@@ -5,11 +5,11 @@ package com.pulumi.aws.elasticache;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,10 +18,10 @@ public final class UserGroupArgs extends com.pulumi.resources.ResourceArgs {
     public static final UserGroupArgs Empty = new UserGroupArgs();
 
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -29,17 +29,17 @@ public final class UserGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="engine", required=true)
-      private final Output<String> engine;
+    private Output<String> engine;
 
     public Output<String> engine() {
         return this.engine;
     }
 
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -47,7 +47,7 @@ public final class UserGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userGroupId", required=true)
-      private final Output<String> userGroupId;
+    private Output<String> userGroupId;
 
     public Output<String> userGroupId() {
         return this.userGroupId;
@@ -58,105 +58,94 @@ public final class UserGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userIds")
-      private final @Nullable Output<List<String>> userIds;
+    private @Nullable Output<List<String>> userIds;
 
-    public Output<List<String>> userIds() {
-        return this.userIds == null ? Codegen.empty() : this.userIds;
+    public Optional<Output<List<String>>> userIds() {
+        return Optional.ofNullable(this.userIds);
     }
 
-    public UserGroupArgs(
-        @Nullable Output<String> arn,
-        Output<String> engine,
-        @Nullable Output<Map<String,String>> tags,
-        Output<String> userGroupId,
-        @Nullable Output<List<String>> userIds) {
-        this.arn = arn;
-        this.engine = Objects.requireNonNull(engine, "expected parameter 'engine' to be non-null");
-        this.tags = tags;
-        this.userGroupId = Objects.requireNonNull(userGroupId, "expected parameter 'userGroupId' to be non-null");
-        this.userIds = userIds;
-    }
+    private UserGroupArgs() {}
 
-    private UserGroupArgs() {
-        this.arn = Codegen.empty();
-        this.engine = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.userGroupId = Codegen.empty();
-        this.userIds = Codegen.empty();
+    private UserGroupArgs(UserGroupArgs $) {
+        this.arn = $.arn;
+        this.engine = $.engine;
+        this.tags = $.tags;
+        this.userGroupId = $.userGroupId;
+        this.userIds = $.userIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private Output<String> engine;
-        private @Nullable Output<Map<String,String>> tags;
-        private Output<String> userGroupId;
-        private @Nullable Output<List<String>> userIds;
+        private UserGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserGroupArgs();
         }
 
         public Builder(UserGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.engine = defaults.engine;
-    	      this.tags = defaults.tags;
-    	      this.userGroupId = defaults.userGroupId;
-    	      this.userIds = defaults.userIds;
+            $ = new UserGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder engine(Output<String> engine) {
-            this.engine = Objects.requireNonNull(engine);
+            $.engine = engine;
             return this;
         }
+
         public Builder engine(String engine) {
-            this.engine = Output.of(Objects.requireNonNull(engine));
-            return this;
+            return engine(Output.of(engine));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder userGroupId(Output<String> userGroupId) {
-            this.userGroupId = Objects.requireNonNull(userGroupId);
+            $.userGroupId = userGroupId;
             return this;
         }
+
         public Builder userGroupId(String userGroupId) {
-            this.userGroupId = Output.of(Objects.requireNonNull(userGroupId));
-            return this;
+            return userGroupId(Output.of(userGroupId));
         }
+
         public Builder userIds(@Nullable Output<List<String>> userIds) {
-            this.userIds = userIds;
+            $.userIds = userIds;
             return this;
         }
-        public Builder userIds(@Nullable List<String> userIds) {
-            this.userIds = Codegen.ofNullable(userIds);
-            return this;
+
+        public Builder userIds(List<String> userIds) {
+            return userIds(Output.of(userIds));
         }
+
         public Builder userIds(String... userIds) {
             return userIds(List.of(userIds));
-        }        public UserGroupArgs build() {
-            return new UserGroupArgs(arn, engine, tags, userGroupId, userIds);
+        }
+
+        public UserGroupArgs build() {
+            $.engine = Objects.requireNonNull($.engine, "expected parameter 'engine' to be non-null");
+            $.userGroupId = Objects.requireNonNull($.userGroupId, "expected parameter 'userGroupId' to be non-null");
+            return $;
         }
     }
+
 }

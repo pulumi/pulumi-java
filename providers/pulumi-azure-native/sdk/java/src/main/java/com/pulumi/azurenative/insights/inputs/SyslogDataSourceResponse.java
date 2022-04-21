@@ -25,10 +25,10 @@ public final class SyslogDataSourceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="facilityNames")
-      private final @Nullable List<String> facilityNames;
+    private @Nullable List<String> facilityNames;
 
-    public List<String> facilityNames() {
-        return this.facilityNames == null ? List.of() : this.facilityNames;
+    public Optional<List<String>> facilityNames() {
+        return Optional.ofNullable(this.facilityNames);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class SyslogDataSourceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="logLevels")
-      private final @Nullable List<String> logLevels;
+    private @Nullable List<String> logLevels;
 
-    public List<String> logLevels() {
-        return this.logLevels == null ? List.of() : this.logLevels;
+    public Optional<List<String>> logLevels() {
+        return Optional.ofNullable(this.logLevels);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class SyslogDataSourceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -60,82 +60,74 @@ public final class SyslogDataSourceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="streams")
-      private final @Nullable List<String> streams;
+    private @Nullable List<String> streams;
 
-    public List<String> streams() {
-        return this.streams == null ? List.of() : this.streams;
+    public Optional<List<String>> streams() {
+        return Optional.ofNullable(this.streams);
     }
 
-    public SyslogDataSourceResponse(
-        @Nullable List<String> facilityNames,
-        @Nullable List<String> logLevels,
-        @Nullable String name,
-        @Nullable List<String> streams) {
-        this.facilityNames = facilityNames;
-        this.logLevels = logLevels;
-        this.name = name;
-        this.streams = streams;
-    }
+    private SyslogDataSourceResponse() {}
 
-    private SyslogDataSourceResponse() {
-        this.facilityNames = List.of();
-        this.logLevels = List.of();
-        this.name = null;
-        this.streams = List.of();
+    private SyslogDataSourceResponse(SyslogDataSourceResponse $) {
+        this.facilityNames = $.facilityNames;
+        this.logLevels = $.logLevels;
+        this.name = $.name;
+        this.streams = $.streams;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SyslogDataSourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> facilityNames;
-        private @Nullable List<String> logLevels;
-        private @Nullable String name;
-        private @Nullable List<String> streams;
+        private SyslogDataSourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SyslogDataSourceResponse();
         }
 
         public Builder(SyslogDataSourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.facilityNames = defaults.facilityNames;
-    	      this.logLevels = defaults.logLevels;
-    	      this.name = defaults.name;
-    	      this.streams = defaults.streams;
+            $ = new SyslogDataSourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder facilityNames(@Nullable List<String> facilityNames) {
-            this.facilityNames = facilityNames;
+            $.facilityNames = facilityNames;
             return this;
         }
+
         public Builder facilityNames(String... facilityNames) {
             return facilityNames(List.of(facilityNames));
         }
+
         public Builder logLevels(@Nullable List<String> logLevels) {
-            this.logLevels = logLevels;
+            $.logLevels = logLevels;
             return this;
         }
+
         public Builder logLevels(String... logLevels) {
             return logLevels(List.of(logLevels));
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder streams(@Nullable List<String> streams) {
-            this.streams = streams;
+            $.streams = streams;
             return this;
         }
+
         public Builder streams(String... streams) {
             return streams(List.of(streams));
-        }        public SyslogDataSourceResponse build() {
-            return new SyslogDataSourceResponse(facilityNames, logLevels, name, streams);
+        }
+
+        public SyslogDataSourceResponse build() {
+            return $;
         }
     }
+
 }

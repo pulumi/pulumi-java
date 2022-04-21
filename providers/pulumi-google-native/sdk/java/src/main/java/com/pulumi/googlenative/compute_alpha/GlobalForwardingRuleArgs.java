@@ -5,7 +5,6 @@ package com.pulumi.googlenative.compute_alpha;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_alpha.enums.GlobalForwardingRuleIpProtocol;
 import com.pulumi.googlenative.compute_alpha.enums.GlobalForwardingRuleIpVersion;
 import com.pulumi.googlenative.compute_alpha.enums.GlobalForwardingRuleLoadBalancingScheme;
@@ -18,6 +17,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,10 +30,10 @@ public final class GlobalForwardingRuleArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="allPorts")
-      private final @Nullable Output<Boolean> allPorts;
+    private @Nullable Output<Boolean> allPorts;
 
-    public Output<Boolean> allPorts() {
-        return this.allPorts == null ? Codegen.empty() : this.allPorts;
+    public Optional<Output<Boolean>> allPorts() {
+        return Optional.ofNullable(this.allPorts);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class GlobalForwardingRuleArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="allowGlobalAccess")
-      private final @Nullable Output<Boolean> allowGlobalAccess;
+    private @Nullable Output<Boolean> allowGlobalAccess;
 
-    public Output<Boolean> allowGlobalAccess() {
-        return this.allowGlobalAccess == null ? Codegen.empty() : this.allowGlobalAccess;
+    public Optional<Output<Boolean>> allowGlobalAccess() {
+        return Optional.ofNullable(this.allowGlobalAccess);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class GlobalForwardingRuleArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="allowPscGlobalAccess")
-      private final @Nullable Output<Boolean> allowPscGlobalAccess;
+    private @Nullable Output<Boolean> allowPscGlobalAccess;
 
-    public Output<Boolean> allowPscGlobalAccess() {
-        return this.allowPscGlobalAccess == null ? Codegen.empty() : this.allowPscGlobalAccess;
+    public Optional<Output<Boolean>> allowPscGlobalAccess() {
+        return Optional.ofNullable(this.allowPscGlobalAccess);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class GlobalForwardingRuleArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="backendService")
-      private final @Nullable Output<String> backendService;
+    private @Nullable Output<String> backendService;
 
-    public Output<String> backendService() {
-        return this.backendService == null ? Codegen.empty() : this.backendService;
+    public Optional<Output<String>> backendService() {
+        return Optional.ofNullable(this.backendService);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class GlobalForwardingRuleArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class GlobalForwardingRuleArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="ipAddress")
-      private final @Nullable Output<String> ipAddress;
+    private @Nullable Output<String> ipAddress;
 
-    public Output<String> ipAddress() {
-        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
+    public Optional<Output<String>> ipAddress() {
+        return Optional.ofNullable(this.ipAddress);
     }
 
     /**
@@ -96,10 +96,10 @@ public final class GlobalForwardingRuleArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="ipProtocol")
-      private final @Nullable Output<GlobalForwardingRuleIpProtocol> ipProtocol;
+    private @Nullable Output<GlobalForwardingRuleIpProtocol> ipProtocol;
 
-    public Output<GlobalForwardingRuleIpProtocol> ipProtocol() {
-        return this.ipProtocol == null ? Codegen.empty() : this.ipProtocol;
+    public Optional<Output<GlobalForwardingRuleIpProtocol>> ipProtocol() {
+        return Optional.ofNullable(this.ipProtocol);
     }
 
     /**
@@ -107,10 +107,10 @@ public final class GlobalForwardingRuleArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="ipVersion")
-      private final @Nullable Output<GlobalForwardingRuleIpVersion> ipVersion;
+    private @Nullable Output<GlobalForwardingRuleIpVersion> ipVersion;
 
-    public Output<GlobalForwardingRuleIpVersion> ipVersion() {
-        return this.ipVersion == null ? Codegen.empty() : this.ipVersion;
+    public Optional<Output<GlobalForwardingRuleIpVersion>> ipVersion() {
+        return Optional.ofNullable(this.ipVersion);
     }
 
     /**
@@ -118,10 +118,10 @@ public final class GlobalForwardingRuleArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="isMirroringCollector")
-      private final @Nullable Output<Boolean> isMirroringCollector;
+    private @Nullable Output<Boolean> isMirroringCollector;
 
-    public Output<Boolean> isMirroringCollector() {
-        return this.isMirroringCollector == null ? Codegen.empty() : this.isMirroringCollector;
+    public Optional<Output<Boolean>> isMirroringCollector() {
+        return Optional.ofNullable(this.isMirroringCollector);
     }
 
     /**
@@ -129,10 +129,10 @@ public final class GlobalForwardingRuleArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -140,10 +140,10 @@ public final class GlobalForwardingRuleArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="loadBalancingScheme")
-      private final @Nullable Output<GlobalForwardingRuleLoadBalancingScheme> loadBalancingScheme;
+    private @Nullable Output<GlobalForwardingRuleLoadBalancingScheme> loadBalancingScheme;
 
-    public Output<GlobalForwardingRuleLoadBalancingScheme> loadBalancingScheme() {
-        return this.loadBalancingScheme == null ? Codegen.empty() : this.loadBalancingScheme;
+    public Optional<Output<GlobalForwardingRuleLoadBalancingScheme>> loadBalancingScheme() {
+        return Optional.ofNullable(this.loadBalancingScheme);
     }
 
     /**
@@ -151,10 +151,10 @@ public final class GlobalForwardingRuleArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="metadataFilters")
-      private final @Nullable Output<List<MetadataFilterArgs>> metadataFilters;
+    private @Nullable Output<List<MetadataFilterArgs>> metadataFilters;
 
-    public Output<List<MetadataFilterArgs>> metadataFilters() {
-        return this.metadataFilters == null ? Codegen.empty() : this.metadataFilters;
+    public Optional<Output<List<MetadataFilterArgs>>> metadataFilters() {
+        return Optional.ofNullable(this.metadataFilters);
     }
 
     /**
@@ -162,10 +162,10 @@ public final class GlobalForwardingRuleArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -173,10 +173,10 @@ public final class GlobalForwardingRuleArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="network")
-      private final @Nullable Output<String> network;
+    private @Nullable Output<String> network;
 
-    public Output<String> network() {
-        return this.network == null ? Codegen.empty() : this.network;
+    public Optional<Output<String>> network() {
+        return Optional.ofNullable(this.network);
     }
 
     /**
@@ -184,10 +184,10 @@ public final class GlobalForwardingRuleArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="networkTier")
-      private final @Nullable Output<GlobalForwardingRuleNetworkTier> networkTier;
+    private @Nullable Output<GlobalForwardingRuleNetworkTier> networkTier;
 
-    public Output<GlobalForwardingRuleNetworkTier> networkTier() {
-        return this.networkTier == null ? Codegen.empty() : this.networkTier;
+    public Optional<Output<GlobalForwardingRuleNetworkTier>> networkTier() {
+        return Optional.ofNullable(this.networkTier);
     }
 
     /**
@@ -195,10 +195,10 @@ public final class GlobalForwardingRuleArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="portRange")
-      private final @Nullable Output<String> portRange;
+    private @Nullable Output<String> portRange;
 
-    public Output<String> portRange() {
-        return this.portRange == null ? Codegen.empty() : this.portRange;
+    public Optional<Output<String>> portRange() {
+        return Optional.ofNullable(this.portRange);
     }
 
     /**
@@ -206,31 +206,31 @@ public final class GlobalForwardingRuleArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="ports")
-      private final @Nullable Output<List<String>> ports;
+    private @Nullable Output<List<String>> ports;
 
-    public Output<List<String>> ports() {
-        return this.ports == null ? Codegen.empty() : this.ports;
+    public Optional<Output<List<String>>> ports() {
+        return Optional.ofNullable(this.ports);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="pscConnectionStatus")
-      private final @Nullable Output<GlobalForwardingRulePscConnectionStatus> pscConnectionStatus;
+    private @Nullable Output<GlobalForwardingRulePscConnectionStatus> pscConnectionStatus;
 
-    public Output<GlobalForwardingRulePscConnectionStatus> pscConnectionStatus() {
-        return this.pscConnectionStatus == null ? Codegen.empty() : this.pscConnectionStatus;
+    public Optional<Output<GlobalForwardingRulePscConnectionStatus>> pscConnectionStatus() {
+        return Optional.ofNullable(this.pscConnectionStatus);
     }
 
     @Import(name="requestId")
-      private final @Nullable Output<String> requestId;
+    private @Nullable Output<String> requestId;
 
-    public Output<String> requestId() {
-        return this.requestId == null ? Codegen.empty() : this.requestId;
+    public Optional<Output<String>> requestId() {
+        return Optional.ofNullable(this.requestId);
     }
 
     /**
@@ -238,10 +238,10 @@ public final class GlobalForwardingRuleArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="serviceDirectoryRegistrations")
-      private final @Nullable Output<List<ForwardingRuleServiceDirectoryRegistrationArgs>> serviceDirectoryRegistrations;
+    private @Nullable Output<List<ForwardingRuleServiceDirectoryRegistrationArgs>> serviceDirectoryRegistrations;
 
-    public Output<List<ForwardingRuleServiceDirectoryRegistrationArgs>> serviceDirectoryRegistrations() {
-        return this.serviceDirectoryRegistrations == null ? Codegen.empty() : this.serviceDirectoryRegistrations;
+    public Optional<Output<List<ForwardingRuleServiceDirectoryRegistrationArgs>>> serviceDirectoryRegistrations() {
+        return Optional.ofNullable(this.serviceDirectoryRegistrations);
     }
 
     /**
@@ -249,10 +249,10 @@ public final class GlobalForwardingRuleArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="serviceLabel")
-      private final @Nullable Output<String> serviceLabel;
+    private @Nullable Output<String> serviceLabel;
 
-    public Output<String> serviceLabel() {
-        return this.serviceLabel == null ? Codegen.empty() : this.serviceLabel;
+    public Optional<Output<String>> serviceLabel() {
+        return Optional.ofNullable(this.serviceLabel);
     }
 
     /**
@@ -260,10 +260,10 @@ public final class GlobalForwardingRuleArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="sourceIpRanges")
-      private final @Nullable Output<List<String>> sourceIpRanges;
+    private @Nullable Output<List<String>> sourceIpRanges;
 
-    public Output<List<String>> sourceIpRanges() {
-        return this.sourceIpRanges == null ? Codegen.empty() : this.sourceIpRanges;
+    public Optional<Output<List<String>>> sourceIpRanges() {
+        return Optional.ofNullable(this.sourceIpRanges);
     }
 
     /**
@@ -271,381 +271,311 @@ public final class GlobalForwardingRuleArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="subnetwork")
-      private final @Nullable Output<String> subnetwork;
+    private @Nullable Output<String> subnetwork;
 
-    public Output<String> subnetwork() {
-        return this.subnetwork == null ? Codegen.empty() : this.subnetwork;
+    public Optional<Output<String>> subnetwork() {
+        return Optional.ofNullable(this.subnetwork);
     }
 
     @Import(name="target")
-      private final @Nullable Output<String> target;
+    private @Nullable Output<String> target;
 
-    public Output<String> target() {
-        return this.target == null ? Codegen.empty() : this.target;
+    public Optional<Output<String>> target() {
+        return Optional.ofNullable(this.target);
     }
 
-    public GlobalForwardingRuleArgs(
-        @Nullable Output<Boolean> allPorts,
-        @Nullable Output<Boolean> allowGlobalAccess,
-        @Nullable Output<Boolean> allowPscGlobalAccess,
-        @Nullable Output<String> backendService,
-        @Nullable Output<String> description,
-        @Nullable Output<String> ipAddress,
-        @Nullable Output<GlobalForwardingRuleIpProtocol> ipProtocol,
-        @Nullable Output<GlobalForwardingRuleIpVersion> ipVersion,
-        @Nullable Output<Boolean> isMirroringCollector,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<GlobalForwardingRuleLoadBalancingScheme> loadBalancingScheme,
-        @Nullable Output<List<MetadataFilterArgs>> metadataFilters,
-        @Nullable Output<String> name,
-        @Nullable Output<String> network,
-        @Nullable Output<GlobalForwardingRuleNetworkTier> networkTier,
-        @Nullable Output<String> portRange,
-        @Nullable Output<List<String>> ports,
-        @Nullable Output<String> project,
-        @Nullable Output<GlobalForwardingRulePscConnectionStatus> pscConnectionStatus,
-        @Nullable Output<String> requestId,
-        @Nullable Output<List<ForwardingRuleServiceDirectoryRegistrationArgs>> serviceDirectoryRegistrations,
-        @Nullable Output<String> serviceLabel,
-        @Nullable Output<List<String>> sourceIpRanges,
-        @Nullable Output<String> subnetwork,
-        @Nullable Output<String> target) {
-        this.allPorts = allPorts;
-        this.allowGlobalAccess = allowGlobalAccess;
-        this.allowPscGlobalAccess = allowPscGlobalAccess;
-        this.backendService = backendService;
-        this.description = description;
-        this.ipAddress = ipAddress;
-        this.ipProtocol = ipProtocol;
-        this.ipVersion = ipVersion;
-        this.isMirroringCollector = isMirroringCollector;
-        this.labels = labels;
-        this.loadBalancingScheme = loadBalancingScheme;
-        this.metadataFilters = metadataFilters;
-        this.name = name;
-        this.network = network;
-        this.networkTier = networkTier;
-        this.portRange = portRange;
-        this.ports = ports;
-        this.project = project;
-        this.pscConnectionStatus = pscConnectionStatus;
-        this.requestId = requestId;
-        this.serviceDirectoryRegistrations = serviceDirectoryRegistrations;
-        this.serviceLabel = serviceLabel;
-        this.sourceIpRanges = sourceIpRanges;
-        this.subnetwork = subnetwork;
-        this.target = target;
-    }
+    private GlobalForwardingRuleArgs() {}
 
-    private GlobalForwardingRuleArgs() {
-        this.allPorts = Codegen.empty();
-        this.allowGlobalAccess = Codegen.empty();
-        this.allowPscGlobalAccess = Codegen.empty();
-        this.backendService = Codegen.empty();
-        this.description = Codegen.empty();
-        this.ipAddress = Codegen.empty();
-        this.ipProtocol = Codegen.empty();
-        this.ipVersion = Codegen.empty();
-        this.isMirroringCollector = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.loadBalancingScheme = Codegen.empty();
-        this.metadataFilters = Codegen.empty();
-        this.name = Codegen.empty();
-        this.network = Codegen.empty();
-        this.networkTier = Codegen.empty();
-        this.portRange = Codegen.empty();
-        this.ports = Codegen.empty();
-        this.project = Codegen.empty();
-        this.pscConnectionStatus = Codegen.empty();
-        this.requestId = Codegen.empty();
-        this.serviceDirectoryRegistrations = Codegen.empty();
-        this.serviceLabel = Codegen.empty();
-        this.sourceIpRanges = Codegen.empty();
-        this.subnetwork = Codegen.empty();
-        this.target = Codegen.empty();
+    private GlobalForwardingRuleArgs(GlobalForwardingRuleArgs $) {
+        this.allPorts = $.allPorts;
+        this.allowGlobalAccess = $.allowGlobalAccess;
+        this.allowPscGlobalAccess = $.allowPscGlobalAccess;
+        this.backendService = $.backendService;
+        this.description = $.description;
+        this.ipAddress = $.ipAddress;
+        this.ipProtocol = $.ipProtocol;
+        this.ipVersion = $.ipVersion;
+        this.isMirroringCollector = $.isMirroringCollector;
+        this.labels = $.labels;
+        this.loadBalancingScheme = $.loadBalancingScheme;
+        this.metadataFilters = $.metadataFilters;
+        this.name = $.name;
+        this.network = $.network;
+        this.networkTier = $.networkTier;
+        this.portRange = $.portRange;
+        this.ports = $.ports;
+        this.project = $.project;
+        this.pscConnectionStatus = $.pscConnectionStatus;
+        this.requestId = $.requestId;
+        this.serviceDirectoryRegistrations = $.serviceDirectoryRegistrations;
+        this.serviceLabel = $.serviceLabel;
+        this.sourceIpRanges = $.sourceIpRanges;
+        this.subnetwork = $.subnetwork;
+        this.target = $.target;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GlobalForwardingRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> allPorts;
-        private @Nullable Output<Boolean> allowGlobalAccess;
-        private @Nullable Output<Boolean> allowPscGlobalAccess;
-        private @Nullable Output<String> backendService;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> ipAddress;
-        private @Nullable Output<GlobalForwardingRuleIpProtocol> ipProtocol;
-        private @Nullable Output<GlobalForwardingRuleIpVersion> ipVersion;
-        private @Nullable Output<Boolean> isMirroringCollector;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<GlobalForwardingRuleLoadBalancingScheme> loadBalancingScheme;
-        private @Nullable Output<List<MetadataFilterArgs>> metadataFilters;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> network;
-        private @Nullable Output<GlobalForwardingRuleNetworkTier> networkTier;
-        private @Nullable Output<String> portRange;
-        private @Nullable Output<List<String>> ports;
-        private @Nullable Output<String> project;
-        private @Nullable Output<GlobalForwardingRulePscConnectionStatus> pscConnectionStatus;
-        private @Nullable Output<String> requestId;
-        private @Nullable Output<List<ForwardingRuleServiceDirectoryRegistrationArgs>> serviceDirectoryRegistrations;
-        private @Nullable Output<String> serviceLabel;
-        private @Nullable Output<List<String>> sourceIpRanges;
-        private @Nullable Output<String> subnetwork;
-        private @Nullable Output<String> target;
+        private GlobalForwardingRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GlobalForwardingRuleArgs();
         }
 
         public Builder(GlobalForwardingRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allPorts = defaults.allPorts;
-    	      this.allowGlobalAccess = defaults.allowGlobalAccess;
-    	      this.allowPscGlobalAccess = defaults.allowPscGlobalAccess;
-    	      this.backendService = defaults.backendService;
-    	      this.description = defaults.description;
-    	      this.ipAddress = defaults.ipAddress;
-    	      this.ipProtocol = defaults.ipProtocol;
-    	      this.ipVersion = defaults.ipVersion;
-    	      this.isMirroringCollector = defaults.isMirroringCollector;
-    	      this.labels = defaults.labels;
-    	      this.loadBalancingScheme = defaults.loadBalancingScheme;
-    	      this.metadataFilters = defaults.metadataFilters;
-    	      this.name = defaults.name;
-    	      this.network = defaults.network;
-    	      this.networkTier = defaults.networkTier;
-    	      this.portRange = defaults.portRange;
-    	      this.ports = defaults.ports;
-    	      this.project = defaults.project;
-    	      this.pscConnectionStatus = defaults.pscConnectionStatus;
-    	      this.requestId = defaults.requestId;
-    	      this.serviceDirectoryRegistrations = defaults.serviceDirectoryRegistrations;
-    	      this.serviceLabel = defaults.serviceLabel;
-    	      this.sourceIpRanges = defaults.sourceIpRanges;
-    	      this.subnetwork = defaults.subnetwork;
-    	      this.target = defaults.target;
+            $ = new GlobalForwardingRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allPorts(@Nullable Output<Boolean> allPorts) {
-            this.allPorts = allPorts;
+            $.allPorts = allPorts;
             return this;
         }
-        public Builder allPorts(@Nullable Boolean allPorts) {
-            this.allPorts = Codegen.ofNullable(allPorts);
-            return this;
+
+        public Builder allPorts(Boolean allPorts) {
+            return allPorts(Output.of(allPorts));
         }
+
         public Builder allowGlobalAccess(@Nullable Output<Boolean> allowGlobalAccess) {
-            this.allowGlobalAccess = allowGlobalAccess;
+            $.allowGlobalAccess = allowGlobalAccess;
             return this;
         }
-        public Builder allowGlobalAccess(@Nullable Boolean allowGlobalAccess) {
-            this.allowGlobalAccess = Codegen.ofNullable(allowGlobalAccess);
-            return this;
+
+        public Builder allowGlobalAccess(Boolean allowGlobalAccess) {
+            return allowGlobalAccess(Output.of(allowGlobalAccess));
         }
+
         public Builder allowPscGlobalAccess(@Nullable Output<Boolean> allowPscGlobalAccess) {
-            this.allowPscGlobalAccess = allowPscGlobalAccess;
+            $.allowPscGlobalAccess = allowPscGlobalAccess;
             return this;
         }
-        public Builder allowPscGlobalAccess(@Nullable Boolean allowPscGlobalAccess) {
-            this.allowPscGlobalAccess = Codegen.ofNullable(allowPscGlobalAccess);
-            return this;
+
+        public Builder allowPscGlobalAccess(Boolean allowPscGlobalAccess) {
+            return allowPscGlobalAccess(Output.of(allowPscGlobalAccess));
         }
+
         public Builder backendService(@Nullable Output<String> backendService) {
-            this.backendService = backendService;
+            $.backendService = backendService;
             return this;
         }
-        public Builder backendService(@Nullable String backendService) {
-            this.backendService = Codegen.ofNullable(backendService);
-            return this;
+
+        public Builder backendService(String backendService) {
+            return backendService(Output.of(backendService));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
-            this.ipAddress = ipAddress;
+            $.ipAddress = ipAddress;
             return this;
         }
-        public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Codegen.ofNullable(ipAddress);
-            return this;
+
+        public Builder ipAddress(String ipAddress) {
+            return ipAddress(Output.of(ipAddress));
         }
+
         public Builder ipProtocol(@Nullable Output<GlobalForwardingRuleIpProtocol> ipProtocol) {
-            this.ipProtocol = ipProtocol;
+            $.ipProtocol = ipProtocol;
             return this;
         }
-        public Builder ipProtocol(@Nullable GlobalForwardingRuleIpProtocol ipProtocol) {
-            this.ipProtocol = Codegen.ofNullable(ipProtocol);
-            return this;
+
+        public Builder ipProtocol(GlobalForwardingRuleIpProtocol ipProtocol) {
+            return ipProtocol(Output.of(ipProtocol));
         }
+
         public Builder ipVersion(@Nullable Output<GlobalForwardingRuleIpVersion> ipVersion) {
-            this.ipVersion = ipVersion;
+            $.ipVersion = ipVersion;
             return this;
         }
-        public Builder ipVersion(@Nullable GlobalForwardingRuleIpVersion ipVersion) {
-            this.ipVersion = Codegen.ofNullable(ipVersion);
-            return this;
+
+        public Builder ipVersion(GlobalForwardingRuleIpVersion ipVersion) {
+            return ipVersion(Output.of(ipVersion));
         }
+
         public Builder isMirroringCollector(@Nullable Output<Boolean> isMirroringCollector) {
-            this.isMirroringCollector = isMirroringCollector;
+            $.isMirroringCollector = isMirroringCollector;
             return this;
         }
-        public Builder isMirroringCollector(@Nullable Boolean isMirroringCollector) {
-            this.isMirroringCollector = Codegen.ofNullable(isMirroringCollector);
-            return this;
+
+        public Builder isMirroringCollector(Boolean isMirroringCollector) {
+            return isMirroringCollector(Output.of(isMirroringCollector));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder loadBalancingScheme(@Nullable Output<GlobalForwardingRuleLoadBalancingScheme> loadBalancingScheme) {
-            this.loadBalancingScheme = loadBalancingScheme;
+            $.loadBalancingScheme = loadBalancingScheme;
             return this;
         }
-        public Builder loadBalancingScheme(@Nullable GlobalForwardingRuleLoadBalancingScheme loadBalancingScheme) {
-            this.loadBalancingScheme = Codegen.ofNullable(loadBalancingScheme);
-            return this;
+
+        public Builder loadBalancingScheme(GlobalForwardingRuleLoadBalancingScheme loadBalancingScheme) {
+            return loadBalancingScheme(Output.of(loadBalancingScheme));
         }
+
         public Builder metadataFilters(@Nullable Output<List<MetadataFilterArgs>> metadataFilters) {
-            this.metadataFilters = metadataFilters;
+            $.metadataFilters = metadataFilters;
             return this;
         }
-        public Builder metadataFilters(@Nullable List<MetadataFilterArgs> metadataFilters) {
-            this.metadataFilters = Codegen.ofNullable(metadataFilters);
-            return this;
+
+        public Builder metadataFilters(List<MetadataFilterArgs> metadataFilters) {
+            return metadataFilters(Output.of(metadataFilters));
         }
+
         public Builder metadataFilters(MetadataFilterArgs... metadataFilters) {
             return metadataFilters(List.of(metadataFilters));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder network(@Nullable Output<String> network) {
-            this.network = network;
+            $.network = network;
             return this;
         }
-        public Builder network(@Nullable String network) {
-            this.network = Codegen.ofNullable(network);
-            return this;
+
+        public Builder network(String network) {
+            return network(Output.of(network));
         }
+
         public Builder networkTier(@Nullable Output<GlobalForwardingRuleNetworkTier> networkTier) {
-            this.networkTier = networkTier;
+            $.networkTier = networkTier;
             return this;
         }
-        public Builder networkTier(@Nullable GlobalForwardingRuleNetworkTier networkTier) {
-            this.networkTier = Codegen.ofNullable(networkTier);
-            return this;
+
+        public Builder networkTier(GlobalForwardingRuleNetworkTier networkTier) {
+            return networkTier(Output.of(networkTier));
         }
+
         public Builder portRange(@Nullable Output<String> portRange) {
-            this.portRange = portRange;
+            $.portRange = portRange;
             return this;
         }
-        public Builder portRange(@Nullable String portRange) {
-            this.portRange = Codegen.ofNullable(portRange);
-            return this;
+
+        public Builder portRange(String portRange) {
+            return portRange(Output.of(portRange));
         }
+
         public Builder ports(@Nullable Output<List<String>> ports) {
-            this.ports = ports;
+            $.ports = ports;
             return this;
         }
-        public Builder ports(@Nullable List<String> ports) {
-            this.ports = Codegen.ofNullable(ports);
-            return this;
+
+        public Builder ports(List<String> ports) {
+            return ports(Output.of(ports));
         }
+
         public Builder ports(String... ports) {
             return ports(List.of(ports));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder pscConnectionStatus(@Nullable Output<GlobalForwardingRulePscConnectionStatus> pscConnectionStatus) {
-            this.pscConnectionStatus = pscConnectionStatus;
+            $.pscConnectionStatus = pscConnectionStatus;
             return this;
         }
-        public Builder pscConnectionStatus(@Nullable GlobalForwardingRulePscConnectionStatus pscConnectionStatus) {
-            this.pscConnectionStatus = Codegen.ofNullable(pscConnectionStatus);
-            return this;
+
+        public Builder pscConnectionStatus(GlobalForwardingRulePscConnectionStatus pscConnectionStatus) {
+            return pscConnectionStatus(Output.of(pscConnectionStatus));
         }
+
         public Builder requestId(@Nullable Output<String> requestId) {
-            this.requestId = requestId;
+            $.requestId = requestId;
             return this;
         }
-        public Builder requestId(@Nullable String requestId) {
-            this.requestId = Codegen.ofNullable(requestId);
-            return this;
+
+        public Builder requestId(String requestId) {
+            return requestId(Output.of(requestId));
         }
+
         public Builder serviceDirectoryRegistrations(@Nullable Output<List<ForwardingRuleServiceDirectoryRegistrationArgs>> serviceDirectoryRegistrations) {
-            this.serviceDirectoryRegistrations = serviceDirectoryRegistrations;
+            $.serviceDirectoryRegistrations = serviceDirectoryRegistrations;
             return this;
         }
-        public Builder serviceDirectoryRegistrations(@Nullable List<ForwardingRuleServiceDirectoryRegistrationArgs> serviceDirectoryRegistrations) {
-            this.serviceDirectoryRegistrations = Codegen.ofNullable(serviceDirectoryRegistrations);
-            return this;
+
+        public Builder serviceDirectoryRegistrations(List<ForwardingRuleServiceDirectoryRegistrationArgs> serviceDirectoryRegistrations) {
+            return serviceDirectoryRegistrations(Output.of(serviceDirectoryRegistrations));
         }
+
         public Builder serviceDirectoryRegistrations(ForwardingRuleServiceDirectoryRegistrationArgs... serviceDirectoryRegistrations) {
             return serviceDirectoryRegistrations(List.of(serviceDirectoryRegistrations));
         }
+
         public Builder serviceLabel(@Nullable Output<String> serviceLabel) {
-            this.serviceLabel = serviceLabel;
+            $.serviceLabel = serviceLabel;
             return this;
         }
-        public Builder serviceLabel(@Nullable String serviceLabel) {
-            this.serviceLabel = Codegen.ofNullable(serviceLabel);
-            return this;
+
+        public Builder serviceLabel(String serviceLabel) {
+            return serviceLabel(Output.of(serviceLabel));
         }
+
         public Builder sourceIpRanges(@Nullable Output<List<String>> sourceIpRanges) {
-            this.sourceIpRanges = sourceIpRanges;
+            $.sourceIpRanges = sourceIpRanges;
             return this;
         }
-        public Builder sourceIpRanges(@Nullable List<String> sourceIpRanges) {
-            this.sourceIpRanges = Codegen.ofNullable(sourceIpRanges);
-            return this;
+
+        public Builder sourceIpRanges(List<String> sourceIpRanges) {
+            return sourceIpRanges(Output.of(sourceIpRanges));
         }
+
         public Builder sourceIpRanges(String... sourceIpRanges) {
             return sourceIpRanges(List.of(sourceIpRanges));
         }
+
         public Builder subnetwork(@Nullable Output<String> subnetwork) {
-            this.subnetwork = subnetwork;
+            $.subnetwork = subnetwork;
             return this;
         }
-        public Builder subnetwork(@Nullable String subnetwork) {
-            this.subnetwork = Codegen.ofNullable(subnetwork);
-            return this;
+
+        public Builder subnetwork(String subnetwork) {
+            return subnetwork(Output.of(subnetwork));
         }
+
         public Builder target(@Nullable Output<String> target) {
-            this.target = target;
+            $.target = target;
             return this;
         }
-        public Builder target(@Nullable String target) {
-            this.target = Codegen.ofNullable(target);
-            return this;
-        }        public GlobalForwardingRuleArgs build() {
-            return new GlobalForwardingRuleArgs(allPorts, allowGlobalAccess, allowPscGlobalAccess, backendService, description, ipAddress, ipProtocol, ipVersion, isMirroringCollector, labels, loadBalancingScheme, metadataFilters, name, network, networkTier, portRange, ports, project, pscConnectionStatus, requestId, serviceDirectoryRegistrations, serviceLabel, sourceIpRanges, subnetwork, target);
+
+        public Builder target(String target) {
+            return target(Output.of(target));
+        }
+
+        public GlobalForwardingRuleArgs build() {
+            return $;
         }
     }
+
 }

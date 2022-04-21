@@ -5,9 +5,9 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class PtrRecordArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ptrdname")
-      private final @Nullable Output<String> ptrdname;
+    private @Nullable Output<String> ptrdname;
 
-    public Output<String> ptrdname() {
-        return this.ptrdname == null ? Codegen.empty() : this.ptrdname;
+    public Optional<Output<String>> ptrdname() {
+        return Optional.ofNullable(this.ptrdname);
     }
 
-    public PtrRecordArgs(@Nullable Output<String> ptrdname) {
-        this.ptrdname = ptrdname;
-    }
+    private PtrRecordArgs() {}
 
-    private PtrRecordArgs() {
-        this.ptrdname = Codegen.empty();
+    private PtrRecordArgs(PtrRecordArgs $) {
+        this.ptrdname = $.ptrdname;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PtrRecordArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> ptrdname;
+        private PtrRecordArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PtrRecordArgs();
         }
 
         public Builder(PtrRecordArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ptrdname = defaults.ptrdname;
+            $ = new PtrRecordArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ptrdname(@Nullable Output<String> ptrdname) {
-            this.ptrdname = ptrdname;
+            $.ptrdname = ptrdname;
             return this;
         }
-        public Builder ptrdname(@Nullable String ptrdname) {
-            this.ptrdname = Codegen.ofNullable(ptrdname);
-            return this;
-        }        public PtrRecordArgs build() {
-            return new PtrRecordArgs(ptrdname);
+
+        public Builder ptrdname(String ptrdname) {
+            return ptrdname(Output.of(ptrdname));
+        }
+
+        public PtrRecordArgs build() {
+            return $;
         }
     }
+
 }

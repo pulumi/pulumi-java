@@ -22,7 +22,7 @@ public final class NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertie
      * 
      */
     @Import(name="fqdns", required=true)
-      private final List<String> fqdns;
+    private List<String> fqdns;
 
     public List<String> fqdns() {
         return this.fqdns;
@@ -33,7 +33,7 @@ public final class NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertie
      * 
      */
     @Import(name="groupId", required=true)
-      private final String groupId;
+    private String groupId;
 
     public String groupId() {
         return this.groupId;
@@ -44,67 +44,63 @@ public final class NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertie
      * 
      */
     @Import(name="requiredMemberName", required=true)
-      private final String requiredMemberName;
+    private String requiredMemberName;
 
     public String requiredMemberName() {
         return this.requiredMemberName;
     }
 
-    public NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertiesResponse(
-        List<String> fqdns,
-        String groupId,
-        String requiredMemberName) {
-        this.fqdns = Objects.requireNonNull(fqdns, "expected parameter 'fqdns' to be non-null");
-        this.groupId = Objects.requireNonNull(groupId, "expected parameter 'groupId' to be non-null");
-        this.requiredMemberName = Objects.requireNonNull(requiredMemberName, "expected parameter 'requiredMemberName' to be non-null");
-    }
+    private NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertiesResponse() {}
 
-    private NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertiesResponse() {
-        this.fqdns = List.of();
-        this.groupId = null;
-        this.requiredMemberName = null;
+    private NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertiesResponse(NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertiesResponse $) {
+        this.fqdns = $.fqdns;
+        this.groupId = $.groupId;
+        this.requiredMemberName = $.requiredMemberName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> fqdns;
-        private String groupId;
-        private String requiredMemberName;
+        private NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertiesResponse();
         }
 
         public Builder(NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fqdns = defaults.fqdns;
-    	      this.groupId = defaults.groupId;
-    	      this.requiredMemberName = defaults.requiredMemberName;
+            $ = new NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder fqdns(List<String> fqdns) {
-            this.fqdns = Objects.requireNonNull(fqdns);
+            $.fqdns = fqdns;
             return this;
         }
+
         public Builder fqdns(String... fqdns) {
             return fqdns(List.of(fqdns));
         }
+
         public Builder groupId(String groupId) {
-            this.groupId = Objects.requireNonNull(groupId);
+            $.groupId = groupId;
             return this;
         }
+
         public Builder requiredMemberName(String requiredMemberName) {
-            this.requiredMemberName = Objects.requireNonNull(requiredMemberName);
+            $.requiredMemberName = requiredMemberName;
             return this;
-        }        public NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertiesResponse build() {
-            return new NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertiesResponse(fqdns, groupId, requiredMemberName);
+        }
+
+        public NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertiesResponse build() {
+            $.fqdns = Objects.requireNonNull($.fqdns, "expected parameter 'fqdns' to be non-null");
+            $.groupId = Objects.requireNonNull($.groupId, "expected parameter 'groupId' to be non-null");
+            $.requiredMemberName = Objects.requireNonNull($.requiredMemberName, "expected parameter 'requiredMemberName' to be non-null");
+            return $;
         }
     }
+
 }

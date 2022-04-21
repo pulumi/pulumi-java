@@ -5,10 +5,10 @@ package com.pulumi.googlenative.run_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GoogleCloudRunOpV2ContainerPortArgs extends com.pulumi.resour
      * 
      */
     @Import(name="containerPort")
-      private final @Nullable Output<Integer> containerPort;
+    private @Nullable Output<Integer> containerPort;
 
-    public Output<Integer> containerPort() {
-        return this.containerPort == null ? Codegen.empty() : this.containerPort;
+    public Optional<Output<Integer>> containerPort() {
+        return Optional.ofNullable(this.containerPort);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class GoogleCloudRunOpV2ContainerPortArgs extends com.pulumi.resour
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public GoogleCloudRunOpV2ContainerPortArgs(
-        @Nullable Output<Integer> containerPort,
-        @Nullable Output<String> name) {
-        this.containerPort = containerPort;
-        this.name = name;
-    }
+    private GoogleCloudRunOpV2ContainerPortArgs() {}
 
-    private GoogleCloudRunOpV2ContainerPortArgs() {
-        this.containerPort = Codegen.empty();
-        this.name = Codegen.empty();
+    private GoogleCloudRunOpV2ContainerPortArgs(GoogleCloudRunOpV2ContainerPortArgs $) {
+        this.containerPort = $.containerPort;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRunOpV2ContainerPortArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> containerPort;
-        private @Nullable Output<String> name;
+        private GoogleCloudRunOpV2ContainerPortArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRunOpV2ContainerPortArgs();
         }
 
         public Builder(GoogleCloudRunOpV2ContainerPortArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerPort = defaults.containerPort;
-    	      this.name = defaults.name;
+            $ = new GoogleCloudRunOpV2ContainerPortArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder containerPort(@Nullable Output<Integer> containerPort) {
-            this.containerPort = containerPort;
+            $.containerPort = containerPort;
             return this;
         }
-        public Builder containerPort(@Nullable Integer containerPort) {
-            this.containerPort = Codegen.ofNullable(containerPort);
-            return this;
+
+        public Builder containerPort(Integer containerPort) {
+            return containerPort(Output.of(containerPort));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public GoogleCloudRunOpV2ContainerPortArgs build() {
-            return new GoogleCloudRunOpV2ContainerPortArgs(containerPort, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public GoogleCloudRunOpV2ContainerPortArgs build() {
+            return $;
         }
     }
+
 }

@@ -23,10 +23,10 @@ public final class IdentityResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="principalId")
-      private final @Nullable String principalId;
+    private @Nullable String principalId;
 
     public Optional<String> principalId() {
-        return this.principalId == null ? Optional.empty() : Optional.ofNullable(this.principalId);
+        return Optional.ofNullable(this.principalId);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class IdentityResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tenantId")
-      private final @Nullable String tenantId;
+    private @Nullable String tenantId;
 
     public Optional<String> tenantId() {
-        return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
+        return Optional.ofNullable(this.tenantId);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class IdentityResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public IdentityResponse(
-        @Nullable String principalId,
-        @Nullable String tenantId,
-        @Nullable String type) {
-        this.principalId = principalId;
-        this.tenantId = tenantId;
-        this.type = type;
-    }
+    private IdentityResponse() {}
 
-    private IdentityResponse() {
-        this.principalId = null;
-        this.tenantId = null;
-        this.type = null;
+    private IdentityResponse(IdentityResponse $) {
+        this.principalId = $.principalId;
+        this.tenantId = $.tenantId;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IdentityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String principalId;
-        private @Nullable String tenantId;
-        private @Nullable String type;
+        private IdentityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IdentityResponse();
         }
 
         public Builder(IdentityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.principalId = defaults.principalId;
-    	      this.tenantId = defaults.tenantId;
-    	      this.type = defaults.type;
+            $ = new IdentityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder principalId(@Nullable String principalId) {
-            this.principalId = principalId;
+            $.principalId = principalId;
             return this;
         }
+
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = tenantId;
+            $.tenantId = tenantId;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public IdentityResponse build() {
-            return new IdentityResponse(principalId, tenantId, type);
+        }
+
+        public IdentityResponse build() {
+            return $;
         }
     }
+
 }

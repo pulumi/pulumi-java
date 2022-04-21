@@ -24,10 +24,10 @@ public final class ImageRecipeAdditionalInstanceConfiguration extends com.pulumi
      * 
      */
     @Import(name="systemsManagerAgent")
-      private final @Nullable ImageRecipeSystemsManagerAgent systemsManagerAgent;
+    private @Nullable ImageRecipeSystemsManagerAgent systemsManagerAgent;
 
     public Optional<ImageRecipeSystemsManagerAgent> systemsManagerAgent() {
-        return this.systemsManagerAgent == null ? Optional.empty() : Optional.ofNullable(this.systemsManagerAgent);
+        return Optional.ofNullable(this.systemsManagerAgent);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class ImageRecipeAdditionalInstanceConfiguration extends com.pulumi
      * 
      */
     @Import(name="userDataOverride")
-      private final @Nullable String userDataOverride;
+    private @Nullable String userDataOverride;
 
     public Optional<String> userDataOverride() {
-        return this.userDataOverride == null ? Optional.empty() : Optional.ofNullable(this.userDataOverride);
+        return Optional.ofNullable(this.userDataOverride);
     }
 
-    public ImageRecipeAdditionalInstanceConfiguration(
-        @Nullable ImageRecipeSystemsManagerAgent systemsManagerAgent,
-        @Nullable String userDataOverride) {
-        this.systemsManagerAgent = systemsManagerAgent;
-        this.userDataOverride = userDataOverride;
-    }
+    private ImageRecipeAdditionalInstanceConfiguration() {}
 
-    private ImageRecipeAdditionalInstanceConfiguration() {
-        this.systemsManagerAgent = null;
-        this.userDataOverride = null;
+    private ImageRecipeAdditionalInstanceConfiguration(ImageRecipeAdditionalInstanceConfiguration $) {
+        this.systemsManagerAgent = $.systemsManagerAgent;
+        this.userDataOverride = $.userDataOverride;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageRecipeAdditionalInstanceConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ImageRecipeSystemsManagerAgent systemsManagerAgent;
-        private @Nullable String userDataOverride;
+        private ImageRecipeAdditionalInstanceConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageRecipeAdditionalInstanceConfiguration();
         }
 
         public Builder(ImageRecipeAdditionalInstanceConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.systemsManagerAgent = defaults.systemsManagerAgent;
-    	      this.userDataOverride = defaults.userDataOverride;
+            $ = new ImageRecipeAdditionalInstanceConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder systemsManagerAgent(@Nullable ImageRecipeSystemsManagerAgent systemsManagerAgent) {
-            this.systemsManagerAgent = systemsManagerAgent;
+            $.systemsManagerAgent = systemsManagerAgent;
             return this;
         }
+
         public Builder userDataOverride(@Nullable String userDataOverride) {
-            this.userDataOverride = userDataOverride;
+            $.userDataOverride = userDataOverride;
             return this;
-        }        public ImageRecipeAdditionalInstanceConfiguration build() {
-            return new ImageRecipeAdditionalInstanceConfiguration(systemsManagerAgent, userDataOverride);
+        }
+
+        public ImageRecipeAdditionalInstanceConfiguration build() {
+            return $;
         }
     }
+
 }

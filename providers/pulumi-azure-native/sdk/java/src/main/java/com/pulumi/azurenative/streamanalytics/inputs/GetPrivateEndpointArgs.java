@@ -17,7 +17,7 @@ public final class GetPrivateEndpointArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="clusterName", required=true)
-      private final String clusterName;
+    private String clusterName;
 
     public String clusterName() {
         return this.clusterName;
@@ -28,7 +28,7 @@ public final class GetPrivateEndpointArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="privateEndpointName", required=true)
-      private final String privateEndpointName;
+    private String privateEndpointName;
 
     public String privateEndpointName() {
         return this.privateEndpointName;
@@ -39,64 +39,59 @@ public final class GetPrivateEndpointArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetPrivateEndpointArgs(
-        String clusterName,
-        String privateEndpointName,
-        String resourceGroupName) {
-        this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
-        this.privateEndpointName = Objects.requireNonNull(privateEndpointName, "expected parameter 'privateEndpointName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetPrivateEndpointArgs() {}
 
-    private GetPrivateEndpointArgs() {
-        this.clusterName = null;
-        this.privateEndpointName = null;
-        this.resourceGroupName = null;
+    private GetPrivateEndpointArgs(GetPrivateEndpointArgs $) {
+        this.clusterName = $.clusterName;
+        this.privateEndpointName = $.privateEndpointName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPrivateEndpointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String clusterName;
-        private String privateEndpointName;
-        private String resourceGroupName;
+        private GetPrivateEndpointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPrivateEndpointArgs();
         }
 
         public Builder(GetPrivateEndpointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterName = defaults.clusterName;
-    	      this.privateEndpointName = defaults.privateEndpointName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetPrivateEndpointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterName(String clusterName) {
-            this.clusterName = Objects.requireNonNull(clusterName);
+            $.clusterName = clusterName;
             return this;
         }
+
         public Builder privateEndpointName(String privateEndpointName) {
-            this.privateEndpointName = Objects.requireNonNull(privateEndpointName);
+            $.privateEndpointName = privateEndpointName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetPrivateEndpointArgs build() {
-            return new GetPrivateEndpointArgs(clusterName, privateEndpointName, resourceGroupName);
+        }
+
+        public GetPrivateEndpointArgs build() {
+            $.clusterName = Objects.requireNonNull($.clusterName, "expected parameter 'clusterName' to be non-null");
+            $.privateEndpointName = Objects.requireNonNull($.privateEndpointName, "expected parameter 'privateEndpointName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

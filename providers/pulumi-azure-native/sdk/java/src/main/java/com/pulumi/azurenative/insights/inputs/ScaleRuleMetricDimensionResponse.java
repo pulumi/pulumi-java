@@ -22,7 +22,7 @@ public final class ScaleRuleMetricDimensionResponse extends com.pulumi.resources
      * 
      */
     @Import(name="dimensionName", required=true)
-      private final String dimensionName;
+    private String dimensionName;
 
     public String dimensionName() {
         return this.dimensionName;
@@ -33,7 +33,7 @@ public final class ScaleRuleMetricDimensionResponse extends com.pulumi.resources
      * 
      */
     @Import(name="operator", required=true)
-      private final String operator;
+    private String operator;
 
     public String operator() {
         return this.operator;
@@ -44,67 +44,63 @@ public final class ScaleRuleMetricDimensionResponse extends com.pulumi.resources
      * 
      */
     @Import(name="values", required=true)
-      private final List<String> values;
+    private List<String> values;
 
     public List<String> values() {
         return this.values;
     }
 
-    public ScaleRuleMetricDimensionResponse(
-        String dimensionName,
-        String operator,
-        List<String> values) {
-        this.dimensionName = Objects.requireNonNull(dimensionName, "expected parameter 'dimensionName' to be non-null");
-        this.operator = Objects.requireNonNull(operator, "expected parameter 'operator' to be non-null");
-        this.values = Objects.requireNonNull(values, "expected parameter 'values' to be non-null");
-    }
+    private ScaleRuleMetricDimensionResponse() {}
 
-    private ScaleRuleMetricDimensionResponse() {
-        this.dimensionName = null;
-        this.operator = null;
-        this.values = List.of();
+    private ScaleRuleMetricDimensionResponse(ScaleRuleMetricDimensionResponse $) {
+        this.dimensionName = $.dimensionName;
+        this.operator = $.operator;
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScaleRuleMetricDimensionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String dimensionName;
-        private String operator;
-        private List<String> values;
+        private ScaleRuleMetricDimensionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScaleRuleMetricDimensionResponse();
         }
 
         public Builder(ScaleRuleMetricDimensionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dimensionName = defaults.dimensionName;
-    	      this.operator = defaults.operator;
-    	      this.values = defaults.values;
+            $ = new ScaleRuleMetricDimensionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dimensionName(String dimensionName) {
-            this.dimensionName = Objects.requireNonNull(dimensionName);
+            $.dimensionName = dimensionName;
             return this;
         }
+
         public Builder operator(String operator) {
-            this.operator = Objects.requireNonNull(operator);
+            $.operator = operator;
             return this;
         }
+
         public Builder values(List<String> values) {
-            this.values = Objects.requireNonNull(values);
+            $.values = values;
             return this;
         }
+
         public Builder values(String... values) {
             return values(List.of(values));
-        }        public ScaleRuleMetricDimensionResponse build() {
-            return new ScaleRuleMetricDimensionResponse(dimensionName, operator, values);
+        }
+
+        public ScaleRuleMetricDimensionResponse build() {
+            $.dimensionName = Objects.requireNonNull($.dimensionName, "expected parameter 'dimensionName' to be non-null");
+            $.operator = Objects.requireNonNull($.operator, "expected parameter 'operator' to be non-null");
+            $.values = Objects.requireNonNull($.values, "expected parameter 'values' to be non-null");
+            return $;
         }
     }
+
 }

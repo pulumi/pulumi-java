@@ -18,48 +18,49 @@ public final class GetVirtualServiceSpec extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="providers", required=true)
-      private final List<GetVirtualServiceSpecProvider> providers;
+    private List<GetVirtualServiceSpecProvider> providers;
 
     public List<GetVirtualServiceSpecProvider> providers() {
         return this.providers;
     }
 
-    public GetVirtualServiceSpec(List<GetVirtualServiceSpecProvider> providers) {
-        this.providers = Objects.requireNonNull(providers, "expected parameter 'providers' to be non-null");
-    }
+    private GetVirtualServiceSpec() {}
 
-    private GetVirtualServiceSpec() {
-        this.providers = List.of();
+    private GetVirtualServiceSpec(GetVirtualServiceSpec $) {
+        this.providers = $.providers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVirtualServiceSpec defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GetVirtualServiceSpecProvider> providers;
+        private GetVirtualServiceSpec $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVirtualServiceSpec();
         }
 
         public Builder(GetVirtualServiceSpec defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.providers = defaults.providers;
+            $ = new GetVirtualServiceSpec(Objects.requireNonNull(defaults));
         }
 
         public Builder providers(List<GetVirtualServiceSpecProvider> providers) {
-            this.providers = Objects.requireNonNull(providers);
+            $.providers = providers;
             return this;
         }
+
         public Builder providers(GetVirtualServiceSpecProvider... providers) {
             return providers(List.of(providers));
-        }        public GetVirtualServiceSpec build() {
-            return new GetVirtualServiceSpec(providers);
+        }
+
+        public GetVirtualServiceSpec build() {
+            $.providers = Objects.requireNonNull($.providers, "expected parameter 'providers' to be non-null");
+            return $;
         }
     }
+
 }

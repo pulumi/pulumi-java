@@ -5,10 +5,10 @@ package com.pulumi.azurenative.providerhub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,73 +17,69 @@ public final class DefaultRolloutSpecificationLowTrafficArgs extends com.pulumi.
     public static final DefaultRolloutSpecificationLowTrafficArgs Empty = new DefaultRolloutSpecificationLowTrafficArgs();
 
     @Import(name="regions")
-      private final @Nullable Output<List<String>> regions;
+    private @Nullable Output<List<String>> regions;
 
-    public Output<List<String>> regions() {
-        return this.regions == null ? Codegen.empty() : this.regions;
+    public Optional<Output<List<String>>> regions() {
+        return Optional.ofNullable(this.regions);
     }
 
     @Import(name="waitDuration")
-      private final @Nullable Output<String> waitDuration;
+    private @Nullable Output<String> waitDuration;
 
-    public Output<String> waitDuration() {
-        return this.waitDuration == null ? Codegen.empty() : this.waitDuration;
+    public Optional<Output<String>> waitDuration() {
+        return Optional.ofNullable(this.waitDuration);
     }
 
-    public DefaultRolloutSpecificationLowTrafficArgs(
-        @Nullable Output<List<String>> regions,
-        @Nullable Output<String> waitDuration) {
-        this.regions = regions;
-        this.waitDuration = waitDuration;
-    }
+    private DefaultRolloutSpecificationLowTrafficArgs() {}
 
-    private DefaultRolloutSpecificationLowTrafficArgs() {
-        this.regions = Codegen.empty();
-        this.waitDuration = Codegen.empty();
+    private DefaultRolloutSpecificationLowTrafficArgs(DefaultRolloutSpecificationLowTrafficArgs $) {
+        this.regions = $.regions;
+        this.waitDuration = $.waitDuration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DefaultRolloutSpecificationLowTrafficArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> regions;
-        private @Nullable Output<String> waitDuration;
+        private DefaultRolloutSpecificationLowTrafficArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DefaultRolloutSpecificationLowTrafficArgs();
         }
 
         public Builder(DefaultRolloutSpecificationLowTrafficArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.regions = defaults.regions;
-    	      this.waitDuration = defaults.waitDuration;
+            $ = new DefaultRolloutSpecificationLowTrafficArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder regions(@Nullable Output<List<String>> regions) {
-            this.regions = regions;
+            $.regions = regions;
             return this;
         }
-        public Builder regions(@Nullable List<String> regions) {
-            this.regions = Codegen.ofNullable(regions);
-            return this;
+
+        public Builder regions(List<String> regions) {
+            return regions(Output.of(regions));
         }
+
         public Builder regions(String... regions) {
             return regions(List.of(regions));
         }
+
         public Builder waitDuration(@Nullable Output<String> waitDuration) {
-            this.waitDuration = waitDuration;
+            $.waitDuration = waitDuration;
             return this;
         }
-        public Builder waitDuration(@Nullable String waitDuration) {
-            this.waitDuration = Codegen.ofNullable(waitDuration);
-            return this;
-        }        public DefaultRolloutSpecificationLowTrafficArgs build() {
-            return new DefaultRolloutSpecificationLowTrafficArgs(regions, waitDuration);
+
+        public Builder waitDuration(String waitDuration) {
+            return waitDuration(Output.of(waitDuration));
+        }
+
+        public DefaultRolloutSpecificationLowTrafficArgs build() {
+            return $;
         }
     }
+
 }

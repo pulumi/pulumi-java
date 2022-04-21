@@ -15,45 +15,44 @@ public final class TopicRuleHttpAuthorization extends com.pulumi.resources.Invok
     public static final TopicRuleHttpAuthorization Empty = new TopicRuleHttpAuthorization();
 
     @Import(name="sigv4")
-      private final @Nullable TopicRuleSigV4Authorization sigv4;
+    private @Nullable TopicRuleSigV4Authorization sigv4;
 
     public Optional<TopicRuleSigV4Authorization> sigv4() {
-        return this.sigv4 == null ? Optional.empty() : Optional.ofNullable(this.sigv4);
+        return Optional.ofNullable(this.sigv4);
     }
 
-    public TopicRuleHttpAuthorization(@Nullable TopicRuleSigV4Authorization sigv4) {
-        this.sigv4 = sigv4;
-    }
+    private TopicRuleHttpAuthorization() {}
 
-    private TopicRuleHttpAuthorization() {
-        this.sigv4 = null;
+    private TopicRuleHttpAuthorization(TopicRuleHttpAuthorization $) {
+        this.sigv4 = $.sigv4;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicRuleHttpAuthorization defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable TopicRuleSigV4Authorization sigv4;
+        private TopicRuleHttpAuthorization $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicRuleHttpAuthorization();
         }
 
         public Builder(TopicRuleHttpAuthorization defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sigv4 = defaults.sigv4;
+            $ = new TopicRuleHttpAuthorization(Objects.requireNonNull(defaults));
         }
 
         public Builder sigv4(@Nullable TopicRuleSigV4Authorization sigv4) {
-            this.sigv4 = sigv4;
+            $.sigv4 = sigv4;
             return this;
-        }        public TopicRuleHttpAuthorization build() {
-            return new TopicRuleHttpAuthorization(sigv4);
+        }
+
+        public TopicRuleHttpAuthorization build() {
+            return $;
         }
     }
+
 }

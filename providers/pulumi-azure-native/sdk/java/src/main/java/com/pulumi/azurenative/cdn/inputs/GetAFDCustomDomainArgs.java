@@ -17,7 +17,7 @@ public final class GetAFDCustomDomainArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="customDomainName", required=true)
-      private final String customDomainName;
+    private String customDomainName;
 
     public String customDomainName() {
         return this.customDomainName;
@@ -28,7 +28,7 @@ public final class GetAFDCustomDomainArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="profileName", required=true)
-      private final String profileName;
+    private String profileName;
 
     public String profileName() {
         return this.profileName;
@@ -39,64 +39,59 @@ public final class GetAFDCustomDomainArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetAFDCustomDomainArgs(
-        String customDomainName,
-        String profileName,
-        String resourceGroupName) {
-        this.customDomainName = Objects.requireNonNull(customDomainName, "expected parameter 'customDomainName' to be non-null");
-        this.profileName = Objects.requireNonNull(profileName, "expected parameter 'profileName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetAFDCustomDomainArgs() {}
 
-    private GetAFDCustomDomainArgs() {
-        this.customDomainName = null;
-        this.profileName = null;
-        this.resourceGroupName = null;
+    private GetAFDCustomDomainArgs(GetAFDCustomDomainArgs $) {
+        this.customDomainName = $.customDomainName;
+        this.profileName = $.profileName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAFDCustomDomainArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String customDomainName;
-        private String profileName;
-        private String resourceGroupName;
+        private GetAFDCustomDomainArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAFDCustomDomainArgs();
         }
 
         public Builder(GetAFDCustomDomainArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customDomainName = defaults.customDomainName;
-    	      this.profileName = defaults.profileName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetAFDCustomDomainArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customDomainName(String customDomainName) {
-            this.customDomainName = Objects.requireNonNull(customDomainName);
+            $.customDomainName = customDomainName;
             return this;
         }
+
         public Builder profileName(String profileName) {
-            this.profileName = Objects.requireNonNull(profileName);
+            $.profileName = profileName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetAFDCustomDomainArgs build() {
-            return new GetAFDCustomDomainArgs(customDomainName, profileName, resourceGroupName);
+        }
+
+        public GetAFDCustomDomainArgs build() {
+            $.customDomainName = Objects.requireNonNull($.customDomainName, "expected parameter 'customDomainName' to be non-null");
+            $.profileName = Objects.requireNonNull($.profileName, "expected parameter 'profileName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

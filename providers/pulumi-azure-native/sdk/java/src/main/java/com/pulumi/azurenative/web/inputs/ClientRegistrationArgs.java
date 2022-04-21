@@ -5,9 +5,9 @@ package com.pulumi.azurenative.web.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ClientRegistrationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="clientId")
-      private final @Nullable Output<String> clientId;
+    private @Nullable Output<String> clientId;
 
-    public Output<String> clientId() {
-        return this.clientId == null ? Codegen.empty() : this.clientId;
+    public Optional<Output<String>> clientId() {
+        return Optional.ofNullable(this.clientId);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class ClientRegistrationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="clientSecretSettingName")
-      private final @Nullable Output<String> clientSecretSettingName;
+    private @Nullable Output<String> clientSecretSettingName;
 
-    public Output<String> clientSecretSettingName() {
-        return this.clientSecretSettingName == null ? Codegen.empty() : this.clientSecretSettingName;
+    public Optional<Output<String>> clientSecretSettingName() {
+        return Optional.ofNullable(this.clientSecretSettingName);
     }
 
-    public ClientRegistrationArgs(
-        @Nullable Output<String> clientId,
-        @Nullable Output<String> clientSecretSettingName) {
-        this.clientId = clientId;
-        this.clientSecretSettingName = clientSecretSettingName;
-    }
+    private ClientRegistrationArgs() {}
 
-    private ClientRegistrationArgs() {
-        this.clientId = Codegen.empty();
-        this.clientSecretSettingName = Codegen.empty();
+    private ClientRegistrationArgs(ClientRegistrationArgs $) {
+        this.clientId = $.clientId;
+        this.clientSecretSettingName = $.clientSecretSettingName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClientRegistrationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> clientId;
-        private @Nullable Output<String> clientSecretSettingName;
+        private ClientRegistrationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClientRegistrationArgs();
         }
 
         public Builder(ClientRegistrationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientId = defaults.clientId;
-    	      this.clientSecretSettingName = defaults.clientSecretSettingName;
+            $ = new ClientRegistrationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clientId(@Nullable Output<String> clientId) {
-            this.clientId = clientId;
+            $.clientId = clientId;
             return this;
         }
-        public Builder clientId(@Nullable String clientId) {
-            this.clientId = Codegen.ofNullable(clientId);
-            return this;
+
+        public Builder clientId(String clientId) {
+            return clientId(Output.of(clientId));
         }
+
         public Builder clientSecretSettingName(@Nullable Output<String> clientSecretSettingName) {
-            this.clientSecretSettingName = clientSecretSettingName;
+            $.clientSecretSettingName = clientSecretSettingName;
             return this;
         }
-        public Builder clientSecretSettingName(@Nullable String clientSecretSettingName) {
-            this.clientSecretSettingName = Codegen.ofNullable(clientSecretSettingName);
-            return this;
-        }        public ClientRegistrationArgs build() {
-            return new ClientRegistrationArgs(clientId, clientSecretSettingName);
+
+        public Builder clientSecretSettingName(String clientSecretSettingName) {
+            return clientSecretSettingName(Output.of(clientSecretSettingName));
+        }
+
+        public ClientRegistrationArgs build() {
+            return $;
         }
     }
+
 }

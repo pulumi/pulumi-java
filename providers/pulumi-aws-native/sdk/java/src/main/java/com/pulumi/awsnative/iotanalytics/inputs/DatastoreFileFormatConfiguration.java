@@ -16,62 +16,57 @@ public final class DatastoreFileFormatConfiguration extends com.pulumi.resources
     public static final DatastoreFileFormatConfiguration Empty = new DatastoreFileFormatConfiguration();
 
     @Import(name="jsonConfiguration")
-      private final @Nullable DatastoreJsonConfiguration jsonConfiguration;
+    private @Nullable DatastoreJsonConfiguration jsonConfiguration;
 
     public Optional<DatastoreJsonConfiguration> jsonConfiguration() {
-        return this.jsonConfiguration == null ? Optional.empty() : Optional.ofNullable(this.jsonConfiguration);
+        return Optional.ofNullable(this.jsonConfiguration);
     }
 
     @Import(name="parquetConfiguration")
-      private final @Nullable DatastoreParquetConfiguration parquetConfiguration;
+    private @Nullable DatastoreParquetConfiguration parquetConfiguration;
 
     public Optional<DatastoreParquetConfiguration> parquetConfiguration() {
-        return this.parquetConfiguration == null ? Optional.empty() : Optional.ofNullable(this.parquetConfiguration);
+        return Optional.ofNullable(this.parquetConfiguration);
     }
 
-    public DatastoreFileFormatConfiguration(
-        @Nullable DatastoreJsonConfiguration jsonConfiguration,
-        @Nullable DatastoreParquetConfiguration parquetConfiguration) {
-        this.jsonConfiguration = jsonConfiguration;
-        this.parquetConfiguration = parquetConfiguration;
-    }
+    private DatastoreFileFormatConfiguration() {}
 
-    private DatastoreFileFormatConfiguration() {
-        this.jsonConfiguration = null;
-        this.parquetConfiguration = null;
+    private DatastoreFileFormatConfiguration(DatastoreFileFormatConfiguration $) {
+        this.jsonConfiguration = $.jsonConfiguration;
+        this.parquetConfiguration = $.parquetConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatastoreFileFormatConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable DatastoreJsonConfiguration jsonConfiguration;
-        private @Nullable DatastoreParquetConfiguration parquetConfiguration;
+        private DatastoreFileFormatConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatastoreFileFormatConfiguration();
         }
 
         public Builder(DatastoreFileFormatConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.jsonConfiguration = defaults.jsonConfiguration;
-    	      this.parquetConfiguration = defaults.parquetConfiguration;
+            $ = new DatastoreFileFormatConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder jsonConfiguration(@Nullable DatastoreJsonConfiguration jsonConfiguration) {
-            this.jsonConfiguration = jsonConfiguration;
+            $.jsonConfiguration = jsonConfiguration;
             return this;
         }
+
         public Builder parquetConfiguration(@Nullable DatastoreParquetConfiguration parquetConfiguration) {
-            this.parquetConfiguration = parquetConfiguration;
+            $.parquetConfiguration = parquetConfiguration;
             return this;
-        }        public DatastoreFileFormatConfiguration build() {
-            return new DatastoreFileFormatConfiguration(jsonConfiguration, parquetConfiguration);
+        }
+
+        public DatastoreFileFormatConfiguration build() {
+            return $;
         }
     }
+
 }

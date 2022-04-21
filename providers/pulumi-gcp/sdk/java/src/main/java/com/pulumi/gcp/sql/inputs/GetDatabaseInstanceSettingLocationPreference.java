@@ -13,62 +13,59 @@ public final class GetDatabaseInstanceSettingLocationPreference extends com.pulu
     public static final GetDatabaseInstanceSettingLocationPreference Empty = new GetDatabaseInstanceSettingLocationPreference();
 
     @Import(name="followGaeApplication", required=true)
-      private final String followGaeApplication;
+    private String followGaeApplication;
 
     public String followGaeApplication() {
         return this.followGaeApplication;
     }
 
     @Import(name="zone", required=true)
-      private final String zone;
+    private String zone;
 
     public String zone() {
         return this.zone;
     }
 
-    public GetDatabaseInstanceSettingLocationPreference(
-        String followGaeApplication,
-        String zone) {
-        this.followGaeApplication = Objects.requireNonNull(followGaeApplication, "expected parameter 'followGaeApplication' to be non-null");
-        this.zone = Objects.requireNonNull(zone, "expected parameter 'zone' to be non-null");
-    }
+    private GetDatabaseInstanceSettingLocationPreference() {}
 
-    private GetDatabaseInstanceSettingLocationPreference() {
-        this.followGaeApplication = null;
-        this.zone = null;
+    private GetDatabaseInstanceSettingLocationPreference(GetDatabaseInstanceSettingLocationPreference $) {
+        this.followGaeApplication = $.followGaeApplication;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDatabaseInstanceSettingLocationPreference defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String followGaeApplication;
-        private String zone;
+        private GetDatabaseInstanceSettingLocationPreference $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDatabaseInstanceSettingLocationPreference();
         }
 
         public Builder(GetDatabaseInstanceSettingLocationPreference defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.followGaeApplication = defaults.followGaeApplication;
-    	      this.zone = defaults.zone;
+            $ = new GetDatabaseInstanceSettingLocationPreference(Objects.requireNonNull(defaults));
         }
 
         public Builder followGaeApplication(String followGaeApplication) {
-            this.followGaeApplication = Objects.requireNonNull(followGaeApplication);
+            $.followGaeApplication = followGaeApplication;
             return this;
         }
+
         public Builder zone(String zone) {
-            this.zone = Objects.requireNonNull(zone);
+            $.zone = zone;
             return this;
-        }        public GetDatabaseInstanceSettingLocationPreference build() {
-            return new GetDatabaseInstanceSettingLocationPreference(followGaeApplication, zone);
+        }
+
+        public GetDatabaseInstanceSettingLocationPreference build() {
+            $.followGaeApplication = Objects.requireNonNull($.followGaeApplication, "expected parameter 'followGaeApplication' to be non-null");
+            $.zone = Objects.requireNonNull($.zone, "expected parameter 'zone' to be non-null");
+            return $;
         }
     }
+
 }

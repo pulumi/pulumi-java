@@ -23,10 +23,10 @@ public final class TargetEligibilityErrorMessageResponse extends com.pulumi.reso
      * 
      */
     @Import(name="message")
-      private final @Nullable String message;
+    private @Nullable String message;
 
     public Optional<String> message() {
-        return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
+        return Optional.ofNullable(this.message);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class TargetEligibilityErrorMessageResponse extends com.pulumi.reso
      * 
      */
     @Import(name="resolution")
-      private final @Nullable String resolution;
+    private @Nullable String resolution;
 
     public Optional<String> resolution() {
-        return this.resolution == null ? Optional.empty() : Optional.ofNullable(this.resolution);
+        return Optional.ofNullable(this.resolution);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class TargetEligibilityErrorMessageResponse extends com.pulumi.reso
      * 
      */
     @Import(name="resultCode")
-      private final @Nullable String resultCode;
+    private @Nullable String resultCode;
 
     public Optional<String> resultCode() {
-        return this.resultCode == null ? Optional.empty() : Optional.ofNullable(this.resultCode);
+        return Optional.ofNullable(this.resultCode);
     }
 
-    public TargetEligibilityErrorMessageResponse(
-        @Nullable String message,
-        @Nullable String resolution,
-        @Nullable String resultCode) {
-        this.message = message;
-        this.resolution = resolution;
-        this.resultCode = resultCode;
-    }
+    private TargetEligibilityErrorMessageResponse() {}
 
-    private TargetEligibilityErrorMessageResponse() {
-        this.message = null;
-        this.resolution = null;
-        this.resultCode = null;
+    private TargetEligibilityErrorMessageResponse(TargetEligibilityErrorMessageResponse $) {
+        this.message = $.message;
+        this.resolution = $.resolution;
+        this.resultCode = $.resultCode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TargetEligibilityErrorMessageResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String message;
-        private @Nullable String resolution;
-        private @Nullable String resultCode;
+        private TargetEligibilityErrorMessageResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TargetEligibilityErrorMessageResponse();
         }
 
         public Builder(TargetEligibilityErrorMessageResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.message = defaults.message;
-    	      this.resolution = defaults.resolution;
-    	      this.resultCode = defaults.resultCode;
+            $ = new TargetEligibilityErrorMessageResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder message(@Nullable String message) {
-            this.message = message;
+            $.message = message;
             return this;
         }
+
         public Builder resolution(@Nullable String resolution) {
-            this.resolution = resolution;
+            $.resolution = resolution;
             return this;
         }
+
         public Builder resultCode(@Nullable String resultCode) {
-            this.resultCode = resultCode;
+            $.resultCode = resultCode;
             return this;
-        }        public TargetEligibilityErrorMessageResponse build() {
-            return new TargetEligibilityErrorMessageResponse(message, resolution, resultCode);
+        }
+
+        public TargetEligibilityErrorMessageResponse build() {
+            return $;
         }
     }
+
 }

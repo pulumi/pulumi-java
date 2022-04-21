@@ -21,7 +21,7 @@ public final class SymptomResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="createTime", required=true)
-      private final String createTime;
+    private String createTime;
 
     public String createTime() {
         return this.createTime;
@@ -32,7 +32,7 @@ public final class SymptomResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="details", required=true)
-      private final String details;
+    private String details;
 
     public String details() {
         return this.details;
@@ -43,7 +43,7 @@ public final class SymptomResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="symptomType", required=true)
-      private final String symptomType;
+    private String symptomType;
 
     public String symptomType() {
         return this.symptomType;
@@ -54,73 +54,66 @@ public final class SymptomResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="workerId", required=true)
-      private final String workerId;
+    private String workerId;
 
     public String workerId() {
         return this.workerId;
     }
 
-    public SymptomResponse(
-        String createTime,
-        String details,
-        String symptomType,
-        String workerId) {
-        this.createTime = Objects.requireNonNull(createTime, "expected parameter 'createTime' to be non-null");
-        this.details = Objects.requireNonNull(details, "expected parameter 'details' to be non-null");
-        this.symptomType = Objects.requireNonNull(symptomType, "expected parameter 'symptomType' to be non-null");
-        this.workerId = Objects.requireNonNull(workerId, "expected parameter 'workerId' to be non-null");
-    }
+    private SymptomResponse() {}
 
-    private SymptomResponse() {
-        this.createTime = null;
-        this.details = null;
-        this.symptomType = null;
-        this.workerId = null;
+    private SymptomResponse(SymptomResponse $) {
+        this.createTime = $.createTime;
+        this.details = $.details;
+        this.symptomType = $.symptomType;
+        this.workerId = $.workerId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SymptomResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String createTime;
-        private String details;
-        private String symptomType;
-        private String workerId;
+        private SymptomResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SymptomResponse();
         }
 
         public Builder(SymptomResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createTime = defaults.createTime;
-    	      this.details = defaults.details;
-    	      this.symptomType = defaults.symptomType;
-    	      this.workerId = defaults.workerId;
+            $ = new SymptomResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder createTime(String createTime) {
-            this.createTime = Objects.requireNonNull(createTime);
+            $.createTime = createTime;
             return this;
         }
+
         public Builder details(String details) {
-            this.details = Objects.requireNonNull(details);
+            $.details = details;
             return this;
         }
+
         public Builder symptomType(String symptomType) {
-            this.symptomType = Objects.requireNonNull(symptomType);
+            $.symptomType = symptomType;
             return this;
         }
+
         public Builder workerId(String workerId) {
-            this.workerId = Objects.requireNonNull(workerId);
+            $.workerId = workerId;
             return this;
-        }        public SymptomResponse build() {
-            return new SymptomResponse(createTime, details, symptomType, workerId);
+        }
+
+        public SymptomResponse build() {
+            $.createTime = Objects.requireNonNull($.createTime, "expected parameter 'createTime' to be non-null");
+            $.details = Objects.requireNonNull($.details, "expected parameter 'details' to be non-null");
+            $.symptomType = Objects.requireNonNull($.symptomType, "expected parameter 'symptomType' to be non-null");
+            $.workerId = Objects.requireNonNull($.workerId, "expected parameter 'workerId' to be non-null");
+            return $;
         }
     }
+
 }

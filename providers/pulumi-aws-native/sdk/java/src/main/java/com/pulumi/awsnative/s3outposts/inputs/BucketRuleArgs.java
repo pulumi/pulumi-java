@@ -8,10 +8,10 @@ import com.pulumi.awsnative.s3outposts.inputs.BucketAbortIncompleteMultipartUplo
 import com.pulumi.awsnative.s3outposts.inputs.BucketRuleFilterPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class BucketRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="abortIncompleteMultipartUpload")
-      private final @Nullable Output<BucketAbortIncompleteMultipartUploadArgs> abortIncompleteMultipartUpload;
+    private @Nullable Output<BucketAbortIncompleteMultipartUploadArgs> abortIncompleteMultipartUpload;
 
-    public Output<BucketAbortIncompleteMultipartUploadArgs> abortIncompleteMultipartUpload() {
-        return this.abortIncompleteMultipartUpload == null ? Codegen.empty() : this.abortIncompleteMultipartUpload;
+    public Optional<Output<BucketAbortIncompleteMultipartUploadArgs>> abortIncompleteMultipartUpload() {
+        return Optional.ofNullable(this.abortIncompleteMultipartUpload);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class BucketRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="expirationDate")
-      private final @Nullable Output<String> expirationDate;
+    private @Nullable Output<String> expirationDate;
 
-    public Output<String> expirationDate() {
-        return this.expirationDate == null ? Codegen.empty() : this.expirationDate;
+    public Optional<Output<String>> expirationDate() {
+        return Optional.ofNullable(this.expirationDate);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class BucketRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="expirationInDays")
-      private final @Nullable Output<Integer> expirationInDays;
+    private @Nullable Output<Integer> expirationInDays;
 
-    public Output<Integer> expirationInDays() {
-        return this.expirationInDays == null ? Codegen.empty() : this.expirationInDays;
+    public Optional<Output<Integer>> expirationInDays() {
+        return Optional.ofNullable(this.expirationInDays);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class BucketRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="filter")
-      private final @Nullable Output<BucketRuleFilterPropertiesArgs> filter;
+    private @Nullable Output<BucketRuleFilterPropertiesArgs> filter;
 
-    public Output<BucketRuleFilterPropertiesArgs> filter() {
-        return this.filter == null ? Codegen.empty() : this.filter;
+    public Optional<Output<BucketRuleFilterPropertiesArgs>> filter() {
+        return Optional.ofNullable(this.filter);
     }
 
     /**
@@ -72,122 +72,105 @@ public final class BucketRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     @Import(name="status")
-      private final @Nullable Output<BucketRuleStatus> status;
+    private @Nullable Output<BucketRuleStatus> status;
 
-    public Output<BucketRuleStatus> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<BucketRuleStatus>> status() {
+        return Optional.ofNullable(this.status);
     }
 
-    public BucketRuleArgs(
-        @Nullable Output<BucketAbortIncompleteMultipartUploadArgs> abortIncompleteMultipartUpload,
-        @Nullable Output<String> expirationDate,
-        @Nullable Output<Integer> expirationInDays,
-        @Nullable Output<BucketRuleFilterPropertiesArgs> filter,
-        @Nullable Output<String> id,
-        @Nullable Output<BucketRuleStatus> status) {
-        this.abortIncompleteMultipartUpload = abortIncompleteMultipartUpload;
-        this.expirationDate = expirationDate;
-        this.expirationInDays = expirationInDays;
-        this.filter = filter;
-        this.id = id;
-        this.status = status;
-    }
+    private BucketRuleArgs() {}
 
-    private BucketRuleArgs() {
-        this.abortIncompleteMultipartUpload = Codegen.empty();
-        this.expirationDate = Codegen.empty();
-        this.expirationInDays = Codegen.empty();
-        this.filter = Codegen.empty();
-        this.id = Codegen.empty();
-        this.status = Codegen.empty();
+    private BucketRuleArgs(BucketRuleArgs $) {
+        this.abortIncompleteMultipartUpload = $.abortIncompleteMultipartUpload;
+        this.expirationDate = $.expirationDate;
+        this.expirationInDays = $.expirationInDays;
+        this.filter = $.filter;
+        this.id = $.id;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<BucketAbortIncompleteMultipartUploadArgs> abortIncompleteMultipartUpload;
-        private @Nullable Output<String> expirationDate;
-        private @Nullable Output<Integer> expirationInDays;
-        private @Nullable Output<BucketRuleFilterPropertiesArgs> filter;
-        private @Nullable Output<String> id;
-        private @Nullable Output<BucketRuleStatus> status;
+        private BucketRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketRuleArgs();
         }
 
         public Builder(BucketRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.abortIncompleteMultipartUpload = defaults.abortIncompleteMultipartUpload;
-    	      this.expirationDate = defaults.expirationDate;
-    	      this.expirationInDays = defaults.expirationInDays;
-    	      this.filter = defaults.filter;
-    	      this.id = defaults.id;
-    	      this.status = defaults.status;
+            $ = new BucketRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder abortIncompleteMultipartUpload(@Nullable Output<BucketAbortIncompleteMultipartUploadArgs> abortIncompleteMultipartUpload) {
-            this.abortIncompleteMultipartUpload = abortIncompleteMultipartUpload;
+            $.abortIncompleteMultipartUpload = abortIncompleteMultipartUpload;
             return this;
         }
-        public Builder abortIncompleteMultipartUpload(@Nullable BucketAbortIncompleteMultipartUploadArgs abortIncompleteMultipartUpload) {
-            this.abortIncompleteMultipartUpload = Codegen.ofNullable(abortIncompleteMultipartUpload);
-            return this;
+
+        public Builder abortIncompleteMultipartUpload(BucketAbortIncompleteMultipartUploadArgs abortIncompleteMultipartUpload) {
+            return abortIncompleteMultipartUpload(Output.of(abortIncompleteMultipartUpload));
         }
+
         public Builder expirationDate(@Nullable Output<String> expirationDate) {
-            this.expirationDate = expirationDate;
+            $.expirationDate = expirationDate;
             return this;
         }
-        public Builder expirationDate(@Nullable String expirationDate) {
-            this.expirationDate = Codegen.ofNullable(expirationDate);
-            return this;
+
+        public Builder expirationDate(String expirationDate) {
+            return expirationDate(Output.of(expirationDate));
         }
+
         public Builder expirationInDays(@Nullable Output<Integer> expirationInDays) {
-            this.expirationInDays = expirationInDays;
+            $.expirationInDays = expirationInDays;
             return this;
         }
-        public Builder expirationInDays(@Nullable Integer expirationInDays) {
-            this.expirationInDays = Codegen.ofNullable(expirationInDays);
-            return this;
+
+        public Builder expirationInDays(Integer expirationInDays) {
+            return expirationInDays(Output.of(expirationInDays));
         }
+
         public Builder filter(@Nullable Output<BucketRuleFilterPropertiesArgs> filter) {
-            this.filter = filter;
+            $.filter = filter;
             return this;
         }
-        public Builder filter(@Nullable BucketRuleFilterPropertiesArgs filter) {
-            this.filter = Codegen.ofNullable(filter);
-            return this;
+
+        public Builder filter(BucketRuleFilterPropertiesArgs filter) {
+            return filter(Output.of(filter));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder status(@Nullable Output<BucketRuleStatus> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable BucketRuleStatus status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
-        }        public BucketRuleArgs build() {
-            return new BucketRuleArgs(abortIncompleteMultipartUpload, expirationDate, expirationInDays, filter, id, status);
+
+        public Builder status(BucketRuleStatus status) {
+            return status(Output.of(status));
+        }
+
+        public BucketRuleArgs build() {
+            return $;
         }
     }
+
 }

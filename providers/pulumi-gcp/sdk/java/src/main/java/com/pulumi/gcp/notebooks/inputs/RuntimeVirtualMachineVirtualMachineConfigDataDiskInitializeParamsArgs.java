@@ -5,11 +5,11 @@ package com.pulumi.gcp.notebooks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializePa
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializePa
      * 
      */
     @Import(name="diskName")
-      private final @Nullable Output<String> diskName;
+    private @Nullable Output<String> diskName;
 
-    public Output<String> diskName() {
-        return this.diskName == null ? Codegen.empty() : this.diskName;
+    public Optional<Output<String>> diskName() {
+        return Optional.ofNullable(this.diskName);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializePa
      * 
      */
     @Import(name="diskSizeGb")
-      private final @Nullable Output<Integer> diskSizeGb;
+    private @Nullable Output<Integer> diskSizeGb;
 
-    public Output<Integer> diskSizeGb() {
-        return this.diskSizeGb == null ? Codegen.empty() : this.diskSizeGb;
+    public Optional<Output<Integer>> diskSizeGb() {
+        return Optional.ofNullable(this.diskSizeGb);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializePa
      * 
      */
     @Import(name="diskType")
-      private final @Nullable Output<String> diskType;
+    private @Nullable Output<String> diskType;
 
-    public Output<String> diskType() {
-        return this.diskType == null ? Codegen.empty() : this.diskType;
+    public Optional<Output<String>> diskType() {
+        return Optional.ofNullable(this.diskType);
     }
 
     /**
@@ -77,102 +77,88 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializePa
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
-    public RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> diskName,
-        @Nullable Output<Integer> diskSizeGb,
-        @Nullable Output<String> diskType,
-        @Nullable Output<Map<String,String>> labels) {
-        this.description = description;
-        this.diskName = diskName;
-        this.diskSizeGb = diskSizeGb;
-        this.diskType = diskType;
-        this.labels = labels;
-    }
+    private RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsArgs() {}
 
-    private RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsArgs() {
-        this.description = Codegen.empty();
-        this.diskName = Codegen.empty();
-        this.diskSizeGb = Codegen.empty();
-        this.diskType = Codegen.empty();
-        this.labels = Codegen.empty();
+    private RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsArgs(RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsArgs $) {
+        this.description = $.description;
+        this.diskName = $.diskName;
+        this.diskSizeGb = $.diskSizeGb;
+        this.diskType = $.diskType;
+        this.labels = $.labels;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> diskName;
-        private @Nullable Output<Integer> diskSizeGb;
-        private @Nullable Output<String> diskType;
-        private @Nullable Output<Map<String,String>> labels;
+        private RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsArgs();
         }
 
         public Builder(RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.diskName = defaults.diskName;
-    	      this.diskSizeGb = defaults.diskSizeGb;
-    	      this.diskType = defaults.diskType;
-    	      this.labels = defaults.labels;
+            $ = new RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder diskName(@Nullable Output<String> diskName) {
-            this.diskName = diskName;
+            $.diskName = diskName;
             return this;
         }
-        public Builder diskName(@Nullable String diskName) {
-            this.diskName = Codegen.ofNullable(diskName);
-            return this;
+
+        public Builder diskName(String diskName) {
+            return diskName(Output.of(diskName));
         }
+
         public Builder diskSizeGb(@Nullable Output<Integer> diskSizeGb) {
-            this.diskSizeGb = diskSizeGb;
+            $.diskSizeGb = diskSizeGb;
             return this;
         }
-        public Builder diskSizeGb(@Nullable Integer diskSizeGb) {
-            this.diskSizeGb = Codegen.ofNullable(diskSizeGb);
-            return this;
+
+        public Builder diskSizeGb(Integer diskSizeGb) {
+            return diskSizeGb(Output.of(diskSizeGb));
         }
+
         public Builder diskType(@Nullable Output<String> diskType) {
-            this.diskType = diskType;
+            $.diskType = diskType;
             return this;
         }
-        public Builder diskType(@Nullable String diskType) {
-            this.diskType = Codegen.ofNullable(diskType);
-            return this;
+
+        public Builder diskType(String diskType) {
+            return diskType(Output.of(diskType));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
-        }        public RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsArgs build() {
-            return new RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsArgs(description, diskName, diskSizeGb, diskType, labels);
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
+        }
+
+        public RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsArgs build() {
+            return $;
         }
     }
+
 }

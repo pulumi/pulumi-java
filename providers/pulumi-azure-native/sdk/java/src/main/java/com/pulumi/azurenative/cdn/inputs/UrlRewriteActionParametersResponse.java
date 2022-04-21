@@ -24,14 +24,14 @@ public final class UrlRewriteActionParametersResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="destination", required=true)
-      private final String destination;
+    private String destination;
 
     public String destination() {
         return this.destination;
     }
 
     @Import(name="odataType", required=true)
-      private final String odataType;
+    private String odataType;
 
     public String odataType() {
         return this.odataType;
@@ -42,10 +42,10 @@ public final class UrlRewriteActionParametersResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="preserveUnmatchedPath")
-      private final @Nullable Boolean preserveUnmatchedPath;
+    private @Nullable Boolean preserveUnmatchedPath;
 
     public Optional<Boolean> preserveUnmatchedPath() {
-        return this.preserveUnmatchedPath == null ? Optional.empty() : Optional.ofNullable(this.preserveUnmatchedPath);
+        return Optional.ofNullable(this.preserveUnmatchedPath);
     }
 
     /**
@@ -53,73 +53,65 @@ public final class UrlRewriteActionParametersResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="sourcePattern", required=true)
-      private final String sourcePattern;
+    private String sourcePattern;
 
     public String sourcePattern() {
         return this.sourcePattern;
     }
 
-    public UrlRewriteActionParametersResponse(
-        String destination,
-        String odataType,
-        @Nullable Boolean preserveUnmatchedPath,
-        String sourcePattern) {
-        this.destination = Objects.requireNonNull(destination, "expected parameter 'destination' to be non-null");
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
-        this.preserveUnmatchedPath = preserveUnmatchedPath;
-        this.sourcePattern = Objects.requireNonNull(sourcePattern, "expected parameter 'sourcePattern' to be non-null");
-    }
+    private UrlRewriteActionParametersResponse() {}
 
-    private UrlRewriteActionParametersResponse() {
-        this.destination = null;
-        this.odataType = null;
-        this.preserveUnmatchedPath = null;
-        this.sourcePattern = null;
+    private UrlRewriteActionParametersResponse(UrlRewriteActionParametersResponse $) {
+        this.destination = $.destination;
+        this.odataType = $.odataType;
+        this.preserveUnmatchedPath = $.preserveUnmatchedPath;
+        this.sourcePattern = $.sourcePattern;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UrlRewriteActionParametersResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String destination;
-        private String odataType;
-        private @Nullable Boolean preserveUnmatchedPath;
-        private String sourcePattern;
+        private UrlRewriteActionParametersResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UrlRewriteActionParametersResponse();
         }
 
         public Builder(UrlRewriteActionParametersResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destination = defaults.destination;
-    	      this.odataType = defaults.odataType;
-    	      this.preserveUnmatchedPath = defaults.preserveUnmatchedPath;
-    	      this.sourcePattern = defaults.sourcePattern;
+            $ = new UrlRewriteActionParametersResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder destination(String destination) {
-            this.destination = Objects.requireNonNull(destination);
+            $.destination = destination;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder preserveUnmatchedPath(@Nullable Boolean preserveUnmatchedPath) {
-            this.preserveUnmatchedPath = preserveUnmatchedPath;
+            $.preserveUnmatchedPath = preserveUnmatchedPath;
             return this;
         }
+
         public Builder sourcePattern(String sourcePattern) {
-            this.sourcePattern = Objects.requireNonNull(sourcePattern);
+            $.sourcePattern = sourcePattern;
             return this;
-        }        public UrlRewriteActionParametersResponse build() {
-            return new UrlRewriteActionParametersResponse(destination, odataType, preserveUnmatchedPath, sourcePattern);
+        }
+
+        public UrlRewriteActionParametersResponse build() {
+            $.destination = Objects.requireNonNull($.destination, "expected parameter 'destination' to be non-null");
+            $.odataType = Objects.requireNonNull($.odataType, "expected parameter 'odataType' to be non-null");
+            $.sourcePattern = Objects.requireNonNull($.sourcePattern, "expected parameter 'sourcePattern' to be non-null");
+            return $;
         }
     }
+
 }

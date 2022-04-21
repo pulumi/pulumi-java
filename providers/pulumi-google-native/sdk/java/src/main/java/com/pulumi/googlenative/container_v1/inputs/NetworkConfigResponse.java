@@ -25,7 +25,7 @@ public final class NetworkConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="datapathProvider", required=true)
-      private final String datapathProvider;
+    private String datapathProvider;
 
     public String datapathProvider() {
         return this.datapathProvider;
@@ -36,7 +36,7 @@ public final class NetworkConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="defaultSnatStatus", required=true)
-      private final DefaultSnatStatusResponse defaultSnatStatus;
+    private DefaultSnatStatusResponse defaultSnatStatus;
 
     public DefaultSnatStatusResponse defaultSnatStatus() {
         return this.defaultSnatStatus;
@@ -47,7 +47,7 @@ public final class NetworkConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="dnsConfig", required=true)
-      private final DNSConfigResponse dnsConfig;
+    private DNSConfigResponse dnsConfig;
 
     public DNSConfigResponse dnsConfig() {
         return this.dnsConfig;
@@ -58,7 +58,7 @@ public final class NetworkConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="enableIntraNodeVisibility", required=true)
-      private final Boolean enableIntraNodeVisibility;
+    private Boolean enableIntraNodeVisibility;
 
     public Boolean enableIntraNodeVisibility() {
         return this.enableIntraNodeVisibility;
@@ -69,7 +69,7 @@ public final class NetworkConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="enableL4ilbSubsetting", required=true)
-      private final Boolean enableL4ilbSubsetting;
+    private Boolean enableL4ilbSubsetting;
 
     public Boolean enableL4ilbSubsetting() {
         return this.enableL4ilbSubsetting;
@@ -80,7 +80,7 @@ public final class NetworkConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="network", required=true)
-      private final String network;
+    private String network;
 
     public String network() {
         return this.network;
@@ -91,7 +91,7 @@ public final class NetworkConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="privateIpv6GoogleAccess", required=true)
-      private final String privateIpv6GoogleAccess;
+    private String privateIpv6GoogleAccess;
 
     public String privateIpv6GoogleAccess() {
         return this.privateIpv6GoogleAccess;
@@ -102,7 +102,7 @@ public final class NetworkConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="serviceExternalIpsConfig", required=true)
-      private final ServiceExternalIPsConfigResponse serviceExternalIpsConfig;
+    private ServiceExternalIPsConfigResponse serviceExternalIpsConfig;
 
     public ServiceExternalIPsConfigResponse serviceExternalIpsConfig() {
         return this.serviceExternalIpsConfig;
@@ -113,118 +113,101 @@ public final class NetworkConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="subnetwork", required=true)
-      private final String subnetwork;
+    private String subnetwork;
 
     public String subnetwork() {
         return this.subnetwork;
     }
 
-    public NetworkConfigResponse(
-        String datapathProvider,
-        DefaultSnatStatusResponse defaultSnatStatus,
-        DNSConfigResponse dnsConfig,
-        Boolean enableIntraNodeVisibility,
-        Boolean enableL4ilbSubsetting,
-        String network,
-        String privateIpv6GoogleAccess,
-        ServiceExternalIPsConfigResponse serviceExternalIpsConfig,
-        String subnetwork) {
-        this.datapathProvider = Objects.requireNonNull(datapathProvider, "expected parameter 'datapathProvider' to be non-null");
-        this.defaultSnatStatus = Objects.requireNonNull(defaultSnatStatus, "expected parameter 'defaultSnatStatus' to be non-null");
-        this.dnsConfig = Objects.requireNonNull(dnsConfig, "expected parameter 'dnsConfig' to be non-null");
-        this.enableIntraNodeVisibility = Objects.requireNonNull(enableIntraNodeVisibility, "expected parameter 'enableIntraNodeVisibility' to be non-null");
-        this.enableL4ilbSubsetting = Objects.requireNonNull(enableL4ilbSubsetting, "expected parameter 'enableL4ilbSubsetting' to be non-null");
-        this.network = Objects.requireNonNull(network, "expected parameter 'network' to be non-null");
-        this.privateIpv6GoogleAccess = Objects.requireNonNull(privateIpv6GoogleAccess, "expected parameter 'privateIpv6GoogleAccess' to be non-null");
-        this.serviceExternalIpsConfig = Objects.requireNonNull(serviceExternalIpsConfig, "expected parameter 'serviceExternalIpsConfig' to be non-null");
-        this.subnetwork = Objects.requireNonNull(subnetwork, "expected parameter 'subnetwork' to be non-null");
-    }
+    private NetworkConfigResponse() {}
 
-    private NetworkConfigResponse() {
-        this.datapathProvider = null;
-        this.defaultSnatStatus = null;
-        this.dnsConfig = null;
-        this.enableIntraNodeVisibility = null;
-        this.enableL4ilbSubsetting = null;
-        this.network = null;
-        this.privateIpv6GoogleAccess = null;
-        this.serviceExternalIpsConfig = null;
-        this.subnetwork = null;
+    private NetworkConfigResponse(NetworkConfigResponse $) {
+        this.datapathProvider = $.datapathProvider;
+        this.defaultSnatStatus = $.defaultSnatStatus;
+        this.dnsConfig = $.dnsConfig;
+        this.enableIntraNodeVisibility = $.enableIntraNodeVisibility;
+        this.enableL4ilbSubsetting = $.enableL4ilbSubsetting;
+        this.network = $.network;
+        this.privateIpv6GoogleAccess = $.privateIpv6GoogleAccess;
+        this.serviceExternalIpsConfig = $.serviceExternalIpsConfig;
+        this.subnetwork = $.subnetwork;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String datapathProvider;
-        private DefaultSnatStatusResponse defaultSnatStatus;
-        private DNSConfigResponse dnsConfig;
-        private Boolean enableIntraNodeVisibility;
-        private Boolean enableL4ilbSubsetting;
-        private String network;
-        private String privateIpv6GoogleAccess;
-        private ServiceExternalIPsConfigResponse serviceExternalIpsConfig;
-        private String subnetwork;
+        private NetworkConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkConfigResponse();
         }
 
         public Builder(NetworkConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datapathProvider = defaults.datapathProvider;
-    	      this.defaultSnatStatus = defaults.defaultSnatStatus;
-    	      this.dnsConfig = defaults.dnsConfig;
-    	      this.enableIntraNodeVisibility = defaults.enableIntraNodeVisibility;
-    	      this.enableL4ilbSubsetting = defaults.enableL4ilbSubsetting;
-    	      this.network = defaults.network;
-    	      this.privateIpv6GoogleAccess = defaults.privateIpv6GoogleAccess;
-    	      this.serviceExternalIpsConfig = defaults.serviceExternalIpsConfig;
-    	      this.subnetwork = defaults.subnetwork;
+            $ = new NetworkConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder datapathProvider(String datapathProvider) {
-            this.datapathProvider = Objects.requireNonNull(datapathProvider);
+            $.datapathProvider = datapathProvider;
             return this;
         }
+
         public Builder defaultSnatStatus(DefaultSnatStatusResponse defaultSnatStatus) {
-            this.defaultSnatStatus = Objects.requireNonNull(defaultSnatStatus);
+            $.defaultSnatStatus = defaultSnatStatus;
             return this;
         }
+
         public Builder dnsConfig(DNSConfigResponse dnsConfig) {
-            this.dnsConfig = Objects.requireNonNull(dnsConfig);
+            $.dnsConfig = dnsConfig;
             return this;
         }
+
         public Builder enableIntraNodeVisibility(Boolean enableIntraNodeVisibility) {
-            this.enableIntraNodeVisibility = Objects.requireNonNull(enableIntraNodeVisibility);
+            $.enableIntraNodeVisibility = enableIntraNodeVisibility;
             return this;
         }
+
         public Builder enableL4ilbSubsetting(Boolean enableL4ilbSubsetting) {
-            this.enableL4ilbSubsetting = Objects.requireNonNull(enableL4ilbSubsetting);
+            $.enableL4ilbSubsetting = enableL4ilbSubsetting;
             return this;
         }
+
         public Builder network(String network) {
-            this.network = Objects.requireNonNull(network);
+            $.network = network;
             return this;
         }
+
         public Builder privateIpv6GoogleAccess(String privateIpv6GoogleAccess) {
-            this.privateIpv6GoogleAccess = Objects.requireNonNull(privateIpv6GoogleAccess);
+            $.privateIpv6GoogleAccess = privateIpv6GoogleAccess;
             return this;
         }
+
         public Builder serviceExternalIpsConfig(ServiceExternalIPsConfigResponse serviceExternalIpsConfig) {
-            this.serviceExternalIpsConfig = Objects.requireNonNull(serviceExternalIpsConfig);
+            $.serviceExternalIpsConfig = serviceExternalIpsConfig;
             return this;
         }
+
         public Builder subnetwork(String subnetwork) {
-            this.subnetwork = Objects.requireNonNull(subnetwork);
+            $.subnetwork = subnetwork;
             return this;
-        }        public NetworkConfigResponse build() {
-            return new NetworkConfigResponse(datapathProvider, defaultSnatStatus, dnsConfig, enableIntraNodeVisibility, enableL4ilbSubsetting, network, privateIpv6GoogleAccess, serviceExternalIpsConfig, subnetwork);
+        }
+
+        public NetworkConfigResponse build() {
+            $.datapathProvider = Objects.requireNonNull($.datapathProvider, "expected parameter 'datapathProvider' to be non-null");
+            $.defaultSnatStatus = Objects.requireNonNull($.defaultSnatStatus, "expected parameter 'defaultSnatStatus' to be non-null");
+            $.dnsConfig = Objects.requireNonNull($.dnsConfig, "expected parameter 'dnsConfig' to be non-null");
+            $.enableIntraNodeVisibility = Objects.requireNonNull($.enableIntraNodeVisibility, "expected parameter 'enableIntraNodeVisibility' to be non-null");
+            $.enableL4ilbSubsetting = Objects.requireNonNull($.enableL4ilbSubsetting, "expected parameter 'enableL4ilbSubsetting' to be non-null");
+            $.network = Objects.requireNonNull($.network, "expected parameter 'network' to be non-null");
+            $.privateIpv6GoogleAccess = Objects.requireNonNull($.privateIpv6GoogleAccess, "expected parameter 'privateIpv6GoogleAccess' to be non-null");
+            $.serviceExternalIpsConfig = Objects.requireNonNull($.serviceExternalIpsConfig, "expected parameter 'serviceExternalIpsConfig' to be non-null");
+            $.subnetwork = Objects.requireNonNull($.subnetwork, "expected parameter 'subnetwork' to be non-null");
+            return $;
         }
     }
+
 }

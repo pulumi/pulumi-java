@@ -22,10 +22,10 @@ public final class GetCoipPoolsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters")
-      private final @Nullable List<GetCoipPoolsFilter> filters;
+    private @Nullable List<GetCoipPoolsFilter> filters;
 
-    public List<GetCoipPoolsFilter> filters() {
-        return this.filters == null ? List.of() : this.filters;
+    public Optional<List<GetCoipPoolsFilter>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -34,58 +34,54 @@ public final class GetCoipPoolsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetCoipPoolsArgs(
-        @Nullable List<GetCoipPoolsFilter> filters,
-        @Nullable Map<String,String> tags) {
-        this.filters = filters;
-        this.tags = tags;
-    }
+    private GetCoipPoolsArgs() {}
 
-    private GetCoipPoolsArgs() {
-        this.filters = List.of();
-        this.tags = Map.of();
+    private GetCoipPoolsArgs(GetCoipPoolsArgs $) {
+        this.filters = $.filters;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCoipPoolsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<GetCoipPoolsFilter> filters;
-        private @Nullable Map<String,String> tags;
+        private GetCoipPoolsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCoipPoolsArgs();
         }
 
         public Builder(GetCoipPoolsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filters = defaults.filters;
-    	      this.tags = defaults.tags;
+            $ = new GetCoipPoolsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filters(@Nullable List<GetCoipPoolsFilter> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(GetCoipPoolsFilter... filters) {
             return filters(List.of(filters));
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetCoipPoolsArgs build() {
-            return new GetCoipPoolsArgs(filters, tags);
+        }
+
+        public GetCoipPoolsArgs build() {
+            return $;
         }
     }
+
 }

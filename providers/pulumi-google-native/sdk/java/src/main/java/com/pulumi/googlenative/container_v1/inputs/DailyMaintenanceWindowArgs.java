@@ -5,9 +5,9 @@ package com.pulumi.googlenative.container_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class DailyMaintenanceWindowArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="startTime")
-      private final @Nullable Output<String> startTime;
+    private @Nullable Output<String> startTime;
 
-    public Output<String> startTime() {
-        return this.startTime == null ? Codegen.empty() : this.startTime;
+    public Optional<Output<String>> startTime() {
+        return Optional.ofNullable(this.startTime);
     }
 
-    public DailyMaintenanceWindowArgs(@Nullable Output<String> startTime) {
-        this.startTime = startTime;
-    }
+    private DailyMaintenanceWindowArgs() {}
 
-    private DailyMaintenanceWindowArgs() {
-        this.startTime = Codegen.empty();
+    private DailyMaintenanceWindowArgs(DailyMaintenanceWindowArgs $) {
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DailyMaintenanceWindowArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> startTime;
+        private DailyMaintenanceWindowArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DailyMaintenanceWindowArgs();
         }
 
         public Builder(DailyMaintenanceWindowArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.startTime = defaults.startTime;
+            $ = new DailyMaintenanceWindowArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder startTime(@Nullable Output<String> startTime) {
-            this.startTime = startTime;
+            $.startTime = startTime;
             return this;
         }
-        public Builder startTime(@Nullable String startTime) {
-            this.startTime = Codegen.ofNullable(startTime);
-            return this;
-        }        public DailyMaintenanceWindowArgs build() {
-            return new DailyMaintenanceWindowArgs(startTime);
+
+        public Builder startTime(String startTime) {
+            return startTime(Output.of(startTime));
+        }
+
+        public DailyMaintenanceWindowArgs build() {
+            return $;
         }
     }
+
 }

@@ -6,10 +6,10 @@ package com.pulumi.awsnative.resourcegroups.inputs;
 import com.pulumi.awsnative.resourcegroups.inputs.GroupConfigurationParameterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,73 +18,69 @@ public final class GroupConfigurationItemArgs extends com.pulumi.resources.Resou
     public static final GroupConfigurationItemArgs Empty = new GroupConfigurationItemArgs();
 
     @Import(name="parameters")
-      private final @Nullable Output<List<GroupConfigurationParameterArgs>> parameters;
+    private @Nullable Output<List<GroupConfigurationParameterArgs>> parameters;
 
-    public Output<List<GroupConfigurationParameterArgs>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<List<GroupConfigurationParameterArgs>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public GroupConfigurationItemArgs(
-        @Nullable Output<List<GroupConfigurationParameterArgs>> parameters,
-        @Nullable Output<String> type) {
-        this.parameters = parameters;
-        this.type = type;
-    }
+    private GroupConfigurationItemArgs() {}
 
-    private GroupConfigurationItemArgs() {
-        this.parameters = Codegen.empty();
-        this.type = Codegen.empty();
+    private GroupConfigurationItemArgs(GroupConfigurationItemArgs $) {
+        this.parameters = $.parameters;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GroupConfigurationItemArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<GroupConfigurationParameterArgs>> parameters;
-        private @Nullable Output<String> type;
+        private GroupConfigurationItemArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GroupConfigurationItemArgs();
         }
 
         public Builder(GroupConfigurationItemArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.parameters = defaults.parameters;
-    	      this.type = defaults.type;
+            $ = new GroupConfigurationItemArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder parameters(@Nullable Output<List<GroupConfigurationParameterArgs>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable List<GroupConfigurationParameterArgs> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(List<GroupConfigurationParameterArgs> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder parameters(GroupConfigurationParameterArgs... parameters) {
             return parameters(List.of(parameters));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public GroupConfigurationItemArgs build() {
-            return new GroupConfigurationItemArgs(parameters, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public GroupConfigurationItemArgs build() {
+            return $;
         }
     }
+
 }

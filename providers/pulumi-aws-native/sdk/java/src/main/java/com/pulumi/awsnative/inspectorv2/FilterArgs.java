@@ -7,9 +7,9 @@ import com.pulumi.awsnative.inspectorv2.enums.FilterAction;
 import com.pulumi.awsnative.inspectorv2.inputs.FilterCriteriaArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class FilterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class FilterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="filterAction", required=true)
-      private final Output<FilterAction> filterAction;
+    private Output<FilterAction> filterAction;
 
     public Output<FilterAction> filterAction() {
         return this.filterAction;
@@ -44,7 +44,7 @@ public final class FilterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="filterCriteria", required=true)
-      private final Output<FilterCriteriaArgs> filterCriteria;
+    private Output<FilterCriteriaArgs> filterCriteria;
 
     public Output<FilterCriteriaArgs> filterCriteria() {
         return this.filterCriteria;
@@ -55,89 +55,80 @@ public final class FilterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public FilterArgs(
-        @Nullable Output<String> description,
-        Output<FilterAction> filterAction,
-        Output<FilterCriteriaArgs> filterCriteria,
-        @Nullable Output<String> name) {
-        this.description = description;
-        this.filterAction = Objects.requireNonNull(filterAction, "expected parameter 'filterAction' to be non-null");
-        this.filterCriteria = Objects.requireNonNull(filterCriteria, "expected parameter 'filterCriteria' to be non-null");
-        this.name = name;
-    }
+    private FilterArgs() {}
 
-    private FilterArgs() {
-        this.description = Codegen.empty();
-        this.filterAction = Codegen.empty();
-        this.filterCriteria = Codegen.empty();
-        this.name = Codegen.empty();
+    private FilterArgs(FilterArgs $) {
+        this.description = $.description;
+        this.filterAction = $.filterAction;
+        this.filterCriteria = $.filterCriteria;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FilterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private Output<FilterAction> filterAction;
-        private Output<FilterCriteriaArgs> filterCriteria;
-        private @Nullable Output<String> name;
+        private FilterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FilterArgs();
         }
 
         public Builder(FilterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.filterAction = defaults.filterAction;
-    	      this.filterCriteria = defaults.filterCriteria;
-    	      this.name = defaults.name;
+            $ = new FilterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder filterAction(Output<FilterAction> filterAction) {
-            this.filterAction = Objects.requireNonNull(filterAction);
+            $.filterAction = filterAction;
             return this;
         }
+
         public Builder filterAction(FilterAction filterAction) {
-            this.filterAction = Output.of(Objects.requireNonNull(filterAction));
-            return this;
+            return filterAction(Output.of(filterAction));
         }
+
         public Builder filterCriteria(Output<FilterCriteriaArgs> filterCriteria) {
-            this.filterCriteria = Objects.requireNonNull(filterCriteria);
+            $.filterCriteria = filterCriteria;
             return this;
         }
+
         public Builder filterCriteria(FilterCriteriaArgs filterCriteria) {
-            this.filterCriteria = Output.of(Objects.requireNonNull(filterCriteria));
-            return this;
+            return filterCriteria(Output.of(filterCriteria));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public FilterArgs build() {
-            return new FilterArgs(description, filterAction, filterCriteria, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public FilterArgs build() {
+            $.filterAction = Objects.requireNonNull($.filterAction, "expected parameter 'filterAction' to be non-null");
+            $.filterCriteria = Objects.requireNonNull($.filterCriteria, "expected parameter 'filterCriteria' to be non-null");
+            return $;
         }
     }
+
 }

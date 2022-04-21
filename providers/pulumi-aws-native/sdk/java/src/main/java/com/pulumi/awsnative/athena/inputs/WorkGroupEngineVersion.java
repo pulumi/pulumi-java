@@ -19,62 +19,57 @@ public final class WorkGroupEngineVersion extends com.pulumi.resources.InvokeArg
     public static final WorkGroupEngineVersion Empty = new WorkGroupEngineVersion();
 
     @Import(name="effectiveEngineVersion")
-      private final @Nullable String effectiveEngineVersion;
+    private @Nullable String effectiveEngineVersion;
 
     public Optional<String> effectiveEngineVersion() {
-        return this.effectiveEngineVersion == null ? Optional.empty() : Optional.ofNullable(this.effectiveEngineVersion);
+        return Optional.ofNullable(this.effectiveEngineVersion);
     }
 
     @Import(name="selectedEngineVersion")
-      private final @Nullable String selectedEngineVersion;
+    private @Nullable String selectedEngineVersion;
 
     public Optional<String> selectedEngineVersion() {
-        return this.selectedEngineVersion == null ? Optional.empty() : Optional.ofNullable(this.selectedEngineVersion);
+        return Optional.ofNullable(this.selectedEngineVersion);
     }
 
-    public WorkGroupEngineVersion(
-        @Nullable String effectiveEngineVersion,
-        @Nullable String selectedEngineVersion) {
-        this.effectiveEngineVersion = effectiveEngineVersion;
-        this.selectedEngineVersion = selectedEngineVersion;
-    }
+    private WorkGroupEngineVersion() {}
 
-    private WorkGroupEngineVersion() {
-        this.effectiveEngineVersion = null;
-        this.selectedEngineVersion = null;
+    private WorkGroupEngineVersion(WorkGroupEngineVersion $) {
+        this.effectiveEngineVersion = $.effectiveEngineVersion;
+        this.selectedEngineVersion = $.selectedEngineVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkGroupEngineVersion defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String effectiveEngineVersion;
-        private @Nullable String selectedEngineVersion;
+        private WorkGroupEngineVersion $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkGroupEngineVersion();
         }
 
         public Builder(WorkGroupEngineVersion defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.effectiveEngineVersion = defaults.effectiveEngineVersion;
-    	      this.selectedEngineVersion = defaults.selectedEngineVersion;
+            $ = new WorkGroupEngineVersion(Objects.requireNonNull(defaults));
         }
 
         public Builder effectiveEngineVersion(@Nullable String effectiveEngineVersion) {
-            this.effectiveEngineVersion = effectiveEngineVersion;
+            $.effectiveEngineVersion = effectiveEngineVersion;
             return this;
         }
+
         public Builder selectedEngineVersion(@Nullable String selectedEngineVersion) {
-            this.selectedEngineVersion = selectedEngineVersion;
+            $.selectedEngineVersion = selectedEngineVersion;
             return this;
-        }        public WorkGroupEngineVersion build() {
-            return new WorkGroupEngineVersion(effectiveEngineVersion, selectedEngineVersion);
+        }
+
+        public WorkGroupEngineVersion build() {
+            return $;
         }
     }
+
 }

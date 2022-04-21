@@ -23,49 +23,49 @@ public final class ConnectedClusterIdentityArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="type", required=true)
-      private final Output<ResourceIdentityType> type;
+    private Output<ResourceIdentityType> type;
 
     public Output<ResourceIdentityType> type() {
         return this.type;
     }
 
-    public ConnectedClusterIdentityArgs(Output<ResourceIdentityType> type) {
-        this.type = Codegen.objectProp("type", ResourceIdentityType.class).output().arg(type).def(ResourceIdentityType.SystemAssigned).require();
-    }
+    private ConnectedClusterIdentityArgs() {}
 
-    private ConnectedClusterIdentityArgs() {
-        this.type = Codegen.empty();
+    private ConnectedClusterIdentityArgs(ConnectedClusterIdentityArgs $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectedClusterIdentityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ResourceIdentityType> type;
+        private ConnectedClusterIdentityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectedClusterIdentityArgs();
         }
 
         public Builder(ConnectedClusterIdentityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new ConnectedClusterIdentityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(Output<ResourceIdentityType> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(ResourceIdentityType type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public ConnectedClusterIdentityArgs build() {
-            return new ConnectedClusterIdentityArgs(type);
+            return type(Output.of(type));
+        }
+
+        public ConnectedClusterIdentityArgs build() {
+            $.type = Codegen.objectProp("type", ResourceIdentityType.class).output().arg($.type).def(ResourceIdentityType.SystemAssigned).require();
+            return $;
         }
     }
+
 }

@@ -8,10 +8,10 @@ import com.pulumi.azurenative.healthcareapis.inputs.IotMappingPropertiesArgs;
 import com.pulumi.azurenative.healthcareapis.inputs.ServiceManagedIdentityIdentityArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class IotConnectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deviceMapping")
-      private final @Nullable Output<IotMappingPropertiesArgs> deviceMapping;
+    private @Nullable Output<IotMappingPropertiesArgs> deviceMapping;
 
-    public Output<IotMappingPropertiesArgs> deviceMapping() {
-        return this.deviceMapping == null ? Codegen.empty() : this.deviceMapping;
+    public Optional<Output<IotMappingPropertiesArgs>> deviceMapping() {
+        return Optional.ofNullable(this.deviceMapping);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class IotConnectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="identity")
-      private final @Nullable Output<ServiceManagedIdentityIdentityArgs> identity;
+    private @Nullable Output<ServiceManagedIdentityIdentityArgs> identity;
 
-    public Output<ServiceManagedIdentityIdentityArgs> identity() {
-        return this.identity == null ? Codegen.empty() : this.identity;
+    public Optional<Output<ServiceManagedIdentityIdentityArgs>> identity() {
+        return Optional.ofNullable(this.identity);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class IotConnectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ingestionEndpointConfiguration")
-      private final @Nullable Output<IotEventHubIngestionEndpointConfigurationArgs> ingestionEndpointConfiguration;
+    private @Nullable Output<IotEventHubIngestionEndpointConfigurationArgs> ingestionEndpointConfiguration;
 
-    public Output<IotEventHubIngestionEndpointConfigurationArgs> ingestionEndpointConfiguration() {
-        return this.ingestionEndpointConfiguration == null ? Codegen.empty() : this.ingestionEndpointConfiguration;
+    public Optional<Output<IotEventHubIngestionEndpointConfigurationArgs>> ingestionEndpointConfiguration() {
+        return Optional.ofNullable(this.ingestionEndpointConfiguration);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class IotConnectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="iotConnectorName")
-      private final @Nullable Output<String> iotConnectorName;
+    private @Nullable Output<String> iotConnectorName;
 
-    public Output<String> iotConnectorName() {
-        return this.iotConnectorName == null ? Codegen.empty() : this.iotConnectorName;
+    public Optional<Output<String>> iotConnectorName() {
+        return Optional.ofNullable(this.iotConnectorName);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class IotConnectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -79,7 +79,7 @@ public final class IotConnectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -90,10 +90,10 @@ public final class IotConnectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -101,141 +101,120 @@ public final class IotConnectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final Output<String> workspaceName;
+    private Output<String> workspaceName;
 
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
-    public IotConnectorArgs(
-        @Nullable Output<IotMappingPropertiesArgs> deviceMapping,
-        @Nullable Output<ServiceManagedIdentityIdentityArgs> identity,
-        @Nullable Output<IotEventHubIngestionEndpointConfigurationArgs> ingestionEndpointConfiguration,
-        @Nullable Output<String> iotConnectorName,
-        @Nullable Output<String> location,
-        Output<String> resourceGroupName,
-        @Nullable Output<Map<String,String>> tags,
-        Output<String> workspaceName) {
-        this.deviceMapping = deviceMapping;
-        this.identity = identity;
-        this.ingestionEndpointConfiguration = ingestionEndpointConfiguration;
-        this.iotConnectorName = iotConnectorName;
-        this.location = location;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tags = tags;
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private IotConnectorArgs() {}
 
-    private IotConnectorArgs() {
-        this.deviceMapping = Codegen.empty();
-        this.identity = Codegen.empty();
-        this.ingestionEndpointConfiguration = Codegen.empty();
-        this.iotConnectorName = Codegen.empty();
-        this.location = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.workspaceName = Codegen.empty();
+    private IotConnectorArgs(IotConnectorArgs $) {
+        this.deviceMapping = $.deviceMapping;
+        this.identity = $.identity;
+        this.ingestionEndpointConfiguration = $.ingestionEndpointConfiguration;
+        this.iotConnectorName = $.iotConnectorName;
+        this.location = $.location;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tags = $.tags;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IotConnectorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<IotMappingPropertiesArgs> deviceMapping;
-        private @Nullable Output<ServiceManagedIdentityIdentityArgs> identity;
-        private @Nullable Output<IotEventHubIngestionEndpointConfigurationArgs> ingestionEndpointConfiguration;
-        private @Nullable Output<String> iotConnectorName;
-        private @Nullable Output<String> location;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Map<String,String>> tags;
-        private Output<String> workspaceName;
+        private IotConnectorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IotConnectorArgs();
         }
 
         public Builder(IotConnectorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deviceMapping = defaults.deviceMapping;
-    	      this.identity = defaults.identity;
-    	      this.ingestionEndpointConfiguration = defaults.ingestionEndpointConfiguration;
-    	      this.iotConnectorName = defaults.iotConnectorName;
-    	      this.location = defaults.location;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tags = defaults.tags;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new IotConnectorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deviceMapping(@Nullable Output<IotMappingPropertiesArgs> deviceMapping) {
-            this.deviceMapping = deviceMapping;
+            $.deviceMapping = deviceMapping;
             return this;
         }
-        public Builder deviceMapping(@Nullable IotMappingPropertiesArgs deviceMapping) {
-            this.deviceMapping = Codegen.ofNullable(deviceMapping);
-            return this;
+
+        public Builder deviceMapping(IotMappingPropertiesArgs deviceMapping) {
+            return deviceMapping(Output.of(deviceMapping));
         }
+
         public Builder identity(@Nullable Output<ServiceManagedIdentityIdentityArgs> identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
         }
-        public Builder identity(@Nullable ServiceManagedIdentityIdentityArgs identity) {
-            this.identity = Codegen.ofNullable(identity);
-            return this;
+
+        public Builder identity(ServiceManagedIdentityIdentityArgs identity) {
+            return identity(Output.of(identity));
         }
+
         public Builder ingestionEndpointConfiguration(@Nullable Output<IotEventHubIngestionEndpointConfigurationArgs> ingestionEndpointConfiguration) {
-            this.ingestionEndpointConfiguration = ingestionEndpointConfiguration;
+            $.ingestionEndpointConfiguration = ingestionEndpointConfiguration;
             return this;
         }
-        public Builder ingestionEndpointConfiguration(@Nullable IotEventHubIngestionEndpointConfigurationArgs ingestionEndpointConfiguration) {
-            this.ingestionEndpointConfiguration = Codegen.ofNullable(ingestionEndpointConfiguration);
-            return this;
+
+        public Builder ingestionEndpointConfiguration(IotEventHubIngestionEndpointConfigurationArgs ingestionEndpointConfiguration) {
+            return ingestionEndpointConfiguration(Output.of(ingestionEndpointConfiguration));
         }
+
         public Builder iotConnectorName(@Nullable Output<String> iotConnectorName) {
-            this.iotConnectorName = iotConnectorName;
+            $.iotConnectorName = iotConnectorName;
             return this;
         }
-        public Builder iotConnectorName(@Nullable String iotConnectorName) {
-            this.iotConnectorName = Codegen.ofNullable(iotConnectorName);
-            return this;
+
+        public Builder iotConnectorName(String iotConnectorName) {
+            return iotConnectorName(Output.of(iotConnectorName));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder workspaceName(Output<String> workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
-            return this;
-        }        public IotConnectorArgs build() {
-            return new IotConnectorArgs(deviceMapping, identity, ingestionEndpointConfiguration, iotConnectorName, location, resourceGroupName, tags, workspaceName);
+            return workspaceName(Output.of(workspaceName));
+        }
+
+        public IotConnectorArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

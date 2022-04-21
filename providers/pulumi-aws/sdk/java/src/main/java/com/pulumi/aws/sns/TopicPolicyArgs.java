@@ -5,7 +5,6 @@ package com.pulumi.aws.sns;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class TopicPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn", required=true)
-      private final Output<String> arn;
+    private Output<String> arn;
 
     public Output<String> arn() {
         return this.arn;
@@ -30,63 +29,60 @@ public final class TopicPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="policy", required=true)
-      private final Output<String> policy;
+    private Output<String> policy;
 
     public Output<String> policy() {
         return this.policy;
     }
 
-    public TopicPolicyArgs(
-        Output<String> arn,
-        Output<String> policy) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-        this.policy = Objects.requireNonNull(policy, "expected parameter 'policy' to be non-null");
-    }
+    private TopicPolicyArgs() {}
 
-    private TopicPolicyArgs() {
-        this.arn = Codegen.empty();
-        this.policy = Codegen.empty();
+    private TopicPolicyArgs(TopicPolicyArgs $) {
+        this.arn = $.arn;
+        this.policy = $.policy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> arn;
-        private Output<String> policy;
+        private TopicPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicPolicyArgs();
         }
 
         public Builder(TopicPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.policy = defaults.policy;
+            $ = new TopicPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(Output<String> arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
         }
+
         public Builder arn(String arn) {
-            this.arn = Output.of(Objects.requireNonNull(arn));
-            return this;
+            return arn(Output.of(arn));
         }
+
         public Builder policy(Output<String> policy) {
-            this.policy = Objects.requireNonNull(policy);
+            $.policy = policy;
             return this;
         }
+
         public Builder policy(String policy) {
-            this.policy = Output.of(Objects.requireNonNull(policy));
-            return this;
-        }        public TopicPolicyArgs build() {
-            return new TopicPolicyArgs(arn, policy);
+            return policy(Output.of(policy));
+        }
+
+        public TopicPolicyArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            $.policy = Objects.requireNonNull($.policy, "expected parameter 'policy' to be non-null");
+            return $;
         }
     }
+
 }

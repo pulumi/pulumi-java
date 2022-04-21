@@ -26,10 +26,10 @@ public final class ForwardingConfigurationResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="backendPool")
-      private final @Nullable SubResourceResponse backendPool;
+    private @Nullable SubResourceResponse backendPool;
 
     public Optional<SubResourceResponse> backendPool() {
-        return this.backendPool == null ? Optional.empty() : Optional.ofNullable(this.backendPool);
+        return Optional.ofNullable(this.backendPool);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ForwardingConfigurationResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="cacheConfiguration")
-      private final @Nullable CacheConfigurationResponse cacheConfiguration;
+    private @Nullable CacheConfigurationResponse cacheConfiguration;
 
     public Optional<CacheConfigurationResponse> cacheConfiguration() {
-        return this.cacheConfiguration == null ? Optional.empty() : Optional.ofNullable(this.cacheConfiguration);
+        return Optional.ofNullable(this.cacheConfiguration);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ForwardingConfigurationResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="customForwardingPath")
-      private final @Nullable String customForwardingPath;
+    private @Nullable String customForwardingPath;
 
     public Optional<String> customForwardingPath() {
-        return this.customForwardingPath == null ? Optional.empty() : Optional.ofNullable(this.customForwardingPath);
+        return Optional.ofNullable(this.customForwardingPath);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ForwardingConfigurationResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="forwardingProtocol")
-      private final @Nullable String forwardingProtocol;
+    private @Nullable String forwardingProtocol;
 
     public Optional<String> forwardingProtocol() {
-        return this.forwardingProtocol == null ? Optional.empty() : Optional.ofNullable(this.forwardingProtocol);
+        return Optional.ofNullable(this.forwardingProtocol);
     }
 
     /**
@@ -70,82 +70,69 @@ public final class ForwardingConfigurationResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="odataType", required=true)
-      private final String odataType;
+    private String odataType;
 
     public String odataType() {
         return this.odataType;
     }
 
-    public ForwardingConfigurationResponse(
-        @Nullable SubResourceResponse backendPool,
-        @Nullable CacheConfigurationResponse cacheConfiguration,
-        @Nullable String customForwardingPath,
-        @Nullable String forwardingProtocol,
-        String odataType) {
-        this.backendPool = backendPool;
-        this.cacheConfiguration = cacheConfiguration;
-        this.customForwardingPath = customForwardingPath;
-        this.forwardingProtocol = forwardingProtocol;
-        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
-    }
+    private ForwardingConfigurationResponse() {}
 
-    private ForwardingConfigurationResponse() {
-        this.backendPool = null;
-        this.cacheConfiguration = null;
-        this.customForwardingPath = null;
-        this.forwardingProtocol = null;
-        this.odataType = null;
+    private ForwardingConfigurationResponse(ForwardingConfigurationResponse $) {
+        this.backendPool = $.backendPool;
+        this.cacheConfiguration = $.cacheConfiguration;
+        this.customForwardingPath = $.customForwardingPath;
+        this.forwardingProtocol = $.forwardingProtocol;
+        this.odataType = $.odataType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ForwardingConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable SubResourceResponse backendPool;
-        private @Nullable CacheConfigurationResponse cacheConfiguration;
-        private @Nullable String customForwardingPath;
-        private @Nullable String forwardingProtocol;
-        private String odataType;
+        private ForwardingConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ForwardingConfigurationResponse();
         }
 
         public Builder(ForwardingConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backendPool = defaults.backendPool;
-    	      this.cacheConfiguration = defaults.cacheConfiguration;
-    	      this.customForwardingPath = defaults.customForwardingPath;
-    	      this.forwardingProtocol = defaults.forwardingProtocol;
-    	      this.odataType = defaults.odataType;
+            $ = new ForwardingConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder backendPool(@Nullable SubResourceResponse backendPool) {
-            this.backendPool = backendPool;
+            $.backendPool = backendPool;
             return this;
         }
+
         public Builder cacheConfiguration(@Nullable CacheConfigurationResponse cacheConfiguration) {
-            this.cacheConfiguration = cacheConfiguration;
+            $.cacheConfiguration = cacheConfiguration;
             return this;
         }
+
         public Builder customForwardingPath(@Nullable String customForwardingPath) {
-            this.customForwardingPath = customForwardingPath;
+            $.customForwardingPath = customForwardingPath;
             return this;
         }
+
         public Builder forwardingProtocol(@Nullable String forwardingProtocol) {
-            this.forwardingProtocol = forwardingProtocol;
+            $.forwardingProtocol = forwardingProtocol;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
-        }        public ForwardingConfigurationResponse build() {
-            return new ForwardingConfigurationResponse(backendPool, cacheConfiguration, customForwardingPath, forwardingProtocol, odataType);
+        }
+
+        public ForwardingConfigurationResponse build() {
+            $.odataType = Codegen.stringProp("odataType").arg($.odataType).require();
+            return $;
         }
     }
+
 }

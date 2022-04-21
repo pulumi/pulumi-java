@@ -5,9 +5,9 @@ package com.pulumi.azurenative.web.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ApiResourceDefinitionsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="modifiedSwaggerUrl")
-      private final @Nullable Output<String> modifiedSwaggerUrl;
+    private @Nullable Output<String> modifiedSwaggerUrl;
 
-    public Output<String> modifiedSwaggerUrl() {
-        return this.modifiedSwaggerUrl == null ? Codegen.empty() : this.modifiedSwaggerUrl;
+    public Optional<Output<String>> modifiedSwaggerUrl() {
+        return Optional.ofNullable(this.modifiedSwaggerUrl);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class ApiResourceDefinitionsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="originalSwaggerUrl")
-      private final @Nullable Output<String> originalSwaggerUrl;
+    private @Nullable Output<String> originalSwaggerUrl;
 
-    public Output<String> originalSwaggerUrl() {
-        return this.originalSwaggerUrl == null ? Codegen.empty() : this.originalSwaggerUrl;
+    public Optional<Output<String>> originalSwaggerUrl() {
+        return Optional.ofNullable(this.originalSwaggerUrl);
     }
 
-    public ApiResourceDefinitionsArgs(
-        @Nullable Output<String> modifiedSwaggerUrl,
-        @Nullable Output<String> originalSwaggerUrl) {
-        this.modifiedSwaggerUrl = modifiedSwaggerUrl;
-        this.originalSwaggerUrl = originalSwaggerUrl;
-    }
+    private ApiResourceDefinitionsArgs() {}
 
-    private ApiResourceDefinitionsArgs() {
-        this.modifiedSwaggerUrl = Codegen.empty();
-        this.originalSwaggerUrl = Codegen.empty();
+    private ApiResourceDefinitionsArgs(ApiResourceDefinitionsArgs $) {
+        this.modifiedSwaggerUrl = $.modifiedSwaggerUrl;
+        this.originalSwaggerUrl = $.originalSwaggerUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiResourceDefinitionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> modifiedSwaggerUrl;
-        private @Nullable Output<String> originalSwaggerUrl;
+        private ApiResourceDefinitionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiResourceDefinitionsArgs();
         }
 
         public Builder(ApiResourceDefinitionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.modifiedSwaggerUrl = defaults.modifiedSwaggerUrl;
-    	      this.originalSwaggerUrl = defaults.originalSwaggerUrl;
+            $ = new ApiResourceDefinitionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder modifiedSwaggerUrl(@Nullable Output<String> modifiedSwaggerUrl) {
-            this.modifiedSwaggerUrl = modifiedSwaggerUrl;
+            $.modifiedSwaggerUrl = modifiedSwaggerUrl;
             return this;
         }
-        public Builder modifiedSwaggerUrl(@Nullable String modifiedSwaggerUrl) {
-            this.modifiedSwaggerUrl = Codegen.ofNullable(modifiedSwaggerUrl);
-            return this;
+
+        public Builder modifiedSwaggerUrl(String modifiedSwaggerUrl) {
+            return modifiedSwaggerUrl(Output.of(modifiedSwaggerUrl));
         }
+
         public Builder originalSwaggerUrl(@Nullable Output<String> originalSwaggerUrl) {
-            this.originalSwaggerUrl = originalSwaggerUrl;
+            $.originalSwaggerUrl = originalSwaggerUrl;
             return this;
         }
-        public Builder originalSwaggerUrl(@Nullable String originalSwaggerUrl) {
-            this.originalSwaggerUrl = Codegen.ofNullable(originalSwaggerUrl);
-            return this;
-        }        public ApiResourceDefinitionsArgs build() {
-            return new ApiResourceDefinitionsArgs(modifiedSwaggerUrl, originalSwaggerUrl);
+
+        public Builder originalSwaggerUrl(String originalSwaggerUrl) {
+            return originalSwaggerUrl(Output.of(originalSwaggerUrl));
+        }
+
+        public ApiResourceDefinitionsArgs build() {
+            return $;
         }
     }
+
 }

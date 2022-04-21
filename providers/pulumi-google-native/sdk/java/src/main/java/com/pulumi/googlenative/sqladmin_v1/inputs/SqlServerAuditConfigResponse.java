@@ -21,7 +21,7 @@ public final class SqlServerAuditConfigResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="bucket", required=true)
-      private final String bucket;
+    private String bucket;
 
     public String bucket() {
         return this.bucket;
@@ -32,55 +32,52 @@ public final class SqlServerAuditConfigResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
     }
 
-    public SqlServerAuditConfigResponse(
-        String bucket,
-        String kind) {
-        this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-    }
+    private SqlServerAuditConfigResponse() {}
 
-    private SqlServerAuditConfigResponse() {
-        this.bucket = null;
-        this.kind = null;
+    private SqlServerAuditConfigResponse(SqlServerAuditConfigResponse $) {
+        this.bucket = $.bucket;
+        this.kind = $.kind;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SqlServerAuditConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String bucket;
-        private String kind;
+        private SqlServerAuditConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SqlServerAuditConfigResponse();
         }
 
         public Builder(SqlServerAuditConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.kind = defaults.kind;
+            $ = new SqlServerAuditConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(String bucket) {
-            this.bucket = Objects.requireNonNull(bucket);
+            $.bucket = bucket;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
-        }        public SqlServerAuditConfigResponse build() {
-            return new SqlServerAuditConfigResponse(bucket, kind);
+        }
+
+        public SqlServerAuditConfigResponse build() {
+            $.bucket = Objects.requireNonNull($.bucket, "expected parameter 'bucket' to be non-null");
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            return $;
         }
     }
+
 }

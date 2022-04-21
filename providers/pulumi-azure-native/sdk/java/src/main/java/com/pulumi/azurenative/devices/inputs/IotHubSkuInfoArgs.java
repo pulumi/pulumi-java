@@ -7,10 +7,10 @@ import com.pulumi.azurenative.devices.enums.IotHubSku;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class IotHubSkuInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="capacity")
-      private final @Nullable Output<Double> capacity;
+    private @Nullable Output<Double> capacity;
 
-    public Output<Double> capacity() {
-        return this.capacity == null ? Codegen.empty() : this.capacity;
+    public Optional<Output<Double>> capacity() {
+        return Optional.ofNullable(this.capacity);
     }
 
     /**
@@ -38,63 +38,59 @@ public final class IotHubSkuInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<Either<String,IotHubSku>> name;
+    private Output<Either<String,IotHubSku>> name;
 
     public Output<Either<String,IotHubSku>> name() {
         return this.name;
     }
 
-    public IotHubSkuInfoArgs(
-        @Nullable Output<Double> capacity,
-        Output<Either<String,IotHubSku>> name) {
-        this.capacity = capacity;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private IotHubSkuInfoArgs() {}
 
-    private IotHubSkuInfoArgs() {
-        this.capacity = Codegen.empty();
-        this.name = Codegen.empty();
+    private IotHubSkuInfoArgs(IotHubSkuInfoArgs $) {
+        this.capacity = $.capacity;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IotHubSkuInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Double> capacity;
-        private Output<Either<String,IotHubSku>> name;
+        private IotHubSkuInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IotHubSkuInfoArgs();
         }
 
         public Builder(IotHubSkuInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacity = defaults.capacity;
-    	      this.name = defaults.name;
+            $ = new IotHubSkuInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder capacity(@Nullable Output<Double> capacity) {
-            this.capacity = capacity;
+            $.capacity = capacity;
             return this;
         }
-        public Builder capacity(@Nullable Double capacity) {
-            this.capacity = Codegen.ofNullable(capacity);
-            return this;
+
+        public Builder capacity(Double capacity) {
+            return capacity(Output.of(capacity));
         }
+
         public Builder name(Output<Either<String,IotHubSku>> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(Either<String,IotHubSku> name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public IotHubSkuInfoArgs build() {
-            return new IotHubSkuInfoArgs(capacity, name);
+            return name(Output.of(name));
+        }
+
+        public IotHubSkuInfoArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

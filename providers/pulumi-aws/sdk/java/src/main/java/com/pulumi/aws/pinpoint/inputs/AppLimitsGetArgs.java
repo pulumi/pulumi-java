@@ -5,9 +5,9 @@ package com.pulumi.aws.pinpoint.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class AppLimitsGetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="daily")
-      private final @Nullable Output<Integer> daily;
+    private @Nullable Output<Integer> daily;
 
-    public Output<Integer> daily() {
-        return this.daily == null ? Codegen.empty() : this.daily;
+    public Optional<Output<Integer>> daily() {
+        return Optional.ofNullable(this.daily);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class AppLimitsGetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maximumDuration")
-      private final @Nullable Output<Integer> maximumDuration;
+    private @Nullable Output<Integer> maximumDuration;
 
-    public Output<Integer> maximumDuration() {
-        return this.maximumDuration == null ? Codegen.empty() : this.maximumDuration;
+    public Optional<Output<Integer>> maximumDuration() {
+        return Optional.ofNullable(this.maximumDuration);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class AppLimitsGetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="messagesPerSecond")
-      private final @Nullable Output<Integer> messagesPerSecond;
+    private @Nullable Output<Integer> messagesPerSecond;
 
-    public Output<Integer> messagesPerSecond() {
-        return this.messagesPerSecond == null ? Codegen.empty() : this.messagesPerSecond;
+    public Optional<Output<Integer>> messagesPerSecond() {
+        return Optional.ofNullable(this.messagesPerSecond);
     }
 
     /**
@@ -53,89 +53,78 @@ public final class AppLimitsGetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="total")
-      private final @Nullable Output<Integer> total;
+    private @Nullable Output<Integer> total;
 
-    public Output<Integer> total() {
-        return this.total == null ? Codegen.empty() : this.total;
+    public Optional<Output<Integer>> total() {
+        return Optional.ofNullable(this.total);
     }
 
-    public AppLimitsGetArgs(
-        @Nullable Output<Integer> daily,
-        @Nullable Output<Integer> maximumDuration,
-        @Nullable Output<Integer> messagesPerSecond,
-        @Nullable Output<Integer> total) {
-        this.daily = daily;
-        this.maximumDuration = maximumDuration;
-        this.messagesPerSecond = messagesPerSecond;
-        this.total = total;
-    }
+    private AppLimitsGetArgs() {}
 
-    private AppLimitsGetArgs() {
-        this.daily = Codegen.empty();
-        this.maximumDuration = Codegen.empty();
-        this.messagesPerSecond = Codegen.empty();
-        this.total = Codegen.empty();
+    private AppLimitsGetArgs(AppLimitsGetArgs $) {
+        this.daily = $.daily;
+        this.maximumDuration = $.maximumDuration;
+        this.messagesPerSecond = $.messagesPerSecond;
+        this.total = $.total;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppLimitsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> daily;
-        private @Nullable Output<Integer> maximumDuration;
-        private @Nullable Output<Integer> messagesPerSecond;
-        private @Nullable Output<Integer> total;
+        private AppLimitsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppLimitsGetArgs();
         }
 
         public Builder(AppLimitsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.daily = defaults.daily;
-    	      this.maximumDuration = defaults.maximumDuration;
-    	      this.messagesPerSecond = defaults.messagesPerSecond;
-    	      this.total = defaults.total;
+            $ = new AppLimitsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder daily(@Nullable Output<Integer> daily) {
-            this.daily = daily;
+            $.daily = daily;
             return this;
         }
-        public Builder daily(@Nullable Integer daily) {
-            this.daily = Codegen.ofNullable(daily);
-            return this;
+
+        public Builder daily(Integer daily) {
+            return daily(Output.of(daily));
         }
+
         public Builder maximumDuration(@Nullable Output<Integer> maximumDuration) {
-            this.maximumDuration = maximumDuration;
+            $.maximumDuration = maximumDuration;
             return this;
         }
-        public Builder maximumDuration(@Nullable Integer maximumDuration) {
-            this.maximumDuration = Codegen.ofNullable(maximumDuration);
-            return this;
+
+        public Builder maximumDuration(Integer maximumDuration) {
+            return maximumDuration(Output.of(maximumDuration));
         }
+
         public Builder messagesPerSecond(@Nullable Output<Integer> messagesPerSecond) {
-            this.messagesPerSecond = messagesPerSecond;
+            $.messagesPerSecond = messagesPerSecond;
             return this;
         }
-        public Builder messagesPerSecond(@Nullable Integer messagesPerSecond) {
-            this.messagesPerSecond = Codegen.ofNullable(messagesPerSecond);
-            return this;
+
+        public Builder messagesPerSecond(Integer messagesPerSecond) {
+            return messagesPerSecond(Output.of(messagesPerSecond));
         }
+
         public Builder total(@Nullable Output<Integer> total) {
-            this.total = total;
+            $.total = total;
             return this;
         }
-        public Builder total(@Nullable Integer total) {
-            this.total = Codegen.ofNullable(total);
-            return this;
-        }        public AppLimitsGetArgs build() {
-            return new AppLimitsGetArgs(daily, maximumDuration, messagesPerSecond, total);
+
+        public Builder total(Integer total) {
+            return total(Output.of(total));
+        }
+
+        public AppLimitsGetArgs build() {
+            return $;
         }
     }
+
 }

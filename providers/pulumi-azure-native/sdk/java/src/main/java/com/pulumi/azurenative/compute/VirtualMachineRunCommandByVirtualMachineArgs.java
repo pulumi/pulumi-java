@@ -14,6 +14,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +27,10 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends com.pulu
      * 
      */
     @Import(name="asyncExecution")
-      private final @Nullable Output<Boolean> asyncExecution;
+    private @Nullable Output<Boolean> asyncExecution;
 
-    public Output<Boolean> asyncExecution() {
-        return this.asyncExecution == null ? Codegen.empty() : this.asyncExecution;
+    public Optional<Output<Boolean>> asyncExecution() {
+        return Optional.ofNullable(this.asyncExecution);
     }
 
     /**
@@ -37,10 +38,10 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends com.pulu
      * 
      */
     @Import(name="errorBlobUri")
-      private final @Nullable Output<String> errorBlobUri;
+    private @Nullable Output<String> errorBlobUri;
 
-    public Output<String> errorBlobUri() {
-        return this.errorBlobUri == null ? Codegen.empty() : this.errorBlobUri;
+    public Optional<Output<String>> errorBlobUri() {
+        return Optional.ofNullable(this.errorBlobUri);
     }
 
     /**
@@ -48,10 +49,10 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends com.pulu
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -59,10 +60,10 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends com.pulu
      * 
      */
     @Import(name="outputBlobUri")
-      private final @Nullable Output<String> outputBlobUri;
+    private @Nullable Output<String> outputBlobUri;
 
-    public Output<String> outputBlobUri() {
-        return this.outputBlobUri == null ? Codegen.empty() : this.outputBlobUri;
+    public Optional<Output<String>> outputBlobUri() {
+        return Optional.ofNullable(this.outputBlobUri);
     }
 
     /**
@@ -70,10 +71,10 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends com.pulu
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<List<RunCommandInputParameterArgs>> parameters;
+    private @Nullable Output<List<RunCommandInputParameterArgs>> parameters;
 
-    public Output<List<RunCommandInputParameterArgs>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<List<RunCommandInputParameterArgs>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -81,10 +82,10 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends com.pulu
      * 
      */
     @Import(name="protectedParameters")
-      private final @Nullable Output<List<RunCommandInputParameterArgs>> protectedParameters;
+    private @Nullable Output<List<RunCommandInputParameterArgs>> protectedParameters;
 
-    public Output<List<RunCommandInputParameterArgs>> protectedParameters() {
-        return this.protectedParameters == null ? Codegen.empty() : this.protectedParameters;
+    public Optional<Output<List<RunCommandInputParameterArgs>>> protectedParameters() {
+        return Optional.ofNullable(this.protectedParameters);
     }
 
     /**
@@ -92,7 +93,7 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends com.pulu
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -103,10 +104,10 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends com.pulu
      * 
      */
     @Import(name="runAsPassword")
-      private final @Nullable Output<String> runAsPassword;
+    private @Nullable Output<String> runAsPassword;
 
-    public Output<String> runAsPassword() {
-        return this.runAsPassword == null ? Codegen.empty() : this.runAsPassword;
+    public Optional<Output<String>> runAsPassword() {
+        return Optional.ofNullable(this.runAsPassword);
     }
 
     /**
@@ -114,10 +115,10 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends com.pulu
      * 
      */
     @Import(name="runAsUser")
-      private final @Nullable Output<String> runAsUser;
+    private @Nullable Output<String> runAsUser;
 
-    public Output<String> runAsUser() {
-        return this.runAsUser == null ? Codegen.empty() : this.runAsUser;
+    public Optional<Output<String>> runAsUser() {
+        return Optional.ofNullable(this.runAsUser);
     }
 
     /**
@@ -125,10 +126,10 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends com.pulu
      * 
      */
     @Import(name="runCommandName")
-      private final @Nullable Output<String> runCommandName;
+    private @Nullable Output<String> runCommandName;
 
-    public Output<String> runCommandName() {
-        return this.runCommandName == null ? Codegen.empty() : this.runCommandName;
+    public Optional<Output<String>> runCommandName() {
+        return Optional.ofNullable(this.runCommandName);
     }
 
     /**
@@ -136,10 +137,10 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends com.pulu
      * 
      */
     @Import(name="source")
-      private final @Nullable Output<VirtualMachineRunCommandScriptSourceArgs> source;
+    private @Nullable Output<VirtualMachineRunCommandScriptSourceArgs> source;
 
-    public Output<VirtualMachineRunCommandScriptSourceArgs> source() {
-        return this.source == null ? Codegen.empty() : this.source;
+    public Optional<Output<VirtualMachineRunCommandScriptSourceArgs>> source() {
+        return Optional.ofNullable(this.source);
     }
 
     /**
@@ -147,10 +148,10 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends com.pulu
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -158,10 +159,10 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends com.pulu
      * 
      */
     @Import(name="timeoutInSeconds")
-      private final @Nullable Output<Integer> timeoutInSeconds;
+    private @Nullable Output<Integer> timeoutInSeconds;
 
-    public Output<Integer> timeoutInSeconds() {
-        return this.timeoutInSeconds == null ? Codegen.empty() : this.timeoutInSeconds;
+    public Optional<Output<Integer>> timeoutInSeconds() {
+        return Optional.ofNullable(this.timeoutInSeconds);
     }
 
     /**
@@ -169,225 +170,189 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends com.pulu
      * 
      */
     @Import(name="vmName", required=true)
-      private final Output<String> vmName;
+    private Output<String> vmName;
 
     public Output<String> vmName() {
         return this.vmName;
     }
 
-    public VirtualMachineRunCommandByVirtualMachineArgs(
-        @Nullable Output<Boolean> asyncExecution,
-        @Nullable Output<String> errorBlobUri,
-        @Nullable Output<String> location,
-        @Nullable Output<String> outputBlobUri,
-        @Nullable Output<List<RunCommandInputParameterArgs>> parameters,
-        @Nullable Output<List<RunCommandInputParameterArgs>> protectedParameters,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> runAsPassword,
-        @Nullable Output<String> runAsUser,
-        @Nullable Output<String> runCommandName,
-        @Nullable Output<VirtualMachineRunCommandScriptSourceArgs> source,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Integer> timeoutInSeconds,
-        Output<String> vmName) {
-        this.asyncExecution = Codegen.booleanProp("asyncExecution").output().arg(asyncExecution).def(false).getNullable();
-        this.errorBlobUri = errorBlobUri;
-        this.location = location;
-        this.outputBlobUri = outputBlobUri;
-        this.parameters = parameters;
-        this.protectedParameters = protectedParameters;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.runAsPassword = runAsPassword;
-        this.runAsUser = runAsUser;
-        this.runCommandName = runCommandName;
-        this.source = source;
-        this.tags = tags;
-        this.timeoutInSeconds = timeoutInSeconds;
-        this.vmName = Objects.requireNonNull(vmName, "expected parameter 'vmName' to be non-null");
-    }
+    private VirtualMachineRunCommandByVirtualMachineArgs() {}
 
-    private VirtualMachineRunCommandByVirtualMachineArgs() {
-        this.asyncExecution = Codegen.empty();
-        this.errorBlobUri = Codegen.empty();
-        this.location = Codegen.empty();
-        this.outputBlobUri = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.protectedParameters = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.runAsPassword = Codegen.empty();
-        this.runAsUser = Codegen.empty();
-        this.runCommandName = Codegen.empty();
-        this.source = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.timeoutInSeconds = Codegen.empty();
-        this.vmName = Codegen.empty();
+    private VirtualMachineRunCommandByVirtualMachineArgs(VirtualMachineRunCommandByVirtualMachineArgs $) {
+        this.asyncExecution = $.asyncExecution;
+        this.errorBlobUri = $.errorBlobUri;
+        this.location = $.location;
+        this.outputBlobUri = $.outputBlobUri;
+        this.parameters = $.parameters;
+        this.protectedParameters = $.protectedParameters;
+        this.resourceGroupName = $.resourceGroupName;
+        this.runAsPassword = $.runAsPassword;
+        this.runAsUser = $.runAsUser;
+        this.runCommandName = $.runCommandName;
+        this.source = $.source;
+        this.tags = $.tags;
+        this.timeoutInSeconds = $.timeoutInSeconds;
+        this.vmName = $.vmName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMachineRunCommandByVirtualMachineArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> asyncExecution;
-        private @Nullable Output<String> errorBlobUri;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> outputBlobUri;
-        private @Nullable Output<List<RunCommandInputParameterArgs>> parameters;
-        private @Nullable Output<List<RunCommandInputParameterArgs>> protectedParameters;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> runAsPassword;
-        private @Nullable Output<String> runAsUser;
-        private @Nullable Output<String> runCommandName;
-        private @Nullable Output<VirtualMachineRunCommandScriptSourceArgs> source;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Integer> timeoutInSeconds;
-        private Output<String> vmName;
+        private VirtualMachineRunCommandByVirtualMachineArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMachineRunCommandByVirtualMachineArgs();
         }
 
         public Builder(VirtualMachineRunCommandByVirtualMachineArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.asyncExecution = defaults.asyncExecution;
-    	      this.errorBlobUri = defaults.errorBlobUri;
-    	      this.location = defaults.location;
-    	      this.outputBlobUri = defaults.outputBlobUri;
-    	      this.parameters = defaults.parameters;
-    	      this.protectedParameters = defaults.protectedParameters;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.runAsPassword = defaults.runAsPassword;
-    	      this.runAsUser = defaults.runAsUser;
-    	      this.runCommandName = defaults.runCommandName;
-    	      this.source = defaults.source;
-    	      this.tags = defaults.tags;
-    	      this.timeoutInSeconds = defaults.timeoutInSeconds;
-    	      this.vmName = defaults.vmName;
+            $ = new VirtualMachineRunCommandByVirtualMachineArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder asyncExecution(@Nullable Output<Boolean> asyncExecution) {
-            this.asyncExecution = asyncExecution;
+            $.asyncExecution = asyncExecution;
             return this;
         }
-        public Builder asyncExecution(@Nullable Boolean asyncExecution) {
-            this.asyncExecution = Codegen.ofNullable(asyncExecution);
-            return this;
+
+        public Builder asyncExecution(Boolean asyncExecution) {
+            return asyncExecution(Output.of(asyncExecution));
         }
+
         public Builder errorBlobUri(@Nullable Output<String> errorBlobUri) {
-            this.errorBlobUri = errorBlobUri;
+            $.errorBlobUri = errorBlobUri;
             return this;
         }
-        public Builder errorBlobUri(@Nullable String errorBlobUri) {
-            this.errorBlobUri = Codegen.ofNullable(errorBlobUri);
-            return this;
+
+        public Builder errorBlobUri(String errorBlobUri) {
+            return errorBlobUri(Output.of(errorBlobUri));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder outputBlobUri(@Nullable Output<String> outputBlobUri) {
-            this.outputBlobUri = outputBlobUri;
+            $.outputBlobUri = outputBlobUri;
             return this;
         }
-        public Builder outputBlobUri(@Nullable String outputBlobUri) {
-            this.outputBlobUri = Codegen.ofNullable(outputBlobUri);
-            return this;
+
+        public Builder outputBlobUri(String outputBlobUri) {
+            return outputBlobUri(Output.of(outputBlobUri));
         }
+
         public Builder parameters(@Nullable Output<List<RunCommandInputParameterArgs>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable List<RunCommandInputParameterArgs> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(List<RunCommandInputParameterArgs> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder parameters(RunCommandInputParameterArgs... parameters) {
             return parameters(List.of(parameters));
         }
+
         public Builder protectedParameters(@Nullable Output<List<RunCommandInputParameterArgs>> protectedParameters) {
-            this.protectedParameters = protectedParameters;
+            $.protectedParameters = protectedParameters;
             return this;
         }
-        public Builder protectedParameters(@Nullable List<RunCommandInputParameterArgs> protectedParameters) {
-            this.protectedParameters = Codegen.ofNullable(protectedParameters);
-            return this;
+
+        public Builder protectedParameters(List<RunCommandInputParameterArgs> protectedParameters) {
+            return protectedParameters(Output.of(protectedParameters));
         }
+
         public Builder protectedParameters(RunCommandInputParameterArgs... protectedParameters) {
             return protectedParameters(List.of(protectedParameters));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder runAsPassword(@Nullable Output<String> runAsPassword) {
-            this.runAsPassword = runAsPassword;
+            $.runAsPassword = runAsPassword;
             return this;
         }
-        public Builder runAsPassword(@Nullable String runAsPassword) {
-            this.runAsPassword = Codegen.ofNullable(runAsPassword);
-            return this;
+
+        public Builder runAsPassword(String runAsPassword) {
+            return runAsPassword(Output.of(runAsPassword));
         }
+
         public Builder runAsUser(@Nullable Output<String> runAsUser) {
-            this.runAsUser = runAsUser;
+            $.runAsUser = runAsUser;
             return this;
         }
-        public Builder runAsUser(@Nullable String runAsUser) {
-            this.runAsUser = Codegen.ofNullable(runAsUser);
-            return this;
+
+        public Builder runAsUser(String runAsUser) {
+            return runAsUser(Output.of(runAsUser));
         }
+
         public Builder runCommandName(@Nullable Output<String> runCommandName) {
-            this.runCommandName = runCommandName;
+            $.runCommandName = runCommandName;
             return this;
         }
-        public Builder runCommandName(@Nullable String runCommandName) {
-            this.runCommandName = Codegen.ofNullable(runCommandName);
-            return this;
+
+        public Builder runCommandName(String runCommandName) {
+            return runCommandName(Output.of(runCommandName));
         }
+
         public Builder source(@Nullable Output<VirtualMachineRunCommandScriptSourceArgs> source) {
-            this.source = source;
+            $.source = source;
             return this;
         }
-        public Builder source(@Nullable VirtualMachineRunCommandScriptSourceArgs source) {
-            this.source = Codegen.ofNullable(source);
-            return this;
+
+        public Builder source(VirtualMachineRunCommandScriptSourceArgs source) {
+            return source(Output.of(source));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder timeoutInSeconds(@Nullable Output<Integer> timeoutInSeconds) {
-            this.timeoutInSeconds = timeoutInSeconds;
+            $.timeoutInSeconds = timeoutInSeconds;
             return this;
         }
-        public Builder timeoutInSeconds(@Nullable Integer timeoutInSeconds) {
-            this.timeoutInSeconds = Codegen.ofNullable(timeoutInSeconds);
-            return this;
+
+        public Builder timeoutInSeconds(Integer timeoutInSeconds) {
+            return timeoutInSeconds(Output.of(timeoutInSeconds));
         }
+
         public Builder vmName(Output<String> vmName) {
-            this.vmName = Objects.requireNonNull(vmName);
+            $.vmName = vmName;
             return this;
         }
+
         public Builder vmName(String vmName) {
-            this.vmName = Output.of(Objects.requireNonNull(vmName));
-            return this;
-        }        public VirtualMachineRunCommandByVirtualMachineArgs build() {
-            return new VirtualMachineRunCommandByVirtualMachineArgs(asyncExecution, errorBlobUri, location, outputBlobUri, parameters, protectedParameters, resourceGroupName, runAsPassword, runAsUser, runCommandName, source, tags, timeoutInSeconds, vmName);
+            return vmName(Output.of(vmName));
+        }
+
+        public VirtualMachineRunCommandByVirtualMachineArgs build() {
+            $.asyncExecution = Codegen.booleanProp("asyncExecution").output().arg($.asyncExecution).def(false).getNullable();
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.vmName = Objects.requireNonNull($.vmName, "expected parameter 'vmName' to be non-null");
+            return $;
         }
     }
+
 }

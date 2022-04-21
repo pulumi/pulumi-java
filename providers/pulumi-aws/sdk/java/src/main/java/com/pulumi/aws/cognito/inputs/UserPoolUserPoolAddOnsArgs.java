@@ -5,7 +5,6 @@ package com.pulumi.aws.cognito.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class UserPoolUserPoolAddOnsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="advancedSecurityMode", required=true)
-      private final Output<String> advancedSecurityMode;
+    private Output<String> advancedSecurityMode;
 
     public Output<String> advancedSecurityMode() {
         return this.advancedSecurityMode;
     }
 
-    public UserPoolUserPoolAddOnsArgs(Output<String> advancedSecurityMode) {
-        this.advancedSecurityMode = Objects.requireNonNull(advancedSecurityMode, "expected parameter 'advancedSecurityMode' to be non-null");
-    }
+    private UserPoolUserPoolAddOnsArgs() {}
 
-    private UserPoolUserPoolAddOnsArgs() {
-        this.advancedSecurityMode = Codegen.empty();
+    private UserPoolUserPoolAddOnsArgs(UserPoolUserPoolAddOnsArgs $) {
+        this.advancedSecurityMode = $.advancedSecurityMode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserPoolUserPoolAddOnsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> advancedSecurityMode;
+        private UserPoolUserPoolAddOnsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserPoolUserPoolAddOnsArgs();
         }
 
         public Builder(UserPoolUserPoolAddOnsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.advancedSecurityMode = defaults.advancedSecurityMode;
+            $ = new UserPoolUserPoolAddOnsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder advancedSecurityMode(Output<String> advancedSecurityMode) {
-            this.advancedSecurityMode = Objects.requireNonNull(advancedSecurityMode);
+            $.advancedSecurityMode = advancedSecurityMode;
             return this;
         }
+
         public Builder advancedSecurityMode(String advancedSecurityMode) {
-            this.advancedSecurityMode = Output.of(Objects.requireNonNull(advancedSecurityMode));
-            return this;
-        }        public UserPoolUserPoolAddOnsArgs build() {
-            return new UserPoolUserPoolAddOnsArgs(advancedSecurityMode);
+            return advancedSecurityMode(Output.of(advancedSecurityMode));
+        }
+
+        public UserPoolUserPoolAddOnsArgs build() {
+            $.advancedSecurityMode = Objects.requireNonNull($.advancedSecurityMode, "expected parameter 'advancedSecurityMode' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.googlenative.compute_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_v1.enums.ImageSourceType;
 import com.pulumi.googlenative.compute_v1.inputs.CustomerEncryptionKeyArgs;
 import com.pulumi.googlenative.compute_v1.inputs.DeprecationStatusArgs;
@@ -16,6 +15,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="archiveSizeBytes")
-      private final @Nullable Output<String> archiveSizeBytes;
+    private @Nullable Output<String> archiveSizeBytes;
 
-    public Output<String> archiveSizeBytes() {
-        return this.archiveSizeBytes == null ? Codegen.empty() : this.archiveSizeBytes;
+    public Optional<Output<String>> archiveSizeBytes() {
+        return Optional.ofNullable(this.archiveSizeBytes);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deprecated")
-      private final @Nullable Output<DeprecationStatusArgs> deprecated;
+    private @Nullable Output<DeprecationStatusArgs> deprecated;
 
-    public Output<DeprecationStatusArgs> deprecated() {
-        return this.deprecated == null ? Codegen.empty() : this.deprecated;
+    public Optional<Output<DeprecationStatusArgs>> deprecated() {
+        return Optional.ofNullable(this.deprecated);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="diskSizeGb")
-      private final @Nullable Output<String> diskSizeGb;
+    private @Nullable Output<String> diskSizeGb;
 
-    public Output<String> diskSizeGb() {
-        return this.diskSizeGb == null ? Codegen.empty() : this.diskSizeGb;
+    public Optional<Output<String>> diskSizeGb() {
+        return Optional.ofNullable(this.diskSizeGb);
     }
 
     /**
@@ -72,17 +72,17 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="family")
-      private final @Nullable Output<String> family;
+    private @Nullable Output<String> family;
 
-    public Output<String> family() {
-        return this.family == null ? Codegen.empty() : this.family;
+    public Optional<Output<String>> family() {
+        return Optional.ofNullable(this.family);
     }
 
     @Import(name="forceCreate")
-      private final @Nullable Output<String> forceCreate;
+    private @Nullable Output<String> forceCreate;
 
-    public Output<String> forceCreate() {
-        return this.forceCreate == null ? Codegen.empty() : this.forceCreate;
+    public Optional<Output<String>> forceCreate() {
+        return Optional.ofNullable(this.forceCreate);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="guestOsFeatures")
-      private final @Nullable Output<List<GuestOsFeatureArgs>> guestOsFeatures;
+    private @Nullable Output<List<GuestOsFeatureArgs>> guestOsFeatures;
 
-    public Output<List<GuestOsFeatureArgs>> guestOsFeatures() {
-        return this.guestOsFeatures == null ? Codegen.empty() : this.guestOsFeatures;
+    public Optional<Output<List<GuestOsFeatureArgs>>> guestOsFeatures() {
+        return Optional.ofNullable(this.guestOsFeatures);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="imageEncryptionKey")
-      private final @Nullable Output<CustomerEncryptionKeyArgs> imageEncryptionKey;
+    private @Nullable Output<CustomerEncryptionKeyArgs> imageEncryptionKey;
 
-    public Output<CustomerEncryptionKeyArgs> imageEncryptionKey() {
-        return this.imageEncryptionKey == null ? Codegen.empty() : this.imageEncryptionKey;
+    public Optional<Output<CustomerEncryptionKeyArgs>> imageEncryptionKey() {
+        return Optional.ofNullable(this.imageEncryptionKey);
     }
 
     /**
@@ -112,10 +112,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -123,10 +123,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="licenseCodes")
-      private final @Nullable Output<List<String>> licenseCodes;
+    private @Nullable Output<List<String>> licenseCodes;
 
-    public Output<List<String>> licenseCodes() {
-        return this.licenseCodes == null ? Codegen.empty() : this.licenseCodes;
+    public Optional<Output<List<String>>> licenseCodes() {
+        return Optional.ofNullable(this.licenseCodes);
     }
 
     /**
@@ -134,10 +134,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="licenses")
-      private final @Nullable Output<List<String>> licenses;
+    private @Nullable Output<List<String>> licenses;
 
-    public Output<List<String>> licenses() {
-        return this.licenses == null ? Codegen.empty() : this.licenses;
+    public Optional<Output<List<String>>> licenses() {
+        return Optional.ofNullable(this.licenses);
     }
 
     /**
@@ -145,17 +145,17 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -163,17 +163,17 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rawDisk")
-      private final @Nullable Output<ImageRawDiskArgs> rawDisk;
+    private @Nullable Output<ImageRawDiskArgs> rawDisk;
 
-    public Output<ImageRawDiskArgs> rawDisk() {
-        return this.rawDisk == null ? Codegen.empty() : this.rawDisk;
+    public Optional<Output<ImageRawDiskArgs>> rawDisk() {
+        return Optional.ofNullable(this.rawDisk);
     }
 
     @Import(name="requestId")
-      private final @Nullable Output<String> requestId;
+    private @Nullable Output<String> requestId;
 
-    public Output<String> requestId() {
-        return this.requestId == null ? Codegen.empty() : this.requestId;
+    public Optional<Output<String>> requestId() {
+        return Optional.ofNullable(this.requestId);
     }
 
     /**
@@ -181,10 +181,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="shieldedInstanceInitialState")
-      private final @Nullable Output<InitialStateConfigArgs> shieldedInstanceInitialState;
+    private @Nullable Output<InitialStateConfigArgs> shieldedInstanceInitialState;
 
-    public Output<InitialStateConfigArgs> shieldedInstanceInitialState() {
-        return this.shieldedInstanceInitialState == null ? Codegen.empty() : this.shieldedInstanceInitialState;
+    public Optional<Output<InitialStateConfigArgs>> shieldedInstanceInitialState() {
+        return Optional.ofNullable(this.shieldedInstanceInitialState);
     }
 
     /**
@@ -192,10 +192,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceDisk")
-      private final @Nullable Output<String> sourceDisk;
+    private @Nullable Output<String> sourceDisk;
 
-    public Output<String> sourceDisk() {
-        return this.sourceDisk == null ? Codegen.empty() : this.sourceDisk;
+    public Optional<Output<String>> sourceDisk() {
+        return Optional.ofNullable(this.sourceDisk);
     }
 
     /**
@@ -203,10 +203,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceDiskEncryptionKey")
-      private final @Nullable Output<CustomerEncryptionKeyArgs> sourceDiskEncryptionKey;
+    private @Nullable Output<CustomerEncryptionKeyArgs> sourceDiskEncryptionKey;
 
-    public Output<CustomerEncryptionKeyArgs> sourceDiskEncryptionKey() {
-        return this.sourceDiskEncryptionKey == null ? Codegen.empty() : this.sourceDiskEncryptionKey;
+    public Optional<Output<CustomerEncryptionKeyArgs>> sourceDiskEncryptionKey() {
+        return Optional.ofNullable(this.sourceDiskEncryptionKey);
     }
 
     /**
@@ -214,10 +214,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceImage")
-      private final @Nullable Output<String> sourceImage;
+    private @Nullable Output<String> sourceImage;
 
-    public Output<String> sourceImage() {
-        return this.sourceImage == null ? Codegen.empty() : this.sourceImage;
+    public Optional<Output<String>> sourceImage() {
+        return Optional.ofNullable(this.sourceImage);
     }
 
     /**
@@ -225,10 +225,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceImageEncryptionKey")
-      private final @Nullable Output<CustomerEncryptionKeyArgs> sourceImageEncryptionKey;
+    private @Nullable Output<CustomerEncryptionKeyArgs> sourceImageEncryptionKey;
 
-    public Output<CustomerEncryptionKeyArgs> sourceImageEncryptionKey() {
-        return this.sourceImageEncryptionKey == null ? Codegen.empty() : this.sourceImageEncryptionKey;
+    public Optional<Output<CustomerEncryptionKeyArgs>> sourceImageEncryptionKey() {
+        return Optional.ofNullable(this.sourceImageEncryptionKey);
     }
 
     /**
@@ -236,10 +236,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceSnapshot")
-      private final @Nullable Output<String> sourceSnapshot;
+    private @Nullable Output<String> sourceSnapshot;
 
-    public Output<String> sourceSnapshot() {
-        return this.sourceSnapshot == null ? Codegen.empty() : this.sourceSnapshot;
+    public Optional<Output<String>> sourceSnapshot() {
+        return Optional.ofNullable(this.sourceSnapshot);
     }
 
     /**
@@ -247,10 +247,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceSnapshotEncryptionKey")
-      private final @Nullable Output<CustomerEncryptionKeyArgs> sourceSnapshotEncryptionKey;
+    private @Nullable Output<CustomerEncryptionKeyArgs> sourceSnapshotEncryptionKey;
 
-    public Output<CustomerEncryptionKeyArgs> sourceSnapshotEncryptionKey() {
-        return this.sourceSnapshotEncryptionKey == null ? Codegen.empty() : this.sourceSnapshotEncryptionKey;
+    public Optional<Output<CustomerEncryptionKeyArgs>> sourceSnapshotEncryptionKey() {
+        return Optional.ofNullable(this.sourceSnapshotEncryptionKey);
     }
 
     /**
@@ -258,10 +258,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceType")
-      private final @Nullable Output<ImageSourceType> sourceType;
+    private @Nullable Output<ImageSourceType> sourceType;
 
-    public Output<ImageSourceType> sourceType() {
-        return this.sourceType == null ? Codegen.empty() : this.sourceType;
+    public Optional<Output<ImageSourceType>> sourceType() {
+        return Optional.ofNullable(this.sourceType);
     }
 
     /**
@@ -269,361 +269,294 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="storageLocations")
-      private final @Nullable Output<List<String>> storageLocations;
+    private @Nullable Output<List<String>> storageLocations;
 
-    public Output<List<String>> storageLocations() {
-        return this.storageLocations == null ? Codegen.empty() : this.storageLocations;
+    public Optional<Output<List<String>>> storageLocations() {
+        return Optional.ofNullable(this.storageLocations);
     }
 
-    public ImageArgs(
-        @Nullable Output<String> archiveSizeBytes,
-        @Nullable Output<DeprecationStatusArgs> deprecated,
-        @Nullable Output<String> description,
-        @Nullable Output<String> diskSizeGb,
-        @Nullable Output<String> family,
-        @Nullable Output<String> forceCreate,
-        @Nullable Output<List<GuestOsFeatureArgs>> guestOsFeatures,
-        @Nullable Output<CustomerEncryptionKeyArgs> imageEncryptionKey,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<List<String>> licenseCodes,
-        @Nullable Output<List<String>> licenses,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<ImageRawDiskArgs> rawDisk,
-        @Nullable Output<String> requestId,
-        @Nullable Output<InitialStateConfigArgs> shieldedInstanceInitialState,
-        @Nullable Output<String> sourceDisk,
-        @Nullable Output<CustomerEncryptionKeyArgs> sourceDiskEncryptionKey,
-        @Nullable Output<String> sourceImage,
-        @Nullable Output<CustomerEncryptionKeyArgs> sourceImageEncryptionKey,
-        @Nullable Output<String> sourceSnapshot,
-        @Nullable Output<CustomerEncryptionKeyArgs> sourceSnapshotEncryptionKey,
-        @Nullable Output<ImageSourceType> sourceType,
-        @Nullable Output<List<String>> storageLocations) {
-        this.archiveSizeBytes = archiveSizeBytes;
-        this.deprecated = deprecated;
-        this.description = description;
-        this.diskSizeGb = diskSizeGb;
-        this.family = family;
-        this.forceCreate = forceCreate;
-        this.guestOsFeatures = guestOsFeatures;
-        this.imageEncryptionKey = imageEncryptionKey;
-        this.labels = labels;
-        this.licenseCodes = licenseCodes;
-        this.licenses = licenses;
-        this.name = name;
-        this.project = project;
-        this.rawDisk = rawDisk;
-        this.requestId = requestId;
-        this.shieldedInstanceInitialState = shieldedInstanceInitialState;
-        this.sourceDisk = sourceDisk;
-        this.sourceDiskEncryptionKey = sourceDiskEncryptionKey;
-        this.sourceImage = sourceImage;
-        this.sourceImageEncryptionKey = sourceImageEncryptionKey;
-        this.sourceSnapshot = sourceSnapshot;
-        this.sourceSnapshotEncryptionKey = sourceSnapshotEncryptionKey;
-        this.sourceType = sourceType;
-        this.storageLocations = storageLocations;
-    }
+    private ImageArgs() {}
 
-    private ImageArgs() {
-        this.archiveSizeBytes = Codegen.empty();
-        this.deprecated = Codegen.empty();
-        this.description = Codegen.empty();
-        this.diskSizeGb = Codegen.empty();
-        this.family = Codegen.empty();
-        this.forceCreate = Codegen.empty();
-        this.guestOsFeatures = Codegen.empty();
-        this.imageEncryptionKey = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.licenseCodes = Codegen.empty();
-        this.licenses = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.rawDisk = Codegen.empty();
-        this.requestId = Codegen.empty();
-        this.shieldedInstanceInitialState = Codegen.empty();
-        this.sourceDisk = Codegen.empty();
-        this.sourceDiskEncryptionKey = Codegen.empty();
-        this.sourceImage = Codegen.empty();
-        this.sourceImageEncryptionKey = Codegen.empty();
-        this.sourceSnapshot = Codegen.empty();
-        this.sourceSnapshotEncryptionKey = Codegen.empty();
-        this.sourceType = Codegen.empty();
-        this.storageLocations = Codegen.empty();
+    private ImageArgs(ImageArgs $) {
+        this.archiveSizeBytes = $.archiveSizeBytes;
+        this.deprecated = $.deprecated;
+        this.description = $.description;
+        this.diskSizeGb = $.diskSizeGb;
+        this.family = $.family;
+        this.forceCreate = $.forceCreate;
+        this.guestOsFeatures = $.guestOsFeatures;
+        this.imageEncryptionKey = $.imageEncryptionKey;
+        this.labels = $.labels;
+        this.licenseCodes = $.licenseCodes;
+        this.licenses = $.licenses;
+        this.name = $.name;
+        this.project = $.project;
+        this.rawDisk = $.rawDisk;
+        this.requestId = $.requestId;
+        this.shieldedInstanceInitialState = $.shieldedInstanceInitialState;
+        this.sourceDisk = $.sourceDisk;
+        this.sourceDiskEncryptionKey = $.sourceDiskEncryptionKey;
+        this.sourceImage = $.sourceImage;
+        this.sourceImageEncryptionKey = $.sourceImageEncryptionKey;
+        this.sourceSnapshot = $.sourceSnapshot;
+        this.sourceSnapshotEncryptionKey = $.sourceSnapshotEncryptionKey;
+        this.sourceType = $.sourceType;
+        this.storageLocations = $.storageLocations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> archiveSizeBytes;
-        private @Nullable Output<DeprecationStatusArgs> deprecated;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> diskSizeGb;
-        private @Nullable Output<String> family;
-        private @Nullable Output<String> forceCreate;
-        private @Nullable Output<List<GuestOsFeatureArgs>> guestOsFeatures;
-        private @Nullable Output<CustomerEncryptionKeyArgs> imageEncryptionKey;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<List<String>> licenseCodes;
-        private @Nullable Output<List<String>> licenses;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<ImageRawDiskArgs> rawDisk;
-        private @Nullable Output<String> requestId;
-        private @Nullable Output<InitialStateConfigArgs> shieldedInstanceInitialState;
-        private @Nullable Output<String> sourceDisk;
-        private @Nullable Output<CustomerEncryptionKeyArgs> sourceDiskEncryptionKey;
-        private @Nullable Output<String> sourceImage;
-        private @Nullable Output<CustomerEncryptionKeyArgs> sourceImageEncryptionKey;
-        private @Nullable Output<String> sourceSnapshot;
-        private @Nullable Output<CustomerEncryptionKeyArgs> sourceSnapshotEncryptionKey;
-        private @Nullable Output<ImageSourceType> sourceType;
-        private @Nullable Output<List<String>> storageLocations;
+        private ImageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageArgs();
         }
 
         public Builder(ImageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.archiveSizeBytes = defaults.archiveSizeBytes;
-    	      this.deprecated = defaults.deprecated;
-    	      this.description = defaults.description;
-    	      this.diskSizeGb = defaults.diskSizeGb;
-    	      this.family = defaults.family;
-    	      this.forceCreate = defaults.forceCreate;
-    	      this.guestOsFeatures = defaults.guestOsFeatures;
-    	      this.imageEncryptionKey = defaults.imageEncryptionKey;
-    	      this.labels = defaults.labels;
-    	      this.licenseCodes = defaults.licenseCodes;
-    	      this.licenses = defaults.licenses;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.rawDisk = defaults.rawDisk;
-    	      this.requestId = defaults.requestId;
-    	      this.shieldedInstanceInitialState = defaults.shieldedInstanceInitialState;
-    	      this.sourceDisk = defaults.sourceDisk;
-    	      this.sourceDiskEncryptionKey = defaults.sourceDiskEncryptionKey;
-    	      this.sourceImage = defaults.sourceImage;
-    	      this.sourceImageEncryptionKey = defaults.sourceImageEncryptionKey;
-    	      this.sourceSnapshot = defaults.sourceSnapshot;
-    	      this.sourceSnapshotEncryptionKey = defaults.sourceSnapshotEncryptionKey;
-    	      this.sourceType = defaults.sourceType;
-    	      this.storageLocations = defaults.storageLocations;
+            $ = new ImageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder archiveSizeBytes(@Nullable Output<String> archiveSizeBytes) {
-            this.archiveSizeBytes = archiveSizeBytes;
+            $.archiveSizeBytes = archiveSizeBytes;
             return this;
         }
-        public Builder archiveSizeBytes(@Nullable String archiveSizeBytes) {
-            this.archiveSizeBytes = Codegen.ofNullable(archiveSizeBytes);
-            return this;
+
+        public Builder archiveSizeBytes(String archiveSizeBytes) {
+            return archiveSizeBytes(Output.of(archiveSizeBytes));
         }
+
         public Builder deprecated(@Nullable Output<DeprecationStatusArgs> deprecated) {
-            this.deprecated = deprecated;
+            $.deprecated = deprecated;
             return this;
         }
-        public Builder deprecated(@Nullable DeprecationStatusArgs deprecated) {
-            this.deprecated = Codegen.ofNullable(deprecated);
-            return this;
+
+        public Builder deprecated(DeprecationStatusArgs deprecated) {
+            return deprecated(Output.of(deprecated));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder diskSizeGb(@Nullable Output<String> diskSizeGb) {
-            this.diskSizeGb = diskSizeGb;
+            $.diskSizeGb = diskSizeGb;
             return this;
         }
-        public Builder diskSizeGb(@Nullable String diskSizeGb) {
-            this.diskSizeGb = Codegen.ofNullable(diskSizeGb);
-            return this;
+
+        public Builder diskSizeGb(String diskSizeGb) {
+            return diskSizeGb(Output.of(diskSizeGb));
         }
+
         public Builder family(@Nullable Output<String> family) {
-            this.family = family;
+            $.family = family;
             return this;
         }
-        public Builder family(@Nullable String family) {
-            this.family = Codegen.ofNullable(family);
-            return this;
+
+        public Builder family(String family) {
+            return family(Output.of(family));
         }
+
         public Builder forceCreate(@Nullable Output<String> forceCreate) {
-            this.forceCreate = forceCreate;
+            $.forceCreate = forceCreate;
             return this;
         }
-        public Builder forceCreate(@Nullable String forceCreate) {
-            this.forceCreate = Codegen.ofNullable(forceCreate);
-            return this;
+
+        public Builder forceCreate(String forceCreate) {
+            return forceCreate(Output.of(forceCreate));
         }
+
         public Builder guestOsFeatures(@Nullable Output<List<GuestOsFeatureArgs>> guestOsFeatures) {
-            this.guestOsFeatures = guestOsFeatures;
+            $.guestOsFeatures = guestOsFeatures;
             return this;
         }
-        public Builder guestOsFeatures(@Nullable List<GuestOsFeatureArgs> guestOsFeatures) {
-            this.guestOsFeatures = Codegen.ofNullable(guestOsFeatures);
-            return this;
+
+        public Builder guestOsFeatures(List<GuestOsFeatureArgs> guestOsFeatures) {
+            return guestOsFeatures(Output.of(guestOsFeatures));
         }
+
         public Builder guestOsFeatures(GuestOsFeatureArgs... guestOsFeatures) {
             return guestOsFeatures(List.of(guestOsFeatures));
         }
+
         public Builder imageEncryptionKey(@Nullable Output<CustomerEncryptionKeyArgs> imageEncryptionKey) {
-            this.imageEncryptionKey = imageEncryptionKey;
+            $.imageEncryptionKey = imageEncryptionKey;
             return this;
         }
-        public Builder imageEncryptionKey(@Nullable CustomerEncryptionKeyArgs imageEncryptionKey) {
-            this.imageEncryptionKey = Codegen.ofNullable(imageEncryptionKey);
-            return this;
+
+        public Builder imageEncryptionKey(CustomerEncryptionKeyArgs imageEncryptionKey) {
+            return imageEncryptionKey(Output.of(imageEncryptionKey));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder licenseCodes(@Nullable Output<List<String>> licenseCodes) {
-            this.licenseCodes = licenseCodes;
+            $.licenseCodes = licenseCodes;
             return this;
         }
-        public Builder licenseCodes(@Nullable List<String> licenseCodes) {
-            this.licenseCodes = Codegen.ofNullable(licenseCodes);
-            return this;
+
+        public Builder licenseCodes(List<String> licenseCodes) {
+            return licenseCodes(Output.of(licenseCodes));
         }
+
         public Builder licenseCodes(String... licenseCodes) {
             return licenseCodes(List.of(licenseCodes));
         }
+
         public Builder licenses(@Nullable Output<List<String>> licenses) {
-            this.licenses = licenses;
+            $.licenses = licenses;
             return this;
         }
-        public Builder licenses(@Nullable List<String> licenses) {
-            this.licenses = Codegen.ofNullable(licenses);
-            return this;
+
+        public Builder licenses(List<String> licenses) {
+            return licenses(Output.of(licenses));
         }
+
         public Builder licenses(String... licenses) {
             return licenses(List.of(licenses));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder rawDisk(@Nullable Output<ImageRawDiskArgs> rawDisk) {
-            this.rawDisk = rawDisk;
+            $.rawDisk = rawDisk;
             return this;
         }
-        public Builder rawDisk(@Nullable ImageRawDiskArgs rawDisk) {
-            this.rawDisk = Codegen.ofNullable(rawDisk);
-            return this;
+
+        public Builder rawDisk(ImageRawDiskArgs rawDisk) {
+            return rawDisk(Output.of(rawDisk));
         }
+
         public Builder requestId(@Nullable Output<String> requestId) {
-            this.requestId = requestId;
+            $.requestId = requestId;
             return this;
         }
-        public Builder requestId(@Nullable String requestId) {
-            this.requestId = Codegen.ofNullable(requestId);
-            return this;
+
+        public Builder requestId(String requestId) {
+            return requestId(Output.of(requestId));
         }
+
         public Builder shieldedInstanceInitialState(@Nullable Output<InitialStateConfigArgs> shieldedInstanceInitialState) {
-            this.shieldedInstanceInitialState = shieldedInstanceInitialState;
+            $.shieldedInstanceInitialState = shieldedInstanceInitialState;
             return this;
         }
-        public Builder shieldedInstanceInitialState(@Nullable InitialStateConfigArgs shieldedInstanceInitialState) {
-            this.shieldedInstanceInitialState = Codegen.ofNullable(shieldedInstanceInitialState);
-            return this;
+
+        public Builder shieldedInstanceInitialState(InitialStateConfigArgs shieldedInstanceInitialState) {
+            return shieldedInstanceInitialState(Output.of(shieldedInstanceInitialState));
         }
+
         public Builder sourceDisk(@Nullable Output<String> sourceDisk) {
-            this.sourceDisk = sourceDisk;
+            $.sourceDisk = sourceDisk;
             return this;
         }
-        public Builder sourceDisk(@Nullable String sourceDisk) {
-            this.sourceDisk = Codegen.ofNullable(sourceDisk);
-            return this;
+
+        public Builder sourceDisk(String sourceDisk) {
+            return sourceDisk(Output.of(sourceDisk));
         }
+
         public Builder sourceDiskEncryptionKey(@Nullable Output<CustomerEncryptionKeyArgs> sourceDiskEncryptionKey) {
-            this.sourceDiskEncryptionKey = sourceDiskEncryptionKey;
+            $.sourceDiskEncryptionKey = sourceDiskEncryptionKey;
             return this;
         }
-        public Builder sourceDiskEncryptionKey(@Nullable CustomerEncryptionKeyArgs sourceDiskEncryptionKey) {
-            this.sourceDiskEncryptionKey = Codegen.ofNullable(sourceDiskEncryptionKey);
-            return this;
+
+        public Builder sourceDiskEncryptionKey(CustomerEncryptionKeyArgs sourceDiskEncryptionKey) {
+            return sourceDiskEncryptionKey(Output.of(sourceDiskEncryptionKey));
         }
+
         public Builder sourceImage(@Nullable Output<String> sourceImage) {
-            this.sourceImage = sourceImage;
+            $.sourceImage = sourceImage;
             return this;
         }
-        public Builder sourceImage(@Nullable String sourceImage) {
-            this.sourceImage = Codegen.ofNullable(sourceImage);
-            return this;
+
+        public Builder sourceImage(String sourceImage) {
+            return sourceImage(Output.of(sourceImage));
         }
+
         public Builder sourceImageEncryptionKey(@Nullable Output<CustomerEncryptionKeyArgs> sourceImageEncryptionKey) {
-            this.sourceImageEncryptionKey = sourceImageEncryptionKey;
+            $.sourceImageEncryptionKey = sourceImageEncryptionKey;
             return this;
         }
-        public Builder sourceImageEncryptionKey(@Nullable CustomerEncryptionKeyArgs sourceImageEncryptionKey) {
-            this.sourceImageEncryptionKey = Codegen.ofNullable(sourceImageEncryptionKey);
-            return this;
+
+        public Builder sourceImageEncryptionKey(CustomerEncryptionKeyArgs sourceImageEncryptionKey) {
+            return sourceImageEncryptionKey(Output.of(sourceImageEncryptionKey));
         }
+
         public Builder sourceSnapshot(@Nullable Output<String> sourceSnapshot) {
-            this.sourceSnapshot = sourceSnapshot;
+            $.sourceSnapshot = sourceSnapshot;
             return this;
         }
-        public Builder sourceSnapshot(@Nullable String sourceSnapshot) {
-            this.sourceSnapshot = Codegen.ofNullable(sourceSnapshot);
-            return this;
+
+        public Builder sourceSnapshot(String sourceSnapshot) {
+            return sourceSnapshot(Output.of(sourceSnapshot));
         }
+
         public Builder sourceSnapshotEncryptionKey(@Nullable Output<CustomerEncryptionKeyArgs> sourceSnapshotEncryptionKey) {
-            this.sourceSnapshotEncryptionKey = sourceSnapshotEncryptionKey;
+            $.sourceSnapshotEncryptionKey = sourceSnapshotEncryptionKey;
             return this;
         }
-        public Builder sourceSnapshotEncryptionKey(@Nullable CustomerEncryptionKeyArgs sourceSnapshotEncryptionKey) {
-            this.sourceSnapshotEncryptionKey = Codegen.ofNullable(sourceSnapshotEncryptionKey);
-            return this;
+
+        public Builder sourceSnapshotEncryptionKey(CustomerEncryptionKeyArgs sourceSnapshotEncryptionKey) {
+            return sourceSnapshotEncryptionKey(Output.of(sourceSnapshotEncryptionKey));
         }
+
         public Builder sourceType(@Nullable Output<ImageSourceType> sourceType) {
-            this.sourceType = sourceType;
+            $.sourceType = sourceType;
             return this;
         }
-        public Builder sourceType(@Nullable ImageSourceType sourceType) {
-            this.sourceType = Codegen.ofNullable(sourceType);
-            return this;
+
+        public Builder sourceType(ImageSourceType sourceType) {
+            return sourceType(Output.of(sourceType));
         }
+
         public Builder storageLocations(@Nullable Output<List<String>> storageLocations) {
-            this.storageLocations = storageLocations;
+            $.storageLocations = storageLocations;
             return this;
         }
-        public Builder storageLocations(@Nullable List<String> storageLocations) {
-            this.storageLocations = Codegen.ofNullable(storageLocations);
-            return this;
+
+        public Builder storageLocations(List<String> storageLocations) {
+            return storageLocations(Output.of(storageLocations));
         }
+
         public Builder storageLocations(String... storageLocations) {
             return storageLocations(List.of(storageLocations));
-        }        public ImageArgs build() {
-            return new ImageArgs(archiveSizeBytes, deprecated, description, diskSizeGb, family, forceCreate, guestOsFeatures, imageEncryptionKey, labels, licenseCodes, licenses, name, project, rawDisk, requestId, shieldedInstanceInitialState, sourceDisk, sourceDiskEncryptionKey, sourceImage, sourceImageEncryptionKey, sourceSnapshot, sourceSnapshotEncryptionKey, sourceType, storageLocations);
+        }
+
+        public ImageArgs build() {
+            return $;
         }
     }
+
 }

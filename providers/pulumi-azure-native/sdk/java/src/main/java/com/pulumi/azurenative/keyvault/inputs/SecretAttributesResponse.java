@@ -24,7 +24,7 @@ public final class SecretAttributesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="created", required=true)
-      private final Integer created;
+    private Integer created;
 
     public Integer created() {
         return this.created;
@@ -35,10 +35,10 @@ public final class SecretAttributesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Boolean enabled;
+    private @Nullable Boolean enabled;
 
     public Optional<Boolean> enabled() {
-        return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class SecretAttributesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="expires")
-      private final @Nullable Integer expires;
+    private @Nullable Integer expires;
 
     public Optional<Integer> expires() {
-        return this.expires == null ? Optional.empty() : Optional.ofNullable(this.expires);
+        return Optional.ofNullable(this.expires);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class SecretAttributesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="notBefore")
-      private final @Nullable Integer notBefore;
+    private @Nullable Integer notBefore;
 
     public Optional<Integer> notBefore() {
-        return this.notBefore == null ? Optional.empty() : Optional.ofNullable(this.notBefore);
+        return Optional.ofNullable(this.notBefore);
     }
 
     /**
@@ -68,82 +68,70 @@ public final class SecretAttributesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="updated", required=true)
-      private final Integer updated;
+    private Integer updated;
 
     public Integer updated() {
         return this.updated;
     }
 
-    public SecretAttributesResponse(
-        Integer created,
-        @Nullable Boolean enabled,
-        @Nullable Integer expires,
-        @Nullable Integer notBefore,
-        Integer updated) {
-        this.created = Objects.requireNonNull(created, "expected parameter 'created' to be non-null");
-        this.enabled = enabled;
-        this.expires = expires;
-        this.notBefore = notBefore;
-        this.updated = Objects.requireNonNull(updated, "expected parameter 'updated' to be non-null");
-    }
+    private SecretAttributesResponse() {}
 
-    private SecretAttributesResponse() {
-        this.created = null;
-        this.enabled = null;
-        this.expires = null;
-        this.notBefore = null;
-        this.updated = null;
+    private SecretAttributesResponse(SecretAttributesResponse $) {
+        this.created = $.created;
+        this.enabled = $.enabled;
+        this.expires = $.expires;
+        this.notBefore = $.notBefore;
+        this.updated = $.updated;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecretAttributesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer created;
-        private @Nullable Boolean enabled;
-        private @Nullable Integer expires;
-        private @Nullable Integer notBefore;
-        private Integer updated;
+        private SecretAttributesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecretAttributesResponse();
         }
 
         public Builder(SecretAttributesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.created = defaults.created;
-    	      this.enabled = defaults.enabled;
-    	      this.expires = defaults.expires;
-    	      this.notBefore = defaults.notBefore;
-    	      this.updated = defaults.updated;
+            $ = new SecretAttributesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder created(Integer created) {
-            this.created = Objects.requireNonNull(created);
+            $.created = created;
             return this;
         }
+
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
+
         public Builder expires(@Nullable Integer expires) {
-            this.expires = expires;
+            $.expires = expires;
             return this;
         }
+
         public Builder notBefore(@Nullable Integer notBefore) {
-            this.notBefore = notBefore;
+            $.notBefore = notBefore;
             return this;
         }
+
         public Builder updated(Integer updated) {
-            this.updated = Objects.requireNonNull(updated);
+            $.updated = updated;
             return this;
-        }        public SecretAttributesResponse build() {
-            return new SecretAttributesResponse(created, enabled, expires, notBefore, updated);
+        }
+
+        public SecretAttributesResponse build() {
+            $.created = Objects.requireNonNull($.created, "expected parameter 'created' to be non-null");
+            $.updated = Objects.requireNonNull($.updated, "expected parameter 'updated' to be non-null");
+            return $;
         }
     }
+
 }

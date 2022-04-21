@@ -5,7 +5,6 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.servicemanagement_v1.enums.FieldCardinality;
 import com.pulumi.googlenative.servicemanagement_v1.enums.FieldKind;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.OptionArgs;
@@ -14,6 +13,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,10 +30,10 @@ public final class FieldArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cardinality")
-      private final @Nullable Output<FieldCardinality> cardinality;
+    private @Nullable Output<FieldCardinality> cardinality;
 
-    public Output<FieldCardinality> cardinality() {
-        return this.cardinality == null ? Codegen.empty() : this.cardinality;
+    public Optional<Output<FieldCardinality>> cardinality() {
+        return Optional.ofNullable(this.cardinality);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class FieldArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultValue")
-      private final @Nullable Output<String> defaultValue;
+    private @Nullable Output<String> defaultValue;
 
-    public Output<String> defaultValue() {
-        return this.defaultValue == null ? Codegen.empty() : this.defaultValue;
+    public Optional<Output<String>> defaultValue() {
+        return Optional.ofNullable(this.defaultValue);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class FieldArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="jsonName")
-      private final @Nullable Output<String> jsonName;
+    private @Nullable Output<String> jsonName;
 
-    public Output<String> jsonName() {
-        return this.jsonName == null ? Codegen.empty() : this.jsonName;
+    public Optional<Output<String>> jsonName() {
+        return Optional.ofNullable(this.jsonName);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class FieldArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<FieldKind> kind;
+    private @Nullable Output<FieldKind> kind;
 
-    public Output<FieldKind> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<FieldKind>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class FieldArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class FieldArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="number")
-      private final @Nullable Output<Integer> number;
+    private @Nullable Output<Integer> number;
 
-    public Output<Integer> number() {
-        return this.number == null ? Codegen.empty() : this.number;
+    public Optional<Output<Integer>> number() {
+        return Optional.ofNullable(this.number);
     }
 
     /**
@@ -96,10 +96,10 @@ public final class FieldArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="oneofIndex")
-      private final @Nullable Output<Integer> oneofIndex;
+    private @Nullable Output<Integer> oneofIndex;
 
-    public Output<Integer> oneofIndex() {
-        return this.oneofIndex == null ? Codegen.empty() : this.oneofIndex;
+    public Optional<Output<Integer>> oneofIndex() {
+        return Optional.ofNullable(this.oneofIndex);
     }
 
     /**
@@ -107,10 +107,10 @@ public final class FieldArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="options")
-      private final @Nullable Output<List<OptionArgs>> options;
+    private @Nullable Output<List<OptionArgs>> options;
 
-    public Output<List<OptionArgs>> options() {
-        return this.options == null ? Codegen.empty() : this.options;
+    public Optional<Output<List<OptionArgs>>> options() {
+        return Optional.ofNullable(this.options);
     }
 
     /**
@@ -118,10 +118,10 @@ public final class FieldArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="packed")
-      private final @Nullable Output<Boolean> packed;
+    private @Nullable Output<Boolean> packed;
 
-    public Output<Boolean> packed() {
-        return this.packed == null ? Codegen.empty() : this.packed;
+    public Optional<Output<Boolean>> packed() {
+        return Optional.ofNullable(this.packed);
     }
 
     /**
@@ -129,170 +129,142 @@ public final class FieldArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="typeUrl")
-      private final @Nullable Output<String> typeUrl;
+    private @Nullable Output<String> typeUrl;
 
-    public Output<String> typeUrl() {
-        return this.typeUrl == null ? Codegen.empty() : this.typeUrl;
+    public Optional<Output<String>> typeUrl() {
+        return Optional.ofNullable(this.typeUrl);
     }
 
-    public FieldArgs(
-        @Nullable Output<FieldCardinality> cardinality,
-        @Nullable Output<String> defaultValue,
-        @Nullable Output<String> jsonName,
-        @Nullable Output<FieldKind> kind,
-        @Nullable Output<String> name,
-        @Nullable Output<Integer> number,
-        @Nullable Output<Integer> oneofIndex,
-        @Nullable Output<List<OptionArgs>> options,
-        @Nullable Output<Boolean> packed,
-        @Nullable Output<String> typeUrl) {
-        this.cardinality = cardinality;
-        this.defaultValue = defaultValue;
-        this.jsonName = jsonName;
-        this.kind = kind;
-        this.name = name;
-        this.number = number;
-        this.oneofIndex = oneofIndex;
-        this.options = options;
-        this.packed = packed;
-        this.typeUrl = typeUrl;
-    }
+    private FieldArgs() {}
 
-    private FieldArgs() {
-        this.cardinality = Codegen.empty();
-        this.defaultValue = Codegen.empty();
-        this.jsonName = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.name = Codegen.empty();
-        this.number = Codegen.empty();
-        this.oneofIndex = Codegen.empty();
-        this.options = Codegen.empty();
-        this.packed = Codegen.empty();
-        this.typeUrl = Codegen.empty();
+    private FieldArgs(FieldArgs $) {
+        this.cardinality = $.cardinality;
+        this.defaultValue = $.defaultValue;
+        this.jsonName = $.jsonName;
+        this.kind = $.kind;
+        this.name = $.name;
+        this.number = $.number;
+        this.oneofIndex = $.oneofIndex;
+        this.options = $.options;
+        this.packed = $.packed;
+        this.typeUrl = $.typeUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FieldArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<FieldCardinality> cardinality;
-        private @Nullable Output<String> defaultValue;
-        private @Nullable Output<String> jsonName;
-        private @Nullable Output<FieldKind> kind;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Integer> number;
-        private @Nullable Output<Integer> oneofIndex;
-        private @Nullable Output<List<OptionArgs>> options;
-        private @Nullable Output<Boolean> packed;
-        private @Nullable Output<String> typeUrl;
+        private FieldArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FieldArgs();
         }
 
         public Builder(FieldArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cardinality = defaults.cardinality;
-    	      this.defaultValue = defaults.defaultValue;
-    	      this.jsonName = defaults.jsonName;
-    	      this.kind = defaults.kind;
-    	      this.name = defaults.name;
-    	      this.number = defaults.number;
-    	      this.oneofIndex = defaults.oneofIndex;
-    	      this.options = defaults.options;
-    	      this.packed = defaults.packed;
-    	      this.typeUrl = defaults.typeUrl;
+            $ = new FieldArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cardinality(@Nullable Output<FieldCardinality> cardinality) {
-            this.cardinality = cardinality;
+            $.cardinality = cardinality;
             return this;
         }
-        public Builder cardinality(@Nullable FieldCardinality cardinality) {
-            this.cardinality = Codegen.ofNullable(cardinality);
-            return this;
+
+        public Builder cardinality(FieldCardinality cardinality) {
+            return cardinality(Output.of(cardinality));
         }
+
         public Builder defaultValue(@Nullable Output<String> defaultValue) {
-            this.defaultValue = defaultValue;
+            $.defaultValue = defaultValue;
             return this;
         }
-        public Builder defaultValue(@Nullable String defaultValue) {
-            this.defaultValue = Codegen.ofNullable(defaultValue);
-            return this;
+
+        public Builder defaultValue(String defaultValue) {
+            return defaultValue(Output.of(defaultValue));
         }
+
         public Builder jsonName(@Nullable Output<String> jsonName) {
-            this.jsonName = jsonName;
+            $.jsonName = jsonName;
             return this;
         }
-        public Builder jsonName(@Nullable String jsonName) {
-            this.jsonName = Codegen.ofNullable(jsonName);
-            return this;
+
+        public Builder jsonName(String jsonName) {
+            return jsonName(Output.of(jsonName));
         }
+
         public Builder kind(@Nullable Output<FieldKind> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable FieldKind kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(FieldKind kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder number(@Nullable Output<Integer> number) {
-            this.number = number;
+            $.number = number;
             return this;
         }
-        public Builder number(@Nullable Integer number) {
-            this.number = Codegen.ofNullable(number);
-            return this;
+
+        public Builder number(Integer number) {
+            return number(Output.of(number));
         }
+
         public Builder oneofIndex(@Nullable Output<Integer> oneofIndex) {
-            this.oneofIndex = oneofIndex;
+            $.oneofIndex = oneofIndex;
             return this;
         }
-        public Builder oneofIndex(@Nullable Integer oneofIndex) {
-            this.oneofIndex = Codegen.ofNullable(oneofIndex);
-            return this;
+
+        public Builder oneofIndex(Integer oneofIndex) {
+            return oneofIndex(Output.of(oneofIndex));
         }
+
         public Builder options(@Nullable Output<List<OptionArgs>> options) {
-            this.options = options;
+            $.options = options;
             return this;
         }
-        public Builder options(@Nullable List<OptionArgs> options) {
-            this.options = Codegen.ofNullable(options);
-            return this;
+
+        public Builder options(List<OptionArgs> options) {
+            return options(Output.of(options));
         }
+
         public Builder options(OptionArgs... options) {
             return options(List.of(options));
         }
+
         public Builder packed(@Nullable Output<Boolean> packed) {
-            this.packed = packed;
+            $.packed = packed;
             return this;
         }
-        public Builder packed(@Nullable Boolean packed) {
-            this.packed = Codegen.ofNullable(packed);
-            return this;
+
+        public Builder packed(Boolean packed) {
+            return packed(Output.of(packed));
         }
+
         public Builder typeUrl(@Nullable Output<String> typeUrl) {
-            this.typeUrl = typeUrl;
+            $.typeUrl = typeUrl;
             return this;
         }
-        public Builder typeUrl(@Nullable String typeUrl) {
-            this.typeUrl = Codegen.ofNullable(typeUrl);
-            return this;
-        }        public FieldArgs build() {
-            return new FieldArgs(cardinality, defaultValue, jsonName, kind, name, number, oneofIndex, options, packed, typeUrl);
+
+        public Builder typeUrl(String typeUrl) {
+            return typeUrl(Output.of(typeUrl));
+        }
+
+        public FieldArgs build() {
+            return $;
         }
     }
+
 }

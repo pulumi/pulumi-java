@@ -5,9 +5,9 @@ package com.pulumi.aws.apigatewayv2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class DomainNameDomainNameConfigurationGetArgs extends com.pulumi.r
      * 
      */
     @Import(name="certificateArn", required=true)
-      private final Output<String> certificateArn;
+    private Output<String> certificateArn;
 
     public Output<String> certificateArn() {
         return this.certificateArn;
@@ -32,7 +32,7 @@ public final class DomainNameDomainNameConfigurationGetArgs extends com.pulumi.r
      * 
      */
     @Import(name="endpointType", required=true)
-      private final Output<String> endpointType;
+    private Output<String> endpointType;
 
     public Output<String> endpointType() {
         return this.endpointType;
@@ -43,10 +43,10 @@ public final class DomainNameDomainNameConfigurationGetArgs extends com.pulumi.r
      * 
      */
     @Import(name="hostedZoneId")
-      private final @Nullable Output<String> hostedZoneId;
+    private @Nullable Output<String> hostedZoneId;
 
-    public Output<String> hostedZoneId() {
-        return this.hostedZoneId == null ? Codegen.empty() : this.hostedZoneId;
+    public Optional<Output<String>> hostedZoneId() {
+        return Optional.ofNullable(this.hostedZoneId);
     }
 
     /**
@@ -54,7 +54,7 @@ public final class DomainNameDomainNameConfigurationGetArgs extends com.pulumi.r
      * 
      */
     @Import(name="securityPolicy", required=true)
-      private final Output<String> securityPolicy;
+    private Output<String> securityPolicy;
 
     public Output<String> securityPolicy() {
         return this.securityPolicy;
@@ -65,102 +65,91 @@ public final class DomainNameDomainNameConfigurationGetArgs extends com.pulumi.r
      * 
      */
     @Import(name="targetDomainName")
-      private final @Nullable Output<String> targetDomainName;
+    private @Nullable Output<String> targetDomainName;
 
-    public Output<String> targetDomainName() {
-        return this.targetDomainName == null ? Codegen.empty() : this.targetDomainName;
+    public Optional<Output<String>> targetDomainName() {
+        return Optional.ofNullable(this.targetDomainName);
     }
 
-    public DomainNameDomainNameConfigurationGetArgs(
-        Output<String> certificateArn,
-        Output<String> endpointType,
-        @Nullable Output<String> hostedZoneId,
-        Output<String> securityPolicy,
-        @Nullable Output<String> targetDomainName) {
-        this.certificateArn = Objects.requireNonNull(certificateArn, "expected parameter 'certificateArn' to be non-null");
-        this.endpointType = Objects.requireNonNull(endpointType, "expected parameter 'endpointType' to be non-null");
-        this.hostedZoneId = hostedZoneId;
-        this.securityPolicy = Objects.requireNonNull(securityPolicy, "expected parameter 'securityPolicy' to be non-null");
-        this.targetDomainName = targetDomainName;
-    }
+    private DomainNameDomainNameConfigurationGetArgs() {}
 
-    private DomainNameDomainNameConfigurationGetArgs() {
-        this.certificateArn = Codegen.empty();
-        this.endpointType = Codegen.empty();
-        this.hostedZoneId = Codegen.empty();
-        this.securityPolicy = Codegen.empty();
-        this.targetDomainName = Codegen.empty();
+    private DomainNameDomainNameConfigurationGetArgs(DomainNameDomainNameConfigurationGetArgs $) {
+        this.certificateArn = $.certificateArn;
+        this.endpointType = $.endpointType;
+        this.hostedZoneId = $.hostedZoneId;
+        this.securityPolicy = $.securityPolicy;
+        this.targetDomainName = $.targetDomainName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainNameDomainNameConfigurationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> certificateArn;
-        private Output<String> endpointType;
-        private @Nullable Output<String> hostedZoneId;
-        private Output<String> securityPolicy;
-        private @Nullable Output<String> targetDomainName;
+        private DomainNameDomainNameConfigurationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainNameDomainNameConfigurationGetArgs();
         }
 
         public Builder(DomainNameDomainNameConfigurationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateArn = defaults.certificateArn;
-    	      this.endpointType = defaults.endpointType;
-    	      this.hostedZoneId = defaults.hostedZoneId;
-    	      this.securityPolicy = defaults.securityPolicy;
-    	      this.targetDomainName = defaults.targetDomainName;
+            $ = new DomainNameDomainNameConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateArn(Output<String> certificateArn) {
-            this.certificateArn = Objects.requireNonNull(certificateArn);
+            $.certificateArn = certificateArn;
             return this;
         }
+
         public Builder certificateArn(String certificateArn) {
-            this.certificateArn = Output.of(Objects.requireNonNull(certificateArn));
-            return this;
+            return certificateArn(Output.of(certificateArn));
         }
+
         public Builder endpointType(Output<String> endpointType) {
-            this.endpointType = Objects.requireNonNull(endpointType);
+            $.endpointType = endpointType;
             return this;
         }
+
         public Builder endpointType(String endpointType) {
-            this.endpointType = Output.of(Objects.requireNonNull(endpointType));
-            return this;
+            return endpointType(Output.of(endpointType));
         }
+
         public Builder hostedZoneId(@Nullable Output<String> hostedZoneId) {
-            this.hostedZoneId = hostedZoneId;
+            $.hostedZoneId = hostedZoneId;
             return this;
         }
-        public Builder hostedZoneId(@Nullable String hostedZoneId) {
-            this.hostedZoneId = Codegen.ofNullable(hostedZoneId);
-            return this;
+
+        public Builder hostedZoneId(String hostedZoneId) {
+            return hostedZoneId(Output.of(hostedZoneId));
         }
+
         public Builder securityPolicy(Output<String> securityPolicy) {
-            this.securityPolicy = Objects.requireNonNull(securityPolicy);
+            $.securityPolicy = securityPolicy;
             return this;
         }
+
         public Builder securityPolicy(String securityPolicy) {
-            this.securityPolicy = Output.of(Objects.requireNonNull(securityPolicy));
-            return this;
+            return securityPolicy(Output.of(securityPolicy));
         }
+
         public Builder targetDomainName(@Nullable Output<String> targetDomainName) {
-            this.targetDomainName = targetDomainName;
+            $.targetDomainName = targetDomainName;
             return this;
         }
-        public Builder targetDomainName(@Nullable String targetDomainName) {
-            this.targetDomainName = Codegen.ofNullable(targetDomainName);
-            return this;
-        }        public DomainNameDomainNameConfigurationGetArgs build() {
-            return new DomainNameDomainNameConfigurationGetArgs(certificateArn, endpointType, hostedZoneId, securityPolicy, targetDomainName);
+
+        public Builder targetDomainName(String targetDomainName) {
+            return targetDomainName(Output.of(targetDomainName));
+        }
+
+        public DomainNameDomainNameConfigurationGetArgs build() {
+            $.certificateArn = Objects.requireNonNull($.certificateArn, "expected parameter 'certificateArn' to be non-null");
+            $.endpointType = Objects.requireNonNull($.endpointType, "expected parameter 'endpointType' to be non-null");
+            $.securityPolicy = Objects.requireNonNull($.securityPolicy, "expected parameter 'securityPolicy' to be non-null");
+            return $;
         }
     }
+
 }

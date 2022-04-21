@@ -17,7 +17,7 @@ public final class GetManagedPrivateEndpointArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="factoryName", required=true)
-      private final String factoryName;
+    private String factoryName;
 
     public String factoryName() {
         return this.factoryName;
@@ -28,7 +28,7 @@ public final class GetManagedPrivateEndpointArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="managedPrivateEndpointName", required=true)
-      private final String managedPrivateEndpointName;
+    private String managedPrivateEndpointName;
 
     public String managedPrivateEndpointName() {
         return this.managedPrivateEndpointName;
@@ -39,7 +39,7 @@ public final class GetManagedPrivateEndpointArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="managedVirtualNetworkName", required=true)
-      private final String managedVirtualNetworkName;
+    private String managedVirtualNetworkName;
 
     public String managedVirtualNetworkName() {
         return this.managedVirtualNetworkName;
@@ -50,73 +50,66 @@ public final class GetManagedPrivateEndpointArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetManagedPrivateEndpointArgs(
-        String factoryName,
-        String managedPrivateEndpointName,
-        String managedVirtualNetworkName,
-        String resourceGroupName) {
-        this.factoryName = Objects.requireNonNull(factoryName, "expected parameter 'factoryName' to be non-null");
-        this.managedPrivateEndpointName = Objects.requireNonNull(managedPrivateEndpointName, "expected parameter 'managedPrivateEndpointName' to be non-null");
-        this.managedVirtualNetworkName = Objects.requireNonNull(managedVirtualNetworkName, "expected parameter 'managedVirtualNetworkName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetManagedPrivateEndpointArgs() {}
 
-    private GetManagedPrivateEndpointArgs() {
-        this.factoryName = null;
-        this.managedPrivateEndpointName = null;
-        this.managedVirtualNetworkName = null;
-        this.resourceGroupName = null;
+    private GetManagedPrivateEndpointArgs(GetManagedPrivateEndpointArgs $) {
+        this.factoryName = $.factoryName;
+        this.managedPrivateEndpointName = $.managedPrivateEndpointName;
+        this.managedVirtualNetworkName = $.managedVirtualNetworkName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetManagedPrivateEndpointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String factoryName;
-        private String managedPrivateEndpointName;
-        private String managedVirtualNetworkName;
-        private String resourceGroupName;
+        private GetManagedPrivateEndpointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetManagedPrivateEndpointArgs();
         }
 
         public Builder(GetManagedPrivateEndpointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.factoryName = defaults.factoryName;
-    	      this.managedPrivateEndpointName = defaults.managedPrivateEndpointName;
-    	      this.managedVirtualNetworkName = defaults.managedVirtualNetworkName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetManagedPrivateEndpointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder factoryName(String factoryName) {
-            this.factoryName = Objects.requireNonNull(factoryName);
+            $.factoryName = factoryName;
             return this;
         }
+
         public Builder managedPrivateEndpointName(String managedPrivateEndpointName) {
-            this.managedPrivateEndpointName = Objects.requireNonNull(managedPrivateEndpointName);
+            $.managedPrivateEndpointName = managedPrivateEndpointName;
             return this;
         }
+
         public Builder managedVirtualNetworkName(String managedVirtualNetworkName) {
-            this.managedVirtualNetworkName = Objects.requireNonNull(managedVirtualNetworkName);
+            $.managedVirtualNetworkName = managedVirtualNetworkName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetManagedPrivateEndpointArgs build() {
-            return new GetManagedPrivateEndpointArgs(factoryName, managedPrivateEndpointName, managedVirtualNetworkName, resourceGroupName);
+        }
+
+        public GetManagedPrivateEndpointArgs build() {
+            $.factoryName = Objects.requireNonNull($.factoryName, "expected parameter 'factoryName' to be non-null");
+            $.managedPrivateEndpointName = Objects.requireNonNull($.managedPrivateEndpointName, "expected parameter 'managedPrivateEndpointName' to be non-null");
+            $.managedVirtualNetworkName = Objects.requireNonNull($.managedVirtualNetworkName, "expected parameter 'managedVirtualNetworkName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

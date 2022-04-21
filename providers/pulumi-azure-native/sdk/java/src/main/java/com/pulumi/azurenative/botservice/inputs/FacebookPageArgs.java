@@ -5,9 +5,9 @@ package com.pulumi.azurenative.botservice.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class FacebookPageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accessToken")
-      private final @Nullable Output<String> accessToken;
+    private @Nullable Output<String> accessToken;
 
-    public Output<String> accessToken() {
-        return this.accessToken == null ? Codegen.empty() : this.accessToken;
+    public Optional<Output<String>> accessToken() {
+        return Optional.ofNullable(this.accessToken);
     }
 
     /**
@@ -35,63 +35,59 @@ public final class FacebookPageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="id", required=true)
-      private final Output<String> id;
+    private Output<String> id;
 
     public Output<String> id() {
         return this.id;
     }
 
-    public FacebookPageArgs(
-        @Nullable Output<String> accessToken,
-        Output<String> id) {
-        this.accessToken = accessToken;
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private FacebookPageArgs() {}
 
-    private FacebookPageArgs() {
-        this.accessToken = Codegen.empty();
-        this.id = Codegen.empty();
+    private FacebookPageArgs(FacebookPageArgs $) {
+        this.accessToken = $.accessToken;
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FacebookPageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accessToken;
-        private Output<String> id;
+        private FacebookPageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FacebookPageArgs();
         }
 
         public Builder(FacebookPageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessToken = defaults.accessToken;
-    	      this.id = defaults.id;
+            $ = new FacebookPageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessToken(@Nullable Output<String> accessToken) {
-            this.accessToken = accessToken;
+            $.accessToken = accessToken;
             return this;
         }
-        public Builder accessToken(@Nullable String accessToken) {
-            this.accessToken = Codegen.ofNullable(accessToken);
-            return this;
+
+        public Builder accessToken(String accessToken) {
+            return accessToken(Output.of(accessToken));
         }
+
         public Builder id(Output<String> id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Output.of(Objects.requireNonNull(id));
-            return this;
-        }        public FacebookPageArgs build() {
-            return new FacebookPageArgs(accessToken, id);
+            return id(Output.of(id));
+        }
+
+        public FacebookPageArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

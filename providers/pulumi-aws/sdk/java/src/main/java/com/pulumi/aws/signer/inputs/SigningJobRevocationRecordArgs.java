@@ -5,9 +5,9 @@ package com.pulumi.aws.signer.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,90 +16,82 @@ public final class SigningJobRevocationRecordArgs extends com.pulumi.resources.R
     public static final SigningJobRevocationRecordArgs Empty = new SigningJobRevocationRecordArgs();
 
     @Import(name="reason")
-      private final @Nullable Output<String> reason;
+    private @Nullable Output<String> reason;
 
-    public Output<String> reason() {
-        return this.reason == null ? Codegen.empty() : this.reason;
+    public Optional<Output<String>> reason() {
+        return Optional.ofNullable(this.reason);
     }
 
     @Import(name="revokedAt")
-      private final @Nullable Output<String> revokedAt;
+    private @Nullable Output<String> revokedAt;
 
-    public Output<String> revokedAt() {
-        return this.revokedAt == null ? Codegen.empty() : this.revokedAt;
+    public Optional<Output<String>> revokedAt() {
+        return Optional.ofNullable(this.revokedAt);
     }
 
     @Import(name="revokedBy")
-      private final @Nullable Output<String> revokedBy;
+    private @Nullable Output<String> revokedBy;
 
-    public Output<String> revokedBy() {
-        return this.revokedBy == null ? Codegen.empty() : this.revokedBy;
+    public Optional<Output<String>> revokedBy() {
+        return Optional.ofNullable(this.revokedBy);
     }
 
-    public SigningJobRevocationRecordArgs(
-        @Nullable Output<String> reason,
-        @Nullable Output<String> revokedAt,
-        @Nullable Output<String> revokedBy) {
-        this.reason = reason;
-        this.revokedAt = revokedAt;
-        this.revokedBy = revokedBy;
-    }
+    private SigningJobRevocationRecordArgs() {}
 
-    private SigningJobRevocationRecordArgs() {
-        this.reason = Codegen.empty();
-        this.revokedAt = Codegen.empty();
-        this.revokedBy = Codegen.empty();
+    private SigningJobRevocationRecordArgs(SigningJobRevocationRecordArgs $) {
+        this.reason = $.reason;
+        this.revokedAt = $.revokedAt;
+        this.revokedBy = $.revokedBy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SigningJobRevocationRecordArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> reason;
-        private @Nullable Output<String> revokedAt;
-        private @Nullable Output<String> revokedBy;
+        private SigningJobRevocationRecordArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SigningJobRevocationRecordArgs();
         }
 
         public Builder(SigningJobRevocationRecordArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.reason = defaults.reason;
-    	      this.revokedAt = defaults.revokedAt;
-    	      this.revokedBy = defaults.revokedBy;
+            $ = new SigningJobRevocationRecordArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder reason(@Nullable Output<String> reason) {
-            this.reason = reason;
+            $.reason = reason;
             return this;
         }
-        public Builder reason(@Nullable String reason) {
-            this.reason = Codegen.ofNullable(reason);
-            return this;
+
+        public Builder reason(String reason) {
+            return reason(Output.of(reason));
         }
+
         public Builder revokedAt(@Nullable Output<String> revokedAt) {
-            this.revokedAt = revokedAt;
+            $.revokedAt = revokedAt;
             return this;
         }
-        public Builder revokedAt(@Nullable String revokedAt) {
-            this.revokedAt = Codegen.ofNullable(revokedAt);
-            return this;
+
+        public Builder revokedAt(String revokedAt) {
+            return revokedAt(Output.of(revokedAt));
         }
+
         public Builder revokedBy(@Nullable Output<String> revokedBy) {
-            this.revokedBy = revokedBy;
+            $.revokedBy = revokedBy;
             return this;
         }
-        public Builder revokedBy(@Nullable String revokedBy) {
-            this.revokedBy = Codegen.ofNullable(revokedBy);
-            return this;
-        }        public SigningJobRevocationRecordArgs build() {
-            return new SigningJobRevocationRecordArgs(reason, revokedAt, revokedBy);
+
+        public Builder revokedBy(String revokedBy) {
+            return revokedBy(Output.of(revokedBy));
+        }
+
+        public SigningJobRevocationRecordArgs build() {
+            return $;
         }
     }
+
 }

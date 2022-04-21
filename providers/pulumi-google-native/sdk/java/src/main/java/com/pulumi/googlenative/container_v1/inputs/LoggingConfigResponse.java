@@ -21,45 +21,45 @@ public final class LoggingConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="componentConfig", required=true)
-      private final LoggingComponentConfigResponse componentConfig;
+    private LoggingComponentConfigResponse componentConfig;
 
     public LoggingComponentConfigResponse componentConfig() {
         return this.componentConfig;
     }
 
-    public LoggingConfigResponse(LoggingComponentConfigResponse componentConfig) {
-        this.componentConfig = Objects.requireNonNull(componentConfig, "expected parameter 'componentConfig' to be non-null");
-    }
+    private LoggingConfigResponse() {}
 
-    private LoggingConfigResponse() {
-        this.componentConfig = null;
+    private LoggingConfigResponse(LoggingConfigResponse $) {
+        this.componentConfig = $.componentConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoggingConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private LoggingComponentConfigResponse componentConfig;
+        private LoggingConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoggingConfigResponse();
         }
 
         public Builder(LoggingConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.componentConfig = defaults.componentConfig;
+            $ = new LoggingConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder componentConfig(LoggingComponentConfigResponse componentConfig) {
-            this.componentConfig = Objects.requireNonNull(componentConfig);
+            $.componentConfig = componentConfig;
             return this;
-        }        public LoggingConfigResponse build() {
-            return new LoggingConfigResponse(componentConfig);
+        }
+
+        public LoggingConfigResponse build() {
+            $.componentConfig = Objects.requireNonNull($.componentConfig, "expected parameter 'componentConfig' to be non-null");
+            return $;
         }
     }
+
 }

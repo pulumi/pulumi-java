@@ -17,7 +17,7 @@ public final class GetOrganizationalUnitsChildren extends com.pulumi.resources.I
      * 
      */
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
@@ -28,7 +28,7 @@ public final class GetOrganizationalUnitsChildren extends com.pulumi.resources.I
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -39,64 +39,59 @@ public final class GetOrganizationalUnitsChildren extends com.pulumi.resources.I
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public GetOrganizationalUnitsChildren(
-        String arn,
-        String id,
-        String name) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private GetOrganizationalUnitsChildren() {}
 
-    private GetOrganizationalUnitsChildren() {
-        this.arn = null;
-        this.id = null;
-        this.name = null;
+    private GetOrganizationalUnitsChildren(GetOrganizationalUnitsChildren $) {
+        this.arn = $.arn;
+        this.id = $.id;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetOrganizationalUnitsChildren defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
-        private String id;
-        private String name;
+        private GetOrganizationalUnitsChildren $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetOrganizationalUnitsChildren();
         }
 
         public Builder(GetOrganizationalUnitsChildren defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
+            $ = new GetOrganizationalUnitsChildren(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public GetOrganizationalUnitsChildren build() {
-            return new GetOrganizationalUnitsChildren(arn, id, name);
+        }
+
+        public GetOrganizationalUnitsChildren build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

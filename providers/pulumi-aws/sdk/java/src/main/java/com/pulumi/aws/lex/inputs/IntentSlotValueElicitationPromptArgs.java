@@ -6,11 +6,11 @@ package com.pulumi.aws.lex.inputs;
 import com.pulumi.aws.lex.inputs.IntentSlotValueElicitationPromptMessageArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class IntentSlotValueElicitationPromptArgs extends com.pulumi.resou
      * 
      */
     @Import(name="maxAttempts", required=true)
-      private final Output<Integer> maxAttempts;
+    private Output<Integer> maxAttempts;
 
     public Output<Integer> maxAttempts() {
         return this.maxAttempts;
@@ -36,7 +36,7 @@ public final class IntentSlotValueElicitationPromptArgs extends com.pulumi.resou
      * 
      */
     @Import(name="messages", required=true)
-      private final Output<List<IntentSlotValueElicitationPromptMessageArgs>> messages;
+    private Output<List<IntentSlotValueElicitationPromptMessageArgs>> messages;
 
     public Output<List<IntentSlotValueElicitationPromptMessageArgs>> messages() {
         return this.messages;
@@ -49,79 +49,74 @@ public final class IntentSlotValueElicitationPromptArgs extends com.pulumi.resou
      * 
      */
     @Import(name="responseCard")
-      private final @Nullable Output<String> responseCard;
+    private @Nullable Output<String> responseCard;
 
-    public Output<String> responseCard() {
-        return this.responseCard == null ? Codegen.empty() : this.responseCard;
+    public Optional<Output<String>> responseCard() {
+        return Optional.ofNullable(this.responseCard);
     }
 
-    public IntentSlotValueElicitationPromptArgs(
-        Output<Integer> maxAttempts,
-        Output<List<IntentSlotValueElicitationPromptMessageArgs>> messages,
-        @Nullable Output<String> responseCard) {
-        this.maxAttempts = Objects.requireNonNull(maxAttempts, "expected parameter 'maxAttempts' to be non-null");
-        this.messages = Objects.requireNonNull(messages, "expected parameter 'messages' to be non-null");
-        this.responseCard = responseCard;
-    }
+    private IntentSlotValueElicitationPromptArgs() {}
 
-    private IntentSlotValueElicitationPromptArgs() {
-        this.maxAttempts = Codegen.empty();
-        this.messages = Codegen.empty();
-        this.responseCard = Codegen.empty();
+    private IntentSlotValueElicitationPromptArgs(IntentSlotValueElicitationPromptArgs $) {
+        this.maxAttempts = $.maxAttempts;
+        this.messages = $.messages;
+        this.responseCard = $.responseCard;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IntentSlotValueElicitationPromptArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> maxAttempts;
-        private Output<List<IntentSlotValueElicitationPromptMessageArgs>> messages;
-        private @Nullable Output<String> responseCard;
+        private IntentSlotValueElicitationPromptArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IntentSlotValueElicitationPromptArgs();
         }
 
         public Builder(IntentSlotValueElicitationPromptArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxAttempts = defaults.maxAttempts;
-    	      this.messages = defaults.messages;
-    	      this.responseCard = defaults.responseCard;
+            $ = new IntentSlotValueElicitationPromptArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxAttempts(Output<Integer> maxAttempts) {
-            this.maxAttempts = Objects.requireNonNull(maxAttempts);
+            $.maxAttempts = maxAttempts;
             return this;
         }
+
         public Builder maxAttempts(Integer maxAttempts) {
-            this.maxAttempts = Output.of(Objects.requireNonNull(maxAttempts));
-            return this;
+            return maxAttempts(Output.of(maxAttempts));
         }
+
         public Builder messages(Output<List<IntentSlotValueElicitationPromptMessageArgs>> messages) {
-            this.messages = Objects.requireNonNull(messages);
+            $.messages = messages;
             return this;
         }
+
         public Builder messages(List<IntentSlotValueElicitationPromptMessageArgs> messages) {
-            this.messages = Output.of(Objects.requireNonNull(messages));
-            return this;
+            return messages(Output.of(messages));
         }
+
         public Builder messages(IntentSlotValueElicitationPromptMessageArgs... messages) {
             return messages(List.of(messages));
         }
+
         public Builder responseCard(@Nullable Output<String> responseCard) {
-            this.responseCard = responseCard;
+            $.responseCard = responseCard;
             return this;
         }
-        public Builder responseCard(@Nullable String responseCard) {
-            this.responseCard = Codegen.ofNullable(responseCard);
-            return this;
-        }        public IntentSlotValueElicitationPromptArgs build() {
-            return new IntentSlotValueElicitationPromptArgs(maxAttempts, messages, responseCard);
+
+        public Builder responseCard(String responseCard) {
+            return responseCard(Output.of(responseCard));
+        }
+
+        public IntentSlotValueElicitationPromptArgs build() {
+            $.maxAttempts = Objects.requireNonNull($.maxAttempts, "expected parameter 'maxAttempts' to be non-null");
+            $.messages = Objects.requireNonNull($.messages, "expected parameter 'messages' to be non-null");
+            return $;
         }
     }
+
 }

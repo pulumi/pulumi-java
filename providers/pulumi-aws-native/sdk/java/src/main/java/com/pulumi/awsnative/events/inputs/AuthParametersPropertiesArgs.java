@@ -9,8 +9,8 @@ import com.pulumi.awsnative.events.inputs.ConnectionHttpParametersArgs;
 import com.pulumi.awsnative.events.inputs.ConnectionOAuthParametersArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,110 +19,99 @@ public final class AuthParametersPropertiesArgs extends com.pulumi.resources.Res
     public static final AuthParametersPropertiesArgs Empty = new AuthParametersPropertiesArgs();
 
     @Import(name="apiKeyAuthParameters")
-      private final @Nullable Output<ConnectionApiKeyAuthParametersArgs> apiKeyAuthParameters;
+    private @Nullable Output<ConnectionApiKeyAuthParametersArgs> apiKeyAuthParameters;
 
-    public Output<ConnectionApiKeyAuthParametersArgs> apiKeyAuthParameters() {
-        return this.apiKeyAuthParameters == null ? Codegen.empty() : this.apiKeyAuthParameters;
+    public Optional<Output<ConnectionApiKeyAuthParametersArgs>> apiKeyAuthParameters() {
+        return Optional.ofNullable(this.apiKeyAuthParameters);
     }
 
     @Import(name="basicAuthParameters")
-      private final @Nullable Output<ConnectionBasicAuthParametersArgs> basicAuthParameters;
+    private @Nullable Output<ConnectionBasicAuthParametersArgs> basicAuthParameters;
 
-    public Output<ConnectionBasicAuthParametersArgs> basicAuthParameters() {
-        return this.basicAuthParameters == null ? Codegen.empty() : this.basicAuthParameters;
+    public Optional<Output<ConnectionBasicAuthParametersArgs>> basicAuthParameters() {
+        return Optional.ofNullable(this.basicAuthParameters);
     }
 
     @Import(name="invocationHttpParameters")
-      private final @Nullable Output<ConnectionHttpParametersArgs> invocationHttpParameters;
+    private @Nullable Output<ConnectionHttpParametersArgs> invocationHttpParameters;
 
-    public Output<ConnectionHttpParametersArgs> invocationHttpParameters() {
-        return this.invocationHttpParameters == null ? Codegen.empty() : this.invocationHttpParameters;
+    public Optional<Output<ConnectionHttpParametersArgs>> invocationHttpParameters() {
+        return Optional.ofNullable(this.invocationHttpParameters);
     }
 
     @Import(name="oAuthParameters")
-      private final @Nullable Output<ConnectionOAuthParametersArgs> oAuthParameters;
+    private @Nullable Output<ConnectionOAuthParametersArgs> oAuthParameters;
 
-    public Output<ConnectionOAuthParametersArgs> oAuthParameters() {
-        return this.oAuthParameters == null ? Codegen.empty() : this.oAuthParameters;
+    public Optional<Output<ConnectionOAuthParametersArgs>> oAuthParameters() {
+        return Optional.ofNullable(this.oAuthParameters);
     }
 
-    public AuthParametersPropertiesArgs(
-        @Nullable Output<ConnectionApiKeyAuthParametersArgs> apiKeyAuthParameters,
-        @Nullable Output<ConnectionBasicAuthParametersArgs> basicAuthParameters,
-        @Nullable Output<ConnectionHttpParametersArgs> invocationHttpParameters,
-        @Nullable Output<ConnectionOAuthParametersArgs> oAuthParameters) {
-        this.apiKeyAuthParameters = apiKeyAuthParameters;
-        this.basicAuthParameters = basicAuthParameters;
-        this.invocationHttpParameters = invocationHttpParameters;
-        this.oAuthParameters = oAuthParameters;
-    }
+    private AuthParametersPropertiesArgs() {}
 
-    private AuthParametersPropertiesArgs() {
-        this.apiKeyAuthParameters = Codegen.empty();
-        this.basicAuthParameters = Codegen.empty();
-        this.invocationHttpParameters = Codegen.empty();
-        this.oAuthParameters = Codegen.empty();
+    private AuthParametersPropertiesArgs(AuthParametersPropertiesArgs $) {
+        this.apiKeyAuthParameters = $.apiKeyAuthParameters;
+        this.basicAuthParameters = $.basicAuthParameters;
+        this.invocationHttpParameters = $.invocationHttpParameters;
+        this.oAuthParameters = $.oAuthParameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AuthParametersPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ConnectionApiKeyAuthParametersArgs> apiKeyAuthParameters;
-        private @Nullable Output<ConnectionBasicAuthParametersArgs> basicAuthParameters;
-        private @Nullable Output<ConnectionHttpParametersArgs> invocationHttpParameters;
-        private @Nullable Output<ConnectionOAuthParametersArgs> oAuthParameters;
+        private AuthParametersPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AuthParametersPropertiesArgs();
         }
 
         public Builder(AuthParametersPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiKeyAuthParameters = defaults.apiKeyAuthParameters;
-    	      this.basicAuthParameters = defaults.basicAuthParameters;
-    	      this.invocationHttpParameters = defaults.invocationHttpParameters;
-    	      this.oAuthParameters = defaults.oAuthParameters;
+            $ = new AuthParametersPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiKeyAuthParameters(@Nullable Output<ConnectionApiKeyAuthParametersArgs> apiKeyAuthParameters) {
-            this.apiKeyAuthParameters = apiKeyAuthParameters;
+            $.apiKeyAuthParameters = apiKeyAuthParameters;
             return this;
         }
-        public Builder apiKeyAuthParameters(@Nullable ConnectionApiKeyAuthParametersArgs apiKeyAuthParameters) {
-            this.apiKeyAuthParameters = Codegen.ofNullable(apiKeyAuthParameters);
-            return this;
+
+        public Builder apiKeyAuthParameters(ConnectionApiKeyAuthParametersArgs apiKeyAuthParameters) {
+            return apiKeyAuthParameters(Output.of(apiKeyAuthParameters));
         }
+
         public Builder basicAuthParameters(@Nullable Output<ConnectionBasicAuthParametersArgs> basicAuthParameters) {
-            this.basicAuthParameters = basicAuthParameters;
+            $.basicAuthParameters = basicAuthParameters;
             return this;
         }
-        public Builder basicAuthParameters(@Nullable ConnectionBasicAuthParametersArgs basicAuthParameters) {
-            this.basicAuthParameters = Codegen.ofNullable(basicAuthParameters);
-            return this;
+
+        public Builder basicAuthParameters(ConnectionBasicAuthParametersArgs basicAuthParameters) {
+            return basicAuthParameters(Output.of(basicAuthParameters));
         }
+
         public Builder invocationHttpParameters(@Nullable Output<ConnectionHttpParametersArgs> invocationHttpParameters) {
-            this.invocationHttpParameters = invocationHttpParameters;
+            $.invocationHttpParameters = invocationHttpParameters;
             return this;
         }
-        public Builder invocationHttpParameters(@Nullable ConnectionHttpParametersArgs invocationHttpParameters) {
-            this.invocationHttpParameters = Codegen.ofNullable(invocationHttpParameters);
-            return this;
+
+        public Builder invocationHttpParameters(ConnectionHttpParametersArgs invocationHttpParameters) {
+            return invocationHttpParameters(Output.of(invocationHttpParameters));
         }
+
         public Builder oAuthParameters(@Nullable Output<ConnectionOAuthParametersArgs> oAuthParameters) {
-            this.oAuthParameters = oAuthParameters;
+            $.oAuthParameters = oAuthParameters;
             return this;
         }
-        public Builder oAuthParameters(@Nullable ConnectionOAuthParametersArgs oAuthParameters) {
-            this.oAuthParameters = Codegen.ofNullable(oAuthParameters);
-            return this;
-        }        public AuthParametersPropertiesArgs build() {
-            return new AuthParametersPropertiesArgs(apiKeyAuthParameters, basicAuthParameters, invocationHttpParameters, oAuthParameters);
+
+        public Builder oAuthParameters(ConnectionOAuthParametersArgs oAuthParameters) {
+            return oAuthParameters(Output.of(oAuthParameters));
+        }
+
+        public AuthParametersPropertiesArgs build() {
+            return $;
         }
     }
+
 }

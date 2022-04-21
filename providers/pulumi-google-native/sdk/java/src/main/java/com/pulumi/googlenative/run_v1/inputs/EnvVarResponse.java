@@ -22,7 +22,7 @@ public final class EnvVarResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -33,7 +33,7 @@ public final class EnvVarResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
@@ -44,64 +44,59 @@ public final class EnvVarResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="valueFrom", required=true)
-      private final EnvVarSourceResponse valueFrom;
+    private EnvVarSourceResponse valueFrom;
 
     public EnvVarSourceResponse valueFrom() {
         return this.valueFrom;
     }
 
-    public EnvVarResponse(
-        String name,
-        String value,
-        EnvVarSourceResponse valueFrom) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-        this.valueFrom = Objects.requireNonNull(valueFrom, "expected parameter 'valueFrom' to be non-null");
-    }
+    private EnvVarResponse() {}
 
-    private EnvVarResponse() {
-        this.name = null;
-        this.value = null;
-        this.valueFrom = null;
+    private EnvVarResponse(EnvVarResponse $) {
+        this.name = $.name;
+        this.value = $.value;
+        this.valueFrom = $.valueFrom;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvVarResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String value;
-        private EnvVarSourceResponse valueFrom;
+        private EnvVarResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvVarResponse();
         }
 
         public Builder(EnvVarResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.value = defaults.value;
-    	      this.valueFrom = defaults.valueFrom;
+            $ = new EnvVarResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder valueFrom(EnvVarSourceResponse valueFrom) {
-            this.valueFrom = Objects.requireNonNull(valueFrom);
+            $.valueFrom = valueFrom;
             return this;
-        }        public EnvVarResponse build() {
-            return new EnvVarResponse(name, value, valueFrom);
+        }
+
+        public EnvVarResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            $.valueFrom = Objects.requireNonNull($.valueFrom, "expected parameter 'valueFrom' to be non-null");
+            return $;
         }
     }
+
 }

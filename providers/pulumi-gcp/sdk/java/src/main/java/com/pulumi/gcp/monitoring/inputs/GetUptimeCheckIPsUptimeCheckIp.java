@@ -20,7 +20,7 @@ public final class GetUptimeCheckIPsUptimeCheckIp extends com.pulumi.resources.I
      * 
      */
     @Import(name="ipAddress", required=true)
-      private final String ipAddress;
+    private String ipAddress;
 
     public String ipAddress() {
         return this.ipAddress;
@@ -32,7 +32,7 @@ public final class GetUptimeCheckIPsUptimeCheckIp extends com.pulumi.resources.I
      * 
      */
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
@@ -43,64 +43,59 @@ public final class GetUptimeCheckIPsUptimeCheckIp extends com.pulumi.resources.I
      * 
      */
     @Import(name="region", required=true)
-      private final String region;
+    private String region;
 
     public String region() {
         return this.region;
     }
 
-    public GetUptimeCheckIPsUptimeCheckIp(
-        String ipAddress,
-        String location,
-        String region) {
-        this.ipAddress = Objects.requireNonNull(ipAddress, "expected parameter 'ipAddress' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-    }
+    private GetUptimeCheckIPsUptimeCheckIp() {}
 
-    private GetUptimeCheckIPsUptimeCheckIp() {
-        this.ipAddress = null;
-        this.location = null;
-        this.region = null;
+    private GetUptimeCheckIPsUptimeCheckIp(GetUptimeCheckIPsUptimeCheckIp $) {
+        this.ipAddress = $.ipAddress;
+        this.location = $.location;
+        this.region = $.region;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetUptimeCheckIPsUptimeCheckIp defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String ipAddress;
-        private String location;
-        private String region;
+        private GetUptimeCheckIPsUptimeCheckIp $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetUptimeCheckIPsUptimeCheckIp();
         }
 
         public Builder(GetUptimeCheckIPsUptimeCheckIp defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipAddress = defaults.ipAddress;
-    	      this.location = defaults.location;
-    	      this.region = defaults.region;
+            $ = new GetUptimeCheckIPsUptimeCheckIp(Objects.requireNonNull(defaults));
         }
 
         public Builder ipAddress(String ipAddress) {
-            this.ipAddress = Objects.requireNonNull(ipAddress);
+            $.ipAddress = ipAddress;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
-        }        public GetUptimeCheckIPsUptimeCheckIp build() {
-            return new GetUptimeCheckIPsUptimeCheckIp(ipAddress, location, region);
+        }
+
+        public GetUptimeCheckIPsUptimeCheckIp build() {
+            $.ipAddress = Objects.requireNonNull($.ipAddress, "expected parameter 'ipAddress' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            return $;
         }
     }
+
 }

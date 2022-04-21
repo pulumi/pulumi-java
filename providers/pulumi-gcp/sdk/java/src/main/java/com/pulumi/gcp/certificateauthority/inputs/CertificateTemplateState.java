@@ -5,13 +5,13 @@ package com.pulumi.gcp.certificateauthority.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.certificateauthority.inputs.CertificateTemplateIdentityConstraintsGetArgs;
 import com.pulumi.gcp.certificateauthority.inputs.CertificateTemplatePassthroughExtensionsGetArgs;
 import com.pulumi.gcp.certificateauthority.inputs.CertificateTemplatePredefinedValuesGetArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class CertificateTemplateState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="createTime")
-      private final @Nullable Output<String> createTime;
+    private @Nullable Output<String> createTime;
 
-    public Output<String> createTime() {
-        return this.createTime == null ? Codegen.empty() : this.createTime;
+    public Optional<Output<String>> createTime() {
+        return Optional.ofNullable(this.createTime);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class CertificateTemplateState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class CertificateTemplateState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="identityConstraints")
-      private final @Nullable Output<CertificateTemplateIdentityConstraintsGetArgs> identityConstraints;
+    private @Nullable Output<CertificateTemplateIdentityConstraintsGetArgs> identityConstraints;
 
-    public Output<CertificateTemplateIdentityConstraintsGetArgs> identityConstraints() {
-        return this.identityConstraints == null ? Codegen.empty() : this.identityConstraints;
+    public Optional<Output<CertificateTemplateIdentityConstraintsGetArgs>> identityConstraints() {
+        return Optional.ofNullable(this.identityConstraints);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class CertificateTemplateState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class CertificateTemplateState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class CertificateTemplateState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class CertificateTemplateState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="passthroughExtensions")
-      private final @Nullable Output<CertificateTemplatePassthroughExtensionsGetArgs> passthroughExtensions;
+    private @Nullable Output<CertificateTemplatePassthroughExtensionsGetArgs> passthroughExtensions;
 
-    public Output<CertificateTemplatePassthroughExtensionsGetArgs> passthroughExtensions() {
-        return this.passthroughExtensions == null ? Codegen.empty() : this.passthroughExtensions;
+    public Optional<Output<CertificateTemplatePassthroughExtensionsGetArgs>> passthroughExtensions() {
+        return Optional.ofNullable(this.passthroughExtensions);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class CertificateTemplateState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="predefinedValues")
-      private final @Nullable Output<CertificateTemplatePredefinedValuesGetArgs> predefinedValues;
+    private @Nullable Output<CertificateTemplatePredefinedValuesGetArgs> predefinedValues;
 
-    public Output<CertificateTemplatePredefinedValuesGetArgs> predefinedValues() {
-        return this.predefinedValues == null ? Codegen.empty() : this.predefinedValues;
+    public Optional<Output<CertificateTemplatePredefinedValuesGetArgs>> predefinedValues() {
+        return Optional.ofNullable(this.predefinedValues);
     }
 
     /**
@@ -112,10 +112,10 @@ public final class CertificateTemplateState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -123,167 +123,138 @@ public final class CertificateTemplateState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="updateTime")
-      private final @Nullable Output<String> updateTime;
+    private @Nullable Output<String> updateTime;
 
-    public Output<String> updateTime() {
-        return this.updateTime == null ? Codegen.empty() : this.updateTime;
+    public Optional<Output<String>> updateTime() {
+        return Optional.ofNullable(this.updateTime);
     }
 
-    public CertificateTemplateState(
-        @Nullable Output<String> createTime,
-        @Nullable Output<String> description,
-        @Nullable Output<CertificateTemplateIdentityConstraintsGetArgs> identityConstraints,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<CertificateTemplatePassthroughExtensionsGetArgs> passthroughExtensions,
-        @Nullable Output<CertificateTemplatePredefinedValuesGetArgs> predefinedValues,
-        @Nullable Output<String> project,
-        @Nullable Output<String> updateTime) {
-        this.createTime = createTime;
-        this.description = description;
-        this.identityConstraints = identityConstraints;
-        this.labels = labels;
-        this.location = location;
-        this.name = name;
-        this.passthroughExtensions = passthroughExtensions;
-        this.predefinedValues = predefinedValues;
-        this.project = project;
-        this.updateTime = updateTime;
-    }
+    private CertificateTemplateState() {}
 
-    private CertificateTemplateState() {
-        this.createTime = Codegen.empty();
-        this.description = Codegen.empty();
-        this.identityConstraints = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.passthroughExtensions = Codegen.empty();
-        this.predefinedValues = Codegen.empty();
-        this.project = Codegen.empty();
-        this.updateTime = Codegen.empty();
+    private CertificateTemplateState(CertificateTemplateState $) {
+        this.createTime = $.createTime;
+        this.description = $.description;
+        this.identityConstraints = $.identityConstraints;
+        this.labels = $.labels;
+        this.location = $.location;
+        this.name = $.name;
+        this.passthroughExtensions = $.passthroughExtensions;
+        this.predefinedValues = $.predefinedValues;
+        this.project = $.project;
+        this.updateTime = $.updateTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateTemplateState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> createTime;
-        private @Nullable Output<String> description;
-        private @Nullable Output<CertificateTemplateIdentityConstraintsGetArgs> identityConstraints;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<CertificateTemplatePassthroughExtensionsGetArgs> passthroughExtensions;
-        private @Nullable Output<CertificateTemplatePredefinedValuesGetArgs> predefinedValues;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> updateTime;
+        private CertificateTemplateState $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateTemplateState();
         }
 
         public Builder(CertificateTemplateState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createTime = defaults.createTime;
-    	      this.description = defaults.description;
-    	      this.identityConstraints = defaults.identityConstraints;
-    	      this.labels = defaults.labels;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.passthroughExtensions = defaults.passthroughExtensions;
-    	      this.predefinedValues = defaults.predefinedValues;
-    	      this.project = defaults.project;
-    	      this.updateTime = defaults.updateTime;
+            $ = new CertificateTemplateState(Objects.requireNonNull(defaults));
         }
 
         public Builder createTime(@Nullable Output<String> createTime) {
-            this.createTime = createTime;
+            $.createTime = createTime;
             return this;
         }
-        public Builder createTime(@Nullable String createTime) {
-            this.createTime = Codegen.ofNullable(createTime);
-            return this;
+
+        public Builder createTime(String createTime) {
+            return createTime(Output.of(createTime));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder identityConstraints(@Nullable Output<CertificateTemplateIdentityConstraintsGetArgs> identityConstraints) {
-            this.identityConstraints = identityConstraints;
+            $.identityConstraints = identityConstraints;
             return this;
         }
-        public Builder identityConstraints(@Nullable CertificateTemplateIdentityConstraintsGetArgs identityConstraints) {
-            this.identityConstraints = Codegen.ofNullable(identityConstraints);
-            return this;
+
+        public Builder identityConstraints(CertificateTemplateIdentityConstraintsGetArgs identityConstraints) {
+            return identityConstraints(Output.of(identityConstraints));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder passthroughExtensions(@Nullable Output<CertificateTemplatePassthroughExtensionsGetArgs> passthroughExtensions) {
-            this.passthroughExtensions = passthroughExtensions;
+            $.passthroughExtensions = passthroughExtensions;
             return this;
         }
-        public Builder passthroughExtensions(@Nullable CertificateTemplatePassthroughExtensionsGetArgs passthroughExtensions) {
-            this.passthroughExtensions = Codegen.ofNullable(passthroughExtensions);
-            return this;
+
+        public Builder passthroughExtensions(CertificateTemplatePassthroughExtensionsGetArgs passthroughExtensions) {
+            return passthroughExtensions(Output.of(passthroughExtensions));
         }
+
         public Builder predefinedValues(@Nullable Output<CertificateTemplatePredefinedValuesGetArgs> predefinedValues) {
-            this.predefinedValues = predefinedValues;
+            $.predefinedValues = predefinedValues;
             return this;
         }
-        public Builder predefinedValues(@Nullable CertificateTemplatePredefinedValuesGetArgs predefinedValues) {
-            this.predefinedValues = Codegen.ofNullable(predefinedValues);
-            return this;
+
+        public Builder predefinedValues(CertificateTemplatePredefinedValuesGetArgs predefinedValues) {
+            return predefinedValues(Output.of(predefinedValues));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder updateTime(@Nullable Output<String> updateTime) {
-            this.updateTime = updateTime;
+            $.updateTime = updateTime;
             return this;
         }
-        public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Codegen.ofNullable(updateTime);
-            return this;
-        }        public CertificateTemplateState build() {
-            return new CertificateTemplateState(createTime, description, identityConstraints, labels, location, name, passthroughExtensions, predefinedValues, project, updateTime);
+
+        public Builder updateTime(String updateTime) {
+            return updateTime(Output.of(updateTime));
+        }
+
+        public CertificateTemplateState build() {
+            return $;
         }
     }
+
 }

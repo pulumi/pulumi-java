@@ -17,7 +17,7 @@ public final class SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse ex
      * 
      */
     @Import(name="headerName", required=true)
-      private final String headerName;
+    private String headerName;
 
     public String headerName() {
         return this.headerName;
@@ -28,55 +28,52 @@ public final class SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse ex
      * 
      */
     @Import(name="headerValue", required=true)
-      private final String headerValue;
+    private String headerValue;
 
     public String headerValue() {
         return this.headerValue;
     }
 
-    public SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse(
-        String headerName,
-        String headerValue) {
-        this.headerName = Objects.requireNonNull(headerName, "expected parameter 'headerName' to be non-null");
-        this.headerValue = Objects.requireNonNull(headerValue, "expected parameter 'headerValue' to be non-null");
-    }
+    private SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse() {}
 
-    private SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse() {
-        this.headerName = null;
-        this.headerValue = null;
+    private SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse(SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse $) {
+        this.headerName = $.headerName;
+        this.headerValue = $.headerValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String headerName;
-        private String headerValue;
+        private SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse();
         }
 
         public Builder(SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.headerName = defaults.headerName;
-    	      this.headerValue = defaults.headerValue;
+            $ = new SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder headerName(String headerName) {
-            this.headerName = Objects.requireNonNull(headerName);
+            $.headerName = headerName;
             return this;
         }
+
         public Builder headerValue(String headerValue) {
-            this.headerValue = Objects.requireNonNull(headerValue);
+            $.headerValue = headerValue;
             return this;
-        }        public SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse build() {
-            return new SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse(headerName, headerValue);
+        }
+
+        public SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse build() {
+            $.headerName = Objects.requireNonNull($.headerName, "expected parameter 'headerName' to be non-null");
+            $.headerValue = Objects.requireNonNull($.headerValue, "expected parameter 'headerValue' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,45 +21,45 @@ public final class GooglePrivacyDlpV2RecordSuppressionResponse extends com.pulum
      * 
      */
     @Import(name="condition", required=true)
-      private final GooglePrivacyDlpV2RecordConditionResponse condition;
+    private GooglePrivacyDlpV2RecordConditionResponse condition;
 
     public GooglePrivacyDlpV2RecordConditionResponse condition() {
         return this.condition;
     }
 
-    public GooglePrivacyDlpV2RecordSuppressionResponse(GooglePrivacyDlpV2RecordConditionResponse condition) {
-        this.condition = Objects.requireNonNull(condition, "expected parameter 'condition' to be non-null");
-    }
+    private GooglePrivacyDlpV2RecordSuppressionResponse() {}
 
-    private GooglePrivacyDlpV2RecordSuppressionResponse() {
-        this.condition = null;
+    private GooglePrivacyDlpV2RecordSuppressionResponse(GooglePrivacyDlpV2RecordSuppressionResponse $) {
+        this.condition = $.condition;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2RecordSuppressionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GooglePrivacyDlpV2RecordConditionResponse condition;
+        private GooglePrivacyDlpV2RecordSuppressionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2RecordSuppressionResponse();
         }
 
         public Builder(GooglePrivacyDlpV2RecordSuppressionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
+            $ = new GooglePrivacyDlpV2RecordSuppressionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(GooglePrivacyDlpV2RecordConditionResponse condition) {
-            this.condition = Objects.requireNonNull(condition);
+            $.condition = condition;
             return this;
-        }        public GooglePrivacyDlpV2RecordSuppressionResponse build() {
-            return new GooglePrivacyDlpV2RecordSuppressionResponse(condition);
+        }
+
+        public GooglePrivacyDlpV2RecordSuppressionResponse build() {
+            $.condition = Objects.requireNonNull($.condition, "expected parameter 'condition' to be non-null");
+            return $;
         }
     }
+
 }

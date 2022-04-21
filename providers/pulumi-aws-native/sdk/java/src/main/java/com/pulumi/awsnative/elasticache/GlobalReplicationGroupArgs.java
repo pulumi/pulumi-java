@@ -7,12 +7,12 @@ import com.pulumi.awsnative.elasticache.inputs.GlobalReplicationGroupMemberArgs;
 import com.pulumi.awsnative.elasticache.inputs.GlobalReplicationGroupRegionalConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GlobalReplicationGroupArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="automaticFailoverEnabled")
-      private final @Nullable Output<Boolean> automaticFailoverEnabled;
+    private @Nullable Output<Boolean> automaticFailoverEnabled;
 
-    public Output<Boolean> automaticFailoverEnabled() {
-        return this.automaticFailoverEnabled == null ? Codegen.empty() : this.automaticFailoverEnabled;
+    public Optional<Output<Boolean>> automaticFailoverEnabled() {
+        return Optional.ofNullable(this.automaticFailoverEnabled);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class GlobalReplicationGroupArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="cacheNodeType")
-      private final @Nullable Output<String> cacheNodeType;
+    private @Nullable Output<String> cacheNodeType;
 
-    public Output<String> cacheNodeType() {
-        return this.cacheNodeType == null ? Codegen.empty() : this.cacheNodeType;
+    public Optional<Output<String>> cacheNodeType() {
+        return Optional.ofNullable(this.cacheNodeType);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class GlobalReplicationGroupArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="cacheParameterGroupName")
-      private final @Nullable Output<String> cacheParameterGroupName;
+    private @Nullable Output<String> cacheParameterGroupName;
 
-    public Output<String> cacheParameterGroupName() {
-        return this.cacheParameterGroupName == null ? Codegen.empty() : this.cacheParameterGroupName;
+    public Optional<Output<String>> cacheParameterGroupName() {
+        return Optional.ofNullable(this.cacheParameterGroupName);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class GlobalReplicationGroupArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="engineVersion")
-      private final @Nullable Output<String> engineVersion;
+    private @Nullable Output<String> engineVersion;
 
-    public Output<String> engineVersion() {
-        return this.engineVersion == null ? Codegen.empty() : this.engineVersion;
+    public Optional<Output<String>> engineVersion() {
+        return Optional.ofNullable(this.engineVersion);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class GlobalReplicationGroupArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="globalNodeGroupCount")
-      private final @Nullable Output<Integer> globalNodeGroupCount;
+    private @Nullable Output<Integer> globalNodeGroupCount;
 
-    public Output<Integer> globalNodeGroupCount() {
-        return this.globalNodeGroupCount == null ? Codegen.empty() : this.globalNodeGroupCount;
+    public Optional<Output<Integer>> globalNodeGroupCount() {
+        return Optional.ofNullable(this.globalNodeGroupCount);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class GlobalReplicationGroupArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="globalReplicationGroupDescription")
-      private final @Nullable Output<String> globalReplicationGroupDescription;
+    private @Nullable Output<String> globalReplicationGroupDescription;
 
-    public Output<String> globalReplicationGroupDescription() {
-        return this.globalReplicationGroupDescription == null ? Codegen.empty() : this.globalReplicationGroupDescription;
+    public Optional<Output<String>> globalReplicationGroupDescription() {
+        return Optional.ofNullable(this.globalReplicationGroupDescription);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class GlobalReplicationGroupArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="globalReplicationGroupIdSuffix")
-      private final @Nullable Output<String> globalReplicationGroupIdSuffix;
+    private @Nullable Output<String> globalReplicationGroupIdSuffix;
 
-    public Output<String> globalReplicationGroupIdSuffix() {
-        return this.globalReplicationGroupIdSuffix == null ? Codegen.empty() : this.globalReplicationGroupIdSuffix;
+    public Optional<Output<String>> globalReplicationGroupIdSuffix() {
+        return Optional.ofNullable(this.globalReplicationGroupIdSuffix);
     }
 
     /**
@@ -102,7 +102,7 @@ public final class GlobalReplicationGroupArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="members", required=true)
-      private final Output<List<GlobalReplicationGroupMemberArgs>> members;
+    private Output<List<GlobalReplicationGroupMemberArgs>> members;
 
     public Output<List<GlobalReplicationGroupMemberArgs>> members() {
         return this.members;
@@ -113,160 +113,137 @@ public final class GlobalReplicationGroupArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="regionalConfigurations")
-      private final @Nullable Output<List<GlobalReplicationGroupRegionalConfigurationArgs>> regionalConfigurations;
+    private @Nullable Output<List<GlobalReplicationGroupRegionalConfigurationArgs>> regionalConfigurations;
 
-    public Output<List<GlobalReplicationGroupRegionalConfigurationArgs>> regionalConfigurations() {
-        return this.regionalConfigurations == null ? Codegen.empty() : this.regionalConfigurations;
+    public Optional<Output<List<GlobalReplicationGroupRegionalConfigurationArgs>>> regionalConfigurations() {
+        return Optional.ofNullable(this.regionalConfigurations);
     }
 
-    public GlobalReplicationGroupArgs(
-        @Nullable Output<Boolean> automaticFailoverEnabled,
-        @Nullable Output<String> cacheNodeType,
-        @Nullable Output<String> cacheParameterGroupName,
-        @Nullable Output<String> engineVersion,
-        @Nullable Output<Integer> globalNodeGroupCount,
-        @Nullable Output<String> globalReplicationGroupDescription,
-        @Nullable Output<String> globalReplicationGroupIdSuffix,
-        Output<List<GlobalReplicationGroupMemberArgs>> members,
-        @Nullable Output<List<GlobalReplicationGroupRegionalConfigurationArgs>> regionalConfigurations) {
-        this.automaticFailoverEnabled = automaticFailoverEnabled;
-        this.cacheNodeType = cacheNodeType;
-        this.cacheParameterGroupName = cacheParameterGroupName;
-        this.engineVersion = engineVersion;
-        this.globalNodeGroupCount = globalNodeGroupCount;
-        this.globalReplicationGroupDescription = globalReplicationGroupDescription;
-        this.globalReplicationGroupIdSuffix = globalReplicationGroupIdSuffix;
-        this.members = Objects.requireNonNull(members, "expected parameter 'members' to be non-null");
-        this.regionalConfigurations = regionalConfigurations;
-    }
+    private GlobalReplicationGroupArgs() {}
 
-    private GlobalReplicationGroupArgs() {
-        this.automaticFailoverEnabled = Codegen.empty();
-        this.cacheNodeType = Codegen.empty();
-        this.cacheParameterGroupName = Codegen.empty();
-        this.engineVersion = Codegen.empty();
-        this.globalNodeGroupCount = Codegen.empty();
-        this.globalReplicationGroupDescription = Codegen.empty();
-        this.globalReplicationGroupIdSuffix = Codegen.empty();
-        this.members = Codegen.empty();
-        this.regionalConfigurations = Codegen.empty();
+    private GlobalReplicationGroupArgs(GlobalReplicationGroupArgs $) {
+        this.automaticFailoverEnabled = $.automaticFailoverEnabled;
+        this.cacheNodeType = $.cacheNodeType;
+        this.cacheParameterGroupName = $.cacheParameterGroupName;
+        this.engineVersion = $.engineVersion;
+        this.globalNodeGroupCount = $.globalNodeGroupCount;
+        this.globalReplicationGroupDescription = $.globalReplicationGroupDescription;
+        this.globalReplicationGroupIdSuffix = $.globalReplicationGroupIdSuffix;
+        this.members = $.members;
+        this.regionalConfigurations = $.regionalConfigurations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GlobalReplicationGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> automaticFailoverEnabled;
-        private @Nullable Output<String> cacheNodeType;
-        private @Nullable Output<String> cacheParameterGroupName;
-        private @Nullable Output<String> engineVersion;
-        private @Nullable Output<Integer> globalNodeGroupCount;
-        private @Nullable Output<String> globalReplicationGroupDescription;
-        private @Nullable Output<String> globalReplicationGroupIdSuffix;
-        private Output<List<GlobalReplicationGroupMemberArgs>> members;
-        private @Nullable Output<List<GlobalReplicationGroupRegionalConfigurationArgs>> regionalConfigurations;
+        private GlobalReplicationGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GlobalReplicationGroupArgs();
         }
 
         public Builder(GlobalReplicationGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.automaticFailoverEnabled = defaults.automaticFailoverEnabled;
-    	      this.cacheNodeType = defaults.cacheNodeType;
-    	      this.cacheParameterGroupName = defaults.cacheParameterGroupName;
-    	      this.engineVersion = defaults.engineVersion;
-    	      this.globalNodeGroupCount = defaults.globalNodeGroupCount;
-    	      this.globalReplicationGroupDescription = defaults.globalReplicationGroupDescription;
-    	      this.globalReplicationGroupIdSuffix = defaults.globalReplicationGroupIdSuffix;
-    	      this.members = defaults.members;
-    	      this.regionalConfigurations = defaults.regionalConfigurations;
+            $ = new GlobalReplicationGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder automaticFailoverEnabled(@Nullable Output<Boolean> automaticFailoverEnabled) {
-            this.automaticFailoverEnabled = automaticFailoverEnabled;
+            $.automaticFailoverEnabled = automaticFailoverEnabled;
             return this;
         }
-        public Builder automaticFailoverEnabled(@Nullable Boolean automaticFailoverEnabled) {
-            this.automaticFailoverEnabled = Codegen.ofNullable(automaticFailoverEnabled);
-            return this;
+
+        public Builder automaticFailoverEnabled(Boolean automaticFailoverEnabled) {
+            return automaticFailoverEnabled(Output.of(automaticFailoverEnabled));
         }
+
         public Builder cacheNodeType(@Nullable Output<String> cacheNodeType) {
-            this.cacheNodeType = cacheNodeType;
+            $.cacheNodeType = cacheNodeType;
             return this;
         }
-        public Builder cacheNodeType(@Nullable String cacheNodeType) {
-            this.cacheNodeType = Codegen.ofNullable(cacheNodeType);
-            return this;
+
+        public Builder cacheNodeType(String cacheNodeType) {
+            return cacheNodeType(Output.of(cacheNodeType));
         }
+
         public Builder cacheParameterGroupName(@Nullable Output<String> cacheParameterGroupName) {
-            this.cacheParameterGroupName = cacheParameterGroupName;
+            $.cacheParameterGroupName = cacheParameterGroupName;
             return this;
         }
-        public Builder cacheParameterGroupName(@Nullable String cacheParameterGroupName) {
-            this.cacheParameterGroupName = Codegen.ofNullable(cacheParameterGroupName);
-            return this;
+
+        public Builder cacheParameterGroupName(String cacheParameterGroupName) {
+            return cacheParameterGroupName(Output.of(cacheParameterGroupName));
         }
+
         public Builder engineVersion(@Nullable Output<String> engineVersion) {
-            this.engineVersion = engineVersion;
+            $.engineVersion = engineVersion;
             return this;
         }
-        public Builder engineVersion(@Nullable String engineVersion) {
-            this.engineVersion = Codegen.ofNullable(engineVersion);
-            return this;
+
+        public Builder engineVersion(String engineVersion) {
+            return engineVersion(Output.of(engineVersion));
         }
+
         public Builder globalNodeGroupCount(@Nullable Output<Integer> globalNodeGroupCount) {
-            this.globalNodeGroupCount = globalNodeGroupCount;
+            $.globalNodeGroupCount = globalNodeGroupCount;
             return this;
         }
-        public Builder globalNodeGroupCount(@Nullable Integer globalNodeGroupCount) {
-            this.globalNodeGroupCount = Codegen.ofNullable(globalNodeGroupCount);
-            return this;
+
+        public Builder globalNodeGroupCount(Integer globalNodeGroupCount) {
+            return globalNodeGroupCount(Output.of(globalNodeGroupCount));
         }
+
         public Builder globalReplicationGroupDescription(@Nullable Output<String> globalReplicationGroupDescription) {
-            this.globalReplicationGroupDescription = globalReplicationGroupDescription;
+            $.globalReplicationGroupDescription = globalReplicationGroupDescription;
             return this;
         }
-        public Builder globalReplicationGroupDescription(@Nullable String globalReplicationGroupDescription) {
-            this.globalReplicationGroupDescription = Codegen.ofNullable(globalReplicationGroupDescription);
-            return this;
+
+        public Builder globalReplicationGroupDescription(String globalReplicationGroupDescription) {
+            return globalReplicationGroupDescription(Output.of(globalReplicationGroupDescription));
         }
+
         public Builder globalReplicationGroupIdSuffix(@Nullable Output<String> globalReplicationGroupIdSuffix) {
-            this.globalReplicationGroupIdSuffix = globalReplicationGroupIdSuffix;
+            $.globalReplicationGroupIdSuffix = globalReplicationGroupIdSuffix;
             return this;
         }
-        public Builder globalReplicationGroupIdSuffix(@Nullable String globalReplicationGroupIdSuffix) {
-            this.globalReplicationGroupIdSuffix = Codegen.ofNullable(globalReplicationGroupIdSuffix);
-            return this;
+
+        public Builder globalReplicationGroupIdSuffix(String globalReplicationGroupIdSuffix) {
+            return globalReplicationGroupIdSuffix(Output.of(globalReplicationGroupIdSuffix));
         }
+
         public Builder members(Output<List<GlobalReplicationGroupMemberArgs>> members) {
-            this.members = Objects.requireNonNull(members);
+            $.members = members;
             return this;
         }
+
         public Builder members(List<GlobalReplicationGroupMemberArgs> members) {
-            this.members = Output.of(Objects.requireNonNull(members));
-            return this;
+            return members(Output.of(members));
         }
+
         public Builder members(GlobalReplicationGroupMemberArgs... members) {
             return members(List.of(members));
         }
+
         public Builder regionalConfigurations(@Nullable Output<List<GlobalReplicationGroupRegionalConfigurationArgs>> regionalConfigurations) {
-            this.regionalConfigurations = regionalConfigurations;
+            $.regionalConfigurations = regionalConfigurations;
             return this;
         }
-        public Builder regionalConfigurations(@Nullable List<GlobalReplicationGroupRegionalConfigurationArgs> regionalConfigurations) {
-            this.regionalConfigurations = Codegen.ofNullable(regionalConfigurations);
-            return this;
+
+        public Builder regionalConfigurations(List<GlobalReplicationGroupRegionalConfigurationArgs> regionalConfigurations) {
+            return regionalConfigurations(Output.of(regionalConfigurations));
         }
+
         public Builder regionalConfigurations(GlobalReplicationGroupRegionalConfigurationArgs... regionalConfigurations) {
             return regionalConfigurations(List.of(regionalConfigurations));
-        }        public GlobalReplicationGroupArgs build() {
-            return new GlobalReplicationGroupArgs(automaticFailoverEnabled, cacheNodeType, cacheParameterGroupName, engineVersion, globalNodeGroupCount, globalReplicationGroupDescription, globalReplicationGroupIdSuffix, members, regionalConfigurations);
+        }
+
+        public GlobalReplicationGroupArgs build() {
+            $.members = Objects.requireNonNull($.members, "expected parameter 'members' to be non-null");
+            return $;
         }
     }
+
 }

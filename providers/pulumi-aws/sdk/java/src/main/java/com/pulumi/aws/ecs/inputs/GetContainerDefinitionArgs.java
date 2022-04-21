@@ -17,7 +17,7 @@ public final class GetContainerDefinitionArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="containerName", required=true)
-      private final String containerName;
+    private String containerName;
 
     public String containerName() {
         return this.containerName;
@@ -28,55 +28,52 @@ public final class GetContainerDefinitionArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="taskDefinition", required=true)
-      private final String taskDefinition;
+    private String taskDefinition;
 
     public String taskDefinition() {
         return this.taskDefinition;
     }
 
-    public GetContainerDefinitionArgs(
-        String containerName,
-        String taskDefinition) {
-        this.containerName = Objects.requireNonNull(containerName, "expected parameter 'containerName' to be non-null");
-        this.taskDefinition = Objects.requireNonNull(taskDefinition, "expected parameter 'taskDefinition' to be non-null");
-    }
+    private GetContainerDefinitionArgs() {}
 
-    private GetContainerDefinitionArgs() {
-        this.containerName = null;
-        this.taskDefinition = null;
+    private GetContainerDefinitionArgs(GetContainerDefinitionArgs $) {
+        this.containerName = $.containerName;
+        this.taskDefinition = $.taskDefinition;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetContainerDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String containerName;
-        private String taskDefinition;
+        private GetContainerDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetContainerDefinitionArgs();
         }
 
         public Builder(GetContainerDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerName = defaults.containerName;
-    	      this.taskDefinition = defaults.taskDefinition;
+            $ = new GetContainerDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder containerName(String containerName) {
-            this.containerName = Objects.requireNonNull(containerName);
+            $.containerName = containerName;
             return this;
         }
+
         public Builder taskDefinition(String taskDefinition) {
-            this.taskDefinition = Objects.requireNonNull(taskDefinition);
+            $.taskDefinition = taskDefinition;
             return this;
-        }        public GetContainerDefinitionArgs build() {
-            return new GetContainerDefinitionArgs(containerName, taskDefinition);
+        }
+
+        public GetContainerDefinitionArgs build() {
+            $.containerName = Objects.requireNonNull($.containerName, "expected parameter 'containerName' to be non-null");
+            $.taskDefinition = Objects.requireNonNull($.taskDefinition, "expected parameter 'taskDefinition' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.azurenative.security.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ScopeElementArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="field")
-      private final @Nullable Output<String> field;
+    private @Nullable Output<String> field;
 
-    public Output<String> field() {
-        return this.field == null ? Codegen.empty() : this.field;
+    public Optional<Output<String>> field() {
+        return Optional.ofNullable(this.field);
     }
 
-    public ScopeElementArgs(@Nullable Output<String> field) {
-        this.field = field;
-    }
+    private ScopeElementArgs() {}
 
-    private ScopeElementArgs() {
-        this.field = Codegen.empty();
+    private ScopeElementArgs(ScopeElementArgs $) {
+        this.field = $.field;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScopeElementArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> field;
+        private ScopeElementArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScopeElementArgs();
         }
 
         public Builder(ScopeElementArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.field = defaults.field;
+            $ = new ScopeElementArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder field(@Nullable Output<String> field) {
-            this.field = field;
+            $.field = field;
             return this;
         }
-        public Builder field(@Nullable String field) {
-            this.field = Codegen.ofNullable(field);
-            return this;
-        }        public ScopeElementArgs build() {
-            return new ScopeElementArgs(field);
+
+        public Builder field(String field) {
+            return field(Output.of(field));
+        }
+
+        public ScopeElementArgs build() {
+            return $;
         }
     }
+
 }

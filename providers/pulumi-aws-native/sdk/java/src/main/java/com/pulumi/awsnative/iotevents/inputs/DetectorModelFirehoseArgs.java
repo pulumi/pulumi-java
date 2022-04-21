@@ -6,9 +6,9 @@ package com.pulumi.awsnative.iotevents.inputs;
 import com.pulumi.awsnative.iotevents.inputs.DetectorModelPayloadArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,17 +25,17 @@ public final class DetectorModelFirehoseArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="deliveryStreamName", required=true)
-      private final Output<String> deliveryStreamName;
+    private Output<String> deliveryStreamName;
 
     public Output<String> deliveryStreamName() {
         return this.deliveryStreamName;
     }
 
     @Import(name="payload")
-      private final @Nullable Output<DetectorModelPayloadArgs> payload;
+    private @Nullable Output<DetectorModelPayloadArgs> payload;
 
-    public Output<DetectorModelPayloadArgs> payload() {
-        return this.payload == null ? Codegen.empty() : this.payload;
+    public Optional<Output<DetectorModelPayloadArgs>> payload() {
+        return Optional.ofNullable(this.payload);
     }
 
     /**
@@ -43,76 +43,69 @@ public final class DetectorModelFirehoseArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="separator")
-      private final @Nullable Output<String> separator;
+    private @Nullable Output<String> separator;
 
-    public Output<String> separator() {
-        return this.separator == null ? Codegen.empty() : this.separator;
+    public Optional<Output<String>> separator() {
+        return Optional.ofNullable(this.separator);
     }
 
-    public DetectorModelFirehoseArgs(
-        Output<String> deliveryStreamName,
-        @Nullable Output<DetectorModelPayloadArgs> payload,
-        @Nullable Output<String> separator) {
-        this.deliveryStreamName = Objects.requireNonNull(deliveryStreamName, "expected parameter 'deliveryStreamName' to be non-null");
-        this.payload = payload;
-        this.separator = separator;
-    }
+    private DetectorModelFirehoseArgs() {}
 
-    private DetectorModelFirehoseArgs() {
-        this.deliveryStreamName = Codegen.empty();
-        this.payload = Codegen.empty();
-        this.separator = Codegen.empty();
+    private DetectorModelFirehoseArgs(DetectorModelFirehoseArgs $) {
+        this.deliveryStreamName = $.deliveryStreamName;
+        this.payload = $.payload;
+        this.separator = $.separator;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DetectorModelFirehoseArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> deliveryStreamName;
-        private @Nullable Output<DetectorModelPayloadArgs> payload;
-        private @Nullable Output<String> separator;
+        private DetectorModelFirehoseArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DetectorModelFirehoseArgs();
         }
 
         public Builder(DetectorModelFirehoseArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deliveryStreamName = defaults.deliveryStreamName;
-    	      this.payload = defaults.payload;
-    	      this.separator = defaults.separator;
+            $ = new DetectorModelFirehoseArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deliveryStreamName(Output<String> deliveryStreamName) {
-            this.deliveryStreamName = Objects.requireNonNull(deliveryStreamName);
+            $.deliveryStreamName = deliveryStreamName;
             return this;
         }
+
         public Builder deliveryStreamName(String deliveryStreamName) {
-            this.deliveryStreamName = Output.of(Objects.requireNonNull(deliveryStreamName));
-            return this;
+            return deliveryStreamName(Output.of(deliveryStreamName));
         }
+
         public Builder payload(@Nullable Output<DetectorModelPayloadArgs> payload) {
-            this.payload = payload;
+            $.payload = payload;
             return this;
         }
-        public Builder payload(@Nullable DetectorModelPayloadArgs payload) {
-            this.payload = Codegen.ofNullable(payload);
-            return this;
+
+        public Builder payload(DetectorModelPayloadArgs payload) {
+            return payload(Output.of(payload));
         }
+
         public Builder separator(@Nullable Output<String> separator) {
-            this.separator = separator;
+            $.separator = separator;
             return this;
         }
-        public Builder separator(@Nullable String separator) {
-            this.separator = Codegen.ofNullable(separator);
-            return this;
-        }        public DetectorModelFirehoseArgs build() {
-            return new DetectorModelFirehoseArgs(deliveryStreamName, payload, separator);
+
+        public Builder separator(String separator) {
+            return separator(Output.of(separator));
+        }
+
+        public DetectorModelFirehoseArgs build() {
+            $.deliveryStreamName = Objects.requireNonNull($.deliveryStreamName, "expected parameter 'deliveryStreamName' to be non-null");
+            return $;
         }
     }
+
 }

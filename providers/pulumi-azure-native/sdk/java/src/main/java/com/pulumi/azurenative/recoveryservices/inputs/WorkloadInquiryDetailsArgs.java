@@ -6,10 +6,10 @@ package com.pulumi.azurenative.recoveryservices.inputs;
 import com.pulumi.azurenative.recoveryservices.inputs.InquiryValidationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class WorkloadInquiryDetailsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="inquiryValidation")
-      private final @Nullable Output<InquiryValidationArgs> inquiryValidation;
+    private @Nullable Output<InquiryValidationArgs> inquiryValidation;
 
-    public Output<InquiryValidationArgs> inquiryValidation() {
-        return this.inquiryValidation == null ? Codegen.empty() : this.inquiryValidation;
+    public Optional<Output<InquiryValidationArgs>> inquiryValidation() {
+        return Optional.ofNullable(this.inquiryValidation);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class WorkloadInquiryDetailsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="itemCount")
-      private final @Nullable Output<Double> itemCount;
+    private @Nullable Output<Double> itemCount;
 
-    public Output<Double> itemCount() {
-        return this.itemCount == null ? Codegen.empty() : this.itemCount;
+    public Optional<Output<Double>> itemCount() {
+        return Optional.ofNullable(this.itemCount);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class WorkloadInquiryDetailsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public WorkloadInquiryDetailsArgs(
-        @Nullable Output<InquiryValidationArgs> inquiryValidation,
-        @Nullable Output<Double> itemCount,
-        @Nullable Output<String> type) {
-        this.inquiryValidation = inquiryValidation;
-        this.itemCount = itemCount;
-        this.type = type;
-    }
+    private WorkloadInquiryDetailsArgs() {}
 
-    private WorkloadInquiryDetailsArgs() {
-        this.inquiryValidation = Codegen.empty();
-        this.itemCount = Codegen.empty();
-        this.type = Codegen.empty();
+    private WorkloadInquiryDetailsArgs(WorkloadInquiryDetailsArgs $) {
+        this.inquiryValidation = $.inquiryValidation;
+        this.itemCount = $.itemCount;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkloadInquiryDetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<InquiryValidationArgs> inquiryValidation;
-        private @Nullable Output<Double> itemCount;
-        private @Nullable Output<String> type;
+        private WorkloadInquiryDetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkloadInquiryDetailsArgs();
         }
 
         public Builder(WorkloadInquiryDetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.inquiryValidation = defaults.inquiryValidation;
-    	      this.itemCount = defaults.itemCount;
-    	      this.type = defaults.type;
+            $ = new WorkloadInquiryDetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder inquiryValidation(@Nullable Output<InquiryValidationArgs> inquiryValidation) {
-            this.inquiryValidation = inquiryValidation;
+            $.inquiryValidation = inquiryValidation;
             return this;
         }
-        public Builder inquiryValidation(@Nullable InquiryValidationArgs inquiryValidation) {
-            this.inquiryValidation = Codegen.ofNullable(inquiryValidation);
-            return this;
+
+        public Builder inquiryValidation(InquiryValidationArgs inquiryValidation) {
+            return inquiryValidation(Output.of(inquiryValidation));
         }
+
         public Builder itemCount(@Nullable Output<Double> itemCount) {
-            this.itemCount = itemCount;
+            $.itemCount = itemCount;
             return this;
         }
-        public Builder itemCount(@Nullable Double itemCount) {
-            this.itemCount = Codegen.ofNullable(itemCount);
-            return this;
+
+        public Builder itemCount(Double itemCount) {
+            return itemCount(Output.of(itemCount));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public WorkloadInquiryDetailsArgs build() {
-            return new WorkloadInquiryDetailsArgs(inquiryValidation, itemCount, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public WorkloadInquiryDetailsArgs build() {
+            return $;
         }
     }
+
 }

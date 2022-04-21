@@ -25,7 +25,7 @@ public final class HiveJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="continueOnFailure", required=true)
-      private final Boolean continueOnFailure;
+    private Boolean continueOnFailure;
 
     public Boolean continueOnFailure() {
         return this.continueOnFailure;
@@ -36,7 +36,7 @@ public final class HiveJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="jarFileUris", required=true)
-      private final List<String> jarFileUris;
+    private List<String> jarFileUris;
 
     public List<String> jarFileUris() {
         return this.jarFileUris;
@@ -47,7 +47,7 @@ public final class HiveJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="properties", required=true)
-      private final Map<String,String> properties;
+    private Map<String,String> properties;
 
     public Map<String,String> properties() {
         return this.properties;
@@ -58,7 +58,7 @@ public final class HiveJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="queryFileUri", required=true)
-      private final String queryFileUri;
+    private String queryFileUri;
 
     public String queryFileUri() {
         return this.queryFileUri;
@@ -69,7 +69,7 @@ public final class HiveJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="queryList", required=true)
-      private final QueryListResponse queryList;
+    private QueryListResponse queryList;
 
     public QueryListResponse queryList() {
         return this.queryList;
@@ -80,94 +80,84 @@ public final class HiveJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="scriptVariables", required=true)
-      private final Map<String,String> scriptVariables;
+    private Map<String,String> scriptVariables;
 
     public Map<String,String> scriptVariables() {
         return this.scriptVariables;
     }
 
-    public HiveJobResponse(
-        Boolean continueOnFailure,
-        List<String> jarFileUris,
-        Map<String,String> properties,
-        String queryFileUri,
-        QueryListResponse queryList,
-        Map<String,String> scriptVariables) {
-        this.continueOnFailure = Objects.requireNonNull(continueOnFailure, "expected parameter 'continueOnFailure' to be non-null");
-        this.jarFileUris = Objects.requireNonNull(jarFileUris, "expected parameter 'jarFileUris' to be non-null");
-        this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
-        this.queryFileUri = Objects.requireNonNull(queryFileUri, "expected parameter 'queryFileUri' to be non-null");
-        this.queryList = Objects.requireNonNull(queryList, "expected parameter 'queryList' to be non-null");
-        this.scriptVariables = Objects.requireNonNull(scriptVariables, "expected parameter 'scriptVariables' to be non-null");
-    }
+    private HiveJobResponse() {}
 
-    private HiveJobResponse() {
-        this.continueOnFailure = null;
-        this.jarFileUris = List.of();
-        this.properties = Map.of();
-        this.queryFileUri = null;
-        this.queryList = null;
-        this.scriptVariables = Map.of();
+    private HiveJobResponse(HiveJobResponse $) {
+        this.continueOnFailure = $.continueOnFailure;
+        this.jarFileUris = $.jarFileUris;
+        this.properties = $.properties;
+        this.queryFileUri = $.queryFileUri;
+        this.queryList = $.queryList;
+        this.scriptVariables = $.scriptVariables;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HiveJobResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean continueOnFailure;
-        private List<String> jarFileUris;
-        private Map<String,String> properties;
-        private String queryFileUri;
-        private QueryListResponse queryList;
-        private Map<String,String> scriptVariables;
+        private HiveJobResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HiveJobResponse();
         }
 
         public Builder(HiveJobResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.continueOnFailure = defaults.continueOnFailure;
-    	      this.jarFileUris = defaults.jarFileUris;
-    	      this.properties = defaults.properties;
-    	      this.queryFileUri = defaults.queryFileUri;
-    	      this.queryList = defaults.queryList;
-    	      this.scriptVariables = defaults.scriptVariables;
+            $ = new HiveJobResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder continueOnFailure(Boolean continueOnFailure) {
-            this.continueOnFailure = Objects.requireNonNull(continueOnFailure);
+            $.continueOnFailure = continueOnFailure;
             return this;
         }
+
         public Builder jarFileUris(List<String> jarFileUris) {
-            this.jarFileUris = Objects.requireNonNull(jarFileUris);
+            $.jarFileUris = jarFileUris;
             return this;
         }
+
         public Builder jarFileUris(String... jarFileUris) {
             return jarFileUris(List.of(jarFileUris));
         }
+
         public Builder properties(Map<String,String> properties) {
-            this.properties = Objects.requireNonNull(properties);
+            $.properties = properties;
             return this;
         }
+
         public Builder queryFileUri(String queryFileUri) {
-            this.queryFileUri = Objects.requireNonNull(queryFileUri);
+            $.queryFileUri = queryFileUri;
             return this;
         }
+
         public Builder queryList(QueryListResponse queryList) {
-            this.queryList = Objects.requireNonNull(queryList);
+            $.queryList = queryList;
             return this;
         }
+
         public Builder scriptVariables(Map<String,String> scriptVariables) {
-            this.scriptVariables = Objects.requireNonNull(scriptVariables);
+            $.scriptVariables = scriptVariables;
             return this;
-        }        public HiveJobResponse build() {
-            return new HiveJobResponse(continueOnFailure, jarFileUris, properties, queryFileUri, queryList, scriptVariables);
+        }
+
+        public HiveJobResponse build() {
+            $.continueOnFailure = Objects.requireNonNull($.continueOnFailure, "expected parameter 'continueOnFailure' to be non-null");
+            $.jarFileUris = Objects.requireNonNull($.jarFileUris, "expected parameter 'jarFileUris' to be non-null");
+            $.properties = Objects.requireNonNull($.properties, "expected parameter 'properties' to be non-null");
+            $.queryFileUri = Objects.requireNonNull($.queryFileUri, "expected parameter 'queryFileUri' to be non-null");
+            $.queryList = Objects.requireNonNull($.queryList, "expected parameter 'queryList' to be non-null");
+            $.scriptVariables = Objects.requireNonNull($.scriptVariables, "expected parameter 'scriptVariables' to be non-null");
+            return $;
         }
     }
+
 }

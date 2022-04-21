@@ -5,7 +5,6 @@ package com.pulumi.gcp.osconfig.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.osconfig.inputs.PatchDeploymentRolloutDisruptionBudgetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +24,7 @@ public final class PatchDeploymentRolloutArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="disruptionBudget", required=true)
-      private final Output<PatchDeploymentRolloutDisruptionBudgetArgs> disruptionBudget;
+    private Output<PatchDeploymentRolloutDisruptionBudgetArgs> disruptionBudget;
 
     public Output<PatchDeploymentRolloutDisruptionBudgetArgs> disruptionBudget() {
         return this.disruptionBudget;
@@ -37,63 +36,60 @@ public final class PatchDeploymentRolloutArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="mode", required=true)
-      private final Output<String> mode;
+    private Output<String> mode;
 
     public Output<String> mode() {
         return this.mode;
     }
 
-    public PatchDeploymentRolloutArgs(
-        Output<PatchDeploymentRolloutDisruptionBudgetArgs> disruptionBudget,
-        Output<String> mode) {
-        this.disruptionBudget = Objects.requireNonNull(disruptionBudget, "expected parameter 'disruptionBudget' to be non-null");
-        this.mode = Objects.requireNonNull(mode, "expected parameter 'mode' to be non-null");
-    }
+    private PatchDeploymentRolloutArgs() {}
 
-    private PatchDeploymentRolloutArgs() {
-        this.disruptionBudget = Codegen.empty();
-        this.mode = Codegen.empty();
+    private PatchDeploymentRolloutArgs(PatchDeploymentRolloutArgs $) {
+        this.disruptionBudget = $.disruptionBudget;
+        this.mode = $.mode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PatchDeploymentRolloutArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<PatchDeploymentRolloutDisruptionBudgetArgs> disruptionBudget;
-        private Output<String> mode;
+        private PatchDeploymentRolloutArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PatchDeploymentRolloutArgs();
         }
 
         public Builder(PatchDeploymentRolloutArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disruptionBudget = defaults.disruptionBudget;
-    	      this.mode = defaults.mode;
+            $ = new PatchDeploymentRolloutArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder disruptionBudget(Output<PatchDeploymentRolloutDisruptionBudgetArgs> disruptionBudget) {
-            this.disruptionBudget = Objects.requireNonNull(disruptionBudget);
+            $.disruptionBudget = disruptionBudget;
             return this;
         }
+
         public Builder disruptionBudget(PatchDeploymentRolloutDisruptionBudgetArgs disruptionBudget) {
-            this.disruptionBudget = Output.of(Objects.requireNonNull(disruptionBudget));
-            return this;
+            return disruptionBudget(Output.of(disruptionBudget));
         }
+
         public Builder mode(Output<String> mode) {
-            this.mode = Objects.requireNonNull(mode);
+            $.mode = mode;
             return this;
         }
+
         public Builder mode(String mode) {
-            this.mode = Output.of(Objects.requireNonNull(mode));
-            return this;
-        }        public PatchDeploymentRolloutArgs build() {
-            return new PatchDeploymentRolloutArgs(disruptionBudget, mode);
+            return mode(Output.of(mode));
+        }
+
+        public PatchDeploymentRolloutArgs build() {
+            $.disruptionBudget = Objects.requireNonNull($.disruptionBudget, "expected parameter 'disruptionBudget' to be non-null");
+            $.mode = Objects.requireNonNull($.mode, "expected parameter 'mode' to be non-null");
+            return $;
         }
     }
+
 }

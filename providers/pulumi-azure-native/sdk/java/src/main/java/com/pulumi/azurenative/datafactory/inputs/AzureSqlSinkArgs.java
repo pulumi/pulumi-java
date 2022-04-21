@@ -12,6 +12,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +29,10 @@ public final class AzureSqlSinkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="disableMetricsCollection")
-      private final @Nullable Output<Object> disableMetricsCollection;
+    private @Nullable Output<Object> disableMetricsCollection;
 
-    public Output<Object> disableMetricsCollection() {
-        return this.disableMetricsCollection == null ? Codegen.empty() : this.disableMetricsCollection;
+    public Optional<Output<Object>> disableMetricsCollection() {
+        return Optional.ofNullable(this.disableMetricsCollection);
     }
 
     /**
@@ -39,10 +40,10 @@ public final class AzureSqlSinkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxConcurrentConnections")
-      private final @Nullable Output<Object> maxConcurrentConnections;
+    private @Nullable Output<Object> maxConcurrentConnections;
 
-    public Output<Object> maxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Codegen.empty() : this.maxConcurrentConnections;
+    public Optional<Output<Object>> maxConcurrentConnections() {
+        return Optional.ofNullable(this.maxConcurrentConnections);
     }
 
     /**
@@ -50,10 +51,10 @@ public final class AzureSqlSinkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="preCopyScript")
-      private final @Nullable Output<Object> preCopyScript;
+    private @Nullable Output<Object> preCopyScript;
 
-    public Output<Object> preCopyScript() {
-        return this.preCopyScript == null ? Codegen.empty() : this.preCopyScript;
+    public Optional<Output<Object>> preCopyScript() {
+        return Optional.ofNullable(this.preCopyScript);
     }
 
     /**
@@ -61,10 +62,10 @@ public final class AzureSqlSinkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sinkRetryCount")
-      private final @Nullable Output<Object> sinkRetryCount;
+    private @Nullable Output<Object> sinkRetryCount;
 
-    public Output<Object> sinkRetryCount() {
-        return this.sinkRetryCount == null ? Codegen.empty() : this.sinkRetryCount;
+    public Optional<Output<Object>> sinkRetryCount() {
+        return Optional.ofNullable(this.sinkRetryCount);
     }
 
     /**
@@ -72,10 +73,10 @@ public final class AzureSqlSinkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sinkRetryWait")
-      private final @Nullable Output<Object> sinkRetryWait;
+    private @Nullable Output<Object> sinkRetryWait;
 
-    public Output<Object> sinkRetryWait() {
-        return this.sinkRetryWait == null ? Codegen.empty() : this.sinkRetryWait;
+    public Optional<Output<Object>> sinkRetryWait() {
+        return Optional.ofNullable(this.sinkRetryWait);
     }
 
     /**
@@ -83,10 +84,10 @@ public final class AzureSqlSinkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sqlWriterStoredProcedureName")
-      private final @Nullable Output<Object> sqlWriterStoredProcedureName;
+    private @Nullable Output<Object> sqlWriterStoredProcedureName;
 
-    public Output<Object> sqlWriterStoredProcedureName() {
-        return this.sqlWriterStoredProcedureName == null ? Codegen.empty() : this.sqlWriterStoredProcedureName;
+    public Optional<Output<Object>> sqlWriterStoredProcedureName() {
+        return Optional.ofNullable(this.sqlWriterStoredProcedureName);
     }
 
     /**
@@ -94,10 +95,10 @@ public final class AzureSqlSinkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sqlWriterTableType")
-      private final @Nullable Output<Object> sqlWriterTableType;
+    private @Nullable Output<Object> sqlWriterTableType;
 
-    public Output<Object> sqlWriterTableType() {
-        return this.sqlWriterTableType == null ? Codegen.empty() : this.sqlWriterTableType;
+    public Optional<Output<Object>> sqlWriterTableType() {
+        return Optional.ofNullable(this.sqlWriterTableType);
     }
 
     /**
@@ -105,10 +106,10 @@ public final class AzureSqlSinkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sqlWriterUseTableLock")
-      private final @Nullable Output<Object> sqlWriterUseTableLock;
+    private @Nullable Output<Object> sqlWriterUseTableLock;
 
-    public Output<Object> sqlWriterUseTableLock() {
-        return this.sqlWriterUseTableLock == null ? Codegen.empty() : this.sqlWriterUseTableLock;
+    public Optional<Output<Object>> sqlWriterUseTableLock() {
+        return Optional.ofNullable(this.sqlWriterUseTableLock);
     }
 
     /**
@@ -116,10 +117,10 @@ public final class AzureSqlSinkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="storedProcedureParameters")
-      private final @Nullable Output<Map<String,StoredProcedureParameterArgs>> storedProcedureParameters;
+    private @Nullable Output<Map<String,StoredProcedureParameterArgs>> storedProcedureParameters;
 
-    public Output<Map<String,StoredProcedureParameterArgs>> storedProcedureParameters() {
-        return this.storedProcedureParameters == null ? Codegen.empty() : this.storedProcedureParameters;
+    public Optional<Output<Map<String,StoredProcedureParameterArgs>>> storedProcedureParameters() {
+        return Optional.ofNullable(this.storedProcedureParameters);
     }
 
     /**
@@ -127,10 +128,10 @@ public final class AzureSqlSinkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="storedProcedureTableTypeParameterName")
-      private final @Nullable Output<Object> storedProcedureTableTypeParameterName;
+    private @Nullable Output<Object> storedProcedureTableTypeParameterName;
 
-    public Output<Object> storedProcedureTableTypeParameterName() {
-        return this.storedProcedureTableTypeParameterName == null ? Codegen.empty() : this.storedProcedureTableTypeParameterName;
+    public Optional<Output<Object>> storedProcedureTableTypeParameterName() {
+        return Optional.ofNullable(this.storedProcedureTableTypeParameterName);
     }
 
     /**
@@ -138,10 +139,10 @@ public final class AzureSqlSinkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tableOption")
-      private final @Nullable Output<Object> tableOption;
+    private @Nullable Output<Object> tableOption;
 
-    public Output<Object> tableOption() {
-        return this.tableOption == null ? Codegen.empty() : this.tableOption;
+    public Optional<Output<Object>> tableOption() {
+        return Optional.ofNullable(this.tableOption);
     }
 
     /**
@@ -150,7 +151,7 @@ public final class AzureSqlSinkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -161,10 +162,10 @@ public final class AzureSqlSinkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="upsertSettings")
-      private final @Nullable Output<SqlUpsertSettingsArgs> upsertSettings;
+    private @Nullable Output<SqlUpsertSettingsArgs> upsertSettings;
 
-    public Output<SqlUpsertSettingsArgs> upsertSettings() {
-        return this.upsertSettings == null ? Codegen.empty() : this.upsertSettings;
+    public Optional<Output<SqlUpsertSettingsArgs>> upsertSettings() {
+        return Optional.ofNullable(this.upsertSettings);
     }
 
     /**
@@ -172,10 +173,10 @@ public final class AzureSqlSinkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="writeBatchSize")
-      private final @Nullable Output<Object> writeBatchSize;
+    private @Nullable Output<Object> writeBatchSize;
 
-    public Output<Object> writeBatchSize() {
-        return this.writeBatchSize == null ? Codegen.empty() : this.writeBatchSize;
+    public Optional<Output<Object>> writeBatchSize() {
+        return Optional.ofNullable(this.writeBatchSize);
     }
 
     /**
@@ -183,10 +184,10 @@ public final class AzureSqlSinkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="writeBatchTimeout")
-      private final @Nullable Output<Object> writeBatchTimeout;
+    private @Nullable Output<Object> writeBatchTimeout;
 
-    public Output<Object> writeBatchTimeout() {
-        return this.writeBatchTimeout == null ? Codegen.empty() : this.writeBatchTimeout;
+    public Optional<Output<Object>> writeBatchTimeout() {
+        return Optional.ofNullable(this.writeBatchTimeout);
     }
 
     /**
@@ -194,245 +195,199 @@ public final class AzureSqlSinkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="writeBehavior")
-      private final @Nullable Output<Object> writeBehavior;
+    private @Nullable Output<Object> writeBehavior;
 
-    public Output<Object> writeBehavior() {
-        return this.writeBehavior == null ? Codegen.empty() : this.writeBehavior;
+    public Optional<Output<Object>> writeBehavior() {
+        return Optional.ofNullable(this.writeBehavior);
     }
 
-    public AzureSqlSinkArgs(
-        @Nullable Output<Object> disableMetricsCollection,
-        @Nullable Output<Object> maxConcurrentConnections,
-        @Nullable Output<Object> preCopyScript,
-        @Nullable Output<Object> sinkRetryCount,
-        @Nullable Output<Object> sinkRetryWait,
-        @Nullable Output<Object> sqlWriterStoredProcedureName,
-        @Nullable Output<Object> sqlWriterTableType,
-        @Nullable Output<Object> sqlWriterUseTableLock,
-        @Nullable Output<Map<String,StoredProcedureParameterArgs>> storedProcedureParameters,
-        @Nullable Output<Object> storedProcedureTableTypeParameterName,
-        @Nullable Output<Object> tableOption,
-        Output<String> type,
-        @Nullable Output<SqlUpsertSettingsArgs> upsertSettings,
-        @Nullable Output<Object> writeBatchSize,
-        @Nullable Output<Object> writeBatchTimeout,
-        @Nullable Output<Object> writeBehavior) {
-        this.disableMetricsCollection = disableMetricsCollection;
-        this.maxConcurrentConnections = maxConcurrentConnections;
-        this.preCopyScript = preCopyScript;
-        this.sinkRetryCount = sinkRetryCount;
-        this.sinkRetryWait = sinkRetryWait;
-        this.sqlWriterStoredProcedureName = sqlWriterStoredProcedureName;
-        this.sqlWriterTableType = sqlWriterTableType;
-        this.sqlWriterUseTableLock = sqlWriterUseTableLock;
-        this.storedProcedureParameters = storedProcedureParameters;
-        this.storedProcedureTableTypeParameterName = storedProcedureTableTypeParameterName;
-        this.tableOption = tableOption;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-        this.upsertSettings = upsertSettings;
-        this.writeBatchSize = writeBatchSize;
-        this.writeBatchTimeout = writeBatchTimeout;
-        this.writeBehavior = writeBehavior;
-    }
+    private AzureSqlSinkArgs() {}
 
-    private AzureSqlSinkArgs() {
-        this.disableMetricsCollection = Codegen.empty();
-        this.maxConcurrentConnections = Codegen.empty();
-        this.preCopyScript = Codegen.empty();
-        this.sinkRetryCount = Codegen.empty();
-        this.sinkRetryWait = Codegen.empty();
-        this.sqlWriterStoredProcedureName = Codegen.empty();
-        this.sqlWriterTableType = Codegen.empty();
-        this.sqlWriterUseTableLock = Codegen.empty();
-        this.storedProcedureParameters = Codegen.empty();
-        this.storedProcedureTableTypeParameterName = Codegen.empty();
-        this.tableOption = Codegen.empty();
-        this.type = Codegen.empty();
-        this.upsertSettings = Codegen.empty();
-        this.writeBatchSize = Codegen.empty();
-        this.writeBatchTimeout = Codegen.empty();
-        this.writeBehavior = Codegen.empty();
+    private AzureSqlSinkArgs(AzureSqlSinkArgs $) {
+        this.disableMetricsCollection = $.disableMetricsCollection;
+        this.maxConcurrentConnections = $.maxConcurrentConnections;
+        this.preCopyScript = $.preCopyScript;
+        this.sinkRetryCount = $.sinkRetryCount;
+        this.sinkRetryWait = $.sinkRetryWait;
+        this.sqlWriterStoredProcedureName = $.sqlWriterStoredProcedureName;
+        this.sqlWriterTableType = $.sqlWriterTableType;
+        this.sqlWriterUseTableLock = $.sqlWriterUseTableLock;
+        this.storedProcedureParameters = $.storedProcedureParameters;
+        this.storedProcedureTableTypeParameterName = $.storedProcedureTableTypeParameterName;
+        this.tableOption = $.tableOption;
+        this.type = $.type;
+        this.upsertSettings = $.upsertSettings;
+        this.writeBatchSize = $.writeBatchSize;
+        this.writeBatchTimeout = $.writeBatchTimeout;
+        this.writeBehavior = $.writeBehavior;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureSqlSinkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> disableMetricsCollection;
-        private @Nullable Output<Object> maxConcurrentConnections;
-        private @Nullable Output<Object> preCopyScript;
-        private @Nullable Output<Object> sinkRetryCount;
-        private @Nullable Output<Object> sinkRetryWait;
-        private @Nullable Output<Object> sqlWriterStoredProcedureName;
-        private @Nullable Output<Object> sqlWriterTableType;
-        private @Nullable Output<Object> sqlWriterUseTableLock;
-        private @Nullable Output<Map<String,StoredProcedureParameterArgs>> storedProcedureParameters;
-        private @Nullable Output<Object> storedProcedureTableTypeParameterName;
-        private @Nullable Output<Object> tableOption;
-        private Output<String> type;
-        private @Nullable Output<SqlUpsertSettingsArgs> upsertSettings;
-        private @Nullable Output<Object> writeBatchSize;
-        private @Nullable Output<Object> writeBatchTimeout;
-        private @Nullable Output<Object> writeBehavior;
+        private AzureSqlSinkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureSqlSinkArgs();
         }
 
         public Builder(AzureSqlSinkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disableMetricsCollection = defaults.disableMetricsCollection;
-    	      this.maxConcurrentConnections = defaults.maxConcurrentConnections;
-    	      this.preCopyScript = defaults.preCopyScript;
-    	      this.sinkRetryCount = defaults.sinkRetryCount;
-    	      this.sinkRetryWait = defaults.sinkRetryWait;
-    	      this.sqlWriterStoredProcedureName = defaults.sqlWriterStoredProcedureName;
-    	      this.sqlWriterTableType = defaults.sqlWriterTableType;
-    	      this.sqlWriterUseTableLock = defaults.sqlWriterUseTableLock;
-    	      this.storedProcedureParameters = defaults.storedProcedureParameters;
-    	      this.storedProcedureTableTypeParameterName = defaults.storedProcedureTableTypeParameterName;
-    	      this.tableOption = defaults.tableOption;
-    	      this.type = defaults.type;
-    	      this.upsertSettings = defaults.upsertSettings;
-    	      this.writeBatchSize = defaults.writeBatchSize;
-    	      this.writeBatchTimeout = defaults.writeBatchTimeout;
-    	      this.writeBehavior = defaults.writeBehavior;
+            $ = new AzureSqlSinkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder disableMetricsCollection(@Nullable Output<Object> disableMetricsCollection) {
-            this.disableMetricsCollection = disableMetricsCollection;
+            $.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
-        public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
-            this.disableMetricsCollection = Codegen.ofNullable(disableMetricsCollection);
-            return this;
+
+        public Builder disableMetricsCollection(Object disableMetricsCollection) {
+            return disableMetricsCollection(Output.of(disableMetricsCollection));
         }
+
         public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
-            this.maxConcurrentConnections = maxConcurrentConnections;
+            $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
-        public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
-            this.maxConcurrentConnections = Codegen.ofNullable(maxConcurrentConnections);
-            return this;
+
+        public Builder maxConcurrentConnections(Object maxConcurrentConnections) {
+            return maxConcurrentConnections(Output.of(maxConcurrentConnections));
         }
+
         public Builder preCopyScript(@Nullable Output<Object> preCopyScript) {
-            this.preCopyScript = preCopyScript;
+            $.preCopyScript = preCopyScript;
             return this;
         }
-        public Builder preCopyScript(@Nullable Object preCopyScript) {
-            this.preCopyScript = Codegen.ofNullable(preCopyScript);
-            return this;
+
+        public Builder preCopyScript(Object preCopyScript) {
+            return preCopyScript(Output.of(preCopyScript));
         }
+
         public Builder sinkRetryCount(@Nullable Output<Object> sinkRetryCount) {
-            this.sinkRetryCount = sinkRetryCount;
+            $.sinkRetryCount = sinkRetryCount;
             return this;
         }
-        public Builder sinkRetryCount(@Nullable Object sinkRetryCount) {
-            this.sinkRetryCount = Codegen.ofNullable(sinkRetryCount);
-            return this;
+
+        public Builder sinkRetryCount(Object sinkRetryCount) {
+            return sinkRetryCount(Output.of(sinkRetryCount));
         }
+
         public Builder sinkRetryWait(@Nullable Output<Object> sinkRetryWait) {
-            this.sinkRetryWait = sinkRetryWait;
+            $.sinkRetryWait = sinkRetryWait;
             return this;
         }
-        public Builder sinkRetryWait(@Nullable Object sinkRetryWait) {
-            this.sinkRetryWait = Codegen.ofNullable(sinkRetryWait);
-            return this;
+
+        public Builder sinkRetryWait(Object sinkRetryWait) {
+            return sinkRetryWait(Output.of(sinkRetryWait));
         }
+
         public Builder sqlWriterStoredProcedureName(@Nullable Output<Object> sqlWriterStoredProcedureName) {
-            this.sqlWriterStoredProcedureName = sqlWriterStoredProcedureName;
+            $.sqlWriterStoredProcedureName = sqlWriterStoredProcedureName;
             return this;
         }
-        public Builder sqlWriterStoredProcedureName(@Nullable Object sqlWriterStoredProcedureName) {
-            this.sqlWriterStoredProcedureName = Codegen.ofNullable(sqlWriterStoredProcedureName);
-            return this;
+
+        public Builder sqlWriterStoredProcedureName(Object sqlWriterStoredProcedureName) {
+            return sqlWriterStoredProcedureName(Output.of(sqlWriterStoredProcedureName));
         }
+
         public Builder sqlWriterTableType(@Nullable Output<Object> sqlWriterTableType) {
-            this.sqlWriterTableType = sqlWriterTableType;
+            $.sqlWriterTableType = sqlWriterTableType;
             return this;
         }
-        public Builder sqlWriterTableType(@Nullable Object sqlWriterTableType) {
-            this.sqlWriterTableType = Codegen.ofNullable(sqlWriterTableType);
-            return this;
+
+        public Builder sqlWriterTableType(Object sqlWriterTableType) {
+            return sqlWriterTableType(Output.of(sqlWriterTableType));
         }
+
         public Builder sqlWriterUseTableLock(@Nullable Output<Object> sqlWriterUseTableLock) {
-            this.sqlWriterUseTableLock = sqlWriterUseTableLock;
+            $.sqlWriterUseTableLock = sqlWriterUseTableLock;
             return this;
         }
-        public Builder sqlWriterUseTableLock(@Nullable Object sqlWriterUseTableLock) {
-            this.sqlWriterUseTableLock = Codegen.ofNullable(sqlWriterUseTableLock);
-            return this;
+
+        public Builder sqlWriterUseTableLock(Object sqlWriterUseTableLock) {
+            return sqlWriterUseTableLock(Output.of(sqlWriterUseTableLock));
         }
+
         public Builder storedProcedureParameters(@Nullable Output<Map<String,StoredProcedureParameterArgs>> storedProcedureParameters) {
-            this.storedProcedureParameters = storedProcedureParameters;
+            $.storedProcedureParameters = storedProcedureParameters;
             return this;
         }
-        public Builder storedProcedureParameters(@Nullable Map<String,StoredProcedureParameterArgs> storedProcedureParameters) {
-            this.storedProcedureParameters = Codegen.ofNullable(storedProcedureParameters);
-            return this;
+
+        public Builder storedProcedureParameters(Map<String,StoredProcedureParameterArgs> storedProcedureParameters) {
+            return storedProcedureParameters(Output.of(storedProcedureParameters));
         }
+
         public Builder storedProcedureTableTypeParameterName(@Nullable Output<Object> storedProcedureTableTypeParameterName) {
-            this.storedProcedureTableTypeParameterName = storedProcedureTableTypeParameterName;
+            $.storedProcedureTableTypeParameterName = storedProcedureTableTypeParameterName;
             return this;
         }
-        public Builder storedProcedureTableTypeParameterName(@Nullable Object storedProcedureTableTypeParameterName) {
-            this.storedProcedureTableTypeParameterName = Codegen.ofNullable(storedProcedureTableTypeParameterName);
-            return this;
+
+        public Builder storedProcedureTableTypeParameterName(Object storedProcedureTableTypeParameterName) {
+            return storedProcedureTableTypeParameterName(Output.of(storedProcedureTableTypeParameterName));
         }
+
         public Builder tableOption(@Nullable Output<Object> tableOption) {
-            this.tableOption = tableOption;
+            $.tableOption = tableOption;
             return this;
         }
-        public Builder tableOption(@Nullable Object tableOption) {
-            this.tableOption = Codegen.ofNullable(tableOption);
-            return this;
+
+        public Builder tableOption(Object tableOption) {
+            return tableOption(Output.of(tableOption));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder upsertSettings(@Nullable Output<SqlUpsertSettingsArgs> upsertSettings) {
-            this.upsertSettings = upsertSettings;
+            $.upsertSettings = upsertSettings;
             return this;
         }
-        public Builder upsertSettings(@Nullable SqlUpsertSettingsArgs upsertSettings) {
-            this.upsertSettings = Codegen.ofNullable(upsertSettings);
-            return this;
+
+        public Builder upsertSettings(SqlUpsertSettingsArgs upsertSettings) {
+            return upsertSettings(Output.of(upsertSettings));
         }
+
         public Builder writeBatchSize(@Nullable Output<Object> writeBatchSize) {
-            this.writeBatchSize = writeBatchSize;
+            $.writeBatchSize = writeBatchSize;
             return this;
         }
-        public Builder writeBatchSize(@Nullable Object writeBatchSize) {
-            this.writeBatchSize = Codegen.ofNullable(writeBatchSize);
-            return this;
+
+        public Builder writeBatchSize(Object writeBatchSize) {
+            return writeBatchSize(Output.of(writeBatchSize));
         }
+
         public Builder writeBatchTimeout(@Nullable Output<Object> writeBatchTimeout) {
-            this.writeBatchTimeout = writeBatchTimeout;
+            $.writeBatchTimeout = writeBatchTimeout;
             return this;
         }
-        public Builder writeBatchTimeout(@Nullable Object writeBatchTimeout) {
-            this.writeBatchTimeout = Codegen.ofNullable(writeBatchTimeout);
-            return this;
+
+        public Builder writeBatchTimeout(Object writeBatchTimeout) {
+            return writeBatchTimeout(Output.of(writeBatchTimeout));
         }
+
         public Builder writeBehavior(@Nullable Output<Object> writeBehavior) {
-            this.writeBehavior = writeBehavior;
+            $.writeBehavior = writeBehavior;
             return this;
         }
-        public Builder writeBehavior(@Nullable Object writeBehavior) {
-            this.writeBehavior = Codegen.ofNullable(writeBehavior);
-            return this;
-        }        public AzureSqlSinkArgs build() {
-            return new AzureSqlSinkArgs(disableMetricsCollection, maxConcurrentConnections, preCopyScript, sinkRetryCount, sinkRetryWait, sqlWriterStoredProcedureName, sqlWriterTableType, sqlWriterUseTableLock, storedProcedureParameters, storedProcedureTableTypeParameterName, tableOption, type, upsertSettings, writeBatchSize, writeBatchTimeout, writeBehavior);
+
+        public Builder writeBehavior(Object writeBehavior) {
+            return writeBehavior(Output.of(writeBehavior));
+        }
+
+        public AzureSqlSinkArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

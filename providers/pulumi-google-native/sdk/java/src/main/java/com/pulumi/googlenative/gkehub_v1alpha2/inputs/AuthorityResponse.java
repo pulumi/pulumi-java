@@ -21,7 +21,7 @@ public final class AuthorityResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="identityProvider", required=true)
-      private final String identityProvider;
+    private String identityProvider;
 
     public String identityProvider() {
         return this.identityProvider;
@@ -32,7 +32,7 @@ public final class AuthorityResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="issuer", required=true)
-      private final String issuer;
+    private String issuer;
 
     public String issuer() {
         return this.issuer;
@@ -43,7 +43,7 @@ public final class AuthorityResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="oidcJwks", required=true)
-      private final String oidcJwks;
+    private String oidcJwks;
 
     public String oidcJwks() {
         return this.oidcJwks;
@@ -54,73 +54,66 @@ public final class AuthorityResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="workloadIdentityPool", required=true)
-      private final String workloadIdentityPool;
+    private String workloadIdentityPool;
 
     public String workloadIdentityPool() {
         return this.workloadIdentityPool;
     }
 
-    public AuthorityResponse(
-        String identityProvider,
-        String issuer,
-        String oidcJwks,
-        String workloadIdentityPool) {
-        this.identityProvider = Objects.requireNonNull(identityProvider, "expected parameter 'identityProvider' to be non-null");
-        this.issuer = Objects.requireNonNull(issuer, "expected parameter 'issuer' to be non-null");
-        this.oidcJwks = Objects.requireNonNull(oidcJwks, "expected parameter 'oidcJwks' to be non-null");
-        this.workloadIdentityPool = Objects.requireNonNull(workloadIdentityPool, "expected parameter 'workloadIdentityPool' to be non-null");
-    }
+    private AuthorityResponse() {}
 
-    private AuthorityResponse() {
-        this.identityProvider = null;
-        this.issuer = null;
-        this.oidcJwks = null;
-        this.workloadIdentityPool = null;
+    private AuthorityResponse(AuthorityResponse $) {
+        this.identityProvider = $.identityProvider;
+        this.issuer = $.issuer;
+        this.oidcJwks = $.oidcJwks;
+        this.workloadIdentityPool = $.workloadIdentityPool;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AuthorityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String identityProvider;
-        private String issuer;
-        private String oidcJwks;
-        private String workloadIdentityPool;
+        private AuthorityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AuthorityResponse();
         }
 
         public Builder(AuthorityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.identityProvider = defaults.identityProvider;
-    	      this.issuer = defaults.issuer;
-    	      this.oidcJwks = defaults.oidcJwks;
-    	      this.workloadIdentityPool = defaults.workloadIdentityPool;
+            $ = new AuthorityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder identityProvider(String identityProvider) {
-            this.identityProvider = Objects.requireNonNull(identityProvider);
+            $.identityProvider = identityProvider;
             return this;
         }
+
         public Builder issuer(String issuer) {
-            this.issuer = Objects.requireNonNull(issuer);
+            $.issuer = issuer;
             return this;
         }
+
         public Builder oidcJwks(String oidcJwks) {
-            this.oidcJwks = Objects.requireNonNull(oidcJwks);
+            $.oidcJwks = oidcJwks;
             return this;
         }
+
         public Builder workloadIdentityPool(String workloadIdentityPool) {
-            this.workloadIdentityPool = Objects.requireNonNull(workloadIdentityPool);
+            $.workloadIdentityPool = workloadIdentityPool;
             return this;
-        }        public AuthorityResponse build() {
-            return new AuthorityResponse(identityProvider, issuer, oidcJwks, workloadIdentityPool);
+        }
+
+        public AuthorityResponse build() {
+            $.identityProvider = Objects.requireNonNull($.identityProvider, "expected parameter 'identityProvider' to be non-null");
+            $.issuer = Objects.requireNonNull($.issuer, "expected parameter 'issuer' to be non-null");
+            $.oidcJwks = Objects.requireNonNull($.oidcJwks, "expected parameter 'oidcJwks' to be non-null");
+            $.workloadIdentityPool = Objects.requireNonNull($.workloadIdentityPool, "expected parameter 'workloadIdentityPool' to be non-null");
+            return $;
         }
     }
+
 }

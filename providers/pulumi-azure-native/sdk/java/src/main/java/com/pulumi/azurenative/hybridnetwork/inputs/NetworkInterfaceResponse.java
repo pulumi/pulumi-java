@@ -25,10 +25,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="ipConfigurations")
-      private final @Nullable List<NetworkInterfaceIPConfigurationResponse> ipConfigurations;
+    private @Nullable List<NetworkInterfaceIPConfigurationResponse> ipConfigurations;
 
-    public List<NetworkInterfaceIPConfigurationResponse> ipConfigurations() {
-        return this.ipConfigurations == null ? List.of() : this.ipConfigurations;
+    public Optional<List<NetworkInterfaceIPConfigurationResponse>> ipConfigurations() {
+        return Optional.ofNullable(this.ipConfigurations);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="macAddress")
-      private final @Nullable String macAddress;
+    private @Nullable String macAddress;
 
     public Optional<String> macAddress() {
-        return this.macAddress == null ? Optional.empty() : Optional.ofNullable(this.macAddress);
+        return Optional.ofNullable(this.macAddress);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="networkInterfaceName")
-      private final @Nullable String networkInterfaceName;
+    private @Nullable String networkInterfaceName;
 
     public Optional<String> networkInterfaceName() {
-        return this.networkInterfaceName == null ? Optional.empty() : Optional.ofNullable(this.networkInterfaceName);
+        return Optional.ofNullable(this.networkInterfaceName);
     }
 
     /**
@@ -58,76 +58,66 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="vmSwitchType")
-      private final @Nullable String vmSwitchType;
+    private @Nullable String vmSwitchType;
 
     public Optional<String> vmSwitchType() {
-        return this.vmSwitchType == null ? Optional.empty() : Optional.ofNullable(this.vmSwitchType);
+        return Optional.ofNullable(this.vmSwitchType);
     }
 
-    public NetworkInterfaceResponse(
-        @Nullable List<NetworkInterfaceIPConfigurationResponse> ipConfigurations,
-        @Nullable String macAddress,
-        @Nullable String networkInterfaceName,
-        @Nullable String vmSwitchType) {
-        this.ipConfigurations = ipConfigurations;
-        this.macAddress = macAddress;
-        this.networkInterfaceName = networkInterfaceName;
-        this.vmSwitchType = vmSwitchType;
-    }
+    private NetworkInterfaceResponse() {}
 
-    private NetworkInterfaceResponse() {
-        this.ipConfigurations = List.of();
-        this.macAddress = null;
-        this.networkInterfaceName = null;
-        this.vmSwitchType = null;
+    private NetworkInterfaceResponse(NetworkInterfaceResponse $) {
+        this.ipConfigurations = $.ipConfigurations;
+        this.macAddress = $.macAddress;
+        this.networkInterfaceName = $.networkInterfaceName;
+        this.vmSwitchType = $.vmSwitchType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkInterfaceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<NetworkInterfaceIPConfigurationResponse> ipConfigurations;
-        private @Nullable String macAddress;
-        private @Nullable String networkInterfaceName;
-        private @Nullable String vmSwitchType;
+        private NetworkInterfaceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkInterfaceResponse();
         }
 
         public Builder(NetworkInterfaceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipConfigurations = defaults.ipConfigurations;
-    	      this.macAddress = defaults.macAddress;
-    	      this.networkInterfaceName = defaults.networkInterfaceName;
-    	      this.vmSwitchType = defaults.vmSwitchType;
+            $ = new NetworkInterfaceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder ipConfigurations(@Nullable List<NetworkInterfaceIPConfigurationResponse> ipConfigurations) {
-            this.ipConfigurations = ipConfigurations;
+            $.ipConfigurations = ipConfigurations;
             return this;
         }
+
         public Builder ipConfigurations(NetworkInterfaceIPConfigurationResponse... ipConfigurations) {
             return ipConfigurations(List.of(ipConfigurations));
         }
+
         public Builder macAddress(@Nullable String macAddress) {
-            this.macAddress = macAddress;
+            $.macAddress = macAddress;
             return this;
         }
+
         public Builder networkInterfaceName(@Nullable String networkInterfaceName) {
-            this.networkInterfaceName = networkInterfaceName;
+            $.networkInterfaceName = networkInterfaceName;
             return this;
         }
+
         public Builder vmSwitchType(@Nullable String vmSwitchType) {
-            this.vmSwitchType = vmSwitchType;
+            $.vmSwitchType = vmSwitchType;
             return this;
-        }        public NetworkInterfaceResponse build() {
-            return new NetworkInterfaceResponse(ipConfigurations, macAddress, networkInterfaceName, vmSwitchType);
+        }
+
+        public NetworkInterfaceResponse build() {
+            return $;
         }
     }
+
 }

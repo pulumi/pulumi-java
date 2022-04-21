@@ -5,7 +5,6 @@ package com.pulumi.kubernetes.autoscaling_v2beta2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.autoscaling_v2beta2.inputs.MetricTargetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +23,7 @@ public final class ContainerResourceMetricSourceArgs extends com.pulumi.resource
      * 
      */
     @Import(name="container", required=true)
-      private final Output<String> container;
+    private Output<String> container;
 
     public Output<String> container() {
         return this.container;
@@ -35,7 +34,7 @@ public final class ContainerResourceMetricSourceArgs extends com.pulumi.resource
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -46,76 +45,71 @@ public final class ContainerResourceMetricSourceArgs extends com.pulumi.resource
      * 
      */
     @Import(name="target", required=true)
-      private final Output<MetricTargetArgs> target;
+    private Output<MetricTargetArgs> target;
 
     public Output<MetricTargetArgs> target() {
         return this.target;
     }
 
-    public ContainerResourceMetricSourceArgs(
-        Output<String> container,
-        Output<String> name,
-        Output<MetricTargetArgs> target) {
-        this.container = Objects.requireNonNull(container, "expected parameter 'container' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.target = Objects.requireNonNull(target, "expected parameter 'target' to be non-null");
-    }
+    private ContainerResourceMetricSourceArgs() {}
 
-    private ContainerResourceMetricSourceArgs() {
-        this.container = Codegen.empty();
-        this.name = Codegen.empty();
-        this.target = Codegen.empty();
+    private ContainerResourceMetricSourceArgs(ContainerResourceMetricSourceArgs $) {
+        this.container = $.container;
+        this.name = $.name;
+        this.target = $.target;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerResourceMetricSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> container;
-        private Output<String> name;
-        private Output<MetricTargetArgs> target;
+        private ContainerResourceMetricSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerResourceMetricSourceArgs();
         }
 
         public Builder(ContainerResourceMetricSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.container = defaults.container;
-    	      this.name = defaults.name;
-    	      this.target = defaults.target;
+            $ = new ContainerResourceMetricSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder container(Output<String> container) {
-            this.container = Objects.requireNonNull(container);
+            $.container = container;
             return this;
         }
+
         public Builder container(String container) {
-            this.container = Output.of(Objects.requireNonNull(container));
-            return this;
+            return container(Output.of(container));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder target(Output<MetricTargetArgs> target) {
-            this.target = Objects.requireNonNull(target);
+            $.target = target;
             return this;
         }
+
         public Builder target(MetricTargetArgs target) {
-            this.target = Output.of(Objects.requireNonNull(target));
-            return this;
-        }        public ContainerResourceMetricSourceArgs build() {
-            return new ContainerResourceMetricSourceArgs(container, name, target);
+            return target(Output.of(target));
+        }
+
+        public ContainerResourceMetricSourceArgs build() {
+            $.container = Objects.requireNonNull($.container, "expected parameter 'container' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.target = Objects.requireNonNull($.target, "expected parameter 'target' to be non-null");
+            return $;
         }
     }
+
 }

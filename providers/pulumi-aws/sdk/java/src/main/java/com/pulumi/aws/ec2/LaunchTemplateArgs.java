@@ -21,13 +21,13 @@ import com.pulumi.aws.ec2.inputs.LaunchTemplatePlacementArgs;
 import com.pulumi.aws.ec2.inputs.LaunchTemplateTagSpecificationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -41,10 +41,10 @@ public final class LaunchTemplateArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="blockDeviceMappings")
-      private final @Nullable Output<List<LaunchTemplateBlockDeviceMappingArgs>> blockDeviceMappings;
+    private @Nullable Output<List<LaunchTemplateBlockDeviceMappingArgs>> blockDeviceMappings;
 
-    public Output<List<LaunchTemplateBlockDeviceMappingArgs>> blockDeviceMappings() {
-        return this.blockDeviceMappings == null ? Codegen.empty() : this.blockDeviceMappings;
+    public Optional<Output<List<LaunchTemplateBlockDeviceMappingArgs>>> blockDeviceMappings() {
+        return Optional.ofNullable(this.blockDeviceMappings);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class LaunchTemplateArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="capacityReservationSpecification")
-      private final @Nullable Output<LaunchTemplateCapacityReservationSpecificationArgs> capacityReservationSpecification;
+    private @Nullable Output<LaunchTemplateCapacityReservationSpecificationArgs> capacityReservationSpecification;
 
-    public Output<LaunchTemplateCapacityReservationSpecificationArgs> capacityReservationSpecification() {
-        return this.capacityReservationSpecification == null ? Codegen.empty() : this.capacityReservationSpecification;
+    public Optional<Output<LaunchTemplateCapacityReservationSpecificationArgs>> capacityReservationSpecification() {
+        return Optional.ofNullable(this.capacityReservationSpecification);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class LaunchTemplateArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="cpuOptions")
-      private final @Nullable Output<LaunchTemplateCpuOptionsArgs> cpuOptions;
+    private @Nullable Output<LaunchTemplateCpuOptionsArgs> cpuOptions;
 
-    public Output<LaunchTemplateCpuOptionsArgs> cpuOptions() {
-        return this.cpuOptions == null ? Codegen.empty() : this.cpuOptions;
+    public Optional<Output<LaunchTemplateCpuOptionsArgs>> cpuOptions() {
+        return Optional.ofNullable(this.cpuOptions);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class LaunchTemplateArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="creditSpecification")
-      private final @Nullable Output<LaunchTemplateCreditSpecificationArgs> creditSpecification;
+    private @Nullable Output<LaunchTemplateCreditSpecificationArgs> creditSpecification;
 
-    public Output<LaunchTemplateCreditSpecificationArgs> creditSpecification() {
-        return this.creditSpecification == null ? Codegen.empty() : this.creditSpecification;
+    public Optional<Output<LaunchTemplateCreditSpecificationArgs>> creditSpecification() {
+        return Optional.ofNullable(this.creditSpecification);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class LaunchTemplateArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="defaultVersion")
-      private final @Nullable Output<Integer> defaultVersion;
+    private @Nullable Output<Integer> defaultVersion;
 
-    public Output<Integer> defaultVersion() {
-        return this.defaultVersion == null ? Codegen.empty() : this.defaultVersion;
+    public Optional<Output<Integer>> defaultVersion() {
+        return Optional.ofNullable(this.defaultVersion);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class LaunchTemplateArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -109,10 +109,10 @@ public final class LaunchTemplateArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="disableApiTermination")
-      private final @Nullable Output<Boolean> disableApiTermination;
+    private @Nullable Output<Boolean> disableApiTermination;
 
-    public Output<Boolean> disableApiTermination() {
-        return this.disableApiTermination == null ? Codegen.empty() : this.disableApiTermination;
+    public Optional<Output<Boolean>> disableApiTermination() {
+        return Optional.ofNullable(this.disableApiTermination);
     }
 
     /**
@@ -120,10 +120,10 @@ public final class LaunchTemplateArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="ebsOptimized")
-      private final @Nullable Output<String> ebsOptimized;
+    private @Nullable Output<String> ebsOptimized;
 
-    public Output<String> ebsOptimized() {
-        return this.ebsOptimized == null ? Codegen.empty() : this.ebsOptimized;
+    public Optional<Output<String>> ebsOptimized() {
+        return Optional.ofNullable(this.ebsOptimized);
     }
 
     /**
@@ -132,10 +132,10 @@ public final class LaunchTemplateArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="elasticGpuSpecifications")
-      private final @Nullable Output<List<LaunchTemplateElasticGpuSpecificationArgs>> elasticGpuSpecifications;
+    private @Nullable Output<List<LaunchTemplateElasticGpuSpecificationArgs>> elasticGpuSpecifications;
 
-    public Output<List<LaunchTemplateElasticGpuSpecificationArgs>> elasticGpuSpecifications() {
-        return this.elasticGpuSpecifications == null ? Codegen.empty() : this.elasticGpuSpecifications;
+    public Optional<Output<List<LaunchTemplateElasticGpuSpecificationArgs>>> elasticGpuSpecifications() {
+        return Optional.ofNullable(this.elasticGpuSpecifications);
     }
 
     /**
@@ -143,10 +143,10 @@ public final class LaunchTemplateArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="elasticInferenceAccelerator")
-      private final @Nullable Output<LaunchTemplateElasticInferenceAcceleratorArgs> elasticInferenceAccelerator;
+    private @Nullable Output<LaunchTemplateElasticInferenceAcceleratorArgs> elasticInferenceAccelerator;
 
-    public Output<LaunchTemplateElasticInferenceAcceleratorArgs> elasticInferenceAccelerator() {
-        return this.elasticInferenceAccelerator == null ? Codegen.empty() : this.elasticInferenceAccelerator;
+    public Optional<Output<LaunchTemplateElasticInferenceAcceleratorArgs>> elasticInferenceAccelerator() {
+        return Optional.ofNullable(this.elasticInferenceAccelerator);
     }
 
     /**
@@ -154,10 +154,10 @@ public final class LaunchTemplateArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="enclaveOptions")
-      private final @Nullable Output<LaunchTemplateEnclaveOptionsArgs> enclaveOptions;
+    private @Nullable Output<LaunchTemplateEnclaveOptionsArgs> enclaveOptions;
 
-    public Output<LaunchTemplateEnclaveOptionsArgs> enclaveOptions() {
-        return this.enclaveOptions == null ? Codegen.empty() : this.enclaveOptions;
+    public Optional<Output<LaunchTemplateEnclaveOptionsArgs>> enclaveOptions() {
+        return Optional.ofNullable(this.enclaveOptions);
     }
 
     /**
@@ -165,10 +165,10 @@ public final class LaunchTemplateArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="hibernationOptions")
-      private final @Nullable Output<LaunchTemplateHibernationOptionsArgs> hibernationOptions;
+    private @Nullable Output<LaunchTemplateHibernationOptionsArgs> hibernationOptions;
 
-    public Output<LaunchTemplateHibernationOptionsArgs> hibernationOptions() {
-        return this.hibernationOptions == null ? Codegen.empty() : this.hibernationOptions;
+    public Optional<Output<LaunchTemplateHibernationOptionsArgs>> hibernationOptions() {
+        return Optional.ofNullable(this.hibernationOptions);
     }
 
     /**
@@ -177,10 +177,10 @@ public final class LaunchTemplateArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="iamInstanceProfile")
-      private final @Nullable Output<LaunchTemplateIamInstanceProfileArgs> iamInstanceProfile;
+    private @Nullable Output<LaunchTemplateIamInstanceProfileArgs> iamInstanceProfile;
 
-    public Output<LaunchTemplateIamInstanceProfileArgs> iamInstanceProfile() {
-        return this.iamInstanceProfile == null ? Codegen.empty() : this.iamInstanceProfile;
+    public Optional<Output<LaunchTemplateIamInstanceProfileArgs>> iamInstanceProfile() {
+        return Optional.ofNullable(this.iamInstanceProfile);
     }
 
     /**
@@ -188,10 +188,10 @@ public final class LaunchTemplateArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="imageId")
-      private final @Nullable Output<String> imageId;
+    private @Nullable Output<String> imageId;
 
-    public Output<String> imageId() {
-        return this.imageId == null ? Codegen.empty() : this.imageId;
+    public Optional<Output<String>> imageId() {
+        return Optional.ofNullable(this.imageId);
     }
 
     /**
@@ -200,10 +200,10 @@ public final class LaunchTemplateArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="instanceInitiatedShutdownBehavior")
-      private final @Nullable Output<String> instanceInitiatedShutdownBehavior;
+    private @Nullable Output<String> instanceInitiatedShutdownBehavior;
 
-    public Output<String> instanceInitiatedShutdownBehavior() {
-        return this.instanceInitiatedShutdownBehavior == null ? Codegen.empty() : this.instanceInitiatedShutdownBehavior;
+    public Optional<Output<String>> instanceInitiatedShutdownBehavior() {
+        return Optional.ofNullable(this.instanceInitiatedShutdownBehavior);
     }
 
     /**
@@ -212,10 +212,10 @@ public final class LaunchTemplateArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="instanceMarketOptions")
-      private final @Nullable Output<LaunchTemplateInstanceMarketOptionsArgs> instanceMarketOptions;
+    private @Nullable Output<LaunchTemplateInstanceMarketOptionsArgs> instanceMarketOptions;
 
-    public Output<LaunchTemplateInstanceMarketOptionsArgs> instanceMarketOptions() {
-        return this.instanceMarketOptions == null ? Codegen.empty() : this.instanceMarketOptions;
+    public Optional<Output<LaunchTemplateInstanceMarketOptionsArgs>> instanceMarketOptions() {
+        return Optional.ofNullable(this.instanceMarketOptions);
     }
 
     /**
@@ -223,10 +223,10 @@ public final class LaunchTemplateArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="instanceType")
-      private final @Nullable Output<String> instanceType;
+    private @Nullable Output<String> instanceType;
 
-    public Output<String> instanceType() {
-        return this.instanceType == null ? Codegen.empty() : this.instanceType;
+    public Optional<Output<String>> instanceType() {
+        return Optional.ofNullable(this.instanceType);
     }
 
     /**
@@ -234,10 +234,10 @@ public final class LaunchTemplateArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="kernelId")
-      private final @Nullable Output<String> kernelId;
+    private @Nullable Output<String> kernelId;
 
-    public Output<String> kernelId() {
-        return this.kernelId == null ? Codegen.empty() : this.kernelId;
+    public Optional<Output<String>> kernelId() {
+        return Optional.ofNullable(this.kernelId);
     }
 
     /**
@@ -245,10 +245,10 @@ public final class LaunchTemplateArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="keyName")
-      private final @Nullable Output<String> keyName;
+    private @Nullable Output<String> keyName;
 
-    public Output<String> keyName() {
-        return this.keyName == null ? Codegen.empty() : this.keyName;
+    public Optional<Output<String>> keyName() {
+        return Optional.ofNullable(this.keyName);
     }
 
     /**
@@ -256,10 +256,10 @@ public final class LaunchTemplateArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="licenseSpecifications")
-      private final @Nullable Output<List<LaunchTemplateLicenseSpecificationArgs>> licenseSpecifications;
+    private @Nullable Output<List<LaunchTemplateLicenseSpecificationArgs>> licenseSpecifications;
 
-    public Output<List<LaunchTemplateLicenseSpecificationArgs>> licenseSpecifications() {
-        return this.licenseSpecifications == null ? Codegen.empty() : this.licenseSpecifications;
+    public Optional<Output<List<LaunchTemplateLicenseSpecificationArgs>>> licenseSpecifications() {
+        return Optional.ofNullable(this.licenseSpecifications);
     }
 
     /**
@@ -267,10 +267,10 @@ public final class LaunchTemplateArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="metadataOptions")
-      private final @Nullable Output<LaunchTemplateMetadataOptionsArgs> metadataOptions;
+    private @Nullable Output<LaunchTemplateMetadataOptionsArgs> metadataOptions;
 
-    public Output<LaunchTemplateMetadataOptionsArgs> metadataOptions() {
-        return this.metadataOptions == null ? Codegen.empty() : this.metadataOptions;
+    public Optional<Output<LaunchTemplateMetadataOptionsArgs>> metadataOptions() {
+        return Optional.ofNullable(this.metadataOptions);
     }
 
     /**
@@ -278,10 +278,10 @@ public final class LaunchTemplateArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="monitoring")
-      private final @Nullable Output<LaunchTemplateMonitoringArgs> monitoring;
+    private @Nullable Output<LaunchTemplateMonitoringArgs> monitoring;
 
-    public Output<LaunchTemplateMonitoringArgs> monitoring() {
-        return this.monitoring == null ? Codegen.empty() : this.monitoring;
+    public Optional<Output<LaunchTemplateMonitoringArgs>> monitoring() {
+        return Optional.ofNullable(this.monitoring);
     }
 
     /**
@@ -289,10 +289,10 @@ public final class LaunchTemplateArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -300,10 +300,10 @@ public final class LaunchTemplateArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="namePrefix")
-      private final @Nullable Output<String> namePrefix;
+    private @Nullable Output<String> namePrefix;
 
-    public Output<String> namePrefix() {
-        return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
+    public Optional<Output<String>> namePrefix() {
+        return Optional.ofNullable(this.namePrefix);
     }
 
     /**
@@ -312,10 +312,10 @@ public final class LaunchTemplateArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="networkInterfaces")
-      private final @Nullable Output<List<LaunchTemplateNetworkInterfaceArgs>> networkInterfaces;
+    private @Nullable Output<List<LaunchTemplateNetworkInterfaceArgs>> networkInterfaces;
 
-    public Output<List<LaunchTemplateNetworkInterfaceArgs>> networkInterfaces() {
-        return this.networkInterfaces == null ? Codegen.empty() : this.networkInterfaces;
+    public Optional<Output<List<LaunchTemplateNetworkInterfaceArgs>>> networkInterfaces() {
+        return Optional.ofNullable(this.networkInterfaces);
     }
 
     /**
@@ -323,10 +323,10 @@ public final class LaunchTemplateArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="placement")
-      private final @Nullable Output<LaunchTemplatePlacementArgs> placement;
+    private @Nullable Output<LaunchTemplatePlacementArgs> placement;
 
-    public Output<LaunchTemplatePlacementArgs> placement() {
-        return this.placement == null ? Codegen.empty() : this.placement;
+    public Optional<Output<LaunchTemplatePlacementArgs>> placement() {
+        return Optional.ofNullable(this.placement);
     }
 
     /**
@@ -334,10 +334,10 @@ public final class LaunchTemplateArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="ramDiskId")
-      private final @Nullable Output<String> ramDiskId;
+    private @Nullable Output<String> ramDiskId;
 
-    public Output<String> ramDiskId() {
-        return this.ramDiskId == null ? Codegen.empty() : this.ramDiskId;
+    public Optional<Output<String>> ramDiskId() {
+        return Optional.ofNullable(this.ramDiskId);
     }
 
     /**
@@ -346,10 +346,10 @@ public final class LaunchTemplateArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="securityGroupNames")
-      private final @Nullable Output<List<String>> securityGroupNames;
+    private @Nullable Output<List<String>> securityGroupNames;
 
-    public Output<List<String>> securityGroupNames() {
-        return this.securityGroupNames == null ? Codegen.empty() : this.securityGroupNames;
+    public Optional<Output<List<String>>> securityGroupNames() {
+        return Optional.ofNullable(this.securityGroupNames);
     }
 
     /**
@@ -357,10 +357,10 @@ public final class LaunchTemplateArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="tagSpecifications")
-      private final @Nullable Output<List<LaunchTemplateTagSpecificationArgs>> tagSpecifications;
+    private @Nullable Output<List<LaunchTemplateTagSpecificationArgs>> tagSpecifications;
 
-    public Output<List<LaunchTemplateTagSpecificationArgs>> tagSpecifications() {
-        return this.tagSpecifications == null ? Codegen.empty() : this.tagSpecifications;
+    public Optional<Output<List<LaunchTemplateTagSpecificationArgs>>> tagSpecifications() {
+        return Optional.ofNullable(this.tagSpecifications);
     }
 
     /**
@@ -368,10 +368,10 @@ public final class LaunchTemplateArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -379,10 +379,10 @@ public final class LaunchTemplateArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="updateDefaultVersion")
-      private final @Nullable Output<Boolean> updateDefaultVersion;
+    private @Nullable Output<Boolean> updateDefaultVersion;
 
-    public Output<Boolean> updateDefaultVersion() {
-        return this.updateDefaultVersion == null ? Codegen.empty() : this.updateDefaultVersion;
+    public Optional<Output<Boolean>> updateDefaultVersion() {
+        return Optional.ofNullable(this.updateDefaultVersion);
     }
 
     /**
@@ -390,10 +390,10 @@ public final class LaunchTemplateArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="userData")
-      private final @Nullable Output<String> userData;
+    private @Nullable Output<String> userData;
 
-    public Output<String> userData() {
-        return this.userData == null ? Codegen.empty() : this.userData;
+    public Optional<Output<String>> userData() {
+        return Optional.ofNullable(this.userData);
     }
 
     /**
@@ -401,487 +401,396 @@ public final class LaunchTemplateArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="vpcSecurityGroupIds")
-      private final @Nullable Output<List<String>> vpcSecurityGroupIds;
+    private @Nullable Output<List<String>> vpcSecurityGroupIds;
 
-    public Output<List<String>> vpcSecurityGroupIds() {
-        return this.vpcSecurityGroupIds == null ? Codegen.empty() : this.vpcSecurityGroupIds;
+    public Optional<Output<List<String>>> vpcSecurityGroupIds() {
+        return Optional.ofNullable(this.vpcSecurityGroupIds);
     }
 
-    public LaunchTemplateArgs(
-        @Nullable Output<List<LaunchTemplateBlockDeviceMappingArgs>> blockDeviceMappings,
-        @Nullable Output<LaunchTemplateCapacityReservationSpecificationArgs> capacityReservationSpecification,
-        @Nullable Output<LaunchTemplateCpuOptionsArgs> cpuOptions,
-        @Nullable Output<LaunchTemplateCreditSpecificationArgs> creditSpecification,
-        @Nullable Output<Integer> defaultVersion,
-        @Nullable Output<String> description,
-        @Nullable Output<Boolean> disableApiTermination,
-        @Nullable Output<String> ebsOptimized,
-        @Nullable Output<List<LaunchTemplateElasticGpuSpecificationArgs>> elasticGpuSpecifications,
-        @Nullable Output<LaunchTemplateElasticInferenceAcceleratorArgs> elasticInferenceAccelerator,
-        @Nullable Output<LaunchTemplateEnclaveOptionsArgs> enclaveOptions,
-        @Nullable Output<LaunchTemplateHibernationOptionsArgs> hibernationOptions,
-        @Nullable Output<LaunchTemplateIamInstanceProfileArgs> iamInstanceProfile,
-        @Nullable Output<String> imageId,
-        @Nullable Output<String> instanceInitiatedShutdownBehavior,
-        @Nullable Output<LaunchTemplateInstanceMarketOptionsArgs> instanceMarketOptions,
-        @Nullable Output<String> instanceType,
-        @Nullable Output<String> kernelId,
-        @Nullable Output<String> keyName,
-        @Nullable Output<List<LaunchTemplateLicenseSpecificationArgs>> licenseSpecifications,
-        @Nullable Output<LaunchTemplateMetadataOptionsArgs> metadataOptions,
-        @Nullable Output<LaunchTemplateMonitoringArgs> monitoring,
-        @Nullable Output<String> name,
-        @Nullable Output<String> namePrefix,
-        @Nullable Output<List<LaunchTemplateNetworkInterfaceArgs>> networkInterfaces,
-        @Nullable Output<LaunchTemplatePlacementArgs> placement,
-        @Nullable Output<String> ramDiskId,
-        @Nullable Output<List<String>> securityGroupNames,
-        @Nullable Output<List<LaunchTemplateTagSpecificationArgs>> tagSpecifications,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Boolean> updateDefaultVersion,
-        @Nullable Output<String> userData,
-        @Nullable Output<List<String>> vpcSecurityGroupIds) {
-        this.blockDeviceMappings = blockDeviceMappings;
-        this.capacityReservationSpecification = capacityReservationSpecification;
-        this.cpuOptions = cpuOptions;
-        this.creditSpecification = creditSpecification;
-        this.defaultVersion = defaultVersion;
-        this.description = description;
-        this.disableApiTermination = disableApiTermination;
-        this.ebsOptimized = ebsOptimized;
-        this.elasticGpuSpecifications = elasticGpuSpecifications;
-        this.elasticInferenceAccelerator = elasticInferenceAccelerator;
-        this.enclaveOptions = enclaveOptions;
-        this.hibernationOptions = hibernationOptions;
-        this.iamInstanceProfile = iamInstanceProfile;
-        this.imageId = imageId;
-        this.instanceInitiatedShutdownBehavior = instanceInitiatedShutdownBehavior;
-        this.instanceMarketOptions = instanceMarketOptions;
-        this.instanceType = instanceType;
-        this.kernelId = kernelId;
-        this.keyName = keyName;
-        this.licenseSpecifications = licenseSpecifications;
-        this.metadataOptions = metadataOptions;
-        this.monitoring = monitoring;
-        this.name = name;
-        this.namePrefix = namePrefix;
-        this.networkInterfaces = networkInterfaces;
-        this.placement = placement;
-        this.ramDiskId = ramDiskId;
-        this.securityGroupNames = securityGroupNames;
-        this.tagSpecifications = tagSpecifications;
-        this.tags = tags;
-        this.updateDefaultVersion = updateDefaultVersion;
-        this.userData = userData;
-        this.vpcSecurityGroupIds = vpcSecurityGroupIds;
-    }
+    private LaunchTemplateArgs() {}
 
-    private LaunchTemplateArgs() {
-        this.blockDeviceMappings = Codegen.empty();
-        this.capacityReservationSpecification = Codegen.empty();
-        this.cpuOptions = Codegen.empty();
-        this.creditSpecification = Codegen.empty();
-        this.defaultVersion = Codegen.empty();
-        this.description = Codegen.empty();
-        this.disableApiTermination = Codegen.empty();
-        this.ebsOptimized = Codegen.empty();
-        this.elasticGpuSpecifications = Codegen.empty();
-        this.elasticInferenceAccelerator = Codegen.empty();
-        this.enclaveOptions = Codegen.empty();
-        this.hibernationOptions = Codegen.empty();
-        this.iamInstanceProfile = Codegen.empty();
-        this.imageId = Codegen.empty();
-        this.instanceInitiatedShutdownBehavior = Codegen.empty();
-        this.instanceMarketOptions = Codegen.empty();
-        this.instanceType = Codegen.empty();
-        this.kernelId = Codegen.empty();
-        this.keyName = Codegen.empty();
-        this.licenseSpecifications = Codegen.empty();
-        this.metadataOptions = Codegen.empty();
-        this.monitoring = Codegen.empty();
-        this.name = Codegen.empty();
-        this.namePrefix = Codegen.empty();
-        this.networkInterfaces = Codegen.empty();
-        this.placement = Codegen.empty();
-        this.ramDiskId = Codegen.empty();
-        this.securityGroupNames = Codegen.empty();
-        this.tagSpecifications = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.updateDefaultVersion = Codegen.empty();
-        this.userData = Codegen.empty();
-        this.vpcSecurityGroupIds = Codegen.empty();
+    private LaunchTemplateArgs(LaunchTemplateArgs $) {
+        this.blockDeviceMappings = $.blockDeviceMappings;
+        this.capacityReservationSpecification = $.capacityReservationSpecification;
+        this.cpuOptions = $.cpuOptions;
+        this.creditSpecification = $.creditSpecification;
+        this.defaultVersion = $.defaultVersion;
+        this.description = $.description;
+        this.disableApiTermination = $.disableApiTermination;
+        this.ebsOptimized = $.ebsOptimized;
+        this.elasticGpuSpecifications = $.elasticGpuSpecifications;
+        this.elasticInferenceAccelerator = $.elasticInferenceAccelerator;
+        this.enclaveOptions = $.enclaveOptions;
+        this.hibernationOptions = $.hibernationOptions;
+        this.iamInstanceProfile = $.iamInstanceProfile;
+        this.imageId = $.imageId;
+        this.instanceInitiatedShutdownBehavior = $.instanceInitiatedShutdownBehavior;
+        this.instanceMarketOptions = $.instanceMarketOptions;
+        this.instanceType = $.instanceType;
+        this.kernelId = $.kernelId;
+        this.keyName = $.keyName;
+        this.licenseSpecifications = $.licenseSpecifications;
+        this.metadataOptions = $.metadataOptions;
+        this.monitoring = $.monitoring;
+        this.name = $.name;
+        this.namePrefix = $.namePrefix;
+        this.networkInterfaces = $.networkInterfaces;
+        this.placement = $.placement;
+        this.ramDiskId = $.ramDiskId;
+        this.securityGroupNames = $.securityGroupNames;
+        this.tagSpecifications = $.tagSpecifications;
+        this.tags = $.tags;
+        this.updateDefaultVersion = $.updateDefaultVersion;
+        this.userData = $.userData;
+        this.vpcSecurityGroupIds = $.vpcSecurityGroupIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LaunchTemplateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<LaunchTemplateBlockDeviceMappingArgs>> blockDeviceMappings;
-        private @Nullable Output<LaunchTemplateCapacityReservationSpecificationArgs> capacityReservationSpecification;
-        private @Nullable Output<LaunchTemplateCpuOptionsArgs> cpuOptions;
-        private @Nullable Output<LaunchTemplateCreditSpecificationArgs> creditSpecification;
-        private @Nullable Output<Integer> defaultVersion;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Boolean> disableApiTermination;
-        private @Nullable Output<String> ebsOptimized;
-        private @Nullable Output<List<LaunchTemplateElasticGpuSpecificationArgs>> elasticGpuSpecifications;
-        private @Nullable Output<LaunchTemplateElasticInferenceAcceleratorArgs> elasticInferenceAccelerator;
-        private @Nullable Output<LaunchTemplateEnclaveOptionsArgs> enclaveOptions;
-        private @Nullable Output<LaunchTemplateHibernationOptionsArgs> hibernationOptions;
-        private @Nullable Output<LaunchTemplateIamInstanceProfileArgs> iamInstanceProfile;
-        private @Nullable Output<String> imageId;
-        private @Nullable Output<String> instanceInitiatedShutdownBehavior;
-        private @Nullable Output<LaunchTemplateInstanceMarketOptionsArgs> instanceMarketOptions;
-        private @Nullable Output<String> instanceType;
-        private @Nullable Output<String> kernelId;
-        private @Nullable Output<String> keyName;
-        private @Nullable Output<List<LaunchTemplateLicenseSpecificationArgs>> licenseSpecifications;
-        private @Nullable Output<LaunchTemplateMetadataOptionsArgs> metadataOptions;
-        private @Nullable Output<LaunchTemplateMonitoringArgs> monitoring;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> namePrefix;
-        private @Nullable Output<List<LaunchTemplateNetworkInterfaceArgs>> networkInterfaces;
-        private @Nullable Output<LaunchTemplatePlacementArgs> placement;
-        private @Nullable Output<String> ramDiskId;
-        private @Nullable Output<List<String>> securityGroupNames;
-        private @Nullable Output<List<LaunchTemplateTagSpecificationArgs>> tagSpecifications;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Boolean> updateDefaultVersion;
-        private @Nullable Output<String> userData;
-        private @Nullable Output<List<String>> vpcSecurityGroupIds;
+        private LaunchTemplateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LaunchTemplateArgs();
         }
 
         public Builder(LaunchTemplateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.blockDeviceMappings = defaults.blockDeviceMappings;
-    	      this.capacityReservationSpecification = defaults.capacityReservationSpecification;
-    	      this.cpuOptions = defaults.cpuOptions;
-    	      this.creditSpecification = defaults.creditSpecification;
-    	      this.defaultVersion = defaults.defaultVersion;
-    	      this.description = defaults.description;
-    	      this.disableApiTermination = defaults.disableApiTermination;
-    	      this.ebsOptimized = defaults.ebsOptimized;
-    	      this.elasticGpuSpecifications = defaults.elasticGpuSpecifications;
-    	      this.elasticInferenceAccelerator = defaults.elasticInferenceAccelerator;
-    	      this.enclaveOptions = defaults.enclaveOptions;
-    	      this.hibernationOptions = defaults.hibernationOptions;
-    	      this.iamInstanceProfile = defaults.iamInstanceProfile;
-    	      this.imageId = defaults.imageId;
-    	      this.instanceInitiatedShutdownBehavior = defaults.instanceInitiatedShutdownBehavior;
-    	      this.instanceMarketOptions = defaults.instanceMarketOptions;
-    	      this.instanceType = defaults.instanceType;
-    	      this.kernelId = defaults.kernelId;
-    	      this.keyName = defaults.keyName;
-    	      this.licenseSpecifications = defaults.licenseSpecifications;
-    	      this.metadataOptions = defaults.metadataOptions;
-    	      this.monitoring = defaults.monitoring;
-    	      this.name = defaults.name;
-    	      this.namePrefix = defaults.namePrefix;
-    	      this.networkInterfaces = defaults.networkInterfaces;
-    	      this.placement = defaults.placement;
-    	      this.ramDiskId = defaults.ramDiskId;
-    	      this.securityGroupNames = defaults.securityGroupNames;
-    	      this.tagSpecifications = defaults.tagSpecifications;
-    	      this.tags = defaults.tags;
-    	      this.updateDefaultVersion = defaults.updateDefaultVersion;
-    	      this.userData = defaults.userData;
-    	      this.vpcSecurityGroupIds = defaults.vpcSecurityGroupIds;
+            $ = new LaunchTemplateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder blockDeviceMappings(@Nullable Output<List<LaunchTemplateBlockDeviceMappingArgs>> blockDeviceMappings) {
-            this.blockDeviceMappings = blockDeviceMappings;
+            $.blockDeviceMappings = blockDeviceMappings;
             return this;
         }
-        public Builder blockDeviceMappings(@Nullable List<LaunchTemplateBlockDeviceMappingArgs> blockDeviceMappings) {
-            this.blockDeviceMappings = Codegen.ofNullable(blockDeviceMappings);
-            return this;
+
+        public Builder blockDeviceMappings(List<LaunchTemplateBlockDeviceMappingArgs> blockDeviceMappings) {
+            return blockDeviceMappings(Output.of(blockDeviceMappings));
         }
+
         public Builder blockDeviceMappings(LaunchTemplateBlockDeviceMappingArgs... blockDeviceMappings) {
             return blockDeviceMappings(List.of(blockDeviceMappings));
         }
+
         public Builder capacityReservationSpecification(@Nullable Output<LaunchTemplateCapacityReservationSpecificationArgs> capacityReservationSpecification) {
-            this.capacityReservationSpecification = capacityReservationSpecification;
+            $.capacityReservationSpecification = capacityReservationSpecification;
             return this;
         }
-        public Builder capacityReservationSpecification(@Nullable LaunchTemplateCapacityReservationSpecificationArgs capacityReservationSpecification) {
-            this.capacityReservationSpecification = Codegen.ofNullable(capacityReservationSpecification);
-            return this;
+
+        public Builder capacityReservationSpecification(LaunchTemplateCapacityReservationSpecificationArgs capacityReservationSpecification) {
+            return capacityReservationSpecification(Output.of(capacityReservationSpecification));
         }
+
         public Builder cpuOptions(@Nullable Output<LaunchTemplateCpuOptionsArgs> cpuOptions) {
-            this.cpuOptions = cpuOptions;
+            $.cpuOptions = cpuOptions;
             return this;
         }
-        public Builder cpuOptions(@Nullable LaunchTemplateCpuOptionsArgs cpuOptions) {
-            this.cpuOptions = Codegen.ofNullable(cpuOptions);
-            return this;
+
+        public Builder cpuOptions(LaunchTemplateCpuOptionsArgs cpuOptions) {
+            return cpuOptions(Output.of(cpuOptions));
         }
+
         public Builder creditSpecification(@Nullable Output<LaunchTemplateCreditSpecificationArgs> creditSpecification) {
-            this.creditSpecification = creditSpecification;
+            $.creditSpecification = creditSpecification;
             return this;
         }
-        public Builder creditSpecification(@Nullable LaunchTemplateCreditSpecificationArgs creditSpecification) {
-            this.creditSpecification = Codegen.ofNullable(creditSpecification);
-            return this;
+
+        public Builder creditSpecification(LaunchTemplateCreditSpecificationArgs creditSpecification) {
+            return creditSpecification(Output.of(creditSpecification));
         }
+
         public Builder defaultVersion(@Nullable Output<Integer> defaultVersion) {
-            this.defaultVersion = defaultVersion;
+            $.defaultVersion = defaultVersion;
             return this;
         }
-        public Builder defaultVersion(@Nullable Integer defaultVersion) {
-            this.defaultVersion = Codegen.ofNullable(defaultVersion);
-            return this;
+
+        public Builder defaultVersion(Integer defaultVersion) {
+            return defaultVersion(Output.of(defaultVersion));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder disableApiTermination(@Nullable Output<Boolean> disableApiTermination) {
-            this.disableApiTermination = disableApiTermination;
+            $.disableApiTermination = disableApiTermination;
             return this;
         }
-        public Builder disableApiTermination(@Nullable Boolean disableApiTermination) {
-            this.disableApiTermination = Codegen.ofNullable(disableApiTermination);
-            return this;
+
+        public Builder disableApiTermination(Boolean disableApiTermination) {
+            return disableApiTermination(Output.of(disableApiTermination));
         }
+
         public Builder ebsOptimized(@Nullable Output<String> ebsOptimized) {
-            this.ebsOptimized = ebsOptimized;
+            $.ebsOptimized = ebsOptimized;
             return this;
         }
-        public Builder ebsOptimized(@Nullable String ebsOptimized) {
-            this.ebsOptimized = Codegen.ofNullable(ebsOptimized);
-            return this;
+
+        public Builder ebsOptimized(String ebsOptimized) {
+            return ebsOptimized(Output.of(ebsOptimized));
         }
+
         public Builder elasticGpuSpecifications(@Nullable Output<List<LaunchTemplateElasticGpuSpecificationArgs>> elasticGpuSpecifications) {
-            this.elasticGpuSpecifications = elasticGpuSpecifications;
+            $.elasticGpuSpecifications = elasticGpuSpecifications;
             return this;
         }
-        public Builder elasticGpuSpecifications(@Nullable List<LaunchTemplateElasticGpuSpecificationArgs> elasticGpuSpecifications) {
-            this.elasticGpuSpecifications = Codegen.ofNullable(elasticGpuSpecifications);
-            return this;
+
+        public Builder elasticGpuSpecifications(List<LaunchTemplateElasticGpuSpecificationArgs> elasticGpuSpecifications) {
+            return elasticGpuSpecifications(Output.of(elasticGpuSpecifications));
         }
+
         public Builder elasticGpuSpecifications(LaunchTemplateElasticGpuSpecificationArgs... elasticGpuSpecifications) {
             return elasticGpuSpecifications(List.of(elasticGpuSpecifications));
         }
+
         public Builder elasticInferenceAccelerator(@Nullable Output<LaunchTemplateElasticInferenceAcceleratorArgs> elasticInferenceAccelerator) {
-            this.elasticInferenceAccelerator = elasticInferenceAccelerator;
+            $.elasticInferenceAccelerator = elasticInferenceAccelerator;
             return this;
         }
-        public Builder elasticInferenceAccelerator(@Nullable LaunchTemplateElasticInferenceAcceleratorArgs elasticInferenceAccelerator) {
-            this.elasticInferenceAccelerator = Codegen.ofNullable(elasticInferenceAccelerator);
-            return this;
+
+        public Builder elasticInferenceAccelerator(LaunchTemplateElasticInferenceAcceleratorArgs elasticInferenceAccelerator) {
+            return elasticInferenceAccelerator(Output.of(elasticInferenceAccelerator));
         }
+
         public Builder enclaveOptions(@Nullable Output<LaunchTemplateEnclaveOptionsArgs> enclaveOptions) {
-            this.enclaveOptions = enclaveOptions;
+            $.enclaveOptions = enclaveOptions;
             return this;
         }
-        public Builder enclaveOptions(@Nullable LaunchTemplateEnclaveOptionsArgs enclaveOptions) {
-            this.enclaveOptions = Codegen.ofNullable(enclaveOptions);
-            return this;
+
+        public Builder enclaveOptions(LaunchTemplateEnclaveOptionsArgs enclaveOptions) {
+            return enclaveOptions(Output.of(enclaveOptions));
         }
+
         public Builder hibernationOptions(@Nullable Output<LaunchTemplateHibernationOptionsArgs> hibernationOptions) {
-            this.hibernationOptions = hibernationOptions;
+            $.hibernationOptions = hibernationOptions;
             return this;
         }
-        public Builder hibernationOptions(@Nullable LaunchTemplateHibernationOptionsArgs hibernationOptions) {
-            this.hibernationOptions = Codegen.ofNullable(hibernationOptions);
-            return this;
+
+        public Builder hibernationOptions(LaunchTemplateHibernationOptionsArgs hibernationOptions) {
+            return hibernationOptions(Output.of(hibernationOptions));
         }
+
         public Builder iamInstanceProfile(@Nullable Output<LaunchTemplateIamInstanceProfileArgs> iamInstanceProfile) {
-            this.iamInstanceProfile = iamInstanceProfile;
+            $.iamInstanceProfile = iamInstanceProfile;
             return this;
         }
-        public Builder iamInstanceProfile(@Nullable LaunchTemplateIamInstanceProfileArgs iamInstanceProfile) {
-            this.iamInstanceProfile = Codegen.ofNullable(iamInstanceProfile);
-            return this;
+
+        public Builder iamInstanceProfile(LaunchTemplateIamInstanceProfileArgs iamInstanceProfile) {
+            return iamInstanceProfile(Output.of(iamInstanceProfile));
         }
+
         public Builder imageId(@Nullable Output<String> imageId) {
-            this.imageId = imageId;
+            $.imageId = imageId;
             return this;
         }
-        public Builder imageId(@Nullable String imageId) {
-            this.imageId = Codegen.ofNullable(imageId);
-            return this;
+
+        public Builder imageId(String imageId) {
+            return imageId(Output.of(imageId));
         }
+
         public Builder instanceInitiatedShutdownBehavior(@Nullable Output<String> instanceInitiatedShutdownBehavior) {
-            this.instanceInitiatedShutdownBehavior = instanceInitiatedShutdownBehavior;
+            $.instanceInitiatedShutdownBehavior = instanceInitiatedShutdownBehavior;
             return this;
         }
-        public Builder instanceInitiatedShutdownBehavior(@Nullable String instanceInitiatedShutdownBehavior) {
-            this.instanceInitiatedShutdownBehavior = Codegen.ofNullable(instanceInitiatedShutdownBehavior);
-            return this;
+
+        public Builder instanceInitiatedShutdownBehavior(String instanceInitiatedShutdownBehavior) {
+            return instanceInitiatedShutdownBehavior(Output.of(instanceInitiatedShutdownBehavior));
         }
+
         public Builder instanceMarketOptions(@Nullable Output<LaunchTemplateInstanceMarketOptionsArgs> instanceMarketOptions) {
-            this.instanceMarketOptions = instanceMarketOptions;
+            $.instanceMarketOptions = instanceMarketOptions;
             return this;
         }
-        public Builder instanceMarketOptions(@Nullable LaunchTemplateInstanceMarketOptionsArgs instanceMarketOptions) {
-            this.instanceMarketOptions = Codegen.ofNullable(instanceMarketOptions);
-            return this;
+
+        public Builder instanceMarketOptions(LaunchTemplateInstanceMarketOptionsArgs instanceMarketOptions) {
+            return instanceMarketOptions(Output.of(instanceMarketOptions));
         }
+
         public Builder instanceType(@Nullable Output<String> instanceType) {
-            this.instanceType = instanceType;
+            $.instanceType = instanceType;
             return this;
         }
-        public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Codegen.ofNullable(instanceType);
-            return this;
+
+        public Builder instanceType(String instanceType) {
+            return instanceType(Output.of(instanceType));
         }
+
         public Builder kernelId(@Nullable Output<String> kernelId) {
-            this.kernelId = kernelId;
+            $.kernelId = kernelId;
             return this;
         }
-        public Builder kernelId(@Nullable String kernelId) {
-            this.kernelId = Codegen.ofNullable(kernelId);
-            return this;
+
+        public Builder kernelId(String kernelId) {
+            return kernelId(Output.of(kernelId));
         }
+
         public Builder keyName(@Nullable Output<String> keyName) {
-            this.keyName = keyName;
+            $.keyName = keyName;
             return this;
         }
-        public Builder keyName(@Nullable String keyName) {
-            this.keyName = Codegen.ofNullable(keyName);
-            return this;
+
+        public Builder keyName(String keyName) {
+            return keyName(Output.of(keyName));
         }
+
         public Builder licenseSpecifications(@Nullable Output<List<LaunchTemplateLicenseSpecificationArgs>> licenseSpecifications) {
-            this.licenseSpecifications = licenseSpecifications;
+            $.licenseSpecifications = licenseSpecifications;
             return this;
         }
-        public Builder licenseSpecifications(@Nullable List<LaunchTemplateLicenseSpecificationArgs> licenseSpecifications) {
-            this.licenseSpecifications = Codegen.ofNullable(licenseSpecifications);
-            return this;
+
+        public Builder licenseSpecifications(List<LaunchTemplateLicenseSpecificationArgs> licenseSpecifications) {
+            return licenseSpecifications(Output.of(licenseSpecifications));
         }
+
         public Builder licenseSpecifications(LaunchTemplateLicenseSpecificationArgs... licenseSpecifications) {
             return licenseSpecifications(List.of(licenseSpecifications));
         }
+
         public Builder metadataOptions(@Nullable Output<LaunchTemplateMetadataOptionsArgs> metadataOptions) {
-            this.metadataOptions = metadataOptions;
+            $.metadataOptions = metadataOptions;
             return this;
         }
-        public Builder metadataOptions(@Nullable LaunchTemplateMetadataOptionsArgs metadataOptions) {
-            this.metadataOptions = Codegen.ofNullable(metadataOptions);
-            return this;
+
+        public Builder metadataOptions(LaunchTemplateMetadataOptionsArgs metadataOptions) {
+            return metadataOptions(Output.of(metadataOptions));
         }
+
         public Builder monitoring(@Nullable Output<LaunchTemplateMonitoringArgs> monitoring) {
-            this.monitoring = monitoring;
+            $.monitoring = monitoring;
             return this;
         }
-        public Builder monitoring(@Nullable LaunchTemplateMonitoringArgs monitoring) {
-            this.monitoring = Codegen.ofNullable(monitoring);
-            return this;
+
+        public Builder monitoring(LaunchTemplateMonitoringArgs monitoring) {
+            return monitoring(Output.of(monitoring));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
-            this.namePrefix = namePrefix;
+            $.namePrefix = namePrefix;
             return this;
         }
-        public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Codegen.ofNullable(namePrefix);
-            return this;
+
+        public Builder namePrefix(String namePrefix) {
+            return namePrefix(Output.of(namePrefix));
         }
+
         public Builder networkInterfaces(@Nullable Output<List<LaunchTemplateNetworkInterfaceArgs>> networkInterfaces) {
-            this.networkInterfaces = networkInterfaces;
+            $.networkInterfaces = networkInterfaces;
             return this;
         }
-        public Builder networkInterfaces(@Nullable List<LaunchTemplateNetworkInterfaceArgs> networkInterfaces) {
-            this.networkInterfaces = Codegen.ofNullable(networkInterfaces);
-            return this;
+
+        public Builder networkInterfaces(List<LaunchTemplateNetworkInterfaceArgs> networkInterfaces) {
+            return networkInterfaces(Output.of(networkInterfaces));
         }
+
         public Builder networkInterfaces(LaunchTemplateNetworkInterfaceArgs... networkInterfaces) {
             return networkInterfaces(List.of(networkInterfaces));
         }
+
         public Builder placement(@Nullable Output<LaunchTemplatePlacementArgs> placement) {
-            this.placement = placement;
+            $.placement = placement;
             return this;
         }
-        public Builder placement(@Nullable LaunchTemplatePlacementArgs placement) {
-            this.placement = Codegen.ofNullable(placement);
-            return this;
+
+        public Builder placement(LaunchTemplatePlacementArgs placement) {
+            return placement(Output.of(placement));
         }
+
         public Builder ramDiskId(@Nullable Output<String> ramDiskId) {
-            this.ramDiskId = ramDiskId;
+            $.ramDiskId = ramDiskId;
             return this;
         }
-        public Builder ramDiskId(@Nullable String ramDiskId) {
-            this.ramDiskId = Codegen.ofNullable(ramDiskId);
-            return this;
+
+        public Builder ramDiskId(String ramDiskId) {
+            return ramDiskId(Output.of(ramDiskId));
         }
+
         public Builder securityGroupNames(@Nullable Output<List<String>> securityGroupNames) {
-            this.securityGroupNames = securityGroupNames;
+            $.securityGroupNames = securityGroupNames;
             return this;
         }
-        public Builder securityGroupNames(@Nullable List<String> securityGroupNames) {
-            this.securityGroupNames = Codegen.ofNullable(securityGroupNames);
-            return this;
+
+        public Builder securityGroupNames(List<String> securityGroupNames) {
+            return securityGroupNames(Output.of(securityGroupNames));
         }
+
         public Builder securityGroupNames(String... securityGroupNames) {
             return securityGroupNames(List.of(securityGroupNames));
         }
+
         public Builder tagSpecifications(@Nullable Output<List<LaunchTemplateTagSpecificationArgs>> tagSpecifications) {
-            this.tagSpecifications = tagSpecifications;
+            $.tagSpecifications = tagSpecifications;
             return this;
         }
-        public Builder tagSpecifications(@Nullable List<LaunchTemplateTagSpecificationArgs> tagSpecifications) {
-            this.tagSpecifications = Codegen.ofNullable(tagSpecifications);
-            return this;
+
+        public Builder tagSpecifications(List<LaunchTemplateTagSpecificationArgs> tagSpecifications) {
+            return tagSpecifications(Output.of(tagSpecifications));
         }
+
         public Builder tagSpecifications(LaunchTemplateTagSpecificationArgs... tagSpecifications) {
             return tagSpecifications(List.of(tagSpecifications));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder updateDefaultVersion(@Nullable Output<Boolean> updateDefaultVersion) {
-            this.updateDefaultVersion = updateDefaultVersion;
+            $.updateDefaultVersion = updateDefaultVersion;
             return this;
         }
-        public Builder updateDefaultVersion(@Nullable Boolean updateDefaultVersion) {
-            this.updateDefaultVersion = Codegen.ofNullable(updateDefaultVersion);
-            return this;
+
+        public Builder updateDefaultVersion(Boolean updateDefaultVersion) {
+            return updateDefaultVersion(Output.of(updateDefaultVersion));
         }
+
         public Builder userData(@Nullable Output<String> userData) {
-            this.userData = userData;
+            $.userData = userData;
             return this;
         }
-        public Builder userData(@Nullable String userData) {
-            this.userData = Codegen.ofNullable(userData);
-            return this;
+
+        public Builder userData(String userData) {
+            return userData(Output.of(userData));
         }
+
         public Builder vpcSecurityGroupIds(@Nullable Output<List<String>> vpcSecurityGroupIds) {
-            this.vpcSecurityGroupIds = vpcSecurityGroupIds;
+            $.vpcSecurityGroupIds = vpcSecurityGroupIds;
             return this;
         }
-        public Builder vpcSecurityGroupIds(@Nullable List<String> vpcSecurityGroupIds) {
-            this.vpcSecurityGroupIds = Codegen.ofNullable(vpcSecurityGroupIds);
-            return this;
+
+        public Builder vpcSecurityGroupIds(List<String> vpcSecurityGroupIds) {
+            return vpcSecurityGroupIds(Output.of(vpcSecurityGroupIds));
         }
+
         public Builder vpcSecurityGroupIds(String... vpcSecurityGroupIds) {
             return vpcSecurityGroupIds(List.of(vpcSecurityGroupIds));
-        }        public LaunchTemplateArgs build() {
-            return new LaunchTemplateArgs(blockDeviceMappings, capacityReservationSpecification, cpuOptions, creditSpecification, defaultVersion, description, disableApiTermination, ebsOptimized, elasticGpuSpecifications, elasticInferenceAccelerator, enclaveOptions, hibernationOptions, iamInstanceProfile, imageId, instanceInitiatedShutdownBehavior, instanceMarketOptions, instanceType, kernelId, keyName, licenseSpecifications, metadataOptions, monitoring, name, namePrefix, networkInterfaces, placement, ramDiskId, securityGroupNames, tagSpecifications, tags, updateDefaultVersion, userData, vpcSecurityGroupIds);
+        }
+
+        public LaunchTemplateArgs build() {
+            return $;
         }
     }
+
 }

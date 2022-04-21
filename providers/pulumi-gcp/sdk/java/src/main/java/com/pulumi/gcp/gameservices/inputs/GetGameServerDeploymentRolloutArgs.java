@@ -17,45 +17,45 @@ public final class GetGameServerDeploymentRolloutArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="deploymentId", required=true)
-      private final String deploymentId;
+    private String deploymentId;
 
     public String deploymentId() {
         return this.deploymentId;
     }
 
-    public GetGameServerDeploymentRolloutArgs(String deploymentId) {
-        this.deploymentId = Objects.requireNonNull(deploymentId, "expected parameter 'deploymentId' to be non-null");
-    }
+    private GetGameServerDeploymentRolloutArgs() {}
 
-    private GetGameServerDeploymentRolloutArgs() {
-        this.deploymentId = null;
+    private GetGameServerDeploymentRolloutArgs(GetGameServerDeploymentRolloutArgs $) {
+        this.deploymentId = $.deploymentId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetGameServerDeploymentRolloutArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String deploymentId;
+        private GetGameServerDeploymentRolloutArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetGameServerDeploymentRolloutArgs();
         }
 
         public Builder(GetGameServerDeploymentRolloutArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deploymentId = defaults.deploymentId;
+            $ = new GetGameServerDeploymentRolloutArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deploymentId(String deploymentId) {
-            this.deploymentId = Objects.requireNonNull(deploymentId);
+            $.deploymentId = deploymentId;
             return this;
-        }        public GetGameServerDeploymentRolloutArgs build() {
-            return new GetGameServerDeploymentRolloutArgs(deploymentId);
+        }
+
+        public GetGameServerDeploymentRolloutArgs build() {
+            $.deploymentId = Objects.requireNonNull($.deploymentId, "expected parameter 'deploymentId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -15,62 +15,58 @@ public final class GetUptimeCheckConfigArgs extends com.pulumi.resources.InvokeA
     public static final GetUptimeCheckConfigArgs Empty = new GetUptimeCheckConfigArgs();
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="uptimeCheckConfigId", required=true)
-      private final String uptimeCheckConfigId;
+    private String uptimeCheckConfigId;
 
     public String uptimeCheckConfigId() {
         return this.uptimeCheckConfigId;
     }
 
-    public GetUptimeCheckConfigArgs(
-        @Nullable String project,
-        String uptimeCheckConfigId) {
-        this.project = project;
-        this.uptimeCheckConfigId = Objects.requireNonNull(uptimeCheckConfigId, "expected parameter 'uptimeCheckConfigId' to be non-null");
-    }
+    private GetUptimeCheckConfigArgs() {}
 
-    private GetUptimeCheckConfigArgs() {
-        this.project = null;
-        this.uptimeCheckConfigId = null;
+    private GetUptimeCheckConfigArgs(GetUptimeCheckConfigArgs $) {
+        this.project = $.project;
+        this.uptimeCheckConfigId = $.uptimeCheckConfigId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetUptimeCheckConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String project;
-        private String uptimeCheckConfigId;
+        private GetUptimeCheckConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetUptimeCheckConfigArgs();
         }
 
         public Builder(GetUptimeCheckConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.project = defaults.project;
-    	      this.uptimeCheckConfigId = defaults.uptimeCheckConfigId;
+            $ = new GetUptimeCheckConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder uptimeCheckConfigId(String uptimeCheckConfigId) {
-            this.uptimeCheckConfigId = Objects.requireNonNull(uptimeCheckConfigId);
+            $.uptimeCheckConfigId = uptimeCheckConfigId;
             return this;
-        }        public GetUptimeCheckConfigArgs build() {
-            return new GetUptimeCheckConfigArgs(project, uptimeCheckConfigId);
+        }
+
+        public GetUptimeCheckConfigArgs build() {
+            $.uptimeCheckConfigId = Objects.requireNonNull($.uptimeCheckConfigId, "expected parameter 'uptimeCheckConfigId' to be non-null");
+            return $;
         }
     }
+
 }

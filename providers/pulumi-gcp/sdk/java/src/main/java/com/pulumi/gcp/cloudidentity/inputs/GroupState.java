@@ -5,11 +5,11 @@ package com.pulumi.gcp.cloudidentity.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.cloudidentity.inputs.GroupGroupKeyGetArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createTime")
-      private final @Nullable Output<String> createTime;
+    private @Nullable Output<String> createTime;
 
-    public Output<String> createTime() {
-        return this.createTime == null ? Codegen.empty() : this.createTime;
+    public Optional<Output<String>> createTime() {
+        return Optional.ofNullable(this.createTime);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="groupKey")
-      private final @Nullable Output<GroupGroupKeyGetArgs> groupKey;
+    private @Nullable Output<GroupGroupKeyGetArgs> groupKey;
 
-    public Output<GroupGroupKeyGetArgs> groupKey() {
-        return this.groupKey == null ? Codegen.empty() : this.groupKey;
+    public Optional<Output<GroupGroupKeyGetArgs>> groupKey() {
+        return Optional.ofNullable(this.groupKey);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="initialGroupConfig")
-      private final @Nullable Output<String> initialGroupConfig;
+    private @Nullable Output<String> initialGroupConfig;
 
-    public Output<String> initialGroupConfig() {
-        return this.initialGroupConfig == null ? Codegen.empty() : this.initialGroupConfig;
+    public Optional<Output<String>> initialGroupConfig() {
+        return Optional.ofNullable(this.initialGroupConfig);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -112,10 +112,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parent")
-      private final @Nullable Output<String> parent;
+    private @Nullable Output<String> parent;
 
-    public Output<String> parent() {
-        return this.parent == null ? Codegen.empty() : this.parent;
+    public Optional<Output<String>> parent() {
+        return Optional.ofNullable(this.parent);
     }
 
     /**
@@ -123,154 +123,128 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="updateTime")
-      private final @Nullable Output<String> updateTime;
+    private @Nullable Output<String> updateTime;
 
-    public Output<String> updateTime() {
-        return this.updateTime == null ? Codegen.empty() : this.updateTime;
+    public Optional<Output<String>> updateTime() {
+        return Optional.ofNullable(this.updateTime);
     }
 
-    public GroupState(
-        @Nullable Output<String> createTime,
-        @Nullable Output<String> description,
-        @Nullable Output<String> displayName,
-        @Nullable Output<GroupGroupKeyGetArgs> groupKey,
-        @Nullable Output<String> initialGroupConfig,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> name,
-        @Nullable Output<String> parent,
-        @Nullable Output<String> updateTime) {
-        this.createTime = createTime;
-        this.description = description;
-        this.displayName = displayName;
-        this.groupKey = groupKey;
-        this.initialGroupConfig = initialGroupConfig;
-        this.labels = labels;
-        this.name = name;
-        this.parent = parent;
-        this.updateTime = updateTime;
-    }
+    private GroupState() {}
 
-    private GroupState() {
-        this.createTime = Codegen.empty();
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.groupKey = Codegen.empty();
-        this.initialGroupConfig = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.name = Codegen.empty();
-        this.parent = Codegen.empty();
-        this.updateTime = Codegen.empty();
+    private GroupState(GroupState $) {
+        this.createTime = $.createTime;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.groupKey = $.groupKey;
+        this.initialGroupConfig = $.initialGroupConfig;
+        this.labels = $.labels;
+        this.name = $.name;
+        this.parent = $.parent;
+        this.updateTime = $.updateTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GroupState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> createTime;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<GroupGroupKeyGetArgs> groupKey;
-        private @Nullable Output<String> initialGroupConfig;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> parent;
-        private @Nullable Output<String> updateTime;
+        private GroupState $;
 
         public Builder() {
-    	      // Empty
+            $ = new GroupState();
         }
 
         public Builder(GroupState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createTime = defaults.createTime;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.groupKey = defaults.groupKey;
-    	      this.initialGroupConfig = defaults.initialGroupConfig;
-    	      this.labels = defaults.labels;
-    	      this.name = defaults.name;
-    	      this.parent = defaults.parent;
-    	      this.updateTime = defaults.updateTime;
+            $ = new GroupState(Objects.requireNonNull(defaults));
         }
 
         public Builder createTime(@Nullable Output<String> createTime) {
-            this.createTime = createTime;
+            $.createTime = createTime;
             return this;
         }
-        public Builder createTime(@Nullable String createTime) {
-            this.createTime = Codegen.ofNullable(createTime);
-            return this;
+
+        public Builder createTime(String createTime) {
+            return createTime(Output.of(createTime));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder groupKey(@Nullable Output<GroupGroupKeyGetArgs> groupKey) {
-            this.groupKey = groupKey;
+            $.groupKey = groupKey;
             return this;
         }
-        public Builder groupKey(@Nullable GroupGroupKeyGetArgs groupKey) {
-            this.groupKey = Codegen.ofNullable(groupKey);
-            return this;
+
+        public Builder groupKey(GroupGroupKeyGetArgs groupKey) {
+            return groupKey(Output.of(groupKey));
         }
+
         public Builder initialGroupConfig(@Nullable Output<String> initialGroupConfig) {
-            this.initialGroupConfig = initialGroupConfig;
+            $.initialGroupConfig = initialGroupConfig;
             return this;
         }
-        public Builder initialGroupConfig(@Nullable String initialGroupConfig) {
-            this.initialGroupConfig = Codegen.ofNullable(initialGroupConfig);
-            return this;
+
+        public Builder initialGroupConfig(String initialGroupConfig) {
+            return initialGroupConfig(Output.of(initialGroupConfig));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder parent(@Nullable Output<String> parent) {
-            this.parent = parent;
+            $.parent = parent;
             return this;
         }
-        public Builder parent(@Nullable String parent) {
-            this.parent = Codegen.ofNullable(parent);
-            return this;
+
+        public Builder parent(String parent) {
+            return parent(Output.of(parent));
         }
+
         public Builder updateTime(@Nullable Output<String> updateTime) {
-            this.updateTime = updateTime;
+            $.updateTime = updateTime;
             return this;
         }
-        public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Codegen.ofNullable(updateTime);
-            return this;
-        }        public GroupState build() {
-            return new GroupState(createTime, description, displayName, groupKey, initialGroupConfig, labels, name, parent, updateTime);
+
+        public Builder updateTime(String updateTime) {
+            return updateTime(Output.of(updateTime));
+        }
+
+        public GroupState build() {
+            return $;
         }
     }
+
 }

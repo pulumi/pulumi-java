@@ -15,78 +15,72 @@ public final class GetRouterArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetRouterArgs Empty = new GetRouterArgs();
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="region", required=true)
-      private final String region;
+    private String region;
 
     public String region() {
         return this.region;
     }
 
     @Import(name="router", required=true)
-      private final String router;
+    private String router;
 
     public String router() {
         return this.router;
     }
 
-    public GetRouterArgs(
-        @Nullable String project,
-        String region,
-        String router) {
-        this.project = project;
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-        this.router = Objects.requireNonNull(router, "expected parameter 'router' to be non-null");
-    }
+    private GetRouterArgs() {}
 
-    private GetRouterArgs() {
-        this.project = null;
-        this.region = null;
-        this.router = null;
+    private GetRouterArgs(GetRouterArgs $) {
+        this.project = $.project;
+        this.region = $.region;
+        this.router = $.router;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRouterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String project;
-        private String region;
-        private String router;
+        private GetRouterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRouterArgs();
         }
 
         public Builder(GetRouterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
-    	      this.router = defaults.router;
+            $ = new GetRouterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
         }
+
         public Builder router(String router) {
-            this.router = Objects.requireNonNull(router);
+            $.router = router;
             return this;
-        }        public GetRouterArgs build() {
-            return new GetRouterArgs(project, region, router);
+        }
+
+        public GetRouterArgs build() {
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            $.router = Objects.requireNonNull($.router, "expected parameter 'router' to be non-null");
+            return $;
         }
     }
+
 }

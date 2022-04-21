@@ -9,13 +9,13 @@ import com.pulumi.azurenative.network.inputs.VpnConnectionArgs;
 import com.pulumi.azurenative.network.inputs.VpnGatewayNatRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class VpnGatewayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bgpSettings")
-      private final @Nullable Output<BgpSettingsArgs> bgpSettings;
+    private @Nullable Output<BgpSettingsArgs> bgpSettings;
 
-    public Output<BgpSettingsArgs> bgpSettings() {
-        return this.bgpSettings == null ? Codegen.empty() : this.bgpSettings;
+    public Optional<Output<BgpSettingsArgs>> bgpSettings() {
+        return Optional.ofNullable(this.bgpSettings);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class VpnGatewayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="connections")
-      private final @Nullable Output<List<VpnConnectionArgs>> connections;
+    private @Nullable Output<List<VpnConnectionArgs>> connections;
 
-    public Output<List<VpnConnectionArgs>> connections() {
-        return this.connections == null ? Codegen.empty() : this.connections;
+    public Optional<Output<List<VpnConnectionArgs>>> connections() {
+        return Optional.ofNullable(this.connections);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class VpnGatewayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gatewayName")
-      private final @Nullable Output<String> gatewayName;
+    private @Nullable Output<String> gatewayName;
 
-    public Output<String> gatewayName() {
-        return this.gatewayName == null ? Codegen.empty() : this.gatewayName;
+    public Optional<Output<String>> gatewayName() {
+        return Optional.ofNullable(this.gatewayName);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class VpnGatewayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class VpnGatewayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="isRoutingPreferenceInternet")
-      private final @Nullable Output<Boolean> isRoutingPreferenceInternet;
+    private @Nullable Output<Boolean> isRoutingPreferenceInternet;
 
-    public Output<Boolean> isRoutingPreferenceInternet() {
-        return this.isRoutingPreferenceInternet == null ? Codegen.empty() : this.isRoutingPreferenceInternet;
+    public Optional<Output<Boolean>> isRoutingPreferenceInternet() {
+        return Optional.ofNullable(this.isRoutingPreferenceInternet);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class VpnGatewayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class VpnGatewayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="natRules")
-      private final @Nullable Output<List<VpnGatewayNatRuleArgs>> natRules;
+    private @Nullable Output<List<VpnGatewayNatRuleArgs>> natRules;
 
-    public Output<List<VpnGatewayNatRuleArgs>> natRules() {
-        return this.natRules == null ? Codegen.empty() : this.natRules;
+    public Optional<Output<List<VpnGatewayNatRuleArgs>>> natRules() {
+        return Optional.ofNullable(this.natRules);
     }
 
     /**
@@ -105,7 +105,7 @@ public final class VpnGatewayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -116,10 +116,10 @@ public final class VpnGatewayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -127,10 +127,10 @@ public final class VpnGatewayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="virtualHub")
-      private final @Nullable Output<SubResourceArgs> virtualHub;
+    private @Nullable Output<SubResourceArgs> virtualHub;
 
-    public Output<SubResourceArgs> virtualHub() {
-        return this.virtualHub == null ? Codegen.empty() : this.virtualHub;
+    public Optional<Output<SubResourceArgs>> virtualHub() {
+        return Optional.ofNullable(this.virtualHub);
     }
 
     /**
@@ -138,186 +138,157 @@ public final class VpnGatewayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpnGatewayScaleUnit")
-      private final @Nullable Output<Integer> vpnGatewayScaleUnit;
+    private @Nullable Output<Integer> vpnGatewayScaleUnit;
 
-    public Output<Integer> vpnGatewayScaleUnit() {
-        return this.vpnGatewayScaleUnit == null ? Codegen.empty() : this.vpnGatewayScaleUnit;
+    public Optional<Output<Integer>> vpnGatewayScaleUnit() {
+        return Optional.ofNullable(this.vpnGatewayScaleUnit);
     }
 
-    public VpnGatewayArgs(
-        @Nullable Output<BgpSettingsArgs> bgpSettings,
-        @Nullable Output<List<VpnConnectionArgs>> connections,
-        @Nullable Output<String> gatewayName,
-        @Nullable Output<String> id,
-        @Nullable Output<Boolean> isRoutingPreferenceInternet,
-        @Nullable Output<String> location,
-        @Nullable Output<List<VpnGatewayNatRuleArgs>> natRules,
-        Output<String> resourceGroupName,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<SubResourceArgs> virtualHub,
-        @Nullable Output<Integer> vpnGatewayScaleUnit) {
-        this.bgpSettings = bgpSettings;
-        this.connections = connections;
-        this.gatewayName = gatewayName;
-        this.id = id;
-        this.isRoutingPreferenceInternet = isRoutingPreferenceInternet;
-        this.location = location;
-        this.natRules = natRules;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tags = tags;
-        this.virtualHub = virtualHub;
-        this.vpnGatewayScaleUnit = vpnGatewayScaleUnit;
-    }
+    private VpnGatewayArgs() {}
 
-    private VpnGatewayArgs() {
-        this.bgpSettings = Codegen.empty();
-        this.connections = Codegen.empty();
-        this.gatewayName = Codegen.empty();
-        this.id = Codegen.empty();
-        this.isRoutingPreferenceInternet = Codegen.empty();
-        this.location = Codegen.empty();
-        this.natRules = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.virtualHub = Codegen.empty();
-        this.vpnGatewayScaleUnit = Codegen.empty();
+    private VpnGatewayArgs(VpnGatewayArgs $) {
+        this.bgpSettings = $.bgpSettings;
+        this.connections = $.connections;
+        this.gatewayName = $.gatewayName;
+        this.id = $.id;
+        this.isRoutingPreferenceInternet = $.isRoutingPreferenceInternet;
+        this.location = $.location;
+        this.natRules = $.natRules;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tags = $.tags;
+        this.virtualHub = $.virtualHub;
+        this.vpnGatewayScaleUnit = $.vpnGatewayScaleUnit;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VpnGatewayArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<BgpSettingsArgs> bgpSettings;
-        private @Nullable Output<List<VpnConnectionArgs>> connections;
-        private @Nullable Output<String> gatewayName;
-        private @Nullable Output<String> id;
-        private @Nullable Output<Boolean> isRoutingPreferenceInternet;
-        private @Nullable Output<String> location;
-        private @Nullable Output<List<VpnGatewayNatRuleArgs>> natRules;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<SubResourceArgs> virtualHub;
-        private @Nullable Output<Integer> vpnGatewayScaleUnit;
+        private VpnGatewayArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VpnGatewayArgs();
         }
 
         public Builder(VpnGatewayArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bgpSettings = defaults.bgpSettings;
-    	      this.connections = defaults.connections;
-    	      this.gatewayName = defaults.gatewayName;
-    	      this.id = defaults.id;
-    	      this.isRoutingPreferenceInternet = defaults.isRoutingPreferenceInternet;
-    	      this.location = defaults.location;
-    	      this.natRules = defaults.natRules;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tags = defaults.tags;
-    	      this.virtualHub = defaults.virtualHub;
-    	      this.vpnGatewayScaleUnit = defaults.vpnGatewayScaleUnit;
+            $ = new VpnGatewayArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bgpSettings(@Nullable Output<BgpSettingsArgs> bgpSettings) {
-            this.bgpSettings = bgpSettings;
+            $.bgpSettings = bgpSettings;
             return this;
         }
-        public Builder bgpSettings(@Nullable BgpSettingsArgs bgpSettings) {
-            this.bgpSettings = Codegen.ofNullable(bgpSettings);
-            return this;
+
+        public Builder bgpSettings(BgpSettingsArgs bgpSettings) {
+            return bgpSettings(Output.of(bgpSettings));
         }
+
         public Builder connections(@Nullable Output<List<VpnConnectionArgs>> connections) {
-            this.connections = connections;
+            $.connections = connections;
             return this;
         }
-        public Builder connections(@Nullable List<VpnConnectionArgs> connections) {
-            this.connections = Codegen.ofNullable(connections);
-            return this;
+
+        public Builder connections(List<VpnConnectionArgs> connections) {
+            return connections(Output.of(connections));
         }
+
         public Builder connections(VpnConnectionArgs... connections) {
             return connections(List.of(connections));
         }
+
         public Builder gatewayName(@Nullable Output<String> gatewayName) {
-            this.gatewayName = gatewayName;
+            $.gatewayName = gatewayName;
             return this;
         }
-        public Builder gatewayName(@Nullable String gatewayName) {
-            this.gatewayName = Codegen.ofNullable(gatewayName);
-            return this;
+
+        public Builder gatewayName(String gatewayName) {
+            return gatewayName(Output.of(gatewayName));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder isRoutingPreferenceInternet(@Nullable Output<Boolean> isRoutingPreferenceInternet) {
-            this.isRoutingPreferenceInternet = isRoutingPreferenceInternet;
+            $.isRoutingPreferenceInternet = isRoutingPreferenceInternet;
             return this;
         }
-        public Builder isRoutingPreferenceInternet(@Nullable Boolean isRoutingPreferenceInternet) {
-            this.isRoutingPreferenceInternet = Codegen.ofNullable(isRoutingPreferenceInternet);
-            return this;
+
+        public Builder isRoutingPreferenceInternet(Boolean isRoutingPreferenceInternet) {
+            return isRoutingPreferenceInternet(Output.of(isRoutingPreferenceInternet));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder natRules(@Nullable Output<List<VpnGatewayNatRuleArgs>> natRules) {
-            this.natRules = natRules;
+            $.natRules = natRules;
             return this;
         }
-        public Builder natRules(@Nullable List<VpnGatewayNatRuleArgs> natRules) {
-            this.natRules = Codegen.ofNullable(natRules);
-            return this;
+
+        public Builder natRules(List<VpnGatewayNatRuleArgs> natRules) {
+            return natRules(Output.of(natRules));
         }
+
         public Builder natRules(VpnGatewayNatRuleArgs... natRules) {
             return natRules(List.of(natRules));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder virtualHub(@Nullable Output<SubResourceArgs> virtualHub) {
-            this.virtualHub = virtualHub;
+            $.virtualHub = virtualHub;
             return this;
         }
-        public Builder virtualHub(@Nullable SubResourceArgs virtualHub) {
-            this.virtualHub = Codegen.ofNullable(virtualHub);
-            return this;
+
+        public Builder virtualHub(SubResourceArgs virtualHub) {
+            return virtualHub(Output.of(virtualHub));
         }
+
         public Builder vpnGatewayScaleUnit(@Nullable Output<Integer> vpnGatewayScaleUnit) {
-            this.vpnGatewayScaleUnit = vpnGatewayScaleUnit;
+            $.vpnGatewayScaleUnit = vpnGatewayScaleUnit;
             return this;
         }
-        public Builder vpnGatewayScaleUnit(@Nullable Integer vpnGatewayScaleUnit) {
-            this.vpnGatewayScaleUnit = Codegen.ofNullable(vpnGatewayScaleUnit);
-            return this;
-        }        public VpnGatewayArgs build() {
-            return new VpnGatewayArgs(bgpSettings, connections, gatewayName, id, isRoutingPreferenceInternet, location, natRules, resourceGroupName, tags, virtualHub, vpnGatewayScaleUnit);
+
+        public Builder vpnGatewayScaleUnit(Integer vpnGatewayScaleUnit) {
+            return vpnGatewayScaleUnit(Output.of(vpnGatewayScaleUnit));
+        }
+
+        public VpnGatewayArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

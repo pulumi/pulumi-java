@@ -23,7 +23,7 @@ public final class AbsoluteClipTimeResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="odataType", required=true)
-      private final String odataType;
+    private String odataType;
 
     public String odataType() {
         return this.odataType;
@@ -34,55 +34,52 @@ public final class AbsoluteClipTimeResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="time", required=true)
-      private final String time;
+    private String time;
 
     public String time() {
         return this.time;
     }
 
-    public AbsoluteClipTimeResponse(
-        String odataType,
-        String time) {
-        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
-        this.time = Objects.requireNonNull(time, "expected parameter 'time' to be non-null");
-    }
+    private AbsoluteClipTimeResponse() {}
 
-    private AbsoluteClipTimeResponse() {
-        this.odataType = null;
-        this.time = null;
+    private AbsoluteClipTimeResponse(AbsoluteClipTimeResponse $) {
+        this.odataType = $.odataType;
+        this.time = $.time;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AbsoluteClipTimeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String odataType;
-        private String time;
+        private AbsoluteClipTimeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AbsoluteClipTimeResponse();
         }
 
         public Builder(AbsoluteClipTimeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.odataType = defaults.odataType;
-    	      this.time = defaults.time;
+            $ = new AbsoluteClipTimeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder time(String time) {
-            this.time = Objects.requireNonNull(time);
+            $.time = time;
             return this;
-        }        public AbsoluteClipTimeResponse build() {
-            return new AbsoluteClipTimeResponse(odataType, time);
+        }
+
+        public AbsoluteClipTimeResponse build() {
+            $.odataType = Codegen.stringProp("odataType").arg($.odataType).require();
+            $.time = Objects.requireNonNull($.time, "expected parameter 'time' to be non-null");
+            return $;
         }
     }
+
 }

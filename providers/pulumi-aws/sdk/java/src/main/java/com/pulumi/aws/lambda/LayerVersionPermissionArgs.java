@@ -5,10 +5,10 @@ package com.pulumi.aws.lambda;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class LayerVersionPermissionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="action", required=true)
-      private final Output<String> action;
+    private Output<String> action;
 
     public Output<String> action() {
         return this.action;
@@ -32,7 +32,7 @@ public final class LayerVersionPermissionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="layerName", required=true)
-      private final Output<String> layerName;
+    private Output<String> layerName;
 
     public Output<String> layerName() {
         return this.layerName;
@@ -43,10 +43,10 @@ public final class LayerVersionPermissionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="organizationId")
-      private final @Nullable Output<String> organizationId;
+    private @Nullable Output<String> organizationId;
 
-    public Output<String> organizationId() {
-        return this.organizationId == null ? Codegen.empty() : this.organizationId;
+    public Optional<Output<String>> organizationId() {
+        return Optional.ofNullable(this.organizationId);
     }
 
     /**
@@ -54,7 +54,7 @@ public final class LayerVersionPermissionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="principal", required=true)
-      private final Output<String> principal;
+    private Output<String> principal;
 
     public Output<String> principal() {
         return this.principal;
@@ -65,7 +65,7 @@ public final class LayerVersionPermissionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="statementId", required=true)
-      private final Output<String> statementId;
+    private Output<String> statementId;
 
     public Output<String> statementId() {
         return this.statementId;
@@ -76,115 +76,103 @@ public final class LayerVersionPermissionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="versionNumber", required=true)
-      private final Output<Integer> versionNumber;
+    private Output<Integer> versionNumber;
 
     public Output<Integer> versionNumber() {
         return this.versionNumber;
     }
 
-    public LayerVersionPermissionArgs(
-        Output<String> action,
-        Output<String> layerName,
-        @Nullable Output<String> organizationId,
-        Output<String> principal,
-        Output<String> statementId,
-        Output<Integer> versionNumber) {
-        this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
-        this.layerName = Objects.requireNonNull(layerName, "expected parameter 'layerName' to be non-null");
-        this.organizationId = organizationId;
-        this.principal = Objects.requireNonNull(principal, "expected parameter 'principal' to be non-null");
-        this.statementId = Objects.requireNonNull(statementId, "expected parameter 'statementId' to be non-null");
-        this.versionNumber = Objects.requireNonNull(versionNumber, "expected parameter 'versionNumber' to be non-null");
-    }
+    private LayerVersionPermissionArgs() {}
 
-    private LayerVersionPermissionArgs() {
-        this.action = Codegen.empty();
-        this.layerName = Codegen.empty();
-        this.organizationId = Codegen.empty();
-        this.principal = Codegen.empty();
-        this.statementId = Codegen.empty();
-        this.versionNumber = Codegen.empty();
+    private LayerVersionPermissionArgs(LayerVersionPermissionArgs $) {
+        this.action = $.action;
+        this.layerName = $.layerName;
+        this.organizationId = $.organizationId;
+        this.principal = $.principal;
+        this.statementId = $.statementId;
+        this.versionNumber = $.versionNumber;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LayerVersionPermissionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> action;
-        private Output<String> layerName;
-        private @Nullable Output<String> organizationId;
-        private Output<String> principal;
-        private Output<String> statementId;
-        private Output<Integer> versionNumber;
+        private LayerVersionPermissionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LayerVersionPermissionArgs();
         }
 
         public Builder(LayerVersionPermissionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.layerName = defaults.layerName;
-    	      this.organizationId = defaults.organizationId;
-    	      this.principal = defaults.principal;
-    	      this.statementId = defaults.statementId;
-    	      this.versionNumber = defaults.versionNumber;
+            $ = new LayerVersionPermissionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(Output<String> action) {
-            this.action = Objects.requireNonNull(action);
+            $.action = action;
             return this;
         }
+
         public Builder action(String action) {
-            this.action = Output.of(Objects.requireNonNull(action));
-            return this;
+            return action(Output.of(action));
         }
+
         public Builder layerName(Output<String> layerName) {
-            this.layerName = Objects.requireNonNull(layerName);
+            $.layerName = layerName;
             return this;
         }
+
         public Builder layerName(String layerName) {
-            this.layerName = Output.of(Objects.requireNonNull(layerName));
-            return this;
+            return layerName(Output.of(layerName));
         }
+
         public Builder organizationId(@Nullable Output<String> organizationId) {
-            this.organizationId = organizationId;
+            $.organizationId = organizationId;
             return this;
         }
-        public Builder organizationId(@Nullable String organizationId) {
-            this.organizationId = Codegen.ofNullable(organizationId);
-            return this;
+
+        public Builder organizationId(String organizationId) {
+            return organizationId(Output.of(organizationId));
         }
+
         public Builder principal(Output<String> principal) {
-            this.principal = Objects.requireNonNull(principal);
+            $.principal = principal;
             return this;
         }
+
         public Builder principal(String principal) {
-            this.principal = Output.of(Objects.requireNonNull(principal));
-            return this;
+            return principal(Output.of(principal));
         }
+
         public Builder statementId(Output<String> statementId) {
-            this.statementId = Objects.requireNonNull(statementId);
+            $.statementId = statementId;
             return this;
         }
+
         public Builder statementId(String statementId) {
-            this.statementId = Output.of(Objects.requireNonNull(statementId));
-            return this;
+            return statementId(Output.of(statementId));
         }
+
         public Builder versionNumber(Output<Integer> versionNumber) {
-            this.versionNumber = Objects.requireNonNull(versionNumber);
+            $.versionNumber = versionNumber;
             return this;
         }
+
         public Builder versionNumber(Integer versionNumber) {
-            this.versionNumber = Output.of(Objects.requireNonNull(versionNumber));
-            return this;
-        }        public LayerVersionPermissionArgs build() {
-            return new LayerVersionPermissionArgs(action, layerName, organizationId, principal, statementId, versionNumber);
+            return versionNumber(Output.of(versionNumber));
+        }
+
+        public LayerVersionPermissionArgs build() {
+            $.action = Objects.requireNonNull($.action, "expected parameter 'action' to be non-null");
+            $.layerName = Objects.requireNonNull($.layerName, "expected parameter 'layerName' to be non-null");
+            $.principal = Objects.requireNonNull($.principal, "expected parameter 'principal' to be non-null");
+            $.statementId = Objects.requireNonNull($.statementId, "expected parameter 'statementId' to be non-null");
+            $.versionNumber = Objects.requireNonNull($.versionNumber, "expected parameter 'versionNumber' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,7 +6,6 @@ package com.pulumi.aws.networkfirewall.inputs;
 import com.pulumi.aws.networkfirewall.inputs.FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -19,49 +18,49 @@ public final class FirewallPolicyFirewallPolicyStatelessCustomActionActionDefini
      * 
      */
     @Import(name="publishMetricAction", required=true)
-      private final Output<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionGetArgs> publishMetricAction;
+    private Output<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionGetArgs> publishMetricAction;
 
     public Output<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionGetArgs> publishMetricAction() {
         return this.publishMetricAction;
     }
 
-    public FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionGetArgs(Output<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionGetArgs> publishMetricAction) {
-        this.publishMetricAction = Objects.requireNonNull(publishMetricAction, "expected parameter 'publishMetricAction' to be non-null");
-    }
+    private FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionGetArgs() {}
 
-    private FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionGetArgs() {
-        this.publishMetricAction = Codegen.empty();
+    private FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionGetArgs(FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionGetArgs $) {
+        this.publishMetricAction = $.publishMetricAction;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionGetArgs> publishMetricAction;
+        private FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionGetArgs();
         }
 
         public Builder(FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.publishMetricAction = defaults.publishMetricAction;
+            $ = new FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder publishMetricAction(Output<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionGetArgs> publishMetricAction) {
-            this.publishMetricAction = Objects.requireNonNull(publishMetricAction);
+            $.publishMetricAction = publishMetricAction;
             return this;
         }
+
         public Builder publishMetricAction(FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionGetArgs publishMetricAction) {
-            this.publishMetricAction = Output.of(Objects.requireNonNull(publishMetricAction));
-            return this;
-        }        public FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionGetArgs build() {
-            return new FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionGetArgs(publishMetricAction);
+            return publishMetricAction(Output.of(publishMetricAction));
+        }
+
+        public FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionGetArgs build() {
+            $.publishMetricAction = Objects.requireNonNull($.publishMetricAction, "expected parameter 'publishMetricAction' to be non-null");
+            return $;
         }
     }
+
 }

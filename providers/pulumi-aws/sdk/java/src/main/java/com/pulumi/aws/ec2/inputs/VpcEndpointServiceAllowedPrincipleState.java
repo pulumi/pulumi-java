@@ -5,9 +5,9 @@ package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class VpcEndpointServiceAllowedPrincipleState extends com.pulumi.re
      * 
      */
     @Import(name="principalArn")
-      private final @Nullable Output<String> principalArn;
+    private @Nullable Output<String> principalArn;
 
-    public Output<String> principalArn() {
-        return this.principalArn == null ? Codegen.empty() : this.principalArn;
+    public Optional<Output<String>> principalArn() {
+        return Optional.ofNullable(this.principalArn);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class VpcEndpointServiceAllowedPrincipleState extends com.pulumi.re
      * 
      */
     @Import(name="vpcEndpointServiceId")
-      private final @Nullable Output<String> vpcEndpointServiceId;
+    private @Nullable Output<String> vpcEndpointServiceId;
 
-    public Output<String> vpcEndpointServiceId() {
-        return this.vpcEndpointServiceId == null ? Codegen.empty() : this.vpcEndpointServiceId;
+    public Optional<Output<String>> vpcEndpointServiceId() {
+        return Optional.ofNullable(this.vpcEndpointServiceId);
     }
 
-    public VpcEndpointServiceAllowedPrincipleState(
-        @Nullable Output<String> principalArn,
-        @Nullable Output<String> vpcEndpointServiceId) {
-        this.principalArn = principalArn;
-        this.vpcEndpointServiceId = vpcEndpointServiceId;
-    }
+    private VpcEndpointServiceAllowedPrincipleState() {}
 
-    private VpcEndpointServiceAllowedPrincipleState() {
-        this.principalArn = Codegen.empty();
-        this.vpcEndpointServiceId = Codegen.empty();
+    private VpcEndpointServiceAllowedPrincipleState(VpcEndpointServiceAllowedPrincipleState $) {
+        this.principalArn = $.principalArn;
+        this.vpcEndpointServiceId = $.vpcEndpointServiceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VpcEndpointServiceAllowedPrincipleState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> principalArn;
-        private @Nullable Output<String> vpcEndpointServiceId;
+        private VpcEndpointServiceAllowedPrincipleState $;
 
         public Builder() {
-    	      // Empty
+            $ = new VpcEndpointServiceAllowedPrincipleState();
         }
 
         public Builder(VpcEndpointServiceAllowedPrincipleState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.principalArn = defaults.principalArn;
-    	      this.vpcEndpointServiceId = defaults.vpcEndpointServiceId;
+            $ = new VpcEndpointServiceAllowedPrincipleState(Objects.requireNonNull(defaults));
         }
 
         public Builder principalArn(@Nullable Output<String> principalArn) {
-            this.principalArn = principalArn;
+            $.principalArn = principalArn;
             return this;
         }
-        public Builder principalArn(@Nullable String principalArn) {
-            this.principalArn = Codegen.ofNullable(principalArn);
-            return this;
+
+        public Builder principalArn(String principalArn) {
+            return principalArn(Output.of(principalArn));
         }
+
         public Builder vpcEndpointServiceId(@Nullable Output<String> vpcEndpointServiceId) {
-            this.vpcEndpointServiceId = vpcEndpointServiceId;
+            $.vpcEndpointServiceId = vpcEndpointServiceId;
             return this;
         }
-        public Builder vpcEndpointServiceId(@Nullable String vpcEndpointServiceId) {
-            this.vpcEndpointServiceId = Codegen.ofNullable(vpcEndpointServiceId);
-            return this;
-        }        public VpcEndpointServiceAllowedPrincipleState build() {
-            return new VpcEndpointServiceAllowedPrincipleState(principalArn, vpcEndpointServiceId);
+
+        public Builder vpcEndpointServiceId(String vpcEndpointServiceId) {
+            return vpcEndpointServiceId(Output.of(vpcEndpointServiceId));
+        }
+
+        public VpcEndpointServiceAllowedPrincipleState build() {
+            return $;
         }
     }
+
 }

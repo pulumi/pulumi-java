@@ -5,11 +5,11 @@ package com.pulumi.aws.cfg.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class ConfigurationAggregatorAccountAggregationSourceArgs extends c
      * 
      */
     @Import(name="accountIds", required=true)
-      private final Output<List<String>> accountIds;
+    private Output<List<String>> accountIds;
 
     public Output<List<String>> accountIds() {
         return this.accountIds;
@@ -33,10 +33,10 @@ public final class ConfigurationAggregatorAccountAggregationSourceArgs extends c
      * 
      */
     @Import(name="allRegions")
-      private final @Nullable Output<Boolean> allRegions;
+    private @Nullable Output<Boolean> allRegions;
 
-    public Output<Boolean> allRegions() {
-        return this.allRegions == null ? Codegen.empty() : this.allRegions;
+    public Optional<Output<Boolean>> allRegions() {
+        return Optional.ofNullable(this.allRegions);
     }
 
     /**
@@ -44,82 +44,77 @@ public final class ConfigurationAggregatorAccountAggregationSourceArgs extends c
      * 
      */
     @Import(name="regions")
-      private final @Nullable Output<List<String>> regions;
+    private @Nullable Output<List<String>> regions;
 
-    public Output<List<String>> regions() {
-        return this.regions == null ? Codegen.empty() : this.regions;
+    public Optional<Output<List<String>>> regions() {
+        return Optional.ofNullable(this.regions);
     }
 
-    public ConfigurationAggregatorAccountAggregationSourceArgs(
-        Output<List<String>> accountIds,
-        @Nullable Output<Boolean> allRegions,
-        @Nullable Output<List<String>> regions) {
-        this.accountIds = Objects.requireNonNull(accountIds, "expected parameter 'accountIds' to be non-null");
-        this.allRegions = allRegions;
-        this.regions = regions;
-    }
+    private ConfigurationAggregatorAccountAggregationSourceArgs() {}
 
-    private ConfigurationAggregatorAccountAggregationSourceArgs() {
-        this.accountIds = Codegen.empty();
-        this.allRegions = Codegen.empty();
-        this.regions = Codegen.empty();
+    private ConfigurationAggregatorAccountAggregationSourceArgs(ConfigurationAggregatorAccountAggregationSourceArgs $) {
+        this.accountIds = $.accountIds;
+        this.allRegions = $.allRegions;
+        this.regions = $.regions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigurationAggregatorAccountAggregationSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> accountIds;
-        private @Nullable Output<Boolean> allRegions;
-        private @Nullable Output<List<String>> regions;
+        private ConfigurationAggregatorAccountAggregationSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigurationAggregatorAccountAggregationSourceArgs();
         }
 
         public Builder(ConfigurationAggregatorAccountAggregationSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountIds = defaults.accountIds;
-    	      this.allRegions = defaults.allRegions;
-    	      this.regions = defaults.regions;
+            $ = new ConfigurationAggregatorAccountAggregationSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountIds(Output<List<String>> accountIds) {
-            this.accountIds = Objects.requireNonNull(accountIds);
+            $.accountIds = accountIds;
             return this;
         }
+
         public Builder accountIds(List<String> accountIds) {
-            this.accountIds = Output.of(Objects.requireNonNull(accountIds));
-            return this;
+            return accountIds(Output.of(accountIds));
         }
+
         public Builder accountIds(String... accountIds) {
             return accountIds(List.of(accountIds));
         }
+
         public Builder allRegions(@Nullable Output<Boolean> allRegions) {
-            this.allRegions = allRegions;
+            $.allRegions = allRegions;
             return this;
         }
-        public Builder allRegions(@Nullable Boolean allRegions) {
-            this.allRegions = Codegen.ofNullable(allRegions);
-            return this;
+
+        public Builder allRegions(Boolean allRegions) {
+            return allRegions(Output.of(allRegions));
         }
+
         public Builder regions(@Nullable Output<List<String>> regions) {
-            this.regions = regions;
+            $.regions = regions;
             return this;
         }
-        public Builder regions(@Nullable List<String> regions) {
-            this.regions = Codegen.ofNullable(regions);
-            return this;
+
+        public Builder regions(List<String> regions) {
+            return regions(Output.of(regions));
         }
+
         public Builder regions(String... regions) {
             return regions(List.of(regions));
-        }        public ConfigurationAggregatorAccountAggregationSourceArgs build() {
-            return new ConfigurationAggregatorAccountAggregationSourceArgs(accountIds, allRegions, regions);
+        }
+
+        public ConfigurationAggregatorAccountAggregationSourceArgs build() {
+            $.accountIds = Objects.requireNonNull($.accountIds, "expected parameter 'accountIds' to be non-null");
+            return $;
         }
     }
+
 }

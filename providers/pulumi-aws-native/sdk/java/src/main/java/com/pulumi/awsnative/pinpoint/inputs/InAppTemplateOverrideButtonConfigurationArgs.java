@@ -6,9 +6,9 @@ package com.pulumi.awsnative.pinpoint.inputs;
 import com.pulumi.awsnative.pinpoint.enums.InAppTemplateButtonAction;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,65 @@ public final class InAppTemplateOverrideButtonConfigurationArgs extends com.pulu
     public static final InAppTemplateOverrideButtonConfigurationArgs Empty = new InAppTemplateOverrideButtonConfigurationArgs();
 
     @Import(name="buttonAction")
-      private final @Nullable Output<InAppTemplateButtonAction> buttonAction;
+    private @Nullable Output<InAppTemplateButtonAction> buttonAction;
 
-    public Output<InAppTemplateButtonAction> buttonAction() {
-        return this.buttonAction == null ? Codegen.empty() : this.buttonAction;
+    public Optional<Output<InAppTemplateButtonAction>> buttonAction() {
+        return Optional.ofNullable(this.buttonAction);
     }
 
     @Import(name="link")
-      private final @Nullable Output<String> link;
+    private @Nullable Output<String> link;
 
-    public Output<String> link() {
-        return this.link == null ? Codegen.empty() : this.link;
+    public Optional<Output<String>> link() {
+        return Optional.ofNullable(this.link);
     }
 
-    public InAppTemplateOverrideButtonConfigurationArgs(
-        @Nullable Output<InAppTemplateButtonAction> buttonAction,
-        @Nullable Output<String> link) {
-        this.buttonAction = buttonAction;
-        this.link = link;
-    }
+    private InAppTemplateOverrideButtonConfigurationArgs() {}
 
-    private InAppTemplateOverrideButtonConfigurationArgs() {
-        this.buttonAction = Codegen.empty();
-        this.link = Codegen.empty();
+    private InAppTemplateOverrideButtonConfigurationArgs(InAppTemplateOverrideButtonConfigurationArgs $) {
+        this.buttonAction = $.buttonAction;
+        this.link = $.link;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InAppTemplateOverrideButtonConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<InAppTemplateButtonAction> buttonAction;
-        private @Nullable Output<String> link;
+        private InAppTemplateOverrideButtonConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InAppTemplateOverrideButtonConfigurationArgs();
         }
 
         public Builder(InAppTemplateOverrideButtonConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.buttonAction = defaults.buttonAction;
-    	      this.link = defaults.link;
+            $ = new InAppTemplateOverrideButtonConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder buttonAction(@Nullable Output<InAppTemplateButtonAction> buttonAction) {
-            this.buttonAction = buttonAction;
+            $.buttonAction = buttonAction;
             return this;
         }
-        public Builder buttonAction(@Nullable InAppTemplateButtonAction buttonAction) {
-            this.buttonAction = Codegen.ofNullable(buttonAction);
-            return this;
+
+        public Builder buttonAction(InAppTemplateButtonAction buttonAction) {
+            return buttonAction(Output.of(buttonAction));
         }
+
         public Builder link(@Nullable Output<String> link) {
-            this.link = link;
+            $.link = link;
             return this;
         }
-        public Builder link(@Nullable String link) {
-            this.link = Codegen.ofNullable(link);
-            return this;
-        }        public InAppTemplateOverrideButtonConfigurationArgs build() {
-            return new InAppTemplateOverrideButtonConfigurationArgs(buttonAction, link);
+
+        public Builder link(String link) {
+            return link(Output.of(link));
+        }
+
+        public InAppTemplateOverrideButtonConfigurationArgs build() {
+            return $;
         }
     }
+
 }

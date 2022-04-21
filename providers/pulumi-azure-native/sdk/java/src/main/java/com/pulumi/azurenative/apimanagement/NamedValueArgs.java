@@ -6,11 +6,11 @@ package com.pulumi.azurenative.apimanagement;
 import com.pulumi.azurenative.apimanagement.inputs.KeyVaultContractCreatePropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class NamedValueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
@@ -34,10 +34,10 @@ public final class NamedValueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keyVault")
-      private final @Nullable Output<KeyVaultContractCreatePropertiesArgs> keyVault;
+    private @Nullable Output<KeyVaultContractCreatePropertiesArgs> keyVault;
 
-    public Output<KeyVaultContractCreatePropertiesArgs> keyVault() {
-        return this.keyVault == null ? Codegen.empty() : this.keyVault;
+    public Optional<Output<KeyVaultContractCreatePropertiesArgs>> keyVault() {
+        return Optional.ofNullable(this.keyVault);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class NamedValueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="namedValueId")
-      private final @Nullable Output<String> namedValueId;
+    private @Nullable Output<String> namedValueId;
 
-    public Output<String> namedValueId() {
-        return this.namedValueId == null ? Codegen.empty() : this.namedValueId;
+    public Optional<Output<String>> namedValueId() {
+        return Optional.ofNullable(this.namedValueId);
     }
 
     /**
@@ -56,7 +56,7 @@ public final class NamedValueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -67,10 +67,10 @@ public final class NamedValueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="secret")
-      private final @Nullable Output<Boolean> secret;
+    private @Nullable Output<Boolean> secret;
 
-    public Output<Boolean> secret() {
-        return this.secret == null ? Codegen.empty() : this.secret;
+    public Optional<Output<Boolean>> secret() {
+        return Optional.ofNullable(this.secret);
     }
 
     /**
@@ -78,7 +78,7 @@ public final class NamedValueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-      private final Output<String> serviceName;
+    private Output<String> serviceName;
 
     public Output<String> serviceName() {
         return this.serviceName;
@@ -89,10 +89,10 @@ public final class NamedValueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<String>> tags;
+    private @Nullable Output<List<String>> tags;
 
-    public Output<List<String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -100,144 +100,125 @@ public final class NamedValueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public NamedValueArgs(
-        Output<String> displayName,
-        @Nullable Output<KeyVaultContractCreatePropertiesArgs> keyVault,
-        @Nullable Output<String> namedValueId,
-        Output<String> resourceGroupName,
-        @Nullable Output<Boolean> secret,
-        Output<String> serviceName,
-        @Nullable Output<List<String>> tags,
-        @Nullable Output<String> value) {
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.keyVault = keyVault;
-        this.namedValueId = namedValueId;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.secret = secret;
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-        this.tags = tags;
-        this.value = value;
-    }
+    private NamedValueArgs() {}
 
-    private NamedValueArgs() {
-        this.displayName = Codegen.empty();
-        this.keyVault = Codegen.empty();
-        this.namedValueId = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.secret = Codegen.empty();
-        this.serviceName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.value = Codegen.empty();
+    private NamedValueArgs(NamedValueArgs $) {
+        this.displayName = $.displayName;
+        this.keyVault = $.keyVault;
+        this.namedValueId = $.namedValueId;
+        this.resourceGroupName = $.resourceGroupName;
+        this.secret = $.secret;
+        this.serviceName = $.serviceName;
+        this.tags = $.tags;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NamedValueArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> displayName;
-        private @Nullable Output<KeyVaultContractCreatePropertiesArgs> keyVault;
-        private @Nullable Output<String> namedValueId;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Boolean> secret;
-        private Output<String> serviceName;
-        private @Nullable Output<List<String>> tags;
-        private @Nullable Output<String> value;
+        private NamedValueArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NamedValueArgs();
         }
 
         public Builder(NamedValueArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.keyVault = defaults.keyVault;
-    	      this.namedValueId = defaults.namedValueId;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.secret = defaults.secret;
-    	      this.serviceName = defaults.serviceName;
-    	      this.tags = defaults.tags;
-    	      this.value = defaults.value;
+            $ = new NamedValueArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder keyVault(@Nullable Output<KeyVaultContractCreatePropertiesArgs> keyVault) {
-            this.keyVault = keyVault;
+            $.keyVault = keyVault;
             return this;
         }
-        public Builder keyVault(@Nullable KeyVaultContractCreatePropertiesArgs keyVault) {
-            this.keyVault = Codegen.ofNullable(keyVault);
-            return this;
+
+        public Builder keyVault(KeyVaultContractCreatePropertiesArgs keyVault) {
+            return keyVault(Output.of(keyVault));
         }
+
         public Builder namedValueId(@Nullable Output<String> namedValueId) {
-            this.namedValueId = namedValueId;
+            $.namedValueId = namedValueId;
             return this;
         }
-        public Builder namedValueId(@Nullable String namedValueId) {
-            this.namedValueId = Codegen.ofNullable(namedValueId);
-            return this;
+
+        public Builder namedValueId(String namedValueId) {
+            return namedValueId(Output.of(namedValueId));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder secret(@Nullable Output<Boolean> secret) {
-            this.secret = secret;
+            $.secret = secret;
             return this;
         }
-        public Builder secret(@Nullable Boolean secret) {
-            this.secret = Codegen.ofNullable(secret);
-            return this;
+
+        public Builder secret(Boolean secret) {
+            return secret(Output.of(secret));
         }
+
         public Builder serviceName(Output<String> serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
-            return this;
+            return serviceName(Output.of(serviceName));
         }
+
         public Builder tags(@Nullable Output<List<String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(String... tags) {
             return tags(List.of(tags));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public NamedValueArgs build() {
-            return new NamedValueArgs(displayName, keyVault, namedValueId, resourceGroupName, secret, serviceName, tags, value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public NamedValueArgs build() {
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

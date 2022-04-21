@@ -5,11 +5,11 @@ package com.pulumi.googlenative.apigee_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1AttributeArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apiProducts")
-      private final @Nullable Output<List<String>> apiProducts;
+    private @Nullable Output<List<String>> apiProducts;
 
-    public Output<List<String>> apiProducts() {
-        return this.apiProducts == null ? Codegen.empty() : this.apiProducts;
+    public Optional<Output<List<String>>> apiProducts() {
+        return Optional.ofNullable(this.apiProducts);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="appFamily")
-      private final @Nullable Output<String> appFamily;
+    private @Nullable Output<String> appFamily;
 
-    public Output<String> appFamily() {
-        return this.appFamily == null ? Codegen.empty() : this.appFamily;
+    public Optional<Output<String>> appFamily() {
+        return Optional.ofNullable(this.appFamily);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="appId")
-      private final @Nullable Output<String> appId;
+    private @Nullable Output<String> appId;
 
-    public Output<String> appId() {
-        return this.appId == null ? Codegen.empty() : this.appId;
+    public Optional<Output<String>> appId() {
+        return Optional.ofNullable(this.appId);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="attributes")
-      private final @Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes;
+    private @Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes;
 
-    public Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes() {
-        return this.attributes == null ? Codegen.empty() : this.attributes;
+    public Optional<Output<List<GoogleCloudApigeeV1AttributeArgs>>> attributes() {
+        return Optional.ofNullable(this.attributes);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="callbackUrl")
-      private final @Nullable Output<String> callbackUrl;
+    private @Nullable Output<String> callbackUrl;
 
-    public Output<String> callbackUrl() {
-        return this.callbackUrl == null ? Codegen.empty() : this.callbackUrl;
+    public Optional<Output<String>> callbackUrl() {
+        return Optional.ofNullable(this.callbackUrl);
     }
 
     /**
@@ -77,7 +77,7 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="developerId", required=true)
-      private final Output<String> developerId;
+    private Output<String> developerId;
 
     public Output<String> developerId() {
         return this.developerId;
@@ -88,10 +88,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keyExpiresIn")
-      private final @Nullable Output<String> keyExpiresIn;
+    private @Nullable Output<String> keyExpiresIn;
 
-    public Output<String> keyExpiresIn() {
-        return this.keyExpiresIn == null ? Codegen.empty() : this.keyExpiresIn;
+    public Optional<Output<String>> keyExpiresIn() {
+        return Optional.ofNullable(this.keyExpiresIn);
     }
 
     /**
@@ -99,14 +99,14 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="organizationId", required=true)
-      private final Output<String> organizationId;
+    private Output<String> organizationId;
 
     public Output<String> organizationId() {
         return this.organizationId;
@@ -117,10 +117,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scopes")
-      private final @Nullable Output<List<String>> scopes;
+    private @Nullable Output<List<String>> scopes;
 
-    public Output<List<String>> scopes() {
-        return this.scopes == null ? Codegen.empty() : this.scopes;
+    public Optional<Output<List<String>>> scopes() {
+        return Optional.ofNullable(this.scopes);
     }
 
     /**
@@ -128,189 +128,162 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
-    public AppArgs(
-        @Nullable Output<List<String>> apiProducts,
-        @Nullable Output<String> appFamily,
-        @Nullable Output<String> appId,
-        @Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes,
-        @Nullable Output<String> callbackUrl,
-        Output<String> developerId,
-        @Nullable Output<String> keyExpiresIn,
-        @Nullable Output<String> name,
-        Output<String> organizationId,
-        @Nullable Output<List<String>> scopes,
-        @Nullable Output<String> status) {
-        this.apiProducts = apiProducts;
-        this.appFamily = appFamily;
-        this.appId = appId;
-        this.attributes = attributes;
-        this.callbackUrl = callbackUrl;
-        this.developerId = Objects.requireNonNull(developerId, "expected parameter 'developerId' to be non-null");
-        this.keyExpiresIn = keyExpiresIn;
-        this.name = name;
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-        this.scopes = scopes;
-        this.status = status;
-    }
+    private AppArgs() {}
 
-    private AppArgs() {
-        this.apiProducts = Codegen.empty();
-        this.appFamily = Codegen.empty();
-        this.appId = Codegen.empty();
-        this.attributes = Codegen.empty();
-        this.callbackUrl = Codegen.empty();
-        this.developerId = Codegen.empty();
-        this.keyExpiresIn = Codegen.empty();
-        this.name = Codegen.empty();
-        this.organizationId = Codegen.empty();
-        this.scopes = Codegen.empty();
-        this.status = Codegen.empty();
+    private AppArgs(AppArgs $) {
+        this.apiProducts = $.apiProducts;
+        this.appFamily = $.appFamily;
+        this.appId = $.appId;
+        this.attributes = $.attributes;
+        this.callbackUrl = $.callbackUrl;
+        this.developerId = $.developerId;
+        this.keyExpiresIn = $.keyExpiresIn;
+        this.name = $.name;
+        this.organizationId = $.organizationId;
+        this.scopes = $.scopes;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> apiProducts;
-        private @Nullable Output<String> appFamily;
-        private @Nullable Output<String> appId;
-        private @Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes;
-        private @Nullable Output<String> callbackUrl;
-        private Output<String> developerId;
-        private @Nullable Output<String> keyExpiresIn;
-        private @Nullable Output<String> name;
-        private Output<String> organizationId;
-        private @Nullable Output<List<String>> scopes;
-        private @Nullable Output<String> status;
+        private AppArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppArgs();
         }
 
         public Builder(AppArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiProducts = defaults.apiProducts;
-    	      this.appFamily = defaults.appFamily;
-    	      this.appId = defaults.appId;
-    	      this.attributes = defaults.attributes;
-    	      this.callbackUrl = defaults.callbackUrl;
-    	      this.developerId = defaults.developerId;
-    	      this.keyExpiresIn = defaults.keyExpiresIn;
-    	      this.name = defaults.name;
-    	      this.organizationId = defaults.organizationId;
-    	      this.scopes = defaults.scopes;
-    	      this.status = defaults.status;
+            $ = new AppArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiProducts(@Nullable Output<List<String>> apiProducts) {
-            this.apiProducts = apiProducts;
+            $.apiProducts = apiProducts;
             return this;
         }
-        public Builder apiProducts(@Nullable List<String> apiProducts) {
-            this.apiProducts = Codegen.ofNullable(apiProducts);
-            return this;
+
+        public Builder apiProducts(List<String> apiProducts) {
+            return apiProducts(Output.of(apiProducts));
         }
+
         public Builder apiProducts(String... apiProducts) {
             return apiProducts(List.of(apiProducts));
         }
+
         public Builder appFamily(@Nullable Output<String> appFamily) {
-            this.appFamily = appFamily;
+            $.appFamily = appFamily;
             return this;
         }
-        public Builder appFamily(@Nullable String appFamily) {
-            this.appFamily = Codegen.ofNullable(appFamily);
-            return this;
+
+        public Builder appFamily(String appFamily) {
+            return appFamily(Output.of(appFamily));
         }
+
         public Builder appId(@Nullable Output<String> appId) {
-            this.appId = appId;
+            $.appId = appId;
             return this;
         }
-        public Builder appId(@Nullable String appId) {
-            this.appId = Codegen.ofNullable(appId);
-            return this;
+
+        public Builder appId(String appId) {
+            return appId(Output.of(appId));
         }
+
         public Builder attributes(@Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes) {
-            this.attributes = attributes;
+            $.attributes = attributes;
             return this;
         }
-        public Builder attributes(@Nullable List<GoogleCloudApigeeV1AttributeArgs> attributes) {
-            this.attributes = Codegen.ofNullable(attributes);
-            return this;
+
+        public Builder attributes(List<GoogleCloudApigeeV1AttributeArgs> attributes) {
+            return attributes(Output.of(attributes));
         }
+
         public Builder attributes(GoogleCloudApigeeV1AttributeArgs... attributes) {
             return attributes(List.of(attributes));
         }
+
         public Builder callbackUrl(@Nullable Output<String> callbackUrl) {
-            this.callbackUrl = callbackUrl;
+            $.callbackUrl = callbackUrl;
             return this;
         }
-        public Builder callbackUrl(@Nullable String callbackUrl) {
-            this.callbackUrl = Codegen.ofNullable(callbackUrl);
-            return this;
+
+        public Builder callbackUrl(String callbackUrl) {
+            return callbackUrl(Output.of(callbackUrl));
         }
+
         public Builder developerId(Output<String> developerId) {
-            this.developerId = Objects.requireNonNull(developerId);
+            $.developerId = developerId;
             return this;
         }
+
         public Builder developerId(String developerId) {
-            this.developerId = Output.of(Objects.requireNonNull(developerId));
-            return this;
+            return developerId(Output.of(developerId));
         }
+
         public Builder keyExpiresIn(@Nullable Output<String> keyExpiresIn) {
-            this.keyExpiresIn = keyExpiresIn;
+            $.keyExpiresIn = keyExpiresIn;
             return this;
         }
-        public Builder keyExpiresIn(@Nullable String keyExpiresIn) {
-            this.keyExpiresIn = Codegen.ofNullable(keyExpiresIn);
-            return this;
+
+        public Builder keyExpiresIn(String keyExpiresIn) {
+            return keyExpiresIn(Output.of(keyExpiresIn));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder organizationId(Output<String> organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
         }
+
         public Builder organizationId(String organizationId) {
-            this.organizationId = Output.of(Objects.requireNonNull(organizationId));
-            return this;
+            return organizationId(Output.of(organizationId));
         }
+
         public Builder scopes(@Nullable Output<List<String>> scopes) {
-            this.scopes = scopes;
+            $.scopes = scopes;
             return this;
         }
-        public Builder scopes(@Nullable List<String> scopes) {
-            this.scopes = Codegen.ofNullable(scopes);
-            return this;
+
+        public Builder scopes(List<String> scopes) {
+            return scopes(Output.of(scopes));
         }
+
         public Builder scopes(String... scopes) {
             return scopes(List.of(scopes));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
-        }        public AppArgs build() {
-            return new AppArgs(apiProducts, appFamily, appId, attributes, callbackUrl, developerId, keyExpiresIn, name, organizationId, scopes, status);
+
+        public Builder status(String status) {
+            return status(Output.of(status));
+        }
+
+        public AppArgs build() {
+            $.developerId = Objects.requireNonNull($.developerId, "expected parameter 'developerId' to be non-null");
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            return $;
         }
     }
+
 }

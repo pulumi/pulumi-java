@@ -6,9 +6,9 @@ package com.pulumi.azurenative.hdinsight.inputs;
 import com.pulumi.azurenative.hdinsight.inputs.RoleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class ComputeProfileArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="roles")
-      private final @Nullable Output<List<RoleArgs>> roles;
+    private @Nullable Output<List<RoleArgs>> roles;
 
-    public Output<List<RoleArgs>> roles() {
-        return this.roles == null ? Codegen.empty() : this.roles;
+    public Optional<Output<List<RoleArgs>>> roles() {
+        return Optional.ofNullable(this.roles);
     }
 
-    public ComputeProfileArgs(@Nullable Output<List<RoleArgs>> roles) {
-        this.roles = roles;
-    }
+    private ComputeProfileArgs() {}
 
-    private ComputeProfileArgs() {
-        this.roles = Codegen.empty();
+    private ComputeProfileArgs(ComputeProfileArgs $) {
+        this.roles = $.roles;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ComputeProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<RoleArgs>> roles;
+        private ComputeProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ComputeProfileArgs();
         }
 
         public Builder(ComputeProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.roles = defaults.roles;
+            $ = new ComputeProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder roles(@Nullable Output<List<RoleArgs>> roles) {
-            this.roles = roles;
+            $.roles = roles;
             return this;
         }
-        public Builder roles(@Nullable List<RoleArgs> roles) {
-            this.roles = Codegen.ofNullable(roles);
-            return this;
+
+        public Builder roles(List<RoleArgs> roles) {
+            return roles(Output.of(roles));
         }
+
         public Builder roles(RoleArgs... roles) {
             return roles(List.of(roles));
-        }        public ComputeProfileArgs build() {
-            return new ComputeProfileArgs(roles);
+        }
+
+        public ComputeProfileArgs build() {
+            return $;
         }
     }
+
 }

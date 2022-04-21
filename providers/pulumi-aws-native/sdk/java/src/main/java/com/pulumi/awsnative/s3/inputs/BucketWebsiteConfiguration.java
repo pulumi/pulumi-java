@@ -26,10 +26,10 @@ public final class BucketWebsiteConfiguration extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="errorDocument")
-      private final @Nullable String errorDocument;
+    private @Nullable String errorDocument;
 
     public Optional<String> errorDocument() {
-        return this.errorDocument == null ? Optional.empty() : Optional.ofNullable(this.errorDocument);
+        return Optional.ofNullable(this.errorDocument);
     }
 
     /**
@@ -37,90 +37,80 @@ public final class BucketWebsiteConfiguration extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="indexDocument")
-      private final @Nullable String indexDocument;
+    private @Nullable String indexDocument;
 
     public Optional<String> indexDocument() {
-        return this.indexDocument == null ? Optional.empty() : Optional.ofNullable(this.indexDocument);
+        return Optional.ofNullable(this.indexDocument);
     }
 
     @Import(name="redirectAllRequestsTo")
-      private final @Nullable BucketRedirectAllRequestsTo redirectAllRequestsTo;
+    private @Nullable BucketRedirectAllRequestsTo redirectAllRequestsTo;
 
     public Optional<BucketRedirectAllRequestsTo> redirectAllRequestsTo() {
-        return this.redirectAllRequestsTo == null ? Optional.empty() : Optional.ofNullable(this.redirectAllRequestsTo);
+        return Optional.ofNullable(this.redirectAllRequestsTo);
     }
 
     @Import(name="routingRules")
-      private final @Nullable List<BucketRoutingRule> routingRules;
+    private @Nullable List<BucketRoutingRule> routingRules;
 
-    public List<BucketRoutingRule> routingRules() {
-        return this.routingRules == null ? List.of() : this.routingRules;
+    public Optional<List<BucketRoutingRule>> routingRules() {
+        return Optional.ofNullable(this.routingRules);
     }
 
-    public BucketWebsiteConfiguration(
-        @Nullable String errorDocument,
-        @Nullable String indexDocument,
-        @Nullable BucketRedirectAllRequestsTo redirectAllRequestsTo,
-        @Nullable List<BucketRoutingRule> routingRules) {
-        this.errorDocument = errorDocument;
-        this.indexDocument = indexDocument;
-        this.redirectAllRequestsTo = redirectAllRequestsTo;
-        this.routingRules = routingRules;
-    }
+    private BucketWebsiteConfiguration() {}
 
-    private BucketWebsiteConfiguration() {
-        this.errorDocument = null;
-        this.indexDocument = null;
-        this.redirectAllRequestsTo = null;
-        this.routingRules = List.of();
+    private BucketWebsiteConfiguration(BucketWebsiteConfiguration $) {
+        this.errorDocument = $.errorDocument;
+        this.indexDocument = $.indexDocument;
+        this.redirectAllRequestsTo = $.redirectAllRequestsTo;
+        this.routingRules = $.routingRules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketWebsiteConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String errorDocument;
-        private @Nullable String indexDocument;
-        private @Nullable BucketRedirectAllRequestsTo redirectAllRequestsTo;
-        private @Nullable List<BucketRoutingRule> routingRules;
+        private BucketWebsiteConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketWebsiteConfiguration();
         }
 
         public Builder(BucketWebsiteConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.errorDocument = defaults.errorDocument;
-    	      this.indexDocument = defaults.indexDocument;
-    	      this.redirectAllRequestsTo = defaults.redirectAllRequestsTo;
-    	      this.routingRules = defaults.routingRules;
+            $ = new BucketWebsiteConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder errorDocument(@Nullable String errorDocument) {
-            this.errorDocument = errorDocument;
+            $.errorDocument = errorDocument;
             return this;
         }
+
         public Builder indexDocument(@Nullable String indexDocument) {
-            this.indexDocument = indexDocument;
+            $.indexDocument = indexDocument;
             return this;
         }
+
         public Builder redirectAllRequestsTo(@Nullable BucketRedirectAllRequestsTo redirectAllRequestsTo) {
-            this.redirectAllRequestsTo = redirectAllRequestsTo;
+            $.redirectAllRequestsTo = redirectAllRequestsTo;
             return this;
         }
+
         public Builder routingRules(@Nullable List<BucketRoutingRule> routingRules) {
-            this.routingRules = routingRules;
+            $.routingRules = routingRules;
             return this;
         }
+
         public Builder routingRules(BucketRoutingRule... routingRules) {
             return routingRules(List.of(routingRules));
-        }        public BucketWebsiteConfiguration build() {
-            return new BucketWebsiteConfiguration(errorDocument, indexDocument, redirectAllRequestsTo, routingRules);
+        }
+
+        public BucketWebsiteConfiguration build() {
+            return $;
         }
     }
+
 }

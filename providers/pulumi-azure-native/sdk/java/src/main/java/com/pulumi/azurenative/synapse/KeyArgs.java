@@ -5,10 +5,10 @@ package com.pulumi.azurenative.synapse;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="isActiveCMK")
-      private final @Nullable Output<Boolean> isActiveCMK;
+    private @Nullable Output<Boolean> isActiveCMK;
 
-    public Output<Boolean> isActiveCMK() {
-        return this.isActiveCMK == null ? Codegen.empty() : this.isActiveCMK;
+    public Optional<Output<Boolean>> isActiveCMK() {
+        return Optional.ofNullable(this.isActiveCMK);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keyName")
-      private final @Nullable Output<String> keyName;
+    private @Nullable Output<String> keyName;
 
-    public Output<String> keyName() {
-        return this.keyName == null ? Codegen.empty() : this.keyName;
+    public Optional<Output<String>> keyName() {
+        return Optional.ofNullable(this.keyName);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keyVaultUrl")
-      private final @Nullable Output<String> keyVaultUrl;
+    private @Nullable Output<String> keyVaultUrl;
 
-    public Output<String> keyVaultUrl() {
-        return this.keyVaultUrl == null ? Codegen.empty() : this.keyVaultUrl;
+    public Optional<Output<String>> keyVaultUrl() {
+        return Optional.ofNullable(this.keyVaultUrl);
     }
 
     /**
@@ -54,7 +54,7 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -65,102 +65,90 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final Output<String> workspaceName;
+    private Output<String> workspaceName;
 
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
-    public KeyArgs(
-        @Nullable Output<Boolean> isActiveCMK,
-        @Nullable Output<String> keyName,
-        @Nullable Output<String> keyVaultUrl,
-        Output<String> resourceGroupName,
-        Output<String> workspaceName) {
-        this.isActiveCMK = isActiveCMK;
-        this.keyName = keyName;
-        this.keyVaultUrl = keyVaultUrl;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private KeyArgs() {}
 
-    private KeyArgs() {
-        this.isActiveCMK = Codegen.empty();
-        this.keyName = Codegen.empty();
-        this.keyVaultUrl = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.workspaceName = Codegen.empty();
+    private KeyArgs(KeyArgs $) {
+        this.isActiveCMK = $.isActiveCMK;
+        this.keyName = $.keyName;
+        this.keyVaultUrl = $.keyVaultUrl;
+        this.resourceGroupName = $.resourceGroupName;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> isActiveCMK;
-        private @Nullable Output<String> keyName;
-        private @Nullable Output<String> keyVaultUrl;
-        private Output<String> resourceGroupName;
-        private Output<String> workspaceName;
+        private KeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyArgs();
         }
 
         public Builder(KeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.isActiveCMK = defaults.isActiveCMK;
-    	      this.keyName = defaults.keyName;
-    	      this.keyVaultUrl = defaults.keyVaultUrl;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new KeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder isActiveCMK(@Nullable Output<Boolean> isActiveCMK) {
-            this.isActiveCMK = isActiveCMK;
+            $.isActiveCMK = isActiveCMK;
             return this;
         }
-        public Builder isActiveCMK(@Nullable Boolean isActiveCMK) {
-            this.isActiveCMK = Codegen.ofNullable(isActiveCMK);
-            return this;
+
+        public Builder isActiveCMK(Boolean isActiveCMK) {
+            return isActiveCMK(Output.of(isActiveCMK));
         }
+
         public Builder keyName(@Nullable Output<String> keyName) {
-            this.keyName = keyName;
+            $.keyName = keyName;
             return this;
         }
-        public Builder keyName(@Nullable String keyName) {
-            this.keyName = Codegen.ofNullable(keyName);
-            return this;
+
+        public Builder keyName(String keyName) {
+            return keyName(Output.of(keyName));
         }
+
         public Builder keyVaultUrl(@Nullable Output<String> keyVaultUrl) {
-            this.keyVaultUrl = keyVaultUrl;
+            $.keyVaultUrl = keyVaultUrl;
             return this;
         }
-        public Builder keyVaultUrl(@Nullable String keyVaultUrl) {
-            this.keyVaultUrl = Codegen.ofNullable(keyVaultUrl);
-            return this;
+
+        public Builder keyVaultUrl(String keyVaultUrl) {
+            return keyVaultUrl(Output.of(keyVaultUrl));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder workspaceName(Output<String> workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
-            return this;
-        }        public KeyArgs build() {
-            return new KeyArgs(isActiveCMK, keyName, keyVaultUrl, resourceGroupName, workspaceName);
+            return workspaceName(Output.of(workspaceName));
+        }
+
+        public KeyArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

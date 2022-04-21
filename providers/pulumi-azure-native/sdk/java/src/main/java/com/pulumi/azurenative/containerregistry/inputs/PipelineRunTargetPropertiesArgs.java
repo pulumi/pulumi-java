@@ -10,6 +10,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +23,10 @@ public final class PipelineRunTargetPropertiesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -33,63 +34,59 @@ public final class PipelineRunTargetPropertiesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<Either<String,PipelineRunTargetType>> type;
+    private @Nullable Output<Either<String,PipelineRunTargetType>> type;
 
-    public Output<Either<String,PipelineRunTargetType>> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<Either<String,PipelineRunTargetType>>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public PipelineRunTargetPropertiesArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<Either<String,PipelineRunTargetType>> type) {
-        this.name = name;
-        this.type = Codegen.stringProp("type").left(PipelineRunTargetType.class).output().arg(type).def("AzureStorageBlob").getNullable();
-    }
+    private PipelineRunTargetPropertiesArgs() {}
 
-    private PipelineRunTargetPropertiesArgs() {
-        this.name = Codegen.empty();
-        this.type = Codegen.empty();
+    private PipelineRunTargetPropertiesArgs(PipelineRunTargetPropertiesArgs $) {
+        this.name = $.name;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PipelineRunTargetPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<Either<String,PipelineRunTargetType>> type;
+        private PipelineRunTargetPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PipelineRunTargetPropertiesArgs();
         }
 
         public Builder(PipelineRunTargetPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.type = defaults.type;
+            $ = new PipelineRunTargetPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder type(@Nullable Output<Either<String,PipelineRunTargetType>> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable Either<String,PipelineRunTargetType> type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public PipelineRunTargetPropertiesArgs build() {
-            return new PipelineRunTargetPropertiesArgs(name, type);
+
+        public Builder type(Either<String,PipelineRunTargetType> type) {
+            return type(Output.of(type));
+        }
+
+        public PipelineRunTargetPropertiesArgs build() {
+            $.type = Codegen.stringProp("type").left(PipelineRunTargetType.class).output().arg($.type).def("AzureStorageBlob").getNullable();
+            return $;
         }
     }
+
 }

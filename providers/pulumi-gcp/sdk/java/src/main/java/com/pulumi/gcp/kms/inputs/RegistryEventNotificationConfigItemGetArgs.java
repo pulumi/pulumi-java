@@ -5,9 +5,9 @@ package com.pulumi.gcp.kms.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,66 @@ public final class RegistryEventNotificationConfigItemGetArgs extends com.pulumi
     public static final RegistryEventNotificationConfigItemGetArgs Empty = new RegistryEventNotificationConfigItemGetArgs();
 
     @Import(name="pubsubTopicName", required=true)
-      private final Output<String> pubsubTopicName;
+    private Output<String> pubsubTopicName;
 
     public Output<String> pubsubTopicName() {
         return this.pubsubTopicName;
     }
 
     @Import(name="subfolderMatches")
-      private final @Nullable Output<String> subfolderMatches;
+    private @Nullable Output<String> subfolderMatches;
 
-    public Output<String> subfolderMatches() {
-        return this.subfolderMatches == null ? Codegen.empty() : this.subfolderMatches;
+    public Optional<Output<String>> subfolderMatches() {
+        return Optional.ofNullable(this.subfolderMatches);
     }
 
-    public RegistryEventNotificationConfigItemGetArgs(
-        Output<String> pubsubTopicName,
-        @Nullable Output<String> subfolderMatches) {
-        this.pubsubTopicName = Objects.requireNonNull(pubsubTopicName, "expected parameter 'pubsubTopicName' to be non-null");
-        this.subfolderMatches = subfolderMatches;
-    }
+    private RegistryEventNotificationConfigItemGetArgs() {}
 
-    private RegistryEventNotificationConfigItemGetArgs() {
-        this.pubsubTopicName = Codegen.empty();
-        this.subfolderMatches = Codegen.empty();
+    private RegistryEventNotificationConfigItemGetArgs(RegistryEventNotificationConfigItemGetArgs $) {
+        this.pubsubTopicName = $.pubsubTopicName;
+        this.subfolderMatches = $.subfolderMatches;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegistryEventNotificationConfigItemGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> pubsubTopicName;
-        private @Nullable Output<String> subfolderMatches;
+        private RegistryEventNotificationConfigItemGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegistryEventNotificationConfigItemGetArgs();
         }
 
         public Builder(RegistryEventNotificationConfigItemGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.pubsubTopicName = defaults.pubsubTopicName;
-    	      this.subfolderMatches = defaults.subfolderMatches;
+            $ = new RegistryEventNotificationConfigItemGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder pubsubTopicName(Output<String> pubsubTopicName) {
-            this.pubsubTopicName = Objects.requireNonNull(pubsubTopicName);
+            $.pubsubTopicName = pubsubTopicName;
             return this;
         }
+
         public Builder pubsubTopicName(String pubsubTopicName) {
-            this.pubsubTopicName = Output.of(Objects.requireNonNull(pubsubTopicName));
-            return this;
+            return pubsubTopicName(Output.of(pubsubTopicName));
         }
+
         public Builder subfolderMatches(@Nullable Output<String> subfolderMatches) {
-            this.subfolderMatches = subfolderMatches;
+            $.subfolderMatches = subfolderMatches;
             return this;
         }
-        public Builder subfolderMatches(@Nullable String subfolderMatches) {
-            this.subfolderMatches = Codegen.ofNullable(subfolderMatches);
-            return this;
-        }        public RegistryEventNotificationConfigItemGetArgs build() {
-            return new RegistryEventNotificationConfigItemGetArgs(pubsubTopicName, subfolderMatches);
+
+        public Builder subfolderMatches(String subfolderMatches) {
+            return subfolderMatches(Output.of(subfolderMatches));
+        }
+
+        public RegistryEventNotificationConfigItemGetArgs build() {
+            $.pubsubTopicName = Objects.requireNonNull($.pubsubTopicName, "expected parameter 'pubsubTopicName' to be non-null");
+            return $;
         }
     }
+
 }

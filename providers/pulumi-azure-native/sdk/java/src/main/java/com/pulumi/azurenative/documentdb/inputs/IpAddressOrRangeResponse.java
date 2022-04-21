@@ -23,45 +23,44 @@ public final class IpAddressOrRangeResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="ipAddressOrRange")
-      private final @Nullable String ipAddressOrRange;
+    private @Nullable String ipAddressOrRange;
 
     public Optional<String> ipAddressOrRange() {
-        return this.ipAddressOrRange == null ? Optional.empty() : Optional.ofNullable(this.ipAddressOrRange);
+        return Optional.ofNullable(this.ipAddressOrRange);
     }
 
-    public IpAddressOrRangeResponse(@Nullable String ipAddressOrRange) {
-        this.ipAddressOrRange = ipAddressOrRange;
-    }
+    private IpAddressOrRangeResponse() {}
 
-    private IpAddressOrRangeResponse() {
-        this.ipAddressOrRange = null;
+    private IpAddressOrRangeResponse(IpAddressOrRangeResponse $) {
+        this.ipAddressOrRange = $.ipAddressOrRange;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IpAddressOrRangeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String ipAddressOrRange;
+        private IpAddressOrRangeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IpAddressOrRangeResponse();
         }
 
         public Builder(IpAddressOrRangeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipAddressOrRange = defaults.ipAddressOrRange;
+            $ = new IpAddressOrRangeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder ipAddressOrRange(@Nullable String ipAddressOrRange) {
-            this.ipAddressOrRange = ipAddressOrRange;
+            $.ipAddressOrRange = ipAddressOrRange;
             return this;
-        }        public IpAddressOrRangeResponse build() {
-            return new IpAddressOrRangeResponse(ipAddressOrRange);
+        }
+
+        public IpAddressOrRangeResponse build() {
+            return $;
         }
     }
+
 }

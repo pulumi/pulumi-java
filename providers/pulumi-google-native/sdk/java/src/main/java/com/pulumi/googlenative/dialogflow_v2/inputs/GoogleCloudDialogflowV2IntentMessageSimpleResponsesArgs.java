@@ -5,7 +5,6 @@ package com.pulumi.googlenative.dialogflow_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs;
 import java.util.List;
 import java.util.Objects;
@@ -24,52 +23,53 @@ public final class GoogleCloudDialogflowV2IntentMessageSimpleResponsesArgs exten
      * 
      */
     @Import(name="simpleResponses", required=true)
-      private final Output<List<GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs>> simpleResponses;
+    private Output<List<GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs>> simpleResponses;
 
     public Output<List<GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs>> simpleResponses() {
         return this.simpleResponses;
     }
 
-    public GoogleCloudDialogflowV2IntentMessageSimpleResponsesArgs(Output<List<GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs>> simpleResponses) {
-        this.simpleResponses = Objects.requireNonNull(simpleResponses, "expected parameter 'simpleResponses' to be non-null");
-    }
+    private GoogleCloudDialogflowV2IntentMessageSimpleResponsesArgs() {}
 
-    private GoogleCloudDialogflowV2IntentMessageSimpleResponsesArgs() {
-        this.simpleResponses = Codegen.empty();
+    private GoogleCloudDialogflowV2IntentMessageSimpleResponsesArgs(GoogleCloudDialogflowV2IntentMessageSimpleResponsesArgs $) {
+        this.simpleResponses = $.simpleResponses;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2IntentMessageSimpleResponsesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs>> simpleResponses;
+        private GoogleCloudDialogflowV2IntentMessageSimpleResponsesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2IntentMessageSimpleResponsesArgs();
         }
 
         public Builder(GoogleCloudDialogflowV2IntentMessageSimpleResponsesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.simpleResponses = defaults.simpleResponses;
+            $ = new GoogleCloudDialogflowV2IntentMessageSimpleResponsesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder simpleResponses(Output<List<GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs>> simpleResponses) {
-            this.simpleResponses = Objects.requireNonNull(simpleResponses);
+            $.simpleResponses = simpleResponses;
             return this;
         }
+
         public Builder simpleResponses(List<GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs> simpleResponses) {
-            this.simpleResponses = Output.of(Objects.requireNonNull(simpleResponses));
-            return this;
+            return simpleResponses(Output.of(simpleResponses));
         }
+
         public Builder simpleResponses(GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs... simpleResponses) {
             return simpleResponses(List.of(simpleResponses));
-        }        public GoogleCloudDialogflowV2IntentMessageSimpleResponsesArgs build() {
-            return new GoogleCloudDialogflowV2IntentMessageSimpleResponsesArgs(simpleResponses);
+        }
+
+        public GoogleCloudDialogflowV2IntentMessageSimpleResponsesArgs build() {
+            $.simpleResponses = Objects.requireNonNull($.simpleResponses, "expected parameter 'simpleResponses' to be non-null");
+            return $;
         }
     }
+
 }

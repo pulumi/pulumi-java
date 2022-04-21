@@ -6,9 +6,9 @@ package com.pulumi.aws.cloudwatch;
 import com.pulumi.aws.cloudwatch.inputs.EventConnectionAuthParametersArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class EventConnectionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="authParameters", required=true)
-      private final Output<EventConnectionAuthParametersArgs> authParameters;
+    private Output<EventConnectionAuthParametersArgs> authParameters;
 
     public Output<EventConnectionAuthParametersArgs> authParameters() {
         return this.authParameters;
@@ -32,7 +32,7 @@ public final class EventConnectionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="authorizationType", required=true)
-      private final Output<String> authorizationType;
+    private Output<String> authorizationType;
 
     public Output<String> authorizationType() {
         return this.authorizationType;
@@ -43,10 +43,10 @@ public final class EventConnectionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -54,89 +54,80 @@ public final class EventConnectionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public EventConnectionArgs(
-        Output<EventConnectionAuthParametersArgs> authParameters,
-        Output<String> authorizationType,
-        @Nullable Output<String> description,
-        @Nullable Output<String> name) {
-        this.authParameters = Objects.requireNonNull(authParameters, "expected parameter 'authParameters' to be non-null");
-        this.authorizationType = Objects.requireNonNull(authorizationType, "expected parameter 'authorizationType' to be non-null");
-        this.description = description;
-        this.name = name;
-    }
+    private EventConnectionArgs() {}
 
-    private EventConnectionArgs() {
-        this.authParameters = Codegen.empty();
-        this.authorizationType = Codegen.empty();
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
+    private EventConnectionArgs(EventConnectionArgs $) {
+        this.authParameters = $.authParameters;
+        this.authorizationType = $.authorizationType;
+        this.description = $.description;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<EventConnectionAuthParametersArgs> authParameters;
-        private Output<String> authorizationType;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
+        private EventConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventConnectionArgs();
         }
 
         public Builder(EventConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authParameters = defaults.authParameters;
-    	      this.authorizationType = defaults.authorizationType;
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
+            $ = new EventConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authParameters(Output<EventConnectionAuthParametersArgs> authParameters) {
-            this.authParameters = Objects.requireNonNull(authParameters);
+            $.authParameters = authParameters;
             return this;
         }
+
         public Builder authParameters(EventConnectionAuthParametersArgs authParameters) {
-            this.authParameters = Output.of(Objects.requireNonNull(authParameters));
-            return this;
+            return authParameters(Output.of(authParameters));
         }
+
         public Builder authorizationType(Output<String> authorizationType) {
-            this.authorizationType = Objects.requireNonNull(authorizationType);
+            $.authorizationType = authorizationType;
             return this;
         }
+
         public Builder authorizationType(String authorizationType) {
-            this.authorizationType = Output.of(Objects.requireNonNull(authorizationType));
-            return this;
+            return authorizationType(Output.of(authorizationType));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public EventConnectionArgs build() {
-            return new EventConnectionArgs(authParameters, authorizationType, description, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public EventConnectionArgs build() {
+            $.authParameters = Objects.requireNonNull($.authParameters, "expected parameter 'authParameters' to be non-null");
+            $.authorizationType = Objects.requireNonNull($.authorizationType, "expected parameter 'authorizationType' to be non-null");
+            return $;
         }
     }
+
 }

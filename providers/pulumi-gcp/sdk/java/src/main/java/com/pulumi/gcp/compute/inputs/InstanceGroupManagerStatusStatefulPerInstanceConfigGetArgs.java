@@ -5,9 +5,9 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class InstanceGroupManagerStatusStatefulPerInstanceConfigGetArgs ex
      * 
      */
     @Import(name="allEffective")
-      private final @Nullable Output<Boolean> allEffective;
+    private @Nullable Output<Boolean> allEffective;
 
-    public Output<Boolean> allEffective() {
-        return this.allEffective == null ? Codegen.empty() : this.allEffective;
+    public Optional<Output<Boolean>> allEffective() {
+        return Optional.ofNullable(this.allEffective);
     }
 
-    public InstanceGroupManagerStatusStatefulPerInstanceConfigGetArgs(@Nullable Output<Boolean> allEffective) {
-        this.allEffective = allEffective;
-    }
+    private InstanceGroupManagerStatusStatefulPerInstanceConfigGetArgs() {}
 
-    private InstanceGroupManagerStatusStatefulPerInstanceConfigGetArgs() {
-        this.allEffective = Codegen.empty();
+    private InstanceGroupManagerStatusStatefulPerInstanceConfigGetArgs(InstanceGroupManagerStatusStatefulPerInstanceConfigGetArgs $) {
+        this.allEffective = $.allEffective;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceGroupManagerStatusStatefulPerInstanceConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> allEffective;
+        private InstanceGroupManagerStatusStatefulPerInstanceConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceGroupManagerStatusStatefulPerInstanceConfigGetArgs();
         }
 
         public Builder(InstanceGroupManagerStatusStatefulPerInstanceConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allEffective = defaults.allEffective;
+            $ = new InstanceGroupManagerStatusStatefulPerInstanceConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allEffective(@Nullable Output<Boolean> allEffective) {
-            this.allEffective = allEffective;
+            $.allEffective = allEffective;
             return this;
         }
-        public Builder allEffective(@Nullable Boolean allEffective) {
-            this.allEffective = Codegen.ofNullable(allEffective);
-            return this;
-        }        public InstanceGroupManagerStatusStatefulPerInstanceConfigGetArgs build() {
-            return new InstanceGroupManagerStatusStatefulPerInstanceConfigGetArgs(allEffective);
+
+        public Builder allEffective(Boolean allEffective) {
+            return allEffective(Output.of(allEffective));
+        }
+
+        public InstanceGroupManagerStatusStatefulPerInstanceConfigGetArgs build() {
+            return $;
         }
     }
+
 }

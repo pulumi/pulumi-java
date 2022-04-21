@@ -6,9 +6,9 @@ package com.pulumi.azurenative.containerregistry.inputs;
 import com.pulumi.azurenative.containerregistry.inputs.SyncPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ParentPropertiesArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -36,63 +36,59 @@ public final class ParentPropertiesArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="syncProperties", required=true)
-      private final Output<SyncPropertiesArgs> syncProperties;
+    private Output<SyncPropertiesArgs> syncProperties;
 
     public Output<SyncPropertiesArgs> syncProperties() {
         return this.syncProperties;
     }
 
-    public ParentPropertiesArgs(
-        @Nullable Output<String> id,
-        Output<SyncPropertiesArgs> syncProperties) {
-        this.id = id;
-        this.syncProperties = Objects.requireNonNull(syncProperties, "expected parameter 'syncProperties' to be non-null");
-    }
+    private ParentPropertiesArgs() {}
 
-    private ParentPropertiesArgs() {
-        this.id = Codegen.empty();
-        this.syncProperties = Codegen.empty();
+    private ParentPropertiesArgs(ParentPropertiesArgs $) {
+        this.id = $.id;
+        this.syncProperties = $.syncProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ParentPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> id;
-        private Output<SyncPropertiesArgs> syncProperties;
+        private ParentPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ParentPropertiesArgs();
         }
 
         public Builder(ParentPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.syncProperties = defaults.syncProperties;
+            $ = new ParentPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder syncProperties(Output<SyncPropertiesArgs> syncProperties) {
-            this.syncProperties = Objects.requireNonNull(syncProperties);
+            $.syncProperties = syncProperties;
             return this;
         }
+
         public Builder syncProperties(SyncPropertiesArgs syncProperties) {
-            this.syncProperties = Output.of(Objects.requireNonNull(syncProperties));
-            return this;
-        }        public ParentPropertiesArgs build() {
-            return new ParentPropertiesArgs(id, syncProperties);
+            return syncProperties(Output.of(syncProperties));
+        }
+
+        public ParentPropertiesArgs build() {
+            $.syncProperties = Objects.requireNonNull($.syncProperties, "expected parameter 'syncProperties' to be non-null");
+            return $;
         }
     }
+
 }

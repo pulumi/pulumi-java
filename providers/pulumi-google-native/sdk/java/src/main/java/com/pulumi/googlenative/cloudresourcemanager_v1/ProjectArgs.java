@@ -5,12 +5,12 @@ package com.pulumi.googlenative.cloudresourcemanager_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.cloudresourcemanager_v1.enums.ProjectLifecycleState;
 import com.pulumi.googlenative.cloudresourcemanager_v1.inputs.ResourceIdArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createTime")
-      private final @Nullable Output<String> createTime;
+    private @Nullable Output<String> createTime;
 
-    public Output<String> createTime() {
-        return this.createTime == null ? Codegen.empty() : this.createTime;
+    public Optional<Output<String>> createTime() {
+        return Optional.ofNullable(this.createTime);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lifecycleState")
-      private final @Nullable Output<ProjectLifecycleState> lifecycleState;
+    private @Nullable Output<ProjectLifecycleState> lifecycleState;
 
-    public Output<ProjectLifecycleState> lifecycleState() {
-        return this.lifecycleState == null ? Codegen.empty() : this.lifecycleState;
+    public Optional<Output<ProjectLifecycleState>> lifecycleState() {
+        return Optional.ofNullable(this.lifecycleState);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parent")
-      private final @Nullable Output<ResourceIdArgs> parent;
+    private @Nullable Output<ResourceIdArgs> parent;
 
-    public Output<ResourceIdArgs> parent() {
-        return this.parent == null ? Codegen.empty() : this.parent;
+    public Optional<Output<ResourceIdArgs>> parent() {
+        return Optional.ofNullable(this.parent);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="projectId")
-      private final @Nullable Output<String> projectId;
+    private @Nullable Output<String> projectId;
 
-    public Output<String> projectId() {
-        return this.projectId == null ? Codegen.empty() : this.projectId;
+    public Optional<Output<String>> projectId() {
+        return Optional.ofNullable(this.projectId);
     }
 
     /**
@@ -89,128 +89,108 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="projectNumber")
-      private final @Nullable Output<String> projectNumber;
+    private @Nullable Output<String> projectNumber;
 
-    public Output<String> projectNumber() {
-        return this.projectNumber == null ? Codegen.empty() : this.projectNumber;
+    public Optional<Output<String>> projectNumber() {
+        return Optional.ofNullable(this.projectNumber);
     }
 
-    public ProjectArgs(
-        @Nullable Output<String> createTime,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<ProjectLifecycleState> lifecycleState,
-        @Nullable Output<String> name,
-        @Nullable Output<ResourceIdArgs> parent,
-        @Nullable Output<String> projectId,
-        @Nullable Output<String> projectNumber) {
-        this.createTime = createTime;
-        this.labels = labels;
-        this.lifecycleState = lifecycleState;
-        this.name = name;
-        this.parent = parent;
-        this.projectId = projectId;
-        this.projectNumber = projectNumber;
-    }
+    private ProjectArgs() {}
 
-    private ProjectArgs() {
-        this.createTime = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.lifecycleState = Codegen.empty();
-        this.name = Codegen.empty();
-        this.parent = Codegen.empty();
-        this.projectId = Codegen.empty();
-        this.projectNumber = Codegen.empty();
+    private ProjectArgs(ProjectArgs $) {
+        this.createTime = $.createTime;
+        this.labels = $.labels;
+        this.lifecycleState = $.lifecycleState;
+        this.name = $.name;
+        this.parent = $.parent;
+        this.projectId = $.projectId;
+        this.projectNumber = $.projectNumber;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProjectArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> createTime;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<ProjectLifecycleState> lifecycleState;
-        private @Nullable Output<String> name;
-        private @Nullable Output<ResourceIdArgs> parent;
-        private @Nullable Output<String> projectId;
-        private @Nullable Output<String> projectNumber;
+        private ProjectArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProjectArgs();
         }
 
         public Builder(ProjectArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createTime = defaults.createTime;
-    	      this.labels = defaults.labels;
-    	      this.lifecycleState = defaults.lifecycleState;
-    	      this.name = defaults.name;
-    	      this.parent = defaults.parent;
-    	      this.projectId = defaults.projectId;
-    	      this.projectNumber = defaults.projectNumber;
+            $ = new ProjectArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder createTime(@Nullable Output<String> createTime) {
-            this.createTime = createTime;
+            $.createTime = createTime;
             return this;
         }
-        public Builder createTime(@Nullable String createTime) {
-            this.createTime = Codegen.ofNullable(createTime);
-            return this;
+
+        public Builder createTime(String createTime) {
+            return createTime(Output.of(createTime));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder lifecycleState(@Nullable Output<ProjectLifecycleState> lifecycleState) {
-            this.lifecycleState = lifecycleState;
+            $.lifecycleState = lifecycleState;
             return this;
         }
-        public Builder lifecycleState(@Nullable ProjectLifecycleState lifecycleState) {
-            this.lifecycleState = Codegen.ofNullable(lifecycleState);
-            return this;
+
+        public Builder lifecycleState(ProjectLifecycleState lifecycleState) {
+            return lifecycleState(Output.of(lifecycleState));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder parent(@Nullable Output<ResourceIdArgs> parent) {
-            this.parent = parent;
+            $.parent = parent;
             return this;
         }
-        public Builder parent(@Nullable ResourceIdArgs parent) {
-            this.parent = Codegen.ofNullable(parent);
-            return this;
+
+        public Builder parent(ResourceIdArgs parent) {
+            return parent(Output.of(parent));
         }
+
         public Builder projectId(@Nullable Output<String> projectId) {
-            this.projectId = projectId;
+            $.projectId = projectId;
             return this;
         }
-        public Builder projectId(@Nullable String projectId) {
-            this.projectId = Codegen.ofNullable(projectId);
-            return this;
+
+        public Builder projectId(String projectId) {
+            return projectId(Output.of(projectId));
         }
+
         public Builder projectNumber(@Nullable Output<String> projectNumber) {
-            this.projectNumber = projectNumber;
+            $.projectNumber = projectNumber;
             return this;
         }
-        public Builder projectNumber(@Nullable String projectNumber) {
-            this.projectNumber = Codegen.ofNullable(projectNumber);
-            return this;
-        }        public ProjectArgs build() {
-            return new ProjectArgs(createTime, labels, lifecycleState, name, parent, projectId, projectNumber);
+
+        public Builder projectNumber(String projectNumber) {
+            return projectNumber(Output.of(projectNumber));
+        }
+
+        public ProjectArgs build() {
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class JobDatabaseOutput extends com.pulumi.resources.InvokeArgs {
     public static final JobDatabaseOutput Empty = new JobDatabaseOutput();
 
     @Import(name="databaseOptions", required=true)
-      private final JobDatabaseTableOutputOptions databaseOptions;
+    private JobDatabaseTableOutputOptions databaseOptions;
 
     public JobDatabaseTableOutputOptions databaseOptions() {
         return this.databaseOptions;
@@ -28,10 +28,10 @@ public final class JobDatabaseOutput extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="databaseOutputMode")
-      private final @Nullable JobDatabaseOutputDatabaseOutputMode databaseOutputMode;
+    private @Nullable JobDatabaseOutputDatabaseOutputMode databaseOutputMode;
 
     public Optional<JobDatabaseOutputDatabaseOutputMode> databaseOutputMode() {
-        return this.databaseOutputMode == null ? Optional.empty() : Optional.ofNullable(this.databaseOutputMode);
+        return Optional.ofNullable(this.databaseOutputMode);
     }
 
     /**
@@ -39,64 +39,58 @@ public final class JobDatabaseOutput extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="glueConnectionName", required=true)
-      private final String glueConnectionName;
+    private String glueConnectionName;
 
     public String glueConnectionName() {
         return this.glueConnectionName;
     }
 
-    public JobDatabaseOutput(
-        JobDatabaseTableOutputOptions databaseOptions,
-        @Nullable JobDatabaseOutputDatabaseOutputMode databaseOutputMode,
-        String glueConnectionName) {
-        this.databaseOptions = Objects.requireNonNull(databaseOptions, "expected parameter 'databaseOptions' to be non-null");
-        this.databaseOutputMode = databaseOutputMode;
-        this.glueConnectionName = Objects.requireNonNull(glueConnectionName, "expected parameter 'glueConnectionName' to be non-null");
-    }
+    private JobDatabaseOutput() {}
 
-    private JobDatabaseOutput() {
-        this.databaseOptions = null;
-        this.databaseOutputMode = null;
-        this.glueConnectionName = null;
+    private JobDatabaseOutput(JobDatabaseOutput $) {
+        this.databaseOptions = $.databaseOptions;
+        this.databaseOutputMode = $.databaseOutputMode;
+        this.glueConnectionName = $.glueConnectionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobDatabaseOutput defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private JobDatabaseTableOutputOptions databaseOptions;
-        private @Nullable JobDatabaseOutputDatabaseOutputMode databaseOutputMode;
-        private String glueConnectionName;
+        private JobDatabaseOutput $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobDatabaseOutput();
         }
 
         public Builder(JobDatabaseOutput defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.databaseOptions = defaults.databaseOptions;
-    	      this.databaseOutputMode = defaults.databaseOutputMode;
-    	      this.glueConnectionName = defaults.glueConnectionName;
+            $ = new JobDatabaseOutput(Objects.requireNonNull(defaults));
         }
 
         public Builder databaseOptions(JobDatabaseTableOutputOptions databaseOptions) {
-            this.databaseOptions = Objects.requireNonNull(databaseOptions);
+            $.databaseOptions = databaseOptions;
             return this;
         }
+
         public Builder databaseOutputMode(@Nullable JobDatabaseOutputDatabaseOutputMode databaseOutputMode) {
-            this.databaseOutputMode = databaseOutputMode;
+            $.databaseOutputMode = databaseOutputMode;
             return this;
         }
+
         public Builder glueConnectionName(String glueConnectionName) {
-            this.glueConnectionName = Objects.requireNonNull(glueConnectionName);
+            $.glueConnectionName = glueConnectionName;
             return this;
-        }        public JobDatabaseOutput build() {
-            return new JobDatabaseOutput(databaseOptions, databaseOutputMode, glueConnectionName);
+        }
+
+        public JobDatabaseOutput build() {
+            $.databaseOptions = Objects.requireNonNull($.databaseOptions, "expected parameter 'databaseOptions' to be non-null");
+            $.glueConnectionName = Objects.requireNonNull($.glueConnectionName, "expected parameter 'glueConnectionName' to be non-null");
+            return $;
         }
     }
+
 }

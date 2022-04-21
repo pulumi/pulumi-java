@@ -5,13 +5,13 @@ package com.pulumi.gcp.networkservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.networkservices.inputs.EdgeCacheOriginTimeoutGetArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class EdgeCacheOriginState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class EdgeCacheOriginState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="failoverOrigin")
-      private final @Nullable Output<String> failoverOrigin;
+    private @Nullable Output<String> failoverOrigin;
 
-    public Output<String> failoverOrigin() {
-        return this.failoverOrigin == null ? Codegen.empty() : this.failoverOrigin;
+    public Optional<Output<String>> failoverOrigin() {
+        return Optional.ofNullable(this.failoverOrigin);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class EdgeCacheOriginState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class EdgeCacheOriginState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="maxAttempts")
-      private final @Nullable Output<Integer> maxAttempts;
+    private @Nullable Output<Integer> maxAttempts;
 
-    public Output<Integer> maxAttempts() {
-        return this.maxAttempts == null ? Codegen.empty() : this.maxAttempts;
+    public Optional<Output<Integer>> maxAttempts() {
+        return Optional.ofNullable(this.maxAttempts);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class EdgeCacheOriginState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class EdgeCacheOriginState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="originAddress")
-      private final @Nullable Output<String> originAddress;
+    private @Nullable Output<String> originAddress;
 
-    public Output<String> originAddress() {
-        return this.originAddress == null ? Codegen.empty() : this.originAddress;
+    public Optional<Output<String>> originAddress() {
+        return Optional.ofNullable(this.originAddress);
     }
 
     /**
@@ -106,10 +106,10 @@ public final class EdgeCacheOriginState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="port")
-      private final @Nullable Output<Integer> port;
+    private @Nullable Output<Integer> port;
 
-    public Output<Integer> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<Integer>> port() {
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -118,10 +118,10 @@ public final class EdgeCacheOriginState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -131,10 +131,10 @@ public final class EdgeCacheOriginState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="protocol")
-      private final @Nullable Output<String> protocol;
+    private @Nullable Output<String> protocol;
 
-    public Output<String> protocol() {
-        return this.protocol == null ? Codegen.empty() : this.protocol;
+    public Optional<Output<String>> protocol() {
+        return Optional.ofNullable(this.protocol);
     }
 
     /**
@@ -154,10 +154,10 @@ public final class EdgeCacheOriginState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="retryConditions")
-      private final @Nullable Output<List<String>> retryConditions;
+    private @Nullable Output<List<String>> retryConditions;
 
-    public Output<List<String>> retryConditions() {
-        return this.retryConditions == null ? Codegen.empty() : this.retryConditions;
+    public Optional<Output<List<String>>> retryConditions() {
+        return Optional.ofNullable(this.retryConditions);
     }
 
     /**
@@ -166,183 +166,152 @@ public final class EdgeCacheOriginState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="timeout")
-      private final @Nullable Output<EdgeCacheOriginTimeoutGetArgs> timeout;
+    private @Nullable Output<EdgeCacheOriginTimeoutGetArgs> timeout;
 
-    public Output<EdgeCacheOriginTimeoutGetArgs> timeout() {
-        return this.timeout == null ? Codegen.empty() : this.timeout;
+    public Optional<Output<EdgeCacheOriginTimeoutGetArgs>> timeout() {
+        return Optional.ofNullable(this.timeout);
     }
 
-    public EdgeCacheOriginState(
-        @Nullable Output<String> description,
-        @Nullable Output<String> failoverOrigin,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<Integer> maxAttempts,
-        @Nullable Output<String> name,
-        @Nullable Output<String> originAddress,
-        @Nullable Output<Integer> port,
-        @Nullable Output<String> project,
-        @Nullable Output<String> protocol,
-        @Nullable Output<List<String>> retryConditions,
-        @Nullable Output<EdgeCacheOriginTimeoutGetArgs> timeout) {
-        this.description = description;
-        this.failoverOrigin = failoverOrigin;
-        this.labels = labels;
-        this.maxAttempts = maxAttempts;
-        this.name = name;
-        this.originAddress = originAddress;
-        this.port = port;
-        this.project = project;
-        this.protocol = protocol;
-        this.retryConditions = retryConditions;
-        this.timeout = timeout;
-    }
+    private EdgeCacheOriginState() {}
 
-    private EdgeCacheOriginState() {
-        this.description = Codegen.empty();
-        this.failoverOrigin = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.maxAttempts = Codegen.empty();
-        this.name = Codegen.empty();
-        this.originAddress = Codegen.empty();
-        this.port = Codegen.empty();
-        this.project = Codegen.empty();
-        this.protocol = Codegen.empty();
-        this.retryConditions = Codegen.empty();
-        this.timeout = Codegen.empty();
+    private EdgeCacheOriginState(EdgeCacheOriginState $) {
+        this.description = $.description;
+        this.failoverOrigin = $.failoverOrigin;
+        this.labels = $.labels;
+        this.maxAttempts = $.maxAttempts;
+        this.name = $.name;
+        this.originAddress = $.originAddress;
+        this.port = $.port;
+        this.project = $.project;
+        this.protocol = $.protocol;
+        this.retryConditions = $.retryConditions;
+        this.timeout = $.timeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EdgeCacheOriginState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> failoverOrigin;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<Integer> maxAttempts;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> originAddress;
-        private @Nullable Output<Integer> port;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> protocol;
-        private @Nullable Output<List<String>> retryConditions;
-        private @Nullable Output<EdgeCacheOriginTimeoutGetArgs> timeout;
+        private EdgeCacheOriginState $;
 
         public Builder() {
-    	      // Empty
+            $ = new EdgeCacheOriginState();
         }
 
         public Builder(EdgeCacheOriginState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.failoverOrigin = defaults.failoverOrigin;
-    	      this.labels = defaults.labels;
-    	      this.maxAttempts = defaults.maxAttempts;
-    	      this.name = defaults.name;
-    	      this.originAddress = defaults.originAddress;
-    	      this.port = defaults.port;
-    	      this.project = defaults.project;
-    	      this.protocol = defaults.protocol;
-    	      this.retryConditions = defaults.retryConditions;
-    	      this.timeout = defaults.timeout;
+            $ = new EdgeCacheOriginState(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder failoverOrigin(@Nullable Output<String> failoverOrigin) {
-            this.failoverOrigin = failoverOrigin;
+            $.failoverOrigin = failoverOrigin;
             return this;
         }
-        public Builder failoverOrigin(@Nullable String failoverOrigin) {
-            this.failoverOrigin = Codegen.ofNullable(failoverOrigin);
-            return this;
+
+        public Builder failoverOrigin(String failoverOrigin) {
+            return failoverOrigin(Output.of(failoverOrigin));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder maxAttempts(@Nullable Output<Integer> maxAttempts) {
-            this.maxAttempts = maxAttempts;
+            $.maxAttempts = maxAttempts;
             return this;
         }
-        public Builder maxAttempts(@Nullable Integer maxAttempts) {
-            this.maxAttempts = Codegen.ofNullable(maxAttempts);
-            return this;
+
+        public Builder maxAttempts(Integer maxAttempts) {
+            return maxAttempts(Output.of(maxAttempts));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder originAddress(@Nullable Output<String> originAddress) {
-            this.originAddress = originAddress;
+            $.originAddress = originAddress;
             return this;
         }
-        public Builder originAddress(@Nullable String originAddress) {
-            this.originAddress = Codegen.ofNullable(originAddress);
-            return this;
+
+        public Builder originAddress(String originAddress) {
+            return originAddress(Output.of(originAddress));
         }
+
         public Builder port(@Nullable Output<Integer> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable Integer port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
+
+        public Builder port(Integer port) {
+            return port(Output.of(port));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder protocol(@Nullable Output<String> protocol) {
-            this.protocol = protocol;
+            $.protocol = protocol;
             return this;
         }
-        public Builder protocol(@Nullable String protocol) {
-            this.protocol = Codegen.ofNullable(protocol);
-            return this;
+
+        public Builder protocol(String protocol) {
+            return protocol(Output.of(protocol));
         }
+
         public Builder retryConditions(@Nullable Output<List<String>> retryConditions) {
-            this.retryConditions = retryConditions;
+            $.retryConditions = retryConditions;
             return this;
         }
-        public Builder retryConditions(@Nullable List<String> retryConditions) {
-            this.retryConditions = Codegen.ofNullable(retryConditions);
-            return this;
+
+        public Builder retryConditions(List<String> retryConditions) {
+            return retryConditions(Output.of(retryConditions));
         }
+
         public Builder retryConditions(String... retryConditions) {
             return retryConditions(List.of(retryConditions));
         }
+
         public Builder timeout(@Nullable Output<EdgeCacheOriginTimeoutGetArgs> timeout) {
-            this.timeout = timeout;
+            $.timeout = timeout;
             return this;
         }
-        public Builder timeout(@Nullable EdgeCacheOriginTimeoutGetArgs timeout) {
-            this.timeout = Codegen.ofNullable(timeout);
-            return this;
-        }        public EdgeCacheOriginState build() {
-            return new EdgeCacheOriginState(description, failoverOrigin, labels, maxAttempts, name, originAddress, port, project, protocol, retryConditions, timeout);
+
+        public Builder timeout(EdgeCacheOriginTimeoutGetArgs timeout) {
+            return timeout(Output.of(timeout));
+        }
+
+        public EdgeCacheOriginState build() {
+            return $;
         }
     }
+
 }

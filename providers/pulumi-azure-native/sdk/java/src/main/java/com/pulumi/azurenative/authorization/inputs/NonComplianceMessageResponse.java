@@ -23,7 +23,7 @@ public final class NonComplianceMessageResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="message", required=true)
-      private final String message;
+    private String message;
 
     public String message() {
         return this.message;
@@ -34,55 +34,51 @@ public final class NonComplianceMessageResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="policyDefinitionReferenceId")
-      private final @Nullable String policyDefinitionReferenceId;
+    private @Nullable String policyDefinitionReferenceId;
 
     public Optional<String> policyDefinitionReferenceId() {
-        return this.policyDefinitionReferenceId == null ? Optional.empty() : Optional.ofNullable(this.policyDefinitionReferenceId);
+        return Optional.ofNullable(this.policyDefinitionReferenceId);
     }
 
-    public NonComplianceMessageResponse(
-        String message,
-        @Nullable String policyDefinitionReferenceId) {
-        this.message = Objects.requireNonNull(message, "expected parameter 'message' to be non-null");
-        this.policyDefinitionReferenceId = policyDefinitionReferenceId;
-    }
+    private NonComplianceMessageResponse() {}
 
-    private NonComplianceMessageResponse() {
-        this.message = null;
-        this.policyDefinitionReferenceId = null;
+    private NonComplianceMessageResponse(NonComplianceMessageResponse $) {
+        this.message = $.message;
+        this.policyDefinitionReferenceId = $.policyDefinitionReferenceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NonComplianceMessageResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String message;
-        private @Nullable String policyDefinitionReferenceId;
+        private NonComplianceMessageResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NonComplianceMessageResponse();
         }
 
         public Builder(NonComplianceMessageResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.message = defaults.message;
-    	      this.policyDefinitionReferenceId = defaults.policyDefinitionReferenceId;
+            $ = new NonComplianceMessageResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder message(String message) {
-            this.message = Objects.requireNonNull(message);
+            $.message = message;
             return this;
         }
+
         public Builder policyDefinitionReferenceId(@Nullable String policyDefinitionReferenceId) {
-            this.policyDefinitionReferenceId = policyDefinitionReferenceId;
+            $.policyDefinitionReferenceId = policyDefinitionReferenceId;
             return this;
-        }        public NonComplianceMessageResponse build() {
-            return new NonComplianceMessageResponse(message, policyDefinitionReferenceId);
+        }
+
+        public NonComplianceMessageResponse build() {
+            $.message = Objects.requireNonNull($.message, "expected parameter 'message' to be non-null");
+            return $;
         }
     }
+
 }

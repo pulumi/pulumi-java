@@ -14,7 +14,7 @@ public final class GetServiceTemplateSpecContainerPort extends com.pulumi.resour
     public static final GetServiceTemplateSpecContainerPort Empty = new GetServiceTemplateSpecContainerPort();
 
     @Import(name="containerPort", required=true)
-      private final Integer containerPort;
+    private Integer containerPort;
 
     public Integer containerPort() {
         return this.containerPort;
@@ -25,71 +25,66 @@ public final class GetServiceTemplateSpecContainerPort extends com.pulumi.resour
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
     @Import(name="protocol", required=true)
-      private final String protocol;
+    private String protocol;
 
     public String protocol() {
         return this.protocol;
     }
 
-    public GetServiceTemplateSpecContainerPort(
-        Integer containerPort,
-        String name,
-        String protocol) {
-        this.containerPort = Objects.requireNonNull(containerPort, "expected parameter 'containerPort' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.protocol = Objects.requireNonNull(protocol, "expected parameter 'protocol' to be non-null");
-    }
+    private GetServiceTemplateSpecContainerPort() {}
 
-    private GetServiceTemplateSpecContainerPort() {
-        this.containerPort = null;
-        this.name = null;
-        this.protocol = null;
+    private GetServiceTemplateSpecContainerPort(GetServiceTemplateSpecContainerPort $) {
+        this.containerPort = $.containerPort;
+        this.name = $.name;
+        this.protocol = $.protocol;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetServiceTemplateSpecContainerPort defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer containerPort;
-        private String name;
-        private String protocol;
+        private GetServiceTemplateSpecContainerPort $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetServiceTemplateSpecContainerPort();
         }
 
         public Builder(GetServiceTemplateSpecContainerPort defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerPort = defaults.containerPort;
-    	      this.name = defaults.name;
-    	      this.protocol = defaults.protocol;
+            $ = new GetServiceTemplateSpecContainerPort(Objects.requireNonNull(defaults));
         }
 
         public Builder containerPort(Integer containerPort) {
-            this.containerPort = Objects.requireNonNull(containerPort);
+            $.containerPort = containerPort;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder protocol(String protocol) {
-            this.protocol = Objects.requireNonNull(protocol);
+            $.protocol = protocol;
             return this;
-        }        public GetServiceTemplateSpecContainerPort build() {
-            return new GetServiceTemplateSpecContainerPort(containerPort, name, protocol);
+        }
+
+        public GetServiceTemplateSpecContainerPort build() {
+            $.containerPort = Objects.requireNonNull($.containerPort, "expected parameter 'containerPort' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.protocol = Objects.requireNonNull($.protocol, "expected parameter 'protocol' to be non-null");
+            return $;
         }
     }
+
 }

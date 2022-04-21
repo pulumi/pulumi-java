@@ -24,7 +24,7 @@ public final class ReservationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="commitment", required=true)
-      private final String commitment;
+    private String commitment;
 
     public String commitment() {
         return this.commitment;
@@ -35,7 +35,7 @@ public final class ReservationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="creationTimestamp", required=true)
-      private final String creationTimestamp;
+    private String creationTimestamp;
 
     public String creationTimestamp() {
         return this.creationTimestamp;
@@ -46,7 +46,7 @@ public final class ReservationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -57,7 +57,7 @@ public final class ReservationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
@@ -68,7 +68,7 @@ public final class ReservationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -79,7 +79,7 @@ public final class ReservationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="satisfiesPzs", required=true)
-      private final Boolean satisfiesPzs;
+    private Boolean satisfiesPzs;
 
     public Boolean satisfiesPzs() {
         return this.satisfiesPzs;
@@ -90,7 +90,7 @@ public final class ReservationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="selfLink", required=true)
-      private final String selfLink;
+    private String selfLink;
 
     public String selfLink() {
         return this.selfLink;
@@ -101,7 +101,7 @@ public final class ReservationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="shareSettings", required=true)
-      private final ShareSettingsResponse shareSettings;
+    private ShareSettingsResponse shareSettings;
 
     public ShareSettingsResponse shareSettings() {
         return this.shareSettings;
@@ -112,7 +112,7 @@ public final class ReservationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="specificReservation", required=true)
-      private final AllocationSpecificSKUReservationResponse specificReservation;
+    private AllocationSpecificSKUReservationResponse specificReservation;
 
     public AllocationSpecificSKUReservationResponse specificReservation() {
         return this.specificReservation;
@@ -123,7 +123,7 @@ public final class ReservationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="specificReservationRequired", required=true)
-      private final Boolean specificReservationRequired;
+    private Boolean specificReservationRequired;
 
     public Boolean specificReservationRequired() {
         return this.specificReservationRequired;
@@ -134,7 +134,7 @@ public final class ReservationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
@@ -145,145 +145,122 @@ public final class ReservationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="zone", required=true)
-      private final String zone;
+    private String zone;
 
     public String zone() {
         return this.zone;
     }
 
-    public ReservationResponse(
-        String commitment,
-        String creationTimestamp,
-        String description,
-        String kind,
-        String name,
-        Boolean satisfiesPzs,
-        String selfLink,
-        ShareSettingsResponse shareSettings,
-        AllocationSpecificSKUReservationResponse specificReservation,
-        Boolean specificReservationRequired,
-        String status,
-        String zone) {
-        this.commitment = Objects.requireNonNull(commitment, "expected parameter 'commitment' to be non-null");
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp, "expected parameter 'creationTimestamp' to be non-null");
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.satisfiesPzs = Objects.requireNonNull(satisfiesPzs, "expected parameter 'satisfiesPzs' to be non-null");
-        this.selfLink = Objects.requireNonNull(selfLink, "expected parameter 'selfLink' to be non-null");
-        this.shareSettings = Objects.requireNonNull(shareSettings, "expected parameter 'shareSettings' to be non-null");
-        this.specificReservation = Objects.requireNonNull(specificReservation, "expected parameter 'specificReservation' to be non-null");
-        this.specificReservationRequired = Objects.requireNonNull(specificReservationRequired, "expected parameter 'specificReservationRequired' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-        this.zone = Objects.requireNonNull(zone, "expected parameter 'zone' to be non-null");
-    }
+    private ReservationResponse() {}
 
-    private ReservationResponse() {
-        this.commitment = null;
-        this.creationTimestamp = null;
-        this.description = null;
-        this.kind = null;
-        this.name = null;
-        this.satisfiesPzs = null;
-        this.selfLink = null;
-        this.shareSettings = null;
-        this.specificReservation = null;
-        this.specificReservationRequired = null;
-        this.status = null;
-        this.zone = null;
+    private ReservationResponse(ReservationResponse $) {
+        this.commitment = $.commitment;
+        this.creationTimestamp = $.creationTimestamp;
+        this.description = $.description;
+        this.kind = $.kind;
+        this.name = $.name;
+        this.satisfiesPzs = $.satisfiesPzs;
+        this.selfLink = $.selfLink;
+        this.shareSettings = $.shareSettings;
+        this.specificReservation = $.specificReservation;
+        this.specificReservationRequired = $.specificReservationRequired;
+        this.status = $.status;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReservationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String commitment;
-        private String creationTimestamp;
-        private String description;
-        private String kind;
-        private String name;
-        private Boolean satisfiesPzs;
-        private String selfLink;
-        private ShareSettingsResponse shareSettings;
-        private AllocationSpecificSKUReservationResponse specificReservation;
-        private Boolean specificReservationRequired;
-        private String status;
-        private String zone;
+        private ReservationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReservationResponse();
         }
 
         public Builder(ReservationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.commitment = defaults.commitment;
-    	      this.creationTimestamp = defaults.creationTimestamp;
-    	      this.description = defaults.description;
-    	      this.kind = defaults.kind;
-    	      this.name = defaults.name;
-    	      this.satisfiesPzs = defaults.satisfiesPzs;
-    	      this.selfLink = defaults.selfLink;
-    	      this.shareSettings = defaults.shareSettings;
-    	      this.specificReservation = defaults.specificReservation;
-    	      this.specificReservationRequired = defaults.specificReservationRequired;
-    	      this.status = defaults.status;
-    	      this.zone = defaults.zone;
+            $ = new ReservationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder commitment(String commitment) {
-            this.commitment = Objects.requireNonNull(commitment);
+            $.commitment = commitment;
             return this;
         }
+
         public Builder creationTimestamp(String creationTimestamp) {
-            this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
+            $.creationTimestamp = creationTimestamp;
             return this;
         }
+
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder satisfiesPzs(Boolean satisfiesPzs) {
-            this.satisfiesPzs = Objects.requireNonNull(satisfiesPzs);
+            $.satisfiesPzs = satisfiesPzs;
             return this;
         }
+
         public Builder selfLink(String selfLink) {
-            this.selfLink = Objects.requireNonNull(selfLink);
+            $.selfLink = selfLink;
             return this;
         }
+
         public Builder shareSettings(ShareSettingsResponse shareSettings) {
-            this.shareSettings = Objects.requireNonNull(shareSettings);
+            $.shareSettings = shareSettings;
             return this;
         }
+
         public Builder specificReservation(AllocationSpecificSKUReservationResponse specificReservation) {
-            this.specificReservation = Objects.requireNonNull(specificReservation);
+            $.specificReservation = specificReservation;
             return this;
         }
+
         public Builder specificReservationRequired(Boolean specificReservationRequired) {
-            this.specificReservationRequired = Objects.requireNonNull(specificReservationRequired);
+            $.specificReservationRequired = specificReservationRequired;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder zone(String zone) {
-            this.zone = Objects.requireNonNull(zone);
+            $.zone = zone;
             return this;
-        }        public ReservationResponse build() {
-            return new ReservationResponse(commitment, creationTimestamp, description, kind, name, satisfiesPzs, selfLink, shareSettings, specificReservation, specificReservationRequired, status, zone);
+        }
+
+        public ReservationResponse build() {
+            $.commitment = Objects.requireNonNull($.commitment, "expected parameter 'commitment' to be non-null");
+            $.creationTimestamp = Objects.requireNonNull($.creationTimestamp, "expected parameter 'creationTimestamp' to be non-null");
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.satisfiesPzs = Objects.requireNonNull($.satisfiesPzs, "expected parameter 'satisfiesPzs' to be non-null");
+            $.selfLink = Objects.requireNonNull($.selfLink, "expected parameter 'selfLink' to be non-null");
+            $.shareSettings = Objects.requireNonNull($.shareSettings, "expected parameter 'shareSettings' to be non-null");
+            $.specificReservation = Objects.requireNonNull($.specificReservation, "expected parameter 'specificReservation' to be non-null");
+            $.specificReservationRequired = Objects.requireNonNull($.specificReservationRequired, "expected parameter 'specificReservationRequired' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            $.zone = Objects.requireNonNull($.zone, "expected parameter 'zone' to be non-null");
+            return $;
         }
     }
+
 }

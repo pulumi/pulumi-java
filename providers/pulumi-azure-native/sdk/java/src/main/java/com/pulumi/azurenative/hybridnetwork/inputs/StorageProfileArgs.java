@@ -8,9 +8,9 @@ import com.pulumi.azurenative.hybridnetwork.inputs.ImageReferenceArgs;
 import com.pulumi.azurenative.hybridnetwork.inputs.OsDiskArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class StorageProfileArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="dataDisks")
-      private final @Nullable Output<List<DataDiskArgs>> dataDisks;
+    private @Nullable Output<List<DataDiskArgs>> dataDisks;
 
-    public Output<List<DataDiskArgs>> dataDisks() {
-        return this.dataDisks == null ? Codegen.empty() : this.dataDisks;
+    public Optional<Output<List<DataDiskArgs>>> dataDisks() {
+        return Optional.ofNullable(this.dataDisks);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class StorageProfileArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="imageReference")
-      private final @Nullable Output<ImageReferenceArgs> imageReference;
+    private @Nullable Output<ImageReferenceArgs> imageReference;
 
-    public Output<ImageReferenceArgs> imageReference() {
-        return this.imageReference == null ? Codegen.empty() : this.imageReference;
+    public Optional<Output<ImageReferenceArgs>> imageReference() {
+        return Optional.ofNullable(this.imageReference);
     }
 
     /**
@@ -49,79 +49,72 @@ public final class StorageProfileArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="osDisk")
-      private final @Nullable Output<OsDiskArgs> osDisk;
+    private @Nullable Output<OsDiskArgs> osDisk;
 
-    public Output<OsDiskArgs> osDisk() {
-        return this.osDisk == null ? Codegen.empty() : this.osDisk;
+    public Optional<Output<OsDiskArgs>> osDisk() {
+        return Optional.ofNullable(this.osDisk);
     }
 
-    public StorageProfileArgs(
-        @Nullable Output<List<DataDiskArgs>> dataDisks,
-        @Nullable Output<ImageReferenceArgs> imageReference,
-        @Nullable Output<OsDiskArgs> osDisk) {
-        this.dataDisks = dataDisks;
-        this.imageReference = imageReference;
-        this.osDisk = osDisk;
-    }
+    private StorageProfileArgs() {}
 
-    private StorageProfileArgs() {
-        this.dataDisks = Codegen.empty();
-        this.imageReference = Codegen.empty();
-        this.osDisk = Codegen.empty();
+    private StorageProfileArgs(StorageProfileArgs $) {
+        this.dataDisks = $.dataDisks;
+        this.imageReference = $.imageReference;
+        this.osDisk = $.osDisk;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<DataDiskArgs>> dataDisks;
-        private @Nullable Output<ImageReferenceArgs> imageReference;
-        private @Nullable Output<OsDiskArgs> osDisk;
+        private StorageProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageProfileArgs();
         }
 
         public Builder(StorageProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataDisks = defaults.dataDisks;
-    	      this.imageReference = defaults.imageReference;
-    	      this.osDisk = defaults.osDisk;
+            $ = new StorageProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataDisks(@Nullable Output<List<DataDiskArgs>> dataDisks) {
-            this.dataDisks = dataDisks;
+            $.dataDisks = dataDisks;
             return this;
         }
-        public Builder dataDisks(@Nullable List<DataDiskArgs> dataDisks) {
-            this.dataDisks = Codegen.ofNullable(dataDisks);
-            return this;
+
+        public Builder dataDisks(List<DataDiskArgs> dataDisks) {
+            return dataDisks(Output.of(dataDisks));
         }
+
         public Builder dataDisks(DataDiskArgs... dataDisks) {
             return dataDisks(List.of(dataDisks));
         }
+
         public Builder imageReference(@Nullable Output<ImageReferenceArgs> imageReference) {
-            this.imageReference = imageReference;
+            $.imageReference = imageReference;
             return this;
         }
-        public Builder imageReference(@Nullable ImageReferenceArgs imageReference) {
-            this.imageReference = Codegen.ofNullable(imageReference);
-            return this;
+
+        public Builder imageReference(ImageReferenceArgs imageReference) {
+            return imageReference(Output.of(imageReference));
         }
+
         public Builder osDisk(@Nullable Output<OsDiskArgs> osDisk) {
-            this.osDisk = osDisk;
+            $.osDisk = osDisk;
             return this;
         }
-        public Builder osDisk(@Nullable OsDiskArgs osDisk) {
-            this.osDisk = Codegen.ofNullable(osDisk);
-            return this;
-        }        public StorageProfileArgs build() {
-            return new StorageProfileArgs(dataDisks, imageReference, osDisk);
+
+        public Builder osDisk(OsDiskArgs osDisk) {
+            return osDisk(Output.of(osDisk));
+        }
+
+        public StorageProfileArgs build() {
+            return $;
         }
     }
+
 }

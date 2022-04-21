@@ -15,62 +15,58 @@ public final class GetConnectivityTestArgs extends com.pulumi.resources.InvokeAr
     public static final GetConnectivityTestArgs Empty = new GetConnectivityTestArgs();
 
     @Import(name="connectivityTestId", required=true)
-      private final String connectivityTestId;
+    private String connectivityTestId;
 
     public String connectivityTestId() {
         return this.connectivityTestId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetConnectivityTestArgs(
-        String connectivityTestId,
-        @Nullable String project) {
-        this.connectivityTestId = Objects.requireNonNull(connectivityTestId, "expected parameter 'connectivityTestId' to be non-null");
-        this.project = project;
-    }
+    private GetConnectivityTestArgs() {}
 
-    private GetConnectivityTestArgs() {
-        this.connectivityTestId = null;
-        this.project = null;
+    private GetConnectivityTestArgs(GetConnectivityTestArgs $) {
+        this.connectivityTestId = $.connectivityTestId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetConnectivityTestArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String connectivityTestId;
-        private @Nullable String project;
+        private GetConnectivityTestArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetConnectivityTestArgs();
         }
 
         public Builder(GetConnectivityTestArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectivityTestId = defaults.connectivityTestId;
-    	      this.project = defaults.project;
+            $ = new GetConnectivityTestArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connectivityTestId(String connectivityTestId) {
-            this.connectivityTestId = Objects.requireNonNull(connectivityTestId);
+            $.connectivityTestId = connectivityTestId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetConnectivityTestArgs build() {
-            return new GetConnectivityTestArgs(connectivityTestId, project);
+        }
+
+        public GetConnectivityTestArgs build() {
+            $.connectivityTestId = Objects.requireNonNull($.connectivityTestId, "expected parameter 'connectivityTestId' to be non-null");
+            return $;
         }
     }
+
 }

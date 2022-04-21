@@ -5,10 +5,10 @@ package com.pulumi.googlenative.dataproc_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class RuntimeConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="containerImage")
-      private final @Nullable Output<String> containerImage;
+    private @Nullable Output<String> containerImage;
 
-    public Output<String> containerImage() {
-        return this.containerImage == null ? Codegen.empty() : this.containerImage;
+    public Optional<Output<String>> containerImage() {
+        return Optional.ofNullable(this.containerImage);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class RuntimeConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<Map<String,String>> properties;
+    private @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<Map<String,String>>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class RuntimeConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public RuntimeConfigArgs(
-        @Nullable Output<String> containerImage,
-        @Nullable Output<Map<String,String>> properties,
-        @Nullable Output<String> version) {
-        this.containerImage = containerImage;
-        this.properties = properties;
-        this.version = version;
-    }
+    private RuntimeConfigArgs() {}
 
-    private RuntimeConfigArgs() {
-        this.containerImage = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.version = Codegen.empty();
+    private RuntimeConfigArgs(RuntimeConfigArgs $) {
+        this.containerImage = $.containerImage;
+        this.properties = $.properties;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuntimeConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> containerImage;
-        private @Nullable Output<Map<String,String>> properties;
-        private @Nullable Output<String> version;
+        private RuntimeConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuntimeConfigArgs();
         }
 
         public Builder(RuntimeConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerImage = defaults.containerImage;
-    	      this.properties = defaults.properties;
-    	      this.version = defaults.version;
+            $ = new RuntimeConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder containerImage(@Nullable Output<String> containerImage) {
-            this.containerImage = containerImage;
+            $.containerImage = containerImage;
             return this;
         }
-        public Builder containerImage(@Nullable String containerImage) {
-            this.containerImage = Codegen.ofNullable(containerImage);
-            return this;
+
+        public Builder containerImage(String containerImage) {
+            return containerImage(Output.of(containerImage));
         }
+
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(Map<String,String> properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public RuntimeConfigArgs build() {
-            return new RuntimeConfigArgs(containerImage, properties, version);
+
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public RuntimeConfigArgs build() {
+            return $;
         }
     }
+
 }

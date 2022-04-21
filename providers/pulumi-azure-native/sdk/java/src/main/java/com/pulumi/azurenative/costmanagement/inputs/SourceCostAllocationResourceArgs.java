@@ -7,7 +7,6 @@ import com.pulumi.azurenative.costmanagement.enums.CostAllocationResourceType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +25,7 @@ public final class SourceCostAllocationResourceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -37,7 +36,7 @@ public final class SourceCostAllocationResourceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceType", required=true)
-      private final Output<Either<String,CostAllocationResourceType>> resourceType;
+    private Output<Either<String,CostAllocationResourceType>> resourceType;
 
     public Output<Either<String,CostAllocationResourceType>> resourceType() {
         return this.resourceType;
@@ -48,79 +47,75 @@ public final class SourceCostAllocationResourceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="values", required=true)
-      private final Output<List<String>> values;
+    private Output<List<String>> values;
 
     public Output<List<String>> values() {
         return this.values;
     }
 
-    public SourceCostAllocationResourceArgs(
-        Output<String> name,
-        Output<Either<String,CostAllocationResourceType>> resourceType,
-        Output<List<String>> values) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resourceType = Objects.requireNonNull(resourceType, "expected parameter 'resourceType' to be non-null");
-        this.values = Objects.requireNonNull(values, "expected parameter 'values' to be non-null");
-    }
+    private SourceCostAllocationResourceArgs() {}
 
-    private SourceCostAllocationResourceArgs() {
-        this.name = Codegen.empty();
-        this.resourceType = Codegen.empty();
-        this.values = Codegen.empty();
+    private SourceCostAllocationResourceArgs(SourceCostAllocationResourceArgs $) {
+        this.name = $.name;
+        this.resourceType = $.resourceType;
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SourceCostAllocationResourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> name;
-        private Output<Either<String,CostAllocationResourceType>> resourceType;
-        private Output<List<String>> values;
+        private SourceCostAllocationResourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SourceCostAllocationResourceArgs();
         }
 
         public Builder(SourceCostAllocationResourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.resourceType = defaults.resourceType;
-    	      this.values = defaults.values;
+            $ = new SourceCostAllocationResourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder resourceType(Output<Either<String,CostAllocationResourceType>> resourceType) {
-            this.resourceType = Objects.requireNonNull(resourceType);
+            $.resourceType = resourceType;
             return this;
         }
+
         public Builder resourceType(Either<String,CostAllocationResourceType> resourceType) {
-            this.resourceType = Output.of(Objects.requireNonNull(resourceType));
-            return this;
+            return resourceType(Output.of(resourceType));
         }
+
         public Builder values(Output<List<String>> values) {
-            this.values = Objects.requireNonNull(values);
+            $.values = values;
             return this;
         }
+
         public Builder values(List<String> values) {
-            this.values = Output.of(Objects.requireNonNull(values));
-            return this;
+            return values(Output.of(values));
         }
+
         public Builder values(String... values) {
             return values(List.of(values));
-        }        public SourceCostAllocationResourceArgs build() {
-            return new SourceCostAllocationResourceArgs(name, resourceType, values);
+        }
+
+        public SourceCostAllocationResourceArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resourceType = Objects.requireNonNull($.resourceType, "expected parameter 'resourceType' to be non-null");
+            $.values = Objects.requireNonNull($.values, "expected parameter 'values' to be non-null");
+            return $;
         }
     }
+
 }

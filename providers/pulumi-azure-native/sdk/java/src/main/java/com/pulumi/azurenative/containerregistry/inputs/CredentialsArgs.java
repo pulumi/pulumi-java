@@ -7,10 +7,10 @@ import com.pulumi.azurenative.containerregistry.inputs.CustomRegistryCredentials
 import com.pulumi.azurenative.containerregistry.inputs.SourceRegistryCredentialsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class CredentialsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="customRegistries")
-      private final @Nullable Output<Map<String,CustomRegistryCredentialsArgs>> customRegistries;
+    private @Nullable Output<Map<String,CustomRegistryCredentialsArgs>> customRegistries;
 
-    public Output<Map<String,CustomRegistryCredentialsArgs>> customRegistries() {
-        return this.customRegistries == null ? Codegen.empty() : this.customRegistries;
+    public Optional<Output<Map<String,CustomRegistryCredentialsArgs>>> customRegistries() {
+        return Optional.ofNullable(this.customRegistries);
     }
 
     /**
@@ -40,63 +40,58 @@ public final class CredentialsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceRegistry")
-      private final @Nullable Output<SourceRegistryCredentialsArgs> sourceRegistry;
+    private @Nullable Output<SourceRegistryCredentialsArgs> sourceRegistry;
 
-    public Output<SourceRegistryCredentialsArgs> sourceRegistry() {
-        return this.sourceRegistry == null ? Codegen.empty() : this.sourceRegistry;
+    public Optional<Output<SourceRegistryCredentialsArgs>> sourceRegistry() {
+        return Optional.ofNullable(this.sourceRegistry);
     }
 
-    public CredentialsArgs(
-        @Nullable Output<Map<String,CustomRegistryCredentialsArgs>> customRegistries,
-        @Nullable Output<SourceRegistryCredentialsArgs> sourceRegistry) {
-        this.customRegistries = customRegistries;
-        this.sourceRegistry = sourceRegistry;
-    }
+    private CredentialsArgs() {}
 
-    private CredentialsArgs() {
-        this.customRegistries = Codegen.empty();
-        this.sourceRegistry = Codegen.empty();
+    private CredentialsArgs(CredentialsArgs $) {
+        this.customRegistries = $.customRegistries;
+        this.sourceRegistry = $.sourceRegistry;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CredentialsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,CustomRegistryCredentialsArgs>> customRegistries;
-        private @Nullable Output<SourceRegistryCredentialsArgs> sourceRegistry;
+        private CredentialsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CredentialsArgs();
         }
 
         public Builder(CredentialsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customRegistries = defaults.customRegistries;
-    	      this.sourceRegistry = defaults.sourceRegistry;
+            $ = new CredentialsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customRegistries(@Nullable Output<Map<String,CustomRegistryCredentialsArgs>> customRegistries) {
-            this.customRegistries = customRegistries;
+            $.customRegistries = customRegistries;
             return this;
         }
-        public Builder customRegistries(@Nullable Map<String,CustomRegistryCredentialsArgs> customRegistries) {
-            this.customRegistries = Codegen.ofNullable(customRegistries);
-            return this;
+
+        public Builder customRegistries(Map<String,CustomRegistryCredentialsArgs> customRegistries) {
+            return customRegistries(Output.of(customRegistries));
         }
+
         public Builder sourceRegistry(@Nullable Output<SourceRegistryCredentialsArgs> sourceRegistry) {
-            this.sourceRegistry = sourceRegistry;
+            $.sourceRegistry = sourceRegistry;
             return this;
         }
-        public Builder sourceRegistry(@Nullable SourceRegistryCredentialsArgs sourceRegistry) {
-            this.sourceRegistry = Codegen.ofNullable(sourceRegistry);
-            return this;
-        }        public CredentialsArgs build() {
-            return new CredentialsArgs(customRegistries, sourceRegistry);
+
+        public Builder sourceRegistry(SourceRegistryCredentialsArgs sourceRegistry) {
+            return sourceRegistry(Output.of(sourceRegistry));
+        }
+
+        public CredentialsArgs build() {
+            return $;
         }
     }
+
 }

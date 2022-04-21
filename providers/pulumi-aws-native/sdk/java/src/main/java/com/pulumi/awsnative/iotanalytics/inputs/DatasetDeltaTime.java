@@ -14,62 +14,59 @@ public final class DatasetDeltaTime extends com.pulumi.resources.InvokeArgs {
     public static final DatasetDeltaTime Empty = new DatasetDeltaTime();
 
     @Import(name="offsetSeconds", required=true)
-      private final Integer offsetSeconds;
+    private Integer offsetSeconds;
 
     public Integer offsetSeconds() {
         return this.offsetSeconds;
     }
 
     @Import(name="timeExpression", required=true)
-      private final String timeExpression;
+    private String timeExpression;
 
     public String timeExpression() {
         return this.timeExpression;
     }
 
-    public DatasetDeltaTime(
-        Integer offsetSeconds,
-        String timeExpression) {
-        this.offsetSeconds = Objects.requireNonNull(offsetSeconds, "expected parameter 'offsetSeconds' to be non-null");
-        this.timeExpression = Objects.requireNonNull(timeExpression, "expected parameter 'timeExpression' to be non-null");
-    }
+    private DatasetDeltaTime() {}
 
-    private DatasetDeltaTime() {
-        this.offsetSeconds = null;
-        this.timeExpression = null;
+    private DatasetDeltaTime(DatasetDeltaTime $) {
+        this.offsetSeconds = $.offsetSeconds;
+        this.timeExpression = $.timeExpression;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetDeltaTime defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer offsetSeconds;
-        private String timeExpression;
+        private DatasetDeltaTime $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetDeltaTime();
         }
 
         public Builder(DatasetDeltaTime defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.offsetSeconds = defaults.offsetSeconds;
-    	      this.timeExpression = defaults.timeExpression;
+            $ = new DatasetDeltaTime(Objects.requireNonNull(defaults));
         }
 
         public Builder offsetSeconds(Integer offsetSeconds) {
-            this.offsetSeconds = Objects.requireNonNull(offsetSeconds);
+            $.offsetSeconds = offsetSeconds;
             return this;
         }
+
         public Builder timeExpression(String timeExpression) {
-            this.timeExpression = Objects.requireNonNull(timeExpression);
+            $.timeExpression = timeExpression;
             return this;
-        }        public DatasetDeltaTime build() {
-            return new DatasetDeltaTime(offsetSeconds, timeExpression);
+        }
+
+        public DatasetDeltaTime build() {
+            $.offsetSeconds = Objects.requireNonNull($.offsetSeconds, "expected parameter 'offsetSeconds' to be non-null");
+            $.timeExpression = Objects.requireNonNull($.timeExpression, "expected parameter 'timeExpression' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class ListMachineLearningComputeNodesArgs extends com.pulumi.resour
      * 
      */
     @Import(name="computeName", required=true)
-      private final String computeName;
+    private String computeName;
 
     public String computeName() {
         return this.computeName;
@@ -28,7 +28,7 @@ public final class ListMachineLearningComputeNodesArgs extends com.pulumi.resour
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class ListMachineLearningComputeNodesArgs extends com.pulumi.resour
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final String workspaceName;
+    private String workspaceName;
 
     public String workspaceName() {
         return this.workspaceName;
     }
 
-    public ListMachineLearningComputeNodesArgs(
-        String computeName,
-        String resourceGroupName,
-        String workspaceName) {
-        this.computeName = Objects.requireNonNull(computeName, "expected parameter 'computeName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private ListMachineLearningComputeNodesArgs() {}
 
-    private ListMachineLearningComputeNodesArgs() {
-        this.computeName = null;
-        this.resourceGroupName = null;
-        this.workspaceName = null;
+    private ListMachineLearningComputeNodesArgs(ListMachineLearningComputeNodesArgs $) {
+        this.computeName = $.computeName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListMachineLearningComputeNodesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String computeName;
-        private String resourceGroupName;
-        private String workspaceName;
+        private ListMachineLearningComputeNodesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListMachineLearningComputeNodesArgs();
         }
 
         public Builder(ListMachineLearningComputeNodesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.computeName = defaults.computeName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new ListMachineLearningComputeNodesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder computeName(String computeName) {
-            this.computeName = Objects.requireNonNull(computeName);
+            $.computeName = computeName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
-        }        public ListMachineLearningComputeNodesArgs build() {
-            return new ListMachineLearningComputeNodesArgs(computeName, resourceGroupName, workspaceName);
+        }
+
+        public ListMachineLearningComputeNodesArgs build() {
+            $.computeName = Objects.requireNonNull($.computeName, "expected parameter 'computeName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

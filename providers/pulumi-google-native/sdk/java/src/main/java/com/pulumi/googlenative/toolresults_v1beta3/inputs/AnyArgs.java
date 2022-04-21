@@ -5,9 +5,9 @@ package com.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class AnyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="typeUrl")
-      private final @Nullable Output<String> typeUrl;
+    private @Nullable Output<String> typeUrl;
 
-    public Output<String> typeUrl() {
-        return this.typeUrl == null ? Codegen.empty() : this.typeUrl;
+    public Optional<Output<String>> typeUrl() {
+        return Optional.ofNullable(this.typeUrl);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class AnyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public AnyArgs(
-        @Nullable Output<String> typeUrl,
-        @Nullable Output<String> value) {
-        this.typeUrl = typeUrl;
-        this.value = value;
-    }
+    private AnyArgs() {}
 
-    private AnyArgs() {
-        this.typeUrl = Codegen.empty();
-        this.value = Codegen.empty();
+    private AnyArgs(AnyArgs $) {
+        this.typeUrl = $.typeUrl;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> typeUrl;
-        private @Nullable Output<String> value;
+        private AnyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnyArgs();
         }
 
         public Builder(AnyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.typeUrl = defaults.typeUrl;
-    	      this.value = defaults.value;
+            $ = new AnyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder typeUrl(@Nullable Output<String> typeUrl) {
-            this.typeUrl = typeUrl;
+            $.typeUrl = typeUrl;
             return this;
         }
-        public Builder typeUrl(@Nullable String typeUrl) {
-            this.typeUrl = Codegen.ofNullable(typeUrl);
-            return this;
+
+        public Builder typeUrl(String typeUrl) {
+            return typeUrl(Output.of(typeUrl));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public AnyArgs build() {
-            return new AnyArgs(typeUrl, value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public AnyArgs build() {
+            return $;
         }
     }
+
 }

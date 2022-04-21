@@ -5,13 +5,13 @@ package com.pulumi.googlenative.healthcare_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.healthcare_v1.inputs.PatientIdArgs;
 import com.pulumi.googlenative.healthcare_v1.inputs.SchematizedDataArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,21 +24,21 @@ public final class MessageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="data")
-      private final @Nullable Output<String> data;
+    private @Nullable Output<String> data;
 
-    public Output<String> data() {
-        return this.data == null ? Codegen.empty() : this.data;
+    public Optional<Output<String>> data() {
+        return Optional.ofNullable(this.data);
     }
 
     @Import(name="datasetId", required=true)
-      private final Output<String> datasetId;
+    private Output<String> datasetId;
 
     public Output<String> datasetId() {
         return this.datasetId;
     }
 
     @Import(name="hl7V2StoreId", required=true)
-      private final Output<String> hl7V2StoreId;
+    private Output<String> hl7V2StoreId;
 
     public Output<String> hl7V2StoreId() {
         return this.hl7V2StoreId;
@@ -49,17 +49,17 @@ public final class MessageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class MessageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="messageType")
-      private final @Nullable Output<String> messageType;
+    private @Nullable Output<String> messageType;
 
-    public Output<String> messageType() {
-        return this.messageType == null ? Codegen.empty() : this.messageType;
+    public Optional<Output<String>> messageType() {
+        return Optional.ofNullable(this.messageType);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class MessageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -89,17 +89,17 @@ public final class MessageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="patientIds")
-      private final @Nullable Output<List<PatientIdArgs>> patientIds;
+    private @Nullable Output<List<PatientIdArgs>> patientIds;
 
-    public Output<List<PatientIdArgs>> patientIds() {
-        return this.patientIds == null ? Codegen.empty() : this.patientIds;
+    public Optional<Output<List<PatientIdArgs>>> patientIds() {
+        return Optional.ofNullable(this.patientIds);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -107,10 +107,10 @@ public final class MessageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="schematizedData")
-      private final @Nullable Output<SchematizedDataArgs> schematizedData;
+    private @Nullable Output<SchematizedDataArgs> schematizedData;
 
-    public Output<SchematizedDataArgs> schematizedData() {
-        return this.schematizedData == null ? Codegen.empty() : this.schematizedData;
+    public Optional<Output<SchematizedDataArgs>> schematizedData() {
+        return Optional.ofNullable(this.schematizedData);
     }
 
     /**
@@ -118,10 +118,10 @@ public final class MessageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sendFacility")
-      private final @Nullable Output<String> sendFacility;
+    private @Nullable Output<String> sendFacility;
 
-    public Output<String> sendFacility() {
-        return this.sendFacility == null ? Codegen.empty() : this.sendFacility;
+    public Optional<Output<String>> sendFacility() {
+        return Optional.ofNullable(this.sendFacility);
     }
 
     /**
@@ -129,196 +129,164 @@ public final class MessageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sendTime")
-      private final @Nullable Output<String> sendTime;
+    private @Nullable Output<String> sendTime;
 
-    public Output<String> sendTime() {
-        return this.sendTime == null ? Codegen.empty() : this.sendTime;
+    public Optional<Output<String>> sendTime() {
+        return Optional.ofNullable(this.sendTime);
     }
 
-    public MessageArgs(
-        @Nullable Output<String> data,
-        Output<String> datasetId,
-        Output<String> hl7V2StoreId,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> location,
-        @Nullable Output<String> messageType,
-        @Nullable Output<String> name,
-        @Nullable Output<List<PatientIdArgs>> patientIds,
-        @Nullable Output<String> project,
-        @Nullable Output<SchematizedDataArgs> schematizedData,
-        @Nullable Output<String> sendFacility,
-        @Nullable Output<String> sendTime) {
-        this.data = data;
-        this.datasetId = Objects.requireNonNull(datasetId, "expected parameter 'datasetId' to be non-null");
-        this.hl7V2StoreId = Objects.requireNonNull(hl7V2StoreId, "expected parameter 'hl7V2StoreId' to be non-null");
-        this.labels = labels;
-        this.location = location;
-        this.messageType = messageType;
-        this.name = name;
-        this.patientIds = patientIds;
-        this.project = project;
-        this.schematizedData = schematizedData;
-        this.sendFacility = sendFacility;
-        this.sendTime = sendTime;
-    }
+    private MessageArgs() {}
 
-    private MessageArgs() {
-        this.data = Codegen.empty();
-        this.datasetId = Codegen.empty();
-        this.hl7V2StoreId = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.location = Codegen.empty();
-        this.messageType = Codegen.empty();
-        this.name = Codegen.empty();
-        this.patientIds = Codegen.empty();
-        this.project = Codegen.empty();
-        this.schematizedData = Codegen.empty();
-        this.sendFacility = Codegen.empty();
-        this.sendTime = Codegen.empty();
+    private MessageArgs(MessageArgs $) {
+        this.data = $.data;
+        this.datasetId = $.datasetId;
+        this.hl7V2StoreId = $.hl7V2StoreId;
+        this.labels = $.labels;
+        this.location = $.location;
+        this.messageType = $.messageType;
+        this.name = $.name;
+        this.patientIds = $.patientIds;
+        this.project = $.project;
+        this.schematizedData = $.schematizedData;
+        this.sendFacility = $.sendFacility;
+        this.sendTime = $.sendTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MessageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> data;
-        private Output<String> datasetId;
-        private Output<String> hl7V2StoreId;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> messageType;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<PatientIdArgs>> patientIds;
-        private @Nullable Output<String> project;
-        private @Nullable Output<SchematizedDataArgs> schematizedData;
-        private @Nullable Output<String> sendFacility;
-        private @Nullable Output<String> sendTime;
+        private MessageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MessageArgs();
         }
 
         public Builder(MessageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.data = defaults.data;
-    	      this.datasetId = defaults.datasetId;
-    	      this.hl7V2StoreId = defaults.hl7V2StoreId;
-    	      this.labels = defaults.labels;
-    	      this.location = defaults.location;
-    	      this.messageType = defaults.messageType;
-    	      this.name = defaults.name;
-    	      this.patientIds = defaults.patientIds;
-    	      this.project = defaults.project;
-    	      this.schematizedData = defaults.schematizedData;
-    	      this.sendFacility = defaults.sendFacility;
-    	      this.sendTime = defaults.sendTime;
+            $ = new MessageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder data(@Nullable Output<String> data) {
-            this.data = data;
+            $.data = data;
             return this;
         }
-        public Builder data(@Nullable String data) {
-            this.data = Codegen.ofNullable(data);
-            return this;
+
+        public Builder data(String data) {
+            return data(Output.of(data));
         }
+
         public Builder datasetId(Output<String> datasetId) {
-            this.datasetId = Objects.requireNonNull(datasetId);
+            $.datasetId = datasetId;
             return this;
         }
+
         public Builder datasetId(String datasetId) {
-            this.datasetId = Output.of(Objects.requireNonNull(datasetId));
-            return this;
+            return datasetId(Output.of(datasetId));
         }
+
         public Builder hl7V2StoreId(Output<String> hl7V2StoreId) {
-            this.hl7V2StoreId = Objects.requireNonNull(hl7V2StoreId);
+            $.hl7V2StoreId = hl7V2StoreId;
             return this;
         }
+
         public Builder hl7V2StoreId(String hl7V2StoreId) {
-            this.hl7V2StoreId = Output.of(Objects.requireNonNull(hl7V2StoreId));
-            return this;
+            return hl7V2StoreId(Output.of(hl7V2StoreId));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder messageType(@Nullable Output<String> messageType) {
-            this.messageType = messageType;
+            $.messageType = messageType;
             return this;
         }
-        public Builder messageType(@Nullable String messageType) {
-            this.messageType = Codegen.ofNullable(messageType);
-            return this;
+
+        public Builder messageType(String messageType) {
+            return messageType(Output.of(messageType));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder patientIds(@Nullable Output<List<PatientIdArgs>> patientIds) {
-            this.patientIds = patientIds;
+            $.patientIds = patientIds;
             return this;
         }
-        public Builder patientIds(@Nullable List<PatientIdArgs> patientIds) {
-            this.patientIds = Codegen.ofNullable(patientIds);
-            return this;
+
+        public Builder patientIds(List<PatientIdArgs> patientIds) {
+            return patientIds(Output.of(patientIds));
         }
+
         public Builder patientIds(PatientIdArgs... patientIds) {
             return patientIds(List.of(patientIds));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder schematizedData(@Nullable Output<SchematizedDataArgs> schematizedData) {
-            this.schematizedData = schematizedData;
+            $.schematizedData = schematizedData;
             return this;
         }
-        public Builder schematizedData(@Nullable SchematizedDataArgs schematizedData) {
-            this.schematizedData = Codegen.ofNullable(schematizedData);
-            return this;
+
+        public Builder schematizedData(SchematizedDataArgs schematizedData) {
+            return schematizedData(Output.of(schematizedData));
         }
+
         public Builder sendFacility(@Nullable Output<String> sendFacility) {
-            this.sendFacility = sendFacility;
+            $.sendFacility = sendFacility;
             return this;
         }
-        public Builder sendFacility(@Nullable String sendFacility) {
-            this.sendFacility = Codegen.ofNullable(sendFacility);
-            return this;
+
+        public Builder sendFacility(String sendFacility) {
+            return sendFacility(Output.of(sendFacility));
         }
+
         public Builder sendTime(@Nullable Output<String> sendTime) {
-            this.sendTime = sendTime;
+            $.sendTime = sendTime;
             return this;
         }
-        public Builder sendTime(@Nullable String sendTime) {
-            this.sendTime = Codegen.ofNullable(sendTime);
-            return this;
-        }        public MessageArgs build() {
-            return new MessageArgs(data, datasetId, hl7V2StoreId, labels, location, messageType, name, patientIds, project, schematizedData, sendFacility, sendTime);
+
+        public Builder sendTime(String sendTime) {
+            return sendTime(Output.of(sendTime));
+        }
+
+        public MessageArgs build() {
+            $.datasetId = Objects.requireNonNull($.datasetId, "expected parameter 'datasetId' to be non-null");
+            $.hl7V2StoreId = Objects.requireNonNull($.hl7V2StoreId, "expected parameter 'hl7V2StoreId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,9 +6,9 @@ package com.pulumi.azurenative.dataprotection.inputs;
 import com.pulumi.azurenative.dataprotection.inputs.AzureOperationalStoreParametersArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class PolicyParametersArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="dataStoreParametersList")
-      private final @Nullable Output<List<AzureOperationalStoreParametersArgs>> dataStoreParametersList;
+    private @Nullable Output<List<AzureOperationalStoreParametersArgs>> dataStoreParametersList;
 
-    public Output<List<AzureOperationalStoreParametersArgs>> dataStoreParametersList() {
-        return this.dataStoreParametersList == null ? Codegen.empty() : this.dataStoreParametersList;
+    public Optional<Output<List<AzureOperationalStoreParametersArgs>>> dataStoreParametersList() {
+        return Optional.ofNullable(this.dataStoreParametersList);
     }
 
-    public PolicyParametersArgs(@Nullable Output<List<AzureOperationalStoreParametersArgs>> dataStoreParametersList) {
-        this.dataStoreParametersList = dataStoreParametersList;
-    }
+    private PolicyParametersArgs() {}
 
-    private PolicyParametersArgs() {
-        this.dataStoreParametersList = Codegen.empty();
+    private PolicyParametersArgs(PolicyParametersArgs $) {
+        this.dataStoreParametersList = $.dataStoreParametersList;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolicyParametersArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<AzureOperationalStoreParametersArgs>> dataStoreParametersList;
+        private PolicyParametersArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolicyParametersArgs();
         }
 
         public Builder(PolicyParametersArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataStoreParametersList = defaults.dataStoreParametersList;
+            $ = new PolicyParametersArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataStoreParametersList(@Nullable Output<List<AzureOperationalStoreParametersArgs>> dataStoreParametersList) {
-            this.dataStoreParametersList = dataStoreParametersList;
+            $.dataStoreParametersList = dataStoreParametersList;
             return this;
         }
-        public Builder dataStoreParametersList(@Nullable List<AzureOperationalStoreParametersArgs> dataStoreParametersList) {
-            this.dataStoreParametersList = Codegen.ofNullable(dataStoreParametersList);
-            return this;
+
+        public Builder dataStoreParametersList(List<AzureOperationalStoreParametersArgs> dataStoreParametersList) {
+            return dataStoreParametersList(Output.of(dataStoreParametersList));
         }
+
         public Builder dataStoreParametersList(AzureOperationalStoreParametersArgs... dataStoreParametersList) {
             return dataStoreParametersList(List.of(dataStoreParametersList));
-        }        public PolicyParametersArgs build() {
-            return new PolicyParametersArgs(dataStoreParametersList);
+        }
+
+        public PolicyParametersArgs build() {
+            return $;
         }
     }
+
 }

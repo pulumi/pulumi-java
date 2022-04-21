@@ -5,9 +5,9 @@ package com.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class IosXcTestArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bundleId")
-      private final @Nullable Output<String> bundleId;
+    private @Nullable Output<String> bundleId;
 
-    public Output<String> bundleId() {
-        return this.bundleId == null ? Codegen.empty() : this.bundleId;
+    public Optional<Output<String>> bundleId() {
+        return Optional.ofNullable(this.bundleId);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class IosXcTestArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="xcodeVersion")
-      private final @Nullable Output<String> xcodeVersion;
+    private @Nullable Output<String> xcodeVersion;
 
-    public Output<String> xcodeVersion() {
-        return this.xcodeVersion == null ? Codegen.empty() : this.xcodeVersion;
+    public Optional<Output<String>> xcodeVersion() {
+        return Optional.ofNullable(this.xcodeVersion);
     }
 
-    public IosXcTestArgs(
-        @Nullable Output<String> bundleId,
-        @Nullable Output<String> xcodeVersion) {
-        this.bundleId = bundleId;
-        this.xcodeVersion = xcodeVersion;
-    }
+    private IosXcTestArgs() {}
 
-    private IosXcTestArgs() {
-        this.bundleId = Codegen.empty();
-        this.xcodeVersion = Codegen.empty();
+    private IosXcTestArgs(IosXcTestArgs $) {
+        this.bundleId = $.bundleId;
+        this.xcodeVersion = $.xcodeVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IosXcTestArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> bundleId;
-        private @Nullable Output<String> xcodeVersion;
+        private IosXcTestArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IosXcTestArgs();
         }
 
         public Builder(IosXcTestArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bundleId = defaults.bundleId;
-    	      this.xcodeVersion = defaults.xcodeVersion;
+            $ = new IosXcTestArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bundleId(@Nullable Output<String> bundleId) {
-            this.bundleId = bundleId;
+            $.bundleId = bundleId;
             return this;
         }
-        public Builder bundleId(@Nullable String bundleId) {
-            this.bundleId = Codegen.ofNullable(bundleId);
-            return this;
+
+        public Builder bundleId(String bundleId) {
+            return bundleId(Output.of(bundleId));
         }
+
         public Builder xcodeVersion(@Nullable Output<String> xcodeVersion) {
-            this.xcodeVersion = xcodeVersion;
+            $.xcodeVersion = xcodeVersion;
             return this;
         }
-        public Builder xcodeVersion(@Nullable String xcodeVersion) {
-            this.xcodeVersion = Codegen.ofNullable(xcodeVersion);
-            return this;
-        }        public IosXcTestArgs build() {
-            return new IosXcTestArgs(bundleId, xcodeVersion);
+
+        public Builder xcodeVersion(String xcodeVersion) {
+            return xcodeVersion(Output.of(xcodeVersion));
+        }
+
+        public IosXcTestArgs build() {
+            return $;
         }
     }
+
 }

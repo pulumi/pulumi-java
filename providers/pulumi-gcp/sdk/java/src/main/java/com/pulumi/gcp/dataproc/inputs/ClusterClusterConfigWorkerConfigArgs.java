@@ -5,13 +5,13 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.dataproc.inputs.ClusterClusterConfigWorkerConfigAcceleratorArgs;
 import com.pulumi.gcp.dataproc.inputs.ClusterClusterConfigWorkerConfigDiskConfigArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ClusterClusterConfigWorkerConfigArgs extends com.pulumi.resou
      * 
      */
     @Import(name="accelerators")
-      private final @Nullable Output<List<ClusterClusterConfigWorkerConfigAcceleratorArgs>> accelerators;
+    private @Nullable Output<List<ClusterClusterConfigWorkerConfigAcceleratorArgs>> accelerators;
 
-    public Output<List<ClusterClusterConfigWorkerConfigAcceleratorArgs>> accelerators() {
-        return this.accelerators == null ? Codegen.empty() : this.accelerators;
+    public Optional<Output<List<ClusterClusterConfigWorkerConfigAcceleratorArgs>>> accelerators() {
+        return Optional.ofNullable(this.accelerators);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ClusterClusterConfigWorkerConfigArgs extends com.pulumi.resou
      * 
      */
     @Import(name="diskConfig")
-      private final @Nullable Output<ClusterClusterConfigWorkerConfigDiskConfigArgs> diskConfig;
+    private @Nullable Output<ClusterClusterConfigWorkerConfigDiskConfigArgs> diskConfig;
 
-    public Output<ClusterClusterConfigWorkerConfigDiskConfigArgs> diskConfig() {
-        return this.diskConfig == null ? Codegen.empty() : this.diskConfig;
+    public Optional<Output<ClusterClusterConfigWorkerConfigDiskConfigArgs>> diskConfig() {
+        return Optional.ofNullable(this.diskConfig);
     }
 
     /**
@@ -47,17 +47,17 @@ public final class ClusterClusterConfigWorkerConfigArgs extends com.pulumi.resou
      * 
      */
     @Import(name="imageUri")
-      private final @Nullable Output<String> imageUri;
+    private @Nullable Output<String> imageUri;
 
-    public Output<String> imageUri() {
-        return this.imageUri == null ? Codegen.empty() : this.imageUri;
+    public Optional<Output<String>> imageUri() {
+        return Optional.ofNullable(this.imageUri);
     }
 
     @Import(name="instanceNames")
-      private final @Nullable Output<List<String>> instanceNames;
+    private @Nullable Output<List<String>> instanceNames;
 
-    public Output<List<String>> instanceNames() {
-        return this.instanceNames == null ? Codegen.empty() : this.instanceNames;
+    public Optional<Output<List<String>>> instanceNames() {
+        return Optional.ofNullable(this.instanceNames);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class ClusterClusterConfigWorkerConfigArgs extends com.pulumi.resou
      * 
      */
     @Import(name="machineType")
-      private final @Nullable Output<String> machineType;
+    private @Nullable Output<String> machineType;
 
-    public Output<String> machineType() {
-        return this.machineType == null ? Codegen.empty() : this.machineType;
+    public Optional<Output<String>> machineType() {
+        return Optional.ofNullable(this.machineType);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class ClusterClusterConfigWorkerConfigArgs extends com.pulumi.resou
      * 
      */
     @Import(name="minCpuPlatform")
-      private final @Nullable Output<String> minCpuPlatform;
+    private @Nullable Output<String> minCpuPlatform;
 
-    public Output<String> minCpuPlatform() {
-        return this.minCpuPlatform == null ? Codegen.empty() : this.minCpuPlatform;
+    public Optional<Output<String>> minCpuPlatform() {
+        return Optional.ofNullable(this.minCpuPlatform);
     }
 
     /**
@@ -93,134 +93,116 @@ public final class ClusterClusterConfigWorkerConfigArgs extends com.pulumi.resou
      * 
      */
     @Import(name="numInstances")
-      private final @Nullable Output<Integer> numInstances;
+    private @Nullable Output<Integer> numInstances;
 
-    public Output<Integer> numInstances() {
-        return this.numInstances == null ? Codegen.empty() : this.numInstances;
+    public Optional<Output<Integer>> numInstances() {
+        return Optional.ofNullable(this.numInstances);
     }
 
-    public ClusterClusterConfigWorkerConfigArgs(
-        @Nullable Output<List<ClusterClusterConfigWorkerConfigAcceleratorArgs>> accelerators,
-        @Nullable Output<ClusterClusterConfigWorkerConfigDiskConfigArgs> diskConfig,
-        @Nullable Output<String> imageUri,
-        @Nullable Output<List<String>> instanceNames,
-        @Nullable Output<String> machineType,
-        @Nullable Output<String> minCpuPlatform,
-        @Nullable Output<Integer> numInstances) {
-        this.accelerators = accelerators;
-        this.diskConfig = diskConfig;
-        this.imageUri = imageUri;
-        this.instanceNames = instanceNames;
-        this.machineType = machineType;
-        this.minCpuPlatform = minCpuPlatform;
-        this.numInstances = numInstances;
-    }
+    private ClusterClusterConfigWorkerConfigArgs() {}
 
-    private ClusterClusterConfigWorkerConfigArgs() {
-        this.accelerators = Codegen.empty();
-        this.diskConfig = Codegen.empty();
-        this.imageUri = Codegen.empty();
-        this.instanceNames = Codegen.empty();
-        this.machineType = Codegen.empty();
-        this.minCpuPlatform = Codegen.empty();
-        this.numInstances = Codegen.empty();
+    private ClusterClusterConfigWorkerConfigArgs(ClusterClusterConfigWorkerConfigArgs $) {
+        this.accelerators = $.accelerators;
+        this.diskConfig = $.diskConfig;
+        this.imageUri = $.imageUri;
+        this.instanceNames = $.instanceNames;
+        this.machineType = $.machineType;
+        this.minCpuPlatform = $.minCpuPlatform;
+        this.numInstances = $.numInstances;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterClusterConfigWorkerConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ClusterClusterConfigWorkerConfigAcceleratorArgs>> accelerators;
-        private @Nullable Output<ClusterClusterConfigWorkerConfigDiskConfigArgs> diskConfig;
-        private @Nullable Output<String> imageUri;
-        private @Nullable Output<List<String>> instanceNames;
-        private @Nullable Output<String> machineType;
-        private @Nullable Output<String> minCpuPlatform;
-        private @Nullable Output<Integer> numInstances;
+        private ClusterClusterConfigWorkerConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterClusterConfigWorkerConfigArgs();
         }
 
         public Builder(ClusterClusterConfigWorkerConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accelerators = defaults.accelerators;
-    	      this.diskConfig = defaults.diskConfig;
-    	      this.imageUri = defaults.imageUri;
-    	      this.instanceNames = defaults.instanceNames;
-    	      this.machineType = defaults.machineType;
-    	      this.minCpuPlatform = defaults.minCpuPlatform;
-    	      this.numInstances = defaults.numInstances;
+            $ = new ClusterClusterConfigWorkerConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accelerators(@Nullable Output<List<ClusterClusterConfigWorkerConfigAcceleratorArgs>> accelerators) {
-            this.accelerators = accelerators;
+            $.accelerators = accelerators;
             return this;
         }
-        public Builder accelerators(@Nullable List<ClusterClusterConfigWorkerConfigAcceleratorArgs> accelerators) {
-            this.accelerators = Codegen.ofNullable(accelerators);
-            return this;
+
+        public Builder accelerators(List<ClusterClusterConfigWorkerConfigAcceleratorArgs> accelerators) {
+            return accelerators(Output.of(accelerators));
         }
+
         public Builder accelerators(ClusterClusterConfigWorkerConfigAcceleratorArgs... accelerators) {
             return accelerators(List.of(accelerators));
         }
+
         public Builder diskConfig(@Nullable Output<ClusterClusterConfigWorkerConfigDiskConfigArgs> diskConfig) {
-            this.diskConfig = diskConfig;
+            $.diskConfig = diskConfig;
             return this;
         }
-        public Builder diskConfig(@Nullable ClusterClusterConfigWorkerConfigDiskConfigArgs diskConfig) {
-            this.diskConfig = Codegen.ofNullable(diskConfig);
-            return this;
+
+        public Builder diskConfig(ClusterClusterConfigWorkerConfigDiskConfigArgs diskConfig) {
+            return diskConfig(Output.of(diskConfig));
         }
+
         public Builder imageUri(@Nullable Output<String> imageUri) {
-            this.imageUri = imageUri;
+            $.imageUri = imageUri;
             return this;
         }
-        public Builder imageUri(@Nullable String imageUri) {
-            this.imageUri = Codegen.ofNullable(imageUri);
-            return this;
+
+        public Builder imageUri(String imageUri) {
+            return imageUri(Output.of(imageUri));
         }
+
         public Builder instanceNames(@Nullable Output<List<String>> instanceNames) {
-            this.instanceNames = instanceNames;
+            $.instanceNames = instanceNames;
             return this;
         }
-        public Builder instanceNames(@Nullable List<String> instanceNames) {
-            this.instanceNames = Codegen.ofNullable(instanceNames);
-            return this;
+
+        public Builder instanceNames(List<String> instanceNames) {
+            return instanceNames(Output.of(instanceNames));
         }
+
         public Builder instanceNames(String... instanceNames) {
             return instanceNames(List.of(instanceNames));
         }
+
         public Builder machineType(@Nullable Output<String> machineType) {
-            this.machineType = machineType;
+            $.machineType = machineType;
             return this;
         }
-        public Builder machineType(@Nullable String machineType) {
-            this.machineType = Codegen.ofNullable(machineType);
-            return this;
+
+        public Builder machineType(String machineType) {
+            return machineType(Output.of(machineType));
         }
+
         public Builder minCpuPlatform(@Nullable Output<String> minCpuPlatform) {
-            this.minCpuPlatform = minCpuPlatform;
+            $.minCpuPlatform = minCpuPlatform;
             return this;
         }
-        public Builder minCpuPlatform(@Nullable String minCpuPlatform) {
-            this.minCpuPlatform = Codegen.ofNullable(minCpuPlatform);
-            return this;
+
+        public Builder minCpuPlatform(String minCpuPlatform) {
+            return minCpuPlatform(Output.of(minCpuPlatform));
         }
+
         public Builder numInstances(@Nullable Output<Integer> numInstances) {
-            this.numInstances = numInstances;
+            $.numInstances = numInstances;
             return this;
         }
-        public Builder numInstances(@Nullable Integer numInstances) {
-            this.numInstances = Codegen.ofNullable(numInstances);
-            return this;
-        }        public ClusterClusterConfigWorkerConfigArgs build() {
-            return new ClusterClusterConfigWorkerConfigArgs(accelerators, diskConfig, imageUri, instanceNames, machineType, minCpuPlatform, numInstances);
+
+        public Builder numInstances(Integer numInstances) {
+            return numInstances(Output.of(numInstances));
+        }
+
+        public ClusterClusterConfigWorkerConfigArgs build() {
+            return $;
         }
     }
+
 }

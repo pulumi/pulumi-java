@@ -5,9 +5,9 @@ package com.pulumi.gcp.apigee.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class InstanceAttachmentState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="environment")
-      private final @Nullable Output<String> environment;
+    private @Nullable Output<String> environment;
 
-    public Output<String> environment() {
-        return this.environment == null ? Codegen.empty() : this.environment;
+    public Optional<Output<String>> environment() {
+        return Optional.ofNullable(this.environment);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class InstanceAttachmentState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="instanceId")
-      private final @Nullable Output<String> instanceId;
+    private @Nullable Output<String> instanceId;
 
-    public Output<String> instanceId() {
-        return this.instanceId == null ? Codegen.empty() : this.instanceId;
+    public Optional<Output<String>> instanceId() {
+        return Optional.ofNullable(this.instanceId);
     }
 
     /**
@@ -43,76 +43,68 @@ public final class InstanceAttachmentState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public InstanceAttachmentState(
-        @Nullable Output<String> environment,
-        @Nullable Output<String> instanceId,
-        @Nullable Output<String> name) {
-        this.environment = environment;
-        this.instanceId = instanceId;
-        this.name = name;
-    }
+    private InstanceAttachmentState() {}
 
-    private InstanceAttachmentState() {
-        this.environment = Codegen.empty();
-        this.instanceId = Codegen.empty();
-        this.name = Codegen.empty();
+    private InstanceAttachmentState(InstanceAttachmentState $) {
+        this.environment = $.environment;
+        this.instanceId = $.instanceId;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceAttachmentState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> environment;
-        private @Nullable Output<String> instanceId;
-        private @Nullable Output<String> name;
+        private InstanceAttachmentState $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceAttachmentState();
         }
 
         public Builder(InstanceAttachmentState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.environment = defaults.environment;
-    	      this.instanceId = defaults.instanceId;
-    	      this.name = defaults.name;
+            $ = new InstanceAttachmentState(Objects.requireNonNull(defaults));
         }
 
         public Builder environment(@Nullable Output<String> environment) {
-            this.environment = environment;
+            $.environment = environment;
             return this;
         }
-        public Builder environment(@Nullable String environment) {
-            this.environment = Codegen.ofNullable(environment);
-            return this;
+
+        public Builder environment(String environment) {
+            return environment(Output.of(environment));
         }
+
         public Builder instanceId(@Nullable Output<String> instanceId) {
-            this.instanceId = instanceId;
+            $.instanceId = instanceId;
             return this;
         }
-        public Builder instanceId(@Nullable String instanceId) {
-            this.instanceId = Codegen.ofNullable(instanceId);
-            return this;
+
+        public Builder instanceId(String instanceId) {
+            return instanceId(Output.of(instanceId));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public InstanceAttachmentState build() {
-            return new InstanceAttachmentState(environment, instanceId, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public InstanceAttachmentState build() {
+            return $;
         }
     }
+
 }

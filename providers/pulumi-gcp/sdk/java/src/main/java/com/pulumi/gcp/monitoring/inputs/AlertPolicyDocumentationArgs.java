@@ -5,9 +5,9 @@ package com.pulumi.gcp.monitoring.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class AlertPolicyDocumentationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="content")
-      private final @Nullable Output<String> content;
+    private @Nullable Output<String> content;
 
-    public Output<String> content() {
-        return this.content == null ? Codegen.empty() : this.content;
+    public Optional<Output<String>> content() {
+        return Optional.ofNullable(this.content);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class AlertPolicyDocumentationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="mimeType")
-      private final @Nullable Output<String> mimeType;
+    private @Nullable Output<String> mimeType;
 
-    public Output<String> mimeType() {
-        return this.mimeType == null ? Codegen.empty() : this.mimeType;
+    public Optional<Output<String>> mimeType() {
+        return Optional.ofNullable(this.mimeType);
     }
 
-    public AlertPolicyDocumentationArgs(
-        @Nullable Output<String> content,
-        @Nullable Output<String> mimeType) {
-        this.content = content;
-        this.mimeType = mimeType;
-    }
+    private AlertPolicyDocumentationArgs() {}
 
-    private AlertPolicyDocumentationArgs() {
-        this.content = Codegen.empty();
-        this.mimeType = Codegen.empty();
+    private AlertPolicyDocumentationArgs(AlertPolicyDocumentationArgs $) {
+        this.content = $.content;
+        this.mimeType = $.mimeType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AlertPolicyDocumentationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> content;
-        private @Nullable Output<String> mimeType;
+        private AlertPolicyDocumentationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AlertPolicyDocumentationArgs();
         }
 
         public Builder(AlertPolicyDocumentationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.content = defaults.content;
-    	      this.mimeType = defaults.mimeType;
+            $ = new AlertPolicyDocumentationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder content(@Nullable Output<String> content) {
-            this.content = content;
+            $.content = content;
             return this;
         }
-        public Builder content(@Nullable String content) {
-            this.content = Codegen.ofNullable(content);
-            return this;
+
+        public Builder content(String content) {
+            return content(Output.of(content));
         }
+
         public Builder mimeType(@Nullable Output<String> mimeType) {
-            this.mimeType = mimeType;
+            $.mimeType = mimeType;
             return this;
         }
-        public Builder mimeType(@Nullable String mimeType) {
-            this.mimeType = Codegen.ofNullable(mimeType);
-            return this;
-        }        public AlertPolicyDocumentationArgs build() {
-            return new AlertPolicyDocumentationArgs(content, mimeType);
+
+        public Builder mimeType(String mimeType) {
+            return mimeType(Output.of(mimeType));
+        }
+
+        public AlertPolicyDocumentationArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.googlenative.metastore_v1beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.metastore_v1beta.inputs.ConsumerArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class NetworkConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="consumers")
-      private final @Nullable Output<List<ConsumerArgs>> consumers;
+    private @Nullable Output<List<ConsumerArgs>> consumers;
 
-    public Output<List<ConsumerArgs>> consumers() {
-        return this.consumers == null ? Codegen.empty() : this.consumers;
+    public Optional<Output<List<ConsumerArgs>>> consumers() {
+        return Optional.ofNullable(this.consumers);
     }
 
-    public NetworkConfigArgs(@Nullable Output<List<ConsumerArgs>> consumers) {
-        this.consumers = consumers;
-    }
+    private NetworkConfigArgs() {}
 
-    private NetworkConfigArgs() {
-        this.consumers = Codegen.empty();
+    private NetworkConfigArgs(NetworkConfigArgs $) {
+        this.consumers = $.consumers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ConsumerArgs>> consumers;
+        private NetworkConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkConfigArgs();
         }
 
         public Builder(NetworkConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.consumers = defaults.consumers;
+            $ = new NetworkConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder consumers(@Nullable Output<List<ConsumerArgs>> consumers) {
-            this.consumers = consumers;
+            $.consumers = consumers;
             return this;
         }
-        public Builder consumers(@Nullable List<ConsumerArgs> consumers) {
-            this.consumers = Codegen.ofNullable(consumers);
-            return this;
+
+        public Builder consumers(List<ConsumerArgs> consumers) {
+            return consumers(Output.of(consumers));
         }
+
         public Builder consumers(ConsumerArgs... consumers) {
             return consumers(List.of(consumers));
-        }        public NetworkConfigArgs build() {
-            return new NetworkConfigArgs(consumers);
+        }
+
+        public NetworkConfigArgs build() {
+            return $;
         }
     }
+
 }

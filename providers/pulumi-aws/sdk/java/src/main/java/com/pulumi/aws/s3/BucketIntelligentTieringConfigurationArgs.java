@@ -7,10 +7,10 @@ import com.pulumi.aws.s3.inputs.BucketIntelligentTieringConfigurationFilterArgs;
 import com.pulumi.aws.s3.inputs.BucketIntelligentTieringConfigurationTieringArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class BucketIntelligentTieringConfigurationArgs extends com.pulumi.
      * 
      */
     @Import(name="bucket", required=true)
-      private final Output<String> bucket;
+    private Output<String> bucket;
 
     public Output<String> bucket() {
         return this.bucket;
@@ -34,10 +34,10 @@ public final class BucketIntelligentTieringConfigurationArgs extends com.pulumi.
      * 
      */
     @Import(name="filter")
-      private final @Nullable Output<BucketIntelligentTieringConfigurationFilterArgs> filter;
+    private @Nullable Output<BucketIntelligentTieringConfigurationFilterArgs> filter;
 
-    public Output<BucketIntelligentTieringConfigurationFilterArgs> filter() {
-        return this.filter == null ? Codegen.empty() : this.filter;
+    public Optional<Output<BucketIntelligentTieringConfigurationFilterArgs>> filter() {
+        return Optional.ofNullable(this.filter);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class BucketIntelligentTieringConfigurationArgs extends com.pulumi.
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class BucketIntelligentTieringConfigurationArgs extends com.pulumi.
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -67,105 +67,94 @@ public final class BucketIntelligentTieringConfigurationArgs extends com.pulumi.
      * 
      */
     @Import(name="tierings", required=true)
-      private final Output<List<BucketIntelligentTieringConfigurationTieringArgs>> tierings;
+    private Output<List<BucketIntelligentTieringConfigurationTieringArgs>> tierings;
 
     public Output<List<BucketIntelligentTieringConfigurationTieringArgs>> tierings() {
         return this.tierings;
     }
 
-    public BucketIntelligentTieringConfigurationArgs(
-        Output<String> bucket,
-        @Nullable Output<BucketIntelligentTieringConfigurationFilterArgs> filter,
-        @Nullable Output<String> name,
-        @Nullable Output<String> status,
-        Output<List<BucketIntelligentTieringConfigurationTieringArgs>> tierings) {
-        this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
-        this.filter = filter;
-        this.name = name;
-        this.status = status;
-        this.tierings = Objects.requireNonNull(tierings, "expected parameter 'tierings' to be non-null");
-    }
+    private BucketIntelligentTieringConfigurationArgs() {}
 
-    private BucketIntelligentTieringConfigurationArgs() {
-        this.bucket = Codegen.empty();
-        this.filter = Codegen.empty();
-        this.name = Codegen.empty();
-        this.status = Codegen.empty();
-        this.tierings = Codegen.empty();
+    private BucketIntelligentTieringConfigurationArgs(BucketIntelligentTieringConfigurationArgs $) {
+        this.bucket = $.bucket;
+        this.filter = $.filter;
+        this.name = $.name;
+        this.status = $.status;
+        this.tierings = $.tierings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketIntelligentTieringConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> bucket;
-        private @Nullable Output<BucketIntelligentTieringConfigurationFilterArgs> filter;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> status;
-        private Output<List<BucketIntelligentTieringConfigurationTieringArgs>> tierings;
+        private BucketIntelligentTieringConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketIntelligentTieringConfigurationArgs();
         }
 
         public Builder(BucketIntelligentTieringConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.filter = defaults.filter;
-    	      this.name = defaults.name;
-    	      this.status = defaults.status;
-    	      this.tierings = defaults.tierings;
+            $ = new BucketIntelligentTieringConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(Output<String> bucket) {
-            this.bucket = Objects.requireNonNull(bucket);
+            $.bucket = bucket;
             return this;
         }
+
         public Builder bucket(String bucket) {
-            this.bucket = Output.of(Objects.requireNonNull(bucket));
-            return this;
+            return bucket(Output.of(bucket));
         }
+
         public Builder filter(@Nullable Output<BucketIntelligentTieringConfigurationFilterArgs> filter) {
-            this.filter = filter;
+            $.filter = filter;
             return this;
         }
-        public Builder filter(@Nullable BucketIntelligentTieringConfigurationFilterArgs filter) {
-            this.filter = Codegen.ofNullable(filter);
-            return this;
+
+        public Builder filter(BucketIntelligentTieringConfigurationFilterArgs filter) {
+            return filter(Output.of(filter));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(String status) {
+            return status(Output.of(status));
         }
+
         public Builder tierings(Output<List<BucketIntelligentTieringConfigurationTieringArgs>> tierings) {
-            this.tierings = Objects.requireNonNull(tierings);
+            $.tierings = tierings;
             return this;
         }
+
         public Builder tierings(List<BucketIntelligentTieringConfigurationTieringArgs> tierings) {
-            this.tierings = Output.of(Objects.requireNonNull(tierings));
-            return this;
+            return tierings(Output.of(tierings));
         }
+
         public Builder tierings(BucketIntelligentTieringConfigurationTieringArgs... tierings) {
             return tierings(List.of(tierings));
-        }        public BucketIntelligentTieringConfigurationArgs build() {
-            return new BucketIntelligentTieringConfigurationArgs(bucket, filter, name, status, tierings);
+        }
+
+        public BucketIntelligentTieringConfigurationArgs build() {
+            $.bucket = Objects.requireNonNull($.bucket, "expected parameter 'bucket' to be non-null");
+            $.tierings = Objects.requireNonNull($.tierings, "expected parameter 'tierings' to be non-null");
+            return $;
         }
     }
+
 }

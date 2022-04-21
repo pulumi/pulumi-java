@@ -7,7 +7,6 @@ import com.pulumi.azurenative.datamigration.inputs.AzureActiveDirectoryAppArgs;
 import com.pulumi.azurenative.datamigration.inputs.MiSqlConnectionInfoArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -24,7 +23,7 @@ public final class ConnectToTargetSqlMISyncTaskInputArgs extends com.pulumi.reso
      * 
      */
     @Import(name="azureApp", required=true)
-      private final Output<AzureActiveDirectoryAppArgs> azureApp;
+    private Output<AzureActiveDirectoryAppArgs> azureApp;
 
     public Output<AzureActiveDirectoryAppArgs> azureApp() {
         return this.azureApp;
@@ -35,63 +34,60 @@ public final class ConnectToTargetSqlMISyncTaskInputArgs extends com.pulumi.reso
      * 
      */
     @Import(name="targetConnectionInfo", required=true)
-      private final Output<MiSqlConnectionInfoArgs> targetConnectionInfo;
+    private Output<MiSqlConnectionInfoArgs> targetConnectionInfo;
 
     public Output<MiSqlConnectionInfoArgs> targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
 
-    public ConnectToTargetSqlMISyncTaskInputArgs(
-        Output<AzureActiveDirectoryAppArgs> azureApp,
-        Output<MiSqlConnectionInfoArgs> targetConnectionInfo) {
-        this.azureApp = Objects.requireNonNull(azureApp, "expected parameter 'azureApp' to be non-null");
-        this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo, "expected parameter 'targetConnectionInfo' to be non-null");
-    }
+    private ConnectToTargetSqlMISyncTaskInputArgs() {}
 
-    private ConnectToTargetSqlMISyncTaskInputArgs() {
-        this.azureApp = Codegen.empty();
-        this.targetConnectionInfo = Codegen.empty();
+    private ConnectToTargetSqlMISyncTaskInputArgs(ConnectToTargetSqlMISyncTaskInputArgs $) {
+        this.azureApp = $.azureApp;
+        this.targetConnectionInfo = $.targetConnectionInfo;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectToTargetSqlMISyncTaskInputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<AzureActiveDirectoryAppArgs> azureApp;
-        private Output<MiSqlConnectionInfoArgs> targetConnectionInfo;
+        private ConnectToTargetSqlMISyncTaskInputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectToTargetSqlMISyncTaskInputArgs();
         }
 
         public Builder(ConnectToTargetSqlMISyncTaskInputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.azureApp = defaults.azureApp;
-    	      this.targetConnectionInfo = defaults.targetConnectionInfo;
+            $ = new ConnectToTargetSqlMISyncTaskInputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder azureApp(Output<AzureActiveDirectoryAppArgs> azureApp) {
-            this.azureApp = Objects.requireNonNull(azureApp);
+            $.azureApp = azureApp;
             return this;
         }
+
         public Builder azureApp(AzureActiveDirectoryAppArgs azureApp) {
-            this.azureApp = Output.of(Objects.requireNonNull(azureApp));
-            return this;
+            return azureApp(Output.of(azureApp));
         }
+
         public Builder targetConnectionInfo(Output<MiSqlConnectionInfoArgs> targetConnectionInfo) {
-            this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
+            $.targetConnectionInfo = targetConnectionInfo;
             return this;
         }
+
         public Builder targetConnectionInfo(MiSqlConnectionInfoArgs targetConnectionInfo) {
-            this.targetConnectionInfo = Output.of(Objects.requireNonNull(targetConnectionInfo));
-            return this;
-        }        public ConnectToTargetSqlMISyncTaskInputArgs build() {
-            return new ConnectToTargetSqlMISyncTaskInputArgs(azureApp, targetConnectionInfo);
+            return targetConnectionInfo(Output.of(targetConnectionInfo));
+        }
+
+        public ConnectToTargetSqlMISyncTaskInputArgs build() {
+            $.azureApp = Objects.requireNonNull($.azureApp, "expected parameter 'azureApp' to be non-null");
+            $.targetConnectionInfo = Objects.requireNonNull($.targetConnectionInfo, "expected parameter 'targetConnectionInfo' to be non-null");
+            return $;
         }
     }
+
 }

@@ -9,9 +9,9 @@ import com.pulumi.azurenative.edgeorder.inputs.NotificationPreferenceArgs;
 import com.pulumi.azurenative.edgeorder.inputs.TransportPreferencesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class PreferencesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encryptionPreferences")
-      private final @Nullable Output<EncryptionPreferencesArgs> encryptionPreferences;
+    private @Nullable Output<EncryptionPreferencesArgs> encryptionPreferences;
 
-    public Output<EncryptionPreferencesArgs> encryptionPreferences() {
-        return this.encryptionPreferences == null ? Codegen.empty() : this.encryptionPreferences;
+    public Optional<Output<EncryptionPreferencesArgs>> encryptionPreferences() {
+        return Optional.ofNullable(this.encryptionPreferences);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class PreferencesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="managementResourcePreferences")
-      private final @Nullable Output<ManagementResourcePreferencesArgs> managementResourcePreferences;
+    private @Nullable Output<ManagementResourcePreferencesArgs> managementResourcePreferences;
 
-    public Output<ManagementResourcePreferencesArgs> managementResourcePreferences() {
-        return this.managementResourcePreferences == null ? Codegen.empty() : this.managementResourcePreferences;
+    public Optional<Output<ManagementResourcePreferencesArgs>> managementResourcePreferences() {
+        return Optional.ofNullable(this.managementResourcePreferences);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class PreferencesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="notificationPreferences")
-      private final @Nullable Output<List<NotificationPreferenceArgs>> notificationPreferences;
+    private @Nullable Output<List<NotificationPreferenceArgs>> notificationPreferences;
 
-    public Output<List<NotificationPreferenceArgs>> notificationPreferences() {
-        return this.notificationPreferences == null ? Codegen.empty() : this.notificationPreferences;
+    public Optional<Output<List<NotificationPreferenceArgs>>> notificationPreferences() {
+        return Optional.ofNullable(this.notificationPreferences);
     }
 
     /**
@@ -61,92 +61,82 @@ public final class PreferencesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="transportPreferences")
-      private final @Nullable Output<TransportPreferencesArgs> transportPreferences;
+    private @Nullable Output<TransportPreferencesArgs> transportPreferences;
 
-    public Output<TransportPreferencesArgs> transportPreferences() {
-        return this.transportPreferences == null ? Codegen.empty() : this.transportPreferences;
+    public Optional<Output<TransportPreferencesArgs>> transportPreferences() {
+        return Optional.ofNullable(this.transportPreferences);
     }
 
-    public PreferencesArgs(
-        @Nullable Output<EncryptionPreferencesArgs> encryptionPreferences,
-        @Nullable Output<ManagementResourcePreferencesArgs> managementResourcePreferences,
-        @Nullable Output<List<NotificationPreferenceArgs>> notificationPreferences,
-        @Nullable Output<TransportPreferencesArgs> transportPreferences) {
-        this.encryptionPreferences = encryptionPreferences;
-        this.managementResourcePreferences = managementResourcePreferences;
-        this.notificationPreferences = notificationPreferences;
-        this.transportPreferences = transportPreferences;
-    }
+    private PreferencesArgs() {}
 
-    private PreferencesArgs() {
-        this.encryptionPreferences = Codegen.empty();
-        this.managementResourcePreferences = Codegen.empty();
-        this.notificationPreferences = Codegen.empty();
-        this.transportPreferences = Codegen.empty();
+    private PreferencesArgs(PreferencesArgs $) {
+        this.encryptionPreferences = $.encryptionPreferences;
+        this.managementResourcePreferences = $.managementResourcePreferences;
+        this.notificationPreferences = $.notificationPreferences;
+        this.transportPreferences = $.transportPreferences;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PreferencesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<EncryptionPreferencesArgs> encryptionPreferences;
-        private @Nullable Output<ManagementResourcePreferencesArgs> managementResourcePreferences;
-        private @Nullable Output<List<NotificationPreferenceArgs>> notificationPreferences;
-        private @Nullable Output<TransportPreferencesArgs> transportPreferences;
+        private PreferencesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PreferencesArgs();
         }
 
         public Builder(PreferencesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encryptionPreferences = defaults.encryptionPreferences;
-    	      this.managementResourcePreferences = defaults.managementResourcePreferences;
-    	      this.notificationPreferences = defaults.notificationPreferences;
-    	      this.transportPreferences = defaults.transportPreferences;
+            $ = new PreferencesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder encryptionPreferences(@Nullable Output<EncryptionPreferencesArgs> encryptionPreferences) {
-            this.encryptionPreferences = encryptionPreferences;
+            $.encryptionPreferences = encryptionPreferences;
             return this;
         }
-        public Builder encryptionPreferences(@Nullable EncryptionPreferencesArgs encryptionPreferences) {
-            this.encryptionPreferences = Codegen.ofNullable(encryptionPreferences);
-            return this;
+
+        public Builder encryptionPreferences(EncryptionPreferencesArgs encryptionPreferences) {
+            return encryptionPreferences(Output.of(encryptionPreferences));
         }
+
         public Builder managementResourcePreferences(@Nullable Output<ManagementResourcePreferencesArgs> managementResourcePreferences) {
-            this.managementResourcePreferences = managementResourcePreferences;
+            $.managementResourcePreferences = managementResourcePreferences;
             return this;
         }
-        public Builder managementResourcePreferences(@Nullable ManagementResourcePreferencesArgs managementResourcePreferences) {
-            this.managementResourcePreferences = Codegen.ofNullable(managementResourcePreferences);
-            return this;
+
+        public Builder managementResourcePreferences(ManagementResourcePreferencesArgs managementResourcePreferences) {
+            return managementResourcePreferences(Output.of(managementResourcePreferences));
         }
+
         public Builder notificationPreferences(@Nullable Output<List<NotificationPreferenceArgs>> notificationPreferences) {
-            this.notificationPreferences = notificationPreferences;
+            $.notificationPreferences = notificationPreferences;
             return this;
         }
-        public Builder notificationPreferences(@Nullable List<NotificationPreferenceArgs> notificationPreferences) {
-            this.notificationPreferences = Codegen.ofNullable(notificationPreferences);
-            return this;
+
+        public Builder notificationPreferences(List<NotificationPreferenceArgs> notificationPreferences) {
+            return notificationPreferences(Output.of(notificationPreferences));
         }
+
         public Builder notificationPreferences(NotificationPreferenceArgs... notificationPreferences) {
             return notificationPreferences(List.of(notificationPreferences));
         }
+
         public Builder transportPreferences(@Nullable Output<TransportPreferencesArgs> transportPreferences) {
-            this.transportPreferences = transportPreferences;
+            $.transportPreferences = transportPreferences;
             return this;
         }
-        public Builder transportPreferences(@Nullable TransportPreferencesArgs transportPreferences) {
-            this.transportPreferences = Codegen.ofNullable(transportPreferences);
-            return this;
-        }        public PreferencesArgs build() {
-            return new PreferencesArgs(encryptionPreferences, managementResourcePreferences, notificationPreferences, transportPreferences);
+
+        public Builder transportPreferences(TransportPreferencesArgs transportPreferences) {
+            return transportPreferences(Output.of(transportPreferences));
+        }
+
+        public PreferencesArgs build() {
+            return $;
         }
     }
+
 }

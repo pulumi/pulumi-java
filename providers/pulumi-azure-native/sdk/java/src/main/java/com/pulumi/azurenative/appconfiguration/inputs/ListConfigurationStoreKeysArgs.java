@@ -19,7 +19,7 @@ public final class ListConfigurationStoreKeysArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="configStoreName", required=true)
-      private final String configStoreName;
+    private String configStoreName;
 
     public String configStoreName() {
         return this.configStoreName;
@@ -30,7 +30,7 @@ public final class ListConfigurationStoreKeysArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -41,64 +41,58 @@ public final class ListConfigurationStoreKeysArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="skipToken")
-      private final @Nullable String skipToken;
+    private @Nullable String skipToken;
 
     public Optional<String> skipToken() {
-        return this.skipToken == null ? Optional.empty() : Optional.ofNullable(this.skipToken);
+        return Optional.ofNullable(this.skipToken);
     }
 
-    public ListConfigurationStoreKeysArgs(
-        String configStoreName,
-        String resourceGroupName,
-        @Nullable String skipToken) {
-        this.configStoreName = Objects.requireNonNull(configStoreName, "expected parameter 'configStoreName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.skipToken = skipToken;
-    }
+    private ListConfigurationStoreKeysArgs() {}
 
-    private ListConfigurationStoreKeysArgs() {
-        this.configStoreName = null;
-        this.resourceGroupName = null;
-        this.skipToken = null;
+    private ListConfigurationStoreKeysArgs(ListConfigurationStoreKeysArgs $) {
+        this.configStoreName = $.configStoreName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.skipToken = $.skipToken;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListConfigurationStoreKeysArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String configStoreName;
-        private String resourceGroupName;
-        private @Nullable String skipToken;
+        private ListConfigurationStoreKeysArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListConfigurationStoreKeysArgs();
         }
 
         public Builder(ListConfigurationStoreKeysArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configStoreName = defaults.configStoreName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.skipToken = defaults.skipToken;
+            $ = new ListConfigurationStoreKeysArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configStoreName(String configStoreName) {
-            this.configStoreName = Objects.requireNonNull(configStoreName);
+            $.configStoreName = configStoreName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder skipToken(@Nullable String skipToken) {
-            this.skipToken = skipToken;
+            $.skipToken = skipToken;
             return this;
-        }        public ListConfigurationStoreKeysArgs build() {
-            return new ListConfigurationStoreKeysArgs(configStoreName, resourceGroupName, skipToken);
+        }
+
+        public ListConfigurationStoreKeysArgs build() {
+            $.configStoreName = Objects.requireNonNull($.configStoreName, "expected parameter 'configStoreName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

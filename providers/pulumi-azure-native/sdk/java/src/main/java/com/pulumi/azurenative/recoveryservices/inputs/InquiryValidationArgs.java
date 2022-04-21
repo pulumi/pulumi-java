@@ -5,9 +5,9 @@ package com.pulumi.azurenative.recoveryservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class InquiryValidationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
-    public InquiryValidationArgs(@Nullable Output<String> status) {
-        this.status = status;
-    }
+    private InquiryValidationArgs() {}
 
-    private InquiryValidationArgs() {
-        this.status = Codegen.empty();
+    private InquiryValidationArgs(InquiryValidationArgs $) {
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InquiryValidationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> status;
+        private InquiryValidationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InquiryValidationArgs();
         }
 
         public Builder(InquiryValidationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.status = defaults.status;
+            $ = new InquiryValidationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
-        }        public InquiryValidationArgs build() {
-            return new InquiryValidationArgs(status);
+
+        public Builder status(String status) {
+            return status(Output.of(status));
+        }
+
+        public InquiryValidationArgs build() {
+            return $;
         }
     }
+
 }

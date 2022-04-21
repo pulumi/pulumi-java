@@ -5,10 +5,10 @@ package com.pulumi.azurenative.importexport.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class DeliveryPackageInformationArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="carrierName", required=true)
-      private final Output<String> carrierName;
+    private Output<String> carrierName;
 
     public Output<String> carrierName() {
         return this.carrierName;
@@ -36,10 +36,10 @@ public final class DeliveryPackageInformationArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="driveCount")
-      private final @Nullable Output<Double> driveCount;
+    private @Nullable Output<Double> driveCount;
 
-    public Output<Double> driveCount() {
-        return this.driveCount == null ? Codegen.empty() : this.driveCount;
+    public Optional<Output<Double>> driveCount() {
+        return Optional.ofNullable(this.driveCount);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class DeliveryPackageInformationArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="shipDate")
-      private final @Nullable Output<String> shipDate;
+    private @Nullable Output<String> shipDate;
 
-    public Output<String> shipDate() {
-        return this.shipDate == null ? Codegen.empty() : this.shipDate;
+    public Optional<Output<String>> shipDate() {
+        return Optional.ofNullable(this.shipDate);
     }
 
     /**
@@ -58,89 +58,80 @@ public final class DeliveryPackageInformationArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="trackingNumber", required=true)
-      private final Output<String> trackingNumber;
+    private Output<String> trackingNumber;
 
     public Output<String> trackingNumber() {
         return this.trackingNumber;
     }
 
-    public DeliveryPackageInformationArgs(
-        Output<String> carrierName,
-        @Nullable Output<Double> driveCount,
-        @Nullable Output<String> shipDate,
-        Output<String> trackingNumber) {
-        this.carrierName = Objects.requireNonNull(carrierName, "expected parameter 'carrierName' to be non-null");
-        this.driveCount = driveCount;
-        this.shipDate = shipDate;
-        this.trackingNumber = Objects.requireNonNull(trackingNumber, "expected parameter 'trackingNumber' to be non-null");
-    }
+    private DeliveryPackageInformationArgs() {}
 
-    private DeliveryPackageInformationArgs() {
-        this.carrierName = Codegen.empty();
-        this.driveCount = Codegen.empty();
-        this.shipDate = Codegen.empty();
-        this.trackingNumber = Codegen.empty();
+    private DeliveryPackageInformationArgs(DeliveryPackageInformationArgs $) {
+        this.carrierName = $.carrierName;
+        this.driveCount = $.driveCount;
+        this.shipDate = $.shipDate;
+        this.trackingNumber = $.trackingNumber;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryPackageInformationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> carrierName;
-        private @Nullable Output<Double> driveCount;
-        private @Nullable Output<String> shipDate;
-        private Output<String> trackingNumber;
+        private DeliveryPackageInformationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryPackageInformationArgs();
         }
 
         public Builder(DeliveryPackageInformationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.carrierName = defaults.carrierName;
-    	      this.driveCount = defaults.driveCount;
-    	      this.shipDate = defaults.shipDate;
-    	      this.trackingNumber = defaults.trackingNumber;
+            $ = new DeliveryPackageInformationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder carrierName(Output<String> carrierName) {
-            this.carrierName = Objects.requireNonNull(carrierName);
+            $.carrierName = carrierName;
             return this;
         }
+
         public Builder carrierName(String carrierName) {
-            this.carrierName = Output.of(Objects.requireNonNull(carrierName));
-            return this;
+            return carrierName(Output.of(carrierName));
         }
+
         public Builder driveCount(@Nullable Output<Double> driveCount) {
-            this.driveCount = driveCount;
+            $.driveCount = driveCount;
             return this;
         }
-        public Builder driveCount(@Nullable Double driveCount) {
-            this.driveCount = Codegen.ofNullable(driveCount);
-            return this;
+
+        public Builder driveCount(Double driveCount) {
+            return driveCount(Output.of(driveCount));
         }
+
         public Builder shipDate(@Nullable Output<String> shipDate) {
-            this.shipDate = shipDate;
+            $.shipDate = shipDate;
             return this;
         }
-        public Builder shipDate(@Nullable String shipDate) {
-            this.shipDate = Codegen.ofNullable(shipDate);
-            return this;
+
+        public Builder shipDate(String shipDate) {
+            return shipDate(Output.of(shipDate));
         }
+
         public Builder trackingNumber(Output<String> trackingNumber) {
-            this.trackingNumber = Objects.requireNonNull(trackingNumber);
+            $.trackingNumber = trackingNumber;
             return this;
         }
+
         public Builder trackingNumber(String trackingNumber) {
-            this.trackingNumber = Output.of(Objects.requireNonNull(trackingNumber));
-            return this;
-        }        public DeliveryPackageInformationArgs build() {
-            return new DeliveryPackageInformationArgs(carrierName, driveCount, shipDate, trackingNumber);
+            return trackingNumber(Output.of(trackingNumber));
+        }
+
+        public DeliveryPackageInformationArgs build() {
+            $.carrierName = Objects.requireNonNull($.carrierName, "expected parameter 'carrierName' to be non-null");
+            $.trackingNumber = Objects.requireNonNull($.trackingNumber, "expected parameter 'trackingNumber' to be non-null");
+            return $;
         }
     }
+
 }

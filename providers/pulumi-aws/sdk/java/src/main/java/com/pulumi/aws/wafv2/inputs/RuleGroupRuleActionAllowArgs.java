@@ -6,8 +6,8 @@ package com.pulumi.aws.wafv2.inputs;
 import com.pulumi.aws.wafv2.inputs.RuleGroupRuleActionAllowCustomRequestHandlingArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class RuleGroupRuleActionAllowArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="customRequestHandling")
-      private final @Nullable Output<RuleGroupRuleActionAllowCustomRequestHandlingArgs> customRequestHandling;
+    private @Nullable Output<RuleGroupRuleActionAllowCustomRequestHandlingArgs> customRequestHandling;
 
-    public Output<RuleGroupRuleActionAllowCustomRequestHandlingArgs> customRequestHandling() {
-        return this.customRequestHandling == null ? Codegen.empty() : this.customRequestHandling;
+    public Optional<Output<RuleGroupRuleActionAllowCustomRequestHandlingArgs>> customRequestHandling() {
+        return Optional.ofNullable(this.customRequestHandling);
     }
 
-    public RuleGroupRuleActionAllowArgs(@Nullable Output<RuleGroupRuleActionAllowCustomRequestHandlingArgs> customRequestHandling) {
-        this.customRequestHandling = customRequestHandling;
-    }
+    private RuleGroupRuleActionAllowArgs() {}
 
-    private RuleGroupRuleActionAllowArgs() {
-        this.customRequestHandling = Codegen.empty();
+    private RuleGroupRuleActionAllowArgs(RuleGroupRuleActionAllowArgs $) {
+        this.customRequestHandling = $.customRequestHandling;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupRuleActionAllowArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<RuleGroupRuleActionAllowCustomRequestHandlingArgs> customRequestHandling;
+        private RuleGroupRuleActionAllowArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupRuleActionAllowArgs();
         }
 
         public Builder(RuleGroupRuleActionAllowArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customRequestHandling = defaults.customRequestHandling;
+            $ = new RuleGroupRuleActionAllowArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customRequestHandling(@Nullable Output<RuleGroupRuleActionAllowCustomRequestHandlingArgs> customRequestHandling) {
-            this.customRequestHandling = customRequestHandling;
+            $.customRequestHandling = customRequestHandling;
             return this;
         }
-        public Builder customRequestHandling(@Nullable RuleGroupRuleActionAllowCustomRequestHandlingArgs customRequestHandling) {
-            this.customRequestHandling = Codegen.ofNullable(customRequestHandling);
-            return this;
-        }        public RuleGroupRuleActionAllowArgs build() {
-            return new RuleGroupRuleActionAllowArgs(customRequestHandling);
+
+        public Builder customRequestHandling(RuleGroupRuleActionAllowCustomRequestHandlingArgs customRequestHandling) {
+            return customRequestHandling(Output.of(customRequestHandling));
+        }
+
+        public RuleGroupRuleActionAllowArgs build() {
+            return $;
         }
     }
+
 }

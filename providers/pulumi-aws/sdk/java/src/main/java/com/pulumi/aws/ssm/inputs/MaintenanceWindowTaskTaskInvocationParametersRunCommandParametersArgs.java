@@ -8,11 +8,11 @@ import com.pulumi.aws.ssm.inputs.MaintenanceWindowTaskTaskInvocationParametersRu
 import com.pulumi.aws.ssm.inputs.MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
      * 
      */
     @Import(name="cloudwatchConfig")
-      private final @Nullable Output<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersCloudwatchConfigArgs> cloudwatchConfig;
+    private @Nullable Output<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersCloudwatchConfigArgs> cloudwatchConfig;
 
-    public Output<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersCloudwatchConfigArgs> cloudwatchConfig() {
-        return this.cloudwatchConfig == null ? Codegen.empty() : this.cloudwatchConfig;
+    public Optional<Output<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersCloudwatchConfigArgs>> cloudwatchConfig() {
+        return Optional.ofNullable(this.cloudwatchConfig);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
      * 
      */
     @Import(name="comment")
-      private final @Nullable Output<String> comment;
+    private @Nullable Output<String> comment;
 
-    public Output<String> comment() {
-        return this.comment == null ? Codegen.empty() : this.comment;
+    public Optional<Output<String>> comment() {
+        return Optional.ofNullable(this.comment);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
      * 
      */
     @Import(name="documentHash")
-      private final @Nullable Output<String> documentHash;
+    private @Nullable Output<String> documentHash;
 
-    public Output<String> documentHash() {
-        return this.documentHash == null ? Codegen.empty() : this.documentHash;
+    public Optional<Output<String>> documentHash() {
+        return Optional.ofNullable(this.documentHash);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
      * 
      */
     @Import(name="documentHashType")
-      private final @Nullable Output<String> documentHashType;
+    private @Nullable Output<String> documentHashType;
 
-    public Output<String> documentHashType() {
-        return this.documentHashType == null ? Codegen.empty() : this.documentHashType;
+    public Optional<Output<String>> documentHashType() {
+        return Optional.ofNullable(this.documentHashType);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
      * 
      */
     @Import(name="documentVersion")
-      private final @Nullable Output<String> documentVersion;
+    private @Nullable Output<String> documentVersion;
 
-    public Output<String> documentVersion() {
-        return this.documentVersion == null ? Codegen.empty() : this.documentVersion;
+    public Optional<Output<String>> documentVersion() {
+        return Optional.ofNullable(this.documentVersion);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
      * 
      */
     @Import(name="notificationConfig")
-      private final @Nullable Output<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfigArgs> notificationConfig;
+    private @Nullable Output<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfigArgs> notificationConfig;
 
-    public Output<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfigArgs> notificationConfig() {
-        return this.notificationConfig == null ? Codegen.empty() : this.notificationConfig;
+    public Optional<Output<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfigArgs>> notificationConfig() {
+        return Optional.ofNullable(this.notificationConfig);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
      * 
      */
     @Import(name="outputS3Bucket")
-      private final @Nullable Output<String> outputS3Bucket;
+    private @Nullable Output<String> outputS3Bucket;
 
-    public Output<String> outputS3Bucket() {
-        return this.outputS3Bucket == null ? Codegen.empty() : this.outputS3Bucket;
+    public Optional<Output<String>> outputS3Bucket() {
+        return Optional.ofNullable(this.outputS3Bucket);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
      * 
      */
     @Import(name="outputS3KeyPrefix")
-      private final @Nullable Output<String> outputS3KeyPrefix;
+    private @Nullable Output<String> outputS3KeyPrefix;
 
-    public Output<String> outputS3KeyPrefix() {
-        return this.outputS3KeyPrefix == null ? Codegen.empty() : this.outputS3KeyPrefix;
+    public Optional<Output<String>> outputS3KeyPrefix() {
+        return Optional.ofNullable(this.outputS3KeyPrefix);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<List<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterArgs>> parameters;
+    private @Nullable Output<List<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterArgs>> parameters;
 
-    public Output<List<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterArgs>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<List<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterArgs>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -124,10 +124,10 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
      * 
      */
     @Import(name="serviceRoleArn")
-      private final @Nullable Output<String> serviceRoleArn;
+    private @Nullable Output<String> serviceRoleArn;
 
-    public Output<String> serviceRoleArn() {
-        return this.serviceRoleArn == null ? Codegen.empty() : this.serviceRoleArn;
+    public Optional<Output<String>> serviceRoleArn() {
+        return Optional.ofNullable(this.serviceRoleArn);
     }
 
     /**
@@ -135,183 +135,152 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
      * 
      */
     @Import(name="timeoutSeconds")
-      private final @Nullable Output<Integer> timeoutSeconds;
+    private @Nullable Output<Integer> timeoutSeconds;
 
-    public Output<Integer> timeoutSeconds() {
-        return this.timeoutSeconds == null ? Codegen.empty() : this.timeoutSeconds;
+    public Optional<Output<Integer>> timeoutSeconds() {
+        return Optional.ofNullable(this.timeoutSeconds);
     }
 
-    public MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersArgs(
-        @Nullable Output<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersCloudwatchConfigArgs> cloudwatchConfig,
-        @Nullable Output<String> comment,
-        @Nullable Output<String> documentHash,
-        @Nullable Output<String> documentHashType,
-        @Nullable Output<String> documentVersion,
-        @Nullable Output<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfigArgs> notificationConfig,
-        @Nullable Output<String> outputS3Bucket,
-        @Nullable Output<String> outputS3KeyPrefix,
-        @Nullable Output<List<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterArgs>> parameters,
-        @Nullable Output<String> serviceRoleArn,
-        @Nullable Output<Integer> timeoutSeconds) {
-        this.cloudwatchConfig = cloudwatchConfig;
-        this.comment = comment;
-        this.documentHash = documentHash;
-        this.documentHashType = documentHashType;
-        this.documentVersion = documentVersion;
-        this.notificationConfig = notificationConfig;
-        this.outputS3Bucket = outputS3Bucket;
-        this.outputS3KeyPrefix = outputS3KeyPrefix;
-        this.parameters = parameters;
-        this.serviceRoleArn = serviceRoleArn;
-        this.timeoutSeconds = timeoutSeconds;
-    }
+    private MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersArgs() {}
 
-    private MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersArgs() {
-        this.cloudwatchConfig = Codegen.empty();
-        this.comment = Codegen.empty();
-        this.documentHash = Codegen.empty();
-        this.documentHashType = Codegen.empty();
-        this.documentVersion = Codegen.empty();
-        this.notificationConfig = Codegen.empty();
-        this.outputS3Bucket = Codegen.empty();
-        this.outputS3KeyPrefix = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.serviceRoleArn = Codegen.empty();
-        this.timeoutSeconds = Codegen.empty();
+    private MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersArgs(MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersArgs $) {
+        this.cloudwatchConfig = $.cloudwatchConfig;
+        this.comment = $.comment;
+        this.documentHash = $.documentHash;
+        this.documentHashType = $.documentHashType;
+        this.documentVersion = $.documentVersion;
+        this.notificationConfig = $.notificationConfig;
+        this.outputS3Bucket = $.outputS3Bucket;
+        this.outputS3KeyPrefix = $.outputS3KeyPrefix;
+        this.parameters = $.parameters;
+        this.serviceRoleArn = $.serviceRoleArn;
+        this.timeoutSeconds = $.timeoutSeconds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersCloudwatchConfigArgs> cloudwatchConfig;
-        private @Nullable Output<String> comment;
-        private @Nullable Output<String> documentHash;
-        private @Nullable Output<String> documentHashType;
-        private @Nullable Output<String> documentVersion;
-        private @Nullable Output<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfigArgs> notificationConfig;
-        private @Nullable Output<String> outputS3Bucket;
-        private @Nullable Output<String> outputS3KeyPrefix;
-        private @Nullable Output<List<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterArgs>> parameters;
-        private @Nullable Output<String> serviceRoleArn;
-        private @Nullable Output<Integer> timeoutSeconds;
+        private MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersArgs();
         }
 
         public Builder(MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudwatchConfig = defaults.cloudwatchConfig;
-    	      this.comment = defaults.comment;
-    	      this.documentHash = defaults.documentHash;
-    	      this.documentHashType = defaults.documentHashType;
-    	      this.documentVersion = defaults.documentVersion;
-    	      this.notificationConfig = defaults.notificationConfig;
-    	      this.outputS3Bucket = defaults.outputS3Bucket;
-    	      this.outputS3KeyPrefix = defaults.outputS3KeyPrefix;
-    	      this.parameters = defaults.parameters;
-    	      this.serviceRoleArn = defaults.serviceRoleArn;
-    	      this.timeoutSeconds = defaults.timeoutSeconds;
+            $ = new MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudwatchConfig(@Nullable Output<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersCloudwatchConfigArgs> cloudwatchConfig) {
-            this.cloudwatchConfig = cloudwatchConfig;
+            $.cloudwatchConfig = cloudwatchConfig;
             return this;
         }
-        public Builder cloudwatchConfig(@Nullable MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersCloudwatchConfigArgs cloudwatchConfig) {
-            this.cloudwatchConfig = Codegen.ofNullable(cloudwatchConfig);
-            return this;
+
+        public Builder cloudwatchConfig(MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersCloudwatchConfigArgs cloudwatchConfig) {
+            return cloudwatchConfig(Output.of(cloudwatchConfig));
         }
+
         public Builder comment(@Nullable Output<String> comment) {
-            this.comment = comment;
+            $.comment = comment;
             return this;
         }
-        public Builder comment(@Nullable String comment) {
-            this.comment = Codegen.ofNullable(comment);
-            return this;
+
+        public Builder comment(String comment) {
+            return comment(Output.of(comment));
         }
+
         public Builder documentHash(@Nullable Output<String> documentHash) {
-            this.documentHash = documentHash;
+            $.documentHash = documentHash;
             return this;
         }
-        public Builder documentHash(@Nullable String documentHash) {
-            this.documentHash = Codegen.ofNullable(documentHash);
-            return this;
+
+        public Builder documentHash(String documentHash) {
+            return documentHash(Output.of(documentHash));
         }
+
         public Builder documentHashType(@Nullable Output<String> documentHashType) {
-            this.documentHashType = documentHashType;
+            $.documentHashType = documentHashType;
             return this;
         }
-        public Builder documentHashType(@Nullable String documentHashType) {
-            this.documentHashType = Codegen.ofNullable(documentHashType);
-            return this;
+
+        public Builder documentHashType(String documentHashType) {
+            return documentHashType(Output.of(documentHashType));
         }
+
         public Builder documentVersion(@Nullable Output<String> documentVersion) {
-            this.documentVersion = documentVersion;
+            $.documentVersion = documentVersion;
             return this;
         }
-        public Builder documentVersion(@Nullable String documentVersion) {
-            this.documentVersion = Codegen.ofNullable(documentVersion);
-            return this;
+
+        public Builder documentVersion(String documentVersion) {
+            return documentVersion(Output.of(documentVersion));
         }
+
         public Builder notificationConfig(@Nullable Output<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfigArgs> notificationConfig) {
-            this.notificationConfig = notificationConfig;
+            $.notificationConfig = notificationConfig;
             return this;
         }
-        public Builder notificationConfig(@Nullable MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfigArgs notificationConfig) {
-            this.notificationConfig = Codegen.ofNullable(notificationConfig);
-            return this;
+
+        public Builder notificationConfig(MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfigArgs notificationConfig) {
+            return notificationConfig(Output.of(notificationConfig));
         }
+
         public Builder outputS3Bucket(@Nullable Output<String> outputS3Bucket) {
-            this.outputS3Bucket = outputS3Bucket;
+            $.outputS3Bucket = outputS3Bucket;
             return this;
         }
-        public Builder outputS3Bucket(@Nullable String outputS3Bucket) {
-            this.outputS3Bucket = Codegen.ofNullable(outputS3Bucket);
-            return this;
+
+        public Builder outputS3Bucket(String outputS3Bucket) {
+            return outputS3Bucket(Output.of(outputS3Bucket));
         }
+
         public Builder outputS3KeyPrefix(@Nullable Output<String> outputS3KeyPrefix) {
-            this.outputS3KeyPrefix = outputS3KeyPrefix;
+            $.outputS3KeyPrefix = outputS3KeyPrefix;
             return this;
         }
-        public Builder outputS3KeyPrefix(@Nullable String outputS3KeyPrefix) {
-            this.outputS3KeyPrefix = Codegen.ofNullable(outputS3KeyPrefix);
-            return this;
+
+        public Builder outputS3KeyPrefix(String outputS3KeyPrefix) {
+            return outputS3KeyPrefix(Output.of(outputS3KeyPrefix));
         }
+
         public Builder parameters(@Nullable Output<List<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterArgs>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable List<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterArgs> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(List<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterArgs> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder parameters(MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterArgs... parameters) {
             return parameters(List.of(parameters));
         }
+
         public Builder serviceRoleArn(@Nullable Output<String> serviceRoleArn) {
-            this.serviceRoleArn = serviceRoleArn;
+            $.serviceRoleArn = serviceRoleArn;
             return this;
         }
-        public Builder serviceRoleArn(@Nullable String serviceRoleArn) {
-            this.serviceRoleArn = Codegen.ofNullable(serviceRoleArn);
-            return this;
+
+        public Builder serviceRoleArn(String serviceRoleArn) {
+            return serviceRoleArn(Output.of(serviceRoleArn));
         }
+
         public Builder timeoutSeconds(@Nullable Output<Integer> timeoutSeconds) {
-            this.timeoutSeconds = timeoutSeconds;
+            $.timeoutSeconds = timeoutSeconds;
             return this;
         }
-        public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
-            this.timeoutSeconds = Codegen.ofNullable(timeoutSeconds);
-            return this;
-        }        public MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersArgs build() {
-            return new MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersArgs(cloudwatchConfig, comment, documentHash, documentHashType, documentVersion, notificationConfig, outputS3Bucket, outputS3KeyPrefix, parameters, serviceRoleArn, timeoutSeconds);
+
+        public Builder timeoutSeconds(Integer timeoutSeconds) {
+            return timeoutSeconds(Output.of(timeoutSeconds));
+        }
+
+        public MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersArgs build() {
+            return $;
         }
     }
+
 }

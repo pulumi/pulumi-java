@@ -21,7 +21,7 @@ public final class ElasticCloudUserResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="elasticCloudSsoDefaultUrl", required=true)
-      private final String elasticCloudSsoDefaultUrl;
+    private String elasticCloudSsoDefaultUrl;
 
     public String elasticCloudSsoDefaultUrl() {
         return this.elasticCloudSsoDefaultUrl;
@@ -32,7 +32,7 @@ public final class ElasticCloudUserResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="emailAddress", required=true)
-      private final String emailAddress;
+    private String emailAddress;
 
     public String emailAddress() {
         return this.emailAddress;
@@ -43,64 +43,59 @@ public final class ElasticCloudUserResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public ElasticCloudUserResponse(
-        String elasticCloudSsoDefaultUrl,
-        String emailAddress,
-        String id) {
-        this.elasticCloudSsoDefaultUrl = Objects.requireNonNull(elasticCloudSsoDefaultUrl, "expected parameter 'elasticCloudSsoDefaultUrl' to be non-null");
-        this.emailAddress = Objects.requireNonNull(emailAddress, "expected parameter 'emailAddress' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private ElasticCloudUserResponse() {}
 
-    private ElasticCloudUserResponse() {
-        this.elasticCloudSsoDefaultUrl = null;
-        this.emailAddress = null;
-        this.id = null;
+    private ElasticCloudUserResponse(ElasticCloudUserResponse $) {
+        this.elasticCloudSsoDefaultUrl = $.elasticCloudSsoDefaultUrl;
+        this.emailAddress = $.emailAddress;
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ElasticCloudUserResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String elasticCloudSsoDefaultUrl;
-        private String emailAddress;
-        private String id;
+        private ElasticCloudUserResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ElasticCloudUserResponse();
         }
 
         public Builder(ElasticCloudUserResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.elasticCloudSsoDefaultUrl = defaults.elasticCloudSsoDefaultUrl;
-    	      this.emailAddress = defaults.emailAddress;
-    	      this.id = defaults.id;
+            $ = new ElasticCloudUserResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder elasticCloudSsoDefaultUrl(String elasticCloudSsoDefaultUrl) {
-            this.elasticCloudSsoDefaultUrl = Objects.requireNonNull(elasticCloudSsoDefaultUrl);
+            $.elasticCloudSsoDefaultUrl = elasticCloudSsoDefaultUrl;
             return this;
         }
+
         public Builder emailAddress(String emailAddress) {
-            this.emailAddress = Objects.requireNonNull(emailAddress);
+            $.emailAddress = emailAddress;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public ElasticCloudUserResponse build() {
-            return new ElasticCloudUserResponse(elasticCloudSsoDefaultUrl, emailAddress, id);
+        }
+
+        public ElasticCloudUserResponse build() {
+            $.elasticCloudSsoDefaultUrl = Objects.requireNonNull($.elasticCloudSsoDefaultUrl, "expected parameter 'elasticCloudSsoDefaultUrl' to be non-null");
+            $.emailAddress = Objects.requireNonNull($.emailAddress, "expected parameter 'emailAddress' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

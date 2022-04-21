@@ -5,10 +5,10 @@ package com.pulumi.googlenative.datacatalog_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1ContactsPersonArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class GoogleCloudDatacatalogV1ContactsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="people")
-      private final @Nullable Output<List<GoogleCloudDatacatalogV1ContactsPersonArgs>> people;
+    private @Nullable Output<List<GoogleCloudDatacatalogV1ContactsPersonArgs>> people;
 
-    public Output<List<GoogleCloudDatacatalogV1ContactsPersonArgs>> people() {
-        return this.people == null ? Codegen.empty() : this.people;
+    public Optional<Output<List<GoogleCloudDatacatalogV1ContactsPersonArgs>>> people() {
+        return Optional.ofNullable(this.people);
     }
 
-    public GoogleCloudDatacatalogV1ContactsArgs(@Nullable Output<List<GoogleCloudDatacatalogV1ContactsPersonArgs>> people) {
-        this.people = people;
-    }
+    private GoogleCloudDatacatalogV1ContactsArgs() {}
 
-    private GoogleCloudDatacatalogV1ContactsArgs() {
-        this.people = Codegen.empty();
+    private GoogleCloudDatacatalogV1ContactsArgs(GoogleCloudDatacatalogV1ContactsArgs $) {
+        this.people = $.people;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatacatalogV1ContactsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<GoogleCloudDatacatalogV1ContactsPersonArgs>> people;
+        private GoogleCloudDatacatalogV1ContactsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatacatalogV1ContactsArgs();
         }
 
         public Builder(GoogleCloudDatacatalogV1ContactsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.people = defaults.people;
+            $ = new GoogleCloudDatacatalogV1ContactsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder people(@Nullable Output<List<GoogleCloudDatacatalogV1ContactsPersonArgs>> people) {
-            this.people = people;
+            $.people = people;
             return this;
         }
-        public Builder people(@Nullable List<GoogleCloudDatacatalogV1ContactsPersonArgs> people) {
-            this.people = Codegen.ofNullable(people);
-            return this;
+
+        public Builder people(List<GoogleCloudDatacatalogV1ContactsPersonArgs> people) {
+            return people(Output.of(people));
         }
+
         public Builder people(GoogleCloudDatacatalogV1ContactsPersonArgs... people) {
             return people(List.of(people));
-        }        public GoogleCloudDatacatalogV1ContactsArgs build() {
-            return new GoogleCloudDatacatalogV1ContactsArgs(people);
+        }
+
+        public GoogleCloudDatacatalogV1ContactsArgs build() {
+            return $;
         }
     }
+
 }

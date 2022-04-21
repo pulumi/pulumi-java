@@ -25,7 +25,7 @@ public final class GooglePrivacyDlpV2CharacterMaskConfigResponse extends com.pul
      * 
      */
     @Import(name="charactersToIgnore", required=true)
-      private final List<GooglePrivacyDlpV2CharsToIgnoreResponse> charactersToIgnore;
+    private List<GooglePrivacyDlpV2CharsToIgnoreResponse> charactersToIgnore;
 
     public List<GooglePrivacyDlpV2CharsToIgnoreResponse> charactersToIgnore() {
         return this.charactersToIgnore;
@@ -36,7 +36,7 @@ public final class GooglePrivacyDlpV2CharacterMaskConfigResponse extends com.pul
      * 
      */
     @Import(name="maskingCharacter", required=true)
-      private final String maskingCharacter;
+    private String maskingCharacter;
 
     public String maskingCharacter() {
         return this.maskingCharacter;
@@ -47,7 +47,7 @@ public final class GooglePrivacyDlpV2CharacterMaskConfigResponse extends com.pul
      * 
      */
     @Import(name="numberToMask", required=true)
-      private final Integer numberToMask;
+    private Integer numberToMask;
 
     public Integer numberToMask() {
         return this.numberToMask;
@@ -58,76 +58,70 @@ public final class GooglePrivacyDlpV2CharacterMaskConfigResponse extends com.pul
      * 
      */
     @Import(name="reverseOrder", required=true)
-      private final Boolean reverseOrder;
+    private Boolean reverseOrder;
 
     public Boolean reverseOrder() {
         return this.reverseOrder;
     }
 
-    public GooglePrivacyDlpV2CharacterMaskConfigResponse(
-        List<GooglePrivacyDlpV2CharsToIgnoreResponse> charactersToIgnore,
-        String maskingCharacter,
-        Integer numberToMask,
-        Boolean reverseOrder) {
-        this.charactersToIgnore = Objects.requireNonNull(charactersToIgnore, "expected parameter 'charactersToIgnore' to be non-null");
-        this.maskingCharacter = Objects.requireNonNull(maskingCharacter, "expected parameter 'maskingCharacter' to be non-null");
-        this.numberToMask = Objects.requireNonNull(numberToMask, "expected parameter 'numberToMask' to be non-null");
-        this.reverseOrder = Objects.requireNonNull(reverseOrder, "expected parameter 'reverseOrder' to be non-null");
-    }
+    private GooglePrivacyDlpV2CharacterMaskConfigResponse() {}
 
-    private GooglePrivacyDlpV2CharacterMaskConfigResponse() {
-        this.charactersToIgnore = List.of();
-        this.maskingCharacter = null;
-        this.numberToMask = null;
-        this.reverseOrder = null;
+    private GooglePrivacyDlpV2CharacterMaskConfigResponse(GooglePrivacyDlpV2CharacterMaskConfigResponse $) {
+        this.charactersToIgnore = $.charactersToIgnore;
+        this.maskingCharacter = $.maskingCharacter;
+        this.numberToMask = $.numberToMask;
+        this.reverseOrder = $.reverseOrder;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2CharacterMaskConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GooglePrivacyDlpV2CharsToIgnoreResponse> charactersToIgnore;
-        private String maskingCharacter;
-        private Integer numberToMask;
-        private Boolean reverseOrder;
+        private GooglePrivacyDlpV2CharacterMaskConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2CharacterMaskConfigResponse();
         }
 
         public Builder(GooglePrivacyDlpV2CharacterMaskConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.charactersToIgnore = defaults.charactersToIgnore;
-    	      this.maskingCharacter = defaults.maskingCharacter;
-    	      this.numberToMask = defaults.numberToMask;
-    	      this.reverseOrder = defaults.reverseOrder;
+            $ = new GooglePrivacyDlpV2CharacterMaskConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder charactersToIgnore(List<GooglePrivacyDlpV2CharsToIgnoreResponse> charactersToIgnore) {
-            this.charactersToIgnore = Objects.requireNonNull(charactersToIgnore);
+            $.charactersToIgnore = charactersToIgnore;
             return this;
         }
+
         public Builder charactersToIgnore(GooglePrivacyDlpV2CharsToIgnoreResponse... charactersToIgnore) {
             return charactersToIgnore(List.of(charactersToIgnore));
         }
+
         public Builder maskingCharacter(String maskingCharacter) {
-            this.maskingCharacter = Objects.requireNonNull(maskingCharacter);
+            $.maskingCharacter = maskingCharacter;
             return this;
         }
+
         public Builder numberToMask(Integer numberToMask) {
-            this.numberToMask = Objects.requireNonNull(numberToMask);
+            $.numberToMask = numberToMask;
             return this;
         }
+
         public Builder reverseOrder(Boolean reverseOrder) {
-            this.reverseOrder = Objects.requireNonNull(reverseOrder);
+            $.reverseOrder = reverseOrder;
             return this;
-        }        public GooglePrivacyDlpV2CharacterMaskConfigResponse build() {
-            return new GooglePrivacyDlpV2CharacterMaskConfigResponse(charactersToIgnore, maskingCharacter, numberToMask, reverseOrder);
+        }
+
+        public GooglePrivacyDlpV2CharacterMaskConfigResponse build() {
+            $.charactersToIgnore = Objects.requireNonNull($.charactersToIgnore, "expected parameter 'charactersToIgnore' to be non-null");
+            $.maskingCharacter = Objects.requireNonNull($.maskingCharacter, "expected parameter 'maskingCharacter' to be non-null");
+            $.numberToMask = Objects.requireNonNull($.numberToMask, "expected parameter 'numberToMask' to be non-null");
+            $.reverseOrder = Objects.requireNonNull($.reverseOrder, "expected parameter 'reverseOrder' to be non-null");
+            return $;
         }
     }
+
 }

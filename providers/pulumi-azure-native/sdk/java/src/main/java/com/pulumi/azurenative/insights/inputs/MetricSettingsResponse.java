@@ -25,10 +25,10 @@ public final class MetricSettingsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="category")
-      private final @Nullable String category;
+    private @Nullable String category;
 
     public Optional<String> category() {
-        return this.category == null ? Optional.empty() : Optional.ofNullable(this.category);
+        return Optional.ofNullable(this.category);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class MetricSettingsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="enabled", required=true)
-      private final Boolean enabled;
+    private Boolean enabled;
 
     public Boolean enabled() {
         return this.enabled;
@@ -47,10 +47,10 @@ public final class MetricSettingsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="retentionPolicy")
-      private final @Nullable RetentionPolicyResponse retentionPolicy;
+    private @Nullable RetentionPolicyResponse retentionPolicy;
 
     public Optional<RetentionPolicyResponse> retentionPolicy() {
-        return this.retentionPolicy == null ? Optional.empty() : Optional.ofNullable(this.retentionPolicy);
+        return Optional.ofNullable(this.retentionPolicy);
     }
 
     /**
@@ -58,73 +58,63 @@ public final class MetricSettingsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="timeGrain")
-      private final @Nullable String timeGrain;
+    private @Nullable String timeGrain;
 
     public Optional<String> timeGrain() {
-        return this.timeGrain == null ? Optional.empty() : Optional.ofNullable(this.timeGrain);
+        return Optional.ofNullable(this.timeGrain);
     }
 
-    public MetricSettingsResponse(
-        @Nullable String category,
-        Boolean enabled,
-        @Nullable RetentionPolicyResponse retentionPolicy,
-        @Nullable String timeGrain) {
-        this.category = category;
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-        this.retentionPolicy = retentionPolicy;
-        this.timeGrain = timeGrain;
-    }
+    private MetricSettingsResponse() {}
 
-    private MetricSettingsResponse() {
-        this.category = null;
-        this.enabled = null;
-        this.retentionPolicy = null;
-        this.timeGrain = null;
+    private MetricSettingsResponse(MetricSettingsResponse $) {
+        this.category = $.category;
+        this.enabled = $.enabled;
+        this.retentionPolicy = $.retentionPolicy;
+        this.timeGrain = $.timeGrain;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetricSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String category;
-        private Boolean enabled;
-        private @Nullable RetentionPolicyResponse retentionPolicy;
-        private @Nullable String timeGrain;
+        private MetricSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetricSettingsResponse();
         }
 
         public Builder(MetricSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.category = defaults.category;
-    	      this.enabled = defaults.enabled;
-    	      this.retentionPolicy = defaults.retentionPolicy;
-    	      this.timeGrain = defaults.timeGrain;
+            $ = new MetricSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder category(@Nullable String category) {
-            this.category = category;
+            $.category = category;
             return this;
         }
+
         public Builder enabled(Boolean enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder retentionPolicy(@Nullable RetentionPolicyResponse retentionPolicy) {
-            this.retentionPolicy = retentionPolicy;
+            $.retentionPolicy = retentionPolicy;
             return this;
         }
+
         public Builder timeGrain(@Nullable String timeGrain) {
-            this.timeGrain = timeGrain;
+            $.timeGrain = timeGrain;
             return this;
-        }        public MetricSettingsResponse build() {
-            return new MetricSettingsResponse(category, enabled, retentionPolicy, timeGrain);
+        }
+
+        public MetricSettingsResponse build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            return $;
         }
     }
+
 }

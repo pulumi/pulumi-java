@@ -23,7 +23,7 @@ public final class ServiceSpecResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="template", required=true)
-      private final RevisionTemplateResponse template;
+    private RevisionTemplateResponse template;
 
     public RevisionTemplateResponse template() {
         return this.template;
@@ -34,58 +34,56 @@ public final class ServiceSpecResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="traffic", required=true)
-      private final List<TrafficTargetResponse> traffic;
+    private List<TrafficTargetResponse> traffic;
 
     public List<TrafficTargetResponse> traffic() {
         return this.traffic;
     }
 
-    public ServiceSpecResponse(
-        RevisionTemplateResponse template,
-        List<TrafficTargetResponse> traffic) {
-        this.template = Objects.requireNonNull(template, "expected parameter 'template' to be non-null");
-        this.traffic = Objects.requireNonNull(traffic, "expected parameter 'traffic' to be non-null");
-    }
+    private ServiceSpecResponse() {}
 
-    private ServiceSpecResponse() {
-        this.template = null;
-        this.traffic = List.of();
+    private ServiceSpecResponse(ServiceSpecResponse $) {
+        this.template = $.template;
+        this.traffic = $.traffic;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceSpecResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private RevisionTemplateResponse template;
-        private List<TrafficTargetResponse> traffic;
+        private ServiceSpecResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceSpecResponse();
         }
 
         public Builder(ServiceSpecResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.template = defaults.template;
-    	      this.traffic = defaults.traffic;
+            $ = new ServiceSpecResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder template(RevisionTemplateResponse template) {
-            this.template = Objects.requireNonNull(template);
+            $.template = template;
             return this;
         }
+
         public Builder traffic(List<TrafficTargetResponse> traffic) {
-            this.traffic = Objects.requireNonNull(traffic);
+            $.traffic = traffic;
             return this;
         }
+
         public Builder traffic(TrafficTargetResponse... traffic) {
             return traffic(List.of(traffic));
-        }        public ServiceSpecResponse build() {
-            return new ServiceSpecResponse(template, traffic);
+        }
+
+        public ServiceSpecResponse build() {
+            $.template = Objects.requireNonNull($.template, "expected parameter 'template' to be non-null");
+            $.traffic = Objects.requireNonNull($.traffic, "expected parameter 'traffic' to be non-null");
+            return $;
         }
     }
+
 }

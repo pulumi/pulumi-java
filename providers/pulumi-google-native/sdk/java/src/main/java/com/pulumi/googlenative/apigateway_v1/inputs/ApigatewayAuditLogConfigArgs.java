@@ -5,11 +5,11 @@ package com.pulumi.googlenative.apigateway_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.apigateway_v1.enums.ApigatewayAuditLogConfigLogType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ApigatewayAuditLogConfigArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="exemptedMembers")
-      private final @Nullable Output<List<String>> exemptedMembers;
+    private @Nullable Output<List<String>> exemptedMembers;
 
-    public Output<List<String>> exemptedMembers() {
-        return this.exemptedMembers == null ? Codegen.empty() : this.exemptedMembers;
+    public Optional<Output<List<String>>> exemptedMembers() {
+        return Optional.ofNullable(this.exemptedMembers);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class ApigatewayAuditLogConfigArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="logType")
-      private final @Nullable Output<ApigatewayAuditLogConfigLogType> logType;
+    private @Nullable Output<ApigatewayAuditLogConfigLogType> logType;
 
-    public Output<ApigatewayAuditLogConfigLogType> logType() {
-        return this.logType == null ? Codegen.empty() : this.logType;
+    public Optional<Output<ApigatewayAuditLogConfigLogType>> logType() {
+        return Optional.ofNullable(this.logType);
     }
 
-    public ApigatewayAuditLogConfigArgs(
-        @Nullable Output<List<String>> exemptedMembers,
-        @Nullable Output<ApigatewayAuditLogConfigLogType> logType) {
-        this.exemptedMembers = exemptedMembers;
-        this.logType = logType;
-    }
+    private ApigatewayAuditLogConfigArgs() {}
 
-    private ApigatewayAuditLogConfigArgs() {
-        this.exemptedMembers = Codegen.empty();
-        this.logType = Codegen.empty();
+    private ApigatewayAuditLogConfigArgs(ApigatewayAuditLogConfigArgs $) {
+        this.exemptedMembers = $.exemptedMembers;
+        this.logType = $.logType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApigatewayAuditLogConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> exemptedMembers;
-        private @Nullable Output<ApigatewayAuditLogConfigLogType> logType;
+        private ApigatewayAuditLogConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApigatewayAuditLogConfigArgs();
         }
 
         public Builder(ApigatewayAuditLogConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.exemptedMembers = defaults.exemptedMembers;
-    	      this.logType = defaults.logType;
+            $ = new ApigatewayAuditLogConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder exemptedMembers(@Nullable Output<List<String>> exemptedMembers) {
-            this.exemptedMembers = exemptedMembers;
+            $.exemptedMembers = exemptedMembers;
             return this;
         }
-        public Builder exemptedMembers(@Nullable List<String> exemptedMembers) {
-            this.exemptedMembers = Codegen.ofNullable(exemptedMembers);
-            return this;
+
+        public Builder exemptedMembers(List<String> exemptedMembers) {
+            return exemptedMembers(Output.of(exemptedMembers));
         }
+
         public Builder exemptedMembers(String... exemptedMembers) {
             return exemptedMembers(List.of(exemptedMembers));
         }
+
         public Builder logType(@Nullable Output<ApigatewayAuditLogConfigLogType> logType) {
-            this.logType = logType;
+            $.logType = logType;
             return this;
         }
-        public Builder logType(@Nullable ApigatewayAuditLogConfigLogType logType) {
-            this.logType = Codegen.ofNullable(logType);
-            return this;
-        }        public ApigatewayAuditLogConfigArgs build() {
-            return new ApigatewayAuditLogConfigArgs(exemptedMembers, logType);
+
+        public Builder logType(ApigatewayAuditLogConfigLogType logType) {
+            return logType(Output.of(logType));
+        }
+
+        public ApigatewayAuditLogConfigArgs build() {
+            return $;
         }
     }
+
 }

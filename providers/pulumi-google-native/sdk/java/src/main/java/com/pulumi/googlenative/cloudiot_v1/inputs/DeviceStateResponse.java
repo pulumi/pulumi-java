@@ -21,7 +21,7 @@ public final class DeviceStateResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="binaryData", required=true)
-      private final String binaryData;
+    private String binaryData;
 
     public String binaryData() {
         return this.binaryData;
@@ -32,55 +32,52 @@ public final class DeviceStateResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="updateTime", required=true)
-      private final String updateTime;
+    private String updateTime;
 
     public String updateTime() {
         return this.updateTime;
     }
 
-    public DeviceStateResponse(
-        String binaryData,
-        String updateTime) {
-        this.binaryData = Objects.requireNonNull(binaryData, "expected parameter 'binaryData' to be non-null");
-        this.updateTime = Objects.requireNonNull(updateTime, "expected parameter 'updateTime' to be non-null");
-    }
+    private DeviceStateResponse() {}
 
-    private DeviceStateResponse() {
-        this.binaryData = null;
-        this.updateTime = null;
+    private DeviceStateResponse(DeviceStateResponse $) {
+        this.binaryData = $.binaryData;
+        this.updateTime = $.updateTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeviceStateResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String binaryData;
-        private String updateTime;
+        private DeviceStateResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeviceStateResponse();
         }
 
         public Builder(DeviceStateResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.binaryData = defaults.binaryData;
-    	      this.updateTime = defaults.updateTime;
+            $ = new DeviceStateResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder binaryData(String binaryData) {
-            this.binaryData = Objects.requireNonNull(binaryData);
+            $.binaryData = binaryData;
             return this;
         }
+
         public Builder updateTime(String updateTime) {
-            this.updateTime = Objects.requireNonNull(updateTime);
+            $.updateTime = updateTime;
             return this;
-        }        public DeviceStateResponse build() {
-            return new DeviceStateResponse(binaryData, updateTime);
+        }
+
+        public DeviceStateResponse build() {
+            $.binaryData = Objects.requireNonNull($.binaryData, "expected parameter 'binaryData' to be non-null");
+            $.updateTime = Objects.requireNonNull($.updateTime, "expected parameter 'updateTime' to be non-null");
+            return $;
         }
     }
+
 }

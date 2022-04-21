@@ -8,12 +8,12 @@ import com.pulumi.awsnative.customerprofiles.inputs.ObjectTypeKeyMapArgs;
 import com.pulumi.awsnative.customerprofiles.inputs.ObjectTypeTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ObjectTypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allowProfileCreation")
-      private final @Nullable Output<Boolean> allowProfileCreation;
+    private @Nullable Output<Boolean> allowProfileCreation;
 
-    public Output<Boolean> allowProfileCreation() {
-        return this.allowProfileCreation == null ? Codegen.empty() : this.allowProfileCreation;
+    public Optional<Output<Boolean>> allowProfileCreation() {
+        return Optional.ofNullable(this.allowProfileCreation);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ObjectTypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -48,7 +48,7 @@ public final class ObjectTypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="domainName", required=true)
-      private final Output<String> domainName;
+    private Output<String> domainName;
 
     public Output<String> domainName() {
         return this.domainName;
@@ -59,10 +59,10 @@ public final class ObjectTypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encryptionKey")
-      private final @Nullable Output<String> encryptionKey;
+    private @Nullable Output<String> encryptionKey;
 
-    public Output<String> encryptionKey() {
-        return this.encryptionKey == null ? Codegen.empty() : this.encryptionKey;
+    public Optional<Output<String>> encryptionKey() {
+        return Optional.ofNullable(this.encryptionKey);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class ObjectTypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="expirationDays")
-      private final @Nullable Output<Integer> expirationDays;
+    private @Nullable Output<Integer> expirationDays;
 
-    public Output<Integer> expirationDays() {
-        return this.expirationDays == null ? Codegen.empty() : this.expirationDays;
+    public Optional<Output<Integer>> expirationDays() {
+        return Optional.ofNullable(this.expirationDays);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class ObjectTypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fields")
-      private final @Nullable Output<List<ObjectTypeFieldMapArgs>> fields;
+    private @Nullable Output<List<ObjectTypeFieldMapArgs>> fields;
 
-    public Output<List<ObjectTypeFieldMapArgs>> fields() {
-        return this.fields == null ? Codegen.empty() : this.fields;
+    public Optional<Output<List<ObjectTypeFieldMapArgs>>> fields() {
+        return Optional.ofNullable(this.fields);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class ObjectTypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keys")
-      private final @Nullable Output<List<ObjectTypeKeyMapArgs>> keys;
+    private @Nullable Output<List<ObjectTypeKeyMapArgs>> keys;
 
-    public Output<List<ObjectTypeKeyMapArgs>> keys() {
-        return this.keys == null ? Codegen.empty() : this.keys;
+    public Optional<Output<List<ObjectTypeKeyMapArgs>>> keys() {
+        return Optional.ofNullable(this.keys);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class ObjectTypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="objectTypeName")
-      private final @Nullable Output<String> objectTypeName;
+    private @Nullable Output<String> objectTypeName;
 
-    public Output<String> objectTypeName() {
-        return this.objectTypeName == null ? Codegen.empty() : this.objectTypeName;
+    public Optional<Output<String>> objectTypeName() {
+        return Optional.ofNullable(this.objectTypeName);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class ObjectTypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<ObjectTypeTagArgs>> tags;
+    private @Nullable Output<List<ObjectTypeTagArgs>> tags;
 
-    public Output<List<ObjectTypeTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<ObjectTypeTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -125,176 +125,151 @@ public final class ObjectTypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="templateId")
-      private final @Nullable Output<String> templateId;
+    private @Nullable Output<String> templateId;
 
-    public Output<String> templateId() {
-        return this.templateId == null ? Codegen.empty() : this.templateId;
+    public Optional<Output<String>> templateId() {
+        return Optional.ofNullable(this.templateId);
     }
 
-    public ObjectTypeArgs(
-        @Nullable Output<Boolean> allowProfileCreation,
-        @Nullable Output<String> description,
-        Output<String> domainName,
-        @Nullable Output<String> encryptionKey,
-        @Nullable Output<Integer> expirationDays,
-        @Nullable Output<List<ObjectTypeFieldMapArgs>> fields,
-        @Nullable Output<List<ObjectTypeKeyMapArgs>> keys,
-        @Nullable Output<String> objectTypeName,
-        @Nullable Output<List<ObjectTypeTagArgs>> tags,
-        @Nullable Output<String> templateId) {
-        this.allowProfileCreation = allowProfileCreation;
-        this.description = description;
-        this.domainName = Objects.requireNonNull(domainName, "expected parameter 'domainName' to be non-null");
-        this.encryptionKey = encryptionKey;
-        this.expirationDays = expirationDays;
-        this.fields = fields;
-        this.keys = keys;
-        this.objectTypeName = objectTypeName;
-        this.tags = tags;
-        this.templateId = templateId;
-    }
+    private ObjectTypeArgs() {}
 
-    private ObjectTypeArgs() {
-        this.allowProfileCreation = Codegen.empty();
-        this.description = Codegen.empty();
-        this.domainName = Codegen.empty();
-        this.encryptionKey = Codegen.empty();
-        this.expirationDays = Codegen.empty();
-        this.fields = Codegen.empty();
-        this.keys = Codegen.empty();
-        this.objectTypeName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.templateId = Codegen.empty();
+    private ObjectTypeArgs(ObjectTypeArgs $) {
+        this.allowProfileCreation = $.allowProfileCreation;
+        this.description = $.description;
+        this.domainName = $.domainName;
+        this.encryptionKey = $.encryptionKey;
+        this.expirationDays = $.expirationDays;
+        this.fields = $.fields;
+        this.keys = $.keys;
+        this.objectTypeName = $.objectTypeName;
+        this.tags = $.tags;
+        this.templateId = $.templateId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ObjectTypeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> allowProfileCreation;
-        private @Nullable Output<String> description;
-        private Output<String> domainName;
-        private @Nullable Output<String> encryptionKey;
-        private @Nullable Output<Integer> expirationDays;
-        private @Nullable Output<List<ObjectTypeFieldMapArgs>> fields;
-        private @Nullable Output<List<ObjectTypeKeyMapArgs>> keys;
-        private @Nullable Output<String> objectTypeName;
-        private @Nullable Output<List<ObjectTypeTagArgs>> tags;
-        private @Nullable Output<String> templateId;
+        private ObjectTypeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ObjectTypeArgs();
         }
 
         public Builder(ObjectTypeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowProfileCreation = defaults.allowProfileCreation;
-    	      this.description = defaults.description;
-    	      this.domainName = defaults.domainName;
-    	      this.encryptionKey = defaults.encryptionKey;
-    	      this.expirationDays = defaults.expirationDays;
-    	      this.fields = defaults.fields;
-    	      this.keys = defaults.keys;
-    	      this.objectTypeName = defaults.objectTypeName;
-    	      this.tags = defaults.tags;
-    	      this.templateId = defaults.templateId;
+            $ = new ObjectTypeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowProfileCreation(@Nullable Output<Boolean> allowProfileCreation) {
-            this.allowProfileCreation = allowProfileCreation;
+            $.allowProfileCreation = allowProfileCreation;
             return this;
         }
-        public Builder allowProfileCreation(@Nullable Boolean allowProfileCreation) {
-            this.allowProfileCreation = Codegen.ofNullable(allowProfileCreation);
-            return this;
+
+        public Builder allowProfileCreation(Boolean allowProfileCreation) {
+            return allowProfileCreation(Output.of(allowProfileCreation));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder domainName(Output<String> domainName) {
-            this.domainName = Objects.requireNonNull(domainName);
+            $.domainName = domainName;
             return this;
         }
+
         public Builder domainName(String domainName) {
-            this.domainName = Output.of(Objects.requireNonNull(domainName));
-            return this;
+            return domainName(Output.of(domainName));
         }
+
         public Builder encryptionKey(@Nullable Output<String> encryptionKey) {
-            this.encryptionKey = encryptionKey;
+            $.encryptionKey = encryptionKey;
             return this;
         }
-        public Builder encryptionKey(@Nullable String encryptionKey) {
-            this.encryptionKey = Codegen.ofNullable(encryptionKey);
-            return this;
+
+        public Builder encryptionKey(String encryptionKey) {
+            return encryptionKey(Output.of(encryptionKey));
         }
+
         public Builder expirationDays(@Nullable Output<Integer> expirationDays) {
-            this.expirationDays = expirationDays;
+            $.expirationDays = expirationDays;
             return this;
         }
-        public Builder expirationDays(@Nullable Integer expirationDays) {
-            this.expirationDays = Codegen.ofNullable(expirationDays);
-            return this;
+
+        public Builder expirationDays(Integer expirationDays) {
+            return expirationDays(Output.of(expirationDays));
         }
+
         public Builder fields(@Nullable Output<List<ObjectTypeFieldMapArgs>> fields) {
-            this.fields = fields;
+            $.fields = fields;
             return this;
         }
-        public Builder fields(@Nullable List<ObjectTypeFieldMapArgs> fields) {
-            this.fields = Codegen.ofNullable(fields);
-            return this;
+
+        public Builder fields(List<ObjectTypeFieldMapArgs> fields) {
+            return fields(Output.of(fields));
         }
+
         public Builder fields(ObjectTypeFieldMapArgs... fields) {
             return fields(List.of(fields));
         }
+
         public Builder keys(@Nullable Output<List<ObjectTypeKeyMapArgs>> keys) {
-            this.keys = keys;
+            $.keys = keys;
             return this;
         }
-        public Builder keys(@Nullable List<ObjectTypeKeyMapArgs> keys) {
-            this.keys = Codegen.ofNullable(keys);
-            return this;
+
+        public Builder keys(List<ObjectTypeKeyMapArgs> keys) {
+            return keys(Output.of(keys));
         }
+
         public Builder keys(ObjectTypeKeyMapArgs... keys) {
             return keys(List.of(keys));
         }
+
         public Builder objectTypeName(@Nullable Output<String> objectTypeName) {
-            this.objectTypeName = objectTypeName;
+            $.objectTypeName = objectTypeName;
             return this;
         }
-        public Builder objectTypeName(@Nullable String objectTypeName) {
-            this.objectTypeName = Codegen.ofNullable(objectTypeName);
-            return this;
+
+        public Builder objectTypeName(String objectTypeName) {
+            return objectTypeName(Output.of(objectTypeName));
         }
+
         public Builder tags(@Nullable Output<List<ObjectTypeTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<ObjectTypeTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<ObjectTypeTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(ObjectTypeTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder templateId(@Nullable Output<String> templateId) {
-            this.templateId = templateId;
+            $.templateId = templateId;
             return this;
         }
-        public Builder templateId(@Nullable String templateId) {
-            this.templateId = Codegen.ofNullable(templateId);
-            return this;
-        }        public ObjectTypeArgs build() {
-            return new ObjectTypeArgs(allowProfileCreation, description, domainName, encryptionKey, expirationDays, fields, keys, objectTypeName, tags, templateId);
+
+        public Builder templateId(String templateId) {
+            return templateId(Output.of(templateId));
+        }
+
+        public ObjectTypeArgs build() {
+            $.domainName = Objects.requireNonNull($.domainName, "expected parameter 'domainName' to be non-null");
+            return $;
         }
     }
+
 }

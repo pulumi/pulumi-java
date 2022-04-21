@@ -15,78 +15,71 @@ public final class DeliveryStreamCopyCommand extends com.pulumi.resources.Invoke
     public static final DeliveryStreamCopyCommand Empty = new DeliveryStreamCopyCommand();
 
     @Import(name="copyOptions")
-      private final @Nullable String copyOptions;
+    private @Nullable String copyOptions;
 
     public Optional<String> copyOptions() {
-        return this.copyOptions == null ? Optional.empty() : Optional.ofNullable(this.copyOptions);
+        return Optional.ofNullable(this.copyOptions);
     }
 
     @Import(name="dataTableColumns")
-      private final @Nullable String dataTableColumns;
+    private @Nullable String dataTableColumns;
 
     public Optional<String> dataTableColumns() {
-        return this.dataTableColumns == null ? Optional.empty() : Optional.ofNullable(this.dataTableColumns);
+        return Optional.ofNullable(this.dataTableColumns);
     }
 
     @Import(name="dataTableName", required=true)
-      private final String dataTableName;
+    private String dataTableName;
 
     public String dataTableName() {
         return this.dataTableName;
     }
 
-    public DeliveryStreamCopyCommand(
-        @Nullable String copyOptions,
-        @Nullable String dataTableColumns,
-        String dataTableName) {
-        this.copyOptions = copyOptions;
-        this.dataTableColumns = dataTableColumns;
-        this.dataTableName = Objects.requireNonNull(dataTableName, "expected parameter 'dataTableName' to be non-null");
-    }
+    private DeliveryStreamCopyCommand() {}
 
-    private DeliveryStreamCopyCommand() {
-        this.copyOptions = null;
-        this.dataTableColumns = null;
-        this.dataTableName = null;
+    private DeliveryStreamCopyCommand(DeliveryStreamCopyCommand $) {
+        this.copyOptions = $.copyOptions;
+        this.dataTableColumns = $.dataTableColumns;
+        this.dataTableName = $.dataTableName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryStreamCopyCommand defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String copyOptions;
-        private @Nullable String dataTableColumns;
-        private String dataTableName;
+        private DeliveryStreamCopyCommand $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryStreamCopyCommand();
         }
 
         public Builder(DeliveryStreamCopyCommand defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.copyOptions = defaults.copyOptions;
-    	      this.dataTableColumns = defaults.dataTableColumns;
-    	      this.dataTableName = defaults.dataTableName;
+            $ = new DeliveryStreamCopyCommand(Objects.requireNonNull(defaults));
         }
 
         public Builder copyOptions(@Nullable String copyOptions) {
-            this.copyOptions = copyOptions;
+            $.copyOptions = copyOptions;
             return this;
         }
+
         public Builder dataTableColumns(@Nullable String dataTableColumns) {
-            this.dataTableColumns = dataTableColumns;
+            $.dataTableColumns = dataTableColumns;
             return this;
         }
+
         public Builder dataTableName(String dataTableName) {
-            this.dataTableName = Objects.requireNonNull(dataTableName);
+            $.dataTableName = dataTableName;
             return this;
-        }        public DeliveryStreamCopyCommand build() {
-            return new DeliveryStreamCopyCommand(copyOptions, dataTableColumns, dataTableName);
+        }
+
+        public DeliveryStreamCopyCommand build() {
+            $.dataTableName = Objects.requireNonNull($.dataTableName, "expected parameter 'dataTableName' to be non-null");
+            return $;
         }
     }
+
 }

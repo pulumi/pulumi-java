@@ -5,9 +5,9 @@ package com.pulumi.azurenative.servicebus;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class MigrationConfigArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="configName")
-      private final @Nullable Output<String> configName;
+    private @Nullable Output<String> configName;
 
-    public Output<String> configName() {
-        return this.configName == null ? Codegen.empty() : this.configName;
+    public Optional<Output<String>> configName() {
+        return Optional.ofNullable(this.configName);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class MigrationConfigArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="namespaceName", required=true)
-      private final Output<String> namespaceName;
+    private Output<String> namespaceName;
 
     public Output<String> namespaceName() {
         return this.namespaceName;
@@ -42,7 +42,7 @@ public final class MigrationConfigArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="postMigrationName", required=true)
-      private final Output<String> postMigrationName;
+    private Output<String> postMigrationName;
 
     public Output<String> postMigrationName() {
         return this.postMigrationName;
@@ -53,7 +53,7 @@ public final class MigrationConfigArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -64,102 +64,92 @@ public final class MigrationConfigArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="targetNamespace", required=true)
-      private final Output<String> targetNamespace;
+    private Output<String> targetNamespace;
 
     public Output<String> targetNamespace() {
         return this.targetNamespace;
     }
 
-    public MigrationConfigArgs(
-        @Nullable Output<String> configName,
-        Output<String> namespaceName,
-        Output<String> postMigrationName,
-        Output<String> resourceGroupName,
-        Output<String> targetNamespace) {
-        this.configName = configName;
-        this.namespaceName = Objects.requireNonNull(namespaceName, "expected parameter 'namespaceName' to be non-null");
-        this.postMigrationName = Objects.requireNonNull(postMigrationName, "expected parameter 'postMigrationName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.targetNamespace = Objects.requireNonNull(targetNamespace, "expected parameter 'targetNamespace' to be non-null");
-    }
+    private MigrationConfigArgs() {}
 
-    private MigrationConfigArgs() {
-        this.configName = Codegen.empty();
-        this.namespaceName = Codegen.empty();
-        this.postMigrationName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.targetNamespace = Codegen.empty();
+    private MigrationConfigArgs(MigrationConfigArgs $) {
+        this.configName = $.configName;
+        this.namespaceName = $.namespaceName;
+        this.postMigrationName = $.postMigrationName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.targetNamespace = $.targetNamespace;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MigrationConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> configName;
-        private Output<String> namespaceName;
-        private Output<String> postMigrationName;
-        private Output<String> resourceGroupName;
-        private Output<String> targetNamespace;
+        private MigrationConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MigrationConfigArgs();
         }
 
         public Builder(MigrationConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configName = defaults.configName;
-    	      this.namespaceName = defaults.namespaceName;
-    	      this.postMigrationName = defaults.postMigrationName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.targetNamespace = defaults.targetNamespace;
+            $ = new MigrationConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configName(@Nullable Output<String> configName) {
-            this.configName = configName;
+            $.configName = configName;
             return this;
         }
-        public Builder configName(@Nullable String configName) {
-            this.configName = Codegen.ofNullable(configName);
-            return this;
+
+        public Builder configName(String configName) {
+            return configName(Output.of(configName));
         }
+
         public Builder namespaceName(Output<String> namespaceName) {
-            this.namespaceName = Objects.requireNonNull(namespaceName);
+            $.namespaceName = namespaceName;
             return this;
         }
+
         public Builder namespaceName(String namespaceName) {
-            this.namespaceName = Output.of(Objects.requireNonNull(namespaceName));
-            return this;
+            return namespaceName(Output.of(namespaceName));
         }
+
         public Builder postMigrationName(Output<String> postMigrationName) {
-            this.postMigrationName = Objects.requireNonNull(postMigrationName);
+            $.postMigrationName = postMigrationName;
             return this;
         }
+
         public Builder postMigrationName(String postMigrationName) {
-            this.postMigrationName = Output.of(Objects.requireNonNull(postMigrationName));
-            return this;
+            return postMigrationName(Output.of(postMigrationName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder targetNamespace(Output<String> targetNamespace) {
-            this.targetNamespace = Objects.requireNonNull(targetNamespace);
+            $.targetNamespace = targetNamespace;
             return this;
         }
+
         public Builder targetNamespace(String targetNamespace) {
-            this.targetNamespace = Output.of(Objects.requireNonNull(targetNamespace));
-            return this;
-        }        public MigrationConfigArgs build() {
-            return new MigrationConfigArgs(configName, namespaceName, postMigrationName, resourceGroupName, targetNamespace);
+            return targetNamespace(Output.of(targetNamespace));
+        }
+
+        public MigrationConfigArgs build() {
+            $.namespaceName = Objects.requireNonNull($.namespaceName, "expected parameter 'namespaceName' to be non-null");
+            $.postMigrationName = Objects.requireNonNull($.postMigrationName, "expected parameter 'postMigrationName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.targetNamespace = Objects.requireNonNull($.targetNamespace, "expected parameter 'targetNamespace' to be non-null");
+            return $;
         }
     }
+
 }

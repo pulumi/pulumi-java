@@ -17,45 +17,45 @@ public final class GetClusterArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="clusterIdentifier", required=true)
-      private final String clusterIdentifier;
+    private String clusterIdentifier;
 
     public String clusterIdentifier() {
         return this.clusterIdentifier;
     }
 
-    public GetClusterArgs(String clusterIdentifier) {
-        this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier, "expected parameter 'clusterIdentifier' to be non-null");
-    }
+    private GetClusterArgs() {}
 
-    private GetClusterArgs() {
-        this.clusterIdentifier = null;
+    private GetClusterArgs(GetClusterArgs $) {
+        this.clusterIdentifier = $.clusterIdentifier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String clusterIdentifier;
+        private GetClusterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterArgs();
         }
 
         public Builder(GetClusterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterIdentifier = defaults.clusterIdentifier;
+            $ = new GetClusterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterIdentifier(String clusterIdentifier) {
-            this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier);
+            $.clusterIdentifier = clusterIdentifier;
             return this;
-        }        public GetClusterArgs build() {
-            return new GetClusterArgs(clusterIdentifier);
+        }
+
+        public GetClusterArgs build() {
+            $.clusterIdentifier = Objects.requireNonNull($.clusterIdentifier, "expected parameter 'clusterIdentifier' to be non-null");
+            return $;
         }
     }
+
 }

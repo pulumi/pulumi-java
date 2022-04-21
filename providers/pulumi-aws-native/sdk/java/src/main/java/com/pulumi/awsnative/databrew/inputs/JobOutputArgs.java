@@ -9,11 +9,11 @@ import com.pulumi.awsnative.databrew.inputs.JobOutputFormatOptionsArgs;
 import com.pulumi.awsnative.databrew.inputs.JobS3LocationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,153 +22,138 @@ public final class JobOutputArgs extends com.pulumi.resources.ResourceArgs {
     public static final JobOutputArgs Empty = new JobOutputArgs();
 
     @Import(name="compressionFormat")
-      private final @Nullable Output<JobOutputCompressionFormat> compressionFormat;
+    private @Nullable Output<JobOutputCompressionFormat> compressionFormat;
 
-    public Output<JobOutputCompressionFormat> compressionFormat() {
-        return this.compressionFormat == null ? Codegen.empty() : this.compressionFormat;
+    public Optional<Output<JobOutputCompressionFormat>> compressionFormat() {
+        return Optional.ofNullable(this.compressionFormat);
     }
 
     @Import(name="format")
-      private final @Nullable Output<JobOutputFormat> format;
+    private @Nullable Output<JobOutputFormat> format;
 
-    public Output<JobOutputFormat> format() {
-        return this.format == null ? Codegen.empty() : this.format;
+    public Optional<Output<JobOutputFormat>> format() {
+        return Optional.ofNullable(this.format);
     }
 
     @Import(name="formatOptions")
-      private final @Nullable Output<JobOutputFormatOptionsArgs> formatOptions;
+    private @Nullable Output<JobOutputFormatOptionsArgs> formatOptions;
 
-    public Output<JobOutputFormatOptionsArgs> formatOptions() {
-        return this.formatOptions == null ? Codegen.empty() : this.formatOptions;
+    public Optional<Output<JobOutputFormatOptionsArgs>> formatOptions() {
+        return Optional.ofNullable(this.formatOptions);
     }
 
     @Import(name="location", required=true)
-      private final Output<JobS3LocationArgs> location;
+    private Output<JobS3LocationArgs> location;
 
     public Output<JobS3LocationArgs> location() {
         return this.location;
     }
 
     @Import(name="overwrite")
-      private final @Nullable Output<Boolean> overwrite;
+    private @Nullable Output<Boolean> overwrite;
 
-    public Output<Boolean> overwrite() {
-        return this.overwrite == null ? Codegen.empty() : this.overwrite;
+    public Optional<Output<Boolean>> overwrite() {
+        return Optional.ofNullable(this.overwrite);
     }
 
     @Import(name="partitionColumns")
-      private final @Nullable Output<List<String>> partitionColumns;
+    private @Nullable Output<List<String>> partitionColumns;
 
-    public Output<List<String>> partitionColumns() {
-        return this.partitionColumns == null ? Codegen.empty() : this.partitionColumns;
+    public Optional<Output<List<String>>> partitionColumns() {
+        return Optional.ofNullable(this.partitionColumns);
     }
 
-    public JobOutputArgs(
-        @Nullable Output<JobOutputCompressionFormat> compressionFormat,
-        @Nullable Output<JobOutputFormat> format,
-        @Nullable Output<JobOutputFormatOptionsArgs> formatOptions,
-        Output<JobS3LocationArgs> location,
-        @Nullable Output<Boolean> overwrite,
-        @Nullable Output<List<String>> partitionColumns) {
-        this.compressionFormat = compressionFormat;
-        this.format = format;
-        this.formatOptions = formatOptions;
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.overwrite = overwrite;
-        this.partitionColumns = partitionColumns;
-    }
+    private JobOutputArgs() {}
 
-    private JobOutputArgs() {
-        this.compressionFormat = Codegen.empty();
-        this.format = Codegen.empty();
-        this.formatOptions = Codegen.empty();
-        this.location = Codegen.empty();
-        this.overwrite = Codegen.empty();
-        this.partitionColumns = Codegen.empty();
+    private JobOutputArgs(JobOutputArgs $) {
+        this.compressionFormat = $.compressionFormat;
+        this.format = $.format;
+        this.formatOptions = $.formatOptions;
+        this.location = $.location;
+        this.overwrite = $.overwrite;
+        this.partitionColumns = $.partitionColumns;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobOutputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<JobOutputCompressionFormat> compressionFormat;
-        private @Nullable Output<JobOutputFormat> format;
-        private @Nullable Output<JobOutputFormatOptionsArgs> formatOptions;
-        private Output<JobS3LocationArgs> location;
-        private @Nullable Output<Boolean> overwrite;
-        private @Nullable Output<List<String>> partitionColumns;
+        private JobOutputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobOutputArgs();
         }
 
         public Builder(JobOutputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.compressionFormat = defaults.compressionFormat;
-    	      this.format = defaults.format;
-    	      this.formatOptions = defaults.formatOptions;
-    	      this.location = defaults.location;
-    	      this.overwrite = defaults.overwrite;
-    	      this.partitionColumns = defaults.partitionColumns;
+            $ = new JobOutputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder compressionFormat(@Nullable Output<JobOutputCompressionFormat> compressionFormat) {
-            this.compressionFormat = compressionFormat;
+            $.compressionFormat = compressionFormat;
             return this;
         }
-        public Builder compressionFormat(@Nullable JobOutputCompressionFormat compressionFormat) {
-            this.compressionFormat = Codegen.ofNullable(compressionFormat);
-            return this;
+
+        public Builder compressionFormat(JobOutputCompressionFormat compressionFormat) {
+            return compressionFormat(Output.of(compressionFormat));
         }
+
         public Builder format(@Nullable Output<JobOutputFormat> format) {
-            this.format = format;
+            $.format = format;
             return this;
         }
-        public Builder format(@Nullable JobOutputFormat format) {
-            this.format = Codegen.ofNullable(format);
-            return this;
+
+        public Builder format(JobOutputFormat format) {
+            return format(Output.of(format));
         }
+
         public Builder formatOptions(@Nullable Output<JobOutputFormatOptionsArgs> formatOptions) {
-            this.formatOptions = formatOptions;
+            $.formatOptions = formatOptions;
             return this;
         }
-        public Builder formatOptions(@Nullable JobOutputFormatOptionsArgs formatOptions) {
-            this.formatOptions = Codegen.ofNullable(formatOptions);
-            return this;
+
+        public Builder formatOptions(JobOutputFormatOptionsArgs formatOptions) {
+            return formatOptions(Output.of(formatOptions));
         }
+
         public Builder location(Output<JobS3LocationArgs> location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder location(JobS3LocationArgs location) {
-            this.location = Output.of(Objects.requireNonNull(location));
-            return this;
+            return location(Output.of(location));
         }
+
         public Builder overwrite(@Nullable Output<Boolean> overwrite) {
-            this.overwrite = overwrite;
+            $.overwrite = overwrite;
             return this;
         }
-        public Builder overwrite(@Nullable Boolean overwrite) {
-            this.overwrite = Codegen.ofNullable(overwrite);
-            return this;
+
+        public Builder overwrite(Boolean overwrite) {
+            return overwrite(Output.of(overwrite));
         }
+
         public Builder partitionColumns(@Nullable Output<List<String>> partitionColumns) {
-            this.partitionColumns = partitionColumns;
+            $.partitionColumns = partitionColumns;
             return this;
         }
-        public Builder partitionColumns(@Nullable List<String> partitionColumns) {
-            this.partitionColumns = Codegen.ofNullable(partitionColumns);
-            return this;
+
+        public Builder partitionColumns(List<String> partitionColumns) {
+            return partitionColumns(Output.of(partitionColumns));
         }
+
         public Builder partitionColumns(String... partitionColumns) {
             return partitionColumns(List.of(partitionColumns));
-        }        public JobOutputArgs build() {
-            return new JobOutputArgs(compressionFormat, format, formatOptions, location, overwrite, partitionColumns);
+        }
+
+        public JobOutputArgs build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

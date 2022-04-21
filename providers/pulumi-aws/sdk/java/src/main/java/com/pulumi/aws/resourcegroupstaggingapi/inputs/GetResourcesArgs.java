@@ -22,10 +22,10 @@ public final class GetResourcesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="excludeCompliantResources")
-      private final @Nullable Boolean excludeCompliantResources;
+    private @Nullable Boolean excludeCompliantResources;
 
     public Optional<Boolean> excludeCompliantResources() {
-        return this.excludeCompliantResources == null ? Optional.empty() : Optional.ofNullable(this.excludeCompliantResources);
+        return Optional.ofNullable(this.excludeCompliantResources);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class GetResourcesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="includeComplianceDetails")
-      private final @Nullable Boolean includeComplianceDetails;
+    private @Nullable Boolean includeComplianceDetails;
 
     public Optional<Boolean> includeComplianceDetails() {
-        return this.includeComplianceDetails == null ? Optional.empty() : Optional.ofNullable(this.includeComplianceDetails);
+        return Optional.ofNullable(this.includeComplianceDetails);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class GetResourcesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceArnLists")
-      private final @Nullable List<String> resourceArnLists;
+    private @Nullable List<String> resourceArnLists;
 
-    public List<String> resourceArnLists() {
-        return this.resourceArnLists == null ? List.of() : this.resourceArnLists;
+    public Optional<List<String>> resourceArnLists() {
+        return Optional.ofNullable(this.resourceArnLists);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class GetResourcesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceTypeFilters")
-      private final @Nullable List<String> resourceTypeFilters;
+    private @Nullable List<String> resourceTypeFilters;
 
-    public List<String> resourceTypeFilters() {
-        return this.resourceTypeFilters == null ? List.of() : this.resourceTypeFilters;
+    public Optional<List<String>> resourceTypeFilters() {
+        return Optional.ofNullable(this.resourceTypeFilters);
     }
 
     /**
@@ -66,91 +66,80 @@ public final class GetResourcesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tagFilters")
-      private final @Nullable List<GetResourcesTagFilter> tagFilters;
+    private @Nullable List<GetResourcesTagFilter> tagFilters;
 
-    public List<GetResourcesTagFilter> tagFilters() {
-        return this.tagFilters == null ? List.of() : this.tagFilters;
+    public Optional<List<GetResourcesTagFilter>> tagFilters() {
+        return Optional.ofNullable(this.tagFilters);
     }
 
-    public GetResourcesArgs(
-        @Nullable Boolean excludeCompliantResources,
-        @Nullable Boolean includeComplianceDetails,
-        @Nullable List<String> resourceArnLists,
-        @Nullable List<String> resourceTypeFilters,
-        @Nullable List<GetResourcesTagFilter> tagFilters) {
-        this.excludeCompliantResources = excludeCompliantResources;
-        this.includeComplianceDetails = includeComplianceDetails;
-        this.resourceArnLists = resourceArnLists;
-        this.resourceTypeFilters = resourceTypeFilters;
-        this.tagFilters = tagFilters;
-    }
+    private GetResourcesArgs() {}
 
-    private GetResourcesArgs() {
-        this.excludeCompliantResources = null;
-        this.includeComplianceDetails = null;
-        this.resourceArnLists = List.of();
-        this.resourceTypeFilters = List.of();
-        this.tagFilters = List.of();
+    private GetResourcesArgs(GetResourcesArgs $) {
+        this.excludeCompliantResources = $.excludeCompliantResources;
+        this.includeComplianceDetails = $.includeComplianceDetails;
+        this.resourceArnLists = $.resourceArnLists;
+        this.resourceTypeFilters = $.resourceTypeFilters;
+        this.tagFilters = $.tagFilters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetResourcesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean excludeCompliantResources;
-        private @Nullable Boolean includeComplianceDetails;
-        private @Nullable List<String> resourceArnLists;
-        private @Nullable List<String> resourceTypeFilters;
-        private @Nullable List<GetResourcesTagFilter> tagFilters;
+        private GetResourcesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetResourcesArgs();
         }
 
         public Builder(GetResourcesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.excludeCompliantResources = defaults.excludeCompliantResources;
-    	      this.includeComplianceDetails = defaults.includeComplianceDetails;
-    	      this.resourceArnLists = defaults.resourceArnLists;
-    	      this.resourceTypeFilters = defaults.resourceTypeFilters;
-    	      this.tagFilters = defaults.tagFilters;
+            $ = new GetResourcesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder excludeCompliantResources(@Nullable Boolean excludeCompliantResources) {
-            this.excludeCompliantResources = excludeCompliantResources;
+            $.excludeCompliantResources = excludeCompliantResources;
             return this;
         }
+
         public Builder includeComplianceDetails(@Nullable Boolean includeComplianceDetails) {
-            this.includeComplianceDetails = includeComplianceDetails;
+            $.includeComplianceDetails = includeComplianceDetails;
             return this;
         }
+
         public Builder resourceArnLists(@Nullable List<String> resourceArnLists) {
-            this.resourceArnLists = resourceArnLists;
+            $.resourceArnLists = resourceArnLists;
             return this;
         }
+
         public Builder resourceArnLists(String... resourceArnLists) {
             return resourceArnLists(List.of(resourceArnLists));
         }
+
         public Builder resourceTypeFilters(@Nullable List<String> resourceTypeFilters) {
-            this.resourceTypeFilters = resourceTypeFilters;
+            $.resourceTypeFilters = resourceTypeFilters;
             return this;
         }
+
         public Builder resourceTypeFilters(String... resourceTypeFilters) {
             return resourceTypeFilters(List.of(resourceTypeFilters));
         }
+
         public Builder tagFilters(@Nullable List<GetResourcesTagFilter> tagFilters) {
-            this.tagFilters = tagFilters;
+            $.tagFilters = tagFilters;
             return this;
         }
+
         public Builder tagFilters(GetResourcesTagFilter... tagFilters) {
             return tagFilters(List.of(tagFilters));
-        }        public GetResourcesArgs build() {
-            return new GetResourcesArgs(excludeCompliantResources, includeComplianceDetails, resourceArnLists, resourceTypeFilters, tagFilters);
+        }
+
+        public GetResourcesArgs build() {
+            return $;
         }
     }
+
 }

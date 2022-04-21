@@ -23,45 +23,44 @@ public final class SubnetPropertiesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
-    public SubnetPropertiesResponse(@Nullable String name) {
-        this.name = name;
-    }
+    private SubnetPropertiesResponse() {}
 
-    private SubnetPropertiesResponse() {
-        this.name = null;
+    private SubnetPropertiesResponse(SubnetPropertiesResponse $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubnetPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
+        private SubnetPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubnetPropertiesResponse();
         }
 
         public Builder(SubnetPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new SubnetPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
-        }        public SubnetPropertiesResponse build() {
-            return new SubnetPropertiesResponse(name);
+        }
+
+        public SubnetPropertiesResponse build() {
+            return $;
         }
     }
+
 }

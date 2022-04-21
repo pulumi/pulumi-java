@@ -23,7 +23,7 @@ public final class ErrorResponseResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="code", required=true)
-      private final String code;
+    private String code;
 
     public String code() {
         return this.code;
@@ -34,7 +34,7 @@ public final class ErrorResponseResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="details", required=true)
-      private final List<ErrorDetailResponse> details;
+    private List<ErrorDetailResponse> details;
 
     public List<ErrorDetailResponse> details() {
         return this.details;
@@ -45,67 +45,63 @@ public final class ErrorResponseResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="message", required=true)
-      private final String message;
+    private String message;
 
     public String message() {
         return this.message;
     }
 
-    public ErrorResponseResponse(
-        String code,
-        List<ErrorDetailResponse> details,
-        String message) {
-        this.code = Objects.requireNonNull(code, "expected parameter 'code' to be non-null");
-        this.details = Objects.requireNonNull(details, "expected parameter 'details' to be non-null");
-        this.message = Objects.requireNonNull(message, "expected parameter 'message' to be non-null");
-    }
+    private ErrorResponseResponse() {}
 
-    private ErrorResponseResponse() {
-        this.code = null;
-        this.details = List.of();
-        this.message = null;
+    private ErrorResponseResponse(ErrorResponseResponse $) {
+        this.code = $.code;
+        this.details = $.details;
+        this.message = $.message;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ErrorResponseResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String code;
-        private List<ErrorDetailResponse> details;
-        private String message;
+        private ErrorResponseResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ErrorResponseResponse();
         }
 
         public Builder(ErrorResponseResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.code = defaults.code;
-    	      this.details = defaults.details;
-    	      this.message = defaults.message;
+            $ = new ErrorResponseResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder code(String code) {
-            this.code = Objects.requireNonNull(code);
+            $.code = code;
             return this;
         }
+
         public Builder details(List<ErrorDetailResponse> details) {
-            this.details = Objects.requireNonNull(details);
+            $.details = details;
             return this;
         }
+
         public Builder details(ErrorDetailResponse... details) {
             return details(List.of(details));
         }
+
         public Builder message(String message) {
-            this.message = Objects.requireNonNull(message);
+            $.message = message;
             return this;
-        }        public ErrorResponseResponse build() {
-            return new ErrorResponseResponse(code, details, message);
+        }
+
+        public ErrorResponseResponse build() {
+            $.code = Objects.requireNonNull($.code, "expected parameter 'code' to be non-null");
+            $.details = Objects.requireNonNull($.details, "expected parameter 'details' to be non-null");
+            $.message = Objects.requireNonNull($.message, "expected parameter 'message' to be non-null");
+            return $;
         }
     }
+
 }

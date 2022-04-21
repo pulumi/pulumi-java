@@ -5,10 +5,10 @@ package com.pulumi.googlenative.workflowexecutions_v1beta;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.workflowexecutions_v1beta.enums.ExecutionCallLogLevel;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ExecutionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="argument")
-      private final @Nullable Output<String> argument;
+    private @Nullable Output<String> argument;
 
-    public Output<String> argument() {
-        return this.argument == null ? Codegen.empty() : this.argument;
+    public Optional<Output<String>> argument() {
+        return Optional.ofNullable(this.argument);
     }
 
     /**
@@ -32,123 +32,110 @@ public final class ExecutionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="callLogLevel")
-      private final @Nullable Output<ExecutionCallLogLevel> callLogLevel;
+    private @Nullable Output<ExecutionCallLogLevel> callLogLevel;
 
-    public Output<ExecutionCallLogLevel> callLogLevel() {
-        return this.callLogLevel == null ? Codegen.empty() : this.callLogLevel;
+    public Optional<Output<ExecutionCallLogLevel>> callLogLevel() {
+        return Optional.ofNullable(this.callLogLevel);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="workflowId", required=true)
-      private final Output<String> workflowId;
+    private Output<String> workflowId;
 
     public Output<String> workflowId() {
         return this.workflowId;
     }
 
-    public ExecutionArgs(
-        @Nullable Output<String> argument,
-        @Nullable Output<ExecutionCallLogLevel> callLogLevel,
-        @Nullable Output<String> location,
-        @Nullable Output<String> project,
-        Output<String> workflowId) {
-        this.argument = argument;
-        this.callLogLevel = callLogLevel;
-        this.location = location;
-        this.project = project;
-        this.workflowId = Objects.requireNonNull(workflowId, "expected parameter 'workflowId' to be non-null");
-    }
+    private ExecutionArgs() {}
 
-    private ExecutionArgs() {
-        this.argument = Codegen.empty();
-        this.callLogLevel = Codegen.empty();
-        this.location = Codegen.empty();
-        this.project = Codegen.empty();
-        this.workflowId = Codegen.empty();
+    private ExecutionArgs(ExecutionArgs $) {
+        this.argument = $.argument;
+        this.callLogLevel = $.callLogLevel;
+        this.location = $.location;
+        this.project = $.project;
+        this.workflowId = $.workflowId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExecutionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> argument;
-        private @Nullable Output<ExecutionCallLogLevel> callLogLevel;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> project;
-        private Output<String> workflowId;
+        private ExecutionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExecutionArgs();
         }
 
         public Builder(ExecutionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.argument = defaults.argument;
-    	      this.callLogLevel = defaults.callLogLevel;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
-    	      this.workflowId = defaults.workflowId;
+            $ = new ExecutionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder argument(@Nullable Output<String> argument) {
-            this.argument = argument;
+            $.argument = argument;
             return this;
         }
-        public Builder argument(@Nullable String argument) {
-            this.argument = Codegen.ofNullable(argument);
-            return this;
+
+        public Builder argument(String argument) {
+            return argument(Output.of(argument));
         }
+
         public Builder callLogLevel(@Nullable Output<ExecutionCallLogLevel> callLogLevel) {
-            this.callLogLevel = callLogLevel;
+            $.callLogLevel = callLogLevel;
             return this;
         }
-        public Builder callLogLevel(@Nullable ExecutionCallLogLevel callLogLevel) {
-            this.callLogLevel = Codegen.ofNullable(callLogLevel);
-            return this;
+
+        public Builder callLogLevel(ExecutionCallLogLevel callLogLevel) {
+            return callLogLevel(Output.of(callLogLevel));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder workflowId(Output<String> workflowId) {
-            this.workflowId = Objects.requireNonNull(workflowId);
+            $.workflowId = workflowId;
             return this;
         }
+
         public Builder workflowId(String workflowId) {
-            this.workflowId = Output.of(Objects.requireNonNull(workflowId));
-            return this;
-        }        public ExecutionArgs build() {
-            return new ExecutionArgs(argument, callLogLevel, location, project, workflowId);
+            return workflowId(Output.of(workflowId));
+        }
+
+        public ExecutionArgs build() {
+            $.workflowId = Objects.requireNonNull($.workflowId, "expected parameter 'workflowId' to be non-null");
+            return $;
         }
     }
+
 }

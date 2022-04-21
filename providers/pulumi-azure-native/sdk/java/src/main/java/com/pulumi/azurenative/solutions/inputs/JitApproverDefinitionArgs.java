@@ -7,9 +7,9 @@ import com.pulumi.azurenative.solutions.enums.JitApproverType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class JitApproverDefinitionArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class JitApproverDefinitionArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="id", required=true)
-      private final Output<String> id;
+    private Output<String> id;
 
     public Output<String> id() {
         return this.id;
@@ -48,76 +48,69 @@ public final class JitApproverDefinitionArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<Either<String,JitApproverType>> type;
+    private @Nullable Output<Either<String,JitApproverType>> type;
 
-    public Output<Either<String,JitApproverType>> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<Either<String,JitApproverType>>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public JitApproverDefinitionArgs(
-        @Nullable Output<String> displayName,
-        Output<String> id,
-        @Nullable Output<Either<String,JitApproverType>> type) {
-        this.displayName = displayName;
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.type = type;
-    }
+    private JitApproverDefinitionArgs() {}
 
-    private JitApproverDefinitionArgs() {
-        this.displayName = Codegen.empty();
-        this.id = Codegen.empty();
-        this.type = Codegen.empty();
+    private JitApproverDefinitionArgs(JitApproverDefinitionArgs $) {
+        this.displayName = $.displayName;
+        this.id = $.id;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JitApproverDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> displayName;
-        private Output<String> id;
-        private @Nullable Output<Either<String,JitApproverType>> type;
+        private JitApproverDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JitApproverDefinitionArgs();
         }
 
         public Builder(JitApproverDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.id = defaults.id;
-    	      this.type = defaults.type;
+            $ = new JitApproverDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder id(Output<String> id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Output.of(Objects.requireNonNull(id));
-            return this;
+            return id(Output.of(id));
         }
+
         public Builder type(@Nullable Output<Either<String,JitApproverType>> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable Either<String,JitApproverType> type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public JitApproverDefinitionArgs build() {
-            return new JitApproverDefinitionArgs(displayName, id, type);
+
+        public Builder type(Either<String,JitApproverType> type) {
+            return type(Output.of(type));
+        }
+
+        public JitApproverDefinitionArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

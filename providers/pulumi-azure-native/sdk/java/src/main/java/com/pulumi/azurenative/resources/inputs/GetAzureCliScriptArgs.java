@@ -17,7 +17,7 @@ public final class GetAzureCliScriptArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,55 +28,52 @@ public final class GetAzureCliScriptArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="scriptName", required=true)
-      private final String scriptName;
+    private String scriptName;
 
     public String scriptName() {
         return this.scriptName;
     }
 
-    public GetAzureCliScriptArgs(
-        String resourceGroupName,
-        String scriptName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.scriptName = Objects.requireNonNull(scriptName, "expected parameter 'scriptName' to be non-null");
-    }
+    private GetAzureCliScriptArgs() {}
 
-    private GetAzureCliScriptArgs() {
-        this.resourceGroupName = null;
-        this.scriptName = null;
+    private GetAzureCliScriptArgs(GetAzureCliScriptArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.scriptName = $.scriptName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAzureCliScriptArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String scriptName;
+        private GetAzureCliScriptArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAzureCliScriptArgs();
         }
 
         public Builder(GetAzureCliScriptArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.scriptName = defaults.scriptName;
+            $ = new GetAzureCliScriptArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder scriptName(String scriptName) {
-            this.scriptName = Objects.requireNonNull(scriptName);
+            $.scriptName = scriptName;
             return this;
-        }        public GetAzureCliScriptArgs build() {
-            return new GetAzureCliScriptArgs(resourceGroupName, scriptName);
+        }
+
+        public GetAzureCliScriptArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.scriptName = Objects.requireNonNull($.scriptName, "expected parameter 'scriptName' to be non-null");
+            return $;
         }
     }
+
 }

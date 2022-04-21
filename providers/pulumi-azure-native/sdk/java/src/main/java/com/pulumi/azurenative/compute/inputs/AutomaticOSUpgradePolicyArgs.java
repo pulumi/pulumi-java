@@ -5,9 +5,9 @@ package com.pulumi.azurenative.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class AutomaticOSUpgradePolicyArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="disableAutomaticRollback")
-      private final @Nullable Output<Boolean> disableAutomaticRollback;
+    private @Nullable Output<Boolean> disableAutomaticRollback;
 
-    public Output<Boolean> disableAutomaticRollback() {
-        return this.disableAutomaticRollback == null ? Codegen.empty() : this.disableAutomaticRollback;
+    public Optional<Output<Boolean>> disableAutomaticRollback() {
+        return Optional.ofNullable(this.disableAutomaticRollback);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class AutomaticOSUpgradePolicyArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="enableAutomaticOSUpgrade")
-      private final @Nullable Output<Boolean> enableAutomaticOSUpgrade;
+    private @Nullable Output<Boolean> enableAutomaticOSUpgrade;
 
-    public Output<Boolean> enableAutomaticOSUpgrade() {
-        return this.enableAutomaticOSUpgrade == null ? Codegen.empty() : this.enableAutomaticOSUpgrade;
+    public Optional<Output<Boolean>> enableAutomaticOSUpgrade() {
+        return Optional.ofNullable(this.enableAutomaticOSUpgrade);
     }
 
-    public AutomaticOSUpgradePolicyArgs(
-        @Nullable Output<Boolean> disableAutomaticRollback,
-        @Nullable Output<Boolean> enableAutomaticOSUpgrade) {
-        this.disableAutomaticRollback = disableAutomaticRollback;
-        this.enableAutomaticOSUpgrade = enableAutomaticOSUpgrade;
-    }
+    private AutomaticOSUpgradePolicyArgs() {}
 
-    private AutomaticOSUpgradePolicyArgs() {
-        this.disableAutomaticRollback = Codegen.empty();
-        this.enableAutomaticOSUpgrade = Codegen.empty();
+    private AutomaticOSUpgradePolicyArgs(AutomaticOSUpgradePolicyArgs $) {
+        this.disableAutomaticRollback = $.disableAutomaticRollback;
+        this.enableAutomaticOSUpgrade = $.enableAutomaticOSUpgrade;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutomaticOSUpgradePolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> disableAutomaticRollback;
-        private @Nullable Output<Boolean> enableAutomaticOSUpgrade;
+        private AutomaticOSUpgradePolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutomaticOSUpgradePolicyArgs();
         }
 
         public Builder(AutomaticOSUpgradePolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disableAutomaticRollback = defaults.disableAutomaticRollback;
-    	      this.enableAutomaticOSUpgrade = defaults.enableAutomaticOSUpgrade;
+            $ = new AutomaticOSUpgradePolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder disableAutomaticRollback(@Nullable Output<Boolean> disableAutomaticRollback) {
-            this.disableAutomaticRollback = disableAutomaticRollback;
+            $.disableAutomaticRollback = disableAutomaticRollback;
             return this;
         }
-        public Builder disableAutomaticRollback(@Nullable Boolean disableAutomaticRollback) {
-            this.disableAutomaticRollback = Codegen.ofNullable(disableAutomaticRollback);
-            return this;
+
+        public Builder disableAutomaticRollback(Boolean disableAutomaticRollback) {
+            return disableAutomaticRollback(Output.of(disableAutomaticRollback));
         }
+
         public Builder enableAutomaticOSUpgrade(@Nullable Output<Boolean> enableAutomaticOSUpgrade) {
-            this.enableAutomaticOSUpgrade = enableAutomaticOSUpgrade;
+            $.enableAutomaticOSUpgrade = enableAutomaticOSUpgrade;
             return this;
         }
-        public Builder enableAutomaticOSUpgrade(@Nullable Boolean enableAutomaticOSUpgrade) {
-            this.enableAutomaticOSUpgrade = Codegen.ofNullable(enableAutomaticOSUpgrade);
-            return this;
-        }        public AutomaticOSUpgradePolicyArgs build() {
-            return new AutomaticOSUpgradePolicyArgs(disableAutomaticRollback, enableAutomaticOSUpgrade);
+
+        public Builder enableAutomaticOSUpgrade(Boolean enableAutomaticOSUpgrade) {
+            return enableAutomaticOSUpgrade(Output.of(enableAutomaticOSUpgrade));
+        }
+
+        public AutomaticOSUpgradePolicyArgs build() {
+            return $;
         }
     }
+
 }

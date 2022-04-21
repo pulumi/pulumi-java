@@ -5,7 +5,6 @@ package com.pulumi.aws.appstream;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class FleetStackAssociationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="fleetName", required=true)
-      private final Output<String> fleetName;
+    private Output<String> fleetName;
 
     public Output<String> fleetName() {
         return this.fleetName;
@@ -30,63 +29,60 @@ public final class FleetStackAssociationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="stackName", required=true)
-      private final Output<String> stackName;
+    private Output<String> stackName;
 
     public Output<String> stackName() {
         return this.stackName;
     }
 
-    public FleetStackAssociationArgs(
-        Output<String> fleetName,
-        Output<String> stackName) {
-        this.fleetName = Objects.requireNonNull(fleetName, "expected parameter 'fleetName' to be non-null");
-        this.stackName = Objects.requireNonNull(stackName, "expected parameter 'stackName' to be non-null");
-    }
+    private FleetStackAssociationArgs() {}
 
-    private FleetStackAssociationArgs() {
-        this.fleetName = Codegen.empty();
-        this.stackName = Codegen.empty();
+    private FleetStackAssociationArgs(FleetStackAssociationArgs $) {
+        this.fleetName = $.fleetName;
+        this.stackName = $.stackName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FleetStackAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> fleetName;
-        private Output<String> stackName;
+        private FleetStackAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FleetStackAssociationArgs();
         }
 
         public Builder(FleetStackAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fleetName = defaults.fleetName;
-    	      this.stackName = defaults.stackName;
+            $ = new FleetStackAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fleetName(Output<String> fleetName) {
-            this.fleetName = Objects.requireNonNull(fleetName);
+            $.fleetName = fleetName;
             return this;
         }
+
         public Builder fleetName(String fleetName) {
-            this.fleetName = Output.of(Objects.requireNonNull(fleetName));
-            return this;
+            return fleetName(Output.of(fleetName));
         }
+
         public Builder stackName(Output<String> stackName) {
-            this.stackName = Objects.requireNonNull(stackName);
+            $.stackName = stackName;
             return this;
         }
+
         public Builder stackName(String stackName) {
-            this.stackName = Output.of(Objects.requireNonNull(stackName));
-            return this;
-        }        public FleetStackAssociationArgs build() {
-            return new FleetStackAssociationArgs(fleetName, stackName);
+            return stackName(Output.of(stackName));
+        }
+
+        public FleetStackAssociationArgs build() {
+            $.fleetName = Objects.requireNonNull($.fleetName, "expected parameter 'fleetName' to be non-null");
+            $.stackName = Objects.requireNonNull($.stackName, "expected parameter 'stackName' to be non-null");
+            return $;
         }
     }
+
 }

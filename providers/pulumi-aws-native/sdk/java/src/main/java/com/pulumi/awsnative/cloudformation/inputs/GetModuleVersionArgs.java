@@ -17,45 +17,45 @@ public final class GetModuleVersionArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
     }
 
-    public GetModuleVersionArgs(String arn) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-    }
+    private GetModuleVersionArgs() {}
 
-    private GetModuleVersionArgs() {
-        this.arn = null;
+    private GetModuleVersionArgs(GetModuleVersionArgs $) {
+        this.arn = $.arn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetModuleVersionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
+        private GetModuleVersionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetModuleVersionArgs();
         }
 
         public Builder(GetModuleVersionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
+            $ = new GetModuleVersionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
-        }        public GetModuleVersionArgs build() {
-            return new GetModuleVersionArgs(arn);
+        }
+
+        public GetModuleVersionArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

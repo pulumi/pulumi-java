@@ -23,10 +23,10 @@ public final class RedisCommonPropertiesResponseRedisConfiguration extends com.p
      * 
      */
     @Import(name="aofStorageConnectionString0")
-      private final @Nullable String aofStorageConnectionString0;
+    private @Nullable String aofStorageConnectionString0;
 
     public Optional<String> aofStorageConnectionString0() {
-        return this.aofStorageConnectionString0 == null ? Optional.empty() : Optional.ofNullable(this.aofStorageConnectionString0);
+        return Optional.ofNullable(this.aofStorageConnectionString0);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class RedisCommonPropertiesResponseRedisConfiguration extends com.p
      * 
      */
     @Import(name="aofStorageConnectionString1")
-      private final @Nullable String aofStorageConnectionString1;
+    private @Nullable String aofStorageConnectionString1;
 
     public Optional<String> aofStorageConnectionString1() {
-        return this.aofStorageConnectionString1 == null ? Optional.empty() : Optional.ofNullable(this.aofStorageConnectionString1);
+        return Optional.ofNullable(this.aofStorageConnectionString1);
     }
 
     /**
@@ -45,7 +45,7 @@ public final class RedisCommonPropertiesResponseRedisConfiguration extends com.p
      * 
      */
     @Import(name="maxclients", required=true)
-      private final String maxclients;
+    private String maxclients;
 
     public String maxclients() {
         return this.maxclients;
@@ -56,10 +56,10 @@ public final class RedisCommonPropertiesResponseRedisConfiguration extends com.p
      * 
      */
     @Import(name="maxfragmentationmemoryReserved")
-      private final @Nullable String maxfragmentationmemoryReserved;
+    private @Nullable String maxfragmentationmemoryReserved;
 
     public Optional<String> maxfragmentationmemoryReserved() {
-        return this.maxfragmentationmemoryReserved == null ? Optional.empty() : Optional.ofNullable(this.maxfragmentationmemoryReserved);
+        return Optional.ofNullable(this.maxfragmentationmemoryReserved);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class RedisCommonPropertiesResponseRedisConfiguration extends com.p
      * 
      */
     @Import(name="maxmemoryDelta")
-      private final @Nullable String maxmemoryDelta;
+    private @Nullable String maxmemoryDelta;
 
     public Optional<String> maxmemoryDelta() {
-        return this.maxmemoryDelta == null ? Optional.empty() : Optional.ofNullable(this.maxmemoryDelta);
+        return Optional.ofNullable(this.maxmemoryDelta);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class RedisCommonPropertiesResponseRedisConfiguration extends com.p
      * 
      */
     @Import(name="maxmemoryPolicy")
-      private final @Nullable String maxmemoryPolicy;
+    private @Nullable String maxmemoryPolicy;
 
     public Optional<String> maxmemoryPolicy() {
-        return this.maxmemoryPolicy == null ? Optional.empty() : Optional.ofNullable(this.maxmemoryPolicy);
+        return Optional.ofNullable(this.maxmemoryPolicy);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class RedisCommonPropertiesResponseRedisConfiguration extends com.p
      * 
      */
     @Import(name="maxmemoryReserved")
-      private final @Nullable String maxmemoryReserved;
+    private @Nullable String maxmemoryReserved;
 
     public Optional<String> maxmemoryReserved() {
-        return this.maxmemoryReserved == null ? Optional.empty() : Optional.ofNullable(this.maxmemoryReserved);
+        return Optional.ofNullable(this.maxmemoryReserved);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class RedisCommonPropertiesResponseRedisConfiguration extends com.p
      * 
      */
     @Import(name="rdbBackupEnabled")
-      private final @Nullable String rdbBackupEnabled;
+    private @Nullable String rdbBackupEnabled;
 
     public Optional<String> rdbBackupEnabled() {
-        return this.rdbBackupEnabled == null ? Optional.empty() : Optional.ofNullable(this.rdbBackupEnabled);
+        return Optional.ofNullable(this.rdbBackupEnabled);
     }
 
     /**
@@ -111,10 +111,10 @@ public final class RedisCommonPropertiesResponseRedisConfiguration extends com.p
      * 
      */
     @Import(name="rdbBackupFrequency")
-      private final @Nullable String rdbBackupFrequency;
+    private @Nullable String rdbBackupFrequency;
 
     public Optional<String> rdbBackupFrequency() {
-        return this.rdbBackupFrequency == null ? Optional.empty() : Optional.ofNullable(this.rdbBackupFrequency);
+        return Optional.ofNullable(this.rdbBackupFrequency);
     }
 
     /**
@@ -122,10 +122,10 @@ public final class RedisCommonPropertiesResponseRedisConfiguration extends com.p
      * 
      */
     @Import(name="rdbBackupMaxSnapshotCount")
-      private final @Nullable String rdbBackupMaxSnapshotCount;
+    private @Nullable String rdbBackupMaxSnapshotCount;
 
     public Optional<String> rdbBackupMaxSnapshotCount() {
-        return this.rdbBackupMaxSnapshotCount == null ? Optional.empty() : Optional.ofNullable(this.rdbBackupMaxSnapshotCount);
+        return Optional.ofNullable(this.rdbBackupMaxSnapshotCount);
     }
 
     /**
@@ -133,136 +133,105 @@ public final class RedisCommonPropertiesResponseRedisConfiguration extends com.p
      * 
      */
     @Import(name="rdbStorageConnectionString")
-      private final @Nullable String rdbStorageConnectionString;
+    private @Nullable String rdbStorageConnectionString;
 
     public Optional<String> rdbStorageConnectionString() {
-        return this.rdbStorageConnectionString == null ? Optional.empty() : Optional.ofNullable(this.rdbStorageConnectionString);
+        return Optional.ofNullable(this.rdbStorageConnectionString);
     }
 
-    public RedisCommonPropertiesResponseRedisConfiguration(
-        @Nullable String aofStorageConnectionString0,
-        @Nullable String aofStorageConnectionString1,
-        String maxclients,
-        @Nullable String maxfragmentationmemoryReserved,
-        @Nullable String maxmemoryDelta,
-        @Nullable String maxmemoryPolicy,
-        @Nullable String maxmemoryReserved,
-        @Nullable String rdbBackupEnabled,
-        @Nullable String rdbBackupFrequency,
-        @Nullable String rdbBackupMaxSnapshotCount,
-        @Nullable String rdbStorageConnectionString) {
-        this.aofStorageConnectionString0 = aofStorageConnectionString0;
-        this.aofStorageConnectionString1 = aofStorageConnectionString1;
-        this.maxclients = Objects.requireNonNull(maxclients, "expected parameter 'maxclients' to be non-null");
-        this.maxfragmentationmemoryReserved = maxfragmentationmemoryReserved;
-        this.maxmemoryDelta = maxmemoryDelta;
-        this.maxmemoryPolicy = maxmemoryPolicy;
-        this.maxmemoryReserved = maxmemoryReserved;
-        this.rdbBackupEnabled = rdbBackupEnabled;
-        this.rdbBackupFrequency = rdbBackupFrequency;
-        this.rdbBackupMaxSnapshotCount = rdbBackupMaxSnapshotCount;
-        this.rdbStorageConnectionString = rdbStorageConnectionString;
-    }
+    private RedisCommonPropertiesResponseRedisConfiguration() {}
 
-    private RedisCommonPropertiesResponseRedisConfiguration() {
-        this.aofStorageConnectionString0 = null;
-        this.aofStorageConnectionString1 = null;
-        this.maxclients = null;
-        this.maxfragmentationmemoryReserved = null;
-        this.maxmemoryDelta = null;
-        this.maxmemoryPolicy = null;
-        this.maxmemoryReserved = null;
-        this.rdbBackupEnabled = null;
-        this.rdbBackupFrequency = null;
-        this.rdbBackupMaxSnapshotCount = null;
-        this.rdbStorageConnectionString = null;
+    private RedisCommonPropertiesResponseRedisConfiguration(RedisCommonPropertiesResponseRedisConfiguration $) {
+        this.aofStorageConnectionString0 = $.aofStorageConnectionString0;
+        this.aofStorageConnectionString1 = $.aofStorageConnectionString1;
+        this.maxclients = $.maxclients;
+        this.maxfragmentationmemoryReserved = $.maxfragmentationmemoryReserved;
+        this.maxmemoryDelta = $.maxmemoryDelta;
+        this.maxmemoryPolicy = $.maxmemoryPolicy;
+        this.maxmemoryReserved = $.maxmemoryReserved;
+        this.rdbBackupEnabled = $.rdbBackupEnabled;
+        this.rdbBackupFrequency = $.rdbBackupFrequency;
+        this.rdbBackupMaxSnapshotCount = $.rdbBackupMaxSnapshotCount;
+        this.rdbStorageConnectionString = $.rdbStorageConnectionString;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RedisCommonPropertiesResponseRedisConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String aofStorageConnectionString0;
-        private @Nullable String aofStorageConnectionString1;
-        private String maxclients;
-        private @Nullable String maxfragmentationmemoryReserved;
-        private @Nullable String maxmemoryDelta;
-        private @Nullable String maxmemoryPolicy;
-        private @Nullable String maxmemoryReserved;
-        private @Nullable String rdbBackupEnabled;
-        private @Nullable String rdbBackupFrequency;
-        private @Nullable String rdbBackupMaxSnapshotCount;
-        private @Nullable String rdbStorageConnectionString;
+        private RedisCommonPropertiesResponseRedisConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new RedisCommonPropertiesResponseRedisConfiguration();
         }
 
         public Builder(RedisCommonPropertiesResponseRedisConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aofStorageConnectionString0 = defaults.aofStorageConnectionString0;
-    	      this.aofStorageConnectionString1 = defaults.aofStorageConnectionString1;
-    	      this.maxclients = defaults.maxclients;
-    	      this.maxfragmentationmemoryReserved = defaults.maxfragmentationmemoryReserved;
-    	      this.maxmemoryDelta = defaults.maxmemoryDelta;
-    	      this.maxmemoryPolicy = defaults.maxmemoryPolicy;
-    	      this.maxmemoryReserved = defaults.maxmemoryReserved;
-    	      this.rdbBackupEnabled = defaults.rdbBackupEnabled;
-    	      this.rdbBackupFrequency = defaults.rdbBackupFrequency;
-    	      this.rdbBackupMaxSnapshotCount = defaults.rdbBackupMaxSnapshotCount;
-    	      this.rdbStorageConnectionString = defaults.rdbStorageConnectionString;
+            $ = new RedisCommonPropertiesResponseRedisConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder aofStorageConnectionString0(@Nullable String aofStorageConnectionString0) {
-            this.aofStorageConnectionString0 = aofStorageConnectionString0;
+            $.aofStorageConnectionString0 = aofStorageConnectionString0;
             return this;
         }
+
         public Builder aofStorageConnectionString1(@Nullable String aofStorageConnectionString1) {
-            this.aofStorageConnectionString1 = aofStorageConnectionString1;
+            $.aofStorageConnectionString1 = aofStorageConnectionString1;
             return this;
         }
+
         public Builder maxclients(String maxclients) {
-            this.maxclients = Objects.requireNonNull(maxclients);
+            $.maxclients = maxclients;
             return this;
         }
+
         public Builder maxfragmentationmemoryReserved(@Nullable String maxfragmentationmemoryReserved) {
-            this.maxfragmentationmemoryReserved = maxfragmentationmemoryReserved;
+            $.maxfragmentationmemoryReserved = maxfragmentationmemoryReserved;
             return this;
         }
+
         public Builder maxmemoryDelta(@Nullable String maxmemoryDelta) {
-            this.maxmemoryDelta = maxmemoryDelta;
+            $.maxmemoryDelta = maxmemoryDelta;
             return this;
         }
+
         public Builder maxmemoryPolicy(@Nullable String maxmemoryPolicy) {
-            this.maxmemoryPolicy = maxmemoryPolicy;
+            $.maxmemoryPolicy = maxmemoryPolicy;
             return this;
         }
+
         public Builder maxmemoryReserved(@Nullable String maxmemoryReserved) {
-            this.maxmemoryReserved = maxmemoryReserved;
+            $.maxmemoryReserved = maxmemoryReserved;
             return this;
         }
+
         public Builder rdbBackupEnabled(@Nullable String rdbBackupEnabled) {
-            this.rdbBackupEnabled = rdbBackupEnabled;
+            $.rdbBackupEnabled = rdbBackupEnabled;
             return this;
         }
+
         public Builder rdbBackupFrequency(@Nullable String rdbBackupFrequency) {
-            this.rdbBackupFrequency = rdbBackupFrequency;
+            $.rdbBackupFrequency = rdbBackupFrequency;
             return this;
         }
+
         public Builder rdbBackupMaxSnapshotCount(@Nullable String rdbBackupMaxSnapshotCount) {
-            this.rdbBackupMaxSnapshotCount = rdbBackupMaxSnapshotCount;
+            $.rdbBackupMaxSnapshotCount = rdbBackupMaxSnapshotCount;
             return this;
         }
+
         public Builder rdbStorageConnectionString(@Nullable String rdbStorageConnectionString) {
-            this.rdbStorageConnectionString = rdbStorageConnectionString;
+            $.rdbStorageConnectionString = rdbStorageConnectionString;
             return this;
-        }        public RedisCommonPropertiesResponseRedisConfiguration build() {
-            return new RedisCommonPropertiesResponseRedisConfiguration(aofStorageConnectionString0, aofStorageConnectionString1, maxclients, maxfragmentationmemoryReserved, maxmemoryDelta, maxmemoryPolicy, maxmemoryReserved, rdbBackupEnabled, rdbBackupFrequency, rdbBackupMaxSnapshotCount, rdbStorageConnectionString);
+        }
+
+        public RedisCommonPropertiesResponseRedisConfiguration build() {
+            $.maxclients = Objects.requireNonNull($.maxclients, "expected parameter 'maxclients' to be non-null");
+            return $;
         }
     }
+
 }

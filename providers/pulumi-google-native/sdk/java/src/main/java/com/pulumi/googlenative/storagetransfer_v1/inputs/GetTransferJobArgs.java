@@ -13,62 +13,59 @@ public final class GetTransferJobArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetTransferJobArgs Empty = new GetTransferJobArgs();
 
     @Import(name="projectId", required=true)
-      private final String projectId;
+    private String projectId;
 
     public String projectId() {
         return this.projectId;
     }
 
     @Import(name="transferJobId", required=true)
-      private final String transferJobId;
+    private String transferJobId;
 
     public String transferJobId() {
         return this.transferJobId;
     }
 
-    public GetTransferJobArgs(
-        String projectId,
-        String transferJobId) {
-        this.projectId = Objects.requireNonNull(projectId, "expected parameter 'projectId' to be non-null");
-        this.transferJobId = Objects.requireNonNull(transferJobId, "expected parameter 'transferJobId' to be non-null");
-    }
+    private GetTransferJobArgs() {}
 
-    private GetTransferJobArgs() {
-        this.projectId = null;
-        this.transferJobId = null;
+    private GetTransferJobArgs(GetTransferJobArgs $) {
+        this.projectId = $.projectId;
+        this.transferJobId = $.transferJobId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTransferJobArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String projectId;
-        private String transferJobId;
+        private GetTransferJobArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTransferJobArgs();
         }
 
         public Builder(GetTransferJobArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.projectId = defaults.projectId;
-    	      this.transferJobId = defaults.transferJobId;
+            $ = new GetTransferJobArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder projectId(String projectId) {
-            this.projectId = Objects.requireNonNull(projectId);
+            $.projectId = projectId;
             return this;
         }
+
         public Builder transferJobId(String transferJobId) {
-            this.transferJobId = Objects.requireNonNull(transferJobId);
+            $.transferJobId = transferJobId;
             return this;
-        }        public GetTransferJobArgs build() {
-            return new GetTransferJobArgs(projectId, transferJobId);
+        }
+
+        public GetTransferJobArgs build() {
+            $.projectId = Objects.requireNonNull($.projectId, "expected parameter 'projectId' to be non-null");
+            $.transferJobId = Objects.requireNonNull($.transferJobId, "expected parameter 'transferJobId' to be non-null");
+            return $;
         }
     }
+
 }

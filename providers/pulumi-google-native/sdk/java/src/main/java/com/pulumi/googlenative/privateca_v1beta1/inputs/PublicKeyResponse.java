@@ -21,7 +21,7 @@ public final class PublicKeyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="key", required=true)
-      private final String key;
+    private String key;
 
     public String key() {
         return this.key;
@@ -32,55 +32,52 @@ public final class PublicKeyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public PublicKeyResponse(
-        String key,
-        String type) {
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private PublicKeyResponse() {}
 
-    private PublicKeyResponse() {
-        this.key = null;
-        this.type = null;
+    private PublicKeyResponse(PublicKeyResponse $) {
+        this.key = $.key;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PublicKeyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String key;
-        private String type;
+        private PublicKeyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PublicKeyResponse();
         }
 
         public Builder(PublicKeyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.type = defaults.type;
+            $ = new PublicKeyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder key(String key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public PublicKeyResponse build() {
-            return new PublicKeyResponse(key, type);
+        }
+
+        public PublicKeyResponse build() {
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

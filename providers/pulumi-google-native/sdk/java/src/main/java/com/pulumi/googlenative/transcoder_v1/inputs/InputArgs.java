@@ -5,10 +5,10 @@ package com.pulumi.googlenative.transcoder_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.transcoder_v1.inputs.PreprocessingConfigArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class InputArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="key")
-      private final @Nullable Output<String> key;
+    private @Nullable Output<String> key;
 
-    public Output<String> key() {
-        return this.key == null ? Codegen.empty() : this.key;
+    public Optional<Output<String>> key() {
+        return Optional.ofNullable(this.key);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class InputArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="preprocessingConfig")
-      private final @Nullable Output<PreprocessingConfigArgs> preprocessingConfig;
+    private @Nullable Output<PreprocessingConfigArgs> preprocessingConfig;
 
-    public Output<PreprocessingConfigArgs> preprocessingConfig() {
-        return this.preprocessingConfig == null ? Codegen.empty() : this.preprocessingConfig;
+    public Optional<Output<PreprocessingConfigArgs>> preprocessingConfig() {
+        return Optional.ofNullable(this.preprocessingConfig);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class InputArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="uri")
-      private final @Nullable Output<String> uri;
+    private @Nullable Output<String> uri;
 
-    public Output<String> uri() {
-        return this.uri == null ? Codegen.empty() : this.uri;
+    public Optional<Output<String>> uri() {
+        return Optional.ofNullable(this.uri);
     }
 
-    public InputArgs(
-        @Nullable Output<String> key,
-        @Nullable Output<PreprocessingConfigArgs> preprocessingConfig,
-        @Nullable Output<String> uri) {
-        this.key = key;
-        this.preprocessingConfig = preprocessingConfig;
-        this.uri = uri;
-    }
+    private InputArgs() {}
 
-    private InputArgs() {
-        this.key = Codegen.empty();
-        this.preprocessingConfig = Codegen.empty();
-        this.uri = Codegen.empty();
+    private InputArgs(InputArgs $) {
+        this.key = $.key;
+        this.preprocessingConfig = $.preprocessingConfig;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> key;
-        private @Nullable Output<PreprocessingConfigArgs> preprocessingConfig;
-        private @Nullable Output<String> uri;
+        private InputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InputArgs();
         }
 
         public Builder(InputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.preprocessingConfig = defaults.preprocessingConfig;
-    	      this.uri = defaults.uri;
+            $ = new InputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder key(@Nullable Output<String> key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
-        public Builder key(@Nullable String key) {
-            this.key = Codegen.ofNullable(key);
-            return this;
+
+        public Builder key(String key) {
+            return key(Output.of(key));
         }
+
         public Builder preprocessingConfig(@Nullable Output<PreprocessingConfigArgs> preprocessingConfig) {
-            this.preprocessingConfig = preprocessingConfig;
+            $.preprocessingConfig = preprocessingConfig;
             return this;
         }
-        public Builder preprocessingConfig(@Nullable PreprocessingConfigArgs preprocessingConfig) {
-            this.preprocessingConfig = Codegen.ofNullable(preprocessingConfig);
-            return this;
+
+        public Builder preprocessingConfig(PreprocessingConfigArgs preprocessingConfig) {
+            return preprocessingConfig(Output.of(preprocessingConfig));
         }
+
         public Builder uri(@Nullable Output<String> uri) {
-            this.uri = uri;
+            $.uri = uri;
             return this;
         }
-        public Builder uri(@Nullable String uri) {
-            this.uri = Codegen.ofNullable(uri);
-            return this;
-        }        public InputArgs build() {
-            return new InputArgs(key, preprocessingConfig, uri);
+
+        public Builder uri(String uri) {
+            return uri(Output.of(uri));
+        }
+
+        public InputArgs build() {
+            return $;
         }
     }
+
 }

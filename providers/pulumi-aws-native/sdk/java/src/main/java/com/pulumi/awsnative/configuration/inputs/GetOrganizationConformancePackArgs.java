@@ -17,45 +17,45 @@ public final class GetOrganizationConformancePackArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="organizationConformancePackName", required=true)
-      private final String organizationConformancePackName;
+    private String organizationConformancePackName;
 
     public String organizationConformancePackName() {
         return this.organizationConformancePackName;
     }
 
-    public GetOrganizationConformancePackArgs(String organizationConformancePackName) {
-        this.organizationConformancePackName = Objects.requireNonNull(organizationConformancePackName, "expected parameter 'organizationConformancePackName' to be non-null");
-    }
+    private GetOrganizationConformancePackArgs() {}
 
-    private GetOrganizationConformancePackArgs() {
-        this.organizationConformancePackName = null;
+    private GetOrganizationConformancePackArgs(GetOrganizationConformancePackArgs $) {
+        this.organizationConformancePackName = $.organizationConformancePackName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetOrganizationConformancePackArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String organizationConformancePackName;
+        private GetOrganizationConformancePackArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetOrganizationConformancePackArgs();
         }
 
         public Builder(GetOrganizationConformancePackArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.organizationConformancePackName = defaults.organizationConformancePackName;
+            $ = new GetOrganizationConformancePackArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder organizationConformancePackName(String organizationConformancePackName) {
-            this.organizationConformancePackName = Objects.requireNonNull(organizationConformancePackName);
+            $.organizationConformancePackName = organizationConformancePackName;
             return this;
-        }        public GetOrganizationConformancePackArgs build() {
-            return new GetOrganizationConformancePackArgs(organizationConformancePackName);
+        }
+
+        public GetOrganizationConformancePackArgs build() {
+            $.organizationConformancePackName = Objects.requireNonNull($.organizationConformancePackName, "expected parameter 'organizationConformancePackName' to be non-null");
+            return $;
         }
     }
+
 }

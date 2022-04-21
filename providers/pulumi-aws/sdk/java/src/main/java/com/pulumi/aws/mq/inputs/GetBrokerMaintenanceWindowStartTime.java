@@ -13,78 +13,73 @@ public final class GetBrokerMaintenanceWindowStartTime extends com.pulumi.resour
     public static final GetBrokerMaintenanceWindowStartTime Empty = new GetBrokerMaintenanceWindowStartTime();
 
     @Import(name="dayOfWeek", required=true)
-      private final String dayOfWeek;
+    private String dayOfWeek;
 
     public String dayOfWeek() {
         return this.dayOfWeek;
     }
 
     @Import(name="timeOfDay", required=true)
-      private final String timeOfDay;
+    private String timeOfDay;
 
     public String timeOfDay() {
         return this.timeOfDay;
     }
 
     @Import(name="timeZone", required=true)
-      private final String timeZone;
+    private String timeZone;
 
     public String timeZone() {
         return this.timeZone;
     }
 
-    public GetBrokerMaintenanceWindowStartTime(
-        String dayOfWeek,
-        String timeOfDay,
-        String timeZone) {
-        this.dayOfWeek = Objects.requireNonNull(dayOfWeek, "expected parameter 'dayOfWeek' to be non-null");
-        this.timeOfDay = Objects.requireNonNull(timeOfDay, "expected parameter 'timeOfDay' to be non-null");
-        this.timeZone = Objects.requireNonNull(timeZone, "expected parameter 'timeZone' to be non-null");
-    }
+    private GetBrokerMaintenanceWindowStartTime() {}
 
-    private GetBrokerMaintenanceWindowStartTime() {
-        this.dayOfWeek = null;
-        this.timeOfDay = null;
-        this.timeZone = null;
+    private GetBrokerMaintenanceWindowStartTime(GetBrokerMaintenanceWindowStartTime $) {
+        this.dayOfWeek = $.dayOfWeek;
+        this.timeOfDay = $.timeOfDay;
+        this.timeZone = $.timeZone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBrokerMaintenanceWindowStartTime defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String dayOfWeek;
-        private String timeOfDay;
-        private String timeZone;
+        private GetBrokerMaintenanceWindowStartTime $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBrokerMaintenanceWindowStartTime();
         }
 
         public Builder(GetBrokerMaintenanceWindowStartTime defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dayOfWeek = defaults.dayOfWeek;
-    	      this.timeOfDay = defaults.timeOfDay;
-    	      this.timeZone = defaults.timeZone;
+            $ = new GetBrokerMaintenanceWindowStartTime(Objects.requireNonNull(defaults));
         }
 
         public Builder dayOfWeek(String dayOfWeek) {
-            this.dayOfWeek = Objects.requireNonNull(dayOfWeek);
+            $.dayOfWeek = dayOfWeek;
             return this;
         }
+
         public Builder timeOfDay(String timeOfDay) {
-            this.timeOfDay = Objects.requireNonNull(timeOfDay);
+            $.timeOfDay = timeOfDay;
             return this;
         }
+
         public Builder timeZone(String timeZone) {
-            this.timeZone = Objects.requireNonNull(timeZone);
+            $.timeZone = timeZone;
             return this;
-        }        public GetBrokerMaintenanceWindowStartTime build() {
-            return new GetBrokerMaintenanceWindowStartTime(dayOfWeek, timeOfDay, timeZone);
+        }
+
+        public GetBrokerMaintenanceWindowStartTime build() {
+            $.dayOfWeek = Objects.requireNonNull($.dayOfWeek, "expected parameter 'dayOfWeek' to be non-null");
+            $.timeOfDay = Objects.requireNonNull($.timeOfDay, "expected parameter 'timeOfDay' to be non-null");
+            $.timeZone = Objects.requireNonNull($.timeZone, "expected parameter 'timeZone' to be non-null");
+            return $;
         }
     }
+
 }

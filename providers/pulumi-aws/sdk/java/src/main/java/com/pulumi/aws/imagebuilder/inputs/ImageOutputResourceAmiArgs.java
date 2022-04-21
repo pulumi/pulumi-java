@@ -5,9 +5,9 @@ package com.pulumi.aws.imagebuilder.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ImageOutputResourceAmiArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="accountId")
-      private final @Nullable Output<String> accountId;
+    private @Nullable Output<String> accountId;
 
-    public Output<String> accountId() {
-        return this.accountId == null ? Codegen.empty() : this.accountId;
+    public Optional<Output<String>> accountId() {
+        return Optional.ofNullable(this.accountId);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ImageOutputResourceAmiArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ImageOutputResourceAmiArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="image")
-      private final @Nullable Output<String> image;
+    private @Nullable Output<String> image;
 
-    public Output<String> image() {
-        return this.image == null ? Codegen.empty() : this.image;
+    public Optional<Output<String>> image() {
+        return Optional.ofNullable(this.image);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class ImageOutputResourceAmiArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -64,102 +64,88 @@ public final class ImageOutputResourceAmiArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
-    public ImageOutputResourceAmiArgs(
-        @Nullable Output<String> accountId,
-        @Nullable Output<String> description,
-        @Nullable Output<String> image,
-        @Nullable Output<String> name,
-        @Nullable Output<String> region) {
-        this.accountId = accountId;
-        this.description = description;
-        this.image = image;
-        this.name = name;
-        this.region = region;
-    }
+    private ImageOutputResourceAmiArgs() {}
 
-    private ImageOutputResourceAmiArgs() {
-        this.accountId = Codegen.empty();
-        this.description = Codegen.empty();
-        this.image = Codegen.empty();
-        this.name = Codegen.empty();
-        this.region = Codegen.empty();
+    private ImageOutputResourceAmiArgs(ImageOutputResourceAmiArgs $) {
+        this.accountId = $.accountId;
+        this.description = $.description;
+        this.image = $.image;
+        this.name = $.name;
+        this.region = $.region;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageOutputResourceAmiArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accountId;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> image;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> region;
+        private ImageOutputResourceAmiArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageOutputResourceAmiArgs();
         }
 
         public Builder(ImageOutputResourceAmiArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountId = defaults.accountId;
-    	      this.description = defaults.description;
-    	      this.image = defaults.image;
-    	      this.name = defaults.name;
-    	      this.region = defaults.region;
+            $ = new ImageOutputResourceAmiArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountId(@Nullable Output<String> accountId) {
-            this.accountId = accountId;
+            $.accountId = accountId;
             return this;
         }
-        public Builder accountId(@Nullable String accountId) {
-            this.accountId = Codegen.ofNullable(accountId);
-            return this;
+
+        public Builder accountId(String accountId) {
+            return accountId(Output.of(accountId));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder image(@Nullable Output<String> image) {
-            this.image = image;
+            $.image = image;
             return this;
         }
-        public Builder image(@Nullable String image) {
-            this.image = Codegen.ofNullable(image);
-            return this;
+
+        public Builder image(String image) {
+            return image(Output.of(image));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
-        }        public ImageOutputResourceAmiArgs build() {
-            return new ImageOutputResourceAmiArgs(accountId, description, image, name, region);
+
+        public Builder region(String region) {
+            return region(Output.of(region));
+        }
+
+        public ImageOutputResourceAmiArgs build() {
+            return $;
         }
     }
+
 }

@@ -13,45 +13,45 @@ public final class GetStudioArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetStudioArgs Empty = new GetStudioArgs();
 
     @Import(name="studioId", required=true)
-      private final String studioId;
+    private String studioId;
 
     public String studioId() {
         return this.studioId;
     }
 
-    public GetStudioArgs(String studioId) {
-        this.studioId = Objects.requireNonNull(studioId, "expected parameter 'studioId' to be non-null");
-    }
+    private GetStudioArgs() {}
 
-    private GetStudioArgs() {
-        this.studioId = null;
+    private GetStudioArgs(GetStudioArgs $) {
+        this.studioId = $.studioId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetStudioArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String studioId;
+        private GetStudioArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetStudioArgs();
         }
 
         public Builder(GetStudioArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.studioId = defaults.studioId;
+            $ = new GetStudioArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder studioId(String studioId) {
-            this.studioId = Objects.requireNonNull(studioId);
+            $.studioId = studioId;
             return this;
-        }        public GetStudioArgs build() {
-            return new GetStudioArgs(studioId);
+        }
+
+        public GetStudioArgs build() {
+            $.studioId = Objects.requireNonNull($.studioId, "expected parameter 'studioId' to be non-null");
+            return $;
         }
     }
+
 }

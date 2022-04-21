@@ -5,12 +5,12 @@ package com.pulumi.aws.codepipeline.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class PipelineStageActionGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="category", required=true)
-      private final Output<String> category;
+    private Output<String> category;
 
     public Output<String> category() {
         return this.category;
@@ -34,10 +34,10 @@ public final class PipelineStageActionGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="configuration")
-      private final @Nullable Output<Map<String,String>> configuration;
+    private @Nullable Output<Map<String,String>> configuration;
 
-    public Output<Map<String,String>> configuration() {
-        return this.configuration == null ? Codegen.empty() : this.configuration;
+    public Optional<Output<Map<String,String>>> configuration() {
+        return Optional.ofNullable(this.configuration);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class PipelineStageActionGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="inputArtifacts")
-      private final @Nullable Output<List<String>> inputArtifacts;
+    private @Nullable Output<List<String>> inputArtifacts;
 
-    public Output<List<String>> inputArtifacts() {
-        return this.inputArtifacts == null ? Codegen.empty() : this.inputArtifacts;
+    public Optional<Output<List<String>>> inputArtifacts() {
+        return Optional.ofNullable(this.inputArtifacts);
     }
 
     /**
@@ -56,7 +56,7 @@ public final class PipelineStageActionGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -67,10 +67,10 @@ public final class PipelineStageActionGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="namespace")
-      private final @Nullable Output<String> namespace;
+    private @Nullable Output<String> namespace;
 
-    public Output<String> namespace() {
-        return this.namespace == null ? Codegen.empty() : this.namespace;
+    public Optional<Output<String>> namespace() {
+        return Optional.ofNullable(this.namespace);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class PipelineStageActionGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="outputArtifacts")
-      private final @Nullable Output<List<String>> outputArtifacts;
+    private @Nullable Output<List<String>> outputArtifacts;
 
-    public Output<List<String>> outputArtifacts() {
-        return this.outputArtifacts == null ? Codegen.empty() : this.outputArtifacts;
+    public Optional<Output<List<String>>> outputArtifacts() {
+        return Optional.ofNullable(this.outputArtifacts);
     }
 
     /**
@@ -89,7 +89,7 @@ public final class PipelineStageActionGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="owner", required=true)
-      private final Output<String> owner;
+    private Output<String> owner;
 
     public Output<String> owner() {
         return this.owner;
@@ -100,7 +100,7 @@ public final class PipelineStageActionGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="provider", required=true)
-      private final Output<String> provider;
+    private Output<String> provider;
 
     public Output<String> provider() {
         return this.provider;
@@ -111,10 +111,10 @@ public final class PipelineStageActionGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
     /**
@@ -122,10 +122,10 @@ public final class PipelineStageActionGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="roleArn")
-      private final @Nullable Output<String> roleArn;
+    private @Nullable Output<String> roleArn;
 
-    public Output<String> roleArn() {
-        return this.roleArn == null ? Codegen.empty() : this.roleArn;
+    public Optional<Output<String>> roleArn() {
+        return Optional.ofNullable(this.roleArn);
     }
 
     /**
@@ -133,10 +133,10 @@ public final class PipelineStageActionGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="runOrder")
-      private final @Nullable Output<Integer> runOrder;
+    private @Nullable Output<Integer> runOrder;
 
-    public Output<Integer> runOrder() {
-        return this.runOrder == null ? Codegen.empty() : this.runOrder;
+    public Optional<Output<Integer>> runOrder() {
+        return Optional.ofNullable(this.runOrder);
     }
 
     /**
@@ -144,199 +144,171 @@ public final class PipelineStageActionGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="version", required=true)
-      private final Output<String> version;
+    private Output<String> version;
 
     public Output<String> version() {
         return this.version;
     }
 
-    public PipelineStageActionGetArgs(
-        Output<String> category,
-        @Nullable Output<Map<String,String>> configuration,
-        @Nullable Output<List<String>> inputArtifacts,
-        Output<String> name,
-        @Nullable Output<String> namespace,
-        @Nullable Output<List<String>> outputArtifacts,
-        Output<String> owner,
-        Output<String> provider,
-        @Nullable Output<String> region,
-        @Nullable Output<String> roleArn,
-        @Nullable Output<Integer> runOrder,
-        Output<String> version) {
-        this.category = Objects.requireNonNull(category, "expected parameter 'category' to be non-null");
-        this.configuration = configuration;
-        this.inputArtifacts = inputArtifacts;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.namespace = namespace;
-        this.outputArtifacts = outputArtifacts;
-        this.owner = Objects.requireNonNull(owner, "expected parameter 'owner' to be non-null");
-        this.provider = Objects.requireNonNull(provider, "expected parameter 'provider' to be non-null");
-        this.region = region;
-        this.roleArn = roleArn;
-        this.runOrder = runOrder;
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private PipelineStageActionGetArgs() {}
 
-    private PipelineStageActionGetArgs() {
-        this.category = Codegen.empty();
-        this.configuration = Codegen.empty();
-        this.inputArtifacts = Codegen.empty();
-        this.name = Codegen.empty();
-        this.namespace = Codegen.empty();
-        this.outputArtifacts = Codegen.empty();
-        this.owner = Codegen.empty();
-        this.provider = Codegen.empty();
-        this.region = Codegen.empty();
-        this.roleArn = Codegen.empty();
-        this.runOrder = Codegen.empty();
-        this.version = Codegen.empty();
+    private PipelineStageActionGetArgs(PipelineStageActionGetArgs $) {
+        this.category = $.category;
+        this.configuration = $.configuration;
+        this.inputArtifacts = $.inputArtifacts;
+        this.name = $.name;
+        this.namespace = $.namespace;
+        this.outputArtifacts = $.outputArtifacts;
+        this.owner = $.owner;
+        this.provider = $.provider;
+        this.region = $.region;
+        this.roleArn = $.roleArn;
+        this.runOrder = $.runOrder;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PipelineStageActionGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> category;
-        private @Nullable Output<Map<String,String>> configuration;
-        private @Nullable Output<List<String>> inputArtifacts;
-        private Output<String> name;
-        private @Nullable Output<String> namespace;
-        private @Nullable Output<List<String>> outputArtifacts;
-        private Output<String> owner;
-        private Output<String> provider;
-        private @Nullable Output<String> region;
-        private @Nullable Output<String> roleArn;
-        private @Nullable Output<Integer> runOrder;
-        private Output<String> version;
+        private PipelineStageActionGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PipelineStageActionGetArgs();
         }
 
         public Builder(PipelineStageActionGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.category = defaults.category;
-    	      this.configuration = defaults.configuration;
-    	      this.inputArtifacts = defaults.inputArtifacts;
-    	      this.name = defaults.name;
-    	      this.namespace = defaults.namespace;
-    	      this.outputArtifacts = defaults.outputArtifacts;
-    	      this.owner = defaults.owner;
-    	      this.provider = defaults.provider;
-    	      this.region = defaults.region;
-    	      this.roleArn = defaults.roleArn;
-    	      this.runOrder = defaults.runOrder;
-    	      this.version = defaults.version;
+            $ = new PipelineStageActionGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder category(Output<String> category) {
-            this.category = Objects.requireNonNull(category);
+            $.category = category;
             return this;
         }
+
         public Builder category(String category) {
-            this.category = Output.of(Objects.requireNonNull(category));
-            return this;
+            return category(Output.of(category));
         }
+
         public Builder configuration(@Nullable Output<Map<String,String>> configuration) {
-            this.configuration = configuration;
+            $.configuration = configuration;
             return this;
         }
-        public Builder configuration(@Nullable Map<String,String> configuration) {
-            this.configuration = Codegen.ofNullable(configuration);
-            return this;
+
+        public Builder configuration(Map<String,String> configuration) {
+            return configuration(Output.of(configuration));
         }
+
         public Builder inputArtifacts(@Nullable Output<List<String>> inputArtifacts) {
-            this.inputArtifacts = inputArtifacts;
+            $.inputArtifacts = inputArtifacts;
             return this;
         }
-        public Builder inputArtifacts(@Nullable List<String> inputArtifacts) {
-            this.inputArtifacts = Codegen.ofNullable(inputArtifacts);
-            return this;
+
+        public Builder inputArtifacts(List<String> inputArtifacts) {
+            return inputArtifacts(Output.of(inputArtifacts));
         }
+
         public Builder inputArtifacts(String... inputArtifacts) {
             return inputArtifacts(List.of(inputArtifacts));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder namespace(@Nullable Output<String> namespace) {
-            this.namespace = namespace;
+            $.namespace = namespace;
             return this;
         }
-        public Builder namespace(@Nullable String namespace) {
-            this.namespace = Codegen.ofNullable(namespace);
-            return this;
+
+        public Builder namespace(String namespace) {
+            return namespace(Output.of(namespace));
         }
+
         public Builder outputArtifacts(@Nullable Output<List<String>> outputArtifacts) {
-            this.outputArtifacts = outputArtifacts;
+            $.outputArtifacts = outputArtifacts;
             return this;
         }
-        public Builder outputArtifacts(@Nullable List<String> outputArtifacts) {
-            this.outputArtifacts = Codegen.ofNullable(outputArtifacts);
-            return this;
+
+        public Builder outputArtifacts(List<String> outputArtifacts) {
+            return outputArtifacts(Output.of(outputArtifacts));
         }
+
         public Builder outputArtifacts(String... outputArtifacts) {
             return outputArtifacts(List.of(outputArtifacts));
         }
+
         public Builder owner(Output<String> owner) {
-            this.owner = Objects.requireNonNull(owner);
+            $.owner = owner;
             return this;
         }
+
         public Builder owner(String owner) {
-            this.owner = Output.of(Objects.requireNonNull(owner));
-            return this;
+            return owner(Output.of(owner));
         }
+
         public Builder provider(Output<String> provider) {
-            this.provider = Objects.requireNonNull(provider);
+            $.provider = provider;
             return this;
         }
+
         public Builder provider(String provider) {
-            this.provider = Output.of(Objects.requireNonNull(provider));
-            return this;
+            return provider(Output.of(provider));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
+
+        public Builder region(String region) {
+            return region(Output.of(region));
         }
+
         public Builder roleArn(@Nullable Output<String> roleArn) {
-            this.roleArn = roleArn;
+            $.roleArn = roleArn;
             return this;
         }
-        public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Codegen.ofNullable(roleArn);
-            return this;
+
+        public Builder roleArn(String roleArn) {
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder runOrder(@Nullable Output<Integer> runOrder) {
-            this.runOrder = runOrder;
+            $.runOrder = runOrder;
             return this;
         }
-        public Builder runOrder(@Nullable Integer runOrder) {
-            this.runOrder = Codegen.ofNullable(runOrder);
-            return this;
+
+        public Builder runOrder(Integer runOrder) {
+            return runOrder(Output.of(runOrder));
         }
+
         public Builder version(Output<String> version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
         }
+
         public Builder version(String version) {
-            this.version = Output.of(Objects.requireNonNull(version));
-            return this;
-        }        public PipelineStageActionGetArgs build() {
-            return new PipelineStageActionGetArgs(category, configuration, inputArtifacts, name, namespace, outputArtifacts, owner, provider, region, roleArn, runOrder, version);
+            return version(Output.of(version));
+        }
+
+        public PipelineStageActionGetArgs build() {
+            $.category = Objects.requireNonNull($.category, "expected parameter 'category' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.owner = Objects.requireNonNull($.owner, "expected parameter 'owner' to be non-null");
+            $.provider = Objects.requireNonNull($.provider, "expected parameter 'provider' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

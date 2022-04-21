@@ -16,78 +16,70 @@ public final class DeliveryStreamCloudWatchLoggingOptions extends com.pulumi.res
     public static final DeliveryStreamCloudWatchLoggingOptions Empty = new DeliveryStreamCloudWatchLoggingOptions();
 
     @Import(name="enabled")
-      private final @Nullable Boolean enabled;
+    private @Nullable Boolean enabled;
 
     public Optional<Boolean> enabled() {
-        return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
+        return Optional.ofNullable(this.enabled);
     }
 
     @Import(name="logGroupName")
-      private final @Nullable String logGroupName;
+    private @Nullable String logGroupName;
 
     public Optional<String> logGroupName() {
-        return this.logGroupName == null ? Optional.empty() : Optional.ofNullable(this.logGroupName);
+        return Optional.ofNullable(this.logGroupName);
     }
 
     @Import(name="logStreamName")
-      private final @Nullable String logStreamName;
+    private @Nullable String logStreamName;
 
     public Optional<String> logStreamName() {
-        return this.logStreamName == null ? Optional.empty() : Optional.ofNullable(this.logStreamName);
+        return Optional.ofNullable(this.logStreamName);
     }
 
-    public DeliveryStreamCloudWatchLoggingOptions(
-        @Nullable Boolean enabled,
-        @Nullable String logGroupName,
-        @Nullable String logStreamName) {
-        this.enabled = enabled;
-        this.logGroupName = logGroupName;
-        this.logStreamName = logStreamName;
-    }
+    private DeliveryStreamCloudWatchLoggingOptions() {}
 
-    private DeliveryStreamCloudWatchLoggingOptions() {
-        this.enabled = null;
-        this.logGroupName = null;
-        this.logStreamName = null;
+    private DeliveryStreamCloudWatchLoggingOptions(DeliveryStreamCloudWatchLoggingOptions $) {
+        this.enabled = $.enabled;
+        this.logGroupName = $.logGroupName;
+        this.logStreamName = $.logStreamName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryStreamCloudWatchLoggingOptions defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean enabled;
-        private @Nullable String logGroupName;
-        private @Nullable String logStreamName;
+        private DeliveryStreamCloudWatchLoggingOptions $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryStreamCloudWatchLoggingOptions();
         }
 
         public Builder(DeliveryStreamCloudWatchLoggingOptions defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.logGroupName = defaults.logGroupName;
-    	      this.logStreamName = defaults.logStreamName;
+            $ = new DeliveryStreamCloudWatchLoggingOptions(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
+
         public Builder logGroupName(@Nullable String logGroupName) {
-            this.logGroupName = logGroupName;
+            $.logGroupName = logGroupName;
             return this;
         }
+
         public Builder logStreamName(@Nullable String logStreamName) {
-            this.logStreamName = logStreamName;
+            $.logStreamName = logStreamName;
             return this;
-        }        public DeliveryStreamCloudWatchLoggingOptions build() {
-            return new DeliveryStreamCloudWatchLoggingOptions(enabled, logGroupName, logStreamName);
+        }
+
+        public DeliveryStreamCloudWatchLoggingOptions build() {
+            return $;
         }
     }
+
 }

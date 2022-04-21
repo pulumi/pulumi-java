@@ -5,10 +5,10 @@ package com.pulumi.googlenative.apigateway_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.apigateway_v1.inputs.ApigatewayApiConfigFileArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ApigatewayApiConfigGrpcServiceDefinitionArgs extends com.pulu
      * 
      */
     @Import(name="fileDescriptorSet")
-      private final @Nullable Output<ApigatewayApiConfigFileArgs> fileDescriptorSet;
+    private @Nullable Output<ApigatewayApiConfigFileArgs> fileDescriptorSet;
 
-    public Output<ApigatewayApiConfigFileArgs> fileDescriptorSet() {
-        return this.fileDescriptorSet == null ? Codegen.empty() : this.fileDescriptorSet;
+    public Optional<Output<ApigatewayApiConfigFileArgs>> fileDescriptorSet() {
+        return Optional.ofNullable(this.fileDescriptorSet);
     }
 
     /**
@@ -36,66 +36,62 @@ public final class ApigatewayApiConfigGrpcServiceDefinitionArgs extends com.pulu
      * 
      */
     @Import(name="source")
-      private final @Nullable Output<List<ApigatewayApiConfigFileArgs>> source;
+    private @Nullable Output<List<ApigatewayApiConfigFileArgs>> source;
 
-    public Output<List<ApigatewayApiConfigFileArgs>> source() {
-        return this.source == null ? Codegen.empty() : this.source;
+    public Optional<Output<List<ApigatewayApiConfigFileArgs>>> source() {
+        return Optional.ofNullable(this.source);
     }
 
-    public ApigatewayApiConfigGrpcServiceDefinitionArgs(
-        @Nullable Output<ApigatewayApiConfigFileArgs> fileDescriptorSet,
-        @Nullable Output<List<ApigatewayApiConfigFileArgs>> source) {
-        this.fileDescriptorSet = fileDescriptorSet;
-        this.source = source;
-    }
+    private ApigatewayApiConfigGrpcServiceDefinitionArgs() {}
 
-    private ApigatewayApiConfigGrpcServiceDefinitionArgs() {
-        this.fileDescriptorSet = Codegen.empty();
-        this.source = Codegen.empty();
+    private ApigatewayApiConfigGrpcServiceDefinitionArgs(ApigatewayApiConfigGrpcServiceDefinitionArgs $) {
+        this.fileDescriptorSet = $.fileDescriptorSet;
+        this.source = $.source;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApigatewayApiConfigGrpcServiceDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ApigatewayApiConfigFileArgs> fileDescriptorSet;
-        private @Nullable Output<List<ApigatewayApiConfigFileArgs>> source;
+        private ApigatewayApiConfigGrpcServiceDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApigatewayApiConfigGrpcServiceDefinitionArgs();
         }
 
         public Builder(ApigatewayApiConfigGrpcServiceDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fileDescriptorSet = defaults.fileDescriptorSet;
-    	      this.source = defaults.source;
+            $ = new ApigatewayApiConfigGrpcServiceDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fileDescriptorSet(@Nullable Output<ApigatewayApiConfigFileArgs> fileDescriptorSet) {
-            this.fileDescriptorSet = fileDescriptorSet;
+            $.fileDescriptorSet = fileDescriptorSet;
             return this;
         }
-        public Builder fileDescriptorSet(@Nullable ApigatewayApiConfigFileArgs fileDescriptorSet) {
-            this.fileDescriptorSet = Codegen.ofNullable(fileDescriptorSet);
-            return this;
+
+        public Builder fileDescriptorSet(ApigatewayApiConfigFileArgs fileDescriptorSet) {
+            return fileDescriptorSet(Output.of(fileDescriptorSet));
         }
+
         public Builder source(@Nullable Output<List<ApigatewayApiConfigFileArgs>> source) {
-            this.source = source;
+            $.source = source;
             return this;
         }
-        public Builder source(@Nullable List<ApigatewayApiConfigFileArgs> source) {
-            this.source = Codegen.ofNullable(source);
-            return this;
+
+        public Builder source(List<ApigatewayApiConfigFileArgs> source) {
+            return source(Output.of(source));
         }
+
         public Builder source(ApigatewayApiConfigFileArgs... source) {
             return source(List.of(source));
-        }        public ApigatewayApiConfigGrpcServiceDefinitionArgs build() {
-            return new ApigatewayApiConfigGrpcServiceDefinitionArgs(fileDescriptorSet, source);
+        }
+
+        public ApigatewayApiConfigGrpcServiceDefinitionArgs build() {
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetSkusNestedResourceTypeFirstArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="nestedResourceTypeFirst", required=true)
-      private final String nestedResourceTypeFirst;
+    private String nestedResourceTypeFirst;
 
     public String nestedResourceTypeFirst() {
         return this.nestedResourceTypeFirst;
@@ -28,7 +28,7 @@ public final class GetSkusNestedResourceTypeFirstArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="providerNamespace", required=true)
-      private final String providerNamespace;
+    private String providerNamespace;
 
     public String providerNamespace() {
         return this.providerNamespace;
@@ -39,7 +39,7 @@ public final class GetSkusNestedResourceTypeFirstArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="resourceType", required=true)
-      private final String resourceType;
+    private String resourceType;
 
     public String resourceType() {
         return this.resourceType;
@@ -50,73 +50,66 @@ public final class GetSkusNestedResourceTypeFirstArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="sku", required=true)
-      private final String sku;
+    private String sku;
 
     public String sku() {
         return this.sku;
     }
 
-    public GetSkusNestedResourceTypeFirstArgs(
-        String nestedResourceTypeFirst,
-        String providerNamespace,
-        String resourceType,
-        String sku) {
-        this.nestedResourceTypeFirst = Objects.requireNonNull(nestedResourceTypeFirst, "expected parameter 'nestedResourceTypeFirst' to be non-null");
-        this.providerNamespace = Objects.requireNonNull(providerNamespace, "expected parameter 'providerNamespace' to be non-null");
-        this.resourceType = Objects.requireNonNull(resourceType, "expected parameter 'resourceType' to be non-null");
-        this.sku = Objects.requireNonNull(sku, "expected parameter 'sku' to be non-null");
-    }
+    private GetSkusNestedResourceTypeFirstArgs() {}
 
-    private GetSkusNestedResourceTypeFirstArgs() {
-        this.nestedResourceTypeFirst = null;
-        this.providerNamespace = null;
-        this.resourceType = null;
-        this.sku = null;
+    private GetSkusNestedResourceTypeFirstArgs(GetSkusNestedResourceTypeFirstArgs $) {
+        this.nestedResourceTypeFirst = $.nestedResourceTypeFirst;
+        this.providerNamespace = $.providerNamespace;
+        this.resourceType = $.resourceType;
+        this.sku = $.sku;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSkusNestedResourceTypeFirstArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String nestedResourceTypeFirst;
-        private String providerNamespace;
-        private String resourceType;
-        private String sku;
+        private GetSkusNestedResourceTypeFirstArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSkusNestedResourceTypeFirstArgs();
         }
 
         public Builder(GetSkusNestedResourceTypeFirstArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nestedResourceTypeFirst = defaults.nestedResourceTypeFirst;
-    	      this.providerNamespace = defaults.providerNamespace;
-    	      this.resourceType = defaults.resourceType;
-    	      this.sku = defaults.sku;
+            $ = new GetSkusNestedResourceTypeFirstArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder nestedResourceTypeFirst(String nestedResourceTypeFirst) {
-            this.nestedResourceTypeFirst = Objects.requireNonNull(nestedResourceTypeFirst);
+            $.nestedResourceTypeFirst = nestedResourceTypeFirst;
             return this;
         }
+
         public Builder providerNamespace(String providerNamespace) {
-            this.providerNamespace = Objects.requireNonNull(providerNamespace);
+            $.providerNamespace = providerNamespace;
             return this;
         }
+
         public Builder resourceType(String resourceType) {
-            this.resourceType = Objects.requireNonNull(resourceType);
+            $.resourceType = resourceType;
             return this;
         }
+
         public Builder sku(String sku) {
-            this.sku = Objects.requireNonNull(sku);
+            $.sku = sku;
             return this;
-        }        public GetSkusNestedResourceTypeFirstArgs build() {
-            return new GetSkusNestedResourceTypeFirstArgs(nestedResourceTypeFirst, providerNamespace, resourceType, sku);
+        }
+
+        public GetSkusNestedResourceTypeFirstArgs build() {
+            $.nestedResourceTypeFirst = Objects.requireNonNull($.nestedResourceTypeFirst, "expected parameter 'nestedResourceTypeFirst' to be non-null");
+            $.providerNamespace = Objects.requireNonNull($.providerNamespace, "expected parameter 'providerNamespace' to be non-null");
+            $.resourceType = Objects.requireNonNull($.resourceType, "expected parameter 'resourceType' to be non-null");
+            $.sku = Objects.requireNonNull($.sku, "expected parameter 'sku' to be non-null");
+            return $;
         }
     }
+
 }

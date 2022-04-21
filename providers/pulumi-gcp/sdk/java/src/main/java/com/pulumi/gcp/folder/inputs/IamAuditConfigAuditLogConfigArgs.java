@@ -5,10 +5,10 @@ package com.pulumi.gcp.folder.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,73 +17,70 @@ public final class IamAuditConfigAuditLogConfigArgs extends com.pulumi.resources
     public static final IamAuditConfigAuditLogConfigArgs Empty = new IamAuditConfigAuditLogConfigArgs();
 
     @Import(name="exemptedMembers")
-      private final @Nullable Output<List<String>> exemptedMembers;
+    private @Nullable Output<List<String>> exemptedMembers;
 
-    public Output<List<String>> exemptedMembers() {
-        return this.exemptedMembers == null ? Codegen.empty() : this.exemptedMembers;
+    public Optional<Output<List<String>>> exemptedMembers() {
+        return Optional.ofNullable(this.exemptedMembers);
     }
 
     @Import(name="logType", required=true)
-      private final Output<String> logType;
+    private Output<String> logType;
 
     public Output<String> logType() {
         return this.logType;
     }
 
-    public IamAuditConfigAuditLogConfigArgs(
-        @Nullable Output<List<String>> exemptedMembers,
-        Output<String> logType) {
-        this.exemptedMembers = exemptedMembers;
-        this.logType = Objects.requireNonNull(logType, "expected parameter 'logType' to be non-null");
-    }
+    private IamAuditConfigAuditLogConfigArgs() {}
 
-    private IamAuditConfigAuditLogConfigArgs() {
-        this.exemptedMembers = Codegen.empty();
-        this.logType = Codegen.empty();
+    private IamAuditConfigAuditLogConfigArgs(IamAuditConfigAuditLogConfigArgs $) {
+        this.exemptedMembers = $.exemptedMembers;
+        this.logType = $.logType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IamAuditConfigAuditLogConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> exemptedMembers;
-        private Output<String> logType;
+        private IamAuditConfigAuditLogConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IamAuditConfigAuditLogConfigArgs();
         }
 
         public Builder(IamAuditConfigAuditLogConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.exemptedMembers = defaults.exemptedMembers;
-    	      this.logType = defaults.logType;
+            $ = new IamAuditConfigAuditLogConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder exemptedMembers(@Nullable Output<List<String>> exemptedMembers) {
-            this.exemptedMembers = exemptedMembers;
+            $.exemptedMembers = exemptedMembers;
             return this;
         }
-        public Builder exemptedMembers(@Nullable List<String> exemptedMembers) {
-            this.exemptedMembers = Codegen.ofNullable(exemptedMembers);
-            return this;
+
+        public Builder exemptedMembers(List<String> exemptedMembers) {
+            return exemptedMembers(Output.of(exemptedMembers));
         }
+
         public Builder exemptedMembers(String... exemptedMembers) {
             return exemptedMembers(List.of(exemptedMembers));
         }
+
         public Builder logType(Output<String> logType) {
-            this.logType = Objects.requireNonNull(logType);
+            $.logType = logType;
             return this;
         }
+
         public Builder logType(String logType) {
-            this.logType = Output.of(Objects.requireNonNull(logType));
-            return this;
-        }        public IamAuditConfigAuditLogConfigArgs build() {
-            return new IamAuditConfigAuditLogConfigArgs(exemptedMembers, logType);
+            return logType(Output.of(logType));
+        }
+
+        public IamAuditConfigAuditLogConfigArgs build() {
+            $.logType = Objects.requireNonNull($.logType, "expected parameter 'logType' to be non-null");
+            return $;
         }
     }
+
 }

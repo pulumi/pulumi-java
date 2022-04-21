@@ -5,7 +5,6 @@ package com.pulumi.awsnative.iot.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class TimeoutConfigPropertiesArgs extends com.pulumi.resources.Reso
     public static final TimeoutConfigPropertiesArgs Empty = new TimeoutConfigPropertiesArgs();
 
     @Import(name="inProgressTimeoutInMinutes", required=true)
-      private final Output<Integer> inProgressTimeoutInMinutes;
+    private Output<Integer> inProgressTimeoutInMinutes;
 
     public Output<Integer> inProgressTimeoutInMinutes() {
         return this.inProgressTimeoutInMinutes;
     }
 
-    public TimeoutConfigPropertiesArgs(Output<Integer> inProgressTimeoutInMinutes) {
-        this.inProgressTimeoutInMinutes = Objects.requireNonNull(inProgressTimeoutInMinutes, "expected parameter 'inProgressTimeoutInMinutes' to be non-null");
-    }
+    private TimeoutConfigPropertiesArgs() {}
 
-    private TimeoutConfigPropertiesArgs() {
-        this.inProgressTimeoutInMinutes = Codegen.empty();
+    private TimeoutConfigPropertiesArgs(TimeoutConfigPropertiesArgs $) {
+        this.inProgressTimeoutInMinutes = $.inProgressTimeoutInMinutes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TimeoutConfigPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> inProgressTimeoutInMinutes;
+        private TimeoutConfigPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TimeoutConfigPropertiesArgs();
         }
 
         public Builder(TimeoutConfigPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.inProgressTimeoutInMinutes = defaults.inProgressTimeoutInMinutes;
+            $ = new TimeoutConfigPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder inProgressTimeoutInMinutes(Output<Integer> inProgressTimeoutInMinutes) {
-            this.inProgressTimeoutInMinutes = Objects.requireNonNull(inProgressTimeoutInMinutes);
+            $.inProgressTimeoutInMinutes = inProgressTimeoutInMinutes;
             return this;
         }
+
         public Builder inProgressTimeoutInMinutes(Integer inProgressTimeoutInMinutes) {
-            this.inProgressTimeoutInMinutes = Output.of(Objects.requireNonNull(inProgressTimeoutInMinutes));
-            return this;
-        }        public TimeoutConfigPropertiesArgs build() {
-            return new TimeoutConfigPropertiesArgs(inProgressTimeoutInMinutes);
+            return inProgressTimeoutInMinutes(Output.of(inProgressTimeoutInMinutes));
+        }
+
+        public TimeoutConfigPropertiesArgs build() {
+            $.inProgressTimeoutInMinutes = Objects.requireNonNull($.inProgressTimeoutInMinutes, "expected parameter 'inProgressTimeoutInMinutes' to be non-null");
+            return $;
         }
     }
+
 }

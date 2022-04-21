@@ -17,7 +17,7 @@ public final class GetAFDOriginArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="originGroupName", required=true)
-      private final String originGroupName;
+    private String originGroupName;
 
     public String originGroupName() {
         return this.originGroupName;
@@ -28,7 +28,7 @@ public final class GetAFDOriginArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="originName", required=true)
-      private final String originName;
+    private String originName;
 
     public String originName() {
         return this.originName;
@@ -39,7 +39,7 @@ public final class GetAFDOriginArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="profileName", required=true)
-      private final String profileName;
+    private String profileName;
 
     public String profileName() {
         return this.profileName;
@@ -50,73 +50,66 @@ public final class GetAFDOriginArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetAFDOriginArgs(
-        String originGroupName,
-        String originName,
-        String profileName,
-        String resourceGroupName) {
-        this.originGroupName = Objects.requireNonNull(originGroupName, "expected parameter 'originGroupName' to be non-null");
-        this.originName = Objects.requireNonNull(originName, "expected parameter 'originName' to be non-null");
-        this.profileName = Objects.requireNonNull(profileName, "expected parameter 'profileName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetAFDOriginArgs() {}
 
-    private GetAFDOriginArgs() {
-        this.originGroupName = null;
-        this.originName = null;
-        this.profileName = null;
-        this.resourceGroupName = null;
+    private GetAFDOriginArgs(GetAFDOriginArgs $) {
+        this.originGroupName = $.originGroupName;
+        this.originName = $.originName;
+        this.profileName = $.profileName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAFDOriginArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String originGroupName;
-        private String originName;
-        private String profileName;
-        private String resourceGroupName;
+        private GetAFDOriginArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAFDOriginArgs();
         }
 
         public Builder(GetAFDOriginArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.originGroupName = defaults.originGroupName;
-    	      this.originName = defaults.originName;
-    	      this.profileName = defaults.profileName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetAFDOriginArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder originGroupName(String originGroupName) {
-            this.originGroupName = Objects.requireNonNull(originGroupName);
+            $.originGroupName = originGroupName;
             return this;
         }
+
         public Builder originName(String originName) {
-            this.originName = Objects.requireNonNull(originName);
+            $.originName = originName;
             return this;
         }
+
         public Builder profileName(String profileName) {
-            this.profileName = Objects.requireNonNull(profileName);
+            $.profileName = profileName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetAFDOriginArgs build() {
-            return new GetAFDOriginArgs(originGroupName, originName, profileName, resourceGroupName);
+        }
+
+        public GetAFDOriginArgs build() {
+            $.originGroupName = Objects.requireNonNull($.originGroupName, "expected parameter 'originGroupName' to be non-null");
+            $.originName = Objects.requireNonNull($.originName, "expected parameter 'originName' to be non-null");
+            $.profileName = Objects.requireNonNull($.profileName, "expected parameter 'profileName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

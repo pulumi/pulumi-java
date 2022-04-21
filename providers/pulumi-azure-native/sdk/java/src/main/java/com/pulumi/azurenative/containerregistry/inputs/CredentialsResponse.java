@@ -28,10 +28,10 @@ public final class CredentialsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="customRegistries")
-      private final @Nullable Map<String,CustomRegistryCredentialsResponse> customRegistries;
+    private @Nullable Map<String,CustomRegistryCredentialsResponse> customRegistries;
 
-    public Map<String,CustomRegistryCredentialsResponse> customRegistries() {
-        return this.customRegistries == null ? Map.of() : this.customRegistries;
+    public Optional<Map<String,CustomRegistryCredentialsResponse>> customRegistries() {
+        return Optional.ofNullable(this.customRegistries);
     }
 
     /**
@@ -39,55 +39,50 @@ public final class CredentialsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sourceRegistry")
-      private final @Nullable SourceRegistryCredentialsResponse sourceRegistry;
+    private @Nullable SourceRegistryCredentialsResponse sourceRegistry;
 
     public Optional<SourceRegistryCredentialsResponse> sourceRegistry() {
-        return this.sourceRegistry == null ? Optional.empty() : Optional.ofNullable(this.sourceRegistry);
+        return Optional.ofNullable(this.sourceRegistry);
     }
 
-    public CredentialsResponse(
-        @Nullable Map<String,CustomRegistryCredentialsResponse> customRegistries,
-        @Nullable SourceRegistryCredentialsResponse sourceRegistry) {
-        this.customRegistries = customRegistries;
-        this.sourceRegistry = sourceRegistry;
-    }
+    private CredentialsResponse() {}
 
-    private CredentialsResponse() {
-        this.customRegistries = Map.of();
-        this.sourceRegistry = null;
+    private CredentialsResponse(CredentialsResponse $) {
+        this.customRegistries = $.customRegistries;
+        this.sourceRegistry = $.sourceRegistry;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CredentialsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Map<String,CustomRegistryCredentialsResponse> customRegistries;
-        private @Nullable SourceRegistryCredentialsResponse sourceRegistry;
+        private CredentialsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CredentialsResponse();
         }
 
         public Builder(CredentialsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customRegistries = defaults.customRegistries;
-    	      this.sourceRegistry = defaults.sourceRegistry;
+            $ = new CredentialsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder customRegistries(@Nullable Map<String,CustomRegistryCredentialsResponse> customRegistries) {
-            this.customRegistries = customRegistries;
+            $.customRegistries = customRegistries;
             return this;
         }
+
         public Builder sourceRegistry(@Nullable SourceRegistryCredentialsResponse sourceRegistry) {
-            this.sourceRegistry = sourceRegistry;
+            $.sourceRegistry = sourceRegistry;
             return this;
-        }        public CredentialsResponse build() {
-            return new CredentialsResponse(customRegistries, sourceRegistry);
+        }
+
+        public CredentialsResponse build() {
+            return $;
         }
     }
+
 }

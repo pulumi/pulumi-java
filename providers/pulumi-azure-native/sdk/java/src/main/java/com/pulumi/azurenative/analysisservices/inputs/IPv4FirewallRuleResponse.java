@@ -23,10 +23,10 @@ public final class IPv4FirewallRuleResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="firewallRuleName")
-      private final @Nullable String firewallRuleName;
+    private @Nullable String firewallRuleName;
 
     public Optional<String> firewallRuleName() {
-        return this.firewallRuleName == null ? Optional.empty() : Optional.ofNullable(this.firewallRuleName);
+        return Optional.ofNullable(this.firewallRuleName);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class IPv4FirewallRuleResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="rangeEnd")
-      private final @Nullable String rangeEnd;
+    private @Nullable String rangeEnd;
 
     public Optional<String> rangeEnd() {
-        return this.rangeEnd == null ? Optional.empty() : Optional.ofNullable(this.rangeEnd);
+        return Optional.ofNullable(this.rangeEnd);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class IPv4FirewallRuleResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="rangeStart")
-      private final @Nullable String rangeStart;
+    private @Nullable String rangeStart;
 
     public Optional<String> rangeStart() {
-        return this.rangeStart == null ? Optional.empty() : Optional.ofNullable(this.rangeStart);
+        return Optional.ofNullable(this.rangeStart);
     }
 
-    public IPv4FirewallRuleResponse(
-        @Nullable String firewallRuleName,
-        @Nullable String rangeEnd,
-        @Nullable String rangeStart) {
-        this.firewallRuleName = firewallRuleName;
-        this.rangeEnd = rangeEnd;
-        this.rangeStart = rangeStart;
-    }
+    private IPv4FirewallRuleResponse() {}
 
-    private IPv4FirewallRuleResponse() {
-        this.firewallRuleName = null;
-        this.rangeEnd = null;
-        this.rangeStart = null;
+    private IPv4FirewallRuleResponse(IPv4FirewallRuleResponse $) {
+        this.firewallRuleName = $.firewallRuleName;
+        this.rangeEnd = $.rangeEnd;
+        this.rangeStart = $.rangeStart;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IPv4FirewallRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String firewallRuleName;
-        private @Nullable String rangeEnd;
-        private @Nullable String rangeStart;
+        private IPv4FirewallRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IPv4FirewallRuleResponse();
         }
 
         public Builder(IPv4FirewallRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.firewallRuleName = defaults.firewallRuleName;
-    	      this.rangeEnd = defaults.rangeEnd;
-    	      this.rangeStart = defaults.rangeStart;
+            $ = new IPv4FirewallRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder firewallRuleName(@Nullable String firewallRuleName) {
-            this.firewallRuleName = firewallRuleName;
+            $.firewallRuleName = firewallRuleName;
             return this;
         }
+
         public Builder rangeEnd(@Nullable String rangeEnd) {
-            this.rangeEnd = rangeEnd;
+            $.rangeEnd = rangeEnd;
             return this;
         }
+
         public Builder rangeStart(@Nullable String rangeStart) {
-            this.rangeStart = rangeStart;
+            $.rangeStart = rangeStart;
             return this;
-        }        public IPv4FirewallRuleResponse build() {
-            return new IPv4FirewallRuleResponse(firewallRuleName, rangeEnd, rangeStart);
+        }
+
+        public IPv4FirewallRuleResponse build() {
+            return $;
         }
     }
+
 }

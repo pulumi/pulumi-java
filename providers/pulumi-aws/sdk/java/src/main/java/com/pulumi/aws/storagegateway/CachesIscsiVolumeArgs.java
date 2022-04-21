@@ -5,12 +5,12 @@ package com.pulumi.aws.storagegateway;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class CachesIscsiVolumeArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="gatewayArn", required=true)
-      private final Output<String> gatewayArn;
+    private Output<String> gatewayArn;
 
     public Output<String> gatewayArn() {
         return this.gatewayArn;
@@ -34,10 +34,10 @@ public final class CachesIscsiVolumeArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="kmsEncrypted")
-      private final @Nullable Output<Boolean> kmsEncrypted;
+    private @Nullable Output<Boolean> kmsEncrypted;
 
-    public Output<Boolean> kmsEncrypted() {
-        return this.kmsEncrypted == null ? Codegen.empty() : this.kmsEncrypted;
+    public Optional<Output<Boolean>> kmsEncrypted() {
+        return Optional.ofNullable(this.kmsEncrypted);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class CachesIscsiVolumeArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="kmsKey")
-      private final @Nullable Output<String> kmsKey;
+    private @Nullable Output<String> kmsKey;
 
-    public Output<String> kmsKey() {
-        return this.kmsKey == null ? Codegen.empty() : this.kmsKey;
+    public Optional<Output<String>> kmsKey() {
+        return Optional.ofNullable(this.kmsKey);
     }
 
     /**
@@ -56,7 +56,7 @@ public final class CachesIscsiVolumeArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="networkInterfaceId", required=true)
-      private final Output<String> networkInterfaceId;
+    private Output<String> networkInterfaceId;
 
     public Output<String> networkInterfaceId() {
         return this.networkInterfaceId;
@@ -67,10 +67,10 @@ public final class CachesIscsiVolumeArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="snapshotId")
-      private final @Nullable Output<String> snapshotId;
+    private @Nullable Output<String> snapshotId;
 
-    public Output<String> snapshotId() {
-        return this.snapshotId == null ? Codegen.empty() : this.snapshotId;
+    public Optional<Output<String>> snapshotId() {
+        return Optional.ofNullable(this.snapshotId);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class CachesIscsiVolumeArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="sourceVolumeArn")
-      private final @Nullable Output<String> sourceVolumeArn;
+    private @Nullable Output<String> sourceVolumeArn;
 
-    public Output<String> sourceVolumeArn() {
-        return this.sourceVolumeArn == null ? Codegen.empty() : this.sourceVolumeArn;
+    public Optional<Output<String>> sourceVolumeArn() {
+        return Optional.ofNullable(this.sourceVolumeArn);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class CachesIscsiVolumeArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -100,7 +100,7 @@ public final class CachesIscsiVolumeArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="targetName", required=true)
-      private final Output<String> targetName;
+    private Output<String> targetName;
 
     public Output<String> targetName() {
         return this.targetName;
@@ -111,154 +111,132 @@ public final class CachesIscsiVolumeArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="volumeSizeInBytes", required=true)
-      private final Output<Integer> volumeSizeInBytes;
+    private Output<Integer> volumeSizeInBytes;
 
     public Output<Integer> volumeSizeInBytes() {
         return this.volumeSizeInBytes;
     }
 
-    public CachesIscsiVolumeArgs(
-        Output<String> gatewayArn,
-        @Nullable Output<Boolean> kmsEncrypted,
-        @Nullable Output<String> kmsKey,
-        Output<String> networkInterfaceId,
-        @Nullable Output<String> snapshotId,
-        @Nullable Output<String> sourceVolumeArn,
-        @Nullable Output<Map<String,String>> tags,
-        Output<String> targetName,
-        Output<Integer> volumeSizeInBytes) {
-        this.gatewayArn = Objects.requireNonNull(gatewayArn, "expected parameter 'gatewayArn' to be non-null");
-        this.kmsEncrypted = kmsEncrypted;
-        this.kmsKey = kmsKey;
-        this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId, "expected parameter 'networkInterfaceId' to be non-null");
-        this.snapshotId = snapshotId;
-        this.sourceVolumeArn = sourceVolumeArn;
-        this.tags = tags;
-        this.targetName = Objects.requireNonNull(targetName, "expected parameter 'targetName' to be non-null");
-        this.volumeSizeInBytes = Objects.requireNonNull(volumeSizeInBytes, "expected parameter 'volumeSizeInBytes' to be non-null");
-    }
+    private CachesIscsiVolumeArgs() {}
 
-    private CachesIscsiVolumeArgs() {
-        this.gatewayArn = Codegen.empty();
-        this.kmsEncrypted = Codegen.empty();
-        this.kmsKey = Codegen.empty();
-        this.networkInterfaceId = Codegen.empty();
-        this.snapshotId = Codegen.empty();
-        this.sourceVolumeArn = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.targetName = Codegen.empty();
-        this.volumeSizeInBytes = Codegen.empty();
+    private CachesIscsiVolumeArgs(CachesIscsiVolumeArgs $) {
+        this.gatewayArn = $.gatewayArn;
+        this.kmsEncrypted = $.kmsEncrypted;
+        this.kmsKey = $.kmsKey;
+        this.networkInterfaceId = $.networkInterfaceId;
+        this.snapshotId = $.snapshotId;
+        this.sourceVolumeArn = $.sourceVolumeArn;
+        this.tags = $.tags;
+        this.targetName = $.targetName;
+        this.volumeSizeInBytes = $.volumeSizeInBytes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CachesIscsiVolumeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> gatewayArn;
-        private @Nullable Output<Boolean> kmsEncrypted;
-        private @Nullable Output<String> kmsKey;
-        private Output<String> networkInterfaceId;
-        private @Nullable Output<String> snapshotId;
-        private @Nullable Output<String> sourceVolumeArn;
-        private @Nullable Output<Map<String,String>> tags;
-        private Output<String> targetName;
-        private Output<Integer> volumeSizeInBytes;
+        private CachesIscsiVolumeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CachesIscsiVolumeArgs();
         }
 
         public Builder(CachesIscsiVolumeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gatewayArn = defaults.gatewayArn;
-    	      this.kmsEncrypted = defaults.kmsEncrypted;
-    	      this.kmsKey = defaults.kmsKey;
-    	      this.networkInterfaceId = defaults.networkInterfaceId;
-    	      this.snapshotId = defaults.snapshotId;
-    	      this.sourceVolumeArn = defaults.sourceVolumeArn;
-    	      this.tags = defaults.tags;
-    	      this.targetName = defaults.targetName;
-    	      this.volumeSizeInBytes = defaults.volumeSizeInBytes;
+            $ = new CachesIscsiVolumeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder gatewayArn(Output<String> gatewayArn) {
-            this.gatewayArn = Objects.requireNonNull(gatewayArn);
+            $.gatewayArn = gatewayArn;
             return this;
         }
+
         public Builder gatewayArn(String gatewayArn) {
-            this.gatewayArn = Output.of(Objects.requireNonNull(gatewayArn));
-            return this;
+            return gatewayArn(Output.of(gatewayArn));
         }
+
         public Builder kmsEncrypted(@Nullable Output<Boolean> kmsEncrypted) {
-            this.kmsEncrypted = kmsEncrypted;
+            $.kmsEncrypted = kmsEncrypted;
             return this;
         }
-        public Builder kmsEncrypted(@Nullable Boolean kmsEncrypted) {
-            this.kmsEncrypted = Codegen.ofNullable(kmsEncrypted);
-            return this;
+
+        public Builder kmsEncrypted(Boolean kmsEncrypted) {
+            return kmsEncrypted(Output.of(kmsEncrypted));
         }
+
         public Builder kmsKey(@Nullable Output<String> kmsKey) {
-            this.kmsKey = kmsKey;
+            $.kmsKey = kmsKey;
             return this;
         }
-        public Builder kmsKey(@Nullable String kmsKey) {
-            this.kmsKey = Codegen.ofNullable(kmsKey);
-            return this;
+
+        public Builder kmsKey(String kmsKey) {
+            return kmsKey(Output.of(kmsKey));
         }
+
         public Builder networkInterfaceId(Output<String> networkInterfaceId) {
-            this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId);
+            $.networkInterfaceId = networkInterfaceId;
             return this;
         }
+
         public Builder networkInterfaceId(String networkInterfaceId) {
-            this.networkInterfaceId = Output.of(Objects.requireNonNull(networkInterfaceId));
-            return this;
+            return networkInterfaceId(Output.of(networkInterfaceId));
         }
+
         public Builder snapshotId(@Nullable Output<String> snapshotId) {
-            this.snapshotId = snapshotId;
+            $.snapshotId = snapshotId;
             return this;
         }
-        public Builder snapshotId(@Nullable String snapshotId) {
-            this.snapshotId = Codegen.ofNullable(snapshotId);
-            return this;
+
+        public Builder snapshotId(String snapshotId) {
+            return snapshotId(Output.of(snapshotId));
         }
+
         public Builder sourceVolumeArn(@Nullable Output<String> sourceVolumeArn) {
-            this.sourceVolumeArn = sourceVolumeArn;
+            $.sourceVolumeArn = sourceVolumeArn;
             return this;
         }
-        public Builder sourceVolumeArn(@Nullable String sourceVolumeArn) {
-            this.sourceVolumeArn = Codegen.ofNullable(sourceVolumeArn);
-            return this;
+
+        public Builder sourceVolumeArn(String sourceVolumeArn) {
+            return sourceVolumeArn(Output.of(sourceVolumeArn));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder targetName(Output<String> targetName) {
-            this.targetName = Objects.requireNonNull(targetName);
+            $.targetName = targetName;
             return this;
         }
+
         public Builder targetName(String targetName) {
-            this.targetName = Output.of(Objects.requireNonNull(targetName));
-            return this;
+            return targetName(Output.of(targetName));
         }
+
         public Builder volumeSizeInBytes(Output<Integer> volumeSizeInBytes) {
-            this.volumeSizeInBytes = Objects.requireNonNull(volumeSizeInBytes);
+            $.volumeSizeInBytes = volumeSizeInBytes;
             return this;
         }
+
         public Builder volumeSizeInBytes(Integer volumeSizeInBytes) {
-            this.volumeSizeInBytes = Output.of(Objects.requireNonNull(volumeSizeInBytes));
-            return this;
-        }        public CachesIscsiVolumeArgs build() {
-            return new CachesIscsiVolumeArgs(gatewayArn, kmsEncrypted, kmsKey, networkInterfaceId, snapshotId, sourceVolumeArn, tags, targetName, volumeSizeInBytes);
+            return volumeSizeInBytes(Output.of(volumeSizeInBytes));
+        }
+
+        public CachesIscsiVolumeArgs build() {
+            $.gatewayArn = Objects.requireNonNull($.gatewayArn, "expected parameter 'gatewayArn' to be non-null");
+            $.networkInterfaceId = Objects.requireNonNull($.networkInterfaceId, "expected parameter 'networkInterfaceId' to be non-null");
+            $.targetName = Objects.requireNonNull($.targetName, "expected parameter 'targetName' to be non-null");
+            $.volumeSizeInBytes = Objects.requireNonNull($.volumeSizeInBytes, "expected parameter 'volumeSizeInBytes' to be non-null");
+            return $;
         }
     }
+
 }

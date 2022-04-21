@@ -25,10 +25,10 @@ public final class DetectorEventType extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable String arn;
+    private @Nullable String arn;
 
     public Optional<String> arn() {
-        return this.arn == null ? Optional.empty() : Optional.ofNullable(this.arn);
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class DetectorEventType extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="createdTime")
-      private final @Nullable String createdTime;
+    private @Nullable String createdTime;
 
     public Optional<String> createdTime() {
-        return this.createdTime == null ? Optional.empty() : Optional.ofNullable(this.createdTime);
+        return Optional.ofNullable(this.createdTime);
     }
 
     /**
@@ -47,38 +47,38 @@ public final class DetectorEventType extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     @Import(name="entityTypes")
-      private final @Nullable List<DetectorEntityType> entityTypes;
+    private @Nullable List<DetectorEntityType> entityTypes;
 
-    public List<DetectorEntityType> entityTypes() {
-        return this.entityTypes == null ? List.of() : this.entityTypes;
+    public Optional<List<DetectorEntityType>> entityTypes() {
+        return Optional.ofNullable(this.entityTypes);
     }
 
     @Import(name="eventVariables")
-      private final @Nullable List<DetectorEventVariable> eventVariables;
+    private @Nullable List<DetectorEventVariable> eventVariables;
 
-    public List<DetectorEventVariable> eventVariables() {
-        return this.eventVariables == null ? List.of() : this.eventVariables;
+    public Optional<List<DetectorEventVariable>> eventVariables() {
+        return Optional.ofNullable(this.eventVariables);
     }
 
     @Import(name="inline")
-      private final @Nullable Boolean inline;
+    private @Nullable Boolean inline;
 
     public Optional<Boolean> inline() {
-        return this.inline == null ? Optional.empty() : Optional.ofNullable(this.inline);
+        return Optional.ofNullable(this.inline);
     }
 
     @Import(name="labels")
-      private final @Nullable List<DetectorLabel> labels;
+    private @Nullable List<DetectorLabel> labels;
 
-    public List<DetectorLabel> labels() {
-        return this.labels == null ? List.of() : this.labels;
+    public Optional<List<DetectorLabel>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class DetectorEventType extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="lastUpdatedTime")
-      private final @Nullable String lastUpdatedTime;
+    private @Nullable String lastUpdatedTime;
 
     public Optional<String> lastUpdatedTime() {
-        return this.lastUpdatedTime == null ? Optional.empty() : Optional.ofNullable(this.lastUpdatedTime);
+        return Optional.ofNullable(this.lastUpdatedTime);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class DetectorEventType extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -108,139 +108,114 @@ public final class DetectorEventType extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable List<DetectorTag> tags;
+    private @Nullable List<DetectorTag> tags;
 
-    public List<DetectorTag> tags() {
-        return this.tags == null ? List.of() : this.tags;
+    public Optional<List<DetectorTag>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public DetectorEventType(
-        @Nullable String arn,
-        @Nullable String createdTime,
-        @Nullable String description,
-        @Nullable List<DetectorEntityType> entityTypes,
-        @Nullable List<DetectorEventVariable> eventVariables,
-        @Nullable Boolean inline,
-        @Nullable List<DetectorLabel> labels,
-        @Nullable String lastUpdatedTime,
-        @Nullable String name,
-        @Nullable List<DetectorTag> tags) {
-        this.arn = arn;
-        this.createdTime = createdTime;
-        this.description = description;
-        this.entityTypes = entityTypes;
-        this.eventVariables = eventVariables;
-        this.inline = inline;
-        this.labels = labels;
-        this.lastUpdatedTime = lastUpdatedTime;
-        this.name = name;
-        this.tags = tags;
-    }
+    private DetectorEventType() {}
 
-    private DetectorEventType() {
-        this.arn = null;
-        this.createdTime = null;
-        this.description = null;
-        this.entityTypes = List.of();
-        this.eventVariables = List.of();
-        this.inline = null;
-        this.labels = List.of();
-        this.lastUpdatedTime = null;
-        this.name = null;
-        this.tags = List.of();
+    private DetectorEventType(DetectorEventType $) {
+        this.arn = $.arn;
+        this.createdTime = $.createdTime;
+        this.description = $.description;
+        this.entityTypes = $.entityTypes;
+        this.eventVariables = $.eventVariables;
+        this.inline = $.inline;
+        this.labels = $.labels;
+        this.lastUpdatedTime = $.lastUpdatedTime;
+        this.name = $.name;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DetectorEventType defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String arn;
-        private @Nullable String createdTime;
-        private @Nullable String description;
-        private @Nullable List<DetectorEntityType> entityTypes;
-        private @Nullable List<DetectorEventVariable> eventVariables;
-        private @Nullable Boolean inline;
-        private @Nullable List<DetectorLabel> labels;
-        private @Nullable String lastUpdatedTime;
-        private @Nullable String name;
-        private @Nullable List<DetectorTag> tags;
+        private DetectorEventType $;
 
         public Builder() {
-    	      // Empty
+            $ = new DetectorEventType();
         }
 
         public Builder(DetectorEventType defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.createdTime = defaults.createdTime;
-    	      this.description = defaults.description;
-    	      this.entityTypes = defaults.entityTypes;
-    	      this.eventVariables = defaults.eventVariables;
-    	      this.inline = defaults.inline;
-    	      this.labels = defaults.labels;
-    	      this.lastUpdatedTime = defaults.lastUpdatedTime;
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
+            $ = new DetectorEventType(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
+
         public Builder createdTime(@Nullable String createdTime) {
-            this.createdTime = createdTime;
+            $.createdTime = createdTime;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder entityTypes(@Nullable List<DetectorEntityType> entityTypes) {
-            this.entityTypes = entityTypes;
+            $.entityTypes = entityTypes;
             return this;
         }
+
         public Builder entityTypes(DetectorEntityType... entityTypes) {
             return entityTypes(List.of(entityTypes));
         }
+
         public Builder eventVariables(@Nullable List<DetectorEventVariable> eventVariables) {
-            this.eventVariables = eventVariables;
+            $.eventVariables = eventVariables;
             return this;
         }
+
         public Builder eventVariables(DetectorEventVariable... eventVariables) {
             return eventVariables(List.of(eventVariables));
         }
+
         public Builder inline(@Nullable Boolean inline) {
-            this.inline = inline;
+            $.inline = inline;
             return this;
         }
+
         public Builder labels(@Nullable List<DetectorLabel> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
+
         public Builder labels(DetectorLabel... labels) {
             return labels(List.of(labels));
         }
+
         public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
-            this.lastUpdatedTime = lastUpdatedTime;
+            $.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder tags(@Nullable List<DetectorTag> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
+
         public Builder tags(DetectorTag... tags) {
             return tags(List.of(tags));
-        }        public DetectorEventType build() {
-            return new DetectorEventType(arn, createdTime, description, entityTypes, eventVariables, inline, labels, lastUpdatedTime, name, tags);
+        }
+
+        public DetectorEventType build() {
+            return $;
         }
     }
+
 }

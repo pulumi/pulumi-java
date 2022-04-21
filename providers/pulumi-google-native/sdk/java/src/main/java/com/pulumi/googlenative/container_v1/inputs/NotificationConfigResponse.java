@@ -21,45 +21,45 @@ public final class NotificationConfigResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="pubsub", required=true)
-      private final PubSubResponse pubsub;
+    private PubSubResponse pubsub;
 
     public PubSubResponse pubsub() {
         return this.pubsub;
     }
 
-    public NotificationConfigResponse(PubSubResponse pubsub) {
-        this.pubsub = Objects.requireNonNull(pubsub, "expected parameter 'pubsub' to be non-null");
-    }
+    private NotificationConfigResponse() {}
 
-    private NotificationConfigResponse() {
-        this.pubsub = null;
+    private NotificationConfigResponse(NotificationConfigResponse $) {
+        this.pubsub = $.pubsub;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NotificationConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private PubSubResponse pubsub;
+        private NotificationConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NotificationConfigResponse();
         }
 
         public Builder(NotificationConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.pubsub = defaults.pubsub;
+            $ = new NotificationConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder pubsub(PubSubResponse pubsub) {
-            this.pubsub = Objects.requireNonNull(pubsub);
+            $.pubsub = pubsub;
             return this;
-        }        public NotificationConfigResponse build() {
-            return new NotificationConfigResponse(pubsub);
+        }
+
+        public NotificationConfigResponse build() {
+            $.pubsub = Objects.requireNonNull($.pubsub, "expected parameter 'pubsub' to be non-null");
+            return $;
         }
     }
+
 }

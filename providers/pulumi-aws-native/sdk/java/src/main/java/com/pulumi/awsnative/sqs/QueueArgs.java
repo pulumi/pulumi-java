@@ -6,13 +6,13 @@ package com.pulumi.awsnative.sqs;
 import com.pulumi.awsnative.sqs.inputs.QueueTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="contentBasedDeduplication")
-      private final @Nullable Output<Boolean> contentBasedDeduplication;
+    private @Nullable Output<Boolean> contentBasedDeduplication;
 
-    public Output<Boolean> contentBasedDeduplication() {
-        return this.contentBasedDeduplication == null ? Codegen.empty() : this.contentBasedDeduplication;
+    public Optional<Output<Boolean>> contentBasedDeduplication() {
+        return Optional.ofNullable(this.contentBasedDeduplication);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deduplicationScope")
-      private final @Nullable Output<String> deduplicationScope;
+    private @Nullable Output<String> deduplicationScope;
 
-    public Output<String> deduplicationScope() {
-        return this.deduplicationScope == null ? Codegen.empty() : this.deduplicationScope;
+    public Optional<Output<String>> deduplicationScope() {
+        return Optional.ofNullable(this.deduplicationScope);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="delaySeconds")
-      private final @Nullable Output<Integer> delaySeconds;
+    private @Nullable Output<Integer> delaySeconds;
 
-    public Output<Integer> delaySeconds() {
-        return this.delaySeconds == null ? Codegen.empty() : this.delaySeconds;
+    public Optional<Output<Integer>> delaySeconds() {
+        return Optional.ofNullable(this.delaySeconds);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fifoQueue")
-      private final @Nullable Output<Boolean> fifoQueue;
+    private @Nullable Output<Boolean> fifoQueue;
 
-    public Output<Boolean> fifoQueue() {
-        return this.fifoQueue == null ? Codegen.empty() : this.fifoQueue;
+    public Optional<Output<Boolean>> fifoQueue() {
+        return Optional.ofNullable(this.fifoQueue);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fifoThroughputLimit")
-      private final @Nullable Output<String> fifoThroughputLimit;
+    private @Nullable Output<String> fifoThroughputLimit;
 
-    public Output<String> fifoThroughputLimit() {
-        return this.fifoThroughputLimit == null ? Codegen.empty() : this.fifoThroughputLimit;
+    public Optional<Output<String>> fifoThroughputLimit() {
+        return Optional.ofNullable(this.fifoThroughputLimit);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kmsDataKeyReusePeriodSeconds")
-      private final @Nullable Output<Integer> kmsDataKeyReusePeriodSeconds;
+    private @Nullable Output<Integer> kmsDataKeyReusePeriodSeconds;
 
-    public Output<Integer> kmsDataKeyReusePeriodSeconds() {
-        return this.kmsDataKeyReusePeriodSeconds == null ? Codegen.empty() : this.kmsDataKeyReusePeriodSeconds;
+    public Optional<Output<Integer>> kmsDataKeyReusePeriodSeconds() {
+        return Optional.ofNullable(this.kmsDataKeyReusePeriodSeconds);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kmsMasterKeyId")
-      private final @Nullable Output<String> kmsMasterKeyId;
+    private @Nullable Output<String> kmsMasterKeyId;
 
-    public Output<String> kmsMasterKeyId() {
-        return this.kmsMasterKeyId == null ? Codegen.empty() : this.kmsMasterKeyId;
+    public Optional<Output<String>> kmsMasterKeyId() {
+        return Optional.ofNullable(this.kmsMasterKeyId);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maximumMessageSize")
-      private final @Nullable Output<Integer> maximumMessageSize;
+    private @Nullable Output<Integer> maximumMessageSize;
 
-    public Output<Integer> maximumMessageSize() {
-        return this.maximumMessageSize == null ? Codegen.empty() : this.maximumMessageSize;
+    public Optional<Output<Integer>> maximumMessageSize() {
+        return Optional.ofNullable(this.maximumMessageSize);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="messageRetentionPeriod")
-      private final @Nullable Output<Integer> messageRetentionPeriod;
+    private @Nullable Output<Integer> messageRetentionPeriod;
 
-    public Output<Integer> messageRetentionPeriod() {
-        return this.messageRetentionPeriod == null ? Codegen.empty() : this.messageRetentionPeriod;
+    public Optional<Output<Integer>> messageRetentionPeriod() {
+        return Optional.ofNullable(this.messageRetentionPeriod);
     }
 
     /**
@@ -124,10 +124,10 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="queueName")
-      private final @Nullable Output<String> queueName;
+    private @Nullable Output<String> queueName;
 
-    public Output<String> queueName() {
-        return this.queueName == null ? Codegen.empty() : this.queueName;
+    public Optional<Output<String>> queueName() {
+        return Optional.ofNullable(this.queueName);
     }
 
     /**
@@ -135,10 +135,10 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="receiveMessageWaitTimeSeconds")
-      private final @Nullable Output<Integer> receiveMessageWaitTimeSeconds;
+    private @Nullable Output<Integer> receiveMessageWaitTimeSeconds;
 
-    public Output<Integer> receiveMessageWaitTimeSeconds() {
-        return this.receiveMessageWaitTimeSeconds == null ? Codegen.empty() : this.receiveMessageWaitTimeSeconds;
+    public Optional<Output<Integer>> receiveMessageWaitTimeSeconds() {
+        return Optional.ofNullable(this.receiveMessageWaitTimeSeconds);
     }
 
     /**
@@ -146,10 +146,10 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="redriveAllowPolicy")
-      private final @Nullable Output<Object> redriveAllowPolicy;
+    private @Nullable Output<Object> redriveAllowPolicy;
 
-    public Output<Object> redriveAllowPolicy() {
-        return this.redriveAllowPolicy == null ? Codegen.empty() : this.redriveAllowPolicy;
+    public Optional<Output<Object>> redriveAllowPolicy() {
+        return Optional.ofNullable(this.redriveAllowPolicy);
     }
 
     /**
@@ -157,10 +157,10 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="redrivePolicy")
-      private final @Nullable Output<Object> redrivePolicy;
+    private @Nullable Output<Object> redrivePolicy;
 
-    public Output<Object> redrivePolicy() {
-        return this.redrivePolicy == null ? Codegen.empty() : this.redrivePolicy;
+    public Optional<Output<Object>> redrivePolicy() {
+        return Optional.ofNullable(this.redrivePolicy);
     }
 
     /**
@@ -168,10 +168,10 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<QueueTagArgs>> tags;
+    private @Nullable Output<List<QueueTagArgs>> tags;
 
-    public Output<List<QueueTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<QueueTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -179,235 +179,192 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="visibilityTimeout")
-      private final @Nullable Output<Integer> visibilityTimeout;
+    private @Nullable Output<Integer> visibilityTimeout;
 
-    public Output<Integer> visibilityTimeout() {
-        return this.visibilityTimeout == null ? Codegen.empty() : this.visibilityTimeout;
+    public Optional<Output<Integer>> visibilityTimeout() {
+        return Optional.ofNullable(this.visibilityTimeout);
     }
 
-    public QueueArgs(
-        @Nullable Output<Boolean> contentBasedDeduplication,
-        @Nullable Output<String> deduplicationScope,
-        @Nullable Output<Integer> delaySeconds,
-        @Nullable Output<Boolean> fifoQueue,
-        @Nullable Output<String> fifoThroughputLimit,
-        @Nullable Output<Integer> kmsDataKeyReusePeriodSeconds,
-        @Nullable Output<String> kmsMasterKeyId,
-        @Nullable Output<Integer> maximumMessageSize,
-        @Nullable Output<Integer> messageRetentionPeriod,
-        @Nullable Output<String> queueName,
-        @Nullable Output<Integer> receiveMessageWaitTimeSeconds,
-        @Nullable Output<Object> redriveAllowPolicy,
-        @Nullable Output<Object> redrivePolicy,
-        @Nullable Output<List<QueueTagArgs>> tags,
-        @Nullable Output<Integer> visibilityTimeout) {
-        this.contentBasedDeduplication = contentBasedDeduplication;
-        this.deduplicationScope = deduplicationScope;
-        this.delaySeconds = delaySeconds;
-        this.fifoQueue = fifoQueue;
-        this.fifoThroughputLimit = fifoThroughputLimit;
-        this.kmsDataKeyReusePeriodSeconds = kmsDataKeyReusePeriodSeconds;
-        this.kmsMasterKeyId = kmsMasterKeyId;
-        this.maximumMessageSize = maximumMessageSize;
-        this.messageRetentionPeriod = messageRetentionPeriod;
-        this.queueName = queueName;
-        this.receiveMessageWaitTimeSeconds = receiveMessageWaitTimeSeconds;
-        this.redriveAllowPolicy = redriveAllowPolicy;
-        this.redrivePolicy = redrivePolicy;
-        this.tags = tags;
-        this.visibilityTimeout = visibilityTimeout;
-    }
+    private QueueArgs() {}
 
-    private QueueArgs() {
-        this.contentBasedDeduplication = Codegen.empty();
-        this.deduplicationScope = Codegen.empty();
-        this.delaySeconds = Codegen.empty();
-        this.fifoQueue = Codegen.empty();
-        this.fifoThroughputLimit = Codegen.empty();
-        this.kmsDataKeyReusePeriodSeconds = Codegen.empty();
-        this.kmsMasterKeyId = Codegen.empty();
-        this.maximumMessageSize = Codegen.empty();
-        this.messageRetentionPeriod = Codegen.empty();
-        this.queueName = Codegen.empty();
-        this.receiveMessageWaitTimeSeconds = Codegen.empty();
-        this.redriveAllowPolicy = Codegen.empty();
-        this.redrivePolicy = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.visibilityTimeout = Codegen.empty();
+    private QueueArgs(QueueArgs $) {
+        this.contentBasedDeduplication = $.contentBasedDeduplication;
+        this.deduplicationScope = $.deduplicationScope;
+        this.delaySeconds = $.delaySeconds;
+        this.fifoQueue = $.fifoQueue;
+        this.fifoThroughputLimit = $.fifoThroughputLimit;
+        this.kmsDataKeyReusePeriodSeconds = $.kmsDataKeyReusePeriodSeconds;
+        this.kmsMasterKeyId = $.kmsMasterKeyId;
+        this.maximumMessageSize = $.maximumMessageSize;
+        this.messageRetentionPeriod = $.messageRetentionPeriod;
+        this.queueName = $.queueName;
+        this.receiveMessageWaitTimeSeconds = $.receiveMessageWaitTimeSeconds;
+        this.redriveAllowPolicy = $.redriveAllowPolicy;
+        this.redrivePolicy = $.redrivePolicy;
+        this.tags = $.tags;
+        this.visibilityTimeout = $.visibilityTimeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(QueueArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> contentBasedDeduplication;
-        private @Nullable Output<String> deduplicationScope;
-        private @Nullable Output<Integer> delaySeconds;
-        private @Nullable Output<Boolean> fifoQueue;
-        private @Nullable Output<String> fifoThroughputLimit;
-        private @Nullable Output<Integer> kmsDataKeyReusePeriodSeconds;
-        private @Nullable Output<String> kmsMasterKeyId;
-        private @Nullable Output<Integer> maximumMessageSize;
-        private @Nullable Output<Integer> messageRetentionPeriod;
-        private @Nullable Output<String> queueName;
-        private @Nullable Output<Integer> receiveMessageWaitTimeSeconds;
-        private @Nullable Output<Object> redriveAllowPolicy;
-        private @Nullable Output<Object> redrivePolicy;
-        private @Nullable Output<List<QueueTagArgs>> tags;
-        private @Nullable Output<Integer> visibilityTimeout;
+        private QueueArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new QueueArgs();
         }
 
         public Builder(QueueArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contentBasedDeduplication = defaults.contentBasedDeduplication;
-    	      this.deduplicationScope = defaults.deduplicationScope;
-    	      this.delaySeconds = defaults.delaySeconds;
-    	      this.fifoQueue = defaults.fifoQueue;
-    	      this.fifoThroughputLimit = defaults.fifoThroughputLimit;
-    	      this.kmsDataKeyReusePeriodSeconds = defaults.kmsDataKeyReusePeriodSeconds;
-    	      this.kmsMasterKeyId = defaults.kmsMasterKeyId;
-    	      this.maximumMessageSize = defaults.maximumMessageSize;
-    	      this.messageRetentionPeriod = defaults.messageRetentionPeriod;
-    	      this.queueName = defaults.queueName;
-    	      this.receiveMessageWaitTimeSeconds = defaults.receiveMessageWaitTimeSeconds;
-    	      this.redriveAllowPolicy = defaults.redriveAllowPolicy;
-    	      this.redrivePolicy = defaults.redrivePolicy;
-    	      this.tags = defaults.tags;
-    	      this.visibilityTimeout = defaults.visibilityTimeout;
+            $ = new QueueArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder contentBasedDeduplication(@Nullable Output<Boolean> contentBasedDeduplication) {
-            this.contentBasedDeduplication = contentBasedDeduplication;
+            $.contentBasedDeduplication = contentBasedDeduplication;
             return this;
         }
-        public Builder contentBasedDeduplication(@Nullable Boolean contentBasedDeduplication) {
-            this.contentBasedDeduplication = Codegen.ofNullable(contentBasedDeduplication);
-            return this;
+
+        public Builder contentBasedDeduplication(Boolean contentBasedDeduplication) {
+            return contentBasedDeduplication(Output.of(contentBasedDeduplication));
         }
+
         public Builder deduplicationScope(@Nullable Output<String> deduplicationScope) {
-            this.deduplicationScope = deduplicationScope;
+            $.deduplicationScope = deduplicationScope;
             return this;
         }
-        public Builder deduplicationScope(@Nullable String deduplicationScope) {
-            this.deduplicationScope = Codegen.ofNullable(deduplicationScope);
-            return this;
+
+        public Builder deduplicationScope(String deduplicationScope) {
+            return deduplicationScope(Output.of(deduplicationScope));
         }
+
         public Builder delaySeconds(@Nullable Output<Integer> delaySeconds) {
-            this.delaySeconds = delaySeconds;
+            $.delaySeconds = delaySeconds;
             return this;
         }
-        public Builder delaySeconds(@Nullable Integer delaySeconds) {
-            this.delaySeconds = Codegen.ofNullable(delaySeconds);
-            return this;
+
+        public Builder delaySeconds(Integer delaySeconds) {
+            return delaySeconds(Output.of(delaySeconds));
         }
+
         public Builder fifoQueue(@Nullable Output<Boolean> fifoQueue) {
-            this.fifoQueue = fifoQueue;
+            $.fifoQueue = fifoQueue;
             return this;
         }
-        public Builder fifoQueue(@Nullable Boolean fifoQueue) {
-            this.fifoQueue = Codegen.ofNullable(fifoQueue);
-            return this;
+
+        public Builder fifoQueue(Boolean fifoQueue) {
+            return fifoQueue(Output.of(fifoQueue));
         }
+
         public Builder fifoThroughputLimit(@Nullable Output<String> fifoThroughputLimit) {
-            this.fifoThroughputLimit = fifoThroughputLimit;
+            $.fifoThroughputLimit = fifoThroughputLimit;
             return this;
         }
-        public Builder fifoThroughputLimit(@Nullable String fifoThroughputLimit) {
-            this.fifoThroughputLimit = Codegen.ofNullable(fifoThroughputLimit);
-            return this;
+
+        public Builder fifoThroughputLimit(String fifoThroughputLimit) {
+            return fifoThroughputLimit(Output.of(fifoThroughputLimit));
         }
+
         public Builder kmsDataKeyReusePeriodSeconds(@Nullable Output<Integer> kmsDataKeyReusePeriodSeconds) {
-            this.kmsDataKeyReusePeriodSeconds = kmsDataKeyReusePeriodSeconds;
+            $.kmsDataKeyReusePeriodSeconds = kmsDataKeyReusePeriodSeconds;
             return this;
         }
-        public Builder kmsDataKeyReusePeriodSeconds(@Nullable Integer kmsDataKeyReusePeriodSeconds) {
-            this.kmsDataKeyReusePeriodSeconds = Codegen.ofNullable(kmsDataKeyReusePeriodSeconds);
-            return this;
+
+        public Builder kmsDataKeyReusePeriodSeconds(Integer kmsDataKeyReusePeriodSeconds) {
+            return kmsDataKeyReusePeriodSeconds(Output.of(kmsDataKeyReusePeriodSeconds));
         }
+
         public Builder kmsMasterKeyId(@Nullable Output<String> kmsMasterKeyId) {
-            this.kmsMasterKeyId = kmsMasterKeyId;
+            $.kmsMasterKeyId = kmsMasterKeyId;
             return this;
         }
-        public Builder kmsMasterKeyId(@Nullable String kmsMasterKeyId) {
-            this.kmsMasterKeyId = Codegen.ofNullable(kmsMasterKeyId);
-            return this;
+
+        public Builder kmsMasterKeyId(String kmsMasterKeyId) {
+            return kmsMasterKeyId(Output.of(kmsMasterKeyId));
         }
+
         public Builder maximumMessageSize(@Nullable Output<Integer> maximumMessageSize) {
-            this.maximumMessageSize = maximumMessageSize;
+            $.maximumMessageSize = maximumMessageSize;
             return this;
         }
-        public Builder maximumMessageSize(@Nullable Integer maximumMessageSize) {
-            this.maximumMessageSize = Codegen.ofNullable(maximumMessageSize);
-            return this;
+
+        public Builder maximumMessageSize(Integer maximumMessageSize) {
+            return maximumMessageSize(Output.of(maximumMessageSize));
         }
+
         public Builder messageRetentionPeriod(@Nullable Output<Integer> messageRetentionPeriod) {
-            this.messageRetentionPeriod = messageRetentionPeriod;
+            $.messageRetentionPeriod = messageRetentionPeriod;
             return this;
         }
-        public Builder messageRetentionPeriod(@Nullable Integer messageRetentionPeriod) {
-            this.messageRetentionPeriod = Codegen.ofNullable(messageRetentionPeriod);
-            return this;
+
+        public Builder messageRetentionPeriod(Integer messageRetentionPeriod) {
+            return messageRetentionPeriod(Output.of(messageRetentionPeriod));
         }
+
         public Builder queueName(@Nullable Output<String> queueName) {
-            this.queueName = queueName;
+            $.queueName = queueName;
             return this;
         }
-        public Builder queueName(@Nullable String queueName) {
-            this.queueName = Codegen.ofNullable(queueName);
-            return this;
+
+        public Builder queueName(String queueName) {
+            return queueName(Output.of(queueName));
         }
+
         public Builder receiveMessageWaitTimeSeconds(@Nullable Output<Integer> receiveMessageWaitTimeSeconds) {
-            this.receiveMessageWaitTimeSeconds = receiveMessageWaitTimeSeconds;
+            $.receiveMessageWaitTimeSeconds = receiveMessageWaitTimeSeconds;
             return this;
         }
-        public Builder receiveMessageWaitTimeSeconds(@Nullable Integer receiveMessageWaitTimeSeconds) {
-            this.receiveMessageWaitTimeSeconds = Codegen.ofNullable(receiveMessageWaitTimeSeconds);
-            return this;
+
+        public Builder receiveMessageWaitTimeSeconds(Integer receiveMessageWaitTimeSeconds) {
+            return receiveMessageWaitTimeSeconds(Output.of(receiveMessageWaitTimeSeconds));
         }
+
         public Builder redriveAllowPolicy(@Nullable Output<Object> redriveAllowPolicy) {
-            this.redriveAllowPolicy = redriveAllowPolicy;
+            $.redriveAllowPolicy = redriveAllowPolicy;
             return this;
         }
-        public Builder redriveAllowPolicy(@Nullable Object redriveAllowPolicy) {
-            this.redriveAllowPolicy = Codegen.ofNullable(redriveAllowPolicy);
-            return this;
+
+        public Builder redriveAllowPolicy(Object redriveAllowPolicy) {
+            return redriveAllowPolicy(Output.of(redriveAllowPolicy));
         }
+
         public Builder redrivePolicy(@Nullable Output<Object> redrivePolicy) {
-            this.redrivePolicy = redrivePolicy;
+            $.redrivePolicy = redrivePolicy;
             return this;
         }
-        public Builder redrivePolicy(@Nullable Object redrivePolicy) {
-            this.redrivePolicy = Codegen.ofNullable(redrivePolicy);
-            return this;
+
+        public Builder redrivePolicy(Object redrivePolicy) {
+            return redrivePolicy(Output.of(redrivePolicy));
         }
+
         public Builder tags(@Nullable Output<List<QueueTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<QueueTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<QueueTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(QueueTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder visibilityTimeout(@Nullable Output<Integer> visibilityTimeout) {
-            this.visibilityTimeout = visibilityTimeout;
+            $.visibilityTimeout = visibilityTimeout;
             return this;
         }
-        public Builder visibilityTimeout(@Nullable Integer visibilityTimeout) {
-            this.visibilityTimeout = Codegen.ofNullable(visibilityTimeout);
-            return this;
-        }        public QueueArgs build() {
-            return new QueueArgs(contentBasedDeduplication, deduplicationScope, delaySeconds, fifoQueue, fifoThroughputLimit, kmsDataKeyReusePeriodSeconds, kmsMasterKeyId, maximumMessageSize, messageRetentionPeriod, queueName, receiveMessageWaitTimeSeconds, redriveAllowPolicy, redrivePolicy, tags, visibilityTimeout);
+
+        public Builder visibilityTimeout(Integer visibilityTimeout) {
+            return visibilityTimeout(Output.of(visibilityTimeout));
+        }
+
+        public QueueArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.gcp.spanner;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.spanner.inputs.InstanceIAMMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +17,10 @@ public final class InstanceIAMMemberArgs extends com.pulumi.resources.ResourceAr
     public static final InstanceIAMMemberArgs Empty = new InstanceIAMMemberArgs();
 
     @Import(name="condition")
-      private final @Nullable Output<InstanceIAMMemberConditionArgs> condition;
+    private @Nullable Output<InstanceIAMMemberConditionArgs> condition;
 
-    public Output<InstanceIAMMemberConditionArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<InstanceIAMMemberConditionArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     /**
@@ -28,14 +28,14 @@ public final class InstanceIAMMemberArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="instance", required=true)
-      private final Output<String> instance;
+    private Output<String> instance;
 
     public Output<String> instance() {
         return this.instance;
     }
 
     @Import(name="member", required=true)
-      private final Output<String> member;
+    private Output<String> member;
 
     public Output<String> member() {
         return this.member;
@@ -47,10 +47,10 @@ public final class InstanceIAMMemberArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -60,102 +60,91 @@ public final class InstanceIAMMemberArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="role", required=true)
-      private final Output<String> role;
+    private Output<String> role;
 
     public Output<String> role() {
         return this.role;
     }
 
-    public InstanceIAMMemberArgs(
-        @Nullable Output<InstanceIAMMemberConditionArgs> condition,
-        Output<String> instance,
-        Output<String> member,
-        @Nullable Output<String> project,
-        Output<String> role) {
-        this.condition = condition;
-        this.instance = Objects.requireNonNull(instance, "expected parameter 'instance' to be non-null");
-        this.member = Objects.requireNonNull(member, "expected parameter 'member' to be non-null");
-        this.project = project;
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-    }
+    private InstanceIAMMemberArgs() {}
 
-    private InstanceIAMMemberArgs() {
-        this.condition = Codegen.empty();
-        this.instance = Codegen.empty();
-        this.member = Codegen.empty();
-        this.project = Codegen.empty();
-        this.role = Codegen.empty();
+    private InstanceIAMMemberArgs(InstanceIAMMemberArgs $) {
+        this.condition = $.condition;
+        this.instance = $.instance;
+        this.member = $.member;
+        this.project = $.project;
+        this.role = $.role;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceIAMMemberArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<InstanceIAMMemberConditionArgs> condition;
-        private Output<String> instance;
-        private Output<String> member;
-        private @Nullable Output<String> project;
-        private Output<String> role;
+        private InstanceIAMMemberArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceIAMMemberArgs();
         }
 
         public Builder(InstanceIAMMemberArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.instance = defaults.instance;
-    	      this.member = defaults.member;
-    	      this.project = defaults.project;
-    	      this.role = defaults.role;
+            $ = new InstanceIAMMemberArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable Output<InstanceIAMMemberConditionArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable InstanceIAMMemberConditionArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(InstanceIAMMemberConditionArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder instance(Output<String> instance) {
-            this.instance = Objects.requireNonNull(instance);
+            $.instance = instance;
             return this;
         }
+
         public Builder instance(String instance) {
-            this.instance = Output.of(Objects.requireNonNull(instance));
-            return this;
+            return instance(Output.of(instance));
         }
+
         public Builder member(Output<String> member) {
-            this.member = Objects.requireNonNull(member);
+            $.member = member;
             return this;
         }
+
         public Builder member(String member) {
-            this.member = Output.of(Objects.requireNonNull(member));
-            return this;
+            return member(Output.of(member));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder role(Output<String> role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
         }
+
         public Builder role(String role) {
-            this.role = Output.of(Objects.requireNonNull(role));
-            return this;
-        }        public InstanceIAMMemberArgs build() {
-            return new InstanceIAMMemberArgs(condition, instance, member, project, role);
+            return role(Output.of(role));
+        }
+
+        public InstanceIAMMemberArgs build() {
+            $.instance = Objects.requireNonNull($.instance, "expected parameter 'instance' to be non-null");
+            $.member = Objects.requireNonNull($.member, "expected parameter 'member' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            return $;
         }
     }
+
 }

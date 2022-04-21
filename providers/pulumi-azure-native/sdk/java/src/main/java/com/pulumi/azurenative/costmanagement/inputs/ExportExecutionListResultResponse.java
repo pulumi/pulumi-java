@@ -22,48 +22,49 @@ public final class ExportExecutionListResultResponse extends com.pulumi.resource
      * 
      */
     @Import(name="value", required=true)
-      private final List<ExportExecutionResponse> value;
+    private List<ExportExecutionResponse> value;
 
     public List<ExportExecutionResponse> value() {
         return this.value;
     }
 
-    public ExportExecutionListResultResponse(List<ExportExecutionResponse> value) {
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private ExportExecutionListResultResponse() {}
 
-    private ExportExecutionListResultResponse() {
-        this.value = List.of();
+    private ExportExecutionListResultResponse(ExportExecutionListResultResponse $) {
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExportExecutionListResultResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<ExportExecutionResponse> value;
+        private ExportExecutionListResultResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExportExecutionListResultResponse();
         }
 
         public Builder(ExportExecutionListResultResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.value = defaults.value;
+            $ = new ExportExecutionListResultResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder value(List<ExportExecutionResponse> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(ExportExecutionResponse... value) {
             return value(List.of(value));
-        }        public ExportExecutionListResultResponse build() {
-            return new ExportExecutionListResultResponse(value);
+        }
+
+        public ExportExecutionListResultResponse build() {
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

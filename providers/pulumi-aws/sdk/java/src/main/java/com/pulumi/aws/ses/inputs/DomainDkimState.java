@@ -5,10 +5,10 @@ package com.pulumi.aws.ses.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class DomainDkimState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dkimTokens")
-      private final @Nullable Output<List<String>> dkimTokens;
+    private @Nullable Output<List<String>> dkimTokens;
 
-    public Output<List<String>> dkimTokens() {
-        return this.dkimTokens == null ? Codegen.empty() : this.dkimTokens;
+    public Optional<Output<List<String>>> dkimTokens() {
+        return Optional.ofNullable(this.dkimTokens);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class DomainDkimState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="domain")
-      private final @Nullable Output<String> domain;
+    private @Nullable Output<String> domain;
 
-    public Output<String> domain() {
-        return this.domain == null ? Codegen.empty() : this.domain;
+    public Optional<Output<String>> domain() {
+        return Optional.ofNullable(this.domain);
     }
 
-    public DomainDkimState(
-        @Nullable Output<List<String>> dkimTokens,
-        @Nullable Output<String> domain) {
-        this.dkimTokens = dkimTokens;
-        this.domain = domain;
-    }
+    private DomainDkimState() {}
 
-    private DomainDkimState() {
-        this.dkimTokens = Codegen.empty();
-        this.domain = Codegen.empty();
+    private DomainDkimState(DomainDkimState $) {
+        this.dkimTokens = $.dkimTokens;
+        this.domain = $.domain;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainDkimState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> dkimTokens;
-        private @Nullable Output<String> domain;
+        private DomainDkimState $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainDkimState();
         }
 
         public Builder(DomainDkimState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dkimTokens = defaults.dkimTokens;
-    	      this.domain = defaults.domain;
+            $ = new DomainDkimState(Objects.requireNonNull(defaults));
         }
 
         public Builder dkimTokens(@Nullable Output<List<String>> dkimTokens) {
-            this.dkimTokens = dkimTokens;
+            $.dkimTokens = dkimTokens;
             return this;
         }
-        public Builder dkimTokens(@Nullable List<String> dkimTokens) {
-            this.dkimTokens = Codegen.ofNullable(dkimTokens);
-            return this;
+
+        public Builder dkimTokens(List<String> dkimTokens) {
+            return dkimTokens(Output.of(dkimTokens));
         }
+
         public Builder dkimTokens(String... dkimTokens) {
             return dkimTokens(List.of(dkimTokens));
         }
+
         public Builder domain(@Nullable Output<String> domain) {
-            this.domain = domain;
+            $.domain = domain;
             return this;
         }
-        public Builder domain(@Nullable String domain) {
-            this.domain = Codegen.ofNullable(domain);
-            return this;
-        }        public DomainDkimState build() {
-            return new DomainDkimState(dkimTokens, domain);
+
+        public Builder domain(String domain) {
+            return domain(Output.of(domain));
+        }
+
+        public DomainDkimState build() {
+            return $;
         }
     }
+
 }

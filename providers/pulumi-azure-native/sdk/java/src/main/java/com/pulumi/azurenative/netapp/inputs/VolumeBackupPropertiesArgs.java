@@ -5,10 +5,10 @@ package com.pulumi.azurenative.netapp.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class VolumeBackupPropertiesArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="backupEnabled")
-      private final @Nullable Output<Boolean> backupEnabled;
+    private @Nullable Output<Boolean> backupEnabled;
 
-    public Output<Boolean> backupEnabled() {
-        return this.backupEnabled == null ? Codegen.empty() : this.backupEnabled;
+    public Optional<Output<Boolean>> backupEnabled() {
+        return Optional.ofNullable(this.backupEnabled);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class VolumeBackupPropertiesArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="backupPolicyId")
-      private final @Nullable Output<String> backupPolicyId;
+    private @Nullable Output<String> backupPolicyId;
 
-    public Output<String> backupPolicyId() {
-        return this.backupPolicyId == null ? Codegen.empty() : this.backupPolicyId;
+    public Optional<Output<String>> backupPolicyId() {
+        return Optional.ofNullable(this.backupPolicyId);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class VolumeBackupPropertiesArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="policyEnforced")
-      private final @Nullable Output<Boolean> policyEnforced;
+    private @Nullable Output<Boolean> policyEnforced;
 
-    public Output<Boolean> policyEnforced() {
-        return this.policyEnforced == null ? Codegen.empty() : this.policyEnforced;
+    public Optional<Output<Boolean>> policyEnforced() {
+        return Optional.ofNullable(this.policyEnforced);
     }
 
     /**
@@ -58,89 +58,78 @@ public final class VolumeBackupPropertiesArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="vaultId")
-      private final @Nullable Output<String> vaultId;
+    private @Nullable Output<String> vaultId;
 
-    public Output<String> vaultId() {
-        return this.vaultId == null ? Codegen.empty() : this.vaultId;
+    public Optional<Output<String>> vaultId() {
+        return Optional.ofNullable(this.vaultId);
     }
 
-    public VolumeBackupPropertiesArgs(
-        @Nullable Output<Boolean> backupEnabled,
-        @Nullable Output<String> backupPolicyId,
-        @Nullable Output<Boolean> policyEnforced,
-        @Nullable Output<String> vaultId) {
-        this.backupEnabled = backupEnabled;
-        this.backupPolicyId = backupPolicyId;
-        this.policyEnforced = policyEnforced;
-        this.vaultId = vaultId;
-    }
+    private VolumeBackupPropertiesArgs() {}
 
-    private VolumeBackupPropertiesArgs() {
-        this.backupEnabled = Codegen.empty();
-        this.backupPolicyId = Codegen.empty();
-        this.policyEnforced = Codegen.empty();
-        this.vaultId = Codegen.empty();
+    private VolumeBackupPropertiesArgs(VolumeBackupPropertiesArgs $) {
+        this.backupEnabled = $.backupEnabled;
+        this.backupPolicyId = $.backupPolicyId;
+        this.policyEnforced = $.policyEnforced;
+        this.vaultId = $.vaultId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VolumeBackupPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> backupEnabled;
-        private @Nullable Output<String> backupPolicyId;
-        private @Nullable Output<Boolean> policyEnforced;
-        private @Nullable Output<String> vaultId;
+        private VolumeBackupPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VolumeBackupPropertiesArgs();
         }
 
         public Builder(VolumeBackupPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupEnabled = defaults.backupEnabled;
-    	      this.backupPolicyId = defaults.backupPolicyId;
-    	      this.policyEnforced = defaults.policyEnforced;
-    	      this.vaultId = defaults.vaultId;
+            $ = new VolumeBackupPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backupEnabled(@Nullable Output<Boolean> backupEnabled) {
-            this.backupEnabled = backupEnabled;
+            $.backupEnabled = backupEnabled;
             return this;
         }
-        public Builder backupEnabled(@Nullable Boolean backupEnabled) {
-            this.backupEnabled = Codegen.ofNullable(backupEnabled);
-            return this;
+
+        public Builder backupEnabled(Boolean backupEnabled) {
+            return backupEnabled(Output.of(backupEnabled));
         }
+
         public Builder backupPolicyId(@Nullable Output<String> backupPolicyId) {
-            this.backupPolicyId = backupPolicyId;
+            $.backupPolicyId = backupPolicyId;
             return this;
         }
-        public Builder backupPolicyId(@Nullable String backupPolicyId) {
-            this.backupPolicyId = Codegen.ofNullable(backupPolicyId);
-            return this;
+
+        public Builder backupPolicyId(String backupPolicyId) {
+            return backupPolicyId(Output.of(backupPolicyId));
         }
+
         public Builder policyEnforced(@Nullable Output<Boolean> policyEnforced) {
-            this.policyEnforced = policyEnforced;
+            $.policyEnforced = policyEnforced;
             return this;
         }
-        public Builder policyEnforced(@Nullable Boolean policyEnforced) {
-            this.policyEnforced = Codegen.ofNullable(policyEnforced);
-            return this;
+
+        public Builder policyEnforced(Boolean policyEnforced) {
+            return policyEnforced(Output.of(policyEnforced));
         }
+
         public Builder vaultId(@Nullable Output<String> vaultId) {
-            this.vaultId = vaultId;
+            $.vaultId = vaultId;
             return this;
         }
-        public Builder vaultId(@Nullable String vaultId) {
-            this.vaultId = Codegen.ofNullable(vaultId);
-            return this;
-        }        public VolumeBackupPropertiesArgs build() {
-            return new VolumeBackupPropertiesArgs(backupEnabled, backupPolicyId, policyEnforced, vaultId);
+
+        public Builder vaultId(String vaultId) {
+            return vaultId(Output.of(vaultId));
+        }
+
+        public VolumeBackupPropertiesArgs build() {
+            return $;
         }
     }
+
 }

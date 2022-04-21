@@ -23,7 +23,7 @@ public final class ConnectToTargetSqlMITaskOutputResponse extends com.pulumi.res
      * 
      */
     @Import(name="agentJobs", required=true)
-      private final List<String> agentJobs;
+    private List<String> agentJobs;
 
     public List<String> agentJobs() {
         return this.agentJobs;
@@ -34,7 +34,7 @@ public final class ConnectToTargetSqlMITaskOutputResponse extends com.pulumi.res
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -45,7 +45,7 @@ public final class ConnectToTargetSqlMITaskOutputResponse extends com.pulumi.res
      * 
      */
     @Import(name="logins", required=true)
-      private final List<String> logins;
+    private List<String> logins;
 
     public List<String> logins() {
         return this.logins;
@@ -56,7 +56,7 @@ public final class ConnectToTargetSqlMITaskOutputResponse extends com.pulumi.res
      * 
      */
     @Import(name="targetServerBrandVersion", required=true)
-      private final String targetServerBrandVersion;
+    private String targetServerBrandVersion;
 
     public String targetServerBrandVersion() {
         return this.targetServerBrandVersion;
@@ -67,7 +67,7 @@ public final class ConnectToTargetSqlMITaskOutputResponse extends com.pulumi.res
      * 
      */
     @Import(name="targetServerVersion", required=true)
-      private final String targetServerVersion;
+    private String targetServerVersion;
 
     public String targetServerVersion() {
         return this.targetServerVersion;
@@ -78,100 +78,92 @@ public final class ConnectToTargetSqlMITaskOutputResponse extends com.pulumi.res
      * 
      */
     @Import(name="validationErrors", required=true)
-      private final List<ReportableExceptionResponse> validationErrors;
+    private List<ReportableExceptionResponse> validationErrors;
 
     public List<ReportableExceptionResponse> validationErrors() {
         return this.validationErrors;
     }
 
-    public ConnectToTargetSqlMITaskOutputResponse(
-        List<String> agentJobs,
-        String id,
-        List<String> logins,
-        String targetServerBrandVersion,
-        String targetServerVersion,
-        List<ReportableExceptionResponse> validationErrors) {
-        this.agentJobs = Objects.requireNonNull(agentJobs, "expected parameter 'agentJobs' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.logins = Objects.requireNonNull(logins, "expected parameter 'logins' to be non-null");
-        this.targetServerBrandVersion = Objects.requireNonNull(targetServerBrandVersion, "expected parameter 'targetServerBrandVersion' to be non-null");
-        this.targetServerVersion = Objects.requireNonNull(targetServerVersion, "expected parameter 'targetServerVersion' to be non-null");
-        this.validationErrors = Objects.requireNonNull(validationErrors, "expected parameter 'validationErrors' to be non-null");
-    }
+    private ConnectToTargetSqlMITaskOutputResponse() {}
 
-    private ConnectToTargetSqlMITaskOutputResponse() {
-        this.agentJobs = List.of();
-        this.id = null;
-        this.logins = List.of();
-        this.targetServerBrandVersion = null;
-        this.targetServerVersion = null;
-        this.validationErrors = List.of();
+    private ConnectToTargetSqlMITaskOutputResponse(ConnectToTargetSqlMITaskOutputResponse $) {
+        this.agentJobs = $.agentJobs;
+        this.id = $.id;
+        this.logins = $.logins;
+        this.targetServerBrandVersion = $.targetServerBrandVersion;
+        this.targetServerVersion = $.targetServerVersion;
+        this.validationErrors = $.validationErrors;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectToTargetSqlMITaskOutputResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> agentJobs;
-        private String id;
-        private List<String> logins;
-        private String targetServerBrandVersion;
-        private String targetServerVersion;
-        private List<ReportableExceptionResponse> validationErrors;
+        private ConnectToTargetSqlMITaskOutputResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectToTargetSqlMITaskOutputResponse();
         }
 
         public Builder(ConnectToTargetSqlMITaskOutputResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agentJobs = defaults.agentJobs;
-    	      this.id = defaults.id;
-    	      this.logins = defaults.logins;
-    	      this.targetServerBrandVersion = defaults.targetServerBrandVersion;
-    	      this.targetServerVersion = defaults.targetServerVersion;
-    	      this.validationErrors = defaults.validationErrors;
+            $ = new ConnectToTargetSqlMITaskOutputResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder agentJobs(List<String> agentJobs) {
-            this.agentJobs = Objects.requireNonNull(agentJobs);
+            $.agentJobs = agentJobs;
             return this;
         }
+
         public Builder agentJobs(String... agentJobs) {
             return agentJobs(List.of(agentJobs));
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder logins(List<String> logins) {
-            this.logins = Objects.requireNonNull(logins);
+            $.logins = logins;
             return this;
         }
+
         public Builder logins(String... logins) {
             return logins(List.of(logins));
         }
+
         public Builder targetServerBrandVersion(String targetServerBrandVersion) {
-            this.targetServerBrandVersion = Objects.requireNonNull(targetServerBrandVersion);
+            $.targetServerBrandVersion = targetServerBrandVersion;
             return this;
         }
+
         public Builder targetServerVersion(String targetServerVersion) {
-            this.targetServerVersion = Objects.requireNonNull(targetServerVersion);
+            $.targetServerVersion = targetServerVersion;
             return this;
         }
+
         public Builder validationErrors(List<ReportableExceptionResponse> validationErrors) {
-            this.validationErrors = Objects.requireNonNull(validationErrors);
+            $.validationErrors = validationErrors;
             return this;
         }
+
         public Builder validationErrors(ReportableExceptionResponse... validationErrors) {
             return validationErrors(List.of(validationErrors));
-        }        public ConnectToTargetSqlMITaskOutputResponse build() {
-            return new ConnectToTargetSqlMITaskOutputResponse(agentJobs, id, logins, targetServerBrandVersion, targetServerVersion, validationErrors);
+        }
+
+        public ConnectToTargetSqlMITaskOutputResponse build() {
+            $.agentJobs = Objects.requireNonNull($.agentJobs, "expected parameter 'agentJobs' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.logins = Objects.requireNonNull($.logins, "expected parameter 'logins' to be non-null");
+            $.targetServerBrandVersion = Objects.requireNonNull($.targetServerBrandVersion, "expected parameter 'targetServerBrandVersion' to be non-null");
+            $.targetServerVersion = Objects.requireNonNull($.targetServerVersion, "expected parameter 'targetServerVersion' to be non-null");
+            $.validationErrors = Objects.requireNonNull($.validationErrors, "expected parameter 'validationErrors' to be non-null");
+            return $;
         }
     }
+
 }

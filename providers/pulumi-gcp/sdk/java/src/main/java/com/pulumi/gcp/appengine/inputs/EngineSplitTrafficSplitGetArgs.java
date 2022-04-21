@@ -5,10 +5,10 @@ package com.pulumi.gcp.appengine.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class EngineSplitTrafficSplitGetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="allocations", required=true)
-      private final Output<Map<String,String>> allocations;
+    private Output<Map<String,String>> allocations;
 
     public Output<Map<String,String>> allocations() {
         return this.allocations;
@@ -33,63 +33,59 @@ public final class EngineSplitTrafficSplitGetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="shardBy")
-      private final @Nullable Output<String> shardBy;
+    private @Nullable Output<String> shardBy;
 
-    public Output<String> shardBy() {
-        return this.shardBy == null ? Codegen.empty() : this.shardBy;
+    public Optional<Output<String>> shardBy() {
+        return Optional.ofNullable(this.shardBy);
     }
 
-    public EngineSplitTrafficSplitGetArgs(
-        Output<Map<String,String>> allocations,
-        @Nullable Output<String> shardBy) {
-        this.allocations = Objects.requireNonNull(allocations, "expected parameter 'allocations' to be non-null");
-        this.shardBy = shardBy;
-    }
+    private EngineSplitTrafficSplitGetArgs() {}
 
-    private EngineSplitTrafficSplitGetArgs() {
-        this.allocations = Codegen.empty();
-        this.shardBy = Codegen.empty();
+    private EngineSplitTrafficSplitGetArgs(EngineSplitTrafficSplitGetArgs $) {
+        this.allocations = $.allocations;
+        this.shardBy = $.shardBy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EngineSplitTrafficSplitGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Map<String,String>> allocations;
-        private @Nullable Output<String> shardBy;
+        private EngineSplitTrafficSplitGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EngineSplitTrafficSplitGetArgs();
         }
 
         public Builder(EngineSplitTrafficSplitGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allocations = defaults.allocations;
-    	      this.shardBy = defaults.shardBy;
+            $ = new EngineSplitTrafficSplitGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allocations(Output<Map<String,String>> allocations) {
-            this.allocations = Objects.requireNonNull(allocations);
+            $.allocations = allocations;
             return this;
         }
+
         public Builder allocations(Map<String,String> allocations) {
-            this.allocations = Output.of(Objects.requireNonNull(allocations));
-            return this;
+            return allocations(Output.of(allocations));
         }
+
         public Builder shardBy(@Nullable Output<String> shardBy) {
-            this.shardBy = shardBy;
+            $.shardBy = shardBy;
             return this;
         }
-        public Builder shardBy(@Nullable String shardBy) {
-            this.shardBy = Codegen.ofNullable(shardBy);
-            return this;
-        }        public EngineSplitTrafficSplitGetArgs build() {
-            return new EngineSplitTrafficSplitGetArgs(allocations, shardBy);
+
+        public Builder shardBy(String shardBy) {
+            return shardBy(Output.of(shardBy));
+        }
+
+        public EngineSplitTrafficSplitGetArgs build() {
+            $.allocations = Objects.requireNonNull($.allocations, "expected parameter 'allocations' to be non-null");
+            return $;
         }
     }
+
 }

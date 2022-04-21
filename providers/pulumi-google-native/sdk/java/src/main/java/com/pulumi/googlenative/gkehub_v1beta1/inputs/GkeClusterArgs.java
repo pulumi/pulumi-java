@@ -5,9 +5,9 @@ package com.pulumi.googlenative.gkehub_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class GkeClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceLink")
-      private final @Nullable Output<String> resourceLink;
+    private @Nullable Output<String> resourceLink;
 
-    public Output<String> resourceLink() {
-        return this.resourceLink == null ? Codegen.empty() : this.resourceLink;
+    public Optional<Output<String>> resourceLink() {
+        return Optional.ofNullable(this.resourceLink);
     }
 
-    public GkeClusterArgs(@Nullable Output<String> resourceLink) {
-        this.resourceLink = resourceLink;
-    }
+    private GkeClusterArgs() {}
 
-    private GkeClusterArgs() {
-        this.resourceLink = Codegen.empty();
+    private GkeClusterArgs(GkeClusterArgs $) {
+        this.resourceLink = $.resourceLink;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GkeClusterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> resourceLink;
+        private GkeClusterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GkeClusterArgs();
         }
 
         public Builder(GkeClusterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceLink = defaults.resourceLink;
+            $ = new GkeClusterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceLink(@Nullable Output<String> resourceLink) {
-            this.resourceLink = resourceLink;
+            $.resourceLink = resourceLink;
             return this;
         }
-        public Builder resourceLink(@Nullable String resourceLink) {
-            this.resourceLink = Codegen.ofNullable(resourceLink);
-            return this;
-        }        public GkeClusterArgs build() {
-            return new GkeClusterArgs(resourceLink);
+
+        public Builder resourceLink(String resourceLink) {
+            return resourceLink(Output.of(resourceLink));
+        }
+
+        public GkeClusterArgs build() {
+            return $;
         }
     }
+
 }

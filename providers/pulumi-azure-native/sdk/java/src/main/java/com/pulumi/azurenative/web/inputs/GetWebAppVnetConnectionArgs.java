@@ -17,7 +17,7 @@ public final class GetWebAppVnetConnectionArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -28,7 +28,7 @@ public final class GetWebAppVnetConnectionArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetWebAppVnetConnectionArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="vnetName", required=true)
-      private final String vnetName;
+    private String vnetName;
 
     public String vnetName() {
         return this.vnetName;
     }
 
-    public GetWebAppVnetConnectionArgs(
-        String name,
-        String resourceGroupName,
-        String vnetName) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.vnetName = Objects.requireNonNull(vnetName, "expected parameter 'vnetName' to be non-null");
-    }
+    private GetWebAppVnetConnectionArgs() {}
 
-    private GetWebAppVnetConnectionArgs() {
-        this.name = null;
-        this.resourceGroupName = null;
-        this.vnetName = null;
+    private GetWebAppVnetConnectionArgs(GetWebAppVnetConnectionArgs $) {
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
+        this.vnetName = $.vnetName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetWebAppVnetConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String resourceGroupName;
-        private String vnetName;
+        private GetWebAppVnetConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetWebAppVnetConnectionArgs();
         }
 
         public Builder(GetWebAppVnetConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.vnetName = defaults.vnetName;
+            $ = new GetWebAppVnetConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder vnetName(String vnetName) {
-            this.vnetName = Objects.requireNonNull(vnetName);
+            $.vnetName = vnetName;
             return this;
-        }        public GetWebAppVnetConnectionArgs build() {
-            return new GetWebAppVnetConnectionArgs(name, resourceGroupName, vnetName);
+        }
+
+        public GetWebAppVnetConnectionArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.vnetName = Objects.requireNonNull($.vnetName, "expected parameter 'vnetName' to be non-null");
+            return $;
         }
     }
+
 }

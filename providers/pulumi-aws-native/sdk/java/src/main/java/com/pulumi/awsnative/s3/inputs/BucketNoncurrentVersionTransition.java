@@ -24,10 +24,10 @@ public final class BucketNoncurrentVersionTransition extends com.pulumi.resource
      * 
      */
     @Import(name="newerNoncurrentVersions")
-      private final @Nullable Integer newerNoncurrentVersions;
+    private @Nullable Integer newerNoncurrentVersions;
 
     public Optional<Integer> newerNoncurrentVersions() {
-        return this.newerNoncurrentVersions == null ? Optional.empty() : Optional.ofNullable(this.newerNoncurrentVersions);
+        return Optional.ofNullable(this.newerNoncurrentVersions);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class BucketNoncurrentVersionTransition extends com.pulumi.resource
      * 
      */
     @Import(name="storageClass", required=true)
-      private final BucketNoncurrentVersionTransitionStorageClass storageClass;
+    private BucketNoncurrentVersionTransitionStorageClass storageClass;
 
     public BucketNoncurrentVersionTransitionStorageClass storageClass() {
         return this.storageClass;
@@ -46,64 +46,58 @@ public final class BucketNoncurrentVersionTransition extends com.pulumi.resource
      * 
      */
     @Import(name="transitionInDays", required=true)
-      private final Integer transitionInDays;
+    private Integer transitionInDays;
 
     public Integer transitionInDays() {
         return this.transitionInDays;
     }
 
-    public BucketNoncurrentVersionTransition(
-        @Nullable Integer newerNoncurrentVersions,
-        BucketNoncurrentVersionTransitionStorageClass storageClass,
-        Integer transitionInDays) {
-        this.newerNoncurrentVersions = newerNoncurrentVersions;
-        this.storageClass = Objects.requireNonNull(storageClass, "expected parameter 'storageClass' to be non-null");
-        this.transitionInDays = Objects.requireNonNull(transitionInDays, "expected parameter 'transitionInDays' to be non-null");
-    }
+    private BucketNoncurrentVersionTransition() {}
 
-    private BucketNoncurrentVersionTransition() {
-        this.newerNoncurrentVersions = null;
-        this.storageClass = null;
-        this.transitionInDays = null;
+    private BucketNoncurrentVersionTransition(BucketNoncurrentVersionTransition $) {
+        this.newerNoncurrentVersions = $.newerNoncurrentVersions;
+        this.storageClass = $.storageClass;
+        this.transitionInDays = $.transitionInDays;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketNoncurrentVersionTransition defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer newerNoncurrentVersions;
-        private BucketNoncurrentVersionTransitionStorageClass storageClass;
-        private Integer transitionInDays;
+        private BucketNoncurrentVersionTransition $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketNoncurrentVersionTransition();
         }
 
         public Builder(BucketNoncurrentVersionTransition defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.newerNoncurrentVersions = defaults.newerNoncurrentVersions;
-    	      this.storageClass = defaults.storageClass;
-    	      this.transitionInDays = defaults.transitionInDays;
+            $ = new BucketNoncurrentVersionTransition(Objects.requireNonNull(defaults));
         }
 
         public Builder newerNoncurrentVersions(@Nullable Integer newerNoncurrentVersions) {
-            this.newerNoncurrentVersions = newerNoncurrentVersions;
+            $.newerNoncurrentVersions = newerNoncurrentVersions;
             return this;
         }
+
         public Builder storageClass(BucketNoncurrentVersionTransitionStorageClass storageClass) {
-            this.storageClass = Objects.requireNonNull(storageClass);
+            $.storageClass = storageClass;
             return this;
         }
+
         public Builder transitionInDays(Integer transitionInDays) {
-            this.transitionInDays = Objects.requireNonNull(transitionInDays);
+            $.transitionInDays = transitionInDays;
             return this;
-        }        public BucketNoncurrentVersionTransition build() {
-            return new BucketNoncurrentVersionTransition(newerNoncurrentVersions, storageClass, transitionInDays);
+        }
+
+        public BucketNoncurrentVersionTransition build() {
+            $.storageClass = Objects.requireNonNull($.storageClass, "expected parameter 'storageClass' to be non-null");
+            $.transitionInDays = Objects.requireNonNull($.transitionInDays, "expected parameter 'transitionInDays' to be non-null");
+            return $;
         }
     }
+
 }

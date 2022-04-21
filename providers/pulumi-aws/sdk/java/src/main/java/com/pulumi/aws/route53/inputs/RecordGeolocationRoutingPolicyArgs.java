@@ -5,9 +5,9 @@ package com.pulumi.aws.route53.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class RecordGeolocationRoutingPolicyArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="continent")
-      private final @Nullable Output<String> continent;
+    private @Nullable Output<String> continent;
 
-    public Output<String> continent() {
-        return this.continent == null ? Codegen.empty() : this.continent;
+    public Optional<Output<String>> continent() {
+        return Optional.ofNullable(this.continent);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class RecordGeolocationRoutingPolicyArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="country")
-      private final @Nullable Output<String> country;
+    private @Nullable Output<String> country;
 
-    public Output<String> country() {
-        return this.country == null ? Codegen.empty() : this.country;
+    public Optional<Output<String>> country() {
+        return Optional.ofNullable(this.country);
     }
 
     /**
@@ -42,76 +42,68 @@ public final class RecordGeolocationRoutingPolicyArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="subdivision")
-      private final @Nullable Output<String> subdivision;
+    private @Nullable Output<String> subdivision;
 
-    public Output<String> subdivision() {
-        return this.subdivision == null ? Codegen.empty() : this.subdivision;
+    public Optional<Output<String>> subdivision() {
+        return Optional.ofNullable(this.subdivision);
     }
 
-    public RecordGeolocationRoutingPolicyArgs(
-        @Nullable Output<String> continent,
-        @Nullable Output<String> country,
-        @Nullable Output<String> subdivision) {
-        this.continent = continent;
-        this.country = country;
-        this.subdivision = subdivision;
-    }
+    private RecordGeolocationRoutingPolicyArgs() {}
 
-    private RecordGeolocationRoutingPolicyArgs() {
-        this.continent = Codegen.empty();
-        this.country = Codegen.empty();
-        this.subdivision = Codegen.empty();
+    private RecordGeolocationRoutingPolicyArgs(RecordGeolocationRoutingPolicyArgs $) {
+        this.continent = $.continent;
+        this.country = $.country;
+        this.subdivision = $.subdivision;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RecordGeolocationRoutingPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> continent;
-        private @Nullable Output<String> country;
-        private @Nullable Output<String> subdivision;
+        private RecordGeolocationRoutingPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RecordGeolocationRoutingPolicyArgs();
         }
 
         public Builder(RecordGeolocationRoutingPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.continent = defaults.continent;
-    	      this.country = defaults.country;
-    	      this.subdivision = defaults.subdivision;
+            $ = new RecordGeolocationRoutingPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder continent(@Nullable Output<String> continent) {
-            this.continent = continent;
+            $.continent = continent;
             return this;
         }
-        public Builder continent(@Nullable String continent) {
-            this.continent = Codegen.ofNullable(continent);
-            return this;
+
+        public Builder continent(String continent) {
+            return continent(Output.of(continent));
         }
+
         public Builder country(@Nullable Output<String> country) {
-            this.country = country;
+            $.country = country;
             return this;
         }
-        public Builder country(@Nullable String country) {
-            this.country = Codegen.ofNullable(country);
-            return this;
+
+        public Builder country(String country) {
+            return country(Output.of(country));
         }
+
         public Builder subdivision(@Nullable Output<String> subdivision) {
-            this.subdivision = subdivision;
+            $.subdivision = subdivision;
             return this;
         }
-        public Builder subdivision(@Nullable String subdivision) {
-            this.subdivision = Codegen.ofNullable(subdivision);
-            return this;
-        }        public RecordGeolocationRoutingPolicyArgs build() {
-            return new RecordGeolocationRoutingPolicyArgs(continent, country, subdivision);
+
+        public Builder subdivision(String subdivision) {
+            return subdivision(Output.of(subdivision));
+        }
+
+        public RecordGeolocationRoutingPolicyArgs build() {
+            return $;
         }
     }
+
 }

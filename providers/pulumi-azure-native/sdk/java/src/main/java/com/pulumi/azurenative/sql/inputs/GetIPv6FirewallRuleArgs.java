@@ -17,7 +17,7 @@ public final class GetIPv6FirewallRuleArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="firewallRuleName", required=true)
-      private final String firewallRuleName;
+    private String firewallRuleName;
 
     public String firewallRuleName() {
         return this.firewallRuleName;
@@ -28,7 +28,7 @@ public final class GetIPv6FirewallRuleArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetIPv6FirewallRuleArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="serverName", required=true)
-      private final String serverName;
+    private String serverName;
 
     public String serverName() {
         return this.serverName;
     }
 
-    public GetIPv6FirewallRuleArgs(
-        String firewallRuleName,
-        String resourceGroupName,
-        String serverName) {
-        this.firewallRuleName = Objects.requireNonNull(firewallRuleName, "expected parameter 'firewallRuleName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
-    }
+    private GetIPv6FirewallRuleArgs() {}
 
-    private GetIPv6FirewallRuleArgs() {
-        this.firewallRuleName = null;
-        this.resourceGroupName = null;
-        this.serverName = null;
+    private GetIPv6FirewallRuleArgs(GetIPv6FirewallRuleArgs $) {
+        this.firewallRuleName = $.firewallRuleName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serverName = $.serverName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetIPv6FirewallRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String firewallRuleName;
-        private String resourceGroupName;
-        private String serverName;
+        private GetIPv6FirewallRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetIPv6FirewallRuleArgs();
         }
 
         public Builder(GetIPv6FirewallRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.firewallRuleName = defaults.firewallRuleName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serverName = defaults.serverName;
+            $ = new GetIPv6FirewallRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder firewallRuleName(String firewallRuleName) {
-            this.firewallRuleName = Objects.requireNonNull(firewallRuleName);
+            $.firewallRuleName = firewallRuleName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serverName(String serverName) {
-            this.serverName = Objects.requireNonNull(serverName);
+            $.serverName = serverName;
             return this;
-        }        public GetIPv6FirewallRuleArgs build() {
-            return new GetIPv6FirewallRuleArgs(firewallRuleName, resourceGroupName, serverName);
+        }
+
+        public GetIPv6FirewallRuleArgs build() {
+            $.firewallRuleName = Objects.requireNonNull($.firewallRuleName, "expected parameter 'firewallRuleName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serverName = Objects.requireNonNull($.serverName, "expected parameter 'serverName' to be non-null");
+            return $;
         }
     }
+
 }

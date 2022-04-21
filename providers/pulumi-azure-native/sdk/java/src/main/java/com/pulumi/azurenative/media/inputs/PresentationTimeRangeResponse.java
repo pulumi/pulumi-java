@@ -24,10 +24,10 @@ public final class PresentationTimeRangeResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="endTimestamp")
-      private final @Nullable Double endTimestamp;
+    private @Nullable Double endTimestamp;
 
     public Optional<Double> endTimestamp() {
-        return this.endTimestamp == null ? Optional.empty() : Optional.ofNullable(this.endTimestamp);
+        return Optional.ofNullable(this.endTimestamp);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class PresentationTimeRangeResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="forceEndTimestamp")
-      private final @Nullable Boolean forceEndTimestamp;
+    private @Nullable Boolean forceEndTimestamp;
 
     public Optional<Boolean> forceEndTimestamp() {
-        return this.forceEndTimestamp == null ? Optional.empty() : Optional.ofNullable(this.forceEndTimestamp);
+        return Optional.ofNullable(this.forceEndTimestamp);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class PresentationTimeRangeResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="liveBackoffDuration")
-      private final @Nullable Double liveBackoffDuration;
+    private @Nullable Double liveBackoffDuration;
 
     public Optional<Double> liveBackoffDuration() {
-        return this.liveBackoffDuration == null ? Optional.empty() : Optional.ofNullable(this.liveBackoffDuration);
+        return Optional.ofNullable(this.liveBackoffDuration);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class PresentationTimeRangeResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="presentationWindowDuration")
-      private final @Nullable Double presentationWindowDuration;
+    private @Nullable Double presentationWindowDuration;
 
     public Optional<Double> presentationWindowDuration() {
-        return this.presentationWindowDuration == null ? Optional.empty() : Optional.ofNullable(this.presentationWindowDuration);
+        return Optional.ofNullable(this.presentationWindowDuration);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class PresentationTimeRangeResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="startTimestamp")
-      private final @Nullable Double startTimestamp;
+    private @Nullable Double startTimestamp;
 
     public Optional<Double> startTimestamp() {
-        return this.startTimestamp == null ? Optional.empty() : Optional.ofNullable(this.startTimestamp);
+        return Optional.ofNullable(this.startTimestamp);
     }
 
     /**
@@ -79,91 +79,74 @@ public final class PresentationTimeRangeResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="timescale")
-      private final @Nullable Double timescale;
+    private @Nullable Double timescale;
 
     public Optional<Double> timescale() {
-        return this.timescale == null ? Optional.empty() : Optional.ofNullable(this.timescale);
+        return Optional.ofNullable(this.timescale);
     }
 
-    public PresentationTimeRangeResponse(
-        @Nullable Double endTimestamp,
-        @Nullable Boolean forceEndTimestamp,
-        @Nullable Double liveBackoffDuration,
-        @Nullable Double presentationWindowDuration,
-        @Nullable Double startTimestamp,
-        @Nullable Double timescale) {
-        this.endTimestamp = endTimestamp;
-        this.forceEndTimestamp = forceEndTimestamp;
-        this.liveBackoffDuration = liveBackoffDuration;
-        this.presentationWindowDuration = presentationWindowDuration;
-        this.startTimestamp = startTimestamp;
-        this.timescale = timescale;
-    }
+    private PresentationTimeRangeResponse() {}
 
-    private PresentationTimeRangeResponse() {
-        this.endTimestamp = null;
-        this.forceEndTimestamp = null;
-        this.liveBackoffDuration = null;
-        this.presentationWindowDuration = null;
-        this.startTimestamp = null;
-        this.timescale = null;
+    private PresentationTimeRangeResponse(PresentationTimeRangeResponse $) {
+        this.endTimestamp = $.endTimestamp;
+        this.forceEndTimestamp = $.forceEndTimestamp;
+        this.liveBackoffDuration = $.liveBackoffDuration;
+        this.presentationWindowDuration = $.presentationWindowDuration;
+        this.startTimestamp = $.startTimestamp;
+        this.timescale = $.timescale;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PresentationTimeRangeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Double endTimestamp;
-        private @Nullable Boolean forceEndTimestamp;
-        private @Nullable Double liveBackoffDuration;
-        private @Nullable Double presentationWindowDuration;
-        private @Nullable Double startTimestamp;
-        private @Nullable Double timescale;
+        private PresentationTimeRangeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PresentationTimeRangeResponse();
         }
 
         public Builder(PresentationTimeRangeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endTimestamp = defaults.endTimestamp;
-    	      this.forceEndTimestamp = defaults.forceEndTimestamp;
-    	      this.liveBackoffDuration = defaults.liveBackoffDuration;
-    	      this.presentationWindowDuration = defaults.presentationWindowDuration;
-    	      this.startTimestamp = defaults.startTimestamp;
-    	      this.timescale = defaults.timescale;
+            $ = new PresentationTimeRangeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endTimestamp(@Nullable Double endTimestamp) {
-            this.endTimestamp = endTimestamp;
+            $.endTimestamp = endTimestamp;
             return this;
         }
+
         public Builder forceEndTimestamp(@Nullable Boolean forceEndTimestamp) {
-            this.forceEndTimestamp = forceEndTimestamp;
+            $.forceEndTimestamp = forceEndTimestamp;
             return this;
         }
+
         public Builder liveBackoffDuration(@Nullable Double liveBackoffDuration) {
-            this.liveBackoffDuration = liveBackoffDuration;
+            $.liveBackoffDuration = liveBackoffDuration;
             return this;
         }
+
         public Builder presentationWindowDuration(@Nullable Double presentationWindowDuration) {
-            this.presentationWindowDuration = presentationWindowDuration;
+            $.presentationWindowDuration = presentationWindowDuration;
             return this;
         }
+
         public Builder startTimestamp(@Nullable Double startTimestamp) {
-            this.startTimestamp = startTimestamp;
+            $.startTimestamp = startTimestamp;
             return this;
         }
+
         public Builder timescale(@Nullable Double timescale) {
-            this.timescale = timescale;
+            $.timescale = timescale;
             return this;
-        }        public PresentationTimeRangeResponse build() {
-            return new PresentationTimeRangeResponse(endTimestamp, forceEndTimestamp, liveBackoffDuration, presentationWindowDuration, startTimestamp, timescale);
+        }
+
+        public PresentationTimeRangeResponse build() {
+            return $;
         }
     }
+
 }

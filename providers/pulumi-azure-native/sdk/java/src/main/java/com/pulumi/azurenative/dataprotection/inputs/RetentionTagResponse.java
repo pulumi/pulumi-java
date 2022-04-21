@@ -21,7 +21,7 @@ public final class RetentionTagResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="eTag", required=true)
-      private final String eTag;
+    private String eTag;
 
     public String eTag() {
         return this.eTag;
@@ -32,7 +32,7 @@ public final class RetentionTagResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -43,64 +43,59 @@ public final class RetentionTagResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="tagName", required=true)
-      private final String tagName;
+    private String tagName;
 
     public String tagName() {
         return this.tagName;
     }
 
-    public RetentionTagResponse(
-        String eTag,
-        String id,
-        String tagName) {
-        this.eTag = Objects.requireNonNull(eTag, "expected parameter 'eTag' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.tagName = Objects.requireNonNull(tagName, "expected parameter 'tagName' to be non-null");
-    }
+    private RetentionTagResponse() {}
 
-    private RetentionTagResponse() {
-        this.eTag = null;
-        this.id = null;
-        this.tagName = null;
+    private RetentionTagResponse(RetentionTagResponse $) {
+        this.eTag = $.eTag;
+        this.id = $.id;
+        this.tagName = $.tagName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RetentionTagResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String eTag;
-        private String id;
-        private String tagName;
+        private RetentionTagResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RetentionTagResponse();
         }
 
         public Builder(RetentionTagResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.eTag = defaults.eTag;
-    	      this.id = defaults.id;
-    	      this.tagName = defaults.tagName;
+            $ = new RetentionTagResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder eTag(String eTag) {
-            this.eTag = Objects.requireNonNull(eTag);
+            $.eTag = eTag;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder tagName(String tagName) {
-            this.tagName = Objects.requireNonNull(tagName);
+            $.tagName = tagName;
             return this;
-        }        public RetentionTagResponse build() {
-            return new RetentionTagResponse(eTag, id, tagName);
+        }
+
+        public RetentionTagResponse build() {
+            $.eTag = Objects.requireNonNull($.eTag, "expected parameter 'eTag' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.tagName = Objects.requireNonNull($.tagName, "expected parameter 'tagName' to be non-null");
+            return $;
         }
     }
+
 }

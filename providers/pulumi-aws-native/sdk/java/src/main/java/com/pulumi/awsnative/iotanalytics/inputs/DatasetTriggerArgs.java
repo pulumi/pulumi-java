@@ -7,8 +7,8 @@ import com.pulumi.awsnative.iotanalytics.inputs.DatasetScheduleArgs;
 import com.pulumi.awsnative.iotanalytics.inputs.DatasetTriggeringDatasetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,65 @@ public final class DatasetTriggerArgs extends com.pulumi.resources.ResourceArgs 
     public static final DatasetTriggerArgs Empty = new DatasetTriggerArgs();
 
     @Import(name="schedule")
-      private final @Nullable Output<DatasetScheduleArgs> schedule;
+    private @Nullable Output<DatasetScheduleArgs> schedule;
 
-    public Output<DatasetScheduleArgs> schedule() {
-        return this.schedule == null ? Codegen.empty() : this.schedule;
+    public Optional<Output<DatasetScheduleArgs>> schedule() {
+        return Optional.ofNullable(this.schedule);
     }
 
     @Import(name="triggeringDataset")
-      private final @Nullable Output<DatasetTriggeringDatasetArgs> triggeringDataset;
+    private @Nullable Output<DatasetTriggeringDatasetArgs> triggeringDataset;
 
-    public Output<DatasetTriggeringDatasetArgs> triggeringDataset() {
-        return this.triggeringDataset == null ? Codegen.empty() : this.triggeringDataset;
+    public Optional<Output<DatasetTriggeringDatasetArgs>> triggeringDataset() {
+        return Optional.ofNullable(this.triggeringDataset);
     }
 
-    public DatasetTriggerArgs(
-        @Nullable Output<DatasetScheduleArgs> schedule,
-        @Nullable Output<DatasetTriggeringDatasetArgs> triggeringDataset) {
-        this.schedule = schedule;
-        this.triggeringDataset = triggeringDataset;
-    }
+    private DatasetTriggerArgs() {}
 
-    private DatasetTriggerArgs() {
-        this.schedule = Codegen.empty();
-        this.triggeringDataset = Codegen.empty();
+    private DatasetTriggerArgs(DatasetTriggerArgs $) {
+        this.schedule = $.schedule;
+        this.triggeringDataset = $.triggeringDataset;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetTriggerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DatasetScheduleArgs> schedule;
-        private @Nullable Output<DatasetTriggeringDatasetArgs> triggeringDataset;
+        private DatasetTriggerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetTriggerArgs();
         }
 
         public Builder(DatasetTriggerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.schedule = defaults.schedule;
-    	      this.triggeringDataset = defaults.triggeringDataset;
+            $ = new DatasetTriggerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder schedule(@Nullable Output<DatasetScheduleArgs> schedule) {
-            this.schedule = schedule;
+            $.schedule = schedule;
             return this;
         }
-        public Builder schedule(@Nullable DatasetScheduleArgs schedule) {
-            this.schedule = Codegen.ofNullable(schedule);
-            return this;
+
+        public Builder schedule(DatasetScheduleArgs schedule) {
+            return schedule(Output.of(schedule));
         }
+
         public Builder triggeringDataset(@Nullable Output<DatasetTriggeringDatasetArgs> triggeringDataset) {
-            this.triggeringDataset = triggeringDataset;
+            $.triggeringDataset = triggeringDataset;
             return this;
         }
-        public Builder triggeringDataset(@Nullable DatasetTriggeringDatasetArgs triggeringDataset) {
-            this.triggeringDataset = Codegen.ofNullable(triggeringDataset);
-            return this;
-        }        public DatasetTriggerArgs build() {
-            return new DatasetTriggerArgs(schedule, triggeringDataset);
+
+        public Builder triggeringDataset(DatasetTriggeringDatasetArgs triggeringDataset) {
+            return triggeringDataset(Output.of(triggeringDataset));
+        }
+
+        public DatasetTriggerArgs build() {
+            return $;
         }
     }
+
 }

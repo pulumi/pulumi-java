@@ -5,12 +5,12 @@ package com.pulumi.gcp.osconfig.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGcsGetArgs;
 import com.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileRemoteGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGetArg
      * 
      */
     @Import(name="allowInsecure")
-      private final @Nullable Output<Boolean> allowInsecure;
+    private @Nullable Output<Boolean> allowInsecure;
 
-    public Output<Boolean> allowInsecure() {
-        return this.allowInsecure == null ? Codegen.empty() : this.allowInsecure;
+    public Optional<Output<Boolean>> allowInsecure() {
+        return Optional.ofNullable(this.allowInsecure);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGetArg
      * 
      */
     @Import(name="gcs")
-      private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGcsGetArgs> gcs;
+    private @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGcsGetArgs> gcs;
 
-    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGcsGetArgs> gcs() {
-        return this.gcs == null ? Codegen.empty() : this.gcs;
+    public Optional<Output<OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGcsGetArgs>> gcs() {
+        return Optional.ofNullable(this.gcs);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGetArg
      * 
      */
     @Import(name="localPath")
-      private final @Nullable Output<String> localPath;
+    private @Nullable Output<String> localPath;
 
-    public Output<String> localPath() {
-        return this.localPath == null ? Codegen.empty() : this.localPath;
+    public Optional<Output<String>> localPath() {
+        return Optional.ofNullable(this.localPath);
     }
 
     /**
@@ -56,89 +56,78 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGetArg
      * 
      */
     @Import(name="remote")
-      private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileRemoteGetArgs> remote;
+    private @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileRemoteGetArgs> remote;
 
-    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileRemoteGetArgs> remote() {
-        return this.remote == null ? Codegen.empty() : this.remote;
+    public Optional<Output<OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileRemoteGetArgs>> remote() {
+        return Optional.ofNullable(this.remote);
     }
 
-    public OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGetArgs(
-        @Nullable Output<Boolean> allowInsecure,
-        @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGcsGetArgs> gcs,
-        @Nullable Output<String> localPath,
-        @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileRemoteGetArgs> remote) {
-        this.allowInsecure = allowInsecure;
-        this.gcs = gcs;
-        this.localPath = localPath;
-        this.remote = remote;
-    }
+    private OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGetArgs() {}
 
-    private OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGetArgs() {
-        this.allowInsecure = Codegen.empty();
-        this.gcs = Codegen.empty();
-        this.localPath = Codegen.empty();
-        this.remote = Codegen.empty();
+    private OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGetArgs(OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGetArgs $) {
+        this.allowInsecure = $.allowInsecure;
+        this.gcs = $.gcs;
+        this.localPath = $.localPath;
+        this.remote = $.remote;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> allowInsecure;
-        private @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGcsGetArgs> gcs;
-        private @Nullable Output<String> localPath;
-        private @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileRemoteGetArgs> remote;
+        private OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGetArgs();
         }
 
         public Builder(OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowInsecure = defaults.allowInsecure;
-    	      this.gcs = defaults.gcs;
-    	      this.localPath = defaults.localPath;
-    	      this.remote = defaults.remote;
+            $ = new OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowInsecure(@Nullable Output<Boolean> allowInsecure) {
-            this.allowInsecure = allowInsecure;
+            $.allowInsecure = allowInsecure;
             return this;
         }
-        public Builder allowInsecure(@Nullable Boolean allowInsecure) {
-            this.allowInsecure = Codegen.ofNullable(allowInsecure);
-            return this;
+
+        public Builder allowInsecure(Boolean allowInsecure) {
+            return allowInsecure(Output.of(allowInsecure));
         }
+
         public Builder gcs(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGcsGetArgs> gcs) {
-            this.gcs = gcs;
+            $.gcs = gcs;
             return this;
         }
-        public Builder gcs(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGcsGetArgs gcs) {
-            this.gcs = Codegen.ofNullable(gcs);
-            return this;
+
+        public Builder gcs(OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGcsGetArgs gcs) {
+            return gcs(Output.of(gcs));
         }
+
         public Builder localPath(@Nullable Output<String> localPath) {
-            this.localPath = localPath;
+            $.localPath = localPath;
             return this;
         }
-        public Builder localPath(@Nullable String localPath) {
-            this.localPath = Codegen.ofNullable(localPath);
-            return this;
+
+        public Builder localPath(String localPath) {
+            return localPath(Output.of(localPath));
         }
+
         public Builder remote(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileRemoteGetArgs> remote) {
-            this.remote = remote;
+            $.remote = remote;
             return this;
         }
-        public Builder remote(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileRemoteGetArgs remote) {
-            this.remote = Codegen.ofNullable(remote);
-            return this;
-        }        public OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGetArgs build() {
-            return new OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGetArgs(allowInsecure, gcs, localPath, remote);
+
+        public Builder remote(OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileRemoteGetArgs remote) {
+            return remote(Output.of(remote));
+        }
+
+        public OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGetArgs build() {
+            return $;
         }
     }
+
 }

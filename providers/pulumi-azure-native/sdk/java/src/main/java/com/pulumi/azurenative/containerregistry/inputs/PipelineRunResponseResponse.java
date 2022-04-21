@@ -28,10 +28,10 @@ public final class PipelineRunResponseResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="catalogDigest")
-      private final @Nullable String catalogDigest;
+    private @Nullable String catalogDigest;
 
     public Optional<String> catalogDigest() {
-        return this.catalogDigest == null ? Optional.empty() : Optional.ofNullable(this.catalogDigest);
+        return Optional.ofNullable(this.catalogDigest);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class PipelineRunResponseResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="finishTime")
-      private final @Nullable String finishTime;
+    private @Nullable String finishTime;
 
     public Optional<String> finishTime() {
-        return this.finishTime == null ? Optional.empty() : Optional.ofNullable(this.finishTime);
+        return Optional.ofNullable(this.finishTime);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class PipelineRunResponseResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="importedArtifacts")
-      private final @Nullable List<String> importedArtifacts;
+    private @Nullable List<String> importedArtifacts;
 
-    public List<String> importedArtifacts() {
-        return this.importedArtifacts == null ? List.of() : this.importedArtifacts;
+    public Optional<List<String>> importedArtifacts() {
+        return Optional.ofNullable(this.importedArtifacts);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class PipelineRunResponseResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="pipelineRunErrorMessage")
-      private final @Nullable String pipelineRunErrorMessage;
+    private @Nullable String pipelineRunErrorMessage;
 
     public Optional<String> pipelineRunErrorMessage() {
-        return this.pipelineRunErrorMessage == null ? Optional.empty() : Optional.ofNullable(this.pipelineRunErrorMessage);
+        return Optional.ofNullable(this.pipelineRunErrorMessage);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class PipelineRunResponseResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="progress")
-      private final @Nullable ProgressPropertiesResponse progress;
+    private @Nullable ProgressPropertiesResponse progress;
 
     public Optional<ProgressPropertiesResponse> progress() {
-        return this.progress == null ? Optional.empty() : Optional.ofNullable(this.progress);
+        return Optional.ofNullable(this.progress);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class PipelineRunResponseResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="source")
-      private final @Nullable ImportPipelineSourcePropertiesResponse source;
+    private @Nullable ImportPipelineSourcePropertiesResponse source;
 
     public Optional<ImportPipelineSourcePropertiesResponse> source() {
-        return this.source == null ? Optional.empty() : Optional.ofNullable(this.source);
+        return Optional.ofNullable(this.source);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class PipelineRunResponseResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="startTime")
-      private final @Nullable String startTime;
+    private @Nullable String startTime;
 
     public Optional<String> startTime() {
-        return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
+        return Optional.ofNullable(this.startTime);
     }
 
     /**
@@ -105,10 +105,10 @@ public final class PipelineRunResponseResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="status")
-      private final @Nullable String status;
+    private @Nullable String status;
 
     public Optional<String> status() {
-        return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -116,10 +116,10 @@ public final class PipelineRunResponseResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="target")
-      private final @Nullable ExportPipelineTargetPropertiesResponse target;
+    private @Nullable ExportPipelineTargetPropertiesResponse target;
 
     public Optional<ExportPipelineTargetPropertiesResponse> target() {
-        return this.target == null ? Optional.empty() : Optional.ofNullable(this.target);
+        return Optional.ofNullable(this.target);
     }
 
     /**
@@ -127,130 +127,102 @@ public final class PipelineRunResponseResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="trigger")
-      private final @Nullable PipelineTriggerDescriptorResponse trigger;
+    private @Nullable PipelineTriggerDescriptorResponse trigger;
 
     public Optional<PipelineTriggerDescriptorResponse> trigger() {
-        return this.trigger == null ? Optional.empty() : Optional.ofNullable(this.trigger);
+        return Optional.ofNullable(this.trigger);
     }
 
-    public PipelineRunResponseResponse(
-        @Nullable String catalogDigest,
-        @Nullable String finishTime,
-        @Nullable List<String> importedArtifacts,
-        @Nullable String pipelineRunErrorMessage,
-        @Nullable ProgressPropertiesResponse progress,
-        @Nullable ImportPipelineSourcePropertiesResponse source,
-        @Nullable String startTime,
-        @Nullable String status,
-        @Nullable ExportPipelineTargetPropertiesResponse target,
-        @Nullable PipelineTriggerDescriptorResponse trigger) {
-        this.catalogDigest = catalogDigest;
-        this.finishTime = finishTime;
-        this.importedArtifacts = importedArtifacts;
-        this.pipelineRunErrorMessage = pipelineRunErrorMessage;
-        this.progress = progress;
-        this.source = source;
-        this.startTime = startTime;
-        this.status = status;
-        this.target = target;
-        this.trigger = trigger;
-    }
+    private PipelineRunResponseResponse() {}
 
-    private PipelineRunResponseResponse() {
-        this.catalogDigest = null;
-        this.finishTime = null;
-        this.importedArtifacts = List.of();
-        this.pipelineRunErrorMessage = null;
-        this.progress = null;
-        this.source = null;
-        this.startTime = null;
-        this.status = null;
-        this.target = null;
-        this.trigger = null;
+    private PipelineRunResponseResponse(PipelineRunResponseResponse $) {
+        this.catalogDigest = $.catalogDigest;
+        this.finishTime = $.finishTime;
+        this.importedArtifacts = $.importedArtifacts;
+        this.pipelineRunErrorMessage = $.pipelineRunErrorMessage;
+        this.progress = $.progress;
+        this.source = $.source;
+        this.startTime = $.startTime;
+        this.status = $.status;
+        this.target = $.target;
+        this.trigger = $.trigger;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PipelineRunResponseResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String catalogDigest;
-        private @Nullable String finishTime;
-        private @Nullable List<String> importedArtifacts;
-        private @Nullable String pipelineRunErrorMessage;
-        private @Nullable ProgressPropertiesResponse progress;
-        private @Nullable ImportPipelineSourcePropertiesResponse source;
-        private @Nullable String startTime;
-        private @Nullable String status;
-        private @Nullable ExportPipelineTargetPropertiesResponse target;
-        private @Nullable PipelineTriggerDescriptorResponse trigger;
+        private PipelineRunResponseResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PipelineRunResponseResponse();
         }
 
         public Builder(PipelineRunResponseResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.catalogDigest = defaults.catalogDigest;
-    	      this.finishTime = defaults.finishTime;
-    	      this.importedArtifacts = defaults.importedArtifacts;
-    	      this.pipelineRunErrorMessage = defaults.pipelineRunErrorMessage;
-    	      this.progress = defaults.progress;
-    	      this.source = defaults.source;
-    	      this.startTime = defaults.startTime;
-    	      this.status = defaults.status;
-    	      this.target = defaults.target;
-    	      this.trigger = defaults.trigger;
+            $ = new PipelineRunResponseResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder catalogDigest(@Nullable String catalogDigest) {
-            this.catalogDigest = catalogDigest;
+            $.catalogDigest = catalogDigest;
             return this;
         }
+
         public Builder finishTime(@Nullable String finishTime) {
-            this.finishTime = finishTime;
+            $.finishTime = finishTime;
             return this;
         }
+
         public Builder importedArtifacts(@Nullable List<String> importedArtifacts) {
-            this.importedArtifacts = importedArtifacts;
+            $.importedArtifacts = importedArtifacts;
             return this;
         }
+
         public Builder importedArtifacts(String... importedArtifacts) {
             return importedArtifacts(List.of(importedArtifacts));
         }
+
         public Builder pipelineRunErrorMessage(@Nullable String pipelineRunErrorMessage) {
-            this.pipelineRunErrorMessage = pipelineRunErrorMessage;
+            $.pipelineRunErrorMessage = pipelineRunErrorMessage;
             return this;
         }
+
         public Builder progress(@Nullable ProgressPropertiesResponse progress) {
-            this.progress = progress;
+            $.progress = progress;
             return this;
         }
+
         public Builder source(@Nullable ImportPipelineSourcePropertiesResponse source) {
-            this.source = source;
+            $.source = source;
             return this;
         }
+
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = startTime;
+            $.startTime = startTime;
             return this;
         }
+
         public Builder status(@Nullable String status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
+
         public Builder target(@Nullable ExportPipelineTargetPropertiesResponse target) {
-            this.target = target;
+            $.target = target;
             return this;
         }
+
         public Builder trigger(@Nullable PipelineTriggerDescriptorResponse trigger) {
-            this.trigger = trigger;
+            $.trigger = trigger;
             return this;
-        }        public PipelineRunResponseResponse build() {
-            return new PipelineRunResponseResponse(catalogDigest, finishTime, importedArtifacts, pipelineRunErrorMessage, progress, source, startTime, status, target, trigger);
+        }
+
+        public PipelineRunResponseResponse build() {
+            return $;
         }
     }
+
 }

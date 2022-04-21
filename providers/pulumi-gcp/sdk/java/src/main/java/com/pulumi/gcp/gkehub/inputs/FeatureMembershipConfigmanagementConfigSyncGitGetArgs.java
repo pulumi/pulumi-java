@@ -5,9 +5,9 @@ package com.pulumi.gcp.gkehub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,10 +16,10 @@ public final class FeatureMembershipConfigmanagementConfigSyncGitGetArgs extends
     public static final FeatureMembershipConfigmanagementConfigSyncGitGetArgs Empty = new FeatureMembershipConfigmanagementConfigSyncGitGetArgs();
 
     @Import(name="gcpServiceAccountEmail")
-      private final @Nullable Output<String> gcpServiceAccountEmail;
+    private @Nullable Output<String> gcpServiceAccountEmail;
 
-    public Output<String> gcpServiceAccountEmail() {
-        return this.gcpServiceAccountEmail == null ? Codegen.empty() : this.gcpServiceAccountEmail;
+    public Optional<Output<String>> gcpServiceAccountEmail() {
+        return Optional.ofNullable(this.gcpServiceAccountEmail);
     }
 
     /**
@@ -27,10 +27,10 @@ public final class FeatureMembershipConfigmanagementConfigSyncGitGetArgs extends
      * 
      */
     @Import(name="httpsProxy")
-      private final @Nullable Output<String> httpsProxy;
+    private @Nullable Output<String> httpsProxy;
 
-    public Output<String> httpsProxy() {
-        return this.httpsProxy == null ? Codegen.empty() : this.httpsProxy;
+    public Optional<Output<String>> httpsProxy() {
+        return Optional.ofNullable(this.httpsProxy);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class FeatureMembershipConfigmanagementConfigSyncGitGetArgs extends
      * 
      */
     @Import(name="policyDir")
-      private final @Nullable Output<String> policyDir;
+    private @Nullable Output<String> policyDir;
 
-    public Output<String> policyDir() {
-        return this.policyDir == null ? Codegen.empty() : this.policyDir;
+    public Optional<Output<String>> policyDir() {
+        return Optional.ofNullable(this.policyDir);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class FeatureMembershipConfigmanagementConfigSyncGitGetArgs extends
      * 
      */
     @Import(name="secretType")
-      private final @Nullable Output<String> secretType;
+    private @Nullable Output<String> secretType;
 
-    public Output<String> secretType() {
-        return this.secretType == null ? Codegen.empty() : this.secretType;
+    public Optional<Output<String>> secretType() {
+        return Optional.ofNullable(this.secretType);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class FeatureMembershipConfigmanagementConfigSyncGitGetArgs extends
      * 
      */
     @Import(name="syncBranch")
-      private final @Nullable Output<String> syncBranch;
+    private @Nullable Output<String> syncBranch;
 
-    public Output<String> syncBranch() {
-        return this.syncBranch == null ? Codegen.empty() : this.syncBranch;
+    public Optional<Output<String>> syncBranch() {
+        return Optional.ofNullable(this.syncBranch);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class FeatureMembershipConfigmanagementConfigSyncGitGetArgs extends
      * 
      */
     @Import(name="syncRepo")
-      private final @Nullable Output<String> syncRepo;
+    private @Nullable Output<String> syncRepo;
 
-    public Output<String> syncRepo() {
-        return this.syncRepo == null ? Codegen.empty() : this.syncRepo;
+    public Optional<Output<String>> syncRepo() {
+        return Optional.ofNullable(this.syncRepo);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class FeatureMembershipConfigmanagementConfigSyncGitGetArgs extends
      * 
      */
     @Import(name="syncRev")
-      private final @Nullable Output<String> syncRev;
+    private @Nullable Output<String> syncRev;
 
-    public Output<String> syncRev() {
-        return this.syncRev == null ? Codegen.empty() : this.syncRev;
+    public Optional<Output<String>> syncRev() {
+        return Optional.ofNullable(this.syncRev);
     }
 
     /**
@@ -93,141 +93,118 @@ public final class FeatureMembershipConfigmanagementConfigSyncGitGetArgs extends
      * 
      */
     @Import(name="syncWaitSecs")
-      private final @Nullable Output<String> syncWaitSecs;
+    private @Nullable Output<String> syncWaitSecs;
 
-    public Output<String> syncWaitSecs() {
-        return this.syncWaitSecs == null ? Codegen.empty() : this.syncWaitSecs;
+    public Optional<Output<String>> syncWaitSecs() {
+        return Optional.ofNullable(this.syncWaitSecs);
     }
 
-    public FeatureMembershipConfigmanagementConfigSyncGitGetArgs(
-        @Nullable Output<String> gcpServiceAccountEmail,
-        @Nullable Output<String> httpsProxy,
-        @Nullable Output<String> policyDir,
-        @Nullable Output<String> secretType,
-        @Nullable Output<String> syncBranch,
-        @Nullable Output<String> syncRepo,
-        @Nullable Output<String> syncRev,
-        @Nullable Output<String> syncWaitSecs) {
-        this.gcpServiceAccountEmail = gcpServiceAccountEmail;
-        this.httpsProxy = httpsProxy;
-        this.policyDir = policyDir;
-        this.secretType = secretType;
-        this.syncBranch = syncBranch;
-        this.syncRepo = syncRepo;
-        this.syncRev = syncRev;
-        this.syncWaitSecs = syncWaitSecs;
-    }
+    private FeatureMembershipConfigmanagementConfigSyncGitGetArgs() {}
 
-    private FeatureMembershipConfigmanagementConfigSyncGitGetArgs() {
-        this.gcpServiceAccountEmail = Codegen.empty();
-        this.httpsProxy = Codegen.empty();
-        this.policyDir = Codegen.empty();
-        this.secretType = Codegen.empty();
-        this.syncBranch = Codegen.empty();
-        this.syncRepo = Codegen.empty();
-        this.syncRev = Codegen.empty();
-        this.syncWaitSecs = Codegen.empty();
+    private FeatureMembershipConfigmanagementConfigSyncGitGetArgs(FeatureMembershipConfigmanagementConfigSyncGitGetArgs $) {
+        this.gcpServiceAccountEmail = $.gcpServiceAccountEmail;
+        this.httpsProxy = $.httpsProxy;
+        this.policyDir = $.policyDir;
+        this.secretType = $.secretType;
+        this.syncBranch = $.syncBranch;
+        this.syncRepo = $.syncRepo;
+        this.syncRev = $.syncRev;
+        this.syncWaitSecs = $.syncWaitSecs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FeatureMembershipConfigmanagementConfigSyncGitGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> gcpServiceAccountEmail;
-        private @Nullable Output<String> httpsProxy;
-        private @Nullable Output<String> policyDir;
-        private @Nullable Output<String> secretType;
-        private @Nullable Output<String> syncBranch;
-        private @Nullable Output<String> syncRepo;
-        private @Nullable Output<String> syncRev;
-        private @Nullable Output<String> syncWaitSecs;
+        private FeatureMembershipConfigmanagementConfigSyncGitGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FeatureMembershipConfigmanagementConfigSyncGitGetArgs();
         }
 
         public Builder(FeatureMembershipConfigmanagementConfigSyncGitGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gcpServiceAccountEmail = defaults.gcpServiceAccountEmail;
-    	      this.httpsProxy = defaults.httpsProxy;
-    	      this.policyDir = defaults.policyDir;
-    	      this.secretType = defaults.secretType;
-    	      this.syncBranch = defaults.syncBranch;
-    	      this.syncRepo = defaults.syncRepo;
-    	      this.syncRev = defaults.syncRev;
-    	      this.syncWaitSecs = defaults.syncWaitSecs;
+            $ = new FeatureMembershipConfigmanagementConfigSyncGitGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder gcpServiceAccountEmail(@Nullable Output<String> gcpServiceAccountEmail) {
-            this.gcpServiceAccountEmail = gcpServiceAccountEmail;
+            $.gcpServiceAccountEmail = gcpServiceAccountEmail;
             return this;
         }
-        public Builder gcpServiceAccountEmail(@Nullable String gcpServiceAccountEmail) {
-            this.gcpServiceAccountEmail = Codegen.ofNullable(gcpServiceAccountEmail);
-            return this;
+
+        public Builder gcpServiceAccountEmail(String gcpServiceAccountEmail) {
+            return gcpServiceAccountEmail(Output.of(gcpServiceAccountEmail));
         }
+
         public Builder httpsProxy(@Nullable Output<String> httpsProxy) {
-            this.httpsProxy = httpsProxy;
+            $.httpsProxy = httpsProxy;
             return this;
         }
-        public Builder httpsProxy(@Nullable String httpsProxy) {
-            this.httpsProxy = Codegen.ofNullable(httpsProxy);
-            return this;
+
+        public Builder httpsProxy(String httpsProxy) {
+            return httpsProxy(Output.of(httpsProxy));
         }
+
         public Builder policyDir(@Nullable Output<String> policyDir) {
-            this.policyDir = policyDir;
+            $.policyDir = policyDir;
             return this;
         }
-        public Builder policyDir(@Nullable String policyDir) {
-            this.policyDir = Codegen.ofNullable(policyDir);
-            return this;
+
+        public Builder policyDir(String policyDir) {
+            return policyDir(Output.of(policyDir));
         }
+
         public Builder secretType(@Nullable Output<String> secretType) {
-            this.secretType = secretType;
+            $.secretType = secretType;
             return this;
         }
-        public Builder secretType(@Nullable String secretType) {
-            this.secretType = Codegen.ofNullable(secretType);
-            return this;
+
+        public Builder secretType(String secretType) {
+            return secretType(Output.of(secretType));
         }
+
         public Builder syncBranch(@Nullable Output<String> syncBranch) {
-            this.syncBranch = syncBranch;
+            $.syncBranch = syncBranch;
             return this;
         }
-        public Builder syncBranch(@Nullable String syncBranch) {
-            this.syncBranch = Codegen.ofNullable(syncBranch);
-            return this;
+
+        public Builder syncBranch(String syncBranch) {
+            return syncBranch(Output.of(syncBranch));
         }
+
         public Builder syncRepo(@Nullable Output<String> syncRepo) {
-            this.syncRepo = syncRepo;
+            $.syncRepo = syncRepo;
             return this;
         }
-        public Builder syncRepo(@Nullable String syncRepo) {
-            this.syncRepo = Codegen.ofNullable(syncRepo);
-            return this;
+
+        public Builder syncRepo(String syncRepo) {
+            return syncRepo(Output.of(syncRepo));
         }
+
         public Builder syncRev(@Nullable Output<String> syncRev) {
-            this.syncRev = syncRev;
+            $.syncRev = syncRev;
             return this;
         }
-        public Builder syncRev(@Nullable String syncRev) {
-            this.syncRev = Codegen.ofNullable(syncRev);
-            return this;
+
+        public Builder syncRev(String syncRev) {
+            return syncRev(Output.of(syncRev));
         }
+
         public Builder syncWaitSecs(@Nullable Output<String> syncWaitSecs) {
-            this.syncWaitSecs = syncWaitSecs;
+            $.syncWaitSecs = syncWaitSecs;
             return this;
         }
-        public Builder syncWaitSecs(@Nullable String syncWaitSecs) {
-            this.syncWaitSecs = Codegen.ofNullable(syncWaitSecs);
-            return this;
-        }        public FeatureMembershipConfigmanagementConfigSyncGitGetArgs build() {
-            return new FeatureMembershipConfigmanagementConfigSyncGitGetArgs(gcpServiceAccountEmail, httpsProxy, policyDir, secretType, syncBranch, syncRepo, syncRev, syncWaitSecs);
+
+        public Builder syncWaitSecs(String syncWaitSecs) {
+            return syncWaitSecs(Output.of(syncWaitSecs));
+        }
+
+        public FeatureMembershipConfigmanagementConfigSyncGitGetArgs build() {
+            return $;
         }
     }
+
 }

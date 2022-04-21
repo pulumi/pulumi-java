@@ -23,45 +23,44 @@ public final class UserAssignedPropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable String resourceId;
+    private @Nullable String resourceId;
 
     public Optional<String> resourceId() {
-        return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
+        return Optional.ofNullable(this.resourceId);
     }
 
-    public UserAssignedPropertiesResponse(@Nullable String resourceId) {
-        this.resourceId = resourceId;
-    }
+    private UserAssignedPropertiesResponse() {}
 
-    private UserAssignedPropertiesResponse() {
-        this.resourceId = null;
+    private UserAssignedPropertiesResponse(UserAssignedPropertiesResponse $) {
+        this.resourceId = $.resourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserAssignedPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String resourceId;
+        private UserAssignedPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserAssignedPropertiesResponse();
         }
 
         public Builder(UserAssignedPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceId = defaults.resourceId;
+            $ = new UserAssignedPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
-        }        public UserAssignedPropertiesResponse build() {
-            return new UserAssignedPropertiesResponse(resourceId);
+        }
+
+        public UserAssignedPropertiesResponse build() {
+            return $;
         }
     }
+
 }

@@ -8,9 +8,9 @@ import com.pulumi.azurenative.network.enums.FrontDoorQuery;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class CacheConfigurationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="cacheDuration")
-      private final @Nullable Output<String> cacheDuration;
+    private @Nullable Output<String> cacheDuration;
 
-    public Output<String> cacheDuration() {
-        return this.cacheDuration == null ? Codegen.empty() : this.cacheDuration;
+    public Optional<Output<String>> cacheDuration() {
+        return Optional.ofNullable(this.cacheDuration);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class CacheConfigurationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="dynamicCompression")
-      private final @Nullable Output<Either<String,DynamicCompressionEnabled>> dynamicCompression;
+    private @Nullable Output<Either<String,DynamicCompressionEnabled>> dynamicCompression;
 
-    public Output<Either<String,DynamicCompressionEnabled>> dynamicCompression() {
-        return this.dynamicCompression == null ? Codegen.empty() : this.dynamicCompression;
+    public Optional<Output<Either<String,DynamicCompressionEnabled>>> dynamicCompression() {
+        return Optional.ofNullable(this.dynamicCompression);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class CacheConfigurationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="queryParameterStripDirective")
-      private final @Nullable Output<Either<String,FrontDoorQuery>> queryParameterStripDirective;
+    private @Nullable Output<Either<String,FrontDoorQuery>> queryParameterStripDirective;
 
-    public Output<Either<String,FrontDoorQuery>> queryParameterStripDirective() {
-        return this.queryParameterStripDirective == null ? Codegen.empty() : this.queryParameterStripDirective;
+    public Optional<Output<Either<String,FrontDoorQuery>>> queryParameterStripDirective() {
+        return Optional.ofNullable(this.queryParameterStripDirective);
     }
 
     /**
@@ -60,89 +60,78 @@ public final class CacheConfigurationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="queryParameters")
-      private final @Nullable Output<String> queryParameters;
+    private @Nullable Output<String> queryParameters;
 
-    public Output<String> queryParameters() {
-        return this.queryParameters == null ? Codegen.empty() : this.queryParameters;
+    public Optional<Output<String>> queryParameters() {
+        return Optional.ofNullable(this.queryParameters);
     }
 
-    public CacheConfigurationArgs(
-        @Nullable Output<String> cacheDuration,
-        @Nullable Output<Either<String,DynamicCompressionEnabled>> dynamicCompression,
-        @Nullable Output<Either<String,FrontDoorQuery>> queryParameterStripDirective,
-        @Nullable Output<String> queryParameters) {
-        this.cacheDuration = cacheDuration;
-        this.dynamicCompression = dynamicCompression;
-        this.queryParameterStripDirective = queryParameterStripDirective;
-        this.queryParameters = queryParameters;
-    }
+    private CacheConfigurationArgs() {}
 
-    private CacheConfigurationArgs() {
-        this.cacheDuration = Codegen.empty();
-        this.dynamicCompression = Codegen.empty();
-        this.queryParameterStripDirective = Codegen.empty();
-        this.queryParameters = Codegen.empty();
+    private CacheConfigurationArgs(CacheConfigurationArgs $) {
+        this.cacheDuration = $.cacheDuration;
+        this.dynamicCompression = $.dynamicCompression;
+        this.queryParameterStripDirective = $.queryParameterStripDirective;
+        this.queryParameters = $.queryParameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CacheConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> cacheDuration;
-        private @Nullable Output<Either<String,DynamicCompressionEnabled>> dynamicCompression;
-        private @Nullable Output<Either<String,FrontDoorQuery>> queryParameterStripDirective;
-        private @Nullable Output<String> queryParameters;
+        private CacheConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CacheConfigurationArgs();
         }
 
         public Builder(CacheConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cacheDuration = defaults.cacheDuration;
-    	      this.dynamicCompression = defaults.dynamicCompression;
-    	      this.queryParameterStripDirective = defaults.queryParameterStripDirective;
-    	      this.queryParameters = defaults.queryParameters;
+            $ = new CacheConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cacheDuration(@Nullable Output<String> cacheDuration) {
-            this.cacheDuration = cacheDuration;
+            $.cacheDuration = cacheDuration;
             return this;
         }
-        public Builder cacheDuration(@Nullable String cacheDuration) {
-            this.cacheDuration = Codegen.ofNullable(cacheDuration);
-            return this;
+
+        public Builder cacheDuration(String cacheDuration) {
+            return cacheDuration(Output.of(cacheDuration));
         }
+
         public Builder dynamicCompression(@Nullable Output<Either<String,DynamicCompressionEnabled>> dynamicCompression) {
-            this.dynamicCompression = dynamicCompression;
+            $.dynamicCompression = dynamicCompression;
             return this;
         }
-        public Builder dynamicCompression(@Nullable Either<String,DynamicCompressionEnabled> dynamicCompression) {
-            this.dynamicCompression = Codegen.ofNullable(dynamicCompression);
-            return this;
+
+        public Builder dynamicCompression(Either<String,DynamicCompressionEnabled> dynamicCompression) {
+            return dynamicCompression(Output.of(dynamicCompression));
         }
+
         public Builder queryParameterStripDirective(@Nullable Output<Either<String,FrontDoorQuery>> queryParameterStripDirective) {
-            this.queryParameterStripDirective = queryParameterStripDirective;
+            $.queryParameterStripDirective = queryParameterStripDirective;
             return this;
         }
-        public Builder queryParameterStripDirective(@Nullable Either<String,FrontDoorQuery> queryParameterStripDirective) {
-            this.queryParameterStripDirective = Codegen.ofNullable(queryParameterStripDirective);
-            return this;
+
+        public Builder queryParameterStripDirective(Either<String,FrontDoorQuery> queryParameterStripDirective) {
+            return queryParameterStripDirective(Output.of(queryParameterStripDirective));
         }
+
         public Builder queryParameters(@Nullable Output<String> queryParameters) {
-            this.queryParameters = queryParameters;
+            $.queryParameters = queryParameters;
             return this;
         }
-        public Builder queryParameters(@Nullable String queryParameters) {
-            this.queryParameters = Codegen.ofNullable(queryParameters);
-            return this;
-        }        public CacheConfigurationArgs build() {
-            return new CacheConfigurationArgs(cacheDuration, dynamicCompression, queryParameterStripDirective, queryParameters);
+
+        public Builder queryParameters(String queryParameters) {
+            return queryParameters(Output.of(queryParameters));
+        }
+
+        public CacheConfigurationArgs build() {
+            return $;
         }
     }
+
 }

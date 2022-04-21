@@ -22,7 +22,7 @@ public final class EgressPolicyResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="egressFrom", required=true)
-      private final EgressFromResponse egressFrom;
+    private EgressFromResponse egressFrom;
 
     public EgressFromResponse egressFrom() {
         return this.egressFrom;
@@ -33,55 +33,52 @@ public final class EgressPolicyResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="egressTo", required=true)
-      private final EgressToResponse egressTo;
+    private EgressToResponse egressTo;
 
     public EgressToResponse egressTo() {
         return this.egressTo;
     }
 
-    public EgressPolicyResponse(
-        EgressFromResponse egressFrom,
-        EgressToResponse egressTo) {
-        this.egressFrom = Objects.requireNonNull(egressFrom, "expected parameter 'egressFrom' to be non-null");
-        this.egressTo = Objects.requireNonNull(egressTo, "expected parameter 'egressTo' to be non-null");
-    }
+    private EgressPolicyResponse() {}
 
-    private EgressPolicyResponse() {
-        this.egressFrom = null;
-        this.egressTo = null;
+    private EgressPolicyResponse(EgressPolicyResponse $) {
+        this.egressFrom = $.egressFrom;
+        this.egressTo = $.egressTo;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EgressPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private EgressFromResponse egressFrom;
-        private EgressToResponse egressTo;
+        private EgressPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EgressPolicyResponse();
         }
 
         public Builder(EgressPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.egressFrom = defaults.egressFrom;
-    	      this.egressTo = defaults.egressTo;
+            $ = new EgressPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder egressFrom(EgressFromResponse egressFrom) {
-            this.egressFrom = Objects.requireNonNull(egressFrom);
+            $.egressFrom = egressFrom;
             return this;
         }
+
         public Builder egressTo(EgressToResponse egressTo) {
-            this.egressTo = Objects.requireNonNull(egressTo);
+            $.egressTo = egressTo;
             return this;
-        }        public EgressPolicyResponse build() {
-            return new EgressPolicyResponse(egressFrom, egressTo);
+        }
+
+        public EgressPolicyResponse build() {
+            $.egressFrom = Objects.requireNonNull($.egressFrom, "expected parameter 'egressFrom' to be non-null");
+            $.egressTo = Objects.requireNonNull($.egressTo, "expected parameter 'egressTo' to be non-null");
+            return $;
         }
     }
+
 }

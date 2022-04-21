@@ -6,11 +6,11 @@ package com.pulumi.aws.cognito;
 import com.pulumi.aws.cognito.inputs.IdentityPoolRoleAttachmentRoleMappingArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class IdentityPoolRoleAttachmentArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="identityPoolId", required=true)
-      private final Output<String> identityPoolId;
+    private Output<String> identityPoolId;
 
     public Output<String> identityPoolId() {
         return this.identityPoolId;
@@ -34,10 +34,10 @@ public final class IdentityPoolRoleAttachmentArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="roleMappings")
-      private final @Nullable Output<List<IdentityPoolRoleAttachmentRoleMappingArgs>> roleMappings;
+    private @Nullable Output<List<IdentityPoolRoleAttachmentRoleMappingArgs>> roleMappings;
 
-    public Output<List<IdentityPoolRoleAttachmentRoleMappingArgs>> roleMappings() {
-        return this.roleMappings == null ? Codegen.empty() : this.roleMappings;
+    public Optional<Output<List<IdentityPoolRoleAttachmentRoleMappingArgs>>> roleMappings() {
+        return Optional.ofNullable(this.roleMappings);
     }
 
     /**
@@ -45,79 +45,74 @@ public final class IdentityPoolRoleAttachmentArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="roles", required=true)
-      private final Output<Map<String,String>> roles;
+    private Output<Map<String,String>> roles;
 
     public Output<Map<String,String>> roles() {
         return this.roles;
     }
 
-    public IdentityPoolRoleAttachmentArgs(
-        Output<String> identityPoolId,
-        @Nullable Output<List<IdentityPoolRoleAttachmentRoleMappingArgs>> roleMappings,
-        Output<Map<String,String>> roles) {
-        this.identityPoolId = Objects.requireNonNull(identityPoolId, "expected parameter 'identityPoolId' to be non-null");
-        this.roleMappings = roleMappings;
-        this.roles = Objects.requireNonNull(roles, "expected parameter 'roles' to be non-null");
-    }
+    private IdentityPoolRoleAttachmentArgs() {}
 
-    private IdentityPoolRoleAttachmentArgs() {
-        this.identityPoolId = Codegen.empty();
-        this.roleMappings = Codegen.empty();
-        this.roles = Codegen.empty();
+    private IdentityPoolRoleAttachmentArgs(IdentityPoolRoleAttachmentArgs $) {
+        this.identityPoolId = $.identityPoolId;
+        this.roleMappings = $.roleMappings;
+        this.roles = $.roles;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IdentityPoolRoleAttachmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> identityPoolId;
-        private @Nullable Output<List<IdentityPoolRoleAttachmentRoleMappingArgs>> roleMappings;
-        private Output<Map<String,String>> roles;
+        private IdentityPoolRoleAttachmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IdentityPoolRoleAttachmentArgs();
         }
 
         public Builder(IdentityPoolRoleAttachmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.identityPoolId = defaults.identityPoolId;
-    	      this.roleMappings = defaults.roleMappings;
-    	      this.roles = defaults.roles;
+            $ = new IdentityPoolRoleAttachmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder identityPoolId(Output<String> identityPoolId) {
-            this.identityPoolId = Objects.requireNonNull(identityPoolId);
+            $.identityPoolId = identityPoolId;
             return this;
         }
+
         public Builder identityPoolId(String identityPoolId) {
-            this.identityPoolId = Output.of(Objects.requireNonNull(identityPoolId));
-            return this;
+            return identityPoolId(Output.of(identityPoolId));
         }
+
         public Builder roleMappings(@Nullable Output<List<IdentityPoolRoleAttachmentRoleMappingArgs>> roleMappings) {
-            this.roleMappings = roleMappings;
+            $.roleMappings = roleMappings;
             return this;
         }
-        public Builder roleMappings(@Nullable List<IdentityPoolRoleAttachmentRoleMappingArgs> roleMappings) {
-            this.roleMappings = Codegen.ofNullable(roleMappings);
-            return this;
+
+        public Builder roleMappings(List<IdentityPoolRoleAttachmentRoleMappingArgs> roleMappings) {
+            return roleMappings(Output.of(roleMappings));
         }
+
         public Builder roleMappings(IdentityPoolRoleAttachmentRoleMappingArgs... roleMappings) {
             return roleMappings(List.of(roleMappings));
         }
+
         public Builder roles(Output<Map<String,String>> roles) {
-            this.roles = Objects.requireNonNull(roles);
+            $.roles = roles;
             return this;
         }
+
         public Builder roles(Map<String,String> roles) {
-            this.roles = Output.of(Objects.requireNonNull(roles));
-            return this;
-        }        public IdentityPoolRoleAttachmentArgs build() {
-            return new IdentityPoolRoleAttachmentArgs(identityPoolId, roleMappings, roles);
+            return roles(Output.of(roles));
+        }
+
+        public IdentityPoolRoleAttachmentArgs build() {
+            $.identityPoolId = Objects.requireNonNull($.identityPoolId, "expected parameter 'identityPoolId' to be non-null");
+            $.roles = Objects.requireNonNull($.roles, "expected parameter 'roles' to be non-null");
+            return $;
         }
     }
+
 }

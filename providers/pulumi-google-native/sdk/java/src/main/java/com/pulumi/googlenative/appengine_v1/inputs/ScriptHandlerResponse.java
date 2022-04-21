@@ -21,45 +21,45 @@ public final class ScriptHandlerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="scriptPath", required=true)
-      private final String scriptPath;
+    private String scriptPath;
 
     public String scriptPath() {
         return this.scriptPath;
     }
 
-    public ScriptHandlerResponse(String scriptPath) {
-        this.scriptPath = Objects.requireNonNull(scriptPath, "expected parameter 'scriptPath' to be non-null");
-    }
+    private ScriptHandlerResponse() {}
 
-    private ScriptHandlerResponse() {
-        this.scriptPath = null;
+    private ScriptHandlerResponse(ScriptHandlerResponse $) {
+        this.scriptPath = $.scriptPath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScriptHandlerResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String scriptPath;
+        private ScriptHandlerResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScriptHandlerResponse();
         }
 
         public Builder(ScriptHandlerResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.scriptPath = defaults.scriptPath;
+            $ = new ScriptHandlerResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder scriptPath(String scriptPath) {
-            this.scriptPath = Objects.requireNonNull(scriptPath);
+            $.scriptPath = scriptPath;
             return this;
-        }        public ScriptHandlerResponse build() {
-            return new ScriptHandlerResponse(scriptPath);
+        }
+
+        public ScriptHandlerResponse build() {
+            $.scriptPath = Objects.requireNonNull($.scriptPath, "expected parameter 'scriptPath' to be non-null");
+            return $;
         }
     }
+
 }

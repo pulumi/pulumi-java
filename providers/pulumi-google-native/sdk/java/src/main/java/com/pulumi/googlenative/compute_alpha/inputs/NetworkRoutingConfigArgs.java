@@ -5,9 +5,9 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_alpha.enums.NetworkRoutingConfigRoutingMode;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class NetworkRoutingConfigArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="routingMode")
-      private final @Nullable Output<NetworkRoutingConfigRoutingMode> routingMode;
+    private @Nullable Output<NetworkRoutingConfigRoutingMode> routingMode;
 
-    public Output<NetworkRoutingConfigRoutingMode> routingMode() {
-        return this.routingMode == null ? Codegen.empty() : this.routingMode;
+    public Optional<Output<NetworkRoutingConfigRoutingMode>> routingMode() {
+        return Optional.ofNullable(this.routingMode);
     }
 
-    public NetworkRoutingConfigArgs(@Nullable Output<NetworkRoutingConfigRoutingMode> routingMode) {
-        this.routingMode = routingMode;
-    }
+    private NetworkRoutingConfigArgs() {}
 
-    private NetworkRoutingConfigArgs() {
-        this.routingMode = Codegen.empty();
+    private NetworkRoutingConfigArgs(NetworkRoutingConfigArgs $) {
+        this.routingMode = $.routingMode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkRoutingConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<NetworkRoutingConfigRoutingMode> routingMode;
+        private NetworkRoutingConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkRoutingConfigArgs();
         }
 
         public Builder(NetworkRoutingConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.routingMode = defaults.routingMode;
+            $ = new NetworkRoutingConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder routingMode(@Nullable Output<NetworkRoutingConfigRoutingMode> routingMode) {
-            this.routingMode = routingMode;
+            $.routingMode = routingMode;
             return this;
         }
-        public Builder routingMode(@Nullable NetworkRoutingConfigRoutingMode routingMode) {
-            this.routingMode = Codegen.ofNullable(routingMode);
-            return this;
-        }        public NetworkRoutingConfigArgs build() {
-            return new NetworkRoutingConfigArgs(routingMode);
+
+        public Builder routingMode(NetworkRoutingConfigRoutingMode routingMode) {
+            return routingMode(Output.of(routingMode));
+        }
+
+        public NetworkRoutingConfigArgs build() {
+            return $;
         }
     }
+
 }

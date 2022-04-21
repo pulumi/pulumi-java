@@ -5,9 +5,9 @@ package com.pulumi.googlenative.cloudtasks_v2beta2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class PullMessageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="payload")
-      private final @Nullable Output<String> payload;
+    private @Nullable Output<String> payload;
 
-    public Output<String> payload() {
-        return this.payload == null ? Codegen.empty() : this.payload;
+    public Optional<Output<String>> payload() {
+        return Optional.ofNullable(this.payload);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class PullMessageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tag")
-      private final @Nullable Output<String> tag;
+    private @Nullable Output<String> tag;
 
-    public Output<String> tag() {
-        return this.tag == null ? Codegen.empty() : this.tag;
+    public Optional<Output<String>> tag() {
+        return Optional.ofNullable(this.tag);
     }
 
-    public PullMessageArgs(
-        @Nullable Output<String> payload,
-        @Nullable Output<String> tag) {
-        this.payload = payload;
-        this.tag = tag;
-    }
+    private PullMessageArgs() {}
 
-    private PullMessageArgs() {
-        this.payload = Codegen.empty();
-        this.tag = Codegen.empty();
+    private PullMessageArgs(PullMessageArgs $) {
+        this.payload = $.payload;
+        this.tag = $.tag;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PullMessageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> payload;
-        private @Nullable Output<String> tag;
+        private PullMessageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PullMessageArgs();
         }
 
         public Builder(PullMessageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.payload = defaults.payload;
-    	      this.tag = defaults.tag;
+            $ = new PullMessageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder payload(@Nullable Output<String> payload) {
-            this.payload = payload;
+            $.payload = payload;
             return this;
         }
-        public Builder payload(@Nullable String payload) {
-            this.payload = Codegen.ofNullable(payload);
-            return this;
+
+        public Builder payload(String payload) {
+            return payload(Output.of(payload));
         }
+
         public Builder tag(@Nullable Output<String> tag) {
-            this.tag = tag;
+            $.tag = tag;
             return this;
         }
-        public Builder tag(@Nullable String tag) {
-            this.tag = Codegen.ofNullable(tag);
-            return this;
-        }        public PullMessageArgs build() {
-            return new PullMessageArgs(payload, tag);
+
+        public Builder tag(String tag) {
+            return tag(Output.of(tag));
+        }
+
+        public PullMessageArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.gcp.composer.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,49 +14,49 @@ public final class EnvironmentConfigWebServerConfigArgs extends com.pulumi.resou
     public static final EnvironmentConfigWebServerConfigArgs Empty = new EnvironmentConfigWebServerConfigArgs();
 
     @Import(name="machineType", required=true)
-      private final Output<String> machineType;
+    private Output<String> machineType;
 
     public Output<String> machineType() {
         return this.machineType;
     }
 
-    public EnvironmentConfigWebServerConfigArgs(Output<String> machineType) {
-        this.machineType = Objects.requireNonNull(machineType, "expected parameter 'machineType' to be non-null");
-    }
+    private EnvironmentConfigWebServerConfigArgs() {}
 
-    private EnvironmentConfigWebServerConfigArgs() {
-        this.machineType = Codegen.empty();
+    private EnvironmentConfigWebServerConfigArgs(EnvironmentConfigWebServerConfigArgs $) {
+        this.machineType = $.machineType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvironmentConfigWebServerConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> machineType;
+        private EnvironmentConfigWebServerConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvironmentConfigWebServerConfigArgs();
         }
 
         public Builder(EnvironmentConfigWebServerConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.machineType = defaults.machineType;
+            $ = new EnvironmentConfigWebServerConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder machineType(Output<String> machineType) {
-            this.machineType = Objects.requireNonNull(machineType);
+            $.machineType = machineType;
             return this;
         }
+
         public Builder machineType(String machineType) {
-            this.machineType = Output.of(Objects.requireNonNull(machineType));
-            return this;
-        }        public EnvironmentConfigWebServerConfigArgs build() {
-            return new EnvironmentConfigWebServerConfigArgs(machineType);
+            return machineType(Output.of(machineType));
+        }
+
+        public EnvironmentConfigWebServerConfigArgs build() {
+            $.machineType = Objects.requireNonNull($.machineType, "expected parameter 'machineType' to be non-null");
+            return $;
         }
     }
+
 }

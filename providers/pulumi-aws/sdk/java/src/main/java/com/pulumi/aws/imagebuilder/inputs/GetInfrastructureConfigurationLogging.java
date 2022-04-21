@@ -18,48 +18,49 @@ public final class GetInfrastructureConfigurationLogging extends com.pulumi.reso
      * 
      */
     @Import(name="s3Logs", required=true)
-      private final List<GetInfrastructureConfigurationLoggingS3Log> s3Logs;
+    private List<GetInfrastructureConfigurationLoggingS3Log> s3Logs;
 
     public List<GetInfrastructureConfigurationLoggingS3Log> s3Logs() {
         return this.s3Logs;
     }
 
-    public GetInfrastructureConfigurationLogging(List<GetInfrastructureConfigurationLoggingS3Log> s3Logs) {
-        this.s3Logs = Objects.requireNonNull(s3Logs, "expected parameter 's3Logs' to be non-null");
-    }
+    private GetInfrastructureConfigurationLogging() {}
 
-    private GetInfrastructureConfigurationLogging() {
-        this.s3Logs = List.of();
+    private GetInfrastructureConfigurationLogging(GetInfrastructureConfigurationLogging $) {
+        this.s3Logs = $.s3Logs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInfrastructureConfigurationLogging defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GetInfrastructureConfigurationLoggingS3Log> s3Logs;
+        private GetInfrastructureConfigurationLogging $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInfrastructureConfigurationLogging();
         }
 
         public Builder(GetInfrastructureConfigurationLogging defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.s3Logs = defaults.s3Logs;
+            $ = new GetInfrastructureConfigurationLogging(Objects.requireNonNull(defaults));
         }
 
         public Builder s3Logs(List<GetInfrastructureConfigurationLoggingS3Log> s3Logs) {
-            this.s3Logs = Objects.requireNonNull(s3Logs);
+            $.s3Logs = s3Logs;
             return this;
         }
+
         public Builder s3Logs(GetInfrastructureConfigurationLoggingS3Log... s3Logs) {
             return s3Logs(List.of(s3Logs));
-        }        public GetInfrastructureConfigurationLogging build() {
-            return new GetInfrastructureConfigurationLogging(s3Logs);
+        }
+
+        public GetInfrastructureConfigurationLogging build() {
+            $.s3Logs = Objects.requireNonNull($.s3Logs, "expected parameter 's3Logs' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class ClusterStatusResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="detail", required=true)
-      private final String detail;
+    private String detail;
 
     public String detail() {
         return this.detail;
@@ -32,7 +32,7 @@ public final class ClusterStatusResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
@@ -43,7 +43,7 @@ public final class ClusterStatusResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="stateStartTime", required=true)
-      private final String stateStartTime;
+    private String stateStartTime;
 
     public String stateStartTime() {
         return this.stateStartTime;
@@ -54,73 +54,66 @@ public final class ClusterStatusResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="substate", required=true)
-      private final String substate;
+    private String substate;
 
     public String substate() {
         return this.substate;
     }
 
-    public ClusterStatusResponse(
-        String detail,
-        String state,
-        String stateStartTime,
-        String substate) {
-        this.detail = Objects.requireNonNull(detail, "expected parameter 'detail' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-        this.stateStartTime = Objects.requireNonNull(stateStartTime, "expected parameter 'stateStartTime' to be non-null");
-        this.substate = Objects.requireNonNull(substate, "expected parameter 'substate' to be non-null");
-    }
+    private ClusterStatusResponse() {}
 
-    private ClusterStatusResponse() {
-        this.detail = null;
-        this.state = null;
-        this.stateStartTime = null;
-        this.substate = null;
+    private ClusterStatusResponse(ClusterStatusResponse $) {
+        this.detail = $.detail;
+        this.state = $.state;
+        this.stateStartTime = $.stateStartTime;
+        this.substate = $.substate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterStatusResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String detail;
-        private String state;
-        private String stateStartTime;
-        private String substate;
+        private ClusterStatusResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterStatusResponse();
         }
 
         public Builder(ClusterStatusResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.detail = defaults.detail;
-    	      this.state = defaults.state;
-    	      this.stateStartTime = defaults.stateStartTime;
-    	      this.substate = defaults.substate;
+            $ = new ClusterStatusResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder detail(String detail) {
-            this.detail = Objects.requireNonNull(detail);
+            $.detail = detail;
             return this;
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
         }
+
         public Builder stateStartTime(String stateStartTime) {
-            this.stateStartTime = Objects.requireNonNull(stateStartTime);
+            $.stateStartTime = stateStartTime;
             return this;
         }
+
         public Builder substate(String substate) {
-            this.substate = Objects.requireNonNull(substate);
+            $.substate = substate;
             return this;
-        }        public ClusterStatusResponse build() {
-            return new ClusterStatusResponse(detail, state, stateStartTime, substate);
+        }
+
+        public ClusterStatusResponse build() {
+            $.detail = Objects.requireNonNull($.detail, "expected parameter 'detail' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            $.stateStartTime = Objects.requireNonNull($.stateStartTime, "expected parameter 'stateStartTime' to be non-null");
+            $.substate = Objects.requireNonNull($.substate, "expected parameter 'substate' to be non-null");
+            return $;
         }
     }
+
 }

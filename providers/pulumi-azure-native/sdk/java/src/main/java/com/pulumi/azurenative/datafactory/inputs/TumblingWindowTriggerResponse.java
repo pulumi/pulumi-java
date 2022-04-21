@@ -32,10 +32,10 @@ public final class TumblingWindowTriggerResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="annotations")
-      private final @Nullable List<Object> annotations;
+    private @Nullable List<Object> annotations;
 
-    public List<Object> annotations() {
-        return this.annotations == null ? List.of() : this.annotations;
+    public Optional<List<Object>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class TumblingWindowTriggerResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="delay")
-      private final @Nullable Object delay;
+    private @Nullable Object delay;
 
     public Optional<Object> delay() {
-        return this.delay == null ? Optional.empty() : Optional.ofNullable(this.delay);
+        return Optional.ofNullable(this.delay);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class TumblingWindowTriggerResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="dependsOn")
-      private final @Nullable List<Object> dependsOn;
+    private @Nullable List<Object> dependsOn;
 
-    public List<Object> dependsOn() {
-        return this.dependsOn == null ? List.of() : this.dependsOn;
+    public Optional<List<Object>> dependsOn() {
+        return Optional.ofNullable(this.dependsOn);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class TumblingWindowTriggerResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class TumblingWindowTriggerResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="endTime")
-      private final @Nullable String endTime;
+    private @Nullable String endTime;
 
     public Optional<String> endTime() {
-        return this.endTime == null ? Optional.empty() : Optional.ofNullable(this.endTime);
+        return Optional.ofNullable(this.endTime);
     }
 
     /**
@@ -87,7 +87,7 @@ public final class TumblingWindowTriggerResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="frequency", required=true)
-      private final String frequency;
+    private String frequency;
 
     public String frequency() {
         return this.frequency;
@@ -98,7 +98,7 @@ public final class TumblingWindowTriggerResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="interval", required=true)
-      private final Integer interval;
+    private Integer interval;
 
     public Integer interval() {
         return this.interval;
@@ -109,7 +109,7 @@ public final class TumblingWindowTriggerResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="maxConcurrency", required=true)
-      private final Integer maxConcurrency;
+    private Integer maxConcurrency;
 
     public Integer maxConcurrency() {
         return this.maxConcurrency;
@@ -120,7 +120,7 @@ public final class TumblingWindowTriggerResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="pipeline", required=true)
-      private final TriggerPipelineReferenceResponse pipeline;
+    private TriggerPipelineReferenceResponse pipeline;
 
     public TriggerPipelineReferenceResponse pipeline() {
         return this.pipeline;
@@ -131,10 +131,10 @@ public final class TumblingWindowTriggerResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="retryPolicy")
-      private final @Nullable RetryPolicyResponse retryPolicy;
+    private @Nullable RetryPolicyResponse retryPolicy;
 
     public Optional<RetryPolicyResponse> retryPolicy() {
-        return this.retryPolicy == null ? Optional.empty() : Optional.ofNullable(this.retryPolicy);
+        return Optional.ofNullable(this.retryPolicy);
     }
 
     /**
@@ -142,7 +142,7 @@ public final class TumblingWindowTriggerResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="runtimeState", required=true)
-      private final String runtimeState;
+    private String runtimeState;
 
     public String runtimeState() {
         return this.runtimeState;
@@ -153,7 +153,7 @@ public final class TumblingWindowTriggerResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="startTime", required=true)
-      private final String startTime;
+    private String startTime;
 
     public String startTime() {
         return this.startTime;
@@ -165,160 +165,131 @@ public final class TumblingWindowTriggerResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public TumblingWindowTriggerResponse(
-        @Nullable List<Object> annotations,
-        @Nullable Object delay,
-        @Nullable List<Object> dependsOn,
-        @Nullable String description,
-        @Nullable String endTime,
-        String frequency,
-        Integer interval,
-        Integer maxConcurrency,
-        TriggerPipelineReferenceResponse pipeline,
-        @Nullable RetryPolicyResponse retryPolicy,
-        String runtimeState,
-        String startTime,
-        String type) {
-        this.annotations = annotations;
-        this.delay = delay;
-        this.dependsOn = dependsOn;
-        this.description = description;
-        this.endTime = endTime;
-        this.frequency = Objects.requireNonNull(frequency, "expected parameter 'frequency' to be non-null");
-        this.interval = Objects.requireNonNull(interval, "expected parameter 'interval' to be non-null");
-        this.maxConcurrency = Objects.requireNonNull(maxConcurrency, "expected parameter 'maxConcurrency' to be non-null");
-        this.pipeline = Objects.requireNonNull(pipeline, "expected parameter 'pipeline' to be non-null");
-        this.retryPolicy = retryPolicy;
-        this.runtimeState = Objects.requireNonNull(runtimeState, "expected parameter 'runtimeState' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private TumblingWindowTriggerResponse() {}
 
-    private TumblingWindowTriggerResponse() {
-        this.annotations = List.of();
-        this.delay = null;
-        this.dependsOn = List.of();
-        this.description = null;
-        this.endTime = null;
-        this.frequency = null;
-        this.interval = null;
-        this.maxConcurrency = null;
-        this.pipeline = null;
-        this.retryPolicy = null;
-        this.runtimeState = null;
-        this.startTime = null;
-        this.type = null;
+    private TumblingWindowTriggerResponse(TumblingWindowTriggerResponse $) {
+        this.annotations = $.annotations;
+        this.delay = $.delay;
+        this.dependsOn = $.dependsOn;
+        this.description = $.description;
+        this.endTime = $.endTime;
+        this.frequency = $.frequency;
+        this.interval = $.interval;
+        this.maxConcurrency = $.maxConcurrency;
+        this.pipeline = $.pipeline;
+        this.retryPolicy = $.retryPolicy;
+        this.runtimeState = $.runtimeState;
+        this.startTime = $.startTime;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TumblingWindowTriggerResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<Object> annotations;
-        private @Nullable Object delay;
-        private @Nullable List<Object> dependsOn;
-        private @Nullable String description;
-        private @Nullable String endTime;
-        private String frequency;
-        private Integer interval;
-        private Integer maxConcurrency;
-        private TriggerPipelineReferenceResponse pipeline;
-        private @Nullable RetryPolicyResponse retryPolicy;
-        private String runtimeState;
-        private String startTime;
-        private String type;
+        private TumblingWindowTriggerResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TumblingWindowTriggerResponse();
         }
 
         public Builder(TumblingWindowTriggerResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.delay = defaults.delay;
-    	      this.dependsOn = defaults.dependsOn;
-    	      this.description = defaults.description;
-    	      this.endTime = defaults.endTime;
-    	      this.frequency = defaults.frequency;
-    	      this.interval = defaults.interval;
-    	      this.maxConcurrency = defaults.maxConcurrency;
-    	      this.pipeline = defaults.pipeline;
-    	      this.retryPolicy = defaults.retryPolicy;
-    	      this.runtimeState = defaults.runtimeState;
-    	      this.startTime = defaults.startTime;
-    	      this.type = defaults.type;
+            $ = new TumblingWindowTriggerResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder delay(@Nullable Object delay) {
-            this.delay = delay;
+            $.delay = delay;
             return this;
         }
+
         public Builder dependsOn(@Nullable List<Object> dependsOn) {
-            this.dependsOn = dependsOn;
+            $.dependsOn = dependsOn;
             return this;
         }
+
         public Builder dependsOn(Object... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder endTime(@Nullable String endTime) {
-            this.endTime = endTime;
+            $.endTime = endTime;
             return this;
         }
+
         public Builder frequency(String frequency) {
-            this.frequency = Objects.requireNonNull(frequency);
+            $.frequency = frequency;
             return this;
         }
+
         public Builder interval(Integer interval) {
-            this.interval = Objects.requireNonNull(interval);
+            $.interval = interval;
             return this;
         }
+
         public Builder maxConcurrency(Integer maxConcurrency) {
-            this.maxConcurrency = Objects.requireNonNull(maxConcurrency);
+            $.maxConcurrency = maxConcurrency;
             return this;
         }
+
         public Builder pipeline(TriggerPipelineReferenceResponse pipeline) {
-            this.pipeline = Objects.requireNonNull(pipeline);
+            $.pipeline = pipeline;
             return this;
         }
+
         public Builder retryPolicy(@Nullable RetryPolicyResponse retryPolicy) {
-            this.retryPolicy = retryPolicy;
+            $.retryPolicy = retryPolicy;
             return this;
         }
+
         public Builder runtimeState(String runtimeState) {
-            this.runtimeState = Objects.requireNonNull(runtimeState);
+            $.runtimeState = runtimeState;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public TumblingWindowTriggerResponse build() {
-            return new TumblingWindowTriggerResponse(annotations, delay, dependsOn, description, endTime, frequency, interval, maxConcurrency, pipeline, retryPolicy, runtimeState, startTime, type);
+        }
+
+        public TumblingWindowTriggerResponse build() {
+            $.frequency = Objects.requireNonNull($.frequency, "expected parameter 'frequency' to be non-null");
+            $.interval = Objects.requireNonNull($.interval, "expected parameter 'interval' to be non-null");
+            $.maxConcurrency = Objects.requireNonNull($.maxConcurrency, "expected parameter 'maxConcurrency' to be non-null");
+            $.pipeline = Objects.requireNonNull($.pipeline, "expected parameter 'pipeline' to be non-null");
+            $.runtimeState = Objects.requireNonNull($.runtimeState, "expected parameter 'runtimeState' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

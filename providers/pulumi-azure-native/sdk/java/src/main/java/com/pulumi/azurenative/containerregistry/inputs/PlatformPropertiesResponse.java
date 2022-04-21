@@ -23,10 +23,10 @@ public final class PlatformPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="architecture")
-      private final @Nullable String architecture;
+    private @Nullable String architecture;
 
     public Optional<String> architecture() {
-        return this.architecture == null ? Optional.empty() : Optional.ofNullable(this.architecture);
+        return Optional.ofNullable(this.architecture);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class PlatformPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="os", required=true)
-      private final String os;
+    private String os;
 
     public String os() {
         return this.os;
@@ -45,64 +45,57 @@ public final class PlatformPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="variant")
-      private final @Nullable String variant;
+    private @Nullable String variant;
 
     public Optional<String> variant() {
-        return this.variant == null ? Optional.empty() : Optional.ofNullable(this.variant);
+        return Optional.ofNullable(this.variant);
     }
 
-    public PlatformPropertiesResponse(
-        @Nullable String architecture,
-        String os,
-        @Nullable String variant) {
-        this.architecture = architecture;
-        this.os = Objects.requireNonNull(os, "expected parameter 'os' to be non-null");
-        this.variant = variant;
-    }
+    private PlatformPropertiesResponse() {}
 
-    private PlatformPropertiesResponse() {
-        this.architecture = null;
-        this.os = null;
-        this.variant = null;
+    private PlatformPropertiesResponse(PlatformPropertiesResponse $) {
+        this.architecture = $.architecture;
+        this.os = $.os;
+        this.variant = $.variant;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PlatformPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String architecture;
-        private String os;
-        private @Nullable String variant;
+        private PlatformPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PlatformPropertiesResponse();
         }
 
         public Builder(PlatformPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.architecture = defaults.architecture;
-    	      this.os = defaults.os;
-    	      this.variant = defaults.variant;
+            $ = new PlatformPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder architecture(@Nullable String architecture) {
-            this.architecture = architecture;
+            $.architecture = architecture;
             return this;
         }
+
         public Builder os(String os) {
-            this.os = Objects.requireNonNull(os);
+            $.os = os;
             return this;
         }
+
         public Builder variant(@Nullable String variant) {
-            this.variant = variant;
+            $.variant = variant;
             return this;
-        }        public PlatformPropertiesResponse build() {
-            return new PlatformPropertiesResponse(architecture, os, variant);
+        }
+
+        public PlatformPropertiesResponse build() {
+            $.os = Objects.requireNonNull($.os, "expected parameter 'os' to be non-null");
+            return $;
         }
     }
+
 }

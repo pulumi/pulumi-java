@@ -5,9 +5,9 @@ package com.pulumi.aws.workspaces.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class IpGroupRuleGetArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -31,63 +31,59 @@ public final class IpGroupRuleGetArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="source", required=true)
-      private final Output<String> source;
+    private Output<String> source;
 
     public Output<String> source() {
         return this.source;
     }
 
-    public IpGroupRuleGetArgs(
-        @Nullable Output<String> description,
-        Output<String> source) {
-        this.description = description;
-        this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
-    }
+    private IpGroupRuleGetArgs() {}
 
-    private IpGroupRuleGetArgs() {
-        this.description = Codegen.empty();
-        this.source = Codegen.empty();
+    private IpGroupRuleGetArgs(IpGroupRuleGetArgs $) {
+        this.description = $.description;
+        this.source = $.source;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IpGroupRuleGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private Output<String> source;
+        private IpGroupRuleGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IpGroupRuleGetArgs();
         }
 
         public Builder(IpGroupRuleGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.source = defaults.source;
+            $ = new IpGroupRuleGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder source(Output<String> source) {
-            this.source = Objects.requireNonNull(source);
+            $.source = source;
             return this;
         }
+
         public Builder source(String source) {
-            this.source = Output.of(Objects.requireNonNull(source));
-            return this;
-        }        public IpGroupRuleGetArgs build() {
-            return new IpGroupRuleGetArgs(description, source);
+            return source(Output.of(source));
+        }
+
+        public IpGroupRuleGetArgs build() {
+            $.source = Objects.requireNonNull($.source, "expected parameter 'source' to be non-null");
+            return $;
         }
     }
+
 }

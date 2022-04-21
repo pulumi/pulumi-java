@@ -24,10 +24,10 @@ public final class StaticSiteTemplateOptionsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class StaticSiteTemplateOptionsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="isPrivate")
-      private final @Nullable Boolean isPrivate;
+    private @Nullable Boolean isPrivate;
 
     public Optional<Boolean> isPrivate() {
-        return this.isPrivate == null ? Optional.empty() : Optional.ofNullable(this.isPrivate);
+        return Optional.ofNullable(this.isPrivate);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class StaticSiteTemplateOptionsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="owner")
-      private final @Nullable String owner;
+    private @Nullable String owner;
 
     public Optional<String> owner() {
-        return this.owner == null ? Optional.empty() : Optional.ofNullable(this.owner);
+        return Optional.ofNullable(this.owner);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class StaticSiteTemplateOptionsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="repositoryName")
-      private final @Nullable String repositoryName;
+    private @Nullable String repositoryName;
 
     public Optional<String> repositoryName() {
-        return this.repositoryName == null ? Optional.empty() : Optional.ofNullable(this.repositoryName);
+        return Optional.ofNullable(this.repositoryName);
     }
 
     /**
@@ -68,82 +68,68 @@ public final class StaticSiteTemplateOptionsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="templateRepositoryUrl")
-      private final @Nullable String templateRepositoryUrl;
+    private @Nullable String templateRepositoryUrl;
 
     public Optional<String> templateRepositoryUrl() {
-        return this.templateRepositoryUrl == null ? Optional.empty() : Optional.ofNullable(this.templateRepositoryUrl);
+        return Optional.ofNullable(this.templateRepositoryUrl);
     }
 
-    public StaticSiteTemplateOptionsResponse(
-        @Nullable String description,
-        @Nullable Boolean isPrivate,
-        @Nullable String owner,
-        @Nullable String repositoryName,
-        @Nullable String templateRepositoryUrl) {
-        this.description = description;
-        this.isPrivate = isPrivate;
-        this.owner = owner;
-        this.repositoryName = repositoryName;
-        this.templateRepositoryUrl = templateRepositoryUrl;
-    }
+    private StaticSiteTemplateOptionsResponse() {}
 
-    private StaticSiteTemplateOptionsResponse() {
-        this.description = null;
-        this.isPrivate = null;
-        this.owner = null;
-        this.repositoryName = null;
-        this.templateRepositoryUrl = null;
+    private StaticSiteTemplateOptionsResponse(StaticSiteTemplateOptionsResponse $) {
+        this.description = $.description;
+        this.isPrivate = $.isPrivate;
+        this.owner = $.owner;
+        this.repositoryName = $.repositoryName;
+        this.templateRepositoryUrl = $.templateRepositoryUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StaticSiteTemplateOptionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String description;
-        private @Nullable Boolean isPrivate;
-        private @Nullable String owner;
-        private @Nullable String repositoryName;
-        private @Nullable String templateRepositoryUrl;
+        private StaticSiteTemplateOptionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StaticSiteTemplateOptionsResponse();
         }
 
         public Builder(StaticSiteTemplateOptionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.isPrivate = defaults.isPrivate;
-    	      this.owner = defaults.owner;
-    	      this.repositoryName = defaults.repositoryName;
-    	      this.templateRepositoryUrl = defaults.templateRepositoryUrl;
+            $ = new StaticSiteTemplateOptionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder isPrivate(@Nullable Boolean isPrivate) {
-            this.isPrivate = isPrivate;
+            $.isPrivate = isPrivate;
             return this;
         }
+
         public Builder owner(@Nullable String owner) {
-            this.owner = owner;
+            $.owner = owner;
             return this;
         }
+
         public Builder repositoryName(@Nullable String repositoryName) {
-            this.repositoryName = repositoryName;
+            $.repositoryName = repositoryName;
             return this;
         }
+
         public Builder templateRepositoryUrl(@Nullable String templateRepositoryUrl) {
-            this.templateRepositoryUrl = templateRepositoryUrl;
+            $.templateRepositoryUrl = templateRepositoryUrl;
             return this;
-        }        public StaticSiteTemplateOptionsResponse build() {
-            return new StaticSiteTemplateOptionsResponse(description, isPrivate, owner, repositoryName, templateRepositoryUrl);
+        }
+
+        public StaticSiteTemplateOptionsResponse build() {
+            return $;
         }
     }
+
 }

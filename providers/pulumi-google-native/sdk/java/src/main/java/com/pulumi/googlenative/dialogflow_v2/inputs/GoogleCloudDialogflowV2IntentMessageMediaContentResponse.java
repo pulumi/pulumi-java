@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentResponse exte
      * 
      */
     @Import(name="mediaObjects", required=true)
-      private final List<GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectResponse> mediaObjects;
+    private List<GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectResponse> mediaObjects;
 
     public List<GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectResponse> mediaObjects() {
         return this.mediaObjects;
@@ -34,58 +34,56 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentResponse exte
      * 
      */
     @Import(name="mediaType", required=true)
-      private final String mediaType;
+    private String mediaType;
 
     public String mediaType() {
         return this.mediaType;
     }
 
-    public GoogleCloudDialogflowV2IntentMessageMediaContentResponse(
-        List<GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectResponse> mediaObjects,
-        String mediaType) {
-        this.mediaObjects = Objects.requireNonNull(mediaObjects, "expected parameter 'mediaObjects' to be non-null");
-        this.mediaType = Objects.requireNonNull(mediaType, "expected parameter 'mediaType' to be non-null");
-    }
+    private GoogleCloudDialogflowV2IntentMessageMediaContentResponse() {}
 
-    private GoogleCloudDialogflowV2IntentMessageMediaContentResponse() {
-        this.mediaObjects = List.of();
-        this.mediaType = null;
+    private GoogleCloudDialogflowV2IntentMessageMediaContentResponse(GoogleCloudDialogflowV2IntentMessageMediaContentResponse $) {
+        this.mediaObjects = $.mediaObjects;
+        this.mediaType = $.mediaType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2IntentMessageMediaContentResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectResponse> mediaObjects;
-        private String mediaType;
+        private GoogleCloudDialogflowV2IntentMessageMediaContentResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2IntentMessageMediaContentResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2IntentMessageMediaContentResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mediaObjects = defaults.mediaObjects;
-    	      this.mediaType = defaults.mediaType;
+            $ = new GoogleCloudDialogflowV2IntentMessageMediaContentResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder mediaObjects(List<GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectResponse> mediaObjects) {
-            this.mediaObjects = Objects.requireNonNull(mediaObjects);
+            $.mediaObjects = mediaObjects;
             return this;
         }
+
         public Builder mediaObjects(GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectResponse... mediaObjects) {
             return mediaObjects(List.of(mediaObjects));
         }
+
         public Builder mediaType(String mediaType) {
-            this.mediaType = Objects.requireNonNull(mediaType);
+            $.mediaType = mediaType;
             return this;
-        }        public GoogleCloudDialogflowV2IntentMessageMediaContentResponse build() {
-            return new GoogleCloudDialogflowV2IntentMessageMediaContentResponse(mediaObjects, mediaType);
+        }
+
+        public GoogleCloudDialogflowV2IntentMessageMediaContentResponse build() {
+            $.mediaObjects = Objects.requireNonNull($.mediaObjects, "expected parameter 'mediaObjects' to be non-null");
+            $.mediaType = Objects.requireNonNull($.mediaType, "expected parameter 'mediaType' to be non-null");
+            return $;
         }
     }
+
 }

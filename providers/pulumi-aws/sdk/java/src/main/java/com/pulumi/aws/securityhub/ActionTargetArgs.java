@@ -5,9 +5,9 @@ package com.pulumi.aws.securityhub;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class ActionTargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description", required=true)
-      private final Output<String> description;
+    private Output<String> description;
 
     public Output<String> description() {
         return this.description;
@@ -31,7 +31,7 @@ public final class ActionTargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="identifier", required=true)
-      private final Output<String> identifier;
+    private Output<String> identifier;
 
     public Output<String> identifier() {
         return this.identifier;
@@ -42,76 +42,70 @@ public final class ActionTargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public ActionTargetArgs(
-        Output<String> description,
-        Output<String> identifier,
-        @Nullable Output<String> name) {
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.identifier = Objects.requireNonNull(identifier, "expected parameter 'identifier' to be non-null");
-        this.name = name;
-    }
+    private ActionTargetArgs() {}
 
-    private ActionTargetArgs() {
-        this.description = Codegen.empty();
-        this.identifier = Codegen.empty();
-        this.name = Codegen.empty();
+    private ActionTargetArgs(ActionTargetArgs $) {
+        this.description = $.description;
+        this.identifier = $.identifier;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ActionTargetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> description;
-        private Output<String> identifier;
-        private @Nullable Output<String> name;
+        private ActionTargetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ActionTargetArgs();
         }
 
         public Builder(ActionTargetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.identifier = defaults.identifier;
-    	      this.name = defaults.name;
+            $ = new ActionTargetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(Output<String> description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder description(String description) {
-            this.description = Output.of(Objects.requireNonNull(description));
-            return this;
+            return description(Output.of(description));
         }
+
         public Builder identifier(Output<String> identifier) {
-            this.identifier = Objects.requireNonNull(identifier);
+            $.identifier = identifier;
             return this;
         }
+
         public Builder identifier(String identifier) {
-            this.identifier = Output.of(Objects.requireNonNull(identifier));
-            return this;
+            return identifier(Output.of(identifier));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public ActionTargetArgs build() {
-            return new ActionTargetArgs(description, identifier, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public ActionTargetArgs build() {
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.identifier = Objects.requireNonNull($.identifier, "expected parameter 'identifier' to be non-null");
+            return $;
         }
     }
+
 }

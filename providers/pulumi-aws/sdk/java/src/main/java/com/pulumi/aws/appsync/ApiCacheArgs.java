@@ -5,11 +5,11 @@ package com.pulumi.aws.appsync;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class ApiCacheArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apiCachingBehavior", required=true)
-      private final Output<String> apiCachingBehavior;
+    private Output<String> apiCachingBehavior;
 
     public Output<String> apiCachingBehavior() {
         return this.apiCachingBehavior;
@@ -33,7 +33,7 @@ public final class ApiCacheArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apiId", required=true)
-      private final Output<String> apiId;
+    private Output<String> apiId;
 
     public Output<String> apiId() {
         return this.apiId;
@@ -44,10 +44,10 @@ public final class ApiCacheArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="atRestEncryptionEnabled")
-      private final @Nullable Output<Boolean> atRestEncryptionEnabled;
+    private @Nullable Output<Boolean> atRestEncryptionEnabled;
 
-    public Output<Boolean> atRestEncryptionEnabled() {
-        return this.atRestEncryptionEnabled == null ? Codegen.empty() : this.atRestEncryptionEnabled;
+    public Optional<Output<Boolean>> atRestEncryptionEnabled() {
+        return Optional.ofNullable(this.atRestEncryptionEnabled);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class ApiCacheArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="transitEncryptionEnabled")
-      private final @Nullable Output<Boolean> transitEncryptionEnabled;
+    private @Nullable Output<Boolean> transitEncryptionEnabled;
 
-    public Output<Boolean> transitEncryptionEnabled() {
-        return this.transitEncryptionEnabled == null ? Codegen.empty() : this.transitEncryptionEnabled;
+    public Optional<Output<Boolean>> transitEncryptionEnabled() {
+        return Optional.ofNullable(this.transitEncryptionEnabled);
     }
 
     /**
@@ -66,7 +66,7 @@ public final class ApiCacheArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ttl", required=true)
-      private final Output<Integer> ttl;
+    private Output<Integer> ttl;
 
     public Output<Integer> ttl() {
         return this.ttl;
@@ -77,115 +77,102 @@ public final class ApiCacheArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public ApiCacheArgs(
-        Output<String> apiCachingBehavior,
-        Output<String> apiId,
-        @Nullable Output<Boolean> atRestEncryptionEnabled,
-        @Nullable Output<Boolean> transitEncryptionEnabled,
-        Output<Integer> ttl,
-        Output<String> type) {
-        this.apiCachingBehavior = Objects.requireNonNull(apiCachingBehavior, "expected parameter 'apiCachingBehavior' to be non-null");
-        this.apiId = Objects.requireNonNull(apiId, "expected parameter 'apiId' to be non-null");
-        this.atRestEncryptionEnabled = atRestEncryptionEnabled;
-        this.transitEncryptionEnabled = transitEncryptionEnabled;
-        this.ttl = Objects.requireNonNull(ttl, "expected parameter 'ttl' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ApiCacheArgs() {}
 
-    private ApiCacheArgs() {
-        this.apiCachingBehavior = Codegen.empty();
-        this.apiId = Codegen.empty();
-        this.atRestEncryptionEnabled = Codegen.empty();
-        this.transitEncryptionEnabled = Codegen.empty();
-        this.ttl = Codegen.empty();
-        this.type = Codegen.empty();
+    private ApiCacheArgs(ApiCacheArgs $) {
+        this.apiCachingBehavior = $.apiCachingBehavior;
+        this.apiId = $.apiId;
+        this.atRestEncryptionEnabled = $.atRestEncryptionEnabled;
+        this.transitEncryptionEnabled = $.transitEncryptionEnabled;
+        this.ttl = $.ttl;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiCacheArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> apiCachingBehavior;
-        private Output<String> apiId;
-        private @Nullable Output<Boolean> atRestEncryptionEnabled;
-        private @Nullable Output<Boolean> transitEncryptionEnabled;
-        private Output<Integer> ttl;
-        private Output<String> type;
+        private ApiCacheArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiCacheArgs();
         }
 
         public Builder(ApiCacheArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiCachingBehavior = defaults.apiCachingBehavior;
-    	      this.apiId = defaults.apiId;
-    	      this.atRestEncryptionEnabled = defaults.atRestEncryptionEnabled;
-    	      this.transitEncryptionEnabled = defaults.transitEncryptionEnabled;
-    	      this.ttl = defaults.ttl;
-    	      this.type = defaults.type;
+            $ = new ApiCacheArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiCachingBehavior(Output<String> apiCachingBehavior) {
-            this.apiCachingBehavior = Objects.requireNonNull(apiCachingBehavior);
+            $.apiCachingBehavior = apiCachingBehavior;
             return this;
         }
+
         public Builder apiCachingBehavior(String apiCachingBehavior) {
-            this.apiCachingBehavior = Output.of(Objects.requireNonNull(apiCachingBehavior));
-            return this;
+            return apiCachingBehavior(Output.of(apiCachingBehavior));
         }
+
         public Builder apiId(Output<String> apiId) {
-            this.apiId = Objects.requireNonNull(apiId);
+            $.apiId = apiId;
             return this;
         }
+
         public Builder apiId(String apiId) {
-            this.apiId = Output.of(Objects.requireNonNull(apiId));
-            return this;
+            return apiId(Output.of(apiId));
         }
+
         public Builder atRestEncryptionEnabled(@Nullable Output<Boolean> atRestEncryptionEnabled) {
-            this.atRestEncryptionEnabled = atRestEncryptionEnabled;
+            $.atRestEncryptionEnabled = atRestEncryptionEnabled;
             return this;
         }
-        public Builder atRestEncryptionEnabled(@Nullable Boolean atRestEncryptionEnabled) {
-            this.atRestEncryptionEnabled = Codegen.ofNullable(atRestEncryptionEnabled);
-            return this;
+
+        public Builder atRestEncryptionEnabled(Boolean atRestEncryptionEnabled) {
+            return atRestEncryptionEnabled(Output.of(atRestEncryptionEnabled));
         }
+
         public Builder transitEncryptionEnabled(@Nullable Output<Boolean> transitEncryptionEnabled) {
-            this.transitEncryptionEnabled = transitEncryptionEnabled;
+            $.transitEncryptionEnabled = transitEncryptionEnabled;
             return this;
         }
-        public Builder transitEncryptionEnabled(@Nullable Boolean transitEncryptionEnabled) {
-            this.transitEncryptionEnabled = Codegen.ofNullable(transitEncryptionEnabled);
-            return this;
+
+        public Builder transitEncryptionEnabled(Boolean transitEncryptionEnabled) {
+            return transitEncryptionEnabled(Output.of(transitEncryptionEnabled));
         }
+
         public Builder ttl(Output<Integer> ttl) {
-            this.ttl = Objects.requireNonNull(ttl);
+            $.ttl = ttl;
             return this;
         }
+
         public Builder ttl(Integer ttl) {
-            this.ttl = Output.of(Objects.requireNonNull(ttl));
-            return this;
+            return ttl(Output.of(ttl));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public ApiCacheArgs build() {
-            return new ApiCacheArgs(apiCachingBehavior, apiId, atRestEncryptionEnabled, transitEncryptionEnabled, ttl, type);
+            return type(Output.of(type));
+        }
+
+        public ApiCacheArgs build() {
+            $.apiCachingBehavior = Objects.requireNonNull($.apiCachingBehavior, "expected parameter 'apiCachingBehavior' to be non-null");
+            $.apiId = Objects.requireNonNull($.apiId, "expected parameter 'apiId' to be non-null");
+            $.ttl = Objects.requireNonNull($.ttl, "expected parameter 'ttl' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

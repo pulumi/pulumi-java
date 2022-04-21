@@ -17,45 +17,45 @@ public final class GetPackagingGroupArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public GetPackagingGroupArgs(String id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private GetPackagingGroupArgs() {}
 
-    private GetPackagingGroupArgs() {
-        this.id = null;
+    private GetPackagingGroupArgs(GetPackagingGroupArgs $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPackagingGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
+        private GetPackagingGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPackagingGroupArgs();
         }
 
         public Builder(GetPackagingGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new GetPackagingGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public GetPackagingGroupArgs build() {
-            return new GetPackagingGroupArgs(id);
+        }
+
+        public GetPackagingGroupArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

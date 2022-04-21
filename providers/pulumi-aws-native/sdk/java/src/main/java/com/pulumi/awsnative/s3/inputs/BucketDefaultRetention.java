@@ -20,78 +20,70 @@ public final class BucketDefaultRetention extends com.pulumi.resources.InvokeArg
     public static final BucketDefaultRetention Empty = new BucketDefaultRetention();
 
     @Import(name="days")
-      private final @Nullable Integer days;
+    private @Nullable Integer days;
 
     public Optional<Integer> days() {
-        return this.days == null ? Optional.empty() : Optional.ofNullable(this.days);
+        return Optional.ofNullable(this.days);
     }
 
     @Import(name="mode")
-      private final @Nullable BucketDefaultRetentionMode mode;
+    private @Nullable BucketDefaultRetentionMode mode;
 
     public Optional<BucketDefaultRetentionMode> mode() {
-        return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
+        return Optional.ofNullable(this.mode);
     }
 
     @Import(name="years")
-      private final @Nullable Integer years;
+    private @Nullable Integer years;
 
     public Optional<Integer> years() {
-        return this.years == null ? Optional.empty() : Optional.ofNullable(this.years);
+        return Optional.ofNullable(this.years);
     }
 
-    public BucketDefaultRetention(
-        @Nullable Integer days,
-        @Nullable BucketDefaultRetentionMode mode,
-        @Nullable Integer years) {
-        this.days = days;
-        this.mode = mode;
-        this.years = years;
-    }
+    private BucketDefaultRetention() {}
 
-    private BucketDefaultRetention() {
-        this.days = null;
-        this.mode = null;
-        this.years = null;
+    private BucketDefaultRetention(BucketDefaultRetention $) {
+        this.days = $.days;
+        this.mode = $.mode;
+        this.years = $.years;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketDefaultRetention defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer days;
-        private @Nullable BucketDefaultRetentionMode mode;
-        private @Nullable Integer years;
+        private BucketDefaultRetention $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketDefaultRetention();
         }
 
         public Builder(BucketDefaultRetention defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.days = defaults.days;
-    	      this.mode = defaults.mode;
-    	      this.years = defaults.years;
+            $ = new BucketDefaultRetention(Objects.requireNonNull(defaults));
         }
 
         public Builder days(@Nullable Integer days) {
-            this.days = days;
+            $.days = days;
             return this;
         }
+
         public Builder mode(@Nullable BucketDefaultRetentionMode mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
         }
+
         public Builder years(@Nullable Integer years) {
-            this.years = years;
+            $.years = years;
             return this;
-        }        public BucketDefaultRetention build() {
-            return new BucketDefaultRetention(days, mode, years);
+        }
+
+        public BucketDefaultRetention build() {
+            return $;
         }
     }
+
 }

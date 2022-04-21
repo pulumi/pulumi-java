@@ -9,6 +9,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class MigrateSqlServerSqlDbTaskPropertiesArgs extends com.pulumi.re
      * 
      */
     @Import(name="input")
-      private final @Nullable Output<MigrateSqlServerSqlDbTaskInputArgs> input;
+    private @Nullable Output<MigrateSqlServerSqlDbTaskInputArgs> input;
 
-    public Output<MigrateSqlServerSqlDbTaskInputArgs> input() {
-        return this.input == null ? Codegen.empty() : this.input;
+    public Optional<Output<MigrateSqlServerSqlDbTaskInputArgs>> input() {
+        return Optional.ofNullable(this.input);
     }
 
     /**
@@ -37,63 +38,59 @@ public final class MigrateSqlServerSqlDbTaskPropertiesArgs extends com.pulumi.re
      * 
      */
     @Import(name="taskType", required=true)
-      private final Output<String> taskType;
+    private Output<String> taskType;
 
     public Output<String> taskType() {
         return this.taskType;
     }
 
-    public MigrateSqlServerSqlDbTaskPropertiesArgs(
-        @Nullable Output<MigrateSqlServerSqlDbTaskInputArgs> input,
-        Output<String> taskType) {
-        this.input = input;
-        this.taskType = Codegen.stringProp("taskType").output().arg(taskType).require();
-    }
+    private MigrateSqlServerSqlDbTaskPropertiesArgs() {}
 
-    private MigrateSqlServerSqlDbTaskPropertiesArgs() {
-        this.input = Codegen.empty();
-        this.taskType = Codegen.empty();
+    private MigrateSqlServerSqlDbTaskPropertiesArgs(MigrateSqlServerSqlDbTaskPropertiesArgs $) {
+        this.input = $.input;
+        this.taskType = $.taskType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MigrateSqlServerSqlDbTaskPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<MigrateSqlServerSqlDbTaskInputArgs> input;
-        private Output<String> taskType;
+        private MigrateSqlServerSqlDbTaskPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MigrateSqlServerSqlDbTaskPropertiesArgs();
         }
 
         public Builder(MigrateSqlServerSqlDbTaskPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.input = defaults.input;
-    	      this.taskType = defaults.taskType;
+            $ = new MigrateSqlServerSqlDbTaskPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder input(@Nullable Output<MigrateSqlServerSqlDbTaskInputArgs> input) {
-            this.input = input;
+            $.input = input;
             return this;
         }
-        public Builder input(@Nullable MigrateSqlServerSqlDbTaskInputArgs input) {
-            this.input = Codegen.ofNullable(input);
-            return this;
+
+        public Builder input(MigrateSqlServerSqlDbTaskInputArgs input) {
+            return input(Output.of(input));
         }
+
         public Builder taskType(Output<String> taskType) {
-            this.taskType = Objects.requireNonNull(taskType);
+            $.taskType = taskType;
             return this;
         }
+
         public Builder taskType(String taskType) {
-            this.taskType = Output.of(Objects.requireNonNull(taskType));
-            return this;
-        }        public MigrateSqlServerSqlDbTaskPropertiesArgs build() {
-            return new MigrateSqlServerSqlDbTaskPropertiesArgs(input, taskType);
+            return taskType(Output.of(taskType));
+        }
+
+        public MigrateSqlServerSqlDbTaskPropertiesArgs build() {
+            $.taskType = Codegen.stringProp("taskType").output().arg($.taskType).require();
+            return $;
         }
     }
+
 }

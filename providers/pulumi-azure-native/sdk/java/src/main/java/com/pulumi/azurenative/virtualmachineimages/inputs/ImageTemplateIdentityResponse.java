@@ -25,10 +25,10 @@ public final class ImageTemplateIdentityResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -36,55 +36,50 @@ public final class ImageTemplateIdentityResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="userAssignedIdentities")
-      private final @Nullable Map<String,ImageTemplateIdentityResponseUserAssignedIdentities> userAssignedIdentities;
+    private @Nullable Map<String,ImageTemplateIdentityResponseUserAssignedIdentities> userAssignedIdentities;
 
-    public Map<String,ImageTemplateIdentityResponseUserAssignedIdentities> userAssignedIdentities() {
-        return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
+    public Optional<Map<String,ImageTemplateIdentityResponseUserAssignedIdentities>> userAssignedIdentities() {
+        return Optional.ofNullable(this.userAssignedIdentities);
     }
 
-    public ImageTemplateIdentityResponse(
-        @Nullable String type,
-        @Nullable Map<String,ImageTemplateIdentityResponseUserAssignedIdentities> userAssignedIdentities) {
-        this.type = type;
-        this.userAssignedIdentities = userAssignedIdentities;
-    }
+    private ImageTemplateIdentityResponse() {}
 
-    private ImageTemplateIdentityResponse() {
-        this.type = null;
-        this.userAssignedIdentities = Map.of();
+    private ImageTemplateIdentityResponse(ImageTemplateIdentityResponse $) {
+        this.type = $.type;
+        this.userAssignedIdentities = $.userAssignedIdentities;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageTemplateIdentityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String type;
-        private @Nullable Map<String,ImageTemplateIdentityResponseUserAssignedIdentities> userAssignedIdentities;
+        private ImageTemplateIdentityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageTemplateIdentityResponse();
         }
 
         public Builder(ImageTemplateIdentityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
-    	      this.userAssignedIdentities = defaults.userAssignedIdentities;
+            $ = new ImageTemplateIdentityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
+
         public Builder userAssignedIdentities(@Nullable Map<String,ImageTemplateIdentityResponseUserAssignedIdentities> userAssignedIdentities) {
-            this.userAssignedIdentities = userAssignedIdentities;
+            $.userAssignedIdentities = userAssignedIdentities;
             return this;
-        }        public ImageTemplateIdentityResponse build() {
-            return new ImageTemplateIdentityResponse(type, userAssignedIdentities);
+        }
+
+        public ImageTemplateIdentityResponse build() {
+            return $;
         }
     }
+
 }

@@ -16,68 +16,65 @@ public final class DataSetColumnLevelPermissionRule extends com.pulumi.resources
     public static final DataSetColumnLevelPermissionRule Empty = new DataSetColumnLevelPermissionRule();
 
     @Import(name="columnNames")
-      private final @Nullable List<String> columnNames;
+    private @Nullable List<String> columnNames;
 
-    public List<String> columnNames() {
-        return this.columnNames == null ? List.of() : this.columnNames;
+    public Optional<List<String>> columnNames() {
+        return Optional.ofNullable(this.columnNames);
     }
 
     @Import(name="principals")
-      private final @Nullable List<String> principals;
+    private @Nullable List<String> principals;
 
-    public List<String> principals() {
-        return this.principals == null ? List.of() : this.principals;
+    public Optional<List<String>> principals() {
+        return Optional.ofNullable(this.principals);
     }
 
-    public DataSetColumnLevelPermissionRule(
-        @Nullable List<String> columnNames,
-        @Nullable List<String> principals) {
-        this.columnNames = columnNames;
-        this.principals = principals;
-    }
+    private DataSetColumnLevelPermissionRule() {}
 
-    private DataSetColumnLevelPermissionRule() {
-        this.columnNames = List.of();
-        this.principals = List.of();
+    private DataSetColumnLevelPermissionRule(DataSetColumnLevelPermissionRule $) {
+        this.columnNames = $.columnNames;
+        this.principals = $.principals;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSetColumnLevelPermissionRule defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> columnNames;
-        private @Nullable List<String> principals;
+        private DataSetColumnLevelPermissionRule $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSetColumnLevelPermissionRule();
         }
 
         public Builder(DataSetColumnLevelPermissionRule defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.columnNames = defaults.columnNames;
-    	      this.principals = defaults.principals;
+            $ = new DataSetColumnLevelPermissionRule(Objects.requireNonNull(defaults));
         }
 
         public Builder columnNames(@Nullable List<String> columnNames) {
-            this.columnNames = columnNames;
+            $.columnNames = columnNames;
             return this;
         }
+
         public Builder columnNames(String... columnNames) {
             return columnNames(List.of(columnNames));
         }
+
         public Builder principals(@Nullable List<String> principals) {
-            this.principals = principals;
+            $.principals = principals;
             return this;
         }
+
         public Builder principals(String... principals) {
             return principals(List.of(principals));
-        }        public DataSetColumnLevelPermissionRule build() {
-            return new DataSetColumnLevelPermissionRule(columnNames, principals);
+        }
+
+        public DataSetColumnLevelPermissionRule build() {
+            return $;
         }
     }
+
 }

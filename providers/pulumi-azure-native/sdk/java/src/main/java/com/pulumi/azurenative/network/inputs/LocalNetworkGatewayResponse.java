@@ -26,10 +26,10 @@ public final class LocalNetworkGatewayResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="bgpSettings")
-      private final @Nullable BgpSettingsResponse bgpSettings;
+    private @Nullable BgpSettingsResponse bgpSettings;
 
     public Optional<BgpSettingsResponse> bgpSettings() {
-        return this.bgpSettings == null ? Optional.empty() : Optional.ofNullable(this.bgpSettings);
+        return Optional.ofNullable(this.bgpSettings);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class LocalNetworkGatewayResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -48,10 +48,10 @@ public final class LocalNetworkGatewayResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="fqdn")
-      private final @Nullable String fqdn;
+    private @Nullable String fqdn;
 
     public Optional<String> fqdn() {
-        return this.fqdn == null ? Optional.empty() : Optional.ofNullable(this.fqdn);
+        return Optional.ofNullable(this.fqdn);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class LocalNetworkGatewayResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="gatewayIpAddress")
-      private final @Nullable String gatewayIpAddress;
+    private @Nullable String gatewayIpAddress;
 
     public Optional<String> gatewayIpAddress() {
-        return this.gatewayIpAddress == null ? Optional.empty() : Optional.ofNullable(this.gatewayIpAddress);
+        return Optional.ofNullable(this.gatewayIpAddress);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class LocalNetworkGatewayResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class LocalNetworkGatewayResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="localNetworkAddressSpace")
-      private final @Nullable AddressSpaceResponse localNetworkAddressSpace;
+    private @Nullable AddressSpaceResponse localNetworkAddressSpace;
 
     public Optional<AddressSpaceResponse> localNetworkAddressSpace() {
-        return this.localNetworkAddressSpace == null ? Optional.empty() : Optional.ofNullable(this.localNetworkAddressSpace);
+        return Optional.ofNullable(this.localNetworkAddressSpace);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class LocalNetworkGatewayResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="location")
-      private final @Nullable String location;
+    private @Nullable String location;
 
     public Optional<String> location() {
-        return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -103,7 +103,7 @@ public final class LocalNetworkGatewayResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -114,7 +114,7 @@ public final class LocalNetworkGatewayResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -125,7 +125,7 @@ public final class LocalNetworkGatewayResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="resourceGuid", required=true)
-      private final String resourceGuid;
+    private String resourceGuid;
 
     public String resourceGuid() {
         return this.resourceGuid;
@@ -136,10 +136,10 @@ public final class LocalNetworkGatewayResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -147,145 +147,115 @@ public final class LocalNetworkGatewayResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public LocalNetworkGatewayResponse(
-        @Nullable BgpSettingsResponse bgpSettings,
-        String etag,
-        @Nullable String fqdn,
-        @Nullable String gatewayIpAddress,
-        @Nullable String id,
-        @Nullable AddressSpaceResponse localNetworkAddressSpace,
-        @Nullable String location,
-        String name,
-        String provisioningState,
-        String resourceGuid,
-        @Nullable Map<String,String> tags,
-        String type) {
-        this.bgpSettings = bgpSettings;
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.fqdn = fqdn;
-        this.gatewayIpAddress = gatewayIpAddress;
-        this.id = id;
-        this.localNetworkAddressSpace = localNetworkAddressSpace;
-        this.location = location;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.resourceGuid = Objects.requireNonNull(resourceGuid, "expected parameter 'resourceGuid' to be non-null");
-        this.tags = tags;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private LocalNetworkGatewayResponse() {}
 
-    private LocalNetworkGatewayResponse() {
-        this.bgpSettings = null;
-        this.etag = null;
-        this.fqdn = null;
-        this.gatewayIpAddress = null;
-        this.id = null;
-        this.localNetworkAddressSpace = null;
-        this.location = null;
-        this.name = null;
-        this.provisioningState = null;
-        this.resourceGuid = null;
-        this.tags = Map.of();
-        this.type = null;
+    private LocalNetworkGatewayResponse(LocalNetworkGatewayResponse $) {
+        this.bgpSettings = $.bgpSettings;
+        this.etag = $.etag;
+        this.fqdn = $.fqdn;
+        this.gatewayIpAddress = $.gatewayIpAddress;
+        this.id = $.id;
+        this.localNetworkAddressSpace = $.localNetworkAddressSpace;
+        this.location = $.location;
+        this.name = $.name;
+        this.provisioningState = $.provisioningState;
+        this.resourceGuid = $.resourceGuid;
+        this.tags = $.tags;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LocalNetworkGatewayResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable BgpSettingsResponse bgpSettings;
-        private String etag;
-        private @Nullable String fqdn;
-        private @Nullable String gatewayIpAddress;
-        private @Nullable String id;
-        private @Nullable AddressSpaceResponse localNetworkAddressSpace;
-        private @Nullable String location;
-        private String name;
-        private String provisioningState;
-        private String resourceGuid;
-        private @Nullable Map<String,String> tags;
-        private String type;
+        private LocalNetworkGatewayResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LocalNetworkGatewayResponse();
         }
 
         public Builder(LocalNetworkGatewayResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bgpSettings = defaults.bgpSettings;
-    	      this.etag = defaults.etag;
-    	      this.fqdn = defaults.fqdn;
-    	      this.gatewayIpAddress = defaults.gatewayIpAddress;
-    	      this.id = defaults.id;
-    	      this.localNetworkAddressSpace = defaults.localNetworkAddressSpace;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.resourceGuid = defaults.resourceGuid;
-    	      this.tags = defaults.tags;
-    	      this.type = defaults.type;
+            $ = new LocalNetworkGatewayResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bgpSettings(@Nullable BgpSettingsResponse bgpSettings) {
-            this.bgpSettings = bgpSettings;
+            $.bgpSettings = bgpSettings;
             return this;
         }
+
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder fqdn(@Nullable String fqdn) {
-            this.fqdn = fqdn;
+            $.fqdn = fqdn;
             return this;
         }
+
         public Builder gatewayIpAddress(@Nullable String gatewayIpAddress) {
-            this.gatewayIpAddress = gatewayIpAddress;
+            $.gatewayIpAddress = gatewayIpAddress;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder localNetworkAddressSpace(@Nullable AddressSpaceResponse localNetworkAddressSpace) {
-            this.localNetworkAddressSpace = localNetworkAddressSpace;
+            $.localNetworkAddressSpace = localNetworkAddressSpace;
             return this;
         }
+
         public Builder location(@Nullable String location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder resourceGuid(String resourceGuid) {
-            this.resourceGuid = Objects.requireNonNull(resourceGuid);
+            $.resourceGuid = resourceGuid;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public LocalNetworkGatewayResponse build() {
-            return new LocalNetworkGatewayResponse(bgpSettings, etag, fqdn, gatewayIpAddress, id, localNetworkAddressSpace, location, name, provisioningState, resourceGuid, tags, type);
+        }
+
+        public LocalNetworkGatewayResponse build() {
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.resourceGuid = Objects.requireNonNull($.resourceGuid, "expected parameter 'resourceGuid' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

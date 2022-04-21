@@ -24,10 +24,10 @@ public final class StorageAccountResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class StorageAccountResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="identity")
-      private final @Nullable ResourceIdentityResponse identity;
+    private @Nullable ResourceIdentityResponse identity;
 
     public Optional<ResourceIdentityResponse> identity() {
-        return this.identity == null ? Optional.empty() : Optional.ofNullable(this.identity);
+        return Optional.ofNullable(this.identity);
     }
 
     /**
@@ -46,64 +46,57 @@ public final class StorageAccountResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
     }
 
-    public StorageAccountResponse(
-        @Nullable String id,
-        @Nullable ResourceIdentityResponse identity,
-        String status) {
-        this.id = id;
-        this.identity = identity;
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-    }
+    private StorageAccountResponse() {}
 
-    private StorageAccountResponse() {
-        this.id = null;
-        this.identity = null;
-        this.status = null;
+    private StorageAccountResponse(StorageAccountResponse $) {
+        this.id = $.id;
+        this.identity = $.identity;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageAccountResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String id;
-        private @Nullable ResourceIdentityResponse identity;
-        private String status;
+        private StorageAccountResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageAccountResponse();
         }
 
         public Builder(StorageAccountResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.identity = defaults.identity;
-    	      this.status = defaults.status;
+            $ = new StorageAccountResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder identity(@Nullable ResourceIdentityResponse identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
-        }        public StorageAccountResponse build() {
-            return new StorageAccountResponse(id, identity, status);
+        }
+
+        public StorageAccountResponse build() {
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

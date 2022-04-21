@@ -22,7 +22,7 @@ public final class PartitionConfigResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="capacity", required=true)
-      private final CapacityResponse capacity;
+    private CapacityResponse capacity;
 
     public CapacityResponse capacity() {
         return this.capacity;
@@ -33,55 +33,52 @@ public final class PartitionConfigResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="count", required=true)
-      private final String count;
+    private String count;
 
     public String count() {
         return this.count;
     }
 
-    public PartitionConfigResponse(
-        CapacityResponse capacity,
-        String count) {
-        this.capacity = Objects.requireNonNull(capacity, "expected parameter 'capacity' to be non-null");
-        this.count = Objects.requireNonNull(count, "expected parameter 'count' to be non-null");
-    }
+    private PartitionConfigResponse() {}
 
-    private PartitionConfigResponse() {
-        this.capacity = null;
-        this.count = null;
+    private PartitionConfigResponse(PartitionConfigResponse $) {
+        this.capacity = $.capacity;
+        this.count = $.count;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PartitionConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private CapacityResponse capacity;
-        private String count;
+        private PartitionConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PartitionConfigResponse();
         }
 
         public Builder(PartitionConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacity = defaults.capacity;
-    	      this.count = defaults.count;
+            $ = new PartitionConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder capacity(CapacityResponse capacity) {
-            this.capacity = Objects.requireNonNull(capacity);
+            $.capacity = capacity;
             return this;
         }
+
         public Builder count(String count) {
-            this.count = Objects.requireNonNull(count);
+            $.count = count;
             return this;
-        }        public PartitionConfigResponse build() {
-            return new PartitionConfigResponse(capacity, count);
+        }
+
+        public PartitionConfigResponse build() {
+            $.capacity = Objects.requireNonNull($.capacity, "expected parameter 'capacity' to be non-null");
+            $.count = Objects.requireNonNull($.count, "expected parameter 'count' to be non-null");
+            return $;
         }
     }
+
 }

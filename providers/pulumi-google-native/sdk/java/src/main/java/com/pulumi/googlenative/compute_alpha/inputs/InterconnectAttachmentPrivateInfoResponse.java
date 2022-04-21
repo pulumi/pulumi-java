@@ -21,45 +21,45 @@ public final class InterconnectAttachmentPrivateInfoResponse extends com.pulumi.
      * 
      */
     @Import(name="tag8021q", required=true)
-      private final Integer tag8021q;
+    private Integer tag8021q;
 
     public Integer tag8021q() {
         return this.tag8021q;
     }
 
-    public InterconnectAttachmentPrivateInfoResponse(Integer tag8021q) {
-        this.tag8021q = Objects.requireNonNull(tag8021q, "expected parameter 'tag8021q' to be non-null");
-    }
+    private InterconnectAttachmentPrivateInfoResponse() {}
 
-    private InterconnectAttachmentPrivateInfoResponse() {
-        this.tag8021q = null;
+    private InterconnectAttachmentPrivateInfoResponse(InterconnectAttachmentPrivateInfoResponse $) {
+        this.tag8021q = $.tag8021q;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InterconnectAttachmentPrivateInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer tag8021q;
+        private InterconnectAttachmentPrivateInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InterconnectAttachmentPrivateInfoResponse();
         }
 
         public Builder(InterconnectAttachmentPrivateInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.tag8021q = defaults.tag8021q;
+            $ = new InterconnectAttachmentPrivateInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder tag8021q(Integer tag8021q) {
-            this.tag8021q = Objects.requireNonNull(tag8021q);
+            $.tag8021q = tag8021q;
             return this;
-        }        public InterconnectAttachmentPrivateInfoResponse build() {
-            return new InterconnectAttachmentPrivateInfoResponse(tag8021q);
+        }
+
+        public InterconnectAttachmentPrivateInfoResponse build() {
+            $.tag8021q = Objects.requireNonNull($.tag8021q, "expected parameter 'tag8021q' to be non-null");
+            return $;
         }
     }
+
 }

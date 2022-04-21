@@ -5,9 +5,9 @@ package com.pulumi.googlenative.container_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.container_v1.inputs.MonitoringComponentConfigArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class MonitoringConfigArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="componentConfig")
-      private final @Nullable Output<MonitoringComponentConfigArgs> componentConfig;
+    private @Nullable Output<MonitoringComponentConfigArgs> componentConfig;
 
-    public Output<MonitoringComponentConfigArgs> componentConfig() {
-        return this.componentConfig == null ? Codegen.empty() : this.componentConfig;
+    public Optional<Output<MonitoringComponentConfigArgs>> componentConfig() {
+        return Optional.ofNullable(this.componentConfig);
     }
 
-    public MonitoringConfigArgs(@Nullable Output<MonitoringComponentConfigArgs> componentConfig) {
-        this.componentConfig = componentConfig;
-    }
+    private MonitoringConfigArgs() {}
 
-    private MonitoringConfigArgs() {
-        this.componentConfig = Codegen.empty();
+    private MonitoringConfigArgs(MonitoringConfigArgs $) {
+        this.componentConfig = $.componentConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MonitoringConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<MonitoringComponentConfigArgs> componentConfig;
+        private MonitoringConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MonitoringConfigArgs();
         }
 
         public Builder(MonitoringConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.componentConfig = defaults.componentConfig;
+            $ = new MonitoringConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder componentConfig(@Nullable Output<MonitoringComponentConfigArgs> componentConfig) {
-            this.componentConfig = componentConfig;
+            $.componentConfig = componentConfig;
             return this;
         }
-        public Builder componentConfig(@Nullable MonitoringComponentConfigArgs componentConfig) {
-            this.componentConfig = Codegen.ofNullable(componentConfig);
-            return this;
-        }        public MonitoringConfigArgs build() {
-            return new MonitoringConfigArgs(componentConfig);
+
+        public Builder componentConfig(MonitoringComponentConfigArgs componentConfig) {
+            return componentConfig(Output.of(componentConfig));
+        }
+
+        public MonitoringConfigArgs build() {
+            return $;
         }
     }
+
 }

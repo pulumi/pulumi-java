@@ -5,7 +5,6 @@ package com.pulumi.googlenative.compute_alpha;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_alpha.enums.AddressAddressType;
 import com.pulumi.googlenative.compute_alpha.enums.AddressIpVersion;
 import com.pulumi.googlenative.compute_alpha.enums.AddressNetworkTier;
@@ -14,6 +13,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class AddressArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="address")
-      private final @Nullable Output<String> address;
+    private @Nullable Output<String> address;
 
-    public Output<String> address() {
-        return this.address == null ? Codegen.empty() : this.address;
+    public Optional<Output<String>> address() {
+        return Optional.ofNullable(this.address);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class AddressArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="addressType")
-      private final @Nullable Output<AddressAddressType> addressType;
+    private @Nullable Output<AddressAddressType> addressType;
 
-    public Output<AddressAddressType> addressType() {
-        return this.addressType == null ? Codegen.empty() : this.addressType;
+    public Optional<Output<AddressAddressType>> addressType() {
+        return Optional.ofNullable(this.addressType);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class AddressArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class AddressArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ipVersion")
-      private final @Nullable Output<AddressIpVersion> ipVersion;
+    private @Nullable Output<AddressIpVersion> ipVersion;
 
-    public Output<AddressIpVersion> ipVersion() {
-        return this.ipVersion == null ? Codegen.empty() : this.ipVersion;
+    public Optional<Output<AddressIpVersion>> ipVersion() {
+        return Optional.ofNullable(this.ipVersion);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class AddressArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class AddressArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class AddressArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="network")
-      private final @Nullable Output<String> network;
+    private @Nullable Output<String> network;
 
-    public Output<String> network() {
-        return this.network == null ? Codegen.empty() : this.network;
+    public Optional<Output<String>> network() {
+        return Optional.ofNullable(this.network);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class AddressArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networkTier")
-      private final @Nullable Output<AddressNetworkTier> networkTier;
+    private @Nullable Output<AddressNetworkTier> networkTier;
 
-    public Output<AddressNetworkTier> networkTier() {
-        return this.networkTier == null ? Codegen.empty() : this.networkTier;
+    public Optional<Output<AddressNetworkTier>> networkTier() {
+        return Optional.ofNullable(this.networkTier);
     }
 
     /**
@@ -114,17 +114,17 @@ public final class AddressArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="prefixLength")
-      private final @Nullable Output<Integer> prefixLength;
+    private @Nullable Output<Integer> prefixLength;
 
-    public Output<Integer> prefixLength() {
-        return this.prefixLength == null ? Codegen.empty() : this.prefixLength;
+    public Optional<Output<Integer>> prefixLength() {
+        return Optional.ofNullable(this.prefixLength);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -132,24 +132,24 @@ public final class AddressArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="purpose")
-      private final @Nullable Output<AddressPurpose> purpose;
+    private @Nullable Output<AddressPurpose> purpose;
 
-    public Output<AddressPurpose> purpose() {
-        return this.purpose == null ? Codegen.empty() : this.purpose;
+    public Optional<Output<AddressPurpose>> purpose() {
+        return Optional.ofNullable(this.purpose);
     }
 
     @Import(name="region", required=true)
-      private final Output<String> region;
+    private Output<String> region;
 
     public Output<String> region() {
         return this.region;
     }
 
     @Import(name="requestId")
-      private final @Nullable Output<String> requestId;
+    private @Nullable Output<String> requestId;
 
-    public Output<String> requestId() {
-        return this.requestId == null ? Codegen.empty() : this.requestId;
+    public Optional<Output<String>> requestId() {
+        return Optional.ofNullable(this.requestId);
     }
 
     /**
@@ -157,219 +157,179 @@ public final class AddressArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subnetwork")
-      private final @Nullable Output<String> subnetwork;
+    private @Nullable Output<String> subnetwork;
 
-    public Output<String> subnetwork() {
-        return this.subnetwork == null ? Codegen.empty() : this.subnetwork;
+    public Optional<Output<String>> subnetwork() {
+        return Optional.ofNullable(this.subnetwork);
     }
 
-    public AddressArgs(
-        @Nullable Output<String> address,
-        @Nullable Output<AddressAddressType> addressType,
-        @Nullable Output<String> description,
-        @Nullable Output<AddressIpVersion> ipVersion,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> name,
-        @Nullable Output<String> network,
-        @Nullable Output<AddressNetworkTier> networkTier,
-        @Nullable Output<Integer> prefixLength,
-        @Nullable Output<String> project,
-        @Nullable Output<AddressPurpose> purpose,
-        Output<String> region,
-        @Nullable Output<String> requestId,
-        @Nullable Output<String> subnetwork) {
-        this.address = address;
-        this.addressType = addressType;
-        this.description = description;
-        this.ipVersion = ipVersion;
-        this.labels = labels;
-        this.name = name;
-        this.network = network;
-        this.networkTier = networkTier;
-        this.prefixLength = prefixLength;
-        this.project = project;
-        this.purpose = purpose;
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-        this.requestId = requestId;
-        this.subnetwork = subnetwork;
-    }
+    private AddressArgs() {}
 
-    private AddressArgs() {
-        this.address = Codegen.empty();
-        this.addressType = Codegen.empty();
-        this.description = Codegen.empty();
-        this.ipVersion = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.name = Codegen.empty();
-        this.network = Codegen.empty();
-        this.networkTier = Codegen.empty();
-        this.prefixLength = Codegen.empty();
-        this.project = Codegen.empty();
-        this.purpose = Codegen.empty();
-        this.region = Codegen.empty();
-        this.requestId = Codegen.empty();
-        this.subnetwork = Codegen.empty();
+    private AddressArgs(AddressArgs $) {
+        this.address = $.address;
+        this.addressType = $.addressType;
+        this.description = $.description;
+        this.ipVersion = $.ipVersion;
+        this.labels = $.labels;
+        this.name = $.name;
+        this.network = $.network;
+        this.networkTier = $.networkTier;
+        this.prefixLength = $.prefixLength;
+        this.project = $.project;
+        this.purpose = $.purpose;
+        this.region = $.region;
+        this.requestId = $.requestId;
+        this.subnetwork = $.subnetwork;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AddressArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> address;
-        private @Nullable Output<AddressAddressType> addressType;
-        private @Nullable Output<String> description;
-        private @Nullable Output<AddressIpVersion> ipVersion;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> network;
-        private @Nullable Output<AddressNetworkTier> networkTier;
-        private @Nullable Output<Integer> prefixLength;
-        private @Nullable Output<String> project;
-        private @Nullable Output<AddressPurpose> purpose;
-        private Output<String> region;
-        private @Nullable Output<String> requestId;
-        private @Nullable Output<String> subnetwork;
+        private AddressArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AddressArgs();
         }
 
         public Builder(AddressArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.address = defaults.address;
-    	      this.addressType = defaults.addressType;
-    	      this.description = defaults.description;
-    	      this.ipVersion = defaults.ipVersion;
-    	      this.labels = defaults.labels;
-    	      this.name = defaults.name;
-    	      this.network = defaults.network;
-    	      this.networkTier = defaults.networkTier;
-    	      this.prefixLength = defaults.prefixLength;
-    	      this.project = defaults.project;
-    	      this.purpose = defaults.purpose;
-    	      this.region = defaults.region;
-    	      this.requestId = defaults.requestId;
-    	      this.subnetwork = defaults.subnetwork;
+            $ = new AddressArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder address(@Nullable Output<String> address) {
-            this.address = address;
+            $.address = address;
             return this;
         }
-        public Builder address(@Nullable String address) {
-            this.address = Codegen.ofNullable(address);
-            return this;
+
+        public Builder address(String address) {
+            return address(Output.of(address));
         }
+
         public Builder addressType(@Nullable Output<AddressAddressType> addressType) {
-            this.addressType = addressType;
+            $.addressType = addressType;
             return this;
         }
-        public Builder addressType(@Nullable AddressAddressType addressType) {
-            this.addressType = Codegen.ofNullable(addressType);
-            return this;
+
+        public Builder addressType(AddressAddressType addressType) {
+            return addressType(Output.of(addressType));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder ipVersion(@Nullable Output<AddressIpVersion> ipVersion) {
-            this.ipVersion = ipVersion;
+            $.ipVersion = ipVersion;
             return this;
         }
-        public Builder ipVersion(@Nullable AddressIpVersion ipVersion) {
-            this.ipVersion = Codegen.ofNullable(ipVersion);
-            return this;
+
+        public Builder ipVersion(AddressIpVersion ipVersion) {
+            return ipVersion(Output.of(ipVersion));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder network(@Nullable Output<String> network) {
-            this.network = network;
+            $.network = network;
             return this;
         }
-        public Builder network(@Nullable String network) {
-            this.network = Codegen.ofNullable(network);
-            return this;
+
+        public Builder network(String network) {
+            return network(Output.of(network));
         }
+
         public Builder networkTier(@Nullable Output<AddressNetworkTier> networkTier) {
-            this.networkTier = networkTier;
+            $.networkTier = networkTier;
             return this;
         }
-        public Builder networkTier(@Nullable AddressNetworkTier networkTier) {
-            this.networkTier = Codegen.ofNullable(networkTier);
-            return this;
+
+        public Builder networkTier(AddressNetworkTier networkTier) {
+            return networkTier(Output.of(networkTier));
         }
+
         public Builder prefixLength(@Nullable Output<Integer> prefixLength) {
-            this.prefixLength = prefixLength;
+            $.prefixLength = prefixLength;
             return this;
         }
-        public Builder prefixLength(@Nullable Integer prefixLength) {
-            this.prefixLength = Codegen.ofNullable(prefixLength);
-            return this;
+
+        public Builder prefixLength(Integer prefixLength) {
+            return prefixLength(Output.of(prefixLength));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder purpose(@Nullable Output<AddressPurpose> purpose) {
-            this.purpose = purpose;
+            $.purpose = purpose;
             return this;
         }
-        public Builder purpose(@Nullable AddressPurpose purpose) {
-            this.purpose = Codegen.ofNullable(purpose);
-            return this;
+
+        public Builder purpose(AddressPurpose purpose) {
+            return purpose(Output.of(purpose));
         }
+
         public Builder region(Output<String> region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Output.of(Objects.requireNonNull(region));
-            return this;
+            return region(Output.of(region));
         }
+
         public Builder requestId(@Nullable Output<String> requestId) {
-            this.requestId = requestId;
+            $.requestId = requestId;
             return this;
         }
-        public Builder requestId(@Nullable String requestId) {
-            this.requestId = Codegen.ofNullable(requestId);
-            return this;
+
+        public Builder requestId(String requestId) {
+            return requestId(Output.of(requestId));
         }
+
         public Builder subnetwork(@Nullable Output<String> subnetwork) {
-            this.subnetwork = subnetwork;
+            $.subnetwork = subnetwork;
             return this;
         }
-        public Builder subnetwork(@Nullable String subnetwork) {
-            this.subnetwork = Codegen.ofNullable(subnetwork);
-            return this;
-        }        public AddressArgs build() {
-            return new AddressArgs(address, addressType, description, ipVersion, labels, name, network, networkTier, prefixLength, project, purpose, region, requestId, subnetwork);
+
+        public Builder subnetwork(String subnetwork) {
+            return subnetwork(Output.of(subnetwork));
+        }
+
+        public AddressArgs build() {
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            return $;
         }
     }
+
 }

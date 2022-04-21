@@ -21,7 +21,7 @@ public final class AttachedDiskResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="mode", required=true)
-      private final String mode;
+    private String mode;
 
     public String mode() {
         return this.mode;
@@ -32,55 +32,52 @@ public final class AttachedDiskResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="sourceDisk", required=true)
-      private final String sourceDisk;
+    private String sourceDisk;
 
     public String sourceDisk() {
         return this.sourceDisk;
     }
 
-    public AttachedDiskResponse(
-        String mode,
-        String sourceDisk) {
-        this.mode = Objects.requireNonNull(mode, "expected parameter 'mode' to be non-null");
-        this.sourceDisk = Objects.requireNonNull(sourceDisk, "expected parameter 'sourceDisk' to be non-null");
-    }
+    private AttachedDiskResponse() {}
 
-    private AttachedDiskResponse() {
-        this.mode = null;
-        this.sourceDisk = null;
+    private AttachedDiskResponse(AttachedDiskResponse $) {
+        this.mode = $.mode;
+        this.sourceDisk = $.sourceDisk;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AttachedDiskResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String mode;
-        private String sourceDisk;
+        private AttachedDiskResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AttachedDiskResponse();
         }
 
         public Builder(AttachedDiskResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mode = defaults.mode;
-    	      this.sourceDisk = defaults.sourceDisk;
+            $ = new AttachedDiskResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder mode(String mode) {
-            this.mode = Objects.requireNonNull(mode);
+            $.mode = mode;
             return this;
         }
+
         public Builder sourceDisk(String sourceDisk) {
-            this.sourceDisk = Objects.requireNonNull(sourceDisk);
+            $.sourceDisk = sourceDisk;
             return this;
-        }        public AttachedDiskResponse build() {
-            return new AttachedDiskResponse(mode, sourceDisk);
+        }
+
+        public AttachedDiskResponse build() {
+            $.mode = Objects.requireNonNull($.mode, "expected parameter 'mode' to be non-null");
+            $.sourceDisk = Objects.requireNonNull($.sourceDisk, "expected parameter 'sourceDisk' to be non-null");
+            return $;
         }
     }
+
 }

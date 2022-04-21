@@ -5,10 +5,10 @@ package com.pulumi.googlenative.sqladmin_v1beta4.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class InsightsConfigArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="queryInsightsEnabled")
-      private final @Nullable Output<Boolean> queryInsightsEnabled;
+    private @Nullable Output<Boolean> queryInsightsEnabled;
 
-    public Output<Boolean> queryInsightsEnabled() {
-        return this.queryInsightsEnabled == null ? Codegen.empty() : this.queryInsightsEnabled;
+    public Optional<Output<Boolean>> queryInsightsEnabled() {
+        return Optional.ofNullable(this.queryInsightsEnabled);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class InsightsConfigArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="queryPlansPerMinute")
-      private final @Nullable Output<Integer> queryPlansPerMinute;
+    private @Nullable Output<Integer> queryPlansPerMinute;
 
-    public Output<Integer> queryPlansPerMinute() {
-        return this.queryPlansPerMinute == null ? Codegen.empty() : this.queryPlansPerMinute;
+    public Optional<Output<Integer>> queryPlansPerMinute() {
+        return Optional.ofNullable(this.queryPlansPerMinute);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class InsightsConfigArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="queryStringLength")
-      private final @Nullable Output<Integer> queryStringLength;
+    private @Nullable Output<Integer> queryStringLength;
 
-    public Output<Integer> queryStringLength() {
-        return this.queryStringLength == null ? Codegen.empty() : this.queryStringLength;
+    public Optional<Output<Integer>> queryStringLength() {
+        return Optional.ofNullable(this.queryStringLength);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class InsightsConfigArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="recordApplicationTags")
-      private final @Nullable Output<Boolean> recordApplicationTags;
+    private @Nullable Output<Boolean> recordApplicationTags;
 
-    public Output<Boolean> recordApplicationTags() {
-        return this.recordApplicationTags == null ? Codegen.empty() : this.recordApplicationTags;
+    public Optional<Output<Boolean>> recordApplicationTags() {
+        return Optional.ofNullable(this.recordApplicationTags);
     }
 
     /**
@@ -69,102 +69,88 @@ public final class InsightsConfigArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="recordClientAddress")
-      private final @Nullable Output<Boolean> recordClientAddress;
+    private @Nullable Output<Boolean> recordClientAddress;
 
-    public Output<Boolean> recordClientAddress() {
-        return this.recordClientAddress == null ? Codegen.empty() : this.recordClientAddress;
+    public Optional<Output<Boolean>> recordClientAddress() {
+        return Optional.ofNullable(this.recordClientAddress);
     }
 
-    public InsightsConfigArgs(
-        @Nullable Output<Boolean> queryInsightsEnabled,
-        @Nullable Output<Integer> queryPlansPerMinute,
-        @Nullable Output<Integer> queryStringLength,
-        @Nullable Output<Boolean> recordApplicationTags,
-        @Nullable Output<Boolean> recordClientAddress) {
-        this.queryInsightsEnabled = queryInsightsEnabled;
-        this.queryPlansPerMinute = queryPlansPerMinute;
-        this.queryStringLength = queryStringLength;
-        this.recordApplicationTags = recordApplicationTags;
-        this.recordClientAddress = recordClientAddress;
-    }
+    private InsightsConfigArgs() {}
 
-    private InsightsConfigArgs() {
-        this.queryInsightsEnabled = Codegen.empty();
-        this.queryPlansPerMinute = Codegen.empty();
-        this.queryStringLength = Codegen.empty();
-        this.recordApplicationTags = Codegen.empty();
-        this.recordClientAddress = Codegen.empty();
+    private InsightsConfigArgs(InsightsConfigArgs $) {
+        this.queryInsightsEnabled = $.queryInsightsEnabled;
+        this.queryPlansPerMinute = $.queryPlansPerMinute;
+        this.queryStringLength = $.queryStringLength;
+        this.recordApplicationTags = $.recordApplicationTags;
+        this.recordClientAddress = $.recordClientAddress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InsightsConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> queryInsightsEnabled;
-        private @Nullable Output<Integer> queryPlansPerMinute;
-        private @Nullable Output<Integer> queryStringLength;
-        private @Nullable Output<Boolean> recordApplicationTags;
-        private @Nullable Output<Boolean> recordClientAddress;
+        private InsightsConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InsightsConfigArgs();
         }
 
         public Builder(InsightsConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.queryInsightsEnabled = defaults.queryInsightsEnabled;
-    	      this.queryPlansPerMinute = defaults.queryPlansPerMinute;
-    	      this.queryStringLength = defaults.queryStringLength;
-    	      this.recordApplicationTags = defaults.recordApplicationTags;
-    	      this.recordClientAddress = defaults.recordClientAddress;
+            $ = new InsightsConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder queryInsightsEnabled(@Nullable Output<Boolean> queryInsightsEnabled) {
-            this.queryInsightsEnabled = queryInsightsEnabled;
+            $.queryInsightsEnabled = queryInsightsEnabled;
             return this;
         }
-        public Builder queryInsightsEnabled(@Nullable Boolean queryInsightsEnabled) {
-            this.queryInsightsEnabled = Codegen.ofNullable(queryInsightsEnabled);
-            return this;
+
+        public Builder queryInsightsEnabled(Boolean queryInsightsEnabled) {
+            return queryInsightsEnabled(Output.of(queryInsightsEnabled));
         }
+
         public Builder queryPlansPerMinute(@Nullable Output<Integer> queryPlansPerMinute) {
-            this.queryPlansPerMinute = queryPlansPerMinute;
+            $.queryPlansPerMinute = queryPlansPerMinute;
             return this;
         }
-        public Builder queryPlansPerMinute(@Nullable Integer queryPlansPerMinute) {
-            this.queryPlansPerMinute = Codegen.ofNullable(queryPlansPerMinute);
-            return this;
+
+        public Builder queryPlansPerMinute(Integer queryPlansPerMinute) {
+            return queryPlansPerMinute(Output.of(queryPlansPerMinute));
         }
+
         public Builder queryStringLength(@Nullable Output<Integer> queryStringLength) {
-            this.queryStringLength = queryStringLength;
+            $.queryStringLength = queryStringLength;
             return this;
         }
-        public Builder queryStringLength(@Nullable Integer queryStringLength) {
-            this.queryStringLength = Codegen.ofNullable(queryStringLength);
-            return this;
+
+        public Builder queryStringLength(Integer queryStringLength) {
+            return queryStringLength(Output.of(queryStringLength));
         }
+
         public Builder recordApplicationTags(@Nullable Output<Boolean> recordApplicationTags) {
-            this.recordApplicationTags = recordApplicationTags;
+            $.recordApplicationTags = recordApplicationTags;
             return this;
         }
-        public Builder recordApplicationTags(@Nullable Boolean recordApplicationTags) {
-            this.recordApplicationTags = Codegen.ofNullable(recordApplicationTags);
-            return this;
+
+        public Builder recordApplicationTags(Boolean recordApplicationTags) {
+            return recordApplicationTags(Output.of(recordApplicationTags));
         }
+
         public Builder recordClientAddress(@Nullable Output<Boolean> recordClientAddress) {
-            this.recordClientAddress = recordClientAddress;
+            $.recordClientAddress = recordClientAddress;
             return this;
         }
-        public Builder recordClientAddress(@Nullable Boolean recordClientAddress) {
-            this.recordClientAddress = Codegen.ofNullable(recordClientAddress);
-            return this;
-        }        public InsightsConfigArgs build() {
-            return new InsightsConfigArgs(queryInsightsEnabled, queryPlansPerMinute, queryStringLength, recordApplicationTags, recordClientAddress);
+
+        public Builder recordClientAddress(Boolean recordClientAddress) {
+            return recordClientAddress(Output.of(recordClientAddress));
+        }
+
+        public InsightsConfigArgs build() {
+            return $;
         }
     }
+
 }

@@ -6,9 +6,9 @@ package com.pulumi.awsnative.databrew.inputs;
 import com.pulumi.awsnative.databrew.enums.ProjectSampleType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ProjectSampleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="size")
-      private final @Nullable Output<Integer> size;
+    private @Nullable Output<Integer> size;
 
-    public Output<Integer> size() {
-        return this.size == null ? Codegen.empty() : this.size;
+    public Optional<Output<Integer>> size() {
+        return Optional.ofNullable(this.size);
     }
 
     /**
@@ -32,63 +32,59 @@ public final class ProjectSampleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final Output<ProjectSampleType> type;
+    private Output<ProjectSampleType> type;
 
     public Output<ProjectSampleType> type() {
         return this.type;
     }
 
-    public ProjectSampleArgs(
-        @Nullable Output<Integer> size,
-        Output<ProjectSampleType> type) {
-        this.size = size;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ProjectSampleArgs() {}
 
-    private ProjectSampleArgs() {
-        this.size = Codegen.empty();
-        this.type = Codegen.empty();
+    private ProjectSampleArgs(ProjectSampleArgs $) {
+        this.size = $.size;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProjectSampleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> size;
-        private Output<ProjectSampleType> type;
+        private ProjectSampleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProjectSampleArgs();
         }
 
         public Builder(ProjectSampleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.size = defaults.size;
-    	      this.type = defaults.type;
+            $ = new ProjectSampleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder size(@Nullable Output<Integer> size) {
-            this.size = size;
+            $.size = size;
             return this;
         }
-        public Builder size(@Nullable Integer size) {
-            this.size = Codegen.ofNullable(size);
-            return this;
+
+        public Builder size(Integer size) {
+            return size(Output.of(size));
         }
+
         public Builder type(Output<ProjectSampleType> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(ProjectSampleType type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public ProjectSampleArgs build() {
-            return new ProjectSampleArgs(size, type);
+            return type(Output.of(type));
+        }
+
+        public ProjectSampleArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

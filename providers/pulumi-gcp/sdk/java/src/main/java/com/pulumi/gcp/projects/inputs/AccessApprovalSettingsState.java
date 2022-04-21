@@ -5,12 +5,12 @@ package com.pulumi.gcp.projects.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.projects.inputs.AccessApprovalSettingsEnrolledServiceGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class AccessApprovalSettingsState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="enrolledAncestor")
-      private final @Nullable Output<Boolean> enrolledAncestor;
+    private @Nullable Output<Boolean> enrolledAncestor;
 
-    public Output<Boolean> enrolledAncestor() {
-        return this.enrolledAncestor == null ? Codegen.empty() : this.enrolledAncestor;
+    public Optional<Output<Boolean>> enrolledAncestor() {
+        return Optional.ofNullable(this.enrolledAncestor);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class AccessApprovalSettingsState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="enrolledServices")
-      private final @Nullable Output<List<AccessApprovalSettingsEnrolledServiceGetArgs>> enrolledServices;
+    private @Nullable Output<List<AccessApprovalSettingsEnrolledServiceGetArgs>> enrolledServices;
 
-    public Output<List<AccessApprovalSettingsEnrolledServiceGetArgs>> enrolledServices() {
-        return this.enrolledServices == null ? Codegen.empty() : this.enrolledServices;
+    public Optional<Output<List<AccessApprovalSettingsEnrolledServiceGetArgs>>> enrolledServices() {
+        return Optional.ofNullable(this.enrolledServices);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class AccessApprovalSettingsState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class AccessApprovalSettingsState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="notificationEmails")
-      private final @Nullable Output<List<String>> notificationEmails;
+    private @Nullable Output<List<String>> notificationEmails;
 
-    public Output<List<String>> notificationEmails() {
-        return this.notificationEmails == null ? Codegen.empty() : this.notificationEmails;
+    public Optional<Output<List<String>>> notificationEmails() {
+        return Optional.ofNullable(this.notificationEmails);
     }
 
     /**
@@ -80,11 +80,11 @@ public final class AccessApprovalSettingsState extends com.pulumi.resources.Reso
      */
     @Deprecated /* Deprecated in favor of `project_id` */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
     @Deprecated /* Deprecated in favor of `project_id` */
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -92,121 +92,106 @@ public final class AccessApprovalSettingsState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="projectId")
-      private final @Nullable Output<String> projectId;
+    private @Nullable Output<String> projectId;
 
-    public Output<String> projectId() {
-        return this.projectId == null ? Codegen.empty() : this.projectId;
+    public Optional<Output<String>> projectId() {
+        return Optional.ofNullable(this.projectId);
     }
 
-    public AccessApprovalSettingsState(
-        @Nullable Output<Boolean> enrolledAncestor,
-        @Nullable Output<List<AccessApprovalSettingsEnrolledServiceGetArgs>> enrolledServices,
-        @Nullable Output<String> name,
-        @Nullable Output<List<String>> notificationEmails,
-        @Nullable Output<String> project,
-        @Nullable Output<String> projectId) {
-        this.enrolledAncestor = enrolledAncestor;
-        this.enrolledServices = enrolledServices;
-        this.name = name;
-        this.notificationEmails = notificationEmails;
-        this.project = project;
-        this.projectId = projectId;
-    }
+    private AccessApprovalSettingsState() {}
 
-    private AccessApprovalSettingsState() {
-        this.enrolledAncestor = Codegen.empty();
-        this.enrolledServices = Codegen.empty();
-        this.name = Codegen.empty();
-        this.notificationEmails = Codegen.empty();
-        this.project = Codegen.empty();
-        this.projectId = Codegen.empty();
+    private AccessApprovalSettingsState(AccessApprovalSettingsState $) {
+        this.enrolledAncestor = $.enrolledAncestor;
+        this.enrolledServices = $.enrolledServices;
+        this.name = $.name;
+        this.notificationEmails = $.notificationEmails;
+        this.project = $.project;
+        this.projectId = $.projectId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessApprovalSettingsState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enrolledAncestor;
-        private @Nullable Output<List<AccessApprovalSettingsEnrolledServiceGetArgs>> enrolledServices;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<String>> notificationEmails;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> projectId;
+        private AccessApprovalSettingsState $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessApprovalSettingsState();
         }
 
         public Builder(AccessApprovalSettingsState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enrolledAncestor = defaults.enrolledAncestor;
-    	      this.enrolledServices = defaults.enrolledServices;
-    	      this.name = defaults.name;
-    	      this.notificationEmails = defaults.notificationEmails;
-    	      this.project = defaults.project;
-    	      this.projectId = defaults.projectId;
+            $ = new AccessApprovalSettingsState(Objects.requireNonNull(defaults));
         }
 
         public Builder enrolledAncestor(@Nullable Output<Boolean> enrolledAncestor) {
-            this.enrolledAncestor = enrolledAncestor;
+            $.enrolledAncestor = enrolledAncestor;
             return this;
         }
-        public Builder enrolledAncestor(@Nullable Boolean enrolledAncestor) {
-            this.enrolledAncestor = Codegen.ofNullable(enrolledAncestor);
-            return this;
+
+        public Builder enrolledAncestor(Boolean enrolledAncestor) {
+            return enrolledAncestor(Output.of(enrolledAncestor));
         }
+
         public Builder enrolledServices(@Nullable Output<List<AccessApprovalSettingsEnrolledServiceGetArgs>> enrolledServices) {
-            this.enrolledServices = enrolledServices;
+            $.enrolledServices = enrolledServices;
             return this;
         }
-        public Builder enrolledServices(@Nullable List<AccessApprovalSettingsEnrolledServiceGetArgs> enrolledServices) {
-            this.enrolledServices = Codegen.ofNullable(enrolledServices);
-            return this;
+
+        public Builder enrolledServices(List<AccessApprovalSettingsEnrolledServiceGetArgs> enrolledServices) {
+            return enrolledServices(Output.of(enrolledServices));
         }
+
         public Builder enrolledServices(AccessApprovalSettingsEnrolledServiceGetArgs... enrolledServices) {
             return enrolledServices(List.of(enrolledServices));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder notificationEmails(@Nullable Output<List<String>> notificationEmails) {
-            this.notificationEmails = notificationEmails;
+            $.notificationEmails = notificationEmails;
             return this;
         }
-        public Builder notificationEmails(@Nullable List<String> notificationEmails) {
-            this.notificationEmails = Codegen.ofNullable(notificationEmails);
-            return this;
+
+        public Builder notificationEmails(List<String> notificationEmails) {
+            return notificationEmails(Output.of(notificationEmails));
         }
+
         public Builder notificationEmails(String... notificationEmails) {
             return notificationEmails(List.of(notificationEmails));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder projectId(@Nullable Output<String> projectId) {
-            this.projectId = projectId;
+            $.projectId = projectId;
             return this;
         }
-        public Builder projectId(@Nullable String projectId) {
-            this.projectId = Codegen.ofNullable(projectId);
-            return this;
-        }        public AccessApprovalSettingsState build() {
-            return new AccessApprovalSettingsState(enrolledAncestor, enrolledServices, name, notificationEmails, project, projectId);
+
+        public Builder projectId(String projectId) {
+            return projectId(Output.of(projectId));
+        }
+
+        public AccessApprovalSettingsState build() {
+            return $;
         }
     }
+
 }

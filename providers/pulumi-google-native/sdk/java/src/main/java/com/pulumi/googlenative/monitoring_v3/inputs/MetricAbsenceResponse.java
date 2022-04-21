@@ -24,7 +24,7 @@ public final class MetricAbsenceResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="aggregations", required=true)
-      private final List<AggregationResponse> aggregations;
+    private List<AggregationResponse> aggregations;
 
     public List<AggregationResponse> aggregations() {
         return this.aggregations;
@@ -35,7 +35,7 @@ public final class MetricAbsenceResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="duration", required=true)
-      private final String duration;
+    private String duration;
 
     public String duration() {
         return this.duration;
@@ -46,7 +46,7 @@ public final class MetricAbsenceResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="filter", required=true)
-      private final String filter;
+    private String filter;
 
     public String filter() {
         return this.filter;
@@ -57,76 +57,70 @@ public final class MetricAbsenceResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="trigger", required=true)
-      private final TriggerResponse trigger;
+    private TriggerResponse trigger;
 
     public TriggerResponse trigger() {
         return this.trigger;
     }
 
-    public MetricAbsenceResponse(
-        List<AggregationResponse> aggregations,
-        String duration,
-        String filter,
-        TriggerResponse trigger) {
-        this.aggregations = Objects.requireNonNull(aggregations, "expected parameter 'aggregations' to be non-null");
-        this.duration = Objects.requireNonNull(duration, "expected parameter 'duration' to be non-null");
-        this.filter = Objects.requireNonNull(filter, "expected parameter 'filter' to be non-null");
-        this.trigger = Objects.requireNonNull(trigger, "expected parameter 'trigger' to be non-null");
-    }
+    private MetricAbsenceResponse() {}
 
-    private MetricAbsenceResponse() {
-        this.aggregations = List.of();
-        this.duration = null;
-        this.filter = null;
-        this.trigger = null;
+    private MetricAbsenceResponse(MetricAbsenceResponse $) {
+        this.aggregations = $.aggregations;
+        this.duration = $.duration;
+        this.filter = $.filter;
+        this.trigger = $.trigger;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetricAbsenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<AggregationResponse> aggregations;
-        private String duration;
-        private String filter;
-        private TriggerResponse trigger;
+        private MetricAbsenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetricAbsenceResponse();
         }
 
         public Builder(MetricAbsenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aggregations = defaults.aggregations;
-    	      this.duration = defaults.duration;
-    	      this.filter = defaults.filter;
-    	      this.trigger = defaults.trigger;
+            $ = new MetricAbsenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder aggregations(List<AggregationResponse> aggregations) {
-            this.aggregations = Objects.requireNonNull(aggregations);
+            $.aggregations = aggregations;
             return this;
         }
+
         public Builder aggregations(AggregationResponse... aggregations) {
             return aggregations(List.of(aggregations));
         }
+
         public Builder duration(String duration) {
-            this.duration = Objects.requireNonNull(duration);
+            $.duration = duration;
             return this;
         }
+
         public Builder filter(String filter) {
-            this.filter = Objects.requireNonNull(filter);
+            $.filter = filter;
             return this;
         }
+
         public Builder trigger(TriggerResponse trigger) {
-            this.trigger = Objects.requireNonNull(trigger);
+            $.trigger = trigger;
             return this;
-        }        public MetricAbsenceResponse build() {
-            return new MetricAbsenceResponse(aggregations, duration, filter, trigger);
+        }
+
+        public MetricAbsenceResponse build() {
+            $.aggregations = Objects.requireNonNull($.aggregations, "expected parameter 'aggregations' to be non-null");
+            $.duration = Objects.requireNonNull($.duration, "expected parameter 'duration' to be non-null");
+            $.filter = Objects.requireNonNull($.filter, "expected parameter 'filter' to be non-null");
+            $.trigger = Objects.requireNonNull($.trigger, "expected parameter 'trigger' to be non-null");
+            return $;
         }
     }
+
 }

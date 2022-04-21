@@ -5,10 +5,10 @@ package com.pulumi.googlenative.container_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.container_v1.inputs.AutoUpgradeOptionsArgs;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class NodeManagementArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="autoRepair")
-      private final @Nullable Output<Boolean> autoRepair;
+    private @Nullable Output<Boolean> autoRepair;
 
-    public Output<Boolean> autoRepair() {
-        return this.autoRepair == null ? Codegen.empty() : this.autoRepair;
+    public Optional<Output<Boolean>> autoRepair() {
+        return Optional.ofNullable(this.autoRepair);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class NodeManagementArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="autoUpgrade")
-      private final @Nullable Output<Boolean> autoUpgrade;
+    private @Nullable Output<Boolean> autoUpgrade;
 
-    public Output<Boolean> autoUpgrade() {
-        return this.autoUpgrade == null ? Codegen.empty() : this.autoUpgrade;
+    public Optional<Output<Boolean>> autoUpgrade() {
+        return Optional.ofNullable(this.autoUpgrade);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class NodeManagementArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="upgradeOptions")
-      private final @Nullable Output<AutoUpgradeOptionsArgs> upgradeOptions;
+    private @Nullable Output<AutoUpgradeOptionsArgs> upgradeOptions;
 
-    public Output<AutoUpgradeOptionsArgs> upgradeOptions() {
-        return this.upgradeOptions == null ? Codegen.empty() : this.upgradeOptions;
+    public Optional<Output<AutoUpgradeOptionsArgs>> upgradeOptions() {
+        return Optional.ofNullable(this.upgradeOptions);
     }
 
-    public NodeManagementArgs(
-        @Nullable Output<Boolean> autoRepair,
-        @Nullable Output<Boolean> autoUpgrade,
-        @Nullable Output<AutoUpgradeOptionsArgs> upgradeOptions) {
-        this.autoRepair = autoRepair;
-        this.autoUpgrade = autoUpgrade;
-        this.upgradeOptions = upgradeOptions;
-    }
+    private NodeManagementArgs() {}
 
-    private NodeManagementArgs() {
-        this.autoRepair = Codegen.empty();
-        this.autoUpgrade = Codegen.empty();
-        this.upgradeOptions = Codegen.empty();
+    private NodeManagementArgs(NodeManagementArgs $) {
+        this.autoRepair = $.autoRepair;
+        this.autoUpgrade = $.autoUpgrade;
+        this.upgradeOptions = $.upgradeOptions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodeManagementArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> autoRepair;
-        private @Nullable Output<Boolean> autoUpgrade;
-        private @Nullable Output<AutoUpgradeOptionsArgs> upgradeOptions;
+        private NodeManagementArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodeManagementArgs();
         }
 
         public Builder(NodeManagementArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoRepair = defaults.autoRepair;
-    	      this.autoUpgrade = defaults.autoUpgrade;
-    	      this.upgradeOptions = defaults.upgradeOptions;
+            $ = new NodeManagementArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoRepair(@Nullable Output<Boolean> autoRepair) {
-            this.autoRepair = autoRepair;
+            $.autoRepair = autoRepair;
             return this;
         }
-        public Builder autoRepair(@Nullable Boolean autoRepair) {
-            this.autoRepair = Codegen.ofNullable(autoRepair);
-            return this;
+
+        public Builder autoRepair(Boolean autoRepair) {
+            return autoRepair(Output.of(autoRepair));
         }
+
         public Builder autoUpgrade(@Nullable Output<Boolean> autoUpgrade) {
-            this.autoUpgrade = autoUpgrade;
+            $.autoUpgrade = autoUpgrade;
             return this;
         }
-        public Builder autoUpgrade(@Nullable Boolean autoUpgrade) {
-            this.autoUpgrade = Codegen.ofNullable(autoUpgrade);
-            return this;
+
+        public Builder autoUpgrade(Boolean autoUpgrade) {
+            return autoUpgrade(Output.of(autoUpgrade));
         }
+
         public Builder upgradeOptions(@Nullable Output<AutoUpgradeOptionsArgs> upgradeOptions) {
-            this.upgradeOptions = upgradeOptions;
+            $.upgradeOptions = upgradeOptions;
             return this;
         }
-        public Builder upgradeOptions(@Nullable AutoUpgradeOptionsArgs upgradeOptions) {
-            this.upgradeOptions = Codegen.ofNullable(upgradeOptions);
-            return this;
-        }        public NodeManagementArgs build() {
-            return new NodeManagementArgs(autoRepair, autoUpgrade, upgradeOptions);
+
+        public Builder upgradeOptions(AutoUpgradeOptionsArgs upgradeOptions) {
+            return upgradeOptions(Output.of(upgradeOptions));
+        }
+
+        public NodeManagementArgs build() {
+            return $;
         }
     }
+
 }

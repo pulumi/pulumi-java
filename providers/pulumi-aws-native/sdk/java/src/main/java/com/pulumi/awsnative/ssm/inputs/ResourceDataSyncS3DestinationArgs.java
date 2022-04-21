@@ -5,9 +5,9 @@ package com.pulumi.awsnative.ssm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,130 +16,119 @@ public final class ResourceDataSyncS3DestinationArgs extends com.pulumi.resource
     public static final ResourceDataSyncS3DestinationArgs Empty = new ResourceDataSyncS3DestinationArgs();
 
     @Import(name="bucketName", required=true)
-      private final Output<String> bucketName;
+    private Output<String> bucketName;
 
     public Output<String> bucketName() {
         return this.bucketName;
     }
 
     @Import(name="bucketPrefix")
-      private final @Nullable Output<String> bucketPrefix;
+    private @Nullable Output<String> bucketPrefix;
 
-    public Output<String> bucketPrefix() {
-        return this.bucketPrefix == null ? Codegen.empty() : this.bucketPrefix;
+    public Optional<Output<String>> bucketPrefix() {
+        return Optional.ofNullable(this.bucketPrefix);
     }
 
     @Import(name="bucketRegion", required=true)
-      private final Output<String> bucketRegion;
+    private Output<String> bucketRegion;
 
     public Output<String> bucketRegion() {
         return this.bucketRegion;
     }
 
     @Import(name="kMSKeyArn")
-      private final @Nullable Output<String> kMSKeyArn;
+    private @Nullable Output<String> kMSKeyArn;
 
-    public Output<String> kMSKeyArn() {
-        return this.kMSKeyArn == null ? Codegen.empty() : this.kMSKeyArn;
+    public Optional<Output<String>> kMSKeyArn() {
+        return Optional.ofNullable(this.kMSKeyArn);
     }
 
     @Import(name="syncFormat", required=true)
-      private final Output<String> syncFormat;
+    private Output<String> syncFormat;
 
     public Output<String> syncFormat() {
         return this.syncFormat;
     }
 
-    public ResourceDataSyncS3DestinationArgs(
-        Output<String> bucketName,
-        @Nullable Output<String> bucketPrefix,
-        Output<String> bucketRegion,
-        @Nullable Output<String> kMSKeyArn,
-        Output<String> syncFormat) {
-        this.bucketName = Objects.requireNonNull(bucketName, "expected parameter 'bucketName' to be non-null");
-        this.bucketPrefix = bucketPrefix;
-        this.bucketRegion = Objects.requireNonNull(bucketRegion, "expected parameter 'bucketRegion' to be non-null");
-        this.kMSKeyArn = kMSKeyArn;
-        this.syncFormat = Objects.requireNonNull(syncFormat, "expected parameter 'syncFormat' to be non-null");
-    }
+    private ResourceDataSyncS3DestinationArgs() {}
 
-    private ResourceDataSyncS3DestinationArgs() {
-        this.bucketName = Codegen.empty();
-        this.bucketPrefix = Codegen.empty();
-        this.bucketRegion = Codegen.empty();
-        this.kMSKeyArn = Codegen.empty();
-        this.syncFormat = Codegen.empty();
+    private ResourceDataSyncS3DestinationArgs(ResourceDataSyncS3DestinationArgs $) {
+        this.bucketName = $.bucketName;
+        this.bucketPrefix = $.bucketPrefix;
+        this.bucketRegion = $.bucketRegion;
+        this.kMSKeyArn = $.kMSKeyArn;
+        this.syncFormat = $.syncFormat;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceDataSyncS3DestinationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> bucketName;
-        private @Nullable Output<String> bucketPrefix;
-        private Output<String> bucketRegion;
-        private @Nullable Output<String> kMSKeyArn;
-        private Output<String> syncFormat;
+        private ResourceDataSyncS3DestinationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceDataSyncS3DestinationArgs();
         }
 
         public Builder(ResourceDataSyncS3DestinationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucketName = defaults.bucketName;
-    	      this.bucketPrefix = defaults.bucketPrefix;
-    	      this.bucketRegion = defaults.bucketRegion;
-    	      this.kMSKeyArn = defaults.kMSKeyArn;
-    	      this.syncFormat = defaults.syncFormat;
+            $ = new ResourceDataSyncS3DestinationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucketName(Output<String> bucketName) {
-            this.bucketName = Objects.requireNonNull(bucketName);
+            $.bucketName = bucketName;
             return this;
         }
+
         public Builder bucketName(String bucketName) {
-            this.bucketName = Output.of(Objects.requireNonNull(bucketName));
-            return this;
+            return bucketName(Output.of(bucketName));
         }
+
         public Builder bucketPrefix(@Nullable Output<String> bucketPrefix) {
-            this.bucketPrefix = bucketPrefix;
+            $.bucketPrefix = bucketPrefix;
             return this;
         }
-        public Builder bucketPrefix(@Nullable String bucketPrefix) {
-            this.bucketPrefix = Codegen.ofNullable(bucketPrefix);
-            return this;
+
+        public Builder bucketPrefix(String bucketPrefix) {
+            return bucketPrefix(Output.of(bucketPrefix));
         }
+
         public Builder bucketRegion(Output<String> bucketRegion) {
-            this.bucketRegion = Objects.requireNonNull(bucketRegion);
+            $.bucketRegion = bucketRegion;
             return this;
         }
+
         public Builder bucketRegion(String bucketRegion) {
-            this.bucketRegion = Output.of(Objects.requireNonNull(bucketRegion));
-            return this;
+            return bucketRegion(Output.of(bucketRegion));
         }
+
         public Builder kMSKeyArn(@Nullable Output<String> kMSKeyArn) {
-            this.kMSKeyArn = kMSKeyArn;
+            $.kMSKeyArn = kMSKeyArn;
             return this;
         }
-        public Builder kMSKeyArn(@Nullable String kMSKeyArn) {
-            this.kMSKeyArn = Codegen.ofNullable(kMSKeyArn);
-            return this;
+
+        public Builder kMSKeyArn(String kMSKeyArn) {
+            return kMSKeyArn(Output.of(kMSKeyArn));
         }
+
         public Builder syncFormat(Output<String> syncFormat) {
-            this.syncFormat = Objects.requireNonNull(syncFormat);
+            $.syncFormat = syncFormat;
             return this;
         }
+
         public Builder syncFormat(String syncFormat) {
-            this.syncFormat = Output.of(Objects.requireNonNull(syncFormat));
-            return this;
-        }        public ResourceDataSyncS3DestinationArgs build() {
-            return new ResourceDataSyncS3DestinationArgs(bucketName, bucketPrefix, bucketRegion, kMSKeyArn, syncFormat);
+            return syncFormat(Output.of(syncFormat));
+        }
+
+        public ResourceDataSyncS3DestinationArgs build() {
+            $.bucketName = Objects.requireNonNull($.bucketName, "expected parameter 'bucketName' to be non-null");
+            $.bucketRegion = Objects.requireNonNull($.bucketRegion, "expected parameter 'bucketRegion' to be non-null");
+            $.syncFormat = Objects.requireNonNull($.syncFormat, "expected parameter 'syncFormat' to be non-null");
+            return $;
         }
     }
+
 }

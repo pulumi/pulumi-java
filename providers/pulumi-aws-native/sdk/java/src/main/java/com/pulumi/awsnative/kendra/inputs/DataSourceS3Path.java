@@ -13,62 +13,59 @@ public final class DataSourceS3Path extends com.pulumi.resources.InvokeArgs {
     public static final DataSourceS3Path Empty = new DataSourceS3Path();
 
     @Import(name="bucket", required=true)
-      private final String bucket;
+    private String bucket;
 
     public String bucket() {
         return this.bucket;
     }
 
     @Import(name="key", required=true)
-      private final String key;
+    private String key;
 
     public String key() {
         return this.key;
     }
 
-    public DataSourceS3Path(
-        String bucket,
-        String key) {
-        this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-    }
+    private DataSourceS3Path() {}
 
-    private DataSourceS3Path() {
-        this.bucket = null;
-        this.key = null;
+    private DataSourceS3Path(DataSourceS3Path $) {
+        this.bucket = $.bucket;
+        this.key = $.key;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceS3Path defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String bucket;
-        private String key;
+        private DataSourceS3Path $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceS3Path();
         }
 
         public Builder(DataSourceS3Path defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.key = defaults.key;
+            $ = new DataSourceS3Path(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(String bucket) {
-            this.bucket = Objects.requireNonNull(bucket);
+            $.bucket = bucket;
             return this;
         }
+
         public Builder key(String key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
-        }        public DataSourceS3Path build() {
-            return new DataSourceS3Path(bucket, key);
+        }
+
+        public DataSourceS3Path build() {
+            $.bucket = Objects.requireNonNull($.bucket, "expected parameter 'bucket' to be non-null");
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            return $;
         }
     }
+
 }

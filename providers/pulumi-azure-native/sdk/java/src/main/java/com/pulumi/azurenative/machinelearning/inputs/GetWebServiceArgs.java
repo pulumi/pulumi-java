@@ -19,10 +19,10 @@ public final class GetWebServiceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="region")
-      private final @Nullable String region;
+    private @Nullable String region;
 
     public Optional<String> region() {
-        return this.region == null ? Optional.empty() : Optional.ofNullable(this.region);
+        return Optional.ofNullable(this.region);
     }
 
     /**
@@ -30,7 +30,7 @@ public final class GetWebServiceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -41,64 +41,58 @@ public final class GetWebServiceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="webServiceName", required=true)
-      private final String webServiceName;
+    private String webServiceName;
 
     public String webServiceName() {
         return this.webServiceName;
     }
 
-    public GetWebServiceArgs(
-        @Nullable String region,
-        String resourceGroupName,
-        String webServiceName) {
-        this.region = region;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.webServiceName = Objects.requireNonNull(webServiceName, "expected parameter 'webServiceName' to be non-null");
-    }
+    private GetWebServiceArgs() {}
 
-    private GetWebServiceArgs() {
-        this.region = null;
-        this.resourceGroupName = null;
-        this.webServiceName = null;
+    private GetWebServiceArgs(GetWebServiceArgs $) {
+        this.region = $.region;
+        this.resourceGroupName = $.resourceGroupName;
+        this.webServiceName = $.webServiceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetWebServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String region;
-        private String resourceGroupName;
-        private String webServiceName;
+        private GetWebServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetWebServiceArgs();
         }
 
         public Builder(GetWebServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.region = defaults.region;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.webServiceName = defaults.webServiceName;
+            $ = new GetWebServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder region(@Nullable String region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder webServiceName(String webServiceName) {
-            this.webServiceName = Objects.requireNonNull(webServiceName);
+            $.webServiceName = webServiceName;
             return this;
-        }        public GetWebServiceArgs build() {
-            return new GetWebServiceArgs(region, resourceGroupName, webServiceName);
+        }
+
+        public GetWebServiceArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.webServiceName = Objects.requireNonNull($.webServiceName, "expected parameter 'webServiceName' to be non-null");
+            return $;
         }
     }
+
 }

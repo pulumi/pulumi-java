@@ -7,9 +7,9 @@ import com.pulumi.azurenative.cdn.enums.HeaderAction;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,7 +26,7 @@ public final class HeaderActionParametersArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="headerAction", required=true)
-      private final Output<Either<String,HeaderAction>> headerAction;
+    private Output<Either<String,HeaderAction>> headerAction;
 
     public Output<Either<String,HeaderAction>> headerAction() {
         return this.headerAction;
@@ -37,14 +37,14 @@ public final class HeaderActionParametersArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="headerName", required=true)
-      private final Output<String> headerName;
+    private Output<String> headerName;
 
     public Output<String> headerName() {
         return this.headerName;
     }
 
     @Import(name="odataType", required=true)
-      private final Output<String> odataType;
+    private Output<String> odataType;
 
     public Output<String> odataType() {
         return this.odataType;
@@ -55,89 +55,81 @@ public final class HeaderActionParametersArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public HeaderActionParametersArgs(
-        Output<Either<String,HeaderAction>> headerAction,
-        Output<String> headerName,
-        Output<String> odataType,
-        @Nullable Output<String> value) {
-        this.headerAction = Objects.requireNonNull(headerAction, "expected parameter 'headerAction' to be non-null");
-        this.headerName = Objects.requireNonNull(headerName, "expected parameter 'headerName' to be non-null");
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
-        this.value = value;
-    }
+    private HeaderActionParametersArgs() {}
 
-    private HeaderActionParametersArgs() {
-        this.headerAction = Codegen.empty();
-        this.headerName = Codegen.empty();
-        this.odataType = Codegen.empty();
-        this.value = Codegen.empty();
+    private HeaderActionParametersArgs(HeaderActionParametersArgs $) {
+        this.headerAction = $.headerAction;
+        this.headerName = $.headerName;
+        this.odataType = $.odataType;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HeaderActionParametersArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,HeaderAction>> headerAction;
-        private Output<String> headerName;
-        private Output<String> odataType;
-        private @Nullable Output<String> value;
+        private HeaderActionParametersArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HeaderActionParametersArgs();
         }
 
         public Builder(HeaderActionParametersArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.headerAction = defaults.headerAction;
-    	      this.headerName = defaults.headerName;
-    	      this.odataType = defaults.odataType;
-    	      this.value = defaults.value;
+            $ = new HeaderActionParametersArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder headerAction(Output<Either<String,HeaderAction>> headerAction) {
-            this.headerAction = Objects.requireNonNull(headerAction);
+            $.headerAction = headerAction;
             return this;
         }
+
         public Builder headerAction(Either<String,HeaderAction> headerAction) {
-            this.headerAction = Output.of(Objects.requireNonNull(headerAction));
-            return this;
+            return headerAction(Output.of(headerAction));
         }
+
         public Builder headerName(Output<String> headerName) {
-            this.headerName = Objects.requireNonNull(headerName);
+            $.headerName = headerName;
             return this;
         }
+
         public Builder headerName(String headerName) {
-            this.headerName = Output.of(Objects.requireNonNull(headerName));
-            return this;
+            return headerName(Output.of(headerName));
         }
+
         public Builder odataType(Output<String> odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Output.of(Objects.requireNonNull(odataType));
-            return this;
+            return odataType(Output.of(odataType));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public HeaderActionParametersArgs build() {
-            return new HeaderActionParametersArgs(headerAction, headerName, odataType, value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public HeaderActionParametersArgs build() {
+            $.headerAction = Objects.requireNonNull($.headerAction, "expected parameter 'headerAction' to be non-null");
+            $.headerName = Objects.requireNonNull($.headerName, "expected parameter 'headerName' to be non-null");
+            $.odataType = Objects.requireNonNull($.odataType, "expected parameter 'odataType' to be non-null");
+            return $;
         }
     }
+
 }

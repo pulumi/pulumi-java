@@ -25,10 +25,10 @@ public final class SQLStorageSettingsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="defaultFilePath")
-      private final @Nullable String defaultFilePath;
+    private @Nullable String defaultFilePath;
 
     public Optional<String> defaultFilePath() {
-        return this.defaultFilePath == null ? Optional.empty() : Optional.ofNullable(this.defaultFilePath);
+        return Optional.ofNullable(this.defaultFilePath);
     }
 
     /**
@@ -36,58 +36,54 @@ public final class SQLStorageSettingsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="luns")
-      private final @Nullable List<Integer> luns;
+    private @Nullable List<Integer> luns;
 
-    public List<Integer> luns() {
-        return this.luns == null ? List.of() : this.luns;
+    public Optional<List<Integer>> luns() {
+        return Optional.ofNullable(this.luns);
     }
 
-    public SQLStorageSettingsResponse(
-        @Nullable String defaultFilePath,
-        @Nullable List<Integer> luns) {
-        this.defaultFilePath = defaultFilePath;
-        this.luns = luns;
-    }
+    private SQLStorageSettingsResponse() {}
 
-    private SQLStorageSettingsResponse() {
-        this.defaultFilePath = null;
-        this.luns = List.of();
+    private SQLStorageSettingsResponse(SQLStorageSettingsResponse $) {
+        this.defaultFilePath = $.defaultFilePath;
+        this.luns = $.luns;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SQLStorageSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String defaultFilePath;
-        private @Nullable List<Integer> luns;
+        private SQLStorageSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SQLStorageSettingsResponse();
         }
 
         public Builder(SQLStorageSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultFilePath = defaults.defaultFilePath;
-    	      this.luns = defaults.luns;
+            $ = new SQLStorageSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultFilePath(@Nullable String defaultFilePath) {
-            this.defaultFilePath = defaultFilePath;
+            $.defaultFilePath = defaultFilePath;
             return this;
         }
+
         public Builder luns(@Nullable List<Integer> luns) {
-            this.luns = luns;
+            $.luns = luns;
             return this;
         }
+
         public Builder luns(Integer... luns) {
             return luns(List.of(luns));
-        }        public SQLStorageSettingsResponse build() {
-            return new SQLStorageSettingsResponse(defaultFilePath, luns);
+        }
+
+        public SQLStorageSettingsResponse build() {
+            return $;
         }
     }
+
 }

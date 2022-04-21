@@ -17,45 +17,45 @@ public final class GetDetectorArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
     }
 
-    public GetDetectorArgs(String arn) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-    }
+    private GetDetectorArgs() {}
 
-    private GetDetectorArgs() {
-        this.arn = null;
+    private GetDetectorArgs(GetDetectorArgs $) {
+        this.arn = $.arn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDetectorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
+        private GetDetectorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDetectorArgs();
         }
 
         public Builder(GetDetectorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
+            $ = new GetDetectorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
-        }        public GetDetectorArgs build() {
-            return new GetDetectorArgs(arn);
+        }
+
+        public GetDetectorArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

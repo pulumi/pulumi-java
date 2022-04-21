@@ -25,300 +25,281 @@ public final class GetEnvironmentConfig extends com.pulumi.resources.InvokeArgs 
     public static final GetEnvironmentConfig Empty = new GetEnvironmentConfig();
 
     @Import(name="airflowUri", required=true)
-      private final String airflowUri;
+    private String airflowUri;
 
     public String airflowUri() {
         return this.airflowUri;
     }
 
     @Import(name="dagGcsPrefix", required=true)
-      private final String dagGcsPrefix;
+    private String dagGcsPrefix;
 
     public String dagGcsPrefix() {
         return this.dagGcsPrefix;
     }
 
     @Import(name="databaseConfigs", required=true)
-      private final List<GetEnvironmentConfigDatabaseConfig> databaseConfigs;
+    private List<GetEnvironmentConfigDatabaseConfig> databaseConfigs;
 
     public List<GetEnvironmentConfigDatabaseConfig> databaseConfigs() {
         return this.databaseConfigs;
     }
 
     @Import(name="encryptionConfigs", required=true)
-      private final List<GetEnvironmentConfigEncryptionConfig> encryptionConfigs;
+    private List<GetEnvironmentConfigEncryptionConfig> encryptionConfigs;
 
     public List<GetEnvironmentConfigEncryptionConfig> encryptionConfigs() {
         return this.encryptionConfigs;
     }
 
     @Import(name="environmentSize", required=true)
-      private final String environmentSize;
+    private String environmentSize;
 
     public String environmentSize() {
         return this.environmentSize;
     }
 
     @Import(name="gkeCluster", required=true)
-      private final String gkeCluster;
+    private String gkeCluster;
 
     public String gkeCluster() {
         return this.gkeCluster;
     }
 
     @Import(name="maintenanceWindows", required=true)
-      private final List<GetEnvironmentConfigMaintenanceWindow> maintenanceWindows;
+    private List<GetEnvironmentConfigMaintenanceWindow> maintenanceWindows;
 
     public List<GetEnvironmentConfigMaintenanceWindow> maintenanceWindows() {
         return this.maintenanceWindows;
     }
 
     @Import(name="masterAuthorizedNetworksConfigs", required=true)
-      private final List<GetEnvironmentConfigMasterAuthorizedNetworksConfig> masterAuthorizedNetworksConfigs;
+    private List<GetEnvironmentConfigMasterAuthorizedNetworksConfig> masterAuthorizedNetworksConfigs;
 
     public List<GetEnvironmentConfigMasterAuthorizedNetworksConfig> masterAuthorizedNetworksConfigs() {
         return this.masterAuthorizedNetworksConfigs;
     }
 
     @Import(name="nodeConfigs", required=true)
-      private final List<GetEnvironmentConfigNodeConfig> nodeConfigs;
+    private List<GetEnvironmentConfigNodeConfig> nodeConfigs;
 
     public List<GetEnvironmentConfigNodeConfig> nodeConfigs() {
         return this.nodeConfigs;
     }
 
     @Import(name="nodeCount", required=true)
-      private final Integer nodeCount;
+    private Integer nodeCount;
 
     public Integer nodeCount() {
         return this.nodeCount;
     }
 
     @Import(name="privateEnvironmentConfigs", required=true)
-      private final List<GetEnvironmentConfigPrivateEnvironmentConfig> privateEnvironmentConfigs;
+    private List<GetEnvironmentConfigPrivateEnvironmentConfig> privateEnvironmentConfigs;
 
     public List<GetEnvironmentConfigPrivateEnvironmentConfig> privateEnvironmentConfigs() {
         return this.privateEnvironmentConfigs;
     }
 
     @Import(name="softwareConfigs", required=true)
-      private final List<GetEnvironmentConfigSoftwareConfig> softwareConfigs;
+    private List<GetEnvironmentConfigSoftwareConfig> softwareConfigs;
 
     public List<GetEnvironmentConfigSoftwareConfig> softwareConfigs() {
         return this.softwareConfigs;
     }
 
     @Import(name="webServerConfigs", required=true)
-      private final List<GetEnvironmentConfigWebServerConfig> webServerConfigs;
+    private List<GetEnvironmentConfigWebServerConfig> webServerConfigs;
 
     public List<GetEnvironmentConfigWebServerConfig> webServerConfigs() {
         return this.webServerConfigs;
     }
 
     @Import(name="webServerNetworkAccessControls", required=true)
-      private final List<GetEnvironmentConfigWebServerNetworkAccessControl> webServerNetworkAccessControls;
+    private List<GetEnvironmentConfigWebServerNetworkAccessControl> webServerNetworkAccessControls;
 
     public List<GetEnvironmentConfigWebServerNetworkAccessControl> webServerNetworkAccessControls() {
         return this.webServerNetworkAccessControls;
     }
 
     @Import(name="workloadsConfigs", required=true)
-      private final List<GetEnvironmentConfigWorkloadsConfig> workloadsConfigs;
+    private List<GetEnvironmentConfigWorkloadsConfig> workloadsConfigs;
 
     public List<GetEnvironmentConfigWorkloadsConfig> workloadsConfigs() {
         return this.workloadsConfigs;
     }
 
-    public GetEnvironmentConfig(
-        String airflowUri,
-        String dagGcsPrefix,
-        List<GetEnvironmentConfigDatabaseConfig> databaseConfigs,
-        List<GetEnvironmentConfigEncryptionConfig> encryptionConfigs,
-        String environmentSize,
-        String gkeCluster,
-        List<GetEnvironmentConfigMaintenanceWindow> maintenanceWindows,
-        List<GetEnvironmentConfigMasterAuthorizedNetworksConfig> masterAuthorizedNetworksConfigs,
-        List<GetEnvironmentConfigNodeConfig> nodeConfigs,
-        Integer nodeCount,
-        List<GetEnvironmentConfigPrivateEnvironmentConfig> privateEnvironmentConfigs,
-        List<GetEnvironmentConfigSoftwareConfig> softwareConfigs,
-        List<GetEnvironmentConfigWebServerConfig> webServerConfigs,
-        List<GetEnvironmentConfigWebServerNetworkAccessControl> webServerNetworkAccessControls,
-        List<GetEnvironmentConfigWorkloadsConfig> workloadsConfigs) {
-        this.airflowUri = Objects.requireNonNull(airflowUri, "expected parameter 'airflowUri' to be non-null");
-        this.dagGcsPrefix = Objects.requireNonNull(dagGcsPrefix, "expected parameter 'dagGcsPrefix' to be non-null");
-        this.databaseConfigs = Objects.requireNonNull(databaseConfigs, "expected parameter 'databaseConfigs' to be non-null");
-        this.encryptionConfigs = Objects.requireNonNull(encryptionConfigs, "expected parameter 'encryptionConfigs' to be non-null");
-        this.environmentSize = Objects.requireNonNull(environmentSize, "expected parameter 'environmentSize' to be non-null");
-        this.gkeCluster = Objects.requireNonNull(gkeCluster, "expected parameter 'gkeCluster' to be non-null");
-        this.maintenanceWindows = Objects.requireNonNull(maintenanceWindows, "expected parameter 'maintenanceWindows' to be non-null");
-        this.masterAuthorizedNetworksConfigs = Objects.requireNonNull(masterAuthorizedNetworksConfigs, "expected parameter 'masterAuthorizedNetworksConfigs' to be non-null");
-        this.nodeConfigs = Objects.requireNonNull(nodeConfigs, "expected parameter 'nodeConfigs' to be non-null");
-        this.nodeCount = Objects.requireNonNull(nodeCount, "expected parameter 'nodeCount' to be non-null");
-        this.privateEnvironmentConfigs = Objects.requireNonNull(privateEnvironmentConfigs, "expected parameter 'privateEnvironmentConfigs' to be non-null");
-        this.softwareConfigs = Objects.requireNonNull(softwareConfigs, "expected parameter 'softwareConfigs' to be non-null");
-        this.webServerConfigs = Objects.requireNonNull(webServerConfigs, "expected parameter 'webServerConfigs' to be non-null");
-        this.webServerNetworkAccessControls = Objects.requireNonNull(webServerNetworkAccessControls, "expected parameter 'webServerNetworkAccessControls' to be non-null");
-        this.workloadsConfigs = Objects.requireNonNull(workloadsConfigs, "expected parameter 'workloadsConfigs' to be non-null");
-    }
+    private GetEnvironmentConfig() {}
 
-    private GetEnvironmentConfig() {
-        this.airflowUri = null;
-        this.dagGcsPrefix = null;
-        this.databaseConfigs = List.of();
-        this.encryptionConfigs = List.of();
-        this.environmentSize = null;
-        this.gkeCluster = null;
-        this.maintenanceWindows = List.of();
-        this.masterAuthorizedNetworksConfigs = List.of();
-        this.nodeConfigs = List.of();
-        this.nodeCount = null;
-        this.privateEnvironmentConfigs = List.of();
-        this.softwareConfigs = List.of();
-        this.webServerConfigs = List.of();
-        this.webServerNetworkAccessControls = List.of();
-        this.workloadsConfigs = List.of();
+    private GetEnvironmentConfig(GetEnvironmentConfig $) {
+        this.airflowUri = $.airflowUri;
+        this.dagGcsPrefix = $.dagGcsPrefix;
+        this.databaseConfigs = $.databaseConfigs;
+        this.encryptionConfigs = $.encryptionConfigs;
+        this.environmentSize = $.environmentSize;
+        this.gkeCluster = $.gkeCluster;
+        this.maintenanceWindows = $.maintenanceWindows;
+        this.masterAuthorizedNetworksConfigs = $.masterAuthorizedNetworksConfigs;
+        this.nodeConfigs = $.nodeConfigs;
+        this.nodeCount = $.nodeCount;
+        this.privateEnvironmentConfigs = $.privateEnvironmentConfigs;
+        this.softwareConfigs = $.softwareConfigs;
+        this.webServerConfigs = $.webServerConfigs;
+        this.webServerNetworkAccessControls = $.webServerNetworkAccessControls;
+        this.workloadsConfigs = $.workloadsConfigs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetEnvironmentConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String airflowUri;
-        private String dagGcsPrefix;
-        private List<GetEnvironmentConfigDatabaseConfig> databaseConfigs;
-        private List<GetEnvironmentConfigEncryptionConfig> encryptionConfigs;
-        private String environmentSize;
-        private String gkeCluster;
-        private List<GetEnvironmentConfigMaintenanceWindow> maintenanceWindows;
-        private List<GetEnvironmentConfigMasterAuthorizedNetworksConfig> masterAuthorizedNetworksConfigs;
-        private List<GetEnvironmentConfigNodeConfig> nodeConfigs;
-        private Integer nodeCount;
-        private List<GetEnvironmentConfigPrivateEnvironmentConfig> privateEnvironmentConfigs;
-        private List<GetEnvironmentConfigSoftwareConfig> softwareConfigs;
-        private List<GetEnvironmentConfigWebServerConfig> webServerConfigs;
-        private List<GetEnvironmentConfigWebServerNetworkAccessControl> webServerNetworkAccessControls;
-        private List<GetEnvironmentConfigWorkloadsConfig> workloadsConfigs;
+        private GetEnvironmentConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetEnvironmentConfig();
         }
 
         public Builder(GetEnvironmentConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.airflowUri = defaults.airflowUri;
-    	      this.dagGcsPrefix = defaults.dagGcsPrefix;
-    	      this.databaseConfigs = defaults.databaseConfigs;
-    	      this.encryptionConfigs = defaults.encryptionConfigs;
-    	      this.environmentSize = defaults.environmentSize;
-    	      this.gkeCluster = defaults.gkeCluster;
-    	      this.maintenanceWindows = defaults.maintenanceWindows;
-    	      this.masterAuthorizedNetworksConfigs = defaults.masterAuthorizedNetworksConfigs;
-    	      this.nodeConfigs = defaults.nodeConfigs;
-    	      this.nodeCount = defaults.nodeCount;
-    	      this.privateEnvironmentConfigs = defaults.privateEnvironmentConfigs;
-    	      this.softwareConfigs = defaults.softwareConfigs;
-    	      this.webServerConfigs = defaults.webServerConfigs;
-    	      this.webServerNetworkAccessControls = defaults.webServerNetworkAccessControls;
-    	      this.workloadsConfigs = defaults.workloadsConfigs;
+            $ = new GetEnvironmentConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder airflowUri(String airflowUri) {
-            this.airflowUri = Objects.requireNonNull(airflowUri);
+            $.airflowUri = airflowUri;
             return this;
         }
+
         public Builder dagGcsPrefix(String dagGcsPrefix) {
-            this.dagGcsPrefix = Objects.requireNonNull(dagGcsPrefix);
+            $.dagGcsPrefix = dagGcsPrefix;
             return this;
         }
+
         public Builder databaseConfigs(List<GetEnvironmentConfigDatabaseConfig> databaseConfigs) {
-            this.databaseConfigs = Objects.requireNonNull(databaseConfigs);
+            $.databaseConfigs = databaseConfigs;
             return this;
         }
+
         public Builder databaseConfigs(GetEnvironmentConfigDatabaseConfig... databaseConfigs) {
             return databaseConfigs(List.of(databaseConfigs));
         }
+
         public Builder encryptionConfigs(List<GetEnvironmentConfigEncryptionConfig> encryptionConfigs) {
-            this.encryptionConfigs = Objects.requireNonNull(encryptionConfigs);
+            $.encryptionConfigs = encryptionConfigs;
             return this;
         }
+
         public Builder encryptionConfigs(GetEnvironmentConfigEncryptionConfig... encryptionConfigs) {
             return encryptionConfigs(List.of(encryptionConfigs));
         }
+
         public Builder environmentSize(String environmentSize) {
-            this.environmentSize = Objects.requireNonNull(environmentSize);
+            $.environmentSize = environmentSize;
             return this;
         }
+
         public Builder gkeCluster(String gkeCluster) {
-            this.gkeCluster = Objects.requireNonNull(gkeCluster);
+            $.gkeCluster = gkeCluster;
             return this;
         }
+
         public Builder maintenanceWindows(List<GetEnvironmentConfigMaintenanceWindow> maintenanceWindows) {
-            this.maintenanceWindows = Objects.requireNonNull(maintenanceWindows);
+            $.maintenanceWindows = maintenanceWindows;
             return this;
         }
+
         public Builder maintenanceWindows(GetEnvironmentConfigMaintenanceWindow... maintenanceWindows) {
             return maintenanceWindows(List.of(maintenanceWindows));
         }
+
         public Builder masterAuthorizedNetworksConfigs(List<GetEnvironmentConfigMasterAuthorizedNetworksConfig> masterAuthorizedNetworksConfigs) {
-            this.masterAuthorizedNetworksConfigs = Objects.requireNonNull(masterAuthorizedNetworksConfigs);
+            $.masterAuthorizedNetworksConfigs = masterAuthorizedNetworksConfigs;
             return this;
         }
+
         public Builder masterAuthorizedNetworksConfigs(GetEnvironmentConfigMasterAuthorizedNetworksConfig... masterAuthorizedNetworksConfigs) {
             return masterAuthorizedNetworksConfigs(List.of(masterAuthorizedNetworksConfigs));
         }
+
         public Builder nodeConfigs(List<GetEnvironmentConfigNodeConfig> nodeConfigs) {
-            this.nodeConfigs = Objects.requireNonNull(nodeConfigs);
+            $.nodeConfigs = nodeConfigs;
             return this;
         }
+
         public Builder nodeConfigs(GetEnvironmentConfigNodeConfig... nodeConfigs) {
             return nodeConfigs(List.of(nodeConfigs));
         }
+
         public Builder nodeCount(Integer nodeCount) {
-            this.nodeCount = Objects.requireNonNull(nodeCount);
+            $.nodeCount = nodeCount;
             return this;
         }
+
         public Builder privateEnvironmentConfigs(List<GetEnvironmentConfigPrivateEnvironmentConfig> privateEnvironmentConfigs) {
-            this.privateEnvironmentConfigs = Objects.requireNonNull(privateEnvironmentConfigs);
+            $.privateEnvironmentConfigs = privateEnvironmentConfigs;
             return this;
         }
+
         public Builder privateEnvironmentConfigs(GetEnvironmentConfigPrivateEnvironmentConfig... privateEnvironmentConfigs) {
             return privateEnvironmentConfigs(List.of(privateEnvironmentConfigs));
         }
+
         public Builder softwareConfigs(List<GetEnvironmentConfigSoftwareConfig> softwareConfigs) {
-            this.softwareConfigs = Objects.requireNonNull(softwareConfigs);
+            $.softwareConfigs = softwareConfigs;
             return this;
         }
+
         public Builder softwareConfigs(GetEnvironmentConfigSoftwareConfig... softwareConfigs) {
             return softwareConfigs(List.of(softwareConfigs));
         }
+
         public Builder webServerConfigs(List<GetEnvironmentConfigWebServerConfig> webServerConfigs) {
-            this.webServerConfigs = Objects.requireNonNull(webServerConfigs);
+            $.webServerConfigs = webServerConfigs;
             return this;
         }
+
         public Builder webServerConfigs(GetEnvironmentConfigWebServerConfig... webServerConfigs) {
             return webServerConfigs(List.of(webServerConfigs));
         }
+
         public Builder webServerNetworkAccessControls(List<GetEnvironmentConfigWebServerNetworkAccessControl> webServerNetworkAccessControls) {
-            this.webServerNetworkAccessControls = Objects.requireNonNull(webServerNetworkAccessControls);
+            $.webServerNetworkAccessControls = webServerNetworkAccessControls;
             return this;
         }
+
         public Builder webServerNetworkAccessControls(GetEnvironmentConfigWebServerNetworkAccessControl... webServerNetworkAccessControls) {
             return webServerNetworkAccessControls(List.of(webServerNetworkAccessControls));
         }
+
         public Builder workloadsConfigs(List<GetEnvironmentConfigWorkloadsConfig> workloadsConfigs) {
-            this.workloadsConfigs = Objects.requireNonNull(workloadsConfigs);
+            $.workloadsConfigs = workloadsConfigs;
             return this;
         }
+
         public Builder workloadsConfigs(GetEnvironmentConfigWorkloadsConfig... workloadsConfigs) {
             return workloadsConfigs(List.of(workloadsConfigs));
-        }        public GetEnvironmentConfig build() {
-            return new GetEnvironmentConfig(airflowUri, dagGcsPrefix, databaseConfigs, encryptionConfigs, environmentSize, gkeCluster, maintenanceWindows, masterAuthorizedNetworksConfigs, nodeConfigs, nodeCount, privateEnvironmentConfigs, softwareConfigs, webServerConfigs, webServerNetworkAccessControls, workloadsConfigs);
+        }
+
+        public GetEnvironmentConfig build() {
+            $.airflowUri = Objects.requireNonNull($.airflowUri, "expected parameter 'airflowUri' to be non-null");
+            $.dagGcsPrefix = Objects.requireNonNull($.dagGcsPrefix, "expected parameter 'dagGcsPrefix' to be non-null");
+            $.databaseConfigs = Objects.requireNonNull($.databaseConfigs, "expected parameter 'databaseConfigs' to be non-null");
+            $.encryptionConfigs = Objects.requireNonNull($.encryptionConfigs, "expected parameter 'encryptionConfigs' to be non-null");
+            $.environmentSize = Objects.requireNonNull($.environmentSize, "expected parameter 'environmentSize' to be non-null");
+            $.gkeCluster = Objects.requireNonNull($.gkeCluster, "expected parameter 'gkeCluster' to be non-null");
+            $.maintenanceWindows = Objects.requireNonNull($.maintenanceWindows, "expected parameter 'maintenanceWindows' to be non-null");
+            $.masterAuthorizedNetworksConfigs = Objects.requireNonNull($.masterAuthorizedNetworksConfigs, "expected parameter 'masterAuthorizedNetworksConfigs' to be non-null");
+            $.nodeConfigs = Objects.requireNonNull($.nodeConfigs, "expected parameter 'nodeConfigs' to be non-null");
+            $.nodeCount = Objects.requireNonNull($.nodeCount, "expected parameter 'nodeCount' to be non-null");
+            $.privateEnvironmentConfigs = Objects.requireNonNull($.privateEnvironmentConfigs, "expected parameter 'privateEnvironmentConfigs' to be non-null");
+            $.softwareConfigs = Objects.requireNonNull($.softwareConfigs, "expected parameter 'softwareConfigs' to be non-null");
+            $.webServerConfigs = Objects.requireNonNull($.webServerConfigs, "expected parameter 'webServerConfigs' to be non-null");
+            $.webServerNetworkAccessControls = Objects.requireNonNull($.webServerNetworkAccessControls, "expected parameter 'webServerNetworkAccessControls' to be non-null");
+            $.workloadsConfigs = Objects.requireNonNull($.workloadsConfigs, "expected parameter 'workloadsConfigs' to be non-null");
+            return $;
         }
     }
+
 }

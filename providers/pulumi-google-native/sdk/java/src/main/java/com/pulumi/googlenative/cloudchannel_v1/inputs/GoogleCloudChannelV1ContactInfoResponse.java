@@ -21,7 +21,7 @@ public final class GoogleCloudChannelV1ContactInfoResponse extends com.pulumi.re
      * 
      */
     @Import(name="displayName", required=true)
-      private final String displayName;
+    private String displayName;
 
     public String displayName() {
         return this.displayName;
@@ -32,7 +32,7 @@ public final class GoogleCloudChannelV1ContactInfoResponse extends com.pulumi.re
      * 
      */
     @Import(name="email", required=true)
-      private final String email;
+    private String email;
 
     public String email() {
         return this.email;
@@ -43,7 +43,7 @@ public final class GoogleCloudChannelV1ContactInfoResponse extends com.pulumi.re
      * 
      */
     @Import(name="firstName", required=true)
-      private final String firstName;
+    private String firstName;
 
     public String firstName() {
         return this.firstName;
@@ -54,7 +54,7 @@ public final class GoogleCloudChannelV1ContactInfoResponse extends com.pulumi.re
      * 
      */
     @Import(name="lastName", required=true)
-      private final String lastName;
+    private String lastName;
 
     public String lastName() {
         return this.lastName;
@@ -65,7 +65,7 @@ public final class GoogleCloudChannelV1ContactInfoResponse extends com.pulumi.re
      * 
      */
     @Import(name="phone", required=true)
-      private final String phone;
+    private String phone;
 
     public String phone() {
         return this.phone;
@@ -76,91 +76,80 @@ public final class GoogleCloudChannelV1ContactInfoResponse extends com.pulumi.re
      * 
      */
     @Import(name="title", required=true)
-      private final String title;
+    private String title;
 
     public String title() {
         return this.title;
     }
 
-    public GoogleCloudChannelV1ContactInfoResponse(
-        String displayName,
-        String email,
-        String firstName,
-        String lastName,
-        String phone,
-        String title) {
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.email = Objects.requireNonNull(email, "expected parameter 'email' to be non-null");
-        this.firstName = Objects.requireNonNull(firstName, "expected parameter 'firstName' to be non-null");
-        this.lastName = Objects.requireNonNull(lastName, "expected parameter 'lastName' to be non-null");
-        this.phone = Objects.requireNonNull(phone, "expected parameter 'phone' to be non-null");
-        this.title = Objects.requireNonNull(title, "expected parameter 'title' to be non-null");
-    }
+    private GoogleCloudChannelV1ContactInfoResponse() {}
 
-    private GoogleCloudChannelV1ContactInfoResponse() {
-        this.displayName = null;
-        this.email = null;
-        this.firstName = null;
-        this.lastName = null;
-        this.phone = null;
-        this.title = null;
+    private GoogleCloudChannelV1ContactInfoResponse(GoogleCloudChannelV1ContactInfoResponse $) {
+        this.displayName = $.displayName;
+        this.email = $.email;
+        this.firstName = $.firstName;
+        this.lastName = $.lastName;
+        this.phone = $.phone;
+        this.title = $.title;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudChannelV1ContactInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String displayName;
-        private String email;
-        private String firstName;
-        private String lastName;
-        private String phone;
-        private String title;
+        private GoogleCloudChannelV1ContactInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudChannelV1ContactInfoResponse();
         }
 
         public Builder(GoogleCloudChannelV1ContactInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.email = defaults.email;
-    	      this.firstName = defaults.firstName;
-    	      this.lastName = defaults.lastName;
-    	      this.phone = defaults.phone;
-    	      this.title = defaults.title;
+            $ = new GoogleCloudChannelV1ContactInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder email(String email) {
-            this.email = Objects.requireNonNull(email);
+            $.email = email;
             return this;
         }
+
         public Builder firstName(String firstName) {
-            this.firstName = Objects.requireNonNull(firstName);
+            $.firstName = firstName;
             return this;
         }
+
         public Builder lastName(String lastName) {
-            this.lastName = Objects.requireNonNull(lastName);
+            $.lastName = lastName;
             return this;
         }
+
         public Builder phone(String phone) {
-            this.phone = Objects.requireNonNull(phone);
+            $.phone = phone;
             return this;
         }
+
         public Builder title(String title) {
-            this.title = Objects.requireNonNull(title);
+            $.title = title;
             return this;
-        }        public GoogleCloudChannelV1ContactInfoResponse build() {
-            return new GoogleCloudChannelV1ContactInfoResponse(displayName, email, firstName, lastName, phone, title);
+        }
+
+        public GoogleCloudChannelV1ContactInfoResponse build() {
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.email = Objects.requireNonNull($.email, "expected parameter 'email' to be non-null");
+            $.firstName = Objects.requireNonNull($.firstName, "expected parameter 'firstName' to be non-null");
+            $.lastName = Objects.requireNonNull($.lastName, "expected parameter 'lastName' to be non-null");
+            $.phone = Objects.requireNonNull($.phone, "expected parameter 'phone' to be non-null");
+            $.title = Objects.requireNonNull($.title, "expected parameter 'title' to be non-null");
+            return $;
         }
     }
+
 }

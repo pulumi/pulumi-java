@@ -26,7 +26,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemRespo
      * 
      */
     @Import(name="availableQuantity", required=true)
-      private final String availableQuantity;
+    private String availableQuantity;
 
     public String availableQuantity() {
         return this.availableQuantity;
@@ -37,7 +37,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemRespo
      * 
      */
     @Import(name="canonicalProductUri", required=true)
-      private final String canonicalProductUri;
+    private String canonicalProductUri;
 
     public String canonicalProductUri() {
         return this.canonicalProductUri;
@@ -48,7 +48,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemRespo
      * 
      */
     @Import(name="costs", required=true)
-      private final Map<String,String> costs;
+    private Map<String,String> costs;
 
     public Map<String,String> costs() {
         return this.costs;
@@ -59,7 +59,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemRespo
      * 
      */
     @Import(name="currencyCode", required=true)
-      private final String currencyCode;
+    private String currencyCode;
 
     public String currencyCode() {
         return this.currencyCode;
@@ -70,7 +70,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemRespo
      * 
      */
     @Import(name="exactPrice", required=true)
-      private final GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse exactPrice;
+    private GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse exactPrice;
 
     public GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse exactPrice() {
         return this.exactPrice;
@@ -81,7 +81,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemRespo
      * 
      */
     @Import(name="images", required=true)
-      private final List<GoogleCloudRecommendationengineV1beta1ImageResponse> images;
+    private List<GoogleCloudRecommendationengineV1beta1ImageResponse> images;
 
     public List<GoogleCloudRecommendationengineV1beta1ImageResponse> images() {
         return this.images;
@@ -92,7 +92,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemRespo
      * 
      */
     @Import(name="priceRange", required=true)
-      private final GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse priceRange;
+    private GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse priceRange;
 
     public GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse priceRange() {
         return this.priceRange;
@@ -103,112 +103,98 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemRespo
      * 
      */
     @Import(name="stockState", required=true)
-      private final String stockState;
+    private String stockState;
 
     public String stockState() {
         return this.stockState;
     }
 
-    public GoogleCloudRecommendationengineV1beta1ProductCatalogItemResponse(
-        String availableQuantity,
-        String canonicalProductUri,
-        Map<String,String> costs,
-        String currencyCode,
-        GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse exactPrice,
-        List<GoogleCloudRecommendationengineV1beta1ImageResponse> images,
-        GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse priceRange,
-        String stockState) {
-        this.availableQuantity = Objects.requireNonNull(availableQuantity, "expected parameter 'availableQuantity' to be non-null");
-        this.canonicalProductUri = Objects.requireNonNull(canonicalProductUri, "expected parameter 'canonicalProductUri' to be non-null");
-        this.costs = Objects.requireNonNull(costs, "expected parameter 'costs' to be non-null");
-        this.currencyCode = Objects.requireNonNull(currencyCode, "expected parameter 'currencyCode' to be non-null");
-        this.exactPrice = Objects.requireNonNull(exactPrice, "expected parameter 'exactPrice' to be non-null");
-        this.images = Objects.requireNonNull(images, "expected parameter 'images' to be non-null");
-        this.priceRange = Objects.requireNonNull(priceRange, "expected parameter 'priceRange' to be non-null");
-        this.stockState = Objects.requireNonNull(stockState, "expected parameter 'stockState' to be non-null");
-    }
+    private GoogleCloudRecommendationengineV1beta1ProductCatalogItemResponse() {}
 
-    private GoogleCloudRecommendationengineV1beta1ProductCatalogItemResponse() {
-        this.availableQuantity = null;
-        this.canonicalProductUri = null;
-        this.costs = Map.of();
-        this.currencyCode = null;
-        this.exactPrice = null;
-        this.images = List.of();
-        this.priceRange = null;
-        this.stockState = null;
+    private GoogleCloudRecommendationengineV1beta1ProductCatalogItemResponse(GoogleCloudRecommendationengineV1beta1ProductCatalogItemResponse $) {
+        this.availableQuantity = $.availableQuantity;
+        this.canonicalProductUri = $.canonicalProductUri;
+        this.costs = $.costs;
+        this.currencyCode = $.currencyCode;
+        this.exactPrice = $.exactPrice;
+        this.images = $.images;
+        this.priceRange = $.priceRange;
+        this.stockState = $.stockState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRecommendationengineV1beta1ProductCatalogItemResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String availableQuantity;
-        private String canonicalProductUri;
-        private Map<String,String> costs;
-        private String currencyCode;
-        private GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse exactPrice;
-        private List<GoogleCloudRecommendationengineV1beta1ImageResponse> images;
-        private GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse priceRange;
-        private String stockState;
+        private GoogleCloudRecommendationengineV1beta1ProductCatalogItemResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRecommendationengineV1beta1ProductCatalogItemResponse();
         }
 
         public Builder(GoogleCloudRecommendationengineV1beta1ProductCatalogItemResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.availableQuantity = defaults.availableQuantity;
-    	      this.canonicalProductUri = defaults.canonicalProductUri;
-    	      this.costs = defaults.costs;
-    	      this.currencyCode = defaults.currencyCode;
-    	      this.exactPrice = defaults.exactPrice;
-    	      this.images = defaults.images;
-    	      this.priceRange = defaults.priceRange;
-    	      this.stockState = defaults.stockState;
+            $ = new GoogleCloudRecommendationengineV1beta1ProductCatalogItemResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder availableQuantity(String availableQuantity) {
-            this.availableQuantity = Objects.requireNonNull(availableQuantity);
+            $.availableQuantity = availableQuantity;
             return this;
         }
+
         public Builder canonicalProductUri(String canonicalProductUri) {
-            this.canonicalProductUri = Objects.requireNonNull(canonicalProductUri);
+            $.canonicalProductUri = canonicalProductUri;
             return this;
         }
+
         public Builder costs(Map<String,String> costs) {
-            this.costs = Objects.requireNonNull(costs);
+            $.costs = costs;
             return this;
         }
+
         public Builder currencyCode(String currencyCode) {
-            this.currencyCode = Objects.requireNonNull(currencyCode);
+            $.currencyCode = currencyCode;
             return this;
         }
+
         public Builder exactPrice(GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse exactPrice) {
-            this.exactPrice = Objects.requireNonNull(exactPrice);
+            $.exactPrice = exactPrice;
             return this;
         }
+
         public Builder images(List<GoogleCloudRecommendationengineV1beta1ImageResponse> images) {
-            this.images = Objects.requireNonNull(images);
+            $.images = images;
             return this;
         }
+
         public Builder images(GoogleCloudRecommendationengineV1beta1ImageResponse... images) {
             return images(List.of(images));
         }
+
         public Builder priceRange(GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse priceRange) {
-            this.priceRange = Objects.requireNonNull(priceRange);
+            $.priceRange = priceRange;
             return this;
         }
+
         public Builder stockState(String stockState) {
-            this.stockState = Objects.requireNonNull(stockState);
+            $.stockState = stockState;
             return this;
-        }        public GoogleCloudRecommendationengineV1beta1ProductCatalogItemResponse build() {
-            return new GoogleCloudRecommendationengineV1beta1ProductCatalogItemResponse(availableQuantity, canonicalProductUri, costs, currencyCode, exactPrice, images, priceRange, stockState);
+        }
+
+        public GoogleCloudRecommendationengineV1beta1ProductCatalogItemResponse build() {
+            $.availableQuantity = Objects.requireNonNull($.availableQuantity, "expected parameter 'availableQuantity' to be non-null");
+            $.canonicalProductUri = Objects.requireNonNull($.canonicalProductUri, "expected parameter 'canonicalProductUri' to be non-null");
+            $.costs = Objects.requireNonNull($.costs, "expected parameter 'costs' to be non-null");
+            $.currencyCode = Objects.requireNonNull($.currencyCode, "expected parameter 'currencyCode' to be non-null");
+            $.exactPrice = Objects.requireNonNull($.exactPrice, "expected parameter 'exactPrice' to be non-null");
+            $.images = Objects.requireNonNull($.images, "expected parameter 'images' to be non-null");
+            $.priceRange = Objects.requireNonNull($.priceRange, "expected parameter 'priceRange' to be non-null");
+            $.stockState = Objects.requireNonNull($.stockState, "expected parameter 'stockState' to be non-null");
+            return $;
         }
     }
+
 }

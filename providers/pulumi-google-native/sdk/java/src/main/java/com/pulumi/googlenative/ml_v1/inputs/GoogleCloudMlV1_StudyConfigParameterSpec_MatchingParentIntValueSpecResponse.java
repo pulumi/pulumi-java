@@ -22,48 +22,49 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntVal
      * 
      */
     @Import(name="values", required=true)
-      private final List<String> values;
+    private List<String> values;
 
     public List<String> values() {
         return this.values;
     }
 
-    public GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecResponse(List<String> values) {
-        this.values = Objects.requireNonNull(values, "expected parameter 'values' to be non-null");
-    }
+    private GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecResponse() {}
 
-    private GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecResponse() {
-        this.values = List.of();
+    private GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecResponse(GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecResponse $) {
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> values;
+        private GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecResponse();
         }
 
         public Builder(GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.values = defaults.values;
+            $ = new GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder values(List<String> values) {
-            this.values = Objects.requireNonNull(values);
+            $.values = values;
             return this;
         }
+
         public Builder values(String... values) {
             return values(List.of(values));
-        }        public GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecResponse build() {
-            return new GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecResponse(values);
+        }
+
+        public GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecResponse build() {
+            $.values = Objects.requireNonNull($.values, "expected parameter 'values' to be non-null");
+            return $;
         }
     }
+
 }

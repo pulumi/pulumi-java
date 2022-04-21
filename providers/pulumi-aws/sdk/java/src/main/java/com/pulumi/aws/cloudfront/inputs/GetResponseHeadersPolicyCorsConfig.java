@@ -23,7 +23,7 @@ public final class GetResponseHeadersPolicyCorsConfig extends com.pulumi.resourc
      * 
      */
     @Import(name="accessControlAllowCredentials", required=true)
-      private final Boolean accessControlAllowCredentials;
+    private Boolean accessControlAllowCredentials;
 
     public Boolean accessControlAllowCredentials() {
         return this.accessControlAllowCredentials;
@@ -34,7 +34,7 @@ public final class GetResponseHeadersPolicyCorsConfig extends com.pulumi.resourc
      * 
      */
     @Import(name="accessControlAllowHeaders", required=true)
-      private final List<GetResponseHeadersPolicyCorsConfigAccessControlAllowHeader> accessControlAllowHeaders;
+    private List<GetResponseHeadersPolicyCorsConfigAccessControlAllowHeader> accessControlAllowHeaders;
 
     public List<GetResponseHeadersPolicyCorsConfigAccessControlAllowHeader> accessControlAllowHeaders() {
         return this.accessControlAllowHeaders;
@@ -45,7 +45,7 @@ public final class GetResponseHeadersPolicyCorsConfig extends com.pulumi.resourc
      * 
      */
     @Import(name="accessControlAllowMethods", required=true)
-      private final List<GetResponseHeadersPolicyCorsConfigAccessControlAllowMethod> accessControlAllowMethods;
+    private List<GetResponseHeadersPolicyCorsConfigAccessControlAllowMethod> accessControlAllowMethods;
 
     public List<GetResponseHeadersPolicyCorsConfigAccessControlAllowMethod> accessControlAllowMethods() {
         return this.accessControlAllowMethods;
@@ -56,7 +56,7 @@ public final class GetResponseHeadersPolicyCorsConfig extends com.pulumi.resourc
      * 
      */
     @Import(name="accessControlAllowOrigins", required=true)
-      private final List<GetResponseHeadersPolicyCorsConfigAccessControlAllowOrigin> accessControlAllowOrigins;
+    private List<GetResponseHeadersPolicyCorsConfigAccessControlAllowOrigin> accessControlAllowOrigins;
 
     public List<GetResponseHeadersPolicyCorsConfigAccessControlAllowOrigin> accessControlAllowOrigins() {
         return this.accessControlAllowOrigins;
@@ -67,7 +67,7 @@ public final class GetResponseHeadersPolicyCorsConfig extends com.pulumi.resourc
      * 
      */
     @Import(name="accessControlExposeHeaders", required=true)
-      private final List<GetResponseHeadersPolicyCorsConfigAccessControlExposeHeader> accessControlExposeHeaders;
+    private List<GetResponseHeadersPolicyCorsConfigAccessControlExposeHeader> accessControlExposeHeaders;
 
     public List<GetResponseHeadersPolicyCorsConfigAccessControlExposeHeader> accessControlExposeHeaders() {
         return this.accessControlExposeHeaders;
@@ -78,119 +78,110 @@ public final class GetResponseHeadersPolicyCorsConfig extends com.pulumi.resourc
      * 
      */
     @Import(name="accessControlMaxAgeSec", required=true)
-      private final Integer accessControlMaxAgeSec;
+    private Integer accessControlMaxAgeSec;
 
     public Integer accessControlMaxAgeSec() {
         return this.accessControlMaxAgeSec;
     }
 
     @Import(name="originOverride", required=true)
-      private final Boolean originOverride;
+    private Boolean originOverride;
 
     public Boolean originOverride() {
         return this.originOverride;
     }
 
-    public GetResponseHeadersPolicyCorsConfig(
-        Boolean accessControlAllowCredentials,
-        List<GetResponseHeadersPolicyCorsConfigAccessControlAllowHeader> accessControlAllowHeaders,
-        List<GetResponseHeadersPolicyCorsConfigAccessControlAllowMethod> accessControlAllowMethods,
-        List<GetResponseHeadersPolicyCorsConfigAccessControlAllowOrigin> accessControlAllowOrigins,
-        List<GetResponseHeadersPolicyCorsConfigAccessControlExposeHeader> accessControlExposeHeaders,
-        Integer accessControlMaxAgeSec,
-        Boolean originOverride) {
-        this.accessControlAllowCredentials = Objects.requireNonNull(accessControlAllowCredentials, "expected parameter 'accessControlAllowCredentials' to be non-null");
-        this.accessControlAllowHeaders = Objects.requireNonNull(accessControlAllowHeaders, "expected parameter 'accessControlAllowHeaders' to be non-null");
-        this.accessControlAllowMethods = Objects.requireNonNull(accessControlAllowMethods, "expected parameter 'accessControlAllowMethods' to be non-null");
-        this.accessControlAllowOrigins = Objects.requireNonNull(accessControlAllowOrigins, "expected parameter 'accessControlAllowOrigins' to be non-null");
-        this.accessControlExposeHeaders = Objects.requireNonNull(accessControlExposeHeaders, "expected parameter 'accessControlExposeHeaders' to be non-null");
-        this.accessControlMaxAgeSec = Objects.requireNonNull(accessControlMaxAgeSec, "expected parameter 'accessControlMaxAgeSec' to be non-null");
-        this.originOverride = Objects.requireNonNull(originOverride, "expected parameter 'originOverride' to be non-null");
-    }
+    private GetResponseHeadersPolicyCorsConfig() {}
 
-    private GetResponseHeadersPolicyCorsConfig() {
-        this.accessControlAllowCredentials = null;
-        this.accessControlAllowHeaders = List.of();
-        this.accessControlAllowMethods = List.of();
-        this.accessControlAllowOrigins = List.of();
-        this.accessControlExposeHeaders = List.of();
-        this.accessControlMaxAgeSec = null;
-        this.originOverride = null;
+    private GetResponseHeadersPolicyCorsConfig(GetResponseHeadersPolicyCorsConfig $) {
+        this.accessControlAllowCredentials = $.accessControlAllowCredentials;
+        this.accessControlAllowHeaders = $.accessControlAllowHeaders;
+        this.accessControlAllowMethods = $.accessControlAllowMethods;
+        this.accessControlAllowOrigins = $.accessControlAllowOrigins;
+        this.accessControlExposeHeaders = $.accessControlExposeHeaders;
+        this.accessControlMaxAgeSec = $.accessControlMaxAgeSec;
+        this.originOverride = $.originOverride;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetResponseHeadersPolicyCorsConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean accessControlAllowCredentials;
-        private List<GetResponseHeadersPolicyCorsConfigAccessControlAllowHeader> accessControlAllowHeaders;
-        private List<GetResponseHeadersPolicyCorsConfigAccessControlAllowMethod> accessControlAllowMethods;
-        private List<GetResponseHeadersPolicyCorsConfigAccessControlAllowOrigin> accessControlAllowOrigins;
-        private List<GetResponseHeadersPolicyCorsConfigAccessControlExposeHeader> accessControlExposeHeaders;
-        private Integer accessControlMaxAgeSec;
-        private Boolean originOverride;
+        private GetResponseHeadersPolicyCorsConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetResponseHeadersPolicyCorsConfig();
         }
 
         public Builder(GetResponseHeadersPolicyCorsConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessControlAllowCredentials = defaults.accessControlAllowCredentials;
-    	      this.accessControlAllowHeaders = defaults.accessControlAllowHeaders;
-    	      this.accessControlAllowMethods = defaults.accessControlAllowMethods;
-    	      this.accessControlAllowOrigins = defaults.accessControlAllowOrigins;
-    	      this.accessControlExposeHeaders = defaults.accessControlExposeHeaders;
-    	      this.accessControlMaxAgeSec = defaults.accessControlMaxAgeSec;
-    	      this.originOverride = defaults.originOverride;
+            $ = new GetResponseHeadersPolicyCorsConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder accessControlAllowCredentials(Boolean accessControlAllowCredentials) {
-            this.accessControlAllowCredentials = Objects.requireNonNull(accessControlAllowCredentials);
+            $.accessControlAllowCredentials = accessControlAllowCredentials;
             return this;
         }
+
         public Builder accessControlAllowHeaders(List<GetResponseHeadersPolicyCorsConfigAccessControlAllowHeader> accessControlAllowHeaders) {
-            this.accessControlAllowHeaders = Objects.requireNonNull(accessControlAllowHeaders);
+            $.accessControlAllowHeaders = accessControlAllowHeaders;
             return this;
         }
+
         public Builder accessControlAllowHeaders(GetResponseHeadersPolicyCorsConfigAccessControlAllowHeader... accessControlAllowHeaders) {
             return accessControlAllowHeaders(List.of(accessControlAllowHeaders));
         }
+
         public Builder accessControlAllowMethods(List<GetResponseHeadersPolicyCorsConfigAccessControlAllowMethod> accessControlAllowMethods) {
-            this.accessControlAllowMethods = Objects.requireNonNull(accessControlAllowMethods);
+            $.accessControlAllowMethods = accessControlAllowMethods;
             return this;
         }
+
         public Builder accessControlAllowMethods(GetResponseHeadersPolicyCorsConfigAccessControlAllowMethod... accessControlAllowMethods) {
             return accessControlAllowMethods(List.of(accessControlAllowMethods));
         }
+
         public Builder accessControlAllowOrigins(List<GetResponseHeadersPolicyCorsConfigAccessControlAllowOrigin> accessControlAllowOrigins) {
-            this.accessControlAllowOrigins = Objects.requireNonNull(accessControlAllowOrigins);
+            $.accessControlAllowOrigins = accessControlAllowOrigins;
             return this;
         }
+
         public Builder accessControlAllowOrigins(GetResponseHeadersPolicyCorsConfigAccessControlAllowOrigin... accessControlAllowOrigins) {
             return accessControlAllowOrigins(List.of(accessControlAllowOrigins));
         }
+
         public Builder accessControlExposeHeaders(List<GetResponseHeadersPolicyCorsConfigAccessControlExposeHeader> accessControlExposeHeaders) {
-            this.accessControlExposeHeaders = Objects.requireNonNull(accessControlExposeHeaders);
+            $.accessControlExposeHeaders = accessControlExposeHeaders;
             return this;
         }
+
         public Builder accessControlExposeHeaders(GetResponseHeadersPolicyCorsConfigAccessControlExposeHeader... accessControlExposeHeaders) {
             return accessControlExposeHeaders(List.of(accessControlExposeHeaders));
         }
+
         public Builder accessControlMaxAgeSec(Integer accessControlMaxAgeSec) {
-            this.accessControlMaxAgeSec = Objects.requireNonNull(accessControlMaxAgeSec);
+            $.accessControlMaxAgeSec = accessControlMaxAgeSec;
             return this;
         }
+
         public Builder originOverride(Boolean originOverride) {
-            this.originOverride = Objects.requireNonNull(originOverride);
+            $.originOverride = originOverride;
             return this;
-        }        public GetResponseHeadersPolicyCorsConfig build() {
-            return new GetResponseHeadersPolicyCorsConfig(accessControlAllowCredentials, accessControlAllowHeaders, accessControlAllowMethods, accessControlAllowOrigins, accessControlExposeHeaders, accessControlMaxAgeSec, originOverride);
+        }
+
+        public GetResponseHeadersPolicyCorsConfig build() {
+            $.accessControlAllowCredentials = Objects.requireNonNull($.accessControlAllowCredentials, "expected parameter 'accessControlAllowCredentials' to be non-null");
+            $.accessControlAllowHeaders = Objects.requireNonNull($.accessControlAllowHeaders, "expected parameter 'accessControlAllowHeaders' to be non-null");
+            $.accessControlAllowMethods = Objects.requireNonNull($.accessControlAllowMethods, "expected parameter 'accessControlAllowMethods' to be non-null");
+            $.accessControlAllowOrigins = Objects.requireNonNull($.accessControlAllowOrigins, "expected parameter 'accessControlAllowOrigins' to be non-null");
+            $.accessControlExposeHeaders = Objects.requireNonNull($.accessControlExposeHeaders, "expected parameter 'accessControlExposeHeaders' to be non-null");
+            $.accessControlMaxAgeSec = Objects.requireNonNull($.accessControlMaxAgeSec, "expected parameter 'accessControlMaxAgeSec' to be non-null");
+            $.originOverride = Objects.requireNonNull($.originOverride, "expected parameter 'originOverride' to be non-null");
+            return $;
         }
     }
+
 }

@@ -15,78 +15,72 @@ public final class GetRealmArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetRealmArgs Empty = new GetRealmArgs();
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="realmId", required=true)
-      private final String realmId;
+    private String realmId;
 
     public String realmId() {
         return this.realmId;
     }
 
-    public GetRealmArgs(
-        String location,
-        @Nullable String project,
-        String realmId) {
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-        this.realmId = Objects.requireNonNull(realmId, "expected parameter 'realmId' to be non-null");
-    }
+    private GetRealmArgs() {}
 
-    private GetRealmArgs() {
-        this.location = null;
-        this.project = null;
-        this.realmId = null;
+    private GetRealmArgs(GetRealmArgs $) {
+        this.location = $.location;
+        this.project = $.project;
+        this.realmId = $.realmId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRealmArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String location;
-        private @Nullable String project;
-        private String realmId;
+        private GetRealmArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRealmArgs();
         }
 
         public Builder(GetRealmArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
-    	      this.realmId = defaults.realmId;
+            $ = new GetRealmArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder realmId(String realmId) {
-            this.realmId = Objects.requireNonNull(realmId);
+            $.realmId = realmId;
             return this;
-        }        public GetRealmArgs build() {
-            return new GetRealmArgs(location, project, realmId);
+        }
+
+        public GetRealmArgs build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.realmId = Objects.requireNonNull($.realmId, "expected parameter 'realmId' to be non-null");
+            return $;
         }
     }
+
 }

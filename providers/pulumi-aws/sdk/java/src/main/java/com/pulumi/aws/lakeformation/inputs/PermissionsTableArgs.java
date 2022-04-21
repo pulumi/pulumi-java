@@ -5,10 +5,10 @@ package com.pulumi.aws.lakeformation.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class PermissionsTableArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="catalogId")
-      private final @Nullable Output<String> catalogId;
+    private @Nullable Output<String> catalogId;
 
-    public Output<String> catalogId() {
-        return this.catalogId == null ? Codegen.empty() : this.catalogId;
+    public Optional<Output<String>> catalogId() {
+        return Optional.ofNullable(this.catalogId);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class PermissionsTableArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="databaseName", required=true)
-      private final Output<String> databaseName;
+    private Output<String> databaseName;
 
     public Output<String> databaseName() {
         return this.databaseName;
@@ -43,96 +43,86 @@ public final class PermissionsTableArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="wildcard")
-      private final @Nullable Output<Boolean> wildcard;
+    private @Nullable Output<Boolean> wildcard;
 
-    public Output<Boolean> wildcard() {
-        return this.wildcard == null ? Codegen.empty() : this.wildcard;
+    public Optional<Output<Boolean>> wildcard() {
+        return Optional.ofNullable(this.wildcard);
     }
 
-    public PermissionsTableArgs(
-        @Nullable Output<String> catalogId,
-        Output<String> databaseName,
-        @Nullable Output<String> name,
-        @Nullable Output<Boolean> wildcard) {
-        this.catalogId = catalogId;
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.name = name;
-        this.wildcard = wildcard;
-    }
+    private PermissionsTableArgs() {}
 
-    private PermissionsTableArgs() {
-        this.catalogId = Codegen.empty();
-        this.databaseName = Codegen.empty();
-        this.name = Codegen.empty();
-        this.wildcard = Codegen.empty();
+    private PermissionsTableArgs(PermissionsTableArgs $) {
+        this.catalogId = $.catalogId;
+        this.databaseName = $.databaseName;
+        this.name = $.name;
+        this.wildcard = $.wildcard;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PermissionsTableArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> catalogId;
-        private Output<String> databaseName;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Boolean> wildcard;
+        private PermissionsTableArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PermissionsTableArgs();
         }
 
         public Builder(PermissionsTableArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.catalogId = defaults.catalogId;
-    	      this.databaseName = defaults.databaseName;
-    	      this.name = defaults.name;
-    	      this.wildcard = defaults.wildcard;
+            $ = new PermissionsTableArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder catalogId(@Nullable Output<String> catalogId) {
-            this.catalogId = catalogId;
+            $.catalogId = catalogId;
             return this;
         }
-        public Builder catalogId(@Nullable String catalogId) {
-            this.catalogId = Codegen.ofNullable(catalogId);
-            return this;
+
+        public Builder catalogId(String catalogId) {
+            return catalogId(Output.of(catalogId));
         }
+
         public Builder databaseName(Output<String> databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder databaseName(String databaseName) {
-            this.databaseName = Output.of(Objects.requireNonNull(databaseName));
-            return this;
+            return databaseName(Output.of(databaseName));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder wildcard(@Nullable Output<Boolean> wildcard) {
-            this.wildcard = wildcard;
+            $.wildcard = wildcard;
             return this;
         }
-        public Builder wildcard(@Nullable Boolean wildcard) {
-            this.wildcard = Codegen.ofNullable(wildcard);
-            return this;
-        }        public PermissionsTableArgs build() {
-            return new PermissionsTableArgs(catalogId, databaseName, name, wildcard);
+
+        public Builder wildcard(Boolean wildcard) {
+            return wildcard(Output.of(wildcard));
+        }
+
+        public PermissionsTableArgs build() {
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            return $;
         }
     }
+
 }

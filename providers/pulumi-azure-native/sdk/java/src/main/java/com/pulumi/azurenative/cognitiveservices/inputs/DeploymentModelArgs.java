@@ -5,9 +5,9 @@ package com.pulumi.azurenative.cognitiveservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class DeploymentModelArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="format")
-      private final @Nullable Output<String> format;
+    private @Nullable Output<String> format;
 
-    public Output<String> format() {
-        return this.format == null ? Codegen.empty() : this.format;
+    public Optional<Output<String>> format() {
+        return Optional.ofNullable(this.format);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class DeploymentModelArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class DeploymentModelArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public DeploymentModelArgs(
-        @Nullable Output<String> format,
-        @Nullable Output<String> name,
-        @Nullable Output<String> version) {
-        this.format = format;
-        this.name = name;
-        this.version = version;
-    }
+    private DeploymentModelArgs() {}
 
-    private DeploymentModelArgs() {
-        this.format = Codegen.empty();
-        this.name = Codegen.empty();
-        this.version = Codegen.empty();
+    private DeploymentModelArgs(DeploymentModelArgs $) {
+        this.format = $.format;
+        this.name = $.name;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeploymentModelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> format;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> version;
+        private DeploymentModelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeploymentModelArgs();
         }
 
         public Builder(DeploymentModelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.format = defaults.format;
-    	      this.name = defaults.name;
-    	      this.version = defaults.version;
+            $ = new DeploymentModelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder format(@Nullable Output<String> format) {
-            this.format = format;
+            $.format = format;
             return this;
         }
-        public Builder format(@Nullable String format) {
-            this.format = Codegen.ofNullable(format);
-            return this;
+
+        public Builder format(String format) {
+            return format(Output.of(format));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public DeploymentModelArgs build() {
-            return new DeploymentModelArgs(format, name, version);
+
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public DeploymentModelArgs build() {
+            return $;
         }
     }
+
 }

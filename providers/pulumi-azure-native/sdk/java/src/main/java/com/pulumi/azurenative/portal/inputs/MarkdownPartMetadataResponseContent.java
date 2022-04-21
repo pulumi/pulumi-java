@@ -23,45 +23,44 @@ public final class MarkdownPartMetadataResponseContent extends com.pulumi.resour
      * 
      */
     @Import(name="settings")
-      private final @Nullable MarkdownPartMetadataResponseSettingsSettings settings;
+    private @Nullable MarkdownPartMetadataResponseSettingsSettings settings;
 
     public Optional<MarkdownPartMetadataResponseSettingsSettings> settings() {
-        return this.settings == null ? Optional.empty() : Optional.ofNullable(this.settings);
+        return Optional.ofNullable(this.settings);
     }
 
-    public MarkdownPartMetadataResponseContent(@Nullable MarkdownPartMetadataResponseSettingsSettings settings) {
-        this.settings = settings;
-    }
+    private MarkdownPartMetadataResponseContent() {}
 
-    private MarkdownPartMetadataResponseContent() {
-        this.settings = null;
+    private MarkdownPartMetadataResponseContent(MarkdownPartMetadataResponseContent $) {
+        this.settings = $.settings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MarkdownPartMetadataResponseContent defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable MarkdownPartMetadataResponseSettingsSettings settings;
+        private MarkdownPartMetadataResponseContent $;
 
         public Builder() {
-    	      // Empty
+            $ = new MarkdownPartMetadataResponseContent();
         }
 
         public Builder(MarkdownPartMetadataResponseContent defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.settings = defaults.settings;
+            $ = new MarkdownPartMetadataResponseContent(Objects.requireNonNull(defaults));
         }
 
         public Builder settings(@Nullable MarkdownPartMetadataResponseSettingsSettings settings) {
-            this.settings = settings;
+            $.settings = settings;
             return this;
-        }        public MarkdownPartMetadataResponseContent build() {
-            return new MarkdownPartMetadataResponseContent(settings);
+        }
+
+        public MarkdownPartMetadataResponseContent build() {
+            return $;
         }
     }
+
 }

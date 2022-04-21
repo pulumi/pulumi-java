@@ -7,10 +7,10 @@ import com.pulumi.azurenative.automation.inputs.RunbookAssociationPropertyArgs;
 import com.pulumi.azurenative.automation.inputs.ScheduleAssociationPropertyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class JobScheduleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="automationAccountName", required=true)
-      private final Output<String> automationAccountName;
+    private Output<String> automationAccountName;
 
     public Output<String> automationAccountName() {
         return this.automationAccountName;
@@ -34,10 +34,10 @@ public final class JobScheduleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="jobScheduleId")
-      private final @Nullable Output<String> jobScheduleId;
+    private @Nullable Output<String> jobScheduleId;
 
-    public Output<String> jobScheduleId() {
-        return this.jobScheduleId == null ? Codegen.empty() : this.jobScheduleId;
+    public Optional<Output<String>> jobScheduleId() {
+        return Optional.ofNullable(this.jobScheduleId);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class JobScheduleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<Map<String,String>> parameters;
+    private @Nullable Output<Map<String,String>> parameters;
 
-    public Output<Map<String,String>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<Map<String,String>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -56,7 +56,7 @@ public final class JobScheduleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -67,10 +67,10 @@ public final class JobScheduleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="runOn")
-      private final @Nullable Output<String> runOn;
+    private @Nullable Output<String> runOn;
 
-    public Output<String> runOn() {
-        return this.runOn == null ? Codegen.empty() : this.runOn;
+    public Optional<Output<String>> runOn() {
+        return Optional.ofNullable(this.runOn);
     }
 
     /**
@@ -78,7 +78,7 @@ public final class JobScheduleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="runbook", required=true)
-      private final Output<RunbookAssociationPropertyArgs> runbook;
+    private Output<RunbookAssociationPropertyArgs> runbook;
 
     public Output<RunbookAssociationPropertyArgs> runbook() {
         return this.runbook;
@@ -89,128 +89,112 @@ public final class JobScheduleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="schedule", required=true)
-      private final Output<ScheduleAssociationPropertyArgs> schedule;
+    private Output<ScheduleAssociationPropertyArgs> schedule;
 
     public Output<ScheduleAssociationPropertyArgs> schedule() {
         return this.schedule;
     }
 
-    public JobScheduleArgs(
-        Output<String> automationAccountName,
-        @Nullable Output<String> jobScheduleId,
-        @Nullable Output<Map<String,String>> parameters,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> runOn,
-        Output<RunbookAssociationPropertyArgs> runbook,
-        Output<ScheduleAssociationPropertyArgs> schedule) {
-        this.automationAccountName = Objects.requireNonNull(automationAccountName, "expected parameter 'automationAccountName' to be non-null");
-        this.jobScheduleId = jobScheduleId;
-        this.parameters = parameters;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.runOn = runOn;
-        this.runbook = Objects.requireNonNull(runbook, "expected parameter 'runbook' to be non-null");
-        this.schedule = Objects.requireNonNull(schedule, "expected parameter 'schedule' to be non-null");
-    }
+    private JobScheduleArgs() {}
 
-    private JobScheduleArgs() {
-        this.automationAccountName = Codegen.empty();
-        this.jobScheduleId = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.runOn = Codegen.empty();
-        this.runbook = Codegen.empty();
-        this.schedule = Codegen.empty();
+    private JobScheduleArgs(JobScheduleArgs $) {
+        this.automationAccountName = $.automationAccountName;
+        this.jobScheduleId = $.jobScheduleId;
+        this.parameters = $.parameters;
+        this.resourceGroupName = $.resourceGroupName;
+        this.runOn = $.runOn;
+        this.runbook = $.runbook;
+        this.schedule = $.schedule;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobScheduleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> automationAccountName;
-        private @Nullable Output<String> jobScheduleId;
-        private @Nullable Output<Map<String,String>> parameters;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> runOn;
-        private Output<RunbookAssociationPropertyArgs> runbook;
-        private Output<ScheduleAssociationPropertyArgs> schedule;
+        private JobScheduleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobScheduleArgs();
         }
 
         public Builder(JobScheduleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.automationAccountName = defaults.automationAccountName;
-    	      this.jobScheduleId = defaults.jobScheduleId;
-    	      this.parameters = defaults.parameters;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.runOn = defaults.runOn;
-    	      this.runbook = defaults.runbook;
-    	      this.schedule = defaults.schedule;
+            $ = new JobScheduleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder automationAccountName(Output<String> automationAccountName) {
-            this.automationAccountName = Objects.requireNonNull(automationAccountName);
+            $.automationAccountName = automationAccountName;
             return this;
         }
+
         public Builder automationAccountName(String automationAccountName) {
-            this.automationAccountName = Output.of(Objects.requireNonNull(automationAccountName));
-            return this;
+            return automationAccountName(Output.of(automationAccountName));
         }
+
         public Builder jobScheduleId(@Nullable Output<String> jobScheduleId) {
-            this.jobScheduleId = jobScheduleId;
+            $.jobScheduleId = jobScheduleId;
             return this;
         }
-        public Builder jobScheduleId(@Nullable String jobScheduleId) {
-            this.jobScheduleId = Codegen.ofNullable(jobScheduleId);
-            return this;
+
+        public Builder jobScheduleId(String jobScheduleId) {
+            return jobScheduleId(Output.of(jobScheduleId));
         }
+
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(Map<String,String> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder runOn(@Nullable Output<String> runOn) {
-            this.runOn = runOn;
+            $.runOn = runOn;
             return this;
         }
-        public Builder runOn(@Nullable String runOn) {
-            this.runOn = Codegen.ofNullable(runOn);
-            return this;
+
+        public Builder runOn(String runOn) {
+            return runOn(Output.of(runOn));
         }
+
         public Builder runbook(Output<RunbookAssociationPropertyArgs> runbook) {
-            this.runbook = Objects.requireNonNull(runbook);
+            $.runbook = runbook;
             return this;
         }
+
         public Builder runbook(RunbookAssociationPropertyArgs runbook) {
-            this.runbook = Output.of(Objects.requireNonNull(runbook));
-            return this;
+            return runbook(Output.of(runbook));
         }
+
         public Builder schedule(Output<ScheduleAssociationPropertyArgs> schedule) {
-            this.schedule = Objects.requireNonNull(schedule);
+            $.schedule = schedule;
             return this;
         }
+
         public Builder schedule(ScheduleAssociationPropertyArgs schedule) {
-            this.schedule = Output.of(Objects.requireNonNull(schedule));
-            return this;
-        }        public JobScheduleArgs build() {
-            return new JobScheduleArgs(automationAccountName, jobScheduleId, parameters, resourceGroupName, runOn, runbook, schedule);
+            return schedule(Output.of(schedule));
+        }
+
+        public JobScheduleArgs build() {
+            $.automationAccountName = Objects.requireNonNull($.automationAccountName, "expected parameter 'automationAccountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.runbook = Objects.requireNonNull($.runbook, "expected parameter 'runbook' to be non-null");
+            $.schedule = Objects.requireNonNull($.schedule, "expected parameter 'schedule' to be non-null");
+            return $;
         }
     }
+
 }

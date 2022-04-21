@@ -15,45 +15,44 @@ public final class DomainZoneAwarenessConfig extends com.pulumi.resources.Invoke
     public static final DomainZoneAwarenessConfig Empty = new DomainZoneAwarenessConfig();
 
     @Import(name="availabilityZoneCount")
-      private final @Nullable Integer availabilityZoneCount;
+    private @Nullable Integer availabilityZoneCount;
 
     public Optional<Integer> availabilityZoneCount() {
-        return this.availabilityZoneCount == null ? Optional.empty() : Optional.ofNullable(this.availabilityZoneCount);
+        return Optional.ofNullable(this.availabilityZoneCount);
     }
 
-    public DomainZoneAwarenessConfig(@Nullable Integer availabilityZoneCount) {
-        this.availabilityZoneCount = availabilityZoneCount;
-    }
+    private DomainZoneAwarenessConfig() {}
 
-    private DomainZoneAwarenessConfig() {
-        this.availabilityZoneCount = null;
+    private DomainZoneAwarenessConfig(DomainZoneAwarenessConfig $) {
+        this.availabilityZoneCount = $.availabilityZoneCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainZoneAwarenessConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer availabilityZoneCount;
+        private DomainZoneAwarenessConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainZoneAwarenessConfig();
         }
 
         public Builder(DomainZoneAwarenessConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.availabilityZoneCount = defaults.availabilityZoneCount;
+            $ = new DomainZoneAwarenessConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder availabilityZoneCount(@Nullable Integer availabilityZoneCount) {
-            this.availabilityZoneCount = availabilityZoneCount;
+            $.availabilityZoneCount = availabilityZoneCount;
             return this;
-        }        public DomainZoneAwarenessConfig build() {
-            return new DomainZoneAwarenessConfig(availabilityZoneCount);
+        }
+
+        public DomainZoneAwarenessConfig build() {
+            return $;
         }
     }
+
 }

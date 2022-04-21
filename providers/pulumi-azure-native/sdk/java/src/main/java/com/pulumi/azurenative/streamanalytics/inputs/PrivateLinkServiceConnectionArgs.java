@@ -5,10 +5,10 @@ package com.pulumi.azurenative.streamanalytics.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class PrivateLinkServiceConnectionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="groupIds")
-      private final @Nullable Output<List<String>> groupIds;
+    private @Nullable Output<List<String>> groupIds;
 
-    public Output<List<String>> groupIds() {
-        return this.groupIds == null ? Codegen.empty() : this.groupIds;
+    public Optional<Output<List<String>>> groupIds() {
+        return Optional.ofNullable(this.groupIds);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class PrivateLinkServiceConnectionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="privateLinkServiceId")
-      private final @Nullable Output<String> privateLinkServiceId;
+    private @Nullable Output<String> privateLinkServiceId;
 
-    public Output<String> privateLinkServiceId() {
-        return this.privateLinkServiceId == null ? Codegen.empty() : this.privateLinkServiceId;
+    public Optional<Output<String>> privateLinkServiceId() {
+        return Optional.ofNullable(this.privateLinkServiceId);
     }
 
     /**
@@ -47,79 +47,72 @@ public final class PrivateLinkServiceConnectionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="requestMessage")
-      private final @Nullable Output<String> requestMessage;
+    private @Nullable Output<String> requestMessage;
 
-    public Output<String> requestMessage() {
-        return this.requestMessage == null ? Codegen.empty() : this.requestMessage;
+    public Optional<Output<String>> requestMessage() {
+        return Optional.ofNullable(this.requestMessage);
     }
 
-    public PrivateLinkServiceConnectionArgs(
-        @Nullable Output<List<String>> groupIds,
-        @Nullable Output<String> privateLinkServiceId,
-        @Nullable Output<String> requestMessage) {
-        this.groupIds = groupIds;
-        this.privateLinkServiceId = privateLinkServiceId;
-        this.requestMessage = requestMessage;
-    }
+    private PrivateLinkServiceConnectionArgs() {}
 
-    private PrivateLinkServiceConnectionArgs() {
-        this.groupIds = Codegen.empty();
-        this.privateLinkServiceId = Codegen.empty();
-        this.requestMessage = Codegen.empty();
+    private PrivateLinkServiceConnectionArgs(PrivateLinkServiceConnectionArgs $) {
+        this.groupIds = $.groupIds;
+        this.privateLinkServiceId = $.privateLinkServiceId;
+        this.requestMessage = $.requestMessage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateLinkServiceConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> groupIds;
-        private @Nullable Output<String> privateLinkServiceId;
-        private @Nullable Output<String> requestMessage;
+        private PrivateLinkServiceConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateLinkServiceConnectionArgs();
         }
 
         public Builder(PrivateLinkServiceConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groupIds = defaults.groupIds;
-    	      this.privateLinkServiceId = defaults.privateLinkServiceId;
-    	      this.requestMessage = defaults.requestMessage;
+            $ = new PrivateLinkServiceConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder groupIds(@Nullable Output<List<String>> groupIds) {
-            this.groupIds = groupIds;
+            $.groupIds = groupIds;
             return this;
         }
-        public Builder groupIds(@Nullable List<String> groupIds) {
-            this.groupIds = Codegen.ofNullable(groupIds);
-            return this;
+
+        public Builder groupIds(List<String> groupIds) {
+            return groupIds(Output.of(groupIds));
         }
+
         public Builder groupIds(String... groupIds) {
             return groupIds(List.of(groupIds));
         }
+
         public Builder privateLinkServiceId(@Nullable Output<String> privateLinkServiceId) {
-            this.privateLinkServiceId = privateLinkServiceId;
+            $.privateLinkServiceId = privateLinkServiceId;
             return this;
         }
-        public Builder privateLinkServiceId(@Nullable String privateLinkServiceId) {
-            this.privateLinkServiceId = Codegen.ofNullable(privateLinkServiceId);
-            return this;
+
+        public Builder privateLinkServiceId(String privateLinkServiceId) {
+            return privateLinkServiceId(Output.of(privateLinkServiceId));
         }
+
         public Builder requestMessage(@Nullable Output<String> requestMessage) {
-            this.requestMessage = requestMessage;
+            $.requestMessage = requestMessage;
             return this;
         }
-        public Builder requestMessage(@Nullable String requestMessage) {
-            this.requestMessage = Codegen.ofNullable(requestMessage);
-            return this;
-        }        public PrivateLinkServiceConnectionArgs build() {
-            return new PrivateLinkServiceConnectionArgs(groupIds, privateLinkServiceId, requestMessage);
+
+        public Builder requestMessage(String requestMessage) {
+            return requestMessage(Output.of(requestMessage));
+        }
+
+        public PrivateLinkServiceConnectionArgs build() {
+            return $;
         }
     }
+
 }

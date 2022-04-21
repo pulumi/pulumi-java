@@ -26,10 +26,10 @@ public final class VirtualMachineScaleSetNetworkProfileResponse extends com.pulu
      * 
      */
     @Import(name="healthProbe")
-      private final @Nullable ApiEntityReferenceResponse healthProbe;
+    private @Nullable ApiEntityReferenceResponse healthProbe;
 
     public Optional<ApiEntityReferenceResponse> healthProbe() {
-        return this.healthProbe == null ? Optional.empty() : Optional.ofNullable(this.healthProbe);
+        return Optional.ofNullable(this.healthProbe);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class VirtualMachineScaleSetNetworkProfileResponse extends com.pulu
      * 
      */
     @Import(name="networkApiVersion")
-      private final @Nullable String networkApiVersion;
+    private @Nullable String networkApiVersion;
 
     public Optional<String> networkApiVersion() {
-        return this.networkApiVersion == null ? Optional.empty() : Optional.ofNullable(this.networkApiVersion);
+        return Optional.ofNullable(this.networkApiVersion);
     }
 
     /**
@@ -48,67 +48,60 @@ public final class VirtualMachineScaleSetNetworkProfileResponse extends com.pulu
      * 
      */
     @Import(name="networkInterfaceConfigurations")
-      private final @Nullable List<VirtualMachineScaleSetNetworkConfigurationResponse> networkInterfaceConfigurations;
+    private @Nullable List<VirtualMachineScaleSetNetworkConfigurationResponse> networkInterfaceConfigurations;
 
-    public List<VirtualMachineScaleSetNetworkConfigurationResponse> networkInterfaceConfigurations() {
-        return this.networkInterfaceConfigurations == null ? List.of() : this.networkInterfaceConfigurations;
+    public Optional<List<VirtualMachineScaleSetNetworkConfigurationResponse>> networkInterfaceConfigurations() {
+        return Optional.ofNullable(this.networkInterfaceConfigurations);
     }
 
-    public VirtualMachineScaleSetNetworkProfileResponse(
-        @Nullable ApiEntityReferenceResponse healthProbe,
-        @Nullable String networkApiVersion,
-        @Nullable List<VirtualMachineScaleSetNetworkConfigurationResponse> networkInterfaceConfigurations) {
-        this.healthProbe = healthProbe;
-        this.networkApiVersion = networkApiVersion;
-        this.networkInterfaceConfigurations = networkInterfaceConfigurations;
-    }
+    private VirtualMachineScaleSetNetworkProfileResponse() {}
 
-    private VirtualMachineScaleSetNetworkProfileResponse() {
-        this.healthProbe = null;
-        this.networkApiVersion = null;
-        this.networkInterfaceConfigurations = List.of();
+    private VirtualMachineScaleSetNetworkProfileResponse(VirtualMachineScaleSetNetworkProfileResponse $) {
+        this.healthProbe = $.healthProbe;
+        this.networkApiVersion = $.networkApiVersion;
+        this.networkInterfaceConfigurations = $.networkInterfaceConfigurations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMachineScaleSetNetworkProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ApiEntityReferenceResponse healthProbe;
-        private @Nullable String networkApiVersion;
-        private @Nullable List<VirtualMachineScaleSetNetworkConfigurationResponse> networkInterfaceConfigurations;
+        private VirtualMachineScaleSetNetworkProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMachineScaleSetNetworkProfileResponse();
         }
 
         public Builder(VirtualMachineScaleSetNetworkProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.healthProbe = defaults.healthProbe;
-    	      this.networkApiVersion = defaults.networkApiVersion;
-    	      this.networkInterfaceConfigurations = defaults.networkInterfaceConfigurations;
+            $ = new VirtualMachineScaleSetNetworkProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder healthProbe(@Nullable ApiEntityReferenceResponse healthProbe) {
-            this.healthProbe = healthProbe;
+            $.healthProbe = healthProbe;
             return this;
         }
+
         public Builder networkApiVersion(@Nullable String networkApiVersion) {
-            this.networkApiVersion = networkApiVersion;
+            $.networkApiVersion = networkApiVersion;
             return this;
         }
+
         public Builder networkInterfaceConfigurations(@Nullable List<VirtualMachineScaleSetNetworkConfigurationResponse> networkInterfaceConfigurations) {
-            this.networkInterfaceConfigurations = networkInterfaceConfigurations;
+            $.networkInterfaceConfigurations = networkInterfaceConfigurations;
             return this;
         }
+
         public Builder networkInterfaceConfigurations(VirtualMachineScaleSetNetworkConfigurationResponse... networkInterfaceConfigurations) {
             return networkInterfaceConfigurations(List.of(networkInterfaceConfigurations));
-        }        public VirtualMachineScaleSetNetworkProfileResponse build() {
-            return new VirtualMachineScaleSetNetworkProfileResponse(healthProbe, networkApiVersion, networkInterfaceConfigurations);
+        }
+
+        public VirtualMachineScaleSetNetworkProfileResponse build() {
+            return $;
         }
     }
+
 }

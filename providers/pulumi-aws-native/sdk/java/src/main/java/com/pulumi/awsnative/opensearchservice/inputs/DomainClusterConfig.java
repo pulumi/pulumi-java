@@ -18,190 +18,161 @@ public final class DomainClusterConfig extends com.pulumi.resources.InvokeArgs {
     public static final DomainClusterConfig Empty = new DomainClusterConfig();
 
     @Import(name="dedicatedMasterCount")
-      private final @Nullable Integer dedicatedMasterCount;
+    private @Nullable Integer dedicatedMasterCount;
 
     public Optional<Integer> dedicatedMasterCount() {
-        return this.dedicatedMasterCount == null ? Optional.empty() : Optional.ofNullable(this.dedicatedMasterCount);
+        return Optional.ofNullable(this.dedicatedMasterCount);
     }
 
     @Import(name="dedicatedMasterEnabled")
-      private final @Nullable Boolean dedicatedMasterEnabled;
+    private @Nullable Boolean dedicatedMasterEnabled;
 
     public Optional<Boolean> dedicatedMasterEnabled() {
-        return this.dedicatedMasterEnabled == null ? Optional.empty() : Optional.ofNullable(this.dedicatedMasterEnabled);
+        return Optional.ofNullable(this.dedicatedMasterEnabled);
     }
 
     @Import(name="dedicatedMasterType")
-      private final @Nullable String dedicatedMasterType;
+    private @Nullable String dedicatedMasterType;
 
     public Optional<String> dedicatedMasterType() {
-        return this.dedicatedMasterType == null ? Optional.empty() : Optional.ofNullable(this.dedicatedMasterType);
+        return Optional.ofNullable(this.dedicatedMasterType);
     }
 
     @Import(name="instanceCount")
-      private final @Nullable Integer instanceCount;
+    private @Nullable Integer instanceCount;
 
     public Optional<Integer> instanceCount() {
-        return this.instanceCount == null ? Optional.empty() : Optional.ofNullable(this.instanceCount);
+        return Optional.ofNullable(this.instanceCount);
     }
 
     @Import(name="instanceType")
-      private final @Nullable String instanceType;
+    private @Nullable String instanceType;
 
     public Optional<String> instanceType() {
-        return this.instanceType == null ? Optional.empty() : Optional.ofNullable(this.instanceType);
+        return Optional.ofNullable(this.instanceType);
     }
 
     @Import(name="warmCount")
-      private final @Nullable Integer warmCount;
+    private @Nullable Integer warmCount;
 
     public Optional<Integer> warmCount() {
-        return this.warmCount == null ? Optional.empty() : Optional.ofNullable(this.warmCount);
+        return Optional.ofNullable(this.warmCount);
     }
 
     @Import(name="warmEnabled")
-      private final @Nullable Boolean warmEnabled;
+    private @Nullable Boolean warmEnabled;
 
     public Optional<Boolean> warmEnabled() {
-        return this.warmEnabled == null ? Optional.empty() : Optional.ofNullable(this.warmEnabled);
+        return Optional.ofNullable(this.warmEnabled);
     }
 
     @Import(name="warmType")
-      private final @Nullable String warmType;
+    private @Nullable String warmType;
 
     public Optional<String> warmType() {
-        return this.warmType == null ? Optional.empty() : Optional.ofNullable(this.warmType);
+        return Optional.ofNullable(this.warmType);
     }
 
     @Import(name="zoneAwarenessConfig")
-      private final @Nullable DomainZoneAwarenessConfig zoneAwarenessConfig;
+    private @Nullable DomainZoneAwarenessConfig zoneAwarenessConfig;
 
     public Optional<DomainZoneAwarenessConfig> zoneAwarenessConfig() {
-        return this.zoneAwarenessConfig == null ? Optional.empty() : Optional.ofNullable(this.zoneAwarenessConfig);
+        return Optional.ofNullable(this.zoneAwarenessConfig);
     }
 
     @Import(name="zoneAwarenessEnabled")
-      private final @Nullable Boolean zoneAwarenessEnabled;
+    private @Nullable Boolean zoneAwarenessEnabled;
 
     public Optional<Boolean> zoneAwarenessEnabled() {
-        return this.zoneAwarenessEnabled == null ? Optional.empty() : Optional.ofNullable(this.zoneAwarenessEnabled);
+        return Optional.ofNullable(this.zoneAwarenessEnabled);
     }
 
-    public DomainClusterConfig(
-        @Nullable Integer dedicatedMasterCount,
-        @Nullable Boolean dedicatedMasterEnabled,
-        @Nullable String dedicatedMasterType,
-        @Nullable Integer instanceCount,
-        @Nullable String instanceType,
-        @Nullable Integer warmCount,
-        @Nullable Boolean warmEnabled,
-        @Nullable String warmType,
-        @Nullable DomainZoneAwarenessConfig zoneAwarenessConfig,
-        @Nullable Boolean zoneAwarenessEnabled) {
-        this.dedicatedMasterCount = dedicatedMasterCount;
-        this.dedicatedMasterEnabled = dedicatedMasterEnabled;
-        this.dedicatedMasterType = dedicatedMasterType;
-        this.instanceCount = instanceCount;
-        this.instanceType = instanceType;
-        this.warmCount = warmCount;
-        this.warmEnabled = warmEnabled;
-        this.warmType = warmType;
-        this.zoneAwarenessConfig = zoneAwarenessConfig;
-        this.zoneAwarenessEnabled = zoneAwarenessEnabled;
-    }
+    private DomainClusterConfig() {}
 
-    private DomainClusterConfig() {
-        this.dedicatedMasterCount = null;
-        this.dedicatedMasterEnabled = null;
-        this.dedicatedMasterType = null;
-        this.instanceCount = null;
-        this.instanceType = null;
-        this.warmCount = null;
-        this.warmEnabled = null;
-        this.warmType = null;
-        this.zoneAwarenessConfig = null;
-        this.zoneAwarenessEnabled = null;
+    private DomainClusterConfig(DomainClusterConfig $) {
+        this.dedicatedMasterCount = $.dedicatedMasterCount;
+        this.dedicatedMasterEnabled = $.dedicatedMasterEnabled;
+        this.dedicatedMasterType = $.dedicatedMasterType;
+        this.instanceCount = $.instanceCount;
+        this.instanceType = $.instanceType;
+        this.warmCount = $.warmCount;
+        this.warmEnabled = $.warmEnabled;
+        this.warmType = $.warmType;
+        this.zoneAwarenessConfig = $.zoneAwarenessConfig;
+        this.zoneAwarenessEnabled = $.zoneAwarenessEnabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainClusterConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer dedicatedMasterCount;
-        private @Nullable Boolean dedicatedMasterEnabled;
-        private @Nullable String dedicatedMasterType;
-        private @Nullable Integer instanceCount;
-        private @Nullable String instanceType;
-        private @Nullable Integer warmCount;
-        private @Nullable Boolean warmEnabled;
-        private @Nullable String warmType;
-        private @Nullable DomainZoneAwarenessConfig zoneAwarenessConfig;
-        private @Nullable Boolean zoneAwarenessEnabled;
+        private DomainClusterConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainClusterConfig();
         }
 
         public Builder(DomainClusterConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dedicatedMasterCount = defaults.dedicatedMasterCount;
-    	      this.dedicatedMasterEnabled = defaults.dedicatedMasterEnabled;
-    	      this.dedicatedMasterType = defaults.dedicatedMasterType;
-    	      this.instanceCount = defaults.instanceCount;
-    	      this.instanceType = defaults.instanceType;
-    	      this.warmCount = defaults.warmCount;
-    	      this.warmEnabled = defaults.warmEnabled;
-    	      this.warmType = defaults.warmType;
-    	      this.zoneAwarenessConfig = defaults.zoneAwarenessConfig;
-    	      this.zoneAwarenessEnabled = defaults.zoneAwarenessEnabled;
+            $ = new DomainClusterConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder dedicatedMasterCount(@Nullable Integer dedicatedMasterCount) {
-            this.dedicatedMasterCount = dedicatedMasterCount;
+            $.dedicatedMasterCount = dedicatedMasterCount;
             return this;
         }
+
         public Builder dedicatedMasterEnabled(@Nullable Boolean dedicatedMasterEnabled) {
-            this.dedicatedMasterEnabled = dedicatedMasterEnabled;
+            $.dedicatedMasterEnabled = dedicatedMasterEnabled;
             return this;
         }
+
         public Builder dedicatedMasterType(@Nullable String dedicatedMasterType) {
-            this.dedicatedMasterType = dedicatedMasterType;
+            $.dedicatedMasterType = dedicatedMasterType;
             return this;
         }
+
         public Builder instanceCount(@Nullable Integer instanceCount) {
-            this.instanceCount = instanceCount;
+            $.instanceCount = instanceCount;
             return this;
         }
+
         public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = instanceType;
+            $.instanceType = instanceType;
             return this;
         }
+
         public Builder warmCount(@Nullable Integer warmCount) {
-            this.warmCount = warmCount;
+            $.warmCount = warmCount;
             return this;
         }
+
         public Builder warmEnabled(@Nullable Boolean warmEnabled) {
-            this.warmEnabled = warmEnabled;
+            $.warmEnabled = warmEnabled;
             return this;
         }
+
         public Builder warmType(@Nullable String warmType) {
-            this.warmType = warmType;
+            $.warmType = warmType;
             return this;
         }
+
         public Builder zoneAwarenessConfig(@Nullable DomainZoneAwarenessConfig zoneAwarenessConfig) {
-            this.zoneAwarenessConfig = zoneAwarenessConfig;
+            $.zoneAwarenessConfig = zoneAwarenessConfig;
             return this;
         }
+
         public Builder zoneAwarenessEnabled(@Nullable Boolean zoneAwarenessEnabled) {
-            this.zoneAwarenessEnabled = zoneAwarenessEnabled;
+            $.zoneAwarenessEnabled = zoneAwarenessEnabled;
             return this;
-        }        public DomainClusterConfig build() {
-            return new DomainClusterConfig(dedicatedMasterCount, dedicatedMasterEnabled, dedicatedMasterType, instanceCount, instanceType, warmCount, warmEnabled, warmType, zoneAwarenessConfig, zoneAwarenessEnabled);
+        }
+
+        public DomainClusterConfig build() {
+            return $;
         }
     }
+
 }

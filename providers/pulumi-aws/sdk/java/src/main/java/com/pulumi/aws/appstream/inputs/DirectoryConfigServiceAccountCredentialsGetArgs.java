@@ -5,7 +5,6 @@ package com.pulumi.aws.appstream.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class DirectoryConfigServiceAccountCredentialsGetArgs extends com.p
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -30,63 +29,60 @@ public final class DirectoryConfigServiceAccountCredentialsGetArgs extends com.p
      * 
      */
     @Import(name="accountPassword", required=true)
-      private final Output<String> accountPassword;
+    private Output<String> accountPassword;
 
     public Output<String> accountPassword() {
         return this.accountPassword;
     }
 
-    public DirectoryConfigServiceAccountCredentialsGetArgs(
-        Output<String> accountName,
-        Output<String> accountPassword) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.accountPassword = Objects.requireNonNull(accountPassword, "expected parameter 'accountPassword' to be non-null");
-    }
+    private DirectoryConfigServiceAccountCredentialsGetArgs() {}
 
-    private DirectoryConfigServiceAccountCredentialsGetArgs() {
-        this.accountName = Codegen.empty();
-        this.accountPassword = Codegen.empty();
+    private DirectoryConfigServiceAccountCredentialsGetArgs(DirectoryConfigServiceAccountCredentialsGetArgs $) {
+        this.accountName = $.accountName;
+        this.accountPassword = $.accountPassword;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DirectoryConfigServiceAccountCredentialsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountName;
-        private Output<String> accountPassword;
+        private DirectoryConfigServiceAccountCredentialsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DirectoryConfigServiceAccountCredentialsGetArgs();
         }
 
         public Builder(DirectoryConfigServiceAccountCredentialsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.accountPassword = defaults.accountPassword;
+            $ = new DirectoryConfigServiceAccountCredentialsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder accountPassword(Output<String> accountPassword) {
-            this.accountPassword = Objects.requireNonNull(accountPassword);
+            $.accountPassword = accountPassword;
             return this;
         }
+
         public Builder accountPassword(String accountPassword) {
-            this.accountPassword = Output.of(Objects.requireNonNull(accountPassword));
-            return this;
-        }        public DirectoryConfigServiceAccountCredentialsGetArgs build() {
-            return new DirectoryConfigServiceAccountCredentialsGetArgs(accountName, accountPassword);
+            return accountPassword(Output.of(accountPassword));
+        }
+
+        public DirectoryConfigServiceAccountCredentialsGetArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.accountPassword = Objects.requireNonNull($.accountPassword, "expected parameter 'accountPassword' to be non-null");
+            return $;
         }
     }
+
 }

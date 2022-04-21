@@ -21,7 +21,7 @@ public final class CropResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="bottomPixels", required=true)
-      private final Integer bottomPixels;
+    private Integer bottomPixels;
 
     public Integer bottomPixels() {
         return this.bottomPixels;
@@ -32,7 +32,7 @@ public final class CropResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="leftPixels", required=true)
-      private final Integer leftPixels;
+    private Integer leftPixels;
 
     public Integer leftPixels() {
         return this.leftPixels;
@@ -43,7 +43,7 @@ public final class CropResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="rightPixels", required=true)
-      private final Integer rightPixels;
+    private Integer rightPixels;
 
     public Integer rightPixels() {
         return this.rightPixels;
@@ -54,73 +54,66 @@ public final class CropResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="topPixels", required=true)
-      private final Integer topPixels;
+    private Integer topPixels;
 
     public Integer topPixels() {
         return this.topPixels;
     }
 
-    public CropResponse(
-        Integer bottomPixels,
-        Integer leftPixels,
-        Integer rightPixels,
-        Integer topPixels) {
-        this.bottomPixels = Objects.requireNonNull(bottomPixels, "expected parameter 'bottomPixels' to be non-null");
-        this.leftPixels = Objects.requireNonNull(leftPixels, "expected parameter 'leftPixels' to be non-null");
-        this.rightPixels = Objects.requireNonNull(rightPixels, "expected parameter 'rightPixels' to be non-null");
-        this.topPixels = Objects.requireNonNull(topPixels, "expected parameter 'topPixels' to be non-null");
-    }
+    private CropResponse() {}
 
-    private CropResponse() {
-        this.bottomPixels = null;
-        this.leftPixels = null;
-        this.rightPixels = null;
-        this.topPixels = null;
+    private CropResponse(CropResponse $) {
+        this.bottomPixels = $.bottomPixels;
+        this.leftPixels = $.leftPixels;
+        this.rightPixels = $.rightPixels;
+        this.topPixels = $.topPixels;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CropResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer bottomPixels;
-        private Integer leftPixels;
-        private Integer rightPixels;
-        private Integer topPixels;
+        private CropResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CropResponse();
         }
 
         public Builder(CropResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bottomPixels = defaults.bottomPixels;
-    	      this.leftPixels = defaults.leftPixels;
-    	      this.rightPixels = defaults.rightPixels;
-    	      this.topPixels = defaults.topPixels;
+            $ = new CropResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bottomPixels(Integer bottomPixels) {
-            this.bottomPixels = Objects.requireNonNull(bottomPixels);
+            $.bottomPixels = bottomPixels;
             return this;
         }
+
         public Builder leftPixels(Integer leftPixels) {
-            this.leftPixels = Objects.requireNonNull(leftPixels);
+            $.leftPixels = leftPixels;
             return this;
         }
+
         public Builder rightPixels(Integer rightPixels) {
-            this.rightPixels = Objects.requireNonNull(rightPixels);
+            $.rightPixels = rightPixels;
             return this;
         }
+
         public Builder topPixels(Integer topPixels) {
-            this.topPixels = Objects.requireNonNull(topPixels);
+            $.topPixels = topPixels;
             return this;
-        }        public CropResponse build() {
-            return new CropResponse(bottomPixels, leftPixels, rightPixels, topPixels);
+        }
+
+        public CropResponse build() {
+            $.bottomPixels = Objects.requireNonNull($.bottomPixels, "expected parameter 'bottomPixels' to be non-null");
+            $.leftPixels = Objects.requireNonNull($.leftPixels, "expected parameter 'leftPixels' to be non-null");
+            $.rightPixels = Objects.requireNonNull($.rightPixels, "expected parameter 'rightPixels' to be non-null");
+            $.topPixels = Objects.requireNonNull($.topPixels, "expected parameter 'topPixels' to be non-null");
+            return $;
         }
     }
+
 }

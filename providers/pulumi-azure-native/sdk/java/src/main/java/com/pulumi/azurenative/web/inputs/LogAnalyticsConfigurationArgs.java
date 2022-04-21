@@ -5,9 +5,9 @@ package com.pulumi.azurenative.web.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,65 @@ public final class LogAnalyticsConfigurationArgs extends com.pulumi.resources.Re
     public static final LogAnalyticsConfigurationArgs Empty = new LogAnalyticsConfigurationArgs();
 
     @Import(name="customerId")
-      private final @Nullable Output<String> customerId;
+    private @Nullable Output<String> customerId;
 
-    public Output<String> customerId() {
-        return this.customerId == null ? Codegen.empty() : this.customerId;
+    public Optional<Output<String>> customerId() {
+        return Optional.ofNullable(this.customerId);
     }
 
     @Import(name="sharedKey")
-      private final @Nullable Output<String> sharedKey;
+    private @Nullable Output<String> sharedKey;
 
-    public Output<String> sharedKey() {
-        return this.sharedKey == null ? Codegen.empty() : this.sharedKey;
+    public Optional<Output<String>> sharedKey() {
+        return Optional.ofNullable(this.sharedKey);
     }
 
-    public LogAnalyticsConfigurationArgs(
-        @Nullable Output<String> customerId,
-        @Nullable Output<String> sharedKey) {
-        this.customerId = customerId;
-        this.sharedKey = sharedKey;
-    }
+    private LogAnalyticsConfigurationArgs() {}
 
-    private LogAnalyticsConfigurationArgs() {
-        this.customerId = Codegen.empty();
-        this.sharedKey = Codegen.empty();
+    private LogAnalyticsConfigurationArgs(LogAnalyticsConfigurationArgs $) {
+        this.customerId = $.customerId;
+        this.sharedKey = $.sharedKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LogAnalyticsConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> customerId;
-        private @Nullable Output<String> sharedKey;
+        private LogAnalyticsConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LogAnalyticsConfigurationArgs();
         }
 
         public Builder(LogAnalyticsConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customerId = defaults.customerId;
-    	      this.sharedKey = defaults.sharedKey;
+            $ = new LogAnalyticsConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customerId(@Nullable Output<String> customerId) {
-            this.customerId = customerId;
+            $.customerId = customerId;
             return this;
         }
-        public Builder customerId(@Nullable String customerId) {
-            this.customerId = Codegen.ofNullable(customerId);
-            return this;
+
+        public Builder customerId(String customerId) {
+            return customerId(Output.of(customerId));
         }
+
         public Builder sharedKey(@Nullable Output<String> sharedKey) {
-            this.sharedKey = sharedKey;
+            $.sharedKey = sharedKey;
             return this;
         }
-        public Builder sharedKey(@Nullable String sharedKey) {
-            this.sharedKey = Codegen.ofNullable(sharedKey);
-            return this;
-        }        public LogAnalyticsConfigurationArgs build() {
-            return new LogAnalyticsConfigurationArgs(customerId, sharedKey);
+
+        public Builder sharedKey(String sharedKey) {
+            return sharedKey(Output.of(sharedKey));
+        }
+
+        public LogAnalyticsConfigurationArgs build() {
+            return $;
         }
     }
+
 }

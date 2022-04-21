@@ -23,7 +23,7 @@ public final class OverlayResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="animations", required=true)
-      private final List<AnimationResponse> animations;
+    private List<AnimationResponse> animations;
 
     public List<AnimationResponse> animations() {
         return this.animations;
@@ -34,58 +34,56 @@ public final class OverlayResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="image", required=true)
-      private final ImageResponse image;
+    private ImageResponse image;
 
     public ImageResponse image() {
         return this.image;
     }
 
-    public OverlayResponse(
-        List<AnimationResponse> animations,
-        ImageResponse image) {
-        this.animations = Objects.requireNonNull(animations, "expected parameter 'animations' to be non-null");
-        this.image = Objects.requireNonNull(image, "expected parameter 'image' to be non-null");
-    }
+    private OverlayResponse() {}
 
-    private OverlayResponse() {
-        this.animations = List.of();
-        this.image = null;
+    private OverlayResponse(OverlayResponse $) {
+        this.animations = $.animations;
+        this.image = $.image;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OverlayResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<AnimationResponse> animations;
-        private ImageResponse image;
+        private OverlayResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OverlayResponse();
         }
 
         public Builder(OverlayResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.animations = defaults.animations;
-    	      this.image = defaults.image;
+            $ = new OverlayResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder animations(List<AnimationResponse> animations) {
-            this.animations = Objects.requireNonNull(animations);
+            $.animations = animations;
             return this;
         }
+
         public Builder animations(AnimationResponse... animations) {
             return animations(List.of(animations));
         }
+
         public Builder image(ImageResponse image) {
-            this.image = Objects.requireNonNull(image);
+            $.image = image;
             return this;
-        }        public OverlayResponse build() {
-            return new OverlayResponse(animations, image);
+        }
+
+        public OverlayResponse build() {
+            $.animations = Objects.requireNonNull($.animations, "expected parameter 'animations' to be non-null");
+            $.image = Objects.requireNonNull($.image, "expected parameter 'image' to be non-null");
+            return $;
         }
     }
+
 }

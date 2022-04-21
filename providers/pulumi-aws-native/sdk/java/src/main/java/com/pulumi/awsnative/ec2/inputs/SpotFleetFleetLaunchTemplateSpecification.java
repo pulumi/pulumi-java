@@ -15,78 +15,71 @@ public final class SpotFleetFleetLaunchTemplateSpecification extends com.pulumi.
     public static final SpotFleetFleetLaunchTemplateSpecification Empty = new SpotFleetFleetLaunchTemplateSpecification();
 
     @Import(name="launchTemplateId")
-      private final @Nullable String launchTemplateId;
+    private @Nullable String launchTemplateId;
 
     public Optional<String> launchTemplateId() {
-        return this.launchTemplateId == null ? Optional.empty() : Optional.ofNullable(this.launchTemplateId);
+        return Optional.ofNullable(this.launchTemplateId);
     }
 
     @Import(name="launchTemplateName")
-      private final @Nullable String launchTemplateName;
+    private @Nullable String launchTemplateName;
 
     public Optional<String> launchTemplateName() {
-        return this.launchTemplateName == null ? Optional.empty() : Optional.ofNullable(this.launchTemplateName);
+        return Optional.ofNullable(this.launchTemplateName);
     }
 
     @Import(name="version", required=true)
-      private final String version;
+    private String version;
 
     public String version() {
         return this.version;
     }
 
-    public SpotFleetFleetLaunchTemplateSpecification(
-        @Nullable String launchTemplateId,
-        @Nullable String launchTemplateName,
-        String version) {
-        this.launchTemplateId = launchTemplateId;
-        this.launchTemplateName = launchTemplateName;
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private SpotFleetFleetLaunchTemplateSpecification() {}
 
-    private SpotFleetFleetLaunchTemplateSpecification() {
-        this.launchTemplateId = null;
-        this.launchTemplateName = null;
-        this.version = null;
+    private SpotFleetFleetLaunchTemplateSpecification(SpotFleetFleetLaunchTemplateSpecification $) {
+        this.launchTemplateId = $.launchTemplateId;
+        this.launchTemplateName = $.launchTemplateName;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SpotFleetFleetLaunchTemplateSpecification defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String launchTemplateId;
-        private @Nullable String launchTemplateName;
-        private String version;
+        private SpotFleetFleetLaunchTemplateSpecification $;
 
         public Builder() {
-    	      // Empty
+            $ = new SpotFleetFleetLaunchTemplateSpecification();
         }
 
         public Builder(SpotFleetFleetLaunchTemplateSpecification defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.launchTemplateId = defaults.launchTemplateId;
-    	      this.launchTemplateName = defaults.launchTemplateName;
-    	      this.version = defaults.version;
+            $ = new SpotFleetFleetLaunchTemplateSpecification(Objects.requireNonNull(defaults));
         }
 
         public Builder launchTemplateId(@Nullable String launchTemplateId) {
-            this.launchTemplateId = launchTemplateId;
+            $.launchTemplateId = launchTemplateId;
             return this;
         }
+
         public Builder launchTemplateName(@Nullable String launchTemplateName) {
-            this.launchTemplateName = launchTemplateName;
+            $.launchTemplateName = launchTemplateName;
             return this;
         }
+
         public Builder version(String version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
-        }        public SpotFleetFleetLaunchTemplateSpecification build() {
-            return new SpotFleetFleetLaunchTemplateSpecification(launchTemplateId, launchTemplateName, version);
+        }
+
+        public SpotFleetFleetLaunchTemplateSpecification build() {
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

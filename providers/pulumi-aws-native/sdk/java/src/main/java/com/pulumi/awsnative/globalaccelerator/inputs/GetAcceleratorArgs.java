@@ -17,45 +17,45 @@ public final class GetAcceleratorArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="acceleratorArn", required=true)
-      private final String acceleratorArn;
+    private String acceleratorArn;
 
     public String acceleratorArn() {
         return this.acceleratorArn;
     }
 
-    public GetAcceleratorArgs(String acceleratorArn) {
-        this.acceleratorArn = Objects.requireNonNull(acceleratorArn, "expected parameter 'acceleratorArn' to be non-null");
-    }
+    private GetAcceleratorArgs() {}
 
-    private GetAcceleratorArgs() {
-        this.acceleratorArn = null;
+    private GetAcceleratorArgs(GetAcceleratorArgs $) {
+        this.acceleratorArn = $.acceleratorArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAcceleratorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String acceleratorArn;
+        private GetAcceleratorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAcceleratorArgs();
         }
 
         public Builder(GetAcceleratorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acceleratorArn = defaults.acceleratorArn;
+            $ = new GetAcceleratorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder acceleratorArn(String acceleratorArn) {
-            this.acceleratorArn = Objects.requireNonNull(acceleratorArn);
+            $.acceleratorArn = acceleratorArn;
             return this;
-        }        public GetAcceleratorArgs build() {
-            return new GetAcceleratorArgs(acceleratorArn);
+        }
+
+        public GetAcceleratorArgs build() {
+            $.acceleratorArn = Objects.requireNonNull($.acceleratorArn, "expected parameter 'acceleratorArn' to be non-null");
+            return $;
         }
     }
+
 }

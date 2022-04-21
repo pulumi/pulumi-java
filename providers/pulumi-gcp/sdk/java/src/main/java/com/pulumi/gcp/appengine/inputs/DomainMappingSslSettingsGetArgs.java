@@ -5,9 +5,9 @@ package com.pulumi.gcp.appengine.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class DomainMappingSslSettingsGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="certificateId")
-      private final @Nullable Output<String> certificateId;
+    private @Nullable Output<String> certificateId;
 
-    public Output<String> certificateId() {
-        return this.certificateId == null ? Codegen.empty() : this.certificateId;
+    public Optional<Output<String>> certificateId() {
+        return Optional.ofNullable(this.certificateId);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class DomainMappingSslSettingsGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="pendingManagedCertificateId")
-      private final @Nullable Output<String> pendingManagedCertificateId;
+    private @Nullable Output<String> pendingManagedCertificateId;
 
-    public Output<String> pendingManagedCertificateId() {
-        return this.pendingManagedCertificateId == null ? Codegen.empty() : this.pendingManagedCertificateId;
+    public Optional<Output<String>> pendingManagedCertificateId() {
+        return Optional.ofNullable(this.pendingManagedCertificateId);
     }
 
     /**
@@ -54,76 +54,69 @@ public final class DomainMappingSslSettingsGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="sslManagementType", required=true)
-      private final Output<String> sslManagementType;
+    private Output<String> sslManagementType;
 
     public Output<String> sslManagementType() {
         return this.sslManagementType;
     }
 
-    public DomainMappingSslSettingsGetArgs(
-        @Nullable Output<String> certificateId,
-        @Nullable Output<String> pendingManagedCertificateId,
-        Output<String> sslManagementType) {
-        this.certificateId = certificateId;
-        this.pendingManagedCertificateId = pendingManagedCertificateId;
-        this.sslManagementType = Objects.requireNonNull(sslManagementType, "expected parameter 'sslManagementType' to be non-null");
-    }
+    private DomainMappingSslSettingsGetArgs() {}
 
-    private DomainMappingSslSettingsGetArgs() {
-        this.certificateId = Codegen.empty();
-        this.pendingManagedCertificateId = Codegen.empty();
-        this.sslManagementType = Codegen.empty();
+    private DomainMappingSslSettingsGetArgs(DomainMappingSslSettingsGetArgs $) {
+        this.certificateId = $.certificateId;
+        this.pendingManagedCertificateId = $.pendingManagedCertificateId;
+        this.sslManagementType = $.sslManagementType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainMappingSslSettingsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> certificateId;
-        private @Nullable Output<String> pendingManagedCertificateId;
-        private Output<String> sslManagementType;
+        private DomainMappingSslSettingsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainMappingSslSettingsGetArgs();
         }
 
         public Builder(DomainMappingSslSettingsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateId = defaults.certificateId;
-    	      this.pendingManagedCertificateId = defaults.pendingManagedCertificateId;
-    	      this.sslManagementType = defaults.sslManagementType;
+            $ = new DomainMappingSslSettingsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateId(@Nullable Output<String> certificateId) {
-            this.certificateId = certificateId;
+            $.certificateId = certificateId;
             return this;
         }
-        public Builder certificateId(@Nullable String certificateId) {
-            this.certificateId = Codegen.ofNullable(certificateId);
-            return this;
+
+        public Builder certificateId(String certificateId) {
+            return certificateId(Output.of(certificateId));
         }
+
         public Builder pendingManagedCertificateId(@Nullable Output<String> pendingManagedCertificateId) {
-            this.pendingManagedCertificateId = pendingManagedCertificateId;
+            $.pendingManagedCertificateId = pendingManagedCertificateId;
             return this;
         }
-        public Builder pendingManagedCertificateId(@Nullable String pendingManagedCertificateId) {
-            this.pendingManagedCertificateId = Codegen.ofNullable(pendingManagedCertificateId);
-            return this;
+
+        public Builder pendingManagedCertificateId(String pendingManagedCertificateId) {
+            return pendingManagedCertificateId(Output.of(pendingManagedCertificateId));
         }
+
         public Builder sslManagementType(Output<String> sslManagementType) {
-            this.sslManagementType = Objects.requireNonNull(sslManagementType);
+            $.sslManagementType = sslManagementType;
             return this;
         }
+
         public Builder sslManagementType(String sslManagementType) {
-            this.sslManagementType = Output.of(Objects.requireNonNull(sslManagementType));
-            return this;
-        }        public DomainMappingSslSettingsGetArgs build() {
-            return new DomainMappingSslSettingsGetArgs(certificateId, pendingManagedCertificateId, sslManagementType);
+            return sslManagementType(Output.of(sslManagementType));
+        }
+
+        public DomainMappingSslSettingsGetArgs build() {
+            $.sslManagementType = Objects.requireNonNull($.sslManagementType, "expected parameter 'sslManagementType' to be non-null");
+            return $;
         }
     }
+
 }

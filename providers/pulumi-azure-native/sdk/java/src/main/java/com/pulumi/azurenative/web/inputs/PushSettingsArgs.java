@@ -5,10 +5,10 @@ package com.pulumi.azurenative.web.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class PushSettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dynamicTagsJson")
-      private final @Nullable Output<String> dynamicTagsJson;
+    private @Nullable Output<String> dynamicTagsJson;
 
-    public Output<String> dynamicTagsJson() {
-        return this.dynamicTagsJson == null ? Codegen.empty() : this.dynamicTagsJson;
+    public Optional<Output<String>> dynamicTagsJson() {
+        return Optional.ofNullable(this.dynamicTagsJson);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class PushSettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="isPushEnabled", required=true)
-      private final Output<Boolean> isPushEnabled;
+    private Output<Boolean> isPushEnabled;
 
     public Output<Boolean> isPushEnabled() {
         return this.isPushEnabled;
@@ -47,10 +47,10 @@ public final class PushSettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class PushSettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagWhitelistJson")
-      private final @Nullable Output<String> tagWhitelistJson;
+    private @Nullable Output<String> tagWhitelistJson;
 
-    public Output<String> tagWhitelistJson() {
-        return this.tagWhitelistJson == null ? Codegen.empty() : this.tagWhitelistJson;
+    public Optional<Output<String>> tagWhitelistJson() {
+        return Optional.ofNullable(this.tagWhitelistJson);
     }
 
     /**
@@ -72,102 +72,89 @@ public final class PushSettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsRequiringAuth")
-      private final @Nullable Output<String> tagsRequiringAuth;
+    private @Nullable Output<String> tagsRequiringAuth;
 
-    public Output<String> tagsRequiringAuth() {
-        return this.tagsRequiringAuth == null ? Codegen.empty() : this.tagsRequiringAuth;
+    public Optional<Output<String>> tagsRequiringAuth() {
+        return Optional.ofNullable(this.tagsRequiringAuth);
     }
 
-    public PushSettingsArgs(
-        @Nullable Output<String> dynamicTagsJson,
-        Output<Boolean> isPushEnabled,
-        @Nullable Output<String> kind,
-        @Nullable Output<String> tagWhitelistJson,
-        @Nullable Output<String> tagsRequiringAuth) {
-        this.dynamicTagsJson = dynamicTagsJson;
-        this.isPushEnabled = Objects.requireNonNull(isPushEnabled, "expected parameter 'isPushEnabled' to be non-null");
-        this.kind = kind;
-        this.tagWhitelistJson = tagWhitelistJson;
-        this.tagsRequiringAuth = tagsRequiringAuth;
-    }
+    private PushSettingsArgs() {}
 
-    private PushSettingsArgs() {
-        this.dynamicTagsJson = Codegen.empty();
-        this.isPushEnabled = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.tagWhitelistJson = Codegen.empty();
-        this.tagsRequiringAuth = Codegen.empty();
+    private PushSettingsArgs(PushSettingsArgs $) {
+        this.dynamicTagsJson = $.dynamicTagsJson;
+        this.isPushEnabled = $.isPushEnabled;
+        this.kind = $.kind;
+        this.tagWhitelistJson = $.tagWhitelistJson;
+        this.tagsRequiringAuth = $.tagsRequiringAuth;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PushSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> dynamicTagsJson;
-        private Output<Boolean> isPushEnabled;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<String> tagWhitelistJson;
-        private @Nullable Output<String> tagsRequiringAuth;
+        private PushSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PushSettingsArgs();
         }
 
         public Builder(PushSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dynamicTagsJson = defaults.dynamicTagsJson;
-    	      this.isPushEnabled = defaults.isPushEnabled;
-    	      this.kind = defaults.kind;
-    	      this.tagWhitelistJson = defaults.tagWhitelistJson;
-    	      this.tagsRequiringAuth = defaults.tagsRequiringAuth;
+            $ = new PushSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dynamicTagsJson(@Nullable Output<String> dynamicTagsJson) {
-            this.dynamicTagsJson = dynamicTagsJson;
+            $.dynamicTagsJson = dynamicTagsJson;
             return this;
         }
-        public Builder dynamicTagsJson(@Nullable String dynamicTagsJson) {
-            this.dynamicTagsJson = Codegen.ofNullable(dynamicTagsJson);
-            return this;
+
+        public Builder dynamicTagsJson(String dynamicTagsJson) {
+            return dynamicTagsJson(Output.of(dynamicTagsJson));
         }
+
         public Builder isPushEnabled(Output<Boolean> isPushEnabled) {
-            this.isPushEnabled = Objects.requireNonNull(isPushEnabled);
+            $.isPushEnabled = isPushEnabled;
             return this;
         }
+
         public Builder isPushEnabled(Boolean isPushEnabled) {
-            this.isPushEnabled = Output.of(Objects.requireNonNull(isPushEnabled));
-            return this;
+            return isPushEnabled(Output.of(isPushEnabled));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder tagWhitelistJson(@Nullable Output<String> tagWhitelistJson) {
-            this.tagWhitelistJson = tagWhitelistJson;
+            $.tagWhitelistJson = tagWhitelistJson;
             return this;
         }
-        public Builder tagWhitelistJson(@Nullable String tagWhitelistJson) {
-            this.tagWhitelistJson = Codegen.ofNullable(tagWhitelistJson);
-            return this;
+
+        public Builder tagWhitelistJson(String tagWhitelistJson) {
+            return tagWhitelistJson(Output.of(tagWhitelistJson));
         }
+
         public Builder tagsRequiringAuth(@Nullable Output<String> tagsRequiringAuth) {
-            this.tagsRequiringAuth = tagsRequiringAuth;
+            $.tagsRequiringAuth = tagsRequiringAuth;
             return this;
         }
-        public Builder tagsRequiringAuth(@Nullable String tagsRequiringAuth) {
-            this.tagsRequiringAuth = Codegen.ofNullable(tagsRequiringAuth);
-            return this;
-        }        public PushSettingsArgs build() {
-            return new PushSettingsArgs(dynamicTagsJson, isPushEnabled, kind, tagWhitelistJson, tagsRequiringAuth);
+
+        public Builder tagsRequiringAuth(String tagsRequiringAuth) {
+            return tagsRequiringAuth(Output.of(tagsRequiringAuth));
+        }
+
+        public PushSettingsArgs build() {
+            $.isPushEnabled = Objects.requireNonNull($.isPushEnabled, "expected parameter 'isPushEnabled' to be non-null");
+            return $;
         }
     }
+
 }

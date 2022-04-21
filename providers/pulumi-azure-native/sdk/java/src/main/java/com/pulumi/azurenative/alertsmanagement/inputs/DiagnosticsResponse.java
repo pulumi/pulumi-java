@@ -26,10 +26,10 @@ public final class DiagnosticsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="conditions")
-      private final @Nullable ConditionsResponse conditions;
+    private @Nullable ConditionsResponse conditions;
 
     public Optional<ConditionsResponse> conditions() {
-        return this.conditions == null ? Optional.empty() : Optional.ofNullable(this.conditions);
+        return Optional.ofNullable(this.conditions);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class DiagnosticsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="createdAt", required=true)
-      private final String createdAt;
+    private String createdAt;
 
     public String createdAt() {
         return this.createdAt;
@@ -48,7 +48,7 @@ public final class DiagnosticsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="createdBy", required=true)
-      private final String createdBy;
+    private String createdBy;
 
     public String createdBy() {
         return this.createdBy;
@@ -59,10 +59,10 @@ public final class DiagnosticsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -70,7 +70,7 @@ public final class DiagnosticsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="lastModifiedAt", required=true)
-      private final String lastModifiedAt;
+    private String lastModifiedAt;
 
     public String lastModifiedAt() {
         return this.lastModifiedAt;
@@ -81,7 +81,7 @@ public final class DiagnosticsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="lastModifiedBy", required=true)
-      private final String lastModifiedBy;
+    private String lastModifiedBy;
 
     public String lastModifiedBy() {
         return this.lastModifiedBy;
@@ -92,10 +92,10 @@ public final class DiagnosticsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="scope")
-      private final @Nullable ScopeResponse scope;
+    private @Nullable ScopeResponse scope;
 
     public Optional<ScopeResponse> scope() {
-        return this.scope == null ? Optional.empty() : Optional.ofNullable(this.scope);
+        return Optional.ofNullable(this.scope);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class DiagnosticsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="status")
-      private final @Nullable String status;
+    private @Nullable String status;
 
     public Optional<String> status() {
-        return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -115,118 +115,97 @@ public final class DiagnosticsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public DiagnosticsResponse(
-        @Nullable ConditionsResponse conditions,
-        String createdAt,
-        String createdBy,
-        @Nullable String description,
-        String lastModifiedAt,
-        String lastModifiedBy,
-        @Nullable ScopeResponse scope,
-        @Nullable String status,
-        String type) {
-        this.conditions = conditions;
-        this.createdAt = Objects.requireNonNull(createdAt, "expected parameter 'createdAt' to be non-null");
-        this.createdBy = Objects.requireNonNull(createdBy, "expected parameter 'createdBy' to be non-null");
-        this.description = description;
-        this.lastModifiedAt = Objects.requireNonNull(lastModifiedAt, "expected parameter 'lastModifiedAt' to be non-null");
-        this.lastModifiedBy = Objects.requireNonNull(lastModifiedBy, "expected parameter 'lastModifiedBy' to be non-null");
-        this.scope = scope;
-        this.status = status;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private DiagnosticsResponse() {}
 
-    private DiagnosticsResponse() {
-        this.conditions = null;
-        this.createdAt = null;
-        this.createdBy = null;
-        this.description = null;
-        this.lastModifiedAt = null;
-        this.lastModifiedBy = null;
-        this.scope = null;
-        this.status = null;
-        this.type = null;
+    private DiagnosticsResponse(DiagnosticsResponse $) {
+        this.conditions = $.conditions;
+        this.createdAt = $.createdAt;
+        this.createdBy = $.createdBy;
+        this.description = $.description;
+        this.lastModifiedAt = $.lastModifiedAt;
+        this.lastModifiedBy = $.lastModifiedBy;
+        this.scope = $.scope;
+        this.status = $.status;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiagnosticsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ConditionsResponse conditions;
-        private String createdAt;
-        private String createdBy;
-        private @Nullable String description;
-        private String lastModifiedAt;
-        private String lastModifiedBy;
-        private @Nullable ScopeResponse scope;
-        private @Nullable String status;
-        private String type;
+        private DiagnosticsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiagnosticsResponse();
         }
 
         public Builder(DiagnosticsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.conditions = defaults.conditions;
-    	      this.createdAt = defaults.createdAt;
-    	      this.createdBy = defaults.createdBy;
-    	      this.description = defaults.description;
-    	      this.lastModifiedAt = defaults.lastModifiedAt;
-    	      this.lastModifiedBy = defaults.lastModifiedBy;
-    	      this.scope = defaults.scope;
-    	      this.status = defaults.status;
-    	      this.type = defaults.type;
+            $ = new DiagnosticsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder conditions(@Nullable ConditionsResponse conditions) {
-            this.conditions = conditions;
+            $.conditions = conditions;
             return this;
         }
+
         public Builder createdAt(String createdAt) {
-            this.createdAt = Objects.requireNonNull(createdAt);
+            $.createdAt = createdAt;
             return this;
         }
+
         public Builder createdBy(String createdBy) {
-            this.createdBy = Objects.requireNonNull(createdBy);
+            $.createdBy = createdBy;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder lastModifiedAt(String lastModifiedAt) {
-            this.lastModifiedAt = Objects.requireNonNull(lastModifiedAt);
+            $.lastModifiedAt = lastModifiedAt;
             return this;
         }
+
         public Builder lastModifiedBy(String lastModifiedBy) {
-            this.lastModifiedBy = Objects.requireNonNull(lastModifiedBy);
+            $.lastModifiedBy = lastModifiedBy;
             return this;
         }
+
         public Builder scope(@Nullable ScopeResponse scope) {
-            this.scope = scope;
+            $.scope = scope;
             return this;
         }
+
         public Builder status(@Nullable String status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public DiagnosticsResponse build() {
-            return new DiagnosticsResponse(conditions, createdAt, createdBy, description, lastModifiedAt, lastModifiedBy, scope, status, type);
+        }
+
+        public DiagnosticsResponse build() {
+            $.createdAt = Objects.requireNonNull($.createdAt, "expected parameter 'createdAt' to be non-null");
+            $.createdBy = Objects.requireNonNull($.createdBy, "expected parameter 'createdBy' to be non-null");
+            $.lastModifiedAt = Objects.requireNonNull($.lastModifiedAt, "expected parameter 'lastModifiedAt' to be non-null");
+            $.lastModifiedBy = Objects.requireNonNull($.lastModifiedBy, "expected parameter 'lastModifiedBy' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

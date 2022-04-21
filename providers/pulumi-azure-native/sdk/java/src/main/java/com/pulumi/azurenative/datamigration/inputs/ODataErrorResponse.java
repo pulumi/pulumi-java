@@ -22,7 +22,7 @@ public final class ODataErrorResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="code", required=true)
-      private final String code;
+    private String code;
 
     public String code() {
         return this.code;
@@ -33,7 +33,7 @@ public final class ODataErrorResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="details", required=true)
-      private final List<ODataErrorResponse> details;
+    private List<ODataErrorResponse> details;
 
     public List<ODataErrorResponse> details() {
         return this.details;
@@ -44,67 +44,63 @@ public final class ODataErrorResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="message", required=true)
-      private final String message;
+    private String message;
 
     public String message() {
         return this.message;
     }
 
-    public ODataErrorResponse(
-        String code,
-        List<ODataErrorResponse> details,
-        String message) {
-        this.code = Objects.requireNonNull(code, "expected parameter 'code' to be non-null");
-        this.details = Objects.requireNonNull(details, "expected parameter 'details' to be non-null");
-        this.message = Objects.requireNonNull(message, "expected parameter 'message' to be non-null");
-    }
+    private ODataErrorResponse() {}
 
-    private ODataErrorResponse() {
-        this.code = null;
-        this.details = List.of();
-        this.message = null;
+    private ODataErrorResponse(ODataErrorResponse $) {
+        this.code = $.code;
+        this.details = $.details;
+        this.message = $.message;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ODataErrorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String code;
-        private List<ODataErrorResponse> details;
-        private String message;
+        private ODataErrorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ODataErrorResponse();
         }
 
         public Builder(ODataErrorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.code = defaults.code;
-    	      this.details = defaults.details;
-    	      this.message = defaults.message;
+            $ = new ODataErrorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder code(String code) {
-            this.code = Objects.requireNonNull(code);
+            $.code = code;
             return this;
         }
+
         public Builder details(List<ODataErrorResponse> details) {
-            this.details = Objects.requireNonNull(details);
+            $.details = details;
             return this;
         }
+
         public Builder details(ODataErrorResponse... details) {
             return details(List.of(details));
         }
+
         public Builder message(String message) {
-            this.message = Objects.requireNonNull(message);
+            $.message = message;
             return this;
-        }        public ODataErrorResponse build() {
-            return new ODataErrorResponse(code, details, message);
+        }
+
+        public ODataErrorResponse build() {
+            $.code = Objects.requireNonNull($.code, "expected parameter 'code' to be non-null");
+            $.details = Objects.requireNonNull($.details, "expected parameter 'details' to be non-null");
+            $.message = Objects.requireNonNull($.message, "expected parameter 'message' to be non-null");
+            return $;
         }
     }
+
 }

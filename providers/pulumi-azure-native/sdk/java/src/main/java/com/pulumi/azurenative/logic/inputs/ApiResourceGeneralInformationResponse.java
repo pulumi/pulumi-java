@@ -23,10 +23,10 @@ public final class ApiResourceGeneralInformationResponse extends com.pulumi.reso
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ApiResourceGeneralInformationResponse extends com.pulumi.reso
      * 
      */
     @Import(name="displayName")
-      private final @Nullable String displayName;
+    private @Nullable String displayName;
 
     public Optional<String> displayName() {
-        return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ApiResourceGeneralInformationResponse extends com.pulumi.reso
      * 
      */
     @Import(name="iconUrl")
-      private final @Nullable String iconUrl;
+    private @Nullable String iconUrl;
 
     public Optional<String> iconUrl() {
-        return this.iconUrl == null ? Optional.empty() : Optional.ofNullable(this.iconUrl);
+        return Optional.ofNullable(this.iconUrl);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ApiResourceGeneralInformationResponse extends com.pulumi.reso
      * 
      */
     @Import(name="releaseTag")
-      private final @Nullable String releaseTag;
+    private @Nullable String releaseTag;
 
     public Optional<String> releaseTag() {
-        return this.releaseTag == null ? Optional.empty() : Optional.ofNullable(this.releaseTag);
+        return Optional.ofNullable(this.releaseTag);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class ApiResourceGeneralInformationResponse extends com.pulumi.reso
      * 
      */
     @Import(name="termsOfUseUrl")
-      private final @Nullable String termsOfUseUrl;
+    private @Nullable String termsOfUseUrl;
 
     public Optional<String> termsOfUseUrl() {
-        return this.termsOfUseUrl == null ? Optional.empty() : Optional.ofNullable(this.termsOfUseUrl);
+        return Optional.ofNullable(this.termsOfUseUrl);
     }
 
     /**
@@ -78,91 +78,74 @@ public final class ApiResourceGeneralInformationResponse extends com.pulumi.reso
      * 
      */
     @Import(name="tier")
-      private final @Nullable String tier;
+    private @Nullable String tier;
 
     public Optional<String> tier() {
-        return this.tier == null ? Optional.empty() : Optional.ofNullable(this.tier);
+        return Optional.ofNullable(this.tier);
     }
 
-    public ApiResourceGeneralInformationResponse(
-        @Nullable String description,
-        @Nullable String displayName,
-        @Nullable String iconUrl,
-        @Nullable String releaseTag,
-        @Nullable String termsOfUseUrl,
-        @Nullable String tier) {
-        this.description = description;
-        this.displayName = displayName;
-        this.iconUrl = iconUrl;
-        this.releaseTag = releaseTag;
-        this.termsOfUseUrl = termsOfUseUrl;
-        this.tier = tier;
-    }
+    private ApiResourceGeneralInformationResponse() {}
 
-    private ApiResourceGeneralInformationResponse() {
-        this.description = null;
-        this.displayName = null;
-        this.iconUrl = null;
-        this.releaseTag = null;
-        this.termsOfUseUrl = null;
-        this.tier = null;
+    private ApiResourceGeneralInformationResponse(ApiResourceGeneralInformationResponse $) {
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.iconUrl = $.iconUrl;
+        this.releaseTag = $.releaseTag;
+        this.termsOfUseUrl = $.termsOfUseUrl;
+        this.tier = $.tier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiResourceGeneralInformationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String description;
-        private @Nullable String displayName;
-        private @Nullable String iconUrl;
-        private @Nullable String releaseTag;
-        private @Nullable String termsOfUseUrl;
-        private @Nullable String tier;
+        private ApiResourceGeneralInformationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiResourceGeneralInformationResponse();
         }
 
         public Builder(ApiResourceGeneralInformationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.iconUrl = defaults.iconUrl;
-    	      this.releaseTag = defaults.releaseTag;
-    	      this.termsOfUseUrl = defaults.termsOfUseUrl;
-    	      this.tier = defaults.tier;
+            $ = new ApiResourceGeneralInformationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
+
         public Builder iconUrl(@Nullable String iconUrl) {
-            this.iconUrl = iconUrl;
+            $.iconUrl = iconUrl;
             return this;
         }
+
         public Builder releaseTag(@Nullable String releaseTag) {
-            this.releaseTag = releaseTag;
+            $.releaseTag = releaseTag;
             return this;
         }
+
         public Builder termsOfUseUrl(@Nullable String termsOfUseUrl) {
-            this.termsOfUseUrl = termsOfUseUrl;
+            $.termsOfUseUrl = termsOfUseUrl;
             return this;
         }
+
         public Builder tier(@Nullable String tier) {
-            this.tier = tier;
+            $.tier = tier;
             return this;
-        }        public ApiResourceGeneralInformationResponse build() {
-            return new ApiResourceGeneralInformationResponse(description, displayName, iconUrl, releaseTag, termsOfUseUrl, tier);
+        }
+
+        public ApiResourceGeneralInformationResponse build() {
+            return $;
         }
     }
+
 }

@@ -8,11 +8,11 @@ import com.pulumi.azurenative.web.inputs.ApiReferenceArgs;
 import com.pulumi.azurenative.web.inputs.ConnectionStatusDefinitionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ApiConnectionDefinitionPropertiesArgs extends com.pulumi.reso
     public static final ApiConnectionDefinitionPropertiesArgs Empty = new ApiConnectionDefinitionPropertiesArgs();
 
     @Import(name="api")
-      private final @Nullable Output<ApiReferenceArgs> api;
+    private @Nullable Output<ApiReferenceArgs> api;
 
-    public Output<ApiReferenceArgs> api() {
-        return this.api == null ? Codegen.empty() : this.api;
+    public Optional<Output<ApiReferenceArgs>> api() {
+        return Optional.ofNullable(this.api);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ApiConnectionDefinitionPropertiesArgs extends com.pulumi.reso
      * 
      */
     @Import(name="changedTime")
-      private final @Nullable Output<String> changedTime;
+    private @Nullable Output<String> changedTime;
 
-    public Output<String> changedTime() {
-        return this.changedTime == null ? Codegen.empty() : this.changedTime;
+    public Optional<Output<String>> changedTime() {
+        return Optional.ofNullable(this.changedTime);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ApiConnectionDefinitionPropertiesArgs extends com.pulumi.reso
      * 
      */
     @Import(name="createdTime")
-      private final @Nullable Output<String> createdTime;
+    private @Nullable Output<String> createdTime;
 
-    public Output<String> createdTime() {
-        return this.createdTime == null ? Codegen.empty() : this.createdTime;
+    public Optional<Output<String>> createdTime() {
+        return Optional.ofNullable(this.createdTime);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ApiConnectionDefinitionPropertiesArgs extends com.pulumi.reso
      * 
      */
     @Import(name="customParameterValues")
-      private final @Nullable Output<Map<String,String>> customParameterValues;
+    private @Nullable Output<Map<String,String>> customParameterValues;
 
-    public Output<Map<String,String>> customParameterValues() {
-        return this.customParameterValues == null ? Codegen.empty() : this.customParameterValues;
+    public Optional<Output<Map<String,String>>> customParameterValues() {
+        return Optional.ofNullable(this.customParameterValues);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class ApiConnectionDefinitionPropertiesArgs extends com.pulumi.reso
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class ApiConnectionDefinitionPropertiesArgs extends com.pulumi.reso
      * 
      */
     @Import(name="nonSecretParameterValues")
-      private final @Nullable Output<Map<String,String>> nonSecretParameterValues;
+    private @Nullable Output<Map<String,String>> nonSecretParameterValues;
 
-    public Output<Map<String,String>> nonSecretParameterValues() {
-        return this.nonSecretParameterValues == null ? Codegen.empty() : this.nonSecretParameterValues;
+    public Optional<Output<Map<String,String>>> nonSecretParameterValues() {
+        return Optional.ofNullable(this.nonSecretParameterValues);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class ApiConnectionDefinitionPropertiesArgs extends com.pulumi.reso
      * 
      */
     @Import(name="parameterValues")
-      private final @Nullable Output<Map<String,String>> parameterValues;
+    private @Nullable Output<Map<String,String>> parameterValues;
 
-    public Output<Map<String,String>> parameterValues() {
-        return this.parameterValues == null ? Codegen.empty() : this.parameterValues;
+    public Optional<Output<Map<String,String>>> parameterValues() {
+        return Optional.ofNullable(this.parameterValues);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class ApiConnectionDefinitionPropertiesArgs extends com.pulumi.reso
      * 
      */
     @Import(name="statuses")
-      private final @Nullable Output<List<ConnectionStatusDefinitionArgs>> statuses;
+    private @Nullable Output<List<ConnectionStatusDefinitionArgs>> statuses;
 
-    public Output<List<ConnectionStatusDefinitionArgs>> statuses() {
-        return this.statuses == null ? Codegen.empty() : this.statuses;
+    public Optional<Output<List<ConnectionStatusDefinitionArgs>>> statuses() {
+        return Optional.ofNullable(this.statuses);
     }
 
     /**
@@ -109,160 +109,136 @@ public final class ApiConnectionDefinitionPropertiesArgs extends com.pulumi.reso
      * 
      */
     @Import(name="testLinks")
-      private final @Nullable Output<List<ApiConnectionTestLinkArgs>> testLinks;
+    private @Nullable Output<List<ApiConnectionTestLinkArgs>> testLinks;
 
-    public Output<List<ApiConnectionTestLinkArgs>> testLinks() {
-        return this.testLinks == null ? Codegen.empty() : this.testLinks;
+    public Optional<Output<List<ApiConnectionTestLinkArgs>>> testLinks() {
+        return Optional.ofNullable(this.testLinks);
     }
 
-    public ApiConnectionDefinitionPropertiesArgs(
-        @Nullable Output<ApiReferenceArgs> api,
-        @Nullable Output<String> changedTime,
-        @Nullable Output<String> createdTime,
-        @Nullable Output<Map<String,String>> customParameterValues,
-        @Nullable Output<String> displayName,
-        @Nullable Output<Map<String,String>> nonSecretParameterValues,
-        @Nullable Output<Map<String,String>> parameterValues,
-        @Nullable Output<List<ConnectionStatusDefinitionArgs>> statuses,
-        @Nullable Output<List<ApiConnectionTestLinkArgs>> testLinks) {
-        this.api = api;
-        this.changedTime = changedTime;
-        this.createdTime = createdTime;
-        this.customParameterValues = customParameterValues;
-        this.displayName = displayName;
-        this.nonSecretParameterValues = nonSecretParameterValues;
-        this.parameterValues = parameterValues;
-        this.statuses = statuses;
-        this.testLinks = testLinks;
-    }
+    private ApiConnectionDefinitionPropertiesArgs() {}
 
-    private ApiConnectionDefinitionPropertiesArgs() {
-        this.api = Codegen.empty();
-        this.changedTime = Codegen.empty();
-        this.createdTime = Codegen.empty();
-        this.customParameterValues = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.nonSecretParameterValues = Codegen.empty();
-        this.parameterValues = Codegen.empty();
-        this.statuses = Codegen.empty();
-        this.testLinks = Codegen.empty();
+    private ApiConnectionDefinitionPropertiesArgs(ApiConnectionDefinitionPropertiesArgs $) {
+        this.api = $.api;
+        this.changedTime = $.changedTime;
+        this.createdTime = $.createdTime;
+        this.customParameterValues = $.customParameterValues;
+        this.displayName = $.displayName;
+        this.nonSecretParameterValues = $.nonSecretParameterValues;
+        this.parameterValues = $.parameterValues;
+        this.statuses = $.statuses;
+        this.testLinks = $.testLinks;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiConnectionDefinitionPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ApiReferenceArgs> api;
-        private @Nullable Output<String> changedTime;
-        private @Nullable Output<String> createdTime;
-        private @Nullable Output<Map<String,String>> customParameterValues;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<Map<String,String>> nonSecretParameterValues;
-        private @Nullable Output<Map<String,String>> parameterValues;
-        private @Nullable Output<List<ConnectionStatusDefinitionArgs>> statuses;
-        private @Nullable Output<List<ApiConnectionTestLinkArgs>> testLinks;
+        private ApiConnectionDefinitionPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiConnectionDefinitionPropertiesArgs();
         }
 
         public Builder(ApiConnectionDefinitionPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.api = defaults.api;
-    	      this.changedTime = defaults.changedTime;
-    	      this.createdTime = defaults.createdTime;
-    	      this.customParameterValues = defaults.customParameterValues;
-    	      this.displayName = defaults.displayName;
-    	      this.nonSecretParameterValues = defaults.nonSecretParameterValues;
-    	      this.parameterValues = defaults.parameterValues;
-    	      this.statuses = defaults.statuses;
-    	      this.testLinks = defaults.testLinks;
+            $ = new ApiConnectionDefinitionPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder api(@Nullable Output<ApiReferenceArgs> api) {
-            this.api = api;
+            $.api = api;
             return this;
         }
-        public Builder api(@Nullable ApiReferenceArgs api) {
-            this.api = Codegen.ofNullable(api);
-            return this;
+
+        public Builder api(ApiReferenceArgs api) {
+            return api(Output.of(api));
         }
+
         public Builder changedTime(@Nullable Output<String> changedTime) {
-            this.changedTime = changedTime;
+            $.changedTime = changedTime;
             return this;
         }
-        public Builder changedTime(@Nullable String changedTime) {
-            this.changedTime = Codegen.ofNullable(changedTime);
-            return this;
+
+        public Builder changedTime(String changedTime) {
+            return changedTime(Output.of(changedTime));
         }
+
         public Builder createdTime(@Nullable Output<String> createdTime) {
-            this.createdTime = createdTime;
+            $.createdTime = createdTime;
             return this;
         }
-        public Builder createdTime(@Nullable String createdTime) {
-            this.createdTime = Codegen.ofNullable(createdTime);
-            return this;
+
+        public Builder createdTime(String createdTime) {
+            return createdTime(Output.of(createdTime));
         }
+
         public Builder customParameterValues(@Nullable Output<Map<String,String>> customParameterValues) {
-            this.customParameterValues = customParameterValues;
+            $.customParameterValues = customParameterValues;
             return this;
         }
-        public Builder customParameterValues(@Nullable Map<String,String> customParameterValues) {
-            this.customParameterValues = Codegen.ofNullable(customParameterValues);
-            return this;
+
+        public Builder customParameterValues(Map<String,String> customParameterValues) {
+            return customParameterValues(Output.of(customParameterValues));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder nonSecretParameterValues(@Nullable Output<Map<String,String>> nonSecretParameterValues) {
-            this.nonSecretParameterValues = nonSecretParameterValues;
+            $.nonSecretParameterValues = nonSecretParameterValues;
             return this;
         }
-        public Builder nonSecretParameterValues(@Nullable Map<String,String> nonSecretParameterValues) {
-            this.nonSecretParameterValues = Codegen.ofNullable(nonSecretParameterValues);
-            return this;
+
+        public Builder nonSecretParameterValues(Map<String,String> nonSecretParameterValues) {
+            return nonSecretParameterValues(Output.of(nonSecretParameterValues));
         }
+
         public Builder parameterValues(@Nullable Output<Map<String,String>> parameterValues) {
-            this.parameterValues = parameterValues;
+            $.parameterValues = parameterValues;
             return this;
         }
-        public Builder parameterValues(@Nullable Map<String,String> parameterValues) {
-            this.parameterValues = Codegen.ofNullable(parameterValues);
-            return this;
+
+        public Builder parameterValues(Map<String,String> parameterValues) {
+            return parameterValues(Output.of(parameterValues));
         }
+
         public Builder statuses(@Nullable Output<List<ConnectionStatusDefinitionArgs>> statuses) {
-            this.statuses = statuses;
+            $.statuses = statuses;
             return this;
         }
-        public Builder statuses(@Nullable List<ConnectionStatusDefinitionArgs> statuses) {
-            this.statuses = Codegen.ofNullable(statuses);
-            return this;
+
+        public Builder statuses(List<ConnectionStatusDefinitionArgs> statuses) {
+            return statuses(Output.of(statuses));
         }
+
         public Builder statuses(ConnectionStatusDefinitionArgs... statuses) {
             return statuses(List.of(statuses));
         }
+
         public Builder testLinks(@Nullable Output<List<ApiConnectionTestLinkArgs>> testLinks) {
-            this.testLinks = testLinks;
+            $.testLinks = testLinks;
             return this;
         }
-        public Builder testLinks(@Nullable List<ApiConnectionTestLinkArgs> testLinks) {
-            this.testLinks = Codegen.ofNullable(testLinks);
-            return this;
+
+        public Builder testLinks(List<ApiConnectionTestLinkArgs> testLinks) {
+            return testLinks(Output.of(testLinks));
         }
+
         public Builder testLinks(ApiConnectionTestLinkArgs... testLinks) {
             return testLinks(List.of(testLinks));
-        }        public ApiConnectionDefinitionPropertiesArgs build() {
-            return new ApiConnectionDefinitionPropertiesArgs(api, changedTime, createdTime, customParameterValues, displayName, nonSecretParameterValues, parameterValues, statuses, testLinks);
+        }
+
+        public ApiConnectionDefinitionPropertiesArgs build() {
+            return $;
         }
     }
+
 }

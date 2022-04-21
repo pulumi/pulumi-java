@@ -17,7 +17,7 @@ public final class GetUserRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="configurationName", required=true)
-      private final String configurationName;
+    private String configurationName;
 
     public String configurationName() {
         return this.configurationName;
@@ -28,7 +28,7 @@ public final class GetUserRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="networkManagerName", required=true)
-      private final String networkManagerName;
+    private String networkManagerName;
 
     public String networkManagerName() {
         return this.networkManagerName;
@@ -39,7 +39,7 @@ public final class GetUserRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -50,7 +50,7 @@ public final class GetUserRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ruleCollectionName", required=true)
-      private final String ruleCollectionName;
+    private String ruleCollectionName;
 
     public String ruleCollectionName() {
         return this.ruleCollectionName;
@@ -61,82 +61,73 @@ public final class GetUserRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ruleName", required=true)
-      private final String ruleName;
+    private String ruleName;
 
     public String ruleName() {
         return this.ruleName;
     }
 
-    public GetUserRuleArgs(
-        String configurationName,
-        String networkManagerName,
-        String resourceGroupName,
-        String ruleCollectionName,
-        String ruleName) {
-        this.configurationName = Objects.requireNonNull(configurationName, "expected parameter 'configurationName' to be non-null");
-        this.networkManagerName = Objects.requireNonNull(networkManagerName, "expected parameter 'networkManagerName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.ruleCollectionName = Objects.requireNonNull(ruleCollectionName, "expected parameter 'ruleCollectionName' to be non-null");
-        this.ruleName = Objects.requireNonNull(ruleName, "expected parameter 'ruleName' to be non-null");
-    }
+    private GetUserRuleArgs() {}
 
-    private GetUserRuleArgs() {
-        this.configurationName = null;
-        this.networkManagerName = null;
-        this.resourceGroupName = null;
-        this.ruleCollectionName = null;
-        this.ruleName = null;
+    private GetUserRuleArgs(GetUserRuleArgs $) {
+        this.configurationName = $.configurationName;
+        this.networkManagerName = $.networkManagerName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.ruleCollectionName = $.ruleCollectionName;
+        this.ruleName = $.ruleName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetUserRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String configurationName;
-        private String networkManagerName;
-        private String resourceGroupName;
-        private String ruleCollectionName;
-        private String ruleName;
+        private GetUserRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetUserRuleArgs();
         }
 
         public Builder(GetUserRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configurationName = defaults.configurationName;
-    	      this.networkManagerName = defaults.networkManagerName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.ruleCollectionName = defaults.ruleCollectionName;
-    	      this.ruleName = defaults.ruleName;
+            $ = new GetUserRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configurationName(String configurationName) {
-            this.configurationName = Objects.requireNonNull(configurationName);
+            $.configurationName = configurationName;
             return this;
         }
+
         public Builder networkManagerName(String networkManagerName) {
-            this.networkManagerName = Objects.requireNonNull(networkManagerName);
+            $.networkManagerName = networkManagerName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder ruleCollectionName(String ruleCollectionName) {
-            this.ruleCollectionName = Objects.requireNonNull(ruleCollectionName);
+            $.ruleCollectionName = ruleCollectionName;
             return this;
         }
+
         public Builder ruleName(String ruleName) {
-            this.ruleName = Objects.requireNonNull(ruleName);
+            $.ruleName = ruleName;
             return this;
-        }        public GetUserRuleArgs build() {
-            return new GetUserRuleArgs(configurationName, networkManagerName, resourceGroupName, ruleCollectionName, ruleName);
+        }
+
+        public GetUserRuleArgs build() {
+            $.configurationName = Objects.requireNonNull($.configurationName, "expected parameter 'configurationName' to be non-null");
+            $.networkManagerName = Objects.requireNonNull($.networkManagerName, "expected parameter 'networkManagerName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.ruleCollectionName = Objects.requireNonNull($.ruleCollectionName, "expected parameter 'ruleCollectionName' to be non-null");
+            $.ruleName = Objects.requireNonNull($.ruleName, "expected parameter 'ruleName' to be non-null");
+            return $;
         }
     }
+
 }

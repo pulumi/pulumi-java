@@ -24,10 +24,10 @@ public final class MonitoringScheduleMonitoringAppSpecification extends com.pulu
      * 
      */
     @Import(name="containerArguments")
-      private final @Nullable List<String> containerArguments;
+    private @Nullable List<String> containerArguments;
 
-    public List<String> containerArguments() {
-        return this.containerArguments == null ? List.of() : this.containerArguments;
+    public Optional<List<String>> containerArguments() {
+        return Optional.ofNullable(this.containerArguments);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class MonitoringScheduleMonitoringAppSpecification extends com.pulu
      * 
      */
     @Import(name="containerEntrypoint")
-      private final @Nullable List<String> containerEntrypoint;
+    private @Nullable List<String> containerEntrypoint;
 
-    public List<String> containerEntrypoint() {
-        return this.containerEntrypoint == null ? List.of() : this.containerEntrypoint;
+    public Optional<List<String>> containerEntrypoint() {
+        return Optional.ofNullable(this.containerEntrypoint);
     }
 
     /**
@@ -46,7 +46,7 @@ public final class MonitoringScheduleMonitoringAppSpecification extends com.pulu
      * 
      */
     @Import(name="imageUri", required=true)
-      private final String imageUri;
+    private String imageUri;
 
     public String imageUri() {
         return this.imageUri;
@@ -57,10 +57,10 @@ public final class MonitoringScheduleMonitoringAppSpecification extends com.pulu
      * 
      */
     @Import(name="postAnalyticsProcessorSourceUri")
-      private final @Nullable String postAnalyticsProcessorSourceUri;
+    private @Nullable String postAnalyticsProcessorSourceUri;
 
     public Optional<String> postAnalyticsProcessorSourceUri() {
-        return this.postAnalyticsProcessorSourceUri == null ? Optional.empty() : Optional.ofNullable(this.postAnalyticsProcessorSourceUri);
+        return Optional.ofNullable(this.postAnalyticsProcessorSourceUri);
     }
 
     /**
@@ -68,88 +68,77 @@ public final class MonitoringScheduleMonitoringAppSpecification extends com.pulu
      * 
      */
     @Import(name="recordPreprocessorSourceUri")
-      private final @Nullable String recordPreprocessorSourceUri;
+    private @Nullable String recordPreprocessorSourceUri;
 
     public Optional<String> recordPreprocessorSourceUri() {
-        return this.recordPreprocessorSourceUri == null ? Optional.empty() : Optional.ofNullable(this.recordPreprocessorSourceUri);
+        return Optional.ofNullable(this.recordPreprocessorSourceUri);
     }
 
-    public MonitoringScheduleMonitoringAppSpecification(
-        @Nullable List<String> containerArguments,
-        @Nullable List<String> containerEntrypoint,
-        String imageUri,
-        @Nullable String postAnalyticsProcessorSourceUri,
-        @Nullable String recordPreprocessorSourceUri) {
-        this.containerArguments = containerArguments;
-        this.containerEntrypoint = containerEntrypoint;
-        this.imageUri = Objects.requireNonNull(imageUri, "expected parameter 'imageUri' to be non-null");
-        this.postAnalyticsProcessorSourceUri = postAnalyticsProcessorSourceUri;
-        this.recordPreprocessorSourceUri = recordPreprocessorSourceUri;
-    }
+    private MonitoringScheduleMonitoringAppSpecification() {}
 
-    private MonitoringScheduleMonitoringAppSpecification() {
-        this.containerArguments = List.of();
-        this.containerEntrypoint = List.of();
-        this.imageUri = null;
-        this.postAnalyticsProcessorSourceUri = null;
-        this.recordPreprocessorSourceUri = null;
+    private MonitoringScheduleMonitoringAppSpecification(MonitoringScheduleMonitoringAppSpecification $) {
+        this.containerArguments = $.containerArguments;
+        this.containerEntrypoint = $.containerEntrypoint;
+        this.imageUri = $.imageUri;
+        this.postAnalyticsProcessorSourceUri = $.postAnalyticsProcessorSourceUri;
+        this.recordPreprocessorSourceUri = $.recordPreprocessorSourceUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MonitoringScheduleMonitoringAppSpecification defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> containerArguments;
-        private @Nullable List<String> containerEntrypoint;
-        private String imageUri;
-        private @Nullable String postAnalyticsProcessorSourceUri;
-        private @Nullable String recordPreprocessorSourceUri;
+        private MonitoringScheduleMonitoringAppSpecification $;
 
         public Builder() {
-    	      // Empty
+            $ = new MonitoringScheduleMonitoringAppSpecification();
         }
 
         public Builder(MonitoringScheduleMonitoringAppSpecification defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerArguments = defaults.containerArguments;
-    	      this.containerEntrypoint = defaults.containerEntrypoint;
-    	      this.imageUri = defaults.imageUri;
-    	      this.postAnalyticsProcessorSourceUri = defaults.postAnalyticsProcessorSourceUri;
-    	      this.recordPreprocessorSourceUri = defaults.recordPreprocessorSourceUri;
+            $ = new MonitoringScheduleMonitoringAppSpecification(Objects.requireNonNull(defaults));
         }
 
         public Builder containerArguments(@Nullable List<String> containerArguments) {
-            this.containerArguments = containerArguments;
+            $.containerArguments = containerArguments;
             return this;
         }
+
         public Builder containerArguments(String... containerArguments) {
             return containerArguments(List.of(containerArguments));
         }
+
         public Builder containerEntrypoint(@Nullable List<String> containerEntrypoint) {
-            this.containerEntrypoint = containerEntrypoint;
+            $.containerEntrypoint = containerEntrypoint;
             return this;
         }
+
         public Builder containerEntrypoint(String... containerEntrypoint) {
             return containerEntrypoint(List.of(containerEntrypoint));
         }
+
         public Builder imageUri(String imageUri) {
-            this.imageUri = Objects.requireNonNull(imageUri);
+            $.imageUri = imageUri;
             return this;
         }
+
         public Builder postAnalyticsProcessorSourceUri(@Nullable String postAnalyticsProcessorSourceUri) {
-            this.postAnalyticsProcessorSourceUri = postAnalyticsProcessorSourceUri;
+            $.postAnalyticsProcessorSourceUri = postAnalyticsProcessorSourceUri;
             return this;
         }
+
         public Builder recordPreprocessorSourceUri(@Nullable String recordPreprocessorSourceUri) {
-            this.recordPreprocessorSourceUri = recordPreprocessorSourceUri;
+            $.recordPreprocessorSourceUri = recordPreprocessorSourceUri;
             return this;
-        }        public MonitoringScheduleMonitoringAppSpecification build() {
-            return new MonitoringScheduleMonitoringAppSpecification(containerArguments, containerEntrypoint, imageUri, postAnalyticsProcessorSourceUri, recordPreprocessorSourceUri);
+        }
+
+        public MonitoringScheduleMonitoringAppSpecification build() {
+            $.imageUri = Objects.requireNonNull($.imageUri, "expected parameter 'imageUri' to be non-null");
+            return $;
         }
     }
+
 }

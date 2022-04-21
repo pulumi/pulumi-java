@@ -5,9 +5,9 @@ package com.pulumi.googlenative.bigquery_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ModelReferenceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="datasetId")
-      private final @Nullable Output<String> datasetId;
+    private @Nullable Output<String> datasetId;
 
-    public Output<String> datasetId() {
-        return this.datasetId == null ? Codegen.empty() : this.datasetId;
+    public Optional<Output<String>> datasetId() {
+        return Optional.ofNullable(this.datasetId);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ModelReferenceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="modelId")
-      private final @Nullable Output<String> modelId;
+    private @Nullable Output<String> modelId;
 
-    public Output<String> modelId() {
-        return this.modelId == null ? Codegen.empty() : this.modelId;
+    public Optional<Output<String>> modelId() {
+        return Optional.ofNullable(this.modelId);
     }
 
     /**
@@ -42,76 +42,68 @@ public final class ModelReferenceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public ModelReferenceArgs(
-        @Nullable Output<String> datasetId,
-        @Nullable Output<String> modelId,
-        @Nullable Output<String> project) {
-        this.datasetId = datasetId;
-        this.modelId = modelId;
-        this.project = project;
-    }
+    private ModelReferenceArgs() {}
 
-    private ModelReferenceArgs() {
-        this.datasetId = Codegen.empty();
-        this.modelId = Codegen.empty();
-        this.project = Codegen.empty();
+    private ModelReferenceArgs(ModelReferenceArgs $) {
+        this.datasetId = $.datasetId;
+        this.modelId = $.modelId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ModelReferenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> datasetId;
-        private @Nullable Output<String> modelId;
-        private @Nullable Output<String> project;
+        private ModelReferenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ModelReferenceArgs();
         }
 
         public Builder(ModelReferenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datasetId = defaults.datasetId;
-    	      this.modelId = defaults.modelId;
-    	      this.project = defaults.project;
+            $ = new ModelReferenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder datasetId(@Nullable Output<String> datasetId) {
-            this.datasetId = datasetId;
+            $.datasetId = datasetId;
             return this;
         }
-        public Builder datasetId(@Nullable String datasetId) {
-            this.datasetId = Codegen.ofNullable(datasetId);
-            return this;
+
+        public Builder datasetId(String datasetId) {
+            return datasetId(Output.of(datasetId));
         }
+
         public Builder modelId(@Nullable Output<String> modelId) {
-            this.modelId = modelId;
+            $.modelId = modelId;
             return this;
         }
-        public Builder modelId(@Nullable String modelId) {
-            this.modelId = Codegen.ofNullable(modelId);
-            return this;
+
+        public Builder modelId(String modelId) {
+            return modelId(Output.of(modelId));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public ModelReferenceArgs build() {
-            return new ModelReferenceArgs(datasetId, modelId, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public ModelReferenceArgs build() {
+            return $;
         }
     }
+
 }

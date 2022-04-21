@@ -5,9 +5,9 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class AutoscalarAutoscalingPolicyScaleInControlMaxScaledInReplicasA
      * 
      */
     @Import(name="fixed")
-      private final @Nullable Output<Integer> fixed;
+    private @Nullable Output<Integer> fixed;
 
-    public Output<Integer> fixed() {
-        return this.fixed == null ? Codegen.empty() : this.fixed;
+    public Optional<Output<Integer>> fixed() {
+        return Optional.ofNullable(this.fixed);
     }
 
     /**
@@ -33,63 +33,58 @@ public final class AutoscalarAutoscalingPolicyScaleInControlMaxScaledInReplicasA
      * 
      */
     @Import(name="percent")
-      private final @Nullable Output<Integer> percent;
+    private @Nullable Output<Integer> percent;
 
-    public Output<Integer> percent() {
-        return this.percent == null ? Codegen.empty() : this.percent;
+    public Optional<Output<Integer>> percent() {
+        return Optional.ofNullable(this.percent);
     }
 
-    public AutoscalarAutoscalingPolicyScaleInControlMaxScaledInReplicasArgs(
-        @Nullable Output<Integer> fixed,
-        @Nullable Output<Integer> percent) {
-        this.fixed = fixed;
-        this.percent = percent;
-    }
+    private AutoscalarAutoscalingPolicyScaleInControlMaxScaledInReplicasArgs() {}
 
-    private AutoscalarAutoscalingPolicyScaleInControlMaxScaledInReplicasArgs() {
-        this.fixed = Codegen.empty();
-        this.percent = Codegen.empty();
+    private AutoscalarAutoscalingPolicyScaleInControlMaxScaledInReplicasArgs(AutoscalarAutoscalingPolicyScaleInControlMaxScaledInReplicasArgs $) {
+        this.fixed = $.fixed;
+        this.percent = $.percent;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoscalarAutoscalingPolicyScaleInControlMaxScaledInReplicasArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> fixed;
-        private @Nullable Output<Integer> percent;
+        private AutoscalarAutoscalingPolicyScaleInControlMaxScaledInReplicasArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoscalarAutoscalingPolicyScaleInControlMaxScaledInReplicasArgs();
         }
 
         public Builder(AutoscalarAutoscalingPolicyScaleInControlMaxScaledInReplicasArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fixed = defaults.fixed;
-    	      this.percent = defaults.percent;
+            $ = new AutoscalarAutoscalingPolicyScaleInControlMaxScaledInReplicasArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fixed(@Nullable Output<Integer> fixed) {
-            this.fixed = fixed;
+            $.fixed = fixed;
             return this;
         }
-        public Builder fixed(@Nullable Integer fixed) {
-            this.fixed = Codegen.ofNullable(fixed);
-            return this;
+
+        public Builder fixed(Integer fixed) {
+            return fixed(Output.of(fixed));
         }
+
         public Builder percent(@Nullable Output<Integer> percent) {
-            this.percent = percent;
+            $.percent = percent;
             return this;
         }
-        public Builder percent(@Nullable Integer percent) {
-            this.percent = Codegen.ofNullable(percent);
-            return this;
-        }        public AutoscalarAutoscalingPolicyScaleInControlMaxScaledInReplicasArgs build() {
-            return new AutoscalarAutoscalingPolicyScaleInControlMaxScaledInReplicasArgs(fixed, percent);
+
+        public Builder percent(Integer percent) {
+            return percent(Output.of(percent));
+        }
+
+        public AutoscalarAutoscalingPolicyScaleInControlMaxScaledInReplicasArgs build() {
+            return $;
         }
     }
+
 }

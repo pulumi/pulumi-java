@@ -17,45 +17,45 @@ public final class AzureADMetricsPropertiesFormatResponse extends com.pulumi.res
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
     }
 
-    public AzureADMetricsPropertiesFormatResponse(String provisioningState) {
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-    }
+    private AzureADMetricsPropertiesFormatResponse() {}
 
-    private AzureADMetricsPropertiesFormatResponse() {
-        this.provisioningState = null;
+    private AzureADMetricsPropertiesFormatResponse(AzureADMetricsPropertiesFormatResponse $) {
+        this.provisioningState = $.provisioningState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureADMetricsPropertiesFormatResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String provisioningState;
+        private AzureADMetricsPropertiesFormatResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureADMetricsPropertiesFormatResponse();
         }
 
         public Builder(AzureADMetricsPropertiesFormatResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.provisioningState = defaults.provisioningState;
+            $ = new AzureADMetricsPropertiesFormatResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
-        }        public AzureADMetricsPropertiesFormatResponse build() {
-            return new AzureADMetricsPropertiesFormatResponse(provisioningState);
+        }
+
+        public AzureADMetricsPropertiesFormatResponse build() {
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            return $;
         }
     }
+
 }

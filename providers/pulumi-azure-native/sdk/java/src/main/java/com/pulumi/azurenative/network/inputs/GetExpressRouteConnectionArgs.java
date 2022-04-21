@@ -17,7 +17,7 @@ public final class GetExpressRouteConnectionArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="connectionName", required=true)
-      private final String connectionName;
+    private String connectionName;
 
     public String connectionName() {
         return this.connectionName;
@@ -28,7 +28,7 @@ public final class GetExpressRouteConnectionArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="expressRouteGatewayName", required=true)
-      private final String expressRouteGatewayName;
+    private String expressRouteGatewayName;
 
     public String expressRouteGatewayName() {
         return this.expressRouteGatewayName;
@@ -39,64 +39,59 @@ public final class GetExpressRouteConnectionArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetExpressRouteConnectionArgs(
-        String connectionName,
-        String expressRouteGatewayName,
-        String resourceGroupName) {
-        this.connectionName = Objects.requireNonNull(connectionName, "expected parameter 'connectionName' to be non-null");
-        this.expressRouteGatewayName = Objects.requireNonNull(expressRouteGatewayName, "expected parameter 'expressRouteGatewayName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetExpressRouteConnectionArgs() {}
 
-    private GetExpressRouteConnectionArgs() {
-        this.connectionName = null;
-        this.expressRouteGatewayName = null;
-        this.resourceGroupName = null;
+    private GetExpressRouteConnectionArgs(GetExpressRouteConnectionArgs $) {
+        this.connectionName = $.connectionName;
+        this.expressRouteGatewayName = $.expressRouteGatewayName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetExpressRouteConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String connectionName;
-        private String expressRouteGatewayName;
-        private String resourceGroupName;
+        private GetExpressRouteConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetExpressRouteConnectionArgs();
         }
 
         public Builder(GetExpressRouteConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectionName = defaults.connectionName;
-    	      this.expressRouteGatewayName = defaults.expressRouteGatewayName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetExpressRouteConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connectionName(String connectionName) {
-            this.connectionName = Objects.requireNonNull(connectionName);
+            $.connectionName = connectionName;
             return this;
         }
+
         public Builder expressRouteGatewayName(String expressRouteGatewayName) {
-            this.expressRouteGatewayName = Objects.requireNonNull(expressRouteGatewayName);
+            $.expressRouteGatewayName = expressRouteGatewayName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetExpressRouteConnectionArgs build() {
-            return new GetExpressRouteConnectionArgs(connectionName, expressRouteGatewayName, resourceGroupName);
+        }
+
+        public GetExpressRouteConnectionArgs build() {
+            $.connectionName = Objects.requireNonNull($.connectionName, "expected parameter 'connectionName' to be non-null");
+            $.expressRouteGatewayName = Objects.requireNonNull($.expressRouteGatewayName, "expected parameter 'expressRouteGatewayName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

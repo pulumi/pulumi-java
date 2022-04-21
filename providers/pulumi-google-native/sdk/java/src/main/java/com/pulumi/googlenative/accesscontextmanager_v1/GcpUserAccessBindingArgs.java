@@ -5,10 +5,10 @@ package com.pulumi.googlenative.accesscontextmanager_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class GcpUserAccessBindingArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="accessLevels", required=true)
-      private final Output<List<String>> accessLevels;
+    private Output<List<String>> accessLevels;
 
     public Output<List<String>> accessLevels() {
         return this.accessLevels;
@@ -32,7 +32,7 @@ public final class GcpUserAccessBindingArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="groupKey", required=true)
-      private final Output<String> groupKey;
+    private Output<String> groupKey;
 
     public Output<String> groupKey() {
         return this.groupKey;
@@ -43,99 +43,92 @@ public final class GcpUserAccessBindingArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="organizationId", required=true)
-      private final Output<String> organizationId;
+    private Output<String> organizationId;
 
     public Output<String> organizationId() {
         return this.organizationId;
     }
 
-    public GcpUserAccessBindingArgs(
-        Output<List<String>> accessLevels,
-        Output<String> groupKey,
-        @Nullable Output<String> name,
-        Output<String> organizationId) {
-        this.accessLevels = Objects.requireNonNull(accessLevels, "expected parameter 'accessLevels' to be non-null");
-        this.groupKey = Objects.requireNonNull(groupKey, "expected parameter 'groupKey' to be non-null");
-        this.name = name;
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-    }
+    private GcpUserAccessBindingArgs() {}
 
-    private GcpUserAccessBindingArgs() {
-        this.accessLevels = Codegen.empty();
-        this.groupKey = Codegen.empty();
-        this.name = Codegen.empty();
-        this.organizationId = Codegen.empty();
+    private GcpUserAccessBindingArgs(GcpUserAccessBindingArgs $) {
+        this.accessLevels = $.accessLevels;
+        this.groupKey = $.groupKey;
+        this.name = $.name;
+        this.organizationId = $.organizationId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GcpUserAccessBindingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> accessLevels;
-        private Output<String> groupKey;
-        private @Nullable Output<String> name;
-        private Output<String> organizationId;
+        private GcpUserAccessBindingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GcpUserAccessBindingArgs();
         }
 
         public Builder(GcpUserAccessBindingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessLevels = defaults.accessLevels;
-    	      this.groupKey = defaults.groupKey;
-    	      this.name = defaults.name;
-    	      this.organizationId = defaults.organizationId;
+            $ = new GcpUserAccessBindingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessLevels(Output<List<String>> accessLevels) {
-            this.accessLevels = Objects.requireNonNull(accessLevels);
+            $.accessLevels = accessLevels;
             return this;
         }
+
         public Builder accessLevels(List<String> accessLevels) {
-            this.accessLevels = Output.of(Objects.requireNonNull(accessLevels));
-            return this;
+            return accessLevels(Output.of(accessLevels));
         }
+
         public Builder accessLevels(String... accessLevels) {
             return accessLevels(List.of(accessLevels));
         }
+
         public Builder groupKey(Output<String> groupKey) {
-            this.groupKey = Objects.requireNonNull(groupKey);
+            $.groupKey = groupKey;
             return this;
         }
+
         public Builder groupKey(String groupKey) {
-            this.groupKey = Output.of(Objects.requireNonNull(groupKey));
-            return this;
+            return groupKey(Output.of(groupKey));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder organizationId(Output<String> organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
         }
+
         public Builder organizationId(String organizationId) {
-            this.organizationId = Output.of(Objects.requireNonNull(organizationId));
-            return this;
-        }        public GcpUserAccessBindingArgs build() {
-            return new GcpUserAccessBindingArgs(accessLevels, groupKey, name, organizationId);
+            return organizationId(Output.of(organizationId));
+        }
+
+        public GcpUserAccessBindingArgs build() {
+            $.accessLevels = Objects.requireNonNull($.accessLevels, "expected parameter 'accessLevels' to be non-null");
+            $.groupKey = Objects.requireNonNull($.groupKey, "expected parameter 'groupKey' to be non-null");
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            return $;
         }
     }
+
 }

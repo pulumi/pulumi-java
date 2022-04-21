@@ -13,45 +13,45 @@ public final class GetListenerRuleArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetListenerRuleArgs Empty = new GetListenerRuleArgs();
 
     @Import(name="ruleArn", required=true)
-      private final String ruleArn;
+    private String ruleArn;
 
     public String ruleArn() {
         return this.ruleArn;
     }
 
-    public GetListenerRuleArgs(String ruleArn) {
-        this.ruleArn = Objects.requireNonNull(ruleArn, "expected parameter 'ruleArn' to be non-null");
-    }
+    private GetListenerRuleArgs() {}
 
-    private GetListenerRuleArgs() {
-        this.ruleArn = null;
+    private GetListenerRuleArgs(GetListenerRuleArgs $) {
+        this.ruleArn = $.ruleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetListenerRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String ruleArn;
+        private GetListenerRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetListenerRuleArgs();
         }
 
         public Builder(GetListenerRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ruleArn = defaults.ruleArn;
+            $ = new GetListenerRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ruleArn(String ruleArn) {
-            this.ruleArn = Objects.requireNonNull(ruleArn);
+            $.ruleArn = ruleArn;
             return this;
-        }        public GetListenerRuleArgs build() {
-            return new GetListenerRuleArgs(ruleArn);
+        }
+
+        public GetListenerRuleArgs build() {
+            $.ruleArn = Objects.requireNonNull($.ruleArn, "expected parameter 'ruleArn' to be non-null");
+            return $;
         }
     }
+
 }

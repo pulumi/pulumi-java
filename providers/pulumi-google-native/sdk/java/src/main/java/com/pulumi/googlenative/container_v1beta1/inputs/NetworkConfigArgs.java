@@ -5,7 +5,6 @@ package com.pulumi.googlenative.container_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.container_v1beta1.enums.NetworkConfigDatapathProvider;
 import com.pulumi.googlenative.container_v1beta1.enums.NetworkConfigPrivateIpv6GoogleAccess;
 import com.pulumi.googlenative.container_v1beta1.inputs.DNSConfigArgs;
@@ -13,6 +12,7 @@ import com.pulumi.googlenative.container_v1beta1.inputs.DefaultSnatStatusArgs;
 import com.pulumi.googlenative.container_v1beta1.inputs.ServiceExternalIPsConfigArgs;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class NetworkConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="datapathProvider")
-      private final @Nullable Output<NetworkConfigDatapathProvider> datapathProvider;
+    private @Nullable Output<NetworkConfigDatapathProvider> datapathProvider;
 
-    public Output<NetworkConfigDatapathProvider> datapathProvider() {
-        return this.datapathProvider == null ? Codegen.empty() : this.datapathProvider;
+    public Optional<Output<NetworkConfigDatapathProvider>> datapathProvider() {
+        return Optional.ofNullable(this.datapathProvider);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class NetworkConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultSnatStatus")
-      private final @Nullable Output<DefaultSnatStatusArgs> defaultSnatStatus;
+    private @Nullable Output<DefaultSnatStatusArgs> defaultSnatStatus;
 
-    public Output<DefaultSnatStatusArgs> defaultSnatStatus() {
-        return this.defaultSnatStatus == null ? Codegen.empty() : this.defaultSnatStatus;
+    public Optional<Output<DefaultSnatStatusArgs>> defaultSnatStatus() {
+        return Optional.ofNullable(this.defaultSnatStatus);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class NetworkConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dnsConfig")
-      private final @Nullable Output<DNSConfigArgs> dnsConfig;
+    private @Nullable Output<DNSConfigArgs> dnsConfig;
 
-    public Output<DNSConfigArgs> dnsConfig() {
-        return this.dnsConfig == null ? Codegen.empty() : this.dnsConfig;
+    public Optional<Output<DNSConfigArgs>> dnsConfig() {
+        return Optional.ofNullable(this.dnsConfig);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class NetworkConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableIntraNodeVisibility")
-      private final @Nullable Output<Boolean> enableIntraNodeVisibility;
+    private @Nullable Output<Boolean> enableIntraNodeVisibility;
 
-    public Output<Boolean> enableIntraNodeVisibility() {
-        return this.enableIntraNodeVisibility == null ? Codegen.empty() : this.enableIntraNodeVisibility;
+    public Optional<Output<Boolean>> enableIntraNodeVisibility() {
+        return Optional.ofNullable(this.enableIntraNodeVisibility);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class NetworkConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableL4ilbSubsetting")
-      private final @Nullable Output<Boolean> enableL4ilbSubsetting;
+    private @Nullable Output<Boolean> enableL4ilbSubsetting;
 
-    public Output<Boolean> enableL4ilbSubsetting() {
-        return this.enableL4ilbSubsetting == null ? Codegen.empty() : this.enableL4ilbSubsetting;
+    public Optional<Output<Boolean>> enableL4ilbSubsetting() {
+        return Optional.ofNullable(this.enableL4ilbSubsetting);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class NetworkConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="privateIpv6GoogleAccess")
-      private final @Nullable Output<NetworkConfigPrivateIpv6GoogleAccess> privateIpv6GoogleAccess;
+    private @Nullable Output<NetworkConfigPrivateIpv6GoogleAccess> privateIpv6GoogleAccess;
 
-    public Output<NetworkConfigPrivateIpv6GoogleAccess> privateIpv6GoogleAccess() {
-        return this.privateIpv6GoogleAccess == null ? Codegen.empty() : this.privateIpv6GoogleAccess;
+    public Optional<Output<NetworkConfigPrivateIpv6GoogleAccess>> privateIpv6GoogleAccess() {
+        return Optional.ofNullable(this.privateIpv6GoogleAccess);
     }
 
     /**
@@ -95,128 +95,108 @@ public final class NetworkConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceExternalIpsConfig")
-      private final @Nullable Output<ServiceExternalIPsConfigArgs> serviceExternalIpsConfig;
+    private @Nullable Output<ServiceExternalIPsConfigArgs> serviceExternalIpsConfig;
 
-    public Output<ServiceExternalIPsConfigArgs> serviceExternalIpsConfig() {
-        return this.serviceExternalIpsConfig == null ? Codegen.empty() : this.serviceExternalIpsConfig;
+    public Optional<Output<ServiceExternalIPsConfigArgs>> serviceExternalIpsConfig() {
+        return Optional.ofNullable(this.serviceExternalIpsConfig);
     }
 
-    public NetworkConfigArgs(
-        @Nullable Output<NetworkConfigDatapathProvider> datapathProvider,
-        @Nullable Output<DefaultSnatStatusArgs> defaultSnatStatus,
-        @Nullable Output<DNSConfigArgs> dnsConfig,
-        @Nullable Output<Boolean> enableIntraNodeVisibility,
-        @Nullable Output<Boolean> enableL4ilbSubsetting,
-        @Nullable Output<NetworkConfigPrivateIpv6GoogleAccess> privateIpv6GoogleAccess,
-        @Nullable Output<ServiceExternalIPsConfigArgs> serviceExternalIpsConfig) {
-        this.datapathProvider = datapathProvider;
-        this.defaultSnatStatus = defaultSnatStatus;
-        this.dnsConfig = dnsConfig;
-        this.enableIntraNodeVisibility = enableIntraNodeVisibility;
-        this.enableL4ilbSubsetting = enableL4ilbSubsetting;
-        this.privateIpv6GoogleAccess = privateIpv6GoogleAccess;
-        this.serviceExternalIpsConfig = serviceExternalIpsConfig;
-    }
+    private NetworkConfigArgs() {}
 
-    private NetworkConfigArgs() {
-        this.datapathProvider = Codegen.empty();
-        this.defaultSnatStatus = Codegen.empty();
-        this.dnsConfig = Codegen.empty();
-        this.enableIntraNodeVisibility = Codegen.empty();
-        this.enableL4ilbSubsetting = Codegen.empty();
-        this.privateIpv6GoogleAccess = Codegen.empty();
-        this.serviceExternalIpsConfig = Codegen.empty();
+    private NetworkConfigArgs(NetworkConfigArgs $) {
+        this.datapathProvider = $.datapathProvider;
+        this.defaultSnatStatus = $.defaultSnatStatus;
+        this.dnsConfig = $.dnsConfig;
+        this.enableIntraNodeVisibility = $.enableIntraNodeVisibility;
+        this.enableL4ilbSubsetting = $.enableL4ilbSubsetting;
+        this.privateIpv6GoogleAccess = $.privateIpv6GoogleAccess;
+        this.serviceExternalIpsConfig = $.serviceExternalIpsConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<NetworkConfigDatapathProvider> datapathProvider;
-        private @Nullable Output<DefaultSnatStatusArgs> defaultSnatStatus;
-        private @Nullable Output<DNSConfigArgs> dnsConfig;
-        private @Nullable Output<Boolean> enableIntraNodeVisibility;
-        private @Nullable Output<Boolean> enableL4ilbSubsetting;
-        private @Nullable Output<NetworkConfigPrivateIpv6GoogleAccess> privateIpv6GoogleAccess;
-        private @Nullable Output<ServiceExternalIPsConfigArgs> serviceExternalIpsConfig;
+        private NetworkConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkConfigArgs();
         }
 
         public Builder(NetworkConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datapathProvider = defaults.datapathProvider;
-    	      this.defaultSnatStatus = defaults.defaultSnatStatus;
-    	      this.dnsConfig = defaults.dnsConfig;
-    	      this.enableIntraNodeVisibility = defaults.enableIntraNodeVisibility;
-    	      this.enableL4ilbSubsetting = defaults.enableL4ilbSubsetting;
-    	      this.privateIpv6GoogleAccess = defaults.privateIpv6GoogleAccess;
-    	      this.serviceExternalIpsConfig = defaults.serviceExternalIpsConfig;
+            $ = new NetworkConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder datapathProvider(@Nullable Output<NetworkConfigDatapathProvider> datapathProvider) {
-            this.datapathProvider = datapathProvider;
+            $.datapathProvider = datapathProvider;
             return this;
         }
-        public Builder datapathProvider(@Nullable NetworkConfigDatapathProvider datapathProvider) {
-            this.datapathProvider = Codegen.ofNullable(datapathProvider);
-            return this;
+
+        public Builder datapathProvider(NetworkConfigDatapathProvider datapathProvider) {
+            return datapathProvider(Output.of(datapathProvider));
         }
+
         public Builder defaultSnatStatus(@Nullable Output<DefaultSnatStatusArgs> defaultSnatStatus) {
-            this.defaultSnatStatus = defaultSnatStatus;
+            $.defaultSnatStatus = defaultSnatStatus;
             return this;
         }
-        public Builder defaultSnatStatus(@Nullable DefaultSnatStatusArgs defaultSnatStatus) {
-            this.defaultSnatStatus = Codegen.ofNullable(defaultSnatStatus);
-            return this;
+
+        public Builder defaultSnatStatus(DefaultSnatStatusArgs defaultSnatStatus) {
+            return defaultSnatStatus(Output.of(defaultSnatStatus));
         }
+
         public Builder dnsConfig(@Nullable Output<DNSConfigArgs> dnsConfig) {
-            this.dnsConfig = dnsConfig;
+            $.dnsConfig = dnsConfig;
             return this;
         }
-        public Builder dnsConfig(@Nullable DNSConfigArgs dnsConfig) {
-            this.dnsConfig = Codegen.ofNullable(dnsConfig);
-            return this;
+
+        public Builder dnsConfig(DNSConfigArgs dnsConfig) {
+            return dnsConfig(Output.of(dnsConfig));
         }
+
         public Builder enableIntraNodeVisibility(@Nullable Output<Boolean> enableIntraNodeVisibility) {
-            this.enableIntraNodeVisibility = enableIntraNodeVisibility;
+            $.enableIntraNodeVisibility = enableIntraNodeVisibility;
             return this;
         }
-        public Builder enableIntraNodeVisibility(@Nullable Boolean enableIntraNodeVisibility) {
-            this.enableIntraNodeVisibility = Codegen.ofNullable(enableIntraNodeVisibility);
-            return this;
+
+        public Builder enableIntraNodeVisibility(Boolean enableIntraNodeVisibility) {
+            return enableIntraNodeVisibility(Output.of(enableIntraNodeVisibility));
         }
+
         public Builder enableL4ilbSubsetting(@Nullable Output<Boolean> enableL4ilbSubsetting) {
-            this.enableL4ilbSubsetting = enableL4ilbSubsetting;
+            $.enableL4ilbSubsetting = enableL4ilbSubsetting;
             return this;
         }
-        public Builder enableL4ilbSubsetting(@Nullable Boolean enableL4ilbSubsetting) {
-            this.enableL4ilbSubsetting = Codegen.ofNullable(enableL4ilbSubsetting);
-            return this;
+
+        public Builder enableL4ilbSubsetting(Boolean enableL4ilbSubsetting) {
+            return enableL4ilbSubsetting(Output.of(enableL4ilbSubsetting));
         }
+
         public Builder privateIpv6GoogleAccess(@Nullable Output<NetworkConfigPrivateIpv6GoogleAccess> privateIpv6GoogleAccess) {
-            this.privateIpv6GoogleAccess = privateIpv6GoogleAccess;
+            $.privateIpv6GoogleAccess = privateIpv6GoogleAccess;
             return this;
         }
-        public Builder privateIpv6GoogleAccess(@Nullable NetworkConfigPrivateIpv6GoogleAccess privateIpv6GoogleAccess) {
-            this.privateIpv6GoogleAccess = Codegen.ofNullable(privateIpv6GoogleAccess);
-            return this;
+
+        public Builder privateIpv6GoogleAccess(NetworkConfigPrivateIpv6GoogleAccess privateIpv6GoogleAccess) {
+            return privateIpv6GoogleAccess(Output.of(privateIpv6GoogleAccess));
         }
+
         public Builder serviceExternalIpsConfig(@Nullable Output<ServiceExternalIPsConfigArgs> serviceExternalIpsConfig) {
-            this.serviceExternalIpsConfig = serviceExternalIpsConfig;
+            $.serviceExternalIpsConfig = serviceExternalIpsConfig;
             return this;
         }
-        public Builder serviceExternalIpsConfig(@Nullable ServiceExternalIPsConfigArgs serviceExternalIpsConfig) {
-            this.serviceExternalIpsConfig = Codegen.ofNullable(serviceExternalIpsConfig);
-            return this;
-        }        public NetworkConfigArgs build() {
-            return new NetworkConfigArgs(datapathProvider, defaultSnatStatus, dnsConfig, enableIntraNodeVisibility, enableL4ilbSubsetting, privateIpv6GoogleAccess, serviceExternalIpsConfig);
+
+        public Builder serviceExternalIpsConfig(ServiceExternalIPsConfigArgs serviceExternalIpsConfig) {
+            return serviceExternalIpsConfig(Output.of(serviceExternalIpsConfig));
+        }
+
+        public NetworkConfigArgs build() {
+            return $;
         }
     }
+
 }

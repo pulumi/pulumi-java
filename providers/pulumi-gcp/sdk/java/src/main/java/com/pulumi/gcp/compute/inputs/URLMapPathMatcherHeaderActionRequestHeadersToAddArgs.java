@@ -5,7 +5,6 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +19,7 @@ public final class URLMapPathMatcherHeaderActionRequestHeadersToAddArgs extends 
      * 
      */
     @Import(name="headerName", required=true)
-      private final Output<String> headerName;
+    private Output<String> headerName;
 
     public Output<String> headerName() {
         return this.headerName;
@@ -31,7 +30,7 @@ public final class URLMapPathMatcherHeaderActionRequestHeadersToAddArgs extends 
      * 
      */
     @Import(name="headerValue", required=true)
-      private final Output<String> headerValue;
+    private Output<String> headerValue;
 
     public Output<String> headerValue() {
         return this.headerValue;
@@ -43,76 +42,71 @@ public final class URLMapPathMatcherHeaderActionRequestHeadersToAddArgs extends 
      * 
      */
     @Import(name="replace", required=true)
-      private final Output<Boolean> replace;
+    private Output<Boolean> replace;
 
     public Output<Boolean> replace() {
         return this.replace;
     }
 
-    public URLMapPathMatcherHeaderActionRequestHeadersToAddArgs(
-        Output<String> headerName,
-        Output<String> headerValue,
-        Output<Boolean> replace) {
-        this.headerName = Objects.requireNonNull(headerName, "expected parameter 'headerName' to be non-null");
-        this.headerValue = Objects.requireNonNull(headerValue, "expected parameter 'headerValue' to be non-null");
-        this.replace = Objects.requireNonNull(replace, "expected parameter 'replace' to be non-null");
-    }
+    private URLMapPathMatcherHeaderActionRequestHeadersToAddArgs() {}
 
-    private URLMapPathMatcherHeaderActionRequestHeadersToAddArgs() {
-        this.headerName = Codegen.empty();
-        this.headerValue = Codegen.empty();
-        this.replace = Codegen.empty();
+    private URLMapPathMatcherHeaderActionRequestHeadersToAddArgs(URLMapPathMatcherHeaderActionRequestHeadersToAddArgs $) {
+        this.headerName = $.headerName;
+        this.headerValue = $.headerValue;
+        this.replace = $.replace;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(URLMapPathMatcherHeaderActionRequestHeadersToAddArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> headerName;
-        private Output<String> headerValue;
-        private Output<Boolean> replace;
+        private URLMapPathMatcherHeaderActionRequestHeadersToAddArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new URLMapPathMatcherHeaderActionRequestHeadersToAddArgs();
         }
 
         public Builder(URLMapPathMatcherHeaderActionRequestHeadersToAddArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.headerName = defaults.headerName;
-    	      this.headerValue = defaults.headerValue;
-    	      this.replace = defaults.replace;
+            $ = new URLMapPathMatcherHeaderActionRequestHeadersToAddArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder headerName(Output<String> headerName) {
-            this.headerName = Objects.requireNonNull(headerName);
+            $.headerName = headerName;
             return this;
         }
+
         public Builder headerName(String headerName) {
-            this.headerName = Output.of(Objects.requireNonNull(headerName));
-            return this;
+            return headerName(Output.of(headerName));
         }
+
         public Builder headerValue(Output<String> headerValue) {
-            this.headerValue = Objects.requireNonNull(headerValue);
+            $.headerValue = headerValue;
             return this;
         }
+
         public Builder headerValue(String headerValue) {
-            this.headerValue = Output.of(Objects.requireNonNull(headerValue));
-            return this;
+            return headerValue(Output.of(headerValue));
         }
+
         public Builder replace(Output<Boolean> replace) {
-            this.replace = Objects.requireNonNull(replace);
+            $.replace = replace;
             return this;
         }
+
         public Builder replace(Boolean replace) {
-            this.replace = Output.of(Objects.requireNonNull(replace));
-            return this;
-        }        public URLMapPathMatcherHeaderActionRequestHeadersToAddArgs build() {
-            return new URLMapPathMatcherHeaderActionRequestHeadersToAddArgs(headerName, headerValue, replace);
+            return replace(Output.of(replace));
+        }
+
+        public URLMapPathMatcherHeaderActionRequestHeadersToAddArgs build() {
+            $.headerName = Objects.requireNonNull($.headerName, "expected parameter 'headerName' to be non-null");
+            $.headerValue = Objects.requireNonNull($.headerValue, "expected parameter 'headerValue' to be non-null");
+            $.replace = Objects.requireNonNull($.replace, "expected parameter 'replace' to be non-null");
+            return $;
         }
     }
+
 }

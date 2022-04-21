@@ -5,10 +5,10 @@ package com.pulumi.aws.fsx.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +17,10 @@ public final class OntapVolumeTieringPolicyGetArgs extends com.pulumi.resources.
     public static final OntapVolumeTieringPolicyGetArgs Empty = new OntapVolumeTieringPolicyGetArgs();
 
     @Import(name="coolingPeriod")
-      private final @Nullable Output<Integer> coolingPeriod;
+    private @Nullable Output<Integer> coolingPeriod;
 
-    public Output<Integer> coolingPeriod() {
-        return this.coolingPeriod == null ? Codegen.empty() : this.coolingPeriod;
+    public Optional<Output<Integer>> coolingPeriod() {
+        return Optional.ofNullable(this.coolingPeriod);
     }
 
     /**
@@ -28,63 +28,58 @@ public final class OntapVolumeTieringPolicyGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public OntapVolumeTieringPolicyGetArgs(
-        @Nullable Output<Integer> coolingPeriod,
-        @Nullable Output<String> name) {
-        this.coolingPeriod = coolingPeriod;
-        this.name = name;
-    }
+    private OntapVolumeTieringPolicyGetArgs() {}
 
-    private OntapVolumeTieringPolicyGetArgs() {
-        this.coolingPeriod = Codegen.empty();
-        this.name = Codegen.empty();
+    private OntapVolumeTieringPolicyGetArgs(OntapVolumeTieringPolicyGetArgs $) {
+        this.coolingPeriod = $.coolingPeriod;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OntapVolumeTieringPolicyGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> coolingPeriod;
-        private @Nullable Output<String> name;
+        private OntapVolumeTieringPolicyGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OntapVolumeTieringPolicyGetArgs();
         }
 
         public Builder(OntapVolumeTieringPolicyGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.coolingPeriod = defaults.coolingPeriod;
-    	      this.name = defaults.name;
+            $ = new OntapVolumeTieringPolicyGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder coolingPeriod(@Nullable Output<Integer> coolingPeriod) {
-            this.coolingPeriod = coolingPeriod;
+            $.coolingPeriod = coolingPeriod;
             return this;
         }
-        public Builder coolingPeriod(@Nullable Integer coolingPeriod) {
-            this.coolingPeriod = Codegen.ofNullable(coolingPeriod);
-            return this;
+
+        public Builder coolingPeriod(Integer coolingPeriod) {
+            return coolingPeriod(Output.of(coolingPeriod));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public OntapVolumeTieringPolicyGetArgs build() {
-            return new OntapVolumeTieringPolicyGetArgs(coolingPeriod, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public OntapVolumeTieringPolicyGetArgs build() {
+            return $;
         }
     }
+
 }

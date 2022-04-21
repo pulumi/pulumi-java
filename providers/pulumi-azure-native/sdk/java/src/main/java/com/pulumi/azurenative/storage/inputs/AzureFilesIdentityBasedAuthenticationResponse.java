@@ -24,10 +24,10 @@ public final class AzureFilesIdentityBasedAuthenticationResponse extends com.pul
      * 
      */
     @Import(name="activeDirectoryProperties")
-      private final @Nullable ActiveDirectoryPropertiesResponse activeDirectoryProperties;
+    private @Nullable ActiveDirectoryPropertiesResponse activeDirectoryProperties;
 
     public Optional<ActiveDirectoryPropertiesResponse> activeDirectoryProperties() {
-        return this.activeDirectoryProperties == null ? Optional.empty() : Optional.ofNullable(this.activeDirectoryProperties);
+        return Optional.ofNullable(this.activeDirectoryProperties);
     }
 
     /**
@@ -35,55 +35,51 @@ public final class AzureFilesIdentityBasedAuthenticationResponse extends com.pul
      * 
      */
     @Import(name="directoryServiceOptions", required=true)
-      private final String directoryServiceOptions;
+    private String directoryServiceOptions;
 
     public String directoryServiceOptions() {
         return this.directoryServiceOptions;
     }
 
-    public AzureFilesIdentityBasedAuthenticationResponse(
-        @Nullable ActiveDirectoryPropertiesResponse activeDirectoryProperties,
-        String directoryServiceOptions) {
-        this.activeDirectoryProperties = activeDirectoryProperties;
-        this.directoryServiceOptions = Objects.requireNonNull(directoryServiceOptions, "expected parameter 'directoryServiceOptions' to be non-null");
-    }
+    private AzureFilesIdentityBasedAuthenticationResponse() {}
 
-    private AzureFilesIdentityBasedAuthenticationResponse() {
-        this.activeDirectoryProperties = null;
-        this.directoryServiceOptions = null;
+    private AzureFilesIdentityBasedAuthenticationResponse(AzureFilesIdentityBasedAuthenticationResponse $) {
+        this.activeDirectoryProperties = $.activeDirectoryProperties;
+        this.directoryServiceOptions = $.directoryServiceOptions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureFilesIdentityBasedAuthenticationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ActiveDirectoryPropertiesResponse activeDirectoryProperties;
-        private String directoryServiceOptions;
+        private AzureFilesIdentityBasedAuthenticationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureFilesIdentityBasedAuthenticationResponse();
         }
 
         public Builder(AzureFilesIdentityBasedAuthenticationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.activeDirectoryProperties = defaults.activeDirectoryProperties;
-    	      this.directoryServiceOptions = defaults.directoryServiceOptions;
+            $ = new AzureFilesIdentityBasedAuthenticationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder activeDirectoryProperties(@Nullable ActiveDirectoryPropertiesResponse activeDirectoryProperties) {
-            this.activeDirectoryProperties = activeDirectoryProperties;
+            $.activeDirectoryProperties = activeDirectoryProperties;
             return this;
         }
+
         public Builder directoryServiceOptions(String directoryServiceOptions) {
-            this.directoryServiceOptions = Objects.requireNonNull(directoryServiceOptions);
+            $.directoryServiceOptions = directoryServiceOptions;
             return this;
-        }        public AzureFilesIdentityBasedAuthenticationResponse build() {
-            return new AzureFilesIdentityBasedAuthenticationResponse(activeDirectoryProperties, directoryServiceOptions);
+        }
+
+        public AzureFilesIdentityBasedAuthenticationResponse build() {
+            $.directoryServiceOptions = Objects.requireNonNull($.directoryServiceOptions, "expected parameter 'directoryServiceOptions' to be non-null");
+            return $;
         }
     }
+
 }

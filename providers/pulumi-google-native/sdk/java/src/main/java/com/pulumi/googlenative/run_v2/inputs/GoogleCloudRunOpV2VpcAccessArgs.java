@@ -5,10 +5,10 @@ package com.pulumi.googlenative.run_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.run_v2.enums.GoogleCloudRunOpV2VpcAccessEgress;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GoogleCloudRunOpV2VpcAccessArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="connector")
-      private final @Nullable Output<String> connector;
+    private @Nullable Output<String> connector;
 
-    public Output<String> connector() {
-        return this.connector == null ? Codegen.empty() : this.connector;
+    public Optional<Output<String>> connector() {
+        return Optional.ofNullable(this.connector);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class GoogleCloudRunOpV2VpcAccessArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="egress")
-      private final @Nullable Output<GoogleCloudRunOpV2VpcAccessEgress> egress;
+    private @Nullable Output<GoogleCloudRunOpV2VpcAccessEgress> egress;
 
-    public Output<GoogleCloudRunOpV2VpcAccessEgress> egress() {
-        return this.egress == null ? Codegen.empty() : this.egress;
+    public Optional<Output<GoogleCloudRunOpV2VpcAccessEgress>> egress() {
+        return Optional.ofNullable(this.egress);
     }
 
-    public GoogleCloudRunOpV2VpcAccessArgs(
-        @Nullable Output<String> connector,
-        @Nullable Output<GoogleCloudRunOpV2VpcAccessEgress> egress) {
-        this.connector = connector;
-        this.egress = egress;
-    }
+    private GoogleCloudRunOpV2VpcAccessArgs() {}
 
-    private GoogleCloudRunOpV2VpcAccessArgs() {
-        this.connector = Codegen.empty();
-        this.egress = Codegen.empty();
+    private GoogleCloudRunOpV2VpcAccessArgs(GoogleCloudRunOpV2VpcAccessArgs $) {
+        this.connector = $.connector;
+        this.egress = $.egress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRunOpV2VpcAccessArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> connector;
-        private @Nullable Output<GoogleCloudRunOpV2VpcAccessEgress> egress;
+        private GoogleCloudRunOpV2VpcAccessArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRunOpV2VpcAccessArgs();
         }
 
         public Builder(GoogleCloudRunOpV2VpcAccessArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connector = defaults.connector;
-    	      this.egress = defaults.egress;
+            $ = new GoogleCloudRunOpV2VpcAccessArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connector(@Nullable Output<String> connector) {
-            this.connector = connector;
+            $.connector = connector;
             return this;
         }
-        public Builder connector(@Nullable String connector) {
-            this.connector = Codegen.ofNullable(connector);
-            return this;
+
+        public Builder connector(String connector) {
+            return connector(Output.of(connector));
         }
+
         public Builder egress(@Nullable Output<GoogleCloudRunOpV2VpcAccessEgress> egress) {
-            this.egress = egress;
+            $.egress = egress;
             return this;
         }
-        public Builder egress(@Nullable GoogleCloudRunOpV2VpcAccessEgress egress) {
-            this.egress = Codegen.ofNullable(egress);
-            return this;
-        }        public GoogleCloudRunOpV2VpcAccessArgs build() {
-            return new GoogleCloudRunOpV2VpcAccessArgs(connector, egress);
+
+        public Builder egress(GoogleCloudRunOpV2VpcAccessEgress egress) {
+            return egress(Output.of(egress));
+        }
+
+        public GoogleCloudRunOpV2VpcAccessArgs build() {
+            return $;
         }
     }
+
 }

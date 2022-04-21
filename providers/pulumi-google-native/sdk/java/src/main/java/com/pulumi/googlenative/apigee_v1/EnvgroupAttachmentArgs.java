@@ -5,9 +5,9 @@ package com.pulumi.googlenative.apigee_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,7 +16,7 @@ public final class EnvgroupAttachmentArgs extends com.pulumi.resources.ResourceA
     public static final EnvgroupAttachmentArgs Empty = new EnvgroupAttachmentArgs();
 
     @Import(name="envgroupId", required=true)
-      private final Output<String> envgroupId;
+    private Output<String> envgroupId;
 
     public Output<String> envgroupId() {
         return this.envgroupId;
@@ -27,7 +27,7 @@ public final class EnvgroupAttachmentArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="environment", required=true)
-      private final Output<String> environment;
+    private Output<String> environment;
 
     public Output<String> environment() {
         return this.environment;
@@ -38,96 +38,88 @@ public final class EnvgroupAttachmentArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="organizationId", required=true)
-      private final Output<String> organizationId;
+    private Output<String> organizationId;
 
     public Output<String> organizationId() {
         return this.organizationId;
     }
 
-    public EnvgroupAttachmentArgs(
-        Output<String> envgroupId,
-        Output<String> environment,
-        @Nullable Output<String> name,
-        Output<String> organizationId) {
-        this.envgroupId = Objects.requireNonNull(envgroupId, "expected parameter 'envgroupId' to be non-null");
-        this.environment = Objects.requireNonNull(environment, "expected parameter 'environment' to be non-null");
-        this.name = name;
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-    }
+    private EnvgroupAttachmentArgs() {}
 
-    private EnvgroupAttachmentArgs() {
-        this.envgroupId = Codegen.empty();
-        this.environment = Codegen.empty();
-        this.name = Codegen.empty();
-        this.organizationId = Codegen.empty();
+    private EnvgroupAttachmentArgs(EnvgroupAttachmentArgs $) {
+        this.envgroupId = $.envgroupId;
+        this.environment = $.environment;
+        this.name = $.name;
+        this.organizationId = $.organizationId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvgroupAttachmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> envgroupId;
-        private Output<String> environment;
-        private @Nullable Output<String> name;
-        private Output<String> organizationId;
+        private EnvgroupAttachmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvgroupAttachmentArgs();
         }
 
         public Builder(EnvgroupAttachmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.envgroupId = defaults.envgroupId;
-    	      this.environment = defaults.environment;
-    	      this.name = defaults.name;
-    	      this.organizationId = defaults.organizationId;
+            $ = new EnvgroupAttachmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder envgroupId(Output<String> envgroupId) {
-            this.envgroupId = Objects.requireNonNull(envgroupId);
+            $.envgroupId = envgroupId;
             return this;
         }
+
         public Builder envgroupId(String envgroupId) {
-            this.envgroupId = Output.of(Objects.requireNonNull(envgroupId));
-            return this;
+            return envgroupId(Output.of(envgroupId));
         }
+
         public Builder environment(Output<String> environment) {
-            this.environment = Objects.requireNonNull(environment);
+            $.environment = environment;
             return this;
         }
+
         public Builder environment(String environment) {
-            this.environment = Output.of(Objects.requireNonNull(environment));
-            return this;
+            return environment(Output.of(environment));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder organizationId(Output<String> organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
         }
+
         public Builder organizationId(String organizationId) {
-            this.organizationId = Output.of(Objects.requireNonNull(organizationId));
-            return this;
-        }        public EnvgroupAttachmentArgs build() {
-            return new EnvgroupAttachmentArgs(envgroupId, environment, name, organizationId);
+            return organizationId(Output.of(organizationId));
+        }
+
+        public EnvgroupAttachmentArgs build() {
+            $.envgroupId = Objects.requireNonNull($.envgroupId, "expected parameter 'envgroupId' to be non-null");
+            $.environment = Objects.requireNonNull($.environment, "expected parameter 'environment' to be non-null");
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            return $;
         }
     }
+
 }

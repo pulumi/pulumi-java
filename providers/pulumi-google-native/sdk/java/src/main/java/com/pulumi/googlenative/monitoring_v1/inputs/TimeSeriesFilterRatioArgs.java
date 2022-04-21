@@ -5,11 +5,11 @@ package com.pulumi.googlenative.monitoring_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.monitoring_v1.inputs.AggregationArgs;
 import com.pulumi.googlenative.monitoring_v1.inputs.PickTimeSeriesFilterArgs;
 import com.pulumi.googlenative.monitoring_v1.inputs.RatioPartArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class TimeSeriesFilterRatioArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="denominator")
-      private final @Nullable Output<RatioPartArgs> denominator;
+    private @Nullable Output<RatioPartArgs> denominator;
 
-    public Output<RatioPartArgs> denominator() {
-        return this.denominator == null ? Codegen.empty() : this.denominator;
+    public Optional<Output<RatioPartArgs>> denominator() {
+        return Optional.ofNullable(this.denominator);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class TimeSeriesFilterRatioArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="numerator")
-      private final @Nullable Output<RatioPartArgs> numerator;
+    private @Nullable Output<RatioPartArgs> numerator;
 
-    public Output<RatioPartArgs> numerator() {
-        return this.numerator == null ? Codegen.empty() : this.numerator;
+    public Optional<Output<RatioPartArgs>> numerator() {
+        return Optional.ofNullable(this.numerator);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class TimeSeriesFilterRatioArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="pickTimeSeriesFilter")
-      private final @Nullable Output<PickTimeSeriesFilterArgs> pickTimeSeriesFilter;
+    private @Nullable Output<PickTimeSeriesFilterArgs> pickTimeSeriesFilter;
 
-    public Output<PickTimeSeriesFilterArgs> pickTimeSeriesFilter() {
-        return this.pickTimeSeriesFilter == null ? Codegen.empty() : this.pickTimeSeriesFilter;
+    public Optional<Output<PickTimeSeriesFilterArgs>> pickTimeSeriesFilter() {
+        return Optional.ofNullable(this.pickTimeSeriesFilter);
     }
 
     /**
@@ -59,89 +59,78 @@ public final class TimeSeriesFilterRatioArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="secondaryAggregation")
-      private final @Nullable Output<AggregationArgs> secondaryAggregation;
+    private @Nullable Output<AggregationArgs> secondaryAggregation;
 
-    public Output<AggregationArgs> secondaryAggregation() {
-        return this.secondaryAggregation == null ? Codegen.empty() : this.secondaryAggregation;
+    public Optional<Output<AggregationArgs>> secondaryAggregation() {
+        return Optional.ofNullable(this.secondaryAggregation);
     }
 
-    public TimeSeriesFilterRatioArgs(
-        @Nullable Output<RatioPartArgs> denominator,
-        @Nullable Output<RatioPartArgs> numerator,
-        @Nullable Output<PickTimeSeriesFilterArgs> pickTimeSeriesFilter,
-        @Nullable Output<AggregationArgs> secondaryAggregation) {
-        this.denominator = denominator;
-        this.numerator = numerator;
-        this.pickTimeSeriesFilter = pickTimeSeriesFilter;
-        this.secondaryAggregation = secondaryAggregation;
-    }
+    private TimeSeriesFilterRatioArgs() {}
 
-    private TimeSeriesFilterRatioArgs() {
-        this.denominator = Codegen.empty();
-        this.numerator = Codegen.empty();
-        this.pickTimeSeriesFilter = Codegen.empty();
-        this.secondaryAggregation = Codegen.empty();
+    private TimeSeriesFilterRatioArgs(TimeSeriesFilterRatioArgs $) {
+        this.denominator = $.denominator;
+        this.numerator = $.numerator;
+        this.pickTimeSeriesFilter = $.pickTimeSeriesFilter;
+        this.secondaryAggregation = $.secondaryAggregation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TimeSeriesFilterRatioArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<RatioPartArgs> denominator;
-        private @Nullable Output<RatioPartArgs> numerator;
-        private @Nullable Output<PickTimeSeriesFilterArgs> pickTimeSeriesFilter;
-        private @Nullable Output<AggregationArgs> secondaryAggregation;
+        private TimeSeriesFilterRatioArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TimeSeriesFilterRatioArgs();
         }
 
         public Builder(TimeSeriesFilterRatioArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.denominator = defaults.denominator;
-    	      this.numerator = defaults.numerator;
-    	      this.pickTimeSeriesFilter = defaults.pickTimeSeriesFilter;
-    	      this.secondaryAggregation = defaults.secondaryAggregation;
+            $ = new TimeSeriesFilterRatioArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder denominator(@Nullable Output<RatioPartArgs> denominator) {
-            this.denominator = denominator;
+            $.denominator = denominator;
             return this;
         }
-        public Builder denominator(@Nullable RatioPartArgs denominator) {
-            this.denominator = Codegen.ofNullable(denominator);
-            return this;
+
+        public Builder denominator(RatioPartArgs denominator) {
+            return denominator(Output.of(denominator));
         }
+
         public Builder numerator(@Nullable Output<RatioPartArgs> numerator) {
-            this.numerator = numerator;
+            $.numerator = numerator;
             return this;
         }
-        public Builder numerator(@Nullable RatioPartArgs numerator) {
-            this.numerator = Codegen.ofNullable(numerator);
-            return this;
+
+        public Builder numerator(RatioPartArgs numerator) {
+            return numerator(Output.of(numerator));
         }
+
         public Builder pickTimeSeriesFilter(@Nullable Output<PickTimeSeriesFilterArgs> pickTimeSeriesFilter) {
-            this.pickTimeSeriesFilter = pickTimeSeriesFilter;
+            $.pickTimeSeriesFilter = pickTimeSeriesFilter;
             return this;
         }
-        public Builder pickTimeSeriesFilter(@Nullable PickTimeSeriesFilterArgs pickTimeSeriesFilter) {
-            this.pickTimeSeriesFilter = Codegen.ofNullable(pickTimeSeriesFilter);
-            return this;
+
+        public Builder pickTimeSeriesFilter(PickTimeSeriesFilterArgs pickTimeSeriesFilter) {
+            return pickTimeSeriesFilter(Output.of(pickTimeSeriesFilter));
         }
+
         public Builder secondaryAggregation(@Nullable Output<AggregationArgs> secondaryAggregation) {
-            this.secondaryAggregation = secondaryAggregation;
+            $.secondaryAggregation = secondaryAggregation;
             return this;
         }
-        public Builder secondaryAggregation(@Nullable AggregationArgs secondaryAggregation) {
-            this.secondaryAggregation = Codegen.ofNullable(secondaryAggregation);
-            return this;
-        }        public TimeSeriesFilterRatioArgs build() {
-            return new TimeSeriesFilterRatioArgs(denominator, numerator, pickTimeSeriesFilter, secondaryAggregation);
+
+        public Builder secondaryAggregation(AggregationArgs secondaryAggregation) {
+            return secondaryAggregation(Output.of(secondaryAggregation));
+        }
+
+        public TimeSeriesFilterRatioArgs build() {
+            return $;
         }
     }
+
 }

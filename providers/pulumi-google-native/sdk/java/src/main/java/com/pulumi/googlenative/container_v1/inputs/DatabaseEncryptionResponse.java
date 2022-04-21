@@ -21,7 +21,7 @@ public final class DatabaseEncryptionResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="keyName", required=true)
-      private final String keyName;
+    private String keyName;
 
     public String keyName() {
         return this.keyName;
@@ -32,55 +32,52 @@ public final class DatabaseEncryptionResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
     }
 
-    public DatabaseEncryptionResponse(
-        String keyName,
-        String state) {
-        this.keyName = Objects.requireNonNull(keyName, "expected parameter 'keyName' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-    }
+    private DatabaseEncryptionResponse() {}
 
-    private DatabaseEncryptionResponse() {
-        this.keyName = null;
-        this.state = null;
+    private DatabaseEncryptionResponse(DatabaseEncryptionResponse $) {
+        this.keyName = $.keyName;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatabaseEncryptionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String keyName;
-        private String state;
+        private DatabaseEncryptionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatabaseEncryptionResponse();
         }
 
         public Builder(DatabaseEncryptionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyName = defaults.keyName;
-    	      this.state = defaults.state;
+            $ = new DatabaseEncryptionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder keyName(String keyName) {
-            this.keyName = Objects.requireNonNull(keyName);
+            $.keyName = keyName;
             return this;
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
-        }        public DatabaseEncryptionResponse build() {
-            return new DatabaseEncryptionResponse(keyName, state);
+        }
+
+        public DatabaseEncryptionResponse build() {
+            $.keyName = Objects.requireNonNull($.keyName, "expected parameter 'keyName' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            return $;
         }
     }
+
 }

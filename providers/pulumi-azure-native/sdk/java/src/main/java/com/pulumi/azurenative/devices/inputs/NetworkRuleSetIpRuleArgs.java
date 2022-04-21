@@ -10,6 +10,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +27,10 @@ public final class NetworkRuleSetIpRuleArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="action")
-      private final @Nullable Output<Either<String,NetworkRuleIPAction>> action;
+    private @Nullable Output<Either<String,NetworkRuleIPAction>> action;
 
-    public Output<Either<String,NetworkRuleIPAction>> action() {
-        return this.action == null ? Codegen.empty() : this.action;
+    public Optional<Output<Either<String,NetworkRuleIPAction>>> action() {
+        return Optional.ofNullable(this.action);
     }
 
     /**
@@ -37,7 +38,7 @@ public final class NetworkRuleSetIpRuleArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="filterName", required=true)
-      private final Output<String> filterName;
+    private Output<String> filterName;
 
     public Output<String> filterName() {
         return this.filterName;
@@ -48,76 +49,71 @@ public final class NetworkRuleSetIpRuleArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="ipMask", required=true)
-      private final Output<String> ipMask;
+    private Output<String> ipMask;
 
     public Output<String> ipMask() {
         return this.ipMask;
     }
 
-    public NetworkRuleSetIpRuleArgs(
-        @Nullable Output<Either<String,NetworkRuleIPAction>> action,
-        Output<String> filterName,
-        Output<String> ipMask) {
-        this.action = Codegen.stringProp("action").left(NetworkRuleIPAction.class).output().arg(action).def("Allow").getNullable();
-        this.filterName = Objects.requireNonNull(filterName, "expected parameter 'filterName' to be non-null");
-        this.ipMask = Objects.requireNonNull(ipMask, "expected parameter 'ipMask' to be non-null");
-    }
+    private NetworkRuleSetIpRuleArgs() {}
 
-    private NetworkRuleSetIpRuleArgs() {
-        this.action = Codegen.empty();
-        this.filterName = Codegen.empty();
-        this.ipMask = Codegen.empty();
+    private NetworkRuleSetIpRuleArgs(NetworkRuleSetIpRuleArgs $) {
+        this.action = $.action;
+        this.filterName = $.filterName;
+        this.ipMask = $.ipMask;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkRuleSetIpRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,NetworkRuleIPAction>> action;
-        private Output<String> filterName;
-        private Output<String> ipMask;
+        private NetworkRuleSetIpRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkRuleSetIpRuleArgs();
         }
 
         public Builder(NetworkRuleSetIpRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.filterName = defaults.filterName;
-    	      this.ipMask = defaults.ipMask;
+            $ = new NetworkRuleSetIpRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(@Nullable Output<Either<String,NetworkRuleIPAction>> action) {
-            this.action = action;
+            $.action = action;
             return this;
         }
-        public Builder action(@Nullable Either<String,NetworkRuleIPAction> action) {
-            this.action = Codegen.ofNullable(action);
-            return this;
+
+        public Builder action(Either<String,NetworkRuleIPAction> action) {
+            return action(Output.of(action));
         }
+
         public Builder filterName(Output<String> filterName) {
-            this.filterName = Objects.requireNonNull(filterName);
+            $.filterName = filterName;
             return this;
         }
+
         public Builder filterName(String filterName) {
-            this.filterName = Output.of(Objects.requireNonNull(filterName));
-            return this;
+            return filterName(Output.of(filterName));
         }
+
         public Builder ipMask(Output<String> ipMask) {
-            this.ipMask = Objects.requireNonNull(ipMask);
+            $.ipMask = ipMask;
             return this;
         }
+
         public Builder ipMask(String ipMask) {
-            this.ipMask = Output.of(Objects.requireNonNull(ipMask));
-            return this;
-        }        public NetworkRuleSetIpRuleArgs build() {
-            return new NetworkRuleSetIpRuleArgs(action, filterName, ipMask);
+            return ipMask(Output.of(ipMask));
+        }
+
+        public NetworkRuleSetIpRuleArgs build() {
+            $.action = Codegen.stringProp("action").left(NetworkRuleIPAction.class).output().arg($.action).def("Allow").getNullable();
+            $.filterName = Objects.requireNonNull($.filterName, "expected parameter 'filterName' to be non-null");
+            $.ipMask = Objects.requireNonNull($.ipMask, "expected parameter 'ipMask' to be non-null");
+            return $;
         }
     }
+
 }

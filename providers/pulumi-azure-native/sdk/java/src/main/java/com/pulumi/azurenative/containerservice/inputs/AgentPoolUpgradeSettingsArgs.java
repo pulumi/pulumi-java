@@ -5,9 +5,9 @@ package com.pulumi.azurenative.containerservice.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class AgentPoolUpgradeSettingsArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="maxSurge")
-      private final @Nullable Output<String> maxSurge;
+    private @Nullable Output<String> maxSurge;
 
-    public Output<String> maxSurge() {
-        return this.maxSurge == null ? Codegen.empty() : this.maxSurge;
+    public Optional<Output<String>> maxSurge() {
+        return Optional.ofNullable(this.maxSurge);
     }
 
-    public AgentPoolUpgradeSettingsArgs(@Nullable Output<String> maxSurge) {
-        this.maxSurge = maxSurge;
-    }
+    private AgentPoolUpgradeSettingsArgs() {}
 
-    private AgentPoolUpgradeSettingsArgs() {
-        this.maxSurge = Codegen.empty();
+    private AgentPoolUpgradeSettingsArgs(AgentPoolUpgradeSettingsArgs $) {
+        this.maxSurge = $.maxSurge;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AgentPoolUpgradeSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> maxSurge;
+        private AgentPoolUpgradeSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AgentPoolUpgradeSettingsArgs();
         }
 
         public Builder(AgentPoolUpgradeSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxSurge = defaults.maxSurge;
+            $ = new AgentPoolUpgradeSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxSurge(@Nullable Output<String> maxSurge) {
-            this.maxSurge = maxSurge;
+            $.maxSurge = maxSurge;
             return this;
         }
-        public Builder maxSurge(@Nullable String maxSurge) {
-            this.maxSurge = Codegen.ofNullable(maxSurge);
-            return this;
-        }        public AgentPoolUpgradeSettingsArgs build() {
-            return new AgentPoolUpgradeSettingsArgs(maxSurge);
+
+        public Builder maxSurge(String maxSurge) {
+            return maxSurge(Output.of(maxSurge));
+        }
+
+        public AgentPoolUpgradeSettingsArgs build() {
+            return $;
         }
     }
+
 }

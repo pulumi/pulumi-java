@@ -17,7 +17,7 @@ public final class GetApplicationGatewayPrivateEndpointConnectionArgs extends co
      * 
      */
     @Import(name="applicationGatewayName", required=true)
-      private final String applicationGatewayName;
+    private String applicationGatewayName;
 
     public String applicationGatewayName() {
         return this.applicationGatewayName;
@@ -28,7 +28,7 @@ public final class GetApplicationGatewayPrivateEndpointConnectionArgs extends co
      * 
      */
     @Import(name="connectionName", required=true)
-      private final String connectionName;
+    private String connectionName;
 
     public String connectionName() {
         return this.connectionName;
@@ -39,64 +39,59 @@ public final class GetApplicationGatewayPrivateEndpointConnectionArgs extends co
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetApplicationGatewayPrivateEndpointConnectionArgs(
-        String applicationGatewayName,
-        String connectionName,
-        String resourceGroupName) {
-        this.applicationGatewayName = Objects.requireNonNull(applicationGatewayName, "expected parameter 'applicationGatewayName' to be non-null");
-        this.connectionName = Objects.requireNonNull(connectionName, "expected parameter 'connectionName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetApplicationGatewayPrivateEndpointConnectionArgs() {}
 
-    private GetApplicationGatewayPrivateEndpointConnectionArgs() {
-        this.applicationGatewayName = null;
-        this.connectionName = null;
-        this.resourceGroupName = null;
+    private GetApplicationGatewayPrivateEndpointConnectionArgs(GetApplicationGatewayPrivateEndpointConnectionArgs $) {
+        this.applicationGatewayName = $.applicationGatewayName;
+        this.connectionName = $.connectionName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetApplicationGatewayPrivateEndpointConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String applicationGatewayName;
-        private String connectionName;
-        private String resourceGroupName;
+        private GetApplicationGatewayPrivateEndpointConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetApplicationGatewayPrivateEndpointConnectionArgs();
         }
 
         public Builder(GetApplicationGatewayPrivateEndpointConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationGatewayName = defaults.applicationGatewayName;
-    	      this.connectionName = defaults.connectionName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetApplicationGatewayPrivateEndpointConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationGatewayName(String applicationGatewayName) {
-            this.applicationGatewayName = Objects.requireNonNull(applicationGatewayName);
+            $.applicationGatewayName = applicationGatewayName;
             return this;
         }
+
         public Builder connectionName(String connectionName) {
-            this.connectionName = Objects.requireNonNull(connectionName);
+            $.connectionName = connectionName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetApplicationGatewayPrivateEndpointConnectionArgs build() {
-            return new GetApplicationGatewayPrivateEndpointConnectionArgs(applicationGatewayName, connectionName, resourceGroupName);
+        }
+
+        public GetApplicationGatewayPrivateEndpointConnectionArgs build() {
+            $.applicationGatewayName = Objects.requireNonNull($.applicationGatewayName, "expected parameter 'applicationGatewayName' to be non-null");
+            $.connectionName = Objects.requireNonNull($.connectionName, "expected parameter 'connectionName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

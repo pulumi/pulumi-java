@@ -5,9 +5,9 @@ package com.pulumi.azurenative.web;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class WebAppSiteExtensionSlotArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -31,7 +31,7 @@ public final class WebAppSiteExtensionSlotArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -42,10 +42,10 @@ public final class WebAppSiteExtensionSlotArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="siteExtensionId")
-      private final @Nullable Output<String> siteExtensionId;
+    private @Nullable Output<String> siteExtensionId;
 
-    public Output<String> siteExtensionId() {
-        return this.siteExtensionId == null ? Codegen.empty() : this.siteExtensionId;
+    public Optional<Output<String>> siteExtensionId() {
+        return Optional.ofNullable(this.siteExtensionId);
     }
 
     /**
@@ -53,89 +53,81 @@ public final class WebAppSiteExtensionSlotArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="slot", required=true)
-      private final Output<String> slot;
+    private Output<String> slot;
 
     public Output<String> slot() {
         return this.slot;
     }
 
-    public WebAppSiteExtensionSlotArgs(
-        Output<String> name,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> siteExtensionId,
-        Output<String> slot) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.siteExtensionId = siteExtensionId;
-        this.slot = Objects.requireNonNull(slot, "expected parameter 'slot' to be non-null");
-    }
+    private WebAppSiteExtensionSlotArgs() {}
 
-    private WebAppSiteExtensionSlotArgs() {
-        this.name = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.siteExtensionId = Codegen.empty();
-        this.slot = Codegen.empty();
+    private WebAppSiteExtensionSlotArgs(WebAppSiteExtensionSlotArgs $) {
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
+        this.siteExtensionId = $.siteExtensionId;
+        this.slot = $.slot;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebAppSiteExtensionSlotArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> name;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> siteExtensionId;
-        private Output<String> slot;
+        private WebAppSiteExtensionSlotArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebAppSiteExtensionSlotArgs();
         }
 
         public Builder(WebAppSiteExtensionSlotArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.siteExtensionId = defaults.siteExtensionId;
-    	      this.slot = defaults.slot;
+            $ = new WebAppSiteExtensionSlotArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder siteExtensionId(@Nullable Output<String> siteExtensionId) {
-            this.siteExtensionId = siteExtensionId;
+            $.siteExtensionId = siteExtensionId;
             return this;
         }
-        public Builder siteExtensionId(@Nullable String siteExtensionId) {
-            this.siteExtensionId = Codegen.ofNullable(siteExtensionId);
-            return this;
+
+        public Builder siteExtensionId(String siteExtensionId) {
+            return siteExtensionId(Output.of(siteExtensionId));
         }
+
         public Builder slot(Output<String> slot) {
-            this.slot = Objects.requireNonNull(slot);
+            $.slot = slot;
             return this;
         }
+
         public Builder slot(String slot) {
-            this.slot = Output.of(Objects.requireNonNull(slot));
-            return this;
-        }        public WebAppSiteExtensionSlotArgs build() {
-            return new WebAppSiteExtensionSlotArgs(name, resourceGroupName, siteExtensionId, slot);
+            return slot(Output.of(slot));
+        }
+
+        public WebAppSiteExtensionSlotArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.slot = Objects.requireNonNull($.slot, "expected parameter 'slot' to be non-null");
+            return $;
         }
     }
+
 }

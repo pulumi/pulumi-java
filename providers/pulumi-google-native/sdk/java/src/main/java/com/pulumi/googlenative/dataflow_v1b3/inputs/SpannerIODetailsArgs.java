@@ -5,9 +5,9 @@ package com.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class SpannerIODetailsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="databaseId")
-      private final @Nullable Output<String> databaseId;
+    private @Nullable Output<String> databaseId;
 
-    public Output<String> databaseId() {
-        return this.databaseId == null ? Codegen.empty() : this.databaseId;
+    public Optional<Output<String>> databaseId() {
+        return Optional.ofNullable(this.databaseId);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class SpannerIODetailsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="instanceId")
-      private final @Nullable Output<String> instanceId;
+    private @Nullable Output<String> instanceId;
 
-    public Output<String> instanceId() {
-        return this.instanceId == null ? Codegen.empty() : this.instanceId;
+    public Optional<Output<String>> instanceId() {
+        return Optional.ofNullable(this.instanceId);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class SpannerIODetailsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public SpannerIODetailsArgs(
-        @Nullable Output<String> databaseId,
-        @Nullable Output<String> instanceId,
-        @Nullable Output<String> project) {
-        this.databaseId = databaseId;
-        this.instanceId = instanceId;
-        this.project = project;
-    }
+    private SpannerIODetailsArgs() {}
 
-    private SpannerIODetailsArgs() {
-        this.databaseId = Codegen.empty();
-        this.instanceId = Codegen.empty();
-        this.project = Codegen.empty();
+    private SpannerIODetailsArgs(SpannerIODetailsArgs $) {
+        this.databaseId = $.databaseId;
+        this.instanceId = $.instanceId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SpannerIODetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> databaseId;
-        private @Nullable Output<String> instanceId;
-        private @Nullable Output<String> project;
+        private SpannerIODetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SpannerIODetailsArgs();
         }
 
         public Builder(SpannerIODetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.databaseId = defaults.databaseId;
-    	      this.instanceId = defaults.instanceId;
-    	      this.project = defaults.project;
+            $ = new SpannerIODetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder databaseId(@Nullable Output<String> databaseId) {
-            this.databaseId = databaseId;
+            $.databaseId = databaseId;
             return this;
         }
-        public Builder databaseId(@Nullable String databaseId) {
-            this.databaseId = Codegen.ofNullable(databaseId);
-            return this;
+
+        public Builder databaseId(String databaseId) {
+            return databaseId(Output.of(databaseId));
         }
+
         public Builder instanceId(@Nullable Output<String> instanceId) {
-            this.instanceId = instanceId;
+            $.instanceId = instanceId;
             return this;
         }
-        public Builder instanceId(@Nullable String instanceId) {
-            this.instanceId = Codegen.ofNullable(instanceId);
-            return this;
+
+        public Builder instanceId(String instanceId) {
+            return instanceId(Output.of(instanceId));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public SpannerIODetailsArgs build() {
-            return new SpannerIODetailsArgs(databaseId, instanceId, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public SpannerIODetailsArgs build() {
+            return $;
         }
     }
+
 }

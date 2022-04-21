@@ -5,13 +5,13 @@ package com.pulumi.googlenative.dialogflow_v3;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3EventHandlerArgs;
 import com.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3NluSettingsArgs;
 import com.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3TransitionRouteArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class FlowArgs extends com.pulumi.resources.ResourceArgs {
     public static final FlowArgs Empty = new FlowArgs();
 
     @Import(name="agentId", required=true)
-      private final Output<String> agentId;
+    private Output<String> agentId;
 
     public Output<String> agentId() {
         return this.agentId;
@@ -31,10 +31,10 @@ public final class FlowArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -42,7 +42,7 @@ public final class FlowArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
@@ -53,24 +53,24 @@ public final class FlowArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="eventHandlers")
-      private final @Nullable Output<List<GoogleCloudDialogflowCxV3EventHandlerArgs>> eventHandlers;
+    private @Nullable Output<List<GoogleCloudDialogflowCxV3EventHandlerArgs>> eventHandlers;
 
-    public Output<List<GoogleCloudDialogflowCxV3EventHandlerArgs>> eventHandlers() {
-        return this.eventHandlers == null ? Codegen.empty() : this.eventHandlers;
+    public Optional<Output<List<GoogleCloudDialogflowCxV3EventHandlerArgs>>> eventHandlers() {
+        return Optional.ofNullable(this.eventHandlers);
     }
 
     @Import(name="languageCode")
-      private final @Nullable Output<String> languageCode;
+    private @Nullable Output<String> languageCode;
 
-    public Output<String> languageCode() {
-        return this.languageCode == null ? Codegen.empty() : this.languageCode;
+    public Optional<Output<String>> languageCode() {
+        return Optional.ofNullable(this.languageCode);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class FlowArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -89,17 +89,17 @@ public final class FlowArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nluSettings")
-      private final @Nullable Output<GoogleCloudDialogflowCxV3NluSettingsArgs> nluSettings;
+    private @Nullable Output<GoogleCloudDialogflowCxV3NluSettingsArgs> nluSettings;
 
-    public Output<GoogleCloudDialogflowCxV3NluSettingsArgs> nluSettings() {
-        return this.nluSettings == null ? Codegen.empty() : this.nluSettings;
+    public Optional<Output<GoogleCloudDialogflowCxV3NluSettingsArgs>> nluSettings() {
+        return Optional.ofNullable(this.nluSettings);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -107,10 +107,10 @@ public final class FlowArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="transitionRouteGroups")
-      private final @Nullable Output<List<String>> transitionRouteGroups;
+    private @Nullable Output<List<String>> transitionRouteGroups;
 
-    public Output<List<String>> transitionRouteGroups() {
-        return this.transitionRouteGroups == null ? Codegen.empty() : this.transitionRouteGroups;
+    public Optional<Output<List<String>>> transitionRouteGroups() {
+        return Optional.ofNullable(this.transitionRouteGroups);
     }
 
     /**
@@ -118,189 +118,162 @@ public final class FlowArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="transitionRoutes")
-      private final @Nullable Output<List<GoogleCloudDialogflowCxV3TransitionRouteArgs>> transitionRoutes;
+    private @Nullable Output<List<GoogleCloudDialogflowCxV3TransitionRouteArgs>> transitionRoutes;
 
-    public Output<List<GoogleCloudDialogflowCxV3TransitionRouteArgs>> transitionRoutes() {
-        return this.transitionRoutes == null ? Codegen.empty() : this.transitionRoutes;
+    public Optional<Output<List<GoogleCloudDialogflowCxV3TransitionRouteArgs>>> transitionRoutes() {
+        return Optional.ofNullable(this.transitionRoutes);
     }
 
-    public FlowArgs(
-        Output<String> agentId,
-        @Nullable Output<String> description,
-        Output<String> displayName,
-        @Nullable Output<List<GoogleCloudDialogflowCxV3EventHandlerArgs>> eventHandlers,
-        @Nullable Output<String> languageCode,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<GoogleCloudDialogflowCxV3NluSettingsArgs> nluSettings,
-        @Nullable Output<String> project,
-        @Nullable Output<List<String>> transitionRouteGroups,
-        @Nullable Output<List<GoogleCloudDialogflowCxV3TransitionRouteArgs>> transitionRoutes) {
-        this.agentId = Objects.requireNonNull(agentId, "expected parameter 'agentId' to be non-null");
-        this.description = description;
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.eventHandlers = eventHandlers;
-        this.languageCode = languageCode;
-        this.location = location;
-        this.name = name;
-        this.nluSettings = nluSettings;
-        this.project = project;
-        this.transitionRouteGroups = transitionRouteGroups;
-        this.transitionRoutes = transitionRoutes;
-    }
+    private FlowArgs() {}
 
-    private FlowArgs() {
-        this.agentId = Codegen.empty();
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.eventHandlers = Codegen.empty();
-        this.languageCode = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.nluSettings = Codegen.empty();
-        this.project = Codegen.empty();
-        this.transitionRouteGroups = Codegen.empty();
-        this.transitionRoutes = Codegen.empty();
+    private FlowArgs(FlowArgs $) {
+        this.agentId = $.agentId;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.eventHandlers = $.eventHandlers;
+        this.languageCode = $.languageCode;
+        this.location = $.location;
+        this.name = $.name;
+        this.nluSettings = $.nluSettings;
+        this.project = $.project;
+        this.transitionRouteGroups = $.transitionRouteGroups;
+        this.transitionRoutes = $.transitionRoutes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> agentId;
-        private @Nullable Output<String> description;
-        private Output<String> displayName;
-        private @Nullable Output<List<GoogleCloudDialogflowCxV3EventHandlerArgs>> eventHandlers;
-        private @Nullable Output<String> languageCode;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<GoogleCloudDialogflowCxV3NluSettingsArgs> nluSettings;
-        private @Nullable Output<String> project;
-        private @Nullable Output<List<String>> transitionRouteGroups;
-        private @Nullable Output<List<GoogleCloudDialogflowCxV3TransitionRouteArgs>> transitionRoutes;
+        private FlowArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowArgs();
         }
 
         public Builder(FlowArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agentId = defaults.agentId;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.eventHandlers = defaults.eventHandlers;
-    	      this.languageCode = defaults.languageCode;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.nluSettings = defaults.nluSettings;
-    	      this.project = defaults.project;
-    	      this.transitionRouteGroups = defaults.transitionRouteGroups;
-    	      this.transitionRoutes = defaults.transitionRoutes;
+            $ = new FlowArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder agentId(Output<String> agentId) {
-            this.agentId = Objects.requireNonNull(agentId);
+            $.agentId = agentId;
             return this;
         }
+
         public Builder agentId(String agentId) {
-            this.agentId = Output.of(Objects.requireNonNull(agentId));
-            return this;
+            return agentId(Output.of(agentId));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder eventHandlers(@Nullable Output<List<GoogleCloudDialogflowCxV3EventHandlerArgs>> eventHandlers) {
-            this.eventHandlers = eventHandlers;
+            $.eventHandlers = eventHandlers;
             return this;
         }
-        public Builder eventHandlers(@Nullable List<GoogleCloudDialogflowCxV3EventHandlerArgs> eventHandlers) {
-            this.eventHandlers = Codegen.ofNullable(eventHandlers);
-            return this;
+
+        public Builder eventHandlers(List<GoogleCloudDialogflowCxV3EventHandlerArgs> eventHandlers) {
+            return eventHandlers(Output.of(eventHandlers));
         }
+
         public Builder eventHandlers(GoogleCloudDialogflowCxV3EventHandlerArgs... eventHandlers) {
             return eventHandlers(List.of(eventHandlers));
         }
+
         public Builder languageCode(@Nullable Output<String> languageCode) {
-            this.languageCode = languageCode;
+            $.languageCode = languageCode;
             return this;
         }
-        public Builder languageCode(@Nullable String languageCode) {
-            this.languageCode = Codegen.ofNullable(languageCode);
-            return this;
+
+        public Builder languageCode(String languageCode) {
+            return languageCode(Output.of(languageCode));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder nluSettings(@Nullable Output<GoogleCloudDialogflowCxV3NluSettingsArgs> nluSettings) {
-            this.nluSettings = nluSettings;
+            $.nluSettings = nluSettings;
             return this;
         }
-        public Builder nluSettings(@Nullable GoogleCloudDialogflowCxV3NluSettingsArgs nluSettings) {
-            this.nluSettings = Codegen.ofNullable(nluSettings);
-            return this;
+
+        public Builder nluSettings(GoogleCloudDialogflowCxV3NluSettingsArgs nluSettings) {
+            return nluSettings(Output.of(nluSettings));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder transitionRouteGroups(@Nullable Output<List<String>> transitionRouteGroups) {
-            this.transitionRouteGroups = transitionRouteGroups;
+            $.transitionRouteGroups = transitionRouteGroups;
             return this;
         }
-        public Builder transitionRouteGroups(@Nullable List<String> transitionRouteGroups) {
-            this.transitionRouteGroups = Codegen.ofNullable(transitionRouteGroups);
-            return this;
+
+        public Builder transitionRouteGroups(List<String> transitionRouteGroups) {
+            return transitionRouteGroups(Output.of(transitionRouteGroups));
         }
+
         public Builder transitionRouteGroups(String... transitionRouteGroups) {
             return transitionRouteGroups(List.of(transitionRouteGroups));
         }
+
         public Builder transitionRoutes(@Nullable Output<List<GoogleCloudDialogflowCxV3TransitionRouteArgs>> transitionRoutes) {
-            this.transitionRoutes = transitionRoutes;
+            $.transitionRoutes = transitionRoutes;
             return this;
         }
-        public Builder transitionRoutes(@Nullable List<GoogleCloudDialogflowCxV3TransitionRouteArgs> transitionRoutes) {
-            this.transitionRoutes = Codegen.ofNullable(transitionRoutes);
-            return this;
+
+        public Builder transitionRoutes(List<GoogleCloudDialogflowCxV3TransitionRouteArgs> transitionRoutes) {
+            return transitionRoutes(Output.of(transitionRoutes));
         }
+
         public Builder transitionRoutes(GoogleCloudDialogflowCxV3TransitionRouteArgs... transitionRoutes) {
             return transitionRoutes(List.of(transitionRoutes));
-        }        public FlowArgs build() {
-            return new FlowArgs(agentId, description, displayName, eventHandlers, languageCode, location, name, nluSettings, project, transitionRouteGroups, transitionRoutes);
+        }
+
+        public FlowArgs build() {
+            $.agentId = Objects.requireNonNull($.agentId, "expected parameter 'agentId' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            return $;
         }
     }
+
 }

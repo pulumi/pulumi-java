@@ -5,11 +5,11 @@ package com.pulumi.googlenative.remotebuildexecution_v1alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.remotebuildexecution_v1alpha.enums.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicy;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFe
      * 
      */
     @Import(name="allowedValues")
-      private final @Nullable Output<List<String>> allowedValues;
+    private @Nullable Output<List<String>> allowedValues;
 
-    public Output<List<String>> allowedValues() {
-        return this.allowedValues == null ? Codegen.empty() : this.allowedValues;
+    public Optional<Output<List<String>>> allowedValues() {
+        return Optional.ofNullable(this.allowedValues);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFe
      * 
      */
     @Import(name="policy")
-      private final @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicy> policy;
+    private @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicy> policy;
 
-    public Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicy> policy() {
-        return this.policy == null ? Codegen.empty() : this.policy;
+    public Optional<Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicy>> policy() {
+        return Optional.ofNullable(this.policy);
     }
 
-    public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs(
-        @Nullable Output<List<String>> allowedValues,
-        @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicy> policy) {
-        this.allowedValues = allowedValues;
-        this.policy = policy;
-    }
+    private GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs() {}
 
-    private GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs() {
-        this.allowedValues = Codegen.empty();
-        this.policy = Codegen.empty();
+    private GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs(GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs $) {
+        this.allowedValues = $.allowedValues;
+        this.policy = $.policy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> allowedValues;
-        private @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicy> policy;
+        private GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs();
         }
 
         public Builder(GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedValues = defaults.allowedValues;
-    	      this.policy = defaults.policy;
+            $ = new GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedValues(@Nullable Output<List<String>> allowedValues) {
-            this.allowedValues = allowedValues;
+            $.allowedValues = allowedValues;
             return this;
         }
-        public Builder allowedValues(@Nullable List<String> allowedValues) {
-            this.allowedValues = Codegen.ofNullable(allowedValues);
-            return this;
+
+        public Builder allowedValues(List<String> allowedValues) {
+            return allowedValues(Output.of(allowedValues));
         }
+
         public Builder allowedValues(String... allowedValues) {
             return allowedValues(List.of(allowedValues));
         }
+
         public Builder policy(@Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicy> policy) {
-            this.policy = policy;
+            $.policy = policy;
             return this;
         }
-        public Builder policy(@Nullable GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicy policy) {
-            this.policy = Codegen.ofNullable(policy);
-            return this;
-        }        public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs build() {
-            return new GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs(allowedValues, policy);
+
+        public Builder policy(GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicy policy) {
+            return policy(Output.of(policy));
+        }
+
+        public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs build() {
+            return $;
         }
     }
+
 }

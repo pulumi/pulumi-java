@@ -5,10 +5,10 @@ package com.pulumi.googlenative.ml_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GoogleCloudMlV1__DiskConfigArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="bootDiskSizeGb")
-      private final @Nullable Output<Integer> bootDiskSizeGb;
+    private @Nullable Output<Integer> bootDiskSizeGb;
 
-    public Output<Integer> bootDiskSizeGb() {
-        return this.bootDiskSizeGb == null ? Codegen.empty() : this.bootDiskSizeGb;
+    public Optional<Output<Integer>> bootDiskSizeGb() {
+        return Optional.ofNullable(this.bootDiskSizeGb);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class GoogleCloudMlV1__DiskConfigArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="bootDiskType")
-      private final @Nullable Output<String> bootDiskType;
+    private @Nullable Output<String> bootDiskType;
 
-    public Output<String> bootDiskType() {
-        return this.bootDiskType == null ? Codegen.empty() : this.bootDiskType;
+    public Optional<Output<String>> bootDiskType() {
+        return Optional.ofNullable(this.bootDiskType);
     }
 
-    public GoogleCloudMlV1__DiskConfigArgs(
-        @Nullable Output<Integer> bootDiskSizeGb,
-        @Nullable Output<String> bootDiskType) {
-        this.bootDiskSizeGb = bootDiskSizeGb;
-        this.bootDiskType = bootDiskType;
-    }
+    private GoogleCloudMlV1__DiskConfigArgs() {}
 
-    private GoogleCloudMlV1__DiskConfigArgs() {
-        this.bootDiskSizeGb = Codegen.empty();
-        this.bootDiskType = Codegen.empty();
+    private GoogleCloudMlV1__DiskConfigArgs(GoogleCloudMlV1__DiskConfigArgs $) {
+        this.bootDiskSizeGb = $.bootDiskSizeGb;
+        this.bootDiskType = $.bootDiskType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudMlV1__DiskConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> bootDiskSizeGb;
-        private @Nullable Output<String> bootDiskType;
+        private GoogleCloudMlV1__DiskConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudMlV1__DiskConfigArgs();
         }
 
         public Builder(GoogleCloudMlV1__DiskConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bootDiskSizeGb = defaults.bootDiskSizeGb;
-    	      this.bootDiskType = defaults.bootDiskType;
+            $ = new GoogleCloudMlV1__DiskConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bootDiskSizeGb(@Nullable Output<Integer> bootDiskSizeGb) {
-            this.bootDiskSizeGb = bootDiskSizeGb;
+            $.bootDiskSizeGb = bootDiskSizeGb;
             return this;
         }
-        public Builder bootDiskSizeGb(@Nullable Integer bootDiskSizeGb) {
-            this.bootDiskSizeGb = Codegen.ofNullable(bootDiskSizeGb);
-            return this;
+
+        public Builder bootDiskSizeGb(Integer bootDiskSizeGb) {
+            return bootDiskSizeGb(Output.of(bootDiskSizeGb));
         }
+
         public Builder bootDiskType(@Nullable Output<String> bootDiskType) {
-            this.bootDiskType = bootDiskType;
+            $.bootDiskType = bootDiskType;
             return this;
         }
-        public Builder bootDiskType(@Nullable String bootDiskType) {
-            this.bootDiskType = Codegen.ofNullable(bootDiskType);
-            return this;
-        }        public GoogleCloudMlV1__DiskConfigArgs build() {
-            return new GoogleCloudMlV1__DiskConfigArgs(bootDiskSizeGb, bootDiskType);
+
+        public Builder bootDiskType(String bootDiskType) {
+            return bootDiskType(Output.of(bootDiskType));
+        }
+
+        public GoogleCloudMlV1__DiskConfigArgs build() {
+            return $;
         }
     }
+
 }

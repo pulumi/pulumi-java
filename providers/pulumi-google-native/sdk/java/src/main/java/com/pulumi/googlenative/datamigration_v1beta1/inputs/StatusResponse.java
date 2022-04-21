@@ -24,7 +24,7 @@ public final class StatusResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="code", required=true)
-      private final Integer code;
+    private Integer code;
 
     public Integer code() {
         return this.code;
@@ -35,7 +35,7 @@ public final class StatusResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="details", required=true)
-      private final List<Map<String,String>> details;
+    private List<Map<String,String>> details;
 
     public List<Map<String,String>> details() {
         return this.details;
@@ -46,64 +46,63 @@ public final class StatusResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="message", required=true)
-      private final String message;
+    private String message;
 
     public String message() {
         return this.message;
     }
 
-    public StatusResponse(
-        Integer code,
-        List<Map<String,String>> details,
-        String message) {
-        this.code = Objects.requireNonNull(code, "expected parameter 'code' to be non-null");
-        this.details = Objects.requireNonNull(details, "expected parameter 'details' to be non-null");
-        this.message = Objects.requireNonNull(message, "expected parameter 'message' to be non-null");
-    }
+    private StatusResponse() {}
 
-    private StatusResponse() {
-        this.code = null;
-        this.details = List.of();
-        this.message = null;
+    private StatusResponse(StatusResponse $) {
+        this.code = $.code;
+        this.details = $.details;
+        this.message = $.message;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StatusResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer code;
-        private List<Map<String,String>> details;
-        private String message;
+        private StatusResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StatusResponse();
         }
 
         public Builder(StatusResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.code = defaults.code;
-    	      this.details = defaults.details;
-    	      this.message = defaults.message;
+            $ = new StatusResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder code(Integer code) {
-            this.code = Objects.requireNonNull(code);
+            $.code = code;
             return this;
         }
+
         public Builder details(List<Map<String,String>> details) {
-            this.details = Objects.requireNonNull(details);
+            $.details = details;
             return this;
         }
+
+        public Builder details(Map<String,String>... details) {
+            return details(List.of(details));
+        }
+
         public Builder message(String message) {
-            this.message = Objects.requireNonNull(message);
+            $.message = message;
             return this;
-        }        public StatusResponse build() {
-            return new StatusResponse(code, details, message);
+        }
+
+        public StatusResponse build() {
+            $.code = Objects.requireNonNull($.code, "expected parameter 'code' to be non-null");
+            $.details = Objects.requireNonNull($.details, "expected parameter 'details' to be non-null");
+            $.message = Objects.requireNonNull($.message, "expected parameter 'message' to be non-null");
+            return $;
         }
     }
+
 }

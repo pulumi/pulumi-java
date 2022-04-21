@@ -23,7 +23,7 @@ public final class X12SecuritySettingsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="authorizationQualifier", required=true)
-      private final String authorizationQualifier;
+    private String authorizationQualifier;
 
     public String authorizationQualifier() {
         return this.authorizationQualifier;
@@ -34,10 +34,10 @@ public final class X12SecuritySettingsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="authorizationValue")
-      private final @Nullable String authorizationValue;
+    private @Nullable String authorizationValue;
 
     public Optional<String> authorizationValue() {
-        return this.authorizationValue == null ? Optional.empty() : Optional.ofNullable(this.authorizationValue);
+        return Optional.ofNullable(this.authorizationValue);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class X12SecuritySettingsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="passwordValue")
-      private final @Nullable String passwordValue;
+    private @Nullable String passwordValue;
 
     public Optional<String> passwordValue() {
-        return this.passwordValue == null ? Optional.empty() : Optional.ofNullable(this.passwordValue);
+        return Optional.ofNullable(this.passwordValue);
     }
 
     /**
@@ -56,73 +56,64 @@ public final class X12SecuritySettingsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="securityQualifier", required=true)
-      private final String securityQualifier;
+    private String securityQualifier;
 
     public String securityQualifier() {
         return this.securityQualifier;
     }
 
-    public X12SecuritySettingsResponse(
-        String authorizationQualifier,
-        @Nullable String authorizationValue,
-        @Nullable String passwordValue,
-        String securityQualifier) {
-        this.authorizationQualifier = Objects.requireNonNull(authorizationQualifier, "expected parameter 'authorizationQualifier' to be non-null");
-        this.authorizationValue = authorizationValue;
-        this.passwordValue = passwordValue;
-        this.securityQualifier = Objects.requireNonNull(securityQualifier, "expected parameter 'securityQualifier' to be non-null");
-    }
+    private X12SecuritySettingsResponse() {}
 
-    private X12SecuritySettingsResponse() {
-        this.authorizationQualifier = null;
-        this.authorizationValue = null;
-        this.passwordValue = null;
-        this.securityQualifier = null;
+    private X12SecuritySettingsResponse(X12SecuritySettingsResponse $) {
+        this.authorizationQualifier = $.authorizationQualifier;
+        this.authorizationValue = $.authorizationValue;
+        this.passwordValue = $.passwordValue;
+        this.securityQualifier = $.securityQualifier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(X12SecuritySettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String authorizationQualifier;
-        private @Nullable String authorizationValue;
-        private @Nullable String passwordValue;
-        private String securityQualifier;
+        private X12SecuritySettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new X12SecuritySettingsResponse();
         }
 
         public Builder(X12SecuritySettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authorizationQualifier = defaults.authorizationQualifier;
-    	      this.authorizationValue = defaults.authorizationValue;
-    	      this.passwordValue = defaults.passwordValue;
-    	      this.securityQualifier = defaults.securityQualifier;
+            $ = new X12SecuritySettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder authorizationQualifier(String authorizationQualifier) {
-            this.authorizationQualifier = Objects.requireNonNull(authorizationQualifier);
+            $.authorizationQualifier = authorizationQualifier;
             return this;
         }
+
         public Builder authorizationValue(@Nullable String authorizationValue) {
-            this.authorizationValue = authorizationValue;
+            $.authorizationValue = authorizationValue;
             return this;
         }
+
         public Builder passwordValue(@Nullable String passwordValue) {
-            this.passwordValue = passwordValue;
+            $.passwordValue = passwordValue;
             return this;
         }
+
         public Builder securityQualifier(String securityQualifier) {
-            this.securityQualifier = Objects.requireNonNull(securityQualifier);
+            $.securityQualifier = securityQualifier;
             return this;
-        }        public X12SecuritySettingsResponse build() {
-            return new X12SecuritySettingsResponse(authorizationQualifier, authorizationValue, passwordValue, securityQualifier);
+        }
+
+        public X12SecuritySettingsResponse build() {
+            $.authorizationQualifier = Objects.requireNonNull($.authorizationQualifier, "expected parameter 'authorizationQualifier' to be non-null");
+            $.securityQualifier = Objects.requireNonNull($.securityQualifier, "expected parameter 'securityQualifier' to be non-null");
+            return $;
         }
     }
+
 }

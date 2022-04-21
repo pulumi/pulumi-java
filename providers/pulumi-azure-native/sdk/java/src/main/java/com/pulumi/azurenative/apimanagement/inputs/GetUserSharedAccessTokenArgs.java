@@ -19,7 +19,7 @@ public final class GetUserSharedAccessTokenArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="expiry", required=true)
-      private final String expiry;
+    private String expiry;
 
     public String expiry() {
         return this.expiry;
@@ -30,7 +30,7 @@ public final class GetUserSharedAccessTokenArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="keyType", required=true)
-      private final KeyType keyType;
+    private KeyType keyType;
 
     public KeyType keyType() {
         return this.keyType;
@@ -41,7 +41,7 @@ public final class GetUserSharedAccessTokenArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -52,7 +52,7 @@ public final class GetUserSharedAccessTokenArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="serviceName", required=true)
-      private final String serviceName;
+    private String serviceName;
 
     public String serviceName() {
         return this.serviceName;
@@ -63,82 +63,73 @@ public final class GetUserSharedAccessTokenArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="userId", required=true)
-      private final String userId;
+    private String userId;
 
     public String userId() {
         return this.userId;
     }
 
-    public GetUserSharedAccessTokenArgs(
-        String expiry,
-        KeyType keyType,
-        String resourceGroupName,
-        String serviceName,
-        String userId) {
-        this.expiry = Objects.requireNonNull(expiry, "expected parameter 'expiry' to be non-null");
-        this.keyType = Codegen.objectProp("keyType", KeyType.class).arg(keyType).def(KeyType.Primary).require();
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-        this.userId = Objects.requireNonNull(userId, "expected parameter 'userId' to be non-null");
-    }
+    private GetUserSharedAccessTokenArgs() {}
 
-    private GetUserSharedAccessTokenArgs() {
-        this.expiry = null;
-        this.keyType = null;
-        this.resourceGroupName = null;
-        this.serviceName = null;
-        this.userId = null;
+    private GetUserSharedAccessTokenArgs(GetUserSharedAccessTokenArgs $) {
+        this.expiry = $.expiry;
+        this.keyType = $.keyType;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
+        this.userId = $.userId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetUserSharedAccessTokenArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String expiry;
-        private KeyType keyType;
-        private String resourceGroupName;
-        private String serviceName;
-        private String userId;
+        private GetUserSharedAccessTokenArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetUserSharedAccessTokenArgs();
         }
 
         public Builder(GetUserSharedAccessTokenArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expiry = defaults.expiry;
-    	      this.keyType = defaults.keyType;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
-    	      this.userId = defaults.userId;
+            $ = new GetUserSharedAccessTokenArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expiry(String expiry) {
-            this.expiry = Objects.requireNonNull(expiry);
+            $.expiry = expiry;
             return this;
         }
+
         public Builder keyType(KeyType keyType) {
-            this.keyType = Objects.requireNonNull(keyType);
+            $.keyType = keyType;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder userId(String userId) {
-            this.userId = Objects.requireNonNull(userId);
+            $.userId = userId;
             return this;
-        }        public GetUserSharedAccessTokenArgs build() {
-            return new GetUserSharedAccessTokenArgs(expiry, keyType, resourceGroupName, serviceName, userId);
+        }
+
+        public GetUserSharedAccessTokenArgs build() {
+            $.expiry = Objects.requireNonNull($.expiry, "expected parameter 'expiry' to be non-null");
+            $.keyType = Codegen.objectProp("keyType", KeyType.class).arg($.keyType).def(KeyType.Primary).require();
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            $.userId = Objects.requireNonNull($.userId, "expected parameter 'userId' to be non-null");
+            return $;
         }
     }
+
 }

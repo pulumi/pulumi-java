@@ -24,10 +24,10 @@ public final class WeekDetailsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="time")
-      private final @Nullable String time;
+    private @Nullable String time;
 
     public Optional<String> time() {
-        return this.time == null ? Optional.empty() : Optional.ofNullable(this.time);
+        return Optional.ofNullable(this.time);
     }
 
     /**
@@ -35,58 +35,54 @@ public final class WeekDetailsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="weekdays")
-      private final @Nullable List<String> weekdays;
+    private @Nullable List<String> weekdays;
 
-    public List<String> weekdays() {
-        return this.weekdays == null ? List.of() : this.weekdays;
+    public Optional<List<String>> weekdays() {
+        return Optional.ofNullable(this.weekdays);
     }
 
-    public WeekDetailsResponse(
-        @Nullable String time,
-        @Nullable List<String> weekdays) {
-        this.time = time;
-        this.weekdays = weekdays;
-    }
+    private WeekDetailsResponse() {}
 
-    private WeekDetailsResponse() {
-        this.time = null;
-        this.weekdays = List.of();
+    private WeekDetailsResponse(WeekDetailsResponse $) {
+        this.time = $.time;
+        this.weekdays = $.weekdays;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WeekDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String time;
-        private @Nullable List<String> weekdays;
+        private WeekDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WeekDetailsResponse();
         }
 
         public Builder(WeekDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.time = defaults.time;
-    	      this.weekdays = defaults.weekdays;
+            $ = new WeekDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder time(@Nullable String time) {
-            this.time = time;
+            $.time = time;
             return this;
         }
+
         public Builder weekdays(@Nullable List<String> weekdays) {
-            this.weekdays = weekdays;
+            $.weekdays = weekdays;
             return this;
         }
+
         public Builder weekdays(String... weekdays) {
             return weekdays(List.of(weekdays));
-        }        public WeekDetailsResponse build() {
-            return new WeekDetailsResponse(time, weekdays);
+        }
+
+        public WeekDetailsResponse build() {
+            return $;
         }
     }
+
 }

@@ -6,9 +6,9 @@ package com.pulumi.aws.sagemaker.inputs;
 import com.pulumi.aws.sagemaker.inputs.EndpointDeploymentConfigAutoRollbackConfigurationAlarmArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,52 +21,52 @@ public final class EndpointDeploymentConfigAutoRollbackConfigurationArgs extends
      * 
      */
     @Import(name="alarms")
-      private final @Nullable Output<List<EndpointDeploymentConfigAutoRollbackConfigurationAlarmArgs>> alarms;
+    private @Nullable Output<List<EndpointDeploymentConfigAutoRollbackConfigurationAlarmArgs>> alarms;
 
-    public Output<List<EndpointDeploymentConfigAutoRollbackConfigurationAlarmArgs>> alarms() {
-        return this.alarms == null ? Codegen.empty() : this.alarms;
+    public Optional<Output<List<EndpointDeploymentConfigAutoRollbackConfigurationAlarmArgs>>> alarms() {
+        return Optional.ofNullable(this.alarms);
     }
 
-    public EndpointDeploymentConfigAutoRollbackConfigurationArgs(@Nullable Output<List<EndpointDeploymentConfigAutoRollbackConfigurationAlarmArgs>> alarms) {
-        this.alarms = alarms;
-    }
+    private EndpointDeploymentConfigAutoRollbackConfigurationArgs() {}
 
-    private EndpointDeploymentConfigAutoRollbackConfigurationArgs() {
-        this.alarms = Codegen.empty();
+    private EndpointDeploymentConfigAutoRollbackConfigurationArgs(EndpointDeploymentConfigAutoRollbackConfigurationArgs $) {
+        this.alarms = $.alarms;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointDeploymentConfigAutoRollbackConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<EndpointDeploymentConfigAutoRollbackConfigurationAlarmArgs>> alarms;
+        private EndpointDeploymentConfigAutoRollbackConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointDeploymentConfigAutoRollbackConfigurationArgs();
         }
 
         public Builder(EndpointDeploymentConfigAutoRollbackConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alarms = defaults.alarms;
+            $ = new EndpointDeploymentConfigAutoRollbackConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder alarms(@Nullable Output<List<EndpointDeploymentConfigAutoRollbackConfigurationAlarmArgs>> alarms) {
-            this.alarms = alarms;
+            $.alarms = alarms;
             return this;
         }
-        public Builder alarms(@Nullable List<EndpointDeploymentConfigAutoRollbackConfigurationAlarmArgs> alarms) {
-            this.alarms = Codegen.ofNullable(alarms);
-            return this;
+
+        public Builder alarms(List<EndpointDeploymentConfigAutoRollbackConfigurationAlarmArgs> alarms) {
+            return alarms(Output.of(alarms));
         }
+
         public Builder alarms(EndpointDeploymentConfigAutoRollbackConfigurationAlarmArgs... alarms) {
             return alarms(List.of(alarms));
-        }        public EndpointDeploymentConfigAutoRollbackConfigurationArgs build() {
-            return new EndpointDeploymentConfigAutoRollbackConfigurationArgs(alarms);
+        }
+
+        public EndpointDeploymentConfigAutoRollbackConfigurationArgs build() {
+            return $;
         }
     }
+
 }

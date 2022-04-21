@@ -5,10 +5,10 @@ package com.pulumi.gcp.logging;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class BillingAccountExclusionArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="billingAccount", required=true)
-      private final Output<String> billingAccount;
+    private Output<String> billingAccount;
 
     public Output<String> billingAccount() {
         return this.billingAccount;
@@ -32,10 +32,10 @@ public final class BillingAccountExclusionArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class BillingAccountExclusionArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="disabled")
-      private final @Nullable Output<Boolean> disabled;
+    private @Nullable Output<Boolean> disabled;
 
-    public Output<Boolean> disabled() {
-        return this.disabled == null ? Codegen.empty() : this.disabled;
+    public Optional<Output<Boolean>> disabled() {
+        return Optional.ofNullable(this.disabled);
     }
 
     /**
@@ -57,7 +57,7 @@ public final class BillingAccountExclusionArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="filter", required=true)
-      private final Output<String> filter;
+    private Output<String> filter;
 
     public Output<String> filter() {
         return this.filter;
@@ -68,102 +68,90 @@ public final class BillingAccountExclusionArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public BillingAccountExclusionArgs(
-        Output<String> billingAccount,
-        @Nullable Output<String> description,
-        @Nullable Output<Boolean> disabled,
-        Output<String> filter,
-        @Nullable Output<String> name) {
-        this.billingAccount = Objects.requireNonNull(billingAccount, "expected parameter 'billingAccount' to be non-null");
-        this.description = description;
-        this.disabled = disabled;
-        this.filter = Objects.requireNonNull(filter, "expected parameter 'filter' to be non-null");
-        this.name = name;
-    }
+    private BillingAccountExclusionArgs() {}
 
-    private BillingAccountExclusionArgs() {
-        this.billingAccount = Codegen.empty();
-        this.description = Codegen.empty();
-        this.disabled = Codegen.empty();
-        this.filter = Codegen.empty();
-        this.name = Codegen.empty();
+    private BillingAccountExclusionArgs(BillingAccountExclusionArgs $) {
+        this.billingAccount = $.billingAccount;
+        this.description = $.description;
+        this.disabled = $.disabled;
+        this.filter = $.filter;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BillingAccountExclusionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> billingAccount;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Boolean> disabled;
-        private Output<String> filter;
-        private @Nullable Output<String> name;
+        private BillingAccountExclusionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BillingAccountExclusionArgs();
         }
 
         public Builder(BillingAccountExclusionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.billingAccount = defaults.billingAccount;
-    	      this.description = defaults.description;
-    	      this.disabled = defaults.disabled;
-    	      this.filter = defaults.filter;
-    	      this.name = defaults.name;
+            $ = new BillingAccountExclusionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder billingAccount(Output<String> billingAccount) {
-            this.billingAccount = Objects.requireNonNull(billingAccount);
+            $.billingAccount = billingAccount;
             return this;
         }
+
         public Builder billingAccount(String billingAccount) {
-            this.billingAccount = Output.of(Objects.requireNonNull(billingAccount));
-            return this;
+            return billingAccount(Output.of(billingAccount));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder disabled(@Nullable Output<Boolean> disabled) {
-            this.disabled = disabled;
+            $.disabled = disabled;
             return this;
         }
-        public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Codegen.ofNullable(disabled);
-            return this;
+
+        public Builder disabled(Boolean disabled) {
+            return disabled(Output.of(disabled));
         }
+
         public Builder filter(Output<String> filter) {
-            this.filter = Objects.requireNonNull(filter);
+            $.filter = filter;
             return this;
         }
+
         public Builder filter(String filter) {
-            this.filter = Output.of(Objects.requireNonNull(filter));
-            return this;
+            return filter(Output.of(filter));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public BillingAccountExclusionArgs build() {
-            return new BillingAccountExclusionArgs(billingAccount, description, disabled, filter, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public BillingAccountExclusionArgs build() {
+            $.billingAccount = Objects.requireNonNull($.billingAccount, "expected parameter 'billingAccount' to be non-null");
+            $.filter = Objects.requireNonNull($.filter, "expected parameter 'filter' to be non-null");
+            return $;
         }
     }
+
 }

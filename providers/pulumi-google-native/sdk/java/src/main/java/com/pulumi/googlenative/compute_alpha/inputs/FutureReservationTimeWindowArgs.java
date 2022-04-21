@@ -5,10 +5,10 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_alpha.inputs.DurationArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,17 +17,17 @@ public final class FutureReservationTimeWindowArgs extends com.pulumi.resources.
     public static final FutureReservationTimeWindowArgs Empty = new FutureReservationTimeWindowArgs();
 
     @Import(name="duration")
-      private final @Nullable Output<DurationArgs> duration;
+    private @Nullable Output<DurationArgs> duration;
 
-    public Output<DurationArgs> duration() {
-        return this.duration == null ? Codegen.empty() : this.duration;
+    public Optional<Output<DurationArgs>> duration() {
+        return Optional.ofNullable(this.duration);
     }
 
     @Import(name="endTime")
-      private final @Nullable Output<String> endTime;
+    private @Nullable Output<String> endTime;
 
-    public Output<String> endTime() {
-        return this.endTime == null ? Codegen.empty() : this.endTime;
+    public Optional<Output<String>> endTime() {
+        return Optional.ofNullable(this.endTime);
     }
 
     /**
@@ -35,76 +35,68 @@ public final class FutureReservationTimeWindowArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="startTime")
-      private final @Nullable Output<String> startTime;
+    private @Nullable Output<String> startTime;
 
-    public Output<String> startTime() {
-        return this.startTime == null ? Codegen.empty() : this.startTime;
+    public Optional<Output<String>> startTime() {
+        return Optional.ofNullable(this.startTime);
     }
 
-    public FutureReservationTimeWindowArgs(
-        @Nullable Output<DurationArgs> duration,
-        @Nullable Output<String> endTime,
-        @Nullable Output<String> startTime) {
-        this.duration = duration;
-        this.endTime = endTime;
-        this.startTime = startTime;
-    }
+    private FutureReservationTimeWindowArgs() {}
 
-    private FutureReservationTimeWindowArgs() {
-        this.duration = Codegen.empty();
-        this.endTime = Codegen.empty();
-        this.startTime = Codegen.empty();
+    private FutureReservationTimeWindowArgs(FutureReservationTimeWindowArgs $) {
+        this.duration = $.duration;
+        this.endTime = $.endTime;
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FutureReservationTimeWindowArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DurationArgs> duration;
-        private @Nullable Output<String> endTime;
-        private @Nullable Output<String> startTime;
+        private FutureReservationTimeWindowArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FutureReservationTimeWindowArgs();
         }
 
         public Builder(FutureReservationTimeWindowArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.duration = defaults.duration;
-    	      this.endTime = defaults.endTime;
-    	      this.startTime = defaults.startTime;
+            $ = new FutureReservationTimeWindowArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder duration(@Nullable Output<DurationArgs> duration) {
-            this.duration = duration;
+            $.duration = duration;
             return this;
         }
-        public Builder duration(@Nullable DurationArgs duration) {
-            this.duration = Codegen.ofNullable(duration);
-            return this;
+
+        public Builder duration(DurationArgs duration) {
+            return duration(Output.of(duration));
         }
+
         public Builder endTime(@Nullable Output<String> endTime) {
-            this.endTime = endTime;
+            $.endTime = endTime;
             return this;
         }
-        public Builder endTime(@Nullable String endTime) {
-            this.endTime = Codegen.ofNullable(endTime);
-            return this;
+
+        public Builder endTime(String endTime) {
+            return endTime(Output.of(endTime));
         }
+
         public Builder startTime(@Nullable Output<String> startTime) {
-            this.startTime = startTime;
+            $.startTime = startTime;
             return this;
         }
-        public Builder startTime(@Nullable String startTime) {
-            this.startTime = Codegen.ofNullable(startTime);
-            return this;
-        }        public FutureReservationTimeWindowArgs build() {
-            return new FutureReservationTimeWindowArgs(duration, endTime, startTime);
+
+        public Builder startTime(String startTime) {
+            return startTime(Output.of(startTime));
+        }
+
+        public FutureReservationTimeWindowArgs build() {
+            return $;
         }
     }
+
 }

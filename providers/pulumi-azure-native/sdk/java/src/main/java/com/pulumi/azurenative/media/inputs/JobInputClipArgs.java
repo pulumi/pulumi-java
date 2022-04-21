@@ -16,6 +16,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class JobInputClipArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="end")
-      private final @Nullable Output<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> end;
+    private @Nullable Output<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> end;
 
-    public Output<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> end() {
-        return this.end == null ? Codegen.empty() : this.end;
+    public Optional<Output<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>>> end() {
+        return Optional.ofNullable(this.end);
     }
 
     /**
@@ -43,10 +44,10 @@ public final class JobInputClipArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="files")
-      private final @Nullable Output<List<String>> files;
+    private @Nullable Output<List<String>> files;
 
-    public Output<List<String>> files() {
-        return this.files == null ? Codegen.empty() : this.files;
+    public Optional<Output<List<String>>> files() {
+        return Optional.ofNullable(this.files);
     }
 
     /**
@@ -54,10 +55,10 @@ public final class JobInputClipArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="inputDefinitions")
-      private final @Nullable Output<List<Object>> inputDefinitions;
+    private @Nullable Output<List<Object>> inputDefinitions;
 
-    public Output<List<Object>> inputDefinitions() {
-        return this.inputDefinitions == null ? Codegen.empty() : this.inputDefinitions;
+    public Optional<Output<List<Object>>> inputDefinitions() {
+        return Optional.ofNullable(this.inputDefinitions);
     }
 
     /**
@@ -65,10 +66,10 @@ public final class JobInputClipArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="label")
-      private final @Nullable Output<String> label;
+    private @Nullable Output<String> label;
 
-    public Output<String> label() {
-        return this.label == null ? Codegen.empty() : this.label;
+    public Optional<Output<String>> label() {
+        return Optional.ofNullable(this.label);
     }
 
     /**
@@ -77,7 +78,7 @@ public final class JobInputClipArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="odataType", required=true)
-      private final Output<String> odataType;
+    private Output<String> odataType;
 
     public Output<String> odataType() {
         return this.odataType;
@@ -88,121 +89,107 @@ public final class JobInputClipArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="start")
-      private final @Nullable Output<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> start;
+    private @Nullable Output<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> start;
 
-    public Output<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> start() {
-        return this.start == null ? Codegen.empty() : this.start;
+    public Optional<Output<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>>> start() {
+        return Optional.ofNullable(this.start);
     }
 
-    public JobInputClipArgs(
-        @Nullable Output<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> end,
-        @Nullable Output<List<String>> files,
-        @Nullable Output<List<Object>> inputDefinitions,
-        @Nullable Output<String> label,
-        Output<String> odataType,
-        @Nullable Output<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> start) {
-        this.end = end;
-        this.files = files;
-        this.inputDefinitions = inputDefinitions;
-        this.label = label;
-        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
-        this.start = start;
-    }
+    private JobInputClipArgs() {}
 
-    private JobInputClipArgs() {
-        this.end = Codegen.empty();
-        this.files = Codegen.empty();
-        this.inputDefinitions = Codegen.empty();
-        this.label = Codegen.empty();
-        this.odataType = Codegen.empty();
-        this.start = Codegen.empty();
+    private JobInputClipArgs(JobInputClipArgs $) {
+        this.end = $.end;
+        this.files = $.files;
+        this.inputDefinitions = $.inputDefinitions;
+        this.label = $.label;
+        this.odataType = $.odataType;
+        this.start = $.start;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobInputClipArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> end;
-        private @Nullable Output<List<String>> files;
-        private @Nullable Output<List<Object>> inputDefinitions;
-        private @Nullable Output<String> label;
-        private Output<String> odataType;
-        private @Nullable Output<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> start;
+        private JobInputClipArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobInputClipArgs();
         }
 
         public Builder(JobInputClipArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.end = defaults.end;
-    	      this.files = defaults.files;
-    	      this.inputDefinitions = defaults.inputDefinitions;
-    	      this.label = defaults.label;
-    	      this.odataType = defaults.odataType;
-    	      this.start = defaults.start;
+            $ = new JobInputClipArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder end(@Nullable Output<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> end) {
-            this.end = end;
+            $.end = end;
             return this;
         }
-        public Builder end(@Nullable Either<AbsoluteClipTimeArgs,UtcClipTimeArgs> end) {
-            this.end = Codegen.ofNullable(end);
-            return this;
+
+        public Builder end(Either<AbsoluteClipTimeArgs,UtcClipTimeArgs> end) {
+            return end(Output.of(end));
         }
+
         public Builder files(@Nullable Output<List<String>> files) {
-            this.files = files;
+            $.files = files;
             return this;
         }
-        public Builder files(@Nullable List<String> files) {
-            this.files = Codegen.ofNullable(files);
-            return this;
+
+        public Builder files(List<String> files) {
+            return files(Output.of(files));
         }
+
         public Builder files(String... files) {
             return files(List.of(files));
         }
+
         public Builder inputDefinitions(@Nullable Output<List<Object>> inputDefinitions) {
-            this.inputDefinitions = inputDefinitions;
+            $.inputDefinitions = inputDefinitions;
             return this;
         }
-        public Builder inputDefinitions(@Nullable List<Object> inputDefinitions) {
-            this.inputDefinitions = Codegen.ofNullable(inputDefinitions);
-            return this;
+
+        public Builder inputDefinitions(List<Object> inputDefinitions) {
+            return inputDefinitions(Output.of(inputDefinitions));
         }
+
         public Builder inputDefinitions(Object... inputDefinitions) {
             return inputDefinitions(List.of(inputDefinitions));
         }
+
         public Builder label(@Nullable Output<String> label) {
-            this.label = label;
+            $.label = label;
             return this;
         }
-        public Builder label(@Nullable String label) {
-            this.label = Codegen.ofNullable(label);
-            return this;
+
+        public Builder label(String label) {
+            return label(Output.of(label));
         }
+
         public Builder odataType(Output<String> odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Output.of(Objects.requireNonNull(odataType));
-            return this;
+            return odataType(Output.of(odataType));
         }
+
         public Builder start(@Nullable Output<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> start) {
-            this.start = start;
+            $.start = start;
             return this;
         }
-        public Builder start(@Nullable Either<AbsoluteClipTimeArgs,UtcClipTimeArgs> start) {
-            this.start = Codegen.ofNullable(start);
-            return this;
-        }        public JobInputClipArgs build() {
-            return new JobInputClipArgs(end, files, inputDefinitions, label, odataType, start);
+
+        public Builder start(Either<AbsoluteClipTimeArgs,UtcClipTimeArgs> start) {
+            return start(Output.of(start));
+        }
+
+        public JobInputClipArgs build() {
+            $.odataType = Codegen.stringProp("odataType").output().arg($.odataType).require();
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetAccessPolicyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="accessPolicyName", required=true)
-      private final String accessPolicyName;
+    private String accessPolicyName;
 
     public String accessPolicyName() {
         return this.accessPolicyName;
@@ -28,7 +28,7 @@ public final class GetAccessPolicyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="environmentName", required=true)
-      private final String environmentName;
+    private String environmentName;
 
     public String environmentName() {
         return this.environmentName;
@@ -39,64 +39,59 @@ public final class GetAccessPolicyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetAccessPolicyArgs(
-        String accessPolicyName,
-        String environmentName,
-        String resourceGroupName) {
-        this.accessPolicyName = Objects.requireNonNull(accessPolicyName, "expected parameter 'accessPolicyName' to be non-null");
-        this.environmentName = Objects.requireNonNull(environmentName, "expected parameter 'environmentName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetAccessPolicyArgs() {}
 
-    private GetAccessPolicyArgs() {
-        this.accessPolicyName = null;
-        this.environmentName = null;
-        this.resourceGroupName = null;
+    private GetAccessPolicyArgs(GetAccessPolicyArgs $) {
+        this.accessPolicyName = $.accessPolicyName;
+        this.environmentName = $.environmentName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAccessPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accessPolicyName;
-        private String environmentName;
-        private String resourceGroupName;
+        private GetAccessPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAccessPolicyArgs();
         }
 
         public Builder(GetAccessPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessPolicyName = defaults.accessPolicyName;
-    	      this.environmentName = defaults.environmentName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetAccessPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessPolicyName(String accessPolicyName) {
-            this.accessPolicyName = Objects.requireNonNull(accessPolicyName);
+            $.accessPolicyName = accessPolicyName;
             return this;
         }
+
         public Builder environmentName(String environmentName) {
-            this.environmentName = Objects.requireNonNull(environmentName);
+            $.environmentName = environmentName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetAccessPolicyArgs build() {
-            return new GetAccessPolicyArgs(accessPolicyName, environmentName, resourceGroupName);
+        }
+
+        public GetAccessPolicyArgs build() {
+            $.accessPolicyName = Objects.requireNonNull($.accessPolicyName, "expected parameter 'accessPolicyName' to be non-null");
+            $.environmentName = Objects.requireNonNull($.environmentName, "expected parameter 'environmentName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

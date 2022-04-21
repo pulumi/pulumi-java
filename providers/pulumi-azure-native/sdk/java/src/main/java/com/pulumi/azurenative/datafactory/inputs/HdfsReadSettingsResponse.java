@@ -27,10 +27,10 @@ public final class HdfsReadSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="deleteFilesAfterCompletion")
-      private final @Nullable Object deleteFilesAfterCompletion;
+    private @Nullable Object deleteFilesAfterCompletion;
 
     public Optional<Object> deleteFilesAfterCompletion() {
-        return this.deleteFilesAfterCompletion == null ? Optional.empty() : Optional.ofNullable(this.deleteFilesAfterCompletion);
+        return Optional.ofNullable(this.deleteFilesAfterCompletion);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class HdfsReadSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="disableMetricsCollection")
-      private final @Nullable Object disableMetricsCollection;
+    private @Nullable Object disableMetricsCollection;
 
     public Optional<Object> disableMetricsCollection() {
-        return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
+        return Optional.ofNullable(this.disableMetricsCollection);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class HdfsReadSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="distcpSettings")
-      private final @Nullable DistcpSettingsResponse distcpSettings;
+    private @Nullable DistcpSettingsResponse distcpSettings;
 
     public Optional<DistcpSettingsResponse> distcpSettings() {
-        return this.distcpSettings == null ? Optional.empty() : Optional.ofNullable(this.distcpSettings);
+        return Optional.ofNullable(this.distcpSettings);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class HdfsReadSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="enablePartitionDiscovery")
-      private final @Nullable Boolean enablePartitionDiscovery;
+    private @Nullable Boolean enablePartitionDiscovery;
 
     public Optional<Boolean> enablePartitionDiscovery() {
-        return this.enablePartitionDiscovery == null ? Optional.empty() : Optional.ofNullable(this.enablePartitionDiscovery);
+        return Optional.ofNullable(this.enablePartitionDiscovery);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class HdfsReadSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="fileListPath")
-      private final @Nullable Object fileListPath;
+    private @Nullable Object fileListPath;
 
     public Optional<Object> fileListPath() {
-        return this.fileListPath == null ? Optional.empty() : Optional.ofNullable(this.fileListPath);
+        return Optional.ofNullable(this.fileListPath);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class HdfsReadSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="maxConcurrentConnections")
-      private final @Nullable Object maxConcurrentConnections;
+    private @Nullable Object maxConcurrentConnections;
 
     public Optional<Object> maxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
+        return Optional.ofNullable(this.maxConcurrentConnections);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class HdfsReadSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="modifiedDatetimeEnd")
-      private final @Nullable Object modifiedDatetimeEnd;
+    private @Nullable Object modifiedDatetimeEnd;
 
     public Optional<Object> modifiedDatetimeEnd() {
-        return this.modifiedDatetimeEnd == null ? Optional.empty() : Optional.ofNullable(this.modifiedDatetimeEnd);
+        return Optional.ofNullable(this.modifiedDatetimeEnd);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class HdfsReadSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="modifiedDatetimeStart")
-      private final @Nullable Object modifiedDatetimeStart;
+    private @Nullable Object modifiedDatetimeStart;
 
     public Optional<Object> modifiedDatetimeStart() {
-        return this.modifiedDatetimeStart == null ? Optional.empty() : Optional.ofNullable(this.modifiedDatetimeStart);
+        return Optional.ofNullable(this.modifiedDatetimeStart);
     }
 
     /**
@@ -115,10 +115,10 @@ public final class HdfsReadSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="partitionRootPath")
-      private final @Nullable Object partitionRootPath;
+    private @Nullable Object partitionRootPath;
 
     public Optional<Object> partitionRootPath() {
-        return this.partitionRootPath == null ? Optional.empty() : Optional.ofNullable(this.partitionRootPath);
+        return Optional.ofNullable(this.partitionRootPath);
     }
 
     /**
@@ -126,10 +126,10 @@ public final class HdfsReadSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="recursive")
-      private final @Nullable Object recursive;
+    private @Nullable Object recursive;
 
     public Optional<Object> recursive() {
-        return this.recursive == null ? Optional.empty() : Optional.ofNullable(this.recursive);
+        return Optional.ofNullable(this.recursive);
     }
 
     /**
@@ -138,7 +138,7 @@ public final class HdfsReadSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -149,10 +149,10 @@ public final class HdfsReadSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="wildcardFileName")
-      private final @Nullable Object wildcardFileName;
+    private @Nullable Object wildcardFileName;
 
     public Optional<Object> wildcardFileName() {
-        return this.wildcardFileName == null ? Optional.empty() : Optional.ofNullable(this.wildcardFileName);
+        return Optional.ofNullable(this.wildcardFileName);
     }
 
     /**
@@ -160,154 +160,117 @@ public final class HdfsReadSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="wildcardFolderPath")
-      private final @Nullable Object wildcardFolderPath;
+    private @Nullable Object wildcardFolderPath;
 
     public Optional<Object> wildcardFolderPath() {
-        return this.wildcardFolderPath == null ? Optional.empty() : Optional.ofNullable(this.wildcardFolderPath);
+        return Optional.ofNullable(this.wildcardFolderPath);
     }
 
-    public HdfsReadSettingsResponse(
-        @Nullable Object deleteFilesAfterCompletion,
-        @Nullable Object disableMetricsCollection,
-        @Nullable DistcpSettingsResponse distcpSettings,
-        @Nullable Boolean enablePartitionDiscovery,
-        @Nullable Object fileListPath,
-        @Nullable Object maxConcurrentConnections,
-        @Nullable Object modifiedDatetimeEnd,
-        @Nullable Object modifiedDatetimeStart,
-        @Nullable Object partitionRootPath,
-        @Nullable Object recursive,
-        String type,
-        @Nullable Object wildcardFileName,
-        @Nullable Object wildcardFolderPath) {
-        this.deleteFilesAfterCompletion = deleteFilesAfterCompletion;
-        this.disableMetricsCollection = disableMetricsCollection;
-        this.distcpSettings = distcpSettings;
-        this.enablePartitionDiscovery = enablePartitionDiscovery;
-        this.fileListPath = fileListPath;
-        this.maxConcurrentConnections = maxConcurrentConnections;
-        this.modifiedDatetimeEnd = modifiedDatetimeEnd;
-        this.modifiedDatetimeStart = modifiedDatetimeStart;
-        this.partitionRootPath = partitionRootPath;
-        this.recursive = recursive;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.wildcardFileName = wildcardFileName;
-        this.wildcardFolderPath = wildcardFolderPath;
-    }
+    private HdfsReadSettingsResponse() {}
 
-    private HdfsReadSettingsResponse() {
-        this.deleteFilesAfterCompletion = null;
-        this.disableMetricsCollection = null;
-        this.distcpSettings = null;
-        this.enablePartitionDiscovery = null;
-        this.fileListPath = null;
-        this.maxConcurrentConnections = null;
-        this.modifiedDatetimeEnd = null;
-        this.modifiedDatetimeStart = null;
-        this.partitionRootPath = null;
-        this.recursive = null;
-        this.type = null;
-        this.wildcardFileName = null;
-        this.wildcardFolderPath = null;
+    private HdfsReadSettingsResponse(HdfsReadSettingsResponse $) {
+        this.deleteFilesAfterCompletion = $.deleteFilesAfterCompletion;
+        this.disableMetricsCollection = $.disableMetricsCollection;
+        this.distcpSettings = $.distcpSettings;
+        this.enablePartitionDiscovery = $.enablePartitionDiscovery;
+        this.fileListPath = $.fileListPath;
+        this.maxConcurrentConnections = $.maxConcurrentConnections;
+        this.modifiedDatetimeEnd = $.modifiedDatetimeEnd;
+        this.modifiedDatetimeStart = $.modifiedDatetimeStart;
+        this.partitionRootPath = $.partitionRootPath;
+        this.recursive = $.recursive;
+        this.type = $.type;
+        this.wildcardFileName = $.wildcardFileName;
+        this.wildcardFolderPath = $.wildcardFolderPath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HdfsReadSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object deleteFilesAfterCompletion;
-        private @Nullable Object disableMetricsCollection;
-        private @Nullable DistcpSettingsResponse distcpSettings;
-        private @Nullable Boolean enablePartitionDiscovery;
-        private @Nullable Object fileListPath;
-        private @Nullable Object maxConcurrentConnections;
-        private @Nullable Object modifiedDatetimeEnd;
-        private @Nullable Object modifiedDatetimeStart;
-        private @Nullable Object partitionRootPath;
-        private @Nullable Object recursive;
-        private String type;
-        private @Nullable Object wildcardFileName;
-        private @Nullable Object wildcardFolderPath;
+        private HdfsReadSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HdfsReadSettingsResponse();
         }
 
         public Builder(HdfsReadSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deleteFilesAfterCompletion = defaults.deleteFilesAfterCompletion;
-    	      this.disableMetricsCollection = defaults.disableMetricsCollection;
-    	      this.distcpSettings = defaults.distcpSettings;
-    	      this.enablePartitionDiscovery = defaults.enablePartitionDiscovery;
-    	      this.fileListPath = defaults.fileListPath;
-    	      this.maxConcurrentConnections = defaults.maxConcurrentConnections;
-    	      this.modifiedDatetimeEnd = defaults.modifiedDatetimeEnd;
-    	      this.modifiedDatetimeStart = defaults.modifiedDatetimeStart;
-    	      this.partitionRootPath = defaults.partitionRootPath;
-    	      this.recursive = defaults.recursive;
-    	      this.type = defaults.type;
-    	      this.wildcardFileName = defaults.wildcardFileName;
-    	      this.wildcardFolderPath = defaults.wildcardFolderPath;
+            $ = new HdfsReadSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder deleteFilesAfterCompletion(@Nullable Object deleteFilesAfterCompletion) {
-            this.deleteFilesAfterCompletion = deleteFilesAfterCompletion;
+            $.deleteFilesAfterCompletion = deleteFilesAfterCompletion;
             return this;
         }
+
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
-            this.disableMetricsCollection = disableMetricsCollection;
+            $.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
+
         public Builder distcpSettings(@Nullable DistcpSettingsResponse distcpSettings) {
-            this.distcpSettings = distcpSettings;
+            $.distcpSettings = distcpSettings;
             return this;
         }
+
         public Builder enablePartitionDiscovery(@Nullable Boolean enablePartitionDiscovery) {
-            this.enablePartitionDiscovery = enablePartitionDiscovery;
+            $.enablePartitionDiscovery = enablePartitionDiscovery;
             return this;
         }
+
         public Builder fileListPath(@Nullable Object fileListPath) {
-            this.fileListPath = fileListPath;
+            $.fileListPath = fileListPath;
             return this;
         }
+
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
-            this.maxConcurrentConnections = maxConcurrentConnections;
+            $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
+
         public Builder modifiedDatetimeEnd(@Nullable Object modifiedDatetimeEnd) {
-            this.modifiedDatetimeEnd = modifiedDatetimeEnd;
+            $.modifiedDatetimeEnd = modifiedDatetimeEnd;
             return this;
         }
+
         public Builder modifiedDatetimeStart(@Nullable Object modifiedDatetimeStart) {
-            this.modifiedDatetimeStart = modifiedDatetimeStart;
+            $.modifiedDatetimeStart = modifiedDatetimeStart;
             return this;
         }
+
         public Builder partitionRootPath(@Nullable Object partitionRootPath) {
-            this.partitionRootPath = partitionRootPath;
+            $.partitionRootPath = partitionRootPath;
             return this;
         }
+
         public Builder recursive(@Nullable Object recursive) {
-            this.recursive = recursive;
+            $.recursive = recursive;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder wildcardFileName(@Nullable Object wildcardFileName) {
-            this.wildcardFileName = wildcardFileName;
+            $.wildcardFileName = wildcardFileName;
             return this;
         }
+
         public Builder wildcardFolderPath(@Nullable Object wildcardFolderPath) {
-            this.wildcardFolderPath = wildcardFolderPath;
+            $.wildcardFolderPath = wildcardFolderPath;
             return this;
-        }        public HdfsReadSettingsResponse build() {
-            return new HdfsReadSettingsResponse(deleteFilesAfterCompletion, disableMetricsCollection, distcpSettings, enablePartitionDiscovery, fileListPath, maxConcurrentConnections, modifiedDatetimeEnd, modifiedDatetimeStart, partitionRootPath, recursive, type, wildcardFileName, wildcardFolderPath);
+        }
+
+        public HdfsReadSettingsResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

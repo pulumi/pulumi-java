@@ -17,7 +17,7 @@ public final class GetStorageAccountCredentialArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="managerName", required=true)
-      private final String managerName;
+    private String managerName;
 
     public String managerName() {
         return this.managerName;
@@ -28,7 +28,7 @@ public final class GetStorageAccountCredentialArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetStorageAccountCredentialArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="storageAccountCredentialName", required=true)
-      private final String storageAccountCredentialName;
+    private String storageAccountCredentialName;
 
     public String storageAccountCredentialName() {
         return this.storageAccountCredentialName;
     }
 
-    public GetStorageAccountCredentialArgs(
-        String managerName,
-        String resourceGroupName,
-        String storageAccountCredentialName) {
-        this.managerName = Objects.requireNonNull(managerName, "expected parameter 'managerName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.storageAccountCredentialName = Objects.requireNonNull(storageAccountCredentialName, "expected parameter 'storageAccountCredentialName' to be non-null");
-    }
+    private GetStorageAccountCredentialArgs() {}
 
-    private GetStorageAccountCredentialArgs() {
-        this.managerName = null;
-        this.resourceGroupName = null;
-        this.storageAccountCredentialName = null;
+    private GetStorageAccountCredentialArgs(GetStorageAccountCredentialArgs $) {
+        this.managerName = $.managerName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.storageAccountCredentialName = $.storageAccountCredentialName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetStorageAccountCredentialArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String managerName;
-        private String resourceGroupName;
-        private String storageAccountCredentialName;
+        private GetStorageAccountCredentialArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetStorageAccountCredentialArgs();
         }
 
         public Builder(GetStorageAccountCredentialArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.managerName = defaults.managerName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.storageAccountCredentialName = defaults.storageAccountCredentialName;
+            $ = new GetStorageAccountCredentialArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder managerName(String managerName) {
-            this.managerName = Objects.requireNonNull(managerName);
+            $.managerName = managerName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder storageAccountCredentialName(String storageAccountCredentialName) {
-            this.storageAccountCredentialName = Objects.requireNonNull(storageAccountCredentialName);
+            $.storageAccountCredentialName = storageAccountCredentialName;
             return this;
-        }        public GetStorageAccountCredentialArgs build() {
-            return new GetStorageAccountCredentialArgs(managerName, resourceGroupName, storageAccountCredentialName);
+        }
+
+        public GetStorageAccountCredentialArgs build() {
+            $.managerName = Objects.requireNonNull($.managerName, "expected parameter 'managerName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.storageAccountCredentialName = Objects.requireNonNull($.storageAccountCredentialName, "expected parameter 'storageAccountCredentialName' to be non-null");
+            return $;
         }
     }
+
 }

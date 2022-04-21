@@ -13,45 +13,45 @@ public final class DeliveryStreamKMSEncryptionConfig extends com.pulumi.resource
     public static final DeliveryStreamKMSEncryptionConfig Empty = new DeliveryStreamKMSEncryptionConfig();
 
     @Import(name="aWSKMSKeyARN", required=true)
-      private final String aWSKMSKeyARN;
+    private String aWSKMSKeyARN;
 
     public String aWSKMSKeyARN() {
         return this.aWSKMSKeyARN;
     }
 
-    public DeliveryStreamKMSEncryptionConfig(String aWSKMSKeyARN) {
-        this.aWSKMSKeyARN = Objects.requireNonNull(aWSKMSKeyARN, "expected parameter 'aWSKMSKeyARN' to be non-null");
-    }
+    private DeliveryStreamKMSEncryptionConfig() {}
 
-    private DeliveryStreamKMSEncryptionConfig() {
-        this.aWSKMSKeyARN = null;
+    private DeliveryStreamKMSEncryptionConfig(DeliveryStreamKMSEncryptionConfig $) {
+        this.aWSKMSKeyARN = $.aWSKMSKeyARN;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryStreamKMSEncryptionConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String aWSKMSKeyARN;
+        private DeliveryStreamKMSEncryptionConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryStreamKMSEncryptionConfig();
         }
 
         public Builder(DeliveryStreamKMSEncryptionConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aWSKMSKeyARN = defaults.aWSKMSKeyARN;
+            $ = new DeliveryStreamKMSEncryptionConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder aWSKMSKeyARN(String aWSKMSKeyARN) {
-            this.aWSKMSKeyARN = Objects.requireNonNull(aWSKMSKeyARN);
+            $.aWSKMSKeyARN = aWSKMSKeyARN;
             return this;
-        }        public DeliveryStreamKMSEncryptionConfig build() {
-            return new DeliveryStreamKMSEncryptionConfig(aWSKMSKeyARN);
+        }
+
+        public DeliveryStreamKMSEncryptionConfig build() {
+            $.aWSKMSKeyARN = Objects.requireNonNull($.aWSKMSKeyARN, "expected parameter 'aWSKMSKeyARN' to be non-null");
+            return $;
         }
     }
+
 }

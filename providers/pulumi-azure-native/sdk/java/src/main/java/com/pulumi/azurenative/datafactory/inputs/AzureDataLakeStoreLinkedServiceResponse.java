@@ -33,10 +33,10 @@ public final class AzureDataLakeStoreLinkedServiceResponse extends com.pulumi.re
      * 
      */
     @Import(name="accountName")
-      private final @Nullable Object accountName;
+    private @Nullable Object accountName;
 
     public Optional<Object> accountName() {
-        return this.accountName == null ? Optional.empty() : Optional.ofNullable(this.accountName);
+        return Optional.ofNullable(this.accountName);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class AzureDataLakeStoreLinkedServiceResponse extends com.pulumi.re
      * 
      */
     @Import(name="annotations")
-      private final @Nullable List<Object> annotations;
+    private @Nullable List<Object> annotations;
 
-    public List<Object> annotations() {
-        return this.annotations == null ? List.of() : this.annotations;
+    public Optional<List<Object>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class AzureDataLakeStoreLinkedServiceResponse extends com.pulumi.re
      * 
      */
     @Import(name="azureCloudType")
-      private final @Nullable Object azureCloudType;
+    private @Nullable Object azureCloudType;
 
     public Optional<Object> azureCloudType() {
-        return this.azureCloudType == null ? Optional.empty() : Optional.ofNullable(this.azureCloudType);
+        return Optional.ofNullable(this.azureCloudType);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class AzureDataLakeStoreLinkedServiceResponse extends com.pulumi.re
      * 
      */
     @Import(name="connectVia")
-      private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+    private @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
-        return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
+        return Optional.ofNullable(this.connectVia);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class AzureDataLakeStoreLinkedServiceResponse extends com.pulumi.re
      * 
      */
     @Import(name="credential")
-      private final @Nullable CredentialReferenceResponse credential;
+    private @Nullable CredentialReferenceResponse credential;
 
     public Optional<CredentialReferenceResponse> credential() {
-        return this.credential == null ? Optional.empty() : Optional.ofNullable(this.credential);
+        return Optional.ofNullable(this.credential);
     }
 
     /**
@@ -88,7 +88,7 @@ public final class AzureDataLakeStoreLinkedServiceResponse extends com.pulumi.re
      * 
      */
     @Import(name="dataLakeStoreUri", required=true)
-      private final Object dataLakeStoreUri;
+    private Object dataLakeStoreUri;
 
     public Object dataLakeStoreUri() {
         return this.dataLakeStoreUri;
@@ -99,10 +99,10 @@ public final class AzureDataLakeStoreLinkedServiceResponse extends com.pulumi.re
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -110,10 +110,10 @@ public final class AzureDataLakeStoreLinkedServiceResponse extends com.pulumi.re
      * 
      */
     @Import(name="encryptedCredential")
-      private final @Nullable Object encryptedCredential;
+    private @Nullable Object encryptedCredential;
 
     public Optional<Object> encryptedCredential() {
-        return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
+        return Optional.ofNullable(this.encryptedCredential);
     }
 
     /**
@@ -121,10 +121,10 @@ public final class AzureDataLakeStoreLinkedServiceResponse extends com.pulumi.re
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+    private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> parameters() {
-        return this.parameters == null ? Map.of() : this.parameters;
+    public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -132,10 +132,10 @@ public final class AzureDataLakeStoreLinkedServiceResponse extends com.pulumi.re
      * 
      */
     @Import(name="resourceGroupName")
-      private final @Nullable Object resourceGroupName;
+    private @Nullable Object resourceGroupName;
 
     public Optional<Object> resourceGroupName() {
-        return this.resourceGroupName == null ? Optional.empty() : Optional.ofNullable(this.resourceGroupName);
+        return Optional.ofNullable(this.resourceGroupName);
     }
 
     /**
@@ -143,10 +143,10 @@ public final class AzureDataLakeStoreLinkedServiceResponse extends com.pulumi.re
      * 
      */
     @Import(name="servicePrincipalId")
-      private final @Nullable Object servicePrincipalId;
+    private @Nullable Object servicePrincipalId;
 
     public Optional<Object> servicePrincipalId() {
-        return this.servicePrincipalId == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipalId);
+        return Optional.ofNullable(this.servicePrincipalId);
     }
 
     /**
@@ -154,10 +154,10 @@ public final class AzureDataLakeStoreLinkedServiceResponse extends com.pulumi.re
      * 
      */
     @Import(name="servicePrincipalKey")
-      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
+    private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey() {
-        return this.servicePrincipalKey == null ? null : this.servicePrincipalKey;
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> servicePrincipalKey() {
+        return Optional.ofNullable(this.servicePrincipalKey);
     }
 
     /**
@@ -165,10 +165,10 @@ public final class AzureDataLakeStoreLinkedServiceResponse extends com.pulumi.re
      * 
      */
     @Import(name="subscriptionId")
-      private final @Nullable Object subscriptionId;
+    private @Nullable Object subscriptionId;
 
     public Optional<Object> subscriptionId() {
-        return this.subscriptionId == null ? Optional.empty() : Optional.ofNullable(this.subscriptionId);
+        return Optional.ofNullable(this.subscriptionId);
     }
 
     /**
@@ -176,10 +176,10 @@ public final class AzureDataLakeStoreLinkedServiceResponse extends com.pulumi.re
      * 
      */
     @Import(name="tenant")
-      private final @Nullable Object tenant;
+    private @Nullable Object tenant;
 
     public Optional<Object> tenant() {
-        return this.tenant == null ? Optional.empty() : Optional.ofNullable(this.tenant);
+        return Optional.ofNullable(this.tenant);
     }
 
     /**
@@ -188,175 +188,134 @@ public final class AzureDataLakeStoreLinkedServiceResponse extends com.pulumi.re
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public AzureDataLakeStoreLinkedServiceResponse(
-        @Nullable Object accountName,
-        @Nullable List<Object> annotations,
-        @Nullable Object azureCloudType,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable CredentialReferenceResponse credential,
-        Object dataLakeStoreUri,
-        @Nullable String description,
-        @Nullable Object encryptedCredential,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Object resourceGroupName,
-        @Nullable Object servicePrincipalId,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey,
-        @Nullable Object subscriptionId,
-        @Nullable Object tenant,
-        String type) {
-        this.accountName = accountName;
-        this.annotations = annotations;
-        this.azureCloudType = azureCloudType;
-        this.connectVia = connectVia;
-        this.credential = credential;
-        this.dataLakeStoreUri = Objects.requireNonNull(dataLakeStoreUri, "expected parameter 'dataLakeStoreUri' to be non-null");
-        this.description = description;
-        this.encryptedCredential = encryptedCredential;
-        this.parameters = parameters;
-        this.resourceGroupName = resourceGroupName;
-        this.servicePrincipalId = servicePrincipalId;
-        this.servicePrincipalKey = servicePrincipalKey;
-        this.subscriptionId = subscriptionId;
-        this.tenant = tenant;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private AzureDataLakeStoreLinkedServiceResponse() {}
 
-    private AzureDataLakeStoreLinkedServiceResponse() {
-        this.accountName = null;
-        this.annotations = List.of();
-        this.azureCloudType = null;
-        this.connectVia = null;
-        this.credential = null;
-        this.dataLakeStoreUri = null;
-        this.description = null;
-        this.encryptedCredential = null;
-        this.parameters = Map.of();
-        this.resourceGroupName = null;
-        this.servicePrincipalId = null;
-        this.servicePrincipalKey = null;
-        this.subscriptionId = null;
-        this.tenant = null;
-        this.type = null;
+    private AzureDataLakeStoreLinkedServiceResponse(AzureDataLakeStoreLinkedServiceResponse $) {
+        this.accountName = $.accountName;
+        this.annotations = $.annotations;
+        this.azureCloudType = $.azureCloudType;
+        this.connectVia = $.connectVia;
+        this.credential = $.credential;
+        this.dataLakeStoreUri = $.dataLakeStoreUri;
+        this.description = $.description;
+        this.encryptedCredential = $.encryptedCredential;
+        this.parameters = $.parameters;
+        this.resourceGroupName = $.resourceGroupName;
+        this.servicePrincipalId = $.servicePrincipalId;
+        this.servicePrincipalKey = $.servicePrincipalKey;
+        this.subscriptionId = $.subscriptionId;
+        this.tenant = $.tenant;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureDataLakeStoreLinkedServiceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object accountName;
-        private @Nullable List<Object> annotations;
-        private @Nullable Object azureCloudType;
-        private @Nullable IntegrationRuntimeReferenceResponse connectVia;
-        private @Nullable CredentialReferenceResponse credential;
-        private Object dataLakeStoreUri;
-        private @Nullable String description;
-        private @Nullable Object encryptedCredential;
-        private @Nullable Map<String,ParameterSpecificationResponse> parameters;
-        private @Nullable Object resourceGroupName;
-        private @Nullable Object servicePrincipalId;
-        private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
-        private @Nullable Object subscriptionId;
-        private @Nullable Object tenant;
-        private String type;
+        private AzureDataLakeStoreLinkedServiceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureDataLakeStoreLinkedServiceResponse();
         }
 
         public Builder(AzureDataLakeStoreLinkedServiceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.annotations = defaults.annotations;
-    	      this.azureCloudType = defaults.azureCloudType;
-    	      this.connectVia = defaults.connectVia;
-    	      this.credential = defaults.credential;
-    	      this.dataLakeStoreUri = defaults.dataLakeStoreUri;
-    	      this.description = defaults.description;
-    	      this.encryptedCredential = defaults.encryptedCredential;
-    	      this.parameters = defaults.parameters;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.servicePrincipalId = defaults.servicePrincipalId;
-    	      this.servicePrincipalKey = defaults.servicePrincipalKey;
-    	      this.subscriptionId = defaults.subscriptionId;
-    	      this.tenant = defaults.tenant;
-    	      this.type = defaults.type;
+            $ = new AzureDataLakeStoreLinkedServiceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(@Nullable Object accountName) {
-            this.accountName = accountName;
+            $.accountName = accountName;
             return this;
         }
+
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder azureCloudType(@Nullable Object azureCloudType) {
-            this.azureCloudType = azureCloudType;
+            $.azureCloudType = azureCloudType;
             return this;
         }
+
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
-            this.connectVia = connectVia;
+            $.connectVia = connectVia;
             return this;
         }
+
         public Builder credential(@Nullable CredentialReferenceResponse credential) {
-            this.credential = credential;
+            $.credential = credential;
             return this;
         }
+
         public Builder dataLakeStoreUri(Object dataLakeStoreUri) {
-            this.dataLakeStoreUri = Objects.requireNonNull(dataLakeStoreUri);
+            $.dataLakeStoreUri = dataLakeStoreUri;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = encryptedCredential;
+            $.encryptedCredential = encryptedCredential;
             return this;
         }
+
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder resourceGroupName(@Nullable Object resourceGroupName) {
-            this.resourceGroupName = resourceGroupName;
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder servicePrincipalId(@Nullable Object servicePrincipalId) {
-            this.servicePrincipalId = servicePrincipalId;
+            $.servicePrincipalId = servicePrincipalId;
             return this;
         }
+
         public Builder servicePrincipalKey(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey) {
-            this.servicePrincipalKey = servicePrincipalKey;
+            $.servicePrincipalKey = servicePrincipalKey;
             return this;
         }
+
         public Builder subscriptionId(@Nullable Object subscriptionId) {
-            this.subscriptionId = subscriptionId;
+            $.subscriptionId = subscriptionId;
             return this;
         }
+
         public Builder tenant(@Nullable Object tenant) {
-            this.tenant = tenant;
+            $.tenant = tenant;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public AzureDataLakeStoreLinkedServiceResponse build() {
-            return new AzureDataLakeStoreLinkedServiceResponse(accountName, annotations, azureCloudType, connectVia, credential, dataLakeStoreUri, description, encryptedCredential, parameters, resourceGroupName, servicePrincipalId, servicePrincipalKey, subscriptionId, tenant, type);
+        }
+
+        public AzureDataLakeStoreLinkedServiceResponse build() {
+            $.dataLakeStoreUri = Objects.requireNonNull($.dataLakeStoreUri, "expected parameter 'dataLakeStoreUri' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

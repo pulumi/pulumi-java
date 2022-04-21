@@ -5,7 +5,6 @@ package com.pulumi.googlenative.container_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.container_v1beta1.inputs.AcceleratorConfigArgs;
 import com.pulumi.googlenative.container_v1beta1.inputs.AdvancedMachineFeaturesArgs;
 import com.pulumi.googlenative.container_v1beta1.inputs.EphemeralStorageConfigArgs;
@@ -24,6 +23,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -40,10 +40,10 @@ public final class NodeConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accelerators")
-      private final @Nullable Output<List<AcceleratorConfigArgs>> accelerators;
+    private @Nullable Output<List<AcceleratorConfigArgs>> accelerators;
 
-    public Output<List<AcceleratorConfigArgs>> accelerators() {
-        return this.accelerators == null ? Codegen.empty() : this.accelerators;
+    public Optional<Output<List<AcceleratorConfigArgs>>> accelerators() {
+        return Optional.ofNullable(this.accelerators);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class NodeConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="advancedMachineFeatures")
-      private final @Nullable Output<AdvancedMachineFeaturesArgs> advancedMachineFeatures;
+    private @Nullable Output<AdvancedMachineFeaturesArgs> advancedMachineFeatures;
 
-    public Output<AdvancedMachineFeaturesArgs> advancedMachineFeatures() {
-        return this.advancedMachineFeatures == null ? Codegen.empty() : this.advancedMachineFeatures;
+    public Optional<Output<AdvancedMachineFeaturesArgs>> advancedMachineFeatures() {
+        return Optional.ofNullable(this.advancedMachineFeatures);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class NodeConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bootDiskKmsKey")
-      private final @Nullable Output<String> bootDiskKmsKey;
+    private @Nullable Output<String> bootDiskKmsKey;
 
-    public Output<String> bootDiskKmsKey() {
-        return this.bootDiskKmsKey == null ? Codegen.empty() : this.bootDiskKmsKey;
+    public Optional<Output<String>> bootDiskKmsKey() {
+        return Optional.ofNullable(this.bootDiskKmsKey);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class NodeConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="diskSizeGb")
-      private final @Nullable Output<Integer> diskSizeGb;
+    private @Nullable Output<Integer> diskSizeGb;
 
-    public Output<Integer> diskSizeGb() {
-        return this.diskSizeGb == null ? Codegen.empty() : this.diskSizeGb;
+    public Optional<Output<Integer>> diskSizeGb() {
+        return Optional.ofNullable(this.diskSizeGb);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class NodeConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="diskType")
-      private final @Nullable Output<String> diskType;
+    private @Nullable Output<String> diskType;
 
-    public Output<String> diskType() {
-        return this.diskType == null ? Codegen.empty() : this.diskType;
+    public Optional<Output<String>> diskType() {
+        return Optional.ofNullable(this.diskType);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class NodeConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ephemeralStorageConfig")
-      private final @Nullable Output<EphemeralStorageConfigArgs> ephemeralStorageConfig;
+    private @Nullable Output<EphemeralStorageConfigArgs> ephemeralStorageConfig;
 
-    public Output<EphemeralStorageConfigArgs> ephemeralStorageConfig() {
-        return this.ephemeralStorageConfig == null ? Codegen.empty() : this.ephemeralStorageConfig;
+    public Optional<Output<EphemeralStorageConfigArgs>> ephemeralStorageConfig() {
+        return Optional.ofNullable(this.ephemeralStorageConfig);
     }
 
     /**
@@ -106,10 +106,10 @@ public final class NodeConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gcfsConfig")
-      private final @Nullable Output<GcfsConfigArgs> gcfsConfig;
+    private @Nullable Output<GcfsConfigArgs> gcfsConfig;
 
-    public Output<GcfsConfigArgs> gcfsConfig() {
-        return this.gcfsConfig == null ? Codegen.empty() : this.gcfsConfig;
+    public Optional<Output<GcfsConfigArgs>> gcfsConfig() {
+        return Optional.ofNullable(this.gcfsConfig);
     }
 
     /**
@@ -117,10 +117,10 @@ public final class NodeConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gvnic")
-      private final @Nullable Output<VirtualNICArgs> gvnic;
+    private @Nullable Output<VirtualNICArgs> gvnic;
 
-    public Output<VirtualNICArgs> gvnic() {
-        return this.gvnic == null ? Codegen.empty() : this.gvnic;
+    public Optional<Output<VirtualNICArgs>> gvnic() {
+        return Optional.ofNullable(this.gvnic);
     }
 
     /**
@@ -128,10 +128,10 @@ public final class NodeConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="imageType")
-      private final @Nullable Output<String> imageType;
+    private @Nullable Output<String> imageType;
 
-    public Output<String> imageType() {
-        return this.imageType == null ? Codegen.empty() : this.imageType;
+    public Optional<Output<String>> imageType() {
+        return Optional.ofNullable(this.imageType);
     }
 
     /**
@@ -139,10 +139,10 @@ public final class NodeConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kubeletConfig")
-      private final @Nullable Output<NodeKubeletConfigArgs> kubeletConfig;
+    private @Nullable Output<NodeKubeletConfigArgs> kubeletConfig;
 
-    public Output<NodeKubeletConfigArgs> kubeletConfig() {
-        return this.kubeletConfig == null ? Codegen.empty() : this.kubeletConfig;
+    public Optional<Output<NodeKubeletConfigArgs>> kubeletConfig() {
+        return Optional.ofNullable(this.kubeletConfig);
     }
 
     /**
@@ -150,10 +150,10 @@ public final class NodeConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -161,10 +161,10 @@ public final class NodeConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="linuxNodeConfig")
-      private final @Nullable Output<LinuxNodeConfigArgs> linuxNodeConfig;
+    private @Nullable Output<LinuxNodeConfigArgs> linuxNodeConfig;
 
-    public Output<LinuxNodeConfigArgs> linuxNodeConfig() {
-        return this.linuxNodeConfig == null ? Codegen.empty() : this.linuxNodeConfig;
+    public Optional<Output<LinuxNodeConfigArgs>> linuxNodeConfig() {
+        return Optional.ofNullable(this.linuxNodeConfig);
     }
 
     /**
@@ -172,10 +172,10 @@ public final class NodeConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="localSsdCount")
-      private final @Nullable Output<Integer> localSsdCount;
+    private @Nullable Output<Integer> localSsdCount;
 
-    public Output<Integer> localSsdCount() {
-        return this.localSsdCount == null ? Codegen.empty() : this.localSsdCount;
+    public Optional<Output<Integer>> localSsdCount() {
+        return Optional.ofNullable(this.localSsdCount);
     }
 
     /**
@@ -183,10 +183,10 @@ public final class NodeConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="machineType")
-      private final @Nullable Output<String> machineType;
+    private @Nullable Output<String> machineType;
 
-    public Output<String> machineType() {
-        return this.machineType == null ? Codegen.empty() : this.machineType;
+    public Optional<Output<String>> machineType() {
+        return Optional.ofNullable(this.machineType);
     }
 
     /**
@@ -194,10 +194,10 @@ public final class NodeConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<Map<String,String>> metadata;
+    private @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<Map<String,String>>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -205,10 +205,10 @@ public final class NodeConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="minCpuPlatform")
-      private final @Nullable Output<String> minCpuPlatform;
+    private @Nullable Output<String> minCpuPlatform;
 
-    public Output<String> minCpuPlatform() {
-        return this.minCpuPlatform == null ? Codegen.empty() : this.minCpuPlatform;
+    public Optional<Output<String>> minCpuPlatform() {
+        return Optional.ofNullable(this.minCpuPlatform);
     }
 
     /**
@@ -216,10 +216,10 @@ public final class NodeConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodeGroup")
-      private final @Nullable Output<String> nodeGroup;
+    private @Nullable Output<String> nodeGroup;
 
-    public Output<String> nodeGroup() {
-        return this.nodeGroup == null ? Codegen.empty() : this.nodeGroup;
+    public Optional<Output<String>> nodeGroup() {
+        return Optional.ofNullable(this.nodeGroup);
     }
 
     /**
@@ -227,10 +227,10 @@ public final class NodeConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="oauthScopes")
-      private final @Nullable Output<List<String>> oauthScopes;
+    private @Nullable Output<List<String>> oauthScopes;
 
-    public Output<List<String>> oauthScopes() {
-        return this.oauthScopes == null ? Codegen.empty() : this.oauthScopes;
+    public Optional<Output<List<String>>> oauthScopes() {
+        return Optional.ofNullable(this.oauthScopes);
     }
 
     /**
@@ -238,10 +238,10 @@ public final class NodeConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="preemptible")
-      private final @Nullable Output<Boolean> preemptible;
+    private @Nullable Output<Boolean> preemptible;
 
-    public Output<Boolean> preemptible() {
-        return this.preemptible == null ? Codegen.empty() : this.preemptible;
+    public Optional<Output<Boolean>> preemptible() {
+        return Optional.ofNullable(this.preemptible);
     }
 
     /**
@@ -249,10 +249,10 @@ public final class NodeConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="reservationAffinity")
-      private final @Nullable Output<ReservationAffinityArgs> reservationAffinity;
+    private @Nullable Output<ReservationAffinityArgs> reservationAffinity;
 
-    public Output<ReservationAffinityArgs> reservationAffinity() {
-        return this.reservationAffinity == null ? Codegen.empty() : this.reservationAffinity;
+    public Optional<Output<ReservationAffinityArgs>> reservationAffinity() {
+        return Optional.ofNullable(this.reservationAffinity);
     }
 
     /**
@@ -260,10 +260,10 @@ public final class NodeConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sandboxConfig")
-      private final @Nullable Output<SandboxConfigArgs> sandboxConfig;
+    private @Nullable Output<SandboxConfigArgs> sandboxConfig;
 
-    public Output<SandboxConfigArgs> sandboxConfig() {
-        return this.sandboxConfig == null ? Codegen.empty() : this.sandboxConfig;
+    public Optional<Output<SandboxConfigArgs>> sandboxConfig() {
+        return Optional.ofNullable(this.sandboxConfig);
     }
 
     /**
@@ -271,10 +271,10 @@ public final class NodeConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceAccount")
-      private final @Nullable Output<String> serviceAccount;
+    private @Nullable Output<String> serviceAccount;
 
-    public Output<String> serviceAccount() {
-        return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
+    public Optional<Output<String>> serviceAccount() {
+        return Optional.ofNullable(this.serviceAccount);
     }
 
     /**
@@ -282,10 +282,10 @@ public final class NodeConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="shieldedInstanceConfig")
-      private final @Nullable Output<ShieldedInstanceConfigArgs> shieldedInstanceConfig;
+    private @Nullable Output<ShieldedInstanceConfigArgs> shieldedInstanceConfig;
 
-    public Output<ShieldedInstanceConfigArgs> shieldedInstanceConfig() {
-        return this.shieldedInstanceConfig == null ? Codegen.empty() : this.shieldedInstanceConfig;
+    public Optional<Output<ShieldedInstanceConfigArgs>> shieldedInstanceConfig() {
+        return Optional.ofNullable(this.shieldedInstanceConfig);
     }
 
     /**
@@ -293,10 +293,10 @@ public final class NodeConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="spot")
-      private final @Nullable Output<Boolean> spot;
+    private @Nullable Output<Boolean> spot;
 
-    public Output<Boolean> spot() {
-        return this.spot == null ? Codegen.empty() : this.spot;
+    public Optional<Output<Boolean>> spot() {
+        return Optional.ofNullable(this.spot);
     }
 
     /**
@@ -304,10 +304,10 @@ public final class NodeConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<String>> tags;
+    private @Nullable Output<List<String>> tags;
 
-    public Output<List<String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -315,10 +315,10 @@ public final class NodeConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="taints")
-      private final @Nullable Output<List<NodeTaintArgs>> taints;
+    private @Nullable Output<List<NodeTaintArgs>> taints;
 
-    public Output<List<NodeTaintArgs>> taints() {
-        return this.taints == null ? Codegen.empty() : this.taints;
+    public Optional<Output<List<NodeTaintArgs>>> taints() {
+        return Optional.ofNullable(this.taints);
     }
 
     /**
@@ -326,400 +326,324 @@ public final class NodeConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workloadMetadataConfig")
-      private final @Nullable Output<WorkloadMetadataConfigArgs> workloadMetadataConfig;
+    private @Nullable Output<WorkloadMetadataConfigArgs> workloadMetadataConfig;
 
-    public Output<WorkloadMetadataConfigArgs> workloadMetadataConfig() {
-        return this.workloadMetadataConfig == null ? Codegen.empty() : this.workloadMetadataConfig;
+    public Optional<Output<WorkloadMetadataConfigArgs>> workloadMetadataConfig() {
+        return Optional.ofNullable(this.workloadMetadataConfig);
     }
 
-    public NodeConfigArgs(
-        @Nullable Output<List<AcceleratorConfigArgs>> accelerators,
-        @Nullable Output<AdvancedMachineFeaturesArgs> advancedMachineFeatures,
-        @Nullable Output<String> bootDiskKmsKey,
-        @Nullable Output<Integer> diskSizeGb,
-        @Nullable Output<String> diskType,
-        @Nullable Output<EphemeralStorageConfigArgs> ephemeralStorageConfig,
-        @Nullable Output<GcfsConfigArgs> gcfsConfig,
-        @Nullable Output<VirtualNICArgs> gvnic,
-        @Nullable Output<String> imageType,
-        @Nullable Output<NodeKubeletConfigArgs> kubeletConfig,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<LinuxNodeConfigArgs> linuxNodeConfig,
-        @Nullable Output<Integer> localSsdCount,
-        @Nullable Output<String> machineType,
-        @Nullable Output<Map<String,String>> metadata,
-        @Nullable Output<String> minCpuPlatform,
-        @Nullable Output<String> nodeGroup,
-        @Nullable Output<List<String>> oauthScopes,
-        @Nullable Output<Boolean> preemptible,
-        @Nullable Output<ReservationAffinityArgs> reservationAffinity,
-        @Nullable Output<SandboxConfigArgs> sandboxConfig,
-        @Nullable Output<String> serviceAccount,
-        @Nullable Output<ShieldedInstanceConfigArgs> shieldedInstanceConfig,
-        @Nullable Output<Boolean> spot,
-        @Nullable Output<List<String>> tags,
-        @Nullable Output<List<NodeTaintArgs>> taints,
-        @Nullable Output<WorkloadMetadataConfigArgs> workloadMetadataConfig) {
-        this.accelerators = accelerators;
-        this.advancedMachineFeatures = advancedMachineFeatures;
-        this.bootDiskKmsKey = bootDiskKmsKey;
-        this.diskSizeGb = diskSizeGb;
-        this.diskType = diskType;
-        this.ephemeralStorageConfig = ephemeralStorageConfig;
-        this.gcfsConfig = gcfsConfig;
-        this.gvnic = gvnic;
-        this.imageType = imageType;
-        this.kubeletConfig = kubeletConfig;
-        this.labels = labels;
-        this.linuxNodeConfig = linuxNodeConfig;
-        this.localSsdCount = localSsdCount;
-        this.machineType = machineType;
-        this.metadata = metadata;
-        this.minCpuPlatform = minCpuPlatform;
-        this.nodeGroup = nodeGroup;
-        this.oauthScopes = oauthScopes;
-        this.preemptible = preemptible;
-        this.reservationAffinity = reservationAffinity;
-        this.sandboxConfig = sandboxConfig;
-        this.serviceAccount = serviceAccount;
-        this.shieldedInstanceConfig = shieldedInstanceConfig;
-        this.spot = spot;
-        this.tags = tags;
-        this.taints = taints;
-        this.workloadMetadataConfig = workloadMetadataConfig;
-    }
+    private NodeConfigArgs() {}
 
-    private NodeConfigArgs() {
-        this.accelerators = Codegen.empty();
-        this.advancedMachineFeatures = Codegen.empty();
-        this.bootDiskKmsKey = Codegen.empty();
-        this.diskSizeGb = Codegen.empty();
-        this.diskType = Codegen.empty();
-        this.ephemeralStorageConfig = Codegen.empty();
-        this.gcfsConfig = Codegen.empty();
-        this.gvnic = Codegen.empty();
-        this.imageType = Codegen.empty();
-        this.kubeletConfig = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.linuxNodeConfig = Codegen.empty();
-        this.localSsdCount = Codegen.empty();
-        this.machineType = Codegen.empty();
-        this.metadata = Codegen.empty();
-        this.minCpuPlatform = Codegen.empty();
-        this.nodeGroup = Codegen.empty();
-        this.oauthScopes = Codegen.empty();
-        this.preemptible = Codegen.empty();
-        this.reservationAffinity = Codegen.empty();
-        this.sandboxConfig = Codegen.empty();
-        this.serviceAccount = Codegen.empty();
-        this.shieldedInstanceConfig = Codegen.empty();
-        this.spot = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.taints = Codegen.empty();
-        this.workloadMetadataConfig = Codegen.empty();
+    private NodeConfigArgs(NodeConfigArgs $) {
+        this.accelerators = $.accelerators;
+        this.advancedMachineFeatures = $.advancedMachineFeatures;
+        this.bootDiskKmsKey = $.bootDiskKmsKey;
+        this.diskSizeGb = $.diskSizeGb;
+        this.diskType = $.diskType;
+        this.ephemeralStorageConfig = $.ephemeralStorageConfig;
+        this.gcfsConfig = $.gcfsConfig;
+        this.gvnic = $.gvnic;
+        this.imageType = $.imageType;
+        this.kubeletConfig = $.kubeletConfig;
+        this.labels = $.labels;
+        this.linuxNodeConfig = $.linuxNodeConfig;
+        this.localSsdCount = $.localSsdCount;
+        this.machineType = $.machineType;
+        this.metadata = $.metadata;
+        this.minCpuPlatform = $.minCpuPlatform;
+        this.nodeGroup = $.nodeGroup;
+        this.oauthScopes = $.oauthScopes;
+        this.preemptible = $.preemptible;
+        this.reservationAffinity = $.reservationAffinity;
+        this.sandboxConfig = $.sandboxConfig;
+        this.serviceAccount = $.serviceAccount;
+        this.shieldedInstanceConfig = $.shieldedInstanceConfig;
+        this.spot = $.spot;
+        this.tags = $.tags;
+        this.taints = $.taints;
+        this.workloadMetadataConfig = $.workloadMetadataConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodeConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<AcceleratorConfigArgs>> accelerators;
-        private @Nullable Output<AdvancedMachineFeaturesArgs> advancedMachineFeatures;
-        private @Nullable Output<String> bootDiskKmsKey;
-        private @Nullable Output<Integer> diskSizeGb;
-        private @Nullable Output<String> diskType;
-        private @Nullable Output<EphemeralStorageConfigArgs> ephemeralStorageConfig;
-        private @Nullable Output<GcfsConfigArgs> gcfsConfig;
-        private @Nullable Output<VirtualNICArgs> gvnic;
-        private @Nullable Output<String> imageType;
-        private @Nullable Output<NodeKubeletConfigArgs> kubeletConfig;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<LinuxNodeConfigArgs> linuxNodeConfig;
-        private @Nullable Output<Integer> localSsdCount;
-        private @Nullable Output<String> machineType;
-        private @Nullable Output<Map<String,String>> metadata;
-        private @Nullable Output<String> minCpuPlatform;
-        private @Nullable Output<String> nodeGroup;
-        private @Nullable Output<List<String>> oauthScopes;
-        private @Nullable Output<Boolean> preemptible;
-        private @Nullable Output<ReservationAffinityArgs> reservationAffinity;
-        private @Nullable Output<SandboxConfigArgs> sandboxConfig;
-        private @Nullable Output<String> serviceAccount;
-        private @Nullable Output<ShieldedInstanceConfigArgs> shieldedInstanceConfig;
-        private @Nullable Output<Boolean> spot;
-        private @Nullable Output<List<String>> tags;
-        private @Nullable Output<List<NodeTaintArgs>> taints;
-        private @Nullable Output<WorkloadMetadataConfigArgs> workloadMetadataConfig;
+        private NodeConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodeConfigArgs();
         }
 
         public Builder(NodeConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accelerators = defaults.accelerators;
-    	      this.advancedMachineFeatures = defaults.advancedMachineFeatures;
-    	      this.bootDiskKmsKey = defaults.bootDiskKmsKey;
-    	      this.diskSizeGb = defaults.diskSizeGb;
-    	      this.diskType = defaults.diskType;
-    	      this.ephemeralStorageConfig = defaults.ephemeralStorageConfig;
-    	      this.gcfsConfig = defaults.gcfsConfig;
-    	      this.gvnic = defaults.gvnic;
-    	      this.imageType = defaults.imageType;
-    	      this.kubeletConfig = defaults.kubeletConfig;
-    	      this.labels = defaults.labels;
-    	      this.linuxNodeConfig = defaults.linuxNodeConfig;
-    	      this.localSsdCount = defaults.localSsdCount;
-    	      this.machineType = defaults.machineType;
-    	      this.metadata = defaults.metadata;
-    	      this.minCpuPlatform = defaults.minCpuPlatform;
-    	      this.nodeGroup = defaults.nodeGroup;
-    	      this.oauthScopes = defaults.oauthScopes;
-    	      this.preemptible = defaults.preemptible;
-    	      this.reservationAffinity = defaults.reservationAffinity;
-    	      this.sandboxConfig = defaults.sandboxConfig;
-    	      this.serviceAccount = defaults.serviceAccount;
-    	      this.shieldedInstanceConfig = defaults.shieldedInstanceConfig;
-    	      this.spot = defaults.spot;
-    	      this.tags = defaults.tags;
-    	      this.taints = defaults.taints;
-    	      this.workloadMetadataConfig = defaults.workloadMetadataConfig;
+            $ = new NodeConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accelerators(@Nullable Output<List<AcceleratorConfigArgs>> accelerators) {
-            this.accelerators = accelerators;
+            $.accelerators = accelerators;
             return this;
         }
-        public Builder accelerators(@Nullable List<AcceleratorConfigArgs> accelerators) {
-            this.accelerators = Codegen.ofNullable(accelerators);
-            return this;
+
+        public Builder accelerators(List<AcceleratorConfigArgs> accelerators) {
+            return accelerators(Output.of(accelerators));
         }
+
         public Builder accelerators(AcceleratorConfigArgs... accelerators) {
             return accelerators(List.of(accelerators));
         }
+
         public Builder advancedMachineFeatures(@Nullable Output<AdvancedMachineFeaturesArgs> advancedMachineFeatures) {
-            this.advancedMachineFeatures = advancedMachineFeatures;
+            $.advancedMachineFeatures = advancedMachineFeatures;
             return this;
         }
-        public Builder advancedMachineFeatures(@Nullable AdvancedMachineFeaturesArgs advancedMachineFeatures) {
-            this.advancedMachineFeatures = Codegen.ofNullable(advancedMachineFeatures);
-            return this;
+
+        public Builder advancedMachineFeatures(AdvancedMachineFeaturesArgs advancedMachineFeatures) {
+            return advancedMachineFeatures(Output.of(advancedMachineFeatures));
         }
+
         public Builder bootDiskKmsKey(@Nullable Output<String> bootDiskKmsKey) {
-            this.bootDiskKmsKey = bootDiskKmsKey;
+            $.bootDiskKmsKey = bootDiskKmsKey;
             return this;
         }
-        public Builder bootDiskKmsKey(@Nullable String bootDiskKmsKey) {
-            this.bootDiskKmsKey = Codegen.ofNullable(bootDiskKmsKey);
-            return this;
+
+        public Builder bootDiskKmsKey(String bootDiskKmsKey) {
+            return bootDiskKmsKey(Output.of(bootDiskKmsKey));
         }
+
         public Builder diskSizeGb(@Nullable Output<Integer> diskSizeGb) {
-            this.diskSizeGb = diskSizeGb;
+            $.diskSizeGb = diskSizeGb;
             return this;
         }
-        public Builder diskSizeGb(@Nullable Integer diskSizeGb) {
-            this.diskSizeGb = Codegen.ofNullable(diskSizeGb);
-            return this;
+
+        public Builder diskSizeGb(Integer diskSizeGb) {
+            return diskSizeGb(Output.of(diskSizeGb));
         }
+
         public Builder diskType(@Nullable Output<String> diskType) {
-            this.diskType = diskType;
+            $.diskType = diskType;
             return this;
         }
-        public Builder diskType(@Nullable String diskType) {
-            this.diskType = Codegen.ofNullable(diskType);
-            return this;
+
+        public Builder diskType(String diskType) {
+            return diskType(Output.of(diskType));
         }
+
         public Builder ephemeralStorageConfig(@Nullable Output<EphemeralStorageConfigArgs> ephemeralStorageConfig) {
-            this.ephemeralStorageConfig = ephemeralStorageConfig;
+            $.ephemeralStorageConfig = ephemeralStorageConfig;
             return this;
         }
-        public Builder ephemeralStorageConfig(@Nullable EphemeralStorageConfigArgs ephemeralStorageConfig) {
-            this.ephemeralStorageConfig = Codegen.ofNullable(ephemeralStorageConfig);
-            return this;
+
+        public Builder ephemeralStorageConfig(EphemeralStorageConfigArgs ephemeralStorageConfig) {
+            return ephemeralStorageConfig(Output.of(ephemeralStorageConfig));
         }
+
         public Builder gcfsConfig(@Nullable Output<GcfsConfigArgs> gcfsConfig) {
-            this.gcfsConfig = gcfsConfig;
+            $.gcfsConfig = gcfsConfig;
             return this;
         }
-        public Builder gcfsConfig(@Nullable GcfsConfigArgs gcfsConfig) {
-            this.gcfsConfig = Codegen.ofNullable(gcfsConfig);
-            return this;
+
+        public Builder gcfsConfig(GcfsConfigArgs gcfsConfig) {
+            return gcfsConfig(Output.of(gcfsConfig));
         }
+
         public Builder gvnic(@Nullable Output<VirtualNICArgs> gvnic) {
-            this.gvnic = gvnic;
+            $.gvnic = gvnic;
             return this;
         }
-        public Builder gvnic(@Nullable VirtualNICArgs gvnic) {
-            this.gvnic = Codegen.ofNullable(gvnic);
-            return this;
+
+        public Builder gvnic(VirtualNICArgs gvnic) {
+            return gvnic(Output.of(gvnic));
         }
+
         public Builder imageType(@Nullable Output<String> imageType) {
-            this.imageType = imageType;
+            $.imageType = imageType;
             return this;
         }
-        public Builder imageType(@Nullable String imageType) {
-            this.imageType = Codegen.ofNullable(imageType);
-            return this;
+
+        public Builder imageType(String imageType) {
+            return imageType(Output.of(imageType));
         }
+
         public Builder kubeletConfig(@Nullable Output<NodeKubeletConfigArgs> kubeletConfig) {
-            this.kubeletConfig = kubeletConfig;
+            $.kubeletConfig = kubeletConfig;
             return this;
         }
-        public Builder kubeletConfig(@Nullable NodeKubeletConfigArgs kubeletConfig) {
-            this.kubeletConfig = Codegen.ofNullable(kubeletConfig);
-            return this;
+
+        public Builder kubeletConfig(NodeKubeletConfigArgs kubeletConfig) {
+            return kubeletConfig(Output.of(kubeletConfig));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder linuxNodeConfig(@Nullable Output<LinuxNodeConfigArgs> linuxNodeConfig) {
-            this.linuxNodeConfig = linuxNodeConfig;
+            $.linuxNodeConfig = linuxNodeConfig;
             return this;
         }
-        public Builder linuxNodeConfig(@Nullable LinuxNodeConfigArgs linuxNodeConfig) {
-            this.linuxNodeConfig = Codegen.ofNullable(linuxNodeConfig);
-            return this;
+
+        public Builder linuxNodeConfig(LinuxNodeConfigArgs linuxNodeConfig) {
+            return linuxNodeConfig(Output.of(linuxNodeConfig));
         }
+
         public Builder localSsdCount(@Nullable Output<Integer> localSsdCount) {
-            this.localSsdCount = localSsdCount;
+            $.localSsdCount = localSsdCount;
             return this;
         }
-        public Builder localSsdCount(@Nullable Integer localSsdCount) {
-            this.localSsdCount = Codegen.ofNullable(localSsdCount);
-            return this;
+
+        public Builder localSsdCount(Integer localSsdCount) {
+            return localSsdCount(Output.of(localSsdCount));
         }
+
         public Builder machineType(@Nullable Output<String> machineType) {
-            this.machineType = machineType;
+            $.machineType = machineType;
             return this;
         }
-        public Builder machineType(@Nullable String machineType) {
-            this.machineType = Codegen.ofNullable(machineType);
-            return this;
+
+        public Builder machineType(String machineType) {
+            return machineType(Output.of(machineType));
         }
+
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(Map<String,String> metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder minCpuPlatform(@Nullable Output<String> minCpuPlatform) {
-            this.minCpuPlatform = minCpuPlatform;
+            $.minCpuPlatform = minCpuPlatform;
             return this;
         }
-        public Builder minCpuPlatform(@Nullable String minCpuPlatform) {
-            this.minCpuPlatform = Codegen.ofNullable(minCpuPlatform);
-            return this;
+
+        public Builder minCpuPlatform(String minCpuPlatform) {
+            return minCpuPlatform(Output.of(minCpuPlatform));
         }
+
         public Builder nodeGroup(@Nullable Output<String> nodeGroup) {
-            this.nodeGroup = nodeGroup;
+            $.nodeGroup = nodeGroup;
             return this;
         }
-        public Builder nodeGroup(@Nullable String nodeGroup) {
-            this.nodeGroup = Codegen.ofNullable(nodeGroup);
-            return this;
+
+        public Builder nodeGroup(String nodeGroup) {
+            return nodeGroup(Output.of(nodeGroup));
         }
+
         public Builder oauthScopes(@Nullable Output<List<String>> oauthScopes) {
-            this.oauthScopes = oauthScopes;
+            $.oauthScopes = oauthScopes;
             return this;
         }
-        public Builder oauthScopes(@Nullable List<String> oauthScopes) {
-            this.oauthScopes = Codegen.ofNullable(oauthScopes);
-            return this;
+
+        public Builder oauthScopes(List<String> oauthScopes) {
+            return oauthScopes(Output.of(oauthScopes));
         }
+
         public Builder oauthScopes(String... oauthScopes) {
             return oauthScopes(List.of(oauthScopes));
         }
+
         public Builder preemptible(@Nullable Output<Boolean> preemptible) {
-            this.preemptible = preemptible;
+            $.preemptible = preemptible;
             return this;
         }
-        public Builder preemptible(@Nullable Boolean preemptible) {
-            this.preemptible = Codegen.ofNullable(preemptible);
-            return this;
+
+        public Builder preemptible(Boolean preemptible) {
+            return preemptible(Output.of(preemptible));
         }
+
         public Builder reservationAffinity(@Nullable Output<ReservationAffinityArgs> reservationAffinity) {
-            this.reservationAffinity = reservationAffinity;
+            $.reservationAffinity = reservationAffinity;
             return this;
         }
-        public Builder reservationAffinity(@Nullable ReservationAffinityArgs reservationAffinity) {
-            this.reservationAffinity = Codegen.ofNullable(reservationAffinity);
-            return this;
+
+        public Builder reservationAffinity(ReservationAffinityArgs reservationAffinity) {
+            return reservationAffinity(Output.of(reservationAffinity));
         }
+
         public Builder sandboxConfig(@Nullable Output<SandboxConfigArgs> sandboxConfig) {
-            this.sandboxConfig = sandboxConfig;
+            $.sandboxConfig = sandboxConfig;
             return this;
         }
-        public Builder sandboxConfig(@Nullable SandboxConfigArgs sandboxConfig) {
-            this.sandboxConfig = Codegen.ofNullable(sandboxConfig);
-            return this;
+
+        public Builder sandboxConfig(SandboxConfigArgs sandboxConfig) {
+            return sandboxConfig(Output.of(sandboxConfig));
         }
+
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
-            this.serviceAccount = serviceAccount;
+            $.serviceAccount = serviceAccount;
             return this;
         }
-        public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Codegen.ofNullable(serviceAccount);
-            return this;
+
+        public Builder serviceAccount(String serviceAccount) {
+            return serviceAccount(Output.of(serviceAccount));
         }
+
         public Builder shieldedInstanceConfig(@Nullable Output<ShieldedInstanceConfigArgs> shieldedInstanceConfig) {
-            this.shieldedInstanceConfig = shieldedInstanceConfig;
+            $.shieldedInstanceConfig = shieldedInstanceConfig;
             return this;
         }
-        public Builder shieldedInstanceConfig(@Nullable ShieldedInstanceConfigArgs shieldedInstanceConfig) {
-            this.shieldedInstanceConfig = Codegen.ofNullable(shieldedInstanceConfig);
-            return this;
+
+        public Builder shieldedInstanceConfig(ShieldedInstanceConfigArgs shieldedInstanceConfig) {
+            return shieldedInstanceConfig(Output.of(shieldedInstanceConfig));
         }
+
         public Builder spot(@Nullable Output<Boolean> spot) {
-            this.spot = spot;
+            $.spot = spot;
             return this;
         }
-        public Builder spot(@Nullable Boolean spot) {
-            this.spot = Codegen.ofNullable(spot);
-            return this;
+
+        public Builder spot(Boolean spot) {
+            return spot(Output.of(spot));
         }
+
         public Builder tags(@Nullable Output<List<String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(String... tags) {
             return tags(List.of(tags));
         }
+
         public Builder taints(@Nullable Output<List<NodeTaintArgs>> taints) {
-            this.taints = taints;
+            $.taints = taints;
             return this;
         }
-        public Builder taints(@Nullable List<NodeTaintArgs> taints) {
-            this.taints = Codegen.ofNullable(taints);
-            return this;
+
+        public Builder taints(List<NodeTaintArgs> taints) {
+            return taints(Output.of(taints));
         }
+
         public Builder taints(NodeTaintArgs... taints) {
             return taints(List.of(taints));
         }
+
         public Builder workloadMetadataConfig(@Nullable Output<WorkloadMetadataConfigArgs> workloadMetadataConfig) {
-            this.workloadMetadataConfig = workloadMetadataConfig;
+            $.workloadMetadataConfig = workloadMetadataConfig;
             return this;
         }
-        public Builder workloadMetadataConfig(@Nullable WorkloadMetadataConfigArgs workloadMetadataConfig) {
-            this.workloadMetadataConfig = Codegen.ofNullable(workloadMetadataConfig);
-            return this;
-        }        public NodeConfigArgs build() {
-            return new NodeConfigArgs(accelerators, advancedMachineFeatures, bootDiskKmsKey, diskSizeGb, diskType, ephemeralStorageConfig, gcfsConfig, gvnic, imageType, kubeletConfig, labels, linuxNodeConfig, localSsdCount, machineType, metadata, minCpuPlatform, nodeGroup, oauthScopes, preemptible, reservationAffinity, sandboxConfig, serviceAccount, shieldedInstanceConfig, spot, tags, taints, workloadMetadataConfig);
+
+        public Builder workloadMetadataConfig(WorkloadMetadataConfigArgs workloadMetadataConfig) {
+            return workloadMetadataConfig(Output.of(workloadMetadataConfig));
+        }
+
+        public NodeConfigArgs build() {
+            return $;
         }
     }
+
 }

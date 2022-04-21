@@ -23,45 +23,44 @@ public final class BlockchainMemberNodesSkuResponse extends com.pulumi.resources
      * 
      */
     @Import(name="capacity")
-      private final @Nullable Integer capacity;
+    private @Nullable Integer capacity;
 
     public Optional<Integer> capacity() {
-        return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
+        return Optional.ofNullable(this.capacity);
     }
 
-    public BlockchainMemberNodesSkuResponse(@Nullable Integer capacity) {
-        this.capacity = capacity;
-    }
+    private BlockchainMemberNodesSkuResponse() {}
 
-    private BlockchainMemberNodesSkuResponse() {
-        this.capacity = null;
+    private BlockchainMemberNodesSkuResponse(BlockchainMemberNodesSkuResponse $) {
+        this.capacity = $.capacity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BlockchainMemberNodesSkuResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer capacity;
+        private BlockchainMemberNodesSkuResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BlockchainMemberNodesSkuResponse();
         }
 
         public Builder(BlockchainMemberNodesSkuResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacity = defaults.capacity;
+            $ = new BlockchainMemberNodesSkuResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder capacity(@Nullable Integer capacity) {
-            this.capacity = capacity;
+            $.capacity = capacity;
             return this;
-        }        public BlockchainMemberNodesSkuResponse build() {
-            return new BlockchainMemberNodesSkuResponse(capacity);
+        }
+
+        public BlockchainMemberNodesSkuResponse build() {
+            return $;
         }
     }
+
 }

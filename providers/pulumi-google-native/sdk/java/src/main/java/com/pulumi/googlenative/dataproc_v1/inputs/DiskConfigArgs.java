@@ -5,10 +5,10 @@ package com.pulumi.googlenative.dataproc_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class DiskConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bootDiskSizeGb")
-      private final @Nullable Output<Integer> bootDiskSizeGb;
+    private @Nullable Output<Integer> bootDiskSizeGb;
 
-    public Output<Integer> bootDiskSizeGb() {
-        return this.bootDiskSizeGb == null ? Codegen.empty() : this.bootDiskSizeGb;
+    public Optional<Output<Integer>> bootDiskSizeGb() {
+        return Optional.ofNullable(this.bootDiskSizeGb);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class DiskConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bootDiskType")
-      private final @Nullable Output<String> bootDiskType;
+    private @Nullable Output<String> bootDiskType;
 
-    public Output<String> bootDiskType() {
-        return this.bootDiskType == null ? Codegen.empty() : this.bootDiskType;
+    public Optional<Output<String>> bootDiskType() {
+        return Optional.ofNullable(this.bootDiskType);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class DiskConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="localSsdInterface")
-      private final @Nullable Output<String> localSsdInterface;
+    private @Nullable Output<String> localSsdInterface;
 
-    public Output<String> localSsdInterface() {
-        return this.localSsdInterface == null ? Codegen.empty() : this.localSsdInterface;
+    public Optional<Output<String>> localSsdInterface() {
+        return Optional.ofNullable(this.localSsdInterface);
     }
 
     /**
@@ -58,89 +58,78 @@ public final class DiskConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="numLocalSsds")
-      private final @Nullable Output<Integer> numLocalSsds;
+    private @Nullable Output<Integer> numLocalSsds;
 
-    public Output<Integer> numLocalSsds() {
-        return this.numLocalSsds == null ? Codegen.empty() : this.numLocalSsds;
+    public Optional<Output<Integer>> numLocalSsds() {
+        return Optional.ofNullable(this.numLocalSsds);
     }
 
-    public DiskConfigArgs(
-        @Nullable Output<Integer> bootDiskSizeGb,
-        @Nullable Output<String> bootDiskType,
-        @Nullable Output<String> localSsdInterface,
-        @Nullable Output<Integer> numLocalSsds) {
-        this.bootDiskSizeGb = bootDiskSizeGb;
-        this.bootDiskType = bootDiskType;
-        this.localSsdInterface = localSsdInterface;
-        this.numLocalSsds = numLocalSsds;
-    }
+    private DiskConfigArgs() {}
 
-    private DiskConfigArgs() {
-        this.bootDiskSizeGb = Codegen.empty();
-        this.bootDiskType = Codegen.empty();
-        this.localSsdInterface = Codegen.empty();
-        this.numLocalSsds = Codegen.empty();
+    private DiskConfigArgs(DiskConfigArgs $) {
+        this.bootDiskSizeGb = $.bootDiskSizeGb;
+        this.bootDiskType = $.bootDiskType;
+        this.localSsdInterface = $.localSsdInterface;
+        this.numLocalSsds = $.numLocalSsds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiskConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> bootDiskSizeGb;
-        private @Nullable Output<String> bootDiskType;
-        private @Nullable Output<String> localSsdInterface;
-        private @Nullable Output<Integer> numLocalSsds;
+        private DiskConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiskConfigArgs();
         }
 
         public Builder(DiskConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bootDiskSizeGb = defaults.bootDiskSizeGb;
-    	      this.bootDiskType = defaults.bootDiskType;
-    	      this.localSsdInterface = defaults.localSsdInterface;
-    	      this.numLocalSsds = defaults.numLocalSsds;
+            $ = new DiskConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bootDiskSizeGb(@Nullable Output<Integer> bootDiskSizeGb) {
-            this.bootDiskSizeGb = bootDiskSizeGb;
+            $.bootDiskSizeGb = bootDiskSizeGb;
             return this;
         }
-        public Builder bootDiskSizeGb(@Nullable Integer bootDiskSizeGb) {
-            this.bootDiskSizeGb = Codegen.ofNullable(bootDiskSizeGb);
-            return this;
+
+        public Builder bootDiskSizeGb(Integer bootDiskSizeGb) {
+            return bootDiskSizeGb(Output.of(bootDiskSizeGb));
         }
+
         public Builder bootDiskType(@Nullable Output<String> bootDiskType) {
-            this.bootDiskType = bootDiskType;
+            $.bootDiskType = bootDiskType;
             return this;
         }
-        public Builder bootDiskType(@Nullable String bootDiskType) {
-            this.bootDiskType = Codegen.ofNullable(bootDiskType);
-            return this;
+
+        public Builder bootDiskType(String bootDiskType) {
+            return bootDiskType(Output.of(bootDiskType));
         }
+
         public Builder localSsdInterface(@Nullable Output<String> localSsdInterface) {
-            this.localSsdInterface = localSsdInterface;
+            $.localSsdInterface = localSsdInterface;
             return this;
         }
-        public Builder localSsdInterface(@Nullable String localSsdInterface) {
-            this.localSsdInterface = Codegen.ofNullable(localSsdInterface);
-            return this;
+
+        public Builder localSsdInterface(String localSsdInterface) {
+            return localSsdInterface(Output.of(localSsdInterface));
         }
+
         public Builder numLocalSsds(@Nullable Output<Integer> numLocalSsds) {
-            this.numLocalSsds = numLocalSsds;
+            $.numLocalSsds = numLocalSsds;
             return this;
         }
-        public Builder numLocalSsds(@Nullable Integer numLocalSsds) {
-            this.numLocalSsds = Codegen.ofNullable(numLocalSsds);
-            return this;
-        }        public DiskConfigArgs build() {
-            return new DiskConfigArgs(bootDiskSizeGb, bootDiskType, localSsdInterface, numLocalSsds);
+
+        public Builder numLocalSsds(Integer numLocalSsds) {
+            return numLocalSsds(Output.of(numLocalSsds));
+        }
+
+        public DiskConfigArgs build() {
+            return $;
         }
     }
+
 }

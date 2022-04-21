@@ -12,6 +12,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +25,7 @@ public final class IoTHubEventSourceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="consumerGroupName", required=true)
-      private final Output<String> consumerGroupName;
+    private Output<String> consumerGroupName;
 
     public Output<String> consumerGroupName() {
         return this.consumerGroupName;
@@ -35,7 +36,7 @@ public final class IoTHubEventSourceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="environmentName", required=true)
-      private final Output<String> environmentName;
+    private Output<String> environmentName;
 
     public Output<String> environmentName() {
         return this.environmentName;
@@ -46,10 +47,10 @@ public final class IoTHubEventSourceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="eventSourceName")
-      private final @Nullable Output<String> eventSourceName;
+    private @Nullable Output<String> eventSourceName;
 
-    public Output<String> eventSourceName() {
-        return this.eventSourceName == null ? Codegen.empty() : this.eventSourceName;
+    public Optional<Output<String>> eventSourceName() {
+        return Optional.ofNullable(this.eventSourceName);
     }
 
     /**
@@ -57,7 +58,7 @@ public final class IoTHubEventSourceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="eventSourceResourceId", required=true)
-      private final Output<String> eventSourceResourceId;
+    private Output<String> eventSourceResourceId;
 
     public Output<String> eventSourceResourceId() {
         return this.eventSourceResourceId;
@@ -68,7 +69,7 @@ public final class IoTHubEventSourceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="iotHubName", required=true)
-      private final Output<String> iotHubName;
+    private Output<String> iotHubName;
 
     public Output<String> iotHubName() {
         return this.iotHubName;
@@ -79,7 +80,7 @@ public final class IoTHubEventSourceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="keyName", required=true)
-      private final Output<String> keyName;
+    private Output<String> keyName;
 
     public Output<String> keyName() {
         return this.keyName;
@@ -91,7 +92,7 @@ public final class IoTHubEventSourceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="kind", required=true)
-      private final Output<String> kind;
+    private Output<String> kind;
 
     public Output<String> kind() {
         return this.kind;
@@ -102,10 +103,10 @@ public final class IoTHubEventSourceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="localTimestamp")
-      private final @Nullable Output<LocalTimestampArgs> localTimestamp;
+    private @Nullable Output<LocalTimestampArgs> localTimestamp;
 
-    public Output<LocalTimestampArgs> localTimestamp() {
-        return this.localTimestamp == null ? Codegen.empty() : this.localTimestamp;
+    public Optional<Output<LocalTimestampArgs>> localTimestamp() {
+        return Optional.ofNullable(this.localTimestamp);
     }
 
     /**
@@ -113,10 +114,10 @@ public final class IoTHubEventSourceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -124,7 +125,7 @@ public final class IoTHubEventSourceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -135,7 +136,7 @@ public final class IoTHubEventSourceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="sharedAccessKey", required=true)
-      private final Output<String> sharedAccessKey;
+    private Output<String> sharedAccessKey;
 
     public Output<String> sharedAccessKey() {
         return this.sharedAccessKey;
@@ -146,10 +147,10 @@ public final class IoTHubEventSourceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -157,10 +158,10 @@ public final class IoTHubEventSourceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="time")
-      private final @Nullable Output<String> time;
+    private @Nullable Output<String> time;
 
-    public Output<String> time() {
-        return this.time == null ? Codegen.empty() : this.time;
+    public Optional<Output<String>> time() {
+        return Optional.ofNullable(this.time);
     }
 
     /**
@@ -168,10 +169,10 @@ public final class IoTHubEventSourceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="timestampPropertyName")
-      private final @Nullable Output<String> timestampPropertyName;
+    private @Nullable Output<String> timestampPropertyName;
 
-    public Output<String> timestampPropertyName() {
-        return this.timestampPropertyName == null ? Codegen.empty() : this.timestampPropertyName;
+    public Optional<Output<String>> timestampPropertyName() {
+        return Optional.ofNullable(this.timestampPropertyName);
     }
 
     /**
@@ -179,232 +180,196 @@ public final class IoTHubEventSourceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<Either<String,IngressStartAtType>> type;
+    private @Nullable Output<Either<String,IngressStartAtType>> type;
 
-    public Output<Either<String,IngressStartAtType>> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<Either<String,IngressStartAtType>>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public IoTHubEventSourceArgs(
-        Output<String> consumerGroupName,
-        Output<String> environmentName,
-        @Nullable Output<String> eventSourceName,
-        Output<String> eventSourceResourceId,
-        Output<String> iotHubName,
-        Output<String> keyName,
-        Output<String> kind,
-        @Nullable Output<LocalTimestampArgs> localTimestamp,
-        @Nullable Output<String> location,
-        Output<String> resourceGroupName,
-        Output<String> sharedAccessKey,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<String> time,
-        @Nullable Output<String> timestampPropertyName,
-        @Nullable Output<Either<String,IngressStartAtType>> type) {
-        this.consumerGroupName = Objects.requireNonNull(consumerGroupName, "expected parameter 'consumerGroupName' to be non-null");
-        this.environmentName = Objects.requireNonNull(environmentName, "expected parameter 'environmentName' to be non-null");
-        this.eventSourceName = eventSourceName;
-        this.eventSourceResourceId = Objects.requireNonNull(eventSourceResourceId, "expected parameter 'eventSourceResourceId' to be non-null");
-        this.iotHubName = Objects.requireNonNull(iotHubName, "expected parameter 'iotHubName' to be non-null");
-        this.keyName = Objects.requireNonNull(keyName, "expected parameter 'keyName' to be non-null");
-        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
-        this.localTimestamp = localTimestamp;
-        this.location = location;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sharedAccessKey = Objects.requireNonNull(sharedAccessKey, "expected parameter 'sharedAccessKey' to be non-null");
-        this.tags = tags;
-        this.time = time;
-        this.timestampPropertyName = timestampPropertyName;
-        this.type = type;
-    }
+    private IoTHubEventSourceArgs() {}
 
-    private IoTHubEventSourceArgs() {
-        this.consumerGroupName = Codegen.empty();
-        this.environmentName = Codegen.empty();
-        this.eventSourceName = Codegen.empty();
-        this.eventSourceResourceId = Codegen.empty();
-        this.iotHubName = Codegen.empty();
-        this.keyName = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.localTimestamp = Codegen.empty();
-        this.location = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.sharedAccessKey = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.time = Codegen.empty();
-        this.timestampPropertyName = Codegen.empty();
-        this.type = Codegen.empty();
+    private IoTHubEventSourceArgs(IoTHubEventSourceArgs $) {
+        this.consumerGroupName = $.consumerGroupName;
+        this.environmentName = $.environmentName;
+        this.eventSourceName = $.eventSourceName;
+        this.eventSourceResourceId = $.eventSourceResourceId;
+        this.iotHubName = $.iotHubName;
+        this.keyName = $.keyName;
+        this.kind = $.kind;
+        this.localTimestamp = $.localTimestamp;
+        this.location = $.location;
+        this.resourceGroupName = $.resourceGroupName;
+        this.sharedAccessKey = $.sharedAccessKey;
+        this.tags = $.tags;
+        this.time = $.time;
+        this.timestampPropertyName = $.timestampPropertyName;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IoTHubEventSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> consumerGroupName;
-        private Output<String> environmentName;
-        private @Nullable Output<String> eventSourceName;
-        private Output<String> eventSourceResourceId;
-        private Output<String> iotHubName;
-        private Output<String> keyName;
-        private Output<String> kind;
-        private @Nullable Output<LocalTimestampArgs> localTimestamp;
-        private @Nullable Output<String> location;
-        private Output<String> resourceGroupName;
-        private Output<String> sharedAccessKey;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<String> time;
-        private @Nullable Output<String> timestampPropertyName;
-        private @Nullable Output<Either<String,IngressStartAtType>> type;
+        private IoTHubEventSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IoTHubEventSourceArgs();
         }
 
         public Builder(IoTHubEventSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.consumerGroupName = defaults.consumerGroupName;
-    	      this.environmentName = defaults.environmentName;
-    	      this.eventSourceName = defaults.eventSourceName;
-    	      this.eventSourceResourceId = defaults.eventSourceResourceId;
-    	      this.iotHubName = defaults.iotHubName;
-    	      this.keyName = defaults.keyName;
-    	      this.kind = defaults.kind;
-    	      this.localTimestamp = defaults.localTimestamp;
-    	      this.location = defaults.location;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sharedAccessKey = defaults.sharedAccessKey;
-    	      this.tags = defaults.tags;
-    	      this.time = defaults.time;
-    	      this.timestampPropertyName = defaults.timestampPropertyName;
-    	      this.type = defaults.type;
+            $ = new IoTHubEventSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder consumerGroupName(Output<String> consumerGroupName) {
-            this.consumerGroupName = Objects.requireNonNull(consumerGroupName);
+            $.consumerGroupName = consumerGroupName;
             return this;
         }
+
         public Builder consumerGroupName(String consumerGroupName) {
-            this.consumerGroupName = Output.of(Objects.requireNonNull(consumerGroupName));
-            return this;
+            return consumerGroupName(Output.of(consumerGroupName));
         }
+
         public Builder environmentName(Output<String> environmentName) {
-            this.environmentName = Objects.requireNonNull(environmentName);
+            $.environmentName = environmentName;
             return this;
         }
+
         public Builder environmentName(String environmentName) {
-            this.environmentName = Output.of(Objects.requireNonNull(environmentName));
-            return this;
+            return environmentName(Output.of(environmentName));
         }
+
         public Builder eventSourceName(@Nullable Output<String> eventSourceName) {
-            this.eventSourceName = eventSourceName;
+            $.eventSourceName = eventSourceName;
             return this;
         }
-        public Builder eventSourceName(@Nullable String eventSourceName) {
-            this.eventSourceName = Codegen.ofNullable(eventSourceName);
-            return this;
+
+        public Builder eventSourceName(String eventSourceName) {
+            return eventSourceName(Output.of(eventSourceName));
         }
+
         public Builder eventSourceResourceId(Output<String> eventSourceResourceId) {
-            this.eventSourceResourceId = Objects.requireNonNull(eventSourceResourceId);
+            $.eventSourceResourceId = eventSourceResourceId;
             return this;
         }
+
         public Builder eventSourceResourceId(String eventSourceResourceId) {
-            this.eventSourceResourceId = Output.of(Objects.requireNonNull(eventSourceResourceId));
-            return this;
+            return eventSourceResourceId(Output.of(eventSourceResourceId));
         }
+
         public Builder iotHubName(Output<String> iotHubName) {
-            this.iotHubName = Objects.requireNonNull(iotHubName);
+            $.iotHubName = iotHubName;
             return this;
         }
+
         public Builder iotHubName(String iotHubName) {
-            this.iotHubName = Output.of(Objects.requireNonNull(iotHubName));
-            return this;
+            return iotHubName(Output.of(iotHubName));
         }
+
         public Builder keyName(Output<String> keyName) {
-            this.keyName = Objects.requireNonNull(keyName);
+            $.keyName = keyName;
             return this;
         }
+
         public Builder keyName(String keyName) {
-            this.keyName = Output.of(Objects.requireNonNull(keyName));
-            return this;
+            return keyName(Output.of(keyName));
         }
+
         public Builder kind(Output<String> kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Output.of(Objects.requireNonNull(kind));
-            return this;
+            return kind(Output.of(kind));
         }
+
         public Builder localTimestamp(@Nullable Output<LocalTimestampArgs> localTimestamp) {
-            this.localTimestamp = localTimestamp;
+            $.localTimestamp = localTimestamp;
             return this;
         }
-        public Builder localTimestamp(@Nullable LocalTimestampArgs localTimestamp) {
-            this.localTimestamp = Codegen.ofNullable(localTimestamp);
-            return this;
+
+        public Builder localTimestamp(LocalTimestampArgs localTimestamp) {
+            return localTimestamp(Output.of(localTimestamp));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder sharedAccessKey(Output<String> sharedAccessKey) {
-            this.sharedAccessKey = Objects.requireNonNull(sharedAccessKey);
+            $.sharedAccessKey = sharedAccessKey;
             return this;
         }
+
         public Builder sharedAccessKey(String sharedAccessKey) {
-            this.sharedAccessKey = Output.of(Objects.requireNonNull(sharedAccessKey));
-            return this;
+            return sharedAccessKey(Output.of(sharedAccessKey));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder time(@Nullable Output<String> time) {
-            this.time = time;
+            $.time = time;
             return this;
         }
-        public Builder time(@Nullable String time) {
-            this.time = Codegen.ofNullable(time);
-            return this;
+
+        public Builder time(String time) {
+            return time(Output.of(time));
         }
+
         public Builder timestampPropertyName(@Nullable Output<String> timestampPropertyName) {
-            this.timestampPropertyName = timestampPropertyName;
+            $.timestampPropertyName = timestampPropertyName;
             return this;
         }
-        public Builder timestampPropertyName(@Nullable String timestampPropertyName) {
-            this.timestampPropertyName = Codegen.ofNullable(timestampPropertyName);
-            return this;
+
+        public Builder timestampPropertyName(String timestampPropertyName) {
+            return timestampPropertyName(Output.of(timestampPropertyName));
         }
+
         public Builder type(@Nullable Output<Either<String,IngressStartAtType>> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable Either<String,IngressStartAtType> type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public IoTHubEventSourceArgs build() {
-            return new IoTHubEventSourceArgs(consumerGroupName, environmentName, eventSourceName, eventSourceResourceId, iotHubName, keyName, kind, localTimestamp, location, resourceGroupName, sharedAccessKey, tags, time, timestampPropertyName, type);
+
+        public Builder type(Either<String,IngressStartAtType> type) {
+            return type(Output.of(type));
+        }
+
+        public IoTHubEventSourceArgs build() {
+            $.consumerGroupName = Objects.requireNonNull($.consumerGroupName, "expected parameter 'consumerGroupName' to be non-null");
+            $.environmentName = Objects.requireNonNull($.environmentName, "expected parameter 'environmentName' to be non-null");
+            $.eventSourceResourceId = Objects.requireNonNull($.eventSourceResourceId, "expected parameter 'eventSourceResourceId' to be non-null");
+            $.iotHubName = Objects.requireNonNull($.iotHubName, "expected parameter 'iotHubName' to be non-null");
+            $.keyName = Objects.requireNonNull($.keyName, "expected parameter 'keyName' to be non-null");
+            $.kind = Codegen.stringProp("kind").output().arg($.kind).require();
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.sharedAccessKey = Objects.requireNonNull($.sharedAccessKey, "expected parameter 'sharedAccessKey' to be non-null");
+            return $;
         }
     }
+
 }

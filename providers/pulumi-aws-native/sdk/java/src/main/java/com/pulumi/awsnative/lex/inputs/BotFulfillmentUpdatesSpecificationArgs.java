@@ -7,10 +7,10 @@ import com.pulumi.awsnative.lex.inputs.BotFulfillmentStartResponseSpecificationA
 import com.pulumi.awsnative.lex.inputs.BotFulfillmentUpdateResponseSpecificationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,17 +27,17 @@ public final class BotFulfillmentUpdatesSpecificationArgs extends com.pulumi.res
      * 
      */
     @Import(name="active", required=true)
-      private final Output<Boolean> active;
+    private Output<Boolean> active;
 
     public Output<Boolean> active() {
         return this.active;
     }
 
     @Import(name="startResponse")
-      private final @Nullable Output<BotFulfillmentStartResponseSpecificationArgs> startResponse;
+    private @Nullable Output<BotFulfillmentStartResponseSpecificationArgs> startResponse;
 
-    public Output<BotFulfillmentStartResponseSpecificationArgs> startResponse() {
-        return this.startResponse == null ? Codegen.empty() : this.startResponse;
+    public Optional<Output<BotFulfillmentStartResponseSpecificationArgs>> startResponse() {
+        return Optional.ofNullable(this.startResponse);
     }
 
     /**
@@ -45,96 +45,86 @@ public final class BotFulfillmentUpdatesSpecificationArgs extends com.pulumi.res
      * 
      */
     @Import(name="timeoutInSeconds")
-      private final @Nullable Output<Integer> timeoutInSeconds;
+    private @Nullable Output<Integer> timeoutInSeconds;
 
-    public Output<Integer> timeoutInSeconds() {
-        return this.timeoutInSeconds == null ? Codegen.empty() : this.timeoutInSeconds;
+    public Optional<Output<Integer>> timeoutInSeconds() {
+        return Optional.ofNullable(this.timeoutInSeconds);
     }
 
     @Import(name="updateResponse")
-      private final @Nullable Output<BotFulfillmentUpdateResponseSpecificationArgs> updateResponse;
+    private @Nullable Output<BotFulfillmentUpdateResponseSpecificationArgs> updateResponse;
 
-    public Output<BotFulfillmentUpdateResponseSpecificationArgs> updateResponse() {
-        return this.updateResponse == null ? Codegen.empty() : this.updateResponse;
+    public Optional<Output<BotFulfillmentUpdateResponseSpecificationArgs>> updateResponse() {
+        return Optional.ofNullable(this.updateResponse);
     }
 
-    public BotFulfillmentUpdatesSpecificationArgs(
-        Output<Boolean> active,
-        @Nullable Output<BotFulfillmentStartResponseSpecificationArgs> startResponse,
-        @Nullable Output<Integer> timeoutInSeconds,
-        @Nullable Output<BotFulfillmentUpdateResponseSpecificationArgs> updateResponse) {
-        this.active = Objects.requireNonNull(active, "expected parameter 'active' to be non-null");
-        this.startResponse = startResponse;
-        this.timeoutInSeconds = timeoutInSeconds;
-        this.updateResponse = updateResponse;
-    }
+    private BotFulfillmentUpdatesSpecificationArgs() {}
 
-    private BotFulfillmentUpdatesSpecificationArgs() {
-        this.active = Codegen.empty();
-        this.startResponse = Codegen.empty();
-        this.timeoutInSeconds = Codegen.empty();
-        this.updateResponse = Codegen.empty();
+    private BotFulfillmentUpdatesSpecificationArgs(BotFulfillmentUpdatesSpecificationArgs $) {
+        this.active = $.active;
+        this.startResponse = $.startResponse;
+        this.timeoutInSeconds = $.timeoutInSeconds;
+        this.updateResponse = $.updateResponse;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BotFulfillmentUpdatesSpecificationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> active;
-        private @Nullable Output<BotFulfillmentStartResponseSpecificationArgs> startResponse;
-        private @Nullable Output<Integer> timeoutInSeconds;
-        private @Nullable Output<BotFulfillmentUpdateResponseSpecificationArgs> updateResponse;
+        private BotFulfillmentUpdatesSpecificationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BotFulfillmentUpdatesSpecificationArgs();
         }
 
         public Builder(BotFulfillmentUpdatesSpecificationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.active = defaults.active;
-    	      this.startResponse = defaults.startResponse;
-    	      this.timeoutInSeconds = defaults.timeoutInSeconds;
-    	      this.updateResponse = defaults.updateResponse;
+            $ = new BotFulfillmentUpdatesSpecificationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder active(Output<Boolean> active) {
-            this.active = Objects.requireNonNull(active);
+            $.active = active;
             return this;
         }
+
         public Builder active(Boolean active) {
-            this.active = Output.of(Objects.requireNonNull(active));
-            return this;
+            return active(Output.of(active));
         }
+
         public Builder startResponse(@Nullable Output<BotFulfillmentStartResponseSpecificationArgs> startResponse) {
-            this.startResponse = startResponse;
+            $.startResponse = startResponse;
             return this;
         }
-        public Builder startResponse(@Nullable BotFulfillmentStartResponseSpecificationArgs startResponse) {
-            this.startResponse = Codegen.ofNullable(startResponse);
-            return this;
+
+        public Builder startResponse(BotFulfillmentStartResponseSpecificationArgs startResponse) {
+            return startResponse(Output.of(startResponse));
         }
+
         public Builder timeoutInSeconds(@Nullable Output<Integer> timeoutInSeconds) {
-            this.timeoutInSeconds = timeoutInSeconds;
+            $.timeoutInSeconds = timeoutInSeconds;
             return this;
         }
-        public Builder timeoutInSeconds(@Nullable Integer timeoutInSeconds) {
-            this.timeoutInSeconds = Codegen.ofNullable(timeoutInSeconds);
-            return this;
+
+        public Builder timeoutInSeconds(Integer timeoutInSeconds) {
+            return timeoutInSeconds(Output.of(timeoutInSeconds));
         }
+
         public Builder updateResponse(@Nullable Output<BotFulfillmentUpdateResponseSpecificationArgs> updateResponse) {
-            this.updateResponse = updateResponse;
+            $.updateResponse = updateResponse;
             return this;
         }
-        public Builder updateResponse(@Nullable BotFulfillmentUpdateResponseSpecificationArgs updateResponse) {
-            this.updateResponse = Codegen.ofNullable(updateResponse);
-            return this;
-        }        public BotFulfillmentUpdatesSpecificationArgs build() {
-            return new BotFulfillmentUpdatesSpecificationArgs(active, startResponse, timeoutInSeconds, updateResponse);
+
+        public Builder updateResponse(BotFulfillmentUpdateResponseSpecificationArgs updateResponse) {
+            return updateResponse(Output.of(updateResponse));
+        }
+
+        public BotFulfillmentUpdatesSpecificationArgs build() {
+            $.active = Objects.requireNonNull($.active, "expected parameter 'active' to be non-null");
+            return $;
         }
     }
+
 }

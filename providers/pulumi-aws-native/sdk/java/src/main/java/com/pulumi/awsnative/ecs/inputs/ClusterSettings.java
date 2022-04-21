@@ -19,62 +19,57 @@ public final class ClusterSettings extends com.pulumi.resources.InvokeArgs {
     public static final ClusterSettings Empty = new ClusterSettings();
 
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="value")
-      private final @Nullable String value;
+    private @Nullable String value;
 
     public Optional<String> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public ClusterSettings(
-        @Nullable String name,
-        @Nullable String value) {
-        this.name = name;
-        this.value = value;
-    }
+    private ClusterSettings() {}
 
-    private ClusterSettings() {
-        this.name = null;
-        this.value = null;
+    private ClusterSettings(ClusterSettings $) {
+        this.name = $.name;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterSettings defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
-        private @Nullable String value;
+        private ClusterSettings $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterSettings();
         }
 
         public Builder(ClusterSettings defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.value = defaults.value;
+            $ = new ClusterSettings(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder value(@Nullable String value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public ClusterSettings build() {
-            return new ClusterSettings(name, value);
+        }
+
+        public ClusterSettings build() {
+            return $;
         }
     }
+
 }

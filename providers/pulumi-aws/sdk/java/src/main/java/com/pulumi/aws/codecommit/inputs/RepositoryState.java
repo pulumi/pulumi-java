@@ -5,10 +5,10 @@ package com.pulumi.aws.codecommit.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cloneUrlHttp")
-      private final @Nullable Output<String> cloneUrlHttp;
+    private @Nullable Output<String> cloneUrlHttp;
 
-    public Output<String> cloneUrlHttp() {
-        return this.cloneUrlHttp == null ? Codegen.empty() : this.cloneUrlHttp;
+    public Optional<Output<String>> cloneUrlHttp() {
+        return Optional.ofNullable(this.cloneUrlHttp);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cloneUrlSsh")
-      private final @Nullable Output<String> cloneUrlSsh;
+    private @Nullable Output<String> cloneUrlSsh;
 
-    public Output<String> cloneUrlSsh() {
-        return this.cloneUrlSsh == null ? Codegen.empty() : this.cloneUrlSsh;
+    public Optional<Output<String>> cloneUrlSsh() {
+        return Optional.ofNullable(this.cloneUrlSsh);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultBranch")
-      private final @Nullable Output<String> defaultBranch;
+    private @Nullable Output<String> defaultBranch;
 
-    public Output<String> defaultBranch() {
-        return this.defaultBranch == null ? Codegen.empty() : this.defaultBranch;
+    public Optional<Output<String>> defaultBranch() {
+        return Optional.ofNullable(this.defaultBranch);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="repositoryId")
-      private final @Nullable Output<String> repositoryId;
+    private @Nullable Output<String> repositoryId;
 
-    public Output<String> repositoryId() {
-        return this.repositoryId == null ? Codegen.empty() : this.repositoryId;
+    public Optional<Output<String>> repositoryId() {
+        return Optional.ofNullable(this.repositoryId);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="repositoryName")
-      private final @Nullable Output<String> repositoryName;
+    private @Nullable Output<String> repositoryName;
 
-    public Output<String> repositoryName() {
-        return this.repositoryName == null ? Codegen.empty() : this.repositoryName;
+    public Optional<Output<String>> repositoryName() {
+        return Optional.ofNullable(this.repositoryName);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -109,154 +109,128 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
-    public RepositoryState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> cloneUrlHttp,
-        @Nullable Output<String> cloneUrlSsh,
-        @Nullable Output<String> defaultBranch,
-        @Nullable Output<String> description,
-        @Nullable Output<String> repositoryId,
-        @Nullable Output<String> repositoryName,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll) {
-        this.arn = arn;
-        this.cloneUrlHttp = cloneUrlHttp;
-        this.cloneUrlSsh = cloneUrlSsh;
-        this.defaultBranch = defaultBranch;
-        this.description = description;
-        this.repositoryId = repositoryId;
-        this.repositoryName = repositoryName;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-    }
+    private RepositoryState() {}
 
-    private RepositoryState() {
-        this.arn = Codegen.empty();
-        this.cloneUrlHttp = Codegen.empty();
-        this.cloneUrlSsh = Codegen.empty();
-        this.defaultBranch = Codegen.empty();
-        this.description = Codegen.empty();
-        this.repositoryId = Codegen.empty();
-        this.repositoryName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
+    private RepositoryState(RepositoryState $) {
+        this.arn = $.arn;
+        this.cloneUrlHttp = $.cloneUrlHttp;
+        this.cloneUrlSsh = $.cloneUrlSsh;
+        this.defaultBranch = $.defaultBranch;
+        this.description = $.description;
+        this.repositoryId = $.repositoryId;
+        this.repositoryName = $.repositoryName;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RepositoryState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> cloneUrlHttp;
-        private @Nullable Output<String> cloneUrlSsh;
-        private @Nullable Output<String> defaultBranch;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> repositoryId;
-        private @Nullable Output<String> repositoryName;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
+        private RepositoryState $;
 
         public Builder() {
-    	      // Empty
+            $ = new RepositoryState();
         }
 
         public Builder(RepositoryState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.cloneUrlHttp = defaults.cloneUrlHttp;
-    	      this.cloneUrlSsh = defaults.cloneUrlSsh;
-    	      this.defaultBranch = defaults.defaultBranch;
-    	      this.description = defaults.description;
-    	      this.repositoryId = defaults.repositoryId;
-    	      this.repositoryName = defaults.repositoryName;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
+            $ = new RepositoryState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder cloneUrlHttp(@Nullable Output<String> cloneUrlHttp) {
-            this.cloneUrlHttp = cloneUrlHttp;
+            $.cloneUrlHttp = cloneUrlHttp;
             return this;
         }
-        public Builder cloneUrlHttp(@Nullable String cloneUrlHttp) {
-            this.cloneUrlHttp = Codegen.ofNullable(cloneUrlHttp);
-            return this;
+
+        public Builder cloneUrlHttp(String cloneUrlHttp) {
+            return cloneUrlHttp(Output.of(cloneUrlHttp));
         }
+
         public Builder cloneUrlSsh(@Nullable Output<String> cloneUrlSsh) {
-            this.cloneUrlSsh = cloneUrlSsh;
+            $.cloneUrlSsh = cloneUrlSsh;
             return this;
         }
-        public Builder cloneUrlSsh(@Nullable String cloneUrlSsh) {
-            this.cloneUrlSsh = Codegen.ofNullable(cloneUrlSsh);
-            return this;
+
+        public Builder cloneUrlSsh(String cloneUrlSsh) {
+            return cloneUrlSsh(Output.of(cloneUrlSsh));
         }
+
         public Builder defaultBranch(@Nullable Output<String> defaultBranch) {
-            this.defaultBranch = defaultBranch;
+            $.defaultBranch = defaultBranch;
             return this;
         }
-        public Builder defaultBranch(@Nullable String defaultBranch) {
-            this.defaultBranch = Codegen.ofNullable(defaultBranch);
-            return this;
+
+        public Builder defaultBranch(String defaultBranch) {
+            return defaultBranch(Output.of(defaultBranch));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder repositoryId(@Nullable Output<String> repositoryId) {
-            this.repositoryId = repositoryId;
+            $.repositoryId = repositoryId;
             return this;
         }
-        public Builder repositoryId(@Nullable String repositoryId) {
-            this.repositoryId = Codegen.ofNullable(repositoryId);
-            return this;
+
+        public Builder repositoryId(String repositoryId) {
+            return repositoryId(Output.of(repositoryId));
         }
+
         public Builder repositoryName(@Nullable Output<String> repositoryName) {
-            this.repositoryName = repositoryName;
+            $.repositoryName = repositoryName;
             return this;
         }
-        public Builder repositoryName(@Nullable String repositoryName) {
-            this.repositoryName = Codegen.ofNullable(repositoryName);
-            return this;
+
+        public Builder repositoryName(String repositoryName) {
+            return repositoryName(Output.of(repositoryName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
-        }        public RepositoryState build() {
-            return new RepositoryState(arn, cloneUrlHttp, cloneUrlSsh, defaultBranch, description, repositoryId, repositoryName, tags, tagsAll);
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
+        }
+
+        public RepositoryState build() {
+            return $;
         }
     }
+
 }

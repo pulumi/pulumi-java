@@ -6,9 +6,9 @@ package com.pulumi.azurenative.customerinsights.inputs;
 import com.pulumi.azurenative.customerinsights.enums.ErrorManagementTypes;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ConnectorMappingErrorManagementArgs extends com.pulumi.resour
      * 
      */
     @Import(name="errorLimit")
-      private final @Nullable Output<Integer> errorLimit;
+    private @Nullable Output<Integer> errorLimit;
 
-    public Output<Integer> errorLimit() {
-        return this.errorLimit == null ? Codegen.empty() : this.errorLimit;
+    public Optional<Output<Integer>> errorLimit() {
+        return Optional.ofNullable(this.errorLimit);
     }
 
     /**
@@ -36,63 +36,59 @@ public final class ConnectorMappingErrorManagementArgs extends com.pulumi.resour
      * 
      */
     @Import(name="errorManagementType", required=true)
-      private final Output<ErrorManagementTypes> errorManagementType;
+    private Output<ErrorManagementTypes> errorManagementType;
 
     public Output<ErrorManagementTypes> errorManagementType() {
         return this.errorManagementType;
     }
 
-    public ConnectorMappingErrorManagementArgs(
-        @Nullable Output<Integer> errorLimit,
-        Output<ErrorManagementTypes> errorManagementType) {
-        this.errorLimit = errorLimit;
-        this.errorManagementType = Objects.requireNonNull(errorManagementType, "expected parameter 'errorManagementType' to be non-null");
-    }
+    private ConnectorMappingErrorManagementArgs() {}
 
-    private ConnectorMappingErrorManagementArgs() {
-        this.errorLimit = Codegen.empty();
-        this.errorManagementType = Codegen.empty();
+    private ConnectorMappingErrorManagementArgs(ConnectorMappingErrorManagementArgs $) {
+        this.errorLimit = $.errorLimit;
+        this.errorManagementType = $.errorManagementType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectorMappingErrorManagementArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> errorLimit;
-        private Output<ErrorManagementTypes> errorManagementType;
+        private ConnectorMappingErrorManagementArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectorMappingErrorManagementArgs();
         }
 
         public Builder(ConnectorMappingErrorManagementArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.errorLimit = defaults.errorLimit;
-    	      this.errorManagementType = defaults.errorManagementType;
+            $ = new ConnectorMappingErrorManagementArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder errorLimit(@Nullable Output<Integer> errorLimit) {
-            this.errorLimit = errorLimit;
+            $.errorLimit = errorLimit;
             return this;
         }
-        public Builder errorLimit(@Nullable Integer errorLimit) {
-            this.errorLimit = Codegen.ofNullable(errorLimit);
-            return this;
+
+        public Builder errorLimit(Integer errorLimit) {
+            return errorLimit(Output.of(errorLimit));
         }
+
         public Builder errorManagementType(Output<ErrorManagementTypes> errorManagementType) {
-            this.errorManagementType = Objects.requireNonNull(errorManagementType);
+            $.errorManagementType = errorManagementType;
             return this;
         }
+
         public Builder errorManagementType(ErrorManagementTypes errorManagementType) {
-            this.errorManagementType = Output.of(Objects.requireNonNull(errorManagementType));
-            return this;
-        }        public ConnectorMappingErrorManagementArgs build() {
-            return new ConnectorMappingErrorManagementArgs(errorLimit, errorManagementType);
+            return errorManagementType(Output.of(errorManagementType));
+        }
+
+        public ConnectorMappingErrorManagementArgs build() {
+            $.errorManagementType = Objects.requireNonNull($.errorManagementType, "expected parameter 'errorManagementType' to be non-null");
+            return $;
         }
     }
+
 }

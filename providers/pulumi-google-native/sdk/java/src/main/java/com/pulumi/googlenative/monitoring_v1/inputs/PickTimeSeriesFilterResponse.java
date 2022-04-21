@@ -22,7 +22,7 @@ public final class PickTimeSeriesFilterResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="direction", required=true)
-      private final String direction;
+    private String direction;
 
     public String direction() {
         return this.direction;
@@ -33,7 +33,7 @@ public final class PickTimeSeriesFilterResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="numTimeSeries", required=true)
-      private final Integer numTimeSeries;
+    private Integer numTimeSeries;
 
     public Integer numTimeSeries() {
         return this.numTimeSeries;
@@ -44,64 +44,59 @@ public final class PickTimeSeriesFilterResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="rankingMethod", required=true)
-      private final String rankingMethod;
+    private String rankingMethod;
 
     public String rankingMethod() {
         return this.rankingMethod;
     }
 
-    public PickTimeSeriesFilterResponse(
-        String direction,
-        Integer numTimeSeries,
-        String rankingMethod) {
-        this.direction = Objects.requireNonNull(direction, "expected parameter 'direction' to be non-null");
-        this.numTimeSeries = Objects.requireNonNull(numTimeSeries, "expected parameter 'numTimeSeries' to be non-null");
-        this.rankingMethod = Objects.requireNonNull(rankingMethod, "expected parameter 'rankingMethod' to be non-null");
-    }
+    private PickTimeSeriesFilterResponse() {}
 
-    private PickTimeSeriesFilterResponse() {
-        this.direction = null;
-        this.numTimeSeries = null;
-        this.rankingMethod = null;
+    private PickTimeSeriesFilterResponse(PickTimeSeriesFilterResponse $) {
+        this.direction = $.direction;
+        this.numTimeSeries = $.numTimeSeries;
+        this.rankingMethod = $.rankingMethod;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PickTimeSeriesFilterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String direction;
-        private Integer numTimeSeries;
-        private String rankingMethod;
+        private PickTimeSeriesFilterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PickTimeSeriesFilterResponse();
         }
 
         public Builder(PickTimeSeriesFilterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.direction = defaults.direction;
-    	      this.numTimeSeries = defaults.numTimeSeries;
-    	      this.rankingMethod = defaults.rankingMethod;
+            $ = new PickTimeSeriesFilterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder direction(String direction) {
-            this.direction = Objects.requireNonNull(direction);
+            $.direction = direction;
             return this;
         }
+
         public Builder numTimeSeries(Integer numTimeSeries) {
-            this.numTimeSeries = Objects.requireNonNull(numTimeSeries);
+            $.numTimeSeries = numTimeSeries;
             return this;
         }
+
         public Builder rankingMethod(String rankingMethod) {
-            this.rankingMethod = Objects.requireNonNull(rankingMethod);
+            $.rankingMethod = rankingMethod;
             return this;
-        }        public PickTimeSeriesFilterResponse build() {
-            return new PickTimeSeriesFilterResponse(direction, numTimeSeries, rankingMethod);
+        }
+
+        public PickTimeSeriesFilterResponse build() {
+            $.direction = Objects.requireNonNull($.direction, "expected parameter 'direction' to be non-null");
+            $.numTimeSeries = Objects.requireNonNull($.numTimeSeries, "expected parameter 'numTimeSeries' to be non-null");
+            $.rankingMethod = Objects.requireNonNull($.rankingMethod, "expected parameter 'rankingMethod' to be non-null");
+            return $;
         }
     }
+
 }

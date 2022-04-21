@@ -13,7 +13,7 @@ public final class GetFunctionSourceRepository extends com.pulumi.resources.Invo
     public static final GetFunctionSourceRepository Empty = new GetFunctionSourceRepository();
 
     @Import(name="deployedUrl", required=true)
-      private final String deployedUrl;
+    private String deployedUrl;
 
     public String deployedUrl() {
         return this.deployedUrl;
@@ -24,55 +24,52 @@ public final class GetFunctionSourceRepository extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="url", required=true)
-      private final String url;
+    private String url;
 
     public String url() {
         return this.url;
     }
 
-    public GetFunctionSourceRepository(
-        String deployedUrl,
-        String url) {
-        this.deployedUrl = Objects.requireNonNull(deployedUrl, "expected parameter 'deployedUrl' to be non-null");
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-    }
+    private GetFunctionSourceRepository() {}
 
-    private GetFunctionSourceRepository() {
-        this.deployedUrl = null;
-        this.url = null;
+    private GetFunctionSourceRepository(GetFunctionSourceRepository $) {
+        this.deployedUrl = $.deployedUrl;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFunctionSourceRepository defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String deployedUrl;
-        private String url;
+        private GetFunctionSourceRepository $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFunctionSourceRepository();
         }
 
         public Builder(GetFunctionSourceRepository defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deployedUrl = defaults.deployedUrl;
-    	      this.url = defaults.url;
+            $ = new GetFunctionSourceRepository(Objects.requireNonNull(defaults));
         }
 
         public Builder deployedUrl(String deployedUrl) {
-            this.deployedUrl = Objects.requireNonNull(deployedUrl);
+            $.deployedUrl = deployedUrl;
             return this;
         }
+
         public Builder url(String url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
-        }        public GetFunctionSourceRepository build() {
-            return new GetFunctionSourceRepository(deployedUrl, url);
+        }
+
+        public GetFunctionSourceRepository build() {
+            $.deployedUrl = Objects.requireNonNull($.deployedUrl, "expected parameter 'deployedUrl' to be non-null");
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            return $;
         }
     }
+
 }

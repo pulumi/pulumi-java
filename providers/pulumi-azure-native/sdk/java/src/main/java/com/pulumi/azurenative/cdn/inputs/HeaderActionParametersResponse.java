@@ -23,7 +23,7 @@ public final class HeaderActionParametersResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="headerAction", required=true)
-      private final String headerAction;
+    private String headerAction;
 
     public String headerAction() {
         return this.headerAction;
@@ -34,14 +34,14 @@ public final class HeaderActionParametersResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="headerName", required=true)
-      private final String headerName;
+    private String headerName;
 
     public String headerName() {
         return this.headerName;
     }
 
     @Import(name="odataType", required=true)
-      private final String odataType;
+    private String odataType;
 
     public String odataType() {
         return this.odataType;
@@ -52,73 +52,65 @@ public final class HeaderActionParametersResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="value")
-      private final @Nullable String value;
+    private @Nullable String value;
 
     public Optional<String> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public HeaderActionParametersResponse(
-        String headerAction,
-        String headerName,
-        String odataType,
-        @Nullable String value) {
-        this.headerAction = Objects.requireNonNull(headerAction, "expected parameter 'headerAction' to be non-null");
-        this.headerName = Objects.requireNonNull(headerName, "expected parameter 'headerName' to be non-null");
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
-        this.value = value;
-    }
+    private HeaderActionParametersResponse() {}
 
-    private HeaderActionParametersResponse() {
-        this.headerAction = null;
-        this.headerName = null;
-        this.odataType = null;
-        this.value = null;
+    private HeaderActionParametersResponse(HeaderActionParametersResponse $) {
+        this.headerAction = $.headerAction;
+        this.headerName = $.headerName;
+        this.odataType = $.odataType;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HeaderActionParametersResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String headerAction;
-        private String headerName;
-        private String odataType;
-        private @Nullable String value;
+        private HeaderActionParametersResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HeaderActionParametersResponse();
         }
 
         public Builder(HeaderActionParametersResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.headerAction = defaults.headerAction;
-    	      this.headerName = defaults.headerName;
-    	      this.odataType = defaults.odataType;
-    	      this.value = defaults.value;
+            $ = new HeaderActionParametersResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder headerAction(String headerAction) {
-            this.headerAction = Objects.requireNonNull(headerAction);
+            $.headerAction = headerAction;
             return this;
         }
+
         public Builder headerName(String headerName) {
-            this.headerName = Objects.requireNonNull(headerName);
+            $.headerName = headerName;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder value(@Nullable String value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public HeaderActionParametersResponse build() {
-            return new HeaderActionParametersResponse(headerAction, headerName, odataType, value);
+        }
+
+        public HeaderActionParametersResponse build() {
+            $.headerAction = Objects.requireNonNull($.headerAction, "expected parameter 'headerAction' to be non-null");
+            $.headerName = Objects.requireNonNull($.headerName, "expected parameter 'headerName' to be non-null");
+            $.odataType = Objects.requireNonNull($.odataType, "expected parameter 'odataType' to be non-null");
+            return $;
         }
     }
+
 }

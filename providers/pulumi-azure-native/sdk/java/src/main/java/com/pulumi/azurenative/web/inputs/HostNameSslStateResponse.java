@@ -24,10 +24,10 @@ public final class HostNameSslStateResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="hostType")
-      private final @Nullable String hostType;
+    private @Nullable String hostType;
 
     public Optional<String> hostType() {
-        return this.hostType == null ? Optional.empty() : Optional.ofNullable(this.hostType);
+        return Optional.ofNullable(this.hostType);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class HostNameSslStateResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class HostNameSslStateResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="sslState")
-      private final @Nullable String sslState;
+    private @Nullable String sslState;
 
     public Optional<String> sslState() {
-        return this.sslState == null ? Optional.empty() : Optional.ofNullable(this.sslState);
+        return Optional.ofNullable(this.sslState);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class HostNameSslStateResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="thumbprint")
-      private final @Nullable String thumbprint;
+    private @Nullable String thumbprint;
 
     public Optional<String> thumbprint() {
-        return this.thumbprint == null ? Optional.empty() : Optional.ofNullable(this.thumbprint);
+        return Optional.ofNullable(this.thumbprint);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class HostNameSslStateResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="toUpdate")
-      private final @Nullable Boolean toUpdate;
+    private @Nullable Boolean toUpdate;
 
     public Optional<Boolean> toUpdate() {
-        return this.toUpdate == null ? Optional.empty() : Optional.ofNullable(this.toUpdate);
+        return Optional.ofNullable(this.toUpdate);
     }
 
     /**
@@ -79,91 +79,74 @@ public final class HostNameSslStateResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="virtualIP")
-      private final @Nullable String virtualIP;
+    private @Nullable String virtualIP;
 
     public Optional<String> virtualIP() {
-        return this.virtualIP == null ? Optional.empty() : Optional.ofNullable(this.virtualIP);
+        return Optional.ofNullable(this.virtualIP);
     }
 
-    public HostNameSslStateResponse(
-        @Nullable String hostType,
-        @Nullable String name,
-        @Nullable String sslState,
-        @Nullable String thumbprint,
-        @Nullable Boolean toUpdate,
-        @Nullable String virtualIP) {
-        this.hostType = hostType;
-        this.name = name;
-        this.sslState = sslState;
-        this.thumbprint = thumbprint;
-        this.toUpdate = toUpdate;
-        this.virtualIP = virtualIP;
-    }
+    private HostNameSslStateResponse() {}
 
-    private HostNameSslStateResponse() {
-        this.hostType = null;
-        this.name = null;
-        this.sslState = null;
-        this.thumbprint = null;
-        this.toUpdate = null;
-        this.virtualIP = null;
+    private HostNameSslStateResponse(HostNameSslStateResponse $) {
+        this.hostType = $.hostType;
+        this.name = $.name;
+        this.sslState = $.sslState;
+        this.thumbprint = $.thumbprint;
+        this.toUpdate = $.toUpdate;
+        this.virtualIP = $.virtualIP;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HostNameSslStateResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String hostType;
-        private @Nullable String name;
-        private @Nullable String sslState;
-        private @Nullable String thumbprint;
-        private @Nullable Boolean toUpdate;
-        private @Nullable String virtualIP;
+        private HostNameSslStateResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HostNameSslStateResponse();
         }
 
         public Builder(HostNameSslStateResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hostType = defaults.hostType;
-    	      this.name = defaults.name;
-    	      this.sslState = defaults.sslState;
-    	      this.thumbprint = defaults.thumbprint;
-    	      this.toUpdate = defaults.toUpdate;
-    	      this.virtualIP = defaults.virtualIP;
+            $ = new HostNameSslStateResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder hostType(@Nullable String hostType) {
-            this.hostType = hostType;
+            $.hostType = hostType;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder sslState(@Nullable String sslState) {
-            this.sslState = sslState;
+            $.sslState = sslState;
             return this;
         }
+
         public Builder thumbprint(@Nullable String thumbprint) {
-            this.thumbprint = thumbprint;
+            $.thumbprint = thumbprint;
             return this;
         }
+
         public Builder toUpdate(@Nullable Boolean toUpdate) {
-            this.toUpdate = toUpdate;
+            $.toUpdate = toUpdate;
             return this;
         }
+
         public Builder virtualIP(@Nullable String virtualIP) {
-            this.virtualIP = virtualIP;
+            $.virtualIP = virtualIP;
             return this;
-        }        public HostNameSslStateResponse build() {
-            return new HostNameSslStateResponse(hostType, name, sslState, thumbprint, toUpdate, virtualIP);
+        }
+
+        public HostNameSslStateResponse build() {
+            return $;
         }
     }
+
 }

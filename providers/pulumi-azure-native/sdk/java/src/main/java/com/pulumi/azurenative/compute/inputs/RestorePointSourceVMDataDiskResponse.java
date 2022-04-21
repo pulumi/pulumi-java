@@ -26,10 +26,10 @@ public final class RestorePointSourceVMDataDiskResponse extends com.pulumi.resou
      * 
      */
     @Import(name="caching")
-      private final @Nullable String caching;
+    private @Nullable String caching;
 
     public Optional<String> caching() {
-        return this.caching == null ? Optional.empty() : Optional.ofNullable(this.caching);
+        return Optional.ofNullable(this.caching);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class RestorePointSourceVMDataDiskResponse extends com.pulumi.resou
      * 
      */
     @Import(name="diskRestorePoint")
-      private final @Nullable ApiEntityReferenceResponse diskRestorePoint;
+    private @Nullable ApiEntityReferenceResponse diskRestorePoint;
 
     public Optional<ApiEntityReferenceResponse> diskRestorePoint() {
-        return this.diskRestorePoint == null ? Optional.empty() : Optional.ofNullable(this.diskRestorePoint);
+        return Optional.ofNullable(this.diskRestorePoint);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class RestorePointSourceVMDataDiskResponse extends com.pulumi.resou
      * 
      */
     @Import(name="diskSizeGB")
-      private final @Nullable Integer diskSizeGB;
+    private @Nullable Integer diskSizeGB;
 
     public Optional<Integer> diskSizeGB() {
-        return this.diskSizeGB == null ? Optional.empty() : Optional.ofNullable(this.diskSizeGB);
+        return Optional.ofNullable(this.diskSizeGB);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class RestorePointSourceVMDataDiskResponse extends com.pulumi.resou
      * 
      */
     @Import(name="lun")
-      private final @Nullable Integer lun;
+    private @Nullable Integer lun;
 
     public Optional<Integer> lun() {
-        return this.lun == null ? Optional.empty() : Optional.ofNullable(this.lun);
+        return Optional.ofNullable(this.lun);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class RestorePointSourceVMDataDiskResponse extends com.pulumi.resou
      * 
      */
     @Import(name="managedDisk")
-      private final @Nullable ManagedDiskParametersResponse managedDisk;
+    private @Nullable ManagedDiskParametersResponse managedDisk;
 
     public Optional<ManagedDiskParametersResponse> managedDisk() {
-        return this.managedDisk == null ? Optional.empty() : Optional.ofNullable(this.managedDisk);
+        return Optional.ofNullable(this.managedDisk);
     }
 
     /**
@@ -81,91 +81,74 @@ public final class RestorePointSourceVMDataDiskResponse extends com.pulumi.resou
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
-    public RestorePointSourceVMDataDiskResponse(
-        @Nullable String caching,
-        @Nullable ApiEntityReferenceResponse diskRestorePoint,
-        @Nullable Integer diskSizeGB,
-        @Nullable Integer lun,
-        @Nullable ManagedDiskParametersResponse managedDisk,
-        @Nullable String name) {
-        this.caching = caching;
-        this.diskRestorePoint = diskRestorePoint;
-        this.diskSizeGB = diskSizeGB;
-        this.lun = lun;
-        this.managedDisk = managedDisk;
-        this.name = name;
-    }
+    private RestorePointSourceVMDataDiskResponse() {}
 
-    private RestorePointSourceVMDataDiskResponse() {
-        this.caching = null;
-        this.diskRestorePoint = null;
-        this.diskSizeGB = null;
-        this.lun = null;
-        this.managedDisk = null;
-        this.name = null;
+    private RestorePointSourceVMDataDiskResponse(RestorePointSourceVMDataDiskResponse $) {
+        this.caching = $.caching;
+        this.diskRestorePoint = $.diskRestorePoint;
+        this.diskSizeGB = $.diskSizeGB;
+        this.lun = $.lun;
+        this.managedDisk = $.managedDisk;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RestorePointSourceVMDataDiskResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String caching;
-        private @Nullable ApiEntityReferenceResponse diskRestorePoint;
-        private @Nullable Integer diskSizeGB;
-        private @Nullable Integer lun;
-        private @Nullable ManagedDiskParametersResponse managedDisk;
-        private @Nullable String name;
+        private RestorePointSourceVMDataDiskResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RestorePointSourceVMDataDiskResponse();
         }
 
         public Builder(RestorePointSourceVMDataDiskResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.caching = defaults.caching;
-    	      this.diskRestorePoint = defaults.diskRestorePoint;
-    	      this.diskSizeGB = defaults.diskSizeGB;
-    	      this.lun = defaults.lun;
-    	      this.managedDisk = defaults.managedDisk;
-    	      this.name = defaults.name;
+            $ = new RestorePointSourceVMDataDiskResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder caching(@Nullable String caching) {
-            this.caching = caching;
+            $.caching = caching;
             return this;
         }
+
         public Builder diskRestorePoint(@Nullable ApiEntityReferenceResponse diskRestorePoint) {
-            this.diskRestorePoint = diskRestorePoint;
+            $.diskRestorePoint = diskRestorePoint;
             return this;
         }
+
         public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
-            this.diskSizeGB = diskSizeGB;
+            $.diskSizeGB = diskSizeGB;
             return this;
         }
+
         public Builder lun(@Nullable Integer lun) {
-            this.lun = lun;
+            $.lun = lun;
             return this;
         }
+
         public Builder managedDisk(@Nullable ManagedDiskParametersResponse managedDisk) {
-            this.managedDisk = managedDisk;
+            $.managedDisk = managedDisk;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
-        }        public RestorePointSourceVMDataDiskResponse build() {
-            return new RestorePointSourceVMDataDiskResponse(caching, diskRestorePoint, diskSizeGB, lun, managedDisk, name);
+        }
+
+        public RestorePointSourceVMDataDiskResponse build() {
+            return $;
         }
     }
+
 }

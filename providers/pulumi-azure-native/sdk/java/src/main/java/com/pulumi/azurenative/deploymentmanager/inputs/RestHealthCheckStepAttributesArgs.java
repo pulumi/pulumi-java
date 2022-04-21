@@ -10,6 +10,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,7 +27,7 @@ public final class RestHealthCheckStepAttributesArgs extends com.pulumi.resource
      * 
      */
     @Import(name="healthChecks", required=true)
-      private final Output<List<RestHealthCheckArgs>> healthChecks;
+    private Output<List<RestHealthCheckArgs>> healthChecks;
 
     public Output<List<RestHealthCheckArgs>> healthChecks() {
         return this.healthChecks;
@@ -37,7 +38,7 @@ public final class RestHealthCheckStepAttributesArgs extends com.pulumi.resource
      * 
      */
     @Import(name="healthyStateDuration", required=true)
-      private final Output<String> healthyStateDuration;
+    private Output<String> healthyStateDuration;
 
     public Output<String> healthyStateDuration() {
         return this.healthyStateDuration;
@@ -48,10 +49,10 @@ public final class RestHealthCheckStepAttributesArgs extends com.pulumi.resource
      * 
      */
     @Import(name="maxElasticDuration")
-      private final @Nullable Output<String> maxElasticDuration;
+    private @Nullable Output<String> maxElasticDuration;
 
-    public Output<String> maxElasticDuration() {
-        return this.maxElasticDuration == null ? Codegen.empty() : this.maxElasticDuration;
+    public Optional<Output<String>> maxElasticDuration() {
+        return Optional.ofNullable(this.maxElasticDuration);
     }
 
     /**
@@ -60,7 +61,7 @@ public final class RestHealthCheckStepAttributesArgs extends com.pulumi.resource
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -71,105 +72,95 @@ public final class RestHealthCheckStepAttributesArgs extends com.pulumi.resource
      * 
      */
     @Import(name="waitDuration")
-      private final @Nullable Output<String> waitDuration;
+    private @Nullable Output<String> waitDuration;
 
-    public Output<String> waitDuration() {
-        return this.waitDuration == null ? Codegen.empty() : this.waitDuration;
+    public Optional<Output<String>> waitDuration() {
+        return Optional.ofNullable(this.waitDuration);
     }
 
-    public RestHealthCheckStepAttributesArgs(
-        Output<List<RestHealthCheckArgs>> healthChecks,
-        Output<String> healthyStateDuration,
-        @Nullable Output<String> maxElasticDuration,
-        Output<String> type,
-        @Nullable Output<String> waitDuration) {
-        this.healthChecks = Objects.requireNonNull(healthChecks, "expected parameter 'healthChecks' to be non-null");
-        this.healthyStateDuration = Objects.requireNonNull(healthyStateDuration, "expected parameter 'healthyStateDuration' to be non-null");
-        this.maxElasticDuration = maxElasticDuration;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-        this.waitDuration = waitDuration;
-    }
+    private RestHealthCheckStepAttributesArgs() {}
 
-    private RestHealthCheckStepAttributesArgs() {
-        this.healthChecks = Codegen.empty();
-        this.healthyStateDuration = Codegen.empty();
-        this.maxElasticDuration = Codegen.empty();
-        this.type = Codegen.empty();
-        this.waitDuration = Codegen.empty();
+    private RestHealthCheckStepAttributesArgs(RestHealthCheckStepAttributesArgs $) {
+        this.healthChecks = $.healthChecks;
+        this.healthyStateDuration = $.healthyStateDuration;
+        this.maxElasticDuration = $.maxElasticDuration;
+        this.type = $.type;
+        this.waitDuration = $.waitDuration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RestHealthCheckStepAttributesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<RestHealthCheckArgs>> healthChecks;
-        private Output<String> healthyStateDuration;
-        private @Nullable Output<String> maxElasticDuration;
-        private Output<String> type;
-        private @Nullable Output<String> waitDuration;
+        private RestHealthCheckStepAttributesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RestHealthCheckStepAttributesArgs();
         }
 
         public Builder(RestHealthCheckStepAttributesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.healthChecks = defaults.healthChecks;
-    	      this.healthyStateDuration = defaults.healthyStateDuration;
-    	      this.maxElasticDuration = defaults.maxElasticDuration;
-    	      this.type = defaults.type;
-    	      this.waitDuration = defaults.waitDuration;
+            $ = new RestHealthCheckStepAttributesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder healthChecks(Output<List<RestHealthCheckArgs>> healthChecks) {
-            this.healthChecks = Objects.requireNonNull(healthChecks);
+            $.healthChecks = healthChecks;
             return this;
         }
+
         public Builder healthChecks(List<RestHealthCheckArgs> healthChecks) {
-            this.healthChecks = Output.of(Objects.requireNonNull(healthChecks));
-            return this;
+            return healthChecks(Output.of(healthChecks));
         }
+
         public Builder healthChecks(RestHealthCheckArgs... healthChecks) {
             return healthChecks(List.of(healthChecks));
         }
+
         public Builder healthyStateDuration(Output<String> healthyStateDuration) {
-            this.healthyStateDuration = Objects.requireNonNull(healthyStateDuration);
+            $.healthyStateDuration = healthyStateDuration;
             return this;
         }
+
         public Builder healthyStateDuration(String healthyStateDuration) {
-            this.healthyStateDuration = Output.of(Objects.requireNonNull(healthyStateDuration));
-            return this;
+            return healthyStateDuration(Output.of(healthyStateDuration));
         }
+
         public Builder maxElasticDuration(@Nullable Output<String> maxElasticDuration) {
-            this.maxElasticDuration = maxElasticDuration;
+            $.maxElasticDuration = maxElasticDuration;
             return this;
         }
-        public Builder maxElasticDuration(@Nullable String maxElasticDuration) {
-            this.maxElasticDuration = Codegen.ofNullable(maxElasticDuration);
-            return this;
+
+        public Builder maxElasticDuration(String maxElasticDuration) {
+            return maxElasticDuration(Output.of(maxElasticDuration));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder waitDuration(@Nullable Output<String> waitDuration) {
-            this.waitDuration = waitDuration;
+            $.waitDuration = waitDuration;
             return this;
         }
-        public Builder waitDuration(@Nullable String waitDuration) {
-            this.waitDuration = Codegen.ofNullable(waitDuration);
-            return this;
-        }        public RestHealthCheckStepAttributesArgs build() {
-            return new RestHealthCheckStepAttributesArgs(healthChecks, healthyStateDuration, maxElasticDuration, type, waitDuration);
+
+        public Builder waitDuration(String waitDuration) {
+            return waitDuration(Output.of(waitDuration));
+        }
+
+        public RestHealthCheckStepAttributesArgs build() {
+            $.healthChecks = Objects.requireNonNull($.healthChecks, "expected parameter 'healthChecks' to be non-null");
+            $.healthyStateDuration = Objects.requireNonNull($.healthyStateDuration, "expected parameter 'healthyStateDuration' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

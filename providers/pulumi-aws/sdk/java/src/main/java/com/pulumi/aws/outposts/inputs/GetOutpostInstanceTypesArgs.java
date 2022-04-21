@@ -17,45 +17,45 @@ public final class GetOutpostInstanceTypesArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
     }
 
-    public GetOutpostInstanceTypesArgs(String arn) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-    }
+    private GetOutpostInstanceTypesArgs() {}
 
-    private GetOutpostInstanceTypesArgs() {
-        this.arn = null;
+    private GetOutpostInstanceTypesArgs(GetOutpostInstanceTypesArgs $) {
+        this.arn = $.arn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetOutpostInstanceTypesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
+        private GetOutpostInstanceTypesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetOutpostInstanceTypesArgs();
         }
 
         public Builder(GetOutpostInstanceTypesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
+            $ = new GetOutpostInstanceTypesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
-        }        public GetOutpostInstanceTypesArgs build() {
-            return new GetOutpostInstanceTypesArgs(arn);
+        }
+
+        public GetOutpostInstanceTypesArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

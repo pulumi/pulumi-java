@@ -25,10 +25,10 @@ public final class AutomationSourceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="eventSource")
-      private final @Nullable String eventSource;
+    private @Nullable String eventSource;
 
     public Optional<String> eventSource() {
-        return this.eventSource == null ? Optional.empty() : Optional.ofNullable(this.eventSource);
+        return Optional.ofNullable(this.eventSource);
     }
 
     /**
@@ -36,58 +36,54 @@ public final class AutomationSourceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="ruleSets")
-      private final @Nullable List<AutomationRuleSetResponse> ruleSets;
+    private @Nullable List<AutomationRuleSetResponse> ruleSets;
 
-    public List<AutomationRuleSetResponse> ruleSets() {
-        return this.ruleSets == null ? List.of() : this.ruleSets;
+    public Optional<List<AutomationRuleSetResponse>> ruleSets() {
+        return Optional.ofNullable(this.ruleSets);
     }
 
-    public AutomationSourceResponse(
-        @Nullable String eventSource,
-        @Nullable List<AutomationRuleSetResponse> ruleSets) {
-        this.eventSource = eventSource;
-        this.ruleSets = ruleSets;
-    }
+    private AutomationSourceResponse() {}
 
-    private AutomationSourceResponse() {
-        this.eventSource = null;
-        this.ruleSets = List.of();
+    private AutomationSourceResponse(AutomationSourceResponse $) {
+        this.eventSource = $.eventSource;
+        this.ruleSets = $.ruleSets;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutomationSourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String eventSource;
-        private @Nullable List<AutomationRuleSetResponse> ruleSets;
+        private AutomationSourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutomationSourceResponse();
         }
 
         public Builder(AutomationSourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.eventSource = defaults.eventSource;
-    	      this.ruleSets = defaults.ruleSets;
+            $ = new AutomationSourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder eventSource(@Nullable String eventSource) {
-            this.eventSource = eventSource;
+            $.eventSource = eventSource;
             return this;
         }
+
         public Builder ruleSets(@Nullable List<AutomationRuleSetResponse> ruleSets) {
-            this.ruleSets = ruleSets;
+            $.ruleSets = ruleSets;
             return this;
         }
+
         public Builder ruleSets(AutomationRuleSetResponse... ruleSets) {
             return ruleSets(List.of(ruleSets));
-        }        public AutomationSourceResponse build() {
-            return new AutomationSourceResponse(eventSource, ruleSets);
+        }
+
+        public AutomationSourceResponse build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.googlenative.cloudiot_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.cloudiot_v1.enums.MqttConfigMqttEnabledState;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class MqttConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mqttEnabledState")
-      private final @Nullable Output<MqttConfigMqttEnabledState> mqttEnabledState;
+    private @Nullable Output<MqttConfigMqttEnabledState> mqttEnabledState;
 
-    public Output<MqttConfigMqttEnabledState> mqttEnabledState() {
-        return this.mqttEnabledState == null ? Codegen.empty() : this.mqttEnabledState;
+    public Optional<Output<MqttConfigMqttEnabledState>> mqttEnabledState() {
+        return Optional.ofNullable(this.mqttEnabledState);
     }
 
-    public MqttConfigArgs(@Nullable Output<MqttConfigMqttEnabledState> mqttEnabledState) {
-        this.mqttEnabledState = mqttEnabledState;
-    }
+    private MqttConfigArgs() {}
 
-    private MqttConfigArgs() {
-        this.mqttEnabledState = Codegen.empty();
+    private MqttConfigArgs(MqttConfigArgs $) {
+        this.mqttEnabledState = $.mqttEnabledState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MqttConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<MqttConfigMqttEnabledState> mqttEnabledState;
+        private MqttConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MqttConfigArgs();
         }
 
         public Builder(MqttConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mqttEnabledState = defaults.mqttEnabledState;
+            $ = new MqttConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder mqttEnabledState(@Nullable Output<MqttConfigMqttEnabledState> mqttEnabledState) {
-            this.mqttEnabledState = mqttEnabledState;
+            $.mqttEnabledState = mqttEnabledState;
             return this;
         }
-        public Builder mqttEnabledState(@Nullable MqttConfigMqttEnabledState mqttEnabledState) {
-            this.mqttEnabledState = Codegen.ofNullable(mqttEnabledState);
-            return this;
-        }        public MqttConfigArgs build() {
-            return new MqttConfigArgs(mqttEnabledState);
+
+        public Builder mqttEnabledState(MqttConfigMqttEnabledState mqttEnabledState) {
+            return mqttEnabledState(Output.of(mqttEnabledState));
+        }
+
+        public MqttConfigArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.gcp.apigee;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +19,7 @@ public final class EnvGroupAttachmentArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="envgroupId", required=true)
-      private final Output<String> envgroupId;
+    private Output<String> envgroupId;
 
     public Output<String> envgroupId() {
         return this.envgroupId;
@@ -31,63 +30,60 @@ public final class EnvGroupAttachmentArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="environment", required=true)
-      private final Output<String> environment;
+    private Output<String> environment;
 
     public Output<String> environment() {
         return this.environment;
     }
 
-    public EnvGroupAttachmentArgs(
-        Output<String> envgroupId,
-        Output<String> environment) {
-        this.envgroupId = Objects.requireNonNull(envgroupId, "expected parameter 'envgroupId' to be non-null");
-        this.environment = Objects.requireNonNull(environment, "expected parameter 'environment' to be non-null");
-    }
+    private EnvGroupAttachmentArgs() {}
 
-    private EnvGroupAttachmentArgs() {
-        this.envgroupId = Codegen.empty();
-        this.environment = Codegen.empty();
+    private EnvGroupAttachmentArgs(EnvGroupAttachmentArgs $) {
+        this.envgroupId = $.envgroupId;
+        this.environment = $.environment;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvGroupAttachmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> envgroupId;
-        private Output<String> environment;
+        private EnvGroupAttachmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvGroupAttachmentArgs();
         }
 
         public Builder(EnvGroupAttachmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.envgroupId = defaults.envgroupId;
-    	      this.environment = defaults.environment;
+            $ = new EnvGroupAttachmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder envgroupId(Output<String> envgroupId) {
-            this.envgroupId = Objects.requireNonNull(envgroupId);
+            $.envgroupId = envgroupId;
             return this;
         }
+
         public Builder envgroupId(String envgroupId) {
-            this.envgroupId = Output.of(Objects.requireNonNull(envgroupId));
-            return this;
+            return envgroupId(Output.of(envgroupId));
         }
+
         public Builder environment(Output<String> environment) {
-            this.environment = Objects.requireNonNull(environment);
+            $.environment = environment;
             return this;
         }
+
         public Builder environment(String environment) {
-            this.environment = Output.of(Objects.requireNonNull(environment));
-            return this;
-        }        public EnvGroupAttachmentArgs build() {
-            return new EnvGroupAttachmentArgs(envgroupId, environment);
+            return environment(Output.of(environment));
+        }
+
+        public EnvGroupAttachmentArgs build() {
+            $.envgroupId = Objects.requireNonNull($.envgroupId, "expected parameter 'envgroupId' to be non-null");
+            $.environment = Objects.requireNonNull($.environment, "expected parameter 'environment' to be non-null");
+            return $;
         }
     }
+
 }

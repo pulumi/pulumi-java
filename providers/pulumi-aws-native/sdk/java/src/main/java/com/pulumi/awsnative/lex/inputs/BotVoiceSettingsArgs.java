@@ -5,7 +5,6 @@ package com.pulumi.awsnative.lex.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class BotVoiceSettingsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="voiceId", required=true)
-      private final Output<String> voiceId;
+    private Output<String> voiceId;
 
     public Output<String> voiceId() {
         return this.voiceId;
     }
 
-    public BotVoiceSettingsArgs(Output<String> voiceId) {
-        this.voiceId = Objects.requireNonNull(voiceId, "expected parameter 'voiceId' to be non-null");
-    }
+    private BotVoiceSettingsArgs() {}
 
-    private BotVoiceSettingsArgs() {
-        this.voiceId = Codegen.empty();
+    private BotVoiceSettingsArgs(BotVoiceSettingsArgs $) {
+        this.voiceId = $.voiceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BotVoiceSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> voiceId;
+        private BotVoiceSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BotVoiceSettingsArgs();
         }
 
         public Builder(BotVoiceSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.voiceId = defaults.voiceId;
+            $ = new BotVoiceSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder voiceId(Output<String> voiceId) {
-            this.voiceId = Objects.requireNonNull(voiceId);
+            $.voiceId = voiceId;
             return this;
         }
+
         public Builder voiceId(String voiceId) {
-            this.voiceId = Output.of(Objects.requireNonNull(voiceId));
-            return this;
-        }        public BotVoiceSettingsArgs build() {
-            return new BotVoiceSettingsArgs(voiceId);
+            return voiceId(Output.of(voiceId));
+        }
+
+        public BotVoiceSettingsArgs build() {
+            $.voiceId = Objects.requireNonNull($.voiceId, "expected parameter 'voiceId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.googlenative.metastore_v1alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,49 +25,48 @@ public final class DataplexConfigArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="lakeResources")
-      private final @Nullable Output<Map<String,String>> lakeResources;
+    private @Nullable Output<Map<String,String>> lakeResources;
 
-    public Output<Map<String,String>> lakeResources() {
-        return this.lakeResources == null ? Codegen.empty() : this.lakeResources;
+    public Optional<Output<Map<String,String>>> lakeResources() {
+        return Optional.ofNullable(this.lakeResources);
     }
 
-    public DataplexConfigArgs(@Nullable Output<Map<String,String>> lakeResources) {
-        this.lakeResources = lakeResources;
-    }
+    private DataplexConfigArgs() {}
 
-    private DataplexConfigArgs() {
-        this.lakeResources = Codegen.empty();
+    private DataplexConfigArgs(DataplexConfigArgs $) {
+        this.lakeResources = $.lakeResources;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataplexConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> lakeResources;
+        private DataplexConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataplexConfigArgs();
         }
 
         public Builder(DataplexConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.lakeResources = defaults.lakeResources;
+            $ = new DataplexConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder lakeResources(@Nullable Output<Map<String,String>> lakeResources) {
-            this.lakeResources = lakeResources;
+            $.lakeResources = lakeResources;
             return this;
         }
-        public Builder lakeResources(@Nullable Map<String,String> lakeResources) {
-            this.lakeResources = Codegen.ofNullable(lakeResources);
-            return this;
-        }        public DataplexConfigArgs build() {
-            return new DataplexConfigArgs(lakeResources);
+
+        public Builder lakeResources(Map<String,String> lakeResources) {
+            return lakeResources(Output.of(lakeResources));
+        }
+
+        public DataplexConfigArgs build() {
+            return $;
         }
     }
+
 }

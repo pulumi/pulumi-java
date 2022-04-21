@@ -19,7 +19,7 @@ public final class GetDistributionConfigurationDistribution extends com.pulumi.r
      * 
      */
     @Import(name="amiDistributionConfigurations", required=true)
-      private final List<GetDistributionConfigurationDistributionAmiDistributionConfiguration> amiDistributionConfigurations;
+    private List<GetDistributionConfigurationDistributionAmiDistributionConfiguration> amiDistributionConfigurations;
 
     public List<GetDistributionConfigurationDistributionAmiDistributionConfiguration> amiDistributionConfigurations() {
         return this.amiDistributionConfigurations;
@@ -30,7 +30,7 @@ public final class GetDistributionConfigurationDistribution extends com.pulumi.r
      * 
      */
     @Import(name="licenseConfigurationArns", required=true)
-      private final List<String> licenseConfigurationArns;
+    private List<String> licenseConfigurationArns;
 
     public List<String> licenseConfigurationArns() {
         return this.licenseConfigurationArns;
@@ -41,70 +41,67 @@ public final class GetDistributionConfigurationDistribution extends com.pulumi.r
      * 
      */
     @Import(name="region", required=true)
-      private final String region;
+    private String region;
 
     public String region() {
         return this.region;
     }
 
-    public GetDistributionConfigurationDistribution(
-        List<GetDistributionConfigurationDistributionAmiDistributionConfiguration> amiDistributionConfigurations,
-        List<String> licenseConfigurationArns,
-        String region) {
-        this.amiDistributionConfigurations = Objects.requireNonNull(amiDistributionConfigurations, "expected parameter 'amiDistributionConfigurations' to be non-null");
-        this.licenseConfigurationArns = Objects.requireNonNull(licenseConfigurationArns, "expected parameter 'licenseConfigurationArns' to be non-null");
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-    }
+    private GetDistributionConfigurationDistribution() {}
 
-    private GetDistributionConfigurationDistribution() {
-        this.amiDistributionConfigurations = List.of();
-        this.licenseConfigurationArns = List.of();
-        this.region = null;
+    private GetDistributionConfigurationDistribution(GetDistributionConfigurationDistribution $) {
+        this.amiDistributionConfigurations = $.amiDistributionConfigurations;
+        this.licenseConfigurationArns = $.licenseConfigurationArns;
+        this.region = $.region;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDistributionConfigurationDistribution defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GetDistributionConfigurationDistributionAmiDistributionConfiguration> amiDistributionConfigurations;
-        private List<String> licenseConfigurationArns;
-        private String region;
+        private GetDistributionConfigurationDistribution $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDistributionConfigurationDistribution();
         }
 
         public Builder(GetDistributionConfigurationDistribution defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.amiDistributionConfigurations = defaults.amiDistributionConfigurations;
-    	      this.licenseConfigurationArns = defaults.licenseConfigurationArns;
-    	      this.region = defaults.region;
+            $ = new GetDistributionConfigurationDistribution(Objects.requireNonNull(defaults));
         }
 
         public Builder amiDistributionConfigurations(List<GetDistributionConfigurationDistributionAmiDistributionConfiguration> amiDistributionConfigurations) {
-            this.amiDistributionConfigurations = Objects.requireNonNull(amiDistributionConfigurations);
+            $.amiDistributionConfigurations = amiDistributionConfigurations;
             return this;
         }
+
         public Builder amiDistributionConfigurations(GetDistributionConfigurationDistributionAmiDistributionConfiguration... amiDistributionConfigurations) {
             return amiDistributionConfigurations(List.of(amiDistributionConfigurations));
         }
+
         public Builder licenseConfigurationArns(List<String> licenseConfigurationArns) {
-            this.licenseConfigurationArns = Objects.requireNonNull(licenseConfigurationArns);
+            $.licenseConfigurationArns = licenseConfigurationArns;
             return this;
         }
+
         public Builder licenseConfigurationArns(String... licenseConfigurationArns) {
             return licenseConfigurationArns(List.of(licenseConfigurationArns));
         }
+
         public Builder region(String region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
-        }        public GetDistributionConfigurationDistribution build() {
-            return new GetDistributionConfigurationDistribution(amiDistributionConfigurations, licenseConfigurationArns, region);
+        }
+
+        public GetDistributionConfigurationDistribution build() {
+            $.amiDistributionConfigurations = Objects.requireNonNull($.amiDistributionConfigurations, "expected parameter 'amiDistributionConfigurations' to be non-null");
+            $.licenseConfigurationArns = Objects.requireNonNull($.licenseConfigurationArns, "expected parameter 'licenseConfigurationArns' to be non-null");
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            return $;
         }
     }
+
 }

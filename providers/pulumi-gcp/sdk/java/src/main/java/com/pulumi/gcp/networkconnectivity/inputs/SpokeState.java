@@ -5,13 +5,13 @@ package com.pulumi.gcp.networkconnectivity.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.networkconnectivity.inputs.SpokeLinkedInterconnectAttachmentsGetArgs;
 import com.pulumi.gcp.networkconnectivity.inputs.SpokeLinkedRouterApplianceInstancesGetArgs;
 import com.pulumi.gcp.networkconnectivity.inputs.SpokeLinkedVpnTunnelsGetArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class SpokeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createTime")
-      private final @Nullable Output<String> createTime;
+    private @Nullable Output<String> createTime;
 
-    public Output<String> createTime() {
-        return this.createTime == null ? Codegen.empty() : this.createTime;
+    public Optional<Output<String>> createTime() {
+        return Optional.ofNullable(this.createTime);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class SpokeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class SpokeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hub")
-      private final @Nullable Output<String> hub;
+    private @Nullable Output<String> hub;
 
-    public Output<String> hub() {
-        return this.hub == null ? Codegen.empty() : this.hub;
+    public Optional<Output<String>> hub() {
+        return Optional.ofNullable(this.hub);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class SpokeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class SpokeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="linkedInterconnectAttachments")
-      private final @Nullable Output<SpokeLinkedInterconnectAttachmentsGetArgs> linkedInterconnectAttachments;
+    private @Nullable Output<SpokeLinkedInterconnectAttachmentsGetArgs> linkedInterconnectAttachments;
 
-    public Output<SpokeLinkedInterconnectAttachmentsGetArgs> linkedInterconnectAttachments() {
-        return this.linkedInterconnectAttachments == null ? Codegen.empty() : this.linkedInterconnectAttachments;
+    public Optional<Output<SpokeLinkedInterconnectAttachmentsGetArgs>> linkedInterconnectAttachments() {
+        return Optional.ofNullable(this.linkedInterconnectAttachments);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class SpokeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="linkedRouterApplianceInstances")
-      private final @Nullable Output<SpokeLinkedRouterApplianceInstancesGetArgs> linkedRouterApplianceInstances;
+    private @Nullable Output<SpokeLinkedRouterApplianceInstancesGetArgs> linkedRouterApplianceInstances;
 
-    public Output<SpokeLinkedRouterApplianceInstancesGetArgs> linkedRouterApplianceInstances() {
-        return this.linkedRouterApplianceInstances == null ? Codegen.empty() : this.linkedRouterApplianceInstances;
+    public Optional<Output<SpokeLinkedRouterApplianceInstancesGetArgs>> linkedRouterApplianceInstances() {
+        return Optional.ofNullable(this.linkedRouterApplianceInstances);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class SpokeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="linkedVpnTunnels")
-      private final @Nullable Output<SpokeLinkedVpnTunnelsGetArgs> linkedVpnTunnels;
+    private @Nullable Output<SpokeLinkedVpnTunnelsGetArgs> linkedVpnTunnels;
 
-    public Output<SpokeLinkedVpnTunnelsGetArgs> linkedVpnTunnels() {
-        return this.linkedVpnTunnels == null ? Codegen.empty() : this.linkedVpnTunnels;
+    public Optional<Output<SpokeLinkedVpnTunnelsGetArgs>> linkedVpnTunnels() {
+        return Optional.ofNullable(this.linkedVpnTunnels);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class SpokeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -112,10 +112,10 @@ public final class SpokeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -123,10 +123,10 @@ public final class SpokeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -134,10 +134,10 @@ public final class SpokeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<String> state;
+    private @Nullable Output<String> state;
 
-    public Output<String> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -146,10 +146,10 @@ public final class SpokeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="uniqueId")
-      private final @Nullable Output<String> uniqueId;
+    private @Nullable Output<String> uniqueId;
 
-    public Output<String> uniqueId() {
-        return this.uniqueId == null ? Codegen.empty() : this.uniqueId;
+    public Optional<Output<String>> uniqueId() {
+        return Optional.ofNullable(this.uniqueId);
     }
 
     /**
@@ -157,206 +157,168 @@ public final class SpokeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="updateTime")
-      private final @Nullable Output<String> updateTime;
+    private @Nullable Output<String> updateTime;
 
-    public Output<String> updateTime() {
-        return this.updateTime == null ? Codegen.empty() : this.updateTime;
+    public Optional<Output<String>> updateTime() {
+        return Optional.ofNullable(this.updateTime);
     }
 
-    public SpokeState(
-        @Nullable Output<String> createTime,
-        @Nullable Output<String> description,
-        @Nullable Output<String> hub,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<SpokeLinkedInterconnectAttachmentsGetArgs> linkedInterconnectAttachments,
-        @Nullable Output<SpokeLinkedRouterApplianceInstancesGetArgs> linkedRouterApplianceInstances,
-        @Nullable Output<SpokeLinkedVpnTunnelsGetArgs> linkedVpnTunnels,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<String> state,
-        @Nullable Output<String> uniqueId,
-        @Nullable Output<String> updateTime) {
-        this.createTime = createTime;
-        this.description = description;
-        this.hub = hub;
-        this.labels = labels;
-        this.linkedInterconnectAttachments = linkedInterconnectAttachments;
-        this.linkedRouterApplianceInstances = linkedRouterApplianceInstances;
-        this.linkedVpnTunnels = linkedVpnTunnels;
-        this.location = location;
-        this.name = name;
-        this.project = project;
-        this.state = state;
-        this.uniqueId = uniqueId;
-        this.updateTime = updateTime;
-    }
+    private SpokeState() {}
 
-    private SpokeState() {
-        this.createTime = Codegen.empty();
-        this.description = Codegen.empty();
-        this.hub = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.linkedInterconnectAttachments = Codegen.empty();
-        this.linkedRouterApplianceInstances = Codegen.empty();
-        this.linkedVpnTunnels = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.state = Codegen.empty();
-        this.uniqueId = Codegen.empty();
-        this.updateTime = Codegen.empty();
+    private SpokeState(SpokeState $) {
+        this.createTime = $.createTime;
+        this.description = $.description;
+        this.hub = $.hub;
+        this.labels = $.labels;
+        this.linkedInterconnectAttachments = $.linkedInterconnectAttachments;
+        this.linkedRouterApplianceInstances = $.linkedRouterApplianceInstances;
+        this.linkedVpnTunnels = $.linkedVpnTunnels;
+        this.location = $.location;
+        this.name = $.name;
+        this.project = $.project;
+        this.state = $.state;
+        this.uniqueId = $.uniqueId;
+        this.updateTime = $.updateTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SpokeState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> createTime;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> hub;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<SpokeLinkedInterconnectAttachmentsGetArgs> linkedInterconnectAttachments;
-        private @Nullable Output<SpokeLinkedRouterApplianceInstancesGetArgs> linkedRouterApplianceInstances;
-        private @Nullable Output<SpokeLinkedVpnTunnelsGetArgs> linkedVpnTunnels;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> state;
-        private @Nullable Output<String> uniqueId;
-        private @Nullable Output<String> updateTime;
+        private SpokeState $;
 
         public Builder() {
-    	      // Empty
+            $ = new SpokeState();
         }
 
         public Builder(SpokeState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createTime = defaults.createTime;
-    	      this.description = defaults.description;
-    	      this.hub = defaults.hub;
-    	      this.labels = defaults.labels;
-    	      this.linkedInterconnectAttachments = defaults.linkedInterconnectAttachments;
-    	      this.linkedRouterApplianceInstances = defaults.linkedRouterApplianceInstances;
-    	      this.linkedVpnTunnels = defaults.linkedVpnTunnels;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.state = defaults.state;
-    	      this.uniqueId = defaults.uniqueId;
-    	      this.updateTime = defaults.updateTime;
+            $ = new SpokeState(Objects.requireNonNull(defaults));
         }
 
         public Builder createTime(@Nullable Output<String> createTime) {
-            this.createTime = createTime;
+            $.createTime = createTime;
             return this;
         }
-        public Builder createTime(@Nullable String createTime) {
-            this.createTime = Codegen.ofNullable(createTime);
-            return this;
+
+        public Builder createTime(String createTime) {
+            return createTime(Output.of(createTime));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder hub(@Nullable Output<String> hub) {
-            this.hub = hub;
+            $.hub = hub;
             return this;
         }
-        public Builder hub(@Nullable String hub) {
-            this.hub = Codegen.ofNullable(hub);
-            return this;
+
+        public Builder hub(String hub) {
+            return hub(Output.of(hub));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder linkedInterconnectAttachments(@Nullable Output<SpokeLinkedInterconnectAttachmentsGetArgs> linkedInterconnectAttachments) {
-            this.linkedInterconnectAttachments = linkedInterconnectAttachments;
+            $.linkedInterconnectAttachments = linkedInterconnectAttachments;
             return this;
         }
-        public Builder linkedInterconnectAttachments(@Nullable SpokeLinkedInterconnectAttachmentsGetArgs linkedInterconnectAttachments) {
-            this.linkedInterconnectAttachments = Codegen.ofNullable(linkedInterconnectAttachments);
-            return this;
+
+        public Builder linkedInterconnectAttachments(SpokeLinkedInterconnectAttachmentsGetArgs linkedInterconnectAttachments) {
+            return linkedInterconnectAttachments(Output.of(linkedInterconnectAttachments));
         }
+
         public Builder linkedRouterApplianceInstances(@Nullable Output<SpokeLinkedRouterApplianceInstancesGetArgs> linkedRouterApplianceInstances) {
-            this.linkedRouterApplianceInstances = linkedRouterApplianceInstances;
+            $.linkedRouterApplianceInstances = linkedRouterApplianceInstances;
             return this;
         }
-        public Builder linkedRouterApplianceInstances(@Nullable SpokeLinkedRouterApplianceInstancesGetArgs linkedRouterApplianceInstances) {
-            this.linkedRouterApplianceInstances = Codegen.ofNullable(linkedRouterApplianceInstances);
-            return this;
+
+        public Builder linkedRouterApplianceInstances(SpokeLinkedRouterApplianceInstancesGetArgs linkedRouterApplianceInstances) {
+            return linkedRouterApplianceInstances(Output.of(linkedRouterApplianceInstances));
         }
+
         public Builder linkedVpnTunnels(@Nullable Output<SpokeLinkedVpnTunnelsGetArgs> linkedVpnTunnels) {
-            this.linkedVpnTunnels = linkedVpnTunnels;
+            $.linkedVpnTunnels = linkedVpnTunnels;
             return this;
         }
-        public Builder linkedVpnTunnels(@Nullable SpokeLinkedVpnTunnelsGetArgs linkedVpnTunnels) {
-            this.linkedVpnTunnels = Codegen.ofNullable(linkedVpnTunnels);
-            return this;
+
+        public Builder linkedVpnTunnels(SpokeLinkedVpnTunnelsGetArgs linkedVpnTunnels) {
+            return linkedVpnTunnels(Output.of(linkedVpnTunnels));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder state(@Nullable Output<String> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable String state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
+
+        public Builder state(String state) {
+            return state(Output.of(state));
         }
+
         public Builder uniqueId(@Nullable Output<String> uniqueId) {
-            this.uniqueId = uniqueId;
+            $.uniqueId = uniqueId;
             return this;
         }
-        public Builder uniqueId(@Nullable String uniqueId) {
-            this.uniqueId = Codegen.ofNullable(uniqueId);
-            return this;
+
+        public Builder uniqueId(String uniqueId) {
+            return uniqueId(Output.of(uniqueId));
         }
+
         public Builder updateTime(@Nullable Output<String> updateTime) {
-            this.updateTime = updateTime;
+            $.updateTime = updateTime;
             return this;
         }
-        public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Codegen.ofNullable(updateTime);
-            return this;
-        }        public SpokeState build() {
-            return new SpokeState(createTime, description, hub, labels, linkedInterconnectAttachments, linkedRouterApplianceInstances, linkedVpnTunnels, location, name, project, state, uniqueId, updateTime);
+
+        public Builder updateTime(String updateTime) {
+            return updateTime(Output.of(updateTime));
+        }
+
+        public SpokeState build() {
+            return $;
         }
     }
+
 }

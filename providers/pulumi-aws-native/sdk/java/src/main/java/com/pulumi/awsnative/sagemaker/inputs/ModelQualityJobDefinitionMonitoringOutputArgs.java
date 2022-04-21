@@ -6,7 +6,6 @@ package com.pulumi.awsnative.sagemaker.inputs;
 import com.pulumi.awsnative.sagemaker.inputs.ModelQualityJobDefinitionS3OutputArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -19,49 +18,49 @@ public final class ModelQualityJobDefinitionMonitoringOutputArgs extends com.pul
     public static final ModelQualityJobDefinitionMonitoringOutputArgs Empty = new ModelQualityJobDefinitionMonitoringOutputArgs();
 
     @Import(name="s3Output", required=true)
-      private final Output<ModelQualityJobDefinitionS3OutputArgs> s3Output;
+    private Output<ModelQualityJobDefinitionS3OutputArgs> s3Output;
 
     public Output<ModelQualityJobDefinitionS3OutputArgs> s3Output() {
         return this.s3Output;
     }
 
-    public ModelQualityJobDefinitionMonitoringOutputArgs(Output<ModelQualityJobDefinitionS3OutputArgs> s3Output) {
-        this.s3Output = Objects.requireNonNull(s3Output, "expected parameter 's3Output' to be non-null");
-    }
+    private ModelQualityJobDefinitionMonitoringOutputArgs() {}
 
-    private ModelQualityJobDefinitionMonitoringOutputArgs() {
-        this.s3Output = Codegen.empty();
+    private ModelQualityJobDefinitionMonitoringOutputArgs(ModelQualityJobDefinitionMonitoringOutputArgs $) {
+        this.s3Output = $.s3Output;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ModelQualityJobDefinitionMonitoringOutputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ModelQualityJobDefinitionS3OutputArgs> s3Output;
+        private ModelQualityJobDefinitionMonitoringOutputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ModelQualityJobDefinitionMonitoringOutputArgs();
         }
 
         public Builder(ModelQualityJobDefinitionMonitoringOutputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.s3Output = defaults.s3Output;
+            $ = new ModelQualityJobDefinitionMonitoringOutputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder s3Output(Output<ModelQualityJobDefinitionS3OutputArgs> s3Output) {
-            this.s3Output = Objects.requireNonNull(s3Output);
+            $.s3Output = s3Output;
             return this;
         }
+
         public Builder s3Output(ModelQualityJobDefinitionS3OutputArgs s3Output) {
-            this.s3Output = Output.of(Objects.requireNonNull(s3Output));
-            return this;
-        }        public ModelQualityJobDefinitionMonitoringOutputArgs build() {
-            return new ModelQualityJobDefinitionMonitoringOutputArgs(s3Output);
+            return s3Output(Output.of(s3Output));
+        }
+
+        public ModelQualityJobDefinitionMonitoringOutputArgs build() {
+            $.s3Output = Objects.requireNonNull($.s3Output, "expected parameter 's3Output' to be non-null");
+            return $;
         }
     }
+
 }

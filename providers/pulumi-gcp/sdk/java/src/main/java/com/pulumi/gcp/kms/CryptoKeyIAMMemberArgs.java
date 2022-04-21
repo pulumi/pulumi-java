@@ -5,10 +5,10 @@ package com.pulumi.gcp.kms;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.kms.inputs.CryptoKeyIAMMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class CryptoKeyIAMMemberArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="condition")
-      private final @Nullable Output<CryptoKeyIAMMemberConditionArgs> condition;
+    private @Nullable Output<CryptoKeyIAMMemberConditionArgs> condition;
 
-    public Output<CryptoKeyIAMMemberConditionArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<CryptoKeyIAMMemberConditionArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     /**
@@ -36,14 +36,14 @@ public final class CryptoKeyIAMMemberArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="cryptoKeyId", required=true)
-      private final Output<String> cryptoKeyId;
+    private Output<String> cryptoKeyId;
 
     public Output<String> cryptoKeyId() {
         return this.cryptoKeyId;
     }
 
     @Import(name="member", required=true)
-      private final Output<String> member;
+    private Output<String> member;
 
     public Output<String> member() {
         return this.member;
@@ -55,89 +55,81 @@ public final class CryptoKeyIAMMemberArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="role", required=true)
-      private final Output<String> role;
+    private Output<String> role;
 
     public Output<String> role() {
         return this.role;
     }
 
-    public CryptoKeyIAMMemberArgs(
-        @Nullable Output<CryptoKeyIAMMemberConditionArgs> condition,
-        Output<String> cryptoKeyId,
-        Output<String> member,
-        Output<String> role) {
-        this.condition = condition;
-        this.cryptoKeyId = Objects.requireNonNull(cryptoKeyId, "expected parameter 'cryptoKeyId' to be non-null");
-        this.member = Objects.requireNonNull(member, "expected parameter 'member' to be non-null");
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-    }
+    private CryptoKeyIAMMemberArgs() {}
 
-    private CryptoKeyIAMMemberArgs() {
-        this.condition = Codegen.empty();
-        this.cryptoKeyId = Codegen.empty();
-        this.member = Codegen.empty();
-        this.role = Codegen.empty();
+    private CryptoKeyIAMMemberArgs(CryptoKeyIAMMemberArgs $) {
+        this.condition = $.condition;
+        this.cryptoKeyId = $.cryptoKeyId;
+        this.member = $.member;
+        this.role = $.role;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CryptoKeyIAMMemberArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CryptoKeyIAMMemberConditionArgs> condition;
-        private Output<String> cryptoKeyId;
-        private Output<String> member;
-        private Output<String> role;
+        private CryptoKeyIAMMemberArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CryptoKeyIAMMemberArgs();
         }
 
         public Builder(CryptoKeyIAMMemberArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.cryptoKeyId = defaults.cryptoKeyId;
-    	      this.member = defaults.member;
-    	      this.role = defaults.role;
+            $ = new CryptoKeyIAMMemberArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable Output<CryptoKeyIAMMemberConditionArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable CryptoKeyIAMMemberConditionArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(CryptoKeyIAMMemberConditionArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder cryptoKeyId(Output<String> cryptoKeyId) {
-            this.cryptoKeyId = Objects.requireNonNull(cryptoKeyId);
+            $.cryptoKeyId = cryptoKeyId;
             return this;
         }
+
         public Builder cryptoKeyId(String cryptoKeyId) {
-            this.cryptoKeyId = Output.of(Objects.requireNonNull(cryptoKeyId));
-            return this;
+            return cryptoKeyId(Output.of(cryptoKeyId));
         }
+
         public Builder member(Output<String> member) {
-            this.member = Objects.requireNonNull(member);
+            $.member = member;
             return this;
         }
+
         public Builder member(String member) {
-            this.member = Output.of(Objects.requireNonNull(member));
-            return this;
+            return member(Output.of(member));
         }
+
         public Builder role(Output<String> role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
         }
+
         public Builder role(String role) {
-            this.role = Output.of(Objects.requireNonNull(role));
-            return this;
-        }        public CryptoKeyIAMMemberArgs build() {
-            return new CryptoKeyIAMMemberArgs(condition, cryptoKeyId, member, role);
+            return role(Output.of(role));
+        }
+
+        public CryptoKeyIAMMemberArgs build() {
+            $.cryptoKeyId = Objects.requireNonNull($.cryptoKeyId, "expected parameter 'cryptoKeyId' to be non-null");
+            $.member = Objects.requireNonNull($.member, "expected parameter 'member' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            return $;
         }
     }
+
 }

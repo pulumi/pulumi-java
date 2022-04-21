@@ -5,12 +5,12 @@ package com.pulumi.aws.xray.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class SamplingRuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class SamplingRuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="attributes")
-      private final @Nullable Output<Map<String,String>> attributes;
+    private @Nullable Output<Map<String,String>> attributes;
 
-    public Output<Map<String,String>> attributes() {
-        return this.attributes == null ? Codegen.empty() : this.attributes;
+    public Optional<Output<Map<String,String>>> attributes() {
+        return Optional.ofNullable(this.attributes);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class SamplingRuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fixedRate")
-      private final @Nullable Output<Double> fixedRate;
+    private @Nullable Output<Double> fixedRate;
 
-    public Output<Double> fixedRate() {
-        return this.fixedRate == null ? Codegen.empty() : this.fixedRate;
+    public Optional<Output<Double>> fixedRate() {
+        return Optional.ofNullable(this.fixedRate);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class SamplingRuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="host")
-      private final @Nullable Output<String> host;
+    private @Nullable Output<String> host;
 
-    public Output<String> host() {
-        return this.host == null ? Codegen.empty() : this.host;
+    public Optional<Output<String>> host() {
+        return Optional.ofNullable(this.host);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class SamplingRuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="httpMethod")
-      private final @Nullable Output<String> httpMethod;
+    private @Nullable Output<String> httpMethod;
 
-    public Output<String> httpMethod() {
-        return this.httpMethod == null ? Codegen.empty() : this.httpMethod;
+    public Optional<Output<String>> httpMethod() {
+        return Optional.ofNullable(this.httpMethod);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class SamplingRuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="priority")
-      private final @Nullable Output<Integer> priority;
+    private @Nullable Output<Integer> priority;
 
-    public Output<Integer> priority() {
-        return this.priority == null ? Codegen.empty() : this.priority;
+    public Optional<Output<Integer>> priority() {
+        return Optional.ofNullable(this.priority);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class SamplingRuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="reservoirSize")
-      private final @Nullable Output<Integer> reservoirSize;
+    private @Nullable Output<Integer> reservoirSize;
 
-    public Output<Integer> reservoirSize() {
-        return this.reservoirSize == null ? Codegen.empty() : this.reservoirSize;
+    public Optional<Output<Integer>> reservoirSize() {
+        return Optional.ofNullable(this.reservoirSize);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class SamplingRuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceArn")
-      private final @Nullable Output<String> resourceArn;
+    private @Nullable Output<String> resourceArn;
 
-    public Output<String> resourceArn() {
-        return this.resourceArn == null ? Codegen.empty() : this.resourceArn;
+    public Optional<Output<String>> resourceArn() {
+        return Optional.ofNullable(this.resourceArn);
     }
 
     /**
@@ -111,10 +111,10 @@ public final class SamplingRuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ruleName")
-      private final @Nullable Output<String> ruleName;
+    private @Nullable Output<String> ruleName;
 
-    public Output<String> ruleName() {
-        return this.ruleName == null ? Codegen.empty() : this.ruleName;
+    public Optional<Output<String>> ruleName() {
+        return Optional.ofNullable(this.ruleName);
     }
 
     /**
@@ -122,10 +122,10 @@ public final class SamplingRuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceName")
-      private final @Nullable Output<String> serviceName;
+    private @Nullable Output<String> serviceName;
 
-    public Output<String> serviceName() {
-        return this.serviceName == null ? Codegen.empty() : this.serviceName;
+    public Optional<Output<String>> serviceName() {
+        return Optional.ofNullable(this.serviceName);
     }
 
     /**
@@ -133,10 +133,10 @@ public final class SamplingRuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceType")
-      private final @Nullable Output<String> serviceType;
+    private @Nullable Output<String> serviceType;
 
-    public Output<String> serviceType() {
-        return this.serviceType == null ? Codegen.empty() : this.serviceType;
+    public Optional<Output<String>> serviceType() {
+        return Optional.ofNullable(this.serviceType);
     }
 
     /**
@@ -144,10 +144,10 @@ public final class SamplingRuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -155,10 +155,10 @@ public final class SamplingRuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -166,10 +166,10 @@ public final class SamplingRuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="urlPath")
-      private final @Nullable Output<String> urlPath;
+    private @Nullable Output<String> urlPath;
 
-    public Output<String> urlPath() {
-        return this.urlPath == null ? Codegen.empty() : this.urlPath;
+    public Optional<Output<String>> urlPath() {
+        return Optional.ofNullable(this.urlPath);
     }
 
     /**
@@ -177,232 +177,188 @@ public final class SamplingRuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<Integer> version;
+    private @Nullable Output<Integer> version;
 
-    public Output<Integer> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<Integer>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public SamplingRuleState(
-        @Nullable Output<String> arn,
-        @Nullable Output<Map<String,String>> attributes,
-        @Nullable Output<Double> fixedRate,
-        @Nullable Output<String> host,
-        @Nullable Output<String> httpMethod,
-        @Nullable Output<Integer> priority,
-        @Nullable Output<Integer> reservoirSize,
-        @Nullable Output<String> resourceArn,
-        @Nullable Output<String> ruleName,
-        @Nullable Output<String> serviceName,
-        @Nullable Output<String> serviceType,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<String> urlPath,
-        @Nullable Output<Integer> version) {
-        this.arn = arn;
-        this.attributes = attributes;
-        this.fixedRate = fixedRate;
-        this.host = host;
-        this.httpMethod = httpMethod;
-        this.priority = priority;
-        this.reservoirSize = reservoirSize;
-        this.resourceArn = resourceArn;
-        this.ruleName = ruleName;
-        this.serviceName = serviceName;
-        this.serviceType = serviceType;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.urlPath = urlPath;
-        this.version = version;
-    }
+    private SamplingRuleState() {}
 
-    private SamplingRuleState() {
-        this.arn = Codegen.empty();
-        this.attributes = Codegen.empty();
-        this.fixedRate = Codegen.empty();
-        this.host = Codegen.empty();
-        this.httpMethod = Codegen.empty();
-        this.priority = Codegen.empty();
-        this.reservoirSize = Codegen.empty();
-        this.resourceArn = Codegen.empty();
-        this.ruleName = Codegen.empty();
-        this.serviceName = Codegen.empty();
-        this.serviceType = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.urlPath = Codegen.empty();
-        this.version = Codegen.empty();
+    private SamplingRuleState(SamplingRuleState $) {
+        this.arn = $.arn;
+        this.attributes = $.attributes;
+        this.fixedRate = $.fixedRate;
+        this.host = $.host;
+        this.httpMethod = $.httpMethod;
+        this.priority = $.priority;
+        this.reservoirSize = $.reservoirSize;
+        this.resourceArn = $.resourceArn;
+        this.ruleName = $.ruleName;
+        this.serviceName = $.serviceName;
+        this.serviceType = $.serviceType;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.urlPath = $.urlPath;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SamplingRuleState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<Map<String,String>> attributes;
-        private @Nullable Output<Double> fixedRate;
-        private @Nullable Output<String> host;
-        private @Nullable Output<String> httpMethod;
-        private @Nullable Output<Integer> priority;
-        private @Nullable Output<Integer> reservoirSize;
-        private @Nullable Output<String> resourceArn;
-        private @Nullable Output<String> ruleName;
-        private @Nullable Output<String> serviceName;
-        private @Nullable Output<String> serviceType;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<String> urlPath;
-        private @Nullable Output<Integer> version;
+        private SamplingRuleState $;
 
         public Builder() {
-    	      // Empty
+            $ = new SamplingRuleState();
         }
 
         public Builder(SamplingRuleState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.attributes = defaults.attributes;
-    	      this.fixedRate = defaults.fixedRate;
-    	      this.host = defaults.host;
-    	      this.httpMethod = defaults.httpMethod;
-    	      this.priority = defaults.priority;
-    	      this.reservoirSize = defaults.reservoirSize;
-    	      this.resourceArn = defaults.resourceArn;
-    	      this.ruleName = defaults.ruleName;
-    	      this.serviceName = defaults.serviceName;
-    	      this.serviceType = defaults.serviceType;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.urlPath = defaults.urlPath;
-    	      this.version = defaults.version;
+            $ = new SamplingRuleState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder attributes(@Nullable Output<Map<String,String>> attributes) {
-            this.attributes = attributes;
+            $.attributes = attributes;
             return this;
         }
-        public Builder attributes(@Nullable Map<String,String> attributes) {
-            this.attributes = Codegen.ofNullable(attributes);
-            return this;
+
+        public Builder attributes(Map<String,String> attributes) {
+            return attributes(Output.of(attributes));
         }
+
         public Builder fixedRate(@Nullable Output<Double> fixedRate) {
-            this.fixedRate = fixedRate;
+            $.fixedRate = fixedRate;
             return this;
         }
-        public Builder fixedRate(@Nullable Double fixedRate) {
-            this.fixedRate = Codegen.ofNullable(fixedRate);
-            return this;
+
+        public Builder fixedRate(Double fixedRate) {
+            return fixedRate(Output.of(fixedRate));
         }
+
         public Builder host(@Nullable Output<String> host) {
-            this.host = host;
+            $.host = host;
             return this;
         }
-        public Builder host(@Nullable String host) {
-            this.host = Codegen.ofNullable(host);
-            return this;
+
+        public Builder host(String host) {
+            return host(Output.of(host));
         }
+
         public Builder httpMethod(@Nullable Output<String> httpMethod) {
-            this.httpMethod = httpMethod;
+            $.httpMethod = httpMethod;
             return this;
         }
-        public Builder httpMethod(@Nullable String httpMethod) {
-            this.httpMethod = Codegen.ofNullable(httpMethod);
-            return this;
+
+        public Builder httpMethod(String httpMethod) {
+            return httpMethod(Output.of(httpMethod));
         }
+
         public Builder priority(@Nullable Output<Integer> priority) {
-            this.priority = priority;
+            $.priority = priority;
             return this;
         }
-        public Builder priority(@Nullable Integer priority) {
-            this.priority = Codegen.ofNullable(priority);
-            return this;
+
+        public Builder priority(Integer priority) {
+            return priority(Output.of(priority));
         }
+
         public Builder reservoirSize(@Nullable Output<Integer> reservoirSize) {
-            this.reservoirSize = reservoirSize;
+            $.reservoirSize = reservoirSize;
             return this;
         }
-        public Builder reservoirSize(@Nullable Integer reservoirSize) {
-            this.reservoirSize = Codegen.ofNullable(reservoirSize);
-            return this;
+
+        public Builder reservoirSize(Integer reservoirSize) {
+            return reservoirSize(Output.of(reservoirSize));
         }
+
         public Builder resourceArn(@Nullable Output<String> resourceArn) {
-            this.resourceArn = resourceArn;
+            $.resourceArn = resourceArn;
             return this;
         }
-        public Builder resourceArn(@Nullable String resourceArn) {
-            this.resourceArn = Codegen.ofNullable(resourceArn);
-            return this;
+
+        public Builder resourceArn(String resourceArn) {
+            return resourceArn(Output.of(resourceArn));
         }
+
         public Builder ruleName(@Nullable Output<String> ruleName) {
-            this.ruleName = ruleName;
+            $.ruleName = ruleName;
             return this;
         }
-        public Builder ruleName(@Nullable String ruleName) {
-            this.ruleName = Codegen.ofNullable(ruleName);
-            return this;
+
+        public Builder ruleName(String ruleName) {
+            return ruleName(Output.of(ruleName));
         }
+
         public Builder serviceName(@Nullable Output<String> serviceName) {
-            this.serviceName = serviceName;
+            $.serviceName = serviceName;
             return this;
         }
-        public Builder serviceName(@Nullable String serviceName) {
-            this.serviceName = Codegen.ofNullable(serviceName);
-            return this;
+
+        public Builder serviceName(String serviceName) {
+            return serviceName(Output.of(serviceName));
         }
+
         public Builder serviceType(@Nullable Output<String> serviceType) {
-            this.serviceType = serviceType;
+            $.serviceType = serviceType;
             return this;
         }
-        public Builder serviceType(@Nullable String serviceType) {
-            this.serviceType = Codegen.ofNullable(serviceType);
-            return this;
+
+        public Builder serviceType(String serviceType) {
+            return serviceType(Output.of(serviceType));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder urlPath(@Nullable Output<String> urlPath) {
-            this.urlPath = urlPath;
+            $.urlPath = urlPath;
             return this;
         }
-        public Builder urlPath(@Nullable String urlPath) {
-            this.urlPath = Codegen.ofNullable(urlPath);
-            return this;
+
+        public Builder urlPath(String urlPath) {
+            return urlPath(Output.of(urlPath));
         }
+
         public Builder version(@Nullable Output<Integer> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable Integer version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public SamplingRuleState build() {
-            return new SamplingRuleState(arn, attributes, fixedRate, host, httpMethod, priority, reservoirSize, resourceArn, ruleName, serviceName, serviceType, tags, tagsAll, urlPath, version);
+
+        public Builder version(Integer version) {
+            return version(Output.of(version));
+        }
+
+        public SamplingRuleState build() {
+            return $;
         }
     }
+
 }

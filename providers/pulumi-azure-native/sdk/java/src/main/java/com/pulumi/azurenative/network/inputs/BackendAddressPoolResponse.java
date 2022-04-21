@@ -27,7 +27,7 @@ public final class BackendAddressPoolResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="backendIPConfigurations", required=true)
-      private final List<NetworkInterfaceIPConfigurationResponse> backendIPConfigurations;
+    private List<NetworkInterfaceIPConfigurationResponse> backendIPConfigurations;
 
     public List<NetworkInterfaceIPConfigurationResponse> backendIPConfigurations() {
         return this.backendIPConfigurations;
@@ -38,7 +38,7 @@ public final class BackendAddressPoolResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -49,10 +49,10 @@ public final class BackendAddressPoolResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class BackendAddressPoolResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="loadBalancerBackendAddresses")
-      private final @Nullable List<LoadBalancerBackendAddressResponse> loadBalancerBackendAddresses;
+    private @Nullable List<LoadBalancerBackendAddressResponse> loadBalancerBackendAddresses;
 
-    public List<LoadBalancerBackendAddressResponse> loadBalancerBackendAddresses() {
-        return this.loadBalancerBackendAddresses == null ? List.of() : this.loadBalancerBackendAddresses;
+    public Optional<List<LoadBalancerBackendAddressResponse>> loadBalancerBackendAddresses() {
+        return Optional.ofNullable(this.loadBalancerBackendAddresses);
     }
 
     /**
@@ -71,7 +71,7 @@ public final class BackendAddressPoolResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="loadBalancingRules", required=true)
-      private final List<SubResourceResponse> loadBalancingRules;
+    private List<SubResourceResponse> loadBalancingRules;
 
     public List<SubResourceResponse> loadBalancingRules() {
         return this.loadBalancingRules;
@@ -82,10 +82,10 @@ public final class BackendAddressPoolResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="location")
-      private final @Nullable String location;
+    private @Nullable String location;
 
     public Optional<String> location() {
-        return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class BackendAddressPoolResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -104,7 +104,7 @@ public final class BackendAddressPoolResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="outboundRule", required=true)
-      private final SubResourceResponse outboundRule;
+    private SubResourceResponse outboundRule;
 
     public SubResourceResponse outboundRule() {
         return this.outboundRule;
@@ -115,7 +115,7 @@ public final class BackendAddressPoolResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="outboundRules", required=true)
-      private final List<SubResourceResponse> outboundRules;
+    private List<SubResourceResponse> outboundRules;
 
     public List<SubResourceResponse> outboundRules() {
         return this.outboundRules;
@@ -126,7 +126,7 @@ public final class BackendAddressPoolResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -137,148 +137,127 @@ public final class BackendAddressPoolResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public BackendAddressPoolResponse(
-        List<NetworkInterfaceIPConfigurationResponse> backendIPConfigurations,
-        String etag,
-        @Nullable String id,
-        @Nullable List<LoadBalancerBackendAddressResponse> loadBalancerBackendAddresses,
-        List<SubResourceResponse> loadBalancingRules,
-        @Nullable String location,
-        @Nullable String name,
-        SubResourceResponse outboundRule,
-        List<SubResourceResponse> outboundRules,
-        String provisioningState,
-        String type) {
-        this.backendIPConfigurations = Objects.requireNonNull(backendIPConfigurations, "expected parameter 'backendIPConfigurations' to be non-null");
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.id = id;
-        this.loadBalancerBackendAddresses = loadBalancerBackendAddresses;
-        this.loadBalancingRules = Objects.requireNonNull(loadBalancingRules, "expected parameter 'loadBalancingRules' to be non-null");
-        this.location = location;
-        this.name = name;
-        this.outboundRule = Objects.requireNonNull(outboundRule, "expected parameter 'outboundRule' to be non-null");
-        this.outboundRules = Objects.requireNonNull(outboundRules, "expected parameter 'outboundRules' to be non-null");
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private BackendAddressPoolResponse() {}
 
-    private BackendAddressPoolResponse() {
-        this.backendIPConfigurations = List.of();
-        this.etag = null;
-        this.id = null;
-        this.loadBalancerBackendAddresses = List.of();
-        this.loadBalancingRules = List.of();
-        this.location = null;
-        this.name = null;
-        this.outboundRule = null;
-        this.outboundRules = List.of();
-        this.provisioningState = null;
-        this.type = null;
+    private BackendAddressPoolResponse(BackendAddressPoolResponse $) {
+        this.backendIPConfigurations = $.backendIPConfigurations;
+        this.etag = $.etag;
+        this.id = $.id;
+        this.loadBalancerBackendAddresses = $.loadBalancerBackendAddresses;
+        this.loadBalancingRules = $.loadBalancingRules;
+        this.location = $.location;
+        this.name = $.name;
+        this.outboundRule = $.outboundRule;
+        this.outboundRules = $.outboundRules;
+        this.provisioningState = $.provisioningState;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackendAddressPoolResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<NetworkInterfaceIPConfigurationResponse> backendIPConfigurations;
-        private String etag;
-        private @Nullable String id;
-        private @Nullable List<LoadBalancerBackendAddressResponse> loadBalancerBackendAddresses;
-        private List<SubResourceResponse> loadBalancingRules;
-        private @Nullable String location;
-        private @Nullable String name;
-        private SubResourceResponse outboundRule;
-        private List<SubResourceResponse> outboundRules;
-        private String provisioningState;
-        private String type;
+        private BackendAddressPoolResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackendAddressPoolResponse();
         }
 
         public Builder(BackendAddressPoolResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backendIPConfigurations = defaults.backendIPConfigurations;
-    	      this.etag = defaults.etag;
-    	      this.id = defaults.id;
-    	      this.loadBalancerBackendAddresses = defaults.loadBalancerBackendAddresses;
-    	      this.loadBalancingRules = defaults.loadBalancingRules;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.outboundRule = defaults.outboundRule;
-    	      this.outboundRules = defaults.outboundRules;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.type = defaults.type;
+            $ = new BackendAddressPoolResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder backendIPConfigurations(List<NetworkInterfaceIPConfigurationResponse> backendIPConfigurations) {
-            this.backendIPConfigurations = Objects.requireNonNull(backendIPConfigurations);
+            $.backendIPConfigurations = backendIPConfigurations;
             return this;
         }
+
         public Builder backendIPConfigurations(NetworkInterfaceIPConfigurationResponse... backendIPConfigurations) {
             return backendIPConfigurations(List.of(backendIPConfigurations));
         }
+
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder loadBalancerBackendAddresses(@Nullable List<LoadBalancerBackendAddressResponse> loadBalancerBackendAddresses) {
-            this.loadBalancerBackendAddresses = loadBalancerBackendAddresses;
+            $.loadBalancerBackendAddresses = loadBalancerBackendAddresses;
             return this;
         }
+
         public Builder loadBalancerBackendAddresses(LoadBalancerBackendAddressResponse... loadBalancerBackendAddresses) {
             return loadBalancerBackendAddresses(List.of(loadBalancerBackendAddresses));
         }
+
         public Builder loadBalancingRules(List<SubResourceResponse> loadBalancingRules) {
-            this.loadBalancingRules = Objects.requireNonNull(loadBalancingRules);
+            $.loadBalancingRules = loadBalancingRules;
             return this;
         }
+
         public Builder loadBalancingRules(SubResourceResponse... loadBalancingRules) {
             return loadBalancingRules(List.of(loadBalancingRules));
         }
+
         public Builder location(@Nullable String location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder outboundRule(SubResourceResponse outboundRule) {
-            this.outboundRule = Objects.requireNonNull(outboundRule);
+            $.outboundRule = outboundRule;
             return this;
         }
+
         public Builder outboundRules(List<SubResourceResponse> outboundRules) {
-            this.outboundRules = Objects.requireNonNull(outboundRules);
+            $.outboundRules = outboundRules;
             return this;
         }
+
         public Builder outboundRules(SubResourceResponse... outboundRules) {
             return outboundRules(List.of(outboundRules));
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public BackendAddressPoolResponse build() {
-            return new BackendAddressPoolResponse(backendIPConfigurations, etag, id, loadBalancerBackendAddresses, loadBalancingRules, location, name, outboundRule, outboundRules, provisioningState, type);
+        }
+
+        public BackendAddressPoolResponse build() {
+            $.backendIPConfigurations = Objects.requireNonNull($.backendIPConfigurations, "expected parameter 'backendIPConfigurations' to be non-null");
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.loadBalancingRules = Objects.requireNonNull($.loadBalancingRules, "expected parameter 'loadBalancingRules' to be non-null");
+            $.outboundRule = Objects.requireNonNull($.outboundRule, "expected parameter 'outboundRule' to be non-null");
+            $.outboundRules = Objects.requireNonNull($.outboundRules, "expected parameter 'outboundRules' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

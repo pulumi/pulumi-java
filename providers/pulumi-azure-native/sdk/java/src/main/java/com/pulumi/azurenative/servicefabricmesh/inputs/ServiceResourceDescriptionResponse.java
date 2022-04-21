@@ -29,10 +29,10 @@ public final class ServiceResourceDescriptionResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="autoScalingPolicies")
-      private final @Nullable List<AutoScalingPolicyResponse> autoScalingPolicies;
+    private @Nullable List<AutoScalingPolicyResponse> autoScalingPolicies;
 
-    public List<AutoScalingPolicyResponse> autoScalingPolicies() {
-        return this.autoScalingPolicies == null ? List.of() : this.autoScalingPolicies;
+    public Optional<List<AutoScalingPolicyResponse>> autoScalingPolicies() {
+        return Optional.ofNullable(this.autoScalingPolicies);
     }
 
     /**
@@ -40,7 +40,7 @@ public final class ServiceResourceDescriptionResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="codePackages", required=true)
-      private final List<ContainerCodePackagePropertiesResponse> codePackages;
+    private List<ContainerCodePackagePropertiesResponse> codePackages;
 
     public List<ContainerCodePackagePropertiesResponse> codePackages() {
         return this.codePackages;
@@ -51,10 +51,10 @@ public final class ServiceResourceDescriptionResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class ServiceResourceDescriptionResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="diagnostics")
-      private final @Nullable DiagnosticsRefResponse diagnostics;
+    private @Nullable DiagnosticsRefResponse diagnostics;
 
     public Optional<DiagnosticsRefResponse> diagnostics() {
-        return this.diagnostics == null ? Optional.empty() : Optional.ofNullable(this.diagnostics);
+        return Optional.ofNullable(this.diagnostics);
     }
 
     /**
@@ -73,7 +73,7 @@ public final class ServiceResourceDescriptionResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="healthState", required=true)
-      private final String healthState;
+    private String healthState;
 
     public String healthState() {
         return this.healthState;
@@ -84,7 +84,7 @@ public final class ServiceResourceDescriptionResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -95,10 +95,10 @@ public final class ServiceResourceDescriptionResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -106,10 +106,10 @@ public final class ServiceResourceDescriptionResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="networkRefs")
-      private final @Nullable List<NetworkRefResponse> networkRefs;
+    private @Nullable List<NetworkRefResponse> networkRefs;
 
-    public List<NetworkRefResponse> networkRefs() {
-        return this.networkRefs == null ? List.of() : this.networkRefs;
+    public Optional<List<NetworkRefResponse>> networkRefs() {
+        return Optional.ofNullable(this.networkRefs);
     }
 
     /**
@@ -117,7 +117,7 @@ public final class ServiceResourceDescriptionResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="osType", required=true)
-      private final String osType;
+    private String osType;
 
     public String osType() {
         return this.osType;
@@ -128,7 +128,7 @@ public final class ServiceResourceDescriptionResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -139,10 +139,10 @@ public final class ServiceResourceDescriptionResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="replicaCount")
-      private final @Nullable Integer replicaCount;
+    private @Nullable Integer replicaCount;
 
     public Optional<Integer> replicaCount() {
-        return this.replicaCount == null ? Optional.empty() : Optional.ofNullable(this.replicaCount);
+        return Optional.ofNullable(this.replicaCount);
     }
 
     /**
@@ -150,7 +150,7 @@ public final class ServiceResourceDescriptionResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
@@ -161,7 +161,7 @@ public final class ServiceResourceDescriptionResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="statusDetails", required=true)
-      private final String statusDetails;
+    private String statusDetails;
 
     public String statusDetails() {
         return this.statusDetails;
@@ -172,7 +172,7 @@ public final class ServiceResourceDescriptionResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -183,181 +183,149 @@ public final class ServiceResourceDescriptionResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="unhealthyEvaluation", required=true)
-      private final String unhealthyEvaluation;
+    private String unhealthyEvaluation;
 
     public String unhealthyEvaluation() {
         return this.unhealthyEvaluation;
     }
 
-    public ServiceResourceDescriptionResponse(
-        @Nullable List<AutoScalingPolicyResponse> autoScalingPolicies,
-        List<ContainerCodePackagePropertiesResponse> codePackages,
-        @Nullable String description,
-        @Nullable DiagnosticsRefResponse diagnostics,
-        String healthState,
-        String id,
-        @Nullable String name,
-        @Nullable List<NetworkRefResponse> networkRefs,
-        String osType,
-        String provisioningState,
-        @Nullable Integer replicaCount,
-        String status,
-        String statusDetails,
-        String type,
-        String unhealthyEvaluation) {
-        this.autoScalingPolicies = autoScalingPolicies;
-        this.codePackages = Objects.requireNonNull(codePackages, "expected parameter 'codePackages' to be non-null");
-        this.description = description;
-        this.diagnostics = diagnostics;
-        this.healthState = Objects.requireNonNull(healthState, "expected parameter 'healthState' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.name = name;
-        this.networkRefs = networkRefs;
-        this.osType = Objects.requireNonNull(osType, "expected parameter 'osType' to be non-null");
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.replicaCount = replicaCount;
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-        this.statusDetails = Objects.requireNonNull(statusDetails, "expected parameter 'statusDetails' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.unhealthyEvaluation = Objects.requireNonNull(unhealthyEvaluation, "expected parameter 'unhealthyEvaluation' to be non-null");
-    }
+    private ServiceResourceDescriptionResponse() {}
 
-    private ServiceResourceDescriptionResponse() {
-        this.autoScalingPolicies = List.of();
-        this.codePackages = List.of();
-        this.description = null;
-        this.diagnostics = null;
-        this.healthState = null;
-        this.id = null;
-        this.name = null;
-        this.networkRefs = List.of();
-        this.osType = null;
-        this.provisioningState = null;
-        this.replicaCount = null;
-        this.status = null;
-        this.statusDetails = null;
-        this.type = null;
-        this.unhealthyEvaluation = null;
+    private ServiceResourceDescriptionResponse(ServiceResourceDescriptionResponse $) {
+        this.autoScalingPolicies = $.autoScalingPolicies;
+        this.codePackages = $.codePackages;
+        this.description = $.description;
+        this.diagnostics = $.diagnostics;
+        this.healthState = $.healthState;
+        this.id = $.id;
+        this.name = $.name;
+        this.networkRefs = $.networkRefs;
+        this.osType = $.osType;
+        this.provisioningState = $.provisioningState;
+        this.replicaCount = $.replicaCount;
+        this.status = $.status;
+        this.statusDetails = $.statusDetails;
+        this.type = $.type;
+        this.unhealthyEvaluation = $.unhealthyEvaluation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceResourceDescriptionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<AutoScalingPolicyResponse> autoScalingPolicies;
-        private List<ContainerCodePackagePropertiesResponse> codePackages;
-        private @Nullable String description;
-        private @Nullable DiagnosticsRefResponse diagnostics;
-        private String healthState;
-        private String id;
-        private @Nullable String name;
-        private @Nullable List<NetworkRefResponse> networkRefs;
-        private String osType;
-        private String provisioningState;
-        private @Nullable Integer replicaCount;
-        private String status;
-        private String statusDetails;
-        private String type;
-        private String unhealthyEvaluation;
+        private ServiceResourceDescriptionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceResourceDescriptionResponse();
         }
 
         public Builder(ServiceResourceDescriptionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoScalingPolicies = defaults.autoScalingPolicies;
-    	      this.codePackages = defaults.codePackages;
-    	      this.description = defaults.description;
-    	      this.diagnostics = defaults.diagnostics;
-    	      this.healthState = defaults.healthState;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.networkRefs = defaults.networkRefs;
-    	      this.osType = defaults.osType;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.replicaCount = defaults.replicaCount;
-    	      this.status = defaults.status;
-    	      this.statusDetails = defaults.statusDetails;
-    	      this.type = defaults.type;
-    	      this.unhealthyEvaluation = defaults.unhealthyEvaluation;
+            $ = new ServiceResourceDescriptionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder autoScalingPolicies(@Nullable List<AutoScalingPolicyResponse> autoScalingPolicies) {
-            this.autoScalingPolicies = autoScalingPolicies;
+            $.autoScalingPolicies = autoScalingPolicies;
             return this;
         }
+
         public Builder autoScalingPolicies(AutoScalingPolicyResponse... autoScalingPolicies) {
             return autoScalingPolicies(List.of(autoScalingPolicies));
         }
+
         public Builder codePackages(List<ContainerCodePackagePropertiesResponse> codePackages) {
-            this.codePackages = Objects.requireNonNull(codePackages);
+            $.codePackages = codePackages;
             return this;
         }
+
         public Builder codePackages(ContainerCodePackagePropertiesResponse... codePackages) {
             return codePackages(List.of(codePackages));
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder diagnostics(@Nullable DiagnosticsRefResponse diagnostics) {
-            this.diagnostics = diagnostics;
+            $.diagnostics = diagnostics;
             return this;
         }
+
         public Builder healthState(String healthState) {
-            this.healthState = Objects.requireNonNull(healthState);
+            $.healthState = healthState;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder networkRefs(@Nullable List<NetworkRefResponse> networkRefs) {
-            this.networkRefs = networkRefs;
+            $.networkRefs = networkRefs;
             return this;
         }
+
         public Builder networkRefs(NetworkRefResponse... networkRefs) {
             return networkRefs(List.of(networkRefs));
         }
+
         public Builder osType(String osType) {
-            this.osType = Objects.requireNonNull(osType);
+            $.osType = osType;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder replicaCount(@Nullable Integer replicaCount) {
-            this.replicaCount = replicaCount;
+            $.replicaCount = replicaCount;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder statusDetails(String statusDetails) {
-            this.statusDetails = Objects.requireNonNull(statusDetails);
+            $.statusDetails = statusDetails;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder unhealthyEvaluation(String unhealthyEvaluation) {
-            this.unhealthyEvaluation = Objects.requireNonNull(unhealthyEvaluation);
+            $.unhealthyEvaluation = unhealthyEvaluation;
             return this;
-        }        public ServiceResourceDescriptionResponse build() {
-            return new ServiceResourceDescriptionResponse(autoScalingPolicies, codePackages, description, diagnostics, healthState, id, name, networkRefs, osType, provisioningState, replicaCount, status, statusDetails, type, unhealthyEvaluation);
+        }
+
+        public ServiceResourceDescriptionResponse build() {
+            $.codePackages = Objects.requireNonNull($.codePackages, "expected parameter 'codePackages' to be non-null");
+            $.healthState = Objects.requireNonNull($.healthState, "expected parameter 'healthState' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.osType = Objects.requireNonNull($.osType, "expected parameter 'osType' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            $.statusDetails = Objects.requireNonNull($.statusDetails, "expected parameter 'statusDetails' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            $.unhealthyEvaluation = Objects.requireNonNull($.unhealthyEvaluation, "expected parameter 'unhealthyEvaluation' to be non-null");
+            return $;
         }
     }
+
 }

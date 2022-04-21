@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
      * 
      */
     @Import(name="contentUrl", required=true)
-      private final String contentUrl;
+    private String contentUrl;
 
     public String contentUrl() {
         return this.contentUrl;
@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -44,7 +44,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
      * 
      */
     @Import(name="icon", required=true)
-      private final GoogleCloudDialogflowV2beta1IntentMessageImageResponse icon;
+    private GoogleCloudDialogflowV2beta1IntentMessageImageResponse icon;
 
     public GoogleCloudDialogflowV2beta1IntentMessageImageResponse icon() {
         return this.icon;
@@ -55,7 +55,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
      * 
      */
     @Import(name="largeImage", required=true)
-      private final GoogleCloudDialogflowV2beta1IntentMessageImageResponse largeImage;
+    private GoogleCloudDialogflowV2beta1IntentMessageImageResponse largeImage;
 
     public GoogleCloudDialogflowV2beta1IntentMessageImageResponse largeImage() {
         return this.largeImage;
@@ -66,82 +66,73 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectResponse(
-        String contentUrl,
-        String description,
-        GoogleCloudDialogflowV2beta1IntentMessageImageResponse icon,
-        GoogleCloudDialogflowV2beta1IntentMessageImageResponse largeImage,
-        String name) {
-        this.contentUrl = Objects.requireNonNull(contentUrl, "expected parameter 'contentUrl' to be non-null");
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.icon = Objects.requireNonNull(icon, "expected parameter 'icon' to be non-null");
-        this.largeImage = Objects.requireNonNull(largeImage, "expected parameter 'largeImage' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectResponse() {}
 
-    private GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectResponse() {
-        this.contentUrl = null;
-        this.description = null;
-        this.icon = null;
-        this.largeImage = null;
-        this.name = null;
+    private GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectResponse(GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectResponse $) {
+        this.contentUrl = $.contentUrl;
+        this.description = $.description;
+        this.icon = $.icon;
+        this.largeImage = $.largeImage;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String contentUrl;
-        private String description;
-        private GoogleCloudDialogflowV2beta1IntentMessageImageResponse icon;
-        private GoogleCloudDialogflowV2beta1IntentMessageImageResponse largeImage;
-        private String name;
+        private GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contentUrl = defaults.contentUrl;
-    	      this.description = defaults.description;
-    	      this.icon = defaults.icon;
-    	      this.largeImage = defaults.largeImage;
-    	      this.name = defaults.name;
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder contentUrl(String contentUrl) {
-            this.contentUrl = Objects.requireNonNull(contentUrl);
+            $.contentUrl = contentUrl;
             return this;
         }
+
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder icon(GoogleCloudDialogflowV2beta1IntentMessageImageResponse icon) {
-            this.icon = Objects.requireNonNull(icon);
+            $.icon = icon;
             return this;
         }
+
         public Builder largeImage(GoogleCloudDialogflowV2beta1IntentMessageImageResponse largeImage) {
-            this.largeImage = Objects.requireNonNull(largeImage);
+            $.largeImage = largeImage;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectResponse build() {
-            return new GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectResponse(contentUrl, description, icon, largeImage, name);
+        }
+
+        public GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectResponse build() {
+            $.contentUrl = Objects.requireNonNull($.contentUrl, "expected parameter 'contentUrl' to be non-null");
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.icon = Objects.requireNonNull($.icon, "expected parameter 'icon' to be non-null");
+            $.largeImage = Objects.requireNonNull($.largeImage, "expected parameter 'largeImage' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

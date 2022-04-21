@@ -24,10 +24,10 @@ public final class OpenShiftManagedClusterIdentityProviderResponse extends com.p
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class OpenShiftManagedClusterIdentityProviderResponse extends com.p
      * 
      */
     @Import(name="provider")
-      private final @Nullable OpenShiftManagedClusterAADIdentityProviderResponse provider;
+    private @Nullable OpenShiftManagedClusterAADIdentityProviderResponse provider;
 
     public Optional<OpenShiftManagedClusterAADIdentityProviderResponse> provider() {
-        return this.provider == null ? Optional.empty() : Optional.ofNullable(this.provider);
+        return Optional.ofNullable(this.provider);
     }
 
-    public OpenShiftManagedClusterIdentityProviderResponse(
-        @Nullable String name,
-        @Nullable OpenShiftManagedClusterAADIdentityProviderResponse provider) {
-        this.name = name;
-        this.provider = provider;
-    }
+    private OpenShiftManagedClusterIdentityProviderResponse() {}
 
-    private OpenShiftManagedClusterIdentityProviderResponse() {
-        this.name = null;
-        this.provider = null;
+    private OpenShiftManagedClusterIdentityProviderResponse(OpenShiftManagedClusterIdentityProviderResponse $) {
+        this.name = $.name;
+        this.provider = $.provider;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OpenShiftManagedClusterIdentityProviderResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
-        private @Nullable OpenShiftManagedClusterAADIdentityProviderResponse provider;
+        private OpenShiftManagedClusterIdentityProviderResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OpenShiftManagedClusterIdentityProviderResponse();
         }
 
         public Builder(OpenShiftManagedClusterIdentityProviderResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.provider = defaults.provider;
+            $ = new OpenShiftManagedClusterIdentityProviderResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder provider(@Nullable OpenShiftManagedClusterAADIdentityProviderResponse provider) {
-            this.provider = provider;
+            $.provider = provider;
             return this;
-        }        public OpenShiftManagedClusterIdentityProviderResponse build() {
-            return new OpenShiftManagedClusterIdentityProviderResponse(name, provider);
+        }
+
+        public OpenShiftManagedClusterIdentityProviderResponse build() {
+            return $;
         }
     }
+
 }

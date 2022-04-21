@@ -17,7 +17,7 @@ public final class GetLinkArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="hubName", required=true)
-      private final String hubName;
+    private String hubName;
 
     public String hubName() {
         return this.hubName;
@@ -28,7 +28,7 @@ public final class GetLinkArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="linkName", required=true)
-      private final String linkName;
+    private String linkName;
 
     public String linkName() {
         return this.linkName;
@@ -39,64 +39,59 @@ public final class GetLinkArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetLinkArgs(
-        String hubName,
-        String linkName,
-        String resourceGroupName) {
-        this.hubName = Objects.requireNonNull(hubName, "expected parameter 'hubName' to be non-null");
-        this.linkName = Objects.requireNonNull(linkName, "expected parameter 'linkName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetLinkArgs() {}
 
-    private GetLinkArgs() {
-        this.hubName = null;
-        this.linkName = null;
-        this.resourceGroupName = null;
+    private GetLinkArgs(GetLinkArgs $) {
+        this.hubName = $.hubName;
+        this.linkName = $.linkName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLinkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String hubName;
-        private String linkName;
-        private String resourceGroupName;
+        private GetLinkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLinkArgs();
         }
 
         public Builder(GetLinkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hubName = defaults.hubName;
-    	      this.linkName = defaults.linkName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetLinkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hubName(String hubName) {
-            this.hubName = Objects.requireNonNull(hubName);
+            $.hubName = hubName;
             return this;
         }
+
         public Builder linkName(String linkName) {
-            this.linkName = Objects.requireNonNull(linkName);
+            $.linkName = linkName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetLinkArgs build() {
-            return new GetLinkArgs(hubName, linkName, resourceGroupName);
+        }
+
+        public GetLinkArgs build() {
+            $.hubName = Objects.requireNonNull($.hubName, "expected parameter 'hubName' to be non-null");
+            $.linkName = Objects.requireNonNull($.linkName, "expected parameter 'linkName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

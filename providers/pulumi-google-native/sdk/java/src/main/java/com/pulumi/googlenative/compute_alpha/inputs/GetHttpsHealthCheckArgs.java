@@ -15,62 +15,58 @@ public final class GetHttpsHealthCheckArgs extends com.pulumi.resources.InvokeAr
     public static final GetHttpsHealthCheckArgs Empty = new GetHttpsHealthCheckArgs();
 
     @Import(name="httpsHealthCheck", required=true)
-      private final String httpsHealthCheck;
+    private String httpsHealthCheck;
 
     public String httpsHealthCheck() {
         return this.httpsHealthCheck;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetHttpsHealthCheckArgs(
-        String httpsHealthCheck,
-        @Nullable String project) {
-        this.httpsHealthCheck = Objects.requireNonNull(httpsHealthCheck, "expected parameter 'httpsHealthCheck' to be non-null");
-        this.project = project;
-    }
+    private GetHttpsHealthCheckArgs() {}
 
-    private GetHttpsHealthCheckArgs() {
-        this.httpsHealthCheck = null;
-        this.project = null;
+    private GetHttpsHealthCheckArgs(GetHttpsHealthCheckArgs $) {
+        this.httpsHealthCheck = $.httpsHealthCheck;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetHttpsHealthCheckArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String httpsHealthCheck;
-        private @Nullable String project;
+        private GetHttpsHealthCheckArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetHttpsHealthCheckArgs();
         }
 
         public Builder(GetHttpsHealthCheckArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.httpsHealthCheck = defaults.httpsHealthCheck;
-    	      this.project = defaults.project;
+            $ = new GetHttpsHealthCheckArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder httpsHealthCheck(String httpsHealthCheck) {
-            this.httpsHealthCheck = Objects.requireNonNull(httpsHealthCheck);
+            $.httpsHealthCheck = httpsHealthCheck;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetHttpsHealthCheckArgs build() {
-            return new GetHttpsHealthCheckArgs(httpsHealthCheck, project);
+        }
+
+        public GetHttpsHealthCheckArgs build() {
+            $.httpsHealthCheck = Objects.requireNonNull($.httpsHealthCheck, "expected parameter 'httpsHealthCheck' to be non-null");
+            return $;
         }
     }
+
 }

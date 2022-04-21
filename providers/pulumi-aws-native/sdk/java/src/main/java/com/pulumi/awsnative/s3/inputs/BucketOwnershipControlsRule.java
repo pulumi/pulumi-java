@@ -19,45 +19,44 @@ public final class BucketOwnershipControlsRule extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="objectOwnership")
-      private final @Nullable BucketOwnershipControlsRuleObjectOwnership objectOwnership;
+    private @Nullable BucketOwnershipControlsRuleObjectOwnership objectOwnership;
 
     public Optional<BucketOwnershipControlsRuleObjectOwnership> objectOwnership() {
-        return this.objectOwnership == null ? Optional.empty() : Optional.ofNullable(this.objectOwnership);
+        return Optional.ofNullable(this.objectOwnership);
     }
 
-    public BucketOwnershipControlsRule(@Nullable BucketOwnershipControlsRuleObjectOwnership objectOwnership) {
-        this.objectOwnership = objectOwnership;
-    }
+    private BucketOwnershipControlsRule() {}
 
-    private BucketOwnershipControlsRule() {
-        this.objectOwnership = null;
+    private BucketOwnershipControlsRule(BucketOwnershipControlsRule $) {
+        this.objectOwnership = $.objectOwnership;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketOwnershipControlsRule defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable BucketOwnershipControlsRuleObjectOwnership objectOwnership;
+        private BucketOwnershipControlsRule $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketOwnershipControlsRule();
         }
 
         public Builder(BucketOwnershipControlsRule defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.objectOwnership = defaults.objectOwnership;
+            $ = new BucketOwnershipControlsRule(Objects.requireNonNull(defaults));
         }
 
         public Builder objectOwnership(@Nullable BucketOwnershipControlsRuleObjectOwnership objectOwnership) {
-            this.objectOwnership = objectOwnership;
+            $.objectOwnership = objectOwnership;
             return this;
-        }        public BucketOwnershipControlsRule build() {
-            return new BucketOwnershipControlsRule(objectOwnership);
+        }
+
+        public BucketOwnershipControlsRule build() {
+            return $;
         }
     }
+
 }

@@ -6,11 +6,11 @@ package com.pulumi.azurenative.logic;
 import com.pulumi.azurenative.logic.inputs.KeyVaultKeyReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class IntegrationAccountCertificateArgs extends com.pulumi.resource
      * 
      */
     @Import(name="certificateName")
-      private final @Nullable Output<String> certificateName;
+    private @Nullable Output<String> certificateName;
 
-    public Output<String> certificateName() {
-        return this.certificateName == null ? Codegen.empty() : this.certificateName;
+    public Optional<Output<String>> certificateName() {
+        return Optional.ofNullable(this.certificateName);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class IntegrationAccountCertificateArgs extends com.pulumi.resource
      * 
      */
     @Import(name="integrationAccountName", required=true)
-      private final Output<String> integrationAccountName;
+    private Output<String> integrationAccountName;
 
     public Output<String> integrationAccountName() {
         return this.integrationAccountName;
@@ -45,10 +45,10 @@ public final class IntegrationAccountCertificateArgs extends com.pulumi.resource
      * 
      */
     @Import(name="key")
-      private final @Nullable Output<KeyVaultKeyReferenceArgs> key;
+    private @Nullable Output<KeyVaultKeyReferenceArgs> key;
 
-    public Output<KeyVaultKeyReferenceArgs> key() {
-        return this.key == null ? Codegen.empty() : this.key;
+    public Optional<Output<KeyVaultKeyReferenceArgs>> key() {
+        return Optional.ofNullable(this.key);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class IntegrationAccountCertificateArgs extends com.pulumi.resource
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class IntegrationAccountCertificateArgs extends com.pulumi.resource
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<Object> metadata;
+    private @Nullable Output<Object> metadata;
 
-    public Output<Object> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<Object>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class IntegrationAccountCertificateArgs extends com.pulumi.resource
      * 
      */
     @Import(name="publicCertificate")
-      private final @Nullable Output<String> publicCertificate;
+    private @Nullable Output<String> publicCertificate;
 
-    public Output<String> publicCertificate() {
-        return this.publicCertificate == null ? Codegen.empty() : this.publicCertificate;
+    public Optional<Output<String>> publicCertificate() {
+        return Optional.ofNullable(this.publicCertificate);
     }
 
     /**
@@ -89,7 +89,7 @@ public final class IntegrationAccountCertificateArgs extends com.pulumi.resource
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -100,141 +100,120 @@ public final class IntegrationAccountCertificateArgs extends com.pulumi.resource
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public IntegrationAccountCertificateArgs(
-        @Nullable Output<String> certificateName,
-        Output<String> integrationAccountName,
-        @Nullable Output<KeyVaultKeyReferenceArgs> key,
-        @Nullable Output<String> location,
-        @Nullable Output<Object> metadata,
-        @Nullable Output<String> publicCertificate,
-        Output<String> resourceGroupName,
-        @Nullable Output<Map<String,String>> tags) {
-        this.certificateName = certificateName;
-        this.integrationAccountName = Objects.requireNonNull(integrationAccountName, "expected parameter 'integrationAccountName' to be non-null");
-        this.key = key;
-        this.location = location;
-        this.metadata = metadata;
-        this.publicCertificate = publicCertificate;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tags = tags;
-    }
+    private IntegrationAccountCertificateArgs() {}
 
-    private IntegrationAccountCertificateArgs() {
-        this.certificateName = Codegen.empty();
-        this.integrationAccountName = Codegen.empty();
-        this.key = Codegen.empty();
-        this.location = Codegen.empty();
-        this.metadata = Codegen.empty();
-        this.publicCertificate = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
+    private IntegrationAccountCertificateArgs(IntegrationAccountCertificateArgs $) {
+        this.certificateName = $.certificateName;
+        this.integrationAccountName = $.integrationAccountName;
+        this.key = $.key;
+        this.location = $.location;
+        this.metadata = $.metadata;
+        this.publicCertificate = $.publicCertificate;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IntegrationAccountCertificateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> certificateName;
-        private Output<String> integrationAccountName;
-        private @Nullable Output<KeyVaultKeyReferenceArgs> key;
-        private @Nullable Output<String> location;
-        private @Nullable Output<Object> metadata;
-        private @Nullable Output<String> publicCertificate;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Map<String,String>> tags;
+        private IntegrationAccountCertificateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IntegrationAccountCertificateArgs();
         }
 
         public Builder(IntegrationAccountCertificateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateName = defaults.certificateName;
-    	      this.integrationAccountName = defaults.integrationAccountName;
-    	      this.key = defaults.key;
-    	      this.location = defaults.location;
-    	      this.metadata = defaults.metadata;
-    	      this.publicCertificate = defaults.publicCertificate;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tags = defaults.tags;
+            $ = new IntegrationAccountCertificateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateName(@Nullable Output<String> certificateName) {
-            this.certificateName = certificateName;
+            $.certificateName = certificateName;
             return this;
         }
-        public Builder certificateName(@Nullable String certificateName) {
-            this.certificateName = Codegen.ofNullable(certificateName);
-            return this;
+
+        public Builder certificateName(String certificateName) {
+            return certificateName(Output.of(certificateName));
         }
+
         public Builder integrationAccountName(Output<String> integrationAccountName) {
-            this.integrationAccountName = Objects.requireNonNull(integrationAccountName);
+            $.integrationAccountName = integrationAccountName;
             return this;
         }
+
         public Builder integrationAccountName(String integrationAccountName) {
-            this.integrationAccountName = Output.of(Objects.requireNonNull(integrationAccountName));
-            return this;
+            return integrationAccountName(Output.of(integrationAccountName));
         }
+
         public Builder key(@Nullable Output<KeyVaultKeyReferenceArgs> key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
-        public Builder key(@Nullable KeyVaultKeyReferenceArgs key) {
-            this.key = Codegen.ofNullable(key);
-            return this;
+
+        public Builder key(KeyVaultKeyReferenceArgs key) {
+            return key(Output.of(key));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder metadata(@Nullable Output<Object> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable Object metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(Object metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder publicCertificate(@Nullable Output<String> publicCertificate) {
-            this.publicCertificate = publicCertificate;
+            $.publicCertificate = publicCertificate;
             return this;
         }
-        public Builder publicCertificate(@Nullable String publicCertificate) {
-            this.publicCertificate = Codegen.ofNullable(publicCertificate);
-            return this;
+
+        public Builder publicCertificate(String publicCertificate) {
+            return publicCertificate(Output.of(publicCertificate));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public IntegrationAccountCertificateArgs build() {
-            return new IntegrationAccountCertificateArgs(certificateName, integrationAccountName, key, location, metadata, publicCertificate, resourceGroupName, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public IntegrationAccountCertificateArgs build() {
+            $.integrationAccountName = Objects.requireNonNull($.integrationAccountName, "expected parameter 'integrationAccountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

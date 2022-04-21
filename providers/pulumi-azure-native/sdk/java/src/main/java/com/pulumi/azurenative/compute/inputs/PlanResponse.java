@@ -23,10 +23,10 @@ public final class PlanResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class PlanResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="product")
-      private final @Nullable String product;
+    private @Nullable String product;
 
     public Optional<String> product() {
-        return this.product == null ? Optional.empty() : Optional.ofNullable(this.product);
+        return Optional.ofNullable(this.product);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class PlanResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="promotionCode")
-      private final @Nullable String promotionCode;
+    private @Nullable String promotionCode;
 
     public Optional<String> promotionCode() {
-        return this.promotionCode == null ? Optional.empty() : Optional.ofNullable(this.promotionCode);
+        return Optional.ofNullable(this.promotionCode);
     }
 
     /**
@@ -56,73 +56,62 @@ public final class PlanResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="publisher")
-      private final @Nullable String publisher;
+    private @Nullable String publisher;
 
     public Optional<String> publisher() {
-        return this.publisher == null ? Optional.empty() : Optional.ofNullable(this.publisher);
+        return Optional.ofNullable(this.publisher);
     }
 
-    public PlanResponse(
-        @Nullable String name,
-        @Nullable String product,
-        @Nullable String promotionCode,
-        @Nullable String publisher) {
-        this.name = name;
-        this.product = product;
-        this.promotionCode = promotionCode;
-        this.publisher = publisher;
-    }
+    private PlanResponse() {}
 
-    private PlanResponse() {
-        this.name = null;
-        this.product = null;
-        this.promotionCode = null;
-        this.publisher = null;
+    private PlanResponse(PlanResponse $) {
+        this.name = $.name;
+        this.product = $.product;
+        this.promotionCode = $.promotionCode;
+        this.publisher = $.publisher;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PlanResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
-        private @Nullable String product;
-        private @Nullable String promotionCode;
-        private @Nullable String publisher;
+        private PlanResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PlanResponse();
         }
 
         public Builder(PlanResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.product = defaults.product;
-    	      this.promotionCode = defaults.promotionCode;
-    	      this.publisher = defaults.publisher;
+            $ = new PlanResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder product(@Nullable String product) {
-            this.product = product;
+            $.product = product;
             return this;
         }
+
         public Builder promotionCode(@Nullable String promotionCode) {
-            this.promotionCode = promotionCode;
+            $.promotionCode = promotionCode;
             return this;
         }
+
         public Builder publisher(@Nullable String publisher) {
-            this.publisher = publisher;
+            $.publisher = publisher;
             return this;
-        }        public PlanResponse build() {
-            return new PlanResponse(name, product, promotionCode, publisher);
+        }
+
+        public PlanResponse build() {
+            return $;
         }
     }
+
 }

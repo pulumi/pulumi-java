@@ -21,7 +21,7 @@ public final class TestCaseReferenceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="className", required=true)
-      private final String className;
+    private String className;
 
     public String className() {
         return this.className;
@@ -32,7 +32,7 @@ public final class TestCaseReferenceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -43,64 +43,59 @@ public final class TestCaseReferenceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="testSuiteName", required=true)
-      private final String testSuiteName;
+    private String testSuiteName;
 
     public String testSuiteName() {
         return this.testSuiteName;
     }
 
-    public TestCaseReferenceResponse(
-        String className,
-        String name,
-        String testSuiteName) {
-        this.className = Objects.requireNonNull(className, "expected parameter 'className' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.testSuiteName = Objects.requireNonNull(testSuiteName, "expected parameter 'testSuiteName' to be non-null");
-    }
+    private TestCaseReferenceResponse() {}
 
-    private TestCaseReferenceResponse() {
-        this.className = null;
-        this.name = null;
-        this.testSuiteName = null;
+    private TestCaseReferenceResponse(TestCaseReferenceResponse $) {
+        this.className = $.className;
+        this.name = $.name;
+        this.testSuiteName = $.testSuiteName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TestCaseReferenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String className;
-        private String name;
-        private String testSuiteName;
+        private TestCaseReferenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TestCaseReferenceResponse();
         }
 
         public Builder(TestCaseReferenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.className = defaults.className;
-    	      this.name = defaults.name;
-    	      this.testSuiteName = defaults.testSuiteName;
+            $ = new TestCaseReferenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder className(String className) {
-            this.className = Objects.requireNonNull(className);
+            $.className = className;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder testSuiteName(String testSuiteName) {
-            this.testSuiteName = Objects.requireNonNull(testSuiteName);
+            $.testSuiteName = testSuiteName;
             return this;
-        }        public TestCaseReferenceResponse build() {
-            return new TestCaseReferenceResponse(className, name, testSuiteName);
+        }
+
+        public TestCaseReferenceResponse build() {
+            $.className = Objects.requireNonNull($.className, "expected parameter 'className' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.testSuiteName = Objects.requireNonNull($.testSuiteName, "expected parameter 'testSuiteName' to be non-null");
+            return $;
         }
     }
+
 }

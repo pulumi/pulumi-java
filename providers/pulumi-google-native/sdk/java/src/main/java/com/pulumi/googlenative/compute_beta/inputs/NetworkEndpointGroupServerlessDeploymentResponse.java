@@ -21,7 +21,7 @@ public final class NetworkEndpointGroupServerlessDeploymentResponse extends com.
      * 
      */
     @Import(name="platform", required=true)
-      private final String platform;
+    private String platform;
 
     public String platform() {
         return this.platform;
@@ -32,7 +32,7 @@ public final class NetworkEndpointGroupServerlessDeploymentResponse extends com.
      * 
      */
     @Import(name="resource", required=true)
-      private final String resource;
+    private String resource;
 
     public String resource() {
         return this.resource;
@@ -43,7 +43,7 @@ public final class NetworkEndpointGroupServerlessDeploymentResponse extends com.
      * 
      */
     @Import(name="urlMask", required=true)
-      private final String urlMask;
+    private String urlMask;
 
     public String urlMask() {
         return this.urlMask;
@@ -54,73 +54,66 @@ public final class NetworkEndpointGroupServerlessDeploymentResponse extends com.
      * 
      */
     @Import(name="version", required=true)
-      private final String version;
+    private String version;
 
     public String version() {
         return this.version;
     }
 
-    public NetworkEndpointGroupServerlessDeploymentResponse(
-        String platform,
-        String resource,
-        String urlMask,
-        String version) {
-        this.platform = Objects.requireNonNull(platform, "expected parameter 'platform' to be non-null");
-        this.resource = Objects.requireNonNull(resource, "expected parameter 'resource' to be non-null");
-        this.urlMask = Objects.requireNonNull(urlMask, "expected parameter 'urlMask' to be non-null");
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private NetworkEndpointGroupServerlessDeploymentResponse() {}
 
-    private NetworkEndpointGroupServerlessDeploymentResponse() {
-        this.platform = null;
-        this.resource = null;
-        this.urlMask = null;
-        this.version = null;
+    private NetworkEndpointGroupServerlessDeploymentResponse(NetworkEndpointGroupServerlessDeploymentResponse $) {
+        this.platform = $.platform;
+        this.resource = $.resource;
+        this.urlMask = $.urlMask;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkEndpointGroupServerlessDeploymentResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String platform;
-        private String resource;
-        private String urlMask;
-        private String version;
+        private NetworkEndpointGroupServerlessDeploymentResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkEndpointGroupServerlessDeploymentResponse();
         }
 
         public Builder(NetworkEndpointGroupServerlessDeploymentResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.platform = defaults.platform;
-    	      this.resource = defaults.resource;
-    	      this.urlMask = defaults.urlMask;
-    	      this.version = defaults.version;
+            $ = new NetworkEndpointGroupServerlessDeploymentResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder platform(String platform) {
-            this.platform = Objects.requireNonNull(platform);
+            $.platform = platform;
             return this;
         }
+
         public Builder resource(String resource) {
-            this.resource = Objects.requireNonNull(resource);
+            $.resource = resource;
             return this;
         }
+
         public Builder urlMask(String urlMask) {
-            this.urlMask = Objects.requireNonNull(urlMask);
+            $.urlMask = urlMask;
             return this;
         }
+
         public Builder version(String version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
-        }        public NetworkEndpointGroupServerlessDeploymentResponse build() {
-            return new NetworkEndpointGroupServerlessDeploymentResponse(platform, resource, urlMask, version);
+        }
+
+        public NetworkEndpointGroupServerlessDeploymentResponse build() {
+            $.platform = Objects.requireNonNull($.platform, "expected parameter 'platform' to be non-null");
+            $.resource = Objects.requireNonNull($.resource, "expected parameter 'resource' to be non-null");
+            $.urlMask = Objects.requireNonNull($.urlMask, "expected parameter 'urlMask' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,7 +23,7 @@ public final class GoogleCloudHealthcareV1ConsentPolicyResponse extends com.pulu
      * 
      */
     @Import(name="authorizationRule", required=true)
-      private final ExprResponse authorizationRule;
+    private ExprResponse authorizationRule;
 
     public ExprResponse authorizationRule() {
         return this.authorizationRule;
@@ -34,58 +34,56 @@ public final class GoogleCloudHealthcareV1ConsentPolicyResponse extends com.pulu
      * 
      */
     @Import(name="resourceAttributes", required=true)
-      private final List<AttributeResponse> resourceAttributes;
+    private List<AttributeResponse> resourceAttributes;
 
     public List<AttributeResponse> resourceAttributes() {
         return this.resourceAttributes;
     }
 
-    public GoogleCloudHealthcareV1ConsentPolicyResponse(
-        ExprResponse authorizationRule,
-        List<AttributeResponse> resourceAttributes) {
-        this.authorizationRule = Objects.requireNonNull(authorizationRule, "expected parameter 'authorizationRule' to be non-null");
-        this.resourceAttributes = Objects.requireNonNull(resourceAttributes, "expected parameter 'resourceAttributes' to be non-null");
-    }
+    private GoogleCloudHealthcareV1ConsentPolicyResponse() {}
 
-    private GoogleCloudHealthcareV1ConsentPolicyResponse() {
-        this.authorizationRule = null;
-        this.resourceAttributes = List.of();
+    private GoogleCloudHealthcareV1ConsentPolicyResponse(GoogleCloudHealthcareV1ConsentPolicyResponse $) {
+        this.authorizationRule = $.authorizationRule;
+        this.resourceAttributes = $.resourceAttributes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudHealthcareV1ConsentPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private ExprResponse authorizationRule;
-        private List<AttributeResponse> resourceAttributes;
+        private GoogleCloudHealthcareV1ConsentPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudHealthcareV1ConsentPolicyResponse();
         }
 
         public Builder(GoogleCloudHealthcareV1ConsentPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authorizationRule = defaults.authorizationRule;
-    	      this.resourceAttributes = defaults.resourceAttributes;
+            $ = new GoogleCloudHealthcareV1ConsentPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder authorizationRule(ExprResponse authorizationRule) {
-            this.authorizationRule = Objects.requireNonNull(authorizationRule);
+            $.authorizationRule = authorizationRule;
             return this;
         }
+
         public Builder resourceAttributes(List<AttributeResponse> resourceAttributes) {
-            this.resourceAttributes = Objects.requireNonNull(resourceAttributes);
+            $.resourceAttributes = resourceAttributes;
             return this;
         }
+
         public Builder resourceAttributes(AttributeResponse... resourceAttributes) {
             return resourceAttributes(List.of(resourceAttributes));
-        }        public GoogleCloudHealthcareV1ConsentPolicyResponse build() {
-            return new GoogleCloudHealthcareV1ConsentPolicyResponse(authorizationRule, resourceAttributes);
+        }
+
+        public GoogleCloudHealthcareV1ConsentPolicyResponse build() {
+            $.authorizationRule = Objects.requireNonNull($.authorizationRule, "expected parameter 'authorizationRule' to be non-null");
+            $.resourceAttributes = Objects.requireNonNull($.resourceAttributes, "expected parameter 'resourceAttributes' to be non-null");
+            return $;
         }
     }
+
 }

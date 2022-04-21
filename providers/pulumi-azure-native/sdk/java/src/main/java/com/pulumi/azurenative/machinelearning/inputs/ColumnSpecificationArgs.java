@@ -8,12 +8,12 @@ import com.pulumi.azurenative.machinelearning.enums.ColumnType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,10 +30,10 @@ public final class ColumnSpecificationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="enum")
-      private final @Nullable Output<List<Object>> enum_;
+    private @Nullable Output<List<Object>> enum_;
 
-    public Output<List<Object>> enum_() {
-        return this.enum_ == null ? Codegen.empty() : this.enum_;
+    public Optional<Output<List<Object>>> enum_() {
+        return Optional.ofNullable(this.enum_);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class ColumnSpecificationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="format")
-      private final @Nullable Output<Either<String,ColumnFormat>> format;
+    private @Nullable Output<Either<String,ColumnFormat>> format;
 
-    public Output<Either<String,ColumnFormat>> format() {
-        return this.format == null ? Codegen.empty() : this.format;
+    public Optional<Output<Either<String,ColumnFormat>>> format() {
+        return Optional.ofNullable(this.format);
     }
 
     /**
@@ -52,7 +52,7 @@ public final class ColumnSpecificationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="type", required=true)
-      private final Output<Either<String,ColumnType>> type;
+    private Output<Either<String,ColumnType>> type;
 
     public Output<Either<String,ColumnType>> type() {
         return this.type;
@@ -63,10 +63,10 @@ public final class ColumnSpecificationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="xMsIsnullable")
-      private final @Nullable Output<Boolean> xMsIsnullable;
+    private @Nullable Output<Boolean> xMsIsnullable;
 
-    public Output<Boolean> xMsIsnullable() {
-        return this.xMsIsnullable == null ? Codegen.empty() : this.xMsIsnullable;
+    public Optional<Output<Boolean>> xMsIsnullable() {
+        return Optional.ofNullable(this.xMsIsnullable);
     }
 
     /**
@@ -74,105 +74,93 @@ public final class ColumnSpecificationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="xMsIsordered")
-      private final @Nullable Output<Boolean> xMsIsordered;
+    private @Nullable Output<Boolean> xMsIsordered;
 
-    public Output<Boolean> xMsIsordered() {
-        return this.xMsIsordered == null ? Codegen.empty() : this.xMsIsordered;
+    public Optional<Output<Boolean>> xMsIsordered() {
+        return Optional.ofNullable(this.xMsIsordered);
     }
 
-    public ColumnSpecificationArgs(
-        @Nullable Output<List<Object>> enum_,
-        @Nullable Output<Either<String,ColumnFormat>> format,
-        Output<Either<String,ColumnType>> type,
-        @Nullable Output<Boolean> xMsIsnullable,
-        @Nullable Output<Boolean> xMsIsordered) {
-        this.enum_ = enum_;
-        this.format = format;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.xMsIsnullable = xMsIsnullable;
-        this.xMsIsordered = xMsIsordered;
-    }
+    private ColumnSpecificationArgs() {}
 
-    private ColumnSpecificationArgs() {
-        this.enum_ = Codegen.empty();
-        this.format = Codegen.empty();
-        this.type = Codegen.empty();
-        this.xMsIsnullable = Codegen.empty();
-        this.xMsIsordered = Codegen.empty();
+    private ColumnSpecificationArgs(ColumnSpecificationArgs $) {
+        this.enum_ = $.enum_;
+        this.format = $.format;
+        this.type = $.type;
+        this.xMsIsnullable = $.xMsIsnullable;
+        this.xMsIsordered = $.xMsIsordered;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ColumnSpecificationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<Object>> enum_;
-        private @Nullable Output<Either<String,ColumnFormat>> format;
-        private Output<Either<String,ColumnType>> type;
-        private @Nullable Output<Boolean> xMsIsnullable;
-        private @Nullable Output<Boolean> xMsIsordered;
+        private ColumnSpecificationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ColumnSpecificationArgs();
         }
 
         public Builder(ColumnSpecificationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enum_ = defaults.enum_;
-    	      this.format = defaults.format;
-    	      this.type = defaults.type;
-    	      this.xMsIsnullable = defaults.xMsIsnullable;
-    	      this.xMsIsordered = defaults.xMsIsordered;
+            $ = new ColumnSpecificationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enum_(@Nullable Output<List<Object>> enum_) {
-            this.enum_ = enum_;
+            $.enum_ = enum_;
             return this;
         }
-        public Builder enum_(@Nullable List<Object> enum_) {
-            this.enum_ = Codegen.ofNullable(enum_);
-            return this;
+
+        public Builder enum_(List<Object> enum_) {
+            return enum_(Output.of(enum_));
         }
+
         public Builder enum_(Object... enum_) {
             return enum_(List.of(enum_));
         }
+
         public Builder format(@Nullable Output<Either<String,ColumnFormat>> format) {
-            this.format = format;
+            $.format = format;
             return this;
         }
-        public Builder format(@Nullable Either<String,ColumnFormat> format) {
-            this.format = Codegen.ofNullable(format);
-            return this;
+
+        public Builder format(Either<String,ColumnFormat> format) {
+            return format(Output.of(format));
         }
+
         public Builder type(Output<Either<String,ColumnType>> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(Either<String,ColumnType> type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder xMsIsnullable(@Nullable Output<Boolean> xMsIsnullable) {
-            this.xMsIsnullable = xMsIsnullable;
+            $.xMsIsnullable = xMsIsnullable;
             return this;
         }
-        public Builder xMsIsnullable(@Nullable Boolean xMsIsnullable) {
-            this.xMsIsnullable = Codegen.ofNullable(xMsIsnullable);
-            return this;
+
+        public Builder xMsIsnullable(Boolean xMsIsnullable) {
+            return xMsIsnullable(Output.of(xMsIsnullable));
         }
+
         public Builder xMsIsordered(@Nullable Output<Boolean> xMsIsordered) {
-            this.xMsIsordered = xMsIsordered;
+            $.xMsIsordered = xMsIsordered;
             return this;
         }
-        public Builder xMsIsordered(@Nullable Boolean xMsIsordered) {
-            this.xMsIsordered = Codegen.ofNullable(xMsIsordered);
-            return this;
-        }        public ColumnSpecificationArgs build() {
-            return new ColumnSpecificationArgs(enum_, format, type, xMsIsnullable, xMsIsordered);
+
+        public Builder xMsIsordered(Boolean xMsIsordered) {
+            return xMsIsordered(Output.of(xMsIsordered));
+        }
+
+        public ColumnSpecificationArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

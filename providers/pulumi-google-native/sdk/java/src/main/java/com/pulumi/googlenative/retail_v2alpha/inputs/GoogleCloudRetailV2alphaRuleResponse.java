@@ -29,7 +29,7 @@ public final class GoogleCloudRetailV2alphaRuleResponse extends com.pulumi.resou
      * 
      */
     @Import(name="boostAction", required=true)
-      private final GoogleCloudRetailV2alphaRuleBoostActionResponse boostAction;
+    private GoogleCloudRetailV2alphaRuleBoostActionResponse boostAction;
 
     public GoogleCloudRetailV2alphaRuleBoostActionResponse boostAction() {
         return this.boostAction;
@@ -40,7 +40,7 @@ public final class GoogleCloudRetailV2alphaRuleResponse extends com.pulumi.resou
      * 
      */
     @Import(name="condition", required=true)
-      private final GoogleCloudRetailV2alphaConditionResponse condition;
+    private GoogleCloudRetailV2alphaConditionResponse condition;
 
     public GoogleCloudRetailV2alphaConditionResponse condition() {
         return this.condition;
@@ -51,7 +51,7 @@ public final class GoogleCloudRetailV2alphaRuleResponse extends com.pulumi.resou
      * 
      */
     @Import(name="doNotAssociateAction", required=true)
-      private final GoogleCloudRetailV2alphaRuleDoNotAssociateActionResponse doNotAssociateAction;
+    private GoogleCloudRetailV2alphaRuleDoNotAssociateActionResponse doNotAssociateAction;
 
     public GoogleCloudRetailV2alphaRuleDoNotAssociateActionResponse doNotAssociateAction() {
         return this.doNotAssociateAction;
@@ -62,7 +62,7 @@ public final class GoogleCloudRetailV2alphaRuleResponse extends com.pulumi.resou
      * 
      */
     @Import(name="filterAction", required=true)
-      private final GoogleCloudRetailV2alphaRuleFilterActionResponse filterAction;
+    private GoogleCloudRetailV2alphaRuleFilterActionResponse filterAction;
 
     public GoogleCloudRetailV2alphaRuleFilterActionResponse filterAction() {
         return this.filterAction;
@@ -73,7 +73,7 @@ public final class GoogleCloudRetailV2alphaRuleResponse extends com.pulumi.resou
      * 
      */
     @Import(name="ignoreAction", required=true)
-      private final GoogleCloudRetailV2alphaRuleIgnoreActionResponse ignoreAction;
+    private GoogleCloudRetailV2alphaRuleIgnoreActionResponse ignoreAction;
 
     public GoogleCloudRetailV2alphaRuleIgnoreActionResponse ignoreAction() {
         return this.ignoreAction;
@@ -84,7 +84,7 @@ public final class GoogleCloudRetailV2alphaRuleResponse extends com.pulumi.resou
      * 
      */
     @Import(name="onewaySynonymsAction", required=true)
-      private final GoogleCloudRetailV2alphaRuleOnewaySynonymsActionResponse onewaySynonymsAction;
+    private GoogleCloudRetailV2alphaRuleOnewaySynonymsActionResponse onewaySynonymsAction;
 
     public GoogleCloudRetailV2alphaRuleOnewaySynonymsActionResponse onewaySynonymsAction() {
         return this.onewaySynonymsAction;
@@ -95,7 +95,7 @@ public final class GoogleCloudRetailV2alphaRuleResponse extends com.pulumi.resou
      * 
      */
     @Import(name="redirectAction", required=true)
-      private final GoogleCloudRetailV2alphaRuleRedirectActionResponse redirectAction;
+    private GoogleCloudRetailV2alphaRuleRedirectActionResponse redirectAction;
 
     public GoogleCloudRetailV2alphaRuleRedirectActionResponse redirectAction() {
         return this.redirectAction;
@@ -106,7 +106,7 @@ public final class GoogleCloudRetailV2alphaRuleResponse extends com.pulumi.resou
      * 
      */
     @Import(name="replacementAction", required=true)
-      private final GoogleCloudRetailV2alphaRuleReplacementActionResponse replacementAction;
+    private GoogleCloudRetailV2alphaRuleReplacementActionResponse replacementAction;
 
     public GoogleCloudRetailV2alphaRuleReplacementActionResponse replacementAction() {
         return this.replacementAction;
@@ -117,118 +117,101 @@ public final class GoogleCloudRetailV2alphaRuleResponse extends com.pulumi.resou
      * 
      */
     @Import(name="twowaySynonymsAction", required=true)
-      private final GoogleCloudRetailV2alphaRuleTwowaySynonymsActionResponse twowaySynonymsAction;
+    private GoogleCloudRetailV2alphaRuleTwowaySynonymsActionResponse twowaySynonymsAction;
 
     public GoogleCloudRetailV2alphaRuleTwowaySynonymsActionResponse twowaySynonymsAction() {
         return this.twowaySynonymsAction;
     }
 
-    public GoogleCloudRetailV2alphaRuleResponse(
-        GoogleCloudRetailV2alphaRuleBoostActionResponse boostAction,
-        GoogleCloudRetailV2alphaConditionResponse condition,
-        GoogleCloudRetailV2alphaRuleDoNotAssociateActionResponse doNotAssociateAction,
-        GoogleCloudRetailV2alphaRuleFilterActionResponse filterAction,
-        GoogleCloudRetailV2alphaRuleIgnoreActionResponse ignoreAction,
-        GoogleCloudRetailV2alphaRuleOnewaySynonymsActionResponse onewaySynonymsAction,
-        GoogleCloudRetailV2alphaRuleRedirectActionResponse redirectAction,
-        GoogleCloudRetailV2alphaRuleReplacementActionResponse replacementAction,
-        GoogleCloudRetailV2alphaRuleTwowaySynonymsActionResponse twowaySynonymsAction) {
-        this.boostAction = Objects.requireNonNull(boostAction, "expected parameter 'boostAction' to be non-null");
-        this.condition = Objects.requireNonNull(condition, "expected parameter 'condition' to be non-null");
-        this.doNotAssociateAction = Objects.requireNonNull(doNotAssociateAction, "expected parameter 'doNotAssociateAction' to be non-null");
-        this.filterAction = Objects.requireNonNull(filterAction, "expected parameter 'filterAction' to be non-null");
-        this.ignoreAction = Objects.requireNonNull(ignoreAction, "expected parameter 'ignoreAction' to be non-null");
-        this.onewaySynonymsAction = Objects.requireNonNull(onewaySynonymsAction, "expected parameter 'onewaySynonymsAction' to be non-null");
-        this.redirectAction = Objects.requireNonNull(redirectAction, "expected parameter 'redirectAction' to be non-null");
-        this.replacementAction = Objects.requireNonNull(replacementAction, "expected parameter 'replacementAction' to be non-null");
-        this.twowaySynonymsAction = Objects.requireNonNull(twowaySynonymsAction, "expected parameter 'twowaySynonymsAction' to be non-null");
-    }
+    private GoogleCloudRetailV2alphaRuleResponse() {}
 
-    private GoogleCloudRetailV2alphaRuleResponse() {
-        this.boostAction = null;
-        this.condition = null;
-        this.doNotAssociateAction = null;
-        this.filterAction = null;
-        this.ignoreAction = null;
-        this.onewaySynonymsAction = null;
-        this.redirectAction = null;
-        this.replacementAction = null;
-        this.twowaySynonymsAction = null;
+    private GoogleCloudRetailV2alphaRuleResponse(GoogleCloudRetailV2alphaRuleResponse $) {
+        this.boostAction = $.boostAction;
+        this.condition = $.condition;
+        this.doNotAssociateAction = $.doNotAssociateAction;
+        this.filterAction = $.filterAction;
+        this.ignoreAction = $.ignoreAction;
+        this.onewaySynonymsAction = $.onewaySynonymsAction;
+        this.redirectAction = $.redirectAction;
+        this.replacementAction = $.replacementAction;
+        this.twowaySynonymsAction = $.twowaySynonymsAction;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRetailV2alphaRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GoogleCloudRetailV2alphaRuleBoostActionResponse boostAction;
-        private GoogleCloudRetailV2alphaConditionResponse condition;
-        private GoogleCloudRetailV2alphaRuleDoNotAssociateActionResponse doNotAssociateAction;
-        private GoogleCloudRetailV2alphaRuleFilterActionResponse filterAction;
-        private GoogleCloudRetailV2alphaRuleIgnoreActionResponse ignoreAction;
-        private GoogleCloudRetailV2alphaRuleOnewaySynonymsActionResponse onewaySynonymsAction;
-        private GoogleCloudRetailV2alphaRuleRedirectActionResponse redirectAction;
-        private GoogleCloudRetailV2alphaRuleReplacementActionResponse replacementAction;
-        private GoogleCloudRetailV2alphaRuleTwowaySynonymsActionResponse twowaySynonymsAction;
+        private GoogleCloudRetailV2alphaRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRetailV2alphaRuleResponse();
         }
 
         public Builder(GoogleCloudRetailV2alphaRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.boostAction = defaults.boostAction;
-    	      this.condition = defaults.condition;
-    	      this.doNotAssociateAction = defaults.doNotAssociateAction;
-    	      this.filterAction = defaults.filterAction;
-    	      this.ignoreAction = defaults.ignoreAction;
-    	      this.onewaySynonymsAction = defaults.onewaySynonymsAction;
-    	      this.redirectAction = defaults.redirectAction;
-    	      this.replacementAction = defaults.replacementAction;
-    	      this.twowaySynonymsAction = defaults.twowaySynonymsAction;
+            $ = new GoogleCloudRetailV2alphaRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder boostAction(GoogleCloudRetailV2alphaRuleBoostActionResponse boostAction) {
-            this.boostAction = Objects.requireNonNull(boostAction);
+            $.boostAction = boostAction;
             return this;
         }
+
         public Builder condition(GoogleCloudRetailV2alphaConditionResponse condition) {
-            this.condition = Objects.requireNonNull(condition);
+            $.condition = condition;
             return this;
         }
+
         public Builder doNotAssociateAction(GoogleCloudRetailV2alphaRuleDoNotAssociateActionResponse doNotAssociateAction) {
-            this.doNotAssociateAction = Objects.requireNonNull(doNotAssociateAction);
+            $.doNotAssociateAction = doNotAssociateAction;
             return this;
         }
+
         public Builder filterAction(GoogleCloudRetailV2alphaRuleFilterActionResponse filterAction) {
-            this.filterAction = Objects.requireNonNull(filterAction);
+            $.filterAction = filterAction;
             return this;
         }
+
         public Builder ignoreAction(GoogleCloudRetailV2alphaRuleIgnoreActionResponse ignoreAction) {
-            this.ignoreAction = Objects.requireNonNull(ignoreAction);
+            $.ignoreAction = ignoreAction;
             return this;
         }
+
         public Builder onewaySynonymsAction(GoogleCloudRetailV2alphaRuleOnewaySynonymsActionResponse onewaySynonymsAction) {
-            this.onewaySynonymsAction = Objects.requireNonNull(onewaySynonymsAction);
+            $.onewaySynonymsAction = onewaySynonymsAction;
             return this;
         }
+
         public Builder redirectAction(GoogleCloudRetailV2alphaRuleRedirectActionResponse redirectAction) {
-            this.redirectAction = Objects.requireNonNull(redirectAction);
+            $.redirectAction = redirectAction;
             return this;
         }
+
         public Builder replacementAction(GoogleCloudRetailV2alphaRuleReplacementActionResponse replacementAction) {
-            this.replacementAction = Objects.requireNonNull(replacementAction);
+            $.replacementAction = replacementAction;
             return this;
         }
+
         public Builder twowaySynonymsAction(GoogleCloudRetailV2alphaRuleTwowaySynonymsActionResponse twowaySynonymsAction) {
-            this.twowaySynonymsAction = Objects.requireNonNull(twowaySynonymsAction);
+            $.twowaySynonymsAction = twowaySynonymsAction;
             return this;
-        }        public GoogleCloudRetailV2alphaRuleResponse build() {
-            return new GoogleCloudRetailV2alphaRuleResponse(boostAction, condition, doNotAssociateAction, filterAction, ignoreAction, onewaySynonymsAction, redirectAction, replacementAction, twowaySynonymsAction);
+        }
+
+        public GoogleCloudRetailV2alphaRuleResponse build() {
+            $.boostAction = Objects.requireNonNull($.boostAction, "expected parameter 'boostAction' to be non-null");
+            $.condition = Objects.requireNonNull($.condition, "expected parameter 'condition' to be non-null");
+            $.doNotAssociateAction = Objects.requireNonNull($.doNotAssociateAction, "expected parameter 'doNotAssociateAction' to be non-null");
+            $.filterAction = Objects.requireNonNull($.filterAction, "expected parameter 'filterAction' to be non-null");
+            $.ignoreAction = Objects.requireNonNull($.ignoreAction, "expected parameter 'ignoreAction' to be non-null");
+            $.onewaySynonymsAction = Objects.requireNonNull($.onewaySynonymsAction, "expected parameter 'onewaySynonymsAction' to be non-null");
+            $.redirectAction = Objects.requireNonNull($.redirectAction, "expected parameter 'redirectAction' to be non-null");
+            $.replacementAction = Objects.requireNonNull($.replacementAction, "expected parameter 'replacementAction' to be non-null");
+            $.twowaySynonymsAction = Objects.requireNonNull($.twowaySynonymsAction, "expected parameter 'twowaySynonymsAction' to be non-null");
+            return $;
         }
     }
+
 }

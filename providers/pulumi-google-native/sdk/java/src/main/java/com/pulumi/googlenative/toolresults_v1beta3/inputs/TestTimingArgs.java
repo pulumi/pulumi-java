@@ -5,9 +5,9 @@ package com.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.DurationArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class TestTimingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="testProcessDuration")
-      private final @Nullable Output<DurationArgs> testProcessDuration;
+    private @Nullable Output<DurationArgs> testProcessDuration;
 
-    public Output<DurationArgs> testProcessDuration() {
-        return this.testProcessDuration == null ? Codegen.empty() : this.testProcessDuration;
+    public Optional<Output<DurationArgs>> testProcessDuration() {
+        return Optional.ofNullable(this.testProcessDuration);
     }
 
-    public TestTimingArgs(@Nullable Output<DurationArgs> testProcessDuration) {
-        this.testProcessDuration = testProcessDuration;
-    }
+    private TestTimingArgs() {}
 
-    private TestTimingArgs() {
-        this.testProcessDuration = Codegen.empty();
+    private TestTimingArgs(TestTimingArgs $) {
+        this.testProcessDuration = $.testProcessDuration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TestTimingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DurationArgs> testProcessDuration;
+        private TestTimingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TestTimingArgs();
         }
 
         public Builder(TestTimingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.testProcessDuration = defaults.testProcessDuration;
+            $ = new TestTimingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder testProcessDuration(@Nullable Output<DurationArgs> testProcessDuration) {
-            this.testProcessDuration = testProcessDuration;
+            $.testProcessDuration = testProcessDuration;
             return this;
         }
-        public Builder testProcessDuration(@Nullable DurationArgs testProcessDuration) {
-            this.testProcessDuration = Codegen.ofNullable(testProcessDuration);
-            return this;
-        }        public TestTimingArgs build() {
-            return new TestTimingArgs(testProcessDuration);
+
+        public Builder testProcessDuration(DurationArgs testProcessDuration) {
+            return testProcessDuration(Output.of(testProcessDuration));
+        }
+
+        public TestTimingArgs build() {
+            return $;
         }
     }
+
 }

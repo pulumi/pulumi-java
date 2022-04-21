@@ -6,11 +6,11 @@ package com.pulumi.azurenative.customerinsights;
 import com.pulumi.azurenative.customerinsights.inputs.HubBillingInfoFormatArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class HubArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hubBillingInfo")
-      private final @Nullable Output<HubBillingInfoFormatArgs> hubBillingInfo;
+    private @Nullable Output<HubBillingInfoFormatArgs> hubBillingInfo;
 
-    public Output<HubBillingInfoFormatArgs> hubBillingInfo() {
-        return this.hubBillingInfo == null ? Codegen.empty() : this.hubBillingInfo;
+    public Optional<Output<HubBillingInfoFormatArgs>> hubBillingInfo() {
+        return Optional.ofNullable(this.hubBillingInfo);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class HubArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hubName")
-      private final @Nullable Output<String> hubName;
+    private @Nullable Output<String> hubName;
 
-    public Output<String> hubName() {
-        return this.hubName == null ? Codegen.empty() : this.hubName;
+    public Optional<Output<String>> hubName() {
+        return Optional.ofNullable(this.hubName);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class HubArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -56,7 +56,7 @@ public final class HubArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -67,10 +67,10 @@ public final class HubArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -78,115 +78,99 @@ public final class HubArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tenantFeatures")
-      private final @Nullable Output<Integer> tenantFeatures;
+    private @Nullable Output<Integer> tenantFeatures;
 
-    public Output<Integer> tenantFeatures() {
-        return this.tenantFeatures == null ? Codegen.empty() : this.tenantFeatures;
+    public Optional<Output<Integer>> tenantFeatures() {
+        return Optional.ofNullable(this.tenantFeatures);
     }
 
-    public HubArgs(
-        @Nullable Output<HubBillingInfoFormatArgs> hubBillingInfo,
-        @Nullable Output<String> hubName,
-        @Nullable Output<String> location,
-        Output<String> resourceGroupName,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Integer> tenantFeatures) {
-        this.hubBillingInfo = hubBillingInfo;
-        this.hubName = hubName;
-        this.location = location;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tags = tags;
-        this.tenantFeatures = tenantFeatures;
-    }
+    private HubArgs() {}
 
-    private HubArgs() {
-        this.hubBillingInfo = Codegen.empty();
-        this.hubName = Codegen.empty();
-        this.location = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tenantFeatures = Codegen.empty();
+    private HubArgs(HubArgs $) {
+        this.hubBillingInfo = $.hubBillingInfo;
+        this.hubName = $.hubName;
+        this.location = $.location;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tags = $.tags;
+        this.tenantFeatures = $.tenantFeatures;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HubArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<HubBillingInfoFormatArgs> hubBillingInfo;
-        private @Nullable Output<String> hubName;
-        private @Nullable Output<String> location;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Integer> tenantFeatures;
+        private HubArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HubArgs();
         }
 
         public Builder(HubArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hubBillingInfo = defaults.hubBillingInfo;
-    	      this.hubName = defaults.hubName;
-    	      this.location = defaults.location;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tags = defaults.tags;
-    	      this.tenantFeatures = defaults.tenantFeatures;
+            $ = new HubArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hubBillingInfo(@Nullable Output<HubBillingInfoFormatArgs> hubBillingInfo) {
-            this.hubBillingInfo = hubBillingInfo;
+            $.hubBillingInfo = hubBillingInfo;
             return this;
         }
-        public Builder hubBillingInfo(@Nullable HubBillingInfoFormatArgs hubBillingInfo) {
-            this.hubBillingInfo = Codegen.ofNullable(hubBillingInfo);
-            return this;
+
+        public Builder hubBillingInfo(HubBillingInfoFormatArgs hubBillingInfo) {
+            return hubBillingInfo(Output.of(hubBillingInfo));
         }
+
         public Builder hubName(@Nullable Output<String> hubName) {
-            this.hubName = hubName;
+            $.hubName = hubName;
             return this;
         }
-        public Builder hubName(@Nullable String hubName) {
-            this.hubName = Codegen.ofNullable(hubName);
-            return this;
+
+        public Builder hubName(String hubName) {
+            return hubName(Output.of(hubName));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tenantFeatures(@Nullable Output<Integer> tenantFeatures) {
-            this.tenantFeatures = tenantFeatures;
+            $.tenantFeatures = tenantFeatures;
             return this;
         }
-        public Builder tenantFeatures(@Nullable Integer tenantFeatures) {
-            this.tenantFeatures = Codegen.ofNullable(tenantFeatures);
-            return this;
-        }        public HubArgs build() {
-            return new HubArgs(hubBillingInfo, hubName, location, resourceGroupName, tags, tenantFeatures);
+
+        public Builder tenantFeatures(Integer tenantFeatures) {
+            return tenantFeatures(Output.of(tenantFeatures));
+        }
+
+        public HubArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

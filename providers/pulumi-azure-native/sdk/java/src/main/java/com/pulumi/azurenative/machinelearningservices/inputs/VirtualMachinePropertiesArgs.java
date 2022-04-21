@@ -6,10 +6,10 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 import com.pulumi.azurenative.machinelearningservices.inputs.VirtualMachineSshCredentialsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class VirtualMachinePropertiesArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="address")
-      private final @Nullable Output<String> address;
+    private @Nullable Output<String> address;
 
-    public Output<String> address() {
-        return this.address == null ? Codegen.empty() : this.address;
+    public Optional<Output<String>> address() {
+        return Optional.ofNullable(this.address);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class VirtualMachinePropertiesArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="administratorAccount")
-      private final @Nullable Output<VirtualMachineSshCredentialsArgs> administratorAccount;
+    private @Nullable Output<VirtualMachineSshCredentialsArgs> administratorAccount;
 
-    public Output<VirtualMachineSshCredentialsArgs> administratorAccount() {
-        return this.administratorAccount == null ? Codegen.empty() : this.administratorAccount;
+    public Optional<Output<VirtualMachineSshCredentialsArgs>> administratorAccount() {
+        return Optional.ofNullable(this.administratorAccount);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class VirtualMachinePropertiesArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="sshPort")
-      private final @Nullable Output<Integer> sshPort;
+    private @Nullable Output<Integer> sshPort;
 
-    public Output<Integer> sshPort() {
-        return this.sshPort == null ? Codegen.empty() : this.sshPort;
+    public Optional<Output<Integer>> sshPort() {
+        return Optional.ofNullable(this.sshPort);
     }
 
     /**
@@ -55,89 +55,78 @@ public final class VirtualMachinePropertiesArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="virtualMachineSize")
-      private final @Nullable Output<String> virtualMachineSize;
+    private @Nullable Output<String> virtualMachineSize;
 
-    public Output<String> virtualMachineSize() {
-        return this.virtualMachineSize == null ? Codegen.empty() : this.virtualMachineSize;
+    public Optional<Output<String>> virtualMachineSize() {
+        return Optional.ofNullable(this.virtualMachineSize);
     }
 
-    public VirtualMachinePropertiesArgs(
-        @Nullable Output<String> address,
-        @Nullable Output<VirtualMachineSshCredentialsArgs> administratorAccount,
-        @Nullable Output<Integer> sshPort,
-        @Nullable Output<String> virtualMachineSize) {
-        this.address = address;
-        this.administratorAccount = administratorAccount;
-        this.sshPort = sshPort;
-        this.virtualMachineSize = virtualMachineSize;
-    }
+    private VirtualMachinePropertiesArgs() {}
 
-    private VirtualMachinePropertiesArgs() {
-        this.address = Codegen.empty();
-        this.administratorAccount = Codegen.empty();
-        this.sshPort = Codegen.empty();
-        this.virtualMachineSize = Codegen.empty();
+    private VirtualMachinePropertiesArgs(VirtualMachinePropertiesArgs $) {
+        this.address = $.address;
+        this.administratorAccount = $.administratorAccount;
+        this.sshPort = $.sshPort;
+        this.virtualMachineSize = $.virtualMachineSize;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMachinePropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> address;
-        private @Nullable Output<VirtualMachineSshCredentialsArgs> administratorAccount;
-        private @Nullable Output<Integer> sshPort;
-        private @Nullable Output<String> virtualMachineSize;
+        private VirtualMachinePropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMachinePropertiesArgs();
         }
 
         public Builder(VirtualMachinePropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.address = defaults.address;
-    	      this.administratorAccount = defaults.administratorAccount;
-    	      this.sshPort = defaults.sshPort;
-    	      this.virtualMachineSize = defaults.virtualMachineSize;
+            $ = new VirtualMachinePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder address(@Nullable Output<String> address) {
-            this.address = address;
+            $.address = address;
             return this;
         }
-        public Builder address(@Nullable String address) {
-            this.address = Codegen.ofNullable(address);
-            return this;
+
+        public Builder address(String address) {
+            return address(Output.of(address));
         }
+
         public Builder administratorAccount(@Nullable Output<VirtualMachineSshCredentialsArgs> administratorAccount) {
-            this.administratorAccount = administratorAccount;
+            $.administratorAccount = administratorAccount;
             return this;
         }
-        public Builder administratorAccount(@Nullable VirtualMachineSshCredentialsArgs administratorAccount) {
-            this.administratorAccount = Codegen.ofNullable(administratorAccount);
-            return this;
+
+        public Builder administratorAccount(VirtualMachineSshCredentialsArgs administratorAccount) {
+            return administratorAccount(Output.of(administratorAccount));
         }
+
         public Builder sshPort(@Nullable Output<Integer> sshPort) {
-            this.sshPort = sshPort;
+            $.sshPort = sshPort;
             return this;
         }
-        public Builder sshPort(@Nullable Integer sshPort) {
-            this.sshPort = Codegen.ofNullable(sshPort);
-            return this;
+
+        public Builder sshPort(Integer sshPort) {
+            return sshPort(Output.of(sshPort));
         }
+
         public Builder virtualMachineSize(@Nullable Output<String> virtualMachineSize) {
-            this.virtualMachineSize = virtualMachineSize;
+            $.virtualMachineSize = virtualMachineSize;
             return this;
         }
-        public Builder virtualMachineSize(@Nullable String virtualMachineSize) {
-            this.virtualMachineSize = Codegen.ofNullable(virtualMachineSize);
-            return this;
-        }        public VirtualMachinePropertiesArgs build() {
-            return new VirtualMachinePropertiesArgs(address, administratorAccount, sshPort, virtualMachineSize);
+
+        public Builder virtualMachineSize(String virtualMachineSize) {
+            return virtualMachineSize(Output.of(virtualMachineSize));
+        }
+
+        public VirtualMachinePropertiesArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.gcp.datacatalog;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,110 +16,101 @@ public final class TagTemplateIamPolicyArgs extends com.pulumi.resources.Resourc
     public static final TagTemplateIamPolicyArgs Empty = new TagTemplateIamPolicyArgs();
 
     @Import(name="policyData", required=true)
-      private final Output<String> policyData;
+    private Output<String> policyData;
 
     public Output<String> policyData() {
         return this.policyData;
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
     @Import(name="tagTemplate", required=true)
-      private final Output<String> tagTemplate;
+    private Output<String> tagTemplate;
 
     public Output<String> tagTemplate() {
         return this.tagTemplate;
     }
 
-    public TagTemplateIamPolicyArgs(
-        Output<String> policyData,
-        @Nullable Output<String> project,
-        @Nullable Output<String> region,
-        Output<String> tagTemplate) {
-        this.policyData = Objects.requireNonNull(policyData, "expected parameter 'policyData' to be non-null");
-        this.project = project;
-        this.region = region;
-        this.tagTemplate = Objects.requireNonNull(tagTemplate, "expected parameter 'tagTemplate' to be non-null");
-    }
+    private TagTemplateIamPolicyArgs() {}
 
-    private TagTemplateIamPolicyArgs() {
-        this.policyData = Codegen.empty();
-        this.project = Codegen.empty();
-        this.region = Codegen.empty();
-        this.tagTemplate = Codegen.empty();
+    private TagTemplateIamPolicyArgs(TagTemplateIamPolicyArgs $) {
+        this.policyData = $.policyData;
+        this.project = $.project;
+        this.region = $.region;
+        this.tagTemplate = $.tagTemplate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TagTemplateIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> policyData;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> region;
-        private Output<String> tagTemplate;
+        private TagTemplateIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TagTemplateIamPolicyArgs();
         }
 
         public Builder(TagTemplateIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.policyData = defaults.policyData;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
-    	      this.tagTemplate = defaults.tagTemplate;
+            $ = new TagTemplateIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder policyData(Output<String> policyData) {
-            this.policyData = Objects.requireNonNull(policyData);
+            $.policyData = policyData;
             return this;
         }
+
         public Builder policyData(String policyData) {
-            this.policyData = Output.of(Objects.requireNonNull(policyData));
-            return this;
+            return policyData(Output.of(policyData));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
+
+        public Builder region(String region) {
+            return region(Output.of(region));
         }
+
         public Builder tagTemplate(Output<String> tagTemplate) {
-            this.tagTemplate = Objects.requireNonNull(tagTemplate);
+            $.tagTemplate = tagTemplate;
             return this;
         }
+
         public Builder tagTemplate(String tagTemplate) {
-            this.tagTemplate = Output.of(Objects.requireNonNull(tagTemplate));
-            return this;
-        }        public TagTemplateIamPolicyArgs build() {
-            return new TagTemplateIamPolicyArgs(policyData, project, region, tagTemplate);
+            return tagTemplate(Output.of(tagTemplate));
+        }
+
+        public TagTemplateIamPolicyArgs build() {
+            $.policyData = Objects.requireNonNull($.policyData, "expected parameter 'policyData' to be non-null");
+            $.tagTemplate = Objects.requireNonNull($.tagTemplate, "expected parameter 'tagTemplate' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,7 +6,6 @@ package com.pulumi.awsnative.databrew.inputs;
 import com.pulumi.awsnative.databrew.inputs.DatasetParameterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,70 +19,67 @@ public final class DatasetPathParameterArgs extends com.pulumi.resources.Resourc
     public static final DatasetPathParameterArgs Empty = new DatasetPathParameterArgs();
 
     @Import(name="datasetParameter", required=true)
-      private final Output<DatasetParameterArgs> datasetParameter;
+    private Output<DatasetParameterArgs> datasetParameter;
 
     public Output<DatasetParameterArgs> datasetParameter() {
         return this.datasetParameter;
     }
 
     @Import(name="pathParameterName", required=true)
-      private final Output<String> pathParameterName;
+    private Output<String> pathParameterName;
 
     public Output<String> pathParameterName() {
         return this.pathParameterName;
     }
 
-    public DatasetPathParameterArgs(
-        Output<DatasetParameterArgs> datasetParameter,
-        Output<String> pathParameterName) {
-        this.datasetParameter = Objects.requireNonNull(datasetParameter, "expected parameter 'datasetParameter' to be non-null");
-        this.pathParameterName = Objects.requireNonNull(pathParameterName, "expected parameter 'pathParameterName' to be non-null");
-    }
+    private DatasetPathParameterArgs() {}
 
-    private DatasetPathParameterArgs() {
-        this.datasetParameter = Codegen.empty();
-        this.pathParameterName = Codegen.empty();
+    private DatasetPathParameterArgs(DatasetPathParameterArgs $) {
+        this.datasetParameter = $.datasetParameter;
+        this.pathParameterName = $.pathParameterName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetPathParameterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<DatasetParameterArgs> datasetParameter;
-        private Output<String> pathParameterName;
+        private DatasetPathParameterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetPathParameterArgs();
         }
 
         public Builder(DatasetPathParameterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datasetParameter = defaults.datasetParameter;
-    	      this.pathParameterName = defaults.pathParameterName;
+            $ = new DatasetPathParameterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder datasetParameter(Output<DatasetParameterArgs> datasetParameter) {
-            this.datasetParameter = Objects.requireNonNull(datasetParameter);
+            $.datasetParameter = datasetParameter;
             return this;
         }
+
         public Builder datasetParameter(DatasetParameterArgs datasetParameter) {
-            this.datasetParameter = Output.of(Objects.requireNonNull(datasetParameter));
-            return this;
+            return datasetParameter(Output.of(datasetParameter));
         }
+
         public Builder pathParameterName(Output<String> pathParameterName) {
-            this.pathParameterName = Objects.requireNonNull(pathParameterName);
+            $.pathParameterName = pathParameterName;
             return this;
         }
+
         public Builder pathParameterName(String pathParameterName) {
-            this.pathParameterName = Output.of(Objects.requireNonNull(pathParameterName));
-            return this;
-        }        public DatasetPathParameterArgs build() {
-            return new DatasetPathParameterArgs(datasetParameter, pathParameterName);
+            return pathParameterName(Output.of(pathParameterName));
+        }
+
+        public DatasetPathParameterArgs build() {
+            $.datasetParameter = Objects.requireNonNull($.datasetParameter, "expected parameter 'datasetParameter' to be non-null");
+            $.pathParameterName = Objects.requireNonNull($.pathParameterName, "expected parameter 'pathParameterName' to be non-null");
+            return $;
         }
     }
+
 }

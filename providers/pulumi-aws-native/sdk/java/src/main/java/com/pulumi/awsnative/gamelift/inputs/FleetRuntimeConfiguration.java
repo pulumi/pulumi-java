@@ -29,10 +29,10 @@ public final class FleetRuntimeConfiguration extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="gameSessionActivationTimeoutSeconds")
-      private final @Nullable Integer gameSessionActivationTimeoutSeconds;
+    private @Nullable Integer gameSessionActivationTimeoutSeconds;
 
     public Optional<Integer> gameSessionActivationTimeoutSeconds() {
-        return this.gameSessionActivationTimeoutSeconds == null ? Optional.empty() : Optional.ofNullable(this.gameSessionActivationTimeoutSeconds);
+        return Optional.ofNullable(this.gameSessionActivationTimeoutSeconds);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class FleetRuntimeConfiguration extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="maxConcurrentGameSessionActivations")
-      private final @Nullable Integer maxConcurrentGameSessionActivations;
+    private @Nullable Integer maxConcurrentGameSessionActivations;
 
     public Optional<Integer> maxConcurrentGameSessionActivations() {
-        return this.maxConcurrentGameSessionActivations == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentGameSessionActivations);
+        return Optional.ofNullable(this.maxConcurrentGameSessionActivations);
     }
 
     /**
@@ -51,67 +51,60 @@ public final class FleetRuntimeConfiguration extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="serverProcesses")
-      private final @Nullable List<FleetServerProcess> serverProcesses;
+    private @Nullable List<FleetServerProcess> serverProcesses;
 
-    public List<FleetServerProcess> serverProcesses() {
-        return this.serverProcesses == null ? List.of() : this.serverProcesses;
+    public Optional<List<FleetServerProcess>> serverProcesses() {
+        return Optional.ofNullable(this.serverProcesses);
     }
 
-    public FleetRuntimeConfiguration(
-        @Nullable Integer gameSessionActivationTimeoutSeconds,
-        @Nullable Integer maxConcurrentGameSessionActivations,
-        @Nullable List<FleetServerProcess> serverProcesses) {
-        this.gameSessionActivationTimeoutSeconds = gameSessionActivationTimeoutSeconds;
-        this.maxConcurrentGameSessionActivations = maxConcurrentGameSessionActivations;
-        this.serverProcesses = serverProcesses;
-    }
+    private FleetRuntimeConfiguration() {}
 
-    private FleetRuntimeConfiguration() {
-        this.gameSessionActivationTimeoutSeconds = null;
-        this.maxConcurrentGameSessionActivations = null;
-        this.serverProcesses = List.of();
+    private FleetRuntimeConfiguration(FleetRuntimeConfiguration $) {
+        this.gameSessionActivationTimeoutSeconds = $.gameSessionActivationTimeoutSeconds;
+        this.maxConcurrentGameSessionActivations = $.maxConcurrentGameSessionActivations;
+        this.serverProcesses = $.serverProcesses;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FleetRuntimeConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer gameSessionActivationTimeoutSeconds;
-        private @Nullable Integer maxConcurrentGameSessionActivations;
-        private @Nullable List<FleetServerProcess> serverProcesses;
+        private FleetRuntimeConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new FleetRuntimeConfiguration();
         }
 
         public Builder(FleetRuntimeConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gameSessionActivationTimeoutSeconds = defaults.gameSessionActivationTimeoutSeconds;
-    	      this.maxConcurrentGameSessionActivations = defaults.maxConcurrentGameSessionActivations;
-    	      this.serverProcesses = defaults.serverProcesses;
+            $ = new FleetRuntimeConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder gameSessionActivationTimeoutSeconds(@Nullable Integer gameSessionActivationTimeoutSeconds) {
-            this.gameSessionActivationTimeoutSeconds = gameSessionActivationTimeoutSeconds;
+            $.gameSessionActivationTimeoutSeconds = gameSessionActivationTimeoutSeconds;
             return this;
         }
+
         public Builder maxConcurrentGameSessionActivations(@Nullable Integer maxConcurrentGameSessionActivations) {
-            this.maxConcurrentGameSessionActivations = maxConcurrentGameSessionActivations;
+            $.maxConcurrentGameSessionActivations = maxConcurrentGameSessionActivations;
             return this;
         }
+
         public Builder serverProcesses(@Nullable List<FleetServerProcess> serverProcesses) {
-            this.serverProcesses = serverProcesses;
+            $.serverProcesses = serverProcesses;
             return this;
         }
+
         public Builder serverProcesses(FleetServerProcess... serverProcesses) {
             return serverProcesses(List.of(serverProcesses));
-        }        public FleetRuntimeConfiguration build() {
-            return new FleetRuntimeConfiguration(gameSessionActivationTimeoutSeconds, maxConcurrentGameSessionActivations, serverProcesses);
+        }
+
+        public FleetRuntimeConfiguration build() {
+            return $;
         }
     }
+
 }

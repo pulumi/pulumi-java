@@ -22,7 +22,7 @@ public final class VolumeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -33,7 +33,7 @@ public final class VolumeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sizeGb", required=true)
-      private final Double sizeGb;
+    private Double sizeGb;
 
     public Double sizeGb() {
         return this.sizeGb;
@@ -44,64 +44,59 @@ public final class VolumeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="volumeType", required=true)
-      private final String volumeType;
+    private String volumeType;
 
     public String volumeType() {
         return this.volumeType;
     }
 
-    public VolumeResponse(
-        String name,
-        Double sizeGb,
-        String volumeType) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.sizeGb = Objects.requireNonNull(sizeGb, "expected parameter 'sizeGb' to be non-null");
-        this.volumeType = Objects.requireNonNull(volumeType, "expected parameter 'volumeType' to be non-null");
-    }
+    private VolumeResponse() {}
 
-    private VolumeResponse() {
-        this.name = null;
-        this.sizeGb = null;
-        this.volumeType = null;
+    private VolumeResponse(VolumeResponse $) {
+        this.name = $.name;
+        this.sizeGb = $.sizeGb;
+        this.volumeType = $.volumeType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VolumeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private Double sizeGb;
-        private String volumeType;
+        private VolumeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VolumeResponse();
         }
 
         public Builder(VolumeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.sizeGb = defaults.sizeGb;
-    	      this.volumeType = defaults.volumeType;
+            $ = new VolumeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder sizeGb(Double sizeGb) {
-            this.sizeGb = Objects.requireNonNull(sizeGb);
+            $.sizeGb = sizeGb;
             return this;
         }
+
         public Builder volumeType(String volumeType) {
-            this.volumeType = Objects.requireNonNull(volumeType);
+            $.volumeType = volumeType;
             return this;
-        }        public VolumeResponse build() {
-            return new VolumeResponse(name, sizeGb, volumeType);
+        }
+
+        public VolumeResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.sizeGb = Objects.requireNonNull($.sizeGb, "expected parameter 'sizeGb' to be non-null");
+            $.volumeType = Objects.requireNonNull($.volumeType, "expected parameter 'volumeType' to be non-null");
+            return $;
         }
     }
+
 }

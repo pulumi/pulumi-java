@@ -5,7 +5,6 @@ package com.pulumi.azurenative.documentdb.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class GremlinDatabaseResourceArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="id", required=true)
-      private final Output<String> id;
+    private Output<String> id;
 
     public Output<String> id() {
         return this.id;
     }
 
-    public GremlinDatabaseResourceArgs(Output<String> id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private GremlinDatabaseResourceArgs() {}
 
-    private GremlinDatabaseResourceArgs() {
-        this.id = Codegen.empty();
+    private GremlinDatabaseResourceArgs(GremlinDatabaseResourceArgs $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GremlinDatabaseResourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> id;
+        private GremlinDatabaseResourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GremlinDatabaseResourceArgs();
         }
 
         public Builder(GremlinDatabaseResourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new GremlinDatabaseResourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(Output<String> id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Output.of(Objects.requireNonNull(id));
-            return this;
-        }        public GremlinDatabaseResourceArgs build() {
-            return new GremlinDatabaseResourceArgs(id);
+            return id(Output.of(id));
+        }
+
+        public GremlinDatabaseResourceArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

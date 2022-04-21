@@ -5,12 +5,12 @@ package com.pulumi.aws.apigateway.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class MethodState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apiKeyRequired")
-      private final @Nullable Output<Boolean> apiKeyRequired;
+    private @Nullable Output<Boolean> apiKeyRequired;
 
-    public Output<Boolean> apiKeyRequired() {
-        return this.apiKeyRequired == null ? Codegen.empty() : this.apiKeyRequired;
+    public Optional<Output<Boolean>> apiKeyRequired() {
+        return Optional.ofNullable(this.apiKeyRequired);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class MethodState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authorization")
-      private final @Nullable Output<String> authorization;
+    private @Nullable Output<String> authorization;
 
-    public Output<String> authorization() {
-        return this.authorization == null ? Codegen.empty() : this.authorization;
+    public Optional<Output<String>> authorization() {
+        return Optional.ofNullable(this.authorization);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class MethodState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authorizationScopes")
-      private final @Nullable Output<List<String>> authorizationScopes;
+    private @Nullable Output<List<String>> authorizationScopes;
 
-    public Output<List<String>> authorizationScopes() {
-        return this.authorizationScopes == null ? Codegen.empty() : this.authorizationScopes;
+    public Optional<Output<List<String>>> authorizationScopes() {
+        return Optional.ofNullable(this.authorizationScopes);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class MethodState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authorizerId")
-      private final @Nullable Output<String> authorizerId;
+    private @Nullable Output<String> authorizerId;
 
-    public Output<String> authorizerId() {
-        return this.authorizerId == null ? Codegen.empty() : this.authorizerId;
+    public Optional<Output<String>> authorizerId() {
+        return Optional.ofNullable(this.authorizerId);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class MethodState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="httpMethod")
-      private final @Nullable Output<String> httpMethod;
+    private @Nullable Output<String> httpMethod;
 
-    public Output<String> httpMethod() {
-        return this.httpMethod == null ? Codegen.empty() : this.httpMethod;
+    public Optional<Output<String>> httpMethod() {
+        return Optional.ofNullable(this.httpMethod);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class MethodState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="operationName")
-      private final @Nullable Output<String> operationName;
+    private @Nullable Output<String> operationName;
 
-    public Output<String> operationName() {
-        return this.operationName == null ? Codegen.empty() : this.operationName;
+    public Optional<Output<String>> operationName() {
+        return Optional.ofNullable(this.operationName);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class MethodState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="requestModels")
-      private final @Nullable Output<Map<String,String>> requestModels;
+    private @Nullable Output<Map<String,String>> requestModels;
 
-    public Output<Map<String,String>> requestModels() {
-        return this.requestModels == null ? Codegen.empty() : this.requestModels;
+    public Optional<Output<Map<String,String>>> requestModels() {
+        return Optional.ofNullable(this.requestModels);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class MethodState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="requestParameters")
-      private final @Nullable Output<Map<String,Boolean>> requestParameters;
+    private @Nullable Output<Map<String,Boolean>> requestParameters;
 
-    public Output<Map<String,Boolean>> requestParameters() {
-        return this.requestParameters == null ? Codegen.empty() : this.requestParameters;
+    public Optional<Output<Map<String,Boolean>>> requestParameters() {
+        return Optional.ofNullable(this.requestParameters);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class MethodState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="requestValidatorId")
-      private final @Nullable Output<String> requestValidatorId;
+    private @Nullable Output<String> requestValidatorId;
 
-    public Output<String> requestValidatorId() {
-        return this.requestValidatorId == null ? Codegen.empty() : this.requestValidatorId;
+    public Optional<Output<String>> requestValidatorId() {
+        return Optional.ofNullable(this.requestValidatorId);
     }
 
     /**
@@ -125,10 +125,10 @@ public final class MethodState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable Output<String> resourceId;
+    private @Nullable Output<String> resourceId;
 
-    public Output<String> resourceId() {
-        return this.resourceId == null ? Codegen.empty() : this.resourceId;
+    public Optional<Output<String>> resourceId() {
+        return Optional.ofNullable(this.resourceId);
     }
 
     /**
@@ -136,179 +136,152 @@ public final class MethodState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="restApi")
-      private final @Nullable Output<String> restApi;
+    private @Nullable Output<String> restApi;
 
-    public Output<String> restApi() {
-        return this.restApi == null ? Codegen.empty() : this.restApi;
+    public Optional<Output<String>> restApi() {
+        return Optional.ofNullable(this.restApi);
     }
 
-    public MethodState(
-        @Nullable Output<Boolean> apiKeyRequired,
-        @Nullable Output<String> authorization,
-        @Nullable Output<List<String>> authorizationScopes,
-        @Nullable Output<String> authorizerId,
-        @Nullable Output<String> httpMethod,
-        @Nullable Output<String> operationName,
-        @Nullable Output<Map<String,String>> requestModels,
-        @Nullable Output<Map<String,Boolean>> requestParameters,
-        @Nullable Output<String> requestValidatorId,
-        @Nullable Output<String> resourceId,
-        @Nullable Output<String> restApi) {
-        this.apiKeyRequired = apiKeyRequired;
-        this.authorization = authorization;
-        this.authorizationScopes = authorizationScopes;
-        this.authorizerId = authorizerId;
-        this.httpMethod = httpMethod;
-        this.operationName = operationName;
-        this.requestModels = requestModels;
-        this.requestParameters = requestParameters;
-        this.requestValidatorId = requestValidatorId;
-        this.resourceId = resourceId;
-        this.restApi = restApi;
-    }
+    private MethodState() {}
 
-    private MethodState() {
-        this.apiKeyRequired = Codegen.empty();
-        this.authorization = Codegen.empty();
-        this.authorizationScopes = Codegen.empty();
-        this.authorizerId = Codegen.empty();
-        this.httpMethod = Codegen.empty();
-        this.operationName = Codegen.empty();
-        this.requestModels = Codegen.empty();
-        this.requestParameters = Codegen.empty();
-        this.requestValidatorId = Codegen.empty();
-        this.resourceId = Codegen.empty();
-        this.restApi = Codegen.empty();
+    private MethodState(MethodState $) {
+        this.apiKeyRequired = $.apiKeyRequired;
+        this.authorization = $.authorization;
+        this.authorizationScopes = $.authorizationScopes;
+        this.authorizerId = $.authorizerId;
+        this.httpMethod = $.httpMethod;
+        this.operationName = $.operationName;
+        this.requestModels = $.requestModels;
+        this.requestParameters = $.requestParameters;
+        this.requestValidatorId = $.requestValidatorId;
+        this.resourceId = $.resourceId;
+        this.restApi = $.restApi;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MethodState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> apiKeyRequired;
-        private @Nullable Output<String> authorization;
-        private @Nullable Output<List<String>> authorizationScopes;
-        private @Nullable Output<String> authorizerId;
-        private @Nullable Output<String> httpMethod;
-        private @Nullable Output<String> operationName;
-        private @Nullable Output<Map<String,String>> requestModels;
-        private @Nullable Output<Map<String,Boolean>> requestParameters;
-        private @Nullable Output<String> requestValidatorId;
-        private @Nullable Output<String> resourceId;
-        private @Nullable Output<String> restApi;
+        private MethodState $;
 
         public Builder() {
-    	      // Empty
+            $ = new MethodState();
         }
 
         public Builder(MethodState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiKeyRequired = defaults.apiKeyRequired;
-    	      this.authorization = defaults.authorization;
-    	      this.authorizationScopes = defaults.authorizationScopes;
-    	      this.authorizerId = defaults.authorizerId;
-    	      this.httpMethod = defaults.httpMethod;
-    	      this.operationName = defaults.operationName;
-    	      this.requestModels = defaults.requestModels;
-    	      this.requestParameters = defaults.requestParameters;
-    	      this.requestValidatorId = defaults.requestValidatorId;
-    	      this.resourceId = defaults.resourceId;
-    	      this.restApi = defaults.restApi;
+            $ = new MethodState(Objects.requireNonNull(defaults));
         }
 
         public Builder apiKeyRequired(@Nullable Output<Boolean> apiKeyRequired) {
-            this.apiKeyRequired = apiKeyRequired;
+            $.apiKeyRequired = apiKeyRequired;
             return this;
         }
-        public Builder apiKeyRequired(@Nullable Boolean apiKeyRequired) {
-            this.apiKeyRequired = Codegen.ofNullable(apiKeyRequired);
-            return this;
+
+        public Builder apiKeyRequired(Boolean apiKeyRequired) {
+            return apiKeyRequired(Output.of(apiKeyRequired));
         }
+
         public Builder authorization(@Nullable Output<String> authorization) {
-            this.authorization = authorization;
+            $.authorization = authorization;
             return this;
         }
-        public Builder authorization(@Nullable String authorization) {
-            this.authorization = Codegen.ofNullable(authorization);
-            return this;
+
+        public Builder authorization(String authorization) {
+            return authorization(Output.of(authorization));
         }
+
         public Builder authorizationScopes(@Nullable Output<List<String>> authorizationScopes) {
-            this.authorizationScopes = authorizationScopes;
+            $.authorizationScopes = authorizationScopes;
             return this;
         }
-        public Builder authorizationScopes(@Nullable List<String> authorizationScopes) {
-            this.authorizationScopes = Codegen.ofNullable(authorizationScopes);
-            return this;
+
+        public Builder authorizationScopes(List<String> authorizationScopes) {
+            return authorizationScopes(Output.of(authorizationScopes));
         }
+
         public Builder authorizationScopes(String... authorizationScopes) {
             return authorizationScopes(List.of(authorizationScopes));
         }
+
         public Builder authorizerId(@Nullable Output<String> authorizerId) {
-            this.authorizerId = authorizerId;
+            $.authorizerId = authorizerId;
             return this;
         }
-        public Builder authorizerId(@Nullable String authorizerId) {
-            this.authorizerId = Codegen.ofNullable(authorizerId);
-            return this;
+
+        public Builder authorizerId(String authorizerId) {
+            return authorizerId(Output.of(authorizerId));
         }
+
         public Builder httpMethod(@Nullable Output<String> httpMethod) {
-            this.httpMethod = httpMethod;
+            $.httpMethod = httpMethod;
             return this;
         }
-        public Builder httpMethod(@Nullable String httpMethod) {
-            this.httpMethod = Codegen.ofNullable(httpMethod);
-            return this;
+
+        public Builder httpMethod(String httpMethod) {
+            return httpMethod(Output.of(httpMethod));
         }
+
         public Builder operationName(@Nullable Output<String> operationName) {
-            this.operationName = operationName;
+            $.operationName = operationName;
             return this;
         }
-        public Builder operationName(@Nullable String operationName) {
-            this.operationName = Codegen.ofNullable(operationName);
-            return this;
+
+        public Builder operationName(String operationName) {
+            return operationName(Output.of(operationName));
         }
+
         public Builder requestModels(@Nullable Output<Map<String,String>> requestModels) {
-            this.requestModels = requestModels;
+            $.requestModels = requestModels;
             return this;
         }
-        public Builder requestModels(@Nullable Map<String,String> requestModels) {
-            this.requestModels = Codegen.ofNullable(requestModels);
-            return this;
+
+        public Builder requestModels(Map<String,String> requestModels) {
+            return requestModels(Output.of(requestModels));
         }
+
         public Builder requestParameters(@Nullable Output<Map<String,Boolean>> requestParameters) {
-            this.requestParameters = requestParameters;
+            $.requestParameters = requestParameters;
             return this;
         }
-        public Builder requestParameters(@Nullable Map<String,Boolean> requestParameters) {
-            this.requestParameters = Codegen.ofNullable(requestParameters);
-            return this;
+
+        public Builder requestParameters(Map<String,Boolean> requestParameters) {
+            return requestParameters(Output.of(requestParameters));
         }
+
         public Builder requestValidatorId(@Nullable Output<String> requestValidatorId) {
-            this.requestValidatorId = requestValidatorId;
+            $.requestValidatorId = requestValidatorId;
             return this;
         }
-        public Builder requestValidatorId(@Nullable String requestValidatorId) {
-            this.requestValidatorId = Codegen.ofNullable(requestValidatorId);
-            return this;
+
+        public Builder requestValidatorId(String requestValidatorId) {
+            return requestValidatorId(Output.of(requestValidatorId));
         }
+
         public Builder resourceId(@Nullable Output<String> resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
         }
-        public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Codegen.ofNullable(resourceId);
-            return this;
+
+        public Builder resourceId(String resourceId) {
+            return resourceId(Output.of(resourceId));
         }
+
         public Builder restApi(@Nullable Output<String> restApi) {
-            this.restApi = restApi;
+            $.restApi = restApi;
             return this;
-        }        public MethodState build() {
-            return new MethodState(apiKeyRequired, authorization, authorizationScopes, authorizerId, httpMethod, operationName, requestModels, requestParameters, requestValidatorId, resourceId, restApi);
+        }
+
+        public Builder restApi(String restApi) {
+            return restApi(Output.of(restApi));
+        }
+
+        public MethodState build() {
+            return $;
         }
     }
+
 }

@@ -15,78 +15,72 @@ public final class GetRegionClusterIamPolicyArgs extends com.pulumi.resources.In
     public static final GetRegionClusterIamPolicyArgs Empty = new GetRegionClusterIamPolicyArgs();
 
     @Import(name="clusterId", required=true)
-      private final String clusterId;
+    private String clusterId;
 
     public String clusterId() {
         return this.clusterId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="regionId", required=true)
-      private final String regionId;
+    private String regionId;
 
     public String regionId() {
         return this.regionId;
     }
 
-    public GetRegionClusterIamPolicyArgs(
-        String clusterId,
-        @Nullable String project,
-        String regionId) {
-        this.clusterId = Objects.requireNonNull(clusterId, "expected parameter 'clusterId' to be non-null");
-        this.project = project;
-        this.regionId = Objects.requireNonNull(regionId, "expected parameter 'regionId' to be non-null");
-    }
+    private GetRegionClusterIamPolicyArgs() {}
 
-    private GetRegionClusterIamPolicyArgs() {
-        this.clusterId = null;
-        this.project = null;
-        this.regionId = null;
+    private GetRegionClusterIamPolicyArgs(GetRegionClusterIamPolicyArgs $) {
+        this.clusterId = $.clusterId;
+        this.project = $.project;
+        this.regionId = $.regionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRegionClusterIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String clusterId;
-        private @Nullable String project;
-        private String regionId;
+        private GetRegionClusterIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRegionClusterIamPolicyArgs();
         }
 
         public Builder(GetRegionClusterIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterId = defaults.clusterId;
-    	      this.project = defaults.project;
-    	      this.regionId = defaults.regionId;
+            $ = new GetRegionClusterIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterId(String clusterId) {
-            this.clusterId = Objects.requireNonNull(clusterId);
+            $.clusterId = clusterId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder regionId(String regionId) {
-            this.regionId = Objects.requireNonNull(regionId);
+            $.regionId = regionId;
             return this;
-        }        public GetRegionClusterIamPolicyArgs build() {
-            return new GetRegionClusterIamPolicyArgs(clusterId, project, regionId);
+        }
+
+        public GetRegionClusterIamPolicyArgs build() {
+            $.clusterId = Objects.requireNonNull($.clusterId, "expected parameter 'clusterId' to be non-null");
+            $.regionId = Objects.requireNonNull($.regionId, "expected parameter 'regionId' to be non-null");
+            return $;
         }
     }
+
 }

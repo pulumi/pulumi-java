@@ -5,10 +5,10 @@ package com.pulumi.googlenative.pubsub_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.pubsub_v1.enums.SchemaType;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="definition")
-      private final @Nullable Output<String> definition;
+    private @Nullable Output<String> definition;
 
-    public Output<String> definition() {
-        return this.definition == null ? Codegen.empty() : this.definition;
+    public Optional<Output<String>> definition() {
+        return Optional.ofNullable(this.definition);
     }
 
     /**
@@ -32,24 +32,24 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="schemaId")
-      private final @Nullable Output<String> schemaId;
+    private @Nullable Output<String> schemaId;
 
-    public Output<String> schemaId() {
-        return this.schemaId == null ? Codegen.empty() : this.schemaId;
+    public Optional<Output<String>> schemaId() {
+        return Optional.ofNullable(this.schemaId);
     }
 
     /**
@@ -57,102 +57,88 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<SchemaType> type;
+    private @Nullable Output<SchemaType> type;
 
-    public Output<SchemaType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<SchemaType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public SchemaArgs(
-        @Nullable Output<String> definition,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<String> schemaId,
-        @Nullable Output<SchemaType> type) {
-        this.definition = definition;
-        this.name = name;
-        this.project = project;
-        this.schemaId = schemaId;
-        this.type = type;
-    }
+    private SchemaArgs() {}
 
-    private SchemaArgs() {
-        this.definition = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.schemaId = Codegen.empty();
-        this.type = Codegen.empty();
+    private SchemaArgs(SchemaArgs $) {
+        this.definition = $.definition;
+        this.name = $.name;
+        this.project = $.project;
+        this.schemaId = $.schemaId;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SchemaArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> definition;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> schemaId;
-        private @Nullable Output<SchemaType> type;
+        private SchemaArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SchemaArgs();
         }
 
         public Builder(SchemaArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.definition = defaults.definition;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.schemaId = defaults.schemaId;
-    	      this.type = defaults.type;
+            $ = new SchemaArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder definition(@Nullable Output<String> definition) {
-            this.definition = definition;
+            $.definition = definition;
             return this;
         }
-        public Builder definition(@Nullable String definition) {
-            this.definition = Codegen.ofNullable(definition);
-            return this;
+
+        public Builder definition(String definition) {
+            return definition(Output.of(definition));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder schemaId(@Nullable Output<String> schemaId) {
-            this.schemaId = schemaId;
+            $.schemaId = schemaId;
             return this;
         }
-        public Builder schemaId(@Nullable String schemaId) {
-            this.schemaId = Codegen.ofNullable(schemaId);
-            return this;
+
+        public Builder schemaId(String schemaId) {
+            return schemaId(Output.of(schemaId));
         }
+
         public Builder type(@Nullable Output<SchemaType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable SchemaType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public SchemaArgs build() {
-            return new SchemaArgs(definition, name, project, schemaId, type);
+
+        public Builder type(SchemaType type) {
+            return type(Output.of(type));
+        }
+
+        public SchemaArgs build() {
+            return $;
         }
     }
+
 }

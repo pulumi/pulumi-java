@@ -21,45 +21,45 @@ public final class MqttConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="mqttEnabledState", required=true)
-      private final String mqttEnabledState;
+    private String mqttEnabledState;
 
     public String mqttEnabledState() {
         return this.mqttEnabledState;
     }
 
-    public MqttConfigResponse(String mqttEnabledState) {
-        this.mqttEnabledState = Objects.requireNonNull(mqttEnabledState, "expected parameter 'mqttEnabledState' to be non-null");
-    }
+    private MqttConfigResponse() {}
 
-    private MqttConfigResponse() {
-        this.mqttEnabledState = null;
+    private MqttConfigResponse(MqttConfigResponse $) {
+        this.mqttEnabledState = $.mqttEnabledState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MqttConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String mqttEnabledState;
+        private MqttConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MqttConfigResponse();
         }
 
         public Builder(MqttConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mqttEnabledState = defaults.mqttEnabledState;
+            $ = new MqttConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder mqttEnabledState(String mqttEnabledState) {
-            this.mqttEnabledState = Objects.requireNonNull(mqttEnabledState);
+            $.mqttEnabledState = mqttEnabledState;
             return this;
-        }        public MqttConfigResponse build() {
-            return new MqttConfigResponse(mqttEnabledState);
+        }
+
+        public MqttConfigResponse build() {
+            $.mqttEnabledState = Objects.requireNonNull($.mqttEnabledState, "expected parameter 'mqttEnabledState' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class ReplicatingStepResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="lastThirtyMinutesAverageBytesPerSecond", required=true)
-      private final String lastThirtyMinutesAverageBytesPerSecond;
+    private String lastThirtyMinutesAverageBytesPerSecond;
 
     public String lastThirtyMinutesAverageBytesPerSecond() {
         return this.lastThirtyMinutesAverageBytesPerSecond;
@@ -32,7 +32,7 @@ public final class ReplicatingStepResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="lastTwoMinutesAverageBytesPerSecond", required=true)
-      private final String lastTwoMinutesAverageBytesPerSecond;
+    private String lastTwoMinutesAverageBytesPerSecond;
 
     public String lastTwoMinutesAverageBytesPerSecond() {
         return this.lastTwoMinutesAverageBytesPerSecond;
@@ -43,7 +43,7 @@ public final class ReplicatingStepResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="replicatedBytes", required=true)
-      private final String replicatedBytes;
+    private String replicatedBytes;
 
     public String replicatedBytes() {
         return this.replicatedBytes;
@@ -54,73 +54,66 @@ public final class ReplicatingStepResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="totalBytes", required=true)
-      private final String totalBytes;
+    private String totalBytes;
 
     public String totalBytes() {
         return this.totalBytes;
     }
 
-    public ReplicatingStepResponse(
-        String lastThirtyMinutesAverageBytesPerSecond,
-        String lastTwoMinutesAverageBytesPerSecond,
-        String replicatedBytes,
-        String totalBytes) {
-        this.lastThirtyMinutesAverageBytesPerSecond = Objects.requireNonNull(lastThirtyMinutesAverageBytesPerSecond, "expected parameter 'lastThirtyMinutesAverageBytesPerSecond' to be non-null");
-        this.lastTwoMinutesAverageBytesPerSecond = Objects.requireNonNull(lastTwoMinutesAverageBytesPerSecond, "expected parameter 'lastTwoMinutesAverageBytesPerSecond' to be non-null");
-        this.replicatedBytes = Objects.requireNonNull(replicatedBytes, "expected parameter 'replicatedBytes' to be non-null");
-        this.totalBytes = Objects.requireNonNull(totalBytes, "expected parameter 'totalBytes' to be non-null");
-    }
+    private ReplicatingStepResponse() {}
 
-    private ReplicatingStepResponse() {
-        this.lastThirtyMinutesAverageBytesPerSecond = null;
-        this.lastTwoMinutesAverageBytesPerSecond = null;
-        this.replicatedBytes = null;
-        this.totalBytes = null;
+    private ReplicatingStepResponse(ReplicatingStepResponse $) {
+        this.lastThirtyMinutesAverageBytesPerSecond = $.lastThirtyMinutesAverageBytesPerSecond;
+        this.lastTwoMinutesAverageBytesPerSecond = $.lastTwoMinutesAverageBytesPerSecond;
+        this.replicatedBytes = $.replicatedBytes;
+        this.totalBytes = $.totalBytes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReplicatingStepResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String lastThirtyMinutesAverageBytesPerSecond;
-        private String lastTwoMinutesAverageBytesPerSecond;
-        private String replicatedBytes;
-        private String totalBytes;
+        private ReplicatingStepResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReplicatingStepResponse();
         }
 
         public Builder(ReplicatingStepResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.lastThirtyMinutesAverageBytesPerSecond = defaults.lastThirtyMinutesAverageBytesPerSecond;
-    	      this.lastTwoMinutesAverageBytesPerSecond = defaults.lastTwoMinutesAverageBytesPerSecond;
-    	      this.replicatedBytes = defaults.replicatedBytes;
-    	      this.totalBytes = defaults.totalBytes;
+            $ = new ReplicatingStepResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder lastThirtyMinutesAverageBytesPerSecond(String lastThirtyMinutesAverageBytesPerSecond) {
-            this.lastThirtyMinutesAverageBytesPerSecond = Objects.requireNonNull(lastThirtyMinutesAverageBytesPerSecond);
+            $.lastThirtyMinutesAverageBytesPerSecond = lastThirtyMinutesAverageBytesPerSecond;
             return this;
         }
+
         public Builder lastTwoMinutesAverageBytesPerSecond(String lastTwoMinutesAverageBytesPerSecond) {
-            this.lastTwoMinutesAverageBytesPerSecond = Objects.requireNonNull(lastTwoMinutesAverageBytesPerSecond);
+            $.lastTwoMinutesAverageBytesPerSecond = lastTwoMinutesAverageBytesPerSecond;
             return this;
         }
+
         public Builder replicatedBytes(String replicatedBytes) {
-            this.replicatedBytes = Objects.requireNonNull(replicatedBytes);
+            $.replicatedBytes = replicatedBytes;
             return this;
         }
+
         public Builder totalBytes(String totalBytes) {
-            this.totalBytes = Objects.requireNonNull(totalBytes);
+            $.totalBytes = totalBytes;
             return this;
-        }        public ReplicatingStepResponse build() {
-            return new ReplicatingStepResponse(lastThirtyMinutesAverageBytesPerSecond, lastTwoMinutesAverageBytesPerSecond, replicatedBytes, totalBytes);
+        }
+
+        public ReplicatingStepResponse build() {
+            $.lastThirtyMinutesAverageBytesPerSecond = Objects.requireNonNull($.lastThirtyMinutesAverageBytesPerSecond, "expected parameter 'lastThirtyMinutesAverageBytesPerSecond' to be non-null");
+            $.lastTwoMinutesAverageBytesPerSecond = Objects.requireNonNull($.lastTwoMinutesAverageBytesPerSecond, "expected parameter 'lastTwoMinutesAverageBytesPerSecond' to be non-null");
+            $.replicatedBytes = Objects.requireNonNull($.replicatedBytes, "expected parameter 'replicatedBytes' to be non-null");
+            $.totalBytes = Objects.requireNonNull($.totalBytes, "expected parameter 'totalBytes' to be non-null");
+            return $;
         }
     }
+
 }

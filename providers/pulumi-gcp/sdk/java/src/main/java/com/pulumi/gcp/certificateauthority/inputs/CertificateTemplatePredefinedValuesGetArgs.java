@@ -5,7 +5,6 @@ package com.pulumi.gcp.certificateauthority.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.certificateauthority.inputs.CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs;
 import com.pulumi.gcp.certificateauthority.inputs.CertificateTemplatePredefinedValuesCaOptionsGetArgs;
 import com.pulumi.gcp.certificateauthority.inputs.CertificateTemplatePredefinedValuesKeyUsageGetArgs;
@@ -13,6 +12,7 @@ import com.pulumi.gcp.certificateauthority.inputs.CertificateTemplatePredefinedV
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class CertificateTemplatePredefinedValuesGetArgs extends com.pulumi
      * 
      */
     @Import(name="additionalExtensions")
-      private final @Nullable Output<List<CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs>> additionalExtensions;
+    private @Nullable Output<List<CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs>> additionalExtensions;
 
-    public Output<List<CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs>> additionalExtensions() {
-        return this.additionalExtensions == null ? Codegen.empty() : this.additionalExtensions;
+    public Optional<Output<List<CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs>>> additionalExtensions() {
+        return Optional.ofNullable(this.additionalExtensions);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class CertificateTemplatePredefinedValuesGetArgs extends com.pulumi
      * 
      */
     @Import(name="aiaOcspServers")
-      private final @Nullable Output<List<String>> aiaOcspServers;
+    private @Nullable Output<List<String>> aiaOcspServers;
 
-    public Output<List<String>> aiaOcspServers() {
-        return this.aiaOcspServers == null ? Codegen.empty() : this.aiaOcspServers;
+    public Optional<Output<List<String>>> aiaOcspServers() {
+        return Optional.ofNullable(this.aiaOcspServers);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class CertificateTemplatePredefinedValuesGetArgs extends com.pulumi
      * 
      */
     @Import(name="caOptions")
-      private final @Nullable Output<CertificateTemplatePredefinedValuesCaOptionsGetArgs> caOptions;
+    private @Nullable Output<CertificateTemplatePredefinedValuesCaOptionsGetArgs> caOptions;
 
-    public Output<CertificateTemplatePredefinedValuesCaOptionsGetArgs> caOptions() {
-        return this.caOptions == null ? Codegen.empty() : this.caOptions;
+    public Optional<Output<CertificateTemplatePredefinedValuesCaOptionsGetArgs>> caOptions() {
+        return Optional.ofNullable(this.caOptions);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class CertificateTemplatePredefinedValuesGetArgs extends com.pulumi
      * 
      */
     @Import(name="keyUsage")
-      private final @Nullable Output<CertificateTemplatePredefinedValuesKeyUsageGetArgs> keyUsage;
+    private @Nullable Output<CertificateTemplatePredefinedValuesKeyUsageGetArgs> keyUsage;
 
-    public Output<CertificateTemplatePredefinedValuesKeyUsageGetArgs> keyUsage() {
-        return this.keyUsage == null ? Codegen.empty() : this.keyUsage;
+    public Optional<Output<CertificateTemplatePredefinedValuesKeyUsageGetArgs>> keyUsage() {
+        return Optional.ofNullable(this.keyUsage);
     }
 
     /**
@@ -69,111 +69,100 @@ public final class CertificateTemplatePredefinedValuesGetArgs extends com.pulumi
      * 
      */
     @Import(name="policyIds")
-      private final @Nullable Output<List<CertificateTemplatePredefinedValuesPolicyIdGetArgs>> policyIds;
+    private @Nullable Output<List<CertificateTemplatePredefinedValuesPolicyIdGetArgs>> policyIds;
 
-    public Output<List<CertificateTemplatePredefinedValuesPolicyIdGetArgs>> policyIds() {
-        return this.policyIds == null ? Codegen.empty() : this.policyIds;
+    public Optional<Output<List<CertificateTemplatePredefinedValuesPolicyIdGetArgs>>> policyIds() {
+        return Optional.ofNullable(this.policyIds);
     }
 
-    public CertificateTemplatePredefinedValuesGetArgs(
-        @Nullable Output<List<CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs>> additionalExtensions,
-        @Nullable Output<List<String>> aiaOcspServers,
-        @Nullable Output<CertificateTemplatePredefinedValuesCaOptionsGetArgs> caOptions,
-        @Nullable Output<CertificateTemplatePredefinedValuesKeyUsageGetArgs> keyUsage,
-        @Nullable Output<List<CertificateTemplatePredefinedValuesPolicyIdGetArgs>> policyIds) {
-        this.additionalExtensions = additionalExtensions;
-        this.aiaOcspServers = aiaOcspServers;
-        this.caOptions = caOptions;
-        this.keyUsage = keyUsage;
-        this.policyIds = policyIds;
-    }
+    private CertificateTemplatePredefinedValuesGetArgs() {}
 
-    private CertificateTemplatePredefinedValuesGetArgs() {
-        this.additionalExtensions = Codegen.empty();
-        this.aiaOcspServers = Codegen.empty();
-        this.caOptions = Codegen.empty();
-        this.keyUsage = Codegen.empty();
-        this.policyIds = Codegen.empty();
+    private CertificateTemplatePredefinedValuesGetArgs(CertificateTemplatePredefinedValuesGetArgs $) {
+        this.additionalExtensions = $.additionalExtensions;
+        this.aiaOcspServers = $.aiaOcspServers;
+        this.caOptions = $.caOptions;
+        this.keyUsage = $.keyUsage;
+        this.policyIds = $.policyIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateTemplatePredefinedValuesGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs>> additionalExtensions;
-        private @Nullable Output<List<String>> aiaOcspServers;
-        private @Nullable Output<CertificateTemplatePredefinedValuesCaOptionsGetArgs> caOptions;
-        private @Nullable Output<CertificateTemplatePredefinedValuesKeyUsageGetArgs> keyUsage;
-        private @Nullable Output<List<CertificateTemplatePredefinedValuesPolicyIdGetArgs>> policyIds;
+        private CertificateTemplatePredefinedValuesGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateTemplatePredefinedValuesGetArgs();
         }
 
         public Builder(CertificateTemplatePredefinedValuesGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalExtensions = defaults.additionalExtensions;
-    	      this.aiaOcspServers = defaults.aiaOcspServers;
-    	      this.caOptions = defaults.caOptions;
-    	      this.keyUsage = defaults.keyUsage;
-    	      this.policyIds = defaults.policyIds;
+            $ = new CertificateTemplatePredefinedValuesGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalExtensions(@Nullable Output<List<CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs>> additionalExtensions) {
-            this.additionalExtensions = additionalExtensions;
+            $.additionalExtensions = additionalExtensions;
             return this;
         }
-        public Builder additionalExtensions(@Nullable List<CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs> additionalExtensions) {
-            this.additionalExtensions = Codegen.ofNullable(additionalExtensions);
-            return this;
+
+        public Builder additionalExtensions(List<CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs> additionalExtensions) {
+            return additionalExtensions(Output.of(additionalExtensions));
         }
+
         public Builder additionalExtensions(CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs... additionalExtensions) {
             return additionalExtensions(List.of(additionalExtensions));
         }
+
         public Builder aiaOcspServers(@Nullable Output<List<String>> aiaOcspServers) {
-            this.aiaOcspServers = aiaOcspServers;
+            $.aiaOcspServers = aiaOcspServers;
             return this;
         }
-        public Builder aiaOcspServers(@Nullable List<String> aiaOcspServers) {
-            this.aiaOcspServers = Codegen.ofNullable(aiaOcspServers);
-            return this;
+
+        public Builder aiaOcspServers(List<String> aiaOcspServers) {
+            return aiaOcspServers(Output.of(aiaOcspServers));
         }
+
         public Builder aiaOcspServers(String... aiaOcspServers) {
             return aiaOcspServers(List.of(aiaOcspServers));
         }
+
         public Builder caOptions(@Nullable Output<CertificateTemplatePredefinedValuesCaOptionsGetArgs> caOptions) {
-            this.caOptions = caOptions;
+            $.caOptions = caOptions;
             return this;
         }
-        public Builder caOptions(@Nullable CertificateTemplatePredefinedValuesCaOptionsGetArgs caOptions) {
-            this.caOptions = Codegen.ofNullable(caOptions);
-            return this;
+
+        public Builder caOptions(CertificateTemplatePredefinedValuesCaOptionsGetArgs caOptions) {
+            return caOptions(Output.of(caOptions));
         }
+
         public Builder keyUsage(@Nullable Output<CertificateTemplatePredefinedValuesKeyUsageGetArgs> keyUsage) {
-            this.keyUsage = keyUsage;
+            $.keyUsage = keyUsage;
             return this;
         }
-        public Builder keyUsage(@Nullable CertificateTemplatePredefinedValuesKeyUsageGetArgs keyUsage) {
-            this.keyUsage = Codegen.ofNullable(keyUsage);
-            return this;
+
+        public Builder keyUsage(CertificateTemplatePredefinedValuesKeyUsageGetArgs keyUsage) {
+            return keyUsage(Output.of(keyUsage));
         }
+
         public Builder policyIds(@Nullable Output<List<CertificateTemplatePredefinedValuesPolicyIdGetArgs>> policyIds) {
-            this.policyIds = policyIds;
+            $.policyIds = policyIds;
             return this;
         }
-        public Builder policyIds(@Nullable List<CertificateTemplatePredefinedValuesPolicyIdGetArgs> policyIds) {
-            this.policyIds = Codegen.ofNullable(policyIds);
-            return this;
+
+        public Builder policyIds(List<CertificateTemplatePredefinedValuesPolicyIdGetArgs> policyIds) {
+            return policyIds(Output.of(policyIds));
         }
+
         public Builder policyIds(CertificateTemplatePredefinedValuesPolicyIdGetArgs... policyIds) {
             return policyIds(List.of(policyIds));
-        }        public CertificateTemplatePredefinedValuesGetArgs build() {
-            return new CertificateTemplatePredefinedValuesGetArgs(additionalExtensions, aiaOcspServers, caOptions, keyUsage, policyIds);
+        }
+
+        public CertificateTemplatePredefinedValuesGetArgs build() {
+            return $;
         }
     }
+
 }

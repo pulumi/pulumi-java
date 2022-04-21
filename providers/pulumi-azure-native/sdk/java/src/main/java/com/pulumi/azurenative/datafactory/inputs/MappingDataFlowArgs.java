@@ -14,6 +14,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,10 +31,10 @@ public final class MappingDataFlowArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="annotations")
-      private final @Nullable Output<List<Object>> annotations;
+    private @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> annotations() {
-        return this.annotations == null ? Codegen.empty() : this.annotations;
+    public Optional<Output<List<Object>>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -41,10 +42,10 @@ public final class MappingDataFlowArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -52,10 +53,10 @@ public final class MappingDataFlowArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="folder")
-      private final @Nullable Output<DataFlowFolderArgs> folder;
+    private @Nullable Output<DataFlowFolderArgs> folder;
 
-    public Output<DataFlowFolderArgs> folder() {
-        return this.folder == null ? Codegen.empty() : this.folder;
+    public Optional<Output<DataFlowFolderArgs>> folder() {
+        return Optional.ofNullable(this.folder);
     }
 
     /**
@@ -63,10 +64,10 @@ public final class MappingDataFlowArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="script")
-      private final @Nullable Output<String> script;
+    private @Nullable Output<String> script;
 
-    public Output<String> script() {
-        return this.script == null ? Codegen.empty() : this.script;
+    public Optional<Output<String>> script() {
+        return Optional.ofNullable(this.script);
     }
 
     /**
@@ -74,10 +75,10 @@ public final class MappingDataFlowArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="scriptLines")
-      private final @Nullable Output<List<String>> scriptLines;
+    private @Nullable Output<List<String>> scriptLines;
 
-    public Output<List<String>> scriptLines() {
-        return this.scriptLines == null ? Codegen.empty() : this.scriptLines;
+    public Optional<Output<List<String>>> scriptLines() {
+        return Optional.ofNullable(this.scriptLines);
     }
 
     /**
@@ -85,10 +86,10 @@ public final class MappingDataFlowArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="sinks")
-      private final @Nullable Output<List<DataFlowSinkArgs>> sinks;
+    private @Nullable Output<List<DataFlowSinkArgs>> sinks;
 
-    public Output<List<DataFlowSinkArgs>> sinks() {
-        return this.sinks == null ? Codegen.empty() : this.sinks;
+    public Optional<Output<List<DataFlowSinkArgs>>> sinks() {
+        return Optional.ofNullable(this.sinks);
     }
 
     /**
@@ -96,10 +97,10 @@ public final class MappingDataFlowArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="sources")
-      private final @Nullable Output<List<DataFlowSourceArgs>> sources;
+    private @Nullable Output<List<DataFlowSourceArgs>> sources;
 
-    public Output<List<DataFlowSourceArgs>> sources() {
-        return this.sources == null ? Codegen.empty() : this.sources;
+    public Optional<Output<List<DataFlowSourceArgs>>> sources() {
+        return Optional.ofNullable(this.sources);
     }
 
     /**
@@ -107,10 +108,10 @@ public final class MappingDataFlowArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="transformations")
-      private final @Nullable Output<List<TransformationArgs>> transformations;
+    private @Nullable Output<List<TransformationArgs>> transformations;
 
-    public Output<List<TransformationArgs>> transformations() {
-        return this.transformations == null ? Codegen.empty() : this.transformations;
+    public Optional<Output<List<TransformationArgs>>> transformations() {
+        return Optional.ofNullable(this.transformations);
     }
 
     /**
@@ -119,169 +120,149 @@ public final class MappingDataFlowArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public MappingDataFlowArgs(
-        @Nullable Output<List<Object>> annotations,
-        @Nullable Output<String> description,
-        @Nullable Output<DataFlowFolderArgs> folder,
-        @Nullable Output<String> script,
-        @Nullable Output<List<String>> scriptLines,
-        @Nullable Output<List<DataFlowSinkArgs>> sinks,
-        @Nullable Output<List<DataFlowSourceArgs>> sources,
-        @Nullable Output<List<TransformationArgs>> transformations,
-        Output<String> type) {
-        this.annotations = annotations;
-        this.description = description;
-        this.folder = folder;
-        this.script = script;
-        this.scriptLines = scriptLines;
-        this.sinks = sinks;
-        this.sources = sources;
-        this.transformations = transformations;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private MappingDataFlowArgs() {}
 
-    private MappingDataFlowArgs() {
-        this.annotations = Codegen.empty();
-        this.description = Codegen.empty();
-        this.folder = Codegen.empty();
-        this.script = Codegen.empty();
-        this.scriptLines = Codegen.empty();
-        this.sinks = Codegen.empty();
-        this.sources = Codegen.empty();
-        this.transformations = Codegen.empty();
-        this.type = Codegen.empty();
+    private MappingDataFlowArgs(MappingDataFlowArgs $) {
+        this.annotations = $.annotations;
+        this.description = $.description;
+        this.folder = $.folder;
+        this.script = $.script;
+        this.scriptLines = $.scriptLines;
+        this.sinks = $.sinks;
+        this.sources = $.sources;
+        this.transformations = $.transformations;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MappingDataFlowArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<Object>> annotations;
-        private @Nullable Output<String> description;
-        private @Nullable Output<DataFlowFolderArgs> folder;
-        private @Nullable Output<String> script;
-        private @Nullable Output<List<String>> scriptLines;
-        private @Nullable Output<List<DataFlowSinkArgs>> sinks;
-        private @Nullable Output<List<DataFlowSourceArgs>> sources;
-        private @Nullable Output<List<TransformationArgs>> transformations;
-        private Output<String> type;
+        private MappingDataFlowArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MappingDataFlowArgs();
         }
 
         public Builder(MappingDataFlowArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.description = defaults.description;
-    	      this.folder = defaults.folder;
-    	      this.script = defaults.script;
-    	      this.scriptLines = defaults.scriptLines;
-    	      this.sinks = defaults.sinks;
-    	      this.sources = defaults.sources;
-    	      this.transformations = defaults.transformations;
-    	      this.type = defaults.type;
+            $ = new MappingDataFlowArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
-        public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Codegen.ofNullable(annotations);
-            return this;
+
+        public Builder annotations(List<Object> annotations) {
+            return annotations(Output.of(annotations));
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder folder(@Nullable Output<DataFlowFolderArgs> folder) {
-            this.folder = folder;
+            $.folder = folder;
             return this;
         }
-        public Builder folder(@Nullable DataFlowFolderArgs folder) {
-            this.folder = Codegen.ofNullable(folder);
-            return this;
+
+        public Builder folder(DataFlowFolderArgs folder) {
+            return folder(Output.of(folder));
         }
+
         public Builder script(@Nullable Output<String> script) {
-            this.script = script;
+            $.script = script;
             return this;
         }
-        public Builder script(@Nullable String script) {
-            this.script = Codegen.ofNullable(script);
-            return this;
+
+        public Builder script(String script) {
+            return script(Output.of(script));
         }
+
         public Builder scriptLines(@Nullable Output<List<String>> scriptLines) {
-            this.scriptLines = scriptLines;
+            $.scriptLines = scriptLines;
             return this;
         }
-        public Builder scriptLines(@Nullable List<String> scriptLines) {
-            this.scriptLines = Codegen.ofNullable(scriptLines);
-            return this;
+
+        public Builder scriptLines(List<String> scriptLines) {
+            return scriptLines(Output.of(scriptLines));
         }
+
         public Builder scriptLines(String... scriptLines) {
             return scriptLines(List.of(scriptLines));
         }
+
         public Builder sinks(@Nullable Output<List<DataFlowSinkArgs>> sinks) {
-            this.sinks = sinks;
+            $.sinks = sinks;
             return this;
         }
-        public Builder sinks(@Nullable List<DataFlowSinkArgs> sinks) {
-            this.sinks = Codegen.ofNullable(sinks);
-            return this;
+
+        public Builder sinks(List<DataFlowSinkArgs> sinks) {
+            return sinks(Output.of(sinks));
         }
+
         public Builder sinks(DataFlowSinkArgs... sinks) {
             return sinks(List.of(sinks));
         }
+
         public Builder sources(@Nullable Output<List<DataFlowSourceArgs>> sources) {
-            this.sources = sources;
+            $.sources = sources;
             return this;
         }
-        public Builder sources(@Nullable List<DataFlowSourceArgs> sources) {
-            this.sources = Codegen.ofNullable(sources);
-            return this;
+
+        public Builder sources(List<DataFlowSourceArgs> sources) {
+            return sources(Output.of(sources));
         }
+
         public Builder sources(DataFlowSourceArgs... sources) {
             return sources(List.of(sources));
         }
+
         public Builder transformations(@Nullable Output<List<TransformationArgs>> transformations) {
-            this.transformations = transformations;
+            $.transformations = transformations;
             return this;
         }
-        public Builder transformations(@Nullable List<TransformationArgs> transformations) {
-            this.transformations = Codegen.ofNullable(transformations);
-            return this;
+
+        public Builder transformations(List<TransformationArgs> transformations) {
+            return transformations(Output.of(transformations));
         }
+
         public Builder transformations(TransformationArgs... transformations) {
             return transformations(List.of(transformations));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public MappingDataFlowArgs build() {
-            return new MappingDataFlowArgs(annotations, description, folder, script, scriptLines, sinks, sources, transformations, type);
+            return type(Output.of(type));
+        }
+
+        public MappingDataFlowArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

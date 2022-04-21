@@ -17,45 +17,45 @@ public final class GetDistributionConfigurationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
     }
 
-    public GetDistributionConfigurationArgs(String arn) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-    }
+    private GetDistributionConfigurationArgs() {}
 
-    private GetDistributionConfigurationArgs() {
-        this.arn = null;
+    private GetDistributionConfigurationArgs(GetDistributionConfigurationArgs $) {
+        this.arn = $.arn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDistributionConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
+        private GetDistributionConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDistributionConfigurationArgs();
         }
 
         public Builder(GetDistributionConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
+            $ = new GetDistributionConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
-        }        public GetDistributionConfigurationArgs build() {
-            return new GetDistributionConfigurationArgs(arn);
+        }
+
+        public GetDistributionConfigurationArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

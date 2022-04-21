@@ -17,7 +17,7 @@ public final class GetSkusArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="providerNamespace", required=true)
-      private final String providerNamespace;
+    private String providerNamespace;
 
     public String providerNamespace() {
         return this.providerNamespace;
@@ -28,7 +28,7 @@ public final class GetSkusArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceType", required=true)
-      private final String resourceType;
+    private String resourceType;
 
     public String resourceType() {
         return this.resourceType;
@@ -39,64 +39,59 @@ public final class GetSkusArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sku", required=true)
-      private final String sku;
+    private String sku;
 
     public String sku() {
         return this.sku;
     }
 
-    public GetSkusArgs(
-        String providerNamespace,
-        String resourceType,
-        String sku) {
-        this.providerNamespace = Objects.requireNonNull(providerNamespace, "expected parameter 'providerNamespace' to be non-null");
-        this.resourceType = Objects.requireNonNull(resourceType, "expected parameter 'resourceType' to be non-null");
-        this.sku = Objects.requireNonNull(sku, "expected parameter 'sku' to be non-null");
-    }
+    private GetSkusArgs() {}
 
-    private GetSkusArgs() {
-        this.providerNamespace = null;
-        this.resourceType = null;
-        this.sku = null;
+    private GetSkusArgs(GetSkusArgs $) {
+        this.providerNamespace = $.providerNamespace;
+        this.resourceType = $.resourceType;
+        this.sku = $.sku;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSkusArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String providerNamespace;
-        private String resourceType;
-        private String sku;
+        private GetSkusArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSkusArgs();
         }
 
         public Builder(GetSkusArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.providerNamespace = defaults.providerNamespace;
-    	      this.resourceType = defaults.resourceType;
-    	      this.sku = defaults.sku;
+            $ = new GetSkusArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder providerNamespace(String providerNamespace) {
-            this.providerNamespace = Objects.requireNonNull(providerNamespace);
+            $.providerNamespace = providerNamespace;
             return this;
         }
+
         public Builder resourceType(String resourceType) {
-            this.resourceType = Objects.requireNonNull(resourceType);
+            $.resourceType = resourceType;
             return this;
         }
+
         public Builder sku(String sku) {
-            this.sku = Objects.requireNonNull(sku);
+            $.sku = sku;
             return this;
-        }        public GetSkusArgs build() {
-            return new GetSkusArgs(providerNamespace, resourceType, sku);
+        }
+
+        public GetSkusArgs build() {
+            $.providerNamespace = Objects.requireNonNull($.providerNamespace, "expected parameter 'providerNamespace' to be non-null");
+            $.resourceType = Objects.requireNonNull($.resourceType, "expected parameter 'resourceType' to be non-null");
+            $.sku = Objects.requireNonNull($.sku, "expected parameter 'sku' to be non-null");
+            return $;
         }
     }
+
 }

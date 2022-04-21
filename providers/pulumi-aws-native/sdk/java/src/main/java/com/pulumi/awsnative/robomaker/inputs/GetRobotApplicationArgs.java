@@ -13,45 +13,45 @@ public final class GetRobotApplicationArgs extends com.pulumi.resources.InvokeAr
     public static final GetRobotApplicationArgs Empty = new GetRobotApplicationArgs();
 
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
     }
 
-    public GetRobotApplicationArgs(String arn) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-    }
+    private GetRobotApplicationArgs() {}
 
-    private GetRobotApplicationArgs() {
-        this.arn = null;
+    private GetRobotApplicationArgs(GetRobotApplicationArgs $) {
+        this.arn = $.arn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRobotApplicationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
+        private GetRobotApplicationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRobotApplicationArgs();
         }
 
         public Builder(GetRobotApplicationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
+            $ = new GetRobotApplicationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
-        }        public GetRobotApplicationArgs build() {
-            return new GetRobotApplicationArgs(arn);
+        }
+
+        public GetRobotApplicationArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

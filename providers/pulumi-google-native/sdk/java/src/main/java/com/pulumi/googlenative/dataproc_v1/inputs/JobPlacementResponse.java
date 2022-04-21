@@ -22,7 +22,7 @@ public final class JobPlacementResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="clusterLabels", required=true)
-      private final Map<String,String> clusterLabels;
+    private Map<String,String> clusterLabels;
 
     public Map<String,String> clusterLabels() {
         return this.clusterLabels;
@@ -33,7 +33,7 @@ public final class JobPlacementResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="clusterName", required=true)
-      private final String clusterName;
+    private String clusterName;
 
     public String clusterName() {
         return this.clusterName;
@@ -44,64 +44,59 @@ public final class JobPlacementResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="clusterUuid", required=true)
-      private final String clusterUuid;
+    private String clusterUuid;
 
     public String clusterUuid() {
         return this.clusterUuid;
     }
 
-    public JobPlacementResponse(
-        Map<String,String> clusterLabels,
-        String clusterName,
-        String clusterUuid) {
-        this.clusterLabels = Objects.requireNonNull(clusterLabels, "expected parameter 'clusterLabels' to be non-null");
-        this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
-        this.clusterUuid = Objects.requireNonNull(clusterUuid, "expected parameter 'clusterUuid' to be non-null");
-    }
+    private JobPlacementResponse() {}
 
-    private JobPlacementResponse() {
-        this.clusterLabels = Map.of();
-        this.clusterName = null;
-        this.clusterUuid = null;
+    private JobPlacementResponse(JobPlacementResponse $) {
+        this.clusterLabels = $.clusterLabels;
+        this.clusterName = $.clusterName;
+        this.clusterUuid = $.clusterUuid;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobPlacementResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,String> clusterLabels;
-        private String clusterName;
-        private String clusterUuid;
+        private JobPlacementResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobPlacementResponse();
         }
 
         public Builder(JobPlacementResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterLabels = defaults.clusterLabels;
-    	      this.clusterName = defaults.clusterName;
-    	      this.clusterUuid = defaults.clusterUuid;
+            $ = new JobPlacementResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterLabels(Map<String,String> clusterLabels) {
-            this.clusterLabels = Objects.requireNonNull(clusterLabels);
+            $.clusterLabels = clusterLabels;
             return this;
         }
+
         public Builder clusterName(String clusterName) {
-            this.clusterName = Objects.requireNonNull(clusterName);
+            $.clusterName = clusterName;
             return this;
         }
+
         public Builder clusterUuid(String clusterUuid) {
-            this.clusterUuid = Objects.requireNonNull(clusterUuid);
+            $.clusterUuid = clusterUuid;
             return this;
-        }        public JobPlacementResponse build() {
-            return new JobPlacementResponse(clusterLabels, clusterName, clusterUuid);
+        }
+
+        public JobPlacementResponse build() {
+            $.clusterLabels = Objects.requireNonNull($.clusterLabels, "expected parameter 'clusterLabels' to be non-null");
+            $.clusterName = Objects.requireNonNull($.clusterName, "expected parameter 'clusterName' to be non-null");
+            $.clusterUuid = Objects.requireNonNull($.clusterUuid, "expected parameter 'clusterUuid' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters", required=true)
-      private final List<GetUserFilter> filters;
+    private List<GetUserFilter> filters;
 
     public List<GetUserFilter> filters() {
         return this.filters;
@@ -32,7 +32,7 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="identityStoreId", required=true)
-      private final String identityStoreId;
+    private String identityStoreId;
 
     public String identityStoreId() {
         return this.identityStoreId;
@@ -43,67 +43,62 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="userId")
-      private final @Nullable String userId;
+    private @Nullable String userId;
 
     public Optional<String> userId() {
-        return this.userId == null ? Optional.empty() : Optional.ofNullable(this.userId);
+        return Optional.ofNullable(this.userId);
     }
 
-    public GetUserArgs(
-        List<GetUserFilter> filters,
-        String identityStoreId,
-        @Nullable String userId) {
-        this.filters = Objects.requireNonNull(filters, "expected parameter 'filters' to be non-null");
-        this.identityStoreId = Objects.requireNonNull(identityStoreId, "expected parameter 'identityStoreId' to be non-null");
-        this.userId = userId;
-    }
+    private GetUserArgs() {}
 
-    private GetUserArgs() {
-        this.filters = List.of();
-        this.identityStoreId = null;
-        this.userId = null;
+    private GetUserArgs(GetUserArgs $) {
+        this.filters = $.filters;
+        this.identityStoreId = $.identityStoreId;
+        this.userId = $.userId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetUserArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GetUserFilter> filters;
-        private String identityStoreId;
-        private @Nullable String userId;
+        private GetUserArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetUserArgs();
         }
 
         public Builder(GetUserArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filters = defaults.filters;
-    	      this.identityStoreId = defaults.identityStoreId;
-    	      this.userId = defaults.userId;
+            $ = new GetUserArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filters(List<GetUserFilter> filters) {
-            this.filters = Objects.requireNonNull(filters);
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(GetUserFilter... filters) {
             return filters(List.of(filters));
         }
+
         public Builder identityStoreId(String identityStoreId) {
-            this.identityStoreId = Objects.requireNonNull(identityStoreId);
+            $.identityStoreId = identityStoreId;
             return this;
         }
+
         public Builder userId(@Nullable String userId) {
-            this.userId = userId;
+            $.userId = userId;
             return this;
-        }        public GetUserArgs build() {
-            return new GetUserArgs(filters, identityStoreId, userId);
+        }
+
+        public GetUserArgs build() {
+            $.filters = Objects.requireNonNull($.filters, "expected parameter 'filters' to be non-null");
+            $.identityStoreId = Objects.requireNonNull($.identityStoreId, "expected parameter 'identityStoreId' to be non-null");
+            return $;
         }
     }
+
 }

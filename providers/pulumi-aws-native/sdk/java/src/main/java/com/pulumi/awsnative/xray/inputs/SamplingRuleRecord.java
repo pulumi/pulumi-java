@@ -20,10 +20,10 @@ public final class SamplingRuleRecord extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="createdAt")
-      private final @Nullable String createdAt;
+    private @Nullable String createdAt;
 
     public Optional<String> createdAt() {
-        return this.createdAt == null ? Optional.empty() : Optional.ofNullable(this.createdAt);
+        return Optional.ofNullable(this.createdAt);
     }
 
     /**
@@ -31,71 +31,63 @@ public final class SamplingRuleRecord extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="modifiedAt")
-      private final @Nullable String modifiedAt;
+    private @Nullable String modifiedAt;
 
     public Optional<String> modifiedAt() {
-        return this.modifiedAt == null ? Optional.empty() : Optional.ofNullable(this.modifiedAt);
+        return Optional.ofNullable(this.modifiedAt);
     }
 
     @Import(name="samplingRule")
-      private final @Nullable SamplingRule samplingRule;
+    private @Nullable SamplingRule samplingRule;
 
     public Optional<SamplingRule> samplingRule() {
-        return this.samplingRule == null ? Optional.empty() : Optional.ofNullable(this.samplingRule);
+        return Optional.ofNullable(this.samplingRule);
     }
 
-    public SamplingRuleRecord(
-        @Nullable String createdAt,
-        @Nullable String modifiedAt,
-        @Nullable SamplingRule samplingRule) {
-        this.createdAt = createdAt;
-        this.modifiedAt = modifiedAt;
-        this.samplingRule = samplingRule;
-    }
+    private SamplingRuleRecord() {}
 
-    private SamplingRuleRecord() {
-        this.createdAt = null;
-        this.modifiedAt = null;
-        this.samplingRule = null;
+    private SamplingRuleRecord(SamplingRuleRecord $) {
+        this.createdAt = $.createdAt;
+        this.modifiedAt = $.modifiedAt;
+        this.samplingRule = $.samplingRule;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SamplingRuleRecord defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String createdAt;
-        private @Nullable String modifiedAt;
-        private @Nullable SamplingRule samplingRule;
+        private SamplingRuleRecord $;
 
         public Builder() {
-    	      // Empty
+            $ = new SamplingRuleRecord();
         }
 
         public Builder(SamplingRuleRecord defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createdAt = defaults.createdAt;
-    	      this.modifiedAt = defaults.modifiedAt;
-    	      this.samplingRule = defaults.samplingRule;
+            $ = new SamplingRuleRecord(Objects.requireNonNull(defaults));
         }
 
         public Builder createdAt(@Nullable String createdAt) {
-            this.createdAt = createdAt;
+            $.createdAt = createdAt;
             return this;
         }
+
         public Builder modifiedAt(@Nullable String modifiedAt) {
-            this.modifiedAt = modifiedAt;
+            $.modifiedAt = modifiedAt;
             return this;
         }
+
         public Builder samplingRule(@Nullable SamplingRule samplingRule) {
-            this.samplingRule = samplingRule;
+            $.samplingRule = samplingRule;
             return this;
-        }        public SamplingRuleRecord build() {
-            return new SamplingRuleRecord(createdAt, modifiedAt, samplingRule);
+        }
+
+        public SamplingRuleRecord build() {
+            return $;
         }
     }
+
 }

@@ -23,45 +23,44 @@ public final class LinuxOsInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="linuxOsState")
-      private final @Nullable String linuxOsState;
+    private @Nullable String linuxOsState;
 
     public Optional<String> linuxOsState() {
-        return this.linuxOsState == null ? Optional.empty() : Optional.ofNullable(this.linuxOsState);
+        return Optional.ofNullable(this.linuxOsState);
     }
 
-    public LinuxOsInfoResponse(@Nullable String linuxOsState) {
-        this.linuxOsState = linuxOsState;
-    }
+    private LinuxOsInfoResponse() {}
 
-    private LinuxOsInfoResponse() {
-        this.linuxOsState = null;
+    private LinuxOsInfoResponse(LinuxOsInfoResponse $) {
+        this.linuxOsState = $.linuxOsState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LinuxOsInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String linuxOsState;
+        private LinuxOsInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LinuxOsInfoResponse();
         }
 
         public Builder(LinuxOsInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.linuxOsState = defaults.linuxOsState;
+            $ = new LinuxOsInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder linuxOsState(@Nullable String linuxOsState) {
-            this.linuxOsState = linuxOsState;
+            $.linuxOsState = linuxOsState;
             return this;
-        }        public LinuxOsInfoResponse build() {
-            return new LinuxOsInfoResponse(linuxOsState);
+        }
+
+        public LinuxOsInfoResponse build() {
+            return $;
         }
     }
+
 }

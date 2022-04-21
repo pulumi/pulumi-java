@@ -25,7 +25,7 @@ public final class HybridConnectionEventSubscriptionDestinationResponse extends 
      * 
      */
     @Import(name="endpointType", required=true)
-      private final String endpointType;
+    private String endpointType;
 
     public String endpointType() {
         return this.endpointType;
@@ -36,55 +36,51 @@ public final class HybridConnectionEventSubscriptionDestinationResponse extends 
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable String resourceId;
+    private @Nullable String resourceId;
 
     public Optional<String> resourceId() {
-        return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
+        return Optional.ofNullable(this.resourceId);
     }
 
-    public HybridConnectionEventSubscriptionDestinationResponse(
-        String endpointType,
-        @Nullable String resourceId) {
-        this.endpointType = Codegen.stringProp("endpointType").arg(endpointType).require();
-        this.resourceId = resourceId;
-    }
+    private HybridConnectionEventSubscriptionDestinationResponse() {}
 
-    private HybridConnectionEventSubscriptionDestinationResponse() {
-        this.endpointType = null;
-        this.resourceId = null;
+    private HybridConnectionEventSubscriptionDestinationResponse(HybridConnectionEventSubscriptionDestinationResponse $) {
+        this.endpointType = $.endpointType;
+        this.resourceId = $.resourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HybridConnectionEventSubscriptionDestinationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String endpointType;
-        private @Nullable String resourceId;
+        private HybridConnectionEventSubscriptionDestinationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HybridConnectionEventSubscriptionDestinationResponse();
         }
 
         public Builder(HybridConnectionEventSubscriptionDestinationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpointType = defaults.endpointType;
-    	      this.resourceId = defaults.resourceId;
+            $ = new HybridConnectionEventSubscriptionDestinationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endpointType(String endpointType) {
-            this.endpointType = Objects.requireNonNull(endpointType);
+            $.endpointType = endpointType;
             return this;
         }
+
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
-        }        public HybridConnectionEventSubscriptionDestinationResponse build() {
-            return new HybridConnectionEventSubscriptionDestinationResponse(endpointType, resourceId);
+        }
+
+        public HybridConnectionEventSubscriptionDestinationResponse build() {
+            $.endpointType = Codegen.stringProp("endpointType").arg($.endpointType).require();
+            return $;
         }
     }
+
 }

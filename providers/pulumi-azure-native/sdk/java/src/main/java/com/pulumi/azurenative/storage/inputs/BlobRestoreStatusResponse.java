@@ -22,7 +22,7 @@ public final class BlobRestoreStatusResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="failureReason", required=true)
-      private final String failureReason;
+    private String failureReason;
 
     public String failureReason() {
         return this.failureReason;
@@ -33,7 +33,7 @@ public final class BlobRestoreStatusResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="parameters", required=true)
-      private final BlobRestoreParametersResponse parameters;
+    private BlobRestoreParametersResponse parameters;
 
     public BlobRestoreParametersResponse parameters() {
         return this.parameters;
@@ -44,7 +44,7 @@ public final class BlobRestoreStatusResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="restoreId", required=true)
-      private final String restoreId;
+    private String restoreId;
 
     public String restoreId() {
         return this.restoreId;
@@ -55,73 +55,66 @@ public final class BlobRestoreStatusResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
     }
 
-    public BlobRestoreStatusResponse(
-        String failureReason,
-        BlobRestoreParametersResponse parameters,
-        String restoreId,
-        String status) {
-        this.failureReason = Objects.requireNonNull(failureReason, "expected parameter 'failureReason' to be non-null");
-        this.parameters = Objects.requireNonNull(parameters, "expected parameter 'parameters' to be non-null");
-        this.restoreId = Objects.requireNonNull(restoreId, "expected parameter 'restoreId' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-    }
+    private BlobRestoreStatusResponse() {}
 
-    private BlobRestoreStatusResponse() {
-        this.failureReason = null;
-        this.parameters = null;
-        this.restoreId = null;
-        this.status = null;
+    private BlobRestoreStatusResponse(BlobRestoreStatusResponse $) {
+        this.failureReason = $.failureReason;
+        this.parameters = $.parameters;
+        this.restoreId = $.restoreId;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BlobRestoreStatusResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String failureReason;
-        private BlobRestoreParametersResponse parameters;
-        private String restoreId;
-        private String status;
+        private BlobRestoreStatusResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BlobRestoreStatusResponse();
         }
 
         public Builder(BlobRestoreStatusResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.failureReason = defaults.failureReason;
-    	      this.parameters = defaults.parameters;
-    	      this.restoreId = defaults.restoreId;
-    	      this.status = defaults.status;
+            $ = new BlobRestoreStatusResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder failureReason(String failureReason) {
-            this.failureReason = Objects.requireNonNull(failureReason);
+            $.failureReason = failureReason;
             return this;
         }
+
         public Builder parameters(BlobRestoreParametersResponse parameters) {
-            this.parameters = Objects.requireNonNull(parameters);
+            $.parameters = parameters;
             return this;
         }
+
         public Builder restoreId(String restoreId) {
-            this.restoreId = Objects.requireNonNull(restoreId);
+            $.restoreId = restoreId;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
-        }        public BlobRestoreStatusResponse build() {
-            return new BlobRestoreStatusResponse(failureReason, parameters, restoreId, status);
+        }
+
+        public BlobRestoreStatusResponse build() {
+            $.failureReason = Objects.requireNonNull($.failureReason, "expected parameter 'failureReason' to be non-null");
+            $.parameters = Objects.requireNonNull($.parameters, "expected parameter 'parameters' to be non-null");
+            $.restoreId = Objects.requireNonNull($.restoreId, "expected parameter 'restoreId' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.googlenative.cloudiot_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class EventNotificationConfigArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="pubsubTopicName")
-      private final @Nullable Output<String> pubsubTopicName;
+    private @Nullable Output<String> pubsubTopicName;
 
-    public Output<String> pubsubTopicName() {
-        return this.pubsubTopicName == null ? Codegen.empty() : this.pubsubTopicName;
+    public Optional<Output<String>> pubsubTopicName() {
+        return Optional.ofNullable(this.pubsubTopicName);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class EventNotificationConfigArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="subfolderMatches")
-      private final @Nullable Output<String> subfolderMatches;
+    private @Nullable Output<String> subfolderMatches;
 
-    public Output<String> subfolderMatches() {
-        return this.subfolderMatches == null ? Codegen.empty() : this.subfolderMatches;
+    public Optional<Output<String>> subfolderMatches() {
+        return Optional.ofNullable(this.subfolderMatches);
     }
 
-    public EventNotificationConfigArgs(
-        @Nullable Output<String> pubsubTopicName,
-        @Nullable Output<String> subfolderMatches) {
-        this.pubsubTopicName = pubsubTopicName;
-        this.subfolderMatches = subfolderMatches;
-    }
+    private EventNotificationConfigArgs() {}
 
-    private EventNotificationConfigArgs() {
-        this.pubsubTopicName = Codegen.empty();
-        this.subfolderMatches = Codegen.empty();
+    private EventNotificationConfigArgs(EventNotificationConfigArgs $) {
+        this.pubsubTopicName = $.pubsubTopicName;
+        this.subfolderMatches = $.subfolderMatches;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventNotificationConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> pubsubTopicName;
-        private @Nullable Output<String> subfolderMatches;
+        private EventNotificationConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventNotificationConfigArgs();
         }
 
         public Builder(EventNotificationConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.pubsubTopicName = defaults.pubsubTopicName;
-    	      this.subfolderMatches = defaults.subfolderMatches;
+            $ = new EventNotificationConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder pubsubTopicName(@Nullable Output<String> pubsubTopicName) {
-            this.pubsubTopicName = pubsubTopicName;
+            $.pubsubTopicName = pubsubTopicName;
             return this;
         }
-        public Builder pubsubTopicName(@Nullable String pubsubTopicName) {
-            this.pubsubTopicName = Codegen.ofNullable(pubsubTopicName);
-            return this;
+
+        public Builder pubsubTopicName(String pubsubTopicName) {
+            return pubsubTopicName(Output.of(pubsubTopicName));
         }
+
         public Builder subfolderMatches(@Nullable Output<String> subfolderMatches) {
-            this.subfolderMatches = subfolderMatches;
+            $.subfolderMatches = subfolderMatches;
             return this;
         }
-        public Builder subfolderMatches(@Nullable String subfolderMatches) {
-            this.subfolderMatches = Codegen.ofNullable(subfolderMatches);
-            return this;
-        }        public EventNotificationConfigArgs build() {
-            return new EventNotificationConfigArgs(pubsubTopicName, subfolderMatches);
+
+        public Builder subfolderMatches(String subfolderMatches) {
+            return subfolderMatches(Output.of(subfolderMatches));
+        }
+
+        public EventNotificationConfigArgs build() {
+            return $;
         }
     }
+
 }

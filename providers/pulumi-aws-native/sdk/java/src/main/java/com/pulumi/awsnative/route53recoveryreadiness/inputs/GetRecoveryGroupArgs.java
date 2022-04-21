@@ -17,45 +17,45 @@ public final class GetRecoveryGroupArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="recoveryGroupName", required=true)
-      private final String recoveryGroupName;
+    private String recoveryGroupName;
 
     public String recoveryGroupName() {
         return this.recoveryGroupName;
     }
 
-    public GetRecoveryGroupArgs(String recoveryGroupName) {
-        this.recoveryGroupName = Objects.requireNonNull(recoveryGroupName, "expected parameter 'recoveryGroupName' to be non-null");
-    }
+    private GetRecoveryGroupArgs() {}
 
-    private GetRecoveryGroupArgs() {
-        this.recoveryGroupName = null;
+    private GetRecoveryGroupArgs(GetRecoveryGroupArgs $) {
+        this.recoveryGroupName = $.recoveryGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRecoveryGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String recoveryGroupName;
+        private GetRecoveryGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRecoveryGroupArgs();
         }
 
         public Builder(GetRecoveryGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.recoveryGroupName = defaults.recoveryGroupName;
+            $ = new GetRecoveryGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder recoveryGroupName(String recoveryGroupName) {
-            this.recoveryGroupName = Objects.requireNonNull(recoveryGroupName);
+            $.recoveryGroupName = recoveryGroupName;
             return this;
-        }        public GetRecoveryGroupArgs build() {
-            return new GetRecoveryGroupArgs(recoveryGroupName);
+        }
+
+        public GetRecoveryGroupArgs build() {
+            $.recoveryGroupName = Objects.requireNonNull($.recoveryGroupName, "expected parameter 'recoveryGroupName' to be non-null");
+            return $;
         }
     }
+
 }

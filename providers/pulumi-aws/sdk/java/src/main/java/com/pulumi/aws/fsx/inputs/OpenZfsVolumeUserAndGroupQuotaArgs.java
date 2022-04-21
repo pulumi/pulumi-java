@@ -5,7 +5,6 @@ package com.pulumi.aws.fsx.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +19,7 @@ public final class OpenZfsVolumeUserAndGroupQuotaArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="id", required=true)
-      private final Output<Integer> id;
+    private Output<Integer> id;
 
     public Output<Integer> id() {
         return this.id;
@@ -31,83 +30,78 @@ public final class OpenZfsVolumeUserAndGroupQuotaArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="storageCapacityQuotaGib", required=true)
-      private final Output<Integer> storageCapacityQuotaGib;
+    private Output<Integer> storageCapacityQuotaGib;
 
     public Output<Integer> storageCapacityQuotaGib() {
         return this.storageCapacityQuotaGib;
     }
 
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public OpenZfsVolumeUserAndGroupQuotaArgs(
-        Output<Integer> id,
-        Output<Integer> storageCapacityQuotaGib,
-        Output<String> type) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.storageCapacityQuotaGib = Objects.requireNonNull(storageCapacityQuotaGib, "expected parameter 'storageCapacityQuotaGib' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private OpenZfsVolumeUserAndGroupQuotaArgs() {}
 
-    private OpenZfsVolumeUserAndGroupQuotaArgs() {
-        this.id = Codegen.empty();
-        this.storageCapacityQuotaGib = Codegen.empty();
-        this.type = Codegen.empty();
+    private OpenZfsVolumeUserAndGroupQuotaArgs(OpenZfsVolumeUserAndGroupQuotaArgs $) {
+        this.id = $.id;
+        this.storageCapacityQuotaGib = $.storageCapacityQuotaGib;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OpenZfsVolumeUserAndGroupQuotaArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> id;
-        private Output<Integer> storageCapacityQuotaGib;
-        private Output<String> type;
+        private OpenZfsVolumeUserAndGroupQuotaArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OpenZfsVolumeUserAndGroupQuotaArgs();
         }
 
         public Builder(OpenZfsVolumeUserAndGroupQuotaArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.storageCapacityQuotaGib = defaults.storageCapacityQuotaGib;
-    	      this.type = defaults.type;
+            $ = new OpenZfsVolumeUserAndGroupQuotaArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(Output<Integer> id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder id(Integer id) {
-            this.id = Output.of(Objects.requireNonNull(id));
-            return this;
+            return id(Output.of(id));
         }
+
         public Builder storageCapacityQuotaGib(Output<Integer> storageCapacityQuotaGib) {
-            this.storageCapacityQuotaGib = Objects.requireNonNull(storageCapacityQuotaGib);
+            $.storageCapacityQuotaGib = storageCapacityQuotaGib;
             return this;
         }
+
         public Builder storageCapacityQuotaGib(Integer storageCapacityQuotaGib) {
-            this.storageCapacityQuotaGib = Output.of(Objects.requireNonNull(storageCapacityQuotaGib));
-            return this;
+            return storageCapacityQuotaGib(Output.of(storageCapacityQuotaGib));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public OpenZfsVolumeUserAndGroupQuotaArgs build() {
-            return new OpenZfsVolumeUserAndGroupQuotaArgs(id, storageCapacityQuotaGib, type);
+            return type(Output.of(type));
+        }
+
+        public OpenZfsVolumeUserAndGroupQuotaArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.storageCapacityQuotaGib = Objects.requireNonNull($.storageCapacityQuotaGib, "expected parameter 'storageCapacityQuotaGib' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

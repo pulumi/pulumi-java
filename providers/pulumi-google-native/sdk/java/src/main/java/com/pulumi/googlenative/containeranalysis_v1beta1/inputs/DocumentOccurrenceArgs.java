@@ -5,10 +5,10 @@ package com.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class DocumentOccurrenceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="createTime")
-      private final @Nullable Output<String> createTime;
+    private @Nullable Output<String> createTime;
 
-    public Output<String> createTime() {
-        return this.createTime == null ? Codegen.empty() : this.createTime;
+    public Optional<Output<String>> createTime() {
+        return Optional.ofNullable(this.createTime);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class DocumentOccurrenceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="creatorComment")
-      private final @Nullable Output<String> creatorComment;
+    private @Nullable Output<String> creatorComment;
 
-    public Output<String> creatorComment() {
-        return this.creatorComment == null ? Codegen.empty() : this.creatorComment;
+    public Optional<Output<String>> creatorComment() {
+        return Optional.ofNullable(this.creatorComment);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class DocumentOccurrenceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="creators")
-      private final @Nullable Output<List<String>> creators;
+    private @Nullable Output<List<String>> creators;
 
-    public Output<List<String>> creators() {
-        return this.creators == null ? Codegen.empty() : this.creators;
+    public Optional<Output<List<String>>> creators() {
+        return Optional.ofNullable(this.creators);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class DocumentOccurrenceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="documentComment")
-      private final @Nullable Output<String> documentComment;
+    private @Nullable Output<String> documentComment;
 
-    public Output<String> documentComment() {
-        return this.documentComment == null ? Codegen.empty() : this.documentComment;
+    public Optional<Output<String>> documentComment() {
+        return Optional.ofNullable(this.documentComment);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class DocumentOccurrenceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="externalDocumentRefs")
-      private final @Nullable Output<List<String>> externalDocumentRefs;
+    private @Nullable Output<List<String>> externalDocumentRefs;
 
-    public Output<List<String>> externalDocumentRefs() {
-        return this.externalDocumentRefs == null ? Codegen.empty() : this.externalDocumentRefs;
+    public Optional<Output<List<String>>> externalDocumentRefs() {
+        return Optional.ofNullable(this.externalDocumentRefs);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class DocumentOccurrenceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class DocumentOccurrenceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="licenseListVersion")
-      private final @Nullable Output<String> licenseListVersion;
+    private @Nullable Output<String> licenseListVersion;
 
-    public Output<String> licenseListVersion() {
-        return this.licenseListVersion == null ? Codegen.empty() : this.licenseListVersion;
+    public Optional<Output<String>> licenseListVersion() {
+        return Optional.ofNullable(this.licenseListVersion);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class DocumentOccurrenceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="namespace")
-      private final @Nullable Output<String> namespace;
+    private @Nullable Output<String> namespace;
 
-    public Output<String> namespace() {
-        return this.namespace == null ? Codegen.empty() : this.namespace;
+    public Optional<Output<String>> namespace() {
+        return Optional.ofNullable(this.namespace);
     }
 
     /**
@@ -113,160 +113,136 @@ public final class DocumentOccurrenceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="title")
-      private final @Nullable Output<String> title;
+    private @Nullable Output<String> title;
 
-    public Output<String> title() {
-        return this.title == null ? Codegen.empty() : this.title;
+    public Optional<Output<String>> title() {
+        return Optional.ofNullable(this.title);
     }
 
-    public DocumentOccurrenceArgs(
-        @Nullable Output<String> createTime,
-        @Nullable Output<String> creatorComment,
-        @Nullable Output<List<String>> creators,
-        @Nullable Output<String> documentComment,
-        @Nullable Output<List<String>> externalDocumentRefs,
-        @Nullable Output<String> id,
-        @Nullable Output<String> licenseListVersion,
-        @Nullable Output<String> namespace,
-        @Nullable Output<String> title) {
-        this.createTime = createTime;
-        this.creatorComment = creatorComment;
-        this.creators = creators;
-        this.documentComment = documentComment;
-        this.externalDocumentRefs = externalDocumentRefs;
-        this.id = id;
-        this.licenseListVersion = licenseListVersion;
-        this.namespace = namespace;
-        this.title = title;
-    }
+    private DocumentOccurrenceArgs() {}
 
-    private DocumentOccurrenceArgs() {
-        this.createTime = Codegen.empty();
-        this.creatorComment = Codegen.empty();
-        this.creators = Codegen.empty();
-        this.documentComment = Codegen.empty();
-        this.externalDocumentRefs = Codegen.empty();
-        this.id = Codegen.empty();
-        this.licenseListVersion = Codegen.empty();
-        this.namespace = Codegen.empty();
-        this.title = Codegen.empty();
+    private DocumentOccurrenceArgs(DocumentOccurrenceArgs $) {
+        this.createTime = $.createTime;
+        this.creatorComment = $.creatorComment;
+        this.creators = $.creators;
+        this.documentComment = $.documentComment;
+        this.externalDocumentRefs = $.externalDocumentRefs;
+        this.id = $.id;
+        this.licenseListVersion = $.licenseListVersion;
+        this.namespace = $.namespace;
+        this.title = $.title;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DocumentOccurrenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> createTime;
-        private @Nullable Output<String> creatorComment;
-        private @Nullable Output<List<String>> creators;
-        private @Nullable Output<String> documentComment;
-        private @Nullable Output<List<String>> externalDocumentRefs;
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> licenseListVersion;
-        private @Nullable Output<String> namespace;
-        private @Nullable Output<String> title;
+        private DocumentOccurrenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DocumentOccurrenceArgs();
         }
 
         public Builder(DocumentOccurrenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createTime = defaults.createTime;
-    	      this.creatorComment = defaults.creatorComment;
-    	      this.creators = defaults.creators;
-    	      this.documentComment = defaults.documentComment;
-    	      this.externalDocumentRefs = defaults.externalDocumentRefs;
-    	      this.id = defaults.id;
-    	      this.licenseListVersion = defaults.licenseListVersion;
-    	      this.namespace = defaults.namespace;
-    	      this.title = defaults.title;
+            $ = new DocumentOccurrenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder createTime(@Nullable Output<String> createTime) {
-            this.createTime = createTime;
+            $.createTime = createTime;
             return this;
         }
-        public Builder createTime(@Nullable String createTime) {
-            this.createTime = Codegen.ofNullable(createTime);
-            return this;
+
+        public Builder createTime(String createTime) {
+            return createTime(Output.of(createTime));
         }
+
         public Builder creatorComment(@Nullable Output<String> creatorComment) {
-            this.creatorComment = creatorComment;
+            $.creatorComment = creatorComment;
             return this;
         }
-        public Builder creatorComment(@Nullable String creatorComment) {
-            this.creatorComment = Codegen.ofNullable(creatorComment);
-            return this;
+
+        public Builder creatorComment(String creatorComment) {
+            return creatorComment(Output.of(creatorComment));
         }
+
         public Builder creators(@Nullable Output<List<String>> creators) {
-            this.creators = creators;
+            $.creators = creators;
             return this;
         }
-        public Builder creators(@Nullable List<String> creators) {
-            this.creators = Codegen.ofNullable(creators);
-            return this;
+
+        public Builder creators(List<String> creators) {
+            return creators(Output.of(creators));
         }
+
         public Builder creators(String... creators) {
             return creators(List.of(creators));
         }
+
         public Builder documentComment(@Nullable Output<String> documentComment) {
-            this.documentComment = documentComment;
+            $.documentComment = documentComment;
             return this;
         }
-        public Builder documentComment(@Nullable String documentComment) {
-            this.documentComment = Codegen.ofNullable(documentComment);
-            return this;
+
+        public Builder documentComment(String documentComment) {
+            return documentComment(Output.of(documentComment));
         }
+
         public Builder externalDocumentRefs(@Nullable Output<List<String>> externalDocumentRefs) {
-            this.externalDocumentRefs = externalDocumentRefs;
+            $.externalDocumentRefs = externalDocumentRefs;
             return this;
         }
-        public Builder externalDocumentRefs(@Nullable List<String> externalDocumentRefs) {
-            this.externalDocumentRefs = Codegen.ofNullable(externalDocumentRefs);
-            return this;
+
+        public Builder externalDocumentRefs(List<String> externalDocumentRefs) {
+            return externalDocumentRefs(Output.of(externalDocumentRefs));
         }
+
         public Builder externalDocumentRefs(String... externalDocumentRefs) {
             return externalDocumentRefs(List.of(externalDocumentRefs));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder licenseListVersion(@Nullable Output<String> licenseListVersion) {
-            this.licenseListVersion = licenseListVersion;
+            $.licenseListVersion = licenseListVersion;
             return this;
         }
-        public Builder licenseListVersion(@Nullable String licenseListVersion) {
-            this.licenseListVersion = Codegen.ofNullable(licenseListVersion);
-            return this;
+
+        public Builder licenseListVersion(String licenseListVersion) {
+            return licenseListVersion(Output.of(licenseListVersion));
         }
+
         public Builder namespace(@Nullable Output<String> namespace) {
-            this.namespace = namespace;
+            $.namespace = namespace;
             return this;
         }
-        public Builder namespace(@Nullable String namespace) {
-            this.namespace = Codegen.ofNullable(namespace);
-            return this;
+
+        public Builder namespace(String namespace) {
+            return namespace(Output.of(namespace));
         }
+
         public Builder title(@Nullable Output<String> title) {
-            this.title = title;
+            $.title = title;
             return this;
         }
-        public Builder title(@Nullable String title) {
-            this.title = Codegen.ofNullable(title);
-            return this;
-        }        public DocumentOccurrenceArgs build() {
-            return new DocumentOccurrenceArgs(createTime, creatorComment, creators, documentComment, externalDocumentRefs, id, licenseListVersion, namespace, title);
+
+        public Builder title(String title) {
+            return title(Output.of(title));
+        }
+
+        public DocumentOccurrenceArgs build() {
+            return $;
         }
     }
+
 }

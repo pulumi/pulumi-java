@@ -6,9 +6,9 @@ package com.pulumi.awsnative.s3.inputs;
 import com.pulumi.awsnative.s3.inputs.BucketNotificationFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class BucketTopicConfigurationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="event", required=true)
-      private final Output<String> event;
+    private Output<String> event;
 
     public Output<String> event() {
         return this.event;
@@ -36,10 +36,10 @@ public final class BucketTopicConfigurationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="filter")
-      private final @Nullable Output<BucketNotificationFilterArgs> filter;
+    private @Nullable Output<BucketNotificationFilterArgs> filter;
 
-    public Output<BucketNotificationFilterArgs> filter() {
-        return this.filter == null ? Codegen.empty() : this.filter;
+    public Optional<Output<BucketNotificationFilterArgs>> filter() {
+        return Optional.ofNullable(this.filter);
     }
 
     /**
@@ -47,76 +47,70 @@ public final class BucketTopicConfigurationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="topic", required=true)
-      private final Output<String> topic;
+    private Output<String> topic;
 
     public Output<String> topic() {
         return this.topic;
     }
 
-    public BucketTopicConfigurationArgs(
-        Output<String> event,
-        @Nullable Output<BucketNotificationFilterArgs> filter,
-        Output<String> topic) {
-        this.event = Objects.requireNonNull(event, "expected parameter 'event' to be non-null");
-        this.filter = filter;
-        this.topic = Objects.requireNonNull(topic, "expected parameter 'topic' to be non-null");
-    }
+    private BucketTopicConfigurationArgs() {}
 
-    private BucketTopicConfigurationArgs() {
-        this.event = Codegen.empty();
-        this.filter = Codegen.empty();
-        this.topic = Codegen.empty();
+    private BucketTopicConfigurationArgs(BucketTopicConfigurationArgs $) {
+        this.event = $.event;
+        this.filter = $.filter;
+        this.topic = $.topic;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketTopicConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> event;
-        private @Nullable Output<BucketNotificationFilterArgs> filter;
-        private Output<String> topic;
+        private BucketTopicConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketTopicConfigurationArgs();
         }
 
         public Builder(BucketTopicConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.event = defaults.event;
-    	      this.filter = defaults.filter;
-    	      this.topic = defaults.topic;
+            $ = new BucketTopicConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder event(Output<String> event) {
-            this.event = Objects.requireNonNull(event);
+            $.event = event;
             return this;
         }
+
         public Builder event(String event) {
-            this.event = Output.of(Objects.requireNonNull(event));
-            return this;
+            return event(Output.of(event));
         }
+
         public Builder filter(@Nullable Output<BucketNotificationFilterArgs> filter) {
-            this.filter = filter;
+            $.filter = filter;
             return this;
         }
-        public Builder filter(@Nullable BucketNotificationFilterArgs filter) {
-            this.filter = Codegen.ofNullable(filter);
-            return this;
+
+        public Builder filter(BucketNotificationFilterArgs filter) {
+            return filter(Output.of(filter));
         }
+
         public Builder topic(Output<String> topic) {
-            this.topic = Objects.requireNonNull(topic);
+            $.topic = topic;
             return this;
         }
+
         public Builder topic(String topic) {
-            this.topic = Output.of(Objects.requireNonNull(topic));
-            return this;
-        }        public BucketTopicConfigurationArgs build() {
-            return new BucketTopicConfigurationArgs(event, filter, topic);
+            return topic(Output.of(topic));
+        }
+
+        public BucketTopicConfigurationArgs build() {
+            $.event = Objects.requireNonNull($.event, "expected parameter 'event' to be non-null");
+            $.topic = Objects.requireNonNull($.topic, "expected parameter 'topic' to be non-null");
+            return $;
         }
     }
+
 }

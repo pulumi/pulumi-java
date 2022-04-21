@@ -19,45 +19,44 @@ public final class ScheduledEventsProfileResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="terminateNotificationProfile")
-      private final @Nullable TerminateNotificationProfileResponse terminateNotificationProfile;
+    private @Nullable TerminateNotificationProfileResponse terminateNotificationProfile;
 
     public Optional<TerminateNotificationProfileResponse> terminateNotificationProfile() {
-        return this.terminateNotificationProfile == null ? Optional.empty() : Optional.ofNullable(this.terminateNotificationProfile);
+        return Optional.ofNullable(this.terminateNotificationProfile);
     }
 
-    public ScheduledEventsProfileResponse(@Nullable TerminateNotificationProfileResponse terminateNotificationProfile) {
-        this.terminateNotificationProfile = terminateNotificationProfile;
-    }
+    private ScheduledEventsProfileResponse() {}
 
-    private ScheduledEventsProfileResponse() {
-        this.terminateNotificationProfile = null;
+    private ScheduledEventsProfileResponse(ScheduledEventsProfileResponse $) {
+        this.terminateNotificationProfile = $.terminateNotificationProfile;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScheduledEventsProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable TerminateNotificationProfileResponse terminateNotificationProfile;
+        private ScheduledEventsProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScheduledEventsProfileResponse();
         }
 
         public Builder(ScheduledEventsProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.terminateNotificationProfile = defaults.terminateNotificationProfile;
+            $ = new ScheduledEventsProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder terminateNotificationProfile(@Nullable TerminateNotificationProfileResponse terminateNotificationProfile) {
-            this.terminateNotificationProfile = terminateNotificationProfile;
+            $.terminateNotificationProfile = terminateNotificationProfile;
             return this;
-        }        public ScheduledEventsProfileResponse build() {
-            return new ScheduledEventsProfileResponse(terminateNotificationProfile);
+        }
+
+        public ScheduledEventsProfileResponse build() {
+            return $;
         }
     }
+
 }

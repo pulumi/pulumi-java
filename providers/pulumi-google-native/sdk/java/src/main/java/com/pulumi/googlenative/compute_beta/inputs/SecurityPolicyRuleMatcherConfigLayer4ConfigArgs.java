@@ -5,10 +5,10 @@ package com.pulumi.googlenative.compute_beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class SecurityPolicyRuleMatcherConfigLayer4ConfigArgs extends com.p
      * 
      */
     @Import(name="ipProtocol")
-      private final @Nullable Output<String> ipProtocol;
+    private @Nullable Output<String> ipProtocol;
 
-    public Output<String> ipProtocol() {
-        return this.ipProtocol == null ? Codegen.empty() : this.ipProtocol;
+    public Optional<Output<String>> ipProtocol() {
+        return Optional.ofNullable(this.ipProtocol);
     }
 
     /**
@@ -32,66 +32,62 @@ public final class SecurityPolicyRuleMatcherConfigLayer4ConfigArgs extends com.p
      * 
      */
     @Import(name="ports")
-      private final @Nullable Output<List<String>> ports;
+    private @Nullable Output<List<String>> ports;
 
-    public Output<List<String>> ports() {
-        return this.ports == null ? Codegen.empty() : this.ports;
+    public Optional<Output<List<String>>> ports() {
+        return Optional.ofNullable(this.ports);
     }
 
-    public SecurityPolicyRuleMatcherConfigLayer4ConfigArgs(
-        @Nullable Output<String> ipProtocol,
-        @Nullable Output<List<String>> ports) {
-        this.ipProtocol = ipProtocol;
-        this.ports = ports;
-    }
+    private SecurityPolicyRuleMatcherConfigLayer4ConfigArgs() {}
 
-    private SecurityPolicyRuleMatcherConfigLayer4ConfigArgs() {
-        this.ipProtocol = Codegen.empty();
-        this.ports = Codegen.empty();
+    private SecurityPolicyRuleMatcherConfigLayer4ConfigArgs(SecurityPolicyRuleMatcherConfigLayer4ConfigArgs $) {
+        this.ipProtocol = $.ipProtocol;
+        this.ports = $.ports;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityPolicyRuleMatcherConfigLayer4ConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> ipProtocol;
-        private @Nullable Output<List<String>> ports;
+        private SecurityPolicyRuleMatcherConfigLayer4ConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityPolicyRuleMatcherConfigLayer4ConfigArgs();
         }
 
         public Builder(SecurityPolicyRuleMatcherConfigLayer4ConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipProtocol = defaults.ipProtocol;
-    	      this.ports = defaults.ports;
+            $ = new SecurityPolicyRuleMatcherConfigLayer4ConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ipProtocol(@Nullable Output<String> ipProtocol) {
-            this.ipProtocol = ipProtocol;
+            $.ipProtocol = ipProtocol;
             return this;
         }
-        public Builder ipProtocol(@Nullable String ipProtocol) {
-            this.ipProtocol = Codegen.ofNullable(ipProtocol);
-            return this;
+
+        public Builder ipProtocol(String ipProtocol) {
+            return ipProtocol(Output.of(ipProtocol));
         }
+
         public Builder ports(@Nullable Output<List<String>> ports) {
-            this.ports = ports;
+            $.ports = ports;
             return this;
         }
-        public Builder ports(@Nullable List<String> ports) {
-            this.ports = Codegen.ofNullable(ports);
-            return this;
+
+        public Builder ports(List<String> ports) {
+            return ports(Output.of(ports));
         }
+
         public Builder ports(String... ports) {
             return ports(List.of(ports));
-        }        public SecurityPolicyRuleMatcherConfigLayer4ConfigArgs build() {
-            return new SecurityPolicyRuleMatcherConfigLayer4ConfigArgs(ipProtocol, ports);
+        }
+
+        public SecurityPolicyRuleMatcherConfigLayer4ConfigArgs build() {
+            return $;
         }
     }
+
 }

@@ -13,12 +13,12 @@ import com.pulumi.azurenative.datamigration.inputs.SqlConnectionInfoArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,10 +31,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="databasesInfo")
-      private final @Nullable Output<List<DatabaseInfoArgs>> databasesInfo;
+    private @Nullable Output<List<DatabaseInfoArgs>> databasesInfo;
 
-    public Output<List<DatabaseInfoArgs>> databasesInfo() {
-        return this.databasesInfo == null ? Codegen.empty() : this.databasesInfo;
+    public Optional<Output<List<DatabaseInfoArgs>>> databasesInfo() {
+        return Optional.ofNullable(this.databasesInfo);
     }
 
     /**
@@ -42,7 +42,7 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="groupName", required=true)
-      private final Output<String> groupName;
+    private Output<String> groupName;
 
     public Output<String> groupName() {
         return this.groupName;
@@ -53,10 +53,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="projectName")
-      private final @Nullable Output<String> projectName;
+    private @Nullable Output<String> projectName;
 
-    public Output<String> projectName() {
-        return this.projectName == null ? Codegen.empty() : this.projectName;
+    public Optional<Output<String>> projectName() {
+        return Optional.ofNullable(this.projectName);
     }
 
     /**
@@ -75,7 +75,7 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-      private final Output<String> serviceName;
+    private Output<String> serviceName;
 
     public Output<String> serviceName() {
         return this.serviceName;
@@ -86,10 +86,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceConnectionInfo")
-      private final @Nullable Output<Object> sourceConnectionInfo;
+    private @Nullable Output<Object> sourceConnectionInfo;
 
-    public Output<Object> sourceConnectionInfo() {
-        return this.sourceConnectionInfo == null ? Codegen.empty() : this.sourceConnectionInfo;
+    public Optional<Output<Object>> sourceConnectionInfo() {
+        return Optional.ofNullable(this.sourceConnectionInfo);
     }
 
     /**
@@ -97,7 +97,7 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourcePlatform", required=true)
-      private final Output<Either<String,ProjectSourcePlatform>> sourcePlatform;
+    private Output<Either<String,ProjectSourcePlatform>> sourcePlatform;
 
     public Output<Either<String,ProjectSourcePlatform>> sourcePlatform() {
         return this.sourcePlatform;
@@ -108,10 +108,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -119,10 +119,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetConnectionInfo")
-      private final @Nullable Output<Object> targetConnectionInfo;
+    private @Nullable Output<Object> targetConnectionInfo;
 
-    public Output<Object> targetConnectionInfo() {
-        return this.targetConnectionInfo == null ? Codegen.empty() : this.targetConnectionInfo;
+    public Optional<Output<Object>> targetConnectionInfo() {
+        return Optional.ofNullable(this.targetConnectionInfo);
     }
 
     /**
@@ -130,170 +130,146 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetPlatform", required=true)
-      private final Output<Either<String,ProjectTargetPlatform>> targetPlatform;
+    private Output<Either<String,ProjectTargetPlatform>> targetPlatform;
 
     public Output<Either<String,ProjectTargetPlatform>> targetPlatform() {
         return this.targetPlatform;
     }
 
-    public ProjectArgs(
-        @Nullable Output<List<DatabaseInfoArgs>> databasesInfo,
-        Output<String> groupName,
-        @Nullable Output<String> location,
-        @Nullable Output<String> projectName,
-        Output<String> serviceName,
-        @Nullable Output<Object> sourceConnectionInfo,
-        Output<Either<String,ProjectSourcePlatform>> sourcePlatform,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Object> targetConnectionInfo,
-        Output<Either<String,ProjectTargetPlatform>> targetPlatform) {
-        this.databasesInfo = databasesInfo;
-        this.groupName = Objects.requireNonNull(groupName, "expected parameter 'groupName' to be non-null");
-        this.location = location;
-        this.projectName = projectName;
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-        this.sourceConnectionInfo = sourceConnectionInfo;
-        this.sourcePlatform = Objects.requireNonNull(sourcePlatform, "expected parameter 'sourcePlatform' to be non-null");
-        this.tags = tags;
-        this.targetConnectionInfo = targetConnectionInfo;
-        this.targetPlatform = Objects.requireNonNull(targetPlatform, "expected parameter 'targetPlatform' to be non-null");
-    }
+    private ProjectArgs() {}
 
-    private ProjectArgs() {
-        this.databasesInfo = Codegen.empty();
-        this.groupName = Codegen.empty();
-        this.location = Codegen.empty();
-        this.projectName = Codegen.empty();
-        this.serviceName = Codegen.empty();
-        this.sourceConnectionInfo = Codegen.empty();
-        this.sourcePlatform = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.targetConnectionInfo = Codegen.empty();
-        this.targetPlatform = Codegen.empty();
+    private ProjectArgs(ProjectArgs $) {
+        this.databasesInfo = $.databasesInfo;
+        this.groupName = $.groupName;
+        this.location = $.location;
+        this.projectName = $.projectName;
+        this.serviceName = $.serviceName;
+        this.sourceConnectionInfo = $.sourceConnectionInfo;
+        this.sourcePlatform = $.sourcePlatform;
+        this.tags = $.tags;
+        this.targetConnectionInfo = $.targetConnectionInfo;
+        this.targetPlatform = $.targetPlatform;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProjectArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<DatabaseInfoArgs>> databasesInfo;
-        private Output<String> groupName;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> projectName;
-        private Output<String> serviceName;
-        private @Nullable Output<Object> sourceConnectionInfo;
-        private Output<Either<String,ProjectSourcePlatform>> sourcePlatform;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Object> targetConnectionInfo;
-        private Output<Either<String,ProjectTargetPlatform>> targetPlatform;
+        private ProjectArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProjectArgs();
         }
 
         public Builder(ProjectArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.databasesInfo = defaults.databasesInfo;
-    	      this.groupName = defaults.groupName;
-    	      this.location = defaults.location;
-    	      this.projectName = defaults.projectName;
-    	      this.serviceName = defaults.serviceName;
-    	      this.sourceConnectionInfo = defaults.sourceConnectionInfo;
-    	      this.sourcePlatform = defaults.sourcePlatform;
-    	      this.tags = defaults.tags;
-    	      this.targetConnectionInfo = defaults.targetConnectionInfo;
-    	      this.targetPlatform = defaults.targetPlatform;
+            $ = new ProjectArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder databasesInfo(@Nullable Output<List<DatabaseInfoArgs>> databasesInfo) {
-            this.databasesInfo = databasesInfo;
+            $.databasesInfo = databasesInfo;
             return this;
         }
-        public Builder databasesInfo(@Nullable List<DatabaseInfoArgs> databasesInfo) {
-            this.databasesInfo = Codegen.ofNullable(databasesInfo);
-            return this;
+
+        public Builder databasesInfo(List<DatabaseInfoArgs> databasesInfo) {
+            return databasesInfo(Output.of(databasesInfo));
         }
+
         public Builder databasesInfo(DatabaseInfoArgs... databasesInfo) {
             return databasesInfo(List.of(databasesInfo));
         }
+
         public Builder groupName(Output<String> groupName) {
-            this.groupName = Objects.requireNonNull(groupName);
+            $.groupName = groupName;
             return this;
         }
+
         public Builder groupName(String groupName) {
-            this.groupName = Output.of(Objects.requireNonNull(groupName));
-            return this;
+            return groupName(Output.of(groupName));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder projectName(@Nullable Output<String> projectName) {
-            this.projectName = projectName;
+            $.projectName = projectName;
             return this;
         }
-        public Builder projectName(@Nullable String projectName) {
-            this.projectName = Codegen.ofNullable(projectName);
-            return this;
+
+        public Builder projectName(String projectName) {
+            return projectName(Output.of(projectName));
         }
+
         public Builder serviceName(Output<String> serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
-            return this;
+            return serviceName(Output.of(serviceName));
         }
+
         public Builder sourceConnectionInfo(@Nullable Output<Object> sourceConnectionInfo) {
-            this.sourceConnectionInfo = sourceConnectionInfo;
+            $.sourceConnectionInfo = sourceConnectionInfo;
             return this;
         }
-        public Builder sourceConnectionInfo(@Nullable Object sourceConnectionInfo) {
-            this.sourceConnectionInfo = Codegen.ofNullable(sourceConnectionInfo);
-            return this;
+
+        public Builder sourceConnectionInfo(Object sourceConnectionInfo) {
+            return sourceConnectionInfo(Output.of(sourceConnectionInfo));
         }
+
         public Builder sourcePlatform(Output<Either<String,ProjectSourcePlatform>> sourcePlatform) {
-            this.sourcePlatform = Objects.requireNonNull(sourcePlatform);
+            $.sourcePlatform = sourcePlatform;
             return this;
         }
+
         public Builder sourcePlatform(Either<String,ProjectSourcePlatform> sourcePlatform) {
-            this.sourcePlatform = Output.of(Objects.requireNonNull(sourcePlatform));
-            return this;
+            return sourcePlatform(Output.of(sourcePlatform));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder targetConnectionInfo(@Nullable Output<Object> targetConnectionInfo) {
-            this.targetConnectionInfo = targetConnectionInfo;
+            $.targetConnectionInfo = targetConnectionInfo;
             return this;
         }
-        public Builder targetConnectionInfo(@Nullable Object targetConnectionInfo) {
-            this.targetConnectionInfo = Codegen.ofNullable(targetConnectionInfo);
-            return this;
+
+        public Builder targetConnectionInfo(Object targetConnectionInfo) {
+            return targetConnectionInfo(Output.of(targetConnectionInfo));
         }
+
         public Builder targetPlatform(Output<Either<String,ProjectTargetPlatform>> targetPlatform) {
-            this.targetPlatform = Objects.requireNonNull(targetPlatform);
+            $.targetPlatform = targetPlatform;
             return this;
         }
+
         public Builder targetPlatform(Either<String,ProjectTargetPlatform> targetPlatform) {
-            this.targetPlatform = Output.of(Objects.requireNonNull(targetPlatform));
-            return this;
-        }        public ProjectArgs build() {
-            return new ProjectArgs(databasesInfo, groupName, location, projectName, serviceName, sourceConnectionInfo, sourcePlatform, tags, targetConnectionInfo, targetPlatform);
+            return targetPlatform(Output.of(targetPlatform));
+        }
+
+        public ProjectArgs build() {
+            $.groupName = Objects.requireNonNull($.groupName, "expected parameter 'groupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            $.sourcePlatform = Objects.requireNonNull($.sourcePlatform, "expected parameter 'sourcePlatform' to be non-null");
+            $.targetPlatform = Objects.requireNonNull($.targetPlatform, "expected parameter 'targetPlatform' to be non-null");
+            return $;
         }
     }
+
 }

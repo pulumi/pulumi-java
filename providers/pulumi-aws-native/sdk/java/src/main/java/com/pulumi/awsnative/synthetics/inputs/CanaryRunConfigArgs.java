@@ -5,11 +5,11 @@ package com.pulumi.awsnative.synthetics.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class CanaryRunConfigArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="activeTracing")
-      private final @Nullable Output<Boolean> activeTracing;
+    private @Nullable Output<Boolean> activeTracing;
 
-    public Output<Boolean> activeTracing() {
-        return this.activeTracing == null ? Codegen.empty() : this.activeTracing;
+    public Optional<Output<Boolean>> activeTracing() {
+        return Optional.ofNullable(this.activeTracing);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class CanaryRunConfigArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="environmentVariables")
-      private final @Nullable Output<Object> environmentVariables;
+    private @Nullable Output<Object> environmentVariables;
 
-    public Output<Object> environmentVariables() {
-        return this.environmentVariables == null ? Codegen.empty() : this.environmentVariables;
+    public Optional<Output<Object>> environmentVariables() {
+        return Optional.ofNullable(this.environmentVariables);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class CanaryRunConfigArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="memoryInMB")
-      private final @Nullable Output<Integer> memoryInMB;
+    private @Nullable Output<Integer> memoryInMB;
 
-    public Output<Integer> memoryInMB() {
-        return this.memoryInMB == null ? Codegen.empty() : this.memoryInMB;
+    public Optional<Output<Integer>> memoryInMB() {
+        return Optional.ofNullable(this.memoryInMB);
     }
 
     /**
@@ -55,89 +55,78 @@ public final class CanaryRunConfigArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="timeoutInSeconds")
-      private final @Nullable Output<Integer> timeoutInSeconds;
+    private @Nullable Output<Integer> timeoutInSeconds;
 
-    public Output<Integer> timeoutInSeconds() {
-        return this.timeoutInSeconds == null ? Codegen.empty() : this.timeoutInSeconds;
+    public Optional<Output<Integer>> timeoutInSeconds() {
+        return Optional.ofNullable(this.timeoutInSeconds);
     }
 
-    public CanaryRunConfigArgs(
-        @Nullable Output<Boolean> activeTracing,
-        @Nullable Output<Object> environmentVariables,
-        @Nullable Output<Integer> memoryInMB,
-        @Nullable Output<Integer> timeoutInSeconds) {
-        this.activeTracing = activeTracing;
-        this.environmentVariables = environmentVariables;
-        this.memoryInMB = memoryInMB;
-        this.timeoutInSeconds = timeoutInSeconds;
-    }
+    private CanaryRunConfigArgs() {}
 
-    private CanaryRunConfigArgs() {
-        this.activeTracing = Codegen.empty();
-        this.environmentVariables = Codegen.empty();
-        this.memoryInMB = Codegen.empty();
-        this.timeoutInSeconds = Codegen.empty();
+    private CanaryRunConfigArgs(CanaryRunConfigArgs $) {
+        this.activeTracing = $.activeTracing;
+        this.environmentVariables = $.environmentVariables;
+        this.memoryInMB = $.memoryInMB;
+        this.timeoutInSeconds = $.timeoutInSeconds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CanaryRunConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> activeTracing;
-        private @Nullable Output<Object> environmentVariables;
-        private @Nullable Output<Integer> memoryInMB;
-        private @Nullable Output<Integer> timeoutInSeconds;
+        private CanaryRunConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CanaryRunConfigArgs();
         }
 
         public Builder(CanaryRunConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.activeTracing = defaults.activeTracing;
-    	      this.environmentVariables = defaults.environmentVariables;
-    	      this.memoryInMB = defaults.memoryInMB;
-    	      this.timeoutInSeconds = defaults.timeoutInSeconds;
+            $ = new CanaryRunConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder activeTracing(@Nullable Output<Boolean> activeTracing) {
-            this.activeTracing = activeTracing;
+            $.activeTracing = activeTracing;
             return this;
         }
-        public Builder activeTracing(@Nullable Boolean activeTracing) {
-            this.activeTracing = Codegen.ofNullable(activeTracing);
-            return this;
+
+        public Builder activeTracing(Boolean activeTracing) {
+            return activeTracing(Output.of(activeTracing));
         }
+
         public Builder environmentVariables(@Nullable Output<Object> environmentVariables) {
-            this.environmentVariables = environmentVariables;
+            $.environmentVariables = environmentVariables;
             return this;
         }
-        public Builder environmentVariables(@Nullable Object environmentVariables) {
-            this.environmentVariables = Codegen.ofNullable(environmentVariables);
-            return this;
+
+        public Builder environmentVariables(Object environmentVariables) {
+            return environmentVariables(Output.of(environmentVariables));
         }
+
         public Builder memoryInMB(@Nullable Output<Integer> memoryInMB) {
-            this.memoryInMB = memoryInMB;
+            $.memoryInMB = memoryInMB;
             return this;
         }
-        public Builder memoryInMB(@Nullable Integer memoryInMB) {
-            this.memoryInMB = Codegen.ofNullable(memoryInMB);
-            return this;
+
+        public Builder memoryInMB(Integer memoryInMB) {
+            return memoryInMB(Output.of(memoryInMB));
         }
+
         public Builder timeoutInSeconds(@Nullable Output<Integer> timeoutInSeconds) {
-            this.timeoutInSeconds = timeoutInSeconds;
+            $.timeoutInSeconds = timeoutInSeconds;
             return this;
         }
-        public Builder timeoutInSeconds(@Nullable Integer timeoutInSeconds) {
-            this.timeoutInSeconds = Codegen.ofNullable(timeoutInSeconds);
-            return this;
-        }        public CanaryRunConfigArgs build() {
-            return new CanaryRunConfigArgs(activeTracing, environmentVariables, memoryInMB, timeoutInSeconds);
+
+        public Builder timeoutInSeconds(Integer timeoutInSeconds) {
+            return timeoutInSeconds(Output.of(timeoutInSeconds));
+        }
+
+        public CanaryRunConfigArgs build() {
+            return $;
         }
     }
+
 }

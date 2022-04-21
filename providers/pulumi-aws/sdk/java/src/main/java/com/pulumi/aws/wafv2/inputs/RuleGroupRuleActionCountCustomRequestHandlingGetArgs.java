@@ -6,7 +6,6 @@ package com.pulumi.aws.wafv2.inputs;
 import com.pulumi.aws.wafv2.inputs.RuleGroupRuleActionCountCustomRequestHandlingInsertHeaderGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -20,52 +19,53 @@ public final class RuleGroupRuleActionCountCustomRequestHandlingGetArgs extends 
      * 
      */
     @Import(name="insertHeaders", required=true)
-      private final Output<List<RuleGroupRuleActionCountCustomRequestHandlingInsertHeaderGetArgs>> insertHeaders;
+    private Output<List<RuleGroupRuleActionCountCustomRequestHandlingInsertHeaderGetArgs>> insertHeaders;
 
     public Output<List<RuleGroupRuleActionCountCustomRequestHandlingInsertHeaderGetArgs>> insertHeaders() {
         return this.insertHeaders;
     }
 
-    public RuleGroupRuleActionCountCustomRequestHandlingGetArgs(Output<List<RuleGroupRuleActionCountCustomRequestHandlingInsertHeaderGetArgs>> insertHeaders) {
-        this.insertHeaders = Objects.requireNonNull(insertHeaders, "expected parameter 'insertHeaders' to be non-null");
-    }
+    private RuleGroupRuleActionCountCustomRequestHandlingGetArgs() {}
 
-    private RuleGroupRuleActionCountCustomRequestHandlingGetArgs() {
-        this.insertHeaders = Codegen.empty();
+    private RuleGroupRuleActionCountCustomRequestHandlingGetArgs(RuleGroupRuleActionCountCustomRequestHandlingGetArgs $) {
+        this.insertHeaders = $.insertHeaders;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupRuleActionCountCustomRequestHandlingGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<RuleGroupRuleActionCountCustomRequestHandlingInsertHeaderGetArgs>> insertHeaders;
+        private RuleGroupRuleActionCountCustomRequestHandlingGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupRuleActionCountCustomRequestHandlingGetArgs();
         }
 
         public Builder(RuleGroupRuleActionCountCustomRequestHandlingGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.insertHeaders = defaults.insertHeaders;
+            $ = new RuleGroupRuleActionCountCustomRequestHandlingGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder insertHeaders(Output<List<RuleGroupRuleActionCountCustomRequestHandlingInsertHeaderGetArgs>> insertHeaders) {
-            this.insertHeaders = Objects.requireNonNull(insertHeaders);
+            $.insertHeaders = insertHeaders;
             return this;
         }
+
         public Builder insertHeaders(List<RuleGroupRuleActionCountCustomRequestHandlingInsertHeaderGetArgs> insertHeaders) {
-            this.insertHeaders = Output.of(Objects.requireNonNull(insertHeaders));
-            return this;
+            return insertHeaders(Output.of(insertHeaders));
         }
+
         public Builder insertHeaders(RuleGroupRuleActionCountCustomRequestHandlingInsertHeaderGetArgs... insertHeaders) {
             return insertHeaders(List.of(insertHeaders));
-        }        public RuleGroupRuleActionCountCustomRequestHandlingGetArgs build() {
-            return new RuleGroupRuleActionCountCustomRequestHandlingGetArgs(insertHeaders);
+        }
+
+        public RuleGroupRuleActionCountCustomRequestHandlingGetArgs build() {
+            $.insertHeaders = Objects.requireNonNull($.insertHeaders, "expected parameter 'insertHeaders' to be non-null");
+            return $;
         }
     }
+
 }

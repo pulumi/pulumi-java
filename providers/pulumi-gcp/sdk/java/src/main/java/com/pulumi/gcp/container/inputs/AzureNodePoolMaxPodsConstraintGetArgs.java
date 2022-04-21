@@ -5,7 +5,6 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class AzureNodePoolMaxPodsConstraintGetArgs extends com.pulumi.reso
      * 
      */
     @Import(name="maxPodsPerNode", required=true)
-      private final Output<Integer> maxPodsPerNode;
+    private Output<Integer> maxPodsPerNode;
 
     public Output<Integer> maxPodsPerNode() {
         return this.maxPodsPerNode;
     }
 
-    public AzureNodePoolMaxPodsConstraintGetArgs(Output<Integer> maxPodsPerNode) {
-        this.maxPodsPerNode = Objects.requireNonNull(maxPodsPerNode, "expected parameter 'maxPodsPerNode' to be non-null");
-    }
+    private AzureNodePoolMaxPodsConstraintGetArgs() {}
 
-    private AzureNodePoolMaxPodsConstraintGetArgs() {
-        this.maxPodsPerNode = Codegen.empty();
+    private AzureNodePoolMaxPodsConstraintGetArgs(AzureNodePoolMaxPodsConstraintGetArgs $) {
+        this.maxPodsPerNode = $.maxPodsPerNode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureNodePoolMaxPodsConstraintGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> maxPodsPerNode;
+        private AzureNodePoolMaxPodsConstraintGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureNodePoolMaxPodsConstraintGetArgs();
         }
 
         public Builder(AzureNodePoolMaxPodsConstraintGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxPodsPerNode = defaults.maxPodsPerNode;
+            $ = new AzureNodePoolMaxPodsConstraintGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxPodsPerNode(Output<Integer> maxPodsPerNode) {
-            this.maxPodsPerNode = Objects.requireNonNull(maxPodsPerNode);
+            $.maxPodsPerNode = maxPodsPerNode;
             return this;
         }
+
         public Builder maxPodsPerNode(Integer maxPodsPerNode) {
-            this.maxPodsPerNode = Output.of(Objects.requireNonNull(maxPodsPerNode));
-            return this;
-        }        public AzureNodePoolMaxPodsConstraintGetArgs build() {
-            return new AzureNodePoolMaxPodsConstraintGetArgs(maxPodsPerNode);
+            return maxPodsPerNode(Output.of(maxPodsPerNode));
+        }
+
+        public AzureNodePoolMaxPodsConstraintGetArgs build() {
+            $.maxPodsPerNode = Objects.requireNonNull($.maxPodsPerNode, "expected parameter 'maxPodsPerNode' to be non-null");
+            return $;
         }
     }
+
 }

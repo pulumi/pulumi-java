@@ -5,11 +5,11 @@ package com.pulumi.aws.opsworks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,10 +18,10 @@ public final class MemcachedLayerEbsVolumeArgs extends com.pulumi.resources.Reso
     public static final MemcachedLayerEbsVolumeArgs Empty = new MemcachedLayerEbsVolumeArgs();
 
     @Import(name="encrypted")
-      private final @Nullable Output<Boolean> encrypted;
+    private @Nullable Output<Boolean> encrypted;
 
-    public Output<Boolean> encrypted() {
-        return this.encrypted == null ? Codegen.empty() : this.encrypted;
+    public Optional<Output<Boolean>> encrypted() {
+        return Optional.ofNullable(this.encrypted);
     }
 
     /**
@@ -29,10 +29,10 @@ public final class MemcachedLayerEbsVolumeArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="iops")
-      private final @Nullable Output<Integer> iops;
+    private @Nullable Output<Integer> iops;
 
-    public Output<Integer> iops() {
-        return this.iops == null ? Codegen.empty() : this.iops;
+    public Optional<Output<Integer>> iops() {
+        return Optional.ofNullable(this.iops);
     }
 
     /**
@@ -40,7 +40,7 @@ public final class MemcachedLayerEbsVolumeArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="mountPoint", required=true)
-      private final Output<String> mountPoint;
+    private Output<String> mountPoint;
 
     public Output<String> mountPoint() {
         return this.mountPoint;
@@ -51,7 +51,7 @@ public final class MemcachedLayerEbsVolumeArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="numberOfDisks", required=true)
-      private final Output<Integer> numberOfDisks;
+    private Output<Integer> numberOfDisks;
 
     public Output<Integer> numberOfDisks() {
         return this.numberOfDisks;
@@ -62,10 +62,10 @@ public final class MemcachedLayerEbsVolumeArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="raidLevel")
-      private final @Nullable Output<String> raidLevel;
+    private @Nullable Output<String> raidLevel;
 
-    public Output<String> raidLevel() {
-        return this.raidLevel == null ? Codegen.empty() : this.raidLevel;
+    public Optional<Output<String>> raidLevel() {
+        return Optional.ofNullable(this.raidLevel);
     }
 
     /**
@@ -73,7 +73,7 @@ public final class MemcachedLayerEbsVolumeArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="size", required=true)
-      private final Output<Integer> size;
+    private Output<Integer> size;
 
     public Output<Integer> size() {
         return this.size;
@@ -84,128 +84,111 @@ public final class MemcachedLayerEbsVolumeArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public MemcachedLayerEbsVolumeArgs(
-        @Nullable Output<Boolean> encrypted,
-        @Nullable Output<Integer> iops,
-        Output<String> mountPoint,
-        Output<Integer> numberOfDisks,
-        @Nullable Output<String> raidLevel,
-        Output<Integer> size,
-        @Nullable Output<String> type) {
-        this.encrypted = encrypted;
-        this.iops = iops;
-        this.mountPoint = Objects.requireNonNull(mountPoint, "expected parameter 'mountPoint' to be non-null");
-        this.numberOfDisks = Objects.requireNonNull(numberOfDisks, "expected parameter 'numberOfDisks' to be non-null");
-        this.raidLevel = raidLevel;
-        this.size = Objects.requireNonNull(size, "expected parameter 'size' to be non-null");
-        this.type = type;
-    }
+    private MemcachedLayerEbsVolumeArgs() {}
 
-    private MemcachedLayerEbsVolumeArgs() {
-        this.encrypted = Codegen.empty();
-        this.iops = Codegen.empty();
-        this.mountPoint = Codegen.empty();
-        this.numberOfDisks = Codegen.empty();
-        this.raidLevel = Codegen.empty();
-        this.size = Codegen.empty();
-        this.type = Codegen.empty();
+    private MemcachedLayerEbsVolumeArgs(MemcachedLayerEbsVolumeArgs $) {
+        this.encrypted = $.encrypted;
+        this.iops = $.iops;
+        this.mountPoint = $.mountPoint;
+        this.numberOfDisks = $.numberOfDisks;
+        this.raidLevel = $.raidLevel;
+        this.size = $.size;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MemcachedLayerEbsVolumeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> encrypted;
-        private @Nullable Output<Integer> iops;
-        private Output<String> mountPoint;
-        private Output<Integer> numberOfDisks;
-        private @Nullable Output<String> raidLevel;
-        private Output<Integer> size;
-        private @Nullable Output<String> type;
+        private MemcachedLayerEbsVolumeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MemcachedLayerEbsVolumeArgs();
         }
 
         public Builder(MemcachedLayerEbsVolumeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encrypted = defaults.encrypted;
-    	      this.iops = defaults.iops;
-    	      this.mountPoint = defaults.mountPoint;
-    	      this.numberOfDisks = defaults.numberOfDisks;
-    	      this.raidLevel = defaults.raidLevel;
-    	      this.size = defaults.size;
-    	      this.type = defaults.type;
+            $ = new MemcachedLayerEbsVolumeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder encrypted(@Nullable Output<Boolean> encrypted) {
-            this.encrypted = encrypted;
+            $.encrypted = encrypted;
             return this;
         }
-        public Builder encrypted(@Nullable Boolean encrypted) {
-            this.encrypted = Codegen.ofNullable(encrypted);
-            return this;
+
+        public Builder encrypted(Boolean encrypted) {
+            return encrypted(Output.of(encrypted));
         }
+
         public Builder iops(@Nullable Output<Integer> iops) {
-            this.iops = iops;
+            $.iops = iops;
             return this;
         }
-        public Builder iops(@Nullable Integer iops) {
-            this.iops = Codegen.ofNullable(iops);
-            return this;
+
+        public Builder iops(Integer iops) {
+            return iops(Output.of(iops));
         }
+
         public Builder mountPoint(Output<String> mountPoint) {
-            this.mountPoint = Objects.requireNonNull(mountPoint);
+            $.mountPoint = mountPoint;
             return this;
         }
+
         public Builder mountPoint(String mountPoint) {
-            this.mountPoint = Output.of(Objects.requireNonNull(mountPoint));
-            return this;
+            return mountPoint(Output.of(mountPoint));
         }
+
         public Builder numberOfDisks(Output<Integer> numberOfDisks) {
-            this.numberOfDisks = Objects.requireNonNull(numberOfDisks);
+            $.numberOfDisks = numberOfDisks;
             return this;
         }
+
         public Builder numberOfDisks(Integer numberOfDisks) {
-            this.numberOfDisks = Output.of(Objects.requireNonNull(numberOfDisks));
-            return this;
+            return numberOfDisks(Output.of(numberOfDisks));
         }
+
         public Builder raidLevel(@Nullable Output<String> raidLevel) {
-            this.raidLevel = raidLevel;
+            $.raidLevel = raidLevel;
             return this;
         }
-        public Builder raidLevel(@Nullable String raidLevel) {
-            this.raidLevel = Codegen.ofNullable(raidLevel);
-            return this;
+
+        public Builder raidLevel(String raidLevel) {
+            return raidLevel(Output.of(raidLevel));
         }
+
         public Builder size(Output<Integer> size) {
-            this.size = Objects.requireNonNull(size);
+            $.size = size;
             return this;
         }
+
         public Builder size(Integer size) {
-            this.size = Output.of(Objects.requireNonNull(size));
-            return this;
+            return size(Output.of(size));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public MemcachedLayerEbsVolumeArgs build() {
-            return new MemcachedLayerEbsVolumeArgs(encrypted, iops, mountPoint, numberOfDisks, raidLevel, size, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public MemcachedLayerEbsVolumeArgs build() {
+            $.mountPoint = Objects.requireNonNull($.mountPoint, "expected parameter 'mountPoint' to be non-null");
+            $.numberOfDisks = Objects.requireNonNull($.numberOfDisks, "expected parameter 'numberOfDisks' to be non-null");
+            $.size = Objects.requireNonNull($.size, "expected parameter 'size' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,45 +17,45 @@ public final class GetRateBasedModArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public GetRateBasedModArgs(String name) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private GetRateBasedModArgs() {}
 
-    private GetRateBasedModArgs() {
-        this.name = null;
+    private GetRateBasedModArgs(GetRateBasedModArgs $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRateBasedModArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
+        private GetRateBasedModArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRateBasedModArgs();
         }
 
         public Builder(GetRateBasedModArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new GetRateBasedModArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public GetRateBasedModArgs build() {
-            return new GetRateBasedModArgs(name);
+        }
+
+        public GetRateBasedModArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

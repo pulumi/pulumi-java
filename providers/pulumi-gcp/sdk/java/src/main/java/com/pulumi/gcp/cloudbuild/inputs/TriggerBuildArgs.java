@@ -5,7 +5,6 @@ package com.pulumi.gcp.cloudbuild.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.cloudbuild.inputs.TriggerBuildArtifactsArgs;
 import com.pulumi.gcp.cloudbuild.inputs.TriggerBuildAvailableSecretsArgs;
 import com.pulumi.gcp.cloudbuild.inputs.TriggerBuildOptionsArgs;
@@ -16,6 +15,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class TriggerBuildArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="artifacts")
-      private final @Nullable Output<TriggerBuildArtifactsArgs> artifacts;
+    private @Nullable Output<TriggerBuildArtifactsArgs> artifacts;
 
-    public Output<TriggerBuildArtifactsArgs> artifacts() {
-        return this.artifacts == null ? Codegen.empty() : this.artifacts;
+    public Optional<Output<TriggerBuildArtifactsArgs>> artifacts() {
+        return Optional.ofNullable(this.artifacts);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class TriggerBuildArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="availableSecrets")
-      private final @Nullable Output<TriggerBuildAvailableSecretsArgs> availableSecrets;
+    private @Nullable Output<TriggerBuildAvailableSecretsArgs> availableSecrets;
 
-    public Output<TriggerBuildAvailableSecretsArgs> availableSecrets() {
-        return this.availableSecrets == null ? Codegen.empty() : this.availableSecrets;
+    public Optional<Output<TriggerBuildAvailableSecretsArgs>> availableSecrets() {
+        return Optional.ofNullable(this.availableSecrets);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class TriggerBuildArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="images")
-      private final @Nullable Output<List<String>> images;
+    private @Nullable Output<List<String>> images;
 
-    public Output<List<String>> images() {
-        return this.images == null ? Codegen.empty() : this.images;
+    public Optional<Output<List<String>>> images() {
+        return Optional.ofNullable(this.images);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class TriggerBuildArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="logsBucket")
-      private final @Nullable Output<String> logsBucket;
+    private @Nullable Output<String> logsBucket;
 
-    public Output<String> logsBucket() {
-        return this.logsBucket == null ? Codegen.empty() : this.logsBucket;
+    public Optional<Output<String>> logsBucket() {
+        return Optional.ofNullable(this.logsBucket);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class TriggerBuildArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="options")
-      private final @Nullable Output<TriggerBuildOptionsArgs> options;
+    private @Nullable Output<TriggerBuildOptionsArgs> options;
 
-    public Output<TriggerBuildOptionsArgs> options() {
-        return this.options == null ? Codegen.empty() : this.options;
+    public Optional<Output<TriggerBuildOptionsArgs>> options() {
+        return Optional.ofNullable(this.options);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class TriggerBuildArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="queueTtl")
-      private final @Nullable Output<String> queueTtl;
+    private @Nullable Output<String> queueTtl;
 
-    public Output<String> queueTtl() {
-        return this.queueTtl == null ? Codegen.empty() : this.queueTtl;
+    public Optional<Output<String>> queueTtl() {
+        return Optional.ofNullable(this.queueTtl);
     }
 
     /**
@@ -105,10 +105,10 @@ public final class TriggerBuildArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="secrets")
-      private final @Nullable Output<List<TriggerBuildSecretArgs>> secrets;
+    private @Nullable Output<List<TriggerBuildSecretArgs>> secrets;
 
-    public Output<List<TriggerBuildSecretArgs>> secrets() {
-        return this.secrets == null ? Codegen.empty() : this.secrets;
+    public Optional<Output<List<TriggerBuildSecretArgs>>> secrets() {
+        return Optional.ofNullable(this.secrets);
     }
 
     /**
@@ -118,10 +118,10 @@ public final class TriggerBuildArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="source")
-      private final @Nullable Output<TriggerBuildSourceArgs> source;
+    private @Nullable Output<TriggerBuildSourceArgs> source;
 
-    public Output<TriggerBuildSourceArgs> source() {
-        return this.source == null ? Codegen.empty() : this.source;
+    public Optional<Output<TriggerBuildSourceArgs>> source() {
+        return Optional.ofNullable(this.source);
     }
 
     /**
@@ -130,7 +130,7 @@ public final class TriggerBuildArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="steps", required=true)
-      private final Output<List<TriggerBuildStepArgs>> steps;
+    private Output<List<TriggerBuildStepArgs>> steps;
 
     public Output<List<TriggerBuildStepArgs>> steps() {
         return this.steps;
@@ -141,10 +141,10 @@ public final class TriggerBuildArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="substitutions")
-      private final @Nullable Output<Map<String,String>> substitutions;
+    private @Nullable Output<Map<String,String>> substitutions;
 
-    public Output<Map<String,String>> substitutions() {
-        return this.substitutions == null ? Codegen.empty() : this.substitutions;
+    public Optional<Output<Map<String,String>>> substitutions() {
+        return Optional.ofNullable(this.substitutions);
     }
 
     /**
@@ -152,10 +152,10 @@ public final class TriggerBuildArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<String>> tags;
+    private @Nullable Output<List<String>> tags;
 
-    public Output<List<String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -166,205 +166,175 @@ public final class TriggerBuildArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="timeout")
-      private final @Nullable Output<String> timeout;
+    private @Nullable Output<String> timeout;
 
-    public Output<String> timeout() {
-        return this.timeout == null ? Codegen.empty() : this.timeout;
+    public Optional<Output<String>> timeout() {
+        return Optional.ofNullable(this.timeout);
     }
 
-    public TriggerBuildArgs(
-        @Nullable Output<TriggerBuildArtifactsArgs> artifacts,
-        @Nullable Output<TriggerBuildAvailableSecretsArgs> availableSecrets,
-        @Nullable Output<List<String>> images,
-        @Nullable Output<String> logsBucket,
-        @Nullable Output<TriggerBuildOptionsArgs> options,
-        @Nullable Output<String> queueTtl,
-        @Nullable Output<List<TriggerBuildSecretArgs>> secrets,
-        @Nullable Output<TriggerBuildSourceArgs> source,
-        Output<List<TriggerBuildStepArgs>> steps,
-        @Nullable Output<Map<String,String>> substitutions,
-        @Nullable Output<List<String>> tags,
-        @Nullable Output<String> timeout) {
-        this.artifacts = artifacts;
-        this.availableSecrets = availableSecrets;
-        this.images = images;
-        this.logsBucket = logsBucket;
-        this.options = options;
-        this.queueTtl = queueTtl;
-        this.secrets = secrets;
-        this.source = source;
-        this.steps = Objects.requireNonNull(steps, "expected parameter 'steps' to be non-null");
-        this.substitutions = substitutions;
-        this.tags = tags;
-        this.timeout = timeout;
-    }
+    private TriggerBuildArgs() {}
 
-    private TriggerBuildArgs() {
-        this.artifacts = Codegen.empty();
-        this.availableSecrets = Codegen.empty();
-        this.images = Codegen.empty();
-        this.logsBucket = Codegen.empty();
-        this.options = Codegen.empty();
-        this.queueTtl = Codegen.empty();
-        this.secrets = Codegen.empty();
-        this.source = Codegen.empty();
-        this.steps = Codegen.empty();
-        this.substitutions = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.timeout = Codegen.empty();
+    private TriggerBuildArgs(TriggerBuildArgs $) {
+        this.artifacts = $.artifacts;
+        this.availableSecrets = $.availableSecrets;
+        this.images = $.images;
+        this.logsBucket = $.logsBucket;
+        this.options = $.options;
+        this.queueTtl = $.queueTtl;
+        this.secrets = $.secrets;
+        this.source = $.source;
+        this.steps = $.steps;
+        this.substitutions = $.substitutions;
+        this.tags = $.tags;
+        this.timeout = $.timeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TriggerBuildArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<TriggerBuildArtifactsArgs> artifacts;
-        private @Nullable Output<TriggerBuildAvailableSecretsArgs> availableSecrets;
-        private @Nullable Output<List<String>> images;
-        private @Nullable Output<String> logsBucket;
-        private @Nullable Output<TriggerBuildOptionsArgs> options;
-        private @Nullable Output<String> queueTtl;
-        private @Nullable Output<List<TriggerBuildSecretArgs>> secrets;
-        private @Nullable Output<TriggerBuildSourceArgs> source;
-        private Output<List<TriggerBuildStepArgs>> steps;
-        private @Nullable Output<Map<String,String>> substitutions;
-        private @Nullable Output<List<String>> tags;
-        private @Nullable Output<String> timeout;
+        private TriggerBuildArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TriggerBuildArgs();
         }
 
         public Builder(TriggerBuildArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.artifacts = defaults.artifacts;
-    	      this.availableSecrets = defaults.availableSecrets;
-    	      this.images = defaults.images;
-    	      this.logsBucket = defaults.logsBucket;
-    	      this.options = defaults.options;
-    	      this.queueTtl = defaults.queueTtl;
-    	      this.secrets = defaults.secrets;
-    	      this.source = defaults.source;
-    	      this.steps = defaults.steps;
-    	      this.substitutions = defaults.substitutions;
-    	      this.tags = defaults.tags;
-    	      this.timeout = defaults.timeout;
+            $ = new TriggerBuildArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder artifacts(@Nullable Output<TriggerBuildArtifactsArgs> artifacts) {
-            this.artifacts = artifacts;
+            $.artifacts = artifacts;
             return this;
         }
-        public Builder artifacts(@Nullable TriggerBuildArtifactsArgs artifacts) {
-            this.artifacts = Codegen.ofNullable(artifacts);
-            return this;
+
+        public Builder artifacts(TriggerBuildArtifactsArgs artifacts) {
+            return artifacts(Output.of(artifacts));
         }
+
         public Builder availableSecrets(@Nullable Output<TriggerBuildAvailableSecretsArgs> availableSecrets) {
-            this.availableSecrets = availableSecrets;
+            $.availableSecrets = availableSecrets;
             return this;
         }
-        public Builder availableSecrets(@Nullable TriggerBuildAvailableSecretsArgs availableSecrets) {
-            this.availableSecrets = Codegen.ofNullable(availableSecrets);
-            return this;
+
+        public Builder availableSecrets(TriggerBuildAvailableSecretsArgs availableSecrets) {
+            return availableSecrets(Output.of(availableSecrets));
         }
+
         public Builder images(@Nullable Output<List<String>> images) {
-            this.images = images;
+            $.images = images;
             return this;
         }
-        public Builder images(@Nullable List<String> images) {
-            this.images = Codegen.ofNullable(images);
-            return this;
+
+        public Builder images(List<String> images) {
+            return images(Output.of(images));
         }
+
         public Builder images(String... images) {
             return images(List.of(images));
         }
+
         public Builder logsBucket(@Nullable Output<String> logsBucket) {
-            this.logsBucket = logsBucket;
+            $.logsBucket = logsBucket;
             return this;
         }
-        public Builder logsBucket(@Nullable String logsBucket) {
-            this.logsBucket = Codegen.ofNullable(logsBucket);
-            return this;
+
+        public Builder logsBucket(String logsBucket) {
+            return logsBucket(Output.of(logsBucket));
         }
+
         public Builder options(@Nullable Output<TriggerBuildOptionsArgs> options) {
-            this.options = options;
+            $.options = options;
             return this;
         }
-        public Builder options(@Nullable TriggerBuildOptionsArgs options) {
-            this.options = Codegen.ofNullable(options);
-            return this;
+
+        public Builder options(TriggerBuildOptionsArgs options) {
+            return options(Output.of(options));
         }
+
         public Builder queueTtl(@Nullable Output<String> queueTtl) {
-            this.queueTtl = queueTtl;
+            $.queueTtl = queueTtl;
             return this;
         }
-        public Builder queueTtl(@Nullable String queueTtl) {
-            this.queueTtl = Codegen.ofNullable(queueTtl);
-            return this;
+
+        public Builder queueTtl(String queueTtl) {
+            return queueTtl(Output.of(queueTtl));
         }
+
         public Builder secrets(@Nullable Output<List<TriggerBuildSecretArgs>> secrets) {
-            this.secrets = secrets;
+            $.secrets = secrets;
             return this;
         }
-        public Builder secrets(@Nullable List<TriggerBuildSecretArgs> secrets) {
-            this.secrets = Codegen.ofNullable(secrets);
-            return this;
+
+        public Builder secrets(List<TriggerBuildSecretArgs> secrets) {
+            return secrets(Output.of(secrets));
         }
+
         public Builder secrets(TriggerBuildSecretArgs... secrets) {
             return secrets(List.of(secrets));
         }
+
         public Builder source(@Nullable Output<TriggerBuildSourceArgs> source) {
-            this.source = source;
+            $.source = source;
             return this;
         }
-        public Builder source(@Nullable TriggerBuildSourceArgs source) {
-            this.source = Codegen.ofNullable(source);
-            return this;
+
+        public Builder source(TriggerBuildSourceArgs source) {
+            return source(Output.of(source));
         }
+
         public Builder steps(Output<List<TriggerBuildStepArgs>> steps) {
-            this.steps = Objects.requireNonNull(steps);
+            $.steps = steps;
             return this;
         }
+
         public Builder steps(List<TriggerBuildStepArgs> steps) {
-            this.steps = Output.of(Objects.requireNonNull(steps));
-            return this;
+            return steps(Output.of(steps));
         }
+
         public Builder steps(TriggerBuildStepArgs... steps) {
             return steps(List.of(steps));
         }
+
         public Builder substitutions(@Nullable Output<Map<String,String>> substitutions) {
-            this.substitutions = substitutions;
+            $.substitutions = substitutions;
             return this;
         }
-        public Builder substitutions(@Nullable Map<String,String> substitutions) {
-            this.substitutions = Codegen.ofNullable(substitutions);
-            return this;
+
+        public Builder substitutions(Map<String,String> substitutions) {
+            return substitutions(Output.of(substitutions));
         }
+
         public Builder tags(@Nullable Output<List<String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(String... tags) {
             return tags(List.of(tags));
         }
+
         public Builder timeout(@Nullable Output<String> timeout) {
-            this.timeout = timeout;
+            $.timeout = timeout;
             return this;
         }
-        public Builder timeout(@Nullable String timeout) {
-            this.timeout = Codegen.ofNullable(timeout);
-            return this;
-        }        public TriggerBuildArgs build() {
-            return new TriggerBuildArgs(artifacts, availableSecrets, images, logsBucket, options, queueTtl, secrets, source, steps, substitutions, tags, timeout);
+
+        public Builder timeout(String timeout) {
+            return timeout(Output.of(timeout));
+        }
+
+        public TriggerBuildArgs build() {
+            $.steps = Objects.requireNonNull($.steps, "expected parameter 'steps' to be non-null");
+            return $;
         }
     }
+
 }

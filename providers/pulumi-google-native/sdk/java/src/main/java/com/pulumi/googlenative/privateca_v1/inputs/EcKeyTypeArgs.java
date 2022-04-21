@@ -5,9 +5,9 @@ package com.pulumi.googlenative.privateca_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.privateca_v1.enums.EcKeyTypeSignatureAlgorithm;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class EcKeyTypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="signatureAlgorithm")
-      private final @Nullable Output<EcKeyTypeSignatureAlgorithm> signatureAlgorithm;
+    private @Nullable Output<EcKeyTypeSignatureAlgorithm> signatureAlgorithm;
 
-    public Output<EcKeyTypeSignatureAlgorithm> signatureAlgorithm() {
-        return this.signatureAlgorithm == null ? Codegen.empty() : this.signatureAlgorithm;
+    public Optional<Output<EcKeyTypeSignatureAlgorithm>> signatureAlgorithm() {
+        return Optional.ofNullable(this.signatureAlgorithm);
     }
 
-    public EcKeyTypeArgs(@Nullable Output<EcKeyTypeSignatureAlgorithm> signatureAlgorithm) {
-        this.signatureAlgorithm = signatureAlgorithm;
-    }
+    private EcKeyTypeArgs() {}
 
-    private EcKeyTypeArgs() {
-        this.signatureAlgorithm = Codegen.empty();
+    private EcKeyTypeArgs(EcKeyTypeArgs $) {
+        this.signatureAlgorithm = $.signatureAlgorithm;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EcKeyTypeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<EcKeyTypeSignatureAlgorithm> signatureAlgorithm;
+        private EcKeyTypeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EcKeyTypeArgs();
         }
 
         public Builder(EcKeyTypeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.signatureAlgorithm = defaults.signatureAlgorithm;
+            $ = new EcKeyTypeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder signatureAlgorithm(@Nullable Output<EcKeyTypeSignatureAlgorithm> signatureAlgorithm) {
-            this.signatureAlgorithm = signatureAlgorithm;
+            $.signatureAlgorithm = signatureAlgorithm;
             return this;
         }
-        public Builder signatureAlgorithm(@Nullable EcKeyTypeSignatureAlgorithm signatureAlgorithm) {
-            this.signatureAlgorithm = Codegen.ofNullable(signatureAlgorithm);
-            return this;
-        }        public EcKeyTypeArgs build() {
-            return new EcKeyTypeArgs(signatureAlgorithm);
+
+        public Builder signatureAlgorithm(EcKeyTypeSignatureAlgorithm signatureAlgorithm) {
+            return signatureAlgorithm(Output.of(signatureAlgorithm));
+        }
+
+        public EcKeyTypeArgs build() {
+            return $;
         }
     }
+
 }

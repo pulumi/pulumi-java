@@ -17,7 +17,7 @@ public final class GetBackupPolicyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="backupPolicyName", required=true)
-      private final String backupPolicyName;
+    private String backupPolicyName;
 
     public String backupPolicyName() {
         return this.backupPolicyName;
@@ -28,7 +28,7 @@ public final class GetBackupPolicyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="deviceName", required=true)
-      private final String deviceName;
+    private String deviceName;
 
     public String deviceName() {
         return this.deviceName;
@@ -39,7 +39,7 @@ public final class GetBackupPolicyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="managerName", required=true)
-      private final String managerName;
+    private String managerName;
 
     public String managerName() {
         return this.managerName;
@@ -50,73 +50,66 @@ public final class GetBackupPolicyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetBackupPolicyArgs(
-        String backupPolicyName,
-        String deviceName,
-        String managerName,
-        String resourceGroupName) {
-        this.backupPolicyName = Objects.requireNonNull(backupPolicyName, "expected parameter 'backupPolicyName' to be non-null");
-        this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
-        this.managerName = Objects.requireNonNull(managerName, "expected parameter 'managerName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetBackupPolicyArgs() {}
 
-    private GetBackupPolicyArgs() {
-        this.backupPolicyName = null;
-        this.deviceName = null;
-        this.managerName = null;
-        this.resourceGroupName = null;
+    private GetBackupPolicyArgs(GetBackupPolicyArgs $) {
+        this.backupPolicyName = $.backupPolicyName;
+        this.deviceName = $.deviceName;
+        this.managerName = $.managerName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBackupPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String backupPolicyName;
-        private String deviceName;
-        private String managerName;
-        private String resourceGroupName;
+        private GetBackupPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBackupPolicyArgs();
         }
 
         public Builder(GetBackupPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupPolicyName = defaults.backupPolicyName;
-    	      this.deviceName = defaults.deviceName;
-    	      this.managerName = defaults.managerName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetBackupPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backupPolicyName(String backupPolicyName) {
-            this.backupPolicyName = Objects.requireNonNull(backupPolicyName);
+            $.backupPolicyName = backupPolicyName;
             return this;
         }
+
         public Builder deviceName(String deviceName) {
-            this.deviceName = Objects.requireNonNull(deviceName);
+            $.deviceName = deviceName;
             return this;
         }
+
         public Builder managerName(String managerName) {
-            this.managerName = Objects.requireNonNull(managerName);
+            $.managerName = managerName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetBackupPolicyArgs build() {
-            return new GetBackupPolicyArgs(backupPolicyName, deviceName, managerName, resourceGroupName);
+        }
+
+        public GetBackupPolicyArgs build() {
+            $.backupPolicyName = Objects.requireNonNull($.backupPolicyName, "expected parameter 'backupPolicyName' to be non-null");
+            $.deviceName = Objects.requireNonNull($.deviceName, "expected parameter 'deviceName' to be non-null");
+            $.managerName = Objects.requireNonNull($.managerName, "expected parameter 'managerName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

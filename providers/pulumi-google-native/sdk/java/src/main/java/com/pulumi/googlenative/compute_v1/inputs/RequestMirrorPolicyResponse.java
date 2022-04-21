@@ -21,45 +21,45 @@ public final class RequestMirrorPolicyResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="backendService", required=true)
-      private final String backendService;
+    private String backendService;
 
     public String backendService() {
         return this.backendService;
     }
 
-    public RequestMirrorPolicyResponse(String backendService) {
-        this.backendService = Objects.requireNonNull(backendService, "expected parameter 'backendService' to be non-null");
-    }
+    private RequestMirrorPolicyResponse() {}
 
-    private RequestMirrorPolicyResponse() {
-        this.backendService = null;
+    private RequestMirrorPolicyResponse(RequestMirrorPolicyResponse $) {
+        this.backendService = $.backendService;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RequestMirrorPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String backendService;
+        private RequestMirrorPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RequestMirrorPolicyResponse();
         }
 
         public Builder(RequestMirrorPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backendService = defaults.backendService;
+            $ = new RequestMirrorPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder backendService(String backendService) {
-            this.backendService = Objects.requireNonNull(backendService);
+            $.backendService = backendService;
             return this;
-        }        public RequestMirrorPolicyResponse build() {
-            return new RequestMirrorPolicyResponse(backendService);
+        }
+
+        public RequestMirrorPolicyResponse build() {
+            $.backendService = Objects.requireNonNull($.backendService, "expected parameter 'backendService' to be non-null");
+            return $;
         }
     }
+
 }

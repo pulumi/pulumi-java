@@ -27,10 +27,10 @@ public final class RecoveryPlanPropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="allowedOperations")
-      private final @Nullable List<String> allowedOperations;
+    private @Nullable List<String> allowedOperations;
 
-    public List<String> allowedOperations() {
-        return this.allowedOperations == null ? List.of() : this.allowedOperations;
+    public Optional<List<String>> allowedOperations() {
+        return Optional.ofNullable(this.allowedOperations);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class RecoveryPlanPropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="currentScenario")
-      private final @Nullable CurrentScenarioDetailsResponse currentScenario;
+    private @Nullable CurrentScenarioDetailsResponse currentScenario;
 
     public Optional<CurrentScenarioDetailsResponse> currentScenario() {
-        return this.currentScenario == null ? Optional.empty() : Optional.ofNullable(this.currentScenario);
+        return Optional.ofNullable(this.currentScenario);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class RecoveryPlanPropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="currentScenarioStatus")
-      private final @Nullable String currentScenarioStatus;
+    private @Nullable String currentScenarioStatus;
 
     public Optional<String> currentScenarioStatus() {
-        return this.currentScenarioStatus == null ? Optional.empty() : Optional.ofNullable(this.currentScenarioStatus);
+        return Optional.ofNullable(this.currentScenarioStatus);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class RecoveryPlanPropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="currentScenarioStatusDescription")
-      private final @Nullable String currentScenarioStatusDescription;
+    private @Nullable String currentScenarioStatusDescription;
 
     public Optional<String> currentScenarioStatusDescription() {
-        return this.currentScenarioStatusDescription == null ? Optional.empty() : Optional.ofNullable(this.currentScenarioStatusDescription);
+        return Optional.ofNullable(this.currentScenarioStatusDescription);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class RecoveryPlanPropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="failoverDeploymentModel")
-      private final @Nullable String failoverDeploymentModel;
+    private @Nullable String failoverDeploymentModel;
 
     public Optional<String> failoverDeploymentModel() {
-        return this.failoverDeploymentModel == null ? Optional.empty() : Optional.ofNullable(this.failoverDeploymentModel);
+        return Optional.ofNullable(this.failoverDeploymentModel);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class RecoveryPlanPropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="friendlyName")
-      private final @Nullable String friendlyName;
+    private @Nullable String friendlyName;
 
     public Optional<String> friendlyName() {
-        return this.friendlyName == null ? Optional.empty() : Optional.ofNullable(this.friendlyName);
+        return Optional.ofNullable(this.friendlyName);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class RecoveryPlanPropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="groups")
-      private final @Nullable List<RecoveryPlanGroupResponse> groups;
+    private @Nullable List<RecoveryPlanGroupResponse> groups;
 
-    public List<RecoveryPlanGroupResponse> groups() {
-        return this.groups == null ? List.of() : this.groups;
+    public Optional<List<RecoveryPlanGroupResponse>> groups() {
+        return Optional.ofNullable(this.groups);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class RecoveryPlanPropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="lastPlannedFailoverTime")
-      private final @Nullable String lastPlannedFailoverTime;
+    private @Nullable String lastPlannedFailoverTime;
 
     public Optional<String> lastPlannedFailoverTime() {
-        return this.lastPlannedFailoverTime == null ? Optional.empty() : Optional.ofNullable(this.lastPlannedFailoverTime);
+        return Optional.ofNullable(this.lastPlannedFailoverTime);
     }
 
     /**
@@ -115,10 +115,10 @@ public final class RecoveryPlanPropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="lastTestFailoverTime")
-      private final @Nullable String lastTestFailoverTime;
+    private @Nullable String lastTestFailoverTime;
 
     public Optional<String> lastTestFailoverTime() {
-        return this.lastTestFailoverTime == null ? Optional.empty() : Optional.ofNullable(this.lastTestFailoverTime);
+        return Optional.ofNullable(this.lastTestFailoverTime);
     }
 
     /**
@@ -126,10 +126,10 @@ public final class RecoveryPlanPropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="lastUnplannedFailoverTime")
-      private final @Nullable String lastUnplannedFailoverTime;
+    private @Nullable String lastUnplannedFailoverTime;
 
     public Optional<String> lastUnplannedFailoverTime() {
-        return this.lastUnplannedFailoverTime == null ? Optional.empty() : Optional.ofNullable(this.lastUnplannedFailoverTime);
+        return Optional.ofNullable(this.lastUnplannedFailoverTime);
     }
 
     /**
@@ -137,10 +137,10 @@ public final class RecoveryPlanPropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="primaryFabricFriendlyName")
-      private final @Nullable String primaryFabricFriendlyName;
+    private @Nullable String primaryFabricFriendlyName;
 
     public Optional<String> primaryFabricFriendlyName() {
-        return this.primaryFabricFriendlyName == null ? Optional.empty() : Optional.ofNullable(this.primaryFabricFriendlyName);
+        return Optional.ofNullable(this.primaryFabricFriendlyName);
     }
 
     /**
@@ -148,10 +148,10 @@ public final class RecoveryPlanPropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="primaryFabricId")
-      private final @Nullable String primaryFabricId;
+    private @Nullable String primaryFabricId;
 
     public Optional<String> primaryFabricId() {
-        return this.primaryFabricId == null ? Optional.empty() : Optional.ofNullable(this.primaryFabricId);
+        return Optional.ofNullable(this.primaryFabricId);
     }
 
     /**
@@ -159,7 +159,7 @@ public final class RecoveryPlanPropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="providerSpecificDetails", required=true)
-      private final List<RecoveryPlanA2ADetailsResponse> providerSpecificDetails;
+    private List<RecoveryPlanA2ADetailsResponse> providerSpecificDetails;
 
     public List<RecoveryPlanA2ADetailsResponse> providerSpecificDetails() {
         return this.providerSpecificDetails;
@@ -170,10 +170,10 @@ public final class RecoveryPlanPropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="recoveryFabricFriendlyName")
-      private final @Nullable String recoveryFabricFriendlyName;
+    private @Nullable String recoveryFabricFriendlyName;
 
     public Optional<String> recoveryFabricFriendlyName() {
-        return this.recoveryFabricFriendlyName == null ? Optional.empty() : Optional.ofNullable(this.recoveryFabricFriendlyName);
+        return Optional.ofNullable(this.recoveryFabricFriendlyName);
     }
 
     /**
@@ -181,10 +181,10 @@ public final class RecoveryPlanPropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="recoveryFabricId")
-      private final @Nullable String recoveryFabricId;
+    private @Nullable String recoveryFabricId;
 
     public Optional<String> recoveryFabricId() {
-        return this.recoveryFabricId == null ? Optional.empty() : Optional.ofNullable(this.recoveryFabricId);
+        return Optional.ofNullable(this.recoveryFabricId);
     }
 
     /**
@@ -192,193 +192,151 @@ public final class RecoveryPlanPropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="replicationProviders")
-      private final @Nullable List<String> replicationProviders;
+    private @Nullable List<String> replicationProviders;
 
-    public List<String> replicationProviders() {
-        return this.replicationProviders == null ? List.of() : this.replicationProviders;
+    public Optional<List<String>> replicationProviders() {
+        return Optional.ofNullable(this.replicationProviders);
     }
 
-    public RecoveryPlanPropertiesResponse(
-        @Nullable List<String> allowedOperations,
-        @Nullable CurrentScenarioDetailsResponse currentScenario,
-        @Nullable String currentScenarioStatus,
-        @Nullable String currentScenarioStatusDescription,
-        @Nullable String failoverDeploymentModel,
-        @Nullable String friendlyName,
-        @Nullable List<RecoveryPlanGroupResponse> groups,
-        @Nullable String lastPlannedFailoverTime,
-        @Nullable String lastTestFailoverTime,
-        @Nullable String lastUnplannedFailoverTime,
-        @Nullable String primaryFabricFriendlyName,
-        @Nullable String primaryFabricId,
-        List<RecoveryPlanA2ADetailsResponse> providerSpecificDetails,
-        @Nullable String recoveryFabricFriendlyName,
-        @Nullable String recoveryFabricId,
-        @Nullable List<String> replicationProviders) {
-        this.allowedOperations = allowedOperations;
-        this.currentScenario = currentScenario;
-        this.currentScenarioStatus = currentScenarioStatus;
-        this.currentScenarioStatusDescription = currentScenarioStatusDescription;
-        this.failoverDeploymentModel = failoverDeploymentModel;
-        this.friendlyName = friendlyName;
-        this.groups = groups;
-        this.lastPlannedFailoverTime = lastPlannedFailoverTime;
-        this.lastTestFailoverTime = lastTestFailoverTime;
-        this.lastUnplannedFailoverTime = lastUnplannedFailoverTime;
-        this.primaryFabricFriendlyName = primaryFabricFriendlyName;
-        this.primaryFabricId = primaryFabricId;
-        this.providerSpecificDetails = Objects.requireNonNull(providerSpecificDetails, "expected parameter 'providerSpecificDetails' to be non-null");
-        this.recoveryFabricFriendlyName = recoveryFabricFriendlyName;
-        this.recoveryFabricId = recoveryFabricId;
-        this.replicationProviders = replicationProviders;
-    }
+    private RecoveryPlanPropertiesResponse() {}
 
-    private RecoveryPlanPropertiesResponse() {
-        this.allowedOperations = List.of();
-        this.currentScenario = null;
-        this.currentScenarioStatus = null;
-        this.currentScenarioStatusDescription = null;
-        this.failoverDeploymentModel = null;
-        this.friendlyName = null;
-        this.groups = List.of();
-        this.lastPlannedFailoverTime = null;
-        this.lastTestFailoverTime = null;
-        this.lastUnplannedFailoverTime = null;
-        this.primaryFabricFriendlyName = null;
-        this.primaryFabricId = null;
-        this.providerSpecificDetails = List.of();
-        this.recoveryFabricFriendlyName = null;
-        this.recoveryFabricId = null;
-        this.replicationProviders = List.of();
+    private RecoveryPlanPropertiesResponse(RecoveryPlanPropertiesResponse $) {
+        this.allowedOperations = $.allowedOperations;
+        this.currentScenario = $.currentScenario;
+        this.currentScenarioStatus = $.currentScenarioStatus;
+        this.currentScenarioStatusDescription = $.currentScenarioStatusDescription;
+        this.failoverDeploymentModel = $.failoverDeploymentModel;
+        this.friendlyName = $.friendlyName;
+        this.groups = $.groups;
+        this.lastPlannedFailoverTime = $.lastPlannedFailoverTime;
+        this.lastTestFailoverTime = $.lastTestFailoverTime;
+        this.lastUnplannedFailoverTime = $.lastUnplannedFailoverTime;
+        this.primaryFabricFriendlyName = $.primaryFabricFriendlyName;
+        this.primaryFabricId = $.primaryFabricId;
+        this.providerSpecificDetails = $.providerSpecificDetails;
+        this.recoveryFabricFriendlyName = $.recoveryFabricFriendlyName;
+        this.recoveryFabricId = $.recoveryFabricId;
+        this.replicationProviders = $.replicationProviders;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RecoveryPlanPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> allowedOperations;
-        private @Nullable CurrentScenarioDetailsResponse currentScenario;
-        private @Nullable String currentScenarioStatus;
-        private @Nullable String currentScenarioStatusDescription;
-        private @Nullable String failoverDeploymentModel;
-        private @Nullable String friendlyName;
-        private @Nullable List<RecoveryPlanGroupResponse> groups;
-        private @Nullable String lastPlannedFailoverTime;
-        private @Nullable String lastTestFailoverTime;
-        private @Nullable String lastUnplannedFailoverTime;
-        private @Nullable String primaryFabricFriendlyName;
-        private @Nullable String primaryFabricId;
-        private List<RecoveryPlanA2ADetailsResponse> providerSpecificDetails;
-        private @Nullable String recoveryFabricFriendlyName;
-        private @Nullable String recoveryFabricId;
-        private @Nullable List<String> replicationProviders;
+        private RecoveryPlanPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RecoveryPlanPropertiesResponse();
         }
 
         public Builder(RecoveryPlanPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedOperations = defaults.allowedOperations;
-    	      this.currentScenario = defaults.currentScenario;
-    	      this.currentScenarioStatus = defaults.currentScenarioStatus;
-    	      this.currentScenarioStatusDescription = defaults.currentScenarioStatusDescription;
-    	      this.failoverDeploymentModel = defaults.failoverDeploymentModel;
-    	      this.friendlyName = defaults.friendlyName;
-    	      this.groups = defaults.groups;
-    	      this.lastPlannedFailoverTime = defaults.lastPlannedFailoverTime;
-    	      this.lastTestFailoverTime = defaults.lastTestFailoverTime;
-    	      this.lastUnplannedFailoverTime = defaults.lastUnplannedFailoverTime;
-    	      this.primaryFabricFriendlyName = defaults.primaryFabricFriendlyName;
-    	      this.primaryFabricId = defaults.primaryFabricId;
-    	      this.providerSpecificDetails = defaults.providerSpecificDetails;
-    	      this.recoveryFabricFriendlyName = defaults.recoveryFabricFriendlyName;
-    	      this.recoveryFabricId = defaults.recoveryFabricId;
-    	      this.replicationProviders = defaults.replicationProviders;
+            $ = new RecoveryPlanPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedOperations(@Nullable List<String> allowedOperations) {
-            this.allowedOperations = allowedOperations;
+            $.allowedOperations = allowedOperations;
             return this;
         }
+
         public Builder allowedOperations(String... allowedOperations) {
             return allowedOperations(List.of(allowedOperations));
         }
+
         public Builder currentScenario(@Nullable CurrentScenarioDetailsResponse currentScenario) {
-            this.currentScenario = currentScenario;
+            $.currentScenario = currentScenario;
             return this;
         }
+
         public Builder currentScenarioStatus(@Nullable String currentScenarioStatus) {
-            this.currentScenarioStatus = currentScenarioStatus;
+            $.currentScenarioStatus = currentScenarioStatus;
             return this;
         }
+
         public Builder currentScenarioStatusDescription(@Nullable String currentScenarioStatusDescription) {
-            this.currentScenarioStatusDescription = currentScenarioStatusDescription;
+            $.currentScenarioStatusDescription = currentScenarioStatusDescription;
             return this;
         }
+
         public Builder failoverDeploymentModel(@Nullable String failoverDeploymentModel) {
-            this.failoverDeploymentModel = failoverDeploymentModel;
+            $.failoverDeploymentModel = failoverDeploymentModel;
             return this;
         }
+
         public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = friendlyName;
+            $.friendlyName = friendlyName;
             return this;
         }
+
         public Builder groups(@Nullable List<RecoveryPlanGroupResponse> groups) {
-            this.groups = groups;
+            $.groups = groups;
             return this;
         }
+
         public Builder groups(RecoveryPlanGroupResponse... groups) {
             return groups(List.of(groups));
         }
+
         public Builder lastPlannedFailoverTime(@Nullable String lastPlannedFailoverTime) {
-            this.lastPlannedFailoverTime = lastPlannedFailoverTime;
+            $.lastPlannedFailoverTime = lastPlannedFailoverTime;
             return this;
         }
+
         public Builder lastTestFailoverTime(@Nullable String lastTestFailoverTime) {
-            this.lastTestFailoverTime = lastTestFailoverTime;
+            $.lastTestFailoverTime = lastTestFailoverTime;
             return this;
         }
+
         public Builder lastUnplannedFailoverTime(@Nullable String lastUnplannedFailoverTime) {
-            this.lastUnplannedFailoverTime = lastUnplannedFailoverTime;
+            $.lastUnplannedFailoverTime = lastUnplannedFailoverTime;
             return this;
         }
+
         public Builder primaryFabricFriendlyName(@Nullable String primaryFabricFriendlyName) {
-            this.primaryFabricFriendlyName = primaryFabricFriendlyName;
+            $.primaryFabricFriendlyName = primaryFabricFriendlyName;
             return this;
         }
+
         public Builder primaryFabricId(@Nullable String primaryFabricId) {
-            this.primaryFabricId = primaryFabricId;
+            $.primaryFabricId = primaryFabricId;
             return this;
         }
+
         public Builder providerSpecificDetails(List<RecoveryPlanA2ADetailsResponse> providerSpecificDetails) {
-            this.providerSpecificDetails = Objects.requireNonNull(providerSpecificDetails);
+            $.providerSpecificDetails = providerSpecificDetails;
             return this;
         }
+
         public Builder providerSpecificDetails(RecoveryPlanA2ADetailsResponse... providerSpecificDetails) {
             return providerSpecificDetails(List.of(providerSpecificDetails));
         }
+
         public Builder recoveryFabricFriendlyName(@Nullable String recoveryFabricFriendlyName) {
-            this.recoveryFabricFriendlyName = recoveryFabricFriendlyName;
+            $.recoveryFabricFriendlyName = recoveryFabricFriendlyName;
             return this;
         }
+
         public Builder recoveryFabricId(@Nullable String recoveryFabricId) {
-            this.recoveryFabricId = recoveryFabricId;
+            $.recoveryFabricId = recoveryFabricId;
             return this;
         }
+
         public Builder replicationProviders(@Nullable List<String> replicationProviders) {
-            this.replicationProviders = replicationProviders;
+            $.replicationProviders = replicationProviders;
             return this;
         }
+
         public Builder replicationProviders(String... replicationProviders) {
             return replicationProviders(List.of(replicationProviders));
-        }        public RecoveryPlanPropertiesResponse build() {
-            return new RecoveryPlanPropertiesResponse(allowedOperations, currentScenario, currentScenarioStatus, currentScenarioStatusDescription, failoverDeploymentModel, friendlyName, groups, lastPlannedFailoverTime, lastTestFailoverTime, lastUnplannedFailoverTime, primaryFabricFriendlyName, primaryFabricId, providerSpecificDetails, recoveryFabricFriendlyName, recoveryFabricId, replicationProviders);
+        }
+
+        public RecoveryPlanPropertiesResponse build() {
+            $.providerSpecificDetails = Objects.requireNonNull($.providerSpecificDetails, "expected parameter 'providerSpecificDetails' to be non-null");
+            return $;
         }
     }
+
 }

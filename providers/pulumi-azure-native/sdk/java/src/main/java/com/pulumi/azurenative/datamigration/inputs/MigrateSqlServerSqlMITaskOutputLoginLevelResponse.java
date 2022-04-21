@@ -20,7 +20,7 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse extends com
      * 
      */
     @Import(name="endedOn", required=true)
-      private final String endedOn;
+    private String endedOn;
 
     public String endedOn() {
         return this.endedOn;
@@ -31,7 +31,7 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse extends com
      * 
      */
     @Import(name="exceptionsAndWarnings", required=true)
-      private final List<ReportableExceptionResponse> exceptionsAndWarnings;
+    private List<ReportableExceptionResponse> exceptionsAndWarnings;
 
     public List<ReportableExceptionResponse> exceptionsAndWarnings() {
         return this.exceptionsAndWarnings;
@@ -42,7 +42,7 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse extends com
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -53,7 +53,7 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse extends com
      * 
      */
     @Import(name="loginName", required=true)
-      private final String loginName;
+    private String loginName;
 
     public String loginName() {
         return this.loginName;
@@ -64,7 +64,7 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse extends com
      * 
      */
     @Import(name="message", required=true)
-      private final String message;
+    private String message;
 
     public String message() {
         return this.message;
@@ -76,7 +76,7 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse extends com
      * 
      */
     @Import(name="resultType", required=true)
-      private final String resultType;
+    private String resultType;
 
     public String resultType() {
         return this.resultType;
@@ -87,7 +87,7 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse extends com
      * 
      */
     @Import(name="stage", required=true)
-      private final String stage;
+    private String stage;
 
     public String stage() {
         return this.stage;
@@ -98,7 +98,7 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse extends com
      * 
      */
     @Import(name="startedOn", required=true)
-      private final String startedOn;
+    private String startedOn;
 
     public String startedOn() {
         return this.startedOn;
@@ -109,121 +109,105 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse extends com
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
     }
 
-    public MigrateSqlServerSqlMITaskOutputLoginLevelResponse(
-        String endedOn,
-        List<ReportableExceptionResponse> exceptionsAndWarnings,
-        String id,
-        String loginName,
-        String message,
-        String resultType,
-        String stage,
-        String startedOn,
-        String state) {
-        this.endedOn = Objects.requireNonNull(endedOn, "expected parameter 'endedOn' to be non-null");
-        this.exceptionsAndWarnings = Objects.requireNonNull(exceptionsAndWarnings, "expected parameter 'exceptionsAndWarnings' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.loginName = Objects.requireNonNull(loginName, "expected parameter 'loginName' to be non-null");
-        this.message = Objects.requireNonNull(message, "expected parameter 'message' to be non-null");
-        this.resultType = Codegen.stringProp("resultType").arg(resultType).require();
-        this.stage = Objects.requireNonNull(stage, "expected parameter 'stage' to be non-null");
-        this.startedOn = Objects.requireNonNull(startedOn, "expected parameter 'startedOn' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-    }
+    private MigrateSqlServerSqlMITaskOutputLoginLevelResponse() {}
 
-    private MigrateSqlServerSqlMITaskOutputLoginLevelResponse() {
-        this.endedOn = null;
-        this.exceptionsAndWarnings = List.of();
-        this.id = null;
-        this.loginName = null;
-        this.message = null;
-        this.resultType = null;
-        this.stage = null;
-        this.startedOn = null;
-        this.state = null;
+    private MigrateSqlServerSqlMITaskOutputLoginLevelResponse(MigrateSqlServerSqlMITaskOutputLoginLevelResponse $) {
+        this.endedOn = $.endedOn;
+        this.exceptionsAndWarnings = $.exceptionsAndWarnings;
+        this.id = $.id;
+        this.loginName = $.loginName;
+        this.message = $.message;
+        this.resultType = $.resultType;
+        this.stage = $.stage;
+        this.startedOn = $.startedOn;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MigrateSqlServerSqlMITaskOutputLoginLevelResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String endedOn;
-        private List<ReportableExceptionResponse> exceptionsAndWarnings;
-        private String id;
-        private String loginName;
-        private String message;
-        private String resultType;
-        private String stage;
-        private String startedOn;
-        private String state;
+        private MigrateSqlServerSqlMITaskOutputLoginLevelResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MigrateSqlServerSqlMITaskOutputLoginLevelResponse();
         }
 
         public Builder(MigrateSqlServerSqlMITaskOutputLoginLevelResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endedOn = defaults.endedOn;
-    	      this.exceptionsAndWarnings = defaults.exceptionsAndWarnings;
-    	      this.id = defaults.id;
-    	      this.loginName = defaults.loginName;
-    	      this.message = defaults.message;
-    	      this.resultType = defaults.resultType;
-    	      this.stage = defaults.stage;
-    	      this.startedOn = defaults.startedOn;
-    	      this.state = defaults.state;
+            $ = new MigrateSqlServerSqlMITaskOutputLoginLevelResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endedOn(String endedOn) {
-            this.endedOn = Objects.requireNonNull(endedOn);
+            $.endedOn = endedOn;
             return this;
         }
+
         public Builder exceptionsAndWarnings(List<ReportableExceptionResponse> exceptionsAndWarnings) {
-            this.exceptionsAndWarnings = Objects.requireNonNull(exceptionsAndWarnings);
+            $.exceptionsAndWarnings = exceptionsAndWarnings;
             return this;
         }
+
         public Builder exceptionsAndWarnings(ReportableExceptionResponse... exceptionsAndWarnings) {
             return exceptionsAndWarnings(List.of(exceptionsAndWarnings));
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder loginName(String loginName) {
-            this.loginName = Objects.requireNonNull(loginName);
+            $.loginName = loginName;
             return this;
         }
+
         public Builder message(String message) {
-            this.message = Objects.requireNonNull(message);
+            $.message = message;
             return this;
         }
+
         public Builder resultType(String resultType) {
-            this.resultType = Objects.requireNonNull(resultType);
+            $.resultType = resultType;
             return this;
         }
+
         public Builder stage(String stage) {
-            this.stage = Objects.requireNonNull(stage);
+            $.stage = stage;
             return this;
         }
+
         public Builder startedOn(String startedOn) {
-            this.startedOn = Objects.requireNonNull(startedOn);
+            $.startedOn = startedOn;
             return this;
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
-        }        public MigrateSqlServerSqlMITaskOutputLoginLevelResponse build() {
-            return new MigrateSqlServerSqlMITaskOutputLoginLevelResponse(endedOn, exceptionsAndWarnings, id, loginName, message, resultType, stage, startedOn, state);
+        }
+
+        public MigrateSqlServerSqlMITaskOutputLoginLevelResponse build() {
+            $.endedOn = Objects.requireNonNull($.endedOn, "expected parameter 'endedOn' to be non-null");
+            $.exceptionsAndWarnings = Objects.requireNonNull($.exceptionsAndWarnings, "expected parameter 'exceptionsAndWarnings' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.loginName = Objects.requireNonNull($.loginName, "expected parameter 'loginName' to be non-null");
+            $.message = Objects.requireNonNull($.message, "expected parameter 'message' to be non-null");
+            $.resultType = Codegen.stringProp("resultType").arg($.resultType).require();
+            $.stage = Objects.requireNonNull($.stage, "expected parameter 'stage' to be non-null");
+            $.startedOn = Objects.requireNonNull($.startedOn, "expected parameter 'startedOn' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            return $;
         }
     }
+
 }

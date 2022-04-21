@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class NFSVolumeSourceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="path", required=true)
-      private final Output<String> path;
+    private Output<String> path;
 
     public Output<String> path() {
         return this.path;
@@ -36,10 +36,10 @@ public final class NFSVolumeSourceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="readOnly")
-      private final @Nullable Output<Boolean> readOnly;
+    private @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> readOnly() {
-        return this.readOnly == null ? Codegen.empty() : this.readOnly;
+    public Optional<Output<Boolean>> readOnly() {
+        return Optional.ofNullable(this.readOnly);
     }
 
     /**
@@ -47,76 +47,70 @@ public final class NFSVolumeSourceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="server", required=true)
-      private final Output<String> server;
+    private Output<String> server;
 
     public Output<String> server() {
         return this.server;
     }
 
-    public NFSVolumeSourceArgs(
-        Output<String> path,
-        @Nullable Output<Boolean> readOnly,
-        Output<String> server) {
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-        this.readOnly = readOnly;
-        this.server = Objects.requireNonNull(server, "expected parameter 'server' to be non-null");
-    }
+    private NFSVolumeSourceArgs() {}
 
-    private NFSVolumeSourceArgs() {
-        this.path = Codegen.empty();
-        this.readOnly = Codegen.empty();
-        this.server = Codegen.empty();
+    private NFSVolumeSourceArgs(NFSVolumeSourceArgs $) {
+        this.path = $.path;
+        this.readOnly = $.readOnly;
+        this.server = $.server;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NFSVolumeSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> path;
-        private @Nullable Output<Boolean> readOnly;
-        private Output<String> server;
+        private NFSVolumeSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NFSVolumeSourceArgs();
         }
 
         public Builder(NFSVolumeSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.path = defaults.path;
-    	      this.readOnly = defaults.readOnly;
-    	      this.server = defaults.server;
+            $ = new NFSVolumeSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder path(Output<String> path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
         }
+
         public Builder path(String path) {
-            this.path = Output.of(Objects.requireNonNull(path));
-            return this;
+            return path(Output.of(path));
         }
+
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
-            this.readOnly = readOnly;
+            $.readOnly = readOnly;
             return this;
         }
-        public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Codegen.ofNullable(readOnly);
-            return this;
+
+        public Builder readOnly(Boolean readOnly) {
+            return readOnly(Output.of(readOnly));
         }
+
         public Builder server(Output<String> server) {
-            this.server = Objects.requireNonNull(server);
+            $.server = server;
             return this;
         }
+
         public Builder server(String server) {
-            this.server = Output.of(Objects.requireNonNull(server));
-            return this;
-        }        public NFSVolumeSourceArgs build() {
-            return new NFSVolumeSourceArgs(path, readOnly, server);
+            return server(Output.of(server));
+        }
+
+        public NFSVolumeSourceArgs build() {
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            $.server = Objects.requireNonNull($.server, "expected parameter 'server' to be non-null");
+            return $;
         }
     }
+
 }

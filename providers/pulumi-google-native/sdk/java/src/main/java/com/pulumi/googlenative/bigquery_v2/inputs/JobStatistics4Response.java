@@ -18,7 +18,7 @@ public final class JobStatistics4Response extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="destinationUriFileCounts", required=true)
-      private final List<String> destinationUriFileCounts;
+    private List<String> destinationUriFileCounts;
 
     public List<String> destinationUriFileCounts() {
         return this.destinationUriFileCounts;
@@ -29,58 +29,56 @@ public final class JobStatistics4Response extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="inputBytes", required=true)
-      private final String inputBytes;
+    private String inputBytes;
 
     public String inputBytes() {
         return this.inputBytes;
     }
 
-    public JobStatistics4Response(
-        List<String> destinationUriFileCounts,
-        String inputBytes) {
-        this.destinationUriFileCounts = Objects.requireNonNull(destinationUriFileCounts, "expected parameter 'destinationUriFileCounts' to be non-null");
-        this.inputBytes = Objects.requireNonNull(inputBytes, "expected parameter 'inputBytes' to be non-null");
-    }
+    private JobStatistics4Response() {}
 
-    private JobStatistics4Response() {
-        this.destinationUriFileCounts = List.of();
-        this.inputBytes = null;
+    private JobStatistics4Response(JobStatistics4Response $) {
+        this.destinationUriFileCounts = $.destinationUriFileCounts;
+        this.inputBytes = $.inputBytes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobStatistics4Response defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> destinationUriFileCounts;
-        private String inputBytes;
+        private JobStatistics4Response $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobStatistics4Response();
         }
 
         public Builder(JobStatistics4Response defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destinationUriFileCounts = defaults.destinationUriFileCounts;
-    	      this.inputBytes = defaults.inputBytes;
+            $ = new JobStatistics4Response(Objects.requireNonNull(defaults));
         }
 
         public Builder destinationUriFileCounts(List<String> destinationUriFileCounts) {
-            this.destinationUriFileCounts = Objects.requireNonNull(destinationUriFileCounts);
+            $.destinationUriFileCounts = destinationUriFileCounts;
             return this;
         }
+
         public Builder destinationUriFileCounts(String... destinationUriFileCounts) {
             return destinationUriFileCounts(List.of(destinationUriFileCounts));
         }
+
         public Builder inputBytes(String inputBytes) {
-            this.inputBytes = Objects.requireNonNull(inputBytes);
+            $.inputBytes = inputBytes;
             return this;
-        }        public JobStatistics4Response build() {
-            return new JobStatistics4Response(destinationUriFileCounts, inputBytes);
+        }
+
+        public JobStatistics4Response build() {
+            $.destinationUriFileCounts = Objects.requireNonNull($.destinationUriFileCounts, "expected parameter 'destinationUriFileCounts' to be non-null");
+            $.inputBytes = Objects.requireNonNull($.inputBytes, "expected parameter 'inputBytes' to be non-null");
+            return $;
         }
     }
+
 }

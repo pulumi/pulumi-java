@@ -24,7 +24,7 @@ public final class PemCertificateListArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="certificates", required=true)
-      private final Output<List<String>> certificates;
+    private Output<List<String>> certificates;
 
     public Output<List<String>> certificates() {
         return this.certificates;
@@ -36,66 +36,64 @@ public final class PemCertificateListArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public PemCertificateListArgs(
-        Output<List<String>> certificates,
-        Output<String> type) {
-        this.certificates = Objects.requireNonNull(certificates, "expected parameter 'certificates' to be non-null");
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private PemCertificateListArgs() {}
 
-    private PemCertificateListArgs() {
-        this.certificates = Codegen.empty();
-        this.type = Codegen.empty();
+    private PemCertificateListArgs(PemCertificateListArgs $) {
+        this.certificates = $.certificates;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PemCertificateListArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> certificates;
-        private Output<String> type;
+        private PemCertificateListArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PemCertificateListArgs();
         }
 
         public Builder(PemCertificateListArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificates = defaults.certificates;
-    	      this.type = defaults.type;
+            $ = new PemCertificateListArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificates(Output<List<String>> certificates) {
-            this.certificates = Objects.requireNonNull(certificates);
+            $.certificates = certificates;
             return this;
         }
+
         public Builder certificates(List<String> certificates) {
-            this.certificates = Output.of(Objects.requireNonNull(certificates));
-            return this;
+            return certificates(Output.of(certificates));
         }
+
         public Builder certificates(String... certificates) {
             return certificates(List.of(certificates));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public PemCertificateListArgs build() {
-            return new PemCertificateListArgs(certificates, type);
+            return type(Output.of(type));
+        }
+
+        public PemCertificateListArgs build() {
+            $.certificates = Objects.requireNonNull($.certificates, "expected parameter 'certificates' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

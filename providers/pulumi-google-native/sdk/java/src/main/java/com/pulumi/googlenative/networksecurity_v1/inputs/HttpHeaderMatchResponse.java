@@ -21,7 +21,7 @@ public final class HttpHeaderMatchResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="headerName", required=true)
-      private final String headerName;
+    private String headerName;
 
     public String headerName() {
         return this.headerName;
@@ -32,55 +32,52 @@ public final class HttpHeaderMatchResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="regexMatch", required=true)
-      private final String regexMatch;
+    private String regexMatch;
 
     public String regexMatch() {
         return this.regexMatch;
     }
 
-    public HttpHeaderMatchResponse(
-        String headerName,
-        String regexMatch) {
-        this.headerName = Objects.requireNonNull(headerName, "expected parameter 'headerName' to be non-null");
-        this.regexMatch = Objects.requireNonNull(regexMatch, "expected parameter 'regexMatch' to be non-null");
-    }
+    private HttpHeaderMatchResponse() {}
 
-    private HttpHeaderMatchResponse() {
-        this.headerName = null;
-        this.regexMatch = null;
+    private HttpHeaderMatchResponse(HttpHeaderMatchResponse $) {
+        this.headerName = $.headerName;
+        this.regexMatch = $.regexMatch;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpHeaderMatchResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String headerName;
-        private String regexMatch;
+        private HttpHeaderMatchResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpHeaderMatchResponse();
         }
 
         public Builder(HttpHeaderMatchResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.headerName = defaults.headerName;
-    	      this.regexMatch = defaults.regexMatch;
+            $ = new HttpHeaderMatchResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder headerName(String headerName) {
-            this.headerName = Objects.requireNonNull(headerName);
+            $.headerName = headerName;
             return this;
         }
+
         public Builder regexMatch(String regexMatch) {
-            this.regexMatch = Objects.requireNonNull(regexMatch);
+            $.regexMatch = regexMatch;
             return this;
-        }        public HttpHeaderMatchResponse build() {
-            return new HttpHeaderMatchResponse(headerName, regexMatch);
+        }
+
+        public HttpHeaderMatchResponse build() {
+            $.headerName = Objects.requireNonNull($.headerName, "expected parameter 'headerName' to be non-null");
+            $.regexMatch = Objects.requireNonNull($.regexMatch, "expected parameter 'regexMatch' to be non-null");
+            return $;
         }
     }
+
 }

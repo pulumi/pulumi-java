@@ -28,10 +28,10 @@ public final class JsonReadSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="compressionProperties")
-      private final @Nullable Object compressionProperties;
+    private @Nullable Object compressionProperties;
 
-    public Object compressionProperties() {
-        return this.compressionProperties == null ? null : this.compressionProperties;
+    public Optional<Object> compressionProperties() {
+        return Optional.ofNullable(this.compressionProperties);
     }
 
     /**
@@ -40,55 +40,51 @@ public final class JsonReadSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public JsonReadSettingsResponse(
-        @Nullable Object compressionProperties,
-        String type) {
-        this.compressionProperties = compressionProperties;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private JsonReadSettingsResponse() {}
 
-    private JsonReadSettingsResponse() {
-        this.compressionProperties = null;
-        this.type = null;
+    private JsonReadSettingsResponse(JsonReadSettingsResponse $) {
+        this.compressionProperties = $.compressionProperties;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JsonReadSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object compressionProperties;
-        private String type;
+        private JsonReadSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new JsonReadSettingsResponse();
         }
 
         public Builder(JsonReadSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.compressionProperties = defaults.compressionProperties;
-    	      this.type = defaults.type;
+            $ = new JsonReadSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder compressionProperties(@Nullable Object compressionProperties) {
-            this.compressionProperties = compressionProperties;
+            $.compressionProperties = compressionProperties;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public JsonReadSettingsResponse build() {
-            return new JsonReadSettingsResponse(compressionProperties, type);
+        }
+
+        public JsonReadSettingsResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

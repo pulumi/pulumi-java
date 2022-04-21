@@ -17,7 +17,7 @@ public final class GetCustomerEventArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="customerEventName", required=true)
-      private final String customerEventName;
+    private String customerEventName;
 
     public String customerEventName() {
         return this.customerEventName;
@@ -28,7 +28,7 @@ public final class GetCustomerEventArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetCustomerEventArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="testBaseAccountName", required=true)
-      private final String testBaseAccountName;
+    private String testBaseAccountName;
 
     public String testBaseAccountName() {
         return this.testBaseAccountName;
     }
 
-    public GetCustomerEventArgs(
-        String customerEventName,
-        String resourceGroupName,
-        String testBaseAccountName) {
-        this.customerEventName = Objects.requireNonNull(customerEventName, "expected parameter 'customerEventName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.testBaseAccountName = Objects.requireNonNull(testBaseAccountName, "expected parameter 'testBaseAccountName' to be non-null");
-    }
+    private GetCustomerEventArgs() {}
 
-    private GetCustomerEventArgs() {
-        this.customerEventName = null;
-        this.resourceGroupName = null;
-        this.testBaseAccountName = null;
+    private GetCustomerEventArgs(GetCustomerEventArgs $) {
+        this.customerEventName = $.customerEventName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.testBaseAccountName = $.testBaseAccountName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCustomerEventArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String customerEventName;
-        private String resourceGroupName;
-        private String testBaseAccountName;
+        private GetCustomerEventArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCustomerEventArgs();
         }
 
         public Builder(GetCustomerEventArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customerEventName = defaults.customerEventName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.testBaseAccountName = defaults.testBaseAccountName;
+            $ = new GetCustomerEventArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customerEventName(String customerEventName) {
-            this.customerEventName = Objects.requireNonNull(customerEventName);
+            $.customerEventName = customerEventName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder testBaseAccountName(String testBaseAccountName) {
-            this.testBaseAccountName = Objects.requireNonNull(testBaseAccountName);
+            $.testBaseAccountName = testBaseAccountName;
             return this;
-        }        public GetCustomerEventArgs build() {
-            return new GetCustomerEventArgs(customerEventName, resourceGroupName, testBaseAccountName);
+        }
+
+        public GetCustomerEventArgs build() {
+            $.customerEventName = Objects.requireNonNull($.customerEventName, "expected parameter 'customerEventName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.testBaseAccountName = Objects.requireNonNull($.testBaseAccountName, "expected parameter 'testBaseAccountName' to be non-null");
+            return $;
         }
     }
+
 }

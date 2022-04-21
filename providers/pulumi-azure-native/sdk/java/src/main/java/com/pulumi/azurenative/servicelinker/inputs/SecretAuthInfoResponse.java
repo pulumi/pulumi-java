@@ -25,7 +25,7 @@ public final class SecretAuthInfoResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="authType", required=true)
-      private final String authType;
+    private String authType;
 
     public String authType() {
         return this.authType;
@@ -36,10 +36,10 @@ public final class SecretAuthInfoResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -47,64 +47,57 @@ public final class SecretAuthInfoResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="secret")
-      private final @Nullable String secret;
+    private @Nullable String secret;
 
     public Optional<String> secret() {
-        return this.secret == null ? Optional.empty() : Optional.ofNullable(this.secret);
+        return Optional.ofNullable(this.secret);
     }
 
-    public SecretAuthInfoResponse(
-        String authType,
-        @Nullable String name,
-        @Nullable String secret) {
-        this.authType = Codegen.stringProp("authType").arg(authType).require();
-        this.name = name;
-        this.secret = secret;
-    }
+    private SecretAuthInfoResponse() {}
 
-    private SecretAuthInfoResponse() {
-        this.authType = null;
-        this.name = null;
-        this.secret = null;
+    private SecretAuthInfoResponse(SecretAuthInfoResponse $) {
+        this.authType = $.authType;
+        this.name = $.name;
+        this.secret = $.secret;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecretAuthInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String authType;
-        private @Nullable String name;
-        private @Nullable String secret;
+        private SecretAuthInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecretAuthInfoResponse();
         }
 
         public Builder(SecretAuthInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authType = defaults.authType;
-    	      this.name = defaults.name;
-    	      this.secret = defaults.secret;
+            $ = new SecretAuthInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder authType(String authType) {
-            this.authType = Objects.requireNonNull(authType);
+            $.authType = authType;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder secret(@Nullable String secret) {
-            this.secret = secret;
+            $.secret = secret;
             return this;
-        }        public SecretAuthInfoResponse build() {
-            return new SecretAuthInfoResponse(authType, name, secret);
+        }
+
+        public SecretAuthInfoResponse build() {
+            $.authType = Codegen.stringProp("authType").arg($.authType).require();
+            return $;
         }
     }
+
 }

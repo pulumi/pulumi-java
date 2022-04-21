@@ -23,45 +23,44 @@ public final class NodePlacementConfigurationResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="policy")
-      private final @Nullable String policy;
+    private @Nullable String policy;
 
     public Optional<String> policy() {
-        return this.policy == null ? Optional.empty() : Optional.ofNullable(this.policy);
+        return Optional.ofNullable(this.policy);
     }
 
-    public NodePlacementConfigurationResponse(@Nullable String policy) {
-        this.policy = policy;
-    }
+    private NodePlacementConfigurationResponse() {}
 
-    private NodePlacementConfigurationResponse() {
-        this.policy = null;
+    private NodePlacementConfigurationResponse(NodePlacementConfigurationResponse $) {
+        this.policy = $.policy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodePlacementConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String policy;
+        private NodePlacementConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodePlacementConfigurationResponse();
         }
 
         public Builder(NodePlacementConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.policy = defaults.policy;
+            $ = new NodePlacementConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder policy(@Nullable String policy) {
-            this.policy = policy;
+            $.policy = policy;
             return this;
-        }        public NodePlacementConfigurationResponse build() {
-            return new NodePlacementConfigurationResponse(policy);
+        }
+
+        public NodePlacementConfigurationResponse build() {
+            return $;
         }
     }
+
 }

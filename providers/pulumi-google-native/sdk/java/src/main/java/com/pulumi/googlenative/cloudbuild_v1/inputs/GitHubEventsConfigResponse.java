@@ -23,7 +23,7 @@ public final class GitHubEventsConfigResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="enterpriseConfigResourceName", required=true)
-      private final String enterpriseConfigResourceName;
+    private String enterpriseConfigResourceName;
 
     public String enterpriseConfigResourceName() {
         return this.enterpriseConfigResourceName;
@@ -34,7 +34,7 @@ public final class GitHubEventsConfigResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="installationId", required=true)
-      private final String installationId;
+    private String installationId;
 
     public String installationId() {
         return this.installationId;
@@ -45,7 +45,7 @@ public final class GitHubEventsConfigResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -56,7 +56,7 @@ public final class GitHubEventsConfigResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="owner", required=true)
-      private final String owner;
+    private String owner;
 
     public String owner() {
         return this.owner;
@@ -67,7 +67,7 @@ public final class GitHubEventsConfigResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="pullRequest", required=true)
-      private final PullRequestFilterResponse pullRequest;
+    private PullRequestFilterResponse pullRequest;
 
     public PullRequestFilterResponse pullRequest() {
         return this.pullRequest;
@@ -78,91 +78,80 @@ public final class GitHubEventsConfigResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="push", required=true)
-      private final PushFilterResponse push;
+    private PushFilterResponse push;
 
     public PushFilterResponse push() {
         return this.push;
     }
 
-    public GitHubEventsConfigResponse(
-        String enterpriseConfigResourceName,
-        String installationId,
-        String name,
-        String owner,
-        PullRequestFilterResponse pullRequest,
-        PushFilterResponse push) {
-        this.enterpriseConfigResourceName = Objects.requireNonNull(enterpriseConfigResourceName, "expected parameter 'enterpriseConfigResourceName' to be non-null");
-        this.installationId = Objects.requireNonNull(installationId, "expected parameter 'installationId' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.owner = Objects.requireNonNull(owner, "expected parameter 'owner' to be non-null");
-        this.pullRequest = Objects.requireNonNull(pullRequest, "expected parameter 'pullRequest' to be non-null");
-        this.push = Objects.requireNonNull(push, "expected parameter 'push' to be non-null");
-    }
+    private GitHubEventsConfigResponse() {}
 
-    private GitHubEventsConfigResponse() {
-        this.enterpriseConfigResourceName = null;
-        this.installationId = null;
-        this.name = null;
-        this.owner = null;
-        this.pullRequest = null;
-        this.push = null;
+    private GitHubEventsConfigResponse(GitHubEventsConfigResponse $) {
+        this.enterpriseConfigResourceName = $.enterpriseConfigResourceName;
+        this.installationId = $.installationId;
+        this.name = $.name;
+        this.owner = $.owner;
+        this.pullRequest = $.pullRequest;
+        this.push = $.push;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GitHubEventsConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String enterpriseConfigResourceName;
-        private String installationId;
-        private String name;
-        private String owner;
-        private PullRequestFilterResponse pullRequest;
-        private PushFilterResponse push;
+        private GitHubEventsConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GitHubEventsConfigResponse();
         }
 
         public Builder(GitHubEventsConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enterpriseConfigResourceName = defaults.enterpriseConfigResourceName;
-    	      this.installationId = defaults.installationId;
-    	      this.name = defaults.name;
-    	      this.owner = defaults.owner;
-    	      this.pullRequest = defaults.pullRequest;
-    	      this.push = defaults.push;
+            $ = new GitHubEventsConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enterpriseConfigResourceName(String enterpriseConfigResourceName) {
-            this.enterpriseConfigResourceName = Objects.requireNonNull(enterpriseConfigResourceName);
+            $.enterpriseConfigResourceName = enterpriseConfigResourceName;
             return this;
         }
+
         public Builder installationId(String installationId) {
-            this.installationId = Objects.requireNonNull(installationId);
+            $.installationId = installationId;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder owner(String owner) {
-            this.owner = Objects.requireNonNull(owner);
+            $.owner = owner;
             return this;
         }
+
         public Builder pullRequest(PullRequestFilterResponse pullRequest) {
-            this.pullRequest = Objects.requireNonNull(pullRequest);
+            $.pullRequest = pullRequest;
             return this;
         }
+
         public Builder push(PushFilterResponse push) {
-            this.push = Objects.requireNonNull(push);
+            $.push = push;
             return this;
-        }        public GitHubEventsConfigResponse build() {
-            return new GitHubEventsConfigResponse(enterpriseConfigResourceName, installationId, name, owner, pullRequest, push);
+        }
+
+        public GitHubEventsConfigResponse build() {
+            $.enterpriseConfigResourceName = Objects.requireNonNull($.enterpriseConfigResourceName, "expected parameter 'enterpriseConfigResourceName' to be non-null");
+            $.installationId = Objects.requireNonNull($.installationId, "expected parameter 'installationId' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.owner = Objects.requireNonNull($.owner, "expected parameter 'owner' to be non-null");
+            $.pullRequest = Objects.requireNonNull($.pullRequest, "expected parameter 'pullRequest' to be non-null");
+            $.push = Objects.requireNonNull($.push, "expected parameter 'push' to be non-null");
+            return $;
         }
     }
+
 }

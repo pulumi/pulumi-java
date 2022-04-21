@@ -23,7 +23,7 @@ public final class MuxStreamResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="container", required=true)
-      private final String container;
+    private String container;
 
     public String container() {
         return this.container;
@@ -34,7 +34,7 @@ public final class MuxStreamResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="elementaryStreams", required=true)
-      private final List<String> elementaryStreams;
+    private List<String> elementaryStreams;
 
     public List<String> elementaryStreams() {
         return this.elementaryStreams;
@@ -45,7 +45,7 @@ public final class MuxStreamResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="fileName", required=true)
-      private final String fileName;
+    private String fileName;
 
     public String fileName() {
         return this.fileName;
@@ -56,7 +56,7 @@ public final class MuxStreamResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="key", required=true)
-      private final String key;
+    private String key;
 
     public String key() {
         return this.key;
@@ -67,85 +67,77 @@ public final class MuxStreamResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="segmentSettings", required=true)
-      private final SegmentSettingsResponse segmentSettings;
+    private SegmentSettingsResponse segmentSettings;
 
     public SegmentSettingsResponse segmentSettings() {
         return this.segmentSettings;
     }
 
-    public MuxStreamResponse(
-        String container,
-        List<String> elementaryStreams,
-        String fileName,
-        String key,
-        SegmentSettingsResponse segmentSettings) {
-        this.container = Objects.requireNonNull(container, "expected parameter 'container' to be non-null");
-        this.elementaryStreams = Objects.requireNonNull(elementaryStreams, "expected parameter 'elementaryStreams' to be non-null");
-        this.fileName = Objects.requireNonNull(fileName, "expected parameter 'fileName' to be non-null");
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.segmentSettings = Objects.requireNonNull(segmentSettings, "expected parameter 'segmentSettings' to be non-null");
-    }
+    private MuxStreamResponse() {}
 
-    private MuxStreamResponse() {
-        this.container = null;
-        this.elementaryStreams = List.of();
-        this.fileName = null;
-        this.key = null;
-        this.segmentSettings = null;
+    private MuxStreamResponse(MuxStreamResponse $) {
+        this.container = $.container;
+        this.elementaryStreams = $.elementaryStreams;
+        this.fileName = $.fileName;
+        this.key = $.key;
+        this.segmentSettings = $.segmentSettings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MuxStreamResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String container;
-        private List<String> elementaryStreams;
-        private String fileName;
-        private String key;
-        private SegmentSettingsResponse segmentSettings;
+        private MuxStreamResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MuxStreamResponse();
         }
 
         public Builder(MuxStreamResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.container = defaults.container;
-    	      this.elementaryStreams = defaults.elementaryStreams;
-    	      this.fileName = defaults.fileName;
-    	      this.key = defaults.key;
-    	      this.segmentSettings = defaults.segmentSettings;
+            $ = new MuxStreamResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder container(String container) {
-            this.container = Objects.requireNonNull(container);
+            $.container = container;
             return this;
         }
+
         public Builder elementaryStreams(List<String> elementaryStreams) {
-            this.elementaryStreams = Objects.requireNonNull(elementaryStreams);
+            $.elementaryStreams = elementaryStreams;
             return this;
         }
+
         public Builder elementaryStreams(String... elementaryStreams) {
             return elementaryStreams(List.of(elementaryStreams));
         }
+
         public Builder fileName(String fileName) {
-            this.fileName = Objects.requireNonNull(fileName);
+            $.fileName = fileName;
             return this;
         }
+
         public Builder key(String key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder segmentSettings(SegmentSettingsResponse segmentSettings) {
-            this.segmentSettings = Objects.requireNonNull(segmentSettings);
+            $.segmentSettings = segmentSettings;
             return this;
-        }        public MuxStreamResponse build() {
-            return new MuxStreamResponse(container, elementaryStreams, fileName, key, segmentSettings);
+        }
+
+        public MuxStreamResponse build() {
+            $.container = Objects.requireNonNull($.container, "expected parameter 'container' to be non-null");
+            $.elementaryStreams = Objects.requireNonNull($.elementaryStreams, "expected parameter 'elementaryStreams' to be non-null");
+            $.fileName = Objects.requireNonNull($.fileName, "expected parameter 'fileName' to be non-null");
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.segmentSettings = Objects.requireNonNull($.segmentSettings, "expected parameter 'segmentSettings' to be non-null");
+            return $;
         }
     }
+
 }

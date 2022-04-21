@@ -7,9 +7,9 @@ import com.pulumi.awsnative.lightsail.inputs.InstanceMonthlyTransferArgs;
 import com.pulumi.awsnative.lightsail.inputs.InstancePortArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class InstanceNetworkingArgs extends com.pulumi.resources.ResourceA
     public static final InstanceNetworkingArgs Empty = new InstanceNetworkingArgs();
 
     @Import(name="monthlyTransfer")
-      private final @Nullable Output<InstanceMonthlyTransferArgs> monthlyTransfer;
+    private @Nullable Output<InstanceMonthlyTransferArgs> monthlyTransfer;
 
-    public Output<InstanceMonthlyTransferArgs> monthlyTransfer() {
-        return this.monthlyTransfer == null ? Codegen.empty() : this.monthlyTransfer;
+    public Optional<Output<InstanceMonthlyTransferArgs>> monthlyTransfer() {
+        return Optional.ofNullable(this.monthlyTransfer);
     }
 
     /**
@@ -33,66 +33,63 @@ public final class InstanceNetworkingArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="ports", required=true)
-      private final Output<List<InstancePortArgs>> ports;
+    private Output<List<InstancePortArgs>> ports;
 
     public Output<List<InstancePortArgs>> ports() {
         return this.ports;
     }
 
-    public InstanceNetworkingArgs(
-        @Nullable Output<InstanceMonthlyTransferArgs> monthlyTransfer,
-        Output<List<InstancePortArgs>> ports) {
-        this.monthlyTransfer = monthlyTransfer;
-        this.ports = Objects.requireNonNull(ports, "expected parameter 'ports' to be non-null");
-    }
+    private InstanceNetworkingArgs() {}
 
-    private InstanceNetworkingArgs() {
-        this.monthlyTransfer = Codegen.empty();
-        this.ports = Codegen.empty();
+    private InstanceNetworkingArgs(InstanceNetworkingArgs $) {
+        this.monthlyTransfer = $.monthlyTransfer;
+        this.ports = $.ports;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceNetworkingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<InstanceMonthlyTransferArgs> monthlyTransfer;
-        private Output<List<InstancePortArgs>> ports;
+        private InstanceNetworkingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceNetworkingArgs();
         }
 
         public Builder(InstanceNetworkingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.monthlyTransfer = defaults.monthlyTransfer;
-    	      this.ports = defaults.ports;
+            $ = new InstanceNetworkingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder monthlyTransfer(@Nullable Output<InstanceMonthlyTransferArgs> monthlyTransfer) {
-            this.monthlyTransfer = monthlyTransfer;
+            $.monthlyTransfer = monthlyTransfer;
             return this;
         }
-        public Builder monthlyTransfer(@Nullable InstanceMonthlyTransferArgs monthlyTransfer) {
-            this.monthlyTransfer = Codegen.ofNullable(monthlyTransfer);
-            return this;
+
+        public Builder monthlyTransfer(InstanceMonthlyTransferArgs monthlyTransfer) {
+            return monthlyTransfer(Output.of(monthlyTransfer));
         }
+
         public Builder ports(Output<List<InstancePortArgs>> ports) {
-            this.ports = Objects.requireNonNull(ports);
+            $.ports = ports;
             return this;
         }
+
         public Builder ports(List<InstancePortArgs> ports) {
-            this.ports = Output.of(Objects.requireNonNull(ports));
-            return this;
+            return ports(Output.of(ports));
         }
+
         public Builder ports(InstancePortArgs... ports) {
             return ports(List.of(ports));
-        }        public InstanceNetworkingArgs build() {
-            return new InstanceNetworkingArgs(monthlyTransfer, ports);
+        }
+
+        public InstanceNetworkingArgs build() {
+            $.ports = Objects.requireNonNull($.ports, "expected parameter 'ports' to be non-null");
+            return $;
         }
     }
+
 }

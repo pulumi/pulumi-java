@@ -17,7 +17,7 @@ public final class GetPolicyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="policyName", required=true)
-      private final String policyName;
+    private String policyName;
 
     public String policyName() {
         return this.policyName;
@@ -28,55 +28,52 @@ public final class GetPolicyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetPolicyArgs(
-        String policyName,
-        String resourceGroupName) {
-        this.policyName = Objects.requireNonNull(policyName, "expected parameter 'policyName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetPolicyArgs() {}
 
-    private GetPolicyArgs() {
-        this.policyName = null;
-        this.resourceGroupName = null;
+    private GetPolicyArgs(GetPolicyArgs $) {
+        this.policyName = $.policyName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String policyName;
-        private String resourceGroupName;
+        private GetPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPolicyArgs();
         }
 
         public Builder(GetPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.policyName = defaults.policyName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder policyName(String policyName) {
-            this.policyName = Objects.requireNonNull(policyName);
+            $.policyName = policyName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetPolicyArgs build() {
-            return new GetPolicyArgs(policyName, resourceGroupName);
+        }
+
+        public GetPolicyArgs build() {
+            $.policyName = Objects.requireNonNull($.policyName, "expected parameter 'policyName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

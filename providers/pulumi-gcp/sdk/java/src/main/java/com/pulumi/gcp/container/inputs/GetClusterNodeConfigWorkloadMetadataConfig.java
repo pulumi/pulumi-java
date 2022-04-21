@@ -13,45 +13,45 @@ public final class GetClusterNodeConfigWorkloadMetadataConfig extends com.pulumi
     public static final GetClusterNodeConfigWorkloadMetadataConfig Empty = new GetClusterNodeConfigWorkloadMetadataConfig();
 
     @Import(name="mode", required=true)
-      private final String mode;
+    private String mode;
 
     public String mode() {
         return this.mode;
     }
 
-    public GetClusterNodeConfigWorkloadMetadataConfig(String mode) {
-        this.mode = Objects.requireNonNull(mode, "expected parameter 'mode' to be non-null");
-    }
+    private GetClusterNodeConfigWorkloadMetadataConfig() {}
 
-    private GetClusterNodeConfigWorkloadMetadataConfig() {
-        this.mode = null;
+    private GetClusterNodeConfigWorkloadMetadataConfig(GetClusterNodeConfigWorkloadMetadataConfig $) {
+        this.mode = $.mode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterNodeConfigWorkloadMetadataConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String mode;
+        private GetClusterNodeConfigWorkloadMetadataConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterNodeConfigWorkloadMetadataConfig();
         }
 
         public Builder(GetClusterNodeConfigWorkloadMetadataConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mode = defaults.mode;
+            $ = new GetClusterNodeConfigWorkloadMetadataConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder mode(String mode) {
-            this.mode = Objects.requireNonNull(mode);
+            $.mode = mode;
             return this;
-        }        public GetClusterNodeConfigWorkloadMetadataConfig build() {
-            return new GetClusterNodeConfigWorkloadMetadataConfig(mode);
+        }
+
+        public GetClusterNodeConfigWorkloadMetadataConfig build() {
+            $.mode = Objects.requireNonNull($.mode, "expected parameter 'mode' to be non-null");
+            return $;
         }
     }
+
 }

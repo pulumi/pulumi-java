@@ -21,7 +21,7 @@ public final class AwsAccessKeyResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="accessKeyId", required=true)
-      private final String accessKeyId;
+    private String accessKeyId;
 
     public String accessKeyId() {
         return this.accessKeyId;
@@ -32,55 +32,52 @@ public final class AwsAccessKeyResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="secretAccessKey", required=true)
-      private final String secretAccessKey;
+    private String secretAccessKey;
 
     public String secretAccessKey() {
         return this.secretAccessKey;
     }
 
-    public AwsAccessKeyResponse(
-        String accessKeyId,
-        String secretAccessKey) {
-        this.accessKeyId = Objects.requireNonNull(accessKeyId, "expected parameter 'accessKeyId' to be non-null");
-        this.secretAccessKey = Objects.requireNonNull(secretAccessKey, "expected parameter 'secretAccessKey' to be non-null");
-    }
+    private AwsAccessKeyResponse() {}
 
-    private AwsAccessKeyResponse() {
-        this.accessKeyId = null;
-        this.secretAccessKey = null;
+    private AwsAccessKeyResponse(AwsAccessKeyResponse $) {
+        this.accessKeyId = $.accessKeyId;
+        this.secretAccessKey = $.secretAccessKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AwsAccessKeyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accessKeyId;
-        private String secretAccessKey;
+        private AwsAccessKeyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AwsAccessKeyResponse();
         }
 
         public Builder(AwsAccessKeyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessKeyId = defaults.accessKeyId;
-    	      this.secretAccessKey = defaults.secretAccessKey;
+            $ = new AwsAccessKeyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accessKeyId(String accessKeyId) {
-            this.accessKeyId = Objects.requireNonNull(accessKeyId);
+            $.accessKeyId = accessKeyId;
             return this;
         }
+
         public Builder secretAccessKey(String secretAccessKey) {
-            this.secretAccessKey = Objects.requireNonNull(secretAccessKey);
+            $.secretAccessKey = secretAccessKey;
             return this;
-        }        public AwsAccessKeyResponse build() {
-            return new AwsAccessKeyResponse(accessKeyId, secretAccessKey);
+        }
+
+        public AwsAccessKeyResponse build() {
+            $.accessKeyId = Objects.requireNonNull($.accessKeyId, "expected parameter 'accessKeyId' to be non-null");
+            $.secretAccessKey = Objects.requireNonNull($.secretAccessKey, "expected parameter 'secretAccessKey' to be non-null");
+            return $;
         }
     }
+
 }

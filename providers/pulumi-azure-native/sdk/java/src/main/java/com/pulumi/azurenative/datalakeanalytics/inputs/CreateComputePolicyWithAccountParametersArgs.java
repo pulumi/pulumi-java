@@ -7,10 +7,10 @@ import com.pulumi.azurenative.datalakeanalytics.enums.AADObjectType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class CreateComputePolicyWithAccountParametersArgs extends com.pulu
      * 
      */
     @Import(name="maxDegreeOfParallelismPerJob")
-      private final @Nullable Output<Integer> maxDegreeOfParallelismPerJob;
+    private @Nullable Output<Integer> maxDegreeOfParallelismPerJob;
 
-    public Output<Integer> maxDegreeOfParallelismPerJob() {
-        return this.maxDegreeOfParallelismPerJob == null ? Codegen.empty() : this.maxDegreeOfParallelismPerJob;
+    public Optional<Output<Integer>> maxDegreeOfParallelismPerJob() {
+        return Optional.ofNullable(this.maxDegreeOfParallelismPerJob);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class CreateComputePolicyWithAccountParametersArgs extends com.pulu
      * 
      */
     @Import(name="minPriorityPerJob")
-      private final @Nullable Output<Integer> minPriorityPerJob;
+    private @Nullable Output<Integer> minPriorityPerJob;
 
-    public Output<Integer> minPriorityPerJob() {
-        return this.minPriorityPerJob == null ? Codegen.empty() : this.minPriorityPerJob;
+    public Optional<Output<Integer>> minPriorityPerJob() {
+        return Optional.ofNullable(this.minPriorityPerJob);
     }
 
     /**
@@ -49,7 +49,7 @@ public final class CreateComputePolicyWithAccountParametersArgs extends com.pulu
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -60,7 +60,7 @@ public final class CreateComputePolicyWithAccountParametersArgs extends com.pulu
      * 
      */
     @Import(name="objectId", required=true)
-      private final Output<String> objectId;
+    private Output<String> objectId;
 
     public Output<String> objectId() {
         return this.objectId;
@@ -71,102 +71,91 @@ public final class CreateComputePolicyWithAccountParametersArgs extends com.pulu
      * 
      */
     @Import(name="objectType", required=true)
-      private final Output<Either<String,AADObjectType>> objectType;
+    private Output<Either<String,AADObjectType>> objectType;
 
     public Output<Either<String,AADObjectType>> objectType() {
         return this.objectType;
     }
 
-    public CreateComputePolicyWithAccountParametersArgs(
-        @Nullable Output<Integer> maxDegreeOfParallelismPerJob,
-        @Nullable Output<Integer> minPriorityPerJob,
-        Output<String> name,
-        Output<String> objectId,
-        Output<Either<String,AADObjectType>> objectType) {
-        this.maxDegreeOfParallelismPerJob = maxDegreeOfParallelismPerJob;
-        this.minPriorityPerJob = minPriorityPerJob;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.objectId = Objects.requireNonNull(objectId, "expected parameter 'objectId' to be non-null");
-        this.objectType = Objects.requireNonNull(objectType, "expected parameter 'objectType' to be non-null");
-    }
+    private CreateComputePolicyWithAccountParametersArgs() {}
 
-    private CreateComputePolicyWithAccountParametersArgs() {
-        this.maxDegreeOfParallelismPerJob = Codegen.empty();
-        this.minPriorityPerJob = Codegen.empty();
-        this.name = Codegen.empty();
-        this.objectId = Codegen.empty();
-        this.objectType = Codegen.empty();
+    private CreateComputePolicyWithAccountParametersArgs(CreateComputePolicyWithAccountParametersArgs $) {
+        this.maxDegreeOfParallelismPerJob = $.maxDegreeOfParallelismPerJob;
+        this.minPriorityPerJob = $.minPriorityPerJob;
+        this.name = $.name;
+        this.objectId = $.objectId;
+        this.objectType = $.objectType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CreateComputePolicyWithAccountParametersArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> maxDegreeOfParallelismPerJob;
-        private @Nullable Output<Integer> minPriorityPerJob;
-        private Output<String> name;
-        private Output<String> objectId;
-        private Output<Either<String,AADObjectType>> objectType;
+        private CreateComputePolicyWithAccountParametersArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CreateComputePolicyWithAccountParametersArgs();
         }
 
         public Builder(CreateComputePolicyWithAccountParametersArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxDegreeOfParallelismPerJob = defaults.maxDegreeOfParallelismPerJob;
-    	      this.minPriorityPerJob = defaults.minPriorityPerJob;
-    	      this.name = defaults.name;
-    	      this.objectId = defaults.objectId;
-    	      this.objectType = defaults.objectType;
+            $ = new CreateComputePolicyWithAccountParametersArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxDegreeOfParallelismPerJob(@Nullable Output<Integer> maxDegreeOfParallelismPerJob) {
-            this.maxDegreeOfParallelismPerJob = maxDegreeOfParallelismPerJob;
+            $.maxDegreeOfParallelismPerJob = maxDegreeOfParallelismPerJob;
             return this;
         }
-        public Builder maxDegreeOfParallelismPerJob(@Nullable Integer maxDegreeOfParallelismPerJob) {
-            this.maxDegreeOfParallelismPerJob = Codegen.ofNullable(maxDegreeOfParallelismPerJob);
-            return this;
+
+        public Builder maxDegreeOfParallelismPerJob(Integer maxDegreeOfParallelismPerJob) {
+            return maxDegreeOfParallelismPerJob(Output.of(maxDegreeOfParallelismPerJob));
         }
+
         public Builder minPriorityPerJob(@Nullable Output<Integer> minPriorityPerJob) {
-            this.minPriorityPerJob = minPriorityPerJob;
+            $.minPriorityPerJob = minPriorityPerJob;
             return this;
         }
-        public Builder minPriorityPerJob(@Nullable Integer minPriorityPerJob) {
-            this.minPriorityPerJob = Codegen.ofNullable(minPriorityPerJob);
-            return this;
+
+        public Builder minPriorityPerJob(Integer minPriorityPerJob) {
+            return minPriorityPerJob(Output.of(minPriorityPerJob));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder objectId(Output<String> objectId) {
-            this.objectId = Objects.requireNonNull(objectId);
+            $.objectId = objectId;
             return this;
         }
+
         public Builder objectId(String objectId) {
-            this.objectId = Output.of(Objects.requireNonNull(objectId));
-            return this;
+            return objectId(Output.of(objectId));
         }
+
         public Builder objectType(Output<Either<String,AADObjectType>> objectType) {
-            this.objectType = Objects.requireNonNull(objectType);
+            $.objectType = objectType;
             return this;
         }
+
         public Builder objectType(Either<String,AADObjectType> objectType) {
-            this.objectType = Output.of(Objects.requireNonNull(objectType));
-            return this;
-        }        public CreateComputePolicyWithAccountParametersArgs build() {
-            return new CreateComputePolicyWithAccountParametersArgs(maxDegreeOfParallelismPerJob, minPriorityPerJob, name, objectId, objectType);
+            return objectType(Output.of(objectType));
+        }
+
+        public CreateComputePolicyWithAccountParametersArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.objectId = Objects.requireNonNull($.objectId, "expected parameter 'objectId' to be non-null");
+            $.objectType = Objects.requireNonNull($.objectType, "expected parameter 'objectType' to be non-null");
+            return $;
         }
     }
+
 }

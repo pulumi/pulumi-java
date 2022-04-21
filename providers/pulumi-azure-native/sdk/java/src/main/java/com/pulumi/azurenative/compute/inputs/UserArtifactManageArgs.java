@@ -5,9 +5,9 @@ package com.pulumi.azurenative.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class UserArtifactManageArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="install", required=true)
-      private final Output<String> install;
+    private Output<String> install;
 
     public Output<String> install() {
         return this.install;
@@ -31,7 +31,7 @@ public final class UserArtifactManageArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="remove", required=true)
-      private final Output<String> remove;
+    private Output<String> remove;
 
     public Output<String> remove() {
         return this.remove;
@@ -42,76 +42,70 @@ public final class UserArtifactManageArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="update")
-      private final @Nullable Output<String> update;
+    private @Nullable Output<String> update;
 
-    public Output<String> update() {
-        return this.update == null ? Codegen.empty() : this.update;
+    public Optional<Output<String>> update() {
+        return Optional.ofNullable(this.update);
     }
 
-    public UserArtifactManageArgs(
-        Output<String> install,
-        Output<String> remove,
-        @Nullable Output<String> update) {
-        this.install = Objects.requireNonNull(install, "expected parameter 'install' to be non-null");
-        this.remove = Objects.requireNonNull(remove, "expected parameter 'remove' to be non-null");
-        this.update = update;
-    }
+    private UserArtifactManageArgs() {}
 
-    private UserArtifactManageArgs() {
-        this.install = Codegen.empty();
-        this.remove = Codegen.empty();
-        this.update = Codegen.empty();
+    private UserArtifactManageArgs(UserArtifactManageArgs $) {
+        this.install = $.install;
+        this.remove = $.remove;
+        this.update = $.update;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserArtifactManageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> install;
-        private Output<String> remove;
-        private @Nullable Output<String> update;
+        private UserArtifactManageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserArtifactManageArgs();
         }
 
         public Builder(UserArtifactManageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.install = defaults.install;
-    	      this.remove = defaults.remove;
-    	      this.update = defaults.update;
+            $ = new UserArtifactManageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder install(Output<String> install) {
-            this.install = Objects.requireNonNull(install);
+            $.install = install;
             return this;
         }
+
         public Builder install(String install) {
-            this.install = Output.of(Objects.requireNonNull(install));
-            return this;
+            return install(Output.of(install));
         }
+
         public Builder remove(Output<String> remove) {
-            this.remove = Objects.requireNonNull(remove);
+            $.remove = remove;
             return this;
         }
+
         public Builder remove(String remove) {
-            this.remove = Output.of(Objects.requireNonNull(remove));
-            return this;
+            return remove(Output.of(remove));
         }
+
         public Builder update(@Nullable Output<String> update) {
-            this.update = update;
+            $.update = update;
             return this;
         }
-        public Builder update(@Nullable String update) {
-            this.update = Codegen.ofNullable(update);
-            return this;
-        }        public UserArtifactManageArgs build() {
-            return new UserArtifactManageArgs(install, remove, update);
+
+        public Builder update(String update) {
+            return update(Output.of(update));
+        }
+
+        public UserArtifactManageArgs build() {
+            $.install = Objects.requireNonNull($.install, "expected parameter 'install' to be non-null");
+            $.remove = Objects.requireNonNull($.remove, "expected parameter 'remove' to be non-null");
+            return $;
         }
     }
+
 }

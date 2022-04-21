@@ -27,10 +27,10 @@ public final class ScheduleBasedBackupCriteriaResponse extends com.pulumi.resour
      * 
      */
     @Import(name="absoluteCriteria")
-      private final @Nullable List<String> absoluteCriteria;
+    private @Nullable List<String> absoluteCriteria;
 
-    public List<String> absoluteCriteria() {
-        return this.absoluteCriteria == null ? List.of() : this.absoluteCriteria;
+    public Optional<List<String>> absoluteCriteria() {
+        return Optional.ofNullable(this.absoluteCriteria);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ScheduleBasedBackupCriteriaResponse extends com.pulumi.resour
      * 
      */
     @Import(name="daysOfMonth")
-      private final @Nullable List<DayResponse> daysOfMonth;
+    private @Nullable List<DayResponse> daysOfMonth;
 
-    public List<DayResponse> daysOfMonth() {
-        return this.daysOfMonth == null ? List.of() : this.daysOfMonth;
+    public Optional<List<DayResponse>> daysOfMonth() {
+        return Optional.ofNullable(this.daysOfMonth);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ScheduleBasedBackupCriteriaResponse extends com.pulumi.resour
      * 
      */
     @Import(name="daysOfTheWeek")
-      private final @Nullable List<String> daysOfTheWeek;
+    private @Nullable List<String> daysOfTheWeek;
 
-    public List<String> daysOfTheWeek() {
-        return this.daysOfTheWeek == null ? List.of() : this.daysOfTheWeek;
+    public Optional<List<String>> daysOfTheWeek() {
+        return Optional.ofNullable(this.daysOfTheWeek);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class ScheduleBasedBackupCriteriaResponse extends com.pulumi.resour
      * 
      */
     @Import(name="monthsOfYear")
-      private final @Nullable List<String> monthsOfYear;
+    private @Nullable List<String> monthsOfYear;
 
-    public List<String> monthsOfYear() {
-        return this.monthsOfYear == null ? List.of() : this.monthsOfYear;
+    public Optional<List<String>> monthsOfYear() {
+        return Optional.ofNullable(this.monthsOfYear);
     }
 
     /**
@@ -72,7 +72,7 @@ public final class ScheduleBasedBackupCriteriaResponse extends com.pulumi.resour
      * 
      */
     @Import(name="objectType", required=true)
-      private final String objectType;
+    private String objectType;
 
     public String objectType() {
         return this.objectType;
@@ -83,10 +83,10 @@ public final class ScheduleBasedBackupCriteriaResponse extends com.pulumi.resour
      * 
      */
     @Import(name="scheduleTimes")
-      private final @Nullable List<String> scheduleTimes;
+    private @Nullable List<String> scheduleTimes;
 
-    public List<String> scheduleTimes() {
-        return this.scheduleTimes == null ? List.of() : this.scheduleTimes;
+    public Optional<List<String>> scheduleTimes() {
+        return Optional.ofNullable(this.scheduleTimes);
     }
 
     /**
@@ -94,118 +94,105 @@ public final class ScheduleBasedBackupCriteriaResponse extends com.pulumi.resour
      * 
      */
     @Import(name="weeksOfTheMonth")
-      private final @Nullable List<String> weeksOfTheMonth;
+    private @Nullable List<String> weeksOfTheMonth;
 
-    public List<String> weeksOfTheMonth() {
-        return this.weeksOfTheMonth == null ? List.of() : this.weeksOfTheMonth;
+    public Optional<List<String>> weeksOfTheMonth() {
+        return Optional.ofNullable(this.weeksOfTheMonth);
     }
 
-    public ScheduleBasedBackupCriteriaResponse(
-        @Nullable List<String> absoluteCriteria,
-        @Nullable List<DayResponse> daysOfMonth,
-        @Nullable List<String> daysOfTheWeek,
-        @Nullable List<String> monthsOfYear,
-        String objectType,
-        @Nullable List<String> scheduleTimes,
-        @Nullable List<String> weeksOfTheMonth) {
-        this.absoluteCriteria = absoluteCriteria;
-        this.daysOfMonth = daysOfMonth;
-        this.daysOfTheWeek = daysOfTheWeek;
-        this.monthsOfYear = monthsOfYear;
-        this.objectType = Codegen.stringProp("objectType").arg(objectType).require();
-        this.scheduleTimes = scheduleTimes;
-        this.weeksOfTheMonth = weeksOfTheMonth;
-    }
+    private ScheduleBasedBackupCriteriaResponse() {}
 
-    private ScheduleBasedBackupCriteriaResponse() {
-        this.absoluteCriteria = List.of();
-        this.daysOfMonth = List.of();
-        this.daysOfTheWeek = List.of();
-        this.monthsOfYear = List.of();
-        this.objectType = null;
-        this.scheduleTimes = List.of();
-        this.weeksOfTheMonth = List.of();
+    private ScheduleBasedBackupCriteriaResponse(ScheduleBasedBackupCriteriaResponse $) {
+        this.absoluteCriteria = $.absoluteCriteria;
+        this.daysOfMonth = $.daysOfMonth;
+        this.daysOfTheWeek = $.daysOfTheWeek;
+        this.monthsOfYear = $.monthsOfYear;
+        this.objectType = $.objectType;
+        this.scheduleTimes = $.scheduleTimes;
+        this.weeksOfTheMonth = $.weeksOfTheMonth;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScheduleBasedBackupCriteriaResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> absoluteCriteria;
-        private @Nullable List<DayResponse> daysOfMonth;
-        private @Nullable List<String> daysOfTheWeek;
-        private @Nullable List<String> monthsOfYear;
-        private String objectType;
-        private @Nullable List<String> scheduleTimes;
-        private @Nullable List<String> weeksOfTheMonth;
+        private ScheduleBasedBackupCriteriaResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScheduleBasedBackupCriteriaResponse();
         }
 
         public Builder(ScheduleBasedBackupCriteriaResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.absoluteCriteria = defaults.absoluteCriteria;
-    	      this.daysOfMonth = defaults.daysOfMonth;
-    	      this.daysOfTheWeek = defaults.daysOfTheWeek;
-    	      this.monthsOfYear = defaults.monthsOfYear;
-    	      this.objectType = defaults.objectType;
-    	      this.scheduleTimes = defaults.scheduleTimes;
-    	      this.weeksOfTheMonth = defaults.weeksOfTheMonth;
+            $ = new ScheduleBasedBackupCriteriaResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder absoluteCriteria(@Nullable List<String> absoluteCriteria) {
-            this.absoluteCriteria = absoluteCriteria;
+            $.absoluteCriteria = absoluteCriteria;
             return this;
         }
+
         public Builder absoluteCriteria(String... absoluteCriteria) {
             return absoluteCriteria(List.of(absoluteCriteria));
         }
+
         public Builder daysOfMonth(@Nullable List<DayResponse> daysOfMonth) {
-            this.daysOfMonth = daysOfMonth;
+            $.daysOfMonth = daysOfMonth;
             return this;
         }
+
         public Builder daysOfMonth(DayResponse... daysOfMonth) {
             return daysOfMonth(List.of(daysOfMonth));
         }
+
         public Builder daysOfTheWeek(@Nullable List<String> daysOfTheWeek) {
-            this.daysOfTheWeek = daysOfTheWeek;
+            $.daysOfTheWeek = daysOfTheWeek;
             return this;
         }
+
         public Builder daysOfTheWeek(String... daysOfTheWeek) {
             return daysOfTheWeek(List.of(daysOfTheWeek));
         }
+
         public Builder monthsOfYear(@Nullable List<String> monthsOfYear) {
-            this.monthsOfYear = monthsOfYear;
+            $.monthsOfYear = monthsOfYear;
             return this;
         }
+
         public Builder monthsOfYear(String... monthsOfYear) {
             return monthsOfYear(List.of(monthsOfYear));
         }
+
         public Builder objectType(String objectType) {
-            this.objectType = Objects.requireNonNull(objectType);
+            $.objectType = objectType;
             return this;
         }
+
         public Builder scheduleTimes(@Nullable List<String> scheduleTimes) {
-            this.scheduleTimes = scheduleTimes;
+            $.scheduleTimes = scheduleTimes;
             return this;
         }
+
         public Builder scheduleTimes(String... scheduleTimes) {
             return scheduleTimes(List.of(scheduleTimes));
         }
+
         public Builder weeksOfTheMonth(@Nullable List<String> weeksOfTheMonth) {
-            this.weeksOfTheMonth = weeksOfTheMonth;
+            $.weeksOfTheMonth = weeksOfTheMonth;
             return this;
         }
+
         public Builder weeksOfTheMonth(String... weeksOfTheMonth) {
             return weeksOfTheMonth(List.of(weeksOfTheMonth));
-        }        public ScheduleBasedBackupCriteriaResponse build() {
-            return new ScheduleBasedBackupCriteriaResponse(absoluteCriteria, daysOfMonth, daysOfTheWeek, monthsOfYear, objectType, scheduleTimes, weeksOfTheMonth);
+        }
+
+        public ScheduleBasedBackupCriteriaResponse build() {
+            $.objectType = Codegen.stringProp("objectType").arg($.objectType).require();
+            return $;
         }
     }
+
 }

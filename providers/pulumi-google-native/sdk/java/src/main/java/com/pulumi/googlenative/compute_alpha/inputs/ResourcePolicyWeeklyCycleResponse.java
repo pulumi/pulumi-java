@@ -22,48 +22,49 @@ public final class ResourcePolicyWeeklyCycleResponse extends com.pulumi.resource
      * 
      */
     @Import(name="dayOfWeeks", required=true)
-      private final List<ResourcePolicyWeeklyCycleDayOfWeekResponse> dayOfWeeks;
+    private List<ResourcePolicyWeeklyCycleDayOfWeekResponse> dayOfWeeks;
 
     public List<ResourcePolicyWeeklyCycleDayOfWeekResponse> dayOfWeeks() {
         return this.dayOfWeeks;
     }
 
-    public ResourcePolicyWeeklyCycleResponse(List<ResourcePolicyWeeklyCycleDayOfWeekResponse> dayOfWeeks) {
-        this.dayOfWeeks = Objects.requireNonNull(dayOfWeeks, "expected parameter 'dayOfWeeks' to be non-null");
-    }
+    private ResourcePolicyWeeklyCycleResponse() {}
 
-    private ResourcePolicyWeeklyCycleResponse() {
-        this.dayOfWeeks = List.of();
+    private ResourcePolicyWeeklyCycleResponse(ResourcePolicyWeeklyCycleResponse $) {
+        this.dayOfWeeks = $.dayOfWeeks;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourcePolicyWeeklyCycleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<ResourcePolicyWeeklyCycleDayOfWeekResponse> dayOfWeeks;
+        private ResourcePolicyWeeklyCycleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourcePolicyWeeklyCycleResponse();
         }
 
         public Builder(ResourcePolicyWeeklyCycleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dayOfWeeks = defaults.dayOfWeeks;
+            $ = new ResourcePolicyWeeklyCycleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dayOfWeeks(List<ResourcePolicyWeeklyCycleDayOfWeekResponse> dayOfWeeks) {
-            this.dayOfWeeks = Objects.requireNonNull(dayOfWeeks);
+            $.dayOfWeeks = dayOfWeeks;
             return this;
         }
+
         public Builder dayOfWeeks(ResourcePolicyWeeklyCycleDayOfWeekResponse... dayOfWeeks) {
             return dayOfWeeks(List.of(dayOfWeeks));
-        }        public ResourcePolicyWeeklyCycleResponse build() {
-            return new ResourcePolicyWeeklyCycleResponse(dayOfWeeks);
+        }
+
+        public ResourcePolicyWeeklyCycleResponse build() {
+            $.dayOfWeeks = Objects.requireNonNull($.dayOfWeeks, "expected parameter 'dayOfWeeks' to be non-null");
+            return $;
         }
     }
+
 }

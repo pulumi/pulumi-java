@@ -24,7 +24,7 @@ public final class ManagedNetworkPeeringPolicyResponse extends com.pulumi.resour
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -35,10 +35,10 @@ public final class ManagedNetworkPeeringPolicyResponse extends com.pulumi.resour
      * 
      */
     @Import(name="location")
-      private final @Nullable String location;
+    private @Nullable String location;
 
     public Optional<String> location() {
-        return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -46,7 +46,7 @@ public final class ManagedNetworkPeeringPolicyResponse extends com.pulumi.resour
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -57,10 +57,10 @@ public final class ManagedNetworkPeeringPolicyResponse extends com.pulumi.resour
      * 
      */
     @Import(name="properties")
-      private final @Nullable ManagedNetworkPeeringPolicyPropertiesResponse properties;
+    private @Nullable ManagedNetworkPeeringPolicyPropertiesResponse properties;
 
     public Optional<ManagedNetworkPeeringPolicyPropertiesResponse> properties() {
-        return this.properties == null ? Optional.empty() : Optional.ofNullable(this.properties);
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -68,82 +68,71 @@ public final class ManagedNetworkPeeringPolicyResponse extends com.pulumi.resour
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ManagedNetworkPeeringPolicyResponse(
-        String id,
-        @Nullable String location,
-        String name,
-        @Nullable ManagedNetworkPeeringPolicyPropertiesResponse properties,
-        String type) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.location = location;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.properties = properties;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ManagedNetworkPeeringPolicyResponse() {}
 
-    private ManagedNetworkPeeringPolicyResponse() {
-        this.id = null;
-        this.location = null;
-        this.name = null;
-        this.properties = null;
-        this.type = null;
+    private ManagedNetworkPeeringPolicyResponse(ManagedNetworkPeeringPolicyResponse $) {
+        this.id = $.id;
+        this.location = $.location;
+        this.name = $.name;
+        this.properties = $.properties;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedNetworkPeeringPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
-        private @Nullable String location;
-        private String name;
-        private @Nullable ManagedNetworkPeeringPolicyPropertiesResponse properties;
-        private String type;
+        private ManagedNetworkPeeringPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedNetworkPeeringPolicyResponse();
         }
 
         public Builder(ManagedNetworkPeeringPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.properties = defaults.properties;
-    	      this.type = defaults.type;
+            $ = new ManagedNetworkPeeringPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder location(@Nullable String location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder properties(@Nullable ManagedNetworkPeeringPolicyPropertiesResponse properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ManagedNetworkPeeringPolicyResponse build() {
-            return new ManagedNetworkPeeringPolicyResponse(id, location, name, properties, type);
+        }
+
+        public ManagedNetworkPeeringPolicyResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

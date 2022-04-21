@@ -17,81 +17,76 @@ public final class RegistryListCredentialsResultResponse extends com.pulumi.reso
     public static final RegistryListCredentialsResultResponse Empty = new RegistryListCredentialsResultResponse();
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="passwords")
-      private final @Nullable List<PasswordResponse> passwords;
+    private @Nullable List<PasswordResponse> passwords;
 
-    public List<PasswordResponse> passwords() {
-        return this.passwords == null ? List.of() : this.passwords;
+    public Optional<List<PasswordResponse>> passwords() {
+        return Optional.ofNullable(this.passwords);
     }
 
     @Import(name="username", required=true)
-      private final String username;
+    private String username;
 
     public String username() {
         return this.username;
     }
 
-    public RegistryListCredentialsResultResponse(
-        String location,
-        @Nullable List<PasswordResponse> passwords,
-        String username) {
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.passwords = passwords;
-        this.username = Objects.requireNonNull(username, "expected parameter 'username' to be non-null");
-    }
+    private RegistryListCredentialsResultResponse() {}
 
-    private RegistryListCredentialsResultResponse() {
-        this.location = null;
-        this.passwords = List.of();
-        this.username = null;
+    private RegistryListCredentialsResultResponse(RegistryListCredentialsResultResponse $) {
+        this.location = $.location;
+        this.passwords = $.passwords;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegistryListCredentialsResultResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String location;
-        private @Nullable List<PasswordResponse> passwords;
-        private String username;
+        private RegistryListCredentialsResultResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegistryListCredentialsResultResponse();
         }
 
         public Builder(RegistryListCredentialsResultResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.passwords = defaults.passwords;
-    	      this.username = defaults.username;
+            $ = new RegistryListCredentialsResultResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder passwords(@Nullable List<PasswordResponse> passwords) {
-            this.passwords = passwords;
+            $.passwords = passwords;
             return this;
         }
+
         public Builder passwords(PasswordResponse... passwords) {
             return passwords(List.of(passwords));
         }
+
         public Builder username(String username) {
-            this.username = Objects.requireNonNull(username);
+            $.username = username;
             return this;
-        }        public RegistryListCredentialsResultResponse build() {
-            return new RegistryListCredentialsResultResponse(location, passwords, username);
+        }
+
+        public RegistryListCredentialsResultResponse build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.username = Objects.requireNonNull($.username, "expected parameter 'username' to be non-null");
+            return $;
         }
     }
+
 }

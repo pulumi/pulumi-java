@@ -21,45 +21,45 @@ public final class WrappingPublicKeyResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="pem", required=true)
-      private final String pem;
+    private String pem;
 
     public String pem() {
         return this.pem;
     }
 
-    public WrappingPublicKeyResponse(String pem) {
-        this.pem = Objects.requireNonNull(pem, "expected parameter 'pem' to be non-null");
-    }
+    private WrappingPublicKeyResponse() {}
 
-    private WrappingPublicKeyResponse() {
-        this.pem = null;
+    private WrappingPublicKeyResponse(WrappingPublicKeyResponse $) {
+        this.pem = $.pem;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WrappingPublicKeyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String pem;
+        private WrappingPublicKeyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WrappingPublicKeyResponse();
         }
 
         public Builder(WrappingPublicKeyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.pem = defaults.pem;
+            $ = new WrappingPublicKeyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder pem(String pem) {
-            this.pem = Objects.requireNonNull(pem);
+            $.pem = pem;
             return this;
-        }        public WrappingPublicKeyResponse build() {
-            return new WrappingPublicKeyResponse(pem);
+        }
+
+        public WrappingPublicKeyResponse build() {
+            $.pem = Objects.requireNonNull($.pem, "expected parameter 'pem' to be non-null");
+            return $;
         }
     }
+
 }

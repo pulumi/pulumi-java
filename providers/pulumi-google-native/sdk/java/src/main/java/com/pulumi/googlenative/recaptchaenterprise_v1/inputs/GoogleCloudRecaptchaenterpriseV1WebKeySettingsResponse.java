@@ -23,7 +23,7 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse extend
      * 
      */
     @Import(name="allowAllDomains", required=true)
-      private final Boolean allowAllDomains;
+    private Boolean allowAllDomains;
 
     public Boolean allowAllDomains() {
         return this.allowAllDomains;
@@ -34,7 +34,7 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse extend
      * 
      */
     @Import(name="allowAmpTraffic", required=true)
-      private final Boolean allowAmpTraffic;
+    private Boolean allowAmpTraffic;
 
     public Boolean allowAmpTraffic() {
         return this.allowAmpTraffic;
@@ -45,7 +45,7 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse extend
      * 
      */
     @Import(name="allowedDomains", required=true)
-      private final List<String> allowedDomains;
+    private List<String> allowedDomains;
 
     public List<String> allowedDomains() {
         return this.allowedDomains;
@@ -56,7 +56,7 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse extend
      * 
      */
     @Import(name="challengeSecurityPreference", required=true)
-      private final String challengeSecurityPreference;
+    private String challengeSecurityPreference;
 
     public String challengeSecurityPreference() {
         return this.challengeSecurityPreference;
@@ -67,85 +67,77 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse extend
      * 
      */
     @Import(name="integrationType", required=true)
-      private final String integrationType;
+    private String integrationType;
 
     public String integrationType() {
         return this.integrationType;
     }
 
-    public GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse(
-        Boolean allowAllDomains,
-        Boolean allowAmpTraffic,
-        List<String> allowedDomains,
-        String challengeSecurityPreference,
-        String integrationType) {
-        this.allowAllDomains = Objects.requireNonNull(allowAllDomains, "expected parameter 'allowAllDomains' to be non-null");
-        this.allowAmpTraffic = Objects.requireNonNull(allowAmpTraffic, "expected parameter 'allowAmpTraffic' to be non-null");
-        this.allowedDomains = Objects.requireNonNull(allowedDomains, "expected parameter 'allowedDomains' to be non-null");
-        this.challengeSecurityPreference = Objects.requireNonNull(challengeSecurityPreference, "expected parameter 'challengeSecurityPreference' to be non-null");
-        this.integrationType = Objects.requireNonNull(integrationType, "expected parameter 'integrationType' to be non-null");
-    }
+    private GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse() {}
 
-    private GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse() {
-        this.allowAllDomains = null;
-        this.allowAmpTraffic = null;
-        this.allowedDomains = List.of();
-        this.challengeSecurityPreference = null;
-        this.integrationType = null;
+    private GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse(GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse $) {
+        this.allowAllDomains = $.allowAllDomains;
+        this.allowAmpTraffic = $.allowAmpTraffic;
+        this.allowedDomains = $.allowedDomains;
+        this.challengeSecurityPreference = $.challengeSecurityPreference;
+        this.integrationType = $.integrationType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean allowAllDomains;
-        private Boolean allowAmpTraffic;
-        private List<String> allowedDomains;
-        private String challengeSecurityPreference;
-        private String integrationType;
+        private GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse();
         }
 
         public Builder(GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowAllDomains = defaults.allowAllDomains;
-    	      this.allowAmpTraffic = defaults.allowAmpTraffic;
-    	      this.allowedDomains = defaults.allowedDomains;
-    	      this.challengeSecurityPreference = defaults.challengeSecurityPreference;
-    	      this.integrationType = defaults.integrationType;
+            $ = new GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowAllDomains(Boolean allowAllDomains) {
-            this.allowAllDomains = Objects.requireNonNull(allowAllDomains);
+            $.allowAllDomains = allowAllDomains;
             return this;
         }
+
         public Builder allowAmpTraffic(Boolean allowAmpTraffic) {
-            this.allowAmpTraffic = Objects.requireNonNull(allowAmpTraffic);
+            $.allowAmpTraffic = allowAmpTraffic;
             return this;
         }
+
         public Builder allowedDomains(List<String> allowedDomains) {
-            this.allowedDomains = Objects.requireNonNull(allowedDomains);
+            $.allowedDomains = allowedDomains;
             return this;
         }
+
         public Builder allowedDomains(String... allowedDomains) {
             return allowedDomains(List.of(allowedDomains));
         }
+
         public Builder challengeSecurityPreference(String challengeSecurityPreference) {
-            this.challengeSecurityPreference = Objects.requireNonNull(challengeSecurityPreference);
+            $.challengeSecurityPreference = challengeSecurityPreference;
             return this;
         }
+
         public Builder integrationType(String integrationType) {
-            this.integrationType = Objects.requireNonNull(integrationType);
+            $.integrationType = integrationType;
             return this;
-        }        public GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse build() {
-            return new GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse(allowAllDomains, allowAmpTraffic, allowedDomains, challengeSecurityPreference, integrationType);
+        }
+
+        public GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse build() {
+            $.allowAllDomains = Objects.requireNonNull($.allowAllDomains, "expected parameter 'allowAllDomains' to be non-null");
+            $.allowAmpTraffic = Objects.requireNonNull($.allowAmpTraffic, "expected parameter 'allowAmpTraffic' to be non-null");
+            $.allowedDomains = Objects.requireNonNull($.allowedDomains, "expected parameter 'allowedDomains' to be non-null");
+            $.challengeSecurityPreference = Objects.requireNonNull($.challengeSecurityPreference, "expected parameter 'challengeSecurityPreference' to be non-null");
+            $.integrationType = Objects.requireNonNull($.integrationType, "expected parameter 'integrationType' to be non-null");
+            return $;
         }
     }
+
 }

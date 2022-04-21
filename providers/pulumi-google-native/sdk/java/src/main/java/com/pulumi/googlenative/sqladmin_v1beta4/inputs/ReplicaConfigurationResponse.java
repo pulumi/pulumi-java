@@ -23,7 +23,7 @@ public final class ReplicaConfigurationResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="failoverTarget", required=true)
-      private final Boolean failoverTarget;
+    private Boolean failoverTarget;
 
     public Boolean failoverTarget() {
         return this.failoverTarget;
@@ -34,7 +34,7 @@ public final class ReplicaConfigurationResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
@@ -45,64 +45,59 @@ public final class ReplicaConfigurationResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="mysqlReplicaConfiguration", required=true)
-      private final MySqlReplicaConfigurationResponse mysqlReplicaConfiguration;
+    private MySqlReplicaConfigurationResponse mysqlReplicaConfiguration;
 
     public MySqlReplicaConfigurationResponse mysqlReplicaConfiguration() {
         return this.mysqlReplicaConfiguration;
     }
 
-    public ReplicaConfigurationResponse(
-        Boolean failoverTarget,
-        String kind,
-        MySqlReplicaConfigurationResponse mysqlReplicaConfiguration) {
-        this.failoverTarget = Objects.requireNonNull(failoverTarget, "expected parameter 'failoverTarget' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.mysqlReplicaConfiguration = Objects.requireNonNull(mysqlReplicaConfiguration, "expected parameter 'mysqlReplicaConfiguration' to be non-null");
-    }
+    private ReplicaConfigurationResponse() {}
 
-    private ReplicaConfigurationResponse() {
-        this.failoverTarget = null;
-        this.kind = null;
-        this.mysqlReplicaConfiguration = null;
+    private ReplicaConfigurationResponse(ReplicaConfigurationResponse $) {
+        this.failoverTarget = $.failoverTarget;
+        this.kind = $.kind;
+        this.mysqlReplicaConfiguration = $.mysqlReplicaConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReplicaConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean failoverTarget;
-        private String kind;
-        private MySqlReplicaConfigurationResponse mysqlReplicaConfiguration;
+        private ReplicaConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReplicaConfigurationResponse();
         }
 
         public Builder(ReplicaConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.failoverTarget = defaults.failoverTarget;
-    	      this.kind = defaults.kind;
-    	      this.mysqlReplicaConfiguration = defaults.mysqlReplicaConfiguration;
+            $ = new ReplicaConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder failoverTarget(Boolean failoverTarget) {
-            this.failoverTarget = Objects.requireNonNull(failoverTarget);
+            $.failoverTarget = failoverTarget;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder mysqlReplicaConfiguration(MySqlReplicaConfigurationResponse mysqlReplicaConfiguration) {
-            this.mysqlReplicaConfiguration = Objects.requireNonNull(mysqlReplicaConfiguration);
+            $.mysqlReplicaConfiguration = mysqlReplicaConfiguration;
             return this;
-        }        public ReplicaConfigurationResponse build() {
-            return new ReplicaConfigurationResponse(failoverTarget, kind, mysqlReplicaConfiguration);
+        }
+
+        public ReplicaConfigurationResponse build() {
+            $.failoverTarget = Objects.requireNonNull($.failoverTarget, "expected parameter 'failoverTarget' to be non-null");
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.mysqlReplicaConfiguration = Objects.requireNonNull($.mysqlReplicaConfiguration, "expected parameter 'mysqlReplicaConfiguration' to be non-null");
+            return $;
         }
     }
+
 }

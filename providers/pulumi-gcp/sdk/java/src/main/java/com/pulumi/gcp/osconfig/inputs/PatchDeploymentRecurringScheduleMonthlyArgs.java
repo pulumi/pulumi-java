@@ -5,10 +5,10 @@ package com.pulumi.gcp.osconfig.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.osconfig.inputs.PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class PatchDeploymentRecurringScheduleMonthlyArgs extends com.pulum
      * 
      */
     @Import(name="monthDay")
-      private final @Nullable Output<Integer> monthDay;
+    private @Nullable Output<Integer> monthDay;
 
-    public Output<Integer> monthDay() {
-        return this.monthDay == null ? Codegen.empty() : this.monthDay;
+    public Optional<Output<Integer>> monthDay() {
+        return Optional.ofNullable(this.monthDay);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class PatchDeploymentRecurringScheduleMonthlyArgs extends com.pulum
      * 
      */
     @Import(name="weekDayOfMonth")
-      private final @Nullable Output<PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs> weekDayOfMonth;
+    private @Nullable Output<PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs> weekDayOfMonth;
 
-    public Output<PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs> weekDayOfMonth() {
-        return this.weekDayOfMonth == null ? Codegen.empty() : this.weekDayOfMonth;
+    public Optional<Output<PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs>> weekDayOfMonth() {
+        return Optional.ofNullable(this.weekDayOfMonth);
     }
 
-    public PatchDeploymentRecurringScheduleMonthlyArgs(
-        @Nullable Output<Integer> monthDay,
-        @Nullable Output<PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs> weekDayOfMonth) {
-        this.monthDay = monthDay;
-        this.weekDayOfMonth = weekDayOfMonth;
-    }
+    private PatchDeploymentRecurringScheduleMonthlyArgs() {}
 
-    private PatchDeploymentRecurringScheduleMonthlyArgs() {
-        this.monthDay = Codegen.empty();
-        this.weekDayOfMonth = Codegen.empty();
+    private PatchDeploymentRecurringScheduleMonthlyArgs(PatchDeploymentRecurringScheduleMonthlyArgs $) {
+        this.monthDay = $.monthDay;
+        this.weekDayOfMonth = $.weekDayOfMonth;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PatchDeploymentRecurringScheduleMonthlyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> monthDay;
-        private @Nullable Output<PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs> weekDayOfMonth;
+        private PatchDeploymentRecurringScheduleMonthlyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PatchDeploymentRecurringScheduleMonthlyArgs();
         }
 
         public Builder(PatchDeploymentRecurringScheduleMonthlyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.monthDay = defaults.monthDay;
-    	      this.weekDayOfMonth = defaults.weekDayOfMonth;
+            $ = new PatchDeploymentRecurringScheduleMonthlyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder monthDay(@Nullable Output<Integer> monthDay) {
-            this.monthDay = monthDay;
+            $.monthDay = monthDay;
             return this;
         }
-        public Builder monthDay(@Nullable Integer monthDay) {
-            this.monthDay = Codegen.ofNullable(monthDay);
-            return this;
+
+        public Builder monthDay(Integer monthDay) {
+            return monthDay(Output.of(monthDay));
         }
+
         public Builder weekDayOfMonth(@Nullable Output<PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs> weekDayOfMonth) {
-            this.weekDayOfMonth = weekDayOfMonth;
+            $.weekDayOfMonth = weekDayOfMonth;
             return this;
         }
-        public Builder weekDayOfMonth(@Nullable PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs weekDayOfMonth) {
-            this.weekDayOfMonth = Codegen.ofNullable(weekDayOfMonth);
-            return this;
-        }        public PatchDeploymentRecurringScheduleMonthlyArgs build() {
-            return new PatchDeploymentRecurringScheduleMonthlyArgs(monthDay, weekDayOfMonth);
+
+        public Builder weekDayOfMonth(PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs weekDayOfMonth) {
+            return weekDayOfMonth(Output.of(weekDayOfMonth));
+        }
+
+        public PatchDeploymentRecurringScheduleMonthlyArgs build() {
+            return $;
         }
     }
+
 }

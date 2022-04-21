@@ -15,62 +15,57 @@ public final class GetRegistryRepositoryArgs extends com.pulumi.resources.Invoke
     public static final GetRegistryRepositoryArgs Empty = new GetRegistryRepositoryArgs();
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="region")
-      private final @Nullable String region;
+    private @Nullable String region;
 
     public Optional<String> region() {
-        return this.region == null ? Optional.empty() : Optional.ofNullable(this.region);
+        return Optional.ofNullable(this.region);
     }
 
-    public GetRegistryRepositoryArgs(
-        @Nullable String project,
-        @Nullable String region) {
-        this.project = project;
-        this.region = region;
-    }
+    private GetRegistryRepositoryArgs() {}
 
-    private GetRegistryRepositoryArgs() {
-        this.project = null;
-        this.region = null;
+    private GetRegistryRepositoryArgs(GetRegistryRepositoryArgs $) {
+        this.project = $.project;
+        this.region = $.region;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRegistryRepositoryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String project;
-        private @Nullable String region;
+        private GetRegistryRepositoryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRegistryRepositoryArgs();
         }
 
         public Builder(GetRegistryRepositoryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
+            $ = new GetRegistryRepositoryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder region(@Nullable String region) {
-            this.region = region;
+            $.region = region;
             return this;
-        }        public GetRegistryRepositoryArgs build() {
-            return new GetRegistryRepositoryArgs(project, region);
+        }
+
+        public GetRegistryRepositoryArgs build() {
+            return $;
         }
     }
+
 }

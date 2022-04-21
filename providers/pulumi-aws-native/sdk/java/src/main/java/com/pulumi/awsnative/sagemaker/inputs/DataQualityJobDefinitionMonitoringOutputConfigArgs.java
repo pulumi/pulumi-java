@@ -6,10 +6,10 @@ package com.pulumi.awsnative.sagemaker.inputs;
 import com.pulumi.awsnative.sagemaker.inputs.DataQualityJobDefinitionMonitoringOutputArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class DataQualityJobDefinitionMonitoringOutputConfigArgs extends co
      * 
      */
     @Import(name="kmsKeyId")
-      private final @Nullable Output<String> kmsKeyId;
+    private @Nullable Output<String> kmsKeyId;
 
-    public Output<String> kmsKeyId() {
-        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
+    public Optional<Output<String>> kmsKeyId() {
+        return Optional.ofNullable(this.kmsKeyId);
     }
 
     /**
@@ -37,66 +37,63 @@ public final class DataQualityJobDefinitionMonitoringOutputConfigArgs extends co
      * 
      */
     @Import(name="monitoringOutputs", required=true)
-      private final Output<List<DataQualityJobDefinitionMonitoringOutputArgs>> monitoringOutputs;
+    private Output<List<DataQualityJobDefinitionMonitoringOutputArgs>> monitoringOutputs;
 
     public Output<List<DataQualityJobDefinitionMonitoringOutputArgs>> monitoringOutputs() {
         return this.monitoringOutputs;
     }
 
-    public DataQualityJobDefinitionMonitoringOutputConfigArgs(
-        @Nullable Output<String> kmsKeyId,
-        Output<List<DataQualityJobDefinitionMonitoringOutputArgs>> monitoringOutputs) {
-        this.kmsKeyId = kmsKeyId;
-        this.monitoringOutputs = Objects.requireNonNull(monitoringOutputs, "expected parameter 'monitoringOutputs' to be non-null");
-    }
+    private DataQualityJobDefinitionMonitoringOutputConfigArgs() {}
 
-    private DataQualityJobDefinitionMonitoringOutputConfigArgs() {
-        this.kmsKeyId = Codegen.empty();
-        this.monitoringOutputs = Codegen.empty();
+    private DataQualityJobDefinitionMonitoringOutputConfigArgs(DataQualityJobDefinitionMonitoringOutputConfigArgs $) {
+        this.kmsKeyId = $.kmsKeyId;
+        this.monitoringOutputs = $.monitoringOutputs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataQualityJobDefinitionMonitoringOutputConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> kmsKeyId;
-        private Output<List<DataQualityJobDefinitionMonitoringOutputArgs>> monitoringOutputs;
+        private DataQualityJobDefinitionMonitoringOutputConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataQualityJobDefinitionMonitoringOutputConfigArgs();
         }
 
         public Builder(DataQualityJobDefinitionMonitoringOutputConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kmsKeyId = defaults.kmsKeyId;
-    	      this.monitoringOutputs = defaults.monitoringOutputs;
+            $ = new DataQualityJobDefinitionMonitoringOutputConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
-            this.kmsKeyId = kmsKeyId;
+            $.kmsKeyId = kmsKeyId;
             return this;
         }
-        public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
-            return this;
+
+        public Builder kmsKeyId(String kmsKeyId) {
+            return kmsKeyId(Output.of(kmsKeyId));
         }
+
         public Builder monitoringOutputs(Output<List<DataQualityJobDefinitionMonitoringOutputArgs>> monitoringOutputs) {
-            this.monitoringOutputs = Objects.requireNonNull(monitoringOutputs);
+            $.monitoringOutputs = monitoringOutputs;
             return this;
         }
+
         public Builder monitoringOutputs(List<DataQualityJobDefinitionMonitoringOutputArgs> monitoringOutputs) {
-            this.monitoringOutputs = Output.of(Objects.requireNonNull(monitoringOutputs));
-            return this;
+            return monitoringOutputs(Output.of(monitoringOutputs));
         }
+
         public Builder monitoringOutputs(DataQualityJobDefinitionMonitoringOutputArgs... monitoringOutputs) {
             return monitoringOutputs(List.of(monitoringOutputs));
-        }        public DataQualityJobDefinitionMonitoringOutputConfigArgs build() {
-            return new DataQualityJobDefinitionMonitoringOutputConfigArgs(kmsKeyId, monitoringOutputs);
+        }
+
+        public DataQualityJobDefinitionMonitoringOutputConfigArgs build() {
+            $.monitoringOutputs = Objects.requireNonNull($.monitoringOutputs, "expected parameter 'monitoringOutputs' to be non-null");
+            return $;
         }
     }
+
 }

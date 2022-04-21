@@ -9,10 +9,10 @@ import com.pulumi.awsnative.acmpca.inputs.CertificateAuthoritySubjectArgs;
 import com.pulumi.awsnative.acmpca.inputs.CertificateAuthorityTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class CertificateAuthorityArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="csrExtensions")
-      private final @Nullable Output<CertificateAuthorityCsrExtensionsArgs> csrExtensions;
+    private @Nullable Output<CertificateAuthorityCsrExtensionsArgs> csrExtensions;
 
-    public Output<CertificateAuthorityCsrExtensionsArgs> csrExtensions() {
-        return this.csrExtensions == null ? Codegen.empty() : this.csrExtensions;
+    public Optional<Output<CertificateAuthorityCsrExtensionsArgs>> csrExtensions() {
+        return Optional.ofNullable(this.csrExtensions);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class CertificateAuthorityArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="keyAlgorithm", required=true)
-      private final Output<String> keyAlgorithm;
+    private Output<String> keyAlgorithm;
 
     public Output<String> keyAlgorithm() {
         return this.keyAlgorithm;
@@ -47,10 +47,10 @@ public final class CertificateAuthorityArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="keyStorageSecurityStandard")
-      private final @Nullable Output<String> keyStorageSecurityStandard;
+    private @Nullable Output<String> keyStorageSecurityStandard;
 
-    public Output<String> keyStorageSecurityStandard() {
-        return this.keyStorageSecurityStandard == null ? Codegen.empty() : this.keyStorageSecurityStandard;
+    public Optional<Output<String>> keyStorageSecurityStandard() {
+        return Optional.ofNullable(this.keyStorageSecurityStandard);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class CertificateAuthorityArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="revocationConfiguration")
-      private final @Nullable Output<CertificateAuthorityRevocationConfigurationArgs> revocationConfiguration;
+    private @Nullable Output<CertificateAuthorityRevocationConfigurationArgs> revocationConfiguration;
 
-    public Output<CertificateAuthorityRevocationConfigurationArgs> revocationConfiguration() {
-        return this.revocationConfiguration == null ? Codegen.empty() : this.revocationConfiguration;
+    public Optional<Output<CertificateAuthorityRevocationConfigurationArgs>> revocationConfiguration() {
+        return Optional.ofNullable(this.revocationConfiguration);
     }
 
     /**
@@ -69,7 +69,7 @@ public final class CertificateAuthorityArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="signingAlgorithm", required=true)
-      private final Output<String> signingAlgorithm;
+    private Output<String> signingAlgorithm;
 
     public Output<String> signingAlgorithm() {
         return this.signingAlgorithm;
@@ -80,17 +80,17 @@ public final class CertificateAuthorityArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="subject", required=true)
-      private final Output<CertificateAuthoritySubjectArgs> subject;
+    private Output<CertificateAuthoritySubjectArgs> subject;
 
     public Output<CertificateAuthoritySubjectArgs> subject() {
         return this.subject;
     }
 
     @Import(name="tags")
-      private final @Nullable Output<List<CertificateAuthorityTagArgs>> tags;
+    private @Nullable Output<List<CertificateAuthorityTagArgs>> tags;
 
-    public Output<List<CertificateAuthorityTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<CertificateAuthorityTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -98,144 +98,126 @@ public final class CertificateAuthorityArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public CertificateAuthorityArgs(
-        @Nullable Output<CertificateAuthorityCsrExtensionsArgs> csrExtensions,
-        Output<String> keyAlgorithm,
-        @Nullable Output<String> keyStorageSecurityStandard,
-        @Nullable Output<CertificateAuthorityRevocationConfigurationArgs> revocationConfiguration,
-        Output<String> signingAlgorithm,
-        Output<CertificateAuthoritySubjectArgs> subject,
-        @Nullable Output<List<CertificateAuthorityTagArgs>> tags,
-        Output<String> type) {
-        this.csrExtensions = csrExtensions;
-        this.keyAlgorithm = Objects.requireNonNull(keyAlgorithm, "expected parameter 'keyAlgorithm' to be non-null");
-        this.keyStorageSecurityStandard = keyStorageSecurityStandard;
-        this.revocationConfiguration = revocationConfiguration;
-        this.signingAlgorithm = Objects.requireNonNull(signingAlgorithm, "expected parameter 'signingAlgorithm' to be non-null");
-        this.subject = Objects.requireNonNull(subject, "expected parameter 'subject' to be non-null");
-        this.tags = tags;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private CertificateAuthorityArgs() {}
 
-    private CertificateAuthorityArgs() {
-        this.csrExtensions = Codegen.empty();
-        this.keyAlgorithm = Codegen.empty();
-        this.keyStorageSecurityStandard = Codegen.empty();
-        this.revocationConfiguration = Codegen.empty();
-        this.signingAlgorithm = Codegen.empty();
-        this.subject = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.type = Codegen.empty();
+    private CertificateAuthorityArgs(CertificateAuthorityArgs $) {
+        this.csrExtensions = $.csrExtensions;
+        this.keyAlgorithm = $.keyAlgorithm;
+        this.keyStorageSecurityStandard = $.keyStorageSecurityStandard;
+        this.revocationConfiguration = $.revocationConfiguration;
+        this.signingAlgorithm = $.signingAlgorithm;
+        this.subject = $.subject;
+        this.tags = $.tags;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateAuthorityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CertificateAuthorityCsrExtensionsArgs> csrExtensions;
-        private Output<String> keyAlgorithm;
-        private @Nullable Output<String> keyStorageSecurityStandard;
-        private @Nullable Output<CertificateAuthorityRevocationConfigurationArgs> revocationConfiguration;
-        private Output<String> signingAlgorithm;
-        private Output<CertificateAuthoritySubjectArgs> subject;
-        private @Nullable Output<List<CertificateAuthorityTagArgs>> tags;
-        private Output<String> type;
+        private CertificateAuthorityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateAuthorityArgs();
         }
 
         public Builder(CertificateAuthorityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.csrExtensions = defaults.csrExtensions;
-    	      this.keyAlgorithm = defaults.keyAlgorithm;
-    	      this.keyStorageSecurityStandard = defaults.keyStorageSecurityStandard;
-    	      this.revocationConfiguration = defaults.revocationConfiguration;
-    	      this.signingAlgorithm = defaults.signingAlgorithm;
-    	      this.subject = defaults.subject;
-    	      this.tags = defaults.tags;
-    	      this.type = defaults.type;
+            $ = new CertificateAuthorityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder csrExtensions(@Nullable Output<CertificateAuthorityCsrExtensionsArgs> csrExtensions) {
-            this.csrExtensions = csrExtensions;
+            $.csrExtensions = csrExtensions;
             return this;
         }
-        public Builder csrExtensions(@Nullable CertificateAuthorityCsrExtensionsArgs csrExtensions) {
-            this.csrExtensions = Codegen.ofNullable(csrExtensions);
-            return this;
+
+        public Builder csrExtensions(CertificateAuthorityCsrExtensionsArgs csrExtensions) {
+            return csrExtensions(Output.of(csrExtensions));
         }
+
         public Builder keyAlgorithm(Output<String> keyAlgorithm) {
-            this.keyAlgorithm = Objects.requireNonNull(keyAlgorithm);
+            $.keyAlgorithm = keyAlgorithm;
             return this;
         }
+
         public Builder keyAlgorithm(String keyAlgorithm) {
-            this.keyAlgorithm = Output.of(Objects.requireNonNull(keyAlgorithm));
-            return this;
+            return keyAlgorithm(Output.of(keyAlgorithm));
         }
+
         public Builder keyStorageSecurityStandard(@Nullable Output<String> keyStorageSecurityStandard) {
-            this.keyStorageSecurityStandard = keyStorageSecurityStandard;
+            $.keyStorageSecurityStandard = keyStorageSecurityStandard;
             return this;
         }
-        public Builder keyStorageSecurityStandard(@Nullable String keyStorageSecurityStandard) {
-            this.keyStorageSecurityStandard = Codegen.ofNullable(keyStorageSecurityStandard);
-            return this;
+
+        public Builder keyStorageSecurityStandard(String keyStorageSecurityStandard) {
+            return keyStorageSecurityStandard(Output.of(keyStorageSecurityStandard));
         }
+
         public Builder revocationConfiguration(@Nullable Output<CertificateAuthorityRevocationConfigurationArgs> revocationConfiguration) {
-            this.revocationConfiguration = revocationConfiguration;
+            $.revocationConfiguration = revocationConfiguration;
             return this;
         }
-        public Builder revocationConfiguration(@Nullable CertificateAuthorityRevocationConfigurationArgs revocationConfiguration) {
-            this.revocationConfiguration = Codegen.ofNullable(revocationConfiguration);
-            return this;
+
+        public Builder revocationConfiguration(CertificateAuthorityRevocationConfigurationArgs revocationConfiguration) {
+            return revocationConfiguration(Output.of(revocationConfiguration));
         }
+
         public Builder signingAlgorithm(Output<String> signingAlgorithm) {
-            this.signingAlgorithm = Objects.requireNonNull(signingAlgorithm);
+            $.signingAlgorithm = signingAlgorithm;
             return this;
         }
+
         public Builder signingAlgorithm(String signingAlgorithm) {
-            this.signingAlgorithm = Output.of(Objects.requireNonNull(signingAlgorithm));
-            return this;
+            return signingAlgorithm(Output.of(signingAlgorithm));
         }
+
         public Builder subject(Output<CertificateAuthoritySubjectArgs> subject) {
-            this.subject = Objects.requireNonNull(subject);
+            $.subject = subject;
             return this;
         }
+
         public Builder subject(CertificateAuthoritySubjectArgs subject) {
-            this.subject = Output.of(Objects.requireNonNull(subject));
-            return this;
+            return subject(Output.of(subject));
         }
+
         public Builder tags(@Nullable Output<List<CertificateAuthorityTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<CertificateAuthorityTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<CertificateAuthorityTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(CertificateAuthorityTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public CertificateAuthorityArgs build() {
-            return new CertificateAuthorityArgs(csrExtensions, keyAlgorithm, keyStorageSecurityStandard, revocationConfiguration, signingAlgorithm, subject, tags, type);
+            return type(Output.of(type));
+        }
+
+        public CertificateAuthorityArgs build() {
+            $.keyAlgorithm = Objects.requireNonNull($.keyAlgorithm, "expected parameter 'keyAlgorithm' to be non-null");
+            $.signingAlgorithm = Objects.requireNonNull($.signingAlgorithm, "expected parameter 'signingAlgorithm' to be non-null");
+            $.subject = Objects.requireNonNull($.subject, "expected parameter 'subject' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

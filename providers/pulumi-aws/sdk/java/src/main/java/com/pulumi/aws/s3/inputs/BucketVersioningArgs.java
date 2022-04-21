@@ -5,9 +5,9 @@ package com.pulumi.aws.s3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class BucketVersioningArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class BucketVersioningArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="mfaDelete")
-      private final @Nullable Output<Boolean> mfaDelete;
+    private @Nullable Output<Boolean> mfaDelete;
 
-    public Output<Boolean> mfaDelete() {
-        return this.mfaDelete == null ? Codegen.empty() : this.mfaDelete;
+    public Optional<Output<Boolean>> mfaDelete() {
+        return Optional.ofNullable(this.mfaDelete);
     }
 
-    public BucketVersioningArgs(
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<Boolean> mfaDelete) {
-        this.enabled = enabled;
-        this.mfaDelete = mfaDelete;
-    }
+    private BucketVersioningArgs() {}
 
-    private BucketVersioningArgs() {
-        this.enabled = Codegen.empty();
-        this.mfaDelete = Codegen.empty();
+    private BucketVersioningArgs(BucketVersioningArgs $) {
+        this.enabled = $.enabled;
+        this.mfaDelete = $.mfaDelete;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketVersioningArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<Boolean> mfaDelete;
+        private BucketVersioningArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketVersioningArgs();
         }
 
         public Builder(BucketVersioningArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.mfaDelete = defaults.mfaDelete;
+            $ = new BucketVersioningArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder mfaDelete(@Nullable Output<Boolean> mfaDelete) {
-            this.mfaDelete = mfaDelete;
+            $.mfaDelete = mfaDelete;
             return this;
         }
-        public Builder mfaDelete(@Nullable Boolean mfaDelete) {
-            this.mfaDelete = Codegen.ofNullable(mfaDelete);
-            return this;
-        }        public BucketVersioningArgs build() {
-            return new BucketVersioningArgs(enabled, mfaDelete);
+
+        public Builder mfaDelete(Boolean mfaDelete) {
+            return mfaDelete(Output.of(mfaDelete));
+        }
+
+        public BucketVersioningArgs build() {
+            return $;
         }
     }
+
 }

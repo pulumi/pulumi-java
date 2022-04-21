@@ -6,10 +6,10 @@ package com.pulumi.azurenative.autonomousdevelopmentplatform;
 import com.pulumi.azurenative.autonomousdevelopmentplatform.inputs.DataPoolLocationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class DataPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -33,10 +33,10 @@ public final class DataPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataPoolName")
-      private final @Nullable Output<String> dataPoolName;
+    private @Nullable Output<String> dataPoolName;
 
-    public Output<String> dataPoolName() {
-        return this.dataPoolName == null ? Codegen.empty() : this.dataPoolName;
+    public Optional<Output<String>> dataPoolName() {
+        return Optional.ofNullable(this.dataPoolName);
     }
 
     /**
@@ -44,7 +44,7 @@ public final class DataPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="locations", required=true)
-      private final Output<List<DataPoolLocationArgs>> locations;
+    private Output<List<DataPoolLocationArgs>> locations;
 
     public Output<List<DataPoolLocationArgs>> locations() {
         return this.locations;
@@ -55,92 +55,85 @@ public final class DataPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public DataPoolArgs(
-        Output<String> accountName,
-        @Nullable Output<String> dataPoolName,
-        Output<List<DataPoolLocationArgs>> locations,
-        Output<String> resourceGroupName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.dataPoolName = dataPoolName;
-        this.locations = Objects.requireNonNull(locations, "expected parameter 'locations' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private DataPoolArgs() {}
 
-    private DataPoolArgs() {
-        this.accountName = Codegen.empty();
-        this.dataPoolName = Codegen.empty();
-        this.locations = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
+    private DataPoolArgs(DataPoolArgs $) {
+        this.accountName = $.accountName;
+        this.dataPoolName = $.dataPoolName;
+        this.locations = $.locations;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataPoolArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountName;
-        private @Nullable Output<String> dataPoolName;
-        private Output<List<DataPoolLocationArgs>> locations;
-        private Output<String> resourceGroupName;
+        private DataPoolArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataPoolArgs();
         }
 
         public Builder(DataPoolArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.dataPoolName = defaults.dataPoolName;
-    	      this.locations = defaults.locations;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new DataPoolArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder dataPoolName(@Nullable Output<String> dataPoolName) {
-            this.dataPoolName = dataPoolName;
+            $.dataPoolName = dataPoolName;
             return this;
         }
-        public Builder dataPoolName(@Nullable String dataPoolName) {
-            this.dataPoolName = Codegen.ofNullable(dataPoolName);
-            return this;
+
+        public Builder dataPoolName(String dataPoolName) {
+            return dataPoolName(Output.of(dataPoolName));
         }
+
         public Builder locations(Output<List<DataPoolLocationArgs>> locations) {
-            this.locations = Objects.requireNonNull(locations);
+            $.locations = locations;
             return this;
         }
+
         public Builder locations(List<DataPoolLocationArgs> locations) {
-            this.locations = Output.of(Objects.requireNonNull(locations));
-            return this;
+            return locations(Output.of(locations));
         }
+
         public Builder locations(DataPoolLocationArgs... locations) {
             return locations(List.of(locations));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
-        }        public DataPoolArgs build() {
-            return new DataPoolArgs(accountName, dataPoolName, locations, resourceGroupName);
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public DataPoolArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.locations = Objects.requireNonNull($.locations, "expected parameter 'locations' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

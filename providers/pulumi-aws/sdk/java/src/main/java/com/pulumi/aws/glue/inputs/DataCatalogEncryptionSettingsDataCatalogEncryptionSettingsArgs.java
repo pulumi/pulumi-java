@@ -7,7 +7,6 @@ import com.pulumi.aws.glue.inputs.DataCatalogEncryptionSettingsDataCatalogEncryp
 import com.pulumi.aws.glue.inputs.DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -20,7 +19,7 @@ public final class DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsArg
      * 
      */
     @Import(name="connectionPasswordEncryption", required=true)
-      private final Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryptionArgs> connectionPasswordEncryption;
+    private Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryptionArgs> connectionPasswordEncryption;
 
     public Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryptionArgs> connectionPasswordEncryption() {
         return this.connectionPasswordEncryption;
@@ -31,63 +30,60 @@ public final class DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsArg
      * 
      */
     @Import(name="encryptionAtRest", required=true)
-      private final Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestArgs> encryptionAtRest;
+    private Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestArgs> encryptionAtRest;
 
     public Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestArgs> encryptionAtRest() {
         return this.encryptionAtRest;
     }
 
-    public DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsArgs(
-        Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryptionArgs> connectionPasswordEncryption,
-        Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestArgs> encryptionAtRest) {
-        this.connectionPasswordEncryption = Objects.requireNonNull(connectionPasswordEncryption, "expected parameter 'connectionPasswordEncryption' to be non-null");
-        this.encryptionAtRest = Objects.requireNonNull(encryptionAtRest, "expected parameter 'encryptionAtRest' to be non-null");
-    }
+    private DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsArgs() {}
 
-    private DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsArgs() {
-        this.connectionPasswordEncryption = Codegen.empty();
-        this.encryptionAtRest = Codegen.empty();
+    private DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsArgs(DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsArgs $) {
+        this.connectionPasswordEncryption = $.connectionPasswordEncryption;
+        this.encryptionAtRest = $.encryptionAtRest;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryptionArgs> connectionPasswordEncryption;
-        private Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestArgs> encryptionAtRest;
+        private DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsArgs();
         }
 
         public Builder(DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectionPasswordEncryption = defaults.connectionPasswordEncryption;
-    	      this.encryptionAtRest = defaults.encryptionAtRest;
+            $ = new DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connectionPasswordEncryption(Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryptionArgs> connectionPasswordEncryption) {
-            this.connectionPasswordEncryption = Objects.requireNonNull(connectionPasswordEncryption);
+            $.connectionPasswordEncryption = connectionPasswordEncryption;
             return this;
         }
+
         public Builder connectionPasswordEncryption(DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryptionArgs connectionPasswordEncryption) {
-            this.connectionPasswordEncryption = Output.of(Objects.requireNonNull(connectionPasswordEncryption));
-            return this;
+            return connectionPasswordEncryption(Output.of(connectionPasswordEncryption));
         }
+
         public Builder encryptionAtRest(Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestArgs> encryptionAtRest) {
-            this.encryptionAtRest = Objects.requireNonNull(encryptionAtRest);
+            $.encryptionAtRest = encryptionAtRest;
             return this;
         }
+
         public Builder encryptionAtRest(DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestArgs encryptionAtRest) {
-            this.encryptionAtRest = Output.of(Objects.requireNonNull(encryptionAtRest));
-            return this;
-        }        public DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsArgs build() {
-            return new DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsArgs(connectionPasswordEncryption, encryptionAtRest);
+            return encryptionAtRest(Output.of(encryptionAtRest));
+        }
+
+        public DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsArgs build() {
+            $.connectionPasswordEncryption = Objects.requireNonNull($.connectionPasswordEncryption, "expected parameter 'connectionPasswordEncryption' to be non-null");
+            $.encryptionAtRest = Objects.requireNonNull($.encryptionAtRest, "expected parameter 'encryptionAtRest' to be non-null");
+            return $;
         }
     }
+
 }

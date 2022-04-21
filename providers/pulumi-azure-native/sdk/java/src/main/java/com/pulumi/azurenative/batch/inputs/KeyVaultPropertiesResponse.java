@@ -27,45 +27,44 @@ public final class KeyVaultPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="keyIdentifier")
-      private final @Nullable String keyIdentifier;
+    private @Nullable String keyIdentifier;
 
     public Optional<String> keyIdentifier() {
-        return this.keyIdentifier == null ? Optional.empty() : Optional.ofNullable(this.keyIdentifier);
+        return Optional.ofNullable(this.keyIdentifier);
     }
 
-    public KeyVaultPropertiesResponse(@Nullable String keyIdentifier) {
-        this.keyIdentifier = keyIdentifier;
-    }
+    private KeyVaultPropertiesResponse() {}
 
-    private KeyVaultPropertiesResponse() {
-        this.keyIdentifier = null;
+    private KeyVaultPropertiesResponse(KeyVaultPropertiesResponse $) {
+        this.keyIdentifier = $.keyIdentifier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyVaultPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String keyIdentifier;
+        private KeyVaultPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyVaultPropertiesResponse();
         }
 
         public Builder(KeyVaultPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyIdentifier = defaults.keyIdentifier;
+            $ = new KeyVaultPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder keyIdentifier(@Nullable String keyIdentifier) {
-            this.keyIdentifier = keyIdentifier;
+            $.keyIdentifier = keyIdentifier;
             return this;
-        }        public KeyVaultPropertiesResponse build() {
-            return new KeyVaultPropertiesResponse(keyIdentifier);
+        }
+
+        public KeyVaultPropertiesResponse build() {
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.kubernetes.policy_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.policy_v1beta1.inputs.IDRangeArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class RunAsUserStrategyOptionsArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="ranges")
-      private final @Nullable Output<List<IDRangeArgs>> ranges;
+    private @Nullable Output<List<IDRangeArgs>> ranges;
 
-    public Output<List<IDRangeArgs>> ranges() {
-        return this.ranges == null ? Codegen.empty() : this.ranges;
+    public Optional<Output<List<IDRangeArgs>>> ranges() {
+        return Optional.ofNullable(this.ranges);
     }
 
     /**
@@ -37,66 +37,63 @@ public final class RunAsUserStrategyOptionsArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="rule", required=true)
-      private final Output<String> rule;
+    private Output<String> rule;
 
     public Output<String> rule() {
         return this.rule;
     }
 
-    public RunAsUserStrategyOptionsArgs(
-        @Nullable Output<List<IDRangeArgs>> ranges,
-        Output<String> rule) {
-        this.ranges = ranges;
-        this.rule = Objects.requireNonNull(rule, "expected parameter 'rule' to be non-null");
-    }
+    private RunAsUserStrategyOptionsArgs() {}
 
-    private RunAsUserStrategyOptionsArgs() {
-        this.ranges = Codegen.empty();
-        this.rule = Codegen.empty();
+    private RunAsUserStrategyOptionsArgs(RunAsUserStrategyOptionsArgs $) {
+        this.ranges = $.ranges;
+        this.rule = $.rule;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RunAsUserStrategyOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<IDRangeArgs>> ranges;
-        private Output<String> rule;
+        private RunAsUserStrategyOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RunAsUserStrategyOptionsArgs();
         }
 
         public Builder(RunAsUserStrategyOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ranges = defaults.ranges;
-    	      this.rule = defaults.rule;
+            $ = new RunAsUserStrategyOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ranges(@Nullable Output<List<IDRangeArgs>> ranges) {
-            this.ranges = ranges;
+            $.ranges = ranges;
             return this;
         }
-        public Builder ranges(@Nullable List<IDRangeArgs> ranges) {
-            this.ranges = Codegen.ofNullable(ranges);
-            return this;
+
+        public Builder ranges(List<IDRangeArgs> ranges) {
+            return ranges(Output.of(ranges));
         }
+
         public Builder ranges(IDRangeArgs... ranges) {
             return ranges(List.of(ranges));
         }
+
         public Builder rule(Output<String> rule) {
-            this.rule = Objects.requireNonNull(rule);
+            $.rule = rule;
             return this;
         }
+
         public Builder rule(String rule) {
-            this.rule = Output.of(Objects.requireNonNull(rule));
-            return this;
-        }        public RunAsUserStrategyOptionsArgs build() {
-            return new RunAsUserStrategyOptionsArgs(ranges, rule);
+            return rule(Output.of(rule));
+        }
+
+        public RunAsUserStrategyOptionsArgs build() {
+            $.rule = Objects.requireNonNull($.rule, "expected parameter 'rule' to be non-null");
+            return $;
         }
     }
+
 }

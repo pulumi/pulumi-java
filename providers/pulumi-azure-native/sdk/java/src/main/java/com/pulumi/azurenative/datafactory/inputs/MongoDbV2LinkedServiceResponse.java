@@ -29,10 +29,10 @@ public final class MongoDbV2LinkedServiceResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="annotations")
-      private final @Nullable List<Object> annotations;
+    private @Nullable List<Object> annotations;
 
-    public List<Object> annotations() {
-        return this.annotations == null ? List.of() : this.annotations;
+    public Optional<List<Object>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class MongoDbV2LinkedServiceResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="connectVia")
-      private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+    private @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
-        return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
+        return Optional.ofNullable(this.connectVia);
     }
 
     /**
@@ -51,7 +51,7 @@ public final class MongoDbV2LinkedServiceResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="connectionString", required=true)
-      private final Object connectionString;
+    private Object connectionString;
 
     public Object connectionString() {
         return this.connectionString;
@@ -62,7 +62,7 @@ public final class MongoDbV2LinkedServiceResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="database", required=true)
-      private final Object database;
+    private Object database;
 
     public Object database() {
         return this.database;
@@ -73,10 +73,10 @@ public final class MongoDbV2LinkedServiceResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class MongoDbV2LinkedServiceResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+    private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> parameters() {
-        return this.parameters == null ? Map.of() : this.parameters;
+    public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -96,103 +96,87 @@ public final class MongoDbV2LinkedServiceResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public MongoDbV2LinkedServiceResponse(
-        @Nullable List<Object> annotations,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        Object connectionString,
-        Object database,
-        @Nullable String description,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        String type) {
-        this.annotations = annotations;
-        this.connectVia = connectVia;
-        this.connectionString = Objects.requireNonNull(connectionString, "expected parameter 'connectionString' to be non-null");
-        this.database = Objects.requireNonNull(database, "expected parameter 'database' to be non-null");
-        this.description = description;
-        this.parameters = parameters;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private MongoDbV2LinkedServiceResponse() {}
 
-    private MongoDbV2LinkedServiceResponse() {
-        this.annotations = List.of();
-        this.connectVia = null;
-        this.connectionString = null;
-        this.database = null;
-        this.description = null;
-        this.parameters = Map.of();
-        this.type = null;
+    private MongoDbV2LinkedServiceResponse(MongoDbV2LinkedServiceResponse $) {
+        this.annotations = $.annotations;
+        this.connectVia = $.connectVia;
+        this.connectionString = $.connectionString;
+        this.database = $.database;
+        this.description = $.description;
+        this.parameters = $.parameters;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MongoDbV2LinkedServiceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<Object> annotations;
-        private @Nullable IntegrationRuntimeReferenceResponse connectVia;
-        private Object connectionString;
-        private Object database;
-        private @Nullable String description;
-        private @Nullable Map<String,ParameterSpecificationResponse> parameters;
-        private String type;
+        private MongoDbV2LinkedServiceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MongoDbV2LinkedServiceResponse();
         }
 
         public Builder(MongoDbV2LinkedServiceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.connectVia = defaults.connectVia;
-    	      this.connectionString = defaults.connectionString;
-    	      this.database = defaults.database;
-    	      this.description = defaults.description;
-    	      this.parameters = defaults.parameters;
-    	      this.type = defaults.type;
+            $ = new MongoDbV2LinkedServiceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
-            this.connectVia = connectVia;
+            $.connectVia = connectVia;
             return this;
         }
+
         public Builder connectionString(Object connectionString) {
-            this.connectionString = Objects.requireNonNull(connectionString);
+            $.connectionString = connectionString;
             return this;
         }
+
         public Builder database(Object database) {
-            this.database = Objects.requireNonNull(database);
+            $.database = database;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public MongoDbV2LinkedServiceResponse build() {
-            return new MongoDbV2LinkedServiceResponse(annotations, connectVia, connectionString, database, description, parameters, type);
+        }
+
+        public MongoDbV2LinkedServiceResponse build() {
+            $.connectionString = Objects.requireNonNull($.connectionString, "expected parameter 'connectionString' to be non-null");
+            $.database = Objects.requireNonNull($.database, "expected parameter 'database' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

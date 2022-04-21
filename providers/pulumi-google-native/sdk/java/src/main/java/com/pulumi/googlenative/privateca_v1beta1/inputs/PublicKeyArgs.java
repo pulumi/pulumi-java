@@ -5,10 +5,10 @@ package com.pulumi.googlenative.privateca_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.privateca_v1beta1.enums.PublicKeyType;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class PublicKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="key", required=true)
-      private final Output<String> key;
+    private Output<String> key;
 
     public Output<String> key() {
         return this.key;
@@ -36,63 +36,59 @@ public final class PublicKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<PublicKeyType> type;
+    private @Nullable Output<PublicKeyType> type;
 
-    public Output<PublicKeyType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<PublicKeyType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public PublicKeyArgs(
-        Output<String> key,
-        @Nullable Output<PublicKeyType> type) {
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.type = type;
-    }
+    private PublicKeyArgs() {}
 
-    private PublicKeyArgs() {
-        this.key = Codegen.empty();
-        this.type = Codegen.empty();
+    private PublicKeyArgs(PublicKeyArgs $) {
+        this.key = $.key;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PublicKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> key;
-        private @Nullable Output<PublicKeyType> type;
+        private PublicKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PublicKeyArgs();
         }
 
         public Builder(PublicKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.type = defaults.type;
+            $ = new PublicKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder key(Output<String> key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder key(String key) {
-            this.key = Output.of(Objects.requireNonNull(key));
-            return this;
+            return key(Output.of(key));
         }
+
         public Builder type(@Nullable Output<PublicKeyType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable PublicKeyType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public PublicKeyArgs build() {
-            return new PublicKeyArgs(key, type);
+
+        public Builder type(PublicKeyType type) {
+            return type(Output.of(type));
+        }
+
+        public PublicKeyArgs build() {
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            return $;
         }
     }
+
 }

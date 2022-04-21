@@ -5,10 +5,10 @@ package com.pulumi.gcp.pubsub;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.pubsub.inputs.SubscriptionIAMMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,14 +17,14 @@ public final class SubscriptionIAMMemberArgs extends com.pulumi.resources.Resour
     public static final SubscriptionIAMMemberArgs Empty = new SubscriptionIAMMemberArgs();
 
     @Import(name="condition")
-      private final @Nullable Output<SubscriptionIAMMemberConditionArgs> condition;
+    private @Nullable Output<SubscriptionIAMMemberConditionArgs> condition;
 
-    public Output<SubscriptionIAMMemberConditionArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<SubscriptionIAMMemberConditionArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     @Import(name="member", required=true)
-      private final Output<String> member;
+    private Output<String> member;
 
     public Output<String> member() {
         return this.member;
@@ -36,10 +36,10 @@ public final class SubscriptionIAMMemberArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -49,7 +49,7 @@ public final class SubscriptionIAMMemberArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="role", required=true)
-      private final Output<String> role;
+    private Output<String> role;
 
     public Output<String> role() {
         return this.role;
@@ -60,102 +60,91 @@ public final class SubscriptionIAMMemberArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="subscription", required=true)
-      private final Output<String> subscription;
+    private Output<String> subscription;
 
     public Output<String> subscription() {
         return this.subscription;
     }
 
-    public SubscriptionIAMMemberArgs(
-        @Nullable Output<SubscriptionIAMMemberConditionArgs> condition,
-        Output<String> member,
-        @Nullable Output<String> project,
-        Output<String> role,
-        Output<String> subscription) {
-        this.condition = condition;
-        this.member = Objects.requireNonNull(member, "expected parameter 'member' to be non-null");
-        this.project = project;
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-        this.subscription = Objects.requireNonNull(subscription, "expected parameter 'subscription' to be non-null");
-    }
+    private SubscriptionIAMMemberArgs() {}
 
-    private SubscriptionIAMMemberArgs() {
-        this.condition = Codegen.empty();
-        this.member = Codegen.empty();
-        this.project = Codegen.empty();
-        this.role = Codegen.empty();
-        this.subscription = Codegen.empty();
+    private SubscriptionIAMMemberArgs(SubscriptionIAMMemberArgs $) {
+        this.condition = $.condition;
+        this.member = $.member;
+        this.project = $.project;
+        this.role = $.role;
+        this.subscription = $.subscription;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubscriptionIAMMemberArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<SubscriptionIAMMemberConditionArgs> condition;
-        private Output<String> member;
-        private @Nullable Output<String> project;
-        private Output<String> role;
-        private Output<String> subscription;
+        private SubscriptionIAMMemberArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubscriptionIAMMemberArgs();
         }
 
         public Builder(SubscriptionIAMMemberArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.member = defaults.member;
-    	      this.project = defaults.project;
-    	      this.role = defaults.role;
-    	      this.subscription = defaults.subscription;
+            $ = new SubscriptionIAMMemberArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable Output<SubscriptionIAMMemberConditionArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable SubscriptionIAMMemberConditionArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(SubscriptionIAMMemberConditionArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder member(Output<String> member) {
-            this.member = Objects.requireNonNull(member);
+            $.member = member;
             return this;
         }
+
         public Builder member(String member) {
-            this.member = Output.of(Objects.requireNonNull(member));
-            return this;
+            return member(Output.of(member));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder role(Output<String> role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
         }
+
         public Builder role(String role) {
-            this.role = Output.of(Objects.requireNonNull(role));
-            return this;
+            return role(Output.of(role));
         }
+
         public Builder subscription(Output<String> subscription) {
-            this.subscription = Objects.requireNonNull(subscription);
+            $.subscription = subscription;
             return this;
         }
+
         public Builder subscription(String subscription) {
-            this.subscription = Output.of(Objects.requireNonNull(subscription));
-            return this;
-        }        public SubscriptionIAMMemberArgs build() {
-            return new SubscriptionIAMMemberArgs(condition, member, project, role, subscription);
+            return subscription(Output.of(subscription));
+        }
+
+        public SubscriptionIAMMemberArgs build() {
+            $.member = Objects.requireNonNull($.member, "expected parameter 'member' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            $.subscription = Objects.requireNonNull($.subscription, "expected parameter 'subscription' to be non-null");
+            return $;
         }
     }
+
 }

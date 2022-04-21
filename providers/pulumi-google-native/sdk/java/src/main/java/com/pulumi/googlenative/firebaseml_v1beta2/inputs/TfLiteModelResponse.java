@@ -21,7 +21,7 @@ public final class TfLiteModelResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="automlModel", required=true)
-      private final String automlModel;
+    private String automlModel;
 
     public String automlModel() {
         return this.automlModel;
@@ -32,7 +32,7 @@ public final class TfLiteModelResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="gcsTfliteUri", required=true)
-      private final String gcsTfliteUri;
+    private String gcsTfliteUri;
 
     public String gcsTfliteUri() {
         return this.gcsTfliteUri;
@@ -43,64 +43,59 @@ public final class TfLiteModelResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sizeBytes", required=true)
-      private final String sizeBytes;
+    private String sizeBytes;
 
     public String sizeBytes() {
         return this.sizeBytes;
     }
 
-    public TfLiteModelResponse(
-        String automlModel,
-        String gcsTfliteUri,
-        String sizeBytes) {
-        this.automlModel = Objects.requireNonNull(automlModel, "expected parameter 'automlModel' to be non-null");
-        this.gcsTfliteUri = Objects.requireNonNull(gcsTfliteUri, "expected parameter 'gcsTfliteUri' to be non-null");
-        this.sizeBytes = Objects.requireNonNull(sizeBytes, "expected parameter 'sizeBytes' to be non-null");
-    }
+    private TfLiteModelResponse() {}
 
-    private TfLiteModelResponse() {
-        this.automlModel = null;
-        this.gcsTfliteUri = null;
-        this.sizeBytes = null;
+    private TfLiteModelResponse(TfLiteModelResponse $) {
+        this.automlModel = $.automlModel;
+        this.gcsTfliteUri = $.gcsTfliteUri;
+        this.sizeBytes = $.sizeBytes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TfLiteModelResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String automlModel;
-        private String gcsTfliteUri;
-        private String sizeBytes;
+        private TfLiteModelResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TfLiteModelResponse();
         }
 
         public Builder(TfLiteModelResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.automlModel = defaults.automlModel;
-    	      this.gcsTfliteUri = defaults.gcsTfliteUri;
-    	      this.sizeBytes = defaults.sizeBytes;
+            $ = new TfLiteModelResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder automlModel(String automlModel) {
-            this.automlModel = Objects.requireNonNull(automlModel);
+            $.automlModel = automlModel;
             return this;
         }
+
         public Builder gcsTfliteUri(String gcsTfliteUri) {
-            this.gcsTfliteUri = Objects.requireNonNull(gcsTfliteUri);
+            $.gcsTfliteUri = gcsTfliteUri;
             return this;
         }
+
         public Builder sizeBytes(String sizeBytes) {
-            this.sizeBytes = Objects.requireNonNull(sizeBytes);
+            $.sizeBytes = sizeBytes;
             return this;
-        }        public TfLiteModelResponse build() {
-            return new TfLiteModelResponse(automlModel, gcsTfliteUri, sizeBytes);
+        }
+
+        public TfLiteModelResponse build() {
+            $.automlModel = Objects.requireNonNull($.automlModel, "expected parameter 'automlModel' to be non-null");
+            $.gcsTfliteUri = Objects.requireNonNull($.gcsTfliteUri, "expected parameter 'gcsTfliteUri' to be non-null");
+            $.sizeBytes = Objects.requireNonNull($.sizeBytes, "expected parameter 'sizeBytes' to be non-null");
+            return $;
         }
     }
+
 }

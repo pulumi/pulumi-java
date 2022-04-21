@@ -19,10 +19,10 @@ public final class GetServiceQuotaArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="quotaCode")
-      private final @Nullable String quotaCode;
+    private @Nullable String quotaCode;
 
     public Optional<String> quotaCode() {
-        return this.quotaCode == null ? Optional.empty() : Optional.ofNullable(this.quotaCode);
+        return Optional.ofNullable(this.quotaCode);
     }
 
     /**
@@ -30,10 +30,10 @@ public final class GetServiceQuotaArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="quotaName")
-      private final @Nullable String quotaName;
+    private @Nullable String quotaName;
 
     public Optional<String> quotaName() {
-        return this.quotaName == null ? Optional.empty() : Optional.ofNullable(this.quotaName);
+        return Optional.ofNullable(this.quotaName);
     }
 
     /**
@@ -41,64 +41,57 @@ public final class GetServiceQuotaArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serviceCode", required=true)
-      private final String serviceCode;
+    private String serviceCode;
 
     public String serviceCode() {
         return this.serviceCode;
     }
 
-    public GetServiceQuotaArgs(
-        @Nullable String quotaCode,
-        @Nullable String quotaName,
-        String serviceCode) {
-        this.quotaCode = quotaCode;
-        this.quotaName = quotaName;
-        this.serviceCode = Objects.requireNonNull(serviceCode, "expected parameter 'serviceCode' to be non-null");
-    }
+    private GetServiceQuotaArgs() {}
 
-    private GetServiceQuotaArgs() {
-        this.quotaCode = null;
-        this.quotaName = null;
-        this.serviceCode = null;
+    private GetServiceQuotaArgs(GetServiceQuotaArgs $) {
+        this.quotaCode = $.quotaCode;
+        this.quotaName = $.quotaName;
+        this.serviceCode = $.serviceCode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetServiceQuotaArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String quotaCode;
-        private @Nullable String quotaName;
-        private String serviceCode;
+        private GetServiceQuotaArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetServiceQuotaArgs();
         }
 
         public Builder(GetServiceQuotaArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.quotaCode = defaults.quotaCode;
-    	      this.quotaName = defaults.quotaName;
-    	      this.serviceCode = defaults.serviceCode;
+            $ = new GetServiceQuotaArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder quotaCode(@Nullable String quotaCode) {
-            this.quotaCode = quotaCode;
+            $.quotaCode = quotaCode;
             return this;
         }
+
         public Builder quotaName(@Nullable String quotaName) {
-            this.quotaName = quotaName;
+            $.quotaName = quotaName;
             return this;
         }
+
         public Builder serviceCode(String serviceCode) {
-            this.serviceCode = Objects.requireNonNull(serviceCode);
+            $.serviceCode = serviceCode;
             return this;
-        }        public GetServiceQuotaArgs build() {
-            return new GetServiceQuotaArgs(quotaCode, quotaName, serviceCode);
+        }
+
+        public GetServiceQuotaArgs build() {
+            $.serviceCode = Objects.requireNonNull($.serviceCode, "expected parameter 'serviceCode' to be non-null");
+            return $;
         }
     }
+
 }

@@ -7,10 +7,10 @@ import com.pulumi.aws.kinesis.inputs.AnalyticsApplicationReferenceDataSourcesSch
 import com.pulumi.aws.kinesis.inputs.AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaGetArgs extends
      * 
      */
     @Import(name="recordColumns", required=true)
-      private final Output<List<AnalyticsApplicationReferenceDataSourcesSchemaRecordColumnGetArgs>> recordColumns;
+    private Output<List<AnalyticsApplicationReferenceDataSourcesSchemaRecordColumnGetArgs>> recordColumns;
 
     public Output<List<AnalyticsApplicationReferenceDataSourcesSchemaRecordColumnGetArgs>> recordColumns() {
         return this.recordColumns;
@@ -35,10 +35,10 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaGetArgs extends
      * 
      */
     @Import(name="recordEncoding")
-      private final @Nullable Output<String> recordEncoding;
+    private @Nullable Output<String> recordEncoding;
 
-    public Output<String> recordEncoding() {
-        return this.recordEncoding == null ? Codegen.empty() : this.recordEncoding;
+    public Optional<Output<String>> recordEncoding() {
+        return Optional.ofNullable(this.recordEncoding);
     }
 
     /**
@@ -47,79 +47,74 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaGetArgs extends
      * 
      */
     @Import(name="recordFormat", required=true)
-      private final Output<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatGetArgs> recordFormat;
+    private Output<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatGetArgs> recordFormat;
 
     public Output<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatGetArgs> recordFormat() {
         return this.recordFormat;
     }
 
-    public AnalyticsApplicationReferenceDataSourcesSchemaGetArgs(
-        Output<List<AnalyticsApplicationReferenceDataSourcesSchemaRecordColumnGetArgs>> recordColumns,
-        @Nullable Output<String> recordEncoding,
-        Output<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatGetArgs> recordFormat) {
-        this.recordColumns = Objects.requireNonNull(recordColumns, "expected parameter 'recordColumns' to be non-null");
-        this.recordEncoding = recordEncoding;
-        this.recordFormat = Objects.requireNonNull(recordFormat, "expected parameter 'recordFormat' to be non-null");
-    }
+    private AnalyticsApplicationReferenceDataSourcesSchemaGetArgs() {}
 
-    private AnalyticsApplicationReferenceDataSourcesSchemaGetArgs() {
-        this.recordColumns = Codegen.empty();
-        this.recordEncoding = Codegen.empty();
-        this.recordFormat = Codegen.empty();
+    private AnalyticsApplicationReferenceDataSourcesSchemaGetArgs(AnalyticsApplicationReferenceDataSourcesSchemaGetArgs $) {
+        this.recordColumns = $.recordColumns;
+        this.recordEncoding = $.recordEncoding;
+        this.recordFormat = $.recordFormat;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnalyticsApplicationReferenceDataSourcesSchemaGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<AnalyticsApplicationReferenceDataSourcesSchemaRecordColumnGetArgs>> recordColumns;
-        private @Nullable Output<String> recordEncoding;
-        private Output<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatGetArgs> recordFormat;
+        private AnalyticsApplicationReferenceDataSourcesSchemaGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnalyticsApplicationReferenceDataSourcesSchemaGetArgs();
         }
 
         public Builder(AnalyticsApplicationReferenceDataSourcesSchemaGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.recordColumns = defaults.recordColumns;
-    	      this.recordEncoding = defaults.recordEncoding;
-    	      this.recordFormat = defaults.recordFormat;
+            $ = new AnalyticsApplicationReferenceDataSourcesSchemaGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder recordColumns(Output<List<AnalyticsApplicationReferenceDataSourcesSchemaRecordColumnGetArgs>> recordColumns) {
-            this.recordColumns = Objects.requireNonNull(recordColumns);
+            $.recordColumns = recordColumns;
             return this;
         }
+
         public Builder recordColumns(List<AnalyticsApplicationReferenceDataSourcesSchemaRecordColumnGetArgs> recordColumns) {
-            this.recordColumns = Output.of(Objects.requireNonNull(recordColumns));
-            return this;
+            return recordColumns(Output.of(recordColumns));
         }
+
         public Builder recordColumns(AnalyticsApplicationReferenceDataSourcesSchemaRecordColumnGetArgs... recordColumns) {
             return recordColumns(List.of(recordColumns));
         }
+
         public Builder recordEncoding(@Nullable Output<String> recordEncoding) {
-            this.recordEncoding = recordEncoding;
+            $.recordEncoding = recordEncoding;
             return this;
         }
-        public Builder recordEncoding(@Nullable String recordEncoding) {
-            this.recordEncoding = Codegen.ofNullable(recordEncoding);
-            return this;
+
+        public Builder recordEncoding(String recordEncoding) {
+            return recordEncoding(Output.of(recordEncoding));
         }
+
         public Builder recordFormat(Output<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatGetArgs> recordFormat) {
-            this.recordFormat = Objects.requireNonNull(recordFormat);
+            $.recordFormat = recordFormat;
             return this;
         }
+
         public Builder recordFormat(AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatGetArgs recordFormat) {
-            this.recordFormat = Output.of(Objects.requireNonNull(recordFormat));
-            return this;
-        }        public AnalyticsApplicationReferenceDataSourcesSchemaGetArgs build() {
-            return new AnalyticsApplicationReferenceDataSourcesSchemaGetArgs(recordColumns, recordEncoding, recordFormat);
+            return recordFormat(Output.of(recordFormat));
+        }
+
+        public AnalyticsApplicationReferenceDataSourcesSchemaGetArgs build() {
+            $.recordColumns = Objects.requireNonNull($.recordColumns, "expected parameter 'recordColumns' to be non-null");
+            $.recordFormat = Objects.requireNonNull($.recordFormat, "expected parameter 'recordFormat' to be non-null");
+            return $;
         }
     }
+
 }

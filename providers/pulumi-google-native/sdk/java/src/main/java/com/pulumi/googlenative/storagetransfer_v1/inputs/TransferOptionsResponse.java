@@ -22,7 +22,7 @@ public final class TransferOptionsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="deleteObjectsFromSourceAfterTransfer", required=true)
-      private final Boolean deleteObjectsFromSourceAfterTransfer;
+    private Boolean deleteObjectsFromSourceAfterTransfer;
 
     public Boolean deleteObjectsFromSourceAfterTransfer() {
         return this.deleteObjectsFromSourceAfterTransfer;
@@ -33,7 +33,7 @@ public final class TransferOptionsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="deleteObjectsUniqueInSink", required=true)
-      private final Boolean deleteObjectsUniqueInSink;
+    private Boolean deleteObjectsUniqueInSink;
 
     public Boolean deleteObjectsUniqueInSink() {
         return this.deleteObjectsUniqueInSink;
@@ -44,7 +44,7 @@ public final class TransferOptionsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="metadataOptions", required=true)
-      private final MetadataOptionsResponse metadataOptions;
+    private MetadataOptionsResponse metadataOptions;
 
     public MetadataOptionsResponse metadataOptions() {
         return this.metadataOptions;
@@ -55,73 +55,66 @@ public final class TransferOptionsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="overwriteObjectsAlreadyExistingInSink", required=true)
-      private final Boolean overwriteObjectsAlreadyExistingInSink;
+    private Boolean overwriteObjectsAlreadyExistingInSink;
 
     public Boolean overwriteObjectsAlreadyExistingInSink() {
         return this.overwriteObjectsAlreadyExistingInSink;
     }
 
-    public TransferOptionsResponse(
-        Boolean deleteObjectsFromSourceAfterTransfer,
-        Boolean deleteObjectsUniqueInSink,
-        MetadataOptionsResponse metadataOptions,
-        Boolean overwriteObjectsAlreadyExistingInSink) {
-        this.deleteObjectsFromSourceAfterTransfer = Objects.requireNonNull(deleteObjectsFromSourceAfterTransfer, "expected parameter 'deleteObjectsFromSourceAfterTransfer' to be non-null");
-        this.deleteObjectsUniqueInSink = Objects.requireNonNull(deleteObjectsUniqueInSink, "expected parameter 'deleteObjectsUniqueInSink' to be non-null");
-        this.metadataOptions = Objects.requireNonNull(metadataOptions, "expected parameter 'metadataOptions' to be non-null");
-        this.overwriteObjectsAlreadyExistingInSink = Objects.requireNonNull(overwriteObjectsAlreadyExistingInSink, "expected parameter 'overwriteObjectsAlreadyExistingInSink' to be non-null");
-    }
+    private TransferOptionsResponse() {}
 
-    private TransferOptionsResponse() {
-        this.deleteObjectsFromSourceAfterTransfer = null;
-        this.deleteObjectsUniqueInSink = null;
-        this.metadataOptions = null;
-        this.overwriteObjectsAlreadyExistingInSink = null;
+    private TransferOptionsResponse(TransferOptionsResponse $) {
+        this.deleteObjectsFromSourceAfterTransfer = $.deleteObjectsFromSourceAfterTransfer;
+        this.deleteObjectsUniqueInSink = $.deleteObjectsUniqueInSink;
+        this.metadataOptions = $.metadataOptions;
+        this.overwriteObjectsAlreadyExistingInSink = $.overwriteObjectsAlreadyExistingInSink;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TransferOptionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean deleteObjectsFromSourceAfterTransfer;
-        private Boolean deleteObjectsUniqueInSink;
-        private MetadataOptionsResponse metadataOptions;
-        private Boolean overwriteObjectsAlreadyExistingInSink;
+        private TransferOptionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TransferOptionsResponse();
         }
 
         public Builder(TransferOptionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deleteObjectsFromSourceAfterTransfer = defaults.deleteObjectsFromSourceAfterTransfer;
-    	      this.deleteObjectsUniqueInSink = defaults.deleteObjectsUniqueInSink;
-    	      this.metadataOptions = defaults.metadataOptions;
-    	      this.overwriteObjectsAlreadyExistingInSink = defaults.overwriteObjectsAlreadyExistingInSink;
+            $ = new TransferOptionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder deleteObjectsFromSourceAfterTransfer(Boolean deleteObjectsFromSourceAfterTransfer) {
-            this.deleteObjectsFromSourceAfterTransfer = Objects.requireNonNull(deleteObjectsFromSourceAfterTransfer);
+            $.deleteObjectsFromSourceAfterTransfer = deleteObjectsFromSourceAfterTransfer;
             return this;
         }
+
         public Builder deleteObjectsUniqueInSink(Boolean deleteObjectsUniqueInSink) {
-            this.deleteObjectsUniqueInSink = Objects.requireNonNull(deleteObjectsUniqueInSink);
+            $.deleteObjectsUniqueInSink = deleteObjectsUniqueInSink;
             return this;
         }
+
         public Builder metadataOptions(MetadataOptionsResponse metadataOptions) {
-            this.metadataOptions = Objects.requireNonNull(metadataOptions);
+            $.metadataOptions = metadataOptions;
             return this;
         }
+
         public Builder overwriteObjectsAlreadyExistingInSink(Boolean overwriteObjectsAlreadyExistingInSink) {
-            this.overwriteObjectsAlreadyExistingInSink = Objects.requireNonNull(overwriteObjectsAlreadyExistingInSink);
+            $.overwriteObjectsAlreadyExistingInSink = overwriteObjectsAlreadyExistingInSink;
             return this;
-        }        public TransferOptionsResponse build() {
-            return new TransferOptionsResponse(deleteObjectsFromSourceAfterTransfer, deleteObjectsUniqueInSink, metadataOptions, overwriteObjectsAlreadyExistingInSink);
+        }
+
+        public TransferOptionsResponse build() {
+            $.deleteObjectsFromSourceAfterTransfer = Objects.requireNonNull($.deleteObjectsFromSourceAfterTransfer, "expected parameter 'deleteObjectsFromSourceAfterTransfer' to be non-null");
+            $.deleteObjectsUniqueInSink = Objects.requireNonNull($.deleteObjectsUniqueInSink, "expected parameter 'deleteObjectsUniqueInSink' to be non-null");
+            $.metadataOptions = Objects.requireNonNull($.metadataOptions, "expected parameter 'metadataOptions' to be non-null");
+            $.overwriteObjectsAlreadyExistingInSink = Objects.requireNonNull($.overwriteObjectsAlreadyExistingInSink, "expected parameter 'overwriteObjectsAlreadyExistingInSink' to be non-null");
+            return $;
         }
     }
+
 }

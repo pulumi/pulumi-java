@@ -7,10 +7,10 @@ import com.pulumi.awsnative.cloudfront.inputs.FunctionConfigArgs;
 import com.pulumi.awsnative.cloudfront.inputs.FunctionMetadataArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,130 +19,116 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
     public static final FunctionArgs Empty = new FunctionArgs();
 
     @Import(name="autoPublish")
-      private final @Nullable Output<Boolean> autoPublish;
+    private @Nullable Output<Boolean> autoPublish;
 
-    public Output<Boolean> autoPublish() {
-        return this.autoPublish == null ? Codegen.empty() : this.autoPublish;
+    public Optional<Output<Boolean>> autoPublish() {
+        return Optional.ofNullable(this.autoPublish);
     }
 
     @Import(name="functionCode")
-      private final @Nullable Output<String> functionCode;
+    private @Nullable Output<String> functionCode;
 
-    public Output<String> functionCode() {
-        return this.functionCode == null ? Codegen.empty() : this.functionCode;
+    public Optional<Output<String>> functionCode() {
+        return Optional.ofNullable(this.functionCode);
     }
 
     @Import(name="functionConfig")
-      private final @Nullable Output<FunctionConfigArgs> functionConfig;
+    private @Nullable Output<FunctionConfigArgs> functionConfig;
 
-    public Output<FunctionConfigArgs> functionConfig() {
-        return this.functionConfig == null ? Codegen.empty() : this.functionConfig;
+    public Optional<Output<FunctionConfigArgs>> functionConfig() {
+        return Optional.ofNullable(this.functionConfig);
     }
 
     @Import(name="functionMetadata")
-      private final @Nullable Output<FunctionMetadataArgs> functionMetadata;
+    private @Nullable Output<FunctionMetadataArgs> functionMetadata;
 
-    public Output<FunctionMetadataArgs> functionMetadata() {
-        return this.functionMetadata == null ? Codegen.empty() : this.functionMetadata;
+    public Optional<Output<FunctionMetadataArgs>> functionMetadata() {
+        return Optional.ofNullable(this.functionMetadata);
     }
 
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public FunctionArgs(
-        @Nullable Output<Boolean> autoPublish,
-        @Nullable Output<String> functionCode,
-        @Nullable Output<FunctionConfigArgs> functionConfig,
-        @Nullable Output<FunctionMetadataArgs> functionMetadata,
-        @Nullable Output<String> name) {
-        this.autoPublish = autoPublish;
-        this.functionCode = functionCode;
-        this.functionConfig = functionConfig;
-        this.functionMetadata = functionMetadata;
-        this.name = name;
-    }
+    private FunctionArgs() {}
 
-    private FunctionArgs() {
-        this.autoPublish = Codegen.empty();
-        this.functionCode = Codegen.empty();
-        this.functionConfig = Codegen.empty();
-        this.functionMetadata = Codegen.empty();
-        this.name = Codegen.empty();
+    private FunctionArgs(FunctionArgs $) {
+        this.autoPublish = $.autoPublish;
+        this.functionCode = $.functionCode;
+        this.functionConfig = $.functionConfig;
+        this.functionMetadata = $.functionMetadata;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FunctionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> autoPublish;
-        private @Nullable Output<String> functionCode;
-        private @Nullable Output<FunctionConfigArgs> functionConfig;
-        private @Nullable Output<FunctionMetadataArgs> functionMetadata;
-        private @Nullable Output<String> name;
+        private FunctionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FunctionArgs();
         }
 
         public Builder(FunctionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoPublish = defaults.autoPublish;
-    	      this.functionCode = defaults.functionCode;
-    	      this.functionConfig = defaults.functionConfig;
-    	      this.functionMetadata = defaults.functionMetadata;
-    	      this.name = defaults.name;
+            $ = new FunctionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoPublish(@Nullable Output<Boolean> autoPublish) {
-            this.autoPublish = autoPublish;
+            $.autoPublish = autoPublish;
             return this;
         }
-        public Builder autoPublish(@Nullable Boolean autoPublish) {
-            this.autoPublish = Codegen.ofNullable(autoPublish);
-            return this;
+
+        public Builder autoPublish(Boolean autoPublish) {
+            return autoPublish(Output.of(autoPublish));
         }
+
         public Builder functionCode(@Nullable Output<String> functionCode) {
-            this.functionCode = functionCode;
+            $.functionCode = functionCode;
             return this;
         }
-        public Builder functionCode(@Nullable String functionCode) {
-            this.functionCode = Codegen.ofNullable(functionCode);
-            return this;
+
+        public Builder functionCode(String functionCode) {
+            return functionCode(Output.of(functionCode));
         }
+
         public Builder functionConfig(@Nullable Output<FunctionConfigArgs> functionConfig) {
-            this.functionConfig = functionConfig;
+            $.functionConfig = functionConfig;
             return this;
         }
-        public Builder functionConfig(@Nullable FunctionConfigArgs functionConfig) {
-            this.functionConfig = Codegen.ofNullable(functionConfig);
-            return this;
+
+        public Builder functionConfig(FunctionConfigArgs functionConfig) {
+            return functionConfig(Output.of(functionConfig));
         }
+
         public Builder functionMetadata(@Nullable Output<FunctionMetadataArgs> functionMetadata) {
-            this.functionMetadata = functionMetadata;
+            $.functionMetadata = functionMetadata;
             return this;
         }
-        public Builder functionMetadata(@Nullable FunctionMetadataArgs functionMetadata) {
-            this.functionMetadata = Codegen.ofNullable(functionMetadata);
-            return this;
+
+        public Builder functionMetadata(FunctionMetadataArgs functionMetadata) {
+            return functionMetadata(Output.of(functionMetadata));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public FunctionArgs build() {
-            return new FunctionArgs(autoPublish, functionCode, functionConfig, functionMetadata, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public FunctionArgs build() {
+            return $;
         }
     }
+
 }

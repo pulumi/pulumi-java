@@ -6,9 +6,9 @@ package com.pulumi.azurenative.autonomousdevelopmentplatform.inputs;
 import com.pulumi.azurenative.autonomousdevelopmentplatform.inputs.DataPoolEncryptionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class DataPoolLocationArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="encryption")
-      private final @Nullable Output<DataPoolEncryptionArgs> encryption;
+    private @Nullable Output<DataPoolEncryptionArgs> encryption;
 
-    public Output<DataPoolEncryptionArgs> encryption() {
-        return this.encryption == null ? Codegen.empty() : this.encryption;
+    public Optional<Output<DataPoolEncryptionArgs>> encryption() {
+        return Optional.ofNullable(this.encryption);
     }
 
     /**
@@ -36,63 +36,59 @@ public final class DataPoolLocationArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
-    public DataPoolLocationArgs(
-        @Nullable Output<DataPoolEncryptionArgs> encryption,
-        Output<String> name) {
-        this.encryption = encryption;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private DataPoolLocationArgs() {}
 
-    private DataPoolLocationArgs() {
-        this.encryption = Codegen.empty();
-        this.name = Codegen.empty();
+    private DataPoolLocationArgs(DataPoolLocationArgs $) {
+        this.encryption = $.encryption;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataPoolLocationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DataPoolEncryptionArgs> encryption;
-        private Output<String> name;
+        private DataPoolLocationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataPoolLocationArgs();
         }
 
         public Builder(DataPoolLocationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encryption = defaults.encryption;
-    	      this.name = defaults.name;
+            $ = new DataPoolLocationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder encryption(@Nullable Output<DataPoolEncryptionArgs> encryption) {
-            this.encryption = encryption;
+            $.encryption = encryption;
             return this;
         }
-        public Builder encryption(@Nullable DataPoolEncryptionArgs encryption) {
-            this.encryption = Codegen.ofNullable(encryption);
-            return this;
+
+        public Builder encryption(DataPoolEncryptionArgs encryption) {
+            return encryption(Output.of(encryption));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public DataPoolLocationArgs build() {
-            return new DataPoolLocationArgs(encryption, name);
+            return name(Output.of(name));
+        }
+
+        public DataPoolLocationArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

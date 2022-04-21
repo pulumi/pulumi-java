@@ -10,6 +10,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +27,10 @@ public final class JobScheduleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -37,10 +38,10 @@ public final class JobScheduleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endTime")
-      private final @Nullable Output<String> endTime;
+    private @Nullable Output<String> endTime;
 
-    public Output<String> endTime() {
-        return this.endTime == null ? Codegen.empty() : this.endTime;
+    public Optional<Output<String>> endTime() {
+        return Optional.ofNullable(this.endTime);
     }
 
     /**
@@ -48,10 +49,10 @@ public final class JobScheduleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="interval")
-      private final @Nullable Output<String> interval;
+    private @Nullable Output<String> interval;
 
-    public Output<String> interval() {
-        return this.interval == null ? Codegen.empty() : this.interval;
+    public Optional<Output<String>> interval() {
+        return Optional.ofNullable(this.interval);
     }
 
     /**
@@ -59,10 +60,10 @@ public final class JobScheduleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="startTime")
-      private final @Nullable Output<String> startTime;
+    private @Nullable Output<String> startTime;
 
-    public Output<String> startTime() {
-        return this.startTime == null ? Codegen.empty() : this.startTime;
+    public Optional<Output<String>> startTime() {
+        return Optional.ofNullable(this.startTime);
     }
 
     /**
@@ -70,102 +71,91 @@ public final class JobScheduleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<JobScheduleType> type;
+    private @Nullable Output<JobScheduleType> type;
 
-    public Output<JobScheduleType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<JobScheduleType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public JobScheduleArgs(
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<String> endTime,
-        @Nullable Output<String> interval,
-        @Nullable Output<String> startTime,
-        @Nullable Output<JobScheduleType> type) {
-        this.enabled = enabled;
-        this.endTime = Codegen.stringProp("endTime").output().arg(endTime).def("9999-12-31T11:59:59+00:00").getNullable();
-        this.interval = interval;
-        this.startTime = Codegen.stringProp("startTime").output().arg(startTime).def("0001-01-01T00:00:00+00:00").getNullable();
-        this.type = Codegen.objectProp("type", JobScheduleType.class).output().arg(type).def(JobScheduleType.Once).getNullable();
-    }
+    private JobScheduleArgs() {}
 
-    private JobScheduleArgs() {
-        this.enabled = Codegen.empty();
-        this.endTime = Codegen.empty();
-        this.interval = Codegen.empty();
-        this.startTime = Codegen.empty();
-        this.type = Codegen.empty();
+    private JobScheduleArgs(JobScheduleArgs $) {
+        this.enabled = $.enabled;
+        this.endTime = $.endTime;
+        this.interval = $.interval;
+        this.startTime = $.startTime;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobScheduleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<String> endTime;
-        private @Nullable Output<String> interval;
-        private @Nullable Output<String> startTime;
-        private @Nullable Output<JobScheduleType> type;
+        private JobScheduleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobScheduleArgs();
         }
 
         public Builder(JobScheduleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.endTime = defaults.endTime;
-    	      this.interval = defaults.interval;
-    	      this.startTime = defaults.startTime;
-    	      this.type = defaults.type;
+            $ = new JobScheduleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder endTime(@Nullable Output<String> endTime) {
-            this.endTime = endTime;
+            $.endTime = endTime;
             return this;
         }
-        public Builder endTime(@Nullable String endTime) {
-            this.endTime = Codegen.ofNullable(endTime);
-            return this;
+
+        public Builder endTime(String endTime) {
+            return endTime(Output.of(endTime));
         }
+
         public Builder interval(@Nullable Output<String> interval) {
-            this.interval = interval;
+            $.interval = interval;
             return this;
         }
-        public Builder interval(@Nullable String interval) {
-            this.interval = Codegen.ofNullable(interval);
-            return this;
+
+        public Builder interval(String interval) {
+            return interval(Output.of(interval));
         }
+
         public Builder startTime(@Nullable Output<String> startTime) {
-            this.startTime = startTime;
+            $.startTime = startTime;
             return this;
         }
-        public Builder startTime(@Nullable String startTime) {
-            this.startTime = Codegen.ofNullable(startTime);
-            return this;
+
+        public Builder startTime(String startTime) {
+            return startTime(Output.of(startTime));
         }
+
         public Builder type(@Nullable Output<JobScheduleType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable JobScheduleType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public JobScheduleArgs build() {
-            return new JobScheduleArgs(enabled, endTime, interval, startTime, type);
+
+        public Builder type(JobScheduleType type) {
+            return type(Output.of(type));
+        }
+
+        public JobScheduleArgs build() {
+            $.endTime = Codegen.stringProp("endTime").output().arg($.endTime).def("9999-12-31T11:59:59+00:00").getNullable();
+            $.startTime = Codegen.stringProp("startTime").output().arg($.startTime).def("0001-01-01T00:00:00+00:00").getNullable();
+            $.type = Codegen.objectProp("type", JobScheduleType.class).output().arg($.type).def(JobScheduleType.Once).getNullable();
+            return $;
         }
     }
+
 }

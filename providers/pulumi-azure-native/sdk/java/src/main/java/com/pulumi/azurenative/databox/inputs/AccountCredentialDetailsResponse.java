@@ -23,7 +23,7 @@ public final class AccountCredentialDetailsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="accountConnectionString", required=true)
-      private final String accountConnectionString;
+    private String accountConnectionString;
 
     public String accountConnectionString() {
         return this.accountConnectionString;
@@ -34,7 +34,7 @@ public final class AccountCredentialDetailsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -45,7 +45,7 @@ public final class AccountCredentialDetailsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="dataAccountType", required=true)
-      private final String dataAccountType;
+    private String dataAccountType;
 
     public String dataAccountType() {
         return this.dataAccountType;
@@ -56,76 +56,70 @@ public final class AccountCredentialDetailsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="shareCredentialDetails", required=true)
-      private final List<ShareCredentialDetailsResponse> shareCredentialDetails;
+    private List<ShareCredentialDetailsResponse> shareCredentialDetails;
 
     public List<ShareCredentialDetailsResponse> shareCredentialDetails() {
         return this.shareCredentialDetails;
     }
 
-    public AccountCredentialDetailsResponse(
-        String accountConnectionString,
-        String accountName,
-        String dataAccountType,
-        List<ShareCredentialDetailsResponse> shareCredentialDetails) {
-        this.accountConnectionString = Objects.requireNonNull(accountConnectionString, "expected parameter 'accountConnectionString' to be non-null");
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.dataAccountType = Objects.requireNonNull(dataAccountType, "expected parameter 'dataAccountType' to be non-null");
-        this.shareCredentialDetails = Objects.requireNonNull(shareCredentialDetails, "expected parameter 'shareCredentialDetails' to be non-null");
-    }
+    private AccountCredentialDetailsResponse() {}
 
-    private AccountCredentialDetailsResponse() {
-        this.accountConnectionString = null;
-        this.accountName = null;
-        this.dataAccountType = null;
-        this.shareCredentialDetails = List.of();
+    private AccountCredentialDetailsResponse(AccountCredentialDetailsResponse $) {
+        this.accountConnectionString = $.accountConnectionString;
+        this.accountName = $.accountName;
+        this.dataAccountType = $.dataAccountType;
+        this.shareCredentialDetails = $.shareCredentialDetails;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccountCredentialDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountConnectionString;
-        private String accountName;
-        private String dataAccountType;
-        private List<ShareCredentialDetailsResponse> shareCredentialDetails;
+        private AccountCredentialDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccountCredentialDetailsResponse();
         }
 
         public Builder(AccountCredentialDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountConnectionString = defaults.accountConnectionString;
-    	      this.accountName = defaults.accountName;
-    	      this.dataAccountType = defaults.dataAccountType;
-    	      this.shareCredentialDetails = defaults.shareCredentialDetails;
+            $ = new AccountCredentialDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accountConnectionString(String accountConnectionString) {
-            this.accountConnectionString = Objects.requireNonNull(accountConnectionString);
+            $.accountConnectionString = accountConnectionString;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder dataAccountType(String dataAccountType) {
-            this.dataAccountType = Objects.requireNonNull(dataAccountType);
+            $.dataAccountType = dataAccountType;
             return this;
         }
+
         public Builder shareCredentialDetails(List<ShareCredentialDetailsResponse> shareCredentialDetails) {
-            this.shareCredentialDetails = Objects.requireNonNull(shareCredentialDetails);
+            $.shareCredentialDetails = shareCredentialDetails;
             return this;
         }
+
         public Builder shareCredentialDetails(ShareCredentialDetailsResponse... shareCredentialDetails) {
             return shareCredentialDetails(List.of(shareCredentialDetails));
-        }        public AccountCredentialDetailsResponse build() {
-            return new AccountCredentialDetailsResponse(accountConnectionString, accountName, dataAccountType, shareCredentialDetails);
+        }
+
+        public AccountCredentialDetailsResponse build() {
+            $.accountConnectionString = Objects.requireNonNull($.accountConnectionString, "expected parameter 'accountConnectionString' to be non-null");
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.dataAccountType = Objects.requireNonNull($.dataAccountType, "expected parameter 'dataAccountType' to be non-null");
+            $.shareCredentialDetails = Objects.requireNonNull($.shareCredentialDetails, "expected parameter 'shareCredentialDetails' to be non-null");
+            return $;
         }
     }
+
 }

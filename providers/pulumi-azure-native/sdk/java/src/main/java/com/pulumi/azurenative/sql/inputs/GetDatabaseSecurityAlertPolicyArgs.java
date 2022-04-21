@@ -17,7 +17,7 @@ public final class GetDatabaseSecurityAlertPolicyArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="databaseName", required=true)
-      private final String databaseName;
+    private String databaseName;
 
     public String databaseName() {
         return this.databaseName;
@@ -28,7 +28,7 @@ public final class GetDatabaseSecurityAlertPolicyArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetDatabaseSecurityAlertPolicyArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="securityAlertPolicyName", required=true)
-      private final String securityAlertPolicyName;
+    private String securityAlertPolicyName;
 
     public String securityAlertPolicyName() {
         return this.securityAlertPolicyName;
@@ -50,73 +50,66 @@ public final class GetDatabaseSecurityAlertPolicyArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="serverName", required=true)
-      private final String serverName;
+    private String serverName;
 
     public String serverName() {
         return this.serverName;
     }
 
-    public GetDatabaseSecurityAlertPolicyArgs(
-        String databaseName,
-        String resourceGroupName,
-        String securityAlertPolicyName,
-        String serverName) {
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.securityAlertPolicyName = Objects.requireNonNull(securityAlertPolicyName, "expected parameter 'securityAlertPolicyName' to be non-null");
-        this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
-    }
+    private GetDatabaseSecurityAlertPolicyArgs() {}
 
-    private GetDatabaseSecurityAlertPolicyArgs() {
-        this.databaseName = null;
-        this.resourceGroupName = null;
-        this.securityAlertPolicyName = null;
-        this.serverName = null;
+    private GetDatabaseSecurityAlertPolicyArgs(GetDatabaseSecurityAlertPolicyArgs $) {
+        this.databaseName = $.databaseName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.securityAlertPolicyName = $.securityAlertPolicyName;
+        this.serverName = $.serverName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDatabaseSecurityAlertPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String databaseName;
-        private String resourceGroupName;
-        private String securityAlertPolicyName;
-        private String serverName;
+        private GetDatabaseSecurityAlertPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDatabaseSecurityAlertPolicyArgs();
         }
 
         public Builder(GetDatabaseSecurityAlertPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.databaseName = defaults.databaseName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.securityAlertPolicyName = defaults.securityAlertPolicyName;
-    	      this.serverName = defaults.serverName;
+            $ = new GetDatabaseSecurityAlertPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder databaseName(String databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder securityAlertPolicyName(String securityAlertPolicyName) {
-            this.securityAlertPolicyName = Objects.requireNonNull(securityAlertPolicyName);
+            $.securityAlertPolicyName = securityAlertPolicyName;
             return this;
         }
+
         public Builder serverName(String serverName) {
-            this.serverName = Objects.requireNonNull(serverName);
+            $.serverName = serverName;
             return this;
-        }        public GetDatabaseSecurityAlertPolicyArgs build() {
-            return new GetDatabaseSecurityAlertPolicyArgs(databaseName, resourceGroupName, securityAlertPolicyName, serverName);
+        }
+
+        public GetDatabaseSecurityAlertPolicyArgs build() {
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.securityAlertPolicyName = Objects.requireNonNull($.securityAlertPolicyName, "expected parameter 'securityAlertPolicyName' to be non-null");
+            $.serverName = Objects.requireNonNull($.serverName, "expected parameter 'serverName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -24,10 +24,10 @@ public final class JsonSerializationResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="encoding")
-      private final @Nullable String encoding;
+    private @Nullable String encoding;
 
     public Optional<String> encoding() {
-        return this.encoding == null ? Optional.empty() : Optional.ofNullable(this.encoding);
+        return Optional.ofNullable(this.encoding);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class JsonSerializationResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="format")
-      private final @Nullable String format;
+    private @Nullable String format;
 
     public Optional<String> format() {
-        return this.format == null ? Optional.empty() : Optional.ofNullable(this.format);
+        return Optional.ofNullable(this.format);
     }
 
     /**
@@ -47,64 +47,57 @@ public final class JsonSerializationResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public JsonSerializationResponse(
-        @Nullable String encoding,
-        @Nullable String format,
-        String type) {
-        this.encoding = encoding;
-        this.format = format;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private JsonSerializationResponse() {}
 
-    private JsonSerializationResponse() {
-        this.encoding = null;
-        this.format = null;
-        this.type = null;
+    private JsonSerializationResponse(JsonSerializationResponse $) {
+        this.encoding = $.encoding;
+        this.format = $.format;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JsonSerializationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String encoding;
-        private @Nullable String format;
-        private String type;
+        private JsonSerializationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new JsonSerializationResponse();
         }
 
         public Builder(JsonSerializationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encoding = defaults.encoding;
-    	      this.format = defaults.format;
-    	      this.type = defaults.type;
+            $ = new JsonSerializationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder encoding(@Nullable String encoding) {
-            this.encoding = encoding;
+            $.encoding = encoding;
             return this;
         }
+
         public Builder format(@Nullable String format) {
-            this.format = format;
+            $.format = format;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public JsonSerializationResponse build() {
-            return new JsonSerializationResponse(encoding, format, type);
+        }
+
+        public JsonSerializationResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

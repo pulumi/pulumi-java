@@ -5,9 +5,9 @@ package com.pulumi.gcp.projects.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,7 +30,7 @@ public final class AccessApprovalSettingsEnrolledServiceGetArgs extends com.pulu
      * 
      */
     @Import(name="cloudProduct", required=true)
-      private final Output<String> cloudProduct;
+    private Output<String> cloudProduct;
 
     public Output<String> cloudProduct() {
         return this.cloudProduct;
@@ -43,63 +43,59 @@ public final class AccessApprovalSettingsEnrolledServiceGetArgs extends com.pulu
      * 
      */
     @Import(name="enrollmentLevel")
-      private final @Nullable Output<String> enrollmentLevel;
+    private @Nullable Output<String> enrollmentLevel;
 
-    public Output<String> enrollmentLevel() {
-        return this.enrollmentLevel == null ? Codegen.empty() : this.enrollmentLevel;
+    public Optional<Output<String>> enrollmentLevel() {
+        return Optional.ofNullable(this.enrollmentLevel);
     }
 
-    public AccessApprovalSettingsEnrolledServiceGetArgs(
-        Output<String> cloudProduct,
-        @Nullable Output<String> enrollmentLevel) {
-        this.cloudProduct = Objects.requireNonNull(cloudProduct, "expected parameter 'cloudProduct' to be non-null");
-        this.enrollmentLevel = enrollmentLevel;
-    }
+    private AccessApprovalSettingsEnrolledServiceGetArgs() {}
 
-    private AccessApprovalSettingsEnrolledServiceGetArgs() {
-        this.cloudProduct = Codegen.empty();
-        this.enrollmentLevel = Codegen.empty();
+    private AccessApprovalSettingsEnrolledServiceGetArgs(AccessApprovalSettingsEnrolledServiceGetArgs $) {
+        this.cloudProduct = $.cloudProduct;
+        this.enrollmentLevel = $.enrollmentLevel;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessApprovalSettingsEnrolledServiceGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> cloudProduct;
-        private @Nullable Output<String> enrollmentLevel;
+        private AccessApprovalSettingsEnrolledServiceGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessApprovalSettingsEnrolledServiceGetArgs();
         }
 
         public Builder(AccessApprovalSettingsEnrolledServiceGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudProduct = defaults.cloudProduct;
-    	      this.enrollmentLevel = defaults.enrollmentLevel;
+            $ = new AccessApprovalSettingsEnrolledServiceGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudProduct(Output<String> cloudProduct) {
-            this.cloudProduct = Objects.requireNonNull(cloudProduct);
+            $.cloudProduct = cloudProduct;
             return this;
         }
+
         public Builder cloudProduct(String cloudProduct) {
-            this.cloudProduct = Output.of(Objects.requireNonNull(cloudProduct));
-            return this;
+            return cloudProduct(Output.of(cloudProduct));
         }
+
         public Builder enrollmentLevel(@Nullable Output<String> enrollmentLevel) {
-            this.enrollmentLevel = enrollmentLevel;
+            $.enrollmentLevel = enrollmentLevel;
             return this;
         }
-        public Builder enrollmentLevel(@Nullable String enrollmentLevel) {
-            this.enrollmentLevel = Codegen.ofNullable(enrollmentLevel);
-            return this;
-        }        public AccessApprovalSettingsEnrolledServiceGetArgs build() {
-            return new AccessApprovalSettingsEnrolledServiceGetArgs(cloudProduct, enrollmentLevel);
+
+        public Builder enrollmentLevel(String enrollmentLevel) {
+            return enrollmentLevel(Output.of(enrollmentLevel));
+        }
+
+        public AccessApprovalSettingsEnrolledServiceGetArgs build() {
+            $.cloudProduct = Objects.requireNonNull($.cloudProduct, "expected parameter 'cloudProduct' to be non-null");
+            return $;
         }
     }
+
 }

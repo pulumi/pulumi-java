@@ -13,45 +13,45 @@ public final class GetClusterAddonsConfigNetworkPolicyConfig extends com.pulumi.
     public static final GetClusterAddonsConfigNetworkPolicyConfig Empty = new GetClusterAddonsConfigNetworkPolicyConfig();
 
     @Import(name="disabled", required=true)
-      private final Boolean disabled;
+    private Boolean disabled;
 
     public Boolean disabled() {
         return this.disabled;
     }
 
-    public GetClusterAddonsConfigNetworkPolicyConfig(Boolean disabled) {
-        this.disabled = Objects.requireNonNull(disabled, "expected parameter 'disabled' to be non-null");
-    }
+    private GetClusterAddonsConfigNetworkPolicyConfig() {}
 
-    private GetClusterAddonsConfigNetworkPolicyConfig() {
-        this.disabled = null;
+    private GetClusterAddonsConfigNetworkPolicyConfig(GetClusterAddonsConfigNetworkPolicyConfig $) {
+        this.disabled = $.disabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterAddonsConfigNetworkPolicyConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean disabled;
+        private GetClusterAddonsConfigNetworkPolicyConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterAddonsConfigNetworkPolicyConfig();
         }
 
         public Builder(GetClusterAddonsConfigNetworkPolicyConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disabled = defaults.disabled;
+            $ = new GetClusterAddonsConfigNetworkPolicyConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder disabled(Boolean disabled) {
-            this.disabled = Objects.requireNonNull(disabled);
+            $.disabled = disabled;
             return this;
-        }        public GetClusterAddonsConfigNetworkPolicyConfig build() {
-            return new GetClusterAddonsConfigNetworkPolicyConfig(disabled);
+        }
+
+        public GetClusterAddonsConfigNetworkPolicyConfig build() {
+            $.disabled = Objects.requireNonNull($.disabled, "expected parameter 'disabled' to be non-null");
+            return $;
         }
     }
+
 }

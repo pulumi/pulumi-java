@@ -5,7 +5,6 @@ package com.pulumi.docker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,90 +15,85 @@ public final class ContainerUlimitGetArgs extends com.pulumi.resources.ResourceA
     public static final ContainerUlimitGetArgs Empty = new ContainerUlimitGetArgs();
 
     @Import(name="hard", required=true)
-      private final Output<Integer> hard;
+    private Output<Integer> hard;
 
     public Output<Integer> hard() {
         return this.hard;
     }
 
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
     @Import(name="soft", required=true)
-      private final Output<Integer> soft;
+    private Output<Integer> soft;
 
     public Output<Integer> soft() {
         return this.soft;
     }
 
-    public ContainerUlimitGetArgs(
-        Output<Integer> hard,
-        Output<String> name,
-        Output<Integer> soft) {
-        this.hard = Objects.requireNonNull(hard, "expected parameter 'hard' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.soft = Objects.requireNonNull(soft, "expected parameter 'soft' to be non-null");
-    }
+    private ContainerUlimitGetArgs() {}
 
-    private ContainerUlimitGetArgs() {
-        this.hard = Codegen.empty();
-        this.name = Codegen.empty();
-        this.soft = Codegen.empty();
+    private ContainerUlimitGetArgs(ContainerUlimitGetArgs $) {
+        this.hard = $.hard;
+        this.name = $.name;
+        this.soft = $.soft;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerUlimitGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> hard;
-        private Output<String> name;
-        private Output<Integer> soft;
+        private ContainerUlimitGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerUlimitGetArgs();
         }
 
         public Builder(ContainerUlimitGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hard = defaults.hard;
-    	      this.name = defaults.name;
-    	      this.soft = defaults.soft;
+            $ = new ContainerUlimitGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hard(Output<Integer> hard) {
-            this.hard = Objects.requireNonNull(hard);
+            $.hard = hard;
             return this;
         }
+
         public Builder hard(Integer hard) {
-            this.hard = Output.of(Objects.requireNonNull(hard));
-            return this;
+            return hard(Output.of(hard));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder soft(Output<Integer> soft) {
-            this.soft = Objects.requireNonNull(soft);
+            $.soft = soft;
             return this;
         }
+
         public Builder soft(Integer soft) {
-            this.soft = Output.of(Objects.requireNonNull(soft));
-            return this;
-        }        public ContainerUlimitGetArgs build() {
-            return new ContainerUlimitGetArgs(hard, name, soft);
+            return soft(Output.of(soft));
+        }
+
+        public ContainerUlimitGetArgs build() {
+            $.hard = Objects.requireNonNull($.hard, "expected parameter 'hard' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.soft = Objects.requireNonNull($.soft, "expected parameter 'soft' to be non-null");
+            return $;
         }
     }
+
 }

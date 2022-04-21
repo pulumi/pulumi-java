@@ -18,7 +18,7 @@ public final class PacketMirroringFilterResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="cidrRanges", required=true)
-      private final List<String> cidrRanges;
+    private List<String> cidrRanges;
 
     public List<String> cidrRanges() {
         return this.cidrRanges;
@@ -29,7 +29,7 @@ public final class PacketMirroringFilterResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="direction", required=true)
-      private final String direction;
+    private String direction;
 
     public String direction() {
         return this.direction;
@@ -40,70 +40,67 @@ public final class PacketMirroringFilterResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="ipProtocols", required=true)
-      private final List<String> ipProtocols;
+    private List<String> ipProtocols;
 
     public List<String> ipProtocols() {
         return this.ipProtocols;
     }
 
-    public PacketMirroringFilterResponse(
-        List<String> cidrRanges,
-        String direction,
-        List<String> ipProtocols) {
-        this.cidrRanges = Objects.requireNonNull(cidrRanges, "expected parameter 'cidrRanges' to be non-null");
-        this.direction = Objects.requireNonNull(direction, "expected parameter 'direction' to be non-null");
-        this.ipProtocols = Objects.requireNonNull(ipProtocols, "expected parameter 'ipProtocols' to be non-null");
-    }
+    private PacketMirroringFilterResponse() {}
 
-    private PacketMirroringFilterResponse() {
-        this.cidrRanges = List.of();
-        this.direction = null;
-        this.ipProtocols = List.of();
+    private PacketMirroringFilterResponse(PacketMirroringFilterResponse $) {
+        this.cidrRanges = $.cidrRanges;
+        this.direction = $.direction;
+        this.ipProtocols = $.ipProtocols;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PacketMirroringFilterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> cidrRanges;
-        private String direction;
-        private List<String> ipProtocols;
+        private PacketMirroringFilterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PacketMirroringFilterResponse();
         }
 
         public Builder(PacketMirroringFilterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cidrRanges = defaults.cidrRanges;
-    	      this.direction = defaults.direction;
-    	      this.ipProtocols = defaults.ipProtocols;
+            $ = new PacketMirroringFilterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cidrRanges(List<String> cidrRanges) {
-            this.cidrRanges = Objects.requireNonNull(cidrRanges);
+            $.cidrRanges = cidrRanges;
             return this;
         }
+
         public Builder cidrRanges(String... cidrRanges) {
             return cidrRanges(List.of(cidrRanges));
         }
+
         public Builder direction(String direction) {
-            this.direction = Objects.requireNonNull(direction);
+            $.direction = direction;
             return this;
         }
+
         public Builder ipProtocols(List<String> ipProtocols) {
-            this.ipProtocols = Objects.requireNonNull(ipProtocols);
+            $.ipProtocols = ipProtocols;
             return this;
         }
+
         public Builder ipProtocols(String... ipProtocols) {
             return ipProtocols(List.of(ipProtocols));
-        }        public PacketMirroringFilterResponse build() {
-            return new PacketMirroringFilterResponse(cidrRanges, direction, ipProtocols);
+        }
+
+        public PacketMirroringFilterResponse build() {
+            $.cidrRanges = Objects.requireNonNull($.cidrRanges, "expected parameter 'cidrRanges' to be non-null");
+            $.direction = Objects.requireNonNull($.direction, "expected parameter 'direction' to be non-null");
+            $.ipProtocols = Objects.requireNonNull($.ipProtocols, "expected parameter 'ipProtocols' to be non-null");
+            return $;
         }
     }
+
 }

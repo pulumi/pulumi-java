@@ -17,7 +17,7 @@ public final class GetHyperVSiteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,55 +28,52 @@ public final class GetHyperVSiteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="siteName", required=true)
-      private final String siteName;
+    private String siteName;
 
     public String siteName() {
         return this.siteName;
     }
 
-    public GetHyperVSiteArgs(
-        String resourceGroupName,
-        String siteName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.siteName = Objects.requireNonNull(siteName, "expected parameter 'siteName' to be non-null");
-    }
+    private GetHyperVSiteArgs() {}
 
-    private GetHyperVSiteArgs() {
-        this.resourceGroupName = null;
-        this.siteName = null;
+    private GetHyperVSiteArgs(GetHyperVSiteArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.siteName = $.siteName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetHyperVSiteArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String siteName;
+        private GetHyperVSiteArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetHyperVSiteArgs();
         }
 
         public Builder(GetHyperVSiteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.siteName = defaults.siteName;
+            $ = new GetHyperVSiteArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder siteName(String siteName) {
-            this.siteName = Objects.requireNonNull(siteName);
+            $.siteName = siteName;
             return this;
-        }        public GetHyperVSiteArgs build() {
-            return new GetHyperVSiteArgs(resourceGroupName, siteName);
+        }
+
+        public GetHyperVSiteArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.siteName = Objects.requireNonNull($.siteName, "expected parameter 'siteName' to be non-null");
+            return $;
         }
     }
+
 }

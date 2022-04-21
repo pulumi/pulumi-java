@@ -19,62 +19,57 @@ public final class DatabaseTag extends com.pulumi.resources.InvokeArgs {
     public static final DatabaseTag Empty = new DatabaseTag();
 
     @Import(name="key")
-      private final @Nullable String key;
+    private @Nullable String key;
 
     public Optional<String> key() {
-        return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
+        return Optional.ofNullable(this.key);
     }
 
     @Import(name="value")
-      private final @Nullable String value;
+    private @Nullable String value;
 
     public Optional<String> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public DatabaseTag(
-        @Nullable String key,
-        @Nullable String value) {
-        this.key = key;
-        this.value = value;
-    }
+    private DatabaseTag() {}
 
-    private DatabaseTag() {
-        this.key = null;
-        this.value = null;
+    private DatabaseTag(DatabaseTag $) {
+        this.key = $.key;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatabaseTag defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String key;
-        private @Nullable String value;
+        private DatabaseTag $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatabaseTag();
         }
 
         public Builder(DatabaseTag defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.value = defaults.value;
+            $ = new DatabaseTag(Objects.requireNonNull(defaults));
         }
 
         public Builder key(@Nullable String key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
+
         public Builder value(@Nullable String value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public DatabaseTag build() {
-            return new DatabaseTag(key, value);
+        }
+
+        public DatabaseTag build() {
+            return $;
         }
     }
+
 }

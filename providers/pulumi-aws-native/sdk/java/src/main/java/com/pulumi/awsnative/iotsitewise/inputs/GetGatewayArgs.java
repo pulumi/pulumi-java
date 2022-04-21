@@ -17,45 +17,45 @@ public final class GetGatewayArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="gatewayId", required=true)
-      private final String gatewayId;
+    private String gatewayId;
 
     public String gatewayId() {
         return this.gatewayId;
     }
 
-    public GetGatewayArgs(String gatewayId) {
-        this.gatewayId = Objects.requireNonNull(gatewayId, "expected parameter 'gatewayId' to be non-null");
-    }
+    private GetGatewayArgs() {}
 
-    private GetGatewayArgs() {
-        this.gatewayId = null;
+    private GetGatewayArgs(GetGatewayArgs $) {
+        this.gatewayId = $.gatewayId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetGatewayArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String gatewayId;
+        private GetGatewayArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetGatewayArgs();
         }
 
         public Builder(GetGatewayArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gatewayId = defaults.gatewayId;
+            $ = new GetGatewayArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder gatewayId(String gatewayId) {
-            this.gatewayId = Objects.requireNonNull(gatewayId);
+            $.gatewayId = gatewayId;
             return this;
-        }        public GetGatewayArgs build() {
-            return new GetGatewayArgs(gatewayId);
+        }
+
+        public GetGatewayArgs build() {
+            $.gatewayId = Objects.requireNonNull($.gatewayId, "expected parameter 'gatewayId' to be non-null");
+            return $;
         }
     }
+
 }

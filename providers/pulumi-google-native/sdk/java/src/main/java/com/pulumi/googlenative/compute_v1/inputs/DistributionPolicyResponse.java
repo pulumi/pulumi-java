@@ -19,7 +19,7 @@ public final class DistributionPolicyResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="targetShape", required=true)
-      private final String targetShape;
+    private String targetShape;
 
     public String targetShape() {
         return this.targetShape;
@@ -30,58 +30,56 @@ public final class DistributionPolicyResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="zones", required=true)
-      private final List<DistributionPolicyZoneConfigurationResponse> zones;
+    private List<DistributionPolicyZoneConfigurationResponse> zones;
 
     public List<DistributionPolicyZoneConfigurationResponse> zones() {
         return this.zones;
     }
 
-    public DistributionPolicyResponse(
-        String targetShape,
-        List<DistributionPolicyZoneConfigurationResponse> zones) {
-        this.targetShape = Objects.requireNonNull(targetShape, "expected parameter 'targetShape' to be non-null");
-        this.zones = Objects.requireNonNull(zones, "expected parameter 'zones' to be non-null");
-    }
+    private DistributionPolicyResponse() {}
 
-    private DistributionPolicyResponse() {
-        this.targetShape = null;
-        this.zones = List.of();
+    private DistributionPolicyResponse(DistributionPolicyResponse $) {
+        this.targetShape = $.targetShape;
+        this.zones = $.zones;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String targetShape;
-        private List<DistributionPolicyZoneConfigurationResponse> zones;
+        private DistributionPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionPolicyResponse();
         }
 
         public Builder(DistributionPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.targetShape = defaults.targetShape;
-    	      this.zones = defaults.zones;
+            $ = new DistributionPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder targetShape(String targetShape) {
-            this.targetShape = Objects.requireNonNull(targetShape);
+            $.targetShape = targetShape;
             return this;
         }
+
         public Builder zones(List<DistributionPolicyZoneConfigurationResponse> zones) {
-            this.zones = Objects.requireNonNull(zones);
+            $.zones = zones;
             return this;
         }
+
         public Builder zones(DistributionPolicyZoneConfigurationResponse... zones) {
             return zones(List.of(zones));
-        }        public DistributionPolicyResponse build() {
-            return new DistributionPolicyResponse(targetShape, zones);
+        }
+
+        public DistributionPolicyResponse build() {
+            $.targetShape = Objects.requireNonNull($.targetShape, "expected parameter 'targetShape' to be non-null");
+            $.zones = Objects.requireNonNull($.zones, "expected parameter 'zones' to be non-null");
+            return $;
         }
     }
+
 }

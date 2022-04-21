@@ -5,10 +5,10 @@ package com.pulumi.awsnative.kendra.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,90 +17,84 @@ public final class DataSourceProxyConfigurationArgs extends com.pulumi.resources
     public static final DataSourceProxyConfigurationArgs Empty = new DataSourceProxyConfigurationArgs();
 
     @Import(name="credentials")
-      private final @Nullable Output<String> credentials;
+    private @Nullable Output<String> credentials;
 
-    public Output<String> credentials() {
-        return this.credentials == null ? Codegen.empty() : this.credentials;
+    public Optional<Output<String>> credentials() {
+        return Optional.ofNullable(this.credentials);
     }
 
     @Import(name="host", required=true)
-      private final Output<String> host;
+    private Output<String> host;
 
     public Output<String> host() {
         return this.host;
     }
 
     @Import(name="port", required=true)
-      private final Output<Integer> port;
+    private Output<Integer> port;
 
     public Output<Integer> port() {
         return this.port;
     }
 
-    public DataSourceProxyConfigurationArgs(
-        @Nullable Output<String> credentials,
-        Output<String> host,
-        Output<Integer> port) {
-        this.credentials = credentials;
-        this.host = Objects.requireNonNull(host, "expected parameter 'host' to be non-null");
-        this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
-    }
+    private DataSourceProxyConfigurationArgs() {}
 
-    private DataSourceProxyConfigurationArgs() {
-        this.credentials = Codegen.empty();
-        this.host = Codegen.empty();
-        this.port = Codegen.empty();
+    private DataSourceProxyConfigurationArgs(DataSourceProxyConfigurationArgs $) {
+        this.credentials = $.credentials;
+        this.host = $.host;
+        this.port = $.port;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceProxyConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> credentials;
-        private Output<String> host;
-        private Output<Integer> port;
+        private DataSourceProxyConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceProxyConfigurationArgs();
         }
 
         public Builder(DataSourceProxyConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.credentials = defaults.credentials;
-    	      this.host = defaults.host;
-    	      this.port = defaults.port;
+            $ = new DataSourceProxyConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder credentials(@Nullable Output<String> credentials) {
-            this.credentials = credentials;
+            $.credentials = credentials;
             return this;
         }
-        public Builder credentials(@Nullable String credentials) {
-            this.credentials = Codegen.ofNullable(credentials);
-            return this;
+
+        public Builder credentials(String credentials) {
+            return credentials(Output.of(credentials));
         }
+
         public Builder host(Output<String> host) {
-            this.host = Objects.requireNonNull(host);
+            $.host = host;
             return this;
         }
+
         public Builder host(String host) {
-            this.host = Output.of(Objects.requireNonNull(host));
-            return this;
+            return host(Output.of(host));
         }
+
         public Builder port(Output<Integer> port) {
-            this.port = Objects.requireNonNull(port);
+            $.port = port;
             return this;
         }
+
         public Builder port(Integer port) {
-            this.port = Output.of(Objects.requireNonNull(port));
-            return this;
-        }        public DataSourceProxyConfigurationArgs build() {
-            return new DataSourceProxyConfigurationArgs(credentials, host, port);
+            return port(Output.of(port));
+        }
+
+        public DataSourceProxyConfigurationArgs build() {
+            $.host = Objects.requireNonNull($.host, "expected parameter 'host' to be non-null");
+            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
+            return $;
         }
     }
+
 }

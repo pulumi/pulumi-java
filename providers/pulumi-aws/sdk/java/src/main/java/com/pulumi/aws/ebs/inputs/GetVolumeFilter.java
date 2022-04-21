@@ -14,65 +14,63 @@ public final class GetVolumeFilter extends com.pulumi.resources.InvokeArgs {
     public static final GetVolumeFilter Empty = new GetVolumeFilter();
 
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
     @Import(name="values", required=true)
-      private final List<String> values;
+    private List<String> values;
 
     public List<String> values() {
         return this.values;
     }
 
-    public GetVolumeFilter(
-        String name,
-        List<String> values) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.values = Objects.requireNonNull(values, "expected parameter 'values' to be non-null");
-    }
+    private GetVolumeFilter() {}
 
-    private GetVolumeFilter() {
-        this.name = null;
-        this.values = List.of();
+    private GetVolumeFilter(GetVolumeFilter $) {
+        this.name = $.name;
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVolumeFilter defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private List<String> values;
+        private GetVolumeFilter $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVolumeFilter();
         }
 
         public Builder(GetVolumeFilter defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.values = defaults.values;
+            $ = new GetVolumeFilter(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder values(List<String> values) {
-            this.values = Objects.requireNonNull(values);
+            $.values = values;
             return this;
         }
+
         public Builder values(String... values) {
             return values(List.of(values));
-        }        public GetVolumeFilter build() {
-            return new GetVolumeFilter(name, values);
+        }
+
+        public GetVolumeFilter build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.values = Objects.requireNonNull($.values, "expected parameter 'values' to be non-null");
+            return $;
         }
     }
+
 }

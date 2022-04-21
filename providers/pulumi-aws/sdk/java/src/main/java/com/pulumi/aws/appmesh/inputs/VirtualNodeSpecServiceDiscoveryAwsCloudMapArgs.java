@@ -5,10 +5,10 @@ package com.pulumi.aws.appmesh.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs extends com.pu
      * 
      */
     @Import(name="attributes")
-      private final @Nullable Output<Map<String,String>> attributes;
+    private @Nullable Output<Map<String,String>> attributes;
 
-    public Output<Map<String,String>> attributes() {
-        return this.attributes == null ? Codegen.empty() : this.attributes;
+    public Optional<Output<Map<String,String>>> attributes() {
+        return Optional.ofNullable(this.attributes);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs extends com.pu
      * 
      */
     @Import(name="namespaceName", required=true)
-      private final Output<String> namespaceName;
+    private Output<String> namespaceName;
 
     public Output<String> namespaceName() {
         return this.namespaceName;
@@ -44,76 +44,70 @@ public final class VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs extends com.pu
      * 
      */
     @Import(name="serviceName", required=true)
-      private final Output<String> serviceName;
+    private Output<String> serviceName;
 
     public Output<String> serviceName() {
         return this.serviceName;
     }
 
-    public VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs(
-        @Nullable Output<Map<String,String>> attributes,
-        Output<String> namespaceName,
-        Output<String> serviceName) {
-        this.attributes = attributes;
-        this.namespaceName = Objects.requireNonNull(namespaceName, "expected parameter 'namespaceName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-    }
+    private VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs() {}
 
-    private VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs() {
-        this.attributes = Codegen.empty();
-        this.namespaceName = Codegen.empty();
-        this.serviceName = Codegen.empty();
+    private VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs(VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs $) {
+        this.attributes = $.attributes;
+        this.namespaceName = $.namespaceName;
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> attributes;
-        private Output<String> namespaceName;
-        private Output<String> serviceName;
+        private VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs();
         }
 
         public Builder(VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attributes = defaults.attributes;
-    	      this.namespaceName = defaults.namespaceName;
-    	      this.serviceName = defaults.serviceName;
+            $ = new VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attributes(@Nullable Output<Map<String,String>> attributes) {
-            this.attributes = attributes;
+            $.attributes = attributes;
             return this;
         }
-        public Builder attributes(@Nullable Map<String,String> attributes) {
-            this.attributes = Codegen.ofNullable(attributes);
-            return this;
+
+        public Builder attributes(Map<String,String> attributes) {
+            return attributes(Output.of(attributes));
         }
+
         public Builder namespaceName(Output<String> namespaceName) {
-            this.namespaceName = Objects.requireNonNull(namespaceName);
+            $.namespaceName = namespaceName;
             return this;
         }
+
         public Builder namespaceName(String namespaceName) {
-            this.namespaceName = Output.of(Objects.requireNonNull(namespaceName));
-            return this;
+            return namespaceName(Output.of(namespaceName));
         }
+
         public Builder serviceName(Output<String> serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
-            return this;
-        }        public VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs build() {
-            return new VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs(attributes, namespaceName, serviceName);
+            return serviceName(Output.of(serviceName));
+        }
+
+        public VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs build() {
+            $.namespaceName = Objects.requireNonNull($.namespaceName, "expected parameter 'namespaceName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

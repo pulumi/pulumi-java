@@ -23,45 +23,44 @@ public final class IntegrationServiceEnvironmentAccessEndpointResponse extends c
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public IntegrationServiceEnvironmentAccessEndpointResponse(@Nullable String type) {
-        this.type = type;
-    }
+    private IntegrationServiceEnvironmentAccessEndpointResponse() {}
 
-    private IntegrationServiceEnvironmentAccessEndpointResponse() {
-        this.type = null;
+    private IntegrationServiceEnvironmentAccessEndpointResponse(IntegrationServiceEnvironmentAccessEndpointResponse $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IntegrationServiceEnvironmentAccessEndpointResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String type;
+        private IntegrationServiceEnvironmentAccessEndpointResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IntegrationServiceEnvironmentAccessEndpointResponse();
         }
 
         public Builder(IntegrationServiceEnvironmentAccessEndpointResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new IntegrationServiceEnvironmentAccessEndpointResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public IntegrationServiceEnvironmentAccessEndpointResponse build() {
-            return new IntegrationServiceEnvironmentAccessEndpointResponse(type);
+        }
+
+        public IntegrationServiceEnvironmentAccessEndpointResponse build() {
+            return $;
         }
     }
+
 }

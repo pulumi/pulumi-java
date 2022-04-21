@@ -21,45 +21,45 @@ public final class GlossaryInputConfigResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="gcsSource", required=true)
-      private final GcsSourceResponse gcsSource;
+    private GcsSourceResponse gcsSource;
 
     public GcsSourceResponse gcsSource() {
         return this.gcsSource;
     }
 
-    public GlossaryInputConfigResponse(GcsSourceResponse gcsSource) {
-        this.gcsSource = Objects.requireNonNull(gcsSource, "expected parameter 'gcsSource' to be non-null");
-    }
+    private GlossaryInputConfigResponse() {}
 
-    private GlossaryInputConfigResponse() {
-        this.gcsSource = null;
+    private GlossaryInputConfigResponse(GlossaryInputConfigResponse $) {
+        this.gcsSource = $.gcsSource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GlossaryInputConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GcsSourceResponse gcsSource;
+        private GlossaryInputConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GlossaryInputConfigResponse();
         }
 
         public Builder(GlossaryInputConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gcsSource = defaults.gcsSource;
+            $ = new GlossaryInputConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder gcsSource(GcsSourceResponse gcsSource) {
-            this.gcsSource = Objects.requireNonNull(gcsSource);
+            $.gcsSource = gcsSource;
             return this;
-        }        public GlossaryInputConfigResponse build() {
-            return new GlossaryInputConfigResponse(gcsSource);
+        }
+
+        public GlossaryInputConfigResponse build() {
+            $.gcsSource = Objects.requireNonNull($.gcsSource, "expected parameter 'gcsSource' to be non-null");
+            return $;
         }
     }
+
 }

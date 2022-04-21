@@ -7,9 +7,9 @@ import com.pulumi.azurenative.compute.inputs.DataDiskImageEncryptionArgs;
 import com.pulumi.azurenative.compute.inputs.OSDiskImageEncryptionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class EncryptionImagesArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="dataDiskImages")
-      private final @Nullable Output<List<DataDiskImageEncryptionArgs>> dataDiskImages;
+    private @Nullable Output<List<DataDiskImageEncryptionArgs>> dataDiskImages;
 
-    public Output<List<DataDiskImageEncryptionArgs>> dataDiskImages() {
-        return this.dataDiskImages == null ? Codegen.empty() : this.dataDiskImages;
+    public Optional<Output<List<DataDiskImageEncryptionArgs>>> dataDiskImages() {
+        return Optional.ofNullable(this.dataDiskImages);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class EncryptionImagesArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="osDiskImage")
-      private final @Nullable Output<OSDiskImageEncryptionArgs> osDiskImage;
+    private @Nullable Output<OSDiskImageEncryptionArgs> osDiskImage;
 
-    public Output<OSDiskImageEncryptionArgs> osDiskImage() {
-        return this.osDiskImage == null ? Codegen.empty() : this.osDiskImage;
+    public Optional<Output<OSDiskImageEncryptionArgs>> osDiskImage() {
+        return Optional.ofNullable(this.osDiskImage);
     }
 
-    public EncryptionImagesArgs(
-        @Nullable Output<List<DataDiskImageEncryptionArgs>> dataDiskImages,
-        @Nullable Output<OSDiskImageEncryptionArgs> osDiskImage) {
-        this.dataDiskImages = dataDiskImages;
-        this.osDiskImage = osDiskImage;
-    }
+    private EncryptionImagesArgs() {}
 
-    private EncryptionImagesArgs() {
-        this.dataDiskImages = Codegen.empty();
-        this.osDiskImage = Codegen.empty();
+    private EncryptionImagesArgs(EncryptionImagesArgs $) {
+        this.dataDiskImages = $.dataDiskImages;
+        this.osDiskImage = $.osDiskImage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EncryptionImagesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<DataDiskImageEncryptionArgs>> dataDiskImages;
-        private @Nullable Output<OSDiskImageEncryptionArgs> osDiskImage;
+        private EncryptionImagesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EncryptionImagesArgs();
         }
 
         public Builder(EncryptionImagesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataDiskImages = defaults.dataDiskImages;
-    	      this.osDiskImage = defaults.osDiskImage;
+            $ = new EncryptionImagesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataDiskImages(@Nullable Output<List<DataDiskImageEncryptionArgs>> dataDiskImages) {
-            this.dataDiskImages = dataDiskImages;
+            $.dataDiskImages = dataDiskImages;
             return this;
         }
-        public Builder dataDiskImages(@Nullable List<DataDiskImageEncryptionArgs> dataDiskImages) {
-            this.dataDiskImages = Codegen.ofNullable(dataDiskImages);
-            return this;
+
+        public Builder dataDiskImages(List<DataDiskImageEncryptionArgs> dataDiskImages) {
+            return dataDiskImages(Output.of(dataDiskImages));
         }
+
         public Builder dataDiskImages(DataDiskImageEncryptionArgs... dataDiskImages) {
             return dataDiskImages(List.of(dataDiskImages));
         }
+
         public Builder osDiskImage(@Nullable Output<OSDiskImageEncryptionArgs> osDiskImage) {
-            this.osDiskImage = osDiskImage;
+            $.osDiskImage = osDiskImage;
             return this;
         }
-        public Builder osDiskImage(@Nullable OSDiskImageEncryptionArgs osDiskImage) {
-            this.osDiskImage = Codegen.ofNullable(osDiskImage);
-            return this;
-        }        public EncryptionImagesArgs build() {
-            return new EncryptionImagesArgs(dataDiskImages, osDiskImage);
+
+        public Builder osDiskImage(OSDiskImageEncryptionArgs osDiskImage) {
+            return osDiskImage(Output.of(osDiskImage));
+        }
+
+        public EncryptionImagesArgs build() {
+            return $;
         }
     }
+
 }

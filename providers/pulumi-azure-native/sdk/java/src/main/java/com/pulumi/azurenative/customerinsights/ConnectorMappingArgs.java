@@ -9,9 +9,9 @@ import com.pulumi.azurenative.customerinsights.inputs.ConnectorMappingProperties
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class ConnectorMappingArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="connectorName", required=true)
-      private final Output<String> connectorName;
+    private Output<String> connectorName;
 
     public Output<String> connectorName() {
         return this.connectorName;
@@ -35,10 +35,10 @@ public final class ConnectorMappingArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="connectorType")
-      private final @Nullable Output<Either<String,ConnectorTypes>> connectorType;
+    private @Nullable Output<Either<String,ConnectorTypes>> connectorType;
 
-    public Output<Either<String,ConnectorTypes>> connectorType() {
-        return this.connectorType == null ? Codegen.empty() : this.connectorType;
+    public Optional<Output<Either<String,ConnectorTypes>>> connectorType() {
+        return Optional.ofNullable(this.connectorType);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ConnectorMappingArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ConnectorMappingArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -68,7 +68,7 @@ public final class ConnectorMappingArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="entityType", required=true)
-      private final Output<EntityTypes> entityType;
+    private Output<EntityTypes> entityType;
 
     public Output<EntityTypes> entityType() {
         return this.entityType;
@@ -79,7 +79,7 @@ public final class ConnectorMappingArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="entityTypeName", required=true)
-      private final Output<String> entityTypeName;
+    private Output<String> entityTypeName;
 
     public Output<String> entityTypeName() {
         return this.entityTypeName;
@@ -90,7 +90,7 @@ public final class ConnectorMappingArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="hubName", required=true)
-      private final Output<String> hubName;
+    private Output<String> hubName;
 
     public Output<String> hubName() {
         return this.hubName;
@@ -101,10 +101,10 @@ public final class ConnectorMappingArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="mappingName")
-      private final @Nullable Output<String> mappingName;
+    private @Nullable Output<String> mappingName;
 
-    public Output<String> mappingName() {
-        return this.mappingName == null ? Codegen.empty() : this.mappingName;
+    public Optional<Output<String>> mappingName() {
+        return Optional.ofNullable(this.mappingName);
     }
 
     /**
@@ -112,7 +112,7 @@ public final class ConnectorMappingArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="mappingProperties", required=true)
-      private final Output<ConnectorMappingPropertiesArgs> mappingProperties;
+    private Output<ConnectorMappingPropertiesArgs> mappingProperties;
 
     public Output<ConnectorMappingPropertiesArgs> mappingProperties() {
         return this.mappingProperties;
@@ -123,167 +123,144 @@ public final class ConnectorMappingArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public ConnectorMappingArgs(
-        Output<String> connectorName,
-        @Nullable Output<Either<String,ConnectorTypes>> connectorType,
-        @Nullable Output<String> description,
-        @Nullable Output<String> displayName,
-        Output<EntityTypes> entityType,
-        Output<String> entityTypeName,
-        Output<String> hubName,
-        @Nullable Output<String> mappingName,
-        Output<ConnectorMappingPropertiesArgs> mappingProperties,
-        Output<String> resourceGroupName) {
-        this.connectorName = Objects.requireNonNull(connectorName, "expected parameter 'connectorName' to be non-null");
-        this.connectorType = connectorType;
-        this.description = description;
-        this.displayName = displayName;
-        this.entityType = Objects.requireNonNull(entityType, "expected parameter 'entityType' to be non-null");
-        this.entityTypeName = Objects.requireNonNull(entityTypeName, "expected parameter 'entityTypeName' to be non-null");
-        this.hubName = Objects.requireNonNull(hubName, "expected parameter 'hubName' to be non-null");
-        this.mappingName = mappingName;
-        this.mappingProperties = Objects.requireNonNull(mappingProperties, "expected parameter 'mappingProperties' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private ConnectorMappingArgs() {}
 
-    private ConnectorMappingArgs() {
-        this.connectorName = Codegen.empty();
-        this.connectorType = Codegen.empty();
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.entityType = Codegen.empty();
-        this.entityTypeName = Codegen.empty();
-        this.hubName = Codegen.empty();
-        this.mappingName = Codegen.empty();
-        this.mappingProperties = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
+    private ConnectorMappingArgs(ConnectorMappingArgs $) {
+        this.connectorName = $.connectorName;
+        this.connectorType = $.connectorType;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.entityType = $.entityType;
+        this.entityTypeName = $.entityTypeName;
+        this.hubName = $.hubName;
+        this.mappingName = $.mappingName;
+        this.mappingProperties = $.mappingProperties;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectorMappingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> connectorName;
-        private @Nullable Output<Either<String,ConnectorTypes>> connectorType;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> displayName;
-        private Output<EntityTypes> entityType;
-        private Output<String> entityTypeName;
-        private Output<String> hubName;
-        private @Nullable Output<String> mappingName;
-        private Output<ConnectorMappingPropertiesArgs> mappingProperties;
-        private Output<String> resourceGroupName;
+        private ConnectorMappingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectorMappingArgs();
         }
 
         public Builder(ConnectorMappingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectorName = defaults.connectorName;
-    	      this.connectorType = defaults.connectorType;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.entityType = defaults.entityType;
-    	      this.entityTypeName = defaults.entityTypeName;
-    	      this.hubName = defaults.hubName;
-    	      this.mappingName = defaults.mappingName;
-    	      this.mappingProperties = defaults.mappingProperties;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new ConnectorMappingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connectorName(Output<String> connectorName) {
-            this.connectorName = Objects.requireNonNull(connectorName);
+            $.connectorName = connectorName;
             return this;
         }
+
         public Builder connectorName(String connectorName) {
-            this.connectorName = Output.of(Objects.requireNonNull(connectorName));
-            return this;
+            return connectorName(Output.of(connectorName));
         }
+
         public Builder connectorType(@Nullable Output<Either<String,ConnectorTypes>> connectorType) {
-            this.connectorType = connectorType;
+            $.connectorType = connectorType;
             return this;
         }
-        public Builder connectorType(@Nullable Either<String,ConnectorTypes> connectorType) {
-            this.connectorType = Codegen.ofNullable(connectorType);
-            return this;
+
+        public Builder connectorType(Either<String,ConnectorTypes> connectorType) {
+            return connectorType(Output.of(connectorType));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder entityType(Output<EntityTypes> entityType) {
-            this.entityType = Objects.requireNonNull(entityType);
+            $.entityType = entityType;
             return this;
         }
+
         public Builder entityType(EntityTypes entityType) {
-            this.entityType = Output.of(Objects.requireNonNull(entityType));
-            return this;
+            return entityType(Output.of(entityType));
         }
+
         public Builder entityTypeName(Output<String> entityTypeName) {
-            this.entityTypeName = Objects.requireNonNull(entityTypeName);
+            $.entityTypeName = entityTypeName;
             return this;
         }
+
         public Builder entityTypeName(String entityTypeName) {
-            this.entityTypeName = Output.of(Objects.requireNonNull(entityTypeName));
-            return this;
+            return entityTypeName(Output.of(entityTypeName));
         }
+
         public Builder hubName(Output<String> hubName) {
-            this.hubName = Objects.requireNonNull(hubName);
+            $.hubName = hubName;
             return this;
         }
+
         public Builder hubName(String hubName) {
-            this.hubName = Output.of(Objects.requireNonNull(hubName));
-            return this;
+            return hubName(Output.of(hubName));
         }
+
         public Builder mappingName(@Nullable Output<String> mappingName) {
-            this.mappingName = mappingName;
+            $.mappingName = mappingName;
             return this;
         }
-        public Builder mappingName(@Nullable String mappingName) {
-            this.mappingName = Codegen.ofNullable(mappingName);
-            return this;
+
+        public Builder mappingName(String mappingName) {
+            return mappingName(Output.of(mappingName));
         }
+
         public Builder mappingProperties(Output<ConnectorMappingPropertiesArgs> mappingProperties) {
-            this.mappingProperties = Objects.requireNonNull(mappingProperties);
+            $.mappingProperties = mappingProperties;
             return this;
         }
+
         public Builder mappingProperties(ConnectorMappingPropertiesArgs mappingProperties) {
-            this.mappingProperties = Output.of(Objects.requireNonNull(mappingProperties));
-            return this;
+            return mappingProperties(Output.of(mappingProperties));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
-        }        public ConnectorMappingArgs build() {
-            return new ConnectorMappingArgs(connectorName, connectorType, description, displayName, entityType, entityTypeName, hubName, mappingName, mappingProperties, resourceGroupName);
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public ConnectorMappingArgs build() {
+            $.connectorName = Objects.requireNonNull($.connectorName, "expected parameter 'connectorName' to be non-null");
+            $.entityType = Objects.requireNonNull($.entityType, "expected parameter 'entityType' to be non-null");
+            $.entityTypeName = Objects.requireNonNull($.entityTypeName, "expected parameter 'entityTypeName' to be non-null");
+            $.hubName = Objects.requireNonNull($.hubName, "expected parameter 'hubName' to be non-null");
+            $.mappingProperties = Objects.requireNonNull($.mappingProperties, "expected parameter 'mappingProperties' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

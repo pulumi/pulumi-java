@@ -6,10 +6,10 @@ package com.pulumi.kubernetes.extensions_v1beta1.inputs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,49 +26,48 @@ public final class RollingUpdateDaemonSetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="maxUnavailable")
-      private final @Nullable Output<Either<Integer,String>> maxUnavailable;
+    private @Nullable Output<Either<Integer,String>> maxUnavailable;
 
-    public Output<Either<Integer,String>> maxUnavailable() {
-        return this.maxUnavailable == null ? Codegen.empty() : this.maxUnavailable;
+    public Optional<Output<Either<Integer,String>>> maxUnavailable() {
+        return Optional.ofNullable(this.maxUnavailable);
     }
 
-    public RollingUpdateDaemonSetArgs(@Nullable Output<Either<Integer,String>> maxUnavailable) {
-        this.maxUnavailable = maxUnavailable;
-    }
+    private RollingUpdateDaemonSetArgs() {}
 
-    private RollingUpdateDaemonSetArgs() {
-        this.maxUnavailable = Codegen.empty();
+    private RollingUpdateDaemonSetArgs(RollingUpdateDaemonSetArgs $) {
+        this.maxUnavailable = $.maxUnavailable;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RollingUpdateDaemonSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<Integer,String>> maxUnavailable;
+        private RollingUpdateDaemonSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RollingUpdateDaemonSetArgs();
         }
 
         public Builder(RollingUpdateDaemonSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxUnavailable = defaults.maxUnavailable;
+            $ = new RollingUpdateDaemonSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxUnavailable(@Nullable Output<Either<Integer,String>> maxUnavailable) {
-            this.maxUnavailable = maxUnavailable;
+            $.maxUnavailable = maxUnavailable;
             return this;
         }
-        public Builder maxUnavailable(@Nullable Either<Integer,String> maxUnavailable) {
-            this.maxUnavailable = Codegen.ofNullable(maxUnavailable);
-            return this;
-        }        public RollingUpdateDaemonSetArgs build() {
-            return new RollingUpdateDaemonSetArgs(maxUnavailable);
+
+        public Builder maxUnavailable(Either<Integer,String> maxUnavailable) {
+            return maxUnavailable(Output.of(maxUnavailable));
+        }
+
+        public RollingUpdateDaemonSetArgs build() {
+            return $;
         }
     }
+
 }

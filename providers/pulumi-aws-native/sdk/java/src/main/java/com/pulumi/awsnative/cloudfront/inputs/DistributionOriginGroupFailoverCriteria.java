@@ -13,45 +13,45 @@ public final class DistributionOriginGroupFailoverCriteria extends com.pulumi.re
     public static final DistributionOriginGroupFailoverCriteria Empty = new DistributionOriginGroupFailoverCriteria();
 
     @Import(name="statusCodes", required=true)
-      private final DistributionStatusCodes statusCodes;
+    private DistributionStatusCodes statusCodes;
 
     public DistributionStatusCodes statusCodes() {
         return this.statusCodes;
     }
 
-    public DistributionOriginGroupFailoverCriteria(DistributionStatusCodes statusCodes) {
-        this.statusCodes = Objects.requireNonNull(statusCodes, "expected parameter 'statusCodes' to be non-null");
-    }
+    private DistributionOriginGroupFailoverCriteria() {}
 
-    private DistributionOriginGroupFailoverCriteria() {
-        this.statusCodes = null;
+    private DistributionOriginGroupFailoverCriteria(DistributionOriginGroupFailoverCriteria $) {
+        this.statusCodes = $.statusCodes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionOriginGroupFailoverCriteria defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private DistributionStatusCodes statusCodes;
+        private DistributionOriginGroupFailoverCriteria $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionOriginGroupFailoverCriteria();
         }
 
         public Builder(DistributionOriginGroupFailoverCriteria defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.statusCodes = defaults.statusCodes;
+            $ = new DistributionOriginGroupFailoverCriteria(Objects.requireNonNull(defaults));
         }
 
         public Builder statusCodes(DistributionStatusCodes statusCodes) {
-            this.statusCodes = Objects.requireNonNull(statusCodes);
+            $.statusCodes = statusCodes;
             return this;
-        }        public DistributionOriginGroupFailoverCriteria build() {
-            return new DistributionOriginGroupFailoverCriteria(statusCodes);
+        }
+
+        public DistributionOriginGroupFailoverCriteria build() {
+            $.statusCodes = Objects.requireNonNull($.statusCodes, "expected parameter 'statusCodes' to be non-null");
+            return $;
         }
     }
+
 }

@@ -10,6 +10,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +27,10 @@ public final class DefenderForServersAwsOfferingArgs extends com.pulumi.resource
      * 
      */
     @Import(name="arcAutoProvisioning")
-      private final @Nullable Output<DefenderForServersAwsOfferingArcAutoProvisioningArgs> arcAutoProvisioning;
+    private @Nullable Output<DefenderForServersAwsOfferingArcAutoProvisioningArgs> arcAutoProvisioning;
 
-    public Output<DefenderForServersAwsOfferingArcAutoProvisioningArgs> arcAutoProvisioning() {
-        return this.arcAutoProvisioning == null ? Codegen.empty() : this.arcAutoProvisioning;
+    public Optional<Output<DefenderForServersAwsOfferingArcAutoProvisioningArgs>> arcAutoProvisioning() {
+        return Optional.ofNullable(this.arcAutoProvisioning);
     }
 
     /**
@@ -37,10 +38,10 @@ public final class DefenderForServersAwsOfferingArgs extends com.pulumi.resource
      * 
      */
     @Import(name="defenderForServers")
-      private final @Nullable Output<DefenderForServersAwsOfferingDefenderForServersArgs> defenderForServers;
+    private @Nullable Output<DefenderForServersAwsOfferingDefenderForServersArgs> defenderForServers;
 
-    public Output<DefenderForServersAwsOfferingDefenderForServersArgs> defenderForServers() {
-        return this.defenderForServers == null ? Codegen.empty() : this.defenderForServers;
+    public Optional<Output<DefenderForServersAwsOfferingDefenderForServersArgs>> defenderForServers() {
+        return Optional.ofNullable(this.defenderForServers);
     }
 
     /**
@@ -49,76 +50,69 @@ public final class DefenderForServersAwsOfferingArgs extends com.pulumi.resource
      * 
      */
     @Import(name="offeringType", required=true)
-      private final Output<String> offeringType;
+    private Output<String> offeringType;
 
     public Output<String> offeringType() {
         return this.offeringType;
     }
 
-    public DefenderForServersAwsOfferingArgs(
-        @Nullable Output<DefenderForServersAwsOfferingArcAutoProvisioningArgs> arcAutoProvisioning,
-        @Nullable Output<DefenderForServersAwsOfferingDefenderForServersArgs> defenderForServers,
-        Output<String> offeringType) {
-        this.arcAutoProvisioning = arcAutoProvisioning;
-        this.defenderForServers = defenderForServers;
-        this.offeringType = Codegen.stringProp("offeringType").output().arg(offeringType).require();
-    }
+    private DefenderForServersAwsOfferingArgs() {}
 
-    private DefenderForServersAwsOfferingArgs() {
-        this.arcAutoProvisioning = Codegen.empty();
-        this.defenderForServers = Codegen.empty();
-        this.offeringType = Codegen.empty();
+    private DefenderForServersAwsOfferingArgs(DefenderForServersAwsOfferingArgs $) {
+        this.arcAutoProvisioning = $.arcAutoProvisioning;
+        this.defenderForServers = $.defenderForServers;
+        this.offeringType = $.offeringType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DefenderForServersAwsOfferingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DefenderForServersAwsOfferingArcAutoProvisioningArgs> arcAutoProvisioning;
-        private @Nullable Output<DefenderForServersAwsOfferingDefenderForServersArgs> defenderForServers;
-        private Output<String> offeringType;
+        private DefenderForServersAwsOfferingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DefenderForServersAwsOfferingArgs();
         }
 
         public Builder(DefenderForServersAwsOfferingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arcAutoProvisioning = defaults.arcAutoProvisioning;
-    	      this.defenderForServers = defaults.defenderForServers;
-    	      this.offeringType = defaults.offeringType;
+            $ = new DefenderForServersAwsOfferingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arcAutoProvisioning(@Nullable Output<DefenderForServersAwsOfferingArcAutoProvisioningArgs> arcAutoProvisioning) {
-            this.arcAutoProvisioning = arcAutoProvisioning;
+            $.arcAutoProvisioning = arcAutoProvisioning;
             return this;
         }
-        public Builder arcAutoProvisioning(@Nullable DefenderForServersAwsOfferingArcAutoProvisioningArgs arcAutoProvisioning) {
-            this.arcAutoProvisioning = Codegen.ofNullable(arcAutoProvisioning);
-            return this;
+
+        public Builder arcAutoProvisioning(DefenderForServersAwsOfferingArcAutoProvisioningArgs arcAutoProvisioning) {
+            return arcAutoProvisioning(Output.of(arcAutoProvisioning));
         }
+
         public Builder defenderForServers(@Nullable Output<DefenderForServersAwsOfferingDefenderForServersArgs> defenderForServers) {
-            this.defenderForServers = defenderForServers;
+            $.defenderForServers = defenderForServers;
             return this;
         }
-        public Builder defenderForServers(@Nullable DefenderForServersAwsOfferingDefenderForServersArgs defenderForServers) {
-            this.defenderForServers = Codegen.ofNullable(defenderForServers);
-            return this;
+
+        public Builder defenderForServers(DefenderForServersAwsOfferingDefenderForServersArgs defenderForServers) {
+            return defenderForServers(Output.of(defenderForServers));
         }
+
         public Builder offeringType(Output<String> offeringType) {
-            this.offeringType = Objects.requireNonNull(offeringType);
+            $.offeringType = offeringType;
             return this;
         }
+
         public Builder offeringType(String offeringType) {
-            this.offeringType = Output.of(Objects.requireNonNull(offeringType));
-            return this;
-        }        public DefenderForServersAwsOfferingArgs build() {
-            return new DefenderForServersAwsOfferingArgs(arcAutoProvisioning, defenderForServers, offeringType);
+            return offeringType(Output.of(offeringType));
+        }
+
+        public DefenderForServersAwsOfferingArgs build() {
+            $.offeringType = Codegen.stringProp("offeringType").output().arg($.offeringType).require();
+            return $;
         }
     }
+
 }

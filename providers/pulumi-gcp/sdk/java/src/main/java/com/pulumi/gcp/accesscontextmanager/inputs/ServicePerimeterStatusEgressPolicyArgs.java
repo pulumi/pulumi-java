@@ -5,10 +5,10 @@ package com.pulumi.gcp.accesscontextmanager.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.accesscontextmanager.inputs.ServicePerimeterStatusEgressPolicyEgressFromArgs;
 import com.pulumi.gcp.accesscontextmanager.inputs.ServicePerimeterStatusEgressPolicyEgressToArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ServicePerimeterStatusEgressPolicyArgs extends com.pulumi.res
      * 
      */
     @Import(name="egressFrom")
-      private final @Nullable Output<ServicePerimeterStatusEgressPolicyEgressFromArgs> egressFrom;
+    private @Nullable Output<ServicePerimeterStatusEgressPolicyEgressFromArgs> egressFrom;
 
-    public Output<ServicePerimeterStatusEgressPolicyEgressFromArgs> egressFrom() {
-        return this.egressFrom == null ? Codegen.empty() : this.egressFrom;
+    public Optional<Output<ServicePerimeterStatusEgressPolicyEgressFromArgs>> egressFrom() {
+        return Optional.ofNullable(this.egressFrom);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class ServicePerimeterStatusEgressPolicyArgs extends com.pulumi.res
      * 
      */
     @Import(name="egressTo")
-      private final @Nullable Output<ServicePerimeterStatusEgressPolicyEgressToArgs> egressTo;
+    private @Nullable Output<ServicePerimeterStatusEgressPolicyEgressToArgs> egressTo;
 
-    public Output<ServicePerimeterStatusEgressPolicyEgressToArgs> egressTo() {
-        return this.egressTo == null ? Codegen.empty() : this.egressTo;
+    public Optional<Output<ServicePerimeterStatusEgressPolicyEgressToArgs>> egressTo() {
+        return Optional.ofNullable(this.egressTo);
     }
 
-    public ServicePerimeterStatusEgressPolicyArgs(
-        @Nullable Output<ServicePerimeterStatusEgressPolicyEgressFromArgs> egressFrom,
-        @Nullable Output<ServicePerimeterStatusEgressPolicyEgressToArgs> egressTo) {
-        this.egressFrom = egressFrom;
-        this.egressTo = egressTo;
-    }
+    private ServicePerimeterStatusEgressPolicyArgs() {}
 
-    private ServicePerimeterStatusEgressPolicyArgs() {
-        this.egressFrom = Codegen.empty();
-        this.egressTo = Codegen.empty();
+    private ServicePerimeterStatusEgressPolicyArgs(ServicePerimeterStatusEgressPolicyArgs $) {
+        this.egressFrom = $.egressFrom;
+        this.egressTo = $.egressTo;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServicePerimeterStatusEgressPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ServicePerimeterStatusEgressPolicyEgressFromArgs> egressFrom;
-        private @Nullable Output<ServicePerimeterStatusEgressPolicyEgressToArgs> egressTo;
+        private ServicePerimeterStatusEgressPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServicePerimeterStatusEgressPolicyArgs();
         }
 
         public Builder(ServicePerimeterStatusEgressPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.egressFrom = defaults.egressFrom;
-    	      this.egressTo = defaults.egressTo;
+            $ = new ServicePerimeterStatusEgressPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder egressFrom(@Nullable Output<ServicePerimeterStatusEgressPolicyEgressFromArgs> egressFrom) {
-            this.egressFrom = egressFrom;
+            $.egressFrom = egressFrom;
             return this;
         }
-        public Builder egressFrom(@Nullable ServicePerimeterStatusEgressPolicyEgressFromArgs egressFrom) {
-            this.egressFrom = Codegen.ofNullable(egressFrom);
-            return this;
+
+        public Builder egressFrom(ServicePerimeterStatusEgressPolicyEgressFromArgs egressFrom) {
+            return egressFrom(Output.of(egressFrom));
         }
+
         public Builder egressTo(@Nullable Output<ServicePerimeterStatusEgressPolicyEgressToArgs> egressTo) {
-            this.egressTo = egressTo;
+            $.egressTo = egressTo;
             return this;
         }
-        public Builder egressTo(@Nullable ServicePerimeterStatusEgressPolicyEgressToArgs egressTo) {
-            this.egressTo = Codegen.ofNullable(egressTo);
-            return this;
-        }        public ServicePerimeterStatusEgressPolicyArgs build() {
-            return new ServicePerimeterStatusEgressPolicyArgs(egressFrom, egressTo);
+
+        public Builder egressTo(ServicePerimeterStatusEgressPolicyEgressToArgs egressTo) {
+            return egressTo(Output.of(egressTo));
+        }
+
+        public ServicePerimeterStatusEgressPolicyArgs build() {
+            return $;
         }
     }
+
 }

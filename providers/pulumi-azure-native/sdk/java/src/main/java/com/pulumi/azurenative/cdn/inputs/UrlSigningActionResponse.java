@@ -24,7 +24,7 @@ public final class UrlSigningActionResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -35,55 +35,52 @@ public final class UrlSigningActionResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="parameters", required=true)
-      private final UrlSigningActionParametersResponse parameters;
+    private UrlSigningActionParametersResponse parameters;
 
     public UrlSigningActionParametersResponse parameters() {
         return this.parameters;
     }
 
-    public UrlSigningActionResponse(
-        String name,
-        UrlSigningActionParametersResponse parameters) {
-        this.name = Codegen.stringProp("name").arg(name).require();
-        this.parameters = Objects.requireNonNull(parameters, "expected parameter 'parameters' to be non-null");
-    }
+    private UrlSigningActionResponse() {}
 
-    private UrlSigningActionResponse() {
-        this.name = null;
-        this.parameters = null;
+    private UrlSigningActionResponse(UrlSigningActionResponse $) {
+        this.name = $.name;
+        this.parameters = $.parameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UrlSigningActionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private UrlSigningActionParametersResponse parameters;
+        private UrlSigningActionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UrlSigningActionResponse();
         }
 
         public Builder(UrlSigningActionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.parameters = defaults.parameters;
+            $ = new UrlSigningActionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder parameters(UrlSigningActionParametersResponse parameters) {
-            this.parameters = Objects.requireNonNull(parameters);
+            $.parameters = parameters;
             return this;
-        }        public UrlSigningActionResponse build() {
-            return new UrlSigningActionResponse(name, parameters);
+        }
+
+        public UrlSigningActionResponse build() {
+            $.name = Codegen.stringProp("name").arg($.name).require();
+            $.parameters = Objects.requireNonNull($.parameters, "expected parameter 'parameters' to be non-null");
+            return $;
         }
     }
+
 }

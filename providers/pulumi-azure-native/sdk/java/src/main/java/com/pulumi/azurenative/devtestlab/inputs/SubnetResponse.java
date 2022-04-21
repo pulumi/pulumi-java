@@ -23,10 +23,10 @@ public final class SubnetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="allowPublicIp")
-      private final @Nullable String allowPublicIp;
+    private @Nullable String allowPublicIp;
 
     public Optional<String> allowPublicIp() {
-        return this.allowPublicIp == null ? Optional.empty() : Optional.ofNullable(this.allowPublicIp);
+        return Optional.ofNullable(this.allowPublicIp);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class SubnetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="labSubnetName")
-      private final @Nullable String labSubnetName;
+    private @Nullable String labSubnetName;
 
     public Optional<String> labSubnetName() {
-        return this.labSubnetName == null ? Optional.empty() : Optional.ofNullable(this.labSubnetName);
+        return Optional.ofNullable(this.labSubnetName);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class SubnetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable String resourceId;
+    private @Nullable String resourceId;
 
     public Optional<String> resourceId() {
-        return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
+        return Optional.ofNullable(this.resourceId);
     }
 
-    public SubnetResponse(
-        @Nullable String allowPublicIp,
-        @Nullable String labSubnetName,
-        @Nullable String resourceId) {
-        this.allowPublicIp = allowPublicIp;
-        this.labSubnetName = labSubnetName;
-        this.resourceId = resourceId;
-    }
+    private SubnetResponse() {}
 
-    private SubnetResponse() {
-        this.allowPublicIp = null;
-        this.labSubnetName = null;
-        this.resourceId = null;
+    private SubnetResponse(SubnetResponse $) {
+        this.allowPublicIp = $.allowPublicIp;
+        this.labSubnetName = $.labSubnetName;
+        this.resourceId = $.resourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubnetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String allowPublicIp;
-        private @Nullable String labSubnetName;
-        private @Nullable String resourceId;
+        private SubnetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubnetResponse();
         }
 
         public Builder(SubnetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowPublicIp = defaults.allowPublicIp;
-    	      this.labSubnetName = defaults.labSubnetName;
-    	      this.resourceId = defaults.resourceId;
+            $ = new SubnetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowPublicIp(@Nullable String allowPublicIp) {
-            this.allowPublicIp = allowPublicIp;
+            $.allowPublicIp = allowPublicIp;
             return this;
         }
+
         public Builder labSubnetName(@Nullable String labSubnetName) {
-            this.labSubnetName = labSubnetName;
+            $.labSubnetName = labSubnetName;
             return this;
         }
+
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
-        }        public SubnetResponse build() {
-            return new SubnetResponse(allowPublicIp, labSubnetName, resourceId);
+        }
+
+        public SubnetResponse build() {
+            return $;
         }
     }
+
 }

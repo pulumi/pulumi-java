@@ -17,7 +17,7 @@ public final class GetFunctionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -28,55 +28,52 @@ public final class GetFunctionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="stage", required=true)
-      private final String stage;
+    private String stage;
 
     public String stage() {
         return this.stage;
     }
 
-    public GetFunctionArgs(
-        String name,
-        String stage) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.stage = Objects.requireNonNull(stage, "expected parameter 'stage' to be non-null");
-    }
+    private GetFunctionArgs() {}
 
-    private GetFunctionArgs() {
-        this.name = null;
-        this.stage = null;
+    private GetFunctionArgs(GetFunctionArgs $) {
+        this.name = $.name;
+        this.stage = $.stage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFunctionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String stage;
+        private GetFunctionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFunctionArgs();
         }
 
         public Builder(GetFunctionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.stage = defaults.stage;
+            $ = new GetFunctionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder stage(String stage) {
-            this.stage = Objects.requireNonNull(stage);
+            $.stage = stage;
             return this;
-        }        public GetFunctionArgs build() {
-            return new GetFunctionArgs(name, stage);
+        }
+
+        public GetFunctionArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.stage = Objects.requireNonNull($.stage, "expected parameter 'stage' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class InstanceGroupManagerActionsSummaryResponse extends com.pulumi
      * 
      */
     @Import(name="abandoning", required=true)
-      private final Integer abandoning;
+    private Integer abandoning;
 
     public Integer abandoning() {
         return this.abandoning;
@@ -28,7 +28,7 @@ public final class InstanceGroupManagerActionsSummaryResponse extends com.pulumi
      * 
      */
     @Import(name="creating", required=true)
-      private final Integer creating;
+    private Integer creating;
 
     public Integer creating() {
         return this.creating;
@@ -39,7 +39,7 @@ public final class InstanceGroupManagerActionsSummaryResponse extends com.pulumi
      * 
      */
     @Import(name="creatingWithoutRetries", required=true)
-      private final Integer creatingWithoutRetries;
+    private Integer creatingWithoutRetries;
 
     public Integer creatingWithoutRetries() {
         return this.creatingWithoutRetries;
@@ -50,7 +50,7 @@ public final class InstanceGroupManagerActionsSummaryResponse extends com.pulumi
      * 
      */
     @Import(name="deleting", required=true)
-      private final Integer deleting;
+    private Integer deleting;
 
     public Integer deleting() {
         return this.deleting;
@@ -61,7 +61,7 @@ public final class InstanceGroupManagerActionsSummaryResponse extends com.pulumi
      * 
      */
     @Import(name="none", required=true)
-      private final Integer none;
+    private Integer none;
 
     public Integer none() {
         return this.none;
@@ -72,7 +72,7 @@ public final class InstanceGroupManagerActionsSummaryResponse extends com.pulumi
      * 
      */
     @Import(name="recreating", required=true)
-      private final Integer recreating;
+    private Integer recreating;
 
     public Integer recreating() {
         return this.recreating;
@@ -83,7 +83,7 @@ public final class InstanceGroupManagerActionsSummaryResponse extends com.pulumi
      * 
      */
     @Import(name="refreshing", required=true)
-      private final Integer refreshing;
+    private Integer refreshing;
 
     public Integer refreshing() {
         return this.refreshing;
@@ -94,7 +94,7 @@ public final class InstanceGroupManagerActionsSummaryResponse extends com.pulumi
      * 
      */
     @Import(name="restarting", required=true)
-      private final Integer restarting;
+    private Integer restarting;
 
     public Integer restarting() {
         return this.restarting;
@@ -105,7 +105,7 @@ public final class InstanceGroupManagerActionsSummaryResponse extends com.pulumi
      * 
      */
     @Import(name="resuming", required=true)
-      private final Integer resuming;
+    private Integer resuming;
 
     public Integer resuming() {
         return this.resuming;
@@ -116,7 +116,7 @@ public final class InstanceGroupManagerActionsSummaryResponse extends com.pulumi
      * 
      */
     @Import(name="starting", required=true)
-      private final Integer starting;
+    private Integer starting;
 
     public Integer starting() {
         return this.starting;
@@ -127,7 +127,7 @@ public final class InstanceGroupManagerActionsSummaryResponse extends com.pulumi
      * 
      */
     @Import(name="stopping", required=true)
-      private final Integer stopping;
+    private Integer stopping;
 
     public Integer stopping() {
         return this.stopping;
@@ -138,7 +138,7 @@ public final class InstanceGroupManagerActionsSummaryResponse extends com.pulumi
      * 
      */
     @Import(name="suspending", required=true)
-      private final Integer suspending;
+    private Integer suspending;
 
     public Integer suspending() {
         return this.suspending;
@@ -149,154 +149,129 @@ public final class InstanceGroupManagerActionsSummaryResponse extends com.pulumi
      * 
      */
     @Import(name="verifying", required=true)
-      private final Integer verifying;
+    private Integer verifying;
 
     public Integer verifying() {
         return this.verifying;
     }
 
-    public InstanceGroupManagerActionsSummaryResponse(
-        Integer abandoning,
-        Integer creating,
-        Integer creatingWithoutRetries,
-        Integer deleting,
-        Integer none,
-        Integer recreating,
-        Integer refreshing,
-        Integer restarting,
-        Integer resuming,
-        Integer starting,
-        Integer stopping,
-        Integer suspending,
-        Integer verifying) {
-        this.abandoning = Objects.requireNonNull(abandoning, "expected parameter 'abandoning' to be non-null");
-        this.creating = Objects.requireNonNull(creating, "expected parameter 'creating' to be non-null");
-        this.creatingWithoutRetries = Objects.requireNonNull(creatingWithoutRetries, "expected parameter 'creatingWithoutRetries' to be non-null");
-        this.deleting = Objects.requireNonNull(deleting, "expected parameter 'deleting' to be non-null");
-        this.none = Objects.requireNonNull(none, "expected parameter 'none' to be non-null");
-        this.recreating = Objects.requireNonNull(recreating, "expected parameter 'recreating' to be non-null");
-        this.refreshing = Objects.requireNonNull(refreshing, "expected parameter 'refreshing' to be non-null");
-        this.restarting = Objects.requireNonNull(restarting, "expected parameter 'restarting' to be non-null");
-        this.resuming = Objects.requireNonNull(resuming, "expected parameter 'resuming' to be non-null");
-        this.starting = Objects.requireNonNull(starting, "expected parameter 'starting' to be non-null");
-        this.stopping = Objects.requireNonNull(stopping, "expected parameter 'stopping' to be non-null");
-        this.suspending = Objects.requireNonNull(suspending, "expected parameter 'suspending' to be non-null");
-        this.verifying = Objects.requireNonNull(verifying, "expected parameter 'verifying' to be non-null");
-    }
+    private InstanceGroupManagerActionsSummaryResponse() {}
 
-    private InstanceGroupManagerActionsSummaryResponse() {
-        this.abandoning = null;
-        this.creating = null;
-        this.creatingWithoutRetries = null;
-        this.deleting = null;
-        this.none = null;
-        this.recreating = null;
-        this.refreshing = null;
-        this.restarting = null;
-        this.resuming = null;
-        this.starting = null;
-        this.stopping = null;
-        this.suspending = null;
-        this.verifying = null;
+    private InstanceGroupManagerActionsSummaryResponse(InstanceGroupManagerActionsSummaryResponse $) {
+        this.abandoning = $.abandoning;
+        this.creating = $.creating;
+        this.creatingWithoutRetries = $.creatingWithoutRetries;
+        this.deleting = $.deleting;
+        this.none = $.none;
+        this.recreating = $.recreating;
+        this.refreshing = $.refreshing;
+        this.restarting = $.restarting;
+        this.resuming = $.resuming;
+        this.starting = $.starting;
+        this.stopping = $.stopping;
+        this.suspending = $.suspending;
+        this.verifying = $.verifying;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceGroupManagerActionsSummaryResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer abandoning;
-        private Integer creating;
-        private Integer creatingWithoutRetries;
-        private Integer deleting;
-        private Integer none;
-        private Integer recreating;
-        private Integer refreshing;
-        private Integer restarting;
-        private Integer resuming;
-        private Integer starting;
-        private Integer stopping;
-        private Integer suspending;
-        private Integer verifying;
+        private InstanceGroupManagerActionsSummaryResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceGroupManagerActionsSummaryResponse();
         }
 
         public Builder(InstanceGroupManagerActionsSummaryResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.abandoning = defaults.abandoning;
-    	      this.creating = defaults.creating;
-    	      this.creatingWithoutRetries = defaults.creatingWithoutRetries;
-    	      this.deleting = defaults.deleting;
-    	      this.none = defaults.none;
-    	      this.recreating = defaults.recreating;
-    	      this.refreshing = defaults.refreshing;
-    	      this.restarting = defaults.restarting;
-    	      this.resuming = defaults.resuming;
-    	      this.starting = defaults.starting;
-    	      this.stopping = defaults.stopping;
-    	      this.suspending = defaults.suspending;
-    	      this.verifying = defaults.verifying;
+            $ = new InstanceGroupManagerActionsSummaryResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder abandoning(Integer abandoning) {
-            this.abandoning = Objects.requireNonNull(abandoning);
+            $.abandoning = abandoning;
             return this;
         }
+
         public Builder creating(Integer creating) {
-            this.creating = Objects.requireNonNull(creating);
+            $.creating = creating;
             return this;
         }
+
         public Builder creatingWithoutRetries(Integer creatingWithoutRetries) {
-            this.creatingWithoutRetries = Objects.requireNonNull(creatingWithoutRetries);
+            $.creatingWithoutRetries = creatingWithoutRetries;
             return this;
         }
+
         public Builder deleting(Integer deleting) {
-            this.deleting = Objects.requireNonNull(deleting);
+            $.deleting = deleting;
             return this;
         }
+
         public Builder none(Integer none) {
-            this.none = Objects.requireNonNull(none);
+            $.none = none;
             return this;
         }
+
         public Builder recreating(Integer recreating) {
-            this.recreating = Objects.requireNonNull(recreating);
+            $.recreating = recreating;
             return this;
         }
+
         public Builder refreshing(Integer refreshing) {
-            this.refreshing = Objects.requireNonNull(refreshing);
+            $.refreshing = refreshing;
             return this;
         }
+
         public Builder restarting(Integer restarting) {
-            this.restarting = Objects.requireNonNull(restarting);
+            $.restarting = restarting;
             return this;
         }
+
         public Builder resuming(Integer resuming) {
-            this.resuming = Objects.requireNonNull(resuming);
+            $.resuming = resuming;
             return this;
         }
+
         public Builder starting(Integer starting) {
-            this.starting = Objects.requireNonNull(starting);
+            $.starting = starting;
             return this;
         }
+
         public Builder stopping(Integer stopping) {
-            this.stopping = Objects.requireNonNull(stopping);
+            $.stopping = stopping;
             return this;
         }
+
         public Builder suspending(Integer suspending) {
-            this.suspending = Objects.requireNonNull(suspending);
+            $.suspending = suspending;
             return this;
         }
+
         public Builder verifying(Integer verifying) {
-            this.verifying = Objects.requireNonNull(verifying);
+            $.verifying = verifying;
             return this;
-        }        public InstanceGroupManagerActionsSummaryResponse build() {
-            return new InstanceGroupManagerActionsSummaryResponse(abandoning, creating, creatingWithoutRetries, deleting, none, recreating, refreshing, restarting, resuming, starting, stopping, suspending, verifying);
+        }
+
+        public InstanceGroupManagerActionsSummaryResponse build() {
+            $.abandoning = Objects.requireNonNull($.abandoning, "expected parameter 'abandoning' to be non-null");
+            $.creating = Objects.requireNonNull($.creating, "expected parameter 'creating' to be non-null");
+            $.creatingWithoutRetries = Objects.requireNonNull($.creatingWithoutRetries, "expected parameter 'creatingWithoutRetries' to be non-null");
+            $.deleting = Objects.requireNonNull($.deleting, "expected parameter 'deleting' to be non-null");
+            $.none = Objects.requireNonNull($.none, "expected parameter 'none' to be non-null");
+            $.recreating = Objects.requireNonNull($.recreating, "expected parameter 'recreating' to be non-null");
+            $.refreshing = Objects.requireNonNull($.refreshing, "expected parameter 'refreshing' to be non-null");
+            $.restarting = Objects.requireNonNull($.restarting, "expected parameter 'restarting' to be non-null");
+            $.resuming = Objects.requireNonNull($.resuming, "expected parameter 'resuming' to be non-null");
+            $.starting = Objects.requireNonNull($.starting, "expected parameter 'starting' to be non-null");
+            $.stopping = Objects.requireNonNull($.stopping, "expected parameter 'stopping' to be non-null");
+            $.suspending = Objects.requireNonNull($.suspending, "expected parameter 'suspending' to be non-null");
+            $.verifying = Objects.requireNonNull($.verifying, "expected parameter 'verifying' to be non-null");
+            return $;
         }
     }
+
 }

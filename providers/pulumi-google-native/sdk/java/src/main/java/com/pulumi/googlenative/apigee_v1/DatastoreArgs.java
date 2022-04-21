@@ -5,10 +5,10 @@ package com.pulumi.googlenative.apigee_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1DatastoreConfigArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class DatastoreArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="datastoreConfig")
-      private final @Nullable Output<GoogleCloudApigeeV1DatastoreConfigArgs> datastoreConfig;
+    private @Nullable Output<GoogleCloudApigeeV1DatastoreConfigArgs> datastoreConfig;
 
-    public Output<GoogleCloudApigeeV1DatastoreConfigArgs> datastoreConfig() {
-        return this.datastoreConfig == null ? Codegen.empty() : this.datastoreConfig;
+    public Optional<Output<GoogleCloudApigeeV1DatastoreConfigArgs>> datastoreConfig() {
+        return Optional.ofNullable(this.datastoreConfig);
     }
 
     /**
@@ -32,14 +32,14 @@ public final class DatastoreArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
     }
 
     @Import(name="organizationId", required=true)
-      private final Output<String> organizationId;
+    private Output<String> organizationId;
 
     public Output<String> organizationId() {
         return this.organizationId;
@@ -50,89 +50,80 @@ public final class DatastoreArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetType")
-      private final @Nullable Output<String> targetType;
+    private @Nullable Output<String> targetType;
 
-    public Output<String> targetType() {
-        return this.targetType == null ? Codegen.empty() : this.targetType;
+    public Optional<Output<String>> targetType() {
+        return Optional.ofNullable(this.targetType);
     }
 
-    public DatastoreArgs(
-        @Nullable Output<GoogleCloudApigeeV1DatastoreConfigArgs> datastoreConfig,
-        Output<String> displayName,
-        Output<String> organizationId,
-        @Nullable Output<String> targetType) {
-        this.datastoreConfig = datastoreConfig;
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-        this.targetType = targetType;
-    }
+    private DatastoreArgs() {}
 
-    private DatastoreArgs() {
-        this.datastoreConfig = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.organizationId = Codegen.empty();
-        this.targetType = Codegen.empty();
+    private DatastoreArgs(DatastoreArgs $) {
+        this.datastoreConfig = $.datastoreConfig;
+        this.displayName = $.displayName;
+        this.organizationId = $.organizationId;
+        this.targetType = $.targetType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatastoreArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GoogleCloudApigeeV1DatastoreConfigArgs> datastoreConfig;
-        private Output<String> displayName;
-        private Output<String> organizationId;
-        private @Nullable Output<String> targetType;
+        private DatastoreArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatastoreArgs();
         }
 
         public Builder(DatastoreArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datastoreConfig = defaults.datastoreConfig;
-    	      this.displayName = defaults.displayName;
-    	      this.organizationId = defaults.organizationId;
-    	      this.targetType = defaults.targetType;
+            $ = new DatastoreArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder datastoreConfig(@Nullable Output<GoogleCloudApigeeV1DatastoreConfigArgs> datastoreConfig) {
-            this.datastoreConfig = datastoreConfig;
+            $.datastoreConfig = datastoreConfig;
             return this;
         }
-        public Builder datastoreConfig(@Nullable GoogleCloudApigeeV1DatastoreConfigArgs datastoreConfig) {
-            this.datastoreConfig = Codegen.ofNullable(datastoreConfig);
-            return this;
+
+        public Builder datastoreConfig(GoogleCloudApigeeV1DatastoreConfigArgs datastoreConfig) {
+            return datastoreConfig(Output.of(datastoreConfig));
         }
+
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder organizationId(Output<String> organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
         }
+
         public Builder organizationId(String organizationId) {
-            this.organizationId = Output.of(Objects.requireNonNull(organizationId));
-            return this;
+            return organizationId(Output.of(organizationId));
         }
+
         public Builder targetType(@Nullable Output<String> targetType) {
-            this.targetType = targetType;
+            $.targetType = targetType;
             return this;
         }
-        public Builder targetType(@Nullable String targetType) {
-            this.targetType = Codegen.ofNullable(targetType);
-            return this;
-        }        public DatastoreArgs build() {
-            return new DatastoreArgs(datastoreConfig, displayName, organizationId, targetType);
+
+        public Builder targetType(String targetType) {
+            return targetType(Output.of(targetType));
+        }
+
+        public DatastoreArgs build() {
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            return $;
         }
     }
+
 }

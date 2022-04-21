@@ -6,10 +6,10 @@ package com.pulumi.azurenative.appplatform.inputs;
 import com.pulumi.azurenative.appplatform.inputs.GatewayApiRouteArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class GatewayRouteConfigPropertiesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="appResourceId")
-      private final @Nullable Output<String> appResourceId;
+    private @Nullable Output<String> appResourceId;
 
-    public Output<String> appResourceId() {
-        return this.appResourceId == null ? Codegen.empty() : this.appResourceId;
+    public Optional<Output<String>> appResourceId() {
+        return Optional.ofNullable(this.appResourceId);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class GatewayRouteConfigPropertiesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="routes")
-      private final @Nullable Output<List<GatewayApiRouteArgs>> routes;
+    private @Nullable Output<List<GatewayApiRouteArgs>> routes;
 
-    public Output<List<GatewayApiRouteArgs>> routes() {
-        return this.routes == null ? Codegen.empty() : this.routes;
+    public Optional<Output<List<GatewayApiRouteArgs>>> routes() {
+        return Optional.ofNullable(this.routes);
     }
 
-    public GatewayRouteConfigPropertiesArgs(
-        @Nullable Output<String> appResourceId,
-        @Nullable Output<List<GatewayApiRouteArgs>> routes) {
-        this.appResourceId = appResourceId;
-        this.routes = routes;
-    }
+    private GatewayRouteConfigPropertiesArgs() {}
 
-    private GatewayRouteConfigPropertiesArgs() {
-        this.appResourceId = Codegen.empty();
-        this.routes = Codegen.empty();
+    private GatewayRouteConfigPropertiesArgs(GatewayRouteConfigPropertiesArgs $) {
+        this.appResourceId = $.appResourceId;
+        this.routes = $.routes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GatewayRouteConfigPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> appResourceId;
-        private @Nullable Output<List<GatewayApiRouteArgs>> routes;
+        private GatewayRouteConfigPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GatewayRouteConfigPropertiesArgs();
         }
 
         public Builder(GatewayRouteConfigPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appResourceId = defaults.appResourceId;
-    	      this.routes = defaults.routes;
+            $ = new GatewayRouteConfigPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appResourceId(@Nullable Output<String> appResourceId) {
-            this.appResourceId = appResourceId;
+            $.appResourceId = appResourceId;
             return this;
         }
-        public Builder appResourceId(@Nullable String appResourceId) {
-            this.appResourceId = Codegen.ofNullable(appResourceId);
-            return this;
+
+        public Builder appResourceId(String appResourceId) {
+            return appResourceId(Output.of(appResourceId));
         }
+
         public Builder routes(@Nullable Output<List<GatewayApiRouteArgs>> routes) {
-            this.routes = routes;
+            $.routes = routes;
             return this;
         }
-        public Builder routes(@Nullable List<GatewayApiRouteArgs> routes) {
-            this.routes = Codegen.ofNullable(routes);
-            return this;
+
+        public Builder routes(List<GatewayApiRouteArgs> routes) {
+            return routes(Output.of(routes));
         }
+
         public Builder routes(GatewayApiRouteArgs... routes) {
             return routes(List.of(routes));
-        }        public GatewayRouteConfigPropertiesArgs build() {
-            return new GatewayRouteConfigPropertiesArgs(appResourceId, routes);
+        }
+
+        public GatewayRouteConfigPropertiesArgs build() {
+            return $;
         }
     }
+
 }

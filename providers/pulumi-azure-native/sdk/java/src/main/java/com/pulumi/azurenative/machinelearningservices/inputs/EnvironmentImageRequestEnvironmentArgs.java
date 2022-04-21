@@ -9,10 +9,10 @@ import com.pulumi.azurenative.machinelearningservices.inputs.ModelEnvironmentDef
 import com.pulumi.azurenative.machinelearningservices.inputs.ModelEnvironmentDefinitionSparkArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class EnvironmentImageRequestEnvironmentArgs extends com.pulumi.res
      * 
      */
     @Import(name="docker")
-      private final @Nullable Output<ModelEnvironmentDefinitionDockerArgs> docker;
+    private @Nullable Output<ModelEnvironmentDefinitionDockerArgs> docker;
 
-    public Output<ModelEnvironmentDefinitionDockerArgs> docker() {
-        return this.docker == null ? Codegen.empty() : this.docker;
+    public Optional<Output<ModelEnvironmentDefinitionDockerArgs>> docker() {
+        return Optional.ofNullable(this.docker);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class EnvironmentImageRequestEnvironmentArgs extends com.pulumi.res
      * 
      */
     @Import(name="environmentVariables")
-      private final @Nullable Output<Map<String,String>> environmentVariables;
+    private @Nullable Output<Map<String,String>> environmentVariables;
 
-    public Output<Map<String,String>> environmentVariables() {
-        return this.environmentVariables == null ? Codegen.empty() : this.environmentVariables;
+    public Optional<Output<Map<String,String>>> environmentVariables() {
+        return Optional.ofNullable(this.environmentVariables);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class EnvironmentImageRequestEnvironmentArgs extends com.pulumi.res
      * 
      */
     @Import(name="inferencingStackVersion")
-      private final @Nullable Output<String> inferencingStackVersion;
+    private @Nullable Output<String> inferencingStackVersion;
 
-    public Output<String> inferencingStackVersion() {
-        return this.inferencingStackVersion == null ? Codegen.empty() : this.inferencingStackVersion;
+    public Optional<Output<String>> inferencingStackVersion() {
+        return Optional.ofNullable(this.inferencingStackVersion);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class EnvironmentImageRequestEnvironmentArgs extends com.pulumi.res
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class EnvironmentImageRequestEnvironmentArgs extends com.pulumi.res
      * 
      */
     @Import(name="python")
-      private final @Nullable Output<ModelEnvironmentDefinitionPythonArgs> python;
+    private @Nullable Output<ModelEnvironmentDefinitionPythonArgs> python;
 
-    public Output<ModelEnvironmentDefinitionPythonArgs> python() {
-        return this.python == null ? Codegen.empty() : this.python;
+    public Optional<Output<ModelEnvironmentDefinitionPythonArgs>> python() {
+        return Optional.ofNullable(this.python);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class EnvironmentImageRequestEnvironmentArgs extends com.pulumi.res
      * 
      */
     @Import(name="r")
-      private final @Nullable Output<ModelEnvironmentDefinitionRArgs> r;
+    private @Nullable Output<ModelEnvironmentDefinitionRArgs> r;
 
-    public Output<ModelEnvironmentDefinitionRArgs> r() {
-        return this.r == null ? Codegen.empty() : this.r;
+    public Optional<Output<ModelEnvironmentDefinitionRArgs>> r() {
+        return Optional.ofNullable(this.r);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class EnvironmentImageRequestEnvironmentArgs extends com.pulumi.res
      * 
      */
     @Import(name="spark")
-      private final @Nullable Output<ModelEnvironmentDefinitionSparkArgs> spark;
+    private @Nullable Output<ModelEnvironmentDefinitionSparkArgs> spark;
 
-    public Output<ModelEnvironmentDefinitionSparkArgs> spark() {
-        return this.spark == null ? Codegen.empty() : this.spark;
+    public Optional<Output<ModelEnvironmentDefinitionSparkArgs>> spark() {
+        return Optional.ofNullable(this.spark);
     }
 
     /**
@@ -106,141 +106,118 @@ public final class EnvironmentImageRequestEnvironmentArgs extends com.pulumi.res
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public EnvironmentImageRequestEnvironmentArgs(
-        @Nullable Output<ModelEnvironmentDefinitionDockerArgs> docker,
-        @Nullable Output<Map<String,String>> environmentVariables,
-        @Nullable Output<String> inferencingStackVersion,
-        @Nullable Output<String> name,
-        @Nullable Output<ModelEnvironmentDefinitionPythonArgs> python,
-        @Nullable Output<ModelEnvironmentDefinitionRArgs> r,
-        @Nullable Output<ModelEnvironmentDefinitionSparkArgs> spark,
-        @Nullable Output<String> version) {
-        this.docker = docker;
-        this.environmentVariables = environmentVariables;
-        this.inferencingStackVersion = inferencingStackVersion;
-        this.name = name;
-        this.python = python;
-        this.r = r;
-        this.spark = spark;
-        this.version = version;
-    }
+    private EnvironmentImageRequestEnvironmentArgs() {}
 
-    private EnvironmentImageRequestEnvironmentArgs() {
-        this.docker = Codegen.empty();
-        this.environmentVariables = Codegen.empty();
-        this.inferencingStackVersion = Codegen.empty();
-        this.name = Codegen.empty();
-        this.python = Codegen.empty();
-        this.r = Codegen.empty();
-        this.spark = Codegen.empty();
-        this.version = Codegen.empty();
+    private EnvironmentImageRequestEnvironmentArgs(EnvironmentImageRequestEnvironmentArgs $) {
+        this.docker = $.docker;
+        this.environmentVariables = $.environmentVariables;
+        this.inferencingStackVersion = $.inferencingStackVersion;
+        this.name = $.name;
+        this.python = $.python;
+        this.r = $.r;
+        this.spark = $.spark;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvironmentImageRequestEnvironmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ModelEnvironmentDefinitionDockerArgs> docker;
-        private @Nullable Output<Map<String,String>> environmentVariables;
-        private @Nullable Output<String> inferencingStackVersion;
-        private @Nullable Output<String> name;
-        private @Nullable Output<ModelEnvironmentDefinitionPythonArgs> python;
-        private @Nullable Output<ModelEnvironmentDefinitionRArgs> r;
-        private @Nullable Output<ModelEnvironmentDefinitionSparkArgs> spark;
-        private @Nullable Output<String> version;
+        private EnvironmentImageRequestEnvironmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvironmentImageRequestEnvironmentArgs();
         }
 
         public Builder(EnvironmentImageRequestEnvironmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.docker = defaults.docker;
-    	      this.environmentVariables = defaults.environmentVariables;
-    	      this.inferencingStackVersion = defaults.inferencingStackVersion;
-    	      this.name = defaults.name;
-    	      this.python = defaults.python;
-    	      this.r = defaults.r;
-    	      this.spark = defaults.spark;
-    	      this.version = defaults.version;
+            $ = new EnvironmentImageRequestEnvironmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder docker(@Nullable Output<ModelEnvironmentDefinitionDockerArgs> docker) {
-            this.docker = docker;
+            $.docker = docker;
             return this;
         }
-        public Builder docker(@Nullable ModelEnvironmentDefinitionDockerArgs docker) {
-            this.docker = Codegen.ofNullable(docker);
-            return this;
+
+        public Builder docker(ModelEnvironmentDefinitionDockerArgs docker) {
+            return docker(Output.of(docker));
         }
+
         public Builder environmentVariables(@Nullable Output<Map<String,String>> environmentVariables) {
-            this.environmentVariables = environmentVariables;
+            $.environmentVariables = environmentVariables;
             return this;
         }
-        public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
-            this.environmentVariables = Codegen.ofNullable(environmentVariables);
-            return this;
+
+        public Builder environmentVariables(Map<String,String> environmentVariables) {
+            return environmentVariables(Output.of(environmentVariables));
         }
+
         public Builder inferencingStackVersion(@Nullable Output<String> inferencingStackVersion) {
-            this.inferencingStackVersion = inferencingStackVersion;
+            $.inferencingStackVersion = inferencingStackVersion;
             return this;
         }
-        public Builder inferencingStackVersion(@Nullable String inferencingStackVersion) {
-            this.inferencingStackVersion = Codegen.ofNullable(inferencingStackVersion);
-            return this;
+
+        public Builder inferencingStackVersion(String inferencingStackVersion) {
+            return inferencingStackVersion(Output.of(inferencingStackVersion));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder python(@Nullable Output<ModelEnvironmentDefinitionPythonArgs> python) {
-            this.python = python;
+            $.python = python;
             return this;
         }
-        public Builder python(@Nullable ModelEnvironmentDefinitionPythonArgs python) {
-            this.python = Codegen.ofNullable(python);
-            return this;
+
+        public Builder python(ModelEnvironmentDefinitionPythonArgs python) {
+            return python(Output.of(python));
         }
+
         public Builder r(@Nullable Output<ModelEnvironmentDefinitionRArgs> r) {
-            this.r = r;
+            $.r = r;
             return this;
         }
-        public Builder r(@Nullable ModelEnvironmentDefinitionRArgs r) {
-            this.r = Codegen.ofNullable(r);
-            return this;
+
+        public Builder r(ModelEnvironmentDefinitionRArgs r) {
+            return r(Output.of(r));
         }
+
         public Builder spark(@Nullable Output<ModelEnvironmentDefinitionSparkArgs> spark) {
-            this.spark = spark;
+            $.spark = spark;
             return this;
         }
-        public Builder spark(@Nullable ModelEnvironmentDefinitionSparkArgs spark) {
-            this.spark = Codegen.ofNullable(spark);
-            return this;
+
+        public Builder spark(ModelEnvironmentDefinitionSparkArgs spark) {
+            return spark(Output.of(spark));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public EnvironmentImageRequestEnvironmentArgs build() {
-            return new EnvironmentImageRequestEnvironmentArgs(docker, environmentVariables, inferencingStackVersion, name, python, r, spark, version);
+
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public EnvironmentImageRequestEnvironmentArgs build() {
+            return $;
         }
     }
+
 }

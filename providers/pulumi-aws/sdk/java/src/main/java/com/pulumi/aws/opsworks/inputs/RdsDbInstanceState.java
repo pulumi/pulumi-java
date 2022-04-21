@@ -5,9 +5,9 @@ package com.pulumi.aws.opsworks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class RdsDbInstanceState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="dbPassword")
-      private final @Nullable Output<String> dbPassword;
+    private @Nullable Output<String> dbPassword;
 
-    public Output<String> dbPassword() {
-        return this.dbPassword == null ? Codegen.empty() : this.dbPassword;
+    public Optional<Output<String>> dbPassword() {
+        return Optional.ofNullable(this.dbPassword);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class RdsDbInstanceState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="dbUser")
-      private final @Nullable Output<String> dbUser;
+    private @Nullable Output<String> dbUser;
 
-    public Output<String> dbUser() {
-        return this.dbUser == null ? Codegen.empty() : this.dbUser;
+    public Optional<Output<String>> dbUser() {
+        return Optional.ofNullable(this.dbUser);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class RdsDbInstanceState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="rdsDbInstanceArn")
-      private final @Nullable Output<String> rdsDbInstanceArn;
+    private @Nullable Output<String> rdsDbInstanceArn;
 
-    public Output<String> rdsDbInstanceArn() {
-        return this.rdsDbInstanceArn == null ? Codegen.empty() : this.rdsDbInstanceArn;
+    public Optional<Output<String>> rdsDbInstanceArn() {
+        return Optional.ofNullable(this.rdsDbInstanceArn);
     }
 
     /**
@@ -53,89 +53,78 @@ public final class RdsDbInstanceState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="stackId")
-      private final @Nullable Output<String> stackId;
+    private @Nullable Output<String> stackId;
 
-    public Output<String> stackId() {
-        return this.stackId == null ? Codegen.empty() : this.stackId;
+    public Optional<Output<String>> stackId() {
+        return Optional.ofNullable(this.stackId);
     }
 
-    public RdsDbInstanceState(
-        @Nullable Output<String> dbPassword,
-        @Nullable Output<String> dbUser,
-        @Nullable Output<String> rdsDbInstanceArn,
-        @Nullable Output<String> stackId) {
-        this.dbPassword = dbPassword;
-        this.dbUser = dbUser;
-        this.rdsDbInstanceArn = rdsDbInstanceArn;
-        this.stackId = stackId;
-    }
+    private RdsDbInstanceState() {}
 
-    private RdsDbInstanceState() {
-        this.dbPassword = Codegen.empty();
-        this.dbUser = Codegen.empty();
-        this.rdsDbInstanceArn = Codegen.empty();
-        this.stackId = Codegen.empty();
+    private RdsDbInstanceState(RdsDbInstanceState $) {
+        this.dbPassword = $.dbPassword;
+        this.dbUser = $.dbUser;
+        this.rdsDbInstanceArn = $.rdsDbInstanceArn;
+        this.stackId = $.stackId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RdsDbInstanceState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> dbPassword;
-        private @Nullable Output<String> dbUser;
-        private @Nullable Output<String> rdsDbInstanceArn;
-        private @Nullable Output<String> stackId;
+        private RdsDbInstanceState $;
 
         public Builder() {
-    	      // Empty
+            $ = new RdsDbInstanceState();
         }
 
         public Builder(RdsDbInstanceState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dbPassword = defaults.dbPassword;
-    	      this.dbUser = defaults.dbUser;
-    	      this.rdsDbInstanceArn = defaults.rdsDbInstanceArn;
-    	      this.stackId = defaults.stackId;
+            $ = new RdsDbInstanceState(Objects.requireNonNull(defaults));
         }
 
         public Builder dbPassword(@Nullable Output<String> dbPassword) {
-            this.dbPassword = dbPassword;
+            $.dbPassword = dbPassword;
             return this;
         }
-        public Builder dbPassword(@Nullable String dbPassword) {
-            this.dbPassword = Codegen.ofNullable(dbPassword);
-            return this;
+
+        public Builder dbPassword(String dbPassword) {
+            return dbPassword(Output.of(dbPassword));
         }
+
         public Builder dbUser(@Nullable Output<String> dbUser) {
-            this.dbUser = dbUser;
+            $.dbUser = dbUser;
             return this;
         }
-        public Builder dbUser(@Nullable String dbUser) {
-            this.dbUser = Codegen.ofNullable(dbUser);
-            return this;
+
+        public Builder dbUser(String dbUser) {
+            return dbUser(Output.of(dbUser));
         }
+
         public Builder rdsDbInstanceArn(@Nullable Output<String> rdsDbInstanceArn) {
-            this.rdsDbInstanceArn = rdsDbInstanceArn;
+            $.rdsDbInstanceArn = rdsDbInstanceArn;
             return this;
         }
-        public Builder rdsDbInstanceArn(@Nullable String rdsDbInstanceArn) {
-            this.rdsDbInstanceArn = Codegen.ofNullable(rdsDbInstanceArn);
-            return this;
+
+        public Builder rdsDbInstanceArn(String rdsDbInstanceArn) {
+            return rdsDbInstanceArn(Output.of(rdsDbInstanceArn));
         }
+
         public Builder stackId(@Nullable Output<String> stackId) {
-            this.stackId = stackId;
+            $.stackId = stackId;
             return this;
         }
-        public Builder stackId(@Nullable String stackId) {
-            this.stackId = Codegen.ofNullable(stackId);
-            return this;
-        }        public RdsDbInstanceState build() {
-            return new RdsDbInstanceState(dbPassword, dbUser, rdsDbInstanceArn, stackId);
+
+        public Builder stackId(String stackId) {
+            return stackId(Output.of(stackId));
+        }
+
+        public RdsDbInstanceState build() {
+            return $;
         }
     }
+
 }

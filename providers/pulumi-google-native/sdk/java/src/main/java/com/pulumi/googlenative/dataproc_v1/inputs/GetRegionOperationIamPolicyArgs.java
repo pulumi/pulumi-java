@@ -15,78 +15,72 @@ public final class GetRegionOperationIamPolicyArgs extends com.pulumi.resources.
     public static final GetRegionOperationIamPolicyArgs Empty = new GetRegionOperationIamPolicyArgs();
 
     @Import(name="operationId", required=true)
-      private final String operationId;
+    private String operationId;
 
     public String operationId() {
         return this.operationId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="regionId", required=true)
-      private final String regionId;
+    private String regionId;
 
     public String regionId() {
         return this.regionId;
     }
 
-    public GetRegionOperationIamPolicyArgs(
-        String operationId,
-        @Nullable String project,
-        String regionId) {
-        this.operationId = Objects.requireNonNull(operationId, "expected parameter 'operationId' to be non-null");
-        this.project = project;
-        this.regionId = Objects.requireNonNull(regionId, "expected parameter 'regionId' to be non-null");
-    }
+    private GetRegionOperationIamPolicyArgs() {}
 
-    private GetRegionOperationIamPolicyArgs() {
-        this.operationId = null;
-        this.project = null;
-        this.regionId = null;
+    private GetRegionOperationIamPolicyArgs(GetRegionOperationIamPolicyArgs $) {
+        this.operationId = $.operationId;
+        this.project = $.project;
+        this.regionId = $.regionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRegionOperationIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String operationId;
-        private @Nullable String project;
-        private String regionId;
+        private GetRegionOperationIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRegionOperationIamPolicyArgs();
         }
 
         public Builder(GetRegionOperationIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.operationId = defaults.operationId;
-    	      this.project = defaults.project;
-    	      this.regionId = defaults.regionId;
+            $ = new GetRegionOperationIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder operationId(String operationId) {
-            this.operationId = Objects.requireNonNull(operationId);
+            $.operationId = operationId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder regionId(String regionId) {
-            this.regionId = Objects.requireNonNull(regionId);
+            $.regionId = regionId;
             return this;
-        }        public GetRegionOperationIamPolicyArgs build() {
-            return new GetRegionOperationIamPolicyArgs(operationId, project, regionId);
+        }
+
+        public GetRegionOperationIamPolicyArgs build() {
+            $.operationId = Objects.requireNonNull($.operationId, "expected parameter 'operationId' to be non-null");
+            $.regionId = Objects.requireNonNull($.regionId, "expected parameter 'regionId' to be non-null");
+            return $;
         }
     }
+
 }

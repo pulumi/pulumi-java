@@ -24,10 +24,10 @@ public final class ConnectionMonitorDestinationResponse extends com.pulumi.resou
      * 
      */
     @Import(name="address")
-      private final @Nullable String address;
+    private @Nullable String address;
 
     public Optional<String> address() {
-        return this.address == null ? Optional.empty() : Optional.ofNullable(this.address);
+        return Optional.ofNullable(this.address);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ConnectionMonitorDestinationResponse extends com.pulumi.resou
      * 
      */
     @Import(name="port")
-      private final @Nullable Integer port;
+    private @Nullable Integer port;
 
     public Optional<Integer> port() {
-        return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -46,64 +46,56 @@ public final class ConnectionMonitorDestinationResponse extends com.pulumi.resou
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable String resourceId;
+    private @Nullable String resourceId;
 
     public Optional<String> resourceId() {
-        return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
+        return Optional.ofNullable(this.resourceId);
     }
 
-    public ConnectionMonitorDestinationResponse(
-        @Nullable String address,
-        @Nullable Integer port,
-        @Nullable String resourceId) {
-        this.address = address;
-        this.port = port;
-        this.resourceId = resourceId;
-    }
+    private ConnectionMonitorDestinationResponse() {}
 
-    private ConnectionMonitorDestinationResponse() {
-        this.address = null;
-        this.port = null;
-        this.resourceId = null;
+    private ConnectionMonitorDestinationResponse(ConnectionMonitorDestinationResponse $) {
+        this.address = $.address;
+        this.port = $.port;
+        this.resourceId = $.resourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionMonitorDestinationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String address;
-        private @Nullable Integer port;
-        private @Nullable String resourceId;
+        private ConnectionMonitorDestinationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionMonitorDestinationResponse();
         }
 
         public Builder(ConnectionMonitorDestinationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.address = defaults.address;
-    	      this.port = defaults.port;
-    	      this.resourceId = defaults.resourceId;
+            $ = new ConnectionMonitorDestinationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder address(@Nullable String address) {
-            this.address = address;
+            $.address = address;
             return this;
         }
+
         public Builder port(@Nullable Integer port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
+
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
-        }        public ConnectionMonitorDestinationResponse build() {
-            return new ConnectionMonitorDestinationResponse(address, port, resourceId);
+        }
+
+        public ConnectionMonitorDestinationResponse build() {
+            return $;
         }
     }
+
 }

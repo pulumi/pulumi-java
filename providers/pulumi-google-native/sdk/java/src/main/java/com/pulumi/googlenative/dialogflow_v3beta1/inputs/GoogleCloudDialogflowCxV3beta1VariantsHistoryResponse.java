@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowCxV3beta1VariantsHistoryResponse extends
      * 
      */
     @Import(name="updateTime", required=true)
-      private final String updateTime;
+    private String updateTime;
 
     public String updateTime() {
         return this.updateTime;
@@ -33,55 +33,52 @@ public final class GoogleCloudDialogflowCxV3beta1VariantsHistoryResponse extends
      * 
      */
     @Import(name="versionVariants", required=true)
-      private final GoogleCloudDialogflowCxV3beta1VersionVariantsResponse versionVariants;
+    private GoogleCloudDialogflowCxV3beta1VersionVariantsResponse versionVariants;
 
     public GoogleCloudDialogflowCxV3beta1VersionVariantsResponse versionVariants() {
         return this.versionVariants;
     }
 
-    public GoogleCloudDialogflowCxV3beta1VariantsHistoryResponse(
-        String updateTime,
-        GoogleCloudDialogflowCxV3beta1VersionVariantsResponse versionVariants) {
-        this.updateTime = Objects.requireNonNull(updateTime, "expected parameter 'updateTime' to be non-null");
-        this.versionVariants = Objects.requireNonNull(versionVariants, "expected parameter 'versionVariants' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3beta1VariantsHistoryResponse() {}
 
-    private GoogleCloudDialogflowCxV3beta1VariantsHistoryResponse() {
-        this.updateTime = null;
-        this.versionVariants = null;
+    private GoogleCloudDialogflowCxV3beta1VariantsHistoryResponse(GoogleCloudDialogflowCxV3beta1VariantsHistoryResponse $) {
+        this.updateTime = $.updateTime;
+        this.versionVariants = $.versionVariants;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3beta1VariantsHistoryResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String updateTime;
-        private GoogleCloudDialogflowCxV3beta1VersionVariantsResponse versionVariants;
+        private GoogleCloudDialogflowCxV3beta1VariantsHistoryResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3beta1VariantsHistoryResponse();
         }
 
         public Builder(GoogleCloudDialogflowCxV3beta1VariantsHistoryResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.updateTime = defaults.updateTime;
-    	      this.versionVariants = defaults.versionVariants;
+            $ = new GoogleCloudDialogflowCxV3beta1VariantsHistoryResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder updateTime(String updateTime) {
-            this.updateTime = Objects.requireNonNull(updateTime);
+            $.updateTime = updateTime;
             return this;
         }
+
         public Builder versionVariants(GoogleCloudDialogflowCxV3beta1VersionVariantsResponse versionVariants) {
-            this.versionVariants = Objects.requireNonNull(versionVariants);
+            $.versionVariants = versionVariants;
             return this;
-        }        public GoogleCloudDialogflowCxV3beta1VariantsHistoryResponse build() {
-            return new GoogleCloudDialogflowCxV3beta1VariantsHistoryResponse(updateTime, versionVariants);
+        }
+
+        public GoogleCloudDialogflowCxV3beta1VariantsHistoryResponse build() {
+            $.updateTime = Objects.requireNonNull($.updateTime, "expected parameter 'updateTime' to be non-null");
+            $.versionVariants = Objects.requireNonNull($.versionVariants, "expected parameter 'versionVariants' to be non-null");
+            return $;
         }
     }
+
 }

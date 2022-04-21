@@ -5,9 +5,9 @@ package com.pulumi.azurenative.automation.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class EncryptionPropertiesIdentityArgs extends com.pulumi.resources
      * 
      */
     @Import(name="userAssignedIdentity")
-      private final @Nullable Output<Object> userAssignedIdentity;
+    private @Nullable Output<Object> userAssignedIdentity;
 
-    public Output<Object> userAssignedIdentity() {
-        return this.userAssignedIdentity == null ? Codegen.empty() : this.userAssignedIdentity;
+    public Optional<Output<Object>> userAssignedIdentity() {
+        return Optional.ofNullable(this.userAssignedIdentity);
     }
 
-    public EncryptionPropertiesIdentityArgs(@Nullable Output<Object> userAssignedIdentity) {
-        this.userAssignedIdentity = userAssignedIdentity;
-    }
+    private EncryptionPropertiesIdentityArgs() {}
 
-    private EncryptionPropertiesIdentityArgs() {
-        this.userAssignedIdentity = Codegen.empty();
+    private EncryptionPropertiesIdentityArgs(EncryptionPropertiesIdentityArgs $) {
+        this.userAssignedIdentity = $.userAssignedIdentity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EncryptionPropertiesIdentityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> userAssignedIdentity;
+        private EncryptionPropertiesIdentityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EncryptionPropertiesIdentityArgs();
         }
 
         public Builder(EncryptionPropertiesIdentityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.userAssignedIdentity = defaults.userAssignedIdentity;
+            $ = new EncryptionPropertiesIdentityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder userAssignedIdentity(@Nullable Output<Object> userAssignedIdentity) {
-            this.userAssignedIdentity = userAssignedIdentity;
+            $.userAssignedIdentity = userAssignedIdentity;
             return this;
         }
-        public Builder userAssignedIdentity(@Nullable Object userAssignedIdentity) {
-            this.userAssignedIdentity = Codegen.ofNullable(userAssignedIdentity);
-            return this;
-        }        public EncryptionPropertiesIdentityArgs build() {
-            return new EncryptionPropertiesIdentityArgs(userAssignedIdentity);
+
+        public Builder userAssignedIdentity(Object userAssignedIdentity) {
+            return userAssignedIdentity(Output.of(userAssignedIdentity));
+        }
+
+        public EncryptionPropertiesIdentityArgs build() {
+            return $;
         }
     }
+
 }

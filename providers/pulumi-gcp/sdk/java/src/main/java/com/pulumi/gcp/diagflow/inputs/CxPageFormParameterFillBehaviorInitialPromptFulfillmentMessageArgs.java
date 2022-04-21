@@ -5,9 +5,9 @@ package com.pulumi.gcp.diagflow.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.diagflow.inputs.CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessag
      * 
      */
     @Import(name="text")
-      private final @Nullable Output<CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextArgs> text;
+    private @Nullable Output<CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextArgs> text;
 
-    public Output<CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextArgs> text() {
-        return this.text == null ? Codegen.empty() : this.text;
+    public Optional<Output<CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextArgs>> text() {
+        return Optional.ofNullable(this.text);
     }
 
-    public CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageArgs(@Nullable Output<CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextArgs> text) {
-        this.text = text;
-    }
+    private CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageArgs() {}
 
-    private CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageArgs() {
-        this.text = Codegen.empty();
+    private CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageArgs(CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageArgs $) {
+        this.text = $.text;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextArgs> text;
+        private CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageArgs();
         }
 
         public Builder(CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.text = defaults.text;
+            $ = new CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder text(@Nullable Output<CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextArgs> text) {
-            this.text = text;
+            $.text = text;
             return this;
         }
-        public Builder text(@Nullable CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextArgs text) {
-            this.text = Codegen.ofNullable(text);
-            return this;
-        }        public CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageArgs build() {
-            return new CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageArgs(text);
+
+        public Builder text(CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextArgs text) {
+            return text(Output.of(text));
+        }
+
+        public CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageArgs build() {
+            return $;
         }
     }
+
 }

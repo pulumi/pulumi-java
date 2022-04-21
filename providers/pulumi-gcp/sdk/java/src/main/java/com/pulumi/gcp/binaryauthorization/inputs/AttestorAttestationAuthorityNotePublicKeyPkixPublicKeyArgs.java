@@ -5,9 +5,9 @@ package com.pulumi.gcp.binaryauthorization.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs ex
      * 
      */
     @Import(name="publicKeyPem")
-      private final @Nullable Output<String> publicKeyPem;
+    private @Nullable Output<String> publicKeyPem;
 
-    public Output<String> publicKeyPem() {
-        return this.publicKeyPem == null ? Codegen.empty() : this.publicKeyPem;
+    public Optional<Output<String>> publicKeyPem() {
+        return Optional.ofNullable(this.publicKeyPem);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs ex
      * 
      */
     @Import(name="signatureAlgorithm")
-      private final @Nullable Output<String> signatureAlgorithm;
+    private @Nullable Output<String> signatureAlgorithm;
 
-    public Output<String> signatureAlgorithm() {
-        return this.signatureAlgorithm == null ? Codegen.empty() : this.signatureAlgorithm;
+    public Optional<Output<String>> signatureAlgorithm() {
+        return Optional.ofNullable(this.signatureAlgorithm);
     }
 
-    public AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs(
-        @Nullable Output<String> publicKeyPem,
-        @Nullable Output<String> signatureAlgorithm) {
-        this.publicKeyPem = publicKeyPem;
-        this.signatureAlgorithm = signatureAlgorithm;
-    }
+    private AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs() {}
 
-    private AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs() {
-        this.publicKeyPem = Codegen.empty();
-        this.signatureAlgorithm = Codegen.empty();
+    private AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs(AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs $) {
+        this.publicKeyPem = $.publicKeyPem;
+        this.signatureAlgorithm = $.signatureAlgorithm;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> publicKeyPem;
-        private @Nullable Output<String> signatureAlgorithm;
+        private AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs();
         }
 
         public Builder(AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.publicKeyPem = defaults.publicKeyPem;
-    	      this.signatureAlgorithm = defaults.signatureAlgorithm;
+            $ = new AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder publicKeyPem(@Nullable Output<String> publicKeyPem) {
-            this.publicKeyPem = publicKeyPem;
+            $.publicKeyPem = publicKeyPem;
             return this;
         }
-        public Builder publicKeyPem(@Nullable String publicKeyPem) {
-            this.publicKeyPem = Codegen.ofNullable(publicKeyPem);
-            return this;
+
+        public Builder publicKeyPem(String publicKeyPem) {
+            return publicKeyPem(Output.of(publicKeyPem));
         }
+
         public Builder signatureAlgorithm(@Nullable Output<String> signatureAlgorithm) {
-            this.signatureAlgorithm = signatureAlgorithm;
+            $.signatureAlgorithm = signatureAlgorithm;
             return this;
         }
-        public Builder signatureAlgorithm(@Nullable String signatureAlgorithm) {
-            this.signatureAlgorithm = Codegen.ofNullable(signatureAlgorithm);
-            return this;
-        }        public AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs build() {
-            return new AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs(publicKeyPem, signatureAlgorithm);
+
+        public Builder signatureAlgorithm(String signatureAlgorithm) {
+            return signatureAlgorithm(Output.of(signatureAlgorithm));
+        }
+
+        public AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs build() {
+            return $;
         }
     }
+
 }

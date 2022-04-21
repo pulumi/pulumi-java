@@ -6,9 +6,9 @@ package com.pulumi.azurenative.migrate;
 import com.pulumi.azurenative.migrate.inputs.CollectorPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +17,10 @@ public final class HyperVCollectorArgs extends com.pulumi.resources.ResourceArgs
     public static final HyperVCollectorArgs Empty = new HyperVCollectorArgs();
 
     @Import(name="eTag")
-      private final @Nullable Output<String> eTag;
+    private @Nullable Output<String> eTag;
 
-    public Output<String> eTag() {
-        return this.eTag == null ? Codegen.empty() : this.eTag;
+    public Optional<Output<String>> eTag() {
+        return Optional.ofNullable(this.eTag);
     }
 
     /**
@@ -28,10 +28,10 @@ public final class HyperVCollectorArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="hyperVCollectorName")
-      private final @Nullable Output<String> hyperVCollectorName;
+    private @Nullable Output<String> hyperVCollectorName;
 
-    public Output<String> hyperVCollectorName() {
-        return this.hyperVCollectorName == null ? Codegen.empty() : this.hyperVCollectorName;
+    public Optional<Output<String>> hyperVCollectorName() {
+        return Optional.ofNullable(this.hyperVCollectorName);
     }
 
     /**
@@ -39,17 +39,17 @@ public final class HyperVCollectorArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="projectName", required=true)
-      private final Output<String> projectName;
+    private Output<String> projectName;
 
     public Output<String> projectName() {
         return this.projectName;
     }
 
     @Import(name="properties")
-      private final @Nullable Output<CollectorPropertiesArgs> properties;
+    private @Nullable Output<CollectorPropertiesArgs> properties;
 
-    public Output<CollectorPropertiesArgs> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<CollectorPropertiesArgs>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -57,102 +57,90 @@ public final class HyperVCollectorArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public HyperVCollectorArgs(
-        @Nullable Output<String> eTag,
-        @Nullable Output<String> hyperVCollectorName,
-        Output<String> projectName,
-        @Nullable Output<CollectorPropertiesArgs> properties,
-        Output<String> resourceGroupName) {
-        this.eTag = eTag;
-        this.hyperVCollectorName = hyperVCollectorName;
-        this.projectName = Objects.requireNonNull(projectName, "expected parameter 'projectName' to be non-null");
-        this.properties = properties;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private HyperVCollectorArgs() {}
 
-    private HyperVCollectorArgs() {
-        this.eTag = Codegen.empty();
-        this.hyperVCollectorName = Codegen.empty();
-        this.projectName = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
+    private HyperVCollectorArgs(HyperVCollectorArgs $) {
+        this.eTag = $.eTag;
+        this.hyperVCollectorName = $.hyperVCollectorName;
+        this.projectName = $.projectName;
+        this.properties = $.properties;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HyperVCollectorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> eTag;
-        private @Nullable Output<String> hyperVCollectorName;
-        private Output<String> projectName;
-        private @Nullable Output<CollectorPropertiesArgs> properties;
-        private Output<String> resourceGroupName;
+        private HyperVCollectorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HyperVCollectorArgs();
         }
 
         public Builder(HyperVCollectorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.eTag = defaults.eTag;
-    	      this.hyperVCollectorName = defaults.hyperVCollectorName;
-    	      this.projectName = defaults.projectName;
-    	      this.properties = defaults.properties;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new HyperVCollectorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder eTag(@Nullable Output<String> eTag) {
-            this.eTag = eTag;
+            $.eTag = eTag;
             return this;
         }
-        public Builder eTag(@Nullable String eTag) {
-            this.eTag = Codegen.ofNullable(eTag);
-            return this;
+
+        public Builder eTag(String eTag) {
+            return eTag(Output.of(eTag));
         }
+
         public Builder hyperVCollectorName(@Nullable Output<String> hyperVCollectorName) {
-            this.hyperVCollectorName = hyperVCollectorName;
+            $.hyperVCollectorName = hyperVCollectorName;
             return this;
         }
-        public Builder hyperVCollectorName(@Nullable String hyperVCollectorName) {
-            this.hyperVCollectorName = Codegen.ofNullable(hyperVCollectorName);
-            return this;
+
+        public Builder hyperVCollectorName(String hyperVCollectorName) {
+            return hyperVCollectorName(Output.of(hyperVCollectorName));
         }
+
         public Builder projectName(Output<String> projectName) {
-            this.projectName = Objects.requireNonNull(projectName);
+            $.projectName = projectName;
             return this;
         }
+
         public Builder projectName(String projectName) {
-            this.projectName = Output.of(Objects.requireNonNull(projectName));
-            return this;
+            return projectName(Output.of(projectName));
         }
+
         public Builder properties(@Nullable Output<CollectorPropertiesArgs> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable CollectorPropertiesArgs properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(CollectorPropertiesArgs properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
-        }        public HyperVCollectorArgs build() {
-            return new HyperVCollectorArgs(eTag, hyperVCollectorName, projectName, properties, resourceGroupName);
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public HyperVCollectorArgs build() {
+            $.projectName = Objects.requireNonNull($.projectName, "expected parameter 'projectName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

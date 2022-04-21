@@ -5,11 +5,11 @@ package com.pulumi.googlenative.cloudsearch_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.cloudsearch_v1.inputs.FilterOptionsArgs;
 import com.pulumi.googlenative.cloudsearch_v1.inputs.SourceArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class DataSourceRestrictionArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="filterOptions")
-      private final @Nullable Output<List<FilterOptionsArgs>> filterOptions;
+    private @Nullable Output<List<FilterOptionsArgs>> filterOptions;
 
-    public Output<List<FilterOptionsArgs>> filterOptions() {
-        return this.filterOptions == null ? Codegen.empty() : this.filterOptions;
+    public Optional<Output<List<FilterOptionsArgs>>> filterOptions() {
+        return Optional.ofNullable(this.filterOptions);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class DataSourceRestrictionArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="source")
-      private final @Nullable Output<SourceArgs> source;
+    private @Nullable Output<SourceArgs> source;
 
-    public Output<SourceArgs> source() {
-        return this.source == null ? Codegen.empty() : this.source;
+    public Optional<Output<SourceArgs>> source() {
+        return Optional.ofNullable(this.source);
     }
 
-    public DataSourceRestrictionArgs(
-        @Nullable Output<List<FilterOptionsArgs>> filterOptions,
-        @Nullable Output<SourceArgs> source) {
-        this.filterOptions = filterOptions;
-        this.source = source;
-    }
+    private DataSourceRestrictionArgs() {}
 
-    private DataSourceRestrictionArgs() {
-        this.filterOptions = Codegen.empty();
-        this.source = Codegen.empty();
+    private DataSourceRestrictionArgs(DataSourceRestrictionArgs $) {
+        this.filterOptions = $.filterOptions;
+        this.source = $.source;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceRestrictionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<FilterOptionsArgs>> filterOptions;
-        private @Nullable Output<SourceArgs> source;
+        private DataSourceRestrictionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceRestrictionArgs();
         }
 
         public Builder(DataSourceRestrictionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filterOptions = defaults.filterOptions;
-    	      this.source = defaults.source;
+            $ = new DataSourceRestrictionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filterOptions(@Nullable Output<List<FilterOptionsArgs>> filterOptions) {
-            this.filterOptions = filterOptions;
+            $.filterOptions = filterOptions;
             return this;
         }
-        public Builder filterOptions(@Nullable List<FilterOptionsArgs> filterOptions) {
-            this.filterOptions = Codegen.ofNullable(filterOptions);
-            return this;
+
+        public Builder filterOptions(List<FilterOptionsArgs> filterOptions) {
+            return filterOptions(Output.of(filterOptions));
         }
+
         public Builder filterOptions(FilterOptionsArgs... filterOptions) {
             return filterOptions(List.of(filterOptions));
         }
+
         public Builder source(@Nullable Output<SourceArgs> source) {
-            this.source = source;
+            $.source = source;
             return this;
         }
-        public Builder source(@Nullable SourceArgs source) {
-            this.source = Codegen.ofNullable(source);
-            return this;
-        }        public DataSourceRestrictionArgs build() {
-            return new DataSourceRestrictionArgs(filterOptions, source);
+
+        public Builder source(SourceArgs source) {
+            return source(Output.of(source));
+        }
+
+        public DataSourceRestrictionArgs build() {
+            return $;
         }
     }
+
 }

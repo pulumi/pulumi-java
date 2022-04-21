@@ -7,9 +7,9 @@ import com.pulumi.awsnative.dynamodb.inputs.GlobalTableContributorInsightsSpecif
 import com.pulumi.awsnative.dynamodb.inputs.GlobalTableReadProvisionedThroughputSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,90 +18,83 @@ public final class GlobalTableReplicaGlobalSecondaryIndexSpecificationArgs exten
     public static final GlobalTableReplicaGlobalSecondaryIndexSpecificationArgs Empty = new GlobalTableReplicaGlobalSecondaryIndexSpecificationArgs();
 
     @Import(name="contributorInsightsSpecification")
-      private final @Nullable Output<GlobalTableContributorInsightsSpecificationArgs> contributorInsightsSpecification;
+    private @Nullable Output<GlobalTableContributorInsightsSpecificationArgs> contributorInsightsSpecification;
 
-    public Output<GlobalTableContributorInsightsSpecificationArgs> contributorInsightsSpecification() {
-        return this.contributorInsightsSpecification == null ? Codegen.empty() : this.contributorInsightsSpecification;
+    public Optional<Output<GlobalTableContributorInsightsSpecificationArgs>> contributorInsightsSpecification() {
+        return Optional.ofNullable(this.contributorInsightsSpecification);
     }
 
     @Import(name="indexName", required=true)
-      private final Output<String> indexName;
+    private Output<String> indexName;
 
     public Output<String> indexName() {
         return this.indexName;
     }
 
     @Import(name="readProvisionedThroughputSettings")
-      private final @Nullable Output<GlobalTableReadProvisionedThroughputSettingsArgs> readProvisionedThroughputSettings;
+    private @Nullable Output<GlobalTableReadProvisionedThroughputSettingsArgs> readProvisionedThroughputSettings;
 
-    public Output<GlobalTableReadProvisionedThroughputSettingsArgs> readProvisionedThroughputSettings() {
-        return this.readProvisionedThroughputSettings == null ? Codegen.empty() : this.readProvisionedThroughputSettings;
+    public Optional<Output<GlobalTableReadProvisionedThroughputSettingsArgs>> readProvisionedThroughputSettings() {
+        return Optional.ofNullable(this.readProvisionedThroughputSettings);
     }
 
-    public GlobalTableReplicaGlobalSecondaryIndexSpecificationArgs(
-        @Nullable Output<GlobalTableContributorInsightsSpecificationArgs> contributorInsightsSpecification,
-        Output<String> indexName,
-        @Nullable Output<GlobalTableReadProvisionedThroughputSettingsArgs> readProvisionedThroughputSettings) {
-        this.contributorInsightsSpecification = contributorInsightsSpecification;
-        this.indexName = Objects.requireNonNull(indexName, "expected parameter 'indexName' to be non-null");
-        this.readProvisionedThroughputSettings = readProvisionedThroughputSettings;
-    }
+    private GlobalTableReplicaGlobalSecondaryIndexSpecificationArgs() {}
 
-    private GlobalTableReplicaGlobalSecondaryIndexSpecificationArgs() {
-        this.contributorInsightsSpecification = Codegen.empty();
-        this.indexName = Codegen.empty();
-        this.readProvisionedThroughputSettings = Codegen.empty();
+    private GlobalTableReplicaGlobalSecondaryIndexSpecificationArgs(GlobalTableReplicaGlobalSecondaryIndexSpecificationArgs $) {
+        this.contributorInsightsSpecification = $.contributorInsightsSpecification;
+        this.indexName = $.indexName;
+        this.readProvisionedThroughputSettings = $.readProvisionedThroughputSettings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GlobalTableReplicaGlobalSecondaryIndexSpecificationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GlobalTableContributorInsightsSpecificationArgs> contributorInsightsSpecification;
-        private Output<String> indexName;
-        private @Nullable Output<GlobalTableReadProvisionedThroughputSettingsArgs> readProvisionedThroughputSettings;
+        private GlobalTableReplicaGlobalSecondaryIndexSpecificationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GlobalTableReplicaGlobalSecondaryIndexSpecificationArgs();
         }
 
         public Builder(GlobalTableReplicaGlobalSecondaryIndexSpecificationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contributorInsightsSpecification = defaults.contributorInsightsSpecification;
-    	      this.indexName = defaults.indexName;
-    	      this.readProvisionedThroughputSettings = defaults.readProvisionedThroughputSettings;
+            $ = new GlobalTableReplicaGlobalSecondaryIndexSpecificationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder contributorInsightsSpecification(@Nullable Output<GlobalTableContributorInsightsSpecificationArgs> contributorInsightsSpecification) {
-            this.contributorInsightsSpecification = contributorInsightsSpecification;
+            $.contributorInsightsSpecification = contributorInsightsSpecification;
             return this;
         }
-        public Builder contributorInsightsSpecification(@Nullable GlobalTableContributorInsightsSpecificationArgs contributorInsightsSpecification) {
-            this.contributorInsightsSpecification = Codegen.ofNullable(contributorInsightsSpecification);
-            return this;
+
+        public Builder contributorInsightsSpecification(GlobalTableContributorInsightsSpecificationArgs contributorInsightsSpecification) {
+            return contributorInsightsSpecification(Output.of(contributorInsightsSpecification));
         }
+
         public Builder indexName(Output<String> indexName) {
-            this.indexName = Objects.requireNonNull(indexName);
+            $.indexName = indexName;
             return this;
         }
+
         public Builder indexName(String indexName) {
-            this.indexName = Output.of(Objects.requireNonNull(indexName));
-            return this;
+            return indexName(Output.of(indexName));
         }
+
         public Builder readProvisionedThroughputSettings(@Nullable Output<GlobalTableReadProvisionedThroughputSettingsArgs> readProvisionedThroughputSettings) {
-            this.readProvisionedThroughputSettings = readProvisionedThroughputSettings;
+            $.readProvisionedThroughputSettings = readProvisionedThroughputSettings;
             return this;
         }
-        public Builder readProvisionedThroughputSettings(@Nullable GlobalTableReadProvisionedThroughputSettingsArgs readProvisionedThroughputSettings) {
-            this.readProvisionedThroughputSettings = Codegen.ofNullable(readProvisionedThroughputSettings);
-            return this;
-        }        public GlobalTableReplicaGlobalSecondaryIndexSpecificationArgs build() {
-            return new GlobalTableReplicaGlobalSecondaryIndexSpecificationArgs(contributorInsightsSpecification, indexName, readProvisionedThroughputSettings);
+
+        public Builder readProvisionedThroughputSettings(GlobalTableReadProvisionedThroughputSettingsArgs readProvisionedThroughputSettings) {
+            return readProvisionedThroughputSettings(Output.of(readProvisionedThroughputSettings));
+        }
+
+        public GlobalTableReplicaGlobalSecondaryIndexSpecificationArgs build() {
+            $.indexName = Objects.requireNonNull($.indexName, "expected parameter 'indexName' to be non-null");
+            return $;
         }
     }
+
 }

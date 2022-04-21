@@ -93,9 +93,9 @@ import com.pulumi.aws.securityhub.inputs.InsightFiltersVerificationStateArgs;
 import com.pulumi.aws.securityhub.inputs.InsightFiltersWorkflowStatusArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -108,10 +108,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="awsAccountIds")
-      private final @Nullable Output<List<InsightFiltersAwsAccountIdArgs>> awsAccountIds;
+    private @Nullable Output<List<InsightFiltersAwsAccountIdArgs>> awsAccountIds;
 
-    public Output<List<InsightFiltersAwsAccountIdArgs>> awsAccountIds() {
-        return this.awsAccountIds == null ? Codegen.empty() : this.awsAccountIds;
+    public Optional<Output<List<InsightFiltersAwsAccountIdArgs>>> awsAccountIds() {
+        return Optional.ofNullable(this.awsAccountIds);
     }
 
     /**
@@ -119,10 +119,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="companyNames")
-      private final @Nullable Output<List<InsightFiltersCompanyNameArgs>> companyNames;
+    private @Nullable Output<List<InsightFiltersCompanyNameArgs>> companyNames;
 
-    public Output<List<InsightFiltersCompanyNameArgs>> companyNames() {
-        return this.companyNames == null ? Codegen.empty() : this.companyNames;
+    public Optional<Output<List<InsightFiltersCompanyNameArgs>>> companyNames() {
+        return Optional.ofNullable(this.companyNames);
     }
 
     /**
@@ -130,10 +130,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="complianceStatuses")
-      private final @Nullable Output<List<InsightFiltersComplianceStatusArgs>> complianceStatuses;
+    private @Nullable Output<List<InsightFiltersComplianceStatusArgs>> complianceStatuses;
 
-    public Output<List<InsightFiltersComplianceStatusArgs>> complianceStatuses() {
-        return this.complianceStatuses == null ? Codegen.empty() : this.complianceStatuses;
+    public Optional<Output<List<InsightFiltersComplianceStatusArgs>>> complianceStatuses() {
+        return Optional.ofNullable(this.complianceStatuses);
     }
 
     /**
@@ -141,10 +141,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="confidences")
-      private final @Nullable Output<List<InsightFiltersConfidenceArgs>> confidences;
+    private @Nullable Output<List<InsightFiltersConfidenceArgs>> confidences;
 
-    public Output<List<InsightFiltersConfidenceArgs>> confidences() {
-        return this.confidences == null ? Codegen.empty() : this.confidences;
+    public Optional<Output<List<InsightFiltersConfidenceArgs>>> confidences() {
+        return Optional.ofNullable(this.confidences);
     }
 
     /**
@@ -152,10 +152,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="createdAts")
-      private final @Nullable Output<List<InsightFiltersCreatedAtArgs>> createdAts;
+    private @Nullable Output<List<InsightFiltersCreatedAtArgs>> createdAts;
 
-    public Output<List<InsightFiltersCreatedAtArgs>> createdAts() {
-        return this.createdAts == null ? Codegen.empty() : this.createdAts;
+    public Optional<Output<List<InsightFiltersCreatedAtArgs>>> createdAts() {
+        return Optional.ofNullable(this.createdAts);
     }
 
     /**
@@ -163,10 +163,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="criticalities")
-      private final @Nullable Output<List<InsightFiltersCriticalityArgs>> criticalities;
+    private @Nullable Output<List<InsightFiltersCriticalityArgs>> criticalities;
 
-    public Output<List<InsightFiltersCriticalityArgs>> criticalities() {
-        return this.criticalities == null ? Codegen.empty() : this.criticalities;
+    public Optional<Output<List<InsightFiltersCriticalityArgs>>> criticalities() {
+        return Optional.ofNullable(this.criticalities);
     }
 
     /**
@@ -174,10 +174,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="descriptions")
-      private final @Nullable Output<List<InsightFiltersDescriptionArgs>> descriptions;
+    private @Nullable Output<List<InsightFiltersDescriptionArgs>> descriptions;
 
-    public Output<List<InsightFiltersDescriptionArgs>> descriptions() {
-        return this.descriptions == null ? Codegen.empty() : this.descriptions;
+    public Optional<Output<List<InsightFiltersDescriptionArgs>>> descriptions() {
+        return Optional.ofNullable(this.descriptions);
     }
 
     /**
@@ -185,10 +185,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="findingProviderFieldsConfidences")
-      private final @Nullable Output<List<InsightFiltersFindingProviderFieldsConfidenceArgs>> findingProviderFieldsConfidences;
+    private @Nullable Output<List<InsightFiltersFindingProviderFieldsConfidenceArgs>> findingProviderFieldsConfidences;
 
-    public Output<List<InsightFiltersFindingProviderFieldsConfidenceArgs>> findingProviderFieldsConfidences() {
-        return this.findingProviderFieldsConfidences == null ? Codegen.empty() : this.findingProviderFieldsConfidences;
+    public Optional<Output<List<InsightFiltersFindingProviderFieldsConfidenceArgs>>> findingProviderFieldsConfidences() {
+        return Optional.ofNullable(this.findingProviderFieldsConfidences);
     }
 
     /**
@@ -196,10 +196,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="findingProviderFieldsCriticalities")
-      private final @Nullable Output<List<InsightFiltersFindingProviderFieldsCriticalityArgs>> findingProviderFieldsCriticalities;
+    private @Nullable Output<List<InsightFiltersFindingProviderFieldsCriticalityArgs>> findingProviderFieldsCriticalities;
 
-    public Output<List<InsightFiltersFindingProviderFieldsCriticalityArgs>> findingProviderFieldsCriticalities() {
-        return this.findingProviderFieldsCriticalities == null ? Codegen.empty() : this.findingProviderFieldsCriticalities;
+    public Optional<Output<List<InsightFiltersFindingProviderFieldsCriticalityArgs>>> findingProviderFieldsCriticalities() {
+        return Optional.ofNullable(this.findingProviderFieldsCriticalities);
     }
 
     /**
@@ -207,10 +207,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="findingProviderFieldsRelatedFindingsIds")
-      private final @Nullable Output<List<InsightFiltersFindingProviderFieldsRelatedFindingsIdArgs>> findingProviderFieldsRelatedFindingsIds;
+    private @Nullable Output<List<InsightFiltersFindingProviderFieldsRelatedFindingsIdArgs>> findingProviderFieldsRelatedFindingsIds;
 
-    public Output<List<InsightFiltersFindingProviderFieldsRelatedFindingsIdArgs>> findingProviderFieldsRelatedFindingsIds() {
-        return this.findingProviderFieldsRelatedFindingsIds == null ? Codegen.empty() : this.findingProviderFieldsRelatedFindingsIds;
+    public Optional<Output<List<InsightFiltersFindingProviderFieldsRelatedFindingsIdArgs>>> findingProviderFieldsRelatedFindingsIds() {
+        return Optional.ofNullable(this.findingProviderFieldsRelatedFindingsIds);
     }
 
     /**
@@ -218,10 +218,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="findingProviderFieldsRelatedFindingsProductArns")
-      private final @Nullable Output<List<InsightFiltersFindingProviderFieldsRelatedFindingsProductArnArgs>> findingProviderFieldsRelatedFindingsProductArns;
+    private @Nullable Output<List<InsightFiltersFindingProviderFieldsRelatedFindingsProductArnArgs>> findingProviderFieldsRelatedFindingsProductArns;
 
-    public Output<List<InsightFiltersFindingProviderFieldsRelatedFindingsProductArnArgs>> findingProviderFieldsRelatedFindingsProductArns() {
-        return this.findingProviderFieldsRelatedFindingsProductArns == null ? Codegen.empty() : this.findingProviderFieldsRelatedFindingsProductArns;
+    public Optional<Output<List<InsightFiltersFindingProviderFieldsRelatedFindingsProductArnArgs>>> findingProviderFieldsRelatedFindingsProductArns() {
+        return Optional.ofNullable(this.findingProviderFieldsRelatedFindingsProductArns);
     }
 
     /**
@@ -229,10 +229,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="findingProviderFieldsSeverityLabels")
-      private final @Nullable Output<List<InsightFiltersFindingProviderFieldsSeverityLabelArgs>> findingProviderFieldsSeverityLabels;
+    private @Nullable Output<List<InsightFiltersFindingProviderFieldsSeverityLabelArgs>> findingProviderFieldsSeverityLabels;
 
-    public Output<List<InsightFiltersFindingProviderFieldsSeverityLabelArgs>> findingProviderFieldsSeverityLabels() {
-        return this.findingProviderFieldsSeverityLabels == null ? Codegen.empty() : this.findingProviderFieldsSeverityLabels;
+    public Optional<Output<List<InsightFiltersFindingProviderFieldsSeverityLabelArgs>>> findingProviderFieldsSeverityLabels() {
+        return Optional.ofNullable(this.findingProviderFieldsSeverityLabels);
     }
 
     /**
@@ -240,10 +240,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="findingProviderFieldsSeverityOriginals")
-      private final @Nullable Output<List<InsightFiltersFindingProviderFieldsSeverityOriginalArgs>> findingProviderFieldsSeverityOriginals;
+    private @Nullable Output<List<InsightFiltersFindingProviderFieldsSeverityOriginalArgs>> findingProviderFieldsSeverityOriginals;
 
-    public Output<List<InsightFiltersFindingProviderFieldsSeverityOriginalArgs>> findingProviderFieldsSeverityOriginals() {
-        return this.findingProviderFieldsSeverityOriginals == null ? Codegen.empty() : this.findingProviderFieldsSeverityOriginals;
+    public Optional<Output<List<InsightFiltersFindingProviderFieldsSeverityOriginalArgs>>> findingProviderFieldsSeverityOriginals() {
+        return Optional.ofNullable(this.findingProviderFieldsSeverityOriginals);
     }
 
     /**
@@ -251,10 +251,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="findingProviderFieldsTypes")
-      private final @Nullable Output<List<InsightFiltersFindingProviderFieldsTypeArgs>> findingProviderFieldsTypes;
+    private @Nullable Output<List<InsightFiltersFindingProviderFieldsTypeArgs>> findingProviderFieldsTypes;
 
-    public Output<List<InsightFiltersFindingProviderFieldsTypeArgs>> findingProviderFieldsTypes() {
-        return this.findingProviderFieldsTypes == null ? Codegen.empty() : this.findingProviderFieldsTypes;
+    public Optional<Output<List<InsightFiltersFindingProviderFieldsTypeArgs>>> findingProviderFieldsTypes() {
+        return Optional.ofNullable(this.findingProviderFieldsTypes);
     }
 
     /**
@@ -262,10 +262,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="firstObservedAts")
-      private final @Nullable Output<List<InsightFiltersFirstObservedAtArgs>> firstObservedAts;
+    private @Nullable Output<List<InsightFiltersFirstObservedAtArgs>> firstObservedAts;
 
-    public Output<List<InsightFiltersFirstObservedAtArgs>> firstObservedAts() {
-        return this.firstObservedAts == null ? Codegen.empty() : this.firstObservedAts;
+    public Optional<Output<List<InsightFiltersFirstObservedAtArgs>>> firstObservedAts() {
+        return Optional.ofNullable(this.firstObservedAts);
     }
 
     /**
@@ -273,10 +273,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="generatorIds")
-      private final @Nullable Output<List<InsightFiltersGeneratorIdArgs>> generatorIds;
+    private @Nullable Output<List<InsightFiltersGeneratorIdArgs>> generatorIds;
 
-    public Output<List<InsightFiltersGeneratorIdArgs>> generatorIds() {
-        return this.generatorIds == null ? Codegen.empty() : this.generatorIds;
+    public Optional<Output<List<InsightFiltersGeneratorIdArgs>>> generatorIds() {
+        return Optional.ofNullable(this.generatorIds);
     }
 
     /**
@@ -284,10 +284,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="ids")
-      private final @Nullable Output<List<InsightFiltersIdArgs>> ids;
+    private @Nullable Output<List<InsightFiltersIdArgs>> ids;
 
-    public Output<List<InsightFiltersIdArgs>> ids() {
-        return this.ids == null ? Codegen.empty() : this.ids;
+    public Optional<Output<List<InsightFiltersIdArgs>>> ids() {
+        return Optional.ofNullable(this.ids);
     }
 
     /**
@@ -295,10 +295,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="keywords")
-      private final @Nullable Output<List<InsightFiltersKeywordArgs>> keywords;
+    private @Nullable Output<List<InsightFiltersKeywordArgs>> keywords;
 
-    public Output<List<InsightFiltersKeywordArgs>> keywords() {
-        return this.keywords == null ? Codegen.empty() : this.keywords;
+    public Optional<Output<List<InsightFiltersKeywordArgs>>> keywords() {
+        return Optional.ofNullable(this.keywords);
     }
 
     /**
@@ -306,10 +306,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="lastObservedAts")
-      private final @Nullable Output<List<InsightFiltersLastObservedAtArgs>> lastObservedAts;
+    private @Nullable Output<List<InsightFiltersLastObservedAtArgs>> lastObservedAts;
 
-    public Output<List<InsightFiltersLastObservedAtArgs>> lastObservedAts() {
-        return this.lastObservedAts == null ? Codegen.empty() : this.lastObservedAts;
+    public Optional<Output<List<InsightFiltersLastObservedAtArgs>>> lastObservedAts() {
+        return Optional.ofNullable(this.lastObservedAts);
     }
 
     /**
@@ -317,10 +317,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="malwareNames")
-      private final @Nullable Output<List<InsightFiltersMalwareNameArgs>> malwareNames;
+    private @Nullable Output<List<InsightFiltersMalwareNameArgs>> malwareNames;
 
-    public Output<List<InsightFiltersMalwareNameArgs>> malwareNames() {
-        return this.malwareNames == null ? Codegen.empty() : this.malwareNames;
+    public Optional<Output<List<InsightFiltersMalwareNameArgs>>> malwareNames() {
+        return Optional.ofNullable(this.malwareNames);
     }
 
     /**
@@ -328,10 +328,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="malwarePaths")
-      private final @Nullable Output<List<InsightFiltersMalwarePathArgs>> malwarePaths;
+    private @Nullable Output<List<InsightFiltersMalwarePathArgs>> malwarePaths;
 
-    public Output<List<InsightFiltersMalwarePathArgs>> malwarePaths() {
-        return this.malwarePaths == null ? Codegen.empty() : this.malwarePaths;
+    public Optional<Output<List<InsightFiltersMalwarePathArgs>>> malwarePaths() {
+        return Optional.ofNullable(this.malwarePaths);
     }
 
     /**
@@ -339,10 +339,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="malwareStates")
-      private final @Nullable Output<List<InsightFiltersMalwareStateArgs>> malwareStates;
+    private @Nullable Output<List<InsightFiltersMalwareStateArgs>> malwareStates;
 
-    public Output<List<InsightFiltersMalwareStateArgs>> malwareStates() {
-        return this.malwareStates == null ? Codegen.empty() : this.malwareStates;
+    public Optional<Output<List<InsightFiltersMalwareStateArgs>>> malwareStates() {
+        return Optional.ofNullable(this.malwareStates);
     }
 
     /**
@@ -350,10 +350,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="malwareTypes")
-      private final @Nullable Output<List<InsightFiltersMalwareTypeArgs>> malwareTypes;
+    private @Nullable Output<List<InsightFiltersMalwareTypeArgs>> malwareTypes;
 
-    public Output<List<InsightFiltersMalwareTypeArgs>> malwareTypes() {
-        return this.malwareTypes == null ? Codegen.empty() : this.malwareTypes;
+    public Optional<Output<List<InsightFiltersMalwareTypeArgs>>> malwareTypes() {
+        return Optional.ofNullable(this.malwareTypes);
     }
 
     /**
@@ -361,10 +361,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="networkDestinationDomains")
-      private final @Nullable Output<List<InsightFiltersNetworkDestinationDomainArgs>> networkDestinationDomains;
+    private @Nullable Output<List<InsightFiltersNetworkDestinationDomainArgs>> networkDestinationDomains;
 
-    public Output<List<InsightFiltersNetworkDestinationDomainArgs>> networkDestinationDomains() {
-        return this.networkDestinationDomains == null ? Codegen.empty() : this.networkDestinationDomains;
+    public Optional<Output<List<InsightFiltersNetworkDestinationDomainArgs>>> networkDestinationDomains() {
+        return Optional.ofNullable(this.networkDestinationDomains);
     }
 
     /**
@@ -372,10 +372,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="networkDestinationIpv4s")
-      private final @Nullable Output<List<InsightFiltersNetworkDestinationIpv4Args>> networkDestinationIpv4s;
+    private @Nullable Output<List<InsightFiltersNetworkDestinationIpv4Args>> networkDestinationIpv4s;
 
-    public Output<List<InsightFiltersNetworkDestinationIpv4Args>> networkDestinationIpv4s() {
-        return this.networkDestinationIpv4s == null ? Codegen.empty() : this.networkDestinationIpv4s;
+    public Optional<Output<List<InsightFiltersNetworkDestinationIpv4Args>>> networkDestinationIpv4s() {
+        return Optional.ofNullable(this.networkDestinationIpv4s);
     }
 
     /**
@@ -383,10 +383,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="networkDestinationIpv6s")
-      private final @Nullable Output<List<InsightFiltersNetworkDestinationIpv6Args>> networkDestinationIpv6s;
+    private @Nullable Output<List<InsightFiltersNetworkDestinationIpv6Args>> networkDestinationIpv6s;
 
-    public Output<List<InsightFiltersNetworkDestinationIpv6Args>> networkDestinationIpv6s() {
-        return this.networkDestinationIpv6s == null ? Codegen.empty() : this.networkDestinationIpv6s;
+    public Optional<Output<List<InsightFiltersNetworkDestinationIpv6Args>>> networkDestinationIpv6s() {
+        return Optional.ofNullable(this.networkDestinationIpv6s);
     }
 
     /**
@@ -394,10 +394,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="networkDestinationPorts")
-      private final @Nullable Output<List<InsightFiltersNetworkDestinationPortArgs>> networkDestinationPorts;
+    private @Nullable Output<List<InsightFiltersNetworkDestinationPortArgs>> networkDestinationPorts;
 
-    public Output<List<InsightFiltersNetworkDestinationPortArgs>> networkDestinationPorts() {
-        return this.networkDestinationPorts == null ? Codegen.empty() : this.networkDestinationPorts;
+    public Optional<Output<List<InsightFiltersNetworkDestinationPortArgs>>> networkDestinationPorts() {
+        return Optional.ofNullable(this.networkDestinationPorts);
     }
 
     /**
@@ -405,10 +405,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="networkDirections")
-      private final @Nullable Output<List<InsightFiltersNetworkDirectionArgs>> networkDirections;
+    private @Nullable Output<List<InsightFiltersNetworkDirectionArgs>> networkDirections;
 
-    public Output<List<InsightFiltersNetworkDirectionArgs>> networkDirections() {
-        return this.networkDirections == null ? Codegen.empty() : this.networkDirections;
+    public Optional<Output<List<InsightFiltersNetworkDirectionArgs>>> networkDirections() {
+        return Optional.ofNullable(this.networkDirections);
     }
 
     /**
@@ -416,10 +416,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="networkProtocols")
-      private final @Nullable Output<List<InsightFiltersNetworkProtocolArgs>> networkProtocols;
+    private @Nullable Output<List<InsightFiltersNetworkProtocolArgs>> networkProtocols;
 
-    public Output<List<InsightFiltersNetworkProtocolArgs>> networkProtocols() {
-        return this.networkProtocols == null ? Codegen.empty() : this.networkProtocols;
+    public Optional<Output<List<InsightFiltersNetworkProtocolArgs>>> networkProtocols() {
+        return Optional.ofNullable(this.networkProtocols);
     }
 
     /**
@@ -427,10 +427,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="networkSourceDomains")
-      private final @Nullable Output<List<InsightFiltersNetworkSourceDomainArgs>> networkSourceDomains;
+    private @Nullable Output<List<InsightFiltersNetworkSourceDomainArgs>> networkSourceDomains;
 
-    public Output<List<InsightFiltersNetworkSourceDomainArgs>> networkSourceDomains() {
-        return this.networkSourceDomains == null ? Codegen.empty() : this.networkSourceDomains;
+    public Optional<Output<List<InsightFiltersNetworkSourceDomainArgs>>> networkSourceDomains() {
+        return Optional.ofNullable(this.networkSourceDomains);
     }
 
     /**
@@ -438,10 +438,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="networkSourceIpv4s")
-      private final @Nullable Output<List<InsightFiltersNetworkSourceIpv4Args>> networkSourceIpv4s;
+    private @Nullable Output<List<InsightFiltersNetworkSourceIpv4Args>> networkSourceIpv4s;
 
-    public Output<List<InsightFiltersNetworkSourceIpv4Args>> networkSourceIpv4s() {
-        return this.networkSourceIpv4s == null ? Codegen.empty() : this.networkSourceIpv4s;
+    public Optional<Output<List<InsightFiltersNetworkSourceIpv4Args>>> networkSourceIpv4s() {
+        return Optional.ofNullable(this.networkSourceIpv4s);
     }
 
     /**
@@ -449,10 +449,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="networkSourceIpv6s")
-      private final @Nullable Output<List<InsightFiltersNetworkSourceIpv6Args>> networkSourceIpv6s;
+    private @Nullable Output<List<InsightFiltersNetworkSourceIpv6Args>> networkSourceIpv6s;
 
-    public Output<List<InsightFiltersNetworkSourceIpv6Args>> networkSourceIpv6s() {
-        return this.networkSourceIpv6s == null ? Codegen.empty() : this.networkSourceIpv6s;
+    public Optional<Output<List<InsightFiltersNetworkSourceIpv6Args>>> networkSourceIpv6s() {
+        return Optional.ofNullable(this.networkSourceIpv6s);
     }
 
     /**
@@ -460,10 +460,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="networkSourceMacs")
-      private final @Nullable Output<List<InsightFiltersNetworkSourceMacArgs>> networkSourceMacs;
+    private @Nullable Output<List<InsightFiltersNetworkSourceMacArgs>> networkSourceMacs;
 
-    public Output<List<InsightFiltersNetworkSourceMacArgs>> networkSourceMacs() {
-        return this.networkSourceMacs == null ? Codegen.empty() : this.networkSourceMacs;
+    public Optional<Output<List<InsightFiltersNetworkSourceMacArgs>>> networkSourceMacs() {
+        return Optional.ofNullable(this.networkSourceMacs);
     }
 
     /**
@@ -471,10 +471,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="networkSourcePorts")
-      private final @Nullable Output<List<InsightFiltersNetworkSourcePortArgs>> networkSourcePorts;
+    private @Nullable Output<List<InsightFiltersNetworkSourcePortArgs>> networkSourcePorts;
 
-    public Output<List<InsightFiltersNetworkSourcePortArgs>> networkSourcePorts() {
-        return this.networkSourcePorts == null ? Codegen.empty() : this.networkSourcePorts;
+    public Optional<Output<List<InsightFiltersNetworkSourcePortArgs>>> networkSourcePorts() {
+        return Optional.ofNullable(this.networkSourcePorts);
     }
 
     /**
@@ -482,10 +482,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="noteTexts")
-      private final @Nullable Output<List<InsightFiltersNoteTextArgs>> noteTexts;
+    private @Nullable Output<List<InsightFiltersNoteTextArgs>> noteTexts;
 
-    public Output<List<InsightFiltersNoteTextArgs>> noteTexts() {
-        return this.noteTexts == null ? Codegen.empty() : this.noteTexts;
+    public Optional<Output<List<InsightFiltersNoteTextArgs>>> noteTexts() {
+        return Optional.ofNullable(this.noteTexts);
     }
 
     /**
@@ -493,10 +493,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="noteUpdatedAts")
-      private final @Nullable Output<List<InsightFiltersNoteUpdatedAtArgs>> noteUpdatedAts;
+    private @Nullable Output<List<InsightFiltersNoteUpdatedAtArgs>> noteUpdatedAts;
 
-    public Output<List<InsightFiltersNoteUpdatedAtArgs>> noteUpdatedAts() {
-        return this.noteUpdatedAts == null ? Codegen.empty() : this.noteUpdatedAts;
+    public Optional<Output<List<InsightFiltersNoteUpdatedAtArgs>>> noteUpdatedAts() {
+        return Optional.ofNullable(this.noteUpdatedAts);
     }
 
     /**
@@ -504,10 +504,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="noteUpdatedBies")
-      private final @Nullable Output<List<InsightFiltersNoteUpdatedByArgs>> noteUpdatedBies;
+    private @Nullable Output<List<InsightFiltersNoteUpdatedByArgs>> noteUpdatedBies;
 
-    public Output<List<InsightFiltersNoteUpdatedByArgs>> noteUpdatedBies() {
-        return this.noteUpdatedBies == null ? Codegen.empty() : this.noteUpdatedBies;
+    public Optional<Output<List<InsightFiltersNoteUpdatedByArgs>>> noteUpdatedBies() {
+        return Optional.ofNullable(this.noteUpdatedBies);
     }
 
     /**
@@ -515,10 +515,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="processLaunchedAts")
-      private final @Nullable Output<List<InsightFiltersProcessLaunchedAtArgs>> processLaunchedAts;
+    private @Nullable Output<List<InsightFiltersProcessLaunchedAtArgs>> processLaunchedAts;
 
-    public Output<List<InsightFiltersProcessLaunchedAtArgs>> processLaunchedAts() {
-        return this.processLaunchedAts == null ? Codegen.empty() : this.processLaunchedAts;
+    public Optional<Output<List<InsightFiltersProcessLaunchedAtArgs>>> processLaunchedAts() {
+        return Optional.ofNullable(this.processLaunchedAts);
     }
 
     /**
@@ -526,10 +526,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="processNames")
-      private final @Nullable Output<List<InsightFiltersProcessNameArgs>> processNames;
+    private @Nullable Output<List<InsightFiltersProcessNameArgs>> processNames;
 
-    public Output<List<InsightFiltersProcessNameArgs>> processNames() {
-        return this.processNames == null ? Codegen.empty() : this.processNames;
+    public Optional<Output<List<InsightFiltersProcessNameArgs>>> processNames() {
+        return Optional.ofNullable(this.processNames);
     }
 
     /**
@@ -537,10 +537,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="processParentPids")
-      private final @Nullable Output<List<InsightFiltersProcessParentPidArgs>> processParentPids;
+    private @Nullable Output<List<InsightFiltersProcessParentPidArgs>> processParentPids;
 
-    public Output<List<InsightFiltersProcessParentPidArgs>> processParentPids() {
-        return this.processParentPids == null ? Codegen.empty() : this.processParentPids;
+    public Optional<Output<List<InsightFiltersProcessParentPidArgs>>> processParentPids() {
+        return Optional.ofNullable(this.processParentPids);
     }
 
     /**
@@ -548,10 +548,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="processPaths")
-      private final @Nullable Output<List<InsightFiltersProcessPathArgs>> processPaths;
+    private @Nullable Output<List<InsightFiltersProcessPathArgs>> processPaths;
 
-    public Output<List<InsightFiltersProcessPathArgs>> processPaths() {
-        return this.processPaths == null ? Codegen.empty() : this.processPaths;
+    public Optional<Output<List<InsightFiltersProcessPathArgs>>> processPaths() {
+        return Optional.ofNullable(this.processPaths);
     }
 
     /**
@@ -559,10 +559,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="processPids")
-      private final @Nullable Output<List<InsightFiltersProcessPidArgs>> processPids;
+    private @Nullable Output<List<InsightFiltersProcessPidArgs>> processPids;
 
-    public Output<List<InsightFiltersProcessPidArgs>> processPids() {
-        return this.processPids == null ? Codegen.empty() : this.processPids;
+    public Optional<Output<List<InsightFiltersProcessPidArgs>>> processPids() {
+        return Optional.ofNullable(this.processPids);
     }
 
     /**
@@ -570,10 +570,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="processTerminatedAts")
-      private final @Nullable Output<List<InsightFiltersProcessTerminatedAtArgs>> processTerminatedAts;
+    private @Nullable Output<List<InsightFiltersProcessTerminatedAtArgs>> processTerminatedAts;
 
-    public Output<List<InsightFiltersProcessTerminatedAtArgs>> processTerminatedAts() {
-        return this.processTerminatedAts == null ? Codegen.empty() : this.processTerminatedAts;
+    public Optional<Output<List<InsightFiltersProcessTerminatedAtArgs>>> processTerminatedAts() {
+        return Optional.ofNullable(this.processTerminatedAts);
     }
 
     /**
@@ -581,10 +581,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="productArns")
-      private final @Nullable Output<List<InsightFiltersProductArnArgs>> productArns;
+    private @Nullable Output<List<InsightFiltersProductArnArgs>> productArns;
 
-    public Output<List<InsightFiltersProductArnArgs>> productArns() {
-        return this.productArns == null ? Codegen.empty() : this.productArns;
+    public Optional<Output<List<InsightFiltersProductArnArgs>>> productArns() {
+        return Optional.ofNullable(this.productArns);
     }
 
     /**
@@ -592,10 +592,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="productFields")
-      private final @Nullable Output<List<InsightFiltersProductFieldArgs>> productFields;
+    private @Nullable Output<List<InsightFiltersProductFieldArgs>> productFields;
 
-    public Output<List<InsightFiltersProductFieldArgs>> productFields() {
-        return this.productFields == null ? Codegen.empty() : this.productFields;
+    public Optional<Output<List<InsightFiltersProductFieldArgs>>> productFields() {
+        return Optional.ofNullable(this.productFields);
     }
 
     /**
@@ -603,10 +603,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="productNames")
-      private final @Nullable Output<List<InsightFiltersProductNameArgs>> productNames;
+    private @Nullable Output<List<InsightFiltersProductNameArgs>> productNames;
 
-    public Output<List<InsightFiltersProductNameArgs>> productNames() {
-        return this.productNames == null ? Codegen.empty() : this.productNames;
+    public Optional<Output<List<InsightFiltersProductNameArgs>>> productNames() {
+        return Optional.ofNullable(this.productNames);
     }
 
     /**
@@ -614,10 +614,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="recommendationTexts")
-      private final @Nullable Output<List<InsightFiltersRecommendationTextArgs>> recommendationTexts;
+    private @Nullable Output<List<InsightFiltersRecommendationTextArgs>> recommendationTexts;
 
-    public Output<List<InsightFiltersRecommendationTextArgs>> recommendationTexts() {
-        return this.recommendationTexts == null ? Codegen.empty() : this.recommendationTexts;
+    public Optional<Output<List<InsightFiltersRecommendationTextArgs>>> recommendationTexts() {
+        return Optional.ofNullable(this.recommendationTexts);
     }
 
     /**
@@ -625,10 +625,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="recordStates")
-      private final @Nullable Output<List<InsightFiltersRecordStateArgs>> recordStates;
+    private @Nullable Output<List<InsightFiltersRecordStateArgs>> recordStates;
 
-    public Output<List<InsightFiltersRecordStateArgs>> recordStates() {
-        return this.recordStates == null ? Codegen.empty() : this.recordStates;
+    public Optional<Output<List<InsightFiltersRecordStateArgs>>> recordStates() {
+        return Optional.ofNullable(this.recordStates);
     }
 
     /**
@@ -636,10 +636,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="relatedFindingsIds")
-      private final @Nullable Output<List<InsightFiltersRelatedFindingsIdArgs>> relatedFindingsIds;
+    private @Nullable Output<List<InsightFiltersRelatedFindingsIdArgs>> relatedFindingsIds;
 
-    public Output<List<InsightFiltersRelatedFindingsIdArgs>> relatedFindingsIds() {
-        return this.relatedFindingsIds == null ? Codegen.empty() : this.relatedFindingsIds;
+    public Optional<Output<List<InsightFiltersRelatedFindingsIdArgs>>> relatedFindingsIds() {
+        return Optional.ofNullable(this.relatedFindingsIds);
     }
 
     /**
@@ -647,10 +647,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="relatedFindingsProductArns")
-      private final @Nullable Output<List<InsightFiltersRelatedFindingsProductArnArgs>> relatedFindingsProductArns;
+    private @Nullable Output<List<InsightFiltersRelatedFindingsProductArnArgs>> relatedFindingsProductArns;
 
-    public Output<List<InsightFiltersRelatedFindingsProductArnArgs>> relatedFindingsProductArns() {
-        return this.relatedFindingsProductArns == null ? Codegen.empty() : this.relatedFindingsProductArns;
+    public Optional<Output<List<InsightFiltersRelatedFindingsProductArnArgs>>> relatedFindingsProductArns() {
+        return Optional.ofNullable(this.relatedFindingsProductArns);
     }
 
     /**
@@ -658,10 +658,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceAwsEc2InstanceIamInstanceProfileArns")
-      private final @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceIamInstanceProfileArnArgs>> resourceAwsEc2InstanceIamInstanceProfileArns;
+    private @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceIamInstanceProfileArnArgs>> resourceAwsEc2InstanceIamInstanceProfileArns;
 
-    public Output<List<InsightFiltersResourceAwsEc2InstanceIamInstanceProfileArnArgs>> resourceAwsEc2InstanceIamInstanceProfileArns() {
-        return this.resourceAwsEc2InstanceIamInstanceProfileArns == null ? Codegen.empty() : this.resourceAwsEc2InstanceIamInstanceProfileArns;
+    public Optional<Output<List<InsightFiltersResourceAwsEc2InstanceIamInstanceProfileArnArgs>>> resourceAwsEc2InstanceIamInstanceProfileArns() {
+        return Optional.ofNullable(this.resourceAwsEc2InstanceIamInstanceProfileArns);
     }
 
     /**
@@ -669,10 +669,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceAwsEc2InstanceImageIds")
-      private final @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceImageIdArgs>> resourceAwsEc2InstanceImageIds;
+    private @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceImageIdArgs>> resourceAwsEc2InstanceImageIds;
 
-    public Output<List<InsightFiltersResourceAwsEc2InstanceImageIdArgs>> resourceAwsEc2InstanceImageIds() {
-        return this.resourceAwsEc2InstanceImageIds == null ? Codegen.empty() : this.resourceAwsEc2InstanceImageIds;
+    public Optional<Output<List<InsightFiltersResourceAwsEc2InstanceImageIdArgs>>> resourceAwsEc2InstanceImageIds() {
+        return Optional.ofNullable(this.resourceAwsEc2InstanceImageIds);
     }
 
     /**
@@ -680,10 +680,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceAwsEc2InstanceIpv4Addresses")
-      private final @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceIpv4AddressArgs>> resourceAwsEc2InstanceIpv4Addresses;
+    private @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceIpv4AddressArgs>> resourceAwsEc2InstanceIpv4Addresses;
 
-    public Output<List<InsightFiltersResourceAwsEc2InstanceIpv4AddressArgs>> resourceAwsEc2InstanceIpv4Addresses() {
-        return this.resourceAwsEc2InstanceIpv4Addresses == null ? Codegen.empty() : this.resourceAwsEc2InstanceIpv4Addresses;
+    public Optional<Output<List<InsightFiltersResourceAwsEc2InstanceIpv4AddressArgs>>> resourceAwsEc2InstanceIpv4Addresses() {
+        return Optional.ofNullable(this.resourceAwsEc2InstanceIpv4Addresses);
     }
 
     /**
@@ -691,10 +691,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceAwsEc2InstanceIpv6Addresses")
-      private final @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceIpv6AddressArgs>> resourceAwsEc2InstanceIpv6Addresses;
+    private @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceIpv6AddressArgs>> resourceAwsEc2InstanceIpv6Addresses;
 
-    public Output<List<InsightFiltersResourceAwsEc2InstanceIpv6AddressArgs>> resourceAwsEc2InstanceIpv6Addresses() {
-        return this.resourceAwsEc2InstanceIpv6Addresses == null ? Codegen.empty() : this.resourceAwsEc2InstanceIpv6Addresses;
+    public Optional<Output<List<InsightFiltersResourceAwsEc2InstanceIpv6AddressArgs>>> resourceAwsEc2InstanceIpv6Addresses() {
+        return Optional.ofNullable(this.resourceAwsEc2InstanceIpv6Addresses);
     }
 
     /**
@@ -702,10 +702,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceAwsEc2InstanceKeyNames")
-      private final @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceKeyNameArgs>> resourceAwsEc2InstanceKeyNames;
+    private @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceKeyNameArgs>> resourceAwsEc2InstanceKeyNames;
 
-    public Output<List<InsightFiltersResourceAwsEc2InstanceKeyNameArgs>> resourceAwsEc2InstanceKeyNames() {
-        return this.resourceAwsEc2InstanceKeyNames == null ? Codegen.empty() : this.resourceAwsEc2InstanceKeyNames;
+    public Optional<Output<List<InsightFiltersResourceAwsEc2InstanceKeyNameArgs>>> resourceAwsEc2InstanceKeyNames() {
+        return Optional.ofNullable(this.resourceAwsEc2InstanceKeyNames);
     }
 
     /**
@@ -713,10 +713,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceAwsEc2InstanceLaunchedAts")
-      private final @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceLaunchedAtArgs>> resourceAwsEc2InstanceLaunchedAts;
+    private @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceLaunchedAtArgs>> resourceAwsEc2InstanceLaunchedAts;
 
-    public Output<List<InsightFiltersResourceAwsEc2InstanceLaunchedAtArgs>> resourceAwsEc2InstanceLaunchedAts() {
-        return this.resourceAwsEc2InstanceLaunchedAts == null ? Codegen.empty() : this.resourceAwsEc2InstanceLaunchedAts;
+    public Optional<Output<List<InsightFiltersResourceAwsEc2InstanceLaunchedAtArgs>>> resourceAwsEc2InstanceLaunchedAts() {
+        return Optional.ofNullable(this.resourceAwsEc2InstanceLaunchedAts);
     }
 
     /**
@@ -724,10 +724,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceAwsEc2InstanceSubnetIds")
-      private final @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceSubnetIdArgs>> resourceAwsEc2InstanceSubnetIds;
+    private @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceSubnetIdArgs>> resourceAwsEc2InstanceSubnetIds;
 
-    public Output<List<InsightFiltersResourceAwsEc2InstanceSubnetIdArgs>> resourceAwsEc2InstanceSubnetIds() {
-        return this.resourceAwsEc2InstanceSubnetIds == null ? Codegen.empty() : this.resourceAwsEc2InstanceSubnetIds;
+    public Optional<Output<List<InsightFiltersResourceAwsEc2InstanceSubnetIdArgs>>> resourceAwsEc2InstanceSubnetIds() {
+        return Optional.ofNullable(this.resourceAwsEc2InstanceSubnetIds);
     }
 
     /**
@@ -735,10 +735,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceAwsEc2InstanceTypes")
-      private final @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceTypeArgs>> resourceAwsEc2InstanceTypes;
+    private @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceTypeArgs>> resourceAwsEc2InstanceTypes;
 
-    public Output<List<InsightFiltersResourceAwsEc2InstanceTypeArgs>> resourceAwsEc2InstanceTypes() {
-        return this.resourceAwsEc2InstanceTypes == null ? Codegen.empty() : this.resourceAwsEc2InstanceTypes;
+    public Optional<Output<List<InsightFiltersResourceAwsEc2InstanceTypeArgs>>> resourceAwsEc2InstanceTypes() {
+        return Optional.ofNullable(this.resourceAwsEc2InstanceTypes);
     }
 
     /**
@@ -746,10 +746,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceAwsEc2InstanceVpcIds")
-      private final @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceVpcIdArgs>> resourceAwsEc2InstanceVpcIds;
+    private @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceVpcIdArgs>> resourceAwsEc2InstanceVpcIds;
 
-    public Output<List<InsightFiltersResourceAwsEc2InstanceVpcIdArgs>> resourceAwsEc2InstanceVpcIds() {
-        return this.resourceAwsEc2InstanceVpcIds == null ? Codegen.empty() : this.resourceAwsEc2InstanceVpcIds;
+    public Optional<Output<List<InsightFiltersResourceAwsEc2InstanceVpcIdArgs>>> resourceAwsEc2InstanceVpcIds() {
+        return Optional.ofNullable(this.resourceAwsEc2InstanceVpcIds);
     }
 
     /**
@@ -757,10 +757,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceAwsIamAccessKeyCreatedAts")
-      private final @Nullable Output<List<InsightFiltersResourceAwsIamAccessKeyCreatedAtArgs>> resourceAwsIamAccessKeyCreatedAts;
+    private @Nullable Output<List<InsightFiltersResourceAwsIamAccessKeyCreatedAtArgs>> resourceAwsIamAccessKeyCreatedAts;
 
-    public Output<List<InsightFiltersResourceAwsIamAccessKeyCreatedAtArgs>> resourceAwsIamAccessKeyCreatedAts() {
-        return this.resourceAwsIamAccessKeyCreatedAts == null ? Codegen.empty() : this.resourceAwsIamAccessKeyCreatedAts;
+    public Optional<Output<List<InsightFiltersResourceAwsIamAccessKeyCreatedAtArgs>>> resourceAwsIamAccessKeyCreatedAts() {
+        return Optional.ofNullable(this.resourceAwsIamAccessKeyCreatedAts);
     }
 
     /**
@@ -768,10 +768,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceAwsIamAccessKeyStatuses")
-      private final @Nullable Output<List<InsightFiltersResourceAwsIamAccessKeyStatusArgs>> resourceAwsIamAccessKeyStatuses;
+    private @Nullable Output<List<InsightFiltersResourceAwsIamAccessKeyStatusArgs>> resourceAwsIamAccessKeyStatuses;
 
-    public Output<List<InsightFiltersResourceAwsIamAccessKeyStatusArgs>> resourceAwsIamAccessKeyStatuses() {
-        return this.resourceAwsIamAccessKeyStatuses == null ? Codegen.empty() : this.resourceAwsIamAccessKeyStatuses;
+    public Optional<Output<List<InsightFiltersResourceAwsIamAccessKeyStatusArgs>>> resourceAwsIamAccessKeyStatuses() {
+        return Optional.ofNullable(this.resourceAwsIamAccessKeyStatuses);
     }
 
     /**
@@ -779,10 +779,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceAwsIamAccessKeyUserNames")
-      private final @Nullable Output<List<InsightFiltersResourceAwsIamAccessKeyUserNameArgs>> resourceAwsIamAccessKeyUserNames;
+    private @Nullable Output<List<InsightFiltersResourceAwsIamAccessKeyUserNameArgs>> resourceAwsIamAccessKeyUserNames;
 
-    public Output<List<InsightFiltersResourceAwsIamAccessKeyUserNameArgs>> resourceAwsIamAccessKeyUserNames() {
-        return this.resourceAwsIamAccessKeyUserNames == null ? Codegen.empty() : this.resourceAwsIamAccessKeyUserNames;
+    public Optional<Output<List<InsightFiltersResourceAwsIamAccessKeyUserNameArgs>>> resourceAwsIamAccessKeyUserNames() {
+        return Optional.ofNullable(this.resourceAwsIamAccessKeyUserNames);
     }
 
     /**
@@ -790,10 +790,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceAwsS3BucketOwnerIds")
-      private final @Nullable Output<List<InsightFiltersResourceAwsS3BucketOwnerIdArgs>> resourceAwsS3BucketOwnerIds;
+    private @Nullable Output<List<InsightFiltersResourceAwsS3BucketOwnerIdArgs>> resourceAwsS3BucketOwnerIds;
 
-    public Output<List<InsightFiltersResourceAwsS3BucketOwnerIdArgs>> resourceAwsS3BucketOwnerIds() {
-        return this.resourceAwsS3BucketOwnerIds == null ? Codegen.empty() : this.resourceAwsS3BucketOwnerIds;
+    public Optional<Output<List<InsightFiltersResourceAwsS3BucketOwnerIdArgs>>> resourceAwsS3BucketOwnerIds() {
+        return Optional.ofNullable(this.resourceAwsS3BucketOwnerIds);
     }
 
     /**
@@ -801,10 +801,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceAwsS3BucketOwnerNames")
-      private final @Nullable Output<List<InsightFiltersResourceAwsS3BucketOwnerNameArgs>> resourceAwsS3BucketOwnerNames;
+    private @Nullable Output<List<InsightFiltersResourceAwsS3BucketOwnerNameArgs>> resourceAwsS3BucketOwnerNames;
 
-    public Output<List<InsightFiltersResourceAwsS3BucketOwnerNameArgs>> resourceAwsS3BucketOwnerNames() {
-        return this.resourceAwsS3BucketOwnerNames == null ? Codegen.empty() : this.resourceAwsS3BucketOwnerNames;
+    public Optional<Output<List<InsightFiltersResourceAwsS3BucketOwnerNameArgs>>> resourceAwsS3BucketOwnerNames() {
+        return Optional.ofNullable(this.resourceAwsS3BucketOwnerNames);
     }
 
     /**
@@ -812,10 +812,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceContainerImageIds")
-      private final @Nullable Output<List<InsightFiltersResourceContainerImageIdArgs>> resourceContainerImageIds;
+    private @Nullable Output<List<InsightFiltersResourceContainerImageIdArgs>> resourceContainerImageIds;
 
-    public Output<List<InsightFiltersResourceContainerImageIdArgs>> resourceContainerImageIds() {
-        return this.resourceContainerImageIds == null ? Codegen.empty() : this.resourceContainerImageIds;
+    public Optional<Output<List<InsightFiltersResourceContainerImageIdArgs>>> resourceContainerImageIds() {
+        return Optional.ofNullable(this.resourceContainerImageIds);
     }
 
     /**
@@ -823,10 +823,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceContainerImageNames")
-      private final @Nullable Output<List<InsightFiltersResourceContainerImageNameArgs>> resourceContainerImageNames;
+    private @Nullable Output<List<InsightFiltersResourceContainerImageNameArgs>> resourceContainerImageNames;
 
-    public Output<List<InsightFiltersResourceContainerImageNameArgs>> resourceContainerImageNames() {
-        return this.resourceContainerImageNames == null ? Codegen.empty() : this.resourceContainerImageNames;
+    public Optional<Output<List<InsightFiltersResourceContainerImageNameArgs>>> resourceContainerImageNames() {
+        return Optional.ofNullable(this.resourceContainerImageNames);
     }
 
     /**
@@ -834,10 +834,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceContainerLaunchedAts")
-      private final @Nullable Output<List<InsightFiltersResourceContainerLaunchedAtArgs>> resourceContainerLaunchedAts;
+    private @Nullable Output<List<InsightFiltersResourceContainerLaunchedAtArgs>> resourceContainerLaunchedAts;
 
-    public Output<List<InsightFiltersResourceContainerLaunchedAtArgs>> resourceContainerLaunchedAts() {
-        return this.resourceContainerLaunchedAts == null ? Codegen.empty() : this.resourceContainerLaunchedAts;
+    public Optional<Output<List<InsightFiltersResourceContainerLaunchedAtArgs>>> resourceContainerLaunchedAts() {
+        return Optional.ofNullable(this.resourceContainerLaunchedAts);
     }
 
     /**
@@ -845,10 +845,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceContainerNames")
-      private final @Nullable Output<List<InsightFiltersResourceContainerNameArgs>> resourceContainerNames;
+    private @Nullable Output<List<InsightFiltersResourceContainerNameArgs>> resourceContainerNames;
 
-    public Output<List<InsightFiltersResourceContainerNameArgs>> resourceContainerNames() {
-        return this.resourceContainerNames == null ? Codegen.empty() : this.resourceContainerNames;
+    public Optional<Output<List<InsightFiltersResourceContainerNameArgs>>> resourceContainerNames() {
+        return Optional.ofNullable(this.resourceContainerNames);
     }
 
     /**
@@ -856,10 +856,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceDetailsOthers")
-      private final @Nullable Output<List<InsightFiltersResourceDetailsOtherArgs>> resourceDetailsOthers;
+    private @Nullable Output<List<InsightFiltersResourceDetailsOtherArgs>> resourceDetailsOthers;
 
-    public Output<List<InsightFiltersResourceDetailsOtherArgs>> resourceDetailsOthers() {
-        return this.resourceDetailsOthers == null ? Codegen.empty() : this.resourceDetailsOthers;
+    public Optional<Output<List<InsightFiltersResourceDetailsOtherArgs>>> resourceDetailsOthers() {
+        return Optional.ofNullable(this.resourceDetailsOthers);
     }
 
     /**
@@ -867,10 +867,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceIds")
-      private final @Nullable Output<List<InsightFiltersResourceIdArgs>> resourceIds;
+    private @Nullable Output<List<InsightFiltersResourceIdArgs>> resourceIds;
 
-    public Output<List<InsightFiltersResourceIdArgs>> resourceIds() {
-        return this.resourceIds == null ? Codegen.empty() : this.resourceIds;
+    public Optional<Output<List<InsightFiltersResourceIdArgs>>> resourceIds() {
+        return Optional.ofNullable(this.resourceIds);
     }
 
     /**
@@ -878,10 +878,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourcePartitions")
-      private final @Nullable Output<List<InsightFiltersResourcePartitionArgs>> resourcePartitions;
+    private @Nullable Output<List<InsightFiltersResourcePartitionArgs>> resourcePartitions;
 
-    public Output<List<InsightFiltersResourcePartitionArgs>> resourcePartitions() {
-        return this.resourcePartitions == null ? Codegen.empty() : this.resourcePartitions;
+    public Optional<Output<List<InsightFiltersResourcePartitionArgs>>> resourcePartitions() {
+        return Optional.ofNullable(this.resourcePartitions);
     }
 
     /**
@@ -889,10 +889,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceRegions")
-      private final @Nullable Output<List<InsightFiltersResourceRegionArgs>> resourceRegions;
+    private @Nullable Output<List<InsightFiltersResourceRegionArgs>> resourceRegions;
 
-    public Output<List<InsightFiltersResourceRegionArgs>> resourceRegions() {
-        return this.resourceRegions == null ? Codegen.empty() : this.resourceRegions;
+    public Optional<Output<List<InsightFiltersResourceRegionArgs>>> resourceRegions() {
+        return Optional.ofNullable(this.resourceRegions);
     }
 
     /**
@@ -900,10 +900,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceTags")
-      private final @Nullable Output<List<InsightFiltersResourceTagArgs>> resourceTags;
+    private @Nullable Output<List<InsightFiltersResourceTagArgs>> resourceTags;
 
-    public Output<List<InsightFiltersResourceTagArgs>> resourceTags() {
-        return this.resourceTags == null ? Codegen.empty() : this.resourceTags;
+    public Optional<Output<List<InsightFiltersResourceTagArgs>>> resourceTags() {
+        return Optional.ofNullable(this.resourceTags);
     }
 
     /**
@@ -911,10 +911,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceTypes")
-      private final @Nullable Output<List<InsightFiltersResourceTypeArgs>> resourceTypes;
+    private @Nullable Output<List<InsightFiltersResourceTypeArgs>> resourceTypes;
 
-    public Output<List<InsightFiltersResourceTypeArgs>> resourceTypes() {
-        return this.resourceTypes == null ? Codegen.empty() : this.resourceTypes;
+    public Optional<Output<List<InsightFiltersResourceTypeArgs>>> resourceTypes() {
+        return Optional.ofNullable(this.resourceTypes);
     }
 
     /**
@@ -922,10 +922,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="severityLabels")
-      private final @Nullable Output<List<InsightFiltersSeverityLabelArgs>> severityLabels;
+    private @Nullable Output<List<InsightFiltersSeverityLabelArgs>> severityLabels;
 
-    public Output<List<InsightFiltersSeverityLabelArgs>> severityLabels() {
-        return this.severityLabels == null ? Codegen.empty() : this.severityLabels;
+    public Optional<Output<List<InsightFiltersSeverityLabelArgs>>> severityLabels() {
+        return Optional.ofNullable(this.severityLabels);
     }
 
     /**
@@ -933,10 +933,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="sourceUrls")
-      private final @Nullable Output<List<InsightFiltersSourceUrlArgs>> sourceUrls;
+    private @Nullable Output<List<InsightFiltersSourceUrlArgs>> sourceUrls;
 
-    public Output<List<InsightFiltersSourceUrlArgs>> sourceUrls() {
-        return this.sourceUrls == null ? Codegen.empty() : this.sourceUrls;
+    public Optional<Output<List<InsightFiltersSourceUrlArgs>>> sourceUrls() {
+        return Optional.ofNullable(this.sourceUrls);
     }
 
     /**
@@ -944,10 +944,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="threatIntelIndicatorCategories")
-      private final @Nullable Output<List<InsightFiltersThreatIntelIndicatorCategoryArgs>> threatIntelIndicatorCategories;
+    private @Nullable Output<List<InsightFiltersThreatIntelIndicatorCategoryArgs>> threatIntelIndicatorCategories;
 
-    public Output<List<InsightFiltersThreatIntelIndicatorCategoryArgs>> threatIntelIndicatorCategories() {
-        return this.threatIntelIndicatorCategories == null ? Codegen.empty() : this.threatIntelIndicatorCategories;
+    public Optional<Output<List<InsightFiltersThreatIntelIndicatorCategoryArgs>>> threatIntelIndicatorCategories() {
+        return Optional.ofNullable(this.threatIntelIndicatorCategories);
     }
 
     /**
@@ -955,10 +955,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="threatIntelIndicatorLastObservedAts")
-      private final @Nullable Output<List<InsightFiltersThreatIntelIndicatorLastObservedAtArgs>> threatIntelIndicatorLastObservedAts;
+    private @Nullable Output<List<InsightFiltersThreatIntelIndicatorLastObservedAtArgs>> threatIntelIndicatorLastObservedAts;
 
-    public Output<List<InsightFiltersThreatIntelIndicatorLastObservedAtArgs>> threatIntelIndicatorLastObservedAts() {
-        return this.threatIntelIndicatorLastObservedAts == null ? Codegen.empty() : this.threatIntelIndicatorLastObservedAts;
+    public Optional<Output<List<InsightFiltersThreatIntelIndicatorLastObservedAtArgs>>> threatIntelIndicatorLastObservedAts() {
+        return Optional.ofNullable(this.threatIntelIndicatorLastObservedAts);
     }
 
     /**
@@ -966,10 +966,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="threatIntelIndicatorSourceUrls")
-      private final @Nullable Output<List<InsightFiltersThreatIntelIndicatorSourceUrlArgs>> threatIntelIndicatorSourceUrls;
+    private @Nullable Output<List<InsightFiltersThreatIntelIndicatorSourceUrlArgs>> threatIntelIndicatorSourceUrls;
 
-    public Output<List<InsightFiltersThreatIntelIndicatorSourceUrlArgs>> threatIntelIndicatorSourceUrls() {
-        return this.threatIntelIndicatorSourceUrls == null ? Codegen.empty() : this.threatIntelIndicatorSourceUrls;
+    public Optional<Output<List<InsightFiltersThreatIntelIndicatorSourceUrlArgs>>> threatIntelIndicatorSourceUrls() {
+        return Optional.ofNullable(this.threatIntelIndicatorSourceUrls);
     }
 
     /**
@@ -977,10 +977,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="threatIntelIndicatorSources")
-      private final @Nullable Output<List<InsightFiltersThreatIntelIndicatorSourceArgs>> threatIntelIndicatorSources;
+    private @Nullable Output<List<InsightFiltersThreatIntelIndicatorSourceArgs>> threatIntelIndicatorSources;
 
-    public Output<List<InsightFiltersThreatIntelIndicatorSourceArgs>> threatIntelIndicatorSources() {
-        return this.threatIntelIndicatorSources == null ? Codegen.empty() : this.threatIntelIndicatorSources;
+    public Optional<Output<List<InsightFiltersThreatIntelIndicatorSourceArgs>>> threatIntelIndicatorSources() {
+        return Optional.ofNullable(this.threatIntelIndicatorSources);
     }
 
     /**
@@ -988,10 +988,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="threatIntelIndicatorTypes")
-      private final @Nullable Output<List<InsightFiltersThreatIntelIndicatorTypeArgs>> threatIntelIndicatorTypes;
+    private @Nullable Output<List<InsightFiltersThreatIntelIndicatorTypeArgs>> threatIntelIndicatorTypes;
 
-    public Output<List<InsightFiltersThreatIntelIndicatorTypeArgs>> threatIntelIndicatorTypes() {
-        return this.threatIntelIndicatorTypes == null ? Codegen.empty() : this.threatIntelIndicatorTypes;
+    public Optional<Output<List<InsightFiltersThreatIntelIndicatorTypeArgs>>> threatIntelIndicatorTypes() {
+        return Optional.ofNullable(this.threatIntelIndicatorTypes);
     }
 
     /**
@@ -999,10 +999,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="threatIntelIndicatorValues")
-      private final @Nullable Output<List<InsightFiltersThreatIntelIndicatorValueArgs>> threatIntelIndicatorValues;
+    private @Nullable Output<List<InsightFiltersThreatIntelIndicatorValueArgs>> threatIntelIndicatorValues;
 
-    public Output<List<InsightFiltersThreatIntelIndicatorValueArgs>> threatIntelIndicatorValues() {
-        return this.threatIntelIndicatorValues == null ? Codegen.empty() : this.threatIntelIndicatorValues;
+    public Optional<Output<List<InsightFiltersThreatIntelIndicatorValueArgs>>> threatIntelIndicatorValues() {
+        return Optional.ofNullable(this.threatIntelIndicatorValues);
     }
 
     /**
@@ -1010,10 +1010,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="titles")
-      private final @Nullable Output<List<InsightFiltersTitleArgs>> titles;
+    private @Nullable Output<List<InsightFiltersTitleArgs>> titles;
 
-    public Output<List<InsightFiltersTitleArgs>> titles() {
-        return this.titles == null ? Codegen.empty() : this.titles;
+    public Optional<Output<List<InsightFiltersTitleArgs>>> titles() {
+        return Optional.ofNullable(this.titles);
     }
 
     /**
@@ -1021,10 +1021,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="types")
-      private final @Nullable Output<List<InsightFiltersTypeArgs>> types;
+    private @Nullable Output<List<InsightFiltersTypeArgs>> types;
 
-    public Output<List<InsightFiltersTypeArgs>> types() {
-        return this.types == null ? Codegen.empty() : this.types;
+    public Optional<Output<List<InsightFiltersTypeArgs>>> types() {
+        return Optional.ofNullable(this.types);
     }
 
     /**
@@ -1032,10 +1032,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="updatedAts")
-      private final @Nullable Output<List<InsightFiltersUpdatedAtArgs>> updatedAts;
+    private @Nullable Output<List<InsightFiltersUpdatedAtArgs>> updatedAts;
 
-    public Output<List<InsightFiltersUpdatedAtArgs>> updatedAts() {
-        return this.updatedAts == null ? Codegen.empty() : this.updatedAts;
+    public Optional<Output<List<InsightFiltersUpdatedAtArgs>>> updatedAts() {
+        return Optional.ofNullable(this.updatedAts);
     }
 
     /**
@@ -1043,10 +1043,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="userDefinedValues")
-      private final @Nullable Output<List<InsightFiltersUserDefinedValueArgs>> userDefinedValues;
+    private @Nullable Output<List<InsightFiltersUserDefinedValueArgs>> userDefinedValues;
 
-    public Output<List<InsightFiltersUserDefinedValueArgs>> userDefinedValues() {
-        return this.userDefinedValues == null ? Codegen.empty() : this.userDefinedValues;
+    public Optional<Output<List<InsightFiltersUserDefinedValueArgs>>> userDefinedValues() {
+        return Optional.ofNullable(this.userDefinedValues);
     }
 
     /**
@@ -1054,10 +1054,10 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="verificationStates")
-      private final @Nullable Output<List<InsightFiltersVerificationStateArgs>> verificationStates;
+    private @Nullable Output<List<InsightFiltersVerificationStateArgs>> verificationStates;
 
-    public Output<List<InsightFiltersVerificationStateArgs>> verificationStates() {
-        return this.verificationStates == null ? Codegen.empty() : this.verificationStates;
+    public Optional<Output<List<InsightFiltersVerificationStateArgs>>> verificationStates() {
+        return Optional.ofNullable(this.verificationStates);
     }
 
     /**
@@ -1065,1445 +1065,1270 @@ public final class InsightFiltersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="workflowStatuses")
-      private final @Nullable Output<List<InsightFiltersWorkflowStatusArgs>> workflowStatuses;
+    private @Nullable Output<List<InsightFiltersWorkflowStatusArgs>> workflowStatuses;
 
-    public Output<List<InsightFiltersWorkflowStatusArgs>> workflowStatuses() {
-        return this.workflowStatuses == null ? Codegen.empty() : this.workflowStatuses;
+    public Optional<Output<List<InsightFiltersWorkflowStatusArgs>>> workflowStatuses() {
+        return Optional.ofNullable(this.workflowStatuses);
     }
 
-    public InsightFiltersArgs(
-        @Nullable Output<List<InsightFiltersAwsAccountIdArgs>> awsAccountIds,
-        @Nullable Output<List<InsightFiltersCompanyNameArgs>> companyNames,
-        @Nullable Output<List<InsightFiltersComplianceStatusArgs>> complianceStatuses,
-        @Nullable Output<List<InsightFiltersConfidenceArgs>> confidences,
-        @Nullable Output<List<InsightFiltersCreatedAtArgs>> createdAts,
-        @Nullable Output<List<InsightFiltersCriticalityArgs>> criticalities,
-        @Nullable Output<List<InsightFiltersDescriptionArgs>> descriptions,
-        @Nullable Output<List<InsightFiltersFindingProviderFieldsConfidenceArgs>> findingProviderFieldsConfidences,
-        @Nullable Output<List<InsightFiltersFindingProviderFieldsCriticalityArgs>> findingProviderFieldsCriticalities,
-        @Nullable Output<List<InsightFiltersFindingProviderFieldsRelatedFindingsIdArgs>> findingProviderFieldsRelatedFindingsIds,
-        @Nullable Output<List<InsightFiltersFindingProviderFieldsRelatedFindingsProductArnArgs>> findingProviderFieldsRelatedFindingsProductArns,
-        @Nullable Output<List<InsightFiltersFindingProviderFieldsSeverityLabelArgs>> findingProviderFieldsSeverityLabels,
-        @Nullable Output<List<InsightFiltersFindingProviderFieldsSeverityOriginalArgs>> findingProviderFieldsSeverityOriginals,
-        @Nullable Output<List<InsightFiltersFindingProviderFieldsTypeArgs>> findingProviderFieldsTypes,
-        @Nullable Output<List<InsightFiltersFirstObservedAtArgs>> firstObservedAts,
-        @Nullable Output<List<InsightFiltersGeneratorIdArgs>> generatorIds,
-        @Nullable Output<List<InsightFiltersIdArgs>> ids,
-        @Nullable Output<List<InsightFiltersKeywordArgs>> keywords,
-        @Nullable Output<List<InsightFiltersLastObservedAtArgs>> lastObservedAts,
-        @Nullable Output<List<InsightFiltersMalwareNameArgs>> malwareNames,
-        @Nullable Output<List<InsightFiltersMalwarePathArgs>> malwarePaths,
-        @Nullable Output<List<InsightFiltersMalwareStateArgs>> malwareStates,
-        @Nullable Output<List<InsightFiltersMalwareTypeArgs>> malwareTypes,
-        @Nullable Output<List<InsightFiltersNetworkDestinationDomainArgs>> networkDestinationDomains,
-        @Nullable Output<List<InsightFiltersNetworkDestinationIpv4Args>> networkDestinationIpv4s,
-        @Nullable Output<List<InsightFiltersNetworkDestinationIpv6Args>> networkDestinationIpv6s,
-        @Nullable Output<List<InsightFiltersNetworkDestinationPortArgs>> networkDestinationPorts,
-        @Nullable Output<List<InsightFiltersNetworkDirectionArgs>> networkDirections,
-        @Nullable Output<List<InsightFiltersNetworkProtocolArgs>> networkProtocols,
-        @Nullable Output<List<InsightFiltersNetworkSourceDomainArgs>> networkSourceDomains,
-        @Nullable Output<List<InsightFiltersNetworkSourceIpv4Args>> networkSourceIpv4s,
-        @Nullable Output<List<InsightFiltersNetworkSourceIpv6Args>> networkSourceIpv6s,
-        @Nullable Output<List<InsightFiltersNetworkSourceMacArgs>> networkSourceMacs,
-        @Nullable Output<List<InsightFiltersNetworkSourcePortArgs>> networkSourcePorts,
-        @Nullable Output<List<InsightFiltersNoteTextArgs>> noteTexts,
-        @Nullable Output<List<InsightFiltersNoteUpdatedAtArgs>> noteUpdatedAts,
-        @Nullable Output<List<InsightFiltersNoteUpdatedByArgs>> noteUpdatedBies,
-        @Nullable Output<List<InsightFiltersProcessLaunchedAtArgs>> processLaunchedAts,
-        @Nullable Output<List<InsightFiltersProcessNameArgs>> processNames,
-        @Nullable Output<List<InsightFiltersProcessParentPidArgs>> processParentPids,
-        @Nullable Output<List<InsightFiltersProcessPathArgs>> processPaths,
-        @Nullable Output<List<InsightFiltersProcessPidArgs>> processPids,
-        @Nullable Output<List<InsightFiltersProcessTerminatedAtArgs>> processTerminatedAts,
-        @Nullable Output<List<InsightFiltersProductArnArgs>> productArns,
-        @Nullable Output<List<InsightFiltersProductFieldArgs>> productFields,
-        @Nullable Output<List<InsightFiltersProductNameArgs>> productNames,
-        @Nullable Output<List<InsightFiltersRecommendationTextArgs>> recommendationTexts,
-        @Nullable Output<List<InsightFiltersRecordStateArgs>> recordStates,
-        @Nullable Output<List<InsightFiltersRelatedFindingsIdArgs>> relatedFindingsIds,
-        @Nullable Output<List<InsightFiltersRelatedFindingsProductArnArgs>> relatedFindingsProductArns,
-        @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceIamInstanceProfileArnArgs>> resourceAwsEc2InstanceIamInstanceProfileArns,
-        @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceImageIdArgs>> resourceAwsEc2InstanceImageIds,
-        @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceIpv4AddressArgs>> resourceAwsEc2InstanceIpv4Addresses,
-        @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceIpv6AddressArgs>> resourceAwsEc2InstanceIpv6Addresses,
-        @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceKeyNameArgs>> resourceAwsEc2InstanceKeyNames,
-        @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceLaunchedAtArgs>> resourceAwsEc2InstanceLaunchedAts,
-        @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceSubnetIdArgs>> resourceAwsEc2InstanceSubnetIds,
-        @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceTypeArgs>> resourceAwsEc2InstanceTypes,
-        @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceVpcIdArgs>> resourceAwsEc2InstanceVpcIds,
-        @Nullable Output<List<InsightFiltersResourceAwsIamAccessKeyCreatedAtArgs>> resourceAwsIamAccessKeyCreatedAts,
-        @Nullable Output<List<InsightFiltersResourceAwsIamAccessKeyStatusArgs>> resourceAwsIamAccessKeyStatuses,
-        @Nullable Output<List<InsightFiltersResourceAwsIamAccessKeyUserNameArgs>> resourceAwsIamAccessKeyUserNames,
-        @Nullable Output<List<InsightFiltersResourceAwsS3BucketOwnerIdArgs>> resourceAwsS3BucketOwnerIds,
-        @Nullable Output<List<InsightFiltersResourceAwsS3BucketOwnerNameArgs>> resourceAwsS3BucketOwnerNames,
-        @Nullable Output<List<InsightFiltersResourceContainerImageIdArgs>> resourceContainerImageIds,
-        @Nullable Output<List<InsightFiltersResourceContainerImageNameArgs>> resourceContainerImageNames,
-        @Nullable Output<List<InsightFiltersResourceContainerLaunchedAtArgs>> resourceContainerLaunchedAts,
-        @Nullable Output<List<InsightFiltersResourceContainerNameArgs>> resourceContainerNames,
-        @Nullable Output<List<InsightFiltersResourceDetailsOtherArgs>> resourceDetailsOthers,
-        @Nullable Output<List<InsightFiltersResourceIdArgs>> resourceIds,
-        @Nullable Output<List<InsightFiltersResourcePartitionArgs>> resourcePartitions,
-        @Nullable Output<List<InsightFiltersResourceRegionArgs>> resourceRegions,
-        @Nullable Output<List<InsightFiltersResourceTagArgs>> resourceTags,
-        @Nullable Output<List<InsightFiltersResourceTypeArgs>> resourceTypes,
-        @Nullable Output<List<InsightFiltersSeverityLabelArgs>> severityLabels,
-        @Nullable Output<List<InsightFiltersSourceUrlArgs>> sourceUrls,
-        @Nullable Output<List<InsightFiltersThreatIntelIndicatorCategoryArgs>> threatIntelIndicatorCategories,
-        @Nullable Output<List<InsightFiltersThreatIntelIndicatorLastObservedAtArgs>> threatIntelIndicatorLastObservedAts,
-        @Nullable Output<List<InsightFiltersThreatIntelIndicatorSourceUrlArgs>> threatIntelIndicatorSourceUrls,
-        @Nullable Output<List<InsightFiltersThreatIntelIndicatorSourceArgs>> threatIntelIndicatorSources,
-        @Nullable Output<List<InsightFiltersThreatIntelIndicatorTypeArgs>> threatIntelIndicatorTypes,
-        @Nullable Output<List<InsightFiltersThreatIntelIndicatorValueArgs>> threatIntelIndicatorValues,
-        @Nullable Output<List<InsightFiltersTitleArgs>> titles,
-        @Nullable Output<List<InsightFiltersTypeArgs>> types,
-        @Nullable Output<List<InsightFiltersUpdatedAtArgs>> updatedAts,
-        @Nullable Output<List<InsightFiltersUserDefinedValueArgs>> userDefinedValues,
-        @Nullable Output<List<InsightFiltersVerificationStateArgs>> verificationStates,
-        @Nullable Output<List<InsightFiltersWorkflowStatusArgs>> workflowStatuses) {
-        this.awsAccountIds = awsAccountIds;
-        this.companyNames = companyNames;
-        this.complianceStatuses = complianceStatuses;
-        this.confidences = confidences;
-        this.createdAts = createdAts;
-        this.criticalities = criticalities;
-        this.descriptions = descriptions;
-        this.findingProviderFieldsConfidences = findingProviderFieldsConfidences;
-        this.findingProviderFieldsCriticalities = findingProviderFieldsCriticalities;
-        this.findingProviderFieldsRelatedFindingsIds = findingProviderFieldsRelatedFindingsIds;
-        this.findingProviderFieldsRelatedFindingsProductArns = findingProviderFieldsRelatedFindingsProductArns;
-        this.findingProviderFieldsSeverityLabels = findingProviderFieldsSeverityLabels;
-        this.findingProviderFieldsSeverityOriginals = findingProviderFieldsSeverityOriginals;
-        this.findingProviderFieldsTypes = findingProviderFieldsTypes;
-        this.firstObservedAts = firstObservedAts;
-        this.generatorIds = generatorIds;
-        this.ids = ids;
-        this.keywords = keywords;
-        this.lastObservedAts = lastObservedAts;
-        this.malwareNames = malwareNames;
-        this.malwarePaths = malwarePaths;
-        this.malwareStates = malwareStates;
-        this.malwareTypes = malwareTypes;
-        this.networkDestinationDomains = networkDestinationDomains;
-        this.networkDestinationIpv4s = networkDestinationIpv4s;
-        this.networkDestinationIpv6s = networkDestinationIpv6s;
-        this.networkDestinationPorts = networkDestinationPorts;
-        this.networkDirections = networkDirections;
-        this.networkProtocols = networkProtocols;
-        this.networkSourceDomains = networkSourceDomains;
-        this.networkSourceIpv4s = networkSourceIpv4s;
-        this.networkSourceIpv6s = networkSourceIpv6s;
-        this.networkSourceMacs = networkSourceMacs;
-        this.networkSourcePorts = networkSourcePorts;
-        this.noteTexts = noteTexts;
-        this.noteUpdatedAts = noteUpdatedAts;
-        this.noteUpdatedBies = noteUpdatedBies;
-        this.processLaunchedAts = processLaunchedAts;
-        this.processNames = processNames;
-        this.processParentPids = processParentPids;
-        this.processPaths = processPaths;
-        this.processPids = processPids;
-        this.processTerminatedAts = processTerminatedAts;
-        this.productArns = productArns;
-        this.productFields = productFields;
-        this.productNames = productNames;
-        this.recommendationTexts = recommendationTexts;
-        this.recordStates = recordStates;
-        this.relatedFindingsIds = relatedFindingsIds;
-        this.relatedFindingsProductArns = relatedFindingsProductArns;
-        this.resourceAwsEc2InstanceIamInstanceProfileArns = resourceAwsEc2InstanceIamInstanceProfileArns;
-        this.resourceAwsEc2InstanceImageIds = resourceAwsEc2InstanceImageIds;
-        this.resourceAwsEc2InstanceIpv4Addresses = resourceAwsEc2InstanceIpv4Addresses;
-        this.resourceAwsEc2InstanceIpv6Addresses = resourceAwsEc2InstanceIpv6Addresses;
-        this.resourceAwsEc2InstanceKeyNames = resourceAwsEc2InstanceKeyNames;
-        this.resourceAwsEc2InstanceLaunchedAts = resourceAwsEc2InstanceLaunchedAts;
-        this.resourceAwsEc2InstanceSubnetIds = resourceAwsEc2InstanceSubnetIds;
-        this.resourceAwsEc2InstanceTypes = resourceAwsEc2InstanceTypes;
-        this.resourceAwsEc2InstanceVpcIds = resourceAwsEc2InstanceVpcIds;
-        this.resourceAwsIamAccessKeyCreatedAts = resourceAwsIamAccessKeyCreatedAts;
-        this.resourceAwsIamAccessKeyStatuses = resourceAwsIamAccessKeyStatuses;
-        this.resourceAwsIamAccessKeyUserNames = resourceAwsIamAccessKeyUserNames;
-        this.resourceAwsS3BucketOwnerIds = resourceAwsS3BucketOwnerIds;
-        this.resourceAwsS3BucketOwnerNames = resourceAwsS3BucketOwnerNames;
-        this.resourceContainerImageIds = resourceContainerImageIds;
-        this.resourceContainerImageNames = resourceContainerImageNames;
-        this.resourceContainerLaunchedAts = resourceContainerLaunchedAts;
-        this.resourceContainerNames = resourceContainerNames;
-        this.resourceDetailsOthers = resourceDetailsOthers;
-        this.resourceIds = resourceIds;
-        this.resourcePartitions = resourcePartitions;
-        this.resourceRegions = resourceRegions;
-        this.resourceTags = resourceTags;
-        this.resourceTypes = resourceTypes;
-        this.severityLabels = severityLabels;
-        this.sourceUrls = sourceUrls;
-        this.threatIntelIndicatorCategories = threatIntelIndicatorCategories;
-        this.threatIntelIndicatorLastObservedAts = threatIntelIndicatorLastObservedAts;
-        this.threatIntelIndicatorSourceUrls = threatIntelIndicatorSourceUrls;
-        this.threatIntelIndicatorSources = threatIntelIndicatorSources;
-        this.threatIntelIndicatorTypes = threatIntelIndicatorTypes;
-        this.threatIntelIndicatorValues = threatIntelIndicatorValues;
-        this.titles = titles;
-        this.types = types;
-        this.updatedAts = updatedAts;
-        this.userDefinedValues = userDefinedValues;
-        this.verificationStates = verificationStates;
-        this.workflowStatuses = workflowStatuses;
-    }
+    private InsightFiltersArgs() {}
 
-    private InsightFiltersArgs() {
-        this.awsAccountIds = Codegen.empty();
-        this.companyNames = Codegen.empty();
-        this.complianceStatuses = Codegen.empty();
-        this.confidences = Codegen.empty();
-        this.createdAts = Codegen.empty();
-        this.criticalities = Codegen.empty();
-        this.descriptions = Codegen.empty();
-        this.findingProviderFieldsConfidences = Codegen.empty();
-        this.findingProviderFieldsCriticalities = Codegen.empty();
-        this.findingProviderFieldsRelatedFindingsIds = Codegen.empty();
-        this.findingProviderFieldsRelatedFindingsProductArns = Codegen.empty();
-        this.findingProviderFieldsSeverityLabels = Codegen.empty();
-        this.findingProviderFieldsSeverityOriginals = Codegen.empty();
-        this.findingProviderFieldsTypes = Codegen.empty();
-        this.firstObservedAts = Codegen.empty();
-        this.generatorIds = Codegen.empty();
-        this.ids = Codegen.empty();
-        this.keywords = Codegen.empty();
-        this.lastObservedAts = Codegen.empty();
-        this.malwareNames = Codegen.empty();
-        this.malwarePaths = Codegen.empty();
-        this.malwareStates = Codegen.empty();
-        this.malwareTypes = Codegen.empty();
-        this.networkDestinationDomains = Codegen.empty();
-        this.networkDestinationIpv4s = Codegen.empty();
-        this.networkDestinationIpv6s = Codegen.empty();
-        this.networkDestinationPorts = Codegen.empty();
-        this.networkDirections = Codegen.empty();
-        this.networkProtocols = Codegen.empty();
-        this.networkSourceDomains = Codegen.empty();
-        this.networkSourceIpv4s = Codegen.empty();
-        this.networkSourceIpv6s = Codegen.empty();
-        this.networkSourceMacs = Codegen.empty();
-        this.networkSourcePorts = Codegen.empty();
-        this.noteTexts = Codegen.empty();
-        this.noteUpdatedAts = Codegen.empty();
-        this.noteUpdatedBies = Codegen.empty();
-        this.processLaunchedAts = Codegen.empty();
-        this.processNames = Codegen.empty();
-        this.processParentPids = Codegen.empty();
-        this.processPaths = Codegen.empty();
-        this.processPids = Codegen.empty();
-        this.processTerminatedAts = Codegen.empty();
-        this.productArns = Codegen.empty();
-        this.productFields = Codegen.empty();
-        this.productNames = Codegen.empty();
-        this.recommendationTexts = Codegen.empty();
-        this.recordStates = Codegen.empty();
-        this.relatedFindingsIds = Codegen.empty();
-        this.relatedFindingsProductArns = Codegen.empty();
-        this.resourceAwsEc2InstanceIamInstanceProfileArns = Codegen.empty();
-        this.resourceAwsEc2InstanceImageIds = Codegen.empty();
-        this.resourceAwsEc2InstanceIpv4Addresses = Codegen.empty();
-        this.resourceAwsEc2InstanceIpv6Addresses = Codegen.empty();
-        this.resourceAwsEc2InstanceKeyNames = Codegen.empty();
-        this.resourceAwsEc2InstanceLaunchedAts = Codegen.empty();
-        this.resourceAwsEc2InstanceSubnetIds = Codegen.empty();
-        this.resourceAwsEc2InstanceTypes = Codegen.empty();
-        this.resourceAwsEc2InstanceVpcIds = Codegen.empty();
-        this.resourceAwsIamAccessKeyCreatedAts = Codegen.empty();
-        this.resourceAwsIamAccessKeyStatuses = Codegen.empty();
-        this.resourceAwsIamAccessKeyUserNames = Codegen.empty();
-        this.resourceAwsS3BucketOwnerIds = Codegen.empty();
-        this.resourceAwsS3BucketOwnerNames = Codegen.empty();
-        this.resourceContainerImageIds = Codegen.empty();
-        this.resourceContainerImageNames = Codegen.empty();
-        this.resourceContainerLaunchedAts = Codegen.empty();
-        this.resourceContainerNames = Codegen.empty();
-        this.resourceDetailsOthers = Codegen.empty();
-        this.resourceIds = Codegen.empty();
-        this.resourcePartitions = Codegen.empty();
-        this.resourceRegions = Codegen.empty();
-        this.resourceTags = Codegen.empty();
-        this.resourceTypes = Codegen.empty();
-        this.severityLabels = Codegen.empty();
-        this.sourceUrls = Codegen.empty();
-        this.threatIntelIndicatorCategories = Codegen.empty();
-        this.threatIntelIndicatorLastObservedAts = Codegen.empty();
-        this.threatIntelIndicatorSourceUrls = Codegen.empty();
-        this.threatIntelIndicatorSources = Codegen.empty();
-        this.threatIntelIndicatorTypes = Codegen.empty();
-        this.threatIntelIndicatorValues = Codegen.empty();
-        this.titles = Codegen.empty();
-        this.types = Codegen.empty();
-        this.updatedAts = Codegen.empty();
-        this.userDefinedValues = Codegen.empty();
-        this.verificationStates = Codegen.empty();
-        this.workflowStatuses = Codegen.empty();
+    private InsightFiltersArgs(InsightFiltersArgs $) {
+        this.awsAccountIds = $.awsAccountIds;
+        this.companyNames = $.companyNames;
+        this.complianceStatuses = $.complianceStatuses;
+        this.confidences = $.confidences;
+        this.createdAts = $.createdAts;
+        this.criticalities = $.criticalities;
+        this.descriptions = $.descriptions;
+        this.findingProviderFieldsConfidences = $.findingProviderFieldsConfidences;
+        this.findingProviderFieldsCriticalities = $.findingProviderFieldsCriticalities;
+        this.findingProviderFieldsRelatedFindingsIds = $.findingProviderFieldsRelatedFindingsIds;
+        this.findingProviderFieldsRelatedFindingsProductArns = $.findingProviderFieldsRelatedFindingsProductArns;
+        this.findingProviderFieldsSeverityLabels = $.findingProviderFieldsSeverityLabels;
+        this.findingProviderFieldsSeverityOriginals = $.findingProviderFieldsSeverityOriginals;
+        this.findingProviderFieldsTypes = $.findingProviderFieldsTypes;
+        this.firstObservedAts = $.firstObservedAts;
+        this.generatorIds = $.generatorIds;
+        this.ids = $.ids;
+        this.keywords = $.keywords;
+        this.lastObservedAts = $.lastObservedAts;
+        this.malwareNames = $.malwareNames;
+        this.malwarePaths = $.malwarePaths;
+        this.malwareStates = $.malwareStates;
+        this.malwareTypes = $.malwareTypes;
+        this.networkDestinationDomains = $.networkDestinationDomains;
+        this.networkDestinationIpv4s = $.networkDestinationIpv4s;
+        this.networkDestinationIpv6s = $.networkDestinationIpv6s;
+        this.networkDestinationPorts = $.networkDestinationPorts;
+        this.networkDirections = $.networkDirections;
+        this.networkProtocols = $.networkProtocols;
+        this.networkSourceDomains = $.networkSourceDomains;
+        this.networkSourceIpv4s = $.networkSourceIpv4s;
+        this.networkSourceIpv6s = $.networkSourceIpv6s;
+        this.networkSourceMacs = $.networkSourceMacs;
+        this.networkSourcePorts = $.networkSourcePorts;
+        this.noteTexts = $.noteTexts;
+        this.noteUpdatedAts = $.noteUpdatedAts;
+        this.noteUpdatedBies = $.noteUpdatedBies;
+        this.processLaunchedAts = $.processLaunchedAts;
+        this.processNames = $.processNames;
+        this.processParentPids = $.processParentPids;
+        this.processPaths = $.processPaths;
+        this.processPids = $.processPids;
+        this.processTerminatedAts = $.processTerminatedAts;
+        this.productArns = $.productArns;
+        this.productFields = $.productFields;
+        this.productNames = $.productNames;
+        this.recommendationTexts = $.recommendationTexts;
+        this.recordStates = $.recordStates;
+        this.relatedFindingsIds = $.relatedFindingsIds;
+        this.relatedFindingsProductArns = $.relatedFindingsProductArns;
+        this.resourceAwsEc2InstanceIamInstanceProfileArns = $.resourceAwsEc2InstanceIamInstanceProfileArns;
+        this.resourceAwsEc2InstanceImageIds = $.resourceAwsEc2InstanceImageIds;
+        this.resourceAwsEc2InstanceIpv4Addresses = $.resourceAwsEc2InstanceIpv4Addresses;
+        this.resourceAwsEc2InstanceIpv6Addresses = $.resourceAwsEc2InstanceIpv6Addresses;
+        this.resourceAwsEc2InstanceKeyNames = $.resourceAwsEc2InstanceKeyNames;
+        this.resourceAwsEc2InstanceLaunchedAts = $.resourceAwsEc2InstanceLaunchedAts;
+        this.resourceAwsEc2InstanceSubnetIds = $.resourceAwsEc2InstanceSubnetIds;
+        this.resourceAwsEc2InstanceTypes = $.resourceAwsEc2InstanceTypes;
+        this.resourceAwsEc2InstanceVpcIds = $.resourceAwsEc2InstanceVpcIds;
+        this.resourceAwsIamAccessKeyCreatedAts = $.resourceAwsIamAccessKeyCreatedAts;
+        this.resourceAwsIamAccessKeyStatuses = $.resourceAwsIamAccessKeyStatuses;
+        this.resourceAwsIamAccessKeyUserNames = $.resourceAwsIamAccessKeyUserNames;
+        this.resourceAwsS3BucketOwnerIds = $.resourceAwsS3BucketOwnerIds;
+        this.resourceAwsS3BucketOwnerNames = $.resourceAwsS3BucketOwnerNames;
+        this.resourceContainerImageIds = $.resourceContainerImageIds;
+        this.resourceContainerImageNames = $.resourceContainerImageNames;
+        this.resourceContainerLaunchedAts = $.resourceContainerLaunchedAts;
+        this.resourceContainerNames = $.resourceContainerNames;
+        this.resourceDetailsOthers = $.resourceDetailsOthers;
+        this.resourceIds = $.resourceIds;
+        this.resourcePartitions = $.resourcePartitions;
+        this.resourceRegions = $.resourceRegions;
+        this.resourceTags = $.resourceTags;
+        this.resourceTypes = $.resourceTypes;
+        this.severityLabels = $.severityLabels;
+        this.sourceUrls = $.sourceUrls;
+        this.threatIntelIndicatorCategories = $.threatIntelIndicatorCategories;
+        this.threatIntelIndicatorLastObservedAts = $.threatIntelIndicatorLastObservedAts;
+        this.threatIntelIndicatorSourceUrls = $.threatIntelIndicatorSourceUrls;
+        this.threatIntelIndicatorSources = $.threatIntelIndicatorSources;
+        this.threatIntelIndicatorTypes = $.threatIntelIndicatorTypes;
+        this.threatIntelIndicatorValues = $.threatIntelIndicatorValues;
+        this.titles = $.titles;
+        this.types = $.types;
+        this.updatedAts = $.updatedAts;
+        this.userDefinedValues = $.userDefinedValues;
+        this.verificationStates = $.verificationStates;
+        this.workflowStatuses = $.workflowStatuses;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InsightFiltersArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<InsightFiltersAwsAccountIdArgs>> awsAccountIds;
-        private @Nullable Output<List<InsightFiltersCompanyNameArgs>> companyNames;
-        private @Nullable Output<List<InsightFiltersComplianceStatusArgs>> complianceStatuses;
-        private @Nullable Output<List<InsightFiltersConfidenceArgs>> confidences;
-        private @Nullable Output<List<InsightFiltersCreatedAtArgs>> createdAts;
-        private @Nullable Output<List<InsightFiltersCriticalityArgs>> criticalities;
-        private @Nullable Output<List<InsightFiltersDescriptionArgs>> descriptions;
-        private @Nullable Output<List<InsightFiltersFindingProviderFieldsConfidenceArgs>> findingProviderFieldsConfidences;
-        private @Nullable Output<List<InsightFiltersFindingProviderFieldsCriticalityArgs>> findingProviderFieldsCriticalities;
-        private @Nullable Output<List<InsightFiltersFindingProviderFieldsRelatedFindingsIdArgs>> findingProviderFieldsRelatedFindingsIds;
-        private @Nullable Output<List<InsightFiltersFindingProviderFieldsRelatedFindingsProductArnArgs>> findingProviderFieldsRelatedFindingsProductArns;
-        private @Nullable Output<List<InsightFiltersFindingProviderFieldsSeverityLabelArgs>> findingProviderFieldsSeverityLabels;
-        private @Nullable Output<List<InsightFiltersFindingProviderFieldsSeverityOriginalArgs>> findingProviderFieldsSeverityOriginals;
-        private @Nullable Output<List<InsightFiltersFindingProviderFieldsTypeArgs>> findingProviderFieldsTypes;
-        private @Nullable Output<List<InsightFiltersFirstObservedAtArgs>> firstObservedAts;
-        private @Nullable Output<List<InsightFiltersGeneratorIdArgs>> generatorIds;
-        private @Nullable Output<List<InsightFiltersIdArgs>> ids;
-        private @Nullable Output<List<InsightFiltersKeywordArgs>> keywords;
-        private @Nullable Output<List<InsightFiltersLastObservedAtArgs>> lastObservedAts;
-        private @Nullable Output<List<InsightFiltersMalwareNameArgs>> malwareNames;
-        private @Nullable Output<List<InsightFiltersMalwarePathArgs>> malwarePaths;
-        private @Nullable Output<List<InsightFiltersMalwareStateArgs>> malwareStates;
-        private @Nullable Output<List<InsightFiltersMalwareTypeArgs>> malwareTypes;
-        private @Nullable Output<List<InsightFiltersNetworkDestinationDomainArgs>> networkDestinationDomains;
-        private @Nullable Output<List<InsightFiltersNetworkDestinationIpv4Args>> networkDestinationIpv4s;
-        private @Nullable Output<List<InsightFiltersNetworkDestinationIpv6Args>> networkDestinationIpv6s;
-        private @Nullable Output<List<InsightFiltersNetworkDestinationPortArgs>> networkDestinationPorts;
-        private @Nullable Output<List<InsightFiltersNetworkDirectionArgs>> networkDirections;
-        private @Nullable Output<List<InsightFiltersNetworkProtocolArgs>> networkProtocols;
-        private @Nullable Output<List<InsightFiltersNetworkSourceDomainArgs>> networkSourceDomains;
-        private @Nullable Output<List<InsightFiltersNetworkSourceIpv4Args>> networkSourceIpv4s;
-        private @Nullable Output<List<InsightFiltersNetworkSourceIpv6Args>> networkSourceIpv6s;
-        private @Nullable Output<List<InsightFiltersNetworkSourceMacArgs>> networkSourceMacs;
-        private @Nullable Output<List<InsightFiltersNetworkSourcePortArgs>> networkSourcePorts;
-        private @Nullable Output<List<InsightFiltersNoteTextArgs>> noteTexts;
-        private @Nullable Output<List<InsightFiltersNoteUpdatedAtArgs>> noteUpdatedAts;
-        private @Nullable Output<List<InsightFiltersNoteUpdatedByArgs>> noteUpdatedBies;
-        private @Nullable Output<List<InsightFiltersProcessLaunchedAtArgs>> processLaunchedAts;
-        private @Nullable Output<List<InsightFiltersProcessNameArgs>> processNames;
-        private @Nullable Output<List<InsightFiltersProcessParentPidArgs>> processParentPids;
-        private @Nullable Output<List<InsightFiltersProcessPathArgs>> processPaths;
-        private @Nullable Output<List<InsightFiltersProcessPidArgs>> processPids;
-        private @Nullable Output<List<InsightFiltersProcessTerminatedAtArgs>> processTerminatedAts;
-        private @Nullable Output<List<InsightFiltersProductArnArgs>> productArns;
-        private @Nullable Output<List<InsightFiltersProductFieldArgs>> productFields;
-        private @Nullable Output<List<InsightFiltersProductNameArgs>> productNames;
-        private @Nullable Output<List<InsightFiltersRecommendationTextArgs>> recommendationTexts;
-        private @Nullable Output<List<InsightFiltersRecordStateArgs>> recordStates;
-        private @Nullable Output<List<InsightFiltersRelatedFindingsIdArgs>> relatedFindingsIds;
-        private @Nullable Output<List<InsightFiltersRelatedFindingsProductArnArgs>> relatedFindingsProductArns;
-        private @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceIamInstanceProfileArnArgs>> resourceAwsEc2InstanceIamInstanceProfileArns;
-        private @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceImageIdArgs>> resourceAwsEc2InstanceImageIds;
-        private @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceIpv4AddressArgs>> resourceAwsEc2InstanceIpv4Addresses;
-        private @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceIpv6AddressArgs>> resourceAwsEc2InstanceIpv6Addresses;
-        private @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceKeyNameArgs>> resourceAwsEc2InstanceKeyNames;
-        private @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceLaunchedAtArgs>> resourceAwsEc2InstanceLaunchedAts;
-        private @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceSubnetIdArgs>> resourceAwsEc2InstanceSubnetIds;
-        private @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceTypeArgs>> resourceAwsEc2InstanceTypes;
-        private @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceVpcIdArgs>> resourceAwsEc2InstanceVpcIds;
-        private @Nullable Output<List<InsightFiltersResourceAwsIamAccessKeyCreatedAtArgs>> resourceAwsIamAccessKeyCreatedAts;
-        private @Nullable Output<List<InsightFiltersResourceAwsIamAccessKeyStatusArgs>> resourceAwsIamAccessKeyStatuses;
-        private @Nullable Output<List<InsightFiltersResourceAwsIamAccessKeyUserNameArgs>> resourceAwsIamAccessKeyUserNames;
-        private @Nullable Output<List<InsightFiltersResourceAwsS3BucketOwnerIdArgs>> resourceAwsS3BucketOwnerIds;
-        private @Nullable Output<List<InsightFiltersResourceAwsS3BucketOwnerNameArgs>> resourceAwsS3BucketOwnerNames;
-        private @Nullable Output<List<InsightFiltersResourceContainerImageIdArgs>> resourceContainerImageIds;
-        private @Nullable Output<List<InsightFiltersResourceContainerImageNameArgs>> resourceContainerImageNames;
-        private @Nullable Output<List<InsightFiltersResourceContainerLaunchedAtArgs>> resourceContainerLaunchedAts;
-        private @Nullable Output<List<InsightFiltersResourceContainerNameArgs>> resourceContainerNames;
-        private @Nullable Output<List<InsightFiltersResourceDetailsOtherArgs>> resourceDetailsOthers;
-        private @Nullable Output<List<InsightFiltersResourceIdArgs>> resourceIds;
-        private @Nullable Output<List<InsightFiltersResourcePartitionArgs>> resourcePartitions;
-        private @Nullable Output<List<InsightFiltersResourceRegionArgs>> resourceRegions;
-        private @Nullable Output<List<InsightFiltersResourceTagArgs>> resourceTags;
-        private @Nullable Output<List<InsightFiltersResourceTypeArgs>> resourceTypes;
-        private @Nullable Output<List<InsightFiltersSeverityLabelArgs>> severityLabels;
-        private @Nullable Output<List<InsightFiltersSourceUrlArgs>> sourceUrls;
-        private @Nullable Output<List<InsightFiltersThreatIntelIndicatorCategoryArgs>> threatIntelIndicatorCategories;
-        private @Nullable Output<List<InsightFiltersThreatIntelIndicatorLastObservedAtArgs>> threatIntelIndicatorLastObservedAts;
-        private @Nullable Output<List<InsightFiltersThreatIntelIndicatorSourceUrlArgs>> threatIntelIndicatorSourceUrls;
-        private @Nullable Output<List<InsightFiltersThreatIntelIndicatorSourceArgs>> threatIntelIndicatorSources;
-        private @Nullable Output<List<InsightFiltersThreatIntelIndicatorTypeArgs>> threatIntelIndicatorTypes;
-        private @Nullable Output<List<InsightFiltersThreatIntelIndicatorValueArgs>> threatIntelIndicatorValues;
-        private @Nullable Output<List<InsightFiltersTitleArgs>> titles;
-        private @Nullable Output<List<InsightFiltersTypeArgs>> types;
-        private @Nullable Output<List<InsightFiltersUpdatedAtArgs>> updatedAts;
-        private @Nullable Output<List<InsightFiltersUserDefinedValueArgs>> userDefinedValues;
-        private @Nullable Output<List<InsightFiltersVerificationStateArgs>> verificationStates;
-        private @Nullable Output<List<InsightFiltersWorkflowStatusArgs>> workflowStatuses;
+        private InsightFiltersArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InsightFiltersArgs();
         }
 
         public Builder(InsightFiltersArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.awsAccountIds = defaults.awsAccountIds;
-    	      this.companyNames = defaults.companyNames;
-    	      this.complianceStatuses = defaults.complianceStatuses;
-    	      this.confidences = defaults.confidences;
-    	      this.createdAts = defaults.createdAts;
-    	      this.criticalities = defaults.criticalities;
-    	      this.descriptions = defaults.descriptions;
-    	      this.findingProviderFieldsConfidences = defaults.findingProviderFieldsConfidences;
-    	      this.findingProviderFieldsCriticalities = defaults.findingProviderFieldsCriticalities;
-    	      this.findingProviderFieldsRelatedFindingsIds = defaults.findingProviderFieldsRelatedFindingsIds;
-    	      this.findingProviderFieldsRelatedFindingsProductArns = defaults.findingProviderFieldsRelatedFindingsProductArns;
-    	      this.findingProviderFieldsSeverityLabels = defaults.findingProviderFieldsSeverityLabels;
-    	      this.findingProviderFieldsSeverityOriginals = defaults.findingProviderFieldsSeverityOriginals;
-    	      this.findingProviderFieldsTypes = defaults.findingProviderFieldsTypes;
-    	      this.firstObservedAts = defaults.firstObservedAts;
-    	      this.generatorIds = defaults.generatorIds;
-    	      this.ids = defaults.ids;
-    	      this.keywords = defaults.keywords;
-    	      this.lastObservedAts = defaults.lastObservedAts;
-    	      this.malwareNames = defaults.malwareNames;
-    	      this.malwarePaths = defaults.malwarePaths;
-    	      this.malwareStates = defaults.malwareStates;
-    	      this.malwareTypes = defaults.malwareTypes;
-    	      this.networkDestinationDomains = defaults.networkDestinationDomains;
-    	      this.networkDestinationIpv4s = defaults.networkDestinationIpv4s;
-    	      this.networkDestinationIpv6s = defaults.networkDestinationIpv6s;
-    	      this.networkDestinationPorts = defaults.networkDestinationPorts;
-    	      this.networkDirections = defaults.networkDirections;
-    	      this.networkProtocols = defaults.networkProtocols;
-    	      this.networkSourceDomains = defaults.networkSourceDomains;
-    	      this.networkSourceIpv4s = defaults.networkSourceIpv4s;
-    	      this.networkSourceIpv6s = defaults.networkSourceIpv6s;
-    	      this.networkSourceMacs = defaults.networkSourceMacs;
-    	      this.networkSourcePorts = defaults.networkSourcePorts;
-    	      this.noteTexts = defaults.noteTexts;
-    	      this.noteUpdatedAts = defaults.noteUpdatedAts;
-    	      this.noteUpdatedBies = defaults.noteUpdatedBies;
-    	      this.processLaunchedAts = defaults.processLaunchedAts;
-    	      this.processNames = defaults.processNames;
-    	      this.processParentPids = defaults.processParentPids;
-    	      this.processPaths = defaults.processPaths;
-    	      this.processPids = defaults.processPids;
-    	      this.processTerminatedAts = defaults.processTerminatedAts;
-    	      this.productArns = defaults.productArns;
-    	      this.productFields = defaults.productFields;
-    	      this.productNames = defaults.productNames;
-    	      this.recommendationTexts = defaults.recommendationTexts;
-    	      this.recordStates = defaults.recordStates;
-    	      this.relatedFindingsIds = defaults.relatedFindingsIds;
-    	      this.relatedFindingsProductArns = defaults.relatedFindingsProductArns;
-    	      this.resourceAwsEc2InstanceIamInstanceProfileArns = defaults.resourceAwsEc2InstanceIamInstanceProfileArns;
-    	      this.resourceAwsEc2InstanceImageIds = defaults.resourceAwsEc2InstanceImageIds;
-    	      this.resourceAwsEc2InstanceIpv4Addresses = defaults.resourceAwsEc2InstanceIpv4Addresses;
-    	      this.resourceAwsEc2InstanceIpv6Addresses = defaults.resourceAwsEc2InstanceIpv6Addresses;
-    	      this.resourceAwsEc2InstanceKeyNames = defaults.resourceAwsEc2InstanceKeyNames;
-    	      this.resourceAwsEc2InstanceLaunchedAts = defaults.resourceAwsEc2InstanceLaunchedAts;
-    	      this.resourceAwsEc2InstanceSubnetIds = defaults.resourceAwsEc2InstanceSubnetIds;
-    	      this.resourceAwsEc2InstanceTypes = defaults.resourceAwsEc2InstanceTypes;
-    	      this.resourceAwsEc2InstanceVpcIds = defaults.resourceAwsEc2InstanceVpcIds;
-    	      this.resourceAwsIamAccessKeyCreatedAts = defaults.resourceAwsIamAccessKeyCreatedAts;
-    	      this.resourceAwsIamAccessKeyStatuses = defaults.resourceAwsIamAccessKeyStatuses;
-    	      this.resourceAwsIamAccessKeyUserNames = defaults.resourceAwsIamAccessKeyUserNames;
-    	      this.resourceAwsS3BucketOwnerIds = defaults.resourceAwsS3BucketOwnerIds;
-    	      this.resourceAwsS3BucketOwnerNames = defaults.resourceAwsS3BucketOwnerNames;
-    	      this.resourceContainerImageIds = defaults.resourceContainerImageIds;
-    	      this.resourceContainerImageNames = defaults.resourceContainerImageNames;
-    	      this.resourceContainerLaunchedAts = defaults.resourceContainerLaunchedAts;
-    	      this.resourceContainerNames = defaults.resourceContainerNames;
-    	      this.resourceDetailsOthers = defaults.resourceDetailsOthers;
-    	      this.resourceIds = defaults.resourceIds;
-    	      this.resourcePartitions = defaults.resourcePartitions;
-    	      this.resourceRegions = defaults.resourceRegions;
-    	      this.resourceTags = defaults.resourceTags;
-    	      this.resourceTypes = defaults.resourceTypes;
-    	      this.severityLabels = defaults.severityLabels;
-    	      this.sourceUrls = defaults.sourceUrls;
-    	      this.threatIntelIndicatorCategories = defaults.threatIntelIndicatorCategories;
-    	      this.threatIntelIndicatorLastObservedAts = defaults.threatIntelIndicatorLastObservedAts;
-    	      this.threatIntelIndicatorSourceUrls = defaults.threatIntelIndicatorSourceUrls;
-    	      this.threatIntelIndicatorSources = defaults.threatIntelIndicatorSources;
-    	      this.threatIntelIndicatorTypes = defaults.threatIntelIndicatorTypes;
-    	      this.threatIntelIndicatorValues = defaults.threatIntelIndicatorValues;
-    	      this.titles = defaults.titles;
-    	      this.types = defaults.types;
-    	      this.updatedAts = defaults.updatedAts;
-    	      this.userDefinedValues = defaults.userDefinedValues;
-    	      this.verificationStates = defaults.verificationStates;
-    	      this.workflowStatuses = defaults.workflowStatuses;
+            $ = new InsightFiltersArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder awsAccountIds(@Nullable Output<List<InsightFiltersAwsAccountIdArgs>> awsAccountIds) {
-            this.awsAccountIds = awsAccountIds;
+            $.awsAccountIds = awsAccountIds;
             return this;
         }
-        public Builder awsAccountIds(@Nullable List<InsightFiltersAwsAccountIdArgs> awsAccountIds) {
-            this.awsAccountIds = Codegen.ofNullable(awsAccountIds);
-            return this;
+
+        public Builder awsAccountIds(List<InsightFiltersAwsAccountIdArgs> awsAccountIds) {
+            return awsAccountIds(Output.of(awsAccountIds));
         }
+
         public Builder awsAccountIds(InsightFiltersAwsAccountIdArgs... awsAccountIds) {
             return awsAccountIds(List.of(awsAccountIds));
         }
+
         public Builder companyNames(@Nullable Output<List<InsightFiltersCompanyNameArgs>> companyNames) {
-            this.companyNames = companyNames;
+            $.companyNames = companyNames;
             return this;
         }
-        public Builder companyNames(@Nullable List<InsightFiltersCompanyNameArgs> companyNames) {
-            this.companyNames = Codegen.ofNullable(companyNames);
-            return this;
+
+        public Builder companyNames(List<InsightFiltersCompanyNameArgs> companyNames) {
+            return companyNames(Output.of(companyNames));
         }
+
         public Builder companyNames(InsightFiltersCompanyNameArgs... companyNames) {
             return companyNames(List.of(companyNames));
         }
+
         public Builder complianceStatuses(@Nullable Output<List<InsightFiltersComplianceStatusArgs>> complianceStatuses) {
-            this.complianceStatuses = complianceStatuses;
+            $.complianceStatuses = complianceStatuses;
             return this;
         }
-        public Builder complianceStatuses(@Nullable List<InsightFiltersComplianceStatusArgs> complianceStatuses) {
-            this.complianceStatuses = Codegen.ofNullable(complianceStatuses);
-            return this;
+
+        public Builder complianceStatuses(List<InsightFiltersComplianceStatusArgs> complianceStatuses) {
+            return complianceStatuses(Output.of(complianceStatuses));
         }
+
         public Builder complianceStatuses(InsightFiltersComplianceStatusArgs... complianceStatuses) {
             return complianceStatuses(List.of(complianceStatuses));
         }
+
         public Builder confidences(@Nullable Output<List<InsightFiltersConfidenceArgs>> confidences) {
-            this.confidences = confidences;
+            $.confidences = confidences;
             return this;
         }
-        public Builder confidences(@Nullable List<InsightFiltersConfidenceArgs> confidences) {
-            this.confidences = Codegen.ofNullable(confidences);
-            return this;
+
+        public Builder confidences(List<InsightFiltersConfidenceArgs> confidences) {
+            return confidences(Output.of(confidences));
         }
+
         public Builder confidences(InsightFiltersConfidenceArgs... confidences) {
             return confidences(List.of(confidences));
         }
+
         public Builder createdAts(@Nullable Output<List<InsightFiltersCreatedAtArgs>> createdAts) {
-            this.createdAts = createdAts;
+            $.createdAts = createdAts;
             return this;
         }
-        public Builder createdAts(@Nullable List<InsightFiltersCreatedAtArgs> createdAts) {
-            this.createdAts = Codegen.ofNullable(createdAts);
-            return this;
+
+        public Builder createdAts(List<InsightFiltersCreatedAtArgs> createdAts) {
+            return createdAts(Output.of(createdAts));
         }
+
         public Builder createdAts(InsightFiltersCreatedAtArgs... createdAts) {
             return createdAts(List.of(createdAts));
         }
+
         public Builder criticalities(@Nullable Output<List<InsightFiltersCriticalityArgs>> criticalities) {
-            this.criticalities = criticalities;
+            $.criticalities = criticalities;
             return this;
         }
-        public Builder criticalities(@Nullable List<InsightFiltersCriticalityArgs> criticalities) {
-            this.criticalities = Codegen.ofNullable(criticalities);
-            return this;
+
+        public Builder criticalities(List<InsightFiltersCriticalityArgs> criticalities) {
+            return criticalities(Output.of(criticalities));
         }
+
         public Builder criticalities(InsightFiltersCriticalityArgs... criticalities) {
             return criticalities(List.of(criticalities));
         }
+
         public Builder descriptions(@Nullable Output<List<InsightFiltersDescriptionArgs>> descriptions) {
-            this.descriptions = descriptions;
+            $.descriptions = descriptions;
             return this;
         }
-        public Builder descriptions(@Nullable List<InsightFiltersDescriptionArgs> descriptions) {
-            this.descriptions = Codegen.ofNullable(descriptions);
-            return this;
+
+        public Builder descriptions(List<InsightFiltersDescriptionArgs> descriptions) {
+            return descriptions(Output.of(descriptions));
         }
+
         public Builder descriptions(InsightFiltersDescriptionArgs... descriptions) {
             return descriptions(List.of(descriptions));
         }
+
         public Builder findingProviderFieldsConfidences(@Nullable Output<List<InsightFiltersFindingProviderFieldsConfidenceArgs>> findingProviderFieldsConfidences) {
-            this.findingProviderFieldsConfidences = findingProviderFieldsConfidences;
+            $.findingProviderFieldsConfidences = findingProviderFieldsConfidences;
             return this;
         }
-        public Builder findingProviderFieldsConfidences(@Nullable List<InsightFiltersFindingProviderFieldsConfidenceArgs> findingProviderFieldsConfidences) {
-            this.findingProviderFieldsConfidences = Codegen.ofNullable(findingProviderFieldsConfidences);
-            return this;
+
+        public Builder findingProviderFieldsConfidences(List<InsightFiltersFindingProviderFieldsConfidenceArgs> findingProviderFieldsConfidences) {
+            return findingProviderFieldsConfidences(Output.of(findingProviderFieldsConfidences));
         }
+
         public Builder findingProviderFieldsConfidences(InsightFiltersFindingProviderFieldsConfidenceArgs... findingProviderFieldsConfidences) {
             return findingProviderFieldsConfidences(List.of(findingProviderFieldsConfidences));
         }
+
         public Builder findingProviderFieldsCriticalities(@Nullable Output<List<InsightFiltersFindingProviderFieldsCriticalityArgs>> findingProviderFieldsCriticalities) {
-            this.findingProviderFieldsCriticalities = findingProviderFieldsCriticalities;
+            $.findingProviderFieldsCriticalities = findingProviderFieldsCriticalities;
             return this;
         }
-        public Builder findingProviderFieldsCriticalities(@Nullable List<InsightFiltersFindingProviderFieldsCriticalityArgs> findingProviderFieldsCriticalities) {
-            this.findingProviderFieldsCriticalities = Codegen.ofNullable(findingProviderFieldsCriticalities);
-            return this;
+
+        public Builder findingProviderFieldsCriticalities(List<InsightFiltersFindingProviderFieldsCriticalityArgs> findingProviderFieldsCriticalities) {
+            return findingProviderFieldsCriticalities(Output.of(findingProviderFieldsCriticalities));
         }
+
         public Builder findingProviderFieldsCriticalities(InsightFiltersFindingProviderFieldsCriticalityArgs... findingProviderFieldsCriticalities) {
             return findingProviderFieldsCriticalities(List.of(findingProviderFieldsCriticalities));
         }
+
         public Builder findingProviderFieldsRelatedFindingsIds(@Nullable Output<List<InsightFiltersFindingProviderFieldsRelatedFindingsIdArgs>> findingProviderFieldsRelatedFindingsIds) {
-            this.findingProviderFieldsRelatedFindingsIds = findingProviderFieldsRelatedFindingsIds;
+            $.findingProviderFieldsRelatedFindingsIds = findingProviderFieldsRelatedFindingsIds;
             return this;
         }
-        public Builder findingProviderFieldsRelatedFindingsIds(@Nullable List<InsightFiltersFindingProviderFieldsRelatedFindingsIdArgs> findingProviderFieldsRelatedFindingsIds) {
-            this.findingProviderFieldsRelatedFindingsIds = Codegen.ofNullable(findingProviderFieldsRelatedFindingsIds);
-            return this;
+
+        public Builder findingProviderFieldsRelatedFindingsIds(List<InsightFiltersFindingProviderFieldsRelatedFindingsIdArgs> findingProviderFieldsRelatedFindingsIds) {
+            return findingProviderFieldsRelatedFindingsIds(Output.of(findingProviderFieldsRelatedFindingsIds));
         }
+
         public Builder findingProviderFieldsRelatedFindingsIds(InsightFiltersFindingProviderFieldsRelatedFindingsIdArgs... findingProviderFieldsRelatedFindingsIds) {
             return findingProviderFieldsRelatedFindingsIds(List.of(findingProviderFieldsRelatedFindingsIds));
         }
+
         public Builder findingProviderFieldsRelatedFindingsProductArns(@Nullable Output<List<InsightFiltersFindingProviderFieldsRelatedFindingsProductArnArgs>> findingProviderFieldsRelatedFindingsProductArns) {
-            this.findingProviderFieldsRelatedFindingsProductArns = findingProviderFieldsRelatedFindingsProductArns;
+            $.findingProviderFieldsRelatedFindingsProductArns = findingProviderFieldsRelatedFindingsProductArns;
             return this;
         }
-        public Builder findingProviderFieldsRelatedFindingsProductArns(@Nullable List<InsightFiltersFindingProviderFieldsRelatedFindingsProductArnArgs> findingProviderFieldsRelatedFindingsProductArns) {
-            this.findingProviderFieldsRelatedFindingsProductArns = Codegen.ofNullable(findingProviderFieldsRelatedFindingsProductArns);
-            return this;
+
+        public Builder findingProviderFieldsRelatedFindingsProductArns(List<InsightFiltersFindingProviderFieldsRelatedFindingsProductArnArgs> findingProviderFieldsRelatedFindingsProductArns) {
+            return findingProviderFieldsRelatedFindingsProductArns(Output.of(findingProviderFieldsRelatedFindingsProductArns));
         }
+
         public Builder findingProviderFieldsRelatedFindingsProductArns(InsightFiltersFindingProviderFieldsRelatedFindingsProductArnArgs... findingProviderFieldsRelatedFindingsProductArns) {
             return findingProviderFieldsRelatedFindingsProductArns(List.of(findingProviderFieldsRelatedFindingsProductArns));
         }
+
         public Builder findingProviderFieldsSeverityLabels(@Nullable Output<List<InsightFiltersFindingProviderFieldsSeverityLabelArgs>> findingProviderFieldsSeverityLabels) {
-            this.findingProviderFieldsSeverityLabels = findingProviderFieldsSeverityLabels;
+            $.findingProviderFieldsSeverityLabels = findingProviderFieldsSeverityLabels;
             return this;
         }
-        public Builder findingProviderFieldsSeverityLabels(@Nullable List<InsightFiltersFindingProviderFieldsSeverityLabelArgs> findingProviderFieldsSeverityLabels) {
-            this.findingProviderFieldsSeverityLabels = Codegen.ofNullable(findingProviderFieldsSeverityLabels);
-            return this;
+
+        public Builder findingProviderFieldsSeverityLabels(List<InsightFiltersFindingProviderFieldsSeverityLabelArgs> findingProviderFieldsSeverityLabels) {
+            return findingProviderFieldsSeverityLabels(Output.of(findingProviderFieldsSeverityLabels));
         }
+
         public Builder findingProviderFieldsSeverityLabels(InsightFiltersFindingProviderFieldsSeverityLabelArgs... findingProviderFieldsSeverityLabels) {
             return findingProviderFieldsSeverityLabels(List.of(findingProviderFieldsSeverityLabels));
         }
+
         public Builder findingProviderFieldsSeverityOriginals(@Nullable Output<List<InsightFiltersFindingProviderFieldsSeverityOriginalArgs>> findingProviderFieldsSeverityOriginals) {
-            this.findingProviderFieldsSeverityOriginals = findingProviderFieldsSeverityOriginals;
+            $.findingProviderFieldsSeverityOriginals = findingProviderFieldsSeverityOriginals;
             return this;
         }
-        public Builder findingProviderFieldsSeverityOriginals(@Nullable List<InsightFiltersFindingProviderFieldsSeverityOriginalArgs> findingProviderFieldsSeverityOriginals) {
-            this.findingProviderFieldsSeverityOriginals = Codegen.ofNullable(findingProviderFieldsSeverityOriginals);
-            return this;
+
+        public Builder findingProviderFieldsSeverityOriginals(List<InsightFiltersFindingProviderFieldsSeverityOriginalArgs> findingProviderFieldsSeverityOriginals) {
+            return findingProviderFieldsSeverityOriginals(Output.of(findingProviderFieldsSeverityOriginals));
         }
+
         public Builder findingProviderFieldsSeverityOriginals(InsightFiltersFindingProviderFieldsSeverityOriginalArgs... findingProviderFieldsSeverityOriginals) {
             return findingProviderFieldsSeverityOriginals(List.of(findingProviderFieldsSeverityOriginals));
         }
+
         public Builder findingProviderFieldsTypes(@Nullable Output<List<InsightFiltersFindingProviderFieldsTypeArgs>> findingProviderFieldsTypes) {
-            this.findingProviderFieldsTypes = findingProviderFieldsTypes;
+            $.findingProviderFieldsTypes = findingProviderFieldsTypes;
             return this;
         }
-        public Builder findingProviderFieldsTypes(@Nullable List<InsightFiltersFindingProviderFieldsTypeArgs> findingProviderFieldsTypes) {
-            this.findingProviderFieldsTypes = Codegen.ofNullable(findingProviderFieldsTypes);
-            return this;
+
+        public Builder findingProviderFieldsTypes(List<InsightFiltersFindingProviderFieldsTypeArgs> findingProviderFieldsTypes) {
+            return findingProviderFieldsTypes(Output.of(findingProviderFieldsTypes));
         }
+
         public Builder findingProviderFieldsTypes(InsightFiltersFindingProviderFieldsTypeArgs... findingProviderFieldsTypes) {
             return findingProviderFieldsTypes(List.of(findingProviderFieldsTypes));
         }
+
         public Builder firstObservedAts(@Nullable Output<List<InsightFiltersFirstObservedAtArgs>> firstObservedAts) {
-            this.firstObservedAts = firstObservedAts;
+            $.firstObservedAts = firstObservedAts;
             return this;
         }
-        public Builder firstObservedAts(@Nullable List<InsightFiltersFirstObservedAtArgs> firstObservedAts) {
-            this.firstObservedAts = Codegen.ofNullable(firstObservedAts);
-            return this;
+
+        public Builder firstObservedAts(List<InsightFiltersFirstObservedAtArgs> firstObservedAts) {
+            return firstObservedAts(Output.of(firstObservedAts));
         }
+
         public Builder firstObservedAts(InsightFiltersFirstObservedAtArgs... firstObservedAts) {
             return firstObservedAts(List.of(firstObservedAts));
         }
+
         public Builder generatorIds(@Nullable Output<List<InsightFiltersGeneratorIdArgs>> generatorIds) {
-            this.generatorIds = generatorIds;
+            $.generatorIds = generatorIds;
             return this;
         }
-        public Builder generatorIds(@Nullable List<InsightFiltersGeneratorIdArgs> generatorIds) {
-            this.generatorIds = Codegen.ofNullable(generatorIds);
-            return this;
+
+        public Builder generatorIds(List<InsightFiltersGeneratorIdArgs> generatorIds) {
+            return generatorIds(Output.of(generatorIds));
         }
+
         public Builder generatorIds(InsightFiltersGeneratorIdArgs... generatorIds) {
             return generatorIds(List.of(generatorIds));
         }
+
         public Builder ids(@Nullable Output<List<InsightFiltersIdArgs>> ids) {
-            this.ids = ids;
+            $.ids = ids;
             return this;
         }
-        public Builder ids(@Nullable List<InsightFiltersIdArgs> ids) {
-            this.ids = Codegen.ofNullable(ids);
-            return this;
+
+        public Builder ids(List<InsightFiltersIdArgs> ids) {
+            return ids(Output.of(ids));
         }
+
         public Builder ids(InsightFiltersIdArgs... ids) {
             return ids(List.of(ids));
         }
+
         public Builder keywords(@Nullable Output<List<InsightFiltersKeywordArgs>> keywords) {
-            this.keywords = keywords;
+            $.keywords = keywords;
             return this;
         }
-        public Builder keywords(@Nullable List<InsightFiltersKeywordArgs> keywords) {
-            this.keywords = Codegen.ofNullable(keywords);
-            return this;
+
+        public Builder keywords(List<InsightFiltersKeywordArgs> keywords) {
+            return keywords(Output.of(keywords));
         }
+
         public Builder keywords(InsightFiltersKeywordArgs... keywords) {
             return keywords(List.of(keywords));
         }
+
         public Builder lastObservedAts(@Nullable Output<List<InsightFiltersLastObservedAtArgs>> lastObservedAts) {
-            this.lastObservedAts = lastObservedAts;
+            $.lastObservedAts = lastObservedAts;
             return this;
         }
-        public Builder lastObservedAts(@Nullable List<InsightFiltersLastObservedAtArgs> lastObservedAts) {
-            this.lastObservedAts = Codegen.ofNullable(lastObservedAts);
-            return this;
+
+        public Builder lastObservedAts(List<InsightFiltersLastObservedAtArgs> lastObservedAts) {
+            return lastObservedAts(Output.of(lastObservedAts));
         }
+
         public Builder lastObservedAts(InsightFiltersLastObservedAtArgs... lastObservedAts) {
             return lastObservedAts(List.of(lastObservedAts));
         }
+
         public Builder malwareNames(@Nullable Output<List<InsightFiltersMalwareNameArgs>> malwareNames) {
-            this.malwareNames = malwareNames;
+            $.malwareNames = malwareNames;
             return this;
         }
-        public Builder malwareNames(@Nullable List<InsightFiltersMalwareNameArgs> malwareNames) {
-            this.malwareNames = Codegen.ofNullable(malwareNames);
-            return this;
+
+        public Builder malwareNames(List<InsightFiltersMalwareNameArgs> malwareNames) {
+            return malwareNames(Output.of(malwareNames));
         }
+
         public Builder malwareNames(InsightFiltersMalwareNameArgs... malwareNames) {
             return malwareNames(List.of(malwareNames));
         }
+
         public Builder malwarePaths(@Nullable Output<List<InsightFiltersMalwarePathArgs>> malwarePaths) {
-            this.malwarePaths = malwarePaths;
+            $.malwarePaths = malwarePaths;
             return this;
         }
-        public Builder malwarePaths(@Nullable List<InsightFiltersMalwarePathArgs> malwarePaths) {
-            this.malwarePaths = Codegen.ofNullable(malwarePaths);
-            return this;
+
+        public Builder malwarePaths(List<InsightFiltersMalwarePathArgs> malwarePaths) {
+            return malwarePaths(Output.of(malwarePaths));
         }
+
         public Builder malwarePaths(InsightFiltersMalwarePathArgs... malwarePaths) {
             return malwarePaths(List.of(malwarePaths));
         }
+
         public Builder malwareStates(@Nullable Output<List<InsightFiltersMalwareStateArgs>> malwareStates) {
-            this.malwareStates = malwareStates;
+            $.malwareStates = malwareStates;
             return this;
         }
-        public Builder malwareStates(@Nullable List<InsightFiltersMalwareStateArgs> malwareStates) {
-            this.malwareStates = Codegen.ofNullable(malwareStates);
-            return this;
+
+        public Builder malwareStates(List<InsightFiltersMalwareStateArgs> malwareStates) {
+            return malwareStates(Output.of(malwareStates));
         }
+
         public Builder malwareStates(InsightFiltersMalwareStateArgs... malwareStates) {
             return malwareStates(List.of(malwareStates));
         }
+
         public Builder malwareTypes(@Nullable Output<List<InsightFiltersMalwareTypeArgs>> malwareTypes) {
-            this.malwareTypes = malwareTypes;
+            $.malwareTypes = malwareTypes;
             return this;
         }
-        public Builder malwareTypes(@Nullable List<InsightFiltersMalwareTypeArgs> malwareTypes) {
-            this.malwareTypes = Codegen.ofNullable(malwareTypes);
-            return this;
+
+        public Builder malwareTypes(List<InsightFiltersMalwareTypeArgs> malwareTypes) {
+            return malwareTypes(Output.of(malwareTypes));
         }
+
         public Builder malwareTypes(InsightFiltersMalwareTypeArgs... malwareTypes) {
             return malwareTypes(List.of(malwareTypes));
         }
+
         public Builder networkDestinationDomains(@Nullable Output<List<InsightFiltersNetworkDestinationDomainArgs>> networkDestinationDomains) {
-            this.networkDestinationDomains = networkDestinationDomains;
+            $.networkDestinationDomains = networkDestinationDomains;
             return this;
         }
-        public Builder networkDestinationDomains(@Nullable List<InsightFiltersNetworkDestinationDomainArgs> networkDestinationDomains) {
-            this.networkDestinationDomains = Codegen.ofNullable(networkDestinationDomains);
-            return this;
+
+        public Builder networkDestinationDomains(List<InsightFiltersNetworkDestinationDomainArgs> networkDestinationDomains) {
+            return networkDestinationDomains(Output.of(networkDestinationDomains));
         }
+
         public Builder networkDestinationDomains(InsightFiltersNetworkDestinationDomainArgs... networkDestinationDomains) {
             return networkDestinationDomains(List.of(networkDestinationDomains));
         }
+
         public Builder networkDestinationIpv4s(@Nullable Output<List<InsightFiltersNetworkDestinationIpv4Args>> networkDestinationIpv4s) {
-            this.networkDestinationIpv4s = networkDestinationIpv4s;
+            $.networkDestinationIpv4s = networkDestinationIpv4s;
             return this;
         }
-        public Builder networkDestinationIpv4s(@Nullable List<InsightFiltersNetworkDestinationIpv4Args> networkDestinationIpv4s) {
-            this.networkDestinationIpv4s = Codegen.ofNullable(networkDestinationIpv4s);
-            return this;
+
+        public Builder networkDestinationIpv4s(List<InsightFiltersNetworkDestinationIpv4Args> networkDestinationIpv4s) {
+            return networkDestinationIpv4s(Output.of(networkDestinationIpv4s));
         }
+
         public Builder networkDestinationIpv4s(InsightFiltersNetworkDestinationIpv4Args... networkDestinationIpv4s) {
             return networkDestinationIpv4s(List.of(networkDestinationIpv4s));
         }
+
         public Builder networkDestinationIpv6s(@Nullable Output<List<InsightFiltersNetworkDestinationIpv6Args>> networkDestinationIpv6s) {
-            this.networkDestinationIpv6s = networkDestinationIpv6s;
+            $.networkDestinationIpv6s = networkDestinationIpv6s;
             return this;
         }
-        public Builder networkDestinationIpv6s(@Nullable List<InsightFiltersNetworkDestinationIpv6Args> networkDestinationIpv6s) {
-            this.networkDestinationIpv6s = Codegen.ofNullable(networkDestinationIpv6s);
-            return this;
+
+        public Builder networkDestinationIpv6s(List<InsightFiltersNetworkDestinationIpv6Args> networkDestinationIpv6s) {
+            return networkDestinationIpv6s(Output.of(networkDestinationIpv6s));
         }
+
         public Builder networkDestinationIpv6s(InsightFiltersNetworkDestinationIpv6Args... networkDestinationIpv6s) {
             return networkDestinationIpv6s(List.of(networkDestinationIpv6s));
         }
+
         public Builder networkDestinationPorts(@Nullable Output<List<InsightFiltersNetworkDestinationPortArgs>> networkDestinationPorts) {
-            this.networkDestinationPorts = networkDestinationPorts;
+            $.networkDestinationPorts = networkDestinationPorts;
             return this;
         }
-        public Builder networkDestinationPorts(@Nullable List<InsightFiltersNetworkDestinationPortArgs> networkDestinationPorts) {
-            this.networkDestinationPorts = Codegen.ofNullable(networkDestinationPorts);
-            return this;
+
+        public Builder networkDestinationPorts(List<InsightFiltersNetworkDestinationPortArgs> networkDestinationPorts) {
+            return networkDestinationPorts(Output.of(networkDestinationPorts));
         }
+
         public Builder networkDestinationPorts(InsightFiltersNetworkDestinationPortArgs... networkDestinationPorts) {
             return networkDestinationPorts(List.of(networkDestinationPorts));
         }
+
         public Builder networkDirections(@Nullable Output<List<InsightFiltersNetworkDirectionArgs>> networkDirections) {
-            this.networkDirections = networkDirections;
+            $.networkDirections = networkDirections;
             return this;
         }
-        public Builder networkDirections(@Nullable List<InsightFiltersNetworkDirectionArgs> networkDirections) {
-            this.networkDirections = Codegen.ofNullable(networkDirections);
-            return this;
+
+        public Builder networkDirections(List<InsightFiltersNetworkDirectionArgs> networkDirections) {
+            return networkDirections(Output.of(networkDirections));
         }
+
         public Builder networkDirections(InsightFiltersNetworkDirectionArgs... networkDirections) {
             return networkDirections(List.of(networkDirections));
         }
+
         public Builder networkProtocols(@Nullable Output<List<InsightFiltersNetworkProtocolArgs>> networkProtocols) {
-            this.networkProtocols = networkProtocols;
+            $.networkProtocols = networkProtocols;
             return this;
         }
-        public Builder networkProtocols(@Nullable List<InsightFiltersNetworkProtocolArgs> networkProtocols) {
-            this.networkProtocols = Codegen.ofNullable(networkProtocols);
-            return this;
+
+        public Builder networkProtocols(List<InsightFiltersNetworkProtocolArgs> networkProtocols) {
+            return networkProtocols(Output.of(networkProtocols));
         }
+
         public Builder networkProtocols(InsightFiltersNetworkProtocolArgs... networkProtocols) {
             return networkProtocols(List.of(networkProtocols));
         }
+
         public Builder networkSourceDomains(@Nullable Output<List<InsightFiltersNetworkSourceDomainArgs>> networkSourceDomains) {
-            this.networkSourceDomains = networkSourceDomains;
+            $.networkSourceDomains = networkSourceDomains;
             return this;
         }
-        public Builder networkSourceDomains(@Nullable List<InsightFiltersNetworkSourceDomainArgs> networkSourceDomains) {
-            this.networkSourceDomains = Codegen.ofNullable(networkSourceDomains);
-            return this;
+
+        public Builder networkSourceDomains(List<InsightFiltersNetworkSourceDomainArgs> networkSourceDomains) {
+            return networkSourceDomains(Output.of(networkSourceDomains));
         }
+
         public Builder networkSourceDomains(InsightFiltersNetworkSourceDomainArgs... networkSourceDomains) {
             return networkSourceDomains(List.of(networkSourceDomains));
         }
+
         public Builder networkSourceIpv4s(@Nullable Output<List<InsightFiltersNetworkSourceIpv4Args>> networkSourceIpv4s) {
-            this.networkSourceIpv4s = networkSourceIpv4s;
+            $.networkSourceIpv4s = networkSourceIpv4s;
             return this;
         }
-        public Builder networkSourceIpv4s(@Nullable List<InsightFiltersNetworkSourceIpv4Args> networkSourceIpv4s) {
-            this.networkSourceIpv4s = Codegen.ofNullable(networkSourceIpv4s);
-            return this;
+
+        public Builder networkSourceIpv4s(List<InsightFiltersNetworkSourceIpv4Args> networkSourceIpv4s) {
+            return networkSourceIpv4s(Output.of(networkSourceIpv4s));
         }
+
         public Builder networkSourceIpv4s(InsightFiltersNetworkSourceIpv4Args... networkSourceIpv4s) {
             return networkSourceIpv4s(List.of(networkSourceIpv4s));
         }
+
         public Builder networkSourceIpv6s(@Nullable Output<List<InsightFiltersNetworkSourceIpv6Args>> networkSourceIpv6s) {
-            this.networkSourceIpv6s = networkSourceIpv6s;
+            $.networkSourceIpv6s = networkSourceIpv6s;
             return this;
         }
-        public Builder networkSourceIpv6s(@Nullable List<InsightFiltersNetworkSourceIpv6Args> networkSourceIpv6s) {
-            this.networkSourceIpv6s = Codegen.ofNullable(networkSourceIpv6s);
-            return this;
+
+        public Builder networkSourceIpv6s(List<InsightFiltersNetworkSourceIpv6Args> networkSourceIpv6s) {
+            return networkSourceIpv6s(Output.of(networkSourceIpv6s));
         }
+
         public Builder networkSourceIpv6s(InsightFiltersNetworkSourceIpv6Args... networkSourceIpv6s) {
             return networkSourceIpv6s(List.of(networkSourceIpv6s));
         }
+
         public Builder networkSourceMacs(@Nullable Output<List<InsightFiltersNetworkSourceMacArgs>> networkSourceMacs) {
-            this.networkSourceMacs = networkSourceMacs;
+            $.networkSourceMacs = networkSourceMacs;
             return this;
         }
-        public Builder networkSourceMacs(@Nullable List<InsightFiltersNetworkSourceMacArgs> networkSourceMacs) {
-            this.networkSourceMacs = Codegen.ofNullable(networkSourceMacs);
-            return this;
+
+        public Builder networkSourceMacs(List<InsightFiltersNetworkSourceMacArgs> networkSourceMacs) {
+            return networkSourceMacs(Output.of(networkSourceMacs));
         }
+
         public Builder networkSourceMacs(InsightFiltersNetworkSourceMacArgs... networkSourceMacs) {
             return networkSourceMacs(List.of(networkSourceMacs));
         }
+
         public Builder networkSourcePorts(@Nullable Output<List<InsightFiltersNetworkSourcePortArgs>> networkSourcePorts) {
-            this.networkSourcePorts = networkSourcePorts;
+            $.networkSourcePorts = networkSourcePorts;
             return this;
         }
-        public Builder networkSourcePorts(@Nullable List<InsightFiltersNetworkSourcePortArgs> networkSourcePorts) {
-            this.networkSourcePorts = Codegen.ofNullable(networkSourcePorts);
-            return this;
+
+        public Builder networkSourcePorts(List<InsightFiltersNetworkSourcePortArgs> networkSourcePorts) {
+            return networkSourcePorts(Output.of(networkSourcePorts));
         }
+
         public Builder networkSourcePorts(InsightFiltersNetworkSourcePortArgs... networkSourcePorts) {
             return networkSourcePorts(List.of(networkSourcePorts));
         }
+
         public Builder noteTexts(@Nullable Output<List<InsightFiltersNoteTextArgs>> noteTexts) {
-            this.noteTexts = noteTexts;
+            $.noteTexts = noteTexts;
             return this;
         }
-        public Builder noteTexts(@Nullable List<InsightFiltersNoteTextArgs> noteTexts) {
-            this.noteTexts = Codegen.ofNullable(noteTexts);
-            return this;
+
+        public Builder noteTexts(List<InsightFiltersNoteTextArgs> noteTexts) {
+            return noteTexts(Output.of(noteTexts));
         }
+
         public Builder noteTexts(InsightFiltersNoteTextArgs... noteTexts) {
             return noteTexts(List.of(noteTexts));
         }
+
         public Builder noteUpdatedAts(@Nullable Output<List<InsightFiltersNoteUpdatedAtArgs>> noteUpdatedAts) {
-            this.noteUpdatedAts = noteUpdatedAts;
+            $.noteUpdatedAts = noteUpdatedAts;
             return this;
         }
-        public Builder noteUpdatedAts(@Nullable List<InsightFiltersNoteUpdatedAtArgs> noteUpdatedAts) {
-            this.noteUpdatedAts = Codegen.ofNullable(noteUpdatedAts);
-            return this;
+
+        public Builder noteUpdatedAts(List<InsightFiltersNoteUpdatedAtArgs> noteUpdatedAts) {
+            return noteUpdatedAts(Output.of(noteUpdatedAts));
         }
+
         public Builder noteUpdatedAts(InsightFiltersNoteUpdatedAtArgs... noteUpdatedAts) {
             return noteUpdatedAts(List.of(noteUpdatedAts));
         }
+
         public Builder noteUpdatedBies(@Nullable Output<List<InsightFiltersNoteUpdatedByArgs>> noteUpdatedBies) {
-            this.noteUpdatedBies = noteUpdatedBies;
+            $.noteUpdatedBies = noteUpdatedBies;
             return this;
         }
-        public Builder noteUpdatedBies(@Nullable List<InsightFiltersNoteUpdatedByArgs> noteUpdatedBies) {
-            this.noteUpdatedBies = Codegen.ofNullable(noteUpdatedBies);
-            return this;
+
+        public Builder noteUpdatedBies(List<InsightFiltersNoteUpdatedByArgs> noteUpdatedBies) {
+            return noteUpdatedBies(Output.of(noteUpdatedBies));
         }
+
         public Builder noteUpdatedBies(InsightFiltersNoteUpdatedByArgs... noteUpdatedBies) {
             return noteUpdatedBies(List.of(noteUpdatedBies));
         }
+
         public Builder processLaunchedAts(@Nullable Output<List<InsightFiltersProcessLaunchedAtArgs>> processLaunchedAts) {
-            this.processLaunchedAts = processLaunchedAts;
+            $.processLaunchedAts = processLaunchedAts;
             return this;
         }
-        public Builder processLaunchedAts(@Nullable List<InsightFiltersProcessLaunchedAtArgs> processLaunchedAts) {
-            this.processLaunchedAts = Codegen.ofNullable(processLaunchedAts);
-            return this;
+
+        public Builder processLaunchedAts(List<InsightFiltersProcessLaunchedAtArgs> processLaunchedAts) {
+            return processLaunchedAts(Output.of(processLaunchedAts));
         }
+
         public Builder processLaunchedAts(InsightFiltersProcessLaunchedAtArgs... processLaunchedAts) {
             return processLaunchedAts(List.of(processLaunchedAts));
         }
+
         public Builder processNames(@Nullable Output<List<InsightFiltersProcessNameArgs>> processNames) {
-            this.processNames = processNames;
+            $.processNames = processNames;
             return this;
         }
-        public Builder processNames(@Nullable List<InsightFiltersProcessNameArgs> processNames) {
-            this.processNames = Codegen.ofNullable(processNames);
-            return this;
+
+        public Builder processNames(List<InsightFiltersProcessNameArgs> processNames) {
+            return processNames(Output.of(processNames));
         }
+
         public Builder processNames(InsightFiltersProcessNameArgs... processNames) {
             return processNames(List.of(processNames));
         }
+
         public Builder processParentPids(@Nullable Output<List<InsightFiltersProcessParentPidArgs>> processParentPids) {
-            this.processParentPids = processParentPids;
+            $.processParentPids = processParentPids;
             return this;
         }
-        public Builder processParentPids(@Nullable List<InsightFiltersProcessParentPidArgs> processParentPids) {
-            this.processParentPids = Codegen.ofNullable(processParentPids);
-            return this;
+
+        public Builder processParentPids(List<InsightFiltersProcessParentPidArgs> processParentPids) {
+            return processParentPids(Output.of(processParentPids));
         }
+
         public Builder processParentPids(InsightFiltersProcessParentPidArgs... processParentPids) {
             return processParentPids(List.of(processParentPids));
         }
+
         public Builder processPaths(@Nullable Output<List<InsightFiltersProcessPathArgs>> processPaths) {
-            this.processPaths = processPaths;
+            $.processPaths = processPaths;
             return this;
         }
-        public Builder processPaths(@Nullable List<InsightFiltersProcessPathArgs> processPaths) {
-            this.processPaths = Codegen.ofNullable(processPaths);
-            return this;
+
+        public Builder processPaths(List<InsightFiltersProcessPathArgs> processPaths) {
+            return processPaths(Output.of(processPaths));
         }
+
         public Builder processPaths(InsightFiltersProcessPathArgs... processPaths) {
             return processPaths(List.of(processPaths));
         }
+
         public Builder processPids(@Nullable Output<List<InsightFiltersProcessPidArgs>> processPids) {
-            this.processPids = processPids;
+            $.processPids = processPids;
             return this;
         }
-        public Builder processPids(@Nullable List<InsightFiltersProcessPidArgs> processPids) {
-            this.processPids = Codegen.ofNullable(processPids);
-            return this;
+
+        public Builder processPids(List<InsightFiltersProcessPidArgs> processPids) {
+            return processPids(Output.of(processPids));
         }
+
         public Builder processPids(InsightFiltersProcessPidArgs... processPids) {
             return processPids(List.of(processPids));
         }
+
         public Builder processTerminatedAts(@Nullable Output<List<InsightFiltersProcessTerminatedAtArgs>> processTerminatedAts) {
-            this.processTerminatedAts = processTerminatedAts;
+            $.processTerminatedAts = processTerminatedAts;
             return this;
         }
-        public Builder processTerminatedAts(@Nullable List<InsightFiltersProcessTerminatedAtArgs> processTerminatedAts) {
-            this.processTerminatedAts = Codegen.ofNullable(processTerminatedAts);
-            return this;
+
+        public Builder processTerminatedAts(List<InsightFiltersProcessTerminatedAtArgs> processTerminatedAts) {
+            return processTerminatedAts(Output.of(processTerminatedAts));
         }
+
         public Builder processTerminatedAts(InsightFiltersProcessTerminatedAtArgs... processTerminatedAts) {
             return processTerminatedAts(List.of(processTerminatedAts));
         }
+
         public Builder productArns(@Nullable Output<List<InsightFiltersProductArnArgs>> productArns) {
-            this.productArns = productArns;
+            $.productArns = productArns;
             return this;
         }
-        public Builder productArns(@Nullable List<InsightFiltersProductArnArgs> productArns) {
-            this.productArns = Codegen.ofNullable(productArns);
-            return this;
+
+        public Builder productArns(List<InsightFiltersProductArnArgs> productArns) {
+            return productArns(Output.of(productArns));
         }
+
         public Builder productArns(InsightFiltersProductArnArgs... productArns) {
             return productArns(List.of(productArns));
         }
+
         public Builder productFields(@Nullable Output<List<InsightFiltersProductFieldArgs>> productFields) {
-            this.productFields = productFields;
+            $.productFields = productFields;
             return this;
         }
-        public Builder productFields(@Nullable List<InsightFiltersProductFieldArgs> productFields) {
-            this.productFields = Codegen.ofNullable(productFields);
-            return this;
+
+        public Builder productFields(List<InsightFiltersProductFieldArgs> productFields) {
+            return productFields(Output.of(productFields));
         }
+
         public Builder productFields(InsightFiltersProductFieldArgs... productFields) {
             return productFields(List.of(productFields));
         }
+
         public Builder productNames(@Nullable Output<List<InsightFiltersProductNameArgs>> productNames) {
-            this.productNames = productNames;
+            $.productNames = productNames;
             return this;
         }
-        public Builder productNames(@Nullable List<InsightFiltersProductNameArgs> productNames) {
-            this.productNames = Codegen.ofNullable(productNames);
-            return this;
+
+        public Builder productNames(List<InsightFiltersProductNameArgs> productNames) {
+            return productNames(Output.of(productNames));
         }
+
         public Builder productNames(InsightFiltersProductNameArgs... productNames) {
             return productNames(List.of(productNames));
         }
+
         public Builder recommendationTexts(@Nullable Output<List<InsightFiltersRecommendationTextArgs>> recommendationTexts) {
-            this.recommendationTexts = recommendationTexts;
+            $.recommendationTexts = recommendationTexts;
             return this;
         }
-        public Builder recommendationTexts(@Nullable List<InsightFiltersRecommendationTextArgs> recommendationTexts) {
-            this.recommendationTexts = Codegen.ofNullable(recommendationTexts);
-            return this;
+
+        public Builder recommendationTexts(List<InsightFiltersRecommendationTextArgs> recommendationTexts) {
+            return recommendationTexts(Output.of(recommendationTexts));
         }
+
         public Builder recommendationTexts(InsightFiltersRecommendationTextArgs... recommendationTexts) {
             return recommendationTexts(List.of(recommendationTexts));
         }
+
         public Builder recordStates(@Nullable Output<List<InsightFiltersRecordStateArgs>> recordStates) {
-            this.recordStates = recordStates;
+            $.recordStates = recordStates;
             return this;
         }
-        public Builder recordStates(@Nullable List<InsightFiltersRecordStateArgs> recordStates) {
-            this.recordStates = Codegen.ofNullable(recordStates);
-            return this;
+
+        public Builder recordStates(List<InsightFiltersRecordStateArgs> recordStates) {
+            return recordStates(Output.of(recordStates));
         }
+
         public Builder recordStates(InsightFiltersRecordStateArgs... recordStates) {
             return recordStates(List.of(recordStates));
         }
+
         public Builder relatedFindingsIds(@Nullable Output<List<InsightFiltersRelatedFindingsIdArgs>> relatedFindingsIds) {
-            this.relatedFindingsIds = relatedFindingsIds;
+            $.relatedFindingsIds = relatedFindingsIds;
             return this;
         }
-        public Builder relatedFindingsIds(@Nullable List<InsightFiltersRelatedFindingsIdArgs> relatedFindingsIds) {
-            this.relatedFindingsIds = Codegen.ofNullable(relatedFindingsIds);
-            return this;
+
+        public Builder relatedFindingsIds(List<InsightFiltersRelatedFindingsIdArgs> relatedFindingsIds) {
+            return relatedFindingsIds(Output.of(relatedFindingsIds));
         }
+
         public Builder relatedFindingsIds(InsightFiltersRelatedFindingsIdArgs... relatedFindingsIds) {
             return relatedFindingsIds(List.of(relatedFindingsIds));
         }
+
         public Builder relatedFindingsProductArns(@Nullable Output<List<InsightFiltersRelatedFindingsProductArnArgs>> relatedFindingsProductArns) {
-            this.relatedFindingsProductArns = relatedFindingsProductArns;
+            $.relatedFindingsProductArns = relatedFindingsProductArns;
             return this;
         }
-        public Builder relatedFindingsProductArns(@Nullable List<InsightFiltersRelatedFindingsProductArnArgs> relatedFindingsProductArns) {
-            this.relatedFindingsProductArns = Codegen.ofNullable(relatedFindingsProductArns);
-            return this;
+
+        public Builder relatedFindingsProductArns(List<InsightFiltersRelatedFindingsProductArnArgs> relatedFindingsProductArns) {
+            return relatedFindingsProductArns(Output.of(relatedFindingsProductArns));
         }
+
         public Builder relatedFindingsProductArns(InsightFiltersRelatedFindingsProductArnArgs... relatedFindingsProductArns) {
             return relatedFindingsProductArns(List.of(relatedFindingsProductArns));
         }
+
         public Builder resourceAwsEc2InstanceIamInstanceProfileArns(@Nullable Output<List<InsightFiltersResourceAwsEc2InstanceIamInstanceProfileArnArgs>> resourceAwsEc2InstanceIamInstanceProfileArns) {
-            this.resourceAwsEc2InstanceIamInstanceProfileArns = resourceAwsEc2InstanceIamInstanceProfileArns;
+            $.resourceAwsEc2InstanceIamInstanceProfileArns = resourceAwsEc2InstanceIamInstanceProfileArns;
             return this;
         }
-        public Builder resourceAwsEc2InstanceIamInstanceProfileArns(@Nullable List<InsightFiltersResourceAwsEc2InstanceIamInstanceProfileArnArgs> resourceAwsEc2InstanceIamInstanceProfileArns) {
-            this.resourceAwsEc2InstanceIamInstanceProfileArns = Codegen.ofNullable(resourceAwsEc2InstanceIamInstanceProfileArns);
-            return this;
+
+        public Builder resourceAwsEc2InstanceIamInstanceProfileArns(List<InsightFiltersResourceAwsEc2InstanceIamInstanceProfileArnArgs> resourceAwsEc2InstanceIamInstanceProfileArns) {
+            return resourceAwsEc2InstanceIamInstanceProfileArns(Output.of(resourceAwsEc2InstanceIamInstanceProfileArns));
         }
+
         public Builder resourceAwsEc2InstanceIamInstanceProfileArns(InsightFiltersResourceAwsEc2InstanceIamInstanceProfileArnArgs... resourceAwsEc2InstanceIamInstanceProfileArns) {
             return resourceAwsEc2InstanceIamInstanceProfileArns(List.of(resourceAwsEc2InstanceIamInstanceProfileArns));
         }
+
         public Builder resourceAwsEc2InstanceImageIds(@Nullable Output<List<InsightFiltersResourceAwsEc2InstanceImageIdArgs>> resourceAwsEc2InstanceImageIds) {
-            this.resourceAwsEc2InstanceImageIds = resourceAwsEc2InstanceImageIds;
+            $.resourceAwsEc2InstanceImageIds = resourceAwsEc2InstanceImageIds;
             return this;
         }
-        public Builder resourceAwsEc2InstanceImageIds(@Nullable List<InsightFiltersResourceAwsEc2InstanceImageIdArgs> resourceAwsEc2InstanceImageIds) {
-            this.resourceAwsEc2InstanceImageIds = Codegen.ofNullable(resourceAwsEc2InstanceImageIds);
-            return this;
+
+        public Builder resourceAwsEc2InstanceImageIds(List<InsightFiltersResourceAwsEc2InstanceImageIdArgs> resourceAwsEc2InstanceImageIds) {
+            return resourceAwsEc2InstanceImageIds(Output.of(resourceAwsEc2InstanceImageIds));
         }
+
         public Builder resourceAwsEc2InstanceImageIds(InsightFiltersResourceAwsEc2InstanceImageIdArgs... resourceAwsEc2InstanceImageIds) {
             return resourceAwsEc2InstanceImageIds(List.of(resourceAwsEc2InstanceImageIds));
         }
+
         public Builder resourceAwsEc2InstanceIpv4Addresses(@Nullable Output<List<InsightFiltersResourceAwsEc2InstanceIpv4AddressArgs>> resourceAwsEc2InstanceIpv4Addresses) {
-            this.resourceAwsEc2InstanceIpv4Addresses = resourceAwsEc2InstanceIpv4Addresses;
+            $.resourceAwsEc2InstanceIpv4Addresses = resourceAwsEc2InstanceIpv4Addresses;
             return this;
         }
-        public Builder resourceAwsEc2InstanceIpv4Addresses(@Nullable List<InsightFiltersResourceAwsEc2InstanceIpv4AddressArgs> resourceAwsEc2InstanceIpv4Addresses) {
-            this.resourceAwsEc2InstanceIpv4Addresses = Codegen.ofNullable(resourceAwsEc2InstanceIpv4Addresses);
-            return this;
+
+        public Builder resourceAwsEc2InstanceIpv4Addresses(List<InsightFiltersResourceAwsEc2InstanceIpv4AddressArgs> resourceAwsEc2InstanceIpv4Addresses) {
+            return resourceAwsEc2InstanceIpv4Addresses(Output.of(resourceAwsEc2InstanceIpv4Addresses));
         }
+
         public Builder resourceAwsEc2InstanceIpv4Addresses(InsightFiltersResourceAwsEc2InstanceIpv4AddressArgs... resourceAwsEc2InstanceIpv4Addresses) {
             return resourceAwsEc2InstanceIpv4Addresses(List.of(resourceAwsEc2InstanceIpv4Addresses));
         }
+
         public Builder resourceAwsEc2InstanceIpv6Addresses(@Nullable Output<List<InsightFiltersResourceAwsEc2InstanceIpv6AddressArgs>> resourceAwsEc2InstanceIpv6Addresses) {
-            this.resourceAwsEc2InstanceIpv6Addresses = resourceAwsEc2InstanceIpv6Addresses;
+            $.resourceAwsEc2InstanceIpv6Addresses = resourceAwsEc2InstanceIpv6Addresses;
             return this;
         }
-        public Builder resourceAwsEc2InstanceIpv6Addresses(@Nullable List<InsightFiltersResourceAwsEc2InstanceIpv6AddressArgs> resourceAwsEc2InstanceIpv6Addresses) {
-            this.resourceAwsEc2InstanceIpv6Addresses = Codegen.ofNullable(resourceAwsEc2InstanceIpv6Addresses);
-            return this;
+
+        public Builder resourceAwsEc2InstanceIpv6Addresses(List<InsightFiltersResourceAwsEc2InstanceIpv6AddressArgs> resourceAwsEc2InstanceIpv6Addresses) {
+            return resourceAwsEc2InstanceIpv6Addresses(Output.of(resourceAwsEc2InstanceIpv6Addresses));
         }
+
         public Builder resourceAwsEc2InstanceIpv6Addresses(InsightFiltersResourceAwsEc2InstanceIpv6AddressArgs... resourceAwsEc2InstanceIpv6Addresses) {
             return resourceAwsEc2InstanceIpv6Addresses(List.of(resourceAwsEc2InstanceIpv6Addresses));
         }
+
         public Builder resourceAwsEc2InstanceKeyNames(@Nullable Output<List<InsightFiltersResourceAwsEc2InstanceKeyNameArgs>> resourceAwsEc2InstanceKeyNames) {
-            this.resourceAwsEc2InstanceKeyNames = resourceAwsEc2InstanceKeyNames;
+            $.resourceAwsEc2InstanceKeyNames = resourceAwsEc2InstanceKeyNames;
             return this;
         }
-        public Builder resourceAwsEc2InstanceKeyNames(@Nullable List<InsightFiltersResourceAwsEc2InstanceKeyNameArgs> resourceAwsEc2InstanceKeyNames) {
-            this.resourceAwsEc2InstanceKeyNames = Codegen.ofNullable(resourceAwsEc2InstanceKeyNames);
-            return this;
+
+        public Builder resourceAwsEc2InstanceKeyNames(List<InsightFiltersResourceAwsEc2InstanceKeyNameArgs> resourceAwsEc2InstanceKeyNames) {
+            return resourceAwsEc2InstanceKeyNames(Output.of(resourceAwsEc2InstanceKeyNames));
         }
+
         public Builder resourceAwsEc2InstanceKeyNames(InsightFiltersResourceAwsEc2InstanceKeyNameArgs... resourceAwsEc2InstanceKeyNames) {
             return resourceAwsEc2InstanceKeyNames(List.of(resourceAwsEc2InstanceKeyNames));
         }
+
         public Builder resourceAwsEc2InstanceLaunchedAts(@Nullable Output<List<InsightFiltersResourceAwsEc2InstanceLaunchedAtArgs>> resourceAwsEc2InstanceLaunchedAts) {
-            this.resourceAwsEc2InstanceLaunchedAts = resourceAwsEc2InstanceLaunchedAts;
+            $.resourceAwsEc2InstanceLaunchedAts = resourceAwsEc2InstanceLaunchedAts;
             return this;
         }
-        public Builder resourceAwsEc2InstanceLaunchedAts(@Nullable List<InsightFiltersResourceAwsEc2InstanceLaunchedAtArgs> resourceAwsEc2InstanceLaunchedAts) {
-            this.resourceAwsEc2InstanceLaunchedAts = Codegen.ofNullable(resourceAwsEc2InstanceLaunchedAts);
-            return this;
+
+        public Builder resourceAwsEc2InstanceLaunchedAts(List<InsightFiltersResourceAwsEc2InstanceLaunchedAtArgs> resourceAwsEc2InstanceLaunchedAts) {
+            return resourceAwsEc2InstanceLaunchedAts(Output.of(resourceAwsEc2InstanceLaunchedAts));
         }
+
         public Builder resourceAwsEc2InstanceLaunchedAts(InsightFiltersResourceAwsEc2InstanceLaunchedAtArgs... resourceAwsEc2InstanceLaunchedAts) {
             return resourceAwsEc2InstanceLaunchedAts(List.of(resourceAwsEc2InstanceLaunchedAts));
         }
+
         public Builder resourceAwsEc2InstanceSubnetIds(@Nullable Output<List<InsightFiltersResourceAwsEc2InstanceSubnetIdArgs>> resourceAwsEc2InstanceSubnetIds) {
-            this.resourceAwsEc2InstanceSubnetIds = resourceAwsEc2InstanceSubnetIds;
+            $.resourceAwsEc2InstanceSubnetIds = resourceAwsEc2InstanceSubnetIds;
             return this;
         }
-        public Builder resourceAwsEc2InstanceSubnetIds(@Nullable List<InsightFiltersResourceAwsEc2InstanceSubnetIdArgs> resourceAwsEc2InstanceSubnetIds) {
-            this.resourceAwsEc2InstanceSubnetIds = Codegen.ofNullable(resourceAwsEc2InstanceSubnetIds);
-            return this;
+
+        public Builder resourceAwsEc2InstanceSubnetIds(List<InsightFiltersResourceAwsEc2InstanceSubnetIdArgs> resourceAwsEc2InstanceSubnetIds) {
+            return resourceAwsEc2InstanceSubnetIds(Output.of(resourceAwsEc2InstanceSubnetIds));
         }
+
         public Builder resourceAwsEc2InstanceSubnetIds(InsightFiltersResourceAwsEc2InstanceSubnetIdArgs... resourceAwsEc2InstanceSubnetIds) {
             return resourceAwsEc2InstanceSubnetIds(List.of(resourceAwsEc2InstanceSubnetIds));
         }
+
         public Builder resourceAwsEc2InstanceTypes(@Nullable Output<List<InsightFiltersResourceAwsEc2InstanceTypeArgs>> resourceAwsEc2InstanceTypes) {
-            this.resourceAwsEc2InstanceTypes = resourceAwsEc2InstanceTypes;
+            $.resourceAwsEc2InstanceTypes = resourceAwsEc2InstanceTypes;
             return this;
         }
-        public Builder resourceAwsEc2InstanceTypes(@Nullable List<InsightFiltersResourceAwsEc2InstanceTypeArgs> resourceAwsEc2InstanceTypes) {
-            this.resourceAwsEc2InstanceTypes = Codegen.ofNullable(resourceAwsEc2InstanceTypes);
-            return this;
+
+        public Builder resourceAwsEc2InstanceTypes(List<InsightFiltersResourceAwsEc2InstanceTypeArgs> resourceAwsEc2InstanceTypes) {
+            return resourceAwsEc2InstanceTypes(Output.of(resourceAwsEc2InstanceTypes));
         }
+
         public Builder resourceAwsEc2InstanceTypes(InsightFiltersResourceAwsEc2InstanceTypeArgs... resourceAwsEc2InstanceTypes) {
             return resourceAwsEc2InstanceTypes(List.of(resourceAwsEc2InstanceTypes));
         }
+
         public Builder resourceAwsEc2InstanceVpcIds(@Nullable Output<List<InsightFiltersResourceAwsEc2InstanceVpcIdArgs>> resourceAwsEc2InstanceVpcIds) {
-            this.resourceAwsEc2InstanceVpcIds = resourceAwsEc2InstanceVpcIds;
+            $.resourceAwsEc2InstanceVpcIds = resourceAwsEc2InstanceVpcIds;
             return this;
         }
-        public Builder resourceAwsEc2InstanceVpcIds(@Nullable List<InsightFiltersResourceAwsEc2InstanceVpcIdArgs> resourceAwsEc2InstanceVpcIds) {
-            this.resourceAwsEc2InstanceVpcIds = Codegen.ofNullable(resourceAwsEc2InstanceVpcIds);
-            return this;
+
+        public Builder resourceAwsEc2InstanceVpcIds(List<InsightFiltersResourceAwsEc2InstanceVpcIdArgs> resourceAwsEc2InstanceVpcIds) {
+            return resourceAwsEc2InstanceVpcIds(Output.of(resourceAwsEc2InstanceVpcIds));
         }
+
         public Builder resourceAwsEc2InstanceVpcIds(InsightFiltersResourceAwsEc2InstanceVpcIdArgs... resourceAwsEc2InstanceVpcIds) {
             return resourceAwsEc2InstanceVpcIds(List.of(resourceAwsEc2InstanceVpcIds));
         }
+
         public Builder resourceAwsIamAccessKeyCreatedAts(@Nullable Output<List<InsightFiltersResourceAwsIamAccessKeyCreatedAtArgs>> resourceAwsIamAccessKeyCreatedAts) {
-            this.resourceAwsIamAccessKeyCreatedAts = resourceAwsIamAccessKeyCreatedAts;
+            $.resourceAwsIamAccessKeyCreatedAts = resourceAwsIamAccessKeyCreatedAts;
             return this;
         }
-        public Builder resourceAwsIamAccessKeyCreatedAts(@Nullable List<InsightFiltersResourceAwsIamAccessKeyCreatedAtArgs> resourceAwsIamAccessKeyCreatedAts) {
-            this.resourceAwsIamAccessKeyCreatedAts = Codegen.ofNullable(resourceAwsIamAccessKeyCreatedAts);
-            return this;
+
+        public Builder resourceAwsIamAccessKeyCreatedAts(List<InsightFiltersResourceAwsIamAccessKeyCreatedAtArgs> resourceAwsIamAccessKeyCreatedAts) {
+            return resourceAwsIamAccessKeyCreatedAts(Output.of(resourceAwsIamAccessKeyCreatedAts));
         }
+
         public Builder resourceAwsIamAccessKeyCreatedAts(InsightFiltersResourceAwsIamAccessKeyCreatedAtArgs... resourceAwsIamAccessKeyCreatedAts) {
             return resourceAwsIamAccessKeyCreatedAts(List.of(resourceAwsIamAccessKeyCreatedAts));
         }
+
         public Builder resourceAwsIamAccessKeyStatuses(@Nullable Output<List<InsightFiltersResourceAwsIamAccessKeyStatusArgs>> resourceAwsIamAccessKeyStatuses) {
-            this.resourceAwsIamAccessKeyStatuses = resourceAwsIamAccessKeyStatuses;
+            $.resourceAwsIamAccessKeyStatuses = resourceAwsIamAccessKeyStatuses;
             return this;
         }
-        public Builder resourceAwsIamAccessKeyStatuses(@Nullable List<InsightFiltersResourceAwsIamAccessKeyStatusArgs> resourceAwsIamAccessKeyStatuses) {
-            this.resourceAwsIamAccessKeyStatuses = Codegen.ofNullable(resourceAwsIamAccessKeyStatuses);
-            return this;
+
+        public Builder resourceAwsIamAccessKeyStatuses(List<InsightFiltersResourceAwsIamAccessKeyStatusArgs> resourceAwsIamAccessKeyStatuses) {
+            return resourceAwsIamAccessKeyStatuses(Output.of(resourceAwsIamAccessKeyStatuses));
         }
+
         public Builder resourceAwsIamAccessKeyStatuses(InsightFiltersResourceAwsIamAccessKeyStatusArgs... resourceAwsIamAccessKeyStatuses) {
             return resourceAwsIamAccessKeyStatuses(List.of(resourceAwsIamAccessKeyStatuses));
         }
+
         public Builder resourceAwsIamAccessKeyUserNames(@Nullable Output<List<InsightFiltersResourceAwsIamAccessKeyUserNameArgs>> resourceAwsIamAccessKeyUserNames) {
-            this.resourceAwsIamAccessKeyUserNames = resourceAwsIamAccessKeyUserNames;
+            $.resourceAwsIamAccessKeyUserNames = resourceAwsIamAccessKeyUserNames;
             return this;
         }
-        public Builder resourceAwsIamAccessKeyUserNames(@Nullable List<InsightFiltersResourceAwsIamAccessKeyUserNameArgs> resourceAwsIamAccessKeyUserNames) {
-            this.resourceAwsIamAccessKeyUserNames = Codegen.ofNullable(resourceAwsIamAccessKeyUserNames);
-            return this;
+
+        public Builder resourceAwsIamAccessKeyUserNames(List<InsightFiltersResourceAwsIamAccessKeyUserNameArgs> resourceAwsIamAccessKeyUserNames) {
+            return resourceAwsIamAccessKeyUserNames(Output.of(resourceAwsIamAccessKeyUserNames));
         }
+
         public Builder resourceAwsIamAccessKeyUserNames(InsightFiltersResourceAwsIamAccessKeyUserNameArgs... resourceAwsIamAccessKeyUserNames) {
             return resourceAwsIamAccessKeyUserNames(List.of(resourceAwsIamAccessKeyUserNames));
         }
+
         public Builder resourceAwsS3BucketOwnerIds(@Nullable Output<List<InsightFiltersResourceAwsS3BucketOwnerIdArgs>> resourceAwsS3BucketOwnerIds) {
-            this.resourceAwsS3BucketOwnerIds = resourceAwsS3BucketOwnerIds;
+            $.resourceAwsS3BucketOwnerIds = resourceAwsS3BucketOwnerIds;
             return this;
         }
-        public Builder resourceAwsS3BucketOwnerIds(@Nullable List<InsightFiltersResourceAwsS3BucketOwnerIdArgs> resourceAwsS3BucketOwnerIds) {
-            this.resourceAwsS3BucketOwnerIds = Codegen.ofNullable(resourceAwsS3BucketOwnerIds);
-            return this;
+
+        public Builder resourceAwsS3BucketOwnerIds(List<InsightFiltersResourceAwsS3BucketOwnerIdArgs> resourceAwsS3BucketOwnerIds) {
+            return resourceAwsS3BucketOwnerIds(Output.of(resourceAwsS3BucketOwnerIds));
         }
+
         public Builder resourceAwsS3BucketOwnerIds(InsightFiltersResourceAwsS3BucketOwnerIdArgs... resourceAwsS3BucketOwnerIds) {
             return resourceAwsS3BucketOwnerIds(List.of(resourceAwsS3BucketOwnerIds));
         }
+
         public Builder resourceAwsS3BucketOwnerNames(@Nullable Output<List<InsightFiltersResourceAwsS3BucketOwnerNameArgs>> resourceAwsS3BucketOwnerNames) {
-            this.resourceAwsS3BucketOwnerNames = resourceAwsS3BucketOwnerNames;
+            $.resourceAwsS3BucketOwnerNames = resourceAwsS3BucketOwnerNames;
             return this;
         }
-        public Builder resourceAwsS3BucketOwnerNames(@Nullable List<InsightFiltersResourceAwsS3BucketOwnerNameArgs> resourceAwsS3BucketOwnerNames) {
-            this.resourceAwsS3BucketOwnerNames = Codegen.ofNullable(resourceAwsS3BucketOwnerNames);
-            return this;
+
+        public Builder resourceAwsS3BucketOwnerNames(List<InsightFiltersResourceAwsS3BucketOwnerNameArgs> resourceAwsS3BucketOwnerNames) {
+            return resourceAwsS3BucketOwnerNames(Output.of(resourceAwsS3BucketOwnerNames));
         }
+
         public Builder resourceAwsS3BucketOwnerNames(InsightFiltersResourceAwsS3BucketOwnerNameArgs... resourceAwsS3BucketOwnerNames) {
             return resourceAwsS3BucketOwnerNames(List.of(resourceAwsS3BucketOwnerNames));
         }
+
         public Builder resourceContainerImageIds(@Nullable Output<List<InsightFiltersResourceContainerImageIdArgs>> resourceContainerImageIds) {
-            this.resourceContainerImageIds = resourceContainerImageIds;
+            $.resourceContainerImageIds = resourceContainerImageIds;
             return this;
         }
-        public Builder resourceContainerImageIds(@Nullable List<InsightFiltersResourceContainerImageIdArgs> resourceContainerImageIds) {
-            this.resourceContainerImageIds = Codegen.ofNullable(resourceContainerImageIds);
-            return this;
+
+        public Builder resourceContainerImageIds(List<InsightFiltersResourceContainerImageIdArgs> resourceContainerImageIds) {
+            return resourceContainerImageIds(Output.of(resourceContainerImageIds));
         }
+
         public Builder resourceContainerImageIds(InsightFiltersResourceContainerImageIdArgs... resourceContainerImageIds) {
             return resourceContainerImageIds(List.of(resourceContainerImageIds));
         }
+
         public Builder resourceContainerImageNames(@Nullable Output<List<InsightFiltersResourceContainerImageNameArgs>> resourceContainerImageNames) {
-            this.resourceContainerImageNames = resourceContainerImageNames;
+            $.resourceContainerImageNames = resourceContainerImageNames;
             return this;
         }
-        public Builder resourceContainerImageNames(@Nullable List<InsightFiltersResourceContainerImageNameArgs> resourceContainerImageNames) {
-            this.resourceContainerImageNames = Codegen.ofNullable(resourceContainerImageNames);
-            return this;
+
+        public Builder resourceContainerImageNames(List<InsightFiltersResourceContainerImageNameArgs> resourceContainerImageNames) {
+            return resourceContainerImageNames(Output.of(resourceContainerImageNames));
         }
+
         public Builder resourceContainerImageNames(InsightFiltersResourceContainerImageNameArgs... resourceContainerImageNames) {
             return resourceContainerImageNames(List.of(resourceContainerImageNames));
         }
+
         public Builder resourceContainerLaunchedAts(@Nullable Output<List<InsightFiltersResourceContainerLaunchedAtArgs>> resourceContainerLaunchedAts) {
-            this.resourceContainerLaunchedAts = resourceContainerLaunchedAts;
+            $.resourceContainerLaunchedAts = resourceContainerLaunchedAts;
             return this;
         }
-        public Builder resourceContainerLaunchedAts(@Nullable List<InsightFiltersResourceContainerLaunchedAtArgs> resourceContainerLaunchedAts) {
-            this.resourceContainerLaunchedAts = Codegen.ofNullable(resourceContainerLaunchedAts);
-            return this;
+
+        public Builder resourceContainerLaunchedAts(List<InsightFiltersResourceContainerLaunchedAtArgs> resourceContainerLaunchedAts) {
+            return resourceContainerLaunchedAts(Output.of(resourceContainerLaunchedAts));
         }
+
         public Builder resourceContainerLaunchedAts(InsightFiltersResourceContainerLaunchedAtArgs... resourceContainerLaunchedAts) {
             return resourceContainerLaunchedAts(List.of(resourceContainerLaunchedAts));
         }
+
         public Builder resourceContainerNames(@Nullable Output<List<InsightFiltersResourceContainerNameArgs>> resourceContainerNames) {
-            this.resourceContainerNames = resourceContainerNames;
+            $.resourceContainerNames = resourceContainerNames;
             return this;
         }
-        public Builder resourceContainerNames(@Nullable List<InsightFiltersResourceContainerNameArgs> resourceContainerNames) {
-            this.resourceContainerNames = Codegen.ofNullable(resourceContainerNames);
-            return this;
+
+        public Builder resourceContainerNames(List<InsightFiltersResourceContainerNameArgs> resourceContainerNames) {
+            return resourceContainerNames(Output.of(resourceContainerNames));
         }
+
         public Builder resourceContainerNames(InsightFiltersResourceContainerNameArgs... resourceContainerNames) {
             return resourceContainerNames(List.of(resourceContainerNames));
         }
+
         public Builder resourceDetailsOthers(@Nullable Output<List<InsightFiltersResourceDetailsOtherArgs>> resourceDetailsOthers) {
-            this.resourceDetailsOthers = resourceDetailsOthers;
+            $.resourceDetailsOthers = resourceDetailsOthers;
             return this;
         }
-        public Builder resourceDetailsOthers(@Nullable List<InsightFiltersResourceDetailsOtherArgs> resourceDetailsOthers) {
-            this.resourceDetailsOthers = Codegen.ofNullable(resourceDetailsOthers);
-            return this;
+
+        public Builder resourceDetailsOthers(List<InsightFiltersResourceDetailsOtherArgs> resourceDetailsOthers) {
+            return resourceDetailsOthers(Output.of(resourceDetailsOthers));
         }
+
         public Builder resourceDetailsOthers(InsightFiltersResourceDetailsOtherArgs... resourceDetailsOthers) {
             return resourceDetailsOthers(List.of(resourceDetailsOthers));
         }
+
         public Builder resourceIds(@Nullable Output<List<InsightFiltersResourceIdArgs>> resourceIds) {
-            this.resourceIds = resourceIds;
+            $.resourceIds = resourceIds;
             return this;
         }
-        public Builder resourceIds(@Nullable List<InsightFiltersResourceIdArgs> resourceIds) {
-            this.resourceIds = Codegen.ofNullable(resourceIds);
-            return this;
+
+        public Builder resourceIds(List<InsightFiltersResourceIdArgs> resourceIds) {
+            return resourceIds(Output.of(resourceIds));
         }
+
         public Builder resourceIds(InsightFiltersResourceIdArgs... resourceIds) {
             return resourceIds(List.of(resourceIds));
         }
+
         public Builder resourcePartitions(@Nullable Output<List<InsightFiltersResourcePartitionArgs>> resourcePartitions) {
-            this.resourcePartitions = resourcePartitions;
+            $.resourcePartitions = resourcePartitions;
             return this;
         }
-        public Builder resourcePartitions(@Nullable List<InsightFiltersResourcePartitionArgs> resourcePartitions) {
-            this.resourcePartitions = Codegen.ofNullable(resourcePartitions);
-            return this;
+
+        public Builder resourcePartitions(List<InsightFiltersResourcePartitionArgs> resourcePartitions) {
+            return resourcePartitions(Output.of(resourcePartitions));
         }
+
         public Builder resourcePartitions(InsightFiltersResourcePartitionArgs... resourcePartitions) {
             return resourcePartitions(List.of(resourcePartitions));
         }
+
         public Builder resourceRegions(@Nullable Output<List<InsightFiltersResourceRegionArgs>> resourceRegions) {
-            this.resourceRegions = resourceRegions;
+            $.resourceRegions = resourceRegions;
             return this;
         }
-        public Builder resourceRegions(@Nullable List<InsightFiltersResourceRegionArgs> resourceRegions) {
-            this.resourceRegions = Codegen.ofNullable(resourceRegions);
-            return this;
+
+        public Builder resourceRegions(List<InsightFiltersResourceRegionArgs> resourceRegions) {
+            return resourceRegions(Output.of(resourceRegions));
         }
+
         public Builder resourceRegions(InsightFiltersResourceRegionArgs... resourceRegions) {
             return resourceRegions(List.of(resourceRegions));
         }
+
         public Builder resourceTags(@Nullable Output<List<InsightFiltersResourceTagArgs>> resourceTags) {
-            this.resourceTags = resourceTags;
+            $.resourceTags = resourceTags;
             return this;
         }
-        public Builder resourceTags(@Nullable List<InsightFiltersResourceTagArgs> resourceTags) {
-            this.resourceTags = Codegen.ofNullable(resourceTags);
-            return this;
+
+        public Builder resourceTags(List<InsightFiltersResourceTagArgs> resourceTags) {
+            return resourceTags(Output.of(resourceTags));
         }
+
         public Builder resourceTags(InsightFiltersResourceTagArgs... resourceTags) {
             return resourceTags(List.of(resourceTags));
         }
+
         public Builder resourceTypes(@Nullable Output<List<InsightFiltersResourceTypeArgs>> resourceTypes) {
-            this.resourceTypes = resourceTypes;
+            $.resourceTypes = resourceTypes;
             return this;
         }
-        public Builder resourceTypes(@Nullable List<InsightFiltersResourceTypeArgs> resourceTypes) {
-            this.resourceTypes = Codegen.ofNullable(resourceTypes);
-            return this;
+
+        public Builder resourceTypes(List<InsightFiltersResourceTypeArgs> resourceTypes) {
+            return resourceTypes(Output.of(resourceTypes));
         }
+
         public Builder resourceTypes(InsightFiltersResourceTypeArgs... resourceTypes) {
             return resourceTypes(List.of(resourceTypes));
         }
+
         public Builder severityLabels(@Nullable Output<List<InsightFiltersSeverityLabelArgs>> severityLabels) {
-            this.severityLabels = severityLabels;
+            $.severityLabels = severityLabels;
             return this;
         }
-        public Builder severityLabels(@Nullable List<InsightFiltersSeverityLabelArgs> severityLabels) {
-            this.severityLabels = Codegen.ofNullable(severityLabels);
-            return this;
+
+        public Builder severityLabels(List<InsightFiltersSeverityLabelArgs> severityLabels) {
+            return severityLabels(Output.of(severityLabels));
         }
+
         public Builder severityLabels(InsightFiltersSeverityLabelArgs... severityLabels) {
             return severityLabels(List.of(severityLabels));
         }
+
         public Builder sourceUrls(@Nullable Output<List<InsightFiltersSourceUrlArgs>> sourceUrls) {
-            this.sourceUrls = sourceUrls;
+            $.sourceUrls = sourceUrls;
             return this;
         }
-        public Builder sourceUrls(@Nullable List<InsightFiltersSourceUrlArgs> sourceUrls) {
-            this.sourceUrls = Codegen.ofNullable(sourceUrls);
-            return this;
+
+        public Builder sourceUrls(List<InsightFiltersSourceUrlArgs> sourceUrls) {
+            return sourceUrls(Output.of(sourceUrls));
         }
+
         public Builder sourceUrls(InsightFiltersSourceUrlArgs... sourceUrls) {
             return sourceUrls(List.of(sourceUrls));
         }
+
         public Builder threatIntelIndicatorCategories(@Nullable Output<List<InsightFiltersThreatIntelIndicatorCategoryArgs>> threatIntelIndicatorCategories) {
-            this.threatIntelIndicatorCategories = threatIntelIndicatorCategories;
+            $.threatIntelIndicatorCategories = threatIntelIndicatorCategories;
             return this;
         }
-        public Builder threatIntelIndicatorCategories(@Nullable List<InsightFiltersThreatIntelIndicatorCategoryArgs> threatIntelIndicatorCategories) {
-            this.threatIntelIndicatorCategories = Codegen.ofNullable(threatIntelIndicatorCategories);
-            return this;
+
+        public Builder threatIntelIndicatorCategories(List<InsightFiltersThreatIntelIndicatorCategoryArgs> threatIntelIndicatorCategories) {
+            return threatIntelIndicatorCategories(Output.of(threatIntelIndicatorCategories));
         }
+
         public Builder threatIntelIndicatorCategories(InsightFiltersThreatIntelIndicatorCategoryArgs... threatIntelIndicatorCategories) {
             return threatIntelIndicatorCategories(List.of(threatIntelIndicatorCategories));
         }
+
         public Builder threatIntelIndicatorLastObservedAts(@Nullable Output<List<InsightFiltersThreatIntelIndicatorLastObservedAtArgs>> threatIntelIndicatorLastObservedAts) {
-            this.threatIntelIndicatorLastObservedAts = threatIntelIndicatorLastObservedAts;
+            $.threatIntelIndicatorLastObservedAts = threatIntelIndicatorLastObservedAts;
             return this;
         }
-        public Builder threatIntelIndicatorLastObservedAts(@Nullable List<InsightFiltersThreatIntelIndicatorLastObservedAtArgs> threatIntelIndicatorLastObservedAts) {
-            this.threatIntelIndicatorLastObservedAts = Codegen.ofNullable(threatIntelIndicatorLastObservedAts);
-            return this;
+
+        public Builder threatIntelIndicatorLastObservedAts(List<InsightFiltersThreatIntelIndicatorLastObservedAtArgs> threatIntelIndicatorLastObservedAts) {
+            return threatIntelIndicatorLastObservedAts(Output.of(threatIntelIndicatorLastObservedAts));
         }
+
         public Builder threatIntelIndicatorLastObservedAts(InsightFiltersThreatIntelIndicatorLastObservedAtArgs... threatIntelIndicatorLastObservedAts) {
             return threatIntelIndicatorLastObservedAts(List.of(threatIntelIndicatorLastObservedAts));
         }
+
         public Builder threatIntelIndicatorSourceUrls(@Nullable Output<List<InsightFiltersThreatIntelIndicatorSourceUrlArgs>> threatIntelIndicatorSourceUrls) {
-            this.threatIntelIndicatorSourceUrls = threatIntelIndicatorSourceUrls;
+            $.threatIntelIndicatorSourceUrls = threatIntelIndicatorSourceUrls;
             return this;
         }
-        public Builder threatIntelIndicatorSourceUrls(@Nullable List<InsightFiltersThreatIntelIndicatorSourceUrlArgs> threatIntelIndicatorSourceUrls) {
-            this.threatIntelIndicatorSourceUrls = Codegen.ofNullable(threatIntelIndicatorSourceUrls);
-            return this;
+
+        public Builder threatIntelIndicatorSourceUrls(List<InsightFiltersThreatIntelIndicatorSourceUrlArgs> threatIntelIndicatorSourceUrls) {
+            return threatIntelIndicatorSourceUrls(Output.of(threatIntelIndicatorSourceUrls));
         }
+
         public Builder threatIntelIndicatorSourceUrls(InsightFiltersThreatIntelIndicatorSourceUrlArgs... threatIntelIndicatorSourceUrls) {
             return threatIntelIndicatorSourceUrls(List.of(threatIntelIndicatorSourceUrls));
         }
+
         public Builder threatIntelIndicatorSources(@Nullable Output<List<InsightFiltersThreatIntelIndicatorSourceArgs>> threatIntelIndicatorSources) {
-            this.threatIntelIndicatorSources = threatIntelIndicatorSources;
+            $.threatIntelIndicatorSources = threatIntelIndicatorSources;
             return this;
         }
-        public Builder threatIntelIndicatorSources(@Nullable List<InsightFiltersThreatIntelIndicatorSourceArgs> threatIntelIndicatorSources) {
-            this.threatIntelIndicatorSources = Codegen.ofNullable(threatIntelIndicatorSources);
-            return this;
+
+        public Builder threatIntelIndicatorSources(List<InsightFiltersThreatIntelIndicatorSourceArgs> threatIntelIndicatorSources) {
+            return threatIntelIndicatorSources(Output.of(threatIntelIndicatorSources));
         }
+
         public Builder threatIntelIndicatorSources(InsightFiltersThreatIntelIndicatorSourceArgs... threatIntelIndicatorSources) {
             return threatIntelIndicatorSources(List.of(threatIntelIndicatorSources));
         }
+
         public Builder threatIntelIndicatorTypes(@Nullable Output<List<InsightFiltersThreatIntelIndicatorTypeArgs>> threatIntelIndicatorTypes) {
-            this.threatIntelIndicatorTypes = threatIntelIndicatorTypes;
+            $.threatIntelIndicatorTypes = threatIntelIndicatorTypes;
             return this;
         }
-        public Builder threatIntelIndicatorTypes(@Nullable List<InsightFiltersThreatIntelIndicatorTypeArgs> threatIntelIndicatorTypes) {
-            this.threatIntelIndicatorTypes = Codegen.ofNullable(threatIntelIndicatorTypes);
-            return this;
+
+        public Builder threatIntelIndicatorTypes(List<InsightFiltersThreatIntelIndicatorTypeArgs> threatIntelIndicatorTypes) {
+            return threatIntelIndicatorTypes(Output.of(threatIntelIndicatorTypes));
         }
+
         public Builder threatIntelIndicatorTypes(InsightFiltersThreatIntelIndicatorTypeArgs... threatIntelIndicatorTypes) {
             return threatIntelIndicatorTypes(List.of(threatIntelIndicatorTypes));
         }
+
         public Builder threatIntelIndicatorValues(@Nullable Output<List<InsightFiltersThreatIntelIndicatorValueArgs>> threatIntelIndicatorValues) {
-            this.threatIntelIndicatorValues = threatIntelIndicatorValues;
+            $.threatIntelIndicatorValues = threatIntelIndicatorValues;
             return this;
         }
-        public Builder threatIntelIndicatorValues(@Nullable List<InsightFiltersThreatIntelIndicatorValueArgs> threatIntelIndicatorValues) {
-            this.threatIntelIndicatorValues = Codegen.ofNullable(threatIntelIndicatorValues);
-            return this;
+
+        public Builder threatIntelIndicatorValues(List<InsightFiltersThreatIntelIndicatorValueArgs> threatIntelIndicatorValues) {
+            return threatIntelIndicatorValues(Output.of(threatIntelIndicatorValues));
         }
+
         public Builder threatIntelIndicatorValues(InsightFiltersThreatIntelIndicatorValueArgs... threatIntelIndicatorValues) {
             return threatIntelIndicatorValues(List.of(threatIntelIndicatorValues));
         }
+
         public Builder titles(@Nullable Output<List<InsightFiltersTitleArgs>> titles) {
-            this.titles = titles;
+            $.titles = titles;
             return this;
         }
-        public Builder titles(@Nullable List<InsightFiltersTitleArgs> titles) {
-            this.titles = Codegen.ofNullable(titles);
-            return this;
+
+        public Builder titles(List<InsightFiltersTitleArgs> titles) {
+            return titles(Output.of(titles));
         }
+
         public Builder titles(InsightFiltersTitleArgs... titles) {
             return titles(List.of(titles));
         }
+
         public Builder types(@Nullable Output<List<InsightFiltersTypeArgs>> types) {
-            this.types = types;
+            $.types = types;
             return this;
         }
-        public Builder types(@Nullable List<InsightFiltersTypeArgs> types) {
-            this.types = Codegen.ofNullable(types);
-            return this;
+
+        public Builder types(List<InsightFiltersTypeArgs> types) {
+            return types(Output.of(types));
         }
+
         public Builder types(InsightFiltersTypeArgs... types) {
             return types(List.of(types));
         }
+
         public Builder updatedAts(@Nullable Output<List<InsightFiltersUpdatedAtArgs>> updatedAts) {
-            this.updatedAts = updatedAts;
+            $.updatedAts = updatedAts;
             return this;
         }
-        public Builder updatedAts(@Nullable List<InsightFiltersUpdatedAtArgs> updatedAts) {
-            this.updatedAts = Codegen.ofNullable(updatedAts);
-            return this;
+
+        public Builder updatedAts(List<InsightFiltersUpdatedAtArgs> updatedAts) {
+            return updatedAts(Output.of(updatedAts));
         }
+
         public Builder updatedAts(InsightFiltersUpdatedAtArgs... updatedAts) {
             return updatedAts(List.of(updatedAts));
         }
+
         public Builder userDefinedValues(@Nullable Output<List<InsightFiltersUserDefinedValueArgs>> userDefinedValues) {
-            this.userDefinedValues = userDefinedValues;
+            $.userDefinedValues = userDefinedValues;
             return this;
         }
-        public Builder userDefinedValues(@Nullable List<InsightFiltersUserDefinedValueArgs> userDefinedValues) {
-            this.userDefinedValues = Codegen.ofNullable(userDefinedValues);
-            return this;
+
+        public Builder userDefinedValues(List<InsightFiltersUserDefinedValueArgs> userDefinedValues) {
+            return userDefinedValues(Output.of(userDefinedValues));
         }
+
         public Builder userDefinedValues(InsightFiltersUserDefinedValueArgs... userDefinedValues) {
             return userDefinedValues(List.of(userDefinedValues));
         }
+
         public Builder verificationStates(@Nullable Output<List<InsightFiltersVerificationStateArgs>> verificationStates) {
-            this.verificationStates = verificationStates;
+            $.verificationStates = verificationStates;
             return this;
         }
-        public Builder verificationStates(@Nullable List<InsightFiltersVerificationStateArgs> verificationStates) {
-            this.verificationStates = Codegen.ofNullable(verificationStates);
-            return this;
+
+        public Builder verificationStates(List<InsightFiltersVerificationStateArgs> verificationStates) {
+            return verificationStates(Output.of(verificationStates));
         }
+
         public Builder verificationStates(InsightFiltersVerificationStateArgs... verificationStates) {
             return verificationStates(List.of(verificationStates));
         }
+
         public Builder workflowStatuses(@Nullable Output<List<InsightFiltersWorkflowStatusArgs>> workflowStatuses) {
-            this.workflowStatuses = workflowStatuses;
+            $.workflowStatuses = workflowStatuses;
             return this;
         }
-        public Builder workflowStatuses(@Nullable List<InsightFiltersWorkflowStatusArgs> workflowStatuses) {
-            this.workflowStatuses = Codegen.ofNullable(workflowStatuses);
-            return this;
+
+        public Builder workflowStatuses(List<InsightFiltersWorkflowStatusArgs> workflowStatuses) {
+            return workflowStatuses(Output.of(workflowStatuses));
         }
+
         public Builder workflowStatuses(InsightFiltersWorkflowStatusArgs... workflowStatuses) {
             return workflowStatuses(List.of(workflowStatuses));
-        }        public InsightFiltersArgs build() {
-            return new InsightFiltersArgs(awsAccountIds, companyNames, complianceStatuses, confidences, createdAts, criticalities, descriptions, findingProviderFieldsConfidences, findingProviderFieldsCriticalities, findingProviderFieldsRelatedFindingsIds, findingProviderFieldsRelatedFindingsProductArns, findingProviderFieldsSeverityLabels, findingProviderFieldsSeverityOriginals, findingProviderFieldsTypes, firstObservedAts, generatorIds, ids, keywords, lastObservedAts, malwareNames, malwarePaths, malwareStates, malwareTypes, networkDestinationDomains, networkDestinationIpv4s, networkDestinationIpv6s, networkDestinationPorts, networkDirections, networkProtocols, networkSourceDomains, networkSourceIpv4s, networkSourceIpv6s, networkSourceMacs, networkSourcePorts, noteTexts, noteUpdatedAts, noteUpdatedBies, processLaunchedAts, processNames, processParentPids, processPaths, processPids, processTerminatedAts, productArns, productFields, productNames, recommendationTexts, recordStates, relatedFindingsIds, relatedFindingsProductArns, resourceAwsEc2InstanceIamInstanceProfileArns, resourceAwsEc2InstanceImageIds, resourceAwsEc2InstanceIpv4Addresses, resourceAwsEc2InstanceIpv6Addresses, resourceAwsEc2InstanceKeyNames, resourceAwsEc2InstanceLaunchedAts, resourceAwsEc2InstanceSubnetIds, resourceAwsEc2InstanceTypes, resourceAwsEc2InstanceVpcIds, resourceAwsIamAccessKeyCreatedAts, resourceAwsIamAccessKeyStatuses, resourceAwsIamAccessKeyUserNames, resourceAwsS3BucketOwnerIds, resourceAwsS3BucketOwnerNames, resourceContainerImageIds, resourceContainerImageNames, resourceContainerLaunchedAts, resourceContainerNames, resourceDetailsOthers, resourceIds, resourcePartitions, resourceRegions, resourceTags, resourceTypes, severityLabels, sourceUrls, threatIntelIndicatorCategories, threatIntelIndicatorLastObservedAts, threatIntelIndicatorSourceUrls, threatIntelIndicatorSources, threatIntelIndicatorTypes, threatIntelIndicatorValues, titles, types, updatedAts, userDefinedValues, verificationStates, workflowStatuses);
+        }
+
+        public InsightFiltersArgs build() {
+            return $;
         }
     }
+
 }

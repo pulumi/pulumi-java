@@ -5,9 +5,9 @@ package com.pulumi.azurenative.web.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ApiResourceBackendServiceArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="serviceUrl")
-      private final @Nullable Output<String> serviceUrl;
+    private @Nullable Output<String> serviceUrl;
 
-    public Output<String> serviceUrl() {
-        return this.serviceUrl == null ? Codegen.empty() : this.serviceUrl;
+    public Optional<Output<String>> serviceUrl() {
+        return Optional.ofNullable(this.serviceUrl);
     }
 
-    public ApiResourceBackendServiceArgs(@Nullable Output<String> serviceUrl) {
-        this.serviceUrl = serviceUrl;
-    }
+    private ApiResourceBackendServiceArgs() {}
 
-    private ApiResourceBackendServiceArgs() {
-        this.serviceUrl = Codegen.empty();
+    private ApiResourceBackendServiceArgs(ApiResourceBackendServiceArgs $) {
+        this.serviceUrl = $.serviceUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiResourceBackendServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> serviceUrl;
+        private ApiResourceBackendServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiResourceBackendServiceArgs();
         }
 
         public Builder(ApiResourceBackendServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.serviceUrl = defaults.serviceUrl;
+            $ = new ApiResourceBackendServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder serviceUrl(@Nullable Output<String> serviceUrl) {
-            this.serviceUrl = serviceUrl;
+            $.serviceUrl = serviceUrl;
             return this;
         }
-        public Builder serviceUrl(@Nullable String serviceUrl) {
-            this.serviceUrl = Codegen.ofNullable(serviceUrl);
-            return this;
-        }        public ApiResourceBackendServiceArgs build() {
-            return new ApiResourceBackendServiceArgs(serviceUrl);
+
+        public Builder serviceUrl(String serviceUrl) {
+            return serviceUrl(Output.of(serviceUrl));
+        }
+
+        public ApiResourceBackendServiceArgs build() {
+            return $;
         }
     }
+
 }

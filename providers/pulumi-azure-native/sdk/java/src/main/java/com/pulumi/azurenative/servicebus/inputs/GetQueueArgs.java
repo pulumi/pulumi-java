@@ -17,7 +17,7 @@ public final class GetQueueArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="namespaceName", required=true)
-      private final String namespaceName;
+    private String namespaceName;
 
     public String namespaceName() {
         return this.namespaceName;
@@ -28,7 +28,7 @@ public final class GetQueueArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="queueName", required=true)
-      private final String queueName;
+    private String queueName;
 
     public String queueName() {
         return this.queueName;
@@ -39,64 +39,59 @@ public final class GetQueueArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetQueueArgs(
-        String namespaceName,
-        String queueName,
-        String resourceGroupName) {
-        this.namespaceName = Objects.requireNonNull(namespaceName, "expected parameter 'namespaceName' to be non-null");
-        this.queueName = Objects.requireNonNull(queueName, "expected parameter 'queueName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetQueueArgs() {}
 
-    private GetQueueArgs() {
-        this.namespaceName = null;
-        this.queueName = null;
-        this.resourceGroupName = null;
+    private GetQueueArgs(GetQueueArgs $) {
+        this.namespaceName = $.namespaceName;
+        this.queueName = $.queueName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetQueueArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String namespaceName;
-        private String queueName;
-        private String resourceGroupName;
+        private GetQueueArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetQueueArgs();
         }
 
         public Builder(GetQueueArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.namespaceName = defaults.namespaceName;
-    	      this.queueName = defaults.queueName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetQueueArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder namespaceName(String namespaceName) {
-            this.namespaceName = Objects.requireNonNull(namespaceName);
+            $.namespaceName = namespaceName;
             return this;
         }
+
         public Builder queueName(String queueName) {
-            this.queueName = Objects.requireNonNull(queueName);
+            $.queueName = queueName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetQueueArgs build() {
-            return new GetQueueArgs(namespaceName, queueName, resourceGroupName);
+        }
+
+        public GetQueueArgs build() {
+            $.namespaceName = Objects.requireNonNull($.namespaceName, "expected parameter 'namespaceName' to be non-null");
+            $.queueName = Objects.requireNonNull($.queueName, "expected parameter 'queueName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -12,12 +12,12 @@ import com.pulumi.awsnative.synthetics.inputs.CanaryVPCConfigArgs;
 import com.pulumi.awsnative.synthetics.inputs.CanaryVisualReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,10 +30,10 @@ public final class CanaryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="artifactConfig")
-      private final @Nullable Output<CanaryArtifactConfigArgs> artifactConfig;
+    private @Nullable Output<CanaryArtifactConfigArgs> artifactConfig;
 
-    public Output<CanaryArtifactConfigArgs> artifactConfig() {
-        return this.artifactConfig == null ? Codegen.empty() : this.artifactConfig;
+    public Optional<Output<CanaryArtifactConfigArgs>> artifactConfig() {
+        return Optional.ofNullable(this.artifactConfig);
     }
 
     /**
@@ -41,7 +41,7 @@ public final class CanaryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="artifactS3Location", required=true)
-      private final Output<String> artifactS3Location;
+    private Output<String> artifactS3Location;
 
     public Output<String> artifactS3Location() {
         return this.artifactS3Location;
@@ -52,7 +52,7 @@ public final class CanaryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="code", required=true)
-      private final Output<CanaryCodeArgs> code;
+    private Output<CanaryCodeArgs> code;
 
     public Output<CanaryCodeArgs> code() {
         return this.code;
@@ -63,7 +63,7 @@ public final class CanaryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="executionRoleArn", required=true)
-      private final Output<String> executionRoleArn;
+    private Output<String> executionRoleArn;
 
     public Output<String> executionRoleArn() {
         return this.executionRoleArn;
@@ -74,10 +74,10 @@ public final class CanaryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="failureRetentionPeriod")
-      private final @Nullable Output<Integer> failureRetentionPeriod;
+    private @Nullable Output<Integer> failureRetentionPeriod;
 
-    public Output<Integer> failureRetentionPeriod() {
-        return this.failureRetentionPeriod == null ? Codegen.empty() : this.failureRetentionPeriod;
+    public Optional<Output<Integer>> failureRetentionPeriod() {
+        return Optional.ofNullable(this.failureRetentionPeriod);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class CanaryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -96,10 +96,10 @@ public final class CanaryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="runConfig")
-      private final @Nullable Output<CanaryRunConfigArgs> runConfig;
+    private @Nullable Output<CanaryRunConfigArgs> runConfig;
 
-    public Output<CanaryRunConfigArgs> runConfig() {
-        return this.runConfig == null ? Codegen.empty() : this.runConfig;
+    public Optional<Output<CanaryRunConfigArgs>> runConfig() {
+        return Optional.ofNullable(this.runConfig);
     }
 
     /**
@@ -107,7 +107,7 @@ public final class CanaryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="runtimeVersion", required=true)
-      private final Output<String> runtimeVersion;
+    private Output<String> runtimeVersion;
 
     public Output<String> runtimeVersion() {
         return this.runtimeVersion;
@@ -118,7 +118,7 @@ public final class CanaryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="schedule", required=true)
-      private final Output<CanaryScheduleArgs> schedule;
+    private Output<CanaryScheduleArgs> schedule;
 
     public Output<CanaryScheduleArgs> schedule() {
         return this.schedule;
@@ -129,7 +129,7 @@ public final class CanaryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="startCanaryAfterCreation", required=true)
-      private final Output<Boolean> startCanaryAfterCreation;
+    private Output<Boolean> startCanaryAfterCreation;
 
     public Output<Boolean> startCanaryAfterCreation() {
         return this.startCanaryAfterCreation;
@@ -140,17 +140,17 @@ public final class CanaryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="successRetentionPeriod")
-      private final @Nullable Output<Integer> successRetentionPeriod;
+    private @Nullable Output<Integer> successRetentionPeriod;
 
-    public Output<Integer> successRetentionPeriod() {
-        return this.successRetentionPeriod == null ? Codegen.empty() : this.successRetentionPeriod;
+    public Optional<Output<Integer>> successRetentionPeriod() {
+        return Optional.ofNullable(this.successRetentionPeriod);
     }
 
     @Import(name="tags")
-      private final @Nullable Output<List<CanaryTagArgs>> tags;
+    private @Nullable Output<List<CanaryTagArgs>> tags;
 
-    public Output<List<CanaryTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<CanaryTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -158,10 +158,10 @@ public final class CanaryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vPCConfig")
-      private final @Nullable Output<CanaryVPCConfigArgs> vPCConfig;
+    private @Nullable Output<CanaryVPCConfigArgs> vPCConfig;
 
-    public Output<CanaryVPCConfigArgs> vPCConfig() {
-        return this.vPCConfig == null ? Codegen.empty() : this.vPCConfig;
+    public Optional<Output<CanaryVPCConfigArgs>> vPCConfig() {
+        return Optional.ofNullable(this.vPCConfig);
     }
 
     /**
@@ -169,222 +169,188 @@ public final class CanaryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="visualReference")
-      private final @Nullable Output<CanaryVisualReferenceArgs> visualReference;
+    private @Nullable Output<CanaryVisualReferenceArgs> visualReference;
 
-    public Output<CanaryVisualReferenceArgs> visualReference() {
-        return this.visualReference == null ? Codegen.empty() : this.visualReference;
+    public Optional<Output<CanaryVisualReferenceArgs>> visualReference() {
+        return Optional.ofNullable(this.visualReference);
     }
 
-    public CanaryArgs(
-        @Nullable Output<CanaryArtifactConfigArgs> artifactConfig,
-        Output<String> artifactS3Location,
-        Output<CanaryCodeArgs> code,
-        Output<String> executionRoleArn,
-        @Nullable Output<Integer> failureRetentionPeriod,
-        @Nullable Output<String> name,
-        @Nullable Output<CanaryRunConfigArgs> runConfig,
-        Output<String> runtimeVersion,
-        Output<CanaryScheduleArgs> schedule,
-        Output<Boolean> startCanaryAfterCreation,
-        @Nullable Output<Integer> successRetentionPeriod,
-        @Nullable Output<List<CanaryTagArgs>> tags,
-        @Nullable Output<CanaryVPCConfigArgs> vPCConfig,
-        @Nullable Output<CanaryVisualReferenceArgs> visualReference) {
-        this.artifactConfig = artifactConfig;
-        this.artifactS3Location = Objects.requireNonNull(artifactS3Location, "expected parameter 'artifactS3Location' to be non-null");
-        this.code = Objects.requireNonNull(code, "expected parameter 'code' to be non-null");
-        this.executionRoleArn = Objects.requireNonNull(executionRoleArn, "expected parameter 'executionRoleArn' to be non-null");
-        this.failureRetentionPeriod = failureRetentionPeriod;
-        this.name = name;
-        this.runConfig = runConfig;
-        this.runtimeVersion = Objects.requireNonNull(runtimeVersion, "expected parameter 'runtimeVersion' to be non-null");
-        this.schedule = Objects.requireNonNull(schedule, "expected parameter 'schedule' to be non-null");
-        this.startCanaryAfterCreation = Objects.requireNonNull(startCanaryAfterCreation, "expected parameter 'startCanaryAfterCreation' to be non-null");
-        this.successRetentionPeriod = successRetentionPeriod;
-        this.tags = tags;
-        this.vPCConfig = vPCConfig;
-        this.visualReference = visualReference;
-    }
+    private CanaryArgs() {}
 
-    private CanaryArgs() {
-        this.artifactConfig = Codegen.empty();
-        this.artifactS3Location = Codegen.empty();
-        this.code = Codegen.empty();
-        this.executionRoleArn = Codegen.empty();
-        this.failureRetentionPeriod = Codegen.empty();
-        this.name = Codegen.empty();
-        this.runConfig = Codegen.empty();
-        this.runtimeVersion = Codegen.empty();
-        this.schedule = Codegen.empty();
-        this.startCanaryAfterCreation = Codegen.empty();
-        this.successRetentionPeriod = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.vPCConfig = Codegen.empty();
-        this.visualReference = Codegen.empty();
+    private CanaryArgs(CanaryArgs $) {
+        this.artifactConfig = $.artifactConfig;
+        this.artifactS3Location = $.artifactS3Location;
+        this.code = $.code;
+        this.executionRoleArn = $.executionRoleArn;
+        this.failureRetentionPeriod = $.failureRetentionPeriod;
+        this.name = $.name;
+        this.runConfig = $.runConfig;
+        this.runtimeVersion = $.runtimeVersion;
+        this.schedule = $.schedule;
+        this.startCanaryAfterCreation = $.startCanaryAfterCreation;
+        this.successRetentionPeriod = $.successRetentionPeriod;
+        this.tags = $.tags;
+        this.vPCConfig = $.vPCConfig;
+        this.visualReference = $.visualReference;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CanaryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CanaryArtifactConfigArgs> artifactConfig;
-        private Output<String> artifactS3Location;
-        private Output<CanaryCodeArgs> code;
-        private Output<String> executionRoleArn;
-        private @Nullable Output<Integer> failureRetentionPeriod;
-        private @Nullable Output<String> name;
-        private @Nullable Output<CanaryRunConfigArgs> runConfig;
-        private Output<String> runtimeVersion;
-        private Output<CanaryScheduleArgs> schedule;
-        private Output<Boolean> startCanaryAfterCreation;
-        private @Nullable Output<Integer> successRetentionPeriod;
-        private @Nullable Output<List<CanaryTagArgs>> tags;
-        private @Nullable Output<CanaryVPCConfigArgs> vPCConfig;
-        private @Nullable Output<CanaryVisualReferenceArgs> visualReference;
+        private CanaryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CanaryArgs();
         }
 
         public Builder(CanaryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.artifactConfig = defaults.artifactConfig;
-    	      this.artifactS3Location = defaults.artifactS3Location;
-    	      this.code = defaults.code;
-    	      this.executionRoleArn = defaults.executionRoleArn;
-    	      this.failureRetentionPeriod = defaults.failureRetentionPeriod;
-    	      this.name = defaults.name;
-    	      this.runConfig = defaults.runConfig;
-    	      this.runtimeVersion = defaults.runtimeVersion;
-    	      this.schedule = defaults.schedule;
-    	      this.startCanaryAfterCreation = defaults.startCanaryAfterCreation;
-    	      this.successRetentionPeriod = defaults.successRetentionPeriod;
-    	      this.tags = defaults.tags;
-    	      this.vPCConfig = defaults.vPCConfig;
-    	      this.visualReference = defaults.visualReference;
+            $ = new CanaryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder artifactConfig(@Nullable Output<CanaryArtifactConfigArgs> artifactConfig) {
-            this.artifactConfig = artifactConfig;
+            $.artifactConfig = artifactConfig;
             return this;
         }
-        public Builder artifactConfig(@Nullable CanaryArtifactConfigArgs artifactConfig) {
-            this.artifactConfig = Codegen.ofNullable(artifactConfig);
-            return this;
+
+        public Builder artifactConfig(CanaryArtifactConfigArgs artifactConfig) {
+            return artifactConfig(Output.of(artifactConfig));
         }
+
         public Builder artifactS3Location(Output<String> artifactS3Location) {
-            this.artifactS3Location = Objects.requireNonNull(artifactS3Location);
+            $.artifactS3Location = artifactS3Location;
             return this;
         }
+
         public Builder artifactS3Location(String artifactS3Location) {
-            this.artifactS3Location = Output.of(Objects.requireNonNull(artifactS3Location));
-            return this;
+            return artifactS3Location(Output.of(artifactS3Location));
         }
+
         public Builder code(Output<CanaryCodeArgs> code) {
-            this.code = Objects.requireNonNull(code);
+            $.code = code;
             return this;
         }
+
         public Builder code(CanaryCodeArgs code) {
-            this.code = Output.of(Objects.requireNonNull(code));
-            return this;
+            return code(Output.of(code));
         }
+
         public Builder executionRoleArn(Output<String> executionRoleArn) {
-            this.executionRoleArn = Objects.requireNonNull(executionRoleArn);
+            $.executionRoleArn = executionRoleArn;
             return this;
         }
+
         public Builder executionRoleArn(String executionRoleArn) {
-            this.executionRoleArn = Output.of(Objects.requireNonNull(executionRoleArn));
-            return this;
+            return executionRoleArn(Output.of(executionRoleArn));
         }
+
         public Builder failureRetentionPeriod(@Nullable Output<Integer> failureRetentionPeriod) {
-            this.failureRetentionPeriod = failureRetentionPeriod;
+            $.failureRetentionPeriod = failureRetentionPeriod;
             return this;
         }
-        public Builder failureRetentionPeriod(@Nullable Integer failureRetentionPeriod) {
-            this.failureRetentionPeriod = Codegen.ofNullable(failureRetentionPeriod);
-            return this;
+
+        public Builder failureRetentionPeriod(Integer failureRetentionPeriod) {
+            return failureRetentionPeriod(Output.of(failureRetentionPeriod));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder runConfig(@Nullable Output<CanaryRunConfigArgs> runConfig) {
-            this.runConfig = runConfig;
+            $.runConfig = runConfig;
             return this;
         }
-        public Builder runConfig(@Nullable CanaryRunConfigArgs runConfig) {
-            this.runConfig = Codegen.ofNullable(runConfig);
-            return this;
+
+        public Builder runConfig(CanaryRunConfigArgs runConfig) {
+            return runConfig(Output.of(runConfig));
         }
+
         public Builder runtimeVersion(Output<String> runtimeVersion) {
-            this.runtimeVersion = Objects.requireNonNull(runtimeVersion);
+            $.runtimeVersion = runtimeVersion;
             return this;
         }
+
         public Builder runtimeVersion(String runtimeVersion) {
-            this.runtimeVersion = Output.of(Objects.requireNonNull(runtimeVersion));
-            return this;
+            return runtimeVersion(Output.of(runtimeVersion));
         }
+
         public Builder schedule(Output<CanaryScheduleArgs> schedule) {
-            this.schedule = Objects.requireNonNull(schedule);
+            $.schedule = schedule;
             return this;
         }
+
         public Builder schedule(CanaryScheduleArgs schedule) {
-            this.schedule = Output.of(Objects.requireNonNull(schedule));
-            return this;
+            return schedule(Output.of(schedule));
         }
+
         public Builder startCanaryAfterCreation(Output<Boolean> startCanaryAfterCreation) {
-            this.startCanaryAfterCreation = Objects.requireNonNull(startCanaryAfterCreation);
+            $.startCanaryAfterCreation = startCanaryAfterCreation;
             return this;
         }
+
         public Builder startCanaryAfterCreation(Boolean startCanaryAfterCreation) {
-            this.startCanaryAfterCreation = Output.of(Objects.requireNonNull(startCanaryAfterCreation));
-            return this;
+            return startCanaryAfterCreation(Output.of(startCanaryAfterCreation));
         }
+
         public Builder successRetentionPeriod(@Nullable Output<Integer> successRetentionPeriod) {
-            this.successRetentionPeriod = successRetentionPeriod;
+            $.successRetentionPeriod = successRetentionPeriod;
             return this;
         }
-        public Builder successRetentionPeriod(@Nullable Integer successRetentionPeriod) {
-            this.successRetentionPeriod = Codegen.ofNullable(successRetentionPeriod);
-            return this;
+
+        public Builder successRetentionPeriod(Integer successRetentionPeriod) {
+            return successRetentionPeriod(Output.of(successRetentionPeriod));
         }
+
         public Builder tags(@Nullable Output<List<CanaryTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<CanaryTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<CanaryTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(CanaryTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder vPCConfig(@Nullable Output<CanaryVPCConfigArgs> vPCConfig) {
-            this.vPCConfig = vPCConfig;
+            $.vPCConfig = vPCConfig;
             return this;
         }
-        public Builder vPCConfig(@Nullable CanaryVPCConfigArgs vPCConfig) {
-            this.vPCConfig = Codegen.ofNullable(vPCConfig);
-            return this;
+
+        public Builder vPCConfig(CanaryVPCConfigArgs vPCConfig) {
+            return vPCConfig(Output.of(vPCConfig));
         }
+
         public Builder visualReference(@Nullable Output<CanaryVisualReferenceArgs> visualReference) {
-            this.visualReference = visualReference;
+            $.visualReference = visualReference;
             return this;
         }
-        public Builder visualReference(@Nullable CanaryVisualReferenceArgs visualReference) {
-            this.visualReference = Codegen.ofNullable(visualReference);
-            return this;
-        }        public CanaryArgs build() {
-            return new CanaryArgs(artifactConfig, artifactS3Location, code, executionRoleArn, failureRetentionPeriod, name, runConfig, runtimeVersion, schedule, startCanaryAfterCreation, successRetentionPeriod, tags, vPCConfig, visualReference);
+
+        public Builder visualReference(CanaryVisualReferenceArgs visualReference) {
+            return visualReference(Output.of(visualReference));
+        }
+
+        public CanaryArgs build() {
+            $.artifactS3Location = Objects.requireNonNull($.artifactS3Location, "expected parameter 'artifactS3Location' to be non-null");
+            $.code = Objects.requireNonNull($.code, "expected parameter 'code' to be non-null");
+            $.executionRoleArn = Objects.requireNonNull($.executionRoleArn, "expected parameter 'executionRoleArn' to be non-null");
+            $.runtimeVersion = Objects.requireNonNull($.runtimeVersion, "expected parameter 'runtimeVersion' to be non-null");
+            $.schedule = Objects.requireNonNull($.schedule, "expected parameter 'schedule' to be non-null");
+            $.startCanaryAfterCreation = Objects.requireNonNull($.startCanaryAfterCreation, "expected parameter 'startCanaryAfterCreation' to be non-null");
+            return $;
         }
     }
+
 }

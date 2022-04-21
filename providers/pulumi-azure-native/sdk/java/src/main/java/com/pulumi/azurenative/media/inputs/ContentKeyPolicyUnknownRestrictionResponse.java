@@ -23,45 +23,45 @@ public final class ContentKeyPolicyUnknownRestrictionResponse extends com.pulumi
      * 
      */
     @Import(name="odataType", required=true)
-      private final String odataType;
+    private String odataType;
 
     public String odataType() {
         return this.odataType;
     }
 
-    public ContentKeyPolicyUnknownRestrictionResponse(String odataType) {
-        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
-    }
+    private ContentKeyPolicyUnknownRestrictionResponse() {}
 
-    private ContentKeyPolicyUnknownRestrictionResponse() {
-        this.odataType = null;
+    private ContentKeyPolicyUnknownRestrictionResponse(ContentKeyPolicyUnknownRestrictionResponse $) {
+        this.odataType = $.odataType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContentKeyPolicyUnknownRestrictionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String odataType;
+        private ContentKeyPolicyUnknownRestrictionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContentKeyPolicyUnknownRestrictionResponse();
         }
 
         public Builder(ContentKeyPolicyUnknownRestrictionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.odataType = defaults.odataType;
+            $ = new ContentKeyPolicyUnknownRestrictionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
-        }        public ContentKeyPolicyUnknownRestrictionResponse build() {
-            return new ContentKeyPolicyUnknownRestrictionResponse(odataType);
+        }
+
+        public ContentKeyPolicyUnknownRestrictionResponse build() {
+            $.odataType = Codegen.stringProp("odataType").arg($.odataType).require();
+            return $;
         }
     }
+
 }

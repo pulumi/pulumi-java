@@ -15,45 +15,44 @@ public final class DistributionS3OriginConfig extends com.pulumi.resources.Invok
     public static final DistributionS3OriginConfig Empty = new DistributionS3OriginConfig();
 
     @Import(name="originAccessIdentity")
-      private final @Nullable String originAccessIdentity;
+    private @Nullable String originAccessIdentity;
 
     public Optional<String> originAccessIdentity() {
-        return this.originAccessIdentity == null ? Optional.empty() : Optional.ofNullable(this.originAccessIdentity);
+        return Optional.ofNullable(this.originAccessIdentity);
     }
 
-    public DistributionS3OriginConfig(@Nullable String originAccessIdentity) {
-        this.originAccessIdentity = originAccessIdentity;
-    }
+    private DistributionS3OriginConfig() {}
 
-    private DistributionS3OriginConfig() {
-        this.originAccessIdentity = null;
+    private DistributionS3OriginConfig(DistributionS3OriginConfig $) {
+        this.originAccessIdentity = $.originAccessIdentity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionS3OriginConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String originAccessIdentity;
+        private DistributionS3OriginConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionS3OriginConfig();
         }
 
         public Builder(DistributionS3OriginConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.originAccessIdentity = defaults.originAccessIdentity;
+            $ = new DistributionS3OriginConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder originAccessIdentity(@Nullable String originAccessIdentity) {
-            this.originAccessIdentity = originAccessIdentity;
+            $.originAccessIdentity = originAccessIdentity;
             return this;
-        }        public DistributionS3OriginConfig build() {
-            return new DistributionS3OriginConfig(originAccessIdentity);
+        }
+
+        public DistributionS3OriginConfig build() {
+            return $;
         }
     }
+
 }

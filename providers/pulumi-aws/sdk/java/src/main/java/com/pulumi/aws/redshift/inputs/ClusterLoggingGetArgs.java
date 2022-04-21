@@ -5,10 +5,10 @@ package com.pulumi.aws.redshift.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ClusterLoggingGetArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="bucketName")
-      private final @Nullable Output<String> bucketName;
+    private @Nullable Output<String> bucketName;
 
-    public Output<String> bucketName() {
-        return this.bucketName == null ? Codegen.empty() : this.bucketName;
+    public Optional<Output<String>> bucketName() {
+        return Optional.ofNullable(this.bucketName);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class ClusterLoggingGetArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="enable", required=true)
-      private final Output<Boolean> enable;
+    private Output<Boolean> enable;
 
     public Output<Boolean> enable() {
         return this.enable;
@@ -44,76 +44,69 @@ public final class ClusterLoggingGetArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="s3KeyPrefix")
-      private final @Nullable Output<String> s3KeyPrefix;
+    private @Nullable Output<String> s3KeyPrefix;
 
-    public Output<String> s3KeyPrefix() {
-        return this.s3KeyPrefix == null ? Codegen.empty() : this.s3KeyPrefix;
+    public Optional<Output<String>> s3KeyPrefix() {
+        return Optional.ofNullable(this.s3KeyPrefix);
     }
 
-    public ClusterLoggingGetArgs(
-        @Nullable Output<String> bucketName,
-        Output<Boolean> enable,
-        @Nullable Output<String> s3KeyPrefix) {
-        this.bucketName = bucketName;
-        this.enable = Objects.requireNonNull(enable, "expected parameter 'enable' to be non-null");
-        this.s3KeyPrefix = s3KeyPrefix;
-    }
+    private ClusterLoggingGetArgs() {}
 
-    private ClusterLoggingGetArgs() {
-        this.bucketName = Codegen.empty();
-        this.enable = Codegen.empty();
-        this.s3KeyPrefix = Codegen.empty();
+    private ClusterLoggingGetArgs(ClusterLoggingGetArgs $) {
+        this.bucketName = $.bucketName;
+        this.enable = $.enable;
+        this.s3KeyPrefix = $.s3KeyPrefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterLoggingGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> bucketName;
-        private Output<Boolean> enable;
-        private @Nullable Output<String> s3KeyPrefix;
+        private ClusterLoggingGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterLoggingGetArgs();
         }
 
         public Builder(ClusterLoggingGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucketName = defaults.bucketName;
-    	      this.enable = defaults.enable;
-    	      this.s3KeyPrefix = defaults.s3KeyPrefix;
+            $ = new ClusterLoggingGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucketName(@Nullable Output<String> bucketName) {
-            this.bucketName = bucketName;
+            $.bucketName = bucketName;
             return this;
         }
-        public Builder bucketName(@Nullable String bucketName) {
-            this.bucketName = Codegen.ofNullable(bucketName);
-            return this;
+
+        public Builder bucketName(String bucketName) {
+            return bucketName(Output.of(bucketName));
         }
+
         public Builder enable(Output<Boolean> enable) {
-            this.enable = Objects.requireNonNull(enable);
+            $.enable = enable;
             return this;
         }
+
         public Builder enable(Boolean enable) {
-            this.enable = Output.of(Objects.requireNonNull(enable));
-            return this;
+            return enable(Output.of(enable));
         }
+
         public Builder s3KeyPrefix(@Nullable Output<String> s3KeyPrefix) {
-            this.s3KeyPrefix = s3KeyPrefix;
+            $.s3KeyPrefix = s3KeyPrefix;
             return this;
         }
-        public Builder s3KeyPrefix(@Nullable String s3KeyPrefix) {
-            this.s3KeyPrefix = Codegen.ofNullable(s3KeyPrefix);
-            return this;
-        }        public ClusterLoggingGetArgs build() {
-            return new ClusterLoggingGetArgs(bucketName, enable, s3KeyPrefix);
+
+        public Builder s3KeyPrefix(String s3KeyPrefix) {
+            return s3KeyPrefix(Output.of(s3KeyPrefix));
+        }
+
+        public ClusterLoggingGetArgs build() {
+            $.enable = Objects.requireNonNull($.enable, "expected parameter 'enable' to be non-null");
+            return $;
         }
     }
+
 }

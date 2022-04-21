@@ -17,7 +17,7 @@ public final class GetSqlPoolArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetSqlPoolArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sqlPoolName", required=true)
-      private final String sqlPoolName;
+    private String sqlPoolName;
 
     public String sqlPoolName() {
         return this.sqlPoolName;
@@ -39,64 +39,59 @@ public final class GetSqlPoolArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final String workspaceName;
+    private String workspaceName;
 
     public String workspaceName() {
         return this.workspaceName;
     }
 
-    public GetSqlPoolArgs(
-        String resourceGroupName,
-        String sqlPoolName,
-        String workspaceName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sqlPoolName = Objects.requireNonNull(sqlPoolName, "expected parameter 'sqlPoolName' to be non-null");
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private GetSqlPoolArgs() {}
 
-    private GetSqlPoolArgs() {
-        this.resourceGroupName = null;
-        this.sqlPoolName = null;
-        this.workspaceName = null;
+    private GetSqlPoolArgs(GetSqlPoolArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.sqlPoolName = $.sqlPoolName;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSqlPoolArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String sqlPoolName;
-        private String workspaceName;
+        private GetSqlPoolArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSqlPoolArgs();
         }
 
         public Builder(GetSqlPoolArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sqlPoolName = defaults.sqlPoolName;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new GetSqlPoolArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder sqlPoolName(String sqlPoolName) {
-            this.sqlPoolName = Objects.requireNonNull(sqlPoolName);
+            $.sqlPoolName = sqlPoolName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
-        }        public GetSqlPoolArgs build() {
-            return new GetSqlPoolArgs(resourceGroupName, sqlPoolName, workspaceName);
+        }
+
+        public GetSqlPoolArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.sqlPoolName = Objects.requireNonNull($.sqlPoolName, "expected parameter 'sqlPoolName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

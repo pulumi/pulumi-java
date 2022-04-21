@@ -7,9 +7,9 @@ import com.pulumi.azurenative.compute.enums.EncryptionType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class EncryptionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="diskEncryptionSetId")
-      private final @Nullable Output<String> diskEncryptionSetId;
+    private @Nullable Output<String> diskEncryptionSetId;
 
-    public Output<String> diskEncryptionSetId() {
-        return this.diskEncryptionSetId == null ? Codegen.empty() : this.diskEncryptionSetId;
+    public Optional<Output<String>> diskEncryptionSetId() {
+        return Optional.ofNullable(this.diskEncryptionSetId);
     }
 
     /**
@@ -37,63 +37,58 @@ public final class EncryptionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<Either<String,EncryptionType>> type;
+    private @Nullable Output<Either<String,EncryptionType>> type;
 
-    public Output<Either<String,EncryptionType>> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<Either<String,EncryptionType>>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public EncryptionArgs(
-        @Nullable Output<String> diskEncryptionSetId,
-        @Nullable Output<Either<String,EncryptionType>> type) {
-        this.diskEncryptionSetId = diskEncryptionSetId;
-        this.type = type;
-    }
+    private EncryptionArgs() {}
 
-    private EncryptionArgs() {
-        this.diskEncryptionSetId = Codegen.empty();
-        this.type = Codegen.empty();
+    private EncryptionArgs(EncryptionArgs $) {
+        this.diskEncryptionSetId = $.diskEncryptionSetId;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EncryptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> diskEncryptionSetId;
-        private @Nullable Output<Either<String,EncryptionType>> type;
+        private EncryptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EncryptionArgs();
         }
 
         public Builder(EncryptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskEncryptionSetId = defaults.diskEncryptionSetId;
-    	      this.type = defaults.type;
+            $ = new EncryptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder diskEncryptionSetId(@Nullable Output<String> diskEncryptionSetId) {
-            this.diskEncryptionSetId = diskEncryptionSetId;
+            $.diskEncryptionSetId = diskEncryptionSetId;
             return this;
         }
-        public Builder diskEncryptionSetId(@Nullable String diskEncryptionSetId) {
-            this.diskEncryptionSetId = Codegen.ofNullable(diskEncryptionSetId);
-            return this;
+
+        public Builder diskEncryptionSetId(String diskEncryptionSetId) {
+            return diskEncryptionSetId(Output.of(diskEncryptionSetId));
         }
+
         public Builder type(@Nullable Output<Either<String,EncryptionType>> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable Either<String,EncryptionType> type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public EncryptionArgs build() {
-            return new EncryptionArgs(diskEncryptionSetId, type);
+
+        public Builder type(Either<String,EncryptionType> type) {
+            return type(Output.of(type));
+        }
+
+        public EncryptionArgs build() {
+            return $;
         }
     }
+
 }

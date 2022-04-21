@@ -5,10 +5,10 @@ package com.pulumi.azurenative.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class DataDiskImageEncryptionArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="diskEncryptionSetId")
-      private final @Nullable Output<String> diskEncryptionSetId;
+    private @Nullable Output<String> diskEncryptionSetId;
 
-    public Output<String> diskEncryptionSetId() {
-        return this.diskEncryptionSetId == null ? Codegen.empty() : this.diskEncryptionSetId;
+    public Optional<Output<String>> diskEncryptionSetId() {
+        return Optional.ofNullable(this.diskEncryptionSetId);
     }
 
     /**
@@ -36,63 +36,59 @@ public final class DataDiskImageEncryptionArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="lun", required=true)
-      private final Output<Integer> lun;
+    private Output<Integer> lun;
 
     public Output<Integer> lun() {
         return this.lun;
     }
 
-    public DataDiskImageEncryptionArgs(
-        @Nullable Output<String> diskEncryptionSetId,
-        Output<Integer> lun) {
-        this.diskEncryptionSetId = diskEncryptionSetId;
-        this.lun = Objects.requireNonNull(lun, "expected parameter 'lun' to be non-null");
-    }
+    private DataDiskImageEncryptionArgs() {}
 
-    private DataDiskImageEncryptionArgs() {
-        this.diskEncryptionSetId = Codegen.empty();
-        this.lun = Codegen.empty();
+    private DataDiskImageEncryptionArgs(DataDiskImageEncryptionArgs $) {
+        this.diskEncryptionSetId = $.diskEncryptionSetId;
+        this.lun = $.lun;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataDiskImageEncryptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> diskEncryptionSetId;
-        private Output<Integer> lun;
+        private DataDiskImageEncryptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataDiskImageEncryptionArgs();
         }
 
         public Builder(DataDiskImageEncryptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskEncryptionSetId = defaults.diskEncryptionSetId;
-    	      this.lun = defaults.lun;
+            $ = new DataDiskImageEncryptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder diskEncryptionSetId(@Nullable Output<String> diskEncryptionSetId) {
-            this.diskEncryptionSetId = diskEncryptionSetId;
+            $.diskEncryptionSetId = diskEncryptionSetId;
             return this;
         }
-        public Builder diskEncryptionSetId(@Nullable String diskEncryptionSetId) {
-            this.diskEncryptionSetId = Codegen.ofNullable(diskEncryptionSetId);
-            return this;
+
+        public Builder diskEncryptionSetId(String diskEncryptionSetId) {
+            return diskEncryptionSetId(Output.of(diskEncryptionSetId));
         }
+
         public Builder lun(Output<Integer> lun) {
-            this.lun = Objects.requireNonNull(lun);
+            $.lun = lun;
             return this;
         }
+
         public Builder lun(Integer lun) {
-            this.lun = Output.of(Objects.requireNonNull(lun));
-            return this;
-        }        public DataDiskImageEncryptionArgs build() {
-            return new DataDiskImageEncryptionArgs(diskEncryptionSetId, lun);
+            return lun(Output.of(lun));
+        }
+
+        public DataDiskImageEncryptionArgs build() {
+            $.lun = Objects.requireNonNull($.lun, "expected parameter 'lun' to be non-null");
+            return $;
         }
     }
+
 }

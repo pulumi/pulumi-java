@@ -24,10 +24,10 @@ public final class ResourceRequirementsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="limits")
-      private final @Nullable ResourceLimitsResponse limits;
+    private @Nullable ResourceLimitsResponse limits;
 
     public Optional<ResourceLimitsResponse> limits() {
-        return this.limits == null ? Optional.empty() : Optional.ofNullable(this.limits);
+        return Optional.ofNullable(this.limits);
     }
 
     /**
@@ -35,55 +35,51 @@ public final class ResourceRequirementsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="requests", required=true)
-      private final ResourceRequestsResponse requests;
+    private ResourceRequestsResponse requests;
 
     public ResourceRequestsResponse requests() {
         return this.requests;
     }
 
-    public ResourceRequirementsResponse(
-        @Nullable ResourceLimitsResponse limits,
-        ResourceRequestsResponse requests) {
-        this.limits = limits;
-        this.requests = Objects.requireNonNull(requests, "expected parameter 'requests' to be non-null");
-    }
+    private ResourceRequirementsResponse() {}
 
-    private ResourceRequirementsResponse() {
-        this.limits = null;
-        this.requests = null;
+    private ResourceRequirementsResponse(ResourceRequirementsResponse $) {
+        this.limits = $.limits;
+        this.requests = $.requests;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceRequirementsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ResourceLimitsResponse limits;
-        private ResourceRequestsResponse requests;
+        private ResourceRequirementsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceRequirementsResponse();
         }
 
         public Builder(ResourceRequirementsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.limits = defaults.limits;
-    	      this.requests = defaults.requests;
+            $ = new ResourceRequirementsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder limits(@Nullable ResourceLimitsResponse limits) {
-            this.limits = limits;
+            $.limits = limits;
             return this;
         }
+
         public Builder requests(ResourceRequestsResponse requests) {
-            this.requests = Objects.requireNonNull(requests);
+            $.requests = requests;
             return this;
-        }        public ResourceRequirementsResponse build() {
-            return new ResourceRequirementsResponse(limits, requests);
+        }
+
+        public ResourceRequirementsResponse build() {
+            $.requests = Objects.requireNonNull($.requests, "expected parameter 'requests' to be non-null");
+            return $;
         }
     }
+
 }

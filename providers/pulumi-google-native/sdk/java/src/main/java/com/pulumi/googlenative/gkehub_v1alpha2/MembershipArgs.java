@@ -5,13 +5,13 @@ package com.pulumi.googlenative.gkehub_v1alpha2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.gkehub_v1alpha2.enums.MembershipInfrastructureType;
 import com.pulumi.googlenative.gkehub_v1alpha2.inputs.AuthorityArgs;
 import com.pulumi.googlenative.gkehub_v1alpha2.inputs.MembershipEndpointArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class MembershipArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authority")
-      private final @Nullable Output<AuthorityArgs> authority;
+    private @Nullable Output<AuthorityArgs> authority;
 
-    public Output<AuthorityArgs> authority() {
-        return this.authority == null ? Codegen.empty() : this.authority;
+    public Optional<Output<AuthorityArgs>> authority() {
+        return Optional.ofNullable(this.authority);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class MembershipArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endpoint")
-      private final @Nullable Output<MembershipEndpointArgs> endpoint;
+    private @Nullable Output<MembershipEndpointArgs> endpoint;
 
-    public Output<MembershipEndpointArgs> endpoint() {
-        return this.endpoint == null ? Codegen.empty() : this.endpoint;
+    public Optional<Output<MembershipEndpointArgs>> endpoint() {
+        return Optional.ofNullable(this.endpoint);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class MembershipArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="externalId")
-      private final @Nullable Output<String> externalId;
+    private @Nullable Output<String> externalId;
 
-    public Output<String> externalId() {
-        return this.externalId == null ? Codegen.empty() : this.externalId;
+    public Optional<Output<String>> externalId() {
+        return Optional.ofNullable(this.externalId);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class MembershipArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="infrastructureType")
-      private final @Nullable Output<MembershipInfrastructureType> infrastructureType;
+    private @Nullable Output<MembershipInfrastructureType> infrastructureType;
 
-    public Output<MembershipInfrastructureType> infrastructureType() {
-        return this.infrastructureType == null ? Codegen.empty() : this.infrastructureType;
+    public Optional<Output<MembershipInfrastructureType>> infrastructureType() {
+        return Optional.ofNullable(this.infrastructureType);
     }
 
     /**
@@ -68,162 +68,140 @@ public final class MembershipArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     @Import(name="membershipId", required=true)
-      private final Output<String> membershipId;
+    private Output<String> membershipId;
 
     public Output<String> membershipId() {
         return this.membershipId;
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public MembershipArgs(
-        @Nullable Output<AuthorityArgs> authority,
-        @Nullable Output<MembershipEndpointArgs> endpoint,
-        @Nullable Output<String> externalId,
-        @Nullable Output<MembershipInfrastructureType> infrastructureType,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> location,
-        Output<String> membershipId,
-        @Nullable Output<String> project) {
-        this.authority = authority;
-        this.endpoint = endpoint;
-        this.externalId = externalId;
-        this.infrastructureType = infrastructureType;
-        this.labels = labels;
-        this.location = location;
-        this.membershipId = Objects.requireNonNull(membershipId, "expected parameter 'membershipId' to be non-null");
-        this.project = project;
-    }
+    private MembershipArgs() {}
 
-    private MembershipArgs() {
-        this.authority = Codegen.empty();
-        this.endpoint = Codegen.empty();
-        this.externalId = Codegen.empty();
-        this.infrastructureType = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.location = Codegen.empty();
-        this.membershipId = Codegen.empty();
-        this.project = Codegen.empty();
+    private MembershipArgs(MembershipArgs $) {
+        this.authority = $.authority;
+        this.endpoint = $.endpoint;
+        this.externalId = $.externalId;
+        this.infrastructureType = $.infrastructureType;
+        this.labels = $.labels;
+        this.location = $.location;
+        this.membershipId = $.membershipId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MembershipArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AuthorityArgs> authority;
-        private @Nullable Output<MembershipEndpointArgs> endpoint;
-        private @Nullable Output<String> externalId;
-        private @Nullable Output<MembershipInfrastructureType> infrastructureType;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> location;
-        private Output<String> membershipId;
-        private @Nullable Output<String> project;
+        private MembershipArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MembershipArgs();
         }
 
         public Builder(MembershipArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authority = defaults.authority;
-    	      this.endpoint = defaults.endpoint;
-    	      this.externalId = defaults.externalId;
-    	      this.infrastructureType = defaults.infrastructureType;
-    	      this.labels = defaults.labels;
-    	      this.location = defaults.location;
-    	      this.membershipId = defaults.membershipId;
-    	      this.project = defaults.project;
+            $ = new MembershipArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authority(@Nullable Output<AuthorityArgs> authority) {
-            this.authority = authority;
+            $.authority = authority;
             return this;
         }
-        public Builder authority(@Nullable AuthorityArgs authority) {
-            this.authority = Codegen.ofNullable(authority);
-            return this;
+
+        public Builder authority(AuthorityArgs authority) {
+            return authority(Output.of(authority));
         }
+
         public Builder endpoint(@Nullable Output<MembershipEndpointArgs> endpoint) {
-            this.endpoint = endpoint;
+            $.endpoint = endpoint;
             return this;
         }
-        public Builder endpoint(@Nullable MembershipEndpointArgs endpoint) {
-            this.endpoint = Codegen.ofNullable(endpoint);
-            return this;
+
+        public Builder endpoint(MembershipEndpointArgs endpoint) {
+            return endpoint(Output.of(endpoint));
         }
+
         public Builder externalId(@Nullable Output<String> externalId) {
-            this.externalId = externalId;
+            $.externalId = externalId;
             return this;
         }
-        public Builder externalId(@Nullable String externalId) {
-            this.externalId = Codegen.ofNullable(externalId);
-            return this;
+
+        public Builder externalId(String externalId) {
+            return externalId(Output.of(externalId));
         }
+
         public Builder infrastructureType(@Nullable Output<MembershipInfrastructureType> infrastructureType) {
-            this.infrastructureType = infrastructureType;
+            $.infrastructureType = infrastructureType;
             return this;
         }
-        public Builder infrastructureType(@Nullable MembershipInfrastructureType infrastructureType) {
-            this.infrastructureType = Codegen.ofNullable(infrastructureType);
-            return this;
+
+        public Builder infrastructureType(MembershipInfrastructureType infrastructureType) {
+            return infrastructureType(Output.of(infrastructureType));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder membershipId(Output<String> membershipId) {
-            this.membershipId = Objects.requireNonNull(membershipId);
+            $.membershipId = membershipId;
             return this;
         }
+
         public Builder membershipId(String membershipId) {
-            this.membershipId = Output.of(Objects.requireNonNull(membershipId));
-            return this;
+            return membershipId(Output.of(membershipId));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public MembershipArgs build() {
-            return new MembershipArgs(authority, endpoint, externalId, infrastructureType, labels, location, membershipId, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public MembershipArgs build() {
+            $.membershipId = Objects.requireNonNull($.membershipId, "expected parameter 'membershipId' to be non-null");
+            return $;
         }
     }
+
 }

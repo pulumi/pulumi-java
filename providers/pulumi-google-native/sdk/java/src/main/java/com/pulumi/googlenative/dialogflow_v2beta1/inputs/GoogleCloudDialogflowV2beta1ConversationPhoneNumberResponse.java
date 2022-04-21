@@ -21,45 +21,45 @@ public final class GoogleCloudDialogflowV2beta1ConversationPhoneNumberResponse e
      * 
      */
     @Import(name="phoneNumber", required=true)
-      private final String phoneNumber;
+    private String phoneNumber;
 
     public String phoneNumber() {
         return this.phoneNumber;
     }
 
-    public GoogleCloudDialogflowV2beta1ConversationPhoneNumberResponse(String phoneNumber) {
-        this.phoneNumber = Objects.requireNonNull(phoneNumber, "expected parameter 'phoneNumber' to be non-null");
-    }
+    private GoogleCloudDialogflowV2beta1ConversationPhoneNumberResponse() {}
 
-    private GoogleCloudDialogflowV2beta1ConversationPhoneNumberResponse() {
-        this.phoneNumber = null;
+    private GoogleCloudDialogflowV2beta1ConversationPhoneNumberResponse(GoogleCloudDialogflowV2beta1ConversationPhoneNumberResponse $) {
+        this.phoneNumber = $.phoneNumber;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2beta1ConversationPhoneNumberResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String phoneNumber;
+        private GoogleCloudDialogflowV2beta1ConversationPhoneNumberResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2beta1ConversationPhoneNumberResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2beta1ConversationPhoneNumberResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.phoneNumber = defaults.phoneNumber;
+            $ = new GoogleCloudDialogflowV2beta1ConversationPhoneNumberResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder phoneNumber(String phoneNumber) {
-            this.phoneNumber = Objects.requireNonNull(phoneNumber);
+            $.phoneNumber = phoneNumber;
             return this;
-        }        public GoogleCloudDialogflowV2beta1ConversationPhoneNumberResponse build() {
-            return new GoogleCloudDialogflowV2beta1ConversationPhoneNumberResponse(phoneNumber);
+        }
+
+        public GoogleCloudDialogflowV2beta1ConversationPhoneNumberResponse build() {
+            $.phoneNumber = Objects.requireNonNull($.phoneNumber, "expected parameter 'phoneNumber' to be non-null");
+            return $;
         }
     }
+
 }

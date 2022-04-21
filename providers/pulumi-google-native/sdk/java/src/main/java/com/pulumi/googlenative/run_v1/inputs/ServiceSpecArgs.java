@@ -5,11 +5,11 @@ package com.pulumi.googlenative.run_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.run_v1.inputs.RevisionTemplateArgs;
 import com.pulumi.googlenative.run_v1.inputs.TrafficTargetArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ServiceSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="template")
-      private final @Nullable Output<RevisionTemplateArgs> template;
+    private @Nullable Output<RevisionTemplateArgs> template;
 
-    public Output<RevisionTemplateArgs> template() {
-        return this.template == null ? Codegen.empty() : this.template;
+    public Optional<Output<RevisionTemplateArgs>> template() {
+        return Optional.ofNullable(this.template);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class ServiceSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="traffic")
-      private final @Nullable Output<List<TrafficTargetArgs>> traffic;
+    private @Nullable Output<List<TrafficTargetArgs>> traffic;
 
-    public Output<List<TrafficTargetArgs>> traffic() {
-        return this.traffic == null ? Codegen.empty() : this.traffic;
+    public Optional<Output<List<TrafficTargetArgs>>> traffic() {
+        return Optional.ofNullable(this.traffic);
     }
 
-    public ServiceSpecArgs(
-        @Nullable Output<RevisionTemplateArgs> template,
-        @Nullable Output<List<TrafficTargetArgs>> traffic) {
-        this.template = template;
-        this.traffic = traffic;
-    }
+    private ServiceSpecArgs() {}
 
-    private ServiceSpecArgs() {
-        this.template = Codegen.empty();
-        this.traffic = Codegen.empty();
+    private ServiceSpecArgs(ServiceSpecArgs $) {
+        this.template = $.template;
+        this.traffic = $.traffic;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<RevisionTemplateArgs> template;
-        private @Nullable Output<List<TrafficTargetArgs>> traffic;
+        private ServiceSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceSpecArgs();
         }
 
         public Builder(ServiceSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.template = defaults.template;
-    	      this.traffic = defaults.traffic;
+            $ = new ServiceSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder template(@Nullable Output<RevisionTemplateArgs> template) {
-            this.template = template;
+            $.template = template;
             return this;
         }
-        public Builder template(@Nullable RevisionTemplateArgs template) {
-            this.template = Codegen.ofNullable(template);
-            return this;
+
+        public Builder template(RevisionTemplateArgs template) {
+            return template(Output.of(template));
         }
+
         public Builder traffic(@Nullable Output<List<TrafficTargetArgs>> traffic) {
-            this.traffic = traffic;
+            $.traffic = traffic;
             return this;
         }
-        public Builder traffic(@Nullable List<TrafficTargetArgs> traffic) {
-            this.traffic = Codegen.ofNullable(traffic);
-            return this;
+
+        public Builder traffic(List<TrafficTargetArgs> traffic) {
+            return traffic(Output.of(traffic));
         }
+
         public Builder traffic(TrafficTargetArgs... traffic) {
             return traffic(List.of(traffic));
-        }        public ServiceSpecArgs build() {
-            return new ServiceSpecArgs(template, traffic);
+        }
+
+        public ServiceSpecArgs build() {
+            return $;
         }
     }
+
 }

@@ -26,7 +26,7 @@ public final class V2RestrictionsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="androidKeyRestrictions", required=true)
-      private final V2AndroidKeyRestrictionsResponse androidKeyRestrictions;
+    private V2AndroidKeyRestrictionsResponse androidKeyRestrictions;
 
     public V2AndroidKeyRestrictionsResponse androidKeyRestrictions() {
         return this.androidKeyRestrictions;
@@ -37,7 +37,7 @@ public final class V2RestrictionsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="apiTargets", required=true)
-      private final List<V2ApiTargetResponse> apiTargets;
+    private List<V2ApiTargetResponse> apiTargets;
 
     public List<V2ApiTargetResponse> apiTargets() {
         return this.apiTargets;
@@ -48,7 +48,7 @@ public final class V2RestrictionsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="browserKeyRestrictions", required=true)
-      private final V2BrowserKeyRestrictionsResponse browserKeyRestrictions;
+    private V2BrowserKeyRestrictionsResponse browserKeyRestrictions;
 
     public V2BrowserKeyRestrictionsResponse browserKeyRestrictions() {
         return this.browserKeyRestrictions;
@@ -59,7 +59,7 @@ public final class V2RestrictionsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="iosKeyRestrictions", required=true)
-      private final V2IosKeyRestrictionsResponse iosKeyRestrictions;
+    private V2IosKeyRestrictionsResponse iosKeyRestrictions;
 
     public V2IosKeyRestrictionsResponse iosKeyRestrictions() {
         return this.iosKeyRestrictions;
@@ -70,85 +70,77 @@ public final class V2RestrictionsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="serverKeyRestrictions", required=true)
-      private final V2ServerKeyRestrictionsResponse serverKeyRestrictions;
+    private V2ServerKeyRestrictionsResponse serverKeyRestrictions;
 
     public V2ServerKeyRestrictionsResponse serverKeyRestrictions() {
         return this.serverKeyRestrictions;
     }
 
-    public V2RestrictionsResponse(
-        V2AndroidKeyRestrictionsResponse androidKeyRestrictions,
-        List<V2ApiTargetResponse> apiTargets,
-        V2BrowserKeyRestrictionsResponse browserKeyRestrictions,
-        V2IosKeyRestrictionsResponse iosKeyRestrictions,
-        V2ServerKeyRestrictionsResponse serverKeyRestrictions) {
-        this.androidKeyRestrictions = Objects.requireNonNull(androidKeyRestrictions, "expected parameter 'androidKeyRestrictions' to be non-null");
-        this.apiTargets = Objects.requireNonNull(apiTargets, "expected parameter 'apiTargets' to be non-null");
-        this.browserKeyRestrictions = Objects.requireNonNull(browserKeyRestrictions, "expected parameter 'browserKeyRestrictions' to be non-null");
-        this.iosKeyRestrictions = Objects.requireNonNull(iosKeyRestrictions, "expected parameter 'iosKeyRestrictions' to be non-null");
-        this.serverKeyRestrictions = Objects.requireNonNull(serverKeyRestrictions, "expected parameter 'serverKeyRestrictions' to be non-null");
-    }
+    private V2RestrictionsResponse() {}
 
-    private V2RestrictionsResponse() {
-        this.androidKeyRestrictions = null;
-        this.apiTargets = List.of();
-        this.browserKeyRestrictions = null;
-        this.iosKeyRestrictions = null;
-        this.serverKeyRestrictions = null;
+    private V2RestrictionsResponse(V2RestrictionsResponse $) {
+        this.androidKeyRestrictions = $.androidKeyRestrictions;
+        this.apiTargets = $.apiTargets;
+        this.browserKeyRestrictions = $.browserKeyRestrictions;
+        this.iosKeyRestrictions = $.iosKeyRestrictions;
+        this.serverKeyRestrictions = $.serverKeyRestrictions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(V2RestrictionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private V2AndroidKeyRestrictionsResponse androidKeyRestrictions;
-        private List<V2ApiTargetResponse> apiTargets;
-        private V2BrowserKeyRestrictionsResponse browserKeyRestrictions;
-        private V2IosKeyRestrictionsResponse iosKeyRestrictions;
-        private V2ServerKeyRestrictionsResponse serverKeyRestrictions;
+        private V2RestrictionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new V2RestrictionsResponse();
         }
 
         public Builder(V2RestrictionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.androidKeyRestrictions = defaults.androidKeyRestrictions;
-    	      this.apiTargets = defaults.apiTargets;
-    	      this.browserKeyRestrictions = defaults.browserKeyRestrictions;
-    	      this.iosKeyRestrictions = defaults.iosKeyRestrictions;
-    	      this.serverKeyRestrictions = defaults.serverKeyRestrictions;
+            $ = new V2RestrictionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder androidKeyRestrictions(V2AndroidKeyRestrictionsResponse androidKeyRestrictions) {
-            this.androidKeyRestrictions = Objects.requireNonNull(androidKeyRestrictions);
+            $.androidKeyRestrictions = androidKeyRestrictions;
             return this;
         }
+
         public Builder apiTargets(List<V2ApiTargetResponse> apiTargets) {
-            this.apiTargets = Objects.requireNonNull(apiTargets);
+            $.apiTargets = apiTargets;
             return this;
         }
+
         public Builder apiTargets(V2ApiTargetResponse... apiTargets) {
             return apiTargets(List.of(apiTargets));
         }
+
         public Builder browserKeyRestrictions(V2BrowserKeyRestrictionsResponse browserKeyRestrictions) {
-            this.browserKeyRestrictions = Objects.requireNonNull(browserKeyRestrictions);
+            $.browserKeyRestrictions = browserKeyRestrictions;
             return this;
         }
+
         public Builder iosKeyRestrictions(V2IosKeyRestrictionsResponse iosKeyRestrictions) {
-            this.iosKeyRestrictions = Objects.requireNonNull(iosKeyRestrictions);
+            $.iosKeyRestrictions = iosKeyRestrictions;
             return this;
         }
+
         public Builder serverKeyRestrictions(V2ServerKeyRestrictionsResponse serverKeyRestrictions) {
-            this.serverKeyRestrictions = Objects.requireNonNull(serverKeyRestrictions);
+            $.serverKeyRestrictions = serverKeyRestrictions;
             return this;
-        }        public V2RestrictionsResponse build() {
-            return new V2RestrictionsResponse(androidKeyRestrictions, apiTargets, browserKeyRestrictions, iosKeyRestrictions, serverKeyRestrictions);
+        }
+
+        public V2RestrictionsResponse build() {
+            $.androidKeyRestrictions = Objects.requireNonNull($.androidKeyRestrictions, "expected parameter 'androidKeyRestrictions' to be non-null");
+            $.apiTargets = Objects.requireNonNull($.apiTargets, "expected parameter 'apiTargets' to be non-null");
+            $.browserKeyRestrictions = Objects.requireNonNull($.browserKeyRestrictions, "expected parameter 'browserKeyRestrictions' to be non-null");
+            $.iosKeyRestrictions = Objects.requireNonNull($.iosKeyRestrictions, "expected parameter 'iosKeyRestrictions' to be non-null");
+            $.serverKeyRestrictions = Objects.requireNonNull($.serverKeyRestrictions, "expected parameter 'serverKeyRestrictions' to be non-null");
+            return $;
         }
     }
+
 }

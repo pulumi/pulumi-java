@@ -5,10 +5,10 @@ package com.pulumi.googlenative.translate_v3beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class LanguageCodesSetArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="languageCodes")
-      private final @Nullable Output<List<String>> languageCodes;
+    private @Nullable Output<List<String>> languageCodes;
 
-    public Output<List<String>> languageCodes() {
-        return this.languageCodes == null ? Codegen.empty() : this.languageCodes;
+    public Optional<Output<List<String>>> languageCodes() {
+        return Optional.ofNullable(this.languageCodes);
     }
 
-    public LanguageCodesSetArgs(@Nullable Output<List<String>> languageCodes) {
-        this.languageCodes = languageCodes;
-    }
+    private LanguageCodesSetArgs() {}
 
-    private LanguageCodesSetArgs() {
-        this.languageCodes = Codegen.empty();
+    private LanguageCodesSetArgs(LanguageCodesSetArgs $) {
+        this.languageCodes = $.languageCodes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LanguageCodesSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> languageCodes;
+        private LanguageCodesSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LanguageCodesSetArgs();
         }
 
         public Builder(LanguageCodesSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.languageCodes = defaults.languageCodes;
+            $ = new LanguageCodesSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder languageCodes(@Nullable Output<List<String>> languageCodes) {
-            this.languageCodes = languageCodes;
+            $.languageCodes = languageCodes;
             return this;
         }
-        public Builder languageCodes(@Nullable List<String> languageCodes) {
-            this.languageCodes = Codegen.ofNullable(languageCodes);
-            return this;
+
+        public Builder languageCodes(List<String> languageCodes) {
+            return languageCodes(Output.of(languageCodes));
         }
+
         public Builder languageCodes(String... languageCodes) {
             return languageCodes(List.of(languageCodes));
-        }        public LanguageCodesSetArgs build() {
-            return new LanguageCodesSetArgs(languageCodes);
+        }
+
+        public LanguageCodesSetArgs build() {
+            return $;
         }
     }
+
 }

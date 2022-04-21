@@ -5,9 +5,9 @@ package com.pulumi.azurenative.testbase;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class FavoriteProcessArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="actualProcessName", required=true)
-      private final Output<String> actualProcessName;
+    private Output<String> actualProcessName;
 
     public Output<String> actualProcessName() {
         return this.actualProcessName;
@@ -31,10 +31,10 @@ public final class FavoriteProcessArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="favoriteProcessResourceName")
-      private final @Nullable Output<String> favoriteProcessResourceName;
+    private @Nullable Output<String> favoriteProcessResourceName;
 
-    public Output<String> favoriteProcessResourceName() {
-        return this.favoriteProcessResourceName == null ? Codegen.empty() : this.favoriteProcessResourceName;
+    public Optional<Output<String>> favoriteProcessResourceName() {
+        return Optional.ofNullable(this.favoriteProcessResourceName);
     }
 
     /**
@@ -42,7 +42,7 @@ public final class FavoriteProcessArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="packageName", required=true)
-      private final Output<String> packageName;
+    private Output<String> packageName;
 
     public Output<String> packageName() {
         return this.packageName;
@@ -53,7 +53,7 @@ public final class FavoriteProcessArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -64,102 +64,92 @@ public final class FavoriteProcessArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="testBaseAccountName", required=true)
-      private final Output<String> testBaseAccountName;
+    private Output<String> testBaseAccountName;
 
     public Output<String> testBaseAccountName() {
         return this.testBaseAccountName;
     }
 
-    public FavoriteProcessArgs(
-        Output<String> actualProcessName,
-        @Nullable Output<String> favoriteProcessResourceName,
-        Output<String> packageName,
-        Output<String> resourceGroupName,
-        Output<String> testBaseAccountName) {
-        this.actualProcessName = Objects.requireNonNull(actualProcessName, "expected parameter 'actualProcessName' to be non-null");
-        this.favoriteProcessResourceName = favoriteProcessResourceName;
-        this.packageName = Objects.requireNonNull(packageName, "expected parameter 'packageName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.testBaseAccountName = Objects.requireNonNull(testBaseAccountName, "expected parameter 'testBaseAccountName' to be non-null");
-    }
+    private FavoriteProcessArgs() {}
 
-    private FavoriteProcessArgs() {
-        this.actualProcessName = Codegen.empty();
-        this.favoriteProcessResourceName = Codegen.empty();
-        this.packageName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.testBaseAccountName = Codegen.empty();
+    private FavoriteProcessArgs(FavoriteProcessArgs $) {
+        this.actualProcessName = $.actualProcessName;
+        this.favoriteProcessResourceName = $.favoriteProcessResourceName;
+        this.packageName = $.packageName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.testBaseAccountName = $.testBaseAccountName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FavoriteProcessArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> actualProcessName;
-        private @Nullable Output<String> favoriteProcessResourceName;
-        private Output<String> packageName;
-        private Output<String> resourceGroupName;
-        private Output<String> testBaseAccountName;
+        private FavoriteProcessArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FavoriteProcessArgs();
         }
 
         public Builder(FavoriteProcessArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actualProcessName = defaults.actualProcessName;
-    	      this.favoriteProcessResourceName = defaults.favoriteProcessResourceName;
-    	      this.packageName = defaults.packageName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.testBaseAccountName = defaults.testBaseAccountName;
+            $ = new FavoriteProcessArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actualProcessName(Output<String> actualProcessName) {
-            this.actualProcessName = Objects.requireNonNull(actualProcessName);
+            $.actualProcessName = actualProcessName;
             return this;
         }
+
         public Builder actualProcessName(String actualProcessName) {
-            this.actualProcessName = Output.of(Objects.requireNonNull(actualProcessName));
-            return this;
+            return actualProcessName(Output.of(actualProcessName));
         }
+
         public Builder favoriteProcessResourceName(@Nullable Output<String> favoriteProcessResourceName) {
-            this.favoriteProcessResourceName = favoriteProcessResourceName;
+            $.favoriteProcessResourceName = favoriteProcessResourceName;
             return this;
         }
-        public Builder favoriteProcessResourceName(@Nullable String favoriteProcessResourceName) {
-            this.favoriteProcessResourceName = Codegen.ofNullable(favoriteProcessResourceName);
-            return this;
+
+        public Builder favoriteProcessResourceName(String favoriteProcessResourceName) {
+            return favoriteProcessResourceName(Output.of(favoriteProcessResourceName));
         }
+
         public Builder packageName(Output<String> packageName) {
-            this.packageName = Objects.requireNonNull(packageName);
+            $.packageName = packageName;
             return this;
         }
+
         public Builder packageName(String packageName) {
-            this.packageName = Output.of(Objects.requireNonNull(packageName));
-            return this;
+            return packageName(Output.of(packageName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder testBaseAccountName(Output<String> testBaseAccountName) {
-            this.testBaseAccountName = Objects.requireNonNull(testBaseAccountName);
+            $.testBaseAccountName = testBaseAccountName;
             return this;
         }
+
         public Builder testBaseAccountName(String testBaseAccountName) {
-            this.testBaseAccountName = Output.of(Objects.requireNonNull(testBaseAccountName));
-            return this;
-        }        public FavoriteProcessArgs build() {
-            return new FavoriteProcessArgs(actualProcessName, favoriteProcessResourceName, packageName, resourceGroupName, testBaseAccountName);
+            return testBaseAccountName(Output.of(testBaseAccountName));
+        }
+
+        public FavoriteProcessArgs build() {
+            $.actualProcessName = Objects.requireNonNull($.actualProcessName, "expected parameter 'actualProcessName' to be non-null");
+            $.packageName = Objects.requireNonNull($.packageName, "expected parameter 'packageName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.testBaseAccountName = Objects.requireNonNull($.testBaseAccountName, "expected parameter 'testBaseAccountName' to be non-null");
+            return $;
         }
     }
+
 }

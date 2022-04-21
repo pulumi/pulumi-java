@@ -13,62 +13,59 @@ public final class ProvisioningTemplateTag extends com.pulumi.resources.InvokeAr
     public static final ProvisioningTemplateTag Empty = new ProvisioningTemplateTag();
 
     @Import(name="key", required=true)
-      private final String key;
+    private String key;
 
     public String key() {
         return this.key;
     }
 
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public ProvisioningTemplateTag(
-        String key,
-        String value) {
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private ProvisioningTemplateTag() {}
 
-    private ProvisioningTemplateTag() {
-        this.key = null;
-        this.value = null;
+    private ProvisioningTemplateTag(ProvisioningTemplateTag $) {
+        this.key = $.key;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProvisioningTemplateTag defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String key;
-        private String value;
+        private ProvisioningTemplateTag $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProvisioningTemplateTag();
         }
 
         public Builder(ProvisioningTemplateTag defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.value = defaults.value;
+            $ = new ProvisioningTemplateTag(Objects.requireNonNull(defaults));
         }
 
         public Builder key(String key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public ProvisioningTemplateTag build() {
-            return new ProvisioningTemplateTag(key, value);
+        }
+
+        public ProvisioningTemplateTag build() {
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

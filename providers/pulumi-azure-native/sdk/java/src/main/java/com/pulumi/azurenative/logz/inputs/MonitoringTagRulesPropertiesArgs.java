@@ -6,8 +6,8 @@ package com.pulumi.azurenative.logz.inputs;
 import com.pulumi.azurenative.logz.inputs.LogRulesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class MonitoringTagRulesPropertiesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="logRules")
-      private final @Nullable Output<LogRulesArgs> logRules;
+    private @Nullable Output<LogRulesArgs> logRules;
 
-    public Output<LogRulesArgs> logRules() {
-        return this.logRules == null ? Codegen.empty() : this.logRules;
+    public Optional<Output<LogRulesArgs>> logRules() {
+        return Optional.ofNullable(this.logRules);
     }
 
-    public MonitoringTagRulesPropertiesArgs(@Nullable Output<LogRulesArgs> logRules) {
-        this.logRules = logRules;
-    }
+    private MonitoringTagRulesPropertiesArgs() {}
 
-    private MonitoringTagRulesPropertiesArgs() {
-        this.logRules = Codegen.empty();
+    private MonitoringTagRulesPropertiesArgs(MonitoringTagRulesPropertiesArgs $) {
+        this.logRules = $.logRules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MonitoringTagRulesPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<LogRulesArgs> logRules;
+        private MonitoringTagRulesPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MonitoringTagRulesPropertiesArgs();
         }
 
         public Builder(MonitoringTagRulesPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.logRules = defaults.logRules;
+            $ = new MonitoringTagRulesPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder logRules(@Nullable Output<LogRulesArgs> logRules) {
-            this.logRules = logRules;
+            $.logRules = logRules;
             return this;
         }
-        public Builder logRules(@Nullable LogRulesArgs logRules) {
-            this.logRules = Codegen.ofNullable(logRules);
-            return this;
-        }        public MonitoringTagRulesPropertiesArgs build() {
-            return new MonitoringTagRulesPropertiesArgs(logRules);
+
+        public Builder logRules(LogRulesArgs logRules) {
+            return logRules(Output.of(logRules));
+        }
+
+        public MonitoringTagRulesPropertiesArgs build() {
+            return $;
         }
     }
+
 }

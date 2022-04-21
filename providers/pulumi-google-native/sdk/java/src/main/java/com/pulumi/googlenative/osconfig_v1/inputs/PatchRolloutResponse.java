@@ -22,7 +22,7 @@ public final class PatchRolloutResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="disruptionBudget", required=true)
-      private final FixedOrPercentResponse disruptionBudget;
+    private FixedOrPercentResponse disruptionBudget;
 
     public FixedOrPercentResponse disruptionBudget() {
         return this.disruptionBudget;
@@ -33,55 +33,52 @@ public final class PatchRolloutResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="mode", required=true)
-      private final String mode;
+    private String mode;
 
     public String mode() {
         return this.mode;
     }
 
-    public PatchRolloutResponse(
-        FixedOrPercentResponse disruptionBudget,
-        String mode) {
-        this.disruptionBudget = Objects.requireNonNull(disruptionBudget, "expected parameter 'disruptionBudget' to be non-null");
-        this.mode = Objects.requireNonNull(mode, "expected parameter 'mode' to be non-null");
-    }
+    private PatchRolloutResponse() {}
 
-    private PatchRolloutResponse() {
-        this.disruptionBudget = null;
-        this.mode = null;
+    private PatchRolloutResponse(PatchRolloutResponse $) {
+        this.disruptionBudget = $.disruptionBudget;
+        this.mode = $.mode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PatchRolloutResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private FixedOrPercentResponse disruptionBudget;
-        private String mode;
+        private PatchRolloutResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PatchRolloutResponse();
         }
 
         public Builder(PatchRolloutResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disruptionBudget = defaults.disruptionBudget;
-    	      this.mode = defaults.mode;
+            $ = new PatchRolloutResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder disruptionBudget(FixedOrPercentResponse disruptionBudget) {
-            this.disruptionBudget = Objects.requireNonNull(disruptionBudget);
+            $.disruptionBudget = disruptionBudget;
             return this;
         }
+
         public Builder mode(String mode) {
-            this.mode = Objects.requireNonNull(mode);
+            $.mode = mode;
             return this;
-        }        public PatchRolloutResponse build() {
-            return new PatchRolloutResponse(disruptionBudget, mode);
+        }
+
+        public PatchRolloutResponse build() {
+            $.disruptionBudget = Objects.requireNonNull($.disruptionBudget, "expected parameter 'disruptionBudget' to be non-null");
+            $.mode = Objects.requireNonNull($.mode, "expected parameter 'mode' to be non-null");
+            return $;
         }
     }
+
 }

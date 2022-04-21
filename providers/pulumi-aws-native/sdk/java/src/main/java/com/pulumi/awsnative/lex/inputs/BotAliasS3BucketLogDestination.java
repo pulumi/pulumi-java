@@ -23,10 +23,10 @@ public final class BotAliasS3BucketLogDestination extends com.pulumi.resources.I
      * 
      */
     @Import(name="kmsKeyArn")
-      private final @Nullable String kmsKeyArn;
+    private @Nullable String kmsKeyArn;
 
     public Optional<String> kmsKeyArn() {
-        return this.kmsKeyArn == null ? Optional.empty() : Optional.ofNullable(this.kmsKeyArn);
+        return Optional.ofNullable(this.kmsKeyArn);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class BotAliasS3BucketLogDestination extends com.pulumi.resources.I
      * 
      */
     @Import(name="logPrefix", required=true)
-      private final String logPrefix;
+    private String logPrefix;
 
     public String logPrefix() {
         return this.logPrefix;
@@ -45,64 +45,58 @@ public final class BotAliasS3BucketLogDestination extends com.pulumi.resources.I
      * 
      */
     @Import(name="s3BucketArn", required=true)
-      private final String s3BucketArn;
+    private String s3BucketArn;
 
     public String s3BucketArn() {
         return this.s3BucketArn;
     }
 
-    public BotAliasS3BucketLogDestination(
-        @Nullable String kmsKeyArn,
-        String logPrefix,
-        String s3BucketArn) {
-        this.kmsKeyArn = kmsKeyArn;
-        this.logPrefix = Objects.requireNonNull(logPrefix, "expected parameter 'logPrefix' to be non-null");
-        this.s3BucketArn = Objects.requireNonNull(s3BucketArn, "expected parameter 's3BucketArn' to be non-null");
-    }
+    private BotAliasS3BucketLogDestination() {}
 
-    private BotAliasS3BucketLogDestination() {
-        this.kmsKeyArn = null;
-        this.logPrefix = null;
-        this.s3BucketArn = null;
+    private BotAliasS3BucketLogDestination(BotAliasS3BucketLogDestination $) {
+        this.kmsKeyArn = $.kmsKeyArn;
+        this.logPrefix = $.logPrefix;
+        this.s3BucketArn = $.s3BucketArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BotAliasS3BucketLogDestination defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String kmsKeyArn;
-        private String logPrefix;
-        private String s3BucketArn;
+        private BotAliasS3BucketLogDestination $;
 
         public Builder() {
-    	      // Empty
+            $ = new BotAliasS3BucketLogDestination();
         }
 
         public Builder(BotAliasS3BucketLogDestination defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kmsKeyArn = defaults.kmsKeyArn;
-    	      this.logPrefix = defaults.logPrefix;
-    	      this.s3BucketArn = defaults.s3BucketArn;
+            $ = new BotAliasS3BucketLogDestination(Objects.requireNonNull(defaults));
         }
 
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
-            this.kmsKeyArn = kmsKeyArn;
+            $.kmsKeyArn = kmsKeyArn;
             return this;
         }
+
         public Builder logPrefix(String logPrefix) {
-            this.logPrefix = Objects.requireNonNull(logPrefix);
+            $.logPrefix = logPrefix;
             return this;
         }
+
         public Builder s3BucketArn(String s3BucketArn) {
-            this.s3BucketArn = Objects.requireNonNull(s3BucketArn);
+            $.s3BucketArn = s3BucketArn;
             return this;
-        }        public BotAliasS3BucketLogDestination build() {
-            return new BotAliasS3BucketLogDestination(kmsKeyArn, logPrefix, s3BucketArn);
+        }
+
+        public BotAliasS3BucketLogDestination build() {
+            $.logPrefix = Objects.requireNonNull($.logPrefix, "expected parameter 'logPrefix' to be non-null");
+            $.s3BucketArn = Objects.requireNonNull($.s3BucketArn, "expected parameter 's3BucketArn' to be non-null");
+            return $;
         }
     }
+
 }

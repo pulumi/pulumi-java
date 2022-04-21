@@ -5,13 +5,13 @@ package com.pulumi.googlenative.dialogflow_v2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dialogflow_v2.enums.DocumentKnowledgeTypesItem;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="contentUri")
-      private final @Nullable Output<String> contentUri;
+    private @Nullable Output<String> contentUri;
 
-    public Output<String> contentUri() {
-        return this.contentUri == null ? Codegen.empty() : this.contentUri;
+    public Optional<Output<String>> contentUri() {
+        return Optional.ofNullable(this.contentUri);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
@@ -46,14 +46,14 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableAutoReload")
-      private final @Nullable Output<Boolean> enableAutoReload;
+    private @Nullable Output<Boolean> enableAutoReload;
 
-    public Output<Boolean> enableAutoReload() {
-        return this.enableAutoReload == null ? Codegen.empty() : this.enableAutoReload;
+    public Optional<Output<Boolean>> enableAutoReload() {
+        return Optional.ofNullable(this.enableAutoReload);
     }
 
     @Import(name="knowledgeBaseId", required=true)
-      private final Output<String> knowledgeBaseId;
+    private Output<String> knowledgeBaseId;
 
     public Output<String> knowledgeBaseId() {
         return this.knowledgeBaseId;
@@ -64,17 +64,17 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="knowledgeTypes", required=true)
-      private final Output<List<DocumentKnowledgeTypesItem>> knowledgeTypes;
+    private Output<List<DocumentKnowledgeTypesItem>> knowledgeTypes;
 
     public Output<List<DocumentKnowledgeTypesItem>> knowledgeTypes() {
         return this.knowledgeTypes;
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<Map<String,String>> metadata;
+    private @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<Map<String,String>>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -93,7 +93,7 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mimeType", required=true)
-      private final Output<String> mimeType;
+    private Output<String> mimeType;
 
     public Output<String> mimeType() {
         return this.mimeType;
@@ -104,17 +104,17 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -122,183 +122,156 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rawContent")
-      private final @Nullable Output<String> rawContent;
+    private @Nullable Output<String> rawContent;
 
-    public Output<String> rawContent() {
-        return this.rawContent == null ? Codegen.empty() : this.rawContent;
+    public Optional<Output<String>> rawContent() {
+        return Optional.ofNullable(this.rawContent);
     }
 
-    public DocumentArgs(
-        @Nullable Output<String> contentUri,
-        Output<String> displayName,
-        @Nullable Output<Boolean> enableAutoReload,
-        Output<String> knowledgeBaseId,
-        Output<List<DocumentKnowledgeTypesItem>> knowledgeTypes,
-        @Nullable Output<String> location,
-        @Nullable Output<Map<String,String>> metadata,
-        Output<String> mimeType,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<String> rawContent) {
-        this.contentUri = contentUri;
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.enableAutoReload = enableAutoReload;
-        this.knowledgeBaseId = Objects.requireNonNull(knowledgeBaseId, "expected parameter 'knowledgeBaseId' to be non-null");
-        this.knowledgeTypes = Objects.requireNonNull(knowledgeTypes, "expected parameter 'knowledgeTypes' to be non-null");
-        this.location = location;
-        this.metadata = metadata;
-        this.mimeType = Objects.requireNonNull(mimeType, "expected parameter 'mimeType' to be non-null");
-        this.name = name;
-        this.project = project;
-        this.rawContent = rawContent;
-    }
+    private DocumentArgs() {}
 
-    private DocumentArgs() {
-        this.contentUri = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.enableAutoReload = Codegen.empty();
-        this.knowledgeBaseId = Codegen.empty();
-        this.knowledgeTypes = Codegen.empty();
-        this.location = Codegen.empty();
-        this.metadata = Codegen.empty();
-        this.mimeType = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.rawContent = Codegen.empty();
+    private DocumentArgs(DocumentArgs $) {
+        this.contentUri = $.contentUri;
+        this.displayName = $.displayName;
+        this.enableAutoReload = $.enableAutoReload;
+        this.knowledgeBaseId = $.knowledgeBaseId;
+        this.knowledgeTypes = $.knowledgeTypes;
+        this.location = $.location;
+        this.metadata = $.metadata;
+        this.mimeType = $.mimeType;
+        this.name = $.name;
+        this.project = $.project;
+        this.rawContent = $.rawContent;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DocumentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> contentUri;
-        private Output<String> displayName;
-        private @Nullable Output<Boolean> enableAutoReload;
-        private Output<String> knowledgeBaseId;
-        private Output<List<DocumentKnowledgeTypesItem>> knowledgeTypes;
-        private @Nullable Output<String> location;
-        private @Nullable Output<Map<String,String>> metadata;
-        private Output<String> mimeType;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> rawContent;
+        private DocumentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DocumentArgs();
         }
 
         public Builder(DocumentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contentUri = defaults.contentUri;
-    	      this.displayName = defaults.displayName;
-    	      this.enableAutoReload = defaults.enableAutoReload;
-    	      this.knowledgeBaseId = defaults.knowledgeBaseId;
-    	      this.knowledgeTypes = defaults.knowledgeTypes;
-    	      this.location = defaults.location;
-    	      this.metadata = defaults.metadata;
-    	      this.mimeType = defaults.mimeType;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.rawContent = defaults.rawContent;
+            $ = new DocumentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder contentUri(@Nullable Output<String> contentUri) {
-            this.contentUri = contentUri;
+            $.contentUri = contentUri;
             return this;
         }
-        public Builder contentUri(@Nullable String contentUri) {
-            this.contentUri = Codegen.ofNullable(contentUri);
-            return this;
+
+        public Builder contentUri(String contentUri) {
+            return contentUri(Output.of(contentUri));
         }
+
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder enableAutoReload(@Nullable Output<Boolean> enableAutoReload) {
-            this.enableAutoReload = enableAutoReload;
+            $.enableAutoReload = enableAutoReload;
             return this;
         }
-        public Builder enableAutoReload(@Nullable Boolean enableAutoReload) {
-            this.enableAutoReload = Codegen.ofNullable(enableAutoReload);
-            return this;
+
+        public Builder enableAutoReload(Boolean enableAutoReload) {
+            return enableAutoReload(Output.of(enableAutoReload));
         }
+
         public Builder knowledgeBaseId(Output<String> knowledgeBaseId) {
-            this.knowledgeBaseId = Objects.requireNonNull(knowledgeBaseId);
+            $.knowledgeBaseId = knowledgeBaseId;
             return this;
         }
+
         public Builder knowledgeBaseId(String knowledgeBaseId) {
-            this.knowledgeBaseId = Output.of(Objects.requireNonNull(knowledgeBaseId));
-            return this;
+            return knowledgeBaseId(Output.of(knowledgeBaseId));
         }
+
         public Builder knowledgeTypes(Output<List<DocumentKnowledgeTypesItem>> knowledgeTypes) {
-            this.knowledgeTypes = Objects.requireNonNull(knowledgeTypes);
+            $.knowledgeTypes = knowledgeTypes;
             return this;
         }
+
         public Builder knowledgeTypes(List<DocumentKnowledgeTypesItem> knowledgeTypes) {
-            this.knowledgeTypes = Output.of(Objects.requireNonNull(knowledgeTypes));
-            return this;
+            return knowledgeTypes(Output.of(knowledgeTypes));
         }
+
         public Builder knowledgeTypes(DocumentKnowledgeTypesItem... knowledgeTypes) {
             return knowledgeTypes(List.of(knowledgeTypes));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(Map<String,String> metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder mimeType(Output<String> mimeType) {
-            this.mimeType = Objects.requireNonNull(mimeType);
+            $.mimeType = mimeType;
             return this;
         }
+
         public Builder mimeType(String mimeType) {
-            this.mimeType = Output.of(Objects.requireNonNull(mimeType));
-            return this;
+            return mimeType(Output.of(mimeType));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder rawContent(@Nullable Output<String> rawContent) {
-            this.rawContent = rawContent;
+            $.rawContent = rawContent;
             return this;
         }
-        public Builder rawContent(@Nullable String rawContent) {
-            this.rawContent = Codegen.ofNullable(rawContent);
-            return this;
-        }        public DocumentArgs build() {
-            return new DocumentArgs(contentUri, displayName, enableAutoReload, knowledgeBaseId, knowledgeTypes, location, metadata, mimeType, name, project, rawContent);
+
+        public Builder rawContent(String rawContent) {
+            return rawContent(Output.of(rawContent));
+        }
+
+        public DocumentArgs build() {
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.knowledgeBaseId = Objects.requireNonNull($.knowledgeBaseId, "expected parameter 'knowledgeBaseId' to be non-null");
+            $.knowledgeTypes = Objects.requireNonNull($.knowledgeTypes, "expected parameter 'knowledgeTypes' to be non-null");
+            $.mimeType = Objects.requireNonNull($.mimeType, "expected parameter 'mimeType' to be non-null");
+            return $;
         }
     }
+
 }

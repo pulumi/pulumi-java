@@ -13,11 +13,11 @@ import com.pulumi.azurenative.notificationhubs.inputs.SkuArgs;
 import com.pulumi.azurenative.notificationhubs.inputs.WnsCredentialArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,10 +30,10 @@ public final class NotificationHubArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="admCredential")
-      private final @Nullable Output<AdmCredentialArgs> admCredential;
+    private @Nullable Output<AdmCredentialArgs> admCredential;
 
-    public Output<AdmCredentialArgs> admCredential() {
-        return this.admCredential == null ? Codegen.empty() : this.admCredential;
+    public Optional<Output<AdmCredentialArgs>> admCredential() {
+        return Optional.ofNullable(this.admCredential);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class NotificationHubArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="apnsCredential")
-      private final @Nullable Output<ApnsCredentialArgs> apnsCredential;
+    private @Nullable Output<ApnsCredentialArgs> apnsCredential;
 
-    public Output<ApnsCredentialArgs> apnsCredential() {
-        return this.apnsCredential == null ? Codegen.empty() : this.apnsCredential;
+    public Optional<Output<ApnsCredentialArgs>> apnsCredential() {
+        return Optional.ofNullable(this.apnsCredential);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class NotificationHubArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="authorizationRules")
-      private final @Nullable Output<List<SharedAccessAuthorizationRulePropertiesArgs>> authorizationRules;
+    private @Nullable Output<List<SharedAccessAuthorizationRulePropertiesArgs>> authorizationRules;
 
-    public Output<List<SharedAccessAuthorizationRulePropertiesArgs>> authorizationRules() {
-        return this.authorizationRules == null ? Codegen.empty() : this.authorizationRules;
+    public Optional<Output<List<SharedAccessAuthorizationRulePropertiesArgs>>> authorizationRules() {
+        return Optional.ofNullable(this.authorizationRules);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class NotificationHubArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="baiduCredential")
-      private final @Nullable Output<BaiduCredentialArgs> baiduCredential;
+    private @Nullable Output<BaiduCredentialArgs> baiduCredential;
 
-    public Output<BaiduCredentialArgs> baiduCredential() {
-        return this.baiduCredential == null ? Codegen.empty() : this.baiduCredential;
+    public Optional<Output<BaiduCredentialArgs>> baiduCredential() {
+        return Optional.ofNullable(this.baiduCredential);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class NotificationHubArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="gcmCredential")
-      private final @Nullable Output<GcmCredentialArgs> gcmCredential;
+    private @Nullable Output<GcmCredentialArgs> gcmCredential;
 
-    public Output<GcmCredentialArgs> gcmCredential() {
-        return this.gcmCredential == null ? Codegen.empty() : this.gcmCredential;
+    public Optional<Output<GcmCredentialArgs>> gcmCredential() {
+        return Optional.ofNullable(this.gcmCredential);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class NotificationHubArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -96,10 +96,10 @@ public final class NotificationHubArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="mpnsCredential")
-      private final @Nullable Output<MpnsCredentialArgs> mpnsCredential;
+    private @Nullable Output<MpnsCredentialArgs> mpnsCredential;
 
-    public Output<MpnsCredentialArgs> mpnsCredential() {
-        return this.mpnsCredential == null ? Codegen.empty() : this.mpnsCredential;
+    public Optional<Output<MpnsCredentialArgs>> mpnsCredential() {
+        return Optional.ofNullable(this.mpnsCredential);
     }
 
     /**
@@ -107,10 +107,10 @@ public final class NotificationHubArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -118,7 +118,7 @@ public final class NotificationHubArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="namespaceName", required=true)
-      private final Output<String> namespaceName;
+    private Output<String> namespaceName;
 
     public Output<String> namespaceName() {
         return this.namespaceName;
@@ -129,10 +129,10 @@ public final class NotificationHubArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="notificationHubName")
-      private final @Nullable Output<String> notificationHubName;
+    private @Nullable Output<String> notificationHubName;
 
-    public Output<String> notificationHubName() {
-        return this.notificationHubName == null ? Codegen.empty() : this.notificationHubName;
+    public Optional<Output<String>> notificationHubName() {
+        return Optional.ofNullable(this.notificationHubName);
     }
 
     /**
@@ -140,10 +140,10 @@ public final class NotificationHubArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="registrationTtl")
-      private final @Nullable Output<String> registrationTtl;
+    private @Nullable Output<String> registrationTtl;
 
-    public Output<String> registrationTtl() {
-        return this.registrationTtl == null ? Codegen.empty() : this.registrationTtl;
+    public Optional<Output<String>> registrationTtl() {
+        return Optional.ofNullable(this.registrationTtl);
     }
 
     /**
@@ -151,7 +151,7 @@ public final class NotificationHubArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -162,10 +162,10 @@ public final class NotificationHubArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="sku")
-      private final @Nullable Output<SkuArgs> sku;
+    private @Nullable Output<SkuArgs> sku;
 
-    public Output<SkuArgs> sku() {
-        return this.sku == null ? Codegen.empty() : this.sku;
+    public Optional<Output<SkuArgs>> sku() {
+        return Optional.ofNullable(this.sku);
     }
 
     /**
@@ -173,10 +173,10 @@ public final class NotificationHubArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -184,235 +184,194 @@ public final class NotificationHubArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="wnsCredential")
-      private final @Nullable Output<WnsCredentialArgs> wnsCredential;
+    private @Nullable Output<WnsCredentialArgs> wnsCredential;
 
-    public Output<WnsCredentialArgs> wnsCredential() {
-        return this.wnsCredential == null ? Codegen.empty() : this.wnsCredential;
+    public Optional<Output<WnsCredentialArgs>> wnsCredential() {
+        return Optional.ofNullable(this.wnsCredential);
     }
 
-    public NotificationHubArgs(
-        @Nullable Output<AdmCredentialArgs> admCredential,
-        @Nullable Output<ApnsCredentialArgs> apnsCredential,
-        @Nullable Output<List<SharedAccessAuthorizationRulePropertiesArgs>> authorizationRules,
-        @Nullable Output<BaiduCredentialArgs> baiduCredential,
-        @Nullable Output<GcmCredentialArgs> gcmCredential,
-        @Nullable Output<String> location,
-        @Nullable Output<MpnsCredentialArgs> mpnsCredential,
-        @Nullable Output<String> name,
-        Output<String> namespaceName,
-        @Nullable Output<String> notificationHubName,
-        @Nullable Output<String> registrationTtl,
-        Output<String> resourceGroupName,
-        @Nullable Output<SkuArgs> sku,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<WnsCredentialArgs> wnsCredential) {
-        this.admCredential = admCredential;
-        this.apnsCredential = apnsCredential;
-        this.authorizationRules = authorizationRules;
-        this.baiduCredential = baiduCredential;
-        this.gcmCredential = gcmCredential;
-        this.location = location;
-        this.mpnsCredential = mpnsCredential;
-        this.name = name;
-        this.namespaceName = Objects.requireNonNull(namespaceName, "expected parameter 'namespaceName' to be non-null");
-        this.notificationHubName = notificationHubName;
-        this.registrationTtl = registrationTtl;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sku = sku;
-        this.tags = tags;
-        this.wnsCredential = wnsCredential;
-    }
+    private NotificationHubArgs() {}
 
-    private NotificationHubArgs() {
-        this.admCredential = Codegen.empty();
-        this.apnsCredential = Codegen.empty();
-        this.authorizationRules = Codegen.empty();
-        this.baiduCredential = Codegen.empty();
-        this.gcmCredential = Codegen.empty();
-        this.location = Codegen.empty();
-        this.mpnsCredential = Codegen.empty();
-        this.name = Codegen.empty();
-        this.namespaceName = Codegen.empty();
-        this.notificationHubName = Codegen.empty();
-        this.registrationTtl = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.sku = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.wnsCredential = Codegen.empty();
+    private NotificationHubArgs(NotificationHubArgs $) {
+        this.admCredential = $.admCredential;
+        this.apnsCredential = $.apnsCredential;
+        this.authorizationRules = $.authorizationRules;
+        this.baiduCredential = $.baiduCredential;
+        this.gcmCredential = $.gcmCredential;
+        this.location = $.location;
+        this.mpnsCredential = $.mpnsCredential;
+        this.name = $.name;
+        this.namespaceName = $.namespaceName;
+        this.notificationHubName = $.notificationHubName;
+        this.registrationTtl = $.registrationTtl;
+        this.resourceGroupName = $.resourceGroupName;
+        this.sku = $.sku;
+        this.tags = $.tags;
+        this.wnsCredential = $.wnsCredential;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NotificationHubArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AdmCredentialArgs> admCredential;
-        private @Nullable Output<ApnsCredentialArgs> apnsCredential;
-        private @Nullable Output<List<SharedAccessAuthorizationRulePropertiesArgs>> authorizationRules;
-        private @Nullable Output<BaiduCredentialArgs> baiduCredential;
-        private @Nullable Output<GcmCredentialArgs> gcmCredential;
-        private @Nullable Output<String> location;
-        private @Nullable Output<MpnsCredentialArgs> mpnsCredential;
-        private @Nullable Output<String> name;
-        private Output<String> namespaceName;
-        private @Nullable Output<String> notificationHubName;
-        private @Nullable Output<String> registrationTtl;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<SkuArgs> sku;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<WnsCredentialArgs> wnsCredential;
+        private NotificationHubArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NotificationHubArgs();
         }
 
         public Builder(NotificationHubArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.admCredential = defaults.admCredential;
-    	      this.apnsCredential = defaults.apnsCredential;
-    	      this.authorizationRules = defaults.authorizationRules;
-    	      this.baiduCredential = defaults.baiduCredential;
-    	      this.gcmCredential = defaults.gcmCredential;
-    	      this.location = defaults.location;
-    	      this.mpnsCredential = defaults.mpnsCredential;
-    	      this.name = defaults.name;
-    	      this.namespaceName = defaults.namespaceName;
-    	      this.notificationHubName = defaults.notificationHubName;
-    	      this.registrationTtl = defaults.registrationTtl;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sku = defaults.sku;
-    	      this.tags = defaults.tags;
-    	      this.wnsCredential = defaults.wnsCredential;
+            $ = new NotificationHubArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder admCredential(@Nullable Output<AdmCredentialArgs> admCredential) {
-            this.admCredential = admCredential;
+            $.admCredential = admCredential;
             return this;
         }
-        public Builder admCredential(@Nullable AdmCredentialArgs admCredential) {
-            this.admCredential = Codegen.ofNullable(admCredential);
-            return this;
+
+        public Builder admCredential(AdmCredentialArgs admCredential) {
+            return admCredential(Output.of(admCredential));
         }
+
         public Builder apnsCredential(@Nullable Output<ApnsCredentialArgs> apnsCredential) {
-            this.apnsCredential = apnsCredential;
+            $.apnsCredential = apnsCredential;
             return this;
         }
-        public Builder apnsCredential(@Nullable ApnsCredentialArgs apnsCredential) {
-            this.apnsCredential = Codegen.ofNullable(apnsCredential);
-            return this;
+
+        public Builder apnsCredential(ApnsCredentialArgs apnsCredential) {
+            return apnsCredential(Output.of(apnsCredential));
         }
+
         public Builder authorizationRules(@Nullable Output<List<SharedAccessAuthorizationRulePropertiesArgs>> authorizationRules) {
-            this.authorizationRules = authorizationRules;
+            $.authorizationRules = authorizationRules;
             return this;
         }
-        public Builder authorizationRules(@Nullable List<SharedAccessAuthorizationRulePropertiesArgs> authorizationRules) {
-            this.authorizationRules = Codegen.ofNullable(authorizationRules);
-            return this;
+
+        public Builder authorizationRules(List<SharedAccessAuthorizationRulePropertiesArgs> authorizationRules) {
+            return authorizationRules(Output.of(authorizationRules));
         }
+
         public Builder authorizationRules(SharedAccessAuthorizationRulePropertiesArgs... authorizationRules) {
             return authorizationRules(List.of(authorizationRules));
         }
+
         public Builder baiduCredential(@Nullable Output<BaiduCredentialArgs> baiduCredential) {
-            this.baiduCredential = baiduCredential;
+            $.baiduCredential = baiduCredential;
             return this;
         }
-        public Builder baiduCredential(@Nullable BaiduCredentialArgs baiduCredential) {
-            this.baiduCredential = Codegen.ofNullable(baiduCredential);
-            return this;
+
+        public Builder baiduCredential(BaiduCredentialArgs baiduCredential) {
+            return baiduCredential(Output.of(baiduCredential));
         }
+
         public Builder gcmCredential(@Nullable Output<GcmCredentialArgs> gcmCredential) {
-            this.gcmCredential = gcmCredential;
+            $.gcmCredential = gcmCredential;
             return this;
         }
-        public Builder gcmCredential(@Nullable GcmCredentialArgs gcmCredential) {
-            this.gcmCredential = Codegen.ofNullable(gcmCredential);
-            return this;
+
+        public Builder gcmCredential(GcmCredentialArgs gcmCredential) {
+            return gcmCredential(Output.of(gcmCredential));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder mpnsCredential(@Nullable Output<MpnsCredentialArgs> mpnsCredential) {
-            this.mpnsCredential = mpnsCredential;
+            $.mpnsCredential = mpnsCredential;
             return this;
         }
-        public Builder mpnsCredential(@Nullable MpnsCredentialArgs mpnsCredential) {
-            this.mpnsCredential = Codegen.ofNullable(mpnsCredential);
-            return this;
+
+        public Builder mpnsCredential(MpnsCredentialArgs mpnsCredential) {
+            return mpnsCredential(Output.of(mpnsCredential));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder namespaceName(Output<String> namespaceName) {
-            this.namespaceName = Objects.requireNonNull(namespaceName);
+            $.namespaceName = namespaceName;
             return this;
         }
+
         public Builder namespaceName(String namespaceName) {
-            this.namespaceName = Output.of(Objects.requireNonNull(namespaceName));
-            return this;
+            return namespaceName(Output.of(namespaceName));
         }
+
         public Builder notificationHubName(@Nullable Output<String> notificationHubName) {
-            this.notificationHubName = notificationHubName;
+            $.notificationHubName = notificationHubName;
             return this;
         }
-        public Builder notificationHubName(@Nullable String notificationHubName) {
-            this.notificationHubName = Codegen.ofNullable(notificationHubName);
-            return this;
+
+        public Builder notificationHubName(String notificationHubName) {
+            return notificationHubName(Output.of(notificationHubName));
         }
+
         public Builder registrationTtl(@Nullable Output<String> registrationTtl) {
-            this.registrationTtl = registrationTtl;
+            $.registrationTtl = registrationTtl;
             return this;
         }
-        public Builder registrationTtl(@Nullable String registrationTtl) {
-            this.registrationTtl = Codegen.ofNullable(registrationTtl);
-            return this;
+
+        public Builder registrationTtl(String registrationTtl) {
+            return registrationTtl(Output.of(registrationTtl));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder sku(@Nullable Output<SkuArgs> sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
         }
-        public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Codegen.ofNullable(sku);
-            return this;
+
+        public Builder sku(SkuArgs sku) {
+            return sku(Output.of(sku));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder wnsCredential(@Nullable Output<WnsCredentialArgs> wnsCredential) {
-            this.wnsCredential = wnsCredential;
+            $.wnsCredential = wnsCredential;
             return this;
         }
-        public Builder wnsCredential(@Nullable WnsCredentialArgs wnsCredential) {
-            this.wnsCredential = Codegen.ofNullable(wnsCredential);
-            return this;
-        }        public NotificationHubArgs build() {
-            return new NotificationHubArgs(admCredential, apnsCredential, authorizationRules, baiduCredential, gcmCredential, location, mpnsCredential, name, namespaceName, notificationHubName, registrationTtl, resourceGroupName, sku, tags, wnsCredential);
+
+        public Builder wnsCredential(WnsCredentialArgs wnsCredential) {
+            return wnsCredential(Output.of(wnsCredential));
+        }
+
+        public NotificationHubArgs build() {
+            $.namespaceName = Objects.requireNonNull($.namespaceName, "expected parameter 'namespaceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

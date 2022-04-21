@@ -21,10 +21,10 @@ public final class JitNetworkAccessRequestResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="justification")
-      private final @Nullable String justification;
+    private @Nullable String justification;
 
     public Optional<String> justification() {
-        return this.justification == null ? Optional.empty() : Optional.ofNullable(this.justification);
+        return Optional.ofNullable(this.justification);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class JitNetworkAccessRequestResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="requestor", required=true)
-      private final String requestor;
+    private String requestor;
 
     public String requestor() {
         return this.requestor;
@@ -43,83 +43,76 @@ public final class JitNetworkAccessRequestResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="startTimeUtc", required=true)
-      private final String startTimeUtc;
+    private String startTimeUtc;
 
     public String startTimeUtc() {
         return this.startTimeUtc;
     }
 
     @Import(name="virtualMachines", required=true)
-      private final List<JitNetworkAccessRequestVirtualMachineResponse> virtualMachines;
+    private List<JitNetworkAccessRequestVirtualMachineResponse> virtualMachines;
 
     public List<JitNetworkAccessRequestVirtualMachineResponse> virtualMachines() {
         return this.virtualMachines;
     }
 
-    public JitNetworkAccessRequestResponse(
-        @Nullable String justification,
-        String requestor,
-        String startTimeUtc,
-        List<JitNetworkAccessRequestVirtualMachineResponse> virtualMachines) {
-        this.justification = justification;
-        this.requestor = Objects.requireNonNull(requestor, "expected parameter 'requestor' to be non-null");
-        this.startTimeUtc = Objects.requireNonNull(startTimeUtc, "expected parameter 'startTimeUtc' to be non-null");
-        this.virtualMachines = Objects.requireNonNull(virtualMachines, "expected parameter 'virtualMachines' to be non-null");
-    }
+    private JitNetworkAccessRequestResponse() {}
 
-    private JitNetworkAccessRequestResponse() {
-        this.justification = null;
-        this.requestor = null;
-        this.startTimeUtc = null;
-        this.virtualMachines = List.of();
+    private JitNetworkAccessRequestResponse(JitNetworkAccessRequestResponse $) {
+        this.justification = $.justification;
+        this.requestor = $.requestor;
+        this.startTimeUtc = $.startTimeUtc;
+        this.virtualMachines = $.virtualMachines;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JitNetworkAccessRequestResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String justification;
-        private String requestor;
-        private String startTimeUtc;
-        private List<JitNetworkAccessRequestVirtualMachineResponse> virtualMachines;
+        private JitNetworkAccessRequestResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new JitNetworkAccessRequestResponse();
         }
 
         public Builder(JitNetworkAccessRequestResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.justification = defaults.justification;
-    	      this.requestor = defaults.requestor;
-    	      this.startTimeUtc = defaults.startTimeUtc;
-    	      this.virtualMachines = defaults.virtualMachines;
+            $ = new JitNetworkAccessRequestResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder justification(@Nullable String justification) {
-            this.justification = justification;
+            $.justification = justification;
             return this;
         }
+
         public Builder requestor(String requestor) {
-            this.requestor = Objects.requireNonNull(requestor);
+            $.requestor = requestor;
             return this;
         }
+
         public Builder startTimeUtc(String startTimeUtc) {
-            this.startTimeUtc = Objects.requireNonNull(startTimeUtc);
+            $.startTimeUtc = startTimeUtc;
             return this;
         }
+
         public Builder virtualMachines(List<JitNetworkAccessRequestVirtualMachineResponse> virtualMachines) {
-            this.virtualMachines = Objects.requireNonNull(virtualMachines);
+            $.virtualMachines = virtualMachines;
             return this;
         }
+
         public Builder virtualMachines(JitNetworkAccessRequestVirtualMachineResponse... virtualMachines) {
             return virtualMachines(List.of(virtualMachines));
-        }        public JitNetworkAccessRequestResponse build() {
-            return new JitNetworkAccessRequestResponse(justification, requestor, startTimeUtc, virtualMachines);
+        }
+
+        public JitNetworkAccessRequestResponse build() {
+            $.requestor = Objects.requireNonNull($.requestor, "expected parameter 'requestor' to be non-null");
+            $.startTimeUtc = Objects.requireNonNull($.startTimeUtc, "expected parameter 'startTimeUtc' to be non-null");
+            $.virtualMachines = Objects.requireNonNull($.virtualMachines, "expected parameter 'virtualMachines' to be non-null");
+            return $;
         }
     }
+
 }

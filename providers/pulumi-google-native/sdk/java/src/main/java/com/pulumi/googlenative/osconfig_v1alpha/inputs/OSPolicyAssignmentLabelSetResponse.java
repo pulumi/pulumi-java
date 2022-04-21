@@ -22,45 +22,45 @@ public final class OSPolicyAssignmentLabelSetResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="labels", required=true)
-      private final Map<String,String> labels;
+    private Map<String,String> labels;
 
     public Map<String,String> labels() {
         return this.labels;
     }
 
-    public OSPolicyAssignmentLabelSetResponse(Map<String,String> labels) {
-        this.labels = Objects.requireNonNull(labels, "expected parameter 'labels' to be non-null");
-    }
+    private OSPolicyAssignmentLabelSetResponse() {}
 
-    private OSPolicyAssignmentLabelSetResponse() {
-        this.labels = Map.of();
+    private OSPolicyAssignmentLabelSetResponse(OSPolicyAssignmentLabelSetResponse $) {
+        this.labels = $.labels;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OSPolicyAssignmentLabelSetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,String> labels;
+        private OSPolicyAssignmentLabelSetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OSPolicyAssignmentLabelSetResponse();
         }
 
         public Builder(OSPolicyAssignmentLabelSetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.labels = defaults.labels;
+            $ = new OSPolicyAssignmentLabelSetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder labels(Map<String,String> labels) {
-            this.labels = Objects.requireNonNull(labels);
+            $.labels = labels;
             return this;
-        }        public OSPolicyAssignmentLabelSetResponse build() {
-            return new OSPolicyAssignmentLabelSetResponse(labels);
+        }
+
+        public OSPolicyAssignmentLabelSetResponse build() {
+            $.labels = Objects.requireNonNull($.labels, "expected parameter 'labels' to be non-null");
+            return $;
         }
     }
+
 }

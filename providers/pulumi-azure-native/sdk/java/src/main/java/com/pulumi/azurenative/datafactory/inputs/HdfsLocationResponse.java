@@ -25,10 +25,10 @@ public final class HdfsLocationResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="fileName")
-      private final @Nullable Object fileName;
+    private @Nullable Object fileName;
 
     public Optional<Object> fileName() {
-        return this.fileName == null ? Optional.empty() : Optional.ofNullable(this.fileName);
+        return Optional.ofNullable(this.fileName);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class HdfsLocationResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="folderPath")
-      private final @Nullable Object folderPath;
+    private @Nullable Object folderPath;
 
     public Optional<Object> folderPath() {
-        return this.folderPath == null ? Optional.empty() : Optional.ofNullable(this.folderPath);
+        return Optional.ofNullable(this.folderPath);
     }
 
     /**
@@ -48,64 +48,57 @@ public final class HdfsLocationResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public HdfsLocationResponse(
-        @Nullable Object fileName,
-        @Nullable Object folderPath,
-        String type) {
-        this.fileName = fileName;
-        this.folderPath = folderPath;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private HdfsLocationResponse() {}
 
-    private HdfsLocationResponse() {
-        this.fileName = null;
-        this.folderPath = null;
-        this.type = null;
+    private HdfsLocationResponse(HdfsLocationResponse $) {
+        this.fileName = $.fileName;
+        this.folderPath = $.folderPath;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HdfsLocationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object fileName;
-        private @Nullable Object folderPath;
-        private String type;
+        private HdfsLocationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HdfsLocationResponse();
         }
 
         public Builder(HdfsLocationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fileName = defaults.fileName;
-    	      this.folderPath = defaults.folderPath;
-    	      this.type = defaults.type;
+            $ = new HdfsLocationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder fileName(@Nullable Object fileName) {
-            this.fileName = fileName;
+            $.fileName = fileName;
             return this;
         }
+
         public Builder folderPath(@Nullable Object folderPath) {
-            this.folderPath = folderPath;
+            $.folderPath = folderPath;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public HdfsLocationResponse build() {
-            return new HdfsLocationResponse(fileName, folderPath, type);
+        }
+
+        public HdfsLocationResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

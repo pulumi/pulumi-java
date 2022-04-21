@@ -22,7 +22,7 @@ public final class SparkBatchResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="archiveUris", required=true)
-      private final List<String> archiveUris;
+    private List<String> archiveUris;
 
     public List<String> archiveUris() {
         return this.archiveUris;
@@ -33,7 +33,7 @@ public final class SparkBatchResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="args", required=true)
-      private final List<String> args;
+    private List<String> args;
 
     public List<String> args() {
         return this.args;
@@ -44,7 +44,7 @@ public final class SparkBatchResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="fileUris", required=true)
-      private final List<String> fileUris;
+    private List<String> fileUris;
 
     public List<String> fileUris() {
         return this.fileUris;
@@ -55,7 +55,7 @@ public final class SparkBatchResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="jarFileUris", required=true)
-      private final List<String> jarFileUris;
+    private List<String> jarFileUris;
 
     public List<String> jarFileUris() {
         return this.jarFileUris;
@@ -66,7 +66,7 @@ public final class SparkBatchResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="mainClass", required=true)
-      private final String mainClass;
+    private String mainClass;
 
     public String mainClass() {
         return this.mainClass;
@@ -77,103 +77,96 @@ public final class SparkBatchResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="mainJarFileUri", required=true)
-      private final String mainJarFileUri;
+    private String mainJarFileUri;
 
     public String mainJarFileUri() {
         return this.mainJarFileUri;
     }
 
-    public SparkBatchResponse(
-        List<String> archiveUris,
-        List<String> args,
-        List<String> fileUris,
-        List<String> jarFileUris,
-        String mainClass,
-        String mainJarFileUri) {
-        this.archiveUris = Objects.requireNonNull(archiveUris, "expected parameter 'archiveUris' to be non-null");
-        this.args = Objects.requireNonNull(args, "expected parameter 'args' to be non-null");
-        this.fileUris = Objects.requireNonNull(fileUris, "expected parameter 'fileUris' to be non-null");
-        this.jarFileUris = Objects.requireNonNull(jarFileUris, "expected parameter 'jarFileUris' to be non-null");
-        this.mainClass = Objects.requireNonNull(mainClass, "expected parameter 'mainClass' to be non-null");
-        this.mainJarFileUri = Objects.requireNonNull(mainJarFileUri, "expected parameter 'mainJarFileUri' to be non-null");
-    }
+    private SparkBatchResponse() {}
 
-    private SparkBatchResponse() {
-        this.archiveUris = List.of();
-        this.args = List.of();
-        this.fileUris = List.of();
-        this.jarFileUris = List.of();
-        this.mainClass = null;
-        this.mainJarFileUri = null;
+    private SparkBatchResponse(SparkBatchResponse $) {
+        this.archiveUris = $.archiveUris;
+        this.args = $.args;
+        this.fileUris = $.fileUris;
+        this.jarFileUris = $.jarFileUris;
+        this.mainClass = $.mainClass;
+        this.mainJarFileUri = $.mainJarFileUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SparkBatchResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> archiveUris;
-        private List<String> args;
-        private List<String> fileUris;
-        private List<String> jarFileUris;
-        private String mainClass;
-        private String mainJarFileUri;
+        private SparkBatchResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SparkBatchResponse();
         }
 
         public Builder(SparkBatchResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.archiveUris = defaults.archiveUris;
-    	      this.args = defaults.args;
-    	      this.fileUris = defaults.fileUris;
-    	      this.jarFileUris = defaults.jarFileUris;
-    	      this.mainClass = defaults.mainClass;
-    	      this.mainJarFileUri = defaults.mainJarFileUri;
+            $ = new SparkBatchResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder archiveUris(List<String> archiveUris) {
-            this.archiveUris = Objects.requireNonNull(archiveUris);
+            $.archiveUris = archiveUris;
             return this;
         }
+
         public Builder archiveUris(String... archiveUris) {
             return archiveUris(List.of(archiveUris));
         }
+
         public Builder args(List<String> args) {
-            this.args = Objects.requireNonNull(args);
+            $.args = args;
             return this;
         }
+
         public Builder args(String... args) {
             return args(List.of(args));
         }
+
         public Builder fileUris(List<String> fileUris) {
-            this.fileUris = Objects.requireNonNull(fileUris);
+            $.fileUris = fileUris;
             return this;
         }
+
         public Builder fileUris(String... fileUris) {
             return fileUris(List.of(fileUris));
         }
+
         public Builder jarFileUris(List<String> jarFileUris) {
-            this.jarFileUris = Objects.requireNonNull(jarFileUris);
+            $.jarFileUris = jarFileUris;
             return this;
         }
+
         public Builder jarFileUris(String... jarFileUris) {
             return jarFileUris(List.of(jarFileUris));
         }
+
         public Builder mainClass(String mainClass) {
-            this.mainClass = Objects.requireNonNull(mainClass);
+            $.mainClass = mainClass;
             return this;
         }
+
         public Builder mainJarFileUri(String mainJarFileUri) {
-            this.mainJarFileUri = Objects.requireNonNull(mainJarFileUri);
+            $.mainJarFileUri = mainJarFileUri;
             return this;
-        }        public SparkBatchResponse build() {
-            return new SparkBatchResponse(archiveUris, args, fileUris, jarFileUris, mainClass, mainJarFileUri);
+        }
+
+        public SparkBatchResponse build() {
+            $.archiveUris = Objects.requireNonNull($.archiveUris, "expected parameter 'archiveUris' to be non-null");
+            $.args = Objects.requireNonNull($.args, "expected parameter 'args' to be non-null");
+            $.fileUris = Objects.requireNonNull($.fileUris, "expected parameter 'fileUris' to be non-null");
+            $.jarFileUris = Objects.requireNonNull($.jarFileUris, "expected parameter 'jarFileUris' to be non-null");
+            $.mainClass = Objects.requireNonNull($.mainClass, "expected parameter 'mainClass' to be non-null");
+            $.mainJarFileUri = Objects.requireNonNull($.mainJarFileUri, "expected parameter 'mainJarFileUri' to be non-null");
+            return $;
         }
     }
+
 }

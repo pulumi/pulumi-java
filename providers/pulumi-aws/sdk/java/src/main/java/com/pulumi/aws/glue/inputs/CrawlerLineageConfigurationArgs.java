@@ -5,9 +5,9 @@ package com.pulumi.aws.glue.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class CrawlerLineageConfigurationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="crawlerLineageSettings")
-      private final @Nullable Output<String> crawlerLineageSettings;
+    private @Nullable Output<String> crawlerLineageSettings;
 
-    public Output<String> crawlerLineageSettings() {
-        return this.crawlerLineageSettings == null ? Codegen.empty() : this.crawlerLineageSettings;
+    public Optional<Output<String>> crawlerLineageSettings() {
+        return Optional.ofNullable(this.crawlerLineageSettings);
     }
 
-    public CrawlerLineageConfigurationArgs(@Nullable Output<String> crawlerLineageSettings) {
-        this.crawlerLineageSettings = crawlerLineageSettings;
-    }
+    private CrawlerLineageConfigurationArgs() {}
 
-    private CrawlerLineageConfigurationArgs() {
-        this.crawlerLineageSettings = Codegen.empty();
+    private CrawlerLineageConfigurationArgs(CrawlerLineageConfigurationArgs $) {
+        this.crawlerLineageSettings = $.crawlerLineageSettings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CrawlerLineageConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> crawlerLineageSettings;
+        private CrawlerLineageConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CrawlerLineageConfigurationArgs();
         }
 
         public Builder(CrawlerLineageConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.crawlerLineageSettings = defaults.crawlerLineageSettings;
+            $ = new CrawlerLineageConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder crawlerLineageSettings(@Nullable Output<String> crawlerLineageSettings) {
-            this.crawlerLineageSettings = crawlerLineageSettings;
+            $.crawlerLineageSettings = crawlerLineageSettings;
             return this;
         }
-        public Builder crawlerLineageSettings(@Nullable String crawlerLineageSettings) {
-            this.crawlerLineageSettings = Codegen.ofNullable(crawlerLineageSettings);
-            return this;
-        }        public CrawlerLineageConfigurationArgs build() {
-            return new CrawlerLineageConfigurationArgs(crawlerLineageSettings);
+
+        public Builder crawlerLineageSettings(String crawlerLineageSettings) {
+            return crawlerLineageSettings(Output.of(crawlerLineageSettings));
+        }
+
+        public CrawlerLineageConfigurationArgs build() {
+            return $;
         }
     }
+
 }

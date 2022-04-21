@@ -17,45 +17,45 @@ public final class GetControlPanelArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="controlPanelArn", required=true)
-      private final String controlPanelArn;
+    private String controlPanelArn;
 
     public String controlPanelArn() {
         return this.controlPanelArn;
     }
 
-    public GetControlPanelArgs(String controlPanelArn) {
-        this.controlPanelArn = Objects.requireNonNull(controlPanelArn, "expected parameter 'controlPanelArn' to be non-null");
-    }
+    private GetControlPanelArgs() {}
 
-    private GetControlPanelArgs() {
-        this.controlPanelArn = null;
+    private GetControlPanelArgs(GetControlPanelArgs $) {
+        this.controlPanelArn = $.controlPanelArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetControlPanelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String controlPanelArn;
+        private GetControlPanelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetControlPanelArgs();
         }
 
         public Builder(GetControlPanelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.controlPanelArn = defaults.controlPanelArn;
+            $ = new GetControlPanelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder controlPanelArn(String controlPanelArn) {
-            this.controlPanelArn = Objects.requireNonNull(controlPanelArn);
+            $.controlPanelArn = controlPanelArn;
             return this;
-        }        public GetControlPanelArgs build() {
-            return new GetControlPanelArgs(controlPanelArn);
+        }
+
+        public GetControlPanelArgs build() {
+            $.controlPanelArn = Objects.requireNonNull($.controlPanelArn, "expected parameter 'controlPanelArn' to be non-null");
+            return $;
         }
     }
+
 }

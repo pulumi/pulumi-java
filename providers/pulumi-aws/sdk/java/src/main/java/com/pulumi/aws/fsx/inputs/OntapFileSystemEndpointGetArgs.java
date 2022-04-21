@@ -7,9 +7,9 @@ import com.pulumi.aws.fsx.inputs.OntapFileSystemEndpointInterclusterGetArgs;
 import com.pulumi.aws.fsx.inputs.OntapFileSystemEndpointManagementGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class OntapFileSystemEndpointGetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="interclusters")
-      private final @Nullable Output<List<OntapFileSystemEndpointInterclusterGetArgs>> interclusters;
+    private @Nullable Output<List<OntapFileSystemEndpointInterclusterGetArgs>> interclusters;
 
-    public Output<List<OntapFileSystemEndpointInterclusterGetArgs>> interclusters() {
-        return this.interclusters == null ? Codegen.empty() : this.interclusters;
+    public Optional<Output<List<OntapFileSystemEndpointInterclusterGetArgs>>> interclusters() {
+        return Optional.ofNullable(this.interclusters);
     }
 
     /**
@@ -33,69 +33,66 @@ public final class OntapFileSystemEndpointGetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="managements")
-      private final @Nullable Output<List<OntapFileSystemEndpointManagementGetArgs>> managements;
+    private @Nullable Output<List<OntapFileSystemEndpointManagementGetArgs>> managements;
 
-    public Output<List<OntapFileSystemEndpointManagementGetArgs>> managements() {
-        return this.managements == null ? Codegen.empty() : this.managements;
+    public Optional<Output<List<OntapFileSystemEndpointManagementGetArgs>>> managements() {
+        return Optional.ofNullable(this.managements);
     }
 
-    public OntapFileSystemEndpointGetArgs(
-        @Nullable Output<List<OntapFileSystemEndpointInterclusterGetArgs>> interclusters,
-        @Nullable Output<List<OntapFileSystemEndpointManagementGetArgs>> managements) {
-        this.interclusters = interclusters;
-        this.managements = managements;
-    }
+    private OntapFileSystemEndpointGetArgs() {}
 
-    private OntapFileSystemEndpointGetArgs() {
-        this.interclusters = Codegen.empty();
-        this.managements = Codegen.empty();
+    private OntapFileSystemEndpointGetArgs(OntapFileSystemEndpointGetArgs $) {
+        this.interclusters = $.interclusters;
+        this.managements = $.managements;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OntapFileSystemEndpointGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<OntapFileSystemEndpointInterclusterGetArgs>> interclusters;
-        private @Nullable Output<List<OntapFileSystemEndpointManagementGetArgs>> managements;
+        private OntapFileSystemEndpointGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OntapFileSystemEndpointGetArgs();
         }
 
         public Builder(OntapFileSystemEndpointGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.interclusters = defaults.interclusters;
-    	      this.managements = defaults.managements;
+            $ = new OntapFileSystemEndpointGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder interclusters(@Nullable Output<List<OntapFileSystemEndpointInterclusterGetArgs>> interclusters) {
-            this.interclusters = interclusters;
+            $.interclusters = interclusters;
             return this;
         }
-        public Builder interclusters(@Nullable List<OntapFileSystemEndpointInterclusterGetArgs> interclusters) {
-            this.interclusters = Codegen.ofNullable(interclusters);
-            return this;
+
+        public Builder interclusters(List<OntapFileSystemEndpointInterclusterGetArgs> interclusters) {
+            return interclusters(Output.of(interclusters));
         }
+
         public Builder interclusters(OntapFileSystemEndpointInterclusterGetArgs... interclusters) {
             return interclusters(List.of(interclusters));
         }
+
         public Builder managements(@Nullable Output<List<OntapFileSystemEndpointManagementGetArgs>> managements) {
-            this.managements = managements;
+            $.managements = managements;
             return this;
         }
-        public Builder managements(@Nullable List<OntapFileSystemEndpointManagementGetArgs> managements) {
-            this.managements = Codegen.ofNullable(managements);
-            return this;
+
+        public Builder managements(List<OntapFileSystemEndpointManagementGetArgs> managements) {
+            return managements(Output.of(managements));
         }
+
         public Builder managements(OntapFileSystemEndpointManagementGetArgs... managements) {
             return managements(List.of(managements));
-        }        public OntapFileSystemEndpointGetArgs build() {
-            return new OntapFileSystemEndpointGetArgs(interclusters, managements);
+        }
+
+        public OntapFileSystemEndpointGetArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,13 +5,13 @@ package com.pulumi.googlenative.networkservices_v1beta1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.networkservices_v1beta1.enums.EndpointPolicyType;
 import com.pulumi.googlenative.networkservices_v1beta1.inputs.EndpointMatcherArgs;
 import com.pulumi.googlenative.networkservices_v1beta1.inputs.TrafficPortSelectorArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class EndpointPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="authorizationPolicy")
-      private final @Nullable Output<String> authorizationPolicy;
+    private @Nullable Output<String> authorizationPolicy;
 
-    public Output<String> authorizationPolicy() {
-        return this.authorizationPolicy == null ? Codegen.empty() : this.authorizationPolicy;
+    public Optional<Output<String>> authorizationPolicy() {
+        return Optional.ofNullable(this.authorizationPolicy);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class EndpointPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="clientTlsPolicy")
-      private final @Nullable Output<String> clientTlsPolicy;
+    private @Nullable Output<String> clientTlsPolicy;
 
-    public Output<String> clientTlsPolicy() {
-        return this.clientTlsPolicy == null ? Codegen.empty() : this.clientTlsPolicy;
+    public Optional<Output<String>> clientTlsPolicy() {
+        return Optional.ofNullable(this.clientTlsPolicy);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class EndpointPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -57,14 +57,14 @@ public final class EndpointPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="endpointMatcher", required=true)
-      private final Output<EndpointMatcherArgs> endpointMatcher;
+    private Output<EndpointMatcherArgs> endpointMatcher;
 
     public Output<EndpointMatcherArgs> endpointMatcher() {
         return this.endpointMatcher;
     }
 
     @Import(name="endpointPolicyId", required=true)
-      private final Output<String> endpointPolicyId;
+    private Output<String> endpointPolicyId;
 
     public Output<String> endpointPolicyId() {
         return this.endpointPolicyId;
@@ -75,17 +75,17 @@ public final class EndpointPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -93,17 +93,17 @@ public final class EndpointPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -111,10 +111,10 @@ public final class EndpointPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="serverTlsPolicy")
-      private final @Nullable Output<String> serverTlsPolicy;
+    private @Nullable Output<String> serverTlsPolicy;
 
-    public Output<String> serverTlsPolicy() {
-        return this.serverTlsPolicy == null ? Codegen.empty() : this.serverTlsPolicy;
+    public Optional<Output<String>> serverTlsPolicy() {
+        return Optional.ofNullable(this.serverTlsPolicy);
     }
 
     /**
@@ -122,10 +122,10 @@ public final class EndpointPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="trafficPortSelector")
-      private final @Nullable Output<TrafficPortSelectorArgs> trafficPortSelector;
+    private @Nullable Output<TrafficPortSelectorArgs> trafficPortSelector;
 
-    public Output<TrafficPortSelectorArgs> trafficPortSelector() {
-        return this.trafficPortSelector == null ? Codegen.empty() : this.trafficPortSelector;
+    public Optional<Output<TrafficPortSelectorArgs>> trafficPortSelector() {
+        return Optional.ofNullable(this.trafficPortSelector);
     }
 
     /**
@@ -133,193 +133,161 @@ public final class EndpointPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="type", required=true)
-      private final Output<EndpointPolicyType> type;
+    private Output<EndpointPolicyType> type;
 
     public Output<EndpointPolicyType> type() {
         return this.type;
     }
 
-    public EndpointPolicyArgs(
-        @Nullable Output<String> authorizationPolicy,
-        @Nullable Output<String> clientTlsPolicy,
-        @Nullable Output<String> description,
-        Output<EndpointMatcherArgs> endpointMatcher,
-        Output<String> endpointPolicyId,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<String> serverTlsPolicy,
-        @Nullable Output<TrafficPortSelectorArgs> trafficPortSelector,
-        Output<EndpointPolicyType> type) {
-        this.authorizationPolicy = authorizationPolicy;
-        this.clientTlsPolicy = clientTlsPolicy;
-        this.description = description;
-        this.endpointMatcher = Objects.requireNonNull(endpointMatcher, "expected parameter 'endpointMatcher' to be non-null");
-        this.endpointPolicyId = Objects.requireNonNull(endpointPolicyId, "expected parameter 'endpointPolicyId' to be non-null");
-        this.labels = labels;
-        this.location = location;
-        this.name = name;
-        this.project = project;
-        this.serverTlsPolicy = serverTlsPolicy;
-        this.trafficPortSelector = trafficPortSelector;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private EndpointPolicyArgs() {}
 
-    private EndpointPolicyArgs() {
-        this.authorizationPolicy = Codegen.empty();
-        this.clientTlsPolicy = Codegen.empty();
-        this.description = Codegen.empty();
-        this.endpointMatcher = Codegen.empty();
-        this.endpointPolicyId = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.serverTlsPolicy = Codegen.empty();
-        this.trafficPortSelector = Codegen.empty();
-        this.type = Codegen.empty();
+    private EndpointPolicyArgs(EndpointPolicyArgs $) {
+        this.authorizationPolicy = $.authorizationPolicy;
+        this.clientTlsPolicy = $.clientTlsPolicy;
+        this.description = $.description;
+        this.endpointMatcher = $.endpointMatcher;
+        this.endpointPolicyId = $.endpointPolicyId;
+        this.labels = $.labels;
+        this.location = $.location;
+        this.name = $.name;
+        this.project = $.project;
+        this.serverTlsPolicy = $.serverTlsPolicy;
+        this.trafficPortSelector = $.trafficPortSelector;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> authorizationPolicy;
-        private @Nullable Output<String> clientTlsPolicy;
-        private @Nullable Output<String> description;
-        private Output<EndpointMatcherArgs> endpointMatcher;
-        private Output<String> endpointPolicyId;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> serverTlsPolicy;
-        private @Nullable Output<TrafficPortSelectorArgs> trafficPortSelector;
-        private Output<EndpointPolicyType> type;
+        private EndpointPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointPolicyArgs();
         }
 
         public Builder(EndpointPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authorizationPolicy = defaults.authorizationPolicy;
-    	      this.clientTlsPolicy = defaults.clientTlsPolicy;
-    	      this.description = defaults.description;
-    	      this.endpointMatcher = defaults.endpointMatcher;
-    	      this.endpointPolicyId = defaults.endpointPolicyId;
-    	      this.labels = defaults.labels;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.serverTlsPolicy = defaults.serverTlsPolicy;
-    	      this.trafficPortSelector = defaults.trafficPortSelector;
-    	      this.type = defaults.type;
+            $ = new EndpointPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authorizationPolicy(@Nullable Output<String> authorizationPolicy) {
-            this.authorizationPolicy = authorizationPolicy;
+            $.authorizationPolicy = authorizationPolicy;
             return this;
         }
-        public Builder authorizationPolicy(@Nullable String authorizationPolicy) {
-            this.authorizationPolicy = Codegen.ofNullable(authorizationPolicy);
-            return this;
+
+        public Builder authorizationPolicy(String authorizationPolicy) {
+            return authorizationPolicy(Output.of(authorizationPolicy));
         }
+
         public Builder clientTlsPolicy(@Nullable Output<String> clientTlsPolicy) {
-            this.clientTlsPolicy = clientTlsPolicy;
+            $.clientTlsPolicy = clientTlsPolicy;
             return this;
         }
-        public Builder clientTlsPolicy(@Nullable String clientTlsPolicy) {
-            this.clientTlsPolicy = Codegen.ofNullable(clientTlsPolicy);
-            return this;
+
+        public Builder clientTlsPolicy(String clientTlsPolicy) {
+            return clientTlsPolicy(Output.of(clientTlsPolicy));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder endpointMatcher(Output<EndpointMatcherArgs> endpointMatcher) {
-            this.endpointMatcher = Objects.requireNonNull(endpointMatcher);
+            $.endpointMatcher = endpointMatcher;
             return this;
         }
+
         public Builder endpointMatcher(EndpointMatcherArgs endpointMatcher) {
-            this.endpointMatcher = Output.of(Objects.requireNonNull(endpointMatcher));
-            return this;
+            return endpointMatcher(Output.of(endpointMatcher));
         }
+
         public Builder endpointPolicyId(Output<String> endpointPolicyId) {
-            this.endpointPolicyId = Objects.requireNonNull(endpointPolicyId);
+            $.endpointPolicyId = endpointPolicyId;
             return this;
         }
+
         public Builder endpointPolicyId(String endpointPolicyId) {
-            this.endpointPolicyId = Output.of(Objects.requireNonNull(endpointPolicyId));
-            return this;
+            return endpointPolicyId(Output.of(endpointPolicyId));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder serverTlsPolicy(@Nullable Output<String> serverTlsPolicy) {
-            this.serverTlsPolicy = serverTlsPolicy;
+            $.serverTlsPolicy = serverTlsPolicy;
             return this;
         }
-        public Builder serverTlsPolicy(@Nullable String serverTlsPolicy) {
-            this.serverTlsPolicy = Codegen.ofNullable(serverTlsPolicy);
-            return this;
+
+        public Builder serverTlsPolicy(String serverTlsPolicy) {
+            return serverTlsPolicy(Output.of(serverTlsPolicy));
         }
+
         public Builder trafficPortSelector(@Nullable Output<TrafficPortSelectorArgs> trafficPortSelector) {
-            this.trafficPortSelector = trafficPortSelector;
+            $.trafficPortSelector = trafficPortSelector;
             return this;
         }
-        public Builder trafficPortSelector(@Nullable TrafficPortSelectorArgs trafficPortSelector) {
-            this.trafficPortSelector = Codegen.ofNullable(trafficPortSelector);
-            return this;
+
+        public Builder trafficPortSelector(TrafficPortSelectorArgs trafficPortSelector) {
+            return trafficPortSelector(Output.of(trafficPortSelector));
         }
+
         public Builder type(Output<EndpointPolicyType> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(EndpointPolicyType type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public EndpointPolicyArgs build() {
-            return new EndpointPolicyArgs(authorizationPolicy, clientTlsPolicy, description, endpointMatcher, endpointPolicyId, labels, location, name, project, serverTlsPolicy, trafficPortSelector, type);
+            return type(Output.of(type));
+        }
+
+        public EndpointPolicyArgs build() {
+            $.endpointMatcher = Objects.requireNonNull($.endpointMatcher, "expected parameter 'endpointMatcher' to be non-null");
+            $.endpointPolicyId = Objects.requireNonNull($.endpointPolicyId, "expected parameter 'endpointPolicyId' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

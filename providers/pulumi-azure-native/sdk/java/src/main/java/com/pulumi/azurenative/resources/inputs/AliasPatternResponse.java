@@ -23,10 +23,10 @@ public final class AliasPatternResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="phrase")
-      private final @Nullable String phrase;
+    private @Nullable String phrase;
 
     public Optional<String> phrase() {
-        return this.phrase == null ? Optional.empty() : Optional.ofNullable(this.phrase);
+        return Optional.ofNullable(this.phrase);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class AliasPatternResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class AliasPatternResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="variable")
-      private final @Nullable String variable;
+    private @Nullable String variable;
 
     public Optional<String> variable() {
-        return this.variable == null ? Optional.empty() : Optional.ofNullable(this.variable);
+        return Optional.ofNullable(this.variable);
     }
 
-    public AliasPatternResponse(
-        @Nullable String phrase,
-        @Nullable String type,
-        @Nullable String variable) {
-        this.phrase = phrase;
-        this.type = type;
-        this.variable = variable;
-    }
+    private AliasPatternResponse() {}
 
-    private AliasPatternResponse() {
-        this.phrase = null;
-        this.type = null;
-        this.variable = null;
+    private AliasPatternResponse(AliasPatternResponse $) {
+        this.phrase = $.phrase;
+        this.type = $.type;
+        this.variable = $.variable;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AliasPatternResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String phrase;
-        private @Nullable String type;
-        private @Nullable String variable;
+        private AliasPatternResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AliasPatternResponse();
         }
 
         public Builder(AliasPatternResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.phrase = defaults.phrase;
-    	      this.type = defaults.type;
-    	      this.variable = defaults.variable;
+            $ = new AliasPatternResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder phrase(@Nullable String phrase) {
-            this.phrase = phrase;
+            $.phrase = phrase;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
+
         public Builder variable(@Nullable String variable) {
-            this.variable = variable;
+            $.variable = variable;
             return this;
-        }        public AliasPatternResponse build() {
-            return new AliasPatternResponse(phrase, type, variable);
+        }
+
+        public AliasPatternResponse build() {
+            return $;
         }
     }
+
 }

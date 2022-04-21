@@ -25,10 +25,10 @@ public final class RestorePolicyPropertiesResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="days")
-      private final @Nullable Integer days;
+    private @Nullable Integer days;
 
     public Optional<Integer> days() {
-        return this.days == null ? Optional.empty() : Optional.ofNullable(this.days);
+        return Optional.ofNullable(this.days);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class RestorePolicyPropertiesResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="enabled", required=true)
-      private final Boolean enabled;
+    private Boolean enabled;
 
     public Boolean enabled() {
         return this.enabled;
@@ -47,7 +47,7 @@ public final class RestorePolicyPropertiesResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="lastEnabledTime", required=true)
-      private final String lastEnabledTime;
+    private String lastEnabledTime;
 
     public String lastEnabledTime() {
         return this.lastEnabledTime;
@@ -58,73 +58,65 @@ public final class RestorePolicyPropertiesResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="minRestoreTime", required=true)
-      private final String minRestoreTime;
+    private String minRestoreTime;
 
     public String minRestoreTime() {
         return this.minRestoreTime;
     }
 
-    public RestorePolicyPropertiesResponse(
-        @Nullable Integer days,
-        Boolean enabled,
-        String lastEnabledTime,
-        String minRestoreTime) {
-        this.days = days;
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-        this.lastEnabledTime = Objects.requireNonNull(lastEnabledTime, "expected parameter 'lastEnabledTime' to be non-null");
-        this.minRestoreTime = Objects.requireNonNull(minRestoreTime, "expected parameter 'minRestoreTime' to be non-null");
-    }
+    private RestorePolicyPropertiesResponse() {}
 
-    private RestorePolicyPropertiesResponse() {
-        this.days = null;
-        this.enabled = null;
-        this.lastEnabledTime = null;
-        this.minRestoreTime = null;
+    private RestorePolicyPropertiesResponse(RestorePolicyPropertiesResponse $) {
+        this.days = $.days;
+        this.enabled = $.enabled;
+        this.lastEnabledTime = $.lastEnabledTime;
+        this.minRestoreTime = $.minRestoreTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RestorePolicyPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer days;
-        private Boolean enabled;
-        private String lastEnabledTime;
-        private String minRestoreTime;
+        private RestorePolicyPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RestorePolicyPropertiesResponse();
         }
 
         public Builder(RestorePolicyPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.days = defaults.days;
-    	      this.enabled = defaults.enabled;
-    	      this.lastEnabledTime = defaults.lastEnabledTime;
-    	      this.minRestoreTime = defaults.minRestoreTime;
+            $ = new RestorePolicyPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder days(@Nullable Integer days) {
-            this.days = days;
+            $.days = days;
             return this;
         }
+
         public Builder enabled(Boolean enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder lastEnabledTime(String lastEnabledTime) {
-            this.lastEnabledTime = Objects.requireNonNull(lastEnabledTime);
+            $.lastEnabledTime = lastEnabledTime;
             return this;
         }
+
         public Builder minRestoreTime(String minRestoreTime) {
-            this.minRestoreTime = Objects.requireNonNull(minRestoreTime);
+            $.minRestoreTime = minRestoreTime;
             return this;
-        }        public RestorePolicyPropertiesResponse build() {
-            return new RestorePolicyPropertiesResponse(days, enabled, lastEnabledTime, minRestoreTime);
+        }
+
+        public RestorePolicyPropertiesResponse build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            $.lastEnabledTime = Objects.requireNonNull($.lastEnabledTime, "expected parameter 'lastEnabledTime' to be non-null");
+            $.minRestoreTime = Objects.requireNonNull($.minRestoreTime, "expected parameter 'minRestoreTime' to be non-null");
+            return $;
         }
     }
+
 }

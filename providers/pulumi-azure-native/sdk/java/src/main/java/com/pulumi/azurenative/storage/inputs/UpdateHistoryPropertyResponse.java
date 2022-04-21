@@ -22,7 +22,7 @@ public final class UpdateHistoryPropertyResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="immutabilityPeriodSinceCreationInDays", required=true)
-      private final Integer immutabilityPeriodSinceCreationInDays;
+    private Integer immutabilityPeriodSinceCreationInDays;
 
     public Integer immutabilityPeriodSinceCreationInDays() {
         return this.immutabilityPeriodSinceCreationInDays;
@@ -33,7 +33,7 @@ public final class UpdateHistoryPropertyResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="objectIdentifier", required=true)
-      private final String objectIdentifier;
+    private String objectIdentifier;
 
     public String objectIdentifier() {
         return this.objectIdentifier;
@@ -44,7 +44,7 @@ public final class UpdateHistoryPropertyResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="tenantId", required=true)
-      private final String tenantId;
+    private String tenantId;
 
     public String tenantId() {
         return this.tenantId;
@@ -55,7 +55,7 @@ public final class UpdateHistoryPropertyResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="timestamp", required=true)
-      private final String timestamp;
+    private String timestamp;
 
     public String timestamp() {
         return this.timestamp;
@@ -66,7 +66,7 @@ public final class UpdateHistoryPropertyResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="update", required=true)
-      private final String update;
+    private String update;
 
     public String update() {
         return this.update;
@@ -77,91 +77,80 @@ public final class UpdateHistoryPropertyResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="upn", required=true)
-      private final String upn;
+    private String upn;
 
     public String upn() {
         return this.upn;
     }
 
-    public UpdateHistoryPropertyResponse(
-        Integer immutabilityPeriodSinceCreationInDays,
-        String objectIdentifier,
-        String tenantId,
-        String timestamp,
-        String update,
-        String upn) {
-        this.immutabilityPeriodSinceCreationInDays = Objects.requireNonNull(immutabilityPeriodSinceCreationInDays, "expected parameter 'immutabilityPeriodSinceCreationInDays' to be non-null");
-        this.objectIdentifier = Objects.requireNonNull(objectIdentifier, "expected parameter 'objectIdentifier' to be non-null");
-        this.tenantId = Objects.requireNonNull(tenantId, "expected parameter 'tenantId' to be non-null");
-        this.timestamp = Objects.requireNonNull(timestamp, "expected parameter 'timestamp' to be non-null");
-        this.update = Objects.requireNonNull(update, "expected parameter 'update' to be non-null");
-        this.upn = Objects.requireNonNull(upn, "expected parameter 'upn' to be non-null");
-    }
+    private UpdateHistoryPropertyResponse() {}
 
-    private UpdateHistoryPropertyResponse() {
-        this.immutabilityPeriodSinceCreationInDays = null;
-        this.objectIdentifier = null;
-        this.tenantId = null;
-        this.timestamp = null;
-        this.update = null;
-        this.upn = null;
+    private UpdateHistoryPropertyResponse(UpdateHistoryPropertyResponse $) {
+        this.immutabilityPeriodSinceCreationInDays = $.immutabilityPeriodSinceCreationInDays;
+        this.objectIdentifier = $.objectIdentifier;
+        this.tenantId = $.tenantId;
+        this.timestamp = $.timestamp;
+        this.update = $.update;
+        this.upn = $.upn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UpdateHistoryPropertyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer immutabilityPeriodSinceCreationInDays;
-        private String objectIdentifier;
-        private String tenantId;
-        private String timestamp;
-        private String update;
-        private String upn;
+        private UpdateHistoryPropertyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UpdateHistoryPropertyResponse();
         }
 
         public Builder(UpdateHistoryPropertyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.immutabilityPeriodSinceCreationInDays = defaults.immutabilityPeriodSinceCreationInDays;
-    	      this.objectIdentifier = defaults.objectIdentifier;
-    	      this.tenantId = defaults.tenantId;
-    	      this.timestamp = defaults.timestamp;
-    	      this.update = defaults.update;
-    	      this.upn = defaults.upn;
+            $ = new UpdateHistoryPropertyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder immutabilityPeriodSinceCreationInDays(Integer immutabilityPeriodSinceCreationInDays) {
-            this.immutabilityPeriodSinceCreationInDays = Objects.requireNonNull(immutabilityPeriodSinceCreationInDays);
+            $.immutabilityPeriodSinceCreationInDays = immutabilityPeriodSinceCreationInDays;
             return this;
         }
+
         public Builder objectIdentifier(String objectIdentifier) {
-            this.objectIdentifier = Objects.requireNonNull(objectIdentifier);
+            $.objectIdentifier = objectIdentifier;
             return this;
         }
+
         public Builder tenantId(String tenantId) {
-            this.tenantId = Objects.requireNonNull(tenantId);
+            $.tenantId = tenantId;
             return this;
         }
+
         public Builder timestamp(String timestamp) {
-            this.timestamp = Objects.requireNonNull(timestamp);
+            $.timestamp = timestamp;
             return this;
         }
+
         public Builder update(String update) {
-            this.update = Objects.requireNonNull(update);
+            $.update = update;
             return this;
         }
+
         public Builder upn(String upn) {
-            this.upn = Objects.requireNonNull(upn);
+            $.upn = upn;
             return this;
-        }        public UpdateHistoryPropertyResponse build() {
-            return new UpdateHistoryPropertyResponse(immutabilityPeriodSinceCreationInDays, objectIdentifier, tenantId, timestamp, update, upn);
+        }
+
+        public UpdateHistoryPropertyResponse build() {
+            $.immutabilityPeriodSinceCreationInDays = Objects.requireNonNull($.immutabilityPeriodSinceCreationInDays, "expected parameter 'immutabilityPeriodSinceCreationInDays' to be non-null");
+            $.objectIdentifier = Objects.requireNonNull($.objectIdentifier, "expected parameter 'objectIdentifier' to be non-null");
+            $.tenantId = Objects.requireNonNull($.tenantId, "expected parameter 'tenantId' to be non-null");
+            $.timestamp = Objects.requireNonNull($.timestamp, "expected parameter 'timestamp' to be non-null");
+            $.update = Objects.requireNonNull($.update, "expected parameter 'update' to be non-null");
+            $.upn = Objects.requireNonNull($.upn, "expected parameter 'upn' to be non-null");
+            return $;
         }
     }
+
 }

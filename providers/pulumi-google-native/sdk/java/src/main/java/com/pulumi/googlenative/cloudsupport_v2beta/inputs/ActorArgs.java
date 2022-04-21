@@ -5,9 +5,9 @@ package com.pulumi.googlenative.cloudsupport_v2beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ActorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class ActorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="email")
-      private final @Nullable Output<String> email;
+    private @Nullable Output<String> email;
 
-    public Output<String> email() {
-        return this.email == null ? Codegen.empty() : this.email;
+    public Optional<Output<String>> email() {
+        return Optional.ofNullable(this.email);
     }
 
-    public ActorArgs(
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> email) {
-        this.displayName = displayName;
-        this.email = email;
-    }
+    private ActorArgs() {}
 
-    private ActorArgs() {
-        this.displayName = Codegen.empty();
-        this.email = Codegen.empty();
+    private ActorArgs(ActorArgs $) {
+        this.displayName = $.displayName;
+        this.email = $.email;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ActorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> email;
+        private ActorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ActorArgs();
         }
 
         public Builder(ActorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.email = defaults.email;
+            $ = new ActorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder email(@Nullable Output<String> email) {
-            this.email = email;
+            $.email = email;
             return this;
         }
-        public Builder email(@Nullable String email) {
-            this.email = Codegen.ofNullable(email);
-            return this;
-        }        public ActorArgs build() {
-            return new ActorArgs(displayName, email);
+
+        public Builder email(String email) {
+            return email(Output.of(email));
+        }
+
+        public ActorArgs build() {
+            return $;
         }
     }
+
 }

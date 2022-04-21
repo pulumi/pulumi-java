@@ -3,35 +3,26 @@
 
 package com.pulumi.azurenative.iotsecurity.inputs;
 
-import java.util.Objects;
+
 
 
 public final class GetDefenderSettingArgs extends com.pulumi.resources.InvokeArgs {
 
     public static final GetDefenderSettingArgs Empty = new GetDefenderSettingArgs();
 
-    public GetDefenderSettingArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(GetDefenderSettingArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private GetDefenderSettingArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(GetDefenderSettingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new GetDefenderSettingArgs();
         }
         public GetDefenderSettingArgs build() {
-            return new GetDefenderSettingArgs();
+            return $;
         }
     }
+
 }

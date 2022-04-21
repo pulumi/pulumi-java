@@ -5,9 +5,9 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ExpressionsArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class GooglePrivacyDlpV2RecordConditionArgs extends com.pulumi.reso
      * 
      */
     @Import(name="expressions")
-      private final @Nullable Output<GooglePrivacyDlpV2ExpressionsArgs> expressions;
+    private @Nullable Output<GooglePrivacyDlpV2ExpressionsArgs> expressions;
 
-    public Output<GooglePrivacyDlpV2ExpressionsArgs> expressions() {
-        return this.expressions == null ? Codegen.empty() : this.expressions;
+    public Optional<Output<GooglePrivacyDlpV2ExpressionsArgs>> expressions() {
+        return Optional.ofNullable(this.expressions);
     }
 
-    public GooglePrivacyDlpV2RecordConditionArgs(@Nullable Output<GooglePrivacyDlpV2ExpressionsArgs> expressions) {
-        this.expressions = expressions;
-    }
+    private GooglePrivacyDlpV2RecordConditionArgs() {}
 
-    private GooglePrivacyDlpV2RecordConditionArgs() {
-        this.expressions = Codegen.empty();
+    private GooglePrivacyDlpV2RecordConditionArgs(GooglePrivacyDlpV2RecordConditionArgs $) {
+        this.expressions = $.expressions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2RecordConditionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GooglePrivacyDlpV2ExpressionsArgs> expressions;
+        private GooglePrivacyDlpV2RecordConditionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2RecordConditionArgs();
         }
 
         public Builder(GooglePrivacyDlpV2RecordConditionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expressions = defaults.expressions;
+            $ = new GooglePrivacyDlpV2RecordConditionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expressions(@Nullable Output<GooglePrivacyDlpV2ExpressionsArgs> expressions) {
-            this.expressions = expressions;
+            $.expressions = expressions;
             return this;
         }
-        public Builder expressions(@Nullable GooglePrivacyDlpV2ExpressionsArgs expressions) {
-            this.expressions = Codegen.ofNullable(expressions);
-            return this;
-        }        public GooglePrivacyDlpV2RecordConditionArgs build() {
-            return new GooglePrivacyDlpV2RecordConditionArgs(expressions);
+
+        public Builder expressions(GooglePrivacyDlpV2ExpressionsArgs expressions) {
+            return expressions(Output.of(expressions));
+        }
+
+        public GooglePrivacyDlpV2RecordConditionArgs build() {
+            return $;
         }
     }
+
 }

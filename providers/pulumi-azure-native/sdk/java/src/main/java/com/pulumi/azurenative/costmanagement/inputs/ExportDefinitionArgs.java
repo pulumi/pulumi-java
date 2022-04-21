@@ -10,9 +10,9 @@ import com.pulumi.azurenative.costmanagement.inputs.ExportTimePeriodArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class ExportDefinitionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="dataSet")
-      private final @Nullable Output<ExportDatasetArgs> dataSet;
+    private @Nullable Output<ExportDatasetArgs> dataSet;
 
-    public Output<ExportDatasetArgs> dataSet() {
-        return this.dataSet == null ? Codegen.empty() : this.dataSet;
+    public Optional<Output<ExportDatasetArgs>> dataSet() {
+        return Optional.ofNullable(this.dataSet);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class ExportDefinitionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="timePeriod")
-      private final @Nullable Output<ExportTimePeriodArgs> timePeriod;
+    private @Nullable Output<ExportTimePeriodArgs> timePeriod;
 
-    public Output<ExportTimePeriodArgs> timePeriod() {
-        return this.timePeriod == null ? Codegen.empty() : this.timePeriod;
+    public Optional<Output<ExportTimePeriodArgs>> timePeriod() {
+        return Optional.ofNullable(this.timePeriod);
     }
 
     /**
@@ -51,7 +51,7 @@ public final class ExportDefinitionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="timeframe", required=true)
-      private final Output<Either<String,TimeframeType>> timeframe;
+    private Output<Either<String,TimeframeType>> timeframe;
 
     public Output<Either<String,TimeframeType>> timeframe() {
         return this.timeframe;
@@ -62,89 +62,80 @@ public final class ExportDefinitionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="type", required=true)
-      private final Output<Either<String,ExportType>> type;
+    private Output<Either<String,ExportType>> type;
 
     public Output<Either<String,ExportType>> type() {
         return this.type;
     }
 
-    public ExportDefinitionArgs(
-        @Nullable Output<ExportDatasetArgs> dataSet,
-        @Nullable Output<ExportTimePeriodArgs> timePeriod,
-        Output<Either<String,TimeframeType>> timeframe,
-        Output<Either<String,ExportType>> type) {
-        this.dataSet = dataSet;
-        this.timePeriod = timePeriod;
-        this.timeframe = Objects.requireNonNull(timeframe, "expected parameter 'timeframe' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ExportDefinitionArgs() {}
 
-    private ExportDefinitionArgs() {
-        this.dataSet = Codegen.empty();
-        this.timePeriod = Codegen.empty();
-        this.timeframe = Codegen.empty();
-        this.type = Codegen.empty();
+    private ExportDefinitionArgs(ExportDefinitionArgs $) {
+        this.dataSet = $.dataSet;
+        this.timePeriod = $.timePeriod;
+        this.timeframe = $.timeframe;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExportDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ExportDatasetArgs> dataSet;
-        private @Nullable Output<ExportTimePeriodArgs> timePeriod;
-        private Output<Either<String,TimeframeType>> timeframe;
-        private Output<Either<String,ExportType>> type;
+        private ExportDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExportDefinitionArgs();
         }
 
         public Builder(ExportDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataSet = defaults.dataSet;
-    	      this.timePeriod = defaults.timePeriod;
-    	      this.timeframe = defaults.timeframe;
-    	      this.type = defaults.type;
+            $ = new ExportDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataSet(@Nullable Output<ExportDatasetArgs> dataSet) {
-            this.dataSet = dataSet;
+            $.dataSet = dataSet;
             return this;
         }
-        public Builder dataSet(@Nullable ExportDatasetArgs dataSet) {
-            this.dataSet = Codegen.ofNullable(dataSet);
-            return this;
+
+        public Builder dataSet(ExportDatasetArgs dataSet) {
+            return dataSet(Output.of(dataSet));
         }
+
         public Builder timePeriod(@Nullable Output<ExportTimePeriodArgs> timePeriod) {
-            this.timePeriod = timePeriod;
+            $.timePeriod = timePeriod;
             return this;
         }
-        public Builder timePeriod(@Nullable ExportTimePeriodArgs timePeriod) {
-            this.timePeriod = Codegen.ofNullable(timePeriod);
-            return this;
+
+        public Builder timePeriod(ExportTimePeriodArgs timePeriod) {
+            return timePeriod(Output.of(timePeriod));
         }
+
         public Builder timeframe(Output<Either<String,TimeframeType>> timeframe) {
-            this.timeframe = Objects.requireNonNull(timeframe);
+            $.timeframe = timeframe;
             return this;
         }
+
         public Builder timeframe(Either<String,TimeframeType> timeframe) {
-            this.timeframe = Output.of(Objects.requireNonNull(timeframe));
-            return this;
+            return timeframe(Output.of(timeframe));
         }
+
         public Builder type(Output<Either<String,ExportType>> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(Either<String,ExportType> type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public ExportDefinitionArgs build() {
-            return new ExportDefinitionArgs(dataSet, timePeriod, timeframe, type);
+            return type(Output.of(type));
+        }
+
+        public ExportDefinitionArgs build() {
+            $.timeframe = Objects.requireNonNull($.timeframe, "expected parameter 'timeframe' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.aws.chime.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class VoiceConnectorTerminationCredentialsCredentialArgs extends co
      * 
      */
     @Import(name="password", required=true)
-      private final Output<String> password;
+    private Output<String> password;
 
     public Output<String> password() {
         return this.password;
@@ -30,63 +29,60 @@ public final class VoiceConnectorTerminationCredentialsCredentialArgs extends co
      * 
      */
     @Import(name="username", required=true)
-      private final Output<String> username;
+    private Output<String> username;
 
     public Output<String> username() {
         return this.username;
     }
 
-    public VoiceConnectorTerminationCredentialsCredentialArgs(
-        Output<String> password,
-        Output<String> username) {
-        this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
-        this.username = Objects.requireNonNull(username, "expected parameter 'username' to be non-null");
-    }
+    private VoiceConnectorTerminationCredentialsCredentialArgs() {}
 
-    private VoiceConnectorTerminationCredentialsCredentialArgs() {
-        this.password = Codegen.empty();
-        this.username = Codegen.empty();
+    private VoiceConnectorTerminationCredentialsCredentialArgs(VoiceConnectorTerminationCredentialsCredentialArgs $) {
+        this.password = $.password;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VoiceConnectorTerminationCredentialsCredentialArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> password;
-        private Output<String> username;
+        private VoiceConnectorTerminationCredentialsCredentialArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VoiceConnectorTerminationCredentialsCredentialArgs();
         }
 
         public Builder(VoiceConnectorTerminationCredentialsCredentialArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.password = defaults.password;
-    	      this.username = defaults.username;
+            $ = new VoiceConnectorTerminationCredentialsCredentialArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder password(Output<String> password) {
-            this.password = Objects.requireNonNull(password);
+            $.password = password;
             return this;
         }
+
         public Builder password(String password) {
-            this.password = Output.of(Objects.requireNonNull(password));
-            return this;
+            return password(Output.of(password));
         }
+
         public Builder username(Output<String> username) {
-            this.username = Objects.requireNonNull(username);
+            $.username = username;
             return this;
         }
+
         public Builder username(String username) {
-            this.username = Output.of(Objects.requireNonNull(username));
-            return this;
-        }        public VoiceConnectorTerminationCredentialsCredentialArgs build() {
-            return new VoiceConnectorTerminationCredentialsCredentialArgs(password, username);
+            return username(Output.of(username));
+        }
+
+        public VoiceConnectorTerminationCredentialsCredentialArgs build() {
+            $.password = Objects.requireNonNull($.password, "expected parameter 'password' to be non-null");
+            $.username = Objects.requireNonNull($.username, "expected parameter 'username' to be non-null");
+            return $;
         }
     }
+
 }

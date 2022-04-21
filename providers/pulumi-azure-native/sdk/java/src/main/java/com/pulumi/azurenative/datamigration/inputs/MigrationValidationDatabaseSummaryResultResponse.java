@@ -21,7 +21,7 @@ public final class MigrationValidationDatabaseSummaryResultResponse extends com.
      * 
      */
     @Import(name="endedOn", required=true)
-      private final String endedOn;
+    private String endedOn;
 
     public String endedOn() {
         return this.endedOn;
@@ -32,7 +32,7 @@ public final class MigrationValidationDatabaseSummaryResultResponse extends com.
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -43,7 +43,7 @@ public final class MigrationValidationDatabaseSummaryResultResponse extends com.
      * 
      */
     @Import(name="migrationId", required=true)
-      private final String migrationId;
+    private String migrationId;
 
     public String migrationId() {
         return this.migrationId;
@@ -54,7 +54,7 @@ public final class MigrationValidationDatabaseSummaryResultResponse extends com.
      * 
      */
     @Import(name="sourceDatabaseName", required=true)
-      private final String sourceDatabaseName;
+    private String sourceDatabaseName;
 
     public String sourceDatabaseName() {
         return this.sourceDatabaseName;
@@ -65,7 +65,7 @@ public final class MigrationValidationDatabaseSummaryResultResponse extends com.
      * 
      */
     @Import(name="startedOn", required=true)
-      private final String startedOn;
+    private String startedOn;
 
     public String startedOn() {
         return this.startedOn;
@@ -76,7 +76,7 @@ public final class MigrationValidationDatabaseSummaryResultResponse extends com.
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
@@ -87,100 +87,87 @@ public final class MigrationValidationDatabaseSummaryResultResponse extends com.
      * 
      */
     @Import(name="targetDatabaseName", required=true)
-      private final String targetDatabaseName;
+    private String targetDatabaseName;
 
     public String targetDatabaseName() {
         return this.targetDatabaseName;
     }
 
-    public MigrationValidationDatabaseSummaryResultResponse(
-        String endedOn,
-        String id,
-        String migrationId,
-        String sourceDatabaseName,
-        String startedOn,
-        String status,
-        String targetDatabaseName) {
-        this.endedOn = Objects.requireNonNull(endedOn, "expected parameter 'endedOn' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.migrationId = Objects.requireNonNull(migrationId, "expected parameter 'migrationId' to be non-null");
-        this.sourceDatabaseName = Objects.requireNonNull(sourceDatabaseName, "expected parameter 'sourceDatabaseName' to be non-null");
-        this.startedOn = Objects.requireNonNull(startedOn, "expected parameter 'startedOn' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-        this.targetDatabaseName = Objects.requireNonNull(targetDatabaseName, "expected parameter 'targetDatabaseName' to be non-null");
-    }
+    private MigrationValidationDatabaseSummaryResultResponse() {}
 
-    private MigrationValidationDatabaseSummaryResultResponse() {
-        this.endedOn = null;
-        this.id = null;
-        this.migrationId = null;
-        this.sourceDatabaseName = null;
-        this.startedOn = null;
-        this.status = null;
-        this.targetDatabaseName = null;
+    private MigrationValidationDatabaseSummaryResultResponse(MigrationValidationDatabaseSummaryResultResponse $) {
+        this.endedOn = $.endedOn;
+        this.id = $.id;
+        this.migrationId = $.migrationId;
+        this.sourceDatabaseName = $.sourceDatabaseName;
+        this.startedOn = $.startedOn;
+        this.status = $.status;
+        this.targetDatabaseName = $.targetDatabaseName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MigrationValidationDatabaseSummaryResultResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String endedOn;
-        private String id;
-        private String migrationId;
-        private String sourceDatabaseName;
-        private String startedOn;
-        private String status;
-        private String targetDatabaseName;
+        private MigrationValidationDatabaseSummaryResultResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MigrationValidationDatabaseSummaryResultResponse();
         }
 
         public Builder(MigrationValidationDatabaseSummaryResultResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endedOn = defaults.endedOn;
-    	      this.id = defaults.id;
-    	      this.migrationId = defaults.migrationId;
-    	      this.sourceDatabaseName = defaults.sourceDatabaseName;
-    	      this.startedOn = defaults.startedOn;
-    	      this.status = defaults.status;
-    	      this.targetDatabaseName = defaults.targetDatabaseName;
+            $ = new MigrationValidationDatabaseSummaryResultResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endedOn(String endedOn) {
-            this.endedOn = Objects.requireNonNull(endedOn);
+            $.endedOn = endedOn;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder migrationId(String migrationId) {
-            this.migrationId = Objects.requireNonNull(migrationId);
+            $.migrationId = migrationId;
             return this;
         }
+
         public Builder sourceDatabaseName(String sourceDatabaseName) {
-            this.sourceDatabaseName = Objects.requireNonNull(sourceDatabaseName);
+            $.sourceDatabaseName = sourceDatabaseName;
             return this;
         }
+
         public Builder startedOn(String startedOn) {
-            this.startedOn = Objects.requireNonNull(startedOn);
+            $.startedOn = startedOn;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder targetDatabaseName(String targetDatabaseName) {
-            this.targetDatabaseName = Objects.requireNonNull(targetDatabaseName);
+            $.targetDatabaseName = targetDatabaseName;
             return this;
-        }        public MigrationValidationDatabaseSummaryResultResponse build() {
-            return new MigrationValidationDatabaseSummaryResultResponse(endedOn, id, migrationId, sourceDatabaseName, startedOn, status, targetDatabaseName);
+        }
+
+        public MigrationValidationDatabaseSummaryResultResponse build() {
+            $.endedOn = Objects.requireNonNull($.endedOn, "expected parameter 'endedOn' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.migrationId = Objects.requireNonNull($.migrationId, "expected parameter 'migrationId' to be non-null");
+            $.sourceDatabaseName = Objects.requireNonNull($.sourceDatabaseName, "expected parameter 'sourceDatabaseName' to be non-null");
+            $.startedOn = Objects.requireNonNull($.startedOn, "expected parameter 'startedOn' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            $.targetDatabaseName = Objects.requireNonNull($.targetDatabaseName, "expected parameter 'targetDatabaseName' to be non-null");
+            return $;
         }
     }
+
 }

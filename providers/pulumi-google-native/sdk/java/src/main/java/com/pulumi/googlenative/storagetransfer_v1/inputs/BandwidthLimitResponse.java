@@ -21,45 +21,45 @@ public final class BandwidthLimitResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="limitMbps", required=true)
-      private final String limitMbps;
+    private String limitMbps;
 
     public String limitMbps() {
         return this.limitMbps;
     }
 
-    public BandwidthLimitResponse(String limitMbps) {
-        this.limitMbps = Objects.requireNonNull(limitMbps, "expected parameter 'limitMbps' to be non-null");
-    }
+    private BandwidthLimitResponse() {}
 
-    private BandwidthLimitResponse() {
-        this.limitMbps = null;
+    private BandwidthLimitResponse(BandwidthLimitResponse $) {
+        this.limitMbps = $.limitMbps;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BandwidthLimitResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String limitMbps;
+        private BandwidthLimitResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BandwidthLimitResponse();
         }
 
         public Builder(BandwidthLimitResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.limitMbps = defaults.limitMbps;
+            $ = new BandwidthLimitResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder limitMbps(String limitMbps) {
-            this.limitMbps = Objects.requireNonNull(limitMbps);
+            $.limitMbps = limitMbps;
             return this;
-        }        public BandwidthLimitResponse build() {
-            return new BandwidthLimitResponse(limitMbps);
+        }
+
+        public BandwidthLimitResponse build() {
+            $.limitMbps = Objects.requireNonNull($.limitMbps, "expected parameter 'limitMbps' to be non-null");
+            return $;
         }
     }
+
 }

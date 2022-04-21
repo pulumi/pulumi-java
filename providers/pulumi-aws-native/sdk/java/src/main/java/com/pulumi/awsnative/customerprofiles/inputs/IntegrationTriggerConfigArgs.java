@@ -7,8 +7,8 @@ import com.pulumi.awsnative.customerprofiles.enums.IntegrationTriggerType;
 import com.pulumi.awsnative.customerprofiles.inputs.IntegrationTriggerPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,66 @@ public final class IntegrationTriggerConfigArgs extends com.pulumi.resources.Res
     public static final IntegrationTriggerConfigArgs Empty = new IntegrationTriggerConfigArgs();
 
     @Import(name="triggerProperties")
-      private final @Nullable Output<IntegrationTriggerPropertiesArgs> triggerProperties;
+    private @Nullable Output<IntegrationTriggerPropertiesArgs> triggerProperties;
 
-    public Output<IntegrationTriggerPropertiesArgs> triggerProperties() {
-        return this.triggerProperties == null ? Codegen.empty() : this.triggerProperties;
+    public Optional<Output<IntegrationTriggerPropertiesArgs>> triggerProperties() {
+        return Optional.ofNullable(this.triggerProperties);
     }
 
     @Import(name="triggerType", required=true)
-      private final Output<IntegrationTriggerType> triggerType;
+    private Output<IntegrationTriggerType> triggerType;
 
     public Output<IntegrationTriggerType> triggerType() {
         return this.triggerType;
     }
 
-    public IntegrationTriggerConfigArgs(
-        @Nullable Output<IntegrationTriggerPropertiesArgs> triggerProperties,
-        Output<IntegrationTriggerType> triggerType) {
-        this.triggerProperties = triggerProperties;
-        this.triggerType = Objects.requireNonNull(triggerType, "expected parameter 'triggerType' to be non-null");
-    }
+    private IntegrationTriggerConfigArgs() {}
 
-    private IntegrationTriggerConfigArgs() {
-        this.triggerProperties = Codegen.empty();
-        this.triggerType = Codegen.empty();
+    private IntegrationTriggerConfigArgs(IntegrationTriggerConfigArgs $) {
+        this.triggerProperties = $.triggerProperties;
+        this.triggerType = $.triggerType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IntegrationTriggerConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<IntegrationTriggerPropertiesArgs> triggerProperties;
-        private Output<IntegrationTriggerType> triggerType;
+        private IntegrationTriggerConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IntegrationTriggerConfigArgs();
         }
 
         public Builder(IntegrationTriggerConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.triggerProperties = defaults.triggerProperties;
-    	      this.triggerType = defaults.triggerType;
+            $ = new IntegrationTriggerConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder triggerProperties(@Nullable Output<IntegrationTriggerPropertiesArgs> triggerProperties) {
-            this.triggerProperties = triggerProperties;
+            $.triggerProperties = triggerProperties;
             return this;
         }
-        public Builder triggerProperties(@Nullable IntegrationTriggerPropertiesArgs triggerProperties) {
-            this.triggerProperties = Codegen.ofNullable(triggerProperties);
-            return this;
+
+        public Builder triggerProperties(IntegrationTriggerPropertiesArgs triggerProperties) {
+            return triggerProperties(Output.of(triggerProperties));
         }
+
         public Builder triggerType(Output<IntegrationTriggerType> triggerType) {
-            this.triggerType = Objects.requireNonNull(triggerType);
+            $.triggerType = triggerType;
             return this;
         }
+
         public Builder triggerType(IntegrationTriggerType triggerType) {
-            this.triggerType = Output.of(Objects.requireNonNull(triggerType));
-            return this;
-        }        public IntegrationTriggerConfigArgs build() {
-            return new IntegrationTriggerConfigArgs(triggerProperties, triggerType);
+            return triggerType(Output.of(triggerType));
+        }
+
+        public IntegrationTriggerConfigArgs build() {
+            $.triggerType = Objects.requireNonNull($.triggerType, "expected parameter 'triggerType' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.googlenative.runtimeconfig_v1beta1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.runtimeconfig_v1beta1.inputs.EndConditionArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,7 +17,7 @@ public final class WaiterArgs extends com.pulumi.resources.ResourceArgs {
     public static final WaiterArgs Empty = new WaiterArgs();
 
     @Import(name="configId", required=true)
-      private final Output<String> configId;
+    private Output<String> configId;
 
     public Output<String> configId() {
         return this.configId;
@@ -28,10 +28,10 @@ public final class WaiterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="failure")
-      private final @Nullable Output<EndConditionArgs> failure;
+    private @Nullable Output<EndConditionArgs> failure;
 
-    public Output<EndConditionArgs> failure() {
-        return this.failure == null ? Codegen.empty() : this.failure;
+    public Optional<Output<EndConditionArgs>> failure() {
+        return Optional.ofNullable(this.failure);
     }
 
     /**
@@ -39,24 +39,24 @@ public final class WaiterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="requestId")
-      private final @Nullable Output<String> requestId;
+    private @Nullable Output<String> requestId;
 
-    public Output<String> requestId() {
-        return this.requestId == null ? Codegen.empty() : this.requestId;
+    public Optional<Output<String>> requestId() {
+        return Optional.ofNullable(this.requestId);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class WaiterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="success")
-      private final @Nullable Output<EndConditionArgs> success;
+    private @Nullable Output<EndConditionArgs> success;
 
-    public Output<EndConditionArgs> success() {
-        return this.success == null ? Codegen.empty() : this.success;
+    public Optional<Output<EndConditionArgs>> success() {
+        return Optional.ofNullable(this.success);
     }
 
     /**
@@ -75,128 +75,109 @@ public final class WaiterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="timeout")
-      private final @Nullable Output<String> timeout;
+    private @Nullable Output<String> timeout;
 
-    public Output<String> timeout() {
-        return this.timeout == null ? Codegen.empty() : this.timeout;
+    public Optional<Output<String>> timeout() {
+        return Optional.ofNullable(this.timeout);
     }
 
-    public WaiterArgs(
-        Output<String> configId,
-        @Nullable Output<EndConditionArgs> failure,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<String> requestId,
-        @Nullable Output<EndConditionArgs> success,
-        @Nullable Output<String> timeout) {
-        this.configId = Objects.requireNonNull(configId, "expected parameter 'configId' to be non-null");
-        this.failure = failure;
-        this.name = name;
-        this.project = project;
-        this.requestId = requestId;
-        this.success = success;
-        this.timeout = timeout;
-    }
+    private WaiterArgs() {}
 
-    private WaiterArgs() {
-        this.configId = Codegen.empty();
-        this.failure = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.requestId = Codegen.empty();
-        this.success = Codegen.empty();
-        this.timeout = Codegen.empty();
+    private WaiterArgs(WaiterArgs $) {
+        this.configId = $.configId;
+        this.failure = $.failure;
+        this.name = $.name;
+        this.project = $.project;
+        this.requestId = $.requestId;
+        this.success = $.success;
+        this.timeout = $.timeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WaiterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> configId;
-        private @Nullable Output<EndConditionArgs> failure;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> requestId;
-        private @Nullable Output<EndConditionArgs> success;
-        private @Nullable Output<String> timeout;
+        private WaiterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WaiterArgs();
         }
 
         public Builder(WaiterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configId = defaults.configId;
-    	      this.failure = defaults.failure;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.requestId = defaults.requestId;
-    	      this.success = defaults.success;
-    	      this.timeout = defaults.timeout;
+            $ = new WaiterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configId(Output<String> configId) {
-            this.configId = Objects.requireNonNull(configId);
+            $.configId = configId;
             return this;
         }
+
         public Builder configId(String configId) {
-            this.configId = Output.of(Objects.requireNonNull(configId));
-            return this;
+            return configId(Output.of(configId));
         }
+
         public Builder failure(@Nullable Output<EndConditionArgs> failure) {
-            this.failure = failure;
+            $.failure = failure;
             return this;
         }
-        public Builder failure(@Nullable EndConditionArgs failure) {
-            this.failure = Codegen.ofNullable(failure);
-            return this;
+
+        public Builder failure(EndConditionArgs failure) {
+            return failure(Output.of(failure));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder requestId(@Nullable Output<String> requestId) {
-            this.requestId = requestId;
+            $.requestId = requestId;
             return this;
         }
-        public Builder requestId(@Nullable String requestId) {
-            this.requestId = Codegen.ofNullable(requestId);
-            return this;
+
+        public Builder requestId(String requestId) {
+            return requestId(Output.of(requestId));
         }
+
         public Builder success(@Nullable Output<EndConditionArgs> success) {
-            this.success = success;
+            $.success = success;
             return this;
         }
-        public Builder success(@Nullable EndConditionArgs success) {
-            this.success = Codegen.ofNullable(success);
-            return this;
+
+        public Builder success(EndConditionArgs success) {
+            return success(Output.of(success));
         }
+
         public Builder timeout(@Nullable Output<String> timeout) {
-            this.timeout = timeout;
+            $.timeout = timeout;
             return this;
         }
-        public Builder timeout(@Nullable String timeout) {
-            this.timeout = Codegen.ofNullable(timeout);
-            return this;
-        }        public WaiterArgs build() {
-            return new WaiterArgs(configId, failure, name, project, requestId, success, timeout);
+
+        public Builder timeout(String timeout) {
+            return timeout(Output.of(timeout));
+        }
+
+        public WaiterArgs build() {
+            $.configId = Objects.requireNonNull($.configId, "expected parameter 'configId' to be non-null");
+            return $;
         }
     }
+
 }

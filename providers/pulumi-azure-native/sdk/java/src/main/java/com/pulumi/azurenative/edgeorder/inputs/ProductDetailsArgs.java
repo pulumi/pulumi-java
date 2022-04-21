@@ -6,7 +6,6 @@ package com.pulumi.azurenative.edgeorder.inputs;
 import com.pulumi.azurenative.edgeorder.inputs.HierarchyInformationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -23,49 +22,49 @@ public final class ProductDetailsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="hierarchyInformation", required=true)
-      private final Output<HierarchyInformationArgs> hierarchyInformation;
+    private Output<HierarchyInformationArgs> hierarchyInformation;
 
     public Output<HierarchyInformationArgs> hierarchyInformation() {
         return this.hierarchyInformation;
     }
 
-    public ProductDetailsArgs(Output<HierarchyInformationArgs> hierarchyInformation) {
-        this.hierarchyInformation = Objects.requireNonNull(hierarchyInformation, "expected parameter 'hierarchyInformation' to be non-null");
-    }
+    private ProductDetailsArgs() {}
 
-    private ProductDetailsArgs() {
-        this.hierarchyInformation = Codegen.empty();
+    private ProductDetailsArgs(ProductDetailsArgs $) {
+        this.hierarchyInformation = $.hierarchyInformation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProductDetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<HierarchyInformationArgs> hierarchyInformation;
+        private ProductDetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProductDetailsArgs();
         }
 
         public Builder(ProductDetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hierarchyInformation = defaults.hierarchyInformation;
+            $ = new ProductDetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hierarchyInformation(Output<HierarchyInformationArgs> hierarchyInformation) {
-            this.hierarchyInformation = Objects.requireNonNull(hierarchyInformation);
+            $.hierarchyInformation = hierarchyInformation;
             return this;
         }
+
         public Builder hierarchyInformation(HierarchyInformationArgs hierarchyInformation) {
-            this.hierarchyInformation = Output.of(Objects.requireNonNull(hierarchyInformation));
-            return this;
-        }        public ProductDetailsArgs build() {
-            return new ProductDetailsArgs(hierarchyInformation);
+            return hierarchyInformation(Output.of(hierarchyInformation));
+        }
+
+        public ProductDetailsArgs build() {
+            $.hierarchyInformation = Objects.requireNonNull($.hierarchyInformation, "expected parameter 'hierarchyInformation' to be non-null");
+            return $;
         }
     }
+
 }

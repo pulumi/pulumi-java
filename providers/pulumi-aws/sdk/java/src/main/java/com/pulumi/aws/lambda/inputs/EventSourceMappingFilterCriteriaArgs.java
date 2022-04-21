@@ -6,9 +6,9 @@ package com.pulumi.aws.lambda.inputs;
 import com.pulumi.aws.lambda.inputs.EventSourceMappingFilterCriteriaFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,52 +21,52 @@ public final class EventSourceMappingFilterCriteriaArgs extends com.pulumi.resou
      * 
      */
     @Import(name="filters")
-      private final @Nullable Output<List<EventSourceMappingFilterCriteriaFilterArgs>> filters;
+    private @Nullable Output<List<EventSourceMappingFilterCriteriaFilterArgs>> filters;
 
-    public Output<List<EventSourceMappingFilterCriteriaFilterArgs>> filters() {
-        return this.filters == null ? Codegen.empty() : this.filters;
+    public Optional<Output<List<EventSourceMappingFilterCriteriaFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
-    public EventSourceMappingFilterCriteriaArgs(@Nullable Output<List<EventSourceMappingFilterCriteriaFilterArgs>> filters) {
-        this.filters = filters;
-    }
+    private EventSourceMappingFilterCriteriaArgs() {}
 
-    private EventSourceMappingFilterCriteriaArgs() {
-        this.filters = Codegen.empty();
+    private EventSourceMappingFilterCriteriaArgs(EventSourceMappingFilterCriteriaArgs $) {
+        this.filters = $.filters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventSourceMappingFilterCriteriaArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<EventSourceMappingFilterCriteriaFilterArgs>> filters;
+        private EventSourceMappingFilterCriteriaArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventSourceMappingFilterCriteriaArgs();
         }
 
         public Builder(EventSourceMappingFilterCriteriaArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filters = defaults.filters;
+            $ = new EventSourceMappingFilterCriteriaArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filters(@Nullable Output<List<EventSourceMappingFilterCriteriaFilterArgs>> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
-        public Builder filters(@Nullable List<EventSourceMappingFilterCriteriaFilterArgs> filters) {
-            this.filters = Codegen.ofNullable(filters);
-            return this;
+
+        public Builder filters(List<EventSourceMappingFilterCriteriaFilterArgs> filters) {
+            return filters(Output.of(filters));
         }
+
         public Builder filters(EventSourceMappingFilterCriteriaFilterArgs... filters) {
             return filters(List.of(filters));
-        }        public EventSourceMappingFilterCriteriaArgs build() {
-            return new EventSourceMappingFilterCriteriaArgs(filters);
+        }
+
+        public EventSourceMappingFilterCriteriaArgs build() {
+            return $;
         }
     }
+
 }

@@ -7,10 +7,10 @@ import com.pulumi.azurenative.apimanagement.inputs.ParameterContractArgs;
 import com.pulumi.azurenative.apimanagement.inputs.RepresentationContractArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class RequestContractArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class RequestContractArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="headers")
-      private final @Nullable Output<List<ParameterContractArgs>> headers;
+    private @Nullable Output<List<ParameterContractArgs>> headers;
 
-    public Output<List<ParameterContractArgs>> headers() {
-        return this.headers == null ? Codegen.empty() : this.headers;
+    public Optional<Output<List<ParameterContractArgs>>> headers() {
+        return Optional.ofNullable(this.headers);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class RequestContractArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="queryParameters")
-      private final @Nullable Output<List<ParameterContractArgs>> queryParameters;
+    private @Nullable Output<List<ParameterContractArgs>> queryParameters;
 
-    public Output<List<ParameterContractArgs>> queryParameters() {
-        return this.queryParameters == null ? Codegen.empty() : this.queryParameters;
+    public Optional<Output<List<ParameterContractArgs>>> queryParameters() {
+        return Optional.ofNullable(this.queryParameters);
     }
 
     /**
@@ -60,98 +60,90 @@ public final class RequestContractArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="representations")
-      private final @Nullable Output<List<RepresentationContractArgs>> representations;
+    private @Nullable Output<List<RepresentationContractArgs>> representations;
 
-    public Output<List<RepresentationContractArgs>> representations() {
-        return this.representations == null ? Codegen.empty() : this.representations;
+    public Optional<Output<List<RepresentationContractArgs>>> representations() {
+        return Optional.ofNullable(this.representations);
     }
 
-    public RequestContractArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<List<ParameterContractArgs>> headers,
-        @Nullable Output<List<ParameterContractArgs>> queryParameters,
-        @Nullable Output<List<RepresentationContractArgs>> representations) {
-        this.description = description;
-        this.headers = headers;
-        this.queryParameters = queryParameters;
-        this.representations = representations;
-    }
+    private RequestContractArgs() {}
 
-    private RequestContractArgs() {
-        this.description = Codegen.empty();
-        this.headers = Codegen.empty();
-        this.queryParameters = Codegen.empty();
-        this.representations = Codegen.empty();
+    private RequestContractArgs(RequestContractArgs $) {
+        this.description = $.description;
+        this.headers = $.headers;
+        this.queryParameters = $.queryParameters;
+        this.representations = $.representations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RequestContractArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<List<ParameterContractArgs>> headers;
-        private @Nullable Output<List<ParameterContractArgs>> queryParameters;
-        private @Nullable Output<List<RepresentationContractArgs>> representations;
+        private RequestContractArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RequestContractArgs();
         }
 
         public Builder(RequestContractArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.headers = defaults.headers;
-    	      this.queryParameters = defaults.queryParameters;
-    	      this.representations = defaults.representations;
+            $ = new RequestContractArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder headers(@Nullable Output<List<ParameterContractArgs>> headers) {
-            this.headers = headers;
+            $.headers = headers;
             return this;
         }
-        public Builder headers(@Nullable List<ParameterContractArgs> headers) {
-            this.headers = Codegen.ofNullable(headers);
-            return this;
+
+        public Builder headers(List<ParameterContractArgs> headers) {
+            return headers(Output.of(headers));
         }
+
         public Builder headers(ParameterContractArgs... headers) {
             return headers(List.of(headers));
         }
+
         public Builder queryParameters(@Nullable Output<List<ParameterContractArgs>> queryParameters) {
-            this.queryParameters = queryParameters;
+            $.queryParameters = queryParameters;
             return this;
         }
-        public Builder queryParameters(@Nullable List<ParameterContractArgs> queryParameters) {
-            this.queryParameters = Codegen.ofNullable(queryParameters);
-            return this;
+
+        public Builder queryParameters(List<ParameterContractArgs> queryParameters) {
+            return queryParameters(Output.of(queryParameters));
         }
+
         public Builder queryParameters(ParameterContractArgs... queryParameters) {
             return queryParameters(List.of(queryParameters));
         }
+
         public Builder representations(@Nullable Output<List<RepresentationContractArgs>> representations) {
-            this.representations = representations;
+            $.representations = representations;
             return this;
         }
-        public Builder representations(@Nullable List<RepresentationContractArgs> representations) {
-            this.representations = Codegen.ofNullable(representations);
-            return this;
+
+        public Builder representations(List<RepresentationContractArgs> representations) {
+            return representations(Output.of(representations));
         }
+
         public Builder representations(RepresentationContractArgs... representations) {
             return representations(List.of(representations));
-        }        public RequestContractArgs build() {
-            return new RequestContractArgs(description, headers, queryParameters, representations);
+        }
+
+        public RequestContractArgs build() {
+            return $;
         }
     }
+
 }

@@ -17,11 +17,11 @@ import com.pulumi.awsnative.databrew.inputs.JobTagArgs;
 import com.pulumi.awsnative.databrew.inputs.JobValidationConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,17 +30,17 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     public static final JobArgs Empty = new JobArgs();
 
     @Import(name="dataCatalogOutputs")
-      private final @Nullable Output<List<JobDataCatalogOutputArgs>> dataCatalogOutputs;
+    private @Nullable Output<List<JobDataCatalogOutputArgs>> dataCatalogOutputs;
 
-    public Output<List<JobDataCatalogOutputArgs>> dataCatalogOutputs() {
-        return this.dataCatalogOutputs == null ? Codegen.empty() : this.dataCatalogOutputs;
+    public Optional<Output<List<JobDataCatalogOutputArgs>>> dataCatalogOutputs() {
+        return Optional.ofNullable(this.dataCatalogOutputs);
     }
 
     @Import(name="databaseOutputs")
-      private final @Nullable Output<List<JobDatabaseOutputArgs>> databaseOutputs;
+    private @Nullable Output<List<JobDatabaseOutputArgs>> databaseOutputs;
 
-    public Output<List<JobDatabaseOutputArgs>> databaseOutputs() {
-        return this.databaseOutputs == null ? Codegen.empty() : this.databaseOutputs;
+    public Optional<Output<List<JobDatabaseOutputArgs>>> databaseOutputs() {
+        return Optional.ofNullable(this.databaseOutputs);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="datasetName")
-      private final @Nullable Output<String> datasetName;
+    private @Nullable Output<String> datasetName;
 
-    public Output<String> datasetName() {
-        return this.datasetName == null ? Codegen.empty() : this.datasetName;
+    public Optional<Output<String>> datasetName() {
+        return Optional.ofNullable(this.datasetName);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encryptionKeyArn")
-      private final @Nullable Output<String> encryptionKeyArn;
+    private @Nullable Output<String> encryptionKeyArn;
 
-    public Output<String> encryptionKeyArn() {
-        return this.encryptionKeyArn == null ? Codegen.empty() : this.encryptionKeyArn;
+    public Optional<Output<String>> encryptionKeyArn() {
+        return Optional.ofNullable(this.encryptionKeyArn);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encryptionMode")
-      private final @Nullable Output<JobEncryptionMode> encryptionMode;
+    private @Nullable Output<JobEncryptionMode> encryptionMode;
 
-    public Output<JobEncryptionMode> encryptionMode() {
-        return this.encryptionMode == null ? Codegen.empty() : this.encryptionMode;
+    public Optional<Output<JobEncryptionMode>> encryptionMode() {
+        return Optional.ofNullable(this.encryptionMode);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="jobSample")
-      private final @Nullable Output<JobSampleArgs> jobSample;
+    private @Nullable Output<JobSampleArgs> jobSample;
 
-    public Output<JobSampleArgs> jobSample() {
-        return this.jobSample == null ? Codegen.empty() : this.jobSample;
+    public Optional<Output<JobSampleArgs>> jobSample() {
+        return Optional.ofNullable(this.jobSample);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="logSubscription")
-      private final @Nullable Output<JobLogSubscription> logSubscription;
+    private @Nullable Output<JobLogSubscription> logSubscription;
 
-    public Output<JobLogSubscription> logSubscription() {
-        return this.logSubscription == null ? Codegen.empty() : this.logSubscription;
+    public Optional<Output<JobLogSubscription>> logSubscription() {
+        return Optional.ofNullable(this.logSubscription);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxCapacity")
-      private final @Nullable Output<Integer> maxCapacity;
+    private @Nullable Output<Integer> maxCapacity;
 
-    public Output<Integer> maxCapacity() {
-        return this.maxCapacity == null ? Codegen.empty() : this.maxCapacity;
+    public Optional<Output<Integer>> maxCapacity() {
+        return Optional.ofNullable(this.maxCapacity);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxRetries")
-      private final @Nullable Output<Integer> maxRetries;
+    private @Nullable Output<Integer> maxRetries;
 
-    public Output<Integer> maxRetries() {
-        return this.maxRetries == null ? Codegen.empty() : this.maxRetries;
+    public Optional<Output<Integer>> maxRetries() {
+        return Optional.ofNullable(this.maxRetries);
     }
 
     /**
@@ -125,10 +125,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -136,17 +136,17 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="outputLocation")
-      private final @Nullable Output<JobOutputLocationArgs> outputLocation;
+    private @Nullable Output<JobOutputLocationArgs> outputLocation;
 
-    public Output<JobOutputLocationArgs> outputLocation() {
-        return this.outputLocation == null ? Codegen.empty() : this.outputLocation;
+    public Optional<Output<JobOutputLocationArgs>> outputLocation() {
+        return Optional.ofNullable(this.outputLocation);
     }
 
     @Import(name="outputs")
-      private final @Nullable Output<List<JobOutputArgs>> outputs;
+    private @Nullable Output<List<JobOutputArgs>> outputs;
 
-    public Output<List<JobOutputArgs>> outputs() {
-        return this.outputs == null ? Codegen.empty() : this.outputs;
+    public Optional<Output<List<JobOutputArgs>>> outputs() {
+        return Optional.ofNullable(this.outputs);
     }
 
     /**
@@ -154,10 +154,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="profileConfiguration")
-      private final @Nullable Output<JobProfileConfigurationArgs> profileConfiguration;
+    private @Nullable Output<JobProfileConfigurationArgs> profileConfiguration;
 
-    public Output<JobProfileConfigurationArgs> profileConfiguration() {
-        return this.profileConfiguration == null ? Codegen.empty() : this.profileConfiguration;
+    public Optional<Output<JobProfileConfigurationArgs>> profileConfiguration() {
+        return Optional.ofNullable(this.profileConfiguration);
     }
 
     /**
@@ -165,17 +165,17 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="projectName")
-      private final @Nullable Output<String> projectName;
+    private @Nullable Output<String> projectName;
 
-    public Output<String> projectName() {
-        return this.projectName == null ? Codegen.empty() : this.projectName;
+    public Optional<Output<String>> projectName() {
+        return Optional.ofNullable(this.projectName);
     }
 
     @Import(name="recipe")
-      private final @Nullable Output<JobRecipeArgs> recipe;
+    private @Nullable Output<JobRecipeArgs> recipe;
 
-    public Output<JobRecipeArgs> recipe() {
-        return this.recipe == null ? Codegen.empty() : this.recipe;
+    public Optional<Output<JobRecipeArgs>> recipe() {
+        return Optional.ofNullable(this.recipe);
     }
 
     /**
@@ -183,17 +183,17 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
     }
 
     @Import(name="tags")
-      private final @Nullable Output<List<JobTagArgs>> tags;
+    private @Nullable Output<List<JobTagArgs>> tags;
 
-    public Output<List<JobTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<JobTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -201,10 +201,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="timeout")
-      private final @Nullable Output<Integer> timeout;
+    private @Nullable Output<Integer> timeout;
 
-    public Output<Integer> timeout() {
-        return this.timeout == null ? Codegen.empty() : this.timeout;
+    public Optional<Output<Integer>> timeout() {
+        return Optional.ofNullable(this.timeout);
     }
 
     /**
@@ -212,7 +212,7 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final Output<JobType> type;
+    private Output<JobType> type;
 
     public Output<JobType> type() {
         return this.type;
@@ -223,312 +223,260 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="validationConfigurations")
-      private final @Nullable Output<List<JobValidationConfigurationArgs>> validationConfigurations;
+    private @Nullable Output<List<JobValidationConfigurationArgs>> validationConfigurations;
 
-    public Output<List<JobValidationConfigurationArgs>> validationConfigurations() {
-        return this.validationConfigurations == null ? Codegen.empty() : this.validationConfigurations;
+    public Optional<Output<List<JobValidationConfigurationArgs>>> validationConfigurations() {
+        return Optional.ofNullable(this.validationConfigurations);
     }
 
-    public JobArgs(
-        @Nullable Output<List<JobDataCatalogOutputArgs>> dataCatalogOutputs,
-        @Nullable Output<List<JobDatabaseOutputArgs>> databaseOutputs,
-        @Nullable Output<String> datasetName,
-        @Nullable Output<String> encryptionKeyArn,
-        @Nullable Output<JobEncryptionMode> encryptionMode,
-        @Nullable Output<JobSampleArgs> jobSample,
-        @Nullable Output<JobLogSubscription> logSubscription,
-        @Nullable Output<Integer> maxCapacity,
-        @Nullable Output<Integer> maxRetries,
-        @Nullable Output<String> name,
-        @Nullable Output<JobOutputLocationArgs> outputLocation,
-        @Nullable Output<List<JobOutputArgs>> outputs,
-        @Nullable Output<JobProfileConfigurationArgs> profileConfiguration,
-        @Nullable Output<String> projectName,
-        @Nullable Output<JobRecipeArgs> recipe,
-        Output<String> roleArn,
-        @Nullable Output<List<JobTagArgs>> tags,
-        @Nullable Output<Integer> timeout,
-        Output<JobType> type,
-        @Nullable Output<List<JobValidationConfigurationArgs>> validationConfigurations) {
-        this.dataCatalogOutputs = dataCatalogOutputs;
-        this.databaseOutputs = databaseOutputs;
-        this.datasetName = datasetName;
-        this.encryptionKeyArn = encryptionKeyArn;
-        this.encryptionMode = encryptionMode;
-        this.jobSample = jobSample;
-        this.logSubscription = logSubscription;
-        this.maxCapacity = maxCapacity;
-        this.maxRetries = maxRetries;
-        this.name = name;
-        this.outputLocation = outputLocation;
-        this.outputs = outputs;
-        this.profileConfiguration = profileConfiguration;
-        this.projectName = projectName;
-        this.recipe = recipe;
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.tags = tags;
-        this.timeout = timeout;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.validationConfigurations = validationConfigurations;
-    }
+    private JobArgs() {}
 
-    private JobArgs() {
-        this.dataCatalogOutputs = Codegen.empty();
-        this.databaseOutputs = Codegen.empty();
-        this.datasetName = Codegen.empty();
-        this.encryptionKeyArn = Codegen.empty();
-        this.encryptionMode = Codegen.empty();
-        this.jobSample = Codegen.empty();
-        this.logSubscription = Codegen.empty();
-        this.maxCapacity = Codegen.empty();
-        this.maxRetries = Codegen.empty();
-        this.name = Codegen.empty();
-        this.outputLocation = Codegen.empty();
-        this.outputs = Codegen.empty();
-        this.profileConfiguration = Codegen.empty();
-        this.projectName = Codegen.empty();
-        this.recipe = Codegen.empty();
-        this.roleArn = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.timeout = Codegen.empty();
-        this.type = Codegen.empty();
-        this.validationConfigurations = Codegen.empty();
+    private JobArgs(JobArgs $) {
+        this.dataCatalogOutputs = $.dataCatalogOutputs;
+        this.databaseOutputs = $.databaseOutputs;
+        this.datasetName = $.datasetName;
+        this.encryptionKeyArn = $.encryptionKeyArn;
+        this.encryptionMode = $.encryptionMode;
+        this.jobSample = $.jobSample;
+        this.logSubscription = $.logSubscription;
+        this.maxCapacity = $.maxCapacity;
+        this.maxRetries = $.maxRetries;
+        this.name = $.name;
+        this.outputLocation = $.outputLocation;
+        this.outputs = $.outputs;
+        this.profileConfiguration = $.profileConfiguration;
+        this.projectName = $.projectName;
+        this.recipe = $.recipe;
+        this.roleArn = $.roleArn;
+        this.tags = $.tags;
+        this.timeout = $.timeout;
+        this.type = $.type;
+        this.validationConfigurations = $.validationConfigurations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<JobDataCatalogOutputArgs>> dataCatalogOutputs;
-        private @Nullable Output<List<JobDatabaseOutputArgs>> databaseOutputs;
-        private @Nullable Output<String> datasetName;
-        private @Nullable Output<String> encryptionKeyArn;
-        private @Nullable Output<JobEncryptionMode> encryptionMode;
-        private @Nullable Output<JobSampleArgs> jobSample;
-        private @Nullable Output<JobLogSubscription> logSubscription;
-        private @Nullable Output<Integer> maxCapacity;
-        private @Nullable Output<Integer> maxRetries;
-        private @Nullable Output<String> name;
-        private @Nullable Output<JobOutputLocationArgs> outputLocation;
-        private @Nullable Output<List<JobOutputArgs>> outputs;
-        private @Nullable Output<JobProfileConfigurationArgs> profileConfiguration;
-        private @Nullable Output<String> projectName;
-        private @Nullable Output<JobRecipeArgs> recipe;
-        private Output<String> roleArn;
-        private @Nullable Output<List<JobTagArgs>> tags;
-        private @Nullable Output<Integer> timeout;
-        private Output<JobType> type;
-        private @Nullable Output<List<JobValidationConfigurationArgs>> validationConfigurations;
+        private JobArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobArgs();
         }
 
         public Builder(JobArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataCatalogOutputs = defaults.dataCatalogOutputs;
-    	      this.databaseOutputs = defaults.databaseOutputs;
-    	      this.datasetName = defaults.datasetName;
-    	      this.encryptionKeyArn = defaults.encryptionKeyArn;
-    	      this.encryptionMode = defaults.encryptionMode;
-    	      this.jobSample = defaults.jobSample;
-    	      this.logSubscription = defaults.logSubscription;
-    	      this.maxCapacity = defaults.maxCapacity;
-    	      this.maxRetries = defaults.maxRetries;
-    	      this.name = defaults.name;
-    	      this.outputLocation = defaults.outputLocation;
-    	      this.outputs = defaults.outputs;
-    	      this.profileConfiguration = defaults.profileConfiguration;
-    	      this.projectName = defaults.projectName;
-    	      this.recipe = defaults.recipe;
-    	      this.roleArn = defaults.roleArn;
-    	      this.tags = defaults.tags;
-    	      this.timeout = defaults.timeout;
-    	      this.type = defaults.type;
-    	      this.validationConfigurations = defaults.validationConfigurations;
+            $ = new JobArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataCatalogOutputs(@Nullable Output<List<JobDataCatalogOutputArgs>> dataCatalogOutputs) {
-            this.dataCatalogOutputs = dataCatalogOutputs;
+            $.dataCatalogOutputs = dataCatalogOutputs;
             return this;
         }
-        public Builder dataCatalogOutputs(@Nullable List<JobDataCatalogOutputArgs> dataCatalogOutputs) {
-            this.dataCatalogOutputs = Codegen.ofNullable(dataCatalogOutputs);
-            return this;
+
+        public Builder dataCatalogOutputs(List<JobDataCatalogOutputArgs> dataCatalogOutputs) {
+            return dataCatalogOutputs(Output.of(dataCatalogOutputs));
         }
+
         public Builder dataCatalogOutputs(JobDataCatalogOutputArgs... dataCatalogOutputs) {
             return dataCatalogOutputs(List.of(dataCatalogOutputs));
         }
+
         public Builder databaseOutputs(@Nullable Output<List<JobDatabaseOutputArgs>> databaseOutputs) {
-            this.databaseOutputs = databaseOutputs;
+            $.databaseOutputs = databaseOutputs;
             return this;
         }
-        public Builder databaseOutputs(@Nullable List<JobDatabaseOutputArgs> databaseOutputs) {
-            this.databaseOutputs = Codegen.ofNullable(databaseOutputs);
-            return this;
+
+        public Builder databaseOutputs(List<JobDatabaseOutputArgs> databaseOutputs) {
+            return databaseOutputs(Output.of(databaseOutputs));
         }
+
         public Builder databaseOutputs(JobDatabaseOutputArgs... databaseOutputs) {
             return databaseOutputs(List.of(databaseOutputs));
         }
+
         public Builder datasetName(@Nullable Output<String> datasetName) {
-            this.datasetName = datasetName;
+            $.datasetName = datasetName;
             return this;
         }
-        public Builder datasetName(@Nullable String datasetName) {
-            this.datasetName = Codegen.ofNullable(datasetName);
-            return this;
+
+        public Builder datasetName(String datasetName) {
+            return datasetName(Output.of(datasetName));
         }
+
         public Builder encryptionKeyArn(@Nullable Output<String> encryptionKeyArn) {
-            this.encryptionKeyArn = encryptionKeyArn;
+            $.encryptionKeyArn = encryptionKeyArn;
             return this;
         }
-        public Builder encryptionKeyArn(@Nullable String encryptionKeyArn) {
-            this.encryptionKeyArn = Codegen.ofNullable(encryptionKeyArn);
-            return this;
+
+        public Builder encryptionKeyArn(String encryptionKeyArn) {
+            return encryptionKeyArn(Output.of(encryptionKeyArn));
         }
+
         public Builder encryptionMode(@Nullable Output<JobEncryptionMode> encryptionMode) {
-            this.encryptionMode = encryptionMode;
+            $.encryptionMode = encryptionMode;
             return this;
         }
-        public Builder encryptionMode(@Nullable JobEncryptionMode encryptionMode) {
-            this.encryptionMode = Codegen.ofNullable(encryptionMode);
-            return this;
+
+        public Builder encryptionMode(JobEncryptionMode encryptionMode) {
+            return encryptionMode(Output.of(encryptionMode));
         }
+
         public Builder jobSample(@Nullable Output<JobSampleArgs> jobSample) {
-            this.jobSample = jobSample;
+            $.jobSample = jobSample;
             return this;
         }
-        public Builder jobSample(@Nullable JobSampleArgs jobSample) {
-            this.jobSample = Codegen.ofNullable(jobSample);
-            return this;
+
+        public Builder jobSample(JobSampleArgs jobSample) {
+            return jobSample(Output.of(jobSample));
         }
+
         public Builder logSubscription(@Nullable Output<JobLogSubscription> logSubscription) {
-            this.logSubscription = logSubscription;
+            $.logSubscription = logSubscription;
             return this;
         }
-        public Builder logSubscription(@Nullable JobLogSubscription logSubscription) {
-            this.logSubscription = Codegen.ofNullable(logSubscription);
-            return this;
+
+        public Builder logSubscription(JobLogSubscription logSubscription) {
+            return logSubscription(Output.of(logSubscription));
         }
+
         public Builder maxCapacity(@Nullable Output<Integer> maxCapacity) {
-            this.maxCapacity = maxCapacity;
+            $.maxCapacity = maxCapacity;
             return this;
         }
-        public Builder maxCapacity(@Nullable Integer maxCapacity) {
-            this.maxCapacity = Codegen.ofNullable(maxCapacity);
-            return this;
+
+        public Builder maxCapacity(Integer maxCapacity) {
+            return maxCapacity(Output.of(maxCapacity));
         }
+
         public Builder maxRetries(@Nullable Output<Integer> maxRetries) {
-            this.maxRetries = maxRetries;
+            $.maxRetries = maxRetries;
             return this;
         }
-        public Builder maxRetries(@Nullable Integer maxRetries) {
-            this.maxRetries = Codegen.ofNullable(maxRetries);
-            return this;
+
+        public Builder maxRetries(Integer maxRetries) {
+            return maxRetries(Output.of(maxRetries));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder outputLocation(@Nullable Output<JobOutputLocationArgs> outputLocation) {
-            this.outputLocation = outputLocation;
+            $.outputLocation = outputLocation;
             return this;
         }
-        public Builder outputLocation(@Nullable JobOutputLocationArgs outputLocation) {
-            this.outputLocation = Codegen.ofNullable(outputLocation);
-            return this;
+
+        public Builder outputLocation(JobOutputLocationArgs outputLocation) {
+            return outputLocation(Output.of(outputLocation));
         }
+
         public Builder outputs(@Nullable Output<List<JobOutputArgs>> outputs) {
-            this.outputs = outputs;
+            $.outputs = outputs;
             return this;
         }
-        public Builder outputs(@Nullable List<JobOutputArgs> outputs) {
-            this.outputs = Codegen.ofNullable(outputs);
-            return this;
+
+        public Builder outputs(List<JobOutputArgs> outputs) {
+            return outputs(Output.of(outputs));
         }
+
         public Builder outputs(JobOutputArgs... outputs) {
             return outputs(List.of(outputs));
         }
+
         public Builder profileConfiguration(@Nullable Output<JobProfileConfigurationArgs> profileConfiguration) {
-            this.profileConfiguration = profileConfiguration;
+            $.profileConfiguration = profileConfiguration;
             return this;
         }
-        public Builder profileConfiguration(@Nullable JobProfileConfigurationArgs profileConfiguration) {
-            this.profileConfiguration = Codegen.ofNullable(profileConfiguration);
-            return this;
+
+        public Builder profileConfiguration(JobProfileConfigurationArgs profileConfiguration) {
+            return profileConfiguration(Output.of(profileConfiguration));
         }
+
         public Builder projectName(@Nullable Output<String> projectName) {
-            this.projectName = projectName;
+            $.projectName = projectName;
             return this;
         }
-        public Builder projectName(@Nullable String projectName) {
-            this.projectName = Codegen.ofNullable(projectName);
-            return this;
+
+        public Builder projectName(String projectName) {
+            return projectName(Output.of(projectName));
         }
+
         public Builder recipe(@Nullable Output<JobRecipeArgs> recipe) {
-            this.recipe = recipe;
+            $.recipe = recipe;
             return this;
         }
-        public Builder recipe(@Nullable JobRecipeArgs recipe) {
-            this.recipe = Codegen.ofNullable(recipe);
-            return this;
+
+        public Builder recipe(JobRecipeArgs recipe) {
+            return recipe(Output.of(recipe));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder tags(@Nullable Output<List<JobTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<JobTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<JobTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(JobTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder timeout(@Nullable Output<Integer> timeout) {
-            this.timeout = timeout;
+            $.timeout = timeout;
             return this;
         }
-        public Builder timeout(@Nullable Integer timeout) {
-            this.timeout = Codegen.ofNullable(timeout);
-            return this;
+
+        public Builder timeout(Integer timeout) {
+            return timeout(Output.of(timeout));
         }
+
         public Builder type(Output<JobType> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(JobType type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder validationConfigurations(@Nullable Output<List<JobValidationConfigurationArgs>> validationConfigurations) {
-            this.validationConfigurations = validationConfigurations;
+            $.validationConfigurations = validationConfigurations;
             return this;
         }
-        public Builder validationConfigurations(@Nullable List<JobValidationConfigurationArgs> validationConfigurations) {
-            this.validationConfigurations = Codegen.ofNullable(validationConfigurations);
-            return this;
+
+        public Builder validationConfigurations(List<JobValidationConfigurationArgs> validationConfigurations) {
+            return validationConfigurations(Output.of(validationConfigurations));
         }
+
         public Builder validationConfigurations(JobValidationConfigurationArgs... validationConfigurations) {
             return validationConfigurations(List.of(validationConfigurations));
-        }        public JobArgs build() {
-            return new JobArgs(dataCatalogOutputs, databaseOutputs, datasetName, encryptionKeyArn, encryptionMode, jobSample, logSubscription, maxCapacity, maxRetries, name, outputLocation, outputs, profileConfiguration, projectName, recipe, roleArn, tags, timeout, type, validationConfigurations);
+        }
+
+        public JobArgs build() {
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

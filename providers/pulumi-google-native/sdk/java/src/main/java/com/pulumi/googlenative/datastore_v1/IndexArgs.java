@@ -5,12 +5,12 @@ package com.pulumi.googlenative.datastore_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.datastore_v1.enums.IndexAncestor;
 import com.pulumi.googlenative.datastore_v1.inputs.GoogleDatastoreAdminV1IndexedPropertyArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class IndexArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ancestor", required=true)
-      private final Output<IndexAncestor> ancestor;
+    private Output<IndexAncestor> ancestor;
 
     public Output<IndexAncestor> ancestor() {
         return this.ancestor;
@@ -34,17 +34,17 @@ public final class IndexArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kind", required=true)
-      private final Output<String> kind;
+    private Output<String> kind;
 
     public Output<String> kind() {
         return this.kind;
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -52,92 +52,85 @@ public final class IndexArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="properties", required=true)
-      private final Output<List<GoogleDatastoreAdminV1IndexedPropertyArgs>> properties;
+    private Output<List<GoogleDatastoreAdminV1IndexedPropertyArgs>> properties;
 
     public Output<List<GoogleDatastoreAdminV1IndexedPropertyArgs>> properties() {
         return this.properties;
     }
 
-    public IndexArgs(
-        Output<IndexAncestor> ancestor,
-        Output<String> kind,
-        @Nullable Output<String> project,
-        Output<List<GoogleDatastoreAdminV1IndexedPropertyArgs>> properties) {
-        this.ancestor = Objects.requireNonNull(ancestor, "expected parameter 'ancestor' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.project = project;
-        this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
-    }
+    private IndexArgs() {}
 
-    private IndexArgs() {
-        this.ancestor = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.project = Codegen.empty();
-        this.properties = Codegen.empty();
+    private IndexArgs(IndexArgs $) {
+        this.ancestor = $.ancestor;
+        this.kind = $.kind;
+        this.project = $.project;
+        this.properties = $.properties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IndexArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<IndexAncestor> ancestor;
-        private Output<String> kind;
-        private @Nullable Output<String> project;
-        private Output<List<GoogleDatastoreAdminV1IndexedPropertyArgs>> properties;
+        private IndexArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IndexArgs();
         }
 
         public Builder(IndexArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ancestor = defaults.ancestor;
-    	      this.kind = defaults.kind;
-    	      this.project = defaults.project;
-    	      this.properties = defaults.properties;
+            $ = new IndexArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ancestor(Output<IndexAncestor> ancestor) {
-            this.ancestor = Objects.requireNonNull(ancestor);
+            $.ancestor = ancestor;
             return this;
         }
+
         public Builder ancestor(IndexAncestor ancestor) {
-            this.ancestor = Output.of(Objects.requireNonNull(ancestor));
-            return this;
+            return ancestor(Output.of(ancestor));
         }
+
         public Builder kind(Output<String> kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Output.of(Objects.requireNonNull(kind));
-            return this;
+            return kind(Output.of(kind));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder properties(Output<List<GoogleDatastoreAdminV1IndexedPropertyArgs>> properties) {
-            this.properties = Objects.requireNonNull(properties);
+            $.properties = properties;
             return this;
         }
+
         public Builder properties(List<GoogleDatastoreAdminV1IndexedPropertyArgs> properties) {
-            this.properties = Output.of(Objects.requireNonNull(properties));
-            return this;
+            return properties(Output.of(properties));
         }
+
         public Builder properties(GoogleDatastoreAdminV1IndexedPropertyArgs... properties) {
             return properties(List.of(properties));
-        }        public IndexArgs build() {
-            return new IndexArgs(ancestor, kind, project, properties);
+        }
+
+        public IndexArgs build() {
+            $.ancestor = Objects.requireNonNull($.ancestor, "expected parameter 'ancestor' to be non-null");
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.properties = Objects.requireNonNull($.properties, "expected parameter 'properties' to be non-null");
+            return $;
         }
     }
+
 }

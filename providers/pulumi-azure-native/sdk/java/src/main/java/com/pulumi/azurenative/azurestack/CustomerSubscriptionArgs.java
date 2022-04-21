@@ -5,9 +5,9 @@ package com.pulumi.azurenative.azurestack;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class CustomerSubscriptionArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="customerSubscriptionName")
-      private final @Nullable Output<String> customerSubscriptionName;
+    private @Nullable Output<String> customerSubscriptionName;
 
-    public Output<String> customerSubscriptionName() {
-        return this.customerSubscriptionName == null ? Codegen.empty() : this.customerSubscriptionName;
+    public Optional<Output<String>> customerSubscriptionName() {
+        return Optional.ofNullable(this.customerSubscriptionName);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class CustomerSubscriptionArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="registrationName", required=true)
-      private final Output<String> registrationName;
+    private Output<String> registrationName;
 
     public Output<String> registrationName() {
         return this.registrationName;
@@ -42,7 +42,7 @@ public final class CustomerSubscriptionArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="resourceGroup", required=true)
-      private final Output<String> resourceGroup;
+    private Output<String> resourceGroup;
 
     public Output<String> resourceGroup() {
         return this.resourceGroup;
@@ -53,89 +53,80 @@ public final class CustomerSubscriptionArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="tenantId")
-      private final @Nullable Output<String> tenantId;
+    private @Nullable Output<String> tenantId;
 
-    public Output<String> tenantId() {
-        return this.tenantId == null ? Codegen.empty() : this.tenantId;
+    public Optional<Output<String>> tenantId() {
+        return Optional.ofNullable(this.tenantId);
     }
 
-    public CustomerSubscriptionArgs(
-        @Nullable Output<String> customerSubscriptionName,
-        Output<String> registrationName,
-        Output<String> resourceGroup,
-        @Nullable Output<String> tenantId) {
-        this.customerSubscriptionName = customerSubscriptionName;
-        this.registrationName = Objects.requireNonNull(registrationName, "expected parameter 'registrationName' to be non-null");
-        this.resourceGroup = Objects.requireNonNull(resourceGroup, "expected parameter 'resourceGroup' to be non-null");
-        this.tenantId = tenantId;
-    }
+    private CustomerSubscriptionArgs() {}
 
-    private CustomerSubscriptionArgs() {
-        this.customerSubscriptionName = Codegen.empty();
-        this.registrationName = Codegen.empty();
-        this.resourceGroup = Codegen.empty();
-        this.tenantId = Codegen.empty();
+    private CustomerSubscriptionArgs(CustomerSubscriptionArgs $) {
+        this.customerSubscriptionName = $.customerSubscriptionName;
+        this.registrationName = $.registrationName;
+        this.resourceGroup = $.resourceGroup;
+        this.tenantId = $.tenantId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomerSubscriptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> customerSubscriptionName;
-        private Output<String> registrationName;
-        private Output<String> resourceGroup;
-        private @Nullable Output<String> tenantId;
+        private CustomerSubscriptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomerSubscriptionArgs();
         }
 
         public Builder(CustomerSubscriptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customerSubscriptionName = defaults.customerSubscriptionName;
-    	      this.registrationName = defaults.registrationName;
-    	      this.resourceGroup = defaults.resourceGroup;
-    	      this.tenantId = defaults.tenantId;
+            $ = new CustomerSubscriptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customerSubscriptionName(@Nullable Output<String> customerSubscriptionName) {
-            this.customerSubscriptionName = customerSubscriptionName;
+            $.customerSubscriptionName = customerSubscriptionName;
             return this;
         }
-        public Builder customerSubscriptionName(@Nullable String customerSubscriptionName) {
-            this.customerSubscriptionName = Codegen.ofNullable(customerSubscriptionName);
-            return this;
+
+        public Builder customerSubscriptionName(String customerSubscriptionName) {
+            return customerSubscriptionName(Output.of(customerSubscriptionName));
         }
+
         public Builder registrationName(Output<String> registrationName) {
-            this.registrationName = Objects.requireNonNull(registrationName);
+            $.registrationName = registrationName;
             return this;
         }
+
         public Builder registrationName(String registrationName) {
-            this.registrationName = Output.of(Objects.requireNonNull(registrationName));
-            return this;
+            return registrationName(Output.of(registrationName));
         }
+
         public Builder resourceGroup(Output<String> resourceGroup) {
-            this.resourceGroup = Objects.requireNonNull(resourceGroup);
+            $.resourceGroup = resourceGroup;
             return this;
         }
+
         public Builder resourceGroup(String resourceGroup) {
-            this.resourceGroup = Output.of(Objects.requireNonNull(resourceGroup));
-            return this;
+            return resourceGroup(Output.of(resourceGroup));
         }
+
         public Builder tenantId(@Nullable Output<String> tenantId) {
-            this.tenantId = tenantId;
+            $.tenantId = tenantId;
             return this;
         }
-        public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Codegen.ofNullable(tenantId);
-            return this;
-        }        public CustomerSubscriptionArgs build() {
-            return new CustomerSubscriptionArgs(customerSubscriptionName, registrationName, resourceGroup, tenantId);
+
+        public Builder tenantId(String tenantId) {
+            return tenantId(Output.of(tenantId));
+        }
+
+        public CustomerSubscriptionArgs build() {
+            $.registrationName = Objects.requireNonNull($.registrationName, "expected parameter 'registrationName' to be non-null");
+            $.resourceGroup = Objects.requireNonNull($.resourceGroup, "expected parameter 'resourceGroup' to be non-null");
+            return $;
         }
     }
+
 }

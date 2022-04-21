@@ -9,11 +9,11 @@ import com.pulumi.aws.ec2.inputs.LaunchConfigurationMetadataOptionsArgs;
 import com.pulumi.aws.ec2.inputs.LaunchConfigurationRootBlockDeviceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class LaunchConfigurationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="associatePublicIpAddress")
-      private final @Nullable Output<Boolean> associatePublicIpAddress;
+    private @Nullable Output<Boolean> associatePublicIpAddress;
 
-    public Output<Boolean> associatePublicIpAddress() {
-        return this.associatePublicIpAddress == null ? Codegen.empty() : this.associatePublicIpAddress;
+    public Optional<Output<Boolean>> associatePublicIpAddress() {
+        return Optional.ofNullable(this.associatePublicIpAddress);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class LaunchConfigurationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="ebsBlockDevices")
-      private final @Nullable Output<List<LaunchConfigurationEbsBlockDeviceArgs>> ebsBlockDevices;
+    private @Nullable Output<List<LaunchConfigurationEbsBlockDeviceArgs>> ebsBlockDevices;
 
-    public Output<List<LaunchConfigurationEbsBlockDeviceArgs>> ebsBlockDevices() {
-        return this.ebsBlockDevices == null ? Codegen.empty() : this.ebsBlockDevices;
+    public Optional<Output<List<LaunchConfigurationEbsBlockDeviceArgs>>> ebsBlockDevices() {
+        return Optional.ofNullable(this.ebsBlockDevices);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class LaunchConfigurationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="ebsOptimized")
-      private final @Nullable Output<Boolean> ebsOptimized;
+    private @Nullable Output<Boolean> ebsOptimized;
 
-    public Output<Boolean> ebsOptimized() {
-        return this.ebsOptimized == null ? Codegen.empty() : this.ebsOptimized;
+    public Optional<Output<Boolean>> ebsOptimized() {
+        return Optional.ofNullable(this.ebsOptimized);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class LaunchConfigurationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="enableMonitoring")
-      private final @Nullable Output<Boolean> enableMonitoring;
+    private @Nullable Output<Boolean> enableMonitoring;
 
-    public Output<Boolean> enableMonitoring() {
-        return this.enableMonitoring == null ? Codegen.empty() : this.enableMonitoring;
+    public Optional<Output<Boolean>> enableMonitoring() {
+        return Optional.ofNullable(this.enableMonitoring);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class LaunchConfigurationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="ephemeralBlockDevices")
-      private final @Nullable Output<List<LaunchConfigurationEphemeralBlockDeviceArgs>> ephemeralBlockDevices;
+    private @Nullable Output<List<LaunchConfigurationEphemeralBlockDeviceArgs>> ephemeralBlockDevices;
 
-    public Output<List<LaunchConfigurationEphemeralBlockDeviceArgs>> ephemeralBlockDevices() {
-        return this.ephemeralBlockDevices == null ? Codegen.empty() : this.ephemeralBlockDevices;
+    public Optional<Output<List<LaunchConfigurationEphemeralBlockDeviceArgs>>> ephemeralBlockDevices() {
+        return Optional.ofNullable(this.ephemeralBlockDevices);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class LaunchConfigurationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="iamInstanceProfile")
-      private final @Nullable Output<String> iamInstanceProfile;
+    private @Nullable Output<String> iamInstanceProfile;
 
-    public Output<String> iamInstanceProfile() {
-        return this.iamInstanceProfile == null ? Codegen.empty() : this.iamInstanceProfile;
+    public Optional<Output<String>> iamInstanceProfile() {
+        return Optional.ofNullable(this.iamInstanceProfile);
     }
 
     /**
@@ -95,7 +95,7 @@ public final class LaunchConfigurationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="imageId", required=true)
-      private final Output<String> imageId;
+    private Output<String> imageId;
 
     public Output<String> imageId() {
         return this.imageId;
@@ -106,7 +106,7 @@ public final class LaunchConfigurationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="instanceType", required=true)
-      private final Output<String> instanceType;
+    private Output<String> instanceType;
 
     public Output<String> instanceType() {
         return this.instanceType;
@@ -117,10 +117,10 @@ public final class LaunchConfigurationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="keyName")
-      private final @Nullable Output<String> keyName;
+    private @Nullable Output<String> keyName;
 
-    public Output<String> keyName() {
-        return this.keyName == null ? Codegen.empty() : this.keyName;
+    public Optional<Output<String>> keyName() {
+        return Optional.ofNullable(this.keyName);
     }
 
     /**
@@ -128,10 +128,10 @@ public final class LaunchConfigurationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="metadataOptions")
-      private final @Nullable Output<LaunchConfigurationMetadataOptionsArgs> metadataOptions;
+    private @Nullable Output<LaunchConfigurationMetadataOptionsArgs> metadataOptions;
 
-    public Output<LaunchConfigurationMetadataOptionsArgs> metadataOptions() {
-        return this.metadataOptions == null ? Codegen.empty() : this.metadataOptions;
+    public Optional<Output<LaunchConfigurationMetadataOptionsArgs>> metadataOptions() {
+        return Optional.ofNullable(this.metadataOptions);
     }
 
     /**
@@ -140,10 +140,10 @@ public final class LaunchConfigurationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -152,10 +152,10 @@ public final class LaunchConfigurationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="namePrefix")
-      private final @Nullable Output<String> namePrefix;
+    private @Nullable Output<String> namePrefix;
 
-    public Output<String> namePrefix() {
-        return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
+    public Optional<Output<String>> namePrefix() {
+        return Optional.ofNullable(this.namePrefix);
     }
 
     /**
@@ -165,10 +165,10 @@ public final class LaunchConfigurationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="placementTenancy")
-      private final @Nullable Output<String> placementTenancy;
+    private @Nullable Output<String> placementTenancy;
 
-    public Output<String> placementTenancy() {
-        return this.placementTenancy == null ? Codegen.empty() : this.placementTenancy;
+    public Optional<Output<String>> placementTenancy() {
+        return Optional.ofNullable(this.placementTenancy);
     }
 
     /**
@@ -177,10 +177,10 @@ public final class LaunchConfigurationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="rootBlockDevice")
-      private final @Nullable Output<LaunchConfigurationRootBlockDeviceArgs> rootBlockDevice;
+    private @Nullable Output<LaunchConfigurationRootBlockDeviceArgs> rootBlockDevice;
 
-    public Output<LaunchConfigurationRootBlockDeviceArgs> rootBlockDevice() {
-        return this.rootBlockDevice == null ? Codegen.empty() : this.rootBlockDevice;
+    public Optional<Output<LaunchConfigurationRootBlockDeviceArgs>> rootBlockDevice() {
+        return Optional.ofNullable(this.rootBlockDevice);
     }
 
     /**
@@ -188,10 +188,10 @@ public final class LaunchConfigurationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="securityGroups")
-      private final @Nullable Output<List<String>> securityGroups;
+    private @Nullable Output<List<String>> securityGroups;
 
-    public Output<List<String>> securityGroups() {
-        return this.securityGroups == null ? Codegen.empty() : this.securityGroups;
+    public Optional<Output<List<String>>> securityGroups() {
+        return Optional.ofNullable(this.securityGroups);
     }
 
     /**
@@ -199,10 +199,10 @@ public final class LaunchConfigurationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="spotPrice")
-      private final @Nullable Output<String> spotPrice;
+    private @Nullable Output<String> spotPrice;
 
-    public Output<String> spotPrice() {
-        return this.spotPrice == null ? Codegen.empty() : this.spotPrice;
+    public Optional<Output<String>> spotPrice() {
+        return Optional.ofNullable(this.spotPrice);
     }
 
     /**
@@ -210,10 +210,10 @@ public final class LaunchConfigurationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="userData")
-      private final @Nullable Output<String> userData;
+    private @Nullable Output<String> userData;
 
-    public Output<String> userData() {
-        return this.userData == null ? Codegen.empty() : this.userData;
+    public Optional<Output<String>> userData() {
+        return Optional.ofNullable(this.userData);
     }
 
     /**
@@ -221,10 +221,10 @@ public final class LaunchConfigurationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="userDataBase64")
-      private final @Nullable Output<String> userDataBase64;
+    private @Nullable Output<String> userDataBase64;
 
-    public Output<String> userDataBase64() {
-        return this.userDataBase64 == null ? Codegen.empty() : this.userDataBase64;
+    public Optional<Output<String>> userDataBase64() {
+        return Optional.ofNullable(this.userDataBase64);
     }
 
     /**
@@ -232,10 +232,10 @@ public final class LaunchConfigurationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="vpcClassicLinkId")
-      private final @Nullable Output<String> vpcClassicLinkId;
+    private @Nullable Output<String> vpcClassicLinkId;
 
-    public Output<String> vpcClassicLinkId() {
-        return this.vpcClassicLinkId == null ? Codegen.empty() : this.vpcClassicLinkId;
+    public Optional<Output<String>> vpcClassicLinkId() {
+        return Optional.ofNullable(this.vpcClassicLinkId);
     }
 
     /**
@@ -243,305 +243,256 @@ public final class LaunchConfigurationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="vpcClassicLinkSecurityGroups")
-      private final @Nullable Output<List<String>> vpcClassicLinkSecurityGroups;
+    private @Nullable Output<List<String>> vpcClassicLinkSecurityGroups;
 
-    public Output<List<String>> vpcClassicLinkSecurityGroups() {
-        return this.vpcClassicLinkSecurityGroups == null ? Codegen.empty() : this.vpcClassicLinkSecurityGroups;
+    public Optional<Output<List<String>>> vpcClassicLinkSecurityGroups() {
+        return Optional.ofNullable(this.vpcClassicLinkSecurityGroups);
     }
 
-    public LaunchConfigurationArgs(
-        @Nullable Output<Boolean> associatePublicIpAddress,
-        @Nullable Output<List<LaunchConfigurationEbsBlockDeviceArgs>> ebsBlockDevices,
-        @Nullable Output<Boolean> ebsOptimized,
-        @Nullable Output<Boolean> enableMonitoring,
-        @Nullable Output<List<LaunchConfigurationEphemeralBlockDeviceArgs>> ephemeralBlockDevices,
-        @Nullable Output<String> iamInstanceProfile,
-        Output<String> imageId,
-        Output<String> instanceType,
-        @Nullable Output<String> keyName,
-        @Nullable Output<LaunchConfigurationMetadataOptionsArgs> metadataOptions,
-        @Nullable Output<String> name,
-        @Nullable Output<String> namePrefix,
-        @Nullable Output<String> placementTenancy,
-        @Nullable Output<LaunchConfigurationRootBlockDeviceArgs> rootBlockDevice,
-        @Nullable Output<List<String>> securityGroups,
-        @Nullable Output<String> spotPrice,
-        @Nullable Output<String> userData,
-        @Nullable Output<String> userDataBase64,
-        @Nullable Output<String> vpcClassicLinkId,
-        @Nullable Output<List<String>> vpcClassicLinkSecurityGroups) {
-        this.associatePublicIpAddress = associatePublicIpAddress;
-        this.ebsBlockDevices = ebsBlockDevices;
-        this.ebsOptimized = ebsOptimized;
-        this.enableMonitoring = enableMonitoring;
-        this.ephemeralBlockDevices = ephemeralBlockDevices;
-        this.iamInstanceProfile = iamInstanceProfile;
-        this.imageId = Objects.requireNonNull(imageId, "expected parameter 'imageId' to be non-null");
-        this.instanceType = Objects.requireNonNull(instanceType, "expected parameter 'instanceType' to be non-null");
-        this.keyName = keyName;
-        this.metadataOptions = metadataOptions;
-        this.name = name;
-        this.namePrefix = namePrefix;
-        this.placementTenancy = placementTenancy;
-        this.rootBlockDevice = rootBlockDevice;
-        this.securityGroups = securityGroups;
-        this.spotPrice = spotPrice;
-        this.userData = userData;
-        this.userDataBase64 = userDataBase64;
-        this.vpcClassicLinkId = vpcClassicLinkId;
-        this.vpcClassicLinkSecurityGroups = vpcClassicLinkSecurityGroups;
-    }
+    private LaunchConfigurationArgs() {}
 
-    private LaunchConfigurationArgs() {
-        this.associatePublicIpAddress = Codegen.empty();
-        this.ebsBlockDevices = Codegen.empty();
-        this.ebsOptimized = Codegen.empty();
-        this.enableMonitoring = Codegen.empty();
-        this.ephemeralBlockDevices = Codegen.empty();
-        this.iamInstanceProfile = Codegen.empty();
-        this.imageId = Codegen.empty();
-        this.instanceType = Codegen.empty();
-        this.keyName = Codegen.empty();
-        this.metadataOptions = Codegen.empty();
-        this.name = Codegen.empty();
-        this.namePrefix = Codegen.empty();
-        this.placementTenancy = Codegen.empty();
-        this.rootBlockDevice = Codegen.empty();
-        this.securityGroups = Codegen.empty();
-        this.spotPrice = Codegen.empty();
-        this.userData = Codegen.empty();
-        this.userDataBase64 = Codegen.empty();
-        this.vpcClassicLinkId = Codegen.empty();
-        this.vpcClassicLinkSecurityGroups = Codegen.empty();
+    private LaunchConfigurationArgs(LaunchConfigurationArgs $) {
+        this.associatePublicIpAddress = $.associatePublicIpAddress;
+        this.ebsBlockDevices = $.ebsBlockDevices;
+        this.ebsOptimized = $.ebsOptimized;
+        this.enableMonitoring = $.enableMonitoring;
+        this.ephemeralBlockDevices = $.ephemeralBlockDevices;
+        this.iamInstanceProfile = $.iamInstanceProfile;
+        this.imageId = $.imageId;
+        this.instanceType = $.instanceType;
+        this.keyName = $.keyName;
+        this.metadataOptions = $.metadataOptions;
+        this.name = $.name;
+        this.namePrefix = $.namePrefix;
+        this.placementTenancy = $.placementTenancy;
+        this.rootBlockDevice = $.rootBlockDevice;
+        this.securityGroups = $.securityGroups;
+        this.spotPrice = $.spotPrice;
+        this.userData = $.userData;
+        this.userDataBase64 = $.userDataBase64;
+        this.vpcClassicLinkId = $.vpcClassicLinkId;
+        this.vpcClassicLinkSecurityGroups = $.vpcClassicLinkSecurityGroups;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LaunchConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> associatePublicIpAddress;
-        private @Nullable Output<List<LaunchConfigurationEbsBlockDeviceArgs>> ebsBlockDevices;
-        private @Nullable Output<Boolean> ebsOptimized;
-        private @Nullable Output<Boolean> enableMonitoring;
-        private @Nullable Output<List<LaunchConfigurationEphemeralBlockDeviceArgs>> ephemeralBlockDevices;
-        private @Nullable Output<String> iamInstanceProfile;
-        private Output<String> imageId;
-        private Output<String> instanceType;
-        private @Nullable Output<String> keyName;
-        private @Nullable Output<LaunchConfigurationMetadataOptionsArgs> metadataOptions;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> namePrefix;
-        private @Nullable Output<String> placementTenancy;
-        private @Nullable Output<LaunchConfigurationRootBlockDeviceArgs> rootBlockDevice;
-        private @Nullable Output<List<String>> securityGroups;
-        private @Nullable Output<String> spotPrice;
-        private @Nullable Output<String> userData;
-        private @Nullable Output<String> userDataBase64;
-        private @Nullable Output<String> vpcClassicLinkId;
-        private @Nullable Output<List<String>> vpcClassicLinkSecurityGroups;
+        private LaunchConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LaunchConfigurationArgs();
         }
 
         public Builder(LaunchConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.associatePublicIpAddress = defaults.associatePublicIpAddress;
-    	      this.ebsBlockDevices = defaults.ebsBlockDevices;
-    	      this.ebsOptimized = defaults.ebsOptimized;
-    	      this.enableMonitoring = defaults.enableMonitoring;
-    	      this.ephemeralBlockDevices = defaults.ephemeralBlockDevices;
-    	      this.iamInstanceProfile = defaults.iamInstanceProfile;
-    	      this.imageId = defaults.imageId;
-    	      this.instanceType = defaults.instanceType;
-    	      this.keyName = defaults.keyName;
-    	      this.metadataOptions = defaults.metadataOptions;
-    	      this.name = defaults.name;
-    	      this.namePrefix = defaults.namePrefix;
-    	      this.placementTenancy = defaults.placementTenancy;
-    	      this.rootBlockDevice = defaults.rootBlockDevice;
-    	      this.securityGroups = defaults.securityGroups;
-    	      this.spotPrice = defaults.spotPrice;
-    	      this.userData = defaults.userData;
-    	      this.userDataBase64 = defaults.userDataBase64;
-    	      this.vpcClassicLinkId = defaults.vpcClassicLinkId;
-    	      this.vpcClassicLinkSecurityGroups = defaults.vpcClassicLinkSecurityGroups;
+            $ = new LaunchConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder associatePublicIpAddress(@Nullable Output<Boolean> associatePublicIpAddress) {
-            this.associatePublicIpAddress = associatePublicIpAddress;
+            $.associatePublicIpAddress = associatePublicIpAddress;
             return this;
         }
-        public Builder associatePublicIpAddress(@Nullable Boolean associatePublicIpAddress) {
-            this.associatePublicIpAddress = Codegen.ofNullable(associatePublicIpAddress);
-            return this;
+
+        public Builder associatePublicIpAddress(Boolean associatePublicIpAddress) {
+            return associatePublicIpAddress(Output.of(associatePublicIpAddress));
         }
+
         public Builder ebsBlockDevices(@Nullable Output<List<LaunchConfigurationEbsBlockDeviceArgs>> ebsBlockDevices) {
-            this.ebsBlockDevices = ebsBlockDevices;
+            $.ebsBlockDevices = ebsBlockDevices;
             return this;
         }
-        public Builder ebsBlockDevices(@Nullable List<LaunchConfigurationEbsBlockDeviceArgs> ebsBlockDevices) {
-            this.ebsBlockDevices = Codegen.ofNullable(ebsBlockDevices);
-            return this;
+
+        public Builder ebsBlockDevices(List<LaunchConfigurationEbsBlockDeviceArgs> ebsBlockDevices) {
+            return ebsBlockDevices(Output.of(ebsBlockDevices));
         }
+
         public Builder ebsBlockDevices(LaunchConfigurationEbsBlockDeviceArgs... ebsBlockDevices) {
             return ebsBlockDevices(List.of(ebsBlockDevices));
         }
+
         public Builder ebsOptimized(@Nullable Output<Boolean> ebsOptimized) {
-            this.ebsOptimized = ebsOptimized;
+            $.ebsOptimized = ebsOptimized;
             return this;
         }
-        public Builder ebsOptimized(@Nullable Boolean ebsOptimized) {
-            this.ebsOptimized = Codegen.ofNullable(ebsOptimized);
-            return this;
+
+        public Builder ebsOptimized(Boolean ebsOptimized) {
+            return ebsOptimized(Output.of(ebsOptimized));
         }
+
         public Builder enableMonitoring(@Nullable Output<Boolean> enableMonitoring) {
-            this.enableMonitoring = enableMonitoring;
+            $.enableMonitoring = enableMonitoring;
             return this;
         }
-        public Builder enableMonitoring(@Nullable Boolean enableMonitoring) {
-            this.enableMonitoring = Codegen.ofNullable(enableMonitoring);
-            return this;
+
+        public Builder enableMonitoring(Boolean enableMonitoring) {
+            return enableMonitoring(Output.of(enableMonitoring));
         }
+
         public Builder ephemeralBlockDevices(@Nullable Output<List<LaunchConfigurationEphemeralBlockDeviceArgs>> ephemeralBlockDevices) {
-            this.ephemeralBlockDevices = ephemeralBlockDevices;
+            $.ephemeralBlockDevices = ephemeralBlockDevices;
             return this;
         }
-        public Builder ephemeralBlockDevices(@Nullable List<LaunchConfigurationEphemeralBlockDeviceArgs> ephemeralBlockDevices) {
-            this.ephemeralBlockDevices = Codegen.ofNullable(ephemeralBlockDevices);
-            return this;
+
+        public Builder ephemeralBlockDevices(List<LaunchConfigurationEphemeralBlockDeviceArgs> ephemeralBlockDevices) {
+            return ephemeralBlockDevices(Output.of(ephemeralBlockDevices));
         }
+
         public Builder ephemeralBlockDevices(LaunchConfigurationEphemeralBlockDeviceArgs... ephemeralBlockDevices) {
             return ephemeralBlockDevices(List.of(ephemeralBlockDevices));
         }
+
         public Builder iamInstanceProfile(@Nullable Output<String> iamInstanceProfile) {
-            this.iamInstanceProfile = iamInstanceProfile;
+            $.iamInstanceProfile = iamInstanceProfile;
             return this;
         }
+
+        public Builder iamInstanceProfile(String iamInstanceProfile) {
+            return iamInstanceProfile(Output.of(iamInstanceProfile));
+        }
+
         public Builder imageId(Output<String> imageId) {
-            this.imageId = Objects.requireNonNull(imageId);
+            $.imageId = imageId;
             return this;
         }
+
         public Builder imageId(String imageId) {
-            this.imageId = Output.of(Objects.requireNonNull(imageId));
-            return this;
+            return imageId(Output.of(imageId));
         }
+
         public Builder instanceType(Output<String> instanceType) {
-            this.instanceType = Objects.requireNonNull(instanceType);
+            $.instanceType = instanceType;
             return this;
         }
+
         public Builder instanceType(String instanceType) {
-            this.instanceType = Output.of(Objects.requireNonNull(instanceType));
-            return this;
+            return instanceType(Output.of(instanceType));
         }
+
         public Builder keyName(@Nullable Output<String> keyName) {
-            this.keyName = keyName;
+            $.keyName = keyName;
             return this;
         }
-        public Builder keyName(@Nullable String keyName) {
-            this.keyName = Codegen.ofNullable(keyName);
-            return this;
+
+        public Builder keyName(String keyName) {
+            return keyName(Output.of(keyName));
         }
+
         public Builder metadataOptions(@Nullable Output<LaunchConfigurationMetadataOptionsArgs> metadataOptions) {
-            this.metadataOptions = metadataOptions;
+            $.metadataOptions = metadataOptions;
             return this;
         }
-        public Builder metadataOptions(@Nullable LaunchConfigurationMetadataOptionsArgs metadataOptions) {
-            this.metadataOptions = Codegen.ofNullable(metadataOptions);
-            return this;
+
+        public Builder metadataOptions(LaunchConfigurationMetadataOptionsArgs metadataOptions) {
+            return metadataOptions(Output.of(metadataOptions));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
-            this.namePrefix = namePrefix;
+            $.namePrefix = namePrefix;
             return this;
         }
-        public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Codegen.ofNullable(namePrefix);
-            return this;
+
+        public Builder namePrefix(String namePrefix) {
+            return namePrefix(Output.of(namePrefix));
         }
+
         public Builder placementTenancy(@Nullable Output<String> placementTenancy) {
-            this.placementTenancy = placementTenancy;
+            $.placementTenancy = placementTenancy;
             return this;
         }
-        public Builder placementTenancy(@Nullable String placementTenancy) {
-            this.placementTenancy = Codegen.ofNullable(placementTenancy);
-            return this;
+
+        public Builder placementTenancy(String placementTenancy) {
+            return placementTenancy(Output.of(placementTenancy));
         }
+
         public Builder rootBlockDevice(@Nullable Output<LaunchConfigurationRootBlockDeviceArgs> rootBlockDevice) {
-            this.rootBlockDevice = rootBlockDevice;
+            $.rootBlockDevice = rootBlockDevice;
             return this;
         }
-        public Builder rootBlockDevice(@Nullable LaunchConfigurationRootBlockDeviceArgs rootBlockDevice) {
-            this.rootBlockDevice = Codegen.ofNullable(rootBlockDevice);
-            return this;
+
+        public Builder rootBlockDevice(LaunchConfigurationRootBlockDeviceArgs rootBlockDevice) {
+            return rootBlockDevice(Output.of(rootBlockDevice));
         }
+
         public Builder securityGroups(@Nullable Output<List<String>> securityGroups) {
-            this.securityGroups = securityGroups;
+            $.securityGroups = securityGroups;
             return this;
         }
-        public Builder securityGroups(@Nullable List<String> securityGroups) {
-            this.securityGroups = Codegen.ofNullable(securityGroups);
-            return this;
+
+        public Builder securityGroups(List<String> securityGroups) {
+            return securityGroups(Output.of(securityGroups));
         }
+
         public Builder securityGroups(String... securityGroups) {
             return securityGroups(List.of(securityGroups));
         }
+
         public Builder spotPrice(@Nullable Output<String> spotPrice) {
-            this.spotPrice = spotPrice;
+            $.spotPrice = spotPrice;
             return this;
         }
-        public Builder spotPrice(@Nullable String spotPrice) {
-            this.spotPrice = Codegen.ofNullable(spotPrice);
-            return this;
+
+        public Builder spotPrice(String spotPrice) {
+            return spotPrice(Output.of(spotPrice));
         }
+
         public Builder userData(@Nullable Output<String> userData) {
-            this.userData = userData;
+            $.userData = userData;
             return this;
         }
-        public Builder userData(@Nullable String userData) {
-            this.userData = Codegen.ofNullable(userData);
-            return this;
+
+        public Builder userData(String userData) {
+            return userData(Output.of(userData));
         }
+
         public Builder userDataBase64(@Nullable Output<String> userDataBase64) {
-            this.userDataBase64 = userDataBase64;
+            $.userDataBase64 = userDataBase64;
             return this;
         }
-        public Builder userDataBase64(@Nullable String userDataBase64) {
-            this.userDataBase64 = Codegen.ofNullable(userDataBase64);
-            return this;
+
+        public Builder userDataBase64(String userDataBase64) {
+            return userDataBase64(Output.of(userDataBase64));
         }
+
         public Builder vpcClassicLinkId(@Nullable Output<String> vpcClassicLinkId) {
-            this.vpcClassicLinkId = vpcClassicLinkId;
+            $.vpcClassicLinkId = vpcClassicLinkId;
             return this;
         }
-        public Builder vpcClassicLinkId(@Nullable String vpcClassicLinkId) {
-            this.vpcClassicLinkId = Codegen.ofNullable(vpcClassicLinkId);
-            return this;
+
+        public Builder vpcClassicLinkId(String vpcClassicLinkId) {
+            return vpcClassicLinkId(Output.of(vpcClassicLinkId));
         }
+
         public Builder vpcClassicLinkSecurityGroups(@Nullable Output<List<String>> vpcClassicLinkSecurityGroups) {
-            this.vpcClassicLinkSecurityGroups = vpcClassicLinkSecurityGroups;
+            $.vpcClassicLinkSecurityGroups = vpcClassicLinkSecurityGroups;
             return this;
         }
-        public Builder vpcClassicLinkSecurityGroups(@Nullable List<String> vpcClassicLinkSecurityGroups) {
-            this.vpcClassicLinkSecurityGroups = Codegen.ofNullable(vpcClassicLinkSecurityGroups);
-            return this;
+
+        public Builder vpcClassicLinkSecurityGroups(List<String> vpcClassicLinkSecurityGroups) {
+            return vpcClassicLinkSecurityGroups(Output.of(vpcClassicLinkSecurityGroups));
         }
+
         public Builder vpcClassicLinkSecurityGroups(String... vpcClassicLinkSecurityGroups) {
             return vpcClassicLinkSecurityGroups(List.of(vpcClassicLinkSecurityGroups));
-        }        public LaunchConfigurationArgs build() {
-            return new LaunchConfigurationArgs(associatePublicIpAddress, ebsBlockDevices, ebsOptimized, enableMonitoring, ephemeralBlockDevices, iamInstanceProfile, imageId, instanceType, keyName, metadataOptions, name, namePrefix, placementTenancy, rootBlockDevice, securityGroups, spotPrice, userData, userDataBase64, vpcClassicLinkId, vpcClassicLinkSecurityGroups);
+        }
+
+        public LaunchConfigurationArgs build() {
+            $.imageId = Objects.requireNonNull($.imageId, "expected parameter 'imageId' to be non-null");
+            $.instanceType = Objects.requireNonNull($.instanceType, "expected parameter 'instanceType' to be non-null");
+            return $;
         }
     }
+
 }

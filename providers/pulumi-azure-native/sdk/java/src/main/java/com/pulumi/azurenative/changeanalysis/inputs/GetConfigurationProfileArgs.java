@@ -17,45 +17,45 @@ public final class GetConfigurationProfileArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="profileName", required=true)
-      private final String profileName;
+    private String profileName;
 
     public String profileName() {
         return this.profileName;
     }
 
-    public GetConfigurationProfileArgs(String profileName) {
-        this.profileName = Objects.requireNonNull(profileName, "expected parameter 'profileName' to be non-null");
-    }
+    private GetConfigurationProfileArgs() {}
 
-    private GetConfigurationProfileArgs() {
-        this.profileName = null;
+    private GetConfigurationProfileArgs(GetConfigurationProfileArgs $) {
+        this.profileName = $.profileName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetConfigurationProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String profileName;
+        private GetConfigurationProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetConfigurationProfileArgs();
         }
 
         public Builder(GetConfigurationProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.profileName = defaults.profileName;
+            $ = new GetConfigurationProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder profileName(String profileName) {
-            this.profileName = Objects.requireNonNull(profileName);
+            $.profileName = profileName;
             return this;
-        }        public GetConfigurationProfileArgs build() {
-            return new GetConfigurationProfileArgs(profileName);
+        }
+
+        public GetConfigurationProfileArgs build() {
+            $.profileName = Objects.requireNonNull($.profileName, "expected parameter 'profileName' to be non-null");
+            return $;
         }
     }
+
 }

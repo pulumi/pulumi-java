@@ -5,7 +5,6 @@ package com.pulumi.googlenative.container_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.container_v1beta1.inputs.MaxPodsConstraintArgs;
 import com.pulumi.googlenative.container_v1beta1.inputs.NodeConfigArgs;
 import com.pulumi.googlenative.container_v1beta1.inputs.NodeManagementArgs;
@@ -18,6 +17,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -34,10 +34,10 @@ public final class NodePoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoscaling")
-      private final @Nullable Output<NodePoolAutoscalingArgs> autoscaling;
+    private @Nullable Output<NodePoolAutoscalingArgs> autoscaling;
 
-    public Output<NodePoolAutoscalingArgs> autoscaling() {
-        return this.autoscaling == null ? Codegen.empty() : this.autoscaling;
+    public Optional<Output<NodePoolAutoscalingArgs>> autoscaling() {
+        return Optional.ofNullable(this.autoscaling);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class NodePoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="conditions")
-      private final @Nullable Output<List<StatusConditionArgs>> conditions;
+    private @Nullable Output<List<StatusConditionArgs>> conditions;
 
-    public Output<List<StatusConditionArgs>> conditions() {
-        return this.conditions == null ? Codegen.empty() : this.conditions;
+    public Optional<Output<List<StatusConditionArgs>>> conditions() {
+        return Optional.ofNullable(this.conditions);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class NodePoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="config")
-      private final @Nullable Output<NodeConfigArgs> config;
+    private @Nullable Output<NodeConfigArgs> config;
 
-    public Output<NodeConfigArgs> config() {
-        return this.config == null ? Codegen.empty() : this.config;
+    public Optional<Output<NodeConfigArgs>> config() {
+        return Optional.ofNullable(this.config);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class NodePoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="initialNodeCount")
-      private final @Nullable Output<Integer> initialNodeCount;
+    private @Nullable Output<Integer> initialNodeCount;
 
-    public Output<Integer> initialNodeCount() {
-        return this.initialNodeCount == null ? Codegen.empty() : this.initialNodeCount;
+    public Optional<Output<Integer>> initialNodeCount() {
+        return Optional.ofNullable(this.initialNodeCount);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class NodePoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="locations")
-      private final @Nullable Output<List<String>> locations;
+    private @Nullable Output<List<String>> locations;
 
-    public Output<List<String>> locations() {
-        return this.locations == null ? Codegen.empty() : this.locations;
+    public Optional<Output<List<String>>> locations() {
+        return Optional.ofNullable(this.locations);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class NodePoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="management")
-      private final @Nullable Output<NodeManagementArgs> management;
+    private @Nullable Output<NodeManagementArgs> management;
 
-    public Output<NodeManagementArgs> management() {
-        return this.management == null ? Codegen.empty() : this.management;
+    public Optional<Output<NodeManagementArgs>> management() {
+        return Optional.ofNullable(this.management);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class NodePoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxPodsConstraint")
-      private final @Nullable Output<MaxPodsConstraintArgs> maxPodsConstraint;
+    private @Nullable Output<MaxPodsConstraintArgs> maxPodsConstraint;
 
-    public Output<MaxPodsConstraintArgs> maxPodsConstraint() {
-        return this.maxPodsConstraint == null ? Codegen.empty() : this.maxPodsConstraint;
+    public Optional<Output<MaxPodsConstraintArgs>> maxPodsConstraint() {
+        return Optional.ofNullable(this.maxPodsConstraint);
     }
 
     /**
@@ -111,10 +111,10 @@ public final class NodePoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -122,10 +122,10 @@ public final class NodePoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networkConfig")
-      private final @Nullable Output<NodeNetworkConfigArgs> networkConfig;
+    private @Nullable Output<NodeNetworkConfigArgs> networkConfig;
 
-    public Output<NodeNetworkConfigArgs> networkConfig() {
-        return this.networkConfig == null ? Codegen.empty() : this.networkConfig;
+    public Optional<Output<NodeNetworkConfigArgs>> networkConfig() {
+        return Optional.ofNullable(this.networkConfig);
     }
 
     /**
@@ -133,10 +133,10 @@ public final class NodePoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="placementPolicy")
-      private final @Nullable Output<PlacementPolicyArgs> placementPolicy;
+    private @Nullable Output<PlacementPolicyArgs> placementPolicy;
 
-    public Output<PlacementPolicyArgs> placementPolicy() {
-        return this.placementPolicy == null ? Codegen.empty() : this.placementPolicy;
+    public Optional<Output<PlacementPolicyArgs>> placementPolicy() {
+        return Optional.ofNullable(this.placementPolicy);
     }
 
     /**
@@ -144,10 +144,10 @@ public final class NodePoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="upgradeSettings")
-      private final @Nullable Output<UpgradeSettingsArgs> upgradeSettings;
+    private @Nullable Output<UpgradeSettingsArgs> upgradeSettings;
 
-    public Output<UpgradeSettingsArgs> upgradeSettings() {
-        return this.upgradeSettings == null ? Codegen.empty() : this.upgradeSettings;
+    public Optional<Output<UpgradeSettingsArgs>> upgradeSettings() {
+        return Optional.ofNullable(this.upgradeSettings);
     }
 
     /**
@@ -155,199 +155,166 @@ public final class NodePoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public NodePoolArgs(
-        @Nullable Output<NodePoolAutoscalingArgs> autoscaling,
-        @Nullable Output<List<StatusConditionArgs>> conditions,
-        @Nullable Output<NodeConfigArgs> config,
-        @Nullable Output<Integer> initialNodeCount,
-        @Nullable Output<List<String>> locations,
-        @Nullable Output<NodeManagementArgs> management,
-        @Nullable Output<MaxPodsConstraintArgs> maxPodsConstraint,
-        @Nullable Output<String> name,
-        @Nullable Output<NodeNetworkConfigArgs> networkConfig,
-        @Nullable Output<PlacementPolicyArgs> placementPolicy,
-        @Nullable Output<UpgradeSettingsArgs> upgradeSettings,
-        @Nullable Output<String> version) {
-        this.autoscaling = autoscaling;
-        this.conditions = conditions;
-        this.config = config;
-        this.initialNodeCount = initialNodeCount;
-        this.locations = locations;
-        this.management = management;
-        this.maxPodsConstraint = maxPodsConstraint;
-        this.name = name;
-        this.networkConfig = networkConfig;
-        this.placementPolicy = placementPolicy;
-        this.upgradeSettings = upgradeSettings;
-        this.version = version;
-    }
+    private NodePoolArgs() {}
 
-    private NodePoolArgs() {
-        this.autoscaling = Codegen.empty();
-        this.conditions = Codegen.empty();
-        this.config = Codegen.empty();
-        this.initialNodeCount = Codegen.empty();
-        this.locations = Codegen.empty();
-        this.management = Codegen.empty();
-        this.maxPodsConstraint = Codegen.empty();
-        this.name = Codegen.empty();
-        this.networkConfig = Codegen.empty();
-        this.placementPolicy = Codegen.empty();
-        this.upgradeSettings = Codegen.empty();
-        this.version = Codegen.empty();
+    private NodePoolArgs(NodePoolArgs $) {
+        this.autoscaling = $.autoscaling;
+        this.conditions = $.conditions;
+        this.config = $.config;
+        this.initialNodeCount = $.initialNodeCount;
+        this.locations = $.locations;
+        this.management = $.management;
+        this.maxPodsConstraint = $.maxPodsConstraint;
+        this.name = $.name;
+        this.networkConfig = $.networkConfig;
+        this.placementPolicy = $.placementPolicy;
+        this.upgradeSettings = $.upgradeSettings;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodePoolArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<NodePoolAutoscalingArgs> autoscaling;
-        private @Nullable Output<List<StatusConditionArgs>> conditions;
-        private @Nullable Output<NodeConfigArgs> config;
-        private @Nullable Output<Integer> initialNodeCount;
-        private @Nullable Output<List<String>> locations;
-        private @Nullable Output<NodeManagementArgs> management;
-        private @Nullable Output<MaxPodsConstraintArgs> maxPodsConstraint;
-        private @Nullable Output<String> name;
-        private @Nullable Output<NodeNetworkConfigArgs> networkConfig;
-        private @Nullable Output<PlacementPolicyArgs> placementPolicy;
-        private @Nullable Output<UpgradeSettingsArgs> upgradeSettings;
-        private @Nullable Output<String> version;
+        private NodePoolArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodePoolArgs();
         }
 
         public Builder(NodePoolArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoscaling = defaults.autoscaling;
-    	      this.conditions = defaults.conditions;
-    	      this.config = defaults.config;
-    	      this.initialNodeCount = defaults.initialNodeCount;
-    	      this.locations = defaults.locations;
-    	      this.management = defaults.management;
-    	      this.maxPodsConstraint = defaults.maxPodsConstraint;
-    	      this.name = defaults.name;
-    	      this.networkConfig = defaults.networkConfig;
-    	      this.placementPolicy = defaults.placementPolicy;
-    	      this.upgradeSettings = defaults.upgradeSettings;
-    	      this.version = defaults.version;
+            $ = new NodePoolArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoscaling(@Nullable Output<NodePoolAutoscalingArgs> autoscaling) {
-            this.autoscaling = autoscaling;
+            $.autoscaling = autoscaling;
             return this;
         }
-        public Builder autoscaling(@Nullable NodePoolAutoscalingArgs autoscaling) {
-            this.autoscaling = Codegen.ofNullable(autoscaling);
-            return this;
+
+        public Builder autoscaling(NodePoolAutoscalingArgs autoscaling) {
+            return autoscaling(Output.of(autoscaling));
         }
+
         public Builder conditions(@Nullable Output<List<StatusConditionArgs>> conditions) {
-            this.conditions = conditions;
+            $.conditions = conditions;
             return this;
         }
-        public Builder conditions(@Nullable List<StatusConditionArgs> conditions) {
-            this.conditions = Codegen.ofNullable(conditions);
-            return this;
+
+        public Builder conditions(List<StatusConditionArgs> conditions) {
+            return conditions(Output.of(conditions));
         }
+
         public Builder conditions(StatusConditionArgs... conditions) {
             return conditions(List.of(conditions));
         }
+
         public Builder config(@Nullable Output<NodeConfigArgs> config) {
-            this.config = config;
+            $.config = config;
             return this;
         }
-        public Builder config(@Nullable NodeConfigArgs config) {
-            this.config = Codegen.ofNullable(config);
-            return this;
+
+        public Builder config(NodeConfigArgs config) {
+            return config(Output.of(config));
         }
+
         public Builder initialNodeCount(@Nullable Output<Integer> initialNodeCount) {
-            this.initialNodeCount = initialNodeCount;
+            $.initialNodeCount = initialNodeCount;
             return this;
         }
-        public Builder initialNodeCount(@Nullable Integer initialNodeCount) {
-            this.initialNodeCount = Codegen.ofNullable(initialNodeCount);
-            return this;
+
+        public Builder initialNodeCount(Integer initialNodeCount) {
+            return initialNodeCount(Output.of(initialNodeCount));
         }
+
         public Builder locations(@Nullable Output<List<String>> locations) {
-            this.locations = locations;
+            $.locations = locations;
             return this;
         }
-        public Builder locations(@Nullable List<String> locations) {
-            this.locations = Codegen.ofNullable(locations);
-            return this;
+
+        public Builder locations(List<String> locations) {
+            return locations(Output.of(locations));
         }
+
         public Builder locations(String... locations) {
             return locations(List.of(locations));
         }
+
         public Builder management(@Nullable Output<NodeManagementArgs> management) {
-            this.management = management;
+            $.management = management;
             return this;
         }
-        public Builder management(@Nullable NodeManagementArgs management) {
-            this.management = Codegen.ofNullable(management);
-            return this;
+
+        public Builder management(NodeManagementArgs management) {
+            return management(Output.of(management));
         }
+
         public Builder maxPodsConstraint(@Nullable Output<MaxPodsConstraintArgs> maxPodsConstraint) {
-            this.maxPodsConstraint = maxPodsConstraint;
+            $.maxPodsConstraint = maxPodsConstraint;
             return this;
         }
-        public Builder maxPodsConstraint(@Nullable MaxPodsConstraintArgs maxPodsConstraint) {
-            this.maxPodsConstraint = Codegen.ofNullable(maxPodsConstraint);
-            return this;
+
+        public Builder maxPodsConstraint(MaxPodsConstraintArgs maxPodsConstraint) {
+            return maxPodsConstraint(Output.of(maxPodsConstraint));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder networkConfig(@Nullable Output<NodeNetworkConfigArgs> networkConfig) {
-            this.networkConfig = networkConfig;
+            $.networkConfig = networkConfig;
             return this;
         }
-        public Builder networkConfig(@Nullable NodeNetworkConfigArgs networkConfig) {
-            this.networkConfig = Codegen.ofNullable(networkConfig);
-            return this;
+
+        public Builder networkConfig(NodeNetworkConfigArgs networkConfig) {
+            return networkConfig(Output.of(networkConfig));
         }
+
         public Builder placementPolicy(@Nullable Output<PlacementPolicyArgs> placementPolicy) {
-            this.placementPolicy = placementPolicy;
+            $.placementPolicy = placementPolicy;
             return this;
         }
-        public Builder placementPolicy(@Nullable PlacementPolicyArgs placementPolicy) {
-            this.placementPolicy = Codegen.ofNullable(placementPolicy);
-            return this;
+
+        public Builder placementPolicy(PlacementPolicyArgs placementPolicy) {
+            return placementPolicy(Output.of(placementPolicy));
         }
+
         public Builder upgradeSettings(@Nullable Output<UpgradeSettingsArgs> upgradeSettings) {
-            this.upgradeSettings = upgradeSettings;
+            $.upgradeSettings = upgradeSettings;
             return this;
         }
-        public Builder upgradeSettings(@Nullable UpgradeSettingsArgs upgradeSettings) {
-            this.upgradeSettings = Codegen.ofNullable(upgradeSettings);
-            return this;
+
+        public Builder upgradeSettings(UpgradeSettingsArgs upgradeSettings) {
+            return upgradeSettings(Output.of(upgradeSettings));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public NodePoolArgs build() {
-            return new NodePoolArgs(autoscaling, conditions, config, initialNodeCount, locations, management, maxPodsConstraint, name, networkConfig, placementPolicy, upgradeSettings, version);
+
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public NodePoolArgs build() {
+            return $;
         }
     }
+
 }

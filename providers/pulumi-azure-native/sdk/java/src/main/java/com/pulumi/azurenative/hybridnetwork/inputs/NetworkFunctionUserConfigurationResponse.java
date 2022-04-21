@@ -27,10 +27,10 @@ public final class NetworkFunctionUserConfigurationResponse extends com.pulumi.r
      * 
      */
     @Import(name="networkInterfaces")
-      private final @Nullable List<NetworkInterfaceResponse> networkInterfaces;
+    private @Nullable List<NetworkInterfaceResponse> networkInterfaces;
 
-    public List<NetworkInterfaceResponse> networkInterfaces() {
-        return this.networkInterfaces == null ? List.of() : this.networkInterfaces;
+    public Optional<List<NetworkInterfaceResponse>> networkInterfaces() {
+        return Optional.ofNullable(this.networkInterfaces);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class NetworkFunctionUserConfigurationResponse extends com.pulumi.r
      * 
      */
     @Import(name="osProfile")
-      private final @Nullable NetworkFunctionUserConfigurationResponseOsProfile osProfile;
+    private @Nullable NetworkFunctionUserConfigurationResponseOsProfile osProfile;
 
     public Optional<NetworkFunctionUserConfigurationResponseOsProfile> osProfile() {
-        return this.osProfile == null ? Optional.empty() : Optional.ofNullable(this.osProfile);
+        return Optional.ofNullable(this.osProfile);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class NetworkFunctionUserConfigurationResponse extends com.pulumi.r
      * 
      */
     @Import(name="roleName")
-      private final @Nullable String roleName;
+    private @Nullable String roleName;
 
     public Optional<String> roleName() {
-        return this.roleName == null ? Optional.empty() : Optional.ofNullable(this.roleName);
+        return Optional.ofNullable(this.roleName);
     }
 
     /**
@@ -60,76 +60,66 @@ public final class NetworkFunctionUserConfigurationResponse extends com.pulumi.r
      * 
      */
     @Import(name="userDataParameters")
-      private final @Nullable Object userDataParameters;
+    private @Nullable Object userDataParameters;
 
     public Optional<Object> userDataParameters() {
-        return this.userDataParameters == null ? Optional.empty() : Optional.ofNullable(this.userDataParameters);
+        return Optional.ofNullable(this.userDataParameters);
     }
 
-    public NetworkFunctionUserConfigurationResponse(
-        @Nullable List<NetworkInterfaceResponse> networkInterfaces,
-        @Nullable NetworkFunctionUserConfigurationResponseOsProfile osProfile,
-        @Nullable String roleName,
-        @Nullable Object userDataParameters) {
-        this.networkInterfaces = networkInterfaces;
-        this.osProfile = osProfile;
-        this.roleName = roleName;
-        this.userDataParameters = userDataParameters;
-    }
+    private NetworkFunctionUserConfigurationResponse() {}
 
-    private NetworkFunctionUserConfigurationResponse() {
-        this.networkInterfaces = List.of();
-        this.osProfile = null;
-        this.roleName = null;
-        this.userDataParameters = null;
+    private NetworkFunctionUserConfigurationResponse(NetworkFunctionUserConfigurationResponse $) {
+        this.networkInterfaces = $.networkInterfaces;
+        this.osProfile = $.osProfile;
+        this.roleName = $.roleName;
+        this.userDataParameters = $.userDataParameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkFunctionUserConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<NetworkInterfaceResponse> networkInterfaces;
-        private @Nullable NetworkFunctionUserConfigurationResponseOsProfile osProfile;
-        private @Nullable String roleName;
-        private @Nullable Object userDataParameters;
+        private NetworkFunctionUserConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkFunctionUserConfigurationResponse();
         }
 
         public Builder(NetworkFunctionUserConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.networkInterfaces = defaults.networkInterfaces;
-    	      this.osProfile = defaults.osProfile;
-    	      this.roleName = defaults.roleName;
-    	      this.userDataParameters = defaults.userDataParameters;
+            $ = new NetworkFunctionUserConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder networkInterfaces(@Nullable List<NetworkInterfaceResponse> networkInterfaces) {
-            this.networkInterfaces = networkInterfaces;
+            $.networkInterfaces = networkInterfaces;
             return this;
         }
+
         public Builder networkInterfaces(NetworkInterfaceResponse... networkInterfaces) {
             return networkInterfaces(List.of(networkInterfaces));
         }
+
         public Builder osProfile(@Nullable NetworkFunctionUserConfigurationResponseOsProfile osProfile) {
-            this.osProfile = osProfile;
+            $.osProfile = osProfile;
             return this;
         }
+
         public Builder roleName(@Nullable String roleName) {
-            this.roleName = roleName;
+            $.roleName = roleName;
             return this;
         }
+
         public Builder userDataParameters(@Nullable Object userDataParameters) {
-            this.userDataParameters = userDataParameters;
+            $.userDataParameters = userDataParameters;
             return this;
-        }        public NetworkFunctionUserConfigurationResponse build() {
-            return new NetworkFunctionUserConfigurationResponse(networkInterfaces, osProfile, roleName, userDataParameters);
+        }
+
+        public NetworkFunctionUserConfigurationResponse build() {
+            return $;
         }
     }
+
 }

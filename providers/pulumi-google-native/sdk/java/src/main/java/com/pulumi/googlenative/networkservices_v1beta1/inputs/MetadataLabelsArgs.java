@@ -5,7 +5,6 @@ package com.pulumi.googlenative.networkservices_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class MetadataLabelsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="labelName", required=true)
-      private final Output<String> labelName;
+    private Output<String> labelName;
 
     public Output<String> labelName() {
         return this.labelName;
@@ -34,63 +33,60 @@ public final class MetadataLabelsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="labelValue", required=true)
-      private final Output<String> labelValue;
+    private Output<String> labelValue;
 
     public Output<String> labelValue() {
         return this.labelValue;
     }
 
-    public MetadataLabelsArgs(
-        Output<String> labelName,
-        Output<String> labelValue) {
-        this.labelName = Objects.requireNonNull(labelName, "expected parameter 'labelName' to be non-null");
-        this.labelValue = Objects.requireNonNull(labelValue, "expected parameter 'labelValue' to be non-null");
-    }
+    private MetadataLabelsArgs() {}
 
-    private MetadataLabelsArgs() {
-        this.labelName = Codegen.empty();
-        this.labelValue = Codegen.empty();
+    private MetadataLabelsArgs(MetadataLabelsArgs $) {
+        this.labelName = $.labelName;
+        this.labelValue = $.labelValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetadataLabelsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> labelName;
-        private Output<String> labelValue;
+        private MetadataLabelsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetadataLabelsArgs();
         }
 
         public Builder(MetadataLabelsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.labelName = defaults.labelName;
-    	      this.labelValue = defaults.labelValue;
+            $ = new MetadataLabelsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder labelName(Output<String> labelName) {
-            this.labelName = Objects.requireNonNull(labelName);
+            $.labelName = labelName;
             return this;
         }
+
         public Builder labelName(String labelName) {
-            this.labelName = Output.of(Objects.requireNonNull(labelName));
-            return this;
+            return labelName(Output.of(labelName));
         }
+
         public Builder labelValue(Output<String> labelValue) {
-            this.labelValue = Objects.requireNonNull(labelValue);
+            $.labelValue = labelValue;
             return this;
         }
+
         public Builder labelValue(String labelValue) {
-            this.labelValue = Output.of(Objects.requireNonNull(labelValue));
-            return this;
-        }        public MetadataLabelsArgs build() {
-            return new MetadataLabelsArgs(labelName, labelValue);
+            return labelValue(Output.of(labelValue));
+        }
+
+        public MetadataLabelsArgs build() {
+            $.labelName = Objects.requireNonNull($.labelName, "expected parameter 'labelName' to be non-null");
+            $.labelValue = Objects.requireNonNull($.labelValue, "expected parameter 'labelValue' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.googlenative.cloudidentity_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class PosixGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gid")
-      private final @Nullable Output<String> gid;
+    private @Nullable Output<String> gid;
 
-    public Output<String> gid() {
-        return this.gid == null ? Codegen.empty() : this.gid;
+    public Optional<Output<String>> gid() {
+        return Optional.ofNullable(this.gid);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class PosixGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class PosixGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="systemId")
-      private final @Nullable Output<String> systemId;
+    private @Nullable Output<String> systemId;
 
-    public Output<String> systemId() {
-        return this.systemId == null ? Codegen.empty() : this.systemId;
+    public Optional<Output<String>> systemId() {
+        return Optional.ofNullable(this.systemId);
     }
 
-    public PosixGroupArgs(
-        @Nullable Output<String> gid,
-        @Nullable Output<String> name,
-        @Nullable Output<String> systemId) {
-        this.gid = gid;
-        this.name = name;
-        this.systemId = systemId;
-    }
+    private PosixGroupArgs() {}
 
-    private PosixGroupArgs() {
-        this.gid = Codegen.empty();
-        this.name = Codegen.empty();
-        this.systemId = Codegen.empty();
+    private PosixGroupArgs(PosixGroupArgs $) {
+        this.gid = $.gid;
+        this.name = $.name;
+        this.systemId = $.systemId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PosixGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> gid;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> systemId;
+        private PosixGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PosixGroupArgs();
         }
 
         public Builder(PosixGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gid = defaults.gid;
-    	      this.name = defaults.name;
-    	      this.systemId = defaults.systemId;
+            $ = new PosixGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder gid(@Nullable Output<String> gid) {
-            this.gid = gid;
+            $.gid = gid;
             return this;
         }
-        public Builder gid(@Nullable String gid) {
-            this.gid = Codegen.ofNullable(gid);
-            return this;
+
+        public Builder gid(String gid) {
+            return gid(Output.of(gid));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder systemId(@Nullable Output<String> systemId) {
-            this.systemId = systemId;
+            $.systemId = systemId;
             return this;
         }
-        public Builder systemId(@Nullable String systemId) {
-            this.systemId = Codegen.ofNullable(systemId);
-            return this;
-        }        public PosixGroupArgs build() {
-            return new PosixGroupArgs(gid, name, systemId);
+
+        public Builder systemId(String systemId) {
+            return systemId(Output.of(systemId));
+        }
+
+        public PosixGroupArgs build() {
+            return $;
         }
     }
+
 }

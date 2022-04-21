@@ -5,9 +5,9 @@ package com.pulumi.aws.apprunner.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class CustomDomainAssociationCertificateValidationRecordArgs extend
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class CustomDomainAssociationCertificateValidationRecordArgs extend
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class CustomDomainAssociationCertificateValidationRecordArgs extend
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -53,89 +53,78 @@ public final class CustomDomainAssociationCertificateValidationRecordArgs extend
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public CustomDomainAssociationCertificateValidationRecordArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<String> status,
-        @Nullable Output<String> type,
-        @Nullable Output<String> value) {
-        this.name = name;
-        this.status = status;
-        this.type = type;
-        this.value = value;
-    }
+    private CustomDomainAssociationCertificateValidationRecordArgs() {}
 
-    private CustomDomainAssociationCertificateValidationRecordArgs() {
-        this.name = Codegen.empty();
-        this.status = Codegen.empty();
-        this.type = Codegen.empty();
-        this.value = Codegen.empty();
+    private CustomDomainAssociationCertificateValidationRecordArgs(CustomDomainAssociationCertificateValidationRecordArgs $) {
+        this.name = $.name;
+        this.status = $.status;
+        this.type = $.type;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomDomainAssociationCertificateValidationRecordArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> status;
-        private @Nullable Output<String> type;
-        private @Nullable Output<String> value;
+        private CustomDomainAssociationCertificateValidationRecordArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomDomainAssociationCertificateValidationRecordArgs();
         }
 
         public Builder(CustomDomainAssociationCertificateValidationRecordArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.status = defaults.status;
-    	      this.type = defaults.type;
-    	      this.value = defaults.value;
+            $ = new CustomDomainAssociationCertificateValidationRecordArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(String status) {
+            return status(Output.of(status));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(String type) {
+            return type(Output.of(type));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public CustomDomainAssociationCertificateValidationRecordArgs build() {
-            return new CustomDomainAssociationCertificateValidationRecordArgs(name, status, type, value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public CustomDomainAssociationCertificateValidationRecordArgs build() {
+            return $;
         }
     }
+
 }

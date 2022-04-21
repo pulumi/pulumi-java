@@ -5,9 +5,9 @@ package com.pulumi.azurenative.datashare;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class InvitationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -31,10 +31,10 @@ public final class InvitationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="expirationDate")
-      private final @Nullable Output<String> expirationDate;
+    private @Nullable Output<String> expirationDate;
 
-    public Output<String> expirationDate() {
-        return this.expirationDate == null ? Codegen.empty() : this.expirationDate;
+    public Optional<Output<String>> expirationDate() {
+        return Optional.ofNullable(this.expirationDate);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class InvitationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="invitationName")
-      private final @Nullable Output<String> invitationName;
+    private @Nullable Output<String> invitationName;
 
-    public Output<String> invitationName() {
-        return this.invitationName == null ? Codegen.empty() : this.invitationName;
+    public Optional<Output<String>> invitationName() {
+        return Optional.ofNullable(this.invitationName);
     }
 
     /**
@@ -53,7 +53,7 @@ public final class InvitationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -64,7 +64,7 @@ public final class InvitationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="shareName", required=true)
-      private final Output<String> shareName;
+    private Output<String> shareName;
 
     public Output<String> shareName() {
         return this.shareName;
@@ -75,10 +75,10 @@ public final class InvitationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetActiveDirectoryId")
-      private final @Nullable Output<String> targetActiveDirectoryId;
+    private @Nullable Output<String> targetActiveDirectoryId;
 
-    public Output<String> targetActiveDirectoryId() {
-        return this.targetActiveDirectoryId == null ? Codegen.empty() : this.targetActiveDirectoryId;
+    public Optional<Output<String>> targetActiveDirectoryId() {
+        return Optional.ofNullable(this.targetActiveDirectoryId);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class InvitationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetEmail")
-      private final @Nullable Output<String> targetEmail;
+    private @Nullable Output<String> targetEmail;
 
-    public Output<String> targetEmail() {
-        return this.targetEmail == null ? Codegen.empty() : this.targetEmail;
+    public Optional<Output<String>> targetEmail() {
+        return Optional.ofNullable(this.targetEmail);
     }
 
     /**
@@ -99,141 +99,121 @@ public final class InvitationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetObjectId")
-      private final @Nullable Output<String> targetObjectId;
+    private @Nullable Output<String> targetObjectId;
 
-    public Output<String> targetObjectId() {
-        return this.targetObjectId == null ? Codegen.empty() : this.targetObjectId;
+    public Optional<Output<String>> targetObjectId() {
+        return Optional.ofNullable(this.targetObjectId);
     }
 
-    public InvitationArgs(
-        Output<String> accountName,
-        @Nullable Output<String> expirationDate,
-        @Nullable Output<String> invitationName,
-        Output<String> resourceGroupName,
-        Output<String> shareName,
-        @Nullable Output<String> targetActiveDirectoryId,
-        @Nullable Output<String> targetEmail,
-        @Nullable Output<String> targetObjectId) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.expirationDate = expirationDate;
-        this.invitationName = invitationName;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.shareName = Objects.requireNonNull(shareName, "expected parameter 'shareName' to be non-null");
-        this.targetActiveDirectoryId = targetActiveDirectoryId;
-        this.targetEmail = targetEmail;
-        this.targetObjectId = targetObjectId;
-    }
+    private InvitationArgs() {}
 
-    private InvitationArgs() {
-        this.accountName = Codegen.empty();
-        this.expirationDate = Codegen.empty();
-        this.invitationName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.shareName = Codegen.empty();
-        this.targetActiveDirectoryId = Codegen.empty();
-        this.targetEmail = Codegen.empty();
-        this.targetObjectId = Codegen.empty();
+    private InvitationArgs(InvitationArgs $) {
+        this.accountName = $.accountName;
+        this.expirationDate = $.expirationDate;
+        this.invitationName = $.invitationName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.shareName = $.shareName;
+        this.targetActiveDirectoryId = $.targetActiveDirectoryId;
+        this.targetEmail = $.targetEmail;
+        this.targetObjectId = $.targetObjectId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InvitationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountName;
-        private @Nullable Output<String> expirationDate;
-        private @Nullable Output<String> invitationName;
-        private Output<String> resourceGroupName;
-        private Output<String> shareName;
-        private @Nullable Output<String> targetActiveDirectoryId;
-        private @Nullable Output<String> targetEmail;
-        private @Nullable Output<String> targetObjectId;
+        private InvitationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InvitationArgs();
         }
 
         public Builder(InvitationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.expirationDate = defaults.expirationDate;
-    	      this.invitationName = defaults.invitationName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.shareName = defaults.shareName;
-    	      this.targetActiveDirectoryId = defaults.targetActiveDirectoryId;
-    	      this.targetEmail = defaults.targetEmail;
-    	      this.targetObjectId = defaults.targetObjectId;
+            $ = new InvitationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder expirationDate(@Nullable Output<String> expirationDate) {
-            this.expirationDate = expirationDate;
+            $.expirationDate = expirationDate;
             return this;
         }
-        public Builder expirationDate(@Nullable String expirationDate) {
-            this.expirationDate = Codegen.ofNullable(expirationDate);
-            return this;
+
+        public Builder expirationDate(String expirationDate) {
+            return expirationDate(Output.of(expirationDate));
         }
+
         public Builder invitationName(@Nullable Output<String> invitationName) {
-            this.invitationName = invitationName;
+            $.invitationName = invitationName;
             return this;
         }
-        public Builder invitationName(@Nullable String invitationName) {
-            this.invitationName = Codegen.ofNullable(invitationName);
-            return this;
+
+        public Builder invitationName(String invitationName) {
+            return invitationName(Output.of(invitationName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder shareName(Output<String> shareName) {
-            this.shareName = Objects.requireNonNull(shareName);
+            $.shareName = shareName;
             return this;
         }
+
         public Builder shareName(String shareName) {
-            this.shareName = Output.of(Objects.requireNonNull(shareName));
-            return this;
+            return shareName(Output.of(shareName));
         }
+
         public Builder targetActiveDirectoryId(@Nullable Output<String> targetActiveDirectoryId) {
-            this.targetActiveDirectoryId = targetActiveDirectoryId;
+            $.targetActiveDirectoryId = targetActiveDirectoryId;
             return this;
         }
-        public Builder targetActiveDirectoryId(@Nullable String targetActiveDirectoryId) {
-            this.targetActiveDirectoryId = Codegen.ofNullable(targetActiveDirectoryId);
-            return this;
+
+        public Builder targetActiveDirectoryId(String targetActiveDirectoryId) {
+            return targetActiveDirectoryId(Output.of(targetActiveDirectoryId));
         }
+
         public Builder targetEmail(@Nullable Output<String> targetEmail) {
-            this.targetEmail = targetEmail;
+            $.targetEmail = targetEmail;
             return this;
         }
-        public Builder targetEmail(@Nullable String targetEmail) {
-            this.targetEmail = Codegen.ofNullable(targetEmail);
-            return this;
+
+        public Builder targetEmail(String targetEmail) {
+            return targetEmail(Output.of(targetEmail));
         }
+
         public Builder targetObjectId(@Nullable Output<String> targetObjectId) {
-            this.targetObjectId = targetObjectId;
+            $.targetObjectId = targetObjectId;
             return this;
         }
-        public Builder targetObjectId(@Nullable String targetObjectId) {
-            this.targetObjectId = Codegen.ofNullable(targetObjectId);
-            return this;
-        }        public InvitationArgs build() {
-            return new InvitationArgs(accountName, expirationDate, invitationName, resourceGroupName, shareName, targetActiveDirectoryId, targetEmail, targetObjectId);
+
+        public Builder targetObjectId(String targetObjectId) {
+            return targetObjectId(Output.of(targetObjectId));
+        }
+
+        public InvitationArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.shareName = Objects.requireNonNull($.shareName, "expected parameter 'shareName' to be non-null");
+            return $;
         }
     }
+
 }

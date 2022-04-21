@@ -21,7 +21,7 @@ public final class VersionSourceResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="mshField", required=true)
-      private final String mshField;
+    private String mshField;
 
     public String mshField() {
         return this.mshField;
@@ -32,55 +32,52 @@ public final class VersionSourceResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public VersionSourceResponse(
-        String mshField,
-        String value) {
-        this.mshField = Objects.requireNonNull(mshField, "expected parameter 'mshField' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private VersionSourceResponse() {}
 
-    private VersionSourceResponse() {
-        this.mshField = null;
-        this.value = null;
+    private VersionSourceResponse(VersionSourceResponse $) {
+        this.mshField = $.mshField;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VersionSourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String mshField;
-        private String value;
+        private VersionSourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VersionSourceResponse();
         }
 
         public Builder(VersionSourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mshField = defaults.mshField;
-    	      this.value = defaults.value;
+            $ = new VersionSourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder mshField(String mshField) {
-            this.mshField = Objects.requireNonNull(mshField);
+            $.mshField = mshField;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public VersionSourceResponse build() {
-            return new VersionSourceResponse(mshField, value);
+        }
+
+        public VersionSourceResponse build() {
+            $.mshField = Objects.requireNonNull($.mshField, "expected parameter 'mshField' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

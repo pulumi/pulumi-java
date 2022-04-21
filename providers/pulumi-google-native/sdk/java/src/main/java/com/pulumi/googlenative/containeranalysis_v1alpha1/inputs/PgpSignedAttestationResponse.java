@@ -21,7 +21,7 @@ public final class PgpSignedAttestationResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="contentType", required=true)
-      private final String contentType;
+    private String contentType;
 
     public String contentType() {
         return this.contentType;
@@ -32,7 +32,7 @@ public final class PgpSignedAttestationResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="pgpKeyId", required=true)
-      private final String pgpKeyId;
+    private String pgpKeyId;
 
     public String pgpKeyId() {
         return this.pgpKeyId;
@@ -43,64 +43,59 @@ public final class PgpSignedAttestationResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="signature", required=true)
-      private final String signature;
+    private String signature;
 
     public String signature() {
         return this.signature;
     }
 
-    public PgpSignedAttestationResponse(
-        String contentType,
-        String pgpKeyId,
-        String signature) {
-        this.contentType = Objects.requireNonNull(contentType, "expected parameter 'contentType' to be non-null");
-        this.pgpKeyId = Objects.requireNonNull(pgpKeyId, "expected parameter 'pgpKeyId' to be non-null");
-        this.signature = Objects.requireNonNull(signature, "expected parameter 'signature' to be non-null");
-    }
+    private PgpSignedAttestationResponse() {}
 
-    private PgpSignedAttestationResponse() {
-        this.contentType = null;
-        this.pgpKeyId = null;
-        this.signature = null;
+    private PgpSignedAttestationResponse(PgpSignedAttestationResponse $) {
+        this.contentType = $.contentType;
+        this.pgpKeyId = $.pgpKeyId;
+        this.signature = $.signature;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PgpSignedAttestationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String contentType;
-        private String pgpKeyId;
-        private String signature;
+        private PgpSignedAttestationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PgpSignedAttestationResponse();
         }
 
         public Builder(PgpSignedAttestationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contentType = defaults.contentType;
-    	      this.pgpKeyId = defaults.pgpKeyId;
-    	      this.signature = defaults.signature;
+            $ = new PgpSignedAttestationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder contentType(String contentType) {
-            this.contentType = Objects.requireNonNull(contentType);
+            $.contentType = contentType;
             return this;
         }
+
         public Builder pgpKeyId(String pgpKeyId) {
-            this.pgpKeyId = Objects.requireNonNull(pgpKeyId);
+            $.pgpKeyId = pgpKeyId;
             return this;
         }
+
         public Builder signature(String signature) {
-            this.signature = Objects.requireNonNull(signature);
+            $.signature = signature;
             return this;
-        }        public PgpSignedAttestationResponse build() {
-            return new PgpSignedAttestationResponse(contentType, pgpKeyId, signature);
+        }
+
+        public PgpSignedAttestationResponse build() {
+            $.contentType = Objects.requireNonNull($.contentType, "expected parameter 'contentType' to be non-null");
+            $.pgpKeyId = Objects.requireNonNull($.pgpKeyId, "expected parameter 'pgpKeyId' to be non-null");
+            $.signature = Objects.requireNonNull($.signature, "expected parameter 'signature' to be non-null");
+            return $;
         }
     }
+
 }

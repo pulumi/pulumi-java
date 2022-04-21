@@ -7,10 +7,10 @@ import com.pulumi.azurenative.providerhub.enums.ExtensionOptionType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,76 +19,73 @@ public final class ResourceTypeExtensionOptionsResourceCreationBeginArgs extends
     public static final ResourceTypeExtensionOptionsResourceCreationBeginArgs Empty = new ResourceTypeExtensionOptionsResourceCreationBeginArgs();
 
     @Import(name="request")
-      private final @Nullable Output<List<Either<String,ExtensionOptionType>>> request;
+    private @Nullable Output<List<Either<String,ExtensionOptionType>>> request;
 
-    public Output<List<Either<String,ExtensionOptionType>>> request() {
-        return this.request == null ? Codegen.empty() : this.request;
+    public Optional<Output<List<Either<String,ExtensionOptionType>>>> request() {
+        return Optional.ofNullable(this.request);
     }
 
     @Import(name="response")
-      private final @Nullable Output<List<Either<String,ExtensionOptionType>>> response;
+    private @Nullable Output<List<Either<String,ExtensionOptionType>>> response;
 
-    public Output<List<Either<String,ExtensionOptionType>>> response() {
-        return this.response == null ? Codegen.empty() : this.response;
+    public Optional<Output<List<Either<String,ExtensionOptionType>>>> response() {
+        return Optional.ofNullable(this.response);
     }
 
-    public ResourceTypeExtensionOptionsResourceCreationBeginArgs(
-        @Nullable Output<List<Either<String,ExtensionOptionType>>> request,
-        @Nullable Output<List<Either<String,ExtensionOptionType>>> response) {
-        this.request = request;
-        this.response = response;
-    }
+    private ResourceTypeExtensionOptionsResourceCreationBeginArgs() {}
 
-    private ResourceTypeExtensionOptionsResourceCreationBeginArgs() {
-        this.request = Codegen.empty();
-        this.response = Codegen.empty();
+    private ResourceTypeExtensionOptionsResourceCreationBeginArgs(ResourceTypeExtensionOptionsResourceCreationBeginArgs $) {
+        this.request = $.request;
+        this.response = $.response;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceTypeExtensionOptionsResourceCreationBeginArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<Either<String,ExtensionOptionType>>> request;
-        private @Nullable Output<List<Either<String,ExtensionOptionType>>> response;
+        private ResourceTypeExtensionOptionsResourceCreationBeginArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceTypeExtensionOptionsResourceCreationBeginArgs();
         }
 
         public Builder(ResourceTypeExtensionOptionsResourceCreationBeginArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.request = defaults.request;
-    	      this.response = defaults.response;
+            $ = new ResourceTypeExtensionOptionsResourceCreationBeginArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder request(@Nullable Output<List<Either<String,ExtensionOptionType>>> request) {
-            this.request = request;
+            $.request = request;
             return this;
         }
-        public Builder request(@Nullable List<Either<String,ExtensionOptionType>> request) {
-            this.request = Codegen.ofNullable(request);
-            return this;
+
+        public Builder request(List<Either<String,ExtensionOptionType>> request) {
+            return request(Output.of(request));
         }
+
         public Builder request(Either<String,ExtensionOptionType>... request) {
             return request(List.of(request));
         }
+
         public Builder response(@Nullable Output<List<Either<String,ExtensionOptionType>>> response) {
-            this.response = response;
+            $.response = response;
             return this;
         }
-        public Builder response(@Nullable List<Either<String,ExtensionOptionType>> response) {
-            this.response = Codegen.ofNullable(response);
-            return this;
+
+        public Builder response(List<Either<String,ExtensionOptionType>> response) {
+            return response(Output.of(response));
         }
+
         public Builder response(Either<String,ExtensionOptionType>... response) {
             return response(List.of(response));
-        }        public ResourceTypeExtensionOptionsResourceCreationBeginArgs build() {
-            return new ResourceTypeExtensionOptionsResourceCreationBeginArgs(request, response);
+        }
+
+        public ResourceTypeExtensionOptionsResourceCreationBeginArgs build() {
+            return $;
         }
     }
+
 }

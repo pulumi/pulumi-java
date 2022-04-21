@@ -5,9 +5,9 @@ package com.pulumi.azurenative.automation.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class NonAzureQueryPropertiesArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="functionAlias")
-      private final @Nullable Output<String> functionAlias;
+    private @Nullable Output<String> functionAlias;
 
-    public Output<String> functionAlias() {
-        return this.functionAlias == null ? Codegen.empty() : this.functionAlias;
+    public Optional<Output<String>> functionAlias() {
+        return Optional.ofNullable(this.functionAlias);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class NonAzureQueryPropertiesArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="workspaceId")
-      private final @Nullable Output<String> workspaceId;
+    private @Nullable Output<String> workspaceId;
 
-    public Output<String> workspaceId() {
-        return this.workspaceId == null ? Codegen.empty() : this.workspaceId;
+    public Optional<Output<String>> workspaceId() {
+        return Optional.ofNullable(this.workspaceId);
     }
 
-    public NonAzureQueryPropertiesArgs(
-        @Nullable Output<String> functionAlias,
-        @Nullable Output<String> workspaceId) {
-        this.functionAlias = functionAlias;
-        this.workspaceId = workspaceId;
-    }
+    private NonAzureQueryPropertiesArgs() {}
 
-    private NonAzureQueryPropertiesArgs() {
-        this.functionAlias = Codegen.empty();
-        this.workspaceId = Codegen.empty();
+    private NonAzureQueryPropertiesArgs(NonAzureQueryPropertiesArgs $) {
+        this.functionAlias = $.functionAlias;
+        this.workspaceId = $.workspaceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NonAzureQueryPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> functionAlias;
-        private @Nullable Output<String> workspaceId;
+        private NonAzureQueryPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NonAzureQueryPropertiesArgs();
         }
 
         public Builder(NonAzureQueryPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.functionAlias = defaults.functionAlias;
-    	      this.workspaceId = defaults.workspaceId;
+            $ = new NonAzureQueryPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder functionAlias(@Nullable Output<String> functionAlias) {
-            this.functionAlias = functionAlias;
+            $.functionAlias = functionAlias;
             return this;
         }
-        public Builder functionAlias(@Nullable String functionAlias) {
-            this.functionAlias = Codegen.ofNullable(functionAlias);
-            return this;
+
+        public Builder functionAlias(String functionAlias) {
+            return functionAlias(Output.of(functionAlias));
         }
+
         public Builder workspaceId(@Nullable Output<String> workspaceId) {
-            this.workspaceId = workspaceId;
+            $.workspaceId = workspaceId;
             return this;
         }
-        public Builder workspaceId(@Nullable String workspaceId) {
-            this.workspaceId = Codegen.ofNullable(workspaceId);
-            return this;
-        }        public NonAzureQueryPropertiesArgs build() {
-            return new NonAzureQueryPropertiesArgs(functionAlias, workspaceId);
+
+        public Builder workspaceId(String workspaceId) {
+            return workspaceId(Output.of(workspaceId));
+        }
+
+        public NonAzureQueryPropertiesArgs build() {
+            return $;
         }
     }
+
 }

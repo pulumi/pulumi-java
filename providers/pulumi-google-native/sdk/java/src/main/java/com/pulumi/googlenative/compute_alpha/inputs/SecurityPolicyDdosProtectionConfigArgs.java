@@ -5,9 +5,9 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_alpha.enums.SecurityPolicyDdosProtectionConfigDdosProtection;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class SecurityPolicyDdosProtectionConfigArgs extends com.pulumi.res
     public static final SecurityPolicyDdosProtectionConfigArgs Empty = new SecurityPolicyDdosProtectionConfigArgs();
 
     @Import(name="ddosProtection")
-      private final @Nullable Output<SecurityPolicyDdosProtectionConfigDdosProtection> ddosProtection;
+    private @Nullable Output<SecurityPolicyDdosProtectionConfigDdosProtection> ddosProtection;
 
-    public Output<SecurityPolicyDdosProtectionConfigDdosProtection> ddosProtection() {
-        return this.ddosProtection == null ? Codegen.empty() : this.ddosProtection;
+    public Optional<Output<SecurityPolicyDdosProtectionConfigDdosProtection>> ddosProtection() {
+        return Optional.ofNullable(this.ddosProtection);
     }
 
-    public SecurityPolicyDdosProtectionConfigArgs(@Nullable Output<SecurityPolicyDdosProtectionConfigDdosProtection> ddosProtection) {
-        this.ddosProtection = ddosProtection;
-    }
+    private SecurityPolicyDdosProtectionConfigArgs() {}
 
-    private SecurityPolicyDdosProtectionConfigArgs() {
-        this.ddosProtection = Codegen.empty();
+    private SecurityPolicyDdosProtectionConfigArgs(SecurityPolicyDdosProtectionConfigArgs $) {
+        this.ddosProtection = $.ddosProtection;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityPolicyDdosProtectionConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<SecurityPolicyDdosProtectionConfigDdosProtection> ddosProtection;
+        private SecurityPolicyDdosProtectionConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityPolicyDdosProtectionConfigArgs();
         }
 
         public Builder(SecurityPolicyDdosProtectionConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ddosProtection = defaults.ddosProtection;
+            $ = new SecurityPolicyDdosProtectionConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ddosProtection(@Nullable Output<SecurityPolicyDdosProtectionConfigDdosProtection> ddosProtection) {
-            this.ddosProtection = ddosProtection;
+            $.ddosProtection = ddosProtection;
             return this;
         }
-        public Builder ddosProtection(@Nullable SecurityPolicyDdosProtectionConfigDdosProtection ddosProtection) {
-            this.ddosProtection = Codegen.ofNullable(ddosProtection);
-            return this;
-        }        public SecurityPolicyDdosProtectionConfigArgs build() {
-            return new SecurityPolicyDdosProtectionConfigArgs(ddosProtection);
+
+        public Builder ddosProtection(SecurityPolicyDdosProtectionConfigDdosProtection ddosProtection) {
+            return ddosProtection(Output.of(ddosProtection));
+        }
+
+        public SecurityPolicyDdosProtectionConfigArgs build() {
+            return $;
         }
     }
+
 }

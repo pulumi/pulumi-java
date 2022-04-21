@@ -22,7 +22,7 @@ public final class BgpPeerStatusResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="asn", required=true)
-      private final Double asn;
+    private Double asn;
 
     public Double asn() {
         return this.asn;
@@ -33,7 +33,7 @@ public final class BgpPeerStatusResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="connectedDuration", required=true)
-      private final String connectedDuration;
+    private String connectedDuration;
 
     public String connectedDuration() {
         return this.connectedDuration;
@@ -44,7 +44,7 @@ public final class BgpPeerStatusResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="localAddress", required=true)
-      private final String localAddress;
+    private String localAddress;
 
     public String localAddress() {
         return this.localAddress;
@@ -55,7 +55,7 @@ public final class BgpPeerStatusResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="messagesReceived", required=true)
-      private final Double messagesReceived;
+    private Double messagesReceived;
 
     public Double messagesReceived() {
         return this.messagesReceived;
@@ -66,7 +66,7 @@ public final class BgpPeerStatusResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="messagesSent", required=true)
-      private final Double messagesSent;
+    private Double messagesSent;
 
     public Double messagesSent() {
         return this.messagesSent;
@@ -77,7 +77,7 @@ public final class BgpPeerStatusResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="neighbor", required=true)
-      private final String neighbor;
+    private String neighbor;
 
     public String neighbor() {
         return this.neighbor;
@@ -88,7 +88,7 @@ public final class BgpPeerStatusResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="routesReceived", required=true)
-      private final Double routesReceived;
+    private Double routesReceived;
 
     public Double routesReceived() {
         return this.routesReceived;
@@ -99,109 +99,94 @@ public final class BgpPeerStatusResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
     }
 
-    public BgpPeerStatusResponse(
-        Double asn,
-        String connectedDuration,
-        String localAddress,
-        Double messagesReceived,
-        Double messagesSent,
-        String neighbor,
-        Double routesReceived,
-        String state) {
-        this.asn = Objects.requireNonNull(asn, "expected parameter 'asn' to be non-null");
-        this.connectedDuration = Objects.requireNonNull(connectedDuration, "expected parameter 'connectedDuration' to be non-null");
-        this.localAddress = Objects.requireNonNull(localAddress, "expected parameter 'localAddress' to be non-null");
-        this.messagesReceived = Objects.requireNonNull(messagesReceived, "expected parameter 'messagesReceived' to be non-null");
-        this.messagesSent = Objects.requireNonNull(messagesSent, "expected parameter 'messagesSent' to be non-null");
-        this.neighbor = Objects.requireNonNull(neighbor, "expected parameter 'neighbor' to be non-null");
-        this.routesReceived = Objects.requireNonNull(routesReceived, "expected parameter 'routesReceived' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-    }
+    private BgpPeerStatusResponse() {}
 
-    private BgpPeerStatusResponse() {
-        this.asn = null;
-        this.connectedDuration = null;
-        this.localAddress = null;
-        this.messagesReceived = null;
-        this.messagesSent = null;
-        this.neighbor = null;
-        this.routesReceived = null;
-        this.state = null;
+    private BgpPeerStatusResponse(BgpPeerStatusResponse $) {
+        this.asn = $.asn;
+        this.connectedDuration = $.connectedDuration;
+        this.localAddress = $.localAddress;
+        this.messagesReceived = $.messagesReceived;
+        this.messagesSent = $.messagesSent;
+        this.neighbor = $.neighbor;
+        this.routesReceived = $.routesReceived;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BgpPeerStatusResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double asn;
-        private String connectedDuration;
-        private String localAddress;
-        private Double messagesReceived;
-        private Double messagesSent;
-        private String neighbor;
-        private Double routesReceived;
-        private String state;
+        private BgpPeerStatusResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BgpPeerStatusResponse();
         }
 
         public Builder(BgpPeerStatusResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.asn = defaults.asn;
-    	      this.connectedDuration = defaults.connectedDuration;
-    	      this.localAddress = defaults.localAddress;
-    	      this.messagesReceived = defaults.messagesReceived;
-    	      this.messagesSent = defaults.messagesSent;
-    	      this.neighbor = defaults.neighbor;
-    	      this.routesReceived = defaults.routesReceived;
-    	      this.state = defaults.state;
+            $ = new BgpPeerStatusResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder asn(Double asn) {
-            this.asn = Objects.requireNonNull(asn);
+            $.asn = asn;
             return this;
         }
+
         public Builder connectedDuration(String connectedDuration) {
-            this.connectedDuration = Objects.requireNonNull(connectedDuration);
+            $.connectedDuration = connectedDuration;
             return this;
         }
+
         public Builder localAddress(String localAddress) {
-            this.localAddress = Objects.requireNonNull(localAddress);
+            $.localAddress = localAddress;
             return this;
         }
+
         public Builder messagesReceived(Double messagesReceived) {
-            this.messagesReceived = Objects.requireNonNull(messagesReceived);
+            $.messagesReceived = messagesReceived;
             return this;
         }
+
         public Builder messagesSent(Double messagesSent) {
-            this.messagesSent = Objects.requireNonNull(messagesSent);
+            $.messagesSent = messagesSent;
             return this;
         }
+
         public Builder neighbor(String neighbor) {
-            this.neighbor = Objects.requireNonNull(neighbor);
+            $.neighbor = neighbor;
             return this;
         }
+
         public Builder routesReceived(Double routesReceived) {
-            this.routesReceived = Objects.requireNonNull(routesReceived);
+            $.routesReceived = routesReceived;
             return this;
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
-        }        public BgpPeerStatusResponse build() {
-            return new BgpPeerStatusResponse(asn, connectedDuration, localAddress, messagesReceived, messagesSent, neighbor, routesReceived, state);
+        }
+
+        public BgpPeerStatusResponse build() {
+            $.asn = Objects.requireNonNull($.asn, "expected parameter 'asn' to be non-null");
+            $.connectedDuration = Objects.requireNonNull($.connectedDuration, "expected parameter 'connectedDuration' to be non-null");
+            $.localAddress = Objects.requireNonNull($.localAddress, "expected parameter 'localAddress' to be non-null");
+            $.messagesReceived = Objects.requireNonNull($.messagesReceived, "expected parameter 'messagesReceived' to be non-null");
+            $.messagesSent = Objects.requireNonNull($.messagesSent, "expected parameter 'messagesSent' to be non-null");
+            $.neighbor = Objects.requireNonNull($.neighbor, "expected parameter 'neighbor' to be non-null");
+            $.routesReceived = Objects.requireNonNull($.routesReceived, "expected parameter 'routesReceived' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            return $;
         }
     }
+
 }

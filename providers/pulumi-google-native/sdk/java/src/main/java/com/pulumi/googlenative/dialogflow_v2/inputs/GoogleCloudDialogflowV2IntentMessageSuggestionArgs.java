@@ -5,7 +5,6 @@ package com.pulumi.googlenative.dialogflow_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class GoogleCloudDialogflowV2IntentMessageSuggestionArgs extends co
      * 
      */
     @Import(name="title", required=true)
-      private final Output<String> title;
+    private Output<String> title;
 
     public Output<String> title() {
         return this.title;
     }
 
-    public GoogleCloudDialogflowV2IntentMessageSuggestionArgs(Output<String> title) {
-        this.title = Objects.requireNonNull(title, "expected parameter 'title' to be non-null");
-    }
+    private GoogleCloudDialogflowV2IntentMessageSuggestionArgs() {}
 
-    private GoogleCloudDialogflowV2IntentMessageSuggestionArgs() {
-        this.title = Codegen.empty();
+    private GoogleCloudDialogflowV2IntentMessageSuggestionArgs(GoogleCloudDialogflowV2IntentMessageSuggestionArgs $) {
+        this.title = $.title;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2IntentMessageSuggestionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> title;
+        private GoogleCloudDialogflowV2IntentMessageSuggestionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2IntentMessageSuggestionArgs();
         }
 
         public Builder(GoogleCloudDialogflowV2IntentMessageSuggestionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.title = defaults.title;
+            $ = new GoogleCloudDialogflowV2IntentMessageSuggestionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder title(Output<String> title) {
-            this.title = Objects.requireNonNull(title);
+            $.title = title;
             return this;
         }
+
         public Builder title(String title) {
-            this.title = Output.of(Objects.requireNonNull(title));
-            return this;
-        }        public GoogleCloudDialogflowV2IntentMessageSuggestionArgs build() {
-            return new GoogleCloudDialogflowV2IntentMessageSuggestionArgs(title);
+            return title(Output.of(title));
+        }
+
+        public GoogleCloudDialogflowV2IntentMessageSuggestionArgs build() {
+            $.title = Objects.requireNonNull($.title, "expected parameter 'title' to be non-null");
+            return $;
         }
     }
+
 }

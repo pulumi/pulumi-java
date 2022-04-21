@@ -5,9 +5,9 @@ package com.pulumi.gcp.monitoring;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dashboardJson", required=true)
-      private final Output<String> dashboardJson;
+    private Output<String> dashboardJson;
 
     public Output<String> dashboardJson() {
         return this.dashboardJson;
@@ -33,63 +33,59 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public DashboardArgs(
-        Output<String> dashboardJson,
-        @Nullable Output<String> project) {
-        this.dashboardJson = Objects.requireNonNull(dashboardJson, "expected parameter 'dashboardJson' to be non-null");
-        this.project = project;
-    }
+    private DashboardArgs() {}
 
-    private DashboardArgs() {
-        this.dashboardJson = Codegen.empty();
-        this.project = Codegen.empty();
+    private DashboardArgs(DashboardArgs $) {
+        this.dashboardJson = $.dashboardJson;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DashboardArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> dashboardJson;
-        private @Nullable Output<String> project;
+        private DashboardArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DashboardArgs();
         }
 
         public Builder(DashboardArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dashboardJson = defaults.dashboardJson;
-    	      this.project = defaults.project;
+            $ = new DashboardArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dashboardJson(Output<String> dashboardJson) {
-            this.dashboardJson = Objects.requireNonNull(dashboardJson);
+            $.dashboardJson = dashboardJson;
             return this;
         }
+
         public Builder dashboardJson(String dashboardJson) {
-            this.dashboardJson = Output.of(Objects.requireNonNull(dashboardJson));
-            return this;
+            return dashboardJson(Output.of(dashboardJson));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public DashboardArgs build() {
-            return new DashboardArgs(dashboardJson, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public DashboardArgs build() {
+            $.dashboardJson = Objects.requireNonNull($.dashboardJson, "expected parameter 'dashboardJson' to be non-null");
+            return $;
         }
     }
+
 }

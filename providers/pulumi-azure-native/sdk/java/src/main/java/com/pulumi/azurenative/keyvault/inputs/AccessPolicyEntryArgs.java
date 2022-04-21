@@ -6,9 +6,9 @@ package com.pulumi.azurenative.keyvault.inputs;
 import com.pulumi.azurenative.keyvault.inputs.PermissionsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class AccessPolicyEntryArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="applicationId")
-      private final @Nullable Output<String> applicationId;
+    private @Nullable Output<String> applicationId;
 
-    public Output<String> applicationId() {
-        return this.applicationId == null ? Codegen.empty() : this.applicationId;
+    public Optional<Output<String>> applicationId() {
+        return Optional.ofNullable(this.applicationId);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class AccessPolicyEntryArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="objectId", required=true)
-      private final Output<String> objectId;
+    private Output<String> objectId;
 
     public Output<String> objectId() {
         return this.objectId;
@@ -47,7 +47,7 @@ public final class AccessPolicyEntryArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="permissions", required=true)
-      private final Output<PermissionsArgs> permissions;
+    private Output<PermissionsArgs> permissions;
 
     public Output<PermissionsArgs> permissions() {
         return this.permissions;
@@ -58,89 +58,81 @@ public final class AccessPolicyEntryArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="tenantId", required=true)
-      private final Output<String> tenantId;
+    private Output<String> tenantId;
 
     public Output<String> tenantId() {
         return this.tenantId;
     }
 
-    public AccessPolicyEntryArgs(
-        @Nullable Output<String> applicationId,
-        Output<String> objectId,
-        Output<PermissionsArgs> permissions,
-        Output<String> tenantId) {
-        this.applicationId = applicationId;
-        this.objectId = Objects.requireNonNull(objectId, "expected parameter 'objectId' to be non-null");
-        this.permissions = Objects.requireNonNull(permissions, "expected parameter 'permissions' to be non-null");
-        this.tenantId = Objects.requireNonNull(tenantId, "expected parameter 'tenantId' to be non-null");
-    }
+    private AccessPolicyEntryArgs() {}
 
-    private AccessPolicyEntryArgs() {
-        this.applicationId = Codegen.empty();
-        this.objectId = Codegen.empty();
-        this.permissions = Codegen.empty();
-        this.tenantId = Codegen.empty();
+    private AccessPolicyEntryArgs(AccessPolicyEntryArgs $) {
+        this.applicationId = $.applicationId;
+        this.objectId = $.objectId;
+        this.permissions = $.permissions;
+        this.tenantId = $.tenantId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessPolicyEntryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> applicationId;
-        private Output<String> objectId;
-        private Output<PermissionsArgs> permissions;
-        private Output<String> tenantId;
+        private AccessPolicyEntryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessPolicyEntryArgs();
         }
 
         public Builder(AccessPolicyEntryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationId = defaults.applicationId;
-    	      this.objectId = defaults.objectId;
-    	      this.permissions = defaults.permissions;
-    	      this.tenantId = defaults.tenantId;
+            $ = new AccessPolicyEntryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationId(@Nullable Output<String> applicationId) {
-            this.applicationId = applicationId;
+            $.applicationId = applicationId;
             return this;
         }
-        public Builder applicationId(@Nullable String applicationId) {
-            this.applicationId = Codegen.ofNullable(applicationId);
-            return this;
+
+        public Builder applicationId(String applicationId) {
+            return applicationId(Output.of(applicationId));
         }
+
         public Builder objectId(Output<String> objectId) {
-            this.objectId = Objects.requireNonNull(objectId);
+            $.objectId = objectId;
             return this;
         }
+
         public Builder objectId(String objectId) {
-            this.objectId = Output.of(Objects.requireNonNull(objectId));
-            return this;
+            return objectId(Output.of(objectId));
         }
+
         public Builder permissions(Output<PermissionsArgs> permissions) {
-            this.permissions = Objects.requireNonNull(permissions);
+            $.permissions = permissions;
             return this;
         }
+
         public Builder permissions(PermissionsArgs permissions) {
-            this.permissions = Output.of(Objects.requireNonNull(permissions));
-            return this;
+            return permissions(Output.of(permissions));
         }
+
         public Builder tenantId(Output<String> tenantId) {
-            this.tenantId = Objects.requireNonNull(tenantId);
+            $.tenantId = tenantId;
             return this;
         }
+
         public Builder tenantId(String tenantId) {
-            this.tenantId = Output.of(Objects.requireNonNull(tenantId));
-            return this;
-        }        public AccessPolicyEntryArgs build() {
-            return new AccessPolicyEntryArgs(applicationId, objectId, permissions, tenantId);
+            return tenantId(Output.of(tenantId));
+        }
+
+        public AccessPolicyEntryArgs build() {
+            $.objectId = Objects.requireNonNull($.objectId, "expected parameter 'objectId' to be non-null");
+            $.permissions = Objects.requireNonNull($.permissions, "expected parameter 'permissions' to be non-null");
+            $.tenantId = Objects.requireNonNull($.tenantId, "expected parameter 'tenantId' to be non-null");
+            return $;
         }
     }
+
 }

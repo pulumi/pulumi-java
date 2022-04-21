@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionCon
      * 
      */
     @Import(name="featureConfigs", required=true)
-      private final List<GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfigResponse> featureConfigs;
+    private List<GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfigResponse> featureConfigs;
 
     public List<GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfigResponse> featureConfigs() {
         return this.featureConfigs;
@@ -34,58 +34,56 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionCon
      * 
      */
     @Import(name="groupSuggestionResponses", required=true)
-      private final Boolean groupSuggestionResponses;
+    private Boolean groupSuggestionResponses;
 
     public Boolean groupSuggestionResponses() {
         return this.groupSuggestionResponses;
     }
 
-    public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfigResponse(
-        List<GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfigResponse> featureConfigs,
-        Boolean groupSuggestionResponses) {
-        this.featureConfigs = Objects.requireNonNull(featureConfigs, "expected parameter 'featureConfigs' to be non-null");
-        this.groupSuggestionResponses = Objects.requireNonNull(groupSuggestionResponses, "expected parameter 'groupSuggestionResponses' to be non-null");
-    }
+    private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfigResponse() {}
 
-    private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfigResponse() {
-        this.featureConfigs = List.of();
-        this.groupSuggestionResponses = null;
+    private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfigResponse(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfigResponse $) {
+        this.featureConfigs = $.featureConfigs;
+        this.groupSuggestionResponses = $.groupSuggestionResponses;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfigResponse> featureConfigs;
-        private Boolean groupSuggestionResponses;
+        private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfigResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.featureConfigs = defaults.featureConfigs;
-    	      this.groupSuggestionResponses = defaults.groupSuggestionResponses;
+            $ = new GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder featureConfigs(List<GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfigResponse> featureConfigs) {
-            this.featureConfigs = Objects.requireNonNull(featureConfigs);
+            $.featureConfigs = featureConfigs;
             return this;
         }
+
         public Builder featureConfigs(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfigResponse... featureConfigs) {
             return featureConfigs(List.of(featureConfigs));
         }
+
         public Builder groupSuggestionResponses(Boolean groupSuggestionResponses) {
-            this.groupSuggestionResponses = Objects.requireNonNull(groupSuggestionResponses);
+            $.groupSuggestionResponses = groupSuggestionResponses;
             return this;
-        }        public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfigResponse build() {
-            return new GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfigResponse(featureConfigs, groupSuggestionResponses);
+        }
+
+        public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfigResponse build() {
+            $.featureConfigs = Objects.requireNonNull($.featureConfigs, "expected parameter 'featureConfigs' to be non-null");
+            $.groupSuggestionResponses = Objects.requireNonNull($.groupSuggestionResponses, "expected parameter 'groupSuggestionResponses' to be non-null");
+            return $;
         }
     }
+
 }

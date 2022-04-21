@@ -23,7 +23,7 @@ public final class ScanRunResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="endTime", required=true)
-      private final String endTime;
+    private String endTime;
 
     public String endTime() {
         return this.endTime;
@@ -34,7 +34,7 @@ public final class ScanRunResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="executionState", required=true)
-      private final String executionState;
+    private String executionState;
 
     public String executionState() {
         return this.executionState;
@@ -45,7 +45,7 @@ public final class ScanRunResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="hasVulnerabilities", required=true)
-      private final Boolean hasVulnerabilities;
+    private Boolean hasVulnerabilities;
 
     public Boolean hasVulnerabilities() {
         return this.hasVulnerabilities;
@@ -56,7 +56,7 @@ public final class ScanRunResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -67,7 +67,7 @@ public final class ScanRunResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="progressPercent", required=true)
-      private final Integer progressPercent;
+    private Integer progressPercent;
 
     public Integer progressPercent() {
         return this.progressPercent;
@@ -78,7 +78,7 @@ public final class ScanRunResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resultState", required=true)
-      private final String resultState;
+    private String resultState;
 
     public String resultState() {
         return this.resultState;
@@ -89,7 +89,7 @@ public final class ScanRunResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="startTime", required=true)
-      private final String startTime;
+    private String startTime;
 
     public String startTime() {
         return this.startTime;
@@ -100,7 +100,7 @@ public final class ScanRunResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="urlsCrawledCount", required=true)
-      private final String urlsCrawledCount;
+    private String urlsCrawledCount;
 
     public String urlsCrawledCount() {
         return this.urlsCrawledCount;
@@ -111,118 +111,101 @@ public final class ScanRunResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="urlsTestedCount", required=true)
-      private final String urlsTestedCount;
+    private String urlsTestedCount;
 
     public String urlsTestedCount() {
         return this.urlsTestedCount;
     }
 
-    public ScanRunResponse(
-        String endTime,
-        String executionState,
-        Boolean hasVulnerabilities,
-        String name,
-        Integer progressPercent,
-        String resultState,
-        String startTime,
-        String urlsCrawledCount,
-        String urlsTestedCount) {
-        this.endTime = Objects.requireNonNull(endTime, "expected parameter 'endTime' to be non-null");
-        this.executionState = Objects.requireNonNull(executionState, "expected parameter 'executionState' to be non-null");
-        this.hasVulnerabilities = Objects.requireNonNull(hasVulnerabilities, "expected parameter 'hasVulnerabilities' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.progressPercent = Objects.requireNonNull(progressPercent, "expected parameter 'progressPercent' to be non-null");
-        this.resultState = Objects.requireNonNull(resultState, "expected parameter 'resultState' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-        this.urlsCrawledCount = Objects.requireNonNull(urlsCrawledCount, "expected parameter 'urlsCrawledCount' to be non-null");
-        this.urlsTestedCount = Objects.requireNonNull(urlsTestedCount, "expected parameter 'urlsTestedCount' to be non-null");
-    }
+    private ScanRunResponse() {}
 
-    private ScanRunResponse() {
-        this.endTime = null;
-        this.executionState = null;
-        this.hasVulnerabilities = null;
-        this.name = null;
-        this.progressPercent = null;
-        this.resultState = null;
-        this.startTime = null;
-        this.urlsCrawledCount = null;
-        this.urlsTestedCount = null;
+    private ScanRunResponse(ScanRunResponse $) {
+        this.endTime = $.endTime;
+        this.executionState = $.executionState;
+        this.hasVulnerabilities = $.hasVulnerabilities;
+        this.name = $.name;
+        this.progressPercent = $.progressPercent;
+        this.resultState = $.resultState;
+        this.startTime = $.startTime;
+        this.urlsCrawledCount = $.urlsCrawledCount;
+        this.urlsTestedCount = $.urlsTestedCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScanRunResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String endTime;
-        private String executionState;
-        private Boolean hasVulnerabilities;
-        private String name;
-        private Integer progressPercent;
-        private String resultState;
-        private String startTime;
-        private String urlsCrawledCount;
-        private String urlsTestedCount;
+        private ScanRunResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScanRunResponse();
         }
 
         public Builder(ScanRunResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endTime = defaults.endTime;
-    	      this.executionState = defaults.executionState;
-    	      this.hasVulnerabilities = defaults.hasVulnerabilities;
-    	      this.name = defaults.name;
-    	      this.progressPercent = defaults.progressPercent;
-    	      this.resultState = defaults.resultState;
-    	      this.startTime = defaults.startTime;
-    	      this.urlsCrawledCount = defaults.urlsCrawledCount;
-    	      this.urlsTestedCount = defaults.urlsTestedCount;
+            $ = new ScanRunResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endTime(String endTime) {
-            this.endTime = Objects.requireNonNull(endTime);
+            $.endTime = endTime;
             return this;
         }
+
         public Builder executionState(String executionState) {
-            this.executionState = Objects.requireNonNull(executionState);
+            $.executionState = executionState;
             return this;
         }
+
         public Builder hasVulnerabilities(Boolean hasVulnerabilities) {
-            this.hasVulnerabilities = Objects.requireNonNull(hasVulnerabilities);
+            $.hasVulnerabilities = hasVulnerabilities;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder progressPercent(Integer progressPercent) {
-            this.progressPercent = Objects.requireNonNull(progressPercent);
+            $.progressPercent = progressPercent;
             return this;
         }
+
         public Builder resultState(String resultState) {
-            this.resultState = Objects.requireNonNull(resultState);
+            $.resultState = resultState;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
         }
+
         public Builder urlsCrawledCount(String urlsCrawledCount) {
-            this.urlsCrawledCount = Objects.requireNonNull(urlsCrawledCount);
+            $.urlsCrawledCount = urlsCrawledCount;
             return this;
         }
+
         public Builder urlsTestedCount(String urlsTestedCount) {
-            this.urlsTestedCount = Objects.requireNonNull(urlsTestedCount);
+            $.urlsTestedCount = urlsTestedCount;
             return this;
-        }        public ScanRunResponse build() {
-            return new ScanRunResponse(endTime, executionState, hasVulnerabilities, name, progressPercent, resultState, startTime, urlsCrawledCount, urlsTestedCount);
+        }
+
+        public ScanRunResponse build() {
+            $.endTime = Objects.requireNonNull($.endTime, "expected parameter 'endTime' to be non-null");
+            $.executionState = Objects.requireNonNull($.executionState, "expected parameter 'executionState' to be non-null");
+            $.hasVulnerabilities = Objects.requireNonNull($.hasVulnerabilities, "expected parameter 'hasVulnerabilities' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.progressPercent = Objects.requireNonNull($.progressPercent, "expected parameter 'progressPercent' to be non-null");
+            $.resultState = Objects.requireNonNull($.resultState, "expected parameter 'resultState' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            $.urlsCrawledCount = Objects.requireNonNull($.urlsCrawledCount, "expected parameter 'urlsCrawledCount' to be non-null");
+            $.urlsTestedCount = Objects.requireNonNull($.urlsTestedCount, "expected parameter 'urlsTestedCount' to be non-null");
+            return $;
         }
     }
+
 }

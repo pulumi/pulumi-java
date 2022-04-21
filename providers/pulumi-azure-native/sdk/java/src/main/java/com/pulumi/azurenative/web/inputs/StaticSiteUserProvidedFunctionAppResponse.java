@@ -23,7 +23,7 @@ public final class StaticSiteUserProvidedFunctionAppResponse extends com.pulumi.
      * 
      */
     @Import(name="createdOn", required=true)
-      private final String createdOn;
+    private String createdOn;
 
     public String createdOn() {
         return this.createdOn;
@@ -34,10 +34,10 @@ public final class StaticSiteUserProvidedFunctionAppResponse extends com.pulumi.
      * 
      */
     @Import(name="functionAppRegion")
-      private final @Nullable String functionAppRegion;
+    private @Nullable String functionAppRegion;
 
     public Optional<String> functionAppRegion() {
-        return this.functionAppRegion == null ? Optional.empty() : Optional.ofNullable(this.functionAppRegion);
+        return Optional.ofNullable(this.functionAppRegion);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class StaticSiteUserProvidedFunctionAppResponse extends com.pulumi.
      * 
      */
     @Import(name="functionAppResourceId")
-      private final @Nullable String functionAppResourceId;
+    private @Nullable String functionAppResourceId;
 
     public Optional<String> functionAppResourceId() {
-        return this.functionAppResourceId == null ? Optional.empty() : Optional.ofNullable(this.functionAppResourceId);
+        return Optional.ofNullable(this.functionAppResourceId);
     }
 
     /**
@@ -56,7 +56,7 @@ public final class StaticSiteUserProvidedFunctionAppResponse extends com.pulumi.
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -67,10 +67,10 @@ public final class StaticSiteUserProvidedFunctionAppResponse extends com.pulumi.
      * 
      */
     @Import(name="kind")
-      private final @Nullable String kind;
+    private @Nullable String kind;
 
     public Optional<String> kind() {
-        return this.kind == null ? Optional.empty() : Optional.ofNullable(this.kind);
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -78,7 +78,7 @@ public final class StaticSiteUserProvidedFunctionAppResponse extends com.pulumi.
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -89,100 +89,84 @@ public final class StaticSiteUserProvidedFunctionAppResponse extends com.pulumi.
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public StaticSiteUserProvidedFunctionAppResponse(
-        String createdOn,
-        @Nullable String functionAppRegion,
-        @Nullable String functionAppResourceId,
-        String id,
-        @Nullable String kind,
-        String name,
-        String type) {
-        this.createdOn = Objects.requireNonNull(createdOn, "expected parameter 'createdOn' to be non-null");
-        this.functionAppRegion = functionAppRegion;
-        this.functionAppResourceId = functionAppResourceId;
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.kind = kind;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private StaticSiteUserProvidedFunctionAppResponse() {}
 
-    private StaticSiteUserProvidedFunctionAppResponse() {
-        this.createdOn = null;
-        this.functionAppRegion = null;
-        this.functionAppResourceId = null;
-        this.id = null;
-        this.kind = null;
-        this.name = null;
-        this.type = null;
+    private StaticSiteUserProvidedFunctionAppResponse(StaticSiteUserProvidedFunctionAppResponse $) {
+        this.createdOn = $.createdOn;
+        this.functionAppRegion = $.functionAppRegion;
+        this.functionAppResourceId = $.functionAppResourceId;
+        this.id = $.id;
+        this.kind = $.kind;
+        this.name = $.name;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StaticSiteUserProvidedFunctionAppResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String createdOn;
-        private @Nullable String functionAppRegion;
-        private @Nullable String functionAppResourceId;
-        private String id;
-        private @Nullable String kind;
-        private String name;
-        private String type;
+        private StaticSiteUserProvidedFunctionAppResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StaticSiteUserProvidedFunctionAppResponse();
         }
 
         public Builder(StaticSiteUserProvidedFunctionAppResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createdOn = defaults.createdOn;
-    	      this.functionAppRegion = defaults.functionAppRegion;
-    	      this.functionAppResourceId = defaults.functionAppResourceId;
-    	      this.id = defaults.id;
-    	      this.kind = defaults.kind;
-    	      this.name = defaults.name;
-    	      this.type = defaults.type;
+            $ = new StaticSiteUserProvidedFunctionAppResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder createdOn(String createdOn) {
-            this.createdOn = Objects.requireNonNull(createdOn);
+            $.createdOn = createdOn;
             return this;
         }
+
         public Builder functionAppRegion(@Nullable String functionAppRegion) {
-            this.functionAppRegion = functionAppRegion;
+            $.functionAppRegion = functionAppRegion;
             return this;
         }
+
         public Builder functionAppResourceId(@Nullable String functionAppResourceId) {
-            this.functionAppResourceId = functionAppResourceId;
+            $.functionAppResourceId = functionAppResourceId;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder kind(@Nullable String kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public StaticSiteUserProvidedFunctionAppResponse build() {
-            return new StaticSiteUserProvidedFunctionAppResponse(createdOn, functionAppRegion, functionAppResourceId, id, kind, name, type);
+        }
+
+        public StaticSiteUserProvidedFunctionAppResponse build() {
+            $.createdOn = Objects.requireNonNull($.createdOn, "expected parameter 'createdOn' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

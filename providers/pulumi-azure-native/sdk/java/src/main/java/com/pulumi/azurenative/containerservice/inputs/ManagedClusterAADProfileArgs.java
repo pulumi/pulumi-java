@@ -5,11 +5,11 @@ package com.pulumi.azurenative.containerservice.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ManagedClusterAADProfileArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="adminGroupObjectIDs")
-      private final @Nullable Output<List<String>> adminGroupObjectIDs;
+    private @Nullable Output<List<String>> adminGroupObjectIDs;
 
-    public Output<List<String>> adminGroupObjectIDs() {
-        return this.adminGroupObjectIDs == null ? Codegen.empty() : this.adminGroupObjectIDs;
+    public Optional<Output<List<String>>> adminGroupObjectIDs() {
+        return Optional.ofNullable(this.adminGroupObjectIDs);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ManagedClusterAADProfileArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="clientAppID")
-      private final @Nullable Output<String> clientAppID;
+    private @Nullable Output<String> clientAppID;
 
-    public Output<String> clientAppID() {
-        return this.clientAppID == null ? Codegen.empty() : this.clientAppID;
+    public Optional<Output<String>> clientAppID() {
+        return Optional.ofNullable(this.clientAppID);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ManagedClusterAADProfileArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="enableAzureRBAC")
-      private final @Nullable Output<Boolean> enableAzureRBAC;
+    private @Nullable Output<Boolean> enableAzureRBAC;
 
-    public Output<Boolean> enableAzureRBAC() {
-        return this.enableAzureRBAC == null ? Codegen.empty() : this.enableAzureRBAC;
+    public Optional<Output<Boolean>> enableAzureRBAC() {
+        return Optional.ofNullable(this.enableAzureRBAC);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ManagedClusterAADProfileArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="managed")
-      private final @Nullable Output<Boolean> managed;
+    private @Nullable Output<Boolean> managed;
 
-    public Output<Boolean> managed() {
-        return this.managed == null ? Codegen.empty() : this.managed;
+    public Optional<Output<Boolean>> managed() {
+        return Optional.ofNullable(this.managed);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class ManagedClusterAADProfileArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="serverAppID")
-      private final @Nullable Output<String> serverAppID;
+    private @Nullable Output<String> serverAppID;
 
-    public Output<String> serverAppID() {
-        return this.serverAppID == null ? Codegen.empty() : this.serverAppID;
+    public Optional<Output<String>> serverAppID() {
+        return Optional.ofNullable(this.serverAppID);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class ManagedClusterAADProfileArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="serverAppSecret")
-      private final @Nullable Output<String> serverAppSecret;
+    private @Nullable Output<String> serverAppSecret;
 
-    public Output<String> serverAppSecret() {
-        return this.serverAppSecret == null ? Codegen.empty() : this.serverAppSecret;
+    public Optional<Output<String>> serverAppSecret() {
+        return Optional.ofNullable(this.serverAppSecret);
     }
 
     /**
@@ -92,131 +92,112 @@ public final class ManagedClusterAADProfileArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="tenantID")
-      private final @Nullable Output<String> tenantID;
+    private @Nullable Output<String> tenantID;
 
-    public Output<String> tenantID() {
-        return this.tenantID == null ? Codegen.empty() : this.tenantID;
+    public Optional<Output<String>> tenantID() {
+        return Optional.ofNullable(this.tenantID);
     }
 
-    public ManagedClusterAADProfileArgs(
-        @Nullable Output<List<String>> adminGroupObjectIDs,
-        @Nullable Output<String> clientAppID,
-        @Nullable Output<Boolean> enableAzureRBAC,
-        @Nullable Output<Boolean> managed,
-        @Nullable Output<String> serverAppID,
-        @Nullable Output<String> serverAppSecret,
-        @Nullable Output<String> tenantID) {
-        this.adminGroupObjectIDs = adminGroupObjectIDs;
-        this.clientAppID = clientAppID;
-        this.enableAzureRBAC = enableAzureRBAC;
-        this.managed = managed;
-        this.serverAppID = serverAppID;
-        this.serverAppSecret = serverAppSecret;
-        this.tenantID = tenantID;
-    }
+    private ManagedClusterAADProfileArgs() {}
 
-    private ManagedClusterAADProfileArgs() {
-        this.adminGroupObjectIDs = Codegen.empty();
-        this.clientAppID = Codegen.empty();
-        this.enableAzureRBAC = Codegen.empty();
-        this.managed = Codegen.empty();
-        this.serverAppID = Codegen.empty();
-        this.serverAppSecret = Codegen.empty();
-        this.tenantID = Codegen.empty();
+    private ManagedClusterAADProfileArgs(ManagedClusterAADProfileArgs $) {
+        this.adminGroupObjectIDs = $.adminGroupObjectIDs;
+        this.clientAppID = $.clientAppID;
+        this.enableAzureRBAC = $.enableAzureRBAC;
+        this.managed = $.managed;
+        this.serverAppID = $.serverAppID;
+        this.serverAppSecret = $.serverAppSecret;
+        this.tenantID = $.tenantID;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedClusterAADProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> adminGroupObjectIDs;
-        private @Nullable Output<String> clientAppID;
-        private @Nullable Output<Boolean> enableAzureRBAC;
-        private @Nullable Output<Boolean> managed;
-        private @Nullable Output<String> serverAppID;
-        private @Nullable Output<String> serverAppSecret;
-        private @Nullable Output<String> tenantID;
+        private ManagedClusterAADProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedClusterAADProfileArgs();
         }
 
         public Builder(ManagedClusterAADProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.adminGroupObjectIDs = defaults.adminGroupObjectIDs;
-    	      this.clientAppID = defaults.clientAppID;
-    	      this.enableAzureRBAC = defaults.enableAzureRBAC;
-    	      this.managed = defaults.managed;
-    	      this.serverAppID = defaults.serverAppID;
-    	      this.serverAppSecret = defaults.serverAppSecret;
-    	      this.tenantID = defaults.tenantID;
+            $ = new ManagedClusterAADProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder adminGroupObjectIDs(@Nullable Output<List<String>> adminGroupObjectIDs) {
-            this.adminGroupObjectIDs = adminGroupObjectIDs;
+            $.adminGroupObjectIDs = adminGroupObjectIDs;
             return this;
         }
-        public Builder adminGroupObjectIDs(@Nullable List<String> adminGroupObjectIDs) {
-            this.adminGroupObjectIDs = Codegen.ofNullable(adminGroupObjectIDs);
-            return this;
+
+        public Builder adminGroupObjectIDs(List<String> adminGroupObjectIDs) {
+            return adminGroupObjectIDs(Output.of(adminGroupObjectIDs));
         }
+
         public Builder adminGroupObjectIDs(String... adminGroupObjectIDs) {
             return adminGroupObjectIDs(List.of(adminGroupObjectIDs));
         }
+
         public Builder clientAppID(@Nullable Output<String> clientAppID) {
-            this.clientAppID = clientAppID;
+            $.clientAppID = clientAppID;
             return this;
         }
-        public Builder clientAppID(@Nullable String clientAppID) {
-            this.clientAppID = Codegen.ofNullable(clientAppID);
-            return this;
+
+        public Builder clientAppID(String clientAppID) {
+            return clientAppID(Output.of(clientAppID));
         }
+
         public Builder enableAzureRBAC(@Nullable Output<Boolean> enableAzureRBAC) {
-            this.enableAzureRBAC = enableAzureRBAC;
+            $.enableAzureRBAC = enableAzureRBAC;
             return this;
         }
-        public Builder enableAzureRBAC(@Nullable Boolean enableAzureRBAC) {
-            this.enableAzureRBAC = Codegen.ofNullable(enableAzureRBAC);
-            return this;
+
+        public Builder enableAzureRBAC(Boolean enableAzureRBAC) {
+            return enableAzureRBAC(Output.of(enableAzureRBAC));
         }
+
         public Builder managed(@Nullable Output<Boolean> managed) {
-            this.managed = managed;
+            $.managed = managed;
             return this;
         }
-        public Builder managed(@Nullable Boolean managed) {
-            this.managed = Codegen.ofNullable(managed);
-            return this;
+
+        public Builder managed(Boolean managed) {
+            return managed(Output.of(managed));
         }
+
         public Builder serverAppID(@Nullable Output<String> serverAppID) {
-            this.serverAppID = serverAppID;
+            $.serverAppID = serverAppID;
             return this;
         }
-        public Builder serverAppID(@Nullable String serverAppID) {
-            this.serverAppID = Codegen.ofNullable(serverAppID);
-            return this;
+
+        public Builder serverAppID(String serverAppID) {
+            return serverAppID(Output.of(serverAppID));
         }
+
         public Builder serverAppSecret(@Nullable Output<String> serverAppSecret) {
-            this.serverAppSecret = serverAppSecret;
+            $.serverAppSecret = serverAppSecret;
             return this;
         }
-        public Builder serverAppSecret(@Nullable String serverAppSecret) {
-            this.serverAppSecret = Codegen.ofNullable(serverAppSecret);
-            return this;
+
+        public Builder serverAppSecret(String serverAppSecret) {
+            return serverAppSecret(Output.of(serverAppSecret));
         }
+
         public Builder tenantID(@Nullable Output<String> tenantID) {
-            this.tenantID = tenantID;
+            $.tenantID = tenantID;
             return this;
         }
-        public Builder tenantID(@Nullable String tenantID) {
-            this.tenantID = Codegen.ofNullable(tenantID);
-            return this;
-        }        public ManagedClusterAADProfileArgs build() {
-            return new ManagedClusterAADProfileArgs(adminGroupObjectIDs, clientAppID, enableAzureRBAC, managed, serverAppID, serverAppSecret, tenantID);
+
+        public Builder tenantID(String tenantID) {
+            return tenantID(Output.of(tenantID));
+        }
+
+        public ManagedClusterAADProfileArgs build() {
+            return $;
         }
     }
+
 }

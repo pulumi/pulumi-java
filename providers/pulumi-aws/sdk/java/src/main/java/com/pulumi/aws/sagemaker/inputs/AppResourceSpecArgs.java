@@ -5,9 +5,9 @@ package com.pulumi.aws.sagemaker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class AppResourceSpecArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="instanceType")
-      private final @Nullable Output<String> instanceType;
+    private @Nullable Output<String> instanceType;
 
-    public Output<String> instanceType() {
-        return this.instanceType == null ? Codegen.empty() : this.instanceType;
+    public Optional<Output<String>> instanceType() {
+        return Optional.ofNullable(this.instanceType);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class AppResourceSpecArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="lifecycleConfigArn")
-      private final @Nullable Output<String> lifecycleConfigArn;
+    private @Nullable Output<String> lifecycleConfigArn;
 
-    public Output<String> lifecycleConfigArn() {
-        return this.lifecycleConfigArn == null ? Codegen.empty() : this.lifecycleConfigArn;
+    public Optional<Output<String>> lifecycleConfigArn() {
+        return Optional.ofNullable(this.lifecycleConfigArn);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class AppResourceSpecArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="sagemakerImageArn")
-      private final @Nullable Output<String> sagemakerImageArn;
+    private @Nullable Output<String> sagemakerImageArn;
 
-    public Output<String> sagemakerImageArn() {
-        return this.sagemakerImageArn == null ? Codegen.empty() : this.sagemakerImageArn;
+    public Optional<Output<String>> sagemakerImageArn() {
+        return Optional.ofNullable(this.sagemakerImageArn);
     }
 
     /**
@@ -53,89 +53,78 @@ public final class AppResourceSpecArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="sagemakerImageVersionArn")
-      private final @Nullable Output<String> sagemakerImageVersionArn;
+    private @Nullable Output<String> sagemakerImageVersionArn;
 
-    public Output<String> sagemakerImageVersionArn() {
-        return this.sagemakerImageVersionArn == null ? Codegen.empty() : this.sagemakerImageVersionArn;
+    public Optional<Output<String>> sagemakerImageVersionArn() {
+        return Optional.ofNullable(this.sagemakerImageVersionArn);
     }
 
-    public AppResourceSpecArgs(
-        @Nullable Output<String> instanceType,
-        @Nullable Output<String> lifecycleConfigArn,
-        @Nullable Output<String> sagemakerImageArn,
-        @Nullable Output<String> sagemakerImageVersionArn) {
-        this.instanceType = instanceType;
-        this.lifecycleConfigArn = lifecycleConfigArn;
-        this.sagemakerImageArn = sagemakerImageArn;
-        this.sagemakerImageVersionArn = sagemakerImageVersionArn;
-    }
+    private AppResourceSpecArgs() {}
 
-    private AppResourceSpecArgs() {
-        this.instanceType = Codegen.empty();
-        this.lifecycleConfigArn = Codegen.empty();
-        this.sagemakerImageArn = Codegen.empty();
-        this.sagemakerImageVersionArn = Codegen.empty();
+    private AppResourceSpecArgs(AppResourceSpecArgs $) {
+        this.instanceType = $.instanceType;
+        this.lifecycleConfigArn = $.lifecycleConfigArn;
+        this.sagemakerImageArn = $.sagemakerImageArn;
+        this.sagemakerImageVersionArn = $.sagemakerImageVersionArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppResourceSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> instanceType;
-        private @Nullable Output<String> lifecycleConfigArn;
-        private @Nullable Output<String> sagemakerImageArn;
-        private @Nullable Output<String> sagemakerImageVersionArn;
+        private AppResourceSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppResourceSpecArgs();
         }
 
         public Builder(AppResourceSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceType = defaults.instanceType;
-    	      this.lifecycleConfigArn = defaults.lifecycleConfigArn;
-    	      this.sagemakerImageArn = defaults.sagemakerImageArn;
-    	      this.sagemakerImageVersionArn = defaults.sagemakerImageVersionArn;
+            $ = new AppResourceSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceType(@Nullable Output<String> instanceType) {
-            this.instanceType = instanceType;
+            $.instanceType = instanceType;
             return this;
         }
-        public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Codegen.ofNullable(instanceType);
-            return this;
+
+        public Builder instanceType(String instanceType) {
+            return instanceType(Output.of(instanceType));
         }
+
         public Builder lifecycleConfigArn(@Nullable Output<String> lifecycleConfigArn) {
-            this.lifecycleConfigArn = lifecycleConfigArn;
+            $.lifecycleConfigArn = lifecycleConfigArn;
             return this;
         }
-        public Builder lifecycleConfigArn(@Nullable String lifecycleConfigArn) {
-            this.lifecycleConfigArn = Codegen.ofNullable(lifecycleConfigArn);
-            return this;
+
+        public Builder lifecycleConfigArn(String lifecycleConfigArn) {
+            return lifecycleConfigArn(Output.of(lifecycleConfigArn));
         }
+
         public Builder sagemakerImageArn(@Nullable Output<String> sagemakerImageArn) {
-            this.sagemakerImageArn = sagemakerImageArn;
+            $.sagemakerImageArn = sagemakerImageArn;
             return this;
         }
-        public Builder sagemakerImageArn(@Nullable String sagemakerImageArn) {
-            this.sagemakerImageArn = Codegen.ofNullable(sagemakerImageArn);
-            return this;
+
+        public Builder sagemakerImageArn(String sagemakerImageArn) {
+            return sagemakerImageArn(Output.of(sagemakerImageArn));
         }
+
         public Builder sagemakerImageVersionArn(@Nullable Output<String> sagemakerImageVersionArn) {
-            this.sagemakerImageVersionArn = sagemakerImageVersionArn;
+            $.sagemakerImageVersionArn = sagemakerImageVersionArn;
             return this;
         }
-        public Builder sagemakerImageVersionArn(@Nullable String sagemakerImageVersionArn) {
-            this.sagemakerImageVersionArn = Codegen.ofNullable(sagemakerImageVersionArn);
-            return this;
-        }        public AppResourceSpecArgs build() {
-            return new AppResourceSpecArgs(instanceType, lifecycleConfigArn, sagemakerImageArn, sagemakerImageVersionArn);
+
+        public Builder sagemakerImageVersionArn(String sagemakerImageVersionArn) {
+            return sagemakerImageVersionArn(Output.of(sagemakerImageVersionArn));
+        }
+
+        public AppResourceSpecArgs build() {
+            return $;
         }
     }
+
 }

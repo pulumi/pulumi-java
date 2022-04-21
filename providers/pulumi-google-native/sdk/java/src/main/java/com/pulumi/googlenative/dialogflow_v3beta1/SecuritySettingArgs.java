@@ -5,7 +5,6 @@ package com.pulumi.googlenative.dialogflow_v3beta1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dialogflow_v3beta1.enums.SecuritySettingPurgeDataTypesItem;
 import com.pulumi.googlenative.dialogflow_v3beta1.enums.SecuritySettingRedactionScope;
 import com.pulumi.googlenative.dialogflow_v3beta1.enums.SecuritySettingRedactionStrategy;
@@ -14,6 +13,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class SecuritySettingArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="deidentifyTemplate")
-      private final @Nullable Output<String> deidentifyTemplate;
+    private @Nullable Output<String> deidentifyTemplate;
 
-    public Output<String> deidentifyTemplate() {
-        return this.deidentifyTemplate == null ? Codegen.empty() : this.deidentifyTemplate;
+    public Optional<Output<String>> deidentifyTemplate() {
+        return Optional.ofNullable(this.deidentifyTemplate);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class SecuritySettingArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
@@ -48,10 +48,10 @@ public final class SecuritySettingArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="insightsExportSettings")
-      private final @Nullable Output<GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsArgs> insightsExportSettings;
+    private @Nullable Output<GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsArgs> insightsExportSettings;
 
-    public Output<GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsArgs> insightsExportSettings() {
-        return this.insightsExportSettings == null ? Codegen.empty() : this.insightsExportSettings;
+    public Optional<Output<GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsArgs>> insightsExportSettings() {
+        return Optional.ofNullable(this.insightsExportSettings);
     }
 
     /**
@@ -59,17 +59,17 @@ public final class SecuritySettingArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="inspectTemplate")
-      private final @Nullable Output<String> inspectTemplate;
+    private @Nullable Output<String> inspectTemplate;
 
-    public Output<String> inspectTemplate() {
-        return this.inspectTemplate == null ? Codegen.empty() : this.inspectTemplate;
+    public Optional<Output<String>> inspectTemplate() {
+        return Optional.ofNullable(this.inspectTemplate);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -77,17 +77,17 @@ public final class SecuritySettingArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class SecuritySettingArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="purgeDataTypes")
-      private final @Nullable Output<List<SecuritySettingPurgeDataTypesItem>> purgeDataTypes;
+    private @Nullable Output<List<SecuritySettingPurgeDataTypesItem>> purgeDataTypes;
 
-    public Output<List<SecuritySettingPurgeDataTypesItem>> purgeDataTypes() {
-        return this.purgeDataTypes == null ? Codegen.empty() : this.purgeDataTypes;
+    public Optional<Output<List<SecuritySettingPurgeDataTypesItem>>> purgeDataTypes() {
+        return Optional.ofNullable(this.purgeDataTypes);
     }
 
     /**
@@ -106,10 +106,10 @@ public final class SecuritySettingArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="redactionScope")
-      private final @Nullable Output<SecuritySettingRedactionScope> redactionScope;
+    private @Nullable Output<SecuritySettingRedactionScope> redactionScope;
 
-    public Output<SecuritySettingRedactionScope> redactionScope() {
-        return this.redactionScope == null ? Codegen.empty() : this.redactionScope;
+    public Optional<Output<SecuritySettingRedactionScope>> redactionScope() {
+        return Optional.ofNullable(this.redactionScope);
     }
 
     /**
@@ -117,10 +117,10 @@ public final class SecuritySettingArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="redactionStrategy")
-      private final @Nullable Output<SecuritySettingRedactionStrategy> redactionStrategy;
+    private @Nullable Output<SecuritySettingRedactionStrategy> redactionStrategy;
 
-    public Output<SecuritySettingRedactionStrategy> redactionStrategy() {
-        return this.redactionStrategy == null ? Codegen.empty() : this.redactionStrategy;
+    public Optional<Output<SecuritySettingRedactionStrategy>> redactionStrategy() {
+        return Optional.ofNullable(this.redactionStrategy);
     }
 
     /**
@@ -128,183 +128,153 @@ public final class SecuritySettingArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="retentionWindowDays")
-      private final @Nullable Output<Integer> retentionWindowDays;
+    private @Nullable Output<Integer> retentionWindowDays;
 
-    public Output<Integer> retentionWindowDays() {
-        return this.retentionWindowDays == null ? Codegen.empty() : this.retentionWindowDays;
+    public Optional<Output<Integer>> retentionWindowDays() {
+        return Optional.ofNullable(this.retentionWindowDays);
     }
 
-    public SecuritySettingArgs(
-        @Nullable Output<String> deidentifyTemplate,
-        Output<String> displayName,
-        @Nullable Output<GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsArgs> insightsExportSettings,
-        @Nullable Output<String> inspectTemplate,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<List<SecuritySettingPurgeDataTypesItem>> purgeDataTypes,
-        @Nullable Output<SecuritySettingRedactionScope> redactionScope,
-        @Nullable Output<SecuritySettingRedactionStrategy> redactionStrategy,
-        @Nullable Output<Integer> retentionWindowDays) {
-        this.deidentifyTemplate = deidentifyTemplate;
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.insightsExportSettings = insightsExportSettings;
-        this.inspectTemplate = inspectTemplate;
-        this.location = location;
-        this.name = name;
-        this.project = project;
-        this.purgeDataTypes = purgeDataTypes;
-        this.redactionScope = redactionScope;
-        this.redactionStrategy = redactionStrategy;
-        this.retentionWindowDays = retentionWindowDays;
-    }
+    private SecuritySettingArgs() {}
 
-    private SecuritySettingArgs() {
-        this.deidentifyTemplate = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.insightsExportSettings = Codegen.empty();
-        this.inspectTemplate = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.purgeDataTypes = Codegen.empty();
-        this.redactionScope = Codegen.empty();
-        this.redactionStrategy = Codegen.empty();
-        this.retentionWindowDays = Codegen.empty();
+    private SecuritySettingArgs(SecuritySettingArgs $) {
+        this.deidentifyTemplate = $.deidentifyTemplate;
+        this.displayName = $.displayName;
+        this.insightsExportSettings = $.insightsExportSettings;
+        this.inspectTemplate = $.inspectTemplate;
+        this.location = $.location;
+        this.name = $.name;
+        this.project = $.project;
+        this.purgeDataTypes = $.purgeDataTypes;
+        this.redactionScope = $.redactionScope;
+        this.redactionStrategy = $.redactionStrategy;
+        this.retentionWindowDays = $.retentionWindowDays;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecuritySettingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> deidentifyTemplate;
-        private Output<String> displayName;
-        private @Nullable Output<GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsArgs> insightsExportSettings;
-        private @Nullable Output<String> inspectTemplate;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<List<SecuritySettingPurgeDataTypesItem>> purgeDataTypes;
-        private @Nullable Output<SecuritySettingRedactionScope> redactionScope;
-        private @Nullable Output<SecuritySettingRedactionStrategy> redactionStrategy;
-        private @Nullable Output<Integer> retentionWindowDays;
+        private SecuritySettingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecuritySettingArgs();
         }
 
         public Builder(SecuritySettingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deidentifyTemplate = defaults.deidentifyTemplate;
-    	      this.displayName = defaults.displayName;
-    	      this.insightsExportSettings = defaults.insightsExportSettings;
-    	      this.inspectTemplate = defaults.inspectTemplate;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.purgeDataTypes = defaults.purgeDataTypes;
-    	      this.redactionScope = defaults.redactionScope;
-    	      this.redactionStrategy = defaults.redactionStrategy;
-    	      this.retentionWindowDays = defaults.retentionWindowDays;
+            $ = new SecuritySettingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deidentifyTemplate(@Nullable Output<String> deidentifyTemplate) {
-            this.deidentifyTemplate = deidentifyTemplate;
+            $.deidentifyTemplate = deidentifyTemplate;
             return this;
         }
-        public Builder deidentifyTemplate(@Nullable String deidentifyTemplate) {
-            this.deidentifyTemplate = Codegen.ofNullable(deidentifyTemplate);
-            return this;
+
+        public Builder deidentifyTemplate(String deidentifyTemplate) {
+            return deidentifyTemplate(Output.of(deidentifyTemplate));
         }
+
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder insightsExportSettings(@Nullable Output<GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsArgs> insightsExportSettings) {
-            this.insightsExportSettings = insightsExportSettings;
+            $.insightsExportSettings = insightsExportSettings;
             return this;
         }
-        public Builder insightsExportSettings(@Nullable GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsArgs insightsExportSettings) {
-            this.insightsExportSettings = Codegen.ofNullable(insightsExportSettings);
-            return this;
+
+        public Builder insightsExportSettings(GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsArgs insightsExportSettings) {
+            return insightsExportSettings(Output.of(insightsExportSettings));
         }
+
         public Builder inspectTemplate(@Nullable Output<String> inspectTemplate) {
-            this.inspectTemplate = inspectTemplate;
+            $.inspectTemplate = inspectTemplate;
             return this;
         }
-        public Builder inspectTemplate(@Nullable String inspectTemplate) {
-            this.inspectTemplate = Codegen.ofNullable(inspectTemplate);
-            return this;
+
+        public Builder inspectTemplate(String inspectTemplate) {
+            return inspectTemplate(Output.of(inspectTemplate));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder purgeDataTypes(@Nullable Output<List<SecuritySettingPurgeDataTypesItem>> purgeDataTypes) {
-            this.purgeDataTypes = purgeDataTypes;
+            $.purgeDataTypes = purgeDataTypes;
             return this;
         }
-        public Builder purgeDataTypes(@Nullable List<SecuritySettingPurgeDataTypesItem> purgeDataTypes) {
-            this.purgeDataTypes = Codegen.ofNullable(purgeDataTypes);
-            return this;
+
+        public Builder purgeDataTypes(List<SecuritySettingPurgeDataTypesItem> purgeDataTypes) {
+            return purgeDataTypes(Output.of(purgeDataTypes));
         }
+
         public Builder purgeDataTypes(SecuritySettingPurgeDataTypesItem... purgeDataTypes) {
             return purgeDataTypes(List.of(purgeDataTypes));
         }
+
         public Builder redactionScope(@Nullable Output<SecuritySettingRedactionScope> redactionScope) {
-            this.redactionScope = redactionScope;
+            $.redactionScope = redactionScope;
             return this;
         }
-        public Builder redactionScope(@Nullable SecuritySettingRedactionScope redactionScope) {
-            this.redactionScope = Codegen.ofNullable(redactionScope);
-            return this;
+
+        public Builder redactionScope(SecuritySettingRedactionScope redactionScope) {
+            return redactionScope(Output.of(redactionScope));
         }
+
         public Builder redactionStrategy(@Nullable Output<SecuritySettingRedactionStrategy> redactionStrategy) {
-            this.redactionStrategy = redactionStrategy;
+            $.redactionStrategy = redactionStrategy;
             return this;
         }
-        public Builder redactionStrategy(@Nullable SecuritySettingRedactionStrategy redactionStrategy) {
-            this.redactionStrategy = Codegen.ofNullable(redactionStrategy);
-            return this;
+
+        public Builder redactionStrategy(SecuritySettingRedactionStrategy redactionStrategy) {
+            return redactionStrategy(Output.of(redactionStrategy));
         }
+
         public Builder retentionWindowDays(@Nullable Output<Integer> retentionWindowDays) {
-            this.retentionWindowDays = retentionWindowDays;
+            $.retentionWindowDays = retentionWindowDays;
             return this;
         }
-        public Builder retentionWindowDays(@Nullable Integer retentionWindowDays) {
-            this.retentionWindowDays = Codegen.ofNullable(retentionWindowDays);
-            return this;
-        }        public SecuritySettingArgs build() {
-            return new SecuritySettingArgs(deidentifyTemplate, displayName, insightsExportSettings, inspectTemplate, location, name, project, purgeDataTypes, redactionScope, redactionStrategy, retentionWindowDays);
+
+        public Builder retentionWindowDays(Integer retentionWindowDays) {
+            return retentionWindowDays(Output.of(retentionWindowDays));
+        }
+
+        public SecuritySettingArgs build() {
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            return $;
         }
     }
+
 }

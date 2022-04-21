@@ -20,10 +20,10 @@ public final class ListEffectiveVirtualNetworkByNetworkManagerArgs extends com.p
      * 
      */
     @Import(name="conditionalMembers")
-      private final @Nullable String conditionalMembers;
+    private @Nullable String conditionalMembers;
 
     public Optional<String> conditionalMembers() {
-        return this.conditionalMembers == null ? Optional.empty() : Optional.ofNullable(this.conditionalMembers);
+        return Optional.ofNullable(this.conditionalMembers);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class ListEffectiveVirtualNetworkByNetworkManagerArgs extends com.p
      * 
      */
     @Import(name="networkManagerName", required=true)
-      private final String networkManagerName;
+    private String networkManagerName;
 
     public String networkManagerName() {
         return this.networkManagerName;
@@ -42,7 +42,7 @@ public final class ListEffectiveVirtualNetworkByNetworkManagerArgs extends com.p
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -53,10 +53,10 @@ public final class ListEffectiveVirtualNetworkByNetworkManagerArgs extends com.p
      * 
      */
     @Import(name="skipToken")
-      private final @Nullable String skipToken;
+    private @Nullable String skipToken;
 
     public Optional<String> skipToken() {
-        return this.skipToken == null ? Optional.empty() : Optional.ofNullable(this.skipToken);
+        return Optional.ofNullable(this.skipToken);
     }
 
     /**
@@ -64,82 +64,70 @@ public final class ListEffectiveVirtualNetworkByNetworkManagerArgs extends com.p
      * 
      */
     @Import(name="top")
-      private final @Nullable Integer top;
+    private @Nullable Integer top;
 
     public Optional<Integer> top() {
-        return this.top == null ? Optional.empty() : Optional.ofNullable(this.top);
+        return Optional.ofNullable(this.top);
     }
 
-    public ListEffectiveVirtualNetworkByNetworkManagerArgs(
-        @Nullable String conditionalMembers,
-        String networkManagerName,
-        String resourceGroupName,
-        @Nullable String skipToken,
-        @Nullable Integer top) {
-        this.conditionalMembers = conditionalMembers;
-        this.networkManagerName = Objects.requireNonNull(networkManagerName, "expected parameter 'networkManagerName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.skipToken = skipToken;
-        this.top = top;
-    }
+    private ListEffectiveVirtualNetworkByNetworkManagerArgs() {}
 
-    private ListEffectiveVirtualNetworkByNetworkManagerArgs() {
-        this.conditionalMembers = null;
-        this.networkManagerName = null;
-        this.resourceGroupName = null;
-        this.skipToken = null;
-        this.top = null;
+    private ListEffectiveVirtualNetworkByNetworkManagerArgs(ListEffectiveVirtualNetworkByNetworkManagerArgs $) {
+        this.conditionalMembers = $.conditionalMembers;
+        this.networkManagerName = $.networkManagerName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.skipToken = $.skipToken;
+        this.top = $.top;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListEffectiveVirtualNetworkByNetworkManagerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String conditionalMembers;
-        private String networkManagerName;
-        private String resourceGroupName;
-        private @Nullable String skipToken;
-        private @Nullable Integer top;
+        private ListEffectiveVirtualNetworkByNetworkManagerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListEffectiveVirtualNetworkByNetworkManagerArgs();
         }
 
         public Builder(ListEffectiveVirtualNetworkByNetworkManagerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.conditionalMembers = defaults.conditionalMembers;
-    	      this.networkManagerName = defaults.networkManagerName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.skipToken = defaults.skipToken;
-    	      this.top = defaults.top;
+            $ = new ListEffectiveVirtualNetworkByNetworkManagerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder conditionalMembers(@Nullable String conditionalMembers) {
-            this.conditionalMembers = conditionalMembers;
+            $.conditionalMembers = conditionalMembers;
             return this;
         }
+
         public Builder networkManagerName(String networkManagerName) {
-            this.networkManagerName = Objects.requireNonNull(networkManagerName);
+            $.networkManagerName = networkManagerName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder skipToken(@Nullable String skipToken) {
-            this.skipToken = skipToken;
+            $.skipToken = skipToken;
             return this;
         }
+
         public Builder top(@Nullable Integer top) {
-            this.top = top;
+            $.top = top;
             return this;
-        }        public ListEffectiveVirtualNetworkByNetworkManagerArgs build() {
-            return new ListEffectiveVirtualNetworkByNetworkManagerArgs(conditionalMembers, networkManagerName, resourceGroupName, skipToken, top);
+        }
+
+        public ListEffectiveVirtualNetworkByNetworkManagerArgs build() {
+            $.networkManagerName = Objects.requireNonNull($.networkManagerName, "expected parameter 'networkManagerName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

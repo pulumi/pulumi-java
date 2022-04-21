@@ -5,7 +5,6 @@ package com.pulumi.gcp.dns.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.dns.inputs.ManagedZonePrivateVisibilityConfigNetworkArgs;
 import java.util.List;
 import java.util.Objects;
@@ -16,52 +15,53 @@ public final class ManagedZonePrivateVisibilityConfigArgs extends com.pulumi.res
     public static final ManagedZonePrivateVisibilityConfigArgs Empty = new ManagedZonePrivateVisibilityConfigArgs();
 
     @Import(name="networks", required=true)
-      private final Output<List<ManagedZonePrivateVisibilityConfigNetworkArgs>> networks;
+    private Output<List<ManagedZonePrivateVisibilityConfigNetworkArgs>> networks;
 
     public Output<List<ManagedZonePrivateVisibilityConfigNetworkArgs>> networks() {
         return this.networks;
     }
 
-    public ManagedZonePrivateVisibilityConfigArgs(Output<List<ManagedZonePrivateVisibilityConfigNetworkArgs>> networks) {
-        this.networks = Objects.requireNonNull(networks, "expected parameter 'networks' to be non-null");
-    }
+    private ManagedZonePrivateVisibilityConfigArgs() {}
 
-    private ManagedZonePrivateVisibilityConfigArgs() {
-        this.networks = Codegen.empty();
+    private ManagedZonePrivateVisibilityConfigArgs(ManagedZonePrivateVisibilityConfigArgs $) {
+        this.networks = $.networks;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedZonePrivateVisibilityConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<ManagedZonePrivateVisibilityConfigNetworkArgs>> networks;
+        private ManagedZonePrivateVisibilityConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedZonePrivateVisibilityConfigArgs();
         }
 
         public Builder(ManagedZonePrivateVisibilityConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.networks = defaults.networks;
+            $ = new ManagedZonePrivateVisibilityConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder networks(Output<List<ManagedZonePrivateVisibilityConfigNetworkArgs>> networks) {
-            this.networks = Objects.requireNonNull(networks);
+            $.networks = networks;
             return this;
         }
+
         public Builder networks(List<ManagedZonePrivateVisibilityConfigNetworkArgs> networks) {
-            this.networks = Output.of(Objects.requireNonNull(networks));
-            return this;
+            return networks(Output.of(networks));
         }
+
         public Builder networks(ManagedZonePrivateVisibilityConfigNetworkArgs... networks) {
             return networks(List.of(networks));
-        }        public ManagedZonePrivateVisibilityConfigArgs build() {
-            return new ManagedZonePrivateVisibilityConfigArgs(networks);
+        }
+
+        public ManagedZonePrivateVisibilityConfigArgs build() {
+            $.networks = Objects.requireNonNull($.networks, "expected parameter 'networks' to be non-null");
+            return $;
         }
     }
+
 }

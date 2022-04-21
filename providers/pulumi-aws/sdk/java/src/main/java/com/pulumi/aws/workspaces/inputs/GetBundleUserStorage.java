@@ -17,45 +17,45 @@ public final class GetBundleUserStorage extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="capacity", required=true)
-      private final String capacity;
+    private String capacity;
 
     public String capacity() {
         return this.capacity;
     }
 
-    public GetBundleUserStorage(String capacity) {
-        this.capacity = Objects.requireNonNull(capacity, "expected parameter 'capacity' to be non-null");
-    }
+    private GetBundleUserStorage() {}
 
-    private GetBundleUserStorage() {
-        this.capacity = null;
+    private GetBundleUserStorage(GetBundleUserStorage $) {
+        this.capacity = $.capacity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBundleUserStorage defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String capacity;
+        private GetBundleUserStorage $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBundleUserStorage();
         }
 
         public Builder(GetBundleUserStorage defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacity = defaults.capacity;
+            $ = new GetBundleUserStorage(Objects.requireNonNull(defaults));
         }
 
         public Builder capacity(String capacity) {
-            this.capacity = Objects.requireNonNull(capacity);
+            $.capacity = capacity;
             return this;
-        }        public GetBundleUserStorage build() {
-            return new GetBundleUserStorage(capacity);
+        }
+
+        public GetBundleUserStorage build() {
+            $.capacity = Objects.requireNonNull($.capacity, "expected parameter 'capacity' to be non-null");
+            return $;
         }
     }
+
 }

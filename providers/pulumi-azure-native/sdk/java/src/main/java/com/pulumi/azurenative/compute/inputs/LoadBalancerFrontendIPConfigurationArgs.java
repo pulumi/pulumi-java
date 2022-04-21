@@ -6,7 +6,6 @@ package com.pulumi.azurenative.compute.inputs;
 import com.pulumi.azurenative.compute.inputs.LoadBalancerFrontendIPConfigurationPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +19,7 @@ public final class LoadBalancerFrontendIPConfigurationArgs extends com.pulumi.re
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -31,63 +30,60 @@ public final class LoadBalancerFrontendIPConfigurationArgs extends com.pulumi.re
      * 
      */
     @Import(name="properties", required=true)
-      private final Output<LoadBalancerFrontendIPConfigurationPropertiesArgs> properties;
+    private Output<LoadBalancerFrontendIPConfigurationPropertiesArgs> properties;
 
     public Output<LoadBalancerFrontendIPConfigurationPropertiesArgs> properties() {
         return this.properties;
     }
 
-    public LoadBalancerFrontendIPConfigurationArgs(
-        Output<String> name,
-        Output<LoadBalancerFrontendIPConfigurationPropertiesArgs> properties) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
-    }
+    private LoadBalancerFrontendIPConfigurationArgs() {}
 
-    private LoadBalancerFrontendIPConfigurationArgs() {
-        this.name = Codegen.empty();
-        this.properties = Codegen.empty();
+    private LoadBalancerFrontendIPConfigurationArgs(LoadBalancerFrontendIPConfigurationArgs $) {
+        this.name = $.name;
+        this.properties = $.properties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoadBalancerFrontendIPConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> name;
-        private Output<LoadBalancerFrontendIPConfigurationPropertiesArgs> properties;
+        private LoadBalancerFrontendIPConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoadBalancerFrontendIPConfigurationArgs();
         }
 
         public Builder(LoadBalancerFrontendIPConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.properties = defaults.properties;
+            $ = new LoadBalancerFrontendIPConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder properties(Output<LoadBalancerFrontendIPConfigurationPropertiesArgs> properties) {
-            this.properties = Objects.requireNonNull(properties);
+            $.properties = properties;
             return this;
         }
+
         public Builder properties(LoadBalancerFrontendIPConfigurationPropertiesArgs properties) {
-            this.properties = Output.of(Objects.requireNonNull(properties));
-            return this;
-        }        public LoadBalancerFrontendIPConfigurationArgs build() {
-            return new LoadBalancerFrontendIPConfigurationArgs(name, properties);
+            return properties(Output.of(properties));
+        }
+
+        public LoadBalancerFrontendIPConfigurationArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.properties = Objects.requireNonNull($.properties, "expected parameter 'properties' to be non-null");
+            return $;
         }
     }
+
 }

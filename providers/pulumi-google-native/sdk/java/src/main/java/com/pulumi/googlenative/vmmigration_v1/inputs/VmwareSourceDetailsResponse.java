@@ -21,7 +21,7 @@ public final class VmwareSourceDetailsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="password", required=true)
-      private final String password;
+    private String password;
 
     public String password() {
         return this.password;
@@ -32,7 +32,7 @@ public final class VmwareSourceDetailsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="thumbprint", required=true)
-      private final String thumbprint;
+    private String thumbprint;
 
     public String thumbprint() {
         return this.thumbprint;
@@ -43,7 +43,7 @@ public final class VmwareSourceDetailsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="username", required=true)
-      private final String username;
+    private String username;
 
     public String username() {
         return this.username;
@@ -54,73 +54,66 @@ public final class VmwareSourceDetailsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="vcenterIp", required=true)
-      private final String vcenterIp;
+    private String vcenterIp;
 
     public String vcenterIp() {
         return this.vcenterIp;
     }
 
-    public VmwareSourceDetailsResponse(
-        String password,
-        String thumbprint,
-        String username,
-        String vcenterIp) {
-        this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
-        this.thumbprint = Objects.requireNonNull(thumbprint, "expected parameter 'thumbprint' to be non-null");
-        this.username = Objects.requireNonNull(username, "expected parameter 'username' to be non-null");
-        this.vcenterIp = Objects.requireNonNull(vcenterIp, "expected parameter 'vcenterIp' to be non-null");
-    }
+    private VmwareSourceDetailsResponse() {}
 
-    private VmwareSourceDetailsResponse() {
-        this.password = null;
-        this.thumbprint = null;
-        this.username = null;
-        this.vcenterIp = null;
+    private VmwareSourceDetailsResponse(VmwareSourceDetailsResponse $) {
+        this.password = $.password;
+        this.thumbprint = $.thumbprint;
+        this.username = $.username;
+        this.vcenterIp = $.vcenterIp;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VmwareSourceDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String password;
-        private String thumbprint;
-        private String username;
-        private String vcenterIp;
+        private VmwareSourceDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VmwareSourceDetailsResponse();
         }
 
         public Builder(VmwareSourceDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.password = defaults.password;
-    	      this.thumbprint = defaults.thumbprint;
-    	      this.username = defaults.username;
-    	      this.vcenterIp = defaults.vcenterIp;
+            $ = new VmwareSourceDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder password(String password) {
-            this.password = Objects.requireNonNull(password);
+            $.password = password;
             return this;
         }
+
         public Builder thumbprint(String thumbprint) {
-            this.thumbprint = Objects.requireNonNull(thumbprint);
+            $.thumbprint = thumbprint;
             return this;
         }
+
         public Builder username(String username) {
-            this.username = Objects.requireNonNull(username);
+            $.username = username;
             return this;
         }
+
         public Builder vcenterIp(String vcenterIp) {
-            this.vcenterIp = Objects.requireNonNull(vcenterIp);
+            $.vcenterIp = vcenterIp;
             return this;
-        }        public VmwareSourceDetailsResponse build() {
-            return new VmwareSourceDetailsResponse(password, thumbprint, username, vcenterIp);
+        }
+
+        public VmwareSourceDetailsResponse build() {
+            $.password = Objects.requireNonNull($.password, "expected parameter 'password' to be non-null");
+            $.thumbprint = Objects.requireNonNull($.thumbprint, "expected parameter 'thumbprint' to be non-null");
+            $.username = Objects.requireNonNull($.username, "expected parameter 'username' to be non-null");
+            $.vcenterIp = Objects.requireNonNull($.vcenterIp, "expected parameter 'vcenterIp' to be non-null");
+            return $;
         }
     }
+
 }

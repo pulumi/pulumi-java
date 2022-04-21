@@ -9,11 +9,11 @@ import com.pulumi.awsnative.redshift.enums.EventSubscriptionSourceType;
 import com.pulumi.awsnative.redshift.inputs.EventSubscriptionTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class EventSubscriptionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class EventSubscriptionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="eventCategories")
-      private final @Nullable Output<List<EventSubscriptionEventCategoriesItem>> eventCategories;
+    private @Nullable Output<List<EventSubscriptionEventCategoriesItem>> eventCategories;
 
-    public Output<List<EventSubscriptionEventCategoriesItem>> eventCategories() {
-        return this.eventCategories == null ? Codegen.empty() : this.eventCategories;
+    public Optional<Output<List<EventSubscriptionEventCategoriesItem>>> eventCategories() {
+        return Optional.ofNullable(this.eventCategories);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class EventSubscriptionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="severity")
-      private final @Nullable Output<EventSubscriptionSeverity> severity;
+    private @Nullable Output<EventSubscriptionSeverity> severity;
 
-    public Output<EventSubscriptionSeverity> severity() {
-        return this.severity == null ? Codegen.empty() : this.severity;
+    public Optional<Output<EventSubscriptionSeverity>> severity() {
+        return Optional.ofNullable(this.severity);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class EventSubscriptionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="snsTopicArn")
-      private final @Nullable Output<String> snsTopicArn;
+    private @Nullable Output<String> snsTopicArn;
 
-    public Output<String> snsTopicArn() {
-        return this.snsTopicArn == null ? Codegen.empty() : this.snsTopicArn;
+    public Optional<Output<String>> snsTopicArn() {
+        return Optional.ofNullable(this.snsTopicArn);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class EventSubscriptionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="sourceIds")
-      private final @Nullable Output<List<String>> sourceIds;
+    private @Nullable Output<List<String>> sourceIds;
 
-    public Output<List<String>> sourceIds() {
-        return this.sourceIds == null ? Codegen.empty() : this.sourceIds;
+    public Optional<Output<List<String>>> sourceIds() {
+        return Optional.ofNullable(this.sourceIds);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class EventSubscriptionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="sourceType")
-      private final @Nullable Output<EventSubscriptionSourceType> sourceType;
+    private @Nullable Output<EventSubscriptionSourceType> sourceType;
 
-    public Output<EventSubscriptionSourceType> sourceType() {
-        return this.sourceType == null ? Codegen.empty() : this.sourceType;
+    public Optional<Output<EventSubscriptionSourceType>> sourceType() {
+        return Optional.ofNullable(this.sourceType);
     }
 
     /**
@@ -92,7 +92,7 @@ public final class EventSubscriptionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="subscriptionName", required=true)
-      private final Output<String> subscriptionName;
+    private Output<String> subscriptionName;
 
     public Output<String> subscriptionName() {
         return this.subscriptionName;
@@ -103,150 +103,131 @@ public final class EventSubscriptionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<EventSubscriptionTagArgs>> tags;
+    private @Nullable Output<List<EventSubscriptionTagArgs>> tags;
 
-    public Output<List<EventSubscriptionTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<EventSubscriptionTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public EventSubscriptionArgs(
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<List<EventSubscriptionEventCategoriesItem>> eventCategories,
-        @Nullable Output<EventSubscriptionSeverity> severity,
-        @Nullable Output<String> snsTopicArn,
-        @Nullable Output<List<String>> sourceIds,
-        @Nullable Output<EventSubscriptionSourceType> sourceType,
-        Output<String> subscriptionName,
-        @Nullable Output<List<EventSubscriptionTagArgs>> tags) {
-        this.enabled = enabled;
-        this.eventCategories = eventCategories;
-        this.severity = severity;
-        this.snsTopicArn = snsTopicArn;
-        this.sourceIds = sourceIds;
-        this.sourceType = sourceType;
-        this.subscriptionName = Objects.requireNonNull(subscriptionName, "expected parameter 'subscriptionName' to be non-null");
-        this.tags = tags;
-    }
+    private EventSubscriptionArgs() {}
 
-    private EventSubscriptionArgs() {
-        this.enabled = Codegen.empty();
-        this.eventCategories = Codegen.empty();
-        this.severity = Codegen.empty();
-        this.snsTopicArn = Codegen.empty();
-        this.sourceIds = Codegen.empty();
-        this.sourceType = Codegen.empty();
-        this.subscriptionName = Codegen.empty();
-        this.tags = Codegen.empty();
+    private EventSubscriptionArgs(EventSubscriptionArgs $) {
+        this.enabled = $.enabled;
+        this.eventCategories = $.eventCategories;
+        this.severity = $.severity;
+        this.snsTopicArn = $.snsTopicArn;
+        this.sourceIds = $.sourceIds;
+        this.sourceType = $.sourceType;
+        this.subscriptionName = $.subscriptionName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventSubscriptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<List<EventSubscriptionEventCategoriesItem>> eventCategories;
-        private @Nullable Output<EventSubscriptionSeverity> severity;
-        private @Nullable Output<String> snsTopicArn;
-        private @Nullable Output<List<String>> sourceIds;
-        private @Nullable Output<EventSubscriptionSourceType> sourceType;
-        private Output<String> subscriptionName;
-        private @Nullable Output<List<EventSubscriptionTagArgs>> tags;
+        private EventSubscriptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventSubscriptionArgs();
         }
 
         public Builder(EventSubscriptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.eventCategories = defaults.eventCategories;
-    	      this.severity = defaults.severity;
-    	      this.snsTopicArn = defaults.snsTopicArn;
-    	      this.sourceIds = defaults.sourceIds;
-    	      this.sourceType = defaults.sourceType;
-    	      this.subscriptionName = defaults.subscriptionName;
-    	      this.tags = defaults.tags;
+            $ = new EventSubscriptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder eventCategories(@Nullable Output<List<EventSubscriptionEventCategoriesItem>> eventCategories) {
-            this.eventCategories = eventCategories;
+            $.eventCategories = eventCategories;
             return this;
         }
-        public Builder eventCategories(@Nullable List<EventSubscriptionEventCategoriesItem> eventCategories) {
-            this.eventCategories = Codegen.ofNullable(eventCategories);
-            return this;
+
+        public Builder eventCategories(List<EventSubscriptionEventCategoriesItem> eventCategories) {
+            return eventCategories(Output.of(eventCategories));
         }
+
         public Builder eventCategories(EventSubscriptionEventCategoriesItem... eventCategories) {
             return eventCategories(List.of(eventCategories));
         }
+
         public Builder severity(@Nullable Output<EventSubscriptionSeverity> severity) {
-            this.severity = severity;
+            $.severity = severity;
             return this;
         }
-        public Builder severity(@Nullable EventSubscriptionSeverity severity) {
-            this.severity = Codegen.ofNullable(severity);
-            return this;
+
+        public Builder severity(EventSubscriptionSeverity severity) {
+            return severity(Output.of(severity));
         }
+
         public Builder snsTopicArn(@Nullable Output<String> snsTopicArn) {
-            this.snsTopicArn = snsTopicArn;
+            $.snsTopicArn = snsTopicArn;
             return this;
         }
-        public Builder snsTopicArn(@Nullable String snsTopicArn) {
-            this.snsTopicArn = Codegen.ofNullable(snsTopicArn);
-            return this;
+
+        public Builder snsTopicArn(String snsTopicArn) {
+            return snsTopicArn(Output.of(snsTopicArn));
         }
+
         public Builder sourceIds(@Nullable Output<List<String>> sourceIds) {
-            this.sourceIds = sourceIds;
+            $.sourceIds = sourceIds;
             return this;
         }
-        public Builder sourceIds(@Nullable List<String> sourceIds) {
-            this.sourceIds = Codegen.ofNullable(sourceIds);
-            return this;
+
+        public Builder sourceIds(List<String> sourceIds) {
+            return sourceIds(Output.of(sourceIds));
         }
+
         public Builder sourceIds(String... sourceIds) {
             return sourceIds(List.of(sourceIds));
         }
+
         public Builder sourceType(@Nullable Output<EventSubscriptionSourceType> sourceType) {
-            this.sourceType = sourceType;
+            $.sourceType = sourceType;
             return this;
         }
-        public Builder sourceType(@Nullable EventSubscriptionSourceType sourceType) {
-            this.sourceType = Codegen.ofNullable(sourceType);
-            return this;
+
+        public Builder sourceType(EventSubscriptionSourceType sourceType) {
+            return sourceType(Output.of(sourceType));
         }
+
         public Builder subscriptionName(Output<String> subscriptionName) {
-            this.subscriptionName = Objects.requireNonNull(subscriptionName);
+            $.subscriptionName = subscriptionName;
             return this;
         }
+
         public Builder subscriptionName(String subscriptionName) {
-            this.subscriptionName = Output.of(Objects.requireNonNull(subscriptionName));
-            return this;
+            return subscriptionName(Output.of(subscriptionName));
         }
+
         public Builder tags(@Nullable Output<List<EventSubscriptionTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<EventSubscriptionTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<EventSubscriptionTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(EventSubscriptionTagArgs... tags) {
             return tags(List.of(tags));
-        }        public EventSubscriptionArgs build() {
-            return new EventSubscriptionArgs(enabled, eventCategories, severity, snsTopicArn, sourceIds, sourceType, subscriptionName, tags);
+        }
+
+        public EventSubscriptionArgs build() {
+            $.subscriptionName = Objects.requireNonNull($.subscriptionName, "expected parameter 'subscriptionName' to be non-null");
+            return $;
         }
     }
+
 }

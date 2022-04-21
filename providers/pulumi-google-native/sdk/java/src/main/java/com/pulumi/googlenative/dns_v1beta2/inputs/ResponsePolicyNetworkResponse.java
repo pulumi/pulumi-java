@@ -13,7 +13,7 @@ public final class ResponsePolicyNetworkResponse extends com.pulumi.resources.In
     public static final ResponsePolicyNetworkResponse Empty = new ResponsePolicyNetworkResponse();
 
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
@@ -24,55 +24,52 @@ public final class ResponsePolicyNetworkResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="networkUrl", required=true)
-      private final String networkUrl;
+    private String networkUrl;
 
     public String networkUrl() {
         return this.networkUrl;
     }
 
-    public ResponsePolicyNetworkResponse(
-        String kind,
-        String networkUrl) {
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.networkUrl = Objects.requireNonNull(networkUrl, "expected parameter 'networkUrl' to be non-null");
-    }
+    private ResponsePolicyNetworkResponse() {}
 
-    private ResponsePolicyNetworkResponse() {
-        this.kind = null;
-        this.networkUrl = null;
+    private ResponsePolicyNetworkResponse(ResponsePolicyNetworkResponse $) {
+        this.kind = $.kind;
+        this.networkUrl = $.networkUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResponsePolicyNetworkResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String kind;
-        private String networkUrl;
+        private ResponsePolicyNetworkResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResponsePolicyNetworkResponse();
         }
 
         public Builder(ResponsePolicyNetworkResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kind = defaults.kind;
-    	      this.networkUrl = defaults.networkUrl;
+            $ = new ResponsePolicyNetworkResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder networkUrl(String networkUrl) {
-            this.networkUrl = Objects.requireNonNull(networkUrl);
+            $.networkUrl = networkUrl;
             return this;
-        }        public ResponsePolicyNetworkResponse build() {
-            return new ResponsePolicyNetworkResponse(kind, networkUrl);
+        }
+
+        public ResponsePolicyNetworkResponse build() {
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.networkUrl = Objects.requireNonNull($.networkUrl, "expected parameter 'networkUrl' to be non-null");
+            return $;
         }
     }
+
 }

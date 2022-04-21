@@ -5,10 +5,10 @@ package com.pulumi.aws.transfer.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ServerEndpointDetailsGetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="addressAllocationIds")
-      private final @Nullable Output<List<String>> addressAllocationIds;
+    private @Nullable Output<List<String>> addressAllocationIds;
 
-    public Output<List<String>> addressAllocationIds() {
-        return this.addressAllocationIds == null ? Codegen.empty() : this.addressAllocationIds;
+    public Optional<Output<List<String>>> addressAllocationIds() {
+        return Optional.ofNullable(this.addressAllocationIds);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ServerEndpointDetailsGetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="securityGroupIds")
-      private final @Nullable Output<List<String>> securityGroupIds;
+    private @Nullable Output<List<String>> securityGroupIds;
 
-    public Output<List<String>> securityGroupIds() {
-        return this.securityGroupIds == null ? Codegen.empty() : this.securityGroupIds;
+    public Optional<Output<List<String>>> securityGroupIds() {
+        return Optional.ofNullable(this.securityGroupIds);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ServerEndpointDetailsGetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="subnetIds")
-      private final @Nullable Output<List<String>> subnetIds;
+    private @Nullable Output<List<String>> subnetIds;
 
-    public Output<List<String>> subnetIds() {
-        return this.subnetIds == null ? Codegen.empty() : this.subnetIds;
+    public Optional<Output<List<String>>> subnetIds() {
+        return Optional.ofNullable(this.subnetIds);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ServerEndpointDetailsGetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="vpcEndpointId")
-      private final @Nullable Output<String> vpcEndpointId;
+    private @Nullable Output<String> vpcEndpointId;
 
-    public Output<String> vpcEndpointId() {
-        return this.vpcEndpointId == null ? Codegen.empty() : this.vpcEndpointId;
+    public Optional<Output<String>> vpcEndpointId() {
+        return Optional.ofNullable(this.vpcEndpointId);
     }
 
     /**
@@ -65,111 +65,100 @@ public final class ServerEndpointDetailsGetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="vpcId")
-      private final @Nullable Output<String> vpcId;
+    private @Nullable Output<String> vpcId;
 
-    public Output<String> vpcId() {
-        return this.vpcId == null ? Codegen.empty() : this.vpcId;
+    public Optional<Output<String>> vpcId() {
+        return Optional.ofNullable(this.vpcId);
     }
 
-    public ServerEndpointDetailsGetArgs(
-        @Nullable Output<List<String>> addressAllocationIds,
-        @Nullable Output<List<String>> securityGroupIds,
-        @Nullable Output<List<String>> subnetIds,
-        @Nullable Output<String> vpcEndpointId,
-        @Nullable Output<String> vpcId) {
-        this.addressAllocationIds = addressAllocationIds;
-        this.securityGroupIds = securityGroupIds;
-        this.subnetIds = subnetIds;
-        this.vpcEndpointId = vpcEndpointId;
-        this.vpcId = vpcId;
-    }
+    private ServerEndpointDetailsGetArgs() {}
 
-    private ServerEndpointDetailsGetArgs() {
-        this.addressAllocationIds = Codegen.empty();
-        this.securityGroupIds = Codegen.empty();
-        this.subnetIds = Codegen.empty();
-        this.vpcEndpointId = Codegen.empty();
-        this.vpcId = Codegen.empty();
+    private ServerEndpointDetailsGetArgs(ServerEndpointDetailsGetArgs $) {
+        this.addressAllocationIds = $.addressAllocationIds;
+        this.securityGroupIds = $.securityGroupIds;
+        this.subnetIds = $.subnetIds;
+        this.vpcEndpointId = $.vpcEndpointId;
+        this.vpcId = $.vpcId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServerEndpointDetailsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> addressAllocationIds;
-        private @Nullable Output<List<String>> securityGroupIds;
-        private @Nullable Output<List<String>> subnetIds;
-        private @Nullable Output<String> vpcEndpointId;
-        private @Nullable Output<String> vpcId;
+        private ServerEndpointDetailsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServerEndpointDetailsGetArgs();
         }
 
         public Builder(ServerEndpointDetailsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addressAllocationIds = defaults.addressAllocationIds;
-    	      this.securityGroupIds = defaults.securityGroupIds;
-    	      this.subnetIds = defaults.subnetIds;
-    	      this.vpcEndpointId = defaults.vpcEndpointId;
-    	      this.vpcId = defaults.vpcId;
+            $ = new ServerEndpointDetailsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder addressAllocationIds(@Nullable Output<List<String>> addressAllocationIds) {
-            this.addressAllocationIds = addressAllocationIds;
+            $.addressAllocationIds = addressAllocationIds;
             return this;
         }
-        public Builder addressAllocationIds(@Nullable List<String> addressAllocationIds) {
-            this.addressAllocationIds = Codegen.ofNullable(addressAllocationIds);
-            return this;
+
+        public Builder addressAllocationIds(List<String> addressAllocationIds) {
+            return addressAllocationIds(Output.of(addressAllocationIds));
         }
+
         public Builder addressAllocationIds(String... addressAllocationIds) {
             return addressAllocationIds(List.of(addressAllocationIds));
         }
+
         public Builder securityGroupIds(@Nullable Output<List<String>> securityGroupIds) {
-            this.securityGroupIds = securityGroupIds;
+            $.securityGroupIds = securityGroupIds;
             return this;
         }
-        public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
-            this.securityGroupIds = Codegen.ofNullable(securityGroupIds);
-            return this;
+
+        public Builder securityGroupIds(List<String> securityGroupIds) {
+            return securityGroupIds(Output.of(securityGroupIds));
         }
+
         public Builder securityGroupIds(String... securityGroupIds) {
             return securityGroupIds(List.of(securityGroupIds));
         }
+
         public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
-            this.subnetIds = subnetIds;
+            $.subnetIds = subnetIds;
             return this;
         }
-        public Builder subnetIds(@Nullable List<String> subnetIds) {
-            this.subnetIds = Codegen.ofNullable(subnetIds);
-            return this;
+
+        public Builder subnetIds(List<String> subnetIds) {
+            return subnetIds(Output.of(subnetIds));
         }
+
         public Builder subnetIds(String... subnetIds) {
             return subnetIds(List.of(subnetIds));
         }
+
         public Builder vpcEndpointId(@Nullable Output<String> vpcEndpointId) {
-            this.vpcEndpointId = vpcEndpointId;
+            $.vpcEndpointId = vpcEndpointId;
             return this;
         }
-        public Builder vpcEndpointId(@Nullable String vpcEndpointId) {
-            this.vpcEndpointId = Codegen.ofNullable(vpcEndpointId);
-            return this;
+
+        public Builder vpcEndpointId(String vpcEndpointId) {
+            return vpcEndpointId(Output.of(vpcEndpointId));
         }
+
         public Builder vpcId(@Nullable Output<String> vpcId) {
-            this.vpcId = vpcId;
+            $.vpcId = vpcId;
             return this;
         }
-        public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Codegen.ofNullable(vpcId);
-            return this;
-        }        public ServerEndpointDetailsGetArgs build() {
-            return new ServerEndpointDetailsGetArgs(addressAllocationIds, securityGroupIds, subnetIds, vpcEndpointId, vpcId);
+
+        public Builder vpcId(String vpcId) {
+            return vpcId(Output.of(vpcId));
+        }
+
+        public ServerEndpointDetailsGetArgs build() {
+            return $;
         }
     }
+
 }

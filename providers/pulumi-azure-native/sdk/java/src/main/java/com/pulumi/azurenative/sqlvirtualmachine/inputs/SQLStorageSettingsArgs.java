@@ -5,11 +5,11 @@ package com.pulumi.azurenative.sqlvirtualmachine.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class SQLStorageSettingsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="defaultFilePath")
-      private final @Nullable Output<String> defaultFilePath;
+    private @Nullable Output<String> defaultFilePath;
 
-    public Output<String> defaultFilePath() {
-        return this.defaultFilePath == null ? Codegen.empty() : this.defaultFilePath;
+    public Optional<Output<String>> defaultFilePath() {
+        return Optional.ofNullable(this.defaultFilePath);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class SQLStorageSettingsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="luns")
-      private final @Nullable Output<List<Integer>> luns;
+    private @Nullable Output<List<Integer>> luns;
 
-    public Output<List<Integer>> luns() {
-        return this.luns == null ? Codegen.empty() : this.luns;
+    public Optional<Output<List<Integer>>> luns() {
+        return Optional.ofNullable(this.luns);
     }
 
-    public SQLStorageSettingsArgs(
-        @Nullable Output<String> defaultFilePath,
-        @Nullable Output<List<Integer>> luns) {
-        this.defaultFilePath = defaultFilePath;
-        this.luns = luns;
-    }
+    private SQLStorageSettingsArgs() {}
 
-    private SQLStorageSettingsArgs() {
-        this.defaultFilePath = Codegen.empty();
-        this.luns = Codegen.empty();
+    private SQLStorageSettingsArgs(SQLStorageSettingsArgs $) {
+        this.defaultFilePath = $.defaultFilePath;
+        this.luns = $.luns;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SQLStorageSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> defaultFilePath;
-        private @Nullable Output<List<Integer>> luns;
+        private SQLStorageSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SQLStorageSettingsArgs();
         }
 
         public Builder(SQLStorageSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultFilePath = defaults.defaultFilePath;
-    	      this.luns = defaults.luns;
+            $ = new SQLStorageSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultFilePath(@Nullable Output<String> defaultFilePath) {
-            this.defaultFilePath = defaultFilePath;
+            $.defaultFilePath = defaultFilePath;
             return this;
         }
-        public Builder defaultFilePath(@Nullable String defaultFilePath) {
-            this.defaultFilePath = Codegen.ofNullable(defaultFilePath);
-            return this;
+
+        public Builder defaultFilePath(String defaultFilePath) {
+            return defaultFilePath(Output.of(defaultFilePath));
         }
+
         public Builder luns(@Nullable Output<List<Integer>> luns) {
-            this.luns = luns;
+            $.luns = luns;
             return this;
         }
-        public Builder luns(@Nullable List<Integer> luns) {
-            this.luns = Codegen.ofNullable(luns);
-            return this;
+
+        public Builder luns(List<Integer> luns) {
+            return luns(Output.of(luns));
         }
+
         public Builder luns(Integer... luns) {
             return luns(List.of(luns));
-        }        public SQLStorageSettingsArgs build() {
-            return new SQLStorageSettingsArgs(defaultFilePath, luns);
+        }
+
+        public SQLStorageSettingsArgs build() {
+            return $;
         }
     }
+
 }

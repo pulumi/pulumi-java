@@ -21,45 +21,45 @@ public final class GooglePrivacyDlpV2StoredInfoTypeStatsResponse extends com.pul
      * 
      */
     @Import(name="largeCustomDictionary", required=true)
-      private final GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse largeCustomDictionary;
+    private GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse largeCustomDictionary;
 
     public GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse largeCustomDictionary() {
         return this.largeCustomDictionary;
     }
 
-    public GooglePrivacyDlpV2StoredInfoTypeStatsResponse(GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse largeCustomDictionary) {
-        this.largeCustomDictionary = Objects.requireNonNull(largeCustomDictionary, "expected parameter 'largeCustomDictionary' to be non-null");
-    }
+    private GooglePrivacyDlpV2StoredInfoTypeStatsResponse() {}
 
-    private GooglePrivacyDlpV2StoredInfoTypeStatsResponse() {
-        this.largeCustomDictionary = null;
+    private GooglePrivacyDlpV2StoredInfoTypeStatsResponse(GooglePrivacyDlpV2StoredInfoTypeStatsResponse $) {
+        this.largeCustomDictionary = $.largeCustomDictionary;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2StoredInfoTypeStatsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse largeCustomDictionary;
+        private GooglePrivacyDlpV2StoredInfoTypeStatsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2StoredInfoTypeStatsResponse();
         }
 
         public Builder(GooglePrivacyDlpV2StoredInfoTypeStatsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.largeCustomDictionary = defaults.largeCustomDictionary;
+            $ = new GooglePrivacyDlpV2StoredInfoTypeStatsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder largeCustomDictionary(GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse largeCustomDictionary) {
-            this.largeCustomDictionary = Objects.requireNonNull(largeCustomDictionary);
+            $.largeCustomDictionary = largeCustomDictionary;
             return this;
-        }        public GooglePrivacyDlpV2StoredInfoTypeStatsResponse build() {
-            return new GooglePrivacyDlpV2StoredInfoTypeStatsResponse(largeCustomDictionary);
+        }
+
+        public GooglePrivacyDlpV2StoredInfoTypeStatsResponse build() {
+            $.largeCustomDictionary = Objects.requireNonNull($.largeCustomDictionary, "expected parameter 'largeCustomDictionary' to be non-null");
+            return $;
         }
     }
+
 }

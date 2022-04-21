@@ -24,48 +24,48 @@ public final class DisallowedResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="diskTypes")
-      private final @Nullable List<String> diskTypes;
+    private @Nullable List<String> diskTypes;
 
-    public List<String> diskTypes() {
-        return this.diskTypes == null ? List.of() : this.diskTypes;
+    public Optional<List<String>> diskTypes() {
+        return Optional.ofNullable(this.diskTypes);
     }
 
-    public DisallowedResponse(@Nullable List<String> diskTypes) {
-        this.diskTypes = diskTypes;
-    }
+    private DisallowedResponse() {}
 
-    private DisallowedResponse() {
-        this.diskTypes = List.of();
+    private DisallowedResponse(DisallowedResponse $) {
+        this.diskTypes = $.diskTypes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DisallowedResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> diskTypes;
+        private DisallowedResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DisallowedResponse();
         }
 
         public Builder(DisallowedResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskTypes = defaults.diskTypes;
+            $ = new DisallowedResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder diskTypes(@Nullable List<String> diskTypes) {
-            this.diskTypes = diskTypes;
+            $.diskTypes = diskTypes;
             return this;
         }
+
         public Builder diskTypes(String... diskTypes) {
             return diskTypes(List.of(diskTypes));
-        }        public DisallowedResponse build() {
-            return new DisallowedResponse(diskTypes);
+        }
+
+        public DisallowedResponse build() {
+            return $;
         }
     }
+
 }

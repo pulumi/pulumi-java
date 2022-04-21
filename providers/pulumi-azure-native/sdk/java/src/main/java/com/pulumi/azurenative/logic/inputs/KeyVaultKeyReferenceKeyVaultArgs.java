@@ -5,9 +5,9 @@ package com.pulumi.azurenative.logic.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class KeyVaultKeyReferenceKeyVaultArgs extends com.pulumi.resources
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
-    public KeyVaultKeyReferenceKeyVaultArgs(@Nullable Output<String> id) {
-        this.id = id;
-    }
+    private KeyVaultKeyReferenceKeyVaultArgs() {}
 
-    private KeyVaultKeyReferenceKeyVaultArgs() {
-        this.id = Codegen.empty();
+    private KeyVaultKeyReferenceKeyVaultArgs(KeyVaultKeyReferenceKeyVaultArgs $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyVaultKeyReferenceKeyVaultArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> id;
+        private KeyVaultKeyReferenceKeyVaultArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyVaultKeyReferenceKeyVaultArgs();
         }
 
         public Builder(KeyVaultKeyReferenceKeyVaultArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new KeyVaultKeyReferenceKeyVaultArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
-        }        public KeyVaultKeyReferenceKeyVaultArgs build() {
-            return new KeyVaultKeyReferenceKeyVaultArgs(id);
+
+        public Builder id(String id) {
+            return id(Output.of(id));
+        }
+
+        public KeyVaultKeyReferenceKeyVaultArgs build() {
+            return $;
         }
     }
+
 }

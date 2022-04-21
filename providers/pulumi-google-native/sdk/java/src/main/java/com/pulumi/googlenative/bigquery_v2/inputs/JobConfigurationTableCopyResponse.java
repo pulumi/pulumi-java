@@ -21,7 +21,7 @@ public final class JobConfigurationTableCopyResponse extends com.pulumi.resource
      * 
      */
     @Import(name="createDisposition", required=true)
-      private final String createDisposition;
+    private String createDisposition;
 
     public String createDisposition() {
         return this.createDisposition;
@@ -32,7 +32,7 @@ public final class JobConfigurationTableCopyResponse extends com.pulumi.resource
      * 
      */
     @Import(name="destinationEncryptionConfiguration", required=true)
-      private final EncryptionConfigurationResponse destinationEncryptionConfiguration;
+    private EncryptionConfigurationResponse destinationEncryptionConfiguration;
 
     public EncryptionConfigurationResponse destinationEncryptionConfiguration() {
         return this.destinationEncryptionConfiguration;
@@ -43,7 +43,7 @@ public final class JobConfigurationTableCopyResponse extends com.pulumi.resource
      * 
      */
     @Import(name="destinationExpirationTime", required=true)
-      private final Object destinationExpirationTime;
+    private Object destinationExpirationTime;
 
     public Object destinationExpirationTime() {
         return this.destinationExpirationTime;
@@ -54,7 +54,7 @@ public final class JobConfigurationTableCopyResponse extends com.pulumi.resource
      * 
      */
     @Import(name="destinationTable", required=true)
-      private final TableReferenceResponse destinationTable;
+    private TableReferenceResponse destinationTable;
 
     public TableReferenceResponse destinationTable() {
         return this.destinationTable;
@@ -65,7 +65,7 @@ public final class JobConfigurationTableCopyResponse extends com.pulumi.resource
      * 
      */
     @Import(name="operationType", required=true)
-      private final String operationType;
+    private String operationType;
 
     public String operationType() {
         return this.operationType;
@@ -76,7 +76,7 @@ public final class JobConfigurationTableCopyResponse extends com.pulumi.resource
      * 
      */
     @Import(name="sourceTable", required=true)
-      private final TableReferenceResponse sourceTable;
+    private TableReferenceResponse sourceTable;
 
     public TableReferenceResponse sourceTable() {
         return this.sourceTable;
@@ -87,7 +87,7 @@ public final class JobConfigurationTableCopyResponse extends com.pulumi.resource
      * 
      */
     @Import(name="sourceTables", required=true)
-      private final List<TableReferenceResponse> sourceTables;
+    private List<TableReferenceResponse> sourceTables;
 
     public List<TableReferenceResponse> sourceTables() {
         return this.sourceTables;
@@ -98,112 +98,98 @@ public final class JobConfigurationTableCopyResponse extends com.pulumi.resource
      * 
      */
     @Import(name="writeDisposition", required=true)
-      private final String writeDisposition;
+    private String writeDisposition;
 
     public String writeDisposition() {
         return this.writeDisposition;
     }
 
-    public JobConfigurationTableCopyResponse(
-        String createDisposition,
-        EncryptionConfigurationResponse destinationEncryptionConfiguration,
-        Object destinationExpirationTime,
-        TableReferenceResponse destinationTable,
-        String operationType,
-        TableReferenceResponse sourceTable,
-        List<TableReferenceResponse> sourceTables,
-        String writeDisposition) {
-        this.createDisposition = Objects.requireNonNull(createDisposition, "expected parameter 'createDisposition' to be non-null");
-        this.destinationEncryptionConfiguration = Objects.requireNonNull(destinationEncryptionConfiguration, "expected parameter 'destinationEncryptionConfiguration' to be non-null");
-        this.destinationExpirationTime = Objects.requireNonNull(destinationExpirationTime, "expected parameter 'destinationExpirationTime' to be non-null");
-        this.destinationTable = Objects.requireNonNull(destinationTable, "expected parameter 'destinationTable' to be non-null");
-        this.operationType = Objects.requireNonNull(operationType, "expected parameter 'operationType' to be non-null");
-        this.sourceTable = Objects.requireNonNull(sourceTable, "expected parameter 'sourceTable' to be non-null");
-        this.sourceTables = Objects.requireNonNull(sourceTables, "expected parameter 'sourceTables' to be non-null");
-        this.writeDisposition = Objects.requireNonNull(writeDisposition, "expected parameter 'writeDisposition' to be non-null");
-    }
+    private JobConfigurationTableCopyResponse() {}
 
-    private JobConfigurationTableCopyResponse() {
-        this.createDisposition = null;
-        this.destinationEncryptionConfiguration = null;
-        this.destinationExpirationTime = null;
-        this.destinationTable = null;
-        this.operationType = null;
-        this.sourceTable = null;
-        this.sourceTables = List.of();
-        this.writeDisposition = null;
+    private JobConfigurationTableCopyResponse(JobConfigurationTableCopyResponse $) {
+        this.createDisposition = $.createDisposition;
+        this.destinationEncryptionConfiguration = $.destinationEncryptionConfiguration;
+        this.destinationExpirationTime = $.destinationExpirationTime;
+        this.destinationTable = $.destinationTable;
+        this.operationType = $.operationType;
+        this.sourceTable = $.sourceTable;
+        this.sourceTables = $.sourceTables;
+        this.writeDisposition = $.writeDisposition;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobConfigurationTableCopyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String createDisposition;
-        private EncryptionConfigurationResponse destinationEncryptionConfiguration;
-        private Object destinationExpirationTime;
-        private TableReferenceResponse destinationTable;
-        private String operationType;
-        private TableReferenceResponse sourceTable;
-        private List<TableReferenceResponse> sourceTables;
-        private String writeDisposition;
+        private JobConfigurationTableCopyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobConfigurationTableCopyResponse();
         }
 
         public Builder(JobConfigurationTableCopyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createDisposition = defaults.createDisposition;
-    	      this.destinationEncryptionConfiguration = defaults.destinationEncryptionConfiguration;
-    	      this.destinationExpirationTime = defaults.destinationExpirationTime;
-    	      this.destinationTable = defaults.destinationTable;
-    	      this.operationType = defaults.operationType;
-    	      this.sourceTable = defaults.sourceTable;
-    	      this.sourceTables = defaults.sourceTables;
-    	      this.writeDisposition = defaults.writeDisposition;
+            $ = new JobConfigurationTableCopyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder createDisposition(String createDisposition) {
-            this.createDisposition = Objects.requireNonNull(createDisposition);
+            $.createDisposition = createDisposition;
             return this;
         }
+
         public Builder destinationEncryptionConfiguration(EncryptionConfigurationResponse destinationEncryptionConfiguration) {
-            this.destinationEncryptionConfiguration = Objects.requireNonNull(destinationEncryptionConfiguration);
+            $.destinationEncryptionConfiguration = destinationEncryptionConfiguration;
             return this;
         }
+
         public Builder destinationExpirationTime(Object destinationExpirationTime) {
-            this.destinationExpirationTime = Objects.requireNonNull(destinationExpirationTime);
+            $.destinationExpirationTime = destinationExpirationTime;
             return this;
         }
+
         public Builder destinationTable(TableReferenceResponse destinationTable) {
-            this.destinationTable = Objects.requireNonNull(destinationTable);
+            $.destinationTable = destinationTable;
             return this;
         }
+
         public Builder operationType(String operationType) {
-            this.operationType = Objects.requireNonNull(operationType);
+            $.operationType = operationType;
             return this;
         }
+
         public Builder sourceTable(TableReferenceResponse sourceTable) {
-            this.sourceTable = Objects.requireNonNull(sourceTable);
+            $.sourceTable = sourceTable;
             return this;
         }
+
         public Builder sourceTables(List<TableReferenceResponse> sourceTables) {
-            this.sourceTables = Objects.requireNonNull(sourceTables);
+            $.sourceTables = sourceTables;
             return this;
         }
+
         public Builder sourceTables(TableReferenceResponse... sourceTables) {
             return sourceTables(List.of(sourceTables));
         }
+
         public Builder writeDisposition(String writeDisposition) {
-            this.writeDisposition = Objects.requireNonNull(writeDisposition);
+            $.writeDisposition = writeDisposition;
             return this;
-        }        public JobConfigurationTableCopyResponse build() {
-            return new JobConfigurationTableCopyResponse(createDisposition, destinationEncryptionConfiguration, destinationExpirationTime, destinationTable, operationType, sourceTable, sourceTables, writeDisposition);
+        }
+
+        public JobConfigurationTableCopyResponse build() {
+            $.createDisposition = Objects.requireNonNull($.createDisposition, "expected parameter 'createDisposition' to be non-null");
+            $.destinationEncryptionConfiguration = Objects.requireNonNull($.destinationEncryptionConfiguration, "expected parameter 'destinationEncryptionConfiguration' to be non-null");
+            $.destinationExpirationTime = Objects.requireNonNull($.destinationExpirationTime, "expected parameter 'destinationExpirationTime' to be non-null");
+            $.destinationTable = Objects.requireNonNull($.destinationTable, "expected parameter 'destinationTable' to be non-null");
+            $.operationType = Objects.requireNonNull($.operationType, "expected parameter 'operationType' to be non-null");
+            $.sourceTable = Objects.requireNonNull($.sourceTable, "expected parameter 'sourceTable' to be non-null");
+            $.sourceTables = Objects.requireNonNull($.sourceTables, "expected parameter 'sourceTables' to be non-null");
+            $.writeDisposition = Objects.requireNonNull($.writeDisposition, "expected parameter 'writeDisposition' to be non-null");
+            return $;
         }
     }
+
 }

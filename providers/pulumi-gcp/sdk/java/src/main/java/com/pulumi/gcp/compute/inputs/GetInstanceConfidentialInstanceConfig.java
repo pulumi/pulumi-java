@@ -13,45 +13,45 @@ public final class GetInstanceConfidentialInstanceConfig extends com.pulumi.reso
     public static final GetInstanceConfidentialInstanceConfig Empty = new GetInstanceConfidentialInstanceConfig();
 
     @Import(name="enableConfidentialCompute", required=true)
-      private final Boolean enableConfidentialCompute;
+    private Boolean enableConfidentialCompute;
 
     public Boolean enableConfidentialCompute() {
         return this.enableConfidentialCompute;
     }
 
-    public GetInstanceConfidentialInstanceConfig(Boolean enableConfidentialCompute) {
-        this.enableConfidentialCompute = Objects.requireNonNull(enableConfidentialCompute, "expected parameter 'enableConfidentialCompute' to be non-null");
-    }
+    private GetInstanceConfidentialInstanceConfig() {}
 
-    private GetInstanceConfidentialInstanceConfig() {
-        this.enableConfidentialCompute = null;
+    private GetInstanceConfidentialInstanceConfig(GetInstanceConfidentialInstanceConfig $) {
+        this.enableConfidentialCompute = $.enableConfidentialCompute;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInstanceConfidentialInstanceConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enableConfidentialCompute;
+        private GetInstanceConfidentialInstanceConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInstanceConfidentialInstanceConfig();
         }
 
         public Builder(GetInstanceConfidentialInstanceConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableConfidentialCompute = defaults.enableConfidentialCompute;
+            $ = new GetInstanceConfidentialInstanceConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder enableConfidentialCompute(Boolean enableConfidentialCompute) {
-            this.enableConfidentialCompute = Objects.requireNonNull(enableConfidentialCompute);
+            $.enableConfidentialCompute = enableConfidentialCompute;
             return this;
-        }        public GetInstanceConfidentialInstanceConfig build() {
-            return new GetInstanceConfidentialInstanceConfig(enableConfidentialCompute);
+        }
+
+        public GetInstanceConfidentialInstanceConfig build() {
+            $.enableConfidentialCompute = Objects.requireNonNull($.enableConfidentialCompute, "expected parameter 'enableConfidentialCompute' to be non-null");
+            return $;
         }
     }
+
 }

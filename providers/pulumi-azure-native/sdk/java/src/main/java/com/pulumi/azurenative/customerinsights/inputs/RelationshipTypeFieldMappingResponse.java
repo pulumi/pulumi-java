@@ -21,7 +21,7 @@ public final class RelationshipTypeFieldMappingResponse extends com.pulumi.resou
      * 
      */
     @Import(name="profileFieldName", required=true)
-      private final String profileFieldName;
+    private String profileFieldName;
 
     public String profileFieldName() {
         return this.profileFieldName;
@@ -32,55 +32,52 @@ public final class RelationshipTypeFieldMappingResponse extends com.pulumi.resou
      * 
      */
     @Import(name="relatedProfileKeyProperty", required=true)
-      private final String relatedProfileKeyProperty;
+    private String relatedProfileKeyProperty;
 
     public String relatedProfileKeyProperty() {
         return this.relatedProfileKeyProperty;
     }
 
-    public RelationshipTypeFieldMappingResponse(
-        String profileFieldName,
-        String relatedProfileKeyProperty) {
-        this.profileFieldName = Objects.requireNonNull(profileFieldName, "expected parameter 'profileFieldName' to be non-null");
-        this.relatedProfileKeyProperty = Objects.requireNonNull(relatedProfileKeyProperty, "expected parameter 'relatedProfileKeyProperty' to be non-null");
-    }
+    private RelationshipTypeFieldMappingResponse() {}
 
-    private RelationshipTypeFieldMappingResponse() {
-        this.profileFieldName = null;
-        this.relatedProfileKeyProperty = null;
+    private RelationshipTypeFieldMappingResponse(RelationshipTypeFieldMappingResponse $) {
+        this.profileFieldName = $.profileFieldName;
+        this.relatedProfileKeyProperty = $.relatedProfileKeyProperty;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RelationshipTypeFieldMappingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String profileFieldName;
-        private String relatedProfileKeyProperty;
+        private RelationshipTypeFieldMappingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RelationshipTypeFieldMappingResponse();
         }
 
         public Builder(RelationshipTypeFieldMappingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.profileFieldName = defaults.profileFieldName;
-    	      this.relatedProfileKeyProperty = defaults.relatedProfileKeyProperty;
+            $ = new RelationshipTypeFieldMappingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder profileFieldName(String profileFieldName) {
-            this.profileFieldName = Objects.requireNonNull(profileFieldName);
+            $.profileFieldName = profileFieldName;
             return this;
         }
+
         public Builder relatedProfileKeyProperty(String relatedProfileKeyProperty) {
-            this.relatedProfileKeyProperty = Objects.requireNonNull(relatedProfileKeyProperty);
+            $.relatedProfileKeyProperty = relatedProfileKeyProperty;
             return this;
-        }        public RelationshipTypeFieldMappingResponse build() {
-            return new RelationshipTypeFieldMappingResponse(profileFieldName, relatedProfileKeyProperty);
+        }
+
+        public RelationshipTypeFieldMappingResponse build() {
+            $.profileFieldName = Objects.requireNonNull($.profileFieldName, "expected parameter 'profileFieldName' to be non-null");
+            $.relatedProfileKeyProperty = Objects.requireNonNull($.relatedProfileKeyProperty, "expected parameter 'relatedProfileKeyProperty' to be non-null");
+            return $;
         }
     }
+
 }

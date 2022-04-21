@@ -15,62 +15,57 @@ public final class NetworkInsightsAnalysisAlternatePathHint extends com.pulumi.r
     public static final NetworkInsightsAnalysisAlternatePathHint Empty = new NetworkInsightsAnalysisAlternatePathHint();
 
     @Import(name="componentArn")
-      private final @Nullable String componentArn;
+    private @Nullable String componentArn;
 
     public Optional<String> componentArn() {
-        return this.componentArn == null ? Optional.empty() : Optional.ofNullable(this.componentArn);
+        return Optional.ofNullable(this.componentArn);
     }
 
     @Import(name="componentId")
-      private final @Nullable String componentId;
+    private @Nullable String componentId;
 
     public Optional<String> componentId() {
-        return this.componentId == null ? Optional.empty() : Optional.ofNullable(this.componentId);
+        return Optional.ofNullable(this.componentId);
     }
 
-    public NetworkInsightsAnalysisAlternatePathHint(
-        @Nullable String componentArn,
-        @Nullable String componentId) {
-        this.componentArn = componentArn;
-        this.componentId = componentId;
-    }
+    private NetworkInsightsAnalysisAlternatePathHint() {}
 
-    private NetworkInsightsAnalysisAlternatePathHint() {
-        this.componentArn = null;
-        this.componentId = null;
+    private NetworkInsightsAnalysisAlternatePathHint(NetworkInsightsAnalysisAlternatePathHint $) {
+        this.componentArn = $.componentArn;
+        this.componentId = $.componentId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkInsightsAnalysisAlternatePathHint defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String componentArn;
-        private @Nullable String componentId;
+        private NetworkInsightsAnalysisAlternatePathHint $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkInsightsAnalysisAlternatePathHint();
         }
 
         public Builder(NetworkInsightsAnalysisAlternatePathHint defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.componentArn = defaults.componentArn;
-    	      this.componentId = defaults.componentId;
+            $ = new NetworkInsightsAnalysisAlternatePathHint(Objects.requireNonNull(defaults));
         }
 
         public Builder componentArn(@Nullable String componentArn) {
-            this.componentArn = componentArn;
+            $.componentArn = componentArn;
             return this;
         }
+
         public Builder componentId(@Nullable String componentId) {
-            this.componentId = componentId;
+            $.componentId = componentId;
             return this;
-        }        public NetworkInsightsAnalysisAlternatePathHint build() {
-            return new NetworkInsightsAnalysisAlternatePathHint(componentArn, componentId);
+        }
+
+        public NetworkInsightsAnalysisAlternatePathHint build() {
+            return $;
         }
     }
+
 }

@@ -23,7 +23,7 @@ public final class AuthenticationResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="providers", required=true)
-      private final List<AuthProviderResponse> providers;
+    private List<AuthProviderResponse> providers;
 
     public List<AuthProviderResponse> providers() {
         return this.providers;
@@ -34,61 +34,60 @@ public final class AuthenticationResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="rules", required=true)
-      private final List<AuthenticationRuleResponse> rules;
+    private List<AuthenticationRuleResponse> rules;
 
     public List<AuthenticationRuleResponse> rules() {
         return this.rules;
     }
 
-    public AuthenticationResponse(
-        List<AuthProviderResponse> providers,
-        List<AuthenticationRuleResponse> rules) {
-        this.providers = Objects.requireNonNull(providers, "expected parameter 'providers' to be non-null");
-        this.rules = Objects.requireNonNull(rules, "expected parameter 'rules' to be non-null");
-    }
+    private AuthenticationResponse() {}
 
-    private AuthenticationResponse() {
-        this.providers = List.of();
-        this.rules = List.of();
+    private AuthenticationResponse(AuthenticationResponse $) {
+        this.providers = $.providers;
+        this.rules = $.rules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AuthenticationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<AuthProviderResponse> providers;
-        private List<AuthenticationRuleResponse> rules;
+        private AuthenticationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AuthenticationResponse();
         }
 
         public Builder(AuthenticationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.providers = defaults.providers;
-    	      this.rules = defaults.rules;
+            $ = new AuthenticationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder providers(List<AuthProviderResponse> providers) {
-            this.providers = Objects.requireNonNull(providers);
+            $.providers = providers;
             return this;
         }
+
         public Builder providers(AuthProviderResponse... providers) {
             return providers(List.of(providers));
         }
+
         public Builder rules(List<AuthenticationRuleResponse> rules) {
-            this.rules = Objects.requireNonNull(rules);
+            $.rules = rules;
             return this;
         }
+
         public Builder rules(AuthenticationRuleResponse... rules) {
             return rules(List.of(rules));
-        }        public AuthenticationResponse build() {
-            return new AuthenticationResponse(providers, rules);
+        }
+
+        public AuthenticationResponse build() {
+            $.providers = Objects.requireNonNull($.providers, "expected parameter 'providers' to be non-null");
+            $.rules = Objects.requireNonNull($.rules, "expected parameter 'rules' to be non-null");
+            return $;
         }
     }
+
 }

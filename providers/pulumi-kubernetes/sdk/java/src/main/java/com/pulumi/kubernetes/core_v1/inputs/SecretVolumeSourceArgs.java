@@ -5,13 +5,13 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.KeyToPathArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,10 +30,10 @@ public final class SecretVolumeSourceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="defaultMode")
-      private final @Nullable Output<Integer> defaultMode;
+    private @Nullable Output<Integer> defaultMode;
 
-    public Output<Integer> defaultMode() {
-        return this.defaultMode == null ? Codegen.empty() : this.defaultMode;
+    public Optional<Output<Integer>> defaultMode() {
+        return Optional.ofNullable(this.defaultMode);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class SecretVolumeSourceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="items")
-      private final @Nullable Output<List<KeyToPathArgs>> items;
+    private @Nullable Output<List<KeyToPathArgs>> items;
 
-    public Output<List<KeyToPathArgs>> items() {
-        return this.items == null ? Codegen.empty() : this.items;
+    public Optional<Output<List<KeyToPathArgs>>> items() {
+        return Optional.ofNullable(this.items);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class SecretVolumeSourceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="optional")
-      private final @Nullable Output<Boolean> optional;
+    private @Nullable Output<Boolean> optional;
 
-    public Output<Boolean> optional() {
-        return this.optional == null ? Codegen.empty() : this.optional;
+    public Optional<Output<Boolean>> optional() {
+        return Optional.ofNullable(this.optional);
     }
 
     /**
@@ -63,92 +63,82 @@ public final class SecretVolumeSourceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="secretName")
-      private final @Nullable Output<String> secretName;
+    private @Nullable Output<String> secretName;
 
-    public Output<String> secretName() {
-        return this.secretName == null ? Codegen.empty() : this.secretName;
+    public Optional<Output<String>> secretName() {
+        return Optional.ofNullable(this.secretName);
     }
 
-    public SecretVolumeSourceArgs(
-        @Nullable Output<Integer> defaultMode,
-        @Nullable Output<List<KeyToPathArgs>> items,
-        @Nullable Output<Boolean> optional,
-        @Nullable Output<String> secretName) {
-        this.defaultMode = defaultMode;
-        this.items = items;
-        this.optional = optional;
-        this.secretName = secretName;
-    }
+    private SecretVolumeSourceArgs() {}
 
-    private SecretVolumeSourceArgs() {
-        this.defaultMode = Codegen.empty();
-        this.items = Codegen.empty();
-        this.optional = Codegen.empty();
-        this.secretName = Codegen.empty();
+    private SecretVolumeSourceArgs(SecretVolumeSourceArgs $) {
+        this.defaultMode = $.defaultMode;
+        this.items = $.items;
+        this.optional = $.optional;
+        this.secretName = $.secretName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecretVolumeSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> defaultMode;
-        private @Nullable Output<List<KeyToPathArgs>> items;
-        private @Nullable Output<Boolean> optional;
-        private @Nullable Output<String> secretName;
+        private SecretVolumeSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecretVolumeSourceArgs();
         }
 
         public Builder(SecretVolumeSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultMode = defaults.defaultMode;
-    	      this.items = defaults.items;
-    	      this.optional = defaults.optional;
-    	      this.secretName = defaults.secretName;
+            $ = new SecretVolumeSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultMode(@Nullable Output<Integer> defaultMode) {
-            this.defaultMode = defaultMode;
+            $.defaultMode = defaultMode;
             return this;
         }
-        public Builder defaultMode(@Nullable Integer defaultMode) {
-            this.defaultMode = Codegen.ofNullable(defaultMode);
-            return this;
+
+        public Builder defaultMode(Integer defaultMode) {
+            return defaultMode(Output.of(defaultMode));
         }
+
         public Builder items(@Nullable Output<List<KeyToPathArgs>> items) {
-            this.items = items;
+            $.items = items;
             return this;
         }
-        public Builder items(@Nullable List<KeyToPathArgs> items) {
-            this.items = Codegen.ofNullable(items);
-            return this;
+
+        public Builder items(List<KeyToPathArgs> items) {
+            return items(Output.of(items));
         }
+
         public Builder items(KeyToPathArgs... items) {
             return items(List.of(items));
         }
+
         public Builder optional(@Nullable Output<Boolean> optional) {
-            this.optional = optional;
+            $.optional = optional;
             return this;
         }
-        public Builder optional(@Nullable Boolean optional) {
-            this.optional = Codegen.ofNullable(optional);
-            return this;
+
+        public Builder optional(Boolean optional) {
+            return optional(Output.of(optional));
         }
+
         public Builder secretName(@Nullable Output<String> secretName) {
-            this.secretName = secretName;
+            $.secretName = secretName;
             return this;
         }
-        public Builder secretName(@Nullable String secretName) {
-            this.secretName = Codegen.ofNullable(secretName);
-            return this;
-        }        public SecretVolumeSourceArgs build() {
-            return new SecretVolumeSourceArgs(defaultMode, items, optional, secretName);
+
+        public Builder secretName(String secretName) {
+            return secretName(Output.of(secretName));
+        }
+
+        public SecretVolumeSourceArgs build() {
+            return $;
         }
     }
+
 }

@@ -7,11 +7,11 @@ import com.pulumi.azurenative.machinelearningservices.enums.DatasetType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class DataVersionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="datasetType")
-      private final @Nullable Output<Either<String,DatasetType>> datasetType;
+    private @Nullable Output<Either<String,DatasetType>> datasetType;
 
-    public Output<Either<String,DatasetType>> datasetType() {
-        return this.datasetType == null ? Codegen.empty() : this.datasetType;
+    public Optional<Output<Either<String,DatasetType>>> datasetType() {
+        return Optional.ofNullable(this.datasetType);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class DataVersionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="datastoreId")
-      private final @Nullable Output<String> datastoreId;
+    private @Nullable Output<String> datastoreId;
 
-    public Output<String> datastoreId() {
-        return this.datastoreId == null ? Codegen.empty() : this.datastoreId;
+    public Optional<Output<String>> datastoreId() {
+        return Optional.ofNullable(this.datastoreId);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class DataVersionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class DataVersionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="isAnonymous")
-      private final @Nullable Output<Boolean> isAnonymous;
+    private @Nullable Output<Boolean> isAnonymous;
 
-    public Output<Boolean> isAnonymous() {
-        return this.isAnonymous == null ? Codegen.empty() : this.isAnonymous;
+    public Optional<Output<Boolean>> isAnonymous() {
+        return Optional.ofNullable(this.isAnonymous);
     }
 
     /**
@@ -72,7 +72,7 @@ public final class DataVersionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="path", required=true)
-      private final Output<String> path;
+    private Output<String> path;
 
     public Output<String> path() {
         return this.path;
@@ -83,10 +83,10 @@ public final class DataVersionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<Map<String,String>> properties;
+    private @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<Map<String,String>>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -94,128 +94,109 @@ public final class DataVersionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public DataVersionArgs(
-        @Nullable Output<Either<String,DatasetType>> datasetType,
-        @Nullable Output<String> datastoreId,
-        @Nullable Output<String> description,
-        @Nullable Output<Boolean> isAnonymous,
-        Output<String> path,
-        @Nullable Output<Map<String,String>> properties,
-        @Nullable Output<Map<String,String>> tags) {
-        this.datasetType = datasetType;
-        this.datastoreId = datastoreId;
-        this.description = description;
-        this.isAnonymous = isAnonymous;
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-        this.properties = properties;
-        this.tags = tags;
-    }
+    private DataVersionArgs() {}
 
-    private DataVersionArgs() {
-        this.datasetType = Codegen.empty();
-        this.datastoreId = Codegen.empty();
-        this.description = Codegen.empty();
-        this.isAnonymous = Codegen.empty();
-        this.path = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.tags = Codegen.empty();
+    private DataVersionArgs(DataVersionArgs $) {
+        this.datasetType = $.datasetType;
+        this.datastoreId = $.datastoreId;
+        this.description = $.description;
+        this.isAnonymous = $.isAnonymous;
+        this.path = $.path;
+        this.properties = $.properties;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataVersionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,DatasetType>> datasetType;
-        private @Nullable Output<String> datastoreId;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Boolean> isAnonymous;
-        private Output<String> path;
-        private @Nullable Output<Map<String,String>> properties;
-        private @Nullable Output<Map<String,String>> tags;
+        private DataVersionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataVersionArgs();
         }
 
         public Builder(DataVersionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datasetType = defaults.datasetType;
-    	      this.datastoreId = defaults.datastoreId;
-    	      this.description = defaults.description;
-    	      this.isAnonymous = defaults.isAnonymous;
-    	      this.path = defaults.path;
-    	      this.properties = defaults.properties;
-    	      this.tags = defaults.tags;
+            $ = new DataVersionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder datasetType(@Nullable Output<Either<String,DatasetType>> datasetType) {
-            this.datasetType = datasetType;
+            $.datasetType = datasetType;
             return this;
         }
-        public Builder datasetType(@Nullable Either<String,DatasetType> datasetType) {
-            this.datasetType = Codegen.ofNullable(datasetType);
-            return this;
+
+        public Builder datasetType(Either<String,DatasetType> datasetType) {
+            return datasetType(Output.of(datasetType));
         }
+
         public Builder datastoreId(@Nullable Output<String> datastoreId) {
-            this.datastoreId = datastoreId;
+            $.datastoreId = datastoreId;
             return this;
         }
-        public Builder datastoreId(@Nullable String datastoreId) {
-            this.datastoreId = Codegen.ofNullable(datastoreId);
-            return this;
+
+        public Builder datastoreId(String datastoreId) {
+            return datastoreId(Output.of(datastoreId));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder isAnonymous(@Nullable Output<Boolean> isAnonymous) {
-            this.isAnonymous = isAnonymous;
+            $.isAnonymous = isAnonymous;
             return this;
         }
-        public Builder isAnonymous(@Nullable Boolean isAnonymous) {
-            this.isAnonymous = Codegen.ofNullable(isAnonymous);
-            return this;
+
+        public Builder isAnonymous(Boolean isAnonymous) {
+            return isAnonymous(Output.of(isAnonymous));
         }
+
         public Builder path(Output<String> path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
         }
+
         public Builder path(String path) {
-            this.path = Output.of(Objects.requireNonNull(path));
-            return this;
+            return path(Output.of(path));
         }
+
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(Map<String,String> properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public DataVersionArgs build() {
-            return new DataVersionArgs(datasetType, datastoreId, description, isAnonymous, path, properties, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public DataVersionArgs build() {
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            return $;
         }
     }
+
 }

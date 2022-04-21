@@ -7,10 +7,10 @@ import com.pulumi.azurenative.webpubsub.enums.WebPubSubRequestType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class NetworkACLArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allow")
-      private final @Nullable Output<List<Either<String,WebPubSubRequestType>>> allow;
+    private @Nullable Output<List<Either<String,WebPubSubRequestType>>> allow;
 
-    public Output<List<Either<String,WebPubSubRequestType>>> allow() {
-        return this.allow == null ? Codegen.empty() : this.allow;
+    public Optional<Output<List<Either<String,WebPubSubRequestType>>>> allow() {
+        return Optional.ofNullable(this.allow);
     }
 
     /**
@@ -38,69 +38,66 @@ public final class NetworkACLArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deny")
-      private final @Nullable Output<List<Either<String,WebPubSubRequestType>>> deny;
+    private @Nullable Output<List<Either<String,WebPubSubRequestType>>> deny;
 
-    public Output<List<Either<String,WebPubSubRequestType>>> deny() {
-        return this.deny == null ? Codegen.empty() : this.deny;
+    public Optional<Output<List<Either<String,WebPubSubRequestType>>>> deny() {
+        return Optional.ofNullable(this.deny);
     }
 
-    public NetworkACLArgs(
-        @Nullable Output<List<Either<String,WebPubSubRequestType>>> allow,
-        @Nullable Output<List<Either<String,WebPubSubRequestType>>> deny) {
-        this.allow = allow;
-        this.deny = deny;
-    }
+    private NetworkACLArgs() {}
 
-    private NetworkACLArgs() {
-        this.allow = Codegen.empty();
-        this.deny = Codegen.empty();
+    private NetworkACLArgs(NetworkACLArgs $) {
+        this.allow = $.allow;
+        this.deny = $.deny;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkACLArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<Either<String,WebPubSubRequestType>>> allow;
-        private @Nullable Output<List<Either<String,WebPubSubRequestType>>> deny;
+        private NetworkACLArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkACLArgs();
         }
 
         public Builder(NetworkACLArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allow = defaults.allow;
-    	      this.deny = defaults.deny;
+            $ = new NetworkACLArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allow(@Nullable Output<List<Either<String,WebPubSubRequestType>>> allow) {
-            this.allow = allow;
+            $.allow = allow;
             return this;
         }
-        public Builder allow(@Nullable List<Either<String,WebPubSubRequestType>> allow) {
-            this.allow = Codegen.ofNullable(allow);
-            return this;
+
+        public Builder allow(List<Either<String,WebPubSubRequestType>> allow) {
+            return allow(Output.of(allow));
         }
+
         public Builder allow(Either<String,WebPubSubRequestType>... allow) {
             return allow(List.of(allow));
         }
+
         public Builder deny(@Nullable Output<List<Either<String,WebPubSubRequestType>>> deny) {
-            this.deny = deny;
+            $.deny = deny;
             return this;
         }
-        public Builder deny(@Nullable List<Either<String,WebPubSubRequestType>> deny) {
-            this.deny = Codegen.ofNullable(deny);
-            return this;
+
+        public Builder deny(List<Either<String,WebPubSubRequestType>> deny) {
+            return deny(Output.of(deny));
         }
+
         public Builder deny(Either<String,WebPubSubRequestType>... deny) {
             return deny(List.of(deny));
-        }        public NetworkACLArgs build() {
-            return new NetworkACLArgs(allow, deny);
+        }
+
+        public NetworkACLArgs build() {
+            return $;
         }
     }
+
 }

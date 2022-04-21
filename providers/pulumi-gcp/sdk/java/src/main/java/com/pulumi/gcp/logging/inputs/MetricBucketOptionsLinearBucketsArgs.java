@@ -5,10 +5,10 @@ package com.pulumi.gcp.logging.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class MetricBucketOptionsLinearBucketsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="numFiniteBuckets")
-      private final @Nullable Output<Integer> numFiniteBuckets;
+    private @Nullable Output<Integer> numFiniteBuckets;
 
-    public Output<Integer> numFiniteBuckets() {
-        return this.numFiniteBuckets == null ? Codegen.empty() : this.numFiniteBuckets;
+    public Optional<Output<Integer>> numFiniteBuckets() {
+        return Optional.ofNullable(this.numFiniteBuckets);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class MetricBucketOptionsLinearBucketsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="offset")
-      private final @Nullable Output<Double> offset;
+    private @Nullable Output<Double> offset;
 
-    public Output<Double> offset() {
-        return this.offset == null ? Codegen.empty() : this.offset;
+    public Optional<Output<Double>> offset() {
+        return Optional.ofNullable(this.offset);
     }
 
     /**
@@ -43,76 +43,68 @@ public final class MetricBucketOptionsLinearBucketsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="width")
-      private final @Nullable Output<Double> width;
+    private @Nullable Output<Double> width;
 
-    public Output<Double> width() {
-        return this.width == null ? Codegen.empty() : this.width;
+    public Optional<Output<Double>> width() {
+        return Optional.ofNullable(this.width);
     }
 
-    public MetricBucketOptionsLinearBucketsArgs(
-        @Nullable Output<Integer> numFiniteBuckets,
-        @Nullable Output<Double> offset,
-        @Nullable Output<Double> width) {
-        this.numFiniteBuckets = numFiniteBuckets;
-        this.offset = offset;
-        this.width = width;
-    }
+    private MetricBucketOptionsLinearBucketsArgs() {}
 
-    private MetricBucketOptionsLinearBucketsArgs() {
-        this.numFiniteBuckets = Codegen.empty();
-        this.offset = Codegen.empty();
-        this.width = Codegen.empty();
+    private MetricBucketOptionsLinearBucketsArgs(MetricBucketOptionsLinearBucketsArgs $) {
+        this.numFiniteBuckets = $.numFiniteBuckets;
+        this.offset = $.offset;
+        this.width = $.width;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetricBucketOptionsLinearBucketsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> numFiniteBuckets;
-        private @Nullable Output<Double> offset;
-        private @Nullable Output<Double> width;
+        private MetricBucketOptionsLinearBucketsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetricBucketOptionsLinearBucketsArgs();
         }
 
         public Builder(MetricBucketOptionsLinearBucketsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.numFiniteBuckets = defaults.numFiniteBuckets;
-    	      this.offset = defaults.offset;
-    	      this.width = defaults.width;
+            $ = new MetricBucketOptionsLinearBucketsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder numFiniteBuckets(@Nullable Output<Integer> numFiniteBuckets) {
-            this.numFiniteBuckets = numFiniteBuckets;
+            $.numFiniteBuckets = numFiniteBuckets;
             return this;
         }
-        public Builder numFiniteBuckets(@Nullable Integer numFiniteBuckets) {
-            this.numFiniteBuckets = Codegen.ofNullable(numFiniteBuckets);
-            return this;
+
+        public Builder numFiniteBuckets(Integer numFiniteBuckets) {
+            return numFiniteBuckets(Output.of(numFiniteBuckets));
         }
+
         public Builder offset(@Nullable Output<Double> offset) {
-            this.offset = offset;
+            $.offset = offset;
             return this;
         }
-        public Builder offset(@Nullable Double offset) {
-            this.offset = Codegen.ofNullable(offset);
-            return this;
+
+        public Builder offset(Double offset) {
+            return offset(Output.of(offset));
         }
+
         public Builder width(@Nullable Output<Double> width) {
-            this.width = width;
+            $.width = width;
             return this;
         }
-        public Builder width(@Nullable Double width) {
-            this.width = Codegen.ofNullable(width);
-            return this;
-        }        public MetricBucketOptionsLinearBucketsArgs build() {
-            return new MetricBucketOptionsLinearBucketsArgs(numFiniteBuckets, offset, width);
+
+        public Builder width(Double width) {
+            return width(Output.of(width));
+        }
+
+        public MetricBucketOptionsLinearBucketsArgs build() {
+            return $;
         }
     }
+
 }

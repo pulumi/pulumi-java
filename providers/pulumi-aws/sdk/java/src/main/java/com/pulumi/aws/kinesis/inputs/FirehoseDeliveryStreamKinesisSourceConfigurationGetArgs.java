@@ -5,7 +5,6 @@ package com.pulumi.aws.kinesis.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class FirehoseDeliveryStreamKinesisSourceConfigurationGetArgs exten
      * 
      */
     @Import(name="kinesisStreamArn", required=true)
-      private final Output<String> kinesisStreamArn;
+    private Output<String> kinesisStreamArn;
 
     public Output<String> kinesisStreamArn() {
         return this.kinesisStreamArn;
@@ -30,63 +29,60 @@ public final class FirehoseDeliveryStreamKinesisSourceConfigurationGetArgs exten
      * 
      */
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
     }
 
-    public FirehoseDeliveryStreamKinesisSourceConfigurationGetArgs(
-        Output<String> kinesisStreamArn,
-        Output<String> roleArn) {
-        this.kinesisStreamArn = Objects.requireNonNull(kinesisStreamArn, "expected parameter 'kinesisStreamArn' to be non-null");
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-    }
+    private FirehoseDeliveryStreamKinesisSourceConfigurationGetArgs() {}
 
-    private FirehoseDeliveryStreamKinesisSourceConfigurationGetArgs() {
-        this.kinesisStreamArn = Codegen.empty();
-        this.roleArn = Codegen.empty();
+    private FirehoseDeliveryStreamKinesisSourceConfigurationGetArgs(FirehoseDeliveryStreamKinesisSourceConfigurationGetArgs $) {
+        this.kinesisStreamArn = $.kinesisStreamArn;
+        this.roleArn = $.roleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirehoseDeliveryStreamKinesisSourceConfigurationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> kinesisStreamArn;
-        private Output<String> roleArn;
+        private FirehoseDeliveryStreamKinesisSourceConfigurationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirehoseDeliveryStreamKinesisSourceConfigurationGetArgs();
         }
 
         public Builder(FirehoseDeliveryStreamKinesisSourceConfigurationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kinesisStreamArn = defaults.kinesisStreamArn;
-    	      this.roleArn = defaults.roleArn;
+            $ = new FirehoseDeliveryStreamKinesisSourceConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kinesisStreamArn(Output<String> kinesisStreamArn) {
-            this.kinesisStreamArn = Objects.requireNonNull(kinesisStreamArn);
+            $.kinesisStreamArn = kinesisStreamArn;
             return this;
         }
+
         public Builder kinesisStreamArn(String kinesisStreamArn) {
-            this.kinesisStreamArn = Output.of(Objects.requireNonNull(kinesisStreamArn));
-            return this;
+            return kinesisStreamArn(Output.of(kinesisStreamArn));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
-        }        public FirehoseDeliveryStreamKinesisSourceConfigurationGetArgs build() {
-            return new FirehoseDeliveryStreamKinesisSourceConfigurationGetArgs(kinesisStreamArn, roleArn);
+            return roleArn(Output.of(roleArn));
+        }
+
+        public FirehoseDeliveryStreamKinesisSourceConfigurationGetArgs build() {
+            $.kinesisStreamArn = Objects.requireNonNull($.kinesisStreamArn, "expected parameter 'kinesisStreamArn' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            return $;
         }
     }
+
 }

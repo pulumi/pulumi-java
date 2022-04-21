@@ -17,7 +17,7 @@ public final class GetSpacecraftArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,55 +28,52 @@ public final class GetSpacecraftArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="spacecraftName", required=true)
-      private final String spacecraftName;
+    private String spacecraftName;
 
     public String spacecraftName() {
         return this.spacecraftName;
     }
 
-    public GetSpacecraftArgs(
-        String resourceGroupName,
-        String spacecraftName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.spacecraftName = Objects.requireNonNull(spacecraftName, "expected parameter 'spacecraftName' to be non-null");
-    }
+    private GetSpacecraftArgs() {}
 
-    private GetSpacecraftArgs() {
-        this.resourceGroupName = null;
-        this.spacecraftName = null;
+    private GetSpacecraftArgs(GetSpacecraftArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.spacecraftName = $.spacecraftName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSpacecraftArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String spacecraftName;
+        private GetSpacecraftArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSpacecraftArgs();
         }
 
         public Builder(GetSpacecraftArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.spacecraftName = defaults.spacecraftName;
+            $ = new GetSpacecraftArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder spacecraftName(String spacecraftName) {
-            this.spacecraftName = Objects.requireNonNull(spacecraftName);
+            $.spacecraftName = spacecraftName;
             return this;
-        }        public GetSpacecraftArgs build() {
-            return new GetSpacecraftArgs(resourceGroupName, spacecraftName);
+        }
+
+        public GetSpacecraftArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.spacecraftName = Objects.requireNonNull($.spacecraftName, "expected parameter 'spacecraftName' to be non-null");
+            return $;
         }
     }
+
 }

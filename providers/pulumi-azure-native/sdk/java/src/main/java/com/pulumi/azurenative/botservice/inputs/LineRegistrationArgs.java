@@ -5,9 +5,9 @@ package com.pulumi.azurenative.botservice.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class LineRegistrationArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="channelAccessToken")
-      private final @Nullable Output<String> channelAccessToken;
+    private @Nullable Output<String> channelAccessToken;
 
-    public Output<String> channelAccessToken() {
-        return this.channelAccessToken == null ? Codegen.empty() : this.channelAccessToken;
+    public Optional<Output<String>> channelAccessToken() {
+        return Optional.ofNullable(this.channelAccessToken);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class LineRegistrationArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="channelSecret")
-      private final @Nullable Output<String> channelSecret;
+    private @Nullable Output<String> channelSecret;
 
-    public Output<String> channelSecret() {
-        return this.channelSecret == null ? Codegen.empty() : this.channelSecret;
+    public Optional<Output<String>> channelSecret() {
+        return Optional.ofNullable(this.channelSecret);
     }
 
-    public LineRegistrationArgs(
-        @Nullable Output<String> channelAccessToken,
-        @Nullable Output<String> channelSecret) {
-        this.channelAccessToken = channelAccessToken;
-        this.channelSecret = channelSecret;
-    }
+    private LineRegistrationArgs() {}
 
-    private LineRegistrationArgs() {
-        this.channelAccessToken = Codegen.empty();
-        this.channelSecret = Codegen.empty();
+    private LineRegistrationArgs(LineRegistrationArgs $) {
+        this.channelAccessToken = $.channelAccessToken;
+        this.channelSecret = $.channelSecret;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LineRegistrationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> channelAccessToken;
-        private @Nullable Output<String> channelSecret;
+        private LineRegistrationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LineRegistrationArgs();
         }
 
         public Builder(LineRegistrationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.channelAccessToken = defaults.channelAccessToken;
-    	      this.channelSecret = defaults.channelSecret;
+            $ = new LineRegistrationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder channelAccessToken(@Nullable Output<String> channelAccessToken) {
-            this.channelAccessToken = channelAccessToken;
+            $.channelAccessToken = channelAccessToken;
             return this;
         }
-        public Builder channelAccessToken(@Nullable String channelAccessToken) {
-            this.channelAccessToken = Codegen.ofNullable(channelAccessToken);
-            return this;
+
+        public Builder channelAccessToken(String channelAccessToken) {
+            return channelAccessToken(Output.of(channelAccessToken));
         }
+
         public Builder channelSecret(@Nullable Output<String> channelSecret) {
-            this.channelSecret = channelSecret;
+            $.channelSecret = channelSecret;
             return this;
         }
-        public Builder channelSecret(@Nullable String channelSecret) {
-            this.channelSecret = Codegen.ofNullable(channelSecret);
-            return this;
-        }        public LineRegistrationArgs build() {
-            return new LineRegistrationArgs(channelAccessToken, channelSecret);
+
+        public Builder channelSecret(String channelSecret) {
+            return channelSecret(Output.of(channelSecret));
+        }
+
+        public LineRegistrationArgs build() {
+            return $;
         }
     }
+
 }

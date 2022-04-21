@@ -21,45 +21,45 @@ public final class SecurityConfigResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="kerberosConfig", required=true)
-      private final KerberosConfigResponse kerberosConfig;
+    private KerberosConfigResponse kerberosConfig;
 
     public KerberosConfigResponse kerberosConfig() {
         return this.kerberosConfig;
     }
 
-    public SecurityConfigResponse(KerberosConfigResponse kerberosConfig) {
-        this.kerberosConfig = Objects.requireNonNull(kerberosConfig, "expected parameter 'kerberosConfig' to be non-null");
-    }
+    private SecurityConfigResponse() {}
 
-    private SecurityConfigResponse() {
-        this.kerberosConfig = null;
+    private SecurityConfigResponse(SecurityConfigResponse $) {
+        this.kerberosConfig = $.kerberosConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private KerberosConfigResponse kerberosConfig;
+        private SecurityConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityConfigResponse();
         }
 
         public Builder(SecurityConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kerberosConfig = defaults.kerberosConfig;
+            $ = new SecurityConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder kerberosConfig(KerberosConfigResponse kerberosConfig) {
-            this.kerberosConfig = Objects.requireNonNull(kerberosConfig);
+            $.kerberosConfig = kerberosConfig;
             return this;
-        }        public SecurityConfigResponse build() {
-            return new SecurityConfigResponse(kerberosConfig);
+        }
+
+        public SecurityConfigResponse build() {
+            $.kerberosConfig = Objects.requireNonNull($.kerberosConfig, "expected parameter 'kerberosConfig' to be non-null");
+            return $;
         }
     }
+
 }

@@ -8,11 +8,11 @@ import com.pulumi.azurenative.machinelearning.inputs.GraphNodeArgs;
 import com.pulumi.azurenative.machinelearning.inputs.GraphParameterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class GraphPackageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="edges")
-      private final @Nullable Output<List<GraphEdgeArgs>> edges;
+    private @Nullable Output<List<GraphEdgeArgs>> edges;
 
-    public Output<List<GraphEdgeArgs>> edges() {
-        return this.edges == null ? Codegen.empty() : this.edges;
+    public Optional<Output<List<GraphEdgeArgs>>> edges() {
+        return Optional.ofNullable(this.edges);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class GraphPackageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="graphParameters")
-      private final @Nullable Output<Map<String,GraphParameterArgs>> graphParameters;
+    private @Nullable Output<Map<String,GraphParameterArgs>> graphParameters;
 
-    public Output<Map<String,GraphParameterArgs>> graphParameters() {
-        return this.graphParameters == null ? Codegen.empty() : this.graphParameters;
+    public Optional<Output<Map<String,GraphParameterArgs>>> graphParameters() {
+        return Optional.ofNullable(this.graphParameters);
     }
 
     /**
@@ -51,79 +51,72 @@ public final class GraphPackageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodes")
-      private final @Nullable Output<Map<String,GraphNodeArgs>> nodes;
+    private @Nullable Output<Map<String,GraphNodeArgs>> nodes;
 
-    public Output<Map<String,GraphNodeArgs>> nodes() {
-        return this.nodes == null ? Codegen.empty() : this.nodes;
+    public Optional<Output<Map<String,GraphNodeArgs>>> nodes() {
+        return Optional.ofNullable(this.nodes);
     }
 
-    public GraphPackageArgs(
-        @Nullable Output<List<GraphEdgeArgs>> edges,
-        @Nullable Output<Map<String,GraphParameterArgs>> graphParameters,
-        @Nullable Output<Map<String,GraphNodeArgs>> nodes) {
-        this.edges = edges;
-        this.graphParameters = graphParameters;
-        this.nodes = nodes;
-    }
+    private GraphPackageArgs() {}
 
-    private GraphPackageArgs() {
-        this.edges = Codegen.empty();
-        this.graphParameters = Codegen.empty();
-        this.nodes = Codegen.empty();
+    private GraphPackageArgs(GraphPackageArgs $) {
+        this.edges = $.edges;
+        this.graphParameters = $.graphParameters;
+        this.nodes = $.nodes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GraphPackageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<GraphEdgeArgs>> edges;
-        private @Nullable Output<Map<String,GraphParameterArgs>> graphParameters;
-        private @Nullable Output<Map<String,GraphNodeArgs>> nodes;
+        private GraphPackageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GraphPackageArgs();
         }
 
         public Builder(GraphPackageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.edges = defaults.edges;
-    	      this.graphParameters = defaults.graphParameters;
-    	      this.nodes = defaults.nodes;
+            $ = new GraphPackageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder edges(@Nullable Output<List<GraphEdgeArgs>> edges) {
-            this.edges = edges;
+            $.edges = edges;
             return this;
         }
-        public Builder edges(@Nullable List<GraphEdgeArgs> edges) {
-            this.edges = Codegen.ofNullable(edges);
-            return this;
+
+        public Builder edges(List<GraphEdgeArgs> edges) {
+            return edges(Output.of(edges));
         }
+
         public Builder edges(GraphEdgeArgs... edges) {
             return edges(List.of(edges));
         }
+
         public Builder graphParameters(@Nullable Output<Map<String,GraphParameterArgs>> graphParameters) {
-            this.graphParameters = graphParameters;
+            $.graphParameters = graphParameters;
             return this;
         }
-        public Builder graphParameters(@Nullable Map<String,GraphParameterArgs> graphParameters) {
-            this.graphParameters = Codegen.ofNullable(graphParameters);
-            return this;
+
+        public Builder graphParameters(Map<String,GraphParameterArgs> graphParameters) {
+            return graphParameters(Output.of(graphParameters));
         }
+
         public Builder nodes(@Nullable Output<Map<String,GraphNodeArgs>> nodes) {
-            this.nodes = nodes;
+            $.nodes = nodes;
             return this;
         }
-        public Builder nodes(@Nullable Map<String,GraphNodeArgs> nodes) {
-            this.nodes = Codegen.ofNullable(nodes);
-            return this;
-        }        public GraphPackageArgs build() {
-            return new GraphPackageArgs(edges, graphParameters, nodes);
+
+        public Builder nodes(Map<String,GraphNodeArgs> nodes) {
+            return nodes(Output.of(nodes));
+        }
+
+        public GraphPackageArgs build() {
+            return $;
         }
     }
+
 }

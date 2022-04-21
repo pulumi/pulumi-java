@@ -5,11 +5,11 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.UsageRuleArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class UsageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="producerNotificationChannel")
-      private final @Nullable Output<String> producerNotificationChannel;
+    private @Nullable Output<String> producerNotificationChannel;
 
-    public Output<String> producerNotificationChannel() {
-        return this.producerNotificationChannel == null ? Codegen.empty() : this.producerNotificationChannel;
+    public Optional<Output<String>> producerNotificationChannel() {
+        return Optional.ofNullable(this.producerNotificationChannel);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class UsageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="requirements")
-      private final @Nullable Output<List<String>> requirements;
+    private @Nullable Output<List<String>> requirements;
 
-    public Output<List<String>> requirements() {
-        return this.requirements == null ? Codegen.empty() : this.requirements;
+    public Optional<Output<List<String>>> requirements() {
+        return Optional.ofNullable(this.requirements);
     }
 
     /**
@@ -48,82 +48,76 @@ public final class UsageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rules")
-      private final @Nullable Output<List<UsageRuleArgs>> rules;
+    private @Nullable Output<List<UsageRuleArgs>> rules;
 
-    public Output<List<UsageRuleArgs>> rules() {
-        return this.rules == null ? Codegen.empty() : this.rules;
+    public Optional<Output<List<UsageRuleArgs>>> rules() {
+        return Optional.ofNullable(this.rules);
     }
 
-    public UsageArgs(
-        @Nullable Output<String> producerNotificationChannel,
-        @Nullable Output<List<String>> requirements,
-        @Nullable Output<List<UsageRuleArgs>> rules) {
-        this.producerNotificationChannel = producerNotificationChannel;
-        this.requirements = requirements;
-        this.rules = rules;
-    }
+    private UsageArgs() {}
 
-    private UsageArgs() {
-        this.producerNotificationChannel = Codegen.empty();
-        this.requirements = Codegen.empty();
-        this.rules = Codegen.empty();
+    private UsageArgs(UsageArgs $) {
+        this.producerNotificationChannel = $.producerNotificationChannel;
+        this.requirements = $.requirements;
+        this.rules = $.rules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UsageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> producerNotificationChannel;
-        private @Nullable Output<List<String>> requirements;
-        private @Nullable Output<List<UsageRuleArgs>> rules;
+        private UsageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UsageArgs();
         }
 
         public Builder(UsageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.producerNotificationChannel = defaults.producerNotificationChannel;
-    	      this.requirements = defaults.requirements;
-    	      this.rules = defaults.rules;
+            $ = new UsageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder producerNotificationChannel(@Nullable Output<String> producerNotificationChannel) {
-            this.producerNotificationChannel = producerNotificationChannel;
+            $.producerNotificationChannel = producerNotificationChannel;
             return this;
         }
-        public Builder producerNotificationChannel(@Nullable String producerNotificationChannel) {
-            this.producerNotificationChannel = Codegen.ofNullable(producerNotificationChannel);
-            return this;
+
+        public Builder producerNotificationChannel(String producerNotificationChannel) {
+            return producerNotificationChannel(Output.of(producerNotificationChannel));
         }
+
         public Builder requirements(@Nullable Output<List<String>> requirements) {
-            this.requirements = requirements;
+            $.requirements = requirements;
             return this;
         }
-        public Builder requirements(@Nullable List<String> requirements) {
-            this.requirements = Codegen.ofNullable(requirements);
-            return this;
+
+        public Builder requirements(List<String> requirements) {
+            return requirements(Output.of(requirements));
         }
+
         public Builder requirements(String... requirements) {
             return requirements(List.of(requirements));
         }
+
         public Builder rules(@Nullable Output<List<UsageRuleArgs>> rules) {
-            this.rules = rules;
+            $.rules = rules;
             return this;
         }
-        public Builder rules(@Nullable List<UsageRuleArgs> rules) {
-            this.rules = Codegen.ofNullable(rules);
-            return this;
+
+        public Builder rules(List<UsageRuleArgs> rules) {
+            return rules(Output.of(rules));
         }
+
         public Builder rules(UsageRuleArgs... rules) {
             return rules(List.of(rules));
-        }        public UsageArgs build() {
-            return new UsageArgs(producerNotificationChannel, requirements, rules);
+        }
+
+        public UsageArgs build() {
+            return $;
         }
     }
+
 }

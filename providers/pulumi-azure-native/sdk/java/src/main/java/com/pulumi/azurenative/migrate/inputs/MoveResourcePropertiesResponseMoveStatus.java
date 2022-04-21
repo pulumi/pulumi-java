@@ -25,10 +25,10 @@ public final class MoveResourcePropertiesResponseMoveStatus extends com.pulumi.r
      * 
      */
     @Import(name="errors")
-      private final @Nullable MoveResourceErrorResponse errors;
+    private @Nullable MoveResourceErrorResponse errors;
 
     public Optional<MoveResourceErrorResponse> errors() {
-        return this.errors == null ? Optional.empty() : Optional.ofNullable(this.errors);
+        return Optional.ofNullable(this.errors);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class MoveResourcePropertiesResponseMoveStatus extends com.pulumi.r
      * 
      */
     @Import(name="jobStatus")
-      private final @Nullable JobStatusResponse jobStatus;
+    private @Nullable JobStatusResponse jobStatus;
 
     public Optional<JobStatusResponse> jobStatus() {
-        return this.jobStatus == null ? Optional.empty() : Optional.ofNullable(this.jobStatus);
+        return Optional.ofNullable(this.jobStatus);
     }
 
     /**
@@ -47,64 +47,57 @@ public final class MoveResourcePropertiesResponseMoveStatus extends com.pulumi.r
      * 
      */
     @Import(name="moveState", required=true)
-      private final String moveState;
+    private String moveState;
 
     public String moveState() {
         return this.moveState;
     }
 
-    public MoveResourcePropertiesResponseMoveStatus(
-        @Nullable MoveResourceErrorResponse errors,
-        @Nullable JobStatusResponse jobStatus,
-        String moveState) {
-        this.errors = errors;
-        this.jobStatus = jobStatus;
-        this.moveState = Objects.requireNonNull(moveState, "expected parameter 'moveState' to be non-null");
-    }
+    private MoveResourcePropertiesResponseMoveStatus() {}
 
-    private MoveResourcePropertiesResponseMoveStatus() {
-        this.errors = null;
-        this.jobStatus = null;
-        this.moveState = null;
+    private MoveResourcePropertiesResponseMoveStatus(MoveResourcePropertiesResponseMoveStatus $) {
+        this.errors = $.errors;
+        this.jobStatus = $.jobStatus;
+        this.moveState = $.moveState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MoveResourcePropertiesResponseMoveStatus defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable MoveResourceErrorResponse errors;
-        private @Nullable JobStatusResponse jobStatus;
-        private String moveState;
+        private MoveResourcePropertiesResponseMoveStatus $;
 
         public Builder() {
-    	      // Empty
+            $ = new MoveResourcePropertiesResponseMoveStatus();
         }
 
         public Builder(MoveResourcePropertiesResponseMoveStatus defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.errors = defaults.errors;
-    	      this.jobStatus = defaults.jobStatus;
-    	      this.moveState = defaults.moveState;
+            $ = new MoveResourcePropertiesResponseMoveStatus(Objects.requireNonNull(defaults));
         }
 
         public Builder errors(@Nullable MoveResourceErrorResponse errors) {
-            this.errors = errors;
+            $.errors = errors;
             return this;
         }
+
         public Builder jobStatus(@Nullable JobStatusResponse jobStatus) {
-            this.jobStatus = jobStatus;
+            $.jobStatus = jobStatus;
             return this;
         }
+
         public Builder moveState(String moveState) {
-            this.moveState = Objects.requireNonNull(moveState);
+            $.moveState = moveState;
             return this;
-        }        public MoveResourcePropertiesResponseMoveStatus build() {
-            return new MoveResourcePropertiesResponseMoveStatus(errors, jobStatus, moveState);
+        }
+
+        public MoveResourcePropertiesResponseMoveStatus build() {
+            $.moveState = Objects.requireNonNull($.moveState, "expected parameter 'moveState' to be non-null");
+            return $;
         }
     }
+
 }

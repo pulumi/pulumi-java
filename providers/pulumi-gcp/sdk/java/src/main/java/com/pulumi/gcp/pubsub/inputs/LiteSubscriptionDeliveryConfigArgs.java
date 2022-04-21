@@ -5,7 +5,6 @@ package com.pulumi.gcp.pubsub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,49 +19,49 @@ public final class LiteSubscriptionDeliveryConfigArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="deliveryRequirement", required=true)
-      private final Output<String> deliveryRequirement;
+    private Output<String> deliveryRequirement;
 
     public Output<String> deliveryRequirement() {
         return this.deliveryRequirement;
     }
 
-    public LiteSubscriptionDeliveryConfigArgs(Output<String> deliveryRequirement) {
-        this.deliveryRequirement = Objects.requireNonNull(deliveryRequirement, "expected parameter 'deliveryRequirement' to be non-null");
-    }
+    private LiteSubscriptionDeliveryConfigArgs() {}
 
-    private LiteSubscriptionDeliveryConfigArgs() {
-        this.deliveryRequirement = Codegen.empty();
+    private LiteSubscriptionDeliveryConfigArgs(LiteSubscriptionDeliveryConfigArgs $) {
+        this.deliveryRequirement = $.deliveryRequirement;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LiteSubscriptionDeliveryConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> deliveryRequirement;
+        private LiteSubscriptionDeliveryConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LiteSubscriptionDeliveryConfigArgs();
         }
 
         public Builder(LiteSubscriptionDeliveryConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deliveryRequirement = defaults.deliveryRequirement;
+            $ = new LiteSubscriptionDeliveryConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deliveryRequirement(Output<String> deliveryRequirement) {
-            this.deliveryRequirement = Objects.requireNonNull(deliveryRequirement);
+            $.deliveryRequirement = deliveryRequirement;
             return this;
         }
+
         public Builder deliveryRequirement(String deliveryRequirement) {
-            this.deliveryRequirement = Output.of(Objects.requireNonNull(deliveryRequirement));
-            return this;
-        }        public LiteSubscriptionDeliveryConfigArgs build() {
-            return new LiteSubscriptionDeliveryConfigArgs(deliveryRequirement);
+            return deliveryRequirement(Output.of(deliveryRequirement));
+        }
+
+        public LiteSubscriptionDeliveryConfigArgs build() {
+            $.deliveryRequirement = Objects.requireNonNull($.deliveryRequirement, "expected parameter 'deliveryRequirement' to be non-null");
+            return $;
         }
     }
+
 }

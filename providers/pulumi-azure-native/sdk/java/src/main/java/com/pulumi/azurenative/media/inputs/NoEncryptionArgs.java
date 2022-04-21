@@ -6,8 +6,8 @@ package com.pulumi.azurenative.media.inputs;
 import com.pulumi.azurenative.media.inputs.EnabledProtocolsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class NoEncryptionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enabledProtocols")
-      private final @Nullable Output<EnabledProtocolsArgs> enabledProtocols;
+    private @Nullable Output<EnabledProtocolsArgs> enabledProtocols;
 
-    public Output<EnabledProtocolsArgs> enabledProtocols() {
-        return this.enabledProtocols == null ? Codegen.empty() : this.enabledProtocols;
+    public Optional<Output<EnabledProtocolsArgs>> enabledProtocols() {
+        return Optional.ofNullable(this.enabledProtocols);
     }
 
-    public NoEncryptionArgs(@Nullable Output<EnabledProtocolsArgs> enabledProtocols) {
-        this.enabledProtocols = enabledProtocols;
-    }
+    private NoEncryptionArgs() {}
 
-    private NoEncryptionArgs() {
-        this.enabledProtocols = Codegen.empty();
+    private NoEncryptionArgs(NoEncryptionArgs $) {
+        this.enabledProtocols = $.enabledProtocols;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NoEncryptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<EnabledProtocolsArgs> enabledProtocols;
+        private NoEncryptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NoEncryptionArgs();
         }
 
         public Builder(NoEncryptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabledProtocols = defaults.enabledProtocols;
+            $ = new NoEncryptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabledProtocols(@Nullable Output<EnabledProtocolsArgs> enabledProtocols) {
-            this.enabledProtocols = enabledProtocols;
+            $.enabledProtocols = enabledProtocols;
             return this;
         }
-        public Builder enabledProtocols(@Nullable EnabledProtocolsArgs enabledProtocols) {
-            this.enabledProtocols = Codegen.ofNullable(enabledProtocols);
-            return this;
-        }        public NoEncryptionArgs build() {
-            return new NoEncryptionArgs(enabledProtocols);
+
+        public Builder enabledProtocols(EnabledProtocolsArgs enabledProtocols) {
+            return enabledProtocols(Output.of(enabledProtocols));
+        }
+
+        public NoEncryptionArgs build() {
+            return $;
         }
     }
+
 }

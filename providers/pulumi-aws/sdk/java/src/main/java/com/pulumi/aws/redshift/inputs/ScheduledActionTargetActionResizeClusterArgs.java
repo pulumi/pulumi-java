@@ -5,11 +5,11 @@ package com.pulumi.aws.redshift.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ScheduledActionTargetActionResizeClusterArgs extends com.pulu
      * 
      */
     @Import(name="classic")
-      private final @Nullable Output<Boolean> classic;
+    private @Nullable Output<Boolean> classic;
 
-    public Output<Boolean> classic() {
-        return this.classic == null ? Codegen.empty() : this.classic;
+    public Optional<Output<Boolean>> classic() {
+        return Optional.ofNullable(this.classic);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class ScheduledActionTargetActionResizeClusterArgs extends com.pulu
      * 
      */
     @Import(name="clusterIdentifier", required=true)
-      private final Output<String> clusterIdentifier;
+    private Output<String> clusterIdentifier;
 
     public Output<String> clusterIdentifier() {
         return this.clusterIdentifier;
@@ -44,10 +44,10 @@ public final class ScheduledActionTargetActionResizeClusterArgs extends com.pulu
      * 
      */
     @Import(name="clusterType")
-      private final @Nullable Output<String> clusterType;
+    private @Nullable Output<String> clusterType;
 
-    public Output<String> clusterType() {
-        return this.clusterType == null ? Codegen.empty() : this.clusterType;
+    public Optional<Output<String>> clusterType() {
+        return Optional.ofNullable(this.clusterType);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class ScheduledActionTargetActionResizeClusterArgs extends com.pulu
      * 
      */
     @Import(name="nodeType")
-      private final @Nullable Output<String> nodeType;
+    private @Nullable Output<String> nodeType;
 
-    public Output<String> nodeType() {
-        return this.nodeType == null ? Codegen.empty() : this.nodeType;
+    public Optional<Output<String>> nodeType() {
+        return Optional.ofNullable(this.nodeType);
     }
 
     /**
@@ -66,102 +66,89 @@ public final class ScheduledActionTargetActionResizeClusterArgs extends com.pulu
      * 
      */
     @Import(name="numberOfNodes")
-      private final @Nullable Output<Integer> numberOfNodes;
+    private @Nullable Output<Integer> numberOfNodes;
 
-    public Output<Integer> numberOfNodes() {
-        return this.numberOfNodes == null ? Codegen.empty() : this.numberOfNodes;
+    public Optional<Output<Integer>> numberOfNodes() {
+        return Optional.ofNullable(this.numberOfNodes);
     }
 
-    public ScheduledActionTargetActionResizeClusterArgs(
-        @Nullable Output<Boolean> classic,
-        Output<String> clusterIdentifier,
-        @Nullable Output<String> clusterType,
-        @Nullable Output<String> nodeType,
-        @Nullable Output<Integer> numberOfNodes) {
-        this.classic = classic;
-        this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier, "expected parameter 'clusterIdentifier' to be non-null");
-        this.clusterType = clusterType;
-        this.nodeType = nodeType;
-        this.numberOfNodes = numberOfNodes;
-    }
+    private ScheduledActionTargetActionResizeClusterArgs() {}
 
-    private ScheduledActionTargetActionResizeClusterArgs() {
-        this.classic = Codegen.empty();
-        this.clusterIdentifier = Codegen.empty();
-        this.clusterType = Codegen.empty();
-        this.nodeType = Codegen.empty();
-        this.numberOfNodes = Codegen.empty();
+    private ScheduledActionTargetActionResizeClusterArgs(ScheduledActionTargetActionResizeClusterArgs $) {
+        this.classic = $.classic;
+        this.clusterIdentifier = $.clusterIdentifier;
+        this.clusterType = $.clusterType;
+        this.nodeType = $.nodeType;
+        this.numberOfNodes = $.numberOfNodes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScheduledActionTargetActionResizeClusterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> classic;
-        private Output<String> clusterIdentifier;
-        private @Nullable Output<String> clusterType;
-        private @Nullable Output<String> nodeType;
-        private @Nullable Output<Integer> numberOfNodes;
+        private ScheduledActionTargetActionResizeClusterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScheduledActionTargetActionResizeClusterArgs();
         }
 
         public Builder(ScheduledActionTargetActionResizeClusterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.classic = defaults.classic;
-    	      this.clusterIdentifier = defaults.clusterIdentifier;
-    	      this.clusterType = defaults.clusterType;
-    	      this.nodeType = defaults.nodeType;
-    	      this.numberOfNodes = defaults.numberOfNodes;
+            $ = new ScheduledActionTargetActionResizeClusterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder classic(@Nullable Output<Boolean> classic) {
-            this.classic = classic;
+            $.classic = classic;
             return this;
         }
-        public Builder classic(@Nullable Boolean classic) {
-            this.classic = Codegen.ofNullable(classic);
-            return this;
+
+        public Builder classic(Boolean classic) {
+            return classic(Output.of(classic));
         }
+
         public Builder clusterIdentifier(Output<String> clusterIdentifier) {
-            this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier);
+            $.clusterIdentifier = clusterIdentifier;
             return this;
         }
+
         public Builder clusterIdentifier(String clusterIdentifier) {
-            this.clusterIdentifier = Output.of(Objects.requireNonNull(clusterIdentifier));
-            return this;
+            return clusterIdentifier(Output.of(clusterIdentifier));
         }
+
         public Builder clusterType(@Nullable Output<String> clusterType) {
-            this.clusterType = clusterType;
+            $.clusterType = clusterType;
             return this;
         }
-        public Builder clusterType(@Nullable String clusterType) {
-            this.clusterType = Codegen.ofNullable(clusterType);
-            return this;
+
+        public Builder clusterType(String clusterType) {
+            return clusterType(Output.of(clusterType));
         }
+
         public Builder nodeType(@Nullable Output<String> nodeType) {
-            this.nodeType = nodeType;
+            $.nodeType = nodeType;
             return this;
         }
-        public Builder nodeType(@Nullable String nodeType) {
-            this.nodeType = Codegen.ofNullable(nodeType);
-            return this;
+
+        public Builder nodeType(String nodeType) {
+            return nodeType(Output.of(nodeType));
         }
+
         public Builder numberOfNodes(@Nullable Output<Integer> numberOfNodes) {
-            this.numberOfNodes = numberOfNodes;
+            $.numberOfNodes = numberOfNodes;
             return this;
         }
-        public Builder numberOfNodes(@Nullable Integer numberOfNodes) {
-            this.numberOfNodes = Codegen.ofNullable(numberOfNodes);
-            return this;
-        }        public ScheduledActionTargetActionResizeClusterArgs build() {
-            return new ScheduledActionTargetActionResizeClusterArgs(classic, clusterIdentifier, clusterType, nodeType, numberOfNodes);
+
+        public Builder numberOfNodes(Integer numberOfNodes) {
+            return numberOfNodes(Output.of(numberOfNodes));
+        }
+
+        public ScheduledActionTargetActionResizeClusterArgs build() {
+            $.clusterIdentifier = Objects.requireNonNull($.clusterIdentifier, "expected parameter 'clusterIdentifier' to be non-null");
+            return $;
         }
     }
+
 }

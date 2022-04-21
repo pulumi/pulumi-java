@@ -17,7 +17,7 @@ public final class GetDdosCustomPolicyArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="ddosCustomPolicyName", required=true)
-      private final String ddosCustomPolicyName;
+    private String ddosCustomPolicyName;
 
     public String ddosCustomPolicyName() {
         return this.ddosCustomPolicyName;
@@ -28,55 +28,52 @@ public final class GetDdosCustomPolicyArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetDdosCustomPolicyArgs(
-        String ddosCustomPolicyName,
-        String resourceGroupName) {
-        this.ddosCustomPolicyName = Objects.requireNonNull(ddosCustomPolicyName, "expected parameter 'ddosCustomPolicyName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetDdosCustomPolicyArgs() {}
 
-    private GetDdosCustomPolicyArgs() {
-        this.ddosCustomPolicyName = null;
-        this.resourceGroupName = null;
+    private GetDdosCustomPolicyArgs(GetDdosCustomPolicyArgs $) {
+        this.ddosCustomPolicyName = $.ddosCustomPolicyName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDdosCustomPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String ddosCustomPolicyName;
-        private String resourceGroupName;
+        private GetDdosCustomPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDdosCustomPolicyArgs();
         }
 
         public Builder(GetDdosCustomPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ddosCustomPolicyName = defaults.ddosCustomPolicyName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetDdosCustomPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ddosCustomPolicyName(String ddosCustomPolicyName) {
-            this.ddosCustomPolicyName = Objects.requireNonNull(ddosCustomPolicyName);
+            $.ddosCustomPolicyName = ddosCustomPolicyName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetDdosCustomPolicyArgs build() {
-            return new GetDdosCustomPolicyArgs(ddosCustomPolicyName, resourceGroupName);
+        }
+
+        public GetDdosCustomPolicyArgs build() {
+            $.ddosCustomPolicyName = Objects.requireNonNull($.ddosCustomPolicyName, "expected parameter 'ddosCustomPolicyName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

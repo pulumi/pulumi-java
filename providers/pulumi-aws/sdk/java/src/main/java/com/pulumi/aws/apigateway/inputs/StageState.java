@@ -6,11 +6,11 @@ package com.pulumi.aws.apigateway.inputs;
 import com.pulumi.aws.apigateway.inputs.StageAccessLogSettingsGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class StageState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accessLogSettings")
-      private final @Nullable Output<StageAccessLogSettingsGetArgs> accessLogSettings;
+    private @Nullable Output<StageAccessLogSettingsGetArgs> accessLogSettings;
 
-    public Output<StageAccessLogSettingsGetArgs> accessLogSettings() {
-        return this.accessLogSettings == null ? Codegen.empty() : this.accessLogSettings;
+    public Optional<Output<StageAccessLogSettingsGetArgs>> accessLogSettings() {
+        return Optional.ofNullable(this.accessLogSettings);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class StageState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class StageState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cacheClusterEnabled")
-      private final @Nullable Output<Boolean> cacheClusterEnabled;
+    private @Nullable Output<Boolean> cacheClusterEnabled;
 
-    public Output<Boolean> cacheClusterEnabled() {
-        return this.cacheClusterEnabled == null ? Codegen.empty() : this.cacheClusterEnabled;
+    public Optional<Output<Boolean>> cacheClusterEnabled() {
+        return Optional.ofNullable(this.cacheClusterEnabled);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class StageState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cacheClusterSize")
-      private final @Nullable Output<String> cacheClusterSize;
+    private @Nullable Output<String> cacheClusterSize;
 
-    public Output<String> cacheClusterSize() {
-        return this.cacheClusterSize == null ? Codegen.empty() : this.cacheClusterSize;
+    public Optional<Output<String>> cacheClusterSize() {
+        return Optional.ofNullable(this.cacheClusterSize);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class StageState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clientCertificateId")
-      private final @Nullable Output<String> clientCertificateId;
+    private @Nullable Output<String> clientCertificateId;
 
-    public Output<String> clientCertificateId() {
-        return this.clientCertificateId == null ? Codegen.empty() : this.clientCertificateId;
+    public Optional<Output<String>> clientCertificateId() {
+        return Optional.ofNullable(this.clientCertificateId);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class StageState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deployment")
-      private final @Nullable Output<String> deployment;
+    private @Nullable Output<String> deployment;
 
-    public Output<String> deployment() {
-        return this.deployment == null ? Codegen.empty() : this.deployment;
+    public Optional<Output<String>> deployment() {
+        return Optional.ofNullable(this.deployment);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class StageState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class StageState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="documentationVersion")
-      private final @Nullable Output<String> documentationVersion;
+    private @Nullable Output<String> documentationVersion;
 
-    public Output<String> documentationVersion() {
-        return this.documentationVersion == null ? Codegen.empty() : this.documentationVersion;
+    public Optional<Output<String>> documentationVersion() {
+        return Optional.ofNullable(this.documentationVersion);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class StageState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="executionArn")
-      private final @Nullable Output<String> executionArn;
+    private @Nullable Output<String> executionArn;
 
-    public Output<String> executionArn() {
-        return this.executionArn == null ? Codegen.empty() : this.executionArn;
+    public Optional<Output<String>> executionArn() {
+        return Optional.ofNullable(this.executionArn);
     }
 
     /**
@@ -125,10 +125,10 @@ public final class StageState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="invokeUrl")
-      private final @Nullable Output<String> invokeUrl;
+    private @Nullable Output<String> invokeUrl;
 
-    public Output<String> invokeUrl() {
-        return this.invokeUrl == null ? Codegen.empty() : this.invokeUrl;
+    public Optional<Output<String>> invokeUrl() {
+        return Optional.ofNullable(this.invokeUrl);
     }
 
     /**
@@ -136,10 +136,10 @@ public final class StageState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="restApi")
-      private final @Nullable Output<String> restApi;
+    private @Nullable Output<String> restApi;
 
-    public Output<String> restApi() {
-        return this.restApi == null ? Codegen.empty() : this.restApi;
+    public Optional<Output<String>> restApi() {
+        return Optional.ofNullable(this.restApi);
     }
 
     /**
@@ -147,10 +147,10 @@ public final class StageState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="stageName")
-      private final @Nullable Output<String> stageName;
+    private @Nullable Output<String> stageName;
 
-    public Output<String> stageName() {
-        return this.stageName == null ? Codegen.empty() : this.stageName;
+    public Optional<Output<String>> stageName() {
+        return Optional.ofNullable(this.stageName);
     }
 
     /**
@@ -158,10 +158,10 @@ public final class StageState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -169,10 +169,10 @@ public final class StageState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -180,10 +180,10 @@ public final class StageState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="variables")
-      private final @Nullable Output<Map<String,String>> variables;
+    private @Nullable Output<Map<String,String>> variables;
 
-    public Output<Map<String,String>> variables() {
-        return this.variables == null ? Codegen.empty() : this.variables;
+    public Optional<Output<Map<String,String>>> variables() {
+        return Optional.ofNullable(this.variables);
     }
 
     /**
@@ -191,10 +191,10 @@ public final class StageState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="webAclArn")
-      private final @Nullable Output<String> webAclArn;
+    private @Nullable Output<String> webAclArn;
 
-    public Output<String> webAclArn() {
-        return this.webAclArn == null ? Codegen.empty() : this.webAclArn;
+    public Optional<Output<String>> webAclArn() {
+        return Optional.ofNullable(this.webAclArn);
     }
 
     /**
@@ -202,250 +202,208 @@ public final class StageState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="xrayTracingEnabled")
-      private final @Nullable Output<Boolean> xrayTracingEnabled;
+    private @Nullable Output<Boolean> xrayTracingEnabled;
 
-    public Output<Boolean> xrayTracingEnabled() {
-        return this.xrayTracingEnabled == null ? Codegen.empty() : this.xrayTracingEnabled;
+    public Optional<Output<Boolean>> xrayTracingEnabled() {
+        return Optional.ofNullable(this.xrayTracingEnabled);
     }
 
-    public StageState(
-        @Nullable Output<StageAccessLogSettingsGetArgs> accessLogSettings,
-        @Nullable Output<String> arn,
-        @Nullable Output<Boolean> cacheClusterEnabled,
-        @Nullable Output<String> cacheClusterSize,
-        @Nullable Output<String> clientCertificateId,
-        @Nullable Output<String> deployment,
-        @Nullable Output<String> description,
-        @Nullable Output<String> documentationVersion,
-        @Nullable Output<String> executionArn,
-        @Nullable Output<String> invokeUrl,
-        @Nullable Output<String> restApi,
-        @Nullable Output<String> stageName,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<Map<String,String>> variables,
-        @Nullable Output<String> webAclArn,
-        @Nullable Output<Boolean> xrayTracingEnabled) {
-        this.accessLogSettings = accessLogSettings;
-        this.arn = arn;
-        this.cacheClusterEnabled = cacheClusterEnabled;
-        this.cacheClusterSize = cacheClusterSize;
-        this.clientCertificateId = clientCertificateId;
-        this.deployment = deployment;
-        this.description = description;
-        this.documentationVersion = documentationVersion;
-        this.executionArn = executionArn;
-        this.invokeUrl = invokeUrl;
-        this.restApi = restApi;
-        this.stageName = stageName;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.variables = variables;
-        this.webAclArn = webAclArn;
-        this.xrayTracingEnabled = xrayTracingEnabled;
-    }
+    private StageState() {}
 
-    private StageState() {
-        this.accessLogSettings = Codegen.empty();
-        this.arn = Codegen.empty();
-        this.cacheClusterEnabled = Codegen.empty();
-        this.cacheClusterSize = Codegen.empty();
-        this.clientCertificateId = Codegen.empty();
-        this.deployment = Codegen.empty();
-        this.description = Codegen.empty();
-        this.documentationVersion = Codegen.empty();
-        this.executionArn = Codegen.empty();
-        this.invokeUrl = Codegen.empty();
-        this.restApi = Codegen.empty();
-        this.stageName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.variables = Codegen.empty();
-        this.webAclArn = Codegen.empty();
-        this.xrayTracingEnabled = Codegen.empty();
+    private StageState(StageState $) {
+        this.accessLogSettings = $.accessLogSettings;
+        this.arn = $.arn;
+        this.cacheClusterEnabled = $.cacheClusterEnabled;
+        this.cacheClusterSize = $.cacheClusterSize;
+        this.clientCertificateId = $.clientCertificateId;
+        this.deployment = $.deployment;
+        this.description = $.description;
+        this.documentationVersion = $.documentationVersion;
+        this.executionArn = $.executionArn;
+        this.invokeUrl = $.invokeUrl;
+        this.restApi = $.restApi;
+        this.stageName = $.stageName;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.variables = $.variables;
+        this.webAclArn = $.webAclArn;
+        this.xrayTracingEnabled = $.xrayTracingEnabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StageState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<StageAccessLogSettingsGetArgs> accessLogSettings;
-        private @Nullable Output<String> arn;
-        private @Nullable Output<Boolean> cacheClusterEnabled;
-        private @Nullable Output<String> cacheClusterSize;
-        private @Nullable Output<String> clientCertificateId;
-        private @Nullable Output<String> deployment;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> documentationVersion;
-        private @Nullable Output<String> executionArn;
-        private @Nullable Output<String> invokeUrl;
-        private @Nullable Output<String> restApi;
-        private @Nullable Output<String> stageName;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<Map<String,String>> variables;
-        private @Nullable Output<String> webAclArn;
-        private @Nullable Output<Boolean> xrayTracingEnabled;
+        private StageState $;
 
         public Builder() {
-    	      // Empty
+            $ = new StageState();
         }
 
         public Builder(StageState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessLogSettings = defaults.accessLogSettings;
-    	      this.arn = defaults.arn;
-    	      this.cacheClusterEnabled = defaults.cacheClusterEnabled;
-    	      this.cacheClusterSize = defaults.cacheClusterSize;
-    	      this.clientCertificateId = defaults.clientCertificateId;
-    	      this.deployment = defaults.deployment;
-    	      this.description = defaults.description;
-    	      this.documentationVersion = defaults.documentationVersion;
-    	      this.executionArn = defaults.executionArn;
-    	      this.invokeUrl = defaults.invokeUrl;
-    	      this.restApi = defaults.restApi;
-    	      this.stageName = defaults.stageName;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.variables = defaults.variables;
-    	      this.webAclArn = defaults.webAclArn;
-    	      this.xrayTracingEnabled = defaults.xrayTracingEnabled;
+            $ = new StageState(Objects.requireNonNull(defaults));
         }
 
         public Builder accessLogSettings(@Nullable Output<StageAccessLogSettingsGetArgs> accessLogSettings) {
-            this.accessLogSettings = accessLogSettings;
+            $.accessLogSettings = accessLogSettings;
             return this;
         }
-        public Builder accessLogSettings(@Nullable StageAccessLogSettingsGetArgs accessLogSettings) {
-            this.accessLogSettings = Codegen.ofNullable(accessLogSettings);
-            return this;
+
+        public Builder accessLogSettings(StageAccessLogSettingsGetArgs accessLogSettings) {
+            return accessLogSettings(Output.of(accessLogSettings));
         }
+
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder cacheClusterEnabled(@Nullable Output<Boolean> cacheClusterEnabled) {
-            this.cacheClusterEnabled = cacheClusterEnabled;
+            $.cacheClusterEnabled = cacheClusterEnabled;
             return this;
         }
-        public Builder cacheClusterEnabled(@Nullable Boolean cacheClusterEnabled) {
-            this.cacheClusterEnabled = Codegen.ofNullable(cacheClusterEnabled);
-            return this;
+
+        public Builder cacheClusterEnabled(Boolean cacheClusterEnabled) {
+            return cacheClusterEnabled(Output.of(cacheClusterEnabled));
         }
+
         public Builder cacheClusterSize(@Nullable Output<String> cacheClusterSize) {
-            this.cacheClusterSize = cacheClusterSize;
+            $.cacheClusterSize = cacheClusterSize;
             return this;
         }
-        public Builder cacheClusterSize(@Nullable String cacheClusterSize) {
-            this.cacheClusterSize = Codegen.ofNullable(cacheClusterSize);
-            return this;
+
+        public Builder cacheClusterSize(String cacheClusterSize) {
+            return cacheClusterSize(Output.of(cacheClusterSize));
         }
+
         public Builder clientCertificateId(@Nullable Output<String> clientCertificateId) {
-            this.clientCertificateId = clientCertificateId;
+            $.clientCertificateId = clientCertificateId;
             return this;
         }
-        public Builder clientCertificateId(@Nullable String clientCertificateId) {
-            this.clientCertificateId = Codegen.ofNullable(clientCertificateId);
-            return this;
+
+        public Builder clientCertificateId(String clientCertificateId) {
+            return clientCertificateId(Output.of(clientCertificateId));
         }
+
         public Builder deployment(@Nullable Output<String> deployment) {
-            this.deployment = deployment;
+            $.deployment = deployment;
             return this;
         }
+
+        public Builder deployment(String deployment) {
+            return deployment(Output.of(deployment));
+        }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder documentationVersion(@Nullable Output<String> documentationVersion) {
-            this.documentationVersion = documentationVersion;
+            $.documentationVersion = documentationVersion;
             return this;
         }
-        public Builder documentationVersion(@Nullable String documentationVersion) {
-            this.documentationVersion = Codegen.ofNullable(documentationVersion);
-            return this;
+
+        public Builder documentationVersion(String documentationVersion) {
+            return documentationVersion(Output.of(documentationVersion));
         }
+
         public Builder executionArn(@Nullable Output<String> executionArn) {
-            this.executionArn = executionArn;
+            $.executionArn = executionArn;
             return this;
         }
-        public Builder executionArn(@Nullable String executionArn) {
-            this.executionArn = Codegen.ofNullable(executionArn);
-            return this;
+
+        public Builder executionArn(String executionArn) {
+            return executionArn(Output.of(executionArn));
         }
+
         public Builder invokeUrl(@Nullable Output<String> invokeUrl) {
-            this.invokeUrl = invokeUrl;
+            $.invokeUrl = invokeUrl;
             return this;
         }
-        public Builder invokeUrl(@Nullable String invokeUrl) {
-            this.invokeUrl = Codegen.ofNullable(invokeUrl);
-            return this;
+
+        public Builder invokeUrl(String invokeUrl) {
+            return invokeUrl(Output.of(invokeUrl));
         }
+
         public Builder restApi(@Nullable Output<String> restApi) {
-            this.restApi = restApi;
+            $.restApi = restApi;
             return this;
         }
+
+        public Builder restApi(String restApi) {
+            return restApi(Output.of(restApi));
+        }
+
         public Builder stageName(@Nullable Output<String> stageName) {
-            this.stageName = stageName;
+            $.stageName = stageName;
             return this;
         }
-        public Builder stageName(@Nullable String stageName) {
-            this.stageName = Codegen.ofNullable(stageName);
-            return this;
+
+        public Builder stageName(String stageName) {
+            return stageName(Output.of(stageName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder variables(@Nullable Output<Map<String,String>> variables) {
-            this.variables = variables;
+            $.variables = variables;
             return this;
         }
-        public Builder variables(@Nullable Map<String,String> variables) {
-            this.variables = Codegen.ofNullable(variables);
-            return this;
+
+        public Builder variables(Map<String,String> variables) {
+            return variables(Output.of(variables));
         }
+
         public Builder webAclArn(@Nullable Output<String> webAclArn) {
-            this.webAclArn = webAclArn;
+            $.webAclArn = webAclArn;
             return this;
         }
-        public Builder webAclArn(@Nullable String webAclArn) {
-            this.webAclArn = Codegen.ofNullable(webAclArn);
-            return this;
+
+        public Builder webAclArn(String webAclArn) {
+            return webAclArn(Output.of(webAclArn));
         }
+
         public Builder xrayTracingEnabled(@Nullable Output<Boolean> xrayTracingEnabled) {
-            this.xrayTracingEnabled = xrayTracingEnabled;
+            $.xrayTracingEnabled = xrayTracingEnabled;
             return this;
         }
-        public Builder xrayTracingEnabled(@Nullable Boolean xrayTracingEnabled) {
-            this.xrayTracingEnabled = Codegen.ofNullable(xrayTracingEnabled);
-            return this;
-        }        public StageState build() {
-            return new StageState(accessLogSettings, arn, cacheClusterEnabled, cacheClusterSize, clientCertificateId, deployment, description, documentationVersion, executionArn, invokeUrl, restApi, stageName, tags, tagsAll, variables, webAclArn, xrayTracingEnabled);
+
+        public Builder xrayTracingEnabled(Boolean xrayTracingEnabled) {
+            return xrayTracingEnabled(Output.of(xrayTracingEnabled));
+        }
+
+        public StageState build() {
+            return $;
         }
     }
+
 }

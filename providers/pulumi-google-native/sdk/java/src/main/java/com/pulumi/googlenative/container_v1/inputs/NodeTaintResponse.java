@@ -21,7 +21,7 @@ public final class NodeTaintResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="effect", required=true)
-      private final String effect;
+    private String effect;
 
     public String effect() {
         return this.effect;
@@ -32,7 +32,7 @@ public final class NodeTaintResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="key", required=true)
-      private final String key;
+    private String key;
 
     public String key() {
         return this.key;
@@ -43,64 +43,59 @@ public final class NodeTaintResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public NodeTaintResponse(
-        String effect,
-        String key,
-        String value) {
-        this.effect = Objects.requireNonNull(effect, "expected parameter 'effect' to be non-null");
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private NodeTaintResponse() {}
 
-    private NodeTaintResponse() {
-        this.effect = null;
-        this.key = null;
-        this.value = null;
+    private NodeTaintResponse(NodeTaintResponse $) {
+        this.effect = $.effect;
+        this.key = $.key;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodeTaintResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String effect;
-        private String key;
-        private String value;
+        private NodeTaintResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodeTaintResponse();
         }
 
         public Builder(NodeTaintResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.effect = defaults.effect;
-    	      this.key = defaults.key;
-    	      this.value = defaults.value;
+            $ = new NodeTaintResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder effect(String effect) {
-            this.effect = Objects.requireNonNull(effect);
+            $.effect = effect;
             return this;
         }
+
         public Builder key(String key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public NodeTaintResponse build() {
-            return new NodeTaintResponse(effect, key, value);
+        }
+
+        public NodeTaintResponse build() {
+            $.effect = Objects.requireNonNull($.effect, "expected parameter 'effect' to be non-null");
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.gcp.notebooks;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.notebooks.inputs.RuntimeIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,10 +18,10 @@ public final class RuntimeIamBindingArgs extends com.pulumi.resources.ResourceAr
     public static final RuntimeIamBindingArgs Empty = new RuntimeIamBindingArgs();
 
     @Import(name="condition")
-      private final @Nullable Output<RuntimeIamBindingConditionArgs> condition;
+    private @Nullable Output<RuntimeIamBindingConditionArgs> condition;
 
-    public Output<RuntimeIamBindingConditionArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<RuntimeIamBindingConditionArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     /**
@@ -29,14 +29,14 @@ public final class RuntimeIamBindingArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     @Import(name="members", required=true)
-      private final Output<List<String>> members;
+    private Output<List<String>> members;
 
     public Output<List<String>> members() {
         return this.members;
@@ -48,10 +48,10 @@ public final class RuntimeIamBindingArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -61,7 +61,7 @@ public final class RuntimeIamBindingArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="role", required=true)
-      private final Output<String> role;
+    private Output<String> role;
 
     public Output<String> role() {
         return this.role;
@@ -72,118 +72,105 @@ public final class RuntimeIamBindingArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="runtimeName", required=true)
-      private final Output<String> runtimeName;
+    private Output<String> runtimeName;
 
     public Output<String> runtimeName() {
         return this.runtimeName;
     }
 
-    public RuntimeIamBindingArgs(
-        @Nullable Output<RuntimeIamBindingConditionArgs> condition,
-        @Nullable Output<String> location,
-        Output<List<String>> members,
-        @Nullable Output<String> project,
-        Output<String> role,
-        Output<String> runtimeName) {
-        this.condition = condition;
-        this.location = location;
-        this.members = Objects.requireNonNull(members, "expected parameter 'members' to be non-null");
-        this.project = project;
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-        this.runtimeName = Objects.requireNonNull(runtimeName, "expected parameter 'runtimeName' to be non-null");
-    }
+    private RuntimeIamBindingArgs() {}
 
-    private RuntimeIamBindingArgs() {
-        this.condition = Codegen.empty();
-        this.location = Codegen.empty();
-        this.members = Codegen.empty();
-        this.project = Codegen.empty();
-        this.role = Codegen.empty();
-        this.runtimeName = Codegen.empty();
+    private RuntimeIamBindingArgs(RuntimeIamBindingArgs $) {
+        this.condition = $.condition;
+        this.location = $.location;
+        this.members = $.members;
+        this.project = $.project;
+        this.role = $.role;
+        this.runtimeName = $.runtimeName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuntimeIamBindingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<RuntimeIamBindingConditionArgs> condition;
-        private @Nullable Output<String> location;
-        private Output<List<String>> members;
-        private @Nullable Output<String> project;
-        private Output<String> role;
-        private Output<String> runtimeName;
+        private RuntimeIamBindingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuntimeIamBindingArgs();
         }
 
         public Builder(RuntimeIamBindingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.location = defaults.location;
-    	      this.members = defaults.members;
-    	      this.project = defaults.project;
-    	      this.role = defaults.role;
-    	      this.runtimeName = defaults.runtimeName;
+            $ = new RuntimeIamBindingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable Output<RuntimeIamBindingConditionArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable RuntimeIamBindingConditionArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(RuntimeIamBindingConditionArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder members(Output<List<String>> members) {
-            this.members = Objects.requireNonNull(members);
+            $.members = members;
             return this;
         }
+
         public Builder members(List<String> members) {
-            this.members = Output.of(Objects.requireNonNull(members));
-            return this;
+            return members(Output.of(members));
         }
+
         public Builder members(String... members) {
             return members(List.of(members));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder role(Output<String> role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
         }
+
         public Builder role(String role) {
-            this.role = Output.of(Objects.requireNonNull(role));
-            return this;
+            return role(Output.of(role));
         }
+
         public Builder runtimeName(Output<String> runtimeName) {
-            this.runtimeName = Objects.requireNonNull(runtimeName);
+            $.runtimeName = runtimeName;
             return this;
         }
+
         public Builder runtimeName(String runtimeName) {
-            this.runtimeName = Output.of(Objects.requireNonNull(runtimeName));
-            return this;
-        }        public RuntimeIamBindingArgs build() {
-            return new RuntimeIamBindingArgs(condition, location, members, project, role, runtimeName);
+            return runtimeName(Output.of(runtimeName));
+        }
+
+        public RuntimeIamBindingArgs build() {
+            $.members = Objects.requireNonNull($.members, "expected parameter 'members' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            $.runtimeName = Objects.requireNonNull($.runtimeName, "expected parameter 'runtimeName' to be non-null");
+            return $;
         }
     }
+
 }

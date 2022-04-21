@@ -5,9 +5,9 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class P2SVpnServerConfigVpnClientRevokedCertificateArgs extends com
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class P2SVpnServerConfigVpnClientRevokedCertificateArgs extends com
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class P2SVpnServerConfigVpnClientRevokedCertificateArgs extends com
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -57,89 +57,78 @@ public final class P2SVpnServerConfigVpnClientRevokedCertificateArgs extends com
      * 
      */
     @Import(name="thumbprint")
-      private final @Nullable Output<String> thumbprint;
+    private @Nullable Output<String> thumbprint;
 
-    public Output<String> thumbprint() {
-        return this.thumbprint == null ? Codegen.empty() : this.thumbprint;
+    public Optional<Output<String>> thumbprint() {
+        return Optional.ofNullable(this.thumbprint);
     }
 
-    public P2SVpnServerConfigVpnClientRevokedCertificateArgs(
-        @Nullable Output<String> etag,
-        @Nullable Output<String> id,
-        @Nullable Output<String> name,
-        @Nullable Output<String> thumbprint) {
-        this.etag = etag;
-        this.id = id;
-        this.name = name;
-        this.thumbprint = thumbprint;
-    }
+    private P2SVpnServerConfigVpnClientRevokedCertificateArgs() {}
 
-    private P2SVpnServerConfigVpnClientRevokedCertificateArgs() {
-        this.etag = Codegen.empty();
-        this.id = Codegen.empty();
-        this.name = Codegen.empty();
-        this.thumbprint = Codegen.empty();
+    private P2SVpnServerConfigVpnClientRevokedCertificateArgs(P2SVpnServerConfigVpnClientRevokedCertificateArgs $) {
+        this.etag = $.etag;
+        this.id = $.id;
+        this.name = $.name;
+        this.thumbprint = $.thumbprint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(P2SVpnServerConfigVpnClientRevokedCertificateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> etag;
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> thumbprint;
+        private P2SVpnServerConfigVpnClientRevokedCertificateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new P2SVpnServerConfigVpnClientRevokedCertificateArgs();
         }
 
         public Builder(P2SVpnServerConfigVpnClientRevokedCertificateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.etag = defaults.etag;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.thumbprint = defaults.thumbprint;
+            $ = new P2SVpnServerConfigVpnClientRevokedCertificateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder thumbprint(@Nullable Output<String> thumbprint) {
-            this.thumbprint = thumbprint;
+            $.thumbprint = thumbprint;
             return this;
         }
-        public Builder thumbprint(@Nullable String thumbprint) {
-            this.thumbprint = Codegen.ofNullable(thumbprint);
-            return this;
-        }        public P2SVpnServerConfigVpnClientRevokedCertificateArgs build() {
-            return new P2SVpnServerConfigVpnClientRevokedCertificateArgs(etag, id, name, thumbprint);
+
+        public Builder thumbprint(String thumbprint) {
+            return thumbprint(Output.of(thumbprint));
+        }
+
+        public P2SVpnServerConfigVpnClientRevokedCertificateArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.googlenative.datastream_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.datastream_v1alpha1.inputs.OracleRdbmsArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class OracleSourceConfigArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="allowlist")
-      private final @Nullable Output<OracleRdbmsArgs> allowlist;
+    private @Nullable Output<OracleRdbmsArgs> allowlist;
 
-    public Output<OracleRdbmsArgs> allowlist() {
-        return this.allowlist == null ? Codegen.empty() : this.allowlist;
+    public Optional<Output<OracleRdbmsArgs>> allowlist() {
+        return Optional.ofNullable(this.allowlist);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class OracleSourceConfigArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="rejectlist")
-      private final @Nullable Output<OracleRdbmsArgs> rejectlist;
+    private @Nullable Output<OracleRdbmsArgs> rejectlist;
 
-    public Output<OracleRdbmsArgs> rejectlist() {
-        return this.rejectlist == null ? Codegen.empty() : this.rejectlist;
+    public Optional<Output<OracleRdbmsArgs>> rejectlist() {
+        return Optional.ofNullable(this.rejectlist);
     }
 
-    public OracleSourceConfigArgs(
-        @Nullable Output<OracleRdbmsArgs> allowlist,
-        @Nullable Output<OracleRdbmsArgs> rejectlist) {
-        this.allowlist = allowlist;
-        this.rejectlist = rejectlist;
-    }
+    private OracleSourceConfigArgs() {}
 
-    private OracleSourceConfigArgs() {
-        this.allowlist = Codegen.empty();
-        this.rejectlist = Codegen.empty();
+    private OracleSourceConfigArgs(OracleSourceConfigArgs $) {
+        this.allowlist = $.allowlist;
+        this.rejectlist = $.rejectlist;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OracleSourceConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<OracleRdbmsArgs> allowlist;
-        private @Nullable Output<OracleRdbmsArgs> rejectlist;
+        private OracleSourceConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OracleSourceConfigArgs();
         }
 
         public Builder(OracleSourceConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowlist = defaults.allowlist;
-    	      this.rejectlist = defaults.rejectlist;
+            $ = new OracleSourceConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowlist(@Nullable Output<OracleRdbmsArgs> allowlist) {
-            this.allowlist = allowlist;
+            $.allowlist = allowlist;
             return this;
         }
-        public Builder allowlist(@Nullable OracleRdbmsArgs allowlist) {
-            this.allowlist = Codegen.ofNullable(allowlist);
-            return this;
+
+        public Builder allowlist(OracleRdbmsArgs allowlist) {
+            return allowlist(Output.of(allowlist));
         }
+
         public Builder rejectlist(@Nullable Output<OracleRdbmsArgs> rejectlist) {
-            this.rejectlist = rejectlist;
+            $.rejectlist = rejectlist;
             return this;
         }
-        public Builder rejectlist(@Nullable OracleRdbmsArgs rejectlist) {
-            this.rejectlist = Codegen.ofNullable(rejectlist);
-            return this;
-        }        public OracleSourceConfigArgs build() {
-            return new OracleSourceConfigArgs(allowlist, rejectlist);
+
+        public Builder rejectlist(OracleRdbmsArgs rejectlist) {
+            return rejectlist(Output.of(rejectlist));
+        }
+
+        public OracleSourceConfigArgs build() {
+            return $;
         }
     }
+
 }

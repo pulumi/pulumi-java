@@ -22,7 +22,7 @@ public final class AssignmentStatusResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="lastModified", required=true)
-      private final String lastModified;
+    private String lastModified;
 
     public String lastModified() {
         return this.lastModified;
@@ -33,7 +33,7 @@ public final class AssignmentStatusResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="managedResources", required=true)
-      private final List<String> managedResources;
+    private List<String> managedResources;
 
     public List<String> managedResources() {
         return this.managedResources;
@@ -44,67 +44,63 @@ public final class AssignmentStatusResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="timeCreated", required=true)
-      private final String timeCreated;
+    private String timeCreated;
 
     public String timeCreated() {
         return this.timeCreated;
     }
 
-    public AssignmentStatusResponse(
-        String lastModified,
-        List<String> managedResources,
-        String timeCreated) {
-        this.lastModified = Objects.requireNonNull(lastModified, "expected parameter 'lastModified' to be non-null");
-        this.managedResources = Objects.requireNonNull(managedResources, "expected parameter 'managedResources' to be non-null");
-        this.timeCreated = Objects.requireNonNull(timeCreated, "expected parameter 'timeCreated' to be non-null");
-    }
+    private AssignmentStatusResponse() {}
 
-    private AssignmentStatusResponse() {
-        this.lastModified = null;
-        this.managedResources = List.of();
-        this.timeCreated = null;
+    private AssignmentStatusResponse(AssignmentStatusResponse $) {
+        this.lastModified = $.lastModified;
+        this.managedResources = $.managedResources;
+        this.timeCreated = $.timeCreated;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssignmentStatusResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String lastModified;
-        private List<String> managedResources;
-        private String timeCreated;
+        private AssignmentStatusResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssignmentStatusResponse();
         }
 
         public Builder(AssignmentStatusResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.lastModified = defaults.lastModified;
-    	      this.managedResources = defaults.managedResources;
-    	      this.timeCreated = defaults.timeCreated;
+            $ = new AssignmentStatusResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder lastModified(String lastModified) {
-            this.lastModified = Objects.requireNonNull(lastModified);
+            $.lastModified = lastModified;
             return this;
         }
+
         public Builder managedResources(List<String> managedResources) {
-            this.managedResources = Objects.requireNonNull(managedResources);
+            $.managedResources = managedResources;
             return this;
         }
+
         public Builder managedResources(String... managedResources) {
             return managedResources(List.of(managedResources));
         }
+
         public Builder timeCreated(String timeCreated) {
-            this.timeCreated = Objects.requireNonNull(timeCreated);
+            $.timeCreated = timeCreated;
             return this;
-        }        public AssignmentStatusResponse build() {
-            return new AssignmentStatusResponse(lastModified, managedResources, timeCreated);
+        }
+
+        public AssignmentStatusResponse build() {
+            $.lastModified = Objects.requireNonNull($.lastModified, "expected parameter 'lastModified' to be non-null");
+            $.managedResources = Objects.requireNonNull($.managedResources, "expected parameter 'managedResources' to be non-null");
+            $.timeCreated = Objects.requireNonNull($.timeCreated, "expected parameter 'timeCreated' to be non-null");
+            return $;
         }
     }
+
 }

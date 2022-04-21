@@ -5,10 +5,10 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ClusterAddonsConfigIstioConfigGetArgs extends com.pulumi.reso
      * 
      */
     @Import(name="auth")
-      private final @Nullable Output<String> auth;
+    private @Nullable Output<String> auth;
 
-    public Output<String> auth() {
-        return this.auth == null ? Codegen.empty() : this.auth;
+    public Optional<Output<String>> auth() {
+        return Optional.ofNullable(this.auth);
     }
 
     /**
@@ -33,63 +33,59 @@ public final class ClusterAddonsConfigIstioConfigGetArgs extends com.pulumi.reso
      * 
      */
     @Import(name="disabled", required=true)
-      private final Output<Boolean> disabled;
+    private Output<Boolean> disabled;
 
     public Output<Boolean> disabled() {
         return this.disabled;
     }
 
-    public ClusterAddonsConfigIstioConfigGetArgs(
-        @Nullable Output<String> auth,
-        Output<Boolean> disabled) {
-        this.auth = auth;
-        this.disabled = Objects.requireNonNull(disabled, "expected parameter 'disabled' to be non-null");
-    }
+    private ClusterAddonsConfigIstioConfigGetArgs() {}
 
-    private ClusterAddonsConfigIstioConfigGetArgs() {
-        this.auth = Codegen.empty();
-        this.disabled = Codegen.empty();
+    private ClusterAddonsConfigIstioConfigGetArgs(ClusterAddonsConfigIstioConfigGetArgs $) {
+        this.auth = $.auth;
+        this.disabled = $.disabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterAddonsConfigIstioConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> auth;
-        private Output<Boolean> disabled;
+        private ClusterAddonsConfigIstioConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterAddonsConfigIstioConfigGetArgs();
         }
 
         public Builder(ClusterAddonsConfigIstioConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.auth = defaults.auth;
-    	      this.disabled = defaults.disabled;
+            $ = new ClusterAddonsConfigIstioConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder auth(@Nullable Output<String> auth) {
-            this.auth = auth;
+            $.auth = auth;
             return this;
         }
-        public Builder auth(@Nullable String auth) {
-            this.auth = Codegen.ofNullable(auth);
-            return this;
+
+        public Builder auth(String auth) {
+            return auth(Output.of(auth));
         }
+
         public Builder disabled(Output<Boolean> disabled) {
-            this.disabled = Objects.requireNonNull(disabled);
+            $.disabled = disabled;
             return this;
         }
+
         public Builder disabled(Boolean disabled) {
-            this.disabled = Output.of(Objects.requireNonNull(disabled));
-            return this;
-        }        public ClusterAddonsConfigIstioConfigGetArgs build() {
-            return new ClusterAddonsConfigIstioConfigGetArgs(auth, disabled);
+            return disabled(Output.of(disabled));
+        }
+
+        public ClusterAddonsConfigIstioConfigGetArgs build() {
+            $.disabled = Objects.requireNonNull($.disabled, "expected parameter 'disabled' to be non-null");
+            return $;
         }
     }
+
 }

@@ -7,7 +7,6 @@ import com.pulumi.azurenative.databoxedge.enums.AzureContainerDataFormat;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,7 +24,7 @@ public final class AzureContainerInfoArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="containerName", required=true)
-      private final Output<String> containerName;
+    private Output<String> containerName;
 
     public Output<String> containerName() {
         return this.containerName;
@@ -36,7 +35,7 @@ public final class AzureContainerInfoArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="dataFormat", required=true)
-      private final Output<Either<String,AzureContainerDataFormat>> dataFormat;
+    private Output<Either<String,AzureContainerDataFormat>> dataFormat;
 
     public Output<Either<String,AzureContainerDataFormat>> dataFormat() {
         return this.dataFormat;
@@ -47,76 +46,71 @@ public final class AzureContainerInfoArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="storageAccountCredentialId", required=true)
-      private final Output<String> storageAccountCredentialId;
+    private Output<String> storageAccountCredentialId;
 
     public Output<String> storageAccountCredentialId() {
         return this.storageAccountCredentialId;
     }
 
-    public AzureContainerInfoArgs(
-        Output<String> containerName,
-        Output<Either<String,AzureContainerDataFormat>> dataFormat,
-        Output<String> storageAccountCredentialId) {
-        this.containerName = Objects.requireNonNull(containerName, "expected parameter 'containerName' to be non-null");
-        this.dataFormat = Objects.requireNonNull(dataFormat, "expected parameter 'dataFormat' to be non-null");
-        this.storageAccountCredentialId = Objects.requireNonNull(storageAccountCredentialId, "expected parameter 'storageAccountCredentialId' to be non-null");
-    }
+    private AzureContainerInfoArgs() {}
 
-    private AzureContainerInfoArgs() {
-        this.containerName = Codegen.empty();
-        this.dataFormat = Codegen.empty();
-        this.storageAccountCredentialId = Codegen.empty();
+    private AzureContainerInfoArgs(AzureContainerInfoArgs $) {
+        this.containerName = $.containerName;
+        this.dataFormat = $.dataFormat;
+        this.storageAccountCredentialId = $.storageAccountCredentialId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureContainerInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> containerName;
-        private Output<Either<String,AzureContainerDataFormat>> dataFormat;
-        private Output<String> storageAccountCredentialId;
+        private AzureContainerInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureContainerInfoArgs();
         }
 
         public Builder(AzureContainerInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerName = defaults.containerName;
-    	      this.dataFormat = defaults.dataFormat;
-    	      this.storageAccountCredentialId = defaults.storageAccountCredentialId;
+            $ = new AzureContainerInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder containerName(Output<String> containerName) {
-            this.containerName = Objects.requireNonNull(containerName);
+            $.containerName = containerName;
             return this;
         }
+
         public Builder containerName(String containerName) {
-            this.containerName = Output.of(Objects.requireNonNull(containerName));
-            return this;
+            return containerName(Output.of(containerName));
         }
+
         public Builder dataFormat(Output<Either<String,AzureContainerDataFormat>> dataFormat) {
-            this.dataFormat = Objects.requireNonNull(dataFormat);
+            $.dataFormat = dataFormat;
             return this;
         }
+
         public Builder dataFormat(Either<String,AzureContainerDataFormat> dataFormat) {
-            this.dataFormat = Output.of(Objects.requireNonNull(dataFormat));
-            return this;
+            return dataFormat(Output.of(dataFormat));
         }
+
         public Builder storageAccountCredentialId(Output<String> storageAccountCredentialId) {
-            this.storageAccountCredentialId = Objects.requireNonNull(storageAccountCredentialId);
+            $.storageAccountCredentialId = storageAccountCredentialId;
             return this;
         }
+
         public Builder storageAccountCredentialId(String storageAccountCredentialId) {
-            this.storageAccountCredentialId = Output.of(Objects.requireNonNull(storageAccountCredentialId));
-            return this;
-        }        public AzureContainerInfoArgs build() {
-            return new AzureContainerInfoArgs(containerName, dataFormat, storageAccountCredentialId);
+            return storageAccountCredentialId(Output.of(storageAccountCredentialId));
+        }
+
+        public AzureContainerInfoArgs build() {
+            $.containerName = Objects.requireNonNull($.containerName, "expected parameter 'containerName' to be non-null");
+            $.dataFormat = Objects.requireNonNull($.dataFormat, "expected parameter 'dataFormat' to be non-null");
+            $.storageAccountCredentialId = Objects.requireNonNull($.storageAccountCredentialId, "expected parameter 'storageAccountCredentialId' to be non-null");
+            return $;
         }
     }
+
 }

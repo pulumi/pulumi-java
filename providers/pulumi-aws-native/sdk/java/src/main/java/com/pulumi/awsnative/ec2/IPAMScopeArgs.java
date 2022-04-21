@@ -6,10 +6,10 @@ package com.pulumi.awsnative.ec2;
 import com.pulumi.awsnative.ec2.inputs.IPAMScopeTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,10 +18,10 @@ public final class IPAMScopeArgs extends com.pulumi.resources.ResourceArgs {
     public static final IPAMScopeArgs Empty = new IPAMScopeArgs();
 
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -29,7 +29,7 @@ public final class IPAMScopeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ipamId", required=true)
-      private final Output<String> ipamId;
+    private Output<String> ipamId;
 
     public Output<String> ipamId() {
         return this.ipamId;
@@ -40,79 +40,73 @@ public final class IPAMScopeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<IPAMScopeTagArgs>> tags;
+    private @Nullable Output<List<IPAMScopeTagArgs>> tags;
 
-    public Output<List<IPAMScopeTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<IPAMScopeTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public IPAMScopeArgs(
-        @Nullable Output<String> description,
-        Output<String> ipamId,
-        @Nullable Output<List<IPAMScopeTagArgs>> tags) {
-        this.description = description;
-        this.ipamId = Objects.requireNonNull(ipamId, "expected parameter 'ipamId' to be non-null");
-        this.tags = tags;
-    }
+    private IPAMScopeArgs() {}
 
-    private IPAMScopeArgs() {
-        this.description = Codegen.empty();
-        this.ipamId = Codegen.empty();
-        this.tags = Codegen.empty();
+    private IPAMScopeArgs(IPAMScopeArgs $) {
+        this.description = $.description;
+        this.ipamId = $.ipamId;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IPAMScopeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private Output<String> ipamId;
-        private @Nullable Output<List<IPAMScopeTagArgs>> tags;
+        private IPAMScopeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IPAMScopeArgs();
         }
 
         public Builder(IPAMScopeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.ipamId = defaults.ipamId;
-    	      this.tags = defaults.tags;
+            $ = new IPAMScopeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder ipamId(Output<String> ipamId) {
-            this.ipamId = Objects.requireNonNull(ipamId);
+            $.ipamId = ipamId;
             return this;
         }
+
         public Builder ipamId(String ipamId) {
-            this.ipamId = Output.of(Objects.requireNonNull(ipamId));
-            return this;
+            return ipamId(Output.of(ipamId));
         }
+
         public Builder tags(@Nullable Output<List<IPAMScopeTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<IPAMScopeTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<IPAMScopeTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(IPAMScopeTagArgs... tags) {
             return tags(List.of(tags));
-        }        public IPAMScopeArgs build() {
-            return new IPAMScopeArgs(description, ipamId, tags);
+        }
+
+        public IPAMScopeArgs build() {
+            $.ipamId = Objects.requireNonNull($.ipamId, "expected parameter 'ipamId' to be non-null");
+            return $;
         }
     }
+
 }

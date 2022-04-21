@@ -5,10 +5,10 @@ package com.pulumi.gcp.cloudbuild.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class TriggerTriggerTemplateArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="branchName")
-      private final @Nullable Output<String> branchName;
+    private @Nullable Output<String> branchName;
 
-    public Output<String> branchName() {
-        return this.branchName == null ? Codegen.empty() : this.branchName;
+    public Optional<Output<String>> branchName() {
+        return Optional.ofNullable(this.branchName);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class TriggerTriggerTemplateArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="commitSha")
-      private final @Nullable Output<String> commitSha;
+    private @Nullable Output<String> commitSha;
 
-    public Output<String> commitSha() {
-        return this.commitSha == null ? Codegen.empty() : this.commitSha;
+    public Optional<Output<String>> commitSha() {
+        return Optional.ofNullable(this.commitSha);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class TriggerTriggerTemplateArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="dir")
-      private final @Nullable Output<String> dir;
+    private @Nullable Output<String> dir;
 
-    public Output<String> dir() {
-        return this.dir == null ? Codegen.empty() : this.dir;
+    public Optional<Output<String>> dir() {
+        return Optional.ofNullable(this.dir);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class TriggerTriggerTemplateArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="invertRegex")
-      private final @Nullable Output<Boolean> invertRegex;
+    private @Nullable Output<Boolean> invertRegex;
 
-    public Output<Boolean> invertRegex() {
-        return this.invertRegex == null ? Codegen.empty() : this.invertRegex;
+    public Optional<Output<Boolean>> invertRegex() {
+        return Optional.ofNullable(this.invertRegex);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class TriggerTriggerTemplateArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="projectId")
-      private final @Nullable Output<String> projectId;
+    private @Nullable Output<String> projectId;
 
-    public Output<String> projectId() {
-        return this.projectId == null ? Codegen.empty() : this.projectId;
+    public Optional<Output<String>> projectId() {
+        return Optional.ofNullable(this.projectId);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class TriggerTriggerTemplateArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="repoName")
-      private final @Nullable Output<String> repoName;
+    private @Nullable Output<String> repoName;
 
-    public Output<String> repoName() {
-        return this.repoName == null ? Codegen.empty() : this.repoName;
+    public Optional<Output<String>> repoName() {
+        return Optional.ofNullable(this.repoName);
     }
 
     /**
@@ -100,128 +100,108 @@ public final class TriggerTriggerTemplateArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="tagName")
-      private final @Nullable Output<String> tagName;
+    private @Nullable Output<String> tagName;
 
-    public Output<String> tagName() {
-        return this.tagName == null ? Codegen.empty() : this.tagName;
+    public Optional<Output<String>> tagName() {
+        return Optional.ofNullable(this.tagName);
     }
 
-    public TriggerTriggerTemplateArgs(
-        @Nullable Output<String> branchName,
-        @Nullable Output<String> commitSha,
-        @Nullable Output<String> dir,
-        @Nullable Output<Boolean> invertRegex,
-        @Nullable Output<String> projectId,
-        @Nullable Output<String> repoName,
-        @Nullable Output<String> tagName) {
-        this.branchName = branchName;
-        this.commitSha = commitSha;
-        this.dir = dir;
-        this.invertRegex = invertRegex;
-        this.projectId = projectId;
-        this.repoName = repoName;
-        this.tagName = tagName;
-    }
+    private TriggerTriggerTemplateArgs() {}
 
-    private TriggerTriggerTemplateArgs() {
-        this.branchName = Codegen.empty();
-        this.commitSha = Codegen.empty();
-        this.dir = Codegen.empty();
-        this.invertRegex = Codegen.empty();
-        this.projectId = Codegen.empty();
-        this.repoName = Codegen.empty();
-        this.tagName = Codegen.empty();
+    private TriggerTriggerTemplateArgs(TriggerTriggerTemplateArgs $) {
+        this.branchName = $.branchName;
+        this.commitSha = $.commitSha;
+        this.dir = $.dir;
+        this.invertRegex = $.invertRegex;
+        this.projectId = $.projectId;
+        this.repoName = $.repoName;
+        this.tagName = $.tagName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TriggerTriggerTemplateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> branchName;
-        private @Nullable Output<String> commitSha;
-        private @Nullable Output<String> dir;
-        private @Nullable Output<Boolean> invertRegex;
-        private @Nullable Output<String> projectId;
-        private @Nullable Output<String> repoName;
-        private @Nullable Output<String> tagName;
+        private TriggerTriggerTemplateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TriggerTriggerTemplateArgs();
         }
 
         public Builder(TriggerTriggerTemplateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.branchName = defaults.branchName;
-    	      this.commitSha = defaults.commitSha;
-    	      this.dir = defaults.dir;
-    	      this.invertRegex = defaults.invertRegex;
-    	      this.projectId = defaults.projectId;
-    	      this.repoName = defaults.repoName;
-    	      this.tagName = defaults.tagName;
+            $ = new TriggerTriggerTemplateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder branchName(@Nullable Output<String> branchName) {
-            this.branchName = branchName;
+            $.branchName = branchName;
             return this;
         }
-        public Builder branchName(@Nullable String branchName) {
-            this.branchName = Codegen.ofNullable(branchName);
-            return this;
+
+        public Builder branchName(String branchName) {
+            return branchName(Output.of(branchName));
         }
+
         public Builder commitSha(@Nullable Output<String> commitSha) {
-            this.commitSha = commitSha;
+            $.commitSha = commitSha;
             return this;
         }
-        public Builder commitSha(@Nullable String commitSha) {
-            this.commitSha = Codegen.ofNullable(commitSha);
-            return this;
+
+        public Builder commitSha(String commitSha) {
+            return commitSha(Output.of(commitSha));
         }
+
         public Builder dir(@Nullable Output<String> dir) {
-            this.dir = dir;
+            $.dir = dir;
             return this;
         }
-        public Builder dir(@Nullable String dir) {
-            this.dir = Codegen.ofNullable(dir);
-            return this;
+
+        public Builder dir(String dir) {
+            return dir(Output.of(dir));
         }
+
         public Builder invertRegex(@Nullable Output<Boolean> invertRegex) {
-            this.invertRegex = invertRegex;
+            $.invertRegex = invertRegex;
             return this;
         }
-        public Builder invertRegex(@Nullable Boolean invertRegex) {
-            this.invertRegex = Codegen.ofNullable(invertRegex);
-            return this;
+
+        public Builder invertRegex(Boolean invertRegex) {
+            return invertRegex(Output.of(invertRegex));
         }
+
         public Builder projectId(@Nullable Output<String> projectId) {
-            this.projectId = projectId;
+            $.projectId = projectId;
             return this;
         }
-        public Builder projectId(@Nullable String projectId) {
-            this.projectId = Codegen.ofNullable(projectId);
-            return this;
+
+        public Builder projectId(String projectId) {
+            return projectId(Output.of(projectId));
         }
+
         public Builder repoName(@Nullable Output<String> repoName) {
-            this.repoName = repoName;
+            $.repoName = repoName;
             return this;
         }
-        public Builder repoName(@Nullable String repoName) {
-            this.repoName = Codegen.ofNullable(repoName);
-            return this;
+
+        public Builder repoName(String repoName) {
+            return repoName(Output.of(repoName));
         }
+
         public Builder tagName(@Nullable Output<String> tagName) {
-            this.tagName = tagName;
+            $.tagName = tagName;
             return this;
         }
-        public Builder tagName(@Nullable String tagName) {
-            this.tagName = Codegen.ofNullable(tagName);
-            return this;
-        }        public TriggerTriggerTemplateArgs build() {
-            return new TriggerTriggerTemplateArgs(branchName, commitSha, dir, invertRegex, projectId, repoName, tagName);
+
+        public Builder tagName(String tagName) {
+            return tagName(Output.of(tagName));
+        }
+
+        public TriggerTriggerTemplateArgs build() {
+            return $;
         }
     }
+
 }

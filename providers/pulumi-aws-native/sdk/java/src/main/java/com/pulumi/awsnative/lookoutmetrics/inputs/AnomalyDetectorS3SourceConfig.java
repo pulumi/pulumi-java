@@ -17,100 +17,93 @@ public final class AnomalyDetectorS3SourceConfig extends com.pulumi.resources.In
     public static final AnomalyDetectorS3SourceConfig Empty = new AnomalyDetectorS3SourceConfig();
 
     @Import(name="fileFormatDescriptor", required=true)
-      private final AnomalyDetectorFileFormatDescriptor fileFormatDescriptor;
+    private AnomalyDetectorFileFormatDescriptor fileFormatDescriptor;
 
     public AnomalyDetectorFileFormatDescriptor fileFormatDescriptor() {
         return this.fileFormatDescriptor;
     }
 
     @Import(name="historicalDataPathList")
-      private final @Nullable List<String> historicalDataPathList;
+    private @Nullable List<String> historicalDataPathList;
 
-    public List<String> historicalDataPathList() {
-        return this.historicalDataPathList == null ? List.of() : this.historicalDataPathList;
+    public Optional<List<String>> historicalDataPathList() {
+        return Optional.ofNullable(this.historicalDataPathList);
     }
 
     @Import(name="roleArn", required=true)
-      private final String roleArn;
+    private String roleArn;
 
     public String roleArn() {
         return this.roleArn;
     }
 
     @Import(name="templatedPathList")
-      private final @Nullable List<String> templatedPathList;
+    private @Nullable List<String> templatedPathList;
 
-    public List<String> templatedPathList() {
-        return this.templatedPathList == null ? List.of() : this.templatedPathList;
+    public Optional<List<String>> templatedPathList() {
+        return Optional.ofNullable(this.templatedPathList);
     }
 
-    public AnomalyDetectorS3SourceConfig(
-        AnomalyDetectorFileFormatDescriptor fileFormatDescriptor,
-        @Nullable List<String> historicalDataPathList,
-        String roleArn,
-        @Nullable List<String> templatedPathList) {
-        this.fileFormatDescriptor = Objects.requireNonNull(fileFormatDescriptor, "expected parameter 'fileFormatDescriptor' to be non-null");
-        this.historicalDataPathList = historicalDataPathList;
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.templatedPathList = templatedPathList;
-    }
+    private AnomalyDetectorS3SourceConfig() {}
 
-    private AnomalyDetectorS3SourceConfig() {
-        this.fileFormatDescriptor = null;
-        this.historicalDataPathList = List.of();
-        this.roleArn = null;
-        this.templatedPathList = List.of();
+    private AnomalyDetectorS3SourceConfig(AnomalyDetectorS3SourceConfig $) {
+        this.fileFormatDescriptor = $.fileFormatDescriptor;
+        this.historicalDataPathList = $.historicalDataPathList;
+        this.roleArn = $.roleArn;
+        this.templatedPathList = $.templatedPathList;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnomalyDetectorS3SourceConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private AnomalyDetectorFileFormatDescriptor fileFormatDescriptor;
-        private @Nullable List<String> historicalDataPathList;
-        private String roleArn;
-        private @Nullable List<String> templatedPathList;
+        private AnomalyDetectorS3SourceConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnomalyDetectorS3SourceConfig();
         }
 
         public Builder(AnomalyDetectorS3SourceConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fileFormatDescriptor = defaults.fileFormatDescriptor;
-    	      this.historicalDataPathList = defaults.historicalDataPathList;
-    	      this.roleArn = defaults.roleArn;
-    	      this.templatedPathList = defaults.templatedPathList;
+            $ = new AnomalyDetectorS3SourceConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder fileFormatDescriptor(AnomalyDetectorFileFormatDescriptor fileFormatDescriptor) {
-            this.fileFormatDescriptor = Objects.requireNonNull(fileFormatDescriptor);
+            $.fileFormatDescriptor = fileFormatDescriptor;
             return this;
         }
+
         public Builder historicalDataPathList(@Nullable List<String> historicalDataPathList) {
-            this.historicalDataPathList = historicalDataPathList;
+            $.historicalDataPathList = historicalDataPathList;
             return this;
         }
+
         public Builder historicalDataPathList(String... historicalDataPathList) {
             return historicalDataPathList(List.of(historicalDataPathList));
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder templatedPathList(@Nullable List<String> templatedPathList) {
-            this.templatedPathList = templatedPathList;
+            $.templatedPathList = templatedPathList;
             return this;
         }
+
         public Builder templatedPathList(String... templatedPathList) {
             return templatedPathList(List.of(templatedPathList));
-        }        public AnomalyDetectorS3SourceConfig build() {
-            return new AnomalyDetectorS3SourceConfig(fileFormatDescriptor, historicalDataPathList, roleArn, templatedPathList);
+        }
+
+        public AnomalyDetectorS3SourceConfig build() {
+            $.fileFormatDescriptor = Objects.requireNonNull($.fileFormatDescriptor, "expected parameter 'fileFormatDescriptor' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            return $;
         }
     }
+
 }

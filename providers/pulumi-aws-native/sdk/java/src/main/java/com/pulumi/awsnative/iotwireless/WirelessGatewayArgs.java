@@ -7,10 +7,10 @@ import com.pulumi.awsnative.iotwireless.inputs.WirelessGatewayLoRaWANGatewayArgs
 import com.pulumi.awsnative.iotwireless.inputs.WirelessGatewayTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class WirelessGatewayArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class WirelessGatewayArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="lastUplinkReceivedAt")
-      private final @Nullable Output<String> lastUplinkReceivedAt;
+    private @Nullable Output<String> lastUplinkReceivedAt;
 
-    public Output<String> lastUplinkReceivedAt() {
-        return this.lastUplinkReceivedAt == null ? Codegen.empty() : this.lastUplinkReceivedAt;
+    public Optional<Output<String>> lastUplinkReceivedAt() {
+        return Optional.ofNullable(this.lastUplinkReceivedAt);
     }
 
     /**
@@ -45,7 +45,7 @@ public final class WirelessGatewayArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="loRaWAN", required=true)
-      private final Output<WirelessGatewayLoRaWANGatewayArgs> loRaWAN;
+    private Output<WirelessGatewayLoRaWANGatewayArgs> loRaWAN;
 
     public Output<WirelessGatewayLoRaWANGatewayArgs> loRaWAN() {
         return this.loRaWAN;
@@ -56,10 +56,10 @@ public final class WirelessGatewayArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class WirelessGatewayArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<WirelessGatewayTagArgs>> tags;
+    private @Nullable Output<List<WirelessGatewayTagArgs>> tags;
 
-    public Output<List<WirelessGatewayTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<WirelessGatewayTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -78,118 +78,103 @@ public final class WirelessGatewayArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="thingArn")
-      private final @Nullable Output<String> thingArn;
+    private @Nullable Output<String> thingArn;
 
-    public Output<String> thingArn() {
-        return this.thingArn == null ? Codegen.empty() : this.thingArn;
+    public Optional<Output<String>> thingArn() {
+        return Optional.ofNullable(this.thingArn);
     }
 
-    public WirelessGatewayArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> lastUplinkReceivedAt,
-        Output<WirelessGatewayLoRaWANGatewayArgs> loRaWAN,
-        @Nullable Output<String> name,
-        @Nullable Output<List<WirelessGatewayTagArgs>> tags,
-        @Nullable Output<String> thingArn) {
-        this.description = description;
-        this.lastUplinkReceivedAt = lastUplinkReceivedAt;
-        this.loRaWAN = Objects.requireNonNull(loRaWAN, "expected parameter 'loRaWAN' to be non-null");
-        this.name = name;
-        this.tags = tags;
-        this.thingArn = thingArn;
-    }
+    private WirelessGatewayArgs() {}
 
-    private WirelessGatewayArgs() {
-        this.description = Codegen.empty();
-        this.lastUplinkReceivedAt = Codegen.empty();
-        this.loRaWAN = Codegen.empty();
-        this.name = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.thingArn = Codegen.empty();
+    private WirelessGatewayArgs(WirelessGatewayArgs $) {
+        this.description = $.description;
+        this.lastUplinkReceivedAt = $.lastUplinkReceivedAt;
+        this.loRaWAN = $.loRaWAN;
+        this.name = $.name;
+        this.tags = $.tags;
+        this.thingArn = $.thingArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WirelessGatewayArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> lastUplinkReceivedAt;
-        private Output<WirelessGatewayLoRaWANGatewayArgs> loRaWAN;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<WirelessGatewayTagArgs>> tags;
-        private @Nullable Output<String> thingArn;
+        private WirelessGatewayArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WirelessGatewayArgs();
         }
 
         public Builder(WirelessGatewayArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.lastUplinkReceivedAt = defaults.lastUplinkReceivedAt;
-    	      this.loRaWAN = defaults.loRaWAN;
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
-    	      this.thingArn = defaults.thingArn;
+            $ = new WirelessGatewayArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder lastUplinkReceivedAt(@Nullable Output<String> lastUplinkReceivedAt) {
-            this.lastUplinkReceivedAt = lastUplinkReceivedAt;
+            $.lastUplinkReceivedAt = lastUplinkReceivedAt;
             return this;
         }
-        public Builder lastUplinkReceivedAt(@Nullable String lastUplinkReceivedAt) {
-            this.lastUplinkReceivedAt = Codegen.ofNullable(lastUplinkReceivedAt);
-            return this;
+
+        public Builder lastUplinkReceivedAt(String lastUplinkReceivedAt) {
+            return lastUplinkReceivedAt(Output.of(lastUplinkReceivedAt));
         }
+
         public Builder loRaWAN(Output<WirelessGatewayLoRaWANGatewayArgs> loRaWAN) {
-            this.loRaWAN = Objects.requireNonNull(loRaWAN);
+            $.loRaWAN = loRaWAN;
             return this;
         }
+
         public Builder loRaWAN(WirelessGatewayLoRaWANGatewayArgs loRaWAN) {
-            this.loRaWAN = Output.of(Objects.requireNonNull(loRaWAN));
-            return this;
+            return loRaWAN(Output.of(loRaWAN));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder tags(@Nullable Output<List<WirelessGatewayTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<WirelessGatewayTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<WirelessGatewayTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(WirelessGatewayTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder thingArn(@Nullable Output<String> thingArn) {
-            this.thingArn = thingArn;
+            $.thingArn = thingArn;
             return this;
         }
-        public Builder thingArn(@Nullable String thingArn) {
-            this.thingArn = Codegen.ofNullable(thingArn);
-            return this;
-        }        public WirelessGatewayArgs build() {
-            return new WirelessGatewayArgs(description, lastUplinkReceivedAt, loRaWAN, name, tags, thingArn);
+
+        public Builder thingArn(String thingArn) {
+            return thingArn(Output.of(thingArn));
+        }
+
+        public WirelessGatewayArgs build() {
+            $.loRaWAN = Objects.requireNonNull($.loRaWAN, "expected parameter 'loRaWAN' to be non-null");
+            return $;
         }
     }
+
 }

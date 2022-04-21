@@ -14,11 +14,11 @@ import com.pulumi.awsnative.mediapackage.inputs.OriginEndpointDashEncryptionArgs
 import com.pulumi.awsnative.mediapackage.inputs.OriginEndpointStreamSelectionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -35,24 +35,24 @@ public final class OriginEndpointDashPackageArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="adTriggers")
-      private final @Nullable Output<List<OriginEndpointDashPackageAdTriggersItem>> adTriggers;
+    private @Nullable Output<List<OriginEndpointDashPackageAdTriggersItem>> adTriggers;
 
-    public Output<List<OriginEndpointDashPackageAdTriggersItem>> adTriggers() {
-        return this.adTriggers == null ? Codegen.empty() : this.adTriggers;
+    public Optional<Output<List<OriginEndpointDashPackageAdTriggersItem>>> adTriggers() {
+        return Optional.ofNullable(this.adTriggers);
     }
 
     @Import(name="adsOnDeliveryRestrictions")
-      private final @Nullable Output<OriginEndpointAdsOnDeliveryRestrictions> adsOnDeliveryRestrictions;
+    private @Nullable Output<OriginEndpointAdsOnDeliveryRestrictions> adsOnDeliveryRestrictions;
 
-    public Output<OriginEndpointAdsOnDeliveryRestrictions> adsOnDeliveryRestrictions() {
-        return this.adsOnDeliveryRestrictions == null ? Codegen.empty() : this.adsOnDeliveryRestrictions;
+    public Optional<Output<OriginEndpointAdsOnDeliveryRestrictions>> adsOnDeliveryRestrictions() {
+        return Optional.ofNullable(this.adsOnDeliveryRestrictions);
     }
 
     @Import(name="encryption")
-      private final @Nullable Output<OriginEndpointDashEncryptionArgs> encryption;
+    private @Nullable Output<OriginEndpointDashEncryptionArgs> encryption;
 
-    public Output<OriginEndpointDashEncryptionArgs> encryption() {
-        return this.encryption == null ? Codegen.empty() : this.encryption;
+    public Optional<Output<OriginEndpointDashEncryptionArgs>> encryption() {
+        return Optional.ofNullable(this.encryption);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class OriginEndpointDashPackageArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="manifestLayout")
-      private final @Nullable Output<OriginEndpointDashPackageManifestLayout> manifestLayout;
+    private @Nullable Output<OriginEndpointDashPackageManifestLayout> manifestLayout;
 
-    public Output<OriginEndpointDashPackageManifestLayout> manifestLayout() {
-        return this.manifestLayout == null ? Codegen.empty() : this.manifestLayout;
+    public Optional<Output<OriginEndpointDashPackageManifestLayout>> manifestLayout() {
+        return Optional.ofNullable(this.manifestLayout);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class OriginEndpointDashPackageArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="manifestWindowSeconds")
-      private final @Nullable Output<Integer> manifestWindowSeconds;
+    private @Nullable Output<Integer> manifestWindowSeconds;
 
-    public Output<Integer> manifestWindowSeconds() {
-        return this.manifestWindowSeconds == null ? Codegen.empty() : this.manifestWindowSeconds;
+    public Optional<Output<Integer>> manifestWindowSeconds() {
+        return Optional.ofNullable(this.manifestWindowSeconds);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class OriginEndpointDashPackageArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="minBufferTimeSeconds")
-      private final @Nullable Output<Integer> minBufferTimeSeconds;
+    private @Nullable Output<Integer> minBufferTimeSeconds;
 
-    public Output<Integer> minBufferTimeSeconds() {
-        return this.minBufferTimeSeconds == null ? Codegen.empty() : this.minBufferTimeSeconds;
+    public Optional<Output<Integer>> minBufferTimeSeconds() {
+        return Optional.ofNullable(this.minBufferTimeSeconds);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class OriginEndpointDashPackageArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="minUpdatePeriodSeconds")
-      private final @Nullable Output<Integer> minUpdatePeriodSeconds;
+    private @Nullable Output<Integer> minUpdatePeriodSeconds;
 
-    public Output<Integer> minUpdatePeriodSeconds() {
-        return this.minUpdatePeriodSeconds == null ? Codegen.empty() : this.minUpdatePeriodSeconds;
+    public Optional<Output<Integer>> minUpdatePeriodSeconds() {
+        return Optional.ofNullable(this.minUpdatePeriodSeconds);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class OriginEndpointDashPackageArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="periodTriggers")
-      private final @Nullable Output<List<OriginEndpointDashPackagePeriodTriggersItem>> periodTriggers;
+    private @Nullable Output<List<OriginEndpointDashPackagePeriodTriggersItem>> periodTriggers;
 
-    public Output<List<OriginEndpointDashPackagePeriodTriggersItem>> periodTriggers() {
-        return this.periodTriggers == null ? Codegen.empty() : this.periodTriggers;
+    public Optional<Output<List<OriginEndpointDashPackagePeriodTriggersItem>>> periodTriggers() {
+        return Optional.ofNullable(this.periodTriggers);
     }
 
     /**
@@ -115,10 +115,10 @@ public final class OriginEndpointDashPackageArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="profile")
-      private final @Nullable Output<OriginEndpointDashPackageProfile> profile;
+    private @Nullable Output<OriginEndpointDashPackageProfile> profile;
 
-    public Output<OriginEndpointDashPackageProfile> profile() {
-        return this.profile == null ? Codegen.empty() : this.profile;
+    public Optional<Output<OriginEndpointDashPackageProfile>> profile() {
+        return Optional.ofNullable(this.profile);
     }
 
     /**
@@ -126,10 +126,10 @@ public final class OriginEndpointDashPackageArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="segmentDurationSeconds")
-      private final @Nullable Output<Integer> segmentDurationSeconds;
+    private @Nullable Output<Integer> segmentDurationSeconds;
 
-    public Output<Integer> segmentDurationSeconds() {
-        return this.segmentDurationSeconds == null ? Codegen.empty() : this.segmentDurationSeconds;
+    public Optional<Output<Integer>> segmentDurationSeconds() {
+        return Optional.ofNullable(this.segmentDurationSeconds);
     }
 
     /**
@@ -137,17 +137,17 @@ public final class OriginEndpointDashPackageArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="segmentTemplateFormat")
-      private final @Nullable Output<OriginEndpointDashPackageSegmentTemplateFormat> segmentTemplateFormat;
+    private @Nullable Output<OriginEndpointDashPackageSegmentTemplateFormat> segmentTemplateFormat;
 
-    public Output<OriginEndpointDashPackageSegmentTemplateFormat> segmentTemplateFormat() {
-        return this.segmentTemplateFormat == null ? Codegen.empty() : this.segmentTemplateFormat;
+    public Optional<Output<OriginEndpointDashPackageSegmentTemplateFormat>> segmentTemplateFormat() {
+        return Optional.ofNullable(this.segmentTemplateFormat);
     }
 
     @Import(name="streamSelection")
-      private final @Nullable Output<OriginEndpointStreamSelectionArgs> streamSelection;
+    private @Nullable Output<OriginEndpointStreamSelectionArgs> streamSelection;
 
-    public Output<OriginEndpointStreamSelectionArgs> streamSelection() {
-        return this.streamSelection == null ? Codegen.empty() : this.streamSelection;
+    public Optional<Output<OriginEndpointStreamSelectionArgs>> streamSelection() {
+        return Optional.ofNullable(this.streamSelection);
     }
 
     /**
@@ -155,10 +155,10 @@ public final class OriginEndpointDashPackageArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="suggestedPresentationDelaySeconds")
-      private final @Nullable Output<Integer> suggestedPresentationDelaySeconds;
+    private @Nullable Output<Integer> suggestedPresentationDelaySeconds;
 
-    public Output<Integer> suggestedPresentationDelaySeconds() {
-        return this.suggestedPresentationDelaySeconds == null ? Codegen.empty() : this.suggestedPresentationDelaySeconds;
+    public Optional<Output<Integer>> suggestedPresentationDelaySeconds() {
+        return Optional.ofNullable(this.suggestedPresentationDelaySeconds);
     }
 
     /**
@@ -166,10 +166,10 @@ public final class OriginEndpointDashPackageArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="utcTiming")
-      private final @Nullable Output<OriginEndpointDashPackageUtcTiming> utcTiming;
+    private @Nullable Output<OriginEndpointDashPackageUtcTiming> utcTiming;
 
-    public Output<OriginEndpointDashPackageUtcTiming> utcTiming() {
-        return this.utcTiming == null ? Codegen.empty() : this.utcTiming;
+    public Optional<Output<OriginEndpointDashPackageUtcTiming>> utcTiming() {
+        return Optional.ofNullable(this.utcTiming);
     }
 
     /**
@@ -177,238 +177,196 @@ public final class OriginEndpointDashPackageArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="utcTimingUri")
-      private final @Nullable Output<String> utcTimingUri;
+    private @Nullable Output<String> utcTimingUri;
 
-    public Output<String> utcTimingUri() {
-        return this.utcTimingUri == null ? Codegen.empty() : this.utcTimingUri;
+    public Optional<Output<String>> utcTimingUri() {
+        return Optional.ofNullable(this.utcTimingUri);
     }
 
-    public OriginEndpointDashPackageArgs(
-        @Nullable Output<List<OriginEndpointDashPackageAdTriggersItem>> adTriggers,
-        @Nullable Output<OriginEndpointAdsOnDeliveryRestrictions> adsOnDeliveryRestrictions,
-        @Nullable Output<OriginEndpointDashEncryptionArgs> encryption,
-        @Nullable Output<OriginEndpointDashPackageManifestLayout> manifestLayout,
-        @Nullable Output<Integer> manifestWindowSeconds,
-        @Nullable Output<Integer> minBufferTimeSeconds,
-        @Nullable Output<Integer> minUpdatePeriodSeconds,
-        @Nullable Output<List<OriginEndpointDashPackagePeriodTriggersItem>> periodTriggers,
-        @Nullable Output<OriginEndpointDashPackageProfile> profile,
-        @Nullable Output<Integer> segmentDurationSeconds,
-        @Nullable Output<OriginEndpointDashPackageSegmentTemplateFormat> segmentTemplateFormat,
-        @Nullable Output<OriginEndpointStreamSelectionArgs> streamSelection,
-        @Nullable Output<Integer> suggestedPresentationDelaySeconds,
-        @Nullable Output<OriginEndpointDashPackageUtcTiming> utcTiming,
-        @Nullable Output<String> utcTimingUri) {
-        this.adTriggers = adTriggers;
-        this.adsOnDeliveryRestrictions = adsOnDeliveryRestrictions;
-        this.encryption = encryption;
-        this.manifestLayout = manifestLayout;
-        this.manifestWindowSeconds = manifestWindowSeconds;
-        this.minBufferTimeSeconds = minBufferTimeSeconds;
-        this.minUpdatePeriodSeconds = minUpdatePeriodSeconds;
-        this.periodTriggers = periodTriggers;
-        this.profile = profile;
-        this.segmentDurationSeconds = segmentDurationSeconds;
-        this.segmentTemplateFormat = segmentTemplateFormat;
-        this.streamSelection = streamSelection;
-        this.suggestedPresentationDelaySeconds = suggestedPresentationDelaySeconds;
-        this.utcTiming = utcTiming;
-        this.utcTimingUri = utcTimingUri;
-    }
+    private OriginEndpointDashPackageArgs() {}
 
-    private OriginEndpointDashPackageArgs() {
-        this.adTriggers = Codegen.empty();
-        this.adsOnDeliveryRestrictions = Codegen.empty();
-        this.encryption = Codegen.empty();
-        this.manifestLayout = Codegen.empty();
-        this.manifestWindowSeconds = Codegen.empty();
-        this.minBufferTimeSeconds = Codegen.empty();
-        this.minUpdatePeriodSeconds = Codegen.empty();
-        this.periodTriggers = Codegen.empty();
-        this.profile = Codegen.empty();
-        this.segmentDurationSeconds = Codegen.empty();
-        this.segmentTemplateFormat = Codegen.empty();
-        this.streamSelection = Codegen.empty();
-        this.suggestedPresentationDelaySeconds = Codegen.empty();
-        this.utcTiming = Codegen.empty();
-        this.utcTimingUri = Codegen.empty();
+    private OriginEndpointDashPackageArgs(OriginEndpointDashPackageArgs $) {
+        this.adTriggers = $.adTriggers;
+        this.adsOnDeliveryRestrictions = $.adsOnDeliveryRestrictions;
+        this.encryption = $.encryption;
+        this.manifestLayout = $.manifestLayout;
+        this.manifestWindowSeconds = $.manifestWindowSeconds;
+        this.minBufferTimeSeconds = $.minBufferTimeSeconds;
+        this.minUpdatePeriodSeconds = $.minUpdatePeriodSeconds;
+        this.periodTriggers = $.periodTriggers;
+        this.profile = $.profile;
+        this.segmentDurationSeconds = $.segmentDurationSeconds;
+        this.segmentTemplateFormat = $.segmentTemplateFormat;
+        this.streamSelection = $.streamSelection;
+        this.suggestedPresentationDelaySeconds = $.suggestedPresentationDelaySeconds;
+        this.utcTiming = $.utcTiming;
+        this.utcTimingUri = $.utcTimingUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OriginEndpointDashPackageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<OriginEndpointDashPackageAdTriggersItem>> adTriggers;
-        private @Nullable Output<OriginEndpointAdsOnDeliveryRestrictions> adsOnDeliveryRestrictions;
-        private @Nullable Output<OriginEndpointDashEncryptionArgs> encryption;
-        private @Nullable Output<OriginEndpointDashPackageManifestLayout> manifestLayout;
-        private @Nullable Output<Integer> manifestWindowSeconds;
-        private @Nullable Output<Integer> minBufferTimeSeconds;
-        private @Nullable Output<Integer> minUpdatePeriodSeconds;
-        private @Nullable Output<List<OriginEndpointDashPackagePeriodTriggersItem>> periodTriggers;
-        private @Nullable Output<OriginEndpointDashPackageProfile> profile;
-        private @Nullable Output<Integer> segmentDurationSeconds;
-        private @Nullable Output<OriginEndpointDashPackageSegmentTemplateFormat> segmentTemplateFormat;
-        private @Nullable Output<OriginEndpointStreamSelectionArgs> streamSelection;
-        private @Nullable Output<Integer> suggestedPresentationDelaySeconds;
-        private @Nullable Output<OriginEndpointDashPackageUtcTiming> utcTiming;
-        private @Nullable Output<String> utcTimingUri;
+        private OriginEndpointDashPackageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OriginEndpointDashPackageArgs();
         }
 
         public Builder(OriginEndpointDashPackageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.adTriggers = defaults.adTriggers;
-    	      this.adsOnDeliveryRestrictions = defaults.adsOnDeliveryRestrictions;
-    	      this.encryption = defaults.encryption;
-    	      this.manifestLayout = defaults.manifestLayout;
-    	      this.manifestWindowSeconds = defaults.manifestWindowSeconds;
-    	      this.minBufferTimeSeconds = defaults.minBufferTimeSeconds;
-    	      this.minUpdatePeriodSeconds = defaults.minUpdatePeriodSeconds;
-    	      this.periodTriggers = defaults.periodTriggers;
-    	      this.profile = defaults.profile;
-    	      this.segmentDurationSeconds = defaults.segmentDurationSeconds;
-    	      this.segmentTemplateFormat = defaults.segmentTemplateFormat;
-    	      this.streamSelection = defaults.streamSelection;
-    	      this.suggestedPresentationDelaySeconds = defaults.suggestedPresentationDelaySeconds;
-    	      this.utcTiming = defaults.utcTiming;
-    	      this.utcTimingUri = defaults.utcTimingUri;
+            $ = new OriginEndpointDashPackageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder adTriggers(@Nullable Output<List<OriginEndpointDashPackageAdTriggersItem>> adTriggers) {
-            this.adTriggers = adTriggers;
+            $.adTriggers = adTriggers;
             return this;
         }
-        public Builder adTriggers(@Nullable List<OriginEndpointDashPackageAdTriggersItem> adTriggers) {
-            this.adTriggers = Codegen.ofNullable(adTriggers);
-            return this;
+
+        public Builder adTriggers(List<OriginEndpointDashPackageAdTriggersItem> adTriggers) {
+            return adTriggers(Output.of(adTriggers));
         }
+
         public Builder adTriggers(OriginEndpointDashPackageAdTriggersItem... adTriggers) {
             return adTriggers(List.of(adTriggers));
         }
+
         public Builder adsOnDeliveryRestrictions(@Nullable Output<OriginEndpointAdsOnDeliveryRestrictions> adsOnDeliveryRestrictions) {
-            this.adsOnDeliveryRestrictions = adsOnDeliveryRestrictions;
+            $.adsOnDeliveryRestrictions = adsOnDeliveryRestrictions;
             return this;
         }
-        public Builder adsOnDeliveryRestrictions(@Nullable OriginEndpointAdsOnDeliveryRestrictions adsOnDeliveryRestrictions) {
-            this.adsOnDeliveryRestrictions = Codegen.ofNullable(adsOnDeliveryRestrictions);
-            return this;
+
+        public Builder adsOnDeliveryRestrictions(OriginEndpointAdsOnDeliveryRestrictions adsOnDeliveryRestrictions) {
+            return adsOnDeliveryRestrictions(Output.of(adsOnDeliveryRestrictions));
         }
+
         public Builder encryption(@Nullable Output<OriginEndpointDashEncryptionArgs> encryption) {
-            this.encryption = encryption;
+            $.encryption = encryption;
             return this;
         }
-        public Builder encryption(@Nullable OriginEndpointDashEncryptionArgs encryption) {
-            this.encryption = Codegen.ofNullable(encryption);
-            return this;
+
+        public Builder encryption(OriginEndpointDashEncryptionArgs encryption) {
+            return encryption(Output.of(encryption));
         }
+
         public Builder manifestLayout(@Nullable Output<OriginEndpointDashPackageManifestLayout> manifestLayout) {
-            this.manifestLayout = manifestLayout;
+            $.manifestLayout = manifestLayout;
             return this;
         }
-        public Builder manifestLayout(@Nullable OriginEndpointDashPackageManifestLayout manifestLayout) {
-            this.manifestLayout = Codegen.ofNullable(manifestLayout);
-            return this;
+
+        public Builder manifestLayout(OriginEndpointDashPackageManifestLayout manifestLayout) {
+            return manifestLayout(Output.of(manifestLayout));
         }
+
         public Builder manifestWindowSeconds(@Nullable Output<Integer> manifestWindowSeconds) {
-            this.manifestWindowSeconds = manifestWindowSeconds;
+            $.manifestWindowSeconds = manifestWindowSeconds;
             return this;
         }
-        public Builder manifestWindowSeconds(@Nullable Integer manifestWindowSeconds) {
-            this.manifestWindowSeconds = Codegen.ofNullable(manifestWindowSeconds);
-            return this;
+
+        public Builder manifestWindowSeconds(Integer manifestWindowSeconds) {
+            return manifestWindowSeconds(Output.of(manifestWindowSeconds));
         }
+
         public Builder minBufferTimeSeconds(@Nullable Output<Integer> minBufferTimeSeconds) {
-            this.minBufferTimeSeconds = minBufferTimeSeconds;
+            $.minBufferTimeSeconds = minBufferTimeSeconds;
             return this;
         }
-        public Builder minBufferTimeSeconds(@Nullable Integer minBufferTimeSeconds) {
-            this.minBufferTimeSeconds = Codegen.ofNullable(minBufferTimeSeconds);
-            return this;
+
+        public Builder minBufferTimeSeconds(Integer minBufferTimeSeconds) {
+            return minBufferTimeSeconds(Output.of(minBufferTimeSeconds));
         }
+
         public Builder minUpdatePeriodSeconds(@Nullable Output<Integer> minUpdatePeriodSeconds) {
-            this.minUpdatePeriodSeconds = minUpdatePeriodSeconds;
+            $.minUpdatePeriodSeconds = minUpdatePeriodSeconds;
             return this;
         }
-        public Builder minUpdatePeriodSeconds(@Nullable Integer minUpdatePeriodSeconds) {
-            this.minUpdatePeriodSeconds = Codegen.ofNullable(minUpdatePeriodSeconds);
-            return this;
+
+        public Builder minUpdatePeriodSeconds(Integer minUpdatePeriodSeconds) {
+            return minUpdatePeriodSeconds(Output.of(minUpdatePeriodSeconds));
         }
+
         public Builder periodTriggers(@Nullable Output<List<OriginEndpointDashPackagePeriodTriggersItem>> periodTriggers) {
-            this.periodTriggers = periodTriggers;
+            $.periodTriggers = periodTriggers;
             return this;
         }
-        public Builder periodTriggers(@Nullable List<OriginEndpointDashPackagePeriodTriggersItem> periodTriggers) {
-            this.periodTriggers = Codegen.ofNullable(periodTriggers);
-            return this;
+
+        public Builder periodTriggers(List<OriginEndpointDashPackagePeriodTriggersItem> periodTriggers) {
+            return periodTriggers(Output.of(periodTriggers));
         }
+
         public Builder periodTriggers(OriginEndpointDashPackagePeriodTriggersItem... periodTriggers) {
             return periodTriggers(List.of(periodTriggers));
         }
+
         public Builder profile(@Nullable Output<OriginEndpointDashPackageProfile> profile) {
-            this.profile = profile;
+            $.profile = profile;
             return this;
         }
-        public Builder profile(@Nullable OriginEndpointDashPackageProfile profile) {
-            this.profile = Codegen.ofNullable(profile);
-            return this;
+
+        public Builder profile(OriginEndpointDashPackageProfile profile) {
+            return profile(Output.of(profile));
         }
+
         public Builder segmentDurationSeconds(@Nullable Output<Integer> segmentDurationSeconds) {
-            this.segmentDurationSeconds = segmentDurationSeconds;
+            $.segmentDurationSeconds = segmentDurationSeconds;
             return this;
         }
-        public Builder segmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
-            this.segmentDurationSeconds = Codegen.ofNullable(segmentDurationSeconds);
-            return this;
+
+        public Builder segmentDurationSeconds(Integer segmentDurationSeconds) {
+            return segmentDurationSeconds(Output.of(segmentDurationSeconds));
         }
+
         public Builder segmentTemplateFormat(@Nullable Output<OriginEndpointDashPackageSegmentTemplateFormat> segmentTemplateFormat) {
-            this.segmentTemplateFormat = segmentTemplateFormat;
+            $.segmentTemplateFormat = segmentTemplateFormat;
             return this;
         }
-        public Builder segmentTemplateFormat(@Nullable OriginEndpointDashPackageSegmentTemplateFormat segmentTemplateFormat) {
-            this.segmentTemplateFormat = Codegen.ofNullable(segmentTemplateFormat);
-            return this;
+
+        public Builder segmentTemplateFormat(OriginEndpointDashPackageSegmentTemplateFormat segmentTemplateFormat) {
+            return segmentTemplateFormat(Output.of(segmentTemplateFormat));
         }
+
         public Builder streamSelection(@Nullable Output<OriginEndpointStreamSelectionArgs> streamSelection) {
-            this.streamSelection = streamSelection;
+            $.streamSelection = streamSelection;
             return this;
         }
-        public Builder streamSelection(@Nullable OriginEndpointStreamSelectionArgs streamSelection) {
-            this.streamSelection = Codegen.ofNullable(streamSelection);
-            return this;
+
+        public Builder streamSelection(OriginEndpointStreamSelectionArgs streamSelection) {
+            return streamSelection(Output.of(streamSelection));
         }
+
         public Builder suggestedPresentationDelaySeconds(@Nullable Output<Integer> suggestedPresentationDelaySeconds) {
-            this.suggestedPresentationDelaySeconds = suggestedPresentationDelaySeconds;
+            $.suggestedPresentationDelaySeconds = suggestedPresentationDelaySeconds;
             return this;
         }
-        public Builder suggestedPresentationDelaySeconds(@Nullable Integer suggestedPresentationDelaySeconds) {
-            this.suggestedPresentationDelaySeconds = Codegen.ofNullable(suggestedPresentationDelaySeconds);
-            return this;
+
+        public Builder suggestedPresentationDelaySeconds(Integer suggestedPresentationDelaySeconds) {
+            return suggestedPresentationDelaySeconds(Output.of(suggestedPresentationDelaySeconds));
         }
+
         public Builder utcTiming(@Nullable Output<OriginEndpointDashPackageUtcTiming> utcTiming) {
-            this.utcTiming = utcTiming;
+            $.utcTiming = utcTiming;
             return this;
         }
-        public Builder utcTiming(@Nullable OriginEndpointDashPackageUtcTiming utcTiming) {
-            this.utcTiming = Codegen.ofNullable(utcTiming);
-            return this;
+
+        public Builder utcTiming(OriginEndpointDashPackageUtcTiming utcTiming) {
+            return utcTiming(Output.of(utcTiming));
         }
+
         public Builder utcTimingUri(@Nullable Output<String> utcTimingUri) {
-            this.utcTimingUri = utcTimingUri;
+            $.utcTimingUri = utcTimingUri;
             return this;
         }
-        public Builder utcTimingUri(@Nullable String utcTimingUri) {
-            this.utcTimingUri = Codegen.ofNullable(utcTimingUri);
-            return this;
-        }        public OriginEndpointDashPackageArgs build() {
-            return new OriginEndpointDashPackageArgs(adTriggers, adsOnDeliveryRestrictions, encryption, manifestLayout, manifestWindowSeconds, minBufferTimeSeconds, minUpdatePeriodSeconds, periodTriggers, profile, segmentDurationSeconds, segmentTemplateFormat, streamSelection, suggestedPresentationDelaySeconds, utcTiming, utcTimingUri);
+
+        public Builder utcTimingUri(String utcTimingUri) {
+            return utcTimingUri(Output.of(utcTimingUri));
+        }
+
+        public OriginEndpointDashPackageArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.azurenative.databoxedge.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class RoleSinkInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="roleId", required=true)
-      private final Output<String> roleId;
+    private Output<String> roleId;
 
     public Output<String> roleId() {
         return this.roleId;
     }
 
-    public RoleSinkInfoArgs(Output<String> roleId) {
-        this.roleId = Objects.requireNonNull(roleId, "expected parameter 'roleId' to be non-null");
-    }
+    private RoleSinkInfoArgs() {}
 
-    private RoleSinkInfoArgs() {
-        this.roleId = Codegen.empty();
+    private RoleSinkInfoArgs(RoleSinkInfoArgs $) {
+        this.roleId = $.roleId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RoleSinkInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> roleId;
+        private RoleSinkInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RoleSinkInfoArgs();
         }
 
         public Builder(RoleSinkInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.roleId = defaults.roleId;
+            $ = new RoleSinkInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder roleId(Output<String> roleId) {
-            this.roleId = Objects.requireNonNull(roleId);
+            $.roleId = roleId;
             return this;
         }
+
         public Builder roleId(String roleId) {
-            this.roleId = Output.of(Objects.requireNonNull(roleId));
-            return this;
-        }        public RoleSinkInfoArgs build() {
-            return new RoleSinkInfoArgs(roleId);
+            return roleId(Output.of(roleId));
+        }
+
+        public RoleSinkInfoArgs build() {
+            $.roleId = Objects.requireNonNull($.roleId, "expected parameter 'roleId' to be non-null");
+            return $;
         }
     }
+
 }

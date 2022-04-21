@@ -20,45 +20,44 @@ public final class GetLocationsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetLocationsArgs(@Nullable String project) {
-        this.project = project;
-    }
+    private GetLocationsArgs() {}
 
-    private GetLocationsArgs() {
-        this.project = null;
+    private GetLocationsArgs(GetLocationsArgs $) {
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLocationsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String project;
+        private GetLocationsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLocationsArgs();
         }
 
         public Builder(GetLocationsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.project = defaults.project;
+            $ = new GetLocationsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetLocationsArgs build() {
-            return new GetLocationsArgs(project);
+        }
+
+        public GetLocationsArgs build() {
+            return $;
         }
     }
+
 }

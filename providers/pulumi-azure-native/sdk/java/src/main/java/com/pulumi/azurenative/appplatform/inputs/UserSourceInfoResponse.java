@@ -24,10 +24,10 @@ public final class UserSourceInfoResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="artifactSelector")
-      private final @Nullable String artifactSelector;
+    private @Nullable String artifactSelector;
 
     public Optional<String> artifactSelector() {
-        return this.artifactSelector == null ? Optional.empty() : Optional.ofNullable(this.artifactSelector);
+        return Optional.ofNullable(this.artifactSelector);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class UserSourceInfoResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="relativePath")
-      private final @Nullable String relativePath;
+    private @Nullable String relativePath;
 
     public Optional<String> relativePath() {
-        return this.relativePath == null ? Optional.empty() : Optional.ofNullable(this.relativePath);
+        return Optional.ofNullable(this.relativePath);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class UserSourceInfoResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -57,73 +57,62 @@ public final class UserSourceInfoResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="version")
-      private final @Nullable String version;
+    private @Nullable String version;
 
     public Optional<String> version() {
-        return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
+        return Optional.ofNullable(this.version);
     }
 
-    public UserSourceInfoResponse(
-        @Nullable String artifactSelector,
-        @Nullable String relativePath,
-        @Nullable String type,
-        @Nullable String version) {
-        this.artifactSelector = artifactSelector;
-        this.relativePath = relativePath;
-        this.type = type;
-        this.version = version;
-    }
+    private UserSourceInfoResponse() {}
 
-    private UserSourceInfoResponse() {
-        this.artifactSelector = null;
-        this.relativePath = null;
-        this.type = null;
-        this.version = null;
+    private UserSourceInfoResponse(UserSourceInfoResponse $) {
+        this.artifactSelector = $.artifactSelector;
+        this.relativePath = $.relativePath;
+        this.type = $.type;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserSourceInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String artifactSelector;
-        private @Nullable String relativePath;
-        private @Nullable String type;
-        private @Nullable String version;
+        private UserSourceInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserSourceInfoResponse();
         }
 
         public Builder(UserSourceInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.artifactSelector = defaults.artifactSelector;
-    	      this.relativePath = defaults.relativePath;
-    	      this.type = defaults.type;
-    	      this.version = defaults.version;
+            $ = new UserSourceInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder artifactSelector(@Nullable String artifactSelector) {
-            this.artifactSelector = artifactSelector;
+            $.artifactSelector = artifactSelector;
             return this;
         }
+
         public Builder relativePath(@Nullable String relativePath) {
-            this.relativePath = relativePath;
+            $.relativePath = relativePath;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
+
         public Builder version(@Nullable String version) {
-            this.version = version;
+            $.version = version;
             return this;
-        }        public UserSourceInfoResponse build() {
-            return new UserSourceInfoResponse(artifactSelector, relativePath, type, version);
+        }
+
+        public UserSourceInfoResponse build() {
+            return $;
         }
     }
+
 }

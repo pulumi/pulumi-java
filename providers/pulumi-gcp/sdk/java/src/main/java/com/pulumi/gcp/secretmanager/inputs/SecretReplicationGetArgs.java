@@ -5,10 +5,10 @@ package com.pulumi.gcp.secretmanager.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.secretmanager.inputs.SecretReplicationUserManagedGetArgs;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class SecretReplicationGetArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="automatic")
-      private final @Nullable Output<Boolean> automatic;
+    private @Nullable Output<Boolean> automatic;
 
-    public Output<Boolean> automatic() {
-        return this.automatic == null ? Codegen.empty() : this.automatic;
+    public Optional<Output<Boolean>> automatic() {
+        return Optional.ofNullable(this.automatic);
     }
 
     /**
@@ -33,63 +33,58 @@ public final class SecretReplicationGetArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="userManaged")
-      private final @Nullable Output<SecretReplicationUserManagedGetArgs> userManaged;
+    private @Nullable Output<SecretReplicationUserManagedGetArgs> userManaged;
 
-    public Output<SecretReplicationUserManagedGetArgs> userManaged() {
-        return this.userManaged == null ? Codegen.empty() : this.userManaged;
+    public Optional<Output<SecretReplicationUserManagedGetArgs>> userManaged() {
+        return Optional.ofNullable(this.userManaged);
     }
 
-    public SecretReplicationGetArgs(
-        @Nullable Output<Boolean> automatic,
-        @Nullable Output<SecretReplicationUserManagedGetArgs> userManaged) {
-        this.automatic = automatic;
-        this.userManaged = userManaged;
-    }
+    private SecretReplicationGetArgs() {}
 
-    private SecretReplicationGetArgs() {
-        this.automatic = Codegen.empty();
-        this.userManaged = Codegen.empty();
+    private SecretReplicationGetArgs(SecretReplicationGetArgs $) {
+        this.automatic = $.automatic;
+        this.userManaged = $.userManaged;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecretReplicationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> automatic;
-        private @Nullable Output<SecretReplicationUserManagedGetArgs> userManaged;
+        private SecretReplicationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecretReplicationGetArgs();
         }
 
         public Builder(SecretReplicationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.automatic = defaults.automatic;
-    	      this.userManaged = defaults.userManaged;
+            $ = new SecretReplicationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder automatic(@Nullable Output<Boolean> automatic) {
-            this.automatic = automatic;
+            $.automatic = automatic;
             return this;
         }
-        public Builder automatic(@Nullable Boolean automatic) {
-            this.automatic = Codegen.ofNullable(automatic);
-            return this;
+
+        public Builder automatic(Boolean automatic) {
+            return automatic(Output.of(automatic));
         }
+
         public Builder userManaged(@Nullable Output<SecretReplicationUserManagedGetArgs> userManaged) {
-            this.userManaged = userManaged;
+            $.userManaged = userManaged;
             return this;
         }
-        public Builder userManaged(@Nullable SecretReplicationUserManagedGetArgs userManaged) {
-            this.userManaged = Codegen.ofNullable(userManaged);
-            return this;
-        }        public SecretReplicationGetArgs build() {
-            return new SecretReplicationGetArgs(automatic, userManaged);
+
+        public Builder userManaged(SecretReplicationUserManagedGetArgs userManaged) {
+            return userManaged(Output.of(userManaged));
+        }
+
+        public SecretReplicationGetArgs build() {
+            return $;
         }
     }
+
 }

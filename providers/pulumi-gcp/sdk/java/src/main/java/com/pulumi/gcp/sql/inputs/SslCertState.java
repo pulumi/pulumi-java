@@ -5,9 +5,9 @@ package com.pulumi.gcp.sql.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class SslCertState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cert")
-      private final @Nullable Output<String> cert;
+    private @Nullable Output<String> cert;
 
-    public Output<String> cert() {
-        return this.cert == null ? Codegen.empty() : this.cert;
+    public Optional<Output<String>> cert() {
+        return Optional.ofNullable(this.cert);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class SslCertState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="certSerialNumber")
-      private final @Nullable Output<String> certSerialNumber;
+    private @Nullable Output<String> certSerialNumber;
 
-    public Output<String> certSerialNumber() {
-        return this.certSerialNumber == null ? Codegen.empty() : this.certSerialNumber;
+    public Optional<Output<String>> certSerialNumber() {
+        return Optional.ofNullable(this.certSerialNumber);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class SslCertState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="commonName")
-      private final @Nullable Output<String> commonName;
+    private @Nullable Output<String> commonName;
 
-    public Output<String> commonName() {
-        return this.commonName == null ? Codegen.empty() : this.commonName;
+    public Optional<Output<String>> commonName() {
+        return Optional.ofNullable(this.commonName);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class SslCertState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createTime")
-      private final @Nullable Output<String> createTime;
+    private @Nullable Output<String> createTime;
 
-    public Output<String> createTime() {
-        return this.createTime == null ? Codegen.empty() : this.createTime;
+    public Optional<Output<String>> createTime() {
+        return Optional.ofNullable(this.createTime);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class SslCertState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="expirationTime")
-      private final @Nullable Output<String> expirationTime;
+    private @Nullable Output<String> expirationTime;
 
-    public Output<String> expirationTime() {
-        return this.expirationTime == null ? Codegen.empty() : this.expirationTime;
+    public Optional<Output<String>> expirationTime() {
+        return Optional.ofNullable(this.expirationTime);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class SslCertState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instance")
-      private final @Nullable Output<String> instance;
+    private @Nullable Output<String> instance;
 
-    public Output<String> instance() {
-        return this.instance == null ? Codegen.empty() : this.instance;
+    public Optional<Output<String>> instance() {
+        return Optional.ofNullable(this.instance);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class SslCertState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="privateKey")
-      private final @Nullable Output<String> privateKey;
+    private @Nullable Output<String> privateKey;
 
-    public Output<String> privateKey() {
-        return this.privateKey == null ? Codegen.empty() : this.privateKey;
+    public Optional<Output<String>> privateKey() {
+        return Optional.ofNullable(this.privateKey);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class SslCertState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class SslCertState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serverCaCert")
-      private final @Nullable Output<String> serverCaCert;
+    private @Nullable Output<String> serverCaCert;
 
-    public Output<String> serverCaCert() {
-        return this.serverCaCert == null ? Codegen.empty() : this.serverCaCert;
+    public Optional<Output<String>> serverCaCert() {
+        return Optional.ofNullable(this.serverCaCert);
     }
 
     /**
@@ -124,167 +124,138 @@ public final class SslCertState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sha1Fingerprint")
-      private final @Nullable Output<String> sha1Fingerprint;
+    private @Nullable Output<String> sha1Fingerprint;
 
-    public Output<String> sha1Fingerprint() {
-        return this.sha1Fingerprint == null ? Codegen.empty() : this.sha1Fingerprint;
+    public Optional<Output<String>> sha1Fingerprint() {
+        return Optional.ofNullable(this.sha1Fingerprint);
     }
 
-    public SslCertState(
-        @Nullable Output<String> cert,
-        @Nullable Output<String> certSerialNumber,
-        @Nullable Output<String> commonName,
-        @Nullable Output<String> createTime,
-        @Nullable Output<String> expirationTime,
-        @Nullable Output<String> instance,
-        @Nullable Output<String> privateKey,
-        @Nullable Output<String> project,
-        @Nullable Output<String> serverCaCert,
-        @Nullable Output<String> sha1Fingerprint) {
-        this.cert = cert;
-        this.certSerialNumber = certSerialNumber;
-        this.commonName = commonName;
-        this.createTime = createTime;
-        this.expirationTime = expirationTime;
-        this.instance = instance;
-        this.privateKey = privateKey;
-        this.project = project;
-        this.serverCaCert = serverCaCert;
-        this.sha1Fingerprint = sha1Fingerprint;
-    }
+    private SslCertState() {}
 
-    private SslCertState() {
-        this.cert = Codegen.empty();
-        this.certSerialNumber = Codegen.empty();
-        this.commonName = Codegen.empty();
-        this.createTime = Codegen.empty();
-        this.expirationTime = Codegen.empty();
-        this.instance = Codegen.empty();
-        this.privateKey = Codegen.empty();
-        this.project = Codegen.empty();
-        this.serverCaCert = Codegen.empty();
-        this.sha1Fingerprint = Codegen.empty();
+    private SslCertState(SslCertState $) {
+        this.cert = $.cert;
+        this.certSerialNumber = $.certSerialNumber;
+        this.commonName = $.commonName;
+        this.createTime = $.createTime;
+        this.expirationTime = $.expirationTime;
+        this.instance = $.instance;
+        this.privateKey = $.privateKey;
+        this.project = $.project;
+        this.serverCaCert = $.serverCaCert;
+        this.sha1Fingerprint = $.sha1Fingerprint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SslCertState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> cert;
-        private @Nullable Output<String> certSerialNumber;
-        private @Nullable Output<String> commonName;
-        private @Nullable Output<String> createTime;
-        private @Nullable Output<String> expirationTime;
-        private @Nullable Output<String> instance;
-        private @Nullable Output<String> privateKey;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> serverCaCert;
-        private @Nullable Output<String> sha1Fingerprint;
+        private SslCertState $;
 
         public Builder() {
-    	      // Empty
+            $ = new SslCertState();
         }
 
         public Builder(SslCertState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cert = defaults.cert;
-    	      this.certSerialNumber = defaults.certSerialNumber;
-    	      this.commonName = defaults.commonName;
-    	      this.createTime = defaults.createTime;
-    	      this.expirationTime = defaults.expirationTime;
-    	      this.instance = defaults.instance;
-    	      this.privateKey = defaults.privateKey;
-    	      this.project = defaults.project;
-    	      this.serverCaCert = defaults.serverCaCert;
-    	      this.sha1Fingerprint = defaults.sha1Fingerprint;
+            $ = new SslCertState(Objects.requireNonNull(defaults));
         }
 
         public Builder cert(@Nullable Output<String> cert) {
-            this.cert = cert;
+            $.cert = cert;
             return this;
         }
-        public Builder cert(@Nullable String cert) {
-            this.cert = Codegen.ofNullable(cert);
-            return this;
+
+        public Builder cert(String cert) {
+            return cert(Output.of(cert));
         }
+
         public Builder certSerialNumber(@Nullable Output<String> certSerialNumber) {
-            this.certSerialNumber = certSerialNumber;
+            $.certSerialNumber = certSerialNumber;
             return this;
         }
-        public Builder certSerialNumber(@Nullable String certSerialNumber) {
-            this.certSerialNumber = Codegen.ofNullable(certSerialNumber);
-            return this;
+
+        public Builder certSerialNumber(String certSerialNumber) {
+            return certSerialNumber(Output.of(certSerialNumber));
         }
+
         public Builder commonName(@Nullable Output<String> commonName) {
-            this.commonName = commonName;
+            $.commonName = commonName;
             return this;
         }
-        public Builder commonName(@Nullable String commonName) {
-            this.commonName = Codegen.ofNullable(commonName);
-            return this;
+
+        public Builder commonName(String commonName) {
+            return commonName(Output.of(commonName));
         }
+
         public Builder createTime(@Nullable Output<String> createTime) {
-            this.createTime = createTime;
+            $.createTime = createTime;
             return this;
         }
-        public Builder createTime(@Nullable String createTime) {
-            this.createTime = Codegen.ofNullable(createTime);
-            return this;
+
+        public Builder createTime(String createTime) {
+            return createTime(Output.of(createTime));
         }
+
         public Builder expirationTime(@Nullable Output<String> expirationTime) {
-            this.expirationTime = expirationTime;
+            $.expirationTime = expirationTime;
             return this;
         }
-        public Builder expirationTime(@Nullable String expirationTime) {
-            this.expirationTime = Codegen.ofNullable(expirationTime);
-            return this;
+
+        public Builder expirationTime(String expirationTime) {
+            return expirationTime(Output.of(expirationTime));
         }
+
         public Builder instance(@Nullable Output<String> instance) {
-            this.instance = instance;
+            $.instance = instance;
             return this;
         }
-        public Builder instance(@Nullable String instance) {
-            this.instance = Codegen.ofNullable(instance);
-            return this;
+
+        public Builder instance(String instance) {
+            return instance(Output.of(instance));
         }
+
         public Builder privateKey(@Nullable Output<String> privateKey) {
-            this.privateKey = privateKey;
+            $.privateKey = privateKey;
             return this;
         }
-        public Builder privateKey(@Nullable String privateKey) {
-            this.privateKey = Codegen.ofNullable(privateKey);
-            return this;
+
+        public Builder privateKey(String privateKey) {
+            return privateKey(Output.of(privateKey));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder serverCaCert(@Nullable Output<String> serverCaCert) {
-            this.serverCaCert = serverCaCert;
+            $.serverCaCert = serverCaCert;
             return this;
         }
-        public Builder serverCaCert(@Nullable String serverCaCert) {
-            this.serverCaCert = Codegen.ofNullable(serverCaCert);
-            return this;
+
+        public Builder serverCaCert(String serverCaCert) {
+            return serverCaCert(Output.of(serverCaCert));
         }
+
         public Builder sha1Fingerprint(@Nullable Output<String> sha1Fingerprint) {
-            this.sha1Fingerprint = sha1Fingerprint;
+            $.sha1Fingerprint = sha1Fingerprint;
             return this;
         }
-        public Builder sha1Fingerprint(@Nullable String sha1Fingerprint) {
-            this.sha1Fingerprint = Codegen.ofNullable(sha1Fingerprint);
-            return this;
-        }        public SslCertState build() {
-            return new SslCertState(cert, certSerialNumber, commonName, createTime, expirationTime, instance, privateKey, project, serverCaCert, sha1Fingerprint);
+
+        public Builder sha1Fingerprint(String sha1Fingerprint) {
+            return sha1Fingerprint(Output.of(sha1Fingerprint));
+        }
+
+        public SslCertState build() {
+            return $;
         }
     }
+
 }

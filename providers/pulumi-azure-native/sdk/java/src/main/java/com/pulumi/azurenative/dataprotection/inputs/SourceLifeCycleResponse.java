@@ -26,7 +26,7 @@ public final class SourceLifeCycleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="deleteAfter", required=true)
-      private final AbsoluteDeleteOptionResponse deleteAfter;
+    private AbsoluteDeleteOptionResponse deleteAfter;
 
     public AbsoluteDeleteOptionResponse deleteAfter() {
         return this.deleteAfter;
@@ -37,74 +37,69 @@ public final class SourceLifeCycleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="sourceDataStore", required=true)
-      private final DataStoreInfoBaseResponse sourceDataStore;
+    private DataStoreInfoBaseResponse sourceDataStore;
 
     public DataStoreInfoBaseResponse sourceDataStore() {
         return this.sourceDataStore;
     }
 
     @Import(name="targetDataStoreCopySettings")
-      private final @Nullable List<TargetCopySettingResponse> targetDataStoreCopySettings;
+    private @Nullable List<TargetCopySettingResponse> targetDataStoreCopySettings;
 
-    public List<TargetCopySettingResponse> targetDataStoreCopySettings() {
-        return this.targetDataStoreCopySettings == null ? List.of() : this.targetDataStoreCopySettings;
+    public Optional<List<TargetCopySettingResponse>> targetDataStoreCopySettings() {
+        return Optional.ofNullable(this.targetDataStoreCopySettings);
     }
 
-    public SourceLifeCycleResponse(
-        AbsoluteDeleteOptionResponse deleteAfter,
-        DataStoreInfoBaseResponse sourceDataStore,
-        @Nullable List<TargetCopySettingResponse> targetDataStoreCopySettings) {
-        this.deleteAfter = Objects.requireNonNull(deleteAfter, "expected parameter 'deleteAfter' to be non-null");
-        this.sourceDataStore = Objects.requireNonNull(sourceDataStore, "expected parameter 'sourceDataStore' to be non-null");
-        this.targetDataStoreCopySettings = targetDataStoreCopySettings;
-    }
+    private SourceLifeCycleResponse() {}
 
-    private SourceLifeCycleResponse() {
-        this.deleteAfter = null;
-        this.sourceDataStore = null;
-        this.targetDataStoreCopySettings = List.of();
+    private SourceLifeCycleResponse(SourceLifeCycleResponse $) {
+        this.deleteAfter = $.deleteAfter;
+        this.sourceDataStore = $.sourceDataStore;
+        this.targetDataStoreCopySettings = $.targetDataStoreCopySettings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SourceLifeCycleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private AbsoluteDeleteOptionResponse deleteAfter;
-        private DataStoreInfoBaseResponse sourceDataStore;
-        private @Nullable List<TargetCopySettingResponse> targetDataStoreCopySettings;
+        private SourceLifeCycleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SourceLifeCycleResponse();
         }
 
         public Builder(SourceLifeCycleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deleteAfter = defaults.deleteAfter;
-    	      this.sourceDataStore = defaults.sourceDataStore;
-    	      this.targetDataStoreCopySettings = defaults.targetDataStoreCopySettings;
+            $ = new SourceLifeCycleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder deleteAfter(AbsoluteDeleteOptionResponse deleteAfter) {
-            this.deleteAfter = Objects.requireNonNull(deleteAfter);
+            $.deleteAfter = deleteAfter;
             return this;
         }
+
         public Builder sourceDataStore(DataStoreInfoBaseResponse sourceDataStore) {
-            this.sourceDataStore = Objects.requireNonNull(sourceDataStore);
+            $.sourceDataStore = sourceDataStore;
             return this;
         }
+
         public Builder targetDataStoreCopySettings(@Nullable List<TargetCopySettingResponse> targetDataStoreCopySettings) {
-            this.targetDataStoreCopySettings = targetDataStoreCopySettings;
+            $.targetDataStoreCopySettings = targetDataStoreCopySettings;
             return this;
         }
+
         public Builder targetDataStoreCopySettings(TargetCopySettingResponse... targetDataStoreCopySettings) {
             return targetDataStoreCopySettings(List.of(targetDataStoreCopySettings));
-        }        public SourceLifeCycleResponse build() {
-            return new SourceLifeCycleResponse(deleteAfter, sourceDataStore, targetDataStoreCopySettings);
+        }
+
+        public SourceLifeCycleResponse build() {
+            $.deleteAfter = Objects.requireNonNull($.deleteAfter, "expected parameter 'deleteAfter' to be non-null");
+            $.sourceDataStore = Objects.requireNonNull($.sourceDataStore, "expected parameter 'sourceDataStore' to be non-null");
+            return $;
         }
     }
+
 }

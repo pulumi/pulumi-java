@@ -5,10 +5,10 @@ package com.pulumi.googlenative.jobs_v3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ApplicationInfoArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="emails")
-      private final @Nullable Output<List<String>> emails;
+    private @Nullable Output<List<String>> emails;
 
-    public Output<List<String>> emails() {
-        return this.emails == null ? Codegen.empty() : this.emails;
+    public Optional<Output<List<String>>> emails() {
+        return Optional.ofNullable(this.emails);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ApplicationInfoArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="instruction")
-      private final @Nullable Output<String> instruction;
+    private @Nullable Output<String> instruction;
 
-    public Output<String> instruction() {
-        return this.instruction == null ? Codegen.empty() : this.instruction;
+    public Optional<Output<String>> instruction() {
+        return Optional.ofNullable(this.instruction);
     }
 
     /**
@@ -47,82 +47,76 @@ public final class ApplicationInfoArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="uris")
-      private final @Nullable Output<List<String>> uris;
+    private @Nullable Output<List<String>> uris;
 
-    public Output<List<String>> uris() {
-        return this.uris == null ? Codegen.empty() : this.uris;
+    public Optional<Output<List<String>>> uris() {
+        return Optional.ofNullable(this.uris);
     }
 
-    public ApplicationInfoArgs(
-        @Nullable Output<List<String>> emails,
-        @Nullable Output<String> instruction,
-        @Nullable Output<List<String>> uris) {
-        this.emails = emails;
-        this.instruction = instruction;
-        this.uris = uris;
-    }
+    private ApplicationInfoArgs() {}
 
-    private ApplicationInfoArgs() {
-        this.emails = Codegen.empty();
-        this.instruction = Codegen.empty();
-        this.uris = Codegen.empty();
+    private ApplicationInfoArgs(ApplicationInfoArgs $) {
+        this.emails = $.emails;
+        this.instruction = $.instruction;
+        this.uris = $.uris;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> emails;
-        private @Nullable Output<String> instruction;
-        private @Nullable Output<List<String>> uris;
+        private ApplicationInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationInfoArgs();
         }
 
         public Builder(ApplicationInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.emails = defaults.emails;
-    	      this.instruction = defaults.instruction;
-    	      this.uris = defaults.uris;
+            $ = new ApplicationInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder emails(@Nullable Output<List<String>> emails) {
-            this.emails = emails;
+            $.emails = emails;
             return this;
         }
-        public Builder emails(@Nullable List<String> emails) {
-            this.emails = Codegen.ofNullable(emails);
-            return this;
+
+        public Builder emails(List<String> emails) {
+            return emails(Output.of(emails));
         }
+
         public Builder emails(String... emails) {
             return emails(List.of(emails));
         }
+
         public Builder instruction(@Nullable Output<String> instruction) {
-            this.instruction = instruction;
+            $.instruction = instruction;
             return this;
         }
-        public Builder instruction(@Nullable String instruction) {
-            this.instruction = Codegen.ofNullable(instruction);
-            return this;
+
+        public Builder instruction(String instruction) {
+            return instruction(Output.of(instruction));
         }
+
         public Builder uris(@Nullable Output<List<String>> uris) {
-            this.uris = uris;
+            $.uris = uris;
             return this;
         }
-        public Builder uris(@Nullable List<String> uris) {
-            this.uris = Codegen.ofNullable(uris);
-            return this;
+
+        public Builder uris(List<String> uris) {
+            return uris(Output.of(uris));
         }
+
         public Builder uris(String... uris) {
             return uris(List.of(uris));
-        }        public ApplicationInfoArgs build() {
-            return new ApplicationInfoArgs(emails, instruction, uris);
+        }
+
+        public ApplicationInfoArgs build() {
+            return $;
         }
     }
+
 }

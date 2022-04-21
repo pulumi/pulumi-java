@@ -22,48 +22,49 @@ public final class CapacityReservationUtilizationResponse extends com.pulumi.res
      * 
      */
     @Import(name="virtualMachinesAllocated", required=true)
-      private final List<SubResourceReadOnlyResponse> virtualMachinesAllocated;
+    private List<SubResourceReadOnlyResponse> virtualMachinesAllocated;
 
     public List<SubResourceReadOnlyResponse> virtualMachinesAllocated() {
         return this.virtualMachinesAllocated;
     }
 
-    public CapacityReservationUtilizationResponse(List<SubResourceReadOnlyResponse> virtualMachinesAllocated) {
-        this.virtualMachinesAllocated = Objects.requireNonNull(virtualMachinesAllocated, "expected parameter 'virtualMachinesAllocated' to be non-null");
-    }
+    private CapacityReservationUtilizationResponse() {}
 
-    private CapacityReservationUtilizationResponse() {
-        this.virtualMachinesAllocated = List.of();
+    private CapacityReservationUtilizationResponse(CapacityReservationUtilizationResponse $) {
+        this.virtualMachinesAllocated = $.virtualMachinesAllocated;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CapacityReservationUtilizationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<SubResourceReadOnlyResponse> virtualMachinesAllocated;
+        private CapacityReservationUtilizationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CapacityReservationUtilizationResponse();
         }
 
         public Builder(CapacityReservationUtilizationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.virtualMachinesAllocated = defaults.virtualMachinesAllocated;
+            $ = new CapacityReservationUtilizationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder virtualMachinesAllocated(List<SubResourceReadOnlyResponse> virtualMachinesAllocated) {
-            this.virtualMachinesAllocated = Objects.requireNonNull(virtualMachinesAllocated);
+            $.virtualMachinesAllocated = virtualMachinesAllocated;
             return this;
         }
+
         public Builder virtualMachinesAllocated(SubResourceReadOnlyResponse... virtualMachinesAllocated) {
             return virtualMachinesAllocated(List.of(virtualMachinesAllocated));
-        }        public CapacityReservationUtilizationResponse build() {
-            return new CapacityReservationUtilizationResponse(virtualMachinesAllocated);
+        }
+
+        public CapacityReservationUtilizationResponse build() {
+            $.virtualMachinesAllocated = Objects.requireNonNull($.virtualMachinesAllocated, "expected parameter 'virtualMachinesAllocated' to be non-null");
+            return $;
         }
     }
+
 }

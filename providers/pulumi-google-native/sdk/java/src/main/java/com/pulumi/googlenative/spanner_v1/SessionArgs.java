@@ -5,10 +5,10 @@ package com.pulumi.googlenative.spanner_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,14 +17,14 @@ public final class SessionArgs extends com.pulumi.resources.ResourceArgs {
     public static final SessionArgs Empty = new SessionArgs();
 
     @Import(name="databaseId", required=true)
-      private final Output<String> databaseId;
+    private Output<String> databaseId;
 
     public Output<String> databaseId() {
         return this.databaseId;
     }
 
     @Import(name="instanceId", required=true)
-      private final Output<String> instanceId;
+    private Output<String> instanceId;
 
     public Output<String> instanceId() {
         return this.instanceId;
@@ -35,96 +35,87 @@ public final class SessionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public SessionArgs(
-        Output<String> databaseId,
-        Output<String> instanceId,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> project) {
-        this.databaseId = Objects.requireNonNull(databaseId, "expected parameter 'databaseId' to be non-null");
-        this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
-        this.labels = labels;
-        this.project = project;
-    }
+    private SessionArgs() {}
 
-    private SessionArgs() {
-        this.databaseId = Codegen.empty();
-        this.instanceId = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.project = Codegen.empty();
+    private SessionArgs(SessionArgs $) {
+        this.databaseId = $.databaseId;
+        this.instanceId = $.instanceId;
+        this.labels = $.labels;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SessionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> databaseId;
-        private Output<String> instanceId;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> project;
+        private SessionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SessionArgs();
         }
 
         public Builder(SessionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.databaseId = defaults.databaseId;
-    	      this.instanceId = defaults.instanceId;
-    	      this.labels = defaults.labels;
-    	      this.project = defaults.project;
+            $ = new SessionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder databaseId(Output<String> databaseId) {
-            this.databaseId = Objects.requireNonNull(databaseId);
+            $.databaseId = databaseId;
             return this;
         }
+
         public Builder databaseId(String databaseId) {
-            this.databaseId = Output.of(Objects.requireNonNull(databaseId));
-            return this;
+            return databaseId(Output.of(databaseId));
         }
+
         public Builder instanceId(Output<String> instanceId) {
-            this.instanceId = Objects.requireNonNull(instanceId);
+            $.instanceId = instanceId;
             return this;
         }
+
         public Builder instanceId(String instanceId) {
-            this.instanceId = Output.of(Objects.requireNonNull(instanceId));
-            return this;
+            return instanceId(Output.of(instanceId));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public SessionArgs build() {
-            return new SessionArgs(databaseId, instanceId, labels, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public SessionArgs build() {
+            $.databaseId = Objects.requireNonNull($.databaseId, "expected parameter 'databaseId' to be non-null");
+            $.instanceId = Objects.requireNonNull($.instanceId, "expected parameter 'instanceId' to be non-null");
+            return $;
         }
     }
+
 }

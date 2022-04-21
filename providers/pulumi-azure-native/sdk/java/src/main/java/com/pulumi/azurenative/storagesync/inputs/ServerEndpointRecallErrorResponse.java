@@ -22,7 +22,7 @@ public final class ServerEndpointRecallErrorResponse extends com.pulumi.resource
      * 
      */
     @Import(name="count", required=true)
-      private final Double count;
+    private Double count;
 
     public Double count() {
         return this.count;
@@ -33,55 +33,52 @@ public final class ServerEndpointRecallErrorResponse extends com.pulumi.resource
      * 
      */
     @Import(name="errorCode", required=true)
-      private final Integer errorCode;
+    private Integer errorCode;
 
     public Integer errorCode() {
         return this.errorCode;
     }
 
-    public ServerEndpointRecallErrorResponse(
-        Double count,
-        Integer errorCode) {
-        this.count = Objects.requireNonNull(count, "expected parameter 'count' to be non-null");
-        this.errorCode = Objects.requireNonNull(errorCode, "expected parameter 'errorCode' to be non-null");
-    }
+    private ServerEndpointRecallErrorResponse() {}
 
-    private ServerEndpointRecallErrorResponse() {
-        this.count = null;
-        this.errorCode = null;
+    private ServerEndpointRecallErrorResponse(ServerEndpointRecallErrorResponse $) {
+        this.count = $.count;
+        this.errorCode = $.errorCode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServerEndpointRecallErrorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double count;
-        private Integer errorCode;
+        private ServerEndpointRecallErrorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServerEndpointRecallErrorResponse();
         }
 
         public Builder(ServerEndpointRecallErrorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.count = defaults.count;
-    	      this.errorCode = defaults.errorCode;
+            $ = new ServerEndpointRecallErrorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder count(Double count) {
-            this.count = Objects.requireNonNull(count);
+            $.count = count;
             return this;
         }
+
         public Builder errorCode(Integer errorCode) {
-            this.errorCode = Objects.requireNonNull(errorCode);
+            $.errorCode = errorCode;
             return this;
-        }        public ServerEndpointRecallErrorResponse build() {
-            return new ServerEndpointRecallErrorResponse(count, errorCode);
+        }
+
+        public ServerEndpointRecallErrorResponse build() {
+            $.count = Objects.requireNonNull($.count, "expected parameter 'count' to be non-null");
+            $.errorCode = Objects.requireNonNull($.errorCode, "expected parameter 'errorCode' to be non-null");
+            return $;
         }
     }
+
 }

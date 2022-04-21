@@ -24,7 +24,7 @@ public final class AddRemoveReplicaScalingMechanismResponse extends com.pulumi.r
      * 
      */
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
@@ -35,7 +35,7 @@ public final class AddRemoveReplicaScalingMechanismResponse extends com.pulumi.r
      * 
      */
     @Import(name="maxCount", required=true)
-      private final Integer maxCount;
+    private Integer maxCount;
 
     public Integer maxCount() {
         return this.maxCount;
@@ -46,7 +46,7 @@ public final class AddRemoveReplicaScalingMechanismResponse extends com.pulumi.r
      * 
      */
     @Import(name="minCount", required=true)
-      private final Integer minCount;
+    private Integer minCount;
 
     public Integer minCount() {
         return this.minCount;
@@ -57,73 +57,66 @@ public final class AddRemoveReplicaScalingMechanismResponse extends com.pulumi.r
      * 
      */
     @Import(name="scaleIncrement", required=true)
-      private final Integer scaleIncrement;
+    private Integer scaleIncrement;
 
     public Integer scaleIncrement() {
         return this.scaleIncrement;
     }
 
-    public AddRemoveReplicaScalingMechanismResponse(
-        String kind,
-        Integer maxCount,
-        Integer minCount,
-        Integer scaleIncrement) {
-        this.kind = Codegen.stringProp("kind").arg(kind).require();
-        this.maxCount = Objects.requireNonNull(maxCount, "expected parameter 'maxCount' to be non-null");
-        this.minCount = Objects.requireNonNull(minCount, "expected parameter 'minCount' to be non-null");
-        this.scaleIncrement = Objects.requireNonNull(scaleIncrement, "expected parameter 'scaleIncrement' to be non-null");
-    }
+    private AddRemoveReplicaScalingMechanismResponse() {}
 
-    private AddRemoveReplicaScalingMechanismResponse() {
-        this.kind = null;
-        this.maxCount = null;
-        this.minCount = null;
-        this.scaleIncrement = null;
+    private AddRemoveReplicaScalingMechanismResponse(AddRemoveReplicaScalingMechanismResponse $) {
+        this.kind = $.kind;
+        this.maxCount = $.maxCount;
+        this.minCount = $.minCount;
+        this.scaleIncrement = $.scaleIncrement;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AddRemoveReplicaScalingMechanismResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String kind;
-        private Integer maxCount;
-        private Integer minCount;
-        private Integer scaleIncrement;
+        private AddRemoveReplicaScalingMechanismResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AddRemoveReplicaScalingMechanismResponse();
         }
 
         public Builder(AddRemoveReplicaScalingMechanismResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kind = defaults.kind;
-    	      this.maxCount = defaults.maxCount;
-    	      this.minCount = defaults.minCount;
-    	      this.scaleIncrement = defaults.scaleIncrement;
+            $ = new AddRemoveReplicaScalingMechanismResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder maxCount(Integer maxCount) {
-            this.maxCount = Objects.requireNonNull(maxCount);
+            $.maxCount = maxCount;
             return this;
         }
+
         public Builder minCount(Integer minCount) {
-            this.minCount = Objects.requireNonNull(minCount);
+            $.minCount = minCount;
             return this;
         }
+
         public Builder scaleIncrement(Integer scaleIncrement) {
-            this.scaleIncrement = Objects.requireNonNull(scaleIncrement);
+            $.scaleIncrement = scaleIncrement;
             return this;
-        }        public AddRemoveReplicaScalingMechanismResponse build() {
-            return new AddRemoveReplicaScalingMechanismResponse(kind, maxCount, minCount, scaleIncrement);
+        }
+
+        public AddRemoveReplicaScalingMechanismResponse build() {
+            $.kind = Codegen.stringProp("kind").arg($.kind).require();
+            $.maxCount = Objects.requireNonNull($.maxCount, "expected parameter 'maxCount' to be non-null");
+            $.minCount = Objects.requireNonNull($.minCount, "expected parameter 'minCount' to be non-null");
+            $.scaleIncrement = Objects.requireNonNull($.scaleIncrement, "expected parameter 'scaleIncrement' to be non-null");
+            return $;
         }
     }
+
 }

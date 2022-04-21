@@ -22,62 +22,58 @@ public final class RecipeAction extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="operation", required=true)
-      private final String operation;
+    private String operation;
 
     public String operation() {
         return this.operation;
     }
 
     @Import(name="parameters")
-      private final @Nullable Either<RecipeParameters,RecipeParameterMap> parameters;
+    private @Nullable Either<RecipeParameters,RecipeParameterMap> parameters;
 
-    public Either<RecipeParameters,RecipeParameterMap> parameters() {
-        return this.parameters == null ? null : this.parameters;
+    public Optional<Either<RecipeParameters,RecipeParameterMap>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
-    public RecipeAction(
-        String operation,
-        @Nullable Either<RecipeParameters,RecipeParameterMap> parameters) {
-        this.operation = Objects.requireNonNull(operation, "expected parameter 'operation' to be non-null");
-        this.parameters = parameters;
-    }
+    private RecipeAction() {}
 
-    private RecipeAction() {
-        this.operation = null;
-        this.parameters = null;
+    private RecipeAction(RecipeAction $) {
+        this.operation = $.operation;
+        this.parameters = $.parameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RecipeAction defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String operation;
-        private @Nullable Either<RecipeParameters,RecipeParameterMap> parameters;
+        private RecipeAction $;
 
         public Builder() {
-    	      // Empty
+            $ = new RecipeAction();
         }
 
         public Builder(RecipeAction defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.operation = defaults.operation;
-    	      this.parameters = defaults.parameters;
+            $ = new RecipeAction(Objects.requireNonNull(defaults));
         }
 
         public Builder operation(String operation) {
-            this.operation = Objects.requireNonNull(operation);
+            $.operation = operation;
             return this;
         }
+
         public Builder parameters(@Nullable Either<RecipeParameters,RecipeParameterMap> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
-        }        public RecipeAction build() {
-            return new RecipeAction(operation, parameters);
+        }
+
+        public RecipeAction build() {
+            $.operation = Objects.requireNonNull($.operation, "expected parameter 'operation' to be non-null");
+            return $;
         }
     }
+
 }

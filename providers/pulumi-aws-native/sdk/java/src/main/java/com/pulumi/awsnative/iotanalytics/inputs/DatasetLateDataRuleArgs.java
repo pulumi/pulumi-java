@@ -6,9 +6,9 @@ package com.pulumi.awsnative.iotanalytics.inputs;
 import com.pulumi.awsnative.iotanalytics.inputs.DatasetLateDataRuleConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,66 @@ public final class DatasetLateDataRuleArgs extends com.pulumi.resources.Resource
     public static final DatasetLateDataRuleArgs Empty = new DatasetLateDataRuleArgs();
 
     @Import(name="ruleConfiguration", required=true)
-      private final Output<DatasetLateDataRuleConfigurationArgs> ruleConfiguration;
+    private Output<DatasetLateDataRuleConfigurationArgs> ruleConfiguration;
 
     public Output<DatasetLateDataRuleConfigurationArgs> ruleConfiguration() {
         return this.ruleConfiguration;
     }
 
     @Import(name="ruleName")
-      private final @Nullable Output<String> ruleName;
+    private @Nullable Output<String> ruleName;
 
-    public Output<String> ruleName() {
-        return this.ruleName == null ? Codegen.empty() : this.ruleName;
+    public Optional<Output<String>> ruleName() {
+        return Optional.ofNullable(this.ruleName);
     }
 
-    public DatasetLateDataRuleArgs(
-        Output<DatasetLateDataRuleConfigurationArgs> ruleConfiguration,
-        @Nullable Output<String> ruleName) {
-        this.ruleConfiguration = Objects.requireNonNull(ruleConfiguration, "expected parameter 'ruleConfiguration' to be non-null");
-        this.ruleName = ruleName;
-    }
+    private DatasetLateDataRuleArgs() {}
 
-    private DatasetLateDataRuleArgs() {
-        this.ruleConfiguration = Codegen.empty();
-        this.ruleName = Codegen.empty();
+    private DatasetLateDataRuleArgs(DatasetLateDataRuleArgs $) {
+        this.ruleConfiguration = $.ruleConfiguration;
+        this.ruleName = $.ruleName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetLateDataRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<DatasetLateDataRuleConfigurationArgs> ruleConfiguration;
-        private @Nullable Output<String> ruleName;
+        private DatasetLateDataRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetLateDataRuleArgs();
         }
 
         public Builder(DatasetLateDataRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ruleConfiguration = defaults.ruleConfiguration;
-    	      this.ruleName = defaults.ruleName;
+            $ = new DatasetLateDataRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ruleConfiguration(Output<DatasetLateDataRuleConfigurationArgs> ruleConfiguration) {
-            this.ruleConfiguration = Objects.requireNonNull(ruleConfiguration);
+            $.ruleConfiguration = ruleConfiguration;
             return this;
         }
+
         public Builder ruleConfiguration(DatasetLateDataRuleConfigurationArgs ruleConfiguration) {
-            this.ruleConfiguration = Output.of(Objects.requireNonNull(ruleConfiguration));
-            return this;
+            return ruleConfiguration(Output.of(ruleConfiguration));
         }
+
         public Builder ruleName(@Nullable Output<String> ruleName) {
-            this.ruleName = ruleName;
+            $.ruleName = ruleName;
             return this;
         }
-        public Builder ruleName(@Nullable String ruleName) {
-            this.ruleName = Codegen.ofNullable(ruleName);
-            return this;
-        }        public DatasetLateDataRuleArgs build() {
-            return new DatasetLateDataRuleArgs(ruleConfiguration, ruleName);
+
+        public Builder ruleName(String ruleName) {
+            return ruleName(Output.of(ruleName));
+        }
+
+        public DatasetLateDataRuleArgs build() {
+            $.ruleConfiguration = Objects.requireNonNull($.ruleConfiguration, "expected parameter 'ruleConfiguration' to be non-null");
+            return $;
         }
     }
+
 }

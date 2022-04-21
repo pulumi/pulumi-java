@@ -5,10 +5,10 @@ package com.pulumi.googlenative.apigee_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,7 +17,7 @@ public final class ArchiveDeploymentArgs extends com.pulumi.resources.ResourceAr
     public static final ArchiveDeploymentArgs Empty = new ArchiveDeploymentArgs();
 
     @Import(name="environmentId", required=true)
-      private final Output<String> environmentId;
+    private Output<String> environmentId;
 
     public Output<String> environmentId() {
         return this.environmentId;
@@ -28,10 +28,10 @@ public final class ArchiveDeploymentArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="gcsUri")
-      private final @Nullable Output<String> gcsUri;
+    private @Nullable Output<String> gcsUri;
 
-    public Output<String> gcsUri() {
-        return this.gcsUri == null ? Codegen.empty() : this.gcsUri;
+    public Optional<Output<String>> gcsUri() {
+        return Optional.ofNullable(this.gcsUri);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class ArchiveDeploymentArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -50,109 +50,97 @@ public final class ArchiveDeploymentArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="organizationId", required=true)
-      private final Output<String> organizationId;
+    private Output<String> organizationId;
 
     public Output<String> organizationId() {
         return this.organizationId;
     }
 
-    public ArchiveDeploymentArgs(
-        Output<String> environmentId,
-        @Nullable Output<String> gcsUri,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> name,
-        Output<String> organizationId) {
-        this.environmentId = Objects.requireNonNull(environmentId, "expected parameter 'environmentId' to be non-null");
-        this.gcsUri = gcsUri;
-        this.labels = labels;
-        this.name = name;
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-    }
+    private ArchiveDeploymentArgs() {}
 
-    private ArchiveDeploymentArgs() {
-        this.environmentId = Codegen.empty();
-        this.gcsUri = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.name = Codegen.empty();
-        this.organizationId = Codegen.empty();
+    private ArchiveDeploymentArgs(ArchiveDeploymentArgs $) {
+        this.environmentId = $.environmentId;
+        this.gcsUri = $.gcsUri;
+        this.labels = $.labels;
+        this.name = $.name;
+        this.organizationId = $.organizationId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ArchiveDeploymentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> environmentId;
-        private @Nullable Output<String> gcsUri;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> name;
-        private Output<String> organizationId;
+        private ArchiveDeploymentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ArchiveDeploymentArgs();
         }
 
         public Builder(ArchiveDeploymentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.environmentId = defaults.environmentId;
-    	      this.gcsUri = defaults.gcsUri;
-    	      this.labels = defaults.labels;
-    	      this.name = defaults.name;
-    	      this.organizationId = defaults.organizationId;
+            $ = new ArchiveDeploymentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder environmentId(Output<String> environmentId) {
-            this.environmentId = Objects.requireNonNull(environmentId);
+            $.environmentId = environmentId;
             return this;
         }
+
         public Builder environmentId(String environmentId) {
-            this.environmentId = Output.of(Objects.requireNonNull(environmentId));
-            return this;
+            return environmentId(Output.of(environmentId));
         }
+
         public Builder gcsUri(@Nullable Output<String> gcsUri) {
-            this.gcsUri = gcsUri;
+            $.gcsUri = gcsUri;
             return this;
         }
-        public Builder gcsUri(@Nullable String gcsUri) {
-            this.gcsUri = Codegen.ofNullable(gcsUri);
-            return this;
+
+        public Builder gcsUri(String gcsUri) {
+            return gcsUri(Output.of(gcsUri));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder organizationId(Output<String> organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
         }
+
         public Builder organizationId(String organizationId) {
-            this.organizationId = Output.of(Objects.requireNonNull(organizationId));
-            return this;
-        }        public ArchiveDeploymentArgs build() {
-            return new ArchiveDeploymentArgs(environmentId, gcsUri, labels, name, organizationId);
+            return organizationId(Output.of(organizationId));
+        }
+
+        public ArchiveDeploymentArgs build() {
+            $.environmentId = Objects.requireNonNull($.environmentId, "expected parameter 'environmentId' to be non-null");
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            return $;
         }
     }
+
 }

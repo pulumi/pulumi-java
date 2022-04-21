@@ -5,7 +5,6 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.NodeSelectorTermArgs;
 import java.lang.Integer;
 import java.util.Objects;
@@ -24,7 +23,7 @@ public final class PreferredSchedulingTermArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="preference", required=true)
-      private final Output<NodeSelectorTermArgs> preference;
+    private Output<NodeSelectorTermArgs> preference;
 
     public Output<NodeSelectorTermArgs> preference() {
         return this.preference;
@@ -35,63 +34,60 @@ public final class PreferredSchedulingTermArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="weight", required=true)
-      private final Output<Integer> weight;
+    private Output<Integer> weight;
 
     public Output<Integer> weight() {
         return this.weight;
     }
 
-    public PreferredSchedulingTermArgs(
-        Output<NodeSelectorTermArgs> preference,
-        Output<Integer> weight) {
-        this.preference = Objects.requireNonNull(preference, "expected parameter 'preference' to be non-null");
-        this.weight = Objects.requireNonNull(weight, "expected parameter 'weight' to be non-null");
-    }
+    private PreferredSchedulingTermArgs() {}
 
-    private PreferredSchedulingTermArgs() {
-        this.preference = Codegen.empty();
-        this.weight = Codegen.empty();
+    private PreferredSchedulingTermArgs(PreferredSchedulingTermArgs $) {
+        this.preference = $.preference;
+        this.weight = $.weight;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PreferredSchedulingTermArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<NodeSelectorTermArgs> preference;
-        private Output<Integer> weight;
+        private PreferredSchedulingTermArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PreferredSchedulingTermArgs();
         }
 
         public Builder(PreferredSchedulingTermArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.preference = defaults.preference;
-    	      this.weight = defaults.weight;
+            $ = new PreferredSchedulingTermArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder preference(Output<NodeSelectorTermArgs> preference) {
-            this.preference = Objects.requireNonNull(preference);
+            $.preference = preference;
             return this;
         }
+
         public Builder preference(NodeSelectorTermArgs preference) {
-            this.preference = Output.of(Objects.requireNonNull(preference));
-            return this;
+            return preference(Output.of(preference));
         }
+
         public Builder weight(Output<Integer> weight) {
-            this.weight = Objects.requireNonNull(weight);
+            $.weight = weight;
             return this;
         }
+
         public Builder weight(Integer weight) {
-            this.weight = Output.of(Objects.requireNonNull(weight));
-            return this;
-        }        public PreferredSchedulingTermArgs build() {
-            return new PreferredSchedulingTermArgs(preference, weight);
+            return weight(Output.of(weight));
+        }
+
+        public PreferredSchedulingTermArgs build() {
+            $.preference = Objects.requireNonNull($.preference, "expected parameter 'preference' to be non-null");
+            $.weight = Objects.requireNonNull($.weight, "expected parameter 'weight' to be non-null");
+            return $;
         }
     }
+
 }

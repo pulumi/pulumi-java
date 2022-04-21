@@ -25,7 +25,7 @@ public final class NamedPartitionSchemeDescriptionArgs extends com.pulumi.resour
      * 
      */
     @Import(name="count", required=true)
-      private final Output<Integer> count;
+    private Output<Integer> count;
 
     public Output<Integer> count() {
         return this.count;
@@ -36,7 +36,7 @@ public final class NamedPartitionSchemeDescriptionArgs extends com.pulumi.resour
      * 
      */
     @Import(name="names", required=true)
-      private final Output<List<String>> names;
+    private Output<List<String>> names;
 
     public Output<List<String>> names() {
         return this.names;
@@ -48,79 +48,75 @@ public final class NamedPartitionSchemeDescriptionArgs extends com.pulumi.resour
      * 
      */
     @Import(name="partitionScheme", required=true)
-      private final Output<String> partitionScheme;
+    private Output<String> partitionScheme;
 
     public Output<String> partitionScheme() {
         return this.partitionScheme;
     }
 
-    public NamedPartitionSchemeDescriptionArgs(
-        Output<Integer> count,
-        Output<List<String>> names,
-        Output<String> partitionScheme) {
-        this.count = Objects.requireNonNull(count, "expected parameter 'count' to be non-null");
-        this.names = Objects.requireNonNull(names, "expected parameter 'names' to be non-null");
-        this.partitionScheme = Codegen.stringProp("partitionScheme").output().arg(partitionScheme).require();
-    }
+    private NamedPartitionSchemeDescriptionArgs() {}
 
-    private NamedPartitionSchemeDescriptionArgs() {
-        this.count = Codegen.empty();
-        this.names = Codegen.empty();
-        this.partitionScheme = Codegen.empty();
+    private NamedPartitionSchemeDescriptionArgs(NamedPartitionSchemeDescriptionArgs $) {
+        this.count = $.count;
+        this.names = $.names;
+        this.partitionScheme = $.partitionScheme;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NamedPartitionSchemeDescriptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> count;
-        private Output<List<String>> names;
-        private Output<String> partitionScheme;
+        private NamedPartitionSchemeDescriptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NamedPartitionSchemeDescriptionArgs();
         }
 
         public Builder(NamedPartitionSchemeDescriptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.count = defaults.count;
-    	      this.names = defaults.names;
-    	      this.partitionScheme = defaults.partitionScheme;
+            $ = new NamedPartitionSchemeDescriptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder count(Output<Integer> count) {
-            this.count = Objects.requireNonNull(count);
+            $.count = count;
             return this;
         }
+
         public Builder count(Integer count) {
-            this.count = Output.of(Objects.requireNonNull(count));
-            return this;
+            return count(Output.of(count));
         }
+
         public Builder names(Output<List<String>> names) {
-            this.names = Objects.requireNonNull(names);
+            $.names = names;
             return this;
         }
+
         public Builder names(List<String> names) {
-            this.names = Output.of(Objects.requireNonNull(names));
-            return this;
+            return names(Output.of(names));
         }
+
         public Builder names(String... names) {
             return names(List.of(names));
         }
+
         public Builder partitionScheme(Output<String> partitionScheme) {
-            this.partitionScheme = Objects.requireNonNull(partitionScheme);
+            $.partitionScheme = partitionScheme;
             return this;
         }
+
         public Builder partitionScheme(String partitionScheme) {
-            this.partitionScheme = Output.of(Objects.requireNonNull(partitionScheme));
-            return this;
-        }        public NamedPartitionSchemeDescriptionArgs build() {
-            return new NamedPartitionSchemeDescriptionArgs(count, names, partitionScheme);
+            return partitionScheme(Output.of(partitionScheme));
+        }
+
+        public NamedPartitionSchemeDescriptionArgs build() {
+            $.count = Objects.requireNonNull($.count, "expected parameter 'count' to be non-null");
+            $.names = Objects.requireNonNull($.names, "expected parameter 'names' to be non-null");
+            $.partitionScheme = Codegen.stringProp("partitionScheme").output().arg($.partitionScheme).require();
+            return $;
         }
     }
+
 }

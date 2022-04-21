@@ -6,12 +6,12 @@ package com.pulumi.azurenative.servicefabric.inputs;
 import com.pulumi.azurenative.servicefabric.inputs.EndpointRangeDescriptionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class NodeTypeDescriptionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="applicationPorts")
-      private final @Nullable Output<EndpointRangeDescriptionArgs> applicationPorts;
+    private @Nullable Output<EndpointRangeDescriptionArgs> applicationPorts;
 
-    public Output<EndpointRangeDescriptionArgs> applicationPorts() {
-        return this.applicationPorts == null ? Codegen.empty() : this.applicationPorts;
+    public Optional<Output<EndpointRangeDescriptionArgs>> applicationPorts() {
+        return Optional.ofNullable(this.applicationPorts);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class NodeTypeDescriptionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="capacities")
-      private final @Nullable Output<Map<String,String>> capacities;
+    private @Nullable Output<Map<String,String>> capacities;
 
-    public Output<Map<String,String>> capacities() {
-        return this.capacities == null ? Codegen.empty() : this.capacities;
+    public Optional<Output<Map<String,String>>> capacities() {
+        return Optional.ofNullable(this.capacities);
     }
 
     /**
@@ -50,7 +50,7 @@ public final class NodeTypeDescriptionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="clientConnectionEndpointPort", required=true)
-      private final Output<Integer> clientConnectionEndpointPort;
+    private Output<Integer> clientConnectionEndpointPort;
 
     public Output<Integer> clientConnectionEndpointPort() {
         return this.clientConnectionEndpointPort;
@@ -65,10 +65,10 @@ public final class NodeTypeDescriptionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="durabilityLevel")
-      private final @Nullable Output<String> durabilityLevel;
+    private @Nullable Output<String> durabilityLevel;
 
-    public Output<String> durabilityLevel() {
-        return this.durabilityLevel == null ? Codegen.empty() : this.durabilityLevel;
+    public Optional<Output<String>> durabilityLevel() {
+        return Optional.ofNullable(this.durabilityLevel);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class NodeTypeDescriptionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="ephemeralPorts")
-      private final @Nullable Output<EndpointRangeDescriptionArgs> ephemeralPorts;
+    private @Nullable Output<EndpointRangeDescriptionArgs> ephemeralPorts;
 
-    public Output<EndpointRangeDescriptionArgs> ephemeralPorts() {
-        return this.ephemeralPorts == null ? Codegen.empty() : this.ephemeralPorts;
+    public Optional<Output<EndpointRangeDescriptionArgs>> ephemeralPorts() {
+        return Optional.ofNullable(this.ephemeralPorts);
     }
 
     /**
@@ -87,7 +87,7 @@ public final class NodeTypeDescriptionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="httpGatewayEndpointPort", required=true)
-      private final Output<Integer> httpGatewayEndpointPort;
+    private Output<Integer> httpGatewayEndpointPort;
 
     public Output<Integer> httpGatewayEndpointPort() {
         return this.httpGatewayEndpointPort;
@@ -98,7 +98,7 @@ public final class NodeTypeDescriptionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="isPrimary", required=true)
-      private final Output<Boolean> isPrimary;
+    private Output<Boolean> isPrimary;
 
     public Output<Boolean> isPrimary() {
         return this.isPrimary;
@@ -109,7 +109,7 @@ public final class NodeTypeDescriptionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -120,10 +120,10 @@ public final class NodeTypeDescriptionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="placementProperties")
-      private final @Nullable Output<Map<String,String>> placementProperties;
+    private @Nullable Output<Map<String,String>> placementProperties;
 
-    public Output<Map<String,String>> placementProperties() {
-        return this.placementProperties == null ? Codegen.empty() : this.placementProperties;
+    public Optional<Output<Map<String,String>>> placementProperties() {
+        return Optional.ofNullable(this.placementProperties);
     }
 
     /**
@@ -131,10 +131,10 @@ public final class NodeTypeDescriptionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="reverseProxyEndpointPort")
-      private final @Nullable Output<Integer> reverseProxyEndpointPort;
+    private @Nullable Output<Integer> reverseProxyEndpointPort;
 
-    public Output<Integer> reverseProxyEndpointPort() {
-        return this.reverseProxyEndpointPort == null ? Codegen.empty() : this.reverseProxyEndpointPort;
+    public Optional<Output<Integer>> reverseProxyEndpointPort() {
+        return Optional.ofNullable(this.reverseProxyEndpointPort);
     }
 
     /**
@@ -142,180 +142,153 @@ public final class NodeTypeDescriptionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="vmInstanceCount", required=true)
-      private final Output<Integer> vmInstanceCount;
+    private Output<Integer> vmInstanceCount;
 
     public Output<Integer> vmInstanceCount() {
         return this.vmInstanceCount;
     }
 
-    public NodeTypeDescriptionArgs(
-        @Nullable Output<EndpointRangeDescriptionArgs> applicationPorts,
-        @Nullable Output<Map<String,String>> capacities,
-        Output<Integer> clientConnectionEndpointPort,
-        @Nullable Output<String> durabilityLevel,
-        @Nullable Output<EndpointRangeDescriptionArgs> ephemeralPorts,
-        Output<Integer> httpGatewayEndpointPort,
-        Output<Boolean> isPrimary,
-        Output<String> name,
-        @Nullable Output<Map<String,String>> placementProperties,
-        @Nullable Output<Integer> reverseProxyEndpointPort,
-        Output<Integer> vmInstanceCount) {
-        this.applicationPorts = applicationPorts;
-        this.capacities = capacities;
-        this.clientConnectionEndpointPort = Objects.requireNonNull(clientConnectionEndpointPort, "expected parameter 'clientConnectionEndpointPort' to be non-null");
-        this.durabilityLevel = durabilityLevel;
-        this.ephemeralPorts = ephemeralPorts;
-        this.httpGatewayEndpointPort = Objects.requireNonNull(httpGatewayEndpointPort, "expected parameter 'httpGatewayEndpointPort' to be non-null");
-        this.isPrimary = Objects.requireNonNull(isPrimary, "expected parameter 'isPrimary' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.placementProperties = placementProperties;
-        this.reverseProxyEndpointPort = reverseProxyEndpointPort;
-        this.vmInstanceCount = Objects.requireNonNull(vmInstanceCount, "expected parameter 'vmInstanceCount' to be non-null");
-    }
+    private NodeTypeDescriptionArgs() {}
 
-    private NodeTypeDescriptionArgs() {
-        this.applicationPorts = Codegen.empty();
-        this.capacities = Codegen.empty();
-        this.clientConnectionEndpointPort = Codegen.empty();
-        this.durabilityLevel = Codegen.empty();
-        this.ephemeralPorts = Codegen.empty();
-        this.httpGatewayEndpointPort = Codegen.empty();
-        this.isPrimary = Codegen.empty();
-        this.name = Codegen.empty();
-        this.placementProperties = Codegen.empty();
-        this.reverseProxyEndpointPort = Codegen.empty();
-        this.vmInstanceCount = Codegen.empty();
+    private NodeTypeDescriptionArgs(NodeTypeDescriptionArgs $) {
+        this.applicationPorts = $.applicationPorts;
+        this.capacities = $.capacities;
+        this.clientConnectionEndpointPort = $.clientConnectionEndpointPort;
+        this.durabilityLevel = $.durabilityLevel;
+        this.ephemeralPorts = $.ephemeralPorts;
+        this.httpGatewayEndpointPort = $.httpGatewayEndpointPort;
+        this.isPrimary = $.isPrimary;
+        this.name = $.name;
+        this.placementProperties = $.placementProperties;
+        this.reverseProxyEndpointPort = $.reverseProxyEndpointPort;
+        this.vmInstanceCount = $.vmInstanceCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodeTypeDescriptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<EndpointRangeDescriptionArgs> applicationPorts;
-        private @Nullable Output<Map<String,String>> capacities;
-        private Output<Integer> clientConnectionEndpointPort;
-        private @Nullable Output<String> durabilityLevel;
-        private @Nullable Output<EndpointRangeDescriptionArgs> ephemeralPorts;
-        private Output<Integer> httpGatewayEndpointPort;
-        private Output<Boolean> isPrimary;
-        private Output<String> name;
-        private @Nullable Output<Map<String,String>> placementProperties;
-        private @Nullable Output<Integer> reverseProxyEndpointPort;
-        private Output<Integer> vmInstanceCount;
+        private NodeTypeDescriptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodeTypeDescriptionArgs();
         }
 
         public Builder(NodeTypeDescriptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationPorts = defaults.applicationPorts;
-    	      this.capacities = defaults.capacities;
-    	      this.clientConnectionEndpointPort = defaults.clientConnectionEndpointPort;
-    	      this.durabilityLevel = defaults.durabilityLevel;
-    	      this.ephemeralPorts = defaults.ephemeralPorts;
-    	      this.httpGatewayEndpointPort = defaults.httpGatewayEndpointPort;
-    	      this.isPrimary = defaults.isPrimary;
-    	      this.name = defaults.name;
-    	      this.placementProperties = defaults.placementProperties;
-    	      this.reverseProxyEndpointPort = defaults.reverseProxyEndpointPort;
-    	      this.vmInstanceCount = defaults.vmInstanceCount;
+            $ = new NodeTypeDescriptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationPorts(@Nullable Output<EndpointRangeDescriptionArgs> applicationPorts) {
-            this.applicationPorts = applicationPorts;
+            $.applicationPorts = applicationPorts;
             return this;
         }
-        public Builder applicationPorts(@Nullable EndpointRangeDescriptionArgs applicationPorts) {
-            this.applicationPorts = Codegen.ofNullable(applicationPorts);
-            return this;
+
+        public Builder applicationPorts(EndpointRangeDescriptionArgs applicationPorts) {
+            return applicationPorts(Output.of(applicationPorts));
         }
+
         public Builder capacities(@Nullable Output<Map<String,String>> capacities) {
-            this.capacities = capacities;
+            $.capacities = capacities;
             return this;
         }
-        public Builder capacities(@Nullable Map<String,String> capacities) {
-            this.capacities = Codegen.ofNullable(capacities);
-            return this;
+
+        public Builder capacities(Map<String,String> capacities) {
+            return capacities(Output.of(capacities));
         }
+
         public Builder clientConnectionEndpointPort(Output<Integer> clientConnectionEndpointPort) {
-            this.clientConnectionEndpointPort = Objects.requireNonNull(clientConnectionEndpointPort);
+            $.clientConnectionEndpointPort = clientConnectionEndpointPort;
             return this;
         }
+
         public Builder clientConnectionEndpointPort(Integer clientConnectionEndpointPort) {
-            this.clientConnectionEndpointPort = Output.of(Objects.requireNonNull(clientConnectionEndpointPort));
-            return this;
+            return clientConnectionEndpointPort(Output.of(clientConnectionEndpointPort));
         }
+
         public Builder durabilityLevel(@Nullable Output<String> durabilityLevel) {
-            this.durabilityLevel = durabilityLevel;
+            $.durabilityLevel = durabilityLevel;
             return this;
         }
-        public Builder durabilityLevel(@Nullable String durabilityLevel) {
-            this.durabilityLevel = Codegen.ofNullable(durabilityLevel);
-            return this;
+
+        public Builder durabilityLevel(String durabilityLevel) {
+            return durabilityLevel(Output.of(durabilityLevel));
         }
+
         public Builder ephemeralPorts(@Nullable Output<EndpointRangeDescriptionArgs> ephemeralPorts) {
-            this.ephemeralPorts = ephemeralPorts;
+            $.ephemeralPorts = ephemeralPorts;
             return this;
         }
-        public Builder ephemeralPorts(@Nullable EndpointRangeDescriptionArgs ephemeralPorts) {
-            this.ephemeralPorts = Codegen.ofNullable(ephemeralPorts);
-            return this;
+
+        public Builder ephemeralPorts(EndpointRangeDescriptionArgs ephemeralPorts) {
+            return ephemeralPorts(Output.of(ephemeralPorts));
         }
+
         public Builder httpGatewayEndpointPort(Output<Integer> httpGatewayEndpointPort) {
-            this.httpGatewayEndpointPort = Objects.requireNonNull(httpGatewayEndpointPort);
+            $.httpGatewayEndpointPort = httpGatewayEndpointPort;
             return this;
         }
+
         public Builder httpGatewayEndpointPort(Integer httpGatewayEndpointPort) {
-            this.httpGatewayEndpointPort = Output.of(Objects.requireNonNull(httpGatewayEndpointPort));
-            return this;
+            return httpGatewayEndpointPort(Output.of(httpGatewayEndpointPort));
         }
+
         public Builder isPrimary(Output<Boolean> isPrimary) {
-            this.isPrimary = Objects.requireNonNull(isPrimary);
+            $.isPrimary = isPrimary;
             return this;
         }
+
         public Builder isPrimary(Boolean isPrimary) {
-            this.isPrimary = Output.of(Objects.requireNonNull(isPrimary));
-            return this;
+            return isPrimary(Output.of(isPrimary));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder placementProperties(@Nullable Output<Map<String,String>> placementProperties) {
-            this.placementProperties = placementProperties;
+            $.placementProperties = placementProperties;
             return this;
         }
-        public Builder placementProperties(@Nullable Map<String,String> placementProperties) {
-            this.placementProperties = Codegen.ofNullable(placementProperties);
-            return this;
+
+        public Builder placementProperties(Map<String,String> placementProperties) {
+            return placementProperties(Output.of(placementProperties));
         }
+
         public Builder reverseProxyEndpointPort(@Nullable Output<Integer> reverseProxyEndpointPort) {
-            this.reverseProxyEndpointPort = reverseProxyEndpointPort;
+            $.reverseProxyEndpointPort = reverseProxyEndpointPort;
             return this;
         }
-        public Builder reverseProxyEndpointPort(@Nullable Integer reverseProxyEndpointPort) {
-            this.reverseProxyEndpointPort = Codegen.ofNullable(reverseProxyEndpointPort);
-            return this;
+
+        public Builder reverseProxyEndpointPort(Integer reverseProxyEndpointPort) {
+            return reverseProxyEndpointPort(Output.of(reverseProxyEndpointPort));
         }
+
         public Builder vmInstanceCount(Output<Integer> vmInstanceCount) {
-            this.vmInstanceCount = Objects.requireNonNull(vmInstanceCount);
+            $.vmInstanceCount = vmInstanceCount;
             return this;
         }
+
         public Builder vmInstanceCount(Integer vmInstanceCount) {
-            this.vmInstanceCount = Output.of(Objects.requireNonNull(vmInstanceCount));
-            return this;
-        }        public NodeTypeDescriptionArgs build() {
-            return new NodeTypeDescriptionArgs(applicationPorts, capacities, clientConnectionEndpointPort, durabilityLevel, ephemeralPorts, httpGatewayEndpointPort, isPrimary, name, placementProperties, reverseProxyEndpointPort, vmInstanceCount);
+            return vmInstanceCount(Output.of(vmInstanceCount));
+        }
+
+        public NodeTypeDescriptionArgs build() {
+            $.clientConnectionEndpointPort = Objects.requireNonNull($.clientConnectionEndpointPort, "expected parameter 'clientConnectionEndpointPort' to be non-null");
+            $.httpGatewayEndpointPort = Objects.requireNonNull($.httpGatewayEndpointPort, "expected parameter 'httpGatewayEndpointPort' to be non-null");
+            $.isPrimary = Objects.requireNonNull($.isPrimary, "expected parameter 'isPrimary' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.vmInstanceCount = Objects.requireNonNull($.vmInstanceCount, "expected parameter 'vmInstanceCount' to be non-null");
+            return $;
         }
     }
+
 }

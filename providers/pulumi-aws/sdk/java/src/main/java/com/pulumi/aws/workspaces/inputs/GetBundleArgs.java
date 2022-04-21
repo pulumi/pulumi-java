@@ -19,10 +19,10 @@ public final class GetBundleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="bundleId")
-      private final @Nullable String bundleId;
+    private @Nullable String bundleId;
 
     public Optional<String> bundleId() {
-        return this.bundleId == null ? Optional.empty() : Optional.ofNullable(this.bundleId);
+        return Optional.ofNullable(this.bundleId);
     }
 
     /**
@@ -30,10 +30,10 @@ public final class GetBundleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -41,64 +41,56 @@ public final class GetBundleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="owner")
-      private final @Nullable String owner;
+    private @Nullable String owner;
 
     public Optional<String> owner() {
-        return this.owner == null ? Optional.empty() : Optional.ofNullable(this.owner);
+        return Optional.ofNullable(this.owner);
     }
 
-    public GetBundleArgs(
-        @Nullable String bundleId,
-        @Nullable String name,
-        @Nullable String owner) {
-        this.bundleId = bundleId;
-        this.name = name;
-        this.owner = owner;
-    }
+    private GetBundleArgs() {}
 
-    private GetBundleArgs() {
-        this.bundleId = null;
-        this.name = null;
-        this.owner = null;
+    private GetBundleArgs(GetBundleArgs $) {
+        this.bundleId = $.bundleId;
+        this.name = $.name;
+        this.owner = $.owner;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBundleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String bundleId;
-        private @Nullable String name;
-        private @Nullable String owner;
+        private GetBundleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBundleArgs();
         }
 
         public Builder(GetBundleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bundleId = defaults.bundleId;
-    	      this.name = defaults.name;
-    	      this.owner = defaults.owner;
+            $ = new GetBundleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bundleId(@Nullable String bundleId) {
-            this.bundleId = bundleId;
+            $.bundleId = bundleId;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder owner(@Nullable String owner) {
-            this.owner = owner;
+            $.owner = owner;
             return this;
-        }        public GetBundleArgs build() {
-            return new GetBundleArgs(bundleId, name, owner);
+        }
+
+        public GetBundleArgs build() {
+            return $;
         }
     }
+
 }

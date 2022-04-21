@@ -21,45 +21,45 @@ public final class RuntimeGuestOsFeatureResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public RuntimeGuestOsFeatureResponse(String type) {
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private RuntimeGuestOsFeatureResponse() {}
 
-    private RuntimeGuestOsFeatureResponse() {
-        this.type = null;
+    private RuntimeGuestOsFeatureResponse(RuntimeGuestOsFeatureResponse $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuntimeGuestOsFeatureResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String type;
+        private RuntimeGuestOsFeatureResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuntimeGuestOsFeatureResponse();
         }
 
         public Builder(RuntimeGuestOsFeatureResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new RuntimeGuestOsFeatureResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public RuntimeGuestOsFeatureResponse build() {
-            return new RuntimeGuestOsFeatureResponse(type);
+        }
+
+        public RuntimeGuestOsFeatureResponse build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

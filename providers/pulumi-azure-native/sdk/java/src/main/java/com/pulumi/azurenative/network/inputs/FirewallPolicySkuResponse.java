@@ -23,45 +23,44 @@ public final class FirewallPolicySkuResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="tier")
-      private final @Nullable String tier;
+    private @Nullable String tier;
 
     public Optional<String> tier() {
-        return this.tier == null ? Optional.empty() : Optional.ofNullable(this.tier);
+        return Optional.ofNullable(this.tier);
     }
 
-    public FirewallPolicySkuResponse(@Nullable String tier) {
-        this.tier = tier;
-    }
+    private FirewallPolicySkuResponse() {}
 
-    private FirewallPolicySkuResponse() {
-        this.tier = null;
+    private FirewallPolicySkuResponse(FirewallPolicySkuResponse $) {
+        this.tier = $.tier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallPolicySkuResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String tier;
+        private FirewallPolicySkuResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallPolicySkuResponse();
         }
 
         public Builder(FirewallPolicySkuResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.tier = defaults.tier;
+            $ = new FirewallPolicySkuResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder tier(@Nullable String tier) {
-            this.tier = tier;
+            $.tier = tier;
             return this;
-        }        public FirewallPolicySkuResponse build() {
-            return new FirewallPolicySkuResponse(tier);
+        }
+
+        public FirewallPolicySkuResponse build() {
+            return $;
         }
     }
+
 }

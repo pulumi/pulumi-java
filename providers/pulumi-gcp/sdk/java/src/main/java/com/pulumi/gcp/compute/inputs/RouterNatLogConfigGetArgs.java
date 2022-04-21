@@ -5,7 +5,6 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +19,7 @@ public final class RouterNatLogConfigGetArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="enable", required=true)
-      private final Output<Boolean> enable;
+    private Output<Boolean> enable;
 
     public Output<Boolean> enable() {
         return this.enable;
@@ -32,63 +31,60 @@ public final class RouterNatLogConfigGetArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="filter", required=true)
-      private final Output<String> filter;
+    private Output<String> filter;
 
     public Output<String> filter() {
         return this.filter;
     }
 
-    public RouterNatLogConfigGetArgs(
-        Output<Boolean> enable,
-        Output<String> filter) {
-        this.enable = Objects.requireNonNull(enable, "expected parameter 'enable' to be non-null");
-        this.filter = Objects.requireNonNull(filter, "expected parameter 'filter' to be non-null");
-    }
+    private RouterNatLogConfigGetArgs() {}
 
-    private RouterNatLogConfigGetArgs() {
-        this.enable = Codegen.empty();
-        this.filter = Codegen.empty();
+    private RouterNatLogConfigGetArgs(RouterNatLogConfigGetArgs $) {
+        this.enable = $.enable;
+        this.filter = $.filter;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouterNatLogConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> enable;
-        private Output<String> filter;
+        private RouterNatLogConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouterNatLogConfigGetArgs();
         }
 
         public Builder(RouterNatLogConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enable = defaults.enable;
-    	      this.filter = defaults.filter;
+            $ = new RouterNatLogConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enable(Output<Boolean> enable) {
-            this.enable = Objects.requireNonNull(enable);
+            $.enable = enable;
             return this;
         }
+
         public Builder enable(Boolean enable) {
-            this.enable = Output.of(Objects.requireNonNull(enable));
-            return this;
+            return enable(Output.of(enable));
         }
+
         public Builder filter(Output<String> filter) {
-            this.filter = Objects.requireNonNull(filter);
+            $.filter = filter;
             return this;
         }
+
         public Builder filter(String filter) {
-            this.filter = Output.of(Objects.requireNonNull(filter));
-            return this;
-        }        public RouterNatLogConfigGetArgs build() {
-            return new RouterNatLogConfigGetArgs(enable, filter);
+            return filter(Output.of(filter));
+        }
+
+        public RouterNatLogConfigGetArgs build() {
+            $.enable = Objects.requireNonNull($.enable, "expected parameter 'enable' to be non-null");
+            $.filter = Objects.requireNonNull($.filter, "expected parameter 'filter' to be non-null");
+            return $;
         }
     }
+
 }

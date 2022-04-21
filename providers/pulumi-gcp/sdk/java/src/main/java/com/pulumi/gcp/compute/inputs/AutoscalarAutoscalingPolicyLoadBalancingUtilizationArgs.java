@@ -5,7 +5,6 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -21,49 +20,49 @@ public final class AutoscalarAutoscalingPolicyLoadBalancingUtilizationArgs exten
      * 
      */
     @Import(name="target", required=true)
-      private final Output<Double> target;
+    private Output<Double> target;
 
     public Output<Double> target() {
         return this.target;
     }
 
-    public AutoscalarAutoscalingPolicyLoadBalancingUtilizationArgs(Output<Double> target) {
-        this.target = Objects.requireNonNull(target, "expected parameter 'target' to be non-null");
-    }
+    private AutoscalarAutoscalingPolicyLoadBalancingUtilizationArgs() {}
 
-    private AutoscalarAutoscalingPolicyLoadBalancingUtilizationArgs() {
-        this.target = Codegen.empty();
+    private AutoscalarAutoscalingPolicyLoadBalancingUtilizationArgs(AutoscalarAutoscalingPolicyLoadBalancingUtilizationArgs $) {
+        this.target = $.target;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoscalarAutoscalingPolicyLoadBalancingUtilizationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Double> target;
+        private AutoscalarAutoscalingPolicyLoadBalancingUtilizationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoscalarAutoscalingPolicyLoadBalancingUtilizationArgs();
         }
 
         public Builder(AutoscalarAutoscalingPolicyLoadBalancingUtilizationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.target = defaults.target;
+            $ = new AutoscalarAutoscalingPolicyLoadBalancingUtilizationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder target(Output<Double> target) {
-            this.target = Objects.requireNonNull(target);
+            $.target = target;
             return this;
         }
+
         public Builder target(Double target) {
-            this.target = Output.of(Objects.requireNonNull(target));
-            return this;
-        }        public AutoscalarAutoscalingPolicyLoadBalancingUtilizationArgs build() {
-            return new AutoscalarAutoscalingPolicyLoadBalancingUtilizationArgs(target);
+            return target(Output.of(target));
+        }
+
+        public AutoscalarAutoscalingPolicyLoadBalancingUtilizationArgs build() {
+            $.target = Objects.requireNonNull($.target, "expected parameter 'target' to be non-null");
+            return $;
         }
     }
+
 }

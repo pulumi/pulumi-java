@@ -6,9 +6,9 @@ package com.pulumi.azurenative.devices;
 import com.pulumi.azurenative.devices.inputs.EventHubConsumerGroupNameArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class IotHubResourceEventHubConsumerGroupArgs extends com.pulumi.re
      * 
      */
     @Import(name="eventHubEndpointName", required=true)
-      private final Output<String> eventHubEndpointName;
+    private Output<String> eventHubEndpointName;
 
     public Output<String> eventHubEndpointName() {
         return this.eventHubEndpointName;
@@ -32,10 +32,10 @@ public final class IotHubResourceEventHubConsumerGroupArgs extends com.pulumi.re
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class IotHubResourceEventHubConsumerGroupArgs extends com.pulumi.re
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<EventHubConsumerGroupNameArgs> properties;
+    private @Nullable Output<EventHubConsumerGroupNameArgs> properties;
 
-    public Output<EventHubConsumerGroupNameArgs> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<EventHubConsumerGroupNameArgs>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -54,7 +54,7 @@ public final class IotHubResourceEventHubConsumerGroupArgs extends com.pulumi.re
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -65,102 +65,91 @@ public final class IotHubResourceEventHubConsumerGroupArgs extends com.pulumi.re
      * 
      */
     @Import(name="resourceName", required=true)
-      private final Output<String> resourceName;
+    private Output<String> resourceName;
 
     public Output<String> resourceName() {
         return this.resourceName;
     }
 
-    public IotHubResourceEventHubConsumerGroupArgs(
-        Output<String> eventHubEndpointName,
-        @Nullable Output<String> name,
-        @Nullable Output<EventHubConsumerGroupNameArgs> properties,
-        Output<String> resourceGroupName,
-        Output<String> resourceName) {
-        this.eventHubEndpointName = Objects.requireNonNull(eventHubEndpointName, "expected parameter 'eventHubEndpointName' to be non-null");
-        this.name = name;
-        this.properties = properties;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
-    }
+    private IotHubResourceEventHubConsumerGroupArgs() {}
 
-    private IotHubResourceEventHubConsumerGroupArgs() {
-        this.eventHubEndpointName = Codegen.empty();
-        this.name = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.resourceName = Codegen.empty();
+    private IotHubResourceEventHubConsumerGroupArgs(IotHubResourceEventHubConsumerGroupArgs $) {
+        this.eventHubEndpointName = $.eventHubEndpointName;
+        this.name = $.name;
+        this.properties = $.properties;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IotHubResourceEventHubConsumerGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> eventHubEndpointName;
-        private @Nullable Output<String> name;
-        private @Nullable Output<EventHubConsumerGroupNameArgs> properties;
-        private Output<String> resourceGroupName;
-        private Output<String> resourceName;
+        private IotHubResourceEventHubConsumerGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IotHubResourceEventHubConsumerGroupArgs();
         }
 
         public Builder(IotHubResourceEventHubConsumerGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.eventHubEndpointName = defaults.eventHubEndpointName;
-    	      this.name = defaults.name;
-    	      this.properties = defaults.properties;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
+            $ = new IotHubResourceEventHubConsumerGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder eventHubEndpointName(Output<String> eventHubEndpointName) {
-            this.eventHubEndpointName = Objects.requireNonNull(eventHubEndpointName);
+            $.eventHubEndpointName = eventHubEndpointName;
             return this;
         }
+
         public Builder eventHubEndpointName(String eventHubEndpointName) {
-            this.eventHubEndpointName = Output.of(Objects.requireNonNull(eventHubEndpointName));
-            return this;
+            return eventHubEndpointName(Output.of(eventHubEndpointName));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder properties(@Nullable Output<EventHubConsumerGroupNameArgs> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable EventHubConsumerGroupNameArgs properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(EventHubConsumerGroupNameArgs properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder resourceName(Output<String> resourceName) {
-            this.resourceName = Objects.requireNonNull(resourceName);
+            $.resourceName = resourceName;
             return this;
         }
+
         public Builder resourceName(String resourceName) {
-            this.resourceName = Output.of(Objects.requireNonNull(resourceName));
-            return this;
-        }        public IotHubResourceEventHubConsumerGroupArgs build() {
-            return new IotHubResourceEventHubConsumerGroupArgs(eventHubEndpointName, name, properties, resourceGroupName, resourceName);
+            return resourceName(Output.of(resourceName));
+        }
+
+        public IotHubResourceEventHubConsumerGroupArgs build() {
+            $.eventHubEndpointName = Objects.requireNonNull($.eventHubEndpointName, "expected parameter 'eventHubEndpointName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourceName = Objects.requireNonNull($.resourceName, "expected parameter 'resourceName' to be non-null");
+            return $;
         }
     }
+
 }

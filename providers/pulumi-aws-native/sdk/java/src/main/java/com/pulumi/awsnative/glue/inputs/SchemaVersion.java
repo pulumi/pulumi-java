@@ -24,10 +24,10 @@ public final class SchemaVersion extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="isLatest")
-      private final @Nullable Boolean isLatest;
+    private @Nullable Boolean isLatest;
 
     public Optional<Boolean> isLatest() {
-        return this.isLatest == null ? Optional.empty() : Optional.ofNullable(this.isLatest);
+        return Optional.ofNullable(this.isLatest);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class SchemaVersion extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="versionNumber")
-      private final @Nullable Integer versionNumber;
+    private @Nullable Integer versionNumber;
 
     public Optional<Integer> versionNumber() {
-        return this.versionNumber == null ? Optional.empty() : Optional.ofNullable(this.versionNumber);
+        return Optional.ofNullable(this.versionNumber);
     }
 
-    public SchemaVersion(
-        @Nullable Boolean isLatest,
-        @Nullable Integer versionNumber) {
-        this.isLatest = isLatest;
-        this.versionNumber = versionNumber;
-    }
+    private SchemaVersion() {}
 
-    private SchemaVersion() {
-        this.isLatest = null;
-        this.versionNumber = null;
+    private SchemaVersion(SchemaVersion $) {
+        this.isLatest = $.isLatest;
+        this.versionNumber = $.versionNumber;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SchemaVersion defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean isLatest;
-        private @Nullable Integer versionNumber;
+        private SchemaVersion $;
 
         public Builder() {
-    	      // Empty
+            $ = new SchemaVersion();
         }
 
         public Builder(SchemaVersion defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.isLatest = defaults.isLatest;
-    	      this.versionNumber = defaults.versionNumber;
+            $ = new SchemaVersion(Objects.requireNonNull(defaults));
         }
 
         public Builder isLatest(@Nullable Boolean isLatest) {
-            this.isLatest = isLatest;
+            $.isLatest = isLatest;
             return this;
         }
+
         public Builder versionNumber(@Nullable Integer versionNumber) {
-            this.versionNumber = versionNumber;
+            $.versionNumber = versionNumber;
             return this;
-        }        public SchemaVersion build() {
-            return new SchemaVersion(isLatest, versionNumber);
+        }
+
+        public SchemaVersion build() {
+            return $;
         }
     }
+
 }

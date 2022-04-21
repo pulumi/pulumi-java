@@ -16,78 +16,70 @@ public final class FlowErrorHandlingConfig extends com.pulumi.resources.InvokeAr
     public static final FlowErrorHandlingConfig Empty = new FlowErrorHandlingConfig();
 
     @Import(name="bucketName")
-      private final @Nullable String bucketName;
+    private @Nullable String bucketName;
 
     public Optional<String> bucketName() {
-        return this.bucketName == null ? Optional.empty() : Optional.ofNullable(this.bucketName);
+        return Optional.ofNullable(this.bucketName);
     }
 
     @Import(name="bucketPrefix")
-      private final @Nullable String bucketPrefix;
+    private @Nullable String bucketPrefix;
 
     public Optional<String> bucketPrefix() {
-        return this.bucketPrefix == null ? Optional.empty() : Optional.ofNullable(this.bucketPrefix);
+        return Optional.ofNullable(this.bucketPrefix);
     }
 
     @Import(name="failOnFirstError")
-      private final @Nullable Boolean failOnFirstError;
+    private @Nullable Boolean failOnFirstError;
 
     public Optional<Boolean> failOnFirstError() {
-        return this.failOnFirstError == null ? Optional.empty() : Optional.ofNullable(this.failOnFirstError);
+        return Optional.ofNullable(this.failOnFirstError);
     }
 
-    public FlowErrorHandlingConfig(
-        @Nullable String bucketName,
-        @Nullable String bucketPrefix,
-        @Nullable Boolean failOnFirstError) {
-        this.bucketName = bucketName;
-        this.bucketPrefix = bucketPrefix;
-        this.failOnFirstError = failOnFirstError;
-    }
+    private FlowErrorHandlingConfig() {}
 
-    private FlowErrorHandlingConfig() {
-        this.bucketName = null;
-        this.bucketPrefix = null;
-        this.failOnFirstError = null;
+    private FlowErrorHandlingConfig(FlowErrorHandlingConfig $) {
+        this.bucketName = $.bucketName;
+        this.bucketPrefix = $.bucketPrefix;
+        this.failOnFirstError = $.failOnFirstError;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowErrorHandlingConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String bucketName;
-        private @Nullable String bucketPrefix;
-        private @Nullable Boolean failOnFirstError;
+        private FlowErrorHandlingConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowErrorHandlingConfig();
         }
 
         public Builder(FlowErrorHandlingConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucketName = defaults.bucketName;
-    	      this.bucketPrefix = defaults.bucketPrefix;
-    	      this.failOnFirstError = defaults.failOnFirstError;
+            $ = new FlowErrorHandlingConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder bucketName(@Nullable String bucketName) {
-            this.bucketName = bucketName;
+            $.bucketName = bucketName;
             return this;
         }
+
         public Builder bucketPrefix(@Nullable String bucketPrefix) {
-            this.bucketPrefix = bucketPrefix;
+            $.bucketPrefix = bucketPrefix;
             return this;
         }
+
         public Builder failOnFirstError(@Nullable Boolean failOnFirstError) {
-            this.failOnFirstError = failOnFirstError;
+            $.failOnFirstError = failOnFirstError;
             return this;
-        }        public FlowErrorHandlingConfig build() {
-            return new FlowErrorHandlingConfig(bucketName, bucketPrefix, failOnFirstError);
+        }
+
+        public FlowErrorHandlingConfig build() {
+            return $;
         }
     }
+
 }

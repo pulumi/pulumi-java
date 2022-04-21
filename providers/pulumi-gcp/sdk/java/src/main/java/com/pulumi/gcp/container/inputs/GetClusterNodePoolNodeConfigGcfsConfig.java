@@ -13,45 +13,45 @@ public final class GetClusterNodePoolNodeConfigGcfsConfig extends com.pulumi.res
     public static final GetClusterNodePoolNodeConfigGcfsConfig Empty = new GetClusterNodePoolNodeConfigGcfsConfig();
 
     @Import(name="enabled", required=true)
-      private final Boolean enabled;
+    private Boolean enabled;
 
     public Boolean enabled() {
         return this.enabled;
     }
 
-    public GetClusterNodePoolNodeConfigGcfsConfig(Boolean enabled) {
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-    }
+    private GetClusterNodePoolNodeConfigGcfsConfig() {}
 
-    private GetClusterNodePoolNodeConfigGcfsConfig() {
-        this.enabled = null;
+    private GetClusterNodePoolNodeConfigGcfsConfig(GetClusterNodePoolNodeConfigGcfsConfig $) {
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterNodePoolNodeConfigGcfsConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enabled;
+        private GetClusterNodePoolNodeConfigGcfsConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterNodePoolNodeConfigGcfsConfig();
         }
 
         public Builder(GetClusterNodePoolNodeConfigGcfsConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
+            $ = new GetClusterNodePoolNodeConfigGcfsConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
-        }        public GetClusterNodePoolNodeConfigGcfsConfig build() {
-            return new GetClusterNodePoolNodeConfigGcfsConfig(enabled);
+        }
+
+        public GetClusterNodePoolNodeConfigGcfsConfig build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            return $;
         }
     }
+
 }

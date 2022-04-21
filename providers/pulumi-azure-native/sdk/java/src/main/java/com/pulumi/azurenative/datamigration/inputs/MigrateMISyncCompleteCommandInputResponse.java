@@ -21,45 +21,45 @@ public final class MigrateMISyncCompleteCommandInputResponse extends com.pulumi.
      * 
      */
     @Import(name="sourceDatabaseName", required=true)
-      private final String sourceDatabaseName;
+    private String sourceDatabaseName;
 
     public String sourceDatabaseName() {
         return this.sourceDatabaseName;
     }
 
-    public MigrateMISyncCompleteCommandInputResponse(String sourceDatabaseName) {
-        this.sourceDatabaseName = Objects.requireNonNull(sourceDatabaseName, "expected parameter 'sourceDatabaseName' to be non-null");
-    }
+    private MigrateMISyncCompleteCommandInputResponse() {}
 
-    private MigrateMISyncCompleteCommandInputResponse() {
-        this.sourceDatabaseName = null;
+    private MigrateMISyncCompleteCommandInputResponse(MigrateMISyncCompleteCommandInputResponse $) {
+        this.sourceDatabaseName = $.sourceDatabaseName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MigrateMISyncCompleteCommandInputResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String sourceDatabaseName;
+        private MigrateMISyncCompleteCommandInputResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MigrateMISyncCompleteCommandInputResponse();
         }
 
         public Builder(MigrateMISyncCompleteCommandInputResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sourceDatabaseName = defaults.sourceDatabaseName;
+            $ = new MigrateMISyncCompleteCommandInputResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder sourceDatabaseName(String sourceDatabaseName) {
-            this.sourceDatabaseName = Objects.requireNonNull(sourceDatabaseName);
+            $.sourceDatabaseName = sourceDatabaseName;
             return this;
-        }        public MigrateMISyncCompleteCommandInputResponse build() {
-            return new MigrateMISyncCompleteCommandInputResponse(sourceDatabaseName);
+        }
+
+        public MigrateMISyncCompleteCommandInputResponse build() {
+            $.sourceDatabaseName = Objects.requireNonNull($.sourceDatabaseName, "expected parameter 'sourceDatabaseName' to be non-null");
+            return $;
         }
     }
+
 }

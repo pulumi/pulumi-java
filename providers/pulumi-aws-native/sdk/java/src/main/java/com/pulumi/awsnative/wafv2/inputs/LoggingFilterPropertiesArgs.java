@@ -7,7 +7,6 @@ import com.pulumi.awsnative.wafv2.enums.LoggingConfigurationLoggingFilterPropert
 import com.pulumi.awsnative.wafv2.inputs.LoggingConfigurationFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -25,7 +24,7 @@ public final class LoggingFilterPropertiesArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="defaultBehavior", required=true)
-      private final Output<LoggingConfigurationLoggingFilterPropertiesDefaultBehavior> defaultBehavior;
+    private Output<LoggingConfigurationLoggingFilterPropertiesDefaultBehavior> defaultBehavior;
 
     public Output<LoggingConfigurationLoggingFilterPropertiesDefaultBehavior> defaultBehavior() {
         return this.defaultBehavior;
@@ -36,66 +35,64 @@ public final class LoggingFilterPropertiesArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="filters", required=true)
-      private final Output<List<LoggingConfigurationFilterArgs>> filters;
+    private Output<List<LoggingConfigurationFilterArgs>> filters;
 
     public Output<List<LoggingConfigurationFilterArgs>> filters() {
         return this.filters;
     }
 
-    public LoggingFilterPropertiesArgs(
-        Output<LoggingConfigurationLoggingFilterPropertiesDefaultBehavior> defaultBehavior,
-        Output<List<LoggingConfigurationFilterArgs>> filters) {
-        this.defaultBehavior = Objects.requireNonNull(defaultBehavior, "expected parameter 'defaultBehavior' to be non-null");
-        this.filters = Objects.requireNonNull(filters, "expected parameter 'filters' to be non-null");
-    }
+    private LoggingFilterPropertiesArgs() {}
 
-    private LoggingFilterPropertiesArgs() {
-        this.defaultBehavior = Codegen.empty();
-        this.filters = Codegen.empty();
+    private LoggingFilterPropertiesArgs(LoggingFilterPropertiesArgs $) {
+        this.defaultBehavior = $.defaultBehavior;
+        this.filters = $.filters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoggingFilterPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<LoggingConfigurationLoggingFilterPropertiesDefaultBehavior> defaultBehavior;
-        private Output<List<LoggingConfigurationFilterArgs>> filters;
+        private LoggingFilterPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoggingFilterPropertiesArgs();
         }
 
         public Builder(LoggingFilterPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultBehavior = defaults.defaultBehavior;
-    	      this.filters = defaults.filters;
+            $ = new LoggingFilterPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultBehavior(Output<LoggingConfigurationLoggingFilterPropertiesDefaultBehavior> defaultBehavior) {
-            this.defaultBehavior = Objects.requireNonNull(defaultBehavior);
+            $.defaultBehavior = defaultBehavior;
             return this;
         }
+
         public Builder defaultBehavior(LoggingConfigurationLoggingFilterPropertiesDefaultBehavior defaultBehavior) {
-            this.defaultBehavior = Output.of(Objects.requireNonNull(defaultBehavior));
-            return this;
+            return defaultBehavior(Output.of(defaultBehavior));
         }
+
         public Builder filters(Output<List<LoggingConfigurationFilterArgs>> filters) {
-            this.filters = Objects.requireNonNull(filters);
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(List<LoggingConfigurationFilterArgs> filters) {
-            this.filters = Output.of(Objects.requireNonNull(filters));
-            return this;
+            return filters(Output.of(filters));
         }
+
         public Builder filters(LoggingConfigurationFilterArgs... filters) {
             return filters(List.of(filters));
-        }        public LoggingFilterPropertiesArgs build() {
-            return new LoggingFilterPropertiesArgs(defaultBehavior, filters);
+        }
+
+        public LoggingFilterPropertiesArgs build() {
+            $.defaultBehavior = Objects.requireNonNull($.defaultBehavior, "expected parameter 'defaultBehavior' to be non-null");
+            $.filters = Objects.requireNonNull($.filters, "expected parameter 'filters' to be non-null");
+            return $;
         }
     }
+
 }

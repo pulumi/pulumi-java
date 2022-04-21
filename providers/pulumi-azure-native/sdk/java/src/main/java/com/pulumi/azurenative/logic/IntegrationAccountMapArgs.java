@@ -8,11 +8,11 @@ import com.pulumi.azurenative.logic.inputs.IntegrationAccountMapPropertiesParame
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class IntegrationAccountMapArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="content")
-      private final @Nullable Output<String> content;
+    private @Nullable Output<String> content;
 
-    public Output<String> content() {
-        return this.content == null ? Codegen.empty() : this.content;
+    public Optional<Output<String>> content() {
+        return Optional.ofNullable(this.content);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class IntegrationAccountMapArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="contentType")
-      private final @Nullable Output<String> contentType;
+    private @Nullable Output<String> contentType;
 
-    public Output<String> contentType() {
-        return this.contentType == null ? Codegen.empty() : this.contentType;
+    public Optional<Output<String>> contentType() {
+        return Optional.ofNullable(this.contentType);
     }
 
     /**
@@ -47,7 +47,7 @@ public final class IntegrationAccountMapArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="integrationAccountName", required=true)
-      private final Output<String> integrationAccountName;
+    private Output<String> integrationAccountName;
 
     public Output<String> integrationAccountName() {
         return this.integrationAccountName;
@@ -58,10 +58,10 @@ public final class IntegrationAccountMapArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class IntegrationAccountMapArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="mapName")
-      private final @Nullable Output<String> mapName;
+    private @Nullable Output<String> mapName;
 
-    public Output<String> mapName() {
-        return this.mapName == null ? Codegen.empty() : this.mapName;
+    public Optional<Output<String>> mapName() {
+        return Optional.ofNullable(this.mapName);
     }
 
     /**
@@ -80,7 +80,7 @@ public final class IntegrationAccountMapArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="mapType", required=true)
-      private final Output<Either<String,MapType>> mapType;
+    private Output<Either<String,MapType>> mapType;
 
     public Output<Either<String,MapType>> mapType() {
         return this.mapType;
@@ -91,10 +91,10 @@ public final class IntegrationAccountMapArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<Object> metadata;
+    private @Nullable Output<Object> metadata;
 
-    public Output<Object> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<Object>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class IntegrationAccountMapArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="parametersSchema")
-      private final @Nullable Output<IntegrationAccountMapPropertiesParametersSchemaArgs> parametersSchema;
+    private @Nullable Output<IntegrationAccountMapPropertiesParametersSchemaArgs> parametersSchema;
 
-    public Output<IntegrationAccountMapPropertiesParametersSchemaArgs> parametersSchema() {
-        return this.parametersSchema == null ? Codegen.empty() : this.parametersSchema;
+    public Optional<Output<IntegrationAccountMapPropertiesParametersSchemaArgs>> parametersSchema() {
+        return Optional.ofNullable(this.parametersSchema);
     }
 
     /**
@@ -113,7 +113,7 @@ public final class IntegrationAccountMapArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -124,167 +124,141 @@ public final class IntegrationAccountMapArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public IntegrationAccountMapArgs(
-        @Nullable Output<String> content,
-        @Nullable Output<String> contentType,
-        Output<String> integrationAccountName,
-        @Nullable Output<String> location,
-        @Nullable Output<String> mapName,
-        Output<Either<String,MapType>> mapType,
-        @Nullable Output<Object> metadata,
-        @Nullable Output<IntegrationAccountMapPropertiesParametersSchemaArgs> parametersSchema,
-        Output<String> resourceGroupName,
-        @Nullable Output<Map<String,String>> tags) {
-        this.content = content;
-        this.contentType = contentType;
-        this.integrationAccountName = Objects.requireNonNull(integrationAccountName, "expected parameter 'integrationAccountName' to be non-null");
-        this.location = location;
-        this.mapName = mapName;
-        this.mapType = Objects.requireNonNull(mapType, "expected parameter 'mapType' to be non-null");
-        this.metadata = metadata;
-        this.parametersSchema = parametersSchema;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tags = tags;
-    }
+    private IntegrationAccountMapArgs() {}
 
-    private IntegrationAccountMapArgs() {
-        this.content = Codegen.empty();
-        this.contentType = Codegen.empty();
-        this.integrationAccountName = Codegen.empty();
-        this.location = Codegen.empty();
-        this.mapName = Codegen.empty();
-        this.mapType = Codegen.empty();
-        this.metadata = Codegen.empty();
-        this.parametersSchema = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
+    private IntegrationAccountMapArgs(IntegrationAccountMapArgs $) {
+        this.content = $.content;
+        this.contentType = $.contentType;
+        this.integrationAccountName = $.integrationAccountName;
+        this.location = $.location;
+        this.mapName = $.mapName;
+        this.mapType = $.mapType;
+        this.metadata = $.metadata;
+        this.parametersSchema = $.parametersSchema;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IntegrationAccountMapArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> content;
-        private @Nullable Output<String> contentType;
-        private Output<String> integrationAccountName;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> mapName;
-        private Output<Either<String,MapType>> mapType;
-        private @Nullable Output<Object> metadata;
-        private @Nullable Output<IntegrationAccountMapPropertiesParametersSchemaArgs> parametersSchema;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Map<String,String>> tags;
+        private IntegrationAccountMapArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IntegrationAccountMapArgs();
         }
 
         public Builder(IntegrationAccountMapArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.content = defaults.content;
-    	      this.contentType = defaults.contentType;
-    	      this.integrationAccountName = defaults.integrationAccountName;
-    	      this.location = defaults.location;
-    	      this.mapName = defaults.mapName;
-    	      this.mapType = defaults.mapType;
-    	      this.metadata = defaults.metadata;
-    	      this.parametersSchema = defaults.parametersSchema;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tags = defaults.tags;
+            $ = new IntegrationAccountMapArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder content(@Nullable Output<String> content) {
-            this.content = content;
+            $.content = content;
             return this;
         }
-        public Builder content(@Nullable String content) {
-            this.content = Codegen.ofNullable(content);
-            return this;
+
+        public Builder content(String content) {
+            return content(Output.of(content));
         }
+
         public Builder contentType(@Nullable Output<String> contentType) {
-            this.contentType = contentType;
+            $.contentType = contentType;
             return this;
         }
-        public Builder contentType(@Nullable String contentType) {
-            this.contentType = Codegen.ofNullable(contentType);
-            return this;
+
+        public Builder contentType(String contentType) {
+            return contentType(Output.of(contentType));
         }
+
         public Builder integrationAccountName(Output<String> integrationAccountName) {
-            this.integrationAccountName = Objects.requireNonNull(integrationAccountName);
+            $.integrationAccountName = integrationAccountName;
             return this;
         }
+
         public Builder integrationAccountName(String integrationAccountName) {
-            this.integrationAccountName = Output.of(Objects.requireNonNull(integrationAccountName));
-            return this;
+            return integrationAccountName(Output.of(integrationAccountName));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder mapName(@Nullable Output<String> mapName) {
-            this.mapName = mapName;
+            $.mapName = mapName;
             return this;
         }
-        public Builder mapName(@Nullable String mapName) {
-            this.mapName = Codegen.ofNullable(mapName);
-            return this;
+
+        public Builder mapName(String mapName) {
+            return mapName(Output.of(mapName));
         }
+
         public Builder mapType(Output<Either<String,MapType>> mapType) {
-            this.mapType = Objects.requireNonNull(mapType);
+            $.mapType = mapType;
             return this;
         }
+
         public Builder mapType(Either<String,MapType> mapType) {
-            this.mapType = Output.of(Objects.requireNonNull(mapType));
-            return this;
+            return mapType(Output.of(mapType));
         }
+
         public Builder metadata(@Nullable Output<Object> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable Object metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(Object metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder parametersSchema(@Nullable Output<IntegrationAccountMapPropertiesParametersSchemaArgs> parametersSchema) {
-            this.parametersSchema = parametersSchema;
+            $.parametersSchema = parametersSchema;
             return this;
         }
-        public Builder parametersSchema(@Nullable IntegrationAccountMapPropertiesParametersSchemaArgs parametersSchema) {
-            this.parametersSchema = Codegen.ofNullable(parametersSchema);
-            return this;
+
+        public Builder parametersSchema(IntegrationAccountMapPropertiesParametersSchemaArgs parametersSchema) {
+            return parametersSchema(Output.of(parametersSchema));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public IntegrationAccountMapArgs build() {
-            return new IntegrationAccountMapArgs(content, contentType, integrationAccountName, location, mapName, mapType, metadata, parametersSchema, resourceGroupName, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public IntegrationAccountMapArgs build() {
+            $.integrationAccountName = Objects.requireNonNull($.integrationAccountName, "expected parameter 'integrationAccountName' to be non-null");
+            $.mapType = Objects.requireNonNull($.mapType, "expected parameter 'mapType' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

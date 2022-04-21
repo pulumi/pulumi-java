@@ -8,10 +8,10 @@ import com.pulumi.azurenative.network.inputs.SubResourceArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class DdosSettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ddosCustomPolicy")
-      private final @Nullable Output<SubResourceArgs> ddosCustomPolicy;
+    private @Nullable Output<SubResourceArgs> ddosCustomPolicy;
 
-    public Output<SubResourceArgs> ddosCustomPolicy() {
-        return this.ddosCustomPolicy == null ? Codegen.empty() : this.ddosCustomPolicy;
+    public Optional<Output<SubResourceArgs>> ddosCustomPolicy() {
+        return Optional.ofNullable(this.ddosCustomPolicy);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class DdosSettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="protectedIP")
-      private final @Nullable Output<Boolean> protectedIP;
+    private @Nullable Output<Boolean> protectedIP;
 
-    public Output<Boolean> protectedIP() {
-        return this.protectedIP == null ? Codegen.empty() : this.protectedIP;
+    public Optional<Output<Boolean>> protectedIP() {
+        return Optional.ofNullable(this.protectedIP);
     }
 
     /**
@@ -50,76 +50,68 @@ public final class DdosSettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="protectionCoverage")
-      private final @Nullable Output<Either<String,DdosSettingsProtectionCoverage>> protectionCoverage;
+    private @Nullable Output<Either<String,DdosSettingsProtectionCoverage>> protectionCoverage;
 
-    public Output<Either<String,DdosSettingsProtectionCoverage>> protectionCoverage() {
-        return this.protectionCoverage == null ? Codegen.empty() : this.protectionCoverage;
+    public Optional<Output<Either<String,DdosSettingsProtectionCoverage>>> protectionCoverage() {
+        return Optional.ofNullable(this.protectionCoverage);
     }
 
-    public DdosSettingsArgs(
-        @Nullable Output<SubResourceArgs> ddosCustomPolicy,
-        @Nullable Output<Boolean> protectedIP,
-        @Nullable Output<Either<String,DdosSettingsProtectionCoverage>> protectionCoverage) {
-        this.ddosCustomPolicy = ddosCustomPolicy;
-        this.protectedIP = protectedIP;
-        this.protectionCoverage = protectionCoverage;
-    }
+    private DdosSettingsArgs() {}
 
-    private DdosSettingsArgs() {
-        this.ddosCustomPolicy = Codegen.empty();
-        this.protectedIP = Codegen.empty();
-        this.protectionCoverage = Codegen.empty();
+    private DdosSettingsArgs(DdosSettingsArgs $) {
+        this.ddosCustomPolicy = $.ddosCustomPolicy;
+        this.protectedIP = $.protectedIP;
+        this.protectionCoverage = $.protectionCoverage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DdosSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<SubResourceArgs> ddosCustomPolicy;
-        private @Nullable Output<Boolean> protectedIP;
-        private @Nullable Output<Either<String,DdosSettingsProtectionCoverage>> protectionCoverage;
+        private DdosSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DdosSettingsArgs();
         }
 
         public Builder(DdosSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ddosCustomPolicy = defaults.ddosCustomPolicy;
-    	      this.protectedIP = defaults.protectedIP;
-    	      this.protectionCoverage = defaults.protectionCoverage;
+            $ = new DdosSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ddosCustomPolicy(@Nullable Output<SubResourceArgs> ddosCustomPolicy) {
-            this.ddosCustomPolicy = ddosCustomPolicy;
+            $.ddosCustomPolicy = ddosCustomPolicy;
             return this;
         }
-        public Builder ddosCustomPolicy(@Nullable SubResourceArgs ddosCustomPolicy) {
-            this.ddosCustomPolicy = Codegen.ofNullable(ddosCustomPolicy);
-            return this;
+
+        public Builder ddosCustomPolicy(SubResourceArgs ddosCustomPolicy) {
+            return ddosCustomPolicy(Output.of(ddosCustomPolicy));
         }
+
         public Builder protectedIP(@Nullable Output<Boolean> protectedIP) {
-            this.protectedIP = protectedIP;
+            $.protectedIP = protectedIP;
             return this;
         }
-        public Builder protectedIP(@Nullable Boolean protectedIP) {
-            this.protectedIP = Codegen.ofNullable(protectedIP);
-            return this;
+
+        public Builder protectedIP(Boolean protectedIP) {
+            return protectedIP(Output.of(protectedIP));
         }
+
         public Builder protectionCoverage(@Nullable Output<Either<String,DdosSettingsProtectionCoverage>> protectionCoverage) {
-            this.protectionCoverage = protectionCoverage;
+            $.protectionCoverage = protectionCoverage;
             return this;
         }
-        public Builder protectionCoverage(@Nullable Either<String,DdosSettingsProtectionCoverage> protectionCoverage) {
-            this.protectionCoverage = Codegen.ofNullable(protectionCoverage);
-            return this;
-        }        public DdosSettingsArgs build() {
-            return new DdosSettingsArgs(ddosCustomPolicy, protectedIP, protectionCoverage);
+
+        public Builder protectionCoverage(Either<String,DdosSettingsProtectionCoverage> protectionCoverage) {
+            return protectionCoverage(Output.of(protectionCoverage));
+        }
+
+        public DdosSettingsArgs build() {
+            return $;
         }
     }
+
 }

@@ -15,94 +15,86 @@ public final class GetDatacenterConnectorArgs extends com.pulumi.resources.Invok
     public static final GetDatacenterConnectorArgs Empty = new GetDatacenterConnectorArgs();
 
     @Import(name="datacenterConnectorId", required=true)
-      private final String datacenterConnectorId;
+    private String datacenterConnectorId;
 
     public String datacenterConnectorId() {
         return this.datacenterConnectorId;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="sourceId", required=true)
-      private final String sourceId;
+    private String sourceId;
 
     public String sourceId() {
         return this.sourceId;
     }
 
-    public GetDatacenterConnectorArgs(
-        String datacenterConnectorId,
-        String location,
-        @Nullable String project,
-        String sourceId) {
-        this.datacenterConnectorId = Objects.requireNonNull(datacenterConnectorId, "expected parameter 'datacenterConnectorId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-        this.sourceId = Objects.requireNonNull(sourceId, "expected parameter 'sourceId' to be non-null");
-    }
+    private GetDatacenterConnectorArgs() {}
 
-    private GetDatacenterConnectorArgs() {
-        this.datacenterConnectorId = null;
-        this.location = null;
-        this.project = null;
-        this.sourceId = null;
+    private GetDatacenterConnectorArgs(GetDatacenterConnectorArgs $) {
+        this.datacenterConnectorId = $.datacenterConnectorId;
+        this.location = $.location;
+        this.project = $.project;
+        this.sourceId = $.sourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDatacenterConnectorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String datacenterConnectorId;
-        private String location;
-        private @Nullable String project;
-        private String sourceId;
+        private GetDatacenterConnectorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDatacenterConnectorArgs();
         }
 
         public Builder(GetDatacenterConnectorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datacenterConnectorId = defaults.datacenterConnectorId;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
-    	      this.sourceId = defaults.sourceId;
+            $ = new GetDatacenterConnectorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder datacenterConnectorId(String datacenterConnectorId) {
-            this.datacenterConnectorId = Objects.requireNonNull(datacenterConnectorId);
+            $.datacenterConnectorId = datacenterConnectorId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder sourceId(String sourceId) {
-            this.sourceId = Objects.requireNonNull(sourceId);
+            $.sourceId = sourceId;
             return this;
-        }        public GetDatacenterConnectorArgs build() {
-            return new GetDatacenterConnectorArgs(datacenterConnectorId, location, project, sourceId);
+        }
+
+        public GetDatacenterConnectorArgs build() {
+            $.datacenterConnectorId = Objects.requireNonNull($.datacenterConnectorId, "expected parameter 'datacenterConnectorId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.sourceId = Objects.requireNonNull($.sourceId, "expected parameter 'sourceId' to be non-null");
+            return $;
         }
     }
+
 }

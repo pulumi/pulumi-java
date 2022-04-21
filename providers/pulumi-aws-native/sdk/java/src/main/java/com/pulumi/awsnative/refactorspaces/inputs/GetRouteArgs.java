@@ -13,78 +13,73 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetRouteArgs Empty = new GetRouteArgs();
 
     @Import(name="applicationIdentifier", required=true)
-      private final String applicationIdentifier;
+    private String applicationIdentifier;
 
     public String applicationIdentifier() {
         return this.applicationIdentifier;
     }
 
     @Import(name="environmentIdentifier", required=true)
-      private final String environmentIdentifier;
+    private String environmentIdentifier;
 
     public String environmentIdentifier() {
         return this.environmentIdentifier;
     }
 
     @Import(name="routeIdentifier", required=true)
-      private final String routeIdentifier;
+    private String routeIdentifier;
 
     public String routeIdentifier() {
         return this.routeIdentifier;
     }
 
-    public GetRouteArgs(
-        String applicationIdentifier,
-        String environmentIdentifier,
-        String routeIdentifier) {
-        this.applicationIdentifier = Objects.requireNonNull(applicationIdentifier, "expected parameter 'applicationIdentifier' to be non-null");
-        this.environmentIdentifier = Objects.requireNonNull(environmentIdentifier, "expected parameter 'environmentIdentifier' to be non-null");
-        this.routeIdentifier = Objects.requireNonNull(routeIdentifier, "expected parameter 'routeIdentifier' to be non-null");
-    }
+    private GetRouteArgs() {}
 
-    private GetRouteArgs() {
-        this.applicationIdentifier = null;
-        this.environmentIdentifier = null;
-        this.routeIdentifier = null;
+    private GetRouteArgs(GetRouteArgs $) {
+        this.applicationIdentifier = $.applicationIdentifier;
+        this.environmentIdentifier = $.environmentIdentifier;
+        this.routeIdentifier = $.routeIdentifier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRouteArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String applicationIdentifier;
-        private String environmentIdentifier;
-        private String routeIdentifier;
+        private GetRouteArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRouteArgs();
         }
 
         public Builder(GetRouteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationIdentifier = defaults.applicationIdentifier;
-    	      this.environmentIdentifier = defaults.environmentIdentifier;
-    	      this.routeIdentifier = defaults.routeIdentifier;
+            $ = new GetRouteArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationIdentifier(String applicationIdentifier) {
-            this.applicationIdentifier = Objects.requireNonNull(applicationIdentifier);
+            $.applicationIdentifier = applicationIdentifier;
             return this;
         }
+
         public Builder environmentIdentifier(String environmentIdentifier) {
-            this.environmentIdentifier = Objects.requireNonNull(environmentIdentifier);
+            $.environmentIdentifier = environmentIdentifier;
             return this;
         }
+
         public Builder routeIdentifier(String routeIdentifier) {
-            this.routeIdentifier = Objects.requireNonNull(routeIdentifier);
+            $.routeIdentifier = routeIdentifier;
             return this;
-        }        public GetRouteArgs build() {
-            return new GetRouteArgs(applicationIdentifier, environmentIdentifier, routeIdentifier);
+        }
+
+        public GetRouteArgs build() {
+            $.applicationIdentifier = Objects.requireNonNull($.applicationIdentifier, "expected parameter 'applicationIdentifier' to be non-null");
+            $.environmentIdentifier = Objects.requireNonNull($.environmentIdentifier, "expected parameter 'environmentIdentifier' to be non-null");
+            $.routeIdentifier = Objects.requireNonNull($.routeIdentifier, "expected parameter 'routeIdentifier' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.googlenative.dataproc_v1beta2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class AutoscalingConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="policyUri")
-      private final @Nullable Output<String> policyUri;
+    private @Nullable Output<String> policyUri;
 
-    public Output<String> policyUri() {
-        return this.policyUri == null ? Codegen.empty() : this.policyUri;
+    public Optional<Output<String>> policyUri() {
+        return Optional.ofNullable(this.policyUri);
     }
 
-    public AutoscalingConfigArgs(@Nullable Output<String> policyUri) {
-        this.policyUri = policyUri;
-    }
+    private AutoscalingConfigArgs() {}
 
-    private AutoscalingConfigArgs() {
-        this.policyUri = Codegen.empty();
+    private AutoscalingConfigArgs(AutoscalingConfigArgs $) {
+        this.policyUri = $.policyUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoscalingConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> policyUri;
+        private AutoscalingConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoscalingConfigArgs();
         }
 
         public Builder(AutoscalingConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.policyUri = defaults.policyUri;
+            $ = new AutoscalingConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder policyUri(@Nullable Output<String> policyUri) {
-            this.policyUri = policyUri;
+            $.policyUri = policyUri;
             return this;
         }
-        public Builder policyUri(@Nullable String policyUri) {
-            this.policyUri = Codegen.ofNullable(policyUri);
-            return this;
-        }        public AutoscalingConfigArgs build() {
-            return new AutoscalingConfigArgs(policyUri);
+
+        public Builder policyUri(String policyUri) {
+            return policyUri(Output.of(policyUri));
+        }
+
+        public AutoscalingConfigArgs build() {
+            return $;
         }
     }
+
 }

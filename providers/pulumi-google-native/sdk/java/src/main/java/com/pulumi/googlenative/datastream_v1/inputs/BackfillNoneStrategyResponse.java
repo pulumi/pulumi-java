@@ -3,7 +3,7 @@
 
 package com.pulumi.googlenative.datastream_v1.inputs;
 
-import java.util.Objects;
+
 
 
 /**
@@ -14,28 +14,19 @@ public final class BackfillNoneStrategyResponse extends com.pulumi.resources.Inv
 
     public static final BackfillNoneStrategyResponse Empty = new BackfillNoneStrategyResponse();
 
-    public BackfillNoneStrategyResponse() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(BackfillNoneStrategyResponse defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private BackfillNoneStrategyResponse $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(BackfillNoneStrategyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new BackfillNoneStrategyResponse();
         }
         public BackfillNoneStrategyResponse build() {
-            return new BackfillNoneStrategyResponse();
+            return $;
         }
     }
+
 }

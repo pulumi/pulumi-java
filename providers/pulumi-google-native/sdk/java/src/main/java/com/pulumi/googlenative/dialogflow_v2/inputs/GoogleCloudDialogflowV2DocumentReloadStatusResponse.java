@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowV2DocumentReloadStatusResponse extends c
      * 
      */
     @Import(name="status", required=true)
-      private final GoogleRpcStatusResponse status;
+    private GoogleRpcStatusResponse status;
 
     public GoogleRpcStatusResponse status() {
         return this.status;
@@ -33,55 +33,52 @@ public final class GoogleCloudDialogflowV2DocumentReloadStatusResponse extends c
      * 
      */
     @Import(name="time", required=true)
-      private final String time;
+    private String time;
 
     public String time() {
         return this.time;
     }
 
-    public GoogleCloudDialogflowV2DocumentReloadStatusResponse(
-        GoogleRpcStatusResponse status,
-        String time) {
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-        this.time = Objects.requireNonNull(time, "expected parameter 'time' to be non-null");
-    }
+    private GoogleCloudDialogflowV2DocumentReloadStatusResponse() {}
 
-    private GoogleCloudDialogflowV2DocumentReloadStatusResponse() {
-        this.status = null;
-        this.time = null;
+    private GoogleCloudDialogflowV2DocumentReloadStatusResponse(GoogleCloudDialogflowV2DocumentReloadStatusResponse $) {
+        this.status = $.status;
+        this.time = $.time;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2DocumentReloadStatusResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GoogleRpcStatusResponse status;
-        private String time;
+        private GoogleCloudDialogflowV2DocumentReloadStatusResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2DocumentReloadStatusResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2DocumentReloadStatusResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.status = defaults.status;
-    	      this.time = defaults.time;
+            $ = new GoogleCloudDialogflowV2DocumentReloadStatusResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder status(GoogleRpcStatusResponse status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder time(String time) {
-            this.time = Objects.requireNonNull(time);
+            $.time = time;
             return this;
-        }        public GoogleCloudDialogflowV2DocumentReloadStatusResponse build() {
-            return new GoogleCloudDialogflowV2DocumentReloadStatusResponse(status, time);
+        }
+
+        public GoogleCloudDialogflowV2DocumentReloadStatusResponse build() {
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            $.time = Objects.requireNonNull($.time, "expected parameter 'time' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.googlenative.container_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.container_v1beta1.enums.CloudRunConfigLoadBalancerType;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class CloudRunConfigArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="disabled")
-      private final @Nullable Output<Boolean> disabled;
+    private @Nullable Output<Boolean> disabled;
 
-    public Output<Boolean> disabled() {
-        return this.disabled == null ? Codegen.empty() : this.disabled;
+    public Optional<Output<Boolean>> disabled() {
+        return Optional.ofNullable(this.disabled);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class CloudRunConfigArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="loadBalancerType")
-      private final @Nullable Output<CloudRunConfigLoadBalancerType> loadBalancerType;
+    private @Nullable Output<CloudRunConfigLoadBalancerType> loadBalancerType;
 
-    public Output<CloudRunConfigLoadBalancerType> loadBalancerType() {
-        return this.loadBalancerType == null ? Codegen.empty() : this.loadBalancerType;
+    public Optional<Output<CloudRunConfigLoadBalancerType>> loadBalancerType() {
+        return Optional.ofNullable(this.loadBalancerType);
     }
 
-    public CloudRunConfigArgs(
-        @Nullable Output<Boolean> disabled,
-        @Nullable Output<CloudRunConfigLoadBalancerType> loadBalancerType) {
-        this.disabled = disabled;
-        this.loadBalancerType = loadBalancerType;
-    }
+    private CloudRunConfigArgs() {}
 
-    private CloudRunConfigArgs() {
-        this.disabled = Codegen.empty();
-        this.loadBalancerType = Codegen.empty();
+    private CloudRunConfigArgs(CloudRunConfigArgs $) {
+        this.disabled = $.disabled;
+        this.loadBalancerType = $.loadBalancerType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudRunConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> disabled;
-        private @Nullable Output<CloudRunConfigLoadBalancerType> loadBalancerType;
+        private CloudRunConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudRunConfigArgs();
         }
 
         public Builder(CloudRunConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disabled = defaults.disabled;
-    	      this.loadBalancerType = defaults.loadBalancerType;
+            $ = new CloudRunConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder disabled(@Nullable Output<Boolean> disabled) {
-            this.disabled = disabled;
+            $.disabled = disabled;
             return this;
         }
-        public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Codegen.ofNullable(disabled);
-            return this;
+
+        public Builder disabled(Boolean disabled) {
+            return disabled(Output.of(disabled));
         }
+
         public Builder loadBalancerType(@Nullable Output<CloudRunConfigLoadBalancerType> loadBalancerType) {
-            this.loadBalancerType = loadBalancerType;
+            $.loadBalancerType = loadBalancerType;
             return this;
         }
-        public Builder loadBalancerType(@Nullable CloudRunConfigLoadBalancerType loadBalancerType) {
-            this.loadBalancerType = Codegen.ofNullable(loadBalancerType);
-            return this;
-        }        public CloudRunConfigArgs build() {
-            return new CloudRunConfigArgs(disabled, loadBalancerType);
+
+        public Builder loadBalancerType(CloudRunConfigLoadBalancerType loadBalancerType) {
+            return loadBalancerType(Output.of(loadBalancerType));
+        }
+
+        public CloudRunConfigArgs build() {
+            return $;
         }
     }
+
 }

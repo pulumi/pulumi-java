@@ -25,10 +25,10 @@ public final class ManagedInstancePrivateEndpointConnectionPropertiesResponse ex
      * 
      */
     @Import(name="privateEndpoint")
-      private final @Nullable ManagedInstancePrivateEndpointPropertyResponse privateEndpoint;
+    private @Nullable ManagedInstancePrivateEndpointPropertyResponse privateEndpoint;
 
     public Optional<ManagedInstancePrivateEndpointPropertyResponse> privateEndpoint() {
-        return this.privateEndpoint == null ? Optional.empty() : Optional.ofNullable(this.privateEndpoint);
+        return Optional.ofNullable(this.privateEndpoint);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ManagedInstancePrivateEndpointConnectionPropertiesResponse ex
      * 
      */
     @Import(name="privateLinkServiceConnectionState")
-      private final @Nullable ManagedInstancePrivateLinkServiceConnectionStatePropertyResponse privateLinkServiceConnectionState;
+    private @Nullable ManagedInstancePrivateLinkServiceConnectionStatePropertyResponse privateLinkServiceConnectionState;
 
     public Optional<ManagedInstancePrivateLinkServiceConnectionStatePropertyResponse> privateLinkServiceConnectionState() {
-        return this.privateLinkServiceConnectionState == null ? Optional.empty() : Optional.ofNullable(this.privateLinkServiceConnectionState);
+        return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
 
     /**
@@ -47,64 +47,57 @@ public final class ManagedInstancePrivateEndpointConnectionPropertiesResponse ex
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
     }
 
-    public ManagedInstancePrivateEndpointConnectionPropertiesResponse(
-        @Nullable ManagedInstancePrivateEndpointPropertyResponse privateEndpoint,
-        @Nullable ManagedInstancePrivateLinkServiceConnectionStatePropertyResponse privateLinkServiceConnectionState,
-        String provisioningState) {
-        this.privateEndpoint = privateEndpoint;
-        this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-    }
+    private ManagedInstancePrivateEndpointConnectionPropertiesResponse() {}
 
-    private ManagedInstancePrivateEndpointConnectionPropertiesResponse() {
-        this.privateEndpoint = null;
-        this.privateLinkServiceConnectionState = null;
-        this.provisioningState = null;
+    private ManagedInstancePrivateEndpointConnectionPropertiesResponse(ManagedInstancePrivateEndpointConnectionPropertiesResponse $) {
+        this.privateEndpoint = $.privateEndpoint;
+        this.privateLinkServiceConnectionState = $.privateLinkServiceConnectionState;
+        this.provisioningState = $.provisioningState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedInstancePrivateEndpointConnectionPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ManagedInstancePrivateEndpointPropertyResponse privateEndpoint;
-        private @Nullable ManagedInstancePrivateLinkServiceConnectionStatePropertyResponse privateLinkServiceConnectionState;
-        private String provisioningState;
+        private ManagedInstancePrivateEndpointConnectionPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedInstancePrivateEndpointConnectionPropertiesResponse();
         }
 
         public Builder(ManagedInstancePrivateEndpointConnectionPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.privateEndpoint = defaults.privateEndpoint;
-    	      this.privateLinkServiceConnectionState = defaults.privateLinkServiceConnectionState;
-    	      this.provisioningState = defaults.provisioningState;
+            $ = new ManagedInstancePrivateEndpointConnectionPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder privateEndpoint(@Nullable ManagedInstancePrivateEndpointPropertyResponse privateEndpoint) {
-            this.privateEndpoint = privateEndpoint;
+            $.privateEndpoint = privateEndpoint;
             return this;
         }
+
         public Builder privateLinkServiceConnectionState(@Nullable ManagedInstancePrivateLinkServiceConnectionStatePropertyResponse privateLinkServiceConnectionState) {
-            this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
+            $.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
-        }        public ManagedInstancePrivateEndpointConnectionPropertiesResponse build() {
-            return new ManagedInstancePrivateEndpointConnectionPropertiesResponse(privateEndpoint, privateLinkServiceConnectionState, provisioningState);
+        }
+
+        public ManagedInstancePrivateEndpointConnectionPropertiesResponse build() {
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            return $;
         }
     }
+
 }

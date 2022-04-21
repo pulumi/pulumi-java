@@ -5,10 +5,10 @@ package com.pulumi.aws.cloudfront.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,52 +17,52 @@ public final class ResponseHeadersPolicyCorsConfigAccessControlExposeHeadersArgs
     public static final ResponseHeadersPolicyCorsConfigAccessControlExposeHeadersArgs Empty = new ResponseHeadersPolicyCorsConfigAccessControlExposeHeadersArgs();
 
     @Import(name="items")
-      private final @Nullable Output<List<String>> items;
+    private @Nullable Output<List<String>> items;
 
-    public Output<List<String>> items() {
-        return this.items == null ? Codegen.empty() : this.items;
+    public Optional<Output<List<String>>> items() {
+        return Optional.ofNullable(this.items);
     }
 
-    public ResponseHeadersPolicyCorsConfigAccessControlExposeHeadersArgs(@Nullable Output<List<String>> items) {
-        this.items = items;
-    }
+    private ResponseHeadersPolicyCorsConfigAccessControlExposeHeadersArgs() {}
 
-    private ResponseHeadersPolicyCorsConfigAccessControlExposeHeadersArgs() {
-        this.items = Codegen.empty();
+    private ResponseHeadersPolicyCorsConfigAccessControlExposeHeadersArgs(ResponseHeadersPolicyCorsConfigAccessControlExposeHeadersArgs $) {
+        this.items = $.items;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResponseHeadersPolicyCorsConfigAccessControlExposeHeadersArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> items;
+        private ResponseHeadersPolicyCorsConfigAccessControlExposeHeadersArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResponseHeadersPolicyCorsConfigAccessControlExposeHeadersArgs();
         }
 
         public Builder(ResponseHeadersPolicyCorsConfigAccessControlExposeHeadersArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.items = defaults.items;
+            $ = new ResponseHeadersPolicyCorsConfigAccessControlExposeHeadersArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder items(@Nullable Output<List<String>> items) {
-            this.items = items;
+            $.items = items;
             return this;
         }
-        public Builder items(@Nullable List<String> items) {
-            this.items = Codegen.ofNullable(items);
-            return this;
+
+        public Builder items(List<String> items) {
+            return items(Output.of(items));
         }
+
         public Builder items(String... items) {
             return items(List.of(items));
-        }        public ResponseHeadersPolicyCorsConfigAccessControlExposeHeadersArgs build() {
-            return new ResponseHeadersPolicyCorsConfigAccessControlExposeHeadersArgs(items);
+        }
+
+        public ResponseHeadersPolicyCorsConfigAccessControlExposeHeadersArgs build() {
+            return $;
         }
     }
+
 }

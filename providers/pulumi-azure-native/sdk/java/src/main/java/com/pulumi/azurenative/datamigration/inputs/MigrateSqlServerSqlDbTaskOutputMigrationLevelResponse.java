@@ -28,7 +28,7 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
      * 
      */
     @Import(name="databaseSummary", required=true)
-      private final Map<String,DatabaseSummaryResultResponse> databaseSummary;
+    private Map<String,DatabaseSummaryResultResponse> databaseSummary;
 
     public Map<String,DatabaseSummaryResultResponse> databaseSummary() {
         return this.databaseSummary;
@@ -39,7 +39,7 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
      * 
      */
     @Import(name="databases", required=true)
-      private final Map<String,String> databases;
+    private Map<String,String> databases;
 
     public Map<String,String> databases() {
         return this.databases;
@@ -50,7 +50,7 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
      * 
      */
     @Import(name="durationInSeconds", required=true)
-      private final Double durationInSeconds;
+    private Double durationInSeconds;
 
     public Double durationInSeconds() {
         return this.durationInSeconds;
@@ -61,7 +61,7 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
      * 
      */
     @Import(name="endedOn", required=true)
-      private final String endedOn;
+    private String endedOn;
 
     public String endedOn() {
         return this.endedOn;
@@ -72,7 +72,7 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
      * 
      */
     @Import(name="exceptionsAndWarnings", required=true)
-      private final List<ReportableExceptionResponse> exceptionsAndWarnings;
+    private List<ReportableExceptionResponse> exceptionsAndWarnings;
 
     public List<ReportableExceptionResponse> exceptionsAndWarnings() {
         return this.exceptionsAndWarnings;
@@ -83,7 +83,7 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -94,7 +94,7 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
      * 
      */
     @Import(name="message", required=true)
-      private final String message;
+    private String message;
 
     public String message() {
         return this.message;
@@ -105,7 +105,7 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
      * 
      */
     @Import(name="migrationReport", required=true)
-      private final MigrationReportResultResponse migrationReport;
+    private MigrationReportResultResponse migrationReport;
 
     public MigrationReportResultResponse migrationReport() {
         return this.migrationReport;
@@ -117,7 +117,7 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
      * 
      */
     @Import(name="resultType", required=true)
-      private final String resultType;
+    private String resultType;
 
     public String resultType() {
         return this.resultType;
@@ -128,7 +128,7 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
      * 
      */
     @Import(name="sourceServerBrandVersion", required=true)
-      private final String sourceServerBrandVersion;
+    private String sourceServerBrandVersion;
 
     public String sourceServerBrandVersion() {
         return this.sourceServerBrandVersion;
@@ -139,7 +139,7 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
      * 
      */
     @Import(name="sourceServerVersion", required=true)
-      private final String sourceServerVersion;
+    private String sourceServerVersion;
 
     public String sourceServerVersion() {
         return this.sourceServerVersion;
@@ -150,7 +150,7 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
      * 
      */
     @Import(name="startedOn", required=true)
-      private final String startedOn;
+    private String startedOn;
 
     public String startedOn() {
         return this.startedOn;
@@ -161,7 +161,7 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
@@ -172,7 +172,7 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
      * 
      */
     @Import(name="statusMessage", required=true)
-      private final String statusMessage;
+    private String statusMessage;
 
     public String statusMessage() {
         return this.statusMessage;
@@ -183,7 +183,7 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
      * 
      */
     @Import(name="targetServerBrandVersion", required=true)
-      private final String targetServerBrandVersion;
+    private String targetServerBrandVersion;
 
     public String targetServerBrandVersion() {
         return this.targetServerBrandVersion;
@@ -194,184 +194,154 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
      * 
      */
     @Import(name="targetServerVersion", required=true)
-      private final String targetServerVersion;
+    private String targetServerVersion;
 
     public String targetServerVersion() {
         return this.targetServerVersion;
     }
 
-    public MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse(
-        Map<String,DatabaseSummaryResultResponse> databaseSummary,
-        Map<String,String> databases,
-        Double durationInSeconds,
-        String endedOn,
-        List<ReportableExceptionResponse> exceptionsAndWarnings,
-        String id,
-        String message,
-        MigrationReportResultResponse migrationReport,
-        String resultType,
-        String sourceServerBrandVersion,
-        String sourceServerVersion,
-        String startedOn,
-        String status,
-        String statusMessage,
-        String targetServerBrandVersion,
-        String targetServerVersion) {
-        this.databaseSummary = Objects.requireNonNull(databaseSummary, "expected parameter 'databaseSummary' to be non-null");
-        this.databases = Objects.requireNonNull(databases, "expected parameter 'databases' to be non-null");
-        this.durationInSeconds = Objects.requireNonNull(durationInSeconds, "expected parameter 'durationInSeconds' to be non-null");
-        this.endedOn = Objects.requireNonNull(endedOn, "expected parameter 'endedOn' to be non-null");
-        this.exceptionsAndWarnings = Objects.requireNonNull(exceptionsAndWarnings, "expected parameter 'exceptionsAndWarnings' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.message = Objects.requireNonNull(message, "expected parameter 'message' to be non-null");
-        this.migrationReport = Objects.requireNonNull(migrationReport, "expected parameter 'migrationReport' to be non-null");
-        this.resultType = Codegen.stringProp("resultType").arg(resultType).require();
-        this.sourceServerBrandVersion = Objects.requireNonNull(sourceServerBrandVersion, "expected parameter 'sourceServerBrandVersion' to be non-null");
-        this.sourceServerVersion = Objects.requireNonNull(sourceServerVersion, "expected parameter 'sourceServerVersion' to be non-null");
-        this.startedOn = Objects.requireNonNull(startedOn, "expected parameter 'startedOn' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-        this.statusMessage = Objects.requireNonNull(statusMessage, "expected parameter 'statusMessage' to be non-null");
-        this.targetServerBrandVersion = Objects.requireNonNull(targetServerBrandVersion, "expected parameter 'targetServerBrandVersion' to be non-null");
-        this.targetServerVersion = Objects.requireNonNull(targetServerVersion, "expected parameter 'targetServerVersion' to be non-null");
-    }
+    private MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse() {}
 
-    private MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse() {
-        this.databaseSummary = Map.of();
-        this.databases = Map.of();
-        this.durationInSeconds = null;
-        this.endedOn = null;
-        this.exceptionsAndWarnings = List.of();
-        this.id = null;
-        this.message = null;
-        this.migrationReport = null;
-        this.resultType = null;
-        this.sourceServerBrandVersion = null;
-        this.sourceServerVersion = null;
-        this.startedOn = null;
-        this.status = null;
-        this.statusMessage = null;
-        this.targetServerBrandVersion = null;
-        this.targetServerVersion = null;
+    private MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse(MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse $) {
+        this.databaseSummary = $.databaseSummary;
+        this.databases = $.databases;
+        this.durationInSeconds = $.durationInSeconds;
+        this.endedOn = $.endedOn;
+        this.exceptionsAndWarnings = $.exceptionsAndWarnings;
+        this.id = $.id;
+        this.message = $.message;
+        this.migrationReport = $.migrationReport;
+        this.resultType = $.resultType;
+        this.sourceServerBrandVersion = $.sourceServerBrandVersion;
+        this.sourceServerVersion = $.sourceServerVersion;
+        this.startedOn = $.startedOn;
+        this.status = $.status;
+        this.statusMessage = $.statusMessage;
+        this.targetServerBrandVersion = $.targetServerBrandVersion;
+        this.targetServerVersion = $.targetServerVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,DatabaseSummaryResultResponse> databaseSummary;
-        private Map<String,String> databases;
-        private Double durationInSeconds;
-        private String endedOn;
-        private List<ReportableExceptionResponse> exceptionsAndWarnings;
-        private String id;
-        private String message;
-        private MigrationReportResultResponse migrationReport;
-        private String resultType;
-        private String sourceServerBrandVersion;
-        private String sourceServerVersion;
-        private String startedOn;
-        private String status;
-        private String statusMessage;
-        private String targetServerBrandVersion;
-        private String targetServerVersion;
+        private MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse();
         }
 
         public Builder(MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.databaseSummary = defaults.databaseSummary;
-    	      this.databases = defaults.databases;
-    	      this.durationInSeconds = defaults.durationInSeconds;
-    	      this.endedOn = defaults.endedOn;
-    	      this.exceptionsAndWarnings = defaults.exceptionsAndWarnings;
-    	      this.id = defaults.id;
-    	      this.message = defaults.message;
-    	      this.migrationReport = defaults.migrationReport;
-    	      this.resultType = defaults.resultType;
-    	      this.sourceServerBrandVersion = defaults.sourceServerBrandVersion;
-    	      this.sourceServerVersion = defaults.sourceServerVersion;
-    	      this.startedOn = defaults.startedOn;
-    	      this.status = defaults.status;
-    	      this.statusMessage = defaults.statusMessage;
-    	      this.targetServerBrandVersion = defaults.targetServerBrandVersion;
-    	      this.targetServerVersion = defaults.targetServerVersion;
+            $ = new MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder databaseSummary(Map<String,DatabaseSummaryResultResponse> databaseSummary) {
-            this.databaseSummary = Objects.requireNonNull(databaseSummary);
+            $.databaseSummary = databaseSummary;
             return this;
         }
+
         public Builder databases(Map<String,String> databases) {
-            this.databases = Objects.requireNonNull(databases);
+            $.databases = databases;
             return this;
         }
+
         public Builder durationInSeconds(Double durationInSeconds) {
-            this.durationInSeconds = Objects.requireNonNull(durationInSeconds);
+            $.durationInSeconds = durationInSeconds;
             return this;
         }
+
         public Builder endedOn(String endedOn) {
-            this.endedOn = Objects.requireNonNull(endedOn);
+            $.endedOn = endedOn;
             return this;
         }
+
         public Builder exceptionsAndWarnings(List<ReportableExceptionResponse> exceptionsAndWarnings) {
-            this.exceptionsAndWarnings = Objects.requireNonNull(exceptionsAndWarnings);
+            $.exceptionsAndWarnings = exceptionsAndWarnings;
             return this;
         }
+
         public Builder exceptionsAndWarnings(ReportableExceptionResponse... exceptionsAndWarnings) {
             return exceptionsAndWarnings(List.of(exceptionsAndWarnings));
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder message(String message) {
-            this.message = Objects.requireNonNull(message);
+            $.message = message;
             return this;
         }
+
         public Builder migrationReport(MigrationReportResultResponse migrationReport) {
-            this.migrationReport = Objects.requireNonNull(migrationReport);
+            $.migrationReport = migrationReport;
             return this;
         }
+
         public Builder resultType(String resultType) {
-            this.resultType = Objects.requireNonNull(resultType);
+            $.resultType = resultType;
             return this;
         }
+
         public Builder sourceServerBrandVersion(String sourceServerBrandVersion) {
-            this.sourceServerBrandVersion = Objects.requireNonNull(sourceServerBrandVersion);
+            $.sourceServerBrandVersion = sourceServerBrandVersion;
             return this;
         }
+
         public Builder sourceServerVersion(String sourceServerVersion) {
-            this.sourceServerVersion = Objects.requireNonNull(sourceServerVersion);
+            $.sourceServerVersion = sourceServerVersion;
             return this;
         }
+
         public Builder startedOn(String startedOn) {
-            this.startedOn = Objects.requireNonNull(startedOn);
+            $.startedOn = startedOn;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder statusMessage(String statusMessage) {
-            this.statusMessage = Objects.requireNonNull(statusMessage);
+            $.statusMessage = statusMessage;
             return this;
         }
+
         public Builder targetServerBrandVersion(String targetServerBrandVersion) {
-            this.targetServerBrandVersion = Objects.requireNonNull(targetServerBrandVersion);
+            $.targetServerBrandVersion = targetServerBrandVersion;
             return this;
         }
+
         public Builder targetServerVersion(String targetServerVersion) {
-            this.targetServerVersion = Objects.requireNonNull(targetServerVersion);
+            $.targetServerVersion = targetServerVersion;
             return this;
-        }        public MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse build() {
-            return new MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse(databaseSummary, databases, durationInSeconds, endedOn, exceptionsAndWarnings, id, message, migrationReport, resultType, sourceServerBrandVersion, sourceServerVersion, startedOn, status, statusMessage, targetServerBrandVersion, targetServerVersion);
+        }
+
+        public MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse build() {
+            $.databaseSummary = Objects.requireNonNull($.databaseSummary, "expected parameter 'databaseSummary' to be non-null");
+            $.databases = Objects.requireNonNull($.databases, "expected parameter 'databases' to be non-null");
+            $.durationInSeconds = Objects.requireNonNull($.durationInSeconds, "expected parameter 'durationInSeconds' to be non-null");
+            $.endedOn = Objects.requireNonNull($.endedOn, "expected parameter 'endedOn' to be non-null");
+            $.exceptionsAndWarnings = Objects.requireNonNull($.exceptionsAndWarnings, "expected parameter 'exceptionsAndWarnings' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.message = Objects.requireNonNull($.message, "expected parameter 'message' to be non-null");
+            $.migrationReport = Objects.requireNonNull($.migrationReport, "expected parameter 'migrationReport' to be non-null");
+            $.resultType = Codegen.stringProp("resultType").arg($.resultType).require();
+            $.sourceServerBrandVersion = Objects.requireNonNull($.sourceServerBrandVersion, "expected parameter 'sourceServerBrandVersion' to be non-null");
+            $.sourceServerVersion = Objects.requireNonNull($.sourceServerVersion, "expected parameter 'sourceServerVersion' to be non-null");
+            $.startedOn = Objects.requireNonNull($.startedOn, "expected parameter 'startedOn' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            $.statusMessage = Objects.requireNonNull($.statusMessage, "expected parameter 'statusMessage' to be non-null");
+            $.targetServerBrandVersion = Objects.requireNonNull($.targetServerBrandVersion, "expected parameter 'targetServerBrandVersion' to be non-null");
+            $.targetServerVersion = Objects.requireNonNull($.targetServerVersion, "expected parameter 'targetServerVersion' to be non-null");
+            return $;
         }
     }
+
 }

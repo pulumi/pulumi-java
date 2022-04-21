@@ -7,9 +7,9 @@ import com.pulumi.azurenative.resourceconnector.enums.Provider;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,49 +26,48 @@ public final class AppliancePropertiesInfrastructureConfigArgs extends com.pulum
      * 
      */
     @Import(name="provider")
-      private final @Nullable Output<Either<String,Provider>> provider;
+    private @Nullable Output<Either<String,Provider>> provider;
 
-    public Output<Either<String,Provider>> provider() {
-        return this.provider == null ? Codegen.empty() : this.provider;
+    public Optional<Output<Either<String,Provider>>> provider() {
+        return Optional.ofNullable(this.provider);
     }
 
-    public AppliancePropertiesInfrastructureConfigArgs(@Nullable Output<Either<String,Provider>> provider) {
-        this.provider = provider;
-    }
+    private AppliancePropertiesInfrastructureConfigArgs() {}
 
-    private AppliancePropertiesInfrastructureConfigArgs() {
-        this.provider = Codegen.empty();
+    private AppliancePropertiesInfrastructureConfigArgs(AppliancePropertiesInfrastructureConfigArgs $) {
+        this.provider = $.provider;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppliancePropertiesInfrastructureConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,Provider>> provider;
+        private AppliancePropertiesInfrastructureConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppliancePropertiesInfrastructureConfigArgs();
         }
 
         public Builder(AppliancePropertiesInfrastructureConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.provider = defaults.provider;
+            $ = new AppliancePropertiesInfrastructureConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder provider(@Nullable Output<Either<String,Provider>> provider) {
-            this.provider = provider;
+            $.provider = provider;
             return this;
         }
-        public Builder provider(@Nullable Either<String,Provider> provider) {
-            this.provider = Codegen.ofNullable(provider);
-            return this;
-        }        public AppliancePropertiesInfrastructureConfigArgs build() {
-            return new AppliancePropertiesInfrastructureConfigArgs(provider);
+
+        public Builder provider(Either<String,Provider> provider) {
+            return provider(Output.of(provider));
+        }
+
+        public AppliancePropertiesInfrastructureConfigArgs build() {
+            return $;
         }
     }
+
 }

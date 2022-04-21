@@ -22,7 +22,7 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixResponse extends
      * 
      */
     @Import(name="delegateeProject", required=true)
-      private final String delegateeProject;
+    private String delegateeProject;
 
     public String delegateeProject() {
         return this.delegateeProject;
@@ -33,7 +33,7 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixResponse extends
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -44,7 +44,7 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixResponse extends
      * 
      */
     @Import(name="ipCidrRange", required=true)
-      private final String ipCidrRange;
+    private String ipCidrRange;
 
     public String ipCidrRange() {
         return this.ipCidrRange;
@@ -55,7 +55,7 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixResponse extends
      * 
      */
     @Import(name="isAddress", required=true)
-      private final Boolean isAddress;
+    private Boolean isAddress;
 
     public Boolean isAddress() {
         return this.isAddress;
@@ -66,7 +66,7 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixResponse extends
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -77,7 +77,7 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixResponse extends
      * 
      */
     @Import(name="region", required=true)
-      private final String region;
+    private String region;
 
     public String region() {
         return this.region;
@@ -88,100 +88,87 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixResponse extends
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
     }
 
-    public PublicDelegatedPrefixPublicDelegatedSubPrefixResponse(
-        String delegateeProject,
-        String description,
-        String ipCidrRange,
-        Boolean isAddress,
-        String name,
-        String region,
-        String status) {
-        this.delegateeProject = Objects.requireNonNull(delegateeProject, "expected parameter 'delegateeProject' to be non-null");
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.ipCidrRange = Objects.requireNonNull(ipCidrRange, "expected parameter 'ipCidrRange' to be non-null");
-        this.isAddress = Objects.requireNonNull(isAddress, "expected parameter 'isAddress' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-    }
+    private PublicDelegatedPrefixPublicDelegatedSubPrefixResponse() {}
 
-    private PublicDelegatedPrefixPublicDelegatedSubPrefixResponse() {
-        this.delegateeProject = null;
-        this.description = null;
-        this.ipCidrRange = null;
-        this.isAddress = null;
-        this.name = null;
-        this.region = null;
-        this.status = null;
+    private PublicDelegatedPrefixPublicDelegatedSubPrefixResponse(PublicDelegatedPrefixPublicDelegatedSubPrefixResponse $) {
+        this.delegateeProject = $.delegateeProject;
+        this.description = $.description;
+        this.ipCidrRange = $.ipCidrRange;
+        this.isAddress = $.isAddress;
+        this.name = $.name;
+        this.region = $.region;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PublicDelegatedPrefixPublicDelegatedSubPrefixResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String delegateeProject;
-        private String description;
-        private String ipCidrRange;
-        private Boolean isAddress;
-        private String name;
-        private String region;
-        private String status;
+        private PublicDelegatedPrefixPublicDelegatedSubPrefixResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PublicDelegatedPrefixPublicDelegatedSubPrefixResponse();
         }
 
         public Builder(PublicDelegatedPrefixPublicDelegatedSubPrefixResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.delegateeProject = defaults.delegateeProject;
-    	      this.description = defaults.description;
-    	      this.ipCidrRange = defaults.ipCidrRange;
-    	      this.isAddress = defaults.isAddress;
-    	      this.name = defaults.name;
-    	      this.region = defaults.region;
-    	      this.status = defaults.status;
+            $ = new PublicDelegatedPrefixPublicDelegatedSubPrefixResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder delegateeProject(String delegateeProject) {
-            this.delegateeProject = Objects.requireNonNull(delegateeProject);
+            $.delegateeProject = delegateeProject;
             return this;
         }
+
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder ipCidrRange(String ipCidrRange) {
-            this.ipCidrRange = Objects.requireNonNull(ipCidrRange);
+            $.ipCidrRange = ipCidrRange;
             return this;
         }
+
         public Builder isAddress(Boolean isAddress) {
-            this.isAddress = Objects.requireNonNull(isAddress);
+            $.isAddress = isAddress;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
-        }        public PublicDelegatedPrefixPublicDelegatedSubPrefixResponse build() {
-            return new PublicDelegatedPrefixPublicDelegatedSubPrefixResponse(delegateeProject, description, ipCidrRange, isAddress, name, region, status);
+        }
+
+        public PublicDelegatedPrefixPublicDelegatedSubPrefixResponse build() {
+            $.delegateeProject = Objects.requireNonNull($.delegateeProject, "expected parameter 'delegateeProject' to be non-null");
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.ipCidrRange = Objects.requireNonNull($.ipCidrRange, "expected parameter 'ipCidrRange' to be non-null");
+            $.isAddress = Objects.requireNonNull($.isAddress, "expected parameter 'isAddress' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

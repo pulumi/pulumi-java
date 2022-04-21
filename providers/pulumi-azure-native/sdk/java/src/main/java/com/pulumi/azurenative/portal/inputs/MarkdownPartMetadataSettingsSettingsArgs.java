@@ -5,10 +5,10 @@ package com.pulumi.azurenative.portal.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class MarkdownPartMetadataSettingsSettingsArgs extends com.pulumi.r
      * 
      */
     @Import(name="content")
-      private final @Nullable Output<String> content;
+    private @Nullable Output<String> content;
 
-    public Output<String> content() {
-        return this.content == null ? Codegen.empty() : this.content;
+    public Optional<Output<String>> content() {
+        return Optional.ofNullable(this.content);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class MarkdownPartMetadataSettingsSettingsArgs extends com.pulumi.r
      * 
      */
     @Import(name="markdownSource")
-      private final @Nullable Output<Integer> markdownSource;
+    private @Nullable Output<Integer> markdownSource;
 
-    public Output<Integer> markdownSource() {
-        return this.markdownSource == null ? Codegen.empty() : this.markdownSource;
+    public Optional<Output<Integer>> markdownSource() {
+        return Optional.ofNullable(this.markdownSource);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class MarkdownPartMetadataSettingsSettingsArgs extends com.pulumi.r
      * 
      */
     @Import(name="markdownUri")
-      private final @Nullable Output<String> markdownUri;
+    private @Nullable Output<String> markdownUri;
 
-    public Output<String> markdownUri() {
-        return this.markdownUri == null ? Codegen.empty() : this.markdownUri;
+    public Optional<Output<String>> markdownUri() {
+        return Optional.ofNullable(this.markdownUri);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class MarkdownPartMetadataSettingsSettingsArgs extends com.pulumi.r
      * 
      */
     @Import(name="subtitle")
-      private final @Nullable Output<String> subtitle;
+    private @Nullable Output<String> subtitle;
 
-    public Output<String> subtitle() {
-        return this.subtitle == null ? Codegen.empty() : this.subtitle;
+    public Optional<Output<String>> subtitle() {
+        return Optional.ofNullable(this.subtitle);
     }
 
     /**
@@ -69,102 +69,88 @@ public final class MarkdownPartMetadataSettingsSettingsArgs extends com.pulumi.r
      * 
      */
     @Import(name="title")
-      private final @Nullable Output<String> title;
+    private @Nullable Output<String> title;
 
-    public Output<String> title() {
-        return this.title == null ? Codegen.empty() : this.title;
+    public Optional<Output<String>> title() {
+        return Optional.ofNullable(this.title);
     }
 
-    public MarkdownPartMetadataSettingsSettingsArgs(
-        @Nullable Output<String> content,
-        @Nullable Output<Integer> markdownSource,
-        @Nullable Output<String> markdownUri,
-        @Nullable Output<String> subtitle,
-        @Nullable Output<String> title) {
-        this.content = content;
-        this.markdownSource = markdownSource;
-        this.markdownUri = markdownUri;
-        this.subtitle = subtitle;
-        this.title = title;
-    }
+    private MarkdownPartMetadataSettingsSettingsArgs() {}
 
-    private MarkdownPartMetadataSettingsSettingsArgs() {
-        this.content = Codegen.empty();
-        this.markdownSource = Codegen.empty();
-        this.markdownUri = Codegen.empty();
-        this.subtitle = Codegen.empty();
-        this.title = Codegen.empty();
+    private MarkdownPartMetadataSettingsSettingsArgs(MarkdownPartMetadataSettingsSettingsArgs $) {
+        this.content = $.content;
+        this.markdownSource = $.markdownSource;
+        this.markdownUri = $.markdownUri;
+        this.subtitle = $.subtitle;
+        this.title = $.title;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MarkdownPartMetadataSettingsSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> content;
-        private @Nullable Output<Integer> markdownSource;
-        private @Nullable Output<String> markdownUri;
-        private @Nullable Output<String> subtitle;
-        private @Nullable Output<String> title;
+        private MarkdownPartMetadataSettingsSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MarkdownPartMetadataSettingsSettingsArgs();
         }
 
         public Builder(MarkdownPartMetadataSettingsSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.content = defaults.content;
-    	      this.markdownSource = defaults.markdownSource;
-    	      this.markdownUri = defaults.markdownUri;
-    	      this.subtitle = defaults.subtitle;
-    	      this.title = defaults.title;
+            $ = new MarkdownPartMetadataSettingsSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder content(@Nullable Output<String> content) {
-            this.content = content;
+            $.content = content;
             return this;
         }
-        public Builder content(@Nullable String content) {
-            this.content = Codegen.ofNullable(content);
-            return this;
+
+        public Builder content(String content) {
+            return content(Output.of(content));
         }
+
         public Builder markdownSource(@Nullable Output<Integer> markdownSource) {
-            this.markdownSource = markdownSource;
+            $.markdownSource = markdownSource;
             return this;
         }
-        public Builder markdownSource(@Nullable Integer markdownSource) {
-            this.markdownSource = Codegen.ofNullable(markdownSource);
-            return this;
+
+        public Builder markdownSource(Integer markdownSource) {
+            return markdownSource(Output.of(markdownSource));
         }
+
         public Builder markdownUri(@Nullable Output<String> markdownUri) {
-            this.markdownUri = markdownUri;
+            $.markdownUri = markdownUri;
             return this;
         }
-        public Builder markdownUri(@Nullable String markdownUri) {
-            this.markdownUri = Codegen.ofNullable(markdownUri);
-            return this;
+
+        public Builder markdownUri(String markdownUri) {
+            return markdownUri(Output.of(markdownUri));
         }
+
         public Builder subtitle(@Nullable Output<String> subtitle) {
-            this.subtitle = subtitle;
+            $.subtitle = subtitle;
             return this;
         }
-        public Builder subtitle(@Nullable String subtitle) {
-            this.subtitle = Codegen.ofNullable(subtitle);
-            return this;
+
+        public Builder subtitle(String subtitle) {
+            return subtitle(Output.of(subtitle));
         }
+
         public Builder title(@Nullable Output<String> title) {
-            this.title = title;
+            $.title = title;
             return this;
         }
-        public Builder title(@Nullable String title) {
-            this.title = Codegen.ofNullable(title);
-            return this;
-        }        public MarkdownPartMetadataSettingsSettingsArgs build() {
-            return new MarkdownPartMetadataSettingsSettingsArgs(content, markdownSource, markdownUri, subtitle, title);
+
+        public Builder title(String title) {
+            return title(Output.of(title));
+        }
+
+        public MarkdownPartMetadataSettingsSettingsArgs build() {
+            return $;
         }
     }
+
 }

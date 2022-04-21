@@ -5,10 +5,10 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class ClusterNodeConfigGuestAcceleratorArgs extends com.pulumi.reso
      * 
      */
     @Import(name="count", required=true)
-      private final Output<Integer> count;
+    private Output<Integer> count;
 
     public Output<Integer> count() {
         return this.count;
@@ -32,10 +32,10 @@ public final class ClusterNodeConfigGuestAcceleratorArgs extends com.pulumi.reso
      * 
      */
     @Import(name="gpuPartitionSize")
-      private final @Nullable Output<String> gpuPartitionSize;
+    private @Nullable Output<String> gpuPartitionSize;
 
-    public Output<String> gpuPartitionSize() {
-        return this.gpuPartitionSize == null ? Codegen.empty() : this.gpuPartitionSize;
+    public Optional<Output<String>> gpuPartitionSize() {
+        return Optional.ofNullable(this.gpuPartitionSize);
     }
 
     /**
@@ -43,76 +43,70 @@ public final class ClusterNodeConfigGuestAcceleratorArgs extends com.pulumi.reso
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public ClusterNodeConfigGuestAcceleratorArgs(
-        Output<Integer> count,
-        @Nullable Output<String> gpuPartitionSize,
-        Output<String> type) {
-        this.count = Objects.requireNonNull(count, "expected parameter 'count' to be non-null");
-        this.gpuPartitionSize = gpuPartitionSize;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ClusterNodeConfigGuestAcceleratorArgs() {}
 
-    private ClusterNodeConfigGuestAcceleratorArgs() {
-        this.count = Codegen.empty();
-        this.gpuPartitionSize = Codegen.empty();
-        this.type = Codegen.empty();
+    private ClusterNodeConfigGuestAcceleratorArgs(ClusterNodeConfigGuestAcceleratorArgs $) {
+        this.count = $.count;
+        this.gpuPartitionSize = $.gpuPartitionSize;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterNodeConfigGuestAcceleratorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> count;
-        private @Nullable Output<String> gpuPartitionSize;
-        private Output<String> type;
+        private ClusterNodeConfigGuestAcceleratorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterNodeConfigGuestAcceleratorArgs();
         }
 
         public Builder(ClusterNodeConfigGuestAcceleratorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.count = defaults.count;
-    	      this.gpuPartitionSize = defaults.gpuPartitionSize;
-    	      this.type = defaults.type;
+            $ = new ClusterNodeConfigGuestAcceleratorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder count(Output<Integer> count) {
-            this.count = Objects.requireNonNull(count);
+            $.count = count;
             return this;
         }
+
         public Builder count(Integer count) {
-            this.count = Output.of(Objects.requireNonNull(count));
-            return this;
+            return count(Output.of(count));
         }
+
         public Builder gpuPartitionSize(@Nullable Output<String> gpuPartitionSize) {
-            this.gpuPartitionSize = gpuPartitionSize;
+            $.gpuPartitionSize = gpuPartitionSize;
             return this;
         }
-        public Builder gpuPartitionSize(@Nullable String gpuPartitionSize) {
-            this.gpuPartitionSize = Codegen.ofNullable(gpuPartitionSize);
-            return this;
+
+        public Builder gpuPartitionSize(String gpuPartitionSize) {
+            return gpuPartitionSize(Output.of(gpuPartitionSize));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public ClusterNodeConfigGuestAcceleratorArgs build() {
-            return new ClusterNodeConfigGuestAcceleratorArgs(count, gpuPartitionSize, type);
+            return type(Output.of(type));
+        }
+
+        public ClusterNodeConfigGuestAcceleratorArgs build() {
+            $.count = Objects.requireNonNull($.count, "expected parameter 'count' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

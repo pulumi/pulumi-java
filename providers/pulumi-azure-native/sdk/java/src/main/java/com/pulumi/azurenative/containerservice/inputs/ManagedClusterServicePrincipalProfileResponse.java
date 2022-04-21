@@ -23,7 +23,7 @@ public final class ManagedClusterServicePrincipalProfileResponse extends com.pul
      * 
      */
     @Import(name="clientId", required=true)
-      private final String clientId;
+    private String clientId;
 
     public String clientId() {
         return this.clientId;
@@ -34,55 +34,51 @@ public final class ManagedClusterServicePrincipalProfileResponse extends com.pul
      * 
      */
     @Import(name="secret")
-      private final @Nullable String secret;
+    private @Nullable String secret;
 
     public Optional<String> secret() {
-        return this.secret == null ? Optional.empty() : Optional.ofNullable(this.secret);
+        return Optional.ofNullable(this.secret);
     }
 
-    public ManagedClusterServicePrincipalProfileResponse(
-        String clientId,
-        @Nullable String secret) {
-        this.clientId = Objects.requireNonNull(clientId, "expected parameter 'clientId' to be non-null");
-        this.secret = secret;
-    }
+    private ManagedClusterServicePrincipalProfileResponse() {}
 
-    private ManagedClusterServicePrincipalProfileResponse() {
-        this.clientId = null;
-        this.secret = null;
+    private ManagedClusterServicePrincipalProfileResponse(ManagedClusterServicePrincipalProfileResponse $) {
+        this.clientId = $.clientId;
+        this.secret = $.secret;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedClusterServicePrincipalProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String clientId;
-        private @Nullable String secret;
+        private ManagedClusterServicePrincipalProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedClusterServicePrincipalProfileResponse();
         }
 
         public Builder(ManagedClusterServicePrincipalProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientId = defaults.clientId;
-    	      this.secret = defaults.secret;
+            $ = new ManagedClusterServicePrincipalProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder clientId(String clientId) {
-            this.clientId = Objects.requireNonNull(clientId);
+            $.clientId = clientId;
             return this;
         }
+
         public Builder secret(@Nullable String secret) {
-            this.secret = secret;
+            $.secret = secret;
             return this;
-        }        public ManagedClusterServicePrincipalProfileResponse build() {
-            return new ManagedClusterServicePrincipalProfileResponse(clientId, secret);
+        }
+
+        public ManagedClusterServicePrincipalProfileResponse build() {
+            $.clientId = Objects.requireNonNull($.clientId, "expected parameter 'clientId' to be non-null");
+            return $;
         }
     }
+
 }

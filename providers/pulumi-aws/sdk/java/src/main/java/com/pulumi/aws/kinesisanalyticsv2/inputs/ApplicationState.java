@@ -7,12 +7,12 @@ import com.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurat
 import com.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationCloudwatchLoggingOptionsGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="applicationConfiguration")
-      private final @Nullable Output<ApplicationApplicationConfigurationGetArgs> applicationConfiguration;
+    private @Nullable Output<ApplicationApplicationConfigurationGetArgs> applicationConfiguration;
 
-    public Output<ApplicationApplicationConfigurationGetArgs> applicationConfiguration() {
-        return this.applicationConfiguration == null ? Codegen.empty() : this.applicationConfiguration;
+    public Optional<Output<ApplicationApplicationConfigurationGetArgs>> applicationConfiguration() {
+        return Optional.ofNullable(this.applicationConfiguration);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cloudwatchLoggingOptions")
-      private final @Nullable Output<ApplicationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions;
+    private @Nullable Output<ApplicationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions;
 
-    public Output<ApplicationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions() {
-        return this.cloudwatchLoggingOptions == null ? Codegen.empty() : this.cloudwatchLoggingOptions;
+    public Optional<Output<ApplicationCloudwatchLoggingOptionsGetArgs>> cloudwatchLoggingOptions() {
+        return Optional.ofNullable(this.cloudwatchLoggingOptions);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createTimestamp")
-      private final @Nullable Output<String> createTimestamp;
+    private @Nullable Output<String> createTimestamp;
 
-    public Output<String> createTimestamp() {
-        return this.createTimestamp == null ? Codegen.empty() : this.createTimestamp;
+    public Optional<Output<String>> createTimestamp() {
+        return Optional.ofNullable(this.createTimestamp);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="forceStop")
-      private final @Nullable Output<Boolean> forceStop;
+    private @Nullable Output<Boolean> forceStop;
 
-    public Output<Boolean> forceStop() {
-        return this.forceStop == null ? Codegen.empty() : this.forceStop;
+    public Optional<Output<Boolean>> forceStop() {
+        return Optional.ofNullable(this.forceStop);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lastUpdateTimestamp")
-      private final @Nullable Output<String> lastUpdateTimestamp;
+    private @Nullable Output<String> lastUpdateTimestamp;
 
-    public Output<String> lastUpdateTimestamp() {
-        return this.lastUpdateTimestamp == null ? Codegen.empty() : this.lastUpdateTimestamp;
+    public Optional<Output<String>> lastUpdateTimestamp() {
+        return Optional.ofNullable(this.lastUpdateTimestamp);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="runtimeEnvironment")
-      private final @Nullable Output<String> runtimeEnvironment;
+    private @Nullable Output<String> runtimeEnvironment;
 
-    public Output<String> runtimeEnvironment() {
-        return this.runtimeEnvironment == null ? Codegen.empty() : this.runtimeEnvironment;
+    public Optional<Output<String>> runtimeEnvironment() {
+        return Optional.ofNullable(this.runtimeEnvironment);
     }
 
     /**
@@ -124,10 +124,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceExecutionRole")
-      private final @Nullable Output<String> serviceExecutionRole;
+    private @Nullable Output<String> serviceExecutionRole;
 
-    public Output<String> serviceExecutionRole() {
-        return this.serviceExecutionRole == null ? Codegen.empty() : this.serviceExecutionRole;
+    public Optional<Output<String>> serviceExecutionRole() {
+        return Optional.ofNullable(this.serviceExecutionRole);
     }
 
     /**
@@ -135,10 +135,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="startApplication")
-      private final @Nullable Output<Boolean> startApplication;
+    private @Nullable Output<Boolean> startApplication;
 
-    public Output<Boolean> startApplication() {
-        return this.startApplication == null ? Codegen.empty() : this.startApplication;
+    public Optional<Output<Boolean>> startApplication() {
+        return Optional.ofNullable(this.startApplication);
     }
 
     /**
@@ -146,10 +146,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -157,10 +157,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -168,10 +168,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -179,232 +179,188 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="versionId")
-      private final @Nullable Output<Integer> versionId;
+    private @Nullable Output<Integer> versionId;
 
-    public Output<Integer> versionId() {
-        return this.versionId == null ? Codegen.empty() : this.versionId;
+    public Optional<Output<Integer>> versionId() {
+        return Optional.ofNullable(this.versionId);
     }
 
-    public ApplicationState(
-        @Nullable Output<ApplicationApplicationConfigurationGetArgs> applicationConfiguration,
-        @Nullable Output<String> arn,
-        @Nullable Output<ApplicationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions,
-        @Nullable Output<String> createTimestamp,
-        @Nullable Output<String> description,
-        @Nullable Output<Boolean> forceStop,
-        @Nullable Output<String> lastUpdateTimestamp,
-        @Nullable Output<String> name,
-        @Nullable Output<String> runtimeEnvironment,
-        @Nullable Output<String> serviceExecutionRole,
-        @Nullable Output<Boolean> startApplication,
-        @Nullable Output<String> status,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<Integer> versionId) {
-        this.applicationConfiguration = applicationConfiguration;
-        this.arn = arn;
-        this.cloudwatchLoggingOptions = cloudwatchLoggingOptions;
-        this.createTimestamp = createTimestamp;
-        this.description = description;
-        this.forceStop = forceStop;
-        this.lastUpdateTimestamp = lastUpdateTimestamp;
-        this.name = name;
-        this.runtimeEnvironment = runtimeEnvironment;
-        this.serviceExecutionRole = serviceExecutionRole;
-        this.startApplication = startApplication;
-        this.status = status;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.versionId = versionId;
-    }
+    private ApplicationState() {}
 
-    private ApplicationState() {
-        this.applicationConfiguration = Codegen.empty();
-        this.arn = Codegen.empty();
-        this.cloudwatchLoggingOptions = Codegen.empty();
-        this.createTimestamp = Codegen.empty();
-        this.description = Codegen.empty();
-        this.forceStop = Codegen.empty();
-        this.lastUpdateTimestamp = Codegen.empty();
-        this.name = Codegen.empty();
-        this.runtimeEnvironment = Codegen.empty();
-        this.serviceExecutionRole = Codegen.empty();
-        this.startApplication = Codegen.empty();
-        this.status = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.versionId = Codegen.empty();
+    private ApplicationState(ApplicationState $) {
+        this.applicationConfiguration = $.applicationConfiguration;
+        this.arn = $.arn;
+        this.cloudwatchLoggingOptions = $.cloudwatchLoggingOptions;
+        this.createTimestamp = $.createTimestamp;
+        this.description = $.description;
+        this.forceStop = $.forceStop;
+        this.lastUpdateTimestamp = $.lastUpdateTimestamp;
+        this.name = $.name;
+        this.runtimeEnvironment = $.runtimeEnvironment;
+        this.serviceExecutionRole = $.serviceExecutionRole;
+        this.startApplication = $.startApplication;
+        this.status = $.status;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.versionId = $.versionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ApplicationApplicationConfigurationGetArgs> applicationConfiguration;
-        private @Nullable Output<String> arn;
-        private @Nullable Output<ApplicationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions;
-        private @Nullable Output<String> createTimestamp;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Boolean> forceStop;
-        private @Nullable Output<String> lastUpdateTimestamp;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> runtimeEnvironment;
-        private @Nullable Output<String> serviceExecutionRole;
-        private @Nullable Output<Boolean> startApplication;
-        private @Nullable Output<String> status;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<Integer> versionId;
+        private ApplicationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationState();
         }
 
         public Builder(ApplicationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationConfiguration = defaults.applicationConfiguration;
-    	      this.arn = defaults.arn;
-    	      this.cloudwatchLoggingOptions = defaults.cloudwatchLoggingOptions;
-    	      this.createTimestamp = defaults.createTimestamp;
-    	      this.description = defaults.description;
-    	      this.forceStop = defaults.forceStop;
-    	      this.lastUpdateTimestamp = defaults.lastUpdateTimestamp;
-    	      this.name = defaults.name;
-    	      this.runtimeEnvironment = defaults.runtimeEnvironment;
-    	      this.serviceExecutionRole = defaults.serviceExecutionRole;
-    	      this.startApplication = defaults.startApplication;
-    	      this.status = defaults.status;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.versionId = defaults.versionId;
+            $ = new ApplicationState(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationConfiguration(@Nullable Output<ApplicationApplicationConfigurationGetArgs> applicationConfiguration) {
-            this.applicationConfiguration = applicationConfiguration;
+            $.applicationConfiguration = applicationConfiguration;
             return this;
         }
-        public Builder applicationConfiguration(@Nullable ApplicationApplicationConfigurationGetArgs applicationConfiguration) {
-            this.applicationConfiguration = Codegen.ofNullable(applicationConfiguration);
-            return this;
+
+        public Builder applicationConfiguration(ApplicationApplicationConfigurationGetArgs applicationConfiguration) {
+            return applicationConfiguration(Output.of(applicationConfiguration));
         }
+
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder cloudwatchLoggingOptions(@Nullable Output<ApplicationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions) {
-            this.cloudwatchLoggingOptions = cloudwatchLoggingOptions;
+            $.cloudwatchLoggingOptions = cloudwatchLoggingOptions;
             return this;
         }
-        public Builder cloudwatchLoggingOptions(@Nullable ApplicationCloudwatchLoggingOptionsGetArgs cloudwatchLoggingOptions) {
-            this.cloudwatchLoggingOptions = Codegen.ofNullable(cloudwatchLoggingOptions);
-            return this;
+
+        public Builder cloudwatchLoggingOptions(ApplicationCloudwatchLoggingOptionsGetArgs cloudwatchLoggingOptions) {
+            return cloudwatchLoggingOptions(Output.of(cloudwatchLoggingOptions));
         }
+
         public Builder createTimestamp(@Nullable Output<String> createTimestamp) {
-            this.createTimestamp = createTimestamp;
+            $.createTimestamp = createTimestamp;
             return this;
         }
-        public Builder createTimestamp(@Nullable String createTimestamp) {
-            this.createTimestamp = Codegen.ofNullable(createTimestamp);
-            return this;
+
+        public Builder createTimestamp(String createTimestamp) {
+            return createTimestamp(Output.of(createTimestamp));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder forceStop(@Nullable Output<Boolean> forceStop) {
-            this.forceStop = forceStop;
+            $.forceStop = forceStop;
             return this;
         }
-        public Builder forceStop(@Nullable Boolean forceStop) {
-            this.forceStop = Codegen.ofNullable(forceStop);
-            return this;
+
+        public Builder forceStop(Boolean forceStop) {
+            return forceStop(Output.of(forceStop));
         }
+
         public Builder lastUpdateTimestamp(@Nullable Output<String> lastUpdateTimestamp) {
-            this.lastUpdateTimestamp = lastUpdateTimestamp;
+            $.lastUpdateTimestamp = lastUpdateTimestamp;
             return this;
         }
-        public Builder lastUpdateTimestamp(@Nullable String lastUpdateTimestamp) {
-            this.lastUpdateTimestamp = Codegen.ofNullable(lastUpdateTimestamp);
-            return this;
+
+        public Builder lastUpdateTimestamp(String lastUpdateTimestamp) {
+            return lastUpdateTimestamp(Output.of(lastUpdateTimestamp));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder runtimeEnvironment(@Nullable Output<String> runtimeEnvironment) {
-            this.runtimeEnvironment = runtimeEnvironment;
+            $.runtimeEnvironment = runtimeEnvironment;
             return this;
         }
-        public Builder runtimeEnvironment(@Nullable String runtimeEnvironment) {
-            this.runtimeEnvironment = Codegen.ofNullable(runtimeEnvironment);
-            return this;
+
+        public Builder runtimeEnvironment(String runtimeEnvironment) {
+            return runtimeEnvironment(Output.of(runtimeEnvironment));
         }
+
         public Builder serviceExecutionRole(@Nullable Output<String> serviceExecutionRole) {
-            this.serviceExecutionRole = serviceExecutionRole;
+            $.serviceExecutionRole = serviceExecutionRole;
             return this;
         }
-        public Builder serviceExecutionRole(@Nullable String serviceExecutionRole) {
-            this.serviceExecutionRole = Codegen.ofNullable(serviceExecutionRole);
-            return this;
+
+        public Builder serviceExecutionRole(String serviceExecutionRole) {
+            return serviceExecutionRole(Output.of(serviceExecutionRole));
         }
+
         public Builder startApplication(@Nullable Output<Boolean> startApplication) {
-            this.startApplication = startApplication;
+            $.startApplication = startApplication;
             return this;
         }
-        public Builder startApplication(@Nullable Boolean startApplication) {
-            this.startApplication = Codegen.ofNullable(startApplication);
-            return this;
+
+        public Builder startApplication(Boolean startApplication) {
+            return startApplication(Output.of(startApplication));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(String status) {
+            return status(Output.of(status));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder versionId(@Nullable Output<Integer> versionId) {
-            this.versionId = versionId;
+            $.versionId = versionId;
             return this;
         }
-        public Builder versionId(@Nullable Integer versionId) {
-            this.versionId = Codegen.ofNullable(versionId);
-            return this;
-        }        public ApplicationState build() {
-            return new ApplicationState(applicationConfiguration, arn, cloudwatchLoggingOptions, createTimestamp, description, forceStop, lastUpdateTimestamp, name, runtimeEnvironment, serviceExecutionRole, startApplication, status, tags, tagsAll, versionId);
+
+        public Builder versionId(Integer versionId) {
+            return versionId(Output.of(versionId));
+        }
+
+        public ApplicationState build() {
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.azurenative.servicefabric.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +23,7 @@ public final class ClientCertificateThumbprintArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="certificateThumbprint", required=true)
-      private final Output<String> certificateThumbprint;
+    private Output<String> certificateThumbprint;
 
     public Output<String> certificateThumbprint() {
         return this.certificateThumbprint;
@@ -35,63 +34,60 @@ public final class ClientCertificateThumbprintArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="isAdmin", required=true)
-      private final Output<Boolean> isAdmin;
+    private Output<Boolean> isAdmin;
 
     public Output<Boolean> isAdmin() {
         return this.isAdmin;
     }
 
-    public ClientCertificateThumbprintArgs(
-        Output<String> certificateThumbprint,
-        Output<Boolean> isAdmin) {
-        this.certificateThumbprint = Objects.requireNonNull(certificateThumbprint, "expected parameter 'certificateThumbprint' to be non-null");
-        this.isAdmin = Objects.requireNonNull(isAdmin, "expected parameter 'isAdmin' to be non-null");
-    }
+    private ClientCertificateThumbprintArgs() {}
 
-    private ClientCertificateThumbprintArgs() {
-        this.certificateThumbprint = Codegen.empty();
-        this.isAdmin = Codegen.empty();
+    private ClientCertificateThumbprintArgs(ClientCertificateThumbprintArgs $) {
+        this.certificateThumbprint = $.certificateThumbprint;
+        this.isAdmin = $.isAdmin;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClientCertificateThumbprintArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> certificateThumbprint;
-        private Output<Boolean> isAdmin;
+        private ClientCertificateThumbprintArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClientCertificateThumbprintArgs();
         }
 
         public Builder(ClientCertificateThumbprintArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateThumbprint = defaults.certificateThumbprint;
-    	      this.isAdmin = defaults.isAdmin;
+            $ = new ClientCertificateThumbprintArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateThumbprint(Output<String> certificateThumbprint) {
-            this.certificateThumbprint = Objects.requireNonNull(certificateThumbprint);
+            $.certificateThumbprint = certificateThumbprint;
             return this;
         }
+
         public Builder certificateThumbprint(String certificateThumbprint) {
-            this.certificateThumbprint = Output.of(Objects.requireNonNull(certificateThumbprint));
-            return this;
+            return certificateThumbprint(Output.of(certificateThumbprint));
         }
+
         public Builder isAdmin(Output<Boolean> isAdmin) {
-            this.isAdmin = Objects.requireNonNull(isAdmin);
+            $.isAdmin = isAdmin;
             return this;
         }
+
         public Builder isAdmin(Boolean isAdmin) {
-            this.isAdmin = Output.of(Objects.requireNonNull(isAdmin));
-            return this;
-        }        public ClientCertificateThumbprintArgs build() {
-            return new ClientCertificateThumbprintArgs(certificateThumbprint, isAdmin);
+            return isAdmin(Output.of(isAdmin));
+        }
+
+        public ClientCertificateThumbprintArgs build() {
+            $.certificateThumbprint = Objects.requireNonNull($.certificateThumbprint, "expected parameter 'certificateThumbprint' to be non-null");
+            $.isAdmin = Objects.requireNonNull($.isAdmin, "expected parameter 'isAdmin' to be non-null");
+            return $;
         }
     }
+
 }

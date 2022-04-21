@@ -5,7 +5,6 @@ package com.pulumi.googlenative.storagetransfer_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class AzureCredentialsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="sasToken", required=true)
-      private final Output<String> sasToken;
+    private Output<String> sasToken;
 
     public Output<String> sasToken() {
         return this.sasToken;
     }
 
-    public AzureCredentialsArgs(Output<String> sasToken) {
-        this.sasToken = Objects.requireNonNull(sasToken, "expected parameter 'sasToken' to be non-null");
-    }
+    private AzureCredentialsArgs() {}
 
-    private AzureCredentialsArgs() {
-        this.sasToken = Codegen.empty();
+    private AzureCredentialsArgs(AzureCredentialsArgs $) {
+        this.sasToken = $.sasToken;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureCredentialsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> sasToken;
+        private AzureCredentialsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureCredentialsArgs();
         }
 
         public Builder(AzureCredentialsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sasToken = defaults.sasToken;
+            $ = new AzureCredentialsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder sasToken(Output<String> sasToken) {
-            this.sasToken = Objects.requireNonNull(sasToken);
+            $.sasToken = sasToken;
             return this;
         }
+
         public Builder sasToken(String sasToken) {
-            this.sasToken = Output.of(Objects.requireNonNull(sasToken));
-            return this;
-        }        public AzureCredentialsArgs build() {
-            return new AzureCredentialsArgs(sasToken);
+            return sasToken(Output.of(sasToken));
+        }
+
+        public AzureCredentialsArgs build() {
+            $.sasToken = Objects.requireNonNull($.sasToken, "expected parameter 'sasToken' to be non-null");
+            return $;
         }
     }
+
 }

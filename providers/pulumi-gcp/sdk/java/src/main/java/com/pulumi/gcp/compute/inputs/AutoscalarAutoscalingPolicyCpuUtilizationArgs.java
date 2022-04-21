@@ -5,10 +5,10 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class AutoscalarAutoscalingPolicyCpuUtilizationArgs extends com.pul
      * 
      */
     @Import(name="predictiveMethod")
-      private final @Nullable Output<String> predictiveMethod;
+    private @Nullable Output<String> predictiveMethod;
 
-    public Output<String> predictiveMethod() {
-        return this.predictiveMethod == null ? Codegen.empty() : this.predictiveMethod;
+    public Optional<Output<String>> predictiveMethod() {
+        return Optional.ofNullable(this.predictiveMethod);
     }
 
     /**
@@ -36,63 +36,59 @@ public final class AutoscalarAutoscalingPolicyCpuUtilizationArgs extends com.pul
      * 
      */
     @Import(name="target", required=true)
-      private final Output<Double> target;
+    private Output<Double> target;
 
     public Output<Double> target() {
         return this.target;
     }
 
-    public AutoscalarAutoscalingPolicyCpuUtilizationArgs(
-        @Nullable Output<String> predictiveMethod,
-        Output<Double> target) {
-        this.predictiveMethod = predictiveMethod;
-        this.target = Objects.requireNonNull(target, "expected parameter 'target' to be non-null");
-    }
+    private AutoscalarAutoscalingPolicyCpuUtilizationArgs() {}
 
-    private AutoscalarAutoscalingPolicyCpuUtilizationArgs() {
-        this.predictiveMethod = Codegen.empty();
-        this.target = Codegen.empty();
+    private AutoscalarAutoscalingPolicyCpuUtilizationArgs(AutoscalarAutoscalingPolicyCpuUtilizationArgs $) {
+        this.predictiveMethod = $.predictiveMethod;
+        this.target = $.target;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoscalarAutoscalingPolicyCpuUtilizationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> predictiveMethod;
-        private Output<Double> target;
+        private AutoscalarAutoscalingPolicyCpuUtilizationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoscalarAutoscalingPolicyCpuUtilizationArgs();
         }
 
         public Builder(AutoscalarAutoscalingPolicyCpuUtilizationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.predictiveMethod = defaults.predictiveMethod;
-    	      this.target = defaults.target;
+            $ = new AutoscalarAutoscalingPolicyCpuUtilizationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder predictiveMethod(@Nullable Output<String> predictiveMethod) {
-            this.predictiveMethod = predictiveMethod;
+            $.predictiveMethod = predictiveMethod;
             return this;
         }
-        public Builder predictiveMethod(@Nullable String predictiveMethod) {
-            this.predictiveMethod = Codegen.ofNullable(predictiveMethod);
-            return this;
+
+        public Builder predictiveMethod(String predictiveMethod) {
+            return predictiveMethod(Output.of(predictiveMethod));
         }
+
         public Builder target(Output<Double> target) {
-            this.target = Objects.requireNonNull(target);
+            $.target = target;
             return this;
         }
+
         public Builder target(Double target) {
-            this.target = Output.of(Objects.requireNonNull(target));
-            return this;
-        }        public AutoscalarAutoscalingPolicyCpuUtilizationArgs build() {
-            return new AutoscalarAutoscalingPolicyCpuUtilizationArgs(predictiveMethod, target);
+            return target(Output.of(target));
+        }
+
+        public AutoscalarAutoscalingPolicyCpuUtilizationArgs build() {
+            $.target = Objects.requireNonNull($.target, "expected parameter 'target' to be non-null");
+            return $;
         }
     }
+
 }

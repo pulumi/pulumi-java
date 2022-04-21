@@ -5,9 +5,9 @@ package com.pulumi.aws.ram.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ResourceAssociationState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="resourceArn")
-      private final @Nullable Output<String> resourceArn;
+    private @Nullable Output<String> resourceArn;
 
-    public Output<String> resourceArn() {
-        return this.resourceArn == null ? Codegen.empty() : this.resourceArn;
+    public Optional<Output<String>> resourceArn() {
+        return Optional.ofNullable(this.resourceArn);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class ResourceAssociationState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="resourceShareArn")
-      private final @Nullable Output<String> resourceShareArn;
+    private @Nullable Output<String> resourceShareArn;
 
-    public Output<String> resourceShareArn() {
-        return this.resourceShareArn == null ? Codegen.empty() : this.resourceShareArn;
+    public Optional<Output<String>> resourceShareArn() {
+        return Optional.ofNullable(this.resourceShareArn);
     }
 
-    public ResourceAssociationState(
-        @Nullable Output<String> resourceArn,
-        @Nullable Output<String> resourceShareArn) {
-        this.resourceArn = resourceArn;
-        this.resourceShareArn = resourceShareArn;
-    }
+    private ResourceAssociationState() {}
 
-    private ResourceAssociationState() {
-        this.resourceArn = Codegen.empty();
-        this.resourceShareArn = Codegen.empty();
+    private ResourceAssociationState(ResourceAssociationState $) {
+        this.resourceArn = $.resourceArn;
+        this.resourceShareArn = $.resourceShareArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceAssociationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> resourceArn;
-        private @Nullable Output<String> resourceShareArn;
+        private ResourceAssociationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceAssociationState();
         }
 
         public Builder(ResourceAssociationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceArn = defaults.resourceArn;
-    	      this.resourceShareArn = defaults.resourceShareArn;
+            $ = new ResourceAssociationState(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceArn(@Nullable Output<String> resourceArn) {
-            this.resourceArn = resourceArn;
+            $.resourceArn = resourceArn;
             return this;
         }
-        public Builder resourceArn(@Nullable String resourceArn) {
-            this.resourceArn = Codegen.ofNullable(resourceArn);
-            return this;
+
+        public Builder resourceArn(String resourceArn) {
+            return resourceArn(Output.of(resourceArn));
         }
+
         public Builder resourceShareArn(@Nullable Output<String> resourceShareArn) {
-            this.resourceShareArn = resourceShareArn;
+            $.resourceShareArn = resourceShareArn;
             return this;
         }
-        public Builder resourceShareArn(@Nullable String resourceShareArn) {
-            this.resourceShareArn = Codegen.ofNullable(resourceShareArn);
-            return this;
-        }        public ResourceAssociationState build() {
-            return new ResourceAssociationState(resourceArn, resourceShareArn);
+
+        public Builder resourceShareArn(String resourceShareArn) {
+            return resourceShareArn(Output.of(resourceShareArn));
+        }
+
+        public ResourceAssociationState build() {
+            return $;
         }
     }
+
 }

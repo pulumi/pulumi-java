@@ -23,10 +23,10 @@ public final class DWCopyCommandDefaultValueResponse extends com.pulumi.resource
      * 
      */
     @Import(name="columnName")
-      private final @Nullable Object columnName;
+    private @Nullable Object columnName;
 
     public Optional<Object> columnName() {
-        return this.columnName == null ? Optional.empty() : Optional.ofNullable(this.columnName);
+        return Optional.ofNullable(this.columnName);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class DWCopyCommandDefaultValueResponse extends com.pulumi.resource
      * 
      */
     @Import(name="defaultValue")
-      private final @Nullable Object defaultValue;
+    private @Nullable Object defaultValue;
 
     public Optional<Object> defaultValue() {
-        return this.defaultValue == null ? Optional.empty() : Optional.ofNullable(this.defaultValue);
+        return Optional.ofNullable(this.defaultValue);
     }
 
-    public DWCopyCommandDefaultValueResponse(
-        @Nullable Object columnName,
-        @Nullable Object defaultValue) {
-        this.columnName = columnName;
-        this.defaultValue = defaultValue;
-    }
+    private DWCopyCommandDefaultValueResponse() {}
 
-    private DWCopyCommandDefaultValueResponse() {
-        this.columnName = null;
-        this.defaultValue = null;
+    private DWCopyCommandDefaultValueResponse(DWCopyCommandDefaultValueResponse $) {
+        this.columnName = $.columnName;
+        this.defaultValue = $.defaultValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DWCopyCommandDefaultValueResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object columnName;
-        private @Nullable Object defaultValue;
+        private DWCopyCommandDefaultValueResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DWCopyCommandDefaultValueResponse();
         }
 
         public Builder(DWCopyCommandDefaultValueResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.columnName = defaults.columnName;
-    	      this.defaultValue = defaults.defaultValue;
+            $ = new DWCopyCommandDefaultValueResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder columnName(@Nullable Object columnName) {
-            this.columnName = columnName;
+            $.columnName = columnName;
             return this;
         }
+
         public Builder defaultValue(@Nullable Object defaultValue) {
-            this.defaultValue = defaultValue;
+            $.defaultValue = defaultValue;
             return this;
-        }        public DWCopyCommandDefaultValueResponse build() {
-            return new DWCopyCommandDefaultValueResponse(columnName, defaultValue);
+        }
+
+        public DWCopyCommandDefaultValueResponse build() {
+            return $;
         }
     }
+
 }

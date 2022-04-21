@@ -24,10 +24,10 @@ public final class FailoverSetEligibilityResultResponse extends com.pulumi.resou
      * 
      */
     @Import(name="errorMessage")
-      private final @Nullable String errorMessage;
+    private @Nullable String errorMessage;
 
     public Optional<String> errorMessage() {
-        return this.errorMessage == null ? Optional.empty() : Optional.ofNullable(this.errorMessage);
+        return Optional.ofNullable(this.errorMessage);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class FailoverSetEligibilityResultResponse extends com.pulumi.resou
      * 
      */
     @Import(name="isEligibleForFailover")
-      private final @Nullable Boolean isEligibleForFailover;
+    private @Nullable Boolean isEligibleForFailover;
 
     public Optional<Boolean> isEligibleForFailover() {
-        return this.isEligibleForFailover == null ? Optional.empty() : Optional.ofNullable(this.isEligibleForFailover);
+        return Optional.ofNullable(this.isEligibleForFailover);
     }
 
-    public FailoverSetEligibilityResultResponse(
-        @Nullable String errorMessage,
-        @Nullable Boolean isEligibleForFailover) {
-        this.errorMessage = errorMessage;
-        this.isEligibleForFailover = isEligibleForFailover;
-    }
+    private FailoverSetEligibilityResultResponse() {}
 
-    private FailoverSetEligibilityResultResponse() {
-        this.errorMessage = null;
-        this.isEligibleForFailover = null;
+    private FailoverSetEligibilityResultResponse(FailoverSetEligibilityResultResponse $) {
+        this.errorMessage = $.errorMessage;
+        this.isEligibleForFailover = $.isEligibleForFailover;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FailoverSetEligibilityResultResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String errorMessage;
-        private @Nullable Boolean isEligibleForFailover;
+        private FailoverSetEligibilityResultResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FailoverSetEligibilityResultResponse();
         }
 
         public Builder(FailoverSetEligibilityResultResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.errorMessage = defaults.errorMessage;
-    	      this.isEligibleForFailover = defaults.isEligibleForFailover;
+            $ = new FailoverSetEligibilityResultResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder errorMessage(@Nullable String errorMessage) {
-            this.errorMessage = errorMessage;
+            $.errorMessage = errorMessage;
             return this;
         }
+
         public Builder isEligibleForFailover(@Nullable Boolean isEligibleForFailover) {
-            this.isEligibleForFailover = isEligibleForFailover;
+            $.isEligibleForFailover = isEligibleForFailover;
             return this;
-        }        public FailoverSetEligibilityResultResponse build() {
-            return new FailoverSetEligibilityResultResponse(errorMessage, isEligibleForFailover);
+        }
+
+        public FailoverSetEligibilityResultResponse build() {
+            return $;
         }
     }
+
 }

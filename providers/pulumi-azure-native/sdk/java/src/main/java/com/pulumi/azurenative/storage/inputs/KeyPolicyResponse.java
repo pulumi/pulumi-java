@@ -21,45 +21,45 @@ public final class KeyPolicyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="keyExpirationPeriodInDays", required=true)
-      private final Integer keyExpirationPeriodInDays;
+    private Integer keyExpirationPeriodInDays;
 
     public Integer keyExpirationPeriodInDays() {
         return this.keyExpirationPeriodInDays;
     }
 
-    public KeyPolicyResponse(Integer keyExpirationPeriodInDays) {
-        this.keyExpirationPeriodInDays = Objects.requireNonNull(keyExpirationPeriodInDays, "expected parameter 'keyExpirationPeriodInDays' to be non-null");
-    }
+    private KeyPolicyResponse() {}
 
-    private KeyPolicyResponse() {
-        this.keyExpirationPeriodInDays = null;
+    private KeyPolicyResponse(KeyPolicyResponse $) {
+        this.keyExpirationPeriodInDays = $.keyExpirationPeriodInDays;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer keyExpirationPeriodInDays;
+        private KeyPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyPolicyResponse();
         }
 
         public Builder(KeyPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyExpirationPeriodInDays = defaults.keyExpirationPeriodInDays;
+            $ = new KeyPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder keyExpirationPeriodInDays(Integer keyExpirationPeriodInDays) {
-            this.keyExpirationPeriodInDays = Objects.requireNonNull(keyExpirationPeriodInDays);
+            $.keyExpirationPeriodInDays = keyExpirationPeriodInDays;
             return this;
-        }        public KeyPolicyResponse build() {
-            return new KeyPolicyResponse(keyExpirationPeriodInDays);
+        }
+
+        public KeyPolicyResponse build() {
+            $.keyExpirationPeriodInDays = Objects.requireNonNull($.keyExpirationPeriodInDays, "expected parameter 'keyExpirationPeriodInDays' to be non-null");
+            return $;
         }
     }
+
 }

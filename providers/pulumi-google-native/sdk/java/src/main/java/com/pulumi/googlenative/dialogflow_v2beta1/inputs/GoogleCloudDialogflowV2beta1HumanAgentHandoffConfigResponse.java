@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigResponse e
      * 
      */
     @Import(name="livePersonConfig", required=true)
-      private final GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePersonConfigResponse livePersonConfig;
+    private GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePersonConfigResponse livePersonConfig;
 
     public GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePersonConfigResponse livePersonConfig() {
         return this.livePersonConfig;
@@ -33,55 +33,52 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigResponse e
      * 
      */
     @Import(name="salesforceLiveAgentConfig", required=true)
-      private final GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforceLiveAgentConfigResponse salesforceLiveAgentConfig;
+    private GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforceLiveAgentConfigResponse salesforceLiveAgentConfig;
 
     public GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforceLiveAgentConfigResponse salesforceLiveAgentConfig() {
         return this.salesforceLiveAgentConfig;
     }
 
-    public GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigResponse(
-        GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePersonConfigResponse livePersonConfig,
-        GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforceLiveAgentConfigResponse salesforceLiveAgentConfig) {
-        this.livePersonConfig = Objects.requireNonNull(livePersonConfig, "expected parameter 'livePersonConfig' to be non-null");
-        this.salesforceLiveAgentConfig = Objects.requireNonNull(salesforceLiveAgentConfig, "expected parameter 'salesforceLiveAgentConfig' to be non-null");
-    }
+    private GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigResponse() {}
 
-    private GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigResponse() {
-        this.livePersonConfig = null;
-        this.salesforceLiveAgentConfig = null;
+    private GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigResponse(GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigResponse $) {
+        this.livePersonConfig = $.livePersonConfig;
+        this.salesforceLiveAgentConfig = $.salesforceLiveAgentConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePersonConfigResponse livePersonConfig;
-        private GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforceLiveAgentConfigResponse salesforceLiveAgentConfig;
+        private GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.livePersonConfig = defaults.livePersonConfig;
-    	      this.salesforceLiveAgentConfig = defaults.salesforceLiveAgentConfig;
+            $ = new GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder livePersonConfig(GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePersonConfigResponse livePersonConfig) {
-            this.livePersonConfig = Objects.requireNonNull(livePersonConfig);
+            $.livePersonConfig = livePersonConfig;
             return this;
         }
+
         public Builder salesforceLiveAgentConfig(GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforceLiveAgentConfigResponse salesforceLiveAgentConfig) {
-            this.salesforceLiveAgentConfig = Objects.requireNonNull(salesforceLiveAgentConfig);
+            $.salesforceLiveAgentConfig = salesforceLiveAgentConfig;
             return this;
-        }        public GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigResponse build() {
-            return new GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigResponse(livePersonConfig, salesforceLiveAgentConfig);
+        }
+
+        public GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigResponse build() {
+            $.livePersonConfig = Objects.requireNonNull($.livePersonConfig, "expected parameter 'livePersonConfig' to be non-null");
+            $.salesforceLiveAgentConfig = Objects.requireNonNull($.salesforceLiveAgentConfig, "expected parameter 'salesforceLiveAgentConfig' to be non-null");
+            return $;
         }
     }
+
 }

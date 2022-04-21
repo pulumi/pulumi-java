@@ -5,10 +5,10 @@ package com.pulumi.awsnative.acmpca.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,70 +21,65 @@ public final class CertificateAuthorityOcspConfigurationArgs extends com.pulumi.
     public static final CertificateAuthorityOcspConfigurationArgs Empty = new CertificateAuthorityOcspConfigurationArgs();
 
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     @Import(name="ocspCustomCname")
-      private final @Nullable Output<String> ocspCustomCname;
+    private @Nullable Output<String> ocspCustomCname;
 
-    public Output<String> ocspCustomCname() {
-        return this.ocspCustomCname == null ? Codegen.empty() : this.ocspCustomCname;
+    public Optional<Output<String>> ocspCustomCname() {
+        return Optional.ofNullable(this.ocspCustomCname);
     }
 
-    public CertificateAuthorityOcspConfigurationArgs(
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<String> ocspCustomCname) {
-        this.enabled = enabled;
-        this.ocspCustomCname = ocspCustomCname;
-    }
+    private CertificateAuthorityOcspConfigurationArgs() {}
 
-    private CertificateAuthorityOcspConfigurationArgs() {
-        this.enabled = Codegen.empty();
-        this.ocspCustomCname = Codegen.empty();
+    private CertificateAuthorityOcspConfigurationArgs(CertificateAuthorityOcspConfigurationArgs $) {
+        this.enabled = $.enabled;
+        this.ocspCustomCname = $.ocspCustomCname;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateAuthorityOcspConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<String> ocspCustomCname;
+        private CertificateAuthorityOcspConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateAuthorityOcspConfigurationArgs();
         }
 
         public Builder(CertificateAuthorityOcspConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.ocspCustomCname = defaults.ocspCustomCname;
+            $ = new CertificateAuthorityOcspConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder ocspCustomCname(@Nullable Output<String> ocspCustomCname) {
-            this.ocspCustomCname = ocspCustomCname;
+            $.ocspCustomCname = ocspCustomCname;
             return this;
         }
-        public Builder ocspCustomCname(@Nullable String ocspCustomCname) {
-            this.ocspCustomCname = Codegen.ofNullable(ocspCustomCname);
-            return this;
-        }        public CertificateAuthorityOcspConfigurationArgs build() {
-            return new CertificateAuthorityOcspConfigurationArgs(enabled, ocspCustomCname);
+
+        public Builder ocspCustomCname(String ocspCustomCname) {
+            return ocspCustomCname(Output.of(ocspCustomCname));
+        }
+
+        public CertificateAuthorityOcspConfigurationArgs build() {
+            return $;
         }
     }
+
 }

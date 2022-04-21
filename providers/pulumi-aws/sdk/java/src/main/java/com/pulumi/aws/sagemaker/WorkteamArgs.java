@@ -7,11 +7,11 @@ import com.pulumi.aws.sagemaker.inputs.WorkteamMemberDefinitionArgs;
 import com.pulumi.aws.sagemaker.inputs.WorkteamNotificationConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class WorkteamArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description", required=true)
-      private final Output<String> description;
+    private Output<String> description;
 
     public Output<String> description() {
         return this.description;
@@ -35,7 +35,7 @@ public final class WorkteamArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="memberDefinitions", required=true)
-      private final Output<List<WorkteamMemberDefinitionArgs>> memberDefinitions;
+    private Output<List<WorkteamMemberDefinitionArgs>> memberDefinitions;
 
     public Output<List<WorkteamMemberDefinitionArgs>> memberDefinitions() {
         return this.memberDefinitions;
@@ -46,10 +46,10 @@ public final class WorkteamArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="notificationConfiguration")
-      private final @Nullable Output<WorkteamNotificationConfigurationArgs> notificationConfiguration;
+    private @Nullable Output<WorkteamNotificationConfigurationArgs> notificationConfiguration;
 
-    public Output<WorkteamNotificationConfigurationArgs> notificationConfiguration() {
-        return this.notificationConfiguration == null ? Codegen.empty() : this.notificationConfiguration;
+    public Optional<Output<WorkteamNotificationConfigurationArgs>> notificationConfiguration() {
+        return Optional.ofNullable(this.notificationConfiguration);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class WorkteamArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -68,7 +68,7 @@ public final class WorkteamArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workforceName", required=true)
-      private final Output<String> workforceName;
+    private Output<String> workforceName;
 
     public Output<String> workforceName() {
         return this.workforceName;
@@ -79,118 +79,106 @@ public final class WorkteamArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workteamName", required=true)
-      private final Output<String> workteamName;
+    private Output<String> workteamName;
 
     public Output<String> workteamName() {
         return this.workteamName;
     }
 
-    public WorkteamArgs(
-        Output<String> description,
-        Output<List<WorkteamMemberDefinitionArgs>> memberDefinitions,
-        @Nullable Output<WorkteamNotificationConfigurationArgs> notificationConfiguration,
-        @Nullable Output<Map<String,String>> tags,
-        Output<String> workforceName,
-        Output<String> workteamName) {
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.memberDefinitions = Objects.requireNonNull(memberDefinitions, "expected parameter 'memberDefinitions' to be non-null");
-        this.notificationConfiguration = notificationConfiguration;
-        this.tags = tags;
-        this.workforceName = Objects.requireNonNull(workforceName, "expected parameter 'workforceName' to be non-null");
-        this.workteamName = Objects.requireNonNull(workteamName, "expected parameter 'workteamName' to be non-null");
-    }
+    private WorkteamArgs() {}
 
-    private WorkteamArgs() {
-        this.description = Codegen.empty();
-        this.memberDefinitions = Codegen.empty();
-        this.notificationConfiguration = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.workforceName = Codegen.empty();
-        this.workteamName = Codegen.empty();
+    private WorkteamArgs(WorkteamArgs $) {
+        this.description = $.description;
+        this.memberDefinitions = $.memberDefinitions;
+        this.notificationConfiguration = $.notificationConfiguration;
+        this.tags = $.tags;
+        this.workforceName = $.workforceName;
+        this.workteamName = $.workteamName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkteamArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> description;
-        private Output<List<WorkteamMemberDefinitionArgs>> memberDefinitions;
-        private @Nullable Output<WorkteamNotificationConfigurationArgs> notificationConfiguration;
-        private @Nullable Output<Map<String,String>> tags;
-        private Output<String> workforceName;
-        private Output<String> workteamName;
+        private WorkteamArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkteamArgs();
         }
 
         public Builder(WorkteamArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.memberDefinitions = defaults.memberDefinitions;
-    	      this.notificationConfiguration = defaults.notificationConfiguration;
-    	      this.tags = defaults.tags;
-    	      this.workforceName = defaults.workforceName;
-    	      this.workteamName = defaults.workteamName;
+            $ = new WorkteamArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(Output<String> description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder description(String description) {
-            this.description = Output.of(Objects.requireNonNull(description));
-            return this;
+            return description(Output.of(description));
         }
+
         public Builder memberDefinitions(Output<List<WorkteamMemberDefinitionArgs>> memberDefinitions) {
-            this.memberDefinitions = Objects.requireNonNull(memberDefinitions);
+            $.memberDefinitions = memberDefinitions;
             return this;
         }
+
         public Builder memberDefinitions(List<WorkteamMemberDefinitionArgs> memberDefinitions) {
-            this.memberDefinitions = Output.of(Objects.requireNonNull(memberDefinitions));
-            return this;
+            return memberDefinitions(Output.of(memberDefinitions));
         }
+
         public Builder memberDefinitions(WorkteamMemberDefinitionArgs... memberDefinitions) {
             return memberDefinitions(List.of(memberDefinitions));
         }
+
         public Builder notificationConfiguration(@Nullable Output<WorkteamNotificationConfigurationArgs> notificationConfiguration) {
-            this.notificationConfiguration = notificationConfiguration;
+            $.notificationConfiguration = notificationConfiguration;
             return this;
         }
-        public Builder notificationConfiguration(@Nullable WorkteamNotificationConfigurationArgs notificationConfiguration) {
-            this.notificationConfiguration = Codegen.ofNullable(notificationConfiguration);
-            return this;
+
+        public Builder notificationConfiguration(WorkteamNotificationConfigurationArgs notificationConfiguration) {
+            return notificationConfiguration(Output.of(notificationConfiguration));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder workforceName(Output<String> workforceName) {
-            this.workforceName = Objects.requireNonNull(workforceName);
+            $.workforceName = workforceName;
             return this;
         }
+
         public Builder workforceName(String workforceName) {
-            this.workforceName = Output.of(Objects.requireNonNull(workforceName));
-            return this;
+            return workforceName(Output.of(workforceName));
         }
+
         public Builder workteamName(Output<String> workteamName) {
-            this.workteamName = Objects.requireNonNull(workteamName);
+            $.workteamName = workteamName;
             return this;
         }
+
         public Builder workteamName(String workteamName) {
-            this.workteamName = Output.of(Objects.requireNonNull(workteamName));
-            return this;
-        }        public WorkteamArgs build() {
-            return new WorkteamArgs(description, memberDefinitions, notificationConfiguration, tags, workforceName, workteamName);
+            return workteamName(Output.of(workteamName));
+        }
+
+        public WorkteamArgs build() {
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.memberDefinitions = Objects.requireNonNull($.memberDefinitions, "expected parameter 'memberDefinitions' to be non-null");
+            $.workforceName = Objects.requireNonNull($.workforceName, "expected parameter 'workforceName' to be non-null");
+            $.workteamName = Objects.requireNonNull($.workteamName, "expected parameter 'workteamName' to be non-null");
+            return $;
         }
     }
+
 }

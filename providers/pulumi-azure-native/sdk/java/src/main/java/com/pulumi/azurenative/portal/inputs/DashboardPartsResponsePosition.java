@@ -26,7 +26,7 @@ public final class DashboardPartsResponsePosition extends com.pulumi.resources.I
      * 
      */
     @Import(name="colSpan", required=true)
-      private final Integer colSpan;
+    private Integer colSpan;
 
     public Integer colSpan() {
         return this.colSpan;
@@ -37,10 +37,10 @@ public final class DashboardPartsResponsePosition extends com.pulumi.resources.I
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Map<String,Object> metadata;
+    private @Nullable Map<String,Object> metadata;
 
-    public Map<String,Object> metadata() {
-        return this.metadata == null ? Map.of() : this.metadata;
+    public Optional<Map<String,Object>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -48,7 +48,7 @@ public final class DashboardPartsResponsePosition extends com.pulumi.resources.I
      * 
      */
     @Import(name="rowSpan", required=true)
-      private final Integer rowSpan;
+    private Integer rowSpan;
 
     public Integer rowSpan() {
         return this.rowSpan;
@@ -59,7 +59,7 @@ public final class DashboardPartsResponsePosition extends com.pulumi.resources.I
      * 
      */
     @Import(name="x", required=true)
-      private final Integer x;
+    private Integer x;
 
     public Integer x() {
         return this.x;
@@ -70,82 +70,72 @@ public final class DashboardPartsResponsePosition extends com.pulumi.resources.I
      * 
      */
     @Import(name="y", required=true)
-      private final Integer y;
+    private Integer y;
 
     public Integer y() {
         return this.y;
     }
 
-    public DashboardPartsResponsePosition(
-        Integer colSpan,
-        @Nullable Map<String,Object> metadata,
-        Integer rowSpan,
-        Integer x,
-        Integer y) {
-        this.colSpan = Objects.requireNonNull(colSpan, "expected parameter 'colSpan' to be non-null");
-        this.metadata = metadata;
-        this.rowSpan = Objects.requireNonNull(rowSpan, "expected parameter 'rowSpan' to be non-null");
-        this.x = Objects.requireNonNull(x, "expected parameter 'x' to be non-null");
-        this.y = Objects.requireNonNull(y, "expected parameter 'y' to be non-null");
-    }
+    private DashboardPartsResponsePosition() {}
 
-    private DashboardPartsResponsePosition() {
-        this.colSpan = null;
-        this.metadata = Map.of();
-        this.rowSpan = null;
-        this.x = null;
-        this.y = null;
+    private DashboardPartsResponsePosition(DashboardPartsResponsePosition $) {
+        this.colSpan = $.colSpan;
+        this.metadata = $.metadata;
+        this.rowSpan = $.rowSpan;
+        this.x = $.x;
+        this.y = $.y;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DashboardPartsResponsePosition defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer colSpan;
-        private @Nullable Map<String,Object> metadata;
-        private Integer rowSpan;
-        private Integer x;
-        private Integer y;
+        private DashboardPartsResponsePosition $;
 
         public Builder() {
-    	      // Empty
+            $ = new DashboardPartsResponsePosition();
         }
 
         public Builder(DashboardPartsResponsePosition defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.colSpan = defaults.colSpan;
-    	      this.metadata = defaults.metadata;
-    	      this.rowSpan = defaults.rowSpan;
-    	      this.x = defaults.x;
-    	      this.y = defaults.y;
+            $ = new DashboardPartsResponsePosition(Objects.requireNonNull(defaults));
         }
 
         public Builder colSpan(Integer colSpan) {
-            this.colSpan = Objects.requireNonNull(colSpan);
+            $.colSpan = colSpan;
             return this;
         }
+
         public Builder metadata(@Nullable Map<String,Object> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
+
         public Builder rowSpan(Integer rowSpan) {
-            this.rowSpan = Objects.requireNonNull(rowSpan);
+            $.rowSpan = rowSpan;
             return this;
         }
+
         public Builder x(Integer x) {
-            this.x = Objects.requireNonNull(x);
+            $.x = x;
             return this;
         }
+
         public Builder y(Integer y) {
-            this.y = Objects.requireNonNull(y);
+            $.y = y;
             return this;
-        }        public DashboardPartsResponsePosition build() {
-            return new DashboardPartsResponsePosition(colSpan, metadata, rowSpan, x, y);
+        }
+
+        public DashboardPartsResponsePosition build() {
+            $.colSpan = Objects.requireNonNull($.colSpan, "expected parameter 'colSpan' to be non-null");
+            $.rowSpan = Objects.requireNonNull($.rowSpan, "expected parameter 'rowSpan' to be non-null");
+            $.x = Objects.requireNonNull($.x, "expected parameter 'x' to be non-null");
+            $.y = Objects.requireNonNull($.y, "expected parameter 'y' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2OutputStorageConfigArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class GooglePrivacyDlpV2SaveFindingsArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="outputConfig")
-      private final @Nullable Output<GooglePrivacyDlpV2OutputStorageConfigArgs> outputConfig;
+    private @Nullable Output<GooglePrivacyDlpV2OutputStorageConfigArgs> outputConfig;
 
-    public Output<GooglePrivacyDlpV2OutputStorageConfigArgs> outputConfig() {
-        return this.outputConfig == null ? Codegen.empty() : this.outputConfig;
+    public Optional<Output<GooglePrivacyDlpV2OutputStorageConfigArgs>> outputConfig() {
+        return Optional.ofNullable(this.outputConfig);
     }
 
-    public GooglePrivacyDlpV2SaveFindingsArgs(@Nullable Output<GooglePrivacyDlpV2OutputStorageConfigArgs> outputConfig) {
-        this.outputConfig = outputConfig;
-    }
+    private GooglePrivacyDlpV2SaveFindingsArgs() {}
 
-    private GooglePrivacyDlpV2SaveFindingsArgs() {
-        this.outputConfig = Codegen.empty();
+    private GooglePrivacyDlpV2SaveFindingsArgs(GooglePrivacyDlpV2SaveFindingsArgs $) {
+        this.outputConfig = $.outputConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2SaveFindingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GooglePrivacyDlpV2OutputStorageConfigArgs> outputConfig;
+        private GooglePrivacyDlpV2SaveFindingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2SaveFindingsArgs();
         }
 
         public Builder(GooglePrivacyDlpV2SaveFindingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.outputConfig = defaults.outputConfig;
+            $ = new GooglePrivacyDlpV2SaveFindingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder outputConfig(@Nullable Output<GooglePrivacyDlpV2OutputStorageConfigArgs> outputConfig) {
-            this.outputConfig = outputConfig;
+            $.outputConfig = outputConfig;
             return this;
         }
-        public Builder outputConfig(@Nullable GooglePrivacyDlpV2OutputStorageConfigArgs outputConfig) {
-            this.outputConfig = Codegen.ofNullable(outputConfig);
-            return this;
-        }        public GooglePrivacyDlpV2SaveFindingsArgs build() {
-            return new GooglePrivacyDlpV2SaveFindingsArgs(outputConfig);
+
+        public Builder outputConfig(GooglePrivacyDlpV2OutputStorageConfigArgs outputConfig) {
+            return outputConfig(Output.of(outputConfig));
+        }
+
+        public GooglePrivacyDlpV2SaveFindingsArgs build() {
+            return $;
         }
     }
+
 }

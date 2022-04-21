@@ -7,9 +7,9 @@ import com.pulumi.awsnative.groundstation.inputs.ConfigEirpArgs;
 import com.pulumi.awsnative.groundstation.inputs.ConfigUplinkSpectrumConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,90 +18,82 @@ public final class ConfigAntennaUplinkConfigArgs extends com.pulumi.resources.Re
     public static final ConfigAntennaUplinkConfigArgs Empty = new ConfigAntennaUplinkConfigArgs();
 
     @Import(name="spectrumConfig")
-      private final @Nullable Output<ConfigUplinkSpectrumConfigArgs> spectrumConfig;
+    private @Nullable Output<ConfigUplinkSpectrumConfigArgs> spectrumConfig;
 
-    public Output<ConfigUplinkSpectrumConfigArgs> spectrumConfig() {
-        return this.spectrumConfig == null ? Codegen.empty() : this.spectrumConfig;
+    public Optional<Output<ConfigUplinkSpectrumConfigArgs>> spectrumConfig() {
+        return Optional.ofNullable(this.spectrumConfig);
     }
 
     @Import(name="targetEirp")
-      private final @Nullable Output<ConfigEirpArgs> targetEirp;
+    private @Nullable Output<ConfigEirpArgs> targetEirp;
 
-    public Output<ConfigEirpArgs> targetEirp() {
-        return this.targetEirp == null ? Codegen.empty() : this.targetEirp;
+    public Optional<Output<ConfigEirpArgs>> targetEirp() {
+        return Optional.ofNullable(this.targetEirp);
     }
 
     @Import(name="transmitDisabled")
-      private final @Nullable Output<Boolean> transmitDisabled;
+    private @Nullable Output<Boolean> transmitDisabled;
 
-    public Output<Boolean> transmitDisabled() {
-        return this.transmitDisabled == null ? Codegen.empty() : this.transmitDisabled;
+    public Optional<Output<Boolean>> transmitDisabled() {
+        return Optional.ofNullable(this.transmitDisabled);
     }
 
-    public ConfigAntennaUplinkConfigArgs(
-        @Nullable Output<ConfigUplinkSpectrumConfigArgs> spectrumConfig,
-        @Nullable Output<ConfigEirpArgs> targetEirp,
-        @Nullable Output<Boolean> transmitDisabled) {
-        this.spectrumConfig = spectrumConfig;
-        this.targetEirp = targetEirp;
-        this.transmitDisabled = transmitDisabled;
-    }
+    private ConfigAntennaUplinkConfigArgs() {}
 
-    private ConfigAntennaUplinkConfigArgs() {
-        this.spectrumConfig = Codegen.empty();
-        this.targetEirp = Codegen.empty();
-        this.transmitDisabled = Codegen.empty();
+    private ConfigAntennaUplinkConfigArgs(ConfigAntennaUplinkConfigArgs $) {
+        this.spectrumConfig = $.spectrumConfig;
+        this.targetEirp = $.targetEirp;
+        this.transmitDisabled = $.transmitDisabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigAntennaUplinkConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ConfigUplinkSpectrumConfigArgs> spectrumConfig;
-        private @Nullable Output<ConfigEirpArgs> targetEirp;
-        private @Nullable Output<Boolean> transmitDisabled;
+        private ConfigAntennaUplinkConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigAntennaUplinkConfigArgs();
         }
 
         public Builder(ConfigAntennaUplinkConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.spectrumConfig = defaults.spectrumConfig;
-    	      this.targetEirp = defaults.targetEirp;
-    	      this.transmitDisabled = defaults.transmitDisabled;
+            $ = new ConfigAntennaUplinkConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder spectrumConfig(@Nullable Output<ConfigUplinkSpectrumConfigArgs> spectrumConfig) {
-            this.spectrumConfig = spectrumConfig;
+            $.spectrumConfig = spectrumConfig;
             return this;
         }
-        public Builder spectrumConfig(@Nullable ConfigUplinkSpectrumConfigArgs spectrumConfig) {
-            this.spectrumConfig = Codegen.ofNullable(spectrumConfig);
-            return this;
+
+        public Builder spectrumConfig(ConfigUplinkSpectrumConfigArgs spectrumConfig) {
+            return spectrumConfig(Output.of(spectrumConfig));
         }
+
         public Builder targetEirp(@Nullable Output<ConfigEirpArgs> targetEirp) {
-            this.targetEirp = targetEirp;
+            $.targetEirp = targetEirp;
             return this;
         }
-        public Builder targetEirp(@Nullable ConfigEirpArgs targetEirp) {
-            this.targetEirp = Codegen.ofNullable(targetEirp);
-            return this;
+
+        public Builder targetEirp(ConfigEirpArgs targetEirp) {
+            return targetEirp(Output.of(targetEirp));
         }
+
         public Builder transmitDisabled(@Nullable Output<Boolean> transmitDisabled) {
-            this.transmitDisabled = transmitDisabled;
+            $.transmitDisabled = transmitDisabled;
             return this;
         }
-        public Builder transmitDisabled(@Nullable Boolean transmitDisabled) {
-            this.transmitDisabled = Codegen.ofNullable(transmitDisabled);
-            return this;
-        }        public ConfigAntennaUplinkConfigArgs build() {
-            return new ConfigAntennaUplinkConfigArgs(spectrumConfig, targetEirp, transmitDisabled);
+
+        public Builder transmitDisabled(Boolean transmitDisabled) {
+            return transmitDisabled(Output.of(transmitDisabled));
+        }
+
+        public ConfigAntennaUplinkConfigArgs build() {
+            return $;
         }
     }
+
 }

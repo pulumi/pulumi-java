@@ -23,45 +23,44 @@ public final class ThemeMarginStyle extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="show")
-      private final @Nullable Boolean show;
+    private @Nullable Boolean show;
 
     public Optional<Boolean> show() {
-        return this.show == null ? Optional.empty() : Optional.ofNullable(this.show);
+        return Optional.ofNullable(this.show);
     }
 
-    public ThemeMarginStyle(@Nullable Boolean show) {
-        this.show = show;
-    }
+    private ThemeMarginStyle() {}
 
-    private ThemeMarginStyle() {
-        this.show = null;
+    private ThemeMarginStyle(ThemeMarginStyle $) {
+        this.show = $.show;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ThemeMarginStyle defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean show;
+        private ThemeMarginStyle $;
 
         public Builder() {
-    	      // Empty
+            $ = new ThemeMarginStyle();
         }
 
         public Builder(ThemeMarginStyle defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.show = defaults.show;
+            $ = new ThemeMarginStyle(Objects.requireNonNull(defaults));
         }
 
         public Builder show(@Nullable Boolean show) {
-            this.show = show;
+            $.show = show;
             return this;
-        }        public ThemeMarginStyle build() {
-            return new ThemeMarginStyle(show);
+        }
+
+        public ThemeMarginStyle build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ResourcePolicyDailyCycleArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="daysInCycle")
-      private final @Nullable Output<Integer> daysInCycle;
+    private @Nullable Output<Integer> daysInCycle;
 
-    public Output<Integer> daysInCycle() {
-        return this.daysInCycle == null ? Codegen.empty() : this.daysInCycle;
+    public Optional<Output<Integer>> daysInCycle() {
+        return Optional.ofNullable(this.daysInCycle);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class ResourcePolicyDailyCycleArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="startTime")
-      private final @Nullable Output<String> startTime;
+    private @Nullable Output<String> startTime;
 
-    public Output<String> startTime() {
-        return this.startTime == null ? Codegen.empty() : this.startTime;
+    public Optional<Output<String>> startTime() {
+        return Optional.ofNullable(this.startTime);
     }
 
-    public ResourcePolicyDailyCycleArgs(
-        @Nullable Output<Integer> daysInCycle,
-        @Nullable Output<String> startTime) {
-        this.daysInCycle = daysInCycle;
-        this.startTime = startTime;
-    }
+    private ResourcePolicyDailyCycleArgs() {}
 
-    private ResourcePolicyDailyCycleArgs() {
-        this.daysInCycle = Codegen.empty();
-        this.startTime = Codegen.empty();
+    private ResourcePolicyDailyCycleArgs(ResourcePolicyDailyCycleArgs $) {
+        this.daysInCycle = $.daysInCycle;
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourcePolicyDailyCycleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> daysInCycle;
-        private @Nullable Output<String> startTime;
+        private ResourcePolicyDailyCycleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourcePolicyDailyCycleArgs();
         }
 
         public Builder(ResourcePolicyDailyCycleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.daysInCycle = defaults.daysInCycle;
-    	      this.startTime = defaults.startTime;
+            $ = new ResourcePolicyDailyCycleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder daysInCycle(@Nullable Output<Integer> daysInCycle) {
-            this.daysInCycle = daysInCycle;
+            $.daysInCycle = daysInCycle;
             return this;
         }
-        public Builder daysInCycle(@Nullable Integer daysInCycle) {
-            this.daysInCycle = Codegen.ofNullable(daysInCycle);
-            return this;
+
+        public Builder daysInCycle(Integer daysInCycle) {
+            return daysInCycle(Output.of(daysInCycle));
         }
+
         public Builder startTime(@Nullable Output<String> startTime) {
-            this.startTime = startTime;
+            $.startTime = startTime;
             return this;
         }
-        public Builder startTime(@Nullable String startTime) {
-            this.startTime = Codegen.ofNullable(startTime);
-            return this;
-        }        public ResourcePolicyDailyCycleArgs build() {
-            return new ResourcePolicyDailyCycleArgs(daysInCycle, startTime);
+
+        public Builder startTime(String startTime) {
+            return startTime(Output.of(startTime));
+        }
+
+        public ResourcePolicyDailyCycleArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.gcp.osconfig.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentInstanceFilterGetArgs;
 import com.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyGetArgs;
 import com.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentRolloutGetArgs;
@@ -13,6 +12,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class OsPolicyAssignmentState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="baseline")
-      private final @Nullable Output<Boolean> baseline;
+    private @Nullable Output<Boolean> baseline;
 
-    public Output<Boolean> baseline() {
-        return this.baseline == null ? Codegen.empty() : this.baseline;
+    public Optional<Output<Boolean>> baseline() {
+        return Optional.ofNullable(this.baseline);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class OsPolicyAssignmentState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="deleted")
-      private final @Nullable Output<Boolean> deleted;
+    private @Nullable Output<Boolean> deleted;
 
-    public Output<Boolean> deleted() {
-        return this.deleted == null ? Codegen.empty() : this.deleted;
+    public Optional<Output<Boolean>> deleted() {
+        return Optional.ofNullable(this.deleted);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class OsPolicyAssignmentState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class OsPolicyAssignmentState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class OsPolicyAssignmentState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="instanceFilter")
-      private final @Nullable Output<OsPolicyAssignmentInstanceFilterGetArgs> instanceFilter;
+    private @Nullable Output<OsPolicyAssignmentInstanceFilterGetArgs> instanceFilter;
 
-    public Output<OsPolicyAssignmentInstanceFilterGetArgs> instanceFilter() {
-        return this.instanceFilter == null ? Codegen.empty() : this.instanceFilter;
+    public Optional<Output<OsPolicyAssignmentInstanceFilterGetArgs>> instanceFilter() {
+        return Optional.ofNullable(this.instanceFilter);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class OsPolicyAssignmentState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class OsPolicyAssignmentState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class OsPolicyAssignmentState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="osPolicies")
-      private final @Nullable Output<List<OsPolicyAssignmentOsPolicyGetArgs>> osPolicies;
+    private @Nullable Output<List<OsPolicyAssignmentOsPolicyGetArgs>> osPolicies;
 
-    public Output<List<OsPolicyAssignmentOsPolicyGetArgs>> osPolicies() {
-        return this.osPolicies == null ? Codegen.empty() : this.osPolicies;
+    public Optional<Output<List<OsPolicyAssignmentOsPolicyGetArgs>>> osPolicies() {
+        return Optional.ofNullable(this.osPolicies);
     }
 
     /**
@@ -115,10 +115,10 @@ public final class OsPolicyAssignmentState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -127,10 +127,10 @@ public final class OsPolicyAssignmentState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="reconciling")
-      private final @Nullable Output<Boolean> reconciling;
+    private @Nullable Output<Boolean> reconciling;
 
-    public Output<Boolean> reconciling() {
-        return this.reconciling == null ? Codegen.empty() : this.reconciling;
+    public Optional<Output<Boolean>> reconciling() {
+        return Optional.ofNullable(this.reconciling);
     }
 
     /**
@@ -138,10 +138,10 @@ public final class OsPolicyAssignmentState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="revisionCreateTime")
-      private final @Nullable Output<String> revisionCreateTime;
+    private @Nullable Output<String> revisionCreateTime;
 
-    public Output<String> revisionCreateTime() {
-        return this.revisionCreateTime == null ? Codegen.empty() : this.revisionCreateTime;
+    public Optional<Output<String>> revisionCreateTime() {
+        return Optional.ofNullable(this.revisionCreateTime);
     }
 
     /**
@@ -150,10 +150,10 @@ public final class OsPolicyAssignmentState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="revisionId")
-      private final @Nullable Output<String> revisionId;
+    private @Nullable Output<String> revisionId;
 
-    public Output<String> revisionId() {
-        return this.revisionId == null ? Codegen.empty() : this.revisionId;
+    public Optional<Output<String>> revisionId() {
+        return Optional.ofNullable(this.revisionId);
     }
 
     /**
@@ -161,10 +161,10 @@ public final class OsPolicyAssignmentState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="rollout")
-      private final @Nullable Output<OsPolicyAssignmentRolloutGetArgs> rollout;
+    private @Nullable Output<OsPolicyAssignmentRolloutGetArgs> rollout;
 
-    public Output<OsPolicyAssignmentRolloutGetArgs> rollout() {
-        return this.rollout == null ? Codegen.empty() : this.rollout;
+    public Optional<Output<OsPolicyAssignmentRolloutGetArgs>> rollout() {
+        return Optional.ofNullable(this.rollout);
     }
 
     /**
@@ -173,10 +173,10 @@ public final class OsPolicyAssignmentState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="rolloutState")
-      private final @Nullable Output<String> rolloutState;
+    private @Nullable Output<String> rolloutState;
 
-    public Output<String> rolloutState() {
-        return this.rolloutState == null ? Codegen.empty() : this.rolloutState;
+    public Optional<Output<String>> rolloutState() {
+        return Optional.ofNullable(this.rolloutState);
     }
 
     /**
@@ -184,235 +184,192 @@ public final class OsPolicyAssignmentState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="uid")
-      private final @Nullable Output<String> uid;
+    private @Nullable Output<String> uid;
 
-    public Output<String> uid() {
-        return this.uid == null ? Codegen.empty() : this.uid;
+    public Optional<Output<String>> uid() {
+        return Optional.ofNullable(this.uid);
     }
 
-    public OsPolicyAssignmentState(
-        @Nullable Output<Boolean> baseline,
-        @Nullable Output<Boolean> deleted,
-        @Nullable Output<String> description,
-        @Nullable Output<String> etag,
-        @Nullable Output<OsPolicyAssignmentInstanceFilterGetArgs> instanceFilter,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<List<OsPolicyAssignmentOsPolicyGetArgs>> osPolicies,
-        @Nullable Output<String> project,
-        @Nullable Output<Boolean> reconciling,
-        @Nullable Output<String> revisionCreateTime,
-        @Nullable Output<String> revisionId,
-        @Nullable Output<OsPolicyAssignmentRolloutGetArgs> rollout,
-        @Nullable Output<String> rolloutState,
-        @Nullable Output<String> uid) {
-        this.baseline = baseline;
-        this.deleted = deleted;
-        this.description = description;
-        this.etag = etag;
-        this.instanceFilter = instanceFilter;
-        this.location = location;
-        this.name = name;
-        this.osPolicies = osPolicies;
-        this.project = project;
-        this.reconciling = reconciling;
-        this.revisionCreateTime = revisionCreateTime;
-        this.revisionId = revisionId;
-        this.rollout = rollout;
-        this.rolloutState = rolloutState;
-        this.uid = uid;
-    }
+    private OsPolicyAssignmentState() {}
 
-    private OsPolicyAssignmentState() {
-        this.baseline = Codegen.empty();
-        this.deleted = Codegen.empty();
-        this.description = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.instanceFilter = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.osPolicies = Codegen.empty();
-        this.project = Codegen.empty();
-        this.reconciling = Codegen.empty();
-        this.revisionCreateTime = Codegen.empty();
-        this.revisionId = Codegen.empty();
-        this.rollout = Codegen.empty();
-        this.rolloutState = Codegen.empty();
-        this.uid = Codegen.empty();
+    private OsPolicyAssignmentState(OsPolicyAssignmentState $) {
+        this.baseline = $.baseline;
+        this.deleted = $.deleted;
+        this.description = $.description;
+        this.etag = $.etag;
+        this.instanceFilter = $.instanceFilter;
+        this.location = $.location;
+        this.name = $.name;
+        this.osPolicies = $.osPolicies;
+        this.project = $.project;
+        this.reconciling = $.reconciling;
+        this.revisionCreateTime = $.revisionCreateTime;
+        this.revisionId = $.revisionId;
+        this.rollout = $.rollout;
+        this.rolloutState = $.rolloutState;
+        this.uid = $.uid;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OsPolicyAssignmentState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> baseline;
-        private @Nullable Output<Boolean> deleted;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<OsPolicyAssignmentInstanceFilterGetArgs> instanceFilter;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<OsPolicyAssignmentOsPolicyGetArgs>> osPolicies;
-        private @Nullable Output<String> project;
-        private @Nullable Output<Boolean> reconciling;
-        private @Nullable Output<String> revisionCreateTime;
-        private @Nullable Output<String> revisionId;
-        private @Nullable Output<OsPolicyAssignmentRolloutGetArgs> rollout;
-        private @Nullable Output<String> rolloutState;
-        private @Nullable Output<String> uid;
+        private OsPolicyAssignmentState $;
 
         public Builder() {
-    	      // Empty
+            $ = new OsPolicyAssignmentState();
         }
 
         public Builder(OsPolicyAssignmentState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.baseline = defaults.baseline;
-    	      this.deleted = defaults.deleted;
-    	      this.description = defaults.description;
-    	      this.etag = defaults.etag;
-    	      this.instanceFilter = defaults.instanceFilter;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.osPolicies = defaults.osPolicies;
-    	      this.project = defaults.project;
-    	      this.reconciling = defaults.reconciling;
-    	      this.revisionCreateTime = defaults.revisionCreateTime;
-    	      this.revisionId = defaults.revisionId;
-    	      this.rollout = defaults.rollout;
-    	      this.rolloutState = defaults.rolloutState;
-    	      this.uid = defaults.uid;
+            $ = new OsPolicyAssignmentState(Objects.requireNonNull(defaults));
         }
 
         public Builder baseline(@Nullable Output<Boolean> baseline) {
-            this.baseline = baseline;
+            $.baseline = baseline;
             return this;
         }
-        public Builder baseline(@Nullable Boolean baseline) {
-            this.baseline = Codegen.ofNullable(baseline);
-            return this;
+
+        public Builder baseline(Boolean baseline) {
+            return baseline(Output.of(baseline));
         }
+
         public Builder deleted(@Nullable Output<Boolean> deleted) {
-            this.deleted = deleted;
+            $.deleted = deleted;
             return this;
         }
-        public Builder deleted(@Nullable Boolean deleted) {
-            this.deleted = Codegen.ofNullable(deleted);
-            return this;
+
+        public Builder deleted(Boolean deleted) {
+            return deleted(Output.of(deleted));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder instanceFilter(@Nullable Output<OsPolicyAssignmentInstanceFilterGetArgs> instanceFilter) {
-            this.instanceFilter = instanceFilter;
+            $.instanceFilter = instanceFilter;
             return this;
         }
-        public Builder instanceFilter(@Nullable OsPolicyAssignmentInstanceFilterGetArgs instanceFilter) {
-            this.instanceFilter = Codegen.ofNullable(instanceFilter);
-            return this;
+
+        public Builder instanceFilter(OsPolicyAssignmentInstanceFilterGetArgs instanceFilter) {
+            return instanceFilter(Output.of(instanceFilter));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder osPolicies(@Nullable Output<List<OsPolicyAssignmentOsPolicyGetArgs>> osPolicies) {
-            this.osPolicies = osPolicies;
+            $.osPolicies = osPolicies;
             return this;
         }
-        public Builder osPolicies(@Nullable List<OsPolicyAssignmentOsPolicyGetArgs> osPolicies) {
-            this.osPolicies = Codegen.ofNullable(osPolicies);
-            return this;
+
+        public Builder osPolicies(List<OsPolicyAssignmentOsPolicyGetArgs> osPolicies) {
+            return osPolicies(Output.of(osPolicies));
         }
+
         public Builder osPolicies(OsPolicyAssignmentOsPolicyGetArgs... osPolicies) {
             return osPolicies(List.of(osPolicies));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder reconciling(@Nullable Output<Boolean> reconciling) {
-            this.reconciling = reconciling;
+            $.reconciling = reconciling;
             return this;
         }
-        public Builder reconciling(@Nullable Boolean reconciling) {
-            this.reconciling = Codegen.ofNullable(reconciling);
-            return this;
+
+        public Builder reconciling(Boolean reconciling) {
+            return reconciling(Output.of(reconciling));
         }
+
         public Builder revisionCreateTime(@Nullable Output<String> revisionCreateTime) {
-            this.revisionCreateTime = revisionCreateTime;
+            $.revisionCreateTime = revisionCreateTime;
             return this;
         }
-        public Builder revisionCreateTime(@Nullable String revisionCreateTime) {
-            this.revisionCreateTime = Codegen.ofNullable(revisionCreateTime);
-            return this;
+
+        public Builder revisionCreateTime(String revisionCreateTime) {
+            return revisionCreateTime(Output.of(revisionCreateTime));
         }
+
         public Builder revisionId(@Nullable Output<String> revisionId) {
-            this.revisionId = revisionId;
+            $.revisionId = revisionId;
             return this;
         }
-        public Builder revisionId(@Nullable String revisionId) {
-            this.revisionId = Codegen.ofNullable(revisionId);
-            return this;
+
+        public Builder revisionId(String revisionId) {
+            return revisionId(Output.of(revisionId));
         }
+
         public Builder rollout(@Nullable Output<OsPolicyAssignmentRolloutGetArgs> rollout) {
-            this.rollout = rollout;
+            $.rollout = rollout;
             return this;
         }
-        public Builder rollout(@Nullable OsPolicyAssignmentRolloutGetArgs rollout) {
-            this.rollout = Codegen.ofNullable(rollout);
-            return this;
+
+        public Builder rollout(OsPolicyAssignmentRolloutGetArgs rollout) {
+            return rollout(Output.of(rollout));
         }
+
         public Builder rolloutState(@Nullable Output<String> rolloutState) {
-            this.rolloutState = rolloutState;
+            $.rolloutState = rolloutState;
             return this;
         }
-        public Builder rolloutState(@Nullable String rolloutState) {
-            this.rolloutState = Codegen.ofNullable(rolloutState);
-            return this;
+
+        public Builder rolloutState(String rolloutState) {
+            return rolloutState(Output.of(rolloutState));
         }
+
         public Builder uid(@Nullable Output<String> uid) {
-            this.uid = uid;
+            $.uid = uid;
             return this;
         }
-        public Builder uid(@Nullable String uid) {
-            this.uid = Codegen.ofNullable(uid);
-            return this;
-        }        public OsPolicyAssignmentState build() {
-            return new OsPolicyAssignmentState(baseline, deleted, description, etag, instanceFilter, location, name, osPolicies, project, reconciling, revisionCreateTime, revisionId, rollout, rolloutState, uid);
+
+        public Builder uid(String uid) {
+            return uid(Output.of(uid));
+        }
+
+        public OsPolicyAssignmentState build() {
+            return $;
         }
     }
+
 }

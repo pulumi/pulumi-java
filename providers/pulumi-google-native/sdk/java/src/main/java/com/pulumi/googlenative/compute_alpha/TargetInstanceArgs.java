@@ -5,10 +5,10 @@ package com.pulumi.googlenative.compute_alpha;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_alpha.enums.TargetInstanceNatPolicy;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class TargetInstanceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class TargetInstanceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="instance")
-      private final @Nullable Output<String> instance;
+    private @Nullable Output<String> instance;
 
-    public Output<String> instance() {
-        return this.instance == null ? Codegen.empty() : this.instance;
+    public Optional<Output<String>> instance() {
+        return Optional.ofNullable(this.instance);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class TargetInstanceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class TargetInstanceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="natPolicy")
-      private final @Nullable Output<TargetInstanceNatPolicy> natPolicy;
+    private @Nullable Output<TargetInstanceNatPolicy> natPolicy;
 
-    public Output<TargetInstanceNatPolicy> natPolicy() {
-        return this.natPolicy == null ? Codegen.empty() : this.natPolicy;
+    public Optional<Output<TargetInstanceNatPolicy>> natPolicy() {
+        return Optional.ofNullable(this.natPolicy);
     }
 
     /**
@@ -65,162 +65,139 @@ public final class TargetInstanceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="network")
-      private final @Nullable Output<String> network;
+    private @Nullable Output<String> network;
 
-    public Output<String> network() {
-        return this.network == null ? Codegen.empty() : this.network;
+    public Optional<Output<String>> network() {
+        return Optional.ofNullable(this.network);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="requestId")
-      private final @Nullable Output<String> requestId;
+    private @Nullable Output<String> requestId;
 
-    public Output<String> requestId() {
-        return this.requestId == null ? Codegen.empty() : this.requestId;
+    public Optional<Output<String>> requestId() {
+        return Optional.ofNullable(this.requestId);
     }
 
     @Import(name="zone")
-      private final @Nullable Output<String> zone;
+    private @Nullable Output<String> zone;
 
-    public Output<String> zone() {
-        return this.zone == null ? Codegen.empty() : this.zone;
+    public Optional<Output<String>> zone() {
+        return Optional.ofNullable(this.zone);
     }
 
-    public TargetInstanceArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> instance,
-        @Nullable Output<String> name,
-        @Nullable Output<TargetInstanceNatPolicy> natPolicy,
-        @Nullable Output<String> network,
-        @Nullable Output<String> project,
-        @Nullable Output<String> requestId,
-        @Nullable Output<String> zone) {
-        this.description = description;
-        this.instance = instance;
-        this.name = name;
-        this.natPolicy = natPolicy;
-        this.network = network;
-        this.project = project;
-        this.requestId = requestId;
-        this.zone = zone;
-    }
+    private TargetInstanceArgs() {}
 
-    private TargetInstanceArgs() {
-        this.description = Codegen.empty();
-        this.instance = Codegen.empty();
-        this.name = Codegen.empty();
-        this.natPolicy = Codegen.empty();
-        this.network = Codegen.empty();
-        this.project = Codegen.empty();
-        this.requestId = Codegen.empty();
-        this.zone = Codegen.empty();
+    private TargetInstanceArgs(TargetInstanceArgs $) {
+        this.description = $.description;
+        this.instance = $.instance;
+        this.name = $.name;
+        this.natPolicy = $.natPolicy;
+        this.network = $.network;
+        this.project = $.project;
+        this.requestId = $.requestId;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TargetInstanceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> instance;
-        private @Nullable Output<String> name;
-        private @Nullable Output<TargetInstanceNatPolicy> natPolicy;
-        private @Nullable Output<String> network;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> requestId;
-        private @Nullable Output<String> zone;
+        private TargetInstanceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TargetInstanceArgs();
         }
 
         public Builder(TargetInstanceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.instance = defaults.instance;
-    	      this.name = defaults.name;
-    	      this.natPolicy = defaults.natPolicy;
-    	      this.network = defaults.network;
-    	      this.project = defaults.project;
-    	      this.requestId = defaults.requestId;
-    	      this.zone = defaults.zone;
+            $ = new TargetInstanceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder instance(@Nullable Output<String> instance) {
-            this.instance = instance;
+            $.instance = instance;
             return this;
         }
-        public Builder instance(@Nullable String instance) {
-            this.instance = Codegen.ofNullable(instance);
-            return this;
+
+        public Builder instance(String instance) {
+            return instance(Output.of(instance));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder natPolicy(@Nullable Output<TargetInstanceNatPolicy> natPolicy) {
-            this.natPolicy = natPolicy;
+            $.natPolicy = natPolicy;
             return this;
         }
-        public Builder natPolicy(@Nullable TargetInstanceNatPolicy natPolicy) {
-            this.natPolicy = Codegen.ofNullable(natPolicy);
-            return this;
+
+        public Builder natPolicy(TargetInstanceNatPolicy natPolicy) {
+            return natPolicy(Output.of(natPolicy));
         }
+
         public Builder network(@Nullable Output<String> network) {
-            this.network = network;
+            $.network = network;
             return this;
         }
-        public Builder network(@Nullable String network) {
-            this.network = Codegen.ofNullable(network);
-            return this;
+
+        public Builder network(String network) {
+            return network(Output.of(network));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder requestId(@Nullable Output<String> requestId) {
-            this.requestId = requestId;
+            $.requestId = requestId;
             return this;
         }
-        public Builder requestId(@Nullable String requestId) {
-            this.requestId = Codegen.ofNullable(requestId);
-            return this;
+
+        public Builder requestId(String requestId) {
+            return requestId(Output.of(requestId));
         }
+
         public Builder zone(@Nullable Output<String> zone) {
-            this.zone = zone;
+            $.zone = zone;
             return this;
         }
-        public Builder zone(@Nullable String zone) {
-            this.zone = Codegen.ofNullable(zone);
-            return this;
-        }        public TargetInstanceArgs build() {
-            return new TargetInstanceArgs(description, instance, name, natPolicy, network, project, requestId, zone);
+
+        public Builder zone(String zone) {
+            return zone(Output.of(zone));
+        }
+
+        public TargetInstanceArgs build() {
+            return $;
         }
     }
+
 }

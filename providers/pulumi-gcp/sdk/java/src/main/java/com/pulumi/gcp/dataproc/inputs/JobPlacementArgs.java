@@ -5,9 +5,9 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,66 @@ public final class JobPlacementArgs extends com.pulumi.resources.ResourceArgs {
     public static final JobPlacementArgs Empty = new JobPlacementArgs();
 
     @Import(name="clusterName", required=true)
-      private final Output<String> clusterName;
+    private Output<String> clusterName;
 
     public Output<String> clusterName() {
         return this.clusterName;
     }
 
     @Import(name="clusterUuid")
-      private final @Nullable Output<String> clusterUuid;
+    private @Nullable Output<String> clusterUuid;
 
-    public Output<String> clusterUuid() {
-        return this.clusterUuid == null ? Codegen.empty() : this.clusterUuid;
+    public Optional<Output<String>> clusterUuid() {
+        return Optional.ofNullable(this.clusterUuid);
     }
 
-    public JobPlacementArgs(
-        Output<String> clusterName,
-        @Nullable Output<String> clusterUuid) {
-        this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
-        this.clusterUuid = clusterUuid;
-    }
+    private JobPlacementArgs() {}
 
-    private JobPlacementArgs() {
-        this.clusterName = Codegen.empty();
-        this.clusterUuid = Codegen.empty();
+    private JobPlacementArgs(JobPlacementArgs $) {
+        this.clusterName = $.clusterName;
+        this.clusterUuid = $.clusterUuid;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobPlacementArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> clusterName;
-        private @Nullable Output<String> clusterUuid;
+        private JobPlacementArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobPlacementArgs();
         }
 
         public Builder(JobPlacementArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterName = defaults.clusterName;
-    	      this.clusterUuid = defaults.clusterUuid;
+            $ = new JobPlacementArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterName(Output<String> clusterName) {
-            this.clusterName = Objects.requireNonNull(clusterName);
+            $.clusterName = clusterName;
             return this;
         }
+
         public Builder clusterName(String clusterName) {
-            this.clusterName = Output.of(Objects.requireNonNull(clusterName));
-            return this;
+            return clusterName(Output.of(clusterName));
         }
+
         public Builder clusterUuid(@Nullable Output<String> clusterUuid) {
-            this.clusterUuid = clusterUuid;
+            $.clusterUuid = clusterUuid;
             return this;
         }
-        public Builder clusterUuid(@Nullable String clusterUuid) {
-            this.clusterUuid = Codegen.ofNullable(clusterUuid);
-            return this;
-        }        public JobPlacementArgs build() {
-            return new JobPlacementArgs(clusterName, clusterUuid);
+
+        public Builder clusterUuid(String clusterUuid) {
+            return clusterUuid(Output.of(clusterUuid));
+        }
+
+        public JobPlacementArgs build() {
+            $.clusterName = Objects.requireNonNull($.clusterName, "expected parameter 'clusterName' to be non-null");
+            return $;
         }
     }
+
 }

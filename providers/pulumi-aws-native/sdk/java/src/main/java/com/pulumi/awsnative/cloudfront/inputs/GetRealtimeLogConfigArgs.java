@@ -13,45 +13,45 @@ public final class GetRealtimeLogConfigArgs extends com.pulumi.resources.InvokeA
     public static final GetRealtimeLogConfigArgs Empty = new GetRealtimeLogConfigArgs();
 
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
     }
 
-    public GetRealtimeLogConfigArgs(String arn) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-    }
+    private GetRealtimeLogConfigArgs() {}
 
-    private GetRealtimeLogConfigArgs() {
-        this.arn = null;
+    private GetRealtimeLogConfigArgs(GetRealtimeLogConfigArgs $) {
+        this.arn = $.arn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRealtimeLogConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
+        private GetRealtimeLogConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRealtimeLogConfigArgs();
         }
 
         public Builder(GetRealtimeLogConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
+            $ = new GetRealtimeLogConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
-        }        public GetRealtimeLogConfigArgs build() {
-            return new GetRealtimeLogConfigArgs(arn);
+        }
+
+        public GetRealtimeLogConfigArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

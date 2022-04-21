@@ -5,9 +5,9 @@ package com.pulumi.googlenative.appengine_v1beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ManualScalingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instances")
-      private final @Nullable Output<Integer> instances;
+    private @Nullable Output<Integer> instances;
 
-    public Output<Integer> instances() {
-        return this.instances == null ? Codegen.empty() : this.instances;
+    public Optional<Output<Integer>> instances() {
+        return Optional.ofNullable(this.instances);
     }
 
-    public ManualScalingArgs(@Nullable Output<Integer> instances) {
-        this.instances = instances;
-    }
+    private ManualScalingArgs() {}
 
-    private ManualScalingArgs() {
-        this.instances = Codegen.empty();
+    private ManualScalingArgs(ManualScalingArgs $) {
+        this.instances = $.instances;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManualScalingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> instances;
+        private ManualScalingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManualScalingArgs();
         }
 
         public Builder(ManualScalingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instances = defaults.instances;
+            $ = new ManualScalingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instances(@Nullable Output<Integer> instances) {
-            this.instances = instances;
+            $.instances = instances;
             return this;
         }
-        public Builder instances(@Nullable Integer instances) {
-            this.instances = Codegen.ofNullable(instances);
-            return this;
-        }        public ManualScalingArgs build() {
-            return new ManualScalingArgs(instances);
+
+        public Builder instances(Integer instances) {
+            return instances(Output.of(instances));
+        }
+
+        public ManualScalingArgs build() {
+            return $;
         }
     }
+
 }

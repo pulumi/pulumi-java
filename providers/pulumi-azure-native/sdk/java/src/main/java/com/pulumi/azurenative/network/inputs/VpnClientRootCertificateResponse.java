@@ -23,7 +23,7 @@ public final class VpnClientRootCertificateResponse extends com.pulumi.resources
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -34,10 +34,10 @@ public final class VpnClientRootCertificateResponse extends com.pulumi.resources
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class VpnClientRootCertificateResponse extends com.pulumi.resources
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -56,7 +56,7 @@ public final class VpnClientRootCertificateResponse extends com.pulumi.resources
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -67,82 +67,71 @@ public final class VpnClientRootCertificateResponse extends com.pulumi.resources
      * 
      */
     @Import(name="publicCertData", required=true)
-      private final String publicCertData;
+    private String publicCertData;
 
     public String publicCertData() {
         return this.publicCertData;
     }
 
-    public VpnClientRootCertificateResponse(
-        String etag,
-        @Nullable String id,
-        @Nullable String name,
-        String provisioningState,
-        String publicCertData) {
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.id = id;
-        this.name = name;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.publicCertData = Objects.requireNonNull(publicCertData, "expected parameter 'publicCertData' to be non-null");
-    }
+    private VpnClientRootCertificateResponse() {}
 
-    private VpnClientRootCertificateResponse() {
-        this.etag = null;
-        this.id = null;
-        this.name = null;
-        this.provisioningState = null;
-        this.publicCertData = null;
+    private VpnClientRootCertificateResponse(VpnClientRootCertificateResponse $) {
+        this.etag = $.etag;
+        this.id = $.id;
+        this.name = $.name;
+        this.provisioningState = $.provisioningState;
+        this.publicCertData = $.publicCertData;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VpnClientRootCertificateResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String etag;
-        private @Nullable String id;
-        private @Nullable String name;
-        private String provisioningState;
-        private String publicCertData;
+        private VpnClientRootCertificateResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VpnClientRootCertificateResponse();
         }
 
         public Builder(VpnClientRootCertificateResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.etag = defaults.etag;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.publicCertData = defaults.publicCertData;
+            $ = new VpnClientRootCertificateResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder publicCertData(String publicCertData) {
-            this.publicCertData = Objects.requireNonNull(publicCertData);
+            $.publicCertData = publicCertData;
             return this;
-        }        public VpnClientRootCertificateResponse build() {
-            return new VpnClientRootCertificateResponse(etag, id, name, provisioningState, publicCertData);
+        }
+
+        public VpnClientRootCertificateResponse build() {
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.publicCertData = Objects.requireNonNull($.publicCertData, "expected parameter 'publicCertData' to be non-null");
+            return $;
         }
     }
+
 }

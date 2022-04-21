@@ -5,7 +5,6 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class SecurityScanConfigAuthenticationCustomAccountArgs extends com
      * 
      */
     @Import(name="loginUrl", required=true)
-      private final Output<String> loginUrl;
+    private Output<String> loginUrl;
 
     public Output<String> loginUrl() {
         return this.loginUrl;
@@ -32,7 +31,7 @@ public final class SecurityScanConfigAuthenticationCustomAccountArgs extends com
      * 
      */
     @Import(name="password", required=true)
-      private final Output<String> password;
+    private Output<String> password;
 
     public Output<String> password() {
         return this.password;
@@ -43,76 +42,71 @@ public final class SecurityScanConfigAuthenticationCustomAccountArgs extends com
      * 
      */
     @Import(name="username", required=true)
-      private final Output<String> username;
+    private Output<String> username;
 
     public Output<String> username() {
         return this.username;
     }
 
-    public SecurityScanConfigAuthenticationCustomAccountArgs(
-        Output<String> loginUrl,
-        Output<String> password,
-        Output<String> username) {
-        this.loginUrl = Objects.requireNonNull(loginUrl, "expected parameter 'loginUrl' to be non-null");
-        this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
-        this.username = Objects.requireNonNull(username, "expected parameter 'username' to be non-null");
-    }
+    private SecurityScanConfigAuthenticationCustomAccountArgs() {}
 
-    private SecurityScanConfigAuthenticationCustomAccountArgs() {
-        this.loginUrl = Codegen.empty();
-        this.password = Codegen.empty();
-        this.username = Codegen.empty();
+    private SecurityScanConfigAuthenticationCustomAccountArgs(SecurityScanConfigAuthenticationCustomAccountArgs $) {
+        this.loginUrl = $.loginUrl;
+        this.password = $.password;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityScanConfigAuthenticationCustomAccountArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> loginUrl;
-        private Output<String> password;
-        private Output<String> username;
+        private SecurityScanConfigAuthenticationCustomAccountArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityScanConfigAuthenticationCustomAccountArgs();
         }
 
         public Builder(SecurityScanConfigAuthenticationCustomAccountArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.loginUrl = defaults.loginUrl;
-    	      this.password = defaults.password;
-    	      this.username = defaults.username;
+            $ = new SecurityScanConfigAuthenticationCustomAccountArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder loginUrl(Output<String> loginUrl) {
-            this.loginUrl = Objects.requireNonNull(loginUrl);
+            $.loginUrl = loginUrl;
             return this;
         }
+
         public Builder loginUrl(String loginUrl) {
-            this.loginUrl = Output.of(Objects.requireNonNull(loginUrl));
-            return this;
+            return loginUrl(Output.of(loginUrl));
         }
+
         public Builder password(Output<String> password) {
-            this.password = Objects.requireNonNull(password);
+            $.password = password;
             return this;
         }
+
         public Builder password(String password) {
-            this.password = Output.of(Objects.requireNonNull(password));
-            return this;
+            return password(Output.of(password));
         }
+
         public Builder username(Output<String> username) {
-            this.username = Objects.requireNonNull(username);
+            $.username = username;
             return this;
         }
+
         public Builder username(String username) {
-            this.username = Output.of(Objects.requireNonNull(username));
-            return this;
-        }        public SecurityScanConfigAuthenticationCustomAccountArgs build() {
-            return new SecurityScanConfigAuthenticationCustomAccountArgs(loginUrl, password, username);
+            return username(Output.of(username));
+        }
+
+        public SecurityScanConfigAuthenticationCustomAccountArgs build() {
+            $.loginUrl = Objects.requireNonNull($.loginUrl, "expected parameter 'loginUrl' to be non-null");
+            $.password = Objects.requireNonNull($.password, "expected parameter 'password' to be non-null");
+            $.username = Objects.requireNonNull($.username, "expected parameter 'username' to be non-null");
+            return $;
         }
     }
+
 }

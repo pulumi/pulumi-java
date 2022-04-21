@@ -5,11 +5,11 @@ package com.pulumi.googlenative.compute_beta;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class TargetHttpProxyArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class TargetHttpProxyArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="httpFilters")
-      private final @Nullable Output<List<String>> httpFilters;
+    private @Nullable Output<List<String>> httpFilters;
 
-    public Output<List<String>> httpFilters() {
-        return this.httpFilters == null ? Codegen.empty() : this.httpFilters;
+    public Optional<Output<List<String>>> httpFilters() {
+        return Optional.ofNullable(this.httpFilters);
     }
 
     /**
@@ -44,17 +44,17 @@ public final class TargetHttpProxyArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -62,17 +62,17 @@ public final class TargetHttpProxyArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="proxyBind")
-      private final @Nullable Output<Boolean> proxyBind;
+    private @Nullable Output<Boolean> proxyBind;
 
-    public Output<Boolean> proxyBind() {
-        return this.proxyBind == null ? Codegen.empty() : this.proxyBind;
+    public Optional<Output<Boolean>> proxyBind() {
+        return Optional.ofNullable(this.proxyBind);
     }
 
     @Import(name="requestId")
-      private final @Nullable Output<String> requestId;
+    private @Nullable Output<String> requestId;
 
-    public Output<String> requestId() {
-        return this.requestId == null ? Codegen.empty() : this.requestId;
+    public Optional<Output<String>> requestId() {
+        return Optional.ofNullable(this.requestId);
     }
 
     /**
@@ -80,131 +80,112 @@ public final class TargetHttpProxyArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="urlMap")
-      private final @Nullable Output<String> urlMap;
+    private @Nullable Output<String> urlMap;
 
-    public Output<String> urlMap() {
-        return this.urlMap == null ? Codegen.empty() : this.urlMap;
+    public Optional<Output<String>> urlMap() {
+        return Optional.ofNullable(this.urlMap);
     }
 
-    public TargetHttpProxyArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<List<String>> httpFilters,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<Boolean> proxyBind,
-        @Nullable Output<String> requestId,
-        @Nullable Output<String> urlMap) {
-        this.description = description;
-        this.httpFilters = httpFilters;
-        this.name = name;
-        this.project = project;
-        this.proxyBind = proxyBind;
-        this.requestId = requestId;
-        this.urlMap = urlMap;
-    }
+    private TargetHttpProxyArgs() {}
 
-    private TargetHttpProxyArgs() {
-        this.description = Codegen.empty();
-        this.httpFilters = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.proxyBind = Codegen.empty();
-        this.requestId = Codegen.empty();
-        this.urlMap = Codegen.empty();
+    private TargetHttpProxyArgs(TargetHttpProxyArgs $) {
+        this.description = $.description;
+        this.httpFilters = $.httpFilters;
+        this.name = $.name;
+        this.project = $.project;
+        this.proxyBind = $.proxyBind;
+        this.requestId = $.requestId;
+        this.urlMap = $.urlMap;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TargetHttpProxyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<List<String>> httpFilters;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<Boolean> proxyBind;
-        private @Nullable Output<String> requestId;
-        private @Nullable Output<String> urlMap;
+        private TargetHttpProxyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TargetHttpProxyArgs();
         }
 
         public Builder(TargetHttpProxyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.httpFilters = defaults.httpFilters;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.proxyBind = defaults.proxyBind;
-    	      this.requestId = defaults.requestId;
-    	      this.urlMap = defaults.urlMap;
+            $ = new TargetHttpProxyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder httpFilters(@Nullable Output<List<String>> httpFilters) {
-            this.httpFilters = httpFilters;
+            $.httpFilters = httpFilters;
             return this;
         }
-        public Builder httpFilters(@Nullable List<String> httpFilters) {
-            this.httpFilters = Codegen.ofNullable(httpFilters);
-            return this;
+
+        public Builder httpFilters(List<String> httpFilters) {
+            return httpFilters(Output.of(httpFilters));
         }
+
         public Builder httpFilters(String... httpFilters) {
             return httpFilters(List.of(httpFilters));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder proxyBind(@Nullable Output<Boolean> proxyBind) {
-            this.proxyBind = proxyBind;
+            $.proxyBind = proxyBind;
             return this;
         }
-        public Builder proxyBind(@Nullable Boolean proxyBind) {
-            this.proxyBind = Codegen.ofNullable(proxyBind);
-            return this;
+
+        public Builder proxyBind(Boolean proxyBind) {
+            return proxyBind(Output.of(proxyBind));
         }
+
         public Builder requestId(@Nullable Output<String> requestId) {
-            this.requestId = requestId;
+            $.requestId = requestId;
             return this;
         }
-        public Builder requestId(@Nullable String requestId) {
-            this.requestId = Codegen.ofNullable(requestId);
-            return this;
+
+        public Builder requestId(String requestId) {
+            return requestId(Output.of(requestId));
         }
+
         public Builder urlMap(@Nullable Output<String> urlMap) {
-            this.urlMap = urlMap;
+            $.urlMap = urlMap;
             return this;
         }
-        public Builder urlMap(@Nullable String urlMap) {
-            this.urlMap = Codegen.ofNullable(urlMap);
-            return this;
-        }        public TargetHttpProxyArgs build() {
-            return new TargetHttpProxyArgs(description, httpFilters, name, project, proxyBind, requestId, urlMap);
+
+        public Builder urlMap(String urlMap) {
+            return urlMap(Output.of(urlMap));
+        }
+
+        public TargetHttpProxyArgs build() {
+            return $;
         }
     }
+
 }

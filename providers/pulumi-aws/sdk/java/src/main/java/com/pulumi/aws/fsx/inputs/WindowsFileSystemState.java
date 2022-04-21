@@ -7,13 +7,13 @@ import com.pulumi.aws.fsx.inputs.WindowsFileSystemAuditLogConfigurationGetArgs;
 import com.pulumi.aws.fsx.inputs.WindowsFileSystemSelfManagedActiveDirectoryGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class WindowsFileSystemState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="activeDirectoryId")
-      private final @Nullable Output<String> activeDirectoryId;
+    private @Nullable Output<String> activeDirectoryId;
 
-    public Output<String> activeDirectoryId() {
-        return this.activeDirectoryId == null ? Codegen.empty() : this.activeDirectoryId;
+    public Optional<Output<String>> activeDirectoryId() {
+        return Optional.ofNullable(this.activeDirectoryId);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class WindowsFileSystemState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="aliases")
-      private final @Nullable Output<List<String>> aliases;
+    private @Nullable Output<List<String>> aliases;
 
-    public Output<List<String>> aliases() {
-        return this.aliases == null ? Codegen.empty() : this.aliases;
+    public Optional<Output<List<String>>> aliases() {
+        return Optional.ofNullable(this.aliases);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class WindowsFileSystemState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class WindowsFileSystemState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="auditLogConfiguration")
-      private final @Nullable Output<WindowsFileSystemAuditLogConfigurationGetArgs> auditLogConfiguration;
+    private @Nullable Output<WindowsFileSystemAuditLogConfigurationGetArgs> auditLogConfiguration;
 
-    public Output<WindowsFileSystemAuditLogConfigurationGetArgs> auditLogConfiguration() {
-        return this.auditLogConfiguration == null ? Codegen.empty() : this.auditLogConfiguration;
+    public Optional<Output<WindowsFileSystemAuditLogConfigurationGetArgs>> auditLogConfiguration() {
+        return Optional.ofNullable(this.auditLogConfiguration);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class WindowsFileSystemState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="automaticBackupRetentionDays")
-      private final @Nullable Output<Integer> automaticBackupRetentionDays;
+    private @Nullable Output<Integer> automaticBackupRetentionDays;
 
-    public Output<Integer> automaticBackupRetentionDays() {
-        return this.automaticBackupRetentionDays == null ? Codegen.empty() : this.automaticBackupRetentionDays;
+    public Optional<Output<Integer>> automaticBackupRetentionDays() {
+        return Optional.ofNullable(this.automaticBackupRetentionDays);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class WindowsFileSystemState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="backupId")
-      private final @Nullable Output<String> backupId;
+    private @Nullable Output<String> backupId;
 
-    public Output<String> backupId() {
-        return this.backupId == null ? Codegen.empty() : this.backupId;
+    public Optional<Output<String>> backupId() {
+        return Optional.ofNullable(this.backupId);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class WindowsFileSystemState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="copyTagsToBackups")
-      private final @Nullable Output<Boolean> copyTagsToBackups;
+    private @Nullable Output<Boolean> copyTagsToBackups;
 
-    public Output<Boolean> copyTagsToBackups() {
-        return this.copyTagsToBackups == null ? Codegen.empty() : this.copyTagsToBackups;
+    public Optional<Output<Boolean>> copyTagsToBackups() {
+        return Optional.ofNullable(this.copyTagsToBackups);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class WindowsFileSystemState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="dailyAutomaticBackupStartTime")
-      private final @Nullable Output<String> dailyAutomaticBackupStartTime;
+    private @Nullable Output<String> dailyAutomaticBackupStartTime;
 
-    public Output<String> dailyAutomaticBackupStartTime() {
-        return this.dailyAutomaticBackupStartTime == null ? Codegen.empty() : this.dailyAutomaticBackupStartTime;
+    public Optional<Output<String>> dailyAutomaticBackupStartTime() {
+        return Optional.ofNullable(this.dailyAutomaticBackupStartTime);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class WindowsFileSystemState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="deploymentType")
-      private final @Nullable Output<String> deploymentType;
+    private @Nullable Output<String> deploymentType;
 
-    public Output<String> deploymentType() {
-        return this.deploymentType == null ? Codegen.empty() : this.deploymentType;
+    public Optional<Output<String>> deploymentType() {
+        return Optional.ofNullable(this.deploymentType);
     }
 
     /**
@@ -125,10 +125,10 @@ public final class WindowsFileSystemState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="dnsName")
-      private final @Nullable Output<String> dnsName;
+    private @Nullable Output<String> dnsName;
 
-    public Output<String> dnsName() {
-        return this.dnsName == null ? Codegen.empty() : this.dnsName;
+    public Optional<Output<String>> dnsName() {
+        return Optional.ofNullable(this.dnsName);
     }
 
     /**
@@ -136,10 +136,10 @@ public final class WindowsFileSystemState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="kmsKeyId")
-      private final @Nullable Output<String> kmsKeyId;
+    private @Nullable Output<String> kmsKeyId;
 
-    public Output<String> kmsKeyId() {
-        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
+    public Optional<Output<String>> kmsKeyId() {
+        return Optional.ofNullable(this.kmsKeyId);
     }
 
     /**
@@ -147,10 +147,10 @@ public final class WindowsFileSystemState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="networkInterfaceIds")
-      private final @Nullable Output<List<String>> networkInterfaceIds;
+    private @Nullable Output<List<String>> networkInterfaceIds;
 
-    public Output<List<String>> networkInterfaceIds() {
-        return this.networkInterfaceIds == null ? Codegen.empty() : this.networkInterfaceIds;
+    public Optional<Output<List<String>>> networkInterfaceIds() {
+        return Optional.ofNullable(this.networkInterfaceIds);
     }
 
     /**
@@ -158,10 +158,10 @@ public final class WindowsFileSystemState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="ownerId")
-      private final @Nullable Output<String> ownerId;
+    private @Nullable Output<String> ownerId;
 
-    public Output<String> ownerId() {
-        return this.ownerId == null ? Codegen.empty() : this.ownerId;
+    public Optional<Output<String>> ownerId() {
+        return Optional.ofNullable(this.ownerId);
     }
 
     /**
@@ -169,10 +169,10 @@ public final class WindowsFileSystemState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="preferredFileServerIp")
-      private final @Nullable Output<String> preferredFileServerIp;
+    private @Nullable Output<String> preferredFileServerIp;
 
-    public Output<String> preferredFileServerIp() {
-        return this.preferredFileServerIp == null ? Codegen.empty() : this.preferredFileServerIp;
+    public Optional<Output<String>> preferredFileServerIp() {
+        return Optional.ofNullable(this.preferredFileServerIp);
     }
 
     /**
@@ -180,10 +180,10 @@ public final class WindowsFileSystemState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="preferredSubnetId")
-      private final @Nullable Output<String> preferredSubnetId;
+    private @Nullable Output<String> preferredSubnetId;
 
-    public Output<String> preferredSubnetId() {
-        return this.preferredSubnetId == null ? Codegen.empty() : this.preferredSubnetId;
+    public Optional<Output<String>> preferredSubnetId() {
+        return Optional.ofNullable(this.preferredSubnetId);
     }
 
     /**
@@ -191,10 +191,10 @@ public final class WindowsFileSystemState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="remoteAdministrationEndpoint")
-      private final @Nullable Output<String> remoteAdministrationEndpoint;
+    private @Nullable Output<String> remoteAdministrationEndpoint;
 
-    public Output<String> remoteAdministrationEndpoint() {
-        return this.remoteAdministrationEndpoint == null ? Codegen.empty() : this.remoteAdministrationEndpoint;
+    public Optional<Output<String>> remoteAdministrationEndpoint() {
+        return Optional.ofNullable(this.remoteAdministrationEndpoint);
     }
 
     /**
@@ -202,10 +202,10 @@ public final class WindowsFileSystemState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="securityGroupIds")
-      private final @Nullable Output<List<String>> securityGroupIds;
+    private @Nullable Output<List<String>> securityGroupIds;
 
-    public Output<List<String>> securityGroupIds() {
-        return this.securityGroupIds == null ? Codegen.empty() : this.securityGroupIds;
+    public Optional<Output<List<String>>> securityGroupIds() {
+        return Optional.ofNullable(this.securityGroupIds);
     }
 
     /**
@@ -213,10 +213,10 @@ public final class WindowsFileSystemState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="selfManagedActiveDirectory")
-      private final @Nullable Output<WindowsFileSystemSelfManagedActiveDirectoryGetArgs> selfManagedActiveDirectory;
+    private @Nullable Output<WindowsFileSystemSelfManagedActiveDirectoryGetArgs> selfManagedActiveDirectory;
 
-    public Output<WindowsFileSystemSelfManagedActiveDirectoryGetArgs> selfManagedActiveDirectory() {
-        return this.selfManagedActiveDirectory == null ? Codegen.empty() : this.selfManagedActiveDirectory;
+    public Optional<Output<WindowsFileSystemSelfManagedActiveDirectoryGetArgs>> selfManagedActiveDirectory() {
+        return Optional.ofNullable(this.selfManagedActiveDirectory);
     }
 
     /**
@@ -224,10 +224,10 @@ public final class WindowsFileSystemState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="skipFinalBackup")
-      private final @Nullable Output<Boolean> skipFinalBackup;
+    private @Nullable Output<Boolean> skipFinalBackup;
 
-    public Output<Boolean> skipFinalBackup() {
-        return this.skipFinalBackup == null ? Codegen.empty() : this.skipFinalBackup;
+    public Optional<Output<Boolean>> skipFinalBackup() {
+        return Optional.ofNullable(this.skipFinalBackup);
     }
 
     /**
@@ -235,10 +235,10 @@ public final class WindowsFileSystemState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="storageCapacity")
-      private final @Nullable Output<Integer> storageCapacity;
+    private @Nullable Output<Integer> storageCapacity;
 
-    public Output<Integer> storageCapacity() {
-        return this.storageCapacity == null ? Codegen.empty() : this.storageCapacity;
+    public Optional<Output<Integer>> storageCapacity() {
+        return Optional.ofNullable(this.storageCapacity);
     }
 
     /**
@@ -246,10 +246,10 @@ public final class WindowsFileSystemState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="storageType")
-      private final @Nullable Output<String> storageType;
+    private @Nullable Output<String> storageType;
 
-    public Output<String> storageType() {
-        return this.storageType == null ? Codegen.empty() : this.storageType;
+    public Optional<Output<String>> storageType() {
+        return Optional.ofNullable(this.storageType);
     }
 
     /**
@@ -257,10 +257,10 @@ public final class WindowsFileSystemState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="subnetIds")
-      private final @Nullable Output<List<String>> subnetIds;
+    private @Nullable Output<List<String>> subnetIds;
 
-    public Output<List<String>> subnetIds() {
-        return this.subnetIds == null ? Codegen.empty() : this.subnetIds;
+    public Optional<Output<List<String>>> subnetIds() {
+        return Optional.ofNullable(this.subnetIds);
     }
 
     /**
@@ -268,10 +268,10 @@ public final class WindowsFileSystemState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -279,10 +279,10 @@ public final class WindowsFileSystemState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -290,10 +290,10 @@ public final class WindowsFileSystemState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="throughputCapacity")
-      private final @Nullable Output<Integer> throughputCapacity;
+    private @Nullable Output<Integer> throughputCapacity;
 
-    public Output<Integer> throughputCapacity() {
-        return this.throughputCapacity == null ? Codegen.empty() : this.throughputCapacity;
+    public Optional<Output<Integer>> throughputCapacity() {
+        return Optional.ofNullable(this.throughputCapacity);
     }
 
     /**
@@ -301,10 +301,10 @@ public final class WindowsFileSystemState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="vpcId")
-      private final @Nullable Output<String> vpcId;
+    private @Nullable Output<String> vpcId;
 
-    public Output<String> vpcId() {
-        return this.vpcId == null ? Codegen.empty() : this.vpcId;
+    public Optional<Output<String>> vpcId() {
+        return Optional.ofNullable(this.vpcId);
     }
 
     /**
@@ -312,400 +312,324 @@ public final class WindowsFileSystemState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="weeklyMaintenanceStartTime")
-      private final @Nullable Output<String> weeklyMaintenanceStartTime;
+    private @Nullable Output<String> weeklyMaintenanceStartTime;
 
-    public Output<String> weeklyMaintenanceStartTime() {
-        return this.weeklyMaintenanceStartTime == null ? Codegen.empty() : this.weeklyMaintenanceStartTime;
+    public Optional<Output<String>> weeklyMaintenanceStartTime() {
+        return Optional.ofNullable(this.weeklyMaintenanceStartTime);
     }
 
-    public WindowsFileSystemState(
-        @Nullable Output<String> activeDirectoryId,
-        @Nullable Output<List<String>> aliases,
-        @Nullable Output<String> arn,
-        @Nullable Output<WindowsFileSystemAuditLogConfigurationGetArgs> auditLogConfiguration,
-        @Nullable Output<Integer> automaticBackupRetentionDays,
-        @Nullable Output<String> backupId,
-        @Nullable Output<Boolean> copyTagsToBackups,
-        @Nullable Output<String> dailyAutomaticBackupStartTime,
-        @Nullable Output<String> deploymentType,
-        @Nullable Output<String> dnsName,
-        @Nullable Output<String> kmsKeyId,
-        @Nullable Output<List<String>> networkInterfaceIds,
-        @Nullable Output<String> ownerId,
-        @Nullable Output<String> preferredFileServerIp,
-        @Nullable Output<String> preferredSubnetId,
-        @Nullable Output<String> remoteAdministrationEndpoint,
-        @Nullable Output<List<String>> securityGroupIds,
-        @Nullable Output<WindowsFileSystemSelfManagedActiveDirectoryGetArgs> selfManagedActiveDirectory,
-        @Nullable Output<Boolean> skipFinalBackup,
-        @Nullable Output<Integer> storageCapacity,
-        @Nullable Output<String> storageType,
-        @Nullable Output<List<String>> subnetIds,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<Integer> throughputCapacity,
-        @Nullable Output<String> vpcId,
-        @Nullable Output<String> weeklyMaintenanceStartTime) {
-        this.activeDirectoryId = activeDirectoryId;
-        this.aliases = aliases;
-        this.arn = arn;
-        this.auditLogConfiguration = auditLogConfiguration;
-        this.automaticBackupRetentionDays = automaticBackupRetentionDays;
-        this.backupId = backupId;
-        this.copyTagsToBackups = copyTagsToBackups;
-        this.dailyAutomaticBackupStartTime = dailyAutomaticBackupStartTime;
-        this.deploymentType = deploymentType;
-        this.dnsName = dnsName;
-        this.kmsKeyId = kmsKeyId;
-        this.networkInterfaceIds = networkInterfaceIds;
-        this.ownerId = ownerId;
-        this.preferredFileServerIp = preferredFileServerIp;
-        this.preferredSubnetId = preferredSubnetId;
-        this.remoteAdministrationEndpoint = remoteAdministrationEndpoint;
-        this.securityGroupIds = securityGroupIds;
-        this.selfManagedActiveDirectory = selfManagedActiveDirectory;
-        this.skipFinalBackup = skipFinalBackup;
-        this.storageCapacity = storageCapacity;
-        this.storageType = storageType;
-        this.subnetIds = subnetIds;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.throughputCapacity = throughputCapacity;
-        this.vpcId = vpcId;
-        this.weeklyMaintenanceStartTime = weeklyMaintenanceStartTime;
-    }
+    private WindowsFileSystemState() {}
 
-    private WindowsFileSystemState() {
-        this.activeDirectoryId = Codegen.empty();
-        this.aliases = Codegen.empty();
-        this.arn = Codegen.empty();
-        this.auditLogConfiguration = Codegen.empty();
-        this.automaticBackupRetentionDays = Codegen.empty();
-        this.backupId = Codegen.empty();
-        this.copyTagsToBackups = Codegen.empty();
-        this.dailyAutomaticBackupStartTime = Codegen.empty();
-        this.deploymentType = Codegen.empty();
-        this.dnsName = Codegen.empty();
-        this.kmsKeyId = Codegen.empty();
-        this.networkInterfaceIds = Codegen.empty();
-        this.ownerId = Codegen.empty();
-        this.preferredFileServerIp = Codegen.empty();
-        this.preferredSubnetId = Codegen.empty();
-        this.remoteAdministrationEndpoint = Codegen.empty();
-        this.securityGroupIds = Codegen.empty();
-        this.selfManagedActiveDirectory = Codegen.empty();
-        this.skipFinalBackup = Codegen.empty();
-        this.storageCapacity = Codegen.empty();
-        this.storageType = Codegen.empty();
-        this.subnetIds = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.throughputCapacity = Codegen.empty();
-        this.vpcId = Codegen.empty();
-        this.weeklyMaintenanceStartTime = Codegen.empty();
+    private WindowsFileSystemState(WindowsFileSystemState $) {
+        this.activeDirectoryId = $.activeDirectoryId;
+        this.aliases = $.aliases;
+        this.arn = $.arn;
+        this.auditLogConfiguration = $.auditLogConfiguration;
+        this.automaticBackupRetentionDays = $.automaticBackupRetentionDays;
+        this.backupId = $.backupId;
+        this.copyTagsToBackups = $.copyTagsToBackups;
+        this.dailyAutomaticBackupStartTime = $.dailyAutomaticBackupStartTime;
+        this.deploymentType = $.deploymentType;
+        this.dnsName = $.dnsName;
+        this.kmsKeyId = $.kmsKeyId;
+        this.networkInterfaceIds = $.networkInterfaceIds;
+        this.ownerId = $.ownerId;
+        this.preferredFileServerIp = $.preferredFileServerIp;
+        this.preferredSubnetId = $.preferredSubnetId;
+        this.remoteAdministrationEndpoint = $.remoteAdministrationEndpoint;
+        this.securityGroupIds = $.securityGroupIds;
+        this.selfManagedActiveDirectory = $.selfManagedActiveDirectory;
+        this.skipFinalBackup = $.skipFinalBackup;
+        this.storageCapacity = $.storageCapacity;
+        this.storageType = $.storageType;
+        this.subnetIds = $.subnetIds;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.throughputCapacity = $.throughputCapacity;
+        this.vpcId = $.vpcId;
+        this.weeklyMaintenanceStartTime = $.weeklyMaintenanceStartTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WindowsFileSystemState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> activeDirectoryId;
-        private @Nullable Output<List<String>> aliases;
-        private @Nullable Output<String> arn;
-        private @Nullable Output<WindowsFileSystemAuditLogConfigurationGetArgs> auditLogConfiguration;
-        private @Nullable Output<Integer> automaticBackupRetentionDays;
-        private @Nullable Output<String> backupId;
-        private @Nullable Output<Boolean> copyTagsToBackups;
-        private @Nullable Output<String> dailyAutomaticBackupStartTime;
-        private @Nullable Output<String> deploymentType;
-        private @Nullable Output<String> dnsName;
-        private @Nullable Output<String> kmsKeyId;
-        private @Nullable Output<List<String>> networkInterfaceIds;
-        private @Nullable Output<String> ownerId;
-        private @Nullable Output<String> preferredFileServerIp;
-        private @Nullable Output<String> preferredSubnetId;
-        private @Nullable Output<String> remoteAdministrationEndpoint;
-        private @Nullable Output<List<String>> securityGroupIds;
-        private @Nullable Output<WindowsFileSystemSelfManagedActiveDirectoryGetArgs> selfManagedActiveDirectory;
-        private @Nullable Output<Boolean> skipFinalBackup;
-        private @Nullable Output<Integer> storageCapacity;
-        private @Nullable Output<String> storageType;
-        private @Nullable Output<List<String>> subnetIds;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<Integer> throughputCapacity;
-        private @Nullable Output<String> vpcId;
-        private @Nullable Output<String> weeklyMaintenanceStartTime;
+        private WindowsFileSystemState $;
 
         public Builder() {
-    	      // Empty
+            $ = new WindowsFileSystemState();
         }
 
         public Builder(WindowsFileSystemState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.activeDirectoryId = defaults.activeDirectoryId;
-    	      this.aliases = defaults.aliases;
-    	      this.arn = defaults.arn;
-    	      this.auditLogConfiguration = defaults.auditLogConfiguration;
-    	      this.automaticBackupRetentionDays = defaults.automaticBackupRetentionDays;
-    	      this.backupId = defaults.backupId;
-    	      this.copyTagsToBackups = defaults.copyTagsToBackups;
-    	      this.dailyAutomaticBackupStartTime = defaults.dailyAutomaticBackupStartTime;
-    	      this.deploymentType = defaults.deploymentType;
-    	      this.dnsName = defaults.dnsName;
-    	      this.kmsKeyId = defaults.kmsKeyId;
-    	      this.networkInterfaceIds = defaults.networkInterfaceIds;
-    	      this.ownerId = defaults.ownerId;
-    	      this.preferredFileServerIp = defaults.preferredFileServerIp;
-    	      this.preferredSubnetId = defaults.preferredSubnetId;
-    	      this.remoteAdministrationEndpoint = defaults.remoteAdministrationEndpoint;
-    	      this.securityGroupIds = defaults.securityGroupIds;
-    	      this.selfManagedActiveDirectory = defaults.selfManagedActiveDirectory;
-    	      this.skipFinalBackup = defaults.skipFinalBackup;
-    	      this.storageCapacity = defaults.storageCapacity;
-    	      this.storageType = defaults.storageType;
-    	      this.subnetIds = defaults.subnetIds;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.throughputCapacity = defaults.throughputCapacity;
-    	      this.vpcId = defaults.vpcId;
-    	      this.weeklyMaintenanceStartTime = defaults.weeklyMaintenanceStartTime;
+            $ = new WindowsFileSystemState(Objects.requireNonNull(defaults));
         }
 
         public Builder activeDirectoryId(@Nullable Output<String> activeDirectoryId) {
-            this.activeDirectoryId = activeDirectoryId;
+            $.activeDirectoryId = activeDirectoryId;
             return this;
         }
-        public Builder activeDirectoryId(@Nullable String activeDirectoryId) {
-            this.activeDirectoryId = Codegen.ofNullable(activeDirectoryId);
-            return this;
+
+        public Builder activeDirectoryId(String activeDirectoryId) {
+            return activeDirectoryId(Output.of(activeDirectoryId));
         }
+
         public Builder aliases(@Nullable Output<List<String>> aliases) {
-            this.aliases = aliases;
+            $.aliases = aliases;
             return this;
         }
-        public Builder aliases(@Nullable List<String> aliases) {
-            this.aliases = Codegen.ofNullable(aliases);
-            return this;
+
+        public Builder aliases(List<String> aliases) {
+            return aliases(Output.of(aliases));
         }
+
         public Builder aliases(String... aliases) {
             return aliases(List.of(aliases));
         }
+
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder auditLogConfiguration(@Nullable Output<WindowsFileSystemAuditLogConfigurationGetArgs> auditLogConfiguration) {
-            this.auditLogConfiguration = auditLogConfiguration;
+            $.auditLogConfiguration = auditLogConfiguration;
             return this;
         }
-        public Builder auditLogConfiguration(@Nullable WindowsFileSystemAuditLogConfigurationGetArgs auditLogConfiguration) {
-            this.auditLogConfiguration = Codegen.ofNullable(auditLogConfiguration);
-            return this;
+
+        public Builder auditLogConfiguration(WindowsFileSystemAuditLogConfigurationGetArgs auditLogConfiguration) {
+            return auditLogConfiguration(Output.of(auditLogConfiguration));
         }
+
         public Builder automaticBackupRetentionDays(@Nullable Output<Integer> automaticBackupRetentionDays) {
-            this.automaticBackupRetentionDays = automaticBackupRetentionDays;
+            $.automaticBackupRetentionDays = automaticBackupRetentionDays;
             return this;
         }
-        public Builder automaticBackupRetentionDays(@Nullable Integer automaticBackupRetentionDays) {
-            this.automaticBackupRetentionDays = Codegen.ofNullable(automaticBackupRetentionDays);
-            return this;
+
+        public Builder automaticBackupRetentionDays(Integer automaticBackupRetentionDays) {
+            return automaticBackupRetentionDays(Output.of(automaticBackupRetentionDays));
         }
+
         public Builder backupId(@Nullable Output<String> backupId) {
-            this.backupId = backupId;
+            $.backupId = backupId;
             return this;
         }
-        public Builder backupId(@Nullable String backupId) {
-            this.backupId = Codegen.ofNullable(backupId);
-            return this;
+
+        public Builder backupId(String backupId) {
+            return backupId(Output.of(backupId));
         }
+
         public Builder copyTagsToBackups(@Nullable Output<Boolean> copyTagsToBackups) {
-            this.copyTagsToBackups = copyTagsToBackups;
+            $.copyTagsToBackups = copyTagsToBackups;
             return this;
         }
-        public Builder copyTagsToBackups(@Nullable Boolean copyTagsToBackups) {
-            this.copyTagsToBackups = Codegen.ofNullable(copyTagsToBackups);
-            return this;
+
+        public Builder copyTagsToBackups(Boolean copyTagsToBackups) {
+            return copyTagsToBackups(Output.of(copyTagsToBackups));
         }
+
         public Builder dailyAutomaticBackupStartTime(@Nullable Output<String> dailyAutomaticBackupStartTime) {
-            this.dailyAutomaticBackupStartTime = dailyAutomaticBackupStartTime;
+            $.dailyAutomaticBackupStartTime = dailyAutomaticBackupStartTime;
             return this;
         }
-        public Builder dailyAutomaticBackupStartTime(@Nullable String dailyAutomaticBackupStartTime) {
-            this.dailyAutomaticBackupStartTime = Codegen.ofNullable(dailyAutomaticBackupStartTime);
-            return this;
+
+        public Builder dailyAutomaticBackupStartTime(String dailyAutomaticBackupStartTime) {
+            return dailyAutomaticBackupStartTime(Output.of(dailyAutomaticBackupStartTime));
         }
+
         public Builder deploymentType(@Nullable Output<String> deploymentType) {
-            this.deploymentType = deploymentType;
+            $.deploymentType = deploymentType;
             return this;
         }
-        public Builder deploymentType(@Nullable String deploymentType) {
-            this.deploymentType = Codegen.ofNullable(deploymentType);
-            return this;
+
+        public Builder deploymentType(String deploymentType) {
+            return deploymentType(Output.of(deploymentType));
         }
+
         public Builder dnsName(@Nullable Output<String> dnsName) {
-            this.dnsName = dnsName;
+            $.dnsName = dnsName;
             return this;
         }
-        public Builder dnsName(@Nullable String dnsName) {
-            this.dnsName = Codegen.ofNullable(dnsName);
-            return this;
+
+        public Builder dnsName(String dnsName) {
+            return dnsName(Output.of(dnsName));
         }
+
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
-            this.kmsKeyId = kmsKeyId;
+            $.kmsKeyId = kmsKeyId;
             return this;
         }
-        public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
-            return this;
+
+        public Builder kmsKeyId(String kmsKeyId) {
+            return kmsKeyId(Output.of(kmsKeyId));
         }
+
         public Builder networkInterfaceIds(@Nullable Output<List<String>> networkInterfaceIds) {
-            this.networkInterfaceIds = networkInterfaceIds;
+            $.networkInterfaceIds = networkInterfaceIds;
             return this;
         }
-        public Builder networkInterfaceIds(@Nullable List<String> networkInterfaceIds) {
-            this.networkInterfaceIds = Codegen.ofNullable(networkInterfaceIds);
-            return this;
+
+        public Builder networkInterfaceIds(List<String> networkInterfaceIds) {
+            return networkInterfaceIds(Output.of(networkInterfaceIds));
         }
+
         public Builder networkInterfaceIds(String... networkInterfaceIds) {
             return networkInterfaceIds(List.of(networkInterfaceIds));
         }
+
         public Builder ownerId(@Nullable Output<String> ownerId) {
-            this.ownerId = ownerId;
+            $.ownerId = ownerId;
             return this;
         }
-        public Builder ownerId(@Nullable String ownerId) {
-            this.ownerId = Codegen.ofNullable(ownerId);
-            return this;
+
+        public Builder ownerId(String ownerId) {
+            return ownerId(Output.of(ownerId));
         }
+
         public Builder preferredFileServerIp(@Nullable Output<String> preferredFileServerIp) {
-            this.preferredFileServerIp = preferredFileServerIp;
+            $.preferredFileServerIp = preferredFileServerIp;
             return this;
         }
-        public Builder preferredFileServerIp(@Nullable String preferredFileServerIp) {
-            this.preferredFileServerIp = Codegen.ofNullable(preferredFileServerIp);
-            return this;
+
+        public Builder preferredFileServerIp(String preferredFileServerIp) {
+            return preferredFileServerIp(Output.of(preferredFileServerIp));
         }
+
         public Builder preferredSubnetId(@Nullable Output<String> preferredSubnetId) {
-            this.preferredSubnetId = preferredSubnetId;
+            $.preferredSubnetId = preferredSubnetId;
             return this;
         }
-        public Builder preferredSubnetId(@Nullable String preferredSubnetId) {
-            this.preferredSubnetId = Codegen.ofNullable(preferredSubnetId);
-            return this;
+
+        public Builder preferredSubnetId(String preferredSubnetId) {
+            return preferredSubnetId(Output.of(preferredSubnetId));
         }
+
         public Builder remoteAdministrationEndpoint(@Nullable Output<String> remoteAdministrationEndpoint) {
-            this.remoteAdministrationEndpoint = remoteAdministrationEndpoint;
+            $.remoteAdministrationEndpoint = remoteAdministrationEndpoint;
             return this;
         }
-        public Builder remoteAdministrationEndpoint(@Nullable String remoteAdministrationEndpoint) {
-            this.remoteAdministrationEndpoint = Codegen.ofNullable(remoteAdministrationEndpoint);
-            return this;
+
+        public Builder remoteAdministrationEndpoint(String remoteAdministrationEndpoint) {
+            return remoteAdministrationEndpoint(Output.of(remoteAdministrationEndpoint));
         }
+
         public Builder securityGroupIds(@Nullable Output<List<String>> securityGroupIds) {
-            this.securityGroupIds = securityGroupIds;
+            $.securityGroupIds = securityGroupIds;
             return this;
         }
-        public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
-            this.securityGroupIds = Codegen.ofNullable(securityGroupIds);
-            return this;
+
+        public Builder securityGroupIds(List<String> securityGroupIds) {
+            return securityGroupIds(Output.of(securityGroupIds));
         }
+
         public Builder securityGroupIds(String... securityGroupIds) {
             return securityGroupIds(List.of(securityGroupIds));
         }
+
         public Builder selfManagedActiveDirectory(@Nullable Output<WindowsFileSystemSelfManagedActiveDirectoryGetArgs> selfManagedActiveDirectory) {
-            this.selfManagedActiveDirectory = selfManagedActiveDirectory;
+            $.selfManagedActiveDirectory = selfManagedActiveDirectory;
             return this;
         }
-        public Builder selfManagedActiveDirectory(@Nullable WindowsFileSystemSelfManagedActiveDirectoryGetArgs selfManagedActiveDirectory) {
-            this.selfManagedActiveDirectory = Codegen.ofNullable(selfManagedActiveDirectory);
-            return this;
+
+        public Builder selfManagedActiveDirectory(WindowsFileSystemSelfManagedActiveDirectoryGetArgs selfManagedActiveDirectory) {
+            return selfManagedActiveDirectory(Output.of(selfManagedActiveDirectory));
         }
+
         public Builder skipFinalBackup(@Nullable Output<Boolean> skipFinalBackup) {
-            this.skipFinalBackup = skipFinalBackup;
+            $.skipFinalBackup = skipFinalBackup;
             return this;
         }
-        public Builder skipFinalBackup(@Nullable Boolean skipFinalBackup) {
-            this.skipFinalBackup = Codegen.ofNullable(skipFinalBackup);
-            return this;
+
+        public Builder skipFinalBackup(Boolean skipFinalBackup) {
+            return skipFinalBackup(Output.of(skipFinalBackup));
         }
+
         public Builder storageCapacity(@Nullable Output<Integer> storageCapacity) {
-            this.storageCapacity = storageCapacity;
+            $.storageCapacity = storageCapacity;
             return this;
         }
-        public Builder storageCapacity(@Nullable Integer storageCapacity) {
-            this.storageCapacity = Codegen.ofNullable(storageCapacity);
-            return this;
+
+        public Builder storageCapacity(Integer storageCapacity) {
+            return storageCapacity(Output.of(storageCapacity));
         }
+
         public Builder storageType(@Nullable Output<String> storageType) {
-            this.storageType = storageType;
+            $.storageType = storageType;
             return this;
         }
-        public Builder storageType(@Nullable String storageType) {
-            this.storageType = Codegen.ofNullable(storageType);
-            return this;
+
+        public Builder storageType(String storageType) {
+            return storageType(Output.of(storageType));
         }
+
         public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
-            this.subnetIds = subnetIds;
+            $.subnetIds = subnetIds;
             return this;
         }
-        public Builder subnetIds(@Nullable List<String> subnetIds) {
-            this.subnetIds = Codegen.ofNullable(subnetIds);
-            return this;
+
+        public Builder subnetIds(List<String> subnetIds) {
+            return subnetIds(Output.of(subnetIds));
         }
+
         public Builder subnetIds(String... subnetIds) {
             return subnetIds(List.of(subnetIds));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder throughputCapacity(@Nullable Output<Integer> throughputCapacity) {
-            this.throughputCapacity = throughputCapacity;
+            $.throughputCapacity = throughputCapacity;
             return this;
         }
-        public Builder throughputCapacity(@Nullable Integer throughputCapacity) {
-            this.throughputCapacity = Codegen.ofNullable(throughputCapacity);
-            return this;
+
+        public Builder throughputCapacity(Integer throughputCapacity) {
+            return throughputCapacity(Output.of(throughputCapacity));
         }
+
         public Builder vpcId(@Nullable Output<String> vpcId) {
-            this.vpcId = vpcId;
+            $.vpcId = vpcId;
             return this;
         }
-        public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Codegen.ofNullable(vpcId);
-            return this;
+
+        public Builder vpcId(String vpcId) {
+            return vpcId(Output.of(vpcId));
         }
+
         public Builder weeklyMaintenanceStartTime(@Nullable Output<String> weeklyMaintenanceStartTime) {
-            this.weeklyMaintenanceStartTime = weeklyMaintenanceStartTime;
+            $.weeklyMaintenanceStartTime = weeklyMaintenanceStartTime;
             return this;
         }
-        public Builder weeklyMaintenanceStartTime(@Nullable String weeklyMaintenanceStartTime) {
-            this.weeklyMaintenanceStartTime = Codegen.ofNullable(weeklyMaintenanceStartTime);
-            return this;
-        }        public WindowsFileSystemState build() {
-            return new WindowsFileSystemState(activeDirectoryId, aliases, arn, auditLogConfiguration, automaticBackupRetentionDays, backupId, copyTagsToBackups, dailyAutomaticBackupStartTime, deploymentType, dnsName, kmsKeyId, networkInterfaceIds, ownerId, preferredFileServerIp, preferredSubnetId, remoteAdministrationEndpoint, securityGroupIds, selfManagedActiveDirectory, skipFinalBackup, storageCapacity, storageType, subnetIds, tags, tagsAll, throughputCapacity, vpcId, weeklyMaintenanceStartTime);
+
+        public Builder weeklyMaintenanceStartTime(String weeklyMaintenanceStartTime) {
+            return weeklyMaintenanceStartTime(Output.of(weeklyMaintenanceStartTime));
+        }
+
+        public WindowsFileSystemState build() {
+            return $;
         }
     }
+
 }

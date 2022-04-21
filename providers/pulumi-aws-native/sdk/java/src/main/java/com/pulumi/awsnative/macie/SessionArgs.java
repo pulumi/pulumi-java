@@ -7,8 +7,8 @@ import com.pulumi.awsnative.macie.enums.SessionFindingPublishingFrequency;
 import com.pulumi.awsnative.macie.enums.SessionStatus;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class SessionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="findingPublishingFrequency")
-      private final @Nullable Output<SessionFindingPublishingFrequency> findingPublishingFrequency;
+    private @Nullable Output<SessionFindingPublishingFrequency> findingPublishingFrequency;
 
-    public Output<SessionFindingPublishingFrequency> findingPublishingFrequency() {
-        return this.findingPublishingFrequency == null ? Codegen.empty() : this.findingPublishingFrequency;
+    public Optional<Output<SessionFindingPublishingFrequency>> findingPublishingFrequency() {
+        return Optional.ofNullable(this.findingPublishingFrequency);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class SessionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<SessionStatus> status;
+    private @Nullable Output<SessionStatus> status;
 
-    public Output<SessionStatus> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<SessionStatus>> status() {
+        return Optional.ofNullable(this.status);
     }
 
-    public SessionArgs(
-        @Nullable Output<SessionFindingPublishingFrequency> findingPublishingFrequency,
-        @Nullable Output<SessionStatus> status) {
-        this.findingPublishingFrequency = findingPublishingFrequency;
-        this.status = status;
-    }
+    private SessionArgs() {}
 
-    private SessionArgs() {
-        this.findingPublishingFrequency = Codegen.empty();
-        this.status = Codegen.empty();
+    private SessionArgs(SessionArgs $) {
+        this.findingPublishingFrequency = $.findingPublishingFrequency;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SessionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<SessionFindingPublishingFrequency> findingPublishingFrequency;
-        private @Nullable Output<SessionStatus> status;
+        private SessionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SessionArgs();
         }
 
         public Builder(SessionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.findingPublishingFrequency = defaults.findingPublishingFrequency;
-    	      this.status = defaults.status;
+            $ = new SessionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder findingPublishingFrequency(@Nullable Output<SessionFindingPublishingFrequency> findingPublishingFrequency) {
-            this.findingPublishingFrequency = findingPublishingFrequency;
+            $.findingPublishingFrequency = findingPublishingFrequency;
             return this;
         }
-        public Builder findingPublishingFrequency(@Nullable SessionFindingPublishingFrequency findingPublishingFrequency) {
-            this.findingPublishingFrequency = Codegen.ofNullable(findingPublishingFrequency);
-            return this;
+
+        public Builder findingPublishingFrequency(SessionFindingPublishingFrequency findingPublishingFrequency) {
+            return findingPublishingFrequency(Output.of(findingPublishingFrequency));
         }
+
         public Builder status(@Nullable Output<SessionStatus> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable SessionStatus status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
-        }        public SessionArgs build() {
-            return new SessionArgs(findingPublishingFrequency, status);
+
+        public Builder status(SessionStatus status) {
+            return status(Output.of(status));
+        }
+
+        public SessionArgs build() {
+            return $;
         }
     }
+
 }

@@ -13,62 +13,59 @@ public final class GetServicePerimeterArgs extends com.pulumi.resources.InvokeAr
     public static final GetServicePerimeterArgs Empty = new GetServicePerimeterArgs();
 
     @Import(name="accessPolicyId", required=true)
-      private final String accessPolicyId;
+    private String accessPolicyId;
 
     public String accessPolicyId() {
         return this.accessPolicyId;
     }
 
     @Import(name="servicePerimeterId", required=true)
-      private final String servicePerimeterId;
+    private String servicePerimeterId;
 
     public String servicePerimeterId() {
         return this.servicePerimeterId;
     }
 
-    public GetServicePerimeterArgs(
-        String accessPolicyId,
-        String servicePerimeterId) {
-        this.accessPolicyId = Objects.requireNonNull(accessPolicyId, "expected parameter 'accessPolicyId' to be non-null");
-        this.servicePerimeterId = Objects.requireNonNull(servicePerimeterId, "expected parameter 'servicePerimeterId' to be non-null");
-    }
+    private GetServicePerimeterArgs() {}
 
-    private GetServicePerimeterArgs() {
-        this.accessPolicyId = null;
-        this.servicePerimeterId = null;
+    private GetServicePerimeterArgs(GetServicePerimeterArgs $) {
+        this.accessPolicyId = $.accessPolicyId;
+        this.servicePerimeterId = $.servicePerimeterId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetServicePerimeterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accessPolicyId;
-        private String servicePerimeterId;
+        private GetServicePerimeterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetServicePerimeterArgs();
         }
 
         public Builder(GetServicePerimeterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessPolicyId = defaults.accessPolicyId;
-    	      this.servicePerimeterId = defaults.servicePerimeterId;
+            $ = new GetServicePerimeterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessPolicyId(String accessPolicyId) {
-            this.accessPolicyId = Objects.requireNonNull(accessPolicyId);
+            $.accessPolicyId = accessPolicyId;
             return this;
         }
+
         public Builder servicePerimeterId(String servicePerimeterId) {
-            this.servicePerimeterId = Objects.requireNonNull(servicePerimeterId);
+            $.servicePerimeterId = servicePerimeterId;
             return this;
-        }        public GetServicePerimeterArgs build() {
-            return new GetServicePerimeterArgs(accessPolicyId, servicePerimeterId);
+        }
+
+        public GetServicePerimeterArgs build() {
+            $.accessPolicyId = Objects.requireNonNull($.accessPolicyId, "expected parameter 'accessPolicyId' to be non-null");
+            $.servicePerimeterId = Objects.requireNonNull($.servicePerimeterId, "expected parameter 'servicePerimeterId' to be non-null");
+            return $;
         }
     }
+
 }

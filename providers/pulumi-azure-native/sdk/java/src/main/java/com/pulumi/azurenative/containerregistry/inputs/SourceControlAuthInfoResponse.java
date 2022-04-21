@@ -24,10 +24,10 @@ public final class SourceControlAuthInfoResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="expiresIn")
-      private final @Nullable Integer expiresIn;
+    private @Nullable Integer expiresIn;
 
     public Optional<Integer> expiresIn() {
-        return this.expiresIn == null ? Optional.empty() : Optional.ofNullable(this.expiresIn);
+        return Optional.ofNullable(this.expiresIn);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class SourceControlAuthInfoResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="refreshToken")
-      private final @Nullable String refreshToken;
+    private @Nullable String refreshToken;
 
     public Optional<String> refreshToken() {
-        return this.refreshToken == null ? Optional.empty() : Optional.ofNullable(this.refreshToken);
+        return Optional.ofNullable(this.refreshToken);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class SourceControlAuthInfoResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="scope")
-      private final @Nullable String scope;
+    private @Nullable String scope;
 
     public Optional<String> scope() {
-        return this.scope == null ? Optional.empty() : Optional.ofNullable(this.scope);
+        return Optional.ofNullable(this.scope);
     }
 
     /**
@@ -57,7 +57,7 @@ public final class SourceControlAuthInfoResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="token", required=true)
-      private final String token;
+    private String token;
 
     public String token() {
         return this.token;
@@ -68,82 +68,69 @@ public final class SourceControlAuthInfoResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="tokenType")
-      private final @Nullable String tokenType;
+    private @Nullable String tokenType;
 
     public Optional<String> tokenType() {
-        return this.tokenType == null ? Optional.empty() : Optional.ofNullable(this.tokenType);
+        return Optional.ofNullable(this.tokenType);
     }
 
-    public SourceControlAuthInfoResponse(
-        @Nullable Integer expiresIn,
-        @Nullable String refreshToken,
-        @Nullable String scope,
-        String token,
-        @Nullable String tokenType) {
-        this.expiresIn = expiresIn;
-        this.refreshToken = refreshToken;
-        this.scope = scope;
-        this.token = Objects.requireNonNull(token, "expected parameter 'token' to be non-null");
-        this.tokenType = tokenType;
-    }
+    private SourceControlAuthInfoResponse() {}
 
-    private SourceControlAuthInfoResponse() {
-        this.expiresIn = null;
-        this.refreshToken = null;
-        this.scope = null;
-        this.token = null;
-        this.tokenType = null;
+    private SourceControlAuthInfoResponse(SourceControlAuthInfoResponse $) {
+        this.expiresIn = $.expiresIn;
+        this.refreshToken = $.refreshToken;
+        this.scope = $.scope;
+        this.token = $.token;
+        this.tokenType = $.tokenType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SourceControlAuthInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer expiresIn;
-        private @Nullable String refreshToken;
-        private @Nullable String scope;
-        private String token;
-        private @Nullable String tokenType;
+        private SourceControlAuthInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SourceControlAuthInfoResponse();
         }
 
         public Builder(SourceControlAuthInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expiresIn = defaults.expiresIn;
-    	      this.refreshToken = defaults.refreshToken;
-    	      this.scope = defaults.scope;
-    	      this.token = defaults.token;
-    	      this.tokenType = defaults.tokenType;
+            $ = new SourceControlAuthInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder expiresIn(@Nullable Integer expiresIn) {
-            this.expiresIn = expiresIn;
+            $.expiresIn = expiresIn;
             return this;
         }
+
         public Builder refreshToken(@Nullable String refreshToken) {
-            this.refreshToken = refreshToken;
+            $.refreshToken = refreshToken;
             return this;
         }
+
         public Builder scope(@Nullable String scope) {
-            this.scope = scope;
+            $.scope = scope;
             return this;
         }
+
         public Builder token(String token) {
-            this.token = Objects.requireNonNull(token);
+            $.token = token;
             return this;
         }
+
         public Builder tokenType(@Nullable String tokenType) {
-            this.tokenType = tokenType;
+            $.tokenType = tokenType;
             return this;
-        }        public SourceControlAuthInfoResponse build() {
-            return new SourceControlAuthInfoResponse(expiresIn, refreshToken, scope, token, tokenType);
+        }
+
+        public SourceControlAuthInfoResponse build() {
+            $.token = Objects.requireNonNull($.token, "expected parameter 'token' to be non-null");
+            return $;
         }
     }
+
 }

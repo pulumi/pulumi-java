@@ -15,62 +15,58 @@ public final class GetConfigArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetConfigArgs Empty = new GetConfigArgs();
 
     @Import(name="configId", required=true)
-      private final String configId;
+    private String configId;
 
     public String configId() {
         return this.configId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetConfigArgs(
-        String configId,
-        @Nullable String project) {
-        this.configId = Objects.requireNonNull(configId, "expected parameter 'configId' to be non-null");
-        this.project = project;
-    }
+    private GetConfigArgs() {}
 
-    private GetConfigArgs() {
-        this.configId = null;
-        this.project = null;
+    private GetConfigArgs(GetConfigArgs $) {
+        this.configId = $.configId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String configId;
-        private @Nullable String project;
+        private GetConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetConfigArgs();
         }
 
         public Builder(GetConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configId = defaults.configId;
-    	      this.project = defaults.project;
+            $ = new GetConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configId(String configId) {
-            this.configId = Objects.requireNonNull(configId);
+            $.configId = configId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetConfigArgs build() {
-            return new GetConfigArgs(configId, project);
+        }
+
+        public GetConfigArgs build() {
+            $.configId = Objects.requireNonNull($.configId, "expected parameter 'configId' to be non-null");
+            return $;
         }
     }
+
 }

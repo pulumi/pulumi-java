@@ -22,7 +22,7 @@ public final class DnsKeySpecResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="algorithm", required=true)
-      private final String algorithm;
+    private String algorithm;
 
     public String algorithm() {
         return this.algorithm;
@@ -33,7 +33,7 @@ public final class DnsKeySpecResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="keyLength", required=true)
-      private final Integer keyLength;
+    private Integer keyLength;
 
     public Integer keyLength() {
         return this.keyLength;
@@ -44,80 +44,73 @@ public final class DnsKeySpecResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="keyType", required=true)
-      private final String keyType;
+    private String keyType;
 
     public String keyType() {
         return this.keyType;
     }
 
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
     }
 
-    public DnsKeySpecResponse(
-        String algorithm,
-        Integer keyLength,
-        String keyType,
-        String kind) {
-        this.algorithm = Objects.requireNonNull(algorithm, "expected parameter 'algorithm' to be non-null");
-        this.keyLength = Objects.requireNonNull(keyLength, "expected parameter 'keyLength' to be non-null");
-        this.keyType = Objects.requireNonNull(keyType, "expected parameter 'keyType' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-    }
+    private DnsKeySpecResponse() {}
 
-    private DnsKeySpecResponse() {
-        this.algorithm = null;
-        this.keyLength = null;
-        this.keyType = null;
-        this.kind = null;
+    private DnsKeySpecResponse(DnsKeySpecResponse $) {
+        this.algorithm = $.algorithm;
+        this.keyLength = $.keyLength;
+        this.keyType = $.keyType;
+        this.kind = $.kind;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DnsKeySpecResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String algorithm;
-        private Integer keyLength;
-        private String keyType;
-        private String kind;
+        private DnsKeySpecResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DnsKeySpecResponse();
         }
 
         public Builder(DnsKeySpecResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.algorithm = defaults.algorithm;
-    	      this.keyLength = defaults.keyLength;
-    	      this.keyType = defaults.keyType;
-    	      this.kind = defaults.kind;
+            $ = new DnsKeySpecResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder algorithm(String algorithm) {
-            this.algorithm = Objects.requireNonNull(algorithm);
+            $.algorithm = algorithm;
             return this;
         }
+
         public Builder keyLength(Integer keyLength) {
-            this.keyLength = Objects.requireNonNull(keyLength);
+            $.keyLength = keyLength;
             return this;
         }
+
         public Builder keyType(String keyType) {
-            this.keyType = Objects.requireNonNull(keyType);
+            $.keyType = keyType;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
-        }        public DnsKeySpecResponse build() {
-            return new DnsKeySpecResponse(algorithm, keyLength, keyType, kind);
+        }
+
+        public DnsKeySpecResponse build() {
+            $.algorithm = Objects.requireNonNull($.algorithm, "expected parameter 'algorithm' to be non-null");
+            $.keyLength = Objects.requireNonNull($.keyLength, "expected parameter 'keyLength' to be non-null");
+            $.keyType = Objects.requireNonNull($.keyType, "expected parameter 'keyType' to be non-null");
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,45 +23,44 @@ public final class MapsAccountPropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="xMsClientId")
-      private final @Nullable String xMsClientId;
+    private @Nullable String xMsClientId;
 
     public Optional<String> xMsClientId() {
-        return this.xMsClientId == null ? Optional.empty() : Optional.ofNullable(this.xMsClientId);
+        return Optional.ofNullable(this.xMsClientId);
     }
 
-    public MapsAccountPropertiesResponse(@Nullable String xMsClientId) {
-        this.xMsClientId = xMsClientId;
-    }
+    private MapsAccountPropertiesResponse() {}
 
-    private MapsAccountPropertiesResponse() {
-        this.xMsClientId = null;
+    private MapsAccountPropertiesResponse(MapsAccountPropertiesResponse $) {
+        this.xMsClientId = $.xMsClientId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MapsAccountPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String xMsClientId;
+        private MapsAccountPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MapsAccountPropertiesResponse();
         }
 
         public Builder(MapsAccountPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.xMsClientId = defaults.xMsClientId;
+            $ = new MapsAccountPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder xMsClientId(@Nullable String xMsClientId) {
-            this.xMsClientId = xMsClientId;
+            $.xMsClientId = xMsClientId;
             return this;
-        }        public MapsAccountPropertiesResponse build() {
-            return new MapsAccountPropertiesResponse(xMsClientId);
+        }
+
+        public MapsAccountPropertiesResponse build() {
+            return $;
         }
     }
+
 }

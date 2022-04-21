@@ -21,7 +21,7 @@ public final class ShareAccessRightResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="accessType", required=true)
-      private final String accessType;
+    private String accessType;
 
     public String accessType() {
         return this.accessType;
@@ -32,55 +32,52 @@ public final class ShareAccessRightResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="shareId", required=true)
-      private final String shareId;
+    private String shareId;
 
     public String shareId() {
         return this.shareId;
     }
 
-    public ShareAccessRightResponse(
-        String accessType,
-        String shareId) {
-        this.accessType = Objects.requireNonNull(accessType, "expected parameter 'accessType' to be non-null");
-        this.shareId = Objects.requireNonNull(shareId, "expected parameter 'shareId' to be non-null");
-    }
+    private ShareAccessRightResponse() {}
 
-    private ShareAccessRightResponse() {
-        this.accessType = null;
-        this.shareId = null;
+    private ShareAccessRightResponse(ShareAccessRightResponse $) {
+        this.accessType = $.accessType;
+        this.shareId = $.shareId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ShareAccessRightResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accessType;
-        private String shareId;
+        private ShareAccessRightResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ShareAccessRightResponse();
         }
 
         public Builder(ShareAccessRightResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessType = defaults.accessType;
-    	      this.shareId = defaults.shareId;
+            $ = new ShareAccessRightResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accessType(String accessType) {
-            this.accessType = Objects.requireNonNull(accessType);
+            $.accessType = accessType;
             return this;
         }
+
         public Builder shareId(String shareId) {
-            this.shareId = Objects.requireNonNull(shareId);
+            $.shareId = shareId;
             return this;
-        }        public ShareAccessRightResponse build() {
-            return new ShareAccessRightResponse(accessType, shareId);
+        }
+
+        public ShareAccessRightResponse build() {
+            $.accessType = Objects.requireNonNull($.accessType, "expected parameter 'accessType' to be non-null");
+            $.shareId = Objects.requireNonNull($.shareId, "expected parameter 'shareId' to be non-null");
+            return $;
         }
     }
+
 }

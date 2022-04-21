@@ -19,7 +19,7 @@ public final class GetAccessPointRootDirectory extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="creationInfos", required=true)
-      private final List<GetAccessPointRootDirectoryCreationInfo> creationInfos;
+    private List<GetAccessPointRootDirectoryCreationInfo> creationInfos;
 
     public List<GetAccessPointRootDirectoryCreationInfo> creationInfos() {
         return this.creationInfos;
@@ -30,58 +30,56 @@ public final class GetAccessPointRootDirectory extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="path", required=true)
-      private final String path;
+    private String path;
 
     public String path() {
         return this.path;
     }
 
-    public GetAccessPointRootDirectory(
-        List<GetAccessPointRootDirectoryCreationInfo> creationInfos,
-        String path) {
-        this.creationInfos = Objects.requireNonNull(creationInfos, "expected parameter 'creationInfos' to be non-null");
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-    }
+    private GetAccessPointRootDirectory() {}
 
-    private GetAccessPointRootDirectory() {
-        this.creationInfos = List.of();
-        this.path = null;
+    private GetAccessPointRootDirectory(GetAccessPointRootDirectory $) {
+        this.creationInfos = $.creationInfos;
+        this.path = $.path;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAccessPointRootDirectory defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GetAccessPointRootDirectoryCreationInfo> creationInfos;
-        private String path;
+        private GetAccessPointRootDirectory $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAccessPointRootDirectory();
         }
 
         public Builder(GetAccessPointRootDirectory defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.creationInfos = defaults.creationInfos;
-    	      this.path = defaults.path;
+            $ = new GetAccessPointRootDirectory(Objects.requireNonNull(defaults));
         }
 
         public Builder creationInfos(List<GetAccessPointRootDirectoryCreationInfo> creationInfos) {
-            this.creationInfos = Objects.requireNonNull(creationInfos);
+            $.creationInfos = creationInfos;
             return this;
         }
+
         public Builder creationInfos(GetAccessPointRootDirectoryCreationInfo... creationInfos) {
             return creationInfos(List.of(creationInfos));
         }
+
         public Builder path(String path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
-        }        public GetAccessPointRootDirectory build() {
-            return new GetAccessPointRootDirectory(creationInfos, path);
+        }
+
+        public GetAccessPointRootDirectory build() {
+            $.creationInfos = Objects.requireNonNull($.creationInfos, "expected parameter 'creationInfos' to be non-null");
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            return $;
         }
     }
+
 }

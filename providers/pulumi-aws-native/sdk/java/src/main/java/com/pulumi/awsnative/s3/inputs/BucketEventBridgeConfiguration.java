@@ -21,45 +21,45 @@ public final class BucketEventBridgeConfiguration extends com.pulumi.resources.I
      * 
      */
     @Import(name="eventBridgeEnabled", required=true)
-      private final Boolean eventBridgeEnabled;
+    private Boolean eventBridgeEnabled;
 
     public Boolean eventBridgeEnabled() {
         return this.eventBridgeEnabled;
     }
 
-    public BucketEventBridgeConfiguration(Boolean eventBridgeEnabled) {
-        this.eventBridgeEnabled = Objects.requireNonNull(eventBridgeEnabled, "expected parameter 'eventBridgeEnabled' to be non-null");
-    }
+    private BucketEventBridgeConfiguration() {}
 
-    private BucketEventBridgeConfiguration() {
-        this.eventBridgeEnabled = null;
+    private BucketEventBridgeConfiguration(BucketEventBridgeConfiguration $) {
+        this.eventBridgeEnabled = $.eventBridgeEnabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketEventBridgeConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean eventBridgeEnabled;
+        private BucketEventBridgeConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketEventBridgeConfiguration();
         }
 
         public Builder(BucketEventBridgeConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.eventBridgeEnabled = defaults.eventBridgeEnabled;
+            $ = new BucketEventBridgeConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder eventBridgeEnabled(Boolean eventBridgeEnabled) {
-            this.eventBridgeEnabled = Objects.requireNonNull(eventBridgeEnabled);
+            $.eventBridgeEnabled = eventBridgeEnabled;
             return this;
-        }        public BucketEventBridgeConfiguration build() {
-            return new BucketEventBridgeConfiguration(eventBridgeEnabled);
+        }
+
+        public BucketEventBridgeConfiguration build() {
+            $.eventBridgeEnabled = Objects.requireNonNull($.eventBridgeEnabled, "expected parameter 'eventBridgeEnabled' to be non-null");
+            return $;
         }
     }
+
 }

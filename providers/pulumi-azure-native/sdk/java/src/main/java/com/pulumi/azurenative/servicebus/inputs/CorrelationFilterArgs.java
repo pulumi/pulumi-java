@@ -10,6 +10,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +27,10 @@ public final class CorrelationFilterArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="contentType")
-      private final @Nullable Output<String> contentType;
+    private @Nullable Output<String> contentType;
 
-    public Output<String> contentType() {
-        return this.contentType == null ? Codegen.empty() : this.contentType;
+    public Optional<Output<String>> contentType() {
+        return Optional.ofNullable(this.contentType);
     }
 
     /**
@@ -37,10 +38,10 @@ public final class CorrelationFilterArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="correlationId")
-      private final @Nullable Output<String> correlationId;
+    private @Nullable Output<String> correlationId;
 
-    public Output<String> correlationId() {
-        return this.correlationId == null ? Codegen.empty() : this.correlationId;
+    public Optional<Output<String>> correlationId() {
+        return Optional.ofNullable(this.correlationId);
     }
 
     /**
@@ -48,10 +49,10 @@ public final class CorrelationFilterArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="label")
-      private final @Nullable Output<String> label;
+    private @Nullable Output<String> label;
 
-    public Output<String> label() {
-        return this.label == null ? Codegen.empty() : this.label;
+    public Optional<Output<String>> label() {
+        return Optional.ofNullable(this.label);
     }
 
     /**
@@ -59,10 +60,10 @@ public final class CorrelationFilterArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="messageId")
-      private final @Nullable Output<String> messageId;
+    private @Nullable Output<String> messageId;
 
-    public Output<String> messageId() {
-        return this.messageId == null ? Codegen.empty() : this.messageId;
+    public Optional<Output<String>> messageId() {
+        return Optional.ofNullable(this.messageId);
     }
 
     /**
@@ -70,10 +71,10 @@ public final class CorrelationFilterArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<Map<String,String>> properties;
+    private @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<Map<String,String>>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -81,10 +82,10 @@ public final class CorrelationFilterArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="replyTo")
-      private final @Nullable Output<String> replyTo;
+    private @Nullable Output<String> replyTo;
 
-    public Output<String> replyTo() {
-        return this.replyTo == null ? Codegen.empty() : this.replyTo;
+    public Optional<Output<String>> replyTo() {
+        return Optional.ofNullable(this.replyTo);
     }
 
     /**
@@ -92,10 +93,10 @@ public final class CorrelationFilterArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="replyToSessionId")
-      private final @Nullable Output<String> replyToSessionId;
+    private @Nullable Output<String> replyToSessionId;
 
-    public Output<String> replyToSessionId() {
-        return this.replyToSessionId == null ? Codegen.empty() : this.replyToSessionId;
+    public Optional<Output<String>> replyToSessionId() {
+        return Optional.ofNullable(this.replyToSessionId);
     }
 
     /**
@@ -103,10 +104,10 @@ public final class CorrelationFilterArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="requiresPreprocessing")
-      private final @Nullable Output<Boolean> requiresPreprocessing;
+    private @Nullable Output<Boolean> requiresPreprocessing;
 
-    public Output<Boolean> requiresPreprocessing() {
-        return this.requiresPreprocessing == null ? Codegen.empty() : this.requiresPreprocessing;
+    public Optional<Output<Boolean>> requiresPreprocessing() {
+        return Optional.ofNullable(this.requiresPreprocessing);
     }
 
     /**
@@ -114,10 +115,10 @@ public final class CorrelationFilterArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="sessionId")
-      private final @Nullable Output<String> sessionId;
+    private @Nullable Output<String> sessionId;
 
-    public Output<String> sessionId() {
-        return this.sessionId == null ? Codegen.empty() : this.sessionId;
+    public Optional<Output<String>> sessionId() {
+        return Optional.ofNullable(this.sessionId);
     }
 
     /**
@@ -125,167 +126,139 @@ public final class CorrelationFilterArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="to")
-      private final @Nullable Output<String> to;
+    private @Nullable Output<String> to;
 
-    public Output<String> to() {
-        return this.to == null ? Codegen.empty() : this.to;
+    public Optional<Output<String>> to() {
+        return Optional.ofNullable(this.to);
     }
 
-    public CorrelationFilterArgs(
-        @Nullable Output<String> contentType,
-        @Nullable Output<String> correlationId,
-        @Nullable Output<String> label,
-        @Nullable Output<String> messageId,
-        @Nullable Output<Map<String,String>> properties,
-        @Nullable Output<String> replyTo,
-        @Nullable Output<String> replyToSessionId,
-        @Nullable Output<Boolean> requiresPreprocessing,
-        @Nullable Output<String> sessionId,
-        @Nullable Output<String> to) {
-        this.contentType = contentType;
-        this.correlationId = correlationId;
-        this.label = label;
-        this.messageId = messageId;
-        this.properties = properties;
-        this.replyTo = replyTo;
-        this.replyToSessionId = replyToSessionId;
-        this.requiresPreprocessing = Codegen.booleanProp("requiresPreprocessing").output().arg(requiresPreprocessing).def(true).getNullable();
-        this.sessionId = sessionId;
-        this.to = to;
-    }
+    private CorrelationFilterArgs() {}
 
-    private CorrelationFilterArgs() {
-        this.contentType = Codegen.empty();
-        this.correlationId = Codegen.empty();
-        this.label = Codegen.empty();
-        this.messageId = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.replyTo = Codegen.empty();
-        this.replyToSessionId = Codegen.empty();
-        this.requiresPreprocessing = Codegen.empty();
-        this.sessionId = Codegen.empty();
-        this.to = Codegen.empty();
+    private CorrelationFilterArgs(CorrelationFilterArgs $) {
+        this.contentType = $.contentType;
+        this.correlationId = $.correlationId;
+        this.label = $.label;
+        this.messageId = $.messageId;
+        this.properties = $.properties;
+        this.replyTo = $.replyTo;
+        this.replyToSessionId = $.replyToSessionId;
+        this.requiresPreprocessing = $.requiresPreprocessing;
+        this.sessionId = $.sessionId;
+        this.to = $.to;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CorrelationFilterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> contentType;
-        private @Nullable Output<String> correlationId;
-        private @Nullable Output<String> label;
-        private @Nullable Output<String> messageId;
-        private @Nullable Output<Map<String,String>> properties;
-        private @Nullable Output<String> replyTo;
-        private @Nullable Output<String> replyToSessionId;
-        private @Nullable Output<Boolean> requiresPreprocessing;
-        private @Nullable Output<String> sessionId;
-        private @Nullable Output<String> to;
+        private CorrelationFilterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CorrelationFilterArgs();
         }
 
         public Builder(CorrelationFilterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contentType = defaults.contentType;
-    	      this.correlationId = defaults.correlationId;
-    	      this.label = defaults.label;
-    	      this.messageId = defaults.messageId;
-    	      this.properties = defaults.properties;
-    	      this.replyTo = defaults.replyTo;
-    	      this.replyToSessionId = defaults.replyToSessionId;
-    	      this.requiresPreprocessing = defaults.requiresPreprocessing;
-    	      this.sessionId = defaults.sessionId;
-    	      this.to = defaults.to;
+            $ = new CorrelationFilterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder contentType(@Nullable Output<String> contentType) {
-            this.contentType = contentType;
+            $.contentType = contentType;
             return this;
         }
-        public Builder contentType(@Nullable String contentType) {
-            this.contentType = Codegen.ofNullable(contentType);
-            return this;
+
+        public Builder contentType(String contentType) {
+            return contentType(Output.of(contentType));
         }
+
         public Builder correlationId(@Nullable Output<String> correlationId) {
-            this.correlationId = correlationId;
+            $.correlationId = correlationId;
             return this;
         }
-        public Builder correlationId(@Nullable String correlationId) {
-            this.correlationId = Codegen.ofNullable(correlationId);
-            return this;
+
+        public Builder correlationId(String correlationId) {
+            return correlationId(Output.of(correlationId));
         }
+
         public Builder label(@Nullable Output<String> label) {
-            this.label = label;
+            $.label = label;
             return this;
         }
-        public Builder label(@Nullable String label) {
-            this.label = Codegen.ofNullable(label);
-            return this;
+
+        public Builder label(String label) {
+            return label(Output.of(label));
         }
+
         public Builder messageId(@Nullable Output<String> messageId) {
-            this.messageId = messageId;
+            $.messageId = messageId;
             return this;
         }
-        public Builder messageId(@Nullable String messageId) {
-            this.messageId = Codegen.ofNullable(messageId);
-            return this;
+
+        public Builder messageId(String messageId) {
+            return messageId(Output.of(messageId));
         }
+
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(Map<String,String> properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder replyTo(@Nullable Output<String> replyTo) {
-            this.replyTo = replyTo;
+            $.replyTo = replyTo;
             return this;
         }
-        public Builder replyTo(@Nullable String replyTo) {
-            this.replyTo = Codegen.ofNullable(replyTo);
-            return this;
+
+        public Builder replyTo(String replyTo) {
+            return replyTo(Output.of(replyTo));
         }
+
         public Builder replyToSessionId(@Nullable Output<String> replyToSessionId) {
-            this.replyToSessionId = replyToSessionId;
+            $.replyToSessionId = replyToSessionId;
             return this;
         }
-        public Builder replyToSessionId(@Nullable String replyToSessionId) {
-            this.replyToSessionId = Codegen.ofNullable(replyToSessionId);
-            return this;
+
+        public Builder replyToSessionId(String replyToSessionId) {
+            return replyToSessionId(Output.of(replyToSessionId));
         }
+
         public Builder requiresPreprocessing(@Nullable Output<Boolean> requiresPreprocessing) {
-            this.requiresPreprocessing = requiresPreprocessing;
+            $.requiresPreprocessing = requiresPreprocessing;
             return this;
         }
-        public Builder requiresPreprocessing(@Nullable Boolean requiresPreprocessing) {
-            this.requiresPreprocessing = Codegen.ofNullable(requiresPreprocessing);
-            return this;
+
+        public Builder requiresPreprocessing(Boolean requiresPreprocessing) {
+            return requiresPreprocessing(Output.of(requiresPreprocessing));
         }
+
         public Builder sessionId(@Nullable Output<String> sessionId) {
-            this.sessionId = sessionId;
+            $.sessionId = sessionId;
             return this;
         }
-        public Builder sessionId(@Nullable String sessionId) {
-            this.sessionId = Codegen.ofNullable(sessionId);
-            return this;
+
+        public Builder sessionId(String sessionId) {
+            return sessionId(Output.of(sessionId));
         }
+
         public Builder to(@Nullable Output<String> to) {
-            this.to = to;
+            $.to = to;
             return this;
         }
-        public Builder to(@Nullable String to) {
-            this.to = Codegen.ofNullable(to);
-            return this;
-        }        public CorrelationFilterArgs build() {
-            return new CorrelationFilterArgs(contentType, correlationId, label, messageId, properties, replyTo, replyToSessionId, requiresPreprocessing, sessionId, to);
+
+        public Builder to(String to) {
+            return to(Output.of(to));
+        }
+
+        public CorrelationFilterArgs build() {
+            $.requiresPreprocessing = Codegen.booleanProp("requiresPreprocessing").output().arg($.requiresPreprocessing).def(true).getNullable();
+            return $;
         }
     }
+
 }

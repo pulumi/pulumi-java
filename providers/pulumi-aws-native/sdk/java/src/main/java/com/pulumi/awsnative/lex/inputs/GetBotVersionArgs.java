@@ -13,62 +13,59 @@ public final class GetBotVersionArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetBotVersionArgs Empty = new GetBotVersionArgs();
 
     @Import(name="botId", required=true)
-      private final String botId;
+    private String botId;
 
     public String botId() {
         return this.botId;
     }
 
     @Import(name="botVersion", required=true)
-      private final String botVersion;
+    private String botVersion;
 
     public String botVersion() {
         return this.botVersion;
     }
 
-    public GetBotVersionArgs(
-        String botId,
-        String botVersion) {
-        this.botId = Objects.requireNonNull(botId, "expected parameter 'botId' to be non-null");
-        this.botVersion = Objects.requireNonNull(botVersion, "expected parameter 'botVersion' to be non-null");
-    }
+    private GetBotVersionArgs() {}
 
-    private GetBotVersionArgs() {
-        this.botId = null;
-        this.botVersion = null;
+    private GetBotVersionArgs(GetBotVersionArgs $) {
+        this.botId = $.botId;
+        this.botVersion = $.botVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBotVersionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String botId;
-        private String botVersion;
+        private GetBotVersionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBotVersionArgs();
         }
 
         public Builder(GetBotVersionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.botId = defaults.botId;
-    	      this.botVersion = defaults.botVersion;
+            $ = new GetBotVersionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder botId(String botId) {
-            this.botId = Objects.requireNonNull(botId);
+            $.botId = botId;
             return this;
         }
+
         public Builder botVersion(String botVersion) {
-            this.botVersion = Objects.requireNonNull(botVersion);
+            $.botVersion = botVersion;
             return this;
-        }        public GetBotVersionArgs build() {
-            return new GetBotVersionArgs(botId, botVersion);
+        }
+
+        public GetBotVersionArgs build() {
+            $.botId = Objects.requireNonNull($.botId, "expected parameter 'botId' to be non-null");
+            $.botVersion = Objects.requireNonNull($.botVersion, "expected parameter 'botVersion' to be non-null");
+            return $;
         }
     }
+
 }

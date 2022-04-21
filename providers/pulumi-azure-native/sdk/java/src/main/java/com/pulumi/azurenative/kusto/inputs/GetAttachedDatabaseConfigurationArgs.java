@@ -17,7 +17,7 @@ public final class GetAttachedDatabaseConfigurationArgs extends com.pulumi.resou
      * 
      */
     @Import(name="attachedDatabaseConfigurationName", required=true)
-      private final String attachedDatabaseConfigurationName;
+    private String attachedDatabaseConfigurationName;
 
     public String attachedDatabaseConfigurationName() {
         return this.attachedDatabaseConfigurationName;
@@ -28,7 +28,7 @@ public final class GetAttachedDatabaseConfigurationArgs extends com.pulumi.resou
      * 
      */
     @Import(name="clusterName", required=true)
-      private final String clusterName;
+    private String clusterName;
 
     public String clusterName() {
         return this.clusterName;
@@ -39,64 +39,59 @@ public final class GetAttachedDatabaseConfigurationArgs extends com.pulumi.resou
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetAttachedDatabaseConfigurationArgs(
-        String attachedDatabaseConfigurationName,
-        String clusterName,
-        String resourceGroupName) {
-        this.attachedDatabaseConfigurationName = Objects.requireNonNull(attachedDatabaseConfigurationName, "expected parameter 'attachedDatabaseConfigurationName' to be non-null");
-        this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetAttachedDatabaseConfigurationArgs() {}
 
-    private GetAttachedDatabaseConfigurationArgs() {
-        this.attachedDatabaseConfigurationName = null;
-        this.clusterName = null;
-        this.resourceGroupName = null;
+    private GetAttachedDatabaseConfigurationArgs(GetAttachedDatabaseConfigurationArgs $) {
+        this.attachedDatabaseConfigurationName = $.attachedDatabaseConfigurationName;
+        this.clusterName = $.clusterName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAttachedDatabaseConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String attachedDatabaseConfigurationName;
-        private String clusterName;
-        private String resourceGroupName;
+        private GetAttachedDatabaseConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAttachedDatabaseConfigurationArgs();
         }
 
         public Builder(GetAttachedDatabaseConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attachedDatabaseConfigurationName = defaults.attachedDatabaseConfigurationName;
-    	      this.clusterName = defaults.clusterName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetAttachedDatabaseConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attachedDatabaseConfigurationName(String attachedDatabaseConfigurationName) {
-            this.attachedDatabaseConfigurationName = Objects.requireNonNull(attachedDatabaseConfigurationName);
+            $.attachedDatabaseConfigurationName = attachedDatabaseConfigurationName;
             return this;
         }
+
         public Builder clusterName(String clusterName) {
-            this.clusterName = Objects.requireNonNull(clusterName);
+            $.clusterName = clusterName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetAttachedDatabaseConfigurationArgs build() {
-            return new GetAttachedDatabaseConfigurationArgs(attachedDatabaseConfigurationName, clusterName, resourceGroupName);
+        }
+
+        public GetAttachedDatabaseConfigurationArgs build() {
+            $.attachedDatabaseConfigurationName = Objects.requireNonNull($.attachedDatabaseConfigurationName, "expected parameter 'attachedDatabaseConfigurationName' to be non-null");
+            $.clusterName = Objects.requireNonNull($.clusterName, "expected parameter 'clusterName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

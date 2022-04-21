@@ -23,10 +23,10 @@ public final class MCASDataConnectorDataTypesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="alerts")
-      private final @Nullable DataConnectorDataTypeCommonResponse alerts;
+    private @Nullable DataConnectorDataTypeCommonResponse alerts;
 
     public Optional<DataConnectorDataTypeCommonResponse> alerts() {
-        return this.alerts == null ? Optional.empty() : Optional.ofNullable(this.alerts);
+        return Optional.ofNullable(this.alerts);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class MCASDataConnectorDataTypesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="discoveryLogs")
-      private final @Nullable DataConnectorDataTypeCommonResponse discoveryLogs;
+    private @Nullable DataConnectorDataTypeCommonResponse discoveryLogs;
 
     public Optional<DataConnectorDataTypeCommonResponse> discoveryLogs() {
-        return this.discoveryLogs == null ? Optional.empty() : Optional.ofNullable(this.discoveryLogs);
+        return Optional.ofNullable(this.discoveryLogs);
     }
 
-    public MCASDataConnectorDataTypesResponse(
-        @Nullable DataConnectorDataTypeCommonResponse alerts,
-        @Nullable DataConnectorDataTypeCommonResponse discoveryLogs) {
-        this.alerts = alerts;
-        this.discoveryLogs = discoveryLogs;
-    }
+    private MCASDataConnectorDataTypesResponse() {}
 
-    private MCASDataConnectorDataTypesResponse() {
-        this.alerts = null;
-        this.discoveryLogs = null;
+    private MCASDataConnectorDataTypesResponse(MCASDataConnectorDataTypesResponse $) {
+        this.alerts = $.alerts;
+        this.discoveryLogs = $.discoveryLogs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MCASDataConnectorDataTypesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable DataConnectorDataTypeCommonResponse alerts;
-        private @Nullable DataConnectorDataTypeCommonResponse discoveryLogs;
+        private MCASDataConnectorDataTypesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MCASDataConnectorDataTypesResponse();
         }
 
         public Builder(MCASDataConnectorDataTypesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alerts = defaults.alerts;
-    	      this.discoveryLogs = defaults.discoveryLogs;
+            $ = new MCASDataConnectorDataTypesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder alerts(@Nullable DataConnectorDataTypeCommonResponse alerts) {
-            this.alerts = alerts;
+            $.alerts = alerts;
             return this;
         }
+
         public Builder discoveryLogs(@Nullable DataConnectorDataTypeCommonResponse discoveryLogs) {
-            this.discoveryLogs = discoveryLogs;
+            $.discoveryLogs = discoveryLogs;
             return this;
-        }        public MCASDataConnectorDataTypesResponse build() {
-            return new MCASDataConnectorDataTypesResponse(alerts, discoveryLogs);
+        }
+
+        public MCASDataConnectorDataTypesResponse build() {
+            return $;
         }
     }
+
 }

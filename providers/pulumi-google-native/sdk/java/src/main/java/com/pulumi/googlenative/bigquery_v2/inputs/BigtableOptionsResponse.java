@@ -19,7 +19,7 @@ public final class BigtableOptionsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="columnFamilies", required=true)
-      private final List<BigtableColumnFamilyResponse> columnFamilies;
+    private List<BigtableColumnFamilyResponse> columnFamilies;
 
     public List<BigtableColumnFamilyResponse> columnFamilies() {
         return this.columnFamilies;
@@ -30,7 +30,7 @@ public final class BigtableOptionsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="ignoreUnspecifiedColumnFamilies", required=true)
-      private final Boolean ignoreUnspecifiedColumnFamilies;
+    private Boolean ignoreUnspecifiedColumnFamilies;
 
     public Boolean ignoreUnspecifiedColumnFamilies() {
         return this.ignoreUnspecifiedColumnFamilies;
@@ -41,67 +41,63 @@ public final class BigtableOptionsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="readRowkeyAsString", required=true)
-      private final Boolean readRowkeyAsString;
+    private Boolean readRowkeyAsString;
 
     public Boolean readRowkeyAsString() {
         return this.readRowkeyAsString;
     }
 
-    public BigtableOptionsResponse(
-        List<BigtableColumnFamilyResponse> columnFamilies,
-        Boolean ignoreUnspecifiedColumnFamilies,
-        Boolean readRowkeyAsString) {
-        this.columnFamilies = Objects.requireNonNull(columnFamilies, "expected parameter 'columnFamilies' to be non-null");
-        this.ignoreUnspecifiedColumnFamilies = Objects.requireNonNull(ignoreUnspecifiedColumnFamilies, "expected parameter 'ignoreUnspecifiedColumnFamilies' to be non-null");
-        this.readRowkeyAsString = Objects.requireNonNull(readRowkeyAsString, "expected parameter 'readRowkeyAsString' to be non-null");
-    }
+    private BigtableOptionsResponse() {}
 
-    private BigtableOptionsResponse() {
-        this.columnFamilies = List.of();
-        this.ignoreUnspecifiedColumnFamilies = null;
-        this.readRowkeyAsString = null;
+    private BigtableOptionsResponse(BigtableOptionsResponse $) {
+        this.columnFamilies = $.columnFamilies;
+        this.ignoreUnspecifiedColumnFamilies = $.ignoreUnspecifiedColumnFamilies;
+        this.readRowkeyAsString = $.readRowkeyAsString;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BigtableOptionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<BigtableColumnFamilyResponse> columnFamilies;
-        private Boolean ignoreUnspecifiedColumnFamilies;
-        private Boolean readRowkeyAsString;
+        private BigtableOptionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BigtableOptionsResponse();
         }
 
         public Builder(BigtableOptionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.columnFamilies = defaults.columnFamilies;
-    	      this.ignoreUnspecifiedColumnFamilies = defaults.ignoreUnspecifiedColumnFamilies;
-    	      this.readRowkeyAsString = defaults.readRowkeyAsString;
+            $ = new BigtableOptionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder columnFamilies(List<BigtableColumnFamilyResponse> columnFamilies) {
-            this.columnFamilies = Objects.requireNonNull(columnFamilies);
+            $.columnFamilies = columnFamilies;
             return this;
         }
+
         public Builder columnFamilies(BigtableColumnFamilyResponse... columnFamilies) {
             return columnFamilies(List.of(columnFamilies));
         }
+
         public Builder ignoreUnspecifiedColumnFamilies(Boolean ignoreUnspecifiedColumnFamilies) {
-            this.ignoreUnspecifiedColumnFamilies = Objects.requireNonNull(ignoreUnspecifiedColumnFamilies);
+            $.ignoreUnspecifiedColumnFamilies = ignoreUnspecifiedColumnFamilies;
             return this;
         }
+
         public Builder readRowkeyAsString(Boolean readRowkeyAsString) {
-            this.readRowkeyAsString = Objects.requireNonNull(readRowkeyAsString);
+            $.readRowkeyAsString = readRowkeyAsString;
             return this;
-        }        public BigtableOptionsResponse build() {
-            return new BigtableOptionsResponse(columnFamilies, ignoreUnspecifiedColumnFamilies, readRowkeyAsString);
+        }
+
+        public BigtableOptionsResponse build() {
+            $.columnFamilies = Objects.requireNonNull($.columnFamilies, "expected parameter 'columnFamilies' to be non-null");
+            $.ignoreUnspecifiedColumnFamilies = Objects.requireNonNull($.ignoreUnspecifiedColumnFamilies, "expected parameter 'ignoreUnspecifiedColumnFamilies' to be non-null");
+            $.readRowkeyAsString = Objects.requireNonNull($.readRowkeyAsString, "expected parameter 'readRowkeyAsString' to be non-null");
+            return $;
         }
     }
+
 }

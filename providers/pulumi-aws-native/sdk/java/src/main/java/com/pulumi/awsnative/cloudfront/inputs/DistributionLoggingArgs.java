@@ -5,10 +5,10 @@ package com.pulumi.awsnative.cloudfront.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,90 +17,83 @@ public final class DistributionLoggingArgs extends com.pulumi.resources.Resource
     public static final DistributionLoggingArgs Empty = new DistributionLoggingArgs();
 
     @Import(name="bucket", required=true)
-      private final Output<String> bucket;
+    private Output<String> bucket;
 
     public Output<String> bucket() {
         return this.bucket;
     }
 
     @Import(name="includeCookies")
-      private final @Nullable Output<Boolean> includeCookies;
+    private @Nullable Output<Boolean> includeCookies;
 
-    public Output<Boolean> includeCookies() {
-        return this.includeCookies == null ? Codegen.empty() : this.includeCookies;
+    public Optional<Output<Boolean>> includeCookies() {
+        return Optional.ofNullable(this.includeCookies);
     }
 
     @Import(name="prefix")
-      private final @Nullable Output<String> prefix;
+    private @Nullable Output<String> prefix;
 
-    public Output<String> prefix() {
-        return this.prefix == null ? Codegen.empty() : this.prefix;
+    public Optional<Output<String>> prefix() {
+        return Optional.ofNullable(this.prefix);
     }
 
-    public DistributionLoggingArgs(
-        Output<String> bucket,
-        @Nullable Output<Boolean> includeCookies,
-        @Nullable Output<String> prefix) {
-        this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
-        this.includeCookies = includeCookies;
-        this.prefix = prefix;
-    }
+    private DistributionLoggingArgs() {}
 
-    private DistributionLoggingArgs() {
-        this.bucket = Codegen.empty();
-        this.includeCookies = Codegen.empty();
-        this.prefix = Codegen.empty();
+    private DistributionLoggingArgs(DistributionLoggingArgs $) {
+        this.bucket = $.bucket;
+        this.includeCookies = $.includeCookies;
+        this.prefix = $.prefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionLoggingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> bucket;
-        private @Nullable Output<Boolean> includeCookies;
-        private @Nullable Output<String> prefix;
+        private DistributionLoggingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionLoggingArgs();
         }
 
         public Builder(DistributionLoggingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.includeCookies = defaults.includeCookies;
-    	      this.prefix = defaults.prefix;
+            $ = new DistributionLoggingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(Output<String> bucket) {
-            this.bucket = Objects.requireNonNull(bucket);
+            $.bucket = bucket;
             return this;
         }
+
         public Builder bucket(String bucket) {
-            this.bucket = Output.of(Objects.requireNonNull(bucket));
-            return this;
+            return bucket(Output.of(bucket));
         }
+
         public Builder includeCookies(@Nullable Output<Boolean> includeCookies) {
-            this.includeCookies = includeCookies;
+            $.includeCookies = includeCookies;
             return this;
         }
-        public Builder includeCookies(@Nullable Boolean includeCookies) {
-            this.includeCookies = Codegen.ofNullable(includeCookies);
-            return this;
+
+        public Builder includeCookies(Boolean includeCookies) {
+            return includeCookies(Output.of(includeCookies));
         }
+
         public Builder prefix(@Nullable Output<String> prefix) {
-            this.prefix = prefix;
+            $.prefix = prefix;
             return this;
         }
-        public Builder prefix(@Nullable String prefix) {
-            this.prefix = Codegen.ofNullable(prefix);
-            return this;
-        }        public DistributionLoggingArgs build() {
-            return new DistributionLoggingArgs(bucket, includeCookies, prefix);
+
+        public Builder prefix(String prefix) {
+            return prefix(Output.of(prefix));
+        }
+
+        public DistributionLoggingArgs build() {
+            $.bucket = Objects.requireNonNull($.bucket, "expected parameter 'bucket' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetBastionHostArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="bastionHostName", required=true)
-      private final String bastionHostName;
+    private String bastionHostName;
 
     public String bastionHostName() {
         return this.bastionHostName;
@@ -28,55 +28,52 @@ public final class GetBastionHostArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetBastionHostArgs(
-        String bastionHostName,
-        String resourceGroupName) {
-        this.bastionHostName = Objects.requireNonNull(bastionHostName, "expected parameter 'bastionHostName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetBastionHostArgs() {}
 
-    private GetBastionHostArgs() {
-        this.bastionHostName = null;
-        this.resourceGroupName = null;
+    private GetBastionHostArgs(GetBastionHostArgs $) {
+        this.bastionHostName = $.bastionHostName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBastionHostArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String bastionHostName;
-        private String resourceGroupName;
+        private GetBastionHostArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBastionHostArgs();
         }
 
         public Builder(GetBastionHostArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bastionHostName = defaults.bastionHostName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetBastionHostArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bastionHostName(String bastionHostName) {
-            this.bastionHostName = Objects.requireNonNull(bastionHostName);
+            $.bastionHostName = bastionHostName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetBastionHostArgs build() {
-            return new GetBastionHostArgs(bastionHostName, resourceGroupName);
+        }
+
+        public GetBastionHostArgs build() {
+            $.bastionHostName = Objects.requireNonNull($.bastionHostName, "expected parameter 'bastionHostName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

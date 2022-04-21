@@ -23,45 +23,44 @@ public final class FunctionOutputResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="dataType")
-      private final @Nullable String dataType;
+    private @Nullable String dataType;
 
     public Optional<String> dataType() {
-        return this.dataType == null ? Optional.empty() : Optional.ofNullable(this.dataType);
+        return Optional.ofNullable(this.dataType);
     }
 
-    public FunctionOutputResponse(@Nullable String dataType) {
-        this.dataType = dataType;
-    }
+    private FunctionOutputResponse() {}
 
-    private FunctionOutputResponse() {
-        this.dataType = null;
+    private FunctionOutputResponse(FunctionOutputResponse $) {
+        this.dataType = $.dataType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FunctionOutputResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String dataType;
+        private FunctionOutputResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FunctionOutputResponse();
         }
 
         public Builder(FunctionOutputResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataType = defaults.dataType;
+            $ = new FunctionOutputResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dataType(@Nullable String dataType) {
-            this.dataType = dataType;
+            $.dataType = dataType;
             return this;
-        }        public FunctionOutputResponse build() {
-            return new FunctionOutputResponse(dataType);
+        }
+
+        public FunctionOutputResponse build() {
+            return $;
         }
     }
+
 }

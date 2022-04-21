@@ -23,10 +23,10 @@ public final class ConnectionGatewayReferenceResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ConnectionGatewayReferenceResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="location")
-      private final @Nullable String location;
+    private @Nullable String location;
 
     public Optional<String> location() {
-        return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ConnectionGatewayReferenceResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -56,73 +56,62 @@ public final class ConnectionGatewayReferenceResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public ConnectionGatewayReferenceResponse(
-        @Nullable String id,
-        @Nullable String location,
-        @Nullable String name,
-        @Nullable String type) {
-        this.id = id;
-        this.location = location;
-        this.name = name;
-        this.type = type;
-    }
+    private ConnectionGatewayReferenceResponse() {}
 
-    private ConnectionGatewayReferenceResponse() {
-        this.id = null;
-        this.location = null;
-        this.name = null;
-        this.type = null;
+    private ConnectionGatewayReferenceResponse(ConnectionGatewayReferenceResponse $) {
+        this.id = $.id;
+        this.location = $.location;
+        this.name = $.name;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionGatewayReferenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String id;
-        private @Nullable String location;
-        private @Nullable String name;
-        private @Nullable String type;
+        private ConnectionGatewayReferenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionGatewayReferenceResponse();
         }
 
         public Builder(ConnectionGatewayReferenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.type = defaults.type;
+            $ = new ConnectionGatewayReferenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder location(@Nullable String location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public ConnectionGatewayReferenceResponse build() {
-            return new ConnectionGatewayReferenceResponse(id, location, name, type);
+        }
+
+        public ConnectionGatewayReferenceResponse build() {
+            return $;
         }
     }
+
 }

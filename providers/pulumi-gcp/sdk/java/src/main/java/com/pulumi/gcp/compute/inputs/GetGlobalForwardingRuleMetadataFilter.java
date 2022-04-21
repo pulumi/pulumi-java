@@ -15,65 +15,63 @@ public final class GetGlobalForwardingRuleMetadataFilter extends com.pulumi.reso
     public static final GetGlobalForwardingRuleMetadataFilter Empty = new GetGlobalForwardingRuleMetadataFilter();
 
     @Import(name="filterLabels", required=true)
-      private final List<GetGlobalForwardingRuleMetadataFilterFilterLabel> filterLabels;
+    private List<GetGlobalForwardingRuleMetadataFilterFilterLabel> filterLabels;
 
     public List<GetGlobalForwardingRuleMetadataFilterFilterLabel> filterLabels() {
         return this.filterLabels;
     }
 
     @Import(name="filterMatchCriteria", required=true)
-      private final String filterMatchCriteria;
+    private String filterMatchCriteria;
 
     public String filterMatchCriteria() {
         return this.filterMatchCriteria;
     }
 
-    public GetGlobalForwardingRuleMetadataFilter(
-        List<GetGlobalForwardingRuleMetadataFilterFilterLabel> filterLabels,
-        String filterMatchCriteria) {
-        this.filterLabels = Objects.requireNonNull(filterLabels, "expected parameter 'filterLabels' to be non-null");
-        this.filterMatchCriteria = Objects.requireNonNull(filterMatchCriteria, "expected parameter 'filterMatchCriteria' to be non-null");
-    }
+    private GetGlobalForwardingRuleMetadataFilter() {}
 
-    private GetGlobalForwardingRuleMetadataFilter() {
-        this.filterLabels = List.of();
-        this.filterMatchCriteria = null;
+    private GetGlobalForwardingRuleMetadataFilter(GetGlobalForwardingRuleMetadataFilter $) {
+        this.filterLabels = $.filterLabels;
+        this.filterMatchCriteria = $.filterMatchCriteria;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetGlobalForwardingRuleMetadataFilter defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GetGlobalForwardingRuleMetadataFilterFilterLabel> filterLabels;
-        private String filterMatchCriteria;
+        private GetGlobalForwardingRuleMetadataFilter $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetGlobalForwardingRuleMetadataFilter();
         }
 
         public Builder(GetGlobalForwardingRuleMetadataFilter defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filterLabels = defaults.filterLabels;
-    	      this.filterMatchCriteria = defaults.filterMatchCriteria;
+            $ = new GetGlobalForwardingRuleMetadataFilter(Objects.requireNonNull(defaults));
         }
 
         public Builder filterLabels(List<GetGlobalForwardingRuleMetadataFilterFilterLabel> filterLabels) {
-            this.filterLabels = Objects.requireNonNull(filterLabels);
+            $.filterLabels = filterLabels;
             return this;
         }
+
         public Builder filterLabels(GetGlobalForwardingRuleMetadataFilterFilterLabel... filterLabels) {
             return filterLabels(List.of(filterLabels));
         }
+
         public Builder filterMatchCriteria(String filterMatchCriteria) {
-            this.filterMatchCriteria = Objects.requireNonNull(filterMatchCriteria);
+            $.filterMatchCriteria = filterMatchCriteria;
             return this;
-        }        public GetGlobalForwardingRuleMetadataFilter build() {
-            return new GetGlobalForwardingRuleMetadataFilter(filterLabels, filterMatchCriteria);
+        }
+
+        public GetGlobalForwardingRuleMetadataFilter build() {
+            $.filterLabels = Objects.requireNonNull($.filterLabels, "expected parameter 'filterLabels' to be non-null");
+            $.filterMatchCriteria = Objects.requireNonNull($.filterMatchCriteria, "expected parameter 'filterMatchCriteria' to be non-null");
+            return $;
         }
     }
+
 }

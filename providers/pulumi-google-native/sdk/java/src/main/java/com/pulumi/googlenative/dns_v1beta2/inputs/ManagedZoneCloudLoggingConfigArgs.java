@@ -5,10 +5,10 @@ package com.pulumi.googlenative.dns_v1beta2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,70 +25,65 @@ public final class ManagedZoneCloudLoggingConfigArgs extends com.pulumi.resource
      * 
      */
     @Import(name="enableLogging")
-      private final @Nullable Output<Boolean> enableLogging;
+    private @Nullable Output<Boolean> enableLogging;
 
-    public Output<Boolean> enableLogging() {
-        return this.enableLogging == null ? Codegen.empty() : this.enableLogging;
+    public Optional<Output<Boolean>> enableLogging() {
+        return Optional.ofNullable(this.enableLogging);
     }
 
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
-    public ManagedZoneCloudLoggingConfigArgs(
-        @Nullable Output<Boolean> enableLogging,
-        @Nullable Output<String> kind) {
-        this.enableLogging = enableLogging;
-        this.kind = kind;
-    }
+    private ManagedZoneCloudLoggingConfigArgs() {}
 
-    private ManagedZoneCloudLoggingConfigArgs() {
-        this.enableLogging = Codegen.empty();
-        this.kind = Codegen.empty();
+    private ManagedZoneCloudLoggingConfigArgs(ManagedZoneCloudLoggingConfigArgs $) {
+        this.enableLogging = $.enableLogging;
+        this.kind = $.kind;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedZoneCloudLoggingConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enableLogging;
-        private @Nullable Output<String> kind;
+        private ManagedZoneCloudLoggingConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedZoneCloudLoggingConfigArgs();
         }
 
         public Builder(ManagedZoneCloudLoggingConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableLogging = defaults.enableLogging;
-    	      this.kind = defaults.kind;
+            $ = new ManagedZoneCloudLoggingConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enableLogging(@Nullable Output<Boolean> enableLogging) {
-            this.enableLogging = enableLogging;
+            $.enableLogging = enableLogging;
             return this;
         }
-        public Builder enableLogging(@Nullable Boolean enableLogging) {
-            this.enableLogging = Codegen.ofNullable(enableLogging);
-            return this;
+
+        public Builder enableLogging(Boolean enableLogging) {
+            return enableLogging(Output.of(enableLogging));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
-        }        public ManagedZoneCloudLoggingConfigArgs build() {
-            return new ManagedZoneCloudLoggingConfigArgs(enableLogging, kind);
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
+        }
+
+        public ManagedZoneCloudLoggingConfigArgs build() {
+            return $;
         }
     }
+
 }

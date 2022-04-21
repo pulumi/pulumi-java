@@ -17,45 +17,45 @@ public final class GetKeyspaceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="keyspaceName", required=true)
-      private final String keyspaceName;
+    private String keyspaceName;
 
     public String keyspaceName() {
         return this.keyspaceName;
     }
 
-    public GetKeyspaceArgs(String keyspaceName) {
-        this.keyspaceName = Objects.requireNonNull(keyspaceName, "expected parameter 'keyspaceName' to be non-null");
-    }
+    private GetKeyspaceArgs() {}
 
-    private GetKeyspaceArgs() {
-        this.keyspaceName = null;
+    private GetKeyspaceArgs(GetKeyspaceArgs $) {
+        this.keyspaceName = $.keyspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetKeyspaceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String keyspaceName;
+        private GetKeyspaceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetKeyspaceArgs();
         }
 
         public Builder(GetKeyspaceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyspaceName = defaults.keyspaceName;
+            $ = new GetKeyspaceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyspaceName(String keyspaceName) {
-            this.keyspaceName = Objects.requireNonNull(keyspaceName);
+            $.keyspaceName = keyspaceName;
             return this;
-        }        public GetKeyspaceArgs build() {
-            return new GetKeyspaceArgs(keyspaceName);
+        }
+
+        public GetKeyspaceArgs build() {
+            $.keyspaceName = Objects.requireNonNull($.keyspaceName, "expected parameter 'keyspaceName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,45 +23,44 @@ public final class FirewallPolicyNatRuleCollectionActionResponse extends com.pul
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public FirewallPolicyNatRuleCollectionActionResponse(@Nullable String type) {
-        this.type = type;
-    }
+    private FirewallPolicyNatRuleCollectionActionResponse() {}
 
-    private FirewallPolicyNatRuleCollectionActionResponse() {
-        this.type = null;
+    private FirewallPolicyNatRuleCollectionActionResponse(FirewallPolicyNatRuleCollectionActionResponse $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallPolicyNatRuleCollectionActionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String type;
+        private FirewallPolicyNatRuleCollectionActionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallPolicyNatRuleCollectionActionResponse();
         }
 
         public Builder(FirewallPolicyNatRuleCollectionActionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new FirewallPolicyNatRuleCollectionActionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public FirewallPolicyNatRuleCollectionActionResponse build() {
-            return new FirewallPolicyNatRuleCollectionActionResponse(type);
+        }
+
+        public FirewallPolicyNatRuleCollectionActionResponse build() {
+            return $;
         }
     }
+
 }

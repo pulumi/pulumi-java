@@ -5,9 +5,9 @@ package com.pulumi.awsnative.codeguruprofiler.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,70 +20,66 @@ public final class ProfilingGroupChannelArgs extends com.pulumi.resources.Resour
     public static final ProfilingGroupChannelArgs Empty = new ProfilingGroupChannelArgs();
 
     @Import(name="channelId")
-      private final @Nullable Output<String> channelId;
+    private @Nullable Output<String> channelId;
 
-    public Output<String> channelId() {
-        return this.channelId == null ? Codegen.empty() : this.channelId;
+    public Optional<Output<String>> channelId() {
+        return Optional.ofNullable(this.channelId);
     }
 
     @Import(name="channelUri", required=true)
-      private final Output<String> channelUri;
+    private Output<String> channelUri;
 
     public Output<String> channelUri() {
         return this.channelUri;
     }
 
-    public ProfilingGroupChannelArgs(
-        @Nullable Output<String> channelId,
-        Output<String> channelUri) {
-        this.channelId = channelId;
-        this.channelUri = Objects.requireNonNull(channelUri, "expected parameter 'channelUri' to be non-null");
-    }
+    private ProfilingGroupChannelArgs() {}
 
-    private ProfilingGroupChannelArgs() {
-        this.channelId = Codegen.empty();
-        this.channelUri = Codegen.empty();
+    private ProfilingGroupChannelArgs(ProfilingGroupChannelArgs $) {
+        this.channelId = $.channelId;
+        this.channelUri = $.channelUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProfilingGroupChannelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> channelId;
-        private Output<String> channelUri;
+        private ProfilingGroupChannelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProfilingGroupChannelArgs();
         }
 
         public Builder(ProfilingGroupChannelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.channelId = defaults.channelId;
-    	      this.channelUri = defaults.channelUri;
+            $ = new ProfilingGroupChannelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder channelId(@Nullable Output<String> channelId) {
-            this.channelId = channelId;
+            $.channelId = channelId;
             return this;
         }
-        public Builder channelId(@Nullable String channelId) {
-            this.channelId = Codegen.ofNullable(channelId);
-            return this;
+
+        public Builder channelId(String channelId) {
+            return channelId(Output.of(channelId));
         }
+
         public Builder channelUri(Output<String> channelUri) {
-            this.channelUri = Objects.requireNonNull(channelUri);
+            $.channelUri = channelUri;
             return this;
         }
+
         public Builder channelUri(String channelUri) {
-            this.channelUri = Output.of(Objects.requireNonNull(channelUri));
-            return this;
-        }        public ProfilingGroupChannelArgs build() {
-            return new ProfilingGroupChannelArgs(channelId, channelUri);
+            return channelUri(Output.of(channelUri));
+        }
+
+        public ProfilingGroupChannelArgs build() {
+            $.channelUri = Objects.requireNonNull($.channelUri, "expected parameter 'channelUri' to be non-null");
+            return $;
         }
     }
+
 }

@@ -18,10 +18,10 @@ public final class DetectorOutcome extends com.pulumi.resources.InvokeArgs {
     public static final DetectorOutcome Empty = new DetectorOutcome();
 
     @Import(name="arn")
-      private final @Nullable String arn;
+    private @Nullable String arn;
 
     public Optional<String> arn() {
-        return this.arn == null ? Optional.empty() : Optional.ofNullable(this.arn);
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -29,10 +29,10 @@ public final class DetectorOutcome extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="createdTime")
-      private final @Nullable String createdTime;
+    private @Nullable String createdTime;
 
     public Optional<String> createdTime() {
-        return this.createdTime == null ? Optional.empty() : Optional.ofNullable(this.createdTime);
+        return Optional.ofNullable(this.createdTime);
     }
 
     /**
@@ -40,17 +40,17 @@ public final class DetectorOutcome extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     @Import(name="inline")
-      private final @Nullable Boolean inline;
+    private @Nullable Boolean inline;
 
     public Optional<Boolean> inline() {
-        return this.inline == null ? Optional.empty() : Optional.ofNullable(this.inline);
+        return Optional.ofNullable(this.inline);
     }
 
     /**
@@ -58,17 +58,17 @@ public final class DetectorOutcome extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="lastUpdatedTime")
-      private final @Nullable String lastUpdatedTime;
+    private @Nullable String lastUpdatedTime;
 
     public Optional<String> lastUpdatedTime() {
-        return this.lastUpdatedTime == null ? Optional.empty() : Optional.ofNullable(this.lastUpdatedTime);
+        return Optional.ofNullable(this.lastUpdatedTime);
     }
 
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -76,103 +76,84 @@ public final class DetectorOutcome extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable List<DetectorTag> tags;
+    private @Nullable List<DetectorTag> tags;
 
-    public List<DetectorTag> tags() {
-        return this.tags == null ? List.of() : this.tags;
+    public Optional<List<DetectorTag>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public DetectorOutcome(
-        @Nullable String arn,
-        @Nullable String createdTime,
-        @Nullable String description,
-        @Nullable Boolean inline,
-        @Nullable String lastUpdatedTime,
-        @Nullable String name,
-        @Nullable List<DetectorTag> tags) {
-        this.arn = arn;
-        this.createdTime = createdTime;
-        this.description = description;
-        this.inline = inline;
-        this.lastUpdatedTime = lastUpdatedTime;
-        this.name = name;
-        this.tags = tags;
-    }
+    private DetectorOutcome() {}
 
-    private DetectorOutcome() {
-        this.arn = null;
-        this.createdTime = null;
-        this.description = null;
-        this.inline = null;
-        this.lastUpdatedTime = null;
-        this.name = null;
-        this.tags = List.of();
+    private DetectorOutcome(DetectorOutcome $) {
+        this.arn = $.arn;
+        this.createdTime = $.createdTime;
+        this.description = $.description;
+        this.inline = $.inline;
+        this.lastUpdatedTime = $.lastUpdatedTime;
+        this.name = $.name;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DetectorOutcome defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String arn;
-        private @Nullable String createdTime;
-        private @Nullable String description;
-        private @Nullable Boolean inline;
-        private @Nullable String lastUpdatedTime;
-        private @Nullable String name;
-        private @Nullable List<DetectorTag> tags;
+        private DetectorOutcome $;
 
         public Builder() {
-    	      // Empty
+            $ = new DetectorOutcome();
         }
 
         public Builder(DetectorOutcome defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.createdTime = defaults.createdTime;
-    	      this.description = defaults.description;
-    	      this.inline = defaults.inline;
-    	      this.lastUpdatedTime = defaults.lastUpdatedTime;
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
+            $ = new DetectorOutcome(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
+
         public Builder createdTime(@Nullable String createdTime) {
-            this.createdTime = createdTime;
+            $.createdTime = createdTime;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder inline(@Nullable Boolean inline) {
-            this.inline = inline;
+            $.inline = inline;
             return this;
         }
+
         public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
-            this.lastUpdatedTime = lastUpdatedTime;
+            $.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder tags(@Nullable List<DetectorTag> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
+
         public Builder tags(DetectorTag... tags) {
             return tags(List.of(tags));
-        }        public DetectorOutcome build() {
-            return new DetectorOutcome(arn, createdTime, description, inline, lastUpdatedTime, name, tags);
+        }
+
+        public DetectorOutcome build() {
+            return $;
         }
     }
+
 }

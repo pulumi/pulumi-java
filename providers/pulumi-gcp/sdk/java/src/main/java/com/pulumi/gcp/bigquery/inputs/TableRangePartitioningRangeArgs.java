@@ -5,7 +5,6 @@ package com.pulumi.gcp.bigquery.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class TableRangePartitioningRangeArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="end", required=true)
-      private final Output<Integer> end;
+    private Output<Integer> end;
 
     public Output<Integer> end() {
         return this.end;
@@ -30,7 +29,7 @@ public final class TableRangePartitioningRangeArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="interval", required=true)
-      private final Output<Integer> interval;
+    private Output<Integer> interval;
 
     public Output<Integer> interval() {
         return this.interval;
@@ -41,76 +40,71 @@ public final class TableRangePartitioningRangeArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="start", required=true)
-      private final Output<Integer> start;
+    private Output<Integer> start;
 
     public Output<Integer> start() {
         return this.start;
     }
 
-    public TableRangePartitioningRangeArgs(
-        Output<Integer> end,
-        Output<Integer> interval,
-        Output<Integer> start) {
-        this.end = Objects.requireNonNull(end, "expected parameter 'end' to be non-null");
-        this.interval = Objects.requireNonNull(interval, "expected parameter 'interval' to be non-null");
-        this.start = Objects.requireNonNull(start, "expected parameter 'start' to be non-null");
-    }
+    private TableRangePartitioningRangeArgs() {}
 
-    private TableRangePartitioningRangeArgs() {
-        this.end = Codegen.empty();
-        this.interval = Codegen.empty();
-        this.start = Codegen.empty();
+    private TableRangePartitioningRangeArgs(TableRangePartitioningRangeArgs $) {
+        this.end = $.end;
+        this.interval = $.interval;
+        this.start = $.start;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TableRangePartitioningRangeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> end;
-        private Output<Integer> interval;
-        private Output<Integer> start;
+        private TableRangePartitioningRangeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TableRangePartitioningRangeArgs();
         }
 
         public Builder(TableRangePartitioningRangeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.end = defaults.end;
-    	      this.interval = defaults.interval;
-    	      this.start = defaults.start;
+            $ = new TableRangePartitioningRangeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder end(Output<Integer> end) {
-            this.end = Objects.requireNonNull(end);
+            $.end = end;
             return this;
         }
+
         public Builder end(Integer end) {
-            this.end = Output.of(Objects.requireNonNull(end));
-            return this;
+            return end(Output.of(end));
         }
+
         public Builder interval(Output<Integer> interval) {
-            this.interval = Objects.requireNonNull(interval);
+            $.interval = interval;
             return this;
         }
+
         public Builder interval(Integer interval) {
-            this.interval = Output.of(Objects.requireNonNull(interval));
-            return this;
+            return interval(Output.of(interval));
         }
+
         public Builder start(Output<Integer> start) {
-            this.start = Objects.requireNonNull(start);
+            $.start = start;
             return this;
         }
+
         public Builder start(Integer start) {
-            this.start = Output.of(Objects.requireNonNull(start));
-            return this;
-        }        public TableRangePartitioningRangeArgs build() {
-            return new TableRangePartitioningRangeArgs(end, interval, start);
+            return start(Output.of(start));
+        }
+
+        public TableRangePartitioningRangeArgs build() {
+            $.end = Objects.requireNonNull($.end, "expected parameter 'end' to be non-null");
+            $.interval = Objects.requireNonNull($.interval, "expected parameter 'interval' to be non-null");
+            $.start = Objects.requireNonNull($.start, "expected parameter 'start' to be non-null");
+            return $;
         }
     }
+
 }

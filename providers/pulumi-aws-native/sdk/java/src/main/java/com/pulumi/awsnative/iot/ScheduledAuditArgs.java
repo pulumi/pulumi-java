@@ -8,10 +8,10 @@ import com.pulumi.awsnative.iot.enums.ScheduledAuditFrequency;
 import com.pulumi.awsnative.iot.inputs.ScheduledAuditTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ScheduledAuditArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="dayOfMonth")
-      private final @Nullable Output<String> dayOfMonth;
+    private @Nullable Output<String> dayOfMonth;
 
-    public Output<String> dayOfMonth() {
-        return this.dayOfMonth == null ? Codegen.empty() : this.dayOfMonth;
+    public Optional<Output<String>> dayOfMonth() {
+        return Optional.ofNullable(this.dayOfMonth);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ScheduledAuditArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="dayOfWeek")
-      private final @Nullable Output<ScheduledAuditDayOfWeek> dayOfWeek;
+    private @Nullable Output<ScheduledAuditDayOfWeek> dayOfWeek;
 
-    public Output<ScheduledAuditDayOfWeek> dayOfWeek() {
-        return this.dayOfWeek == null ? Codegen.empty() : this.dayOfWeek;
+    public Optional<Output<ScheduledAuditDayOfWeek>> dayOfWeek() {
+        return Optional.ofNullable(this.dayOfWeek);
     }
 
     /**
@@ -46,7 +46,7 @@ public final class ScheduledAuditArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="frequency", required=true)
-      private final Output<ScheduledAuditFrequency> frequency;
+    private Output<ScheduledAuditFrequency> frequency;
 
     public Output<ScheduledAuditFrequency> frequency() {
         return this.frequency;
@@ -57,10 +57,10 @@ public final class ScheduledAuditArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="scheduledAuditName")
-      private final @Nullable Output<String> scheduledAuditName;
+    private @Nullable Output<String> scheduledAuditName;
 
-    public Output<String> scheduledAuditName() {
-        return this.scheduledAuditName == null ? Codegen.empty() : this.scheduledAuditName;
+    public Optional<Output<String>> scheduledAuditName() {
+        return Optional.ofNullable(this.scheduledAuditName);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ScheduledAuditArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<ScheduledAuditTagArgs>> tags;
+    private @Nullable Output<List<ScheduledAuditTagArgs>> tags;
 
-    public Output<List<ScheduledAuditTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<ScheduledAuditTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -79,121 +79,108 @@ public final class ScheduledAuditArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="targetCheckNames", required=true)
-      private final Output<List<String>> targetCheckNames;
+    private Output<List<String>> targetCheckNames;
 
     public Output<List<String>> targetCheckNames() {
         return this.targetCheckNames;
     }
 
-    public ScheduledAuditArgs(
-        @Nullable Output<String> dayOfMonth,
-        @Nullable Output<ScheduledAuditDayOfWeek> dayOfWeek,
-        Output<ScheduledAuditFrequency> frequency,
-        @Nullable Output<String> scheduledAuditName,
-        @Nullable Output<List<ScheduledAuditTagArgs>> tags,
-        Output<List<String>> targetCheckNames) {
-        this.dayOfMonth = dayOfMonth;
-        this.dayOfWeek = dayOfWeek;
-        this.frequency = Objects.requireNonNull(frequency, "expected parameter 'frequency' to be non-null");
-        this.scheduledAuditName = scheduledAuditName;
-        this.tags = tags;
-        this.targetCheckNames = Objects.requireNonNull(targetCheckNames, "expected parameter 'targetCheckNames' to be non-null");
-    }
+    private ScheduledAuditArgs() {}
 
-    private ScheduledAuditArgs() {
-        this.dayOfMonth = Codegen.empty();
-        this.dayOfWeek = Codegen.empty();
-        this.frequency = Codegen.empty();
-        this.scheduledAuditName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.targetCheckNames = Codegen.empty();
+    private ScheduledAuditArgs(ScheduledAuditArgs $) {
+        this.dayOfMonth = $.dayOfMonth;
+        this.dayOfWeek = $.dayOfWeek;
+        this.frequency = $.frequency;
+        this.scheduledAuditName = $.scheduledAuditName;
+        this.tags = $.tags;
+        this.targetCheckNames = $.targetCheckNames;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScheduledAuditArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> dayOfMonth;
-        private @Nullable Output<ScheduledAuditDayOfWeek> dayOfWeek;
-        private Output<ScheduledAuditFrequency> frequency;
-        private @Nullable Output<String> scheduledAuditName;
-        private @Nullable Output<List<ScheduledAuditTagArgs>> tags;
-        private Output<List<String>> targetCheckNames;
+        private ScheduledAuditArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScheduledAuditArgs();
         }
 
         public Builder(ScheduledAuditArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dayOfMonth = defaults.dayOfMonth;
-    	      this.dayOfWeek = defaults.dayOfWeek;
-    	      this.frequency = defaults.frequency;
-    	      this.scheduledAuditName = defaults.scheduledAuditName;
-    	      this.tags = defaults.tags;
-    	      this.targetCheckNames = defaults.targetCheckNames;
+            $ = new ScheduledAuditArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dayOfMonth(@Nullable Output<String> dayOfMonth) {
-            this.dayOfMonth = dayOfMonth;
+            $.dayOfMonth = dayOfMonth;
             return this;
         }
-        public Builder dayOfMonth(@Nullable String dayOfMonth) {
-            this.dayOfMonth = Codegen.ofNullable(dayOfMonth);
-            return this;
+
+        public Builder dayOfMonth(String dayOfMonth) {
+            return dayOfMonth(Output.of(dayOfMonth));
         }
+
         public Builder dayOfWeek(@Nullable Output<ScheduledAuditDayOfWeek> dayOfWeek) {
-            this.dayOfWeek = dayOfWeek;
+            $.dayOfWeek = dayOfWeek;
             return this;
         }
-        public Builder dayOfWeek(@Nullable ScheduledAuditDayOfWeek dayOfWeek) {
-            this.dayOfWeek = Codegen.ofNullable(dayOfWeek);
-            return this;
+
+        public Builder dayOfWeek(ScheduledAuditDayOfWeek dayOfWeek) {
+            return dayOfWeek(Output.of(dayOfWeek));
         }
+
         public Builder frequency(Output<ScheduledAuditFrequency> frequency) {
-            this.frequency = Objects.requireNonNull(frequency);
+            $.frequency = frequency;
             return this;
         }
+
         public Builder frequency(ScheduledAuditFrequency frequency) {
-            this.frequency = Output.of(Objects.requireNonNull(frequency));
-            return this;
+            return frequency(Output.of(frequency));
         }
+
         public Builder scheduledAuditName(@Nullable Output<String> scheduledAuditName) {
-            this.scheduledAuditName = scheduledAuditName;
+            $.scheduledAuditName = scheduledAuditName;
             return this;
         }
-        public Builder scheduledAuditName(@Nullable String scheduledAuditName) {
-            this.scheduledAuditName = Codegen.ofNullable(scheduledAuditName);
-            return this;
+
+        public Builder scheduledAuditName(String scheduledAuditName) {
+            return scheduledAuditName(Output.of(scheduledAuditName));
         }
+
         public Builder tags(@Nullable Output<List<ScheduledAuditTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<ScheduledAuditTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<ScheduledAuditTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(ScheduledAuditTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder targetCheckNames(Output<List<String>> targetCheckNames) {
-            this.targetCheckNames = Objects.requireNonNull(targetCheckNames);
+            $.targetCheckNames = targetCheckNames;
             return this;
         }
+
         public Builder targetCheckNames(List<String> targetCheckNames) {
-            this.targetCheckNames = Output.of(Objects.requireNonNull(targetCheckNames));
-            return this;
+            return targetCheckNames(Output.of(targetCheckNames));
         }
+
         public Builder targetCheckNames(String... targetCheckNames) {
             return targetCheckNames(List.of(targetCheckNames));
-        }        public ScheduledAuditArgs build() {
-            return new ScheduledAuditArgs(dayOfMonth, dayOfWeek, frequency, scheduledAuditName, tags, targetCheckNames);
+        }
+
+        public ScheduledAuditArgs build() {
+            $.frequency = Objects.requireNonNull($.frequency, "expected parameter 'frequency' to be non-null");
+            $.targetCheckNames = Objects.requireNonNull($.targetCheckNames, "expected parameter 'targetCheckNames' to be non-null");
+            return $;
         }
     }
+
 }

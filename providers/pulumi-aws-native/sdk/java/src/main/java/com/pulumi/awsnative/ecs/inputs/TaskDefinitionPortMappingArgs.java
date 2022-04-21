@@ -5,10 +5,10 @@ package com.pulumi.awsnative.ecs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,90 +17,82 @@ public final class TaskDefinitionPortMappingArgs extends com.pulumi.resources.Re
     public static final TaskDefinitionPortMappingArgs Empty = new TaskDefinitionPortMappingArgs();
 
     @Import(name="containerPort")
-      private final @Nullable Output<Integer> containerPort;
+    private @Nullable Output<Integer> containerPort;
 
-    public Output<Integer> containerPort() {
-        return this.containerPort == null ? Codegen.empty() : this.containerPort;
+    public Optional<Output<Integer>> containerPort() {
+        return Optional.ofNullable(this.containerPort);
     }
 
     @Import(name="hostPort")
-      private final @Nullable Output<Integer> hostPort;
+    private @Nullable Output<Integer> hostPort;
 
-    public Output<Integer> hostPort() {
-        return this.hostPort == null ? Codegen.empty() : this.hostPort;
+    public Optional<Output<Integer>> hostPort() {
+        return Optional.ofNullable(this.hostPort);
     }
 
     @Import(name="protocol")
-      private final @Nullable Output<String> protocol;
+    private @Nullable Output<String> protocol;
 
-    public Output<String> protocol() {
-        return this.protocol == null ? Codegen.empty() : this.protocol;
+    public Optional<Output<String>> protocol() {
+        return Optional.ofNullable(this.protocol);
     }
 
-    public TaskDefinitionPortMappingArgs(
-        @Nullable Output<Integer> containerPort,
-        @Nullable Output<Integer> hostPort,
-        @Nullable Output<String> protocol) {
-        this.containerPort = containerPort;
-        this.hostPort = hostPort;
-        this.protocol = protocol;
-    }
+    private TaskDefinitionPortMappingArgs() {}
 
-    private TaskDefinitionPortMappingArgs() {
-        this.containerPort = Codegen.empty();
-        this.hostPort = Codegen.empty();
-        this.protocol = Codegen.empty();
+    private TaskDefinitionPortMappingArgs(TaskDefinitionPortMappingArgs $) {
+        this.containerPort = $.containerPort;
+        this.hostPort = $.hostPort;
+        this.protocol = $.protocol;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaskDefinitionPortMappingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> containerPort;
-        private @Nullable Output<Integer> hostPort;
-        private @Nullable Output<String> protocol;
+        private TaskDefinitionPortMappingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaskDefinitionPortMappingArgs();
         }
 
         public Builder(TaskDefinitionPortMappingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerPort = defaults.containerPort;
-    	      this.hostPort = defaults.hostPort;
-    	      this.protocol = defaults.protocol;
+            $ = new TaskDefinitionPortMappingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder containerPort(@Nullable Output<Integer> containerPort) {
-            this.containerPort = containerPort;
+            $.containerPort = containerPort;
             return this;
         }
-        public Builder containerPort(@Nullable Integer containerPort) {
-            this.containerPort = Codegen.ofNullable(containerPort);
-            return this;
+
+        public Builder containerPort(Integer containerPort) {
+            return containerPort(Output.of(containerPort));
         }
+
         public Builder hostPort(@Nullable Output<Integer> hostPort) {
-            this.hostPort = hostPort;
+            $.hostPort = hostPort;
             return this;
         }
-        public Builder hostPort(@Nullable Integer hostPort) {
-            this.hostPort = Codegen.ofNullable(hostPort);
-            return this;
+
+        public Builder hostPort(Integer hostPort) {
+            return hostPort(Output.of(hostPort));
         }
+
         public Builder protocol(@Nullable Output<String> protocol) {
-            this.protocol = protocol;
+            $.protocol = protocol;
             return this;
         }
-        public Builder protocol(@Nullable String protocol) {
-            this.protocol = Codegen.ofNullable(protocol);
-            return this;
-        }        public TaskDefinitionPortMappingArgs build() {
-            return new TaskDefinitionPortMappingArgs(containerPort, hostPort, protocol);
+
+        public Builder protocol(String protocol) {
+            return protocol(Output.of(protocol));
+        }
+
+        public TaskDefinitionPortMappingArgs build() {
+            return $;
         }
     }
+
 }

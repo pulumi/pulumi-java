@@ -19,7 +19,7 @@ public final class OperationWarningsItemResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="code", required=true)
-      private final String code;
+    private String code;
 
     public String code() {
         return this.code;
@@ -30,7 +30,7 @@ public final class OperationWarningsItemResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="data", required=true)
-      private final List<OperationWarningsItemDataItemResponse> data;
+    private List<OperationWarningsItemDataItemResponse> data;
 
     public List<OperationWarningsItemDataItemResponse> data() {
         return this.data;
@@ -41,67 +41,63 @@ public final class OperationWarningsItemResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="message", required=true)
-      private final String message;
+    private String message;
 
     public String message() {
         return this.message;
     }
 
-    public OperationWarningsItemResponse(
-        String code,
-        List<OperationWarningsItemDataItemResponse> data,
-        String message) {
-        this.code = Objects.requireNonNull(code, "expected parameter 'code' to be non-null");
-        this.data = Objects.requireNonNull(data, "expected parameter 'data' to be non-null");
-        this.message = Objects.requireNonNull(message, "expected parameter 'message' to be non-null");
-    }
+    private OperationWarningsItemResponse() {}
 
-    private OperationWarningsItemResponse() {
-        this.code = null;
-        this.data = List.of();
-        this.message = null;
+    private OperationWarningsItemResponse(OperationWarningsItemResponse $) {
+        this.code = $.code;
+        this.data = $.data;
+        this.message = $.message;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OperationWarningsItemResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String code;
-        private List<OperationWarningsItemDataItemResponse> data;
-        private String message;
+        private OperationWarningsItemResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OperationWarningsItemResponse();
         }
 
         public Builder(OperationWarningsItemResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.code = defaults.code;
-    	      this.data = defaults.data;
-    	      this.message = defaults.message;
+            $ = new OperationWarningsItemResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder code(String code) {
-            this.code = Objects.requireNonNull(code);
+            $.code = code;
             return this;
         }
+
         public Builder data(List<OperationWarningsItemDataItemResponse> data) {
-            this.data = Objects.requireNonNull(data);
+            $.data = data;
             return this;
         }
+
         public Builder data(OperationWarningsItemDataItemResponse... data) {
             return data(List.of(data));
         }
+
         public Builder message(String message) {
-            this.message = Objects.requireNonNull(message);
+            $.message = message;
             return this;
-        }        public OperationWarningsItemResponse build() {
-            return new OperationWarningsItemResponse(code, data, message);
+        }
+
+        public OperationWarningsItemResponse build() {
+            $.code = Objects.requireNonNull($.code, "expected parameter 'code' to be non-null");
+            $.data = Objects.requireNonNull($.data, "expected parameter 'data' to be non-null");
+            $.message = Objects.requireNonNull($.message, "expected parameter 'message' to be non-null");
+            return $;
         }
     }
+
 }

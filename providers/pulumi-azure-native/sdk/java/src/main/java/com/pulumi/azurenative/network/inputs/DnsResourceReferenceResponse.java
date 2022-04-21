@@ -24,10 +24,10 @@ public final class DnsResourceReferenceResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="dnsResources")
-      private final @Nullable List<SubResourceResponse> dnsResources;
+    private @Nullable List<SubResourceResponse> dnsResources;
 
-    public List<SubResourceResponse> dnsResources() {
-        return this.dnsResources == null ? List.of() : this.dnsResources;
+    public Optional<List<SubResourceResponse>> dnsResources() {
+        return Optional.ofNullable(this.dnsResources);
     }
 
     /**
@@ -35,58 +35,54 @@ public final class DnsResourceReferenceResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="targetResource")
-      private final @Nullable SubResourceResponse targetResource;
+    private @Nullable SubResourceResponse targetResource;
 
     public Optional<SubResourceResponse> targetResource() {
-        return this.targetResource == null ? Optional.empty() : Optional.ofNullable(this.targetResource);
+        return Optional.ofNullable(this.targetResource);
     }
 
-    public DnsResourceReferenceResponse(
-        @Nullable List<SubResourceResponse> dnsResources,
-        @Nullable SubResourceResponse targetResource) {
-        this.dnsResources = dnsResources;
-        this.targetResource = targetResource;
-    }
+    private DnsResourceReferenceResponse() {}
 
-    private DnsResourceReferenceResponse() {
-        this.dnsResources = List.of();
-        this.targetResource = null;
+    private DnsResourceReferenceResponse(DnsResourceReferenceResponse $) {
+        this.dnsResources = $.dnsResources;
+        this.targetResource = $.targetResource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DnsResourceReferenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<SubResourceResponse> dnsResources;
-        private @Nullable SubResourceResponse targetResource;
+        private DnsResourceReferenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DnsResourceReferenceResponse();
         }
 
         public Builder(DnsResourceReferenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dnsResources = defaults.dnsResources;
-    	      this.targetResource = defaults.targetResource;
+            $ = new DnsResourceReferenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dnsResources(@Nullable List<SubResourceResponse> dnsResources) {
-            this.dnsResources = dnsResources;
+            $.dnsResources = dnsResources;
             return this;
         }
+
         public Builder dnsResources(SubResourceResponse... dnsResources) {
             return dnsResources(List.of(dnsResources));
         }
+
         public Builder targetResource(@Nullable SubResourceResponse targetResource) {
-            this.targetResource = targetResource;
+            $.targetResource = targetResource;
             return this;
-        }        public DnsResourceReferenceResponse build() {
-            return new DnsResourceReferenceResponse(dnsResources, targetResource);
+        }
+
+        public DnsResourceReferenceResponse build() {
+            return $;
         }
     }
+
 }

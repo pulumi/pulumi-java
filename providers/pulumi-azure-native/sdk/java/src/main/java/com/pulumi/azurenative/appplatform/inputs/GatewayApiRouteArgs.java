@@ -5,12 +5,12 @@ package com.pulumi.azurenative.appplatform.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class GatewayApiRouteArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class GatewayApiRouteArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="filters")
-      private final @Nullable Output<List<String>> filters;
+    private @Nullable Output<List<String>> filters;
 
-    public Output<List<String>> filters() {
-        return this.filters == null ? Codegen.empty() : this.filters;
+    public Optional<Output<List<String>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class GatewayApiRouteArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="order")
-      private final @Nullable Output<Integer> order;
+    private @Nullable Output<Integer> order;
 
-    public Output<Integer> order() {
-        return this.order == null ? Codegen.empty() : this.order;
+    public Optional<Output<Integer>> order() {
+        return Optional.ofNullable(this.order);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class GatewayApiRouteArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="predicates")
-      private final @Nullable Output<List<String>> predicates;
+    private @Nullable Output<List<String>> predicates;
 
-    public Output<List<String>> predicates() {
-        return this.predicates == null ? Codegen.empty() : this.predicates;
+    public Optional<Output<List<String>>> predicates() {
+        return Optional.ofNullable(this.predicates);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class GatewayApiRouteArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="ssoEnabled")
-      private final @Nullable Output<Boolean> ssoEnabled;
+    private @Nullable Output<Boolean> ssoEnabled;
 
-    public Output<Boolean> ssoEnabled() {
-        return this.ssoEnabled == null ? Codegen.empty() : this.ssoEnabled;
+    public Optional<Output<Boolean>> ssoEnabled() {
+        return Optional.ofNullable(this.ssoEnabled);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class GatewayApiRouteArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<String>> tags;
+    private @Nullable Output<List<String>> tags;
 
-    public Output<List<String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class GatewayApiRouteArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="title")
-      private final @Nullable Output<String> title;
+    private @Nullable Output<String> title;
 
-    public Output<String> title() {
-        return this.title == null ? Codegen.empty() : this.title;
+    public Optional<Output<String>> title() {
+        return Optional.ofNullable(this.title);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class GatewayApiRouteArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="tokenRelay")
-      private final @Nullable Output<Boolean> tokenRelay;
+    private @Nullable Output<Boolean> tokenRelay;
 
-    public Output<Boolean> tokenRelay() {
-        return this.tokenRelay == null ? Codegen.empty() : this.tokenRelay;
+    public Optional<Output<Boolean>> tokenRelay() {
+        return Optional.ofNullable(this.tokenRelay);
     }
 
     /**
@@ -115,163 +115,140 @@ public final class GatewayApiRouteArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="uri")
-      private final @Nullable Output<String> uri;
+    private @Nullable Output<String> uri;
 
-    public Output<String> uri() {
-        return this.uri == null ? Codegen.empty() : this.uri;
+    public Optional<Output<String>> uri() {
+        return Optional.ofNullable(this.uri);
     }
 
-    public GatewayApiRouteArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<List<String>> filters,
-        @Nullable Output<Integer> order,
-        @Nullable Output<List<String>> predicates,
-        @Nullable Output<Boolean> ssoEnabled,
-        @Nullable Output<List<String>> tags,
-        @Nullable Output<String> title,
-        @Nullable Output<Boolean> tokenRelay,
-        @Nullable Output<String> uri) {
-        this.description = description;
-        this.filters = filters;
-        this.order = order;
-        this.predicates = predicates;
-        this.ssoEnabled = ssoEnabled;
-        this.tags = tags;
-        this.title = title;
-        this.tokenRelay = tokenRelay;
-        this.uri = uri;
-    }
+    private GatewayApiRouteArgs() {}
 
-    private GatewayApiRouteArgs() {
-        this.description = Codegen.empty();
-        this.filters = Codegen.empty();
-        this.order = Codegen.empty();
-        this.predicates = Codegen.empty();
-        this.ssoEnabled = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.title = Codegen.empty();
-        this.tokenRelay = Codegen.empty();
-        this.uri = Codegen.empty();
+    private GatewayApiRouteArgs(GatewayApiRouteArgs $) {
+        this.description = $.description;
+        this.filters = $.filters;
+        this.order = $.order;
+        this.predicates = $.predicates;
+        this.ssoEnabled = $.ssoEnabled;
+        this.tags = $.tags;
+        this.title = $.title;
+        this.tokenRelay = $.tokenRelay;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GatewayApiRouteArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<List<String>> filters;
-        private @Nullable Output<Integer> order;
-        private @Nullable Output<List<String>> predicates;
-        private @Nullable Output<Boolean> ssoEnabled;
-        private @Nullable Output<List<String>> tags;
-        private @Nullable Output<String> title;
-        private @Nullable Output<Boolean> tokenRelay;
-        private @Nullable Output<String> uri;
+        private GatewayApiRouteArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GatewayApiRouteArgs();
         }
 
         public Builder(GatewayApiRouteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.filters = defaults.filters;
-    	      this.order = defaults.order;
-    	      this.predicates = defaults.predicates;
-    	      this.ssoEnabled = defaults.ssoEnabled;
-    	      this.tags = defaults.tags;
-    	      this.title = defaults.title;
-    	      this.tokenRelay = defaults.tokenRelay;
-    	      this.uri = defaults.uri;
+            $ = new GatewayApiRouteArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder filters(@Nullable Output<List<String>> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
-        public Builder filters(@Nullable List<String> filters) {
-            this.filters = Codegen.ofNullable(filters);
-            return this;
+
+        public Builder filters(List<String> filters) {
+            return filters(Output.of(filters));
         }
+
         public Builder filters(String... filters) {
             return filters(List.of(filters));
         }
+
         public Builder order(@Nullable Output<Integer> order) {
-            this.order = order;
+            $.order = order;
             return this;
         }
-        public Builder order(@Nullable Integer order) {
-            this.order = Codegen.ofNullable(order);
-            return this;
+
+        public Builder order(Integer order) {
+            return order(Output.of(order));
         }
+
         public Builder predicates(@Nullable Output<List<String>> predicates) {
-            this.predicates = predicates;
+            $.predicates = predicates;
             return this;
         }
-        public Builder predicates(@Nullable List<String> predicates) {
-            this.predicates = Codegen.ofNullable(predicates);
-            return this;
+
+        public Builder predicates(List<String> predicates) {
+            return predicates(Output.of(predicates));
         }
+
         public Builder predicates(String... predicates) {
             return predicates(List.of(predicates));
         }
+
         public Builder ssoEnabled(@Nullable Output<Boolean> ssoEnabled) {
-            this.ssoEnabled = ssoEnabled;
+            $.ssoEnabled = ssoEnabled;
             return this;
         }
-        public Builder ssoEnabled(@Nullable Boolean ssoEnabled) {
-            this.ssoEnabled = Codegen.ofNullable(ssoEnabled);
-            return this;
+
+        public Builder ssoEnabled(Boolean ssoEnabled) {
+            return ssoEnabled(Output.of(ssoEnabled));
         }
+
         public Builder tags(@Nullable Output<List<String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(String... tags) {
             return tags(List.of(tags));
         }
+
         public Builder title(@Nullable Output<String> title) {
-            this.title = title;
+            $.title = title;
             return this;
         }
-        public Builder title(@Nullable String title) {
-            this.title = Codegen.ofNullable(title);
-            return this;
+
+        public Builder title(String title) {
+            return title(Output.of(title));
         }
+
         public Builder tokenRelay(@Nullable Output<Boolean> tokenRelay) {
-            this.tokenRelay = tokenRelay;
+            $.tokenRelay = tokenRelay;
             return this;
         }
-        public Builder tokenRelay(@Nullable Boolean tokenRelay) {
-            this.tokenRelay = Codegen.ofNullable(tokenRelay);
-            return this;
+
+        public Builder tokenRelay(Boolean tokenRelay) {
+            return tokenRelay(Output.of(tokenRelay));
         }
+
         public Builder uri(@Nullable Output<String> uri) {
-            this.uri = uri;
+            $.uri = uri;
             return this;
         }
-        public Builder uri(@Nullable String uri) {
-            this.uri = Codegen.ofNullable(uri);
-            return this;
-        }        public GatewayApiRouteArgs build() {
-            return new GatewayApiRouteArgs(description, filters, order, predicates, ssoEnabled, tags, title, tokenRelay, uri);
+
+        public Builder uri(String uri) {
+            return uri(Output.of(uri));
+        }
+
+        public GatewayApiRouteArgs build() {
+            return $;
         }
     }
+
 }

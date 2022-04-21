@@ -6,8 +6,8 @@ package com.pulumi.awsnative.ssm.inputs;
 import com.pulumi.awsnative.ssm.inputs.AssociationS3OutputLocationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class AssociationInstanceAssociationOutputLocationArgs extends com.
     public static final AssociationInstanceAssociationOutputLocationArgs Empty = new AssociationInstanceAssociationOutputLocationArgs();
 
     @Import(name="s3Location")
-      private final @Nullable Output<AssociationS3OutputLocationArgs> s3Location;
+    private @Nullable Output<AssociationS3OutputLocationArgs> s3Location;
 
-    public Output<AssociationS3OutputLocationArgs> s3Location() {
-        return this.s3Location == null ? Codegen.empty() : this.s3Location;
+    public Optional<Output<AssociationS3OutputLocationArgs>> s3Location() {
+        return Optional.ofNullable(this.s3Location);
     }
 
-    public AssociationInstanceAssociationOutputLocationArgs(@Nullable Output<AssociationS3OutputLocationArgs> s3Location) {
-        this.s3Location = s3Location;
-    }
+    private AssociationInstanceAssociationOutputLocationArgs() {}
 
-    private AssociationInstanceAssociationOutputLocationArgs() {
-        this.s3Location = Codegen.empty();
+    private AssociationInstanceAssociationOutputLocationArgs(AssociationInstanceAssociationOutputLocationArgs $) {
+        this.s3Location = $.s3Location;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssociationInstanceAssociationOutputLocationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AssociationS3OutputLocationArgs> s3Location;
+        private AssociationInstanceAssociationOutputLocationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssociationInstanceAssociationOutputLocationArgs();
         }
 
         public Builder(AssociationInstanceAssociationOutputLocationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.s3Location = defaults.s3Location;
+            $ = new AssociationInstanceAssociationOutputLocationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder s3Location(@Nullable Output<AssociationS3OutputLocationArgs> s3Location) {
-            this.s3Location = s3Location;
+            $.s3Location = s3Location;
             return this;
         }
-        public Builder s3Location(@Nullable AssociationS3OutputLocationArgs s3Location) {
-            this.s3Location = Codegen.ofNullable(s3Location);
-            return this;
-        }        public AssociationInstanceAssociationOutputLocationArgs build() {
-            return new AssociationInstanceAssociationOutputLocationArgs(s3Location);
+
+        public Builder s3Location(AssociationS3OutputLocationArgs s3Location) {
+            return s3Location(Output.of(s3Location));
+        }
+
+        public AssociationInstanceAssociationOutputLocationArgs build() {
+            return $;
         }
     }
+
 }

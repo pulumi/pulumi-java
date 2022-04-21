@@ -17,7 +17,7 @@ public final class GetBlobInventoryPolicyArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetBlobInventoryPolicyArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="blobInventoryPolicyName", required=true)
-      private final String blobInventoryPolicyName;
+    private String blobInventoryPolicyName;
 
     public String blobInventoryPolicyName() {
         return this.blobInventoryPolicyName;
@@ -39,64 +39,59 @@ public final class GetBlobInventoryPolicyArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetBlobInventoryPolicyArgs(
-        String accountName,
-        String blobInventoryPolicyName,
-        String resourceGroupName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.blobInventoryPolicyName = Objects.requireNonNull(blobInventoryPolicyName, "expected parameter 'blobInventoryPolicyName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetBlobInventoryPolicyArgs() {}
 
-    private GetBlobInventoryPolicyArgs() {
-        this.accountName = null;
-        this.blobInventoryPolicyName = null;
-        this.resourceGroupName = null;
+    private GetBlobInventoryPolicyArgs(GetBlobInventoryPolicyArgs $) {
+        this.accountName = $.accountName;
+        this.blobInventoryPolicyName = $.blobInventoryPolicyName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBlobInventoryPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String blobInventoryPolicyName;
-        private String resourceGroupName;
+        private GetBlobInventoryPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBlobInventoryPolicyArgs();
         }
 
         public Builder(GetBlobInventoryPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.blobInventoryPolicyName = defaults.blobInventoryPolicyName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetBlobInventoryPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder blobInventoryPolicyName(String blobInventoryPolicyName) {
-            this.blobInventoryPolicyName = Objects.requireNonNull(blobInventoryPolicyName);
+            $.blobInventoryPolicyName = blobInventoryPolicyName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetBlobInventoryPolicyArgs build() {
-            return new GetBlobInventoryPolicyArgs(accountName, blobInventoryPolicyName, resourceGroupName);
+        }
+
+        public GetBlobInventoryPolicyArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.blobInventoryPolicyName = Objects.requireNonNull($.blobInventoryPolicyName, "expected parameter 'blobInventoryPolicyName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

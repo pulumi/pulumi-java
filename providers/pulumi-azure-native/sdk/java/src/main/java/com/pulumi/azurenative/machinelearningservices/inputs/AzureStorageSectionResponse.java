@@ -22,10 +22,10 @@ public final class AzureStorageSectionResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="accountKey")
-      private final @Nullable String accountKey;
+    private @Nullable String accountKey;
 
     public Optional<String> accountKey() {
-        return this.accountKey == null ? Optional.empty() : Optional.ofNullable(this.accountKey);
+        return Optional.ofNullable(this.accountKey);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class AzureStorageSectionResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="accountName")
-      private final @Nullable String accountName;
+    private @Nullable String accountName;
 
     public Optional<String> accountName() {
-        return this.accountName == null ? Optional.empty() : Optional.ofNullable(this.accountName);
+        return Optional.ofNullable(this.accountName);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class AzureStorageSectionResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="areWorkspaceManagedIdentitiesAllowed")
-      private final @Nullable Boolean areWorkspaceManagedIdentitiesAllowed;
+    private @Nullable Boolean areWorkspaceManagedIdentitiesAllowed;
 
     public Optional<Boolean> areWorkspaceManagedIdentitiesAllowed() {
-        return this.areWorkspaceManagedIdentitiesAllowed == null ? Optional.empty() : Optional.ofNullable(this.areWorkspaceManagedIdentitiesAllowed);
+        return Optional.ofNullable(this.areWorkspaceManagedIdentitiesAllowed);
     }
 
     /**
@@ -55,17 +55,17 @@ public final class AzureStorageSectionResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="blobCacheTimeout")
-      private final @Nullable Integer blobCacheTimeout;
+    private @Nullable Integer blobCacheTimeout;
 
     public Optional<Integer> blobCacheTimeout() {
-        return this.blobCacheTimeout == null ? Optional.empty() : Optional.ofNullable(this.blobCacheTimeout);
+        return Optional.ofNullable(this.blobCacheTimeout);
     }
 
     @Import(name="clientCredentials")
-      private final @Nullable ClientCredentialsResponse clientCredentials;
+    private @Nullable ClientCredentialsResponse clientCredentials;
 
     public Optional<ClientCredentialsResponse> clientCredentials() {
-        return this.clientCredentials == null ? Optional.empty() : Optional.ofNullable(this.clientCredentials);
+        return Optional.ofNullable(this.clientCredentials);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class AzureStorageSectionResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="containerName")
-      private final @Nullable String containerName;
+    private @Nullable String containerName;
 
     public Optional<String> containerName() {
-        return this.containerName == null ? Optional.empty() : Optional.ofNullable(this.containerName);
+        return Optional.ofNullable(this.containerName);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class AzureStorageSectionResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="credential")
-      private final @Nullable String credential;
+    private @Nullable String credential;
 
     public Optional<String> credential() {
-        return this.credential == null ? Optional.empty() : Optional.ofNullable(this.credential);
+        return Optional.ofNullable(this.credential);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class AzureStorageSectionResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="credentialType")
-      private final @Nullable String credentialType;
+    private @Nullable String credentialType;
 
     public Optional<String> credentialType() {
-        return this.credentialType == null ? Optional.empty() : Optional.ofNullable(this.credentialType);
+        return Optional.ofNullable(this.credentialType);
     }
 
     /**
@@ -106,10 +106,10 @@ public final class AzureStorageSectionResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="endpoint")
-      private final @Nullable String endpoint;
+    private @Nullable String endpoint;
 
     public Optional<String> endpoint() {
-        return this.endpoint == null ? Optional.empty() : Optional.ofNullable(this.endpoint);
+        return Optional.ofNullable(this.endpoint);
     }
 
     /**
@@ -117,10 +117,10 @@ public final class AzureStorageSectionResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="isSas")
-      private final @Nullable Boolean isSas;
+    private @Nullable Boolean isSas;
 
     public Optional<Boolean> isSas() {
-        return this.isSas == null ? Optional.empty() : Optional.ofNullable(this.isSas);
+        return Optional.ofNullable(this.isSas);
     }
 
     /**
@@ -128,10 +128,10 @@ public final class AzureStorageSectionResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="protocol")
-      private final @Nullable String protocol;
+    private @Nullable String protocol;
 
     public Optional<String> protocol() {
-        return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
+        return Optional.ofNullable(this.protocol);
     }
 
     /**
@@ -139,10 +139,10 @@ public final class AzureStorageSectionResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="resourceGroup")
-      private final @Nullable String resourceGroup;
+    private @Nullable String resourceGroup;
 
     public Optional<String> resourceGroup() {
-        return this.resourceGroup == null ? Optional.empty() : Optional.ofNullable(this.resourceGroup);
+        return Optional.ofNullable(this.resourceGroup);
     }
 
     /**
@@ -150,10 +150,10 @@ public final class AzureStorageSectionResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="sasToken")
-      private final @Nullable String sasToken;
+    private @Nullable String sasToken;
 
     public Optional<String> sasToken() {
-        return this.sasToken == null ? Optional.empty() : Optional.ofNullable(this.sasToken);
+        return Optional.ofNullable(this.sasToken);
     }
 
     /**
@@ -161,10 +161,10 @@ public final class AzureStorageSectionResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="serviceDataAccessAuthIdentity")
-      private final @Nullable String serviceDataAccessAuthIdentity;
+    private @Nullable String serviceDataAccessAuthIdentity;
 
     public Optional<String> serviceDataAccessAuthIdentity() {
-        return this.serviceDataAccessAuthIdentity == null ? Optional.empty() : Optional.ofNullable(this.serviceDataAccessAuthIdentity);
+        return Optional.ofNullable(this.serviceDataAccessAuthIdentity);
     }
 
     /**
@@ -172,172 +172,128 @@ public final class AzureStorageSectionResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="subscriptionId")
-      private final @Nullable String subscriptionId;
+    private @Nullable String subscriptionId;
 
     public Optional<String> subscriptionId() {
-        return this.subscriptionId == null ? Optional.empty() : Optional.ofNullable(this.subscriptionId);
+        return Optional.ofNullable(this.subscriptionId);
     }
 
-    public AzureStorageSectionResponse(
-        @Nullable String accountKey,
-        @Nullable String accountName,
-        @Nullable Boolean areWorkspaceManagedIdentitiesAllowed,
-        @Nullable Integer blobCacheTimeout,
-        @Nullable ClientCredentialsResponse clientCredentials,
-        @Nullable String containerName,
-        @Nullable String credential,
-        @Nullable String credentialType,
-        @Nullable String endpoint,
-        @Nullable Boolean isSas,
-        @Nullable String protocol,
-        @Nullable String resourceGroup,
-        @Nullable String sasToken,
-        @Nullable String serviceDataAccessAuthIdentity,
-        @Nullable String subscriptionId) {
-        this.accountKey = accountKey;
-        this.accountName = accountName;
-        this.areWorkspaceManagedIdentitiesAllowed = areWorkspaceManagedIdentitiesAllowed;
-        this.blobCacheTimeout = blobCacheTimeout;
-        this.clientCredentials = clientCredentials;
-        this.containerName = containerName;
-        this.credential = credential;
-        this.credentialType = credentialType;
-        this.endpoint = endpoint;
-        this.isSas = isSas;
-        this.protocol = protocol;
-        this.resourceGroup = resourceGroup;
-        this.sasToken = sasToken;
-        this.serviceDataAccessAuthIdentity = serviceDataAccessAuthIdentity;
-        this.subscriptionId = subscriptionId;
-    }
+    private AzureStorageSectionResponse() {}
 
-    private AzureStorageSectionResponse() {
-        this.accountKey = null;
-        this.accountName = null;
-        this.areWorkspaceManagedIdentitiesAllowed = null;
-        this.blobCacheTimeout = null;
-        this.clientCredentials = null;
-        this.containerName = null;
-        this.credential = null;
-        this.credentialType = null;
-        this.endpoint = null;
-        this.isSas = null;
-        this.protocol = null;
-        this.resourceGroup = null;
-        this.sasToken = null;
-        this.serviceDataAccessAuthIdentity = null;
-        this.subscriptionId = null;
+    private AzureStorageSectionResponse(AzureStorageSectionResponse $) {
+        this.accountKey = $.accountKey;
+        this.accountName = $.accountName;
+        this.areWorkspaceManagedIdentitiesAllowed = $.areWorkspaceManagedIdentitiesAllowed;
+        this.blobCacheTimeout = $.blobCacheTimeout;
+        this.clientCredentials = $.clientCredentials;
+        this.containerName = $.containerName;
+        this.credential = $.credential;
+        this.credentialType = $.credentialType;
+        this.endpoint = $.endpoint;
+        this.isSas = $.isSas;
+        this.protocol = $.protocol;
+        this.resourceGroup = $.resourceGroup;
+        this.sasToken = $.sasToken;
+        this.serviceDataAccessAuthIdentity = $.serviceDataAccessAuthIdentity;
+        this.subscriptionId = $.subscriptionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureStorageSectionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String accountKey;
-        private @Nullable String accountName;
-        private @Nullable Boolean areWorkspaceManagedIdentitiesAllowed;
-        private @Nullable Integer blobCacheTimeout;
-        private @Nullable ClientCredentialsResponse clientCredentials;
-        private @Nullable String containerName;
-        private @Nullable String credential;
-        private @Nullable String credentialType;
-        private @Nullable String endpoint;
-        private @Nullable Boolean isSas;
-        private @Nullable String protocol;
-        private @Nullable String resourceGroup;
-        private @Nullable String sasToken;
-        private @Nullable String serviceDataAccessAuthIdentity;
-        private @Nullable String subscriptionId;
+        private AzureStorageSectionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureStorageSectionResponse();
         }
 
         public Builder(AzureStorageSectionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountKey = defaults.accountKey;
-    	      this.accountName = defaults.accountName;
-    	      this.areWorkspaceManagedIdentitiesAllowed = defaults.areWorkspaceManagedIdentitiesAllowed;
-    	      this.blobCacheTimeout = defaults.blobCacheTimeout;
-    	      this.clientCredentials = defaults.clientCredentials;
-    	      this.containerName = defaults.containerName;
-    	      this.credential = defaults.credential;
-    	      this.credentialType = defaults.credentialType;
-    	      this.endpoint = defaults.endpoint;
-    	      this.isSas = defaults.isSas;
-    	      this.protocol = defaults.protocol;
-    	      this.resourceGroup = defaults.resourceGroup;
-    	      this.sasToken = defaults.sasToken;
-    	      this.serviceDataAccessAuthIdentity = defaults.serviceDataAccessAuthIdentity;
-    	      this.subscriptionId = defaults.subscriptionId;
+            $ = new AzureStorageSectionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accountKey(@Nullable String accountKey) {
-            this.accountKey = accountKey;
+            $.accountKey = accountKey;
             return this;
         }
+
         public Builder accountName(@Nullable String accountName) {
-            this.accountName = accountName;
+            $.accountName = accountName;
             return this;
         }
+
         public Builder areWorkspaceManagedIdentitiesAllowed(@Nullable Boolean areWorkspaceManagedIdentitiesAllowed) {
-            this.areWorkspaceManagedIdentitiesAllowed = areWorkspaceManagedIdentitiesAllowed;
+            $.areWorkspaceManagedIdentitiesAllowed = areWorkspaceManagedIdentitiesAllowed;
             return this;
         }
+
         public Builder blobCacheTimeout(@Nullable Integer blobCacheTimeout) {
-            this.blobCacheTimeout = blobCacheTimeout;
+            $.blobCacheTimeout = blobCacheTimeout;
             return this;
         }
+
         public Builder clientCredentials(@Nullable ClientCredentialsResponse clientCredentials) {
-            this.clientCredentials = clientCredentials;
+            $.clientCredentials = clientCredentials;
             return this;
         }
+
         public Builder containerName(@Nullable String containerName) {
-            this.containerName = containerName;
+            $.containerName = containerName;
             return this;
         }
+
         public Builder credential(@Nullable String credential) {
-            this.credential = credential;
+            $.credential = credential;
             return this;
         }
+
         public Builder credentialType(@Nullable String credentialType) {
-            this.credentialType = credentialType;
+            $.credentialType = credentialType;
             return this;
         }
+
         public Builder endpoint(@Nullable String endpoint) {
-            this.endpoint = endpoint;
+            $.endpoint = endpoint;
             return this;
         }
+
         public Builder isSas(@Nullable Boolean isSas) {
-            this.isSas = isSas;
+            $.isSas = isSas;
             return this;
         }
+
         public Builder protocol(@Nullable String protocol) {
-            this.protocol = protocol;
+            $.protocol = protocol;
             return this;
         }
+
         public Builder resourceGroup(@Nullable String resourceGroup) {
-            this.resourceGroup = resourceGroup;
+            $.resourceGroup = resourceGroup;
             return this;
         }
+
         public Builder sasToken(@Nullable String sasToken) {
-            this.sasToken = sasToken;
+            $.sasToken = sasToken;
             return this;
         }
+
         public Builder serviceDataAccessAuthIdentity(@Nullable String serviceDataAccessAuthIdentity) {
-            this.serviceDataAccessAuthIdentity = serviceDataAccessAuthIdentity;
+            $.serviceDataAccessAuthIdentity = serviceDataAccessAuthIdentity;
             return this;
         }
+
         public Builder subscriptionId(@Nullable String subscriptionId) {
-            this.subscriptionId = subscriptionId;
+            $.subscriptionId = subscriptionId;
             return this;
-        }        public AzureStorageSectionResponse build() {
-            return new AzureStorageSectionResponse(accountKey, accountName, areWorkspaceManagedIdentitiesAllowed, blobCacheTimeout, clientCredentials, containerName, credential, credentialType, endpoint, isSas, protocol, resourceGroup, sasToken, serviceDataAccessAuthIdentity, subscriptionId);
+        }
+
+        public AzureStorageSectionResponse build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.BackendRuleArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rules")
-      private final @Nullable Output<List<BackendRuleArgs>> rules;
+    private @Nullable Output<List<BackendRuleArgs>> rules;
 
-    public Output<List<BackendRuleArgs>> rules() {
-        return this.rules == null ? Codegen.empty() : this.rules;
+    public Optional<Output<List<BackendRuleArgs>>> rules() {
+        return Optional.ofNullable(this.rules);
     }
 
-    public BackendArgs(@Nullable Output<List<BackendRuleArgs>> rules) {
-        this.rules = rules;
-    }
+    private BackendArgs() {}
 
-    private BackendArgs() {
-        this.rules = Codegen.empty();
+    private BackendArgs(BackendArgs $) {
+        this.rules = $.rules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackendArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<BackendRuleArgs>> rules;
+        private BackendArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackendArgs();
         }
 
         public Builder(BackendArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.rules = defaults.rules;
+            $ = new BackendArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder rules(@Nullable Output<List<BackendRuleArgs>> rules) {
-            this.rules = rules;
+            $.rules = rules;
             return this;
         }
-        public Builder rules(@Nullable List<BackendRuleArgs> rules) {
-            this.rules = Codegen.ofNullable(rules);
-            return this;
+
+        public Builder rules(List<BackendRuleArgs> rules) {
+            return rules(Output.of(rules));
         }
+
         public Builder rules(BackendRuleArgs... rules) {
             return rules(List.of(rules));
-        }        public BackendArgs build() {
-            return new BackendArgs(rules);
+        }
+
+        public BackendArgs build() {
+            return $;
         }
     }
+
 }

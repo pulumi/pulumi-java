@@ -17,45 +17,45 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigContentTypeOptio
      * 
      */
     @Import(name="override", required=true)
-      private final Boolean override;
+    private Boolean override;
 
     public Boolean override() {
         return this.override;
     }
 
-    public GetResponseHeadersPolicySecurityHeadersConfigContentTypeOption(Boolean override) {
-        this.override = Objects.requireNonNull(override, "expected parameter 'override' to be non-null");
-    }
+    private GetResponseHeadersPolicySecurityHeadersConfigContentTypeOption() {}
 
-    private GetResponseHeadersPolicySecurityHeadersConfigContentTypeOption() {
-        this.override = null;
+    private GetResponseHeadersPolicySecurityHeadersConfigContentTypeOption(GetResponseHeadersPolicySecurityHeadersConfigContentTypeOption $) {
+        this.override = $.override;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetResponseHeadersPolicySecurityHeadersConfigContentTypeOption defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean override;
+        private GetResponseHeadersPolicySecurityHeadersConfigContentTypeOption $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetResponseHeadersPolicySecurityHeadersConfigContentTypeOption();
         }
 
         public Builder(GetResponseHeadersPolicySecurityHeadersConfigContentTypeOption defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.override = defaults.override;
+            $ = new GetResponseHeadersPolicySecurityHeadersConfigContentTypeOption(Objects.requireNonNull(defaults));
         }
 
         public Builder override(Boolean override) {
-            this.override = Objects.requireNonNull(override);
+            $.override = override;
             return this;
-        }        public GetResponseHeadersPolicySecurityHeadersConfigContentTypeOption build() {
-            return new GetResponseHeadersPolicySecurityHeadersConfigContentTypeOption(override);
+        }
+
+        public GetResponseHeadersPolicySecurityHeadersConfigContentTypeOption build() {
+            $.override = Objects.requireNonNull($.override, "expected parameter 'override' to be non-null");
+            return $;
         }
     }
+
 }

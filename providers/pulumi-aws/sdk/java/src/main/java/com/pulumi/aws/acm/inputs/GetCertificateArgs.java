@@ -22,7 +22,7 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="domain", required=true)
-      private final String domain;
+    private String domain;
 
     public String domain() {
         return this.domain;
@@ -33,10 +33,10 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="keyTypes")
-      private final @Nullable List<String> keyTypes;
+    private @Nullable List<String> keyTypes;
 
-    public List<String> keyTypes() {
-        return this.keyTypes == null ? List.of() : this.keyTypes;
+    public Optional<List<String>> keyTypes() {
+        return Optional.ofNullable(this.keyTypes);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="mostRecent")
-      private final @Nullable Boolean mostRecent;
+    private @Nullable Boolean mostRecent;
 
     public Optional<Boolean> mostRecent() {
-        return this.mostRecent == null ? Optional.empty() : Optional.ofNullable(this.mostRecent);
+        return Optional.ofNullable(this.mostRecent);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="statuses")
-      private final @Nullable List<String> statuses;
+    private @Nullable List<String> statuses;
 
-    public List<String> statuses() {
-        return this.statuses == null ? List.of() : this.statuses;
+    public Optional<List<String>> statuses() {
+        return Optional.ofNullable(this.statuses);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -79,100 +79,87 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="types")
-      private final @Nullable List<String> types;
+    private @Nullable List<String> types;
 
-    public List<String> types() {
-        return this.types == null ? List.of() : this.types;
+    public Optional<List<String>> types() {
+        return Optional.ofNullable(this.types);
     }
 
-    public GetCertificateArgs(
-        String domain,
-        @Nullable List<String> keyTypes,
-        @Nullable Boolean mostRecent,
-        @Nullable List<String> statuses,
-        @Nullable Map<String,String> tags,
-        @Nullable List<String> types) {
-        this.domain = Objects.requireNonNull(domain, "expected parameter 'domain' to be non-null");
-        this.keyTypes = keyTypes;
-        this.mostRecent = mostRecent;
-        this.statuses = statuses;
-        this.tags = tags;
-        this.types = types;
-    }
+    private GetCertificateArgs() {}
 
-    private GetCertificateArgs() {
-        this.domain = null;
-        this.keyTypes = List.of();
-        this.mostRecent = null;
-        this.statuses = List.of();
-        this.tags = Map.of();
-        this.types = List.of();
+    private GetCertificateArgs(GetCertificateArgs $) {
+        this.domain = $.domain;
+        this.keyTypes = $.keyTypes;
+        this.mostRecent = $.mostRecent;
+        this.statuses = $.statuses;
+        this.tags = $.tags;
+        this.types = $.types;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCertificateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String domain;
-        private @Nullable List<String> keyTypes;
-        private @Nullable Boolean mostRecent;
-        private @Nullable List<String> statuses;
-        private @Nullable Map<String,String> tags;
-        private @Nullable List<String> types;
+        private GetCertificateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCertificateArgs();
         }
 
         public Builder(GetCertificateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domain = defaults.domain;
-    	      this.keyTypes = defaults.keyTypes;
-    	      this.mostRecent = defaults.mostRecent;
-    	      this.statuses = defaults.statuses;
-    	      this.tags = defaults.tags;
-    	      this.types = defaults.types;
+            $ = new GetCertificateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder domain(String domain) {
-            this.domain = Objects.requireNonNull(domain);
+            $.domain = domain;
             return this;
         }
+
         public Builder keyTypes(@Nullable List<String> keyTypes) {
-            this.keyTypes = keyTypes;
+            $.keyTypes = keyTypes;
             return this;
         }
+
         public Builder keyTypes(String... keyTypes) {
             return keyTypes(List.of(keyTypes));
         }
+
         public Builder mostRecent(@Nullable Boolean mostRecent) {
-            this.mostRecent = mostRecent;
+            $.mostRecent = mostRecent;
             return this;
         }
+
         public Builder statuses(@Nullable List<String> statuses) {
-            this.statuses = statuses;
+            $.statuses = statuses;
             return this;
         }
+
         public Builder statuses(String... statuses) {
             return statuses(List.of(statuses));
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
+
         public Builder types(@Nullable List<String> types) {
-            this.types = types;
+            $.types = types;
             return this;
         }
+
         public Builder types(String... types) {
             return types(List.of(types));
-        }        public GetCertificateArgs build() {
-            return new GetCertificateArgs(domain, keyTypes, mostRecent, statuses, tags, types);
+        }
+
+        public GetCertificateArgs build() {
+            $.domain = Objects.requireNonNull($.domain, "expected parameter 'domain' to be non-null");
+            return $;
         }
     }
+
 }

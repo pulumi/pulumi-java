@@ -8,9 +8,9 @@ import com.pulumi.azurenative.security.enums.PropertyType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class AutomationTriggeringRuleArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="expectedValue")
-      private final @Nullable Output<String> expectedValue;
+    private @Nullable Output<String> expectedValue;
 
-    public Output<String> expectedValue() {
-        return this.expectedValue == null ? Codegen.empty() : this.expectedValue;
+    public Optional<Output<String>> expectedValue() {
+        return Optional.ofNullable(this.expectedValue);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class AutomationTriggeringRuleArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="operator")
-      private final @Nullable Output<Either<String,Operator>> operator;
+    private @Nullable Output<Either<String,Operator>> operator;
 
-    public Output<Either<String,Operator>> operator() {
-        return this.operator == null ? Codegen.empty() : this.operator;
+    public Optional<Output<Either<String,Operator>>> operator() {
+        return Optional.ofNullable(this.operator);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class AutomationTriggeringRuleArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="propertyJPath")
-      private final @Nullable Output<String> propertyJPath;
+    private @Nullable Output<String> propertyJPath;
 
-    public Output<String> propertyJPath() {
-        return this.propertyJPath == null ? Codegen.empty() : this.propertyJPath;
+    public Optional<Output<String>> propertyJPath() {
+        return Optional.ofNullable(this.propertyJPath);
     }
 
     /**
@@ -60,89 +60,78 @@ public final class AutomationTriggeringRuleArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="propertyType")
-      private final @Nullable Output<Either<String,PropertyType>> propertyType;
+    private @Nullable Output<Either<String,PropertyType>> propertyType;
 
-    public Output<Either<String,PropertyType>> propertyType() {
-        return this.propertyType == null ? Codegen.empty() : this.propertyType;
+    public Optional<Output<Either<String,PropertyType>>> propertyType() {
+        return Optional.ofNullable(this.propertyType);
     }
 
-    public AutomationTriggeringRuleArgs(
-        @Nullable Output<String> expectedValue,
-        @Nullable Output<Either<String,Operator>> operator,
-        @Nullable Output<String> propertyJPath,
-        @Nullable Output<Either<String,PropertyType>> propertyType) {
-        this.expectedValue = expectedValue;
-        this.operator = operator;
-        this.propertyJPath = propertyJPath;
-        this.propertyType = propertyType;
-    }
+    private AutomationTriggeringRuleArgs() {}
 
-    private AutomationTriggeringRuleArgs() {
-        this.expectedValue = Codegen.empty();
-        this.operator = Codegen.empty();
-        this.propertyJPath = Codegen.empty();
-        this.propertyType = Codegen.empty();
+    private AutomationTriggeringRuleArgs(AutomationTriggeringRuleArgs $) {
+        this.expectedValue = $.expectedValue;
+        this.operator = $.operator;
+        this.propertyJPath = $.propertyJPath;
+        this.propertyType = $.propertyType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutomationTriggeringRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> expectedValue;
-        private @Nullable Output<Either<String,Operator>> operator;
-        private @Nullable Output<String> propertyJPath;
-        private @Nullable Output<Either<String,PropertyType>> propertyType;
+        private AutomationTriggeringRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutomationTriggeringRuleArgs();
         }
 
         public Builder(AutomationTriggeringRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expectedValue = defaults.expectedValue;
-    	      this.operator = defaults.operator;
-    	      this.propertyJPath = defaults.propertyJPath;
-    	      this.propertyType = defaults.propertyType;
+            $ = new AutomationTriggeringRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expectedValue(@Nullable Output<String> expectedValue) {
-            this.expectedValue = expectedValue;
+            $.expectedValue = expectedValue;
             return this;
         }
-        public Builder expectedValue(@Nullable String expectedValue) {
-            this.expectedValue = Codegen.ofNullable(expectedValue);
-            return this;
+
+        public Builder expectedValue(String expectedValue) {
+            return expectedValue(Output.of(expectedValue));
         }
+
         public Builder operator(@Nullable Output<Either<String,Operator>> operator) {
-            this.operator = operator;
+            $.operator = operator;
             return this;
         }
-        public Builder operator(@Nullable Either<String,Operator> operator) {
-            this.operator = Codegen.ofNullable(operator);
-            return this;
+
+        public Builder operator(Either<String,Operator> operator) {
+            return operator(Output.of(operator));
         }
+
         public Builder propertyJPath(@Nullable Output<String> propertyJPath) {
-            this.propertyJPath = propertyJPath;
+            $.propertyJPath = propertyJPath;
             return this;
         }
-        public Builder propertyJPath(@Nullable String propertyJPath) {
-            this.propertyJPath = Codegen.ofNullable(propertyJPath);
-            return this;
+
+        public Builder propertyJPath(String propertyJPath) {
+            return propertyJPath(Output.of(propertyJPath));
         }
+
         public Builder propertyType(@Nullable Output<Either<String,PropertyType>> propertyType) {
-            this.propertyType = propertyType;
+            $.propertyType = propertyType;
             return this;
         }
-        public Builder propertyType(@Nullable Either<String,PropertyType> propertyType) {
-            this.propertyType = Codegen.ofNullable(propertyType);
-            return this;
-        }        public AutomationTriggeringRuleArgs build() {
-            return new AutomationTriggeringRuleArgs(expectedValue, operator, propertyJPath, propertyType);
+
+        public Builder propertyType(Either<String,PropertyType> propertyType) {
+            return propertyType(Output.of(propertyType));
+        }
+
+        public AutomationTriggeringRuleArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.aws.cloudfront.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class FieldLevelEncryptionConfigContentTypeProfileConfigContentType
      * 
      */
     @Import(name="contentType", required=true)
-      private final Output<String> contentType;
+    private Output<String> contentType;
 
     public Output<String> contentType() {
         return this.contentType;
@@ -31,7 +31,7 @@ public final class FieldLevelEncryptionConfigContentTypeProfileConfigContentType
      * 
      */
     @Import(name="format", required=true)
-      private final Output<String> format;
+    private Output<String> format;
 
     public Output<String> format() {
         return this.format;
@@ -42,76 +42,70 @@ public final class FieldLevelEncryptionConfigContentTypeProfileConfigContentType
      * 
      */
     @Import(name="profileId")
-      private final @Nullable Output<String> profileId;
+    private @Nullable Output<String> profileId;
 
-    public Output<String> profileId() {
-        return this.profileId == null ? Codegen.empty() : this.profileId;
+    public Optional<Output<String>> profileId() {
+        return Optional.ofNullable(this.profileId);
     }
 
-    public FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItemGetArgs(
-        Output<String> contentType,
-        Output<String> format,
-        @Nullable Output<String> profileId) {
-        this.contentType = Objects.requireNonNull(contentType, "expected parameter 'contentType' to be non-null");
-        this.format = Objects.requireNonNull(format, "expected parameter 'format' to be non-null");
-        this.profileId = profileId;
-    }
+    private FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItemGetArgs() {}
 
-    private FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItemGetArgs() {
-        this.contentType = Codegen.empty();
-        this.format = Codegen.empty();
-        this.profileId = Codegen.empty();
+    private FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItemGetArgs(FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItemGetArgs $) {
+        this.contentType = $.contentType;
+        this.format = $.format;
+        this.profileId = $.profileId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItemGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> contentType;
-        private Output<String> format;
-        private @Nullable Output<String> profileId;
+        private FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItemGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItemGetArgs();
         }
 
         public Builder(FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItemGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contentType = defaults.contentType;
-    	      this.format = defaults.format;
-    	      this.profileId = defaults.profileId;
+            $ = new FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItemGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder contentType(Output<String> contentType) {
-            this.contentType = Objects.requireNonNull(contentType);
+            $.contentType = contentType;
             return this;
         }
+
         public Builder contentType(String contentType) {
-            this.contentType = Output.of(Objects.requireNonNull(contentType));
-            return this;
+            return contentType(Output.of(contentType));
         }
+
         public Builder format(Output<String> format) {
-            this.format = Objects.requireNonNull(format);
+            $.format = format;
             return this;
         }
+
         public Builder format(String format) {
-            this.format = Output.of(Objects.requireNonNull(format));
-            return this;
+            return format(Output.of(format));
         }
+
         public Builder profileId(@Nullable Output<String> profileId) {
-            this.profileId = profileId;
+            $.profileId = profileId;
             return this;
         }
-        public Builder profileId(@Nullable String profileId) {
-            this.profileId = Codegen.ofNullable(profileId);
-            return this;
-        }        public FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItemGetArgs build() {
-            return new FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItemGetArgs(contentType, format, profileId);
+
+        public Builder profileId(String profileId) {
+            return profileId(Output.of(profileId));
+        }
+
+        public FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItemGetArgs build() {
+            $.contentType = Objects.requireNonNull($.contentType, "expected parameter 'contentType' to be non-null");
+            $.format = Objects.requireNonNull($.format, "expected parameter 'format' to be non-null");
+            return $;
         }
     }
+
 }

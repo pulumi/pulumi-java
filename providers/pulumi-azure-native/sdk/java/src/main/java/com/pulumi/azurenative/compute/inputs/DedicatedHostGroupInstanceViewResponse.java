@@ -20,48 +20,48 @@ public final class DedicatedHostGroupInstanceViewResponse extends com.pulumi.res
      * 
      */
     @Import(name="hosts")
-      private final @Nullable List<DedicatedHostInstanceViewWithNameResponse> hosts;
+    private @Nullable List<DedicatedHostInstanceViewWithNameResponse> hosts;
 
-    public List<DedicatedHostInstanceViewWithNameResponse> hosts() {
-        return this.hosts == null ? List.of() : this.hosts;
+    public Optional<List<DedicatedHostInstanceViewWithNameResponse>> hosts() {
+        return Optional.ofNullable(this.hosts);
     }
 
-    public DedicatedHostGroupInstanceViewResponse(@Nullable List<DedicatedHostInstanceViewWithNameResponse> hosts) {
-        this.hosts = hosts;
-    }
+    private DedicatedHostGroupInstanceViewResponse() {}
 
-    private DedicatedHostGroupInstanceViewResponse() {
-        this.hosts = List.of();
+    private DedicatedHostGroupInstanceViewResponse(DedicatedHostGroupInstanceViewResponse $) {
+        this.hosts = $.hosts;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DedicatedHostGroupInstanceViewResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<DedicatedHostInstanceViewWithNameResponse> hosts;
+        private DedicatedHostGroupInstanceViewResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DedicatedHostGroupInstanceViewResponse();
         }
 
         public Builder(DedicatedHostGroupInstanceViewResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hosts = defaults.hosts;
+            $ = new DedicatedHostGroupInstanceViewResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder hosts(@Nullable List<DedicatedHostInstanceViewWithNameResponse> hosts) {
-            this.hosts = hosts;
+            $.hosts = hosts;
             return this;
         }
+
         public Builder hosts(DedicatedHostInstanceViewWithNameResponse... hosts) {
             return hosts(List.of(hosts));
-        }        public DedicatedHostGroupInstanceViewResponse build() {
-            return new DedicatedHostGroupInstanceViewResponse(hosts);
+        }
+
+        public DedicatedHostGroupInstanceViewResponse build() {
+            return $;
         }
     }
+
 }

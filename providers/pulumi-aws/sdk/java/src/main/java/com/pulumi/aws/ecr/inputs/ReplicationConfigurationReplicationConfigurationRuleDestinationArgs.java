@@ -5,7 +5,6 @@ package com.pulumi.aws.ecr.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class ReplicationConfigurationReplicationConfigurationRuleDestinati
      * 
      */
     @Import(name="region", required=true)
-      private final Output<String> region;
+    private Output<String> region;
 
     public Output<String> region() {
         return this.region;
@@ -30,63 +29,60 @@ public final class ReplicationConfigurationReplicationConfigurationRuleDestinati
      * 
      */
     @Import(name="registryId", required=true)
-      private final Output<String> registryId;
+    private Output<String> registryId;
 
     public Output<String> registryId() {
         return this.registryId;
     }
 
-    public ReplicationConfigurationReplicationConfigurationRuleDestinationArgs(
-        Output<String> region,
-        Output<String> registryId) {
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-        this.registryId = Objects.requireNonNull(registryId, "expected parameter 'registryId' to be non-null");
-    }
+    private ReplicationConfigurationReplicationConfigurationRuleDestinationArgs() {}
 
-    private ReplicationConfigurationReplicationConfigurationRuleDestinationArgs() {
-        this.region = Codegen.empty();
-        this.registryId = Codegen.empty();
+    private ReplicationConfigurationReplicationConfigurationRuleDestinationArgs(ReplicationConfigurationReplicationConfigurationRuleDestinationArgs $) {
+        this.region = $.region;
+        this.registryId = $.registryId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReplicationConfigurationReplicationConfigurationRuleDestinationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> region;
-        private Output<String> registryId;
+        private ReplicationConfigurationReplicationConfigurationRuleDestinationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReplicationConfigurationReplicationConfigurationRuleDestinationArgs();
         }
 
         public Builder(ReplicationConfigurationReplicationConfigurationRuleDestinationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.region = defaults.region;
-    	      this.registryId = defaults.registryId;
+            $ = new ReplicationConfigurationReplicationConfigurationRuleDestinationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder region(Output<String> region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Output.of(Objects.requireNonNull(region));
-            return this;
+            return region(Output.of(region));
         }
+
         public Builder registryId(Output<String> registryId) {
-            this.registryId = Objects.requireNonNull(registryId);
+            $.registryId = registryId;
             return this;
         }
+
         public Builder registryId(String registryId) {
-            this.registryId = Output.of(Objects.requireNonNull(registryId));
-            return this;
-        }        public ReplicationConfigurationReplicationConfigurationRuleDestinationArgs build() {
-            return new ReplicationConfigurationReplicationConfigurationRuleDestinationArgs(region, registryId);
+            return registryId(Output.of(registryId));
+        }
+
+        public ReplicationConfigurationReplicationConfigurationRuleDestinationArgs build() {
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            $.registryId = Objects.requireNonNull($.registryId, "expected parameter 'registryId' to be non-null");
+            return $;
         }
     }
+
 }

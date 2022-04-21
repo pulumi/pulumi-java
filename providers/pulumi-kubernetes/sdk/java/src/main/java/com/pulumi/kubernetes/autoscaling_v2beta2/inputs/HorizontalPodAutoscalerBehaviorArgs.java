@@ -5,9 +5,9 @@ package com.pulumi.kubernetes.autoscaling_v2beta2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.autoscaling_v2beta2.inputs.HPAScalingRulesArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class HorizontalPodAutoscalerBehaviorArgs extends com.pulumi.resour
      * 
      */
     @Import(name="scaleDown")
-      private final @Nullable Output<HPAScalingRulesArgs> scaleDown;
+    private @Nullable Output<HPAScalingRulesArgs> scaleDown;
 
-    public Output<HPAScalingRulesArgs> scaleDown() {
-        return this.scaleDown == null ? Codegen.empty() : this.scaleDown;
+    public Optional<Output<HPAScalingRulesArgs>> scaleDown() {
+        return Optional.ofNullable(this.scaleDown);
     }
 
     /**
@@ -38,63 +38,58 @@ public final class HorizontalPodAutoscalerBehaviorArgs extends com.pulumi.resour
      * 
      */
     @Import(name="scaleUp")
-      private final @Nullable Output<HPAScalingRulesArgs> scaleUp;
+    private @Nullable Output<HPAScalingRulesArgs> scaleUp;
 
-    public Output<HPAScalingRulesArgs> scaleUp() {
-        return this.scaleUp == null ? Codegen.empty() : this.scaleUp;
+    public Optional<Output<HPAScalingRulesArgs>> scaleUp() {
+        return Optional.ofNullable(this.scaleUp);
     }
 
-    public HorizontalPodAutoscalerBehaviorArgs(
-        @Nullable Output<HPAScalingRulesArgs> scaleDown,
-        @Nullable Output<HPAScalingRulesArgs> scaleUp) {
-        this.scaleDown = scaleDown;
-        this.scaleUp = scaleUp;
-    }
+    private HorizontalPodAutoscalerBehaviorArgs() {}
 
-    private HorizontalPodAutoscalerBehaviorArgs() {
-        this.scaleDown = Codegen.empty();
-        this.scaleUp = Codegen.empty();
+    private HorizontalPodAutoscalerBehaviorArgs(HorizontalPodAutoscalerBehaviorArgs $) {
+        this.scaleDown = $.scaleDown;
+        this.scaleUp = $.scaleUp;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HorizontalPodAutoscalerBehaviorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<HPAScalingRulesArgs> scaleDown;
-        private @Nullable Output<HPAScalingRulesArgs> scaleUp;
+        private HorizontalPodAutoscalerBehaviorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HorizontalPodAutoscalerBehaviorArgs();
         }
 
         public Builder(HorizontalPodAutoscalerBehaviorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.scaleDown = defaults.scaleDown;
-    	      this.scaleUp = defaults.scaleUp;
+            $ = new HorizontalPodAutoscalerBehaviorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder scaleDown(@Nullable Output<HPAScalingRulesArgs> scaleDown) {
-            this.scaleDown = scaleDown;
+            $.scaleDown = scaleDown;
             return this;
         }
-        public Builder scaleDown(@Nullable HPAScalingRulesArgs scaleDown) {
-            this.scaleDown = Codegen.ofNullable(scaleDown);
-            return this;
+
+        public Builder scaleDown(HPAScalingRulesArgs scaleDown) {
+            return scaleDown(Output.of(scaleDown));
         }
+
         public Builder scaleUp(@Nullable Output<HPAScalingRulesArgs> scaleUp) {
-            this.scaleUp = scaleUp;
+            $.scaleUp = scaleUp;
             return this;
         }
-        public Builder scaleUp(@Nullable HPAScalingRulesArgs scaleUp) {
-            this.scaleUp = Codegen.ofNullable(scaleUp);
-            return this;
-        }        public HorizontalPodAutoscalerBehaviorArgs build() {
-            return new HorizontalPodAutoscalerBehaviorArgs(scaleDown, scaleUp);
+
+        public Builder scaleUp(HPAScalingRulesArgs scaleUp) {
+            return scaleUp(Output.of(scaleUp));
+        }
+
+        public HorizontalPodAutoscalerBehaviorArgs build() {
+            return $;
         }
     }
+
 }

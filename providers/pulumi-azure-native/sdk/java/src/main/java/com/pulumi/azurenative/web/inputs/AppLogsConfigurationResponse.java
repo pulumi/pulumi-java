@@ -16,62 +16,57 @@ public final class AppLogsConfigurationResponse extends com.pulumi.resources.Inv
     public static final AppLogsConfigurationResponse Empty = new AppLogsConfigurationResponse();
 
     @Import(name="destination")
-      private final @Nullable String destination;
+    private @Nullable String destination;
 
     public Optional<String> destination() {
-        return this.destination == null ? Optional.empty() : Optional.ofNullable(this.destination);
+        return Optional.ofNullable(this.destination);
     }
 
     @Import(name="logAnalyticsConfiguration")
-      private final @Nullable LogAnalyticsConfigurationResponse logAnalyticsConfiguration;
+    private @Nullable LogAnalyticsConfigurationResponse logAnalyticsConfiguration;
 
     public Optional<LogAnalyticsConfigurationResponse> logAnalyticsConfiguration() {
-        return this.logAnalyticsConfiguration == null ? Optional.empty() : Optional.ofNullable(this.logAnalyticsConfiguration);
+        return Optional.ofNullable(this.logAnalyticsConfiguration);
     }
 
-    public AppLogsConfigurationResponse(
-        @Nullable String destination,
-        @Nullable LogAnalyticsConfigurationResponse logAnalyticsConfiguration) {
-        this.destination = destination;
-        this.logAnalyticsConfiguration = logAnalyticsConfiguration;
-    }
+    private AppLogsConfigurationResponse() {}
 
-    private AppLogsConfigurationResponse() {
-        this.destination = null;
-        this.logAnalyticsConfiguration = null;
+    private AppLogsConfigurationResponse(AppLogsConfigurationResponse $) {
+        this.destination = $.destination;
+        this.logAnalyticsConfiguration = $.logAnalyticsConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppLogsConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String destination;
-        private @Nullable LogAnalyticsConfigurationResponse logAnalyticsConfiguration;
+        private AppLogsConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppLogsConfigurationResponse();
         }
 
         public Builder(AppLogsConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destination = defaults.destination;
-    	      this.logAnalyticsConfiguration = defaults.logAnalyticsConfiguration;
+            $ = new AppLogsConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder destination(@Nullable String destination) {
-            this.destination = destination;
+            $.destination = destination;
             return this;
         }
+
         public Builder logAnalyticsConfiguration(@Nullable LogAnalyticsConfigurationResponse logAnalyticsConfiguration) {
-            this.logAnalyticsConfiguration = logAnalyticsConfiguration;
+            $.logAnalyticsConfiguration = logAnalyticsConfiguration;
             return this;
-        }        public AppLogsConfigurationResponse build() {
-            return new AppLogsConfigurationResponse(destination, logAnalyticsConfiguration);
+        }
+
+        public AppLogsConfigurationResponse build() {
+            return $;
         }
     }
+
 }

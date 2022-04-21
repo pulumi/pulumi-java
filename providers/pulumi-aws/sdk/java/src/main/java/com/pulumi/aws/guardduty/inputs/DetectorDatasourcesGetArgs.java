@@ -6,8 +6,8 @@ package com.pulumi.aws.guardduty.inputs;
 import com.pulumi.aws.guardduty.inputs.DetectorDatasourcesS3LogsGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class DetectorDatasourcesGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="s3Logs")
-      private final @Nullable Output<DetectorDatasourcesS3LogsGetArgs> s3Logs;
+    private @Nullable Output<DetectorDatasourcesS3LogsGetArgs> s3Logs;
 
-    public Output<DetectorDatasourcesS3LogsGetArgs> s3Logs() {
-        return this.s3Logs == null ? Codegen.empty() : this.s3Logs;
+    public Optional<Output<DetectorDatasourcesS3LogsGetArgs>> s3Logs() {
+        return Optional.ofNullable(this.s3Logs);
     }
 
-    public DetectorDatasourcesGetArgs(@Nullable Output<DetectorDatasourcesS3LogsGetArgs> s3Logs) {
-        this.s3Logs = s3Logs;
-    }
+    private DetectorDatasourcesGetArgs() {}
 
-    private DetectorDatasourcesGetArgs() {
-        this.s3Logs = Codegen.empty();
+    private DetectorDatasourcesGetArgs(DetectorDatasourcesGetArgs $) {
+        this.s3Logs = $.s3Logs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DetectorDatasourcesGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DetectorDatasourcesS3LogsGetArgs> s3Logs;
+        private DetectorDatasourcesGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DetectorDatasourcesGetArgs();
         }
 
         public Builder(DetectorDatasourcesGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.s3Logs = defaults.s3Logs;
+            $ = new DetectorDatasourcesGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder s3Logs(@Nullable Output<DetectorDatasourcesS3LogsGetArgs> s3Logs) {
-            this.s3Logs = s3Logs;
+            $.s3Logs = s3Logs;
             return this;
         }
-        public Builder s3Logs(@Nullable DetectorDatasourcesS3LogsGetArgs s3Logs) {
-            this.s3Logs = Codegen.ofNullable(s3Logs);
-            return this;
-        }        public DetectorDatasourcesGetArgs build() {
-            return new DetectorDatasourcesGetArgs(s3Logs);
+
+        public Builder s3Logs(DetectorDatasourcesS3LogsGetArgs s3Logs) {
+            return s3Logs(Output.of(s3Logs));
+        }
+
+        public DetectorDatasourcesGetArgs build() {
+            return $;
         }
     }
+
 }

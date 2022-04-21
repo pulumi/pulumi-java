@@ -18,129 +18,113 @@ public final class AnomalyDetectorCsvFormatDescriptor extends com.pulumi.resourc
     public static final AnomalyDetectorCsvFormatDescriptor Empty = new AnomalyDetectorCsvFormatDescriptor();
 
     @Import(name="charset")
-      private final @Nullable String charset;
+    private @Nullable String charset;
 
     public Optional<String> charset() {
-        return this.charset == null ? Optional.empty() : Optional.ofNullable(this.charset);
+        return Optional.ofNullable(this.charset);
     }
 
     @Import(name="containsHeader")
-      private final @Nullable Boolean containsHeader;
+    private @Nullable Boolean containsHeader;
 
     public Optional<Boolean> containsHeader() {
-        return this.containsHeader == null ? Optional.empty() : Optional.ofNullable(this.containsHeader);
+        return Optional.ofNullable(this.containsHeader);
     }
 
     @Import(name="delimiter")
-      private final @Nullable String delimiter;
+    private @Nullable String delimiter;
 
     public Optional<String> delimiter() {
-        return this.delimiter == null ? Optional.empty() : Optional.ofNullable(this.delimiter);
+        return Optional.ofNullable(this.delimiter);
     }
 
     @Import(name="fileCompression")
-      private final @Nullable AnomalyDetectorCsvFormatDescriptorFileCompression fileCompression;
+    private @Nullable AnomalyDetectorCsvFormatDescriptorFileCompression fileCompression;
 
     public Optional<AnomalyDetectorCsvFormatDescriptorFileCompression> fileCompression() {
-        return this.fileCompression == null ? Optional.empty() : Optional.ofNullable(this.fileCompression);
+        return Optional.ofNullable(this.fileCompression);
     }
 
     @Import(name="headerList")
-      private final @Nullable List<String> headerList;
+    private @Nullable List<String> headerList;
 
-    public List<String> headerList() {
-        return this.headerList == null ? List.of() : this.headerList;
+    public Optional<List<String>> headerList() {
+        return Optional.ofNullable(this.headerList);
     }
 
     @Import(name="quoteSymbol")
-      private final @Nullable String quoteSymbol;
+    private @Nullable String quoteSymbol;
 
     public Optional<String> quoteSymbol() {
-        return this.quoteSymbol == null ? Optional.empty() : Optional.ofNullable(this.quoteSymbol);
+        return Optional.ofNullable(this.quoteSymbol);
     }
 
-    public AnomalyDetectorCsvFormatDescriptor(
-        @Nullable String charset,
-        @Nullable Boolean containsHeader,
-        @Nullable String delimiter,
-        @Nullable AnomalyDetectorCsvFormatDescriptorFileCompression fileCompression,
-        @Nullable List<String> headerList,
-        @Nullable String quoteSymbol) {
-        this.charset = charset;
-        this.containsHeader = containsHeader;
-        this.delimiter = delimiter;
-        this.fileCompression = fileCompression;
-        this.headerList = headerList;
-        this.quoteSymbol = quoteSymbol;
-    }
+    private AnomalyDetectorCsvFormatDescriptor() {}
 
-    private AnomalyDetectorCsvFormatDescriptor() {
-        this.charset = null;
-        this.containsHeader = null;
-        this.delimiter = null;
-        this.fileCompression = null;
-        this.headerList = List.of();
-        this.quoteSymbol = null;
+    private AnomalyDetectorCsvFormatDescriptor(AnomalyDetectorCsvFormatDescriptor $) {
+        this.charset = $.charset;
+        this.containsHeader = $.containsHeader;
+        this.delimiter = $.delimiter;
+        this.fileCompression = $.fileCompression;
+        this.headerList = $.headerList;
+        this.quoteSymbol = $.quoteSymbol;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnomalyDetectorCsvFormatDescriptor defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String charset;
-        private @Nullable Boolean containsHeader;
-        private @Nullable String delimiter;
-        private @Nullable AnomalyDetectorCsvFormatDescriptorFileCompression fileCompression;
-        private @Nullable List<String> headerList;
-        private @Nullable String quoteSymbol;
+        private AnomalyDetectorCsvFormatDescriptor $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnomalyDetectorCsvFormatDescriptor();
         }
 
         public Builder(AnomalyDetectorCsvFormatDescriptor defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.charset = defaults.charset;
-    	      this.containsHeader = defaults.containsHeader;
-    	      this.delimiter = defaults.delimiter;
-    	      this.fileCompression = defaults.fileCompression;
-    	      this.headerList = defaults.headerList;
-    	      this.quoteSymbol = defaults.quoteSymbol;
+            $ = new AnomalyDetectorCsvFormatDescriptor(Objects.requireNonNull(defaults));
         }
 
         public Builder charset(@Nullable String charset) {
-            this.charset = charset;
+            $.charset = charset;
             return this;
         }
+
         public Builder containsHeader(@Nullable Boolean containsHeader) {
-            this.containsHeader = containsHeader;
+            $.containsHeader = containsHeader;
             return this;
         }
+
         public Builder delimiter(@Nullable String delimiter) {
-            this.delimiter = delimiter;
+            $.delimiter = delimiter;
             return this;
         }
+
         public Builder fileCompression(@Nullable AnomalyDetectorCsvFormatDescriptorFileCompression fileCompression) {
-            this.fileCompression = fileCompression;
+            $.fileCompression = fileCompression;
             return this;
         }
+
         public Builder headerList(@Nullable List<String> headerList) {
-            this.headerList = headerList;
+            $.headerList = headerList;
             return this;
         }
+
         public Builder headerList(String... headerList) {
             return headerList(List.of(headerList));
         }
+
         public Builder quoteSymbol(@Nullable String quoteSymbol) {
-            this.quoteSymbol = quoteSymbol;
+            $.quoteSymbol = quoteSymbol;
             return this;
-        }        public AnomalyDetectorCsvFormatDescriptor build() {
-            return new AnomalyDetectorCsvFormatDescriptor(charset, containsHeader, delimiter, fileCompression, headerList, quoteSymbol);
+        }
+
+        public AnomalyDetectorCsvFormatDescriptor build() {
+            return $;
         }
     }
+
 }

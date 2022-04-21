@@ -5,9 +5,9 @@ package com.pulumi.gcp.kms.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class CryptoKeyVersionTemplateGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="algorithm", required=true)
-      private final Output<String> algorithm;
+    private Output<String> algorithm;
 
     public Output<String> algorithm() {
         return this.algorithm;
@@ -32,63 +32,59 @@ public final class CryptoKeyVersionTemplateGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="protectionLevel")
-      private final @Nullable Output<String> protectionLevel;
+    private @Nullable Output<String> protectionLevel;
 
-    public Output<String> protectionLevel() {
-        return this.protectionLevel == null ? Codegen.empty() : this.protectionLevel;
+    public Optional<Output<String>> protectionLevel() {
+        return Optional.ofNullable(this.protectionLevel);
     }
 
-    public CryptoKeyVersionTemplateGetArgs(
-        Output<String> algorithm,
-        @Nullable Output<String> protectionLevel) {
-        this.algorithm = Objects.requireNonNull(algorithm, "expected parameter 'algorithm' to be non-null");
-        this.protectionLevel = protectionLevel;
-    }
+    private CryptoKeyVersionTemplateGetArgs() {}
 
-    private CryptoKeyVersionTemplateGetArgs() {
-        this.algorithm = Codegen.empty();
-        this.protectionLevel = Codegen.empty();
+    private CryptoKeyVersionTemplateGetArgs(CryptoKeyVersionTemplateGetArgs $) {
+        this.algorithm = $.algorithm;
+        this.protectionLevel = $.protectionLevel;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CryptoKeyVersionTemplateGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> algorithm;
-        private @Nullable Output<String> protectionLevel;
+        private CryptoKeyVersionTemplateGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CryptoKeyVersionTemplateGetArgs();
         }
 
         public Builder(CryptoKeyVersionTemplateGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.algorithm = defaults.algorithm;
-    	      this.protectionLevel = defaults.protectionLevel;
+            $ = new CryptoKeyVersionTemplateGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder algorithm(Output<String> algorithm) {
-            this.algorithm = Objects.requireNonNull(algorithm);
+            $.algorithm = algorithm;
             return this;
         }
+
         public Builder algorithm(String algorithm) {
-            this.algorithm = Output.of(Objects.requireNonNull(algorithm));
-            return this;
+            return algorithm(Output.of(algorithm));
         }
+
         public Builder protectionLevel(@Nullable Output<String> protectionLevel) {
-            this.protectionLevel = protectionLevel;
+            $.protectionLevel = protectionLevel;
             return this;
         }
-        public Builder protectionLevel(@Nullable String protectionLevel) {
-            this.protectionLevel = Codegen.ofNullable(protectionLevel);
-            return this;
-        }        public CryptoKeyVersionTemplateGetArgs build() {
-            return new CryptoKeyVersionTemplateGetArgs(algorithm, protectionLevel);
+
+        public Builder protectionLevel(String protectionLevel) {
+            return protectionLevel(Output.of(protectionLevel));
+        }
+
+        public CryptoKeyVersionTemplateGetArgs build() {
+            $.algorithm = Objects.requireNonNull($.algorithm, "expected parameter 'algorithm' to be non-null");
+            return $;
         }
     }
+
 }

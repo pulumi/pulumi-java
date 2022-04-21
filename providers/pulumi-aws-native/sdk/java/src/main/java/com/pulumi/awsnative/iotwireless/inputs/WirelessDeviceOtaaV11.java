@@ -13,78 +13,73 @@ public final class WirelessDeviceOtaaV11 extends com.pulumi.resources.InvokeArgs
     public static final WirelessDeviceOtaaV11 Empty = new WirelessDeviceOtaaV11();
 
     @Import(name="appKey", required=true)
-      private final String appKey;
+    private String appKey;
 
     public String appKey() {
         return this.appKey;
     }
 
     @Import(name="joinEui", required=true)
-      private final String joinEui;
+    private String joinEui;
 
     public String joinEui() {
         return this.joinEui;
     }
 
     @Import(name="nwkKey", required=true)
-      private final String nwkKey;
+    private String nwkKey;
 
     public String nwkKey() {
         return this.nwkKey;
     }
 
-    public WirelessDeviceOtaaV11(
-        String appKey,
-        String joinEui,
-        String nwkKey) {
-        this.appKey = Objects.requireNonNull(appKey, "expected parameter 'appKey' to be non-null");
-        this.joinEui = Objects.requireNonNull(joinEui, "expected parameter 'joinEui' to be non-null");
-        this.nwkKey = Objects.requireNonNull(nwkKey, "expected parameter 'nwkKey' to be non-null");
-    }
+    private WirelessDeviceOtaaV11() {}
 
-    private WirelessDeviceOtaaV11() {
-        this.appKey = null;
-        this.joinEui = null;
-        this.nwkKey = null;
+    private WirelessDeviceOtaaV11(WirelessDeviceOtaaV11 $) {
+        this.appKey = $.appKey;
+        this.joinEui = $.joinEui;
+        this.nwkKey = $.nwkKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WirelessDeviceOtaaV11 defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String appKey;
-        private String joinEui;
-        private String nwkKey;
+        private WirelessDeviceOtaaV11 $;
 
         public Builder() {
-    	      // Empty
+            $ = new WirelessDeviceOtaaV11();
         }
 
         public Builder(WirelessDeviceOtaaV11 defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appKey = defaults.appKey;
-    	      this.joinEui = defaults.joinEui;
-    	      this.nwkKey = defaults.nwkKey;
+            $ = new WirelessDeviceOtaaV11(Objects.requireNonNull(defaults));
         }
 
         public Builder appKey(String appKey) {
-            this.appKey = Objects.requireNonNull(appKey);
+            $.appKey = appKey;
             return this;
         }
+
         public Builder joinEui(String joinEui) {
-            this.joinEui = Objects.requireNonNull(joinEui);
+            $.joinEui = joinEui;
             return this;
         }
+
         public Builder nwkKey(String nwkKey) {
-            this.nwkKey = Objects.requireNonNull(nwkKey);
+            $.nwkKey = nwkKey;
             return this;
-        }        public WirelessDeviceOtaaV11 build() {
-            return new WirelessDeviceOtaaV11(appKey, joinEui, nwkKey);
+        }
+
+        public WirelessDeviceOtaaV11 build() {
+            $.appKey = Objects.requireNonNull($.appKey, "expected parameter 'appKey' to be non-null");
+            $.joinEui = Objects.requireNonNull($.joinEui, "expected parameter 'joinEui' to be non-null");
+            $.nwkKey = Objects.requireNonNull($.nwkKey, "expected parameter 'nwkKey' to be non-null");
+            return $;
         }
     }
+
 }

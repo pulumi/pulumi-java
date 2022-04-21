@@ -6,10 +6,10 @@ package com.pulumi.azurenative.authorization;
 import com.pulumi.azurenative.authorization.inputs.PermissionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class RoleDefinitionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="assignableScopes")
-      private final @Nullable Output<List<String>> assignableScopes;
+    private @Nullable Output<List<String>> assignableScopes;
 
-    public Output<List<String>> assignableScopes() {
-        return this.assignableScopes == null ? Codegen.empty() : this.assignableScopes;
+    public Optional<Output<List<String>>> assignableScopes() {
+        return Optional.ofNullable(this.assignableScopes);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class RoleDefinitionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class RoleDefinitionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="permissions")
-      private final @Nullable Output<List<PermissionArgs>> permissions;
+    private @Nullable Output<List<PermissionArgs>> permissions;
 
-    public Output<List<PermissionArgs>> permissions() {
-        return this.permissions == null ? Codegen.empty() : this.permissions;
+    public Optional<Output<List<PermissionArgs>>> permissions() {
+        return Optional.ofNullable(this.permissions);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class RoleDefinitionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="roleDefinitionId")
-      private final @Nullable Output<String> roleDefinitionId;
+    private @Nullable Output<String> roleDefinitionId;
 
-    public Output<String> roleDefinitionId() {
-        return this.roleDefinitionId == null ? Codegen.empty() : this.roleDefinitionId;
+    public Optional<Output<String>> roleDefinitionId() {
+        return Optional.ofNullable(this.roleDefinitionId);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class RoleDefinitionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="roleName")
-      private final @Nullable Output<String> roleName;
+    private @Nullable Output<String> roleName;
 
-    public Output<String> roleName() {
-        return this.roleName == null ? Codegen.empty() : this.roleName;
+    public Optional<Output<String>> roleName() {
+        return Optional.ofNullable(this.roleName);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class RoleDefinitionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="roleType")
-      private final @Nullable Output<String> roleType;
+    private @Nullable Output<String> roleType;
 
-    public Output<String> roleType() {
-        return this.roleType == null ? Codegen.empty() : this.roleType;
+    public Optional<Output<String>> roleType() {
+        return Optional.ofNullable(this.roleType);
     }
 
     /**
@@ -88,134 +88,117 @@ public final class RoleDefinitionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="scope", required=true)
-      private final Output<String> scope;
+    private Output<String> scope;
 
     public Output<String> scope() {
         return this.scope;
     }
 
-    public RoleDefinitionArgs(
-        @Nullable Output<List<String>> assignableScopes,
-        @Nullable Output<String> description,
-        @Nullable Output<List<PermissionArgs>> permissions,
-        @Nullable Output<String> roleDefinitionId,
-        @Nullable Output<String> roleName,
-        @Nullable Output<String> roleType,
-        Output<String> scope) {
-        this.assignableScopes = assignableScopes;
-        this.description = description;
-        this.permissions = permissions;
-        this.roleDefinitionId = roleDefinitionId;
-        this.roleName = roleName;
-        this.roleType = roleType;
-        this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
-    }
+    private RoleDefinitionArgs() {}
 
-    private RoleDefinitionArgs() {
-        this.assignableScopes = Codegen.empty();
-        this.description = Codegen.empty();
-        this.permissions = Codegen.empty();
-        this.roleDefinitionId = Codegen.empty();
-        this.roleName = Codegen.empty();
-        this.roleType = Codegen.empty();
-        this.scope = Codegen.empty();
+    private RoleDefinitionArgs(RoleDefinitionArgs $) {
+        this.assignableScopes = $.assignableScopes;
+        this.description = $.description;
+        this.permissions = $.permissions;
+        this.roleDefinitionId = $.roleDefinitionId;
+        this.roleName = $.roleName;
+        this.roleType = $.roleType;
+        this.scope = $.scope;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RoleDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> assignableScopes;
-        private @Nullable Output<String> description;
-        private @Nullable Output<List<PermissionArgs>> permissions;
-        private @Nullable Output<String> roleDefinitionId;
-        private @Nullable Output<String> roleName;
-        private @Nullable Output<String> roleType;
-        private Output<String> scope;
+        private RoleDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RoleDefinitionArgs();
         }
 
         public Builder(RoleDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assignableScopes = defaults.assignableScopes;
-    	      this.description = defaults.description;
-    	      this.permissions = defaults.permissions;
-    	      this.roleDefinitionId = defaults.roleDefinitionId;
-    	      this.roleName = defaults.roleName;
-    	      this.roleType = defaults.roleType;
-    	      this.scope = defaults.scope;
+            $ = new RoleDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder assignableScopes(@Nullable Output<List<String>> assignableScopes) {
-            this.assignableScopes = assignableScopes;
+            $.assignableScopes = assignableScopes;
             return this;
         }
-        public Builder assignableScopes(@Nullable List<String> assignableScopes) {
-            this.assignableScopes = Codegen.ofNullable(assignableScopes);
-            return this;
+
+        public Builder assignableScopes(List<String> assignableScopes) {
+            return assignableScopes(Output.of(assignableScopes));
         }
+
         public Builder assignableScopes(String... assignableScopes) {
             return assignableScopes(List.of(assignableScopes));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder permissions(@Nullable Output<List<PermissionArgs>> permissions) {
-            this.permissions = permissions;
+            $.permissions = permissions;
             return this;
         }
-        public Builder permissions(@Nullable List<PermissionArgs> permissions) {
-            this.permissions = Codegen.ofNullable(permissions);
-            return this;
+
+        public Builder permissions(List<PermissionArgs> permissions) {
+            return permissions(Output.of(permissions));
         }
+
         public Builder permissions(PermissionArgs... permissions) {
             return permissions(List.of(permissions));
         }
+
         public Builder roleDefinitionId(@Nullable Output<String> roleDefinitionId) {
-            this.roleDefinitionId = roleDefinitionId;
+            $.roleDefinitionId = roleDefinitionId;
             return this;
         }
-        public Builder roleDefinitionId(@Nullable String roleDefinitionId) {
-            this.roleDefinitionId = Codegen.ofNullable(roleDefinitionId);
-            return this;
+
+        public Builder roleDefinitionId(String roleDefinitionId) {
+            return roleDefinitionId(Output.of(roleDefinitionId));
         }
+
         public Builder roleName(@Nullable Output<String> roleName) {
-            this.roleName = roleName;
+            $.roleName = roleName;
             return this;
         }
-        public Builder roleName(@Nullable String roleName) {
-            this.roleName = Codegen.ofNullable(roleName);
-            return this;
+
+        public Builder roleName(String roleName) {
+            return roleName(Output.of(roleName));
         }
+
         public Builder roleType(@Nullable Output<String> roleType) {
-            this.roleType = roleType;
+            $.roleType = roleType;
             return this;
         }
-        public Builder roleType(@Nullable String roleType) {
-            this.roleType = Codegen.ofNullable(roleType);
-            return this;
+
+        public Builder roleType(String roleType) {
+            return roleType(Output.of(roleType));
         }
+
         public Builder scope(Output<String> scope) {
-            this.scope = Objects.requireNonNull(scope);
+            $.scope = scope;
             return this;
         }
+
         public Builder scope(String scope) {
-            this.scope = Output.of(Objects.requireNonNull(scope));
-            return this;
-        }        public RoleDefinitionArgs build() {
-            return new RoleDefinitionArgs(assignableScopes, description, permissions, roleDefinitionId, roleName, roleType, scope);
+            return scope(Output.of(scope));
+        }
+
+        public RoleDefinitionArgs build() {
+            $.scope = Objects.requireNonNull($.scope, "expected parameter 'scope' to be non-null");
+            return $;
         }
     }
+
 }

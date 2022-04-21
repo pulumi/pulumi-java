@@ -25,7 +25,7 @@ public final class ScorecardResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="gaugeView", required=true)
-      private final GaugeViewResponse gaugeView;
+    private GaugeViewResponse gaugeView;
 
     public GaugeViewResponse gaugeView() {
         return this.gaugeView;
@@ -36,7 +36,7 @@ public final class ScorecardResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sparkChartView", required=true)
-      private final SparkChartViewResponse sparkChartView;
+    private SparkChartViewResponse sparkChartView;
 
     public SparkChartViewResponse sparkChartView() {
         return this.sparkChartView;
@@ -47,7 +47,7 @@ public final class ScorecardResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="thresholds", required=true)
-      private final List<ThresholdResponse> thresholds;
+    private List<ThresholdResponse> thresholds;
 
     public List<ThresholdResponse> thresholds() {
         return this.thresholds;
@@ -58,76 +58,70 @@ public final class ScorecardResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="timeSeriesQuery", required=true)
-      private final TimeSeriesQueryResponse timeSeriesQuery;
+    private TimeSeriesQueryResponse timeSeriesQuery;
 
     public TimeSeriesQueryResponse timeSeriesQuery() {
         return this.timeSeriesQuery;
     }
 
-    public ScorecardResponse(
-        GaugeViewResponse gaugeView,
-        SparkChartViewResponse sparkChartView,
-        List<ThresholdResponse> thresholds,
-        TimeSeriesQueryResponse timeSeriesQuery) {
-        this.gaugeView = Objects.requireNonNull(gaugeView, "expected parameter 'gaugeView' to be non-null");
-        this.sparkChartView = Objects.requireNonNull(sparkChartView, "expected parameter 'sparkChartView' to be non-null");
-        this.thresholds = Objects.requireNonNull(thresholds, "expected parameter 'thresholds' to be non-null");
-        this.timeSeriesQuery = Objects.requireNonNull(timeSeriesQuery, "expected parameter 'timeSeriesQuery' to be non-null");
-    }
+    private ScorecardResponse() {}
 
-    private ScorecardResponse() {
-        this.gaugeView = null;
-        this.sparkChartView = null;
-        this.thresholds = List.of();
-        this.timeSeriesQuery = null;
+    private ScorecardResponse(ScorecardResponse $) {
+        this.gaugeView = $.gaugeView;
+        this.sparkChartView = $.sparkChartView;
+        this.thresholds = $.thresholds;
+        this.timeSeriesQuery = $.timeSeriesQuery;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScorecardResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GaugeViewResponse gaugeView;
-        private SparkChartViewResponse sparkChartView;
-        private List<ThresholdResponse> thresholds;
-        private TimeSeriesQueryResponse timeSeriesQuery;
+        private ScorecardResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScorecardResponse();
         }
 
         public Builder(ScorecardResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gaugeView = defaults.gaugeView;
-    	      this.sparkChartView = defaults.sparkChartView;
-    	      this.thresholds = defaults.thresholds;
-    	      this.timeSeriesQuery = defaults.timeSeriesQuery;
+            $ = new ScorecardResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder gaugeView(GaugeViewResponse gaugeView) {
-            this.gaugeView = Objects.requireNonNull(gaugeView);
+            $.gaugeView = gaugeView;
             return this;
         }
+
         public Builder sparkChartView(SparkChartViewResponse sparkChartView) {
-            this.sparkChartView = Objects.requireNonNull(sparkChartView);
+            $.sparkChartView = sparkChartView;
             return this;
         }
+
         public Builder thresholds(List<ThresholdResponse> thresholds) {
-            this.thresholds = Objects.requireNonNull(thresholds);
+            $.thresholds = thresholds;
             return this;
         }
+
         public Builder thresholds(ThresholdResponse... thresholds) {
             return thresholds(List.of(thresholds));
         }
+
         public Builder timeSeriesQuery(TimeSeriesQueryResponse timeSeriesQuery) {
-            this.timeSeriesQuery = Objects.requireNonNull(timeSeriesQuery);
+            $.timeSeriesQuery = timeSeriesQuery;
             return this;
-        }        public ScorecardResponse build() {
-            return new ScorecardResponse(gaugeView, sparkChartView, thresholds, timeSeriesQuery);
+        }
+
+        public ScorecardResponse build() {
+            $.gaugeView = Objects.requireNonNull($.gaugeView, "expected parameter 'gaugeView' to be non-null");
+            $.sparkChartView = Objects.requireNonNull($.sparkChartView, "expected parameter 'sparkChartView' to be non-null");
+            $.thresholds = Objects.requireNonNull($.thresholds, "expected parameter 'thresholds' to be non-null");
+            $.timeSeriesQuery = Objects.requireNonNull($.timeSeriesQuery, "expected parameter 'timeSeriesQuery' to be non-null");
+            return $;
         }
     }
+
 }

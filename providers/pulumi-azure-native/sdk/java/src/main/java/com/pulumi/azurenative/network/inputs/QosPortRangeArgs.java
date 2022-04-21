@@ -5,9 +5,9 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class QosPortRangeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="end")
-      private final @Nullable Output<Integer> end;
+    private @Nullable Output<Integer> end;
 
-    public Output<Integer> end() {
-        return this.end == null ? Codegen.empty() : this.end;
+    public Optional<Output<Integer>> end() {
+        return Optional.ofNullable(this.end);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class QosPortRangeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="start")
-      private final @Nullable Output<Integer> start;
+    private @Nullable Output<Integer> start;
 
-    public Output<Integer> start() {
-        return this.start == null ? Codegen.empty() : this.start;
+    public Optional<Output<Integer>> start() {
+        return Optional.ofNullable(this.start);
     }
 
-    public QosPortRangeArgs(
-        @Nullable Output<Integer> end,
-        @Nullable Output<Integer> start) {
-        this.end = end;
-        this.start = start;
-    }
+    private QosPortRangeArgs() {}
 
-    private QosPortRangeArgs() {
-        this.end = Codegen.empty();
-        this.start = Codegen.empty();
+    private QosPortRangeArgs(QosPortRangeArgs $) {
+        this.end = $.end;
+        this.start = $.start;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(QosPortRangeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> end;
-        private @Nullable Output<Integer> start;
+        private QosPortRangeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new QosPortRangeArgs();
         }
 
         public Builder(QosPortRangeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.end = defaults.end;
-    	      this.start = defaults.start;
+            $ = new QosPortRangeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder end(@Nullable Output<Integer> end) {
-            this.end = end;
+            $.end = end;
             return this;
         }
-        public Builder end(@Nullable Integer end) {
-            this.end = Codegen.ofNullable(end);
-            return this;
+
+        public Builder end(Integer end) {
+            return end(Output.of(end));
         }
+
         public Builder start(@Nullable Output<Integer> start) {
-            this.start = start;
+            $.start = start;
             return this;
         }
-        public Builder start(@Nullable Integer start) {
-            this.start = Codegen.ofNullable(start);
-            return this;
-        }        public QosPortRangeArgs build() {
-            return new QosPortRangeArgs(end, start);
+
+        public Builder start(Integer start) {
+            return start(Output.of(start));
+        }
+
+        public QosPortRangeArgs build() {
+            return $;
         }
     }
+
 }

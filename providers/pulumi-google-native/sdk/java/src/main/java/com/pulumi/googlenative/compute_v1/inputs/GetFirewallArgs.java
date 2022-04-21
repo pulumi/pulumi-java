@@ -15,62 +15,58 @@ public final class GetFirewallArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetFirewallArgs Empty = new GetFirewallArgs();
 
     @Import(name="firewall", required=true)
-      private final String firewall;
+    private String firewall;
 
     public String firewall() {
         return this.firewall;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetFirewallArgs(
-        String firewall,
-        @Nullable String project) {
-        this.firewall = Objects.requireNonNull(firewall, "expected parameter 'firewall' to be non-null");
-        this.project = project;
-    }
+    private GetFirewallArgs() {}
 
-    private GetFirewallArgs() {
-        this.firewall = null;
-        this.project = null;
+    private GetFirewallArgs(GetFirewallArgs $) {
+        this.firewall = $.firewall;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFirewallArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String firewall;
-        private @Nullable String project;
+        private GetFirewallArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFirewallArgs();
         }
 
         public Builder(GetFirewallArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.firewall = defaults.firewall;
-    	      this.project = defaults.project;
+            $ = new GetFirewallArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder firewall(String firewall) {
-            this.firewall = Objects.requireNonNull(firewall);
+            $.firewall = firewall;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetFirewallArgs build() {
-            return new GetFirewallArgs(firewall, project);
+        }
+
+        public GetFirewallArgs build() {
+            $.firewall = Objects.requireNonNull($.firewall, "expected parameter 'firewall' to be non-null");
+            return $;
         }
     }
+
 }

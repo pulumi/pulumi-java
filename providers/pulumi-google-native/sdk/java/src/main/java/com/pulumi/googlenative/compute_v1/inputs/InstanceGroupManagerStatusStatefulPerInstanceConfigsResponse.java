@@ -17,45 +17,45 @@ public final class InstanceGroupManagerStatusStatefulPerInstanceConfigsResponse 
      * 
      */
     @Import(name="allEffective", required=true)
-      private final Boolean allEffective;
+    private Boolean allEffective;
 
     public Boolean allEffective() {
         return this.allEffective;
     }
 
-    public InstanceGroupManagerStatusStatefulPerInstanceConfigsResponse(Boolean allEffective) {
-        this.allEffective = Objects.requireNonNull(allEffective, "expected parameter 'allEffective' to be non-null");
-    }
+    private InstanceGroupManagerStatusStatefulPerInstanceConfigsResponse() {}
 
-    private InstanceGroupManagerStatusStatefulPerInstanceConfigsResponse() {
-        this.allEffective = null;
+    private InstanceGroupManagerStatusStatefulPerInstanceConfigsResponse(InstanceGroupManagerStatusStatefulPerInstanceConfigsResponse $) {
+        this.allEffective = $.allEffective;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceGroupManagerStatusStatefulPerInstanceConfigsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean allEffective;
+        private InstanceGroupManagerStatusStatefulPerInstanceConfigsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceGroupManagerStatusStatefulPerInstanceConfigsResponse();
         }
 
         public Builder(InstanceGroupManagerStatusStatefulPerInstanceConfigsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allEffective = defaults.allEffective;
+            $ = new InstanceGroupManagerStatusStatefulPerInstanceConfigsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allEffective(Boolean allEffective) {
-            this.allEffective = Objects.requireNonNull(allEffective);
+            $.allEffective = allEffective;
             return this;
-        }        public InstanceGroupManagerStatusStatefulPerInstanceConfigsResponse build() {
-            return new InstanceGroupManagerStatusStatefulPerInstanceConfigsResponse(allEffective);
+        }
+
+        public InstanceGroupManagerStatusStatefulPerInstanceConfigsResponse build() {
+            $.allEffective = Objects.requireNonNull($.allEffective, "expected parameter 'allEffective' to be non-null");
+            return $;
         }
     }
+
 }

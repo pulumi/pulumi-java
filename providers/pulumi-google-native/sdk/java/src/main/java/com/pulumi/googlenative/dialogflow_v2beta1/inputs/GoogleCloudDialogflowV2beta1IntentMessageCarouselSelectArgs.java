@@ -5,7 +5,6 @@ package com.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemArgs;
 import java.util.List;
 import java.util.Objects;
@@ -24,52 +23,53 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectArgs e
      * 
      */
     @Import(name="items", required=true)
-      private final Output<List<GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemArgs>> items;
+    private Output<List<GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemArgs>> items;
 
     public Output<List<GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemArgs>> items() {
         return this.items;
     }
 
-    public GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectArgs(Output<List<GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemArgs>> items) {
-        this.items = Objects.requireNonNull(items, "expected parameter 'items' to be non-null");
-    }
+    private GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectArgs() {}
 
-    private GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectArgs() {
-        this.items = Codegen.empty();
+    private GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectArgs(GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectArgs $) {
+        this.items = $.items;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemArgs>> items;
+        private GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectArgs();
         }
 
         public Builder(GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.items = defaults.items;
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder items(Output<List<GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemArgs>> items) {
-            this.items = Objects.requireNonNull(items);
+            $.items = items;
             return this;
         }
+
         public Builder items(List<GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemArgs> items) {
-            this.items = Output.of(Objects.requireNonNull(items));
-            return this;
+            return items(Output.of(items));
         }
+
         public Builder items(GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemArgs... items) {
             return items(List.of(items));
-        }        public GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectArgs build() {
-            return new GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectArgs(items);
+        }
+
+        public GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectArgs build() {
+            $.items = Objects.requireNonNull($.items, "expected parameter 'items' to be non-null");
+            return $;
         }
     }
+
 }

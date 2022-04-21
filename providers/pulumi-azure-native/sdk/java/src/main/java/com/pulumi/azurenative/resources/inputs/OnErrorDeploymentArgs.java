@@ -6,9 +6,9 @@ package com.pulumi.azurenative.resources.inputs;
 import com.pulumi.azurenative.resources.enums.OnErrorDeploymentType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class OnErrorDeploymentArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="deploymentName")
-      private final @Nullable Output<String> deploymentName;
+    private @Nullable Output<String> deploymentName;
 
-    public Output<String> deploymentName() {
-        return this.deploymentName == null ? Codegen.empty() : this.deploymentName;
+    public Optional<Output<String>> deploymentName() {
+        return Optional.ofNullable(this.deploymentName);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class OnErrorDeploymentArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<OnErrorDeploymentType> type;
+    private @Nullable Output<OnErrorDeploymentType> type;
 
-    public Output<OnErrorDeploymentType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<OnErrorDeploymentType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public OnErrorDeploymentArgs(
-        @Nullable Output<String> deploymentName,
-        @Nullable Output<OnErrorDeploymentType> type) {
-        this.deploymentName = deploymentName;
-        this.type = type;
-    }
+    private OnErrorDeploymentArgs() {}
 
-    private OnErrorDeploymentArgs() {
-        this.deploymentName = Codegen.empty();
-        this.type = Codegen.empty();
+    private OnErrorDeploymentArgs(OnErrorDeploymentArgs $) {
+        this.deploymentName = $.deploymentName;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OnErrorDeploymentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> deploymentName;
-        private @Nullable Output<OnErrorDeploymentType> type;
+        private OnErrorDeploymentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OnErrorDeploymentArgs();
         }
 
         public Builder(OnErrorDeploymentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deploymentName = defaults.deploymentName;
-    	      this.type = defaults.type;
+            $ = new OnErrorDeploymentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deploymentName(@Nullable Output<String> deploymentName) {
-            this.deploymentName = deploymentName;
+            $.deploymentName = deploymentName;
             return this;
         }
-        public Builder deploymentName(@Nullable String deploymentName) {
-            this.deploymentName = Codegen.ofNullable(deploymentName);
-            return this;
+
+        public Builder deploymentName(String deploymentName) {
+            return deploymentName(Output.of(deploymentName));
         }
+
         public Builder type(@Nullable Output<OnErrorDeploymentType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable OnErrorDeploymentType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public OnErrorDeploymentArgs build() {
-            return new OnErrorDeploymentArgs(deploymentName, type);
+
+        public Builder type(OnErrorDeploymentType type) {
+            return type(Output.of(type));
+        }
+
+        public OnErrorDeploymentArgs build() {
+            return $;
         }
     }
+
 }

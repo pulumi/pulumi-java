@@ -5,10 +5,10 @@ package com.pulumi.awsnative.ssm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,73 +17,70 @@ public final class ResourceDataSyncAwsOrganizationsSourceArgs extends com.pulumi
     public static final ResourceDataSyncAwsOrganizationsSourceArgs Empty = new ResourceDataSyncAwsOrganizationsSourceArgs();
 
     @Import(name="organizationSourceType", required=true)
-      private final Output<String> organizationSourceType;
+    private Output<String> organizationSourceType;
 
     public Output<String> organizationSourceType() {
         return this.organizationSourceType;
     }
 
     @Import(name="organizationalUnits")
-      private final @Nullable Output<List<String>> organizationalUnits;
+    private @Nullable Output<List<String>> organizationalUnits;
 
-    public Output<List<String>> organizationalUnits() {
-        return this.organizationalUnits == null ? Codegen.empty() : this.organizationalUnits;
+    public Optional<Output<List<String>>> organizationalUnits() {
+        return Optional.ofNullable(this.organizationalUnits);
     }
 
-    public ResourceDataSyncAwsOrganizationsSourceArgs(
-        Output<String> organizationSourceType,
-        @Nullable Output<List<String>> organizationalUnits) {
-        this.organizationSourceType = Objects.requireNonNull(organizationSourceType, "expected parameter 'organizationSourceType' to be non-null");
-        this.organizationalUnits = organizationalUnits;
-    }
+    private ResourceDataSyncAwsOrganizationsSourceArgs() {}
 
-    private ResourceDataSyncAwsOrganizationsSourceArgs() {
-        this.organizationSourceType = Codegen.empty();
-        this.organizationalUnits = Codegen.empty();
+    private ResourceDataSyncAwsOrganizationsSourceArgs(ResourceDataSyncAwsOrganizationsSourceArgs $) {
+        this.organizationSourceType = $.organizationSourceType;
+        this.organizationalUnits = $.organizationalUnits;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceDataSyncAwsOrganizationsSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> organizationSourceType;
-        private @Nullable Output<List<String>> organizationalUnits;
+        private ResourceDataSyncAwsOrganizationsSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceDataSyncAwsOrganizationsSourceArgs();
         }
 
         public Builder(ResourceDataSyncAwsOrganizationsSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.organizationSourceType = defaults.organizationSourceType;
-    	      this.organizationalUnits = defaults.organizationalUnits;
+            $ = new ResourceDataSyncAwsOrganizationsSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder organizationSourceType(Output<String> organizationSourceType) {
-            this.organizationSourceType = Objects.requireNonNull(organizationSourceType);
+            $.organizationSourceType = organizationSourceType;
             return this;
         }
+
         public Builder organizationSourceType(String organizationSourceType) {
-            this.organizationSourceType = Output.of(Objects.requireNonNull(organizationSourceType));
-            return this;
+            return organizationSourceType(Output.of(organizationSourceType));
         }
+
         public Builder organizationalUnits(@Nullable Output<List<String>> organizationalUnits) {
-            this.organizationalUnits = organizationalUnits;
+            $.organizationalUnits = organizationalUnits;
             return this;
         }
-        public Builder organizationalUnits(@Nullable List<String> organizationalUnits) {
-            this.organizationalUnits = Codegen.ofNullable(organizationalUnits);
-            return this;
+
+        public Builder organizationalUnits(List<String> organizationalUnits) {
+            return organizationalUnits(Output.of(organizationalUnits));
         }
+
         public Builder organizationalUnits(String... organizationalUnits) {
             return organizationalUnits(List.of(organizationalUnits));
-        }        public ResourceDataSyncAwsOrganizationsSourceArgs build() {
-            return new ResourceDataSyncAwsOrganizationsSourceArgs(organizationSourceType, organizationalUnits);
+        }
+
+        public ResourceDataSyncAwsOrganizationsSourceArgs build() {
+            $.organizationSourceType = Objects.requireNonNull($.organizationSourceType, "expected parameter 'organizationSourceType' to be non-null");
+            return $;
         }
     }
+
 }

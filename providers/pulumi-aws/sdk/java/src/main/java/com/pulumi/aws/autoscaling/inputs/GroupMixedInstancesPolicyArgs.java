@@ -7,8 +7,8 @@ import com.pulumi.aws.autoscaling.inputs.GroupMixedInstancesPolicyInstancesDistr
 import com.pulumi.aws.autoscaling.inputs.GroupMixedInstancesPolicyLaunchTemplateArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class GroupMixedInstancesPolicyArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="instancesDistribution")
-      private final @Nullable Output<GroupMixedInstancesPolicyInstancesDistributionArgs> instancesDistribution;
+    private @Nullable Output<GroupMixedInstancesPolicyInstancesDistributionArgs> instancesDistribution;
 
-    public Output<GroupMixedInstancesPolicyInstancesDistributionArgs> instancesDistribution() {
-        return this.instancesDistribution == null ? Codegen.empty() : this.instancesDistribution;
+    public Optional<Output<GroupMixedInstancesPolicyInstancesDistributionArgs>> instancesDistribution() {
+        return Optional.ofNullable(this.instancesDistribution);
     }
 
     /**
@@ -32,63 +32,59 @@ public final class GroupMixedInstancesPolicyArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="launchTemplate", required=true)
-      private final Output<GroupMixedInstancesPolicyLaunchTemplateArgs> launchTemplate;
+    private Output<GroupMixedInstancesPolicyLaunchTemplateArgs> launchTemplate;
 
     public Output<GroupMixedInstancesPolicyLaunchTemplateArgs> launchTemplate() {
         return this.launchTemplate;
     }
 
-    public GroupMixedInstancesPolicyArgs(
-        @Nullable Output<GroupMixedInstancesPolicyInstancesDistributionArgs> instancesDistribution,
-        Output<GroupMixedInstancesPolicyLaunchTemplateArgs> launchTemplate) {
-        this.instancesDistribution = instancesDistribution;
-        this.launchTemplate = Objects.requireNonNull(launchTemplate, "expected parameter 'launchTemplate' to be non-null");
-    }
+    private GroupMixedInstancesPolicyArgs() {}
 
-    private GroupMixedInstancesPolicyArgs() {
-        this.instancesDistribution = Codegen.empty();
-        this.launchTemplate = Codegen.empty();
+    private GroupMixedInstancesPolicyArgs(GroupMixedInstancesPolicyArgs $) {
+        this.instancesDistribution = $.instancesDistribution;
+        this.launchTemplate = $.launchTemplate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GroupMixedInstancesPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GroupMixedInstancesPolicyInstancesDistributionArgs> instancesDistribution;
-        private Output<GroupMixedInstancesPolicyLaunchTemplateArgs> launchTemplate;
+        private GroupMixedInstancesPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GroupMixedInstancesPolicyArgs();
         }
 
         public Builder(GroupMixedInstancesPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instancesDistribution = defaults.instancesDistribution;
-    	      this.launchTemplate = defaults.launchTemplate;
+            $ = new GroupMixedInstancesPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instancesDistribution(@Nullable Output<GroupMixedInstancesPolicyInstancesDistributionArgs> instancesDistribution) {
-            this.instancesDistribution = instancesDistribution;
+            $.instancesDistribution = instancesDistribution;
             return this;
         }
-        public Builder instancesDistribution(@Nullable GroupMixedInstancesPolicyInstancesDistributionArgs instancesDistribution) {
-            this.instancesDistribution = Codegen.ofNullable(instancesDistribution);
-            return this;
+
+        public Builder instancesDistribution(GroupMixedInstancesPolicyInstancesDistributionArgs instancesDistribution) {
+            return instancesDistribution(Output.of(instancesDistribution));
         }
+
         public Builder launchTemplate(Output<GroupMixedInstancesPolicyLaunchTemplateArgs> launchTemplate) {
-            this.launchTemplate = Objects.requireNonNull(launchTemplate);
+            $.launchTemplate = launchTemplate;
             return this;
         }
+
         public Builder launchTemplate(GroupMixedInstancesPolicyLaunchTemplateArgs launchTemplate) {
-            this.launchTemplate = Output.of(Objects.requireNonNull(launchTemplate));
-            return this;
-        }        public GroupMixedInstancesPolicyArgs build() {
-            return new GroupMixedInstancesPolicyArgs(instancesDistribution, launchTemplate);
+            return launchTemplate(Output.of(launchTemplate));
+        }
+
+        public GroupMixedInstancesPolicyArgs build() {
+            $.launchTemplate = Objects.requireNonNull($.launchTemplate, "expected parameter 'launchTemplate' to be non-null");
+            return $;
         }
     }
+
 }

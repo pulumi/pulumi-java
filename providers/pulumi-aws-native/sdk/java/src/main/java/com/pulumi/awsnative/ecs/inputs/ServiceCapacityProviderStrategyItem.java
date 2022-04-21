@@ -16,78 +16,70 @@ public final class ServiceCapacityProviderStrategyItem extends com.pulumi.resour
     public static final ServiceCapacityProviderStrategyItem Empty = new ServiceCapacityProviderStrategyItem();
 
     @Import(name="base")
-      private final @Nullable Integer base;
+    private @Nullable Integer base;
 
     public Optional<Integer> base() {
-        return this.base == null ? Optional.empty() : Optional.ofNullable(this.base);
+        return Optional.ofNullable(this.base);
     }
 
     @Import(name="capacityProvider")
-      private final @Nullable String capacityProvider;
+    private @Nullable String capacityProvider;
 
     public Optional<String> capacityProvider() {
-        return this.capacityProvider == null ? Optional.empty() : Optional.ofNullable(this.capacityProvider);
+        return Optional.ofNullable(this.capacityProvider);
     }
 
     @Import(name="weight")
-      private final @Nullable Integer weight;
+    private @Nullable Integer weight;
 
     public Optional<Integer> weight() {
-        return this.weight == null ? Optional.empty() : Optional.ofNullable(this.weight);
+        return Optional.ofNullable(this.weight);
     }
 
-    public ServiceCapacityProviderStrategyItem(
-        @Nullable Integer base,
-        @Nullable String capacityProvider,
-        @Nullable Integer weight) {
-        this.base = base;
-        this.capacityProvider = capacityProvider;
-        this.weight = weight;
-    }
+    private ServiceCapacityProviderStrategyItem() {}
 
-    private ServiceCapacityProviderStrategyItem() {
-        this.base = null;
-        this.capacityProvider = null;
-        this.weight = null;
+    private ServiceCapacityProviderStrategyItem(ServiceCapacityProviderStrategyItem $) {
+        this.base = $.base;
+        this.capacityProvider = $.capacityProvider;
+        this.weight = $.weight;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceCapacityProviderStrategyItem defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer base;
-        private @Nullable String capacityProvider;
-        private @Nullable Integer weight;
+        private ServiceCapacityProviderStrategyItem $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceCapacityProviderStrategyItem();
         }
 
         public Builder(ServiceCapacityProviderStrategyItem defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.base = defaults.base;
-    	      this.capacityProvider = defaults.capacityProvider;
-    	      this.weight = defaults.weight;
+            $ = new ServiceCapacityProviderStrategyItem(Objects.requireNonNull(defaults));
         }
 
         public Builder base(@Nullable Integer base) {
-            this.base = base;
+            $.base = base;
             return this;
         }
+
         public Builder capacityProvider(@Nullable String capacityProvider) {
-            this.capacityProvider = capacityProvider;
+            $.capacityProvider = capacityProvider;
             return this;
         }
+
         public Builder weight(@Nullable Integer weight) {
-            this.weight = weight;
+            $.weight = weight;
             return this;
-        }        public ServiceCapacityProviderStrategyItem build() {
-            return new ServiceCapacityProviderStrategyItem(base, capacityProvider, weight);
+        }
+
+        public ServiceCapacityProviderStrategyItem build() {
+            return $;
         }
     }
+
 }

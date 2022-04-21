@@ -5,7 +5,6 @@ package com.pulumi.googlenative.toolresults_v1beta3;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.toolresults_v1beta3.enums.ExecutionState;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.MatrixDimensionDefinitionArgs;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.OutcomeArgs;
@@ -14,6 +13,7 @@ import com.pulumi.googlenative.toolresults_v1beta3.inputs.TimestampArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ExecutionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="completionTime")
-      private final @Nullable Output<TimestampArgs> completionTime;
+    private @Nullable Output<TimestampArgs> completionTime;
 
-    public Output<TimestampArgs> completionTime() {
-        return this.completionTime == null ? Codegen.empty() : this.completionTime;
+    public Optional<Output<TimestampArgs>> completionTime() {
+        return Optional.ofNullable(this.completionTime);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ExecutionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="creationTime")
-      private final @Nullable Output<TimestampArgs> creationTime;
+    private @Nullable Output<TimestampArgs> creationTime;
 
-    public Output<TimestampArgs> creationTime() {
-        return this.creationTime == null ? Codegen.empty() : this.creationTime;
+    public Optional<Output<TimestampArgs>> creationTime() {
+        return Optional.ofNullable(this.creationTime);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ExecutionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dimensionDefinitions")
-      private final @Nullable Output<List<MatrixDimensionDefinitionArgs>> dimensionDefinitions;
+    private @Nullable Output<List<MatrixDimensionDefinitionArgs>> dimensionDefinitions;
 
-    public Output<List<MatrixDimensionDefinitionArgs>> dimensionDefinitions() {
-        return this.dimensionDefinitions == null ? Codegen.empty() : this.dimensionDefinitions;
+    public Optional<Output<List<MatrixDimensionDefinitionArgs>>> dimensionDefinitions() {
+        return Optional.ofNullable(this.dimensionDefinitions);
     }
 
     /**
@@ -59,14 +59,14 @@ public final class ExecutionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="executionId")
-      private final @Nullable Output<String> executionId;
+    private @Nullable Output<String> executionId;
 
-    public Output<String> executionId() {
-        return this.executionId == null ? Codegen.empty() : this.executionId;
+    public Optional<Output<String>> executionId() {
+        return Optional.ofNullable(this.executionId);
     }
 
     @Import(name="historyId", required=true)
-      private final Output<String> historyId;
+    private Output<String> historyId;
 
     public Output<String> historyId() {
         return this.historyId;
@@ -77,24 +77,24 @@ public final class ExecutionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="outcome")
-      private final @Nullable Output<OutcomeArgs> outcome;
+    private @Nullable Output<OutcomeArgs> outcome;
 
-    public Output<OutcomeArgs> outcome() {
-        return this.outcome == null ? Codegen.empty() : this.outcome;
+    public Optional<Output<OutcomeArgs>> outcome() {
+        return Optional.ofNullable(this.outcome);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="requestId")
-      private final @Nullable Output<String> requestId;
+    private @Nullable Output<String> requestId;
 
-    public Output<String> requestId() {
-        return this.requestId == null ? Codegen.empty() : this.requestId;
+    public Optional<Output<String>> requestId() {
+        return Optional.ofNullable(this.requestId);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class ExecutionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="specification")
-      private final @Nullable Output<SpecificationArgs> specification;
+    private @Nullable Output<SpecificationArgs> specification;
 
-    public Output<SpecificationArgs> specification() {
-        return this.specification == null ? Codegen.empty() : this.specification;
+    public Optional<Output<SpecificationArgs>> specification() {
+        return Optional.ofNullable(this.specification);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class ExecutionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<ExecutionState> state;
+    private @Nullable Output<ExecutionState> state;
 
-    public Output<ExecutionState> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<ExecutionState>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -124,183 +124,153 @@ public final class ExecutionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="testExecutionMatrixId")
-      private final @Nullable Output<String> testExecutionMatrixId;
+    private @Nullable Output<String> testExecutionMatrixId;
 
-    public Output<String> testExecutionMatrixId() {
-        return this.testExecutionMatrixId == null ? Codegen.empty() : this.testExecutionMatrixId;
+    public Optional<Output<String>> testExecutionMatrixId() {
+        return Optional.ofNullable(this.testExecutionMatrixId);
     }
 
-    public ExecutionArgs(
-        @Nullable Output<TimestampArgs> completionTime,
-        @Nullable Output<TimestampArgs> creationTime,
-        @Nullable Output<List<MatrixDimensionDefinitionArgs>> dimensionDefinitions,
-        @Nullable Output<String> executionId,
-        Output<String> historyId,
-        @Nullable Output<OutcomeArgs> outcome,
-        @Nullable Output<String> project,
-        @Nullable Output<String> requestId,
-        @Nullable Output<SpecificationArgs> specification,
-        @Nullable Output<ExecutionState> state,
-        @Nullable Output<String> testExecutionMatrixId) {
-        this.completionTime = completionTime;
-        this.creationTime = creationTime;
-        this.dimensionDefinitions = dimensionDefinitions;
-        this.executionId = executionId;
-        this.historyId = Objects.requireNonNull(historyId, "expected parameter 'historyId' to be non-null");
-        this.outcome = outcome;
-        this.project = project;
-        this.requestId = requestId;
-        this.specification = specification;
-        this.state = state;
-        this.testExecutionMatrixId = testExecutionMatrixId;
-    }
+    private ExecutionArgs() {}
 
-    private ExecutionArgs() {
-        this.completionTime = Codegen.empty();
-        this.creationTime = Codegen.empty();
-        this.dimensionDefinitions = Codegen.empty();
-        this.executionId = Codegen.empty();
-        this.historyId = Codegen.empty();
-        this.outcome = Codegen.empty();
-        this.project = Codegen.empty();
-        this.requestId = Codegen.empty();
-        this.specification = Codegen.empty();
-        this.state = Codegen.empty();
-        this.testExecutionMatrixId = Codegen.empty();
+    private ExecutionArgs(ExecutionArgs $) {
+        this.completionTime = $.completionTime;
+        this.creationTime = $.creationTime;
+        this.dimensionDefinitions = $.dimensionDefinitions;
+        this.executionId = $.executionId;
+        this.historyId = $.historyId;
+        this.outcome = $.outcome;
+        this.project = $.project;
+        this.requestId = $.requestId;
+        this.specification = $.specification;
+        this.state = $.state;
+        this.testExecutionMatrixId = $.testExecutionMatrixId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExecutionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<TimestampArgs> completionTime;
-        private @Nullable Output<TimestampArgs> creationTime;
-        private @Nullable Output<List<MatrixDimensionDefinitionArgs>> dimensionDefinitions;
-        private @Nullable Output<String> executionId;
-        private Output<String> historyId;
-        private @Nullable Output<OutcomeArgs> outcome;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> requestId;
-        private @Nullable Output<SpecificationArgs> specification;
-        private @Nullable Output<ExecutionState> state;
-        private @Nullable Output<String> testExecutionMatrixId;
+        private ExecutionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExecutionArgs();
         }
 
         public Builder(ExecutionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.completionTime = defaults.completionTime;
-    	      this.creationTime = defaults.creationTime;
-    	      this.dimensionDefinitions = defaults.dimensionDefinitions;
-    	      this.executionId = defaults.executionId;
-    	      this.historyId = defaults.historyId;
-    	      this.outcome = defaults.outcome;
-    	      this.project = defaults.project;
-    	      this.requestId = defaults.requestId;
-    	      this.specification = defaults.specification;
-    	      this.state = defaults.state;
-    	      this.testExecutionMatrixId = defaults.testExecutionMatrixId;
+            $ = new ExecutionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder completionTime(@Nullable Output<TimestampArgs> completionTime) {
-            this.completionTime = completionTime;
+            $.completionTime = completionTime;
             return this;
         }
-        public Builder completionTime(@Nullable TimestampArgs completionTime) {
-            this.completionTime = Codegen.ofNullable(completionTime);
-            return this;
+
+        public Builder completionTime(TimestampArgs completionTime) {
+            return completionTime(Output.of(completionTime));
         }
+
         public Builder creationTime(@Nullable Output<TimestampArgs> creationTime) {
-            this.creationTime = creationTime;
+            $.creationTime = creationTime;
             return this;
         }
-        public Builder creationTime(@Nullable TimestampArgs creationTime) {
-            this.creationTime = Codegen.ofNullable(creationTime);
-            return this;
+
+        public Builder creationTime(TimestampArgs creationTime) {
+            return creationTime(Output.of(creationTime));
         }
+
         public Builder dimensionDefinitions(@Nullable Output<List<MatrixDimensionDefinitionArgs>> dimensionDefinitions) {
-            this.dimensionDefinitions = dimensionDefinitions;
+            $.dimensionDefinitions = dimensionDefinitions;
             return this;
         }
-        public Builder dimensionDefinitions(@Nullable List<MatrixDimensionDefinitionArgs> dimensionDefinitions) {
-            this.dimensionDefinitions = Codegen.ofNullable(dimensionDefinitions);
-            return this;
+
+        public Builder dimensionDefinitions(List<MatrixDimensionDefinitionArgs> dimensionDefinitions) {
+            return dimensionDefinitions(Output.of(dimensionDefinitions));
         }
+
         public Builder dimensionDefinitions(MatrixDimensionDefinitionArgs... dimensionDefinitions) {
             return dimensionDefinitions(List.of(dimensionDefinitions));
         }
+
         public Builder executionId(@Nullable Output<String> executionId) {
-            this.executionId = executionId;
+            $.executionId = executionId;
             return this;
         }
-        public Builder executionId(@Nullable String executionId) {
-            this.executionId = Codegen.ofNullable(executionId);
-            return this;
+
+        public Builder executionId(String executionId) {
+            return executionId(Output.of(executionId));
         }
+
         public Builder historyId(Output<String> historyId) {
-            this.historyId = Objects.requireNonNull(historyId);
+            $.historyId = historyId;
             return this;
         }
+
         public Builder historyId(String historyId) {
-            this.historyId = Output.of(Objects.requireNonNull(historyId));
-            return this;
+            return historyId(Output.of(historyId));
         }
+
         public Builder outcome(@Nullable Output<OutcomeArgs> outcome) {
-            this.outcome = outcome;
+            $.outcome = outcome;
             return this;
         }
-        public Builder outcome(@Nullable OutcomeArgs outcome) {
-            this.outcome = Codegen.ofNullable(outcome);
-            return this;
+
+        public Builder outcome(OutcomeArgs outcome) {
+            return outcome(Output.of(outcome));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder requestId(@Nullable Output<String> requestId) {
-            this.requestId = requestId;
+            $.requestId = requestId;
             return this;
         }
-        public Builder requestId(@Nullable String requestId) {
-            this.requestId = Codegen.ofNullable(requestId);
-            return this;
+
+        public Builder requestId(String requestId) {
+            return requestId(Output.of(requestId));
         }
+
         public Builder specification(@Nullable Output<SpecificationArgs> specification) {
-            this.specification = specification;
+            $.specification = specification;
             return this;
         }
-        public Builder specification(@Nullable SpecificationArgs specification) {
-            this.specification = Codegen.ofNullable(specification);
-            return this;
+
+        public Builder specification(SpecificationArgs specification) {
+            return specification(Output.of(specification));
         }
+
         public Builder state(@Nullable Output<ExecutionState> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable ExecutionState state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
+
+        public Builder state(ExecutionState state) {
+            return state(Output.of(state));
         }
+
         public Builder testExecutionMatrixId(@Nullable Output<String> testExecutionMatrixId) {
-            this.testExecutionMatrixId = testExecutionMatrixId;
+            $.testExecutionMatrixId = testExecutionMatrixId;
             return this;
         }
-        public Builder testExecutionMatrixId(@Nullable String testExecutionMatrixId) {
-            this.testExecutionMatrixId = Codegen.ofNullable(testExecutionMatrixId);
-            return this;
-        }        public ExecutionArgs build() {
-            return new ExecutionArgs(completionTime, creationTime, dimensionDefinitions, executionId, historyId, outcome, project, requestId, specification, state, testExecutionMatrixId);
+
+        public Builder testExecutionMatrixId(String testExecutionMatrixId) {
+            return testExecutionMatrixId(Output.of(testExecutionMatrixId));
+        }
+
+        public ExecutionArgs build() {
+            $.historyId = Objects.requireNonNull($.historyId, "expected parameter 'historyId' to be non-null");
+            return $;
         }
     }
+
 }

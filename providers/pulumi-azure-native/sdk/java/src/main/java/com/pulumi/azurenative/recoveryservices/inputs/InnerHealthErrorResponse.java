@@ -23,10 +23,10 @@ public final class InnerHealthErrorResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="creationTimeUtc")
-      private final @Nullable String creationTimeUtc;
+    private @Nullable String creationTimeUtc;
 
     public Optional<String> creationTimeUtc() {
-        return this.creationTimeUtc == null ? Optional.empty() : Optional.ofNullable(this.creationTimeUtc);
+        return Optional.ofNullable(this.creationTimeUtc);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class InnerHealthErrorResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="entityId")
-      private final @Nullable String entityId;
+    private @Nullable String entityId;
 
     public Optional<String> entityId() {
-        return this.entityId == null ? Optional.empty() : Optional.ofNullable(this.entityId);
+        return Optional.ofNullable(this.entityId);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class InnerHealthErrorResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="errorCategory")
-      private final @Nullable String errorCategory;
+    private @Nullable String errorCategory;
 
     public Optional<String> errorCategory() {
-        return this.errorCategory == null ? Optional.empty() : Optional.ofNullable(this.errorCategory);
+        return Optional.ofNullable(this.errorCategory);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class InnerHealthErrorResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="errorCode")
-      private final @Nullable String errorCode;
+    private @Nullable String errorCode;
 
     public Optional<String> errorCode() {
-        return this.errorCode == null ? Optional.empty() : Optional.ofNullable(this.errorCode);
+        return Optional.ofNullable(this.errorCode);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class InnerHealthErrorResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="errorLevel")
-      private final @Nullable String errorLevel;
+    private @Nullable String errorLevel;
 
     public Optional<String> errorLevel() {
-        return this.errorLevel == null ? Optional.empty() : Optional.ofNullable(this.errorLevel);
+        return Optional.ofNullable(this.errorLevel);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class InnerHealthErrorResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="errorMessage")
-      private final @Nullable String errorMessage;
+    private @Nullable String errorMessage;
 
     public Optional<String> errorMessage() {
-        return this.errorMessage == null ? Optional.empty() : Optional.ofNullable(this.errorMessage);
+        return Optional.ofNullable(this.errorMessage);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class InnerHealthErrorResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="errorSource")
-      private final @Nullable String errorSource;
+    private @Nullable String errorSource;
 
     public Optional<String> errorSource() {
-        return this.errorSource == null ? Optional.empty() : Optional.ofNullable(this.errorSource);
+        return Optional.ofNullable(this.errorSource);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class InnerHealthErrorResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="errorType")
-      private final @Nullable String errorType;
+    private @Nullable String errorType;
 
     public Optional<String> errorType() {
-        return this.errorType == null ? Optional.empty() : Optional.ofNullable(this.errorType);
+        return Optional.ofNullable(this.errorType);
     }
 
     /**
@@ -111,10 +111,10 @@ public final class InnerHealthErrorResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="possibleCauses")
-      private final @Nullable String possibleCauses;
+    private @Nullable String possibleCauses;
 
     public Optional<String> possibleCauses() {
-        return this.possibleCauses == null ? Optional.empty() : Optional.ofNullable(this.possibleCauses);
+        return Optional.ofNullable(this.possibleCauses);
     }
 
     /**
@@ -122,10 +122,10 @@ public final class InnerHealthErrorResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="recommendedAction")
-      private final @Nullable String recommendedAction;
+    private @Nullable String recommendedAction;
 
     public Optional<String> recommendedAction() {
-        return this.recommendedAction == null ? Optional.empty() : Optional.ofNullable(this.recommendedAction);
+        return Optional.ofNullable(this.recommendedAction);
     }
 
     /**
@@ -133,10 +133,10 @@ public final class InnerHealthErrorResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="recoveryProviderErrorMessage")
-      private final @Nullable String recoveryProviderErrorMessage;
+    private @Nullable String recoveryProviderErrorMessage;
 
     public Optional<String> recoveryProviderErrorMessage() {
-        return this.recoveryProviderErrorMessage == null ? Optional.empty() : Optional.ofNullable(this.recoveryProviderErrorMessage);
+        return Optional.ofNullable(this.recoveryProviderErrorMessage);
     }
 
     /**
@@ -144,145 +144,110 @@ public final class InnerHealthErrorResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="summaryMessage")
-      private final @Nullable String summaryMessage;
+    private @Nullable String summaryMessage;
 
     public Optional<String> summaryMessage() {
-        return this.summaryMessage == null ? Optional.empty() : Optional.ofNullable(this.summaryMessage);
+        return Optional.ofNullable(this.summaryMessage);
     }
 
-    public InnerHealthErrorResponse(
-        @Nullable String creationTimeUtc,
-        @Nullable String entityId,
-        @Nullable String errorCategory,
-        @Nullable String errorCode,
-        @Nullable String errorLevel,
-        @Nullable String errorMessage,
-        @Nullable String errorSource,
-        @Nullable String errorType,
-        @Nullable String possibleCauses,
-        @Nullable String recommendedAction,
-        @Nullable String recoveryProviderErrorMessage,
-        @Nullable String summaryMessage) {
-        this.creationTimeUtc = creationTimeUtc;
-        this.entityId = entityId;
-        this.errorCategory = errorCategory;
-        this.errorCode = errorCode;
-        this.errorLevel = errorLevel;
-        this.errorMessage = errorMessage;
-        this.errorSource = errorSource;
-        this.errorType = errorType;
-        this.possibleCauses = possibleCauses;
-        this.recommendedAction = recommendedAction;
-        this.recoveryProviderErrorMessage = recoveryProviderErrorMessage;
-        this.summaryMessage = summaryMessage;
-    }
+    private InnerHealthErrorResponse() {}
 
-    private InnerHealthErrorResponse() {
-        this.creationTimeUtc = null;
-        this.entityId = null;
-        this.errorCategory = null;
-        this.errorCode = null;
-        this.errorLevel = null;
-        this.errorMessage = null;
-        this.errorSource = null;
-        this.errorType = null;
-        this.possibleCauses = null;
-        this.recommendedAction = null;
-        this.recoveryProviderErrorMessage = null;
-        this.summaryMessage = null;
+    private InnerHealthErrorResponse(InnerHealthErrorResponse $) {
+        this.creationTimeUtc = $.creationTimeUtc;
+        this.entityId = $.entityId;
+        this.errorCategory = $.errorCategory;
+        this.errorCode = $.errorCode;
+        this.errorLevel = $.errorLevel;
+        this.errorMessage = $.errorMessage;
+        this.errorSource = $.errorSource;
+        this.errorType = $.errorType;
+        this.possibleCauses = $.possibleCauses;
+        this.recommendedAction = $.recommendedAction;
+        this.recoveryProviderErrorMessage = $.recoveryProviderErrorMessage;
+        this.summaryMessage = $.summaryMessage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InnerHealthErrorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String creationTimeUtc;
-        private @Nullable String entityId;
-        private @Nullable String errorCategory;
-        private @Nullable String errorCode;
-        private @Nullable String errorLevel;
-        private @Nullable String errorMessage;
-        private @Nullable String errorSource;
-        private @Nullable String errorType;
-        private @Nullable String possibleCauses;
-        private @Nullable String recommendedAction;
-        private @Nullable String recoveryProviderErrorMessage;
-        private @Nullable String summaryMessage;
+        private InnerHealthErrorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InnerHealthErrorResponse();
         }
 
         public Builder(InnerHealthErrorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.creationTimeUtc = defaults.creationTimeUtc;
-    	      this.entityId = defaults.entityId;
-    	      this.errorCategory = defaults.errorCategory;
-    	      this.errorCode = defaults.errorCode;
-    	      this.errorLevel = defaults.errorLevel;
-    	      this.errorMessage = defaults.errorMessage;
-    	      this.errorSource = defaults.errorSource;
-    	      this.errorType = defaults.errorType;
-    	      this.possibleCauses = defaults.possibleCauses;
-    	      this.recommendedAction = defaults.recommendedAction;
-    	      this.recoveryProviderErrorMessage = defaults.recoveryProviderErrorMessage;
-    	      this.summaryMessage = defaults.summaryMessage;
+            $ = new InnerHealthErrorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder creationTimeUtc(@Nullable String creationTimeUtc) {
-            this.creationTimeUtc = creationTimeUtc;
+            $.creationTimeUtc = creationTimeUtc;
             return this;
         }
+
         public Builder entityId(@Nullable String entityId) {
-            this.entityId = entityId;
+            $.entityId = entityId;
             return this;
         }
+
         public Builder errorCategory(@Nullable String errorCategory) {
-            this.errorCategory = errorCategory;
+            $.errorCategory = errorCategory;
             return this;
         }
+
         public Builder errorCode(@Nullable String errorCode) {
-            this.errorCode = errorCode;
+            $.errorCode = errorCode;
             return this;
         }
+
         public Builder errorLevel(@Nullable String errorLevel) {
-            this.errorLevel = errorLevel;
+            $.errorLevel = errorLevel;
             return this;
         }
+
         public Builder errorMessage(@Nullable String errorMessage) {
-            this.errorMessage = errorMessage;
+            $.errorMessage = errorMessage;
             return this;
         }
+
         public Builder errorSource(@Nullable String errorSource) {
-            this.errorSource = errorSource;
+            $.errorSource = errorSource;
             return this;
         }
+
         public Builder errorType(@Nullable String errorType) {
-            this.errorType = errorType;
+            $.errorType = errorType;
             return this;
         }
+
         public Builder possibleCauses(@Nullable String possibleCauses) {
-            this.possibleCauses = possibleCauses;
+            $.possibleCauses = possibleCauses;
             return this;
         }
+
         public Builder recommendedAction(@Nullable String recommendedAction) {
-            this.recommendedAction = recommendedAction;
+            $.recommendedAction = recommendedAction;
             return this;
         }
+
         public Builder recoveryProviderErrorMessage(@Nullable String recoveryProviderErrorMessage) {
-            this.recoveryProviderErrorMessage = recoveryProviderErrorMessage;
+            $.recoveryProviderErrorMessage = recoveryProviderErrorMessage;
             return this;
         }
+
         public Builder summaryMessage(@Nullable String summaryMessage) {
-            this.summaryMessage = summaryMessage;
+            $.summaryMessage = summaryMessage;
             return this;
-        }        public InnerHealthErrorResponse build() {
-            return new InnerHealthErrorResponse(creationTimeUtc, entityId, errorCategory, errorCode, errorLevel, errorMessage, errorSource, errorType, possibleCauses, recommendedAction, recoveryProviderErrorMessage, summaryMessage);
+        }
+
+        public InnerHealthErrorResponse build() {
+            return $;
         }
     }
+
 }

@@ -23,7 +23,7 @@ public final class PackageValidationResultResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="errors", required=true)
-      private final List<String> errors;
+    private List<String> errors;
 
     public List<String> errors() {
         return this.errors;
@@ -34,7 +34,7 @@ public final class PackageValidationResultResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="isValid", required=true)
-      private final Boolean isValid;
+    private Boolean isValid;
 
     public Boolean isValid() {
         return this.isValid;
@@ -45,67 +45,63 @@ public final class PackageValidationResultResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="validationName", required=true)
-      private final String validationName;
+    private String validationName;
 
     public String validationName() {
         return this.validationName;
     }
 
-    public PackageValidationResultResponse(
-        List<String> errors,
-        Boolean isValid,
-        String validationName) {
-        this.errors = Objects.requireNonNull(errors, "expected parameter 'errors' to be non-null");
-        this.isValid = Objects.requireNonNull(isValid, "expected parameter 'isValid' to be non-null");
-        this.validationName = Objects.requireNonNull(validationName, "expected parameter 'validationName' to be non-null");
-    }
+    private PackageValidationResultResponse() {}
 
-    private PackageValidationResultResponse() {
-        this.errors = List.of();
-        this.isValid = null;
-        this.validationName = null;
+    private PackageValidationResultResponse(PackageValidationResultResponse $) {
+        this.errors = $.errors;
+        this.isValid = $.isValid;
+        this.validationName = $.validationName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PackageValidationResultResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> errors;
-        private Boolean isValid;
-        private String validationName;
+        private PackageValidationResultResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PackageValidationResultResponse();
         }
 
         public Builder(PackageValidationResultResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.errors = defaults.errors;
-    	      this.isValid = defaults.isValid;
-    	      this.validationName = defaults.validationName;
+            $ = new PackageValidationResultResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder errors(List<String> errors) {
-            this.errors = Objects.requireNonNull(errors);
+            $.errors = errors;
             return this;
         }
+
         public Builder errors(String... errors) {
             return errors(List.of(errors));
         }
+
         public Builder isValid(Boolean isValid) {
-            this.isValid = Objects.requireNonNull(isValid);
+            $.isValid = isValid;
             return this;
         }
+
         public Builder validationName(String validationName) {
-            this.validationName = Objects.requireNonNull(validationName);
+            $.validationName = validationName;
             return this;
-        }        public PackageValidationResultResponse build() {
-            return new PackageValidationResultResponse(errors, isValid, validationName);
+        }
+
+        public PackageValidationResultResponse build() {
+            $.errors = Objects.requireNonNull($.errors, "expected parameter 'errors' to be non-null");
+            $.isValid = Objects.requireNonNull($.isValid, "expected parameter 'isValid' to be non-null");
+            $.validationName = Objects.requireNonNull($.validationName, "expected parameter 'validationName' to be non-null");
+            return $;
         }
     }
+
 }

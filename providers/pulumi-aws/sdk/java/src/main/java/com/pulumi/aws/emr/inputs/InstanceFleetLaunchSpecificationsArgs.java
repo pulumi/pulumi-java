@@ -7,9 +7,9 @@ import com.pulumi.aws.emr.inputs.InstanceFleetLaunchSpecificationsOnDemandSpecif
 import com.pulumi.aws.emr.inputs.InstanceFleetLaunchSpecificationsSpotSpecificationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class InstanceFleetLaunchSpecificationsArgs extends com.pulumi.reso
      * 
      */
     @Import(name="onDemandSpecifications")
-      private final @Nullable Output<List<InstanceFleetLaunchSpecificationsOnDemandSpecificationArgs>> onDemandSpecifications;
+    private @Nullable Output<List<InstanceFleetLaunchSpecificationsOnDemandSpecificationArgs>> onDemandSpecifications;
 
-    public Output<List<InstanceFleetLaunchSpecificationsOnDemandSpecificationArgs>> onDemandSpecifications() {
-        return this.onDemandSpecifications == null ? Codegen.empty() : this.onDemandSpecifications;
+    public Optional<Output<List<InstanceFleetLaunchSpecificationsOnDemandSpecificationArgs>>> onDemandSpecifications() {
+        return Optional.ofNullable(this.onDemandSpecifications);
     }
 
     /**
@@ -33,69 +33,66 @@ public final class InstanceFleetLaunchSpecificationsArgs extends com.pulumi.reso
      * 
      */
     @Import(name="spotSpecifications")
-      private final @Nullable Output<List<InstanceFleetLaunchSpecificationsSpotSpecificationArgs>> spotSpecifications;
+    private @Nullable Output<List<InstanceFleetLaunchSpecificationsSpotSpecificationArgs>> spotSpecifications;
 
-    public Output<List<InstanceFleetLaunchSpecificationsSpotSpecificationArgs>> spotSpecifications() {
-        return this.spotSpecifications == null ? Codegen.empty() : this.spotSpecifications;
+    public Optional<Output<List<InstanceFleetLaunchSpecificationsSpotSpecificationArgs>>> spotSpecifications() {
+        return Optional.ofNullable(this.spotSpecifications);
     }
 
-    public InstanceFleetLaunchSpecificationsArgs(
-        @Nullable Output<List<InstanceFleetLaunchSpecificationsOnDemandSpecificationArgs>> onDemandSpecifications,
-        @Nullable Output<List<InstanceFleetLaunchSpecificationsSpotSpecificationArgs>> spotSpecifications) {
-        this.onDemandSpecifications = onDemandSpecifications;
-        this.spotSpecifications = spotSpecifications;
-    }
+    private InstanceFleetLaunchSpecificationsArgs() {}
 
-    private InstanceFleetLaunchSpecificationsArgs() {
-        this.onDemandSpecifications = Codegen.empty();
-        this.spotSpecifications = Codegen.empty();
+    private InstanceFleetLaunchSpecificationsArgs(InstanceFleetLaunchSpecificationsArgs $) {
+        this.onDemandSpecifications = $.onDemandSpecifications;
+        this.spotSpecifications = $.spotSpecifications;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceFleetLaunchSpecificationsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<InstanceFleetLaunchSpecificationsOnDemandSpecificationArgs>> onDemandSpecifications;
-        private @Nullable Output<List<InstanceFleetLaunchSpecificationsSpotSpecificationArgs>> spotSpecifications;
+        private InstanceFleetLaunchSpecificationsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceFleetLaunchSpecificationsArgs();
         }
 
         public Builder(InstanceFleetLaunchSpecificationsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.onDemandSpecifications = defaults.onDemandSpecifications;
-    	      this.spotSpecifications = defaults.spotSpecifications;
+            $ = new InstanceFleetLaunchSpecificationsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder onDemandSpecifications(@Nullable Output<List<InstanceFleetLaunchSpecificationsOnDemandSpecificationArgs>> onDemandSpecifications) {
-            this.onDemandSpecifications = onDemandSpecifications;
+            $.onDemandSpecifications = onDemandSpecifications;
             return this;
         }
-        public Builder onDemandSpecifications(@Nullable List<InstanceFleetLaunchSpecificationsOnDemandSpecificationArgs> onDemandSpecifications) {
-            this.onDemandSpecifications = Codegen.ofNullable(onDemandSpecifications);
-            return this;
+
+        public Builder onDemandSpecifications(List<InstanceFleetLaunchSpecificationsOnDemandSpecificationArgs> onDemandSpecifications) {
+            return onDemandSpecifications(Output.of(onDemandSpecifications));
         }
+
         public Builder onDemandSpecifications(InstanceFleetLaunchSpecificationsOnDemandSpecificationArgs... onDemandSpecifications) {
             return onDemandSpecifications(List.of(onDemandSpecifications));
         }
+
         public Builder spotSpecifications(@Nullable Output<List<InstanceFleetLaunchSpecificationsSpotSpecificationArgs>> spotSpecifications) {
-            this.spotSpecifications = spotSpecifications;
+            $.spotSpecifications = spotSpecifications;
             return this;
         }
-        public Builder spotSpecifications(@Nullable List<InstanceFleetLaunchSpecificationsSpotSpecificationArgs> spotSpecifications) {
-            this.spotSpecifications = Codegen.ofNullable(spotSpecifications);
-            return this;
+
+        public Builder spotSpecifications(List<InstanceFleetLaunchSpecificationsSpotSpecificationArgs> spotSpecifications) {
+            return spotSpecifications(Output.of(spotSpecifications));
         }
+
         public Builder spotSpecifications(InstanceFleetLaunchSpecificationsSpotSpecificationArgs... spotSpecifications) {
             return spotSpecifications(List.of(spotSpecifications));
-        }        public InstanceFleetLaunchSpecificationsArgs build() {
-            return new InstanceFleetLaunchSpecificationsArgs(onDemandSpecifications, spotSpecifications);
+        }
+
+        public InstanceFleetLaunchSpecificationsArgs build() {
+            return $;
         }
     }
+
 }

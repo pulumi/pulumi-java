@@ -5,11 +5,11 @@ package com.pulumi.googlenative.composer_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.composer_v1.inputs.SchedulerResourceArgs;
 import com.pulumi.googlenative.composer_v1.inputs.WebServerResourceArgs;
 import com.pulumi.googlenative.composer_v1.inputs.WorkerResourceArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class WorkloadsConfigArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="scheduler")
-      private final @Nullable Output<SchedulerResourceArgs> scheduler;
+    private @Nullable Output<SchedulerResourceArgs> scheduler;
 
-    public Output<SchedulerResourceArgs> scheduler() {
-        return this.scheduler == null ? Codegen.empty() : this.scheduler;
+    public Optional<Output<SchedulerResourceArgs>> scheduler() {
+        return Optional.ofNullable(this.scheduler);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class WorkloadsConfigArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="webServer")
-      private final @Nullable Output<WebServerResourceArgs> webServer;
+    private @Nullable Output<WebServerResourceArgs> webServer;
 
-    public Output<WebServerResourceArgs> webServer() {
-        return this.webServer == null ? Codegen.empty() : this.webServer;
+    public Optional<Output<WebServerResourceArgs>> webServer() {
+        return Optional.ofNullable(this.webServer);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class WorkloadsConfigArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="worker")
-      private final @Nullable Output<WorkerResourceArgs> worker;
+    private @Nullable Output<WorkerResourceArgs> worker;
 
-    public Output<WorkerResourceArgs> worker() {
-        return this.worker == null ? Codegen.empty() : this.worker;
+    public Optional<Output<WorkerResourceArgs>> worker() {
+        return Optional.ofNullable(this.worker);
     }
 
-    public WorkloadsConfigArgs(
-        @Nullable Output<SchedulerResourceArgs> scheduler,
-        @Nullable Output<WebServerResourceArgs> webServer,
-        @Nullable Output<WorkerResourceArgs> worker) {
-        this.scheduler = scheduler;
-        this.webServer = webServer;
-        this.worker = worker;
-    }
+    private WorkloadsConfigArgs() {}
 
-    private WorkloadsConfigArgs() {
-        this.scheduler = Codegen.empty();
-        this.webServer = Codegen.empty();
-        this.worker = Codegen.empty();
+    private WorkloadsConfigArgs(WorkloadsConfigArgs $) {
+        this.scheduler = $.scheduler;
+        this.webServer = $.webServer;
+        this.worker = $.worker;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkloadsConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<SchedulerResourceArgs> scheduler;
-        private @Nullable Output<WebServerResourceArgs> webServer;
-        private @Nullable Output<WorkerResourceArgs> worker;
+        private WorkloadsConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkloadsConfigArgs();
         }
 
         public Builder(WorkloadsConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.scheduler = defaults.scheduler;
-    	      this.webServer = defaults.webServer;
-    	      this.worker = defaults.worker;
+            $ = new WorkloadsConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder scheduler(@Nullable Output<SchedulerResourceArgs> scheduler) {
-            this.scheduler = scheduler;
+            $.scheduler = scheduler;
             return this;
         }
-        public Builder scheduler(@Nullable SchedulerResourceArgs scheduler) {
-            this.scheduler = Codegen.ofNullable(scheduler);
-            return this;
+
+        public Builder scheduler(SchedulerResourceArgs scheduler) {
+            return scheduler(Output.of(scheduler));
         }
+
         public Builder webServer(@Nullable Output<WebServerResourceArgs> webServer) {
-            this.webServer = webServer;
+            $.webServer = webServer;
             return this;
         }
-        public Builder webServer(@Nullable WebServerResourceArgs webServer) {
-            this.webServer = Codegen.ofNullable(webServer);
-            return this;
+
+        public Builder webServer(WebServerResourceArgs webServer) {
+            return webServer(Output.of(webServer));
         }
+
         public Builder worker(@Nullable Output<WorkerResourceArgs> worker) {
-            this.worker = worker;
+            $.worker = worker;
             return this;
         }
-        public Builder worker(@Nullable WorkerResourceArgs worker) {
-            this.worker = Codegen.ofNullable(worker);
-            return this;
-        }        public WorkloadsConfigArgs build() {
-            return new WorkloadsConfigArgs(scheduler, webServer, worker);
+
+        public Builder worker(WorkerResourceArgs worker) {
+            return worker(Output.of(worker));
+        }
+
+        public WorkloadsConfigArgs build() {
+            return $;
         }
     }
+
 }

@@ -21,45 +21,45 @@ public final class VideoMediaInfoResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="segmentLength", required=true)
-      private final String segmentLength;
+    private String segmentLength;
 
     public String segmentLength() {
         return this.segmentLength;
     }
 
-    public VideoMediaInfoResponse(String segmentLength) {
-        this.segmentLength = Objects.requireNonNull(segmentLength, "expected parameter 'segmentLength' to be non-null");
-    }
+    private VideoMediaInfoResponse() {}
 
-    private VideoMediaInfoResponse() {
-        this.segmentLength = null;
+    private VideoMediaInfoResponse(VideoMediaInfoResponse $) {
+        this.segmentLength = $.segmentLength;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VideoMediaInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String segmentLength;
+        private VideoMediaInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VideoMediaInfoResponse();
         }
 
         public Builder(VideoMediaInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.segmentLength = defaults.segmentLength;
+            $ = new VideoMediaInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder segmentLength(String segmentLength) {
-            this.segmentLength = Objects.requireNonNull(segmentLength);
+            $.segmentLength = segmentLength;
             return this;
-        }        public VideoMediaInfoResponse build() {
-            return new VideoMediaInfoResponse(segmentLength);
+        }
+
+        public VideoMediaInfoResponse build() {
+            $.segmentLength = Objects.requireNonNull($.segmentLength, "expected parameter 'segmentLength' to be non-null");
+            return $;
         }
     }
+
 }

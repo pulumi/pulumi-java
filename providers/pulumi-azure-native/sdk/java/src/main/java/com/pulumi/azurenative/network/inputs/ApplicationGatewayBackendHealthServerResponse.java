@@ -24,10 +24,10 @@ public final class ApplicationGatewayBackendHealthServerResponse extends com.pul
      * 
      */
     @Import(name="address")
-      private final @Nullable String address;
+    private @Nullable String address;
 
     public Optional<String> address() {
-        return this.address == null ? Optional.empty() : Optional.ofNullable(this.address);
+        return Optional.ofNullable(this.address);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ApplicationGatewayBackendHealthServerResponse extends com.pul
      * 
      */
     @Import(name="health")
-      private final @Nullable String health;
+    private @Nullable String health;
 
     public Optional<String> health() {
-        return this.health == null ? Optional.empty() : Optional.ofNullable(this.health);
+        return Optional.ofNullable(this.health);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ApplicationGatewayBackendHealthServerResponse extends com.pul
      * 
      */
     @Import(name="healthProbeLog")
-      private final @Nullable String healthProbeLog;
+    private @Nullable String healthProbeLog;
 
     public Optional<String> healthProbeLog() {
-        return this.healthProbeLog == null ? Optional.empty() : Optional.ofNullable(this.healthProbeLog);
+        return Optional.ofNullable(this.healthProbeLog);
     }
 
     /**
@@ -57,73 +57,62 @@ public final class ApplicationGatewayBackendHealthServerResponse extends com.pul
      * 
      */
     @Import(name="ipConfiguration")
-      private final @Nullable NetworkInterfaceIPConfigurationResponse ipConfiguration;
+    private @Nullable NetworkInterfaceIPConfigurationResponse ipConfiguration;
 
     public Optional<NetworkInterfaceIPConfigurationResponse> ipConfiguration() {
-        return this.ipConfiguration == null ? Optional.empty() : Optional.ofNullable(this.ipConfiguration);
+        return Optional.ofNullable(this.ipConfiguration);
     }
 
-    public ApplicationGatewayBackendHealthServerResponse(
-        @Nullable String address,
-        @Nullable String health,
-        @Nullable String healthProbeLog,
-        @Nullable NetworkInterfaceIPConfigurationResponse ipConfiguration) {
-        this.address = address;
-        this.health = health;
-        this.healthProbeLog = healthProbeLog;
-        this.ipConfiguration = ipConfiguration;
-    }
+    private ApplicationGatewayBackendHealthServerResponse() {}
 
-    private ApplicationGatewayBackendHealthServerResponse() {
-        this.address = null;
-        this.health = null;
-        this.healthProbeLog = null;
-        this.ipConfiguration = null;
+    private ApplicationGatewayBackendHealthServerResponse(ApplicationGatewayBackendHealthServerResponse $) {
+        this.address = $.address;
+        this.health = $.health;
+        this.healthProbeLog = $.healthProbeLog;
+        this.ipConfiguration = $.ipConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationGatewayBackendHealthServerResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String address;
-        private @Nullable String health;
-        private @Nullable String healthProbeLog;
-        private @Nullable NetworkInterfaceIPConfigurationResponse ipConfiguration;
+        private ApplicationGatewayBackendHealthServerResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationGatewayBackendHealthServerResponse();
         }
 
         public Builder(ApplicationGatewayBackendHealthServerResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.address = defaults.address;
-    	      this.health = defaults.health;
-    	      this.healthProbeLog = defaults.healthProbeLog;
-    	      this.ipConfiguration = defaults.ipConfiguration;
+            $ = new ApplicationGatewayBackendHealthServerResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder address(@Nullable String address) {
-            this.address = address;
+            $.address = address;
             return this;
         }
+
         public Builder health(@Nullable String health) {
-            this.health = health;
+            $.health = health;
             return this;
         }
+
         public Builder healthProbeLog(@Nullable String healthProbeLog) {
-            this.healthProbeLog = healthProbeLog;
+            $.healthProbeLog = healthProbeLog;
             return this;
         }
+
         public Builder ipConfiguration(@Nullable NetworkInterfaceIPConfigurationResponse ipConfiguration) {
-            this.ipConfiguration = ipConfiguration;
+            $.ipConfiguration = ipConfiguration;
             return this;
-        }        public ApplicationGatewayBackendHealthServerResponse build() {
-            return new ApplicationGatewayBackendHealthServerResponse(address, health, healthProbeLog, ipConfiguration);
+        }
+
+        public ApplicationGatewayBackendHealthServerResponse build() {
+            return $;
         }
     }
+
 }

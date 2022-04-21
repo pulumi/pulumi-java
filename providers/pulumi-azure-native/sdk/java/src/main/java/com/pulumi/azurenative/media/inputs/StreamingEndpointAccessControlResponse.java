@@ -24,10 +24,10 @@ public final class StreamingEndpointAccessControlResponse extends com.pulumi.res
      * 
      */
     @Import(name="akamai")
-      private final @Nullable AkamaiAccessControlResponse akamai;
+    private @Nullable AkamaiAccessControlResponse akamai;
 
     public Optional<AkamaiAccessControlResponse> akamai() {
-        return this.akamai == null ? Optional.empty() : Optional.ofNullable(this.akamai);
+        return Optional.ofNullable(this.akamai);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class StreamingEndpointAccessControlResponse extends com.pulumi.res
      * 
      */
     @Import(name="ip")
-      private final @Nullable IPAccessControlResponse ip;
+    private @Nullable IPAccessControlResponse ip;
 
     public Optional<IPAccessControlResponse> ip() {
-        return this.ip == null ? Optional.empty() : Optional.ofNullable(this.ip);
+        return Optional.ofNullable(this.ip);
     }
 
-    public StreamingEndpointAccessControlResponse(
-        @Nullable AkamaiAccessControlResponse akamai,
-        @Nullable IPAccessControlResponse ip) {
-        this.akamai = akamai;
-        this.ip = ip;
-    }
+    private StreamingEndpointAccessControlResponse() {}
 
-    private StreamingEndpointAccessControlResponse() {
-        this.akamai = null;
-        this.ip = null;
+    private StreamingEndpointAccessControlResponse(StreamingEndpointAccessControlResponse $) {
+        this.akamai = $.akamai;
+        this.ip = $.ip;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StreamingEndpointAccessControlResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable AkamaiAccessControlResponse akamai;
-        private @Nullable IPAccessControlResponse ip;
+        private StreamingEndpointAccessControlResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StreamingEndpointAccessControlResponse();
         }
 
         public Builder(StreamingEndpointAccessControlResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.akamai = defaults.akamai;
-    	      this.ip = defaults.ip;
+            $ = new StreamingEndpointAccessControlResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder akamai(@Nullable AkamaiAccessControlResponse akamai) {
-            this.akamai = akamai;
+            $.akamai = akamai;
             return this;
         }
+
         public Builder ip(@Nullable IPAccessControlResponse ip) {
-            this.ip = ip;
+            $.ip = ip;
             return this;
-        }        public StreamingEndpointAccessControlResponse build() {
-            return new StreamingEndpointAccessControlResponse(akamai, ip);
+        }
+
+        public StreamingEndpointAccessControlResponse build() {
+            return $;
         }
     }
+
 }

@@ -24,45 +24,45 @@ public final class QuarantinePolicyResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="status")
-      private final @Nullable String status;
+    private @Nullable String status;
 
     public Optional<String> status() {
-        return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
+        return Optional.ofNullable(this.status);
     }
 
-    public QuarantinePolicyResponse(@Nullable String status) {
-        this.status = Codegen.stringProp("status").arg(status).def("disabled").getNullable();
-    }
+    private QuarantinePolicyResponse() {}
 
-    private QuarantinePolicyResponse() {
-        this.status = null;
+    private QuarantinePolicyResponse(QuarantinePolicyResponse $) {
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(QuarantinePolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String status;
+        private QuarantinePolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new QuarantinePolicyResponse();
         }
 
         public Builder(QuarantinePolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.status = defaults.status;
+            $ = new QuarantinePolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder status(@Nullable String status) {
-            this.status = status;
+            $.status = status;
             return this;
-        }        public QuarantinePolicyResponse build() {
-            return new QuarantinePolicyResponse(status);
+        }
+
+        public QuarantinePolicyResponse build() {
+            $.status = Codegen.stringProp("status").arg($.status).def("disabled").getNullable();
+            return $;
         }
     }
+
 }

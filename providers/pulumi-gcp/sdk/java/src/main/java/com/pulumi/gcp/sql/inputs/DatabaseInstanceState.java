@@ -5,7 +5,6 @@ package com.pulumi.gcp.sql.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.sql.inputs.DatabaseInstanceCloneGetArgs;
 import com.pulumi.gcp.sql.inputs.DatabaseInstanceIpAddressGetArgs;
 import com.pulumi.gcp.sql.inputs.DatabaseInstanceReplicaConfigurationGetArgs;
@@ -16,6 +15,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,10 +30,10 @@ public final class DatabaseInstanceState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="clone")
-      private final @Nullable Output<DatabaseInstanceCloneGetArgs> clone;
+    private @Nullable Output<DatabaseInstanceCloneGetArgs> clone;
 
-    public Output<DatabaseInstanceCloneGetArgs> clone_() {
-        return this.clone == null ? Codegen.empty() : this.clone;
+    public Optional<Output<DatabaseInstanceCloneGetArgs>> clone_() {
+        return Optional.ofNullable(this.clone);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class DatabaseInstanceState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="connectionName")
-      private final @Nullable Output<String> connectionName;
+    private @Nullable Output<String> connectionName;
 
-    public Output<String> connectionName() {
-        return this.connectionName == null ? Codegen.empty() : this.connectionName;
+    public Optional<Output<String>> connectionName() {
+        return Optional.ofNullable(this.connectionName);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class DatabaseInstanceState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="databaseVersion")
-      private final @Nullable Output<String> databaseVersion;
+    private @Nullable Output<String> databaseVersion;
 
-    public Output<String> databaseVersion() {
-        return this.databaseVersion == null ? Codegen.empty() : this.databaseVersion;
+    public Optional<Output<String>> databaseVersion() {
+        return Optional.ofNullable(this.databaseVersion);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class DatabaseInstanceState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="deletionProtection")
-      private final @Nullable Output<Boolean> deletionProtection;
+    private @Nullable Output<Boolean> deletionProtection;
 
-    public Output<Boolean> deletionProtection() {
-        return this.deletionProtection == null ? Codegen.empty() : this.deletionProtection;
+    public Optional<Output<Boolean>> deletionProtection() {
+        return Optional.ofNullable(this.deletionProtection);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class DatabaseInstanceState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="encryptionKeyName")
-      private final @Nullable Output<String> encryptionKeyName;
+    private @Nullable Output<String> encryptionKeyName;
 
-    public Output<String> encryptionKeyName() {
-        return this.encryptionKeyName == null ? Codegen.empty() : this.encryptionKeyName;
+    public Optional<Output<String>> encryptionKeyName() {
+        return Optional.ofNullable(this.encryptionKeyName);
     }
 
     /**
@@ -102,17 +102,17 @@ public final class DatabaseInstanceState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="firstIpAddress")
-      private final @Nullable Output<String> firstIpAddress;
+    private @Nullable Output<String> firstIpAddress;
 
-    public Output<String> firstIpAddress() {
-        return this.firstIpAddress == null ? Codegen.empty() : this.firstIpAddress;
+    public Optional<Output<String>> firstIpAddress() {
+        return Optional.ofNullable(this.firstIpAddress);
     }
 
     @Import(name="ipAddresses")
-      private final @Nullable Output<List<DatabaseInstanceIpAddressGetArgs>> ipAddresses;
+    private @Nullable Output<List<DatabaseInstanceIpAddressGetArgs>> ipAddresses;
 
-    public Output<List<DatabaseInstanceIpAddressGetArgs>> ipAddresses() {
-        return this.ipAddresses == null ? Codegen.empty() : this.ipAddresses;
+    public Optional<Output<List<DatabaseInstanceIpAddressGetArgs>>> ipAddresses() {
+        return Optional.ofNullable(this.ipAddresses);
     }
 
     /**
@@ -122,10 +122,10 @@ public final class DatabaseInstanceState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="masterInstanceName")
-      private final @Nullable Output<String> masterInstanceName;
+    private @Nullable Output<String> masterInstanceName;
 
-    public Output<String> masterInstanceName() {
-        return this.masterInstanceName == null ? Codegen.empty() : this.masterInstanceName;
+    public Optional<Output<String>> masterInstanceName() {
+        return Optional.ofNullable(this.masterInstanceName);
     }
 
     /**
@@ -133,10 +133,10 @@ public final class DatabaseInstanceState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -144,10 +144,10 @@ public final class DatabaseInstanceState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="privateIpAddress")
-      private final @Nullable Output<String> privateIpAddress;
+    private @Nullable Output<String> privateIpAddress;
 
-    public Output<String> privateIpAddress() {
-        return this.privateIpAddress == null ? Codegen.empty() : this.privateIpAddress;
+    public Optional<Output<String>> privateIpAddress() {
+        return Optional.ofNullable(this.privateIpAddress);
     }
 
     /**
@@ -155,10 +155,10 @@ public final class DatabaseInstanceState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -166,10 +166,10 @@ public final class DatabaseInstanceState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="publicIpAddress")
-      private final @Nullable Output<String> publicIpAddress;
+    private @Nullable Output<String> publicIpAddress;
 
-    public Output<String> publicIpAddress() {
-        return this.publicIpAddress == null ? Codegen.empty() : this.publicIpAddress;
+    public Optional<Output<String>> publicIpAddress() {
+        return Optional.ofNullable(this.publicIpAddress);
     }
 
     /**
@@ -182,10 +182,10 @@ public final class DatabaseInstanceState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
     /**
@@ -194,10 +194,10 @@ public final class DatabaseInstanceState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="replicaConfiguration")
-      private final @Nullable Output<DatabaseInstanceReplicaConfigurationGetArgs> replicaConfiguration;
+    private @Nullable Output<DatabaseInstanceReplicaConfigurationGetArgs> replicaConfiguration;
 
-    public Output<DatabaseInstanceReplicaConfigurationGetArgs> replicaConfiguration() {
-        return this.replicaConfiguration == null ? Codegen.empty() : this.replicaConfiguration;
+    public Optional<Output<DatabaseInstanceReplicaConfigurationGetArgs>> replicaConfiguration() {
+        return Optional.ofNullable(this.replicaConfiguration);
     }
 
     /**
@@ -208,10 +208,10 @@ public final class DatabaseInstanceState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="restoreBackupContext")
-      private final @Nullable Output<DatabaseInstanceRestoreBackupContextGetArgs> restoreBackupContext;
+    private @Nullable Output<DatabaseInstanceRestoreBackupContextGetArgs> restoreBackupContext;
 
-    public Output<DatabaseInstanceRestoreBackupContextGetArgs> restoreBackupContext() {
-        return this.restoreBackupContext == null ? Codegen.empty() : this.restoreBackupContext;
+    public Optional<Output<DatabaseInstanceRestoreBackupContextGetArgs>> restoreBackupContext() {
+        return Optional.ofNullable(this.restoreBackupContext);
     }
 
     /**
@@ -219,10 +219,10 @@ public final class DatabaseInstanceState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="rootPassword")
-      private final @Nullable Output<String> rootPassword;
+    private @Nullable Output<String> rootPassword;
 
-    public Output<String> rootPassword() {
-        return this.rootPassword == null ? Codegen.empty() : this.rootPassword;
+    public Optional<Output<String>> rootPassword() {
+        return Optional.ofNullable(this.rootPassword);
     }
 
     /**
@@ -230,17 +230,17 @@ public final class DatabaseInstanceState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="selfLink")
-      private final @Nullable Output<String> selfLink;
+    private @Nullable Output<String> selfLink;
 
-    public Output<String> selfLink() {
-        return this.selfLink == null ? Codegen.empty() : this.selfLink;
+    public Optional<Output<String>> selfLink() {
+        return Optional.ofNullable(this.selfLink);
     }
 
     @Import(name="serverCaCerts")
-      private final @Nullable Output<List<DatabaseInstanceServerCaCertGetArgs>> serverCaCerts;
+    private @Nullable Output<List<DatabaseInstanceServerCaCertGetArgs>> serverCaCerts;
 
-    public Output<List<DatabaseInstanceServerCaCertGetArgs>> serverCaCerts() {
-        return this.serverCaCerts == null ? Codegen.empty() : this.serverCaCerts;
+    public Optional<Output<List<DatabaseInstanceServerCaCertGetArgs>>> serverCaCerts() {
+        return Optional.ofNullable(this.serverCaCerts);
     }
 
     /**
@@ -249,10 +249,10 @@ public final class DatabaseInstanceState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="serviceAccountEmailAddress")
-      private final @Nullable Output<String> serviceAccountEmailAddress;
+    private @Nullable Output<String> serviceAccountEmailAddress;
 
-    public Output<String> serviceAccountEmailAddress() {
-        return this.serviceAccountEmailAddress == null ? Codegen.empty() : this.serviceAccountEmailAddress;
+    public Optional<Output<String>> serviceAccountEmailAddress() {
+        return Optional.ofNullable(this.serviceAccountEmailAddress);
     }
 
     /**
@@ -261,303 +261,246 @@ public final class DatabaseInstanceState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="settings")
-      private final @Nullable Output<DatabaseInstanceSettingsGetArgs> settings;
+    private @Nullable Output<DatabaseInstanceSettingsGetArgs> settings;
 
-    public Output<DatabaseInstanceSettingsGetArgs> settings() {
-        return this.settings == null ? Codegen.empty() : this.settings;
+    public Optional<Output<DatabaseInstanceSettingsGetArgs>> settings() {
+        return Optional.ofNullable(this.settings);
     }
 
-    public DatabaseInstanceState(
-        @Nullable Output<DatabaseInstanceCloneGetArgs> clone,
-        @Nullable Output<String> connectionName,
-        @Nullable Output<String> databaseVersion,
-        @Nullable Output<Boolean> deletionProtection,
-        @Nullable Output<String> encryptionKeyName,
-        @Nullable Output<String> firstIpAddress,
-        @Nullable Output<List<DatabaseInstanceIpAddressGetArgs>> ipAddresses,
-        @Nullable Output<String> masterInstanceName,
-        @Nullable Output<String> name,
-        @Nullable Output<String> privateIpAddress,
-        @Nullable Output<String> project,
-        @Nullable Output<String> publicIpAddress,
-        @Nullable Output<String> region,
-        @Nullable Output<DatabaseInstanceReplicaConfigurationGetArgs> replicaConfiguration,
-        @Nullable Output<DatabaseInstanceRestoreBackupContextGetArgs> restoreBackupContext,
-        @Nullable Output<String> rootPassword,
-        @Nullable Output<String> selfLink,
-        @Nullable Output<List<DatabaseInstanceServerCaCertGetArgs>> serverCaCerts,
-        @Nullable Output<String> serviceAccountEmailAddress,
-        @Nullable Output<DatabaseInstanceSettingsGetArgs> settings) {
-        this.clone = clone;
-        this.connectionName = connectionName;
-        this.databaseVersion = databaseVersion;
-        this.deletionProtection = deletionProtection;
-        this.encryptionKeyName = encryptionKeyName;
-        this.firstIpAddress = firstIpAddress;
-        this.ipAddresses = ipAddresses;
-        this.masterInstanceName = masterInstanceName;
-        this.name = name;
-        this.privateIpAddress = privateIpAddress;
-        this.project = project;
-        this.publicIpAddress = publicIpAddress;
-        this.region = region;
-        this.replicaConfiguration = replicaConfiguration;
-        this.restoreBackupContext = restoreBackupContext;
-        this.rootPassword = rootPassword;
-        this.selfLink = selfLink;
-        this.serverCaCerts = serverCaCerts;
-        this.serviceAccountEmailAddress = serviceAccountEmailAddress;
-        this.settings = settings;
-    }
+    private DatabaseInstanceState() {}
 
-    private DatabaseInstanceState() {
-        this.clone = Codegen.empty();
-        this.connectionName = Codegen.empty();
-        this.databaseVersion = Codegen.empty();
-        this.deletionProtection = Codegen.empty();
-        this.encryptionKeyName = Codegen.empty();
-        this.firstIpAddress = Codegen.empty();
-        this.ipAddresses = Codegen.empty();
-        this.masterInstanceName = Codegen.empty();
-        this.name = Codegen.empty();
-        this.privateIpAddress = Codegen.empty();
-        this.project = Codegen.empty();
-        this.publicIpAddress = Codegen.empty();
-        this.region = Codegen.empty();
-        this.replicaConfiguration = Codegen.empty();
-        this.restoreBackupContext = Codegen.empty();
-        this.rootPassword = Codegen.empty();
-        this.selfLink = Codegen.empty();
-        this.serverCaCerts = Codegen.empty();
-        this.serviceAccountEmailAddress = Codegen.empty();
-        this.settings = Codegen.empty();
+    private DatabaseInstanceState(DatabaseInstanceState $) {
+        this.clone = $.clone;
+        this.connectionName = $.connectionName;
+        this.databaseVersion = $.databaseVersion;
+        this.deletionProtection = $.deletionProtection;
+        this.encryptionKeyName = $.encryptionKeyName;
+        this.firstIpAddress = $.firstIpAddress;
+        this.ipAddresses = $.ipAddresses;
+        this.masterInstanceName = $.masterInstanceName;
+        this.name = $.name;
+        this.privateIpAddress = $.privateIpAddress;
+        this.project = $.project;
+        this.publicIpAddress = $.publicIpAddress;
+        this.region = $.region;
+        this.replicaConfiguration = $.replicaConfiguration;
+        this.restoreBackupContext = $.restoreBackupContext;
+        this.rootPassword = $.rootPassword;
+        this.selfLink = $.selfLink;
+        this.serverCaCerts = $.serverCaCerts;
+        this.serviceAccountEmailAddress = $.serviceAccountEmailAddress;
+        this.settings = $.settings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatabaseInstanceState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DatabaseInstanceCloneGetArgs> clone;
-        private @Nullable Output<String> connectionName;
-        private @Nullable Output<String> databaseVersion;
-        private @Nullable Output<Boolean> deletionProtection;
-        private @Nullable Output<String> encryptionKeyName;
-        private @Nullable Output<String> firstIpAddress;
-        private @Nullable Output<List<DatabaseInstanceIpAddressGetArgs>> ipAddresses;
-        private @Nullable Output<String> masterInstanceName;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> privateIpAddress;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> publicIpAddress;
-        private @Nullable Output<String> region;
-        private @Nullable Output<DatabaseInstanceReplicaConfigurationGetArgs> replicaConfiguration;
-        private @Nullable Output<DatabaseInstanceRestoreBackupContextGetArgs> restoreBackupContext;
-        private @Nullable Output<String> rootPassword;
-        private @Nullable Output<String> selfLink;
-        private @Nullable Output<List<DatabaseInstanceServerCaCertGetArgs>> serverCaCerts;
-        private @Nullable Output<String> serviceAccountEmailAddress;
-        private @Nullable Output<DatabaseInstanceSettingsGetArgs> settings;
+        private DatabaseInstanceState $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatabaseInstanceState();
         }
 
         public Builder(DatabaseInstanceState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clone = defaults.clone;
-    	      this.connectionName = defaults.connectionName;
-    	      this.databaseVersion = defaults.databaseVersion;
-    	      this.deletionProtection = defaults.deletionProtection;
-    	      this.encryptionKeyName = defaults.encryptionKeyName;
-    	      this.firstIpAddress = defaults.firstIpAddress;
-    	      this.ipAddresses = defaults.ipAddresses;
-    	      this.masterInstanceName = defaults.masterInstanceName;
-    	      this.name = defaults.name;
-    	      this.privateIpAddress = defaults.privateIpAddress;
-    	      this.project = defaults.project;
-    	      this.publicIpAddress = defaults.publicIpAddress;
-    	      this.region = defaults.region;
-    	      this.replicaConfiguration = defaults.replicaConfiguration;
-    	      this.restoreBackupContext = defaults.restoreBackupContext;
-    	      this.rootPassword = defaults.rootPassword;
-    	      this.selfLink = defaults.selfLink;
-    	      this.serverCaCerts = defaults.serverCaCerts;
-    	      this.serviceAccountEmailAddress = defaults.serviceAccountEmailAddress;
-    	      this.settings = defaults.settings;
+            $ = new DatabaseInstanceState(Objects.requireNonNull(defaults));
         }
 
         public Builder clone_(@Nullable Output<DatabaseInstanceCloneGetArgs> clone) {
-            this.clone = clone;
+            $.clone = clone;
             return this;
         }
-        public Builder clone_(@Nullable DatabaseInstanceCloneGetArgs clone) {
-            this.clone = Codegen.ofNullable(clone);
-            return this;
+
+        public Builder clone_(DatabaseInstanceCloneGetArgs clone) {
+            return clone_(Output.of(clone));
         }
+
         public Builder connectionName(@Nullable Output<String> connectionName) {
-            this.connectionName = connectionName;
+            $.connectionName = connectionName;
             return this;
         }
-        public Builder connectionName(@Nullable String connectionName) {
-            this.connectionName = Codegen.ofNullable(connectionName);
-            return this;
+
+        public Builder connectionName(String connectionName) {
+            return connectionName(Output.of(connectionName));
         }
+
         public Builder databaseVersion(@Nullable Output<String> databaseVersion) {
-            this.databaseVersion = databaseVersion;
+            $.databaseVersion = databaseVersion;
             return this;
         }
-        public Builder databaseVersion(@Nullable String databaseVersion) {
-            this.databaseVersion = Codegen.ofNullable(databaseVersion);
-            return this;
+
+        public Builder databaseVersion(String databaseVersion) {
+            return databaseVersion(Output.of(databaseVersion));
         }
+
         public Builder deletionProtection(@Nullable Output<Boolean> deletionProtection) {
-            this.deletionProtection = deletionProtection;
+            $.deletionProtection = deletionProtection;
             return this;
         }
-        public Builder deletionProtection(@Nullable Boolean deletionProtection) {
-            this.deletionProtection = Codegen.ofNullable(deletionProtection);
-            return this;
+
+        public Builder deletionProtection(Boolean deletionProtection) {
+            return deletionProtection(Output.of(deletionProtection));
         }
+
         public Builder encryptionKeyName(@Nullable Output<String> encryptionKeyName) {
-            this.encryptionKeyName = encryptionKeyName;
+            $.encryptionKeyName = encryptionKeyName;
             return this;
         }
-        public Builder encryptionKeyName(@Nullable String encryptionKeyName) {
-            this.encryptionKeyName = Codegen.ofNullable(encryptionKeyName);
-            return this;
+
+        public Builder encryptionKeyName(String encryptionKeyName) {
+            return encryptionKeyName(Output.of(encryptionKeyName));
         }
+
         public Builder firstIpAddress(@Nullable Output<String> firstIpAddress) {
-            this.firstIpAddress = firstIpAddress;
+            $.firstIpAddress = firstIpAddress;
             return this;
         }
-        public Builder firstIpAddress(@Nullable String firstIpAddress) {
-            this.firstIpAddress = Codegen.ofNullable(firstIpAddress);
-            return this;
+
+        public Builder firstIpAddress(String firstIpAddress) {
+            return firstIpAddress(Output.of(firstIpAddress));
         }
+
         public Builder ipAddresses(@Nullable Output<List<DatabaseInstanceIpAddressGetArgs>> ipAddresses) {
-            this.ipAddresses = ipAddresses;
+            $.ipAddresses = ipAddresses;
             return this;
         }
-        public Builder ipAddresses(@Nullable List<DatabaseInstanceIpAddressGetArgs> ipAddresses) {
-            this.ipAddresses = Codegen.ofNullable(ipAddresses);
-            return this;
+
+        public Builder ipAddresses(List<DatabaseInstanceIpAddressGetArgs> ipAddresses) {
+            return ipAddresses(Output.of(ipAddresses));
         }
+
         public Builder ipAddresses(DatabaseInstanceIpAddressGetArgs... ipAddresses) {
             return ipAddresses(List.of(ipAddresses));
         }
+
         public Builder masterInstanceName(@Nullable Output<String> masterInstanceName) {
-            this.masterInstanceName = masterInstanceName;
+            $.masterInstanceName = masterInstanceName;
             return this;
         }
-        public Builder masterInstanceName(@Nullable String masterInstanceName) {
-            this.masterInstanceName = Codegen.ofNullable(masterInstanceName);
-            return this;
+
+        public Builder masterInstanceName(String masterInstanceName) {
+            return masterInstanceName(Output.of(masterInstanceName));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder privateIpAddress(@Nullable Output<String> privateIpAddress) {
-            this.privateIpAddress = privateIpAddress;
+            $.privateIpAddress = privateIpAddress;
             return this;
         }
-        public Builder privateIpAddress(@Nullable String privateIpAddress) {
-            this.privateIpAddress = Codegen.ofNullable(privateIpAddress);
-            return this;
+
+        public Builder privateIpAddress(String privateIpAddress) {
+            return privateIpAddress(Output.of(privateIpAddress));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder publicIpAddress(@Nullable Output<String> publicIpAddress) {
-            this.publicIpAddress = publicIpAddress;
+            $.publicIpAddress = publicIpAddress;
             return this;
         }
-        public Builder publicIpAddress(@Nullable String publicIpAddress) {
-            this.publicIpAddress = Codegen.ofNullable(publicIpAddress);
-            return this;
+
+        public Builder publicIpAddress(String publicIpAddress) {
+            return publicIpAddress(Output.of(publicIpAddress));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
+
+        public Builder region(String region) {
+            return region(Output.of(region));
         }
+
         public Builder replicaConfiguration(@Nullable Output<DatabaseInstanceReplicaConfigurationGetArgs> replicaConfiguration) {
-            this.replicaConfiguration = replicaConfiguration;
+            $.replicaConfiguration = replicaConfiguration;
             return this;
         }
-        public Builder replicaConfiguration(@Nullable DatabaseInstanceReplicaConfigurationGetArgs replicaConfiguration) {
-            this.replicaConfiguration = Codegen.ofNullable(replicaConfiguration);
-            return this;
+
+        public Builder replicaConfiguration(DatabaseInstanceReplicaConfigurationGetArgs replicaConfiguration) {
+            return replicaConfiguration(Output.of(replicaConfiguration));
         }
+
         public Builder restoreBackupContext(@Nullable Output<DatabaseInstanceRestoreBackupContextGetArgs> restoreBackupContext) {
-            this.restoreBackupContext = restoreBackupContext;
+            $.restoreBackupContext = restoreBackupContext;
             return this;
         }
-        public Builder restoreBackupContext(@Nullable DatabaseInstanceRestoreBackupContextGetArgs restoreBackupContext) {
-            this.restoreBackupContext = Codegen.ofNullable(restoreBackupContext);
-            return this;
+
+        public Builder restoreBackupContext(DatabaseInstanceRestoreBackupContextGetArgs restoreBackupContext) {
+            return restoreBackupContext(Output.of(restoreBackupContext));
         }
+
         public Builder rootPassword(@Nullable Output<String> rootPassword) {
-            this.rootPassword = rootPassword;
+            $.rootPassword = rootPassword;
             return this;
         }
-        public Builder rootPassword(@Nullable String rootPassword) {
-            this.rootPassword = Codegen.ofNullable(rootPassword);
-            return this;
+
+        public Builder rootPassword(String rootPassword) {
+            return rootPassword(Output.of(rootPassword));
         }
+
         public Builder selfLink(@Nullable Output<String> selfLink) {
-            this.selfLink = selfLink;
+            $.selfLink = selfLink;
             return this;
         }
-        public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Codegen.ofNullable(selfLink);
-            return this;
+
+        public Builder selfLink(String selfLink) {
+            return selfLink(Output.of(selfLink));
         }
+
         public Builder serverCaCerts(@Nullable Output<List<DatabaseInstanceServerCaCertGetArgs>> serverCaCerts) {
-            this.serverCaCerts = serverCaCerts;
+            $.serverCaCerts = serverCaCerts;
             return this;
         }
-        public Builder serverCaCerts(@Nullable List<DatabaseInstanceServerCaCertGetArgs> serverCaCerts) {
-            this.serverCaCerts = Codegen.ofNullable(serverCaCerts);
-            return this;
+
+        public Builder serverCaCerts(List<DatabaseInstanceServerCaCertGetArgs> serverCaCerts) {
+            return serverCaCerts(Output.of(serverCaCerts));
         }
+
         public Builder serverCaCerts(DatabaseInstanceServerCaCertGetArgs... serverCaCerts) {
             return serverCaCerts(List.of(serverCaCerts));
         }
+
         public Builder serviceAccountEmailAddress(@Nullable Output<String> serviceAccountEmailAddress) {
-            this.serviceAccountEmailAddress = serviceAccountEmailAddress;
+            $.serviceAccountEmailAddress = serviceAccountEmailAddress;
             return this;
         }
-        public Builder serviceAccountEmailAddress(@Nullable String serviceAccountEmailAddress) {
-            this.serviceAccountEmailAddress = Codegen.ofNullable(serviceAccountEmailAddress);
-            return this;
+
+        public Builder serviceAccountEmailAddress(String serviceAccountEmailAddress) {
+            return serviceAccountEmailAddress(Output.of(serviceAccountEmailAddress));
         }
+
         public Builder settings(@Nullable Output<DatabaseInstanceSettingsGetArgs> settings) {
-            this.settings = settings;
+            $.settings = settings;
             return this;
         }
-        public Builder settings(@Nullable DatabaseInstanceSettingsGetArgs settings) {
-            this.settings = Codegen.ofNullable(settings);
-            return this;
-        }        public DatabaseInstanceState build() {
-            return new DatabaseInstanceState(clone, connectionName, databaseVersion, deletionProtection, encryptionKeyName, firstIpAddress, ipAddresses, masterInstanceName, name, privateIpAddress, project, publicIpAddress, region, replicaConfiguration, restoreBackupContext, rootPassword, selfLink, serverCaCerts, serviceAccountEmailAddress, settings);
+
+        public Builder settings(DatabaseInstanceSettingsGetArgs settings) {
+            return settings(Output.of(settings));
+        }
+
+        public DatabaseInstanceState build() {
+            return $;
         }
     }
+
 }

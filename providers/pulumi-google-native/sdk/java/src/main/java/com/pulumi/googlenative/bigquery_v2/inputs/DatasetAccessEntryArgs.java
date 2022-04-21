@@ -5,11 +5,11 @@ package com.pulumi.googlenative.bigquery_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.bigquery_v2.enums.DatasetAccessEntryTargetTypesItem;
 import com.pulumi.googlenative.bigquery_v2.inputs.DatasetReferenceArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,73 +22,69 @@ public final class DatasetAccessEntryArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="dataset")
-      private final @Nullable Output<DatasetReferenceArgs> dataset;
+    private @Nullable Output<DatasetReferenceArgs> dataset;
 
-    public Output<DatasetReferenceArgs> dataset() {
-        return this.dataset == null ? Codegen.empty() : this.dataset;
+    public Optional<Output<DatasetReferenceArgs>> dataset() {
+        return Optional.ofNullable(this.dataset);
     }
 
     @Import(name="targetTypes")
-      private final @Nullable Output<List<DatasetAccessEntryTargetTypesItem>> targetTypes;
+    private @Nullable Output<List<DatasetAccessEntryTargetTypesItem>> targetTypes;
 
-    public Output<List<DatasetAccessEntryTargetTypesItem>> targetTypes() {
-        return this.targetTypes == null ? Codegen.empty() : this.targetTypes;
+    public Optional<Output<List<DatasetAccessEntryTargetTypesItem>>> targetTypes() {
+        return Optional.ofNullable(this.targetTypes);
     }
 
-    public DatasetAccessEntryArgs(
-        @Nullable Output<DatasetReferenceArgs> dataset,
-        @Nullable Output<List<DatasetAccessEntryTargetTypesItem>> targetTypes) {
-        this.dataset = dataset;
-        this.targetTypes = targetTypes;
-    }
+    private DatasetAccessEntryArgs() {}
 
-    private DatasetAccessEntryArgs() {
-        this.dataset = Codegen.empty();
-        this.targetTypes = Codegen.empty();
+    private DatasetAccessEntryArgs(DatasetAccessEntryArgs $) {
+        this.dataset = $.dataset;
+        this.targetTypes = $.targetTypes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetAccessEntryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DatasetReferenceArgs> dataset;
-        private @Nullable Output<List<DatasetAccessEntryTargetTypesItem>> targetTypes;
+        private DatasetAccessEntryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetAccessEntryArgs();
         }
 
         public Builder(DatasetAccessEntryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataset = defaults.dataset;
-    	      this.targetTypes = defaults.targetTypes;
+            $ = new DatasetAccessEntryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataset(@Nullable Output<DatasetReferenceArgs> dataset) {
-            this.dataset = dataset;
+            $.dataset = dataset;
             return this;
         }
-        public Builder dataset(@Nullable DatasetReferenceArgs dataset) {
-            this.dataset = Codegen.ofNullable(dataset);
-            return this;
+
+        public Builder dataset(DatasetReferenceArgs dataset) {
+            return dataset(Output.of(dataset));
         }
+
         public Builder targetTypes(@Nullable Output<List<DatasetAccessEntryTargetTypesItem>> targetTypes) {
-            this.targetTypes = targetTypes;
+            $.targetTypes = targetTypes;
             return this;
         }
-        public Builder targetTypes(@Nullable List<DatasetAccessEntryTargetTypesItem> targetTypes) {
-            this.targetTypes = Codegen.ofNullable(targetTypes);
-            return this;
+
+        public Builder targetTypes(List<DatasetAccessEntryTargetTypesItem> targetTypes) {
+            return targetTypes(Output.of(targetTypes));
         }
+
         public Builder targetTypes(DatasetAccessEntryTargetTypesItem... targetTypes) {
             return targetTypes(List.of(targetTypes));
-        }        public DatasetAccessEntryArgs build() {
-            return new DatasetAccessEntryArgs(dataset, targetTypes);
+        }
+
+        public DatasetAccessEntryArgs build() {
+            return $;
         }
     }
+
 }

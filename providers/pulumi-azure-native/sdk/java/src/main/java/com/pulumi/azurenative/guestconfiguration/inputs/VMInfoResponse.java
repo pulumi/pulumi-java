@@ -21,7 +21,7 @@ public final class VMInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -32,55 +32,52 @@ public final class VMInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="uuid", required=true)
-      private final String uuid;
+    private String uuid;
 
     public String uuid() {
         return this.uuid;
     }
 
-    public VMInfoResponse(
-        String id,
-        String uuid) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.uuid = Objects.requireNonNull(uuid, "expected parameter 'uuid' to be non-null");
-    }
+    private VMInfoResponse() {}
 
-    private VMInfoResponse() {
-        this.id = null;
-        this.uuid = null;
+    private VMInfoResponse(VMInfoResponse $) {
+        this.id = $.id;
+        this.uuid = $.uuid;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VMInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
-        private String uuid;
+        private VMInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VMInfoResponse();
         }
 
         public Builder(VMInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.uuid = defaults.uuid;
+            $ = new VMInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder uuid(String uuid) {
-            this.uuid = Objects.requireNonNull(uuid);
+            $.uuid = uuid;
             return this;
-        }        public VMInfoResponse build() {
-            return new VMInfoResponse(id, uuid);
+        }
+
+        public VMInfoResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.uuid = Objects.requireNonNull($.uuid, "expected parameter 'uuid' to be non-null");
+            return $;
         }
     }
+
 }

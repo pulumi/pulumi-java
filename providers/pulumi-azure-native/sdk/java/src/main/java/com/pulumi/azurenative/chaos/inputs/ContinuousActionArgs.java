@@ -25,7 +25,7 @@ public final class ContinuousActionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="duration", required=true)
-      private final Output<String> duration;
+    private Output<String> duration;
 
     public Output<String> duration() {
         return this.duration;
@@ -36,7 +36,7 @@ public final class ContinuousActionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -47,7 +47,7 @@ public final class ContinuousActionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="parameters", required=true)
-      private final Output<List<KeyValuePairArgs>> parameters;
+    private Output<List<KeyValuePairArgs>> parameters;
 
     public Output<List<KeyValuePairArgs>> parameters() {
         return this.parameters;
@@ -58,7 +58,7 @@ public final class ContinuousActionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="selectorId", required=true)
-      private final Output<String> selectorId;
+    private Output<String> selectorId;
 
     public Output<String> selectorId() {
         return this.selectorId;
@@ -70,105 +70,97 @@ public final class ContinuousActionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public ContinuousActionArgs(
-        Output<String> duration,
-        Output<String> name,
-        Output<List<KeyValuePairArgs>> parameters,
-        Output<String> selectorId,
-        Output<String> type) {
-        this.duration = Objects.requireNonNull(duration, "expected parameter 'duration' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.parameters = Objects.requireNonNull(parameters, "expected parameter 'parameters' to be non-null");
-        this.selectorId = Objects.requireNonNull(selectorId, "expected parameter 'selectorId' to be non-null");
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private ContinuousActionArgs() {}
 
-    private ContinuousActionArgs() {
-        this.duration = Codegen.empty();
-        this.name = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.selectorId = Codegen.empty();
-        this.type = Codegen.empty();
+    private ContinuousActionArgs(ContinuousActionArgs $) {
+        this.duration = $.duration;
+        this.name = $.name;
+        this.parameters = $.parameters;
+        this.selectorId = $.selectorId;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContinuousActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> duration;
-        private Output<String> name;
-        private Output<List<KeyValuePairArgs>> parameters;
-        private Output<String> selectorId;
-        private Output<String> type;
+        private ContinuousActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContinuousActionArgs();
         }
 
         public Builder(ContinuousActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.duration = defaults.duration;
-    	      this.name = defaults.name;
-    	      this.parameters = defaults.parameters;
-    	      this.selectorId = defaults.selectorId;
-    	      this.type = defaults.type;
+            $ = new ContinuousActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder duration(Output<String> duration) {
-            this.duration = Objects.requireNonNull(duration);
+            $.duration = duration;
             return this;
         }
+
         public Builder duration(String duration) {
-            this.duration = Output.of(Objects.requireNonNull(duration));
-            return this;
+            return duration(Output.of(duration));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder parameters(Output<List<KeyValuePairArgs>> parameters) {
-            this.parameters = Objects.requireNonNull(parameters);
+            $.parameters = parameters;
             return this;
         }
+
         public Builder parameters(List<KeyValuePairArgs> parameters) {
-            this.parameters = Output.of(Objects.requireNonNull(parameters));
-            return this;
+            return parameters(Output.of(parameters));
         }
+
         public Builder parameters(KeyValuePairArgs... parameters) {
             return parameters(List.of(parameters));
         }
+
         public Builder selectorId(Output<String> selectorId) {
-            this.selectorId = Objects.requireNonNull(selectorId);
+            $.selectorId = selectorId;
             return this;
         }
+
         public Builder selectorId(String selectorId) {
-            this.selectorId = Output.of(Objects.requireNonNull(selectorId));
-            return this;
+            return selectorId(Output.of(selectorId));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public ContinuousActionArgs build() {
-            return new ContinuousActionArgs(duration, name, parameters, selectorId, type);
+            return type(Output.of(type));
+        }
+
+        public ContinuousActionArgs build() {
+            $.duration = Objects.requireNonNull($.duration, "expected parameter 'duration' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.parameters = Objects.requireNonNull($.parameters, "expected parameter 'parameters' to be non-null");
+            $.selectorId = Objects.requireNonNull($.selectorId, "expected parameter 'selectorId' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

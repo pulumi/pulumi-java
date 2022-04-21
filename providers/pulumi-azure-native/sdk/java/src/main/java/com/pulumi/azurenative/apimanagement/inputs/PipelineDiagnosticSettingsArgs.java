@@ -6,8 +6,8 @@ package com.pulumi.azurenative.apimanagement.inputs;
 import com.pulumi.azurenative.apimanagement.inputs.HttpMessageDiagnosticArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class PipelineDiagnosticSettingsArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="request")
-      private final @Nullable Output<HttpMessageDiagnosticArgs> request;
+    private @Nullable Output<HttpMessageDiagnosticArgs> request;
 
-    public Output<HttpMessageDiagnosticArgs> request() {
-        return this.request == null ? Codegen.empty() : this.request;
+    public Optional<Output<HttpMessageDiagnosticArgs>> request() {
+        return Optional.ofNullable(this.request);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class PipelineDiagnosticSettingsArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="response")
-      private final @Nullable Output<HttpMessageDiagnosticArgs> response;
+    private @Nullable Output<HttpMessageDiagnosticArgs> response;
 
-    public Output<HttpMessageDiagnosticArgs> response() {
-        return this.response == null ? Codegen.empty() : this.response;
+    public Optional<Output<HttpMessageDiagnosticArgs>> response() {
+        return Optional.ofNullable(this.response);
     }
 
-    public PipelineDiagnosticSettingsArgs(
-        @Nullable Output<HttpMessageDiagnosticArgs> request,
-        @Nullable Output<HttpMessageDiagnosticArgs> response) {
-        this.request = request;
-        this.response = response;
-    }
+    private PipelineDiagnosticSettingsArgs() {}
 
-    private PipelineDiagnosticSettingsArgs() {
-        this.request = Codegen.empty();
-        this.response = Codegen.empty();
+    private PipelineDiagnosticSettingsArgs(PipelineDiagnosticSettingsArgs $) {
+        this.request = $.request;
+        this.response = $.response;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PipelineDiagnosticSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<HttpMessageDiagnosticArgs> request;
-        private @Nullable Output<HttpMessageDiagnosticArgs> response;
+        private PipelineDiagnosticSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PipelineDiagnosticSettingsArgs();
         }
 
         public Builder(PipelineDiagnosticSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.request = defaults.request;
-    	      this.response = defaults.response;
+            $ = new PipelineDiagnosticSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder request(@Nullable Output<HttpMessageDiagnosticArgs> request) {
-            this.request = request;
+            $.request = request;
             return this;
         }
-        public Builder request(@Nullable HttpMessageDiagnosticArgs request) {
-            this.request = Codegen.ofNullable(request);
-            return this;
+
+        public Builder request(HttpMessageDiagnosticArgs request) {
+            return request(Output.of(request));
         }
+
         public Builder response(@Nullable Output<HttpMessageDiagnosticArgs> response) {
-            this.response = response;
+            $.response = response;
             return this;
         }
-        public Builder response(@Nullable HttpMessageDiagnosticArgs response) {
-            this.response = Codegen.ofNullable(response);
-            return this;
-        }        public PipelineDiagnosticSettingsArgs build() {
-            return new PipelineDiagnosticSettingsArgs(request, response);
+
+        public Builder response(HttpMessageDiagnosticArgs response) {
+            return response(Output.of(response));
+        }
+
+        public PipelineDiagnosticSettingsArgs build() {
+            return $;
         }
     }
+
 }

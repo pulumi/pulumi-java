@@ -24,7 +24,7 @@ public final class ScriptActionResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -35,10 +35,10 @@ public final class ScriptActionResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="parameters")
-      private final @Nullable String parameters;
+    private @Nullable String parameters;
 
     public Optional<String> parameters() {
-        return this.parameters == null ? Optional.empty() : Optional.ofNullable(this.parameters);
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -46,7 +46,7 @@ public final class ScriptActionResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="roles", required=true)
-      private final Object roles;
+    private Object roles;
 
     public Object roles() {
         return this.roles;
@@ -57,73 +57,65 @@ public final class ScriptActionResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="uri", required=true)
-      private final String uri;
+    private String uri;
 
     public String uri() {
         return this.uri;
     }
 
-    public ScriptActionResponse(
-        String name,
-        @Nullable String parameters,
-        Object roles,
-        String uri) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.parameters = parameters;
-        this.roles = Objects.requireNonNull(roles, "expected parameter 'roles' to be non-null");
-        this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
-    }
+    private ScriptActionResponse() {}
 
-    private ScriptActionResponse() {
-        this.name = null;
-        this.parameters = null;
-        this.roles = null;
-        this.uri = null;
+    private ScriptActionResponse(ScriptActionResponse $) {
+        this.name = $.name;
+        this.parameters = $.parameters;
+        this.roles = $.roles;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScriptActionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private @Nullable String parameters;
-        private Object roles;
-        private String uri;
+        private ScriptActionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScriptActionResponse();
         }
 
         public Builder(ScriptActionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.parameters = defaults.parameters;
-    	      this.roles = defaults.roles;
-    	      this.uri = defaults.uri;
+            $ = new ScriptActionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder parameters(@Nullable String parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder roles(Object roles) {
-            this.roles = Objects.requireNonNull(roles);
+            $.roles = roles;
             return this;
         }
+
         public Builder uri(String uri) {
-            this.uri = Objects.requireNonNull(uri);
+            $.uri = uri;
             return this;
-        }        public ScriptActionResponse build() {
-            return new ScriptActionResponse(name, parameters, roles, uri);
+        }
+
+        public ScriptActionResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.roles = Objects.requireNonNull($.roles, "expected parameter 'roles' to be non-null");
+            $.uri = Objects.requireNonNull($.uri, "expected parameter 'uri' to be non-null");
+            return $;
         }
     }
+
 }

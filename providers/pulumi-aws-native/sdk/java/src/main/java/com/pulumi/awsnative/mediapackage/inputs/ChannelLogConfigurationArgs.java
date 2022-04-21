@@ -5,9 +5,9 @@ package com.pulumi.awsnative.mediapackage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class ChannelLogConfigurationArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="logGroupName")
-      private final @Nullable Output<String> logGroupName;
+    private @Nullable Output<String> logGroupName;
 
-    public Output<String> logGroupName() {
-        return this.logGroupName == null ? Codegen.empty() : this.logGroupName;
+    public Optional<Output<String>> logGroupName() {
+        return Optional.ofNullable(this.logGroupName);
     }
 
-    public ChannelLogConfigurationArgs(@Nullable Output<String> logGroupName) {
-        this.logGroupName = logGroupName;
-    }
+    private ChannelLogConfigurationArgs() {}
 
-    private ChannelLogConfigurationArgs() {
-        this.logGroupName = Codegen.empty();
+    private ChannelLogConfigurationArgs(ChannelLogConfigurationArgs $) {
+        this.logGroupName = $.logGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ChannelLogConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> logGroupName;
+        private ChannelLogConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ChannelLogConfigurationArgs();
         }
 
         public Builder(ChannelLogConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.logGroupName = defaults.logGroupName;
+            $ = new ChannelLogConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder logGroupName(@Nullable Output<String> logGroupName) {
-            this.logGroupName = logGroupName;
+            $.logGroupName = logGroupName;
             return this;
         }
-        public Builder logGroupName(@Nullable String logGroupName) {
-            this.logGroupName = Codegen.ofNullable(logGroupName);
-            return this;
-        }        public ChannelLogConfigurationArgs build() {
-            return new ChannelLogConfigurationArgs(logGroupName);
+
+        public Builder logGroupName(String logGroupName) {
+            return logGroupName(Output.of(logGroupName));
+        }
+
+        public ChannelLogConfigurationArgs build() {
+            return $;
         }
     }
+
 }

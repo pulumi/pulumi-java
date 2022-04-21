@@ -13,7 +13,7 @@ public final class GetClusterKubernetesNetworkConfig extends com.pulumi.resource
     public static final GetClusterKubernetesNetworkConfig Empty = new GetClusterKubernetesNetworkConfig();
 
     @Import(name="ipFamily", required=true)
-      private final String ipFamily;
+    private String ipFamily;
 
     public String ipFamily() {
         return this.ipFamily;
@@ -24,55 +24,52 @@ public final class GetClusterKubernetesNetworkConfig extends com.pulumi.resource
      * 
      */
     @Import(name="serviceIpv4Cidr", required=true)
-      private final String serviceIpv4Cidr;
+    private String serviceIpv4Cidr;
 
     public String serviceIpv4Cidr() {
         return this.serviceIpv4Cidr;
     }
 
-    public GetClusterKubernetesNetworkConfig(
-        String ipFamily,
-        String serviceIpv4Cidr) {
-        this.ipFamily = Objects.requireNonNull(ipFamily, "expected parameter 'ipFamily' to be non-null");
-        this.serviceIpv4Cidr = Objects.requireNonNull(serviceIpv4Cidr, "expected parameter 'serviceIpv4Cidr' to be non-null");
-    }
+    private GetClusterKubernetesNetworkConfig() {}
 
-    private GetClusterKubernetesNetworkConfig() {
-        this.ipFamily = null;
-        this.serviceIpv4Cidr = null;
+    private GetClusterKubernetesNetworkConfig(GetClusterKubernetesNetworkConfig $) {
+        this.ipFamily = $.ipFamily;
+        this.serviceIpv4Cidr = $.serviceIpv4Cidr;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterKubernetesNetworkConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String ipFamily;
-        private String serviceIpv4Cidr;
+        private GetClusterKubernetesNetworkConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterKubernetesNetworkConfig();
         }
 
         public Builder(GetClusterKubernetesNetworkConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipFamily = defaults.ipFamily;
-    	      this.serviceIpv4Cidr = defaults.serviceIpv4Cidr;
+            $ = new GetClusterKubernetesNetworkConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder ipFamily(String ipFamily) {
-            this.ipFamily = Objects.requireNonNull(ipFamily);
+            $.ipFamily = ipFamily;
             return this;
         }
+
         public Builder serviceIpv4Cidr(String serviceIpv4Cidr) {
-            this.serviceIpv4Cidr = Objects.requireNonNull(serviceIpv4Cidr);
+            $.serviceIpv4Cidr = serviceIpv4Cidr;
             return this;
-        }        public GetClusterKubernetesNetworkConfig build() {
-            return new GetClusterKubernetesNetworkConfig(ipFamily, serviceIpv4Cidr);
+        }
+
+        public GetClusterKubernetesNetworkConfig build() {
+            $.ipFamily = Objects.requireNonNull($.ipFamily, "expected parameter 'ipFamily' to be non-null");
+            $.serviceIpv4Cidr = Objects.requireNonNull($.serviceIpv4Cidr, "expected parameter 'serviceIpv4Cidr' to be non-null");
+            return $;
         }
     }
+
 }

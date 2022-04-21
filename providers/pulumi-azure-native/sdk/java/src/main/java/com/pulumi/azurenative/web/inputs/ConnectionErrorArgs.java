@@ -5,10 +5,10 @@ package com.pulumi.azurenative.web.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ConnectionErrorArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="code")
-      private final @Nullable Output<String> code;
+    private @Nullable Output<String> code;
 
-    public Output<String> code() {
-        return this.code == null ? Codegen.empty() : this.code;
+    public Optional<Output<String>> code() {
+        return Optional.ofNullable(this.code);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ConnectionErrorArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ConnectionErrorArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ConnectionErrorArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="message")
-      private final @Nullable Output<String> message;
+    private @Nullable Output<String> message;
 
-    public Output<String> message() {
-        return this.message == null ? Codegen.empty() : this.message;
+    public Optional<Output<String>> message() {
+        return Optional.ofNullable(this.message);
     }
 
     /**
@@ -69,102 +69,88 @@ public final class ConnectionErrorArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public ConnectionErrorArgs(
-        @Nullable Output<String> code,
-        @Nullable Output<String> etag,
-        @Nullable Output<String> location,
-        @Nullable Output<String> message,
-        @Nullable Output<Map<String,String>> tags) {
-        this.code = code;
-        this.etag = etag;
-        this.location = location;
-        this.message = message;
-        this.tags = tags;
-    }
+    private ConnectionErrorArgs() {}
 
-    private ConnectionErrorArgs() {
-        this.code = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.location = Codegen.empty();
-        this.message = Codegen.empty();
-        this.tags = Codegen.empty();
+    private ConnectionErrorArgs(ConnectionErrorArgs $) {
+        this.code = $.code;
+        this.etag = $.etag;
+        this.location = $.location;
+        this.message = $.message;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionErrorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> code;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> message;
-        private @Nullable Output<Map<String,String>> tags;
+        private ConnectionErrorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionErrorArgs();
         }
 
         public Builder(ConnectionErrorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.code = defaults.code;
-    	      this.etag = defaults.etag;
-    	      this.location = defaults.location;
-    	      this.message = defaults.message;
-    	      this.tags = defaults.tags;
+            $ = new ConnectionErrorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder code(@Nullable Output<String> code) {
-            this.code = code;
+            $.code = code;
             return this;
         }
-        public Builder code(@Nullable String code) {
-            this.code = Codegen.ofNullable(code);
-            return this;
+
+        public Builder code(String code) {
+            return code(Output.of(code));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder message(@Nullable Output<String> message) {
-            this.message = message;
+            $.message = message;
             return this;
         }
-        public Builder message(@Nullable String message) {
-            this.message = Codegen.ofNullable(message);
-            return this;
+
+        public Builder message(String message) {
+            return message(Output.of(message));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public ConnectionErrorArgs build() {
-            return new ConnectionErrorArgs(code, etag, location, message, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public ConnectionErrorArgs build() {
+            return $;
         }
     }
+
 }

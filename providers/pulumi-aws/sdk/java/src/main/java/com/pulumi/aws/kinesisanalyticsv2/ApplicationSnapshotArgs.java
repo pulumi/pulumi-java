@@ -5,7 +5,6 @@ package com.pulumi.aws.kinesisanalyticsv2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class ApplicationSnapshotArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="applicationName", required=true)
-      private final Output<String> applicationName;
+    private Output<String> applicationName;
 
     public Output<String> applicationName() {
         return this.applicationName;
@@ -30,63 +29,60 @@ public final class ApplicationSnapshotArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="snapshotName", required=true)
-      private final Output<String> snapshotName;
+    private Output<String> snapshotName;
 
     public Output<String> snapshotName() {
         return this.snapshotName;
     }
 
-    public ApplicationSnapshotArgs(
-        Output<String> applicationName,
-        Output<String> snapshotName) {
-        this.applicationName = Objects.requireNonNull(applicationName, "expected parameter 'applicationName' to be non-null");
-        this.snapshotName = Objects.requireNonNull(snapshotName, "expected parameter 'snapshotName' to be non-null");
-    }
+    private ApplicationSnapshotArgs() {}
 
-    private ApplicationSnapshotArgs() {
-        this.applicationName = Codegen.empty();
-        this.snapshotName = Codegen.empty();
+    private ApplicationSnapshotArgs(ApplicationSnapshotArgs $) {
+        this.applicationName = $.applicationName;
+        this.snapshotName = $.snapshotName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationSnapshotArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> applicationName;
-        private Output<String> snapshotName;
+        private ApplicationSnapshotArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationSnapshotArgs();
         }
 
         public Builder(ApplicationSnapshotArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationName = defaults.applicationName;
-    	      this.snapshotName = defaults.snapshotName;
+            $ = new ApplicationSnapshotArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationName(Output<String> applicationName) {
-            this.applicationName = Objects.requireNonNull(applicationName);
+            $.applicationName = applicationName;
             return this;
         }
+
         public Builder applicationName(String applicationName) {
-            this.applicationName = Output.of(Objects.requireNonNull(applicationName));
-            return this;
+            return applicationName(Output.of(applicationName));
         }
+
         public Builder snapshotName(Output<String> snapshotName) {
-            this.snapshotName = Objects.requireNonNull(snapshotName);
+            $.snapshotName = snapshotName;
             return this;
         }
+
         public Builder snapshotName(String snapshotName) {
-            this.snapshotName = Output.of(Objects.requireNonNull(snapshotName));
-            return this;
-        }        public ApplicationSnapshotArgs build() {
-            return new ApplicationSnapshotArgs(applicationName, snapshotName);
+            return snapshotName(Output.of(snapshotName));
+        }
+
+        public ApplicationSnapshotArgs build() {
+            $.applicationName = Objects.requireNonNull($.applicationName, "expected parameter 'applicationName' to be non-null");
+            $.snapshotName = Objects.requireNonNull($.snapshotName, "expected parameter 'snapshotName' to be non-null");
+            return $;
         }
     }
+
 }

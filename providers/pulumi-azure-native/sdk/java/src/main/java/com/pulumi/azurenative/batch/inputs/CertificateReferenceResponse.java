@@ -16,7 +16,7 @@ public final class CertificateReferenceResponse extends com.pulumi.resources.Inv
     public static final CertificateReferenceResponse Empty = new CertificateReferenceResponse();
 
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -27,10 +27,10 @@ public final class CertificateReferenceResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="storeLocation")
-      private final @Nullable String storeLocation;
+    private @Nullable String storeLocation;
 
     public Optional<String> storeLocation() {
-        return this.storeLocation == null ? Optional.empty() : Optional.ofNullable(this.storeLocation);
+        return Optional.ofNullable(this.storeLocation);
     }
 
     /**
@@ -38,83 +38,74 @@ public final class CertificateReferenceResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="storeName")
-      private final @Nullable String storeName;
+    private @Nullable String storeName;
 
     public Optional<String> storeName() {
-        return this.storeName == null ? Optional.empty() : Optional.ofNullable(this.storeName);
+        return Optional.ofNullable(this.storeName);
     }
 
     @Import(name="visibility")
-      private final @Nullable List<String> visibility;
+    private @Nullable List<String> visibility;
 
-    public List<String> visibility() {
-        return this.visibility == null ? List.of() : this.visibility;
+    public Optional<List<String>> visibility() {
+        return Optional.ofNullable(this.visibility);
     }
 
-    public CertificateReferenceResponse(
-        String id,
-        @Nullable String storeLocation,
-        @Nullable String storeName,
-        @Nullable List<String> visibility) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.storeLocation = storeLocation;
-        this.storeName = storeName;
-        this.visibility = visibility;
-    }
+    private CertificateReferenceResponse() {}
 
-    private CertificateReferenceResponse() {
-        this.id = null;
-        this.storeLocation = null;
-        this.storeName = null;
-        this.visibility = List.of();
+    private CertificateReferenceResponse(CertificateReferenceResponse $) {
+        this.id = $.id;
+        this.storeLocation = $.storeLocation;
+        this.storeName = $.storeName;
+        this.visibility = $.visibility;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateReferenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
-        private @Nullable String storeLocation;
-        private @Nullable String storeName;
-        private @Nullable List<String> visibility;
+        private CertificateReferenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateReferenceResponse();
         }
 
         public Builder(CertificateReferenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.storeLocation = defaults.storeLocation;
-    	      this.storeName = defaults.storeName;
-    	      this.visibility = defaults.visibility;
+            $ = new CertificateReferenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder storeLocation(@Nullable String storeLocation) {
-            this.storeLocation = storeLocation;
+            $.storeLocation = storeLocation;
             return this;
         }
+
         public Builder storeName(@Nullable String storeName) {
-            this.storeName = storeName;
+            $.storeName = storeName;
             return this;
         }
+
         public Builder visibility(@Nullable List<String> visibility) {
-            this.visibility = visibility;
+            $.visibility = visibility;
             return this;
         }
+
         public Builder visibility(String... visibility) {
             return visibility(List.of(visibility));
-        }        public CertificateReferenceResponse build() {
-            return new CertificateReferenceResponse(id, storeLocation, storeName, visibility);
+        }
+
+        public CertificateReferenceResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

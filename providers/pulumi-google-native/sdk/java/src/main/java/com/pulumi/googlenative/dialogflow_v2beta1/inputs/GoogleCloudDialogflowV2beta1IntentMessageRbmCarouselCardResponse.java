@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardRespo
      * 
      */
     @Import(name="cardContents", required=true)
-      private final List<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse> cardContents;
+    private List<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse> cardContents;
 
     public List<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse> cardContents() {
         return this.cardContents;
@@ -34,58 +34,56 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardRespo
      * 
      */
     @Import(name="cardWidth", required=true)
-      private final String cardWidth;
+    private String cardWidth;
 
     public String cardWidth() {
         return this.cardWidth;
     }
 
-    public GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardResponse(
-        List<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse> cardContents,
-        String cardWidth) {
-        this.cardContents = Objects.requireNonNull(cardContents, "expected parameter 'cardContents' to be non-null");
-        this.cardWidth = Objects.requireNonNull(cardWidth, "expected parameter 'cardWidth' to be non-null");
-    }
+    private GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardResponse() {}
 
-    private GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardResponse() {
-        this.cardContents = List.of();
-        this.cardWidth = null;
+    private GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardResponse(GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardResponse $) {
+        this.cardContents = $.cardContents;
+        this.cardWidth = $.cardWidth;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse> cardContents;
-        private String cardWidth;
+        private GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cardContents = defaults.cardContents;
-    	      this.cardWidth = defaults.cardWidth;
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cardContents(List<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse> cardContents) {
-            this.cardContents = Objects.requireNonNull(cardContents);
+            $.cardContents = cardContents;
             return this;
         }
+
         public Builder cardContents(GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse... cardContents) {
             return cardContents(List.of(cardContents));
         }
+
         public Builder cardWidth(String cardWidth) {
-            this.cardWidth = Objects.requireNonNull(cardWidth);
+            $.cardWidth = cardWidth;
             return this;
-        }        public GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardResponse build() {
-            return new GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardResponse(cardContents, cardWidth);
+        }
+
+        public GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardResponse build() {
+            $.cardContents = Objects.requireNonNull($.cardContents, "expected parameter 'cardContents' to be non-null");
+            $.cardWidth = Objects.requireNonNull($.cardWidth, "expected parameter 'cardWidth' to be non-null");
+            return $;
         }
     }
+
 }

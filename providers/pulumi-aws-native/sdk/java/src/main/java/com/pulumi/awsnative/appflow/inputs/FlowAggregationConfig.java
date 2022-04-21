@@ -15,45 +15,44 @@ public final class FlowAggregationConfig extends com.pulumi.resources.InvokeArgs
     public static final FlowAggregationConfig Empty = new FlowAggregationConfig();
 
     @Import(name="aggregationType")
-      private final @Nullable FlowAggregationType aggregationType;
+    private @Nullable FlowAggregationType aggregationType;
 
     public Optional<FlowAggregationType> aggregationType() {
-        return this.aggregationType == null ? Optional.empty() : Optional.ofNullable(this.aggregationType);
+        return Optional.ofNullable(this.aggregationType);
     }
 
-    public FlowAggregationConfig(@Nullable FlowAggregationType aggregationType) {
-        this.aggregationType = aggregationType;
-    }
+    private FlowAggregationConfig() {}
 
-    private FlowAggregationConfig() {
-        this.aggregationType = null;
+    private FlowAggregationConfig(FlowAggregationConfig $) {
+        this.aggregationType = $.aggregationType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowAggregationConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable FlowAggregationType aggregationType;
+        private FlowAggregationConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowAggregationConfig();
         }
 
         public Builder(FlowAggregationConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aggregationType = defaults.aggregationType;
+            $ = new FlowAggregationConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder aggregationType(@Nullable FlowAggregationType aggregationType) {
-            this.aggregationType = aggregationType;
+            $.aggregationType = aggregationType;
             return this;
-        }        public FlowAggregationConfig build() {
-            return new FlowAggregationConfig(aggregationType);
+        }
+
+        public FlowAggregationConfig build() {
+            return $;
         }
     }
+
 }

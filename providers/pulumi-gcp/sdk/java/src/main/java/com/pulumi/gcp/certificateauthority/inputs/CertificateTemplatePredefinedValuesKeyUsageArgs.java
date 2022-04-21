@@ -5,12 +5,12 @@ package com.pulumi.gcp.certificateauthority.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.certificateauthority.inputs.CertificateTemplatePredefinedValuesKeyUsageBaseKeyUsageArgs;
 import com.pulumi.gcp.certificateauthority.inputs.CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsageArgs;
 import com.pulumi.gcp.certificateauthority.inputs.CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsageArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class CertificateTemplatePredefinedValuesKeyUsageArgs extends com.p
      * 
      */
     @Import(name="baseKeyUsage")
-      private final @Nullable Output<CertificateTemplatePredefinedValuesKeyUsageBaseKeyUsageArgs> baseKeyUsage;
+    private @Nullable Output<CertificateTemplatePredefinedValuesKeyUsageBaseKeyUsageArgs> baseKeyUsage;
 
-    public Output<CertificateTemplatePredefinedValuesKeyUsageBaseKeyUsageArgs> baseKeyUsage() {
-        return this.baseKeyUsage == null ? Codegen.empty() : this.baseKeyUsage;
+    public Optional<Output<CertificateTemplatePredefinedValuesKeyUsageBaseKeyUsageArgs>> baseKeyUsage() {
+        return Optional.ofNullable(this.baseKeyUsage);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class CertificateTemplatePredefinedValuesKeyUsageArgs extends com.p
      * 
      */
     @Import(name="extendedKeyUsage")
-      private final @Nullable Output<CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsageArgs> extendedKeyUsage;
+    private @Nullable Output<CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsageArgs> extendedKeyUsage;
 
-    public Output<CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsageArgs> extendedKeyUsage() {
-        return this.extendedKeyUsage == null ? Codegen.empty() : this.extendedKeyUsage;
+    public Optional<Output<CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsageArgs>> extendedKeyUsage() {
+        return Optional.ofNullable(this.extendedKeyUsage);
     }
 
     /**
@@ -45,79 +45,72 @@ public final class CertificateTemplatePredefinedValuesKeyUsageArgs extends com.p
      * 
      */
     @Import(name="unknownExtendedKeyUsages")
-      private final @Nullable Output<List<CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsageArgs>> unknownExtendedKeyUsages;
+    private @Nullable Output<List<CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsageArgs>> unknownExtendedKeyUsages;
 
-    public Output<List<CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsageArgs>> unknownExtendedKeyUsages() {
-        return this.unknownExtendedKeyUsages == null ? Codegen.empty() : this.unknownExtendedKeyUsages;
+    public Optional<Output<List<CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsageArgs>>> unknownExtendedKeyUsages() {
+        return Optional.ofNullable(this.unknownExtendedKeyUsages);
     }
 
-    public CertificateTemplatePredefinedValuesKeyUsageArgs(
-        @Nullable Output<CertificateTemplatePredefinedValuesKeyUsageBaseKeyUsageArgs> baseKeyUsage,
-        @Nullable Output<CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsageArgs> extendedKeyUsage,
-        @Nullable Output<List<CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsageArgs>> unknownExtendedKeyUsages) {
-        this.baseKeyUsage = baseKeyUsage;
-        this.extendedKeyUsage = extendedKeyUsage;
-        this.unknownExtendedKeyUsages = unknownExtendedKeyUsages;
-    }
+    private CertificateTemplatePredefinedValuesKeyUsageArgs() {}
 
-    private CertificateTemplatePredefinedValuesKeyUsageArgs() {
-        this.baseKeyUsage = Codegen.empty();
-        this.extendedKeyUsage = Codegen.empty();
-        this.unknownExtendedKeyUsages = Codegen.empty();
+    private CertificateTemplatePredefinedValuesKeyUsageArgs(CertificateTemplatePredefinedValuesKeyUsageArgs $) {
+        this.baseKeyUsage = $.baseKeyUsage;
+        this.extendedKeyUsage = $.extendedKeyUsage;
+        this.unknownExtendedKeyUsages = $.unknownExtendedKeyUsages;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateTemplatePredefinedValuesKeyUsageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CertificateTemplatePredefinedValuesKeyUsageBaseKeyUsageArgs> baseKeyUsage;
-        private @Nullable Output<CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsageArgs> extendedKeyUsage;
-        private @Nullable Output<List<CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsageArgs>> unknownExtendedKeyUsages;
+        private CertificateTemplatePredefinedValuesKeyUsageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateTemplatePredefinedValuesKeyUsageArgs();
         }
 
         public Builder(CertificateTemplatePredefinedValuesKeyUsageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.baseKeyUsage = defaults.baseKeyUsage;
-    	      this.extendedKeyUsage = defaults.extendedKeyUsage;
-    	      this.unknownExtendedKeyUsages = defaults.unknownExtendedKeyUsages;
+            $ = new CertificateTemplatePredefinedValuesKeyUsageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder baseKeyUsage(@Nullable Output<CertificateTemplatePredefinedValuesKeyUsageBaseKeyUsageArgs> baseKeyUsage) {
-            this.baseKeyUsage = baseKeyUsage;
+            $.baseKeyUsage = baseKeyUsage;
             return this;
         }
-        public Builder baseKeyUsage(@Nullable CertificateTemplatePredefinedValuesKeyUsageBaseKeyUsageArgs baseKeyUsage) {
-            this.baseKeyUsage = Codegen.ofNullable(baseKeyUsage);
-            return this;
+
+        public Builder baseKeyUsage(CertificateTemplatePredefinedValuesKeyUsageBaseKeyUsageArgs baseKeyUsage) {
+            return baseKeyUsage(Output.of(baseKeyUsage));
         }
+
         public Builder extendedKeyUsage(@Nullable Output<CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsageArgs> extendedKeyUsage) {
-            this.extendedKeyUsage = extendedKeyUsage;
+            $.extendedKeyUsage = extendedKeyUsage;
             return this;
         }
-        public Builder extendedKeyUsage(@Nullable CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsageArgs extendedKeyUsage) {
-            this.extendedKeyUsage = Codegen.ofNullable(extendedKeyUsage);
-            return this;
+
+        public Builder extendedKeyUsage(CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsageArgs extendedKeyUsage) {
+            return extendedKeyUsage(Output.of(extendedKeyUsage));
         }
+
         public Builder unknownExtendedKeyUsages(@Nullable Output<List<CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsageArgs>> unknownExtendedKeyUsages) {
-            this.unknownExtendedKeyUsages = unknownExtendedKeyUsages;
+            $.unknownExtendedKeyUsages = unknownExtendedKeyUsages;
             return this;
         }
-        public Builder unknownExtendedKeyUsages(@Nullable List<CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsageArgs> unknownExtendedKeyUsages) {
-            this.unknownExtendedKeyUsages = Codegen.ofNullable(unknownExtendedKeyUsages);
-            return this;
+
+        public Builder unknownExtendedKeyUsages(List<CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsageArgs> unknownExtendedKeyUsages) {
+            return unknownExtendedKeyUsages(Output.of(unknownExtendedKeyUsages));
         }
+
         public Builder unknownExtendedKeyUsages(CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsageArgs... unknownExtendedKeyUsages) {
             return unknownExtendedKeyUsages(List.of(unknownExtendedKeyUsages));
-        }        public CertificateTemplatePredefinedValuesKeyUsageArgs build() {
-            return new CertificateTemplatePredefinedValuesKeyUsageArgs(baseKeyUsage, extendedKeyUsage, unknownExtendedKeyUsages);
+        }
+
+        public CertificateTemplatePredefinedValuesKeyUsageArgs build() {
+            return $;
         }
     }
+
 }

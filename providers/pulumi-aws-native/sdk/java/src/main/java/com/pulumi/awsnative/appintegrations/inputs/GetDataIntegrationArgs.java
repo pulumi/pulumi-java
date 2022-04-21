@@ -17,45 +17,45 @@ public final class GetDataIntegrationArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public GetDataIntegrationArgs(String id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private GetDataIntegrationArgs() {}
 
-    private GetDataIntegrationArgs() {
-        this.id = null;
+    private GetDataIntegrationArgs(GetDataIntegrationArgs $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDataIntegrationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
+        private GetDataIntegrationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDataIntegrationArgs();
         }
 
         public Builder(GetDataIntegrationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new GetDataIntegrationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public GetDataIntegrationArgs build() {
-            return new GetDataIntegrationArgs(id);
+        }
+
+        public GetDataIntegrationArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

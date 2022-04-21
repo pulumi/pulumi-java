@@ -5,9 +5,9 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class ConfigMapNodeConfigSourceArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="kubeletConfigKey", required=true)
-      private final Output<String> kubeletConfigKey;
+    private Output<String> kubeletConfigKey;
 
     public Output<String> kubeletConfigKey() {
         return this.kubeletConfigKey;
@@ -35,7 +35,7 @@ public final class ConfigMapNodeConfigSourceArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -46,7 +46,7 @@ public final class ConfigMapNodeConfigSourceArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="namespace", required=true)
-      private final Output<String> namespace;
+    private Output<String> namespace;
 
     public Output<String> namespace() {
         return this.namespace;
@@ -57,10 +57,10 @@ public final class ConfigMapNodeConfigSourceArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="resourceVersion")
-      private final @Nullable Output<String> resourceVersion;
+    private @Nullable Output<String> resourceVersion;
 
-    public Output<String> resourceVersion() {
-        return this.resourceVersion == null ? Codegen.empty() : this.resourceVersion;
+    public Optional<Output<String>> resourceVersion() {
+        return Optional.ofNullable(this.resourceVersion);
     }
 
     /**
@@ -68,102 +68,91 @@ public final class ConfigMapNodeConfigSourceArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="uid")
-      private final @Nullable Output<String> uid;
+    private @Nullable Output<String> uid;
 
-    public Output<String> uid() {
-        return this.uid == null ? Codegen.empty() : this.uid;
+    public Optional<Output<String>> uid() {
+        return Optional.ofNullable(this.uid);
     }
 
-    public ConfigMapNodeConfigSourceArgs(
-        Output<String> kubeletConfigKey,
-        Output<String> name,
-        Output<String> namespace,
-        @Nullable Output<String> resourceVersion,
-        @Nullable Output<String> uid) {
-        this.kubeletConfigKey = Objects.requireNonNull(kubeletConfigKey, "expected parameter 'kubeletConfigKey' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.namespace = Objects.requireNonNull(namespace, "expected parameter 'namespace' to be non-null");
-        this.resourceVersion = resourceVersion;
-        this.uid = uid;
-    }
+    private ConfigMapNodeConfigSourceArgs() {}
 
-    private ConfigMapNodeConfigSourceArgs() {
-        this.kubeletConfigKey = Codegen.empty();
-        this.name = Codegen.empty();
-        this.namespace = Codegen.empty();
-        this.resourceVersion = Codegen.empty();
-        this.uid = Codegen.empty();
+    private ConfigMapNodeConfigSourceArgs(ConfigMapNodeConfigSourceArgs $) {
+        this.kubeletConfigKey = $.kubeletConfigKey;
+        this.name = $.name;
+        this.namespace = $.namespace;
+        this.resourceVersion = $.resourceVersion;
+        this.uid = $.uid;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigMapNodeConfigSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> kubeletConfigKey;
-        private Output<String> name;
-        private Output<String> namespace;
-        private @Nullable Output<String> resourceVersion;
-        private @Nullable Output<String> uid;
+        private ConfigMapNodeConfigSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigMapNodeConfigSourceArgs();
         }
 
         public Builder(ConfigMapNodeConfigSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kubeletConfigKey = defaults.kubeletConfigKey;
-    	      this.name = defaults.name;
-    	      this.namespace = defaults.namespace;
-    	      this.resourceVersion = defaults.resourceVersion;
-    	      this.uid = defaults.uid;
+            $ = new ConfigMapNodeConfigSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kubeletConfigKey(Output<String> kubeletConfigKey) {
-            this.kubeletConfigKey = Objects.requireNonNull(kubeletConfigKey);
+            $.kubeletConfigKey = kubeletConfigKey;
             return this;
         }
+
         public Builder kubeletConfigKey(String kubeletConfigKey) {
-            this.kubeletConfigKey = Output.of(Objects.requireNonNull(kubeletConfigKey));
-            return this;
+            return kubeletConfigKey(Output.of(kubeletConfigKey));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder namespace(Output<String> namespace) {
-            this.namespace = Objects.requireNonNull(namespace);
+            $.namespace = namespace;
             return this;
         }
+
         public Builder namespace(String namespace) {
-            this.namespace = Output.of(Objects.requireNonNull(namespace));
-            return this;
+            return namespace(Output.of(namespace));
         }
+
         public Builder resourceVersion(@Nullable Output<String> resourceVersion) {
-            this.resourceVersion = resourceVersion;
+            $.resourceVersion = resourceVersion;
             return this;
         }
-        public Builder resourceVersion(@Nullable String resourceVersion) {
-            this.resourceVersion = Codegen.ofNullable(resourceVersion);
-            return this;
+
+        public Builder resourceVersion(String resourceVersion) {
+            return resourceVersion(Output.of(resourceVersion));
         }
+
         public Builder uid(@Nullable Output<String> uid) {
-            this.uid = uid;
+            $.uid = uid;
             return this;
         }
-        public Builder uid(@Nullable String uid) {
-            this.uid = Codegen.ofNullable(uid);
-            return this;
-        }        public ConfigMapNodeConfigSourceArgs build() {
-            return new ConfigMapNodeConfigSourceArgs(kubeletConfigKey, name, namespace, resourceVersion, uid);
+
+        public Builder uid(String uid) {
+            return uid(Output.of(uid));
+        }
+
+        public ConfigMapNodeConfigSourceArgs build() {
+            $.kubeletConfigKey = Objects.requireNonNull($.kubeletConfigKey, "expected parameter 'kubeletConfigKey' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.namespace = Objects.requireNonNull($.namespace, "expected parameter 'namespace' to be non-null");
+            return $;
         }
     }
+
 }

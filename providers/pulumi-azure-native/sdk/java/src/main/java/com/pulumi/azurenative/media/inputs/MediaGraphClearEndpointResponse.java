@@ -25,10 +25,10 @@ public final class MediaGraphClearEndpointResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="credentials")
-      private final @Nullable MediaGraphUsernamePasswordCredentialsResponse credentials;
+    private @Nullable MediaGraphUsernamePasswordCredentialsResponse credentials;
 
     public Optional<MediaGraphUsernamePasswordCredentialsResponse> credentials() {
-        return this.credentials == null ? Optional.empty() : Optional.ofNullable(this.credentials);
+        return Optional.ofNullable(this.credentials);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class MediaGraphClearEndpointResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="odataType", required=true)
-      private final String odataType;
+    private String odataType;
 
     public String odataType() {
         return this.odataType;
@@ -48,64 +48,58 @@ public final class MediaGraphClearEndpointResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="url", required=true)
-      private final String url;
+    private String url;
 
     public String url() {
         return this.url;
     }
 
-    public MediaGraphClearEndpointResponse(
-        @Nullable MediaGraphUsernamePasswordCredentialsResponse credentials,
-        String odataType,
-        String url) {
-        this.credentials = credentials;
-        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-    }
+    private MediaGraphClearEndpointResponse() {}
 
-    private MediaGraphClearEndpointResponse() {
-        this.credentials = null;
-        this.odataType = null;
-        this.url = null;
+    private MediaGraphClearEndpointResponse(MediaGraphClearEndpointResponse $) {
+        this.credentials = $.credentials;
+        this.odataType = $.odataType;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MediaGraphClearEndpointResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable MediaGraphUsernamePasswordCredentialsResponse credentials;
-        private String odataType;
-        private String url;
+        private MediaGraphClearEndpointResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MediaGraphClearEndpointResponse();
         }
 
         public Builder(MediaGraphClearEndpointResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.credentials = defaults.credentials;
-    	      this.odataType = defaults.odataType;
-    	      this.url = defaults.url;
+            $ = new MediaGraphClearEndpointResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder credentials(@Nullable MediaGraphUsernamePasswordCredentialsResponse credentials) {
-            this.credentials = credentials;
+            $.credentials = credentials;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder url(String url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
-        }        public MediaGraphClearEndpointResponse build() {
-            return new MediaGraphClearEndpointResponse(credentials, odataType, url);
+        }
+
+        public MediaGraphClearEndpointResponse build() {
+            $.odataType = Codegen.stringProp("odataType").arg($.odataType).require();
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            return $;
         }
     }
+
 }

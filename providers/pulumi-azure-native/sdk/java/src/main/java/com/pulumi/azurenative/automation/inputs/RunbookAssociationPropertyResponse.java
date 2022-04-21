@@ -23,45 +23,44 @@ public final class RunbookAssociationPropertyResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
-    public RunbookAssociationPropertyResponse(@Nullable String name) {
-        this.name = name;
-    }
+    private RunbookAssociationPropertyResponse() {}
 
-    private RunbookAssociationPropertyResponse() {
-        this.name = null;
+    private RunbookAssociationPropertyResponse(RunbookAssociationPropertyResponse $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RunbookAssociationPropertyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
+        private RunbookAssociationPropertyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RunbookAssociationPropertyResponse();
         }
 
         public Builder(RunbookAssociationPropertyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new RunbookAssociationPropertyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
-        }        public RunbookAssociationPropertyResponse build() {
-            return new RunbookAssociationPropertyResponse(name);
+        }
+
+        public RunbookAssociationPropertyResponse build() {
+            return $;
         }
     }
+
 }

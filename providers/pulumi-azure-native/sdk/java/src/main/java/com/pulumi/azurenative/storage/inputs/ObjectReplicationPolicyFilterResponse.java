@@ -24,10 +24,10 @@ public final class ObjectReplicationPolicyFilterResponse extends com.pulumi.reso
      * 
      */
     @Import(name="minCreationTime")
-      private final @Nullable String minCreationTime;
+    private @Nullable String minCreationTime;
 
     public Optional<String> minCreationTime() {
-        return this.minCreationTime == null ? Optional.empty() : Optional.ofNullable(this.minCreationTime);
+        return Optional.ofNullable(this.minCreationTime);
     }
 
     /**
@@ -35,58 +35,54 @@ public final class ObjectReplicationPolicyFilterResponse extends com.pulumi.reso
      * 
      */
     @Import(name="prefixMatch")
-      private final @Nullable List<String> prefixMatch;
+    private @Nullable List<String> prefixMatch;
 
-    public List<String> prefixMatch() {
-        return this.prefixMatch == null ? List.of() : this.prefixMatch;
+    public Optional<List<String>> prefixMatch() {
+        return Optional.ofNullable(this.prefixMatch);
     }
 
-    public ObjectReplicationPolicyFilterResponse(
-        @Nullable String minCreationTime,
-        @Nullable List<String> prefixMatch) {
-        this.minCreationTime = minCreationTime;
-        this.prefixMatch = prefixMatch;
-    }
+    private ObjectReplicationPolicyFilterResponse() {}
 
-    private ObjectReplicationPolicyFilterResponse() {
-        this.minCreationTime = null;
-        this.prefixMatch = List.of();
+    private ObjectReplicationPolicyFilterResponse(ObjectReplicationPolicyFilterResponse $) {
+        this.minCreationTime = $.minCreationTime;
+        this.prefixMatch = $.prefixMatch;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ObjectReplicationPolicyFilterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String minCreationTime;
-        private @Nullable List<String> prefixMatch;
+        private ObjectReplicationPolicyFilterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ObjectReplicationPolicyFilterResponse();
         }
 
         public Builder(ObjectReplicationPolicyFilterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.minCreationTime = defaults.minCreationTime;
-    	      this.prefixMatch = defaults.prefixMatch;
+            $ = new ObjectReplicationPolicyFilterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder minCreationTime(@Nullable String minCreationTime) {
-            this.minCreationTime = minCreationTime;
+            $.minCreationTime = minCreationTime;
             return this;
         }
+
         public Builder prefixMatch(@Nullable List<String> prefixMatch) {
-            this.prefixMatch = prefixMatch;
+            $.prefixMatch = prefixMatch;
             return this;
         }
+
         public Builder prefixMatch(String... prefixMatch) {
             return prefixMatch(List.of(prefixMatch));
-        }        public ObjectReplicationPolicyFilterResponse build() {
-            return new ObjectReplicationPolicyFilterResponse(minCreationTime, prefixMatch);
+        }
+
+        public ObjectReplicationPolicyFilterResponse build() {
+            return $;
         }
     }
+
 }

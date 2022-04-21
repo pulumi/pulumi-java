@@ -9,10 +9,10 @@ import com.pulumi.awsnative.frauddetector.enums.VariableType;
 import com.pulumi.awsnative.frauddetector.inputs.VariableTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataSource", required=true)
-      private final Output<VariableDataSource> dataSource;
+    private Output<VariableDataSource> dataSource;
 
     public Output<VariableDataSource> dataSource() {
         return this.dataSource;
@@ -36,7 +36,7 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataType", required=true)
-      private final Output<VariableDataType> dataType;
+    private Output<VariableDataType> dataType;
 
     public Output<VariableDataType> dataType() {
         return this.dataType;
@@ -47,7 +47,7 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultValue", required=true)
-      private final Output<String> defaultValue;
+    private Output<String> defaultValue;
 
     public Output<String> defaultValue() {
         return this.defaultValue;
@@ -58,10 +58,10 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<VariableTagArgs>> tags;
+    private @Nullable Output<List<VariableTagArgs>> tags;
 
-    public Output<List<VariableTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<VariableTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -91,131 +91,115 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="variableType")
-      private final @Nullable Output<VariableType> variableType;
+    private @Nullable Output<VariableType> variableType;
 
-    public Output<VariableType> variableType() {
-        return this.variableType == null ? Codegen.empty() : this.variableType;
+    public Optional<Output<VariableType>> variableType() {
+        return Optional.ofNullable(this.variableType);
     }
 
-    public VariableArgs(
-        Output<VariableDataSource> dataSource,
-        Output<VariableDataType> dataType,
-        Output<String> defaultValue,
-        @Nullable Output<String> description,
-        @Nullable Output<String> name,
-        @Nullable Output<List<VariableTagArgs>> tags,
-        @Nullable Output<VariableType> variableType) {
-        this.dataSource = Objects.requireNonNull(dataSource, "expected parameter 'dataSource' to be non-null");
-        this.dataType = Objects.requireNonNull(dataType, "expected parameter 'dataType' to be non-null");
-        this.defaultValue = Objects.requireNonNull(defaultValue, "expected parameter 'defaultValue' to be non-null");
-        this.description = description;
-        this.name = name;
-        this.tags = tags;
-        this.variableType = variableType;
-    }
+    private VariableArgs() {}
 
-    private VariableArgs() {
-        this.dataSource = Codegen.empty();
-        this.dataType = Codegen.empty();
-        this.defaultValue = Codegen.empty();
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.variableType = Codegen.empty();
+    private VariableArgs(VariableArgs $) {
+        this.dataSource = $.dataSource;
+        this.dataType = $.dataType;
+        this.defaultValue = $.defaultValue;
+        this.description = $.description;
+        this.name = $.name;
+        this.tags = $.tags;
+        this.variableType = $.variableType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VariableArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<VariableDataSource> dataSource;
-        private Output<VariableDataType> dataType;
-        private Output<String> defaultValue;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<VariableTagArgs>> tags;
-        private @Nullable Output<VariableType> variableType;
+        private VariableArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VariableArgs();
         }
 
         public Builder(VariableArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataSource = defaults.dataSource;
-    	      this.dataType = defaults.dataType;
-    	      this.defaultValue = defaults.defaultValue;
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
-    	      this.variableType = defaults.variableType;
+            $ = new VariableArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataSource(Output<VariableDataSource> dataSource) {
-            this.dataSource = Objects.requireNonNull(dataSource);
+            $.dataSource = dataSource;
             return this;
         }
+
         public Builder dataSource(VariableDataSource dataSource) {
-            this.dataSource = Output.of(Objects.requireNonNull(dataSource));
-            return this;
+            return dataSource(Output.of(dataSource));
         }
+
         public Builder dataType(Output<VariableDataType> dataType) {
-            this.dataType = Objects.requireNonNull(dataType);
+            $.dataType = dataType;
             return this;
         }
+
         public Builder dataType(VariableDataType dataType) {
-            this.dataType = Output.of(Objects.requireNonNull(dataType));
-            return this;
+            return dataType(Output.of(dataType));
         }
+
         public Builder defaultValue(Output<String> defaultValue) {
-            this.defaultValue = Objects.requireNonNull(defaultValue);
+            $.defaultValue = defaultValue;
             return this;
         }
+
         public Builder defaultValue(String defaultValue) {
-            this.defaultValue = Output.of(Objects.requireNonNull(defaultValue));
-            return this;
+            return defaultValue(Output.of(defaultValue));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder tags(@Nullable Output<List<VariableTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<VariableTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<VariableTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(VariableTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder variableType(@Nullable Output<VariableType> variableType) {
-            this.variableType = variableType;
+            $.variableType = variableType;
             return this;
         }
-        public Builder variableType(@Nullable VariableType variableType) {
-            this.variableType = Codegen.ofNullable(variableType);
-            return this;
-        }        public VariableArgs build() {
-            return new VariableArgs(dataSource, dataType, defaultValue, description, name, tags, variableType);
+
+        public Builder variableType(VariableType variableType) {
+            return variableType(Output.of(variableType));
+        }
+
+        public VariableArgs build() {
+            $.dataSource = Objects.requireNonNull($.dataSource, "expected parameter 'dataSource' to be non-null");
+            $.dataType = Objects.requireNonNull($.dataType, "expected parameter 'dataType' to be non-null");
+            $.defaultValue = Objects.requireNonNull($.defaultValue, "expected parameter 'defaultValue' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ConnectionMonitorSourceArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="port")
-      private final @Nullable Output<Integer> port;
+    private @Nullable Output<Integer> port;
 
-    public Output<Integer> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<Integer>> port() {
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -36,63 +36,59 @@ public final class ConnectionMonitorSourceArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="resourceId", required=true)
-      private final Output<String> resourceId;
+    private Output<String> resourceId;
 
     public Output<String> resourceId() {
         return this.resourceId;
     }
 
-    public ConnectionMonitorSourceArgs(
-        @Nullable Output<Integer> port,
-        Output<String> resourceId) {
-        this.port = port;
-        this.resourceId = Objects.requireNonNull(resourceId, "expected parameter 'resourceId' to be non-null");
-    }
+    private ConnectionMonitorSourceArgs() {}
 
-    private ConnectionMonitorSourceArgs() {
-        this.port = Codegen.empty();
-        this.resourceId = Codegen.empty();
+    private ConnectionMonitorSourceArgs(ConnectionMonitorSourceArgs $) {
+        this.port = $.port;
+        this.resourceId = $.resourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionMonitorSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> port;
-        private Output<String> resourceId;
+        private ConnectionMonitorSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionMonitorSourceArgs();
         }
 
         public Builder(ConnectionMonitorSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.port = defaults.port;
-    	      this.resourceId = defaults.resourceId;
+            $ = new ConnectionMonitorSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder port(@Nullable Output<Integer> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable Integer port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
+
+        public Builder port(Integer port) {
+            return port(Output.of(port));
         }
+
         public Builder resourceId(Output<String> resourceId) {
-            this.resourceId = Objects.requireNonNull(resourceId);
+            $.resourceId = resourceId;
             return this;
         }
+
         public Builder resourceId(String resourceId) {
-            this.resourceId = Output.of(Objects.requireNonNull(resourceId));
-            return this;
-        }        public ConnectionMonitorSourceArgs build() {
-            return new ConnectionMonitorSourceArgs(port, resourceId);
+            return resourceId(Output.of(resourceId));
+        }
+
+        public ConnectionMonitorSourceArgs build() {
+            $.resourceId = Objects.requireNonNull($.resourceId, "expected parameter 'resourceId' to be non-null");
+            return $;
         }
     }
+
 }

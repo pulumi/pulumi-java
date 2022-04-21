@@ -15,78 +15,72 @@ public final class GetViewArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetViewArgs Empty = new GetViewArgs();
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="viewId", required=true)
-      private final String viewId;
+    private String viewId;
 
     public String viewId() {
         return this.viewId;
     }
 
-    public GetViewArgs(
-        String location,
-        @Nullable String project,
-        String viewId) {
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-        this.viewId = Objects.requireNonNull(viewId, "expected parameter 'viewId' to be non-null");
-    }
+    private GetViewArgs() {}
 
-    private GetViewArgs() {
-        this.location = null;
-        this.project = null;
-        this.viewId = null;
+    private GetViewArgs(GetViewArgs $) {
+        this.location = $.location;
+        this.project = $.project;
+        this.viewId = $.viewId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetViewArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String location;
-        private @Nullable String project;
-        private String viewId;
+        private GetViewArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetViewArgs();
         }
 
         public Builder(GetViewArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
-    	      this.viewId = defaults.viewId;
+            $ = new GetViewArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder viewId(String viewId) {
-            this.viewId = Objects.requireNonNull(viewId);
+            $.viewId = viewId;
             return this;
-        }        public GetViewArgs build() {
-            return new GetViewArgs(location, project, viewId);
+        }
+
+        public GetViewArgs build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.viewId = Objects.requireNonNull($.viewId, "expected parameter 'viewId' to be non-null");
+            return $;
         }
     }
+
 }

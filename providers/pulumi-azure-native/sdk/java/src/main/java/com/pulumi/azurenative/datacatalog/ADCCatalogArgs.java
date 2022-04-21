@@ -8,13 +8,13 @@ import com.pulumi.azurenative.datacatalog.inputs.PrincipalsArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class ADCCatalogArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="admins")
-      private final @Nullable Output<List<PrincipalsArgs>> admins;
+    private @Nullable Output<List<PrincipalsArgs>> admins;
 
-    public Output<List<PrincipalsArgs>> admins() {
-        return this.admins == null ? Codegen.empty() : this.admins;
+    public Optional<Output<List<PrincipalsArgs>>> admins() {
+        return Optional.ofNullable(this.admins);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ADCCatalogArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="catalogName")
-      private final @Nullable Output<String> catalogName;
+    private @Nullable Output<String> catalogName;
 
-    public Output<String> catalogName() {
-        return this.catalogName == null ? Codegen.empty() : this.catalogName;
+    public Optional<Output<String>> catalogName() {
+        return Optional.ofNullable(this.catalogName);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ADCCatalogArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableAutomaticUnitAdjustment")
-      private final @Nullable Output<Boolean> enableAutomaticUnitAdjustment;
+    private @Nullable Output<Boolean> enableAutomaticUnitAdjustment;
 
-    public Output<Boolean> enableAutomaticUnitAdjustment() {
-        return this.enableAutomaticUnitAdjustment == null ? Codegen.empty() : this.enableAutomaticUnitAdjustment;
+    public Optional<Output<Boolean>> enableAutomaticUnitAdjustment() {
+        return Optional.ofNullable(this.enableAutomaticUnitAdjustment);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class ADCCatalogArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -71,7 +71,7 @@ public final class ADCCatalogArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -82,10 +82,10 @@ public final class ADCCatalogArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sku")
-      private final @Nullable Output<Either<String,SkuType>> sku;
+    private @Nullable Output<Either<String,SkuType>> sku;
 
-    public Output<Either<String,SkuType>> sku() {
-        return this.sku == null ? Codegen.empty() : this.sku;
+    public Optional<Output<Either<String,SkuType>>> sku() {
+        return Optional.ofNullable(this.sku);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class ADCCatalogArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="successfullyProvisioned")
-      private final @Nullable Output<Boolean> successfullyProvisioned;
+    private @Nullable Output<Boolean> successfullyProvisioned;
 
-    public Output<Boolean> successfullyProvisioned() {
-        return this.successfullyProvisioned == null ? Codegen.empty() : this.successfullyProvisioned;
+    public Optional<Output<Boolean>> successfullyProvisioned() {
+        return Optional.ofNullable(this.successfullyProvisioned);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class ADCCatalogArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -115,10 +115,10 @@ public final class ADCCatalogArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="units")
-      private final @Nullable Output<Integer> units;
+    private @Nullable Output<Integer> units;
 
-    public Output<Integer> units() {
-        return this.units == null ? Codegen.empty() : this.units;
+    public Optional<Output<Integer>> units() {
+        return Optional.ofNullable(this.units);
     }
 
     /**
@@ -126,173 +126,147 @@ public final class ADCCatalogArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="users")
-      private final @Nullable Output<List<PrincipalsArgs>> users;
+    private @Nullable Output<List<PrincipalsArgs>> users;
 
-    public Output<List<PrincipalsArgs>> users() {
-        return this.users == null ? Codegen.empty() : this.users;
+    public Optional<Output<List<PrincipalsArgs>>> users() {
+        return Optional.ofNullable(this.users);
     }
 
-    public ADCCatalogArgs(
-        @Nullable Output<List<PrincipalsArgs>> admins,
-        @Nullable Output<String> catalogName,
-        @Nullable Output<Boolean> enableAutomaticUnitAdjustment,
-        @Nullable Output<String> location,
-        Output<String> resourceGroupName,
-        @Nullable Output<Either<String,SkuType>> sku,
-        @Nullable Output<Boolean> successfullyProvisioned,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Integer> units,
-        @Nullable Output<List<PrincipalsArgs>> users) {
-        this.admins = admins;
-        this.catalogName = catalogName;
-        this.enableAutomaticUnitAdjustment = enableAutomaticUnitAdjustment;
-        this.location = location;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sku = sku;
-        this.successfullyProvisioned = successfullyProvisioned;
-        this.tags = tags;
-        this.units = units;
-        this.users = users;
-    }
+    private ADCCatalogArgs() {}
 
-    private ADCCatalogArgs() {
-        this.admins = Codegen.empty();
-        this.catalogName = Codegen.empty();
-        this.enableAutomaticUnitAdjustment = Codegen.empty();
-        this.location = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.sku = Codegen.empty();
-        this.successfullyProvisioned = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.units = Codegen.empty();
-        this.users = Codegen.empty();
+    private ADCCatalogArgs(ADCCatalogArgs $) {
+        this.admins = $.admins;
+        this.catalogName = $.catalogName;
+        this.enableAutomaticUnitAdjustment = $.enableAutomaticUnitAdjustment;
+        this.location = $.location;
+        this.resourceGroupName = $.resourceGroupName;
+        this.sku = $.sku;
+        this.successfullyProvisioned = $.successfullyProvisioned;
+        this.tags = $.tags;
+        this.units = $.units;
+        this.users = $.users;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ADCCatalogArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<PrincipalsArgs>> admins;
-        private @Nullable Output<String> catalogName;
-        private @Nullable Output<Boolean> enableAutomaticUnitAdjustment;
-        private @Nullable Output<String> location;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Either<String,SkuType>> sku;
-        private @Nullable Output<Boolean> successfullyProvisioned;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Integer> units;
-        private @Nullable Output<List<PrincipalsArgs>> users;
+        private ADCCatalogArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ADCCatalogArgs();
         }
 
         public Builder(ADCCatalogArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.admins = defaults.admins;
-    	      this.catalogName = defaults.catalogName;
-    	      this.enableAutomaticUnitAdjustment = defaults.enableAutomaticUnitAdjustment;
-    	      this.location = defaults.location;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sku = defaults.sku;
-    	      this.successfullyProvisioned = defaults.successfullyProvisioned;
-    	      this.tags = defaults.tags;
-    	      this.units = defaults.units;
-    	      this.users = defaults.users;
+            $ = new ADCCatalogArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder admins(@Nullable Output<List<PrincipalsArgs>> admins) {
-            this.admins = admins;
+            $.admins = admins;
             return this;
         }
-        public Builder admins(@Nullable List<PrincipalsArgs> admins) {
-            this.admins = Codegen.ofNullable(admins);
-            return this;
+
+        public Builder admins(List<PrincipalsArgs> admins) {
+            return admins(Output.of(admins));
         }
+
         public Builder admins(PrincipalsArgs... admins) {
             return admins(List.of(admins));
         }
+
         public Builder catalogName(@Nullable Output<String> catalogName) {
-            this.catalogName = catalogName;
+            $.catalogName = catalogName;
             return this;
         }
-        public Builder catalogName(@Nullable String catalogName) {
-            this.catalogName = Codegen.ofNullable(catalogName);
-            return this;
+
+        public Builder catalogName(String catalogName) {
+            return catalogName(Output.of(catalogName));
         }
+
         public Builder enableAutomaticUnitAdjustment(@Nullable Output<Boolean> enableAutomaticUnitAdjustment) {
-            this.enableAutomaticUnitAdjustment = enableAutomaticUnitAdjustment;
+            $.enableAutomaticUnitAdjustment = enableAutomaticUnitAdjustment;
             return this;
         }
-        public Builder enableAutomaticUnitAdjustment(@Nullable Boolean enableAutomaticUnitAdjustment) {
-            this.enableAutomaticUnitAdjustment = Codegen.ofNullable(enableAutomaticUnitAdjustment);
-            return this;
+
+        public Builder enableAutomaticUnitAdjustment(Boolean enableAutomaticUnitAdjustment) {
+            return enableAutomaticUnitAdjustment(Output.of(enableAutomaticUnitAdjustment));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder sku(@Nullable Output<Either<String,SkuType>> sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
         }
-        public Builder sku(@Nullable Either<String,SkuType> sku) {
-            this.sku = Codegen.ofNullable(sku);
-            return this;
+
+        public Builder sku(Either<String,SkuType> sku) {
+            return sku(Output.of(sku));
         }
+
         public Builder successfullyProvisioned(@Nullable Output<Boolean> successfullyProvisioned) {
-            this.successfullyProvisioned = successfullyProvisioned;
+            $.successfullyProvisioned = successfullyProvisioned;
             return this;
         }
-        public Builder successfullyProvisioned(@Nullable Boolean successfullyProvisioned) {
-            this.successfullyProvisioned = Codegen.ofNullable(successfullyProvisioned);
-            return this;
+
+        public Builder successfullyProvisioned(Boolean successfullyProvisioned) {
+            return successfullyProvisioned(Output.of(successfullyProvisioned));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder units(@Nullable Output<Integer> units) {
-            this.units = units;
+            $.units = units;
             return this;
         }
-        public Builder units(@Nullable Integer units) {
-            this.units = Codegen.ofNullable(units);
-            return this;
+
+        public Builder units(Integer units) {
+            return units(Output.of(units));
         }
+
         public Builder users(@Nullable Output<List<PrincipalsArgs>> users) {
-            this.users = users;
+            $.users = users;
             return this;
         }
-        public Builder users(@Nullable List<PrincipalsArgs> users) {
-            this.users = Codegen.ofNullable(users);
-            return this;
+
+        public Builder users(List<PrincipalsArgs> users) {
+            return users(Output.of(users));
         }
+
         public Builder users(PrincipalsArgs... users) {
             return users(List.of(users));
-        }        public ADCCatalogArgs build() {
-            return new ADCCatalogArgs(admins, catalogName, enableAutomaticUnitAdjustment, location, resourceGroupName, sku, successfullyProvisioned, tags, units, users);
+        }
+
+        public ADCCatalogArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -19,142 +19,122 @@ public final class WirelessDeviceLoRaWANDevice extends com.pulumi.resources.Invo
     public static final WirelessDeviceLoRaWANDevice Empty = new WirelessDeviceLoRaWANDevice();
 
     @Import(name="abpV10x")
-      private final @Nullable WirelessDeviceAbpV10x abpV10x;
+    private @Nullable WirelessDeviceAbpV10x abpV10x;
 
     public Optional<WirelessDeviceAbpV10x> abpV10x() {
-        return this.abpV10x == null ? Optional.empty() : Optional.ofNullable(this.abpV10x);
+        return Optional.ofNullable(this.abpV10x);
     }
 
     @Import(name="abpV11")
-      private final @Nullable WirelessDeviceAbpV11 abpV11;
+    private @Nullable WirelessDeviceAbpV11 abpV11;
 
     public Optional<WirelessDeviceAbpV11> abpV11() {
-        return this.abpV11 == null ? Optional.empty() : Optional.ofNullable(this.abpV11);
+        return Optional.ofNullable(this.abpV11);
     }
 
     @Import(name="devEui")
-      private final @Nullable String devEui;
+    private @Nullable String devEui;
 
     public Optional<String> devEui() {
-        return this.devEui == null ? Optional.empty() : Optional.ofNullable(this.devEui);
+        return Optional.ofNullable(this.devEui);
     }
 
     @Import(name="deviceProfileId")
-      private final @Nullable String deviceProfileId;
+    private @Nullable String deviceProfileId;
 
     public Optional<String> deviceProfileId() {
-        return this.deviceProfileId == null ? Optional.empty() : Optional.ofNullable(this.deviceProfileId);
+        return Optional.ofNullable(this.deviceProfileId);
     }
 
     @Import(name="otaaV10x")
-      private final @Nullable WirelessDeviceOtaaV10x otaaV10x;
+    private @Nullable WirelessDeviceOtaaV10x otaaV10x;
 
     public Optional<WirelessDeviceOtaaV10x> otaaV10x() {
-        return this.otaaV10x == null ? Optional.empty() : Optional.ofNullable(this.otaaV10x);
+        return Optional.ofNullable(this.otaaV10x);
     }
 
     @Import(name="otaaV11")
-      private final @Nullable WirelessDeviceOtaaV11 otaaV11;
+    private @Nullable WirelessDeviceOtaaV11 otaaV11;
 
     public Optional<WirelessDeviceOtaaV11> otaaV11() {
-        return this.otaaV11 == null ? Optional.empty() : Optional.ofNullable(this.otaaV11);
+        return Optional.ofNullable(this.otaaV11);
     }
 
     @Import(name="serviceProfileId")
-      private final @Nullable String serviceProfileId;
+    private @Nullable String serviceProfileId;
 
     public Optional<String> serviceProfileId() {
-        return this.serviceProfileId == null ? Optional.empty() : Optional.ofNullable(this.serviceProfileId);
+        return Optional.ofNullable(this.serviceProfileId);
     }
 
-    public WirelessDeviceLoRaWANDevice(
-        @Nullable WirelessDeviceAbpV10x abpV10x,
-        @Nullable WirelessDeviceAbpV11 abpV11,
-        @Nullable String devEui,
-        @Nullable String deviceProfileId,
-        @Nullable WirelessDeviceOtaaV10x otaaV10x,
-        @Nullable WirelessDeviceOtaaV11 otaaV11,
-        @Nullable String serviceProfileId) {
-        this.abpV10x = abpV10x;
-        this.abpV11 = abpV11;
-        this.devEui = devEui;
-        this.deviceProfileId = deviceProfileId;
-        this.otaaV10x = otaaV10x;
-        this.otaaV11 = otaaV11;
-        this.serviceProfileId = serviceProfileId;
-    }
+    private WirelessDeviceLoRaWANDevice() {}
 
-    private WirelessDeviceLoRaWANDevice() {
-        this.abpV10x = null;
-        this.abpV11 = null;
-        this.devEui = null;
-        this.deviceProfileId = null;
-        this.otaaV10x = null;
-        this.otaaV11 = null;
-        this.serviceProfileId = null;
+    private WirelessDeviceLoRaWANDevice(WirelessDeviceLoRaWANDevice $) {
+        this.abpV10x = $.abpV10x;
+        this.abpV11 = $.abpV11;
+        this.devEui = $.devEui;
+        this.deviceProfileId = $.deviceProfileId;
+        this.otaaV10x = $.otaaV10x;
+        this.otaaV11 = $.otaaV11;
+        this.serviceProfileId = $.serviceProfileId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WirelessDeviceLoRaWANDevice defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable WirelessDeviceAbpV10x abpV10x;
-        private @Nullable WirelessDeviceAbpV11 abpV11;
-        private @Nullable String devEui;
-        private @Nullable String deviceProfileId;
-        private @Nullable WirelessDeviceOtaaV10x otaaV10x;
-        private @Nullable WirelessDeviceOtaaV11 otaaV11;
-        private @Nullable String serviceProfileId;
+        private WirelessDeviceLoRaWANDevice $;
 
         public Builder() {
-    	      // Empty
+            $ = new WirelessDeviceLoRaWANDevice();
         }
 
         public Builder(WirelessDeviceLoRaWANDevice defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.abpV10x = defaults.abpV10x;
-    	      this.abpV11 = defaults.abpV11;
-    	      this.devEui = defaults.devEui;
-    	      this.deviceProfileId = defaults.deviceProfileId;
-    	      this.otaaV10x = defaults.otaaV10x;
-    	      this.otaaV11 = defaults.otaaV11;
-    	      this.serviceProfileId = defaults.serviceProfileId;
+            $ = new WirelessDeviceLoRaWANDevice(Objects.requireNonNull(defaults));
         }
 
         public Builder abpV10x(@Nullable WirelessDeviceAbpV10x abpV10x) {
-            this.abpV10x = abpV10x;
+            $.abpV10x = abpV10x;
             return this;
         }
+
         public Builder abpV11(@Nullable WirelessDeviceAbpV11 abpV11) {
-            this.abpV11 = abpV11;
+            $.abpV11 = abpV11;
             return this;
         }
+
         public Builder devEui(@Nullable String devEui) {
-            this.devEui = devEui;
+            $.devEui = devEui;
             return this;
         }
+
         public Builder deviceProfileId(@Nullable String deviceProfileId) {
-            this.deviceProfileId = deviceProfileId;
+            $.deviceProfileId = deviceProfileId;
             return this;
         }
+
         public Builder otaaV10x(@Nullable WirelessDeviceOtaaV10x otaaV10x) {
-            this.otaaV10x = otaaV10x;
+            $.otaaV10x = otaaV10x;
             return this;
         }
+
         public Builder otaaV11(@Nullable WirelessDeviceOtaaV11 otaaV11) {
-            this.otaaV11 = otaaV11;
+            $.otaaV11 = otaaV11;
             return this;
         }
+
         public Builder serviceProfileId(@Nullable String serviceProfileId) {
-            this.serviceProfileId = serviceProfileId;
+            $.serviceProfileId = serviceProfileId;
             return this;
-        }        public WirelessDeviceLoRaWANDevice build() {
-            return new WirelessDeviceLoRaWANDevice(abpV10x, abpV11, devEui, deviceProfileId, otaaV10x, otaaV11, serviceProfileId);
+        }
+
+        public WirelessDeviceLoRaWANDevice build() {
+            return $;
         }
     }
+
 }

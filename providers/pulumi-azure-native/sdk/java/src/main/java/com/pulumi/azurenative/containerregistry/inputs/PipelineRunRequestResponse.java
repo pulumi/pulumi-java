@@ -29,10 +29,10 @@ public final class PipelineRunRequestResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="artifacts")
-      private final @Nullable List<String> artifacts;
+    private @Nullable List<String> artifacts;
 
-    public List<String> artifacts() {
-        return this.artifacts == null ? List.of() : this.artifacts;
+    public Optional<List<String>> artifacts() {
+        return Optional.ofNullable(this.artifacts);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class PipelineRunRequestResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="catalogDigest")
-      private final @Nullable String catalogDigest;
+    private @Nullable String catalogDigest;
 
     public Optional<String> catalogDigest() {
-        return this.catalogDigest == null ? Optional.empty() : Optional.ofNullable(this.catalogDigest);
+        return Optional.ofNullable(this.catalogDigest);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class PipelineRunRequestResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="pipelineResourceId")
-      private final @Nullable String pipelineResourceId;
+    private @Nullable String pipelineResourceId;
 
     public Optional<String> pipelineResourceId() {
-        return this.pipelineResourceId == null ? Optional.empty() : Optional.ofNullable(this.pipelineResourceId);
+        return Optional.ofNullable(this.pipelineResourceId);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class PipelineRunRequestResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="source")
-      private final @Nullable PipelineRunSourcePropertiesResponse source;
+    private @Nullable PipelineRunSourcePropertiesResponse source;
 
     public Optional<PipelineRunSourcePropertiesResponse> source() {
-        return this.source == null ? Optional.empty() : Optional.ofNullable(this.source);
+        return Optional.ofNullable(this.source);
     }
 
     /**
@@ -73,85 +73,72 @@ public final class PipelineRunRequestResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="target")
-      private final @Nullable PipelineRunTargetPropertiesResponse target;
+    private @Nullable PipelineRunTargetPropertiesResponse target;
 
     public Optional<PipelineRunTargetPropertiesResponse> target() {
-        return this.target == null ? Optional.empty() : Optional.ofNullable(this.target);
+        return Optional.ofNullable(this.target);
     }
 
-    public PipelineRunRequestResponse(
-        @Nullable List<String> artifacts,
-        @Nullable String catalogDigest,
-        @Nullable String pipelineResourceId,
-        @Nullable PipelineRunSourcePropertiesResponse source,
-        @Nullable PipelineRunTargetPropertiesResponse target) {
-        this.artifacts = artifacts;
-        this.catalogDigest = catalogDigest;
-        this.pipelineResourceId = pipelineResourceId;
-        this.source = source;
-        this.target = target;
-    }
+    private PipelineRunRequestResponse() {}
 
-    private PipelineRunRequestResponse() {
-        this.artifacts = List.of();
-        this.catalogDigest = null;
-        this.pipelineResourceId = null;
-        this.source = null;
-        this.target = null;
+    private PipelineRunRequestResponse(PipelineRunRequestResponse $) {
+        this.artifacts = $.artifacts;
+        this.catalogDigest = $.catalogDigest;
+        this.pipelineResourceId = $.pipelineResourceId;
+        this.source = $.source;
+        this.target = $.target;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PipelineRunRequestResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> artifacts;
-        private @Nullable String catalogDigest;
-        private @Nullable String pipelineResourceId;
-        private @Nullable PipelineRunSourcePropertiesResponse source;
-        private @Nullable PipelineRunTargetPropertiesResponse target;
+        private PipelineRunRequestResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PipelineRunRequestResponse();
         }
 
         public Builder(PipelineRunRequestResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.artifacts = defaults.artifacts;
-    	      this.catalogDigest = defaults.catalogDigest;
-    	      this.pipelineResourceId = defaults.pipelineResourceId;
-    	      this.source = defaults.source;
-    	      this.target = defaults.target;
+            $ = new PipelineRunRequestResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder artifacts(@Nullable List<String> artifacts) {
-            this.artifacts = artifacts;
+            $.artifacts = artifacts;
             return this;
         }
+
         public Builder artifacts(String... artifacts) {
             return artifacts(List.of(artifacts));
         }
+
         public Builder catalogDigest(@Nullable String catalogDigest) {
-            this.catalogDigest = catalogDigest;
+            $.catalogDigest = catalogDigest;
             return this;
         }
+
         public Builder pipelineResourceId(@Nullable String pipelineResourceId) {
-            this.pipelineResourceId = pipelineResourceId;
+            $.pipelineResourceId = pipelineResourceId;
             return this;
         }
+
         public Builder source(@Nullable PipelineRunSourcePropertiesResponse source) {
-            this.source = source;
+            $.source = source;
             return this;
         }
+
         public Builder target(@Nullable PipelineRunTargetPropertiesResponse target) {
-            this.target = target;
+            $.target = target;
             return this;
-        }        public PipelineRunRequestResponse build() {
-            return new PipelineRunRequestResponse(artifacts, catalogDigest, pipelineResourceId, source, target);
+        }
+
+        public PipelineRunRequestResponse build() {
+            return $;
         }
     }
+
 }

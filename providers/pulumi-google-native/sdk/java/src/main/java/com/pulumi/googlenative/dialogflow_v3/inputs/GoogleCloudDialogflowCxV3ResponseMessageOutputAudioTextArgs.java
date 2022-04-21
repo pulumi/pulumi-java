@@ -5,9 +5,9 @@ package com.pulumi.googlenative.dialogflow_v3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextArgs e
      * 
      */
     @Import(name="ssml")
-      private final @Nullable Output<String> ssml;
+    private @Nullable Output<String> ssml;
 
-    public Output<String> ssml() {
-        return this.ssml == null ? Codegen.empty() : this.ssml;
+    public Optional<Output<String>> ssml() {
+        return Optional.ofNullable(this.ssml);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextArgs e
      * 
      */
     @Import(name="text")
-      private final @Nullable Output<String> text;
+    private @Nullable Output<String> text;
 
-    public Output<String> text() {
-        return this.text == null ? Codegen.empty() : this.text;
+    public Optional<Output<String>> text() {
+        return Optional.ofNullable(this.text);
     }
 
-    public GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextArgs(
-        @Nullable Output<String> ssml,
-        @Nullable Output<String> text) {
-        this.ssml = ssml;
-        this.text = text;
-    }
+    private GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextArgs() {}
 
-    private GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextArgs() {
-        this.ssml = Codegen.empty();
-        this.text = Codegen.empty();
+    private GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextArgs(GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextArgs $) {
+        this.ssml = $.ssml;
+        this.text = $.text;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> ssml;
-        private @Nullable Output<String> text;
+        private GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextArgs();
         }
 
         public Builder(GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ssml = defaults.ssml;
-    	      this.text = defaults.text;
+            $ = new GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ssml(@Nullable Output<String> ssml) {
-            this.ssml = ssml;
+            $.ssml = ssml;
             return this;
         }
-        public Builder ssml(@Nullable String ssml) {
-            this.ssml = Codegen.ofNullable(ssml);
-            return this;
+
+        public Builder ssml(String ssml) {
+            return ssml(Output.of(ssml));
         }
+
         public Builder text(@Nullable Output<String> text) {
-            this.text = text;
+            $.text = text;
             return this;
         }
-        public Builder text(@Nullable String text) {
-            this.text = Codegen.ofNullable(text);
-            return this;
-        }        public GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextArgs build() {
-            return new GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextArgs(ssml, text);
+
+        public Builder text(String text) {
+            return text(Output.of(text));
+        }
+
+        public GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextArgs build() {
+            return $;
         }
     }
+
 }

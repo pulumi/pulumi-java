@@ -5,11 +5,11 @@ package com.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,7 +26,7 @@ public final class ResourcePolicyRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="apiGroups", required=true)
-      private final Output<List<String>> apiGroups;
+    private Output<List<String>> apiGroups;
 
     public Output<List<String>> apiGroups() {
         return this.apiGroups;
@@ -37,10 +37,10 @@ public final class ResourcePolicyRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="clusterScope")
-      private final @Nullable Output<Boolean> clusterScope;
+    private @Nullable Output<Boolean> clusterScope;
 
-    public Output<Boolean> clusterScope() {
-        return this.clusterScope == null ? Codegen.empty() : this.clusterScope;
+    public Optional<Output<Boolean>> clusterScope() {
+        return Optional.ofNullable(this.clusterScope);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ResourcePolicyRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="namespaces")
-      private final @Nullable Output<List<String>> namespaces;
+    private @Nullable Output<List<String>> namespaces;
 
-    public Output<List<String>> namespaces() {
-        return this.namespaces == null ? Codegen.empty() : this.namespaces;
+    public Optional<Output<List<String>>> namespaces() {
+        return Optional.ofNullable(this.namespaces);
     }
 
     /**
@@ -59,7 +59,7 @@ public final class ResourcePolicyRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="resources", required=true)
-      private final Output<List<String>> resources;
+    private Output<List<String>> resources;
 
     public Output<List<String>> resources() {
         return this.resources;
@@ -70,114 +70,107 @@ public final class ResourcePolicyRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="verbs", required=true)
-      private final Output<List<String>> verbs;
+    private Output<List<String>> verbs;
 
     public Output<List<String>> verbs() {
         return this.verbs;
     }
 
-    public ResourcePolicyRuleArgs(
-        Output<List<String>> apiGroups,
-        @Nullable Output<Boolean> clusterScope,
-        @Nullable Output<List<String>> namespaces,
-        Output<List<String>> resources,
-        Output<List<String>> verbs) {
-        this.apiGroups = Objects.requireNonNull(apiGroups, "expected parameter 'apiGroups' to be non-null");
-        this.clusterScope = clusterScope;
-        this.namespaces = namespaces;
-        this.resources = Objects.requireNonNull(resources, "expected parameter 'resources' to be non-null");
-        this.verbs = Objects.requireNonNull(verbs, "expected parameter 'verbs' to be non-null");
-    }
+    private ResourcePolicyRuleArgs() {}
 
-    private ResourcePolicyRuleArgs() {
-        this.apiGroups = Codegen.empty();
-        this.clusterScope = Codegen.empty();
-        this.namespaces = Codegen.empty();
-        this.resources = Codegen.empty();
-        this.verbs = Codegen.empty();
+    private ResourcePolicyRuleArgs(ResourcePolicyRuleArgs $) {
+        this.apiGroups = $.apiGroups;
+        this.clusterScope = $.clusterScope;
+        this.namespaces = $.namespaces;
+        this.resources = $.resources;
+        this.verbs = $.verbs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourcePolicyRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> apiGroups;
-        private @Nullable Output<Boolean> clusterScope;
-        private @Nullable Output<List<String>> namespaces;
-        private Output<List<String>> resources;
-        private Output<List<String>> verbs;
+        private ResourcePolicyRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourcePolicyRuleArgs();
         }
 
         public Builder(ResourcePolicyRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiGroups = defaults.apiGroups;
-    	      this.clusterScope = defaults.clusterScope;
-    	      this.namespaces = defaults.namespaces;
-    	      this.resources = defaults.resources;
-    	      this.verbs = defaults.verbs;
+            $ = new ResourcePolicyRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiGroups(Output<List<String>> apiGroups) {
-            this.apiGroups = Objects.requireNonNull(apiGroups);
+            $.apiGroups = apiGroups;
             return this;
         }
+
         public Builder apiGroups(List<String> apiGroups) {
-            this.apiGroups = Output.of(Objects.requireNonNull(apiGroups));
-            return this;
+            return apiGroups(Output.of(apiGroups));
         }
+
         public Builder apiGroups(String... apiGroups) {
             return apiGroups(List.of(apiGroups));
         }
+
         public Builder clusterScope(@Nullable Output<Boolean> clusterScope) {
-            this.clusterScope = clusterScope;
+            $.clusterScope = clusterScope;
             return this;
         }
-        public Builder clusterScope(@Nullable Boolean clusterScope) {
-            this.clusterScope = Codegen.ofNullable(clusterScope);
-            return this;
+
+        public Builder clusterScope(Boolean clusterScope) {
+            return clusterScope(Output.of(clusterScope));
         }
+
         public Builder namespaces(@Nullable Output<List<String>> namespaces) {
-            this.namespaces = namespaces;
+            $.namespaces = namespaces;
             return this;
         }
-        public Builder namespaces(@Nullable List<String> namespaces) {
-            this.namespaces = Codegen.ofNullable(namespaces);
-            return this;
+
+        public Builder namespaces(List<String> namespaces) {
+            return namespaces(Output.of(namespaces));
         }
+
         public Builder namespaces(String... namespaces) {
             return namespaces(List.of(namespaces));
         }
+
         public Builder resources(Output<List<String>> resources) {
-            this.resources = Objects.requireNonNull(resources);
+            $.resources = resources;
             return this;
         }
+
         public Builder resources(List<String> resources) {
-            this.resources = Output.of(Objects.requireNonNull(resources));
-            return this;
+            return resources(Output.of(resources));
         }
+
         public Builder resources(String... resources) {
             return resources(List.of(resources));
         }
+
         public Builder verbs(Output<List<String>> verbs) {
-            this.verbs = Objects.requireNonNull(verbs);
+            $.verbs = verbs;
             return this;
         }
+
         public Builder verbs(List<String> verbs) {
-            this.verbs = Output.of(Objects.requireNonNull(verbs));
-            return this;
+            return verbs(Output.of(verbs));
         }
+
         public Builder verbs(String... verbs) {
             return verbs(List.of(verbs));
-        }        public ResourcePolicyRuleArgs build() {
-            return new ResourcePolicyRuleArgs(apiGroups, clusterScope, namespaces, resources, verbs);
+        }
+
+        public ResourcePolicyRuleArgs build() {
+            $.apiGroups = Objects.requireNonNull($.apiGroups, "expected parameter 'apiGroups' to be non-null");
+            $.resources = Objects.requireNonNull($.resources, "expected parameter 'resources' to be non-null");
+            $.verbs = Objects.requireNonNull($.verbs, "expected parameter 'verbs' to be non-null");
+            return $;
         }
     }
+
 }

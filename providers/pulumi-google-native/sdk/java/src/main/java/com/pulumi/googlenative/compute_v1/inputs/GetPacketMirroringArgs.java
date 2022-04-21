@@ -15,78 +15,72 @@ public final class GetPacketMirroringArgs extends com.pulumi.resources.InvokeArg
     public static final GetPacketMirroringArgs Empty = new GetPacketMirroringArgs();
 
     @Import(name="packetMirroring", required=true)
-      private final String packetMirroring;
+    private String packetMirroring;
 
     public String packetMirroring() {
         return this.packetMirroring;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="region", required=true)
-      private final String region;
+    private String region;
 
     public String region() {
         return this.region;
     }
 
-    public GetPacketMirroringArgs(
-        String packetMirroring,
-        @Nullable String project,
-        String region) {
-        this.packetMirroring = Objects.requireNonNull(packetMirroring, "expected parameter 'packetMirroring' to be non-null");
-        this.project = project;
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-    }
+    private GetPacketMirroringArgs() {}
 
-    private GetPacketMirroringArgs() {
-        this.packetMirroring = null;
-        this.project = null;
-        this.region = null;
+    private GetPacketMirroringArgs(GetPacketMirroringArgs $) {
+        this.packetMirroring = $.packetMirroring;
+        this.project = $.project;
+        this.region = $.region;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPacketMirroringArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String packetMirroring;
-        private @Nullable String project;
-        private String region;
+        private GetPacketMirroringArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPacketMirroringArgs();
         }
 
         public Builder(GetPacketMirroringArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.packetMirroring = defaults.packetMirroring;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
+            $ = new GetPacketMirroringArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder packetMirroring(String packetMirroring) {
-            this.packetMirroring = Objects.requireNonNull(packetMirroring);
+            $.packetMirroring = packetMirroring;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
-        }        public GetPacketMirroringArgs build() {
-            return new GetPacketMirroringArgs(packetMirroring, project, region);
+        }
+
+        public GetPacketMirroringArgs build() {
+            $.packetMirroring = Objects.requireNonNull($.packetMirroring, "expected parameter 'packetMirroring' to be non-null");
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.azurenative.synapse.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class PurviewConfigurationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="purviewResourceId")
-      private final @Nullable Output<String> purviewResourceId;
+    private @Nullable Output<String> purviewResourceId;
 
-    public Output<String> purviewResourceId() {
-        return this.purviewResourceId == null ? Codegen.empty() : this.purviewResourceId;
+    public Optional<Output<String>> purviewResourceId() {
+        return Optional.ofNullable(this.purviewResourceId);
     }
 
-    public PurviewConfigurationArgs(@Nullable Output<String> purviewResourceId) {
-        this.purviewResourceId = purviewResourceId;
-    }
+    private PurviewConfigurationArgs() {}
 
-    private PurviewConfigurationArgs() {
-        this.purviewResourceId = Codegen.empty();
+    private PurviewConfigurationArgs(PurviewConfigurationArgs $) {
+        this.purviewResourceId = $.purviewResourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PurviewConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> purviewResourceId;
+        private PurviewConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PurviewConfigurationArgs();
         }
 
         public Builder(PurviewConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.purviewResourceId = defaults.purviewResourceId;
+            $ = new PurviewConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder purviewResourceId(@Nullable Output<String> purviewResourceId) {
-            this.purviewResourceId = purviewResourceId;
+            $.purviewResourceId = purviewResourceId;
             return this;
         }
-        public Builder purviewResourceId(@Nullable String purviewResourceId) {
-            this.purviewResourceId = Codegen.ofNullable(purviewResourceId);
-            return this;
-        }        public PurviewConfigurationArgs build() {
-            return new PurviewConfigurationArgs(purviewResourceId);
+
+        public Builder purviewResourceId(String purviewResourceId) {
+            return purviewResourceId(Output.of(purviewResourceId));
+        }
+
+        public PurviewConfigurationArgs build() {
+            return $;
         }
     }
+
 }

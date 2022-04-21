@@ -5,9 +5,9 @@ package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class VpcDhcpOptionsAssociationState extends com.pulumi.resources.R
      * 
      */
     @Import(name="dhcpOptionsId")
-      private final @Nullable Output<String> dhcpOptionsId;
+    private @Nullable Output<String> dhcpOptionsId;
 
-    public Output<String> dhcpOptionsId() {
-        return this.dhcpOptionsId == null ? Codegen.empty() : this.dhcpOptionsId;
+    public Optional<Output<String>> dhcpOptionsId() {
+        return Optional.ofNullable(this.dhcpOptionsId);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class VpcDhcpOptionsAssociationState extends com.pulumi.resources.R
      * 
      */
     @Import(name="vpcId")
-      private final @Nullable Output<String> vpcId;
+    private @Nullable Output<String> vpcId;
 
-    public Output<String> vpcId() {
-        return this.vpcId == null ? Codegen.empty() : this.vpcId;
+    public Optional<Output<String>> vpcId() {
+        return Optional.ofNullable(this.vpcId);
     }
 
-    public VpcDhcpOptionsAssociationState(
-        @Nullable Output<String> dhcpOptionsId,
-        @Nullable Output<String> vpcId) {
-        this.dhcpOptionsId = dhcpOptionsId;
-        this.vpcId = vpcId;
-    }
+    private VpcDhcpOptionsAssociationState() {}
 
-    private VpcDhcpOptionsAssociationState() {
-        this.dhcpOptionsId = Codegen.empty();
-        this.vpcId = Codegen.empty();
+    private VpcDhcpOptionsAssociationState(VpcDhcpOptionsAssociationState $) {
+        this.dhcpOptionsId = $.dhcpOptionsId;
+        this.vpcId = $.vpcId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VpcDhcpOptionsAssociationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> dhcpOptionsId;
-        private @Nullable Output<String> vpcId;
+        private VpcDhcpOptionsAssociationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new VpcDhcpOptionsAssociationState();
         }
 
         public Builder(VpcDhcpOptionsAssociationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dhcpOptionsId = defaults.dhcpOptionsId;
-    	      this.vpcId = defaults.vpcId;
+            $ = new VpcDhcpOptionsAssociationState(Objects.requireNonNull(defaults));
         }
 
         public Builder dhcpOptionsId(@Nullable Output<String> dhcpOptionsId) {
-            this.dhcpOptionsId = dhcpOptionsId;
+            $.dhcpOptionsId = dhcpOptionsId;
             return this;
         }
-        public Builder dhcpOptionsId(@Nullable String dhcpOptionsId) {
-            this.dhcpOptionsId = Codegen.ofNullable(dhcpOptionsId);
-            return this;
+
+        public Builder dhcpOptionsId(String dhcpOptionsId) {
+            return dhcpOptionsId(Output.of(dhcpOptionsId));
         }
+
         public Builder vpcId(@Nullable Output<String> vpcId) {
-            this.vpcId = vpcId;
+            $.vpcId = vpcId;
             return this;
         }
-        public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Codegen.ofNullable(vpcId);
-            return this;
-        }        public VpcDhcpOptionsAssociationState build() {
-            return new VpcDhcpOptionsAssociationState(dhcpOptionsId, vpcId);
+
+        public Builder vpcId(String vpcId) {
+            return vpcId(Output.of(vpcId));
+        }
+
+        public VpcDhcpOptionsAssociationState build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.gcp.memcache.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,130 +17,116 @@ public final class InstanceMemcacheNodeArgs extends com.pulumi.resources.Resourc
     public static final InstanceMemcacheNodeArgs Empty = new InstanceMemcacheNodeArgs();
 
     @Import(name="host")
-      private final @Nullable Output<String> host;
+    private @Nullable Output<String> host;
 
-    public Output<String> host() {
-        return this.host == null ? Codegen.empty() : this.host;
+    public Optional<Output<String>> host() {
+        return Optional.ofNullable(this.host);
     }
 
     @Import(name="nodeId")
-      private final @Nullable Output<String> nodeId;
+    private @Nullable Output<String> nodeId;
 
-    public Output<String> nodeId() {
-        return this.nodeId == null ? Codegen.empty() : this.nodeId;
+    public Optional<Output<String>> nodeId() {
+        return Optional.ofNullable(this.nodeId);
     }
 
     @Import(name="port")
-      private final @Nullable Output<Integer> port;
+    private @Nullable Output<Integer> port;
 
-    public Output<Integer> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<Integer>> port() {
+        return Optional.ofNullable(this.port);
     }
 
     @Import(name="state")
-      private final @Nullable Output<String> state;
+    private @Nullable Output<String> state;
 
-    public Output<String> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     @Import(name="zone")
-      private final @Nullable Output<String> zone;
+    private @Nullable Output<String> zone;
 
-    public Output<String> zone() {
-        return this.zone == null ? Codegen.empty() : this.zone;
+    public Optional<Output<String>> zone() {
+        return Optional.ofNullable(this.zone);
     }
 
-    public InstanceMemcacheNodeArgs(
-        @Nullable Output<String> host,
-        @Nullable Output<String> nodeId,
-        @Nullable Output<Integer> port,
-        @Nullable Output<String> state,
-        @Nullable Output<String> zone) {
-        this.host = host;
-        this.nodeId = nodeId;
-        this.port = port;
-        this.state = state;
-        this.zone = zone;
-    }
+    private InstanceMemcacheNodeArgs() {}
 
-    private InstanceMemcacheNodeArgs() {
-        this.host = Codegen.empty();
-        this.nodeId = Codegen.empty();
-        this.port = Codegen.empty();
-        this.state = Codegen.empty();
-        this.zone = Codegen.empty();
+    private InstanceMemcacheNodeArgs(InstanceMemcacheNodeArgs $) {
+        this.host = $.host;
+        this.nodeId = $.nodeId;
+        this.port = $.port;
+        this.state = $.state;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceMemcacheNodeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> host;
-        private @Nullable Output<String> nodeId;
-        private @Nullable Output<Integer> port;
-        private @Nullable Output<String> state;
-        private @Nullable Output<String> zone;
+        private InstanceMemcacheNodeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceMemcacheNodeArgs();
         }
 
         public Builder(InstanceMemcacheNodeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.host = defaults.host;
-    	      this.nodeId = defaults.nodeId;
-    	      this.port = defaults.port;
-    	      this.state = defaults.state;
-    	      this.zone = defaults.zone;
+            $ = new InstanceMemcacheNodeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder host(@Nullable Output<String> host) {
-            this.host = host;
+            $.host = host;
             return this;
         }
-        public Builder host(@Nullable String host) {
-            this.host = Codegen.ofNullable(host);
-            return this;
+
+        public Builder host(String host) {
+            return host(Output.of(host));
         }
+
         public Builder nodeId(@Nullable Output<String> nodeId) {
-            this.nodeId = nodeId;
+            $.nodeId = nodeId;
             return this;
         }
-        public Builder nodeId(@Nullable String nodeId) {
-            this.nodeId = Codegen.ofNullable(nodeId);
-            return this;
+
+        public Builder nodeId(String nodeId) {
+            return nodeId(Output.of(nodeId));
         }
+
         public Builder port(@Nullable Output<Integer> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable Integer port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
+
+        public Builder port(Integer port) {
+            return port(Output.of(port));
         }
+
         public Builder state(@Nullable Output<String> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable String state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
+
+        public Builder state(String state) {
+            return state(Output.of(state));
         }
+
         public Builder zone(@Nullable Output<String> zone) {
-            this.zone = zone;
+            $.zone = zone;
             return this;
         }
-        public Builder zone(@Nullable String zone) {
-            this.zone = Codegen.ofNullable(zone);
-            return this;
-        }        public InstanceMemcacheNodeArgs build() {
-            return new InstanceMemcacheNodeArgs(host, nodeId, port, state, zone);
+
+        public Builder zone(String zone) {
+            return zone(Output.of(zone));
+        }
+
+        public InstanceMemcacheNodeArgs build() {
+            return $;
         }
     }
+
 }

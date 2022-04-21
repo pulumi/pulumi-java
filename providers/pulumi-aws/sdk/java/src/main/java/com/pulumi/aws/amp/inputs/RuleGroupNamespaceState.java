@@ -5,9 +5,9 @@ package com.pulumi.aws.amp.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class RuleGroupNamespaceState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="data")
-      private final @Nullable Output<String> data;
+    private @Nullable Output<String> data;
 
-    public Output<String> data() {
-        return this.data == null ? Codegen.empty() : this.data;
+    public Optional<Output<String>> data() {
+        return Optional.ofNullable(this.data);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class RuleGroupNamespaceState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -42,76 +42,68 @@ public final class RuleGroupNamespaceState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="workspaceId")
-      private final @Nullable Output<String> workspaceId;
+    private @Nullable Output<String> workspaceId;
 
-    public Output<String> workspaceId() {
-        return this.workspaceId == null ? Codegen.empty() : this.workspaceId;
+    public Optional<Output<String>> workspaceId() {
+        return Optional.ofNullable(this.workspaceId);
     }
 
-    public RuleGroupNamespaceState(
-        @Nullable Output<String> data,
-        @Nullable Output<String> name,
-        @Nullable Output<String> workspaceId) {
-        this.data = data;
-        this.name = name;
-        this.workspaceId = workspaceId;
-    }
+    private RuleGroupNamespaceState() {}
 
-    private RuleGroupNamespaceState() {
-        this.data = Codegen.empty();
-        this.name = Codegen.empty();
-        this.workspaceId = Codegen.empty();
+    private RuleGroupNamespaceState(RuleGroupNamespaceState $) {
+        this.data = $.data;
+        this.name = $.name;
+        this.workspaceId = $.workspaceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupNamespaceState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> data;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> workspaceId;
+        private RuleGroupNamespaceState $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupNamespaceState();
         }
 
         public Builder(RuleGroupNamespaceState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.data = defaults.data;
-    	      this.name = defaults.name;
-    	      this.workspaceId = defaults.workspaceId;
+            $ = new RuleGroupNamespaceState(Objects.requireNonNull(defaults));
         }
 
         public Builder data(@Nullable Output<String> data) {
-            this.data = data;
+            $.data = data;
             return this;
         }
-        public Builder data(@Nullable String data) {
-            this.data = Codegen.ofNullable(data);
-            return this;
+
+        public Builder data(String data) {
+            return data(Output.of(data));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder workspaceId(@Nullable Output<String> workspaceId) {
-            this.workspaceId = workspaceId;
+            $.workspaceId = workspaceId;
             return this;
         }
-        public Builder workspaceId(@Nullable String workspaceId) {
-            this.workspaceId = Codegen.ofNullable(workspaceId);
-            return this;
-        }        public RuleGroupNamespaceState build() {
-            return new RuleGroupNamespaceState(data, name, workspaceId);
+
+        public Builder workspaceId(String workspaceId) {
+            return workspaceId(Output.of(workspaceId));
+        }
+
+        public RuleGroupNamespaceState build() {
+            return $;
         }
     }
+
 }

@@ -23,10 +23,10 @@ public final class RegistryCredentialsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="passwordSecretRef")
-      private final @Nullable String passwordSecretRef;
+    private @Nullable String passwordSecretRef;
 
     public Optional<String> passwordSecretRef() {
-        return this.passwordSecretRef == null ? Optional.empty() : Optional.ofNullable(this.passwordSecretRef);
+        return Optional.ofNullable(this.passwordSecretRef);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class RegistryCredentialsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="server")
-      private final @Nullable String server;
+    private @Nullable String server;
 
     public Optional<String> server() {
-        return this.server == null ? Optional.empty() : Optional.ofNullable(this.server);
+        return Optional.ofNullable(this.server);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class RegistryCredentialsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="username")
-      private final @Nullable String username;
+    private @Nullable String username;
 
     public Optional<String> username() {
-        return this.username == null ? Optional.empty() : Optional.ofNullable(this.username);
+        return Optional.ofNullable(this.username);
     }
 
-    public RegistryCredentialsResponse(
-        @Nullable String passwordSecretRef,
-        @Nullable String server,
-        @Nullable String username) {
-        this.passwordSecretRef = passwordSecretRef;
-        this.server = server;
-        this.username = username;
-    }
+    private RegistryCredentialsResponse() {}
 
-    private RegistryCredentialsResponse() {
-        this.passwordSecretRef = null;
-        this.server = null;
-        this.username = null;
+    private RegistryCredentialsResponse(RegistryCredentialsResponse $) {
+        this.passwordSecretRef = $.passwordSecretRef;
+        this.server = $.server;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegistryCredentialsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String passwordSecretRef;
-        private @Nullable String server;
-        private @Nullable String username;
+        private RegistryCredentialsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegistryCredentialsResponse();
         }
 
         public Builder(RegistryCredentialsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.passwordSecretRef = defaults.passwordSecretRef;
-    	      this.server = defaults.server;
-    	      this.username = defaults.username;
+            $ = new RegistryCredentialsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder passwordSecretRef(@Nullable String passwordSecretRef) {
-            this.passwordSecretRef = passwordSecretRef;
+            $.passwordSecretRef = passwordSecretRef;
             return this;
         }
+
         public Builder server(@Nullable String server) {
-            this.server = server;
+            $.server = server;
             return this;
         }
+
         public Builder username(@Nullable String username) {
-            this.username = username;
+            $.username = username;
             return this;
-        }        public RegistryCredentialsResponse build() {
-            return new RegistryCredentialsResponse(passwordSecretRef, server, username);
+        }
+
+        public RegistryCredentialsResponse build() {
+            return $;
         }
     }
+
 }

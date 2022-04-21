@@ -22,7 +22,7 @@ public final class MaintenanceWindowResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="dayOfWeek", required=true)
-      private final String dayOfWeek;
+    private String dayOfWeek;
 
     public String dayOfWeek() {
         return this.dayOfWeek;
@@ -33,55 +33,52 @@ public final class MaintenanceWindowResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="hourOfDay", required=true)
-      private final Integer hourOfDay;
+    private Integer hourOfDay;
 
     public Integer hourOfDay() {
         return this.hourOfDay;
     }
 
-    public MaintenanceWindowResponse(
-        String dayOfWeek,
-        Integer hourOfDay) {
-        this.dayOfWeek = Objects.requireNonNull(dayOfWeek, "expected parameter 'dayOfWeek' to be non-null");
-        this.hourOfDay = Objects.requireNonNull(hourOfDay, "expected parameter 'hourOfDay' to be non-null");
-    }
+    private MaintenanceWindowResponse() {}
 
-    private MaintenanceWindowResponse() {
-        this.dayOfWeek = null;
-        this.hourOfDay = null;
+    private MaintenanceWindowResponse(MaintenanceWindowResponse $) {
+        this.dayOfWeek = $.dayOfWeek;
+        this.hourOfDay = $.hourOfDay;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MaintenanceWindowResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String dayOfWeek;
-        private Integer hourOfDay;
+        private MaintenanceWindowResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MaintenanceWindowResponse();
         }
 
         public Builder(MaintenanceWindowResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dayOfWeek = defaults.dayOfWeek;
-    	      this.hourOfDay = defaults.hourOfDay;
+            $ = new MaintenanceWindowResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dayOfWeek(String dayOfWeek) {
-            this.dayOfWeek = Objects.requireNonNull(dayOfWeek);
+            $.dayOfWeek = dayOfWeek;
             return this;
         }
+
         public Builder hourOfDay(Integer hourOfDay) {
-            this.hourOfDay = Objects.requireNonNull(hourOfDay);
+            $.hourOfDay = hourOfDay;
             return this;
-        }        public MaintenanceWindowResponse build() {
-            return new MaintenanceWindowResponse(dayOfWeek, hourOfDay);
+        }
+
+        public MaintenanceWindowResponse build() {
+            $.dayOfWeek = Objects.requireNonNull($.dayOfWeek, "expected parameter 'dayOfWeek' to be non-null");
+            $.hourOfDay = Objects.requireNonNull($.hourOfDay, "expected parameter 'hourOfDay' to be non-null");
+            return $;
         }
     }
+
 }

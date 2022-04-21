@@ -22,7 +22,7 @@ public final class ShareSettingsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="projectMap", required=true)
-      private final Map<String,String> projectMap;
+    private Map<String,String> projectMap;
 
     public Map<String,String> projectMap() {
         return this.projectMap;
@@ -33,55 +33,52 @@ public final class ShareSettingsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="shareType", required=true)
-      private final String shareType;
+    private String shareType;
 
     public String shareType() {
         return this.shareType;
     }
 
-    public ShareSettingsResponse(
-        Map<String,String> projectMap,
-        String shareType) {
-        this.projectMap = Objects.requireNonNull(projectMap, "expected parameter 'projectMap' to be non-null");
-        this.shareType = Objects.requireNonNull(shareType, "expected parameter 'shareType' to be non-null");
-    }
+    private ShareSettingsResponse() {}
 
-    private ShareSettingsResponse() {
-        this.projectMap = Map.of();
-        this.shareType = null;
+    private ShareSettingsResponse(ShareSettingsResponse $) {
+        this.projectMap = $.projectMap;
+        this.shareType = $.shareType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ShareSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,String> projectMap;
-        private String shareType;
+        private ShareSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ShareSettingsResponse();
         }
 
         public Builder(ShareSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.projectMap = defaults.projectMap;
-    	      this.shareType = defaults.shareType;
+            $ = new ShareSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder projectMap(Map<String,String> projectMap) {
-            this.projectMap = Objects.requireNonNull(projectMap);
+            $.projectMap = projectMap;
             return this;
         }
+
         public Builder shareType(String shareType) {
-            this.shareType = Objects.requireNonNull(shareType);
+            $.shareType = shareType;
             return this;
-        }        public ShareSettingsResponse build() {
-            return new ShareSettingsResponse(projectMap, shareType);
+        }
+
+        public ShareSettingsResponse build() {
+            $.projectMap = Objects.requireNonNull($.projectMap, "expected parameter 'projectMap' to be non-null");
+            $.shareType = Objects.requireNonNull($.shareType, "expected parameter 'shareType' to be non-null");
+            return $;
         }
     }
+
 }

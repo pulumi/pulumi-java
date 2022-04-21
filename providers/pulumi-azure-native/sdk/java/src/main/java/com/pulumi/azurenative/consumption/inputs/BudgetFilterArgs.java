@@ -7,9 +7,9 @@ import com.pulumi.azurenative.consumption.inputs.BudgetComparisonExpressionArgs;
 import com.pulumi.azurenative.consumption.inputs.BudgetFilterPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class BudgetFilterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="and")
-      private final @Nullable Output<List<BudgetFilterPropertiesArgs>> and;
+    private @Nullable Output<List<BudgetFilterPropertiesArgs>> and;
 
-    public Output<List<BudgetFilterPropertiesArgs>> and() {
-        return this.and == null ? Codegen.empty() : this.and;
+    public Optional<Output<List<BudgetFilterPropertiesArgs>>> and() {
+        return Optional.ofNullable(this.and);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class BudgetFilterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dimensions")
-      private final @Nullable Output<BudgetComparisonExpressionArgs> dimensions;
+    private @Nullable Output<BudgetComparisonExpressionArgs> dimensions;
 
-    public Output<BudgetComparisonExpressionArgs> dimensions() {
-        return this.dimensions == null ? Codegen.empty() : this.dimensions;
+    public Optional<Output<BudgetComparisonExpressionArgs>> dimensions() {
+        return Optional.ofNullable(this.dimensions);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class BudgetFilterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="not")
-      private final @Nullable Output<BudgetFilterPropertiesArgs> not;
+    private @Nullable Output<BudgetFilterPropertiesArgs> not;
 
-    public Output<BudgetFilterPropertiesArgs> not() {
-        return this.not == null ? Codegen.empty() : this.not;
+    public Optional<Output<BudgetFilterPropertiesArgs>> not() {
+        return Optional.ofNullable(this.not);
     }
 
     /**
@@ -59,92 +59,82 @@ public final class BudgetFilterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<BudgetComparisonExpressionArgs> tags;
+    private @Nullable Output<BudgetComparisonExpressionArgs> tags;
 
-    public Output<BudgetComparisonExpressionArgs> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<BudgetComparisonExpressionArgs>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public BudgetFilterArgs(
-        @Nullable Output<List<BudgetFilterPropertiesArgs>> and,
-        @Nullable Output<BudgetComparisonExpressionArgs> dimensions,
-        @Nullable Output<BudgetFilterPropertiesArgs> not,
-        @Nullable Output<BudgetComparisonExpressionArgs> tags) {
-        this.and = and;
-        this.dimensions = dimensions;
-        this.not = not;
-        this.tags = tags;
-    }
+    private BudgetFilterArgs() {}
 
-    private BudgetFilterArgs() {
-        this.and = Codegen.empty();
-        this.dimensions = Codegen.empty();
-        this.not = Codegen.empty();
-        this.tags = Codegen.empty();
+    private BudgetFilterArgs(BudgetFilterArgs $) {
+        this.and = $.and;
+        this.dimensions = $.dimensions;
+        this.not = $.not;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BudgetFilterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<BudgetFilterPropertiesArgs>> and;
-        private @Nullable Output<BudgetComparisonExpressionArgs> dimensions;
-        private @Nullable Output<BudgetFilterPropertiesArgs> not;
-        private @Nullable Output<BudgetComparisonExpressionArgs> tags;
+        private BudgetFilterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BudgetFilterArgs();
         }
 
         public Builder(BudgetFilterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.and = defaults.and;
-    	      this.dimensions = defaults.dimensions;
-    	      this.not = defaults.not;
-    	      this.tags = defaults.tags;
+            $ = new BudgetFilterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder and(@Nullable Output<List<BudgetFilterPropertiesArgs>> and) {
-            this.and = and;
+            $.and = and;
             return this;
         }
-        public Builder and(@Nullable List<BudgetFilterPropertiesArgs> and) {
-            this.and = Codegen.ofNullable(and);
-            return this;
+
+        public Builder and(List<BudgetFilterPropertiesArgs> and) {
+            return and(Output.of(and));
         }
+
         public Builder and(BudgetFilterPropertiesArgs... and) {
             return and(List.of(and));
         }
+
         public Builder dimensions(@Nullable Output<BudgetComparisonExpressionArgs> dimensions) {
-            this.dimensions = dimensions;
+            $.dimensions = dimensions;
             return this;
         }
-        public Builder dimensions(@Nullable BudgetComparisonExpressionArgs dimensions) {
-            this.dimensions = Codegen.ofNullable(dimensions);
-            return this;
+
+        public Builder dimensions(BudgetComparisonExpressionArgs dimensions) {
+            return dimensions(Output.of(dimensions));
         }
+
         public Builder not(@Nullable Output<BudgetFilterPropertiesArgs> not) {
-            this.not = not;
+            $.not = not;
             return this;
         }
-        public Builder not(@Nullable BudgetFilterPropertiesArgs not) {
-            this.not = Codegen.ofNullable(not);
-            return this;
+
+        public Builder not(BudgetFilterPropertiesArgs not) {
+            return not(Output.of(not));
         }
+
         public Builder tags(@Nullable Output<BudgetComparisonExpressionArgs> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable BudgetComparisonExpressionArgs tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public BudgetFilterArgs build() {
-            return new BudgetFilterArgs(and, dimensions, not, tags);
+
+        public Builder tags(BudgetComparisonExpressionArgs tags) {
+            return tags(Output.of(tags));
+        }
+
+        public BudgetFilterArgs build() {
+            return $;
         }
     }
+
 }

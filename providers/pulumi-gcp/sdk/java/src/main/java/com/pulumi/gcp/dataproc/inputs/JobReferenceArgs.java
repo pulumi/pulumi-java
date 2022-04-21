@@ -5,9 +5,9 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class JobReferenceArgs extends com.pulumi.resources.ResourceArgs {
     public static final JobReferenceArgs Empty = new JobReferenceArgs();
 
     @Import(name="jobId")
-      private final @Nullable Output<String> jobId;
+    private @Nullable Output<String> jobId;
 
-    public Output<String> jobId() {
-        return this.jobId == null ? Codegen.empty() : this.jobId;
+    public Optional<Output<String>> jobId() {
+        return Optional.ofNullable(this.jobId);
     }
 
-    public JobReferenceArgs(@Nullable Output<String> jobId) {
-        this.jobId = jobId;
-    }
+    private JobReferenceArgs() {}
 
-    private JobReferenceArgs() {
-        this.jobId = Codegen.empty();
+    private JobReferenceArgs(JobReferenceArgs $) {
+        this.jobId = $.jobId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobReferenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> jobId;
+        private JobReferenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobReferenceArgs();
         }
 
         public Builder(JobReferenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.jobId = defaults.jobId;
+            $ = new JobReferenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder jobId(@Nullable Output<String> jobId) {
-            this.jobId = jobId;
+            $.jobId = jobId;
             return this;
         }
-        public Builder jobId(@Nullable String jobId) {
-            this.jobId = Codegen.ofNullable(jobId);
-            return this;
-        }        public JobReferenceArgs build() {
-            return new JobReferenceArgs(jobId);
+
+        public Builder jobId(String jobId) {
+            return jobId(Output.of(jobId));
+        }
+
+        public JobReferenceArgs build() {
+            return $;
         }
     }
+
 }

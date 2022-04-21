@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,7 +31,7 @@ public final class ScopedResourceSelectorRequirementArgs extends com.pulumi.reso
      * 
      */
     @Import(name="operator", required=true)
-      private final Output<String> operator;
+    private Output<String> operator;
 
     public Output<String> operator() {
         return this.operator;
@@ -50,7 +50,7 @@ public final class ScopedResourceSelectorRequirementArgs extends com.pulumi.reso
      * 
      */
     @Import(name="scopeName", required=true)
-      private final Output<String> scopeName;
+    private Output<String> scopeName;
 
     public Output<String> scopeName() {
         return this.scopeName;
@@ -61,79 +61,74 @@ public final class ScopedResourceSelectorRequirementArgs extends com.pulumi.reso
      * 
      */
     @Import(name="values")
-      private final @Nullable Output<List<String>> values;
+    private @Nullable Output<List<String>> values;
 
-    public Output<List<String>> values() {
-        return this.values == null ? Codegen.empty() : this.values;
+    public Optional<Output<List<String>>> values() {
+        return Optional.ofNullable(this.values);
     }
 
-    public ScopedResourceSelectorRequirementArgs(
-        Output<String> operator,
-        Output<String> scopeName,
-        @Nullable Output<List<String>> values) {
-        this.operator = Objects.requireNonNull(operator, "expected parameter 'operator' to be non-null");
-        this.scopeName = Objects.requireNonNull(scopeName, "expected parameter 'scopeName' to be non-null");
-        this.values = values;
-    }
+    private ScopedResourceSelectorRequirementArgs() {}
 
-    private ScopedResourceSelectorRequirementArgs() {
-        this.operator = Codegen.empty();
-        this.scopeName = Codegen.empty();
-        this.values = Codegen.empty();
+    private ScopedResourceSelectorRequirementArgs(ScopedResourceSelectorRequirementArgs $) {
+        this.operator = $.operator;
+        this.scopeName = $.scopeName;
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScopedResourceSelectorRequirementArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> operator;
-        private Output<String> scopeName;
-        private @Nullable Output<List<String>> values;
+        private ScopedResourceSelectorRequirementArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScopedResourceSelectorRequirementArgs();
         }
 
         public Builder(ScopedResourceSelectorRequirementArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.operator = defaults.operator;
-    	      this.scopeName = defaults.scopeName;
-    	      this.values = defaults.values;
+            $ = new ScopedResourceSelectorRequirementArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder operator(Output<String> operator) {
-            this.operator = Objects.requireNonNull(operator);
+            $.operator = operator;
             return this;
         }
+
         public Builder operator(String operator) {
-            this.operator = Output.of(Objects.requireNonNull(operator));
-            return this;
+            return operator(Output.of(operator));
         }
+
         public Builder scopeName(Output<String> scopeName) {
-            this.scopeName = Objects.requireNonNull(scopeName);
+            $.scopeName = scopeName;
             return this;
         }
+
         public Builder scopeName(String scopeName) {
-            this.scopeName = Output.of(Objects.requireNonNull(scopeName));
-            return this;
+            return scopeName(Output.of(scopeName));
         }
+
         public Builder values(@Nullable Output<List<String>> values) {
-            this.values = values;
+            $.values = values;
             return this;
         }
-        public Builder values(@Nullable List<String> values) {
-            this.values = Codegen.ofNullable(values);
-            return this;
+
+        public Builder values(List<String> values) {
+            return values(Output.of(values));
         }
+
         public Builder values(String... values) {
             return values(List.of(values));
-        }        public ScopedResourceSelectorRequirementArgs build() {
-            return new ScopedResourceSelectorRequirementArgs(operator, scopeName, values);
+        }
+
+        public ScopedResourceSelectorRequirementArgs build() {
+            $.operator = Objects.requireNonNull($.operator, "expected parameter 'operator' to be non-null");
+            $.scopeName = Objects.requireNonNull($.scopeName, "expected parameter 'scopeName' to be non-null");
+            return $;
         }
     }
+
 }

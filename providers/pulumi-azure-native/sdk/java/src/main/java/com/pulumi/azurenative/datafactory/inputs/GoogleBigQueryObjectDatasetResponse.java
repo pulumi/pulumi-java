@@ -30,10 +30,10 @@ public final class GoogleBigQueryObjectDatasetResponse extends com.pulumi.resour
      * 
      */
     @Import(name="annotations")
-      private final @Nullable List<Object> annotations;
+    private @Nullable List<Object> annotations;
 
-    public List<Object> annotations() {
-        return this.annotations == null ? List.of() : this.annotations;
+    public Optional<List<Object>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class GoogleBigQueryObjectDatasetResponse extends com.pulumi.resour
      * 
      */
     @Import(name="dataset")
-      private final @Nullable Object dataset;
+    private @Nullable Object dataset;
 
     public Optional<Object> dataset() {
-        return this.dataset == null ? Optional.empty() : Optional.ofNullable(this.dataset);
+        return Optional.ofNullable(this.dataset);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class GoogleBigQueryObjectDatasetResponse extends com.pulumi.resour
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class GoogleBigQueryObjectDatasetResponse extends com.pulumi.resour
      * 
      */
     @Import(name="folder")
-      private final @Nullable DatasetResponseFolder folder;
+    private @Nullable DatasetResponseFolder folder;
 
     public Optional<DatasetResponseFolder> folder() {
-        return this.folder == null ? Optional.empty() : Optional.ofNullable(this.folder);
+        return Optional.ofNullable(this.folder);
     }
 
     /**
@@ -74,7 +74,7 @@ public final class GoogleBigQueryObjectDatasetResponse extends com.pulumi.resour
      * 
      */
     @Import(name="linkedServiceName", required=true)
-      private final LinkedServiceReferenceResponse linkedServiceName;
+    private LinkedServiceReferenceResponse linkedServiceName;
 
     public LinkedServiceReferenceResponse linkedServiceName() {
         return this.linkedServiceName;
@@ -85,10 +85,10 @@ public final class GoogleBigQueryObjectDatasetResponse extends com.pulumi.resour
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+    private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> parameters() {
-        return this.parameters == null ? Map.of() : this.parameters;
+    public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -96,10 +96,10 @@ public final class GoogleBigQueryObjectDatasetResponse extends com.pulumi.resour
      * 
      */
     @Import(name="schema")
-      private final @Nullable Object schema;
+    private @Nullable Object schema;
 
     public Optional<Object> schema() {
-        return this.schema == null ? Optional.empty() : Optional.ofNullable(this.schema);
+        return Optional.ofNullable(this.schema);
     }
 
     /**
@@ -107,10 +107,10 @@ public final class GoogleBigQueryObjectDatasetResponse extends com.pulumi.resour
      * 
      */
     @Import(name="structure")
-      private final @Nullable Object structure;
+    private @Nullable Object structure;
 
     public Optional<Object> structure() {
-        return this.structure == null ? Optional.empty() : Optional.ofNullable(this.structure);
+        return Optional.ofNullable(this.structure);
     }
 
     /**
@@ -118,10 +118,10 @@ public final class GoogleBigQueryObjectDatasetResponse extends com.pulumi.resour
      * 
      */
     @Import(name="table")
-      private final @Nullable Object table;
+    private @Nullable Object table;
 
     public Optional<Object> table() {
-        return this.table == null ? Optional.empty() : Optional.ofNullable(this.table);
+        return Optional.ofNullable(this.table);
     }
 
     /**
@@ -129,10 +129,10 @@ public final class GoogleBigQueryObjectDatasetResponse extends com.pulumi.resour
      * 
      */
     @Import(name="tableName")
-      private final @Nullable Object tableName;
+    private @Nullable Object tableName;
 
     public Optional<Object> tableName() {
-        return this.tableName == null ? Optional.empty() : Optional.ofNullable(this.tableName);
+        return Optional.ofNullable(this.tableName);
     }
 
     /**
@@ -141,139 +141,110 @@ public final class GoogleBigQueryObjectDatasetResponse extends com.pulumi.resour
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public GoogleBigQueryObjectDatasetResponse(
-        @Nullable List<Object> annotations,
-        @Nullable Object dataset,
-        @Nullable String description,
-        @Nullable DatasetResponseFolder folder,
-        LinkedServiceReferenceResponse linkedServiceName,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Object schema,
-        @Nullable Object structure,
-        @Nullable Object table,
-        @Nullable Object tableName,
-        String type) {
-        this.annotations = annotations;
-        this.dataset = dataset;
-        this.description = description;
-        this.folder = folder;
-        this.linkedServiceName = Objects.requireNonNull(linkedServiceName, "expected parameter 'linkedServiceName' to be non-null");
-        this.parameters = parameters;
-        this.schema = schema;
-        this.structure = structure;
-        this.table = table;
-        this.tableName = tableName;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private GoogleBigQueryObjectDatasetResponse() {}
 
-    private GoogleBigQueryObjectDatasetResponse() {
-        this.annotations = List.of();
-        this.dataset = null;
-        this.description = null;
-        this.folder = null;
-        this.linkedServiceName = null;
-        this.parameters = Map.of();
-        this.schema = null;
-        this.structure = null;
-        this.table = null;
-        this.tableName = null;
-        this.type = null;
+    private GoogleBigQueryObjectDatasetResponse(GoogleBigQueryObjectDatasetResponse $) {
+        this.annotations = $.annotations;
+        this.dataset = $.dataset;
+        this.description = $.description;
+        this.folder = $.folder;
+        this.linkedServiceName = $.linkedServiceName;
+        this.parameters = $.parameters;
+        this.schema = $.schema;
+        this.structure = $.structure;
+        this.table = $.table;
+        this.tableName = $.tableName;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleBigQueryObjectDatasetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<Object> annotations;
-        private @Nullable Object dataset;
-        private @Nullable String description;
-        private @Nullable DatasetResponseFolder folder;
-        private LinkedServiceReferenceResponse linkedServiceName;
-        private @Nullable Map<String,ParameterSpecificationResponse> parameters;
-        private @Nullable Object schema;
-        private @Nullable Object structure;
-        private @Nullable Object table;
-        private @Nullable Object tableName;
-        private String type;
+        private GoogleBigQueryObjectDatasetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleBigQueryObjectDatasetResponse();
         }
 
         public Builder(GoogleBigQueryObjectDatasetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.dataset = defaults.dataset;
-    	      this.description = defaults.description;
-    	      this.folder = defaults.folder;
-    	      this.linkedServiceName = defaults.linkedServiceName;
-    	      this.parameters = defaults.parameters;
-    	      this.schema = defaults.schema;
-    	      this.structure = defaults.structure;
-    	      this.table = defaults.table;
-    	      this.tableName = defaults.tableName;
-    	      this.type = defaults.type;
+            $ = new GoogleBigQueryObjectDatasetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder dataset(@Nullable Object dataset) {
-            this.dataset = dataset;
+            $.dataset = dataset;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder folder(@Nullable DatasetResponseFolder folder) {
-            this.folder = folder;
+            $.folder = folder;
             return this;
         }
+
         public Builder linkedServiceName(LinkedServiceReferenceResponse linkedServiceName) {
-            this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
+            $.linkedServiceName = linkedServiceName;
             return this;
         }
+
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder schema(@Nullable Object schema) {
-            this.schema = schema;
+            $.schema = schema;
             return this;
         }
+
         public Builder structure(@Nullable Object structure) {
-            this.structure = structure;
+            $.structure = structure;
             return this;
         }
+
         public Builder table(@Nullable Object table) {
-            this.table = table;
+            $.table = table;
             return this;
         }
+
         public Builder tableName(@Nullable Object tableName) {
-            this.tableName = tableName;
+            $.tableName = tableName;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public GoogleBigQueryObjectDatasetResponse build() {
-            return new GoogleBigQueryObjectDatasetResponse(annotations, dataset, description, folder, linkedServiceName, parameters, schema, structure, table, tableName, type);
+        }
+
+        public GoogleBigQueryObjectDatasetResponse build() {
+            $.linkedServiceName = Objects.requireNonNull($.linkedServiceName, "expected parameter 'linkedServiceName' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

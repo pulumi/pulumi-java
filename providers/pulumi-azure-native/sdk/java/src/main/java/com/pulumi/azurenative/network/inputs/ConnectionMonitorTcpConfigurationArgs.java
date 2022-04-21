@@ -7,11 +7,11 @@ import com.pulumi.azurenative.network.enums.DestinationPortBehavior;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class ConnectionMonitorTcpConfigurationArgs extends com.pulumi.reso
      * 
      */
     @Import(name="destinationPortBehavior")
-      private final @Nullable Output<Either<String,DestinationPortBehavior>> destinationPortBehavior;
+    private @Nullable Output<Either<String,DestinationPortBehavior>> destinationPortBehavior;
 
-    public Output<Either<String,DestinationPortBehavior>> destinationPortBehavior() {
-        return this.destinationPortBehavior == null ? Codegen.empty() : this.destinationPortBehavior;
+    public Optional<Output<Either<String,DestinationPortBehavior>>> destinationPortBehavior() {
+        return Optional.ofNullable(this.destinationPortBehavior);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class ConnectionMonitorTcpConfigurationArgs extends com.pulumi.reso
      * 
      */
     @Import(name="disableTraceRoute")
-      private final @Nullable Output<Boolean> disableTraceRoute;
+    private @Nullable Output<Boolean> disableTraceRoute;
 
-    public Output<Boolean> disableTraceRoute() {
-        return this.disableTraceRoute == null ? Codegen.empty() : this.disableTraceRoute;
+    public Optional<Output<Boolean>> disableTraceRoute() {
+        return Optional.ofNullable(this.disableTraceRoute);
     }
 
     /**
@@ -50,76 +50,68 @@ public final class ConnectionMonitorTcpConfigurationArgs extends com.pulumi.reso
      * 
      */
     @Import(name="port")
-      private final @Nullable Output<Integer> port;
+    private @Nullable Output<Integer> port;
 
-    public Output<Integer> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<Integer>> port() {
+        return Optional.ofNullable(this.port);
     }
 
-    public ConnectionMonitorTcpConfigurationArgs(
-        @Nullable Output<Either<String,DestinationPortBehavior>> destinationPortBehavior,
-        @Nullable Output<Boolean> disableTraceRoute,
-        @Nullable Output<Integer> port) {
-        this.destinationPortBehavior = destinationPortBehavior;
-        this.disableTraceRoute = disableTraceRoute;
-        this.port = port;
-    }
+    private ConnectionMonitorTcpConfigurationArgs() {}
 
-    private ConnectionMonitorTcpConfigurationArgs() {
-        this.destinationPortBehavior = Codegen.empty();
-        this.disableTraceRoute = Codegen.empty();
-        this.port = Codegen.empty();
+    private ConnectionMonitorTcpConfigurationArgs(ConnectionMonitorTcpConfigurationArgs $) {
+        this.destinationPortBehavior = $.destinationPortBehavior;
+        this.disableTraceRoute = $.disableTraceRoute;
+        this.port = $.port;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionMonitorTcpConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,DestinationPortBehavior>> destinationPortBehavior;
-        private @Nullable Output<Boolean> disableTraceRoute;
-        private @Nullable Output<Integer> port;
+        private ConnectionMonitorTcpConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionMonitorTcpConfigurationArgs();
         }
 
         public Builder(ConnectionMonitorTcpConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destinationPortBehavior = defaults.destinationPortBehavior;
-    	      this.disableTraceRoute = defaults.disableTraceRoute;
-    	      this.port = defaults.port;
+            $ = new ConnectionMonitorTcpConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder destinationPortBehavior(@Nullable Output<Either<String,DestinationPortBehavior>> destinationPortBehavior) {
-            this.destinationPortBehavior = destinationPortBehavior;
+            $.destinationPortBehavior = destinationPortBehavior;
             return this;
         }
-        public Builder destinationPortBehavior(@Nullable Either<String,DestinationPortBehavior> destinationPortBehavior) {
-            this.destinationPortBehavior = Codegen.ofNullable(destinationPortBehavior);
-            return this;
+
+        public Builder destinationPortBehavior(Either<String,DestinationPortBehavior> destinationPortBehavior) {
+            return destinationPortBehavior(Output.of(destinationPortBehavior));
         }
+
         public Builder disableTraceRoute(@Nullable Output<Boolean> disableTraceRoute) {
-            this.disableTraceRoute = disableTraceRoute;
+            $.disableTraceRoute = disableTraceRoute;
             return this;
         }
-        public Builder disableTraceRoute(@Nullable Boolean disableTraceRoute) {
-            this.disableTraceRoute = Codegen.ofNullable(disableTraceRoute);
-            return this;
+
+        public Builder disableTraceRoute(Boolean disableTraceRoute) {
+            return disableTraceRoute(Output.of(disableTraceRoute));
         }
+
         public Builder port(@Nullable Output<Integer> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable Integer port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
-        }        public ConnectionMonitorTcpConfigurationArgs build() {
-            return new ConnectionMonitorTcpConfigurationArgs(destinationPortBehavior, disableTraceRoute, port);
+
+        public Builder port(Integer port) {
+            return port(Output.of(port));
+        }
+
+        public ConnectionMonitorTcpConfigurationArgs build() {
+            return $;
         }
     }
+
 }

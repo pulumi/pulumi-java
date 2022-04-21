@@ -25,8 +25,8 @@ import com.pulumi.aws.quicksight.inputs.DataSourceParametersTeradataGetArgs;
 import com.pulumi.aws.quicksight.inputs.DataSourceParametersTwitterGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -39,10 +39,10 @@ public final class DataSourceParametersGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="amazonElasticsearch")
-      private final @Nullable Output<DataSourceParametersAmazonElasticsearchGetArgs> amazonElasticsearch;
+    private @Nullable Output<DataSourceParametersAmazonElasticsearchGetArgs> amazonElasticsearch;
 
-    public Output<DataSourceParametersAmazonElasticsearchGetArgs> amazonElasticsearch() {
-        return this.amazonElasticsearch == null ? Codegen.empty() : this.amazonElasticsearch;
+    public Optional<Output<DataSourceParametersAmazonElasticsearchGetArgs>> amazonElasticsearch() {
+        return Optional.ofNullable(this.amazonElasticsearch);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class DataSourceParametersGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="athena")
-      private final @Nullable Output<DataSourceParametersAthenaGetArgs> athena;
+    private @Nullable Output<DataSourceParametersAthenaGetArgs> athena;
 
-    public Output<DataSourceParametersAthenaGetArgs> athena() {
-        return this.athena == null ? Codegen.empty() : this.athena;
+    public Optional<Output<DataSourceParametersAthenaGetArgs>> athena() {
+        return Optional.ofNullable(this.athena);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class DataSourceParametersGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="aurora")
-      private final @Nullable Output<DataSourceParametersAuroraGetArgs> aurora;
+    private @Nullable Output<DataSourceParametersAuroraGetArgs> aurora;
 
-    public Output<DataSourceParametersAuroraGetArgs> aurora() {
-        return this.aurora == null ? Codegen.empty() : this.aurora;
+    public Optional<Output<DataSourceParametersAuroraGetArgs>> aurora() {
+        return Optional.ofNullable(this.aurora);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class DataSourceParametersGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="auroraPostgresql")
-      private final @Nullable Output<DataSourceParametersAuroraPostgresqlGetArgs> auroraPostgresql;
+    private @Nullable Output<DataSourceParametersAuroraPostgresqlGetArgs> auroraPostgresql;
 
-    public Output<DataSourceParametersAuroraPostgresqlGetArgs> auroraPostgresql() {
-        return this.auroraPostgresql == null ? Codegen.empty() : this.auroraPostgresql;
+    public Optional<Output<DataSourceParametersAuroraPostgresqlGetArgs>> auroraPostgresql() {
+        return Optional.ofNullable(this.auroraPostgresql);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class DataSourceParametersGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="awsIotAnalytics")
-      private final @Nullable Output<DataSourceParametersAwsIotAnalyticsGetArgs> awsIotAnalytics;
+    private @Nullable Output<DataSourceParametersAwsIotAnalyticsGetArgs> awsIotAnalytics;
 
-    public Output<DataSourceParametersAwsIotAnalyticsGetArgs> awsIotAnalytics() {
-        return this.awsIotAnalytics == null ? Codegen.empty() : this.awsIotAnalytics;
+    public Optional<Output<DataSourceParametersAwsIotAnalyticsGetArgs>> awsIotAnalytics() {
+        return Optional.ofNullable(this.awsIotAnalytics);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class DataSourceParametersGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="jira")
-      private final @Nullable Output<DataSourceParametersJiraGetArgs> jira;
+    private @Nullable Output<DataSourceParametersJiraGetArgs> jira;
 
-    public Output<DataSourceParametersJiraGetArgs> jira() {
-        return this.jira == null ? Codegen.empty() : this.jira;
+    public Optional<Output<DataSourceParametersJiraGetArgs>> jira() {
+        return Optional.ofNullable(this.jira);
     }
 
     /**
@@ -105,10 +105,10 @@ public final class DataSourceParametersGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="mariaDb")
-      private final @Nullable Output<DataSourceParametersMariaDbGetArgs> mariaDb;
+    private @Nullable Output<DataSourceParametersMariaDbGetArgs> mariaDb;
 
-    public Output<DataSourceParametersMariaDbGetArgs> mariaDb() {
-        return this.mariaDb == null ? Codegen.empty() : this.mariaDb;
+    public Optional<Output<DataSourceParametersMariaDbGetArgs>> mariaDb() {
+        return Optional.ofNullable(this.mariaDb);
     }
 
     /**
@@ -116,10 +116,10 @@ public final class DataSourceParametersGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="mysql")
-      private final @Nullable Output<DataSourceParametersMysqlGetArgs> mysql;
+    private @Nullable Output<DataSourceParametersMysqlGetArgs> mysql;
 
-    public Output<DataSourceParametersMysqlGetArgs> mysql() {
-        return this.mysql == null ? Codegen.empty() : this.mysql;
+    public Optional<Output<DataSourceParametersMysqlGetArgs>> mysql() {
+        return Optional.ofNullable(this.mysql);
     }
 
     /**
@@ -127,10 +127,10 @@ public final class DataSourceParametersGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="oracle")
-      private final @Nullable Output<DataSourceParametersOracleGetArgs> oracle;
+    private @Nullable Output<DataSourceParametersOracleGetArgs> oracle;
 
-    public Output<DataSourceParametersOracleGetArgs> oracle() {
-        return this.oracle == null ? Codegen.empty() : this.oracle;
+    public Optional<Output<DataSourceParametersOracleGetArgs>> oracle() {
+        return Optional.ofNullable(this.oracle);
     }
 
     /**
@@ -138,10 +138,10 @@ public final class DataSourceParametersGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="postgresql")
-      private final @Nullable Output<DataSourceParametersPostgresqlGetArgs> postgresql;
+    private @Nullable Output<DataSourceParametersPostgresqlGetArgs> postgresql;
 
-    public Output<DataSourceParametersPostgresqlGetArgs> postgresql() {
-        return this.postgresql == null ? Codegen.empty() : this.postgresql;
+    public Optional<Output<DataSourceParametersPostgresqlGetArgs>> postgresql() {
+        return Optional.ofNullable(this.postgresql);
     }
 
     /**
@@ -149,10 +149,10 @@ public final class DataSourceParametersGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="presto")
-      private final @Nullable Output<DataSourceParametersPrestoGetArgs> presto;
+    private @Nullable Output<DataSourceParametersPrestoGetArgs> presto;
 
-    public Output<DataSourceParametersPrestoGetArgs> presto() {
-        return this.presto == null ? Codegen.empty() : this.presto;
+    public Optional<Output<DataSourceParametersPrestoGetArgs>> presto() {
+        return Optional.ofNullable(this.presto);
     }
 
     /**
@@ -160,10 +160,10 @@ public final class DataSourceParametersGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="rds")
-      private final @Nullable Output<DataSourceParametersRdsGetArgs> rds;
+    private @Nullable Output<DataSourceParametersRdsGetArgs> rds;
 
-    public Output<DataSourceParametersRdsGetArgs> rds() {
-        return this.rds == null ? Codegen.empty() : this.rds;
+    public Optional<Output<DataSourceParametersRdsGetArgs>> rds() {
+        return Optional.ofNullable(this.rds);
     }
 
     /**
@@ -171,10 +171,10 @@ public final class DataSourceParametersGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="redshift")
-      private final @Nullable Output<DataSourceParametersRedshiftGetArgs> redshift;
+    private @Nullable Output<DataSourceParametersRedshiftGetArgs> redshift;
 
-    public Output<DataSourceParametersRedshiftGetArgs> redshift() {
-        return this.redshift == null ? Codegen.empty() : this.redshift;
+    public Optional<Output<DataSourceParametersRedshiftGetArgs>> redshift() {
+        return Optional.ofNullable(this.redshift);
     }
 
     /**
@@ -182,10 +182,10 @@ public final class DataSourceParametersGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="s3")
-      private final @Nullable Output<DataSourceParametersS3GetArgs> s3;
+    private @Nullable Output<DataSourceParametersS3GetArgs> s3;
 
-    public Output<DataSourceParametersS3GetArgs> s3() {
-        return this.s3 == null ? Codegen.empty() : this.s3;
+    public Optional<Output<DataSourceParametersS3GetArgs>> s3() {
+        return Optional.ofNullable(this.s3);
     }
 
     /**
@@ -193,10 +193,10 @@ public final class DataSourceParametersGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="serviceNow")
-      private final @Nullable Output<DataSourceParametersServiceNowGetArgs> serviceNow;
+    private @Nullable Output<DataSourceParametersServiceNowGetArgs> serviceNow;
 
-    public Output<DataSourceParametersServiceNowGetArgs> serviceNow() {
-        return this.serviceNow == null ? Codegen.empty() : this.serviceNow;
+    public Optional<Output<DataSourceParametersServiceNowGetArgs>> serviceNow() {
+        return Optional.ofNullable(this.serviceNow);
     }
 
     /**
@@ -204,10 +204,10 @@ public final class DataSourceParametersGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="snowflake")
-      private final @Nullable Output<DataSourceParametersSnowflakeGetArgs> snowflake;
+    private @Nullable Output<DataSourceParametersSnowflakeGetArgs> snowflake;
 
-    public Output<DataSourceParametersSnowflakeGetArgs> snowflake() {
-        return this.snowflake == null ? Codegen.empty() : this.snowflake;
+    public Optional<Output<DataSourceParametersSnowflakeGetArgs>> snowflake() {
+        return Optional.ofNullable(this.snowflake);
     }
 
     /**
@@ -215,10 +215,10 @@ public final class DataSourceParametersGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="spark")
-      private final @Nullable Output<DataSourceParametersSparkGetArgs> spark;
+    private @Nullable Output<DataSourceParametersSparkGetArgs> spark;
 
-    public Output<DataSourceParametersSparkGetArgs> spark() {
-        return this.spark == null ? Codegen.empty() : this.spark;
+    public Optional<Output<DataSourceParametersSparkGetArgs>> spark() {
+        return Optional.ofNullable(this.spark);
     }
 
     /**
@@ -226,10 +226,10 @@ public final class DataSourceParametersGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="sqlServer")
-      private final @Nullable Output<DataSourceParametersSqlServerGetArgs> sqlServer;
+    private @Nullable Output<DataSourceParametersSqlServerGetArgs> sqlServer;
 
-    public Output<DataSourceParametersSqlServerGetArgs> sqlServer() {
-        return this.sqlServer == null ? Codegen.empty() : this.sqlServer;
+    public Optional<Output<DataSourceParametersSqlServerGetArgs>> sqlServer() {
+        return Optional.ofNullable(this.sqlServer);
     }
 
     /**
@@ -237,10 +237,10 @@ public final class DataSourceParametersGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="teradata")
-      private final @Nullable Output<DataSourceParametersTeradataGetArgs> teradata;
+    private @Nullable Output<DataSourceParametersTeradataGetArgs> teradata;
 
-    public Output<DataSourceParametersTeradataGetArgs> teradata() {
-        return this.teradata == null ? Codegen.empty() : this.teradata;
+    public Optional<Output<DataSourceParametersTeradataGetArgs>> teradata() {
+        return Optional.ofNullable(this.teradata);
     }
 
     /**
@@ -248,297 +248,238 @@ public final class DataSourceParametersGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="twitter")
-      private final @Nullable Output<DataSourceParametersTwitterGetArgs> twitter;
+    private @Nullable Output<DataSourceParametersTwitterGetArgs> twitter;
 
-    public Output<DataSourceParametersTwitterGetArgs> twitter() {
-        return this.twitter == null ? Codegen.empty() : this.twitter;
+    public Optional<Output<DataSourceParametersTwitterGetArgs>> twitter() {
+        return Optional.ofNullable(this.twitter);
     }
 
-    public DataSourceParametersGetArgs(
-        @Nullable Output<DataSourceParametersAmazonElasticsearchGetArgs> amazonElasticsearch,
-        @Nullable Output<DataSourceParametersAthenaGetArgs> athena,
-        @Nullable Output<DataSourceParametersAuroraGetArgs> aurora,
-        @Nullable Output<DataSourceParametersAuroraPostgresqlGetArgs> auroraPostgresql,
-        @Nullable Output<DataSourceParametersAwsIotAnalyticsGetArgs> awsIotAnalytics,
-        @Nullable Output<DataSourceParametersJiraGetArgs> jira,
-        @Nullable Output<DataSourceParametersMariaDbGetArgs> mariaDb,
-        @Nullable Output<DataSourceParametersMysqlGetArgs> mysql,
-        @Nullable Output<DataSourceParametersOracleGetArgs> oracle,
-        @Nullable Output<DataSourceParametersPostgresqlGetArgs> postgresql,
-        @Nullable Output<DataSourceParametersPrestoGetArgs> presto,
-        @Nullable Output<DataSourceParametersRdsGetArgs> rds,
-        @Nullable Output<DataSourceParametersRedshiftGetArgs> redshift,
-        @Nullable Output<DataSourceParametersS3GetArgs> s3,
-        @Nullable Output<DataSourceParametersServiceNowGetArgs> serviceNow,
-        @Nullable Output<DataSourceParametersSnowflakeGetArgs> snowflake,
-        @Nullable Output<DataSourceParametersSparkGetArgs> spark,
-        @Nullable Output<DataSourceParametersSqlServerGetArgs> sqlServer,
-        @Nullable Output<DataSourceParametersTeradataGetArgs> teradata,
-        @Nullable Output<DataSourceParametersTwitterGetArgs> twitter) {
-        this.amazonElasticsearch = amazonElasticsearch;
-        this.athena = athena;
-        this.aurora = aurora;
-        this.auroraPostgresql = auroraPostgresql;
-        this.awsIotAnalytics = awsIotAnalytics;
-        this.jira = jira;
-        this.mariaDb = mariaDb;
-        this.mysql = mysql;
-        this.oracle = oracle;
-        this.postgresql = postgresql;
-        this.presto = presto;
-        this.rds = rds;
-        this.redshift = redshift;
-        this.s3 = s3;
-        this.serviceNow = serviceNow;
-        this.snowflake = snowflake;
-        this.spark = spark;
-        this.sqlServer = sqlServer;
-        this.teradata = teradata;
-        this.twitter = twitter;
-    }
+    private DataSourceParametersGetArgs() {}
 
-    private DataSourceParametersGetArgs() {
-        this.amazonElasticsearch = Codegen.empty();
-        this.athena = Codegen.empty();
-        this.aurora = Codegen.empty();
-        this.auroraPostgresql = Codegen.empty();
-        this.awsIotAnalytics = Codegen.empty();
-        this.jira = Codegen.empty();
-        this.mariaDb = Codegen.empty();
-        this.mysql = Codegen.empty();
-        this.oracle = Codegen.empty();
-        this.postgresql = Codegen.empty();
-        this.presto = Codegen.empty();
-        this.rds = Codegen.empty();
-        this.redshift = Codegen.empty();
-        this.s3 = Codegen.empty();
-        this.serviceNow = Codegen.empty();
-        this.snowflake = Codegen.empty();
-        this.spark = Codegen.empty();
-        this.sqlServer = Codegen.empty();
-        this.teradata = Codegen.empty();
-        this.twitter = Codegen.empty();
+    private DataSourceParametersGetArgs(DataSourceParametersGetArgs $) {
+        this.amazonElasticsearch = $.amazonElasticsearch;
+        this.athena = $.athena;
+        this.aurora = $.aurora;
+        this.auroraPostgresql = $.auroraPostgresql;
+        this.awsIotAnalytics = $.awsIotAnalytics;
+        this.jira = $.jira;
+        this.mariaDb = $.mariaDb;
+        this.mysql = $.mysql;
+        this.oracle = $.oracle;
+        this.postgresql = $.postgresql;
+        this.presto = $.presto;
+        this.rds = $.rds;
+        this.redshift = $.redshift;
+        this.s3 = $.s3;
+        this.serviceNow = $.serviceNow;
+        this.snowflake = $.snowflake;
+        this.spark = $.spark;
+        this.sqlServer = $.sqlServer;
+        this.teradata = $.teradata;
+        this.twitter = $.twitter;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceParametersGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DataSourceParametersAmazonElasticsearchGetArgs> amazonElasticsearch;
-        private @Nullable Output<DataSourceParametersAthenaGetArgs> athena;
-        private @Nullable Output<DataSourceParametersAuroraGetArgs> aurora;
-        private @Nullable Output<DataSourceParametersAuroraPostgresqlGetArgs> auroraPostgresql;
-        private @Nullable Output<DataSourceParametersAwsIotAnalyticsGetArgs> awsIotAnalytics;
-        private @Nullable Output<DataSourceParametersJiraGetArgs> jira;
-        private @Nullable Output<DataSourceParametersMariaDbGetArgs> mariaDb;
-        private @Nullable Output<DataSourceParametersMysqlGetArgs> mysql;
-        private @Nullable Output<DataSourceParametersOracleGetArgs> oracle;
-        private @Nullable Output<DataSourceParametersPostgresqlGetArgs> postgresql;
-        private @Nullable Output<DataSourceParametersPrestoGetArgs> presto;
-        private @Nullable Output<DataSourceParametersRdsGetArgs> rds;
-        private @Nullable Output<DataSourceParametersRedshiftGetArgs> redshift;
-        private @Nullable Output<DataSourceParametersS3GetArgs> s3;
-        private @Nullable Output<DataSourceParametersServiceNowGetArgs> serviceNow;
-        private @Nullable Output<DataSourceParametersSnowflakeGetArgs> snowflake;
-        private @Nullable Output<DataSourceParametersSparkGetArgs> spark;
-        private @Nullable Output<DataSourceParametersSqlServerGetArgs> sqlServer;
-        private @Nullable Output<DataSourceParametersTeradataGetArgs> teradata;
-        private @Nullable Output<DataSourceParametersTwitterGetArgs> twitter;
+        private DataSourceParametersGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceParametersGetArgs();
         }
 
         public Builder(DataSourceParametersGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.amazonElasticsearch = defaults.amazonElasticsearch;
-    	      this.athena = defaults.athena;
-    	      this.aurora = defaults.aurora;
-    	      this.auroraPostgresql = defaults.auroraPostgresql;
-    	      this.awsIotAnalytics = defaults.awsIotAnalytics;
-    	      this.jira = defaults.jira;
-    	      this.mariaDb = defaults.mariaDb;
-    	      this.mysql = defaults.mysql;
-    	      this.oracle = defaults.oracle;
-    	      this.postgresql = defaults.postgresql;
-    	      this.presto = defaults.presto;
-    	      this.rds = defaults.rds;
-    	      this.redshift = defaults.redshift;
-    	      this.s3 = defaults.s3;
-    	      this.serviceNow = defaults.serviceNow;
-    	      this.snowflake = defaults.snowflake;
-    	      this.spark = defaults.spark;
-    	      this.sqlServer = defaults.sqlServer;
-    	      this.teradata = defaults.teradata;
-    	      this.twitter = defaults.twitter;
+            $ = new DataSourceParametersGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder amazonElasticsearch(@Nullable Output<DataSourceParametersAmazonElasticsearchGetArgs> amazonElasticsearch) {
-            this.amazonElasticsearch = amazonElasticsearch;
+            $.amazonElasticsearch = amazonElasticsearch;
             return this;
         }
-        public Builder amazonElasticsearch(@Nullable DataSourceParametersAmazonElasticsearchGetArgs amazonElasticsearch) {
-            this.amazonElasticsearch = Codegen.ofNullable(amazonElasticsearch);
-            return this;
+
+        public Builder amazonElasticsearch(DataSourceParametersAmazonElasticsearchGetArgs amazonElasticsearch) {
+            return amazonElasticsearch(Output.of(amazonElasticsearch));
         }
+
         public Builder athena(@Nullable Output<DataSourceParametersAthenaGetArgs> athena) {
-            this.athena = athena;
+            $.athena = athena;
             return this;
         }
-        public Builder athena(@Nullable DataSourceParametersAthenaGetArgs athena) {
-            this.athena = Codegen.ofNullable(athena);
-            return this;
+
+        public Builder athena(DataSourceParametersAthenaGetArgs athena) {
+            return athena(Output.of(athena));
         }
+
         public Builder aurora(@Nullable Output<DataSourceParametersAuroraGetArgs> aurora) {
-            this.aurora = aurora;
+            $.aurora = aurora;
             return this;
         }
-        public Builder aurora(@Nullable DataSourceParametersAuroraGetArgs aurora) {
-            this.aurora = Codegen.ofNullable(aurora);
-            return this;
+
+        public Builder aurora(DataSourceParametersAuroraGetArgs aurora) {
+            return aurora(Output.of(aurora));
         }
+
         public Builder auroraPostgresql(@Nullable Output<DataSourceParametersAuroraPostgresqlGetArgs> auroraPostgresql) {
-            this.auroraPostgresql = auroraPostgresql;
+            $.auroraPostgresql = auroraPostgresql;
             return this;
         }
-        public Builder auroraPostgresql(@Nullable DataSourceParametersAuroraPostgresqlGetArgs auroraPostgresql) {
-            this.auroraPostgresql = Codegen.ofNullable(auroraPostgresql);
-            return this;
+
+        public Builder auroraPostgresql(DataSourceParametersAuroraPostgresqlGetArgs auroraPostgresql) {
+            return auroraPostgresql(Output.of(auroraPostgresql));
         }
+
         public Builder awsIotAnalytics(@Nullable Output<DataSourceParametersAwsIotAnalyticsGetArgs> awsIotAnalytics) {
-            this.awsIotAnalytics = awsIotAnalytics;
+            $.awsIotAnalytics = awsIotAnalytics;
             return this;
         }
-        public Builder awsIotAnalytics(@Nullable DataSourceParametersAwsIotAnalyticsGetArgs awsIotAnalytics) {
-            this.awsIotAnalytics = Codegen.ofNullable(awsIotAnalytics);
-            return this;
+
+        public Builder awsIotAnalytics(DataSourceParametersAwsIotAnalyticsGetArgs awsIotAnalytics) {
+            return awsIotAnalytics(Output.of(awsIotAnalytics));
         }
+
         public Builder jira(@Nullable Output<DataSourceParametersJiraGetArgs> jira) {
-            this.jira = jira;
+            $.jira = jira;
             return this;
         }
-        public Builder jira(@Nullable DataSourceParametersJiraGetArgs jira) {
-            this.jira = Codegen.ofNullable(jira);
-            return this;
+
+        public Builder jira(DataSourceParametersJiraGetArgs jira) {
+            return jira(Output.of(jira));
         }
+
         public Builder mariaDb(@Nullable Output<DataSourceParametersMariaDbGetArgs> mariaDb) {
-            this.mariaDb = mariaDb;
+            $.mariaDb = mariaDb;
             return this;
         }
-        public Builder mariaDb(@Nullable DataSourceParametersMariaDbGetArgs mariaDb) {
-            this.mariaDb = Codegen.ofNullable(mariaDb);
-            return this;
+
+        public Builder mariaDb(DataSourceParametersMariaDbGetArgs mariaDb) {
+            return mariaDb(Output.of(mariaDb));
         }
+
         public Builder mysql(@Nullable Output<DataSourceParametersMysqlGetArgs> mysql) {
-            this.mysql = mysql;
+            $.mysql = mysql;
             return this;
         }
-        public Builder mysql(@Nullable DataSourceParametersMysqlGetArgs mysql) {
-            this.mysql = Codegen.ofNullable(mysql);
-            return this;
+
+        public Builder mysql(DataSourceParametersMysqlGetArgs mysql) {
+            return mysql(Output.of(mysql));
         }
+
         public Builder oracle(@Nullable Output<DataSourceParametersOracleGetArgs> oracle) {
-            this.oracle = oracle;
+            $.oracle = oracle;
             return this;
         }
-        public Builder oracle(@Nullable DataSourceParametersOracleGetArgs oracle) {
-            this.oracle = Codegen.ofNullable(oracle);
-            return this;
+
+        public Builder oracle(DataSourceParametersOracleGetArgs oracle) {
+            return oracle(Output.of(oracle));
         }
+
         public Builder postgresql(@Nullable Output<DataSourceParametersPostgresqlGetArgs> postgresql) {
-            this.postgresql = postgresql;
+            $.postgresql = postgresql;
             return this;
         }
-        public Builder postgresql(@Nullable DataSourceParametersPostgresqlGetArgs postgresql) {
-            this.postgresql = Codegen.ofNullable(postgresql);
-            return this;
+
+        public Builder postgresql(DataSourceParametersPostgresqlGetArgs postgresql) {
+            return postgresql(Output.of(postgresql));
         }
+
         public Builder presto(@Nullable Output<DataSourceParametersPrestoGetArgs> presto) {
-            this.presto = presto;
+            $.presto = presto;
             return this;
         }
-        public Builder presto(@Nullable DataSourceParametersPrestoGetArgs presto) {
-            this.presto = Codegen.ofNullable(presto);
-            return this;
+
+        public Builder presto(DataSourceParametersPrestoGetArgs presto) {
+            return presto(Output.of(presto));
         }
+
         public Builder rds(@Nullable Output<DataSourceParametersRdsGetArgs> rds) {
-            this.rds = rds;
+            $.rds = rds;
             return this;
         }
-        public Builder rds(@Nullable DataSourceParametersRdsGetArgs rds) {
-            this.rds = Codegen.ofNullable(rds);
-            return this;
+
+        public Builder rds(DataSourceParametersRdsGetArgs rds) {
+            return rds(Output.of(rds));
         }
+
         public Builder redshift(@Nullable Output<DataSourceParametersRedshiftGetArgs> redshift) {
-            this.redshift = redshift;
+            $.redshift = redshift;
             return this;
         }
-        public Builder redshift(@Nullable DataSourceParametersRedshiftGetArgs redshift) {
-            this.redshift = Codegen.ofNullable(redshift);
-            return this;
+
+        public Builder redshift(DataSourceParametersRedshiftGetArgs redshift) {
+            return redshift(Output.of(redshift));
         }
+
         public Builder s3(@Nullable Output<DataSourceParametersS3GetArgs> s3) {
-            this.s3 = s3;
+            $.s3 = s3;
             return this;
         }
-        public Builder s3(@Nullable DataSourceParametersS3GetArgs s3) {
-            this.s3 = Codegen.ofNullable(s3);
-            return this;
+
+        public Builder s3(DataSourceParametersS3GetArgs s3) {
+            return s3(Output.of(s3));
         }
+
         public Builder serviceNow(@Nullable Output<DataSourceParametersServiceNowGetArgs> serviceNow) {
-            this.serviceNow = serviceNow;
+            $.serviceNow = serviceNow;
             return this;
         }
-        public Builder serviceNow(@Nullable DataSourceParametersServiceNowGetArgs serviceNow) {
-            this.serviceNow = Codegen.ofNullable(serviceNow);
-            return this;
+
+        public Builder serviceNow(DataSourceParametersServiceNowGetArgs serviceNow) {
+            return serviceNow(Output.of(serviceNow));
         }
+
         public Builder snowflake(@Nullable Output<DataSourceParametersSnowflakeGetArgs> snowflake) {
-            this.snowflake = snowflake;
+            $.snowflake = snowflake;
             return this;
         }
-        public Builder snowflake(@Nullable DataSourceParametersSnowflakeGetArgs snowflake) {
-            this.snowflake = Codegen.ofNullable(snowflake);
-            return this;
+
+        public Builder snowflake(DataSourceParametersSnowflakeGetArgs snowflake) {
+            return snowflake(Output.of(snowflake));
         }
+
         public Builder spark(@Nullable Output<DataSourceParametersSparkGetArgs> spark) {
-            this.spark = spark;
+            $.spark = spark;
             return this;
         }
-        public Builder spark(@Nullable DataSourceParametersSparkGetArgs spark) {
-            this.spark = Codegen.ofNullable(spark);
-            return this;
+
+        public Builder spark(DataSourceParametersSparkGetArgs spark) {
+            return spark(Output.of(spark));
         }
+
         public Builder sqlServer(@Nullable Output<DataSourceParametersSqlServerGetArgs> sqlServer) {
-            this.sqlServer = sqlServer;
+            $.sqlServer = sqlServer;
             return this;
         }
-        public Builder sqlServer(@Nullable DataSourceParametersSqlServerGetArgs sqlServer) {
-            this.sqlServer = Codegen.ofNullable(sqlServer);
-            return this;
+
+        public Builder sqlServer(DataSourceParametersSqlServerGetArgs sqlServer) {
+            return sqlServer(Output.of(sqlServer));
         }
+
         public Builder teradata(@Nullable Output<DataSourceParametersTeradataGetArgs> teradata) {
-            this.teradata = teradata;
+            $.teradata = teradata;
             return this;
         }
-        public Builder teradata(@Nullable DataSourceParametersTeradataGetArgs teradata) {
-            this.teradata = Codegen.ofNullable(teradata);
-            return this;
+
+        public Builder teradata(DataSourceParametersTeradataGetArgs teradata) {
+            return teradata(Output.of(teradata));
         }
+
         public Builder twitter(@Nullable Output<DataSourceParametersTwitterGetArgs> twitter) {
-            this.twitter = twitter;
+            $.twitter = twitter;
             return this;
         }
-        public Builder twitter(@Nullable DataSourceParametersTwitterGetArgs twitter) {
-            this.twitter = Codegen.ofNullable(twitter);
-            return this;
-        }        public DataSourceParametersGetArgs build() {
-            return new DataSourceParametersGetArgs(amazonElasticsearch, athena, aurora, auroraPostgresql, awsIotAnalytics, jira, mariaDb, mysql, oracle, postgresql, presto, rds, redshift, s3, serviceNow, snowflake, spark, sqlServer, teradata, twitter);
+
+        public Builder twitter(DataSourceParametersTwitterGetArgs twitter) {
+            return twitter(Output.of(twitter));
+        }
+
+        public DataSourceParametersGetArgs build() {
+            return $;
         }
     }
+
 }

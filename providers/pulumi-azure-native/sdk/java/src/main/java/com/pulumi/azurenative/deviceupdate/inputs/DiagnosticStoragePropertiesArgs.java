@@ -7,9 +7,9 @@ import com.pulumi.azurenative.deviceupdate.enums.AuthenticationType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,7 +26,7 @@ public final class DiagnosticStoragePropertiesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="authenticationType", required=true)
-      private final Output<Either<String,AuthenticationType>> authenticationType;
+    private Output<Either<String,AuthenticationType>> authenticationType;
 
     public Output<Either<String,AuthenticationType>> authenticationType() {
         return this.authenticationType;
@@ -37,10 +37,10 @@ public final class DiagnosticStoragePropertiesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="connectionString")
-      private final @Nullable Output<String> connectionString;
+    private @Nullable Output<String> connectionString;
 
-    public Output<String> connectionString() {
-        return this.connectionString == null ? Codegen.empty() : this.connectionString;
+    public Optional<Output<String>> connectionString() {
+        return Optional.ofNullable(this.connectionString);
     }
 
     /**
@@ -48,76 +48,70 @@ public final class DiagnosticStoragePropertiesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="resourceId", required=true)
-      private final Output<String> resourceId;
+    private Output<String> resourceId;
 
     public Output<String> resourceId() {
         return this.resourceId;
     }
 
-    public DiagnosticStoragePropertiesArgs(
-        Output<Either<String,AuthenticationType>> authenticationType,
-        @Nullable Output<String> connectionString,
-        Output<String> resourceId) {
-        this.authenticationType = Objects.requireNonNull(authenticationType, "expected parameter 'authenticationType' to be non-null");
-        this.connectionString = connectionString;
-        this.resourceId = Objects.requireNonNull(resourceId, "expected parameter 'resourceId' to be non-null");
-    }
+    private DiagnosticStoragePropertiesArgs() {}
 
-    private DiagnosticStoragePropertiesArgs() {
-        this.authenticationType = Codegen.empty();
-        this.connectionString = Codegen.empty();
-        this.resourceId = Codegen.empty();
+    private DiagnosticStoragePropertiesArgs(DiagnosticStoragePropertiesArgs $) {
+        this.authenticationType = $.authenticationType;
+        this.connectionString = $.connectionString;
+        this.resourceId = $.resourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiagnosticStoragePropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,AuthenticationType>> authenticationType;
-        private @Nullable Output<String> connectionString;
-        private Output<String> resourceId;
+        private DiagnosticStoragePropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiagnosticStoragePropertiesArgs();
         }
 
         public Builder(DiagnosticStoragePropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authenticationType = defaults.authenticationType;
-    	      this.connectionString = defaults.connectionString;
-    	      this.resourceId = defaults.resourceId;
+            $ = new DiagnosticStoragePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authenticationType(Output<Either<String,AuthenticationType>> authenticationType) {
-            this.authenticationType = Objects.requireNonNull(authenticationType);
+            $.authenticationType = authenticationType;
             return this;
         }
+
         public Builder authenticationType(Either<String,AuthenticationType> authenticationType) {
-            this.authenticationType = Output.of(Objects.requireNonNull(authenticationType));
-            return this;
+            return authenticationType(Output.of(authenticationType));
         }
+
         public Builder connectionString(@Nullable Output<String> connectionString) {
-            this.connectionString = connectionString;
+            $.connectionString = connectionString;
             return this;
         }
-        public Builder connectionString(@Nullable String connectionString) {
-            this.connectionString = Codegen.ofNullable(connectionString);
-            return this;
+
+        public Builder connectionString(String connectionString) {
+            return connectionString(Output.of(connectionString));
         }
+
         public Builder resourceId(Output<String> resourceId) {
-            this.resourceId = Objects.requireNonNull(resourceId);
+            $.resourceId = resourceId;
             return this;
         }
+
         public Builder resourceId(String resourceId) {
-            this.resourceId = Output.of(Objects.requireNonNull(resourceId));
-            return this;
-        }        public DiagnosticStoragePropertiesArgs build() {
-            return new DiagnosticStoragePropertiesArgs(authenticationType, connectionString, resourceId);
+            return resourceId(Output.of(resourceId));
+        }
+
+        public DiagnosticStoragePropertiesArgs build() {
+            $.authenticationType = Objects.requireNonNull($.authenticationType, "expected parameter 'authenticationType' to be non-null");
+            $.resourceId = Objects.requireNonNull($.resourceId, "expected parameter 'resourceId' to be non-null");
+            return $;
         }
     }
+
 }

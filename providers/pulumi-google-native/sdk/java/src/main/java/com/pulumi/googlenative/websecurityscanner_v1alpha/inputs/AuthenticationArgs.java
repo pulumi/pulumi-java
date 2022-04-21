@@ -5,10 +5,10 @@ package com.pulumi.googlenative.websecurityscanner_v1alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.websecurityscanner_v1alpha.inputs.CustomAccountArgs;
 import com.pulumi.googlenative.websecurityscanner_v1alpha.inputs.GoogleAccountArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class AuthenticationArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="customAccount")
-      private final @Nullable Output<CustomAccountArgs> customAccount;
+    private @Nullable Output<CustomAccountArgs> customAccount;
 
-    public Output<CustomAccountArgs> customAccount() {
-        return this.customAccount == null ? Codegen.empty() : this.customAccount;
+    public Optional<Output<CustomAccountArgs>> customAccount() {
+        return Optional.ofNullable(this.customAccount);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class AuthenticationArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="googleAccount")
-      private final @Nullable Output<GoogleAccountArgs> googleAccount;
+    private @Nullable Output<GoogleAccountArgs> googleAccount;
 
-    public Output<GoogleAccountArgs> googleAccount() {
-        return this.googleAccount == null ? Codegen.empty() : this.googleAccount;
+    public Optional<Output<GoogleAccountArgs>> googleAccount() {
+        return Optional.ofNullable(this.googleAccount);
     }
 
-    public AuthenticationArgs(
-        @Nullable Output<CustomAccountArgs> customAccount,
-        @Nullable Output<GoogleAccountArgs> googleAccount) {
-        this.customAccount = customAccount;
-        this.googleAccount = googleAccount;
-    }
+    private AuthenticationArgs() {}
 
-    private AuthenticationArgs() {
-        this.customAccount = Codegen.empty();
-        this.googleAccount = Codegen.empty();
+    private AuthenticationArgs(AuthenticationArgs $) {
+        this.customAccount = $.customAccount;
+        this.googleAccount = $.googleAccount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AuthenticationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CustomAccountArgs> customAccount;
-        private @Nullable Output<GoogleAccountArgs> googleAccount;
+        private AuthenticationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AuthenticationArgs();
         }
 
         public Builder(AuthenticationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customAccount = defaults.customAccount;
-    	      this.googleAccount = defaults.googleAccount;
+            $ = new AuthenticationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customAccount(@Nullable Output<CustomAccountArgs> customAccount) {
-            this.customAccount = customAccount;
+            $.customAccount = customAccount;
             return this;
         }
-        public Builder customAccount(@Nullable CustomAccountArgs customAccount) {
-            this.customAccount = Codegen.ofNullable(customAccount);
-            return this;
+
+        public Builder customAccount(CustomAccountArgs customAccount) {
+            return customAccount(Output.of(customAccount));
         }
+
         public Builder googleAccount(@Nullable Output<GoogleAccountArgs> googleAccount) {
-            this.googleAccount = googleAccount;
+            $.googleAccount = googleAccount;
             return this;
         }
-        public Builder googleAccount(@Nullable GoogleAccountArgs googleAccount) {
-            this.googleAccount = Codegen.ofNullable(googleAccount);
-            return this;
-        }        public AuthenticationArgs build() {
-            return new AuthenticationArgs(customAccount, googleAccount);
+
+        public Builder googleAccount(GoogleAccountArgs googleAccount) {
+            return googleAccount(Output.of(googleAccount));
+        }
+
+        public AuthenticationArgs build() {
+            return $;
         }
     }
+
 }

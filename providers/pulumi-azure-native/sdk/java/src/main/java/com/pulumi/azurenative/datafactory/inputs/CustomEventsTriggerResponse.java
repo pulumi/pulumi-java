@@ -27,10 +27,10 @@ public final class CustomEventsTriggerResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="annotations")
-      private final @Nullable List<Object> annotations;
+    private @Nullable List<Object> annotations;
 
-    public List<Object> annotations() {
-        return this.annotations == null ? List.of() : this.annotations;
+    public Optional<List<Object>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class CustomEventsTriggerResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -49,7 +49,7 @@ public final class CustomEventsTriggerResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="events", required=true)
-      private final List<Object> events;
+    private List<Object> events;
 
     public List<Object> events() {
         return this.events;
@@ -60,10 +60,10 @@ public final class CustomEventsTriggerResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="pipelines")
-      private final @Nullable List<TriggerPipelineReferenceResponse> pipelines;
+    private @Nullable List<TriggerPipelineReferenceResponse> pipelines;
 
-    public List<TriggerPipelineReferenceResponse> pipelines() {
-        return this.pipelines == null ? List.of() : this.pipelines;
+    public Optional<List<TriggerPipelineReferenceResponse>> pipelines() {
+        return Optional.ofNullable(this.pipelines);
     }
 
     /**
@@ -71,7 +71,7 @@ public final class CustomEventsTriggerResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="runtimeState", required=true)
-      private final String runtimeState;
+    private String runtimeState;
 
     public String runtimeState() {
         return this.runtimeState;
@@ -82,7 +82,7 @@ public final class CustomEventsTriggerResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="scope", required=true)
-      private final String scope;
+    private String scope;
 
     public String scope() {
         return this.scope;
@@ -93,10 +93,10 @@ public final class CustomEventsTriggerResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="subjectBeginsWith")
-      private final @Nullable String subjectBeginsWith;
+    private @Nullable String subjectBeginsWith;
 
     public Optional<String> subjectBeginsWith() {
-        return this.subjectBeginsWith == null ? Optional.empty() : Optional.ofNullable(this.subjectBeginsWith);
+        return Optional.ofNullable(this.subjectBeginsWith);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class CustomEventsTriggerResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="subjectEndsWith")
-      private final @Nullable String subjectEndsWith;
+    private @Nullable String subjectEndsWith;
 
     public Optional<String> subjectEndsWith() {
-        return this.subjectEndsWith == null ? Optional.empty() : Optional.ofNullable(this.subjectEndsWith);
+        return Optional.ofNullable(this.subjectEndsWith);
     }
 
     /**
@@ -116,127 +116,108 @@ public final class CustomEventsTriggerResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public CustomEventsTriggerResponse(
-        @Nullable List<Object> annotations,
-        @Nullable String description,
-        List<Object> events,
-        @Nullable List<TriggerPipelineReferenceResponse> pipelines,
-        String runtimeState,
-        String scope,
-        @Nullable String subjectBeginsWith,
-        @Nullable String subjectEndsWith,
-        String type) {
-        this.annotations = annotations;
-        this.description = description;
-        this.events = Objects.requireNonNull(events, "expected parameter 'events' to be non-null");
-        this.pipelines = pipelines;
-        this.runtimeState = Objects.requireNonNull(runtimeState, "expected parameter 'runtimeState' to be non-null");
-        this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
-        this.subjectBeginsWith = subjectBeginsWith;
-        this.subjectEndsWith = subjectEndsWith;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private CustomEventsTriggerResponse() {}
 
-    private CustomEventsTriggerResponse() {
-        this.annotations = List.of();
-        this.description = null;
-        this.events = List.of();
-        this.pipelines = List.of();
-        this.runtimeState = null;
-        this.scope = null;
-        this.subjectBeginsWith = null;
-        this.subjectEndsWith = null;
-        this.type = null;
+    private CustomEventsTriggerResponse(CustomEventsTriggerResponse $) {
+        this.annotations = $.annotations;
+        this.description = $.description;
+        this.events = $.events;
+        this.pipelines = $.pipelines;
+        this.runtimeState = $.runtimeState;
+        this.scope = $.scope;
+        this.subjectBeginsWith = $.subjectBeginsWith;
+        this.subjectEndsWith = $.subjectEndsWith;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomEventsTriggerResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<Object> annotations;
-        private @Nullable String description;
-        private List<Object> events;
-        private @Nullable List<TriggerPipelineReferenceResponse> pipelines;
-        private String runtimeState;
-        private String scope;
-        private @Nullable String subjectBeginsWith;
-        private @Nullable String subjectEndsWith;
-        private String type;
+        private CustomEventsTriggerResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomEventsTriggerResponse();
         }
 
         public Builder(CustomEventsTriggerResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.description = defaults.description;
-    	      this.events = defaults.events;
-    	      this.pipelines = defaults.pipelines;
-    	      this.runtimeState = defaults.runtimeState;
-    	      this.scope = defaults.scope;
-    	      this.subjectBeginsWith = defaults.subjectBeginsWith;
-    	      this.subjectEndsWith = defaults.subjectEndsWith;
-    	      this.type = defaults.type;
+            $ = new CustomEventsTriggerResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder events(List<Object> events) {
-            this.events = Objects.requireNonNull(events);
+            $.events = events;
             return this;
         }
+
         public Builder events(Object... events) {
             return events(List.of(events));
         }
+
         public Builder pipelines(@Nullable List<TriggerPipelineReferenceResponse> pipelines) {
-            this.pipelines = pipelines;
+            $.pipelines = pipelines;
             return this;
         }
+
         public Builder pipelines(TriggerPipelineReferenceResponse... pipelines) {
             return pipelines(List.of(pipelines));
         }
+
         public Builder runtimeState(String runtimeState) {
-            this.runtimeState = Objects.requireNonNull(runtimeState);
+            $.runtimeState = runtimeState;
             return this;
         }
+
         public Builder scope(String scope) {
-            this.scope = Objects.requireNonNull(scope);
+            $.scope = scope;
             return this;
         }
+
         public Builder subjectBeginsWith(@Nullable String subjectBeginsWith) {
-            this.subjectBeginsWith = subjectBeginsWith;
+            $.subjectBeginsWith = subjectBeginsWith;
             return this;
         }
+
         public Builder subjectEndsWith(@Nullable String subjectEndsWith) {
-            this.subjectEndsWith = subjectEndsWith;
+            $.subjectEndsWith = subjectEndsWith;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public CustomEventsTriggerResponse build() {
-            return new CustomEventsTriggerResponse(annotations, description, events, pipelines, runtimeState, scope, subjectBeginsWith, subjectEndsWith, type);
+        }
+
+        public CustomEventsTriggerResponse build() {
+            $.events = Objects.requireNonNull($.events, "expected parameter 'events' to be non-null");
+            $.runtimeState = Objects.requireNonNull($.runtimeState, "expected parameter 'runtimeState' to be non-null");
+            $.scope = Objects.requireNonNull($.scope, "expected parameter 'scope' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

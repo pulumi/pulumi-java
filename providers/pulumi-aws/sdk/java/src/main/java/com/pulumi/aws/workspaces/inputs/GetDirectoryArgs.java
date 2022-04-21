@@ -20,7 +20,7 @@ public final class GetDirectoryArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="directoryId", required=true)
-      private final String directoryId;
+    private String directoryId;
 
     public String directoryId() {
         return this.directoryId;
@@ -31,55 +31,51 @@ public final class GetDirectoryArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetDirectoryArgs(
-        String directoryId,
-        @Nullable Map<String,String> tags) {
-        this.directoryId = Objects.requireNonNull(directoryId, "expected parameter 'directoryId' to be non-null");
-        this.tags = tags;
-    }
+    private GetDirectoryArgs() {}
 
-    private GetDirectoryArgs() {
-        this.directoryId = null;
-        this.tags = Map.of();
+    private GetDirectoryArgs(GetDirectoryArgs $) {
+        this.directoryId = $.directoryId;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDirectoryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String directoryId;
-        private @Nullable Map<String,String> tags;
+        private GetDirectoryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDirectoryArgs();
         }
 
         public Builder(GetDirectoryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.directoryId = defaults.directoryId;
-    	      this.tags = defaults.tags;
+            $ = new GetDirectoryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder directoryId(String directoryId) {
-            this.directoryId = Objects.requireNonNull(directoryId);
+            $.directoryId = directoryId;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetDirectoryArgs build() {
-            return new GetDirectoryArgs(directoryId, tags);
+        }
+
+        public GetDirectoryArgs build() {
+            $.directoryId = Objects.requireNonNull($.directoryId, "expected parameter 'directoryId' to be non-null");
+            return $;
         }
     }
+
 }

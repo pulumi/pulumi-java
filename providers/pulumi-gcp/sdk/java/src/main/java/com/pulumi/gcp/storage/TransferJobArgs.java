@@ -5,11 +5,11 @@ package com.pulumi.gcp.storage;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.storage.inputs.TransferJobScheduleArgs;
 import com.pulumi.gcp.storage.inputs.TransferJobTransferSpecArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class TransferJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description", required=true)
-      private final Output<String> description;
+    private Output<String> description;
 
     public Output<String> description() {
         return this.description;
@@ -34,10 +34,10 @@ public final class TransferJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class TransferJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="schedule")
-      private final @Nullable Output<TransferJobScheduleArgs> schedule;
+    private @Nullable Output<TransferJobScheduleArgs> schedule;
 
-    public Output<TransferJobScheduleArgs> schedule() {
-        return this.schedule == null ? Codegen.empty() : this.schedule;
+    public Optional<Output<TransferJobScheduleArgs>> schedule() {
+        return Optional.ofNullable(this.schedule);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class TransferJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -67,102 +67,90 @@ public final class TransferJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="transferSpec", required=true)
-      private final Output<TransferJobTransferSpecArgs> transferSpec;
+    private Output<TransferJobTransferSpecArgs> transferSpec;
 
     public Output<TransferJobTransferSpecArgs> transferSpec() {
         return this.transferSpec;
     }
 
-    public TransferJobArgs(
-        Output<String> description,
-        @Nullable Output<String> project,
-        @Nullable Output<TransferJobScheduleArgs> schedule,
-        @Nullable Output<String> status,
-        Output<TransferJobTransferSpecArgs> transferSpec) {
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.project = project;
-        this.schedule = schedule;
-        this.status = status;
-        this.transferSpec = Objects.requireNonNull(transferSpec, "expected parameter 'transferSpec' to be non-null");
-    }
+    private TransferJobArgs() {}
 
-    private TransferJobArgs() {
-        this.description = Codegen.empty();
-        this.project = Codegen.empty();
-        this.schedule = Codegen.empty();
-        this.status = Codegen.empty();
-        this.transferSpec = Codegen.empty();
+    private TransferJobArgs(TransferJobArgs $) {
+        this.description = $.description;
+        this.project = $.project;
+        this.schedule = $.schedule;
+        this.status = $.status;
+        this.transferSpec = $.transferSpec;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TransferJobArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> description;
-        private @Nullable Output<String> project;
-        private @Nullable Output<TransferJobScheduleArgs> schedule;
-        private @Nullable Output<String> status;
-        private Output<TransferJobTransferSpecArgs> transferSpec;
+        private TransferJobArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TransferJobArgs();
         }
 
         public Builder(TransferJobArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.project = defaults.project;
-    	      this.schedule = defaults.schedule;
-    	      this.status = defaults.status;
-    	      this.transferSpec = defaults.transferSpec;
+            $ = new TransferJobArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(Output<String> description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder description(String description) {
-            this.description = Output.of(Objects.requireNonNull(description));
-            return this;
+            return description(Output.of(description));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder schedule(@Nullable Output<TransferJobScheduleArgs> schedule) {
-            this.schedule = schedule;
+            $.schedule = schedule;
             return this;
         }
-        public Builder schedule(@Nullable TransferJobScheduleArgs schedule) {
-            this.schedule = Codegen.ofNullable(schedule);
-            return this;
+
+        public Builder schedule(TransferJobScheduleArgs schedule) {
+            return schedule(Output.of(schedule));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(String status) {
+            return status(Output.of(status));
         }
+
         public Builder transferSpec(Output<TransferJobTransferSpecArgs> transferSpec) {
-            this.transferSpec = Objects.requireNonNull(transferSpec);
+            $.transferSpec = transferSpec;
             return this;
         }
+
         public Builder transferSpec(TransferJobTransferSpecArgs transferSpec) {
-            this.transferSpec = Output.of(Objects.requireNonNull(transferSpec));
-            return this;
-        }        public TransferJobArgs build() {
-            return new TransferJobArgs(description, project, schedule, status, transferSpec);
+            return transferSpec(Output.of(transferSpec));
+        }
+
+        public TransferJobArgs build() {
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.transferSpec = Objects.requireNonNull($.transferSpec, "expected parameter 'transferSpec' to be non-null");
+            return $;
         }
     }
+
 }

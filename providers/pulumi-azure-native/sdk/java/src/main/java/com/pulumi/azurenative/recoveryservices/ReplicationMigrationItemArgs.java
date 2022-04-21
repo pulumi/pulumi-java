@@ -6,9 +6,9 @@ package com.pulumi.azurenative.recoveryservices;
 import com.pulumi.azurenative.recoveryservices.inputs.EnableMigrationInputPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class ReplicationMigrationItemArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="fabricName", required=true)
-      private final Output<String> fabricName;
+    private Output<String> fabricName;
 
     public Output<String> fabricName() {
         return this.fabricName;
@@ -32,10 +32,10 @@ public final class ReplicationMigrationItemArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="migrationItemName")
-      private final @Nullable Output<String> migrationItemName;
+    private @Nullable Output<String> migrationItemName;
 
-    public Output<String> migrationItemName() {
-        return this.migrationItemName == null ? Codegen.empty() : this.migrationItemName;
+    public Optional<Output<String>> migrationItemName() {
+        return Optional.ofNullable(this.migrationItemName);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class ReplicationMigrationItemArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="properties", required=true)
-      private final Output<EnableMigrationInputPropertiesArgs> properties;
+    private Output<EnableMigrationInputPropertiesArgs> properties;
 
     public Output<EnableMigrationInputPropertiesArgs> properties() {
         return this.properties;
@@ -54,7 +54,7 @@ public final class ReplicationMigrationItemArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="protectionContainerName", required=true)
-      private final Output<String> protectionContainerName;
+    private Output<String> protectionContainerName;
 
     public Output<String> protectionContainerName() {
         return this.protectionContainerName;
@@ -65,7 +65,7 @@ public final class ReplicationMigrationItemArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -76,115 +76,103 @@ public final class ReplicationMigrationItemArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="resourceName", required=true)
-      private final Output<String> resourceName;
+    private Output<String> resourceName;
 
     public Output<String> resourceName() {
         return this.resourceName;
     }
 
-    public ReplicationMigrationItemArgs(
-        Output<String> fabricName,
-        @Nullable Output<String> migrationItemName,
-        Output<EnableMigrationInputPropertiesArgs> properties,
-        Output<String> protectionContainerName,
-        Output<String> resourceGroupName,
-        Output<String> resourceName) {
-        this.fabricName = Objects.requireNonNull(fabricName, "expected parameter 'fabricName' to be non-null");
-        this.migrationItemName = migrationItemName;
-        this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
-        this.protectionContainerName = Objects.requireNonNull(protectionContainerName, "expected parameter 'protectionContainerName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
-    }
+    private ReplicationMigrationItemArgs() {}
 
-    private ReplicationMigrationItemArgs() {
-        this.fabricName = Codegen.empty();
-        this.migrationItemName = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.protectionContainerName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.resourceName = Codegen.empty();
+    private ReplicationMigrationItemArgs(ReplicationMigrationItemArgs $) {
+        this.fabricName = $.fabricName;
+        this.migrationItemName = $.migrationItemName;
+        this.properties = $.properties;
+        this.protectionContainerName = $.protectionContainerName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReplicationMigrationItemArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> fabricName;
-        private @Nullable Output<String> migrationItemName;
-        private Output<EnableMigrationInputPropertiesArgs> properties;
-        private Output<String> protectionContainerName;
-        private Output<String> resourceGroupName;
-        private Output<String> resourceName;
+        private ReplicationMigrationItemArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReplicationMigrationItemArgs();
         }
 
         public Builder(ReplicationMigrationItemArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fabricName = defaults.fabricName;
-    	      this.migrationItemName = defaults.migrationItemName;
-    	      this.properties = defaults.properties;
-    	      this.protectionContainerName = defaults.protectionContainerName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
+            $ = new ReplicationMigrationItemArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fabricName(Output<String> fabricName) {
-            this.fabricName = Objects.requireNonNull(fabricName);
+            $.fabricName = fabricName;
             return this;
         }
+
         public Builder fabricName(String fabricName) {
-            this.fabricName = Output.of(Objects.requireNonNull(fabricName));
-            return this;
+            return fabricName(Output.of(fabricName));
         }
+
         public Builder migrationItemName(@Nullable Output<String> migrationItemName) {
-            this.migrationItemName = migrationItemName;
+            $.migrationItemName = migrationItemName;
             return this;
         }
-        public Builder migrationItemName(@Nullable String migrationItemName) {
-            this.migrationItemName = Codegen.ofNullable(migrationItemName);
-            return this;
+
+        public Builder migrationItemName(String migrationItemName) {
+            return migrationItemName(Output.of(migrationItemName));
         }
+
         public Builder properties(Output<EnableMigrationInputPropertiesArgs> properties) {
-            this.properties = Objects.requireNonNull(properties);
+            $.properties = properties;
             return this;
         }
+
         public Builder properties(EnableMigrationInputPropertiesArgs properties) {
-            this.properties = Output.of(Objects.requireNonNull(properties));
-            return this;
+            return properties(Output.of(properties));
         }
+
         public Builder protectionContainerName(Output<String> protectionContainerName) {
-            this.protectionContainerName = Objects.requireNonNull(protectionContainerName);
+            $.protectionContainerName = protectionContainerName;
             return this;
         }
+
         public Builder protectionContainerName(String protectionContainerName) {
-            this.protectionContainerName = Output.of(Objects.requireNonNull(protectionContainerName));
-            return this;
+            return protectionContainerName(Output.of(protectionContainerName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder resourceName(Output<String> resourceName) {
-            this.resourceName = Objects.requireNonNull(resourceName);
+            $.resourceName = resourceName;
             return this;
         }
+
         public Builder resourceName(String resourceName) {
-            this.resourceName = Output.of(Objects.requireNonNull(resourceName));
-            return this;
-        }        public ReplicationMigrationItemArgs build() {
-            return new ReplicationMigrationItemArgs(fabricName, migrationItemName, properties, protectionContainerName, resourceGroupName, resourceName);
+            return resourceName(Output.of(resourceName));
+        }
+
+        public ReplicationMigrationItemArgs build() {
+            $.fabricName = Objects.requireNonNull($.fabricName, "expected parameter 'fabricName' to be non-null");
+            $.properties = Objects.requireNonNull($.properties, "expected parameter 'properties' to be non-null");
+            $.protectionContainerName = Objects.requireNonNull($.protectionContainerName, "expected parameter 'protectionContainerName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourceName = Objects.requireNonNull($.resourceName, "expected parameter 'resourceName' to be non-null");
+            return $;
         }
     }
+
 }

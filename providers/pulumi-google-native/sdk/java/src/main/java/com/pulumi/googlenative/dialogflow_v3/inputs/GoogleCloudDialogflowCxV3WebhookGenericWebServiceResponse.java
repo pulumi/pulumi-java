@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse ext
      * 
      */
     @Import(name="allowedCaCerts", required=true)
-      private final List<String> allowedCaCerts;
+    private List<String> allowedCaCerts;
 
     public List<String> allowedCaCerts() {
         return this.allowedCaCerts;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse ext
      * 
      */
     @Import(name="password", required=true)
-      private final String password;
+    private String password;
 
     public String password() {
         return this.password;
@@ -45,7 +45,7 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse ext
      * 
      */
     @Import(name="requestHeaders", required=true)
-      private final Map<String,String> requestHeaders;
+    private Map<String,String> requestHeaders;
 
     public Map<String,String> requestHeaders() {
         return this.requestHeaders;
@@ -56,7 +56,7 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse ext
      * 
      */
     @Import(name="uri", required=true)
-      private final String uri;
+    private String uri;
 
     public String uri() {
         return this.uri;
@@ -67,85 +67,77 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse ext
      * 
      */
     @Import(name="username", required=true)
-      private final String username;
+    private String username;
 
     public String username() {
         return this.username;
     }
 
-    public GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse(
-        List<String> allowedCaCerts,
-        String password,
-        Map<String,String> requestHeaders,
-        String uri,
-        String username) {
-        this.allowedCaCerts = Objects.requireNonNull(allowedCaCerts, "expected parameter 'allowedCaCerts' to be non-null");
-        this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
-        this.requestHeaders = Objects.requireNonNull(requestHeaders, "expected parameter 'requestHeaders' to be non-null");
-        this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
-        this.username = Objects.requireNonNull(username, "expected parameter 'username' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse() {}
 
-    private GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse() {
-        this.allowedCaCerts = List.of();
-        this.password = null;
-        this.requestHeaders = Map.of();
-        this.uri = null;
-        this.username = null;
+    private GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse(GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse $) {
+        this.allowedCaCerts = $.allowedCaCerts;
+        this.password = $.password;
+        this.requestHeaders = $.requestHeaders;
+        this.uri = $.uri;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> allowedCaCerts;
-        private String password;
-        private Map<String,String> requestHeaders;
-        private String uri;
-        private String username;
+        private GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse();
         }
 
         public Builder(GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedCaCerts = defaults.allowedCaCerts;
-    	      this.password = defaults.password;
-    	      this.requestHeaders = defaults.requestHeaders;
-    	      this.uri = defaults.uri;
-    	      this.username = defaults.username;
+            $ = new GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedCaCerts(List<String> allowedCaCerts) {
-            this.allowedCaCerts = Objects.requireNonNull(allowedCaCerts);
+            $.allowedCaCerts = allowedCaCerts;
             return this;
         }
+
         public Builder allowedCaCerts(String... allowedCaCerts) {
             return allowedCaCerts(List.of(allowedCaCerts));
         }
+
         public Builder password(String password) {
-            this.password = Objects.requireNonNull(password);
+            $.password = password;
             return this;
         }
+
         public Builder requestHeaders(Map<String,String> requestHeaders) {
-            this.requestHeaders = Objects.requireNonNull(requestHeaders);
+            $.requestHeaders = requestHeaders;
             return this;
         }
+
         public Builder uri(String uri) {
-            this.uri = Objects.requireNonNull(uri);
+            $.uri = uri;
             return this;
         }
+
         public Builder username(String username) {
-            this.username = Objects.requireNonNull(username);
+            $.username = username;
             return this;
-        }        public GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse build() {
-            return new GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse(allowedCaCerts, password, requestHeaders, uri, username);
+        }
+
+        public GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse build() {
+            $.allowedCaCerts = Objects.requireNonNull($.allowedCaCerts, "expected parameter 'allowedCaCerts' to be non-null");
+            $.password = Objects.requireNonNull($.password, "expected parameter 'password' to be non-null");
+            $.requestHeaders = Objects.requireNonNull($.requestHeaders, "expected parameter 'requestHeaders' to be non-null");
+            $.uri = Objects.requireNonNull($.uri, "expected parameter 'uri' to be non-null");
+            $.username = Objects.requireNonNull($.username, "expected parameter 'username' to be non-null");
+            return $;
         }
     }
+
 }

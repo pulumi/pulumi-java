@@ -21,7 +21,7 @@ public final class LatestOperationResultResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="errorCode", required=true)
-      private final String errorCode;
+    private String errorCode;
 
     public String errorCode() {
         return this.errorCode;
@@ -32,7 +32,7 @@ public final class LatestOperationResultResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="errorMessage", required=true)
-      private final String errorMessage;
+    private String errorMessage;
 
     public String errorMessage() {
         return this.errorMessage;
@@ -43,7 +43,7 @@ public final class LatestOperationResultResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="httpMethod", required=true)
-      private final String httpMethod;
+    private String httpMethod;
 
     public String httpMethod() {
         return this.httpMethod;
@@ -54,7 +54,7 @@ public final class LatestOperationResultResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="operationUrl", required=true)
-      private final String operationUrl;
+    private String operationUrl;
 
     public String operationUrl() {
         return this.operationUrl;
@@ -65,7 +65,7 @@ public final class LatestOperationResultResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="requestUri", required=true)
-      private final String requestUri;
+    private String requestUri;
 
     public String requestUri() {
         return this.requestUri;
@@ -76,91 +76,80 @@ public final class LatestOperationResultResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
     }
 
-    public LatestOperationResultResponse(
-        String errorCode,
-        String errorMessage,
-        String httpMethod,
-        String operationUrl,
-        String requestUri,
-        String status) {
-        this.errorCode = Objects.requireNonNull(errorCode, "expected parameter 'errorCode' to be non-null");
-        this.errorMessage = Objects.requireNonNull(errorMessage, "expected parameter 'errorMessage' to be non-null");
-        this.httpMethod = Objects.requireNonNull(httpMethod, "expected parameter 'httpMethod' to be non-null");
-        this.operationUrl = Objects.requireNonNull(operationUrl, "expected parameter 'operationUrl' to be non-null");
-        this.requestUri = Objects.requireNonNull(requestUri, "expected parameter 'requestUri' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-    }
+    private LatestOperationResultResponse() {}
 
-    private LatestOperationResultResponse() {
-        this.errorCode = null;
-        this.errorMessage = null;
-        this.httpMethod = null;
-        this.operationUrl = null;
-        this.requestUri = null;
-        this.status = null;
+    private LatestOperationResultResponse(LatestOperationResultResponse $) {
+        this.errorCode = $.errorCode;
+        this.errorMessage = $.errorMessage;
+        this.httpMethod = $.httpMethod;
+        this.operationUrl = $.operationUrl;
+        this.requestUri = $.requestUri;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LatestOperationResultResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String errorCode;
-        private String errorMessage;
-        private String httpMethod;
-        private String operationUrl;
-        private String requestUri;
-        private String status;
+        private LatestOperationResultResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LatestOperationResultResponse();
         }
 
         public Builder(LatestOperationResultResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.errorCode = defaults.errorCode;
-    	      this.errorMessage = defaults.errorMessage;
-    	      this.httpMethod = defaults.httpMethod;
-    	      this.operationUrl = defaults.operationUrl;
-    	      this.requestUri = defaults.requestUri;
-    	      this.status = defaults.status;
+            $ = new LatestOperationResultResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder errorCode(String errorCode) {
-            this.errorCode = Objects.requireNonNull(errorCode);
+            $.errorCode = errorCode;
             return this;
         }
+
         public Builder errorMessage(String errorMessage) {
-            this.errorMessage = Objects.requireNonNull(errorMessage);
+            $.errorMessage = errorMessage;
             return this;
         }
+
         public Builder httpMethod(String httpMethod) {
-            this.httpMethod = Objects.requireNonNull(httpMethod);
+            $.httpMethod = httpMethod;
             return this;
         }
+
         public Builder operationUrl(String operationUrl) {
-            this.operationUrl = Objects.requireNonNull(operationUrl);
+            $.operationUrl = operationUrl;
             return this;
         }
+
         public Builder requestUri(String requestUri) {
-            this.requestUri = Objects.requireNonNull(requestUri);
+            $.requestUri = requestUri;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
-        }        public LatestOperationResultResponse build() {
-            return new LatestOperationResultResponse(errorCode, errorMessage, httpMethod, operationUrl, requestUri, status);
+        }
+
+        public LatestOperationResultResponse build() {
+            $.errorCode = Objects.requireNonNull($.errorCode, "expected parameter 'errorCode' to be non-null");
+            $.errorMessage = Objects.requireNonNull($.errorMessage, "expected parameter 'errorMessage' to be non-null");
+            $.httpMethod = Objects.requireNonNull($.httpMethod, "expected parameter 'httpMethod' to be non-null");
+            $.operationUrl = Objects.requireNonNull($.operationUrl, "expected parameter 'operationUrl' to be non-null");
+            $.requestUri = Objects.requireNonNull($.requestUri, "expected parameter 'requestUri' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

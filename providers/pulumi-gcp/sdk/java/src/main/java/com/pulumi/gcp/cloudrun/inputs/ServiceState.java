@@ -5,7 +5,6 @@ package com.pulumi.gcp.cloudrun.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.cloudrun.inputs.ServiceMetadataGetArgs;
 import com.pulumi.gcp.cloudrun.inputs.ServiceStatusGetArgs;
 import com.pulumi.gcp.cloudrun.inputs.ServiceTemplateGetArgs;
@@ -14,6 +13,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,10 +30,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autogenerateRevisionName")
-      private final @Nullable Output<Boolean> autogenerateRevisionName;
+    private @Nullable Output<Boolean> autogenerateRevisionName;
 
-    public Output<Boolean> autogenerateRevisionName() {
-        return this.autogenerateRevisionName == null ? Codegen.empty() : this.autogenerateRevisionName;
+    public Optional<Output<Boolean>> autogenerateRevisionName() {
+        return Optional.ofNullable(this.autogenerateRevisionName);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<ServiceMetadataGetArgs> metadata;
+    private @Nullable Output<ServiceMetadataGetArgs> metadata;
 
-    public Output<ServiceMetadataGetArgs> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<ServiceMetadataGetArgs>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="statuses")
-      private final @Nullable Output<List<ServiceStatusGetArgs>> statuses;
+    private @Nullable Output<List<ServiceStatusGetArgs>> statuses;
 
-    public Output<List<ServiceStatusGetArgs>> statuses() {
-        return this.statuses == null ? Codegen.empty() : this.statuses;
+    public Optional<Output<List<ServiceStatusGetArgs>>> statuses() {
+        return Optional.ofNullable(this.statuses);
     }
 
     /**
@@ -108,10 +108,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="template")
-      private final @Nullable Output<ServiceTemplateGetArgs> template;
+    private @Nullable Output<ServiceTemplateGetArgs> template;
 
-    public Output<ServiceTemplateGetArgs> template() {
-        return this.template == null ? Codegen.empty() : this.template;
+    public Optional<Output<ServiceTemplateGetArgs>> template() {
+        return Optional.ofNullable(this.template);
     }
 
     /**
@@ -121,147 +121,126 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="traffics")
-      private final @Nullable Output<List<ServiceTrafficGetArgs>> traffics;
+    private @Nullable Output<List<ServiceTrafficGetArgs>> traffics;
 
-    public Output<List<ServiceTrafficGetArgs>> traffics() {
-        return this.traffics == null ? Codegen.empty() : this.traffics;
+    public Optional<Output<List<ServiceTrafficGetArgs>>> traffics() {
+        return Optional.ofNullable(this.traffics);
     }
 
-    public ServiceState(
-        @Nullable Output<Boolean> autogenerateRevisionName,
-        @Nullable Output<String> location,
-        @Nullable Output<ServiceMetadataGetArgs> metadata,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<List<ServiceStatusGetArgs>> statuses,
-        @Nullable Output<ServiceTemplateGetArgs> template,
-        @Nullable Output<List<ServiceTrafficGetArgs>> traffics) {
-        this.autogenerateRevisionName = autogenerateRevisionName;
-        this.location = location;
-        this.metadata = metadata;
-        this.name = name;
-        this.project = project;
-        this.statuses = statuses;
-        this.template = template;
-        this.traffics = traffics;
-    }
+    private ServiceState() {}
 
-    private ServiceState() {
-        this.autogenerateRevisionName = Codegen.empty();
-        this.location = Codegen.empty();
-        this.metadata = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.statuses = Codegen.empty();
-        this.template = Codegen.empty();
-        this.traffics = Codegen.empty();
+    private ServiceState(ServiceState $) {
+        this.autogenerateRevisionName = $.autogenerateRevisionName;
+        this.location = $.location;
+        this.metadata = $.metadata;
+        this.name = $.name;
+        this.project = $.project;
+        this.statuses = $.statuses;
+        this.template = $.template;
+        this.traffics = $.traffics;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> autogenerateRevisionName;
-        private @Nullable Output<String> location;
-        private @Nullable Output<ServiceMetadataGetArgs> metadata;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<List<ServiceStatusGetArgs>> statuses;
-        private @Nullable Output<ServiceTemplateGetArgs> template;
-        private @Nullable Output<List<ServiceTrafficGetArgs>> traffics;
+        private ServiceState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceState();
         }
 
         public Builder(ServiceState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autogenerateRevisionName = defaults.autogenerateRevisionName;
-    	      this.location = defaults.location;
-    	      this.metadata = defaults.metadata;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.statuses = defaults.statuses;
-    	      this.template = defaults.template;
-    	      this.traffics = defaults.traffics;
+            $ = new ServiceState(Objects.requireNonNull(defaults));
         }
 
         public Builder autogenerateRevisionName(@Nullable Output<Boolean> autogenerateRevisionName) {
-            this.autogenerateRevisionName = autogenerateRevisionName;
+            $.autogenerateRevisionName = autogenerateRevisionName;
             return this;
         }
-        public Builder autogenerateRevisionName(@Nullable Boolean autogenerateRevisionName) {
-            this.autogenerateRevisionName = Codegen.ofNullable(autogenerateRevisionName);
-            return this;
+
+        public Builder autogenerateRevisionName(Boolean autogenerateRevisionName) {
+            return autogenerateRevisionName(Output.of(autogenerateRevisionName));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder metadata(@Nullable Output<ServiceMetadataGetArgs> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable ServiceMetadataGetArgs metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(ServiceMetadataGetArgs metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder statuses(@Nullable Output<List<ServiceStatusGetArgs>> statuses) {
-            this.statuses = statuses;
+            $.statuses = statuses;
             return this;
         }
-        public Builder statuses(@Nullable List<ServiceStatusGetArgs> statuses) {
-            this.statuses = Codegen.ofNullable(statuses);
-            return this;
+
+        public Builder statuses(List<ServiceStatusGetArgs> statuses) {
+            return statuses(Output.of(statuses));
         }
+
         public Builder statuses(ServiceStatusGetArgs... statuses) {
             return statuses(List.of(statuses));
         }
+
         public Builder template(@Nullable Output<ServiceTemplateGetArgs> template) {
-            this.template = template;
+            $.template = template;
             return this;
         }
-        public Builder template(@Nullable ServiceTemplateGetArgs template) {
-            this.template = Codegen.ofNullable(template);
-            return this;
+
+        public Builder template(ServiceTemplateGetArgs template) {
+            return template(Output.of(template));
         }
+
         public Builder traffics(@Nullable Output<List<ServiceTrafficGetArgs>> traffics) {
-            this.traffics = traffics;
+            $.traffics = traffics;
             return this;
         }
-        public Builder traffics(@Nullable List<ServiceTrafficGetArgs> traffics) {
-            this.traffics = Codegen.ofNullable(traffics);
-            return this;
+
+        public Builder traffics(List<ServiceTrafficGetArgs> traffics) {
+            return traffics(Output.of(traffics));
         }
+
         public Builder traffics(ServiceTrafficGetArgs... traffics) {
             return traffics(List.of(traffics));
-        }        public ServiceState build() {
-            return new ServiceState(autogenerateRevisionName, location, metadata, name, project, statuses, template, traffics);
+        }
+
+        public ServiceState build() {
+            return $;
         }
     }
+
 }

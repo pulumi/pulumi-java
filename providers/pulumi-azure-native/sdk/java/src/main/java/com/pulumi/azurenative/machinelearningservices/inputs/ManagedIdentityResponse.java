@@ -24,10 +24,10 @@ public final class ManagedIdentityResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="clientId")
-      private final @Nullable String clientId;
+    private @Nullable String clientId;
 
     public Optional<String> clientId() {
-        return this.clientId == null ? Optional.empty() : Optional.ofNullable(this.clientId);
+        return Optional.ofNullable(this.clientId);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class ManagedIdentityResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="identityType", required=true)
-      private final String identityType;
+    private String identityType;
 
     public String identityType() {
         return this.identityType;
@@ -47,10 +47,10 @@ public final class ManagedIdentityResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="objectId")
-      private final @Nullable String objectId;
+    private @Nullable String objectId;
 
     public Optional<String> objectId() {
-        return this.objectId == null ? Optional.empty() : Optional.ofNullable(this.objectId);
+        return Optional.ofNullable(this.objectId);
     }
 
     /**
@@ -58,73 +58,63 @@ public final class ManagedIdentityResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable String resourceId;
+    private @Nullable String resourceId;
 
     public Optional<String> resourceId() {
-        return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
+        return Optional.ofNullable(this.resourceId);
     }
 
-    public ManagedIdentityResponse(
-        @Nullable String clientId,
-        String identityType,
-        @Nullable String objectId,
-        @Nullable String resourceId) {
-        this.clientId = clientId;
-        this.identityType = Codegen.stringProp("identityType").arg(identityType).require();
-        this.objectId = objectId;
-        this.resourceId = resourceId;
-    }
+    private ManagedIdentityResponse() {}
 
-    private ManagedIdentityResponse() {
-        this.clientId = null;
-        this.identityType = null;
-        this.objectId = null;
-        this.resourceId = null;
+    private ManagedIdentityResponse(ManagedIdentityResponse $) {
+        this.clientId = $.clientId;
+        this.identityType = $.identityType;
+        this.objectId = $.objectId;
+        this.resourceId = $.resourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedIdentityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String clientId;
-        private String identityType;
-        private @Nullable String objectId;
-        private @Nullable String resourceId;
+        private ManagedIdentityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedIdentityResponse();
         }
 
         public Builder(ManagedIdentityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientId = defaults.clientId;
-    	      this.identityType = defaults.identityType;
-    	      this.objectId = defaults.objectId;
-    	      this.resourceId = defaults.resourceId;
+            $ = new ManagedIdentityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder clientId(@Nullable String clientId) {
-            this.clientId = clientId;
+            $.clientId = clientId;
             return this;
         }
+
         public Builder identityType(String identityType) {
-            this.identityType = Objects.requireNonNull(identityType);
+            $.identityType = identityType;
             return this;
         }
+
         public Builder objectId(@Nullable String objectId) {
-            this.objectId = objectId;
+            $.objectId = objectId;
             return this;
         }
+
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
-        }        public ManagedIdentityResponse build() {
-            return new ManagedIdentityResponse(clientId, identityType, objectId, resourceId);
+        }
+
+        public ManagedIdentityResponse build() {
+            $.identityType = Codegen.stringProp("identityType").arg($.identityType).require();
+            return $;
         }
     }
+
 }

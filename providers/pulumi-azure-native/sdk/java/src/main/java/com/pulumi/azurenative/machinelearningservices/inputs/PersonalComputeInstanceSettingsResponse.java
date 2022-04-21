@@ -23,45 +23,44 @@ public final class PersonalComputeInstanceSettingsResponse extends com.pulumi.re
      * 
      */
     @Import(name="assignedUser")
-      private final @Nullable AssignedUserResponse assignedUser;
+    private @Nullable AssignedUserResponse assignedUser;
 
     public Optional<AssignedUserResponse> assignedUser() {
-        return this.assignedUser == null ? Optional.empty() : Optional.ofNullable(this.assignedUser);
+        return Optional.ofNullable(this.assignedUser);
     }
 
-    public PersonalComputeInstanceSettingsResponse(@Nullable AssignedUserResponse assignedUser) {
-        this.assignedUser = assignedUser;
-    }
+    private PersonalComputeInstanceSettingsResponse() {}
 
-    private PersonalComputeInstanceSettingsResponse() {
-        this.assignedUser = null;
+    private PersonalComputeInstanceSettingsResponse(PersonalComputeInstanceSettingsResponse $) {
+        this.assignedUser = $.assignedUser;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PersonalComputeInstanceSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable AssignedUserResponse assignedUser;
+        private PersonalComputeInstanceSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PersonalComputeInstanceSettingsResponse();
         }
 
         public Builder(PersonalComputeInstanceSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assignedUser = defaults.assignedUser;
+            $ = new PersonalComputeInstanceSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder assignedUser(@Nullable AssignedUserResponse assignedUser) {
-            this.assignedUser = assignedUser;
+            $.assignedUser = assignedUser;
             return this;
-        }        public PersonalComputeInstanceSettingsResponse build() {
-            return new PersonalComputeInstanceSettingsResponse(assignedUser);
+        }
+
+        public PersonalComputeInstanceSettingsResponse build() {
+            return $;
         }
     }
+
 }

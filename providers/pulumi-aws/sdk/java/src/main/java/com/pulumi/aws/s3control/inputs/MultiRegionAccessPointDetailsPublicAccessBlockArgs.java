@@ -5,9 +5,9 @@ package com.pulumi.aws.s3control.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class MultiRegionAccessPointDetailsPublicAccessBlockArgs extends co
      * 
      */
     @Import(name="blockPublicAcls")
-      private final @Nullable Output<Boolean> blockPublicAcls;
+    private @Nullable Output<Boolean> blockPublicAcls;
 
-    public Output<Boolean> blockPublicAcls() {
-        return this.blockPublicAcls == null ? Codegen.empty() : this.blockPublicAcls;
+    public Optional<Output<Boolean>> blockPublicAcls() {
+        return Optional.ofNullable(this.blockPublicAcls);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class MultiRegionAccessPointDetailsPublicAccessBlockArgs extends co
      * 
      */
     @Import(name="blockPublicPolicy")
-      private final @Nullable Output<Boolean> blockPublicPolicy;
+    private @Nullable Output<Boolean> blockPublicPolicy;
 
-    public Output<Boolean> blockPublicPolicy() {
-        return this.blockPublicPolicy == null ? Codegen.empty() : this.blockPublicPolicy;
+    public Optional<Output<Boolean>> blockPublicPolicy() {
+        return Optional.ofNullable(this.blockPublicPolicy);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class MultiRegionAccessPointDetailsPublicAccessBlockArgs extends co
      * 
      */
     @Import(name="ignorePublicAcls")
-      private final @Nullable Output<Boolean> ignorePublicAcls;
+    private @Nullable Output<Boolean> ignorePublicAcls;
 
-    public Output<Boolean> ignorePublicAcls() {
-        return this.ignorePublicAcls == null ? Codegen.empty() : this.ignorePublicAcls;
+    public Optional<Output<Boolean>> ignorePublicAcls() {
+        return Optional.ofNullable(this.ignorePublicAcls);
     }
 
     /**
@@ -59,89 +59,78 @@ public final class MultiRegionAccessPointDetailsPublicAccessBlockArgs extends co
      * 
      */
     @Import(name="restrictPublicBuckets")
-      private final @Nullable Output<Boolean> restrictPublicBuckets;
+    private @Nullable Output<Boolean> restrictPublicBuckets;
 
-    public Output<Boolean> restrictPublicBuckets() {
-        return this.restrictPublicBuckets == null ? Codegen.empty() : this.restrictPublicBuckets;
+    public Optional<Output<Boolean>> restrictPublicBuckets() {
+        return Optional.ofNullable(this.restrictPublicBuckets);
     }
 
-    public MultiRegionAccessPointDetailsPublicAccessBlockArgs(
-        @Nullable Output<Boolean> blockPublicAcls,
-        @Nullable Output<Boolean> blockPublicPolicy,
-        @Nullable Output<Boolean> ignorePublicAcls,
-        @Nullable Output<Boolean> restrictPublicBuckets) {
-        this.blockPublicAcls = blockPublicAcls;
-        this.blockPublicPolicy = blockPublicPolicy;
-        this.ignorePublicAcls = ignorePublicAcls;
-        this.restrictPublicBuckets = restrictPublicBuckets;
-    }
+    private MultiRegionAccessPointDetailsPublicAccessBlockArgs() {}
 
-    private MultiRegionAccessPointDetailsPublicAccessBlockArgs() {
-        this.blockPublicAcls = Codegen.empty();
-        this.blockPublicPolicy = Codegen.empty();
-        this.ignorePublicAcls = Codegen.empty();
-        this.restrictPublicBuckets = Codegen.empty();
+    private MultiRegionAccessPointDetailsPublicAccessBlockArgs(MultiRegionAccessPointDetailsPublicAccessBlockArgs $) {
+        this.blockPublicAcls = $.blockPublicAcls;
+        this.blockPublicPolicy = $.blockPublicPolicy;
+        this.ignorePublicAcls = $.ignorePublicAcls;
+        this.restrictPublicBuckets = $.restrictPublicBuckets;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MultiRegionAccessPointDetailsPublicAccessBlockArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> blockPublicAcls;
-        private @Nullable Output<Boolean> blockPublicPolicy;
-        private @Nullable Output<Boolean> ignorePublicAcls;
-        private @Nullable Output<Boolean> restrictPublicBuckets;
+        private MultiRegionAccessPointDetailsPublicAccessBlockArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MultiRegionAccessPointDetailsPublicAccessBlockArgs();
         }
 
         public Builder(MultiRegionAccessPointDetailsPublicAccessBlockArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.blockPublicAcls = defaults.blockPublicAcls;
-    	      this.blockPublicPolicy = defaults.blockPublicPolicy;
-    	      this.ignorePublicAcls = defaults.ignorePublicAcls;
-    	      this.restrictPublicBuckets = defaults.restrictPublicBuckets;
+            $ = new MultiRegionAccessPointDetailsPublicAccessBlockArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder blockPublicAcls(@Nullable Output<Boolean> blockPublicAcls) {
-            this.blockPublicAcls = blockPublicAcls;
+            $.blockPublicAcls = blockPublicAcls;
             return this;
         }
-        public Builder blockPublicAcls(@Nullable Boolean blockPublicAcls) {
-            this.blockPublicAcls = Codegen.ofNullable(blockPublicAcls);
-            return this;
+
+        public Builder blockPublicAcls(Boolean blockPublicAcls) {
+            return blockPublicAcls(Output.of(blockPublicAcls));
         }
+
         public Builder blockPublicPolicy(@Nullable Output<Boolean> blockPublicPolicy) {
-            this.blockPublicPolicy = blockPublicPolicy;
+            $.blockPublicPolicy = blockPublicPolicy;
             return this;
         }
-        public Builder blockPublicPolicy(@Nullable Boolean blockPublicPolicy) {
-            this.blockPublicPolicy = Codegen.ofNullable(blockPublicPolicy);
-            return this;
+
+        public Builder blockPublicPolicy(Boolean blockPublicPolicy) {
+            return blockPublicPolicy(Output.of(blockPublicPolicy));
         }
+
         public Builder ignorePublicAcls(@Nullable Output<Boolean> ignorePublicAcls) {
-            this.ignorePublicAcls = ignorePublicAcls;
+            $.ignorePublicAcls = ignorePublicAcls;
             return this;
         }
-        public Builder ignorePublicAcls(@Nullable Boolean ignorePublicAcls) {
-            this.ignorePublicAcls = Codegen.ofNullable(ignorePublicAcls);
-            return this;
+
+        public Builder ignorePublicAcls(Boolean ignorePublicAcls) {
+            return ignorePublicAcls(Output.of(ignorePublicAcls));
         }
+
         public Builder restrictPublicBuckets(@Nullable Output<Boolean> restrictPublicBuckets) {
-            this.restrictPublicBuckets = restrictPublicBuckets;
+            $.restrictPublicBuckets = restrictPublicBuckets;
             return this;
         }
-        public Builder restrictPublicBuckets(@Nullable Boolean restrictPublicBuckets) {
-            this.restrictPublicBuckets = Codegen.ofNullable(restrictPublicBuckets);
-            return this;
-        }        public MultiRegionAccessPointDetailsPublicAccessBlockArgs build() {
-            return new MultiRegionAccessPointDetailsPublicAccessBlockArgs(blockPublicAcls, blockPublicPolicy, ignorePublicAcls, restrictPublicBuckets);
+
+        public Builder restrictPublicBuckets(Boolean restrictPublicBuckets) {
+            return restrictPublicBuckets(Output.of(restrictPublicBuckets));
+        }
+
+        public MultiRegionAccessPointDetailsPublicAccessBlockArgs build() {
+            return $;
         }
     }
+
 }

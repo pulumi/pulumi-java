@@ -5,10 +5,10 @@ package com.pulumi.azurenative.apimanagement;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class GatewayCertificateAuthorityArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="certificateId")
-      private final @Nullable Output<String> certificateId;
+    private @Nullable Output<String> certificateId;
 
-    public Output<String> certificateId() {
-        return this.certificateId == null ? Codegen.empty() : this.certificateId;
+    public Optional<Output<String>> certificateId() {
+        return Optional.ofNullable(this.certificateId);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class GatewayCertificateAuthorityArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="gatewayId", required=true)
-      private final Output<String> gatewayId;
+    private Output<String> gatewayId;
 
     public Output<String> gatewayId() {
         return this.gatewayId;
@@ -43,10 +43,10 @@ public final class GatewayCertificateAuthorityArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="isTrusted")
-      private final @Nullable Output<Boolean> isTrusted;
+    private @Nullable Output<Boolean> isTrusted;
 
-    public Output<Boolean> isTrusted() {
-        return this.isTrusted == null ? Codegen.empty() : this.isTrusted;
+    public Optional<Output<Boolean>> isTrusted() {
+        return Optional.ofNullable(this.isTrusted);
     }
 
     /**
@@ -54,7 +54,7 @@ public final class GatewayCertificateAuthorityArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -65,102 +65,91 @@ public final class GatewayCertificateAuthorityArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="serviceName", required=true)
-      private final Output<String> serviceName;
+    private Output<String> serviceName;
 
     public Output<String> serviceName() {
         return this.serviceName;
     }
 
-    public GatewayCertificateAuthorityArgs(
-        @Nullable Output<String> certificateId,
-        Output<String> gatewayId,
-        @Nullable Output<Boolean> isTrusted,
-        Output<String> resourceGroupName,
-        Output<String> serviceName) {
-        this.certificateId = certificateId;
-        this.gatewayId = Objects.requireNonNull(gatewayId, "expected parameter 'gatewayId' to be non-null");
-        this.isTrusted = isTrusted;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-    }
+    private GatewayCertificateAuthorityArgs() {}
 
-    private GatewayCertificateAuthorityArgs() {
-        this.certificateId = Codegen.empty();
-        this.gatewayId = Codegen.empty();
-        this.isTrusted = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serviceName = Codegen.empty();
+    private GatewayCertificateAuthorityArgs(GatewayCertificateAuthorityArgs $) {
+        this.certificateId = $.certificateId;
+        this.gatewayId = $.gatewayId;
+        this.isTrusted = $.isTrusted;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GatewayCertificateAuthorityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> certificateId;
-        private Output<String> gatewayId;
-        private @Nullable Output<Boolean> isTrusted;
-        private Output<String> resourceGroupName;
-        private Output<String> serviceName;
+        private GatewayCertificateAuthorityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GatewayCertificateAuthorityArgs();
         }
 
         public Builder(GatewayCertificateAuthorityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateId = defaults.certificateId;
-    	      this.gatewayId = defaults.gatewayId;
-    	      this.isTrusted = defaults.isTrusted;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
+            $ = new GatewayCertificateAuthorityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateId(@Nullable Output<String> certificateId) {
-            this.certificateId = certificateId;
+            $.certificateId = certificateId;
             return this;
         }
-        public Builder certificateId(@Nullable String certificateId) {
-            this.certificateId = Codegen.ofNullable(certificateId);
-            return this;
+
+        public Builder certificateId(String certificateId) {
+            return certificateId(Output.of(certificateId));
         }
+
         public Builder gatewayId(Output<String> gatewayId) {
-            this.gatewayId = Objects.requireNonNull(gatewayId);
+            $.gatewayId = gatewayId;
             return this;
         }
+
         public Builder gatewayId(String gatewayId) {
-            this.gatewayId = Output.of(Objects.requireNonNull(gatewayId));
-            return this;
+            return gatewayId(Output.of(gatewayId));
         }
+
         public Builder isTrusted(@Nullable Output<Boolean> isTrusted) {
-            this.isTrusted = isTrusted;
+            $.isTrusted = isTrusted;
             return this;
         }
-        public Builder isTrusted(@Nullable Boolean isTrusted) {
-            this.isTrusted = Codegen.ofNullable(isTrusted);
-            return this;
+
+        public Builder isTrusted(Boolean isTrusted) {
+            return isTrusted(Output.of(isTrusted));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serviceName(Output<String> serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
-            return this;
-        }        public GatewayCertificateAuthorityArgs build() {
-            return new GatewayCertificateAuthorityArgs(certificateId, gatewayId, isTrusted, resourceGroupName, serviceName);
+            return serviceName(Output.of(serviceName));
+        }
+
+        public GatewayCertificateAuthorityArgs build() {
+            $.gatewayId = Objects.requireNonNull($.gatewayId, "expected parameter 'gatewayId' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

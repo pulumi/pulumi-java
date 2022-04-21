@@ -7,8 +7,8 @@ import com.pulumi.azurenative.batch.inputs.AutoScaleSettingsArgs;
 import com.pulumi.azurenative.batch.inputs.FixedScaleSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ScaleSettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoScale")
-      private final @Nullable Output<AutoScaleSettingsArgs> autoScale;
+    private @Nullable Output<AutoScaleSettingsArgs> autoScale;
 
-    public Output<AutoScaleSettingsArgs> autoScale() {
-        return this.autoScale == null ? Codegen.empty() : this.autoScale;
+    public Optional<Output<AutoScaleSettingsArgs>> autoScale() {
+        return Optional.ofNullable(this.autoScale);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class ScaleSettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fixedScale")
-      private final @Nullable Output<FixedScaleSettingsArgs> fixedScale;
+    private @Nullable Output<FixedScaleSettingsArgs> fixedScale;
 
-    public Output<FixedScaleSettingsArgs> fixedScale() {
-        return this.fixedScale == null ? Codegen.empty() : this.fixedScale;
+    public Optional<Output<FixedScaleSettingsArgs>> fixedScale() {
+        return Optional.ofNullable(this.fixedScale);
     }
 
-    public ScaleSettingsArgs(
-        @Nullable Output<AutoScaleSettingsArgs> autoScale,
-        @Nullable Output<FixedScaleSettingsArgs> fixedScale) {
-        this.autoScale = autoScale;
-        this.fixedScale = fixedScale;
-    }
+    private ScaleSettingsArgs() {}
 
-    private ScaleSettingsArgs() {
-        this.autoScale = Codegen.empty();
-        this.fixedScale = Codegen.empty();
+    private ScaleSettingsArgs(ScaleSettingsArgs $) {
+        this.autoScale = $.autoScale;
+        this.fixedScale = $.fixedScale;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScaleSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AutoScaleSettingsArgs> autoScale;
-        private @Nullable Output<FixedScaleSettingsArgs> fixedScale;
+        private ScaleSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScaleSettingsArgs();
         }
 
         public Builder(ScaleSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoScale = defaults.autoScale;
-    	      this.fixedScale = defaults.fixedScale;
+            $ = new ScaleSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoScale(@Nullable Output<AutoScaleSettingsArgs> autoScale) {
-            this.autoScale = autoScale;
+            $.autoScale = autoScale;
             return this;
         }
-        public Builder autoScale(@Nullable AutoScaleSettingsArgs autoScale) {
-            this.autoScale = Codegen.ofNullable(autoScale);
-            return this;
+
+        public Builder autoScale(AutoScaleSettingsArgs autoScale) {
+            return autoScale(Output.of(autoScale));
         }
+
         public Builder fixedScale(@Nullable Output<FixedScaleSettingsArgs> fixedScale) {
-            this.fixedScale = fixedScale;
+            $.fixedScale = fixedScale;
             return this;
         }
-        public Builder fixedScale(@Nullable FixedScaleSettingsArgs fixedScale) {
-            this.fixedScale = Codegen.ofNullable(fixedScale);
-            return this;
-        }        public ScaleSettingsArgs build() {
-            return new ScaleSettingsArgs(autoScale, fixedScale);
+
+        public Builder fixedScale(FixedScaleSettingsArgs fixedScale) {
+            return fixedScale(Output.of(fixedScale));
+        }
+
+        public ScaleSettingsArgs build() {
+            return $;
         }
     }
+
 }

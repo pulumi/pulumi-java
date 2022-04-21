@@ -17,7 +17,7 @@ public final class GetP2sVpnServerConfigurationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="p2SVpnServerConfigurationName", required=true)
-      private final String p2SVpnServerConfigurationName;
+    private String p2SVpnServerConfigurationName;
 
     public String p2SVpnServerConfigurationName() {
         return this.p2SVpnServerConfigurationName;
@@ -28,7 +28,7 @@ public final class GetP2sVpnServerConfigurationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetP2sVpnServerConfigurationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="virtualWanName", required=true)
-      private final String virtualWanName;
+    private String virtualWanName;
 
     public String virtualWanName() {
         return this.virtualWanName;
     }
 
-    public GetP2sVpnServerConfigurationArgs(
-        String p2SVpnServerConfigurationName,
-        String resourceGroupName,
-        String virtualWanName) {
-        this.p2SVpnServerConfigurationName = Objects.requireNonNull(p2SVpnServerConfigurationName, "expected parameter 'p2SVpnServerConfigurationName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.virtualWanName = Objects.requireNonNull(virtualWanName, "expected parameter 'virtualWanName' to be non-null");
-    }
+    private GetP2sVpnServerConfigurationArgs() {}
 
-    private GetP2sVpnServerConfigurationArgs() {
-        this.p2SVpnServerConfigurationName = null;
-        this.resourceGroupName = null;
-        this.virtualWanName = null;
+    private GetP2sVpnServerConfigurationArgs(GetP2sVpnServerConfigurationArgs $) {
+        this.p2SVpnServerConfigurationName = $.p2SVpnServerConfigurationName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.virtualWanName = $.virtualWanName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetP2sVpnServerConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String p2SVpnServerConfigurationName;
-        private String resourceGroupName;
-        private String virtualWanName;
+        private GetP2sVpnServerConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetP2sVpnServerConfigurationArgs();
         }
 
         public Builder(GetP2sVpnServerConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.p2SVpnServerConfigurationName = defaults.p2SVpnServerConfigurationName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.virtualWanName = defaults.virtualWanName;
+            $ = new GetP2sVpnServerConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder p2SVpnServerConfigurationName(String p2SVpnServerConfigurationName) {
-            this.p2SVpnServerConfigurationName = Objects.requireNonNull(p2SVpnServerConfigurationName);
+            $.p2SVpnServerConfigurationName = p2SVpnServerConfigurationName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder virtualWanName(String virtualWanName) {
-            this.virtualWanName = Objects.requireNonNull(virtualWanName);
+            $.virtualWanName = virtualWanName;
             return this;
-        }        public GetP2sVpnServerConfigurationArgs build() {
-            return new GetP2sVpnServerConfigurationArgs(p2SVpnServerConfigurationName, resourceGroupName, virtualWanName);
+        }
+
+        public GetP2sVpnServerConfigurationArgs build() {
+            $.p2SVpnServerConfigurationName = Objects.requireNonNull($.p2SVpnServerConfigurationName, "expected parameter 'p2SVpnServerConfigurationName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.virtualWanName = Objects.requireNonNull($.virtualWanName, "expected parameter 'virtualWanName' to be non-null");
+            return $;
         }
     }
+
 }

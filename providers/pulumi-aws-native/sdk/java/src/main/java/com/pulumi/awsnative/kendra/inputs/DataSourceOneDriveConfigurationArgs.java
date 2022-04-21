@@ -7,11 +7,11 @@ import com.pulumi.awsnative.kendra.inputs.DataSourceOneDriveUsersArgs;
 import com.pulumi.awsnative.kendra.inputs.DataSourceToIndexFieldMappingArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,179 +20,165 @@ public final class DataSourceOneDriveConfigurationArgs extends com.pulumi.resour
     public static final DataSourceOneDriveConfigurationArgs Empty = new DataSourceOneDriveConfigurationArgs();
 
     @Import(name="disableLocalGroups")
-      private final @Nullable Output<Boolean> disableLocalGroups;
+    private @Nullable Output<Boolean> disableLocalGroups;
 
-    public Output<Boolean> disableLocalGroups() {
-        return this.disableLocalGroups == null ? Codegen.empty() : this.disableLocalGroups;
+    public Optional<Output<Boolean>> disableLocalGroups() {
+        return Optional.ofNullable(this.disableLocalGroups);
     }
 
     @Import(name="exclusionPatterns")
-      private final @Nullable Output<List<String>> exclusionPatterns;
+    private @Nullable Output<List<String>> exclusionPatterns;
 
-    public Output<List<String>> exclusionPatterns() {
-        return this.exclusionPatterns == null ? Codegen.empty() : this.exclusionPatterns;
+    public Optional<Output<List<String>>> exclusionPatterns() {
+        return Optional.ofNullable(this.exclusionPatterns);
     }
 
     @Import(name="fieldMappings")
-      private final @Nullable Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings;
+    private @Nullable Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings;
 
-    public Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings() {
-        return this.fieldMappings == null ? Codegen.empty() : this.fieldMappings;
+    public Optional<Output<List<DataSourceToIndexFieldMappingArgs>>> fieldMappings() {
+        return Optional.ofNullable(this.fieldMappings);
     }
 
     @Import(name="inclusionPatterns")
-      private final @Nullable Output<List<String>> inclusionPatterns;
+    private @Nullable Output<List<String>> inclusionPatterns;
 
-    public Output<List<String>> inclusionPatterns() {
-        return this.inclusionPatterns == null ? Codegen.empty() : this.inclusionPatterns;
+    public Optional<Output<List<String>>> inclusionPatterns() {
+        return Optional.ofNullable(this.inclusionPatterns);
     }
 
     @Import(name="oneDriveUsers", required=true)
-      private final Output<DataSourceOneDriveUsersArgs> oneDriveUsers;
+    private Output<DataSourceOneDriveUsersArgs> oneDriveUsers;
 
     public Output<DataSourceOneDriveUsersArgs> oneDriveUsers() {
         return this.oneDriveUsers;
     }
 
     @Import(name="secretArn", required=true)
-      private final Output<String> secretArn;
+    private Output<String> secretArn;
 
     public Output<String> secretArn() {
         return this.secretArn;
     }
 
     @Import(name="tenantDomain", required=true)
-      private final Output<String> tenantDomain;
+    private Output<String> tenantDomain;
 
     public Output<String> tenantDomain() {
         return this.tenantDomain;
     }
 
-    public DataSourceOneDriveConfigurationArgs(
-        @Nullable Output<Boolean> disableLocalGroups,
-        @Nullable Output<List<String>> exclusionPatterns,
-        @Nullable Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings,
-        @Nullable Output<List<String>> inclusionPatterns,
-        Output<DataSourceOneDriveUsersArgs> oneDriveUsers,
-        Output<String> secretArn,
-        Output<String> tenantDomain) {
-        this.disableLocalGroups = disableLocalGroups;
-        this.exclusionPatterns = exclusionPatterns;
-        this.fieldMappings = fieldMappings;
-        this.inclusionPatterns = inclusionPatterns;
-        this.oneDriveUsers = Objects.requireNonNull(oneDriveUsers, "expected parameter 'oneDriveUsers' to be non-null");
-        this.secretArn = Objects.requireNonNull(secretArn, "expected parameter 'secretArn' to be non-null");
-        this.tenantDomain = Objects.requireNonNull(tenantDomain, "expected parameter 'tenantDomain' to be non-null");
-    }
+    private DataSourceOneDriveConfigurationArgs() {}
 
-    private DataSourceOneDriveConfigurationArgs() {
-        this.disableLocalGroups = Codegen.empty();
-        this.exclusionPatterns = Codegen.empty();
-        this.fieldMappings = Codegen.empty();
-        this.inclusionPatterns = Codegen.empty();
-        this.oneDriveUsers = Codegen.empty();
-        this.secretArn = Codegen.empty();
-        this.tenantDomain = Codegen.empty();
+    private DataSourceOneDriveConfigurationArgs(DataSourceOneDriveConfigurationArgs $) {
+        this.disableLocalGroups = $.disableLocalGroups;
+        this.exclusionPatterns = $.exclusionPatterns;
+        this.fieldMappings = $.fieldMappings;
+        this.inclusionPatterns = $.inclusionPatterns;
+        this.oneDriveUsers = $.oneDriveUsers;
+        this.secretArn = $.secretArn;
+        this.tenantDomain = $.tenantDomain;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceOneDriveConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> disableLocalGroups;
-        private @Nullable Output<List<String>> exclusionPatterns;
-        private @Nullable Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings;
-        private @Nullable Output<List<String>> inclusionPatterns;
-        private Output<DataSourceOneDriveUsersArgs> oneDriveUsers;
-        private Output<String> secretArn;
-        private Output<String> tenantDomain;
+        private DataSourceOneDriveConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceOneDriveConfigurationArgs();
         }
 
         public Builder(DataSourceOneDriveConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disableLocalGroups = defaults.disableLocalGroups;
-    	      this.exclusionPatterns = defaults.exclusionPatterns;
-    	      this.fieldMappings = defaults.fieldMappings;
-    	      this.inclusionPatterns = defaults.inclusionPatterns;
-    	      this.oneDriveUsers = defaults.oneDriveUsers;
-    	      this.secretArn = defaults.secretArn;
-    	      this.tenantDomain = defaults.tenantDomain;
+            $ = new DataSourceOneDriveConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder disableLocalGroups(@Nullable Output<Boolean> disableLocalGroups) {
-            this.disableLocalGroups = disableLocalGroups;
+            $.disableLocalGroups = disableLocalGroups;
             return this;
         }
-        public Builder disableLocalGroups(@Nullable Boolean disableLocalGroups) {
-            this.disableLocalGroups = Codegen.ofNullable(disableLocalGroups);
-            return this;
+
+        public Builder disableLocalGroups(Boolean disableLocalGroups) {
+            return disableLocalGroups(Output.of(disableLocalGroups));
         }
+
         public Builder exclusionPatterns(@Nullable Output<List<String>> exclusionPatterns) {
-            this.exclusionPatterns = exclusionPatterns;
+            $.exclusionPatterns = exclusionPatterns;
             return this;
         }
-        public Builder exclusionPatterns(@Nullable List<String> exclusionPatterns) {
-            this.exclusionPatterns = Codegen.ofNullable(exclusionPatterns);
-            return this;
+
+        public Builder exclusionPatterns(List<String> exclusionPatterns) {
+            return exclusionPatterns(Output.of(exclusionPatterns));
         }
+
         public Builder exclusionPatterns(String... exclusionPatterns) {
             return exclusionPatterns(List.of(exclusionPatterns));
         }
+
         public Builder fieldMappings(@Nullable Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings) {
-            this.fieldMappings = fieldMappings;
+            $.fieldMappings = fieldMappings;
             return this;
         }
-        public Builder fieldMappings(@Nullable List<DataSourceToIndexFieldMappingArgs> fieldMappings) {
-            this.fieldMappings = Codegen.ofNullable(fieldMappings);
-            return this;
+
+        public Builder fieldMappings(List<DataSourceToIndexFieldMappingArgs> fieldMappings) {
+            return fieldMappings(Output.of(fieldMappings));
         }
+
         public Builder fieldMappings(DataSourceToIndexFieldMappingArgs... fieldMappings) {
             return fieldMappings(List.of(fieldMappings));
         }
+
         public Builder inclusionPatterns(@Nullable Output<List<String>> inclusionPatterns) {
-            this.inclusionPatterns = inclusionPatterns;
+            $.inclusionPatterns = inclusionPatterns;
             return this;
         }
-        public Builder inclusionPatterns(@Nullable List<String> inclusionPatterns) {
-            this.inclusionPatterns = Codegen.ofNullable(inclusionPatterns);
-            return this;
+
+        public Builder inclusionPatterns(List<String> inclusionPatterns) {
+            return inclusionPatterns(Output.of(inclusionPatterns));
         }
+
         public Builder inclusionPatterns(String... inclusionPatterns) {
             return inclusionPatterns(List.of(inclusionPatterns));
         }
+
         public Builder oneDriveUsers(Output<DataSourceOneDriveUsersArgs> oneDriveUsers) {
-            this.oneDriveUsers = Objects.requireNonNull(oneDriveUsers);
+            $.oneDriveUsers = oneDriveUsers;
             return this;
         }
+
         public Builder oneDriveUsers(DataSourceOneDriveUsersArgs oneDriveUsers) {
-            this.oneDriveUsers = Output.of(Objects.requireNonNull(oneDriveUsers));
-            return this;
+            return oneDriveUsers(Output.of(oneDriveUsers));
         }
+
         public Builder secretArn(Output<String> secretArn) {
-            this.secretArn = Objects.requireNonNull(secretArn);
+            $.secretArn = secretArn;
             return this;
         }
+
         public Builder secretArn(String secretArn) {
-            this.secretArn = Output.of(Objects.requireNonNull(secretArn));
-            return this;
+            return secretArn(Output.of(secretArn));
         }
+
         public Builder tenantDomain(Output<String> tenantDomain) {
-            this.tenantDomain = Objects.requireNonNull(tenantDomain);
+            $.tenantDomain = tenantDomain;
             return this;
         }
+
         public Builder tenantDomain(String tenantDomain) {
-            this.tenantDomain = Output.of(Objects.requireNonNull(tenantDomain));
-            return this;
-        }        public DataSourceOneDriveConfigurationArgs build() {
-            return new DataSourceOneDriveConfigurationArgs(disableLocalGroups, exclusionPatterns, fieldMappings, inclusionPatterns, oneDriveUsers, secretArn, tenantDomain);
+            return tenantDomain(Output.of(tenantDomain));
+        }
+
+        public DataSourceOneDriveConfigurationArgs build() {
+            $.oneDriveUsers = Objects.requireNonNull($.oneDriveUsers, "expected parameter 'oneDriveUsers' to be non-null");
+            $.secretArn = Objects.requireNonNull($.secretArn, "expected parameter 'secretArn' to be non-null");
+            $.tenantDomain = Objects.requireNonNull($.tenantDomain, "expected parameter 'tenantDomain' to be non-null");
+            return $;
         }
     }
+
 }

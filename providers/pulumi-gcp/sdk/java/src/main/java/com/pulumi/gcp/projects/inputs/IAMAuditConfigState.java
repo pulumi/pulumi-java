@@ -5,11 +5,11 @@ package com.pulumi.gcp.projects.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.projects.inputs.IAMAuditConfigAuditLogConfigGetArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class IAMAuditConfigState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="auditLogConfigs")
-      private final @Nullable Output<List<IAMAuditConfigAuditLogConfigGetArgs>> auditLogConfigs;
+    private @Nullable Output<List<IAMAuditConfigAuditLogConfigGetArgs>> auditLogConfigs;
 
-    public Output<List<IAMAuditConfigAuditLogConfigGetArgs>> auditLogConfigs() {
-        return this.auditLogConfigs == null ? Codegen.empty() : this.auditLogConfigs;
+    public Optional<Output<List<IAMAuditConfigAuditLogConfigGetArgs>>> auditLogConfigs() {
+        return Optional.ofNullable(this.auditLogConfigs);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class IAMAuditConfigState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class IAMAuditConfigState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -56,92 +56,82 @@ public final class IAMAuditConfigState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="service")
-      private final @Nullable Output<String> service;
+    private @Nullable Output<String> service;
 
-    public Output<String> service() {
-        return this.service == null ? Codegen.empty() : this.service;
+    public Optional<Output<String>> service() {
+        return Optional.ofNullable(this.service);
     }
 
-    public IAMAuditConfigState(
-        @Nullable Output<List<IAMAuditConfigAuditLogConfigGetArgs>> auditLogConfigs,
-        @Nullable Output<String> etag,
-        @Nullable Output<String> project,
-        @Nullable Output<String> service) {
-        this.auditLogConfigs = auditLogConfigs;
-        this.etag = etag;
-        this.project = project;
-        this.service = service;
-    }
+    private IAMAuditConfigState() {}
 
-    private IAMAuditConfigState() {
-        this.auditLogConfigs = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.project = Codegen.empty();
-        this.service = Codegen.empty();
+    private IAMAuditConfigState(IAMAuditConfigState $) {
+        this.auditLogConfigs = $.auditLogConfigs;
+        this.etag = $.etag;
+        this.project = $.project;
+        this.service = $.service;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IAMAuditConfigState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<IAMAuditConfigAuditLogConfigGetArgs>> auditLogConfigs;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> service;
+        private IAMAuditConfigState $;
 
         public Builder() {
-    	      // Empty
+            $ = new IAMAuditConfigState();
         }
 
         public Builder(IAMAuditConfigState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.auditLogConfigs = defaults.auditLogConfigs;
-    	      this.etag = defaults.etag;
-    	      this.project = defaults.project;
-    	      this.service = defaults.service;
+            $ = new IAMAuditConfigState(Objects.requireNonNull(defaults));
         }
 
         public Builder auditLogConfigs(@Nullable Output<List<IAMAuditConfigAuditLogConfigGetArgs>> auditLogConfigs) {
-            this.auditLogConfigs = auditLogConfigs;
+            $.auditLogConfigs = auditLogConfigs;
             return this;
         }
-        public Builder auditLogConfigs(@Nullable List<IAMAuditConfigAuditLogConfigGetArgs> auditLogConfigs) {
-            this.auditLogConfigs = Codegen.ofNullable(auditLogConfigs);
-            return this;
+
+        public Builder auditLogConfigs(List<IAMAuditConfigAuditLogConfigGetArgs> auditLogConfigs) {
+            return auditLogConfigs(Output.of(auditLogConfigs));
         }
+
         public Builder auditLogConfigs(IAMAuditConfigAuditLogConfigGetArgs... auditLogConfigs) {
             return auditLogConfigs(List.of(auditLogConfigs));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder service(@Nullable Output<String> service) {
-            this.service = service;
+            $.service = service;
             return this;
         }
-        public Builder service(@Nullable String service) {
-            this.service = Codegen.ofNullable(service);
-            return this;
-        }        public IAMAuditConfigState build() {
-            return new IAMAuditConfigState(auditLogConfigs, etag, project, service);
+
+        public Builder service(String service) {
+            return service(Output.of(service));
+        }
+
+        public IAMAuditConfigState build() {
+            return $;
         }
     }
+
 }

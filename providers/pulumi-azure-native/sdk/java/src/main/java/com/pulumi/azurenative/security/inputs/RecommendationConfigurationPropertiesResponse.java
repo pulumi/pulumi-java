@@ -18,7 +18,7 @@ public final class RecommendationConfigurationPropertiesResponse extends com.pul
     public static final RecommendationConfigurationPropertiesResponse Empty = new RecommendationConfigurationPropertiesResponse();
 
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -29,7 +29,7 @@ public final class RecommendationConfigurationPropertiesResponse extends com.pul
      * 
      */
     @Import(name="recommendationType", required=true)
-      private final String recommendationType;
+    private String recommendationType;
 
     public String recommendationType() {
         return this.recommendationType;
@@ -40,64 +40,59 @@ public final class RecommendationConfigurationPropertiesResponse extends com.pul
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
     }
 
-    public RecommendationConfigurationPropertiesResponse(
-        String name,
-        String recommendationType,
-        String status) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.recommendationType = Objects.requireNonNull(recommendationType, "expected parameter 'recommendationType' to be non-null");
-        this.status = Codegen.stringProp("status").arg(status).def("Enabled").require();
-    }
+    private RecommendationConfigurationPropertiesResponse() {}
 
-    private RecommendationConfigurationPropertiesResponse() {
-        this.name = null;
-        this.recommendationType = null;
-        this.status = null;
+    private RecommendationConfigurationPropertiesResponse(RecommendationConfigurationPropertiesResponse $) {
+        this.name = $.name;
+        this.recommendationType = $.recommendationType;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RecommendationConfigurationPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String recommendationType;
-        private String status;
+        private RecommendationConfigurationPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RecommendationConfigurationPropertiesResponse();
         }
 
         public Builder(RecommendationConfigurationPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.recommendationType = defaults.recommendationType;
-    	      this.status = defaults.status;
+            $ = new RecommendationConfigurationPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder recommendationType(String recommendationType) {
-            this.recommendationType = Objects.requireNonNull(recommendationType);
+            $.recommendationType = recommendationType;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
-        }        public RecommendationConfigurationPropertiesResponse build() {
-            return new RecommendationConfigurationPropertiesResponse(name, recommendationType, status);
+        }
+
+        public RecommendationConfigurationPropertiesResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.recommendationType = Objects.requireNonNull($.recommendationType, "expected parameter 'recommendationType' to be non-null");
+            $.status = Codegen.stringProp("status").arg($.status).def("Enabled").require();
+            return $;
         }
     }
+
 }

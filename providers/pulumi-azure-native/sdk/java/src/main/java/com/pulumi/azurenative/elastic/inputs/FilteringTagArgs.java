@@ -7,9 +7,9 @@ import com.pulumi.azurenative.elastic.enums.TagAction;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class FilteringTagArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="action")
-      private final @Nullable Output<Either<String,TagAction>> action;
+    private @Nullable Output<Either<String,TagAction>> action;
 
-    public Output<Either<String,TagAction>> action() {
-        return this.action == null ? Codegen.empty() : this.action;
+    public Optional<Output<Either<String,TagAction>>> action() {
+        return Optional.ofNullable(this.action);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class FilteringTagArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class FilteringTagArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public FilteringTagArgs(
-        @Nullable Output<Either<String,TagAction>> action,
-        @Nullable Output<String> name,
-        @Nullable Output<String> value) {
-        this.action = action;
-        this.name = name;
-        this.value = value;
-    }
+    private FilteringTagArgs() {}
 
-    private FilteringTagArgs() {
-        this.action = Codegen.empty();
-        this.name = Codegen.empty();
-        this.value = Codegen.empty();
+    private FilteringTagArgs(FilteringTagArgs $) {
+        this.action = $.action;
+        this.name = $.name;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FilteringTagArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,TagAction>> action;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> value;
+        private FilteringTagArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FilteringTagArgs();
         }
 
         public Builder(FilteringTagArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.name = defaults.name;
-    	      this.value = defaults.value;
+            $ = new FilteringTagArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(@Nullable Output<Either<String,TagAction>> action) {
-            this.action = action;
+            $.action = action;
             return this;
         }
-        public Builder action(@Nullable Either<String,TagAction> action) {
-            this.action = Codegen.ofNullable(action);
-            return this;
+
+        public Builder action(Either<String,TagAction> action) {
+            return action(Output.of(action));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public FilteringTagArgs build() {
-            return new FilteringTagArgs(action, name, value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public FilteringTagArgs build() {
+            return $;
         }
     }
+
 }

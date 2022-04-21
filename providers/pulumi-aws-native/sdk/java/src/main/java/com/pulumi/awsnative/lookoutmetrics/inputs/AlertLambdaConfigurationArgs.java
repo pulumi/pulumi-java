@@ -5,7 +5,6 @@ package com.pulumi.awsnative.lookoutmetrics.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class AlertLambdaConfigurationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="lambdaArn", required=true)
-      private final Output<String> lambdaArn;
+    private Output<String> lambdaArn;
 
     public Output<String> lambdaArn() {
         return this.lambdaArn;
@@ -34,63 +33,60 @@ public final class AlertLambdaConfigurationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
     }
 
-    public AlertLambdaConfigurationArgs(
-        Output<String> lambdaArn,
-        Output<String> roleArn) {
-        this.lambdaArn = Objects.requireNonNull(lambdaArn, "expected parameter 'lambdaArn' to be non-null");
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-    }
+    private AlertLambdaConfigurationArgs() {}
 
-    private AlertLambdaConfigurationArgs() {
-        this.lambdaArn = Codegen.empty();
-        this.roleArn = Codegen.empty();
+    private AlertLambdaConfigurationArgs(AlertLambdaConfigurationArgs $) {
+        this.lambdaArn = $.lambdaArn;
+        this.roleArn = $.roleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AlertLambdaConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> lambdaArn;
-        private Output<String> roleArn;
+        private AlertLambdaConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AlertLambdaConfigurationArgs();
         }
 
         public Builder(AlertLambdaConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.lambdaArn = defaults.lambdaArn;
-    	      this.roleArn = defaults.roleArn;
+            $ = new AlertLambdaConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder lambdaArn(Output<String> lambdaArn) {
-            this.lambdaArn = Objects.requireNonNull(lambdaArn);
+            $.lambdaArn = lambdaArn;
             return this;
         }
+
         public Builder lambdaArn(String lambdaArn) {
-            this.lambdaArn = Output.of(Objects.requireNonNull(lambdaArn));
-            return this;
+            return lambdaArn(Output.of(lambdaArn));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
-        }        public AlertLambdaConfigurationArgs build() {
-            return new AlertLambdaConfigurationArgs(lambdaArn, roleArn);
+            return roleArn(Output.of(roleArn));
+        }
+
+        public AlertLambdaConfigurationArgs build() {
+            $.lambdaArn = Objects.requireNonNull($.lambdaArn, "expected parameter 'lambdaArn' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            return $;
         }
     }
+
 }

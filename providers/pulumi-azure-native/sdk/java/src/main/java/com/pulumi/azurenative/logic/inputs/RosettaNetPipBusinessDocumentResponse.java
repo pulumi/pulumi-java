@@ -23,10 +23,10 @@ public final class RosettaNetPipBusinessDocumentResponse extends com.pulumi.reso
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class RosettaNetPipBusinessDocumentResponse extends com.pulumi.reso
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -45,64 +45,58 @@ public final class RosettaNetPipBusinessDocumentResponse extends com.pulumi.reso
      * 
      */
     @Import(name="version", required=true)
-      private final String version;
+    private String version;
 
     public String version() {
         return this.version;
     }
 
-    public RosettaNetPipBusinessDocumentResponse(
-        @Nullable String description,
-        String name,
-        String version) {
-        this.description = description;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private RosettaNetPipBusinessDocumentResponse() {}
 
-    private RosettaNetPipBusinessDocumentResponse() {
-        this.description = null;
-        this.name = null;
-        this.version = null;
+    private RosettaNetPipBusinessDocumentResponse(RosettaNetPipBusinessDocumentResponse $) {
+        this.description = $.description;
+        this.name = $.name;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RosettaNetPipBusinessDocumentResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String description;
-        private String name;
-        private String version;
+        private RosettaNetPipBusinessDocumentResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RosettaNetPipBusinessDocumentResponse();
         }
 
         public Builder(RosettaNetPipBusinessDocumentResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.version = defaults.version;
+            $ = new RosettaNetPipBusinessDocumentResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder version(String version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
-        }        public RosettaNetPipBusinessDocumentResponse build() {
-            return new RosettaNetPipBusinessDocumentResponse(description, name, version);
+        }
+
+        public RosettaNetPipBusinessDocumentResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

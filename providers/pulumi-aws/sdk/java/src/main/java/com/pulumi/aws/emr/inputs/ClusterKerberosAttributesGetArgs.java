@@ -5,9 +5,9 @@ package com.pulumi.aws.emr.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ClusterKerberosAttributesGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="adDomainJoinPassword")
-      private final @Nullable Output<String> adDomainJoinPassword;
+    private @Nullable Output<String> adDomainJoinPassword;
 
-    public Output<String> adDomainJoinPassword() {
-        return this.adDomainJoinPassword == null ? Codegen.empty() : this.adDomainJoinPassword;
+    public Optional<Output<String>> adDomainJoinPassword() {
+        return Optional.ofNullable(this.adDomainJoinPassword);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ClusterKerberosAttributesGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="adDomainJoinUser")
-      private final @Nullable Output<String> adDomainJoinUser;
+    private @Nullable Output<String> adDomainJoinUser;
 
-    public Output<String> adDomainJoinUser() {
-        return this.adDomainJoinUser == null ? Codegen.empty() : this.adDomainJoinUser;
+    public Optional<Output<String>> adDomainJoinUser() {
+        return Optional.ofNullable(this.adDomainJoinUser);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ClusterKerberosAttributesGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="crossRealmTrustPrincipalPassword")
-      private final @Nullable Output<String> crossRealmTrustPrincipalPassword;
+    private @Nullable Output<String> crossRealmTrustPrincipalPassword;
 
-    public Output<String> crossRealmTrustPrincipalPassword() {
-        return this.crossRealmTrustPrincipalPassword == null ? Codegen.empty() : this.crossRealmTrustPrincipalPassword;
+    public Optional<Output<String>> crossRealmTrustPrincipalPassword() {
+        return Optional.ofNullable(this.crossRealmTrustPrincipalPassword);
     }
 
     /**
@@ -53,7 +53,7 @@ public final class ClusterKerberosAttributesGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="kdcAdminPassword", required=true)
-      private final Output<String> kdcAdminPassword;
+    private Output<String> kdcAdminPassword;
 
     public Output<String> kdcAdminPassword() {
         return this.kdcAdminPassword;
@@ -64,102 +64,90 @@ public final class ClusterKerberosAttributesGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="realm", required=true)
-      private final Output<String> realm;
+    private Output<String> realm;
 
     public Output<String> realm() {
         return this.realm;
     }
 
-    public ClusterKerberosAttributesGetArgs(
-        @Nullable Output<String> adDomainJoinPassword,
-        @Nullable Output<String> adDomainJoinUser,
-        @Nullable Output<String> crossRealmTrustPrincipalPassword,
-        Output<String> kdcAdminPassword,
-        Output<String> realm) {
-        this.adDomainJoinPassword = adDomainJoinPassword;
-        this.adDomainJoinUser = adDomainJoinUser;
-        this.crossRealmTrustPrincipalPassword = crossRealmTrustPrincipalPassword;
-        this.kdcAdminPassword = Objects.requireNonNull(kdcAdminPassword, "expected parameter 'kdcAdminPassword' to be non-null");
-        this.realm = Objects.requireNonNull(realm, "expected parameter 'realm' to be non-null");
-    }
+    private ClusterKerberosAttributesGetArgs() {}
 
-    private ClusterKerberosAttributesGetArgs() {
-        this.adDomainJoinPassword = Codegen.empty();
-        this.adDomainJoinUser = Codegen.empty();
-        this.crossRealmTrustPrincipalPassword = Codegen.empty();
-        this.kdcAdminPassword = Codegen.empty();
-        this.realm = Codegen.empty();
+    private ClusterKerberosAttributesGetArgs(ClusterKerberosAttributesGetArgs $) {
+        this.adDomainJoinPassword = $.adDomainJoinPassword;
+        this.adDomainJoinUser = $.adDomainJoinUser;
+        this.crossRealmTrustPrincipalPassword = $.crossRealmTrustPrincipalPassword;
+        this.kdcAdminPassword = $.kdcAdminPassword;
+        this.realm = $.realm;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterKerberosAttributesGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> adDomainJoinPassword;
-        private @Nullable Output<String> adDomainJoinUser;
-        private @Nullable Output<String> crossRealmTrustPrincipalPassword;
-        private Output<String> kdcAdminPassword;
-        private Output<String> realm;
+        private ClusterKerberosAttributesGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterKerberosAttributesGetArgs();
         }
 
         public Builder(ClusterKerberosAttributesGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.adDomainJoinPassword = defaults.adDomainJoinPassword;
-    	      this.adDomainJoinUser = defaults.adDomainJoinUser;
-    	      this.crossRealmTrustPrincipalPassword = defaults.crossRealmTrustPrincipalPassword;
-    	      this.kdcAdminPassword = defaults.kdcAdminPassword;
-    	      this.realm = defaults.realm;
+            $ = new ClusterKerberosAttributesGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder adDomainJoinPassword(@Nullable Output<String> adDomainJoinPassword) {
-            this.adDomainJoinPassword = adDomainJoinPassword;
+            $.adDomainJoinPassword = adDomainJoinPassword;
             return this;
         }
-        public Builder adDomainJoinPassword(@Nullable String adDomainJoinPassword) {
-            this.adDomainJoinPassword = Codegen.ofNullable(adDomainJoinPassword);
-            return this;
+
+        public Builder adDomainJoinPassword(String adDomainJoinPassword) {
+            return adDomainJoinPassword(Output.of(adDomainJoinPassword));
         }
+
         public Builder adDomainJoinUser(@Nullable Output<String> adDomainJoinUser) {
-            this.adDomainJoinUser = adDomainJoinUser;
+            $.adDomainJoinUser = adDomainJoinUser;
             return this;
         }
-        public Builder adDomainJoinUser(@Nullable String adDomainJoinUser) {
-            this.adDomainJoinUser = Codegen.ofNullable(adDomainJoinUser);
-            return this;
+
+        public Builder adDomainJoinUser(String adDomainJoinUser) {
+            return adDomainJoinUser(Output.of(adDomainJoinUser));
         }
+
         public Builder crossRealmTrustPrincipalPassword(@Nullable Output<String> crossRealmTrustPrincipalPassword) {
-            this.crossRealmTrustPrincipalPassword = crossRealmTrustPrincipalPassword;
+            $.crossRealmTrustPrincipalPassword = crossRealmTrustPrincipalPassword;
             return this;
         }
-        public Builder crossRealmTrustPrincipalPassword(@Nullable String crossRealmTrustPrincipalPassword) {
-            this.crossRealmTrustPrincipalPassword = Codegen.ofNullable(crossRealmTrustPrincipalPassword);
-            return this;
+
+        public Builder crossRealmTrustPrincipalPassword(String crossRealmTrustPrincipalPassword) {
+            return crossRealmTrustPrincipalPassword(Output.of(crossRealmTrustPrincipalPassword));
         }
+
         public Builder kdcAdminPassword(Output<String> kdcAdminPassword) {
-            this.kdcAdminPassword = Objects.requireNonNull(kdcAdminPassword);
+            $.kdcAdminPassword = kdcAdminPassword;
             return this;
         }
+
         public Builder kdcAdminPassword(String kdcAdminPassword) {
-            this.kdcAdminPassword = Output.of(Objects.requireNonNull(kdcAdminPassword));
-            return this;
+            return kdcAdminPassword(Output.of(kdcAdminPassword));
         }
+
         public Builder realm(Output<String> realm) {
-            this.realm = Objects.requireNonNull(realm);
+            $.realm = realm;
             return this;
         }
+
         public Builder realm(String realm) {
-            this.realm = Output.of(Objects.requireNonNull(realm));
-            return this;
-        }        public ClusterKerberosAttributesGetArgs build() {
-            return new ClusterKerberosAttributesGetArgs(adDomainJoinPassword, adDomainJoinUser, crossRealmTrustPrincipalPassword, kdcAdminPassword, realm);
+            return realm(Output.of(realm));
+        }
+
+        public ClusterKerberosAttributesGetArgs build() {
+            $.kdcAdminPassword = Objects.requireNonNull($.kdcAdminPassword, "expected parameter 'kdcAdminPassword' to be non-null");
+            $.realm = Objects.requireNonNull($.realm, "expected parameter 'realm' to be non-null");
+            return $;
         }
     }
+
 }

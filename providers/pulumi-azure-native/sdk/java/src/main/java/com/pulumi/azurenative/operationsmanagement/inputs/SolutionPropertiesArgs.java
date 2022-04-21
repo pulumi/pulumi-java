@@ -5,10 +5,10 @@ package com.pulumi.azurenative.operationsmanagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class SolutionPropertiesArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="containedResources")
-      private final @Nullable Output<List<String>> containedResources;
+    private @Nullable Output<List<String>> containedResources;
 
-    public Output<List<String>> containedResources() {
-        return this.containedResources == null ? Codegen.empty() : this.containedResources;
+    public Optional<Output<List<String>>> containedResources() {
+        return Optional.ofNullable(this.containedResources);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class SolutionPropertiesArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="referencedResources")
-      private final @Nullable Output<List<String>> referencedResources;
+    private @Nullable Output<List<String>> referencedResources;
 
-    public Output<List<String>> referencedResources() {
-        return this.referencedResources == null ? Codegen.empty() : this.referencedResources;
+    public Optional<Output<List<String>>> referencedResources() {
+        return Optional.ofNullable(this.referencedResources);
     }
 
     /**
@@ -47,82 +47,77 @@ public final class SolutionPropertiesArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="workspaceResourceId", required=true)
-      private final Output<String> workspaceResourceId;
+    private Output<String> workspaceResourceId;
 
     public Output<String> workspaceResourceId() {
         return this.workspaceResourceId;
     }
 
-    public SolutionPropertiesArgs(
-        @Nullable Output<List<String>> containedResources,
-        @Nullable Output<List<String>> referencedResources,
-        Output<String> workspaceResourceId) {
-        this.containedResources = containedResources;
-        this.referencedResources = referencedResources;
-        this.workspaceResourceId = Objects.requireNonNull(workspaceResourceId, "expected parameter 'workspaceResourceId' to be non-null");
-    }
+    private SolutionPropertiesArgs() {}
 
-    private SolutionPropertiesArgs() {
-        this.containedResources = Codegen.empty();
-        this.referencedResources = Codegen.empty();
-        this.workspaceResourceId = Codegen.empty();
+    private SolutionPropertiesArgs(SolutionPropertiesArgs $) {
+        this.containedResources = $.containedResources;
+        this.referencedResources = $.referencedResources;
+        this.workspaceResourceId = $.workspaceResourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SolutionPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> containedResources;
-        private @Nullable Output<List<String>> referencedResources;
-        private Output<String> workspaceResourceId;
+        private SolutionPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SolutionPropertiesArgs();
         }
 
         public Builder(SolutionPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containedResources = defaults.containedResources;
-    	      this.referencedResources = defaults.referencedResources;
-    	      this.workspaceResourceId = defaults.workspaceResourceId;
+            $ = new SolutionPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder containedResources(@Nullable Output<List<String>> containedResources) {
-            this.containedResources = containedResources;
+            $.containedResources = containedResources;
             return this;
         }
-        public Builder containedResources(@Nullable List<String> containedResources) {
-            this.containedResources = Codegen.ofNullable(containedResources);
-            return this;
+
+        public Builder containedResources(List<String> containedResources) {
+            return containedResources(Output.of(containedResources));
         }
+
         public Builder containedResources(String... containedResources) {
             return containedResources(List.of(containedResources));
         }
+
         public Builder referencedResources(@Nullable Output<List<String>> referencedResources) {
-            this.referencedResources = referencedResources;
+            $.referencedResources = referencedResources;
             return this;
         }
-        public Builder referencedResources(@Nullable List<String> referencedResources) {
-            this.referencedResources = Codegen.ofNullable(referencedResources);
-            return this;
+
+        public Builder referencedResources(List<String> referencedResources) {
+            return referencedResources(Output.of(referencedResources));
         }
+
         public Builder referencedResources(String... referencedResources) {
             return referencedResources(List.of(referencedResources));
         }
+
         public Builder workspaceResourceId(Output<String> workspaceResourceId) {
-            this.workspaceResourceId = Objects.requireNonNull(workspaceResourceId);
+            $.workspaceResourceId = workspaceResourceId;
             return this;
         }
+
         public Builder workspaceResourceId(String workspaceResourceId) {
-            this.workspaceResourceId = Output.of(Objects.requireNonNull(workspaceResourceId));
-            return this;
-        }        public SolutionPropertiesArgs build() {
-            return new SolutionPropertiesArgs(containedResources, referencedResources, workspaceResourceId);
+            return workspaceResourceId(Output.of(workspaceResourceId));
+        }
+
+        public SolutionPropertiesArgs build() {
+            $.workspaceResourceId = Objects.requireNonNull($.workspaceResourceId, "expected parameter 'workspaceResourceId' to be non-null");
+            return $;
         }
     }
+
 }

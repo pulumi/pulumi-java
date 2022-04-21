@@ -5,12 +5,12 @@ package com.pulumi.gcp.diagflow.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.diagflow.inputs.CxAgentSpeechToTextSettingsGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class CxAgentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="avatarUri")
-      private final @Nullable Output<String> avatarUri;
+    private @Nullable Output<String> avatarUri;
 
-    public Output<String> avatarUri() {
-        return this.avatarUri == null ? Codegen.empty() : this.avatarUri;
+    public Optional<Output<String>> avatarUri() {
+        return Optional.ofNullable(this.avatarUri);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class CxAgentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultLanguageCode")
-      private final @Nullable Output<String> defaultLanguageCode;
+    private @Nullable Output<String> defaultLanguageCode;
 
-    public Output<String> defaultLanguageCode() {
-        return this.defaultLanguageCode == null ? Codegen.empty() : this.defaultLanguageCode;
+    public Optional<Output<String>> defaultLanguageCode() {
+        return Optional.ofNullable(this.defaultLanguageCode);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class CxAgentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class CxAgentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class CxAgentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableSpellCorrection")
-      private final @Nullable Output<Boolean> enableSpellCorrection;
+    private @Nullable Output<Boolean> enableSpellCorrection;
 
-    public Output<Boolean> enableSpellCorrection() {
-        return this.enableSpellCorrection == null ? Codegen.empty() : this.enableSpellCorrection;
+    public Optional<Output<Boolean>> enableSpellCorrection() {
+        return Optional.ofNullable(this.enableSpellCorrection);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class CxAgentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableStackdriverLogging")
-      private final @Nullable Output<Boolean> enableStackdriverLogging;
+    private @Nullable Output<Boolean> enableStackdriverLogging;
 
-    public Output<Boolean> enableStackdriverLogging() {
-        return this.enableStackdriverLogging == null ? Codegen.empty() : this.enableStackdriverLogging;
+    public Optional<Output<Boolean>> enableStackdriverLogging() {
+        return Optional.ofNullable(this.enableStackdriverLogging);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class CxAgentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class CxAgentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -116,10 +116,10 @@ public final class CxAgentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -127,10 +127,10 @@ public final class CxAgentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="securitySettings")
-      private final @Nullable Output<String> securitySettings;
+    private @Nullable Output<String> securitySettings;
 
-    public Output<String> securitySettings() {
-        return this.securitySettings == null ? Codegen.empty() : this.securitySettings;
+    public Optional<Output<String>> securitySettings() {
+        return Optional.ofNullable(this.securitySettings);
     }
 
     /**
@@ -139,10 +139,10 @@ public final class CxAgentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="speechToTextSettings")
-      private final @Nullable Output<CxAgentSpeechToTextSettingsGetArgs> speechToTextSettings;
+    private @Nullable Output<CxAgentSpeechToTextSettingsGetArgs> speechToTextSettings;
 
-    public Output<CxAgentSpeechToTextSettingsGetArgs> speechToTextSettings() {
-        return this.speechToTextSettings == null ? Codegen.empty() : this.speechToTextSettings;
+    public Optional<Output<CxAgentSpeechToTextSettingsGetArgs>> speechToTextSettings() {
+        return Optional.ofNullable(this.speechToTextSettings);
     }
 
     /**
@@ -152,10 +152,10 @@ public final class CxAgentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="startFlow")
-      private final @Nullable Output<String> startFlow;
+    private @Nullable Output<String> startFlow;
 
-    public Output<String> startFlow() {
-        return this.startFlow == null ? Codegen.empty() : this.startFlow;
+    public Optional<Output<String>> startFlow() {
+        return Optional.ofNullable(this.startFlow);
     }
 
     /**
@@ -163,10 +163,10 @@ public final class CxAgentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="supportedLanguageCodes")
-      private final @Nullable Output<List<String>> supportedLanguageCodes;
+    private @Nullable Output<List<String>> supportedLanguageCodes;
 
-    public Output<List<String>> supportedLanguageCodes() {
-        return this.supportedLanguageCodes == null ? Codegen.empty() : this.supportedLanguageCodes;
+    public Optional<Output<List<String>>> supportedLanguageCodes() {
+        return Optional.ofNullable(this.supportedLanguageCodes);
     }
 
     /**
@@ -175,222 +175,182 @@ public final class CxAgentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="timeZone")
-      private final @Nullable Output<String> timeZone;
+    private @Nullable Output<String> timeZone;
 
-    public Output<String> timeZone() {
-        return this.timeZone == null ? Codegen.empty() : this.timeZone;
+    public Optional<Output<String>> timeZone() {
+        return Optional.ofNullable(this.timeZone);
     }
 
-    public CxAgentState(
-        @Nullable Output<String> avatarUri,
-        @Nullable Output<String> defaultLanguageCode,
-        @Nullable Output<String> description,
-        @Nullable Output<String> displayName,
-        @Nullable Output<Boolean> enableSpellCorrection,
-        @Nullable Output<Boolean> enableStackdriverLogging,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<String> securitySettings,
-        @Nullable Output<CxAgentSpeechToTextSettingsGetArgs> speechToTextSettings,
-        @Nullable Output<String> startFlow,
-        @Nullable Output<List<String>> supportedLanguageCodes,
-        @Nullable Output<String> timeZone) {
-        this.avatarUri = avatarUri;
-        this.defaultLanguageCode = defaultLanguageCode;
-        this.description = description;
-        this.displayName = displayName;
-        this.enableSpellCorrection = enableSpellCorrection;
-        this.enableStackdriverLogging = enableStackdriverLogging;
-        this.location = location;
-        this.name = name;
-        this.project = project;
-        this.securitySettings = securitySettings;
-        this.speechToTextSettings = speechToTextSettings;
-        this.startFlow = startFlow;
-        this.supportedLanguageCodes = supportedLanguageCodes;
-        this.timeZone = timeZone;
-    }
+    private CxAgentState() {}
 
-    private CxAgentState() {
-        this.avatarUri = Codegen.empty();
-        this.defaultLanguageCode = Codegen.empty();
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.enableSpellCorrection = Codegen.empty();
-        this.enableStackdriverLogging = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.securitySettings = Codegen.empty();
-        this.speechToTextSettings = Codegen.empty();
-        this.startFlow = Codegen.empty();
-        this.supportedLanguageCodes = Codegen.empty();
-        this.timeZone = Codegen.empty();
+    private CxAgentState(CxAgentState $) {
+        this.avatarUri = $.avatarUri;
+        this.defaultLanguageCode = $.defaultLanguageCode;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.enableSpellCorrection = $.enableSpellCorrection;
+        this.enableStackdriverLogging = $.enableStackdriverLogging;
+        this.location = $.location;
+        this.name = $.name;
+        this.project = $.project;
+        this.securitySettings = $.securitySettings;
+        this.speechToTextSettings = $.speechToTextSettings;
+        this.startFlow = $.startFlow;
+        this.supportedLanguageCodes = $.supportedLanguageCodes;
+        this.timeZone = $.timeZone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CxAgentState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> avatarUri;
-        private @Nullable Output<String> defaultLanguageCode;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<Boolean> enableSpellCorrection;
-        private @Nullable Output<Boolean> enableStackdriverLogging;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> securitySettings;
-        private @Nullable Output<CxAgentSpeechToTextSettingsGetArgs> speechToTextSettings;
-        private @Nullable Output<String> startFlow;
-        private @Nullable Output<List<String>> supportedLanguageCodes;
-        private @Nullable Output<String> timeZone;
+        private CxAgentState $;
 
         public Builder() {
-    	      // Empty
+            $ = new CxAgentState();
         }
 
         public Builder(CxAgentState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.avatarUri = defaults.avatarUri;
-    	      this.defaultLanguageCode = defaults.defaultLanguageCode;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.enableSpellCorrection = defaults.enableSpellCorrection;
-    	      this.enableStackdriverLogging = defaults.enableStackdriverLogging;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.securitySettings = defaults.securitySettings;
-    	      this.speechToTextSettings = defaults.speechToTextSettings;
-    	      this.startFlow = defaults.startFlow;
-    	      this.supportedLanguageCodes = defaults.supportedLanguageCodes;
-    	      this.timeZone = defaults.timeZone;
+            $ = new CxAgentState(Objects.requireNonNull(defaults));
         }
 
         public Builder avatarUri(@Nullable Output<String> avatarUri) {
-            this.avatarUri = avatarUri;
+            $.avatarUri = avatarUri;
             return this;
         }
-        public Builder avatarUri(@Nullable String avatarUri) {
-            this.avatarUri = Codegen.ofNullable(avatarUri);
-            return this;
+
+        public Builder avatarUri(String avatarUri) {
+            return avatarUri(Output.of(avatarUri));
         }
+
         public Builder defaultLanguageCode(@Nullable Output<String> defaultLanguageCode) {
-            this.defaultLanguageCode = defaultLanguageCode;
+            $.defaultLanguageCode = defaultLanguageCode;
             return this;
         }
-        public Builder defaultLanguageCode(@Nullable String defaultLanguageCode) {
-            this.defaultLanguageCode = Codegen.ofNullable(defaultLanguageCode);
-            return this;
+
+        public Builder defaultLanguageCode(String defaultLanguageCode) {
+            return defaultLanguageCode(Output.of(defaultLanguageCode));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder enableSpellCorrection(@Nullable Output<Boolean> enableSpellCorrection) {
-            this.enableSpellCorrection = enableSpellCorrection;
+            $.enableSpellCorrection = enableSpellCorrection;
             return this;
         }
-        public Builder enableSpellCorrection(@Nullable Boolean enableSpellCorrection) {
-            this.enableSpellCorrection = Codegen.ofNullable(enableSpellCorrection);
-            return this;
+
+        public Builder enableSpellCorrection(Boolean enableSpellCorrection) {
+            return enableSpellCorrection(Output.of(enableSpellCorrection));
         }
+
         public Builder enableStackdriverLogging(@Nullable Output<Boolean> enableStackdriverLogging) {
-            this.enableStackdriverLogging = enableStackdriverLogging;
+            $.enableStackdriverLogging = enableStackdriverLogging;
             return this;
         }
-        public Builder enableStackdriverLogging(@Nullable Boolean enableStackdriverLogging) {
-            this.enableStackdriverLogging = Codegen.ofNullable(enableStackdriverLogging);
-            return this;
+
+        public Builder enableStackdriverLogging(Boolean enableStackdriverLogging) {
+            return enableStackdriverLogging(Output.of(enableStackdriverLogging));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder securitySettings(@Nullable Output<String> securitySettings) {
-            this.securitySettings = securitySettings;
+            $.securitySettings = securitySettings;
             return this;
         }
-        public Builder securitySettings(@Nullable String securitySettings) {
-            this.securitySettings = Codegen.ofNullable(securitySettings);
-            return this;
+
+        public Builder securitySettings(String securitySettings) {
+            return securitySettings(Output.of(securitySettings));
         }
+
         public Builder speechToTextSettings(@Nullable Output<CxAgentSpeechToTextSettingsGetArgs> speechToTextSettings) {
-            this.speechToTextSettings = speechToTextSettings;
+            $.speechToTextSettings = speechToTextSettings;
             return this;
         }
-        public Builder speechToTextSettings(@Nullable CxAgentSpeechToTextSettingsGetArgs speechToTextSettings) {
-            this.speechToTextSettings = Codegen.ofNullable(speechToTextSettings);
-            return this;
+
+        public Builder speechToTextSettings(CxAgentSpeechToTextSettingsGetArgs speechToTextSettings) {
+            return speechToTextSettings(Output.of(speechToTextSettings));
         }
+
         public Builder startFlow(@Nullable Output<String> startFlow) {
-            this.startFlow = startFlow;
+            $.startFlow = startFlow;
             return this;
         }
-        public Builder startFlow(@Nullable String startFlow) {
-            this.startFlow = Codegen.ofNullable(startFlow);
-            return this;
+
+        public Builder startFlow(String startFlow) {
+            return startFlow(Output.of(startFlow));
         }
+
         public Builder supportedLanguageCodes(@Nullable Output<List<String>> supportedLanguageCodes) {
-            this.supportedLanguageCodes = supportedLanguageCodes;
+            $.supportedLanguageCodes = supportedLanguageCodes;
             return this;
         }
-        public Builder supportedLanguageCodes(@Nullable List<String> supportedLanguageCodes) {
-            this.supportedLanguageCodes = Codegen.ofNullable(supportedLanguageCodes);
-            return this;
+
+        public Builder supportedLanguageCodes(List<String> supportedLanguageCodes) {
+            return supportedLanguageCodes(Output.of(supportedLanguageCodes));
         }
+
         public Builder supportedLanguageCodes(String... supportedLanguageCodes) {
             return supportedLanguageCodes(List.of(supportedLanguageCodes));
         }
+
         public Builder timeZone(@Nullable Output<String> timeZone) {
-            this.timeZone = timeZone;
+            $.timeZone = timeZone;
             return this;
         }
-        public Builder timeZone(@Nullable String timeZone) {
-            this.timeZone = Codegen.ofNullable(timeZone);
-            return this;
-        }        public CxAgentState build() {
-            return new CxAgentState(avatarUri, defaultLanguageCode, description, displayName, enableSpellCorrection, enableStackdriverLogging, location, name, project, securitySettings, speechToTextSettings, startFlow, supportedLanguageCodes, timeZone);
+
+        public Builder timeZone(String timeZone) {
+            return timeZone(Output.of(timeZone));
+        }
+
+        public CxAgentState build() {
+            return $;
         }
     }
+
 }

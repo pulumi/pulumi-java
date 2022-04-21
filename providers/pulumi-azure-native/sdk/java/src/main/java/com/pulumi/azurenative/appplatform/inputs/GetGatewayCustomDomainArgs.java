@@ -17,7 +17,7 @@ public final class GetGatewayCustomDomainArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="domainName", required=true)
-      private final String domainName;
+    private String domainName;
 
     public String domainName() {
         return this.domainName;
@@ -28,7 +28,7 @@ public final class GetGatewayCustomDomainArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="gatewayName", required=true)
-      private final String gatewayName;
+    private String gatewayName;
 
     public String gatewayName() {
         return this.gatewayName;
@@ -39,7 +39,7 @@ public final class GetGatewayCustomDomainArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -50,73 +50,66 @@ public final class GetGatewayCustomDomainArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="serviceName", required=true)
-      private final String serviceName;
+    private String serviceName;
 
     public String serviceName() {
         return this.serviceName;
     }
 
-    public GetGatewayCustomDomainArgs(
-        String domainName,
-        String gatewayName,
-        String resourceGroupName,
-        String serviceName) {
-        this.domainName = Objects.requireNonNull(domainName, "expected parameter 'domainName' to be non-null");
-        this.gatewayName = Objects.requireNonNull(gatewayName, "expected parameter 'gatewayName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-    }
+    private GetGatewayCustomDomainArgs() {}
 
-    private GetGatewayCustomDomainArgs() {
-        this.domainName = null;
-        this.gatewayName = null;
-        this.resourceGroupName = null;
-        this.serviceName = null;
+    private GetGatewayCustomDomainArgs(GetGatewayCustomDomainArgs $) {
+        this.domainName = $.domainName;
+        this.gatewayName = $.gatewayName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetGatewayCustomDomainArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String domainName;
-        private String gatewayName;
-        private String resourceGroupName;
-        private String serviceName;
+        private GetGatewayCustomDomainArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetGatewayCustomDomainArgs();
         }
 
         public Builder(GetGatewayCustomDomainArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domainName = defaults.domainName;
-    	      this.gatewayName = defaults.gatewayName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
+            $ = new GetGatewayCustomDomainArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder domainName(String domainName) {
-            this.domainName = Objects.requireNonNull(domainName);
+            $.domainName = domainName;
             return this;
         }
+
         public Builder gatewayName(String gatewayName) {
-            this.gatewayName = Objects.requireNonNull(gatewayName);
+            $.gatewayName = gatewayName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
-        }        public GetGatewayCustomDomainArgs build() {
-            return new GetGatewayCustomDomainArgs(domainName, gatewayName, resourceGroupName, serviceName);
+        }
+
+        public GetGatewayCustomDomainArgs build() {
+            $.domainName = Objects.requireNonNull($.domainName, "expected parameter 'domainName' to be non-null");
+            $.gatewayName = Objects.requireNonNull($.gatewayName, "expected parameter 'gatewayName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

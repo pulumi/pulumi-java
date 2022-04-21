@@ -5,9 +5,9 @@ package com.pulumi.googlenative.cloudscheduler_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class OAuthTokenArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scope")
-      private final @Nullable Output<String> scope;
+    private @Nullable Output<String> scope;
 
-    public Output<String> scope() {
-        return this.scope == null ? Codegen.empty() : this.scope;
+    public Optional<Output<String>> scope() {
+        return Optional.ofNullable(this.scope);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class OAuthTokenArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceAccountEmail")
-      private final @Nullable Output<String> serviceAccountEmail;
+    private @Nullable Output<String> serviceAccountEmail;
 
-    public Output<String> serviceAccountEmail() {
-        return this.serviceAccountEmail == null ? Codegen.empty() : this.serviceAccountEmail;
+    public Optional<Output<String>> serviceAccountEmail() {
+        return Optional.ofNullable(this.serviceAccountEmail);
     }
 
-    public OAuthTokenArgs(
-        @Nullable Output<String> scope,
-        @Nullable Output<String> serviceAccountEmail) {
-        this.scope = scope;
-        this.serviceAccountEmail = serviceAccountEmail;
-    }
+    private OAuthTokenArgs() {}
 
-    private OAuthTokenArgs() {
-        this.scope = Codegen.empty();
-        this.serviceAccountEmail = Codegen.empty();
+    private OAuthTokenArgs(OAuthTokenArgs $) {
+        this.scope = $.scope;
+        this.serviceAccountEmail = $.serviceAccountEmail;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OAuthTokenArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> scope;
-        private @Nullable Output<String> serviceAccountEmail;
+        private OAuthTokenArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OAuthTokenArgs();
         }
 
         public Builder(OAuthTokenArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.scope = defaults.scope;
-    	      this.serviceAccountEmail = defaults.serviceAccountEmail;
+            $ = new OAuthTokenArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder scope(@Nullable Output<String> scope) {
-            this.scope = scope;
+            $.scope = scope;
             return this;
         }
-        public Builder scope(@Nullable String scope) {
-            this.scope = Codegen.ofNullable(scope);
-            return this;
+
+        public Builder scope(String scope) {
+            return scope(Output.of(scope));
         }
+
         public Builder serviceAccountEmail(@Nullable Output<String> serviceAccountEmail) {
-            this.serviceAccountEmail = serviceAccountEmail;
+            $.serviceAccountEmail = serviceAccountEmail;
             return this;
         }
-        public Builder serviceAccountEmail(@Nullable String serviceAccountEmail) {
-            this.serviceAccountEmail = Codegen.ofNullable(serviceAccountEmail);
-            return this;
-        }        public OAuthTokenArgs build() {
-            return new OAuthTokenArgs(scope, serviceAccountEmail);
+
+        public Builder serviceAccountEmail(String serviceAccountEmail) {
+            return serviceAccountEmail(Output.of(serviceAccountEmail));
+        }
+
+        public OAuthTokenArgs build() {
+            return $;
         }
     }
+
 }

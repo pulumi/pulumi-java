@@ -6,10 +6,10 @@ package com.pulumi.azurenative.relay;
 import com.pulumi.azurenative.relay.enums.Relaytype;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class WCFRelayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="namespaceName", required=true)
-      private final Output<String> namespaceName;
+    private Output<String> namespaceName;
 
     public Output<String> namespaceName() {
         return this.namespaceName;
@@ -33,10 +33,10 @@ public final class WCFRelayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="relayName")
-      private final @Nullable Output<String> relayName;
+    private @Nullable Output<String> relayName;
 
-    public Output<String> relayName() {
-        return this.relayName == null ? Codegen.empty() : this.relayName;
+    public Optional<Output<String>> relayName() {
+        return Optional.ofNullable(this.relayName);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class WCFRelayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="relayType")
-      private final @Nullable Output<Relaytype> relayType;
+    private @Nullable Output<Relaytype> relayType;
 
-    public Output<Relaytype> relayType() {
-        return this.relayType == null ? Codegen.empty() : this.relayType;
+    public Optional<Output<Relaytype>> relayType() {
+        return Optional.ofNullable(this.relayType);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class WCFRelayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="requiresClientAuthorization")
-      private final @Nullable Output<Boolean> requiresClientAuthorization;
+    private @Nullable Output<Boolean> requiresClientAuthorization;
 
-    public Output<Boolean> requiresClientAuthorization() {
-        return this.requiresClientAuthorization == null ? Codegen.empty() : this.requiresClientAuthorization;
+    public Optional<Output<Boolean>> requiresClientAuthorization() {
+        return Optional.ofNullable(this.requiresClientAuthorization);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class WCFRelayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="requiresTransportSecurity")
-      private final @Nullable Output<Boolean> requiresTransportSecurity;
+    private @Nullable Output<Boolean> requiresTransportSecurity;
 
-    public Output<Boolean> requiresTransportSecurity() {
-        return this.requiresTransportSecurity == null ? Codegen.empty() : this.requiresTransportSecurity;
+    public Optional<Output<Boolean>> requiresTransportSecurity() {
+        return Optional.ofNullable(this.requiresTransportSecurity);
     }
 
     /**
@@ -77,7 +77,7 @@ public final class WCFRelayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -88,128 +88,110 @@ public final class WCFRelayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userMetadata")
-      private final @Nullable Output<String> userMetadata;
+    private @Nullable Output<String> userMetadata;
 
-    public Output<String> userMetadata() {
-        return this.userMetadata == null ? Codegen.empty() : this.userMetadata;
+    public Optional<Output<String>> userMetadata() {
+        return Optional.ofNullable(this.userMetadata);
     }
 
-    public WCFRelayArgs(
-        Output<String> namespaceName,
-        @Nullable Output<String> relayName,
-        @Nullable Output<Relaytype> relayType,
-        @Nullable Output<Boolean> requiresClientAuthorization,
-        @Nullable Output<Boolean> requiresTransportSecurity,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> userMetadata) {
-        this.namespaceName = Objects.requireNonNull(namespaceName, "expected parameter 'namespaceName' to be non-null");
-        this.relayName = relayName;
-        this.relayType = relayType;
-        this.requiresClientAuthorization = requiresClientAuthorization;
-        this.requiresTransportSecurity = requiresTransportSecurity;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.userMetadata = userMetadata;
-    }
+    private WCFRelayArgs() {}
 
-    private WCFRelayArgs() {
-        this.namespaceName = Codegen.empty();
-        this.relayName = Codegen.empty();
-        this.relayType = Codegen.empty();
-        this.requiresClientAuthorization = Codegen.empty();
-        this.requiresTransportSecurity = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.userMetadata = Codegen.empty();
+    private WCFRelayArgs(WCFRelayArgs $) {
+        this.namespaceName = $.namespaceName;
+        this.relayName = $.relayName;
+        this.relayType = $.relayType;
+        this.requiresClientAuthorization = $.requiresClientAuthorization;
+        this.requiresTransportSecurity = $.requiresTransportSecurity;
+        this.resourceGroupName = $.resourceGroupName;
+        this.userMetadata = $.userMetadata;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WCFRelayArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> namespaceName;
-        private @Nullable Output<String> relayName;
-        private @Nullable Output<Relaytype> relayType;
-        private @Nullable Output<Boolean> requiresClientAuthorization;
-        private @Nullable Output<Boolean> requiresTransportSecurity;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> userMetadata;
+        private WCFRelayArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WCFRelayArgs();
         }
 
         public Builder(WCFRelayArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.namespaceName = defaults.namespaceName;
-    	      this.relayName = defaults.relayName;
-    	      this.relayType = defaults.relayType;
-    	      this.requiresClientAuthorization = defaults.requiresClientAuthorization;
-    	      this.requiresTransportSecurity = defaults.requiresTransportSecurity;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.userMetadata = defaults.userMetadata;
+            $ = new WCFRelayArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder namespaceName(Output<String> namespaceName) {
-            this.namespaceName = Objects.requireNonNull(namespaceName);
+            $.namespaceName = namespaceName;
             return this;
         }
+
         public Builder namespaceName(String namespaceName) {
-            this.namespaceName = Output.of(Objects.requireNonNull(namespaceName));
-            return this;
+            return namespaceName(Output.of(namespaceName));
         }
+
         public Builder relayName(@Nullable Output<String> relayName) {
-            this.relayName = relayName;
+            $.relayName = relayName;
             return this;
         }
-        public Builder relayName(@Nullable String relayName) {
-            this.relayName = Codegen.ofNullable(relayName);
-            return this;
+
+        public Builder relayName(String relayName) {
+            return relayName(Output.of(relayName));
         }
+
         public Builder relayType(@Nullable Output<Relaytype> relayType) {
-            this.relayType = relayType;
+            $.relayType = relayType;
             return this;
         }
-        public Builder relayType(@Nullable Relaytype relayType) {
-            this.relayType = Codegen.ofNullable(relayType);
-            return this;
+
+        public Builder relayType(Relaytype relayType) {
+            return relayType(Output.of(relayType));
         }
+
         public Builder requiresClientAuthorization(@Nullable Output<Boolean> requiresClientAuthorization) {
-            this.requiresClientAuthorization = requiresClientAuthorization;
+            $.requiresClientAuthorization = requiresClientAuthorization;
             return this;
         }
-        public Builder requiresClientAuthorization(@Nullable Boolean requiresClientAuthorization) {
-            this.requiresClientAuthorization = Codegen.ofNullable(requiresClientAuthorization);
-            return this;
+
+        public Builder requiresClientAuthorization(Boolean requiresClientAuthorization) {
+            return requiresClientAuthorization(Output.of(requiresClientAuthorization));
         }
+
         public Builder requiresTransportSecurity(@Nullable Output<Boolean> requiresTransportSecurity) {
-            this.requiresTransportSecurity = requiresTransportSecurity;
+            $.requiresTransportSecurity = requiresTransportSecurity;
             return this;
         }
-        public Builder requiresTransportSecurity(@Nullable Boolean requiresTransportSecurity) {
-            this.requiresTransportSecurity = Codegen.ofNullable(requiresTransportSecurity);
-            return this;
+
+        public Builder requiresTransportSecurity(Boolean requiresTransportSecurity) {
+            return requiresTransportSecurity(Output.of(requiresTransportSecurity));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder userMetadata(@Nullable Output<String> userMetadata) {
-            this.userMetadata = userMetadata;
+            $.userMetadata = userMetadata;
             return this;
         }
-        public Builder userMetadata(@Nullable String userMetadata) {
-            this.userMetadata = Codegen.ofNullable(userMetadata);
-            return this;
-        }        public WCFRelayArgs build() {
-            return new WCFRelayArgs(namespaceName, relayName, relayType, requiresClientAuthorization, requiresTransportSecurity, resourceGroupName, userMetadata);
+
+        public Builder userMetadata(String userMetadata) {
+            return userMetadata(Output.of(userMetadata));
+        }
+
+        public WCFRelayArgs build() {
+            $.namespaceName = Objects.requireNonNull($.namespaceName, "expected parameter 'namespaceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

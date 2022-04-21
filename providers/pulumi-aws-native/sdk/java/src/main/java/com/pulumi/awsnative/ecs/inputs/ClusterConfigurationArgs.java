@@ -6,8 +6,8 @@ package com.pulumi.awsnative.ecs.inputs;
 import com.pulumi.awsnative.ecs.inputs.ClusterExecuteCommandConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class ClusterConfigurationArgs extends com.pulumi.resources.Resourc
     public static final ClusterConfigurationArgs Empty = new ClusterConfigurationArgs();
 
     @Import(name="executeCommandConfiguration")
-      private final @Nullable Output<ClusterExecuteCommandConfigurationArgs> executeCommandConfiguration;
+    private @Nullable Output<ClusterExecuteCommandConfigurationArgs> executeCommandConfiguration;
 
-    public Output<ClusterExecuteCommandConfigurationArgs> executeCommandConfiguration() {
-        return this.executeCommandConfiguration == null ? Codegen.empty() : this.executeCommandConfiguration;
+    public Optional<Output<ClusterExecuteCommandConfigurationArgs>> executeCommandConfiguration() {
+        return Optional.ofNullable(this.executeCommandConfiguration);
     }
 
-    public ClusterConfigurationArgs(@Nullable Output<ClusterExecuteCommandConfigurationArgs> executeCommandConfiguration) {
-        this.executeCommandConfiguration = executeCommandConfiguration;
-    }
+    private ClusterConfigurationArgs() {}
 
-    private ClusterConfigurationArgs() {
-        this.executeCommandConfiguration = Codegen.empty();
+    private ClusterConfigurationArgs(ClusterConfigurationArgs $) {
+        this.executeCommandConfiguration = $.executeCommandConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ClusterExecuteCommandConfigurationArgs> executeCommandConfiguration;
+        private ClusterConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterConfigurationArgs();
         }
 
         public Builder(ClusterConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.executeCommandConfiguration = defaults.executeCommandConfiguration;
+            $ = new ClusterConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder executeCommandConfiguration(@Nullable Output<ClusterExecuteCommandConfigurationArgs> executeCommandConfiguration) {
-            this.executeCommandConfiguration = executeCommandConfiguration;
+            $.executeCommandConfiguration = executeCommandConfiguration;
             return this;
         }
-        public Builder executeCommandConfiguration(@Nullable ClusterExecuteCommandConfigurationArgs executeCommandConfiguration) {
-            this.executeCommandConfiguration = Codegen.ofNullable(executeCommandConfiguration);
-            return this;
-        }        public ClusterConfigurationArgs build() {
-            return new ClusterConfigurationArgs(executeCommandConfiguration);
+
+        public Builder executeCommandConfiguration(ClusterExecuteCommandConfigurationArgs executeCommandConfiguration) {
+            return executeCommandConfiguration(Output.of(executeCommandConfiguration));
+        }
+
+        public ClusterConfigurationArgs build() {
+            return $;
         }
     }
+
 }

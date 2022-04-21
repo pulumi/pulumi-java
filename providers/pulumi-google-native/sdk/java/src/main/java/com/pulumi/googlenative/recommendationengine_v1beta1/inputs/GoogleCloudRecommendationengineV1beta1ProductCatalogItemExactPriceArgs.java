@@ -5,9 +5,9 @@ package com.pulumi.googlenative.recommendationengine_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemExact
      * 
      */
     @Import(name="displayPrice")
-      private final @Nullable Output<Double> displayPrice;
+    private @Nullable Output<Double> displayPrice;
 
-    public Output<Double> displayPrice() {
-        return this.displayPrice == null ? Codegen.empty() : this.displayPrice;
+    public Optional<Output<Double>> displayPrice() {
+        return Optional.ofNullable(this.displayPrice);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemExact
      * 
      */
     @Import(name="originalPrice")
-      private final @Nullable Output<Double> originalPrice;
+    private @Nullable Output<Double> originalPrice;
 
-    public Output<Double> originalPrice() {
-        return this.originalPrice == null ? Codegen.empty() : this.originalPrice;
+    public Optional<Output<Double>> originalPrice() {
+        return Optional.ofNullable(this.originalPrice);
     }
 
-    public GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceArgs(
-        @Nullable Output<Double> displayPrice,
-        @Nullable Output<Double> originalPrice) {
-        this.displayPrice = displayPrice;
-        this.originalPrice = originalPrice;
-    }
+    private GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceArgs() {}
 
-    private GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceArgs() {
-        this.displayPrice = Codegen.empty();
-        this.originalPrice = Codegen.empty();
+    private GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceArgs(GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceArgs $) {
+        this.displayPrice = $.displayPrice;
+        this.originalPrice = $.originalPrice;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Double> displayPrice;
-        private @Nullable Output<Double> originalPrice;
+        private GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceArgs();
         }
 
         public Builder(GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayPrice = defaults.displayPrice;
-    	      this.originalPrice = defaults.originalPrice;
+            $ = new GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder displayPrice(@Nullable Output<Double> displayPrice) {
-            this.displayPrice = displayPrice;
+            $.displayPrice = displayPrice;
             return this;
         }
-        public Builder displayPrice(@Nullable Double displayPrice) {
-            this.displayPrice = Codegen.ofNullable(displayPrice);
-            return this;
+
+        public Builder displayPrice(Double displayPrice) {
+            return displayPrice(Output.of(displayPrice));
         }
+
         public Builder originalPrice(@Nullable Output<Double> originalPrice) {
-            this.originalPrice = originalPrice;
+            $.originalPrice = originalPrice;
             return this;
         }
-        public Builder originalPrice(@Nullable Double originalPrice) {
-            this.originalPrice = Codegen.ofNullable(originalPrice);
-            return this;
-        }        public GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceArgs build() {
-            return new GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceArgs(displayPrice, originalPrice);
+
+        public Builder originalPrice(Double originalPrice) {
+            return originalPrice(Output.of(originalPrice));
+        }
+
+        public GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceArgs build() {
+            return $;
         }
     }
+
 }

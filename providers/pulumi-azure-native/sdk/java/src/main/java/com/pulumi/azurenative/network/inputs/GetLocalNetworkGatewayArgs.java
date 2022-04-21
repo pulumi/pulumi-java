@@ -17,7 +17,7 @@ public final class GetLocalNetworkGatewayArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="localNetworkGatewayName", required=true)
-      private final String localNetworkGatewayName;
+    private String localNetworkGatewayName;
 
     public String localNetworkGatewayName() {
         return this.localNetworkGatewayName;
@@ -28,55 +28,52 @@ public final class GetLocalNetworkGatewayArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetLocalNetworkGatewayArgs(
-        String localNetworkGatewayName,
-        String resourceGroupName) {
-        this.localNetworkGatewayName = Objects.requireNonNull(localNetworkGatewayName, "expected parameter 'localNetworkGatewayName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetLocalNetworkGatewayArgs() {}
 
-    private GetLocalNetworkGatewayArgs() {
-        this.localNetworkGatewayName = null;
-        this.resourceGroupName = null;
+    private GetLocalNetworkGatewayArgs(GetLocalNetworkGatewayArgs $) {
+        this.localNetworkGatewayName = $.localNetworkGatewayName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLocalNetworkGatewayArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String localNetworkGatewayName;
-        private String resourceGroupName;
+        private GetLocalNetworkGatewayArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLocalNetworkGatewayArgs();
         }
 
         public Builder(GetLocalNetworkGatewayArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.localNetworkGatewayName = defaults.localNetworkGatewayName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetLocalNetworkGatewayArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder localNetworkGatewayName(String localNetworkGatewayName) {
-            this.localNetworkGatewayName = Objects.requireNonNull(localNetworkGatewayName);
+            $.localNetworkGatewayName = localNetworkGatewayName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetLocalNetworkGatewayArgs build() {
-            return new GetLocalNetworkGatewayArgs(localNetworkGatewayName, resourceGroupName);
+        }
+
+        public GetLocalNetworkGatewayArgs build() {
+            $.localNetworkGatewayName = Objects.requireNonNull($.localNetworkGatewayName, "expected parameter 'localNetworkGatewayName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

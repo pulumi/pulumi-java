@@ -22,206 +22,174 @@ public final class AssessmentDelegation extends com.pulumi.resources.InvokeArgs 
     public static final AssessmentDelegation Empty = new AssessmentDelegation();
 
     @Import(name="assessmentId")
-      private final @Nullable String assessmentId;
+    private @Nullable String assessmentId;
 
     public Optional<String> assessmentId() {
-        return this.assessmentId == null ? Optional.empty() : Optional.ofNullable(this.assessmentId);
+        return Optional.ofNullable(this.assessmentId);
     }
 
     @Import(name="assessmentName")
-      private final @Nullable String assessmentName;
+    private @Nullable String assessmentName;
 
     public Optional<String> assessmentName() {
-        return this.assessmentName == null ? Optional.empty() : Optional.ofNullable(this.assessmentName);
+        return Optional.ofNullable(this.assessmentName);
     }
 
     @Import(name="comment")
-      private final @Nullable String comment;
+    private @Nullable String comment;
 
     public Optional<String> comment() {
-        return this.comment == null ? Optional.empty() : Optional.ofNullable(this.comment);
+        return Optional.ofNullable(this.comment);
     }
 
     @Import(name="controlSetId")
-      private final @Nullable String controlSetId;
+    private @Nullable String controlSetId;
 
     public Optional<String> controlSetId() {
-        return this.controlSetId == null ? Optional.empty() : Optional.ofNullable(this.controlSetId);
+        return Optional.ofNullable(this.controlSetId);
     }
 
     @Import(name="createdBy")
-      private final @Nullable String createdBy;
+    private @Nullable String createdBy;
 
     public Optional<String> createdBy() {
-        return this.createdBy == null ? Optional.empty() : Optional.ofNullable(this.createdBy);
+        return Optional.ofNullable(this.createdBy);
     }
 
     @Import(name="creationTime")
-      private final @Nullable Double creationTime;
+    private @Nullable Double creationTime;
 
     public Optional<Double> creationTime() {
-        return this.creationTime == null ? Optional.empty() : Optional.ofNullable(this.creationTime);
+        return Optional.ofNullable(this.creationTime);
     }
 
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     @Import(name="lastUpdated")
-      private final @Nullable Double lastUpdated;
+    private @Nullable Double lastUpdated;
 
     public Optional<Double> lastUpdated() {
-        return this.lastUpdated == null ? Optional.empty() : Optional.ofNullable(this.lastUpdated);
+        return Optional.ofNullable(this.lastUpdated);
     }
 
     @Import(name="roleArn")
-      private final @Nullable String roleArn;
+    private @Nullable String roleArn;
 
     public Optional<String> roleArn() {
-        return this.roleArn == null ? Optional.empty() : Optional.ofNullable(this.roleArn);
+        return Optional.ofNullable(this.roleArn);
     }
 
     @Import(name="roleType")
-      private final @Nullable AssessmentRoleType roleType;
+    private @Nullable AssessmentRoleType roleType;
 
     public Optional<AssessmentRoleType> roleType() {
-        return this.roleType == null ? Optional.empty() : Optional.ofNullable(this.roleType);
+        return Optional.ofNullable(this.roleType);
     }
 
     @Import(name="status")
-      private final @Nullable AssessmentDelegationStatus status;
+    private @Nullable AssessmentDelegationStatus status;
 
     public Optional<AssessmentDelegationStatus> status() {
-        return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
+        return Optional.ofNullable(this.status);
     }
 
-    public AssessmentDelegation(
-        @Nullable String assessmentId,
-        @Nullable String assessmentName,
-        @Nullable String comment,
-        @Nullable String controlSetId,
-        @Nullable String createdBy,
-        @Nullable Double creationTime,
-        @Nullable String id,
-        @Nullable Double lastUpdated,
-        @Nullable String roleArn,
-        @Nullable AssessmentRoleType roleType,
-        @Nullable AssessmentDelegationStatus status) {
-        this.assessmentId = assessmentId;
-        this.assessmentName = assessmentName;
-        this.comment = comment;
-        this.controlSetId = controlSetId;
-        this.createdBy = createdBy;
-        this.creationTime = creationTime;
-        this.id = id;
-        this.lastUpdated = lastUpdated;
-        this.roleArn = roleArn;
-        this.roleType = roleType;
-        this.status = status;
-    }
+    private AssessmentDelegation() {}
 
-    private AssessmentDelegation() {
-        this.assessmentId = null;
-        this.assessmentName = null;
-        this.comment = null;
-        this.controlSetId = null;
-        this.createdBy = null;
-        this.creationTime = null;
-        this.id = null;
-        this.lastUpdated = null;
-        this.roleArn = null;
-        this.roleType = null;
-        this.status = null;
+    private AssessmentDelegation(AssessmentDelegation $) {
+        this.assessmentId = $.assessmentId;
+        this.assessmentName = $.assessmentName;
+        this.comment = $.comment;
+        this.controlSetId = $.controlSetId;
+        this.createdBy = $.createdBy;
+        this.creationTime = $.creationTime;
+        this.id = $.id;
+        this.lastUpdated = $.lastUpdated;
+        this.roleArn = $.roleArn;
+        this.roleType = $.roleType;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssessmentDelegation defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String assessmentId;
-        private @Nullable String assessmentName;
-        private @Nullable String comment;
-        private @Nullable String controlSetId;
-        private @Nullable String createdBy;
-        private @Nullable Double creationTime;
-        private @Nullable String id;
-        private @Nullable Double lastUpdated;
-        private @Nullable String roleArn;
-        private @Nullable AssessmentRoleType roleType;
-        private @Nullable AssessmentDelegationStatus status;
+        private AssessmentDelegation $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssessmentDelegation();
         }
 
         public Builder(AssessmentDelegation defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assessmentId = defaults.assessmentId;
-    	      this.assessmentName = defaults.assessmentName;
-    	      this.comment = defaults.comment;
-    	      this.controlSetId = defaults.controlSetId;
-    	      this.createdBy = defaults.createdBy;
-    	      this.creationTime = defaults.creationTime;
-    	      this.id = defaults.id;
-    	      this.lastUpdated = defaults.lastUpdated;
-    	      this.roleArn = defaults.roleArn;
-    	      this.roleType = defaults.roleType;
-    	      this.status = defaults.status;
+            $ = new AssessmentDelegation(Objects.requireNonNull(defaults));
         }
 
         public Builder assessmentId(@Nullable String assessmentId) {
-            this.assessmentId = assessmentId;
+            $.assessmentId = assessmentId;
             return this;
         }
+
         public Builder assessmentName(@Nullable String assessmentName) {
-            this.assessmentName = assessmentName;
+            $.assessmentName = assessmentName;
             return this;
         }
+
         public Builder comment(@Nullable String comment) {
-            this.comment = comment;
+            $.comment = comment;
             return this;
         }
+
         public Builder controlSetId(@Nullable String controlSetId) {
-            this.controlSetId = controlSetId;
+            $.controlSetId = controlSetId;
             return this;
         }
+
         public Builder createdBy(@Nullable String createdBy) {
-            this.createdBy = createdBy;
+            $.createdBy = createdBy;
             return this;
         }
+
         public Builder creationTime(@Nullable Double creationTime) {
-            this.creationTime = creationTime;
+            $.creationTime = creationTime;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder lastUpdated(@Nullable Double lastUpdated) {
-            this.lastUpdated = lastUpdated;
+            $.lastUpdated = lastUpdated;
             return this;
         }
+
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = roleArn;
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleType(@Nullable AssessmentRoleType roleType) {
-            this.roleType = roleType;
+            $.roleType = roleType;
             return this;
         }
+
         public Builder status(@Nullable AssessmentDelegationStatus status) {
-            this.status = status;
+            $.status = status;
             return this;
-        }        public AssessmentDelegation build() {
-            return new AssessmentDelegation(assessmentId, assessmentName, comment, controlSetId, createdBy, creationTime, id, lastUpdated, roleArn, roleType, status);
+        }
+
+        public AssessmentDelegation build() {
+            return $;
         }
     }
+
 }

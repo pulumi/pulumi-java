@@ -24,10 +24,10 @@ public final class ContentLinkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="contentHash")
-      private final @Nullable ContentHashResponse contentHash;
+    private @Nullable ContentHashResponse contentHash;
 
     public Optional<ContentHashResponse> contentHash() {
-        return this.contentHash == null ? Optional.empty() : Optional.ofNullable(this.contentHash);
+        return Optional.ofNullable(this.contentHash);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ContentLinkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="uri")
-      private final @Nullable String uri;
+    private @Nullable String uri;
 
     public Optional<String> uri() {
-        return this.uri == null ? Optional.empty() : Optional.ofNullable(this.uri);
+        return Optional.ofNullable(this.uri);
     }
 
     /**
@@ -46,64 +46,56 @@ public final class ContentLinkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="version")
-      private final @Nullable String version;
+    private @Nullable String version;
 
     public Optional<String> version() {
-        return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
+        return Optional.ofNullable(this.version);
     }
 
-    public ContentLinkResponse(
-        @Nullable ContentHashResponse contentHash,
-        @Nullable String uri,
-        @Nullable String version) {
-        this.contentHash = contentHash;
-        this.uri = uri;
-        this.version = version;
-    }
+    private ContentLinkResponse() {}
 
-    private ContentLinkResponse() {
-        this.contentHash = null;
-        this.uri = null;
-        this.version = null;
+    private ContentLinkResponse(ContentLinkResponse $) {
+        this.contentHash = $.contentHash;
+        this.uri = $.uri;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContentLinkResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ContentHashResponse contentHash;
-        private @Nullable String uri;
-        private @Nullable String version;
+        private ContentLinkResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContentLinkResponse();
         }
 
         public Builder(ContentLinkResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contentHash = defaults.contentHash;
-    	      this.uri = defaults.uri;
-    	      this.version = defaults.version;
+            $ = new ContentLinkResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder contentHash(@Nullable ContentHashResponse contentHash) {
-            this.contentHash = contentHash;
+            $.contentHash = contentHash;
             return this;
         }
+
         public Builder uri(@Nullable String uri) {
-            this.uri = uri;
+            $.uri = uri;
             return this;
         }
+
         public Builder version(@Nullable String version) {
-            this.version = version;
+            $.version = version;
             return this;
-        }        public ContentLinkResponse build() {
-            return new ContentLinkResponse(contentHash, uri, version);
+        }
+
+        public ContentLinkResponse build() {
+            return $;
         }
     }
+
 }

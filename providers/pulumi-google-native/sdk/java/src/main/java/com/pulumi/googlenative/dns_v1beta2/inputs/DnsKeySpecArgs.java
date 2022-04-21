@@ -5,12 +5,12 @@ package com.pulumi.googlenative.dns_v1beta2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dns_v1beta2.enums.DnsKeySpecAlgorithm;
 import com.pulumi.googlenative.dns_v1beta2.enums.DnsKeySpecKeyType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class DnsKeySpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="algorithm")
-      private final @Nullable Output<DnsKeySpecAlgorithm> algorithm;
+    private @Nullable Output<DnsKeySpecAlgorithm> algorithm;
 
-    public Output<DnsKeySpecAlgorithm> algorithm() {
-        return this.algorithm == null ? Codegen.empty() : this.algorithm;
+    public Optional<Output<DnsKeySpecAlgorithm>> algorithm() {
+        return Optional.ofNullable(this.algorithm);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class DnsKeySpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keyLength")
-      private final @Nullable Output<Integer> keyLength;
+    private @Nullable Output<Integer> keyLength;
 
-    public Output<Integer> keyLength() {
-        return this.keyLength == null ? Codegen.empty() : this.keyLength;
+    public Optional<Output<Integer>> keyLength() {
+        return Optional.ofNullable(this.keyLength);
     }
 
     /**
@@ -49,96 +49,85 @@ public final class DnsKeySpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keyType")
-      private final @Nullable Output<DnsKeySpecKeyType> keyType;
+    private @Nullable Output<DnsKeySpecKeyType> keyType;
 
-    public Output<DnsKeySpecKeyType> keyType() {
-        return this.keyType == null ? Codegen.empty() : this.keyType;
+    public Optional<Output<DnsKeySpecKeyType>> keyType() {
+        return Optional.ofNullable(this.keyType);
     }
 
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
-    public DnsKeySpecArgs(
-        @Nullable Output<DnsKeySpecAlgorithm> algorithm,
-        @Nullable Output<Integer> keyLength,
-        @Nullable Output<DnsKeySpecKeyType> keyType,
-        @Nullable Output<String> kind) {
-        this.algorithm = algorithm;
-        this.keyLength = keyLength;
-        this.keyType = keyType;
-        this.kind = kind;
-    }
+    private DnsKeySpecArgs() {}
 
-    private DnsKeySpecArgs() {
-        this.algorithm = Codegen.empty();
-        this.keyLength = Codegen.empty();
-        this.keyType = Codegen.empty();
-        this.kind = Codegen.empty();
+    private DnsKeySpecArgs(DnsKeySpecArgs $) {
+        this.algorithm = $.algorithm;
+        this.keyLength = $.keyLength;
+        this.keyType = $.keyType;
+        this.kind = $.kind;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DnsKeySpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DnsKeySpecAlgorithm> algorithm;
-        private @Nullable Output<Integer> keyLength;
-        private @Nullable Output<DnsKeySpecKeyType> keyType;
-        private @Nullable Output<String> kind;
+        private DnsKeySpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DnsKeySpecArgs();
         }
 
         public Builder(DnsKeySpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.algorithm = defaults.algorithm;
-    	      this.keyLength = defaults.keyLength;
-    	      this.keyType = defaults.keyType;
-    	      this.kind = defaults.kind;
+            $ = new DnsKeySpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder algorithm(@Nullable Output<DnsKeySpecAlgorithm> algorithm) {
-            this.algorithm = algorithm;
+            $.algorithm = algorithm;
             return this;
         }
-        public Builder algorithm(@Nullable DnsKeySpecAlgorithm algorithm) {
-            this.algorithm = Codegen.ofNullable(algorithm);
-            return this;
+
+        public Builder algorithm(DnsKeySpecAlgorithm algorithm) {
+            return algorithm(Output.of(algorithm));
         }
+
         public Builder keyLength(@Nullable Output<Integer> keyLength) {
-            this.keyLength = keyLength;
+            $.keyLength = keyLength;
             return this;
         }
-        public Builder keyLength(@Nullable Integer keyLength) {
-            this.keyLength = Codegen.ofNullable(keyLength);
-            return this;
+
+        public Builder keyLength(Integer keyLength) {
+            return keyLength(Output.of(keyLength));
         }
+
         public Builder keyType(@Nullable Output<DnsKeySpecKeyType> keyType) {
-            this.keyType = keyType;
+            $.keyType = keyType;
             return this;
         }
-        public Builder keyType(@Nullable DnsKeySpecKeyType keyType) {
-            this.keyType = Codegen.ofNullable(keyType);
-            return this;
+
+        public Builder keyType(DnsKeySpecKeyType keyType) {
+            return keyType(Output.of(keyType));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
-        }        public DnsKeySpecArgs build() {
-            return new DnsKeySpecArgs(algorithm, keyLength, keyType, kind);
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
+        }
+
+        public DnsKeySpecArgs build() {
+            return $;
         }
     }
+
 }

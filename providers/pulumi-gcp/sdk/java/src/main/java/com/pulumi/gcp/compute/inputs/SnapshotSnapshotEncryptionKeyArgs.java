@@ -5,9 +5,9 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class SnapshotSnapshotEncryptionKeyArgs extends com.pulumi.resource
      * 
      */
     @Import(name="kmsKeySelfLink")
-      private final @Nullable Output<String> kmsKeySelfLink;
+    private @Nullable Output<String> kmsKeySelfLink;
 
-    public Output<String> kmsKeySelfLink() {
-        return this.kmsKeySelfLink == null ? Codegen.empty() : this.kmsKeySelfLink;
+    public Optional<Output<String>> kmsKeySelfLink() {
+        return Optional.ofNullable(this.kmsKeySelfLink);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class SnapshotSnapshotEncryptionKeyArgs extends com.pulumi.resource
      * 
      */
     @Import(name="kmsKeyServiceAccount")
-      private final @Nullable Output<String> kmsKeyServiceAccount;
+    private @Nullable Output<String> kmsKeyServiceAccount;
 
-    public Output<String> kmsKeyServiceAccount() {
-        return this.kmsKeyServiceAccount == null ? Codegen.empty() : this.kmsKeyServiceAccount;
+    public Optional<Output<String>> kmsKeyServiceAccount() {
+        return Optional.ofNullable(this.kmsKeyServiceAccount);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class SnapshotSnapshotEncryptionKeyArgs extends com.pulumi.resource
      * 
      */
     @Import(name="rawKey")
-      private final @Nullable Output<String> rawKey;
+    private @Nullable Output<String> rawKey;
 
-    public Output<String> rawKey() {
-        return this.rawKey == null ? Codegen.empty() : this.rawKey;
+    public Optional<Output<String>> rawKey() {
+        return Optional.ofNullable(this.rawKey);
     }
 
     /**
@@ -58,89 +58,78 @@ public final class SnapshotSnapshotEncryptionKeyArgs extends com.pulumi.resource
      * 
      */
     @Import(name="sha256")
-      private final @Nullable Output<String> sha256;
+    private @Nullable Output<String> sha256;
 
-    public Output<String> sha256() {
-        return this.sha256 == null ? Codegen.empty() : this.sha256;
+    public Optional<Output<String>> sha256() {
+        return Optional.ofNullable(this.sha256);
     }
 
-    public SnapshotSnapshotEncryptionKeyArgs(
-        @Nullable Output<String> kmsKeySelfLink,
-        @Nullable Output<String> kmsKeyServiceAccount,
-        @Nullable Output<String> rawKey,
-        @Nullable Output<String> sha256) {
-        this.kmsKeySelfLink = kmsKeySelfLink;
-        this.kmsKeyServiceAccount = kmsKeyServiceAccount;
-        this.rawKey = rawKey;
-        this.sha256 = sha256;
-    }
+    private SnapshotSnapshotEncryptionKeyArgs() {}
 
-    private SnapshotSnapshotEncryptionKeyArgs() {
-        this.kmsKeySelfLink = Codegen.empty();
-        this.kmsKeyServiceAccount = Codegen.empty();
-        this.rawKey = Codegen.empty();
-        this.sha256 = Codegen.empty();
+    private SnapshotSnapshotEncryptionKeyArgs(SnapshotSnapshotEncryptionKeyArgs $) {
+        this.kmsKeySelfLink = $.kmsKeySelfLink;
+        this.kmsKeyServiceAccount = $.kmsKeyServiceAccount;
+        this.rawKey = $.rawKey;
+        this.sha256 = $.sha256;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SnapshotSnapshotEncryptionKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> kmsKeySelfLink;
-        private @Nullable Output<String> kmsKeyServiceAccount;
-        private @Nullable Output<String> rawKey;
-        private @Nullable Output<String> sha256;
+        private SnapshotSnapshotEncryptionKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SnapshotSnapshotEncryptionKeyArgs();
         }
 
         public Builder(SnapshotSnapshotEncryptionKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kmsKeySelfLink = defaults.kmsKeySelfLink;
-    	      this.kmsKeyServiceAccount = defaults.kmsKeyServiceAccount;
-    	      this.rawKey = defaults.rawKey;
-    	      this.sha256 = defaults.sha256;
+            $ = new SnapshotSnapshotEncryptionKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kmsKeySelfLink(@Nullable Output<String> kmsKeySelfLink) {
-            this.kmsKeySelfLink = kmsKeySelfLink;
+            $.kmsKeySelfLink = kmsKeySelfLink;
             return this;
         }
-        public Builder kmsKeySelfLink(@Nullable String kmsKeySelfLink) {
-            this.kmsKeySelfLink = Codegen.ofNullable(kmsKeySelfLink);
-            return this;
+
+        public Builder kmsKeySelfLink(String kmsKeySelfLink) {
+            return kmsKeySelfLink(Output.of(kmsKeySelfLink));
         }
+
         public Builder kmsKeyServiceAccount(@Nullable Output<String> kmsKeyServiceAccount) {
-            this.kmsKeyServiceAccount = kmsKeyServiceAccount;
+            $.kmsKeyServiceAccount = kmsKeyServiceAccount;
             return this;
         }
-        public Builder kmsKeyServiceAccount(@Nullable String kmsKeyServiceAccount) {
-            this.kmsKeyServiceAccount = Codegen.ofNullable(kmsKeyServiceAccount);
-            return this;
+
+        public Builder kmsKeyServiceAccount(String kmsKeyServiceAccount) {
+            return kmsKeyServiceAccount(Output.of(kmsKeyServiceAccount));
         }
+
         public Builder rawKey(@Nullable Output<String> rawKey) {
-            this.rawKey = rawKey;
+            $.rawKey = rawKey;
             return this;
         }
-        public Builder rawKey(@Nullable String rawKey) {
-            this.rawKey = Codegen.ofNullable(rawKey);
-            return this;
+
+        public Builder rawKey(String rawKey) {
+            return rawKey(Output.of(rawKey));
         }
+
         public Builder sha256(@Nullable Output<String> sha256) {
-            this.sha256 = sha256;
+            $.sha256 = sha256;
             return this;
         }
-        public Builder sha256(@Nullable String sha256) {
-            this.sha256 = Codegen.ofNullable(sha256);
-            return this;
-        }        public SnapshotSnapshotEncryptionKeyArgs build() {
-            return new SnapshotSnapshotEncryptionKeyArgs(kmsKeySelfLink, kmsKeyServiceAccount, rawKey, sha256);
+
+        public Builder sha256(String sha256) {
+            return sha256(Output.of(sha256));
+        }
+
+        public SnapshotSnapshotEncryptionKeyArgs build() {
+            return $;
         }
     }
+
 }

@@ -27,10 +27,10 @@ public final class AppResourcePropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="activeDeploymentName")
-      private final @Nullable String activeDeploymentName;
+    private @Nullable String activeDeploymentName;
 
     public Optional<String> activeDeploymentName() {
-        return this.activeDeploymentName == null ? Optional.empty() : Optional.ofNullable(this.activeDeploymentName);
+        return Optional.ofNullable(this.activeDeploymentName);
     }
 
     /**
@@ -38,7 +38,7 @@ public final class AppResourcePropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="createdTime", required=true)
-      private final String createdTime;
+    private String createdTime;
 
     public String createdTime() {
         return this.createdTime;
@@ -49,10 +49,10 @@ public final class AppResourcePropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="fqdn")
-      private final @Nullable String fqdn;
+    private @Nullable String fqdn;
 
     public Optional<String> fqdn() {
-        return this.fqdn == null ? Optional.empty() : Optional.ofNullable(this.fqdn);
+        return Optional.ofNullable(this.fqdn);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class AppResourcePropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="httpsOnly")
-      private final @Nullable Boolean httpsOnly;
+    private @Nullable Boolean httpsOnly;
 
     public Optional<Boolean> httpsOnly() {
-        return this.httpsOnly == null ? Optional.empty() : Optional.ofNullable(this.httpsOnly);
+        return Optional.ofNullable(this.httpsOnly);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class AppResourcePropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="persistentDisk")
-      private final @Nullable PersistentDiskResponse persistentDisk;
+    private @Nullable PersistentDiskResponse persistentDisk;
 
     public Optional<PersistentDiskResponse> persistentDisk() {
-        return this.persistentDisk == null ? Optional.empty() : Optional.ofNullable(this.persistentDisk);
+        return Optional.ofNullable(this.persistentDisk);
     }
 
     /**
@@ -82,7 +82,7 @@ public final class AppResourcePropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -93,10 +93,10 @@ public final class AppResourcePropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="public")
-      private final @Nullable Boolean public_;
+    private @Nullable Boolean public_;
 
     public Optional<Boolean> public_() {
-        return this.public_ == null ? Optional.empty() : Optional.ofNullable(this.public_);
+        return Optional.ofNullable(this.public_);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class AppResourcePropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="temporaryDisk")
-      private final @Nullable TemporaryDiskResponse temporaryDisk;
+    private @Nullable TemporaryDiskResponse temporaryDisk;
 
     public Optional<TemporaryDiskResponse> temporaryDisk() {
-        return this.temporaryDisk == null ? Optional.empty() : Optional.ofNullable(this.temporaryDisk);
+        return Optional.ofNullable(this.temporaryDisk);
     }
 
     /**
@@ -115,118 +115,96 @@ public final class AppResourcePropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="url", required=true)
-      private final String url;
+    private String url;
 
     public String url() {
         return this.url;
     }
 
-    public AppResourcePropertiesResponse(
-        @Nullable String activeDeploymentName,
-        String createdTime,
-        @Nullable String fqdn,
-        @Nullable Boolean httpsOnly,
-        @Nullable PersistentDiskResponse persistentDisk,
-        String provisioningState,
-        @Nullable Boolean public_,
-        @Nullable TemporaryDiskResponse temporaryDisk,
-        String url) {
-        this.activeDeploymentName = activeDeploymentName;
-        this.createdTime = Objects.requireNonNull(createdTime, "expected parameter 'createdTime' to be non-null");
-        this.fqdn = fqdn;
-        this.httpsOnly = Codegen.booleanProp("httpsOnly").arg(httpsOnly).def(false).getNullable();
-        this.persistentDisk = persistentDisk;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.public_ = public_;
-        this.temporaryDisk = temporaryDisk;
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-    }
+    private AppResourcePropertiesResponse() {}
 
-    private AppResourcePropertiesResponse() {
-        this.activeDeploymentName = null;
-        this.createdTime = null;
-        this.fqdn = null;
-        this.httpsOnly = null;
-        this.persistentDisk = null;
-        this.provisioningState = null;
-        this.public_ = null;
-        this.temporaryDisk = null;
-        this.url = null;
+    private AppResourcePropertiesResponse(AppResourcePropertiesResponse $) {
+        this.activeDeploymentName = $.activeDeploymentName;
+        this.createdTime = $.createdTime;
+        this.fqdn = $.fqdn;
+        this.httpsOnly = $.httpsOnly;
+        this.persistentDisk = $.persistentDisk;
+        this.provisioningState = $.provisioningState;
+        this.public_ = $.public_;
+        this.temporaryDisk = $.temporaryDisk;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppResourcePropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String activeDeploymentName;
-        private String createdTime;
-        private @Nullable String fqdn;
-        private @Nullable Boolean httpsOnly;
-        private @Nullable PersistentDiskResponse persistentDisk;
-        private String provisioningState;
-        private @Nullable Boolean public_;
-        private @Nullable TemporaryDiskResponse temporaryDisk;
-        private String url;
+        private AppResourcePropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppResourcePropertiesResponse();
         }
 
         public Builder(AppResourcePropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.activeDeploymentName = defaults.activeDeploymentName;
-    	      this.createdTime = defaults.createdTime;
-    	      this.fqdn = defaults.fqdn;
-    	      this.httpsOnly = defaults.httpsOnly;
-    	      this.persistentDisk = defaults.persistentDisk;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.public_ = defaults.public_;
-    	      this.temporaryDisk = defaults.temporaryDisk;
-    	      this.url = defaults.url;
+            $ = new AppResourcePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder activeDeploymentName(@Nullable String activeDeploymentName) {
-            this.activeDeploymentName = activeDeploymentName;
+            $.activeDeploymentName = activeDeploymentName;
             return this;
         }
+
         public Builder createdTime(String createdTime) {
-            this.createdTime = Objects.requireNonNull(createdTime);
+            $.createdTime = createdTime;
             return this;
         }
+
         public Builder fqdn(@Nullable String fqdn) {
-            this.fqdn = fqdn;
+            $.fqdn = fqdn;
             return this;
         }
+
         public Builder httpsOnly(@Nullable Boolean httpsOnly) {
-            this.httpsOnly = httpsOnly;
+            $.httpsOnly = httpsOnly;
             return this;
         }
+
         public Builder persistentDisk(@Nullable PersistentDiskResponse persistentDisk) {
-            this.persistentDisk = persistentDisk;
+            $.persistentDisk = persistentDisk;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder public_(@Nullable Boolean public_) {
-            this.public_ = public_;
+            $.public_ = public_;
             return this;
         }
+
         public Builder temporaryDisk(@Nullable TemporaryDiskResponse temporaryDisk) {
-            this.temporaryDisk = temporaryDisk;
+            $.temporaryDisk = temporaryDisk;
             return this;
         }
+
         public Builder url(String url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
-        }        public AppResourcePropertiesResponse build() {
-            return new AppResourcePropertiesResponse(activeDeploymentName, createdTime, fqdn, httpsOnly, persistentDisk, provisioningState, public_, temporaryDisk, url);
+        }
+
+        public AppResourcePropertiesResponse build() {
+            $.createdTime = Objects.requireNonNull($.createdTime, "expected parameter 'createdTime' to be non-null");
+            $.httpsOnly = Codegen.booleanProp("httpsOnly").arg($.httpsOnly).def(false).getNullable();
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            return $;
         }
     }
+
 }

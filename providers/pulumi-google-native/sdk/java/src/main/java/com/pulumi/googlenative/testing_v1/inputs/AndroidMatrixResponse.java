@@ -22,7 +22,7 @@ public final class AndroidMatrixResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="androidModelIds", required=true)
-      private final List<String> androidModelIds;
+    private List<String> androidModelIds;
 
     public List<String> androidModelIds() {
         return this.androidModelIds;
@@ -33,7 +33,7 @@ public final class AndroidMatrixResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="androidVersionIds", required=true)
-      private final List<String> androidVersionIds;
+    private List<String> androidVersionIds;
 
     public List<String> androidVersionIds() {
         return this.androidVersionIds;
@@ -44,7 +44,7 @@ public final class AndroidMatrixResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="locales", required=true)
-      private final List<String> locales;
+    private List<String> locales;
 
     public List<String> locales() {
         return this.locales;
@@ -55,85 +55,82 @@ public final class AndroidMatrixResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="orientations", required=true)
-      private final List<String> orientations;
+    private List<String> orientations;
 
     public List<String> orientations() {
         return this.orientations;
     }
 
-    public AndroidMatrixResponse(
-        List<String> androidModelIds,
-        List<String> androidVersionIds,
-        List<String> locales,
-        List<String> orientations) {
-        this.androidModelIds = Objects.requireNonNull(androidModelIds, "expected parameter 'androidModelIds' to be non-null");
-        this.androidVersionIds = Objects.requireNonNull(androidVersionIds, "expected parameter 'androidVersionIds' to be non-null");
-        this.locales = Objects.requireNonNull(locales, "expected parameter 'locales' to be non-null");
-        this.orientations = Objects.requireNonNull(orientations, "expected parameter 'orientations' to be non-null");
-    }
+    private AndroidMatrixResponse() {}
 
-    private AndroidMatrixResponse() {
-        this.androidModelIds = List.of();
-        this.androidVersionIds = List.of();
-        this.locales = List.of();
-        this.orientations = List.of();
+    private AndroidMatrixResponse(AndroidMatrixResponse $) {
+        this.androidModelIds = $.androidModelIds;
+        this.androidVersionIds = $.androidVersionIds;
+        this.locales = $.locales;
+        this.orientations = $.orientations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AndroidMatrixResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> androidModelIds;
-        private List<String> androidVersionIds;
-        private List<String> locales;
-        private List<String> orientations;
+        private AndroidMatrixResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AndroidMatrixResponse();
         }
 
         public Builder(AndroidMatrixResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.androidModelIds = defaults.androidModelIds;
-    	      this.androidVersionIds = defaults.androidVersionIds;
-    	      this.locales = defaults.locales;
-    	      this.orientations = defaults.orientations;
+            $ = new AndroidMatrixResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder androidModelIds(List<String> androidModelIds) {
-            this.androidModelIds = Objects.requireNonNull(androidModelIds);
+            $.androidModelIds = androidModelIds;
             return this;
         }
+
         public Builder androidModelIds(String... androidModelIds) {
             return androidModelIds(List.of(androidModelIds));
         }
+
         public Builder androidVersionIds(List<String> androidVersionIds) {
-            this.androidVersionIds = Objects.requireNonNull(androidVersionIds);
+            $.androidVersionIds = androidVersionIds;
             return this;
         }
+
         public Builder androidVersionIds(String... androidVersionIds) {
             return androidVersionIds(List.of(androidVersionIds));
         }
+
         public Builder locales(List<String> locales) {
-            this.locales = Objects.requireNonNull(locales);
+            $.locales = locales;
             return this;
         }
+
         public Builder locales(String... locales) {
             return locales(List.of(locales));
         }
+
         public Builder orientations(List<String> orientations) {
-            this.orientations = Objects.requireNonNull(orientations);
+            $.orientations = orientations;
             return this;
         }
+
         public Builder orientations(String... orientations) {
             return orientations(List.of(orientations));
-        }        public AndroidMatrixResponse build() {
-            return new AndroidMatrixResponse(androidModelIds, androidVersionIds, locales, orientations);
+        }
+
+        public AndroidMatrixResponse build() {
+            $.androidModelIds = Objects.requireNonNull($.androidModelIds, "expected parameter 'androidModelIds' to be non-null");
+            $.androidVersionIds = Objects.requireNonNull($.androidVersionIds, "expected parameter 'androidVersionIds' to be non-null");
+            $.locales = Objects.requireNonNull($.locales, "expected parameter 'locales' to be non-null");
+            $.orientations = Objects.requireNonNull($.orientations, "expected parameter 'orientations' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,12 +5,12 @@ package com.pulumi.kubernetes.meta_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.meta_v1.inputs.StatusCauseArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class StatusDetailsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="causes")
-      private final @Nullable Output<List<StatusCauseArgs>> causes;
+    private @Nullable Output<List<StatusCauseArgs>> causes;
 
-    public Output<List<StatusCauseArgs>> causes() {
-        return this.causes == null ? Codegen.empty() : this.causes;
+    public Optional<Output<List<StatusCauseArgs>>> causes() {
+        return Optional.ofNullable(this.causes);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class StatusDetailsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="group")
-      private final @Nullable Output<String> group;
+    private @Nullable Output<String> group;
 
-    public Output<String> group() {
-        return this.group == null ? Codegen.empty() : this.group;
+    public Optional<Output<String>> group() {
+        return Optional.ofNullable(this.group);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class StatusDetailsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class StatusDetailsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class StatusDetailsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="retryAfterSeconds")
-      private final @Nullable Output<Integer> retryAfterSeconds;
+    private @Nullable Output<Integer> retryAfterSeconds;
 
-    public Output<Integer> retryAfterSeconds() {
-        return this.retryAfterSeconds == null ? Codegen.empty() : this.retryAfterSeconds;
+    public Optional<Output<Integer>> retryAfterSeconds() {
+        return Optional.ofNullable(this.retryAfterSeconds);
     }
 
     /**
@@ -82,118 +82,102 @@ public final class StatusDetailsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="uid")
-      private final @Nullable Output<String> uid;
+    private @Nullable Output<String> uid;
 
-    public Output<String> uid() {
-        return this.uid == null ? Codegen.empty() : this.uid;
+    public Optional<Output<String>> uid() {
+        return Optional.ofNullable(this.uid);
     }
 
-    public StatusDetailsArgs(
-        @Nullable Output<List<StatusCauseArgs>> causes,
-        @Nullable Output<String> group,
-        @Nullable Output<String> kind,
-        @Nullable Output<String> name,
-        @Nullable Output<Integer> retryAfterSeconds,
-        @Nullable Output<String> uid) {
-        this.causes = causes;
-        this.group = group;
-        this.kind = kind;
-        this.name = name;
-        this.retryAfterSeconds = retryAfterSeconds;
-        this.uid = uid;
-    }
+    private StatusDetailsArgs() {}
 
-    private StatusDetailsArgs() {
-        this.causes = Codegen.empty();
-        this.group = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.name = Codegen.empty();
-        this.retryAfterSeconds = Codegen.empty();
-        this.uid = Codegen.empty();
+    private StatusDetailsArgs(StatusDetailsArgs $) {
+        this.causes = $.causes;
+        this.group = $.group;
+        this.kind = $.kind;
+        this.name = $.name;
+        this.retryAfterSeconds = $.retryAfterSeconds;
+        this.uid = $.uid;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StatusDetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<StatusCauseArgs>> causes;
-        private @Nullable Output<String> group;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Integer> retryAfterSeconds;
-        private @Nullable Output<String> uid;
+        private StatusDetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StatusDetailsArgs();
         }
 
         public Builder(StatusDetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.causes = defaults.causes;
-    	      this.group = defaults.group;
-    	      this.kind = defaults.kind;
-    	      this.name = defaults.name;
-    	      this.retryAfterSeconds = defaults.retryAfterSeconds;
-    	      this.uid = defaults.uid;
+            $ = new StatusDetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder causes(@Nullable Output<List<StatusCauseArgs>> causes) {
-            this.causes = causes;
+            $.causes = causes;
             return this;
         }
-        public Builder causes(@Nullable List<StatusCauseArgs> causes) {
-            this.causes = Codegen.ofNullable(causes);
-            return this;
+
+        public Builder causes(List<StatusCauseArgs> causes) {
+            return causes(Output.of(causes));
         }
+
         public Builder causes(StatusCauseArgs... causes) {
             return causes(List.of(causes));
         }
+
         public Builder group(@Nullable Output<String> group) {
-            this.group = group;
+            $.group = group;
             return this;
         }
-        public Builder group(@Nullable String group) {
-            this.group = Codegen.ofNullable(group);
-            return this;
+
+        public Builder group(String group) {
+            return group(Output.of(group));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder retryAfterSeconds(@Nullable Output<Integer> retryAfterSeconds) {
-            this.retryAfterSeconds = retryAfterSeconds;
+            $.retryAfterSeconds = retryAfterSeconds;
             return this;
         }
-        public Builder retryAfterSeconds(@Nullable Integer retryAfterSeconds) {
-            this.retryAfterSeconds = Codegen.ofNullable(retryAfterSeconds);
-            return this;
+
+        public Builder retryAfterSeconds(Integer retryAfterSeconds) {
+            return retryAfterSeconds(Output.of(retryAfterSeconds));
         }
+
         public Builder uid(@Nullable Output<String> uid) {
-            this.uid = uid;
+            $.uid = uid;
             return this;
         }
-        public Builder uid(@Nullable String uid) {
-            this.uid = Codegen.ofNullable(uid);
-            return this;
-        }        public StatusDetailsArgs build() {
-            return new StatusDetailsArgs(causes, group, kind, name, retryAfterSeconds, uid);
+
+        public Builder uid(String uid) {
+            return uid(Output.of(uid));
+        }
+
+        public StatusDetailsArgs build() {
+            return $;
         }
     }
+
 }

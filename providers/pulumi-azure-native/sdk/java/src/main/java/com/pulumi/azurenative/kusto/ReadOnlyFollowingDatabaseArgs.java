@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +21,7 @@ public final class ReadOnlyFollowingDatabaseArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="clusterName", required=true)
-      private final Output<String> clusterName;
+    private Output<String> clusterName;
 
     public Output<String> clusterName() {
         return this.clusterName;
@@ -31,10 +32,10 @@ public final class ReadOnlyFollowingDatabaseArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="databaseName")
-      private final @Nullable Output<String> databaseName;
+    private @Nullable Output<String> databaseName;
 
-    public Output<String> databaseName() {
-        return this.databaseName == null ? Codegen.empty() : this.databaseName;
+    public Optional<Output<String>> databaseName() {
+        return Optional.ofNullable(this.databaseName);
     }
 
     /**
@@ -42,10 +43,10 @@ public final class ReadOnlyFollowingDatabaseArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="hotCachePeriod")
-      private final @Nullable Output<String> hotCachePeriod;
+    private @Nullable Output<String> hotCachePeriod;
 
-    public Output<String> hotCachePeriod() {
-        return this.hotCachePeriod == null ? Codegen.empty() : this.hotCachePeriod;
+    public Optional<Output<String>> hotCachePeriod() {
+        return Optional.ofNullable(this.hotCachePeriod);
     }
 
     /**
@@ -54,7 +55,7 @@ public final class ReadOnlyFollowingDatabaseArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="kind", required=true)
-      private final Output<String> kind;
+    private Output<String> kind;
 
     public Output<String> kind() {
         return this.kind;
@@ -65,10 +66,10 @@ public final class ReadOnlyFollowingDatabaseArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -76,115 +77,101 @@ public final class ReadOnlyFollowingDatabaseArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public ReadOnlyFollowingDatabaseArgs(
-        Output<String> clusterName,
-        @Nullable Output<String> databaseName,
-        @Nullable Output<String> hotCachePeriod,
-        Output<String> kind,
-        @Nullable Output<String> location,
-        Output<String> resourceGroupName) {
-        this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
-        this.databaseName = databaseName;
-        this.hotCachePeriod = hotCachePeriod;
-        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
-        this.location = location;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private ReadOnlyFollowingDatabaseArgs() {}
 
-    private ReadOnlyFollowingDatabaseArgs() {
-        this.clusterName = Codegen.empty();
-        this.databaseName = Codegen.empty();
-        this.hotCachePeriod = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.location = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
+    private ReadOnlyFollowingDatabaseArgs(ReadOnlyFollowingDatabaseArgs $) {
+        this.clusterName = $.clusterName;
+        this.databaseName = $.databaseName;
+        this.hotCachePeriod = $.hotCachePeriod;
+        this.kind = $.kind;
+        this.location = $.location;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReadOnlyFollowingDatabaseArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> clusterName;
-        private @Nullable Output<String> databaseName;
-        private @Nullable Output<String> hotCachePeriod;
-        private Output<String> kind;
-        private @Nullable Output<String> location;
-        private Output<String> resourceGroupName;
+        private ReadOnlyFollowingDatabaseArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReadOnlyFollowingDatabaseArgs();
         }
 
         public Builder(ReadOnlyFollowingDatabaseArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterName = defaults.clusterName;
-    	      this.databaseName = defaults.databaseName;
-    	      this.hotCachePeriod = defaults.hotCachePeriod;
-    	      this.kind = defaults.kind;
-    	      this.location = defaults.location;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new ReadOnlyFollowingDatabaseArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterName(Output<String> clusterName) {
-            this.clusterName = Objects.requireNonNull(clusterName);
+            $.clusterName = clusterName;
             return this;
         }
+
         public Builder clusterName(String clusterName) {
-            this.clusterName = Output.of(Objects.requireNonNull(clusterName));
-            return this;
+            return clusterName(Output.of(clusterName));
         }
+
         public Builder databaseName(@Nullable Output<String> databaseName) {
-            this.databaseName = databaseName;
+            $.databaseName = databaseName;
             return this;
         }
-        public Builder databaseName(@Nullable String databaseName) {
-            this.databaseName = Codegen.ofNullable(databaseName);
-            return this;
+
+        public Builder databaseName(String databaseName) {
+            return databaseName(Output.of(databaseName));
         }
+
         public Builder hotCachePeriod(@Nullable Output<String> hotCachePeriod) {
-            this.hotCachePeriod = hotCachePeriod;
+            $.hotCachePeriod = hotCachePeriod;
             return this;
         }
-        public Builder hotCachePeriod(@Nullable String hotCachePeriod) {
-            this.hotCachePeriod = Codegen.ofNullable(hotCachePeriod);
-            return this;
+
+        public Builder hotCachePeriod(String hotCachePeriod) {
+            return hotCachePeriod(Output.of(hotCachePeriod));
         }
+
         public Builder kind(Output<String> kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Output.of(Objects.requireNonNull(kind));
-            return this;
+            return kind(Output.of(kind));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
-        }        public ReadOnlyFollowingDatabaseArgs build() {
-            return new ReadOnlyFollowingDatabaseArgs(clusterName, databaseName, hotCachePeriod, kind, location, resourceGroupName);
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public ReadOnlyFollowingDatabaseArgs build() {
+            $.clusterName = Objects.requireNonNull($.clusterName, "expected parameter 'clusterName' to be non-null");
+            $.kind = Codegen.stringProp("kind").output().arg($.kind).require();
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

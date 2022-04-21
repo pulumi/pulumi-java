@@ -25,10 +25,10 @@ public final class AutoscaleRecurrenceResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="schedule")
-      private final @Nullable List<AutoscaleScheduleResponse> schedule;
+    private @Nullable List<AutoscaleScheduleResponse> schedule;
 
-    public List<AutoscaleScheduleResponse> schedule() {
-        return this.schedule == null ? List.of() : this.schedule;
+    public Optional<List<AutoscaleScheduleResponse>> schedule() {
+        return Optional.ofNullable(this.schedule);
     }
 
     /**
@@ -36,58 +36,54 @@ public final class AutoscaleRecurrenceResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="timeZone")
-      private final @Nullable String timeZone;
+    private @Nullable String timeZone;
 
     public Optional<String> timeZone() {
-        return this.timeZone == null ? Optional.empty() : Optional.ofNullable(this.timeZone);
+        return Optional.ofNullable(this.timeZone);
     }
 
-    public AutoscaleRecurrenceResponse(
-        @Nullable List<AutoscaleScheduleResponse> schedule,
-        @Nullable String timeZone) {
-        this.schedule = schedule;
-        this.timeZone = timeZone;
-    }
+    private AutoscaleRecurrenceResponse() {}
 
-    private AutoscaleRecurrenceResponse() {
-        this.schedule = List.of();
-        this.timeZone = null;
+    private AutoscaleRecurrenceResponse(AutoscaleRecurrenceResponse $) {
+        this.schedule = $.schedule;
+        this.timeZone = $.timeZone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoscaleRecurrenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<AutoscaleScheduleResponse> schedule;
-        private @Nullable String timeZone;
+        private AutoscaleRecurrenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoscaleRecurrenceResponse();
         }
 
         public Builder(AutoscaleRecurrenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.schedule = defaults.schedule;
-    	      this.timeZone = defaults.timeZone;
+            $ = new AutoscaleRecurrenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder schedule(@Nullable List<AutoscaleScheduleResponse> schedule) {
-            this.schedule = schedule;
+            $.schedule = schedule;
             return this;
         }
+
         public Builder schedule(AutoscaleScheduleResponse... schedule) {
             return schedule(List.of(schedule));
         }
+
         public Builder timeZone(@Nullable String timeZone) {
-            this.timeZone = timeZone;
+            $.timeZone = timeZone;
             return this;
-        }        public AutoscaleRecurrenceResponse build() {
-            return new AutoscaleRecurrenceResponse(schedule, timeZone);
+        }
+
+        public AutoscaleRecurrenceResponse build() {
+            return $;
         }
     }
+
 }

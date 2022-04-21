@@ -24,45 +24,45 @@ public final class FileSystemApplicationLogsConfigResponse extends com.pulumi.re
      * 
      */
     @Import(name="level")
-      private final @Nullable String level;
+    private @Nullable String level;
 
     public Optional<String> level() {
-        return this.level == null ? Optional.empty() : Optional.ofNullable(this.level);
+        return Optional.ofNullable(this.level);
     }
 
-    public FileSystemApplicationLogsConfigResponse(@Nullable String level) {
-        this.level = Codegen.stringProp("level").arg(level).def("Off").getNullable();
-    }
+    private FileSystemApplicationLogsConfigResponse() {}
 
-    private FileSystemApplicationLogsConfigResponse() {
-        this.level = null;
+    private FileSystemApplicationLogsConfigResponse(FileSystemApplicationLogsConfigResponse $) {
+        this.level = $.level;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FileSystemApplicationLogsConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String level;
+        private FileSystemApplicationLogsConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FileSystemApplicationLogsConfigResponse();
         }
 
         public Builder(FileSystemApplicationLogsConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.level = defaults.level;
+            $ = new FileSystemApplicationLogsConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder level(@Nullable String level) {
-            this.level = level;
+            $.level = level;
             return this;
-        }        public FileSystemApplicationLogsConfigResponse build() {
-            return new FileSystemApplicationLogsConfigResponse(level);
+        }
+
+        public FileSystemApplicationLogsConfigResponse build() {
+            $.level = Codegen.stringProp("level").arg($.level).def("Off").getNullable();
+            return $;
         }
     }
+
 }

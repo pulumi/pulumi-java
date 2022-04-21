@@ -14,45 +14,45 @@ public final class GetFunctionEnvironment extends com.pulumi.resources.InvokeArg
     public static final GetFunctionEnvironment Empty = new GetFunctionEnvironment();
 
     @Import(name="variables", required=true)
-      private final Map<String,String> variables;
+    private Map<String,String> variables;
 
     public Map<String,String> variables() {
         return this.variables;
     }
 
-    public GetFunctionEnvironment(Map<String,String> variables) {
-        this.variables = Objects.requireNonNull(variables, "expected parameter 'variables' to be non-null");
-    }
+    private GetFunctionEnvironment() {}
 
-    private GetFunctionEnvironment() {
-        this.variables = Map.of();
+    private GetFunctionEnvironment(GetFunctionEnvironment $) {
+        this.variables = $.variables;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFunctionEnvironment defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,String> variables;
+        private GetFunctionEnvironment $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFunctionEnvironment();
         }
 
         public Builder(GetFunctionEnvironment defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.variables = defaults.variables;
+            $ = new GetFunctionEnvironment(Objects.requireNonNull(defaults));
         }
 
         public Builder variables(Map<String,String> variables) {
-            this.variables = Objects.requireNonNull(variables);
+            $.variables = variables;
             return this;
-        }        public GetFunctionEnvironment build() {
-            return new GetFunctionEnvironment(variables);
+        }
+
+        public GetFunctionEnvironment build() {
+            $.variables = Objects.requireNonNull($.variables, "expected parameter 'variables' to be non-null");
+            return $;
         }
     }
+
 }

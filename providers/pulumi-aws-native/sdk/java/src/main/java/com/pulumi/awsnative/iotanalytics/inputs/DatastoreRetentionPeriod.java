@@ -16,62 +16,57 @@ public final class DatastoreRetentionPeriod extends com.pulumi.resources.InvokeA
     public static final DatastoreRetentionPeriod Empty = new DatastoreRetentionPeriod();
 
     @Import(name="numberOfDays")
-      private final @Nullable Integer numberOfDays;
+    private @Nullable Integer numberOfDays;
 
     public Optional<Integer> numberOfDays() {
-        return this.numberOfDays == null ? Optional.empty() : Optional.ofNullable(this.numberOfDays);
+        return Optional.ofNullable(this.numberOfDays);
     }
 
     @Import(name="unlimited")
-      private final @Nullable Boolean unlimited;
+    private @Nullable Boolean unlimited;
 
     public Optional<Boolean> unlimited() {
-        return this.unlimited == null ? Optional.empty() : Optional.ofNullable(this.unlimited);
+        return Optional.ofNullable(this.unlimited);
     }
 
-    public DatastoreRetentionPeriod(
-        @Nullable Integer numberOfDays,
-        @Nullable Boolean unlimited) {
-        this.numberOfDays = numberOfDays;
-        this.unlimited = unlimited;
-    }
+    private DatastoreRetentionPeriod() {}
 
-    private DatastoreRetentionPeriod() {
-        this.numberOfDays = null;
-        this.unlimited = null;
+    private DatastoreRetentionPeriod(DatastoreRetentionPeriod $) {
+        this.numberOfDays = $.numberOfDays;
+        this.unlimited = $.unlimited;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatastoreRetentionPeriod defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer numberOfDays;
-        private @Nullable Boolean unlimited;
+        private DatastoreRetentionPeriod $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatastoreRetentionPeriod();
         }
 
         public Builder(DatastoreRetentionPeriod defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.numberOfDays = defaults.numberOfDays;
-    	      this.unlimited = defaults.unlimited;
+            $ = new DatastoreRetentionPeriod(Objects.requireNonNull(defaults));
         }
 
         public Builder numberOfDays(@Nullable Integer numberOfDays) {
-            this.numberOfDays = numberOfDays;
+            $.numberOfDays = numberOfDays;
             return this;
         }
+
         public Builder unlimited(@Nullable Boolean unlimited) {
-            this.unlimited = unlimited;
+            $.unlimited = unlimited;
             return this;
-        }        public DatastoreRetentionPeriod build() {
-            return new DatastoreRetentionPeriod(numberOfDays, unlimited);
+        }
+
+        public DatastoreRetentionPeriod build() {
+            return $;
         }
     }
+
 }

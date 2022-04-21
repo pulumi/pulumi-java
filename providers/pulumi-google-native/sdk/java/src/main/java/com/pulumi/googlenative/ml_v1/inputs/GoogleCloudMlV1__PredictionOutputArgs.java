@@ -5,10 +5,10 @@ package com.pulumi.googlenative.ml_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GoogleCloudMlV1__PredictionOutputArgs extends com.pulumi.reso
      * 
      */
     @Import(name="errorCount")
-      private final @Nullable Output<String> errorCount;
+    private @Nullable Output<String> errorCount;
 
-    public Output<String> errorCount() {
-        return this.errorCount == null ? Codegen.empty() : this.errorCount;
+    public Optional<Output<String>> errorCount() {
+        return Optional.ofNullable(this.errorCount);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class GoogleCloudMlV1__PredictionOutputArgs extends com.pulumi.reso
      * 
      */
     @Import(name="nodeHours")
-      private final @Nullable Output<Double> nodeHours;
+    private @Nullable Output<Double> nodeHours;
 
-    public Output<Double> nodeHours() {
-        return this.nodeHours == null ? Codegen.empty() : this.nodeHours;
+    public Optional<Output<Double>> nodeHours() {
+        return Optional.ofNullable(this.nodeHours);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class GoogleCloudMlV1__PredictionOutputArgs extends com.pulumi.reso
      * 
      */
     @Import(name="outputPath")
-      private final @Nullable Output<String> outputPath;
+    private @Nullable Output<String> outputPath;
 
-    public Output<String> outputPath() {
-        return this.outputPath == null ? Codegen.empty() : this.outputPath;
+    public Optional<Output<String>> outputPath() {
+        return Optional.ofNullable(this.outputPath);
     }
 
     /**
@@ -58,89 +58,78 @@ public final class GoogleCloudMlV1__PredictionOutputArgs extends com.pulumi.reso
      * 
      */
     @Import(name="predictionCount")
-      private final @Nullable Output<String> predictionCount;
+    private @Nullable Output<String> predictionCount;
 
-    public Output<String> predictionCount() {
-        return this.predictionCount == null ? Codegen.empty() : this.predictionCount;
+    public Optional<Output<String>> predictionCount() {
+        return Optional.ofNullable(this.predictionCount);
     }
 
-    public GoogleCloudMlV1__PredictionOutputArgs(
-        @Nullable Output<String> errorCount,
-        @Nullable Output<Double> nodeHours,
-        @Nullable Output<String> outputPath,
-        @Nullable Output<String> predictionCount) {
-        this.errorCount = errorCount;
-        this.nodeHours = nodeHours;
-        this.outputPath = outputPath;
-        this.predictionCount = predictionCount;
-    }
+    private GoogleCloudMlV1__PredictionOutputArgs() {}
 
-    private GoogleCloudMlV1__PredictionOutputArgs() {
-        this.errorCount = Codegen.empty();
-        this.nodeHours = Codegen.empty();
-        this.outputPath = Codegen.empty();
-        this.predictionCount = Codegen.empty();
+    private GoogleCloudMlV1__PredictionOutputArgs(GoogleCloudMlV1__PredictionOutputArgs $) {
+        this.errorCount = $.errorCount;
+        this.nodeHours = $.nodeHours;
+        this.outputPath = $.outputPath;
+        this.predictionCount = $.predictionCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudMlV1__PredictionOutputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> errorCount;
-        private @Nullable Output<Double> nodeHours;
-        private @Nullable Output<String> outputPath;
-        private @Nullable Output<String> predictionCount;
+        private GoogleCloudMlV1__PredictionOutputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudMlV1__PredictionOutputArgs();
         }
 
         public Builder(GoogleCloudMlV1__PredictionOutputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.errorCount = defaults.errorCount;
-    	      this.nodeHours = defaults.nodeHours;
-    	      this.outputPath = defaults.outputPath;
-    	      this.predictionCount = defaults.predictionCount;
+            $ = new GoogleCloudMlV1__PredictionOutputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder errorCount(@Nullable Output<String> errorCount) {
-            this.errorCount = errorCount;
+            $.errorCount = errorCount;
             return this;
         }
-        public Builder errorCount(@Nullable String errorCount) {
-            this.errorCount = Codegen.ofNullable(errorCount);
-            return this;
+
+        public Builder errorCount(String errorCount) {
+            return errorCount(Output.of(errorCount));
         }
+
         public Builder nodeHours(@Nullable Output<Double> nodeHours) {
-            this.nodeHours = nodeHours;
+            $.nodeHours = nodeHours;
             return this;
         }
-        public Builder nodeHours(@Nullable Double nodeHours) {
-            this.nodeHours = Codegen.ofNullable(nodeHours);
-            return this;
+
+        public Builder nodeHours(Double nodeHours) {
+            return nodeHours(Output.of(nodeHours));
         }
+
         public Builder outputPath(@Nullable Output<String> outputPath) {
-            this.outputPath = outputPath;
+            $.outputPath = outputPath;
             return this;
         }
-        public Builder outputPath(@Nullable String outputPath) {
-            this.outputPath = Codegen.ofNullable(outputPath);
-            return this;
+
+        public Builder outputPath(String outputPath) {
+            return outputPath(Output.of(outputPath));
         }
+
         public Builder predictionCount(@Nullable Output<String> predictionCount) {
-            this.predictionCount = predictionCount;
+            $.predictionCount = predictionCount;
             return this;
         }
-        public Builder predictionCount(@Nullable String predictionCount) {
-            this.predictionCount = Codegen.ofNullable(predictionCount);
-            return this;
-        }        public GoogleCloudMlV1__PredictionOutputArgs build() {
-            return new GoogleCloudMlV1__PredictionOutputArgs(errorCount, nodeHours, outputPath, predictionCount);
+
+        public Builder predictionCount(String predictionCount) {
+            return predictionCount(Output.of(predictionCount));
+        }
+
+        public GoogleCloudMlV1__PredictionOutputArgs build() {
+            return $;
         }
     }
+
 }

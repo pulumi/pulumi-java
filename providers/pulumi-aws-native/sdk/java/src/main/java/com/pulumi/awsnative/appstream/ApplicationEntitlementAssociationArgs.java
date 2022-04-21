@@ -5,7 +5,6 @@ package com.pulumi.awsnative.appstream;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,90 +14,85 @@ public final class ApplicationEntitlementAssociationArgs extends com.pulumi.reso
     public static final ApplicationEntitlementAssociationArgs Empty = new ApplicationEntitlementAssociationArgs();
 
     @Import(name="applicationIdentifier", required=true)
-      private final Output<String> applicationIdentifier;
+    private Output<String> applicationIdentifier;
 
     public Output<String> applicationIdentifier() {
         return this.applicationIdentifier;
     }
 
     @Import(name="entitlementName", required=true)
-      private final Output<String> entitlementName;
+    private Output<String> entitlementName;
 
     public Output<String> entitlementName() {
         return this.entitlementName;
     }
 
     @Import(name="stackName", required=true)
-      private final Output<String> stackName;
+    private Output<String> stackName;
 
     public Output<String> stackName() {
         return this.stackName;
     }
 
-    public ApplicationEntitlementAssociationArgs(
-        Output<String> applicationIdentifier,
-        Output<String> entitlementName,
-        Output<String> stackName) {
-        this.applicationIdentifier = Objects.requireNonNull(applicationIdentifier, "expected parameter 'applicationIdentifier' to be non-null");
-        this.entitlementName = Objects.requireNonNull(entitlementName, "expected parameter 'entitlementName' to be non-null");
-        this.stackName = Objects.requireNonNull(stackName, "expected parameter 'stackName' to be non-null");
-    }
+    private ApplicationEntitlementAssociationArgs() {}
 
-    private ApplicationEntitlementAssociationArgs() {
-        this.applicationIdentifier = Codegen.empty();
-        this.entitlementName = Codegen.empty();
-        this.stackName = Codegen.empty();
+    private ApplicationEntitlementAssociationArgs(ApplicationEntitlementAssociationArgs $) {
+        this.applicationIdentifier = $.applicationIdentifier;
+        this.entitlementName = $.entitlementName;
+        this.stackName = $.stackName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationEntitlementAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> applicationIdentifier;
-        private Output<String> entitlementName;
-        private Output<String> stackName;
+        private ApplicationEntitlementAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationEntitlementAssociationArgs();
         }
 
         public Builder(ApplicationEntitlementAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationIdentifier = defaults.applicationIdentifier;
-    	      this.entitlementName = defaults.entitlementName;
-    	      this.stackName = defaults.stackName;
+            $ = new ApplicationEntitlementAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationIdentifier(Output<String> applicationIdentifier) {
-            this.applicationIdentifier = Objects.requireNonNull(applicationIdentifier);
+            $.applicationIdentifier = applicationIdentifier;
             return this;
         }
+
         public Builder applicationIdentifier(String applicationIdentifier) {
-            this.applicationIdentifier = Output.of(Objects.requireNonNull(applicationIdentifier));
-            return this;
+            return applicationIdentifier(Output.of(applicationIdentifier));
         }
+
         public Builder entitlementName(Output<String> entitlementName) {
-            this.entitlementName = Objects.requireNonNull(entitlementName);
+            $.entitlementName = entitlementName;
             return this;
         }
+
         public Builder entitlementName(String entitlementName) {
-            this.entitlementName = Output.of(Objects.requireNonNull(entitlementName));
-            return this;
+            return entitlementName(Output.of(entitlementName));
         }
+
         public Builder stackName(Output<String> stackName) {
-            this.stackName = Objects.requireNonNull(stackName);
+            $.stackName = stackName;
             return this;
         }
+
         public Builder stackName(String stackName) {
-            this.stackName = Output.of(Objects.requireNonNull(stackName));
-            return this;
-        }        public ApplicationEntitlementAssociationArgs build() {
-            return new ApplicationEntitlementAssociationArgs(applicationIdentifier, entitlementName, stackName);
+            return stackName(Output.of(stackName));
+        }
+
+        public ApplicationEntitlementAssociationArgs build() {
+            $.applicationIdentifier = Objects.requireNonNull($.applicationIdentifier, "expected parameter 'applicationIdentifier' to be non-null");
+            $.entitlementName = Objects.requireNonNull($.entitlementName, "expected parameter 'entitlementName' to be non-null");
+            $.stackName = Objects.requireNonNull($.stackName, "expected parameter 'stackName' to be non-null");
+            return $;
         }
     }
+
 }

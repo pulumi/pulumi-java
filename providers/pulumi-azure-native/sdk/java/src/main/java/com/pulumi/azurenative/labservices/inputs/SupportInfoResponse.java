@@ -23,10 +23,10 @@ public final class SupportInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="email")
-      private final @Nullable String email;
+    private @Nullable String email;
 
     public Optional<String> email() {
-        return this.email == null ? Optional.empty() : Optional.ofNullable(this.email);
+        return Optional.ofNullable(this.email);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class SupportInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="instructions")
-      private final @Nullable String instructions;
+    private @Nullable String instructions;
 
     public Optional<String> instructions() {
-        return this.instructions == null ? Optional.empty() : Optional.ofNullable(this.instructions);
+        return Optional.ofNullable(this.instructions);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class SupportInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="phone")
-      private final @Nullable String phone;
+    private @Nullable String phone;
 
     public Optional<String> phone() {
-        return this.phone == null ? Optional.empty() : Optional.ofNullable(this.phone);
+        return Optional.ofNullable(this.phone);
     }
 
     /**
@@ -56,73 +56,62 @@ public final class SupportInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="url")
-      private final @Nullable String url;
+    private @Nullable String url;
 
     public Optional<String> url() {
-        return this.url == null ? Optional.empty() : Optional.ofNullable(this.url);
+        return Optional.ofNullable(this.url);
     }
 
-    public SupportInfoResponse(
-        @Nullable String email,
-        @Nullable String instructions,
-        @Nullable String phone,
-        @Nullable String url) {
-        this.email = email;
-        this.instructions = instructions;
-        this.phone = phone;
-        this.url = url;
-    }
+    private SupportInfoResponse() {}
 
-    private SupportInfoResponse() {
-        this.email = null;
-        this.instructions = null;
-        this.phone = null;
-        this.url = null;
+    private SupportInfoResponse(SupportInfoResponse $) {
+        this.email = $.email;
+        this.instructions = $.instructions;
+        this.phone = $.phone;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SupportInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String email;
-        private @Nullable String instructions;
-        private @Nullable String phone;
-        private @Nullable String url;
+        private SupportInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SupportInfoResponse();
         }
 
         public Builder(SupportInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.email = defaults.email;
-    	      this.instructions = defaults.instructions;
-    	      this.phone = defaults.phone;
-    	      this.url = defaults.url;
+            $ = new SupportInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder email(@Nullable String email) {
-            this.email = email;
+            $.email = email;
             return this;
         }
+
         public Builder instructions(@Nullable String instructions) {
-            this.instructions = instructions;
+            $.instructions = instructions;
             return this;
         }
+
         public Builder phone(@Nullable String phone) {
-            this.phone = phone;
+            $.phone = phone;
             return this;
         }
+
         public Builder url(@Nullable String url) {
-            this.url = url;
+            $.url = url;
             return this;
-        }        public SupportInfoResponse build() {
-            return new SupportInfoResponse(email, instructions, phone, url);
+        }
+
+        public SupportInfoResponse build() {
+            return $;
         }
     }
+
 }

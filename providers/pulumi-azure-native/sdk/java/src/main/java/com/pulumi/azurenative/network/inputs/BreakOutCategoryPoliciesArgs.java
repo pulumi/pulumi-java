@@ -5,9 +5,9 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class BreakOutCategoryPoliciesArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="allow")
-      private final @Nullable Output<Boolean> allow;
+    private @Nullable Output<Boolean> allow;
 
-    public Output<Boolean> allow() {
-        return this.allow == null ? Codegen.empty() : this.allow;
+    public Optional<Output<Boolean>> allow() {
+        return Optional.ofNullable(this.allow);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class BreakOutCategoryPoliciesArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="default")
-      private final @Nullable Output<Boolean> default_;
+    private @Nullable Output<Boolean> default_;
 
-    public Output<Boolean> default_() {
-        return this.default_ == null ? Codegen.empty() : this.default_;
+    public Optional<Output<Boolean>> default_() {
+        return Optional.ofNullable(this.default_);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class BreakOutCategoryPoliciesArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="optimize")
-      private final @Nullable Output<Boolean> optimize;
+    private @Nullable Output<Boolean> optimize;
 
-    public Output<Boolean> optimize() {
-        return this.optimize == null ? Codegen.empty() : this.optimize;
+    public Optional<Output<Boolean>> optimize() {
+        return Optional.ofNullable(this.optimize);
     }
 
-    public BreakOutCategoryPoliciesArgs(
-        @Nullable Output<Boolean> allow,
-        @Nullable Output<Boolean> default_,
-        @Nullable Output<Boolean> optimize) {
-        this.allow = allow;
-        this.default_ = default_;
-        this.optimize = optimize;
-    }
+    private BreakOutCategoryPoliciesArgs() {}
 
-    private BreakOutCategoryPoliciesArgs() {
-        this.allow = Codegen.empty();
-        this.default_ = Codegen.empty();
-        this.optimize = Codegen.empty();
+    private BreakOutCategoryPoliciesArgs(BreakOutCategoryPoliciesArgs $) {
+        this.allow = $.allow;
+        this.default_ = $.default_;
+        this.optimize = $.optimize;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BreakOutCategoryPoliciesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> allow;
-        private @Nullable Output<Boolean> default_;
-        private @Nullable Output<Boolean> optimize;
+        private BreakOutCategoryPoliciesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BreakOutCategoryPoliciesArgs();
         }
 
         public Builder(BreakOutCategoryPoliciesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allow = defaults.allow;
-    	      this.default_ = defaults.default_;
-    	      this.optimize = defaults.optimize;
+            $ = new BreakOutCategoryPoliciesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allow(@Nullable Output<Boolean> allow) {
-            this.allow = allow;
+            $.allow = allow;
             return this;
         }
-        public Builder allow(@Nullable Boolean allow) {
-            this.allow = Codegen.ofNullable(allow);
-            return this;
+
+        public Builder allow(Boolean allow) {
+            return allow(Output.of(allow));
         }
+
         public Builder default_(@Nullable Output<Boolean> default_) {
-            this.default_ = default_;
+            $.default_ = default_;
             return this;
         }
-        public Builder default_(@Nullable Boolean default_) {
-            this.default_ = Codegen.ofNullable(default_);
-            return this;
+
+        public Builder default_(Boolean default_) {
+            return default_(Output.of(default_));
         }
+
         public Builder optimize(@Nullable Output<Boolean> optimize) {
-            this.optimize = optimize;
+            $.optimize = optimize;
             return this;
         }
-        public Builder optimize(@Nullable Boolean optimize) {
-            this.optimize = Codegen.ofNullable(optimize);
-            return this;
-        }        public BreakOutCategoryPoliciesArgs build() {
-            return new BreakOutCategoryPoliciesArgs(allow, default_, optimize);
+
+        public Builder optimize(Boolean optimize) {
+            return optimize(Output.of(optimize));
+        }
+
+        public BreakOutCategoryPoliciesArgs build() {
+            return $;
         }
     }
+
 }

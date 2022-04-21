@@ -5,10 +5,10 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class AutoscalarAutoscalingPolicyCpuUtilizationGetArgs extends com.
      * 
      */
     @Import(name="predictiveMethod")
-      private final @Nullable Output<String> predictiveMethod;
+    private @Nullable Output<String> predictiveMethod;
 
-    public Output<String> predictiveMethod() {
-        return this.predictiveMethod == null ? Codegen.empty() : this.predictiveMethod;
+    public Optional<Output<String>> predictiveMethod() {
+        return Optional.ofNullable(this.predictiveMethod);
     }
 
     /**
@@ -36,63 +36,59 @@ public final class AutoscalarAutoscalingPolicyCpuUtilizationGetArgs extends com.
      * 
      */
     @Import(name="target", required=true)
-      private final Output<Double> target;
+    private Output<Double> target;
 
     public Output<Double> target() {
         return this.target;
     }
 
-    public AutoscalarAutoscalingPolicyCpuUtilizationGetArgs(
-        @Nullable Output<String> predictiveMethod,
-        Output<Double> target) {
-        this.predictiveMethod = predictiveMethod;
-        this.target = Objects.requireNonNull(target, "expected parameter 'target' to be non-null");
-    }
+    private AutoscalarAutoscalingPolicyCpuUtilizationGetArgs() {}
 
-    private AutoscalarAutoscalingPolicyCpuUtilizationGetArgs() {
-        this.predictiveMethod = Codegen.empty();
-        this.target = Codegen.empty();
+    private AutoscalarAutoscalingPolicyCpuUtilizationGetArgs(AutoscalarAutoscalingPolicyCpuUtilizationGetArgs $) {
+        this.predictiveMethod = $.predictiveMethod;
+        this.target = $.target;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoscalarAutoscalingPolicyCpuUtilizationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> predictiveMethod;
-        private Output<Double> target;
+        private AutoscalarAutoscalingPolicyCpuUtilizationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoscalarAutoscalingPolicyCpuUtilizationGetArgs();
         }
 
         public Builder(AutoscalarAutoscalingPolicyCpuUtilizationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.predictiveMethod = defaults.predictiveMethod;
-    	      this.target = defaults.target;
+            $ = new AutoscalarAutoscalingPolicyCpuUtilizationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder predictiveMethod(@Nullable Output<String> predictiveMethod) {
-            this.predictiveMethod = predictiveMethod;
+            $.predictiveMethod = predictiveMethod;
             return this;
         }
-        public Builder predictiveMethod(@Nullable String predictiveMethod) {
-            this.predictiveMethod = Codegen.ofNullable(predictiveMethod);
-            return this;
+
+        public Builder predictiveMethod(String predictiveMethod) {
+            return predictiveMethod(Output.of(predictiveMethod));
         }
+
         public Builder target(Output<Double> target) {
-            this.target = Objects.requireNonNull(target);
+            $.target = target;
             return this;
         }
+
         public Builder target(Double target) {
-            this.target = Output.of(Objects.requireNonNull(target));
-            return this;
-        }        public AutoscalarAutoscalingPolicyCpuUtilizationGetArgs build() {
-            return new AutoscalarAutoscalingPolicyCpuUtilizationGetArgs(predictiveMethod, target);
+            return target(Output.of(target));
+        }
+
+        public AutoscalarAutoscalingPolicyCpuUtilizationGetArgs build() {
+            $.target = Objects.requireNonNull($.target, "expected parameter 'target' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.gcp.billing;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class SubAccountArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deletionPolicy")
-      private final @Nullable Output<String> deletionPolicy;
+    private @Nullable Output<String> deletionPolicy;
 
-    public Output<String> deletionPolicy() {
-        return this.deletionPolicy == null ? Codegen.empty() : this.deletionPolicy;
+    public Optional<Output<String>> deletionPolicy() {
+        return Optional.ofNullable(this.deletionPolicy);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class SubAccountArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
@@ -45,76 +45,70 @@ public final class SubAccountArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="masterBillingAccount", required=true)
-      private final Output<String> masterBillingAccount;
+    private Output<String> masterBillingAccount;
 
     public Output<String> masterBillingAccount() {
         return this.masterBillingAccount;
     }
 
-    public SubAccountArgs(
-        @Nullable Output<String> deletionPolicy,
-        Output<String> displayName,
-        Output<String> masterBillingAccount) {
-        this.deletionPolicy = deletionPolicy;
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.masterBillingAccount = Objects.requireNonNull(masterBillingAccount, "expected parameter 'masterBillingAccount' to be non-null");
-    }
+    private SubAccountArgs() {}
 
-    private SubAccountArgs() {
-        this.deletionPolicy = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.masterBillingAccount = Codegen.empty();
+    private SubAccountArgs(SubAccountArgs $) {
+        this.deletionPolicy = $.deletionPolicy;
+        this.displayName = $.displayName;
+        this.masterBillingAccount = $.masterBillingAccount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubAccountArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> deletionPolicy;
-        private Output<String> displayName;
-        private Output<String> masterBillingAccount;
+        private SubAccountArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubAccountArgs();
         }
 
         public Builder(SubAccountArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deletionPolicy = defaults.deletionPolicy;
-    	      this.displayName = defaults.displayName;
-    	      this.masterBillingAccount = defaults.masterBillingAccount;
+            $ = new SubAccountArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deletionPolicy(@Nullable Output<String> deletionPolicy) {
-            this.deletionPolicy = deletionPolicy;
+            $.deletionPolicy = deletionPolicy;
             return this;
         }
-        public Builder deletionPolicy(@Nullable String deletionPolicy) {
-            this.deletionPolicy = Codegen.ofNullable(deletionPolicy);
-            return this;
+
+        public Builder deletionPolicy(String deletionPolicy) {
+            return deletionPolicy(Output.of(deletionPolicy));
         }
+
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder masterBillingAccount(Output<String> masterBillingAccount) {
-            this.masterBillingAccount = Objects.requireNonNull(masterBillingAccount);
+            $.masterBillingAccount = masterBillingAccount;
             return this;
         }
+
         public Builder masterBillingAccount(String masterBillingAccount) {
-            this.masterBillingAccount = Output.of(Objects.requireNonNull(masterBillingAccount));
-            return this;
-        }        public SubAccountArgs build() {
-            return new SubAccountArgs(deletionPolicy, displayName, masterBillingAccount);
+            return masterBillingAccount(Output.of(masterBillingAccount));
+        }
+
+        public SubAccountArgs build() {
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.masterBillingAccount = Objects.requireNonNull($.masterBillingAccount, "expected parameter 'masterBillingAccount' to be non-null");
+            return $;
         }
     }
+
 }

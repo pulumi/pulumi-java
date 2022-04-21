@@ -20,10 +20,10 @@ public final class SqlTriggerGetPropertiesResponseResource extends com.pulumi.re
      * 
      */
     @Import(name="body")
-      private final @Nullable String body;
+    private @Nullable String body;
 
     public Optional<String> body() {
-        return this.body == null ? Optional.empty() : Optional.ofNullable(this.body);
+        return Optional.ofNullable(this.body);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class SqlTriggerGetPropertiesResponseResource extends com.pulumi.re
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -42,7 +42,7 @@ public final class SqlTriggerGetPropertiesResponseResource extends com.pulumi.re
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -53,7 +53,7 @@ public final class SqlTriggerGetPropertiesResponseResource extends com.pulumi.re
      * 
      */
     @Import(name="rid", required=true)
-      private final String rid;
+    private String rid;
 
     public String rid() {
         return this.rid;
@@ -64,10 +64,10 @@ public final class SqlTriggerGetPropertiesResponseResource extends com.pulumi.re
      * 
      */
     @Import(name="triggerOperation")
-      private final @Nullable String triggerOperation;
+    private @Nullable String triggerOperation;
 
     public Optional<String> triggerOperation() {
-        return this.triggerOperation == null ? Optional.empty() : Optional.ofNullable(this.triggerOperation);
+        return Optional.ofNullable(this.triggerOperation);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class SqlTriggerGetPropertiesResponseResource extends com.pulumi.re
      * 
      */
     @Import(name="triggerType")
-      private final @Nullable String triggerType;
+    private @Nullable String triggerType;
 
     public Optional<String> triggerType() {
-        return this.triggerType == null ? Optional.empty() : Optional.ofNullable(this.triggerType);
+        return Optional.ofNullable(this.triggerType);
     }
 
     /**
@@ -86,100 +86,84 @@ public final class SqlTriggerGetPropertiesResponseResource extends com.pulumi.re
      * 
      */
     @Import(name="ts", required=true)
-      private final Double ts;
+    private Double ts;
 
     public Double ts() {
         return this.ts;
     }
 
-    public SqlTriggerGetPropertiesResponseResource(
-        @Nullable String body,
-        String etag,
-        String id,
-        String rid,
-        @Nullable String triggerOperation,
-        @Nullable String triggerType,
-        Double ts) {
-        this.body = body;
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.rid = Objects.requireNonNull(rid, "expected parameter 'rid' to be non-null");
-        this.triggerOperation = triggerOperation;
-        this.triggerType = triggerType;
-        this.ts = Objects.requireNonNull(ts, "expected parameter 'ts' to be non-null");
-    }
+    private SqlTriggerGetPropertiesResponseResource() {}
 
-    private SqlTriggerGetPropertiesResponseResource() {
-        this.body = null;
-        this.etag = null;
-        this.id = null;
-        this.rid = null;
-        this.triggerOperation = null;
-        this.triggerType = null;
-        this.ts = null;
+    private SqlTriggerGetPropertiesResponseResource(SqlTriggerGetPropertiesResponseResource $) {
+        this.body = $.body;
+        this.etag = $.etag;
+        this.id = $.id;
+        this.rid = $.rid;
+        this.triggerOperation = $.triggerOperation;
+        this.triggerType = $.triggerType;
+        this.ts = $.ts;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SqlTriggerGetPropertiesResponseResource defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String body;
-        private String etag;
-        private String id;
-        private String rid;
-        private @Nullable String triggerOperation;
-        private @Nullable String triggerType;
-        private Double ts;
+        private SqlTriggerGetPropertiesResponseResource $;
 
         public Builder() {
-    	      // Empty
+            $ = new SqlTriggerGetPropertiesResponseResource();
         }
 
         public Builder(SqlTriggerGetPropertiesResponseResource defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.body = defaults.body;
-    	      this.etag = defaults.etag;
-    	      this.id = defaults.id;
-    	      this.rid = defaults.rid;
-    	      this.triggerOperation = defaults.triggerOperation;
-    	      this.triggerType = defaults.triggerType;
-    	      this.ts = defaults.ts;
+            $ = new SqlTriggerGetPropertiesResponseResource(Objects.requireNonNull(defaults));
         }
 
         public Builder body(@Nullable String body) {
-            this.body = body;
+            $.body = body;
             return this;
         }
+
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder rid(String rid) {
-            this.rid = Objects.requireNonNull(rid);
+            $.rid = rid;
             return this;
         }
+
         public Builder triggerOperation(@Nullable String triggerOperation) {
-            this.triggerOperation = triggerOperation;
+            $.triggerOperation = triggerOperation;
             return this;
         }
+
         public Builder triggerType(@Nullable String triggerType) {
-            this.triggerType = triggerType;
+            $.triggerType = triggerType;
             return this;
         }
+
         public Builder ts(Double ts) {
-            this.ts = Objects.requireNonNull(ts);
+            $.ts = ts;
             return this;
-        }        public SqlTriggerGetPropertiesResponseResource build() {
-            return new SqlTriggerGetPropertiesResponseResource(body, etag, id, rid, triggerOperation, triggerType, ts);
+        }
+
+        public SqlTriggerGetPropertiesResponseResource build() {
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.rid = Objects.requireNonNull($.rid, "expected parameter 'rid' to be non-null");
+            $.ts = Objects.requireNonNull($.ts, "expected parameter 'ts' to be non-null");
+            return $;
         }
     }
+
 }

@@ -19,7 +19,7 @@ public final class PollingOptionsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="diagnostics", required=true)
-      private final List<DiagnosticResponse> diagnostics;
+    private List<DiagnosticResponse> diagnostics;
 
     public List<DiagnosticResponse> diagnostics() {
         return this.diagnostics;
@@ -30,7 +30,7 @@ public final class PollingOptionsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="failCondition", required=true)
-      private final String failCondition;
+    private String failCondition;
 
     public String failCondition() {
         return this.failCondition;
@@ -41,7 +41,7 @@ public final class PollingOptionsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="finishCondition", required=true)
-      private final String finishCondition;
+    private String finishCondition;
 
     public String finishCondition() {
         return this.finishCondition;
@@ -52,7 +52,7 @@ public final class PollingOptionsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="pollingLink", required=true)
-      private final String pollingLink;
+    private String pollingLink;
 
     public String pollingLink() {
         return this.pollingLink;
@@ -63,85 +63,77 @@ public final class PollingOptionsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="targetLink", required=true)
-      private final String targetLink;
+    private String targetLink;
 
     public String targetLink() {
         return this.targetLink;
     }
 
-    public PollingOptionsResponse(
-        List<DiagnosticResponse> diagnostics,
-        String failCondition,
-        String finishCondition,
-        String pollingLink,
-        String targetLink) {
-        this.diagnostics = Objects.requireNonNull(diagnostics, "expected parameter 'diagnostics' to be non-null");
-        this.failCondition = Objects.requireNonNull(failCondition, "expected parameter 'failCondition' to be non-null");
-        this.finishCondition = Objects.requireNonNull(finishCondition, "expected parameter 'finishCondition' to be non-null");
-        this.pollingLink = Objects.requireNonNull(pollingLink, "expected parameter 'pollingLink' to be non-null");
-        this.targetLink = Objects.requireNonNull(targetLink, "expected parameter 'targetLink' to be non-null");
-    }
+    private PollingOptionsResponse() {}
 
-    private PollingOptionsResponse() {
-        this.diagnostics = List.of();
-        this.failCondition = null;
-        this.finishCondition = null;
-        this.pollingLink = null;
-        this.targetLink = null;
+    private PollingOptionsResponse(PollingOptionsResponse $) {
+        this.diagnostics = $.diagnostics;
+        this.failCondition = $.failCondition;
+        this.finishCondition = $.finishCondition;
+        this.pollingLink = $.pollingLink;
+        this.targetLink = $.targetLink;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PollingOptionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<DiagnosticResponse> diagnostics;
-        private String failCondition;
-        private String finishCondition;
-        private String pollingLink;
-        private String targetLink;
+        private PollingOptionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PollingOptionsResponse();
         }
 
         public Builder(PollingOptionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diagnostics = defaults.diagnostics;
-    	      this.failCondition = defaults.failCondition;
-    	      this.finishCondition = defaults.finishCondition;
-    	      this.pollingLink = defaults.pollingLink;
-    	      this.targetLink = defaults.targetLink;
+            $ = new PollingOptionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder diagnostics(List<DiagnosticResponse> diagnostics) {
-            this.diagnostics = Objects.requireNonNull(diagnostics);
+            $.diagnostics = diagnostics;
             return this;
         }
+
         public Builder diagnostics(DiagnosticResponse... diagnostics) {
             return diagnostics(List.of(diagnostics));
         }
+
         public Builder failCondition(String failCondition) {
-            this.failCondition = Objects.requireNonNull(failCondition);
+            $.failCondition = failCondition;
             return this;
         }
+
         public Builder finishCondition(String finishCondition) {
-            this.finishCondition = Objects.requireNonNull(finishCondition);
+            $.finishCondition = finishCondition;
             return this;
         }
+
         public Builder pollingLink(String pollingLink) {
-            this.pollingLink = Objects.requireNonNull(pollingLink);
+            $.pollingLink = pollingLink;
             return this;
         }
+
         public Builder targetLink(String targetLink) {
-            this.targetLink = Objects.requireNonNull(targetLink);
+            $.targetLink = targetLink;
             return this;
-        }        public PollingOptionsResponse build() {
-            return new PollingOptionsResponse(diagnostics, failCondition, finishCondition, pollingLink, targetLink);
+        }
+
+        public PollingOptionsResponse build() {
+            $.diagnostics = Objects.requireNonNull($.diagnostics, "expected parameter 'diagnostics' to be non-null");
+            $.failCondition = Objects.requireNonNull($.failCondition, "expected parameter 'failCondition' to be non-null");
+            $.finishCondition = Objects.requireNonNull($.finishCondition, "expected parameter 'finishCondition' to be non-null");
+            $.pollingLink = Objects.requireNonNull($.pollingLink, "expected parameter 'pollingLink' to be non-null");
+            $.targetLink = Objects.requireNonNull($.targetLink, "expected parameter 'targetLink' to be non-null");
+            return $;
         }
     }
+
 }

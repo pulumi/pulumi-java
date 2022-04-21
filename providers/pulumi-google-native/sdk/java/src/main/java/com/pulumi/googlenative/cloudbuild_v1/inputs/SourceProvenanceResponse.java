@@ -25,7 +25,7 @@ public final class SourceProvenanceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="fileHashes", required=true)
-      private final Map<String,String> fileHashes;
+    private Map<String,String> fileHashes;
 
     public Map<String,String> fileHashes() {
         return this.fileHashes;
@@ -36,7 +36,7 @@ public final class SourceProvenanceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="resolvedRepoSource", required=true)
-      private final RepoSourceResponse resolvedRepoSource;
+    private RepoSourceResponse resolvedRepoSource;
 
     public RepoSourceResponse resolvedRepoSource() {
         return this.resolvedRepoSource;
@@ -47,7 +47,7 @@ public final class SourceProvenanceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="resolvedStorageSource", required=true)
-      private final StorageSourceResponse resolvedStorageSource;
+    private StorageSourceResponse resolvedStorageSource;
 
     public StorageSourceResponse resolvedStorageSource() {
         return this.resolvedStorageSource;
@@ -58,73 +58,66 @@ public final class SourceProvenanceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="resolvedStorageSourceManifest", required=true)
-      private final StorageSourceManifestResponse resolvedStorageSourceManifest;
+    private StorageSourceManifestResponse resolvedStorageSourceManifest;
 
     public StorageSourceManifestResponse resolvedStorageSourceManifest() {
         return this.resolvedStorageSourceManifest;
     }
 
-    public SourceProvenanceResponse(
-        Map<String,String> fileHashes,
-        RepoSourceResponse resolvedRepoSource,
-        StorageSourceResponse resolvedStorageSource,
-        StorageSourceManifestResponse resolvedStorageSourceManifest) {
-        this.fileHashes = Objects.requireNonNull(fileHashes, "expected parameter 'fileHashes' to be non-null");
-        this.resolvedRepoSource = Objects.requireNonNull(resolvedRepoSource, "expected parameter 'resolvedRepoSource' to be non-null");
-        this.resolvedStorageSource = Objects.requireNonNull(resolvedStorageSource, "expected parameter 'resolvedStorageSource' to be non-null");
-        this.resolvedStorageSourceManifest = Objects.requireNonNull(resolvedStorageSourceManifest, "expected parameter 'resolvedStorageSourceManifest' to be non-null");
-    }
+    private SourceProvenanceResponse() {}
 
-    private SourceProvenanceResponse() {
-        this.fileHashes = Map.of();
-        this.resolvedRepoSource = null;
-        this.resolvedStorageSource = null;
-        this.resolvedStorageSourceManifest = null;
+    private SourceProvenanceResponse(SourceProvenanceResponse $) {
+        this.fileHashes = $.fileHashes;
+        this.resolvedRepoSource = $.resolvedRepoSource;
+        this.resolvedStorageSource = $.resolvedStorageSource;
+        this.resolvedStorageSourceManifest = $.resolvedStorageSourceManifest;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SourceProvenanceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,String> fileHashes;
-        private RepoSourceResponse resolvedRepoSource;
-        private StorageSourceResponse resolvedStorageSource;
-        private StorageSourceManifestResponse resolvedStorageSourceManifest;
+        private SourceProvenanceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SourceProvenanceResponse();
         }
 
         public Builder(SourceProvenanceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fileHashes = defaults.fileHashes;
-    	      this.resolvedRepoSource = defaults.resolvedRepoSource;
-    	      this.resolvedStorageSource = defaults.resolvedStorageSource;
-    	      this.resolvedStorageSourceManifest = defaults.resolvedStorageSourceManifest;
+            $ = new SourceProvenanceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder fileHashes(Map<String,String> fileHashes) {
-            this.fileHashes = Objects.requireNonNull(fileHashes);
+            $.fileHashes = fileHashes;
             return this;
         }
+
         public Builder resolvedRepoSource(RepoSourceResponse resolvedRepoSource) {
-            this.resolvedRepoSource = Objects.requireNonNull(resolvedRepoSource);
+            $.resolvedRepoSource = resolvedRepoSource;
             return this;
         }
+
         public Builder resolvedStorageSource(StorageSourceResponse resolvedStorageSource) {
-            this.resolvedStorageSource = Objects.requireNonNull(resolvedStorageSource);
+            $.resolvedStorageSource = resolvedStorageSource;
             return this;
         }
+
         public Builder resolvedStorageSourceManifest(StorageSourceManifestResponse resolvedStorageSourceManifest) {
-            this.resolvedStorageSourceManifest = Objects.requireNonNull(resolvedStorageSourceManifest);
+            $.resolvedStorageSourceManifest = resolvedStorageSourceManifest;
             return this;
-        }        public SourceProvenanceResponse build() {
-            return new SourceProvenanceResponse(fileHashes, resolvedRepoSource, resolvedStorageSource, resolvedStorageSourceManifest);
+        }
+
+        public SourceProvenanceResponse build() {
+            $.fileHashes = Objects.requireNonNull($.fileHashes, "expected parameter 'fileHashes' to be non-null");
+            $.resolvedRepoSource = Objects.requireNonNull($.resolvedRepoSource, "expected parameter 'resolvedRepoSource' to be non-null");
+            $.resolvedStorageSource = Objects.requireNonNull($.resolvedStorageSource, "expected parameter 'resolvedStorageSource' to be non-null");
+            $.resolvedStorageSourceManifest = Objects.requireNonNull($.resolvedStorageSourceManifest, "expected parameter 'resolvedStorageSourceManifest' to be non-null");
+            return $;
         }
     }
+
 }

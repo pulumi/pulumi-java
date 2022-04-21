@@ -21,7 +21,7 @@ public final class ServicePrincipalPropertiesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="clientId", required=true)
-      private final String clientId;
+    private String clientId;
 
     public String clientId() {
         return this.clientId;
@@ -32,55 +32,52 @@ public final class ServicePrincipalPropertiesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="secret", required=true)
-      private final String secret;
+    private String secret;
 
     public String secret() {
         return this.secret;
     }
 
-    public ServicePrincipalPropertiesResponse(
-        String clientId,
-        String secret) {
-        this.clientId = Objects.requireNonNull(clientId, "expected parameter 'clientId' to be non-null");
-        this.secret = Objects.requireNonNull(secret, "expected parameter 'secret' to be non-null");
-    }
+    private ServicePrincipalPropertiesResponse() {}
 
-    private ServicePrincipalPropertiesResponse() {
-        this.clientId = null;
-        this.secret = null;
+    private ServicePrincipalPropertiesResponse(ServicePrincipalPropertiesResponse $) {
+        this.clientId = $.clientId;
+        this.secret = $.secret;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServicePrincipalPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String clientId;
-        private String secret;
+        private ServicePrincipalPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServicePrincipalPropertiesResponse();
         }
 
         public Builder(ServicePrincipalPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientId = defaults.clientId;
-    	      this.secret = defaults.secret;
+            $ = new ServicePrincipalPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder clientId(String clientId) {
-            this.clientId = Objects.requireNonNull(clientId);
+            $.clientId = clientId;
             return this;
         }
+
         public Builder secret(String secret) {
-            this.secret = Objects.requireNonNull(secret);
+            $.secret = secret;
             return this;
-        }        public ServicePrincipalPropertiesResponse build() {
-            return new ServicePrincipalPropertiesResponse(clientId, secret);
+        }
+
+        public ServicePrincipalPropertiesResponse build() {
+            $.clientId = Objects.requireNonNull($.clientId, "expected parameter 'clientId' to be non-null");
+            $.secret = Objects.requireNonNull($.secret, "expected parameter 'secret' to be non-null");
+            return $;
         }
     }
+
 }

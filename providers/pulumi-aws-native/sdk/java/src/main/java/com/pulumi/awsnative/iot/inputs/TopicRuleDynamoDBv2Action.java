@@ -16,62 +16,57 @@ public final class TopicRuleDynamoDBv2Action extends com.pulumi.resources.Invoke
     public static final TopicRuleDynamoDBv2Action Empty = new TopicRuleDynamoDBv2Action();
 
     @Import(name="putItem")
-      private final @Nullable TopicRulePutItemInput putItem;
+    private @Nullable TopicRulePutItemInput putItem;
 
     public Optional<TopicRulePutItemInput> putItem() {
-        return this.putItem == null ? Optional.empty() : Optional.ofNullable(this.putItem);
+        return Optional.ofNullable(this.putItem);
     }
 
     @Import(name="roleArn")
-      private final @Nullable String roleArn;
+    private @Nullable String roleArn;
 
     public Optional<String> roleArn() {
-        return this.roleArn == null ? Optional.empty() : Optional.ofNullable(this.roleArn);
+        return Optional.ofNullable(this.roleArn);
     }
 
-    public TopicRuleDynamoDBv2Action(
-        @Nullable TopicRulePutItemInput putItem,
-        @Nullable String roleArn) {
-        this.putItem = putItem;
-        this.roleArn = roleArn;
-    }
+    private TopicRuleDynamoDBv2Action() {}
 
-    private TopicRuleDynamoDBv2Action() {
-        this.putItem = null;
-        this.roleArn = null;
+    private TopicRuleDynamoDBv2Action(TopicRuleDynamoDBv2Action $) {
+        this.putItem = $.putItem;
+        this.roleArn = $.roleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicRuleDynamoDBv2Action defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable TopicRulePutItemInput putItem;
-        private @Nullable String roleArn;
+        private TopicRuleDynamoDBv2Action $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicRuleDynamoDBv2Action();
         }
 
         public Builder(TopicRuleDynamoDBv2Action defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.putItem = defaults.putItem;
-    	      this.roleArn = defaults.roleArn;
+            $ = new TopicRuleDynamoDBv2Action(Objects.requireNonNull(defaults));
         }
 
         public Builder putItem(@Nullable TopicRulePutItemInput putItem) {
-            this.putItem = putItem;
+            $.putItem = putItem;
             return this;
         }
+
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = roleArn;
+            $.roleArn = roleArn;
             return this;
-        }        public TopicRuleDynamoDBv2Action build() {
-            return new TopicRuleDynamoDBv2Action(putItem, roleArn);
+        }
+
+        public TopicRuleDynamoDBv2Action build() {
+            return $;
         }
     }
+
 }

@@ -23,45 +23,44 @@ public final class AccountEncryptionResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="keySource")
-      private final @Nullable String keySource;
+    private @Nullable String keySource;
 
     public Optional<String> keySource() {
-        return this.keySource == null ? Optional.empty() : Optional.ofNullable(this.keySource);
+        return Optional.ofNullable(this.keySource);
     }
 
-    public AccountEncryptionResponse(@Nullable String keySource) {
-        this.keySource = keySource;
-    }
+    private AccountEncryptionResponse() {}
 
-    private AccountEncryptionResponse() {
-        this.keySource = null;
+    private AccountEncryptionResponse(AccountEncryptionResponse $) {
+        this.keySource = $.keySource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccountEncryptionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String keySource;
+        private AccountEncryptionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccountEncryptionResponse();
         }
 
         public Builder(AccountEncryptionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keySource = defaults.keySource;
+            $ = new AccountEncryptionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder keySource(@Nullable String keySource) {
-            this.keySource = keySource;
+            $.keySource = keySource;
             return this;
-        }        public AccountEncryptionResponse build() {
-            return new AccountEncryptionResponse(keySource);
+        }
+
+        public AccountEncryptionResponse build() {
+            return $;
         }
     }
+
 }

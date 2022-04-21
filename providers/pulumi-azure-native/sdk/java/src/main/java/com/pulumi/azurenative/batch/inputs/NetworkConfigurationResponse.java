@@ -25,10 +25,10 @@ public final class NetworkConfigurationResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="endpointConfiguration")
-      private final @Nullable PoolEndpointConfigurationResponse endpointConfiguration;
+    private @Nullable PoolEndpointConfigurationResponse endpointConfiguration;
 
     public Optional<PoolEndpointConfigurationResponse> endpointConfiguration() {
-        return this.endpointConfiguration == null ? Optional.empty() : Optional.ofNullable(this.endpointConfiguration);
+        return Optional.ofNullable(this.endpointConfiguration);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class NetworkConfigurationResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="publicIPAddressConfiguration")
-      private final @Nullable PublicIPAddressConfigurationResponse publicIPAddressConfiguration;
+    private @Nullable PublicIPAddressConfigurationResponse publicIPAddressConfiguration;
 
     public Optional<PublicIPAddressConfigurationResponse> publicIPAddressConfiguration() {
-        return this.publicIPAddressConfiguration == null ? Optional.empty() : Optional.ofNullable(this.publicIPAddressConfiguration);
+        return Optional.ofNullable(this.publicIPAddressConfiguration);
     }
 
     /**
@@ -47,64 +47,56 @@ public final class NetworkConfigurationResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="subnetId")
-      private final @Nullable String subnetId;
+    private @Nullable String subnetId;
 
     public Optional<String> subnetId() {
-        return this.subnetId == null ? Optional.empty() : Optional.ofNullable(this.subnetId);
+        return Optional.ofNullable(this.subnetId);
     }
 
-    public NetworkConfigurationResponse(
-        @Nullable PoolEndpointConfigurationResponse endpointConfiguration,
-        @Nullable PublicIPAddressConfigurationResponse publicIPAddressConfiguration,
-        @Nullable String subnetId) {
-        this.endpointConfiguration = endpointConfiguration;
-        this.publicIPAddressConfiguration = publicIPAddressConfiguration;
-        this.subnetId = subnetId;
-    }
+    private NetworkConfigurationResponse() {}
 
-    private NetworkConfigurationResponse() {
-        this.endpointConfiguration = null;
-        this.publicIPAddressConfiguration = null;
-        this.subnetId = null;
+    private NetworkConfigurationResponse(NetworkConfigurationResponse $) {
+        this.endpointConfiguration = $.endpointConfiguration;
+        this.publicIPAddressConfiguration = $.publicIPAddressConfiguration;
+        this.subnetId = $.subnetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable PoolEndpointConfigurationResponse endpointConfiguration;
-        private @Nullable PublicIPAddressConfigurationResponse publicIPAddressConfiguration;
-        private @Nullable String subnetId;
+        private NetworkConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkConfigurationResponse();
         }
 
         public Builder(NetworkConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpointConfiguration = defaults.endpointConfiguration;
-    	      this.publicIPAddressConfiguration = defaults.publicIPAddressConfiguration;
-    	      this.subnetId = defaults.subnetId;
+            $ = new NetworkConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endpointConfiguration(@Nullable PoolEndpointConfigurationResponse endpointConfiguration) {
-            this.endpointConfiguration = endpointConfiguration;
+            $.endpointConfiguration = endpointConfiguration;
             return this;
         }
+
         public Builder publicIPAddressConfiguration(@Nullable PublicIPAddressConfigurationResponse publicIPAddressConfiguration) {
-            this.publicIPAddressConfiguration = publicIPAddressConfiguration;
+            $.publicIPAddressConfiguration = publicIPAddressConfiguration;
             return this;
         }
+
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = subnetId;
+            $.subnetId = subnetId;
             return this;
-        }        public NetworkConfigurationResponse build() {
-            return new NetworkConfigurationResponse(endpointConfiguration, publicIPAddressConfiguration, subnetId);
+        }
+
+        public NetworkConfigurationResponse build() {
+            return $;
         }
     }
+
 }

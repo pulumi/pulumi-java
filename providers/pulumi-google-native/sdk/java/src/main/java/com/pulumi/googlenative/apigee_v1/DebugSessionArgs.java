@@ -5,10 +5,10 @@ package com.pulumi.googlenative.apigee_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,7 +17,7 @@ public final class DebugSessionArgs extends com.pulumi.resources.ResourceArgs {
     public static final DebugSessionArgs Empty = new DebugSessionArgs();
 
     @Import(name="apiId", required=true)
-      private final Output<String> apiId;
+    private Output<String> apiId;
 
     public Output<String> apiId() {
         return this.apiId;
@@ -28,14 +28,14 @@ public final class DebugSessionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="count")
-      private final @Nullable Output<Integer> count;
+    private @Nullable Output<Integer> count;
 
-    public Output<Integer> count() {
-        return this.count == null ? Codegen.empty() : this.count;
+    public Optional<Output<Integer>> count() {
+        return Optional.ofNullable(this.count);
     }
 
     @Import(name="environmentId", required=true)
-      private final Output<String> environmentId;
+    private Output<String> environmentId;
 
     public Output<String> environmentId() {
         return this.environmentId;
@@ -46,10 +46,10 @@ public final class DebugSessionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="filter")
-      private final @Nullable Output<String> filter;
+    private @Nullable Output<String> filter;
 
-    public Output<String> filter() {
-        return this.filter == null ? Codegen.empty() : this.filter;
+    public Optional<Output<String>> filter() {
+        return Optional.ofNullable(this.filter);
     }
 
     /**
@@ -57,21 +57,21 @@ public final class DebugSessionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="organizationId", required=true)
-      private final Output<String> organizationId;
+    private Output<String> organizationId;
 
     public Output<String> organizationId() {
         return this.organizationId;
     }
 
     @Import(name="revisionId", required=true)
-      private final Output<String> revisionId;
+    private Output<String> revisionId;
 
     public Output<String> revisionId() {
         return this.revisionId;
@@ -82,10 +82,10 @@ public final class DebugSessionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="timeout")
-      private final @Nullable Output<String> timeout;
+    private @Nullable Output<String> timeout;
 
-    public Output<String> timeout() {
-        return this.timeout == null ? Codegen.empty() : this.timeout;
+    public Optional<Output<String>> timeout() {
+        return Optional.ofNullable(this.timeout);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class DebugSessionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tracesize")
-      private final @Nullable Output<Integer> tracesize;
+    private @Nullable Output<Integer> tracesize;
 
-    public Output<Integer> tracesize() {
-        return this.tracesize == null ? Codegen.empty() : this.tracesize;
+    public Optional<Output<Integer>> tracesize() {
+        return Optional.ofNullable(this.tracesize);
     }
 
     /**
@@ -104,167 +104,142 @@ public final class DebugSessionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="validity")
-      private final @Nullable Output<Integer> validity;
+    private @Nullable Output<Integer> validity;
 
-    public Output<Integer> validity() {
-        return this.validity == null ? Codegen.empty() : this.validity;
+    public Optional<Output<Integer>> validity() {
+        return Optional.ofNullable(this.validity);
     }
 
-    public DebugSessionArgs(
-        Output<String> apiId,
-        @Nullable Output<Integer> count,
-        Output<String> environmentId,
-        @Nullable Output<String> filter,
-        @Nullable Output<String> name,
-        Output<String> organizationId,
-        Output<String> revisionId,
-        @Nullable Output<String> timeout,
-        @Nullable Output<Integer> tracesize,
-        @Nullable Output<Integer> validity) {
-        this.apiId = Objects.requireNonNull(apiId, "expected parameter 'apiId' to be non-null");
-        this.count = count;
-        this.environmentId = Objects.requireNonNull(environmentId, "expected parameter 'environmentId' to be non-null");
-        this.filter = filter;
-        this.name = name;
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-        this.revisionId = Objects.requireNonNull(revisionId, "expected parameter 'revisionId' to be non-null");
-        this.timeout = timeout;
-        this.tracesize = tracesize;
-        this.validity = validity;
-    }
+    private DebugSessionArgs() {}
 
-    private DebugSessionArgs() {
-        this.apiId = Codegen.empty();
-        this.count = Codegen.empty();
-        this.environmentId = Codegen.empty();
-        this.filter = Codegen.empty();
-        this.name = Codegen.empty();
-        this.organizationId = Codegen.empty();
-        this.revisionId = Codegen.empty();
-        this.timeout = Codegen.empty();
-        this.tracesize = Codegen.empty();
-        this.validity = Codegen.empty();
+    private DebugSessionArgs(DebugSessionArgs $) {
+        this.apiId = $.apiId;
+        this.count = $.count;
+        this.environmentId = $.environmentId;
+        this.filter = $.filter;
+        this.name = $.name;
+        this.organizationId = $.organizationId;
+        this.revisionId = $.revisionId;
+        this.timeout = $.timeout;
+        this.tracesize = $.tracesize;
+        this.validity = $.validity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DebugSessionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> apiId;
-        private @Nullable Output<Integer> count;
-        private Output<String> environmentId;
-        private @Nullable Output<String> filter;
-        private @Nullable Output<String> name;
-        private Output<String> organizationId;
-        private Output<String> revisionId;
-        private @Nullable Output<String> timeout;
-        private @Nullable Output<Integer> tracesize;
-        private @Nullable Output<Integer> validity;
+        private DebugSessionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DebugSessionArgs();
         }
 
         public Builder(DebugSessionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiId = defaults.apiId;
-    	      this.count = defaults.count;
-    	      this.environmentId = defaults.environmentId;
-    	      this.filter = defaults.filter;
-    	      this.name = defaults.name;
-    	      this.organizationId = defaults.organizationId;
-    	      this.revisionId = defaults.revisionId;
-    	      this.timeout = defaults.timeout;
-    	      this.tracesize = defaults.tracesize;
-    	      this.validity = defaults.validity;
+            $ = new DebugSessionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiId(Output<String> apiId) {
-            this.apiId = Objects.requireNonNull(apiId);
+            $.apiId = apiId;
             return this;
         }
+
         public Builder apiId(String apiId) {
-            this.apiId = Output.of(Objects.requireNonNull(apiId));
-            return this;
+            return apiId(Output.of(apiId));
         }
+
         public Builder count(@Nullable Output<Integer> count) {
-            this.count = count;
+            $.count = count;
             return this;
         }
-        public Builder count(@Nullable Integer count) {
-            this.count = Codegen.ofNullable(count);
-            return this;
+
+        public Builder count(Integer count) {
+            return count(Output.of(count));
         }
+
         public Builder environmentId(Output<String> environmentId) {
-            this.environmentId = Objects.requireNonNull(environmentId);
+            $.environmentId = environmentId;
             return this;
         }
+
         public Builder environmentId(String environmentId) {
-            this.environmentId = Output.of(Objects.requireNonNull(environmentId));
-            return this;
+            return environmentId(Output.of(environmentId));
         }
+
         public Builder filter(@Nullable Output<String> filter) {
-            this.filter = filter;
+            $.filter = filter;
             return this;
         }
-        public Builder filter(@Nullable String filter) {
-            this.filter = Codegen.ofNullable(filter);
-            return this;
+
+        public Builder filter(String filter) {
+            return filter(Output.of(filter));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder organizationId(Output<String> organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
         }
+
         public Builder organizationId(String organizationId) {
-            this.organizationId = Output.of(Objects.requireNonNull(organizationId));
-            return this;
+            return organizationId(Output.of(organizationId));
         }
+
         public Builder revisionId(Output<String> revisionId) {
-            this.revisionId = Objects.requireNonNull(revisionId);
+            $.revisionId = revisionId;
             return this;
         }
+
         public Builder revisionId(String revisionId) {
-            this.revisionId = Output.of(Objects.requireNonNull(revisionId));
-            return this;
+            return revisionId(Output.of(revisionId));
         }
+
         public Builder timeout(@Nullable Output<String> timeout) {
-            this.timeout = timeout;
+            $.timeout = timeout;
             return this;
         }
-        public Builder timeout(@Nullable String timeout) {
-            this.timeout = Codegen.ofNullable(timeout);
-            return this;
+
+        public Builder timeout(String timeout) {
+            return timeout(Output.of(timeout));
         }
+
         public Builder tracesize(@Nullable Output<Integer> tracesize) {
-            this.tracesize = tracesize;
+            $.tracesize = tracesize;
             return this;
         }
-        public Builder tracesize(@Nullable Integer tracesize) {
-            this.tracesize = Codegen.ofNullable(tracesize);
-            return this;
+
+        public Builder tracesize(Integer tracesize) {
+            return tracesize(Output.of(tracesize));
         }
+
         public Builder validity(@Nullable Output<Integer> validity) {
-            this.validity = validity;
+            $.validity = validity;
             return this;
         }
-        public Builder validity(@Nullable Integer validity) {
-            this.validity = Codegen.ofNullable(validity);
-            return this;
-        }        public DebugSessionArgs build() {
-            return new DebugSessionArgs(apiId, count, environmentId, filter, name, organizationId, revisionId, timeout, tracesize, validity);
+
+        public Builder validity(Integer validity) {
+            return validity(Output.of(validity));
+        }
+
+        public DebugSessionArgs build() {
+            $.apiId = Objects.requireNonNull($.apiId, "expected parameter 'apiId' to be non-null");
+            $.environmentId = Objects.requireNonNull($.environmentId, "expected parameter 'environmentId' to be non-null");
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            $.revisionId = Objects.requireNonNull($.revisionId, "expected parameter 'revisionId' to be non-null");
+            return $;
         }
     }
+
 }

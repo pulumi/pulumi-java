@@ -18,78 +18,73 @@ public final class WebACLVisibilityConfig extends com.pulumi.resources.InvokeArg
     public static final WebACLVisibilityConfig Empty = new WebACLVisibilityConfig();
 
     @Import(name="cloudWatchMetricsEnabled", required=true)
-      private final Boolean cloudWatchMetricsEnabled;
+    private Boolean cloudWatchMetricsEnabled;
 
     public Boolean cloudWatchMetricsEnabled() {
         return this.cloudWatchMetricsEnabled;
     }
 
     @Import(name="metricName", required=true)
-      private final String metricName;
+    private String metricName;
 
     public String metricName() {
         return this.metricName;
     }
 
     @Import(name="sampledRequestsEnabled", required=true)
-      private final Boolean sampledRequestsEnabled;
+    private Boolean sampledRequestsEnabled;
 
     public Boolean sampledRequestsEnabled() {
         return this.sampledRequestsEnabled;
     }
 
-    public WebACLVisibilityConfig(
-        Boolean cloudWatchMetricsEnabled,
-        String metricName,
-        Boolean sampledRequestsEnabled) {
-        this.cloudWatchMetricsEnabled = Objects.requireNonNull(cloudWatchMetricsEnabled, "expected parameter 'cloudWatchMetricsEnabled' to be non-null");
-        this.metricName = Objects.requireNonNull(metricName, "expected parameter 'metricName' to be non-null");
-        this.sampledRequestsEnabled = Objects.requireNonNull(sampledRequestsEnabled, "expected parameter 'sampledRequestsEnabled' to be non-null");
-    }
+    private WebACLVisibilityConfig() {}
 
-    private WebACLVisibilityConfig() {
-        this.cloudWatchMetricsEnabled = null;
-        this.metricName = null;
-        this.sampledRequestsEnabled = null;
+    private WebACLVisibilityConfig(WebACLVisibilityConfig $) {
+        this.cloudWatchMetricsEnabled = $.cloudWatchMetricsEnabled;
+        this.metricName = $.metricName;
+        this.sampledRequestsEnabled = $.sampledRequestsEnabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebACLVisibilityConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean cloudWatchMetricsEnabled;
-        private String metricName;
-        private Boolean sampledRequestsEnabled;
+        private WebACLVisibilityConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebACLVisibilityConfig();
         }
 
         public Builder(WebACLVisibilityConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudWatchMetricsEnabled = defaults.cloudWatchMetricsEnabled;
-    	      this.metricName = defaults.metricName;
-    	      this.sampledRequestsEnabled = defaults.sampledRequestsEnabled;
+            $ = new WebACLVisibilityConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudWatchMetricsEnabled(Boolean cloudWatchMetricsEnabled) {
-            this.cloudWatchMetricsEnabled = Objects.requireNonNull(cloudWatchMetricsEnabled);
+            $.cloudWatchMetricsEnabled = cloudWatchMetricsEnabled;
             return this;
         }
+
         public Builder metricName(String metricName) {
-            this.metricName = Objects.requireNonNull(metricName);
+            $.metricName = metricName;
             return this;
         }
+
         public Builder sampledRequestsEnabled(Boolean sampledRequestsEnabled) {
-            this.sampledRequestsEnabled = Objects.requireNonNull(sampledRequestsEnabled);
+            $.sampledRequestsEnabled = sampledRequestsEnabled;
             return this;
-        }        public WebACLVisibilityConfig build() {
-            return new WebACLVisibilityConfig(cloudWatchMetricsEnabled, metricName, sampledRequestsEnabled);
+        }
+
+        public WebACLVisibilityConfig build() {
+            $.cloudWatchMetricsEnabled = Objects.requireNonNull($.cloudWatchMetricsEnabled, "expected parameter 'cloudWatchMetricsEnabled' to be non-null");
+            $.metricName = Objects.requireNonNull($.metricName, "expected parameter 'metricName' to be non-null");
+            $.sampledRequestsEnabled = Objects.requireNonNull($.sampledRequestsEnabled, "expected parameter 'sampledRequestsEnabled' to be non-null");
+            return $;
         }
     }
+
 }

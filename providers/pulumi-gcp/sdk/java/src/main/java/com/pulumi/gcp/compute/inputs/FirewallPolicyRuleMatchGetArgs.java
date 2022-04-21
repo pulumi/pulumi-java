@@ -5,11 +5,11 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.FirewallPolicyRuleMatchLayer4ConfigGetArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class FirewallPolicyRuleMatchGetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="destIpRanges")
-      private final @Nullable Output<List<String>> destIpRanges;
+    private @Nullable Output<List<String>> destIpRanges;
 
-    public Output<List<String>> destIpRanges() {
-        return this.destIpRanges == null ? Codegen.empty() : this.destIpRanges;
+    public Optional<Output<List<String>>> destIpRanges() {
+        return Optional.ofNullable(this.destIpRanges);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class FirewallPolicyRuleMatchGetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="layer4Configs", required=true)
-      private final Output<List<FirewallPolicyRuleMatchLayer4ConfigGetArgs>> layer4Configs;
+    private Output<List<FirewallPolicyRuleMatchLayer4ConfigGetArgs>> layer4Configs;
 
     public Output<List<FirewallPolicyRuleMatchLayer4ConfigGetArgs>> layer4Configs() {
         return this.layer4Configs;
@@ -44,85 +44,81 @@ public final class FirewallPolicyRuleMatchGetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="srcIpRanges")
-      private final @Nullable Output<List<String>> srcIpRanges;
+    private @Nullable Output<List<String>> srcIpRanges;
 
-    public Output<List<String>> srcIpRanges() {
-        return this.srcIpRanges == null ? Codegen.empty() : this.srcIpRanges;
+    public Optional<Output<List<String>>> srcIpRanges() {
+        return Optional.ofNullable(this.srcIpRanges);
     }
 
-    public FirewallPolicyRuleMatchGetArgs(
-        @Nullable Output<List<String>> destIpRanges,
-        Output<List<FirewallPolicyRuleMatchLayer4ConfigGetArgs>> layer4Configs,
-        @Nullable Output<List<String>> srcIpRanges) {
-        this.destIpRanges = destIpRanges;
-        this.layer4Configs = Objects.requireNonNull(layer4Configs, "expected parameter 'layer4Configs' to be non-null");
-        this.srcIpRanges = srcIpRanges;
-    }
+    private FirewallPolicyRuleMatchGetArgs() {}
 
-    private FirewallPolicyRuleMatchGetArgs() {
-        this.destIpRanges = Codegen.empty();
-        this.layer4Configs = Codegen.empty();
-        this.srcIpRanges = Codegen.empty();
+    private FirewallPolicyRuleMatchGetArgs(FirewallPolicyRuleMatchGetArgs $) {
+        this.destIpRanges = $.destIpRanges;
+        this.layer4Configs = $.layer4Configs;
+        this.srcIpRanges = $.srcIpRanges;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallPolicyRuleMatchGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> destIpRanges;
-        private Output<List<FirewallPolicyRuleMatchLayer4ConfigGetArgs>> layer4Configs;
-        private @Nullable Output<List<String>> srcIpRanges;
+        private FirewallPolicyRuleMatchGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallPolicyRuleMatchGetArgs();
         }
 
         public Builder(FirewallPolicyRuleMatchGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destIpRanges = defaults.destIpRanges;
-    	      this.layer4Configs = defaults.layer4Configs;
-    	      this.srcIpRanges = defaults.srcIpRanges;
+            $ = new FirewallPolicyRuleMatchGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder destIpRanges(@Nullable Output<List<String>> destIpRanges) {
-            this.destIpRanges = destIpRanges;
+            $.destIpRanges = destIpRanges;
             return this;
         }
-        public Builder destIpRanges(@Nullable List<String> destIpRanges) {
-            this.destIpRanges = Codegen.ofNullable(destIpRanges);
-            return this;
+
+        public Builder destIpRanges(List<String> destIpRanges) {
+            return destIpRanges(Output.of(destIpRanges));
         }
+
         public Builder destIpRanges(String... destIpRanges) {
             return destIpRanges(List.of(destIpRanges));
         }
+
         public Builder layer4Configs(Output<List<FirewallPolicyRuleMatchLayer4ConfigGetArgs>> layer4Configs) {
-            this.layer4Configs = Objects.requireNonNull(layer4Configs);
+            $.layer4Configs = layer4Configs;
             return this;
         }
+
         public Builder layer4Configs(List<FirewallPolicyRuleMatchLayer4ConfigGetArgs> layer4Configs) {
-            this.layer4Configs = Output.of(Objects.requireNonNull(layer4Configs));
-            return this;
+            return layer4Configs(Output.of(layer4Configs));
         }
+
         public Builder layer4Configs(FirewallPolicyRuleMatchLayer4ConfigGetArgs... layer4Configs) {
             return layer4Configs(List.of(layer4Configs));
         }
+
         public Builder srcIpRanges(@Nullable Output<List<String>> srcIpRanges) {
-            this.srcIpRanges = srcIpRanges;
+            $.srcIpRanges = srcIpRanges;
             return this;
         }
-        public Builder srcIpRanges(@Nullable List<String> srcIpRanges) {
-            this.srcIpRanges = Codegen.ofNullable(srcIpRanges);
-            return this;
+
+        public Builder srcIpRanges(List<String> srcIpRanges) {
+            return srcIpRanges(Output.of(srcIpRanges));
         }
+
         public Builder srcIpRanges(String... srcIpRanges) {
             return srcIpRanges(List.of(srcIpRanges));
-        }        public FirewallPolicyRuleMatchGetArgs build() {
-            return new FirewallPolicyRuleMatchGetArgs(destIpRanges, layer4Configs, srcIpRanges);
+        }
+
+        public FirewallPolicyRuleMatchGetArgs build() {
+            $.layer4Configs = Objects.requireNonNull($.layer4Configs, "expected parameter 'layer4Configs' to be non-null");
+            return $;
         }
     }
+
 }

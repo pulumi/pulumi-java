@@ -8,8 +8,8 @@ import com.pulumi.aws.wafv2.inputs.WebAclRuleActionBlockGetArgs;
 import com.pulumi.aws.wafv2.inputs.WebAclRuleActionCountGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class WebAclRuleActionGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="allow")
-      private final @Nullable Output<WebAclRuleActionAllowGetArgs> allow;
+    private @Nullable Output<WebAclRuleActionAllowGetArgs> allow;
 
-    public Output<WebAclRuleActionAllowGetArgs> allow() {
-        return this.allow == null ? Codegen.empty() : this.allow;
+    public Optional<Output<WebAclRuleActionAllowGetArgs>> allow() {
+        return Optional.ofNullable(this.allow);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class WebAclRuleActionGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="block")
-      private final @Nullable Output<WebAclRuleActionBlockGetArgs> block;
+    private @Nullable Output<WebAclRuleActionBlockGetArgs> block;
 
-    public Output<WebAclRuleActionBlockGetArgs> block() {
-        return this.block == null ? Codegen.empty() : this.block;
+    public Optional<Output<WebAclRuleActionBlockGetArgs>> block() {
+        return Optional.ofNullable(this.block);
     }
 
     /**
@@ -44,76 +44,68 @@ public final class WebAclRuleActionGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="count")
-      private final @Nullable Output<WebAclRuleActionCountGetArgs> count;
+    private @Nullable Output<WebAclRuleActionCountGetArgs> count;
 
-    public Output<WebAclRuleActionCountGetArgs> count() {
-        return this.count == null ? Codegen.empty() : this.count;
+    public Optional<Output<WebAclRuleActionCountGetArgs>> count() {
+        return Optional.ofNullable(this.count);
     }
 
-    public WebAclRuleActionGetArgs(
-        @Nullable Output<WebAclRuleActionAllowGetArgs> allow,
-        @Nullable Output<WebAclRuleActionBlockGetArgs> block,
-        @Nullable Output<WebAclRuleActionCountGetArgs> count) {
-        this.allow = allow;
-        this.block = block;
-        this.count = count;
-    }
+    private WebAclRuleActionGetArgs() {}
 
-    private WebAclRuleActionGetArgs() {
-        this.allow = Codegen.empty();
-        this.block = Codegen.empty();
-        this.count = Codegen.empty();
+    private WebAclRuleActionGetArgs(WebAclRuleActionGetArgs $) {
+        this.allow = $.allow;
+        this.block = $.block;
+        this.count = $.count;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebAclRuleActionGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<WebAclRuleActionAllowGetArgs> allow;
-        private @Nullable Output<WebAclRuleActionBlockGetArgs> block;
-        private @Nullable Output<WebAclRuleActionCountGetArgs> count;
+        private WebAclRuleActionGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebAclRuleActionGetArgs();
         }
 
         public Builder(WebAclRuleActionGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allow = defaults.allow;
-    	      this.block = defaults.block;
-    	      this.count = defaults.count;
+            $ = new WebAclRuleActionGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allow(@Nullable Output<WebAclRuleActionAllowGetArgs> allow) {
-            this.allow = allow;
+            $.allow = allow;
             return this;
         }
-        public Builder allow(@Nullable WebAclRuleActionAllowGetArgs allow) {
-            this.allow = Codegen.ofNullable(allow);
-            return this;
+
+        public Builder allow(WebAclRuleActionAllowGetArgs allow) {
+            return allow(Output.of(allow));
         }
+
         public Builder block(@Nullable Output<WebAclRuleActionBlockGetArgs> block) {
-            this.block = block;
+            $.block = block;
             return this;
         }
-        public Builder block(@Nullable WebAclRuleActionBlockGetArgs block) {
-            this.block = Codegen.ofNullable(block);
-            return this;
+
+        public Builder block(WebAclRuleActionBlockGetArgs block) {
+            return block(Output.of(block));
         }
+
         public Builder count(@Nullable Output<WebAclRuleActionCountGetArgs> count) {
-            this.count = count;
+            $.count = count;
             return this;
         }
-        public Builder count(@Nullable WebAclRuleActionCountGetArgs count) {
-            this.count = Codegen.ofNullable(count);
-            return this;
-        }        public WebAclRuleActionGetArgs build() {
-            return new WebAclRuleActionGetArgs(allow, block, count);
+
+        public Builder count(WebAclRuleActionCountGetArgs count) {
+            return count(Output.of(count));
+        }
+
+        public WebAclRuleActionGetArgs build() {
+            return $;
         }
     }
+
 }

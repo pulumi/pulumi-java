@@ -15,62 +15,58 @@ public final class GetBackendServiceArgs extends com.pulumi.resources.InvokeArgs
     public static final GetBackendServiceArgs Empty = new GetBackendServiceArgs();
 
     @Import(name="backendService", required=true)
-      private final String backendService;
+    private String backendService;
 
     public String backendService() {
         return this.backendService;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetBackendServiceArgs(
-        String backendService,
-        @Nullable String project) {
-        this.backendService = Objects.requireNonNull(backendService, "expected parameter 'backendService' to be non-null");
-        this.project = project;
-    }
+    private GetBackendServiceArgs() {}
 
-    private GetBackendServiceArgs() {
-        this.backendService = null;
-        this.project = null;
+    private GetBackendServiceArgs(GetBackendServiceArgs $) {
+        this.backendService = $.backendService;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBackendServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String backendService;
-        private @Nullable String project;
+        private GetBackendServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBackendServiceArgs();
         }
 
         public Builder(GetBackendServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backendService = defaults.backendService;
-    	      this.project = defaults.project;
+            $ = new GetBackendServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backendService(String backendService) {
-            this.backendService = Objects.requireNonNull(backendService);
+            $.backendService = backendService;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetBackendServiceArgs build() {
-            return new GetBackendServiceArgs(backendService, project);
+        }
+
+        public GetBackendServiceArgs build() {
+            $.backendService = Objects.requireNonNull($.backendService, "expected parameter 'backendService' to be non-null");
+            return $;
         }
     }
+
 }

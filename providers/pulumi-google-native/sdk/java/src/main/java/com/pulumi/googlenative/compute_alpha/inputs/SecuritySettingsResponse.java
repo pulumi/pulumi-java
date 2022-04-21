@@ -22,7 +22,7 @@ public final class SecuritySettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="clientTlsPolicy", required=true)
-      private final String clientTlsPolicy;
+    private String clientTlsPolicy;
 
     public String clientTlsPolicy() {
         return this.clientTlsPolicy;
@@ -33,58 +33,56 @@ public final class SecuritySettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="subjectAltNames", required=true)
-      private final List<String> subjectAltNames;
+    private List<String> subjectAltNames;
 
     public List<String> subjectAltNames() {
         return this.subjectAltNames;
     }
 
-    public SecuritySettingsResponse(
-        String clientTlsPolicy,
-        List<String> subjectAltNames) {
-        this.clientTlsPolicy = Objects.requireNonNull(clientTlsPolicy, "expected parameter 'clientTlsPolicy' to be non-null");
-        this.subjectAltNames = Objects.requireNonNull(subjectAltNames, "expected parameter 'subjectAltNames' to be non-null");
-    }
+    private SecuritySettingsResponse() {}
 
-    private SecuritySettingsResponse() {
-        this.clientTlsPolicy = null;
-        this.subjectAltNames = List.of();
+    private SecuritySettingsResponse(SecuritySettingsResponse $) {
+        this.clientTlsPolicy = $.clientTlsPolicy;
+        this.subjectAltNames = $.subjectAltNames;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecuritySettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String clientTlsPolicy;
-        private List<String> subjectAltNames;
+        private SecuritySettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecuritySettingsResponse();
         }
 
         public Builder(SecuritySettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientTlsPolicy = defaults.clientTlsPolicy;
-    	      this.subjectAltNames = defaults.subjectAltNames;
+            $ = new SecuritySettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder clientTlsPolicy(String clientTlsPolicy) {
-            this.clientTlsPolicy = Objects.requireNonNull(clientTlsPolicy);
+            $.clientTlsPolicy = clientTlsPolicy;
             return this;
         }
+
         public Builder subjectAltNames(List<String> subjectAltNames) {
-            this.subjectAltNames = Objects.requireNonNull(subjectAltNames);
+            $.subjectAltNames = subjectAltNames;
             return this;
         }
+
         public Builder subjectAltNames(String... subjectAltNames) {
             return subjectAltNames(List.of(subjectAltNames));
-        }        public SecuritySettingsResponse build() {
-            return new SecuritySettingsResponse(clientTlsPolicy, subjectAltNames);
+        }
+
+        public SecuritySettingsResponse build() {
+            $.clientTlsPolicy = Objects.requireNonNull($.clientTlsPolicy, "expected parameter 'clientTlsPolicy' to be non-null");
+            $.subjectAltNames = Objects.requireNonNull($.subjectAltNames, "expected parameter 'subjectAltNames' to be non-null");
+            return $;
         }
     }
+
 }

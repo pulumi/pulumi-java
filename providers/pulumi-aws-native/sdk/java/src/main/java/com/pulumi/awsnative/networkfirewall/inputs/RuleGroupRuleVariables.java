@@ -15,62 +15,57 @@ public final class RuleGroupRuleVariables extends com.pulumi.resources.InvokeArg
     public static final RuleGroupRuleVariables Empty = new RuleGroupRuleVariables();
 
     @Import(name="iPSets")
-      private final @Nullable Object iPSets;
+    private @Nullable Object iPSets;
 
     public Optional<Object> iPSets() {
-        return this.iPSets == null ? Optional.empty() : Optional.ofNullable(this.iPSets);
+        return Optional.ofNullable(this.iPSets);
     }
 
     @Import(name="portSets")
-      private final @Nullable Object portSets;
+    private @Nullable Object portSets;
 
     public Optional<Object> portSets() {
-        return this.portSets == null ? Optional.empty() : Optional.ofNullable(this.portSets);
+        return Optional.ofNullable(this.portSets);
     }
 
-    public RuleGroupRuleVariables(
-        @Nullable Object iPSets,
-        @Nullable Object portSets) {
-        this.iPSets = iPSets;
-        this.portSets = portSets;
-    }
+    private RuleGroupRuleVariables() {}
 
-    private RuleGroupRuleVariables() {
-        this.iPSets = null;
-        this.portSets = null;
+    private RuleGroupRuleVariables(RuleGroupRuleVariables $) {
+        this.iPSets = $.iPSets;
+        this.portSets = $.portSets;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupRuleVariables defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object iPSets;
-        private @Nullable Object portSets;
+        private RuleGroupRuleVariables $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupRuleVariables();
         }
 
         public Builder(RuleGroupRuleVariables defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.iPSets = defaults.iPSets;
-    	      this.portSets = defaults.portSets;
+            $ = new RuleGroupRuleVariables(Objects.requireNonNull(defaults));
         }
 
         public Builder iPSets(@Nullable Object iPSets) {
-            this.iPSets = iPSets;
+            $.iPSets = iPSets;
             return this;
         }
+
         public Builder portSets(@Nullable Object portSets) {
-            this.portSets = portSets;
+            $.portSets = portSets;
             return this;
-        }        public RuleGroupRuleVariables build() {
-            return new RuleGroupRuleVariables(iPSets, portSets);
+        }
+
+        public RuleGroupRuleVariables build() {
+            return $;
         }
     }
+
 }

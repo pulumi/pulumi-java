@@ -15,78 +15,71 @@ public final class GetJobIamPolicyArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetJobIamPolicyArgs Empty = new GetJobIamPolicyArgs();
 
     @Import(name="jobId", required=true)
-      private final String jobId;
+    private String jobId;
 
     public String jobId() {
         return this.jobId;
     }
 
     @Import(name="optionsRequestedPolicyVersion")
-      private final @Nullable String optionsRequestedPolicyVersion;
+    private @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> optionsRequestedPolicyVersion() {
-        return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
+        return Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetJobIamPolicyArgs(
-        String jobId,
-        @Nullable String optionsRequestedPolicyVersion,
-        @Nullable String project) {
-        this.jobId = Objects.requireNonNull(jobId, "expected parameter 'jobId' to be non-null");
-        this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
-        this.project = project;
-    }
+    private GetJobIamPolicyArgs() {}
 
-    private GetJobIamPolicyArgs() {
-        this.jobId = null;
-        this.optionsRequestedPolicyVersion = null;
-        this.project = null;
+    private GetJobIamPolicyArgs(GetJobIamPolicyArgs $) {
+        this.jobId = $.jobId;
+        this.optionsRequestedPolicyVersion = $.optionsRequestedPolicyVersion;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetJobIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String jobId;
-        private @Nullable String optionsRequestedPolicyVersion;
-        private @Nullable String project;
+        private GetJobIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetJobIamPolicyArgs();
         }
 
         public Builder(GetJobIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.jobId = defaults.jobId;
-    	      this.optionsRequestedPolicyVersion = defaults.optionsRequestedPolicyVersion;
-    	      this.project = defaults.project;
+            $ = new GetJobIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder jobId(String jobId) {
-            this.jobId = Objects.requireNonNull(jobId);
+            $.jobId = jobId;
             return this;
         }
+
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
-            this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
+            $.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetJobIamPolicyArgs build() {
-            return new GetJobIamPolicyArgs(jobId, optionsRequestedPolicyVersion, project);
+        }
+
+        public GetJobIamPolicyArgs build() {
+            $.jobId = Objects.requireNonNull($.jobId, "expected parameter 'jobId' to be non-null");
+            return $;
         }
     }
+
 }

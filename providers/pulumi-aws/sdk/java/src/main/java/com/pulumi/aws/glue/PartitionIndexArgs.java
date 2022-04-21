@@ -6,9 +6,9 @@ package com.pulumi.aws.glue;
 import com.pulumi.aws.glue.inputs.PartitionIndexPartitionIndexArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class PartitionIndexArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="catalogId")
-      private final @Nullable Output<String> catalogId;
+    private @Nullable Output<String> catalogId;
 
-    public Output<String> catalogId() {
-        return this.catalogId == null ? Codegen.empty() : this.catalogId;
+    public Optional<Output<String>> catalogId() {
+        return Optional.ofNullable(this.catalogId);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class PartitionIndexArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="databaseName", required=true)
-      private final Output<String> databaseName;
+    private Output<String> databaseName;
 
     public Output<String> databaseName() {
         return this.databaseName;
@@ -43,7 +43,7 @@ public final class PartitionIndexArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="partitionIndex", required=true)
-      private final Output<PartitionIndexPartitionIndexArgs> partitionIndex;
+    private Output<PartitionIndexPartitionIndexArgs> partitionIndex;
 
     public Output<PartitionIndexPartitionIndexArgs> partitionIndex() {
         return this.partitionIndex;
@@ -54,89 +54,81 @@ public final class PartitionIndexArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="tableName", required=true)
-      private final Output<String> tableName;
+    private Output<String> tableName;
 
     public Output<String> tableName() {
         return this.tableName;
     }
 
-    public PartitionIndexArgs(
-        @Nullable Output<String> catalogId,
-        Output<String> databaseName,
-        Output<PartitionIndexPartitionIndexArgs> partitionIndex,
-        Output<String> tableName) {
-        this.catalogId = catalogId;
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.partitionIndex = Objects.requireNonNull(partitionIndex, "expected parameter 'partitionIndex' to be non-null");
-        this.tableName = Objects.requireNonNull(tableName, "expected parameter 'tableName' to be non-null");
-    }
+    private PartitionIndexArgs() {}
 
-    private PartitionIndexArgs() {
-        this.catalogId = Codegen.empty();
-        this.databaseName = Codegen.empty();
-        this.partitionIndex = Codegen.empty();
-        this.tableName = Codegen.empty();
+    private PartitionIndexArgs(PartitionIndexArgs $) {
+        this.catalogId = $.catalogId;
+        this.databaseName = $.databaseName;
+        this.partitionIndex = $.partitionIndex;
+        this.tableName = $.tableName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PartitionIndexArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> catalogId;
-        private Output<String> databaseName;
-        private Output<PartitionIndexPartitionIndexArgs> partitionIndex;
-        private Output<String> tableName;
+        private PartitionIndexArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PartitionIndexArgs();
         }
 
         public Builder(PartitionIndexArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.catalogId = defaults.catalogId;
-    	      this.databaseName = defaults.databaseName;
-    	      this.partitionIndex = defaults.partitionIndex;
-    	      this.tableName = defaults.tableName;
+            $ = new PartitionIndexArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder catalogId(@Nullable Output<String> catalogId) {
-            this.catalogId = catalogId;
+            $.catalogId = catalogId;
             return this;
         }
-        public Builder catalogId(@Nullable String catalogId) {
-            this.catalogId = Codegen.ofNullable(catalogId);
-            return this;
+
+        public Builder catalogId(String catalogId) {
+            return catalogId(Output.of(catalogId));
         }
+
         public Builder databaseName(Output<String> databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder databaseName(String databaseName) {
-            this.databaseName = Output.of(Objects.requireNonNull(databaseName));
-            return this;
+            return databaseName(Output.of(databaseName));
         }
+
         public Builder partitionIndex(Output<PartitionIndexPartitionIndexArgs> partitionIndex) {
-            this.partitionIndex = Objects.requireNonNull(partitionIndex);
+            $.partitionIndex = partitionIndex;
             return this;
         }
+
         public Builder partitionIndex(PartitionIndexPartitionIndexArgs partitionIndex) {
-            this.partitionIndex = Output.of(Objects.requireNonNull(partitionIndex));
-            return this;
+            return partitionIndex(Output.of(partitionIndex));
         }
+
         public Builder tableName(Output<String> tableName) {
-            this.tableName = Objects.requireNonNull(tableName);
+            $.tableName = tableName;
             return this;
         }
+
         public Builder tableName(String tableName) {
-            this.tableName = Output.of(Objects.requireNonNull(tableName));
-            return this;
-        }        public PartitionIndexArgs build() {
-            return new PartitionIndexArgs(catalogId, databaseName, partitionIndex, tableName);
+            return tableName(Output.of(tableName));
+        }
+
+        public PartitionIndexArgs build() {
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            $.partitionIndex = Objects.requireNonNull($.partitionIndex, "expected parameter 'partitionIndex' to be non-null");
+            $.tableName = Objects.requireNonNull($.tableName, "expected parameter 'tableName' to be non-null");
+            return $;
         }
     }
+
 }

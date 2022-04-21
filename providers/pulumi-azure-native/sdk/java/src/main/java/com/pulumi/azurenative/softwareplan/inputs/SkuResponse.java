@@ -23,45 +23,44 @@ public final class SkuResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
-    public SkuResponse(@Nullable String name) {
-        this.name = name;
-    }
+    private SkuResponse() {}
 
-    private SkuResponse() {
-        this.name = null;
+    private SkuResponse(SkuResponse $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SkuResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
+        private SkuResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SkuResponse();
         }
 
         public Builder(SkuResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new SkuResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
-        }        public SkuResponse build() {
-            return new SkuResponse(name);
+        }
+
+        public SkuResponse build() {
+            return $;
         }
     }
+
 }

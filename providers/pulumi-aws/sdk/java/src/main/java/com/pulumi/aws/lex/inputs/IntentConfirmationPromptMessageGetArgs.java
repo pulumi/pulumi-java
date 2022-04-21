@@ -5,10 +5,10 @@ package com.pulumi.aws.lex.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class IntentConfirmationPromptMessageGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="content", required=true)
-      private final Output<String> content;
+    private Output<String> content;
 
     public Output<String> content() {
         return this.content;
@@ -32,7 +32,7 @@ public final class IntentConfirmationPromptMessageGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="contentType", required=true)
-      private final Output<String> contentType;
+    private Output<String> contentType;
 
     public Output<String> contentType() {
         return this.contentType;
@@ -44,76 +44,70 @@ public final class IntentConfirmationPromptMessageGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="groupNumber")
-      private final @Nullable Output<Integer> groupNumber;
+    private @Nullable Output<Integer> groupNumber;
 
-    public Output<Integer> groupNumber() {
-        return this.groupNumber == null ? Codegen.empty() : this.groupNumber;
+    public Optional<Output<Integer>> groupNumber() {
+        return Optional.ofNullable(this.groupNumber);
     }
 
-    public IntentConfirmationPromptMessageGetArgs(
-        Output<String> content,
-        Output<String> contentType,
-        @Nullable Output<Integer> groupNumber) {
-        this.content = Objects.requireNonNull(content, "expected parameter 'content' to be non-null");
-        this.contentType = Objects.requireNonNull(contentType, "expected parameter 'contentType' to be non-null");
-        this.groupNumber = groupNumber;
-    }
+    private IntentConfirmationPromptMessageGetArgs() {}
 
-    private IntentConfirmationPromptMessageGetArgs() {
-        this.content = Codegen.empty();
-        this.contentType = Codegen.empty();
-        this.groupNumber = Codegen.empty();
+    private IntentConfirmationPromptMessageGetArgs(IntentConfirmationPromptMessageGetArgs $) {
+        this.content = $.content;
+        this.contentType = $.contentType;
+        this.groupNumber = $.groupNumber;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IntentConfirmationPromptMessageGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> content;
-        private Output<String> contentType;
-        private @Nullable Output<Integer> groupNumber;
+        private IntentConfirmationPromptMessageGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IntentConfirmationPromptMessageGetArgs();
         }
 
         public Builder(IntentConfirmationPromptMessageGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.content = defaults.content;
-    	      this.contentType = defaults.contentType;
-    	      this.groupNumber = defaults.groupNumber;
+            $ = new IntentConfirmationPromptMessageGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder content(Output<String> content) {
-            this.content = Objects.requireNonNull(content);
+            $.content = content;
             return this;
         }
+
         public Builder content(String content) {
-            this.content = Output.of(Objects.requireNonNull(content));
-            return this;
+            return content(Output.of(content));
         }
+
         public Builder contentType(Output<String> contentType) {
-            this.contentType = Objects.requireNonNull(contentType);
+            $.contentType = contentType;
             return this;
         }
+
         public Builder contentType(String contentType) {
-            this.contentType = Output.of(Objects.requireNonNull(contentType));
-            return this;
+            return contentType(Output.of(contentType));
         }
+
         public Builder groupNumber(@Nullable Output<Integer> groupNumber) {
-            this.groupNumber = groupNumber;
+            $.groupNumber = groupNumber;
             return this;
         }
-        public Builder groupNumber(@Nullable Integer groupNumber) {
-            this.groupNumber = Codegen.ofNullable(groupNumber);
-            return this;
-        }        public IntentConfirmationPromptMessageGetArgs build() {
-            return new IntentConfirmationPromptMessageGetArgs(content, contentType, groupNumber);
+
+        public Builder groupNumber(Integer groupNumber) {
+            return groupNumber(Output.of(groupNumber));
+        }
+
+        public IntentConfirmationPromptMessageGetArgs build() {
+            $.content = Objects.requireNonNull($.content, "expected parameter 'content' to be non-null");
+            $.contentType = Objects.requireNonNull($.contentType, "expected parameter 'contentType' to be non-null");
+            return $;
         }
     }
+
 }

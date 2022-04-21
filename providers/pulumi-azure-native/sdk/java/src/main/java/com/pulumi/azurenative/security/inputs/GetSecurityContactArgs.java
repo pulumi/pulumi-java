@@ -17,45 +17,45 @@ public final class GetSecurityContactArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="securityContactName", required=true)
-      private final String securityContactName;
+    private String securityContactName;
 
     public String securityContactName() {
         return this.securityContactName;
     }
 
-    public GetSecurityContactArgs(String securityContactName) {
-        this.securityContactName = Objects.requireNonNull(securityContactName, "expected parameter 'securityContactName' to be non-null");
-    }
+    private GetSecurityContactArgs() {}
 
-    private GetSecurityContactArgs() {
-        this.securityContactName = null;
+    private GetSecurityContactArgs(GetSecurityContactArgs $) {
+        this.securityContactName = $.securityContactName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSecurityContactArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String securityContactName;
+        private GetSecurityContactArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSecurityContactArgs();
         }
 
         public Builder(GetSecurityContactArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.securityContactName = defaults.securityContactName;
+            $ = new GetSecurityContactArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder securityContactName(String securityContactName) {
-            this.securityContactName = Objects.requireNonNull(securityContactName);
+            $.securityContactName = securityContactName;
             return this;
-        }        public GetSecurityContactArgs build() {
-            return new GetSecurityContactArgs(securityContactName);
+        }
+
+        public GetSecurityContactArgs build() {
+            $.securityContactName = Objects.requireNonNull($.securityContactName, "expected parameter 'securityContactName' to be non-null");
+            return $;
         }
     }
+
 }

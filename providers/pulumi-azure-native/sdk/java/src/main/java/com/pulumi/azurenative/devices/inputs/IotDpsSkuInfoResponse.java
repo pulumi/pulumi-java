@@ -24,10 +24,10 @@ public final class IotDpsSkuInfoResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="capacity")
-      private final @Nullable Double capacity;
+    private @Nullable Double capacity;
 
     public Optional<Double> capacity() {
-        return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
+        return Optional.ofNullable(this.capacity);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class IotDpsSkuInfoResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -46,64 +46,57 @@ public final class IotDpsSkuInfoResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="tier", required=true)
-      private final String tier;
+    private String tier;
 
     public String tier() {
         return this.tier;
     }
 
-    public IotDpsSkuInfoResponse(
-        @Nullable Double capacity,
-        @Nullable String name,
-        String tier) {
-        this.capacity = capacity;
-        this.name = name;
-        this.tier = Objects.requireNonNull(tier, "expected parameter 'tier' to be non-null");
-    }
+    private IotDpsSkuInfoResponse() {}
 
-    private IotDpsSkuInfoResponse() {
-        this.capacity = null;
-        this.name = null;
-        this.tier = null;
+    private IotDpsSkuInfoResponse(IotDpsSkuInfoResponse $) {
+        this.capacity = $.capacity;
+        this.name = $.name;
+        this.tier = $.tier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IotDpsSkuInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Double capacity;
-        private @Nullable String name;
-        private String tier;
+        private IotDpsSkuInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IotDpsSkuInfoResponse();
         }
 
         public Builder(IotDpsSkuInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacity = defaults.capacity;
-    	      this.name = defaults.name;
-    	      this.tier = defaults.tier;
+            $ = new IotDpsSkuInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder capacity(@Nullable Double capacity) {
-            this.capacity = capacity;
+            $.capacity = capacity;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder tier(String tier) {
-            this.tier = Objects.requireNonNull(tier);
+            $.tier = tier;
             return this;
-        }        public IotDpsSkuInfoResponse build() {
-            return new IotDpsSkuInfoResponse(capacity, name, tier);
+        }
+
+        public IotDpsSkuInfoResponse build() {
+            $.tier = Objects.requireNonNull($.tier, "expected parameter 'tier' to be non-null");
+            return $;
         }
     }
+
 }

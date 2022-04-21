@@ -26,10 +26,10 @@ public final class VirtualMachineAgentInstanceViewResponse extends com.pulumi.re
      * 
      */
     @Import(name="extensionHandlers")
-      private final @Nullable List<VirtualMachineExtensionHandlerInstanceViewResponse> extensionHandlers;
+    private @Nullable List<VirtualMachineExtensionHandlerInstanceViewResponse> extensionHandlers;
 
-    public List<VirtualMachineExtensionHandlerInstanceViewResponse> extensionHandlers() {
-        return this.extensionHandlers == null ? List.of() : this.extensionHandlers;
+    public Optional<List<VirtualMachineExtensionHandlerInstanceViewResponse>> extensionHandlers() {
+        return Optional.ofNullable(this.extensionHandlers);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class VirtualMachineAgentInstanceViewResponse extends com.pulumi.re
      * 
      */
     @Import(name="statuses")
-      private final @Nullable List<InstanceViewStatusResponse> statuses;
+    private @Nullable List<InstanceViewStatusResponse> statuses;
 
-    public List<InstanceViewStatusResponse> statuses() {
-        return this.statuses == null ? List.of() : this.statuses;
+    public Optional<List<InstanceViewStatusResponse>> statuses() {
+        return Optional.ofNullable(this.statuses);
     }
 
     /**
@@ -48,70 +48,64 @@ public final class VirtualMachineAgentInstanceViewResponse extends com.pulumi.re
      * 
      */
     @Import(name="vmAgentVersion")
-      private final @Nullable String vmAgentVersion;
+    private @Nullable String vmAgentVersion;
 
     public Optional<String> vmAgentVersion() {
-        return this.vmAgentVersion == null ? Optional.empty() : Optional.ofNullable(this.vmAgentVersion);
+        return Optional.ofNullable(this.vmAgentVersion);
     }
 
-    public VirtualMachineAgentInstanceViewResponse(
-        @Nullable List<VirtualMachineExtensionHandlerInstanceViewResponse> extensionHandlers,
-        @Nullable List<InstanceViewStatusResponse> statuses,
-        @Nullable String vmAgentVersion) {
-        this.extensionHandlers = extensionHandlers;
-        this.statuses = statuses;
-        this.vmAgentVersion = vmAgentVersion;
-    }
+    private VirtualMachineAgentInstanceViewResponse() {}
 
-    private VirtualMachineAgentInstanceViewResponse() {
-        this.extensionHandlers = List.of();
-        this.statuses = List.of();
-        this.vmAgentVersion = null;
+    private VirtualMachineAgentInstanceViewResponse(VirtualMachineAgentInstanceViewResponse $) {
+        this.extensionHandlers = $.extensionHandlers;
+        this.statuses = $.statuses;
+        this.vmAgentVersion = $.vmAgentVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMachineAgentInstanceViewResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<VirtualMachineExtensionHandlerInstanceViewResponse> extensionHandlers;
-        private @Nullable List<InstanceViewStatusResponse> statuses;
-        private @Nullable String vmAgentVersion;
+        private VirtualMachineAgentInstanceViewResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMachineAgentInstanceViewResponse();
         }
 
         public Builder(VirtualMachineAgentInstanceViewResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.extensionHandlers = defaults.extensionHandlers;
-    	      this.statuses = defaults.statuses;
-    	      this.vmAgentVersion = defaults.vmAgentVersion;
+            $ = new VirtualMachineAgentInstanceViewResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder extensionHandlers(@Nullable List<VirtualMachineExtensionHandlerInstanceViewResponse> extensionHandlers) {
-            this.extensionHandlers = extensionHandlers;
+            $.extensionHandlers = extensionHandlers;
             return this;
         }
+
         public Builder extensionHandlers(VirtualMachineExtensionHandlerInstanceViewResponse... extensionHandlers) {
             return extensionHandlers(List.of(extensionHandlers));
         }
+
         public Builder statuses(@Nullable List<InstanceViewStatusResponse> statuses) {
-            this.statuses = statuses;
+            $.statuses = statuses;
             return this;
         }
+
         public Builder statuses(InstanceViewStatusResponse... statuses) {
             return statuses(List.of(statuses));
         }
+
         public Builder vmAgentVersion(@Nullable String vmAgentVersion) {
-            this.vmAgentVersion = vmAgentVersion;
+            $.vmAgentVersion = vmAgentVersion;
             return this;
-        }        public VirtualMachineAgentInstanceViewResponse build() {
-            return new VirtualMachineAgentInstanceViewResponse(extensionHandlers, statuses, vmAgentVersion);
+        }
+
+        public VirtualMachineAgentInstanceViewResponse build() {
+            return $;
         }
     }
+
 }

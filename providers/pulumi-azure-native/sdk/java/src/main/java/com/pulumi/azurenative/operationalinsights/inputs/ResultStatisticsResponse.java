@@ -22,7 +22,7 @@ public final class ResultStatisticsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="ingestedRecords", required=true)
-      private final Integer ingestedRecords;
+    private Integer ingestedRecords;
 
     public Integer ingestedRecords() {
         return this.ingestedRecords;
@@ -33,55 +33,52 @@ public final class ResultStatisticsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="progress", required=true)
-      private final Double progress;
+    private Double progress;
 
     public Double progress() {
         return this.progress;
     }
 
-    public ResultStatisticsResponse(
-        Integer ingestedRecords,
-        Double progress) {
-        this.ingestedRecords = Objects.requireNonNull(ingestedRecords, "expected parameter 'ingestedRecords' to be non-null");
-        this.progress = Objects.requireNonNull(progress, "expected parameter 'progress' to be non-null");
-    }
+    private ResultStatisticsResponse() {}
 
-    private ResultStatisticsResponse() {
-        this.ingestedRecords = null;
-        this.progress = null;
+    private ResultStatisticsResponse(ResultStatisticsResponse $) {
+        this.ingestedRecords = $.ingestedRecords;
+        this.progress = $.progress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResultStatisticsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer ingestedRecords;
-        private Double progress;
+        private ResultStatisticsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResultStatisticsResponse();
         }
 
         public Builder(ResultStatisticsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ingestedRecords = defaults.ingestedRecords;
-    	      this.progress = defaults.progress;
+            $ = new ResultStatisticsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder ingestedRecords(Integer ingestedRecords) {
-            this.ingestedRecords = Objects.requireNonNull(ingestedRecords);
+            $.ingestedRecords = ingestedRecords;
             return this;
         }
+
         public Builder progress(Double progress) {
-            this.progress = Objects.requireNonNull(progress);
+            $.progress = progress;
             return this;
-        }        public ResultStatisticsResponse build() {
-            return new ResultStatisticsResponse(ingestedRecords, progress);
+        }
+
+        public ResultStatisticsResponse build() {
+            $.ingestedRecords = Objects.requireNonNull($.ingestedRecords, "expected parameter 'ingestedRecords' to be non-null");
+            $.progress = Objects.requireNonNull($.progress, "expected parameter 'progress' to be non-null");
+            return $;
         }
     }
+
 }

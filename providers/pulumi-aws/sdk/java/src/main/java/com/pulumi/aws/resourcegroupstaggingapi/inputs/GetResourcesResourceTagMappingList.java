@@ -20,7 +20,7 @@ public final class GetResourcesResourceTagMappingList extends com.pulumi.resourc
      * 
      */
     @Import(name="complianceDetails", required=true)
-      private final List<GetResourcesResourceTagMappingListComplianceDetail> complianceDetails;
+    private List<GetResourcesResourceTagMappingListComplianceDetail> complianceDetails;
 
     public List<GetResourcesResourceTagMappingListComplianceDetail> complianceDetails() {
         return this.complianceDetails;
@@ -31,7 +31,7 @@ public final class GetResourcesResourceTagMappingList extends com.pulumi.resourc
      * 
      */
     @Import(name="resourceArn", required=true)
-      private final String resourceArn;
+    private String resourceArn;
 
     public String resourceArn() {
         return this.resourceArn;
@@ -42,67 +42,63 @@ public final class GetResourcesResourceTagMappingList extends com.pulumi.resourc
      * 
      */
     @Import(name="tags", required=true)
-      private final Map<String,String> tags;
+    private Map<String,String> tags;
 
     public Map<String,String> tags() {
         return this.tags;
     }
 
-    public GetResourcesResourceTagMappingList(
-        List<GetResourcesResourceTagMappingListComplianceDetail> complianceDetails,
-        String resourceArn,
-        Map<String,String> tags) {
-        this.complianceDetails = Objects.requireNonNull(complianceDetails, "expected parameter 'complianceDetails' to be non-null");
-        this.resourceArn = Objects.requireNonNull(resourceArn, "expected parameter 'resourceArn' to be non-null");
-        this.tags = Objects.requireNonNull(tags, "expected parameter 'tags' to be non-null");
-    }
+    private GetResourcesResourceTagMappingList() {}
 
-    private GetResourcesResourceTagMappingList() {
-        this.complianceDetails = List.of();
-        this.resourceArn = null;
-        this.tags = Map.of();
+    private GetResourcesResourceTagMappingList(GetResourcesResourceTagMappingList $) {
+        this.complianceDetails = $.complianceDetails;
+        this.resourceArn = $.resourceArn;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetResourcesResourceTagMappingList defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GetResourcesResourceTagMappingListComplianceDetail> complianceDetails;
-        private String resourceArn;
-        private Map<String,String> tags;
+        private GetResourcesResourceTagMappingList $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetResourcesResourceTagMappingList();
         }
 
         public Builder(GetResourcesResourceTagMappingList defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.complianceDetails = defaults.complianceDetails;
-    	      this.resourceArn = defaults.resourceArn;
-    	      this.tags = defaults.tags;
+            $ = new GetResourcesResourceTagMappingList(Objects.requireNonNull(defaults));
         }
 
         public Builder complianceDetails(List<GetResourcesResourceTagMappingListComplianceDetail> complianceDetails) {
-            this.complianceDetails = Objects.requireNonNull(complianceDetails);
+            $.complianceDetails = complianceDetails;
             return this;
         }
+
         public Builder complianceDetails(GetResourcesResourceTagMappingListComplianceDetail... complianceDetails) {
             return complianceDetails(List.of(complianceDetails));
         }
+
         public Builder resourceArn(String resourceArn) {
-            this.resourceArn = Objects.requireNonNull(resourceArn);
+            $.resourceArn = resourceArn;
             return this;
         }
+
         public Builder tags(Map<String,String> tags) {
-            this.tags = Objects.requireNonNull(tags);
+            $.tags = tags;
             return this;
-        }        public GetResourcesResourceTagMappingList build() {
-            return new GetResourcesResourceTagMappingList(complianceDetails, resourceArn, tags);
+        }
+
+        public GetResourcesResourceTagMappingList build() {
+            $.complianceDetails = Objects.requireNonNull($.complianceDetails, "expected parameter 'complianceDetails' to be non-null");
+            $.resourceArn = Objects.requireNonNull($.resourceArn, "expected parameter 'resourceArn' to be non-null");
+            $.tags = Objects.requireNonNull($.tags, "expected parameter 'tags' to be non-null");
+            return $;
         }
     }
+
 }

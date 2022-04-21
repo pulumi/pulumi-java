@@ -22,7 +22,7 @@ public final class TaskStatusResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="attemptDispatchCount", required=true)
-      private final Integer attemptDispatchCount;
+    private Integer attemptDispatchCount;
 
     public Integer attemptDispatchCount() {
         return this.attemptDispatchCount;
@@ -33,7 +33,7 @@ public final class TaskStatusResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="attemptResponseCount", required=true)
-      private final Integer attemptResponseCount;
+    private Integer attemptResponseCount;
 
     public Integer attemptResponseCount() {
         return this.attemptResponseCount;
@@ -44,7 +44,7 @@ public final class TaskStatusResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="firstAttemptStatus", required=true)
-      private final AttemptStatusResponse firstAttemptStatus;
+    private AttemptStatusResponse firstAttemptStatus;
 
     public AttemptStatusResponse firstAttemptStatus() {
         return this.firstAttemptStatus;
@@ -55,73 +55,66 @@ public final class TaskStatusResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="lastAttemptStatus", required=true)
-      private final AttemptStatusResponse lastAttemptStatus;
+    private AttemptStatusResponse lastAttemptStatus;
 
     public AttemptStatusResponse lastAttemptStatus() {
         return this.lastAttemptStatus;
     }
 
-    public TaskStatusResponse(
-        Integer attemptDispatchCount,
-        Integer attemptResponseCount,
-        AttemptStatusResponse firstAttemptStatus,
-        AttemptStatusResponse lastAttemptStatus) {
-        this.attemptDispatchCount = Objects.requireNonNull(attemptDispatchCount, "expected parameter 'attemptDispatchCount' to be non-null");
-        this.attemptResponseCount = Objects.requireNonNull(attemptResponseCount, "expected parameter 'attemptResponseCount' to be non-null");
-        this.firstAttemptStatus = Objects.requireNonNull(firstAttemptStatus, "expected parameter 'firstAttemptStatus' to be non-null");
-        this.lastAttemptStatus = Objects.requireNonNull(lastAttemptStatus, "expected parameter 'lastAttemptStatus' to be non-null");
-    }
+    private TaskStatusResponse() {}
 
-    private TaskStatusResponse() {
-        this.attemptDispatchCount = null;
-        this.attemptResponseCount = null;
-        this.firstAttemptStatus = null;
-        this.lastAttemptStatus = null;
+    private TaskStatusResponse(TaskStatusResponse $) {
+        this.attemptDispatchCount = $.attemptDispatchCount;
+        this.attemptResponseCount = $.attemptResponseCount;
+        this.firstAttemptStatus = $.firstAttemptStatus;
+        this.lastAttemptStatus = $.lastAttemptStatus;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaskStatusResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer attemptDispatchCount;
-        private Integer attemptResponseCount;
-        private AttemptStatusResponse firstAttemptStatus;
-        private AttemptStatusResponse lastAttemptStatus;
+        private TaskStatusResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaskStatusResponse();
         }
 
         public Builder(TaskStatusResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attemptDispatchCount = defaults.attemptDispatchCount;
-    	      this.attemptResponseCount = defaults.attemptResponseCount;
-    	      this.firstAttemptStatus = defaults.firstAttemptStatus;
-    	      this.lastAttemptStatus = defaults.lastAttemptStatus;
+            $ = new TaskStatusResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder attemptDispatchCount(Integer attemptDispatchCount) {
-            this.attemptDispatchCount = Objects.requireNonNull(attemptDispatchCount);
+            $.attemptDispatchCount = attemptDispatchCount;
             return this;
         }
+
         public Builder attemptResponseCount(Integer attemptResponseCount) {
-            this.attemptResponseCount = Objects.requireNonNull(attemptResponseCount);
+            $.attemptResponseCount = attemptResponseCount;
             return this;
         }
+
         public Builder firstAttemptStatus(AttemptStatusResponse firstAttemptStatus) {
-            this.firstAttemptStatus = Objects.requireNonNull(firstAttemptStatus);
+            $.firstAttemptStatus = firstAttemptStatus;
             return this;
         }
+
         public Builder lastAttemptStatus(AttemptStatusResponse lastAttemptStatus) {
-            this.lastAttemptStatus = Objects.requireNonNull(lastAttemptStatus);
+            $.lastAttemptStatus = lastAttemptStatus;
             return this;
-        }        public TaskStatusResponse build() {
-            return new TaskStatusResponse(attemptDispatchCount, attemptResponseCount, firstAttemptStatus, lastAttemptStatus);
+        }
+
+        public TaskStatusResponse build() {
+            $.attemptDispatchCount = Objects.requireNonNull($.attemptDispatchCount, "expected parameter 'attemptDispatchCount' to be non-null");
+            $.attemptResponseCount = Objects.requireNonNull($.attemptResponseCount, "expected parameter 'attemptResponseCount' to be non-null");
+            $.firstAttemptStatus = Objects.requireNonNull($.firstAttemptStatus, "expected parameter 'firstAttemptStatus' to be non-null");
+            $.lastAttemptStatus = Objects.requireNonNull($.lastAttemptStatus, "expected parameter 'lastAttemptStatus' to be non-null");
+            return $;
         }
     }
+
 }

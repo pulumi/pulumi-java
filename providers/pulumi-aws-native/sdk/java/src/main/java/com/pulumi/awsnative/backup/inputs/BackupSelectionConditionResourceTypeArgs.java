@@ -5,7 +5,6 @@ package com.pulumi.awsnative.backup.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,90 +14,85 @@ public final class BackupSelectionConditionResourceTypeArgs extends com.pulumi.r
     public static final BackupSelectionConditionResourceTypeArgs Empty = new BackupSelectionConditionResourceTypeArgs();
 
     @Import(name="conditionKey", required=true)
-      private final Output<String> conditionKey;
+    private Output<String> conditionKey;
 
     public Output<String> conditionKey() {
         return this.conditionKey;
     }
 
     @Import(name="conditionType", required=true)
-      private final Output<String> conditionType;
+    private Output<String> conditionType;
 
     public Output<String> conditionType() {
         return this.conditionType;
     }
 
     @Import(name="conditionValue", required=true)
-      private final Output<String> conditionValue;
+    private Output<String> conditionValue;
 
     public Output<String> conditionValue() {
         return this.conditionValue;
     }
 
-    public BackupSelectionConditionResourceTypeArgs(
-        Output<String> conditionKey,
-        Output<String> conditionType,
-        Output<String> conditionValue) {
-        this.conditionKey = Objects.requireNonNull(conditionKey, "expected parameter 'conditionKey' to be non-null");
-        this.conditionType = Objects.requireNonNull(conditionType, "expected parameter 'conditionType' to be non-null");
-        this.conditionValue = Objects.requireNonNull(conditionValue, "expected parameter 'conditionValue' to be non-null");
-    }
+    private BackupSelectionConditionResourceTypeArgs() {}
 
-    private BackupSelectionConditionResourceTypeArgs() {
-        this.conditionKey = Codegen.empty();
-        this.conditionType = Codegen.empty();
-        this.conditionValue = Codegen.empty();
+    private BackupSelectionConditionResourceTypeArgs(BackupSelectionConditionResourceTypeArgs $) {
+        this.conditionKey = $.conditionKey;
+        this.conditionType = $.conditionType;
+        this.conditionValue = $.conditionValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackupSelectionConditionResourceTypeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> conditionKey;
-        private Output<String> conditionType;
-        private Output<String> conditionValue;
+        private BackupSelectionConditionResourceTypeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackupSelectionConditionResourceTypeArgs();
         }
 
         public Builder(BackupSelectionConditionResourceTypeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.conditionKey = defaults.conditionKey;
-    	      this.conditionType = defaults.conditionType;
-    	      this.conditionValue = defaults.conditionValue;
+            $ = new BackupSelectionConditionResourceTypeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder conditionKey(Output<String> conditionKey) {
-            this.conditionKey = Objects.requireNonNull(conditionKey);
+            $.conditionKey = conditionKey;
             return this;
         }
+
         public Builder conditionKey(String conditionKey) {
-            this.conditionKey = Output.of(Objects.requireNonNull(conditionKey));
-            return this;
+            return conditionKey(Output.of(conditionKey));
         }
+
         public Builder conditionType(Output<String> conditionType) {
-            this.conditionType = Objects.requireNonNull(conditionType);
+            $.conditionType = conditionType;
             return this;
         }
+
         public Builder conditionType(String conditionType) {
-            this.conditionType = Output.of(Objects.requireNonNull(conditionType));
-            return this;
+            return conditionType(Output.of(conditionType));
         }
+
         public Builder conditionValue(Output<String> conditionValue) {
-            this.conditionValue = Objects.requireNonNull(conditionValue);
+            $.conditionValue = conditionValue;
             return this;
         }
+
         public Builder conditionValue(String conditionValue) {
-            this.conditionValue = Output.of(Objects.requireNonNull(conditionValue));
-            return this;
-        }        public BackupSelectionConditionResourceTypeArgs build() {
-            return new BackupSelectionConditionResourceTypeArgs(conditionKey, conditionType, conditionValue);
+            return conditionValue(Output.of(conditionValue));
+        }
+
+        public BackupSelectionConditionResourceTypeArgs build() {
+            $.conditionKey = Objects.requireNonNull($.conditionKey, "expected parameter 'conditionKey' to be non-null");
+            $.conditionType = Objects.requireNonNull($.conditionType, "expected parameter 'conditionType' to be non-null");
+            $.conditionValue = Objects.requireNonNull($.conditionValue, "expected parameter 'conditionValue' to be non-null");
+            return $;
         }
     }
+
 }

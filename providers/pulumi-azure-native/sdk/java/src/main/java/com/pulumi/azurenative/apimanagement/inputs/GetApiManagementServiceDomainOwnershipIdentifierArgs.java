@@ -3,35 +3,26 @@
 
 package com.pulumi.azurenative.apimanagement.inputs;
 
-import java.util.Objects;
+
 
 
 public final class GetApiManagementServiceDomainOwnershipIdentifierArgs extends com.pulumi.resources.InvokeArgs {
 
     public static final GetApiManagementServiceDomainOwnershipIdentifierArgs Empty = new GetApiManagementServiceDomainOwnershipIdentifierArgs();
 
-    public GetApiManagementServiceDomainOwnershipIdentifierArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(GetApiManagementServiceDomainOwnershipIdentifierArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private GetApiManagementServiceDomainOwnershipIdentifierArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(GetApiManagementServiceDomainOwnershipIdentifierArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new GetApiManagementServiceDomainOwnershipIdentifierArgs();
         }
         public GetApiManagementServiceDomainOwnershipIdentifierArgs build() {
-            return new GetApiManagementServiceDomainOwnershipIdentifierArgs();
+            return $;
         }
     }
+
 }

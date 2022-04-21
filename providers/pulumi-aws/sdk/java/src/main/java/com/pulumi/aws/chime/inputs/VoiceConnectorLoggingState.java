@@ -5,10 +5,10 @@ package com.pulumi.aws.chime.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class VoiceConnectorLoggingState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="enableSipLogs")
-      private final @Nullable Output<Boolean> enableSipLogs;
+    private @Nullable Output<Boolean> enableSipLogs;
 
-    public Output<Boolean> enableSipLogs() {
-        return this.enableSipLogs == null ? Codegen.empty() : this.enableSipLogs;
+    public Optional<Output<Boolean>> enableSipLogs() {
+        return Optional.ofNullable(this.enableSipLogs);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class VoiceConnectorLoggingState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="voiceConnectorId")
-      private final @Nullable Output<String> voiceConnectorId;
+    private @Nullable Output<String> voiceConnectorId;
 
-    public Output<String> voiceConnectorId() {
-        return this.voiceConnectorId == null ? Codegen.empty() : this.voiceConnectorId;
+    public Optional<Output<String>> voiceConnectorId() {
+        return Optional.ofNullable(this.voiceConnectorId);
     }
 
-    public VoiceConnectorLoggingState(
-        @Nullable Output<Boolean> enableSipLogs,
-        @Nullable Output<String> voiceConnectorId) {
-        this.enableSipLogs = enableSipLogs;
-        this.voiceConnectorId = voiceConnectorId;
-    }
+    private VoiceConnectorLoggingState() {}
 
-    private VoiceConnectorLoggingState() {
-        this.enableSipLogs = Codegen.empty();
-        this.voiceConnectorId = Codegen.empty();
+    private VoiceConnectorLoggingState(VoiceConnectorLoggingState $) {
+        this.enableSipLogs = $.enableSipLogs;
+        this.voiceConnectorId = $.voiceConnectorId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VoiceConnectorLoggingState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enableSipLogs;
-        private @Nullable Output<String> voiceConnectorId;
+        private VoiceConnectorLoggingState $;
 
         public Builder() {
-    	      // Empty
+            $ = new VoiceConnectorLoggingState();
         }
 
         public Builder(VoiceConnectorLoggingState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableSipLogs = defaults.enableSipLogs;
-    	      this.voiceConnectorId = defaults.voiceConnectorId;
+            $ = new VoiceConnectorLoggingState(Objects.requireNonNull(defaults));
         }
 
         public Builder enableSipLogs(@Nullable Output<Boolean> enableSipLogs) {
-            this.enableSipLogs = enableSipLogs;
+            $.enableSipLogs = enableSipLogs;
             return this;
         }
-        public Builder enableSipLogs(@Nullable Boolean enableSipLogs) {
-            this.enableSipLogs = Codegen.ofNullable(enableSipLogs);
-            return this;
+
+        public Builder enableSipLogs(Boolean enableSipLogs) {
+            return enableSipLogs(Output.of(enableSipLogs));
         }
+
         public Builder voiceConnectorId(@Nullable Output<String> voiceConnectorId) {
-            this.voiceConnectorId = voiceConnectorId;
+            $.voiceConnectorId = voiceConnectorId;
             return this;
         }
-        public Builder voiceConnectorId(@Nullable String voiceConnectorId) {
-            this.voiceConnectorId = Codegen.ofNullable(voiceConnectorId);
-            return this;
-        }        public VoiceConnectorLoggingState build() {
-            return new VoiceConnectorLoggingState(enableSipLogs, voiceConnectorId);
+
+        public Builder voiceConnectorId(String voiceConnectorId) {
+            return voiceConnectorId(Output.of(voiceConnectorId));
+        }
+
+        public VoiceConnectorLoggingState build() {
+            return $;
         }
     }
+
 }

@@ -23,7 +23,7 @@ public final class BindingResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="bindingId", required=true)
-      private final String bindingId;
+    private String bindingId;
 
     public String bindingId() {
         return this.bindingId;
@@ -34,7 +34,7 @@ public final class BindingResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="condition", required=true)
-      private final ExprResponse condition;
+    private ExprResponse condition;
 
     public ExprResponse condition() {
         return this.condition;
@@ -45,7 +45,7 @@ public final class BindingResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="members", required=true)
-      private final List<String> members;
+    private List<String> members;
 
     public List<String> members() {
         return this.members;
@@ -56,76 +56,70 @@ public final class BindingResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="role", required=true)
-      private final String role;
+    private String role;
 
     public String role() {
         return this.role;
     }
 
-    public BindingResponse(
-        String bindingId,
-        ExprResponse condition,
-        List<String> members,
-        String role) {
-        this.bindingId = Objects.requireNonNull(bindingId, "expected parameter 'bindingId' to be non-null");
-        this.condition = Objects.requireNonNull(condition, "expected parameter 'condition' to be non-null");
-        this.members = Objects.requireNonNull(members, "expected parameter 'members' to be non-null");
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-    }
+    private BindingResponse() {}
 
-    private BindingResponse() {
-        this.bindingId = null;
-        this.condition = null;
-        this.members = List.of();
-        this.role = null;
+    private BindingResponse(BindingResponse $) {
+        this.bindingId = $.bindingId;
+        this.condition = $.condition;
+        this.members = $.members;
+        this.role = $.role;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BindingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String bindingId;
-        private ExprResponse condition;
-        private List<String> members;
-        private String role;
+        private BindingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BindingResponse();
         }
 
         public Builder(BindingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bindingId = defaults.bindingId;
-    	      this.condition = defaults.condition;
-    	      this.members = defaults.members;
-    	      this.role = defaults.role;
+            $ = new BindingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bindingId(String bindingId) {
-            this.bindingId = Objects.requireNonNull(bindingId);
+            $.bindingId = bindingId;
             return this;
         }
+
         public Builder condition(ExprResponse condition) {
-            this.condition = Objects.requireNonNull(condition);
+            $.condition = condition;
             return this;
         }
+
         public Builder members(List<String> members) {
-            this.members = Objects.requireNonNull(members);
+            $.members = members;
             return this;
         }
+
         public Builder members(String... members) {
             return members(List.of(members));
         }
+
         public Builder role(String role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
-        }        public BindingResponse build() {
-            return new BindingResponse(bindingId, condition, members, role);
+        }
+
+        public BindingResponse build() {
+            $.bindingId = Objects.requireNonNull($.bindingId, "expected parameter 'bindingId' to be non-null");
+            $.condition = Objects.requireNonNull($.condition, "expected parameter 'condition' to be non-null");
+            $.members = Objects.requireNonNull($.members, "expected parameter 'members' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            return $;
         }
     }
+
 }

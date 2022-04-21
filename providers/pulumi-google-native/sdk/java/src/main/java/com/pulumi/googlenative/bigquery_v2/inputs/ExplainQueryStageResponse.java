@@ -20,7 +20,7 @@ public final class ExplainQueryStageResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="completedParallelInputs", required=true)
-      private final String completedParallelInputs;
+    private String completedParallelInputs;
 
     public String completedParallelInputs() {
         return this.completedParallelInputs;
@@ -31,7 +31,7 @@ public final class ExplainQueryStageResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="computeMsAvg", required=true)
-      private final String computeMsAvg;
+    private String computeMsAvg;
 
     public String computeMsAvg() {
         return this.computeMsAvg;
@@ -42,7 +42,7 @@ public final class ExplainQueryStageResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="computeMsMax", required=true)
-      private final String computeMsMax;
+    private String computeMsMax;
 
     public String computeMsMax() {
         return this.computeMsMax;
@@ -53,7 +53,7 @@ public final class ExplainQueryStageResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="computeRatioAvg", required=true)
-      private final Double computeRatioAvg;
+    private Double computeRatioAvg;
 
     public Double computeRatioAvg() {
         return this.computeRatioAvg;
@@ -64,7 +64,7 @@ public final class ExplainQueryStageResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="computeRatioMax", required=true)
-      private final Double computeRatioMax;
+    private Double computeRatioMax;
 
     public Double computeRatioMax() {
         return this.computeRatioMax;
@@ -75,7 +75,7 @@ public final class ExplainQueryStageResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="endMs", required=true)
-      private final String endMs;
+    private String endMs;
 
     public String endMs() {
         return this.endMs;
@@ -86,7 +86,7 @@ public final class ExplainQueryStageResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="inputStages", required=true)
-      private final List<String> inputStages;
+    private List<String> inputStages;
 
     public List<String> inputStages() {
         return this.inputStages;
@@ -97,7 +97,7 @@ public final class ExplainQueryStageResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -108,7 +108,7 @@ public final class ExplainQueryStageResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="parallelInputs", required=true)
-      private final String parallelInputs;
+    private String parallelInputs;
 
     public String parallelInputs() {
         return this.parallelInputs;
@@ -119,7 +119,7 @@ public final class ExplainQueryStageResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="readMsAvg", required=true)
-      private final String readMsAvg;
+    private String readMsAvg;
 
     public String readMsAvg() {
         return this.readMsAvg;
@@ -130,7 +130,7 @@ public final class ExplainQueryStageResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="readMsMax", required=true)
-      private final String readMsMax;
+    private String readMsMax;
 
     public String readMsMax() {
         return this.readMsMax;
@@ -141,7 +141,7 @@ public final class ExplainQueryStageResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="readRatioAvg", required=true)
-      private final Double readRatioAvg;
+    private Double readRatioAvg;
 
     public Double readRatioAvg() {
         return this.readRatioAvg;
@@ -152,7 +152,7 @@ public final class ExplainQueryStageResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="readRatioMax", required=true)
-      private final Double readRatioMax;
+    private Double readRatioMax;
 
     public Double readRatioMax() {
         return this.readRatioMax;
@@ -163,7 +163,7 @@ public final class ExplainQueryStageResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="recordsRead", required=true)
-      private final String recordsRead;
+    private String recordsRead;
 
     public String recordsRead() {
         return this.recordsRead;
@@ -174,7 +174,7 @@ public final class ExplainQueryStageResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="recordsWritten", required=true)
-      private final String recordsWritten;
+    private String recordsWritten;
 
     public String recordsWritten() {
         return this.recordsWritten;
@@ -185,7 +185,7 @@ public final class ExplainQueryStageResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="shuffleOutputBytes", required=true)
-      private final String shuffleOutputBytes;
+    private String shuffleOutputBytes;
 
     public String shuffleOutputBytes() {
         return this.shuffleOutputBytes;
@@ -196,7 +196,7 @@ public final class ExplainQueryStageResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="shuffleOutputBytesSpilled", required=true)
-      private final String shuffleOutputBytesSpilled;
+    private String shuffleOutputBytesSpilled;
 
     public String shuffleOutputBytesSpilled() {
         return this.shuffleOutputBytesSpilled;
@@ -207,7 +207,7 @@ public final class ExplainQueryStageResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="slotMs", required=true)
-      private final String slotMs;
+    private String slotMs;
 
     public String slotMs() {
         return this.slotMs;
@@ -218,7 +218,7 @@ public final class ExplainQueryStageResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="startMs", required=true)
-      private final String startMs;
+    private String startMs;
 
     public String startMs() {
         return this.startMs;
@@ -229,7 +229,7 @@ public final class ExplainQueryStageResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
@@ -240,7 +240,7 @@ public final class ExplainQueryStageResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="steps", required=true)
-      private final List<ExplainQueryStepResponse> steps;
+    private List<ExplainQueryStepResponse> steps;
 
     public List<ExplainQueryStepResponse> steps() {
         return this.steps;
@@ -251,7 +251,7 @@ public final class ExplainQueryStageResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="waitMsAvg", required=true)
-      private final String waitMsAvg;
+    private String waitMsAvg;
 
     public String waitMsAvg() {
         return this.waitMsAvg;
@@ -262,7 +262,7 @@ public final class ExplainQueryStageResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="waitMsMax", required=true)
-      private final String waitMsMax;
+    private String waitMsMax;
 
     public String waitMsMax() {
         return this.waitMsMax;
@@ -273,7 +273,7 @@ public final class ExplainQueryStageResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="waitRatioAvg", required=true)
-      private final Double waitRatioAvg;
+    private Double waitRatioAvg;
 
     public Double waitRatioAvg() {
         return this.waitRatioAvg;
@@ -284,7 +284,7 @@ public final class ExplainQueryStageResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="waitRatioMax", required=true)
-      private final Double waitRatioMax;
+    private Double waitRatioMax;
 
     public Double waitRatioMax() {
         return this.waitRatioMax;
@@ -295,7 +295,7 @@ public final class ExplainQueryStageResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="writeMsAvg", required=true)
-      private final String writeMsAvg;
+    private String writeMsAvg;
 
     public String writeMsAvg() {
         return this.writeMsAvg;
@@ -306,7 +306,7 @@ public final class ExplainQueryStageResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="writeMsMax", required=true)
-      private final String writeMsMax;
+    private String writeMsMax;
 
     public String writeMsMax() {
         return this.writeMsMax;
@@ -317,7 +317,7 @@ public final class ExplainQueryStageResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="writeRatioAvg", required=true)
-      private final Double writeRatioAvg;
+    private Double writeRatioAvg;
 
     public Double writeRatioAvg() {
         return this.writeRatioAvg;
@@ -328,304 +328,249 @@ public final class ExplainQueryStageResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="writeRatioMax", required=true)
-      private final Double writeRatioMax;
+    private Double writeRatioMax;
 
     public Double writeRatioMax() {
         return this.writeRatioMax;
     }
 
-    public ExplainQueryStageResponse(
-        String completedParallelInputs,
-        String computeMsAvg,
-        String computeMsMax,
-        Double computeRatioAvg,
-        Double computeRatioMax,
-        String endMs,
-        List<String> inputStages,
-        String name,
-        String parallelInputs,
-        String readMsAvg,
-        String readMsMax,
-        Double readRatioAvg,
-        Double readRatioMax,
-        String recordsRead,
-        String recordsWritten,
-        String shuffleOutputBytes,
-        String shuffleOutputBytesSpilled,
-        String slotMs,
-        String startMs,
-        String status,
-        List<ExplainQueryStepResponse> steps,
-        String waitMsAvg,
-        String waitMsMax,
-        Double waitRatioAvg,
-        Double waitRatioMax,
-        String writeMsAvg,
-        String writeMsMax,
-        Double writeRatioAvg,
-        Double writeRatioMax) {
-        this.completedParallelInputs = Objects.requireNonNull(completedParallelInputs, "expected parameter 'completedParallelInputs' to be non-null");
-        this.computeMsAvg = Objects.requireNonNull(computeMsAvg, "expected parameter 'computeMsAvg' to be non-null");
-        this.computeMsMax = Objects.requireNonNull(computeMsMax, "expected parameter 'computeMsMax' to be non-null");
-        this.computeRatioAvg = Objects.requireNonNull(computeRatioAvg, "expected parameter 'computeRatioAvg' to be non-null");
-        this.computeRatioMax = Objects.requireNonNull(computeRatioMax, "expected parameter 'computeRatioMax' to be non-null");
-        this.endMs = Objects.requireNonNull(endMs, "expected parameter 'endMs' to be non-null");
-        this.inputStages = Objects.requireNonNull(inputStages, "expected parameter 'inputStages' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.parallelInputs = Objects.requireNonNull(parallelInputs, "expected parameter 'parallelInputs' to be non-null");
-        this.readMsAvg = Objects.requireNonNull(readMsAvg, "expected parameter 'readMsAvg' to be non-null");
-        this.readMsMax = Objects.requireNonNull(readMsMax, "expected parameter 'readMsMax' to be non-null");
-        this.readRatioAvg = Objects.requireNonNull(readRatioAvg, "expected parameter 'readRatioAvg' to be non-null");
-        this.readRatioMax = Objects.requireNonNull(readRatioMax, "expected parameter 'readRatioMax' to be non-null");
-        this.recordsRead = Objects.requireNonNull(recordsRead, "expected parameter 'recordsRead' to be non-null");
-        this.recordsWritten = Objects.requireNonNull(recordsWritten, "expected parameter 'recordsWritten' to be non-null");
-        this.shuffleOutputBytes = Objects.requireNonNull(shuffleOutputBytes, "expected parameter 'shuffleOutputBytes' to be non-null");
-        this.shuffleOutputBytesSpilled = Objects.requireNonNull(shuffleOutputBytesSpilled, "expected parameter 'shuffleOutputBytesSpilled' to be non-null");
-        this.slotMs = Objects.requireNonNull(slotMs, "expected parameter 'slotMs' to be non-null");
-        this.startMs = Objects.requireNonNull(startMs, "expected parameter 'startMs' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-        this.steps = Objects.requireNonNull(steps, "expected parameter 'steps' to be non-null");
-        this.waitMsAvg = Objects.requireNonNull(waitMsAvg, "expected parameter 'waitMsAvg' to be non-null");
-        this.waitMsMax = Objects.requireNonNull(waitMsMax, "expected parameter 'waitMsMax' to be non-null");
-        this.waitRatioAvg = Objects.requireNonNull(waitRatioAvg, "expected parameter 'waitRatioAvg' to be non-null");
-        this.waitRatioMax = Objects.requireNonNull(waitRatioMax, "expected parameter 'waitRatioMax' to be non-null");
-        this.writeMsAvg = Objects.requireNonNull(writeMsAvg, "expected parameter 'writeMsAvg' to be non-null");
-        this.writeMsMax = Objects.requireNonNull(writeMsMax, "expected parameter 'writeMsMax' to be non-null");
-        this.writeRatioAvg = Objects.requireNonNull(writeRatioAvg, "expected parameter 'writeRatioAvg' to be non-null");
-        this.writeRatioMax = Objects.requireNonNull(writeRatioMax, "expected parameter 'writeRatioMax' to be non-null");
-    }
+    private ExplainQueryStageResponse() {}
 
-    private ExplainQueryStageResponse() {
-        this.completedParallelInputs = null;
-        this.computeMsAvg = null;
-        this.computeMsMax = null;
-        this.computeRatioAvg = null;
-        this.computeRatioMax = null;
-        this.endMs = null;
-        this.inputStages = List.of();
-        this.name = null;
-        this.parallelInputs = null;
-        this.readMsAvg = null;
-        this.readMsMax = null;
-        this.readRatioAvg = null;
-        this.readRatioMax = null;
-        this.recordsRead = null;
-        this.recordsWritten = null;
-        this.shuffleOutputBytes = null;
-        this.shuffleOutputBytesSpilled = null;
-        this.slotMs = null;
-        this.startMs = null;
-        this.status = null;
-        this.steps = List.of();
-        this.waitMsAvg = null;
-        this.waitMsMax = null;
-        this.waitRatioAvg = null;
-        this.waitRatioMax = null;
-        this.writeMsAvg = null;
-        this.writeMsMax = null;
-        this.writeRatioAvg = null;
-        this.writeRatioMax = null;
+    private ExplainQueryStageResponse(ExplainQueryStageResponse $) {
+        this.completedParallelInputs = $.completedParallelInputs;
+        this.computeMsAvg = $.computeMsAvg;
+        this.computeMsMax = $.computeMsMax;
+        this.computeRatioAvg = $.computeRatioAvg;
+        this.computeRatioMax = $.computeRatioMax;
+        this.endMs = $.endMs;
+        this.inputStages = $.inputStages;
+        this.name = $.name;
+        this.parallelInputs = $.parallelInputs;
+        this.readMsAvg = $.readMsAvg;
+        this.readMsMax = $.readMsMax;
+        this.readRatioAvg = $.readRatioAvg;
+        this.readRatioMax = $.readRatioMax;
+        this.recordsRead = $.recordsRead;
+        this.recordsWritten = $.recordsWritten;
+        this.shuffleOutputBytes = $.shuffleOutputBytes;
+        this.shuffleOutputBytesSpilled = $.shuffleOutputBytesSpilled;
+        this.slotMs = $.slotMs;
+        this.startMs = $.startMs;
+        this.status = $.status;
+        this.steps = $.steps;
+        this.waitMsAvg = $.waitMsAvg;
+        this.waitMsMax = $.waitMsMax;
+        this.waitRatioAvg = $.waitRatioAvg;
+        this.waitRatioMax = $.waitRatioMax;
+        this.writeMsAvg = $.writeMsAvg;
+        this.writeMsMax = $.writeMsMax;
+        this.writeRatioAvg = $.writeRatioAvg;
+        this.writeRatioMax = $.writeRatioMax;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExplainQueryStageResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String completedParallelInputs;
-        private String computeMsAvg;
-        private String computeMsMax;
-        private Double computeRatioAvg;
-        private Double computeRatioMax;
-        private String endMs;
-        private List<String> inputStages;
-        private String name;
-        private String parallelInputs;
-        private String readMsAvg;
-        private String readMsMax;
-        private Double readRatioAvg;
-        private Double readRatioMax;
-        private String recordsRead;
-        private String recordsWritten;
-        private String shuffleOutputBytes;
-        private String shuffleOutputBytesSpilled;
-        private String slotMs;
-        private String startMs;
-        private String status;
-        private List<ExplainQueryStepResponse> steps;
-        private String waitMsAvg;
-        private String waitMsMax;
-        private Double waitRatioAvg;
-        private Double waitRatioMax;
-        private String writeMsAvg;
-        private String writeMsMax;
-        private Double writeRatioAvg;
-        private Double writeRatioMax;
+        private ExplainQueryStageResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExplainQueryStageResponse();
         }
 
         public Builder(ExplainQueryStageResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.completedParallelInputs = defaults.completedParallelInputs;
-    	      this.computeMsAvg = defaults.computeMsAvg;
-    	      this.computeMsMax = defaults.computeMsMax;
-    	      this.computeRatioAvg = defaults.computeRatioAvg;
-    	      this.computeRatioMax = defaults.computeRatioMax;
-    	      this.endMs = defaults.endMs;
-    	      this.inputStages = defaults.inputStages;
-    	      this.name = defaults.name;
-    	      this.parallelInputs = defaults.parallelInputs;
-    	      this.readMsAvg = defaults.readMsAvg;
-    	      this.readMsMax = defaults.readMsMax;
-    	      this.readRatioAvg = defaults.readRatioAvg;
-    	      this.readRatioMax = defaults.readRatioMax;
-    	      this.recordsRead = defaults.recordsRead;
-    	      this.recordsWritten = defaults.recordsWritten;
-    	      this.shuffleOutputBytes = defaults.shuffleOutputBytes;
-    	      this.shuffleOutputBytesSpilled = defaults.shuffleOutputBytesSpilled;
-    	      this.slotMs = defaults.slotMs;
-    	      this.startMs = defaults.startMs;
-    	      this.status = defaults.status;
-    	      this.steps = defaults.steps;
-    	      this.waitMsAvg = defaults.waitMsAvg;
-    	      this.waitMsMax = defaults.waitMsMax;
-    	      this.waitRatioAvg = defaults.waitRatioAvg;
-    	      this.waitRatioMax = defaults.waitRatioMax;
-    	      this.writeMsAvg = defaults.writeMsAvg;
-    	      this.writeMsMax = defaults.writeMsMax;
-    	      this.writeRatioAvg = defaults.writeRatioAvg;
-    	      this.writeRatioMax = defaults.writeRatioMax;
+            $ = new ExplainQueryStageResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder completedParallelInputs(String completedParallelInputs) {
-            this.completedParallelInputs = Objects.requireNonNull(completedParallelInputs);
+            $.completedParallelInputs = completedParallelInputs;
             return this;
         }
+
         public Builder computeMsAvg(String computeMsAvg) {
-            this.computeMsAvg = Objects.requireNonNull(computeMsAvg);
+            $.computeMsAvg = computeMsAvg;
             return this;
         }
+
         public Builder computeMsMax(String computeMsMax) {
-            this.computeMsMax = Objects.requireNonNull(computeMsMax);
+            $.computeMsMax = computeMsMax;
             return this;
         }
+
         public Builder computeRatioAvg(Double computeRatioAvg) {
-            this.computeRatioAvg = Objects.requireNonNull(computeRatioAvg);
+            $.computeRatioAvg = computeRatioAvg;
             return this;
         }
+
         public Builder computeRatioMax(Double computeRatioMax) {
-            this.computeRatioMax = Objects.requireNonNull(computeRatioMax);
+            $.computeRatioMax = computeRatioMax;
             return this;
         }
+
         public Builder endMs(String endMs) {
-            this.endMs = Objects.requireNonNull(endMs);
+            $.endMs = endMs;
             return this;
         }
+
         public Builder inputStages(List<String> inputStages) {
-            this.inputStages = Objects.requireNonNull(inputStages);
+            $.inputStages = inputStages;
             return this;
         }
+
         public Builder inputStages(String... inputStages) {
             return inputStages(List.of(inputStages));
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder parallelInputs(String parallelInputs) {
-            this.parallelInputs = Objects.requireNonNull(parallelInputs);
+            $.parallelInputs = parallelInputs;
             return this;
         }
+
         public Builder readMsAvg(String readMsAvg) {
-            this.readMsAvg = Objects.requireNonNull(readMsAvg);
+            $.readMsAvg = readMsAvg;
             return this;
         }
+
         public Builder readMsMax(String readMsMax) {
-            this.readMsMax = Objects.requireNonNull(readMsMax);
+            $.readMsMax = readMsMax;
             return this;
         }
+
         public Builder readRatioAvg(Double readRatioAvg) {
-            this.readRatioAvg = Objects.requireNonNull(readRatioAvg);
+            $.readRatioAvg = readRatioAvg;
             return this;
         }
+
         public Builder readRatioMax(Double readRatioMax) {
-            this.readRatioMax = Objects.requireNonNull(readRatioMax);
+            $.readRatioMax = readRatioMax;
             return this;
         }
+
         public Builder recordsRead(String recordsRead) {
-            this.recordsRead = Objects.requireNonNull(recordsRead);
+            $.recordsRead = recordsRead;
             return this;
         }
+
         public Builder recordsWritten(String recordsWritten) {
-            this.recordsWritten = Objects.requireNonNull(recordsWritten);
+            $.recordsWritten = recordsWritten;
             return this;
         }
+
         public Builder shuffleOutputBytes(String shuffleOutputBytes) {
-            this.shuffleOutputBytes = Objects.requireNonNull(shuffleOutputBytes);
+            $.shuffleOutputBytes = shuffleOutputBytes;
             return this;
         }
+
         public Builder shuffleOutputBytesSpilled(String shuffleOutputBytesSpilled) {
-            this.shuffleOutputBytesSpilled = Objects.requireNonNull(shuffleOutputBytesSpilled);
+            $.shuffleOutputBytesSpilled = shuffleOutputBytesSpilled;
             return this;
         }
+
         public Builder slotMs(String slotMs) {
-            this.slotMs = Objects.requireNonNull(slotMs);
+            $.slotMs = slotMs;
             return this;
         }
+
         public Builder startMs(String startMs) {
-            this.startMs = Objects.requireNonNull(startMs);
+            $.startMs = startMs;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder steps(List<ExplainQueryStepResponse> steps) {
-            this.steps = Objects.requireNonNull(steps);
+            $.steps = steps;
             return this;
         }
+
         public Builder steps(ExplainQueryStepResponse... steps) {
             return steps(List.of(steps));
         }
+
         public Builder waitMsAvg(String waitMsAvg) {
-            this.waitMsAvg = Objects.requireNonNull(waitMsAvg);
+            $.waitMsAvg = waitMsAvg;
             return this;
         }
+
         public Builder waitMsMax(String waitMsMax) {
-            this.waitMsMax = Objects.requireNonNull(waitMsMax);
+            $.waitMsMax = waitMsMax;
             return this;
         }
+
         public Builder waitRatioAvg(Double waitRatioAvg) {
-            this.waitRatioAvg = Objects.requireNonNull(waitRatioAvg);
+            $.waitRatioAvg = waitRatioAvg;
             return this;
         }
+
         public Builder waitRatioMax(Double waitRatioMax) {
-            this.waitRatioMax = Objects.requireNonNull(waitRatioMax);
+            $.waitRatioMax = waitRatioMax;
             return this;
         }
+
         public Builder writeMsAvg(String writeMsAvg) {
-            this.writeMsAvg = Objects.requireNonNull(writeMsAvg);
+            $.writeMsAvg = writeMsAvg;
             return this;
         }
+
         public Builder writeMsMax(String writeMsMax) {
-            this.writeMsMax = Objects.requireNonNull(writeMsMax);
+            $.writeMsMax = writeMsMax;
             return this;
         }
+
         public Builder writeRatioAvg(Double writeRatioAvg) {
-            this.writeRatioAvg = Objects.requireNonNull(writeRatioAvg);
+            $.writeRatioAvg = writeRatioAvg;
             return this;
         }
+
         public Builder writeRatioMax(Double writeRatioMax) {
-            this.writeRatioMax = Objects.requireNonNull(writeRatioMax);
+            $.writeRatioMax = writeRatioMax;
             return this;
-        }        public ExplainQueryStageResponse build() {
-            return new ExplainQueryStageResponse(completedParallelInputs, computeMsAvg, computeMsMax, computeRatioAvg, computeRatioMax, endMs, inputStages, name, parallelInputs, readMsAvg, readMsMax, readRatioAvg, readRatioMax, recordsRead, recordsWritten, shuffleOutputBytes, shuffleOutputBytesSpilled, slotMs, startMs, status, steps, waitMsAvg, waitMsMax, waitRatioAvg, waitRatioMax, writeMsAvg, writeMsMax, writeRatioAvg, writeRatioMax);
+        }
+
+        public ExplainQueryStageResponse build() {
+            $.completedParallelInputs = Objects.requireNonNull($.completedParallelInputs, "expected parameter 'completedParallelInputs' to be non-null");
+            $.computeMsAvg = Objects.requireNonNull($.computeMsAvg, "expected parameter 'computeMsAvg' to be non-null");
+            $.computeMsMax = Objects.requireNonNull($.computeMsMax, "expected parameter 'computeMsMax' to be non-null");
+            $.computeRatioAvg = Objects.requireNonNull($.computeRatioAvg, "expected parameter 'computeRatioAvg' to be non-null");
+            $.computeRatioMax = Objects.requireNonNull($.computeRatioMax, "expected parameter 'computeRatioMax' to be non-null");
+            $.endMs = Objects.requireNonNull($.endMs, "expected parameter 'endMs' to be non-null");
+            $.inputStages = Objects.requireNonNull($.inputStages, "expected parameter 'inputStages' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.parallelInputs = Objects.requireNonNull($.parallelInputs, "expected parameter 'parallelInputs' to be non-null");
+            $.readMsAvg = Objects.requireNonNull($.readMsAvg, "expected parameter 'readMsAvg' to be non-null");
+            $.readMsMax = Objects.requireNonNull($.readMsMax, "expected parameter 'readMsMax' to be non-null");
+            $.readRatioAvg = Objects.requireNonNull($.readRatioAvg, "expected parameter 'readRatioAvg' to be non-null");
+            $.readRatioMax = Objects.requireNonNull($.readRatioMax, "expected parameter 'readRatioMax' to be non-null");
+            $.recordsRead = Objects.requireNonNull($.recordsRead, "expected parameter 'recordsRead' to be non-null");
+            $.recordsWritten = Objects.requireNonNull($.recordsWritten, "expected parameter 'recordsWritten' to be non-null");
+            $.shuffleOutputBytes = Objects.requireNonNull($.shuffleOutputBytes, "expected parameter 'shuffleOutputBytes' to be non-null");
+            $.shuffleOutputBytesSpilled = Objects.requireNonNull($.shuffleOutputBytesSpilled, "expected parameter 'shuffleOutputBytesSpilled' to be non-null");
+            $.slotMs = Objects.requireNonNull($.slotMs, "expected parameter 'slotMs' to be non-null");
+            $.startMs = Objects.requireNonNull($.startMs, "expected parameter 'startMs' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            $.steps = Objects.requireNonNull($.steps, "expected parameter 'steps' to be non-null");
+            $.waitMsAvg = Objects.requireNonNull($.waitMsAvg, "expected parameter 'waitMsAvg' to be non-null");
+            $.waitMsMax = Objects.requireNonNull($.waitMsMax, "expected parameter 'waitMsMax' to be non-null");
+            $.waitRatioAvg = Objects.requireNonNull($.waitRatioAvg, "expected parameter 'waitRatioAvg' to be non-null");
+            $.waitRatioMax = Objects.requireNonNull($.waitRatioMax, "expected parameter 'waitRatioMax' to be non-null");
+            $.writeMsAvg = Objects.requireNonNull($.writeMsAvg, "expected parameter 'writeMsAvg' to be non-null");
+            $.writeMsMax = Objects.requireNonNull($.writeMsMax, "expected parameter 'writeMsMax' to be non-null");
+            $.writeRatioAvg = Objects.requireNonNull($.writeRatioAvg, "expected parameter 'writeRatioAvg' to be non-null");
+            $.writeRatioMax = Objects.requireNonNull($.writeRatioMax, "expected parameter 'writeRatioMax' to be non-null");
+            return $;
         }
     }
+
 }

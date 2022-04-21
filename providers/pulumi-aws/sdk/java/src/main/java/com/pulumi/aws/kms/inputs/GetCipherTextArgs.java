@@ -20,10 +20,10 @@ public final class GetCipherTextArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="context")
-      private final @Nullable Map<String,String> context;
+    private @Nullable Map<String,String> context;
 
-    public Map<String,String> context() {
-        return this.context == null ? Map.of() : this.context;
+    public Optional<Map<String,String>> context() {
+        return Optional.ofNullable(this.context);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class GetCipherTextArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="keyId", required=true)
-      private final String keyId;
+    private String keyId;
 
     public String keyId() {
         return this.keyId;
@@ -42,64 +42,58 @@ public final class GetCipherTextArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="plaintext", required=true)
-      private final String plaintext;
+    private String plaintext;
 
     public String plaintext() {
         return this.plaintext;
     }
 
-    public GetCipherTextArgs(
-        @Nullable Map<String,String> context,
-        String keyId,
-        String plaintext) {
-        this.context = context;
-        this.keyId = Objects.requireNonNull(keyId, "expected parameter 'keyId' to be non-null");
-        this.plaintext = Objects.requireNonNull(plaintext, "expected parameter 'plaintext' to be non-null");
-    }
+    private GetCipherTextArgs() {}
 
-    private GetCipherTextArgs() {
-        this.context = Map.of();
-        this.keyId = null;
-        this.plaintext = null;
+    private GetCipherTextArgs(GetCipherTextArgs $) {
+        this.context = $.context;
+        this.keyId = $.keyId;
+        this.plaintext = $.plaintext;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCipherTextArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Map<String,String> context;
-        private String keyId;
-        private String plaintext;
+        private GetCipherTextArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCipherTextArgs();
         }
 
         public Builder(GetCipherTextArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.context = defaults.context;
-    	      this.keyId = defaults.keyId;
-    	      this.plaintext = defaults.plaintext;
+            $ = new GetCipherTextArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder context(@Nullable Map<String,String> context) {
-            this.context = context;
+            $.context = context;
             return this;
         }
+
         public Builder keyId(String keyId) {
-            this.keyId = Objects.requireNonNull(keyId);
+            $.keyId = keyId;
             return this;
         }
+
         public Builder plaintext(String plaintext) {
-            this.plaintext = Objects.requireNonNull(plaintext);
+            $.plaintext = plaintext;
             return this;
-        }        public GetCipherTextArgs build() {
-            return new GetCipherTextArgs(context, keyId, plaintext);
+        }
+
+        public GetCipherTextArgs build() {
+            $.keyId = Objects.requireNonNull($.keyId, "expected parameter 'keyId' to be non-null");
+            $.plaintext = Objects.requireNonNull($.plaintext, "expected parameter 'plaintext' to be non-null");
+            return $;
         }
     }
+
 }

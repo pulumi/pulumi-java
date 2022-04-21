@@ -5,10 +5,10 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class MonitoringDestinationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="metrics")
-      private final @Nullable Output<List<String>> metrics;
+    private @Nullable Output<List<String>> metrics;
 
-    public Output<List<String>> metrics() {
-        return this.metrics == null ? Codegen.empty() : this.metrics;
+    public Optional<Output<List<String>>> metrics() {
+        return Optional.ofNullable(this.metrics);
     }
 
     /**
@@ -36,66 +36,62 @@ public final class MonitoringDestinationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="monitoredResource")
-      private final @Nullable Output<String> monitoredResource;
+    private @Nullable Output<String> monitoredResource;
 
-    public Output<String> monitoredResource() {
-        return this.monitoredResource == null ? Codegen.empty() : this.monitoredResource;
+    public Optional<Output<String>> monitoredResource() {
+        return Optional.ofNullable(this.monitoredResource);
     }
 
-    public MonitoringDestinationArgs(
-        @Nullable Output<List<String>> metrics,
-        @Nullable Output<String> monitoredResource) {
-        this.metrics = metrics;
-        this.monitoredResource = monitoredResource;
-    }
+    private MonitoringDestinationArgs() {}
 
-    private MonitoringDestinationArgs() {
-        this.metrics = Codegen.empty();
-        this.monitoredResource = Codegen.empty();
+    private MonitoringDestinationArgs(MonitoringDestinationArgs $) {
+        this.metrics = $.metrics;
+        this.monitoredResource = $.monitoredResource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MonitoringDestinationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> metrics;
-        private @Nullable Output<String> monitoredResource;
+        private MonitoringDestinationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MonitoringDestinationArgs();
         }
 
         public Builder(MonitoringDestinationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.metrics = defaults.metrics;
-    	      this.monitoredResource = defaults.monitoredResource;
+            $ = new MonitoringDestinationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder metrics(@Nullable Output<List<String>> metrics) {
-            this.metrics = metrics;
+            $.metrics = metrics;
             return this;
         }
-        public Builder metrics(@Nullable List<String> metrics) {
-            this.metrics = Codegen.ofNullable(metrics);
-            return this;
+
+        public Builder metrics(List<String> metrics) {
+            return metrics(Output.of(metrics));
         }
+
         public Builder metrics(String... metrics) {
             return metrics(List.of(metrics));
         }
+
         public Builder monitoredResource(@Nullable Output<String> monitoredResource) {
-            this.monitoredResource = monitoredResource;
+            $.monitoredResource = monitoredResource;
             return this;
         }
-        public Builder monitoredResource(@Nullable String monitoredResource) {
-            this.monitoredResource = Codegen.ofNullable(monitoredResource);
-            return this;
-        }        public MonitoringDestinationArgs build() {
-            return new MonitoringDestinationArgs(metrics, monitoredResource);
+
+        public Builder monitoredResource(String monitoredResource) {
+            return monitoredResource(Output.of(monitoredResource));
+        }
+
+        public MonitoringDestinationArgs build() {
+            return $;
         }
     }
+
 }

@@ -6,11 +6,11 @@ package com.pulumi.awsnative.ec2.inputs;
 import com.pulumi.awsnative.ec2.inputs.EC2FleetCapacityReservationOptionsRequestArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,150 +19,133 @@ public final class EC2FleetOnDemandOptionsRequestArgs extends com.pulumi.resourc
     public static final EC2FleetOnDemandOptionsRequestArgs Empty = new EC2FleetOnDemandOptionsRequestArgs();
 
     @Import(name="allocationStrategy")
-      private final @Nullable Output<String> allocationStrategy;
+    private @Nullable Output<String> allocationStrategy;
 
-    public Output<String> allocationStrategy() {
-        return this.allocationStrategy == null ? Codegen.empty() : this.allocationStrategy;
+    public Optional<Output<String>> allocationStrategy() {
+        return Optional.ofNullable(this.allocationStrategy);
     }
 
     @Import(name="capacityReservationOptions")
-      private final @Nullable Output<EC2FleetCapacityReservationOptionsRequestArgs> capacityReservationOptions;
+    private @Nullable Output<EC2FleetCapacityReservationOptionsRequestArgs> capacityReservationOptions;
 
-    public Output<EC2FleetCapacityReservationOptionsRequestArgs> capacityReservationOptions() {
-        return this.capacityReservationOptions == null ? Codegen.empty() : this.capacityReservationOptions;
+    public Optional<Output<EC2FleetCapacityReservationOptionsRequestArgs>> capacityReservationOptions() {
+        return Optional.ofNullable(this.capacityReservationOptions);
     }
 
     @Import(name="maxTotalPrice")
-      private final @Nullable Output<String> maxTotalPrice;
+    private @Nullable Output<String> maxTotalPrice;
 
-    public Output<String> maxTotalPrice() {
-        return this.maxTotalPrice == null ? Codegen.empty() : this.maxTotalPrice;
+    public Optional<Output<String>> maxTotalPrice() {
+        return Optional.ofNullable(this.maxTotalPrice);
     }
 
     @Import(name="minTargetCapacity")
-      private final @Nullable Output<Integer> minTargetCapacity;
+    private @Nullable Output<Integer> minTargetCapacity;
 
-    public Output<Integer> minTargetCapacity() {
-        return this.minTargetCapacity == null ? Codegen.empty() : this.minTargetCapacity;
+    public Optional<Output<Integer>> minTargetCapacity() {
+        return Optional.ofNullable(this.minTargetCapacity);
     }
 
     @Import(name="singleAvailabilityZone")
-      private final @Nullable Output<Boolean> singleAvailabilityZone;
+    private @Nullable Output<Boolean> singleAvailabilityZone;
 
-    public Output<Boolean> singleAvailabilityZone() {
-        return this.singleAvailabilityZone == null ? Codegen.empty() : this.singleAvailabilityZone;
+    public Optional<Output<Boolean>> singleAvailabilityZone() {
+        return Optional.ofNullable(this.singleAvailabilityZone);
     }
 
     @Import(name="singleInstanceType")
-      private final @Nullable Output<Boolean> singleInstanceType;
+    private @Nullable Output<Boolean> singleInstanceType;
 
-    public Output<Boolean> singleInstanceType() {
-        return this.singleInstanceType == null ? Codegen.empty() : this.singleInstanceType;
+    public Optional<Output<Boolean>> singleInstanceType() {
+        return Optional.ofNullable(this.singleInstanceType);
     }
 
-    public EC2FleetOnDemandOptionsRequestArgs(
-        @Nullable Output<String> allocationStrategy,
-        @Nullable Output<EC2FleetCapacityReservationOptionsRequestArgs> capacityReservationOptions,
-        @Nullable Output<String> maxTotalPrice,
-        @Nullable Output<Integer> minTargetCapacity,
-        @Nullable Output<Boolean> singleAvailabilityZone,
-        @Nullable Output<Boolean> singleInstanceType) {
-        this.allocationStrategy = allocationStrategy;
-        this.capacityReservationOptions = capacityReservationOptions;
-        this.maxTotalPrice = maxTotalPrice;
-        this.minTargetCapacity = minTargetCapacity;
-        this.singleAvailabilityZone = singleAvailabilityZone;
-        this.singleInstanceType = singleInstanceType;
-    }
+    private EC2FleetOnDemandOptionsRequestArgs() {}
 
-    private EC2FleetOnDemandOptionsRequestArgs() {
-        this.allocationStrategy = Codegen.empty();
-        this.capacityReservationOptions = Codegen.empty();
-        this.maxTotalPrice = Codegen.empty();
-        this.minTargetCapacity = Codegen.empty();
-        this.singleAvailabilityZone = Codegen.empty();
-        this.singleInstanceType = Codegen.empty();
+    private EC2FleetOnDemandOptionsRequestArgs(EC2FleetOnDemandOptionsRequestArgs $) {
+        this.allocationStrategy = $.allocationStrategy;
+        this.capacityReservationOptions = $.capacityReservationOptions;
+        this.maxTotalPrice = $.maxTotalPrice;
+        this.minTargetCapacity = $.minTargetCapacity;
+        this.singleAvailabilityZone = $.singleAvailabilityZone;
+        this.singleInstanceType = $.singleInstanceType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EC2FleetOnDemandOptionsRequestArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> allocationStrategy;
-        private @Nullable Output<EC2FleetCapacityReservationOptionsRequestArgs> capacityReservationOptions;
-        private @Nullable Output<String> maxTotalPrice;
-        private @Nullable Output<Integer> minTargetCapacity;
-        private @Nullable Output<Boolean> singleAvailabilityZone;
-        private @Nullable Output<Boolean> singleInstanceType;
+        private EC2FleetOnDemandOptionsRequestArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EC2FleetOnDemandOptionsRequestArgs();
         }
 
         public Builder(EC2FleetOnDemandOptionsRequestArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allocationStrategy = defaults.allocationStrategy;
-    	      this.capacityReservationOptions = defaults.capacityReservationOptions;
-    	      this.maxTotalPrice = defaults.maxTotalPrice;
-    	      this.minTargetCapacity = defaults.minTargetCapacity;
-    	      this.singleAvailabilityZone = defaults.singleAvailabilityZone;
-    	      this.singleInstanceType = defaults.singleInstanceType;
+            $ = new EC2FleetOnDemandOptionsRequestArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allocationStrategy(@Nullable Output<String> allocationStrategy) {
-            this.allocationStrategy = allocationStrategy;
+            $.allocationStrategy = allocationStrategy;
             return this;
         }
-        public Builder allocationStrategy(@Nullable String allocationStrategy) {
-            this.allocationStrategy = Codegen.ofNullable(allocationStrategy);
-            return this;
+
+        public Builder allocationStrategy(String allocationStrategy) {
+            return allocationStrategy(Output.of(allocationStrategy));
         }
+
         public Builder capacityReservationOptions(@Nullable Output<EC2FleetCapacityReservationOptionsRequestArgs> capacityReservationOptions) {
-            this.capacityReservationOptions = capacityReservationOptions;
+            $.capacityReservationOptions = capacityReservationOptions;
             return this;
         }
-        public Builder capacityReservationOptions(@Nullable EC2FleetCapacityReservationOptionsRequestArgs capacityReservationOptions) {
-            this.capacityReservationOptions = Codegen.ofNullable(capacityReservationOptions);
-            return this;
+
+        public Builder capacityReservationOptions(EC2FleetCapacityReservationOptionsRequestArgs capacityReservationOptions) {
+            return capacityReservationOptions(Output.of(capacityReservationOptions));
         }
+
         public Builder maxTotalPrice(@Nullable Output<String> maxTotalPrice) {
-            this.maxTotalPrice = maxTotalPrice;
+            $.maxTotalPrice = maxTotalPrice;
             return this;
         }
-        public Builder maxTotalPrice(@Nullable String maxTotalPrice) {
-            this.maxTotalPrice = Codegen.ofNullable(maxTotalPrice);
-            return this;
+
+        public Builder maxTotalPrice(String maxTotalPrice) {
+            return maxTotalPrice(Output.of(maxTotalPrice));
         }
+
         public Builder minTargetCapacity(@Nullable Output<Integer> minTargetCapacity) {
-            this.minTargetCapacity = minTargetCapacity;
+            $.minTargetCapacity = minTargetCapacity;
             return this;
         }
-        public Builder minTargetCapacity(@Nullable Integer minTargetCapacity) {
-            this.minTargetCapacity = Codegen.ofNullable(minTargetCapacity);
-            return this;
+
+        public Builder minTargetCapacity(Integer minTargetCapacity) {
+            return minTargetCapacity(Output.of(minTargetCapacity));
         }
+
         public Builder singleAvailabilityZone(@Nullable Output<Boolean> singleAvailabilityZone) {
-            this.singleAvailabilityZone = singleAvailabilityZone;
+            $.singleAvailabilityZone = singleAvailabilityZone;
             return this;
         }
-        public Builder singleAvailabilityZone(@Nullable Boolean singleAvailabilityZone) {
-            this.singleAvailabilityZone = Codegen.ofNullable(singleAvailabilityZone);
-            return this;
+
+        public Builder singleAvailabilityZone(Boolean singleAvailabilityZone) {
+            return singleAvailabilityZone(Output.of(singleAvailabilityZone));
         }
+
         public Builder singleInstanceType(@Nullable Output<Boolean> singleInstanceType) {
-            this.singleInstanceType = singleInstanceType;
+            $.singleInstanceType = singleInstanceType;
             return this;
         }
-        public Builder singleInstanceType(@Nullable Boolean singleInstanceType) {
-            this.singleInstanceType = Codegen.ofNullable(singleInstanceType);
-            return this;
-        }        public EC2FleetOnDemandOptionsRequestArgs build() {
-            return new EC2FleetOnDemandOptionsRequestArgs(allocationStrategy, capacityReservationOptions, maxTotalPrice, minTargetCapacity, singleAvailabilityZone, singleInstanceType);
+
+        public Builder singleInstanceType(Boolean singleInstanceType) {
+            return singleInstanceType(Output.of(singleInstanceType));
+        }
+
+        public EC2FleetOnDemandOptionsRequestArgs build() {
+            return $;
         }
     }
+
 }

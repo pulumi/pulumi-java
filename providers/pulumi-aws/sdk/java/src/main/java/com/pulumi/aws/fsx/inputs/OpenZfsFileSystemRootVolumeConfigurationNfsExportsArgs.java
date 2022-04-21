@@ -6,7 +6,6 @@ package com.pulumi.aws.fsx.inputs;
 import com.pulumi.aws.fsx.inputs.OpenZfsFileSystemRootVolumeConfigurationNfsExportsClientConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -20,52 +19,53 @@ public final class OpenZfsFileSystemRootVolumeConfigurationNfsExportsArgs extend
      * 
      */
     @Import(name="clientConfigurations", required=true)
-      private final Output<List<OpenZfsFileSystemRootVolumeConfigurationNfsExportsClientConfigurationArgs>> clientConfigurations;
+    private Output<List<OpenZfsFileSystemRootVolumeConfigurationNfsExportsClientConfigurationArgs>> clientConfigurations;
 
     public Output<List<OpenZfsFileSystemRootVolumeConfigurationNfsExportsClientConfigurationArgs>> clientConfigurations() {
         return this.clientConfigurations;
     }
 
-    public OpenZfsFileSystemRootVolumeConfigurationNfsExportsArgs(Output<List<OpenZfsFileSystemRootVolumeConfigurationNfsExportsClientConfigurationArgs>> clientConfigurations) {
-        this.clientConfigurations = Objects.requireNonNull(clientConfigurations, "expected parameter 'clientConfigurations' to be non-null");
-    }
+    private OpenZfsFileSystemRootVolumeConfigurationNfsExportsArgs() {}
 
-    private OpenZfsFileSystemRootVolumeConfigurationNfsExportsArgs() {
-        this.clientConfigurations = Codegen.empty();
+    private OpenZfsFileSystemRootVolumeConfigurationNfsExportsArgs(OpenZfsFileSystemRootVolumeConfigurationNfsExportsArgs $) {
+        this.clientConfigurations = $.clientConfigurations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OpenZfsFileSystemRootVolumeConfigurationNfsExportsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<OpenZfsFileSystemRootVolumeConfigurationNfsExportsClientConfigurationArgs>> clientConfigurations;
+        private OpenZfsFileSystemRootVolumeConfigurationNfsExportsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OpenZfsFileSystemRootVolumeConfigurationNfsExportsArgs();
         }
 
         public Builder(OpenZfsFileSystemRootVolumeConfigurationNfsExportsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientConfigurations = defaults.clientConfigurations;
+            $ = new OpenZfsFileSystemRootVolumeConfigurationNfsExportsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clientConfigurations(Output<List<OpenZfsFileSystemRootVolumeConfigurationNfsExportsClientConfigurationArgs>> clientConfigurations) {
-            this.clientConfigurations = Objects.requireNonNull(clientConfigurations);
+            $.clientConfigurations = clientConfigurations;
             return this;
         }
+
         public Builder clientConfigurations(List<OpenZfsFileSystemRootVolumeConfigurationNfsExportsClientConfigurationArgs> clientConfigurations) {
-            this.clientConfigurations = Output.of(Objects.requireNonNull(clientConfigurations));
-            return this;
+            return clientConfigurations(Output.of(clientConfigurations));
         }
+
         public Builder clientConfigurations(OpenZfsFileSystemRootVolumeConfigurationNfsExportsClientConfigurationArgs... clientConfigurations) {
             return clientConfigurations(List.of(clientConfigurations));
-        }        public OpenZfsFileSystemRootVolumeConfigurationNfsExportsArgs build() {
-            return new OpenZfsFileSystemRootVolumeConfigurationNfsExportsArgs(clientConfigurations);
+        }
+
+        public OpenZfsFileSystemRootVolumeConfigurationNfsExportsArgs build() {
+            $.clientConfigurations = Objects.requireNonNull($.clientConfigurations, "expected parameter 'clientConfigurations' to be non-null");
+            return $;
         }
     }
+
 }

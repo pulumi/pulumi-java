@@ -17,7 +17,7 @@ public final class QueryTimelineSampleResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="activeUnits", required=true)
-      private final String activeUnits;
+    private String activeUnits;
 
     public String activeUnits() {
         return this.activeUnits;
@@ -28,7 +28,7 @@ public final class QueryTimelineSampleResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="completedUnits", required=true)
-      private final String completedUnits;
+    private String completedUnits;
 
     public String completedUnits() {
         return this.completedUnits;
@@ -39,7 +39,7 @@ public final class QueryTimelineSampleResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="elapsedMs", required=true)
-      private final String elapsedMs;
+    private String elapsedMs;
 
     public String elapsedMs() {
         return this.elapsedMs;
@@ -50,7 +50,7 @@ public final class QueryTimelineSampleResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="pendingUnits", required=true)
-      private final String pendingUnits;
+    private String pendingUnits;
 
     public String pendingUnits() {
         return this.pendingUnits;
@@ -61,82 +61,73 @@ public final class QueryTimelineSampleResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="totalSlotMs", required=true)
-      private final String totalSlotMs;
+    private String totalSlotMs;
 
     public String totalSlotMs() {
         return this.totalSlotMs;
     }
 
-    public QueryTimelineSampleResponse(
-        String activeUnits,
-        String completedUnits,
-        String elapsedMs,
-        String pendingUnits,
-        String totalSlotMs) {
-        this.activeUnits = Objects.requireNonNull(activeUnits, "expected parameter 'activeUnits' to be non-null");
-        this.completedUnits = Objects.requireNonNull(completedUnits, "expected parameter 'completedUnits' to be non-null");
-        this.elapsedMs = Objects.requireNonNull(elapsedMs, "expected parameter 'elapsedMs' to be non-null");
-        this.pendingUnits = Objects.requireNonNull(pendingUnits, "expected parameter 'pendingUnits' to be non-null");
-        this.totalSlotMs = Objects.requireNonNull(totalSlotMs, "expected parameter 'totalSlotMs' to be non-null");
-    }
+    private QueryTimelineSampleResponse() {}
 
-    private QueryTimelineSampleResponse() {
-        this.activeUnits = null;
-        this.completedUnits = null;
-        this.elapsedMs = null;
-        this.pendingUnits = null;
-        this.totalSlotMs = null;
+    private QueryTimelineSampleResponse(QueryTimelineSampleResponse $) {
+        this.activeUnits = $.activeUnits;
+        this.completedUnits = $.completedUnits;
+        this.elapsedMs = $.elapsedMs;
+        this.pendingUnits = $.pendingUnits;
+        this.totalSlotMs = $.totalSlotMs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(QueryTimelineSampleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String activeUnits;
-        private String completedUnits;
-        private String elapsedMs;
-        private String pendingUnits;
-        private String totalSlotMs;
+        private QueryTimelineSampleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new QueryTimelineSampleResponse();
         }
 
         public Builder(QueryTimelineSampleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.activeUnits = defaults.activeUnits;
-    	      this.completedUnits = defaults.completedUnits;
-    	      this.elapsedMs = defaults.elapsedMs;
-    	      this.pendingUnits = defaults.pendingUnits;
-    	      this.totalSlotMs = defaults.totalSlotMs;
+            $ = new QueryTimelineSampleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder activeUnits(String activeUnits) {
-            this.activeUnits = Objects.requireNonNull(activeUnits);
+            $.activeUnits = activeUnits;
             return this;
         }
+
         public Builder completedUnits(String completedUnits) {
-            this.completedUnits = Objects.requireNonNull(completedUnits);
+            $.completedUnits = completedUnits;
             return this;
         }
+
         public Builder elapsedMs(String elapsedMs) {
-            this.elapsedMs = Objects.requireNonNull(elapsedMs);
+            $.elapsedMs = elapsedMs;
             return this;
         }
+
         public Builder pendingUnits(String pendingUnits) {
-            this.pendingUnits = Objects.requireNonNull(pendingUnits);
+            $.pendingUnits = pendingUnits;
             return this;
         }
+
         public Builder totalSlotMs(String totalSlotMs) {
-            this.totalSlotMs = Objects.requireNonNull(totalSlotMs);
+            $.totalSlotMs = totalSlotMs;
             return this;
-        }        public QueryTimelineSampleResponse build() {
-            return new QueryTimelineSampleResponse(activeUnits, completedUnits, elapsedMs, pendingUnits, totalSlotMs);
+        }
+
+        public QueryTimelineSampleResponse build() {
+            $.activeUnits = Objects.requireNonNull($.activeUnits, "expected parameter 'activeUnits' to be non-null");
+            $.completedUnits = Objects.requireNonNull($.completedUnits, "expected parameter 'completedUnits' to be non-null");
+            $.elapsedMs = Objects.requireNonNull($.elapsedMs, "expected parameter 'elapsedMs' to be non-null");
+            $.pendingUnits = Objects.requireNonNull($.pendingUnits, "expected parameter 'pendingUnits' to be non-null");
+            $.totalSlotMs = Objects.requireNonNull($.totalSlotMs, "expected parameter 'totalSlotMs' to be non-null");
+            return $;
         }
     }
+
 }

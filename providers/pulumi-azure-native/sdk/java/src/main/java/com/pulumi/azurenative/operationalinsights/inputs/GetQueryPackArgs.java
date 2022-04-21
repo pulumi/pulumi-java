@@ -17,7 +17,7 @@ public final class GetQueryPackArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="queryPackName", required=true)
-      private final String queryPackName;
+    private String queryPackName;
 
     public String queryPackName() {
         return this.queryPackName;
@@ -28,55 +28,52 @@ public final class GetQueryPackArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetQueryPackArgs(
-        String queryPackName,
-        String resourceGroupName) {
-        this.queryPackName = Objects.requireNonNull(queryPackName, "expected parameter 'queryPackName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetQueryPackArgs() {}
 
-    private GetQueryPackArgs() {
-        this.queryPackName = null;
-        this.resourceGroupName = null;
+    private GetQueryPackArgs(GetQueryPackArgs $) {
+        this.queryPackName = $.queryPackName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetQueryPackArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String queryPackName;
-        private String resourceGroupName;
+        private GetQueryPackArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetQueryPackArgs();
         }
 
         public Builder(GetQueryPackArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.queryPackName = defaults.queryPackName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetQueryPackArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder queryPackName(String queryPackName) {
-            this.queryPackName = Objects.requireNonNull(queryPackName);
+            $.queryPackName = queryPackName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetQueryPackArgs build() {
-            return new GetQueryPackArgs(queryPackName, resourceGroupName);
+        }
+
+        public GetQueryPackArgs build() {
+            $.queryPackName = Objects.requireNonNull($.queryPackName, "expected parameter 'queryPackName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

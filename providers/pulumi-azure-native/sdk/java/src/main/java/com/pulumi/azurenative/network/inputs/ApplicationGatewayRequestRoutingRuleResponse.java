@@ -25,10 +25,10 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends com.pulu
      * 
      */
     @Import(name="backendAddressPool")
-      private final @Nullable SubResourceResponse backendAddressPool;
+    private @Nullable SubResourceResponse backendAddressPool;
 
     public Optional<SubResourceResponse> backendAddressPool() {
-        return this.backendAddressPool == null ? Optional.empty() : Optional.ofNullable(this.backendAddressPool);
+        return Optional.ofNullable(this.backendAddressPool);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends com.pulu
      * 
      */
     @Import(name="backendHttpSettings")
-      private final @Nullable SubResourceResponse backendHttpSettings;
+    private @Nullable SubResourceResponse backendHttpSettings;
 
     public Optional<SubResourceResponse> backendHttpSettings() {
-        return this.backendHttpSettings == null ? Optional.empty() : Optional.ofNullable(this.backendHttpSettings);
+        return Optional.ofNullable(this.backendHttpSettings);
     }
 
     /**
@@ -47,7 +47,7 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends com.pulu
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -58,10 +58,10 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends com.pulu
      * 
      */
     @Import(name="httpListener")
-      private final @Nullable SubResourceResponse httpListener;
+    private @Nullable SubResourceResponse httpListener;
 
     public Optional<SubResourceResponse> httpListener() {
-        return this.httpListener == null ? Optional.empty() : Optional.ofNullable(this.httpListener);
+        return Optional.ofNullable(this.httpListener);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends com.pulu
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends com.pulu
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends com.pulu
      * 
      */
     @Import(name="priority")
-      private final @Nullable Integer priority;
+    private @Nullable Integer priority;
 
     public Optional<Integer> priority() {
-        return this.priority == null ? Optional.empty() : Optional.ofNullable(this.priority);
+        return Optional.ofNullable(this.priority);
     }
 
     /**
@@ -102,7 +102,7 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends com.pulu
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -113,10 +113,10 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends com.pulu
      * 
      */
     @Import(name="redirectConfiguration")
-      private final @Nullable SubResourceResponse redirectConfiguration;
+    private @Nullable SubResourceResponse redirectConfiguration;
 
     public Optional<SubResourceResponse> redirectConfiguration() {
-        return this.redirectConfiguration == null ? Optional.empty() : Optional.ofNullable(this.redirectConfiguration);
+        return Optional.ofNullable(this.redirectConfiguration);
     }
 
     /**
@@ -124,10 +124,10 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends com.pulu
      * 
      */
     @Import(name="rewriteRuleSet")
-      private final @Nullable SubResourceResponse rewriteRuleSet;
+    private @Nullable SubResourceResponse rewriteRuleSet;
 
     public Optional<SubResourceResponse> rewriteRuleSet() {
-        return this.rewriteRuleSet == null ? Optional.empty() : Optional.ofNullable(this.rewriteRuleSet);
+        return Optional.ofNullable(this.rewriteRuleSet);
     }
 
     /**
@@ -135,10 +135,10 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends com.pulu
      * 
      */
     @Import(name="ruleType")
-      private final @Nullable String ruleType;
+    private @Nullable String ruleType;
 
     public Optional<String> ruleType() {
-        return this.ruleType == null ? Optional.empty() : Optional.ofNullable(this.ruleType);
+        return Optional.ofNullable(this.ruleType);
     }
 
     /**
@@ -146,7 +146,7 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends com.pulu
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -157,154 +157,119 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends com.pulu
      * 
      */
     @Import(name="urlPathMap")
-      private final @Nullable SubResourceResponse urlPathMap;
+    private @Nullable SubResourceResponse urlPathMap;
 
     public Optional<SubResourceResponse> urlPathMap() {
-        return this.urlPathMap == null ? Optional.empty() : Optional.ofNullable(this.urlPathMap);
+        return Optional.ofNullable(this.urlPathMap);
     }
 
-    public ApplicationGatewayRequestRoutingRuleResponse(
-        @Nullable SubResourceResponse backendAddressPool,
-        @Nullable SubResourceResponse backendHttpSettings,
-        String etag,
-        @Nullable SubResourceResponse httpListener,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable Integer priority,
-        String provisioningState,
-        @Nullable SubResourceResponse redirectConfiguration,
-        @Nullable SubResourceResponse rewriteRuleSet,
-        @Nullable String ruleType,
-        String type,
-        @Nullable SubResourceResponse urlPathMap) {
-        this.backendAddressPool = backendAddressPool;
-        this.backendHttpSettings = backendHttpSettings;
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.httpListener = httpListener;
-        this.id = id;
-        this.name = name;
-        this.priority = priority;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.redirectConfiguration = redirectConfiguration;
-        this.rewriteRuleSet = rewriteRuleSet;
-        this.ruleType = ruleType;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.urlPathMap = urlPathMap;
-    }
+    private ApplicationGatewayRequestRoutingRuleResponse() {}
 
-    private ApplicationGatewayRequestRoutingRuleResponse() {
-        this.backendAddressPool = null;
-        this.backendHttpSettings = null;
-        this.etag = null;
-        this.httpListener = null;
-        this.id = null;
-        this.name = null;
-        this.priority = null;
-        this.provisioningState = null;
-        this.redirectConfiguration = null;
-        this.rewriteRuleSet = null;
-        this.ruleType = null;
-        this.type = null;
-        this.urlPathMap = null;
+    private ApplicationGatewayRequestRoutingRuleResponse(ApplicationGatewayRequestRoutingRuleResponse $) {
+        this.backendAddressPool = $.backendAddressPool;
+        this.backendHttpSettings = $.backendHttpSettings;
+        this.etag = $.etag;
+        this.httpListener = $.httpListener;
+        this.id = $.id;
+        this.name = $.name;
+        this.priority = $.priority;
+        this.provisioningState = $.provisioningState;
+        this.redirectConfiguration = $.redirectConfiguration;
+        this.rewriteRuleSet = $.rewriteRuleSet;
+        this.ruleType = $.ruleType;
+        this.type = $.type;
+        this.urlPathMap = $.urlPathMap;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationGatewayRequestRoutingRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable SubResourceResponse backendAddressPool;
-        private @Nullable SubResourceResponse backendHttpSettings;
-        private String etag;
-        private @Nullable SubResourceResponse httpListener;
-        private @Nullable String id;
-        private @Nullable String name;
-        private @Nullable Integer priority;
-        private String provisioningState;
-        private @Nullable SubResourceResponse redirectConfiguration;
-        private @Nullable SubResourceResponse rewriteRuleSet;
-        private @Nullable String ruleType;
-        private String type;
-        private @Nullable SubResourceResponse urlPathMap;
+        private ApplicationGatewayRequestRoutingRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationGatewayRequestRoutingRuleResponse();
         }
 
         public Builder(ApplicationGatewayRequestRoutingRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backendAddressPool = defaults.backendAddressPool;
-    	      this.backendHttpSettings = defaults.backendHttpSettings;
-    	      this.etag = defaults.etag;
-    	      this.httpListener = defaults.httpListener;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.priority = defaults.priority;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.redirectConfiguration = defaults.redirectConfiguration;
-    	      this.rewriteRuleSet = defaults.rewriteRuleSet;
-    	      this.ruleType = defaults.ruleType;
-    	      this.type = defaults.type;
-    	      this.urlPathMap = defaults.urlPathMap;
+            $ = new ApplicationGatewayRequestRoutingRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder backendAddressPool(@Nullable SubResourceResponse backendAddressPool) {
-            this.backendAddressPool = backendAddressPool;
+            $.backendAddressPool = backendAddressPool;
             return this;
         }
+
         public Builder backendHttpSettings(@Nullable SubResourceResponse backendHttpSettings) {
-            this.backendHttpSettings = backendHttpSettings;
+            $.backendHttpSettings = backendHttpSettings;
             return this;
         }
+
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder httpListener(@Nullable SubResourceResponse httpListener) {
-            this.httpListener = httpListener;
+            $.httpListener = httpListener;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder priority(@Nullable Integer priority) {
-            this.priority = priority;
+            $.priority = priority;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder redirectConfiguration(@Nullable SubResourceResponse redirectConfiguration) {
-            this.redirectConfiguration = redirectConfiguration;
+            $.redirectConfiguration = redirectConfiguration;
             return this;
         }
+
         public Builder rewriteRuleSet(@Nullable SubResourceResponse rewriteRuleSet) {
-            this.rewriteRuleSet = rewriteRuleSet;
+            $.rewriteRuleSet = rewriteRuleSet;
             return this;
         }
+
         public Builder ruleType(@Nullable String ruleType) {
-            this.ruleType = ruleType;
+            $.ruleType = ruleType;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder urlPathMap(@Nullable SubResourceResponse urlPathMap) {
-            this.urlPathMap = urlPathMap;
+            $.urlPathMap = urlPathMap;
             return this;
-        }        public ApplicationGatewayRequestRoutingRuleResponse build() {
-            return new ApplicationGatewayRequestRoutingRuleResponse(backendAddressPool, backendHttpSettings, etag, httpListener, id, name, priority, provisioningState, redirectConfiguration, rewriteRuleSet, ruleType, type, urlPathMap);
+        }
+
+        public ApplicationGatewayRequestRoutingRuleResponse build() {
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

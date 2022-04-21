@@ -8,9 +8,9 @@ import com.pulumi.azurenative.web.inputs.ClientRegistrationArgs;
 import com.pulumi.azurenative.web.inputs.LoginScopesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class GoogleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class GoogleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="login")
-      private final @Nullable Output<LoginScopesArgs> login;
+    private @Nullable Output<LoginScopesArgs> login;
 
-    public Output<LoginScopesArgs> login() {
-        return this.login == null ? Codegen.empty() : this.login;
+    public Optional<Output<LoginScopesArgs>> login() {
+        return Optional.ofNullable(this.login);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class GoogleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="registration")
-      private final @Nullable Output<ClientRegistrationArgs> registration;
+    private @Nullable Output<ClientRegistrationArgs> registration;
 
-    public Output<ClientRegistrationArgs> registration() {
-        return this.registration == null ? Codegen.empty() : this.registration;
+    public Optional<Output<ClientRegistrationArgs>> registration() {
+        return Optional.ofNullable(this.registration);
     }
 
     /**
@@ -60,89 +60,78 @@ public final class GoogleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="validation")
-      private final @Nullable Output<AllowedAudiencesValidationArgs> validation;
+    private @Nullable Output<AllowedAudiencesValidationArgs> validation;
 
-    public Output<AllowedAudiencesValidationArgs> validation() {
-        return this.validation == null ? Codegen.empty() : this.validation;
+    public Optional<Output<AllowedAudiencesValidationArgs>> validation() {
+        return Optional.ofNullable(this.validation);
     }
 
-    public GoogleArgs(
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<LoginScopesArgs> login,
-        @Nullable Output<ClientRegistrationArgs> registration,
-        @Nullable Output<AllowedAudiencesValidationArgs> validation) {
-        this.enabled = enabled;
-        this.login = login;
-        this.registration = registration;
-        this.validation = validation;
-    }
+    private GoogleArgs() {}
 
-    private GoogleArgs() {
-        this.enabled = Codegen.empty();
-        this.login = Codegen.empty();
-        this.registration = Codegen.empty();
-        this.validation = Codegen.empty();
+    private GoogleArgs(GoogleArgs $) {
+        this.enabled = $.enabled;
+        this.login = $.login;
+        this.registration = $.registration;
+        this.validation = $.validation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<LoginScopesArgs> login;
-        private @Nullable Output<ClientRegistrationArgs> registration;
-        private @Nullable Output<AllowedAudiencesValidationArgs> validation;
+        private GoogleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleArgs();
         }
 
         public Builder(GoogleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.login = defaults.login;
-    	      this.registration = defaults.registration;
-    	      this.validation = defaults.validation;
+            $ = new GoogleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder login(@Nullable Output<LoginScopesArgs> login) {
-            this.login = login;
+            $.login = login;
             return this;
         }
-        public Builder login(@Nullable LoginScopesArgs login) {
-            this.login = Codegen.ofNullable(login);
-            return this;
+
+        public Builder login(LoginScopesArgs login) {
+            return login(Output.of(login));
         }
+
         public Builder registration(@Nullable Output<ClientRegistrationArgs> registration) {
-            this.registration = registration;
+            $.registration = registration;
             return this;
         }
-        public Builder registration(@Nullable ClientRegistrationArgs registration) {
-            this.registration = Codegen.ofNullable(registration);
-            return this;
+
+        public Builder registration(ClientRegistrationArgs registration) {
+            return registration(Output.of(registration));
         }
+
         public Builder validation(@Nullable Output<AllowedAudiencesValidationArgs> validation) {
-            this.validation = validation;
+            $.validation = validation;
             return this;
         }
-        public Builder validation(@Nullable AllowedAudiencesValidationArgs validation) {
-            this.validation = Codegen.ofNullable(validation);
-            return this;
-        }        public GoogleArgs build() {
-            return new GoogleArgs(enabled, login, registration, validation);
+
+        public Builder validation(AllowedAudiencesValidationArgs validation) {
+            return validation(Output.of(validation));
+        }
+
+        public GoogleArgs build() {
+            return $;
         }
     }
+
 }

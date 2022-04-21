@@ -7,7 +7,6 @@ import com.pulumi.awsnative.elasticloadbalancingv2.inputs.ListenerRuleActionArgs
 import com.pulumi.awsnative.elasticloadbalancingv2.inputs.ListenerRuleRuleConditionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -19,116 +18,111 @@ public final class ListenerRuleArgs extends com.pulumi.resources.ResourceArgs {
     public static final ListenerRuleArgs Empty = new ListenerRuleArgs();
 
     @Import(name="actions", required=true)
-      private final Output<List<ListenerRuleActionArgs>> actions;
+    private Output<List<ListenerRuleActionArgs>> actions;
 
     public Output<List<ListenerRuleActionArgs>> actions() {
         return this.actions;
     }
 
     @Import(name="conditions", required=true)
-      private final Output<List<ListenerRuleRuleConditionArgs>> conditions;
+    private Output<List<ListenerRuleRuleConditionArgs>> conditions;
 
     public Output<List<ListenerRuleRuleConditionArgs>> conditions() {
         return this.conditions;
     }
 
     @Import(name="listenerArn", required=true)
-      private final Output<String> listenerArn;
+    private Output<String> listenerArn;
 
     public Output<String> listenerArn() {
         return this.listenerArn;
     }
 
     @Import(name="priority", required=true)
-      private final Output<Integer> priority;
+    private Output<Integer> priority;
 
     public Output<Integer> priority() {
         return this.priority;
     }
 
-    public ListenerRuleArgs(
-        Output<List<ListenerRuleActionArgs>> actions,
-        Output<List<ListenerRuleRuleConditionArgs>> conditions,
-        Output<String> listenerArn,
-        Output<Integer> priority) {
-        this.actions = Objects.requireNonNull(actions, "expected parameter 'actions' to be non-null");
-        this.conditions = Objects.requireNonNull(conditions, "expected parameter 'conditions' to be non-null");
-        this.listenerArn = Objects.requireNonNull(listenerArn, "expected parameter 'listenerArn' to be non-null");
-        this.priority = Objects.requireNonNull(priority, "expected parameter 'priority' to be non-null");
-    }
+    private ListenerRuleArgs() {}
 
-    private ListenerRuleArgs() {
-        this.actions = Codegen.empty();
-        this.conditions = Codegen.empty();
-        this.listenerArn = Codegen.empty();
-        this.priority = Codegen.empty();
+    private ListenerRuleArgs(ListenerRuleArgs $) {
+        this.actions = $.actions;
+        this.conditions = $.conditions;
+        this.listenerArn = $.listenerArn;
+        this.priority = $.priority;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListenerRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<ListenerRuleActionArgs>> actions;
-        private Output<List<ListenerRuleRuleConditionArgs>> conditions;
-        private Output<String> listenerArn;
-        private Output<Integer> priority;
+        private ListenerRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListenerRuleArgs();
         }
 
         public Builder(ListenerRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actions = defaults.actions;
-    	      this.conditions = defaults.conditions;
-    	      this.listenerArn = defaults.listenerArn;
-    	      this.priority = defaults.priority;
+            $ = new ListenerRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actions(Output<List<ListenerRuleActionArgs>> actions) {
-            this.actions = Objects.requireNonNull(actions);
+            $.actions = actions;
             return this;
         }
+
         public Builder actions(List<ListenerRuleActionArgs> actions) {
-            this.actions = Output.of(Objects.requireNonNull(actions));
-            return this;
+            return actions(Output.of(actions));
         }
+
         public Builder actions(ListenerRuleActionArgs... actions) {
             return actions(List.of(actions));
         }
+
         public Builder conditions(Output<List<ListenerRuleRuleConditionArgs>> conditions) {
-            this.conditions = Objects.requireNonNull(conditions);
+            $.conditions = conditions;
             return this;
         }
+
         public Builder conditions(List<ListenerRuleRuleConditionArgs> conditions) {
-            this.conditions = Output.of(Objects.requireNonNull(conditions));
-            return this;
+            return conditions(Output.of(conditions));
         }
+
         public Builder conditions(ListenerRuleRuleConditionArgs... conditions) {
             return conditions(List.of(conditions));
         }
+
         public Builder listenerArn(Output<String> listenerArn) {
-            this.listenerArn = Objects.requireNonNull(listenerArn);
+            $.listenerArn = listenerArn;
             return this;
         }
+
         public Builder listenerArn(String listenerArn) {
-            this.listenerArn = Output.of(Objects.requireNonNull(listenerArn));
-            return this;
+            return listenerArn(Output.of(listenerArn));
         }
+
         public Builder priority(Output<Integer> priority) {
-            this.priority = Objects.requireNonNull(priority);
+            $.priority = priority;
             return this;
         }
+
         public Builder priority(Integer priority) {
-            this.priority = Output.of(Objects.requireNonNull(priority));
-            return this;
-        }        public ListenerRuleArgs build() {
-            return new ListenerRuleArgs(actions, conditions, listenerArn, priority);
+            return priority(Output.of(priority));
+        }
+
+        public ListenerRuleArgs build() {
+            $.actions = Objects.requireNonNull($.actions, "expected parameter 'actions' to be non-null");
+            $.conditions = Objects.requireNonNull($.conditions, "expected parameter 'conditions' to be non-null");
+            $.listenerArn = Objects.requireNonNull($.listenerArn, "expected parameter 'listenerArn' to be non-null");
+            $.priority = Objects.requireNonNull($.priority, "expected parameter 'priority' to be non-null");
+            return $;
         }
     }
+
 }

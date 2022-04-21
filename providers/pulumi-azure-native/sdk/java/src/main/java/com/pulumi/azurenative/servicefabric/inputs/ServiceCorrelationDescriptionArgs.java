@@ -7,7 +7,6 @@ import com.pulumi.azurenative.servicefabric.enums.ServiceCorrelationScheme;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,7 +24,7 @@ public final class ServiceCorrelationDescriptionArgs extends com.pulumi.resource
      * 
      */
     @Import(name="scheme", required=true)
-      private final Output<Either<String,ServiceCorrelationScheme>> scheme;
+    private Output<Either<String,ServiceCorrelationScheme>> scheme;
 
     public Output<Either<String,ServiceCorrelationScheme>> scheme() {
         return this.scheme;
@@ -36,63 +35,60 @@ public final class ServiceCorrelationDescriptionArgs extends com.pulumi.resource
      * 
      */
     @Import(name="serviceName", required=true)
-      private final Output<String> serviceName;
+    private Output<String> serviceName;
 
     public Output<String> serviceName() {
         return this.serviceName;
     }
 
-    public ServiceCorrelationDescriptionArgs(
-        Output<Either<String,ServiceCorrelationScheme>> scheme,
-        Output<String> serviceName) {
-        this.scheme = Objects.requireNonNull(scheme, "expected parameter 'scheme' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-    }
+    private ServiceCorrelationDescriptionArgs() {}
 
-    private ServiceCorrelationDescriptionArgs() {
-        this.scheme = Codegen.empty();
-        this.serviceName = Codegen.empty();
+    private ServiceCorrelationDescriptionArgs(ServiceCorrelationDescriptionArgs $) {
+        this.scheme = $.scheme;
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceCorrelationDescriptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,ServiceCorrelationScheme>> scheme;
-        private Output<String> serviceName;
+        private ServiceCorrelationDescriptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceCorrelationDescriptionArgs();
         }
 
         public Builder(ServiceCorrelationDescriptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.scheme = defaults.scheme;
-    	      this.serviceName = defaults.serviceName;
+            $ = new ServiceCorrelationDescriptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder scheme(Output<Either<String,ServiceCorrelationScheme>> scheme) {
-            this.scheme = Objects.requireNonNull(scheme);
+            $.scheme = scheme;
             return this;
         }
+
         public Builder scheme(Either<String,ServiceCorrelationScheme> scheme) {
-            this.scheme = Output.of(Objects.requireNonNull(scheme));
-            return this;
+            return scheme(Output.of(scheme));
         }
+
         public Builder serviceName(Output<String> serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
-            return this;
-        }        public ServiceCorrelationDescriptionArgs build() {
-            return new ServiceCorrelationDescriptionArgs(scheme, serviceName);
+            return serviceName(Output.of(serviceName));
+        }
+
+        public ServiceCorrelationDescriptionArgs build() {
+            $.scheme = Objects.requireNonNull($.scheme, "expected parameter 'scheme' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

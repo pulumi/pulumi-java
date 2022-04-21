@@ -5,10 +5,10 @@ package com.pulumi.aws.lb;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class TargetGroupAttachmentArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="availabilityZone")
-      private final @Nullable Output<String> availabilityZone;
+    private @Nullable Output<String> availabilityZone;
 
-    public Output<String> availabilityZone() {
-        return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
+    public Optional<Output<String>> availabilityZone() {
+        return Optional.ofNullable(this.availabilityZone);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class TargetGroupAttachmentArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="port")
-      private final @Nullable Output<Integer> port;
+    private @Nullable Output<Integer> port;
 
-    public Output<Integer> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<Integer>> port() {
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class TargetGroupAttachmentArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="targetGroupArn", required=true)
-      private final Output<String> targetGroupArn;
+    private Output<String> targetGroupArn;
 
     public Output<String> targetGroupArn() {
         return this.targetGroupArn;
@@ -54,89 +54,80 @@ public final class TargetGroupAttachmentArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="targetId", required=true)
-      private final Output<String> targetId;
+    private Output<String> targetId;
 
     public Output<String> targetId() {
         return this.targetId;
     }
 
-    public TargetGroupAttachmentArgs(
-        @Nullable Output<String> availabilityZone,
-        @Nullable Output<Integer> port,
-        Output<String> targetGroupArn,
-        Output<String> targetId) {
-        this.availabilityZone = availabilityZone;
-        this.port = port;
-        this.targetGroupArn = Objects.requireNonNull(targetGroupArn, "expected parameter 'targetGroupArn' to be non-null");
-        this.targetId = Objects.requireNonNull(targetId, "expected parameter 'targetId' to be non-null");
-    }
+    private TargetGroupAttachmentArgs() {}
 
-    private TargetGroupAttachmentArgs() {
-        this.availabilityZone = Codegen.empty();
-        this.port = Codegen.empty();
-        this.targetGroupArn = Codegen.empty();
-        this.targetId = Codegen.empty();
+    private TargetGroupAttachmentArgs(TargetGroupAttachmentArgs $) {
+        this.availabilityZone = $.availabilityZone;
+        this.port = $.port;
+        this.targetGroupArn = $.targetGroupArn;
+        this.targetId = $.targetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TargetGroupAttachmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> availabilityZone;
-        private @Nullable Output<Integer> port;
-        private Output<String> targetGroupArn;
-        private Output<String> targetId;
+        private TargetGroupAttachmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TargetGroupAttachmentArgs();
         }
 
         public Builder(TargetGroupAttachmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.availabilityZone = defaults.availabilityZone;
-    	      this.port = defaults.port;
-    	      this.targetGroupArn = defaults.targetGroupArn;
-    	      this.targetId = defaults.targetId;
+            $ = new TargetGroupAttachmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
-            this.availabilityZone = availabilityZone;
+            $.availabilityZone = availabilityZone;
             return this;
         }
-        public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Codegen.ofNullable(availabilityZone);
-            return this;
+
+        public Builder availabilityZone(String availabilityZone) {
+            return availabilityZone(Output.of(availabilityZone));
         }
+
         public Builder port(@Nullable Output<Integer> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable Integer port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
+
+        public Builder port(Integer port) {
+            return port(Output.of(port));
         }
+
         public Builder targetGroupArn(Output<String> targetGroupArn) {
-            this.targetGroupArn = Objects.requireNonNull(targetGroupArn);
+            $.targetGroupArn = targetGroupArn;
             return this;
         }
+
         public Builder targetGroupArn(String targetGroupArn) {
-            this.targetGroupArn = Output.of(Objects.requireNonNull(targetGroupArn));
-            return this;
+            return targetGroupArn(Output.of(targetGroupArn));
         }
+
         public Builder targetId(Output<String> targetId) {
-            this.targetId = Objects.requireNonNull(targetId);
+            $.targetId = targetId;
             return this;
         }
+
         public Builder targetId(String targetId) {
-            this.targetId = Output.of(Objects.requireNonNull(targetId));
-            return this;
-        }        public TargetGroupAttachmentArgs build() {
-            return new TargetGroupAttachmentArgs(availabilityZone, port, targetGroupArn, targetId);
+            return targetId(Output.of(targetId));
+        }
+
+        public TargetGroupAttachmentArgs build() {
+            $.targetGroupArn = Objects.requireNonNull($.targetGroupArn, "expected parameter 'targetGroupArn' to be non-null");
+            $.targetId = Objects.requireNonNull($.targetId, "expected parameter 'targetId' to be non-null");
+            return $;
         }
     }
+
 }

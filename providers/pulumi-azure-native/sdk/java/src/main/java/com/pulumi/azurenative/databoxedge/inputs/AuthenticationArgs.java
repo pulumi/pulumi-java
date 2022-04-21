@@ -6,8 +6,8 @@ package com.pulumi.azurenative.databoxedge.inputs;
 import com.pulumi.azurenative.databoxedge.inputs.SymmetricKeyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class AuthenticationArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="symmetricKey")
-      private final @Nullable Output<SymmetricKeyArgs> symmetricKey;
+    private @Nullable Output<SymmetricKeyArgs> symmetricKey;
 
-    public Output<SymmetricKeyArgs> symmetricKey() {
-        return this.symmetricKey == null ? Codegen.empty() : this.symmetricKey;
+    public Optional<Output<SymmetricKeyArgs>> symmetricKey() {
+        return Optional.ofNullable(this.symmetricKey);
     }
 
-    public AuthenticationArgs(@Nullable Output<SymmetricKeyArgs> symmetricKey) {
-        this.symmetricKey = symmetricKey;
-    }
+    private AuthenticationArgs() {}
 
-    private AuthenticationArgs() {
-        this.symmetricKey = Codegen.empty();
+    private AuthenticationArgs(AuthenticationArgs $) {
+        this.symmetricKey = $.symmetricKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AuthenticationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<SymmetricKeyArgs> symmetricKey;
+        private AuthenticationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AuthenticationArgs();
         }
 
         public Builder(AuthenticationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.symmetricKey = defaults.symmetricKey;
+            $ = new AuthenticationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder symmetricKey(@Nullable Output<SymmetricKeyArgs> symmetricKey) {
-            this.symmetricKey = symmetricKey;
+            $.symmetricKey = symmetricKey;
             return this;
         }
-        public Builder symmetricKey(@Nullable SymmetricKeyArgs symmetricKey) {
-            this.symmetricKey = Codegen.ofNullable(symmetricKey);
-            return this;
-        }        public AuthenticationArgs build() {
-            return new AuthenticationArgs(symmetricKey);
+
+        public Builder symmetricKey(SymmetricKeyArgs symmetricKey) {
+            return symmetricKey(Output.of(symmetricKey));
+        }
+
+        public AuthenticationArgs build() {
+            return $;
         }
     }
+
 }

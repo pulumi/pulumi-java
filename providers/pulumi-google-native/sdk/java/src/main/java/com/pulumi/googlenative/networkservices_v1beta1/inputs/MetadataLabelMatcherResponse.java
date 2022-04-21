@@ -23,7 +23,7 @@ public final class MetadataLabelMatcherResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="metadataLabelMatchCriteria", required=true)
-      private final String metadataLabelMatchCriteria;
+    private String metadataLabelMatchCriteria;
 
     public String metadataLabelMatchCriteria() {
         return this.metadataLabelMatchCriteria;
@@ -34,58 +34,56 @@ public final class MetadataLabelMatcherResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="metadataLabels", required=true)
-      private final List<MetadataLabelsResponse> metadataLabels;
+    private List<MetadataLabelsResponse> metadataLabels;
 
     public List<MetadataLabelsResponse> metadataLabels() {
         return this.metadataLabels;
     }
 
-    public MetadataLabelMatcherResponse(
-        String metadataLabelMatchCriteria,
-        List<MetadataLabelsResponse> metadataLabels) {
-        this.metadataLabelMatchCriteria = Objects.requireNonNull(metadataLabelMatchCriteria, "expected parameter 'metadataLabelMatchCriteria' to be non-null");
-        this.metadataLabels = Objects.requireNonNull(metadataLabels, "expected parameter 'metadataLabels' to be non-null");
-    }
+    private MetadataLabelMatcherResponse() {}
 
-    private MetadataLabelMatcherResponse() {
-        this.metadataLabelMatchCriteria = null;
-        this.metadataLabels = List.of();
+    private MetadataLabelMatcherResponse(MetadataLabelMatcherResponse $) {
+        this.metadataLabelMatchCriteria = $.metadataLabelMatchCriteria;
+        this.metadataLabels = $.metadataLabels;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetadataLabelMatcherResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String metadataLabelMatchCriteria;
-        private List<MetadataLabelsResponse> metadataLabels;
+        private MetadataLabelMatcherResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetadataLabelMatcherResponse();
         }
 
         public Builder(MetadataLabelMatcherResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.metadataLabelMatchCriteria = defaults.metadataLabelMatchCriteria;
-    	      this.metadataLabels = defaults.metadataLabels;
+            $ = new MetadataLabelMatcherResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder metadataLabelMatchCriteria(String metadataLabelMatchCriteria) {
-            this.metadataLabelMatchCriteria = Objects.requireNonNull(metadataLabelMatchCriteria);
+            $.metadataLabelMatchCriteria = metadataLabelMatchCriteria;
             return this;
         }
+
         public Builder metadataLabels(List<MetadataLabelsResponse> metadataLabels) {
-            this.metadataLabels = Objects.requireNonNull(metadataLabels);
+            $.metadataLabels = metadataLabels;
             return this;
         }
+
         public Builder metadataLabels(MetadataLabelsResponse... metadataLabels) {
             return metadataLabels(List.of(metadataLabels));
-        }        public MetadataLabelMatcherResponse build() {
-            return new MetadataLabelMatcherResponse(metadataLabelMatchCriteria, metadataLabels);
+        }
+
+        public MetadataLabelMatcherResponse build() {
+            $.metadataLabelMatchCriteria = Objects.requireNonNull($.metadataLabelMatchCriteria, "expected parameter 'metadataLabelMatchCriteria' to be non-null");
+            $.metadataLabels = Objects.requireNonNull($.metadataLabels, "expected parameter 'metadataLabels' to be non-null");
+            return $;
         }
     }
+
 }

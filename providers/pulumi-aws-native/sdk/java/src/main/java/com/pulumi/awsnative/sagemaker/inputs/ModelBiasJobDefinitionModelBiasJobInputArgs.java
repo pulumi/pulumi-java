@@ -7,7 +7,6 @@ import com.pulumi.awsnative.sagemaker.inputs.ModelBiasJobDefinitionEndpointInput
 import com.pulumi.awsnative.sagemaker.inputs.ModelBiasJobDefinitionMonitoringGroundTruthS3InputArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -20,70 +19,67 @@ public final class ModelBiasJobDefinitionModelBiasJobInputArgs extends com.pulum
     public static final ModelBiasJobDefinitionModelBiasJobInputArgs Empty = new ModelBiasJobDefinitionModelBiasJobInputArgs();
 
     @Import(name="endpointInput", required=true)
-      private final Output<ModelBiasJobDefinitionEndpointInputArgs> endpointInput;
+    private Output<ModelBiasJobDefinitionEndpointInputArgs> endpointInput;
 
     public Output<ModelBiasJobDefinitionEndpointInputArgs> endpointInput() {
         return this.endpointInput;
     }
 
     @Import(name="groundTruthS3Input", required=true)
-      private final Output<ModelBiasJobDefinitionMonitoringGroundTruthS3InputArgs> groundTruthS3Input;
+    private Output<ModelBiasJobDefinitionMonitoringGroundTruthS3InputArgs> groundTruthS3Input;
 
     public Output<ModelBiasJobDefinitionMonitoringGroundTruthS3InputArgs> groundTruthS3Input() {
         return this.groundTruthS3Input;
     }
 
-    public ModelBiasJobDefinitionModelBiasJobInputArgs(
-        Output<ModelBiasJobDefinitionEndpointInputArgs> endpointInput,
-        Output<ModelBiasJobDefinitionMonitoringGroundTruthS3InputArgs> groundTruthS3Input) {
-        this.endpointInput = Objects.requireNonNull(endpointInput, "expected parameter 'endpointInput' to be non-null");
-        this.groundTruthS3Input = Objects.requireNonNull(groundTruthS3Input, "expected parameter 'groundTruthS3Input' to be non-null");
-    }
+    private ModelBiasJobDefinitionModelBiasJobInputArgs() {}
 
-    private ModelBiasJobDefinitionModelBiasJobInputArgs() {
-        this.endpointInput = Codegen.empty();
-        this.groundTruthS3Input = Codegen.empty();
+    private ModelBiasJobDefinitionModelBiasJobInputArgs(ModelBiasJobDefinitionModelBiasJobInputArgs $) {
+        this.endpointInput = $.endpointInput;
+        this.groundTruthS3Input = $.groundTruthS3Input;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ModelBiasJobDefinitionModelBiasJobInputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ModelBiasJobDefinitionEndpointInputArgs> endpointInput;
-        private Output<ModelBiasJobDefinitionMonitoringGroundTruthS3InputArgs> groundTruthS3Input;
+        private ModelBiasJobDefinitionModelBiasJobInputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ModelBiasJobDefinitionModelBiasJobInputArgs();
         }
 
         public Builder(ModelBiasJobDefinitionModelBiasJobInputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpointInput = defaults.endpointInput;
-    	      this.groundTruthS3Input = defaults.groundTruthS3Input;
+            $ = new ModelBiasJobDefinitionModelBiasJobInputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endpointInput(Output<ModelBiasJobDefinitionEndpointInputArgs> endpointInput) {
-            this.endpointInput = Objects.requireNonNull(endpointInput);
+            $.endpointInput = endpointInput;
             return this;
         }
+
         public Builder endpointInput(ModelBiasJobDefinitionEndpointInputArgs endpointInput) {
-            this.endpointInput = Output.of(Objects.requireNonNull(endpointInput));
-            return this;
+            return endpointInput(Output.of(endpointInput));
         }
+
         public Builder groundTruthS3Input(Output<ModelBiasJobDefinitionMonitoringGroundTruthS3InputArgs> groundTruthS3Input) {
-            this.groundTruthS3Input = Objects.requireNonNull(groundTruthS3Input);
+            $.groundTruthS3Input = groundTruthS3Input;
             return this;
         }
+
         public Builder groundTruthS3Input(ModelBiasJobDefinitionMonitoringGroundTruthS3InputArgs groundTruthS3Input) {
-            this.groundTruthS3Input = Output.of(Objects.requireNonNull(groundTruthS3Input));
-            return this;
-        }        public ModelBiasJobDefinitionModelBiasJobInputArgs build() {
-            return new ModelBiasJobDefinitionModelBiasJobInputArgs(endpointInput, groundTruthS3Input);
+            return groundTruthS3Input(Output.of(groundTruthS3Input));
+        }
+
+        public ModelBiasJobDefinitionModelBiasJobInputArgs build() {
+            $.endpointInput = Objects.requireNonNull($.endpointInput, "expected parameter 'endpointInput' to be non-null");
+            $.groundTruthS3Input = Objects.requireNonNull($.groundTruthS3Input, "expected parameter 'groundTruthS3Input' to be non-null");
+            return $;
         }
     }
+
 }

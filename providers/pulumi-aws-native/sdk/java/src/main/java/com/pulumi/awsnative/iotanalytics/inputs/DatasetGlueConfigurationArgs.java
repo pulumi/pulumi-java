@@ -5,7 +5,6 @@ package com.pulumi.awsnative.iotanalytics.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,70 +14,67 @@ public final class DatasetGlueConfigurationArgs extends com.pulumi.resources.Res
     public static final DatasetGlueConfigurationArgs Empty = new DatasetGlueConfigurationArgs();
 
     @Import(name="databaseName", required=true)
-      private final Output<String> databaseName;
+    private Output<String> databaseName;
 
     public Output<String> databaseName() {
         return this.databaseName;
     }
 
     @Import(name="tableName", required=true)
-      private final Output<String> tableName;
+    private Output<String> tableName;
 
     public Output<String> tableName() {
         return this.tableName;
     }
 
-    public DatasetGlueConfigurationArgs(
-        Output<String> databaseName,
-        Output<String> tableName) {
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.tableName = Objects.requireNonNull(tableName, "expected parameter 'tableName' to be non-null");
-    }
+    private DatasetGlueConfigurationArgs() {}
 
-    private DatasetGlueConfigurationArgs() {
-        this.databaseName = Codegen.empty();
-        this.tableName = Codegen.empty();
+    private DatasetGlueConfigurationArgs(DatasetGlueConfigurationArgs $) {
+        this.databaseName = $.databaseName;
+        this.tableName = $.tableName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetGlueConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> databaseName;
-        private Output<String> tableName;
+        private DatasetGlueConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetGlueConfigurationArgs();
         }
 
         public Builder(DatasetGlueConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.databaseName = defaults.databaseName;
-    	      this.tableName = defaults.tableName;
+            $ = new DatasetGlueConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder databaseName(Output<String> databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder databaseName(String databaseName) {
-            this.databaseName = Output.of(Objects.requireNonNull(databaseName));
-            return this;
+            return databaseName(Output.of(databaseName));
         }
+
         public Builder tableName(Output<String> tableName) {
-            this.tableName = Objects.requireNonNull(tableName);
+            $.tableName = tableName;
             return this;
         }
+
         public Builder tableName(String tableName) {
-            this.tableName = Output.of(Objects.requireNonNull(tableName));
-            return this;
-        }        public DatasetGlueConfigurationArgs build() {
-            return new DatasetGlueConfigurationArgs(databaseName, tableName);
+            return tableName(Output.of(tableName));
+        }
+
+        public DatasetGlueConfigurationArgs build() {
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            $.tableName = Objects.requireNonNull($.tableName, "expected parameter 'tableName' to be non-null");
+            return $;
         }
     }
+
 }

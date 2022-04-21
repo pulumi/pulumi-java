@@ -5,9 +5,9 @@ package com.pulumi.aws.iam.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class RolePolicyAttachmentState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="policyArn")
-      private final @Nullable Output<String> policyArn;
+    private @Nullable Output<String> policyArn;
 
-    public Output<String> policyArn() {
-        return this.policyArn == null ? Codegen.empty() : this.policyArn;
+    public Optional<Output<String>> policyArn() {
+        return Optional.ofNullable(this.policyArn);
     }
 
     /**
@@ -31,59 +31,58 @@ public final class RolePolicyAttachmentState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="role")
-      private final @Nullable Output<String> role;
+    private @Nullable Output<String> role;
 
-    public Output<String> role() {
-        return this.role == null ? Codegen.empty() : this.role;
+    public Optional<Output<String>> role() {
+        return Optional.ofNullable(this.role);
     }
 
-    public RolePolicyAttachmentState(
-        @Nullable Output<String> policyArn,
-        @Nullable Output<String> role) {
-        this.policyArn = policyArn;
-        this.role = role;
-    }
+    private RolePolicyAttachmentState() {}
 
-    private RolePolicyAttachmentState() {
-        this.policyArn = Codegen.empty();
-        this.role = Codegen.empty();
+    private RolePolicyAttachmentState(RolePolicyAttachmentState $) {
+        this.policyArn = $.policyArn;
+        this.role = $.role;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RolePolicyAttachmentState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> policyArn;
-        private @Nullable Output<String> role;
+        private RolePolicyAttachmentState $;
 
         public Builder() {
-    	      // Empty
+            $ = new RolePolicyAttachmentState();
         }
 
         public Builder(RolePolicyAttachmentState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.policyArn = defaults.policyArn;
-    	      this.role = defaults.role;
+            $ = new RolePolicyAttachmentState(Objects.requireNonNull(defaults));
         }
 
         public Builder policyArn(@Nullable Output<String> policyArn) {
-            this.policyArn = policyArn;
+            $.policyArn = policyArn;
             return this;
         }
-        public Builder policyArn(@Nullable String policyArn) {
-            this.policyArn = Codegen.ofNullable(policyArn);
-            return this;
+
+        public Builder policyArn(String policyArn) {
+            return policyArn(Output.of(policyArn));
         }
+
         public Builder role(@Nullable Output<String> role) {
-            this.role = role;
+            $.role = role;
             return this;
-        }        public RolePolicyAttachmentState build() {
-            return new RolePolicyAttachmentState(policyArn, role);
+        }
+
+        public Builder role(String role) {
+            return role(Output.of(role));
+        }
+
+        public RolePolicyAttachmentState build() {
+            return $;
         }
     }
+
 }

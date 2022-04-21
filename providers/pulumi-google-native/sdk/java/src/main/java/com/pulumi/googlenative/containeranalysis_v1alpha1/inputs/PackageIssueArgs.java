@@ -5,10 +5,10 @@ package com.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.VulnerabilityLocationArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class PackageIssueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="affectedLocation")
-      private final @Nullable Output<VulnerabilityLocationArgs> affectedLocation;
+    private @Nullable Output<VulnerabilityLocationArgs> affectedLocation;
 
-    public Output<VulnerabilityLocationArgs> affectedLocation() {
-        return this.affectedLocation == null ? Codegen.empty() : this.affectedLocation;
+    public Optional<Output<VulnerabilityLocationArgs>> affectedLocation() {
+        return Optional.ofNullable(this.affectedLocation);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class PackageIssueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fixedLocation")
-      private final @Nullable Output<VulnerabilityLocationArgs> fixedLocation;
+    private @Nullable Output<VulnerabilityLocationArgs> fixedLocation;
 
-    public Output<VulnerabilityLocationArgs> fixedLocation() {
-        return this.fixedLocation == null ? Codegen.empty() : this.fixedLocation;
+    public Optional<Output<VulnerabilityLocationArgs>> fixedLocation() {
+        return Optional.ofNullable(this.fixedLocation);
     }
 
     /**
@@ -47,96 +47,85 @@ public final class PackageIssueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="packageType")
-      private final @Nullable Output<String> packageType;
+    private @Nullable Output<String> packageType;
 
-    public Output<String> packageType() {
-        return this.packageType == null ? Codegen.empty() : this.packageType;
+    public Optional<Output<String>> packageType() {
+        return Optional.ofNullable(this.packageType);
     }
 
     @Import(name="severityName")
-      private final @Nullable Output<String> severityName;
+    private @Nullable Output<String> severityName;
 
-    public Output<String> severityName() {
-        return this.severityName == null ? Codegen.empty() : this.severityName;
+    public Optional<Output<String>> severityName() {
+        return Optional.ofNullable(this.severityName);
     }
 
-    public PackageIssueArgs(
-        @Nullable Output<VulnerabilityLocationArgs> affectedLocation,
-        @Nullable Output<VulnerabilityLocationArgs> fixedLocation,
-        @Nullable Output<String> packageType,
-        @Nullable Output<String> severityName) {
-        this.affectedLocation = affectedLocation;
-        this.fixedLocation = fixedLocation;
-        this.packageType = packageType;
-        this.severityName = severityName;
-    }
+    private PackageIssueArgs() {}
 
-    private PackageIssueArgs() {
-        this.affectedLocation = Codegen.empty();
-        this.fixedLocation = Codegen.empty();
-        this.packageType = Codegen.empty();
-        this.severityName = Codegen.empty();
+    private PackageIssueArgs(PackageIssueArgs $) {
+        this.affectedLocation = $.affectedLocation;
+        this.fixedLocation = $.fixedLocation;
+        this.packageType = $.packageType;
+        this.severityName = $.severityName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PackageIssueArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<VulnerabilityLocationArgs> affectedLocation;
-        private @Nullable Output<VulnerabilityLocationArgs> fixedLocation;
-        private @Nullable Output<String> packageType;
-        private @Nullable Output<String> severityName;
+        private PackageIssueArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PackageIssueArgs();
         }
 
         public Builder(PackageIssueArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.affectedLocation = defaults.affectedLocation;
-    	      this.fixedLocation = defaults.fixedLocation;
-    	      this.packageType = defaults.packageType;
-    	      this.severityName = defaults.severityName;
+            $ = new PackageIssueArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder affectedLocation(@Nullable Output<VulnerabilityLocationArgs> affectedLocation) {
-            this.affectedLocation = affectedLocation;
+            $.affectedLocation = affectedLocation;
             return this;
         }
-        public Builder affectedLocation(@Nullable VulnerabilityLocationArgs affectedLocation) {
-            this.affectedLocation = Codegen.ofNullable(affectedLocation);
-            return this;
+
+        public Builder affectedLocation(VulnerabilityLocationArgs affectedLocation) {
+            return affectedLocation(Output.of(affectedLocation));
         }
+
         public Builder fixedLocation(@Nullable Output<VulnerabilityLocationArgs> fixedLocation) {
-            this.fixedLocation = fixedLocation;
+            $.fixedLocation = fixedLocation;
             return this;
         }
-        public Builder fixedLocation(@Nullable VulnerabilityLocationArgs fixedLocation) {
-            this.fixedLocation = Codegen.ofNullable(fixedLocation);
-            return this;
+
+        public Builder fixedLocation(VulnerabilityLocationArgs fixedLocation) {
+            return fixedLocation(Output.of(fixedLocation));
         }
+
         public Builder packageType(@Nullable Output<String> packageType) {
-            this.packageType = packageType;
+            $.packageType = packageType;
             return this;
         }
-        public Builder packageType(@Nullable String packageType) {
-            this.packageType = Codegen.ofNullable(packageType);
-            return this;
+
+        public Builder packageType(String packageType) {
+            return packageType(Output.of(packageType));
         }
+
         public Builder severityName(@Nullable Output<String> severityName) {
-            this.severityName = severityName;
+            $.severityName = severityName;
             return this;
         }
-        public Builder severityName(@Nullable String severityName) {
-            this.severityName = Codegen.ofNullable(severityName);
-            return this;
-        }        public PackageIssueArgs build() {
-            return new PackageIssueArgs(affectedLocation, fixedLocation, packageType, severityName);
+
+        public Builder severityName(String severityName) {
+            return severityName(Output.of(severityName));
+        }
+
+        public PackageIssueArgs build() {
+            return $;
         }
     }
+
 }

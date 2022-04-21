@@ -24,7 +24,7 @@ public final class ResourceRequestsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="cpu", required=true)
-      private final Double cpu;
+    private Double cpu;
 
     public Double cpu() {
         return this.cpu;
@@ -35,10 +35,10 @@ public final class ResourceRequestsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="gpu")
-      private final @Nullable GpuResourceResponse gpu;
+    private @Nullable GpuResourceResponse gpu;
 
     public Optional<GpuResourceResponse> gpu() {
-        return this.gpu == null ? Optional.empty() : Optional.ofNullable(this.gpu);
+        return Optional.ofNullable(this.gpu);
     }
 
     /**
@@ -46,64 +46,58 @@ public final class ResourceRequestsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="memoryInGB", required=true)
-      private final Double memoryInGB;
+    private Double memoryInGB;
 
     public Double memoryInGB() {
         return this.memoryInGB;
     }
 
-    public ResourceRequestsResponse(
-        Double cpu,
-        @Nullable GpuResourceResponse gpu,
-        Double memoryInGB) {
-        this.cpu = Objects.requireNonNull(cpu, "expected parameter 'cpu' to be non-null");
-        this.gpu = gpu;
-        this.memoryInGB = Objects.requireNonNull(memoryInGB, "expected parameter 'memoryInGB' to be non-null");
-    }
+    private ResourceRequestsResponse() {}
 
-    private ResourceRequestsResponse() {
-        this.cpu = null;
-        this.gpu = null;
-        this.memoryInGB = null;
+    private ResourceRequestsResponse(ResourceRequestsResponse $) {
+        this.cpu = $.cpu;
+        this.gpu = $.gpu;
+        this.memoryInGB = $.memoryInGB;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceRequestsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double cpu;
-        private @Nullable GpuResourceResponse gpu;
-        private Double memoryInGB;
+        private ResourceRequestsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceRequestsResponse();
         }
 
         public Builder(ResourceRequestsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cpu = defaults.cpu;
-    	      this.gpu = defaults.gpu;
-    	      this.memoryInGB = defaults.memoryInGB;
+            $ = new ResourceRequestsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cpu(Double cpu) {
-            this.cpu = Objects.requireNonNull(cpu);
+            $.cpu = cpu;
             return this;
         }
+
         public Builder gpu(@Nullable GpuResourceResponse gpu) {
-            this.gpu = gpu;
+            $.gpu = gpu;
             return this;
         }
+
         public Builder memoryInGB(Double memoryInGB) {
-            this.memoryInGB = Objects.requireNonNull(memoryInGB);
+            $.memoryInGB = memoryInGB;
             return this;
-        }        public ResourceRequestsResponse build() {
-            return new ResourceRequestsResponse(cpu, gpu, memoryInGB);
+        }
+
+        public ResourceRequestsResponse build() {
+            $.cpu = Objects.requireNonNull($.cpu, "expected parameter 'cpu' to be non-null");
+            $.memoryInGB = Objects.requireNonNull($.memoryInGB, "expected parameter 'memoryInGB' to be non-null");
+            return $;
         }
     }
+
 }

@@ -26,10 +26,10 @@ public final class HdfsSourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="disableMetricsCollection")
-      private final @Nullable Object disableMetricsCollection;
+    private @Nullable Object disableMetricsCollection;
 
     public Optional<Object> disableMetricsCollection() {
-        return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
+        return Optional.ofNullable(this.disableMetricsCollection);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class HdfsSourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="distcpSettings")
-      private final @Nullable DistcpSettingsResponse distcpSettings;
+    private @Nullable DistcpSettingsResponse distcpSettings;
 
     public Optional<DistcpSettingsResponse> distcpSettings() {
-        return this.distcpSettings == null ? Optional.empty() : Optional.ofNullable(this.distcpSettings);
+        return Optional.ofNullable(this.distcpSettings);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class HdfsSourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="maxConcurrentConnections")
-      private final @Nullable Object maxConcurrentConnections;
+    private @Nullable Object maxConcurrentConnections;
 
     public Optional<Object> maxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
+        return Optional.ofNullable(this.maxConcurrentConnections);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class HdfsSourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="recursive")
-      private final @Nullable Object recursive;
+    private @Nullable Object recursive;
 
     public Optional<Object> recursive() {
-        return this.recursive == null ? Optional.empty() : Optional.ofNullable(this.recursive);
+        return Optional.ofNullable(this.recursive);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class HdfsSourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sourceRetryCount")
-      private final @Nullable Object sourceRetryCount;
+    private @Nullable Object sourceRetryCount;
 
     public Optional<Object> sourceRetryCount() {
-        return this.sourceRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryCount);
+        return Optional.ofNullable(this.sourceRetryCount);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class HdfsSourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sourceRetryWait")
-      private final @Nullable Object sourceRetryWait;
+    private @Nullable Object sourceRetryWait;
 
     public Optional<Object> sourceRetryWait() {
-        return this.sourceRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryWait);
+        return Optional.ofNullable(this.sourceRetryWait);
     }
 
     /**
@@ -93,100 +93,81 @@ public final class HdfsSourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public HdfsSourceResponse(
-        @Nullable Object disableMetricsCollection,
-        @Nullable DistcpSettingsResponse distcpSettings,
-        @Nullable Object maxConcurrentConnections,
-        @Nullable Object recursive,
-        @Nullable Object sourceRetryCount,
-        @Nullable Object sourceRetryWait,
-        String type) {
-        this.disableMetricsCollection = disableMetricsCollection;
-        this.distcpSettings = distcpSettings;
-        this.maxConcurrentConnections = maxConcurrentConnections;
-        this.recursive = recursive;
-        this.sourceRetryCount = sourceRetryCount;
-        this.sourceRetryWait = sourceRetryWait;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private HdfsSourceResponse() {}
 
-    private HdfsSourceResponse() {
-        this.disableMetricsCollection = null;
-        this.distcpSettings = null;
-        this.maxConcurrentConnections = null;
-        this.recursive = null;
-        this.sourceRetryCount = null;
-        this.sourceRetryWait = null;
-        this.type = null;
+    private HdfsSourceResponse(HdfsSourceResponse $) {
+        this.disableMetricsCollection = $.disableMetricsCollection;
+        this.distcpSettings = $.distcpSettings;
+        this.maxConcurrentConnections = $.maxConcurrentConnections;
+        this.recursive = $.recursive;
+        this.sourceRetryCount = $.sourceRetryCount;
+        this.sourceRetryWait = $.sourceRetryWait;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HdfsSourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object disableMetricsCollection;
-        private @Nullable DistcpSettingsResponse distcpSettings;
-        private @Nullable Object maxConcurrentConnections;
-        private @Nullable Object recursive;
-        private @Nullable Object sourceRetryCount;
-        private @Nullable Object sourceRetryWait;
-        private String type;
+        private HdfsSourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HdfsSourceResponse();
         }
 
         public Builder(HdfsSourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disableMetricsCollection = defaults.disableMetricsCollection;
-    	      this.distcpSettings = defaults.distcpSettings;
-    	      this.maxConcurrentConnections = defaults.maxConcurrentConnections;
-    	      this.recursive = defaults.recursive;
-    	      this.sourceRetryCount = defaults.sourceRetryCount;
-    	      this.sourceRetryWait = defaults.sourceRetryWait;
-    	      this.type = defaults.type;
+            $ = new HdfsSourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
-            this.disableMetricsCollection = disableMetricsCollection;
+            $.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
+
         public Builder distcpSettings(@Nullable DistcpSettingsResponse distcpSettings) {
-            this.distcpSettings = distcpSettings;
+            $.distcpSettings = distcpSettings;
             return this;
         }
+
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
-            this.maxConcurrentConnections = maxConcurrentConnections;
+            $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
+
         public Builder recursive(@Nullable Object recursive) {
-            this.recursive = recursive;
+            $.recursive = recursive;
             return this;
         }
+
         public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
-            this.sourceRetryCount = sourceRetryCount;
+            $.sourceRetryCount = sourceRetryCount;
             return this;
         }
+
         public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
-            this.sourceRetryWait = sourceRetryWait;
+            $.sourceRetryWait = sourceRetryWait;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public HdfsSourceResponse build() {
-            return new HdfsSourceResponse(disableMetricsCollection, distcpSettings, maxConcurrentConnections, recursive, sourceRetryCount, sourceRetryWait, type);
+        }
+
+        public HdfsSourceResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.azurenative.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ImagePurchasePlanArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ImagePurchasePlanArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="product")
-      private final @Nullable Output<String> product;
+    private @Nullable Output<String> product;
 
-    public Output<String> product() {
-        return this.product == null ? Codegen.empty() : this.product;
+    public Optional<Output<String>> product() {
+        return Optional.ofNullable(this.product);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class ImagePurchasePlanArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="publisher")
-      private final @Nullable Output<String> publisher;
+    private @Nullable Output<String> publisher;
 
-    public Output<String> publisher() {
-        return this.publisher == null ? Codegen.empty() : this.publisher;
+    public Optional<Output<String>> publisher() {
+        return Optional.ofNullable(this.publisher);
     }
 
-    public ImagePurchasePlanArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<String> product,
-        @Nullable Output<String> publisher) {
-        this.name = name;
-        this.product = product;
-        this.publisher = publisher;
-    }
+    private ImagePurchasePlanArgs() {}
 
-    private ImagePurchasePlanArgs() {
-        this.name = Codegen.empty();
-        this.product = Codegen.empty();
-        this.publisher = Codegen.empty();
+    private ImagePurchasePlanArgs(ImagePurchasePlanArgs $) {
+        this.name = $.name;
+        this.product = $.product;
+        this.publisher = $.publisher;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImagePurchasePlanArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> product;
-        private @Nullable Output<String> publisher;
+        private ImagePurchasePlanArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImagePurchasePlanArgs();
         }
 
         public Builder(ImagePurchasePlanArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.product = defaults.product;
-    	      this.publisher = defaults.publisher;
+            $ = new ImagePurchasePlanArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder product(@Nullable Output<String> product) {
-            this.product = product;
+            $.product = product;
             return this;
         }
-        public Builder product(@Nullable String product) {
-            this.product = Codegen.ofNullable(product);
-            return this;
+
+        public Builder product(String product) {
+            return product(Output.of(product));
         }
+
         public Builder publisher(@Nullable Output<String> publisher) {
-            this.publisher = publisher;
+            $.publisher = publisher;
             return this;
         }
-        public Builder publisher(@Nullable String publisher) {
-            this.publisher = Codegen.ofNullable(publisher);
-            return this;
-        }        public ImagePurchasePlanArgs build() {
-            return new ImagePurchasePlanArgs(name, product, publisher);
+
+        public Builder publisher(String publisher) {
+            return publisher(Output.of(publisher));
+        }
+
+        public ImagePurchasePlanArgs build() {
+            return $;
         }
     }
+
 }

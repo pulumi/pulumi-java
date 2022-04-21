@@ -21,7 +21,7 @@ public final class UserDefinedFunctionResourceResponse extends com.pulumi.resour
      * 
      */
     @Import(name="inlineCode", required=true)
-      private final String inlineCode;
+    private String inlineCode;
 
     public String inlineCode() {
         return this.inlineCode;
@@ -32,55 +32,52 @@ public final class UserDefinedFunctionResourceResponse extends com.pulumi.resour
      * 
      */
     @Import(name="resourceUri", required=true)
-      private final String resourceUri;
+    private String resourceUri;
 
     public String resourceUri() {
         return this.resourceUri;
     }
 
-    public UserDefinedFunctionResourceResponse(
-        String inlineCode,
-        String resourceUri) {
-        this.inlineCode = Objects.requireNonNull(inlineCode, "expected parameter 'inlineCode' to be non-null");
-        this.resourceUri = Objects.requireNonNull(resourceUri, "expected parameter 'resourceUri' to be non-null");
-    }
+    private UserDefinedFunctionResourceResponse() {}
 
-    private UserDefinedFunctionResourceResponse() {
-        this.inlineCode = null;
-        this.resourceUri = null;
+    private UserDefinedFunctionResourceResponse(UserDefinedFunctionResourceResponse $) {
+        this.inlineCode = $.inlineCode;
+        this.resourceUri = $.resourceUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserDefinedFunctionResourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String inlineCode;
-        private String resourceUri;
+        private UserDefinedFunctionResourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserDefinedFunctionResourceResponse();
         }
 
         public Builder(UserDefinedFunctionResourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.inlineCode = defaults.inlineCode;
-    	      this.resourceUri = defaults.resourceUri;
+            $ = new UserDefinedFunctionResourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder inlineCode(String inlineCode) {
-            this.inlineCode = Objects.requireNonNull(inlineCode);
+            $.inlineCode = inlineCode;
             return this;
         }
+
         public Builder resourceUri(String resourceUri) {
-            this.resourceUri = Objects.requireNonNull(resourceUri);
+            $.resourceUri = resourceUri;
             return this;
-        }        public UserDefinedFunctionResourceResponse build() {
-            return new UserDefinedFunctionResourceResponse(inlineCode, resourceUri);
+        }
+
+        public UserDefinedFunctionResourceResponse build() {
+            $.inlineCode = Objects.requireNonNull($.inlineCode, "expected parameter 'inlineCode' to be non-null");
+            $.resourceUri = Objects.requireNonNull($.resourceUri, "expected parameter 'resourceUri' to be non-null");
+            return $;
         }
     }
+
 }

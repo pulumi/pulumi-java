@@ -7,10 +7,10 @@ import com.pulumi.azurenative.timeseriesinsights.enums.AccessPolicyRole;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class AccessPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accessPolicyName")
-      private final @Nullable Output<String> accessPolicyName;
+    private @Nullable Output<String> accessPolicyName;
 
-    public Output<String> accessPolicyName() {
-        return this.accessPolicyName == null ? Codegen.empty() : this.accessPolicyName;
+    public Optional<Output<String>> accessPolicyName() {
+        return Optional.ofNullable(this.accessPolicyName);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class AccessPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -45,7 +45,7 @@ public final class AccessPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="environmentName", required=true)
-      private final Output<String> environmentName;
+    private Output<String> environmentName;
 
     public Output<String> environmentName() {
         return this.environmentName;
@@ -56,10 +56,10 @@ public final class AccessPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="principalObjectId")
-      private final @Nullable Output<String> principalObjectId;
+    private @Nullable Output<String> principalObjectId;
 
-    public Output<String> principalObjectId() {
-        return this.principalObjectId == null ? Codegen.empty() : this.principalObjectId;
+    public Optional<Output<String>> principalObjectId() {
+        return Optional.ofNullable(this.principalObjectId);
     }
 
     /**
@@ -67,7 +67,7 @@ public final class AccessPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -78,118 +78,104 @@ public final class AccessPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="roles")
-      private final @Nullable Output<List<Either<String,AccessPolicyRole>>> roles;
+    private @Nullable Output<List<Either<String,AccessPolicyRole>>> roles;
 
-    public Output<List<Either<String,AccessPolicyRole>>> roles() {
-        return this.roles == null ? Codegen.empty() : this.roles;
+    public Optional<Output<List<Either<String,AccessPolicyRole>>>> roles() {
+        return Optional.ofNullable(this.roles);
     }
 
-    public AccessPolicyArgs(
-        @Nullable Output<String> accessPolicyName,
-        @Nullable Output<String> description,
-        Output<String> environmentName,
-        @Nullable Output<String> principalObjectId,
-        Output<String> resourceGroupName,
-        @Nullable Output<List<Either<String,AccessPolicyRole>>> roles) {
-        this.accessPolicyName = accessPolicyName;
-        this.description = description;
-        this.environmentName = Objects.requireNonNull(environmentName, "expected parameter 'environmentName' to be non-null");
-        this.principalObjectId = principalObjectId;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.roles = roles;
-    }
+    private AccessPolicyArgs() {}
 
-    private AccessPolicyArgs() {
-        this.accessPolicyName = Codegen.empty();
-        this.description = Codegen.empty();
-        this.environmentName = Codegen.empty();
-        this.principalObjectId = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.roles = Codegen.empty();
+    private AccessPolicyArgs(AccessPolicyArgs $) {
+        this.accessPolicyName = $.accessPolicyName;
+        this.description = $.description;
+        this.environmentName = $.environmentName;
+        this.principalObjectId = $.principalObjectId;
+        this.resourceGroupName = $.resourceGroupName;
+        this.roles = $.roles;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accessPolicyName;
-        private @Nullable Output<String> description;
-        private Output<String> environmentName;
-        private @Nullable Output<String> principalObjectId;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<List<Either<String,AccessPolicyRole>>> roles;
+        private AccessPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessPolicyArgs();
         }
 
         public Builder(AccessPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessPolicyName = defaults.accessPolicyName;
-    	      this.description = defaults.description;
-    	      this.environmentName = defaults.environmentName;
-    	      this.principalObjectId = defaults.principalObjectId;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.roles = defaults.roles;
+            $ = new AccessPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessPolicyName(@Nullable Output<String> accessPolicyName) {
-            this.accessPolicyName = accessPolicyName;
+            $.accessPolicyName = accessPolicyName;
             return this;
         }
-        public Builder accessPolicyName(@Nullable String accessPolicyName) {
-            this.accessPolicyName = Codegen.ofNullable(accessPolicyName);
-            return this;
+
+        public Builder accessPolicyName(String accessPolicyName) {
+            return accessPolicyName(Output.of(accessPolicyName));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder environmentName(Output<String> environmentName) {
-            this.environmentName = Objects.requireNonNull(environmentName);
+            $.environmentName = environmentName;
             return this;
         }
+
         public Builder environmentName(String environmentName) {
-            this.environmentName = Output.of(Objects.requireNonNull(environmentName));
-            return this;
+            return environmentName(Output.of(environmentName));
         }
+
         public Builder principalObjectId(@Nullable Output<String> principalObjectId) {
-            this.principalObjectId = principalObjectId;
+            $.principalObjectId = principalObjectId;
             return this;
         }
-        public Builder principalObjectId(@Nullable String principalObjectId) {
-            this.principalObjectId = Codegen.ofNullable(principalObjectId);
-            return this;
+
+        public Builder principalObjectId(String principalObjectId) {
+            return principalObjectId(Output.of(principalObjectId));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder roles(@Nullable Output<List<Either<String,AccessPolicyRole>>> roles) {
-            this.roles = roles;
+            $.roles = roles;
             return this;
         }
-        public Builder roles(@Nullable List<Either<String,AccessPolicyRole>> roles) {
-            this.roles = Codegen.ofNullable(roles);
-            return this;
+
+        public Builder roles(List<Either<String,AccessPolicyRole>> roles) {
+            return roles(Output.of(roles));
         }
+
         public Builder roles(Either<String,AccessPolicyRole>... roles) {
             return roles(List.of(roles));
-        }        public AccessPolicyArgs build() {
-            return new AccessPolicyArgs(accessPolicyName, description, environmentName, principalObjectId, resourceGroupName, roles);
+        }
+
+        public AccessPolicyArgs build() {
+            $.environmentName = Objects.requireNonNull($.environmentName, "expected parameter 'environmentName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

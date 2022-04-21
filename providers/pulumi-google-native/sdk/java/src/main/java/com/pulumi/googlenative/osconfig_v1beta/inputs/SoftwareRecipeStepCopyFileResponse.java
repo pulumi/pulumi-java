@@ -22,7 +22,7 @@ public final class SoftwareRecipeStepCopyFileResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="artifactId", required=true)
-      private final String artifactId;
+    private String artifactId;
 
     public String artifactId() {
         return this.artifactId;
@@ -33,7 +33,7 @@ public final class SoftwareRecipeStepCopyFileResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="destination", required=true)
-      private final String destination;
+    private String destination;
 
     public String destination() {
         return this.destination;
@@ -44,7 +44,7 @@ public final class SoftwareRecipeStepCopyFileResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="overwrite", required=true)
-      private final Boolean overwrite;
+    private Boolean overwrite;
 
     public Boolean overwrite() {
         return this.overwrite;
@@ -55,73 +55,66 @@ public final class SoftwareRecipeStepCopyFileResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="permissions", required=true)
-      private final String permissions;
+    private String permissions;
 
     public String permissions() {
         return this.permissions;
     }
 
-    public SoftwareRecipeStepCopyFileResponse(
-        String artifactId,
-        String destination,
-        Boolean overwrite,
-        String permissions) {
-        this.artifactId = Objects.requireNonNull(artifactId, "expected parameter 'artifactId' to be non-null");
-        this.destination = Objects.requireNonNull(destination, "expected parameter 'destination' to be non-null");
-        this.overwrite = Objects.requireNonNull(overwrite, "expected parameter 'overwrite' to be non-null");
-        this.permissions = Objects.requireNonNull(permissions, "expected parameter 'permissions' to be non-null");
-    }
+    private SoftwareRecipeStepCopyFileResponse() {}
 
-    private SoftwareRecipeStepCopyFileResponse() {
-        this.artifactId = null;
-        this.destination = null;
-        this.overwrite = null;
-        this.permissions = null;
+    private SoftwareRecipeStepCopyFileResponse(SoftwareRecipeStepCopyFileResponse $) {
+        this.artifactId = $.artifactId;
+        this.destination = $.destination;
+        this.overwrite = $.overwrite;
+        this.permissions = $.permissions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SoftwareRecipeStepCopyFileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String artifactId;
-        private String destination;
-        private Boolean overwrite;
-        private String permissions;
+        private SoftwareRecipeStepCopyFileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SoftwareRecipeStepCopyFileResponse();
         }
 
         public Builder(SoftwareRecipeStepCopyFileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.artifactId = defaults.artifactId;
-    	      this.destination = defaults.destination;
-    	      this.overwrite = defaults.overwrite;
-    	      this.permissions = defaults.permissions;
+            $ = new SoftwareRecipeStepCopyFileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder artifactId(String artifactId) {
-            this.artifactId = Objects.requireNonNull(artifactId);
+            $.artifactId = artifactId;
             return this;
         }
+
         public Builder destination(String destination) {
-            this.destination = Objects.requireNonNull(destination);
+            $.destination = destination;
             return this;
         }
+
         public Builder overwrite(Boolean overwrite) {
-            this.overwrite = Objects.requireNonNull(overwrite);
+            $.overwrite = overwrite;
             return this;
         }
+
         public Builder permissions(String permissions) {
-            this.permissions = Objects.requireNonNull(permissions);
+            $.permissions = permissions;
             return this;
-        }        public SoftwareRecipeStepCopyFileResponse build() {
-            return new SoftwareRecipeStepCopyFileResponse(artifactId, destination, overwrite, permissions);
+        }
+
+        public SoftwareRecipeStepCopyFileResponse build() {
+            $.artifactId = Objects.requireNonNull($.artifactId, "expected parameter 'artifactId' to be non-null");
+            $.destination = Objects.requireNonNull($.destination, "expected parameter 'destination' to be non-null");
+            $.overwrite = Objects.requireNonNull($.overwrite, "expected parameter 'overwrite' to be non-null");
+            $.permissions = Objects.requireNonNull($.permissions, "expected parameter 'permissions' to be non-null");
+            return $;
         }
     }
+
 }

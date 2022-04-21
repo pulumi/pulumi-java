@@ -21,7 +21,7 @@ public final class EdifactAgreementContentResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="receiveAgreement", required=true)
-      private final EdifactOneWayAgreementResponse receiveAgreement;
+    private EdifactOneWayAgreementResponse receiveAgreement;
 
     public EdifactOneWayAgreementResponse receiveAgreement() {
         return this.receiveAgreement;
@@ -32,55 +32,52 @@ public final class EdifactAgreementContentResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="sendAgreement", required=true)
-      private final EdifactOneWayAgreementResponse sendAgreement;
+    private EdifactOneWayAgreementResponse sendAgreement;
 
     public EdifactOneWayAgreementResponse sendAgreement() {
         return this.sendAgreement;
     }
 
-    public EdifactAgreementContentResponse(
-        EdifactOneWayAgreementResponse receiveAgreement,
-        EdifactOneWayAgreementResponse sendAgreement) {
-        this.receiveAgreement = Objects.requireNonNull(receiveAgreement, "expected parameter 'receiveAgreement' to be non-null");
-        this.sendAgreement = Objects.requireNonNull(sendAgreement, "expected parameter 'sendAgreement' to be non-null");
-    }
+    private EdifactAgreementContentResponse() {}
 
-    private EdifactAgreementContentResponse() {
-        this.receiveAgreement = null;
-        this.sendAgreement = null;
+    private EdifactAgreementContentResponse(EdifactAgreementContentResponse $) {
+        this.receiveAgreement = $.receiveAgreement;
+        this.sendAgreement = $.sendAgreement;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EdifactAgreementContentResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private EdifactOneWayAgreementResponse receiveAgreement;
-        private EdifactOneWayAgreementResponse sendAgreement;
+        private EdifactAgreementContentResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EdifactAgreementContentResponse();
         }
 
         public Builder(EdifactAgreementContentResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.receiveAgreement = defaults.receiveAgreement;
-    	      this.sendAgreement = defaults.sendAgreement;
+            $ = new EdifactAgreementContentResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder receiveAgreement(EdifactOneWayAgreementResponse receiveAgreement) {
-            this.receiveAgreement = Objects.requireNonNull(receiveAgreement);
+            $.receiveAgreement = receiveAgreement;
             return this;
         }
+
         public Builder sendAgreement(EdifactOneWayAgreementResponse sendAgreement) {
-            this.sendAgreement = Objects.requireNonNull(sendAgreement);
+            $.sendAgreement = sendAgreement;
             return this;
-        }        public EdifactAgreementContentResponse build() {
-            return new EdifactAgreementContentResponse(receiveAgreement, sendAgreement);
+        }
+
+        public EdifactAgreementContentResponse build() {
+            $.receiveAgreement = Objects.requireNonNull($.receiveAgreement, "expected parameter 'receiveAgreement' to be non-null");
+            $.sendAgreement = Objects.requireNonNull($.sendAgreement, "expected parameter 'sendAgreement' to be non-null");
+            return $;
         }
     }
+
 }

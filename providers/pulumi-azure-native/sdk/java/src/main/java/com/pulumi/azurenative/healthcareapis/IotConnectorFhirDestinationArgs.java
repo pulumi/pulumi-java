@@ -8,9 +8,9 @@ import com.pulumi.azurenative.healthcareapis.inputs.IotMappingPropertiesArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class IotConnectorFhirDestinationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="fhirDestinationName")
-      private final @Nullable Output<String> fhirDestinationName;
+    private @Nullable Output<String> fhirDestinationName;
 
-    public Output<String> fhirDestinationName() {
-        return this.fhirDestinationName == null ? Codegen.empty() : this.fhirDestinationName;
+    public Optional<Output<String>> fhirDestinationName() {
+        return Optional.ofNullable(this.fhirDestinationName);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class IotConnectorFhirDestinationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="fhirMapping", required=true)
-      private final Output<IotMappingPropertiesArgs> fhirMapping;
+    private Output<IotMappingPropertiesArgs> fhirMapping;
 
     public Output<IotMappingPropertiesArgs> fhirMapping() {
         return this.fhirMapping;
@@ -45,7 +45,7 @@ public final class IotConnectorFhirDestinationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="fhirServiceResourceId", required=true)
-      private final Output<String> fhirServiceResourceId;
+    private Output<String> fhirServiceResourceId;
 
     public Output<String> fhirServiceResourceId() {
         return this.fhirServiceResourceId;
@@ -56,7 +56,7 @@ public final class IotConnectorFhirDestinationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="iotConnectorName", required=true)
-      private final Output<String> iotConnectorName;
+    private Output<String> iotConnectorName;
 
     public Output<String> iotConnectorName() {
         return this.iotConnectorName;
@@ -67,10 +67,10 @@ public final class IotConnectorFhirDestinationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -78,7 +78,7 @@ public final class IotConnectorFhirDestinationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -89,7 +89,7 @@ public final class IotConnectorFhirDestinationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="resourceIdentityResolutionType", required=true)
-      private final Output<Either<String,IotIdentityResolutionType>> resourceIdentityResolutionType;
+    private Output<Either<String,IotIdentityResolutionType>> resourceIdentityResolutionType;
 
     public Output<Either<String,IotIdentityResolutionType>> resourceIdentityResolutionType() {
         return this.resourceIdentityResolutionType;
@@ -100,141 +100,124 @@ public final class IotConnectorFhirDestinationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final Output<String> workspaceName;
+    private Output<String> workspaceName;
 
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
-    public IotConnectorFhirDestinationArgs(
-        @Nullable Output<String> fhirDestinationName,
-        Output<IotMappingPropertiesArgs> fhirMapping,
-        Output<String> fhirServiceResourceId,
-        Output<String> iotConnectorName,
-        @Nullable Output<String> location,
-        Output<String> resourceGroupName,
-        Output<Either<String,IotIdentityResolutionType>> resourceIdentityResolutionType,
-        Output<String> workspaceName) {
-        this.fhirDestinationName = fhirDestinationName;
-        this.fhirMapping = Objects.requireNonNull(fhirMapping, "expected parameter 'fhirMapping' to be non-null");
-        this.fhirServiceResourceId = Objects.requireNonNull(fhirServiceResourceId, "expected parameter 'fhirServiceResourceId' to be non-null");
-        this.iotConnectorName = Objects.requireNonNull(iotConnectorName, "expected parameter 'iotConnectorName' to be non-null");
-        this.location = location;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceIdentityResolutionType = Objects.requireNonNull(resourceIdentityResolutionType, "expected parameter 'resourceIdentityResolutionType' to be non-null");
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private IotConnectorFhirDestinationArgs() {}
 
-    private IotConnectorFhirDestinationArgs() {
-        this.fhirDestinationName = Codegen.empty();
-        this.fhirMapping = Codegen.empty();
-        this.fhirServiceResourceId = Codegen.empty();
-        this.iotConnectorName = Codegen.empty();
-        this.location = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.resourceIdentityResolutionType = Codegen.empty();
-        this.workspaceName = Codegen.empty();
+    private IotConnectorFhirDestinationArgs(IotConnectorFhirDestinationArgs $) {
+        this.fhirDestinationName = $.fhirDestinationName;
+        this.fhirMapping = $.fhirMapping;
+        this.fhirServiceResourceId = $.fhirServiceResourceId;
+        this.iotConnectorName = $.iotConnectorName;
+        this.location = $.location;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceIdentityResolutionType = $.resourceIdentityResolutionType;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IotConnectorFhirDestinationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> fhirDestinationName;
-        private Output<IotMappingPropertiesArgs> fhirMapping;
-        private Output<String> fhirServiceResourceId;
-        private Output<String> iotConnectorName;
-        private @Nullable Output<String> location;
-        private Output<String> resourceGroupName;
-        private Output<Either<String,IotIdentityResolutionType>> resourceIdentityResolutionType;
-        private Output<String> workspaceName;
+        private IotConnectorFhirDestinationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IotConnectorFhirDestinationArgs();
         }
 
         public Builder(IotConnectorFhirDestinationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fhirDestinationName = defaults.fhirDestinationName;
-    	      this.fhirMapping = defaults.fhirMapping;
-    	      this.fhirServiceResourceId = defaults.fhirServiceResourceId;
-    	      this.iotConnectorName = defaults.iotConnectorName;
-    	      this.location = defaults.location;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceIdentityResolutionType = defaults.resourceIdentityResolutionType;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new IotConnectorFhirDestinationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fhirDestinationName(@Nullable Output<String> fhirDestinationName) {
-            this.fhirDestinationName = fhirDestinationName;
+            $.fhirDestinationName = fhirDestinationName;
             return this;
         }
-        public Builder fhirDestinationName(@Nullable String fhirDestinationName) {
-            this.fhirDestinationName = Codegen.ofNullable(fhirDestinationName);
-            return this;
+
+        public Builder fhirDestinationName(String fhirDestinationName) {
+            return fhirDestinationName(Output.of(fhirDestinationName));
         }
+
         public Builder fhirMapping(Output<IotMappingPropertiesArgs> fhirMapping) {
-            this.fhirMapping = Objects.requireNonNull(fhirMapping);
+            $.fhirMapping = fhirMapping;
             return this;
         }
+
         public Builder fhirMapping(IotMappingPropertiesArgs fhirMapping) {
-            this.fhirMapping = Output.of(Objects.requireNonNull(fhirMapping));
-            return this;
+            return fhirMapping(Output.of(fhirMapping));
         }
+
         public Builder fhirServiceResourceId(Output<String> fhirServiceResourceId) {
-            this.fhirServiceResourceId = Objects.requireNonNull(fhirServiceResourceId);
+            $.fhirServiceResourceId = fhirServiceResourceId;
             return this;
         }
+
         public Builder fhirServiceResourceId(String fhirServiceResourceId) {
-            this.fhirServiceResourceId = Output.of(Objects.requireNonNull(fhirServiceResourceId));
-            return this;
+            return fhirServiceResourceId(Output.of(fhirServiceResourceId));
         }
+
         public Builder iotConnectorName(Output<String> iotConnectorName) {
-            this.iotConnectorName = Objects.requireNonNull(iotConnectorName);
+            $.iotConnectorName = iotConnectorName;
             return this;
         }
+
         public Builder iotConnectorName(String iotConnectorName) {
-            this.iotConnectorName = Output.of(Objects.requireNonNull(iotConnectorName));
-            return this;
+            return iotConnectorName(Output.of(iotConnectorName));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder resourceIdentityResolutionType(Output<Either<String,IotIdentityResolutionType>> resourceIdentityResolutionType) {
-            this.resourceIdentityResolutionType = Objects.requireNonNull(resourceIdentityResolutionType);
+            $.resourceIdentityResolutionType = resourceIdentityResolutionType;
             return this;
         }
+
         public Builder resourceIdentityResolutionType(Either<String,IotIdentityResolutionType> resourceIdentityResolutionType) {
-            this.resourceIdentityResolutionType = Output.of(Objects.requireNonNull(resourceIdentityResolutionType));
-            return this;
+            return resourceIdentityResolutionType(Output.of(resourceIdentityResolutionType));
         }
+
         public Builder workspaceName(Output<String> workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
-            return this;
-        }        public IotConnectorFhirDestinationArgs build() {
-            return new IotConnectorFhirDestinationArgs(fhirDestinationName, fhirMapping, fhirServiceResourceId, iotConnectorName, location, resourceGroupName, resourceIdentityResolutionType, workspaceName);
+            return workspaceName(Output.of(workspaceName));
+        }
+
+        public IotConnectorFhirDestinationArgs build() {
+            $.fhirMapping = Objects.requireNonNull($.fhirMapping, "expected parameter 'fhirMapping' to be non-null");
+            $.fhirServiceResourceId = Objects.requireNonNull($.fhirServiceResourceId, "expected parameter 'fhirServiceResourceId' to be non-null");
+            $.iotConnectorName = Objects.requireNonNull($.iotConnectorName, "expected parameter 'iotConnectorName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourceIdentityResolutionType = Objects.requireNonNull($.resourceIdentityResolutionType, "expected parameter 'resourceIdentityResolutionType' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,45 +17,45 @@ public final class GetTaskDefinitionArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="taskDefinition", required=true)
-      private final String taskDefinition;
+    private String taskDefinition;
 
     public String taskDefinition() {
         return this.taskDefinition;
     }
 
-    public GetTaskDefinitionArgs(String taskDefinition) {
-        this.taskDefinition = Objects.requireNonNull(taskDefinition, "expected parameter 'taskDefinition' to be non-null");
-    }
+    private GetTaskDefinitionArgs() {}
 
-    private GetTaskDefinitionArgs() {
-        this.taskDefinition = null;
+    private GetTaskDefinitionArgs(GetTaskDefinitionArgs $) {
+        this.taskDefinition = $.taskDefinition;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTaskDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String taskDefinition;
+        private GetTaskDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTaskDefinitionArgs();
         }
 
         public Builder(GetTaskDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.taskDefinition = defaults.taskDefinition;
+            $ = new GetTaskDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder taskDefinition(String taskDefinition) {
-            this.taskDefinition = Objects.requireNonNull(taskDefinition);
+            $.taskDefinition = taskDefinition;
             return this;
-        }        public GetTaskDefinitionArgs build() {
-            return new GetTaskDefinitionArgs(taskDefinition);
+        }
+
+        public GetTaskDefinitionArgs build() {
+            $.taskDefinition = Objects.requireNonNull($.taskDefinition, "expected parameter 'taskDefinition' to be non-null");
+            return $;
         }
     }
+
 }

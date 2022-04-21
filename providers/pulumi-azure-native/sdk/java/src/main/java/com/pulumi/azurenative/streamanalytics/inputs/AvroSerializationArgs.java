@@ -24,49 +24,49 @@ public final class AvroSerializationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public AvroSerializationArgs(Output<String> type) {
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private AvroSerializationArgs() {}
 
-    private AvroSerializationArgs() {
-        this.type = Codegen.empty();
+    private AvroSerializationArgs(AvroSerializationArgs $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AvroSerializationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> type;
+        private AvroSerializationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AvroSerializationArgs();
         }
 
         public Builder(AvroSerializationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new AvroSerializationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public AvroSerializationArgs build() {
-            return new AvroSerializationArgs(type);
+            return type(Output.of(type));
+        }
+
+        public AvroSerializationArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

@@ -20,10 +20,10 @@ public final class RetryPolicyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="retryCount")
-      private final @Nullable Integer retryCount;
+    private @Nullable Integer retryCount;
 
     public Optional<Integer> retryCount() {
-        return this.retryCount == null ? Optional.empty() : Optional.ofNullable(this.retryCount);
+        return Optional.ofNullable(this.retryCount);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class RetryPolicyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="retryInterval")
-      private final @Nullable String retryInterval;
+    private @Nullable String retryInterval;
 
     public Optional<String> retryInterval() {
-        return this.retryInterval == null ? Optional.empty() : Optional.ofNullable(this.retryInterval);
+        return Optional.ofNullable(this.retryInterval);
     }
 
     /**
@@ -42,64 +42,56 @@ public final class RetryPolicyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="retryType")
-      private final @Nullable String retryType;
+    private @Nullable String retryType;
 
     public Optional<String> retryType() {
-        return this.retryType == null ? Optional.empty() : Optional.ofNullable(this.retryType);
+        return Optional.ofNullable(this.retryType);
     }
 
-    public RetryPolicyResponse(
-        @Nullable Integer retryCount,
-        @Nullable String retryInterval,
-        @Nullable String retryType) {
-        this.retryCount = retryCount;
-        this.retryInterval = retryInterval;
-        this.retryType = retryType;
-    }
+    private RetryPolicyResponse() {}
 
-    private RetryPolicyResponse() {
-        this.retryCount = null;
-        this.retryInterval = null;
-        this.retryType = null;
+    private RetryPolicyResponse(RetryPolicyResponse $) {
+        this.retryCount = $.retryCount;
+        this.retryInterval = $.retryInterval;
+        this.retryType = $.retryType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RetryPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer retryCount;
-        private @Nullable String retryInterval;
-        private @Nullable String retryType;
+        private RetryPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RetryPolicyResponse();
         }
 
         public Builder(RetryPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.retryCount = defaults.retryCount;
-    	      this.retryInterval = defaults.retryInterval;
-    	      this.retryType = defaults.retryType;
+            $ = new RetryPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder retryCount(@Nullable Integer retryCount) {
-            this.retryCount = retryCount;
+            $.retryCount = retryCount;
             return this;
         }
+
         public Builder retryInterval(@Nullable String retryInterval) {
-            this.retryInterval = retryInterval;
+            $.retryInterval = retryInterval;
             return this;
         }
+
         public Builder retryType(@Nullable String retryType) {
-            this.retryType = retryType;
+            $.retryType = retryType;
             return this;
-        }        public RetryPolicyResponse build() {
-            return new RetryPolicyResponse(retryCount, retryInterval, retryType);
+        }
+
+        public RetryPolicyResponse build() {
+            return $;
         }
     }
+
 }

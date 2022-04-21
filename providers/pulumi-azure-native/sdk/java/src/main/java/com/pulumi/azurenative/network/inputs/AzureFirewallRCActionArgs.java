@@ -7,9 +7,9 @@ import com.pulumi.azurenative.network.enums.AzureFirewallRCActionType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,49 +26,48 @@ public final class AzureFirewallRCActionArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<Either<String,AzureFirewallRCActionType>> type;
+    private @Nullable Output<Either<String,AzureFirewallRCActionType>> type;
 
-    public Output<Either<String,AzureFirewallRCActionType>> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<Either<String,AzureFirewallRCActionType>>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public AzureFirewallRCActionArgs(@Nullable Output<Either<String,AzureFirewallRCActionType>> type) {
-        this.type = type;
-    }
+    private AzureFirewallRCActionArgs() {}
 
-    private AzureFirewallRCActionArgs() {
-        this.type = Codegen.empty();
+    private AzureFirewallRCActionArgs(AzureFirewallRCActionArgs $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureFirewallRCActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,AzureFirewallRCActionType>> type;
+        private AzureFirewallRCActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureFirewallRCActionArgs();
         }
 
         public Builder(AzureFirewallRCActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new AzureFirewallRCActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable Output<Either<String,AzureFirewallRCActionType>> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable Either<String,AzureFirewallRCActionType> type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public AzureFirewallRCActionArgs build() {
-            return new AzureFirewallRCActionArgs(type);
+
+        public Builder type(Either<String,AzureFirewallRCActionType> type) {
+            return type(Output.of(type));
+        }
+
+        public AzureFirewallRCActionArgs build() {
+            return $;
         }
     }
+
 }

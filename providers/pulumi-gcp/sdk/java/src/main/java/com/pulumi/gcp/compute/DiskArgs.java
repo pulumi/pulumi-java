@@ -5,7 +5,6 @@ package com.pulumi.gcp.compute;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.DiskDiskEncryptionKeyArgs;
 import com.pulumi.gcp.compute.inputs.DiskSourceImageEncryptionKeyArgs;
 import com.pulumi.gcp.compute.inputs.DiskSourceSnapshotEncryptionKeyArgs;
@@ -15,6 +14,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="diskEncryptionKey")
-      private final @Nullable Output<DiskDiskEncryptionKeyArgs> diskEncryptionKey;
+    private @Nullable Output<DiskDiskEncryptionKeyArgs> diskEncryptionKey;
 
-    public Output<DiskDiskEncryptionKeyArgs> diskEncryptionKey() {
-        return this.diskEncryptionKey == null ? Codegen.empty() : this.diskEncryptionKey;
+    public Optional<Output<DiskDiskEncryptionKeyArgs>> diskEncryptionKey() {
+        return Optional.ofNullable(this.diskEncryptionKey);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="image")
-      private final @Nullable Output<String> image;
+    private @Nullable Output<String> image;
 
-    public Output<String> image() {
-        return this.image == null ? Codegen.empty() : this.image;
+    public Optional<Output<String>> image() {
+        return Optional.ofNullable(this.image);
     }
 
     /**
@@ -82,11 +82,11 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      */
     @Deprecated /* This field is no longer in use, disk interfaces will be automatically determined on attachment. To resolve this issue, remove this field from your config. */
     @Import(name="interface")
-      private final @Nullable Output<String> interface_;
+    private @Nullable Output<String> interface_;
 
     @Deprecated /* This field is no longer in use, disk interfaces will be automatically determined on attachment. To resolve this issue, remove this field from your config. */
-    public Output<String> interface_() {
-        return this.interface_ == null ? Codegen.empty() : this.interface_;
+    public Optional<Output<String>> interface_() {
+        return Optional.ofNullable(this.interface_);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -105,10 +105,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="multiWriter")
-      private final @Nullable Output<Boolean> multiWriter;
+    private @Nullable Output<Boolean> multiWriter;
 
-    public Output<Boolean> multiWriter() {
-        return this.multiWriter == null ? Codegen.empty() : this.multiWriter;
+    public Optional<Output<Boolean>> multiWriter() {
+        return Optional.ofNullable(this.multiWriter);
     }
 
     /**
@@ -122,10 +122,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -137,10 +137,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="physicalBlockSizeBytes")
-      private final @Nullable Output<Integer> physicalBlockSizeBytes;
+    private @Nullable Output<Integer> physicalBlockSizeBytes;
 
-    public Output<Integer> physicalBlockSizeBytes() {
-        return this.physicalBlockSizeBytes == null ? Codegen.empty() : this.physicalBlockSizeBytes;
+    public Optional<Output<Integer>> physicalBlockSizeBytes() {
+        return Optional.ofNullable(this.physicalBlockSizeBytes);
     }
 
     /**
@@ -149,10 +149,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -160,10 +160,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="provisionedIops")
-      private final @Nullable Output<Integer> provisionedIops;
+    private @Nullable Output<Integer> provisionedIops;
 
-    public Output<Integer> provisionedIops() {
-        return this.provisionedIops == null ? Codegen.empty() : this.provisionedIops;
+    public Optional<Output<Integer>> provisionedIops() {
+        return Optional.ofNullable(this.provisionedIops);
     }
 
     /**
@@ -176,10 +176,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourcePolicies")
-      private final @Nullable Output<List<String>> resourcePolicies;
+    private @Nullable Output<List<String>> resourcePolicies;
 
-    public Output<List<String>> resourcePolicies() {
-        return this.resourcePolicies == null ? Codegen.empty() : this.resourcePolicies;
+    public Optional<Output<List<String>>> resourcePolicies() {
+        return Optional.ofNullable(this.resourcePolicies);
     }
 
     /**
@@ -197,10 +197,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="size")
-      private final @Nullable Output<Integer> size;
+    private @Nullable Output<Integer> size;
 
-    public Output<Integer> size() {
-        return this.size == null ? Codegen.empty() : this.size;
+    public Optional<Output<Integer>> size() {
+        return Optional.ofNullable(this.size);
     }
 
     /**
@@ -215,10 +215,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="snapshot")
-      private final @Nullable Output<String> snapshot;
+    private @Nullable Output<String> snapshot;
 
-    public Output<String> snapshot() {
-        return this.snapshot == null ? Codegen.empty() : this.snapshot;
+    public Optional<Output<String>> snapshot() {
+        return Optional.ofNullable(this.snapshot);
     }
 
     /**
@@ -228,10 +228,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceImageEncryptionKey")
-      private final @Nullable Output<DiskSourceImageEncryptionKeyArgs> sourceImageEncryptionKey;
+    private @Nullable Output<DiskSourceImageEncryptionKeyArgs> sourceImageEncryptionKey;
 
-    public Output<DiskSourceImageEncryptionKeyArgs> sourceImageEncryptionKey() {
-        return this.sourceImageEncryptionKey == null ? Codegen.empty() : this.sourceImageEncryptionKey;
+    public Optional<Output<DiskSourceImageEncryptionKeyArgs>> sourceImageEncryptionKey() {
+        return Optional.ofNullable(this.sourceImageEncryptionKey);
     }
 
     /**
@@ -242,10 +242,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceSnapshotEncryptionKey")
-      private final @Nullable Output<DiskSourceSnapshotEncryptionKeyArgs> sourceSnapshotEncryptionKey;
+    private @Nullable Output<DiskSourceSnapshotEncryptionKeyArgs> sourceSnapshotEncryptionKey;
 
-    public Output<DiskSourceSnapshotEncryptionKeyArgs> sourceSnapshotEncryptionKey() {
-        return this.sourceSnapshotEncryptionKey == null ? Codegen.empty() : this.sourceSnapshotEncryptionKey;
+    public Optional<Output<DiskSourceSnapshotEncryptionKeyArgs>> sourceSnapshotEncryptionKey() {
+        return Optional.ofNullable(this.sourceSnapshotEncryptionKey);
     }
 
     /**
@@ -254,10 +254,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -265,261 +265,212 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="zone")
-      private final @Nullable Output<String> zone;
+    private @Nullable Output<String> zone;
 
-    public Output<String> zone() {
-        return this.zone == null ? Codegen.empty() : this.zone;
+    public Optional<Output<String>> zone() {
+        return Optional.ofNullable(this.zone);
     }
 
-    public DiskArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<DiskDiskEncryptionKeyArgs> diskEncryptionKey,
-        @Nullable Output<String> image,
-        @Nullable Output<String> interface_,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<Boolean> multiWriter,
-        @Nullable Output<String> name,
-        @Nullable Output<Integer> physicalBlockSizeBytes,
-        @Nullable Output<String> project,
-        @Nullable Output<Integer> provisionedIops,
-        @Nullable Output<List<String>> resourcePolicies,
-        @Nullable Output<Integer> size,
-        @Nullable Output<String> snapshot,
-        @Nullable Output<DiskSourceImageEncryptionKeyArgs> sourceImageEncryptionKey,
-        @Nullable Output<DiskSourceSnapshotEncryptionKeyArgs> sourceSnapshotEncryptionKey,
-        @Nullable Output<String> type,
-        @Nullable Output<String> zone) {
-        this.description = description;
-        this.diskEncryptionKey = diskEncryptionKey;
-        this.image = image;
-        this.interface_ = interface_;
-        this.labels = labels;
-        this.multiWriter = multiWriter;
-        this.name = name;
-        this.physicalBlockSizeBytes = physicalBlockSizeBytes;
-        this.project = project;
-        this.provisionedIops = provisionedIops;
-        this.resourcePolicies = resourcePolicies;
-        this.size = size;
-        this.snapshot = snapshot;
-        this.sourceImageEncryptionKey = sourceImageEncryptionKey;
-        this.sourceSnapshotEncryptionKey = sourceSnapshotEncryptionKey;
-        this.type = type;
-        this.zone = zone;
-    }
+    private DiskArgs() {}
 
-    private DiskArgs() {
-        this.description = Codegen.empty();
-        this.diskEncryptionKey = Codegen.empty();
-        this.image = Codegen.empty();
-        this.interface_ = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.multiWriter = Codegen.empty();
-        this.name = Codegen.empty();
-        this.physicalBlockSizeBytes = Codegen.empty();
-        this.project = Codegen.empty();
-        this.provisionedIops = Codegen.empty();
-        this.resourcePolicies = Codegen.empty();
-        this.size = Codegen.empty();
-        this.snapshot = Codegen.empty();
-        this.sourceImageEncryptionKey = Codegen.empty();
-        this.sourceSnapshotEncryptionKey = Codegen.empty();
-        this.type = Codegen.empty();
-        this.zone = Codegen.empty();
+    private DiskArgs(DiskArgs $) {
+        this.description = $.description;
+        this.diskEncryptionKey = $.diskEncryptionKey;
+        this.image = $.image;
+        this.interface_ = $.interface_;
+        this.labels = $.labels;
+        this.multiWriter = $.multiWriter;
+        this.name = $.name;
+        this.physicalBlockSizeBytes = $.physicalBlockSizeBytes;
+        this.project = $.project;
+        this.provisionedIops = $.provisionedIops;
+        this.resourcePolicies = $.resourcePolicies;
+        this.size = $.size;
+        this.snapshot = $.snapshot;
+        this.sourceImageEncryptionKey = $.sourceImageEncryptionKey;
+        this.sourceSnapshotEncryptionKey = $.sourceSnapshotEncryptionKey;
+        this.type = $.type;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiskArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<DiskDiskEncryptionKeyArgs> diskEncryptionKey;
-        private @Nullable Output<String> image;
-        private @Nullable Output<String> interface_;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<Boolean> multiWriter;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Integer> physicalBlockSizeBytes;
-        private @Nullable Output<String> project;
-        private @Nullable Output<Integer> provisionedIops;
-        private @Nullable Output<List<String>> resourcePolicies;
-        private @Nullable Output<Integer> size;
-        private @Nullable Output<String> snapshot;
-        private @Nullable Output<DiskSourceImageEncryptionKeyArgs> sourceImageEncryptionKey;
-        private @Nullable Output<DiskSourceSnapshotEncryptionKeyArgs> sourceSnapshotEncryptionKey;
-        private @Nullable Output<String> type;
-        private @Nullable Output<String> zone;
+        private DiskArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiskArgs();
         }
 
         public Builder(DiskArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.diskEncryptionKey = defaults.diskEncryptionKey;
-    	      this.image = defaults.image;
-    	      this.interface_ = defaults.interface_;
-    	      this.labels = defaults.labels;
-    	      this.multiWriter = defaults.multiWriter;
-    	      this.name = defaults.name;
-    	      this.physicalBlockSizeBytes = defaults.physicalBlockSizeBytes;
-    	      this.project = defaults.project;
-    	      this.provisionedIops = defaults.provisionedIops;
-    	      this.resourcePolicies = defaults.resourcePolicies;
-    	      this.size = defaults.size;
-    	      this.snapshot = defaults.snapshot;
-    	      this.sourceImageEncryptionKey = defaults.sourceImageEncryptionKey;
-    	      this.sourceSnapshotEncryptionKey = defaults.sourceSnapshotEncryptionKey;
-    	      this.type = defaults.type;
-    	      this.zone = defaults.zone;
+            $ = new DiskArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder diskEncryptionKey(@Nullable Output<DiskDiskEncryptionKeyArgs> diskEncryptionKey) {
-            this.diskEncryptionKey = diskEncryptionKey;
+            $.diskEncryptionKey = diskEncryptionKey;
             return this;
         }
-        public Builder diskEncryptionKey(@Nullable DiskDiskEncryptionKeyArgs diskEncryptionKey) {
-            this.diskEncryptionKey = Codegen.ofNullable(diskEncryptionKey);
-            return this;
+
+        public Builder diskEncryptionKey(DiskDiskEncryptionKeyArgs diskEncryptionKey) {
+            return diskEncryptionKey(Output.of(diskEncryptionKey));
         }
+
         public Builder image(@Nullable Output<String> image) {
-            this.image = image;
+            $.image = image;
             return this;
         }
-        public Builder image(@Nullable String image) {
-            this.image = Codegen.ofNullable(image);
-            return this;
+
+        public Builder image(String image) {
+            return image(Output.of(image));
         }
+
         public Builder interface_(@Nullable Output<String> interface_) {
-            this.interface_ = interface_;
+            $.interface_ = interface_;
             return this;
         }
-        public Builder interface_(@Nullable String interface_) {
-            this.interface_ = Codegen.ofNullable(interface_);
-            return this;
+
+        public Builder interface_(String interface_) {
+            return interface_(Output.of(interface_));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder multiWriter(@Nullable Output<Boolean> multiWriter) {
-            this.multiWriter = multiWriter;
+            $.multiWriter = multiWriter;
             return this;
         }
-        public Builder multiWriter(@Nullable Boolean multiWriter) {
-            this.multiWriter = Codegen.ofNullable(multiWriter);
-            return this;
+
+        public Builder multiWriter(Boolean multiWriter) {
+            return multiWriter(Output.of(multiWriter));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder physicalBlockSizeBytes(@Nullable Output<Integer> physicalBlockSizeBytes) {
-            this.physicalBlockSizeBytes = physicalBlockSizeBytes;
+            $.physicalBlockSizeBytes = physicalBlockSizeBytes;
             return this;
         }
-        public Builder physicalBlockSizeBytes(@Nullable Integer physicalBlockSizeBytes) {
-            this.physicalBlockSizeBytes = Codegen.ofNullable(physicalBlockSizeBytes);
-            return this;
+
+        public Builder physicalBlockSizeBytes(Integer physicalBlockSizeBytes) {
+            return physicalBlockSizeBytes(Output.of(physicalBlockSizeBytes));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder provisionedIops(@Nullable Output<Integer> provisionedIops) {
-            this.provisionedIops = provisionedIops;
+            $.provisionedIops = provisionedIops;
             return this;
         }
-        public Builder provisionedIops(@Nullable Integer provisionedIops) {
-            this.provisionedIops = Codegen.ofNullable(provisionedIops);
-            return this;
+
+        public Builder provisionedIops(Integer provisionedIops) {
+            return provisionedIops(Output.of(provisionedIops));
         }
+
         public Builder resourcePolicies(@Nullable Output<List<String>> resourcePolicies) {
-            this.resourcePolicies = resourcePolicies;
+            $.resourcePolicies = resourcePolicies;
             return this;
         }
-        public Builder resourcePolicies(@Nullable List<String> resourcePolicies) {
-            this.resourcePolicies = Codegen.ofNullable(resourcePolicies);
-            return this;
+
+        public Builder resourcePolicies(List<String> resourcePolicies) {
+            return resourcePolicies(Output.of(resourcePolicies));
         }
+
         public Builder resourcePolicies(String... resourcePolicies) {
             return resourcePolicies(List.of(resourcePolicies));
         }
+
         public Builder size(@Nullable Output<Integer> size) {
-            this.size = size;
+            $.size = size;
             return this;
         }
-        public Builder size(@Nullable Integer size) {
-            this.size = Codegen.ofNullable(size);
-            return this;
+
+        public Builder size(Integer size) {
+            return size(Output.of(size));
         }
+
         public Builder snapshot(@Nullable Output<String> snapshot) {
-            this.snapshot = snapshot;
+            $.snapshot = snapshot;
             return this;
         }
-        public Builder snapshot(@Nullable String snapshot) {
-            this.snapshot = Codegen.ofNullable(snapshot);
-            return this;
+
+        public Builder snapshot(String snapshot) {
+            return snapshot(Output.of(snapshot));
         }
+
         public Builder sourceImageEncryptionKey(@Nullable Output<DiskSourceImageEncryptionKeyArgs> sourceImageEncryptionKey) {
-            this.sourceImageEncryptionKey = sourceImageEncryptionKey;
+            $.sourceImageEncryptionKey = sourceImageEncryptionKey;
             return this;
         }
-        public Builder sourceImageEncryptionKey(@Nullable DiskSourceImageEncryptionKeyArgs sourceImageEncryptionKey) {
-            this.sourceImageEncryptionKey = Codegen.ofNullable(sourceImageEncryptionKey);
-            return this;
+
+        public Builder sourceImageEncryptionKey(DiskSourceImageEncryptionKeyArgs sourceImageEncryptionKey) {
+            return sourceImageEncryptionKey(Output.of(sourceImageEncryptionKey));
         }
+
         public Builder sourceSnapshotEncryptionKey(@Nullable Output<DiskSourceSnapshotEncryptionKeyArgs> sourceSnapshotEncryptionKey) {
-            this.sourceSnapshotEncryptionKey = sourceSnapshotEncryptionKey;
+            $.sourceSnapshotEncryptionKey = sourceSnapshotEncryptionKey;
             return this;
         }
-        public Builder sourceSnapshotEncryptionKey(@Nullable DiskSourceSnapshotEncryptionKeyArgs sourceSnapshotEncryptionKey) {
-            this.sourceSnapshotEncryptionKey = Codegen.ofNullable(sourceSnapshotEncryptionKey);
-            return this;
+
+        public Builder sourceSnapshotEncryptionKey(DiskSourceSnapshotEncryptionKeyArgs sourceSnapshotEncryptionKey) {
+            return sourceSnapshotEncryptionKey(Output.of(sourceSnapshotEncryptionKey));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(String type) {
+            return type(Output.of(type));
         }
+
         public Builder zone(@Nullable Output<String> zone) {
-            this.zone = zone;
+            $.zone = zone;
             return this;
         }
-        public Builder zone(@Nullable String zone) {
-            this.zone = Codegen.ofNullable(zone);
-            return this;
-        }        public DiskArgs build() {
-            return new DiskArgs(description, diskEncryptionKey, image, interface_, labels, multiWriter, name, physicalBlockSizeBytes, project, provisionedIops, resourcePolicies, size, snapshot, sourceImageEncryptionKey, sourceSnapshotEncryptionKey, type, zone);
+
+        public Builder zone(String zone) {
+            return zone(Output.of(zone));
+        }
+
+        public DiskArgs build() {
+            return $;
         }
     }
+
 }

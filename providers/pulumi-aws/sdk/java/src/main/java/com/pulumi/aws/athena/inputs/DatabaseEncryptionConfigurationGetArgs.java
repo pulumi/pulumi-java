@@ -5,9 +5,9 @@ package com.pulumi.aws.athena.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class DatabaseEncryptionConfigurationGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="encryptionOption", required=true)
-      private final Output<String> encryptionOption;
+    private Output<String> encryptionOption;
 
     public Output<String> encryptionOption() {
         return this.encryptionOption;
@@ -31,63 +31,59 @@ public final class DatabaseEncryptionConfigurationGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="kmsKey")
-      private final @Nullable Output<String> kmsKey;
+    private @Nullable Output<String> kmsKey;
 
-    public Output<String> kmsKey() {
-        return this.kmsKey == null ? Codegen.empty() : this.kmsKey;
+    public Optional<Output<String>> kmsKey() {
+        return Optional.ofNullable(this.kmsKey);
     }
 
-    public DatabaseEncryptionConfigurationGetArgs(
-        Output<String> encryptionOption,
-        @Nullable Output<String> kmsKey) {
-        this.encryptionOption = Objects.requireNonNull(encryptionOption, "expected parameter 'encryptionOption' to be non-null");
-        this.kmsKey = kmsKey;
-    }
+    private DatabaseEncryptionConfigurationGetArgs() {}
 
-    private DatabaseEncryptionConfigurationGetArgs() {
-        this.encryptionOption = Codegen.empty();
-        this.kmsKey = Codegen.empty();
+    private DatabaseEncryptionConfigurationGetArgs(DatabaseEncryptionConfigurationGetArgs $) {
+        this.encryptionOption = $.encryptionOption;
+        this.kmsKey = $.kmsKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatabaseEncryptionConfigurationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> encryptionOption;
-        private @Nullable Output<String> kmsKey;
+        private DatabaseEncryptionConfigurationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatabaseEncryptionConfigurationGetArgs();
         }
 
         public Builder(DatabaseEncryptionConfigurationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encryptionOption = defaults.encryptionOption;
-    	      this.kmsKey = defaults.kmsKey;
+            $ = new DatabaseEncryptionConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder encryptionOption(Output<String> encryptionOption) {
-            this.encryptionOption = Objects.requireNonNull(encryptionOption);
+            $.encryptionOption = encryptionOption;
             return this;
         }
+
         public Builder encryptionOption(String encryptionOption) {
-            this.encryptionOption = Output.of(Objects.requireNonNull(encryptionOption));
-            return this;
+            return encryptionOption(Output.of(encryptionOption));
         }
+
         public Builder kmsKey(@Nullable Output<String> kmsKey) {
-            this.kmsKey = kmsKey;
+            $.kmsKey = kmsKey;
             return this;
         }
-        public Builder kmsKey(@Nullable String kmsKey) {
-            this.kmsKey = Codegen.ofNullable(kmsKey);
-            return this;
-        }        public DatabaseEncryptionConfigurationGetArgs build() {
-            return new DatabaseEncryptionConfigurationGetArgs(encryptionOption, kmsKey);
+
+        public Builder kmsKey(String kmsKey) {
+            return kmsKey(Output.of(kmsKey));
+        }
+
+        public DatabaseEncryptionConfigurationGetArgs build() {
+            $.encryptionOption = Objects.requireNonNull($.encryptionOption, "expected parameter 'encryptionOption' to be non-null");
+            return $;
         }
     }
+
 }

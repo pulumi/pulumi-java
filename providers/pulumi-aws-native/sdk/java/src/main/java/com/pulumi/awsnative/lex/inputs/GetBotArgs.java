@@ -13,45 +13,45 @@ public final class GetBotArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetBotArgs Empty = new GetBotArgs();
 
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public GetBotArgs(String id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private GetBotArgs() {}
 
-    private GetBotArgs() {
-        this.id = null;
+    private GetBotArgs(GetBotArgs $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBotArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
+        private GetBotArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBotArgs();
         }
 
         public Builder(GetBotArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new GetBotArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public GetBotArgs build() {
-            return new GetBotArgs(id);
+        }
+
+        public GetBotArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

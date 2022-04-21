@@ -6,10 +6,10 @@ package com.pulumi.awsnative.kendra.inputs;
 import com.pulumi.awsnative.kendra.inputs.DataSourceToIndexFieldMappingArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,113 +18,105 @@ public final class DataSourceSalesforceCustomKnowledgeArticleTypeConfigurationAr
     public static final DataSourceSalesforceCustomKnowledgeArticleTypeConfigurationArgs Empty = new DataSourceSalesforceCustomKnowledgeArticleTypeConfigurationArgs();
 
     @Import(name="documentDataFieldName", required=true)
-      private final Output<String> documentDataFieldName;
+    private Output<String> documentDataFieldName;
 
     public Output<String> documentDataFieldName() {
         return this.documentDataFieldName;
     }
 
     @Import(name="documentTitleFieldName")
-      private final @Nullable Output<String> documentTitleFieldName;
+    private @Nullable Output<String> documentTitleFieldName;
 
-    public Output<String> documentTitleFieldName() {
-        return this.documentTitleFieldName == null ? Codegen.empty() : this.documentTitleFieldName;
+    public Optional<Output<String>> documentTitleFieldName() {
+        return Optional.ofNullable(this.documentTitleFieldName);
     }
 
     @Import(name="fieldMappings")
-      private final @Nullable Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings;
+    private @Nullable Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings;
 
-    public Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings() {
-        return this.fieldMappings == null ? Codegen.empty() : this.fieldMappings;
+    public Optional<Output<List<DataSourceToIndexFieldMappingArgs>>> fieldMappings() {
+        return Optional.ofNullable(this.fieldMappings);
     }
 
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
-    public DataSourceSalesforceCustomKnowledgeArticleTypeConfigurationArgs(
-        Output<String> documentDataFieldName,
-        @Nullable Output<String> documentTitleFieldName,
-        @Nullable Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings,
-        Output<String> name) {
-        this.documentDataFieldName = Objects.requireNonNull(documentDataFieldName, "expected parameter 'documentDataFieldName' to be non-null");
-        this.documentTitleFieldName = documentTitleFieldName;
-        this.fieldMappings = fieldMappings;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private DataSourceSalesforceCustomKnowledgeArticleTypeConfigurationArgs() {}
 
-    private DataSourceSalesforceCustomKnowledgeArticleTypeConfigurationArgs() {
-        this.documentDataFieldName = Codegen.empty();
-        this.documentTitleFieldName = Codegen.empty();
-        this.fieldMappings = Codegen.empty();
-        this.name = Codegen.empty();
+    private DataSourceSalesforceCustomKnowledgeArticleTypeConfigurationArgs(DataSourceSalesforceCustomKnowledgeArticleTypeConfigurationArgs $) {
+        this.documentDataFieldName = $.documentDataFieldName;
+        this.documentTitleFieldName = $.documentTitleFieldName;
+        this.fieldMappings = $.fieldMappings;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceSalesforceCustomKnowledgeArticleTypeConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> documentDataFieldName;
-        private @Nullable Output<String> documentTitleFieldName;
-        private @Nullable Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings;
-        private Output<String> name;
+        private DataSourceSalesforceCustomKnowledgeArticleTypeConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceSalesforceCustomKnowledgeArticleTypeConfigurationArgs();
         }
 
         public Builder(DataSourceSalesforceCustomKnowledgeArticleTypeConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.documentDataFieldName = defaults.documentDataFieldName;
-    	      this.documentTitleFieldName = defaults.documentTitleFieldName;
-    	      this.fieldMappings = defaults.fieldMappings;
-    	      this.name = defaults.name;
+            $ = new DataSourceSalesforceCustomKnowledgeArticleTypeConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder documentDataFieldName(Output<String> documentDataFieldName) {
-            this.documentDataFieldName = Objects.requireNonNull(documentDataFieldName);
+            $.documentDataFieldName = documentDataFieldName;
             return this;
         }
+
         public Builder documentDataFieldName(String documentDataFieldName) {
-            this.documentDataFieldName = Output.of(Objects.requireNonNull(documentDataFieldName));
-            return this;
+            return documentDataFieldName(Output.of(documentDataFieldName));
         }
+
         public Builder documentTitleFieldName(@Nullable Output<String> documentTitleFieldName) {
-            this.documentTitleFieldName = documentTitleFieldName;
+            $.documentTitleFieldName = documentTitleFieldName;
             return this;
         }
-        public Builder documentTitleFieldName(@Nullable String documentTitleFieldName) {
-            this.documentTitleFieldName = Codegen.ofNullable(documentTitleFieldName);
-            return this;
+
+        public Builder documentTitleFieldName(String documentTitleFieldName) {
+            return documentTitleFieldName(Output.of(documentTitleFieldName));
         }
+
         public Builder fieldMappings(@Nullable Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings) {
-            this.fieldMappings = fieldMappings;
+            $.fieldMappings = fieldMappings;
             return this;
         }
-        public Builder fieldMappings(@Nullable List<DataSourceToIndexFieldMappingArgs> fieldMappings) {
-            this.fieldMappings = Codegen.ofNullable(fieldMappings);
-            return this;
+
+        public Builder fieldMappings(List<DataSourceToIndexFieldMappingArgs> fieldMappings) {
+            return fieldMappings(Output.of(fieldMappings));
         }
+
         public Builder fieldMappings(DataSourceToIndexFieldMappingArgs... fieldMappings) {
             return fieldMappings(List.of(fieldMappings));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public DataSourceSalesforceCustomKnowledgeArticleTypeConfigurationArgs build() {
-            return new DataSourceSalesforceCustomKnowledgeArticleTypeConfigurationArgs(documentDataFieldName, documentTitleFieldName, fieldMappings, name);
+            return name(Output.of(name));
+        }
+
+        public DataSourceSalesforceCustomKnowledgeArticleTypeConfigurationArgs build() {
+            $.documentDataFieldName = Objects.requireNonNull($.documentDataFieldName, "expected parameter 'documentDataFieldName' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

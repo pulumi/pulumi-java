@@ -8,9 +8,9 @@ import com.pulumi.azurenative.providerhub.inputs.ProviderHubMetadataThirdPartyPr
 import com.pulumi.azurenative.providerhub.inputs.ResourceProviderAuthorizationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,93 +19,86 @@ public final class ProviderRegistrationPropertiesProviderHubMetadataArgs extends
     public static final ProviderRegistrationPropertiesProviderHubMetadataArgs Empty = new ProviderRegistrationPropertiesProviderHubMetadataArgs();
 
     @Import(name="providerAuthentication")
-      private final @Nullable Output<ProviderHubMetadataProviderAuthenticationArgs> providerAuthentication;
+    private @Nullable Output<ProviderHubMetadataProviderAuthenticationArgs> providerAuthentication;
 
-    public Output<ProviderHubMetadataProviderAuthenticationArgs> providerAuthentication() {
-        return this.providerAuthentication == null ? Codegen.empty() : this.providerAuthentication;
+    public Optional<Output<ProviderHubMetadataProviderAuthenticationArgs>> providerAuthentication() {
+        return Optional.ofNullable(this.providerAuthentication);
     }
 
     @Import(name="providerAuthorizations")
-      private final @Nullable Output<List<ResourceProviderAuthorizationArgs>> providerAuthorizations;
+    private @Nullable Output<List<ResourceProviderAuthorizationArgs>> providerAuthorizations;
 
-    public Output<List<ResourceProviderAuthorizationArgs>> providerAuthorizations() {
-        return this.providerAuthorizations == null ? Codegen.empty() : this.providerAuthorizations;
+    public Optional<Output<List<ResourceProviderAuthorizationArgs>>> providerAuthorizations() {
+        return Optional.ofNullable(this.providerAuthorizations);
     }
 
     @Import(name="thirdPartyProviderAuthorization")
-      private final @Nullable Output<ProviderHubMetadataThirdPartyProviderAuthorizationArgs> thirdPartyProviderAuthorization;
+    private @Nullable Output<ProviderHubMetadataThirdPartyProviderAuthorizationArgs> thirdPartyProviderAuthorization;
 
-    public Output<ProviderHubMetadataThirdPartyProviderAuthorizationArgs> thirdPartyProviderAuthorization() {
-        return this.thirdPartyProviderAuthorization == null ? Codegen.empty() : this.thirdPartyProviderAuthorization;
+    public Optional<Output<ProviderHubMetadataThirdPartyProviderAuthorizationArgs>> thirdPartyProviderAuthorization() {
+        return Optional.ofNullable(this.thirdPartyProviderAuthorization);
     }
 
-    public ProviderRegistrationPropertiesProviderHubMetadataArgs(
-        @Nullable Output<ProviderHubMetadataProviderAuthenticationArgs> providerAuthentication,
-        @Nullable Output<List<ResourceProviderAuthorizationArgs>> providerAuthorizations,
-        @Nullable Output<ProviderHubMetadataThirdPartyProviderAuthorizationArgs> thirdPartyProviderAuthorization) {
-        this.providerAuthentication = providerAuthentication;
-        this.providerAuthorizations = providerAuthorizations;
-        this.thirdPartyProviderAuthorization = thirdPartyProviderAuthorization;
-    }
+    private ProviderRegistrationPropertiesProviderHubMetadataArgs() {}
 
-    private ProviderRegistrationPropertiesProviderHubMetadataArgs() {
-        this.providerAuthentication = Codegen.empty();
-        this.providerAuthorizations = Codegen.empty();
-        this.thirdPartyProviderAuthorization = Codegen.empty();
+    private ProviderRegistrationPropertiesProviderHubMetadataArgs(ProviderRegistrationPropertiesProviderHubMetadataArgs $) {
+        this.providerAuthentication = $.providerAuthentication;
+        this.providerAuthorizations = $.providerAuthorizations;
+        this.thirdPartyProviderAuthorization = $.thirdPartyProviderAuthorization;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProviderRegistrationPropertiesProviderHubMetadataArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ProviderHubMetadataProviderAuthenticationArgs> providerAuthentication;
-        private @Nullable Output<List<ResourceProviderAuthorizationArgs>> providerAuthorizations;
-        private @Nullable Output<ProviderHubMetadataThirdPartyProviderAuthorizationArgs> thirdPartyProviderAuthorization;
+        private ProviderRegistrationPropertiesProviderHubMetadataArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProviderRegistrationPropertiesProviderHubMetadataArgs();
         }
 
         public Builder(ProviderRegistrationPropertiesProviderHubMetadataArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.providerAuthentication = defaults.providerAuthentication;
-    	      this.providerAuthorizations = defaults.providerAuthorizations;
-    	      this.thirdPartyProviderAuthorization = defaults.thirdPartyProviderAuthorization;
+            $ = new ProviderRegistrationPropertiesProviderHubMetadataArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder providerAuthentication(@Nullable Output<ProviderHubMetadataProviderAuthenticationArgs> providerAuthentication) {
-            this.providerAuthentication = providerAuthentication;
+            $.providerAuthentication = providerAuthentication;
             return this;
         }
-        public Builder providerAuthentication(@Nullable ProviderHubMetadataProviderAuthenticationArgs providerAuthentication) {
-            this.providerAuthentication = Codegen.ofNullable(providerAuthentication);
-            return this;
+
+        public Builder providerAuthentication(ProviderHubMetadataProviderAuthenticationArgs providerAuthentication) {
+            return providerAuthentication(Output.of(providerAuthentication));
         }
+
         public Builder providerAuthorizations(@Nullable Output<List<ResourceProviderAuthorizationArgs>> providerAuthorizations) {
-            this.providerAuthorizations = providerAuthorizations;
+            $.providerAuthorizations = providerAuthorizations;
             return this;
         }
-        public Builder providerAuthorizations(@Nullable List<ResourceProviderAuthorizationArgs> providerAuthorizations) {
-            this.providerAuthorizations = Codegen.ofNullable(providerAuthorizations);
-            return this;
+
+        public Builder providerAuthorizations(List<ResourceProviderAuthorizationArgs> providerAuthorizations) {
+            return providerAuthorizations(Output.of(providerAuthorizations));
         }
+
         public Builder providerAuthorizations(ResourceProviderAuthorizationArgs... providerAuthorizations) {
             return providerAuthorizations(List.of(providerAuthorizations));
         }
+
         public Builder thirdPartyProviderAuthorization(@Nullable Output<ProviderHubMetadataThirdPartyProviderAuthorizationArgs> thirdPartyProviderAuthorization) {
-            this.thirdPartyProviderAuthorization = thirdPartyProviderAuthorization;
+            $.thirdPartyProviderAuthorization = thirdPartyProviderAuthorization;
             return this;
         }
-        public Builder thirdPartyProviderAuthorization(@Nullable ProviderHubMetadataThirdPartyProviderAuthorizationArgs thirdPartyProviderAuthorization) {
-            this.thirdPartyProviderAuthorization = Codegen.ofNullable(thirdPartyProviderAuthorization);
-            return this;
-        }        public ProviderRegistrationPropertiesProviderHubMetadataArgs build() {
-            return new ProviderRegistrationPropertiesProviderHubMetadataArgs(providerAuthentication, providerAuthorizations, thirdPartyProviderAuthorization);
+
+        public Builder thirdPartyProviderAuthorization(ProviderHubMetadataThirdPartyProviderAuthorizationArgs thirdPartyProviderAuthorization) {
+            return thirdPartyProviderAuthorization(Output.of(thirdPartyProviderAuthorization));
+        }
+
+        public ProviderRegistrationPropertiesProviderHubMetadataArgs build() {
+            return $;
         }
     }
+
 }

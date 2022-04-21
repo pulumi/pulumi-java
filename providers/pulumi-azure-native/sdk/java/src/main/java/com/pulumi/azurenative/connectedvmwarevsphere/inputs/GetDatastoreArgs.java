@@ -17,7 +17,7 @@ public final class GetDatastoreArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="datastoreName", required=true)
-      private final String datastoreName;
+    private String datastoreName;
 
     public String datastoreName() {
         return this.datastoreName;
@@ -28,55 +28,52 @@ public final class GetDatastoreArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetDatastoreArgs(
-        String datastoreName,
-        String resourceGroupName) {
-        this.datastoreName = Objects.requireNonNull(datastoreName, "expected parameter 'datastoreName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetDatastoreArgs() {}
 
-    private GetDatastoreArgs() {
-        this.datastoreName = null;
-        this.resourceGroupName = null;
+    private GetDatastoreArgs(GetDatastoreArgs $) {
+        this.datastoreName = $.datastoreName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDatastoreArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String datastoreName;
-        private String resourceGroupName;
+        private GetDatastoreArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDatastoreArgs();
         }
 
         public Builder(GetDatastoreArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datastoreName = defaults.datastoreName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetDatastoreArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder datastoreName(String datastoreName) {
-            this.datastoreName = Objects.requireNonNull(datastoreName);
+            $.datastoreName = datastoreName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetDatastoreArgs build() {
-            return new GetDatastoreArgs(datastoreName, resourceGroupName);
+        }
+
+        public GetDatastoreArgs build() {
+            $.datastoreName = Objects.requireNonNull($.datastoreName, "expected parameter 'datastoreName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,45 +17,45 @@ public final class GetResourceSetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceSetName", required=true)
-      private final String resourceSetName;
+    private String resourceSetName;
 
     public String resourceSetName() {
         return this.resourceSetName;
     }
 
-    public GetResourceSetArgs(String resourceSetName) {
-        this.resourceSetName = Objects.requireNonNull(resourceSetName, "expected parameter 'resourceSetName' to be non-null");
-    }
+    private GetResourceSetArgs() {}
 
-    private GetResourceSetArgs() {
-        this.resourceSetName = null;
+    private GetResourceSetArgs(GetResourceSetArgs $) {
+        this.resourceSetName = $.resourceSetName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetResourceSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceSetName;
+        private GetResourceSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetResourceSetArgs();
         }
 
         public Builder(GetResourceSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceSetName = defaults.resourceSetName;
+            $ = new GetResourceSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceSetName(String resourceSetName) {
-            this.resourceSetName = Objects.requireNonNull(resourceSetName);
+            $.resourceSetName = resourceSetName;
             return this;
-        }        public GetResourceSetArgs build() {
-            return new GetResourceSetArgs(resourceSetName);
+        }
+
+        public GetResourceSetArgs build() {
+            $.resourceSetName = Objects.requireNonNull($.resourceSetName, "expected parameter 'resourceSetName' to be non-null");
+            return $;
         }
     }
+
 }

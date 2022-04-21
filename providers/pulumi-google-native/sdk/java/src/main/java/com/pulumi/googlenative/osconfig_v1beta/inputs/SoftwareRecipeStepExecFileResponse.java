@@ -23,7 +23,7 @@ public final class SoftwareRecipeStepExecFileResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="allowedExitCodes", required=true)
-      private final List<Integer> allowedExitCodes;
+    private List<Integer> allowedExitCodes;
 
     public List<Integer> allowedExitCodes() {
         return this.allowedExitCodes;
@@ -34,7 +34,7 @@ public final class SoftwareRecipeStepExecFileResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="args", required=true)
-      private final List<String> args;
+    private List<String> args;
 
     public List<String> args() {
         return this.args;
@@ -45,7 +45,7 @@ public final class SoftwareRecipeStepExecFileResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="artifactId", required=true)
-      private final String artifactId;
+    private String artifactId;
 
     public String artifactId() {
         return this.artifactId;
@@ -56,79 +56,74 @@ public final class SoftwareRecipeStepExecFileResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="localPath", required=true)
-      private final String localPath;
+    private String localPath;
 
     public String localPath() {
         return this.localPath;
     }
 
-    public SoftwareRecipeStepExecFileResponse(
-        List<Integer> allowedExitCodes,
-        List<String> args,
-        String artifactId,
-        String localPath) {
-        this.allowedExitCodes = Objects.requireNonNull(allowedExitCodes, "expected parameter 'allowedExitCodes' to be non-null");
-        this.args = Objects.requireNonNull(args, "expected parameter 'args' to be non-null");
-        this.artifactId = Objects.requireNonNull(artifactId, "expected parameter 'artifactId' to be non-null");
-        this.localPath = Objects.requireNonNull(localPath, "expected parameter 'localPath' to be non-null");
-    }
+    private SoftwareRecipeStepExecFileResponse() {}
 
-    private SoftwareRecipeStepExecFileResponse() {
-        this.allowedExitCodes = List.of();
-        this.args = List.of();
-        this.artifactId = null;
-        this.localPath = null;
+    private SoftwareRecipeStepExecFileResponse(SoftwareRecipeStepExecFileResponse $) {
+        this.allowedExitCodes = $.allowedExitCodes;
+        this.args = $.args;
+        this.artifactId = $.artifactId;
+        this.localPath = $.localPath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SoftwareRecipeStepExecFileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<Integer> allowedExitCodes;
-        private List<String> args;
-        private String artifactId;
-        private String localPath;
+        private SoftwareRecipeStepExecFileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SoftwareRecipeStepExecFileResponse();
         }
 
         public Builder(SoftwareRecipeStepExecFileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedExitCodes = defaults.allowedExitCodes;
-    	      this.args = defaults.args;
-    	      this.artifactId = defaults.artifactId;
-    	      this.localPath = defaults.localPath;
+            $ = new SoftwareRecipeStepExecFileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedExitCodes(List<Integer> allowedExitCodes) {
-            this.allowedExitCodes = Objects.requireNonNull(allowedExitCodes);
+            $.allowedExitCodes = allowedExitCodes;
             return this;
         }
+
         public Builder allowedExitCodes(Integer... allowedExitCodes) {
             return allowedExitCodes(List.of(allowedExitCodes));
         }
+
         public Builder args(List<String> args) {
-            this.args = Objects.requireNonNull(args);
+            $.args = args;
             return this;
         }
+
         public Builder args(String... args) {
             return args(List.of(args));
         }
+
         public Builder artifactId(String artifactId) {
-            this.artifactId = Objects.requireNonNull(artifactId);
+            $.artifactId = artifactId;
             return this;
         }
+
         public Builder localPath(String localPath) {
-            this.localPath = Objects.requireNonNull(localPath);
+            $.localPath = localPath;
             return this;
-        }        public SoftwareRecipeStepExecFileResponse build() {
-            return new SoftwareRecipeStepExecFileResponse(allowedExitCodes, args, artifactId, localPath);
+        }
+
+        public SoftwareRecipeStepExecFileResponse build() {
+            $.allowedExitCodes = Objects.requireNonNull($.allowedExitCodes, "expected parameter 'allowedExitCodes' to be non-null");
+            $.args = Objects.requireNonNull($.args, "expected parameter 'args' to be non-null");
+            $.artifactId = Objects.requireNonNull($.artifactId, "expected parameter 'artifactId' to be non-null");
+            $.localPath = Objects.requireNonNull($.localPath, "expected parameter 'localPath' to be non-null");
+            return $;
         }
     }
+
 }

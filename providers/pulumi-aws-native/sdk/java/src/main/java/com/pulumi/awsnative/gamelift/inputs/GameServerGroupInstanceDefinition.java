@@ -19,62 +19,58 @@ public final class GameServerGroupInstanceDefinition extends com.pulumi.resource
     public static final GameServerGroupInstanceDefinition Empty = new GameServerGroupInstanceDefinition();
 
     @Import(name="instanceType", required=true)
-      private final String instanceType;
+    private String instanceType;
 
     public String instanceType() {
         return this.instanceType;
     }
 
     @Import(name="weightedCapacity")
-      private final @Nullable String weightedCapacity;
+    private @Nullable String weightedCapacity;
 
     public Optional<String> weightedCapacity() {
-        return this.weightedCapacity == null ? Optional.empty() : Optional.ofNullable(this.weightedCapacity);
+        return Optional.ofNullable(this.weightedCapacity);
     }
 
-    public GameServerGroupInstanceDefinition(
-        String instanceType,
-        @Nullable String weightedCapacity) {
-        this.instanceType = Objects.requireNonNull(instanceType, "expected parameter 'instanceType' to be non-null");
-        this.weightedCapacity = weightedCapacity;
-    }
+    private GameServerGroupInstanceDefinition() {}
 
-    private GameServerGroupInstanceDefinition() {
-        this.instanceType = null;
-        this.weightedCapacity = null;
+    private GameServerGroupInstanceDefinition(GameServerGroupInstanceDefinition $) {
+        this.instanceType = $.instanceType;
+        this.weightedCapacity = $.weightedCapacity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GameServerGroupInstanceDefinition defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String instanceType;
-        private @Nullable String weightedCapacity;
+        private GameServerGroupInstanceDefinition $;
 
         public Builder() {
-    	      // Empty
+            $ = new GameServerGroupInstanceDefinition();
         }
 
         public Builder(GameServerGroupInstanceDefinition defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceType = defaults.instanceType;
-    	      this.weightedCapacity = defaults.weightedCapacity;
+            $ = new GameServerGroupInstanceDefinition(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceType(String instanceType) {
-            this.instanceType = Objects.requireNonNull(instanceType);
+            $.instanceType = instanceType;
             return this;
         }
+
         public Builder weightedCapacity(@Nullable String weightedCapacity) {
-            this.weightedCapacity = weightedCapacity;
+            $.weightedCapacity = weightedCapacity;
             return this;
-        }        public GameServerGroupInstanceDefinition build() {
-            return new GameServerGroupInstanceDefinition(instanceType, weightedCapacity);
+        }
+
+        public GameServerGroupInstanceDefinition build() {
+            $.instanceType = Objects.requireNonNull($.instanceType, "expected parameter 'instanceType' to be non-null");
+            return $;
         }
     }
+
 }

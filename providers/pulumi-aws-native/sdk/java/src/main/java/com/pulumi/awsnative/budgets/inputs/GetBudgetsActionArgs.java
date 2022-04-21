@@ -13,62 +13,59 @@ public final class GetBudgetsActionArgs extends com.pulumi.resources.InvokeArgs 
     public static final GetBudgetsActionArgs Empty = new GetBudgetsActionArgs();
 
     @Import(name="actionId", required=true)
-      private final String actionId;
+    private String actionId;
 
     public String actionId() {
         return this.actionId;
     }
 
     @Import(name="budgetName", required=true)
-      private final String budgetName;
+    private String budgetName;
 
     public String budgetName() {
         return this.budgetName;
     }
 
-    public GetBudgetsActionArgs(
-        String actionId,
-        String budgetName) {
-        this.actionId = Objects.requireNonNull(actionId, "expected parameter 'actionId' to be non-null");
-        this.budgetName = Objects.requireNonNull(budgetName, "expected parameter 'budgetName' to be non-null");
-    }
+    private GetBudgetsActionArgs() {}
 
-    private GetBudgetsActionArgs() {
-        this.actionId = null;
-        this.budgetName = null;
+    private GetBudgetsActionArgs(GetBudgetsActionArgs $) {
+        this.actionId = $.actionId;
+        this.budgetName = $.budgetName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBudgetsActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String actionId;
-        private String budgetName;
+        private GetBudgetsActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBudgetsActionArgs();
         }
 
         public Builder(GetBudgetsActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actionId = defaults.actionId;
-    	      this.budgetName = defaults.budgetName;
+            $ = new GetBudgetsActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actionId(String actionId) {
-            this.actionId = Objects.requireNonNull(actionId);
+            $.actionId = actionId;
             return this;
         }
+
         public Builder budgetName(String budgetName) {
-            this.budgetName = Objects.requireNonNull(budgetName);
+            $.budgetName = budgetName;
             return this;
-        }        public GetBudgetsActionArgs build() {
-            return new GetBudgetsActionArgs(actionId, budgetName);
+        }
+
+        public GetBudgetsActionArgs build() {
+            $.actionId = Objects.requireNonNull($.actionId, "expected parameter 'actionId' to be non-null");
+            $.budgetName = Objects.requireNonNull($.budgetName, "expected parameter 'budgetName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -26,7 +26,7 @@ public final class ProbeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -37,10 +37,10 @@ public final class ProbeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ProbeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="intervalInSeconds")
-      private final @Nullable Integer intervalInSeconds;
+    private @Nullable Integer intervalInSeconds;
 
     public Optional<Integer> intervalInSeconds() {
-        return this.intervalInSeconds == null ? Optional.empty() : Optional.ofNullable(this.intervalInSeconds);
+        return Optional.ofNullable(this.intervalInSeconds);
     }
 
     /**
@@ -59,7 +59,7 @@ public final class ProbeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="loadBalancingRules", required=true)
-      private final List<SubResourceResponse> loadBalancingRules;
+    private List<SubResourceResponse> loadBalancingRules;
 
     public List<SubResourceResponse> loadBalancingRules() {
         return this.loadBalancingRules;
@@ -70,10 +70,10 @@ public final class ProbeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class ProbeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="numberOfProbes")
-      private final @Nullable Integer numberOfProbes;
+    private @Nullable Integer numberOfProbes;
 
     public Optional<Integer> numberOfProbes() {
-        return this.numberOfProbes == null ? Optional.empty() : Optional.ofNullable(this.numberOfProbes);
+        return Optional.ofNullable(this.numberOfProbes);
     }
 
     /**
@@ -92,7 +92,7 @@ public final class ProbeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="port", required=true)
-      private final Integer port;
+    private Integer port;
 
     public Integer port() {
         return this.port;
@@ -103,7 +103,7 @@ public final class ProbeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="protocol", required=true)
-      private final String protocol;
+    private String protocol;
 
     public String protocol() {
         return this.protocol;
@@ -114,7 +114,7 @@ public final class ProbeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -125,10 +125,10 @@ public final class ProbeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="requestPath")
-      private final @Nullable String requestPath;
+    private @Nullable String requestPath;
 
     public Optional<String> requestPath() {
-        return this.requestPath == null ? Optional.empty() : Optional.ofNullable(this.requestPath);
+        return Optional.ofNullable(this.requestPath);
     }
 
     /**
@@ -136,139 +136,114 @@ public final class ProbeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ProbeResponse(
-        String etag,
-        @Nullable String id,
-        @Nullable Integer intervalInSeconds,
-        List<SubResourceResponse> loadBalancingRules,
-        @Nullable String name,
-        @Nullable Integer numberOfProbes,
-        Integer port,
-        String protocol,
-        String provisioningState,
-        @Nullable String requestPath,
-        String type) {
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.id = id;
-        this.intervalInSeconds = intervalInSeconds;
-        this.loadBalancingRules = Objects.requireNonNull(loadBalancingRules, "expected parameter 'loadBalancingRules' to be non-null");
-        this.name = name;
-        this.numberOfProbes = numberOfProbes;
-        this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
-        this.protocol = Objects.requireNonNull(protocol, "expected parameter 'protocol' to be non-null");
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.requestPath = requestPath;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ProbeResponse() {}
 
-    private ProbeResponse() {
-        this.etag = null;
-        this.id = null;
-        this.intervalInSeconds = null;
-        this.loadBalancingRules = List.of();
-        this.name = null;
-        this.numberOfProbes = null;
-        this.port = null;
-        this.protocol = null;
-        this.provisioningState = null;
-        this.requestPath = null;
-        this.type = null;
+    private ProbeResponse(ProbeResponse $) {
+        this.etag = $.etag;
+        this.id = $.id;
+        this.intervalInSeconds = $.intervalInSeconds;
+        this.loadBalancingRules = $.loadBalancingRules;
+        this.name = $.name;
+        this.numberOfProbes = $.numberOfProbes;
+        this.port = $.port;
+        this.protocol = $.protocol;
+        this.provisioningState = $.provisioningState;
+        this.requestPath = $.requestPath;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProbeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String etag;
-        private @Nullable String id;
-        private @Nullable Integer intervalInSeconds;
-        private List<SubResourceResponse> loadBalancingRules;
-        private @Nullable String name;
-        private @Nullable Integer numberOfProbes;
-        private Integer port;
-        private String protocol;
-        private String provisioningState;
-        private @Nullable String requestPath;
-        private String type;
+        private ProbeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProbeResponse();
         }
 
         public Builder(ProbeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.etag = defaults.etag;
-    	      this.id = defaults.id;
-    	      this.intervalInSeconds = defaults.intervalInSeconds;
-    	      this.loadBalancingRules = defaults.loadBalancingRules;
-    	      this.name = defaults.name;
-    	      this.numberOfProbes = defaults.numberOfProbes;
-    	      this.port = defaults.port;
-    	      this.protocol = defaults.protocol;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.requestPath = defaults.requestPath;
-    	      this.type = defaults.type;
+            $ = new ProbeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder intervalInSeconds(@Nullable Integer intervalInSeconds) {
-            this.intervalInSeconds = intervalInSeconds;
+            $.intervalInSeconds = intervalInSeconds;
             return this;
         }
+
         public Builder loadBalancingRules(List<SubResourceResponse> loadBalancingRules) {
-            this.loadBalancingRules = Objects.requireNonNull(loadBalancingRules);
+            $.loadBalancingRules = loadBalancingRules;
             return this;
         }
+
         public Builder loadBalancingRules(SubResourceResponse... loadBalancingRules) {
             return loadBalancingRules(List.of(loadBalancingRules));
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder numberOfProbes(@Nullable Integer numberOfProbes) {
-            this.numberOfProbes = numberOfProbes;
+            $.numberOfProbes = numberOfProbes;
             return this;
         }
+
         public Builder port(Integer port) {
-            this.port = Objects.requireNonNull(port);
+            $.port = port;
             return this;
         }
+
         public Builder protocol(String protocol) {
-            this.protocol = Objects.requireNonNull(protocol);
+            $.protocol = protocol;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder requestPath(@Nullable String requestPath) {
-            this.requestPath = requestPath;
+            $.requestPath = requestPath;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ProbeResponse build() {
-            return new ProbeResponse(etag, id, intervalInSeconds, loadBalancingRules, name, numberOfProbes, port, protocol, provisioningState, requestPath, type);
+        }
+
+        public ProbeResponse build() {
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.loadBalancingRules = Objects.requireNonNull($.loadBalancingRules, "expected parameter 'loadBalancingRules' to be non-null");
+            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
+            $.protocol = Objects.requireNonNull($.protocol, "expected parameter 'protocol' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

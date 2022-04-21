@@ -23,7 +23,7 @@ public final class JobConfigurationResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="copy", required=true)
-      private final JobConfigurationTableCopyResponse copy;
+    private JobConfigurationTableCopyResponse copy;
 
     public JobConfigurationTableCopyResponse copy() {
         return this.copy;
@@ -34,7 +34,7 @@ public final class JobConfigurationResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="dryRun", required=true)
-      private final Boolean dryRun;
+    private Boolean dryRun;
 
     public Boolean dryRun() {
         return this.dryRun;
@@ -45,7 +45,7 @@ public final class JobConfigurationResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="extract", required=true)
-      private final JobConfigurationExtractResponse extract;
+    private JobConfigurationExtractResponse extract;
 
     public JobConfigurationExtractResponse extract() {
         return this.extract;
@@ -56,7 +56,7 @@ public final class JobConfigurationResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="jobTimeoutMs", required=true)
-      private final String jobTimeoutMs;
+    private String jobTimeoutMs;
 
     public String jobTimeoutMs() {
         return this.jobTimeoutMs;
@@ -67,7 +67,7 @@ public final class JobConfigurationResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="jobType", required=true)
-      private final String jobType;
+    private String jobType;
 
     public String jobType() {
         return this.jobType;
@@ -78,7 +78,7 @@ public final class JobConfigurationResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="labels", required=true)
-      private final Map<String,String> labels;
+    private Map<String,String> labels;
 
     public Map<String,String> labels() {
         return this.labels;
@@ -89,7 +89,7 @@ public final class JobConfigurationResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="load", required=true)
-      private final JobConfigurationLoadResponse load;
+    private JobConfigurationLoadResponse load;
 
     public JobConfigurationLoadResponse load() {
         return this.load;
@@ -100,109 +100,94 @@ public final class JobConfigurationResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="query", required=true)
-      private final JobConfigurationQueryResponse query;
+    private JobConfigurationQueryResponse query;
 
     public JobConfigurationQueryResponse query() {
         return this.query;
     }
 
-    public JobConfigurationResponse(
-        JobConfigurationTableCopyResponse copy,
-        Boolean dryRun,
-        JobConfigurationExtractResponse extract,
-        String jobTimeoutMs,
-        String jobType,
-        Map<String,String> labels,
-        JobConfigurationLoadResponse load,
-        JobConfigurationQueryResponse query) {
-        this.copy = Objects.requireNonNull(copy, "expected parameter 'copy' to be non-null");
-        this.dryRun = Objects.requireNonNull(dryRun, "expected parameter 'dryRun' to be non-null");
-        this.extract = Objects.requireNonNull(extract, "expected parameter 'extract' to be non-null");
-        this.jobTimeoutMs = Objects.requireNonNull(jobTimeoutMs, "expected parameter 'jobTimeoutMs' to be non-null");
-        this.jobType = Objects.requireNonNull(jobType, "expected parameter 'jobType' to be non-null");
-        this.labels = Objects.requireNonNull(labels, "expected parameter 'labels' to be non-null");
-        this.load = Objects.requireNonNull(load, "expected parameter 'load' to be non-null");
-        this.query = Objects.requireNonNull(query, "expected parameter 'query' to be non-null");
-    }
+    private JobConfigurationResponse() {}
 
-    private JobConfigurationResponse() {
-        this.copy = null;
-        this.dryRun = null;
-        this.extract = null;
-        this.jobTimeoutMs = null;
-        this.jobType = null;
-        this.labels = Map.of();
-        this.load = null;
-        this.query = null;
+    private JobConfigurationResponse(JobConfigurationResponse $) {
+        this.copy = $.copy;
+        this.dryRun = $.dryRun;
+        this.extract = $.extract;
+        this.jobTimeoutMs = $.jobTimeoutMs;
+        this.jobType = $.jobType;
+        this.labels = $.labels;
+        this.load = $.load;
+        this.query = $.query;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private JobConfigurationTableCopyResponse copy;
-        private Boolean dryRun;
-        private JobConfigurationExtractResponse extract;
-        private String jobTimeoutMs;
-        private String jobType;
-        private Map<String,String> labels;
-        private JobConfigurationLoadResponse load;
-        private JobConfigurationQueryResponse query;
+        private JobConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobConfigurationResponse();
         }
 
         public Builder(JobConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.copy = defaults.copy;
-    	      this.dryRun = defaults.dryRun;
-    	      this.extract = defaults.extract;
-    	      this.jobTimeoutMs = defaults.jobTimeoutMs;
-    	      this.jobType = defaults.jobType;
-    	      this.labels = defaults.labels;
-    	      this.load = defaults.load;
-    	      this.query = defaults.query;
+            $ = new JobConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder copy(JobConfigurationTableCopyResponse copy) {
-            this.copy = Objects.requireNonNull(copy);
+            $.copy = copy;
             return this;
         }
+
         public Builder dryRun(Boolean dryRun) {
-            this.dryRun = Objects.requireNonNull(dryRun);
+            $.dryRun = dryRun;
             return this;
         }
+
         public Builder extract(JobConfigurationExtractResponse extract) {
-            this.extract = Objects.requireNonNull(extract);
+            $.extract = extract;
             return this;
         }
+
         public Builder jobTimeoutMs(String jobTimeoutMs) {
-            this.jobTimeoutMs = Objects.requireNonNull(jobTimeoutMs);
+            $.jobTimeoutMs = jobTimeoutMs;
             return this;
         }
+
         public Builder jobType(String jobType) {
-            this.jobType = Objects.requireNonNull(jobType);
+            $.jobType = jobType;
             return this;
         }
+
         public Builder labels(Map<String,String> labels) {
-            this.labels = Objects.requireNonNull(labels);
+            $.labels = labels;
             return this;
         }
+
         public Builder load(JobConfigurationLoadResponse load) {
-            this.load = Objects.requireNonNull(load);
+            $.load = load;
             return this;
         }
+
         public Builder query(JobConfigurationQueryResponse query) {
-            this.query = Objects.requireNonNull(query);
+            $.query = query;
             return this;
-        }        public JobConfigurationResponse build() {
-            return new JobConfigurationResponse(copy, dryRun, extract, jobTimeoutMs, jobType, labels, load, query);
+        }
+
+        public JobConfigurationResponse build() {
+            $.copy = Objects.requireNonNull($.copy, "expected parameter 'copy' to be non-null");
+            $.dryRun = Objects.requireNonNull($.dryRun, "expected parameter 'dryRun' to be non-null");
+            $.extract = Objects.requireNonNull($.extract, "expected parameter 'extract' to be non-null");
+            $.jobTimeoutMs = Objects.requireNonNull($.jobTimeoutMs, "expected parameter 'jobTimeoutMs' to be non-null");
+            $.jobType = Objects.requireNonNull($.jobType, "expected parameter 'jobType' to be non-null");
+            $.labels = Objects.requireNonNull($.labels, "expected parameter 'labels' to be non-null");
+            $.load = Objects.requireNonNull($.load, "expected parameter 'load' to be non-null");
+            $.query = Objects.requireNonNull($.query, "expected parameter 'query' to be non-null");
+            return $;
         }
     }
+
 }

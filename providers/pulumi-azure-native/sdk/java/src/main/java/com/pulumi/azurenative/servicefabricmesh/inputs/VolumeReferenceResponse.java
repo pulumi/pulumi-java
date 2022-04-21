@@ -24,7 +24,7 @@ public final class VolumeReferenceResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="destinationPath", required=true)
-      private final String destinationPath;
+    private String destinationPath;
 
     public String destinationPath() {
         return this.destinationPath;
@@ -35,7 +35,7 @@ public final class VolumeReferenceResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -46,64 +46,58 @@ public final class VolumeReferenceResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="readOnly")
-      private final @Nullable Boolean readOnly;
+    private @Nullable Boolean readOnly;
 
     public Optional<Boolean> readOnly() {
-        return this.readOnly == null ? Optional.empty() : Optional.ofNullable(this.readOnly);
+        return Optional.ofNullable(this.readOnly);
     }
 
-    public VolumeReferenceResponse(
-        String destinationPath,
-        String name,
-        @Nullable Boolean readOnly) {
-        this.destinationPath = Objects.requireNonNull(destinationPath, "expected parameter 'destinationPath' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.readOnly = readOnly;
-    }
+    private VolumeReferenceResponse() {}
 
-    private VolumeReferenceResponse() {
-        this.destinationPath = null;
-        this.name = null;
-        this.readOnly = null;
+    private VolumeReferenceResponse(VolumeReferenceResponse $) {
+        this.destinationPath = $.destinationPath;
+        this.name = $.name;
+        this.readOnly = $.readOnly;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VolumeReferenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String destinationPath;
-        private String name;
-        private @Nullable Boolean readOnly;
+        private VolumeReferenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VolumeReferenceResponse();
         }
 
         public Builder(VolumeReferenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destinationPath = defaults.destinationPath;
-    	      this.name = defaults.name;
-    	      this.readOnly = defaults.readOnly;
+            $ = new VolumeReferenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder destinationPath(String destinationPath) {
-            this.destinationPath = Objects.requireNonNull(destinationPath);
+            $.destinationPath = destinationPath;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = readOnly;
+            $.readOnly = readOnly;
             return this;
-        }        public VolumeReferenceResponse build() {
-            return new VolumeReferenceResponse(destinationPath, name, readOnly);
+        }
+
+        public VolumeReferenceResponse build() {
+            $.destinationPath = Objects.requireNonNull($.destinationPath, "expected parameter 'destinationPath' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

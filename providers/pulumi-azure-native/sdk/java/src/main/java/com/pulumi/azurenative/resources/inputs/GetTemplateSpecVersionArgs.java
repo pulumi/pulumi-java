@@ -17,7 +17,7 @@ public final class GetTemplateSpecVersionArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetTemplateSpecVersionArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="templateSpecName", required=true)
-      private final String templateSpecName;
+    private String templateSpecName;
 
     public String templateSpecName() {
         return this.templateSpecName;
@@ -39,64 +39,59 @@ public final class GetTemplateSpecVersionArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="templateSpecVersion", required=true)
-      private final String templateSpecVersion;
+    private String templateSpecVersion;
 
     public String templateSpecVersion() {
         return this.templateSpecVersion;
     }
 
-    public GetTemplateSpecVersionArgs(
-        String resourceGroupName,
-        String templateSpecName,
-        String templateSpecVersion) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.templateSpecName = Objects.requireNonNull(templateSpecName, "expected parameter 'templateSpecName' to be non-null");
-        this.templateSpecVersion = Objects.requireNonNull(templateSpecVersion, "expected parameter 'templateSpecVersion' to be non-null");
-    }
+    private GetTemplateSpecVersionArgs() {}
 
-    private GetTemplateSpecVersionArgs() {
-        this.resourceGroupName = null;
-        this.templateSpecName = null;
-        this.templateSpecVersion = null;
+    private GetTemplateSpecVersionArgs(GetTemplateSpecVersionArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.templateSpecName = $.templateSpecName;
+        this.templateSpecVersion = $.templateSpecVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTemplateSpecVersionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String templateSpecName;
-        private String templateSpecVersion;
+        private GetTemplateSpecVersionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTemplateSpecVersionArgs();
         }
 
         public Builder(GetTemplateSpecVersionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.templateSpecName = defaults.templateSpecName;
-    	      this.templateSpecVersion = defaults.templateSpecVersion;
+            $ = new GetTemplateSpecVersionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder templateSpecName(String templateSpecName) {
-            this.templateSpecName = Objects.requireNonNull(templateSpecName);
+            $.templateSpecName = templateSpecName;
             return this;
         }
+
         public Builder templateSpecVersion(String templateSpecVersion) {
-            this.templateSpecVersion = Objects.requireNonNull(templateSpecVersion);
+            $.templateSpecVersion = templateSpecVersion;
             return this;
-        }        public GetTemplateSpecVersionArgs build() {
-            return new GetTemplateSpecVersionArgs(resourceGroupName, templateSpecName, templateSpecVersion);
+        }
+
+        public GetTemplateSpecVersionArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.templateSpecName = Objects.requireNonNull($.templateSpecName, "expected parameter 'templateSpecName' to be non-null");
+            $.templateSpecVersion = Objects.requireNonNull($.templateSpecVersion, "expected parameter 'templateSpecVersion' to be non-null");
+            return $;
         }
     }
+
 }

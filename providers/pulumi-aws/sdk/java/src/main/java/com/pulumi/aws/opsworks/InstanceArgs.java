@@ -8,11 +8,11 @@ import com.pulumi.aws.opsworks.inputs.InstanceEphemeralBlockDeviceArgs;
 import com.pulumi.aws.opsworks.inputs.InstanceRootBlockDeviceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="agentVersion")
-      private final @Nullable Output<String> agentVersion;
+    private @Nullable Output<String> agentVersion;
 
-    public Output<String> agentVersion() {
-        return this.agentVersion == null ? Codegen.empty() : this.agentVersion;
+    public Optional<Output<String>> agentVersion() {
+        return Optional.ofNullable(this.agentVersion);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="amiId")
-      private final @Nullable Output<String> amiId;
+    private @Nullable Output<String> amiId;
 
-    public Output<String> amiId() {
-        return this.amiId == null ? Codegen.empty() : this.amiId;
+    public Optional<Output<String>> amiId() {
+        return Optional.ofNullable(this.amiId);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="architecture")
-      private final @Nullable Output<String> architecture;
+    private @Nullable Output<String> architecture;
 
-    public Output<String> architecture() {
-        return this.architecture == null ? Codegen.empty() : this.architecture;
+    public Optional<Output<String>> architecture() {
+        return Optional.ofNullable(this.architecture);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoScalingType")
-      private final @Nullable Output<String> autoScalingType;
+    private @Nullable Output<String> autoScalingType;
 
-    public Output<String> autoScalingType() {
-        return this.autoScalingType == null ? Codegen.empty() : this.autoScalingType;
+    public Optional<Output<String>> autoScalingType() {
+        return Optional.ofNullable(this.autoScalingType);
     }
 
     /**
@@ -70,31 +70,31 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="availabilityZone")
-      private final @Nullable Output<String> availabilityZone;
+    private @Nullable Output<String> availabilityZone;
 
-    public Output<String> availabilityZone() {
-        return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
+    public Optional<Output<String>> availabilityZone() {
+        return Optional.ofNullable(this.availabilityZone);
     }
 
     @Import(name="createdAt")
-      private final @Nullable Output<String> createdAt;
+    private @Nullable Output<String> createdAt;
 
-    public Output<String> createdAt() {
-        return this.createdAt == null ? Codegen.empty() : this.createdAt;
+    public Optional<Output<String>> createdAt() {
+        return Optional.ofNullable(this.createdAt);
     }
 
     @Import(name="deleteEbs")
-      private final @Nullable Output<Boolean> deleteEbs;
+    private @Nullable Output<Boolean> deleteEbs;
 
-    public Output<Boolean> deleteEbs() {
-        return this.deleteEbs == null ? Codegen.empty() : this.deleteEbs;
+    public Optional<Output<Boolean>> deleteEbs() {
+        return Optional.ofNullable(this.deleteEbs);
     }
 
     @Import(name="deleteEip")
-      private final @Nullable Output<Boolean> deleteEip;
+    private @Nullable Output<Boolean> deleteEip;
 
-    public Output<Boolean> deleteEip() {
-        return this.deleteEip == null ? Codegen.empty() : this.deleteEip;
+    public Optional<Output<Boolean>> deleteEip() {
+        return Optional.ofNullable(this.deleteEip);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ebsBlockDevices")
-      private final @Nullable Output<List<InstanceEbsBlockDeviceArgs>> ebsBlockDevices;
+    private @Nullable Output<List<InstanceEbsBlockDeviceArgs>> ebsBlockDevices;
 
-    public Output<List<InstanceEbsBlockDeviceArgs>> ebsBlockDevices() {
-        return this.ebsBlockDevices == null ? Codegen.empty() : this.ebsBlockDevices;
+    public Optional<Output<List<InstanceEbsBlockDeviceArgs>>> ebsBlockDevices() {
+        return Optional.ofNullable(this.ebsBlockDevices);
     }
 
     /**
@@ -114,24 +114,24 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ebsOptimized")
-      private final @Nullable Output<Boolean> ebsOptimized;
+    private @Nullable Output<Boolean> ebsOptimized;
 
-    public Output<Boolean> ebsOptimized() {
-        return this.ebsOptimized == null ? Codegen.empty() : this.ebsOptimized;
+    public Optional<Output<Boolean>> ebsOptimized() {
+        return Optional.ofNullable(this.ebsOptimized);
     }
 
     @Import(name="ecsClusterArn")
-      private final @Nullable Output<String> ecsClusterArn;
+    private @Nullable Output<String> ecsClusterArn;
 
-    public Output<String> ecsClusterArn() {
-        return this.ecsClusterArn == null ? Codegen.empty() : this.ecsClusterArn;
+    public Optional<Output<String>> ecsClusterArn() {
+        return Optional.ofNullable(this.ecsClusterArn);
     }
 
     @Import(name="elasticIp")
-      private final @Nullable Output<String> elasticIp;
+    private @Nullable Output<String> elasticIp;
 
-    public Output<String> elasticIp() {
-        return this.elasticIp == null ? Codegen.empty() : this.elasticIp;
+    public Optional<Output<String>> elasticIp() {
+        return Optional.ofNullable(this.elasticIp);
     }
 
     /**
@@ -140,10 +140,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ephemeralBlockDevices")
-      private final @Nullable Output<List<InstanceEphemeralBlockDeviceArgs>> ephemeralBlockDevices;
+    private @Nullable Output<List<InstanceEphemeralBlockDeviceArgs>> ephemeralBlockDevices;
 
-    public Output<List<InstanceEphemeralBlockDeviceArgs>> ephemeralBlockDevices() {
-        return this.ephemeralBlockDevices == null ? Codegen.empty() : this.ephemeralBlockDevices;
+    public Optional<Output<List<InstanceEphemeralBlockDeviceArgs>>> ephemeralBlockDevices() {
+        return Optional.ofNullable(this.ephemeralBlockDevices);
     }
 
     /**
@@ -151,17 +151,17 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hostname")
-      private final @Nullable Output<String> hostname;
+    private @Nullable Output<String> hostname;
 
-    public Output<String> hostname() {
-        return this.hostname == null ? Codegen.empty() : this.hostname;
+    public Optional<Output<String>> hostname() {
+        return Optional.ofNullable(this.hostname);
     }
 
     @Import(name="infrastructureClass")
-      private final @Nullable Output<String> infrastructureClass;
+    private @Nullable Output<String> infrastructureClass;
 
-    public Output<String> infrastructureClass() {
-        return this.infrastructureClass == null ? Codegen.empty() : this.infrastructureClass;
+    public Optional<Output<String>> infrastructureClass() {
+        return Optional.ofNullable(this.infrastructureClass);
     }
 
     /**
@@ -169,17 +169,17 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="installUpdatesOnBoot")
-      private final @Nullable Output<Boolean> installUpdatesOnBoot;
+    private @Nullable Output<Boolean> installUpdatesOnBoot;
 
-    public Output<Boolean> installUpdatesOnBoot() {
-        return this.installUpdatesOnBoot == null ? Codegen.empty() : this.installUpdatesOnBoot;
+    public Optional<Output<Boolean>> installUpdatesOnBoot() {
+        return Optional.ofNullable(this.installUpdatesOnBoot);
     }
 
     @Import(name="instanceProfileArn")
-      private final @Nullable Output<String> instanceProfileArn;
+    private @Nullable Output<String> instanceProfileArn;
 
-    public Output<String> instanceProfileArn() {
-        return this.instanceProfileArn == null ? Codegen.empty() : this.instanceProfileArn;
+    public Optional<Output<String>> instanceProfileArn() {
+        return Optional.ofNullable(this.instanceProfileArn);
     }
 
     /**
@@ -187,17 +187,17 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instanceType")
-      private final @Nullable Output<String> instanceType;
+    private @Nullable Output<String> instanceType;
 
-    public Output<String> instanceType() {
-        return this.instanceType == null ? Codegen.empty() : this.instanceType;
+    public Optional<Output<String>> instanceType() {
+        return Optional.ofNullable(this.instanceType);
     }
 
     @Import(name="lastServiceErrorId")
-      private final @Nullable Output<String> lastServiceErrorId;
+    private @Nullable Output<String> lastServiceErrorId;
 
-    public Output<String> lastServiceErrorId() {
-        return this.lastServiceErrorId == null ? Codegen.empty() : this.lastServiceErrorId;
+    public Optional<Output<String>> lastServiceErrorId() {
+        return Optional.ofNullable(this.lastServiceErrorId);
     }
 
     /**
@@ -205,7 +205,7 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="layerIds", required=true)
-      private final Output<List<String>> layerIds;
+    private Output<List<String>> layerIds;
 
     public Output<List<String>> layerIds() {
         return this.layerIds;
@@ -216,17 +216,17 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="os")
-      private final @Nullable Output<String> os;
+    private @Nullable Output<String> os;
 
-    public Output<String> os() {
-        return this.os == null ? Codegen.empty() : this.os;
+    public Optional<Output<String>> os() {
+        return Optional.ofNullable(this.os);
     }
 
     @Import(name="platform")
-      private final @Nullable Output<String> platform;
+    private @Nullable Output<String> platform;
 
-    public Output<String> platform() {
-        return this.platform == null ? Codegen.empty() : this.platform;
+    public Optional<Output<String>> platform() {
+        return Optional.ofNullable(this.platform);
     }
 
     /**
@@ -236,10 +236,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="privateDns")
-      private final @Nullable Output<String> privateDns;
+    private @Nullable Output<String> privateDns;
 
-    public Output<String> privateDns() {
-        return this.privateDns == null ? Codegen.empty() : this.privateDns;
+    public Optional<Output<String>> privateDns() {
+        return Optional.ofNullable(this.privateDns);
     }
 
     /**
@@ -247,10 +247,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="privateIp")
-      private final @Nullable Output<String> privateIp;
+    private @Nullable Output<String> privateIp;
 
-    public Output<String> privateIp() {
-        return this.privateIp == null ? Codegen.empty() : this.privateIp;
+    public Optional<Output<String>> privateIp() {
+        return Optional.ofNullable(this.privateIp);
     }
 
     /**
@@ -259,10 +259,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publicDns")
-      private final @Nullable Output<String> publicDns;
+    private @Nullable Output<String> publicDns;
 
-    public Output<String> publicDns() {
-        return this.publicDns == null ? Codegen.empty() : this.publicDns;
+    public Optional<Output<String>> publicDns() {
+        return Optional.ofNullable(this.publicDns);
     }
 
     /**
@@ -270,45 +270,45 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publicIp")
-      private final @Nullable Output<String> publicIp;
+    private @Nullable Output<String> publicIp;
 
-    public Output<String> publicIp() {
-        return this.publicIp == null ? Codegen.empty() : this.publicIp;
+    public Optional<Output<String>> publicIp() {
+        return Optional.ofNullable(this.publicIp);
     }
 
     @Import(name="registeredBy")
-      private final @Nullable Output<String> registeredBy;
+    private @Nullable Output<String> registeredBy;
 
-    public Output<String> registeredBy() {
-        return this.registeredBy == null ? Codegen.empty() : this.registeredBy;
+    public Optional<Output<String>> registeredBy() {
+        return Optional.ofNullable(this.registeredBy);
     }
 
     @Import(name="reportedAgentVersion")
-      private final @Nullable Output<String> reportedAgentVersion;
+    private @Nullable Output<String> reportedAgentVersion;
 
-    public Output<String> reportedAgentVersion() {
-        return this.reportedAgentVersion == null ? Codegen.empty() : this.reportedAgentVersion;
+    public Optional<Output<String>> reportedAgentVersion() {
+        return Optional.ofNullable(this.reportedAgentVersion);
     }
 
     @Import(name="reportedOsFamily")
-      private final @Nullable Output<String> reportedOsFamily;
+    private @Nullable Output<String> reportedOsFamily;
 
-    public Output<String> reportedOsFamily() {
-        return this.reportedOsFamily == null ? Codegen.empty() : this.reportedOsFamily;
+    public Optional<Output<String>> reportedOsFamily() {
+        return Optional.ofNullable(this.reportedOsFamily);
     }
 
     @Import(name="reportedOsName")
-      private final @Nullable Output<String> reportedOsName;
+    private @Nullable Output<String> reportedOsName;
 
-    public Output<String> reportedOsName() {
-        return this.reportedOsName == null ? Codegen.empty() : this.reportedOsName;
+    public Optional<Output<String>> reportedOsName() {
+        return Optional.ofNullable(this.reportedOsName);
     }
 
     @Import(name="reportedOsVersion")
-      private final @Nullable Output<String> reportedOsVersion;
+    private @Nullable Output<String> reportedOsVersion;
 
-    public Output<String> reportedOsVersion() {
-        return this.reportedOsVersion == null ? Codegen.empty() : this.reportedOsVersion;
+    public Optional<Output<String>> reportedOsVersion() {
+        return Optional.ofNullable(this.reportedOsVersion);
     }
 
     /**
@@ -317,10 +317,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rootBlockDevices")
-      private final @Nullable Output<List<InstanceRootBlockDeviceArgs>> rootBlockDevices;
+    private @Nullable Output<List<InstanceRootBlockDeviceArgs>> rootBlockDevices;
 
-    public Output<List<InstanceRootBlockDeviceArgs>> rootBlockDevices() {
-        return this.rootBlockDevices == null ? Codegen.empty() : this.rootBlockDevices;
+    public Optional<Output<List<InstanceRootBlockDeviceArgs>>> rootBlockDevices() {
+        return Optional.ofNullable(this.rootBlockDevices);
     }
 
     /**
@@ -328,17 +328,17 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rootDeviceType")
-      private final @Nullable Output<String> rootDeviceType;
+    private @Nullable Output<String> rootDeviceType;
 
-    public Output<String> rootDeviceType() {
-        return this.rootDeviceType == null ? Codegen.empty() : this.rootDeviceType;
+    public Optional<Output<String>> rootDeviceType() {
+        return Optional.ofNullable(this.rootDeviceType);
     }
 
     @Import(name="rootDeviceVolumeId")
-      private final @Nullable Output<String> rootDeviceVolumeId;
+    private @Nullable Output<String> rootDeviceVolumeId;
 
-    public Output<String> rootDeviceVolumeId() {
-        return this.rootDeviceVolumeId == null ? Codegen.empty() : this.rootDeviceVolumeId;
+    public Optional<Output<String>> rootDeviceVolumeId() {
+        return Optional.ofNullable(this.rootDeviceVolumeId);
     }
 
     /**
@@ -346,24 +346,24 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="securityGroupIds")
-      private final @Nullable Output<List<String>> securityGroupIds;
+    private @Nullable Output<List<String>> securityGroupIds;
 
-    public Output<List<String>> securityGroupIds() {
-        return this.securityGroupIds == null ? Codegen.empty() : this.securityGroupIds;
+    public Optional<Output<List<String>>> securityGroupIds() {
+        return Optional.ofNullable(this.securityGroupIds);
     }
 
     @Import(name="sshHostDsaKeyFingerprint")
-      private final @Nullable Output<String> sshHostDsaKeyFingerprint;
+    private @Nullable Output<String> sshHostDsaKeyFingerprint;
 
-    public Output<String> sshHostDsaKeyFingerprint() {
-        return this.sshHostDsaKeyFingerprint == null ? Codegen.empty() : this.sshHostDsaKeyFingerprint;
+    public Optional<Output<String>> sshHostDsaKeyFingerprint() {
+        return Optional.ofNullable(this.sshHostDsaKeyFingerprint);
     }
 
     @Import(name="sshHostRsaKeyFingerprint")
-      private final @Nullable Output<String> sshHostRsaKeyFingerprint;
+    private @Nullable Output<String> sshHostRsaKeyFingerprint;
 
-    public Output<String> sshHostRsaKeyFingerprint() {
-        return this.sshHostRsaKeyFingerprint == null ? Codegen.empty() : this.sshHostRsaKeyFingerprint;
+    public Optional<Output<String>> sshHostRsaKeyFingerprint() {
+        return Optional.ofNullable(this.sshHostRsaKeyFingerprint);
     }
 
     /**
@@ -371,10 +371,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sshKeyName")
-      private final @Nullable Output<String> sshKeyName;
+    private @Nullable Output<String> sshKeyName;
 
-    public Output<String> sshKeyName() {
-        return this.sshKeyName == null ? Codegen.empty() : this.sshKeyName;
+    public Optional<Output<String>> sshKeyName() {
+        return Optional.ofNullable(this.sshKeyName);
     }
 
     /**
@@ -382,7 +382,7 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="stackId", required=true)
-      private final Output<String> stackId;
+    private Output<String> stackId;
 
     public Output<String> stackId() {
         return this.stackId;
@@ -393,17 +393,17 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<String> state;
+    private @Nullable Output<String> state;
 
-    public Output<String> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -411,10 +411,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subnetId")
-      private final @Nullable Output<String> subnetId;
+    private @Nullable Output<String> subnetId;
 
-    public Output<String> subnetId() {
-        return this.subnetId == null ? Codegen.empty() : this.subnetId;
+    public Optional<Output<String>> subnetId() {
+        return Optional.ofNullable(this.subnetId);
     }
 
     /**
@@ -422,10 +422,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tenancy")
-      private final @Nullable Output<String> tenancy;
+    private @Nullable Output<String> tenancy;
 
-    public Output<String> tenancy() {
-        return this.tenancy == null ? Codegen.empty() : this.tenancy;
+    public Optional<Output<String>> tenancy() {
+        return Optional.ofNullable(this.tenancy);
     }
 
     /**
@@ -434,624 +434,500 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="virtualizationType")
-      private final @Nullable Output<String> virtualizationType;
+    private @Nullable Output<String> virtualizationType;
 
-    public Output<String> virtualizationType() {
-        return this.virtualizationType == null ? Codegen.empty() : this.virtualizationType;
+    public Optional<Output<String>> virtualizationType() {
+        return Optional.ofNullable(this.virtualizationType);
     }
 
-    public InstanceArgs(
-        @Nullable Output<String> agentVersion,
-        @Nullable Output<String> amiId,
-        @Nullable Output<String> architecture,
-        @Nullable Output<String> autoScalingType,
-        @Nullable Output<String> availabilityZone,
-        @Nullable Output<String> createdAt,
-        @Nullable Output<Boolean> deleteEbs,
-        @Nullable Output<Boolean> deleteEip,
-        @Nullable Output<List<InstanceEbsBlockDeviceArgs>> ebsBlockDevices,
-        @Nullable Output<Boolean> ebsOptimized,
-        @Nullable Output<String> ecsClusterArn,
-        @Nullable Output<String> elasticIp,
-        @Nullable Output<List<InstanceEphemeralBlockDeviceArgs>> ephemeralBlockDevices,
-        @Nullable Output<String> hostname,
-        @Nullable Output<String> infrastructureClass,
-        @Nullable Output<Boolean> installUpdatesOnBoot,
-        @Nullable Output<String> instanceProfileArn,
-        @Nullable Output<String> instanceType,
-        @Nullable Output<String> lastServiceErrorId,
-        Output<List<String>> layerIds,
-        @Nullable Output<String> os,
-        @Nullable Output<String> platform,
-        @Nullable Output<String> privateDns,
-        @Nullable Output<String> privateIp,
-        @Nullable Output<String> publicDns,
-        @Nullable Output<String> publicIp,
-        @Nullable Output<String> registeredBy,
-        @Nullable Output<String> reportedAgentVersion,
-        @Nullable Output<String> reportedOsFamily,
-        @Nullable Output<String> reportedOsName,
-        @Nullable Output<String> reportedOsVersion,
-        @Nullable Output<List<InstanceRootBlockDeviceArgs>> rootBlockDevices,
-        @Nullable Output<String> rootDeviceType,
-        @Nullable Output<String> rootDeviceVolumeId,
-        @Nullable Output<List<String>> securityGroupIds,
-        @Nullable Output<String> sshHostDsaKeyFingerprint,
-        @Nullable Output<String> sshHostRsaKeyFingerprint,
-        @Nullable Output<String> sshKeyName,
-        Output<String> stackId,
-        @Nullable Output<String> state,
-        @Nullable Output<String> status,
-        @Nullable Output<String> subnetId,
-        @Nullable Output<String> tenancy,
-        @Nullable Output<String> virtualizationType) {
-        this.agentVersion = agentVersion;
-        this.amiId = amiId;
-        this.architecture = architecture;
-        this.autoScalingType = autoScalingType;
-        this.availabilityZone = availabilityZone;
-        this.createdAt = createdAt;
-        this.deleteEbs = deleteEbs;
-        this.deleteEip = deleteEip;
-        this.ebsBlockDevices = ebsBlockDevices;
-        this.ebsOptimized = ebsOptimized;
-        this.ecsClusterArn = ecsClusterArn;
-        this.elasticIp = elasticIp;
-        this.ephemeralBlockDevices = ephemeralBlockDevices;
-        this.hostname = hostname;
-        this.infrastructureClass = infrastructureClass;
-        this.installUpdatesOnBoot = installUpdatesOnBoot;
-        this.instanceProfileArn = instanceProfileArn;
-        this.instanceType = instanceType;
-        this.lastServiceErrorId = lastServiceErrorId;
-        this.layerIds = Objects.requireNonNull(layerIds, "expected parameter 'layerIds' to be non-null");
-        this.os = os;
-        this.platform = platform;
-        this.privateDns = privateDns;
-        this.privateIp = privateIp;
-        this.publicDns = publicDns;
-        this.publicIp = publicIp;
-        this.registeredBy = registeredBy;
-        this.reportedAgentVersion = reportedAgentVersion;
-        this.reportedOsFamily = reportedOsFamily;
-        this.reportedOsName = reportedOsName;
-        this.reportedOsVersion = reportedOsVersion;
-        this.rootBlockDevices = rootBlockDevices;
-        this.rootDeviceType = rootDeviceType;
-        this.rootDeviceVolumeId = rootDeviceVolumeId;
-        this.securityGroupIds = securityGroupIds;
-        this.sshHostDsaKeyFingerprint = sshHostDsaKeyFingerprint;
-        this.sshHostRsaKeyFingerprint = sshHostRsaKeyFingerprint;
-        this.sshKeyName = sshKeyName;
-        this.stackId = Objects.requireNonNull(stackId, "expected parameter 'stackId' to be non-null");
-        this.state = state;
-        this.status = status;
-        this.subnetId = subnetId;
-        this.tenancy = tenancy;
-        this.virtualizationType = virtualizationType;
-    }
+    private InstanceArgs() {}
 
-    private InstanceArgs() {
-        this.agentVersion = Codegen.empty();
-        this.amiId = Codegen.empty();
-        this.architecture = Codegen.empty();
-        this.autoScalingType = Codegen.empty();
-        this.availabilityZone = Codegen.empty();
-        this.createdAt = Codegen.empty();
-        this.deleteEbs = Codegen.empty();
-        this.deleteEip = Codegen.empty();
-        this.ebsBlockDevices = Codegen.empty();
-        this.ebsOptimized = Codegen.empty();
-        this.ecsClusterArn = Codegen.empty();
-        this.elasticIp = Codegen.empty();
-        this.ephemeralBlockDevices = Codegen.empty();
-        this.hostname = Codegen.empty();
-        this.infrastructureClass = Codegen.empty();
-        this.installUpdatesOnBoot = Codegen.empty();
-        this.instanceProfileArn = Codegen.empty();
-        this.instanceType = Codegen.empty();
-        this.lastServiceErrorId = Codegen.empty();
-        this.layerIds = Codegen.empty();
-        this.os = Codegen.empty();
-        this.platform = Codegen.empty();
-        this.privateDns = Codegen.empty();
-        this.privateIp = Codegen.empty();
-        this.publicDns = Codegen.empty();
-        this.publicIp = Codegen.empty();
-        this.registeredBy = Codegen.empty();
-        this.reportedAgentVersion = Codegen.empty();
-        this.reportedOsFamily = Codegen.empty();
-        this.reportedOsName = Codegen.empty();
-        this.reportedOsVersion = Codegen.empty();
-        this.rootBlockDevices = Codegen.empty();
-        this.rootDeviceType = Codegen.empty();
-        this.rootDeviceVolumeId = Codegen.empty();
-        this.securityGroupIds = Codegen.empty();
-        this.sshHostDsaKeyFingerprint = Codegen.empty();
-        this.sshHostRsaKeyFingerprint = Codegen.empty();
-        this.sshKeyName = Codegen.empty();
-        this.stackId = Codegen.empty();
-        this.state = Codegen.empty();
-        this.status = Codegen.empty();
-        this.subnetId = Codegen.empty();
-        this.tenancy = Codegen.empty();
-        this.virtualizationType = Codegen.empty();
+    private InstanceArgs(InstanceArgs $) {
+        this.agentVersion = $.agentVersion;
+        this.amiId = $.amiId;
+        this.architecture = $.architecture;
+        this.autoScalingType = $.autoScalingType;
+        this.availabilityZone = $.availabilityZone;
+        this.createdAt = $.createdAt;
+        this.deleteEbs = $.deleteEbs;
+        this.deleteEip = $.deleteEip;
+        this.ebsBlockDevices = $.ebsBlockDevices;
+        this.ebsOptimized = $.ebsOptimized;
+        this.ecsClusterArn = $.ecsClusterArn;
+        this.elasticIp = $.elasticIp;
+        this.ephemeralBlockDevices = $.ephemeralBlockDevices;
+        this.hostname = $.hostname;
+        this.infrastructureClass = $.infrastructureClass;
+        this.installUpdatesOnBoot = $.installUpdatesOnBoot;
+        this.instanceProfileArn = $.instanceProfileArn;
+        this.instanceType = $.instanceType;
+        this.lastServiceErrorId = $.lastServiceErrorId;
+        this.layerIds = $.layerIds;
+        this.os = $.os;
+        this.platform = $.platform;
+        this.privateDns = $.privateDns;
+        this.privateIp = $.privateIp;
+        this.publicDns = $.publicDns;
+        this.publicIp = $.publicIp;
+        this.registeredBy = $.registeredBy;
+        this.reportedAgentVersion = $.reportedAgentVersion;
+        this.reportedOsFamily = $.reportedOsFamily;
+        this.reportedOsName = $.reportedOsName;
+        this.reportedOsVersion = $.reportedOsVersion;
+        this.rootBlockDevices = $.rootBlockDevices;
+        this.rootDeviceType = $.rootDeviceType;
+        this.rootDeviceVolumeId = $.rootDeviceVolumeId;
+        this.securityGroupIds = $.securityGroupIds;
+        this.sshHostDsaKeyFingerprint = $.sshHostDsaKeyFingerprint;
+        this.sshHostRsaKeyFingerprint = $.sshHostRsaKeyFingerprint;
+        this.sshKeyName = $.sshKeyName;
+        this.stackId = $.stackId;
+        this.state = $.state;
+        this.status = $.status;
+        this.subnetId = $.subnetId;
+        this.tenancy = $.tenancy;
+        this.virtualizationType = $.virtualizationType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> agentVersion;
-        private @Nullable Output<String> amiId;
-        private @Nullable Output<String> architecture;
-        private @Nullable Output<String> autoScalingType;
-        private @Nullable Output<String> availabilityZone;
-        private @Nullable Output<String> createdAt;
-        private @Nullable Output<Boolean> deleteEbs;
-        private @Nullable Output<Boolean> deleteEip;
-        private @Nullable Output<List<InstanceEbsBlockDeviceArgs>> ebsBlockDevices;
-        private @Nullable Output<Boolean> ebsOptimized;
-        private @Nullable Output<String> ecsClusterArn;
-        private @Nullable Output<String> elasticIp;
-        private @Nullable Output<List<InstanceEphemeralBlockDeviceArgs>> ephemeralBlockDevices;
-        private @Nullable Output<String> hostname;
-        private @Nullable Output<String> infrastructureClass;
-        private @Nullable Output<Boolean> installUpdatesOnBoot;
-        private @Nullable Output<String> instanceProfileArn;
-        private @Nullable Output<String> instanceType;
-        private @Nullable Output<String> lastServiceErrorId;
-        private Output<List<String>> layerIds;
-        private @Nullable Output<String> os;
-        private @Nullable Output<String> platform;
-        private @Nullable Output<String> privateDns;
-        private @Nullable Output<String> privateIp;
-        private @Nullable Output<String> publicDns;
-        private @Nullable Output<String> publicIp;
-        private @Nullable Output<String> registeredBy;
-        private @Nullable Output<String> reportedAgentVersion;
-        private @Nullable Output<String> reportedOsFamily;
-        private @Nullable Output<String> reportedOsName;
-        private @Nullable Output<String> reportedOsVersion;
-        private @Nullable Output<List<InstanceRootBlockDeviceArgs>> rootBlockDevices;
-        private @Nullable Output<String> rootDeviceType;
-        private @Nullable Output<String> rootDeviceVolumeId;
-        private @Nullable Output<List<String>> securityGroupIds;
-        private @Nullable Output<String> sshHostDsaKeyFingerprint;
-        private @Nullable Output<String> sshHostRsaKeyFingerprint;
-        private @Nullable Output<String> sshKeyName;
-        private Output<String> stackId;
-        private @Nullable Output<String> state;
-        private @Nullable Output<String> status;
-        private @Nullable Output<String> subnetId;
-        private @Nullable Output<String> tenancy;
-        private @Nullable Output<String> virtualizationType;
+        private InstanceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceArgs();
         }
 
         public Builder(InstanceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agentVersion = defaults.agentVersion;
-    	      this.amiId = defaults.amiId;
-    	      this.architecture = defaults.architecture;
-    	      this.autoScalingType = defaults.autoScalingType;
-    	      this.availabilityZone = defaults.availabilityZone;
-    	      this.createdAt = defaults.createdAt;
-    	      this.deleteEbs = defaults.deleteEbs;
-    	      this.deleteEip = defaults.deleteEip;
-    	      this.ebsBlockDevices = defaults.ebsBlockDevices;
-    	      this.ebsOptimized = defaults.ebsOptimized;
-    	      this.ecsClusterArn = defaults.ecsClusterArn;
-    	      this.elasticIp = defaults.elasticIp;
-    	      this.ephemeralBlockDevices = defaults.ephemeralBlockDevices;
-    	      this.hostname = defaults.hostname;
-    	      this.infrastructureClass = defaults.infrastructureClass;
-    	      this.installUpdatesOnBoot = defaults.installUpdatesOnBoot;
-    	      this.instanceProfileArn = defaults.instanceProfileArn;
-    	      this.instanceType = defaults.instanceType;
-    	      this.lastServiceErrorId = defaults.lastServiceErrorId;
-    	      this.layerIds = defaults.layerIds;
-    	      this.os = defaults.os;
-    	      this.platform = defaults.platform;
-    	      this.privateDns = defaults.privateDns;
-    	      this.privateIp = defaults.privateIp;
-    	      this.publicDns = defaults.publicDns;
-    	      this.publicIp = defaults.publicIp;
-    	      this.registeredBy = defaults.registeredBy;
-    	      this.reportedAgentVersion = defaults.reportedAgentVersion;
-    	      this.reportedOsFamily = defaults.reportedOsFamily;
-    	      this.reportedOsName = defaults.reportedOsName;
-    	      this.reportedOsVersion = defaults.reportedOsVersion;
-    	      this.rootBlockDevices = defaults.rootBlockDevices;
-    	      this.rootDeviceType = defaults.rootDeviceType;
-    	      this.rootDeviceVolumeId = defaults.rootDeviceVolumeId;
-    	      this.securityGroupIds = defaults.securityGroupIds;
-    	      this.sshHostDsaKeyFingerprint = defaults.sshHostDsaKeyFingerprint;
-    	      this.sshHostRsaKeyFingerprint = defaults.sshHostRsaKeyFingerprint;
-    	      this.sshKeyName = defaults.sshKeyName;
-    	      this.stackId = defaults.stackId;
-    	      this.state = defaults.state;
-    	      this.status = defaults.status;
-    	      this.subnetId = defaults.subnetId;
-    	      this.tenancy = defaults.tenancy;
-    	      this.virtualizationType = defaults.virtualizationType;
+            $ = new InstanceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder agentVersion(@Nullable Output<String> agentVersion) {
-            this.agentVersion = agentVersion;
+            $.agentVersion = agentVersion;
             return this;
         }
-        public Builder agentVersion(@Nullable String agentVersion) {
-            this.agentVersion = Codegen.ofNullable(agentVersion);
-            return this;
+
+        public Builder agentVersion(String agentVersion) {
+            return agentVersion(Output.of(agentVersion));
         }
+
         public Builder amiId(@Nullable Output<String> amiId) {
-            this.amiId = amiId;
+            $.amiId = amiId;
             return this;
         }
-        public Builder amiId(@Nullable String amiId) {
-            this.amiId = Codegen.ofNullable(amiId);
-            return this;
+
+        public Builder amiId(String amiId) {
+            return amiId(Output.of(amiId));
         }
+
         public Builder architecture(@Nullable Output<String> architecture) {
-            this.architecture = architecture;
+            $.architecture = architecture;
             return this;
         }
-        public Builder architecture(@Nullable String architecture) {
-            this.architecture = Codegen.ofNullable(architecture);
-            return this;
+
+        public Builder architecture(String architecture) {
+            return architecture(Output.of(architecture));
         }
+
         public Builder autoScalingType(@Nullable Output<String> autoScalingType) {
-            this.autoScalingType = autoScalingType;
+            $.autoScalingType = autoScalingType;
             return this;
         }
-        public Builder autoScalingType(@Nullable String autoScalingType) {
-            this.autoScalingType = Codegen.ofNullable(autoScalingType);
-            return this;
+
+        public Builder autoScalingType(String autoScalingType) {
+            return autoScalingType(Output.of(autoScalingType));
         }
+
         public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
-            this.availabilityZone = availabilityZone;
+            $.availabilityZone = availabilityZone;
             return this;
         }
-        public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Codegen.ofNullable(availabilityZone);
-            return this;
+
+        public Builder availabilityZone(String availabilityZone) {
+            return availabilityZone(Output.of(availabilityZone));
         }
+
         public Builder createdAt(@Nullable Output<String> createdAt) {
-            this.createdAt = createdAt;
+            $.createdAt = createdAt;
             return this;
         }
-        public Builder createdAt(@Nullable String createdAt) {
-            this.createdAt = Codegen.ofNullable(createdAt);
-            return this;
+
+        public Builder createdAt(String createdAt) {
+            return createdAt(Output.of(createdAt));
         }
+
         public Builder deleteEbs(@Nullable Output<Boolean> deleteEbs) {
-            this.deleteEbs = deleteEbs;
+            $.deleteEbs = deleteEbs;
             return this;
         }
-        public Builder deleteEbs(@Nullable Boolean deleteEbs) {
-            this.deleteEbs = Codegen.ofNullable(deleteEbs);
-            return this;
+
+        public Builder deleteEbs(Boolean deleteEbs) {
+            return deleteEbs(Output.of(deleteEbs));
         }
+
         public Builder deleteEip(@Nullable Output<Boolean> deleteEip) {
-            this.deleteEip = deleteEip;
+            $.deleteEip = deleteEip;
             return this;
         }
-        public Builder deleteEip(@Nullable Boolean deleteEip) {
-            this.deleteEip = Codegen.ofNullable(deleteEip);
-            return this;
+
+        public Builder deleteEip(Boolean deleteEip) {
+            return deleteEip(Output.of(deleteEip));
         }
+
         public Builder ebsBlockDevices(@Nullable Output<List<InstanceEbsBlockDeviceArgs>> ebsBlockDevices) {
-            this.ebsBlockDevices = ebsBlockDevices;
+            $.ebsBlockDevices = ebsBlockDevices;
             return this;
         }
-        public Builder ebsBlockDevices(@Nullable List<InstanceEbsBlockDeviceArgs> ebsBlockDevices) {
-            this.ebsBlockDevices = Codegen.ofNullable(ebsBlockDevices);
-            return this;
+
+        public Builder ebsBlockDevices(List<InstanceEbsBlockDeviceArgs> ebsBlockDevices) {
+            return ebsBlockDevices(Output.of(ebsBlockDevices));
         }
+
         public Builder ebsBlockDevices(InstanceEbsBlockDeviceArgs... ebsBlockDevices) {
             return ebsBlockDevices(List.of(ebsBlockDevices));
         }
+
         public Builder ebsOptimized(@Nullable Output<Boolean> ebsOptimized) {
-            this.ebsOptimized = ebsOptimized;
+            $.ebsOptimized = ebsOptimized;
             return this;
         }
-        public Builder ebsOptimized(@Nullable Boolean ebsOptimized) {
-            this.ebsOptimized = Codegen.ofNullable(ebsOptimized);
-            return this;
+
+        public Builder ebsOptimized(Boolean ebsOptimized) {
+            return ebsOptimized(Output.of(ebsOptimized));
         }
+
         public Builder ecsClusterArn(@Nullable Output<String> ecsClusterArn) {
-            this.ecsClusterArn = ecsClusterArn;
+            $.ecsClusterArn = ecsClusterArn;
             return this;
         }
-        public Builder ecsClusterArn(@Nullable String ecsClusterArn) {
-            this.ecsClusterArn = Codegen.ofNullable(ecsClusterArn);
-            return this;
+
+        public Builder ecsClusterArn(String ecsClusterArn) {
+            return ecsClusterArn(Output.of(ecsClusterArn));
         }
+
         public Builder elasticIp(@Nullable Output<String> elasticIp) {
-            this.elasticIp = elasticIp;
+            $.elasticIp = elasticIp;
             return this;
         }
-        public Builder elasticIp(@Nullable String elasticIp) {
-            this.elasticIp = Codegen.ofNullable(elasticIp);
-            return this;
+
+        public Builder elasticIp(String elasticIp) {
+            return elasticIp(Output.of(elasticIp));
         }
+
         public Builder ephemeralBlockDevices(@Nullable Output<List<InstanceEphemeralBlockDeviceArgs>> ephemeralBlockDevices) {
-            this.ephemeralBlockDevices = ephemeralBlockDevices;
+            $.ephemeralBlockDevices = ephemeralBlockDevices;
             return this;
         }
-        public Builder ephemeralBlockDevices(@Nullable List<InstanceEphemeralBlockDeviceArgs> ephemeralBlockDevices) {
-            this.ephemeralBlockDevices = Codegen.ofNullable(ephemeralBlockDevices);
-            return this;
+
+        public Builder ephemeralBlockDevices(List<InstanceEphemeralBlockDeviceArgs> ephemeralBlockDevices) {
+            return ephemeralBlockDevices(Output.of(ephemeralBlockDevices));
         }
+
         public Builder ephemeralBlockDevices(InstanceEphemeralBlockDeviceArgs... ephemeralBlockDevices) {
             return ephemeralBlockDevices(List.of(ephemeralBlockDevices));
         }
+
         public Builder hostname(@Nullable Output<String> hostname) {
-            this.hostname = hostname;
+            $.hostname = hostname;
             return this;
         }
-        public Builder hostname(@Nullable String hostname) {
-            this.hostname = Codegen.ofNullable(hostname);
-            return this;
+
+        public Builder hostname(String hostname) {
+            return hostname(Output.of(hostname));
         }
+
         public Builder infrastructureClass(@Nullable Output<String> infrastructureClass) {
-            this.infrastructureClass = infrastructureClass;
+            $.infrastructureClass = infrastructureClass;
             return this;
         }
-        public Builder infrastructureClass(@Nullable String infrastructureClass) {
-            this.infrastructureClass = Codegen.ofNullable(infrastructureClass);
-            return this;
+
+        public Builder infrastructureClass(String infrastructureClass) {
+            return infrastructureClass(Output.of(infrastructureClass));
         }
+
         public Builder installUpdatesOnBoot(@Nullable Output<Boolean> installUpdatesOnBoot) {
-            this.installUpdatesOnBoot = installUpdatesOnBoot;
+            $.installUpdatesOnBoot = installUpdatesOnBoot;
             return this;
         }
-        public Builder installUpdatesOnBoot(@Nullable Boolean installUpdatesOnBoot) {
-            this.installUpdatesOnBoot = Codegen.ofNullable(installUpdatesOnBoot);
-            return this;
+
+        public Builder installUpdatesOnBoot(Boolean installUpdatesOnBoot) {
+            return installUpdatesOnBoot(Output.of(installUpdatesOnBoot));
         }
+
         public Builder instanceProfileArn(@Nullable Output<String> instanceProfileArn) {
-            this.instanceProfileArn = instanceProfileArn;
+            $.instanceProfileArn = instanceProfileArn;
             return this;
         }
-        public Builder instanceProfileArn(@Nullable String instanceProfileArn) {
-            this.instanceProfileArn = Codegen.ofNullable(instanceProfileArn);
-            return this;
+
+        public Builder instanceProfileArn(String instanceProfileArn) {
+            return instanceProfileArn(Output.of(instanceProfileArn));
         }
+
         public Builder instanceType(@Nullable Output<String> instanceType) {
-            this.instanceType = instanceType;
+            $.instanceType = instanceType;
             return this;
         }
-        public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Codegen.ofNullable(instanceType);
-            return this;
+
+        public Builder instanceType(String instanceType) {
+            return instanceType(Output.of(instanceType));
         }
+
         public Builder lastServiceErrorId(@Nullable Output<String> lastServiceErrorId) {
-            this.lastServiceErrorId = lastServiceErrorId;
+            $.lastServiceErrorId = lastServiceErrorId;
             return this;
         }
-        public Builder lastServiceErrorId(@Nullable String lastServiceErrorId) {
-            this.lastServiceErrorId = Codegen.ofNullable(lastServiceErrorId);
-            return this;
+
+        public Builder lastServiceErrorId(String lastServiceErrorId) {
+            return lastServiceErrorId(Output.of(lastServiceErrorId));
         }
+
         public Builder layerIds(Output<List<String>> layerIds) {
-            this.layerIds = Objects.requireNonNull(layerIds);
+            $.layerIds = layerIds;
             return this;
         }
+
         public Builder layerIds(List<String> layerIds) {
-            this.layerIds = Output.of(Objects.requireNonNull(layerIds));
-            return this;
+            return layerIds(Output.of(layerIds));
         }
+
         public Builder layerIds(String... layerIds) {
             return layerIds(List.of(layerIds));
         }
+
         public Builder os(@Nullable Output<String> os) {
-            this.os = os;
+            $.os = os;
             return this;
         }
-        public Builder os(@Nullable String os) {
-            this.os = Codegen.ofNullable(os);
-            return this;
+
+        public Builder os(String os) {
+            return os(Output.of(os));
         }
+
         public Builder platform(@Nullable Output<String> platform) {
-            this.platform = platform;
+            $.platform = platform;
             return this;
         }
-        public Builder platform(@Nullable String platform) {
-            this.platform = Codegen.ofNullable(platform);
-            return this;
+
+        public Builder platform(String platform) {
+            return platform(Output.of(platform));
         }
+
         public Builder privateDns(@Nullable Output<String> privateDns) {
-            this.privateDns = privateDns;
+            $.privateDns = privateDns;
             return this;
         }
-        public Builder privateDns(@Nullable String privateDns) {
-            this.privateDns = Codegen.ofNullable(privateDns);
-            return this;
+
+        public Builder privateDns(String privateDns) {
+            return privateDns(Output.of(privateDns));
         }
+
         public Builder privateIp(@Nullable Output<String> privateIp) {
-            this.privateIp = privateIp;
+            $.privateIp = privateIp;
             return this;
         }
-        public Builder privateIp(@Nullable String privateIp) {
-            this.privateIp = Codegen.ofNullable(privateIp);
-            return this;
+
+        public Builder privateIp(String privateIp) {
+            return privateIp(Output.of(privateIp));
         }
+
         public Builder publicDns(@Nullable Output<String> publicDns) {
-            this.publicDns = publicDns;
+            $.publicDns = publicDns;
             return this;
         }
-        public Builder publicDns(@Nullable String publicDns) {
-            this.publicDns = Codegen.ofNullable(publicDns);
-            return this;
+
+        public Builder publicDns(String publicDns) {
+            return publicDns(Output.of(publicDns));
         }
+
         public Builder publicIp(@Nullable Output<String> publicIp) {
-            this.publicIp = publicIp;
+            $.publicIp = publicIp;
             return this;
         }
-        public Builder publicIp(@Nullable String publicIp) {
-            this.publicIp = Codegen.ofNullable(publicIp);
-            return this;
+
+        public Builder publicIp(String publicIp) {
+            return publicIp(Output.of(publicIp));
         }
+
         public Builder registeredBy(@Nullable Output<String> registeredBy) {
-            this.registeredBy = registeredBy;
+            $.registeredBy = registeredBy;
             return this;
         }
-        public Builder registeredBy(@Nullable String registeredBy) {
-            this.registeredBy = Codegen.ofNullable(registeredBy);
-            return this;
+
+        public Builder registeredBy(String registeredBy) {
+            return registeredBy(Output.of(registeredBy));
         }
+
         public Builder reportedAgentVersion(@Nullable Output<String> reportedAgentVersion) {
-            this.reportedAgentVersion = reportedAgentVersion;
+            $.reportedAgentVersion = reportedAgentVersion;
             return this;
         }
-        public Builder reportedAgentVersion(@Nullable String reportedAgentVersion) {
-            this.reportedAgentVersion = Codegen.ofNullable(reportedAgentVersion);
-            return this;
+
+        public Builder reportedAgentVersion(String reportedAgentVersion) {
+            return reportedAgentVersion(Output.of(reportedAgentVersion));
         }
+
         public Builder reportedOsFamily(@Nullable Output<String> reportedOsFamily) {
-            this.reportedOsFamily = reportedOsFamily;
+            $.reportedOsFamily = reportedOsFamily;
             return this;
         }
-        public Builder reportedOsFamily(@Nullable String reportedOsFamily) {
-            this.reportedOsFamily = Codegen.ofNullable(reportedOsFamily);
-            return this;
+
+        public Builder reportedOsFamily(String reportedOsFamily) {
+            return reportedOsFamily(Output.of(reportedOsFamily));
         }
+
         public Builder reportedOsName(@Nullable Output<String> reportedOsName) {
-            this.reportedOsName = reportedOsName;
+            $.reportedOsName = reportedOsName;
             return this;
         }
-        public Builder reportedOsName(@Nullable String reportedOsName) {
-            this.reportedOsName = Codegen.ofNullable(reportedOsName);
-            return this;
+
+        public Builder reportedOsName(String reportedOsName) {
+            return reportedOsName(Output.of(reportedOsName));
         }
+
         public Builder reportedOsVersion(@Nullable Output<String> reportedOsVersion) {
-            this.reportedOsVersion = reportedOsVersion;
+            $.reportedOsVersion = reportedOsVersion;
             return this;
         }
-        public Builder reportedOsVersion(@Nullable String reportedOsVersion) {
-            this.reportedOsVersion = Codegen.ofNullable(reportedOsVersion);
-            return this;
+
+        public Builder reportedOsVersion(String reportedOsVersion) {
+            return reportedOsVersion(Output.of(reportedOsVersion));
         }
+
         public Builder rootBlockDevices(@Nullable Output<List<InstanceRootBlockDeviceArgs>> rootBlockDevices) {
-            this.rootBlockDevices = rootBlockDevices;
+            $.rootBlockDevices = rootBlockDevices;
             return this;
         }
-        public Builder rootBlockDevices(@Nullable List<InstanceRootBlockDeviceArgs> rootBlockDevices) {
-            this.rootBlockDevices = Codegen.ofNullable(rootBlockDevices);
-            return this;
+
+        public Builder rootBlockDevices(List<InstanceRootBlockDeviceArgs> rootBlockDevices) {
+            return rootBlockDevices(Output.of(rootBlockDevices));
         }
+
         public Builder rootBlockDevices(InstanceRootBlockDeviceArgs... rootBlockDevices) {
             return rootBlockDevices(List.of(rootBlockDevices));
         }
+
         public Builder rootDeviceType(@Nullable Output<String> rootDeviceType) {
-            this.rootDeviceType = rootDeviceType;
+            $.rootDeviceType = rootDeviceType;
             return this;
         }
-        public Builder rootDeviceType(@Nullable String rootDeviceType) {
-            this.rootDeviceType = Codegen.ofNullable(rootDeviceType);
-            return this;
+
+        public Builder rootDeviceType(String rootDeviceType) {
+            return rootDeviceType(Output.of(rootDeviceType));
         }
+
         public Builder rootDeviceVolumeId(@Nullable Output<String> rootDeviceVolumeId) {
-            this.rootDeviceVolumeId = rootDeviceVolumeId;
+            $.rootDeviceVolumeId = rootDeviceVolumeId;
             return this;
         }
-        public Builder rootDeviceVolumeId(@Nullable String rootDeviceVolumeId) {
-            this.rootDeviceVolumeId = Codegen.ofNullable(rootDeviceVolumeId);
-            return this;
+
+        public Builder rootDeviceVolumeId(String rootDeviceVolumeId) {
+            return rootDeviceVolumeId(Output.of(rootDeviceVolumeId));
         }
+
         public Builder securityGroupIds(@Nullable Output<List<String>> securityGroupIds) {
-            this.securityGroupIds = securityGroupIds;
+            $.securityGroupIds = securityGroupIds;
             return this;
         }
-        public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
-            this.securityGroupIds = Codegen.ofNullable(securityGroupIds);
-            return this;
+
+        public Builder securityGroupIds(List<String> securityGroupIds) {
+            return securityGroupIds(Output.of(securityGroupIds));
         }
+
         public Builder securityGroupIds(String... securityGroupIds) {
             return securityGroupIds(List.of(securityGroupIds));
         }
+
         public Builder sshHostDsaKeyFingerprint(@Nullable Output<String> sshHostDsaKeyFingerprint) {
-            this.sshHostDsaKeyFingerprint = sshHostDsaKeyFingerprint;
+            $.sshHostDsaKeyFingerprint = sshHostDsaKeyFingerprint;
             return this;
         }
-        public Builder sshHostDsaKeyFingerprint(@Nullable String sshHostDsaKeyFingerprint) {
-            this.sshHostDsaKeyFingerprint = Codegen.ofNullable(sshHostDsaKeyFingerprint);
-            return this;
+
+        public Builder sshHostDsaKeyFingerprint(String sshHostDsaKeyFingerprint) {
+            return sshHostDsaKeyFingerprint(Output.of(sshHostDsaKeyFingerprint));
         }
+
         public Builder sshHostRsaKeyFingerprint(@Nullable Output<String> sshHostRsaKeyFingerprint) {
-            this.sshHostRsaKeyFingerprint = sshHostRsaKeyFingerprint;
+            $.sshHostRsaKeyFingerprint = sshHostRsaKeyFingerprint;
             return this;
         }
-        public Builder sshHostRsaKeyFingerprint(@Nullable String sshHostRsaKeyFingerprint) {
-            this.sshHostRsaKeyFingerprint = Codegen.ofNullable(sshHostRsaKeyFingerprint);
-            return this;
+
+        public Builder sshHostRsaKeyFingerprint(String sshHostRsaKeyFingerprint) {
+            return sshHostRsaKeyFingerprint(Output.of(sshHostRsaKeyFingerprint));
         }
+
         public Builder sshKeyName(@Nullable Output<String> sshKeyName) {
-            this.sshKeyName = sshKeyName;
+            $.sshKeyName = sshKeyName;
             return this;
         }
-        public Builder sshKeyName(@Nullable String sshKeyName) {
-            this.sshKeyName = Codegen.ofNullable(sshKeyName);
-            return this;
+
+        public Builder sshKeyName(String sshKeyName) {
+            return sshKeyName(Output.of(sshKeyName));
         }
+
         public Builder stackId(Output<String> stackId) {
-            this.stackId = Objects.requireNonNull(stackId);
+            $.stackId = stackId;
             return this;
         }
+
         public Builder stackId(String stackId) {
-            this.stackId = Output.of(Objects.requireNonNull(stackId));
-            return this;
+            return stackId(Output.of(stackId));
         }
+
         public Builder state(@Nullable Output<String> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable String state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
+
+        public Builder state(String state) {
+            return state(Output.of(state));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(String status) {
+            return status(Output.of(status));
         }
+
         public Builder subnetId(@Nullable Output<String> subnetId) {
-            this.subnetId = subnetId;
+            $.subnetId = subnetId;
             return this;
         }
-        public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Codegen.ofNullable(subnetId);
-            return this;
+
+        public Builder subnetId(String subnetId) {
+            return subnetId(Output.of(subnetId));
         }
+
         public Builder tenancy(@Nullable Output<String> tenancy) {
-            this.tenancy = tenancy;
+            $.tenancy = tenancy;
             return this;
         }
-        public Builder tenancy(@Nullable String tenancy) {
-            this.tenancy = Codegen.ofNullable(tenancy);
-            return this;
+
+        public Builder tenancy(String tenancy) {
+            return tenancy(Output.of(tenancy));
         }
+
         public Builder virtualizationType(@Nullable Output<String> virtualizationType) {
-            this.virtualizationType = virtualizationType;
+            $.virtualizationType = virtualizationType;
             return this;
         }
-        public Builder virtualizationType(@Nullable String virtualizationType) {
-            this.virtualizationType = Codegen.ofNullable(virtualizationType);
-            return this;
-        }        public InstanceArgs build() {
-            return new InstanceArgs(agentVersion, amiId, architecture, autoScalingType, availabilityZone, createdAt, deleteEbs, deleteEip, ebsBlockDevices, ebsOptimized, ecsClusterArn, elasticIp, ephemeralBlockDevices, hostname, infrastructureClass, installUpdatesOnBoot, instanceProfileArn, instanceType, lastServiceErrorId, layerIds, os, platform, privateDns, privateIp, publicDns, publicIp, registeredBy, reportedAgentVersion, reportedOsFamily, reportedOsName, reportedOsVersion, rootBlockDevices, rootDeviceType, rootDeviceVolumeId, securityGroupIds, sshHostDsaKeyFingerprint, sshHostRsaKeyFingerprint, sshKeyName, stackId, state, status, subnetId, tenancy, virtualizationType);
+
+        public Builder virtualizationType(String virtualizationType) {
+            return virtualizationType(Output.of(virtualizationType));
+        }
+
+        public InstanceArgs build() {
+            $.layerIds = Objects.requireNonNull($.layerIds, "expected parameter 'layerIds' to be non-null");
+            $.stackId = Objects.requireNonNull($.stackId, "expected parameter 'stackId' to be non-null");
+            return $;
         }
     }
+
 }

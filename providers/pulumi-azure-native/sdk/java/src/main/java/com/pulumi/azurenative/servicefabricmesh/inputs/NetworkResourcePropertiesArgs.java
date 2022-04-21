@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +25,10 @@ public final class NetworkResourcePropertiesArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -36,63 +37,59 @@ public final class NetworkResourcePropertiesArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="kind", required=true)
-      private final Output<String> kind;
+    private Output<String> kind;
 
     public Output<String> kind() {
         return this.kind;
     }
 
-    public NetworkResourcePropertiesArgs(
-        @Nullable Output<String> description,
-        Output<String> kind) {
-        this.description = description;
-        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
-    }
+    private NetworkResourcePropertiesArgs() {}
 
-    private NetworkResourcePropertiesArgs() {
-        this.description = Codegen.empty();
-        this.kind = Codegen.empty();
+    private NetworkResourcePropertiesArgs(NetworkResourcePropertiesArgs $) {
+        this.description = $.description;
+        this.kind = $.kind;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkResourcePropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private Output<String> kind;
+        private NetworkResourcePropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkResourcePropertiesArgs();
         }
 
         public Builder(NetworkResourcePropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.kind = defaults.kind;
+            $ = new NetworkResourcePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder kind(Output<String> kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Output.of(Objects.requireNonNull(kind));
-            return this;
-        }        public NetworkResourcePropertiesArgs build() {
-            return new NetworkResourcePropertiesArgs(description, kind);
+            return kind(Output.of(kind));
+        }
+
+        public NetworkResourcePropertiesArgs build() {
+            $.kind = Codegen.stringProp("kind").output().arg($.kind).require();
+            return $;
         }
     }
+
 }

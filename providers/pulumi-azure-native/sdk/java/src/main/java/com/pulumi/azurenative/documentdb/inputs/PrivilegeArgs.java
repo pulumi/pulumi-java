@@ -6,10 +6,10 @@ package com.pulumi.azurenative.documentdb.inputs;
 import com.pulumi.azurenative.documentdb.inputs.PrivilegeResourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class PrivilegeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="actions")
-      private final @Nullable Output<List<String>> actions;
+    private @Nullable Output<List<String>> actions;
 
-    public Output<List<String>> actions() {
-        return this.actions == null ? Codegen.empty() : this.actions;
+    public Optional<Output<List<String>>> actions() {
+        return Optional.ofNullable(this.actions);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class PrivilegeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resource")
-      private final @Nullable Output<PrivilegeResourceArgs> resource;
+    private @Nullable Output<PrivilegeResourceArgs> resource;
 
-    public Output<PrivilegeResourceArgs> resource() {
-        return this.resource == null ? Codegen.empty() : this.resource;
+    public Optional<Output<PrivilegeResourceArgs>> resource() {
+        return Optional.ofNullable(this.resource);
     }
 
-    public PrivilegeArgs(
-        @Nullable Output<List<String>> actions,
-        @Nullable Output<PrivilegeResourceArgs> resource) {
-        this.actions = actions;
-        this.resource = resource;
-    }
+    private PrivilegeArgs() {}
 
-    private PrivilegeArgs() {
-        this.actions = Codegen.empty();
-        this.resource = Codegen.empty();
+    private PrivilegeArgs(PrivilegeArgs $) {
+        this.actions = $.actions;
+        this.resource = $.resource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivilegeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> actions;
-        private @Nullable Output<PrivilegeResourceArgs> resource;
+        private PrivilegeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivilegeArgs();
         }
 
         public Builder(PrivilegeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actions = defaults.actions;
-    	      this.resource = defaults.resource;
+            $ = new PrivilegeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actions(@Nullable Output<List<String>> actions) {
-            this.actions = actions;
+            $.actions = actions;
             return this;
         }
-        public Builder actions(@Nullable List<String> actions) {
-            this.actions = Codegen.ofNullable(actions);
-            return this;
+
+        public Builder actions(List<String> actions) {
+            return actions(Output.of(actions));
         }
+
         public Builder actions(String... actions) {
             return actions(List.of(actions));
         }
+
         public Builder resource(@Nullable Output<PrivilegeResourceArgs> resource) {
-            this.resource = resource;
+            $.resource = resource;
             return this;
         }
-        public Builder resource(@Nullable PrivilegeResourceArgs resource) {
-            this.resource = Codegen.ofNullable(resource);
-            return this;
-        }        public PrivilegeArgs build() {
-            return new PrivilegeArgs(actions, resource);
+
+        public Builder resource(PrivilegeResourceArgs resource) {
+            return resource(Output.of(resource));
+        }
+
+        public PrivilegeArgs build() {
+            return $;
         }
     }
+
 }

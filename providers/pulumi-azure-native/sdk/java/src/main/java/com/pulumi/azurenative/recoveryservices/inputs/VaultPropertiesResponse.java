@@ -27,10 +27,10 @@ public final class VaultPropertiesResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="encryption")
-      private final @Nullable VaultPropertiesResponseEncryption encryption;
+    private @Nullable VaultPropertiesResponseEncryption encryption;
 
     public Optional<VaultPropertiesResponseEncryption> encryption() {
-        return this.encryption == null ? Optional.empty() : Optional.ofNullable(this.encryption);
+        return Optional.ofNullable(this.encryption);
     }
 
     /**
@@ -38,7 +38,7 @@ public final class VaultPropertiesResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="privateEndpointConnections", required=true)
-      private final List<PrivateEndpointConnectionVaultPropertiesResponse> privateEndpointConnections;
+    private List<PrivateEndpointConnectionVaultPropertiesResponse> privateEndpointConnections;
 
     public List<PrivateEndpointConnectionVaultPropertiesResponse> privateEndpointConnections() {
         return this.privateEndpointConnections;
@@ -49,7 +49,7 @@ public final class VaultPropertiesResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="privateEndpointStateForBackup", required=true)
-      private final String privateEndpointStateForBackup;
+    private String privateEndpointStateForBackup;
 
     public String privateEndpointStateForBackup() {
         return this.privateEndpointStateForBackup;
@@ -60,7 +60,7 @@ public final class VaultPropertiesResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="privateEndpointStateForSiteRecovery", required=true)
-      private final String privateEndpointStateForSiteRecovery;
+    private String privateEndpointStateForSiteRecovery;
 
     public String privateEndpointStateForSiteRecovery() {
         return this.privateEndpointStateForSiteRecovery;
@@ -71,7 +71,7 @@ public final class VaultPropertiesResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -82,94 +82,82 @@ public final class VaultPropertiesResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="upgradeDetails")
-      private final @Nullable UpgradeDetailsResponse upgradeDetails;
+    private @Nullable UpgradeDetailsResponse upgradeDetails;
 
     public Optional<UpgradeDetailsResponse> upgradeDetails() {
-        return this.upgradeDetails == null ? Optional.empty() : Optional.ofNullable(this.upgradeDetails);
+        return Optional.ofNullable(this.upgradeDetails);
     }
 
-    public VaultPropertiesResponse(
-        @Nullable VaultPropertiesResponseEncryption encryption,
-        List<PrivateEndpointConnectionVaultPropertiesResponse> privateEndpointConnections,
-        String privateEndpointStateForBackup,
-        String privateEndpointStateForSiteRecovery,
-        String provisioningState,
-        @Nullable UpgradeDetailsResponse upgradeDetails) {
-        this.encryption = encryption;
-        this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections, "expected parameter 'privateEndpointConnections' to be non-null");
-        this.privateEndpointStateForBackup = Objects.requireNonNull(privateEndpointStateForBackup, "expected parameter 'privateEndpointStateForBackup' to be non-null");
-        this.privateEndpointStateForSiteRecovery = Objects.requireNonNull(privateEndpointStateForSiteRecovery, "expected parameter 'privateEndpointStateForSiteRecovery' to be non-null");
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.upgradeDetails = upgradeDetails;
-    }
+    private VaultPropertiesResponse() {}
 
-    private VaultPropertiesResponse() {
-        this.encryption = null;
-        this.privateEndpointConnections = List.of();
-        this.privateEndpointStateForBackup = null;
-        this.privateEndpointStateForSiteRecovery = null;
-        this.provisioningState = null;
-        this.upgradeDetails = null;
+    private VaultPropertiesResponse(VaultPropertiesResponse $) {
+        this.encryption = $.encryption;
+        this.privateEndpointConnections = $.privateEndpointConnections;
+        this.privateEndpointStateForBackup = $.privateEndpointStateForBackup;
+        this.privateEndpointStateForSiteRecovery = $.privateEndpointStateForSiteRecovery;
+        this.provisioningState = $.provisioningState;
+        this.upgradeDetails = $.upgradeDetails;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VaultPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable VaultPropertiesResponseEncryption encryption;
-        private List<PrivateEndpointConnectionVaultPropertiesResponse> privateEndpointConnections;
-        private String privateEndpointStateForBackup;
-        private String privateEndpointStateForSiteRecovery;
-        private String provisioningState;
-        private @Nullable UpgradeDetailsResponse upgradeDetails;
+        private VaultPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VaultPropertiesResponse();
         }
 
         public Builder(VaultPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encryption = defaults.encryption;
-    	      this.privateEndpointConnections = defaults.privateEndpointConnections;
-    	      this.privateEndpointStateForBackup = defaults.privateEndpointStateForBackup;
-    	      this.privateEndpointStateForSiteRecovery = defaults.privateEndpointStateForSiteRecovery;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.upgradeDetails = defaults.upgradeDetails;
+            $ = new VaultPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder encryption(@Nullable VaultPropertiesResponseEncryption encryption) {
-            this.encryption = encryption;
+            $.encryption = encryption;
             return this;
         }
+
         public Builder privateEndpointConnections(List<PrivateEndpointConnectionVaultPropertiesResponse> privateEndpointConnections) {
-            this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
+            $.privateEndpointConnections = privateEndpointConnections;
             return this;
         }
+
         public Builder privateEndpointConnections(PrivateEndpointConnectionVaultPropertiesResponse... privateEndpointConnections) {
             return privateEndpointConnections(List.of(privateEndpointConnections));
         }
+
         public Builder privateEndpointStateForBackup(String privateEndpointStateForBackup) {
-            this.privateEndpointStateForBackup = Objects.requireNonNull(privateEndpointStateForBackup);
+            $.privateEndpointStateForBackup = privateEndpointStateForBackup;
             return this;
         }
+
         public Builder privateEndpointStateForSiteRecovery(String privateEndpointStateForSiteRecovery) {
-            this.privateEndpointStateForSiteRecovery = Objects.requireNonNull(privateEndpointStateForSiteRecovery);
+            $.privateEndpointStateForSiteRecovery = privateEndpointStateForSiteRecovery;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder upgradeDetails(@Nullable UpgradeDetailsResponse upgradeDetails) {
-            this.upgradeDetails = upgradeDetails;
+            $.upgradeDetails = upgradeDetails;
             return this;
-        }        public VaultPropertiesResponse build() {
-            return new VaultPropertiesResponse(encryption, privateEndpointConnections, privateEndpointStateForBackup, privateEndpointStateForSiteRecovery, provisioningState, upgradeDetails);
+        }
+
+        public VaultPropertiesResponse build() {
+            $.privateEndpointConnections = Objects.requireNonNull($.privateEndpointConnections, "expected parameter 'privateEndpointConnections' to be non-null");
+            $.privateEndpointStateForBackup = Objects.requireNonNull($.privateEndpointStateForBackup, "expected parameter 'privateEndpointStateForBackup' to be non-null");
+            $.privateEndpointStateForSiteRecovery = Objects.requireNonNull($.privateEndpointStateForSiteRecovery, "expected parameter 'privateEndpointStateForSiteRecovery' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            return $;
         }
     }
+
 }

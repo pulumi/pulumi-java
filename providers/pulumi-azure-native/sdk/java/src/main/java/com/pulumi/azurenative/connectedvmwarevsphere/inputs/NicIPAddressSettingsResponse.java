@@ -21,7 +21,7 @@ public final class NicIPAddressSettingsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="allocationMethod", required=true)
-      private final String allocationMethod;
+    private String allocationMethod;
 
     public String allocationMethod() {
         return this.allocationMethod;
@@ -32,7 +32,7 @@ public final class NicIPAddressSettingsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="ipAddress", required=true)
-      private final String ipAddress;
+    private String ipAddress;
 
     public String ipAddress() {
         return this.ipAddress;
@@ -43,64 +43,59 @@ public final class NicIPAddressSettingsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="subnetMask", required=true)
-      private final String subnetMask;
+    private String subnetMask;
 
     public String subnetMask() {
         return this.subnetMask;
     }
 
-    public NicIPAddressSettingsResponse(
-        String allocationMethod,
-        String ipAddress,
-        String subnetMask) {
-        this.allocationMethod = Objects.requireNonNull(allocationMethod, "expected parameter 'allocationMethod' to be non-null");
-        this.ipAddress = Objects.requireNonNull(ipAddress, "expected parameter 'ipAddress' to be non-null");
-        this.subnetMask = Objects.requireNonNull(subnetMask, "expected parameter 'subnetMask' to be non-null");
-    }
+    private NicIPAddressSettingsResponse() {}
 
-    private NicIPAddressSettingsResponse() {
-        this.allocationMethod = null;
-        this.ipAddress = null;
-        this.subnetMask = null;
+    private NicIPAddressSettingsResponse(NicIPAddressSettingsResponse $) {
+        this.allocationMethod = $.allocationMethod;
+        this.ipAddress = $.ipAddress;
+        this.subnetMask = $.subnetMask;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NicIPAddressSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String allocationMethod;
-        private String ipAddress;
-        private String subnetMask;
+        private NicIPAddressSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NicIPAddressSettingsResponse();
         }
 
         public Builder(NicIPAddressSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allocationMethod = defaults.allocationMethod;
-    	      this.ipAddress = defaults.ipAddress;
-    	      this.subnetMask = defaults.subnetMask;
+            $ = new NicIPAddressSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allocationMethod(String allocationMethod) {
-            this.allocationMethod = Objects.requireNonNull(allocationMethod);
+            $.allocationMethod = allocationMethod;
             return this;
         }
+
         public Builder ipAddress(String ipAddress) {
-            this.ipAddress = Objects.requireNonNull(ipAddress);
+            $.ipAddress = ipAddress;
             return this;
         }
+
         public Builder subnetMask(String subnetMask) {
-            this.subnetMask = Objects.requireNonNull(subnetMask);
+            $.subnetMask = subnetMask;
             return this;
-        }        public NicIPAddressSettingsResponse build() {
-            return new NicIPAddressSettingsResponse(allocationMethod, ipAddress, subnetMask);
+        }
+
+        public NicIPAddressSettingsResponse build() {
+            $.allocationMethod = Objects.requireNonNull($.allocationMethod, "expected parameter 'allocationMethod' to be non-null");
+            $.ipAddress = Objects.requireNonNull($.ipAddress, "expected parameter 'ipAddress' to be non-null");
+            $.subnetMask = Objects.requireNonNull($.subnetMask, "expected parameter 'subnetMask' to be non-null");
+            return $;
         }
     }
+
 }

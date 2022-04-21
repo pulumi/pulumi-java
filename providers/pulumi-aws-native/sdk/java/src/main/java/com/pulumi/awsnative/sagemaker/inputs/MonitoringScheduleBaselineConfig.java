@@ -20,62 +20,57 @@ public final class MonitoringScheduleBaselineConfig extends com.pulumi.resources
     public static final MonitoringScheduleBaselineConfig Empty = new MonitoringScheduleBaselineConfig();
 
     @Import(name="constraintsResource")
-      private final @Nullable MonitoringScheduleConstraintsResource constraintsResource;
+    private @Nullable MonitoringScheduleConstraintsResource constraintsResource;
 
     public Optional<MonitoringScheduleConstraintsResource> constraintsResource() {
-        return this.constraintsResource == null ? Optional.empty() : Optional.ofNullable(this.constraintsResource);
+        return Optional.ofNullable(this.constraintsResource);
     }
 
     @Import(name="statisticsResource")
-      private final @Nullable MonitoringScheduleStatisticsResource statisticsResource;
+    private @Nullable MonitoringScheduleStatisticsResource statisticsResource;
 
     public Optional<MonitoringScheduleStatisticsResource> statisticsResource() {
-        return this.statisticsResource == null ? Optional.empty() : Optional.ofNullable(this.statisticsResource);
+        return Optional.ofNullable(this.statisticsResource);
     }
 
-    public MonitoringScheduleBaselineConfig(
-        @Nullable MonitoringScheduleConstraintsResource constraintsResource,
-        @Nullable MonitoringScheduleStatisticsResource statisticsResource) {
-        this.constraintsResource = constraintsResource;
-        this.statisticsResource = statisticsResource;
-    }
+    private MonitoringScheduleBaselineConfig() {}
 
-    private MonitoringScheduleBaselineConfig() {
-        this.constraintsResource = null;
-        this.statisticsResource = null;
+    private MonitoringScheduleBaselineConfig(MonitoringScheduleBaselineConfig $) {
+        this.constraintsResource = $.constraintsResource;
+        this.statisticsResource = $.statisticsResource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MonitoringScheduleBaselineConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable MonitoringScheduleConstraintsResource constraintsResource;
-        private @Nullable MonitoringScheduleStatisticsResource statisticsResource;
+        private MonitoringScheduleBaselineConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new MonitoringScheduleBaselineConfig();
         }
 
         public Builder(MonitoringScheduleBaselineConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.constraintsResource = defaults.constraintsResource;
-    	      this.statisticsResource = defaults.statisticsResource;
+            $ = new MonitoringScheduleBaselineConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder constraintsResource(@Nullable MonitoringScheduleConstraintsResource constraintsResource) {
-            this.constraintsResource = constraintsResource;
+            $.constraintsResource = constraintsResource;
             return this;
         }
+
         public Builder statisticsResource(@Nullable MonitoringScheduleStatisticsResource statisticsResource) {
-            this.statisticsResource = statisticsResource;
+            $.statisticsResource = statisticsResource;
             return this;
-        }        public MonitoringScheduleBaselineConfig build() {
-            return new MonitoringScheduleBaselineConfig(constraintsResource, statisticsResource);
+        }
+
+        public MonitoringScheduleBaselineConfig build() {
+            return $;
         }
     }
+
 }

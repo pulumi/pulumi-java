@@ -21,45 +21,45 @@ public final class RestrictionEvaluationsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="memberRestrictionEvaluation", required=true)
-      private final MembershipRoleRestrictionEvaluationResponse memberRestrictionEvaluation;
+    private MembershipRoleRestrictionEvaluationResponse memberRestrictionEvaluation;
 
     public MembershipRoleRestrictionEvaluationResponse memberRestrictionEvaluation() {
         return this.memberRestrictionEvaluation;
     }
 
-    public RestrictionEvaluationsResponse(MembershipRoleRestrictionEvaluationResponse memberRestrictionEvaluation) {
-        this.memberRestrictionEvaluation = Objects.requireNonNull(memberRestrictionEvaluation, "expected parameter 'memberRestrictionEvaluation' to be non-null");
-    }
+    private RestrictionEvaluationsResponse() {}
 
-    private RestrictionEvaluationsResponse() {
-        this.memberRestrictionEvaluation = null;
+    private RestrictionEvaluationsResponse(RestrictionEvaluationsResponse $) {
+        this.memberRestrictionEvaluation = $.memberRestrictionEvaluation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RestrictionEvaluationsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private MembershipRoleRestrictionEvaluationResponse memberRestrictionEvaluation;
+        private RestrictionEvaluationsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RestrictionEvaluationsResponse();
         }
 
         public Builder(RestrictionEvaluationsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.memberRestrictionEvaluation = defaults.memberRestrictionEvaluation;
+            $ = new RestrictionEvaluationsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder memberRestrictionEvaluation(MembershipRoleRestrictionEvaluationResponse memberRestrictionEvaluation) {
-            this.memberRestrictionEvaluation = Objects.requireNonNull(memberRestrictionEvaluation);
+            $.memberRestrictionEvaluation = memberRestrictionEvaluation;
             return this;
-        }        public RestrictionEvaluationsResponse build() {
-            return new RestrictionEvaluationsResponse(memberRestrictionEvaluation);
+        }
+
+        public RestrictionEvaluationsResponse build() {
+            $.memberRestrictionEvaluation = Objects.requireNonNull($.memberRestrictionEvaluation, "expected parameter 'memberRestrictionEvaluation' to be non-null");
+            return $;
         }
     }
+
 }

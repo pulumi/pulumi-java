@@ -19,14 +19,14 @@ public final class ManagedZoneDnsSecConfigResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="defaultKeySpecs", required=true)
-      private final List<DnsKeySpecResponse> defaultKeySpecs;
+    private List<DnsKeySpecResponse> defaultKeySpecs;
 
     public List<DnsKeySpecResponse> defaultKeySpecs() {
         return this.defaultKeySpecs;
     }
 
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
@@ -37,7 +37,7 @@ public final class ManagedZoneDnsSecConfigResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="nonExistence", required=true)
-      private final String nonExistence;
+    private String nonExistence;
 
     public String nonExistence() {
         return this.nonExistence;
@@ -48,76 +48,70 @@ public final class ManagedZoneDnsSecConfigResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
     }
 
-    public ManagedZoneDnsSecConfigResponse(
-        List<DnsKeySpecResponse> defaultKeySpecs,
-        String kind,
-        String nonExistence,
-        String state) {
-        this.defaultKeySpecs = Objects.requireNonNull(defaultKeySpecs, "expected parameter 'defaultKeySpecs' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.nonExistence = Objects.requireNonNull(nonExistence, "expected parameter 'nonExistence' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-    }
+    private ManagedZoneDnsSecConfigResponse() {}
 
-    private ManagedZoneDnsSecConfigResponse() {
-        this.defaultKeySpecs = List.of();
-        this.kind = null;
-        this.nonExistence = null;
-        this.state = null;
+    private ManagedZoneDnsSecConfigResponse(ManagedZoneDnsSecConfigResponse $) {
+        this.defaultKeySpecs = $.defaultKeySpecs;
+        this.kind = $.kind;
+        this.nonExistence = $.nonExistence;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedZoneDnsSecConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<DnsKeySpecResponse> defaultKeySpecs;
-        private String kind;
-        private String nonExistence;
-        private String state;
+        private ManagedZoneDnsSecConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedZoneDnsSecConfigResponse();
         }
 
         public Builder(ManagedZoneDnsSecConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultKeySpecs = defaults.defaultKeySpecs;
-    	      this.kind = defaults.kind;
-    	      this.nonExistence = defaults.nonExistence;
-    	      this.state = defaults.state;
+            $ = new ManagedZoneDnsSecConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultKeySpecs(List<DnsKeySpecResponse> defaultKeySpecs) {
-            this.defaultKeySpecs = Objects.requireNonNull(defaultKeySpecs);
+            $.defaultKeySpecs = defaultKeySpecs;
             return this;
         }
+
         public Builder defaultKeySpecs(DnsKeySpecResponse... defaultKeySpecs) {
             return defaultKeySpecs(List.of(defaultKeySpecs));
         }
+
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder nonExistence(String nonExistence) {
-            this.nonExistence = Objects.requireNonNull(nonExistence);
+            $.nonExistence = nonExistence;
             return this;
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
-        }        public ManagedZoneDnsSecConfigResponse build() {
-            return new ManagedZoneDnsSecConfigResponse(defaultKeySpecs, kind, nonExistence, state);
+        }
+
+        public ManagedZoneDnsSecConfigResponse build() {
+            $.defaultKeySpecs = Objects.requireNonNull($.defaultKeySpecs, "expected parameter 'defaultKeySpecs' to be non-null");
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.nonExistence = Objects.requireNonNull($.nonExistence, "expected parameter 'nonExistence' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            return $;
         }
     }
+
 }

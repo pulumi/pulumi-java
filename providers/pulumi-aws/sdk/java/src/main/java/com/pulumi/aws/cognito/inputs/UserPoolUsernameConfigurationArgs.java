@@ -5,7 +5,6 @@ package com.pulumi.aws.cognito.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class UserPoolUsernameConfigurationArgs extends com.pulumi.resource
      * 
      */
     @Import(name="caseSensitive", required=true)
-      private final Output<Boolean> caseSensitive;
+    private Output<Boolean> caseSensitive;
 
     public Output<Boolean> caseSensitive() {
         return this.caseSensitive;
     }
 
-    public UserPoolUsernameConfigurationArgs(Output<Boolean> caseSensitive) {
-        this.caseSensitive = Objects.requireNonNull(caseSensitive, "expected parameter 'caseSensitive' to be non-null");
-    }
+    private UserPoolUsernameConfigurationArgs() {}
 
-    private UserPoolUsernameConfigurationArgs() {
-        this.caseSensitive = Codegen.empty();
+    private UserPoolUsernameConfigurationArgs(UserPoolUsernameConfigurationArgs $) {
+        this.caseSensitive = $.caseSensitive;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserPoolUsernameConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> caseSensitive;
+        private UserPoolUsernameConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserPoolUsernameConfigurationArgs();
         }
 
         public Builder(UserPoolUsernameConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.caseSensitive = defaults.caseSensitive;
+            $ = new UserPoolUsernameConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder caseSensitive(Output<Boolean> caseSensitive) {
-            this.caseSensitive = Objects.requireNonNull(caseSensitive);
+            $.caseSensitive = caseSensitive;
             return this;
         }
+
         public Builder caseSensitive(Boolean caseSensitive) {
-            this.caseSensitive = Output.of(Objects.requireNonNull(caseSensitive));
-            return this;
-        }        public UserPoolUsernameConfigurationArgs build() {
-            return new UserPoolUsernameConfigurationArgs(caseSensitive);
+            return caseSensitive(Output.of(caseSensitive));
+        }
+
+        public UserPoolUsernameConfigurationArgs build() {
+            $.caseSensitive = Objects.requireNonNull($.caseSensitive, "expected parameter 'caseSensitive' to be non-null");
+            return $;
         }
     }
+
 }

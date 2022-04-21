@@ -15,78 +15,72 @@ public final class GetRegionTargetHttpsProxyArgs extends com.pulumi.resources.In
     public static final GetRegionTargetHttpsProxyArgs Empty = new GetRegionTargetHttpsProxyArgs();
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="region", required=true)
-      private final String region;
+    private String region;
 
     public String region() {
         return this.region;
     }
 
     @Import(name="targetHttpsProxy", required=true)
-      private final String targetHttpsProxy;
+    private String targetHttpsProxy;
 
     public String targetHttpsProxy() {
         return this.targetHttpsProxy;
     }
 
-    public GetRegionTargetHttpsProxyArgs(
-        @Nullable String project,
-        String region,
-        String targetHttpsProxy) {
-        this.project = project;
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-        this.targetHttpsProxy = Objects.requireNonNull(targetHttpsProxy, "expected parameter 'targetHttpsProxy' to be non-null");
-    }
+    private GetRegionTargetHttpsProxyArgs() {}
 
-    private GetRegionTargetHttpsProxyArgs() {
-        this.project = null;
-        this.region = null;
-        this.targetHttpsProxy = null;
+    private GetRegionTargetHttpsProxyArgs(GetRegionTargetHttpsProxyArgs $) {
+        this.project = $.project;
+        this.region = $.region;
+        this.targetHttpsProxy = $.targetHttpsProxy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRegionTargetHttpsProxyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String project;
-        private String region;
-        private String targetHttpsProxy;
+        private GetRegionTargetHttpsProxyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRegionTargetHttpsProxyArgs();
         }
 
         public Builder(GetRegionTargetHttpsProxyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
-    	      this.targetHttpsProxy = defaults.targetHttpsProxy;
+            $ = new GetRegionTargetHttpsProxyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
         }
+
         public Builder targetHttpsProxy(String targetHttpsProxy) {
-            this.targetHttpsProxy = Objects.requireNonNull(targetHttpsProxy);
+            $.targetHttpsProxy = targetHttpsProxy;
             return this;
-        }        public GetRegionTargetHttpsProxyArgs build() {
-            return new GetRegionTargetHttpsProxyArgs(project, region, targetHttpsProxy);
+        }
+
+        public GetRegionTargetHttpsProxyArgs build() {
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            $.targetHttpsProxy = Objects.requireNonNull($.targetHttpsProxy, "expected parameter 'targetHttpsProxy' to be non-null");
+            return $;
         }
     }
+
 }

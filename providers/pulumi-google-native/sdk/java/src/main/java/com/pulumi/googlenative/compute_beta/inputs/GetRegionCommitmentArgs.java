@@ -15,78 +15,72 @@ public final class GetRegionCommitmentArgs extends com.pulumi.resources.InvokeAr
     public static final GetRegionCommitmentArgs Empty = new GetRegionCommitmentArgs();
 
     @Import(name="commitment", required=true)
-      private final String commitment;
+    private String commitment;
 
     public String commitment() {
         return this.commitment;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="region", required=true)
-      private final String region;
+    private String region;
 
     public String region() {
         return this.region;
     }
 
-    public GetRegionCommitmentArgs(
-        String commitment,
-        @Nullable String project,
-        String region) {
-        this.commitment = Objects.requireNonNull(commitment, "expected parameter 'commitment' to be non-null");
-        this.project = project;
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-    }
+    private GetRegionCommitmentArgs() {}
 
-    private GetRegionCommitmentArgs() {
-        this.commitment = null;
-        this.project = null;
-        this.region = null;
+    private GetRegionCommitmentArgs(GetRegionCommitmentArgs $) {
+        this.commitment = $.commitment;
+        this.project = $.project;
+        this.region = $.region;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRegionCommitmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String commitment;
-        private @Nullable String project;
-        private String region;
+        private GetRegionCommitmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRegionCommitmentArgs();
         }
 
         public Builder(GetRegionCommitmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.commitment = defaults.commitment;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
+            $ = new GetRegionCommitmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder commitment(String commitment) {
-            this.commitment = Objects.requireNonNull(commitment);
+            $.commitment = commitment;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
-        }        public GetRegionCommitmentArgs build() {
-            return new GetRegionCommitmentArgs(commitment, project, region);
+        }
+
+        public GetRegionCommitmentArgs build() {
+            $.commitment = Objects.requireNonNull($.commitment, "expected parameter 'commitment' to be non-null");
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.aws.glue.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class MLTransformParametersFindMatchesParametersArgs extends com.pu
      * 
      */
     @Import(name="accuracyCostTradeOff")
-      private final @Nullable Output<Double> accuracyCostTradeOff;
+    private @Nullable Output<Double> accuracyCostTradeOff;
 
-    public Output<Double> accuracyCostTradeOff() {
-        return this.accuracyCostTradeOff == null ? Codegen.empty() : this.accuracyCostTradeOff;
+    public Optional<Output<Double>> accuracyCostTradeOff() {
+        return Optional.ofNullable(this.accuracyCostTradeOff);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class MLTransformParametersFindMatchesParametersArgs extends com.pu
      * 
      */
     @Import(name="enforceProvidedLabels")
-      private final @Nullable Output<Boolean> enforceProvidedLabels;
+    private @Nullable Output<Boolean> enforceProvidedLabels;
 
-    public Output<Boolean> enforceProvidedLabels() {
-        return this.enforceProvidedLabels == null ? Codegen.empty() : this.enforceProvidedLabels;
+    public Optional<Output<Boolean>> enforceProvidedLabels() {
+        return Optional.ofNullable(this.enforceProvidedLabels);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class MLTransformParametersFindMatchesParametersArgs extends com.pu
      * 
      */
     @Import(name="precisionRecallTradeOff")
-      private final @Nullable Output<Double> precisionRecallTradeOff;
+    private @Nullable Output<Double> precisionRecallTradeOff;
 
-    public Output<Double> precisionRecallTradeOff() {
-        return this.precisionRecallTradeOff == null ? Codegen.empty() : this.precisionRecallTradeOff;
+    public Optional<Output<Double>> precisionRecallTradeOff() {
+        return Optional.ofNullable(this.precisionRecallTradeOff);
     }
 
     /**
@@ -55,89 +55,78 @@ public final class MLTransformParametersFindMatchesParametersArgs extends com.pu
      * 
      */
     @Import(name="primaryKeyColumnName")
-      private final @Nullable Output<String> primaryKeyColumnName;
+    private @Nullable Output<String> primaryKeyColumnName;
 
-    public Output<String> primaryKeyColumnName() {
-        return this.primaryKeyColumnName == null ? Codegen.empty() : this.primaryKeyColumnName;
+    public Optional<Output<String>> primaryKeyColumnName() {
+        return Optional.ofNullable(this.primaryKeyColumnName);
     }
 
-    public MLTransformParametersFindMatchesParametersArgs(
-        @Nullable Output<Double> accuracyCostTradeOff,
-        @Nullable Output<Boolean> enforceProvidedLabels,
-        @Nullable Output<Double> precisionRecallTradeOff,
-        @Nullable Output<String> primaryKeyColumnName) {
-        this.accuracyCostTradeOff = accuracyCostTradeOff;
-        this.enforceProvidedLabels = enforceProvidedLabels;
-        this.precisionRecallTradeOff = precisionRecallTradeOff;
-        this.primaryKeyColumnName = primaryKeyColumnName;
-    }
+    private MLTransformParametersFindMatchesParametersArgs() {}
 
-    private MLTransformParametersFindMatchesParametersArgs() {
-        this.accuracyCostTradeOff = Codegen.empty();
-        this.enforceProvidedLabels = Codegen.empty();
-        this.precisionRecallTradeOff = Codegen.empty();
-        this.primaryKeyColumnName = Codegen.empty();
+    private MLTransformParametersFindMatchesParametersArgs(MLTransformParametersFindMatchesParametersArgs $) {
+        this.accuracyCostTradeOff = $.accuracyCostTradeOff;
+        this.enforceProvidedLabels = $.enforceProvidedLabels;
+        this.precisionRecallTradeOff = $.precisionRecallTradeOff;
+        this.primaryKeyColumnName = $.primaryKeyColumnName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MLTransformParametersFindMatchesParametersArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Double> accuracyCostTradeOff;
-        private @Nullable Output<Boolean> enforceProvidedLabels;
-        private @Nullable Output<Double> precisionRecallTradeOff;
-        private @Nullable Output<String> primaryKeyColumnName;
+        private MLTransformParametersFindMatchesParametersArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MLTransformParametersFindMatchesParametersArgs();
         }
 
         public Builder(MLTransformParametersFindMatchesParametersArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accuracyCostTradeOff = defaults.accuracyCostTradeOff;
-    	      this.enforceProvidedLabels = defaults.enforceProvidedLabels;
-    	      this.precisionRecallTradeOff = defaults.precisionRecallTradeOff;
-    	      this.primaryKeyColumnName = defaults.primaryKeyColumnName;
+            $ = new MLTransformParametersFindMatchesParametersArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accuracyCostTradeOff(@Nullable Output<Double> accuracyCostTradeOff) {
-            this.accuracyCostTradeOff = accuracyCostTradeOff;
+            $.accuracyCostTradeOff = accuracyCostTradeOff;
             return this;
         }
-        public Builder accuracyCostTradeOff(@Nullable Double accuracyCostTradeOff) {
-            this.accuracyCostTradeOff = Codegen.ofNullable(accuracyCostTradeOff);
-            return this;
+
+        public Builder accuracyCostTradeOff(Double accuracyCostTradeOff) {
+            return accuracyCostTradeOff(Output.of(accuracyCostTradeOff));
         }
+
         public Builder enforceProvidedLabels(@Nullable Output<Boolean> enforceProvidedLabels) {
-            this.enforceProvidedLabels = enforceProvidedLabels;
+            $.enforceProvidedLabels = enforceProvidedLabels;
             return this;
         }
-        public Builder enforceProvidedLabels(@Nullable Boolean enforceProvidedLabels) {
-            this.enforceProvidedLabels = Codegen.ofNullable(enforceProvidedLabels);
-            return this;
+
+        public Builder enforceProvidedLabels(Boolean enforceProvidedLabels) {
+            return enforceProvidedLabels(Output.of(enforceProvidedLabels));
         }
+
         public Builder precisionRecallTradeOff(@Nullable Output<Double> precisionRecallTradeOff) {
-            this.precisionRecallTradeOff = precisionRecallTradeOff;
+            $.precisionRecallTradeOff = precisionRecallTradeOff;
             return this;
         }
-        public Builder precisionRecallTradeOff(@Nullable Double precisionRecallTradeOff) {
-            this.precisionRecallTradeOff = Codegen.ofNullable(precisionRecallTradeOff);
-            return this;
+
+        public Builder precisionRecallTradeOff(Double precisionRecallTradeOff) {
+            return precisionRecallTradeOff(Output.of(precisionRecallTradeOff));
         }
+
         public Builder primaryKeyColumnName(@Nullable Output<String> primaryKeyColumnName) {
-            this.primaryKeyColumnName = primaryKeyColumnName;
+            $.primaryKeyColumnName = primaryKeyColumnName;
             return this;
         }
-        public Builder primaryKeyColumnName(@Nullable String primaryKeyColumnName) {
-            this.primaryKeyColumnName = Codegen.ofNullable(primaryKeyColumnName);
-            return this;
-        }        public MLTransformParametersFindMatchesParametersArgs build() {
-            return new MLTransformParametersFindMatchesParametersArgs(accuracyCostTradeOff, enforceProvidedLabels, precisionRecallTradeOff, primaryKeyColumnName);
+
+        public Builder primaryKeyColumnName(String primaryKeyColumnName) {
+            return primaryKeyColumnName(Output.of(primaryKeyColumnName));
+        }
+
+        public MLTransformParametersFindMatchesParametersArgs build() {
+            return $;
         }
     }
+
 }

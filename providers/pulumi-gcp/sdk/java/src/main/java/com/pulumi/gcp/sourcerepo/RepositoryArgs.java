@@ -5,11 +5,11 @@ package com.pulumi.gcp.sourcerepo;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.sourcerepo.inputs.RepositoryPubsubConfigArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -48,79 +48,72 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pubsubConfigs")
-      private final @Nullable Output<List<RepositoryPubsubConfigArgs>> pubsubConfigs;
+    private @Nullable Output<List<RepositoryPubsubConfigArgs>> pubsubConfigs;
 
-    public Output<List<RepositoryPubsubConfigArgs>> pubsubConfigs() {
-        return this.pubsubConfigs == null ? Codegen.empty() : this.pubsubConfigs;
+    public Optional<Output<List<RepositoryPubsubConfigArgs>>> pubsubConfigs() {
+        return Optional.ofNullable(this.pubsubConfigs);
     }
 
-    public RepositoryArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<List<RepositoryPubsubConfigArgs>> pubsubConfigs) {
-        this.name = name;
-        this.project = project;
-        this.pubsubConfigs = pubsubConfigs;
-    }
+    private RepositoryArgs() {}
 
-    private RepositoryArgs() {
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.pubsubConfigs = Codegen.empty();
+    private RepositoryArgs(RepositoryArgs $) {
+        this.name = $.name;
+        this.project = $.project;
+        this.pubsubConfigs = $.pubsubConfigs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RepositoryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<List<RepositoryPubsubConfigArgs>> pubsubConfigs;
+        private RepositoryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RepositoryArgs();
         }
 
         public Builder(RepositoryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.pubsubConfigs = defaults.pubsubConfigs;
+            $ = new RepositoryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder pubsubConfigs(@Nullable Output<List<RepositoryPubsubConfigArgs>> pubsubConfigs) {
-            this.pubsubConfigs = pubsubConfigs;
+            $.pubsubConfigs = pubsubConfigs;
             return this;
         }
-        public Builder pubsubConfigs(@Nullable List<RepositoryPubsubConfigArgs> pubsubConfigs) {
-            this.pubsubConfigs = Codegen.ofNullable(pubsubConfigs);
-            return this;
+
+        public Builder pubsubConfigs(List<RepositoryPubsubConfigArgs> pubsubConfigs) {
+            return pubsubConfigs(Output.of(pubsubConfigs));
         }
+
         public Builder pubsubConfigs(RepositoryPubsubConfigArgs... pubsubConfigs) {
             return pubsubConfigs(List.of(pubsubConfigs));
-        }        public RepositoryArgs build() {
-            return new RepositoryArgs(name, project, pubsubConfigs);
+        }
+
+        public RepositoryArgs build() {
+            return $;
         }
     }
+
 }

@@ -25,10 +25,10 @@ public final class HttpServerLocationResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="fileName")
-      private final @Nullable Object fileName;
+    private @Nullable Object fileName;
 
     public Optional<Object> fileName() {
-        return this.fileName == null ? Optional.empty() : Optional.ofNullable(this.fileName);
+        return Optional.ofNullable(this.fileName);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class HttpServerLocationResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="folderPath")
-      private final @Nullable Object folderPath;
+    private @Nullable Object folderPath;
 
     public Optional<Object> folderPath() {
-        return this.folderPath == null ? Optional.empty() : Optional.ofNullable(this.folderPath);
+        return Optional.ofNullable(this.folderPath);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class HttpServerLocationResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="relativeUrl")
-      private final @Nullable Object relativeUrl;
+    private @Nullable Object relativeUrl;
 
     public Optional<Object> relativeUrl() {
-        return this.relativeUrl == null ? Optional.empty() : Optional.ofNullable(this.relativeUrl);
+        return Optional.ofNullable(this.relativeUrl);
     }
 
     /**
@@ -59,73 +59,63 @@ public final class HttpServerLocationResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public HttpServerLocationResponse(
-        @Nullable Object fileName,
-        @Nullable Object folderPath,
-        @Nullable Object relativeUrl,
-        String type) {
-        this.fileName = fileName;
-        this.folderPath = folderPath;
-        this.relativeUrl = relativeUrl;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private HttpServerLocationResponse() {}
 
-    private HttpServerLocationResponse() {
-        this.fileName = null;
-        this.folderPath = null;
-        this.relativeUrl = null;
-        this.type = null;
+    private HttpServerLocationResponse(HttpServerLocationResponse $) {
+        this.fileName = $.fileName;
+        this.folderPath = $.folderPath;
+        this.relativeUrl = $.relativeUrl;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpServerLocationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object fileName;
-        private @Nullable Object folderPath;
-        private @Nullable Object relativeUrl;
-        private String type;
+        private HttpServerLocationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpServerLocationResponse();
         }
 
         public Builder(HttpServerLocationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fileName = defaults.fileName;
-    	      this.folderPath = defaults.folderPath;
-    	      this.relativeUrl = defaults.relativeUrl;
-    	      this.type = defaults.type;
+            $ = new HttpServerLocationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder fileName(@Nullable Object fileName) {
-            this.fileName = fileName;
+            $.fileName = fileName;
             return this;
         }
+
         public Builder folderPath(@Nullable Object folderPath) {
-            this.folderPath = folderPath;
+            $.folderPath = folderPath;
             return this;
         }
+
         public Builder relativeUrl(@Nullable Object relativeUrl) {
-            this.relativeUrl = relativeUrl;
+            $.relativeUrl = relativeUrl;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public HttpServerLocationResponse build() {
-            return new HttpServerLocationResponse(fileName, folderPath, relativeUrl, type);
+        }
+
+        public HttpServerLocationResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

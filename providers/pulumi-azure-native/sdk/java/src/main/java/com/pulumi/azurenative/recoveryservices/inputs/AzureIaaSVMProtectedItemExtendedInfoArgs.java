@@ -5,11 +5,11 @@ package com.pulumi.azurenative.recoveryservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class AzureIaaSVMProtectedItemExtendedInfoArgs extends com.pulumi.r
      * 
      */
     @Import(name="oldestRecoveryPoint")
-      private final @Nullable Output<String> oldestRecoveryPoint;
+    private @Nullable Output<String> oldestRecoveryPoint;
 
-    public Output<String> oldestRecoveryPoint() {
-        return this.oldestRecoveryPoint == null ? Codegen.empty() : this.oldestRecoveryPoint;
+    public Optional<Output<String>> oldestRecoveryPoint() {
+        return Optional.ofNullable(this.oldestRecoveryPoint);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class AzureIaaSVMProtectedItemExtendedInfoArgs extends com.pulumi.r
      * 
      */
     @Import(name="policyInconsistent")
-      private final @Nullable Output<Boolean> policyInconsistent;
+    private @Nullable Output<Boolean> policyInconsistent;
 
-    public Output<Boolean> policyInconsistent() {
-        return this.policyInconsistent == null ? Codegen.empty() : this.policyInconsistent;
+    public Optional<Output<Boolean>> policyInconsistent() {
+        return Optional.ofNullable(this.policyInconsistent);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class AzureIaaSVMProtectedItemExtendedInfoArgs extends com.pulumi.r
      * 
      */
     @Import(name="recoveryPointCount")
-      private final @Nullable Output<Integer> recoveryPointCount;
+    private @Nullable Output<Integer> recoveryPointCount;
 
-    public Output<Integer> recoveryPointCount() {
-        return this.recoveryPointCount == null ? Codegen.empty() : this.recoveryPointCount;
+    public Optional<Output<Integer>> recoveryPointCount() {
+        return Optional.ofNullable(this.recoveryPointCount);
     }
 
-    public AzureIaaSVMProtectedItemExtendedInfoArgs(
-        @Nullable Output<String> oldestRecoveryPoint,
-        @Nullable Output<Boolean> policyInconsistent,
-        @Nullable Output<Integer> recoveryPointCount) {
-        this.oldestRecoveryPoint = oldestRecoveryPoint;
-        this.policyInconsistent = policyInconsistent;
-        this.recoveryPointCount = recoveryPointCount;
-    }
+    private AzureIaaSVMProtectedItemExtendedInfoArgs() {}
 
-    private AzureIaaSVMProtectedItemExtendedInfoArgs() {
-        this.oldestRecoveryPoint = Codegen.empty();
-        this.policyInconsistent = Codegen.empty();
-        this.recoveryPointCount = Codegen.empty();
+    private AzureIaaSVMProtectedItemExtendedInfoArgs(AzureIaaSVMProtectedItemExtendedInfoArgs $) {
+        this.oldestRecoveryPoint = $.oldestRecoveryPoint;
+        this.policyInconsistent = $.policyInconsistent;
+        this.recoveryPointCount = $.recoveryPointCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureIaaSVMProtectedItemExtendedInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> oldestRecoveryPoint;
-        private @Nullable Output<Boolean> policyInconsistent;
-        private @Nullable Output<Integer> recoveryPointCount;
+        private AzureIaaSVMProtectedItemExtendedInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureIaaSVMProtectedItemExtendedInfoArgs();
         }
 
         public Builder(AzureIaaSVMProtectedItemExtendedInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.oldestRecoveryPoint = defaults.oldestRecoveryPoint;
-    	      this.policyInconsistent = defaults.policyInconsistent;
-    	      this.recoveryPointCount = defaults.recoveryPointCount;
+            $ = new AzureIaaSVMProtectedItemExtendedInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder oldestRecoveryPoint(@Nullable Output<String> oldestRecoveryPoint) {
-            this.oldestRecoveryPoint = oldestRecoveryPoint;
+            $.oldestRecoveryPoint = oldestRecoveryPoint;
             return this;
         }
-        public Builder oldestRecoveryPoint(@Nullable String oldestRecoveryPoint) {
-            this.oldestRecoveryPoint = Codegen.ofNullable(oldestRecoveryPoint);
-            return this;
+
+        public Builder oldestRecoveryPoint(String oldestRecoveryPoint) {
+            return oldestRecoveryPoint(Output.of(oldestRecoveryPoint));
         }
+
         public Builder policyInconsistent(@Nullable Output<Boolean> policyInconsistent) {
-            this.policyInconsistent = policyInconsistent;
+            $.policyInconsistent = policyInconsistent;
             return this;
         }
-        public Builder policyInconsistent(@Nullable Boolean policyInconsistent) {
-            this.policyInconsistent = Codegen.ofNullable(policyInconsistent);
-            return this;
+
+        public Builder policyInconsistent(Boolean policyInconsistent) {
+            return policyInconsistent(Output.of(policyInconsistent));
         }
+
         public Builder recoveryPointCount(@Nullable Output<Integer> recoveryPointCount) {
-            this.recoveryPointCount = recoveryPointCount;
+            $.recoveryPointCount = recoveryPointCount;
             return this;
         }
-        public Builder recoveryPointCount(@Nullable Integer recoveryPointCount) {
-            this.recoveryPointCount = Codegen.ofNullable(recoveryPointCount);
-            return this;
-        }        public AzureIaaSVMProtectedItemExtendedInfoArgs build() {
-            return new AzureIaaSVMProtectedItemExtendedInfoArgs(oldestRecoveryPoint, policyInconsistent, recoveryPointCount);
+
+        public Builder recoveryPointCount(Integer recoveryPointCount) {
+            return recoveryPointCount(Output.of(recoveryPointCount));
+        }
+
+        public AzureIaaSVMProtectedItemExtendedInfoArgs build() {
+            return $;
         }
     }
+
 }

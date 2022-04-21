@@ -5,7 +5,6 @@ package com.pulumi.gcp.monitoring.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.monitoring.inputs.UptimeCheckConfigContentMatcherGetArgs;
 import com.pulumi.gcp.monitoring.inputs.UptimeCheckConfigHttpCheckGetArgs;
 import com.pulumi.gcp.monitoring.inputs.UptimeCheckConfigMonitoredResourceGetArgs;
@@ -14,6 +13,7 @@ import com.pulumi.gcp.monitoring.inputs.UptimeCheckConfigTcpCheckGetArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class UptimeCheckConfigState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="contentMatchers")
-      private final @Nullable Output<List<UptimeCheckConfigContentMatcherGetArgs>> contentMatchers;
+    private @Nullable Output<List<UptimeCheckConfigContentMatcherGetArgs>> contentMatchers;
 
-    public Output<List<UptimeCheckConfigContentMatcherGetArgs>> contentMatchers() {
-        return this.contentMatchers == null ? Codegen.empty() : this.contentMatchers;
+    public Optional<Output<List<UptimeCheckConfigContentMatcherGetArgs>>> contentMatchers() {
+        return Optional.ofNullable(this.contentMatchers);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class UptimeCheckConfigState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class UptimeCheckConfigState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="httpCheck")
-      private final @Nullable Output<UptimeCheckConfigHttpCheckGetArgs> httpCheck;
+    private @Nullable Output<UptimeCheckConfigHttpCheckGetArgs> httpCheck;
 
-    public Output<UptimeCheckConfigHttpCheckGetArgs> httpCheck() {
-        return this.httpCheck == null ? Codegen.empty() : this.httpCheck;
+    public Optional<Output<UptimeCheckConfigHttpCheckGetArgs>> httpCheck() {
+        return Optional.ofNullable(this.httpCheck);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class UptimeCheckConfigState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="monitoredResource")
-      private final @Nullable Output<UptimeCheckConfigMonitoredResourceGetArgs> monitoredResource;
+    private @Nullable Output<UptimeCheckConfigMonitoredResourceGetArgs> monitoredResource;
 
-    public Output<UptimeCheckConfigMonitoredResourceGetArgs> monitoredResource() {
-        return this.monitoredResource == null ? Codegen.empty() : this.monitoredResource;
+    public Optional<Output<UptimeCheckConfigMonitoredResourceGetArgs>> monitoredResource() {
+        return Optional.ofNullable(this.monitoredResource);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class UptimeCheckConfigState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class UptimeCheckConfigState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="period")
-      private final @Nullable Output<String> period;
+    private @Nullable Output<String> period;
 
-    public Output<String> period() {
-        return this.period == null ? Codegen.empty() : this.period;
+    public Optional<Output<String>> period() {
+        return Optional.ofNullable(this.period);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class UptimeCheckConfigState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -109,10 +109,10 @@ public final class UptimeCheckConfigState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="resourceGroup")
-      private final @Nullable Output<UptimeCheckConfigResourceGroupGetArgs> resourceGroup;
+    private @Nullable Output<UptimeCheckConfigResourceGroupGetArgs> resourceGroup;
 
-    public Output<UptimeCheckConfigResourceGroupGetArgs> resourceGroup() {
-        return this.resourceGroup == null ? Codegen.empty() : this.resourceGroup;
+    public Optional<Output<UptimeCheckConfigResourceGroupGetArgs>> resourceGroup() {
+        return Optional.ofNullable(this.resourceGroup);
     }
 
     /**
@@ -120,10 +120,10 @@ public final class UptimeCheckConfigState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="selectedRegions")
-      private final @Nullable Output<List<String>> selectedRegions;
+    private @Nullable Output<List<String>> selectedRegions;
 
-    public Output<List<String>> selectedRegions() {
-        return this.selectedRegions == null ? Codegen.empty() : this.selectedRegions;
+    public Optional<Output<List<String>>> selectedRegions() {
+        return Optional.ofNullable(this.selectedRegions);
     }
 
     /**
@@ -132,10 +132,10 @@ public final class UptimeCheckConfigState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="tcpCheck")
-      private final @Nullable Output<UptimeCheckConfigTcpCheckGetArgs> tcpCheck;
+    private @Nullable Output<UptimeCheckConfigTcpCheckGetArgs> tcpCheck;
 
-    public Output<UptimeCheckConfigTcpCheckGetArgs> tcpCheck() {
-        return this.tcpCheck == null ? Codegen.empty() : this.tcpCheck;
+    public Optional<Output<UptimeCheckConfigTcpCheckGetArgs>> tcpCheck() {
+        return Optional.ofNullable(this.tcpCheck);
     }
 
     /**
@@ -143,10 +143,10 @@ public final class UptimeCheckConfigState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="timeout")
-      private final @Nullable Output<String> timeout;
+    private @Nullable Output<String> timeout;
 
-    public Output<String> timeout() {
-        return this.timeout == null ? Codegen.empty() : this.timeout;
+    public Optional<Output<String>> timeout() {
+        return Optional.ofNullable(this.timeout);
     }
 
     /**
@@ -154,199 +154,166 @@ public final class UptimeCheckConfigState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="uptimeCheckId")
-      private final @Nullable Output<String> uptimeCheckId;
+    private @Nullable Output<String> uptimeCheckId;
 
-    public Output<String> uptimeCheckId() {
-        return this.uptimeCheckId == null ? Codegen.empty() : this.uptimeCheckId;
+    public Optional<Output<String>> uptimeCheckId() {
+        return Optional.ofNullable(this.uptimeCheckId);
     }
 
-    public UptimeCheckConfigState(
-        @Nullable Output<List<UptimeCheckConfigContentMatcherGetArgs>> contentMatchers,
-        @Nullable Output<String> displayName,
-        @Nullable Output<UptimeCheckConfigHttpCheckGetArgs> httpCheck,
-        @Nullable Output<UptimeCheckConfigMonitoredResourceGetArgs> monitoredResource,
-        @Nullable Output<String> name,
-        @Nullable Output<String> period,
-        @Nullable Output<String> project,
-        @Nullable Output<UptimeCheckConfigResourceGroupGetArgs> resourceGroup,
-        @Nullable Output<List<String>> selectedRegions,
-        @Nullable Output<UptimeCheckConfigTcpCheckGetArgs> tcpCheck,
-        @Nullable Output<String> timeout,
-        @Nullable Output<String> uptimeCheckId) {
-        this.contentMatchers = contentMatchers;
-        this.displayName = displayName;
-        this.httpCheck = httpCheck;
-        this.monitoredResource = monitoredResource;
-        this.name = name;
-        this.period = period;
-        this.project = project;
-        this.resourceGroup = resourceGroup;
-        this.selectedRegions = selectedRegions;
-        this.tcpCheck = tcpCheck;
-        this.timeout = timeout;
-        this.uptimeCheckId = uptimeCheckId;
-    }
+    private UptimeCheckConfigState() {}
 
-    private UptimeCheckConfigState() {
-        this.contentMatchers = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.httpCheck = Codegen.empty();
-        this.monitoredResource = Codegen.empty();
-        this.name = Codegen.empty();
-        this.period = Codegen.empty();
-        this.project = Codegen.empty();
-        this.resourceGroup = Codegen.empty();
-        this.selectedRegions = Codegen.empty();
-        this.tcpCheck = Codegen.empty();
-        this.timeout = Codegen.empty();
-        this.uptimeCheckId = Codegen.empty();
+    private UptimeCheckConfigState(UptimeCheckConfigState $) {
+        this.contentMatchers = $.contentMatchers;
+        this.displayName = $.displayName;
+        this.httpCheck = $.httpCheck;
+        this.monitoredResource = $.monitoredResource;
+        this.name = $.name;
+        this.period = $.period;
+        this.project = $.project;
+        this.resourceGroup = $.resourceGroup;
+        this.selectedRegions = $.selectedRegions;
+        this.tcpCheck = $.tcpCheck;
+        this.timeout = $.timeout;
+        this.uptimeCheckId = $.uptimeCheckId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UptimeCheckConfigState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<UptimeCheckConfigContentMatcherGetArgs>> contentMatchers;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<UptimeCheckConfigHttpCheckGetArgs> httpCheck;
-        private @Nullable Output<UptimeCheckConfigMonitoredResourceGetArgs> monitoredResource;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> period;
-        private @Nullable Output<String> project;
-        private @Nullable Output<UptimeCheckConfigResourceGroupGetArgs> resourceGroup;
-        private @Nullable Output<List<String>> selectedRegions;
-        private @Nullable Output<UptimeCheckConfigTcpCheckGetArgs> tcpCheck;
-        private @Nullable Output<String> timeout;
-        private @Nullable Output<String> uptimeCheckId;
+        private UptimeCheckConfigState $;
 
         public Builder() {
-    	      // Empty
+            $ = new UptimeCheckConfigState();
         }
 
         public Builder(UptimeCheckConfigState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contentMatchers = defaults.contentMatchers;
-    	      this.displayName = defaults.displayName;
-    	      this.httpCheck = defaults.httpCheck;
-    	      this.monitoredResource = defaults.monitoredResource;
-    	      this.name = defaults.name;
-    	      this.period = defaults.period;
-    	      this.project = defaults.project;
-    	      this.resourceGroup = defaults.resourceGroup;
-    	      this.selectedRegions = defaults.selectedRegions;
-    	      this.tcpCheck = defaults.tcpCheck;
-    	      this.timeout = defaults.timeout;
-    	      this.uptimeCheckId = defaults.uptimeCheckId;
+            $ = new UptimeCheckConfigState(Objects.requireNonNull(defaults));
         }
 
         public Builder contentMatchers(@Nullable Output<List<UptimeCheckConfigContentMatcherGetArgs>> contentMatchers) {
-            this.contentMatchers = contentMatchers;
+            $.contentMatchers = contentMatchers;
             return this;
         }
-        public Builder contentMatchers(@Nullable List<UptimeCheckConfigContentMatcherGetArgs> contentMatchers) {
-            this.contentMatchers = Codegen.ofNullable(contentMatchers);
-            return this;
+
+        public Builder contentMatchers(List<UptimeCheckConfigContentMatcherGetArgs> contentMatchers) {
+            return contentMatchers(Output.of(contentMatchers));
         }
+
         public Builder contentMatchers(UptimeCheckConfigContentMatcherGetArgs... contentMatchers) {
             return contentMatchers(List.of(contentMatchers));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder httpCheck(@Nullable Output<UptimeCheckConfigHttpCheckGetArgs> httpCheck) {
-            this.httpCheck = httpCheck;
+            $.httpCheck = httpCheck;
             return this;
         }
-        public Builder httpCheck(@Nullable UptimeCheckConfigHttpCheckGetArgs httpCheck) {
-            this.httpCheck = Codegen.ofNullable(httpCheck);
-            return this;
+
+        public Builder httpCheck(UptimeCheckConfigHttpCheckGetArgs httpCheck) {
+            return httpCheck(Output.of(httpCheck));
         }
+
         public Builder monitoredResource(@Nullable Output<UptimeCheckConfigMonitoredResourceGetArgs> monitoredResource) {
-            this.monitoredResource = monitoredResource;
+            $.monitoredResource = monitoredResource;
             return this;
         }
-        public Builder monitoredResource(@Nullable UptimeCheckConfigMonitoredResourceGetArgs monitoredResource) {
-            this.monitoredResource = Codegen.ofNullable(monitoredResource);
-            return this;
+
+        public Builder monitoredResource(UptimeCheckConfigMonitoredResourceGetArgs monitoredResource) {
+            return monitoredResource(Output.of(monitoredResource));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder period(@Nullable Output<String> period) {
-            this.period = period;
+            $.period = period;
             return this;
         }
-        public Builder period(@Nullable String period) {
-            this.period = Codegen.ofNullable(period);
-            return this;
+
+        public Builder period(String period) {
+            return period(Output.of(period));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder resourceGroup(@Nullable Output<UptimeCheckConfigResourceGroupGetArgs> resourceGroup) {
-            this.resourceGroup = resourceGroup;
+            $.resourceGroup = resourceGroup;
             return this;
         }
-        public Builder resourceGroup(@Nullable UptimeCheckConfigResourceGroupGetArgs resourceGroup) {
-            this.resourceGroup = Codegen.ofNullable(resourceGroup);
-            return this;
+
+        public Builder resourceGroup(UptimeCheckConfigResourceGroupGetArgs resourceGroup) {
+            return resourceGroup(Output.of(resourceGroup));
         }
+
         public Builder selectedRegions(@Nullable Output<List<String>> selectedRegions) {
-            this.selectedRegions = selectedRegions;
+            $.selectedRegions = selectedRegions;
             return this;
         }
-        public Builder selectedRegions(@Nullable List<String> selectedRegions) {
-            this.selectedRegions = Codegen.ofNullable(selectedRegions);
-            return this;
+
+        public Builder selectedRegions(List<String> selectedRegions) {
+            return selectedRegions(Output.of(selectedRegions));
         }
+
         public Builder selectedRegions(String... selectedRegions) {
             return selectedRegions(List.of(selectedRegions));
         }
+
         public Builder tcpCheck(@Nullable Output<UptimeCheckConfigTcpCheckGetArgs> tcpCheck) {
-            this.tcpCheck = tcpCheck;
+            $.tcpCheck = tcpCheck;
             return this;
         }
-        public Builder tcpCheck(@Nullable UptimeCheckConfigTcpCheckGetArgs tcpCheck) {
-            this.tcpCheck = Codegen.ofNullable(tcpCheck);
-            return this;
+
+        public Builder tcpCheck(UptimeCheckConfigTcpCheckGetArgs tcpCheck) {
+            return tcpCheck(Output.of(tcpCheck));
         }
+
         public Builder timeout(@Nullable Output<String> timeout) {
-            this.timeout = timeout;
+            $.timeout = timeout;
             return this;
         }
-        public Builder timeout(@Nullable String timeout) {
-            this.timeout = Codegen.ofNullable(timeout);
-            return this;
+
+        public Builder timeout(String timeout) {
+            return timeout(Output.of(timeout));
         }
+
         public Builder uptimeCheckId(@Nullable Output<String> uptimeCheckId) {
-            this.uptimeCheckId = uptimeCheckId;
+            $.uptimeCheckId = uptimeCheckId;
             return this;
         }
-        public Builder uptimeCheckId(@Nullable String uptimeCheckId) {
-            this.uptimeCheckId = Codegen.ofNullable(uptimeCheckId);
-            return this;
-        }        public UptimeCheckConfigState build() {
-            return new UptimeCheckConfigState(contentMatchers, displayName, httpCheck, monitoredResource, name, period, project, resourceGroup, selectedRegions, tcpCheck, timeout, uptimeCheckId);
+
+        public Builder uptimeCheckId(String uptimeCheckId) {
+            return uptimeCheckId(Output.of(uptimeCheckId));
+        }
+
+        public UptimeCheckConfigState build() {
+            return $;
         }
     }
+
 }

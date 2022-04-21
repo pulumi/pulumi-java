@@ -22,7 +22,7 @@ public final class ZipInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filesCount", required=true)
-      private final Integer filesCount;
+    private Integer filesCount;
 
     public Integer filesCount() {
         return this.filesCount;
@@ -33,55 +33,52 @@ public final class ZipInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sourceUrl", required=true)
-      private final String sourceUrl;
+    private String sourceUrl;
 
     public String sourceUrl() {
         return this.sourceUrl;
     }
 
-    public ZipInfoResponse(
-        Integer filesCount,
-        String sourceUrl) {
-        this.filesCount = Objects.requireNonNull(filesCount, "expected parameter 'filesCount' to be non-null");
-        this.sourceUrl = Objects.requireNonNull(sourceUrl, "expected parameter 'sourceUrl' to be non-null");
-    }
+    private ZipInfoResponse() {}
 
-    private ZipInfoResponse() {
-        this.filesCount = null;
-        this.sourceUrl = null;
+    private ZipInfoResponse(ZipInfoResponse $) {
+        this.filesCount = $.filesCount;
+        this.sourceUrl = $.sourceUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ZipInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer filesCount;
-        private String sourceUrl;
+        private ZipInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ZipInfoResponse();
         }
 
         public Builder(ZipInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filesCount = defaults.filesCount;
-    	      this.sourceUrl = defaults.sourceUrl;
+            $ = new ZipInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder filesCount(Integer filesCount) {
-            this.filesCount = Objects.requireNonNull(filesCount);
+            $.filesCount = filesCount;
             return this;
         }
+
         public Builder sourceUrl(String sourceUrl) {
-            this.sourceUrl = Objects.requireNonNull(sourceUrl);
+            $.sourceUrl = sourceUrl;
             return this;
-        }        public ZipInfoResponse build() {
-            return new ZipInfoResponse(filesCount, sourceUrl);
+        }
+
+        public ZipInfoResponse build() {
+            $.filesCount = Objects.requireNonNull($.filesCount, "expected parameter 'filesCount' to be non-null");
+            $.sourceUrl = Objects.requireNonNull($.sourceUrl, "expected parameter 'sourceUrl' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class ProjectRepoIdResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="project", required=true)
-      private final String project;
+    private String project;
 
     public String project() {
         return this.project;
@@ -32,55 +32,52 @@ public final class ProjectRepoIdResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="repoName", required=true)
-      private final String repoName;
+    private String repoName;
 
     public String repoName() {
         return this.repoName;
     }
 
-    public ProjectRepoIdResponse(
-        String project,
-        String repoName) {
-        this.project = Objects.requireNonNull(project, "expected parameter 'project' to be non-null");
-        this.repoName = Objects.requireNonNull(repoName, "expected parameter 'repoName' to be non-null");
-    }
+    private ProjectRepoIdResponse() {}
 
-    private ProjectRepoIdResponse() {
-        this.project = null;
-        this.repoName = null;
+    private ProjectRepoIdResponse(ProjectRepoIdResponse $) {
+        this.project = $.project;
+        this.repoName = $.repoName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProjectRepoIdResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String project;
-        private String repoName;
+        private ProjectRepoIdResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProjectRepoIdResponse();
         }
 
         public Builder(ProjectRepoIdResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.project = defaults.project;
-    	      this.repoName = defaults.repoName;
+            $ = new ProjectRepoIdResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder project(String project) {
-            this.project = Objects.requireNonNull(project);
+            $.project = project;
             return this;
         }
+
         public Builder repoName(String repoName) {
-            this.repoName = Objects.requireNonNull(repoName);
+            $.repoName = repoName;
             return this;
-        }        public ProjectRepoIdResponse build() {
-            return new ProjectRepoIdResponse(project, repoName);
+        }
+
+        public ProjectRepoIdResponse build() {
+            $.project = Objects.requireNonNull($.project, "expected parameter 'project' to be non-null");
+            $.repoName = Objects.requireNonNull($.repoName, "expected parameter 'repoName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -24,10 +24,10 @@ public final class OriginEndpointSpekeKeyProvider extends com.pulumi.resources.I
      * 
      */
     @Import(name="certificateArn")
-      private final @Nullable String certificateArn;
+    private @Nullable String certificateArn;
 
     public Optional<String> certificateArn() {
-        return this.certificateArn == null ? Optional.empty() : Optional.ofNullable(this.certificateArn);
+        return Optional.ofNullable(this.certificateArn);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class OriginEndpointSpekeKeyProvider extends com.pulumi.resources.I
      * 
      */
     @Import(name="resourceId", required=true)
-      private final String resourceId;
+    private String resourceId;
 
     public String resourceId() {
         return this.resourceId;
@@ -46,7 +46,7 @@ public final class OriginEndpointSpekeKeyProvider extends com.pulumi.resources.I
      * 
      */
     @Import(name="roleArn", required=true)
-      private final String roleArn;
+    private String roleArn;
 
     public String roleArn() {
         return this.roleArn;
@@ -57,7 +57,7 @@ public final class OriginEndpointSpekeKeyProvider extends com.pulumi.resources.I
      * 
      */
     @Import(name="systemIds", required=true)
-      private final List<String> systemIds;
+    private List<String> systemIds;
 
     public List<String> systemIds() {
         return this.systemIds;
@@ -68,85 +68,76 @@ public final class OriginEndpointSpekeKeyProvider extends com.pulumi.resources.I
      * 
      */
     @Import(name="url", required=true)
-      private final String url;
+    private String url;
 
     public String url() {
         return this.url;
     }
 
-    public OriginEndpointSpekeKeyProvider(
-        @Nullable String certificateArn,
-        String resourceId,
-        String roleArn,
-        List<String> systemIds,
-        String url) {
-        this.certificateArn = certificateArn;
-        this.resourceId = Objects.requireNonNull(resourceId, "expected parameter 'resourceId' to be non-null");
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.systemIds = Objects.requireNonNull(systemIds, "expected parameter 'systemIds' to be non-null");
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-    }
+    private OriginEndpointSpekeKeyProvider() {}
 
-    private OriginEndpointSpekeKeyProvider() {
-        this.certificateArn = null;
-        this.resourceId = null;
-        this.roleArn = null;
-        this.systemIds = List.of();
-        this.url = null;
+    private OriginEndpointSpekeKeyProvider(OriginEndpointSpekeKeyProvider $) {
+        this.certificateArn = $.certificateArn;
+        this.resourceId = $.resourceId;
+        this.roleArn = $.roleArn;
+        this.systemIds = $.systemIds;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OriginEndpointSpekeKeyProvider defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String certificateArn;
-        private String resourceId;
-        private String roleArn;
-        private List<String> systemIds;
-        private String url;
+        private OriginEndpointSpekeKeyProvider $;
 
         public Builder() {
-    	      // Empty
+            $ = new OriginEndpointSpekeKeyProvider();
         }
 
         public Builder(OriginEndpointSpekeKeyProvider defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateArn = defaults.certificateArn;
-    	      this.resourceId = defaults.resourceId;
-    	      this.roleArn = defaults.roleArn;
-    	      this.systemIds = defaults.systemIds;
-    	      this.url = defaults.url;
+            $ = new OriginEndpointSpekeKeyProvider(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateArn(@Nullable String certificateArn) {
-            this.certificateArn = certificateArn;
+            $.certificateArn = certificateArn;
             return this;
         }
+
         public Builder resourceId(String resourceId) {
-            this.resourceId = Objects.requireNonNull(resourceId);
+            $.resourceId = resourceId;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder systemIds(List<String> systemIds) {
-            this.systemIds = Objects.requireNonNull(systemIds);
+            $.systemIds = systemIds;
             return this;
         }
+
         public Builder systemIds(String... systemIds) {
             return systemIds(List.of(systemIds));
         }
+
         public Builder url(String url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
-        }        public OriginEndpointSpekeKeyProvider build() {
-            return new OriginEndpointSpekeKeyProvider(certificateArn, resourceId, roleArn, systemIds, url);
+        }
+
+        public OriginEndpointSpekeKeyProvider build() {
+            $.resourceId = Objects.requireNonNull($.resourceId, "expected parameter 'resourceId' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            $.systemIds = Objects.requireNonNull($.systemIds, "expected parameter 'systemIds' to be non-null");
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            return $;
         }
     }
+
 }

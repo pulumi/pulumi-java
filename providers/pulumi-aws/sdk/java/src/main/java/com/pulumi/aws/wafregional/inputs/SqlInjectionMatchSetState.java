@@ -6,10 +6,10 @@ package com.pulumi.aws.wafregional.inputs;
 import com.pulumi.aws.wafregional.inputs.SqlInjectionMatchSetSqlInjectionMatchTupleGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class SqlInjectionMatchSetState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -33,66 +33,62 @@ public final class SqlInjectionMatchSetState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="sqlInjectionMatchTuples")
-      private final @Nullable Output<List<SqlInjectionMatchSetSqlInjectionMatchTupleGetArgs>> sqlInjectionMatchTuples;
+    private @Nullable Output<List<SqlInjectionMatchSetSqlInjectionMatchTupleGetArgs>> sqlInjectionMatchTuples;
 
-    public Output<List<SqlInjectionMatchSetSqlInjectionMatchTupleGetArgs>> sqlInjectionMatchTuples() {
-        return this.sqlInjectionMatchTuples == null ? Codegen.empty() : this.sqlInjectionMatchTuples;
+    public Optional<Output<List<SqlInjectionMatchSetSqlInjectionMatchTupleGetArgs>>> sqlInjectionMatchTuples() {
+        return Optional.ofNullable(this.sqlInjectionMatchTuples);
     }
 
-    public SqlInjectionMatchSetState(
-        @Nullable Output<String> name,
-        @Nullable Output<List<SqlInjectionMatchSetSqlInjectionMatchTupleGetArgs>> sqlInjectionMatchTuples) {
-        this.name = name;
-        this.sqlInjectionMatchTuples = sqlInjectionMatchTuples;
-    }
+    private SqlInjectionMatchSetState() {}
 
-    private SqlInjectionMatchSetState() {
-        this.name = Codegen.empty();
-        this.sqlInjectionMatchTuples = Codegen.empty();
+    private SqlInjectionMatchSetState(SqlInjectionMatchSetState $) {
+        this.name = $.name;
+        this.sqlInjectionMatchTuples = $.sqlInjectionMatchTuples;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SqlInjectionMatchSetState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<SqlInjectionMatchSetSqlInjectionMatchTupleGetArgs>> sqlInjectionMatchTuples;
+        private SqlInjectionMatchSetState $;
 
         public Builder() {
-    	      // Empty
+            $ = new SqlInjectionMatchSetState();
         }
 
         public Builder(SqlInjectionMatchSetState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.sqlInjectionMatchTuples = defaults.sqlInjectionMatchTuples;
+            $ = new SqlInjectionMatchSetState(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder sqlInjectionMatchTuples(@Nullable Output<List<SqlInjectionMatchSetSqlInjectionMatchTupleGetArgs>> sqlInjectionMatchTuples) {
-            this.sqlInjectionMatchTuples = sqlInjectionMatchTuples;
+            $.sqlInjectionMatchTuples = sqlInjectionMatchTuples;
             return this;
         }
-        public Builder sqlInjectionMatchTuples(@Nullable List<SqlInjectionMatchSetSqlInjectionMatchTupleGetArgs> sqlInjectionMatchTuples) {
-            this.sqlInjectionMatchTuples = Codegen.ofNullable(sqlInjectionMatchTuples);
-            return this;
+
+        public Builder sqlInjectionMatchTuples(List<SqlInjectionMatchSetSqlInjectionMatchTupleGetArgs> sqlInjectionMatchTuples) {
+            return sqlInjectionMatchTuples(Output.of(sqlInjectionMatchTuples));
         }
+
         public Builder sqlInjectionMatchTuples(SqlInjectionMatchSetSqlInjectionMatchTupleGetArgs... sqlInjectionMatchTuples) {
             return sqlInjectionMatchTuples(List.of(sqlInjectionMatchTuples));
-        }        public SqlInjectionMatchSetState build() {
-            return new SqlInjectionMatchSetState(name, sqlInjectionMatchTuples);
+        }
+
+        public SqlInjectionMatchSetState build() {
+            return $;
         }
     }
+
 }

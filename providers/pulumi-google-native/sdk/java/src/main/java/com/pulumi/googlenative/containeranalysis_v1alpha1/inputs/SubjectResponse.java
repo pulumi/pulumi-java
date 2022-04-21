@@ -22,7 +22,7 @@ public final class SubjectResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="digest", required=true)
-      private final Map<String,String> digest;
+    private Map<String,String> digest;
 
     public Map<String,String> digest() {
         return this.digest;
@@ -33,55 +33,52 @@ public final class SubjectResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public SubjectResponse(
-        Map<String,String> digest,
-        String name) {
-        this.digest = Objects.requireNonNull(digest, "expected parameter 'digest' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private SubjectResponse() {}
 
-    private SubjectResponse() {
-        this.digest = Map.of();
-        this.name = null;
+    private SubjectResponse(SubjectResponse $) {
+        this.digest = $.digest;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubjectResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,String> digest;
-        private String name;
+        private SubjectResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubjectResponse();
         }
 
         public Builder(SubjectResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.digest = defaults.digest;
-    	      this.name = defaults.name;
+            $ = new SubjectResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder digest(Map<String,String> digest) {
-            this.digest = Objects.requireNonNull(digest);
+            $.digest = digest;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public SubjectResponse build() {
-            return new SubjectResponse(digest, name);
+        }
+
+        public SubjectResponse build() {
+            $.digest = Objects.requireNonNull($.digest, "expected parameter 'digest' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

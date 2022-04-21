@@ -7,10 +7,10 @@ import com.pulumi.azurenative.providerhub.enums.ResourceProviderCapabilitiesEffe
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,93 +19,88 @@ public final class ResourceProviderCapabilitiesArgs extends com.pulumi.resources
     public static final ResourceProviderCapabilitiesArgs Empty = new ResourceProviderCapabilitiesArgs();
 
     @Import(name="effect", required=true)
-      private final Output<Either<String,ResourceProviderCapabilitiesEffect>> effect;
+    private Output<Either<String,ResourceProviderCapabilitiesEffect>> effect;
 
     public Output<Either<String,ResourceProviderCapabilitiesEffect>> effect() {
         return this.effect;
     }
 
     @Import(name="quotaId", required=true)
-      private final Output<String> quotaId;
+    private Output<String> quotaId;
 
     public Output<String> quotaId() {
         return this.quotaId;
     }
 
     @Import(name="requiredFeatures")
-      private final @Nullable Output<List<String>> requiredFeatures;
+    private @Nullable Output<List<String>> requiredFeatures;
 
-    public Output<List<String>> requiredFeatures() {
-        return this.requiredFeatures == null ? Codegen.empty() : this.requiredFeatures;
+    public Optional<Output<List<String>>> requiredFeatures() {
+        return Optional.ofNullable(this.requiredFeatures);
     }
 
-    public ResourceProviderCapabilitiesArgs(
-        Output<Either<String,ResourceProviderCapabilitiesEffect>> effect,
-        Output<String> quotaId,
-        @Nullable Output<List<String>> requiredFeatures) {
-        this.effect = Objects.requireNonNull(effect, "expected parameter 'effect' to be non-null");
-        this.quotaId = Objects.requireNonNull(quotaId, "expected parameter 'quotaId' to be non-null");
-        this.requiredFeatures = requiredFeatures;
-    }
+    private ResourceProviderCapabilitiesArgs() {}
 
-    private ResourceProviderCapabilitiesArgs() {
-        this.effect = Codegen.empty();
-        this.quotaId = Codegen.empty();
-        this.requiredFeatures = Codegen.empty();
+    private ResourceProviderCapabilitiesArgs(ResourceProviderCapabilitiesArgs $) {
+        this.effect = $.effect;
+        this.quotaId = $.quotaId;
+        this.requiredFeatures = $.requiredFeatures;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceProviderCapabilitiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,ResourceProviderCapabilitiesEffect>> effect;
-        private Output<String> quotaId;
-        private @Nullable Output<List<String>> requiredFeatures;
+        private ResourceProviderCapabilitiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceProviderCapabilitiesArgs();
         }
 
         public Builder(ResourceProviderCapabilitiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.effect = defaults.effect;
-    	      this.quotaId = defaults.quotaId;
-    	      this.requiredFeatures = defaults.requiredFeatures;
+            $ = new ResourceProviderCapabilitiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder effect(Output<Either<String,ResourceProviderCapabilitiesEffect>> effect) {
-            this.effect = Objects.requireNonNull(effect);
+            $.effect = effect;
             return this;
         }
+
         public Builder effect(Either<String,ResourceProviderCapabilitiesEffect> effect) {
-            this.effect = Output.of(Objects.requireNonNull(effect));
-            return this;
+            return effect(Output.of(effect));
         }
+
         public Builder quotaId(Output<String> quotaId) {
-            this.quotaId = Objects.requireNonNull(quotaId);
+            $.quotaId = quotaId;
             return this;
         }
+
         public Builder quotaId(String quotaId) {
-            this.quotaId = Output.of(Objects.requireNonNull(quotaId));
-            return this;
+            return quotaId(Output.of(quotaId));
         }
+
         public Builder requiredFeatures(@Nullable Output<List<String>> requiredFeatures) {
-            this.requiredFeatures = requiredFeatures;
+            $.requiredFeatures = requiredFeatures;
             return this;
         }
-        public Builder requiredFeatures(@Nullable List<String> requiredFeatures) {
-            this.requiredFeatures = Codegen.ofNullable(requiredFeatures);
-            return this;
+
+        public Builder requiredFeatures(List<String> requiredFeatures) {
+            return requiredFeatures(Output.of(requiredFeatures));
         }
+
         public Builder requiredFeatures(String... requiredFeatures) {
             return requiredFeatures(List.of(requiredFeatures));
-        }        public ResourceProviderCapabilitiesArgs build() {
-            return new ResourceProviderCapabilitiesArgs(effect, quotaId, requiredFeatures);
+        }
+
+        public ResourceProviderCapabilitiesArgs build() {
+            $.effect = Objects.requireNonNull($.effect, "expected parameter 'effect' to be non-null");
+            $.quotaId = Objects.requireNonNull($.quotaId, "expected parameter 'quotaId' to be non-null");
+            return $;
         }
     }
+
 }

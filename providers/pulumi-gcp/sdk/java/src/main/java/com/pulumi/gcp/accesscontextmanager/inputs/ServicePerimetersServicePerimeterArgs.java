@@ -5,12 +5,12 @@ package com.pulumi.gcp.accesscontextmanager.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.accesscontextmanager.inputs.ServicePerimetersServicePerimeterSpecArgs;
 import com.pulumi.gcp.accesscontextmanager.inputs.ServicePerimetersServicePerimeterStatusArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ServicePerimetersServicePerimeterArgs extends com.pulumi.reso
      * 
      */
     @Import(name="createTime")
-      private final @Nullable Output<String> createTime;
+    private @Nullable Output<String> createTime;
 
-    public Output<String> createTime() {
-        return this.createTime == null ? Codegen.empty() : this.createTime;
+    public Optional<Output<String>> createTime() {
+        return Optional.ofNullable(this.createTime);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ServicePerimetersServicePerimeterArgs extends com.pulumi.reso
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -49,7 +49,7 @@ public final class ServicePerimetersServicePerimeterArgs extends com.pulumi.reso
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -75,10 +75,10 @@ public final class ServicePerimetersServicePerimeterArgs extends com.pulumi.reso
      * 
      */
     @Import(name="perimeterType")
-      private final @Nullable Output<String> perimeterType;
+    private @Nullable Output<String> perimeterType;
 
-    public Output<String> perimeterType() {
-        return this.perimeterType == null ? Codegen.empty() : this.perimeterType;
+    public Optional<Output<String>> perimeterType() {
+        return Optional.ofNullable(this.perimeterType);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class ServicePerimetersServicePerimeterArgs extends com.pulumi.reso
      * 
      */
     @Import(name="spec")
-      private final @Nullable Output<ServicePerimetersServicePerimeterSpecArgs> spec;
+    private @Nullable Output<ServicePerimetersServicePerimeterSpecArgs> spec;
 
-    public Output<ServicePerimetersServicePerimeterSpecArgs> spec() {
-        return this.spec == null ? Codegen.empty() : this.spec;
+    public Optional<Output<ServicePerimetersServicePerimeterSpecArgs>> spec() {
+        return Optional.ofNullable(this.spec);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class ServicePerimetersServicePerimeterArgs extends com.pulumi.reso
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<ServicePerimetersServicePerimeterStatusArgs> status;
+    private @Nullable Output<ServicePerimetersServicePerimeterStatusArgs> status;
 
-    public Output<ServicePerimetersServicePerimeterStatusArgs> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<ServicePerimetersServicePerimeterStatusArgs>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -115,7 +115,7 @@ public final class ServicePerimetersServicePerimeterArgs extends com.pulumi.reso
      * 
      */
     @Import(name="title", required=true)
-      private final Output<String> title;
+    private Output<String> title;
 
     public Output<String> title() {
         return this.title;
@@ -127,10 +127,10 @@ public final class ServicePerimetersServicePerimeterArgs extends com.pulumi.reso
      * 
      */
     @Import(name="updateTime")
-      private final @Nullable Output<String> updateTime;
+    private @Nullable Output<String> updateTime;
 
-    public Output<String> updateTime() {
-        return this.updateTime == null ? Codegen.empty() : this.updateTime;
+    public Optional<Output<String>> updateTime() {
+        return Optional.ofNullable(this.updateTime);
     }
 
     /**
@@ -146,154 +146,130 @@ public final class ServicePerimetersServicePerimeterArgs extends com.pulumi.reso
      * 
      */
     @Import(name="useExplicitDryRunSpec")
-      private final @Nullable Output<Boolean> useExplicitDryRunSpec;
+    private @Nullable Output<Boolean> useExplicitDryRunSpec;
 
-    public Output<Boolean> useExplicitDryRunSpec() {
-        return this.useExplicitDryRunSpec == null ? Codegen.empty() : this.useExplicitDryRunSpec;
+    public Optional<Output<Boolean>> useExplicitDryRunSpec() {
+        return Optional.ofNullable(this.useExplicitDryRunSpec);
     }
 
-    public ServicePerimetersServicePerimeterArgs(
-        @Nullable Output<String> createTime,
-        @Nullable Output<String> description,
-        Output<String> name,
-        @Nullable Output<String> perimeterType,
-        @Nullable Output<ServicePerimetersServicePerimeterSpecArgs> spec,
-        @Nullable Output<ServicePerimetersServicePerimeterStatusArgs> status,
-        Output<String> title,
-        @Nullable Output<String> updateTime,
-        @Nullable Output<Boolean> useExplicitDryRunSpec) {
-        this.createTime = createTime;
-        this.description = description;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.perimeterType = perimeterType;
-        this.spec = spec;
-        this.status = status;
-        this.title = Objects.requireNonNull(title, "expected parameter 'title' to be non-null");
-        this.updateTime = updateTime;
-        this.useExplicitDryRunSpec = useExplicitDryRunSpec;
-    }
+    private ServicePerimetersServicePerimeterArgs() {}
 
-    private ServicePerimetersServicePerimeterArgs() {
-        this.createTime = Codegen.empty();
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.perimeterType = Codegen.empty();
-        this.spec = Codegen.empty();
-        this.status = Codegen.empty();
-        this.title = Codegen.empty();
-        this.updateTime = Codegen.empty();
-        this.useExplicitDryRunSpec = Codegen.empty();
+    private ServicePerimetersServicePerimeterArgs(ServicePerimetersServicePerimeterArgs $) {
+        this.createTime = $.createTime;
+        this.description = $.description;
+        this.name = $.name;
+        this.perimeterType = $.perimeterType;
+        this.spec = $.spec;
+        this.status = $.status;
+        this.title = $.title;
+        this.updateTime = $.updateTime;
+        this.useExplicitDryRunSpec = $.useExplicitDryRunSpec;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServicePerimetersServicePerimeterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> createTime;
-        private @Nullable Output<String> description;
-        private Output<String> name;
-        private @Nullable Output<String> perimeterType;
-        private @Nullable Output<ServicePerimetersServicePerimeterSpecArgs> spec;
-        private @Nullable Output<ServicePerimetersServicePerimeterStatusArgs> status;
-        private Output<String> title;
-        private @Nullable Output<String> updateTime;
-        private @Nullable Output<Boolean> useExplicitDryRunSpec;
+        private ServicePerimetersServicePerimeterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServicePerimetersServicePerimeterArgs();
         }
 
         public Builder(ServicePerimetersServicePerimeterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createTime = defaults.createTime;
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.perimeterType = defaults.perimeterType;
-    	      this.spec = defaults.spec;
-    	      this.status = defaults.status;
-    	      this.title = defaults.title;
-    	      this.updateTime = defaults.updateTime;
-    	      this.useExplicitDryRunSpec = defaults.useExplicitDryRunSpec;
+            $ = new ServicePerimetersServicePerimeterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder createTime(@Nullable Output<String> createTime) {
-            this.createTime = createTime;
+            $.createTime = createTime;
             return this;
         }
-        public Builder createTime(@Nullable String createTime) {
-            this.createTime = Codegen.ofNullable(createTime);
-            return this;
+
+        public Builder createTime(String createTime) {
+            return createTime(Output.of(createTime));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder perimeterType(@Nullable Output<String> perimeterType) {
-            this.perimeterType = perimeterType;
+            $.perimeterType = perimeterType;
             return this;
         }
-        public Builder perimeterType(@Nullable String perimeterType) {
-            this.perimeterType = Codegen.ofNullable(perimeterType);
-            return this;
+
+        public Builder perimeterType(String perimeterType) {
+            return perimeterType(Output.of(perimeterType));
         }
+
         public Builder spec(@Nullable Output<ServicePerimetersServicePerimeterSpecArgs> spec) {
-            this.spec = spec;
+            $.spec = spec;
             return this;
         }
-        public Builder spec(@Nullable ServicePerimetersServicePerimeterSpecArgs spec) {
-            this.spec = Codegen.ofNullable(spec);
-            return this;
+
+        public Builder spec(ServicePerimetersServicePerimeterSpecArgs spec) {
+            return spec(Output.of(spec));
         }
+
         public Builder status(@Nullable Output<ServicePerimetersServicePerimeterStatusArgs> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable ServicePerimetersServicePerimeterStatusArgs status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(ServicePerimetersServicePerimeterStatusArgs status) {
+            return status(Output.of(status));
         }
+
         public Builder title(Output<String> title) {
-            this.title = Objects.requireNonNull(title);
+            $.title = title;
             return this;
         }
+
         public Builder title(String title) {
-            this.title = Output.of(Objects.requireNonNull(title));
-            return this;
+            return title(Output.of(title));
         }
+
         public Builder updateTime(@Nullable Output<String> updateTime) {
-            this.updateTime = updateTime;
+            $.updateTime = updateTime;
             return this;
         }
-        public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Codegen.ofNullable(updateTime);
-            return this;
+
+        public Builder updateTime(String updateTime) {
+            return updateTime(Output.of(updateTime));
         }
+
         public Builder useExplicitDryRunSpec(@Nullable Output<Boolean> useExplicitDryRunSpec) {
-            this.useExplicitDryRunSpec = useExplicitDryRunSpec;
+            $.useExplicitDryRunSpec = useExplicitDryRunSpec;
             return this;
         }
-        public Builder useExplicitDryRunSpec(@Nullable Boolean useExplicitDryRunSpec) {
-            this.useExplicitDryRunSpec = Codegen.ofNullable(useExplicitDryRunSpec);
-            return this;
-        }        public ServicePerimetersServicePerimeterArgs build() {
-            return new ServicePerimetersServicePerimeterArgs(createTime, description, name, perimeterType, spec, status, title, updateTime, useExplicitDryRunSpec);
+
+        public Builder useExplicitDryRunSpec(Boolean useExplicitDryRunSpec) {
+            return useExplicitDryRunSpec(Output.of(useExplicitDryRunSpec));
+        }
+
+        public ServicePerimetersServicePerimeterArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.title = Objects.requireNonNull($.title, "expected parameter 'title' to be non-null");
+            return $;
         }
     }
+
 }

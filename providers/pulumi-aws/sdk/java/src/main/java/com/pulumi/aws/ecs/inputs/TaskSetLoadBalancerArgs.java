@@ -5,10 +5,10 @@ package com.pulumi.aws.ecs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class TaskSetLoadBalancerArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="containerName", required=true)
-      private final Output<String> containerName;
+    private Output<String> containerName;
 
     public Output<String> containerName() {
         return this.containerName;
@@ -32,10 +32,10 @@ public final class TaskSetLoadBalancerArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="containerPort")
-      private final @Nullable Output<Integer> containerPort;
+    private @Nullable Output<Integer> containerPort;
 
-    public Output<Integer> containerPort() {
-        return this.containerPort == null ? Codegen.empty() : this.containerPort;
+    public Optional<Output<Integer>> containerPort() {
+        return Optional.ofNullable(this.containerPort);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class TaskSetLoadBalancerArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="loadBalancerName")
-      private final @Nullable Output<String> loadBalancerName;
+    private @Nullable Output<String> loadBalancerName;
 
-    public Output<String> loadBalancerName() {
-        return this.loadBalancerName == null ? Codegen.empty() : this.loadBalancerName;
+    public Optional<Output<String>> loadBalancerName() {
+        return Optional.ofNullable(this.loadBalancerName);
     }
 
     /**
@@ -54,89 +54,79 @@ public final class TaskSetLoadBalancerArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="targetGroupArn")
-      private final @Nullable Output<String> targetGroupArn;
+    private @Nullable Output<String> targetGroupArn;
 
-    public Output<String> targetGroupArn() {
-        return this.targetGroupArn == null ? Codegen.empty() : this.targetGroupArn;
+    public Optional<Output<String>> targetGroupArn() {
+        return Optional.ofNullable(this.targetGroupArn);
     }
 
-    public TaskSetLoadBalancerArgs(
-        Output<String> containerName,
-        @Nullable Output<Integer> containerPort,
-        @Nullable Output<String> loadBalancerName,
-        @Nullable Output<String> targetGroupArn) {
-        this.containerName = Objects.requireNonNull(containerName, "expected parameter 'containerName' to be non-null");
-        this.containerPort = containerPort;
-        this.loadBalancerName = loadBalancerName;
-        this.targetGroupArn = targetGroupArn;
-    }
+    private TaskSetLoadBalancerArgs() {}
 
-    private TaskSetLoadBalancerArgs() {
-        this.containerName = Codegen.empty();
-        this.containerPort = Codegen.empty();
-        this.loadBalancerName = Codegen.empty();
-        this.targetGroupArn = Codegen.empty();
+    private TaskSetLoadBalancerArgs(TaskSetLoadBalancerArgs $) {
+        this.containerName = $.containerName;
+        this.containerPort = $.containerPort;
+        this.loadBalancerName = $.loadBalancerName;
+        this.targetGroupArn = $.targetGroupArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaskSetLoadBalancerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> containerName;
-        private @Nullable Output<Integer> containerPort;
-        private @Nullable Output<String> loadBalancerName;
-        private @Nullable Output<String> targetGroupArn;
+        private TaskSetLoadBalancerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaskSetLoadBalancerArgs();
         }
 
         public Builder(TaskSetLoadBalancerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerName = defaults.containerName;
-    	      this.containerPort = defaults.containerPort;
-    	      this.loadBalancerName = defaults.loadBalancerName;
-    	      this.targetGroupArn = defaults.targetGroupArn;
+            $ = new TaskSetLoadBalancerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder containerName(Output<String> containerName) {
-            this.containerName = Objects.requireNonNull(containerName);
+            $.containerName = containerName;
             return this;
         }
+
         public Builder containerName(String containerName) {
-            this.containerName = Output.of(Objects.requireNonNull(containerName));
-            return this;
+            return containerName(Output.of(containerName));
         }
+
         public Builder containerPort(@Nullable Output<Integer> containerPort) {
-            this.containerPort = containerPort;
+            $.containerPort = containerPort;
             return this;
         }
-        public Builder containerPort(@Nullable Integer containerPort) {
-            this.containerPort = Codegen.ofNullable(containerPort);
-            return this;
+
+        public Builder containerPort(Integer containerPort) {
+            return containerPort(Output.of(containerPort));
         }
+
         public Builder loadBalancerName(@Nullable Output<String> loadBalancerName) {
-            this.loadBalancerName = loadBalancerName;
+            $.loadBalancerName = loadBalancerName;
             return this;
         }
-        public Builder loadBalancerName(@Nullable String loadBalancerName) {
-            this.loadBalancerName = Codegen.ofNullable(loadBalancerName);
-            return this;
+
+        public Builder loadBalancerName(String loadBalancerName) {
+            return loadBalancerName(Output.of(loadBalancerName));
         }
+
         public Builder targetGroupArn(@Nullable Output<String> targetGroupArn) {
-            this.targetGroupArn = targetGroupArn;
+            $.targetGroupArn = targetGroupArn;
             return this;
         }
-        public Builder targetGroupArn(@Nullable String targetGroupArn) {
-            this.targetGroupArn = Codegen.ofNullable(targetGroupArn);
-            return this;
-        }        public TaskSetLoadBalancerArgs build() {
-            return new TaskSetLoadBalancerArgs(containerName, containerPort, loadBalancerName, targetGroupArn);
+
+        public Builder targetGroupArn(String targetGroupArn) {
+            return targetGroupArn(Output.of(targetGroupArn));
+        }
+
+        public TaskSetLoadBalancerArgs build() {
+            $.containerName = Objects.requireNonNull($.containerName, "expected parameter 'containerName' to be non-null");
+            return $;
         }
     }
+
 }

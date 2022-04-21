@@ -6,9 +6,9 @@ package com.pulumi.awsnative.databrew.inputs;
 import com.pulumi.awsnative.databrew.inputs.RecipeS3LocationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class RecipeDataCatalogInputDefinitionArgs extends com.pulumi.resou
      * 
      */
     @Import(name="catalogId")
-      private final @Nullable Output<String> catalogId;
+    private @Nullable Output<String> catalogId;
 
-    public Output<String> catalogId() {
-        return this.catalogId == null ? Codegen.empty() : this.catalogId;
+    public Optional<Output<String>> catalogId() {
+        return Optional.ofNullable(this.catalogId);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class RecipeDataCatalogInputDefinitionArgs extends com.pulumi.resou
      * 
      */
     @Import(name="databaseName")
-      private final @Nullable Output<String> databaseName;
+    private @Nullable Output<String> databaseName;
 
-    public Output<String> databaseName() {
-        return this.databaseName == null ? Codegen.empty() : this.databaseName;
+    public Optional<Output<String>> databaseName() {
+        return Optional.ofNullable(this.databaseName);
     }
 
     /**
@@ -43,96 +43,85 @@ public final class RecipeDataCatalogInputDefinitionArgs extends com.pulumi.resou
      * 
      */
     @Import(name="tableName")
-      private final @Nullable Output<String> tableName;
+    private @Nullable Output<String> tableName;
 
-    public Output<String> tableName() {
-        return this.tableName == null ? Codegen.empty() : this.tableName;
+    public Optional<Output<String>> tableName() {
+        return Optional.ofNullable(this.tableName);
     }
 
     @Import(name="tempDirectory")
-      private final @Nullable Output<RecipeS3LocationArgs> tempDirectory;
+    private @Nullable Output<RecipeS3LocationArgs> tempDirectory;
 
-    public Output<RecipeS3LocationArgs> tempDirectory() {
-        return this.tempDirectory == null ? Codegen.empty() : this.tempDirectory;
+    public Optional<Output<RecipeS3LocationArgs>> tempDirectory() {
+        return Optional.ofNullable(this.tempDirectory);
     }
 
-    public RecipeDataCatalogInputDefinitionArgs(
-        @Nullable Output<String> catalogId,
-        @Nullable Output<String> databaseName,
-        @Nullable Output<String> tableName,
-        @Nullable Output<RecipeS3LocationArgs> tempDirectory) {
-        this.catalogId = catalogId;
-        this.databaseName = databaseName;
-        this.tableName = tableName;
-        this.tempDirectory = tempDirectory;
-    }
+    private RecipeDataCatalogInputDefinitionArgs() {}
 
-    private RecipeDataCatalogInputDefinitionArgs() {
-        this.catalogId = Codegen.empty();
-        this.databaseName = Codegen.empty();
-        this.tableName = Codegen.empty();
-        this.tempDirectory = Codegen.empty();
+    private RecipeDataCatalogInputDefinitionArgs(RecipeDataCatalogInputDefinitionArgs $) {
+        this.catalogId = $.catalogId;
+        this.databaseName = $.databaseName;
+        this.tableName = $.tableName;
+        this.tempDirectory = $.tempDirectory;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RecipeDataCatalogInputDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> catalogId;
-        private @Nullable Output<String> databaseName;
-        private @Nullable Output<String> tableName;
-        private @Nullable Output<RecipeS3LocationArgs> tempDirectory;
+        private RecipeDataCatalogInputDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RecipeDataCatalogInputDefinitionArgs();
         }
 
         public Builder(RecipeDataCatalogInputDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.catalogId = defaults.catalogId;
-    	      this.databaseName = defaults.databaseName;
-    	      this.tableName = defaults.tableName;
-    	      this.tempDirectory = defaults.tempDirectory;
+            $ = new RecipeDataCatalogInputDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder catalogId(@Nullable Output<String> catalogId) {
-            this.catalogId = catalogId;
+            $.catalogId = catalogId;
             return this;
         }
-        public Builder catalogId(@Nullable String catalogId) {
-            this.catalogId = Codegen.ofNullable(catalogId);
-            return this;
+
+        public Builder catalogId(String catalogId) {
+            return catalogId(Output.of(catalogId));
         }
+
         public Builder databaseName(@Nullable Output<String> databaseName) {
-            this.databaseName = databaseName;
+            $.databaseName = databaseName;
             return this;
         }
-        public Builder databaseName(@Nullable String databaseName) {
-            this.databaseName = Codegen.ofNullable(databaseName);
-            return this;
+
+        public Builder databaseName(String databaseName) {
+            return databaseName(Output.of(databaseName));
         }
+
         public Builder tableName(@Nullable Output<String> tableName) {
-            this.tableName = tableName;
+            $.tableName = tableName;
             return this;
         }
-        public Builder tableName(@Nullable String tableName) {
-            this.tableName = Codegen.ofNullable(tableName);
-            return this;
+
+        public Builder tableName(String tableName) {
+            return tableName(Output.of(tableName));
         }
+
         public Builder tempDirectory(@Nullable Output<RecipeS3LocationArgs> tempDirectory) {
-            this.tempDirectory = tempDirectory;
+            $.tempDirectory = tempDirectory;
             return this;
         }
-        public Builder tempDirectory(@Nullable RecipeS3LocationArgs tempDirectory) {
-            this.tempDirectory = Codegen.ofNullable(tempDirectory);
-            return this;
-        }        public RecipeDataCatalogInputDefinitionArgs build() {
-            return new RecipeDataCatalogInputDefinitionArgs(catalogId, databaseName, tableName, tempDirectory);
+
+        public Builder tempDirectory(RecipeS3LocationArgs tempDirectory) {
+            return tempDirectory(Output.of(tempDirectory));
+        }
+
+        public RecipeDataCatalogInputDefinitionArgs build() {
+            return $;
         }
     }
+
 }

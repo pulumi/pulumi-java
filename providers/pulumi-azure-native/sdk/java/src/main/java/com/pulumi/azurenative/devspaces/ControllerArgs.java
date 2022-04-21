@@ -6,10 +6,10 @@ package com.pulumi.azurenative.devspaces;
 import com.pulumi.azurenative.devspaces.inputs.SkuArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ControllerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ControllerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -44,7 +44,7 @@ public final class ControllerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -55,7 +55,7 @@ public final class ControllerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sku", required=true)
-      private final Output<SkuArgs> sku;
+    private Output<SkuArgs> sku;
 
     public Output<SkuArgs> sku() {
         return this.sku;
@@ -66,10 +66,10 @@ public final class ControllerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -77,7 +77,7 @@ public final class ControllerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetContainerHostCredentialsBase64", required=true)
-      private final Output<String> targetContainerHostCredentialsBase64;
+    private Output<String> targetContainerHostCredentialsBase64;
 
     public Output<String> targetContainerHostCredentialsBase64() {
         return this.targetContainerHostCredentialsBase64;
@@ -88,128 +88,112 @@ public final class ControllerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetContainerHostResourceId", required=true)
-      private final Output<String> targetContainerHostResourceId;
+    private Output<String> targetContainerHostResourceId;
 
     public Output<String> targetContainerHostResourceId() {
         return this.targetContainerHostResourceId;
     }
 
-    public ControllerArgs(
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        Output<String> resourceGroupName,
-        Output<SkuArgs> sku,
-        @Nullable Output<Map<String,String>> tags,
-        Output<String> targetContainerHostCredentialsBase64,
-        Output<String> targetContainerHostResourceId) {
-        this.location = location;
-        this.name = name;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sku = Objects.requireNonNull(sku, "expected parameter 'sku' to be non-null");
-        this.tags = tags;
-        this.targetContainerHostCredentialsBase64 = Objects.requireNonNull(targetContainerHostCredentialsBase64, "expected parameter 'targetContainerHostCredentialsBase64' to be non-null");
-        this.targetContainerHostResourceId = Objects.requireNonNull(targetContainerHostResourceId, "expected parameter 'targetContainerHostResourceId' to be non-null");
-    }
+    private ControllerArgs() {}
 
-    private ControllerArgs() {
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.sku = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.targetContainerHostCredentialsBase64 = Codegen.empty();
-        this.targetContainerHostResourceId = Codegen.empty();
+    private ControllerArgs(ControllerArgs $) {
+        this.location = $.location;
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
+        this.sku = $.sku;
+        this.tags = $.tags;
+        this.targetContainerHostCredentialsBase64 = $.targetContainerHostCredentialsBase64;
+        this.targetContainerHostResourceId = $.targetContainerHostResourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ControllerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private Output<String> resourceGroupName;
-        private Output<SkuArgs> sku;
-        private @Nullable Output<Map<String,String>> tags;
-        private Output<String> targetContainerHostCredentialsBase64;
-        private Output<String> targetContainerHostResourceId;
+        private ControllerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ControllerArgs();
         }
 
         public Builder(ControllerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sku = defaults.sku;
-    	      this.tags = defaults.tags;
-    	      this.targetContainerHostCredentialsBase64 = defaults.targetContainerHostCredentialsBase64;
-    	      this.targetContainerHostResourceId = defaults.targetContainerHostResourceId;
+            $ = new ControllerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder sku(Output<SkuArgs> sku) {
-            this.sku = Objects.requireNonNull(sku);
+            $.sku = sku;
             return this;
         }
+
         public Builder sku(SkuArgs sku) {
-            this.sku = Output.of(Objects.requireNonNull(sku));
-            return this;
+            return sku(Output.of(sku));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder targetContainerHostCredentialsBase64(Output<String> targetContainerHostCredentialsBase64) {
-            this.targetContainerHostCredentialsBase64 = Objects.requireNonNull(targetContainerHostCredentialsBase64);
+            $.targetContainerHostCredentialsBase64 = targetContainerHostCredentialsBase64;
             return this;
         }
+
         public Builder targetContainerHostCredentialsBase64(String targetContainerHostCredentialsBase64) {
-            this.targetContainerHostCredentialsBase64 = Output.of(Objects.requireNonNull(targetContainerHostCredentialsBase64));
-            return this;
+            return targetContainerHostCredentialsBase64(Output.of(targetContainerHostCredentialsBase64));
         }
+
         public Builder targetContainerHostResourceId(Output<String> targetContainerHostResourceId) {
-            this.targetContainerHostResourceId = Objects.requireNonNull(targetContainerHostResourceId);
+            $.targetContainerHostResourceId = targetContainerHostResourceId;
             return this;
         }
+
         public Builder targetContainerHostResourceId(String targetContainerHostResourceId) {
-            this.targetContainerHostResourceId = Output.of(Objects.requireNonNull(targetContainerHostResourceId));
-            return this;
-        }        public ControllerArgs build() {
-            return new ControllerArgs(location, name, resourceGroupName, sku, tags, targetContainerHostCredentialsBase64, targetContainerHostResourceId);
+            return targetContainerHostResourceId(Output.of(targetContainerHostResourceId));
+        }
+
+        public ControllerArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.sku = Objects.requireNonNull($.sku, "expected parameter 'sku' to be non-null");
+            $.targetContainerHostCredentialsBase64 = Objects.requireNonNull($.targetContainerHostCredentialsBase64, "expected parameter 'targetContainerHostCredentialsBase64' to be non-null");
+            $.targetContainerHostResourceId = Objects.requireNonNull($.targetContainerHostResourceId, "expected parameter 'targetContainerHostResourceId' to be non-null");
+            return $;
         }
     }
+
 }

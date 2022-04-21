@@ -16,62 +16,57 @@ public final class BucketObjectLockConfiguration extends com.pulumi.resources.In
     public static final BucketObjectLockConfiguration Empty = new BucketObjectLockConfiguration();
 
     @Import(name="objectLockEnabled")
-      private final @Nullable String objectLockEnabled;
+    private @Nullable String objectLockEnabled;
 
     public Optional<String> objectLockEnabled() {
-        return this.objectLockEnabled == null ? Optional.empty() : Optional.ofNullable(this.objectLockEnabled);
+        return Optional.ofNullable(this.objectLockEnabled);
     }
 
     @Import(name="rule")
-      private final @Nullable BucketObjectLockRule rule;
+    private @Nullable BucketObjectLockRule rule;
 
     public Optional<BucketObjectLockRule> rule() {
-        return this.rule == null ? Optional.empty() : Optional.ofNullable(this.rule);
+        return Optional.ofNullable(this.rule);
     }
 
-    public BucketObjectLockConfiguration(
-        @Nullable String objectLockEnabled,
-        @Nullable BucketObjectLockRule rule) {
-        this.objectLockEnabled = objectLockEnabled;
-        this.rule = rule;
-    }
+    private BucketObjectLockConfiguration() {}
 
-    private BucketObjectLockConfiguration() {
-        this.objectLockEnabled = null;
-        this.rule = null;
+    private BucketObjectLockConfiguration(BucketObjectLockConfiguration $) {
+        this.objectLockEnabled = $.objectLockEnabled;
+        this.rule = $.rule;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketObjectLockConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String objectLockEnabled;
-        private @Nullable BucketObjectLockRule rule;
+        private BucketObjectLockConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketObjectLockConfiguration();
         }
 
         public Builder(BucketObjectLockConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.objectLockEnabled = defaults.objectLockEnabled;
-    	      this.rule = defaults.rule;
+            $ = new BucketObjectLockConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder objectLockEnabled(@Nullable String objectLockEnabled) {
-            this.objectLockEnabled = objectLockEnabled;
+            $.objectLockEnabled = objectLockEnabled;
             return this;
         }
+
         public Builder rule(@Nullable BucketObjectLockRule rule) {
-            this.rule = rule;
+            $.rule = rule;
             return this;
-        }        public BucketObjectLockConfiguration build() {
-            return new BucketObjectLockConfiguration(objectLockEnabled, rule);
+        }
+
+        public BucketObjectLockConfiguration build() {
+            return $;
         }
     }
+
 }

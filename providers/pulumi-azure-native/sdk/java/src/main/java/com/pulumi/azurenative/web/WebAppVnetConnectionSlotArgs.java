@@ -5,10 +5,10 @@ package com.pulumi.azurenative.web;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class WebAppVnetConnectionSlotArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="certBlob")
-      private final @Nullable Output<String> certBlob;
+    private @Nullable Output<String> certBlob;
 
-    public Output<String> certBlob() {
-        return this.certBlob == null ? Codegen.empty() : this.certBlob;
+    public Optional<Output<String>> certBlob() {
+        return Optional.ofNullable(this.certBlob);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class WebAppVnetConnectionSlotArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="dnsServers")
-      private final @Nullable Output<String> dnsServers;
+    private @Nullable Output<String> dnsServers;
 
-    public Output<String> dnsServers() {
-        return this.dnsServers == null ? Codegen.empty() : this.dnsServers;
+    public Optional<Output<String>> dnsServers() {
+        return Optional.ofNullable(this.dnsServers);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class WebAppVnetConnectionSlotArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="isSwift")
-      private final @Nullable Output<Boolean> isSwift;
+    private @Nullable Output<Boolean> isSwift;
 
-    public Output<Boolean> isSwift() {
-        return this.isSwift == null ? Codegen.empty() : this.isSwift;
+    public Optional<Output<Boolean>> isSwift() {
+        return Optional.ofNullable(this.isSwift);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class WebAppVnetConnectionSlotArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -66,7 +66,7 @@ public final class WebAppVnetConnectionSlotArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -77,7 +77,7 @@ public final class WebAppVnetConnectionSlotArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -88,7 +88,7 @@ public final class WebAppVnetConnectionSlotArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="slot", required=true)
-      private final Output<String> slot;
+    private Output<String> slot;
 
     public Output<String> slot() {
         return this.slot;
@@ -99,10 +99,10 @@ public final class WebAppVnetConnectionSlotArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="vnetName")
-      private final @Nullable Output<String> vnetName;
+    private @Nullable Output<String> vnetName;
 
-    public Output<String> vnetName() {
-        return this.vnetName == null ? Codegen.empty() : this.vnetName;
+    public Optional<Output<String>> vnetName() {
+        return Optional.ofNullable(this.vnetName);
     }
 
     /**
@@ -110,154 +110,131 @@ public final class WebAppVnetConnectionSlotArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="vnetResourceId")
-      private final @Nullable Output<String> vnetResourceId;
+    private @Nullable Output<String> vnetResourceId;
 
-    public Output<String> vnetResourceId() {
-        return this.vnetResourceId == null ? Codegen.empty() : this.vnetResourceId;
+    public Optional<Output<String>> vnetResourceId() {
+        return Optional.ofNullable(this.vnetResourceId);
     }
 
-    public WebAppVnetConnectionSlotArgs(
-        @Nullable Output<String> certBlob,
-        @Nullable Output<String> dnsServers,
-        @Nullable Output<Boolean> isSwift,
-        @Nullable Output<String> kind,
-        Output<String> name,
-        Output<String> resourceGroupName,
-        Output<String> slot,
-        @Nullable Output<String> vnetName,
-        @Nullable Output<String> vnetResourceId) {
-        this.certBlob = certBlob;
-        this.dnsServers = dnsServers;
-        this.isSwift = isSwift;
-        this.kind = kind;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.slot = Objects.requireNonNull(slot, "expected parameter 'slot' to be non-null");
-        this.vnetName = vnetName;
-        this.vnetResourceId = vnetResourceId;
-    }
+    private WebAppVnetConnectionSlotArgs() {}
 
-    private WebAppVnetConnectionSlotArgs() {
-        this.certBlob = Codegen.empty();
-        this.dnsServers = Codegen.empty();
-        this.isSwift = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.name = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.slot = Codegen.empty();
-        this.vnetName = Codegen.empty();
-        this.vnetResourceId = Codegen.empty();
+    private WebAppVnetConnectionSlotArgs(WebAppVnetConnectionSlotArgs $) {
+        this.certBlob = $.certBlob;
+        this.dnsServers = $.dnsServers;
+        this.isSwift = $.isSwift;
+        this.kind = $.kind;
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
+        this.slot = $.slot;
+        this.vnetName = $.vnetName;
+        this.vnetResourceId = $.vnetResourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebAppVnetConnectionSlotArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> certBlob;
-        private @Nullable Output<String> dnsServers;
-        private @Nullable Output<Boolean> isSwift;
-        private @Nullable Output<String> kind;
-        private Output<String> name;
-        private Output<String> resourceGroupName;
-        private Output<String> slot;
-        private @Nullable Output<String> vnetName;
-        private @Nullable Output<String> vnetResourceId;
+        private WebAppVnetConnectionSlotArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebAppVnetConnectionSlotArgs();
         }
 
         public Builder(WebAppVnetConnectionSlotArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certBlob = defaults.certBlob;
-    	      this.dnsServers = defaults.dnsServers;
-    	      this.isSwift = defaults.isSwift;
-    	      this.kind = defaults.kind;
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.slot = defaults.slot;
-    	      this.vnetName = defaults.vnetName;
-    	      this.vnetResourceId = defaults.vnetResourceId;
+            $ = new WebAppVnetConnectionSlotArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certBlob(@Nullable Output<String> certBlob) {
-            this.certBlob = certBlob;
+            $.certBlob = certBlob;
             return this;
         }
-        public Builder certBlob(@Nullable String certBlob) {
-            this.certBlob = Codegen.ofNullable(certBlob);
-            return this;
+
+        public Builder certBlob(String certBlob) {
+            return certBlob(Output.of(certBlob));
         }
+
         public Builder dnsServers(@Nullable Output<String> dnsServers) {
-            this.dnsServers = dnsServers;
+            $.dnsServers = dnsServers;
             return this;
         }
-        public Builder dnsServers(@Nullable String dnsServers) {
-            this.dnsServers = Codegen.ofNullable(dnsServers);
-            return this;
+
+        public Builder dnsServers(String dnsServers) {
+            return dnsServers(Output.of(dnsServers));
         }
+
         public Builder isSwift(@Nullable Output<Boolean> isSwift) {
-            this.isSwift = isSwift;
+            $.isSwift = isSwift;
             return this;
         }
-        public Builder isSwift(@Nullable Boolean isSwift) {
-            this.isSwift = Codegen.ofNullable(isSwift);
-            return this;
+
+        public Builder isSwift(Boolean isSwift) {
+            return isSwift(Output.of(isSwift));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder slot(Output<String> slot) {
-            this.slot = Objects.requireNonNull(slot);
+            $.slot = slot;
             return this;
         }
+
         public Builder slot(String slot) {
-            this.slot = Output.of(Objects.requireNonNull(slot));
-            return this;
+            return slot(Output.of(slot));
         }
+
         public Builder vnetName(@Nullable Output<String> vnetName) {
-            this.vnetName = vnetName;
+            $.vnetName = vnetName;
             return this;
         }
-        public Builder vnetName(@Nullable String vnetName) {
-            this.vnetName = Codegen.ofNullable(vnetName);
-            return this;
+
+        public Builder vnetName(String vnetName) {
+            return vnetName(Output.of(vnetName));
         }
+
         public Builder vnetResourceId(@Nullable Output<String> vnetResourceId) {
-            this.vnetResourceId = vnetResourceId;
+            $.vnetResourceId = vnetResourceId;
             return this;
         }
-        public Builder vnetResourceId(@Nullable String vnetResourceId) {
-            this.vnetResourceId = Codegen.ofNullable(vnetResourceId);
-            return this;
-        }        public WebAppVnetConnectionSlotArgs build() {
-            return new WebAppVnetConnectionSlotArgs(certBlob, dnsServers, isSwift, kind, name, resourceGroupName, slot, vnetName, vnetResourceId);
+
+        public Builder vnetResourceId(String vnetResourceId) {
+            return vnetResourceId(Output.of(vnetResourceId));
+        }
+
+        public WebAppVnetConnectionSlotArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.slot = Objects.requireNonNull($.slot, "expected parameter 'slot' to be non-null");
+            return $;
         }
     }
+
 }

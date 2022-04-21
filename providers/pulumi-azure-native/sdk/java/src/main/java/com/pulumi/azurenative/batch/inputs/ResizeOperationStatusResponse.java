@@ -26,10 +26,10 @@ public final class ResizeOperationStatusResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="errors")
-      private final @Nullable List<ResizeErrorResponse> errors;
+    private @Nullable List<ResizeErrorResponse> errors;
 
-    public List<ResizeErrorResponse> errors() {
-        return this.errors == null ? List.of() : this.errors;
+    public Optional<List<ResizeErrorResponse>> errors() {
+        return Optional.ofNullable(this.errors);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ResizeOperationStatusResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="nodeDeallocationOption")
-      private final @Nullable String nodeDeallocationOption;
+    private @Nullable String nodeDeallocationOption;
 
     public Optional<String> nodeDeallocationOption() {
-        return this.nodeDeallocationOption == null ? Optional.empty() : Optional.ofNullable(this.nodeDeallocationOption);
+        return Optional.ofNullable(this.nodeDeallocationOption);
     }
 
     /**
@@ -48,115 +48,99 @@ public final class ResizeOperationStatusResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="resizeTimeout")
-      private final @Nullable String resizeTimeout;
+    private @Nullable String resizeTimeout;
 
     public Optional<String> resizeTimeout() {
-        return this.resizeTimeout == null ? Optional.empty() : Optional.ofNullable(this.resizeTimeout);
+        return Optional.ofNullable(this.resizeTimeout);
     }
 
     @Import(name="startTime")
-      private final @Nullable String startTime;
+    private @Nullable String startTime;
 
     public Optional<String> startTime() {
-        return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
+        return Optional.ofNullable(this.startTime);
     }
 
     @Import(name="targetDedicatedNodes")
-      private final @Nullable Integer targetDedicatedNodes;
+    private @Nullable Integer targetDedicatedNodes;
 
     public Optional<Integer> targetDedicatedNodes() {
-        return this.targetDedicatedNodes == null ? Optional.empty() : Optional.ofNullable(this.targetDedicatedNodes);
+        return Optional.ofNullable(this.targetDedicatedNodes);
     }
 
     @Import(name="targetLowPriorityNodes")
-      private final @Nullable Integer targetLowPriorityNodes;
+    private @Nullable Integer targetLowPriorityNodes;
 
     public Optional<Integer> targetLowPriorityNodes() {
-        return this.targetLowPriorityNodes == null ? Optional.empty() : Optional.ofNullable(this.targetLowPriorityNodes);
+        return Optional.ofNullable(this.targetLowPriorityNodes);
     }
 
-    public ResizeOperationStatusResponse(
-        @Nullable List<ResizeErrorResponse> errors,
-        @Nullable String nodeDeallocationOption,
-        @Nullable String resizeTimeout,
-        @Nullable String startTime,
-        @Nullable Integer targetDedicatedNodes,
-        @Nullable Integer targetLowPriorityNodes) {
-        this.errors = errors;
-        this.nodeDeallocationOption = nodeDeallocationOption;
-        this.resizeTimeout = resizeTimeout;
-        this.startTime = startTime;
-        this.targetDedicatedNodes = targetDedicatedNodes;
-        this.targetLowPriorityNodes = targetLowPriorityNodes;
-    }
+    private ResizeOperationStatusResponse() {}
 
-    private ResizeOperationStatusResponse() {
-        this.errors = List.of();
-        this.nodeDeallocationOption = null;
-        this.resizeTimeout = null;
-        this.startTime = null;
-        this.targetDedicatedNodes = null;
-        this.targetLowPriorityNodes = null;
+    private ResizeOperationStatusResponse(ResizeOperationStatusResponse $) {
+        this.errors = $.errors;
+        this.nodeDeallocationOption = $.nodeDeallocationOption;
+        this.resizeTimeout = $.resizeTimeout;
+        this.startTime = $.startTime;
+        this.targetDedicatedNodes = $.targetDedicatedNodes;
+        this.targetLowPriorityNodes = $.targetLowPriorityNodes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResizeOperationStatusResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<ResizeErrorResponse> errors;
-        private @Nullable String nodeDeallocationOption;
-        private @Nullable String resizeTimeout;
-        private @Nullable String startTime;
-        private @Nullable Integer targetDedicatedNodes;
-        private @Nullable Integer targetLowPriorityNodes;
+        private ResizeOperationStatusResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResizeOperationStatusResponse();
         }
 
         public Builder(ResizeOperationStatusResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.errors = defaults.errors;
-    	      this.nodeDeallocationOption = defaults.nodeDeallocationOption;
-    	      this.resizeTimeout = defaults.resizeTimeout;
-    	      this.startTime = defaults.startTime;
-    	      this.targetDedicatedNodes = defaults.targetDedicatedNodes;
-    	      this.targetLowPriorityNodes = defaults.targetLowPriorityNodes;
+            $ = new ResizeOperationStatusResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder errors(@Nullable List<ResizeErrorResponse> errors) {
-            this.errors = errors;
+            $.errors = errors;
             return this;
         }
+
         public Builder errors(ResizeErrorResponse... errors) {
             return errors(List.of(errors));
         }
+
         public Builder nodeDeallocationOption(@Nullable String nodeDeallocationOption) {
-            this.nodeDeallocationOption = nodeDeallocationOption;
+            $.nodeDeallocationOption = nodeDeallocationOption;
             return this;
         }
+
         public Builder resizeTimeout(@Nullable String resizeTimeout) {
-            this.resizeTimeout = resizeTimeout;
+            $.resizeTimeout = resizeTimeout;
             return this;
         }
+
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = startTime;
+            $.startTime = startTime;
             return this;
         }
+
         public Builder targetDedicatedNodes(@Nullable Integer targetDedicatedNodes) {
-            this.targetDedicatedNodes = targetDedicatedNodes;
+            $.targetDedicatedNodes = targetDedicatedNodes;
             return this;
         }
+
         public Builder targetLowPriorityNodes(@Nullable Integer targetLowPriorityNodes) {
-            this.targetLowPriorityNodes = targetLowPriorityNodes;
+            $.targetLowPriorityNodes = targetLowPriorityNodes;
             return this;
-        }        public ResizeOperationStatusResponse build() {
-            return new ResizeOperationStatusResponse(errors, nodeDeallocationOption, resizeTimeout, startTime, targetDedicatedNodes, targetLowPriorityNodes);
+        }
+
+        public ResizeOperationStatusResponse build() {
+            return $;
         }
     }
+
 }

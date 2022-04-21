@@ -26,10 +26,10 @@ public final class LabelCategoryResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="allowMultiSelect")
-      private final @Nullable Boolean allowMultiSelect;
+    private @Nullable Boolean allowMultiSelect;
 
     public Optional<Boolean> allowMultiSelect() {
-        return this.allowMultiSelect == null ? Optional.empty() : Optional.ofNullable(this.allowMultiSelect);
+        return Optional.ofNullable(this.allowMultiSelect);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class LabelCategoryResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="classes", required=true)
-      private final Map<String,LabelClassResponse> classes;
+    private Map<String,LabelClassResponse> classes;
 
     public Map<String,LabelClassResponse> classes() {
         return this.classes;
@@ -48,64 +48,57 @@ public final class LabelCategoryResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="displayName")
-      private final @Nullable String displayName;
+    private @Nullable String displayName;
 
     public Optional<String> displayName() {
-        return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
+        return Optional.ofNullable(this.displayName);
     }
 
-    public LabelCategoryResponse(
-        @Nullable Boolean allowMultiSelect,
-        Map<String,LabelClassResponse> classes,
-        @Nullable String displayName) {
-        this.allowMultiSelect = allowMultiSelect;
-        this.classes = Objects.requireNonNull(classes, "expected parameter 'classes' to be non-null");
-        this.displayName = displayName;
-    }
+    private LabelCategoryResponse() {}
 
-    private LabelCategoryResponse() {
-        this.allowMultiSelect = null;
-        this.classes = Map.of();
-        this.displayName = null;
+    private LabelCategoryResponse(LabelCategoryResponse $) {
+        this.allowMultiSelect = $.allowMultiSelect;
+        this.classes = $.classes;
+        this.displayName = $.displayName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LabelCategoryResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean allowMultiSelect;
-        private Map<String,LabelClassResponse> classes;
-        private @Nullable String displayName;
+        private LabelCategoryResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LabelCategoryResponse();
         }
 
         public Builder(LabelCategoryResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowMultiSelect = defaults.allowMultiSelect;
-    	      this.classes = defaults.classes;
-    	      this.displayName = defaults.displayName;
+            $ = new LabelCategoryResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowMultiSelect(@Nullable Boolean allowMultiSelect) {
-            this.allowMultiSelect = allowMultiSelect;
+            $.allowMultiSelect = allowMultiSelect;
             return this;
         }
+
         public Builder classes(Map<String,LabelClassResponse> classes) {
-            this.classes = Objects.requireNonNull(classes);
+            $.classes = classes;
             return this;
         }
+
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
-        }        public LabelCategoryResponse build() {
-            return new LabelCategoryResponse(allowMultiSelect, classes, displayName);
+        }
+
+        public LabelCategoryResponse build() {
+            $.classes = Objects.requireNonNull($.classes, "expected parameter 'classes' to be non-null");
+            return $;
         }
     }
+
 }

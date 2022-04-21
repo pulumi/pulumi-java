@@ -22,48 +22,49 @@ public final class GooglePrivacyDlpV2InfoTypeTransformationsResponse extends com
      * 
      */
     @Import(name="transformations", required=true)
-      private final List<GooglePrivacyDlpV2InfoTypeTransformationResponse> transformations;
+    private List<GooglePrivacyDlpV2InfoTypeTransformationResponse> transformations;
 
     public List<GooglePrivacyDlpV2InfoTypeTransformationResponse> transformations() {
         return this.transformations;
     }
 
-    public GooglePrivacyDlpV2InfoTypeTransformationsResponse(List<GooglePrivacyDlpV2InfoTypeTransformationResponse> transformations) {
-        this.transformations = Objects.requireNonNull(transformations, "expected parameter 'transformations' to be non-null");
-    }
+    private GooglePrivacyDlpV2InfoTypeTransformationsResponse() {}
 
-    private GooglePrivacyDlpV2InfoTypeTransformationsResponse() {
-        this.transformations = List.of();
+    private GooglePrivacyDlpV2InfoTypeTransformationsResponse(GooglePrivacyDlpV2InfoTypeTransformationsResponse $) {
+        this.transformations = $.transformations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2InfoTypeTransformationsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GooglePrivacyDlpV2InfoTypeTransformationResponse> transformations;
+        private GooglePrivacyDlpV2InfoTypeTransformationsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2InfoTypeTransformationsResponse();
         }
 
         public Builder(GooglePrivacyDlpV2InfoTypeTransformationsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.transformations = defaults.transformations;
+            $ = new GooglePrivacyDlpV2InfoTypeTransformationsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder transformations(List<GooglePrivacyDlpV2InfoTypeTransformationResponse> transformations) {
-            this.transformations = Objects.requireNonNull(transformations);
+            $.transformations = transformations;
             return this;
         }
+
         public Builder transformations(GooglePrivacyDlpV2InfoTypeTransformationResponse... transformations) {
             return transformations(List.of(transformations));
-        }        public GooglePrivacyDlpV2InfoTypeTransformationsResponse build() {
-            return new GooglePrivacyDlpV2InfoTypeTransformationsResponse(transformations);
+        }
+
+        public GooglePrivacyDlpV2InfoTypeTransformationsResponse build() {
+            $.transformations = Objects.requireNonNull($.transformations, "expected parameter 'transformations' to be non-null");
+            return $;
         }
     }
+
 }

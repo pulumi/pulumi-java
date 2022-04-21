@@ -8,9 +8,9 @@ import com.pulumi.awsnative.appflow.enums.ConnectorProfileConnectorType;
 import com.pulumi.awsnative.appflow.inputs.ConnectorProfileConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class ConnectorProfileArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="connectionMode", required=true)
-      private final Output<ConnectorProfileConnectionMode> connectionMode;
+    private Output<ConnectorProfileConnectionMode> connectionMode;
 
     public Output<ConnectorProfileConnectionMode> connectionMode() {
         return this.connectionMode;
@@ -34,10 +34,10 @@ public final class ConnectorProfileArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="connectorProfileConfig")
-      private final @Nullable Output<ConnectorProfileConfigArgs> connectorProfileConfig;
+    private @Nullable Output<ConnectorProfileConfigArgs> connectorProfileConfig;
 
-    public Output<ConnectorProfileConfigArgs> connectorProfileConfig() {
-        return this.connectorProfileConfig == null ? Codegen.empty() : this.connectorProfileConfig;
+    public Optional<Output<ConnectorProfileConfigArgs>> connectorProfileConfig() {
+        return Optional.ofNullable(this.connectorProfileConfig);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ConnectorProfileArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="connectorProfileName")
-      private final @Nullable Output<String> connectorProfileName;
+    private @Nullable Output<String> connectorProfileName;
 
-    public Output<String> connectorProfileName() {
-        return this.connectorProfileName == null ? Codegen.empty() : this.connectorProfileName;
+    public Optional<Output<String>> connectorProfileName() {
+        return Optional.ofNullable(this.connectorProfileName);
     }
 
     /**
@@ -56,7 +56,7 @@ public final class ConnectorProfileArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="connectorType", required=true)
-      private final Output<ConnectorProfileConnectorType> connectorType;
+    private Output<ConnectorProfileConnectorType> connectorType;
 
     public Output<ConnectorProfileConnectorType> connectorType() {
         return this.connectorType;
@@ -67,102 +67,90 @@ public final class ConnectorProfileArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="kMSArn")
-      private final @Nullable Output<String> kMSArn;
+    private @Nullable Output<String> kMSArn;
 
-    public Output<String> kMSArn() {
-        return this.kMSArn == null ? Codegen.empty() : this.kMSArn;
+    public Optional<Output<String>> kMSArn() {
+        return Optional.ofNullable(this.kMSArn);
     }
 
-    public ConnectorProfileArgs(
-        Output<ConnectorProfileConnectionMode> connectionMode,
-        @Nullable Output<ConnectorProfileConfigArgs> connectorProfileConfig,
-        @Nullable Output<String> connectorProfileName,
-        Output<ConnectorProfileConnectorType> connectorType,
-        @Nullable Output<String> kMSArn) {
-        this.connectionMode = Objects.requireNonNull(connectionMode, "expected parameter 'connectionMode' to be non-null");
-        this.connectorProfileConfig = connectorProfileConfig;
-        this.connectorProfileName = connectorProfileName;
-        this.connectorType = Objects.requireNonNull(connectorType, "expected parameter 'connectorType' to be non-null");
-        this.kMSArn = kMSArn;
-    }
+    private ConnectorProfileArgs() {}
 
-    private ConnectorProfileArgs() {
-        this.connectionMode = Codegen.empty();
-        this.connectorProfileConfig = Codegen.empty();
-        this.connectorProfileName = Codegen.empty();
-        this.connectorType = Codegen.empty();
-        this.kMSArn = Codegen.empty();
+    private ConnectorProfileArgs(ConnectorProfileArgs $) {
+        this.connectionMode = $.connectionMode;
+        this.connectorProfileConfig = $.connectorProfileConfig;
+        this.connectorProfileName = $.connectorProfileName;
+        this.connectorType = $.connectorType;
+        this.kMSArn = $.kMSArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectorProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ConnectorProfileConnectionMode> connectionMode;
-        private @Nullable Output<ConnectorProfileConfigArgs> connectorProfileConfig;
-        private @Nullable Output<String> connectorProfileName;
-        private Output<ConnectorProfileConnectorType> connectorType;
-        private @Nullable Output<String> kMSArn;
+        private ConnectorProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectorProfileArgs();
         }
 
         public Builder(ConnectorProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectionMode = defaults.connectionMode;
-    	      this.connectorProfileConfig = defaults.connectorProfileConfig;
-    	      this.connectorProfileName = defaults.connectorProfileName;
-    	      this.connectorType = defaults.connectorType;
-    	      this.kMSArn = defaults.kMSArn;
+            $ = new ConnectorProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connectionMode(Output<ConnectorProfileConnectionMode> connectionMode) {
-            this.connectionMode = Objects.requireNonNull(connectionMode);
+            $.connectionMode = connectionMode;
             return this;
         }
+
         public Builder connectionMode(ConnectorProfileConnectionMode connectionMode) {
-            this.connectionMode = Output.of(Objects.requireNonNull(connectionMode));
-            return this;
+            return connectionMode(Output.of(connectionMode));
         }
+
         public Builder connectorProfileConfig(@Nullable Output<ConnectorProfileConfigArgs> connectorProfileConfig) {
-            this.connectorProfileConfig = connectorProfileConfig;
+            $.connectorProfileConfig = connectorProfileConfig;
             return this;
         }
-        public Builder connectorProfileConfig(@Nullable ConnectorProfileConfigArgs connectorProfileConfig) {
-            this.connectorProfileConfig = Codegen.ofNullable(connectorProfileConfig);
-            return this;
+
+        public Builder connectorProfileConfig(ConnectorProfileConfigArgs connectorProfileConfig) {
+            return connectorProfileConfig(Output.of(connectorProfileConfig));
         }
+
         public Builder connectorProfileName(@Nullable Output<String> connectorProfileName) {
-            this.connectorProfileName = connectorProfileName;
+            $.connectorProfileName = connectorProfileName;
             return this;
         }
-        public Builder connectorProfileName(@Nullable String connectorProfileName) {
-            this.connectorProfileName = Codegen.ofNullable(connectorProfileName);
-            return this;
+
+        public Builder connectorProfileName(String connectorProfileName) {
+            return connectorProfileName(Output.of(connectorProfileName));
         }
+
         public Builder connectorType(Output<ConnectorProfileConnectorType> connectorType) {
-            this.connectorType = Objects.requireNonNull(connectorType);
+            $.connectorType = connectorType;
             return this;
         }
+
         public Builder connectorType(ConnectorProfileConnectorType connectorType) {
-            this.connectorType = Output.of(Objects.requireNonNull(connectorType));
-            return this;
+            return connectorType(Output.of(connectorType));
         }
+
         public Builder kMSArn(@Nullable Output<String> kMSArn) {
-            this.kMSArn = kMSArn;
+            $.kMSArn = kMSArn;
             return this;
         }
-        public Builder kMSArn(@Nullable String kMSArn) {
-            this.kMSArn = Codegen.ofNullable(kMSArn);
-            return this;
-        }        public ConnectorProfileArgs build() {
-            return new ConnectorProfileArgs(connectionMode, connectorProfileConfig, connectorProfileName, connectorType, kMSArn);
+
+        public Builder kMSArn(String kMSArn) {
+            return kMSArn(Output.of(kMSArn));
+        }
+
+        public ConnectorProfileArgs build() {
+            $.connectionMode = Objects.requireNonNull($.connectionMode, "expected parameter 'connectionMode' to be non-null");
+            $.connectorType = Objects.requireNonNull($.connectorType, "expected parameter 'connectorType' to be non-null");
+            return $;
         }
     }
+
 }

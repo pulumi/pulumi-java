@@ -13,45 +13,45 @@ public final class GetHostedZoneArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetHostedZoneArgs Empty = new GetHostedZoneArgs();
 
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public GetHostedZoneArgs(String id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private GetHostedZoneArgs() {}
 
-    private GetHostedZoneArgs() {
-        this.id = null;
+    private GetHostedZoneArgs(GetHostedZoneArgs $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetHostedZoneArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
+        private GetHostedZoneArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetHostedZoneArgs();
         }
 
         public Builder(GetHostedZoneArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new GetHostedZoneArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public GetHostedZoneArgs build() {
-            return new GetHostedZoneArgs(id);
+        }
+
+        public GetHostedZoneArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }
