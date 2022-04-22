@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -58,8 +59,8 @@ public class Alias extends com.pulumi.resources.CustomResource {
      * @return Description of the alias.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Lambda Function name or ARN.
@@ -128,8 +129,8 @@ public class Alias extends com.pulumi.resources.CustomResource {
      * @return The Lambda alias&#39; route configuration settings. Fields documented below
      * 
      */
-    public Output</* @Nullable */ AliasRoutingConfig> routingConfig() {
-        return this.routingConfig;
+    public Output<Optional<AliasRoutingConfig>> routingConfig() {
+        return Codegen.optional(this.routingConfig);
     }
 
     /**

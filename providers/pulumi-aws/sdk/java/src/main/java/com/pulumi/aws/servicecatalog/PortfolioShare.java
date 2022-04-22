@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -49,8 +50,8 @@ public class PortfolioShare extends com.pulumi.resources.CustomResource {
      * @return Language code. Valid values: `en` (English), `jp` (Japanese), `zh` (Chinese). Default value is `en`.
      * 
      */
-    public Output</* @Nullable */ String> acceptLanguage() {
-        return this.acceptLanguage;
+    public Output<Optional<String>> acceptLanguage() {
+        return Codegen.optional(this.acceptLanguage);
     }
     /**
      * Whether the shared portfolio is imported by the recipient account. If the recipient is organizational, the share is automatically imported, and the field is always set to true.
@@ -105,8 +106,8 @@ public class PortfolioShare extends com.pulumi.resources.CustomResource {
      * @return Whether to enable sharing of `aws.servicecatalog.TagOption` resources when creating the portfolio share.
      * 
      */
-    public Output</* @Nullable */ Boolean> shareTagOptions() {
-        return this.shareTagOptions;
+    public Output<Optional<Boolean>> shareTagOptions() {
+        return Codegen.optional(this.shareTagOptions);
     }
     /**
      * Type of portfolio share. Valid values are `ACCOUNT` (an external account), `ORGANIZATION` (a share to every account in an organization), `ORGANIZATIONAL_UNIT`, `ORGANIZATION_MEMBER_ACCOUNT` (a share to an account in an organization).
@@ -133,8 +134,8 @@ public class PortfolioShare extends com.pulumi.resources.CustomResource {
      * @return Whether to wait (up to the timeout) for the share to be accepted. Organizational shares are automatically accepted.
      * 
      */
-    public Output</* @Nullable */ Boolean> waitForAcceptance() {
-        return this.waitForAcceptance;
+    public Output<Optional<Boolean>> waitForAcceptance() {
+        return Codegen.optional(this.waitForAcceptance);
     }
 
     /**

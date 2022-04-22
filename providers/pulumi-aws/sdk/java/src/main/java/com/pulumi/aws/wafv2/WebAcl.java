@@ -18,6 +18,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -77,8 +78,8 @@ public class WebAcl extends com.pulumi.resources.CustomResource {
      * @return Defines custom response bodies that can be referenced by `custom_response` actions. See Custom Response Body below for details.
      * 
      */
-    public Output</* @Nullable */ List<WebAclCustomResponseBody>> customResponseBodies() {
-        return this.customResponseBodies;
+    public Output<Optional<List<WebAclCustomResponseBody>>> customResponseBodies() {
+        return Codegen.optional(this.customResponseBodies);
     }
     /**
      * The action to perform if none of the `rules` contained in the WebACL match. See Default Action below for details.
@@ -105,8 +106,8 @@ public class WebAcl extends com.pulumi.resources.CustomResource {
      * @return A friendly description of the WebACL.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     @Export(name="lockToken", type=String.class, parameters={})
     private Output<String> lockToken;
@@ -139,8 +140,8 @@ public class WebAcl extends com.pulumi.resources.CustomResource {
      * @return The rule blocks used to identify the web requests that you want to `allow`, `block`, or `count`. See Rules below for details.
      * 
      */
-    public Output</* @Nullable */ List<WebAclRule>> rules() {
-        return this.rules;
+    public Output<Optional<List<WebAclRule>>> rules() {
+        return Codegen.optional(this.rules);
     }
     /**
      * Specifies whether this is for an AWS CloudFront distribution or for a regional application. Valid values are `CLOUDFRONT` or `REGIONAL`. To work with CloudFront, you must also specify the region `us-east-1` (N. Virginia) on the AWS provider.
@@ -167,8 +168,8 @@ public class WebAcl extends com.pulumi.resources.CustomResource {
      * @return An map of key:value pairs to associate with the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -54,8 +55,8 @@ public class PlatformApplication extends com.pulumi.resources.CustomResource {
      * @return SNS Topic triggered when a delivery to any of the platform endpoints associated with your platform application encounters a permanent failure.
      * 
      */
-    public Output</* @Nullable */ String> eventDeliveryFailureTopicArn() {
-        return this.eventDeliveryFailureTopicArn;
+    public Output<Optional<String>> eventDeliveryFailureTopicArn() {
+        return Codegen.optional(this.eventDeliveryFailureTopicArn);
     }
     /**
      * SNS Topic triggered when a new platform endpoint is added to your platform application.
@@ -68,8 +69,8 @@ public class PlatformApplication extends com.pulumi.resources.CustomResource {
      * @return SNS Topic triggered when a new platform endpoint is added to your platform application.
      * 
      */
-    public Output</* @Nullable */ String> eventEndpointCreatedTopicArn() {
-        return this.eventEndpointCreatedTopicArn;
+    public Output<Optional<String>> eventEndpointCreatedTopicArn() {
+        return Codegen.optional(this.eventEndpointCreatedTopicArn);
     }
     /**
      * SNS Topic triggered when an existing platform endpoint is deleted from your platform application.
@@ -82,8 +83,8 @@ public class PlatformApplication extends com.pulumi.resources.CustomResource {
      * @return SNS Topic triggered when an existing platform endpoint is deleted from your platform application.
      * 
      */
-    public Output</* @Nullable */ String> eventEndpointDeletedTopicArn() {
-        return this.eventEndpointDeletedTopicArn;
+    public Output<Optional<String>> eventEndpointDeletedTopicArn() {
+        return Codegen.optional(this.eventEndpointDeletedTopicArn);
     }
     /**
      * SNS Topic triggered when an existing platform endpoint is changed from your platform application.
@@ -96,8 +97,8 @@ public class PlatformApplication extends com.pulumi.resources.CustomResource {
      * @return SNS Topic triggered when an existing platform endpoint is changed from your platform application.
      * 
      */
-    public Output</* @Nullable */ String> eventEndpointUpdatedTopicArn() {
-        return this.eventEndpointUpdatedTopicArn;
+    public Output<Optional<String>> eventEndpointUpdatedTopicArn() {
+        return Codegen.optional(this.eventEndpointUpdatedTopicArn);
     }
     /**
      * The IAM role permitted to receive failure feedback for this application.
@@ -110,8 +111,8 @@ public class PlatformApplication extends com.pulumi.resources.CustomResource {
      * @return The IAM role permitted to receive failure feedback for this application.
      * 
      */
-    public Output</* @Nullable */ String> failureFeedbackRoleArn() {
-        return this.failureFeedbackRoleArn;
+    public Output<Optional<String>> failureFeedbackRoleArn() {
+        return Codegen.optional(this.failureFeedbackRoleArn);
     }
     /**
      * The friendly name for the SNS platform application
@@ -166,8 +167,8 @@ public class PlatformApplication extends com.pulumi.resources.CustomResource {
      * @return Application Platform principal. See [Principal](http://docs.aws.amazon.com/sns/latest/api/API_CreatePlatformApplication.html) for type of principal required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
      * 
      */
-    public Output</* @Nullable */ String> platformPrincipal() {
-        return this.platformPrincipal;
+    public Output<Optional<String>> platformPrincipal() {
+        return Codegen.optional(this.platformPrincipal);
     }
     /**
      * The IAM role permitted to receive success feedback for this application.
@@ -180,8 +181,8 @@ public class PlatformApplication extends com.pulumi.resources.CustomResource {
      * @return The IAM role permitted to receive success feedback for this application.
      * 
      */
-    public Output</* @Nullable */ String> successFeedbackRoleArn() {
-        return this.successFeedbackRoleArn;
+    public Output<Optional<String>> successFeedbackRoleArn() {
+        return Codegen.optional(this.successFeedbackRoleArn);
     }
     /**
      * The percentage of success to sample (0-100)
@@ -194,8 +195,8 @@ public class PlatformApplication extends com.pulumi.resources.CustomResource {
      * @return The percentage of success to sample (0-100)
      * 
      */
-    public Output</* @Nullable */ String> successFeedbackSampleRate() {
-        return this.successFeedbackSampleRate;
+    public Output<Optional<String>> successFeedbackSampleRate() {
+        return Codegen.optional(this.successFeedbackSampleRate);
     }
 
     /**

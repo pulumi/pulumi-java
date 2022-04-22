@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -57,8 +58,8 @@ public class ParameterGroup extends com.pulumi.resources.CustomResource {
      * @return The description of the Neptune parameter group. Defaults to &#34;Managed by Pulumi&#34;.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The family of the Neptune parameter group.
@@ -99,8 +100,8 @@ public class ParameterGroup extends com.pulumi.resources.CustomResource {
      * @return A list of Neptune parameters to apply.
      * 
      */
-    public Output</* @Nullable */ List<ParameterGroupParameter>> parameters() {
-        return this.parameters;
+    public Output<Optional<List<ParameterGroupParameter>>> parameters() {
+        return Codegen.optional(this.parameters);
     }
     /**
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -113,8 +114,8 @@ public class ParameterGroup extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

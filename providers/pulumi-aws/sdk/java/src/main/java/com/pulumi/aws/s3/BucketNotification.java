@@ -16,6 +16,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -61,8 +62,8 @@ public class BucketNotification extends com.pulumi.resources.CustomResource {
      * @return Whether to enable Amazon EventBridge notifications.
      * 
      */
-    public Output</* @Nullable */ Boolean> eventbridge() {
-        return this.eventbridge;
+    public Output<Optional<Boolean>> eventbridge() {
+        return Codegen.optional(this.eventbridge);
     }
     /**
      * Used to configure notifications to a Lambda Function. See below.
@@ -75,8 +76,8 @@ public class BucketNotification extends com.pulumi.resources.CustomResource {
      * @return Used to configure notifications to a Lambda Function. See below.
      * 
      */
-    public Output</* @Nullable */ List<BucketNotificationLambdaFunction>> lambdaFunctions() {
-        return this.lambdaFunctions;
+    public Output<Optional<List<BucketNotificationLambdaFunction>>> lambdaFunctions() {
+        return Codegen.optional(this.lambdaFunctions);
     }
     /**
      * Notification configuration to SQS Queue. See below.
@@ -89,8 +90,8 @@ public class BucketNotification extends com.pulumi.resources.CustomResource {
      * @return Notification configuration to SQS Queue. See below.
      * 
      */
-    public Output</* @Nullable */ List<BucketNotificationQueue>> queues() {
-        return this.queues;
+    public Output<Optional<List<BucketNotificationQueue>>> queues() {
+        return Codegen.optional(this.queues);
     }
     /**
      * Notification configuration to SNS Topic. See below.
@@ -103,8 +104,8 @@ public class BucketNotification extends com.pulumi.resources.CustomResource {
      * @return Notification configuration to SNS Topic. See below.
      * 
      */
-    public Output</* @Nullable */ List<BucketNotificationTopic>> topics() {
-        return this.topics;
+    public Output<Optional<List<BucketNotificationTopic>>> topics() {
+        return Codegen.optional(this.topics);
     }
 
     /**

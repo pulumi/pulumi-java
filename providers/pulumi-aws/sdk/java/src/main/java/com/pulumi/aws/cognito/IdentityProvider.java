@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -56,8 +57,8 @@ public class IdentityProvider extends com.pulumi.resources.CustomResource {
      * @return The list of identity providers.
      * 
      */
-    public Output</* @Nullable */ List<String>> idpIdentifiers() {
-        return this.idpIdentifiers;
+    public Output<Optional<List<String>>> idpIdentifiers() {
+        return Codegen.optional(this.idpIdentifiers);
     }
     /**
      * The map of identity details, such as access token

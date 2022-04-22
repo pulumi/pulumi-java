@@ -16,6 +16,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -154,8 +155,8 @@ public class SecurityGroup extends com.pulumi.resources.CustomResource {
      * @return Instruct this provider to revoke all of the Security Groups attached ingress and egress rules before deleting the rule itself. This is normally not needed, however certain AWS services such as Elastic Map Reduce may automatically add required rules to security groups used with the service, and those rules may contain a cyclic dependency that prevent the security groups from being destroyed without removing the dependency first. Default `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> revokeRulesOnDelete() {
-        return this.revokeRulesOnDelete;
+    public Output<Optional<Boolean>> revokeRulesOnDelete() {
+        return Codegen.optional(this.revokeRulesOnDelete);
     }
     /**
      * Map of tags to assign to the resource.
@@ -168,8 +169,8 @@ public class SecurityGroup extends com.pulumi.resources.CustomResource {
      * @return Map of tags to assign to the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -77,8 +78,8 @@ public class DefaultVpcDhcpOptions extends com.pulumi.resources.CustomResource {
      * @return List of NETBIOS name servers.
      * 
      */
-    public Output</* @Nullable */ List<String>> netbiosNameServers() {
-        return this.netbiosNameServers;
+    public Output<Optional<List<String>>> netbiosNameServers() {
+        return Codegen.optional(this.netbiosNameServers);
     }
     /**
      * The NetBIOS node type (1, 2, 4, or 8). AWS recommends to specify 2 since broadcast and multicast are not supported in their network. For more information about these node types, see [RFC 2132](http://www.ietf.org/rfc/rfc2132.txt).
@@ -91,8 +92,8 @@ public class DefaultVpcDhcpOptions extends com.pulumi.resources.CustomResource {
      * @return The NetBIOS node type (1, 2, 4, or 8). AWS recommends to specify 2 since broadcast and multicast are not supported in their network. For more information about these node types, see [RFC 2132](http://www.ietf.org/rfc/rfc2132.txt).
      * 
      */
-    public Output</* @Nullable */ String> netbiosNodeType() {
-        return this.netbiosNodeType;
+    public Output<Optional<String>> netbiosNodeType() {
+        return Codegen.optional(this.netbiosNodeType);
     }
     @Export(name="ntpServers", type=String.class, parameters={})
     private Output<String> ntpServers;
@@ -125,8 +126,8 @@ public class DefaultVpcDhcpOptions extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;

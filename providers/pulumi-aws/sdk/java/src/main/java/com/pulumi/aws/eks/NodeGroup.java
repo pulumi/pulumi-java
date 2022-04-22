@@ -21,6 +21,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -120,8 +121,8 @@ public class NodeGroup extends com.pulumi.resources.CustomResource {
      * @return Force version update if existing pods are unable to be drained due to a pod disruption budget issue.
      * 
      */
-    public Output</* @Nullable */ Boolean> forceUpdateVersion() {
-        return this.forceUpdateVersion;
+    public Output<Optional<Boolean>> forceUpdateVersion() {
+        return Codegen.optional(this.forceUpdateVersion);
     }
     /**
      * List of instance types associated with the EKS Node Group. Defaults to `[&#34;t3.medium&#34;]`. This provider will only perform drift detection if a configuration value is provided.
@@ -148,8 +149,8 @@ public class NodeGroup extends com.pulumi.resources.CustomResource {
      * @return Key-value map of Kubernetes labels. Only labels that are applied with the EKS API are managed by this argument. Other Kubernetes labels applied to the EKS Node Group will not be managed.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * Configuration block with Launch Template settings. Detailed below.
@@ -162,8 +163,8 @@ public class NodeGroup extends com.pulumi.resources.CustomResource {
      * @return Configuration block with Launch Template settings. Detailed below.
      * 
      */
-    public Output</* @Nullable */ NodeGroupLaunchTemplate> launchTemplate() {
-        return this.launchTemplate;
+    public Output<Optional<NodeGroupLaunchTemplate>> launchTemplate() {
+        return Codegen.optional(this.launchTemplate);
     }
     /**
      * Name of the EKS Node Group. If omitted, this provider will assign a random, unique name. Conflicts with `node_group_name_prefix`.
@@ -232,8 +233,8 @@ public class NodeGroup extends com.pulumi.resources.CustomResource {
      * @return Configuration block with remote access settings. Detailed below.
      * 
      */
-    public Output</* @Nullable */ NodeGroupRemoteAccess> remoteAccess() {
-        return this.remoteAccess;
+    public Output<Optional<NodeGroupRemoteAccess>> remoteAccess() {
+        return Codegen.optional(this.remoteAccess);
     }
     /**
      * List of objects containing information about underlying resources.
@@ -302,8 +303,8 @@ public class NodeGroup extends com.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. If configured with a provider defaultTags present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider.
@@ -330,8 +331,8 @@ public class NodeGroup extends com.pulumi.resources.CustomResource {
      * @return The Kubernetes taints to be applied to the nodes in the node group. Maximum of 50 taints per node group. Detailed below.
      * 
      */
-    public Output</* @Nullable */ List<NodeGroupTaint>> taints() {
-        return this.taints;
+    public Output<Optional<List<NodeGroupTaint>>> taints() {
+        return Codegen.optional(this.taints);
     }
     @Export(name="updateConfig", type=NodeGroupUpdateConfig.class, parameters={})
     private Output<NodeGroupUpdateConfig> updateConfig;

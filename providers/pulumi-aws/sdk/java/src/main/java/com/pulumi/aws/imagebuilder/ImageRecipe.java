@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -58,8 +59,8 @@ public class ImageRecipe extends com.pulumi.resources.CustomResource {
      * @return Configuration block(s) with block device mappings for the the image recipe. Detailed below.
      * 
      */
-    public Output</* @Nullable */ List<ImageRecipeBlockDeviceMapping>> blockDeviceMappings() {
-        return this.blockDeviceMappings;
+    public Output<Optional<List<ImageRecipeBlockDeviceMapping>>> blockDeviceMappings() {
+        return Codegen.optional(this.blockDeviceMappings);
     }
     /**
      * Ordered configuration block(s) with components for the image recipe. Detailed below.
@@ -100,8 +101,8 @@ public class ImageRecipe extends com.pulumi.resources.CustomResource {
      * @return Description of the image recipe.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Name of the image recipe.
@@ -170,8 +171,8 @@ public class ImageRecipe extends com.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags for the image recipe. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .
@@ -226,8 +227,8 @@ public class ImageRecipe extends com.pulumi.resources.CustomResource {
      * @return The working directory to be used during build and test workflows.
      * 
      */
-    public Output</* @Nullable */ String> workingDirectory() {
-        return this.workingDirectory;
+    public Output<Optional<String>> workingDirectory() {
+        return Codegen.optional(this.workingDirectory);
     }
 
     /**

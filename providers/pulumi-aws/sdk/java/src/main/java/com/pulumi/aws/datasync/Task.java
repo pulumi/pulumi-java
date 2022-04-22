@@ -15,6 +15,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -58,8 +59,8 @@ public class Task extends com.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the CloudWatch Log Group that is used to monitor and log events in the sync task.
      * 
      */
-    public Output</* @Nullable */ String> cloudwatchLogGroupArn() {
-        return this.cloudwatchLogGroupArn;
+    public Output<Optional<String>> cloudwatchLogGroupArn() {
+        return Codegen.optional(this.cloudwatchLogGroupArn);
     }
     /**
      * Amazon Resource Name (ARN) of destination DataSync Location.
@@ -86,8 +87,8 @@ public class Task extends com.pulumi.resources.CustomResource {
      * @return Filter rules that determines which files to exclude from a task.
      * 
      */
-    public Output</* @Nullable */ TaskExcludes> excludes() {
-        return this.excludes;
+    public Output<Optional<TaskExcludes>> excludes() {
+        return Codegen.optional(this.excludes);
     }
     /**
      * Name of the DataSync Task.
@@ -114,8 +115,8 @@ public class Task extends com.pulumi.resources.CustomResource {
      * @return Configuration block containing option that controls the default behavior when you start an execution of this DataSync Task. For each individual task execution, you can override these options by specifying an overriding configuration in those executions.
      * 
      */
-    public Output</* @Nullable */ TaskOptions> options() {
-        return this.options;
+    public Output<Optional<TaskOptions>> options() {
+        return Codegen.optional(this.options);
     }
     /**
      * Specifies a schedule used to periodically transfer files from a source to a destination location.
@@ -128,8 +129,8 @@ public class Task extends com.pulumi.resources.CustomResource {
      * @return Specifies a schedule used to periodically transfer files from a source to a destination location.
      * 
      */
-    public Output</* @Nullable */ TaskSchedule> schedule() {
-        return this.schedule;
+    public Output<Optional<TaskSchedule>> schedule() {
+        return Codegen.optional(this.schedule);
     }
     /**
      * Amazon Resource Name (ARN) of source DataSync Location.
@@ -156,8 +157,8 @@ public class Task extends com.pulumi.resources.CustomResource {
      * @return Key-value pairs of resource tags to assign to the DataSync Task. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

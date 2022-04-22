@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -71,8 +72,8 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return ARN of an ACM PCA
      * 
      */
-    public Output</* @Nullable */ String> certificateAuthorityArn() {
-        return this.certificateAuthorityArn;
+    public Output<Optional<String>> certificateAuthorityArn() {
+        return Codegen.optional(this.certificateAuthorityArn);
     }
     /**
      * The certificate&#39;s PEM-formatted public key
@@ -85,8 +86,8 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return The certificate&#39;s PEM-formatted public key
      * 
      */
-    public Output</* @Nullable */ String> certificateBody() {
-        return this.certificateBody;
+    public Output<Optional<String>> certificateBody() {
+        return Codegen.optional(this.certificateBody);
     }
     /**
      * The certificate&#39;s PEM-formatted chain
@@ -101,8 +102,8 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * * Creating a private CA issued certificate
      * 
      */
-    public Output</* @Nullable */ String> certificateChain() {
-        return this.certificateChain;
+    public Output<Optional<String>> certificateChain() {
+        return Codegen.optional(this.certificateChain);
     }
     /**
      * A domain name for which the certificate should be issued
@@ -145,8 +146,8 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * * Importing an existing certificate
      * 
      */
-    public Output</* @Nullable */ CertificateOptions> options() {
-        return this.options;
+    public Output<Optional<CertificateOptions>> options() {
+        return Codegen.optional(this.options);
     }
     /**
      * The certificate&#39;s PEM-formatted private key
@@ -159,8 +160,8 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return The certificate&#39;s PEM-formatted private key
      * 
      */
-    public Output</* @Nullable */ String> privateKey() {
-        return this.privateKey;
+    public Output<Optional<String>> privateKey() {
+        return Codegen.optional(this.privateKey);
     }
     /**
      * Status of the certificate.
@@ -201,8 +202,8 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource..
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

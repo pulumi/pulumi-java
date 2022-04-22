@@ -16,6 +16,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -51,8 +52,8 @@ public class Policy extends com.pulumi.resources.CustomResource {
      * @return Specifies whether the adjustment is an absolute number or a percentage of the current capacity. Valid values are `ChangeInCapacity`, `ExactCapacity`, and `PercentChangeInCapacity`.
      * 
      */
-    public Output</* @Nullable */ String> adjustmentType() {
-        return this.adjustmentType;
+    public Output<Optional<String>> adjustmentType() {
+        return Codegen.optional(this.adjustmentType);
     }
     /**
      * The ARN assigned by AWS to the scaling policy.
@@ -93,8 +94,8 @@ public class Policy extends com.pulumi.resources.CustomResource {
      * @return The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start.
      * 
      */
-    public Output</* @Nullable */ Integer> cooldown() {
-        return this.cooldown;
+    public Output<Optional<Integer>> cooldown() {
+        return Codegen.optional(this.cooldown);
     }
     /**
      * The estimated time, in seconds, until a newly launched instance will contribute CloudWatch metrics. Without a value, AWS will default to the group&#39;s specified cooldown period.
@@ -107,8 +108,8 @@ public class Policy extends com.pulumi.resources.CustomResource {
      * @return The estimated time, in seconds, until a newly launched instance will contribute CloudWatch metrics. Without a value, AWS will default to the group&#39;s specified cooldown period.
      * 
      */
-    public Output</* @Nullable */ Integer> estimatedInstanceWarmup() {
-        return this.estimatedInstanceWarmup;
+    public Output<Optional<Integer>> estimatedInstanceWarmup() {
+        return Codegen.optional(this.estimatedInstanceWarmup);
     }
     /**
      * The aggregation type for the policy&#39;s metrics. Valid values are &#34;Minimum&#34;, &#34;Maximum&#34;, and &#34;Average&#34;. Without a value, AWS will treat the aggregation type as &#34;Average&#34;.
@@ -135,8 +136,8 @@ public class Policy extends com.pulumi.resources.CustomResource {
      * @return Minimum value to scale by when `adjustment_type` is set to `PercentChangeInCapacity`.
      * 
      */
-    public Output</* @Nullable */ Integer> minAdjustmentMagnitude() {
-        return this.minAdjustmentMagnitude;
+    public Output<Optional<Integer>> minAdjustmentMagnitude() {
+        return Codegen.optional(this.minAdjustmentMagnitude);
     }
     /**
      * The name of the dimension.
@@ -163,8 +164,8 @@ public class Policy extends com.pulumi.resources.CustomResource {
      * @return The policy type, either &#34;SimpleScaling&#34;, &#34;StepScaling&#34;, &#34;TargetTrackingScaling&#34;, or &#34;PredictiveScaling&#34;. If this value isn&#39;t provided, AWS will default to &#34;SimpleScaling.&#34;
      * 
      */
-    public Output</* @Nullable */ String> policyType() {
-        return this.policyType;
+    public Output<Optional<String>> policyType() {
+        return Codegen.optional(this.policyType);
     }
     /**
      * The predictive scaling policy configuration to use with Amazon EC2 Auto Scaling.
@@ -177,8 +178,8 @@ public class Policy extends com.pulumi.resources.CustomResource {
      * @return The predictive scaling policy configuration to use with Amazon EC2 Auto Scaling.
      * 
      */
-    public Output</* @Nullable */ PolicyPredictiveScalingConfiguration> predictiveScalingConfiguration() {
-        return this.predictiveScalingConfiguration;
+    public Output<Optional<PolicyPredictiveScalingConfiguration>> predictiveScalingConfiguration() {
+        return Codegen.optional(this.predictiveScalingConfiguration);
     }
     /**
      * The number of members by which to
@@ -195,8 +196,8 @@ public class Policy extends com.pulumi.resources.CustomResource {
      * up. A negative value scales down.
      * 
      */
-    public Output</* @Nullable */ Integer> scalingAdjustment() {
-        return this.scalingAdjustment;
+    public Output<Optional<Integer>> scalingAdjustment() {
+        return Codegen.optional(this.scalingAdjustment);
     }
     /**
      * A set of adjustments that manage
@@ -211,8 +212,8 @@ public class Policy extends com.pulumi.resources.CustomResource {
      * group scaling. These have the following structure:
      * 
      */
-    public Output</* @Nullable */ List<PolicyStepAdjustment>> stepAdjustments() {
-        return this.stepAdjustments;
+    public Output<Optional<List<PolicyStepAdjustment>>> stepAdjustments() {
+        return Codegen.optional(this.stepAdjustments);
     }
     /**
      * A target tracking policy. These have the following structure:
@@ -225,8 +226,8 @@ public class Policy extends com.pulumi.resources.CustomResource {
      * @return A target tracking policy. These have the following structure:
      * 
      */
-    public Output</* @Nullable */ PolicyTargetTrackingConfiguration> targetTrackingConfiguration() {
-        return this.targetTrackingConfiguration;
+    public Output<Optional<PolicyTargetTrackingConfiguration>> targetTrackingConfiguration() {
+        return Codegen.optional(this.targetTrackingConfiguration);
     }
 
     /**

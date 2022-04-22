@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -57,8 +58,8 @@ public class SafetyRule extends com.pulumi.resources.CustomResource {
      * @return Routing controls that are part of transactions that are evaluated to determine if a request to change a routing control state is allowed.
      * 
      */
-    public Output</* @Nullable */ List<String>> assertedControls() {
-        return this.assertedControls;
+    public Output<Optional<List<String>>> assertedControls() {
+        return Codegen.optional(this.assertedControls);
     }
     /**
      * ARN of the control panel in which this safety rule will reside.
@@ -85,8 +86,8 @@ public class SafetyRule extends com.pulumi.resources.CustomResource {
      * @return Gating controls for the new gating rule. That is, routing controls that are evaluated by the rule configuration that you specify.
      * 
      */
-    public Output</* @Nullable */ List<String>> gatingControls() {
-        return this.gatingControls;
+    public Output<Optional<List<String>>> gatingControls() {
+        return Codegen.optional(this.gatingControls);
     }
     /**
      * Name describing the safety rule.
@@ -141,8 +142,8 @@ public class SafetyRule extends com.pulumi.resources.CustomResource {
      * @return Routing controls that can only be set or unset if the specified `rule_config` evaluates to true for the specified `gating_controls`.
      * 
      */
-    public Output</* @Nullable */ List<String>> targetControls() {
-        return this.targetControls;
+    public Output<Optional<List<String>>> targetControls() {
+        return Codegen.optional(this.targetControls);
     }
     /**
      * Evaluation period, in milliseconds (ms), during which any request against the target routing controls will fail.

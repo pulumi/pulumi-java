@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -47,8 +48,8 @@ public class ScheduledAction extends com.pulumi.resources.CustomResource {
      * @return The date and time for the scheduled action to end in RFC 3339 format. The timezone is not affected by the setting of `timezone`.
      * 
      */
-    public Output</* @Nullable */ String> endTime() {
-        return this.endTime;
+    public Output<Optional<String>> endTime() {
+        return Codegen.optional(this.endTime);
     }
     /**
      * The name of the scheduled action.
@@ -145,8 +146,8 @@ public class ScheduledAction extends com.pulumi.resources.CustomResource {
      * @return The date and time for the scheduled action to start in RFC 3339 format. The timezone is not affected by the setting of `timezone`.
      * 
      */
-    public Output</* @Nullable */ String> startTime() {
-        return this.startTime;
+    public Output<Optional<String>> startTime() {
+        return Codegen.optional(this.startTime);
     }
     /**
      * The time zone used when setting a scheduled action by using an at or cron expression. Does not affect timezone for `start_time` and `end_time`. Valid values are the [canonical names of the IANA time zones supported by Joda-Time](https://www.joda.org/joda-time/timezones.html), such as `Etc/GMT+9` or `Pacific/Tahiti`. Default is `UTC`.
@@ -159,8 +160,8 @@ public class ScheduledAction extends com.pulumi.resources.CustomResource {
      * @return The time zone used when setting a scheduled action by using an at or cron expression. Does not affect timezone for `start_time` and `end_time`. Valid values are the [canonical names of the IANA time zones supported by Joda-Time](https://www.joda.org/joda-time/timezones.html), such as `Etc/GMT+9` or `Pacific/Tahiti`. Default is `UTC`.
      * 
      */
-    public Output</* @Nullable */ String> timezone() {
-        return this.timezone;
+    public Output<Optional<String>> timezone() {
+        return Codegen.optional(this.timezone);
     }
 
     /**

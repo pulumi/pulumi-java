@@ -14,6 +14,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -182,8 +183,8 @@ public class DefaultVpc extends com.pulumi.resources.CustomResource {
      * @return A boolean flag to enable/disable DNS support in the VPC. Defaults true.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableDnsSupport() {
-        return this.enableDnsSupport;
+    public Output<Optional<Boolean>> enableDnsSupport() {
+        return Codegen.optional(this.enableDnsSupport);
     }
     /**
      * Tenancy of instances spin up within VPC.
@@ -202,14 +203,14 @@ public class DefaultVpc extends com.pulumi.resources.CustomResource {
     @Export(name="ipv4IpamPoolId", type=String.class, parameters={})
     private Output</* @Nullable */ String> ipv4IpamPoolId;
 
-    public Output</* @Nullable */ String> ipv4IpamPoolId() {
-        return this.ipv4IpamPoolId;
+    public Output<Optional<String>> ipv4IpamPoolId() {
+        return Codegen.optional(this.ipv4IpamPoolId);
     }
     @Export(name="ipv4NetmaskLength", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> ipv4NetmaskLength;
 
-    public Output</* @Nullable */ Integer> ipv4NetmaskLength() {
-        return this.ipv4NetmaskLength;
+    public Output<Optional<Integer>> ipv4NetmaskLength() {
+        return Codegen.optional(this.ipv4NetmaskLength);
     }
     /**
      * The association ID for the IPv6 CIDR block of the VPC
@@ -248,14 +249,14 @@ public class DefaultVpc extends com.pulumi.resources.CustomResource {
     @Export(name="ipv6IpamPoolId", type=String.class, parameters={})
     private Output</* @Nullable */ String> ipv6IpamPoolId;
 
-    public Output</* @Nullable */ String> ipv6IpamPoolId() {
-        return this.ipv6IpamPoolId;
+    public Output<Optional<String>> ipv6IpamPoolId() {
+        return Codegen.optional(this.ipv6IpamPoolId);
     }
     @Export(name="ipv6NetmaskLength", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> ipv6NetmaskLength;
 
-    public Output</* @Nullable */ Integer> ipv6NetmaskLength() {
-        return this.ipv6NetmaskLength;
+    public Output<Optional<Integer>> ipv6NetmaskLength() {
+        return Codegen.optional(this.ipv6NetmaskLength);
     }
     /**
      * The ID of the main route table associated with
@@ -300,8 +301,8 @@ public class DefaultVpc extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;

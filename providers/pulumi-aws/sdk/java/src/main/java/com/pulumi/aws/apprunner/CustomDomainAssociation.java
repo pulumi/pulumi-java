@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -89,8 +90,8 @@ public class CustomDomainAssociation extends com.pulumi.resources.CustomResource
      * @return Whether to associate the subdomain with the App Runner service in addition to the base domain. Defaults to `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableWwwSubdomain() {
-        return this.enableWwwSubdomain;
+    public Output<Optional<Boolean>> enableWwwSubdomain() {
+        return Codegen.optional(this.enableWwwSubdomain);
     }
     /**
      * The ARN of the App Runner service.

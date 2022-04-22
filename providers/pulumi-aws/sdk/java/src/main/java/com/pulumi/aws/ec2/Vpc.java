@@ -14,6 +14,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -57,8 +58,8 @@ public class Vpc extends com.pulumi.resources.CustomResource {
      * @return Requests an Amazon-provided IPv6 CIDR block with a /56 prefix length for the VPC. You cannot specify the range of IP addresses, or the size of the CIDR block. Default is `false`. Conflicts with `ipv6_ipam_pool_id`
      * 
      */
-    public Output</* @Nullable */ Boolean> assignGeneratedIpv6CidrBlock() {
-        return this.assignGeneratedIpv6CidrBlock;
+    public Output<Optional<Boolean>> assignGeneratedIpv6CidrBlock() {
+        return Codegen.optional(this.assignGeneratedIpv6CidrBlock);
     }
     /**
      * The IPv4 CIDR block for the VPC. CIDR can be explicitly set or it can be derived from IPAM using `ipv4_netmask_length`.
@@ -181,8 +182,8 @@ public class Vpc extends com.pulumi.resources.CustomResource {
      * @return A boolean flag to enable/disable DNS support in the VPC. Defaults true.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableDnsSupport() {
-        return this.enableDnsSupport;
+    public Output<Optional<Boolean>> enableDnsSupport() {
+        return Codegen.optional(this.enableDnsSupport);
     }
     /**
      * A tenancy option for instances launched into the VPC. Default is `default`, which makes your instances shared on the host. Using either of the other options (`dedicated` or `host`) costs at least $2/hr.
@@ -195,8 +196,8 @@ public class Vpc extends com.pulumi.resources.CustomResource {
      * @return A tenancy option for instances launched into the VPC. Default is `default`, which makes your instances shared on the host. Using either of the other options (`dedicated` or `host`) costs at least $2/hr.
      * 
      */
-    public Output</* @Nullable */ String> instanceTenancy() {
-        return this.instanceTenancy;
+    public Output<Optional<String>> instanceTenancy() {
+        return Codegen.optional(this.instanceTenancy);
     }
     /**
      * The ID of an IPv4 IPAM pool you want to use for allocating this VPC&#39;s CIDR. IPAM is a VPC feature that you can use to automate your IP address management workflows including assigning, tracking, troubleshooting, and auditing IP addresses across AWS Regions and accounts. Using IPAM you can monitor IP address usage throughout your AWS Organization.
@@ -209,8 +210,8 @@ public class Vpc extends com.pulumi.resources.CustomResource {
      * @return The ID of an IPv4 IPAM pool you want to use for allocating this VPC&#39;s CIDR. IPAM is a VPC feature that you can use to automate your IP address management workflows including assigning, tracking, troubleshooting, and auditing IP addresses across AWS Regions and accounts. Using IPAM you can monitor IP address usage throughout your AWS Organization.
      * 
      */
-    public Output</* @Nullable */ String> ipv4IpamPoolId() {
-        return this.ipv4IpamPoolId;
+    public Output<Optional<String>> ipv4IpamPoolId() {
+        return Codegen.optional(this.ipv4IpamPoolId);
     }
     /**
      * The netmask length of the IPv4 CIDR you want to allocate to this VPC. Requires specifying a `ipv4_ipam_pool_id`.
@@ -223,8 +224,8 @@ public class Vpc extends com.pulumi.resources.CustomResource {
      * @return The netmask length of the IPv4 CIDR you want to allocate to this VPC. Requires specifying a `ipv4_ipam_pool_id`.
      * 
      */
-    public Output</* @Nullable */ Integer> ipv4NetmaskLength() {
-        return this.ipv4NetmaskLength;
+    public Output<Optional<Integer>> ipv4NetmaskLength() {
+        return Codegen.optional(this.ipv4NetmaskLength);
     }
     /**
      * The association ID for the IPv6 CIDR block.
@@ -281,8 +282,8 @@ public class Vpc extends com.pulumi.resources.CustomResource {
      * @return IPAM Pool ID for a IPv6 pool. Conflicts with `assign_generated_ipv6_cidr_block`.
      * 
      */
-    public Output</* @Nullable */ String> ipv6IpamPoolId() {
-        return this.ipv6IpamPoolId;
+    public Output<Optional<String>> ipv6IpamPoolId() {
+        return Codegen.optional(this.ipv6IpamPoolId);
     }
     /**
      * Netmask length to request from IPAM Pool. Conflicts with `ipv6_cidr_block`. This can be omitted if IPAM pool as a `allocation_default_netmask_length` set. Valid values: `56`.
@@ -295,8 +296,8 @@ public class Vpc extends com.pulumi.resources.CustomResource {
      * @return Netmask length to request from IPAM Pool. Conflicts with `ipv6_cidr_block`. This can be omitted if IPAM pool as a `allocation_default_netmask_length` set. Valid values: `56`.
      * 
      */
-    public Output</* @Nullable */ Integer> ipv6NetmaskLength() {
-        return this.ipv6NetmaskLength;
+    public Output<Optional<Integer>> ipv6NetmaskLength() {
+        return Codegen.optional(this.ipv6NetmaskLength);
     }
     /**
      * The ID of the main route table associated with
@@ -341,8 +342,8 @@ public class Vpc extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

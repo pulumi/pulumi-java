@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class AuthorizationRule extends com.pulumi.resources.CustomResource {
      * @return The ID of the group to which the authorization rule grants access. One of `access_group_id` or `authorize_all_groups` must be set.
      * 
      */
-    public Output</* @Nullable */ String> accessGroupId() {
-        return this.accessGroupId;
+    public Output<Optional<String>> accessGroupId() {
+        return Codegen.optional(this.accessGroupId);
     }
     /**
      * Indicates whether the authorization rule grants access to all clients. One of `access_group_id` or `authorize_all_groups` must be set.
@@ -60,8 +61,8 @@ public class AuthorizationRule extends com.pulumi.resources.CustomResource {
      * @return Indicates whether the authorization rule grants access to all clients. One of `access_group_id` or `authorize_all_groups` must be set.
      * 
      */
-    public Output</* @Nullable */ Boolean> authorizeAllGroups() {
-        return this.authorizeAllGroups;
+    public Output<Optional<Boolean>> authorizeAllGroups() {
+        return Codegen.optional(this.authorizeAllGroups);
     }
     /**
      * The ID of the Client VPN endpoint.
@@ -88,8 +89,8 @@ public class AuthorizationRule extends com.pulumi.resources.CustomResource {
      * @return A brief description of the authorization rule.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The IPv4 address range, in CIDR notation, of the network to which the authorization rule applies.

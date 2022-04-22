@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -42,8 +43,8 @@ public class ByteMatchSet extends com.pulumi.resources.CustomResource {
      * @return Settings for the ByteMatchSet, such as the bytes (typically a string that corresponds with ASCII characters) that you want AWS WAF to search for in web requests. ByteMatchTuple documented below.
      * 
      */
-    public Output</* @Nullable */ List<ByteMatchSetByteMatchTuple>> byteMatchTuples() {
-        return this.byteMatchTuples;
+    public Output<Optional<List<ByteMatchSetByteMatchTuple>>> byteMatchTuples() {
+        return Codegen.optional(this.byteMatchTuples);
     }
     /**
      * The name or description of the ByteMatchSet.

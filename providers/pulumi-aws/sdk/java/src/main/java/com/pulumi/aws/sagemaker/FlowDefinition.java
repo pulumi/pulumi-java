@@ -16,6 +16,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -73,8 +74,8 @@ public class FlowDefinition extends com.pulumi.resources.CustomResource {
      * @return An object containing information about the events that trigger a human workflow. See Human Loop Activation Config details below.
      * 
      */
-    public Output</* @Nullable */ FlowDefinitionHumanLoopActivationConfig> humanLoopActivationConfig() {
-        return this.humanLoopActivationConfig;
+    public Output<Optional<FlowDefinitionHumanLoopActivationConfig>> humanLoopActivationConfig() {
+        return Codegen.optional(this.humanLoopActivationConfig);
     }
     /**
      * An object containing information about the tasks the human reviewers will perform. See Human Loop Config details below.
@@ -101,8 +102,8 @@ public class FlowDefinition extends com.pulumi.resources.CustomResource {
      * @return Container for configuring the source of human task requests. Use to specify if Amazon Rekognition or Amazon Textract is used as an integration source. See Human Loop Request Source details below.
      * 
      */
-    public Output</* @Nullable */ FlowDefinitionHumanLoopRequestSource> humanLoopRequestSource() {
-        return this.humanLoopRequestSource;
+    public Output<Optional<FlowDefinitionHumanLoopRequestSource>> humanLoopRequestSource() {
+        return Codegen.optional(this.humanLoopRequestSource);
     }
     /**
      * An object containing information about where the human review results will be uploaded. See Output Config details below.
@@ -143,8 +144,8 @@ public class FlowDefinition extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.

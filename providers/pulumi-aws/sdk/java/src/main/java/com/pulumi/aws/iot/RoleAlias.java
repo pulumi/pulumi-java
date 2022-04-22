@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -69,8 +70,8 @@ public class RoleAlias extends com.pulumi.resources.CustomResource {
      * @return The duration of the credential, in seconds. If you do not specify a value for this setting, the default maximum of one hour is applied. This setting can have a value from 900 seconds (15 minutes) to 43200 seconds (12 hours).
      * 
      */
-    public Output</* @Nullable */ Integer> credentialDuration() {
-        return this.credentialDuration;
+    public Output<Optional<Integer>> credentialDuration() {
+        return Codegen.optional(this.credentialDuration);
     }
     /**
      * The identity of the role to which the alias refers.

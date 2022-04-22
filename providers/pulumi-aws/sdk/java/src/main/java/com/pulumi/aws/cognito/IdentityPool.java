@@ -15,6 +15,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class IdentityPool extends com.pulumi.resources.CustomResource {
      * @return Enables or disables the classic / basic authentication flow. Default is `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> allowClassicFlow() {
-        return this.allowClassicFlow;
+    public Output<Optional<Boolean>> allowClassicFlow() {
+        return Codegen.optional(this.allowClassicFlow);
     }
     /**
      * Whether the identity pool supports unauthenticated logins or not.
@@ -58,8 +59,8 @@ public class IdentityPool extends com.pulumi.resources.CustomResource {
      * @return Whether the identity pool supports unauthenticated logins or not.
      * 
      */
-    public Output</* @Nullable */ Boolean> allowUnauthenticatedIdentities() {
-        return this.allowUnauthenticatedIdentities;
+    public Output<Optional<Boolean>> allowUnauthenticatedIdentities() {
+        return Codegen.optional(this.allowUnauthenticatedIdentities);
     }
     /**
      * The ARN of the identity pool.
@@ -86,8 +87,8 @@ public class IdentityPool extends com.pulumi.resources.CustomResource {
      * @return An array of Amazon Cognito Identity user pools and their client IDs.
      * 
      */
-    public Output</* @Nullable */ List<IdentityPoolCognitoIdentityProvider>> cognitoIdentityProviders() {
-        return this.cognitoIdentityProviders;
+    public Output<Optional<List<IdentityPoolCognitoIdentityProvider>>> cognitoIdentityProviders() {
+        return Codegen.optional(this.cognitoIdentityProviders);
     }
     /**
      * The &#34;domain&#34; by which Cognito will refer to your users. This name acts as a placeholder that allows your
@@ -102,8 +103,8 @@ public class IdentityPool extends com.pulumi.resources.CustomResource {
      * backend and the Cognito service to communicate about the developer provider.
      * 
      */
-    public Output</* @Nullable */ String> developerProviderName() {
-        return this.developerProviderName;
+    public Output<Optional<String>> developerProviderName() {
+        return Codegen.optional(this.developerProviderName);
     }
     /**
      * The Cognito Identity Pool name.
@@ -130,8 +131,8 @@ public class IdentityPool extends com.pulumi.resources.CustomResource {
      * @return Set of OpendID Connect provider ARNs.
      * 
      */
-    public Output</* @Nullable */ List<String>> openidConnectProviderArns() {
-        return this.openidConnectProviderArns;
+    public Output<Optional<List<String>>> openidConnectProviderArns() {
+        return Codegen.optional(this.openidConnectProviderArns);
     }
     /**
      * An array of Amazon Resource Names (ARNs) of the SAML provider for your identity.
@@ -144,8 +145,8 @@ public class IdentityPool extends com.pulumi.resources.CustomResource {
      * @return An array of Amazon Resource Names (ARNs) of the SAML provider for your identity.
      * 
      */
-    public Output</* @Nullable */ List<String>> samlProviderArns() {
-        return this.samlProviderArns;
+    public Output<Optional<List<String>>> samlProviderArns() {
+        return Codegen.optional(this.samlProviderArns);
     }
     /**
      * Key-Value pairs mapping provider names to provider app IDs.
@@ -158,8 +159,8 @@ public class IdentityPool extends com.pulumi.resources.CustomResource {
      * @return Key-Value pairs mapping provider names to provider app IDs.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> supportedLoginProviders() {
-        return this.supportedLoginProviders;
+    public Output<Optional<Map<String,String>>> supportedLoginProviders() {
+        return Codegen.optional(this.supportedLoginProviders);
     }
     /**
      * A map of tags to assign to the Identity Pool. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -172,8 +173,8 @@ public class IdentityPool extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the Identity Pool. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

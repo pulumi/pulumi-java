@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -69,8 +70,8 @@ public class RequestValidator extends com.pulumi.resources.CustomResource {
      * @return Boolean whether to validate request body. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> validateRequestBody() {
-        return this.validateRequestBody;
+    public Output<Optional<Boolean>> validateRequestBody() {
+        return Codegen.optional(this.validateRequestBody);
     }
     /**
      * Boolean whether to validate request parameters. Defaults to `false`.
@@ -83,8 +84,8 @@ public class RequestValidator extends com.pulumi.resources.CustomResource {
      * @return Boolean whether to validate request parameters. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> validateRequestParameters() {
-        return this.validateRequestParameters;
+    public Output<Optional<Boolean>> validateRequestParameters() {
+        return Codegen.optional(this.validateRequestParameters);
     }
 
     /**

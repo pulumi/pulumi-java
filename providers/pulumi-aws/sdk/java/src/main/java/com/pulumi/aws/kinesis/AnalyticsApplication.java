@@ -19,6 +19,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -69,8 +70,8 @@ public class AnalyticsApplication extends com.pulumi.resources.CustomResource {
      * See CloudWatch Logging Options below for more details.
      * 
      */
-    public Output</* @Nullable */ AnalyticsApplicationCloudwatchLoggingOptions> cloudwatchLoggingOptions() {
-        return this.cloudwatchLoggingOptions;
+    public Output<Optional<AnalyticsApplicationCloudwatchLoggingOptions>> cloudwatchLoggingOptions() {
+        return Codegen.optional(this.cloudwatchLoggingOptions);
     }
     /**
      * SQL Code to transform input data, and generate output.
@@ -83,8 +84,8 @@ public class AnalyticsApplication extends com.pulumi.resources.CustomResource {
      * @return SQL Code to transform input data, and generate output.
      * 
      */
-    public Output</* @Nullable */ String> code() {
-        return this.code;
+    public Output<Optional<String>> code() {
+        return Codegen.optional(this.code);
     }
     /**
      * The Timestamp when the application version was created.
@@ -111,8 +112,8 @@ public class AnalyticsApplication extends com.pulumi.resources.CustomResource {
      * @return Description of the application.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Input configuration of the application. See Inputs below for more details.
@@ -125,8 +126,8 @@ public class AnalyticsApplication extends com.pulumi.resources.CustomResource {
      * @return Input configuration of the application. See Inputs below for more details.
      * 
      */
-    public Output</* @Nullable */ AnalyticsApplicationInputs> inputs() {
-        return this.inputs;
+    public Output<Optional<AnalyticsApplicationInputs>> inputs() {
+        return Codegen.optional(this.inputs);
     }
     /**
      * The Timestamp when the application was last updated.
@@ -167,8 +168,8 @@ public class AnalyticsApplication extends com.pulumi.resources.CustomResource {
      * @return Output destination configuration of the application. See Outputs below for more details.
      * 
      */
-    public Output</* @Nullable */ List<AnalyticsApplicationOutput>> outputs() {
-        return this.outputs;
+    public Output<Optional<List<AnalyticsApplicationOutput>>> outputs() {
+        return Codegen.optional(this.outputs);
     }
     /**
      * An S3 Reference Data Source for the application.
@@ -183,8 +184,8 @@ public class AnalyticsApplication extends com.pulumi.resources.CustomResource {
      * See Reference Data Sources below for more details.
      * 
      */
-    public Output</* @Nullable */ AnalyticsApplicationReferenceDataSources> referenceDataSources() {
-        return this.referenceDataSources;
+    public Output<Optional<AnalyticsApplicationReferenceDataSources>> referenceDataSources() {
+        return Codegen.optional(this.referenceDataSources);
     }
     /**
      * Whether to start or stop the Kinesis Analytics Application. To start an application, an input with a defined `starting_position` must be configured.
@@ -199,8 +200,8 @@ public class AnalyticsApplication extends com.pulumi.resources.CustomResource {
      * To modify an application&#39;s starting position, first stop the application by setting `start_application = false`, then update `starting_position` and set `start_application = true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> startApplication() {
-        return this.startApplication;
+    public Output<Optional<Boolean>> startApplication() {
+        return Codegen.optional(this.startApplication);
     }
     /**
      * The Status of the application.
@@ -227,8 +228,8 @@ public class AnalyticsApplication extends com.pulumi.resources.CustomResource {
      * @return Key-value map of tags for the Kinesis Analytics Application. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.

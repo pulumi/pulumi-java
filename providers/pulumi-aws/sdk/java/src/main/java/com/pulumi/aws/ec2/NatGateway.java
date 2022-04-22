@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -41,8 +42,8 @@ public class NatGateway extends com.pulumi.resources.CustomResource {
      * @return The Allocation ID of the Elastic IP address for the gateway. Required for `connectivity_type` of `public`.
      * 
      */
-    public Output</* @Nullable */ String> allocationId() {
-        return this.allocationId;
+    public Output<Optional<String>> allocationId() {
+        return Codegen.optional(this.allocationId);
     }
     /**
      * Connectivity type for the gateway. Valid values are `private` and `public`. Defaults to `public`.
@@ -55,8 +56,8 @@ public class NatGateway extends com.pulumi.resources.CustomResource {
      * @return Connectivity type for the gateway. Valid values are `private` and `public`. Defaults to `public`.
      * 
      */
-    public Output</* @Nullable */ String> connectivityType() {
-        return this.connectivityType;
+    public Output<Optional<String>> connectivityType() {
+        return Codegen.optional(this.connectivityType);
     }
     /**
      * The ENI ID of the network interface created by the NAT gateway.
@@ -125,8 +126,8 @@ public class NatGateway extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

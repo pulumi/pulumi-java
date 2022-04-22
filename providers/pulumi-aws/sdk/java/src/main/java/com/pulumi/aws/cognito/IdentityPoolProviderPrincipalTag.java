@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -64,14 +65,14 @@ public class IdentityPoolProviderPrincipalTag extends com.pulumi.resources.Custo
     @Export(name="principalTags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> principalTags;
 
-    public Output</* @Nullable */ Map<String,String>> principalTags() {
-        return this.principalTags;
+    public Output<Optional<Map<String,String>>> principalTags() {
+        return Codegen.optional(this.principalTags);
     }
     @Export(name="useDefaults", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> useDefaults;
 
-    public Output</* @Nullable */ Boolean> useDefaults() {
-        return this.useDefaults;
+    public Output<Optional<Boolean>> useDefaults() {
+        return Codegen.optional(this.useDefaults);
     }
 
     /**

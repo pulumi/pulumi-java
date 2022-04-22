@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -113,8 +114,8 @@ public class Selection extends com.pulumi.resources.CustomResource {
      * @return An array of strings that either contain Amazon Resource Names (ARNs) or match patterns of resources to assign to a backup plan.
      * 
      */
-    public Output</* @Nullable */ List<String>> resources() {
-        return this.resources;
+    public Output<Optional<List<String>>> resources() {
+        return Codegen.optional(this.resources);
     }
     /**
      * Tag-based conditions used to specify a set of resources to assign to a backup plan.
@@ -127,8 +128,8 @@ public class Selection extends com.pulumi.resources.CustomResource {
      * @return Tag-based conditions used to specify a set of resources to assign to a backup plan.
      * 
      */
-    public Output</* @Nullable */ List<SelectionSelectionTag>> selectionTags() {
-        return this.selectionTags;
+    public Output<Optional<List<SelectionSelectionTag>>> selectionTags() {
+        return Codegen.optional(this.selectionTags);
     }
 
     /**

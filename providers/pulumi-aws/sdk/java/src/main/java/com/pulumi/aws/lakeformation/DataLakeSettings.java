@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -51,8 +52,8 @@ public class DataLakeSettings extends com.pulumi.resources.CustomResource {
      * @return Identifier for the Data Catalog. By default, the account ID.
      * 
      */
-    public Output</* @Nullable */ String> catalogId() {
-        return this.catalogId;
+    public Output<Optional<String>> catalogId() {
+        return Codegen.optional(this.catalogId);
     }
     /**
      * Up to three configuration blocks of principal permissions for default create database permissions. Detailed below.

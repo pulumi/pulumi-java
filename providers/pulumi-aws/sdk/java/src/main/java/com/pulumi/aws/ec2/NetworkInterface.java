@@ -16,6 +16,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -89,8 +90,8 @@ public class NetworkInterface extends com.pulumi.resources.CustomResource {
      * @return Description for the network interface.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Type of network interface to create. Set to `efa` for Elastic Fabric Adapter. Changing `interface_type` will cause the resource to be destroyed and re-created.
@@ -151,8 +152,8 @@ public class NetworkInterface extends com.pulumi.resources.CustomResource {
     @Export(name="ipv6AddressListEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> ipv6AddressListEnabled;
 
-    public Output</* @Nullable */ Boolean> ipv6AddressListEnabled() {
-        return this.ipv6AddressListEnabled;
+    public Output<Optional<Boolean>> ipv6AddressListEnabled() {
+        return Codegen.optional(this.ipv6AddressListEnabled);
     }
     /**
      * List of private IPs to assign to the ENI in sequential order.
@@ -267,8 +268,8 @@ public class NetworkInterface extends com.pulumi.resources.CustomResource {
     @Export(name="privateIpListEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> privateIpListEnabled;
 
-    public Output</* @Nullable */ Boolean> privateIpListEnabled() {
-        return this.privateIpListEnabled;
+    public Output<Optional<Boolean>> privateIpListEnabled() {
+        return Codegen.optional(this.privateIpListEnabled);
     }
     /**
      * List of private IPs to assign to the ENI in sequential order. Requires setting `private_ip_list_enable` to `true`.
@@ -337,8 +338,8 @@ public class NetworkInterface extends com.pulumi.resources.CustomResource {
      * @return Whether to enable source destination checking for the ENI. Default true.
      * 
      */
-    public Output</* @Nullable */ Boolean> sourceDestCheck() {
-        return this.sourceDestCheck;
+    public Output<Optional<Boolean>> sourceDestCheck() {
+        return Codegen.optional(this.sourceDestCheck);
     }
     /**
      * Subnet ID to create the ENI in.
@@ -365,8 +366,8 @@ public class NetworkInterface extends com.pulumi.resources.CustomResource {
      * @return Map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).

@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -59,8 +60,8 @@ public class OrganizationManagedRule extends com.pulumi.resources.CustomResource
      * @return Description of the rule
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * List of AWS account identifiers to exclude from the rule
@@ -73,8 +74,8 @@ public class OrganizationManagedRule extends com.pulumi.resources.CustomResource
      * @return List of AWS account identifiers to exclude from the rule
      * 
      */
-    public Output</* @Nullable */ List<String>> excludedAccounts() {
-        return this.excludedAccounts;
+    public Output<Optional<List<String>>> excludedAccounts() {
+        return Codegen.optional(this.excludedAccounts);
     }
     /**
      * A string in JSON format that is passed to the AWS Config Rule Lambda Function
@@ -87,8 +88,8 @@ public class OrganizationManagedRule extends com.pulumi.resources.CustomResource
      * @return A string in JSON format that is passed to the AWS Config Rule Lambda Function
      * 
      */
-    public Output</* @Nullable */ String> inputParameters() {
-        return this.inputParameters;
+    public Output<Optional<String>> inputParameters() {
+        return Codegen.optional(this.inputParameters);
     }
     /**
      * The maximum frequency with which AWS Config runs evaluations for a rule, if the rule is triggered at a periodic frequency. Defaults to `TwentyFour_Hours` for periodic frequency triggered rules. Valid values: `One_Hour`, `Three_Hours`, `Six_Hours`, `Twelve_Hours`, or `TwentyFour_Hours`.
@@ -101,8 +102,8 @@ public class OrganizationManagedRule extends com.pulumi.resources.CustomResource
      * @return The maximum frequency with which AWS Config runs evaluations for a rule, if the rule is triggered at a periodic frequency. Defaults to `TwentyFour_Hours` for periodic frequency triggered rules. Valid values: `One_Hour`, `Three_Hours`, `Six_Hours`, `Twelve_Hours`, or `TwentyFour_Hours`.
      * 
      */
-    public Output</* @Nullable */ String> maximumExecutionFrequency() {
-        return this.maximumExecutionFrequency;
+    public Output<Optional<String>> maximumExecutionFrequency() {
+        return Codegen.optional(this.maximumExecutionFrequency);
     }
     /**
      * The name of the rule
@@ -129,8 +130,8 @@ public class OrganizationManagedRule extends com.pulumi.resources.CustomResource
      * @return Identifier of the AWS resource to evaluate
      * 
      */
-    public Output</* @Nullable */ String> resourceIdScope() {
-        return this.resourceIdScope;
+    public Output<Optional<String>> resourceIdScope() {
+        return Codegen.optional(this.resourceIdScope);
     }
     /**
      * List of types of AWS resources to evaluate
@@ -143,8 +144,8 @@ public class OrganizationManagedRule extends com.pulumi.resources.CustomResource
      * @return List of types of AWS resources to evaluate
      * 
      */
-    public Output</* @Nullable */ List<String>> resourceTypesScopes() {
-        return this.resourceTypesScopes;
+    public Output<Optional<List<String>>> resourceTypesScopes() {
+        return Codegen.optional(this.resourceTypesScopes);
     }
     /**
      * Identifier of an available AWS Config Managed Rule to call. For available values, see the [List of AWS Config Managed Rules](https://docs.aws.amazon.com/config/latest/developerguide/managed-rules-by-aws-config.html) documentation
@@ -171,8 +172,8 @@ public class OrganizationManagedRule extends com.pulumi.resources.CustomResource
      * @return Tag key of AWS resources to evaluate
      * 
      */
-    public Output</* @Nullable */ String> tagKeyScope() {
-        return this.tagKeyScope;
+    public Output<Optional<String>> tagKeyScope() {
+        return Codegen.optional(this.tagKeyScope);
     }
     /**
      * Tag value of AWS resources to evaluate
@@ -185,8 +186,8 @@ public class OrganizationManagedRule extends com.pulumi.resources.CustomResource
      * @return Tag value of AWS resources to evaluate
      * 
      */
-    public Output</* @Nullable */ String> tagValueScope() {
-        return this.tagValueScope;
+    public Output<Optional<String>> tagValueScope() {
+        return Codegen.optional(this.tagValueScope);
     }
 
     /**

@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -68,8 +69,8 @@ public class AssessmentTarget extends com.pulumi.resources.CustomResource {
      * @return Inspector Resource Group Amazon Resource Name (ARN) stating tags for instance matching. If not specified, all EC2 instances in the current AWS account and region are included in the assessment target.
      * 
      */
-    public Output</* @Nullable */ String> resourceGroupArn() {
-        return this.resourceGroupArn;
+    public Output<Optional<String>> resourceGroupArn() {
+        return Codegen.optional(this.resourceGroupArn);
     }
 
     /**

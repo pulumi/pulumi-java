@@ -15,6 +15,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -58,8 +59,8 @@ public class ReplicationInstance extends com.pulumi.resources.CustomResource {
      * @return Indicates that major version upgrades are allowed.
      * 
      */
-    public Output</* @Nullable */ Boolean> allowMajorVersionUpgrade() {
-        return this.allowMajorVersionUpgrade;
+    public Output<Optional<Boolean>> allowMajorVersionUpgrade() {
+        return Codegen.optional(this.allowMajorVersionUpgrade);
     }
     /**
      * Indicates whether the changes should be applied immediately or during the next maintenance window. Only used when updating an existing resource.
@@ -72,8 +73,8 @@ public class ReplicationInstance extends com.pulumi.resources.CustomResource {
      * @return Indicates whether the changes should be applied immediately or during the next maintenance window. Only used when updating an existing resource.
      * 
      */
-    public Output</* @Nullable */ Boolean> applyImmediately() {
-        return this.applyImmediately;
+    public Output<Optional<Boolean>> applyImmediately() {
+        return Codegen.optional(this.applyImmediately);
     }
     /**
      * Indicates that minor engine upgrades will be applied automatically to the replication instance during the maintenance window.
@@ -268,8 +269,8 @@ public class ReplicationInstance extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

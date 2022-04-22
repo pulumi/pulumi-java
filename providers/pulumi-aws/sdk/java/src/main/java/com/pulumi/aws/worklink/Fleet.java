@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -55,8 +56,8 @@ public class Fleet extends com.pulumi.resources.CustomResource {
      * @return The ARN of the Amazon Kinesis data stream that receives the audit events. Kinesis data stream name must begin with `&#34;AmazonWorkLink-&#34;`.
      * 
      */
-    public Output</* @Nullable */ String> auditStreamArn() {
-        return this.auditStreamArn;
+    public Output<Optional<String>> auditStreamArn() {
+        return Codegen.optional(this.auditStreamArn);
     }
     /**
      * The identifier used by users to sign in to the Amazon WorkLink app.
@@ -97,8 +98,8 @@ public class Fleet extends com.pulumi.resources.CustomResource {
      * @return The certificate chain, including intermediate certificates and the root certificate authority certificate used to issue device certificates.
      * 
      */
-    public Output</* @Nullable */ String> deviceCaCertificate() {
-        return this.deviceCaCertificate;
+    public Output<Optional<String>> deviceCaCertificate() {
+        return Codegen.optional(this.deviceCaCertificate);
     }
     /**
      * The name of the fleet.
@@ -111,8 +112,8 @@ public class Fleet extends com.pulumi.resources.CustomResource {
      * @return The name of the fleet.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * Provide this to allow manage the identity provider configuration for the fleet. Fields documented below.
@@ -125,8 +126,8 @@ public class Fleet extends com.pulumi.resources.CustomResource {
      * @return Provide this to allow manage the identity provider configuration for the fleet. Fields documented below.
      * 
      */
-    public Output</* @Nullable */ FleetIdentityProvider> identityProvider() {
-        return this.identityProvider;
+    public Output<Optional<FleetIdentityProvider>> identityProvider() {
+        return Codegen.optional(this.identityProvider);
     }
     /**
      * The time that the fleet was last updated.
@@ -167,8 +168,8 @@ public class Fleet extends com.pulumi.resources.CustomResource {
      * @return Provide this to allow manage the company network configuration for the fleet. Fields documented below.
      * 
      */
-    public Output</* @Nullable */ FleetNetwork> network() {
-        return this.network;
+    public Output<Optional<FleetNetwork>> network() {
+        return Codegen.optional(this.network);
     }
     /**
      * The option to optimize for better performance by routing traffic through the closest AWS Region to users, which may be outside of your home Region. Defaults to `true`.
@@ -181,8 +182,8 @@ public class Fleet extends com.pulumi.resources.CustomResource {
      * @return The option to optimize for better performance by routing traffic through the closest AWS Region to users, which may be outside of your home Region. Defaults to `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> optimizeForEndUserLocation() {
-        return this.optimizeForEndUserLocation;
+    public Output<Optional<Boolean>> optimizeForEndUserLocation() {
+        return Codegen.optional(this.optimizeForEndUserLocation);
     }
 
     /**

@@ -17,6 +17,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -99,8 +100,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * the change is asynchronously applied as soon as possible.
      * 
      */
-    public Output</* @Nullable */ Boolean> allowMajorVersionUpgrade() {
-        return this.allowMajorVersionUpgrade;
+    public Output<Optional<Boolean>> allowMajorVersionUpgrade() {
+        return Codegen.optional(this.allowMajorVersionUpgrade);
     }
     /**
      * Specifies whether any database modifications
@@ -151,8 +152,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * Defaults to true.
      * 
      */
-    public Output</* @Nullable */ Boolean> autoMinorVersionUpgrade() {
-        return this.autoMinorVersionUpgrade;
+    public Output<Optional<Boolean>> autoMinorVersionUpgrade() {
+        return Codegen.optional(this.autoMinorVersionUpgrade);
     }
     /**
      * The AZ for the RDS instance.
@@ -247,8 +248,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return Copy all Instance `tags` to snapshots. Default is `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> copyTagsToSnapshot() {
-        return this.copyTagsToSnapshot;
+    public Output<Optional<Boolean>> copyTagsToSnapshot() {
+        return Codegen.optional(this.copyTagsToSnapshot);
     }
     /**
      * Indicates whether to enable a customer-owned IP address (CoIP) for an RDS on Outposts DB instance. See [CoIP for RDS on Outposts](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-on-outposts.html#rds-on-outposts.coip) for more information.
@@ -261,8 +262,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return Indicates whether to enable a customer-owned IP address (CoIP) for an RDS on Outposts DB instance. See [CoIP for RDS on Outposts](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-on-outposts.html#rds-on-outposts.coip) for more information.
      * 
      */
-    public Output</* @Nullable */ Boolean> customerOwnedIpEnabled() {
-        return this.customerOwnedIpEnabled;
+    public Output<Optional<Boolean>> customerOwnedIpEnabled() {
+        return Codegen.optional(this.customerOwnedIpEnabled);
     }
     /**
      * Name of `DB subnet group`. DB instance will
@@ -301,8 +302,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return Specifies whether to remove automated backups immediately after the DB instance is deleted. Default is `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> deleteAutomatedBackups() {
-        return this.deleteAutomatedBackups;
+    public Output<Optional<Boolean>> deleteAutomatedBackups() {
+        return Codegen.optional(this.deleteAutomatedBackups);
     }
     /**
      * If the DB instance should have deletion protection enabled. The database can&#39;t be deleted when this value is set to `true`. The default is `false`.
@@ -315,8 +316,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return If the DB instance should have deletion protection enabled. The database can&#39;t be deleted when this value is set to `true`. The default is `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> deletionProtection() {
-        return this.deletionProtection;
+    public Output<Optional<Boolean>> deletionProtection() {
+        return Codegen.optional(this.deletionProtection);
     }
     /**
      * The ID of the Directory Service Active Directory domain to create the instance in.
@@ -329,8 +330,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return The ID of the Directory Service Active Directory domain to create the instance in.
      * 
      */
-    public Output</* @Nullable */ String> domain() {
-        return this.domain;
+    public Output<Optional<String>> domain() {
+        return Codegen.optional(this.domain);
     }
     /**
      * The name of the IAM role to be used when making API calls to the Directory Service.
@@ -343,8 +344,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return The name of the IAM role to be used when making API calls to the Directory Service.
      * 
      */
-    public Output</* @Nullable */ String> domainIamRoleName() {
-        return this.domainIamRoleName;
+    public Output<Optional<String>> domainIamRoleName() {
+        return Codegen.optional(this.domainIamRoleName);
     }
     /**
      * Set of log types to enable for exporting to CloudWatch logs. If omitted, no logs will be exported. Valid values (depending on `engine`). MySQL and MariaDB: `audit`, `error`, `general`, `slowquery`. PostgreSQL: `postgresql`, `upgrade`. MSSQL: `agent` , `error`. Oracle: `alert`, `audit`, `listener`, `trace`.
@@ -357,8 +358,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return Set of log types to enable for exporting to CloudWatch logs. If omitted, no logs will be exported. Valid values (depending on `engine`). MySQL and MariaDB: `audit`, `error`, `general`, `slowquery`. PostgreSQL: `postgresql`, `upgrade`. MSSQL: `agent` , `error`. Oracle: `alert`, `audit`, `listener`, `trace`.
      * 
      */
-    public Output</* @Nullable */ List<String>> enabledCloudwatchLogsExports() {
-        return this.enabledCloudwatchLogsExports;
+    public Output<Optional<List<String>>> enabledCloudwatchLogsExports() {
+        return Codegen.optional(this.enabledCloudwatchLogsExports);
     }
     /**
      * The connection endpoint in `address:port` format.
@@ -449,8 +450,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * set to `false`. The value must begin with a letter, only contain alphanumeric characters and hyphens, and not end with a hyphen or contain two consecutive hyphens. Must not be provided when deleting a read replica.
      * 
      */
-    public Output</* @Nullable */ String> finalSnapshotIdentifier() {
-        return this.finalSnapshotIdentifier;
+    public Output<Optional<String>> finalSnapshotIdentifier() {
+        return Codegen.optional(this.finalSnapshotIdentifier);
     }
     /**
      * The canonical hosted zone ID of the DB instance (to be used
@@ -483,8 +484,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * accounts is enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> iamDatabaseAuthenticationEnabled() {
-        return this.iamDatabaseAuthenticationEnabled;
+    public Output<Optional<Boolean>> iamDatabaseAuthenticationEnabled() {
+        return Codegen.optional(this.iamDatabaseAuthenticationEnabled);
     }
     /**
      * The name of the RDS instance,
@@ -545,8 +546,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * storage_type of &#34;io1&#34;.
      * 
      */
-    public Output</* @Nullable */ Integer> iops() {
-        return this.iops;
+    public Output<Optional<Integer>> iops() {
+        return Codegen.optional(this.iops);
     }
     /**
      * The ARN for the KMS encryption key. If creating an
@@ -627,8 +628,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return When configured, the upper limit to which Amazon RDS can automatically scale the storage of the DB instance. Configuring this will automatically ignore differences to `allocated_storage`. Must be greater than or equal to `allocated_storage` or `0` to disable Storage Autoscaling.
      * 
      */
-    public Output</* @Nullable */ Integer> maxAllocatedStorage() {
-        return this.maxAllocatedStorage;
+    public Output<Optional<Integer>> maxAllocatedStorage() {
+        return Codegen.optional(this.maxAllocatedStorage);
     }
     /**
      * The interval, in seconds, between points
@@ -647,8 +648,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * Values: 0, 1, 5, 10, 15, 30, 60.
      * 
      */
-    public Output</* @Nullable */ Integer> monitoringInterval() {
-        return this.monitoringInterval;
+    public Output<Optional<Integer>> monitoringInterval() {
+        return Codegen.optional(this.monitoringInterval);
     }
     /**
      * The ARN for the IAM role that permits RDS
@@ -761,8 +762,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * logs, and it will be stored in the state file.
      * 
      */
-    public Output</* @Nullable */ String> password() {
-        return this.password;
+    public Output<Optional<String>> password() {
+        return Codegen.optional(this.password);
     }
     /**
      * Specifies whether Performance Insights are enabled. Defaults to false.
@@ -775,8 +776,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return Specifies whether Performance Insights are enabled. Defaults to false.
      * 
      */
-    public Output</* @Nullable */ Boolean> performanceInsightsEnabled() {
-        return this.performanceInsightsEnabled;
+    public Output<Optional<Boolean>> performanceInsightsEnabled() {
+        return Codegen.optional(this.performanceInsightsEnabled);
     }
     /**
      * The ARN for the KMS key to encrypt Performance Insights data. When specifying `performance_insights_kms_key_id`, `performance_insights_enabled` needs to be set to true. Once KMS key is set, it can never be changed.
@@ -833,8 +834,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * accessible. Default is `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> publiclyAccessible() {
-        return this.publiclyAccessible;
+    public Output<Optional<Boolean>> publiclyAccessible() {
+        return Codegen.optional(this.publiclyAccessible);
     }
     /**
      * Specifies whether the replica is in either `mounted` or `open-read-only` mode. This attribute
@@ -849,8 +850,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * is only supported by Oracle instances. Oracle replicas operate in `open-read-only` mode unless otherwise specified. See [Working with Oracle Read Replicas](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/oracle-read-replicas.html) for more information.
      * 
      */
-    public Output</* @Nullable */ String> replicaMode() {
-        return this.replicaMode;
+    public Output<Optional<String>> replicaMode() {
+        return Codegen.optional(this.replicaMode);
     }
     @Export(name="replicas", type=List.class, parameters={String.class})
     private Output<List<String>> replicas;
@@ -885,8 +886,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * for more information on using Replication.
      * 
      */
-    public Output</* @Nullable */ String> replicateSourceDb() {
-        return this.replicateSourceDb;
+    public Output<Optional<String>> replicateSourceDb() {
+        return Codegen.optional(this.replicateSourceDb);
     }
     /**
      * The RDS Resource ID of this instance.
@@ -913,8 +914,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return A configuration block for restoring a DB instance to an arbitrary point in time. Requires the `identifier` argument to be set with the name of the new DB instance to be created. See Restore To Point In Time below for details.
      * 
      */
-    public Output</* @Nullable */ InstanceRestoreToPointInTime> restoreToPointInTime() {
-        return this.restoreToPointInTime;
+    public Output<Optional<InstanceRestoreToPointInTime>> restoreToPointInTime() {
+        return Codegen.optional(this.restoreToPointInTime);
     }
     /**
      * Restore from a Percona Xtrabackup in S3.  See [Importing Data into an Amazon RDS MySQL DB Instance](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MySQL.Procedural.Importing.html)
@@ -927,8 +928,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return Restore from a Percona Xtrabackup in S3.  See [Importing Data into an Amazon RDS MySQL DB Instance](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MySQL.Procedural.Importing.html)
      * 
      */
-    public Output</* @Nullable */ InstanceS3Import> s3Import() {
-        return this.s3Import;
+    public Output<Optional<InstanceS3Import>> s3Import() {
+        return Codegen.optional(this.s3Import);
     }
     /**
      * List of DB Security Groups to
@@ -945,8 +946,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * Platform](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.html#USER_VPC.FindDefaultVPC).
      * 
      */
-    public Output</* @Nullable */ List<String>> securityGroupNames() {
-        return this.securityGroupNames;
+    public Output<Optional<List<String>>> securityGroupNames() {
+        return Codegen.optional(this.securityGroupNames);
     }
     /**
      * Determines whether a final DB snapshot is
@@ -967,8 +968,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * is `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> skipFinalSnapshot() {
-        return this.skipFinalSnapshot;
+    public Output<Optional<Boolean>> skipFinalSnapshot() {
+        return Codegen.optional(this.skipFinalSnapshot);
     }
     /**
      * Specifies whether or not to create this
@@ -1019,8 +1020,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * default is `false` if not specified.
      * 
      */
-    public Output</* @Nullable */ Boolean> storageEncrypted() {
-        return this.storageEncrypted;
+    public Output<Optional<Boolean>> storageEncrypted() {
+        return Codegen.optional(this.storageEncrypted);
     }
     /**
      * One of &#34;standard&#34; (magnetic), &#34;gp2&#34; (general
@@ -1051,8 +1052,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

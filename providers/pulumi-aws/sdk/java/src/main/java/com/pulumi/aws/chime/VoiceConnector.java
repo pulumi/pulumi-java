@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -41,8 +42,8 @@ public class VoiceConnector extends com.pulumi.resources.CustomResource {
      * @return The AWS Region in which the Amazon Chime Voice Connector is created. Default value: `us-east-1`
      * 
      */
-    public Output</* @Nullable */ String> awsRegion() {
-        return this.awsRegion;
+    public Output<Optional<String>> awsRegion() {
+        return Codegen.optional(this.awsRegion);
     }
     /**
      * The name of the Amazon Chime Voice Connector.

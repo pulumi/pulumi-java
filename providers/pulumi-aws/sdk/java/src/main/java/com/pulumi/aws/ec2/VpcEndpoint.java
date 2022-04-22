@@ -15,6 +15,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -65,8 +66,8 @@ public class VpcEndpoint extends com.pulumi.resources.CustomResource {
      * @return Accept the VPC endpoint (the VPC endpoint and service need to be in the same AWS account).
      * 
      */
-    public Output</* @Nullable */ Boolean> autoAccept() {
-        return this.autoAccept;
+    public Output<Optional<Boolean>> autoAccept() {
+        return Codegen.optional(this.autoAccept);
     }
     /**
      * The list of CIDR blocks for the exposed AWS service. Applicable for endpoints of type `Gateway`.
@@ -165,8 +166,8 @@ public class VpcEndpoint extends com.pulumi.resources.CustomResource {
      * Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> privateDnsEnabled() {
-        return this.privateDnsEnabled;
+    public Output<Optional<Boolean>> privateDnsEnabled() {
+        return Codegen.optional(this.privateDnsEnabled);
     }
     /**
      * Whether or not the VPC Endpoint is being managed by its service - `true` or `false`.
@@ -263,8 +264,8 @@ public class VpcEndpoint extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .
@@ -291,8 +292,8 @@ public class VpcEndpoint extends com.pulumi.resources.CustomResource {
      * @return The VPC endpoint type, `Gateway`, `GatewayLoadBalancer`, or `Interface`. Defaults to `Gateway`.
      * 
      */
-    public Output</* @Nullable */ String> vpcEndpointType() {
-        return this.vpcEndpointType;
+    public Output<Optional<String>> vpcEndpointType() {
+        return Codegen.optional(this.vpcEndpointType);
     }
     /**
      * The ID of the VPC in which the endpoint will be used.

@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -98,8 +99,8 @@ public class BotAlias extends com.pulumi.resources.CustomResource {
      * @return The settings that determine how Amazon Lex uses conversation logs for the alias. Attributes are documented under conversation_logs.
      * 
      */
-    public Output</* @Nullable */ BotAliasConversationLogs> conversationLogs() {
-        return this.conversationLogs;
+    public Output<Optional<BotAliasConversationLogs>> conversationLogs() {
+        return Codegen.optional(this.conversationLogs);
     }
     /**
      * The date that the bot alias was created.
@@ -126,8 +127,8 @@ public class BotAlias extends com.pulumi.resources.CustomResource {
      * @return A description of the alias. Must be less than or equal to 200 characters in length.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The date that the bot alias was updated. When you create a resource, the creation date and the last updated date are the same.

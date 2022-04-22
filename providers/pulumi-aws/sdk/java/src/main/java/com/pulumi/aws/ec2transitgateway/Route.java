@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -41,8 +42,8 @@ public class Route extends com.pulumi.resources.CustomResource {
      * @return Indicates whether to drop traffic that matches this route (default to `false`).
      * 
      */
-    public Output</* @Nullable */ Boolean> blackhole() {
-        return this.blackhole;
+    public Output<Optional<Boolean>> blackhole() {
+        return Codegen.optional(this.blackhole);
     }
     /**
      * IPv4 or IPv6 RFC1924 CIDR used for destination matches. Routing decisions are based on the most specific match.
@@ -69,8 +70,8 @@ public class Route extends com.pulumi.resources.CustomResource {
      * @return Identifier of EC2 Transit Gateway Attachment (required if `blackhole` is set to false).
      * 
      */
-    public Output</* @Nullable */ String> transitGatewayAttachmentId() {
-        return this.transitGatewayAttachmentId;
+    public Output<Optional<String>> transitGatewayAttachmentId() {
+        return Codegen.optional(this.transitGatewayAttachmentId);
     }
     /**
      * Identifier of EC2 Transit Gateway Route Table.

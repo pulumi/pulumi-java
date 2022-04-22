@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -81,8 +82,8 @@ public class LifecycleHook extends com.pulumi.resources.CustomResource {
      * @return Defines the amount of time, in seconds, that can elapse before the lifecycle hook times out. When the lifecycle hook times out, Auto Scaling performs the action defined in the DefaultResult parameter
      * 
      */
-    public Output</* @Nullable */ Integer> heartbeatTimeout() {
-        return this.heartbeatTimeout;
+    public Output<Optional<Integer>> heartbeatTimeout() {
+        return Codegen.optional(this.heartbeatTimeout);
     }
     /**
      * The instance state to which you want to attach the lifecycle hook. For a list of lifecycle hook types, see [describe-lifecycle-hook-types](https://docs.aws.amazon.com/cli/latest/reference/autoscaling/describe-lifecycle-hook-types.html#examples)
@@ -123,8 +124,8 @@ public class LifecycleHook extends com.pulumi.resources.CustomResource {
      * @return Contains additional information that you want to include any time Auto Scaling sends a message to the notification target.
      * 
      */
-    public Output</* @Nullable */ String> notificationMetadata() {
-        return this.notificationMetadata;
+    public Output<Optional<String>> notificationMetadata() {
+        return Codegen.optional(this.notificationMetadata);
     }
     /**
      * The ARN of the notification target that Auto Scaling will use to notify you when an instance is in the transition state for the lifecycle hook. This ARN target can be either an SQS queue or an SNS topic.
@@ -137,8 +138,8 @@ public class LifecycleHook extends com.pulumi.resources.CustomResource {
      * @return The ARN of the notification target that Auto Scaling will use to notify you when an instance is in the transition state for the lifecycle hook. This ARN target can be either an SQS queue or an SNS topic.
      * 
      */
-    public Output</* @Nullable */ String> notificationTargetArn() {
-        return this.notificationTargetArn;
+    public Output<Optional<String>> notificationTargetArn() {
+        return Codegen.optional(this.notificationTargetArn);
     }
     /**
      * The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification target.
@@ -151,8 +152,8 @@ public class LifecycleHook extends com.pulumi.resources.CustomResource {
      * @return The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification target.
      * 
      */
-    public Output</* @Nullable */ String> roleArn() {
-        return this.roleArn;
+    public Output<Optional<String>> roleArn() {
+        return Codegen.optional(this.roleArn);
     }
 
     /**

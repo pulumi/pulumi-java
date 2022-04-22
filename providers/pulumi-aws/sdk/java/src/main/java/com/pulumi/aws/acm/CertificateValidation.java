@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -54,8 +55,8 @@ public class CertificateValidation extends com.pulumi.resources.CustomResource {
      * @return List of FQDNs that implement the validation. Only valid for DNS validation method ACM certificates. If this is set, the resource can implement additional sanity checks and has an explicit dependency on the resource that is implementing the validation
      * 
      */
-    public Output</* @Nullable */ List<String>> validationRecordFqdns() {
-        return this.validationRecordFqdns;
+    public Output<Optional<List<String>>> validationRecordFqdns() {
+        return Codegen.optional(this.validationRecordFqdns);
     }
 
     /**

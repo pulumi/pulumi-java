@@ -16,6 +16,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -52,8 +53,8 @@ public class Ami extends com.pulumi.resources.CustomResource {
      * @return Machine architecture for created instances. Defaults to &#34;x86_64&#34;.
      * 
      */
-    public Output</* @Nullable */ String> architecture() {
-        return this.architecture;
+    public Output<Optional<String>> architecture() {
+        return Codegen.optional(this.architecture);
     }
     /**
      * The ARN of the AMI.
@@ -80,8 +81,8 @@ public class Ami extends com.pulumi.resources.CustomResource {
      * @return A longer, human-readable description for the AMI.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Nested block describing an EBS block device that should be
@@ -110,8 +111,8 @@ public class Ami extends com.pulumi.resources.CustomResource {
      * @return Specifies whether enhanced networking with ENA is enabled. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> enaSupport() {
-        return this.enaSupport;
+    public Output<Optional<Boolean>> enaSupport() {
+        return Codegen.optional(this.enaSupport);
     }
     /**
      * Nested block describing an ephemeral block device that
@@ -200,8 +201,8 @@ public class Ami extends com.pulumi.resources.CustomResource {
      * kernel in created instances.
      * 
      */
-    public Output</* @Nullable */ String> kernelId() {
-        return this.kernelId;
+    public Output<Optional<String>> kernelId() {
+        return Codegen.optional(this.kernelId);
     }
     @Export(name="manageEbsSnapshots", type=Boolean.class, parameters={})
     private Output<Boolean> manageEbsSnapshots;
@@ -292,8 +293,8 @@ public class Ami extends com.pulumi.resources.CustomResource {
      * created instances.
      * 
      */
-    public Output</* @Nullable */ String> ramdiskId() {
-        return this.ramdiskId;
+    public Output<Optional<String>> ramdiskId() {
+        return Codegen.optional(this.ramdiskId);
     }
     /**
      * The name of the root device (for example, `/dev/sda1`, or `/dev/xvda`).
@@ -306,8 +307,8 @@ public class Ami extends com.pulumi.resources.CustomResource {
      * @return The name of the root device (for example, `/dev/sda1`, or `/dev/xvda`).
      * 
      */
-    public Output</* @Nullable */ String> rootDeviceName() {
-        return this.rootDeviceName;
+    public Output<Optional<String>> rootDeviceName() {
+        return Codegen.optional(this.rootDeviceName);
     }
     /**
      * The Snapshot ID for the root volume (for EBS-backed AMIs)
@@ -336,8 +337,8 @@ public class Ami extends com.pulumi.resources.CustomResource {
      * for created instances. No other value is supported at this time.
      * 
      */
-    public Output</* @Nullable */ String> sriovNetSupport() {
-        return this.sriovNetSupport;
+    public Output<Optional<String>> sriovNetSupport() {
+        return Codegen.optional(this.sriovNetSupport);
     }
     /**
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -350,8 +351,8 @@ public class Ami extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .
@@ -396,8 +397,8 @@ public class Ami extends com.pulumi.resources.CustomResource {
      * changes the set of further arguments that are required, as described below.
      * 
      */
-    public Output</* @Nullable */ String> virtualizationType() {
-        return this.virtualizationType;
+    public Output<Optional<String>> virtualizationType() {
+        return Codegen.optional(this.virtualizationType);
     }
 
     /**

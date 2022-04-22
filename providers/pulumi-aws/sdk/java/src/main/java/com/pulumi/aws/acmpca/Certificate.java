@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -121,8 +122,8 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return The template to use when issuing a certificate. See [ACM PCA Documentation](https://docs.aws.amazon.com/acm-pca/latest/userguide/UsingTemplates.html) for more information.
      * 
      */
-    public Output</* @Nullable */ String> templateArn() {
-        return this.templateArn;
+    public Output<Optional<String>> templateArn() {
+        return Codegen.optional(this.templateArn);
     }
     /**
      * Configures end of the validity period for the certificate. See validity block below.

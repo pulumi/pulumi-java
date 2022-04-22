@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -47,8 +48,8 @@ public class ProvisioningArtifact extends com.pulumi.resources.CustomResource {
      * @return Language code. Valid values: `en` (English), `jp` (Japanese), `zh` (Chinese). The default value is `en`.
      * 
      */
-    public Output</* @Nullable */ String> acceptLanguage() {
-        return this.acceptLanguage;
+    public Output<Optional<String>> acceptLanguage() {
+        return Codegen.optional(this.acceptLanguage);
     }
     /**
      * Whether the product version is active. Inactive provisioning artifacts are invisible to end users. End users cannot launch or update a provisioned product from an inactive provisioning artifact. Default is `true`.
@@ -61,8 +62,8 @@ public class ProvisioningArtifact extends com.pulumi.resources.CustomResource {
      * @return Whether the product version is active. Inactive provisioning artifacts are invisible to end users. End users cannot launch or update a provisioned product from an inactive provisioning artifact. Default is `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> active() {
-        return this.active;
+    public Output<Optional<Boolean>> active() {
+        return Codegen.optional(this.active);
     }
     /**
      * Time when the provisioning artifact was created.
@@ -103,8 +104,8 @@ public class ProvisioningArtifact extends com.pulumi.resources.CustomResource {
      * @return Whether AWS Service Catalog stops validating the specified provisioning artifact template even if it is invalid.
      * 
      */
-    public Output</* @Nullable */ Boolean> disableTemplateValidation() {
-        return this.disableTemplateValidation;
+    public Output<Optional<Boolean>> disableTemplateValidation() {
+        return Codegen.optional(this.disableTemplateValidation);
     }
     /**
      * Information set by the administrator to provide guidance to end users about which provisioning artifacts to use. Valid values are `DEFAULT` and `DEPRECATED`. The default is `DEFAULT`. Users are able to make updates to a provisioned product of a deprecated version but cannot launch new provisioned products using a deprecated version.
@@ -117,8 +118,8 @@ public class ProvisioningArtifact extends com.pulumi.resources.CustomResource {
      * @return Information set by the administrator to provide guidance to end users about which provisioning artifacts to use. Valid values are `DEFAULT` and `DEPRECATED`. The default is `DEFAULT`. Users are able to make updates to a provisioned product of a deprecated version but cannot launch new provisioned products using a deprecated version.
      * 
      */
-    public Output</* @Nullable */ String> guidance() {
-        return this.guidance;
+    public Output<Optional<String>> guidance() {
+        return Codegen.optional(this.guidance);
     }
     /**
      * Name of the provisioning artifact (for example, `v1`, `v2beta`). No spaces are allowed.
@@ -159,8 +160,8 @@ public class ProvisioningArtifact extends com.pulumi.resources.CustomResource {
      * @return Template source as the physical ID of the resource that contains the template. Currently only supports CloudFormation stack ARN. Specify the physical ID as `arn:[partition]:cloudformation:[region]:[account ID]:stack/[stack name]/[resource ID]`.
      * 
      */
-    public Output</* @Nullable */ String> templatePhysicalId() {
-        return this.templatePhysicalId;
+    public Output<Optional<String>> templatePhysicalId() {
+        return Codegen.optional(this.templatePhysicalId);
     }
     /**
      * Template source as URL of the CloudFormation template in Amazon S3.
@@ -173,8 +174,8 @@ public class ProvisioningArtifact extends com.pulumi.resources.CustomResource {
      * @return Template source as URL of the CloudFormation template in Amazon S3.
      * 
      */
-    public Output</* @Nullable */ String> templateUrl() {
-        return this.templateUrl;
+    public Output<Optional<String>> templateUrl() {
+        return Codegen.optional(this.templateUrl);
     }
     /**
      * Type of provisioning artifact. Valid values: `CLOUD_FORMATION_TEMPLATE`, `MARKETPLACE_AMI`, `MARKETPLACE_CAR` (Marketplace Clusters and AWS Resources).
@@ -187,8 +188,8 @@ public class ProvisioningArtifact extends com.pulumi.resources.CustomResource {
      * @return Type of provisioning artifact. Valid values: `CLOUD_FORMATION_TEMPLATE`, `MARKETPLACE_AMI`, `MARKETPLACE_CAR` (Marketplace Clusters and AWS Resources).
      * 
      */
-    public Output</* @Nullable */ String> type() {
-        return this.type;
+    public Output<Optional<String>> type() {
+        return Codegen.optional(this.type);
     }
 
     /**

@@ -16,6 +16,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class Accelerator extends com.pulumi.resources.CustomResource {
      * @return The attributes of the accelerator. Fields documented below.
      * 
      */
-    public Output</* @Nullable */ AcceleratorAttributes> attributes() {
-        return this.attributes;
+    public Output<Optional<AcceleratorAttributes>> attributes() {
+        return Codegen.optional(this.attributes);
     }
     /**
      * The DNS name of the accelerator. For example, `a5d53ff5ee6bca4ce.awsglobalaccelerator.com`.
@@ -79,8 +80,8 @@ public class Accelerator extends com.pulumi.resources.CustomResource {
      * @return Indicates whether the accelerator is enabled. Defaults to `true`. Valid values: `true`, `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> enabled() {
-        return this.enabled;
+    public Output<Optional<Boolean>> enabled() {
+        return Codegen.optional(this.enabled);
     }
     @Export(name="hostedZoneId", type=String.class, parameters={})
     private Output<String> hostedZoneId;
@@ -99,8 +100,8 @@ public class Accelerator extends com.pulumi.resources.CustomResource {
      * @return The value for the address type. Defaults to `IPV4`. Valid values: `IPV4`.
      * 
      */
-    public Output</* @Nullable */ String> ipAddressType() {
-        return this.ipAddressType;
+    public Output<Optional<String>> ipAddressType() {
+        return Codegen.optional(this.ipAddressType);
     }
     /**
      * IP address set associated with the accelerator.
@@ -141,8 +142,8 @@ public class Accelerator extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -91,8 +92,8 @@ public class AccessPoint extends com.pulumi.resources.CustomResource {
      * @return Operating system user and group applied to all file system requests made using the access point. Detailed below.
      * 
      */
-    public Output</* @Nullable */ AccessPointPosixUser> posixUser() {
-        return this.posixUser;
+    public Output<Optional<AccessPointPosixUser>> posixUser() {
+        return Codegen.optional(this.posixUser);
     }
     /**
      * Directory on the Amazon EFS file system that the access point provides access to. Detailed below.
@@ -119,8 +120,8 @@ public class AccessPoint extends com.pulumi.resources.CustomResource {
      * @return Key-value mapping of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;

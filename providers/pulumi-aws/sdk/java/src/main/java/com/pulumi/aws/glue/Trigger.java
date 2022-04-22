@@ -16,6 +16,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -73,8 +74,8 @@ public class Trigger extends com.pulumi.resources.CustomResource {
      * @return A description of the new trigger.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Start the trigger. Defaults to `true`.
@@ -87,8 +88,8 @@ public class Trigger extends com.pulumi.resources.CustomResource {
      * @return Start the trigger. Defaults to `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> enabled() {
-        return this.enabled;
+    public Output<Optional<Boolean>> enabled() {
+        return Codegen.optional(this.enabled);
     }
     /**
      * The name of the trigger.
@@ -115,8 +116,8 @@ public class Trigger extends com.pulumi.resources.CustomResource {
      * @return A predicate to specify when the new trigger should fire. Required when trigger type is `CONDITIONAL`. See Predicate Below.
      * 
      */
-    public Output</* @Nullable */ TriggerPredicate> predicate() {
-        return this.predicate;
+    public Output<Optional<TriggerPredicate>> predicate() {
+        return Codegen.optional(this.predicate);
     }
     /**
      * A cron expression used to specify the schedule. [Time-Based Schedules for Jobs and Crawlers](https://docs.aws.amazon.com/glue/latest/dg/monitor-data-warehouse-schedule.html)
@@ -129,8 +130,8 @@ public class Trigger extends com.pulumi.resources.CustomResource {
      * @return A cron expression used to specify the schedule. [Time-Based Schedules for Jobs and Crawlers](https://docs.aws.amazon.com/glue/latest/dg/monitor-data-warehouse-schedule.html)
      * 
      */
-    public Output</* @Nullable */ String> schedule() {
-        return this.schedule;
+    public Output<Optional<String>> schedule() {
+        return Codegen.optional(this.schedule);
     }
     /**
      * Set to true to start `SCHEDULED` and `CONDITIONAL` triggers when created. True is not supported for `ON_DEMAND` triggers.
@@ -143,8 +144,8 @@ public class Trigger extends com.pulumi.resources.CustomResource {
      * @return Set to true to start `SCHEDULED` and `CONDITIONAL` triggers when created. True is not supported for `ON_DEMAND` triggers.
      * 
      */
-    public Output</* @Nullable */ Boolean> startOnCreation() {
-        return this.startOnCreation;
+    public Output<Optional<Boolean>> startOnCreation() {
+        return Codegen.optional(this.startOnCreation);
     }
     /**
      * The condition job state. Currently, the values supported are `SUCCEEDED`, `STOPPED`, `TIMEOUT` and `FAILED`. If this is specified, `job_name` must also be specified. Conflicts with `crawler_state`.
@@ -171,8 +172,8 @@ public class Trigger extends com.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
@@ -213,8 +214,8 @@ public class Trigger extends com.pulumi.resources.CustomResource {
      * @return A workflow to which the trigger should be associated to. Every workflow graph (DAG) needs a starting trigger (`ON_DEMAND` or `SCHEDULED` type) and can contain multiple additional `CONDITIONAL` triggers.
      * 
      */
-    public Output</* @Nullable */ String> workflowName() {
-        return this.workflowName;
+    public Output<Optional<String>> workflowName() {
+        return Codegen.optional(this.workflowName);
     }
 
     /**

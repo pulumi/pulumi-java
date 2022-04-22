@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -63,8 +64,8 @@ public class InstanceFleet extends com.pulumi.resources.CustomResource {
      * @return Configuration block for instance fleet
      * 
      */
-    public Output</* @Nullable */ List<InstanceFleetInstanceTypeConfig>> instanceTypeConfigs() {
-        return this.instanceTypeConfigs;
+    public Output<Optional<List<InstanceFleetInstanceTypeConfig>>> instanceTypeConfigs() {
+        return Codegen.optional(this.instanceTypeConfigs);
     }
     /**
      * Configuration block for launch specification
@@ -77,8 +78,8 @@ public class InstanceFleet extends com.pulumi.resources.CustomResource {
      * @return Configuration block for launch specification
      * 
      */
-    public Output</* @Nullable */ InstanceFleetLaunchSpecifications> launchSpecifications() {
-        return this.launchSpecifications;
+    public Output<Optional<InstanceFleetLaunchSpecifications>> launchSpecifications() {
+        return Codegen.optional(this.launchSpecifications);
     }
     /**
      * Friendly name given to the instance fleet.
@@ -117,8 +118,8 @@ public class InstanceFleet extends com.pulumi.resources.CustomResource {
      * @return The target capacity of On-Demand units for the instance fleet, which determines how many On-Demand instances to provision.
      * 
      */
-    public Output</* @Nullable */ Integer> targetOnDemandCapacity() {
-        return this.targetOnDemandCapacity;
+    public Output<Optional<Integer>> targetOnDemandCapacity() {
+        return Codegen.optional(this.targetOnDemandCapacity);
     }
     /**
      * The target capacity of Spot units for the instance fleet, which determines how many Spot instances to provision.
@@ -131,8 +132,8 @@ public class InstanceFleet extends com.pulumi.resources.CustomResource {
      * @return The target capacity of Spot units for the instance fleet, which determines how many Spot instances to provision.
      * 
      */
-    public Output</* @Nullable */ Integer> targetSpotCapacity() {
-        return this.targetSpotCapacity;
+    public Output<Optional<Integer>> targetSpotCapacity() {
+        return Codegen.optional(this.targetSpotCapacity);
     }
 
     /**

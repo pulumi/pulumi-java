@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -149,8 +150,8 @@ public class GatewayAssociation extends com.pulumi.resources.CustomResource {
      * Used for cross-account Direct Connect gateway associations.
      * 
      */
-    public Output</* @Nullable */ String> proposalId() {
-        return this.proposalId;
+    public Output<Optional<String>> proposalId() {
+        return Codegen.optional(this.proposalId);
     }
     /**
      * @deprecated
@@ -161,8 +162,8 @@ public class GatewayAssociation extends com.pulumi.resources.CustomResource {
     @Export(name="vpnGatewayId", type=String.class, parameters={})
     private Output</* @Nullable */ String> vpnGatewayId;
 
-    public Output</* @Nullable */ String> vpnGatewayId() {
-        return this.vpnGatewayId;
+    public Output<Optional<String>> vpnGatewayId() {
+        return Codegen.optional(this.vpnGatewayId);
     }
 
     /**

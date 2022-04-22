@@ -16,6 +16,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -73,8 +74,8 @@ public class Directory extends com.pulumi.resources.CustomResource {
      * @return Connector related information about the directory. Fields documented below.
      * 
      */
-    public Output</* @Nullable */ DirectoryConnectSettings> connectSettings() {
-        return this.connectSettings;
+    public Output<Optional<DirectoryConnectSettings>> connectSettings() {
+        return Codegen.optional(this.connectSettings);
     }
     /**
      * A textual description for the directory.
@@ -87,8 +88,8 @@ public class Directory extends com.pulumi.resources.CustomResource {
      * @return A textual description for the directory.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * A list of IP addresses of the DNS servers for the directory or connector.
@@ -129,8 +130,8 @@ public class Directory extends com.pulumi.resources.CustomResource {
      * @return Whether to enable single-sign on for the directory. Requires `alias`. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableSso() {
-        return this.enableSso;
+    public Output<Optional<Boolean>> enableSso() {
+        return Codegen.optional(this.enableSso);
     }
     /**
      * The fully qualified name for the directory, such as `corp.example.com`
@@ -213,8 +214,8 @@ public class Directory extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .
@@ -241,8 +242,8 @@ public class Directory extends com.pulumi.resources.CustomResource {
      * @return The directory type (`SimpleAD`, `ADConnector` or `MicrosoftAD` are accepted values). Defaults to `SimpleAD`.
      * 
      */
-    public Output</* @Nullable */ String> type() {
-        return this.type;
+    public Output<Optional<String>> type() {
+        return Codegen.optional(this.type);
     }
     /**
      * VPC related information about the directory. Fields documented below.
@@ -255,8 +256,8 @@ public class Directory extends com.pulumi.resources.CustomResource {
      * @return VPC related information about the directory. Fields documented below.
      * 
      */
-    public Output</* @Nullable */ DirectoryVpcSettings> vpcSettings() {
-        return this.vpcSettings;
+    public Output<Optional<DirectoryVpcSettings>> vpcSettings() {
+        return Codegen.optional(this.vpcSettings);
     }
 
     /**

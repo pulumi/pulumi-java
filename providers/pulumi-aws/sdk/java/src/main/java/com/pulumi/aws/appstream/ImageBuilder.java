@@ -17,6 +17,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class ImageBuilder extends com.pulumi.resources.CustomResource {
      * @return Set of interface VPC endpoint (interface endpoint) objects. Maximum of 4. See below.
      * 
      */
-    public Output</* @Nullable */ List<ImageBuilderAccessEndpoint>> accessEndpoints() {
-        return this.accessEndpoints;
+    public Output<Optional<List<ImageBuilderAccessEndpoint>>> accessEndpoints() {
+        return Codegen.optional(this.accessEndpoints);
     }
     /**
      * The version of the AppStream 2.0 agent to use for this image builder.
@@ -242,8 +243,8 @@ public class ImageBuilder extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the instance. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.

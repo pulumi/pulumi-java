@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -113,8 +114,8 @@ public class Partition extends com.pulumi.resources.CustomResource {
      * @return A map of initialization parameters for the SerDe, in key-value form.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> parameters() {
-        return this.parameters;
+    public Output<Optional<Map<String,String>>> parameters() {
+        return Codegen.optional(this.parameters);
     }
     /**
      * The values that define the partition.
@@ -141,8 +142,8 @@ public class Partition extends com.pulumi.resources.CustomResource {
      * @return A storage descriptor object containing information about the physical storage of this table. You can refer to the [Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-StorageDescriptor) for a full explanation of this object.
      * 
      */
-    public Output</* @Nullable */ PartitionStorageDescriptor> storageDescriptor() {
-        return this.storageDescriptor;
+    public Output<Optional<PartitionStorageDescriptor>> storageDescriptor() {
+        return Codegen.optional(this.storageDescriptor);
     }
     @Export(name="tableName", type=String.class, parameters={})
     private Output<String> tableName;

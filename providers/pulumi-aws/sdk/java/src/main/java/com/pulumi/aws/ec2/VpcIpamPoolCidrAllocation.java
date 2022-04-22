@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -56,8 +57,8 @@ public class VpcIpamPoolCidrAllocation extends com.pulumi.resources.CustomResour
      * @return The description for the allocation.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Exclude a particular CIDR range from being returned by the pool.
@@ -70,8 +71,8 @@ public class VpcIpamPoolCidrAllocation extends com.pulumi.resources.CustomResour
      * @return Exclude a particular CIDR range from being returned by the pool.
      * 
      */
-    public Output</* @Nullable */ List<String>> disallowedCidrs() {
-        return this.disallowedCidrs;
+    public Output<Optional<List<String>>> disallowedCidrs() {
+        return Codegen.optional(this.disallowedCidrs);
     }
     @Export(name="ipamPoolAllocationId", type=String.class, parameters={})
     private Output<String> ipamPoolAllocationId;
@@ -104,8 +105,8 @@ public class VpcIpamPoolCidrAllocation extends com.pulumi.resources.CustomResour
      * @return The netmask length of the CIDR you would like to allocate to the IPAM pool. Valid Values: `0-32`.
      * 
      */
-    public Output</* @Nullable */ Integer> netmaskLength() {
-        return this.netmaskLength;
+    public Output<Optional<Integer>> netmaskLength() {
+        return Codegen.optional(this.netmaskLength);
     }
     /**
      * The ID of the resource.

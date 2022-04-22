@@ -22,6 +22,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -78,8 +79,8 @@ public class EventTarget extends com.pulumi.resources.CustomResource {
      * @return Parameters used when you are using the rule to invoke an Amazon Batch Job. Documented below. A maximum of 1 are allowed.
      * 
      */
-    public Output</* @Nullable */ EventTargetBatchTarget> batchTarget() {
-        return this.batchTarget;
+    public Output<Optional<EventTargetBatchTarget>> batchTarget() {
+        return Codegen.optional(this.batchTarget);
     }
     /**
      * Parameters used when you are providing a dead letter config. Documented below. A maximum of 1 are allowed.
@@ -92,8 +93,8 @@ public class EventTarget extends com.pulumi.resources.CustomResource {
      * @return Parameters used when you are providing a dead letter config. Documented below. A maximum of 1 are allowed.
      * 
      */
-    public Output</* @Nullable */ EventTargetDeadLetterConfig> deadLetterConfig() {
-        return this.deadLetterConfig;
+    public Output<Optional<EventTargetDeadLetterConfig>> deadLetterConfig() {
+        return Codegen.optional(this.deadLetterConfig);
     }
     /**
      * Parameters used when you are using the rule to invoke Amazon ECS Task. Documented below. A maximum of 1 are allowed.
@@ -106,8 +107,8 @@ public class EventTarget extends com.pulumi.resources.CustomResource {
      * @return Parameters used when you are using the rule to invoke Amazon ECS Task. Documented below. A maximum of 1 are allowed.
      * 
      */
-    public Output</* @Nullable */ EventTargetEcsTarget> ecsTarget() {
-        return this.ecsTarget;
+    public Output<Optional<EventTargetEcsTarget>> ecsTarget() {
+        return Codegen.optional(this.ecsTarget);
     }
     /**
      * The event bus to associate with the rule. If you omit this, the `default` event bus is used.
@@ -120,8 +121,8 @@ public class EventTarget extends com.pulumi.resources.CustomResource {
      * @return The event bus to associate with the rule. If you omit this, the `default` event bus is used.
      * 
      */
-    public Output</* @Nullable */ String> eventBusName() {
-        return this.eventBusName;
+    public Output<Optional<String>> eventBusName() {
+        return Codegen.optional(this.eventBusName);
     }
     /**
      * Parameters used when you are using the rule to invoke an API Gateway REST endpoint. Documented below. A maximum of 1 is allowed.
@@ -134,8 +135,8 @@ public class EventTarget extends com.pulumi.resources.CustomResource {
      * @return Parameters used when you are using the rule to invoke an API Gateway REST endpoint. Documented below. A maximum of 1 is allowed.
      * 
      */
-    public Output</* @Nullable */ EventTargetHttpTarget> httpTarget() {
-        return this.httpTarget;
+    public Output<Optional<EventTargetHttpTarget>> httpTarget() {
+        return Codegen.optional(this.httpTarget);
     }
     /**
      * Valid JSON text passed to the target. Conflicts with `input_path` and `input_transformer`.
@@ -148,8 +149,8 @@ public class EventTarget extends com.pulumi.resources.CustomResource {
      * @return Valid JSON text passed to the target. Conflicts with `input_path` and `input_transformer`.
      * 
      */
-    public Output</* @Nullable */ String> input() {
-        return this.input;
+    public Output<Optional<String>> input() {
+        return Codegen.optional(this.input);
     }
     /**
      * The value of the [JSONPath](http://goessner.net/articles/JsonPath/) that is used for extracting part of the matched event when passing it to the target. Conflicts with `input` and `input_transformer`.
@@ -162,8 +163,8 @@ public class EventTarget extends com.pulumi.resources.CustomResource {
      * @return The value of the [JSONPath](http://goessner.net/articles/JsonPath/) that is used for extracting part of the matched event when passing it to the target. Conflicts with `input` and `input_transformer`.
      * 
      */
-    public Output</* @Nullable */ String> inputPath() {
-        return this.inputPath;
+    public Output<Optional<String>> inputPath() {
+        return Codegen.optional(this.inputPath);
     }
     /**
      * Parameters used when you are providing a custom input to a target based on certain event data. Conflicts with `input` and `input_path`.
@@ -176,8 +177,8 @@ public class EventTarget extends com.pulumi.resources.CustomResource {
      * @return Parameters used when you are providing a custom input to a target based on certain event data. Conflicts with `input` and `input_path`.
      * 
      */
-    public Output</* @Nullable */ EventTargetInputTransformer> inputTransformer() {
-        return this.inputTransformer;
+    public Output<Optional<EventTargetInputTransformer>> inputTransformer() {
+        return Codegen.optional(this.inputTransformer);
     }
     /**
      * Parameters used when you are using the rule to invoke an Amazon Kinesis Stream. Documented below. A maximum of 1 are allowed.
@@ -190,8 +191,8 @@ public class EventTarget extends com.pulumi.resources.CustomResource {
      * @return Parameters used when you are using the rule to invoke an Amazon Kinesis Stream. Documented below. A maximum of 1 are allowed.
      * 
      */
-    public Output</* @Nullable */ EventTargetKinesisTarget> kinesisTarget() {
-        return this.kinesisTarget;
+    public Output<Optional<EventTargetKinesisTarget>> kinesisTarget() {
+        return Codegen.optional(this.kinesisTarget);
     }
     /**
      * Parameters used when you are using the rule to invoke an Amazon Redshift Statement. Documented below. A maximum of 1 are allowed.
@@ -204,8 +205,8 @@ public class EventTarget extends com.pulumi.resources.CustomResource {
      * @return Parameters used when you are using the rule to invoke an Amazon Redshift Statement. Documented below. A maximum of 1 are allowed.
      * 
      */
-    public Output</* @Nullable */ EventTargetRedshiftTarget> redshiftTarget() {
-        return this.redshiftTarget;
+    public Output<Optional<EventTargetRedshiftTarget>> redshiftTarget() {
+        return Codegen.optional(this.redshiftTarget);
     }
     /**
      * Parameters used when you are providing retry policies. Documented below. A maximum of 1 are allowed.
@@ -218,8 +219,8 @@ public class EventTarget extends com.pulumi.resources.CustomResource {
      * @return Parameters used when you are providing retry policies. Documented below. A maximum of 1 are allowed.
      * 
      */
-    public Output</* @Nullable */ EventTargetRetryPolicy> retryPolicy() {
-        return this.retryPolicy;
+    public Output<Optional<EventTargetRetryPolicy>> retryPolicy() {
+        return Codegen.optional(this.retryPolicy);
     }
     /**
      * The Amazon Resource Name (ARN) of the IAM role to be used for this target when the rule is triggered. Required if `ecs_target` is used or target in `arn` is EC2 instance, Kinesis data stream, Step Functions state machine, or Event Bus in different account or region.
@@ -232,8 +233,8 @@ public class EventTarget extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the IAM role to be used for this target when the rule is triggered. Required if `ecs_target` is used or target in `arn` is EC2 instance, Kinesis data stream, Step Functions state machine, or Event Bus in different account or region.
      * 
      */
-    public Output</* @Nullable */ String> roleArn() {
-        return this.roleArn;
+    public Output<Optional<String>> roleArn() {
+        return Codegen.optional(this.roleArn);
     }
     /**
      * The name of the rule you want to add targets to.
@@ -260,8 +261,8 @@ public class EventTarget extends com.pulumi.resources.CustomResource {
      * @return Parameters used when you are using the rule to invoke Amazon EC2 Run Command. Documented below. A maximum of 5 are allowed.
      * 
      */
-    public Output</* @Nullable */ List<EventTargetRunCommandTarget>> runCommandTargets() {
-        return this.runCommandTargets;
+    public Output<Optional<List<EventTargetRunCommandTarget>>> runCommandTargets() {
+        return Codegen.optional(this.runCommandTargets);
     }
     /**
      * Parameters used when you are using the rule to invoke an Amazon SQS Queue. Documented below. A maximum of 1 are allowed.
@@ -274,8 +275,8 @@ public class EventTarget extends com.pulumi.resources.CustomResource {
      * @return Parameters used when you are using the rule to invoke an Amazon SQS Queue. Documented below. A maximum of 1 are allowed.
      * 
      */
-    public Output</* @Nullable */ EventTargetSqsTarget> sqsTarget() {
-        return this.sqsTarget;
+    public Output<Optional<EventTargetSqsTarget>> sqsTarget() {
+        return Codegen.optional(this.sqsTarget);
     }
     /**
      * The unique target assignment ID.  If missing, will generate a random, unique id.

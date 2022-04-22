@@ -16,6 +16,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -59,8 +60,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return Run bundle install when deploying for application of type `rails`.
      * 
      */
-    public Output</* @Nullable */ String> autoBundleOnDeploy() {
-        return this.autoBundleOnDeploy;
+    public Output<Optional<String>> autoBundleOnDeploy() {
+        return Codegen.optional(this.autoBundleOnDeploy);
     }
     /**
      * Specify activity and workflow workers for your app using the aws-flow gem.
@@ -73,8 +74,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return Specify activity and workflow workers for your app using the aws-flow gem.
      * 
      */
-    public Output</* @Nullable */ String> awsFlowRubySettings() {
-        return this.awsFlowRubySettings;
+    public Output<Optional<String>> awsFlowRubySettings() {
+        return Codegen.optional(this.awsFlowRubySettings);
     }
     /**
      * The data source&#39;s ARN.
@@ -87,8 +88,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return The data source&#39;s ARN.
      * 
      */
-    public Output</* @Nullable */ String> dataSourceArn() {
-        return this.dataSourceArn;
+    public Output<Optional<String>> dataSourceArn() {
+        return Codegen.optional(this.dataSourceArn);
     }
     /**
      * The database name.
@@ -101,8 +102,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return The database name.
      * 
      */
-    public Output</* @Nullable */ String> dataSourceDatabaseName() {
-        return this.dataSourceDatabaseName;
+    public Output<Optional<String>> dataSourceDatabaseName() {
+        return Codegen.optional(this.dataSourceDatabaseName);
     }
     /**
      * The data source&#39;s type one of `AutoSelectOpsworksMysqlInstance`, `OpsworksMysqlInstance`, or `RdsDbInstance`.
@@ -115,8 +116,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return The data source&#39;s type one of `AutoSelectOpsworksMysqlInstance`, `OpsworksMysqlInstance`, or `RdsDbInstance`.
      * 
      */
-    public Output</* @Nullable */ String> dataSourceType() {
-        return this.dataSourceType;
+    public Output<Optional<String>> dataSourceType() {
+        return Codegen.optional(this.dataSourceType);
     }
     /**
      * A description of the app.
@@ -129,8 +130,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return A description of the app.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Subfolder for the document root for application of type `rails`.
@@ -143,8 +144,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return Subfolder for the document root for application of type `rails`.
      * 
      */
-    public Output</* @Nullable */ String> documentRoot() {
-        return this.documentRoot;
+    public Output<Optional<String>> documentRoot() {
+        return Codegen.optional(this.documentRoot);
     }
     /**
      * A list of virtual host alias.
@@ -157,8 +158,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return A list of virtual host alias.
      * 
      */
-    public Output</* @Nullable */ List<String>> domains() {
-        return this.domains;
+    public Output<Optional<List<String>>> domains() {
+        return Codegen.optional(this.domains);
     }
     /**
      * Whether to enable SSL for the app. This must be set in order to let `ssl_configuration.private_key`, `ssl_configuration.certificate` and `ssl_configuration.chain` take effect.
@@ -171,8 +172,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return Whether to enable SSL for the app. This must be set in order to let `ssl_configuration.private_key`, `ssl_configuration.certificate` and `ssl_configuration.chain` take effect.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableSsl() {
-        return this.enableSsl;
+    public Output<Optional<Boolean>> enableSsl() {
+        return Codegen.optional(this.enableSsl);
     }
     /**
      * Object to define environment variables.  Object is described below.
@@ -185,8 +186,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return Object to define environment variables.  Object is described below.
      * 
      */
-    public Output</* @Nullable */ List<ApplicationEnvironment>> environments() {
-        return this.environments;
+    public Output<Optional<List<ApplicationEnvironment>>> environments() {
+        return Codegen.optional(this.environments);
     }
     /**
      * A human-readable name for the application.
@@ -213,8 +214,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return The name of the Rails environment for application of type `rails`.
      * 
      */
-    public Output</* @Nullable */ String> railsEnv() {
-        return this.railsEnv;
+    public Output<Optional<String>> railsEnv() {
+        return Codegen.optional(this.railsEnv);
     }
     /**
      * A short, machine-readable name for the application. This can only be defined on resource creation and ignored on resource update.
@@ -241,8 +242,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return The SSL configuration of the app. Object is described below.
      * 
      */
-    public Output</* @Nullable */ List<ApplicationSslConfiguration>> sslConfigurations() {
-        return this.sslConfigurations;
+    public Output<Optional<List<ApplicationSslConfiguration>>> sslConfigurations() {
+        return Codegen.optional(this.sslConfigurations);
     }
     /**
      * The id of the stack the application will belong to.

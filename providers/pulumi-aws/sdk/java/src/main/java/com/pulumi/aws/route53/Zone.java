@@ -15,6 +15,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -72,8 +73,8 @@ public class Zone extends com.pulumi.resources.CustomResource {
      * @return The ID of the reusable delegation set whose NS records you want to assign to the hosted zone. Conflicts with `vpc` as delegation sets can only be used for public zones.
      * 
      */
-    public Output</* @Nullable */ String> delegationSetId() {
-        return this.delegationSetId;
+    public Output<Optional<String>> delegationSetId() {
+        return Codegen.optional(this.delegationSetId);
     }
     /**
      * Whether to destroy all records (possibly managed outside of this provider) in the zone when destroying the zone.
@@ -86,8 +87,8 @@ public class Zone extends com.pulumi.resources.CustomResource {
      * @return Whether to destroy all records (possibly managed outside of this provider) in the zone when destroying the zone.
      * 
      */
-    public Output</* @Nullable */ Boolean> forceDestroy() {
-        return this.forceDestroy;
+    public Output<Optional<Boolean>> forceDestroy() {
+        return Codegen.optional(this.forceDestroy);
     }
     /**
      * This is the name of the hosted zone.
@@ -130,8 +131,8 @@ public class Zone extends com.pulumi.resources.CustomResource {
      * @return A mapping of tags to assign to the zone.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .
@@ -158,8 +159,8 @@ public class Zone extends com.pulumi.resources.CustomResource {
      * @return Configuration block(s) specifying VPC(s) to associate with a private hosted zone. Conflicts with the `delegation_set_id` argument in this resource and any `aws.route53.ZoneAssociation` resource specifying the same zone ID. Detailed below.
      * 
      */
-    public Output</* @Nullable */ List<ZoneVpc>> vpcs() {
-        return this.vpcs;
+    public Output<Optional<List<ZoneVpc>>> vpcs() {
+        return Codegen.optional(this.vpcs);
     }
     /**
      * The Hosted Zone ID. This can be referenced by zone records.

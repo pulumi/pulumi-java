@@ -14,6 +14,7 @@ import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -71,8 +72,8 @@ public class DeploymentStrategy extends com.pulumi.resources.CustomResource {
      * @return A description of the deployment strategy. Can be at most 1024 characters.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The amount of time AWS AppConfig monitors for alarms before considering the deployment to be complete and no longer eligible for automatic roll back. Minimum value of 0, maximum value of 1440.
@@ -85,8 +86,8 @@ public class DeploymentStrategy extends com.pulumi.resources.CustomResource {
      * @return The amount of time AWS AppConfig monitors for alarms before considering the deployment to be complete and no longer eligible for automatic roll back. Minimum value of 0, maximum value of 1440.
      * 
      */
-    public Output</* @Nullable */ Integer> finalBakeTimeInMinutes() {
-        return this.finalBakeTimeInMinutes;
+    public Output<Optional<Integer>> finalBakeTimeInMinutes() {
+        return Codegen.optional(this.finalBakeTimeInMinutes);
     }
     /**
      * The percentage of targets to receive a deployed configuration during each interval. Minimum value of 1.0, maximum value of 100.0.
@@ -113,8 +114,8 @@ public class DeploymentStrategy extends com.pulumi.resources.CustomResource {
      * @return The algorithm used to define how percentage grows over time. Valid value: `LINEAR` and `EXPONENTIAL`. Defaults to `LINEAR`.
      * 
      */
-    public Output</* @Nullable */ String> growthType() {
-        return this.growthType;
+    public Output<Optional<String>> growthType() {
+        return Codegen.optional(this.growthType);
     }
     /**
      * A name for the deployment strategy. Must be between 1 and 64 characters in length.
@@ -155,8 +156,8 @@ public class DeploymentStrategy extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.

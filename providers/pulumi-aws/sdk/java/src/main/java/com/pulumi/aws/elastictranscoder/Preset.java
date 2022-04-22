@@ -18,6 +18,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -61,8 +62,8 @@ public class Preset extends com.pulumi.resources.CustomResource {
      * @return Audio parameters object (documented below).
      * 
      */
-    public Output</* @Nullable */ PresetAudio> audio() {
-        return this.audio;
+    public Output<Optional<PresetAudio>> audio() {
+        return Codegen.optional(this.audio);
     }
     /**
      * Codec options for the audio parameters (documented below)
@@ -75,8 +76,8 @@ public class Preset extends com.pulumi.resources.CustomResource {
      * @return Codec options for the audio parameters (documented below)
      * 
      */
-    public Output</* @Nullable */ PresetAudioCodecOptions> audioCodecOptions() {
-        return this.audioCodecOptions;
+    public Output<Optional<PresetAudioCodecOptions>> audioCodecOptions() {
+        return Codegen.optional(this.audioCodecOptions);
     }
     /**
      * The container type for the output file. Valid values are `flac`, `flv`, `fmp4`, `gif`, `mp3`, `mp4`, `mpg`, `mxf`, `oga`, `ogg`, `ts`, and `webm`.
@@ -103,8 +104,8 @@ public class Preset extends com.pulumi.resources.CustomResource {
      * @return A description of the preset (maximum 255 characters)
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The name of the preset. (maximum 40 characters)
@@ -131,8 +132,8 @@ public class Preset extends com.pulumi.resources.CustomResource {
      * @return Thumbnail parameters object (documented below)
      * 
      */
-    public Output</* @Nullable */ PresetThumbnails> thumbnails() {
-        return this.thumbnails;
+    public Output<Optional<PresetThumbnails>> thumbnails() {
+        return Codegen.optional(this.thumbnails);
     }
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
@@ -151,8 +152,8 @@ public class Preset extends com.pulumi.resources.CustomResource {
      * @return Video parameters object (documented below)
      * 
      */
-    public Output</* @Nullable */ PresetVideo> video() {
-        return this.video;
+    public Output<Optional<PresetVideo>> video() {
+        return Codegen.optional(this.video);
     }
     /**
      * Codec options for the video parameters
@@ -165,8 +166,8 @@ public class Preset extends com.pulumi.resources.CustomResource {
      * @return Codec options for the video parameters
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> videoCodecOptions() {
-        return this.videoCodecOptions;
+    public Output<Optional<Map<String,String>>> videoCodecOptions() {
+        return Codegen.optional(this.videoCodecOptions);
     }
     /**
      * Watermark parameters for the video parameters (documented below)
@@ -179,8 +180,8 @@ public class Preset extends com.pulumi.resources.CustomResource {
      * @return Watermark parameters for the video parameters (documented below)
      * 
      */
-    public Output</* @Nullable */ List<PresetVideoWatermark>> videoWatermarks() {
-        return this.videoWatermarks;
+    public Output<Optional<List<PresetVideoWatermark>>> videoWatermarks() {
+        return Codegen.optional(this.videoWatermarks);
     }
 
     /**

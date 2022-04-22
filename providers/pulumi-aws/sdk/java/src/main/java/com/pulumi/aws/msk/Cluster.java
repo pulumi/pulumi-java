@@ -19,6 +19,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -132,8 +133,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Configuration block for specifying a client authentication. See below.
      * 
      */
-    public Output</* @Nullable */ ClusterClientAuthentication> clientAuthentication() {
-        return this.clientAuthentication;
+    public Output<Optional<ClusterClientAuthentication>> clientAuthentication() {
+        return Codegen.optional(this.clientAuthentication);
     }
     /**
      * Name of the MSK cluster.
@@ -160,8 +161,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Configuration block for specifying a MSK Configuration to attach to Kafka brokers. See below.
      * 
      */
-    public Output</* @Nullable */ ClusterConfigurationInfo> configurationInfo() {
-        return this.configurationInfo;
+    public Output<Optional<ClusterConfigurationInfo>> configurationInfo() {
+        return Codegen.optional(this.configurationInfo);
     }
     /**
      * Current version of the MSK Cluster used for updates, e.g., `K13V1IB3VIYZZH`
@@ -190,8 +191,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Configuration block for specifying encryption. See below.
      * 
      */
-    public Output</* @Nullable */ ClusterEncryptionInfo> encryptionInfo() {
-        return this.encryptionInfo;
+    public Output<Optional<ClusterEncryptionInfo>> encryptionInfo() {
+        return Codegen.optional(this.encryptionInfo);
     }
     /**
      * Specify the desired enhanced MSK CloudWatch monitoring level.  See [Monitoring Amazon MSK with Amazon CloudWatch](https://docs.aws.amazon.com/msk/latest/developerguide/monitoring.html)
@@ -204,8 +205,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Specify the desired enhanced MSK CloudWatch monitoring level.  See [Monitoring Amazon MSK with Amazon CloudWatch](https://docs.aws.amazon.com/msk/latest/developerguide/monitoring.html)
      * 
      */
-    public Output</* @Nullable */ String> enhancedMonitoring() {
-        return this.enhancedMonitoring;
+    public Output<Optional<String>> enhancedMonitoring() {
+        return Codegen.optional(this.enhancedMonitoring);
     }
     /**
      * Specify the desired Kafka software version.
@@ -232,8 +233,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Configuration block for streaming broker logs to Cloudwatch/S3/Kinesis Firehose. See below.
      * 
      */
-    public Output</* @Nullable */ ClusterLoggingInfo> loggingInfo() {
-        return this.loggingInfo;
+    public Output<Optional<ClusterLoggingInfo>> loggingInfo() {
+        return Codegen.optional(this.loggingInfo);
     }
     /**
      * The desired total number of broker nodes in the kafka cluster.  It must be a multiple of the number of specified client subnets.
@@ -260,8 +261,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Configuration block for JMX and Node monitoring for the MSK cluster. See below.
      * 
      */
-    public Output</* @Nullable */ ClusterOpenMonitoring> openMonitoring() {
-        return this.openMonitoring;
+    public Output<Optional<ClusterOpenMonitoring>> openMonitoring() {
+        return Codegen.optional(this.openMonitoring);
     }
     /**
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -274,8 +275,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

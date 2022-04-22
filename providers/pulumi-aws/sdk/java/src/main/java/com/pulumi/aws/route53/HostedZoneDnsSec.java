@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -56,8 +57,8 @@ public class HostedZoneDnsSec extends com.pulumi.resources.CustomResource {
      * @return Hosted Zone signing status. Valid values: `SIGNING`, `NOT_SIGNING`. Defaults to `SIGNING`.
      * 
      */
-    public Output</* @Nullable */ String> signingStatus() {
-        return this.signingStatus;
+    public Output<Optional<String>> signingStatus() {
+        return Codegen.optional(this.signingStatus);
     }
 
     /**

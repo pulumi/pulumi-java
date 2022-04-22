@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class EventPermission extends com.pulumi.resources.CustomResource {
      * @return The action that you are enabling the other account to perform. Defaults to `events:PutEvents`.
      * 
      */
-    public Output</* @Nullable */ String> action() {
-        return this.action;
+    public Output<Optional<String>> action() {
+        return Codegen.optional(this.action);
     }
     /**
      * Configuration block to limit the event bus permissions you are granting to only accounts that fulfill the condition. Specified below.
@@ -59,8 +60,8 @@ public class EventPermission extends com.pulumi.resources.CustomResource {
      * @return Configuration block to limit the event bus permissions you are granting to only accounts that fulfill the condition. Specified below.
      * 
      */
-    public Output</* @Nullable */ EventPermissionCondition> condition() {
-        return this.condition;
+    public Output<Optional<EventPermissionCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * The event bus to set the permissions on. If you omit this, the permissions are set on the `default` event bus.
@@ -73,8 +74,8 @@ public class EventPermission extends com.pulumi.resources.CustomResource {
      * @return The event bus to set the permissions on. If you omit this, the permissions are set on the `default` event bus.
      * 
      */
-    public Output</* @Nullable */ String> eventBusName() {
-        return this.eventBusName;
+    public Output<Optional<String>> eventBusName() {
+        return Codegen.optional(this.eventBusName);
     }
     /**
      * The 12-digit AWS account ID that you are permitting to put events to your default event bus. Specify `*` to permit any account to put events to your default event bus, optionally limited by `condition`.

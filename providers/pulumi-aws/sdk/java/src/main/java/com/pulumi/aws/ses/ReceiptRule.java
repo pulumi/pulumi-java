@@ -20,6 +20,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -49,8 +50,8 @@ public class ReceiptRule extends com.pulumi.resources.CustomResource {
      * @return A list of Add Header Action blocks. Documented below.
      * 
      */
-    public Output</* @Nullable */ List<ReceiptRuleAddHeaderAction>> addHeaderActions() {
-        return this.addHeaderActions;
+    public Output<Optional<List<ReceiptRuleAddHeaderAction>>> addHeaderActions() {
+        return Codegen.optional(this.addHeaderActions);
     }
     /**
      * The name of the rule to place this rule after
@@ -63,8 +64,8 @@ public class ReceiptRule extends com.pulumi.resources.CustomResource {
      * @return The name of the rule to place this rule after
      * 
      */
-    public Output</* @Nullable */ String> after() {
-        return this.after;
+    public Output<Optional<String>> after() {
+        return Codegen.optional(this.after);
     }
     /**
      * The SES receipt rule ARN.
@@ -91,8 +92,8 @@ public class ReceiptRule extends com.pulumi.resources.CustomResource {
      * @return A list of Bounce Action blocks. Documented below.
      * 
      */
-    public Output</* @Nullable */ List<ReceiptRuleBounceAction>> bounceActions() {
-        return this.bounceActions;
+    public Output<Optional<List<ReceiptRuleBounceAction>>> bounceActions() {
+        return Codegen.optional(this.bounceActions);
     }
     /**
      * If true, the rule will be enabled
@@ -105,8 +106,8 @@ public class ReceiptRule extends com.pulumi.resources.CustomResource {
      * @return If true, the rule will be enabled
      * 
      */
-    public Output</* @Nullable */ Boolean> enabled() {
-        return this.enabled;
+    public Output<Optional<Boolean>> enabled() {
+        return Codegen.optional(this.enabled);
     }
     /**
      * A list of Lambda Action blocks. Documented below.
@@ -119,8 +120,8 @@ public class ReceiptRule extends com.pulumi.resources.CustomResource {
      * @return A list of Lambda Action blocks. Documented below.
      * 
      */
-    public Output</* @Nullable */ List<ReceiptRuleLambdaAction>> lambdaActions() {
-        return this.lambdaActions;
+    public Output<Optional<List<ReceiptRuleLambdaAction>>> lambdaActions() {
+        return Codegen.optional(this.lambdaActions);
     }
     /**
      * The name of the rule
@@ -147,8 +148,8 @@ public class ReceiptRule extends com.pulumi.resources.CustomResource {
      * @return A list of email addresses
      * 
      */
-    public Output</* @Nullable */ List<String>> recipients() {
-        return this.recipients;
+    public Output<Optional<List<String>>> recipients() {
+        return Codegen.optional(this.recipients);
     }
     /**
      * The name of the rule set
@@ -175,8 +176,8 @@ public class ReceiptRule extends com.pulumi.resources.CustomResource {
      * @return A list of S3 Action blocks. Documented below.
      * 
      */
-    public Output</* @Nullable */ List<ReceiptRuleS3Action>> s3Actions() {
-        return this.s3Actions;
+    public Output<Optional<List<ReceiptRuleS3Action>>> s3Actions() {
+        return Codegen.optional(this.s3Actions);
     }
     /**
      * If true, incoming emails will be scanned for spam and viruses
@@ -189,8 +190,8 @@ public class ReceiptRule extends com.pulumi.resources.CustomResource {
      * @return If true, incoming emails will be scanned for spam and viruses
      * 
      */
-    public Output</* @Nullable */ Boolean> scanEnabled() {
-        return this.scanEnabled;
+    public Output<Optional<Boolean>> scanEnabled() {
+        return Codegen.optional(this.scanEnabled);
     }
     /**
      * A list of SNS Action blocks. Documented below.
@@ -203,8 +204,8 @@ public class ReceiptRule extends com.pulumi.resources.CustomResource {
      * @return A list of SNS Action blocks. Documented below.
      * 
      */
-    public Output</* @Nullable */ List<ReceiptRuleSnsAction>> snsActions() {
-        return this.snsActions;
+    public Output<Optional<List<ReceiptRuleSnsAction>>> snsActions() {
+        return Codegen.optional(this.snsActions);
     }
     /**
      * A list of Stop Action blocks. Documented below.
@@ -217,8 +218,8 @@ public class ReceiptRule extends com.pulumi.resources.CustomResource {
      * @return A list of Stop Action blocks. Documented below.
      * 
      */
-    public Output</* @Nullable */ List<ReceiptRuleStopAction>> stopActions() {
-        return this.stopActions;
+    public Output<Optional<List<ReceiptRuleStopAction>>> stopActions() {
+        return Codegen.optional(this.stopActions);
     }
     /**
      * `Require` or `Optional`
@@ -245,8 +246,8 @@ public class ReceiptRule extends com.pulumi.resources.CustomResource {
      * @return A list of WorkMail Action blocks. Documented below.
      * 
      */
-    public Output</* @Nullable */ List<ReceiptRuleWorkmailAction>> workmailActions() {
-        return this.workmailActions;
+    public Output<Optional<List<ReceiptRuleWorkmailAction>>> workmailActions() {
+        return Codegen.optional(this.workmailActions);
     }
 
     /**

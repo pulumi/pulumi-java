@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -76,8 +77,8 @@ public class Studio extends com.pulumi.resources.CustomResource {
      * @return A detailed description of the Amazon EMR Studio.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The ID of the Amazon EMR Studio Engine security group. The Engine security group allows inbound network traffic from the Workspace security group, and it must be in the same VPC specified by `vpc_id`.
@@ -104,8 +105,8 @@ public class Studio extends com.pulumi.resources.CustomResource {
      * @return The authentication endpoint of your identity provider (IdP). Specify this value when you use IAM authentication and want to let federated users log in to a Studio with the Studio URL and credentials from your IdP. Amazon EMR Studio redirects users to this endpoint to enter credentials.
      * 
      */
-    public Output</* @Nullable */ String> idpAuthUrl() {
-        return this.idpAuthUrl;
+    public Output<Optional<String>> idpAuthUrl() {
+        return Codegen.optional(this.idpAuthUrl);
     }
     /**
      * The name that your identity provider (IdP) uses for its RelayState parameter. For example, RelayState or TargetSource. Specify this value when you use IAM authentication and want to let federated users log in to a Studio using the Studio URL. The RelayState parameter differs by IdP.
@@ -118,8 +119,8 @@ public class Studio extends com.pulumi.resources.CustomResource {
      * @return The name that your identity provider (IdP) uses for its RelayState parameter. For example, RelayState or TargetSource. Specify this value when you use IAM authentication and want to let federated users log in to a Studio using the Studio URL. The RelayState parameter differs by IdP.
      * 
      */
-    public Output</* @Nullable */ String> idpRelayStateParameterName() {
-        return this.idpRelayStateParameterName;
+    public Output<Optional<String>> idpRelayStateParameterName() {
+        return Codegen.optional(this.idpRelayStateParameterName);
     }
     /**
      * A descriptive name for the Amazon EMR Studio.
@@ -174,8 +175,8 @@ public class Studio extends com.pulumi.resources.CustomResource {
      * @return list of tags to apply to the EMR Cluster. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
@@ -208,8 +209,8 @@ public class Studio extends com.pulumi.resources.CustomResource {
      * @return - The IAM user role that users and groups assume when logged in to an Amazon EMR Studio. Only specify a User Role when you use Amazon Web Services SSO authentication. The permissions attached to the User Role can be scoped down for each user or group using session policies.
      * 
      */
-    public Output</* @Nullable */ String> userRole() {
-        return this.userRole;
+    public Output<Optional<String>> userRole() {
+        return Codegen.optional(this.userRole);
     }
     /**
      * The ID of the Amazon Virtual Private Cloud (Amazon VPC) to associate with the Studio.

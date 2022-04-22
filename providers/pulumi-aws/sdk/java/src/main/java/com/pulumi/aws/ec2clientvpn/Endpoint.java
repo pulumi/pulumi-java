@@ -16,6 +16,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -102,8 +103,8 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return A brief description of the Client VPN endpoint.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The DNS name to be used by clients when establishing their VPN session.
@@ -130,8 +131,8 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return Information about the DNS servers to be used for DNS resolution. A Client VPN endpoint can have up to two DNS servers. If no DNS server is specified, the DNS address of the connecting device is used.
      * 
      */
-    public Output</* @Nullable */ List<String>> dnsServers() {
-        return this.dnsServers;
+    public Output<Optional<List<String>>> dnsServers() {
+        return Codegen.optional(this.dnsServers);
     }
     /**
      * Specify whether to enable the self-service portal for the Client VPN endpoint. Values can be `enabled` or `disabled`. Default value is `disabled`.
@@ -144,8 +145,8 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return Specify whether to enable the self-service portal for the Client VPN endpoint. Values can be `enabled` or `disabled`. Default value is `disabled`.
      * 
      */
-    public Output</* @Nullable */ String> selfServicePortal() {
-        return this.selfServicePortal;
+    public Output<Optional<String>> selfServicePortal() {
+        return Codegen.optional(this.selfServicePortal);
     }
     /**
      * The ARN of the ACM server certificate.
@@ -172,8 +173,8 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return Indicates whether split-tunnel is enabled on VPN endpoint. Default value is `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> splitTunnel() {
-        return this.splitTunnel;
+    public Output<Optional<Boolean>> splitTunnel() {
+        return Codegen.optional(this.splitTunnel);
     }
     /**
      * The current state of the Client VPN endpoint.
@@ -200,8 +201,8 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return A mapping of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
@@ -228,8 +229,8 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return The transport protocol to be used by the VPN session. Default value is `udp`.
      * 
      */
-    public Output</* @Nullable */ String> transportProtocol() {
-        return this.transportProtocol;
+    public Output<Optional<String>> transportProtocol() {
+        return Codegen.optional(this.transportProtocol);
     }
 
     /**

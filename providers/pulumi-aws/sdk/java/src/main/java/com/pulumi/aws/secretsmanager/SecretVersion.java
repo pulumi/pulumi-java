@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -57,8 +58,8 @@ public class SecretVersion extends com.pulumi.resources.CustomResource {
      * @return Specifies binary data that you want to encrypt and store in this version of the secret. This is required if secret_string is not set. Needs to be encoded to base64.
      * 
      */
-    public Output</* @Nullable */ String> secretBinary() {
-        return this.secretBinary;
+    public Output<Optional<String>> secretBinary() {
+        return Codegen.optional(this.secretBinary);
     }
     /**
      * Specifies the secret to which you want to add a new version. You can specify either the Amazon Resource Name (ARN) or the friendly name of the secret. The secret must already exist.
@@ -85,8 +86,8 @@ public class SecretVersion extends com.pulumi.resources.CustomResource {
      * @return Specifies text data that you want to encrypt and store in this version of the secret. This is required if secret_binary is not set.
      * 
      */
-    public Output</* @Nullable */ String> secretString() {
-        return this.secretString;
+    public Output<Optional<String>> secretString() {
+        return Codegen.optional(this.secretString);
     }
     /**
      * The unique identifier of the version of the secret.

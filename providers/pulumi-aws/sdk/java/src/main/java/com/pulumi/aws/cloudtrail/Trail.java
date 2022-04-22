@@ -17,6 +17,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -56,8 +57,8 @@ public class Trail extends com.pulumi.resources.CustomResource {
      * @return Specifies an advanced event selector for enabling data event logging. Fields documented below. Conflicts with `event_selector`.
      * 
      */
-    public Output</* @Nullable */ List<TrailAdvancedEventSelector>> advancedEventSelectors() {
-        return this.advancedEventSelectors;
+    public Output<Optional<List<TrailAdvancedEventSelector>>> advancedEventSelectors() {
+        return Codegen.optional(this.advancedEventSelectors);
     }
     /**
      * ARN of the trail.
@@ -84,8 +85,8 @@ public class Trail extends com.pulumi.resources.CustomResource {
      * @return Log group name using an ARN that represents the log group to which CloudTrail logs will be delivered. Note that CloudTrail requires the Log Stream wildcard.
      * 
      */
-    public Output</* @Nullable */ String> cloudWatchLogsGroupArn() {
-        return this.cloudWatchLogsGroupArn;
+    public Output<Optional<String>> cloudWatchLogsGroupArn() {
+        return Codegen.optional(this.cloudWatchLogsGroupArn);
     }
     /**
      * Role for the CloudWatch Logs endpoint to assume to write to a user’s log group.
@@ -98,8 +99,8 @@ public class Trail extends com.pulumi.resources.CustomResource {
      * @return Role for the CloudWatch Logs endpoint to assume to write to a user’s log group.
      * 
      */
-    public Output</* @Nullable */ String> cloudWatchLogsRoleArn() {
-        return this.cloudWatchLogsRoleArn;
+    public Output<Optional<String>> cloudWatchLogsRoleArn() {
+        return Codegen.optional(this.cloudWatchLogsRoleArn);
     }
     /**
      * Whether log file integrity validation is enabled. Defaults to `false`.
@@ -112,8 +113,8 @@ public class Trail extends com.pulumi.resources.CustomResource {
      * @return Whether log file integrity validation is enabled. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableLogFileValidation() {
-        return this.enableLogFileValidation;
+    public Output<Optional<Boolean>> enableLogFileValidation() {
+        return Codegen.optional(this.enableLogFileValidation);
     }
     /**
      * Enables logging for the trail. Defaults to `true`. Setting this to `false` will pause logging.
@@ -126,8 +127,8 @@ public class Trail extends com.pulumi.resources.CustomResource {
      * @return Enables logging for the trail. Defaults to `true`. Setting this to `false` will pause logging.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableLogging() {
-        return this.enableLogging;
+    public Output<Optional<Boolean>> enableLogging() {
+        return Codegen.optional(this.enableLogging);
     }
     /**
      * Specifies an event selector for enabling data event logging. Fields documented below. Please note the [CloudTrail limits](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html) when configuring these. Conflicts with `advanced_event_selector`.
@@ -140,8 +141,8 @@ public class Trail extends com.pulumi.resources.CustomResource {
      * @return Specifies an event selector for enabling data event logging. Fields documented below. Please note the [CloudTrail limits](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html) when configuring these. Conflicts with `advanced_event_selector`.
      * 
      */
-    public Output</* @Nullable */ List<TrailEventSelector>> eventSelectors() {
-        return this.eventSelectors;
+    public Output<Optional<List<TrailEventSelector>>> eventSelectors() {
+        return Codegen.optional(this.eventSelectors);
     }
     /**
      * Region in which the trail was created.
@@ -168,8 +169,8 @@ public class Trail extends com.pulumi.resources.CustomResource {
      * @return Whether the trail is publishing events from global services such as IAM to the log files. Defaults to `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> includeGlobalServiceEvents() {
-        return this.includeGlobalServiceEvents;
+    public Output<Optional<Boolean>> includeGlobalServiceEvents() {
+        return Codegen.optional(this.includeGlobalServiceEvents);
     }
     /**
      * Configuration block for identifying unusual operational activity. See details below.
@@ -182,8 +183,8 @@ public class Trail extends com.pulumi.resources.CustomResource {
      * @return Configuration block for identifying unusual operational activity. See details below.
      * 
      */
-    public Output</* @Nullable */ List<TrailInsightSelector>> insightSelectors() {
-        return this.insightSelectors;
+    public Output<Optional<List<TrailInsightSelector>>> insightSelectors() {
+        return Codegen.optional(this.insightSelectors);
     }
     /**
      * Whether the trail is created in the current region or in all regions. Defaults to `false`.
@@ -196,8 +197,8 @@ public class Trail extends com.pulumi.resources.CustomResource {
      * @return Whether the trail is created in the current region or in all regions. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> isMultiRegionTrail() {
-        return this.isMultiRegionTrail;
+    public Output<Optional<Boolean>> isMultiRegionTrail() {
+        return Codegen.optional(this.isMultiRegionTrail);
     }
     /**
      * Whether the trail is an AWS Organizations trail. Organization trails log events for the master account and all member accounts. Can only be created in the organization master account. Defaults to `false`.
@@ -210,8 +211,8 @@ public class Trail extends com.pulumi.resources.CustomResource {
      * @return Whether the trail is an AWS Organizations trail. Organization trails log events for the master account and all member accounts. Can only be created in the organization master account. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> isOrganizationTrail() {
-        return this.isOrganizationTrail;
+    public Output<Optional<Boolean>> isOrganizationTrail() {
+        return Codegen.optional(this.isOrganizationTrail);
     }
     /**
      * KMS key ARN to use to encrypt the logs delivered by CloudTrail.
@@ -224,8 +225,8 @@ public class Trail extends com.pulumi.resources.CustomResource {
      * @return KMS key ARN to use to encrypt the logs delivered by CloudTrail.
      * 
      */
-    public Output</* @Nullable */ String> kmsKeyId() {
-        return this.kmsKeyId;
+    public Output<Optional<String>> kmsKeyId() {
+        return Codegen.optional(this.kmsKeyId);
     }
     /**
      * Specifies the name of the advanced event selector.
@@ -266,8 +267,8 @@ public class Trail extends com.pulumi.resources.CustomResource {
      * @return S3 key prefix that follows the name of the bucket you have designated for log file delivery.
      * 
      */
-    public Output</* @Nullable */ String> s3KeyPrefix() {
-        return this.s3KeyPrefix;
+    public Output<Optional<String>> s3KeyPrefix() {
+        return Codegen.optional(this.s3KeyPrefix);
     }
     /**
      * Name of the Amazon SNS topic defined for notification of log file delivery.
@@ -280,8 +281,8 @@ public class Trail extends com.pulumi.resources.CustomResource {
      * @return Name of the Amazon SNS topic defined for notification of log file delivery.
      * 
      */
-    public Output</* @Nullable */ String> snsTopicName() {
-        return this.snsTopicName;
+    public Output<Optional<String>> snsTopicName() {
+        return Codegen.optional(this.snsTopicName);
     }
     /**
      * Map of tags to assign to the trail. If configured with provider defaultTags present, tags with matching keys will overwrite those defined at the provider-level.
@@ -294,8 +295,8 @@ public class Trail extends com.pulumi.resources.CustomResource {
      * @return Map of tags to assign to the trail. If configured with provider defaultTags present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Map of tags assigned to the resource, including those inherited from the provider.

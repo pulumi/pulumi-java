@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -114,8 +115,8 @@ public class ImagePipeline extends com.pulumi.resources.CustomResource {
      * @return Description of the image pipeline.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Amazon Resource Name (ARN) of the Image Builder Distribution Configuration.
@@ -128,8 +129,8 @@ public class ImagePipeline extends com.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the Image Builder Distribution Configuration.
      * 
      */
-    public Output</* @Nullable */ String> distributionConfigurationArn() {
-        return this.distributionConfigurationArn;
+    public Output<Optional<String>> distributionConfigurationArn() {
+        return Codegen.optional(this.distributionConfigurationArn);
     }
     /**
      * Whether additional information about the image being created is collected. Defaults to `true`.
@@ -142,8 +143,8 @@ public class ImagePipeline extends com.pulumi.resources.CustomResource {
      * @return Whether additional information about the image being created is collected. Defaults to `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> enhancedImageMetadataEnabled() {
-        return this.enhancedImageMetadataEnabled;
+    public Output<Optional<Boolean>> enhancedImageMetadataEnabled() {
+        return Codegen.optional(this.enhancedImageMetadataEnabled);
     }
     /**
      * Amazon Resource Name (ARN) of the Image Builder Infrastructure Recipe.
@@ -226,8 +227,8 @@ public class ImagePipeline extends com.pulumi.resources.CustomResource {
      * @return Configuration block with schedule settings. Detailed below.
      * 
      */
-    public Output</* @Nullable */ ImagePipelineSchedule> schedule() {
-        return this.schedule;
+    public Output<Optional<ImagePipelineSchedule>> schedule() {
+        return Codegen.optional(this.schedule);
     }
     /**
      * Status of the image pipeline. Valid values are `DISABLED` and `ENABLED`. Defaults to `ENABLED`.
@@ -240,8 +241,8 @@ public class ImagePipeline extends com.pulumi.resources.CustomResource {
      * @return Status of the image pipeline. Valid values are `DISABLED` and `ENABLED`. Defaults to `ENABLED`.
      * 
      */
-    public Output</* @Nullable */ String> status() {
-        return this.status;
+    public Output<Optional<String>> status() {
+        return Codegen.optional(this.status);
     }
     /**
      * Key-value map of resource tags for the image pipeline. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -254,8 +255,8 @@ public class ImagePipeline extends com.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags for the image pipeline. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

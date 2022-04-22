@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -58,8 +59,8 @@ public class TrafficMirrorFilterRule extends com.pulumi.resources.CustomResource
      * @return Description of the traffic mirror filter rule.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Destination CIDR block to assign to the Traffic Mirror rule.
@@ -86,8 +87,8 @@ public class TrafficMirrorFilterRule extends com.pulumi.resources.CustomResource
      * @return Destination port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below
      * 
      */
-    public Output</* @Nullable */ TrafficMirrorFilterRuleDestinationPortRange> destinationPortRange() {
-        return this.destinationPortRange;
+    public Output<Optional<TrafficMirrorFilterRuleDestinationPortRange>> destinationPortRange() {
+        return Codegen.optional(this.destinationPortRange);
     }
     /**
      * Protocol number, for example 17 (UDP), to assign to the Traffic Mirror rule. For information about the protocol value, see [Protocol Numbers](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml) on the Internet Assigned Numbers Authority (IANA) website.
@@ -100,8 +101,8 @@ public class TrafficMirrorFilterRule extends com.pulumi.resources.CustomResource
      * @return Protocol number, for example 17 (UDP), to assign to the Traffic Mirror rule. For information about the protocol value, see [Protocol Numbers](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml) on the Internet Assigned Numbers Authority (IANA) website.
      * 
      */
-    public Output</* @Nullable */ Integer> protocol() {
-        return this.protocol;
+    public Output<Optional<Integer>> protocol() {
+        return Codegen.optional(this.protocol);
     }
     /**
      * Action to take (accept | reject) on the filtered traffic. Valid values are `accept` and `reject`
@@ -156,8 +157,8 @@ public class TrafficMirrorFilterRule extends com.pulumi.resources.CustomResource
      * @return Source port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below
      * 
      */
-    public Output</* @Nullable */ TrafficMirrorFilterRuleSourcePortRange> sourcePortRange() {
-        return this.sourcePortRange;
+    public Output<Optional<TrafficMirrorFilterRuleSourcePortRange>> sourcePortRange() {
+        return Codegen.optional(this.sourcePortRange);
     }
     /**
      * Direction of traffic to be captured. Valid values are `ingress` and `egress`

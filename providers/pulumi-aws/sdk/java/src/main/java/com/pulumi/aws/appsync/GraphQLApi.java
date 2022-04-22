@@ -19,6 +19,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -48,8 +49,8 @@ public class GraphQLApi extends com.pulumi.resources.CustomResource {
      * @return One or more additional authentication providers for the GraphqlApi. Defined below.
      * 
      */
-    public Output</* @Nullable */ List<GraphQLApiAdditionalAuthenticationProvider>> additionalAuthenticationProviders() {
-        return this.additionalAuthenticationProviders;
+    public Output<Optional<List<GraphQLApiAdditionalAuthenticationProvider>>> additionalAuthenticationProviders() {
+        return Codegen.optional(this.additionalAuthenticationProviders);
     }
     /**
      * The ARN
@@ -90,8 +91,8 @@ public class GraphQLApi extends com.pulumi.resources.CustomResource {
      * @return Nested argument containing Lambda authorizer configuration. Defined below.
      * 
      */
-    public Output</* @Nullable */ GraphQLApiLambdaAuthorizerConfig> lambdaAuthorizerConfig() {
-        return this.lambdaAuthorizerConfig;
+    public Output<Optional<GraphQLApiLambdaAuthorizerConfig>> lambdaAuthorizerConfig() {
+        return Codegen.optional(this.lambdaAuthorizerConfig);
     }
     /**
      * Nested argument containing logging configuration. Defined below.
@@ -104,8 +105,8 @@ public class GraphQLApi extends com.pulumi.resources.CustomResource {
      * @return Nested argument containing logging configuration. Defined below.
      * 
      */
-    public Output</* @Nullable */ GraphQLApiLogConfig> logConfig() {
-        return this.logConfig;
+    public Output<Optional<GraphQLApiLogConfig>> logConfig() {
+        return Codegen.optional(this.logConfig);
     }
     /**
      * A user-supplied name for the GraphqlApi.
@@ -132,8 +133,8 @@ public class GraphQLApi extends com.pulumi.resources.CustomResource {
      * @return Nested argument containing OpenID Connect configuration. Defined below.
      * 
      */
-    public Output</* @Nullable */ GraphQLApiOpenidConnectConfig> openidConnectConfig() {
-        return this.openidConnectConfig;
+    public Output<Optional<GraphQLApiOpenidConnectConfig>> openidConnectConfig() {
+        return Codegen.optional(this.openidConnectConfig);
     }
     /**
      * The schema definition, in GraphQL schema language format. This provider cannot perform drift detection of this configuration.
@@ -146,8 +147,8 @@ public class GraphQLApi extends com.pulumi.resources.CustomResource {
      * @return The schema definition, in GraphQL schema language format. This provider cannot perform drift detection of this configuration.
      * 
      */
-    public Output</* @Nullable */ String> schema() {
-        return this.schema;
+    public Output<Optional<String>> schema() {
+        return Codegen.optional(this.schema);
     }
     /**
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -160,8 +161,8 @@ public class GraphQLApi extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
@@ -202,8 +203,8 @@ public class GraphQLApi extends com.pulumi.resources.CustomResource {
      * @return The Amazon Cognito User Pool configuration. Defined below.
      * 
      */
-    public Output</* @Nullable */ GraphQLApiUserPoolConfig> userPoolConfig() {
-        return this.userPoolConfig;
+    public Output<Optional<GraphQLApiUserPoolConfig>> userPoolConfig() {
+        return Codegen.optional(this.userPoolConfig);
     }
     /**
      * Whether tracing with X-ray is enabled. Defaults to false.
@@ -216,8 +217,8 @@ public class GraphQLApi extends com.pulumi.resources.CustomResource {
      * @return Whether tracing with X-ray is enabled. Defaults to false.
      * 
      */
-    public Output</* @Nullable */ Boolean> xrayEnabled() {
-        return this.xrayEnabled;
+    public Output<Optional<Boolean>> xrayEnabled() {
+        return Codegen.optional(this.xrayEnabled);
     }
 
     /**

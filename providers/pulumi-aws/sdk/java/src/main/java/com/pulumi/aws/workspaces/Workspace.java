@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -101,8 +102,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return Indicates whether the data stored on the root volume is encrypted.
      * 
      */
-    public Output</* @Nullable */ Boolean> rootVolumeEncryptionEnabled() {
-        return this.rootVolumeEncryptionEnabled;
+    public Output<Optional<Boolean>> rootVolumeEncryptionEnabled() {
+        return Codegen.optional(this.rootVolumeEncryptionEnabled);
     }
     /**
      * The operational state of the WorkSpace.
@@ -129,8 +130,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return The tags for the WorkSpace. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .
@@ -171,8 +172,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return Indicates whether the data stored on the user volume is encrypted.
      * 
      */
-    public Output</* @Nullable */ Boolean> userVolumeEncryptionEnabled() {
-        return this.userVolumeEncryptionEnabled;
+    public Output<Optional<Boolean>> userVolumeEncryptionEnabled() {
+        return Codegen.optional(this.userVolumeEncryptionEnabled);
     }
     /**
      * The symmetric AWS KMS customer master key (CMK) used to encrypt data stored on your WorkSpace. Amazon WorkSpaces does not support asymmetric CMKs.
@@ -185,8 +186,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return The symmetric AWS KMS customer master key (CMK) used to encrypt data stored on your WorkSpace. Amazon WorkSpaces does not support asymmetric CMKs.
      * 
      */
-    public Output</* @Nullable */ String> volumeEncryptionKey() {
-        return this.volumeEncryptionKey;
+    public Output<Optional<String>> volumeEncryptionKey() {
+        return Codegen.optional(this.volumeEncryptionKey);
     }
     /**
      * The WorkSpace properties.

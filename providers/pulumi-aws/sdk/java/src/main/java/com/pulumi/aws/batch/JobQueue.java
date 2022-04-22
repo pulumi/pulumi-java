@@ -14,6 +14,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -105,8 +106,8 @@ public class JobQueue extends com.pulumi.resources.CustomResource {
      * @return The ARN of the fair share scheduling policy. If this parameter is specified, the job queue uses a fair share scheduling policy. If this parameter isn&#39;t specified, the job queue uses a first in, first out (FIFO) scheduling policy. After a job queue is created, you can replace but can&#39;t remove the fair share scheduling policy.
      * 
      */
-    public Output</* @Nullable */ String> schedulingPolicyArn() {
-        return this.schedulingPolicyArn;
+    public Output<Optional<String>> schedulingPolicyArn() {
+        return Codegen.optional(this.schedulingPolicyArn);
     }
     /**
      * The state of the job queue. Must be one of: `ENABLED` or `DISABLED`
@@ -133,8 +134,8 @@ public class JobQueue extends com.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .
