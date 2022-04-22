@@ -17,6 +17,7 @@ import java.lang.Double;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -109,8 +110,8 @@ public class ResourcePool extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the extended location.
      * 
      */
-    public Output</* @Nullable */ ExtendedLocationResponse> extendedLocation() {
-        return this.extendedLocation;
+    public Output<Optional<ExtendedLocationResponse>> extendedLocation() {
+        return Codegen.optional(this.extendedLocation);
     }
     /**
      * Gets or sets the inventory Item ID for the resource pool.
@@ -123,8 +124,8 @@ public class ResourcePool extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the inventory Item ID for the resource pool.
      * 
      */
-    public Output</* @Nullable */ String> inventoryItemId() {
-        return this.inventoryItemId;
+    public Output<Optional<String>> inventoryItemId() {
+        return Codegen.optional(this.inventoryItemId);
     }
     /**
      * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
@@ -137,8 +138,8 @@ public class ResourcePool extends com.pulumi.resources.CustomResource {
      * @return Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
      * 
      */
-    public Output</* @Nullable */ String> kind() {
-        return this.kind;
+    public Output<Optional<String>> kind() {
+        return Codegen.optional(this.kind);
     }
     /**
      * Gets or sets the location.
@@ -227,8 +228,8 @@ public class ResourcePool extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the vCenter MoRef (Managed Object Reference) ID for the resource pool.
      * 
      */
-    public Output</* @Nullable */ String> moRefId() {
-        return this.moRefId;
+    public Output<Optional<String>> moRefId() {
+        return Codegen.optional(this.moRefId);
     }
     /**
      * Gets or sets the name.
@@ -297,8 +298,8 @@ public class ResourcePool extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Gets or sets the type of the resource.
@@ -339,8 +340,8 @@ public class ResourcePool extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the ARM Id of the vCenter resource in which this resource pool resides.
      * 
      */
-    public Output</* @Nullable */ String> vCenterId() {
-        return this.vCenterId;
+    public Output<Optional<String>> vCenterId() {
+        return Codegen.optional(this.vCenterId);
     }
 
     /**

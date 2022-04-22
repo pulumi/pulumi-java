@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -58,8 +59,8 @@ public class ResourceGroup extends com.pulumi.resources.CustomResource {
      * @return The ID of the resource that manages this resource group.
      * 
      */
-    public Output</* @Nullable */ String> managedBy() {
-        return this.managedBy;
+    public Output<Optional<String>> managedBy() {
+        return Codegen.optional(this.managedBy);
     }
     /**
      * The name of the resource group.
@@ -100,8 +101,8 @@ public class ResourceGroup extends com.pulumi.resources.CustomResource {
      * @return The tags attached to the resource group.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource group.

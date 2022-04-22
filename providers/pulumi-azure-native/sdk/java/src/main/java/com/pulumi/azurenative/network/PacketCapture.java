@@ -16,6 +16,7 @@ import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class PacketCapture extends com.pulumi.resources.CustomResource {
      * @return Number of bytes captured per packet, the remaining bytes are truncated.
      * 
      */
-    public Output</* @Nullable */ Double> bytesToCapturePerPacket() {
-        return this.bytesToCapturePerPacket;
+    public Output<Optional<Double>> bytesToCapturePerPacket() {
+        return Codegen.optional(this.bytesToCapturePerPacket);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
@@ -74,8 +75,8 @@ public class PacketCapture extends com.pulumi.resources.CustomResource {
      * @return A list of packet capture filters.
      * 
      */
-    public Output</* @Nullable */ List<PacketCaptureFilterResponse>> filters() {
-        return this.filters;
+    public Output<Optional<List<PacketCaptureFilterResponse>>> filters() {
+        return Codegen.optional(this.filters);
     }
     /**
      * Name of the packet capture session.
@@ -144,8 +145,8 @@ public class PacketCapture extends com.pulumi.resources.CustomResource {
      * @return Maximum duration of the capture session in seconds.
      * 
      */
-    public Output</* @Nullable */ Integer> timeLimitInSeconds() {
-        return this.timeLimitInSeconds;
+    public Output<Optional<Integer>> timeLimitInSeconds() {
+        return Codegen.optional(this.timeLimitInSeconds);
     }
     /**
      * Maximum size of the capture output.
@@ -158,8 +159,8 @@ public class PacketCapture extends com.pulumi.resources.CustomResource {
      * @return Maximum size of the capture output.
      * 
      */
-    public Output</* @Nullable */ Double> totalBytesPerSession() {
-        return this.totalBytesPerSession;
+    public Output<Optional<Double>> totalBytesPerSession() {
+        return Codegen.optional(this.totalBytesPerSession);
     }
 
     /**

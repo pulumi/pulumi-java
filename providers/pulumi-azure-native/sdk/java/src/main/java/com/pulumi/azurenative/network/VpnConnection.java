@@ -20,6 +20,7 @@ import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -50,8 +51,8 @@ public class VpnConnection extends com.pulumi.resources.CustomResource {
      * @return Expected bandwidth in MBPS.
      * 
      */
-    public Output</* @Nullable */ Integer> connectionBandwidth() {
-        return this.connectionBandwidth;
+    public Output<Optional<Integer>> connectionBandwidth() {
+        return Codegen.optional(this.connectionBandwidth);
     }
     /**
      * The connection status.
@@ -78,8 +79,8 @@ public class VpnConnection extends com.pulumi.resources.CustomResource {
      * @return DPD timeout in seconds for vpn connection.
      * 
      */
-    public Output</* @Nullable */ Integer> dpdTimeoutSeconds() {
-        return this.dpdTimeoutSeconds;
+    public Output<Optional<Integer>> dpdTimeoutSeconds() {
+        return Codegen.optional(this.dpdTimeoutSeconds);
     }
     /**
      * Egress bytes transferred.
@@ -106,8 +107,8 @@ public class VpnConnection extends com.pulumi.resources.CustomResource {
      * @return EnableBgp flag.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableBgp() {
-        return this.enableBgp;
+    public Output<Optional<Boolean>> enableBgp() {
+        return Codegen.optional(this.enableBgp);
     }
     /**
      * Enable internet security.
@@ -120,8 +121,8 @@ public class VpnConnection extends com.pulumi.resources.CustomResource {
      * @return Enable internet security.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableInternetSecurity() {
-        return this.enableInternetSecurity;
+    public Output<Optional<Boolean>> enableInternetSecurity() {
+        return Codegen.optional(this.enableInternetSecurity);
     }
     /**
      * EnableBgp flag.
@@ -134,8 +135,8 @@ public class VpnConnection extends com.pulumi.resources.CustomResource {
      * @return EnableBgp flag.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableRateLimiting() {
-        return this.enableRateLimiting;
+    public Output<Optional<Boolean>> enableRateLimiting() {
+        return Codegen.optional(this.enableRateLimiting);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
@@ -176,8 +177,8 @@ public class VpnConnection extends com.pulumi.resources.CustomResource {
      * @return The IPSec Policies to be considered by this connection.
      * 
      */
-    public Output</* @Nullable */ List<IpsecPolicyResponse>> ipsecPolicies() {
-        return this.ipsecPolicies;
+    public Output<Optional<List<IpsecPolicyResponse>>> ipsecPolicies() {
+        return Codegen.optional(this.ipsecPolicies);
     }
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
@@ -190,8 +191,8 @@ public class VpnConnection extends com.pulumi.resources.CustomResource {
      * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * The provisioning state of the VPN connection resource.
@@ -218,8 +219,8 @@ public class VpnConnection extends com.pulumi.resources.CustomResource {
      * @return Id of the connected vpn site.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> remoteVpnSite() {
-        return this.remoteVpnSite;
+    public Output<Optional<SubResourceResponse>> remoteVpnSite() {
+        return Codegen.optional(this.remoteVpnSite);
     }
     /**
      * The Routing Configuration indicating the associated and propagated route tables on this connection.
@@ -232,8 +233,8 @@ public class VpnConnection extends com.pulumi.resources.CustomResource {
      * @return The Routing Configuration indicating the associated and propagated route tables on this connection.
      * 
      */
-    public Output</* @Nullable */ RoutingConfigurationResponse> routingConfiguration() {
-        return this.routingConfiguration;
+    public Output<Optional<RoutingConfigurationResponse>> routingConfiguration() {
+        return Codegen.optional(this.routingConfiguration);
     }
     /**
      * Routing weight for vpn connection.
@@ -246,8 +247,8 @@ public class VpnConnection extends com.pulumi.resources.CustomResource {
      * @return Routing weight for vpn connection.
      * 
      */
-    public Output</* @Nullable */ Integer> routingWeight() {
-        return this.routingWeight;
+    public Output<Optional<Integer>> routingWeight() {
+        return Codegen.optional(this.routingWeight);
     }
     /**
      * SharedKey for the vpn connection.
@@ -260,8 +261,8 @@ public class VpnConnection extends com.pulumi.resources.CustomResource {
      * @return SharedKey for the vpn connection.
      * 
      */
-    public Output</* @Nullable */ String> sharedKey() {
-        return this.sharedKey;
+    public Output<Optional<String>> sharedKey() {
+        return Codegen.optional(this.sharedKey);
     }
     /**
      * The Traffic Selector Policies to be considered by this connection.
@@ -274,8 +275,8 @@ public class VpnConnection extends com.pulumi.resources.CustomResource {
      * @return The Traffic Selector Policies to be considered by this connection.
      * 
      */
-    public Output</* @Nullable */ List<TrafficSelectorPolicyResponse>> trafficSelectorPolicies() {
-        return this.trafficSelectorPolicies;
+    public Output<Optional<List<TrafficSelectorPolicyResponse>>> trafficSelectorPolicies() {
+        return Codegen.optional(this.trafficSelectorPolicies);
     }
     /**
      * Use local azure ip to initiate connection.
@@ -288,8 +289,8 @@ public class VpnConnection extends com.pulumi.resources.CustomResource {
      * @return Use local azure ip to initiate connection.
      * 
      */
-    public Output</* @Nullable */ Boolean> useLocalAzureIpAddress() {
-        return this.useLocalAzureIpAddress;
+    public Output<Optional<Boolean>> useLocalAzureIpAddress() {
+        return Codegen.optional(this.useLocalAzureIpAddress);
     }
     /**
      * Enable policy-based traffic selectors.
@@ -302,8 +303,8 @@ public class VpnConnection extends com.pulumi.resources.CustomResource {
      * @return Enable policy-based traffic selectors.
      * 
      */
-    public Output</* @Nullable */ Boolean> usePolicyBasedTrafficSelectors() {
-        return this.usePolicyBasedTrafficSelectors;
+    public Output<Optional<Boolean>> usePolicyBasedTrafficSelectors() {
+        return Codegen.optional(this.usePolicyBasedTrafficSelectors);
     }
     /**
      * Connection protocol used for this connection.
@@ -316,8 +317,8 @@ public class VpnConnection extends com.pulumi.resources.CustomResource {
      * @return Connection protocol used for this connection.
      * 
      */
-    public Output</* @Nullable */ String> vpnConnectionProtocolType() {
-        return this.vpnConnectionProtocolType;
+    public Output<Optional<String>> vpnConnectionProtocolType() {
+        return Codegen.optional(this.vpnConnectionProtocolType);
     }
     /**
      * List of all vpn site link connections to the gateway.
@@ -330,8 +331,8 @@ public class VpnConnection extends com.pulumi.resources.CustomResource {
      * @return List of all vpn site link connections to the gateway.
      * 
      */
-    public Output</* @Nullable */ List<VpnSiteLinkConnectionResponse>> vpnLinkConnections() {
-        return this.vpnLinkConnections;
+    public Output<Optional<List<VpnSiteLinkConnectionResponse>>> vpnLinkConnections() {
+        return Codegen.optional(this.vpnLinkConnections);
     }
 
     /**

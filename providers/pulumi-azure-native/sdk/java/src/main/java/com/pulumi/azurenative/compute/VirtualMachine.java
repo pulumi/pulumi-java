@@ -29,6 +29,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -59,8 +60,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return Specifies additional capabilities enabled or disabled on the virtual machine.
      * 
      */
-    public Output</* @Nullable */ AdditionalCapabilitiesResponse> additionalCapabilities() {
-        return this.additionalCapabilities;
+    public Output<Optional<AdditionalCapabilitiesResponse>> additionalCapabilities() {
+        return Codegen.optional(this.additionalCapabilities);
     }
     /**
      * Specifies information about the availability set that the virtual machine should be assigned to. Virtual machines specified in the same availability set are allocated to different nodes to maximize availability. For more information about availability sets, see [Availability sets overview](https://docs.microsoft.com/azure/virtual-machines/availability-set-overview). &lt;br&gt;&lt;br&gt; For more information on Azure planned maintenance, see [Maintenance and updates for Virtual Machines in Azure](https://docs.microsoft.com/azure/virtual-machines/maintenance-and-updates) &lt;br&gt;&lt;br&gt; Currently, a VM can only be added to availability set at creation time. The availability set to which the VM is being added should be under the same resource group as the availability set resource. An existing VM cannot be added to an availability set. &lt;br&gt;&lt;br&gt;This property cannot exist along with a non-null properties.virtualMachineScaleSet reference.
@@ -73,8 +74,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return Specifies information about the availability set that the virtual machine should be assigned to. Virtual machines specified in the same availability set are allocated to different nodes to maximize availability. For more information about availability sets, see [Availability sets overview](https://docs.microsoft.com/azure/virtual-machines/availability-set-overview). &lt;br&gt;&lt;br&gt; For more information on Azure planned maintenance, see [Maintenance and updates for Virtual Machines in Azure](https://docs.microsoft.com/azure/virtual-machines/maintenance-and-updates) &lt;br&gt;&lt;br&gt; Currently, a VM can only be added to availability set at creation time. The availability set to which the VM is being added should be under the same resource group as the availability set resource. An existing VM cannot be added to an availability set. &lt;br&gt;&lt;br&gt;This property cannot exist along with a non-null properties.virtualMachineScaleSet reference.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> availabilitySet() {
-        return this.availabilitySet;
+    public Output<Optional<SubResourceResponse>> availabilitySet() {
+        return Codegen.optional(this.availabilitySet);
     }
     /**
      * Specifies the billing related details of a Azure Spot virtual machine. &lt;br&gt;&lt;br&gt;Minimum api-version: 2019-03-01.
@@ -87,8 +88,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return Specifies the billing related details of a Azure Spot virtual machine. &lt;br&gt;&lt;br&gt;Minimum api-version: 2019-03-01.
      * 
      */
-    public Output</* @Nullable */ BillingProfileResponse> billingProfile() {
-        return this.billingProfile;
+    public Output<Optional<BillingProfileResponse>> billingProfile() {
+        return Codegen.optional(this.billingProfile);
     }
     /**
      * Specifies the boot diagnostic settings state. &lt;br&gt;&lt;br&gt;Minimum api-version: 2015-06-15.
@@ -101,8 +102,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return Specifies the boot diagnostic settings state. &lt;br&gt;&lt;br&gt;Minimum api-version: 2015-06-15.
      * 
      */
-    public Output</* @Nullable */ DiagnosticsProfileResponse> diagnosticsProfile() {
-        return this.diagnosticsProfile;
+    public Output<Optional<DiagnosticsProfileResponse>> diagnosticsProfile() {
+        return Codegen.optional(this.diagnosticsProfile);
     }
     /**
      * Specifies the eviction policy for the Azure Spot virtual machine and Azure Spot scale set. &lt;br&gt;&lt;br&gt;For Azure Spot virtual machines, both &#39;Deallocate&#39; and &#39;Delete&#39; are supported and the minimum api-version is 2019-03-01. &lt;br&gt;&lt;br&gt;For Azure Spot scale sets, both &#39;Deallocate&#39; and &#39;Delete&#39; are supported and the minimum api-version is 2017-10-30-preview.
@@ -115,8 +116,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return Specifies the eviction policy for the Azure Spot virtual machine and Azure Spot scale set. &lt;br&gt;&lt;br&gt;For Azure Spot virtual machines, both &#39;Deallocate&#39; and &#39;Delete&#39; are supported and the minimum api-version is 2019-03-01. &lt;br&gt;&lt;br&gt;For Azure Spot scale sets, both &#39;Deallocate&#39; and &#39;Delete&#39; are supported and the minimum api-version is 2017-10-30-preview.
      * 
      */
-    public Output</* @Nullable */ String> evictionPolicy() {
-        return this.evictionPolicy;
+    public Output<Optional<String>> evictionPolicy() {
+        return Codegen.optional(this.evictionPolicy);
     }
     /**
      * The extended location of the Virtual Machine.
@@ -129,8 +130,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return The extended location of the Virtual Machine.
      * 
      */
-    public Output</* @Nullable */ ExtendedLocationResponse> extendedLocation() {
-        return this.extendedLocation;
+    public Output<Optional<ExtendedLocationResponse>> extendedLocation() {
+        return Codegen.optional(this.extendedLocation);
     }
     /**
      * Specifies the time alloted for all extensions to start. The time duration should be between 15 minutes and 120 minutes (inclusive) and should be specified in ISO 8601 format. The default value is 90 minutes (PT1H30M). &lt;br&gt;&lt;br&gt; Minimum api-version: 2020-06-01
@@ -143,8 +144,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return Specifies the time alloted for all extensions to start. The time duration should be between 15 minutes and 120 minutes (inclusive) and should be specified in ISO 8601 format. The default value is 90 minutes (PT1H30M). &lt;br&gt;&lt;br&gt; Minimum api-version: 2020-06-01
      * 
      */
-    public Output</* @Nullable */ String> extensionsTimeBudget() {
-        return this.extensionsTimeBudget;
+    public Output<Optional<String>> extensionsTimeBudget() {
+        return Codegen.optional(this.extensionsTimeBudget);
     }
     /**
      * Specifies the hardware settings for the virtual machine.
@@ -157,8 +158,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return Specifies the hardware settings for the virtual machine.
      * 
      */
-    public Output</* @Nullable */ HardwareProfileResponse> hardwareProfile() {
-        return this.hardwareProfile;
+    public Output<Optional<HardwareProfileResponse>> hardwareProfile() {
+        return Codegen.optional(this.hardwareProfile);
     }
     /**
      * Specifies information about the dedicated host that the virtual machine resides in. &lt;br&gt;&lt;br&gt;Minimum api-version: 2018-10-01.
@@ -171,8 +172,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return Specifies information about the dedicated host that the virtual machine resides in. &lt;br&gt;&lt;br&gt;Minimum api-version: 2018-10-01.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> host() {
-        return this.host;
+    public Output<Optional<SubResourceResponse>> host() {
+        return Codegen.optional(this.host);
     }
     /**
      * Specifies information about the dedicated host group that the virtual machine resides in. &lt;br&gt;&lt;br&gt;Minimum api-version: 2020-06-01. &lt;br&gt;&lt;br&gt;NOTE: User cannot specify both host and hostGroup properties.
@@ -185,8 +186,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return Specifies information about the dedicated host group that the virtual machine resides in. &lt;br&gt;&lt;br&gt;Minimum api-version: 2020-06-01. &lt;br&gt;&lt;br&gt;NOTE: User cannot specify both host and hostGroup properties.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> hostGroup() {
-        return this.hostGroup;
+    public Output<Optional<SubResourceResponse>> hostGroup() {
+        return Codegen.optional(this.hostGroup);
     }
     /**
      * The identity of the virtual machine, if configured.
@@ -199,8 +200,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return The identity of the virtual machine, if configured.
      * 
      */
-    public Output</* @Nullable */ VirtualMachineIdentityResponse> identity() {
-        return this.identity;
+    public Output<Optional<VirtualMachineIdentityResponse>> identity() {
+        return Codegen.optional(this.identity);
     }
     /**
      * The virtual machine instance view.
@@ -227,8 +228,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return Specifies that the image or disk that is being used was licensed on-premises. &lt;br&gt;&lt;br&gt; Possible values for Windows Server operating system are: &lt;br&gt;&lt;br&gt; Windows_Client &lt;br&gt;&lt;br&gt; Windows_Server &lt;br&gt;&lt;br&gt; Possible values for Linux Server operating system are: &lt;br&gt;&lt;br&gt; RHEL_BYOS (for RHEL) &lt;br&gt;&lt;br&gt; SLES_BYOS (for SUSE) &lt;br&gt;&lt;br&gt; For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/windows/hybrid-use-benefit-licensing) &lt;br&gt;&lt;br&gt; [Azure Hybrid Use Benefit for Linux Server](https://docs.microsoft.com/azure/virtual-machines/linux/azure-hybrid-benefit-linux) &lt;br&gt;&lt;br&gt; Minimum api-version: 2015-06-15
      * 
      */
-    public Output</* @Nullable */ String> licenseType() {
-        return this.licenseType;
+    public Output<Optional<String>> licenseType() {
+        return Codegen.optional(this.licenseType);
     }
     /**
      * Resource location
@@ -269,8 +270,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return Specifies the network interfaces of the virtual machine.
      * 
      */
-    public Output</* @Nullable */ NetworkProfileResponse> networkProfile() {
-        return this.networkProfile;
+    public Output<Optional<NetworkProfileResponse>> networkProfile() {
+        return Codegen.optional(this.networkProfile);
     }
     /**
      * Specifies the operating system settings used while creating the virtual machine. Some of the settings cannot be changed once VM is provisioned.
@@ -283,8 +284,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return Specifies the operating system settings used while creating the virtual machine. Some of the settings cannot be changed once VM is provisioned.
      * 
      */
-    public Output</* @Nullable */ OSProfileResponse> osProfile() {
-        return this.osProfile;
+    public Output<Optional<OSProfileResponse>> osProfile() {
+        return Codegen.optional(this.osProfile);
     }
     /**
      * Specifies information about the marketplace image used to create the virtual machine. This element is only used for marketplace images. Before you can use a marketplace image from an API, you must enable the image for programmatic use.  In the Azure portal, find the marketplace image that you want to use and then click **Want to deploy programmatically, Get Started -&gt;**. Enter any required information and then click **Save**.
@@ -297,8 +298,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return Specifies information about the marketplace image used to create the virtual machine. This element is only used for marketplace images. Before you can use a marketplace image from an API, you must enable the image for programmatic use.  In the Azure portal, find the marketplace image that you want to use and then click **Want to deploy programmatically, Get Started -&gt;**. Enter any required information and then click **Save**.
      * 
      */
-    public Output</* @Nullable */ PlanResponse> plan() {
-        return this.plan;
+    public Output<Optional<PlanResponse>> plan() {
+        return Codegen.optional(this.plan);
     }
     /**
      * Specifies the scale set logical fault domain into which the Virtual Machine will be created. By default, the Virtual Machine will by automatically assigned to a fault domain that best maintains balance across available fault domains.&lt;br&gt;&lt;li&gt;This is applicable only if the &#39;virtualMachineScaleSet&#39; property of this Virtual Machine is set.&lt;li&gt;The Virtual Machine Scale Set that is referenced, must have &#39;platformFaultDomainCount&#39; &amp;gt; 1.&lt;li&gt;This property cannot be updated once the Virtual Machine is created.&lt;li&gt;Fault domain assignment can be viewed in the Virtual Machine Instance View.&lt;br&gt;&lt;br&gt;Minimum api‐version: 2020‐12‐01
@@ -311,8 +312,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return Specifies the scale set logical fault domain into which the Virtual Machine will be created. By default, the Virtual Machine will by automatically assigned to a fault domain that best maintains balance across available fault domains.&lt;br&gt;&lt;li&gt;This is applicable only if the &#39;virtualMachineScaleSet&#39; property of this Virtual Machine is set.&lt;li&gt;The Virtual Machine Scale Set that is referenced, must have &#39;platformFaultDomainCount&#39; &amp;gt; 1.&lt;li&gt;This property cannot be updated once the Virtual Machine is created.&lt;li&gt;Fault domain assignment can be viewed in the Virtual Machine Instance View.&lt;br&gt;&lt;br&gt;Minimum api‐version: 2020‐12‐01
      * 
      */
-    public Output</* @Nullable */ Integer> platformFaultDomain() {
-        return this.platformFaultDomain;
+    public Output<Optional<Integer>> platformFaultDomain() {
+        return Codegen.optional(this.platformFaultDomain);
     }
     /**
      * Specifies the priority for the virtual machine. &lt;br&gt;&lt;br&gt;Minimum api-version: 2019-03-01
@@ -325,8 +326,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return Specifies the priority for the virtual machine. &lt;br&gt;&lt;br&gt;Minimum api-version: 2019-03-01
      * 
      */
-    public Output</* @Nullable */ String> priority() {
-        return this.priority;
+    public Output<Optional<String>> priority() {
+        return Codegen.optional(this.priority);
     }
     /**
      * The provisioning state, which only appears in the response.
@@ -353,8 +354,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return Specifies information about the proximity placement group that the virtual machine should be assigned to. &lt;br&gt;&lt;br&gt;Minimum api-version: 2018-04-01.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> proximityPlacementGroup() {
-        return this.proximityPlacementGroup;
+    public Output<Optional<SubResourceResponse>> proximityPlacementGroup() {
+        return Codegen.optional(this.proximityPlacementGroup);
     }
     /**
      * The virtual machine child extension resources.
@@ -381,8 +382,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return Specifies Scheduled Event related configurations.
      * 
      */
-    public Output</* @Nullable */ ScheduledEventsProfileResponse> scheduledEventsProfile() {
-        return this.scheduledEventsProfile;
+    public Output<Optional<ScheduledEventsProfileResponse>> scheduledEventsProfile() {
+        return Codegen.optional(this.scheduledEventsProfile);
     }
     /**
      * Specifies the Security related profile settings for the virtual machine.
@@ -395,8 +396,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return Specifies the Security related profile settings for the virtual machine.
      * 
      */
-    public Output</* @Nullable */ SecurityProfileResponse> securityProfile() {
-        return this.securityProfile;
+    public Output<Optional<SecurityProfileResponse>> securityProfile() {
+        return Codegen.optional(this.securityProfile);
     }
     /**
      * Specifies the storage settings for the virtual machine disks.
@@ -409,8 +410,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return Specifies the storage settings for the virtual machine disks.
      * 
      */
-    public Output</* @Nullable */ StorageProfileResponse> storageProfile() {
-        return this.storageProfile;
+    public Output<Optional<StorageProfileResponse>> storageProfile() {
+        return Codegen.optional(this.storageProfile);
     }
     /**
      * Resource tags
@@ -423,8 +424,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type
@@ -451,8 +452,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return UserData for the VM, which must be base-64 encoded. Customer should not pass any secrets in here. &lt;br&gt;&lt;br&gt;Minimum api-version: 2021-03-01
      * 
      */
-    public Output</* @Nullable */ String> userData() {
-        return this.userData;
+    public Output<Optional<String>> userData() {
+        return Codegen.optional(this.userData);
     }
     /**
      * Specifies information about the virtual machine scale set that the virtual machine should be assigned to. Virtual machines specified in the same virtual machine scale set are allocated to different nodes to maximize availability. Currently, a VM can only be added to virtual machine scale set at creation time. An existing VM cannot be added to a virtual machine scale set. &lt;br&gt;&lt;br&gt;This property cannot exist along with a non-null properties.availabilitySet reference. &lt;br&gt;&lt;br&gt;Minimum api‐version: 2019‐03‐01
@@ -465,8 +466,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return Specifies information about the virtual machine scale set that the virtual machine should be assigned to. Virtual machines specified in the same virtual machine scale set are allocated to different nodes to maximize availability. Currently, a VM can only be added to virtual machine scale set at creation time. An existing VM cannot be added to a virtual machine scale set. &lt;br&gt;&lt;br&gt;This property cannot exist along with a non-null properties.availabilitySet reference. &lt;br&gt;&lt;br&gt;Minimum api‐version: 2019‐03‐01
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> virtualMachineScaleSet() {
-        return this.virtualMachineScaleSet;
+    public Output<Optional<SubResourceResponse>> virtualMachineScaleSet() {
+        return Codegen.optional(this.virtualMachineScaleSet);
     }
     /**
      * Specifies the VM unique ID which is a 128-bits identifier that is encoded and stored in all Azure IaaS VMs SMBIOS and can be read using platform BIOS commands.
@@ -493,8 +494,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return The virtual machine zones.
      * 
      */
-    public Output</* @Nullable */ List<String>> zones() {
-        return this.zones;
+    public Output<Optional<List<String>>> zones() {
+        return Codegen.optional(this.zones);
     }
 
     /**

@@ -16,6 +16,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class ManagedHsm extends com.pulumi.resources.CustomResource {
      * @return The supported Azure location where the managed HSM Pool should be created.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The name of the managed HSM Pool.
@@ -88,8 +89,8 @@ public class ManagedHsm extends com.pulumi.resources.CustomResource {
      * @return SKU details
      * 
      */
-    public Output</* @Nullable */ ManagedHsmSkuResponse> sku() {
-        return this.sku;
+    public Output<Optional<ManagedHsmSkuResponse>> sku() {
+        return Codegen.optional(this.sku);
     }
     /**
      * Metadata pertaining to creation and last modification of the key vault resource.
@@ -116,8 +117,8 @@ public class ManagedHsm extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The resource type of the managed HSM Pool.

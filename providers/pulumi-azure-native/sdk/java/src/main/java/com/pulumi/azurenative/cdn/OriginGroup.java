@@ -17,6 +17,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -47,8 +48,8 @@ public class OriginGroup extends com.pulumi.resources.CustomResource {
      * @return Health probe settings to the origin that is used to determine the health of the origin.
      * 
      */
-    public Output</* @Nullable */ HealthProbeParametersResponse> healthProbeSettings() {
-        return this.healthProbeSettings;
+    public Output<Optional<HealthProbeParametersResponse>> healthProbeSettings() {
+        return Codegen.optional(this.healthProbeSettings);
     }
     /**
      * Resource name.
@@ -117,8 +118,8 @@ public class OriginGroup extends com.pulumi.resources.CustomResource {
      * @return The JSON object that contains the properties to determine origin health using real requests/responses. This property is currently not supported.
      * 
      */
-    public Output</* @Nullable */ ResponseBasedOriginErrorDetectionParametersResponse> responseBasedOriginErrorDetectionSettings() {
-        return this.responseBasedOriginErrorDetectionSettings;
+    public Output<Optional<ResponseBasedOriginErrorDetectionParametersResponse>> responseBasedOriginErrorDetectionSettings() {
+        return Codegen.optional(this.responseBasedOriginErrorDetectionSettings);
     }
     /**
      * Read only system data
@@ -145,8 +146,8 @@ public class OriginGroup extends com.pulumi.resources.CustomResource {
      * @return Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.
      * 
      */
-    public Output</* @Nullable */ Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes() {
-        return this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
+    public Output<Optional<Integer>> trafficRestorationTimeToHealedOrNewEndpointsInMinutes() {
+        return Codegen.optional(this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes);
     }
     /**
      * Resource type.

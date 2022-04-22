@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class IntegrationAccount extends com.pulumi.resources.CustomResource {
      * @return The integration service environment.
      * 
      */
-    public Output</* @Nullable */ ResourceReferenceResponse> integrationServiceEnvironment() {
-        return this.integrationServiceEnvironment;
+    public Output<Optional<ResourceReferenceResponse>> integrationServiceEnvironment() {
+        return Codegen.optional(this.integrationServiceEnvironment);
     }
     /**
      * The resource location.
@@ -59,8 +60,8 @@ public class IntegrationAccount extends com.pulumi.resources.CustomResource {
      * @return The resource location.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * Gets the resource name.
@@ -87,8 +88,8 @@ public class IntegrationAccount extends com.pulumi.resources.CustomResource {
      * @return The sku.
      * 
      */
-    public Output</* @Nullable */ IntegrationAccountSkuResponse> sku() {
-        return this.sku;
+    public Output<Optional<IntegrationAccountSkuResponse>> sku() {
+        return Codegen.optional(this.sku);
     }
     /**
      * The workflow state.
@@ -101,8 +102,8 @@ public class IntegrationAccount extends com.pulumi.resources.CustomResource {
      * @return The workflow state.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Output<Optional<String>> state() {
+        return Codegen.optional(this.state);
     }
     /**
      * The resource tags.
@@ -115,8 +116,8 @@ public class IntegrationAccount extends com.pulumi.resources.CustomResource {
      * @return The resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Gets the resource type.

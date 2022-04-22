@@ -16,6 +16,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class CustomResourceProvider extends com.pulumi.resources.CustomResource 
      * @return A list of actions that the custom resource provider implements.
      * 
      */
-    public Output</* @Nullable */ List<CustomRPActionRouteDefinitionResponse>> actions() {
-        return this.actions;
+    public Output<Optional<List<CustomRPActionRouteDefinitionResponse>>> actions() {
+        return Codegen.optional(this.actions);
     }
     /**
      * Resource location
@@ -102,8 +103,8 @@ public class CustomResourceProvider extends com.pulumi.resources.CustomResource 
      * @return A list of resource types that the custom resource provider implements.
      * 
      */
-    public Output</* @Nullable */ List<CustomRPResourceTypeRouteDefinitionResponse>> resourceTypes() {
-        return this.resourceTypes;
+    public Output<Optional<List<CustomRPResourceTypeRouteDefinitionResponse>>> resourceTypes() {
+        return Codegen.optional(this.resourceTypes);
     }
     /**
      * Resource tags
@@ -116,8 +117,8 @@ public class CustomResourceProvider extends com.pulumi.resources.CustomResource 
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type
@@ -144,8 +145,8 @@ public class CustomResourceProvider extends com.pulumi.resources.CustomResource 
      * @return A list of validations to run on the custom resource provider&#39;s requests.
      * 
      */
-    public Output</* @Nullable */ List<CustomRPValidationsResponse>> validations() {
-        return this.validations;
+    public Output<Optional<List<CustomRPValidationsResponse>>> validations() {
+        return Codegen.optional(this.validations);
     }
 
     /**

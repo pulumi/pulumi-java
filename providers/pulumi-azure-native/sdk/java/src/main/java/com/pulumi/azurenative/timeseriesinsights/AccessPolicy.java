@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -42,8 +43,8 @@ public class AccessPolicy extends com.pulumi.resources.CustomResource {
      * @return An description of the access policy.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Resource name
@@ -70,8 +71,8 @@ public class AccessPolicy extends com.pulumi.resources.CustomResource {
      * @return The objectId of the principal in Azure Active Directory.
      * 
      */
-    public Output</* @Nullable */ String> principalObjectId() {
-        return this.principalObjectId;
+    public Output<Optional<String>> principalObjectId() {
+        return Codegen.optional(this.principalObjectId);
     }
     /**
      * The list of roles the principal is assigned on the environment.
@@ -84,8 +85,8 @@ public class AccessPolicy extends com.pulumi.resources.CustomResource {
      * @return The list of roles the principal is assigned on the environment.
      * 
      */
-    public Output</* @Nullable */ List<String>> roles() {
-        return this.roles;
+    public Output<Optional<List<String>>> roles() {
+        return Codegen.optional(this.roles);
     }
     /**
      * Resource type

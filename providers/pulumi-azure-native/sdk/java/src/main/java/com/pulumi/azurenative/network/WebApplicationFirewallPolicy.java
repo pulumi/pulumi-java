@@ -18,6 +18,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -62,8 +63,8 @@ public class WebApplicationFirewallPolicy extends com.pulumi.resources.CustomRes
      * @return The custom rules inside the policy.
      * 
      */
-    public Output</* @Nullable */ List<WebApplicationFirewallCustomRuleResponse>> customRules() {
-        return this.customRules;
+    public Output<Optional<List<WebApplicationFirewallCustomRuleResponse>>> customRules() {
+        return Codegen.optional(this.customRules);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
@@ -104,8 +105,8 @@ public class WebApplicationFirewallPolicy extends com.pulumi.resources.CustomRes
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * Describes the managedRules structure.
@@ -160,8 +161,8 @@ public class WebApplicationFirewallPolicy extends com.pulumi.resources.CustomRes
      * @return The PolicySettings for policy.
      * 
      */
-    public Output</* @Nullable */ PolicySettingsResponse> policySettings() {
-        return this.policySettings;
+    public Output<Optional<PolicySettingsResponse>> policySettings() {
+        return Codegen.optional(this.policySettings);
     }
     /**
      * The provisioning state of the web application firewall policy resource.
@@ -202,8 +203,8 @@ public class WebApplicationFirewallPolicy extends com.pulumi.resources.CustomRes
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type.

@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -224,8 +225,8 @@ public class ExportConfiguration extends com.pulumi.resources.CustomResource {
      * @return Deprecated
      * 
      */
-    public Output</* @Nullable */ String> notificationQueueEnabled() {
-        return this.notificationQueueEnabled;
+    public Output<Optional<String>> notificationQueueEnabled() {
+        return Codegen.optional(this.notificationQueueEnabled);
     }
     /**
      * This is the reason the Continuous Export configuration started failing. It can be &#39;AzureStorageNotFound&#39; or &#39;AzureStorageAccessDenied&#39;.
@@ -252,8 +253,8 @@ public class ExportConfiguration extends com.pulumi.resources.CustomResource {
      * @return This comma separated list of document types that will be exported. The possible values include &#39;Requests&#39;, &#39;Event&#39;, &#39;Exceptions&#39;, &#39;Metrics&#39;, &#39;PageViews&#39;, &#39;PageViewPerformance&#39;, &#39;Rdd&#39;, &#39;PerformanceCounters&#39;, &#39;Availability&#39;, &#39;Messages&#39;.
      * 
      */
-    public Output</* @Nullable */ String> recordTypes() {
-        return this.recordTypes;
+    public Output<Optional<String>> recordTypes() {
+        return Codegen.optional(this.recordTypes);
     }
     /**
      * The resource group of the Application Insights component.

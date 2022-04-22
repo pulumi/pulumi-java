@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -71,8 +72,8 @@ public class ManagementLockByScope extends com.pulumi.resources.CustomResource {
      * @return Notes about the lock. Maximum of 512 characters.
      * 
      */
-    public Output</* @Nullable */ String> notes() {
-        return this.notes;
+    public Output<Optional<String>> notes() {
+        return Codegen.optional(this.notes);
     }
     /**
      * The owners of the lock.
@@ -85,8 +86,8 @@ public class ManagementLockByScope extends com.pulumi.resources.CustomResource {
      * @return The owners of the lock.
      * 
      */
-    public Output</* @Nullable */ List<ManagementLockOwnerResponse>> owners() {
-        return this.owners;
+    public Output<Optional<List<ManagementLockOwnerResponse>>> owners() {
+        return Codegen.optional(this.owners);
     }
     /**
      * The resource type of the lock - Microsoft.Authorization/locks.

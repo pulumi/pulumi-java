@@ -14,6 +14,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class ScheduledAlertRule extends com.pulumi.resources.CustomResource {
      * @return The Name of the alert rule template used to create this rule.
      * 
      */
-    public Output</* @Nullable */ String> alertRuleTemplateName() {
-        return this.alertRuleTemplateName;
+    public Output<Optional<String>> alertRuleTemplateName() {
+        return Codegen.optional(this.alertRuleTemplateName);
     }
     /**
      * The description of the alert rule.
@@ -58,8 +59,8 @@ public class ScheduledAlertRule extends com.pulumi.resources.CustomResource {
      * @return The description of the alert rule.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The display name for alerts created by this alert rule.
@@ -100,8 +101,8 @@ public class ScheduledAlertRule extends com.pulumi.resources.CustomResource {
      * @return Etag of the azure resource
      * 
      */
-    public Output</* @Nullable */ String> etag() {
-        return this.etag;
+    public Output<Optional<String>> etag() {
+        return Codegen.optional(this.etag);
     }
     /**
      * The kind of the alert rule
@@ -242,8 +243,8 @@ public class ScheduledAlertRule extends com.pulumi.resources.CustomResource {
      * @return The tactics of the alert rule
      * 
      */
-    public Output</* @Nullable */ List<String>> tactics() {
-        return this.tactics;
+    public Output<Optional<List<String>>> tactics() {
+        return Codegen.optional(this.tactics);
     }
     /**
      * The operation against the threshold that triggers alert rule.

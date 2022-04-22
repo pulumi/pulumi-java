@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class SubscriptionNetworkManagerConnection extends com.pulumi.resources.C
      * @return A description of the scope connection.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
@@ -85,8 +86,8 @@ public class SubscriptionNetworkManagerConnection extends com.pulumi.resources.C
      * @return Network Manager Id.
      * 
      */
-    public Output</* @Nullable */ String> networkManagerId() {
-        return this.networkManagerId;
+    public Output<Optional<String>> networkManagerId() {
+        return Codegen.optional(this.networkManagerId);
     }
     /**
      * The system metadata related to this resource.

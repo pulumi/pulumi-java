@@ -17,6 +17,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -61,8 +62,8 @@ public class HanaInstance extends com.pulumi.resources.CustomResource {
      * @return Specifies the hardware settings for the HANA instance.
      * 
      */
-    public Output</* @Nullable */ HardwareProfileResponse> hardwareProfile() {
-        return this.hardwareProfile;
+    public Output<Optional<HardwareProfileResponse>> hardwareProfile() {
+        return Codegen.optional(this.hardwareProfile);
     }
     /**
      * Hardware revision of a HANA instance
@@ -89,8 +90,8 @@ public class HanaInstance extends com.pulumi.resources.CustomResource {
      * @return Resource location
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * Resource name
@@ -117,8 +118,8 @@ public class HanaInstance extends com.pulumi.resources.CustomResource {
      * @return Specifies the network settings for the HANA instance.
      * 
      */
-    public Output</* @Nullable */ NetworkProfileResponse> networkProfile() {
-        return this.networkProfile;
+    public Output<Optional<NetworkProfileResponse>> networkProfile() {
+        return Codegen.optional(this.networkProfile);
     }
     /**
      * Specifies the operating system settings for the HANA instance.
@@ -131,8 +132,8 @@ public class HanaInstance extends com.pulumi.resources.CustomResource {
      * @return Specifies the operating system settings for the HANA instance.
      * 
      */
-    public Output</* @Nullable */ OSProfileResponse> osProfile() {
-        return this.osProfile;
+    public Output<Optional<OSProfileResponse>> osProfile() {
+        return Codegen.optional(this.osProfile);
     }
     /**
      * ARM ID of another HanaInstance that will share a network with this HanaInstance
@@ -145,8 +146,8 @@ public class HanaInstance extends com.pulumi.resources.CustomResource {
      * @return ARM ID of another HanaInstance that will share a network with this HanaInstance
      * 
      */
-    public Output</* @Nullable */ String> partnerNodeId() {
-        return this.partnerNodeId;
+    public Output<Optional<String>> partnerNodeId() {
+        return Codegen.optional(this.partnerNodeId);
     }
     /**
      * Resource power state
@@ -201,8 +202,8 @@ public class HanaInstance extends com.pulumi.resources.CustomResource {
      * @return Specifies the storage settings for the HANA instance disks.
      * 
      */
-    public Output</* @Nullable */ StorageProfileResponse> storageProfile() {
-        return this.storageProfile;
+    public Output<Optional<StorageProfileResponse>> storageProfile() {
+        return Codegen.optional(this.storageProfile);
     }
     /**
      * Resource tags
@@ -215,8 +216,8 @@ public class HanaInstance extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type

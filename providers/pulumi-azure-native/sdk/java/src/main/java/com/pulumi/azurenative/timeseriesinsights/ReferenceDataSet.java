@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -58,8 +59,8 @@ public class ReferenceDataSet extends com.pulumi.resources.CustomResource {
      * @return The reference data set key comparison behavior can be set using this property. By default, the value is &#39;Ordinal&#39; - which means case sensitive key comparison will be performed while joining reference data with events or while adding new reference data. When &#39;OrdinalIgnoreCase&#39; is set, case insensitive comparison will be used.
      * 
      */
-    public Output</* @Nullable */ String> dataStringComparisonBehavior() {
-        return this.dataStringComparisonBehavior;
+    public Output<Optional<String>> dataStringComparisonBehavior() {
+        return Codegen.optional(this.dataStringComparisonBehavior);
     }
     /**
      * The list of key properties for the reference data set.
@@ -128,8 +129,8 @@ public class ReferenceDataSet extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type

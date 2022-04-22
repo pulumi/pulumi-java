@@ -16,6 +16,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class Watchlist extends com.pulumi.resources.CustomResource {
      * @return The content type of the raw content. Example : text/csv or text/tsv
      * 
      */
-    public Output</* @Nullable */ String> contentType() {
-        return this.contentType;
+    public Output<Optional<String>> contentType() {
+        return Codegen.optional(this.contentType);
     }
     /**
      * The time the watchlist was created
@@ -60,8 +61,8 @@ public class Watchlist extends com.pulumi.resources.CustomResource {
      * @return The time the watchlist was created
      * 
      */
-    public Output</* @Nullable */ String> created() {
-        return this.created;
+    public Output<Optional<String>> created() {
+        return Codegen.optional(this.created);
     }
     /**
      * Describes a user that created the watchlist
@@ -74,8 +75,8 @@ public class Watchlist extends com.pulumi.resources.CustomResource {
      * @return Describes a user that created the watchlist
      * 
      */
-    public Output</* @Nullable */ WatchlistUserInfoResponse> createdBy() {
-        return this.createdBy;
+    public Output<Optional<WatchlistUserInfoResponse>> createdBy() {
+        return Codegen.optional(this.createdBy);
     }
     /**
      * The default duration of a watchlist (in ISO 8601 duration format)
@@ -88,8 +89,8 @@ public class Watchlist extends com.pulumi.resources.CustomResource {
      * @return The default duration of a watchlist (in ISO 8601 duration format)
      * 
      */
-    public Output</* @Nullable */ String> defaultDuration() {
-        return this.defaultDuration;
+    public Output<Optional<String>> defaultDuration() {
+        return Codegen.optional(this.defaultDuration);
     }
     /**
      * A description of the watchlist
@@ -102,8 +103,8 @@ public class Watchlist extends com.pulumi.resources.CustomResource {
      * @return A description of the watchlist
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The display name of the watchlist
@@ -130,8 +131,8 @@ public class Watchlist extends com.pulumi.resources.CustomResource {
      * @return Etag of the azure resource
      * 
      */
-    public Output</* @Nullable */ String> etag() {
-        return this.etag;
+    public Output<Optional<String>> etag() {
+        return Codegen.optional(this.etag);
     }
     /**
      * A flag that indicates if the watchlist is deleted or not
@@ -144,8 +145,8 @@ public class Watchlist extends com.pulumi.resources.CustomResource {
      * @return A flag that indicates if the watchlist is deleted or not
      * 
      */
-    public Output</* @Nullable */ Boolean> isDeleted() {
-        return this.isDeleted;
+    public Output<Optional<Boolean>> isDeleted() {
+        return Codegen.optional(this.isDeleted);
     }
     /**
      * The search key is used to optimize query performance when using watchlists for joins with other data. For example, enable a column with IP addresses to be the designated SearchKey field, then use this field as the key field when joining to other event data by IP address.
@@ -172,8 +173,8 @@ public class Watchlist extends com.pulumi.resources.CustomResource {
      * @return List of labels relevant to this watchlist
      * 
      */
-    public Output</* @Nullable */ List<String>> labels() {
-        return this.labels;
+    public Output<Optional<List<String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * Azure resource name
@@ -200,8 +201,8 @@ public class Watchlist extends com.pulumi.resources.CustomResource {
      * @return The number of lines in a csv/tsv content to skip before the header
      * 
      */
-    public Output</* @Nullable */ Integer> numberOfLinesToSkip() {
-        return this.numberOfLinesToSkip;
+    public Output<Optional<Integer>> numberOfLinesToSkip() {
+        return Codegen.optional(this.numberOfLinesToSkip);
     }
     /**
      * The provider of the watchlist
@@ -228,8 +229,8 @@ public class Watchlist extends com.pulumi.resources.CustomResource {
      * @return The raw content that represents to watchlist items to create. In case of csv/tsv content type, it&#39;s the content of the file that will parsed by the endpoint
      * 
      */
-    public Output</* @Nullable */ String> rawContent() {
-        return this.rawContent;
+    public Output<Optional<String>> rawContent() {
+        return Codegen.optional(this.rawContent);
     }
     /**
      * The source of the watchlist
@@ -270,8 +271,8 @@ public class Watchlist extends com.pulumi.resources.CustomResource {
      * @return The tenantId where the watchlist belongs to
      * 
      */
-    public Output</* @Nullable */ String> tenantId() {
-        return this.tenantId;
+    public Output<Optional<String>> tenantId() {
+        return Codegen.optional(this.tenantId);
     }
     /**
      * Azure resource type
@@ -298,8 +299,8 @@ public class Watchlist extends com.pulumi.resources.CustomResource {
      * @return The last time the watchlist was updated
      * 
      */
-    public Output</* @Nullable */ String> updated() {
-        return this.updated;
+    public Output<Optional<String>> updated() {
+        return Codegen.optional(this.updated);
     }
     /**
      * Describes a user that updated the watchlist
@@ -312,8 +313,8 @@ public class Watchlist extends com.pulumi.resources.CustomResource {
      * @return Describes a user that updated the watchlist
      * 
      */
-    public Output</* @Nullable */ WatchlistUserInfoResponse> updatedBy() {
-        return this.updatedBy;
+    public Output<Optional<WatchlistUserInfoResponse>> updatedBy() {
+        return Codegen.optional(this.updatedBy);
     }
     /**
      * The status of the Watchlist upload : New, InProgress or Complete. Pls note : When a Watchlist upload status is equal to InProgress, the Watchlist cannot be deleted
@@ -326,8 +327,8 @@ public class Watchlist extends com.pulumi.resources.CustomResource {
      * @return The status of the Watchlist upload : New, InProgress or Complete. Pls note : When a Watchlist upload status is equal to InProgress, the Watchlist cannot be deleted
      * 
      */
-    public Output</* @Nullable */ String> uploadStatus() {
-        return this.uploadStatus;
+    public Output<Optional<String>> uploadStatus() {
+        return Codegen.optional(this.uploadStatus);
     }
     /**
      * The alias of the watchlist
@@ -340,8 +341,8 @@ public class Watchlist extends com.pulumi.resources.CustomResource {
      * @return The alias of the watchlist
      * 
      */
-    public Output</* @Nullable */ String> watchlistAlias() {
-        return this.watchlistAlias;
+    public Output<Optional<String>> watchlistAlias() {
+        return Codegen.optional(this.watchlistAlias);
     }
     /**
      * The id (a Guid) of the watchlist
@@ -354,8 +355,8 @@ public class Watchlist extends com.pulumi.resources.CustomResource {
      * @return The id (a Guid) of the watchlist
      * 
      */
-    public Output</* @Nullable */ String> watchlistId() {
-        return this.watchlistId;
+    public Output<Optional<String>> watchlistId() {
+        return Codegen.optional(this.watchlistId);
     }
     /**
      * The number of Watchlist Items in the Watchlist
@@ -368,8 +369,8 @@ public class Watchlist extends com.pulumi.resources.CustomResource {
      * @return The number of Watchlist Items in the Watchlist
      * 
      */
-    public Output</* @Nullable */ Integer> watchlistItemsCount() {
-        return this.watchlistItemsCount;
+    public Output<Optional<Integer>> watchlistItemsCount() {
+        return Codegen.optional(this.watchlistItemsCount);
     }
     /**
      * The type of the watchlist
@@ -382,8 +383,8 @@ public class Watchlist extends com.pulumi.resources.CustomResource {
      * @return The type of the watchlist
      * 
      */
-    public Output</* @Nullable */ String> watchlistType() {
-        return this.watchlistType;
+    public Output<Optional<String>> watchlistType() {
+        return Codegen.optional(this.watchlistType);
     }
 
     /**

@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -59,8 +60,8 @@ public class ProximityPlacementGroup extends com.pulumi.resources.CustomResource
      * @return Describes colocation status of the Proximity Placement Group.
      * 
      */
-    public Output</* @Nullable */ InstanceViewStatusResponse> colocationStatus() {
-        return this.colocationStatus;
+    public Output<Optional<InstanceViewStatusResponse>> colocationStatus() {
+        return Codegen.optional(this.colocationStatus);
     }
     /**
      * Resource location
@@ -101,8 +102,8 @@ public class ProximityPlacementGroup extends com.pulumi.resources.CustomResource
      * @return Specifies the type of the proximity placement group. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **Standard** : Co-locate resources within an Azure region or Availability Zone. &lt;br&gt;&lt;br&gt; **Ultra** : For future use.
      * 
      */
-    public Output</* @Nullable */ String> proximityPlacementGroupType() {
-        return this.proximityPlacementGroupType;
+    public Output<Optional<String>> proximityPlacementGroupType() {
+        return Codegen.optional(this.proximityPlacementGroupType);
     }
     /**
      * Resource tags
@@ -115,8 +116,8 @@ public class ProximityPlacementGroup extends com.pulumi.resources.CustomResource
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type

@@ -19,6 +19,7 @@ import java.lang.Double;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -91,8 +92,8 @@ public class Budget extends com.pulumi.resources.CustomResource {
      * @return eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
      * 
      */
-    public Output</* @Nullable */ String> eTag() {
-        return this.eTag;
+    public Output<Optional<String>> eTag() {
+        return Codegen.optional(this.eTag);
     }
     /**
      * May be used to filter budgets by user-specified dimensions and/or tags.
@@ -105,8 +106,8 @@ public class Budget extends com.pulumi.resources.CustomResource {
      * @return May be used to filter budgets by user-specified dimensions and/or tags.
      * 
      */
-    public Output</* @Nullable */ BudgetFilterResponse> filter() {
-        return this.filter;
+    public Output<Optional<BudgetFilterResponse>> filter() {
+        return Codegen.optional(this.filter);
     }
     /**
      * The forecasted cost which is being tracked for a budget.
@@ -147,8 +148,8 @@ public class Budget extends com.pulumi.resources.CustomResource {
      * @return Dictionary of notifications associated with the budget. Budget can have up to five notifications.
      * 
      */
-    public Output</* @Nullable */ Map<String,NotificationResponse>> notifications() {
-        return this.notifications;
+    public Output<Optional<Map<String,NotificationResponse>>> notifications() {
+        return Codegen.optional(this.notifications);
     }
     /**
      * The time covered by a budget. Tracking of the amount will be reset based on the time grain. BillingMonth, BillingQuarter, and BillingAnnual are only supported by WD customers

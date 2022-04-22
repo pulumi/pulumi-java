@@ -16,6 +16,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class BlockchainMember extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the consortium for the blockchain member.
      * 
      */
-    public Output</* @Nullable */ String> consortium() {
-        return this.consortium;
+    public Output<Optional<String>> consortium() {
+        return Codegen.optional(this.consortium);
     }
     /**
      * Gets the managed consortium management account address.
@@ -74,8 +75,8 @@ public class BlockchainMember extends com.pulumi.resources.CustomResource {
      * @return Sets the managed consortium management account password.
      * 
      */
-    public Output</* @Nullable */ String> consortiumManagementAccountPassword() {
-        return this.consortiumManagementAccountPassword;
+    public Output<Optional<String>> consortiumManagementAccountPassword() {
+        return Codegen.optional(this.consortiumManagementAccountPassword);
     }
     /**
      * Gets the display name of the member in the consortium.
@@ -88,8 +89,8 @@ public class BlockchainMember extends com.pulumi.resources.CustomResource {
      * @return Gets the display name of the member in the consortium.
      * 
      */
-    public Output</* @Nullable */ String> consortiumMemberDisplayName() {
-        return this.consortiumMemberDisplayName;
+    public Output<Optional<String>> consortiumMemberDisplayName() {
+        return Codegen.optional(this.consortiumMemberDisplayName);
     }
     /**
      * Gets the role of the member in the consortium.
@@ -102,8 +103,8 @@ public class BlockchainMember extends com.pulumi.resources.CustomResource {
      * @return Gets the role of the member in the consortium.
      * 
      */
-    public Output</* @Nullable */ String> consortiumRole() {
-        return this.consortiumRole;
+    public Output<Optional<String>> consortiumRole() {
+        return Codegen.optional(this.consortiumRole);
     }
     /**
      * Gets the dns endpoint of the blockchain member.
@@ -130,8 +131,8 @@ public class BlockchainMember extends com.pulumi.resources.CustomResource {
      * @return Gets or sets firewall rules
      * 
      */
-    public Output</* @Nullable */ List<FirewallRuleResponse>> firewallRules() {
-        return this.firewallRules;
+    public Output<Optional<List<FirewallRuleResponse>>> firewallRules() {
+        return Codegen.optional(this.firewallRules);
     }
     /**
      * The GEO location of the blockchain service.
@@ -144,8 +145,8 @@ public class BlockchainMember extends com.pulumi.resources.CustomResource {
      * @return The GEO location of the blockchain service.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The name of the resource.
@@ -172,8 +173,8 @@ public class BlockchainMember extends com.pulumi.resources.CustomResource {
      * @return Sets the basic auth password of the blockchain member.
      * 
      */
-    public Output</* @Nullable */ String> password() {
-        return this.password;
+    public Output<Optional<String>> password() {
+        return Codegen.optional(this.password);
     }
     /**
      * Gets or sets the blockchain protocol.
@@ -186,8 +187,8 @@ public class BlockchainMember extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the blockchain protocol.
      * 
      */
-    public Output</* @Nullable */ String> protocol() {
-        return this.protocol;
+    public Output<Optional<String>> protocol() {
+        return Codegen.optional(this.protocol);
     }
     /**
      * Gets or sets the blockchain member provision state.
@@ -242,8 +243,8 @@ public class BlockchainMember extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the blockchain member Sku.
      * 
      */
-    public Output</* @Nullable */ SkuResponse> sku() {
-        return this.sku;
+    public Output<Optional<SkuResponse>> sku() {
+        return Codegen.optional(this.sku);
     }
     /**
      * Tags of the service which is a list of key value pairs that describes the resource.
@@ -256,8 +257,8 @@ public class BlockchainMember extends com.pulumi.resources.CustomResource {
      * @return Tags of the service which is a list of key value pairs that describes the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the service - e.g. &#34;Microsoft.Blockchain&#34;
@@ -298,8 +299,8 @@ public class BlockchainMember extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the blockchain validator nodes Sku.
      * 
      */
-    public Output</* @Nullable */ BlockchainMemberNodesSkuResponse> validatorNodesSku() {
-        return this.validatorNodesSku;
+    public Output<Optional<BlockchainMemberNodesSkuResponse>> validatorNodesSku() {
+        return Codegen.optional(this.validatorNodesSku);
     }
 
     /**

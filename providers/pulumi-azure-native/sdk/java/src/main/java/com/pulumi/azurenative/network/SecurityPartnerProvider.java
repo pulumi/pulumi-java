@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -72,8 +73,8 @@ public class SecurityPartnerProvider extends com.pulumi.resources.CustomResource
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * Resource name.
@@ -114,8 +115,8 @@ public class SecurityPartnerProvider extends com.pulumi.resources.CustomResource
      * @return The security provider name.
      * 
      */
-    public Output</* @Nullable */ String> securityProviderName() {
-        return this.securityProviderName;
+    public Output<Optional<String>> securityProviderName() {
+        return Codegen.optional(this.securityProviderName);
     }
     /**
      * Resource tags.
@@ -128,8 +129,8 @@ public class SecurityPartnerProvider extends com.pulumi.resources.CustomResource
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type.
@@ -156,8 +157,8 @@ public class SecurityPartnerProvider extends com.pulumi.resources.CustomResource
      * @return The virtualHub to which the Security Partner Provider belongs.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> virtualHub() {
-        return this.virtualHub;
+    public Output<Optional<SubResourceResponse>> virtualHub() {
+        return Codegen.optional(this.virtualHub);
     }
 
     /**

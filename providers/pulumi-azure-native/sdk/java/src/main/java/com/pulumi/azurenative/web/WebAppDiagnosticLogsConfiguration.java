@@ -15,6 +15,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -42,8 +43,8 @@ public class WebAppDiagnosticLogsConfiguration extends com.pulumi.resources.Cust
      * @return Application logs configuration.
      * 
      */
-    public Output</* @Nullable */ ApplicationLogsConfigResponse> applicationLogs() {
-        return this.applicationLogs;
+    public Output<Optional<ApplicationLogsConfigResponse>> applicationLogs() {
+        return Codegen.optional(this.applicationLogs);
     }
     /**
      * Detailed error messages configuration.
@@ -56,8 +57,8 @@ public class WebAppDiagnosticLogsConfiguration extends com.pulumi.resources.Cust
      * @return Detailed error messages configuration.
      * 
      */
-    public Output</* @Nullable */ EnabledConfigResponse> detailedErrorMessages() {
-        return this.detailedErrorMessages;
+    public Output<Optional<EnabledConfigResponse>> detailedErrorMessages() {
+        return Codegen.optional(this.detailedErrorMessages);
     }
     /**
      * Failed requests tracing configuration.
@@ -70,8 +71,8 @@ public class WebAppDiagnosticLogsConfiguration extends com.pulumi.resources.Cust
      * @return Failed requests tracing configuration.
      * 
      */
-    public Output</* @Nullable */ EnabledConfigResponse> failedRequestsTracing() {
-        return this.failedRequestsTracing;
+    public Output<Optional<EnabledConfigResponse>> failedRequestsTracing() {
+        return Codegen.optional(this.failedRequestsTracing);
     }
     /**
      * HTTP logs configuration.
@@ -84,8 +85,8 @@ public class WebAppDiagnosticLogsConfiguration extends com.pulumi.resources.Cust
      * @return HTTP logs configuration.
      * 
      */
-    public Output</* @Nullable */ HttpLogsConfigResponse> httpLogs() {
-        return this.httpLogs;
+    public Output<Optional<HttpLogsConfigResponse>> httpLogs() {
+        return Codegen.optional(this.httpLogs);
     }
     /**
      * Kind of resource.
@@ -98,8 +99,8 @@ public class WebAppDiagnosticLogsConfiguration extends com.pulumi.resources.Cust
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> kind() {
-        return this.kind;
+    public Output<Optional<String>> kind() {
+        return Codegen.optional(this.kind);
     }
     /**
      * Resource Name.

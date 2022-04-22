@@ -18,6 +18,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -48,8 +49,8 @@ public class Server extends com.pulumi.resources.CustomResource {
      * @return The administrator&#39;s login name of a server. Can only be specified when the server is being created (and is required for creation).
      * 
      */
-    public Output</* @Nullable */ String> administratorLogin() {
-        return this.administratorLogin;
+    public Output<Optional<String>> administratorLogin() {
+        return Codegen.optional(this.administratorLogin);
     }
     /**
      * Status showing whether the server data encryption is enabled with customer-managed keys.
@@ -76,8 +77,8 @@ public class Server extends com.pulumi.resources.CustomResource {
      * @return Earliest restore point creation time (ISO8601 format)
      * 
      */
-    public Output</* @Nullable */ String> earliestRestoreDate() {
-        return this.earliestRestoreDate;
+    public Output<Optional<String>> earliestRestoreDate() {
+        return Codegen.optional(this.earliestRestoreDate);
     }
     /**
      * The fully qualified domain name of a server.
@@ -90,8 +91,8 @@ public class Server extends com.pulumi.resources.CustomResource {
      * @return The fully qualified domain name of a server.
      * 
      */
-    public Output</* @Nullable */ String> fullyQualifiedDomainName() {
-        return this.fullyQualifiedDomainName;
+    public Output<Optional<String>> fullyQualifiedDomainName() {
+        return Codegen.optional(this.fullyQualifiedDomainName);
     }
     /**
      * The Azure Active Directory identity of the server.
@@ -104,8 +105,8 @@ public class Server extends com.pulumi.resources.CustomResource {
      * @return The Azure Active Directory identity of the server.
      * 
      */
-    public Output</* @Nullable */ ResourceIdentityResponse> identity() {
-        return this.identity;
+    public Output<Optional<ResourceIdentityResponse>> identity() {
+        return Codegen.optional(this.identity);
     }
     /**
      * Status showing whether the server enabled infrastructure encryption.
@@ -118,8 +119,8 @@ public class Server extends com.pulumi.resources.CustomResource {
      * @return Status showing whether the server enabled infrastructure encryption.
      * 
      */
-    public Output</* @Nullable */ String> infrastructureEncryption() {
-        return this.infrastructureEncryption;
+    public Output<Optional<String>> infrastructureEncryption() {
+        return Codegen.optional(this.infrastructureEncryption);
     }
     /**
      * The geo-location where the resource lives
@@ -146,8 +147,8 @@ public class Server extends com.pulumi.resources.CustomResource {
      * @return The master server id of a replica server.
      * 
      */
-    public Output</* @Nullable */ String> masterServerId() {
-        return this.masterServerId;
+    public Output<Optional<String>> masterServerId() {
+        return Codegen.optional(this.masterServerId);
     }
     /**
      * Enforce a minimal Tls version for the server.
@@ -160,8 +161,8 @@ public class Server extends com.pulumi.resources.CustomResource {
      * @return Enforce a minimal Tls version for the server.
      * 
      */
-    public Output</* @Nullable */ String> minimalTlsVersion() {
-        return this.minimalTlsVersion;
+    public Output<Optional<String>> minimalTlsVersion() {
+        return Codegen.optional(this.minimalTlsVersion);
     }
     /**
      * The name of the resource
@@ -202,8 +203,8 @@ public class Server extends com.pulumi.resources.CustomResource {
      * @return Whether or not public network access is allowed for this server. Value is optional but if passed in, must be &#39;Enabled&#39; or &#39;Disabled&#39;
      * 
      */
-    public Output</* @Nullable */ String> publicNetworkAccess() {
-        return this.publicNetworkAccess;
+    public Output<Optional<String>> publicNetworkAccess() {
+        return Codegen.optional(this.publicNetworkAccess);
     }
     /**
      * The maximum number of replicas that a master server can have.
@@ -216,8 +217,8 @@ public class Server extends com.pulumi.resources.CustomResource {
      * @return The maximum number of replicas that a master server can have.
      * 
      */
-    public Output</* @Nullable */ Integer> replicaCapacity() {
-        return this.replicaCapacity;
+    public Output<Optional<Integer>> replicaCapacity() {
+        return Codegen.optional(this.replicaCapacity);
     }
     /**
      * The replication role of the server.
@@ -230,8 +231,8 @@ public class Server extends com.pulumi.resources.CustomResource {
      * @return The replication role of the server.
      * 
      */
-    public Output</* @Nullable */ String> replicationRole() {
-        return this.replicationRole;
+    public Output<Optional<String>> replicationRole() {
+        return Codegen.optional(this.replicationRole);
     }
     /**
      * The SKU (pricing tier) of the server.
@@ -244,8 +245,8 @@ public class Server extends com.pulumi.resources.CustomResource {
      * @return The SKU (pricing tier) of the server.
      * 
      */
-    public Output</* @Nullable */ SkuResponse> sku() {
-        return this.sku;
+    public Output<Optional<SkuResponse>> sku() {
+        return Codegen.optional(this.sku);
     }
     /**
      * Enable ssl enforcement or not when connect to server.
@@ -258,8 +259,8 @@ public class Server extends com.pulumi.resources.CustomResource {
      * @return Enable ssl enforcement or not when connect to server.
      * 
      */
-    public Output</* @Nullable */ String> sslEnforcement() {
-        return this.sslEnforcement;
+    public Output<Optional<String>> sslEnforcement() {
+        return Codegen.optional(this.sslEnforcement);
     }
     /**
      * Storage profile of a server.
@@ -272,8 +273,8 @@ public class Server extends com.pulumi.resources.CustomResource {
      * @return Storage profile of a server.
      * 
      */
-    public Output</* @Nullable */ StorageProfileResponse> storageProfile() {
-        return this.storageProfile;
+    public Output<Optional<StorageProfileResponse>> storageProfile() {
+        return Codegen.optional(this.storageProfile);
     }
     /**
      * Resource tags.
@@ -286,8 +287,8 @@ public class Server extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
@@ -314,8 +315,8 @@ public class Server extends com.pulumi.resources.CustomResource {
      * @return A state of a server that is visible to user.
      * 
      */
-    public Output</* @Nullable */ String> userVisibleState() {
-        return this.userVisibleState;
+    public Output<Optional<String>> userVisibleState() {
+        return Codegen.optional(this.userVisibleState);
     }
     /**
      * Server version.
@@ -328,8 +329,8 @@ public class Server extends com.pulumi.resources.CustomResource {
      * @return Server version.
      * 
      */
-    public Output</* @Nullable */ String> version() {
-        return this.version;
+    public Output<Optional<String>> version() {
+        return Codegen.optional(this.version);
     }
 
     /**

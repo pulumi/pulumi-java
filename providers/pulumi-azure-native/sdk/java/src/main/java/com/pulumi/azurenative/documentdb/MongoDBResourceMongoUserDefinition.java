@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class MongoDBResourceMongoUserDefinition extends com.pulumi.resources.Cus
      * @return A custom definition for the USer Definition.
      * 
      */
-    public Output</* @Nullable */ String> customData() {
-        return this.customData;
+    public Output<Optional<String>> customData() {
+        return Codegen.optional(this.customData);
     }
     /**
      * The database name for which access is being granted for this User Definition.
@@ -57,8 +58,8 @@ public class MongoDBResourceMongoUserDefinition extends com.pulumi.resources.Cus
      * @return The database name for which access is being granted for this User Definition.
      * 
      */
-    public Output</* @Nullable */ String> databaseName() {
-        return this.databaseName;
+    public Output<Optional<String>> databaseName() {
+        return Codegen.optional(this.databaseName);
     }
     /**
      * The Mongo Auth mechanism. For now, we only support auth mechanism SCRAM-SHA-256.
@@ -71,8 +72,8 @@ public class MongoDBResourceMongoUserDefinition extends com.pulumi.resources.Cus
      * @return The Mongo Auth mechanism. For now, we only support auth mechanism SCRAM-SHA-256.
      * 
      */
-    public Output</* @Nullable */ String> mechanisms() {
-        return this.mechanisms;
+    public Output<Optional<String>> mechanisms() {
+        return Codegen.optional(this.mechanisms);
     }
     /**
      * The name of the database account.
@@ -99,8 +100,8 @@ public class MongoDBResourceMongoUserDefinition extends com.pulumi.resources.Cus
      * @return The password for User Definition. Response does not contain user password.
      * 
      */
-    public Output</* @Nullable */ String> password() {
-        return this.password;
+    public Output<Optional<String>> password() {
+        return Codegen.optional(this.password);
     }
     /**
      * The set of roles inherited by the User Definition.
@@ -113,8 +114,8 @@ public class MongoDBResourceMongoUserDefinition extends com.pulumi.resources.Cus
      * @return The set of roles inherited by the User Definition.
      * 
      */
-    public Output</* @Nullable */ List<RoleResponse>> roles() {
-        return this.roles;
+    public Output<Optional<List<RoleResponse>>> roles() {
+        return Codegen.optional(this.roles);
     }
     /**
      * The type of Azure resource.
@@ -141,8 +142,8 @@ public class MongoDBResourceMongoUserDefinition extends com.pulumi.resources.Cus
      * @return The user name for User Definition.
      * 
      */
-    public Output</* @Nullable */ String> userName() {
-        return this.userName;
+    public Output<Optional<String>> userName() {
+        return Codegen.optional(this.userName);
     }
 
     /**

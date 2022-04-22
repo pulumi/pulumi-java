@@ -15,6 +15,7 @@ import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class VolumeContainer extends com.pulumi.resources.CustomResource {
      * @return The bandwidth-rate set on the volume container.
      * 
      */
-    public Output</* @Nullable */ Integer> bandWidthRateInMbps() {
-        return this.bandWidthRateInMbps;
+    public Output<Optional<Integer>> bandWidthRateInMbps() {
+        return Codegen.optional(this.bandWidthRateInMbps);
     }
     /**
      * The ID of the bandwidth setting associated with the volume container.
@@ -59,8 +60,8 @@ public class VolumeContainer extends com.pulumi.resources.CustomResource {
      * @return The ID of the bandwidth setting associated with the volume container.
      * 
      */
-    public Output</* @Nullable */ String> bandwidthSettingId() {
-        return this.bandwidthSettingId;
+    public Output<Optional<String>> bandwidthSettingId() {
+        return Codegen.optional(this.bandwidthSettingId);
     }
     /**
      * The key used to encrypt data in the volume container. It is required when property &#39;EncryptionStatus&#39; is &#34;Enabled&#34;.
@@ -73,8 +74,8 @@ public class VolumeContainer extends com.pulumi.resources.CustomResource {
      * @return The key used to encrypt data in the volume container. It is required when property &#39;EncryptionStatus&#39; is &#34;Enabled&#34;.
      * 
      */
-    public Output</* @Nullable */ AsymmetricEncryptedSecretResponse> encryptionKey() {
-        return this.encryptionKey;
+    public Output<Optional<AsymmetricEncryptedSecretResponse>> encryptionKey() {
+        return Codegen.optional(this.encryptionKey);
     }
     /**
      * The flag to denote whether encryption is enabled or not.
@@ -101,8 +102,8 @@ public class VolumeContainer extends com.pulumi.resources.CustomResource {
      * @return The Kind of the object. Currently only Series8000 is supported
      * 
      */
-    public Output</* @Nullable */ String> kind() {
-        return this.kind;
+    public Output<Optional<String>> kind() {
+        return Codegen.optional(this.kind);
     }
     /**
      * The name of the object.

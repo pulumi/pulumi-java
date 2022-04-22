@@ -20,6 +20,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -50,8 +51,8 @@ public class MetricAlert extends com.pulumi.resources.CustomResource {
      * @return the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
      * 
      */
-    public Output</* @Nullable */ List<MetricAlertActionResponse>> actions() {
-        return this.actions;
+    public Output<Optional<List<MetricAlertActionResponse>>> actions() {
+        return Codegen.optional(this.actions);
     }
     /**
      * the flag that indicates whether the alert should be auto resolved or not. The default is true.
@@ -64,8 +65,8 @@ public class MetricAlert extends com.pulumi.resources.CustomResource {
      * @return the flag that indicates whether the alert should be auto resolved or not. The default is true.
      * 
      */
-    public Output</* @Nullable */ Boolean> autoMitigate() {
-        return this.autoMitigate;
+    public Output<Optional<Boolean>> autoMitigate() {
+        return Codegen.optional(this.autoMitigate);
     }
     /**
      * defines the specific alert criteria information.
@@ -92,8 +93,8 @@ public class MetricAlert extends com.pulumi.resources.CustomResource {
      * @return the description of the metric alert that will be included in the alert email.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * the flag that indicates whether the metric alert is enabled.
@@ -218,8 +219,8 @@ public class MetricAlert extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * the region of the target resource(s) on which the alert is created/updated. Mandatory if the scope contains a subscription, resource group, or more than one resource.
@@ -232,8 +233,8 @@ public class MetricAlert extends com.pulumi.resources.CustomResource {
      * @return the region of the target resource(s) on which the alert is created/updated. Mandatory if the scope contains a subscription, resource group, or more than one resource.
      * 
      */
-    public Output</* @Nullable */ String> targetResourceRegion() {
-        return this.targetResourceRegion;
+    public Output<Optional<String>> targetResourceRegion() {
+        return Codegen.optional(this.targetResourceRegion);
     }
     /**
      * the resource type of the target resource(s) on which the alert is created/updated. Mandatory if the scope contains a subscription, resource group, or more than one resource.
@@ -246,8 +247,8 @@ public class MetricAlert extends com.pulumi.resources.CustomResource {
      * @return the resource type of the target resource(s) on which the alert is created/updated. Mandatory if the scope contains a subscription, resource group, or more than one resource.
      * 
      */
-    public Output</* @Nullable */ String> targetResourceType() {
-        return this.targetResourceType;
+    public Output<Optional<String>> targetResourceType() {
+        return Codegen.optional(this.targetResourceType);
     }
     /**
      * Azure resource type

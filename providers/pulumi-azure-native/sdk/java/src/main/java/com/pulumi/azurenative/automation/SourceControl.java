@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class SourceControl extends com.pulumi.resources.CustomResource {
      * @return The auto sync of the source control. Default is false.
      * 
      */
-    public Output</* @Nullable */ Boolean> autoSync() {
-        return this.autoSync;
+    public Output<Optional<Boolean>> autoSync() {
+        return Codegen.optional(this.autoSync);
     }
     /**
      * The repo branch of the source control. Include branch as empty string for VsoTfvc.
@@ -57,8 +58,8 @@ public class SourceControl extends com.pulumi.resources.CustomResource {
      * @return The repo branch of the source control. Include branch as empty string for VsoTfvc.
      * 
      */
-    public Output</* @Nullable */ String> branch() {
-        return this.branch;
+    public Output<Optional<String>> branch() {
+        return Codegen.optional(this.branch);
     }
     /**
      * The creation time.
@@ -71,8 +72,8 @@ public class SourceControl extends com.pulumi.resources.CustomResource {
      * @return The creation time.
      * 
      */
-    public Output</* @Nullable */ String> creationTime() {
-        return this.creationTime;
+    public Output<Optional<String>> creationTime() {
+        return Codegen.optional(this.creationTime);
     }
     /**
      * The description.
@@ -85,8 +86,8 @@ public class SourceControl extends com.pulumi.resources.CustomResource {
      * @return The description.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The folder path of the source control.
@@ -99,8 +100,8 @@ public class SourceControl extends com.pulumi.resources.CustomResource {
      * @return The folder path of the source control.
      * 
      */
-    public Output</* @Nullable */ String> folderPath() {
-        return this.folderPath;
+    public Output<Optional<String>> folderPath() {
+        return Codegen.optional(this.folderPath);
     }
     /**
      * The last modified time.
@@ -113,8 +114,8 @@ public class SourceControl extends com.pulumi.resources.CustomResource {
      * @return The last modified time.
      * 
      */
-    public Output</* @Nullable */ String> lastModifiedTime() {
-        return this.lastModifiedTime;
+    public Output<Optional<String>> lastModifiedTime() {
+        return Codegen.optional(this.lastModifiedTime);
     }
     /**
      * The name of the resource
@@ -141,8 +142,8 @@ public class SourceControl extends com.pulumi.resources.CustomResource {
      * @return The auto publish of the source control. Default is true.
      * 
      */
-    public Output</* @Nullable */ Boolean> publishRunbook() {
-        return this.publishRunbook;
+    public Output<Optional<Boolean>> publishRunbook() {
+        return Codegen.optional(this.publishRunbook);
     }
     /**
      * The repo url of the source control.
@@ -155,8 +156,8 @@ public class SourceControl extends com.pulumi.resources.CustomResource {
      * @return The repo url of the source control.
      * 
      */
-    public Output</* @Nullable */ String> repoUrl() {
-        return this.repoUrl;
+    public Output<Optional<String>> repoUrl() {
+        return Codegen.optional(this.repoUrl);
     }
     /**
      * The source type. Must be one of VsoGit, VsoTfvc, GitHub.
@@ -169,8 +170,8 @@ public class SourceControl extends com.pulumi.resources.CustomResource {
      * @return The source type. Must be one of VsoGit, VsoTfvc, GitHub.
      * 
      */
-    public Output</* @Nullable */ String> sourceType() {
-        return this.sourceType;
+    public Output<Optional<String>> sourceType() {
+        return Codegen.optional(this.sourceType);
     }
     /**
      * The type of the resource.

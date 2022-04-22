@@ -25,6 +25,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -55,8 +56,8 @@ public class Output extends com.pulumi.resources.CustomResource {
      * @return Describes the data source that output will be written to. Required on PUT (CreateOrReplace) requests.
      * 
      */
-    public com.pulumi.core.Output</* @Nullable */ Object> datasource() {
-        return this.datasource;
+    public com.pulumi.core.Output<Optional<Object>> datasource() {
+        return Codegen.optional(this.datasource);
     }
     /**
      * Describes conditions applicable to the Input, Output, or the job overall, that warrant customer attention.
@@ -97,8 +98,8 @@ public class Output extends com.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public com.pulumi.core.Output</* @Nullable */ String> name() {
-        return this.name;
+    public com.pulumi.core.Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.
@@ -111,8 +112,8 @@ public class Output extends com.pulumi.resources.CustomResource {
      * @return Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.
      * 
      */
-    public com.pulumi.core.Output</* @Nullable */ Object> serialization() {
-        return this.serialization;
+    public com.pulumi.core.Output<Optional<Object>> serialization() {
+        return Codegen.optional(this.serialization);
     }
     /**
      * Resource type

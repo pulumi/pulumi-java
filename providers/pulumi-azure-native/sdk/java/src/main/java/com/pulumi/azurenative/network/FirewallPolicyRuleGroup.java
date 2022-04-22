@@ -16,6 +16,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -60,8 +61,8 @@ public class FirewallPolicyRuleGroup extends com.pulumi.resources.CustomResource
      * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * Priority of the Firewall Policy Rule Group resource.
@@ -74,8 +75,8 @@ public class FirewallPolicyRuleGroup extends com.pulumi.resources.CustomResource
      * @return Priority of the Firewall Policy Rule Group resource.
      * 
      */
-    public Output</* @Nullable */ Integer> priority() {
-        return this.priority;
+    public Output<Optional<Integer>> priority() {
+        return Codegen.optional(this.priority);
     }
     /**
      * The provisioning state of the firewall policy rule group resource.
@@ -102,8 +103,8 @@ public class FirewallPolicyRuleGroup extends com.pulumi.resources.CustomResource
      * @return Group of Firewall Policy rules.
      * 
      */
-    public Output</* @Nullable */ List<Either<FirewallPolicyFilterRuleResponse,FirewallPolicyNatRuleResponse>>> rules() {
-        return this.rules;
+    public Output<Optional<List<Either<FirewallPolicyFilterRuleResponse,FirewallPolicyNatRuleResponse>>>> rules() {
+        return Codegen.optional(this.rules);
     }
     /**
      * Rule Group type.

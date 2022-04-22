@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return List of custom headers.
      * 
      */
-    public Output</* @Nullable */ List<EndpointPropertiesResponseCustomHeaders>> customHeaders() {
-        return this.customHeaders;
+    public Output<Optional<List<EndpointPropertiesResponseCustomHeaders>>> customHeaders() {
+        return Codegen.optional(this.customHeaders);
     }
     /**
      * Specifies the location of the external or nested endpoints when using the &#39;Performance&#39; traffic routing method.
@@ -59,8 +60,8 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return Specifies the location of the external or nested endpoints when using the &#39;Performance&#39; traffic routing method.
      * 
      */
-    public Output</* @Nullable */ String> endpointLocation() {
-        return this.endpointLocation;
+    public Output<Optional<String>> endpointLocation() {
+        return Codegen.optional(this.endpointLocation);
     }
     /**
      * The monitoring status of the endpoint.
@@ -73,8 +74,8 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return The monitoring status of the endpoint.
      * 
      */
-    public Output</* @Nullable */ String> endpointMonitorStatus() {
-        return this.endpointMonitorStatus;
+    public Output<Optional<String>> endpointMonitorStatus() {
+        return Codegen.optional(this.endpointMonitorStatus);
     }
     /**
      * The status of the endpoint. If the endpoint is Enabled, it is probed for endpoint health and is included in the traffic routing method.
@@ -87,8 +88,8 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return The status of the endpoint. If the endpoint is Enabled, it is probed for endpoint health and is included in the traffic routing method.
      * 
      */
-    public Output</* @Nullable */ String> endpointStatus() {
-        return this.endpointStatus;
+    public Output<Optional<String>> endpointStatus() {
+        return Codegen.optional(this.endpointStatus);
     }
     /**
      * The list of countries/regions mapped to this endpoint when using the &#39;Geographic&#39; traffic routing method. Please consult Traffic Manager Geographic documentation for a full list of accepted values.
@@ -101,8 +102,8 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return The list of countries/regions mapped to this endpoint when using the &#39;Geographic&#39; traffic routing method. Please consult Traffic Manager Geographic documentation for a full list of accepted values.
      * 
      */
-    public Output</* @Nullable */ List<String>> geoMapping() {
-        return this.geoMapping;
+    public Output<Optional<List<String>>> geoMapping() {
+        return Codegen.optional(this.geoMapping);
     }
     /**
      * The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type &#39;NestedEndpoints&#39;.
@@ -115,8 +116,8 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type &#39;NestedEndpoints&#39;.
      * 
      */
-    public Output</* @Nullable */ Double> minChildEndpoints() {
-        return this.minChildEndpoints;
+    public Output<Optional<Double>> minChildEndpoints() {
+        return Codegen.optional(this.minChildEndpoints);
     }
     /**
      * The minimum number of IPv4 (DNS record type A) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type &#39;NestedEndpoints&#39;.
@@ -129,8 +130,8 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return The minimum number of IPv4 (DNS record type A) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type &#39;NestedEndpoints&#39;.
      * 
      */
-    public Output</* @Nullable */ Double> minChildEndpointsIPv4() {
-        return this.minChildEndpointsIPv4;
+    public Output<Optional<Double>> minChildEndpointsIPv4() {
+        return Codegen.optional(this.minChildEndpointsIPv4);
     }
     /**
      * The minimum number of IPv6 (DNS record type AAAA) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type &#39;NestedEndpoints&#39;.
@@ -143,8 +144,8 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return The minimum number of IPv6 (DNS record type AAAA) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type &#39;NestedEndpoints&#39;.
      * 
      */
-    public Output</* @Nullable */ Double> minChildEndpointsIPv6() {
-        return this.minChildEndpointsIPv6;
+    public Output<Optional<Double>> minChildEndpointsIPv6() {
+        return Codegen.optional(this.minChildEndpointsIPv6);
     }
     /**
      * The name of the resource
@@ -157,8 +158,8 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * The priority of this endpoint when using the &#39;Priority&#39; traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value.
@@ -171,8 +172,8 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return The priority of this endpoint when using the &#39;Priority&#39; traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value.
      * 
      */
-    public Output</* @Nullable */ Double> priority() {
-        return this.priority;
+    public Output<Optional<Double>> priority() {
+        return Codegen.optional(this.priority);
     }
     /**
      * The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the &#39;Subnet&#39; traffic routing method. An empty list will match all ranges not covered by other endpoints.
@@ -185,8 +186,8 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the &#39;Subnet&#39; traffic routing method. An empty list will match all ranges not covered by other endpoints.
      * 
      */
-    public Output</* @Nullable */ List<EndpointPropertiesResponseSubnets>> subnets() {
-        return this.subnets;
+    public Output<Optional<List<EndpointPropertiesResponseSubnets>>> subnets() {
+        return Codegen.optional(this.subnets);
     }
     /**
      * The fully-qualified DNS name or IP address of the endpoint. Traffic Manager returns this value in DNS responses to direct traffic to this endpoint.
@@ -199,8 +200,8 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return The fully-qualified DNS name or IP address of the endpoint. Traffic Manager returns this value in DNS responses to direct traffic to this endpoint.
      * 
      */
-    public Output</* @Nullable */ String> target() {
-        return this.target;
+    public Output<Optional<String>> target() {
+        return Codegen.optional(this.target);
     }
     /**
      * The Azure Resource URI of the of the endpoint. Not applicable to endpoints of type &#39;ExternalEndpoints&#39;.
@@ -213,8 +214,8 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return The Azure Resource URI of the of the endpoint. Not applicable to endpoints of type &#39;ExternalEndpoints&#39;.
      * 
      */
-    public Output</* @Nullable */ String> targetResourceId() {
-        return this.targetResourceId;
+    public Output<Optional<String>> targetResourceId() {
+        return Codegen.optional(this.targetResourceId);
     }
     /**
      * The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.
@@ -227,8 +228,8 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.
      * 
      */
-    public Output</* @Nullable */ String> type() {
-        return this.type;
+    public Output<Optional<String>> type() {
+        return Codegen.optional(this.type);
     }
     /**
      * The weight of this endpoint when using the &#39;Weighted&#39; traffic routing method. Possible values are from 1 to 1000.
@@ -241,8 +242,8 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return The weight of this endpoint when using the &#39;Weighted&#39; traffic routing method. Possible values are from 1 to 1000.
      * 
      */
-    public Output</* @Nullable */ Double> weight() {
-        return this.weight;
+    public Output<Optional<Double>> weight() {
+        return Codegen.optional(this.weight);
     }
 
     /**

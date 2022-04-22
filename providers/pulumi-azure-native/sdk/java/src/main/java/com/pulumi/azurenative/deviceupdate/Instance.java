@@ -17,6 +17,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -61,8 +62,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return Customer-initiated diagnostic log collection storage properties
      * 
      */
-    public Output</* @Nullable */ DiagnosticStoragePropertiesResponse> diagnosticStorageProperties() {
-        return this.diagnosticStorageProperties;
+    public Output<Optional<DiagnosticStoragePropertiesResponse>> diagnosticStorageProperties() {
+        return Codegen.optional(this.diagnosticStorageProperties);
     }
     /**
      * Enables or Disables the diagnostic logs collection
@@ -75,8 +76,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return Enables or Disables the diagnostic logs collection
      * 
      */
-    public Output</* @Nullable */ Boolean> enableDiagnostics() {
-        return this.enableDiagnostics;
+    public Output<Optional<Boolean>> enableDiagnostics() {
+        return Codegen.optional(this.enableDiagnostics);
     }
     /**
      * List of IoT Hubs associated with the account.
@@ -89,8 +90,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return List of IoT Hubs associated with the account.
      * 
      */
-    public Output</* @Nullable */ List<IotHubSettingsResponse>> iotHubs() {
-        return this.iotHubs;
+    public Output<Optional<List<IotHubSettingsResponse>>> iotHubs() {
+        return Codegen.optional(this.iotHubs);
     }
     /**
      * The geo-location where the resource lives
@@ -159,8 +160,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;

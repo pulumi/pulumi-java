@@ -18,6 +18,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -48,8 +49,8 @@ public class SnapshotPolicy extends com.pulumi.resources.CustomResource {
      * @return Schedule for daily snapshots
      * 
      */
-    public Output</* @Nullable */ DailyScheduleResponse> dailySchedule() {
-        return this.dailySchedule;
+    public Output<Optional<DailyScheduleResponse>> dailySchedule() {
+        return Codegen.optional(this.dailySchedule);
     }
     /**
      * The property to decide policy is enabled or not
@@ -62,8 +63,8 @@ public class SnapshotPolicy extends com.pulumi.resources.CustomResource {
      * @return The property to decide policy is enabled or not
      * 
      */
-    public Output</* @Nullable */ Boolean> enabled() {
-        return this.enabled;
+    public Output<Optional<Boolean>> enabled() {
+        return Codegen.optional(this.enabled);
     }
     /**
      * Schedule for hourly snapshots
@@ -76,8 +77,8 @@ public class SnapshotPolicy extends com.pulumi.resources.CustomResource {
      * @return Schedule for hourly snapshots
      * 
      */
-    public Output</* @Nullable */ HourlyScheduleResponse> hourlySchedule() {
-        return this.hourlySchedule;
+    public Output<Optional<HourlyScheduleResponse>> hourlySchedule() {
+        return Codegen.optional(this.hourlySchedule);
     }
     /**
      * Resource location
@@ -104,8 +105,8 @@ public class SnapshotPolicy extends com.pulumi.resources.CustomResource {
      * @return Schedule for monthly snapshots
      * 
      */
-    public Output</* @Nullable */ MonthlyScheduleResponse> monthlySchedule() {
-        return this.monthlySchedule;
+    public Output<Optional<MonthlyScheduleResponse>> monthlySchedule() {
+        return Codegen.optional(this.monthlySchedule);
     }
     /**
      * Resource name
@@ -146,8 +147,8 @@ public class SnapshotPolicy extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type
@@ -174,8 +175,8 @@ public class SnapshotPolicy extends com.pulumi.resources.CustomResource {
      * @return Schedule for weekly snapshots
      * 
      */
-    public Output</* @Nullable */ WeeklyScheduleResponse> weeklySchedule() {
-        return this.weeklySchedule;
+    public Output<Optional<WeeklyScheduleResponse>> weeklySchedule() {
+        return Codegen.optional(this.weeklySchedule);
     }
 
     /**

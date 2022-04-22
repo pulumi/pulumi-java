@@ -17,6 +17,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -47,8 +48,8 @@ public class PartnerNamespace extends com.pulumi.resources.CustomResource {
      * @return This boolean is used to enable or disable local auth. Default value is false. When the property is set to true, only AAD token will be used to authenticate if user is allowed to publish to the partner namespace.
      * 
      */
-    public Output</* @Nullable */ Boolean> disableLocalAuth() {
-        return this.disableLocalAuth;
+    public Output<Optional<Boolean>> disableLocalAuth() {
+        return Codegen.optional(this.disableLocalAuth);
     }
     /**
      * Endpoint for the partner namespace.
@@ -75,8 +76,8 @@ public class PartnerNamespace extends com.pulumi.resources.CustomResource {
      * @return This can be used to restrict traffic from specific IPs instead of all IPs. Note: These are considered only if PublicNetworkAccess is enabled.
      * 
      */
-    public Output</* @Nullable */ List<InboundIpRuleResponse>> inboundIpRules() {
-        return this.inboundIpRules;
+    public Output<Optional<List<InboundIpRuleResponse>>> inboundIpRules() {
+        return Codegen.optional(this.inboundIpRules);
     }
     /**
      * Location of the resource.
@@ -119,8 +120,8 @@ public class PartnerNamespace extends com.pulumi.resources.CustomResource {
      * /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/partnerRegistrations/{partnerRegistrationName}.
      * 
      */
-    public Output</* @Nullable */ String> partnerRegistrationFullyQualifiedId() {
-        return this.partnerRegistrationFullyQualifiedId;
+    public Output<Optional<String>> partnerRegistrationFullyQualifiedId() {
+        return Codegen.optional(this.partnerRegistrationFullyQualifiedId);
     }
     @Export(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionResponse.class})
     private Output<List<PrivateEndpointConnectionResponse>> privateEndpointConnections;
@@ -155,8 +156,8 @@ public class PartnerNamespace extends com.pulumi.resources.CustomResource {
      * You can further restrict to specific IPs by configuring &lt;seealso cref=&#34;P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.PartnerNamespaceProperties.InboundIpRules&#34; /&gt;
      * 
      */
-    public Output</* @Nullable */ String> publicNetworkAccess() {
-        return this.publicNetworkAccess;
+    public Output<Optional<String>> publicNetworkAccess() {
+        return Codegen.optional(this.publicNetworkAccess);
     }
     /**
      * The system metadata relating to Partner Namespace resource.
@@ -183,8 +184,8 @@ public class PartnerNamespace extends com.pulumi.resources.CustomResource {
      * @return Tags of the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Type of the resource.

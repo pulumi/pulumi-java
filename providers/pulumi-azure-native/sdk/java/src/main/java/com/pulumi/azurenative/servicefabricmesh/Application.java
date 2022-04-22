@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return Internal - used by Visual Studio to setup the debugging session on the local development environment.
      * 
      */
-    public Output</* @Nullable */ String> debugParams() {
-        return this.debugParams;
+    public Output<Optional<String>> debugParams() {
+        return Codegen.optional(this.debugParams);
     }
     /**
      * User readable description of the application.
@@ -59,8 +60,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return User readable description of the application.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Describes the diagnostics definition and usage for an application resource.
@@ -73,8 +74,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return Describes the diagnostics definition and usage for an application resource.
      * 
      */
-    public Output</* @Nullable */ DiagnosticsDescriptionResponse> diagnostics() {
-        return this.diagnostics;
+    public Output<Optional<DiagnosticsDescriptionResponse>> diagnostics() {
+        return Codegen.optional(this.diagnostics);
     }
     /**
      * Describes the health state of an application resource.
@@ -157,8 +158,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return Describes the services in the application. This property is used to create or modify services of the application. On get only the name of the service is returned. The service description can be obtained by querying for the service resource.
      * 
      */
-    public Output</* @Nullable */ List<ServiceResourceDescriptionResponse>> services() {
-        return this.services;
+    public Output<Optional<List<ServiceResourceDescriptionResponse>>> services() {
+        return Codegen.optional(this.services);
     }
     /**
      * Status of the application.
@@ -199,8 +200,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.

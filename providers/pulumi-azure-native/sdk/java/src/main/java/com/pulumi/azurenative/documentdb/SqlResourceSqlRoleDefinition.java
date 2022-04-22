@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class SqlResourceSqlRoleDefinition extends com.pulumi.resources.CustomRes
      * @return A set of fully qualified Scopes at or below which Role Assignments may be created using this Role Definition. This will allow application of this Role Definition on the entire database account or any underlying Database / Collection. Must have at least one element. Scopes higher than Database account are not enforceable as assignable Scopes. Note that resources referenced in assignable Scopes need not exist.
      * 
      */
-    public Output</* @Nullable */ List<String>> assignableScopes() {
-        return this.assignableScopes;
+    public Output<Optional<List<String>>> assignableScopes() {
+        return Codegen.optional(this.assignableScopes);
     }
     /**
      * The name of the database account.
@@ -71,8 +72,8 @@ public class SqlResourceSqlRoleDefinition extends com.pulumi.resources.CustomRes
      * @return The set of operations allowed through this Role Definition.
      * 
      */
-    public Output</* @Nullable */ List<PermissionResponse>> permissions() {
-        return this.permissions;
+    public Output<Optional<List<PermissionResponse>>> permissions() {
+        return Codegen.optional(this.permissions);
     }
     /**
      * A user-friendly name for the Role Definition. Must be unique for the database account.
@@ -85,8 +86,8 @@ public class SqlResourceSqlRoleDefinition extends com.pulumi.resources.CustomRes
      * @return A user-friendly name for the Role Definition. Must be unique for the database account.
      * 
      */
-    public Output</* @Nullable */ String> roleName() {
-        return this.roleName;
+    public Output<Optional<String>> roleName() {
+        return Codegen.optional(this.roleName);
     }
     /**
      * The type of Azure resource.

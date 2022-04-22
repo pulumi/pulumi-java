@@ -17,6 +17,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -61,8 +62,8 @@ public class VirtualMachineSchedule extends com.pulumi.resources.CustomResource 
      * @return If the schedule will occur once each day of the week, specify the daily recurrence.
      * 
      */
-    public Output</* @Nullable */ DayDetailsResponse> dailyRecurrence() {
-        return this.dailyRecurrence;
+    public Output<Optional<DayDetailsResponse>> dailyRecurrence() {
+        return Codegen.optional(this.dailyRecurrence);
     }
     /**
      * If the schedule will occur multiple times a day, specify the hourly recurrence.
@@ -75,8 +76,8 @@ public class VirtualMachineSchedule extends com.pulumi.resources.CustomResource 
      * @return If the schedule will occur multiple times a day, specify the hourly recurrence.
      * 
      */
-    public Output</* @Nullable */ HourDetailsResponse> hourlyRecurrence() {
-        return this.hourlyRecurrence;
+    public Output<Optional<HourDetailsResponse>> hourlyRecurrence() {
+        return Codegen.optional(this.hourlyRecurrence);
     }
     /**
      * The location of the resource.
@@ -89,8 +90,8 @@ public class VirtualMachineSchedule extends com.pulumi.resources.CustomResource 
      * @return The location of the resource.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The name of the resource.
@@ -117,8 +118,8 @@ public class VirtualMachineSchedule extends com.pulumi.resources.CustomResource 
      * @return Notification settings.
      * 
      */
-    public Output</* @Nullable */ NotificationSettingsResponse> notificationSettings() {
-        return this.notificationSettings;
+    public Output<Optional<NotificationSettingsResponse>> notificationSettings() {
+        return Codegen.optional(this.notificationSettings);
     }
     /**
      * The provisioning status of the resource.
@@ -145,8 +146,8 @@ public class VirtualMachineSchedule extends com.pulumi.resources.CustomResource 
      * @return The status of the schedule (i.e. Enabled, Disabled)
      * 
      */
-    public Output</* @Nullable */ String> status() {
-        return this.status;
+    public Output<Optional<String>> status() {
+        return Codegen.optional(this.status);
     }
     /**
      * The tags of the resource.
@@ -159,8 +160,8 @@ public class VirtualMachineSchedule extends com.pulumi.resources.CustomResource 
      * @return The tags of the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The resource ID to which the schedule belongs
@@ -173,8 +174,8 @@ public class VirtualMachineSchedule extends com.pulumi.resources.CustomResource 
      * @return The resource ID to which the schedule belongs
      * 
      */
-    public Output</* @Nullable */ String> targetResourceId() {
-        return this.targetResourceId;
+    public Output<Optional<String>> targetResourceId() {
+        return Codegen.optional(this.targetResourceId);
     }
     /**
      * The task type of the schedule (e.g. LabVmsShutdownTask, LabVmAutoStart).
@@ -187,8 +188,8 @@ public class VirtualMachineSchedule extends com.pulumi.resources.CustomResource 
      * @return The task type of the schedule (e.g. LabVmsShutdownTask, LabVmAutoStart).
      * 
      */
-    public Output</* @Nullable */ String> taskType() {
-        return this.taskType;
+    public Output<Optional<String>> taskType() {
+        return Codegen.optional(this.taskType);
     }
     /**
      * The time zone ID (e.g. Pacific Standard time).
@@ -201,8 +202,8 @@ public class VirtualMachineSchedule extends com.pulumi.resources.CustomResource 
      * @return The time zone ID (e.g. Pacific Standard time).
      * 
      */
-    public Output</* @Nullable */ String> timeZoneId() {
-        return this.timeZoneId;
+    public Output<Optional<String>> timeZoneId() {
+        return Codegen.optional(this.timeZoneId);
     }
     /**
      * The type of the resource.
@@ -243,8 +244,8 @@ public class VirtualMachineSchedule extends com.pulumi.resources.CustomResource 
      * @return If the schedule will occur only some days of the week, specify the weekly recurrence.
      * 
      */
-    public Output</* @Nullable */ WeekDetailsResponse> weeklyRecurrence() {
-        return this.weeklyRecurrence;
+    public Output<Optional<WeekDetailsResponse>> weeklyRecurrence() {
+        return Codegen.optional(this.weeklyRecurrence);
     }
 
     /**

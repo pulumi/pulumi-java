@@ -14,6 +14,7 @@ import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class WorkloadGroup extends com.pulumi.resources.CustomResource {
      * @return The workload group importance level.
      * 
      */
-    public Output</* @Nullable */ String> importance() {
-        return this.importance;
+    public Output<Optional<String>> importance() {
+        return Codegen.optional(this.importance);
     }
     /**
      * The workload group cap percentage resource.
@@ -72,8 +73,8 @@ public class WorkloadGroup extends com.pulumi.resources.CustomResource {
      * @return The workload group request maximum grant percentage.
      * 
      */
-    public Output</* @Nullable */ Double> maxResourcePercentPerRequest() {
-        return this.maxResourcePercentPerRequest;
+    public Output<Optional<Double>> maxResourcePercentPerRequest() {
+        return Codegen.optional(this.maxResourcePercentPerRequest);
     }
     /**
      * The workload group minimum percentage resource.
@@ -128,8 +129,8 @@ public class WorkloadGroup extends com.pulumi.resources.CustomResource {
      * @return The workload group query execution timeout.
      * 
      */
-    public Output</* @Nullable */ Integer> queryExecutionTimeout() {
-        return this.queryExecutionTimeout;
+    public Output<Optional<Integer>> queryExecutionTimeout() {
+        return Codegen.optional(this.queryExecutionTimeout);
     }
     /**
      * Resource type.

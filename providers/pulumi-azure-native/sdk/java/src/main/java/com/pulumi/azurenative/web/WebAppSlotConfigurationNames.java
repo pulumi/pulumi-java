@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -39,8 +40,8 @@ public class WebAppSlotConfigurationNames extends com.pulumi.resources.CustomRes
      * @return List of application settings names.
      * 
      */
-    public Output</* @Nullable */ List<String>> appSettingNames() {
-        return this.appSettingNames;
+    public Output<Optional<List<String>>> appSettingNames() {
+        return Codegen.optional(this.appSettingNames);
     }
     /**
      * List of external Azure storage account identifiers.
@@ -53,8 +54,8 @@ public class WebAppSlotConfigurationNames extends com.pulumi.resources.CustomRes
      * @return List of external Azure storage account identifiers.
      * 
      */
-    public Output</* @Nullable */ List<String>> azureStorageConfigNames() {
-        return this.azureStorageConfigNames;
+    public Output<Optional<List<String>>> azureStorageConfigNames() {
+        return Codegen.optional(this.azureStorageConfigNames);
     }
     /**
      * List of connection string names.
@@ -67,8 +68,8 @@ public class WebAppSlotConfigurationNames extends com.pulumi.resources.CustomRes
      * @return List of connection string names.
      * 
      */
-    public Output</* @Nullable */ List<String>> connectionStringNames() {
-        return this.connectionStringNames;
+    public Output<Optional<List<String>>> connectionStringNames() {
+        return Codegen.optional(this.connectionStringNames);
     }
     /**
      * Kind of resource.
@@ -81,8 +82,8 @@ public class WebAppSlotConfigurationNames extends com.pulumi.resources.CustomRes
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> kind() {
-        return this.kind;
+    public Output<Optional<String>> kind() {
+        return Codegen.optional(this.kind);
     }
     /**
      * Resource Name.

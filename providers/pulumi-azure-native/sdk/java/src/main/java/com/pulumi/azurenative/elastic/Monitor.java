@@ -17,6 +17,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -47,8 +48,8 @@ public class Monitor extends com.pulumi.resources.CustomResource {
      * @return Identity properties of the monitor resource.
      * 
      */
-    public Output</* @Nullable */ IdentityPropertiesResponse> identity() {
-        return this.identity;
+    public Output<Optional<IdentityPropertiesResponse>> identity() {
+        return Codegen.optional(this.identity);
     }
     /**
      * The location of the monitor resource
@@ -103,8 +104,8 @@ public class Monitor extends com.pulumi.resources.CustomResource {
      * @return SKU of the monitor resource.
      * 
      */
-    public Output</* @Nullable */ ResourceSkuResponse> sku() {
-        return this.sku;
+    public Output<Optional<ResourceSkuResponse>> sku() {
+        return Codegen.optional(this.sku);
     }
     /**
      * The system metadata relating to this resource
@@ -131,8 +132,8 @@ public class Monitor extends com.pulumi.resources.CustomResource {
      * @return The tags of the monitor resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the monitor resource.

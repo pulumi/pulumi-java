@@ -15,6 +15,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class Dashboard extends com.pulumi.resources.CustomResource {
      * @return The dashboard lenses.
      * 
      */
-    public Output</* @Nullable */ List<DashboardLensResponse>> lenses() {
-        return this.lenses;
+    public Output<Optional<List<DashboardLensResponse>>> lenses() {
+        return Codegen.optional(this.lenses);
     }
     /**
      * Resource location
@@ -73,8 +74,8 @@ public class Dashboard extends com.pulumi.resources.CustomResource {
      * @return The dashboard metadata.
      * 
      */
-    public Output</* @Nullable */ Map<String,Object>> metadata() {
-        return this.metadata;
+    public Output<Optional<Map<String,Object>>> metadata() {
+        return Codegen.optional(this.metadata);
     }
     /**
      * Resource name
@@ -101,8 +102,8 @@ public class Dashboard extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type

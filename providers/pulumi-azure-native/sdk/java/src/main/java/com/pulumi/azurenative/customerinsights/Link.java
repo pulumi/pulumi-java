@@ -16,6 +16,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class Link extends com.pulumi.resources.CustomResource {
      * @return Localized descriptions for the Link.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> description() {
-        return this.description;
+    public Output<Optional<Map<String,String>>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Localized display name for the Link.
@@ -60,8 +61,8 @@ public class Link extends com.pulumi.resources.CustomResource {
      * @return Localized display name for the Link.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> displayName() {
-        return this.displayName;
+    public Output<Optional<Map<String,String>>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * The link name.
@@ -88,8 +89,8 @@ public class Link extends com.pulumi.resources.CustomResource {
      * @return The set of properties mappings between the source and target Types.
      * 
      */
-    public Output</* @Nullable */ List<TypePropertiesMappingResponse>> mappings() {
-        return this.mappings;
+    public Output<Optional<List<TypePropertiesMappingResponse>>> mappings() {
+        return Codegen.optional(this.mappings);
     }
     /**
      * Resource name.
@@ -116,8 +117,8 @@ public class Link extends com.pulumi.resources.CustomResource {
      * @return Determines whether this link is supposed to create or delete instances if Link is NOT Reference Only.
      * 
      */
-    public Output</* @Nullable */ String> operationType() {
-        return this.operationType;
+    public Output<Optional<String>> operationType() {
+        return Codegen.optional(this.operationType);
     }
     /**
      * The properties that represent the participating profile.
@@ -158,8 +159,8 @@ public class Link extends com.pulumi.resources.CustomResource {
      * @return Indicating whether the link is reference only link. This flag is ignored if the Mappings are defined. If the mappings are not defined and it is set to true, links processing will not create or update profiles.
      * 
      */
-    public Output</* @Nullable */ Boolean> referenceOnly() {
-        return this.referenceOnly;
+    public Output<Optional<Boolean>> referenceOnly() {
+        return Codegen.optional(this.referenceOnly);
     }
     /**
      * Type of source entity.

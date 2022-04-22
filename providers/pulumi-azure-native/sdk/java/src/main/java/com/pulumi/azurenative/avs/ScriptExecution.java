@@ -17,6 +17,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -61,8 +62,8 @@ public class ScriptExecution extends com.pulumi.resources.CustomResource {
      * @return Error message if the script was able to run, but if the script itself had errors or powershell threw an exception
      * 
      */
-    public Output</* @Nullable */ String> failureReason() {
-        return this.failureReason;
+    public Output<Optional<String>> failureReason() {
+        return Codegen.optional(this.failureReason);
     }
     /**
      * Time the script execution was finished
@@ -89,8 +90,8 @@ public class ScriptExecution extends com.pulumi.resources.CustomResource {
      * @return Parameters that will be hidden/not visible to ARM, such as passwords and credentials
      * 
      */
-    public Output</* @Nullable */ List<Object>> hiddenParameters() {
-        return this.hiddenParameters;
+    public Output<Optional<List<Object>>> hiddenParameters() {
+        return Codegen.optional(this.hiddenParameters);
     }
     /**
      * Standard information out stream from the powershell execution
@@ -131,8 +132,8 @@ public class ScriptExecution extends com.pulumi.resources.CustomResource {
      * @return User-defined dictionary.
      * 
      */
-    public Output</* @Nullable */ Map<String,Object>> namedOutputs() {
-        return this.namedOutputs;
+    public Output<Optional<Map<String,Object>>> namedOutputs() {
+        return Codegen.optional(this.namedOutputs);
     }
     /**
      * Standard output stream from the powershell execution
@@ -145,8 +146,8 @@ public class ScriptExecution extends com.pulumi.resources.CustomResource {
      * @return Standard output stream from the powershell execution
      * 
      */
-    public Output</* @Nullable */ List<String>> output() {
-        return this.output;
+    public Output<Optional<List<String>>> output() {
+        return Codegen.optional(this.output);
     }
     /**
      * Parameters the script will accept
@@ -159,8 +160,8 @@ public class ScriptExecution extends com.pulumi.resources.CustomResource {
      * @return Parameters the script will accept
      * 
      */
-    public Output</* @Nullable */ List<Object>> parameters() {
-        return this.parameters;
+    public Output<Optional<List<Object>>> parameters() {
+        return Codegen.optional(this.parameters);
     }
     /**
      * The state of the script execution resource
@@ -187,8 +188,8 @@ public class ScriptExecution extends com.pulumi.resources.CustomResource {
      * @return Time to live for the resource. If not provided, will be available for 60 days
      * 
      */
-    public Output</* @Nullable */ String> retention() {
-        return this.retention;
+    public Output<Optional<String>> retention() {
+        return Codegen.optional(this.retention);
     }
     /**
      * A reference to the script cmdlet resource if user is running a AVS script
@@ -201,8 +202,8 @@ public class ScriptExecution extends com.pulumi.resources.CustomResource {
      * @return A reference to the script cmdlet resource if user is running a AVS script
      * 
      */
-    public Output</* @Nullable */ String> scriptCmdletId() {
-        return this.scriptCmdletId;
+    public Output<Optional<String>> scriptCmdletId() {
+        return Codegen.optional(this.scriptCmdletId);
     }
     /**
      * Time the script execution was started

@@ -19,6 +19,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -49,8 +50,8 @@ public class OpenShiftManagedCluster extends com.pulumi.resources.CustomResource
      * @return Configuration of OpenShift cluster VMs.
      * 
      */
-    public Output</* @Nullable */ List<OpenShiftManagedClusterAgentPoolProfileResponse>> agentPoolProfiles() {
-        return this.agentPoolProfiles;
+    public Output<Optional<List<OpenShiftManagedClusterAgentPoolProfileResponse>>> agentPoolProfiles() {
+        return Codegen.optional(this.agentPoolProfiles);
     }
     /**
      * Configures OpenShift authentication.
@@ -63,8 +64,8 @@ public class OpenShiftManagedCluster extends com.pulumi.resources.CustomResource
      * @return Configures OpenShift authentication.
      * 
      */
-    public Output</* @Nullable */ OpenShiftManagedClusterAuthProfileResponse> authProfile() {
-        return this.authProfile;
+    public Output<Optional<OpenShiftManagedClusterAuthProfileResponse>> authProfile() {
+        return Codegen.optional(this.authProfile);
     }
     /**
      * Version of OpenShift specified when creating the cluster.
@@ -119,8 +120,8 @@ public class OpenShiftManagedCluster extends com.pulumi.resources.CustomResource
      * @return Configuration for OpenShift master VMs.
      * 
      */
-    public Output</* @Nullable */ OpenShiftManagedClusterMasterPoolProfileResponse> masterPoolProfile() {
-        return this.masterPoolProfile;
+    public Output<Optional<OpenShiftManagedClusterMasterPoolProfileResponse>> masterPoolProfile() {
+        return Codegen.optional(this.masterPoolProfile);
     }
     /**
      * Resource name
@@ -147,8 +148,8 @@ public class OpenShiftManagedCluster extends com.pulumi.resources.CustomResource
      * @return Configuration for OpenShift networking.
      * 
      */
-    public Output</* @Nullable */ NetworkProfileResponse> networkProfile() {
-        return this.networkProfile;
+    public Output<Optional<NetworkProfileResponse>> networkProfile() {
+        return Codegen.optional(this.networkProfile);
     }
     /**
      * Version of OpenShift specified when creating the cluster.
@@ -175,8 +176,8 @@ public class OpenShiftManagedCluster extends com.pulumi.resources.CustomResource
      * @return Define the resource plan as required by ARM for billing purposes
      * 
      */
-    public Output</* @Nullable */ PurchasePlanResponse> plan() {
-        return this.plan;
+    public Output<Optional<PurchasePlanResponse>> plan() {
+        return Codegen.optional(this.plan);
     }
     /**
      * The current deployment or provisioning state, which only appears in the response.
@@ -217,8 +218,8 @@ public class OpenShiftManagedCluster extends com.pulumi.resources.CustomResource
      * @return Configuration for OpenShift router(s).
      * 
      */
-    public Output</* @Nullable */ List<OpenShiftRouterProfileResponse>> routerProfiles() {
-        return this.routerProfiles;
+    public Output<Optional<List<OpenShiftRouterProfileResponse>>> routerProfiles() {
+        return Codegen.optional(this.routerProfiles);
     }
     /**
      * Resource tags
@@ -231,8 +232,8 @@ public class OpenShiftManagedCluster extends com.pulumi.resources.CustomResource
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type

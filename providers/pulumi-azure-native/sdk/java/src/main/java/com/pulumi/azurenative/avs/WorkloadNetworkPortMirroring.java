@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class WorkloadNetworkPortMirroring extends com.pulumi.resources.CustomRes
      * @return Destination VM Group.
      * 
      */
-    public Output</* @Nullable */ String> destination() {
-        return this.destination;
+    public Output<Optional<String>> destination() {
+        return Codegen.optional(this.destination);
     }
     /**
      * Direction of port mirroring profile.
@@ -57,8 +58,8 @@ public class WorkloadNetworkPortMirroring extends com.pulumi.resources.CustomRes
      * @return Direction of port mirroring profile.
      * 
      */
-    public Output</* @Nullable */ String> direction() {
-        return this.direction;
+    public Output<Optional<String>> direction() {
+        return Codegen.optional(this.direction);
     }
     /**
      * Display name of the port mirroring profile.
@@ -71,8 +72,8 @@ public class WorkloadNetworkPortMirroring extends com.pulumi.resources.CustomRes
      * @return Display name of the port mirroring profile.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * Resource name.
@@ -113,8 +114,8 @@ public class WorkloadNetworkPortMirroring extends com.pulumi.resources.CustomRes
      * @return NSX revision number.
      * 
      */
-    public Output</* @Nullable */ Double> revision() {
-        return this.revision;
+    public Output<Optional<Double>> revision() {
+        return Codegen.optional(this.revision);
     }
     /**
      * Source VM Group.
@@ -127,8 +128,8 @@ public class WorkloadNetworkPortMirroring extends com.pulumi.resources.CustomRes
      * @return Source VM Group.
      * 
      */
-    public Output</* @Nullable */ String> source() {
-        return this.source;
+    public Output<Optional<String>> source() {
+        return Codegen.optional(this.source);
     }
     /**
      * Port Mirroring Status.

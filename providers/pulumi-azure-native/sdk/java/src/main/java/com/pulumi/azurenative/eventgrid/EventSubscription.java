@@ -24,6 +24,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -54,8 +55,8 @@ public class EventSubscription extends com.pulumi.resources.CustomResource {
      * @return The DeadLetter destination of the event subscription.
      * 
      */
-    public Output</* @Nullable */ StorageBlobDeadLetterDestinationResponse> deadLetterDestination() {
-        return this.deadLetterDestination;
+    public Output<Optional<StorageBlobDeadLetterDestinationResponse>> deadLetterDestination() {
+        return Codegen.optional(this.deadLetterDestination);
     }
     /**
      * Information about the destination where events have to be delivered for the event subscription.
@@ -68,8 +69,8 @@ public class EventSubscription extends com.pulumi.resources.CustomResource {
      * @return Information about the destination where events have to be delivered for the event subscription.
      * 
      */
-    public Output</* @Nullable */ Object> destination() {
-        return this.destination;
+    public Output<Optional<Object>> destination() {
+        return Codegen.optional(this.destination);
     }
     /**
      * The event delivery schema for the event subscription.
@@ -82,8 +83,8 @@ public class EventSubscription extends com.pulumi.resources.CustomResource {
      * @return The event delivery schema for the event subscription.
      * 
      */
-    public Output</* @Nullable */ String> eventDeliverySchema() {
-        return this.eventDeliverySchema;
+    public Output<Optional<String>> eventDeliverySchema() {
+        return Codegen.optional(this.eventDeliverySchema);
     }
     /**
      * Expiration time of the event subscription.
@@ -96,8 +97,8 @@ public class EventSubscription extends com.pulumi.resources.CustomResource {
      * @return Expiration time of the event subscription.
      * 
      */
-    public Output</* @Nullable */ String> expirationTimeUtc() {
-        return this.expirationTimeUtc;
+    public Output<Optional<String>> expirationTimeUtc() {
+        return Codegen.optional(this.expirationTimeUtc);
     }
     /**
      * Information about the filter for the event subscription.
@@ -110,8 +111,8 @@ public class EventSubscription extends com.pulumi.resources.CustomResource {
      * @return Information about the filter for the event subscription.
      * 
      */
-    public Output</* @Nullable */ EventSubscriptionFilterResponse> filter() {
-        return this.filter;
+    public Output<Optional<EventSubscriptionFilterResponse>> filter() {
+        return Codegen.optional(this.filter);
     }
     /**
      * List of user defined labels.
@@ -124,8 +125,8 @@ public class EventSubscription extends com.pulumi.resources.CustomResource {
      * @return List of user defined labels.
      * 
      */
-    public Output</* @Nullable */ List<String>> labels() {
-        return this.labels;
+    public Output<Optional<List<String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * Name of the resource.
@@ -166,8 +167,8 @@ public class EventSubscription extends com.pulumi.resources.CustomResource {
      * @return The retry policy for events. This can be used to configure maximum number of delivery attempts and time to live for events.
      * 
      */
-    public Output</* @Nullable */ RetryPolicyResponse> retryPolicy() {
-        return this.retryPolicy;
+    public Output<Optional<RetryPolicyResponse>> retryPolicy() {
+        return Codegen.optional(this.retryPolicy);
     }
     /**
      * The system metadata relating to Event Subscription resource.

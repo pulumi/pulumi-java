@@ -17,6 +17,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -89,8 +90,8 @@ public class NetworkSecurityGroup extends com.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * Resource name.
@@ -159,8 +160,8 @@ public class NetworkSecurityGroup extends com.pulumi.resources.CustomResource {
      * @return A collection of security rules of the network security group.
      * 
      */
-    public Output</* @Nullable */ List<SecurityRuleResponse>> securityRules() {
-        return this.securityRules;
+    public Output<Optional<List<SecurityRuleResponse>>> securityRules() {
+        return Codegen.optional(this.securityRules);
     }
     /**
      * A collection of references to subnets.
@@ -187,8 +188,8 @@ public class NetworkSecurityGroup extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type.

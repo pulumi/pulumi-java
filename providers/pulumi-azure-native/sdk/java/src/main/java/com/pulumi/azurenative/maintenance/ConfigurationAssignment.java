@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class ConfigurationAssignment extends com.pulumi.resources.CustomResource
      * @return Location of the resource
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The maintenance configuration Id
@@ -57,8 +58,8 @@ public class ConfigurationAssignment extends com.pulumi.resources.CustomResource
      * @return The maintenance configuration Id
      * 
      */
-    public Output</* @Nullable */ String> maintenanceConfigurationId() {
-        return this.maintenanceConfigurationId;
+    public Output<Optional<String>> maintenanceConfigurationId() {
+        return Codegen.optional(this.maintenanceConfigurationId);
     }
     /**
      * Name of the resource
@@ -85,8 +86,8 @@ public class ConfigurationAssignment extends com.pulumi.resources.CustomResource
      * @return The unique resourceId
      * 
      */
-    public Output</* @Nullable */ String> resourceId() {
-        return this.resourceId;
+    public Output<Optional<String>> resourceId() {
+        return Codegen.optional(this.resourceId);
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.

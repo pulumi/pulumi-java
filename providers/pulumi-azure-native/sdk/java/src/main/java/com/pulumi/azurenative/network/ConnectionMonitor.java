@@ -21,6 +21,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -51,8 +52,8 @@ public class ConnectionMonitor extends com.pulumi.resources.CustomResource {
      * @return Determines if the connection monitor will start automatically once created.
      * 
      */
-    public Output</* @Nullable */ Boolean> autoStart() {
-        return this.autoStart;
+    public Output<Optional<Boolean>> autoStart() {
+        return Codegen.optional(this.autoStart);
     }
     /**
      * Type of connection monitor.
@@ -79,8 +80,8 @@ public class ConnectionMonitor extends com.pulumi.resources.CustomResource {
      * @return Describes the destination of connection monitor.
      * 
      */
-    public Output</* @Nullable */ ConnectionMonitorDestinationResponse> destination() {
-        return this.destination;
+    public Output<Optional<ConnectionMonitorDestinationResponse>> destination() {
+        return Codegen.optional(this.destination);
     }
     /**
      * List of connection monitor endpoints.
@@ -93,8 +94,8 @@ public class ConnectionMonitor extends com.pulumi.resources.CustomResource {
      * @return List of connection monitor endpoints.
      * 
      */
-    public Output</* @Nullable */ List<ConnectionMonitorEndpointResponse>> endpoints() {
-        return this.endpoints;
+    public Output<Optional<List<ConnectionMonitorEndpointResponse>>> endpoints() {
+        return Codegen.optional(this.endpoints);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
@@ -121,8 +122,8 @@ public class ConnectionMonitor extends com.pulumi.resources.CustomResource {
      * @return Connection monitor location.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * Monitoring interval in seconds.
@@ -135,8 +136,8 @@ public class ConnectionMonitor extends com.pulumi.resources.CustomResource {
      * @return Monitoring interval in seconds.
      * 
      */
-    public Output</* @Nullable */ Integer> monitoringIntervalInSeconds() {
-        return this.monitoringIntervalInSeconds;
+    public Output<Optional<Integer>> monitoringIntervalInSeconds() {
+        return Codegen.optional(this.monitoringIntervalInSeconds);
     }
     /**
      * The monitoring status of the connection monitor.
@@ -177,8 +178,8 @@ public class ConnectionMonitor extends com.pulumi.resources.CustomResource {
      * @return Optional notes to be associated with the connection monitor.
      * 
      */
-    public Output</* @Nullable */ String> notes() {
-        return this.notes;
+    public Output<Optional<String>> notes() {
+        return Codegen.optional(this.notes);
     }
     /**
      * List of connection monitor outputs.
@@ -191,8 +192,8 @@ public class ConnectionMonitor extends com.pulumi.resources.CustomResource {
      * @return List of connection monitor outputs.
      * 
      */
-    public Output</* @Nullable */ List<ConnectionMonitorOutputResponse>> outputs() {
-        return this.outputs;
+    public Output<Optional<List<ConnectionMonitorOutputResponse>>> outputs() {
+        return Codegen.optional(this.outputs);
     }
     /**
      * The provisioning state of the connection monitor.
@@ -219,8 +220,8 @@ public class ConnectionMonitor extends com.pulumi.resources.CustomResource {
      * @return Describes the source of connection monitor.
      * 
      */
-    public Output</* @Nullable */ ConnectionMonitorSourceResponse> source() {
-        return this.source;
+    public Output<Optional<ConnectionMonitorSourceResponse>> source() {
+        return Codegen.optional(this.source);
     }
     /**
      * The date and time when the connection monitor was started.
@@ -247,8 +248,8 @@ public class ConnectionMonitor extends com.pulumi.resources.CustomResource {
      * @return Connection monitor tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * List of connection monitor test configurations.
@@ -261,8 +262,8 @@ public class ConnectionMonitor extends com.pulumi.resources.CustomResource {
      * @return List of connection monitor test configurations.
      * 
      */
-    public Output</* @Nullable */ List<ConnectionMonitorTestConfigurationResponse>> testConfigurations() {
-        return this.testConfigurations;
+    public Output<Optional<List<ConnectionMonitorTestConfigurationResponse>>> testConfigurations() {
+        return Codegen.optional(this.testConfigurations);
     }
     /**
      * List of connection monitor test groups.
@@ -275,8 +276,8 @@ public class ConnectionMonitor extends com.pulumi.resources.CustomResource {
      * @return List of connection monitor test groups.
      * 
      */
-    public Output</* @Nullable */ List<ConnectionMonitorTestGroupResponse>> testGroups() {
-        return this.testGroups;
+    public Output<Optional<List<ConnectionMonitorTestGroupResponse>>> testGroups() {
+        return Codegen.optional(this.testGroups);
     }
     /**
      * Connection monitor type.

@@ -16,6 +16,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -60,8 +61,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return Managed Identity information.
      * 
      */
-    public Output</* @Nullable */ QuantumWorkspaceResponseIdentity> identity() {
-        return this.identity;
+    public Output<Optional<QuantumWorkspaceResponseIdentity>> identity() {
+        return Codegen.optional(this.identity);
     }
     /**
      * The geo-location where the resource lives
@@ -102,8 +103,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return List of Providers selected for this Workspace
      * 
      */
-    public Output</* @Nullable */ List<ProviderResponse>> providers() {
-        return this.providers;
+    public Output<Optional<List<ProviderResponse>>> providers() {
+        return Codegen.optional(this.providers);
     }
     /**
      * Provisioning status field
@@ -130,8 +131,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return ARM Resource Id of the storage account associated with this workspace.
      * 
      */
-    public Output</* @Nullable */ String> storageAccount() {
-        return this.storageAccount;
+    public Output<Optional<String>> storageAccount() {
+        return Codegen.optional(this.storageAccount);
     }
     /**
      * System metadata
@@ -158,8 +159,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;

@@ -20,6 +20,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -162,8 +163,8 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return The current state of allowing or disallowing IPs originating within Azure through the firewall. If the firewall is disabled, this is not enforced.
      * 
      */
-    public Output</* @Nullable */ String> firewallAllowAzureIps() {
-        return this.firewallAllowAzureIps;
+    public Output<Optional<String>> firewallAllowAzureIps() {
+        return Codegen.optional(this.firewallAllowAzureIps);
     }
     /**
      * The list of firewall rules associated with this account.
@@ -190,8 +191,8 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return The current state of the IP address firewall for this account.
      * 
      */
-    public Output</* @Nullable */ String> firewallState() {
-        return this.firewallState;
+    public Output<Optional<String>> firewallState() {
+        return Codegen.optional(this.firewallState);
     }
     /**
      * The list of hiveMetastores associated with this account.
@@ -260,8 +261,8 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return The maximum supported degree of parallelism for this account.
      * 
      */
-    public Output</* @Nullable */ Integer> maxDegreeOfParallelism() {
-        return this.maxDegreeOfParallelism;
+    public Output<Optional<Integer>> maxDegreeOfParallelism() {
+        return Codegen.optional(this.maxDegreeOfParallelism);
     }
     /**
      * The maximum supported degree of parallelism per job for this account.
@@ -274,8 +275,8 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return The maximum supported degree of parallelism per job for this account.
      * 
      */
-    public Output</* @Nullable */ Integer> maxDegreeOfParallelismPerJob() {
-        return this.maxDegreeOfParallelismPerJob;
+    public Output<Optional<Integer>> maxDegreeOfParallelismPerJob() {
+        return Codegen.optional(this.maxDegreeOfParallelismPerJob);
     }
     /**
      * The maximum supported jobs running under the account at the same time.
@@ -288,8 +289,8 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return The maximum supported jobs running under the account at the same time.
      * 
      */
-    public Output</* @Nullable */ Integer> maxJobCount() {
-        return this.maxJobCount;
+    public Output<Optional<Integer>> maxJobCount() {
+        return Codegen.optional(this.maxJobCount);
     }
     /**
      * The maximum supported active jobs under the account at the same time.
@@ -358,8 +359,8 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return The commitment tier for the next month.
      * 
      */
-    public Output</* @Nullable */ String> newTier() {
-        return this.newTier;
+    public Output<Optional<String>> newTier() {
+        return Codegen.optional(this.newTier);
     }
     /**
      * The provisioning status of the Data Lake Analytics account.
@@ -386,8 +387,8 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return The list of Data Lake Store accounts associated with this account.
      * 
      */
-    public Output</* @Nullable */ List<DataLakeStoreAccountInformationResponse>> publicDataLakeStoreAccounts() {
-        return this.publicDataLakeStoreAccounts;
+    public Output<Optional<List<DataLakeStoreAccountInformationResponse>>> publicDataLakeStoreAccounts() {
+        return Codegen.optional(this.publicDataLakeStoreAccounts);
     }
     /**
      * The number of days that job metadata is retained.
@@ -400,8 +401,8 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return The number of days that job metadata is retained.
      * 
      */
-    public Output</* @Nullable */ Integer> queryStoreRetention() {
-        return this.queryStoreRetention;
+    public Output<Optional<Integer>> queryStoreRetention() {
+        return Codegen.optional(this.queryStoreRetention);
     }
     /**
      * The state of the Data Lake Analytics account.

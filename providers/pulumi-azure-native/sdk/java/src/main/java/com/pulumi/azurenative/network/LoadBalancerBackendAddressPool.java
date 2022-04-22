@@ -15,6 +15,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -73,8 +74,8 @@ public class LoadBalancerBackendAddressPool extends com.pulumi.resources.CustomR
      * @return An array of backend addresses.
      * 
      */
-    public Output</* @Nullable */ List<LoadBalancerBackendAddressResponse>> loadBalancerBackendAddresses() {
-        return this.loadBalancerBackendAddresses;
+    public Output<Optional<List<LoadBalancerBackendAddressResponse>>> loadBalancerBackendAddresses() {
+        return Codegen.optional(this.loadBalancerBackendAddresses);
     }
     /**
      * An array of references to load balancing rules that use this backend address pool.
@@ -101,8 +102,8 @@ public class LoadBalancerBackendAddressPool extends com.pulumi.resources.CustomR
      * @return The location of the backend address pool.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The name of the resource that is unique within the set of backend address pools used by the load balancer. This name can be used to access the resource.
@@ -115,8 +116,8 @@ public class LoadBalancerBackendAddressPool extends com.pulumi.resources.CustomR
      * @return The name of the resource that is unique within the set of backend address pools used by the load balancer. This name can be used to access the resource.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * A reference to an outbound rule that uses this backend address pool.

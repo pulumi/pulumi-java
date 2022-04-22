@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class DisasterRecoveryConfig extends com.pulumi.resources.CustomResource 
      * @return Alternate name specified when alias and namespace names are same.
      * 
      */
-    public Output</* @Nullable */ String> alternateName() {
-        return this.alternateName;
+    public Output<Optional<String>> alternateName() {
+        return Codegen.optional(this.alternateName);
     }
     /**
      * The name of the resource
@@ -71,8 +72,8 @@ public class DisasterRecoveryConfig extends com.pulumi.resources.CustomResource 
      * @return ARM Id of the Primary/Secondary eventhub namespace name, which is part of GEO DR pairing
      * 
      */
-    public Output</* @Nullable */ String> partnerNamespace() {
-        return this.partnerNamespace;
+    public Output<Optional<String>> partnerNamespace() {
+        return Codegen.optional(this.partnerNamespace);
     }
     /**
      * Number of entities pending to be replicated.

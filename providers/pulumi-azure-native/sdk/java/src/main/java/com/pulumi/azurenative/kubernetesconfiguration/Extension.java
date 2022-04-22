@@ -19,6 +19,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -49,8 +50,8 @@ public class Extension extends com.pulumi.resources.CustomResource {
      * @return Flag to note if this instance participates in auto upgrade of minor version, or not.
      * 
      */
-    public Output</* @Nullable */ Boolean> autoUpgradeMinorVersion() {
-        return this.autoUpgradeMinorVersion;
+    public Output<Optional<Boolean>> autoUpgradeMinorVersion() {
+        return Codegen.optional(this.autoUpgradeMinorVersion);
     }
     /**
      * Configuration settings that are sensitive, as name-value pairs for configuring this instance of the extension.
@@ -63,8 +64,8 @@ public class Extension extends com.pulumi.resources.CustomResource {
      * @return Configuration settings that are sensitive, as name-value pairs for configuring this instance of the extension.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> configurationProtectedSettings() {
-        return this.configurationProtectedSettings;
+    public Output<Optional<Map<String,String>>> configurationProtectedSettings() {
+        return Codegen.optional(this.configurationProtectedSettings);
     }
     /**
      * Configuration settings, as name-value pairs for configuring this instance of the extension.
@@ -77,8 +78,8 @@ public class Extension extends com.pulumi.resources.CustomResource {
      * @return Configuration settings, as name-value pairs for configuring this instance of the extension.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> configurationSettings() {
-        return this.configurationSettings;
+    public Output<Optional<Map<String,String>>> configurationSettings() {
+        return Codegen.optional(this.configurationSettings);
     }
     /**
      * DateLiteral (per ISO8601) noting the time the resource was created by the client (user).
@@ -119,8 +120,8 @@ public class Extension extends com.pulumi.resources.CustomResource {
      * @return Type of the Extension, of which this resource is an instance of.  It must be one of the Extension Types registered with Microsoft.KubernetesConfiguration by the Extension publisher.
      * 
      */
-    public Output</* @Nullable */ String> extensionType() {
-        return this.extensionType;
+    public Output<Optional<String>> extensionType() {
+        return Codegen.optional(this.extensionType);
     }
     /**
      * The identity of the configuration.
@@ -133,8 +134,8 @@ public class Extension extends com.pulumi.resources.CustomResource {
      * @return The identity of the configuration.
      * 
      */
-    public Output</* @Nullable */ ConfigurationIdentityResponse> identity() {
-        return this.identity;
+    public Output<Optional<ConfigurationIdentityResponse>> identity() {
+        return Codegen.optional(this.identity);
     }
     /**
      * Status of installation of this instance of the extension.
@@ -203,8 +204,8 @@ public class Extension extends com.pulumi.resources.CustomResource {
      * @return ReleaseTrain this extension instance participates in for auto-upgrade (e.g. Stable, Preview, etc.) - only if autoUpgradeMinorVersion is &#39;true&#39;.
      * 
      */
-    public Output</* @Nullable */ String> releaseTrain() {
-        return this.releaseTrain;
+    public Output<Optional<String>> releaseTrain() {
+        return Codegen.optional(this.releaseTrain);
     }
     /**
      * Scope at which the extension instance is installed.
@@ -217,8 +218,8 @@ public class Extension extends com.pulumi.resources.CustomResource {
      * @return Scope at which the extension instance is installed.
      * 
      */
-    public Output</* @Nullable */ ScopeResponse> scope() {
-        return this.scope;
+    public Output<Optional<ScopeResponse>> scope() {
+        return Codegen.optional(this.scope);
     }
     /**
      * Status from this instance of the extension.
@@ -231,8 +232,8 @@ public class Extension extends com.pulumi.resources.CustomResource {
      * @return Status from this instance of the extension.
      * 
      */
-    public Output</* @Nullable */ List<ExtensionStatusResponse>> statuses() {
-        return this.statuses;
+    public Output<Optional<List<ExtensionStatusResponse>>> statuses() {
+        return Codegen.optional(this.statuses);
     }
     /**
      * Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources
@@ -245,8 +246,8 @@ public class Extension extends com.pulumi.resources.CustomResource {
      * @return Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources
      * 
      */
-    public Output</* @Nullable */ SystemDataResponse> systemData() {
-        return this.systemData;
+    public Output<Optional<SystemDataResponse>> systemData() {
+        return Codegen.optional(this.systemData);
     }
     /**
      * Resource type
@@ -273,8 +274,8 @@ public class Extension extends com.pulumi.resources.CustomResource {
      * @return Version of the extension for this extension instance, if it is &#39;pinned&#39; to a specific version. autoUpgradeMinorVersion must be &#39;false&#39;.
      * 
      */
-    public Output</* @Nullable */ String> version() {
-        return this.version;
+    public Output<Optional<String>> version() {
+        return Codegen.optional(this.version);
     }
 
     /**

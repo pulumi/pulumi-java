@@ -15,6 +15,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -59,8 +60,8 @@ public class Hub extends com.pulumi.resources.CustomResource {
      * @return Billing settings of the hub.
      * 
      */
-    public Output</* @Nullable */ HubBillingInfoFormatResponse> hubBillingInfo() {
-        return this.hubBillingInfo;
+    public Output<Optional<HubBillingInfoFormatResponse>> hubBillingInfo() {
+        return Codegen.optional(this.hubBillingInfo);
     }
     /**
      * Resource location.
@@ -73,8 +74,8 @@ public class Hub extends com.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * Resource name.
@@ -115,8 +116,8 @@ public class Hub extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The bit flags for enabled hub features. Bit 0 is set to 1 indicates graph is enabled, or disabled if set to 0. Bit 1 is set to 1 indicates the hub is disabled, or enabled if set to 0.
@@ -129,8 +130,8 @@ public class Hub extends com.pulumi.resources.CustomResource {
      * @return The bit flags for enabled hub features. Bit 0 is set to 1 indicates graph is enabled, or disabled if set to 0. Bit 1 is set to 1 indicates the hub is disabled, or enabled if set to 0.
      * 
      */
-    public Output</* @Nullable */ Integer> tenantFeatures() {
-        return this.tenantFeatures;
+    public Output<Optional<Integer>> tenantFeatures() {
+        return Codegen.optional(this.tenantFeatures);
     }
     /**
      * Resource type.

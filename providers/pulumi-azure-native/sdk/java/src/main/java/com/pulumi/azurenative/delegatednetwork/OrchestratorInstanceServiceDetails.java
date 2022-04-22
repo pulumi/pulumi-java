@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class OrchestratorInstanceServiceDetails extends com.pulumi.resources.Cus
      * @return K8s APIServer url. Either one of apiServerEndpoint or privateLinkResourceId can be specified
      * 
      */
-    public Output</* @Nullable */ String> apiServerEndpoint() {
-        return this.apiServerEndpoint;
+    public Output<Optional<String>> apiServerEndpoint() {
+        return Codegen.optional(this.apiServerEndpoint);
     }
     /**
      * RootCA certificate of kubernetes cluster base64 encoded
@@ -59,8 +60,8 @@ public class OrchestratorInstanceServiceDetails extends com.pulumi.resources.Cus
      * @return RootCA certificate of kubernetes cluster base64 encoded
      * 
      */
-    public Output</* @Nullable */ String> clusterRootCA() {
-        return this.clusterRootCA;
+    public Output<Optional<String>> clusterRootCA() {
+        return Codegen.optional(this.clusterRootCA);
     }
     /**
      * Properties of the controller.
@@ -87,8 +88,8 @@ public class OrchestratorInstanceServiceDetails extends com.pulumi.resources.Cus
      * @return The identity of the orchestrator
      * 
      */
-    public Output</* @Nullable */ OrchestratorIdentityResponse> identity() {
-        return this.identity;
+    public Output<Optional<OrchestratorIdentityResponse>> identity() {
+        return Codegen.optional(this.identity);
     }
     /**
      * The kind of workbook. Choices are user and shared.
@@ -115,8 +116,8 @@ public class OrchestratorInstanceServiceDetails extends com.pulumi.resources.Cus
      * @return Location of the resource.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The name of the resource.
@@ -143,8 +144,8 @@ public class OrchestratorInstanceServiceDetails extends com.pulumi.resources.Cus
      * @return AAD ID used with apiserver
      * 
      */
-    public Output</* @Nullable */ String> orchestratorAppId() {
-        return this.orchestratorAppId;
+    public Output<Optional<String>> orchestratorAppId() {
+        return Codegen.optional(this.orchestratorAppId);
     }
     /**
      * TenantID of server App ID
@@ -157,8 +158,8 @@ public class OrchestratorInstanceServiceDetails extends com.pulumi.resources.Cus
      * @return TenantID of server App ID
      * 
      */
-    public Output</* @Nullable */ String> orchestratorTenantId() {
-        return this.orchestratorTenantId;
+    public Output<Optional<String>> orchestratorTenantId() {
+        return Codegen.optional(this.orchestratorTenantId);
     }
     /**
      * private link arm resource id. Either one of apiServerEndpoint or privateLinkResourceId can be specified
@@ -171,8 +172,8 @@ public class OrchestratorInstanceServiceDetails extends com.pulumi.resources.Cus
      * @return private link arm resource id. Either one of apiServerEndpoint or privateLinkResourceId can be specified
      * 
      */
-    public Output</* @Nullable */ String> privateLinkResourceId() {
-        return this.privateLinkResourceId;
+    public Output<Optional<String>> privateLinkResourceId() {
+        return Codegen.optional(this.privateLinkResourceId);
     }
     /**
      * The current state of orchestratorInstance resource.
@@ -213,8 +214,8 @@ public class OrchestratorInstanceServiceDetails extends com.pulumi.resources.Cus
      * @return The resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of resource.

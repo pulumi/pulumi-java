@@ -57,6 +57,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -77,8 +78,8 @@ public class Pipeline extends com.pulumi.resources.CustomResource {
      * @return List of activities in pipeline.
      * 
      */
-    public Output</* @Nullable */ List<Object>> activities() {
-        return this.activities;
+    public Output<Optional<List<Object>>> activities() {
+        return Codegen.optional(this.activities);
     }
     /**
      * List of tags that can be used for describing the Pipeline.
@@ -91,8 +92,8 @@ public class Pipeline extends com.pulumi.resources.CustomResource {
      * @return List of tags that can be used for describing the Pipeline.
      * 
      */
-    public Output</* @Nullable */ List<Object>> annotations() {
-        return this.annotations;
+    public Output<Optional<List<Object>>> annotations() {
+        return Codegen.optional(this.annotations);
     }
     /**
      * The max number of concurrent runs for the pipeline.
@@ -105,8 +106,8 @@ public class Pipeline extends com.pulumi.resources.CustomResource {
      * @return The max number of concurrent runs for the pipeline.
      * 
      */
-    public Output</* @Nullable */ Integer> concurrency() {
-        return this.concurrency;
+    public Output<Optional<Integer>> concurrency() {
+        return Codegen.optional(this.concurrency);
     }
     /**
      * The description of the pipeline.
@@ -119,8 +120,8 @@ public class Pipeline extends com.pulumi.resources.CustomResource {
      * @return The description of the pipeline.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Etag identifies change in the resource.
@@ -147,8 +148,8 @@ public class Pipeline extends com.pulumi.resources.CustomResource {
      * @return The folder that this Pipeline is in. If not specified, Pipeline will appear at the root level.
      * 
      */
-    public Output</* @Nullable */ PipelineResponseFolder> folder() {
-        return this.folder;
+    public Output<Optional<PipelineResponseFolder>> folder() {
+        return Codegen.optional(this.folder);
     }
     /**
      * The resource name.
@@ -175,8 +176,8 @@ public class Pipeline extends com.pulumi.resources.CustomResource {
      * @return List of parameters for pipeline.
      * 
      */
-    public Output</* @Nullable */ Map<String,ParameterSpecificationResponse>> parameters() {
-        return this.parameters;
+    public Output<Optional<Map<String,ParameterSpecificationResponse>>> parameters() {
+        return Codegen.optional(this.parameters);
     }
     /**
      * Pipeline Policy.
@@ -189,8 +190,8 @@ public class Pipeline extends com.pulumi.resources.CustomResource {
      * @return Pipeline Policy.
      * 
      */
-    public Output</* @Nullable */ PipelinePolicyResponse> policy() {
-        return this.policy;
+    public Output<Optional<PipelinePolicyResponse>> policy() {
+        return Codegen.optional(this.policy);
     }
     /**
      * Dimensions emitted by Pipeline.
@@ -203,8 +204,8 @@ public class Pipeline extends com.pulumi.resources.CustomResource {
      * @return Dimensions emitted by Pipeline.
      * 
      */
-    public Output</* @Nullable */ Map<String,Object>> runDimensions() {
-        return this.runDimensions;
+    public Output<Optional<Map<String,Object>>> runDimensions() {
+        return Codegen.optional(this.runDimensions);
     }
     /**
      * The resource type.
@@ -231,8 +232,8 @@ public class Pipeline extends com.pulumi.resources.CustomResource {
      * @return List of variables for pipeline.
      * 
      */
-    public Output</* @Nullable */ Map<String,VariableSpecificationResponse>> variables() {
-        return this.variables;
+    public Output<Optional<Map<String,VariableSpecificationResponse>>> variables() {
+        return Codegen.optional(this.variables);
     }
 
     /**

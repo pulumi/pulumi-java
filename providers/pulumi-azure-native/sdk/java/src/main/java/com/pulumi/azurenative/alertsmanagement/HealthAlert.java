@@ -16,6 +16,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class HealthAlert extends com.pulumi.resources.CustomResource {
      * @return the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
      * 
      */
-    public Output</* @Nullable */ List<HealthAlertActionResponse>> actions() {
-        return this.actions;
+    public Output<Optional<List<HealthAlertActionResponse>>> actions() {
+        return Codegen.optional(this.actions);
     }
     /**
      * defines the specific alert criteria information.
@@ -144,8 +145,8 @@ public class HealthAlert extends com.pulumi.resources.CustomResource {
      * @return the list of resource id&#39;s that this health alert is scoped to.
      * 
      */
-    public Output</* @Nullable */ List<String>> scopes() {
-        return this.scopes;
+    public Output<Optional<List<String>>> scopes() {
+        return Codegen.optional(this.scopes);
     }
     /**
      * Resource tags
@@ -158,8 +159,8 @@ public class HealthAlert extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Azure resource type

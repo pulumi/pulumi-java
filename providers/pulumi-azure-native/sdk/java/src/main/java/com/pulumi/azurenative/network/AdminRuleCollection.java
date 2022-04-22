@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class AdminRuleCollection extends com.pulumi.resources.CustomResource {
      * @return Groups for configuration
      * 
      */
-    public Output</* @Nullable */ List<NetworkManagerSecurityGroupItemResponse>> appliesToGroups() {
-        return this.appliesToGroups;
+    public Output<Optional<List<NetworkManagerSecurityGroupItemResponse>>> appliesToGroups() {
+        return Codegen.optional(this.appliesToGroups);
     }
     /**
      * A description of the rule collection.
@@ -58,8 +59,8 @@ public class AdminRuleCollection extends com.pulumi.resources.CustomResource {
      * @return A description of the rule collection.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * A display name of the rule collection.
@@ -72,8 +73,8 @@ public class AdminRuleCollection extends com.pulumi.resources.CustomResource {
      * @return A display name of the rule collection.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.

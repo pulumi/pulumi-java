@@ -16,6 +16,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Specifies the job identity details
      * 
      */
-    public Output</* @Nullable */ IdentityDetailsResponse> identity() {
-        return this.identity;
+    public Output<Optional<IdentityDetailsResponse>> identity() {
+        return Codegen.optional(this.identity);
     }
     /**
      * Specifies the Azure location where the job is created.
@@ -60,8 +61,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Specifies the Azure location where the job is created.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * Specifies the name of the job.
@@ -116,8 +117,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Specifies the tags that are assigned to the job.
      * 
      */
-    public Output</* @Nullable */ Object> tags() {
-        return this.tags;
+    public Output<Optional<Object>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Specifies the type of the job resource.

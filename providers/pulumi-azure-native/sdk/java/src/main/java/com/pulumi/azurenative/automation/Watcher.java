@@ -14,6 +14,7 @@ import java.lang.Double;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -58,8 +59,8 @@ public class Watcher extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the description.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Gets or sets the etag of the resource.
@@ -72,8 +73,8 @@ public class Watcher extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the etag of the resource.
      * 
      */
-    public Output</* @Nullable */ String> etag() {
-        return this.etag;
+    public Output<Optional<String>> etag() {
+        return Codegen.optional(this.etag);
     }
     /**
      * Gets or sets the frequency at which the watcher is invoked.
@@ -86,8 +87,8 @@ public class Watcher extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the frequency at which the watcher is invoked.
      * 
      */
-    public Output</* @Nullable */ Double> executionFrequencyInSeconds() {
-        return this.executionFrequencyInSeconds;
+    public Output<Optional<Double>> executionFrequencyInSeconds() {
+        return Codegen.optional(this.executionFrequencyInSeconds);
     }
     /**
      * Details of the user who last modified the watcher.
@@ -128,8 +129,8 @@ public class Watcher extends com.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The name of the resource
@@ -156,8 +157,8 @@ public class Watcher extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the name of the script the watcher is attached to, i.e. the name of an existing runbook.
      * 
      */
-    public Output</* @Nullable */ String> scriptName() {
-        return this.scriptName;
+    public Output<Optional<String>> scriptName() {
+        return Codegen.optional(this.scriptName);
     }
     /**
      * Gets or sets the parameters of the script.
@@ -170,8 +171,8 @@ public class Watcher extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the parameters of the script.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> scriptParameters() {
-        return this.scriptParameters;
+    public Output<Optional<Map<String,String>>> scriptParameters() {
+        return Codegen.optional(this.scriptParameters);
     }
     /**
      * Gets or sets the name of the hybrid worker group the watcher will run on.
@@ -184,8 +185,8 @@ public class Watcher extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the name of the hybrid worker group the watcher will run on.
      * 
      */
-    public Output</* @Nullable */ String> scriptRunOn() {
-        return this.scriptRunOn;
+    public Output<Optional<String>> scriptRunOn() {
+        return Codegen.optional(this.scriptRunOn);
     }
     /**
      * Gets the current status of the watcher.
@@ -212,8 +213,8 @@ public class Watcher extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource.

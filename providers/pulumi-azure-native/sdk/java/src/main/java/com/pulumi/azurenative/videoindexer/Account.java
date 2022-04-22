@@ -16,6 +16,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return The account&#39;s data-plane ID
      * 
      */
-    public Output</* @Nullable */ String> accountId() {
-        return this.accountId;
+    public Output<Optional<String>> accountId() {
+        return Codegen.optional(this.accountId);
     }
     /**
      * The account&#39;s name
@@ -74,8 +75,8 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return Managed service identity (system assigned and/or user assigned identities)
      * 
      */
-    public Output</* @Nullable */ ManagedServiceIdentityResponse> identity() {
-        return this.identity;
+    public Output<Optional<ManagedServiceIdentityResponse>> identity() {
+        return Codegen.optional(this.identity);
     }
     /**
      * The geo-location where the resource lives
@@ -102,8 +103,8 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return The media services details
      * 
      */
-    public Output</* @Nullable */ MediaServicesForPutRequestResponse> mediaServices() {
-        return this.mediaServices;
+    public Output<Optional<MediaServicesForPutRequestResponse>> mediaServices() {
+        return Codegen.optional(this.mediaServices);
     }
     /**
      * The name of the resource
@@ -158,8 +159,8 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The account&#39;s tenant id

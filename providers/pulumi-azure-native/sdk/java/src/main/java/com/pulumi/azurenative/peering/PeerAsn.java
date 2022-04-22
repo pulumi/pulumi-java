@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -72,8 +73,8 @@ public class PeerAsn extends com.pulumi.resources.CustomResource {
      * @return The Autonomous System Number (ASN) of the peer.
      * 
      */
-    public Output</* @Nullable */ Integer> peerAsn() {
-        return this.peerAsn;
+    public Output<Optional<Integer>> peerAsn() {
+        return Codegen.optional(this.peerAsn);
     }
     /**
      * The contact details of the peer.
@@ -86,8 +87,8 @@ public class PeerAsn extends com.pulumi.resources.CustomResource {
      * @return The contact details of the peer.
      * 
      */
-    public Output</* @Nullable */ List<ContactDetailResponse>> peerContactDetail() {
-        return this.peerContactDetail;
+    public Output<Optional<List<ContactDetailResponse>>> peerContactDetail() {
+        return Codegen.optional(this.peerContactDetail);
     }
     /**
      * The name of the peer.
@@ -100,8 +101,8 @@ public class PeerAsn extends com.pulumi.resources.CustomResource {
      * @return The name of the peer.
      * 
      */
-    public Output</* @Nullable */ String> peerName() {
-        return this.peerName;
+    public Output<Optional<String>> peerName() {
+        return Codegen.optional(this.peerName);
     }
     /**
      * The type of the resource.
@@ -128,8 +129,8 @@ public class PeerAsn extends com.pulumi.resources.CustomResource {
      * @return The validation state of the ASN associated with the peer.
      * 
      */
-    public Output</* @Nullable */ String> validationState() {
-        return this.validationState;
+    public Output<Optional<String>> validationState() {
+        return Codegen.optional(this.validationState);
     }
 
     /**

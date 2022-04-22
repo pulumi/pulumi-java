@@ -15,6 +15,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -59,8 +60,8 @@ public class ConnectionType extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the description.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Gets the field definitions of the connection type.
@@ -87,8 +88,8 @@ public class ConnectionType extends com.pulumi.resources.CustomResource {
      * @return Gets or sets a Boolean value to indicate if the connection type is global.
      * 
      */
-    public Output</* @Nullable */ Boolean> isGlobal() {
-        return this.isGlobal;
+    public Output<Optional<Boolean>> isGlobal() {
+        return Codegen.optional(this.isGlobal);
     }
     /**
      * Gets or sets the last modified time.
@@ -101,8 +102,8 @@ public class ConnectionType extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the last modified time.
      * 
      */
-    public Output</* @Nullable */ String> lastModifiedTime() {
-        return this.lastModifiedTime;
+    public Output<Optional<String>> lastModifiedTime() {
+        return Codegen.optional(this.lastModifiedTime);
     }
     /**
      * Gets the name of the connection type.

@@ -25,6 +25,7 @@ import java.lang.Double;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -55,8 +56,8 @@ public class RecordSet extends com.pulumi.resources.CustomResource {
      * @return The list of A records in the record set.
      * 
      */
-    public Output</* @Nullable */ List<ARecordResponse>> aRecords() {
-        return this.aRecords;
+    public Output<Optional<List<ARecordResponse>>> aRecords() {
+        return Codegen.optional(this.aRecords);
     }
     /**
      * The list of AAAA records in the record set.
@@ -69,8 +70,8 @@ public class RecordSet extends com.pulumi.resources.CustomResource {
      * @return The list of AAAA records in the record set.
      * 
      */
-    public Output</* @Nullable */ List<AaaaRecordResponse>> aaaaRecords() {
-        return this.aaaaRecords;
+    public Output<Optional<List<AaaaRecordResponse>>> aaaaRecords() {
+        return Codegen.optional(this.aaaaRecords);
     }
     /**
      * The list of CAA records in the record set.
@@ -83,8 +84,8 @@ public class RecordSet extends com.pulumi.resources.CustomResource {
      * @return The list of CAA records in the record set.
      * 
      */
-    public Output</* @Nullable */ List<CaaRecordResponse>> caaRecords() {
-        return this.caaRecords;
+    public Output<Optional<List<CaaRecordResponse>>> caaRecords() {
+        return Codegen.optional(this.caaRecords);
     }
     /**
      * The CNAME record in the  record set.
@@ -97,8 +98,8 @@ public class RecordSet extends com.pulumi.resources.CustomResource {
      * @return The CNAME record in the  record set.
      * 
      */
-    public Output</* @Nullable */ CnameRecordResponse> cnameRecord() {
-        return this.cnameRecord;
+    public Output<Optional<CnameRecordResponse>> cnameRecord() {
+        return Codegen.optional(this.cnameRecord);
     }
     /**
      * The etag of the record set.
@@ -111,8 +112,8 @@ public class RecordSet extends com.pulumi.resources.CustomResource {
      * @return The etag of the record set.
      * 
      */
-    public Output</* @Nullable */ String> etag() {
-        return this.etag;
+    public Output<Optional<String>> etag() {
+        return Codegen.optional(this.etag);
     }
     /**
      * Fully qualified domain name of the record set.
@@ -139,8 +140,8 @@ public class RecordSet extends com.pulumi.resources.CustomResource {
      * @return The metadata attached to the record set.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> metadata() {
-        return this.metadata;
+    public Output<Optional<Map<String,String>>> metadata() {
+        return Codegen.optional(this.metadata);
     }
     /**
      * The list of MX records in the record set.
@@ -153,8 +154,8 @@ public class RecordSet extends com.pulumi.resources.CustomResource {
      * @return The list of MX records in the record set.
      * 
      */
-    public Output</* @Nullable */ List<MxRecordResponse>> mxRecords() {
-        return this.mxRecords;
+    public Output<Optional<List<MxRecordResponse>>> mxRecords() {
+        return Codegen.optional(this.mxRecords);
     }
     /**
      * The name of the record set.
@@ -181,8 +182,8 @@ public class RecordSet extends com.pulumi.resources.CustomResource {
      * @return The list of NS records in the record set.
      * 
      */
-    public Output</* @Nullable */ List<NsRecordResponse>> nsRecords() {
-        return this.nsRecords;
+    public Output<Optional<List<NsRecordResponse>>> nsRecords() {
+        return Codegen.optional(this.nsRecords);
     }
     /**
      * provisioning State of the record set.
@@ -209,8 +210,8 @@ public class RecordSet extends com.pulumi.resources.CustomResource {
      * @return The list of PTR records in the record set.
      * 
      */
-    public Output</* @Nullable */ List<PtrRecordResponse>> ptrRecords() {
-        return this.ptrRecords;
+    public Output<Optional<List<PtrRecordResponse>>> ptrRecords() {
+        return Codegen.optional(this.ptrRecords);
     }
     /**
      * The SOA record in the record set.
@@ -223,8 +224,8 @@ public class RecordSet extends com.pulumi.resources.CustomResource {
      * @return The SOA record in the record set.
      * 
      */
-    public Output</* @Nullable */ SoaRecordResponse> soaRecord() {
-        return this.soaRecord;
+    public Output<Optional<SoaRecordResponse>> soaRecord() {
+        return Codegen.optional(this.soaRecord);
     }
     /**
      * The list of SRV records in the record set.
@@ -237,8 +238,8 @@ public class RecordSet extends com.pulumi.resources.CustomResource {
      * @return The list of SRV records in the record set.
      * 
      */
-    public Output</* @Nullable */ List<SrvRecordResponse>> srvRecords() {
-        return this.srvRecords;
+    public Output<Optional<List<SrvRecordResponse>>> srvRecords() {
+        return Codegen.optional(this.srvRecords);
     }
     /**
      * A reference to an azure resource from where the dns resource value is taken.
@@ -251,8 +252,8 @@ public class RecordSet extends com.pulumi.resources.CustomResource {
      * @return A reference to an azure resource from where the dns resource value is taken.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> targetResource() {
-        return this.targetResource;
+    public Output<Optional<SubResourceResponse>> targetResource() {
+        return Codegen.optional(this.targetResource);
     }
     /**
      * The TTL (time-to-live) of the records in the record set.
@@ -265,8 +266,8 @@ public class RecordSet extends com.pulumi.resources.CustomResource {
      * @return The TTL (time-to-live) of the records in the record set.
      * 
      */
-    public Output</* @Nullable */ Double> ttl() {
-        return this.ttl;
+    public Output<Optional<Double>> ttl() {
+        return Codegen.optional(this.ttl);
     }
     /**
      * The list of TXT records in the record set.
@@ -279,8 +280,8 @@ public class RecordSet extends com.pulumi.resources.CustomResource {
      * @return The list of TXT records in the record set.
      * 
      */
-    public Output</* @Nullable */ List<TxtRecordResponse>> txtRecords() {
-        return this.txtRecords;
+    public Output<Optional<List<TxtRecordResponse>>> txtRecords() {
+        return Codegen.optional(this.txtRecords);
     }
     /**
      * The type of the record set.

@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -58,8 +59,8 @@ public class Token extends com.pulumi.resources.CustomResource {
      * @return The credentials that can be used for authenticating the token.
      * 
      */
-    public Output</* @Nullable */ TokenCredentialsPropertiesResponse> credentials() {
-        return this.credentials;
+    public Output<Optional<TokenCredentialsPropertiesResponse>> credentials() {
+        return Codegen.optional(this.credentials);
     }
     /**
      * The name of the resource.
@@ -100,8 +101,8 @@ public class Token extends com.pulumi.resources.CustomResource {
      * @return The resource ID of the scope map to which the token will be associated with.
      * 
      */
-    public Output</* @Nullable */ String> scopeMapId() {
-        return this.scopeMapId;
+    public Output<Optional<String>> scopeMapId() {
+        return Codegen.optional(this.scopeMapId);
     }
     /**
      * The status of the token example enabled or disabled.
@@ -114,8 +115,8 @@ public class Token extends com.pulumi.resources.CustomResource {
      * @return The status of the token example enabled or disabled.
      * 
      */
-    public Output</* @Nullable */ String> status() {
-        return this.status;
+    public Output<Optional<String>> status() {
+        return Codegen.optional(this.status);
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.

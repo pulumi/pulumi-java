@@ -18,6 +18,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -62,8 +63,8 @@ public class ConnectedRegistry extends com.pulumi.resources.CustomResource {
      * @return The list of the ACR token resource IDs used to authenticate clients to the connected registry.
      * 
      */
-    public Output</* @Nullable */ List<String>> clientTokenIds() {
-        return this.clientTokenIds;
+    public Output<Optional<List<String>>> clientTokenIds() {
+        return Codegen.optional(this.clientTokenIds);
     }
     /**
      * The current connection state of the connected registry.
@@ -104,8 +105,8 @@ public class ConnectedRegistry extends com.pulumi.resources.CustomResource {
      * @return The logging properties of the connected registry.
      * 
      */
-    public Output</* @Nullable */ LoggingPropertiesResponse> logging() {
-        return this.logging;
+    public Output<Optional<LoggingPropertiesResponse>> logging() {
+        return Codegen.optional(this.logging);
     }
     /**
      * The login server properties of the connected registry.
@@ -118,8 +119,8 @@ public class ConnectedRegistry extends com.pulumi.resources.CustomResource {
      * @return The login server properties of the connected registry.
      * 
      */
-    public Output</* @Nullable */ LoginServerPropertiesResponse> loginServer() {
-        return this.loginServer;
+    public Output<Optional<LoginServerPropertiesResponse>> loginServer() {
+        return Codegen.optional(this.loginServer);
     }
     /**
      * The mode of the connected registry resource that indicates the permissions of the registry.

@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -58,8 +59,8 @@ public class NotificationChannel extends com.pulumi.resources.CustomResource {
      * @return Description of notification.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The email recipient to send notifications to (can be a list of semi-colon separated email addresses).
@@ -72,8 +73,8 @@ public class NotificationChannel extends com.pulumi.resources.CustomResource {
      * @return The email recipient to send notifications to (can be a list of semi-colon separated email addresses).
      * 
      */
-    public Output</* @Nullable */ String> emailRecipient() {
-        return this.emailRecipient;
+    public Output<Optional<String>> emailRecipient() {
+        return Codegen.optional(this.emailRecipient);
     }
     /**
      * The list of event for which this notification is enabled.
@@ -86,8 +87,8 @@ public class NotificationChannel extends com.pulumi.resources.CustomResource {
      * @return The list of event for which this notification is enabled.
      * 
      */
-    public Output</* @Nullable */ List<EventResponse>> events() {
-        return this.events;
+    public Output<Optional<List<EventResponse>>> events() {
+        return Codegen.optional(this.events);
     }
     /**
      * The location of the resource.
@@ -100,8 +101,8 @@ public class NotificationChannel extends com.pulumi.resources.CustomResource {
      * @return The location of the resource.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The name of the resource.
@@ -128,8 +129,8 @@ public class NotificationChannel extends com.pulumi.resources.CustomResource {
      * @return The locale to use when sending a notification (fallback for unsupported languages is EN).
      * 
      */
-    public Output</* @Nullable */ String> notificationLocale() {
-        return this.notificationLocale;
+    public Output<Optional<String>> notificationLocale() {
+        return Codegen.optional(this.notificationLocale);
     }
     /**
      * The provisioning status of the resource.
@@ -156,8 +157,8 @@ public class NotificationChannel extends com.pulumi.resources.CustomResource {
      * @return The tags of the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource.
@@ -198,8 +199,8 @@ public class NotificationChannel extends com.pulumi.resources.CustomResource {
      * @return The webhook URL to send notifications to.
      * 
      */
-    public Output</* @Nullable */ String> webHookUrl() {
-        return this.webHookUrl;
+    public Output<Optional<String>> webHookUrl() {
+        return Codegen.optional(this.webHookUrl);
     }
 
     /**

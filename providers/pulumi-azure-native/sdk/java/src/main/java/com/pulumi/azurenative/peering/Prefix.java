@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -99,8 +100,8 @@ public class Prefix extends com.pulumi.resources.CustomResource {
      * @return The peering service prefix key
      * 
      */
-    public Output</* @Nullable */ String> peeringServicePrefixKey() {
-        return this.peeringServicePrefixKey;
+    public Output<Optional<String>> peeringServicePrefixKey() {
+        return Codegen.optional(this.peeringServicePrefixKey);
     }
     /**
      * The prefix from which your traffic originates.
@@ -113,8 +114,8 @@ public class Prefix extends com.pulumi.resources.CustomResource {
      * @return The prefix from which your traffic originates.
      * 
      */
-    public Output</* @Nullable */ String> prefix() {
-        return this.prefix;
+    public Output<Optional<String>> prefix() {
+        return Codegen.optional(this.prefix);
     }
     /**
      * The prefix validation state

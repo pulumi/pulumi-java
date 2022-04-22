@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class Bookmark extends com.pulumi.resources.CustomResource {
      * @return The time the bookmark was created
      * 
      */
-    public Output</* @Nullable */ String> created() {
-        return this.created;
+    public Output<Optional<String>> created() {
+        return Codegen.optional(this.created);
     }
     /**
      * Describes a user that created the bookmark
@@ -58,8 +59,8 @@ public class Bookmark extends com.pulumi.resources.CustomResource {
      * @return Describes a user that created the bookmark
      * 
      */
-    public Output</* @Nullable */ UserInfoResponse> createdBy() {
-        return this.createdBy;
+    public Output<Optional<UserInfoResponse>> createdBy() {
+        return Codegen.optional(this.createdBy);
     }
     /**
      * The display name of the bookmark
@@ -86,8 +87,8 @@ public class Bookmark extends com.pulumi.resources.CustomResource {
      * @return Etag of the azure resource
      * 
      */
-    public Output</* @Nullable */ String> etag() {
-        return this.etag;
+    public Output<Optional<String>> etag() {
+        return Codegen.optional(this.etag);
     }
     /**
      * The bookmark event time
@@ -100,8 +101,8 @@ public class Bookmark extends com.pulumi.resources.CustomResource {
      * @return The bookmark event time
      * 
      */
-    public Output</* @Nullable */ String> eventTime() {
-        return this.eventTime;
+    public Output<Optional<String>> eventTime() {
+        return Codegen.optional(this.eventTime);
     }
     /**
      * Describes an incident that relates to bookmark
@@ -114,8 +115,8 @@ public class Bookmark extends com.pulumi.resources.CustomResource {
      * @return Describes an incident that relates to bookmark
      * 
      */
-    public Output</* @Nullable */ IncidentInfoResponse> incidentInfo() {
-        return this.incidentInfo;
+    public Output<Optional<IncidentInfoResponse>> incidentInfo() {
+        return Codegen.optional(this.incidentInfo);
     }
     /**
      * List of labels relevant to this bookmark
@@ -128,8 +129,8 @@ public class Bookmark extends com.pulumi.resources.CustomResource {
      * @return List of labels relevant to this bookmark
      * 
      */
-    public Output</* @Nullable */ List<String>> labels() {
-        return this.labels;
+    public Output<Optional<List<String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * Azure resource name
@@ -156,8 +157,8 @@ public class Bookmark extends com.pulumi.resources.CustomResource {
      * @return The notes of the bookmark
      * 
      */
-    public Output</* @Nullable */ String> notes() {
-        return this.notes;
+    public Output<Optional<String>> notes() {
+        return Codegen.optional(this.notes);
     }
     /**
      * The query of the bookmark.
@@ -184,8 +185,8 @@ public class Bookmark extends com.pulumi.resources.CustomResource {
      * @return The end time for the query
      * 
      */
-    public Output</* @Nullable */ String> queryEndTime() {
-        return this.queryEndTime;
+    public Output<Optional<String>> queryEndTime() {
+        return Codegen.optional(this.queryEndTime);
     }
     /**
      * The query result of the bookmark.
@@ -198,8 +199,8 @@ public class Bookmark extends com.pulumi.resources.CustomResource {
      * @return The query result of the bookmark.
      * 
      */
-    public Output</* @Nullable */ String> queryResult() {
-        return this.queryResult;
+    public Output<Optional<String>> queryResult() {
+        return Codegen.optional(this.queryResult);
     }
     /**
      * The start time for the query
@@ -212,8 +213,8 @@ public class Bookmark extends com.pulumi.resources.CustomResource {
      * @return The start time for the query
      * 
      */
-    public Output</* @Nullable */ String> queryStartTime() {
-        return this.queryStartTime;
+    public Output<Optional<String>> queryStartTime() {
+        return Codegen.optional(this.queryStartTime);
     }
     /**
      * Azure resource type
@@ -240,8 +241,8 @@ public class Bookmark extends com.pulumi.resources.CustomResource {
      * @return The last time the bookmark was updated
      * 
      */
-    public Output</* @Nullable */ String> updated() {
-        return this.updated;
+    public Output<Optional<String>> updated() {
+        return Codegen.optional(this.updated);
     }
     /**
      * Describes a user that updated the bookmark
@@ -254,8 +255,8 @@ public class Bookmark extends com.pulumi.resources.CustomResource {
      * @return Describes a user that updated the bookmark
      * 
      */
-    public Output</* @Nullable */ UserInfoResponse> updatedBy() {
-        return this.updatedBy;
+    public Output<Optional<UserInfoResponse>> updatedBy() {
+        return Codegen.optional(this.updatedBy);
     }
 
     /**

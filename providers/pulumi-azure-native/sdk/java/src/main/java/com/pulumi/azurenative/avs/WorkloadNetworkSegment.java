@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class WorkloadNetworkSegment extends com.pulumi.resources.CustomResource 
      * @return Gateway which to connect segment to.
      * 
      */
-    public Output</* @Nullable */ String> connectedGateway() {
-        return this.connectedGateway;
+    public Output<Optional<String>> connectedGateway() {
+        return Codegen.optional(this.connectedGateway);
     }
     /**
      * Display name of the segment.
@@ -59,8 +60,8 @@ public class WorkloadNetworkSegment extends com.pulumi.resources.CustomResource 
      * @return Display name of the segment.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * Resource name.
@@ -115,8 +116,8 @@ public class WorkloadNetworkSegment extends com.pulumi.resources.CustomResource 
      * @return NSX revision number.
      * 
      */
-    public Output</* @Nullable */ Double> revision() {
-        return this.revision;
+    public Output<Optional<Double>> revision() {
+        return Codegen.optional(this.revision);
     }
     /**
      * Segment status.
@@ -143,8 +144,8 @@ public class WorkloadNetworkSegment extends com.pulumi.resources.CustomResource 
      * @return Subnet which to connect segment to.
      * 
      */
-    public Output</* @Nullable */ WorkloadNetworkSegmentSubnetResponse> subnet() {
-        return this.subnet;
+    public Output<Optional<WorkloadNetworkSegmentSubnetResponse>> subnet() {
+        return Codegen.optional(this.subnet);
     }
     /**
      * Resource type.

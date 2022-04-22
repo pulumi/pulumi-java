@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class Manager extends com.pulumi.resources.CustomResource {
      * @return Represents the type of StorSimple Manager.
      * 
      */
-    public Output</* @Nullable */ ManagerIntrinsicSettingsResponse> cisIntrinsicSettings() {
-        return this.cisIntrinsicSettings;
+    public Output<Optional<ManagerIntrinsicSettingsResponse>> cisIntrinsicSettings() {
+        return Codegen.optional(this.cisIntrinsicSettings);
     }
     /**
      * The etag of the manager.
@@ -59,8 +60,8 @@ public class Manager extends com.pulumi.resources.CustomResource {
      * @return The etag of the manager.
      * 
      */
-    public Output</* @Nullable */ String> etag() {
-        return this.etag;
+    public Output<Optional<String>> etag() {
+        return Codegen.optional(this.etag);
     }
     /**
      * The geo location of the resource.
@@ -101,8 +102,8 @@ public class Manager extends com.pulumi.resources.CustomResource {
      * @return Specifies the state of the resource as it is getting provisioned. Value of &#34;Succeeded&#34; means the Manager was successfully created.
      * 
      */
-    public Output</* @Nullable */ String> provisioningState() {
-        return this.provisioningState;
+    public Output<Optional<String>> provisioningState() {
+        return Codegen.optional(this.provisioningState);
     }
     /**
      * Specifies the Sku.
@@ -115,8 +116,8 @@ public class Manager extends com.pulumi.resources.CustomResource {
      * @return Specifies the Sku.
      * 
      */
-    public Output</* @Nullable */ ManagerSkuResponse> sku() {
-        return this.sku;
+    public Output<Optional<ManagerSkuResponse>> sku() {
+        return Codegen.optional(this.sku);
     }
     /**
      * The tags attached to the resource.
@@ -129,8 +130,8 @@ public class Manager extends com.pulumi.resources.CustomResource {
      * @return The tags attached to the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The resource type.

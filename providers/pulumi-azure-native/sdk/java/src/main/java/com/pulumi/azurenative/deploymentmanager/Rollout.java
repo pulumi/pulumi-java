@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class Rollout extends com.pulumi.resources.CustomResource {
      * @return The reference to the artifact source resource Id where the payload is located.
      * 
      */
-    public Output</* @Nullable */ String> artifactSourceId() {
-        return this.artifactSourceId;
+    public Output<Optional<String>> artifactSourceId() {
+        return Codegen.optional(this.artifactSourceId);
     }
     /**
      * The version of the build being deployed.
@@ -129,8 +130,8 @@ public class Rollout extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The resource Id of the service topology from which service units are being referenced in step groups to be deployed.

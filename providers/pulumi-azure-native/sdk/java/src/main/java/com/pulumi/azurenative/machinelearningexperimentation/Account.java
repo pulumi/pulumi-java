@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -72,8 +73,8 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return The description of this workspace.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The uri for this machine learning team account.
@@ -100,8 +101,8 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return The friendly name for this workspace. This will be the workspace name in the arm id when the workspace object gets created
      * 
      */
-    public Output</* @Nullable */ String> friendlyName() {
-        return this.friendlyName;
+    public Output<Optional<String>> friendlyName() {
+        return Codegen.optional(this.friendlyName);
     }
     /**
      * The fully qualified arm id of the user key vault.
@@ -170,8 +171,8 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return The no of users/seats who can access this team account. This property defines the charge on the team account.
      * 
      */
-    public Output</* @Nullable */ String> seats() {
-        return this.seats;
+    public Output<Optional<String>> seats() {
+        return Codegen.optional(this.seats);
     }
     /**
      * The properties of the storage account for the machine learning team account.
@@ -198,8 +199,8 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return The tags of the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource.

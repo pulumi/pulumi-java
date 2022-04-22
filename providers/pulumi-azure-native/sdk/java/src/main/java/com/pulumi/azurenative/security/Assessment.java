@@ -21,6 +21,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -51,8 +52,8 @@ public class Assessment extends com.pulumi.resources.CustomResource {
      * @return Additional data regarding the assessment
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> additionalData() {
-        return this.additionalData;
+    public Output<Optional<Map<String,String>>> additionalData() {
+        return Codegen.optional(this.additionalData);
     }
     /**
      * User friendly display name of the assessment
@@ -93,8 +94,8 @@ public class Assessment extends com.pulumi.resources.CustomResource {
      * @return Describes properties of an assessment metadata.
      * 
      */
-    public Output</* @Nullable */ SecurityAssessmentMetadataPropertiesResponse> metadata() {
-        return this.metadata;
+    public Output<Optional<SecurityAssessmentMetadataPropertiesResponse>> metadata() {
+        return Codegen.optional(this.metadata);
     }
     /**
      * Resource name
@@ -121,8 +122,8 @@ public class Assessment extends com.pulumi.resources.CustomResource {
      * @return Data regarding 3rd party partner integration
      * 
      */
-    public Output</* @Nullable */ SecurityAssessmentPartnerDataResponse> partnersData() {
-        return this.partnersData;
+    public Output<Optional<SecurityAssessmentPartnerDataResponse>> partnersData() {
+        return Codegen.optional(this.partnersData);
     }
     /**
      * Details of the resource that was assessed

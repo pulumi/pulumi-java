@@ -17,6 +17,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -47,8 +48,8 @@ public class MediaService extends com.pulumi.resources.CustomResource {
      * @return The account encryption properties.
      * 
      */
-    public Output</* @Nullable */ AccountEncryptionResponse> encryption() {
-        return this.encryption;
+    public Output<Optional<AccountEncryptionResponse>> encryption() {
+        return Codegen.optional(this.encryption);
     }
     /**
      * The Managed Identity for the Media Services account.
@@ -61,8 +62,8 @@ public class MediaService extends com.pulumi.resources.CustomResource {
      * @return The Managed Identity for the Media Services account.
      * 
      */
-    public Output</* @Nullable */ MediaServiceIdentityResponse> identity() {
-        return this.identity;
+    public Output<Optional<MediaServiceIdentityResponse>> identity() {
+        return Codegen.optional(this.identity);
     }
     /**
      * The geo-location where the resource lives
@@ -117,14 +118,14 @@ public class MediaService extends com.pulumi.resources.CustomResource {
      * @return The storage accounts for this resource.
      * 
      */
-    public Output</* @Nullable */ List<StorageAccountResponse>> storageAccounts() {
-        return this.storageAccounts;
+    public Output<Optional<List<StorageAccountResponse>>> storageAccounts() {
+        return Codegen.optional(this.storageAccounts);
     }
     @Export(name="storageAuthentication", type=String.class, parameters={})
     private Output</* @Nullable */ String> storageAuthentication;
 
-    public Output</* @Nullable */ String> storageAuthentication() {
-        return this.storageAuthentication;
+    public Output<Optional<String>> storageAuthentication() {
+        return Codegen.optional(this.storageAuthentication);
     }
     /**
      * The system metadata relating to this resource.
@@ -151,8 +152,8 @@ public class MediaService extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;

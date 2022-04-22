@@ -20,6 +20,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -50,8 +51,8 @@ public class PublicIPPrefix extends com.pulumi.resources.CustomResource {
      * @return The customIpPrefix that this prefix is associated with.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> customIPPrefix() {
-        return this.customIPPrefix;
+    public Output<Optional<SubResourceResponse>> customIPPrefix() {
+        return Codegen.optional(this.customIPPrefix);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
@@ -78,8 +79,8 @@ public class PublicIPPrefix extends com.pulumi.resources.CustomResource {
      * @return The extended location of the public ip address.
      * 
      */
-    public Output</* @Nullable */ ExtendedLocationResponse> extendedLocation() {
-        return this.extendedLocation;
+    public Output<Optional<ExtendedLocationResponse>> extendedLocation() {
+        return Codegen.optional(this.extendedLocation);
     }
     /**
      * The allocated Prefix.
@@ -106,8 +107,8 @@ public class PublicIPPrefix extends com.pulumi.resources.CustomResource {
      * @return The list of tags associated with the public IP prefix.
      * 
      */
-    public Output</* @Nullable */ List<IpTagResponse>> ipTags() {
-        return this.ipTags;
+    public Output<Optional<List<IpTagResponse>>> ipTags() {
+        return Codegen.optional(this.ipTags);
     }
     /**
      * The reference to load balancer frontend IP configuration associated with the public IP prefix.
@@ -134,8 +135,8 @@ public class PublicIPPrefix extends com.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * Resource name.
@@ -162,8 +163,8 @@ public class PublicIPPrefix extends com.pulumi.resources.CustomResource {
      * @return NatGateway of Public IP Prefix.
      * 
      */
-    public Output</* @Nullable */ NatGatewayResponse> natGateway() {
-        return this.natGateway;
+    public Output<Optional<NatGatewayResponse>> natGateway() {
+        return Codegen.optional(this.natGateway);
     }
     /**
      * The Length of the Public IP Prefix.
@@ -176,8 +177,8 @@ public class PublicIPPrefix extends com.pulumi.resources.CustomResource {
      * @return The Length of the Public IP Prefix.
      * 
      */
-    public Output</* @Nullable */ Integer> prefixLength() {
-        return this.prefixLength;
+    public Output<Optional<Integer>> prefixLength() {
+        return Codegen.optional(this.prefixLength);
     }
     /**
      * The provisioning state of the public IP prefix resource.
@@ -204,8 +205,8 @@ public class PublicIPPrefix extends com.pulumi.resources.CustomResource {
      * @return The public IP address version.
      * 
      */
-    public Output</* @Nullable */ String> publicIPAddressVersion() {
-        return this.publicIPAddressVersion;
+    public Output<Optional<String>> publicIPAddressVersion() {
+        return Codegen.optional(this.publicIPAddressVersion);
     }
     /**
      * The list of all referenced PublicIPAddresses.
@@ -246,8 +247,8 @@ public class PublicIPPrefix extends com.pulumi.resources.CustomResource {
      * @return The public IP prefix SKU.
      * 
      */
-    public Output</* @Nullable */ PublicIPPrefixSkuResponse> sku() {
-        return this.sku;
+    public Output<Optional<PublicIPPrefixSkuResponse>> sku() {
+        return Codegen.optional(this.sku);
     }
     /**
      * Resource tags.
@@ -260,8 +261,8 @@ public class PublicIPPrefix extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type.
@@ -288,8 +289,8 @@ public class PublicIPPrefix extends com.pulumi.resources.CustomResource {
      * @return A list of availability zones denoting the IP allocated for the resource needs to come from.
      * 
      */
-    public Output</* @Nullable */ List<String>> zones() {
-        return this.zones;
+    public Output<Optional<List<String>>> zones() {
+        return Codegen.optional(this.zones);
     }
 
     /**

@@ -16,6 +16,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -60,8 +61,8 @@ public class NatGateway extends com.pulumi.resources.CustomResource {
      * @return The idle timeout of the nat gateway.
      * 
      */
-    public Output</* @Nullable */ Integer> idleTimeoutInMinutes() {
-        return this.idleTimeoutInMinutes;
+    public Output<Optional<Integer>> idleTimeoutInMinutes() {
+        return Codegen.optional(this.idleTimeoutInMinutes);
     }
     /**
      * Resource location.
@@ -74,8 +75,8 @@ public class NatGateway extends com.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * Resource name.
@@ -116,8 +117,8 @@ public class NatGateway extends com.pulumi.resources.CustomResource {
      * @return An array of public ip addresses associated with the nat gateway resource.
      * 
      */
-    public Output</* @Nullable */ List<SubResourceResponse>> publicIpAddresses() {
-        return this.publicIpAddresses;
+    public Output<Optional<List<SubResourceResponse>>> publicIpAddresses() {
+        return Codegen.optional(this.publicIpAddresses);
     }
     /**
      * An array of public ip prefixes associated with the nat gateway resource.
@@ -130,8 +131,8 @@ public class NatGateway extends com.pulumi.resources.CustomResource {
      * @return An array of public ip prefixes associated with the nat gateway resource.
      * 
      */
-    public Output</* @Nullable */ List<SubResourceResponse>> publicIpPrefixes() {
-        return this.publicIpPrefixes;
+    public Output<Optional<List<SubResourceResponse>>> publicIpPrefixes() {
+        return Codegen.optional(this.publicIpPrefixes);
     }
     /**
      * The resource GUID property of the NAT gateway resource.
@@ -158,8 +159,8 @@ public class NatGateway extends com.pulumi.resources.CustomResource {
      * @return The nat gateway SKU.
      * 
      */
-    public Output</* @Nullable */ NatGatewaySkuResponse> sku() {
-        return this.sku;
+    public Output<Optional<NatGatewaySkuResponse>> sku() {
+        return Codegen.optional(this.sku);
     }
     /**
      * An array of references to the subnets using this nat gateway resource.
@@ -186,8 +187,8 @@ public class NatGateway extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type.
@@ -214,8 +215,8 @@ public class NatGateway extends com.pulumi.resources.CustomResource {
      * @return A list of availability zones denoting the zone in which Nat Gateway should be deployed.
      * 
      */
-    public Output</* @Nullable */ List<String>> zones() {
-        return this.zones;
+    public Output<Optional<List<String>>> zones() {
+        return Codegen.optional(this.zones);
     }
 
     /**

@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class DiskPool extends com.pulumi.resources.CustomResource {
      * @return List of additional capabilities for Disk pool.
      * 
      */
-    public Output</* @Nullable */ List<String>> additionalCapabilities() {
-        return this.additionalCapabilities;
+    public Output<Optional<List<String>>> additionalCapabilities() {
+        return Codegen.optional(this.additionalCapabilities);
     }
     /**
      * Logical zone for Disk pool resource; example: [&#34;1&#34;].
@@ -73,8 +74,8 @@ public class DiskPool extends com.pulumi.resources.CustomResource {
      * @return List of Azure Managed Disks to attach to a Disk pool. Can attach 8 disks at most.
      * 
      */
-    public Output</* @Nullable */ List<DiskResponse>> disks() {
-        return this.disks;
+    public Output<Optional<List<DiskResponse>>> disks() {
+        return Codegen.optional(this.disks);
     }
     /**
      * The geo-location where the resource lives.
@@ -171,8 +172,8 @@ public class DiskPool extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Determines the SKU of VM deployed for Disk pool

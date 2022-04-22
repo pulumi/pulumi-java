@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -42,8 +43,8 @@ public class ProviderInstance extends com.pulumi.resources.CustomResource {
      * @return A JSON string containing metadata of the provider instance.
      * 
      */
-    public Output</* @Nullable */ String> metadata() {
-        return this.metadata;
+    public Output<Optional<String>> metadata() {
+        return Codegen.optional(this.metadata);
     }
     /**
      * The name of the resource

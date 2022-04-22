@@ -20,6 +20,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -61,8 +62,8 @@ public class WebAppSlot extends com.pulumi.resources.CustomResource {
      * @return &lt;code&gt;true&lt;/code&gt; to enable client affinity; &lt;code&gt;false&lt;/code&gt; to stop sending session affinity cookies, which route client requests in the same session to the same instance. Default is &lt;code&gt;true&lt;/code&gt;.
      * 
      */
-    public Output</* @Nullable */ Boolean> clientAffinityEnabled() {
-        return this.clientAffinityEnabled;
+    public Output<Optional<Boolean>> clientAffinityEnabled() {
+        return Codegen.optional(this.clientAffinityEnabled);
     }
     /**
      * &lt;code&gt;true&lt;/code&gt; to enable client certificate authentication (TLS mutual authentication); otherwise, &lt;code&gt;false&lt;/code&gt;. Default is &lt;code&gt;false&lt;/code&gt;.
@@ -75,8 +76,8 @@ public class WebAppSlot extends com.pulumi.resources.CustomResource {
      * @return &lt;code&gt;true&lt;/code&gt; to enable client certificate authentication (TLS mutual authentication); otherwise, &lt;code&gt;false&lt;/code&gt;. Default is &lt;code&gt;false&lt;/code&gt;.
      * 
      */
-    public Output</* @Nullable */ Boolean> clientCertEnabled() {
-        return this.clientCertEnabled;
+    public Output<Optional<Boolean>> clientCertEnabled() {
+        return Codegen.optional(this.clientCertEnabled);
     }
     /**
      * client certificate authentication comma-separated exclusion paths
@@ -89,8 +90,8 @@ public class WebAppSlot extends com.pulumi.resources.CustomResource {
      * @return client certificate authentication comma-separated exclusion paths
      * 
      */
-    public Output</* @Nullable */ String> clientCertExclusionPaths() {
-        return this.clientCertExclusionPaths;
+    public Output<Optional<String>> clientCertExclusionPaths() {
+        return Codegen.optional(this.clientCertExclusionPaths);
     }
     /**
      * This composes with ClientCertEnabled setting.
@@ -109,8 +110,8 @@ public class WebAppSlot extends com.pulumi.resources.CustomResource {
      * - ClientCertEnabled: true and ClientCertMode: Optional means ClientCert is optional or accepted.
      * 
      */
-    public Output</* @Nullable */ String> clientCertMode() {
-        return this.clientCertMode;
+    public Output<Optional<String>> clientCertMode() {
+        return Codegen.optional(this.clientCertMode);
     }
     /**
      * Size of the function container.
@@ -123,8 +124,8 @@ public class WebAppSlot extends com.pulumi.resources.CustomResource {
      * @return Size of the function container.
      * 
      */
-    public Output</* @Nullable */ Integer> containerSize() {
-        return this.containerSize;
+    public Output<Optional<Integer>> containerSize() {
+        return Codegen.optional(this.containerSize);
     }
     /**
      * Unique identifier that verifies the custom domains assigned to the app. Customer will add this id to a txt record for verification.
@@ -137,8 +138,8 @@ public class WebAppSlot extends com.pulumi.resources.CustomResource {
      * @return Unique identifier that verifies the custom domains assigned to the app. Customer will add this id to a txt record for verification.
      * 
      */
-    public Output</* @Nullable */ String> customDomainVerificationId() {
-        return this.customDomainVerificationId;
+    public Output<Optional<String>> customDomainVerificationId() {
+        return Codegen.optional(this.customDomainVerificationId);
     }
     /**
      * Maximum allowed daily memory-time quota (applicable on dynamic apps only).
@@ -151,8 +152,8 @@ public class WebAppSlot extends com.pulumi.resources.CustomResource {
      * @return Maximum allowed daily memory-time quota (applicable on dynamic apps only).
      * 
      */
-    public Output</* @Nullable */ Integer> dailyMemoryTimeQuota() {
-        return this.dailyMemoryTimeQuota;
+    public Output<Optional<Integer>> dailyMemoryTimeQuota() {
+        return Codegen.optional(this.dailyMemoryTimeQuota);
     }
     /**
      * Default hostname of the app. Read-only.
@@ -179,8 +180,8 @@ public class WebAppSlot extends com.pulumi.resources.CustomResource {
      * @return &lt;code&gt;true&lt;/code&gt; if the app is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;. Setting this value to false disables the app (takes the app offline).
      * 
      */
-    public Output</* @Nullable */ Boolean> enabled() {
-        return this.enabled;
+    public Output<Optional<Boolean>> enabled() {
+        return Codegen.optional(this.enabled);
     }
     /**
      * Enabled hostnames for the app.Hostnames need to be assigned (see HostNames) AND enabled. Otherwise,
@@ -209,8 +210,8 @@ public class WebAppSlot extends com.pulumi.resources.CustomResource {
      * @return Hostname SSL states are used to manage the SSL bindings for app&#39;s hostnames.
      * 
      */
-    public Output</* @Nullable */ List<HostNameSslStateResponse>> hostNameSslStates() {
-        return this.hostNameSslStates;
+    public Output<Optional<List<HostNameSslStateResponse>>> hostNameSslStates() {
+        return Codegen.optional(this.hostNameSslStates);
     }
     /**
      * Hostnames associated with the app.
@@ -239,8 +240,8 @@ public class WebAppSlot extends com.pulumi.resources.CustomResource {
      *  If &lt;code&gt;true&lt;/code&gt;, the app is only accessible via API management process.
      * 
      */
-    public Output</* @Nullable */ Boolean> hostNamesDisabled() {
-        return this.hostNamesDisabled;
+    public Output<Optional<Boolean>> hostNamesDisabled() {
+        return Codegen.optional(this.hostNamesDisabled);
     }
     /**
      * App Service Environment to use for the app.
@@ -253,8 +254,8 @@ public class WebAppSlot extends com.pulumi.resources.CustomResource {
      * @return App Service Environment to use for the app.
      * 
      */
-    public Output</* @Nullable */ HostingEnvironmentProfileResponse> hostingEnvironmentProfile() {
-        return this.hostingEnvironmentProfile;
+    public Output<Optional<HostingEnvironmentProfileResponse>> hostingEnvironmentProfile() {
+        return Codegen.optional(this.hostingEnvironmentProfile);
     }
     /**
      * HttpsOnly: configures a web site to accept only https requests. Issues redirect for
@@ -269,8 +270,8 @@ public class WebAppSlot extends com.pulumi.resources.CustomResource {
      * http requests
      * 
      */
-    public Output</* @Nullable */ Boolean> httpsOnly() {
-        return this.httpsOnly;
+    public Output<Optional<Boolean>> httpsOnly() {
+        return Codegen.optional(this.httpsOnly);
     }
     /**
      * Hyper-V sandbox.
@@ -283,8 +284,8 @@ public class WebAppSlot extends com.pulumi.resources.CustomResource {
      * @return Hyper-V sandbox.
      * 
      */
-    public Output</* @Nullable */ Boolean> hyperV() {
-        return this.hyperV;
+    public Output<Optional<Boolean>> hyperV() {
+        return Codegen.optional(this.hyperV);
     }
     /**
      * Managed service identity.
@@ -297,8 +298,8 @@ public class WebAppSlot extends com.pulumi.resources.CustomResource {
      * @return Managed service identity.
      * 
      */
-    public Output</* @Nullable */ ManagedServiceIdentityResponse> identity() {
-        return this.identity;
+    public Output<Optional<ManagedServiceIdentityResponse>> identity() {
+        return Codegen.optional(this.identity);
     }
     /**
      * Specifies an operation id if this site has a pending operation.
@@ -339,8 +340,8 @@ public class WebAppSlot extends com.pulumi.resources.CustomResource {
      * @return Obsolete: Hyper-V sandbox.
      * 
      */
-    public Output</* @Nullable */ Boolean> isXenon() {
-        return this.isXenon;
+    public Output<Optional<Boolean>> isXenon() {
+        return Codegen.optional(this.isXenon);
     }
     /**
      * Identity to use for Key Vault Reference authentication.
@@ -353,8 +354,8 @@ public class WebAppSlot extends com.pulumi.resources.CustomResource {
      * @return Identity to use for Key Vault Reference authentication.
      * 
      */
-    public Output</* @Nullable */ String> keyVaultReferenceIdentity() {
-        return this.keyVaultReferenceIdentity;
+    public Output<Optional<String>> keyVaultReferenceIdentity() {
+        return Codegen.optional(this.keyVaultReferenceIdentity);
     }
     /**
      * Kind of resource.
@@ -367,8 +368,8 @@ public class WebAppSlot extends com.pulumi.resources.CustomResource {
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> kind() {
-        return this.kind;
+    public Output<Optional<String>> kind() {
+        return Codegen.optional(this.kind);
     }
     /**
      * Last time the app was modified, in UTC. Read-only.
@@ -467,8 +468,8 @@ public class WebAppSlot extends com.pulumi.resources.CustomResource {
      * @return Site redundancy mode
      * 
      */
-    public Output</* @Nullable */ String> redundancyMode() {
-        return this.redundancyMode;
+    public Output<Optional<String>> redundancyMode() {
+        return Codegen.optional(this.redundancyMode);
     }
     /**
      * Name of the repository site.
@@ -495,8 +496,8 @@ public class WebAppSlot extends com.pulumi.resources.CustomResource {
      * @return &lt;code&gt;true&lt;/code&gt; if reserved; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
-    public Output</* @Nullable */ Boolean> reserved() {
-        return this.reserved;
+    public Output<Optional<Boolean>> reserved() {
+        return Codegen.optional(this.reserved);
     }
     /**
      * Name of the resource group the app belongs to. Read-only.
@@ -523,8 +524,8 @@ public class WebAppSlot extends com.pulumi.resources.CustomResource {
      * @return &lt;code&gt;true&lt;/code&gt; to stop SCM (KUDU) site when the app is stopped; otherwise, &lt;code&gt;false&lt;/code&gt;. The default is &lt;code&gt;false&lt;/code&gt;.
      * 
      */
-    public Output</* @Nullable */ Boolean> scmSiteAlsoStopped() {
-        return this.scmSiteAlsoStopped;
+    public Output<Optional<Boolean>> scmSiteAlsoStopped() {
+        return Codegen.optional(this.scmSiteAlsoStopped);
     }
     /**
      * Resource ID of the associated App Service plan, formatted as: &#34;/subscriptions/{subscriptionID}/resourceGroups/{groupName}/providers/Microsoft.Web/serverfarms/{appServicePlanName}&#34;.
@@ -537,8 +538,8 @@ public class WebAppSlot extends com.pulumi.resources.CustomResource {
      * @return Resource ID of the associated App Service plan, formatted as: &#34;/subscriptions/{subscriptionID}/resourceGroups/{groupName}/providers/Microsoft.Web/serverfarms/{appServicePlanName}&#34;.
      * 
      */
-    public Output</* @Nullable */ String> serverFarmId() {
-        return this.serverFarmId;
+    public Output<Optional<String>> serverFarmId() {
+        return Codegen.optional(this.serverFarmId);
     }
     /**
      * Configuration of the app.
@@ -551,8 +552,8 @@ public class WebAppSlot extends com.pulumi.resources.CustomResource {
      * @return Configuration of the app.
      * 
      */
-    public Output</* @Nullable */ SiteConfigResponse> siteConfig() {
-        return this.siteConfig;
+    public Output<Optional<SiteConfigResponse>> siteConfig() {
+        return Codegen.optional(this.siteConfig);
     }
     /**
      * Status of the last deployment slot swap operation.
@@ -593,8 +594,8 @@ public class WebAppSlot extends com.pulumi.resources.CustomResource {
      * @return Checks if Customer provided storage account is required
      * 
      */
-    public Output</* @Nullable */ Boolean> storageAccountRequired() {
-        return this.storageAccountRequired;
+    public Output<Optional<Boolean>> storageAccountRequired() {
+        return Codegen.optional(this.storageAccountRequired);
     }
     /**
      * App suspended till in case memory-time quota is exceeded.
@@ -621,8 +622,8 @@ public class WebAppSlot extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Specifies which deployment slot this app will swap into. Read-only.
@@ -693,8 +694,8 @@ public class WebAppSlot extends com.pulumi.resources.CustomResource {
      * This must be of the form /subscriptions/{subscriptionName}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}
      * 
      */
-    public Output</* @Nullable */ String> virtualNetworkSubnetId() {
-        return this.virtualNetworkSubnetId;
+    public Output<Optional<String>> virtualNetworkSubnetId() {
+        return Codegen.optional(this.virtualNetworkSubnetId);
     }
 
     /**

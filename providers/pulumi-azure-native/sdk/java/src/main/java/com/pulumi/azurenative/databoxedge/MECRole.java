@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class MECRole extends com.pulumi.resources.CustomResource {
      * @return Activation key of the MEC.
      * 
      */
-    public Output</* @Nullable */ AsymmetricEncryptedSecretResponse> connectionString() {
-        return this.connectionString;
+    public Output<Optional<AsymmetricEncryptedSecretResponse>> connectionString() {
+        return Codegen.optional(this.connectionString);
     }
     /**
      * Role type.

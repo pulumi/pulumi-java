@@ -17,6 +17,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -47,8 +48,8 @@ public class View extends com.pulumi.resources.CustomResource {
      * @return Show costs accumulated over time.
      * 
      */
-    public Output</* @Nullable */ String> accumulated() {
-        return this.accumulated;
+    public Output<Optional<String>> accumulated() {
+        return Codegen.optional(this.accumulated);
     }
     /**
      * Chart type of the main view in Cost Analysis. Required.
@@ -61,8 +62,8 @@ public class View extends com.pulumi.resources.CustomResource {
      * @return Chart type of the main view in Cost Analysis. Required.
      * 
      */
-    public Output</* @Nullable */ String> chart() {
-        return this.chart;
+    public Output<Optional<String>> chart() {
+        return Codegen.optional(this.chart);
     }
     /**
      * Date the user created this view.
@@ -103,8 +104,8 @@ public class View extends com.pulumi.resources.CustomResource {
      * @return Has definition for data in this report config.
      * 
      */
-    public Output</* @Nullable */ ReportConfigDatasetResponse> dataSet() {
-        return this.dataSet;
+    public Output<Optional<ReportConfigDatasetResponse>> dataSet() {
+        return Codegen.optional(this.dataSet);
     }
     /**
      * Selected date range for viewing cost in.
@@ -131,8 +132,8 @@ public class View extends com.pulumi.resources.CustomResource {
      * @return User input name of the view. Required.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
@@ -145,8 +146,8 @@ public class View extends com.pulumi.resources.CustomResource {
      * @return eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
      * 
      */
-    public Output</* @Nullable */ String> eTag() {
-        return this.eTag;
+    public Output<Optional<String>> eTag() {
+        return Codegen.optional(this.eTag);
     }
     /**
      * Include monetary commitment
@@ -173,8 +174,8 @@ public class View extends com.pulumi.resources.CustomResource {
      * @return List of KPIs to show in Cost Analysis UI.
      * 
      */
-    public Output</* @Nullable */ List<KpiPropertiesResponse>> kpis() {
-        return this.kpis;
+    public Output<Optional<List<KpiPropertiesResponse>>> kpis() {
+        return Codegen.optional(this.kpis);
     }
     /**
      * Metric to use when displaying costs.
@@ -187,8 +188,8 @@ public class View extends com.pulumi.resources.CustomResource {
      * @return Metric to use when displaying costs.
      * 
      */
-    public Output</* @Nullable */ String> metric() {
-        return this.metric;
+    public Output<Optional<String>> metric() {
+        return Codegen.optional(this.metric);
     }
     /**
      * Date when the user last modified this view.
@@ -229,8 +230,8 @@ public class View extends com.pulumi.resources.CustomResource {
      * @return Configuration of 3 sub-views in the Cost Analysis UI.
      * 
      */
-    public Output</* @Nullable */ List<PivotPropertiesResponse>> pivots() {
-        return this.pivots;
+    public Output<Optional<List<PivotPropertiesResponse>>> pivots() {
+        return Codegen.optional(this.pivots);
     }
     /**
      * Cost Management scope to save the view on. This includes &#39;subscriptions/{subscriptionId}&#39; for subscription scope, &#39;subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}&#39; for resourceGroup scope, &#39;providers/Microsoft.Billing/billingAccounts/{billingAccountId}&#39; for Billing Account scope, &#39;providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}&#39; for Department scope, &#39;providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}&#39; for EnrollmentAccount scope, &#39;providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}&#39; for BillingProfile scope, &#39;providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}&#39; for InvoiceSection scope, &#39;providers/Microsoft.Management/managementGroups/{managementGroupId}&#39; for Management Group scope, &#39;/providers/Microsoft.CostManagement/externalBillingAccounts/{externalBillingAccountName}&#39; for ExternalBillingAccount scope, and &#39;/providers/Microsoft.CostManagement/externalSubscriptions/{externalSubscriptionName}&#39; for ExternalSubscription scope.
@@ -243,8 +244,8 @@ public class View extends com.pulumi.resources.CustomResource {
      * @return Cost Management scope to save the view on. This includes &#39;subscriptions/{subscriptionId}&#39; for subscription scope, &#39;subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}&#39; for resourceGroup scope, &#39;providers/Microsoft.Billing/billingAccounts/{billingAccountId}&#39; for Billing Account scope, &#39;providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}&#39; for Department scope, &#39;providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}&#39; for EnrollmentAccount scope, &#39;providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}&#39; for BillingProfile scope, &#39;providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}&#39; for InvoiceSection scope, &#39;providers/Microsoft.Management/managementGroups/{managementGroupId}&#39; for Management Group scope, &#39;/providers/Microsoft.CostManagement/externalBillingAccounts/{externalBillingAccountName}&#39; for ExternalBillingAccount scope, and &#39;/providers/Microsoft.CostManagement/externalSubscriptions/{externalSubscriptionName}&#39; for ExternalSubscription scope.
      * 
      */
-    public Output</* @Nullable */ String> scope() {
-        return this.scope;
+    public Output<Optional<String>> scope() {
+        return Codegen.optional(this.scope);
     }
     /**
      * Has time period for pulling data for the report.
@@ -257,8 +258,8 @@ public class View extends com.pulumi.resources.CustomResource {
      * @return Has time period for pulling data for the report.
      * 
      */
-    public Output</* @Nullable */ ReportConfigTimePeriodResponse> timePeriod() {
-        return this.timePeriod;
+    public Output<Optional<ReportConfigTimePeriodResponse>> timePeriod() {
+        return Codegen.optional(this.timePeriod);
     }
     /**
      * The time frame for pulling data for the report. If custom, then a specific time period must be provided.

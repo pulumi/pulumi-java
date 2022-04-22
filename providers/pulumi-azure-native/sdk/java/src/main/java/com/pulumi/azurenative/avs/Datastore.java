@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class Datastore extends com.pulumi.resources.CustomResource {
      * @return An iSCSI volume
      * 
      */
-    public Output</* @Nullable */ DiskPoolVolumeResponse> diskPoolVolume() {
-        return this.diskPoolVolume;
+    public Output<Optional<DiskPoolVolumeResponse>> diskPoolVolume() {
+        return Codegen.optional(this.diskPoolVolume);
     }
     /**
      * Resource name.
@@ -72,8 +73,8 @@ public class Datastore extends com.pulumi.resources.CustomResource {
      * @return An Azure NetApp Files volume
      * 
      */
-    public Output</* @Nullable */ NetAppVolumeResponse> netAppVolume() {
-        return this.netAppVolume;
+    public Output<Optional<NetAppVolumeResponse>> netAppVolume() {
+        return Codegen.optional(this.netAppVolume);
     }
     /**
      * The state of the datastore provisioning

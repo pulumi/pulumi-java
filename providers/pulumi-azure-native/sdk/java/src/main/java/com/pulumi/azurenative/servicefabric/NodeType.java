@@ -18,6 +18,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -48,8 +49,8 @@ public class NodeType extends com.pulumi.resources.CustomResource {
      * @return The range of ports from which cluster assigned port to Service Fabric applications.
      * 
      */
-    public Output</* @Nullable */ EndpointRangeDescriptionResponse> applicationPorts() {
-        return this.applicationPorts;
+    public Output<Optional<EndpointRangeDescriptionResponse>> applicationPorts() {
+        return Codegen.optional(this.applicationPorts);
     }
     /**
      * The capacity tags applied to the nodes in the node type, the cluster resource manager uses these tags to understand how much resource a node has.
@@ -62,8 +63,8 @@ public class NodeType extends com.pulumi.resources.CustomResource {
      * @return The capacity tags applied to the nodes in the node type, the cluster resource manager uses these tags to understand how much resource a node has.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> capacities() {
-        return this.capacities;
+    public Output<Optional<Map<String,String>>> capacities() {
+        return Codegen.optional(this.capacities);
     }
     /**
      * Disk size for each vm in the node type in GBs.
@@ -90,8 +91,8 @@ public class NodeType extends com.pulumi.resources.CustomResource {
      * @return The range of ephemeral ports that nodes in this node type should be configured with.
      * 
      */
-    public Output</* @Nullable */ EndpointRangeDescriptionResponse> ephemeralPorts() {
-        return this.ephemeralPorts;
+    public Output<Optional<EndpointRangeDescriptionResponse>> ephemeralPorts() {
+        return Codegen.optional(this.ephemeralPorts);
     }
     /**
      * The node type on which system services will run. Only one node type should be marked as primary. Primary node type cannot be deleted or changed for existing clusters.
@@ -132,8 +133,8 @@ public class NodeType extends com.pulumi.resources.CustomResource {
      * @return The placement tags applied to nodes in the node type, which can be used to indicate where certain services (workload) should run.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> placementProperties() {
-        return this.placementProperties;
+    public Output<Optional<Map<String,String>>> placementProperties() {
+        return Codegen.optional(this.placementProperties);
     }
     /**
      * The provisioning state of the managed cluster resource.
@@ -160,8 +161,8 @@ public class NodeType extends com.pulumi.resources.CustomResource {
      * @return Azure resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Azure resource type.
@@ -188,8 +189,8 @@ public class NodeType extends com.pulumi.resources.CustomResource {
      * @return Set of extensions that should be installed onto the virtual machines.
      * 
      */
-    public Output</* @Nullable */ List<VMSSExtensionResponse>> vmExtensions() {
-        return this.vmExtensions;
+    public Output<Optional<List<VMSSExtensionResponse>>> vmExtensions() {
+        return Codegen.optional(this.vmExtensions);
     }
     /**
      * The offer type of the Azure Virtual Machines Marketplace image. For example, UbuntuServer or WindowsServer.
@@ -202,8 +203,8 @@ public class NodeType extends com.pulumi.resources.CustomResource {
      * @return The offer type of the Azure Virtual Machines Marketplace image. For example, UbuntuServer or WindowsServer.
      * 
      */
-    public Output</* @Nullable */ String> vmImageOffer() {
-        return this.vmImageOffer;
+    public Output<Optional<String>> vmImageOffer() {
+        return Codegen.optional(this.vmImageOffer);
     }
     /**
      * The publisher of the Azure Virtual Machines Marketplace image. For example, Canonical or MicrosoftWindowsServer.
@@ -216,8 +217,8 @@ public class NodeType extends com.pulumi.resources.CustomResource {
      * @return The publisher of the Azure Virtual Machines Marketplace image. For example, Canonical or MicrosoftWindowsServer.
      * 
      */
-    public Output</* @Nullable */ String> vmImagePublisher() {
-        return this.vmImagePublisher;
+    public Output<Optional<String>> vmImagePublisher() {
+        return Codegen.optional(this.vmImagePublisher);
     }
     /**
      * The SKU of the Azure Virtual Machines Marketplace image. For example, 14.04.0-LTS or 2012-R2-Datacenter.
@@ -230,8 +231,8 @@ public class NodeType extends com.pulumi.resources.CustomResource {
      * @return The SKU of the Azure Virtual Machines Marketplace image. For example, 14.04.0-LTS or 2012-R2-Datacenter.
      * 
      */
-    public Output</* @Nullable */ String> vmImageSku() {
-        return this.vmImageSku;
+    public Output<Optional<String>> vmImageSku() {
+        return Codegen.optional(this.vmImageSku);
     }
     /**
      * The version of the Azure Virtual Machines Marketplace image. A value of &#39;latest&#39; can be specified to select the latest version of an image. If omitted, the default is &#39;latest&#39;.
@@ -244,8 +245,8 @@ public class NodeType extends com.pulumi.resources.CustomResource {
      * @return The version of the Azure Virtual Machines Marketplace image. A value of &#39;latest&#39; can be specified to select the latest version of an image. If omitted, the default is &#39;latest&#39;.
      * 
      */
-    public Output</* @Nullable */ String> vmImageVersion() {
-        return this.vmImageVersion;
+    public Output<Optional<String>> vmImageVersion() {
+        return Codegen.optional(this.vmImageVersion);
     }
     /**
      * The number of nodes in the node type.
@@ -272,8 +273,8 @@ public class NodeType extends com.pulumi.resources.CustomResource {
      * @return The secrets to install in the virtual machines.
      * 
      */
-    public Output</* @Nullable */ List<VaultSecretGroupResponse>> vmSecrets() {
-        return this.vmSecrets;
+    public Output<Optional<List<VaultSecretGroupResponse>>> vmSecrets() {
+        return Codegen.optional(this.vmSecrets);
     }
     /**
      * The size of virtual machines in the pool. All virtual machines in a pool are the same size. For example, Standard_D3.
@@ -286,8 +287,8 @@ public class NodeType extends com.pulumi.resources.CustomResource {
      * @return The size of virtual machines in the pool. All virtual machines in a pool are the same size. For example, Standard_D3.
      * 
      */
-    public Output</* @Nullable */ String> vmSize() {
-        return this.vmSize;
+    public Output<Optional<String>> vmSize() {
+        return Codegen.optional(this.vmSize);
     }
 
     /**

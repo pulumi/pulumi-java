@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class Connection extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the connectionType of the connection.
      * 
      */
-    public Output</* @Nullable */ ConnectionTypeAssociationPropertyResponse> connectionType() {
-        return this.connectionType;
+    public Output<Optional<ConnectionTypeAssociationPropertyResponse>> connectionType() {
+        return Codegen.optional(this.connectionType);
     }
     /**
      * Gets the creation time.
@@ -72,8 +73,8 @@ public class Connection extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the description.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Gets the field definition values of the connection.

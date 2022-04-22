@@ -15,6 +15,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -42,8 +43,8 @@ public class WebAppFunction extends com.pulumi.resources.CustomResource {
      * @return Config information.
      * 
      */
-    public Output</* @Nullable */ Object> config() {
-        return this.config;
+    public Output<Optional<Object>> config() {
+        return Codegen.optional(this.config);
     }
     /**
      * Config URI.
@@ -56,8 +57,8 @@ public class WebAppFunction extends com.pulumi.resources.CustomResource {
      * @return Config URI.
      * 
      */
-    public Output</* @Nullable */ String> configHref() {
-        return this.configHref;
+    public Output<Optional<String>> configHref() {
+        return Codegen.optional(this.configHref);
     }
     /**
      * File list.
@@ -70,8 +71,8 @@ public class WebAppFunction extends com.pulumi.resources.CustomResource {
      * @return File list.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> files() {
-        return this.files;
+    public Output<Optional<Map<String,String>>> files() {
+        return Codegen.optional(this.files);
     }
     /**
      * Function App ID.
@@ -84,8 +85,8 @@ public class WebAppFunction extends com.pulumi.resources.CustomResource {
      * @return Function App ID.
      * 
      */
-    public Output</* @Nullable */ String> functionAppId() {
-        return this.functionAppId;
+    public Output<Optional<String>> functionAppId() {
+        return Codegen.optional(this.functionAppId);
     }
     /**
      * Function URI.
@@ -98,8 +99,8 @@ public class WebAppFunction extends com.pulumi.resources.CustomResource {
      * @return Function URI.
      * 
      */
-    public Output</* @Nullable */ String> href() {
-        return this.href;
+    public Output<Optional<String>> href() {
+        return Codegen.optional(this.href);
     }
     /**
      * The invocation URL
@@ -112,8 +113,8 @@ public class WebAppFunction extends com.pulumi.resources.CustomResource {
      * @return The invocation URL
      * 
      */
-    public Output</* @Nullable */ String> invokeUrlTemplate() {
-        return this.invokeUrlTemplate;
+    public Output<Optional<String>> invokeUrlTemplate() {
+        return Codegen.optional(this.invokeUrlTemplate);
     }
     /**
      * Gets or sets a value indicating whether the function is disabled
@@ -126,8 +127,8 @@ public class WebAppFunction extends com.pulumi.resources.CustomResource {
      * @return Gets or sets a value indicating whether the function is disabled
      * 
      */
-    public Output</* @Nullable */ Boolean> isDisabled() {
-        return this.isDisabled;
+    public Output<Optional<Boolean>> isDisabled() {
+        return Codegen.optional(this.isDisabled);
     }
     /**
      * Kind of resource.
@@ -140,8 +141,8 @@ public class WebAppFunction extends com.pulumi.resources.CustomResource {
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> kind() {
-        return this.kind;
+    public Output<Optional<String>> kind() {
+        return Codegen.optional(this.kind);
     }
     /**
      * The function language
@@ -154,8 +155,8 @@ public class WebAppFunction extends com.pulumi.resources.CustomResource {
      * @return The function language
      * 
      */
-    public Output</* @Nullable */ String> language() {
-        return this.language;
+    public Output<Optional<String>> language() {
+        return Codegen.optional(this.language);
     }
     /**
      * Resource Name.
@@ -182,8 +183,8 @@ public class WebAppFunction extends com.pulumi.resources.CustomResource {
      * @return Script URI.
      * 
      */
-    public Output</* @Nullable */ String> scriptHref() {
-        return this.scriptHref;
+    public Output<Optional<String>> scriptHref() {
+        return Codegen.optional(this.scriptHref);
     }
     /**
      * Script root path URI.
@@ -196,8 +197,8 @@ public class WebAppFunction extends com.pulumi.resources.CustomResource {
      * @return Script root path URI.
      * 
      */
-    public Output</* @Nullable */ String> scriptRootPathHref() {
-        return this.scriptRootPathHref;
+    public Output<Optional<String>> scriptRootPathHref() {
+        return Codegen.optional(this.scriptRootPathHref);
     }
     /**
      * Secrets file URI.
@@ -210,8 +211,8 @@ public class WebAppFunction extends com.pulumi.resources.CustomResource {
      * @return Secrets file URI.
      * 
      */
-    public Output</* @Nullable */ String> secretsFileHref() {
-        return this.secretsFileHref;
+    public Output<Optional<String>> secretsFileHref() {
+        return Codegen.optional(this.secretsFileHref);
     }
     /**
      * Test data used when testing via the Azure Portal.
@@ -224,8 +225,8 @@ public class WebAppFunction extends com.pulumi.resources.CustomResource {
      * @return Test data used when testing via the Azure Portal.
      * 
      */
-    public Output</* @Nullable */ String> testData() {
-        return this.testData;
+    public Output<Optional<String>> testData() {
+        return Codegen.optional(this.testData);
     }
     /**
      * Test data URI.
@@ -238,8 +239,8 @@ public class WebAppFunction extends com.pulumi.resources.CustomResource {
      * @return Test data URI.
      * 
      */
-    public Output</* @Nullable */ String> testDataHref() {
-        return this.testDataHref;
+    public Output<Optional<String>> testDataHref() {
+        return Codegen.optional(this.testDataHref);
     }
     /**
      * Resource type.

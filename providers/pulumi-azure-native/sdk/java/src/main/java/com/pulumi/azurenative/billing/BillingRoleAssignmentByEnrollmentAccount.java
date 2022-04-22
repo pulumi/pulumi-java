@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -112,8 +113,8 @@ public class BillingRoleAssignmentByEnrollmentAccount extends com.pulumi.resourc
      * @return The principal id of the user to whom the role was assigned.
      * 
      */
-    public Output</* @Nullable */ String> principalId() {
-        return this.principalId;
+    public Output<Optional<String>> principalId() {
+        return Codegen.optional(this.principalId);
     }
     /**
      * The principal tenant id of the user to whom the role was assigned.
@@ -126,8 +127,8 @@ public class BillingRoleAssignmentByEnrollmentAccount extends com.pulumi.resourc
      * @return The principal tenant id of the user to whom the role was assigned.
      * 
      */
-    public Output</* @Nullable */ String> principalTenantId() {
-        return this.principalTenantId;
+    public Output<Optional<String>> principalTenantId() {
+        return Codegen.optional(this.principalTenantId);
     }
     /**
      * The ID of the role definition.
@@ -140,8 +141,8 @@ public class BillingRoleAssignmentByEnrollmentAccount extends com.pulumi.resourc
      * @return The ID of the role definition.
      * 
      */
-    public Output</* @Nullable */ String> roleDefinitionId() {
-        return this.roleDefinitionId;
+    public Output<Optional<String>> roleDefinitionId() {
+        return Codegen.optional(this.roleDefinitionId);
     }
     /**
      * The scope at which the role was assigned.
@@ -182,8 +183,8 @@ public class BillingRoleAssignmentByEnrollmentAccount extends com.pulumi.resourc
      * @return The authentication type of the user, whether Organization or MSA, of the user to whom the role was assigned. This is supported only for billing accounts with agreement type Enterprise Agreement.
      * 
      */
-    public Output</* @Nullable */ String> userAuthenticationType() {
-        return this.userAuthenticationType;
+    public Output<Optional<String>> userAuthenticationType() {
+        return Codegen.optional(this.userAuthenticationType);
     }
     /**
      * The email address of the user to whom the role was assigned. This is supported only for billing accounts with agreement type Enterprise Agreement.
@@ -196,8 +197,8 @@ public class BillingRoleAssignmentByEnrollmentAccount extends com.pulumi.resourc
      * @return The email address of the user to whom the role was assigned. This is supported only for billing accounts with agreement type Enterprise Agreement.
      * 
      */
-    public Output</* @Nullable */ String> userEmailAddress() {
-        return this.userEmailAddress;
+    public Output<Optional<String>> userEmailAddress() {
+        return Codegen.optional(this.userEmailAddress);
     }
 
     /**

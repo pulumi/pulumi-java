@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -70,8 +71,8 @@ public class Association extends com.pulumi.resources.CustomResource {
      * @return The REST resource instance of the target resource for this association.
      * 
      */
-    public Output</* @Nullable */ String> targetResourceId() {
-        return this.targetResourceId;
+    public Output<Optional<String>> targetResourceId() {
+        return Codegen.optional(this.targetResourceId);
     }
     /**
      * The association type.

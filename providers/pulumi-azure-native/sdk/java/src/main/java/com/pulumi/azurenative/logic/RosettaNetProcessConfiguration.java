@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -87,8 +88,8 @@ public class RosettaNetProcessConfiguration extends com.pulumi.resources.CustomR
      * @return The integration account RosettaNet ProcessConfiguration properties.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The RosettaNet initiator role settings.
@@ -115,8 +116,8 @@ public class RosettaNetProcessConfiguration extends com.pulumi.resources.CustomR
      * @return The resource location.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The metadata.
@@ -129,8 +130,8 @@ public class RosettaNetProcessConfiguration extends com.pulumi.resources.CustomR
      * @return The metadata.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> metadata() {
-        return this.metadata;
+    public Output<Optional<Map<String,String>>> metadata() {
+        return Codegen.optional(this.metadata);
     }
     /**
      * Gets the resource name.
@@ -213,8 +214,8 @@ public class RosettaNetProcessConfiguration extends com.pulumi.resources.CustomR
      * @return The resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Gets the resource type.

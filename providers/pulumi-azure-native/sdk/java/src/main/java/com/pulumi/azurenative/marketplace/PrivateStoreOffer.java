@@ -15,6 +15,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -59,8 +60,8 @@ public class PrivateStoreOffer extends com.pulumi.resources.CustomResource {
      * @return Identifier for purposes of race condition
      * 
      */
-    public Output</* @Nullable */ String> eTag() {
-        return this.eTag;
+    public Output<Optional<String>> eTag() {
+        return Codegen.optional(this.eTag);
     }
     /**
      * Icon File Uris
@@ -73,8 +74,8 @@ public class PrivateStoreOffer extends com.pulumi.resources.CustomResource {
      * @return Icon File Uris
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> iconFileUris() {
-        return this.iconFileUris;
+    public Output<Optional<Map<String,String>>> iconFileUris() {
+        return Codegen.optional(this.iconFileUris);
     }
     /**
      * Private store offer modification date
@@ -129,8 +130,8 @@ public class PrivateStoreOffer extends com.pulumi.resources.CustomResource {
      * @return Offer plans
      * 
      */
-    public Output</* @Nullable */ List<PlanResponse>> plans() {
-        return this.plans;
+    public Output<Optional<List<PlanResponse>>> plans() {
+        return Codegen.optional(this.plans);
     }
     /**
      * Private store unique id
@@ -171,8 +172,8 @@ public class PrivateStoreOffer extends com.pulumi.resources.CustomResource {
      * @return Plan ids limitation for this offer
      * 
      */
-    public Output</* @Nullable */ List<String>> specificPlanIdsLimitation() {
-        return this.specificPlanIdsLimitation;
+    public Output<Optional<List<String>>> specificPlanIdsLimitation() {
+        return Codegen.optional(this.specificPlanIdsLimitation);
     }
     /**
      * The type of the resource.
@@ -213,8 +214,8 @@ public class PrivateStoreOffer extends com.pulumi.resources.CustomResource {
      * @return Indicating whether the offer was not updated to db (true = not updated). If the allow list is identical to the existed one in db, the offer would not be updated.
      * 
      */
-    public Output</* @Nullable */ Boolean> updateSuppressedDueIdempotence() {
-        return this.updateSuppressedDueIdempotence;
+    public Output<Optional<Boolean>> updateSuppressedDueIdempotence() {
+        return Codegen.optional(this.updateSuppressedDueIdempotence);
     }
 
     /**

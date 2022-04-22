@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -59,8 +60,8 @@ public class KustoPool extends com.pulumi.resources.CustomResource {
      * @return The engine type
      * 
      */
-    public Output</* @Nullable */ String> engineType() {
-        return this.engineType;
+    public Output<Optional<String>> engineType() {
+        return Codegen.optional(this.engineType);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
@@ -185,8 +186,8 @@ public class KustoPool extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
@@ -227,8 +228,8 @@ public class KustoPool extends com.pulumi.resources.CustomResource {
      * @return The workspace unique identifier.
      * 
      */
-    public Output</* @Nullable */ String> workspaceUid() {
-        return this.workspaceUid;
+    public Output<Optional<String>> workspaceUid() {
+        return Codegen.optional(this.workspaceUid);
     }
 
     /**

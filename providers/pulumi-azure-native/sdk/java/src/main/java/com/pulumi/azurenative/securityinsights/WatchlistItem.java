@@ -16,6 +16,7 @@ import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class WatchlistItem extends com.pulumi.resources.CustomResource {
      * @return The time the watchlist item was created
      * 
      */
-    public Output</* @Nullable */ String> created() {
-        return this.created;
+    public Output<Optional<String>> created() {
+        return Codegen.optional(this.created);
     }
     /**
      * Describes a user that created the watchlist item
@@ -60,8 +61,8 @@ public class WatchlistItem extends com.pulumi.resources.CustomResource {
      * @return Describes a user that created the watchlist item
      * 
      */
-    public Output</* @Nullable */ WatchlistUserInfoResponse> createdBy() {
-        return this.createdBy;
+    public Output<Optional<WatchlistUserInfoResponse>> createdBy() {
+        return Codegen.optional(this.createdBy);
     }
     /**
      * key-value pairs for a watchlist item entity mapping
@@ -74,8 +75,8 @@ public class WatchlistItem extends com.pulumi.resources.CustomResource {
      * @return key-value pairs for a watchlist item entity mapping
      * 
      */
-    public Output</* @Nullable */ Object> entityMapping() {
-        return this.entityMapping;
+    public Output<Optional<Object>> entityMapping() {
+        return Codegen.optional(this.entityMapping);
     }
     /**
      * Etag of the azure resource
@@ -88,8 +89,8 @@ public class WatchlistItem extends com.pulumi.resources.CustomResource {
      * @return Etag of the azure resource
      * 
      */
-    public Output</* @Nullable */ String> etag() {
-        return this.etag;
+    public Output<Optional<String>> etag() {
+        return Codegen.optional(this.etag);
     }
     /**
      * A flag that indicates if the watchlist item is deleted or not
@@ -102,8 +103,8 @@ public class WatchlistItem extends com.pulumi.resources.CustomResource {
      * @return A flag that indicates if the watchlist item is deleted or not
      * 
      */
-    public Output</* @Nullable */ Boolean> isDeleted() {
-        return this.isDeleted;
+    public Output<Optional<Boolean>> isDeleted() {
+        return Codegen.optional(this.isDeleted);
     }
     /**
      * key-value pairs for a watchlist item
@@ -158,8 +159,8 @@ public class WatchlistItem extends com.pulumi.resources.CustomResource {
      * @return The tenantId to which the watchlist item belongs to
      * 
      */
-    public Output</* @Nullable */ String> tenantId() {
-        return this.tenantId;
+    public Output<Optional<String>> tenantId() {
+        return Codegen.optional(this.tenantId);
     }
     /**
      * Azure resource type
@@ -186,8 +187,8 @@ public class WatchlistItem extends com.pulumi.resources.CustomResource {
      * @return The last time the watchlist item was updated
      * 
      */
-    public Output</* @Nullable */ String> updated() {
-        return this.updated;
+    public Output<Optional<String>> updated() {
+        return Codegen.optional(this.updated);
     }
     /**
      * Describes a user that updated the watchlist item
@@ -200,8 +201,8 @@ public class WatchlistItem extends com.pulumi.resources.CustomResource {
      * @return Describes a user that updated the watchlist item
      * 
      */
-    public Output</* @Nullable */ WatchlistUserInfoResponse> updatedBy() {
-        return this.updatedBy;
+    public Output<Optional<WatchlistUserInfoResponse>> updatedBy() {
+        return Codegen.optional(this.updatedBy);
     }
     /**
      * The id (a Guid) of the watchlist item
@@ -214,8 +215,8 @@ public class WatchlistItem extends com.pulumi.resources.CustomResource {
      * @return The id (a Guid) of the watchlist item
      * 
      */
-    public Output</* @Nullable */ String> watchlistItemId() {
-        return this.watchlistItemId;
+    public Output<Optional<String>> watchlistItemId() {
+        return Codegen.optional(this.watchlistItemId);
     }
     /**
      * The type of the watchlist item
@@ -228,8 +229,8 @@ public class WatchlistItem extends com.pulumi.resources.CustomResource {
      * @return The type of the watchlist item
      * 
      */
-    public Output</* @Nullable */ String> watchlistItemType() {
-        return this.watchlistItemType;
+    public Output<Optional<String>> watchlistItemType() {
+        return Codegen.optional(this.watchlistItemType);
     }
 
     /**

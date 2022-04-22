@@ -19,6 +19,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -49,8 +50,8 @@ public class ScalingPlan extends com.pulumi.resources.CustomResource {
      * @return Description of scaling plan.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
@@ -77,8 +78,8 @@ public class ScalingPlan extends com.pulumi.resources.CustomResource {
      * @return Exclusion tag for scaling plan.
      * 
      */
-    public Output</* @Nullable */ String> exclusionTag() {
-        return this.exclusionTag;
+    public Output<Optional<String>> exclusionTag() {
+        return Codegen.optional(this.exclusionTag);
     }
     /**
      * User friendly name of scaling plan.
@@ -91,8 +92,8 @@ public class ScalingPlan extends com.pulumi.resources.CustomResource {
      * @return User friendly name of scaling plan.
      * 
      */
-    public Output</* @Nullable */ String> friendlyName() {
-        return this.friendlyName;
+    public Output<Optional<String>> friendlyName() {
+        return Codegen.optional(this.friendlyName);
     }
     /**
      * List of ScalingHostPoolReference definitions.
@@ -105,8 +106,8 @@ public class ScalingPlan extends com.pulumi.resources.CustomResource {
      * @return List of ScalingHostPoolReference definitions.
      * 
      */
-    public Output</* @Nullable */ List<ScalingHostPoolReferenceResponse>> hostPoolReferences() {
-        return this.hostPoolReferences;
+    public Output<Optional<List<ScalingHostPoolReferenceResponse>>> hostPoolReferences() {
+        return Codegen.optional(this.hostPoolReferences);
     }
     /**
      * HostPool type for desktop.
@@ -119,14 +120,14 @@ public class ScalingPlan extends com.pulumi.resources.CustomResource {
      * @return HostPool type for desktop.
      * 
      */
-    public Output</* @Nullable */ String> hostPoolType() {
-        return this.hostPoolType;
+    public Output<Optional<String>> hostPoolType() {
+        return Codegen.optional(this.hostPoolType);
     }
     @Export(name="identity", type=ResourceModelWithAllowedPropertySetResponseIdentity.class, parameters={})
     private Output</* @Nullable */ ResourceModelWithAllowedPropertySetResponseIdentity> identity;
 
-    public Output</* @Nullable */ ResourceModelWithAllowedPropertySetResponseIdentity> identity() {
-        return this.identity;
+    public Output<Optional<ResourceModelWithAllowedPropertySetResponseIdentity>> identity() {
+        return Codegen.optional(this.identity);
     }
     /**
      * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
@@ -139,8 +140,8 @@ public class ScalingPlan extends com.pulumi.resources.CustomResource {
      * @return Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
      * 
      */
-    public Output</* @Nullable */ String> kind() {
-        return this.kind;
+    public Output<Optional<String>> kind() {
+        return Codegen.optional(this.kind);
     }
     /**
      * The geo-location where the resource lives
@@ -153,8 +154,8 @@ public class ScalingPlan extends com.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.
@@ -167,8 +168,8 @@ public class ScalingPlan extends com.pulumi.resources.CustomResource {
      * @return The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.
      * 
      */
-    public Output</* @Nullable */ String> managedBy() {
-        return this.managedBy;
+    public Output<Optional<String>> managedBy() {
+        return Codegen.optional(this.managedBy);
     }
     /**
      * The name of the resource
@@ -201,8 +202,8 @@ public class ScalingPlan extends com.pulumi.resources.CustomResource {
     @Export(name="plan", type=ResourceModelWithAllowedPropertySetResponsePlan.class, parameters={})
     private Output</* @Nullable */ ResourceModelWithAllowedPropertySetResponsePlan> plan;
 
-    public Output</* @Nullable */ ResourceModelWithAllowedPropertySetResponsePlan> plan() {
-        return this.plan;
+    public Output<Optional<ResourceModelWithAllowedPropertySetResponsePlan>> plan() {
+        return Codegen.optional(this.plan);
     }
     /**
      * The ring number of scaling plan.
@@ -215,8 +216,8 @@ public class ScalingPlan extends com.pulumi.resources.CustomResource {
      * @return The ring number of scaling plan.
      * 
      */
-    public Output</* @Nullable */ Integer> ring() {
-        return this.ring;
+    public Output<Optional<Integer>> ring() {
+        return Codegen.optional(this.ring);
     }
     /**
      * List of ScalingSchedule definitions.
@@ -229,14 +230,14 @@ public class ScalingPlan extends com.pulumi.resources.CustomResource {
      * @return List of ScalingSchedule definitions.
      * 
      */
-    public Output</* @Nullable */ List<ScalingScheduleResponse>> schedules() {
-        return this.schedules;
+    public Output<Optional<List<ScalingScheduleResponse>>> schedules() {
+        return Codegen.optional(this.schedules);
     }
     @Export(name="sku", type=ResourceModelWithAllowedPropertySetResponseSku.class, parameters={})
     private Output</* @Nullable */ ResourceModelWithAllowedPropertySetResponseSku> sku;
 
-    public Output</* @Nullable */ ResourceModelWithAllowedPropertySetResponseSku> sku() {
-        return this.sku;
+    public Output<Optional<ResourceModelWithAllowedPropertySetResponseSku>> sku() {
+        return Codegen.optional(this.sku);
     }
     /**
      * Resource tags.
@@ -249,8 +250,8 @@ public class ScalingPlan extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Timezone of the scaling plan.
@@ -263,8 +264,8 @@ public class ScalingPlan extends com.pulumi.resources.CustomResource {
      * @return Timezone of the scaling plan.
      * 
      */
-    public Output</* @Nullable */ String> timeZone() {
-        return this.timeZone;
+    public Output<Optional<String>> timeZone() {
+        return Codegen.optional(this.timeZone);
     }
     /**
      * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;

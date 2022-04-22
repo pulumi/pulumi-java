@@ -16,6 +16,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -74,8 +75,8 @@ public class SoftwareUpdateConfigurationByName extends com.pulumi.resources.Cust
      * @return Details of provisioning error
      * 
      */
-    public Output</* @Nullable */ ErrorResponseResponse> error() {
-        return this.error;
+    public Output<Optional<ErrorResponseResponse>> error() {
+        return Codegen.optional(this.error);
     }
     /**
      * LastModifiedBy property, which only appears in the response.
@@ -158,8 +159,8 @@ public class SoftwareUpdateConfigurationByName extends com.pulumi.resources.Cust
      * @return Tasks information for the Software update configuration.
      * 
      */
-    public Output</* @Nullable */ SoftwareUpdateConfigurationTasksResponse> tasks() {
-        return this.tasks;
+    public Output<Optional<SoftwareUpdateConfigurationTasksResponse>> tasks() {
+        return Codegen.optional(this.tasks);
     }
     /**
      * Resource type

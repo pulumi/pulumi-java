@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class DiagnosticSetting extends com.pulumi.resources.CustomResource {
      * @return The resource Id for the event hub authorization rule.
      * 
      */
-    public Output</* @Nullable */ String> eventHubAuthorizationRuleId() {
-        return this.eventHubAuthorizationRuleId;
+    public Output<Optional<String>> eventHubAuthorizationRuleId() {
+        return Codegen.optional(this.eventHubAuthorizationRuleId);
     }
     /**
      * The name of the event hub. If none is specified, the default event hub will be selected.
@@ -58,8 +59,8 @@ public class DiagnosticSetting extends com.pulumi.resources.CustomResource {
      * @return The name of the event hub. If none is specified, the default event hub will be selected.
      * 
      */
-    public Output</* @Nullable */ String> eventHubName() {
-        return this.eventHubName;
+    public Output<Optional<String>> eventHubName() {
+        return Codegen.optional(this.eventHubName);
     }
     /**
      * A string indicating whether the export to Log Analytics should use the default destination type, i.e. AzureDiagnostics, or use a destination type constructed as follows: &lt;normalized service identity&gt;_&lt;normalized category name&gt;. Possible values are: Dedicated and null (null is default.)
@@ -72,8 +73,8 @@ public class DiagnosticSetting extends com.pulumi.resources.CustomResource {
      * @return A string indicating whether the export to Log Analytics should use the default destination type, i.e. AzureDiagnostics, or use a destination type constructed as follows: &lt;normalized service identity&gt;_&lt;normalized category name&gt;. Possible values are: Dedicated and null (null is default.)
      * 
      */
-    public Output</* @Nullable */ String> logAnalyticsDestinationType() {
-        return this.logAnalyticsDestinationType;
+    public Output<Optional<String>> logAnalyticsDestinationType() {
+        return Codegen.optional(this.logAnalyticsDestinationType);
     }
     /**
      * The list of logs settings.
@@ -86,8 +87,8 @@ public class DiagnosticSetting extends com.pulumi.resources.CustomResource {
      * @return The list of logs settings.
      * 
      */
-    public Output</* @Nullable */ List<LogSettingsResponse>> logs() {
-        return this.logs;
+    public Output<Optional<List<LogSettingsResponse>>> logs() {
+        return Codegen.optional(this.logs);
     }
     /**
      * The list of metric settings.
@@ -100,8 +101,8 @@ public class DiagnosticSetting extends com.pulumi.resources.CustomResource {
      * @return The list of metric settings.
      * 
      */
-    public Output</* @Nullable */ List<MetricSettingsResponse>> metrics() {
-        return this.metrics;
+    public Output<Optional<List<MetricSettingsResponse>>> metrics() {
+        return Codegen.optional(this.metrics);
     }
     /**
      * Azure resource name
@@ -128,8 +129,8 @@ public class DiagnosticSetting extends com.pulumi.resources.CustomResource {
      * @return The service bus rule Id of the diagnostic setting. This is here to maintain backwards compatibility.
      * 
      */
-    public Output</* @Nullable */ String> serviceBusRuleId() {
-        return this.serviceBusRuleId;
+    public Output<Optional<String>> serviceBusRuleId() {
+        return Codegen.optional(this.serviceBusRuleId);
     }
     /**
      * The resource ID of the storage account to which you would like to send Diagnostic Logs.
@@ -142,8 +143,8 @@ public class DiagnosticSetting extends com.pulumi.resources.CustomResource {
      * @return The resource ID of the storage account to which you would like to send Diagnostic Logs.
      * 
      */
-    public Output</* @Nullable */ String> storageAccountId() {
-        return this.storageAccountId;
+    public Output<Optional<String>> storageAccountId() {
+        return Codegen.optional(this.storageAccountId);
     }
     /**
      * Azure resource type
@@ -170,8 +171,8 @@ public class DiagnosticSetting extends com.pulumi.resources.CustomResource {
      * @return The full ARM resource ID of the Log Analytics workspace to which you would like to send Diagnostic Logs. Example: /subscriptions/4b9e8510-67ab-4e9a-95a9-e2f1e570ea9c/resourceGroups/insights-integration/providers/Microsoft.OperationalInsights/workspaces/viruela2
      * 
      */
-    public Output</* @Nullable */ String> workspaceId() {
-        return this.workspaceId;
+    public Output<Optional<String>> workspaceId() {
+        return Codegen.optional(this.workspaceId);
     }
 
     /**

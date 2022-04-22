@@ -20,6 +20,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -78,8 +79,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return Virtual machine properties
      * 
      */
-    public Output</* @Nullable */ GuestOSCustomizationResponse> customization() {
-        return this.customization;
+    public Output<Optional<GuestOSCustomizationResponse>> customization() {
+        return Codegen.optional(this.customization);
     }
     /**
      * The list of Virtual Disks
@@ -92,8 +93,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return The list of Virtual Disks
      * 
      */
-    public Output</* @Nullable */ List<VirtualDiskResponse>> disks() {
-        return this.disks;
+    public Output<Optional<List<VirtualDiskResponse>>> disks() {
+        return Codegen.optional(this.disks);
     }
     /**
      * The DNS name of Virtual Machine in VCenter
@@ -120,8 +121,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return Expose Guest OS or not
      * 
      */
-    public Output</* @Nullable */ Boolean> exposeToGuestVM() {
-        return this.exposeToGuestVM;
+    public Output<Optional<Boolean>> exposeToGuestVM() {
+        return Codegen.optional(this.exposeToGuestVM);
     }
     /**
      * The path to virtual machine folder in VCenter
@@ -204,8 +205,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return The list of Virtual NICs
      * 
      */
-    public Output</* @Nullable */ List<VirtualNicResponse>> nics() {
-        return this.nics;
+    public Output<Optional<List<VirtualNicResponse>>> nics() {
+        return Codegen.optional(this.nics);
     }
     /**
      * The number of CPU cores
@@ -232,8 +233,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return Password for login. Deprecated - use customization property
      * 
      */
-    public Output</* @Nullable */ String> password() {
-        return this.password;
+    public Output<Optional<String>> password() {
+        return Codegen.optional(this.password);
     }
     /**
      * Private Cloud Id
@@ -288,8 +289,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return Virtual Machines Resource Pool
      * 
      */
-    public Output</* @Nullable */ ResourcePoolResponse> resourcePool() {
-        return this.resourcePool;
+    public Output<Optional<ResourcePoolResponse>> resourcePool() {
+        return Codegen.optional(this.resourcePool);
     }
     /**
      * The status of Virtual machine
@@ -316,8 +317,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return The list of tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Virtual Machine Template Id
@@ -330,8 +331,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return Virtual Machine Template Id
      * 
      */
-    public Output</* @Nullable */ String> templateId() {
-        return this.templateId;
+    public Output<Optional<String>> templateId() {
+        return Codegen.optional(this.templateId);
     }
     /**
      * {resourceProviderNamespace}/{resourceType}
@@ -358,8 +359,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return Username for login. Deprecated - use customization property
      * 
      */
-    public Output</* @Nullable */ String> username() {
-        return this.username;
+    public Output<Optional<String>> username() {
+        return Codegen.optional(this.username);
     }
     /**
      * The list of Virtual VSphere Networks
@@ -372,8 +373,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return The list of Virtual VSphere Networks
      * 
      */
-    public Output</* @Nullable */ List<String>> vSphereNetworks() {
-        return this.vSphereNetworks;
+    public Output<Optional<List<String>>> vSphereNetworks() {
+        return Codegen.optional(this.vSphereNetworks);
     }
     /**
      * The internal id of Virtual Machine in VCenter

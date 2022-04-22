@@ -15,6 +15,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return CNAME of the certificate to be issued via free certificate
      * 
      */
-    public Output</* @Nullable */ String> canonicalName() {
-        return this.canonicalName;
+    public Output<Optional<String>> canonicalName() {
+        return Codegen.optional(this.canonicalName);
     }
     /**
      * Raw bytes of .cer file
@@ -73,8 +74,8 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return Method of domain validation for free cert
      * 
      */
-    public Output</* @Nullable */ String> domainValidationMethod() {
-        return this.domainValidationMethod;
+    public Output<Optional<String>> domainValidationMethod() {
+        return Codegen.optional(this.domainValidationMethod);
     }
     /**
      * Certificate expiration date.
@@ -115,8 +116,8 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return Host names the certificate applies to.
      * 
      */
-    public Output</* @Nullable */ List<String>> hostNames() {
-        return this.hostNames;
+    public Output<Optional<List<String>>> hostNames() {
+        return Codegen.optional(this.hostNames);
     }
     /**
      * Specification for the App Service Environment to use for the certificate.
@@ -171,8 +172,8 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return Key Vault Csm resource Id.
      * 
      */
-    public Output</* @Nullable */ String> keyVaultId() {
-        return this.keyVaultId;
+    public Output<Optional<String>> keyVaultId() {
+        return Codegen.optional(this.keyVaultId);
     }
     /**
      * Key Vault secret name.
@@ -185,8 +186,8 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return Key Vault secret name.
      * 
      */
-    public Output</* @Nullable */ String> keyVaultSecretName() {
-        return this.keyVaultSecretName;
+    public Output<Optional<String>> keyVaultSecretName() {
+        return Codegen.optional(this.keyVaultSecretName);
     }
     /**
      * Status of the Key Vault secret.
@@ -213,8 +214,8 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> kind() {
-        return this.kind;
+    public Output<Optional<String>> kind() {
+        return Codegen.optional(this.kind);
     }
     /**
      * Resource Location.
@@ -255,8 +256,8 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return Pfx blob.
      * 
      */
-    public Output</* @Nullable */ String> pfxBlob() {
-        return this.pfxBlob;
+    public Output<Optional<String>> pfxBlob() {
+        return Codegen.optional(this.pfxBlob);
     }
     /**
      * Public key hash.
@@ -297,8 +298,8 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return Resource ID of the associated App Service plan, formatted as: &#34;/subscriptions/{subscriptionID}/resourceGroups/{groupName}/providers/Microsoft.Web/serverfarms/{appServicePlanName}&#34;.
      * 
      */
-    public Output</* @Nullable */ String> serverFarmId() {
-        return this.serverFarmId;
+    public Output<Optional<String>> serverFarmId() {
+        return Codegen.optional(this.serverFarmId);
     }
     /**
      * App name.
@@ -339,8 +340,8 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Certificate thumbprint.

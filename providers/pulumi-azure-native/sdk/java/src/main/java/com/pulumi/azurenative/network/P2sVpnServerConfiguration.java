@@ -18,6 +18,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -62,8 +63,8 @@ public class P2sVpnServerConfiguration extends com.pulumi.resources.CustomResour
      * @return The name of the P2SVpnServerConfiguration that is unique within a VirtualWan in a resource group. This name can be used to access the resource along with Paren VirtualWan resource name.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * List of references to P2SVpnGateways.
@@ -90,8 +91,8 @@ public class P2sVpnServerConfiguration extends com.pulumi.resources.CustomResour
      * @return Radius client root certificate of P2SVpnServerConfiguration.
      * 
      */
-    public Output</* @Nullable */ List<P2SVpnServerConfigRadiusClientRootCertificateResponse>> p2SVpnServerConfigRadiusClientRootCertificates() {
-        return this.p2SVpnServerConfigRadiusClientRootCertificates;
+    public Output<Optional<List<P2SVpnServerConfigRadiusClientRootCertificateResponse>>> p2SVpnServerConfigRadiusClientRootCertificates() {
+        return Codegen.optional(this.p2SVpnServerConfigRadiusClientRootCertificates);
     }
     /**
      * Radius Server root certificate of P2SVpnServerConfiguration.
@@ -104,8 +105,8 @@ public class P2sVpnServerConfiguration extends com.pulumi.resources.CustomResour
      * @return Radius Server root certificate of P2SVpnServerConfiguration.
      * 
      */
-    public Output</* @Nullable */ List<P2SVpnServerConfigRadiusServerRootCertificateResponse>> p2SVpnServerConfigRadiusServerRootCertificates() {
-        return this.p2SVpnServerConfigRadiusServerRootCertificates;
+    public Output<Optional<List<P2SVpnServerConfigRadiusServerRootCertificateResponse>>> p2SVpnServerConfigRadiusServerRootCertificates() {
+        return Codegen.optional(this.p2SVpnServerConfigRadiusServerRootCertificates);
     }
     /**
      * VPN client revoked certificate of P2SVpnServerConfiguration.
@@ -118,8 +119,8 @@ public class P2sVpnServerConfiguration extends com.pulumi.resources.CustomResour
      * @return VPN client revoked certificate of P2SVpnServerConfiguration.
      * 
      */
-    public Output</* @Nullable */ List<P2SVpnServerConfigVpnClientRevokedCertificateResponse>> p2SVpnServerConfigVpnClientRevokedCertificates() {
-        return this.p2SVpnServerConfigVpnClientRevokedCertificates;
+    public Output<Optional<List<P2SVpnServerConfigVpnClientRevokedCertificateResponse>>> p2SVpnServerConfigVpnClientRevokedCertificates() {
+        return Codegen.optional(this.p2SVpnServerConfigVpnClientRevokedCertificates);
     }
     /**
      * VPN client root certificate of P2SVpnServerConfiguration.
@@ -132,8 +133,8 @@ public class P2sVpnServerConfiguration extends com.pulumi.resources.CustomResour
      * @return VPN client root certificate of P2SVpnServerConfiguration.
      * 
      */
-    public Output</* @Nullable */ List<P2SVpnServerConfigVpnClientRootCertificateResponse>> p2SVpnServerConfigVpnClientRootCertificates() {
-        return this.p2SVpnServerConfigVpnClientRootCertificates;
+    public Output<Optional<List<P2SVpnServerConfigVpnClientRootCertificateResponse>>> p2SVpnServerConfigVpnClientRootCertificates() {
+        return Codegen.optional(this.p2SVpnServerConfigVpnClientRootCertificates);
     }
     /**
      * The provisioning state of the P2S VPN server configuration resource.
@@ -160,8 +161,8 @@ public class P2sVpnServerConfiguration extends com.pulumi.resources.CustomResour
      * @return The radius server address property of the P2SVpnServerConfiguration resource for point to site client connection.
      * 
      */
-    public Output</* @Nullable */ String> radiusServerAddress() {
-        return this.radiusServerAddress;
+    public Output<Optional<String>> radiusServerAddress() {
+        return Codegen.optional(this.radiusServerAddress);
     }
     /**
      * The radius secret property of the P2SVpnServerConfiguration resource for point to site client connection.
@@ -174,8 +175,8 @@ public class P2sVpnServerConfiguration extends com.pulumi.resources.CustomResour
      * @return The radius secret property of the P2SVpnServerConfiguration resource for point to site client connection.
      * 
      */
-    public Output</* @Nullable */ String> radiusServerSecret() {
-        return this.radiusServerSecret;
+    public Output<Optional<String>> radiusServerSecret() {
+        return Codegen.optional(this.radiusServerSecret);
     }
     /**
      * VpnClientIpsecPolicies for P2SVpnServerConfiguration.
@@ -188,8 +189,8 @@ public class P2sVpnServerConfiguration extends com.pulumi.resources.CustomResour
      * @return VpnClientIpsecPolicies for P2SVpnServerConfiguration.
      * 
      */
-    public Output</* @Nullable */ List<IpsecPolicyResponse>> vpnClientIpsecPolicies() {
-        return this.vpnClientIpsecPolicies;
+    public Output<Optional<List<IpsecPolicyResponse>>> vpnClientIpsecPolicies() {
+        return Codegen.optional(this.vpnClientIpsecPolicies);
     }
     /**
      * VPN protocols for the P2SVpnServerConfiguration.
@@ -202,8 +203,8 @@ public class P2sVpnServerConfiguration extends com.pulumi.resources.CustomResour
      * @return VPN protocols for the P2SVpnServerConfiguration.
      * 
      */
-    public Output</* @Nullable */ List<String>> vpnProtocols() {
-        return this.vpnProtocols;
+    public Output<Optional<List<String>>> vpnProtocols() {
+        return Codegen.optional(this.vpnProtocols);
     }
 
     /**

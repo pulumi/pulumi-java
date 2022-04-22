@@ -15,6 +15,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -112,8 +113,8 @@ public class Lab extends com.pulumi.resources.CustomResource {
      * @return The location of the resource.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * Maximum number of users allowed in the lab.
@@ -126,8 +127,8 @@ public class Lab extends com.pulumi.resources.CustomResource {
      * @return Maximum number of users allowed in the lab.
      * 
      */
-    public Output</* @Nullable */ Integer> maxUsersInLab() {
-        return this.maxUsersInLab;
+    public Output<Optional<Integer>> maxUsersInLab() {
+        return Codegen.optional(this.maxUsersInLab);
     }
     /**
      * The name of the resource.
@@ -154,8 +155,8 @@ public class Lab extends com.pulumi.resources.CustomResource {
      * @return The provisioning status of the resource.
      * 
      */
-    public Output</* @Nullable */ String> provisioningState() {
-        return this.provisioningState;
+    public Output<Optional<String>> provisioningState() {
+        return Codegen.optional(this.provisioningState);
     }
     /**
      * The tags of the resource.
@@ -168,8 +169,8 @@ public class Lab extends com.pulumi.resources.CustomResource {
      * @return The tags of the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource.
@@ -196,8 +197,8 @@ public class Lab extends com.pulumi.resources.CustomResource {
      * @return The unique immutable identifier of a resource (Guid).
      * 
      */
-    public Output</* @Nullable */ String> uniqueIdentifier() {
-        return this.uniqueIdentifier;
+    public Output<Optional<String>> uniqueIdentifier() {
+        return Codegen.optional(this.uniqueIdentifier);
     }
     /**
      * Maximum duration a user can use an environment for in the lab.
@@ -210,8 +211,8 @@ public class Lab extends com.pulumi.resources.CustomResource {
      * @return Maximum duration a user can use an environment for in the lab.
      * 
      */
-    public Output</* @Nullable */ String> usageQuota() {
-        return this.usageQuota;
+    public Output<Optional<String>> usageQuota() {
+        return Codegen.optional(this.usageQuota);
     }
     /**
      * Lab user access mode (open to all vs. restricted to those listed on the lab).
@@ -224,8 +225,8 @@ public class Lab extends com.pulumi.resources.CustomResource {
      * @return Lab user access mode (open to all vs. restricted to those listed on the lab).
      * 
      */
-    public Output</* @Nullable */ String> userAccessMode() {
-        return this.userAccessMode;
+    public Output<Optional<String>> userAccessMode() {
+        return Codegen.optional(this.userAccessMode);
     }
     /**
      * Maximum value MaxUsersInLab can be set to, as specified by the service

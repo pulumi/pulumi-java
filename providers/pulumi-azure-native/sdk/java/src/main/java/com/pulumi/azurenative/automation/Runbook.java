@@ -18,6 +18,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -48,8 +49,8 @@ public class Runbook extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the creation time.
      * 
      */
-    public Output</* @Nullable */ String> creationTime() {
-        return this.creationTime;
+    public Output<Optional<String>> creationTime() {
+        return Codegen.optional(this.creationTime);
     }
     /**
      * Gets or sets the description.
@@ -62,8 +63,8 @@ public class Runbook extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the description.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Gets or sets the draft runbook properties.
@@ -76,8 +77,8 @@ public class Runbook extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the draft runbook properties.
      * 
      */
-    public Output</* @Nullable */ RunbookDraftResponse> draft() {
-        return this.draft;
+    public Output<Optional<RunbookDraftResponse>> draft() {
+        return Codegen.optional(this.draft);
     }
     /**
      * Gets or sets the etag of the resource.
@@ -90,8 +91,8 @@ public class Runbook extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the etag of the resource.
      * 
      */
-    public Output</* @Nullable */ String> etag() {
-        return this.etag;
+    public Output<Optional<String>> etag() {
+        return Codegen.optional(this.etag);
     }
     /**
      * Gets or sets the job count of the runbook.
@@ -104,8 +105,8 @@ public class Runbook extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the job count of the runbook.
      * 
      */
-    public Output</* @Nullable */ Integer> jobCount() {
-        return this.jobCount;
+    public Output<Optional<Integer>> jobCount() {
+        return Codegen.optional(this.jobCount);
     }
     /**
      * Gets or sets the last modified by.
@@ -118,8 +119,8 @@ public class Runbook extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the last modified by.
      * 
      */
-    public Output</* @Nullable */ String> lastModifiedBy() {
-        return this.lastModifiedBy;
+    public Output<Optional<String>> lastModifiedBy() {
+        return Codegen.optional(this.lastModifiedBy);
     }
     /**
      * Gets or sets the last modified time.
@@ -132,8 +133,8 @@ public class Runbook extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the last modified time.
      * 
      */
-    public Output</* @Nullable */ String> lastModifiedTime() {
-        return this.lastModifiedTime;
+    public Output<Optional<String>> lastModifiedTime() {
+        return Codegen.optional(this.lastModifiedTime);
     }
     /**
      * The Azure Region where the resource lives
@@ -146,8 +147,8 @@ public class Runbook extends com.pulumi.resources.CustomResource {
      * @return The Azure Region where the resource lives
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * Gets or sets the option to log activity trace of the runbook.
@@ -160,8 +161,8 @@ public class Runbook extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the option to log activity trace of the runbook.
      * 
      */
-    public Output</* @Nullable */ Integer> logActivityTrace() {
-        return this.logActivityTrace;
+    public Output<Optional<Integer>> logActivityTrace() {
+        return Codegen.optional(this.logActivityTrace);
     }
     /**
      * Gets or sets progress log option.
@@ -174,8 +175,8 @@ public class Runbook extends com.pulumi.resources.CustomResource {
      * @return Gets or sets progress log option.
      * 
      */
-    public Output</* @Nullable */ Boolean> logProgress() {
-        return this.logProgress;
+    public Output<Optional<Boolean>> logProgress() {
+        return Codegen.optional(this.logProgress);
     }
     /**
      * Gets or sets verbose log option.
@@ -188,8 +189,8 @@ public class Runbook extends com.pulumi.resources.CustomResource {
      * @return Gets or sets verbose log option.
      * 
      */
-    public Output</* @Nullable */ Boolean> logVerbose() {
-        return this.logVerbose;
+    public Output<Optional<Boolean>> logVerbose() {
+        return Codegen.optional(this.logVerbose);
     }
     /**
      * The name of the resource
@@ -216,8 +217,8 @@ public class Runbook extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the runbook output types.
      * 
      */
-    public Output</* @Nullable */ List<String>> outputTypes() {
-        return this.outputTypes;
+    public Output<Optional<List<String>>> outputTypes() {
+        return Codegen.optional(this.outputTypes);
     }
     /**
      * Gets or sets the runbook parameters.
@@ -230,8 +231,8 @@ public class Runbook extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the runbook parameters.
      * 
      */
-    public Output</* @Nullable */ Map<String,RunbookParameterResponse>> parameters() {
-        return this.parameters;
+    public Output<Optional<Map<String,RunbookParameterResponse>>> parameters() {
+        return Codegen.optional(this.parameters);
     }
     /**
      * Gets or sets the provisioning state of the runbook.
@@ -244,8 +245,8 @@ public class Runbook extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the provisioning state of the runbook.
      * 
      */
-    public Output</* @Nullable */ String> provisioningState() {
-        return this.provisioningState;
+    public Output<Optional<String>> provisioningState() {
+        return Codegen.optional(this.provisioningState);
     }
     /**
      * Gets or sets the published runbook content link.
@@ -258,8 +259,8 @@ public class Runbook extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the published runbook content link.
      * 
      */
-    public Output</* @Nullable */ ContentLinkResponse> publishContentLink() {
-        return this.publishContentLink;
+    public Output<Optional<ContentLinkResponse>> publishContentLink() {
+        return Codegen.optional(this.publishContentLink);
     }
     /**
      * Gets or sets the type of the runbook.
@@ -272,8 +273,8 @@ public class Runbook extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the type of the runbook.
      * 
      */
-    public Output</* @Nullable */ String> runbookType() {
-        return this.runbookType;
+    public Output<Optional<String>> runbookType() {
+        return Codegen.optional(this.runbookType);
     }
     /**
      * Gets or sets the state of the runbook.
@@ -286,8 +287,8 @@ public class Runbook extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the state of the runbook.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Output<Optional<String>> state() {
+        return Codegen.optional(this.state);
     }
     /**
      * Resource tags.
@@ -300,8 +301,8 @@ public class Runbook extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource.

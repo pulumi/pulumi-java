@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class SqlResourceSqlContainer extends com.pulumi.resources.CustomResource
      * @return The location of the resource group to which the resource belongs.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The name of the ARM resource.
@@ -65,14 +66,14 @@ public class SqlResourceSqlContainer extends com.pulumi.resources.CustomResource
     @Export(name="options", type=SqlContainerGetPropertiesResponseOptions.class, parameters={})
     private Output</* @Nullable */ SqlContainerGetPropertiesResponseOptions> options;
 
-    public Output</* @Nullable */ SqlContainerGetPropertiesResponseOptions> options() {
-        return this.options;
+    public Output<Optional<SqlContainerGetPropertiesResponseOptions>> options() {
+        return Codegen.optional(this.options);
     }
     @Export(name="resource", type=SqlContainerGetPropertiesResponseResource.class, parameters={})
     private Output</* @Nullable */ SqlContainerGetPropertiesResponseResource> resource;
 
-    public Output</* @Nullable */ SqlContainerGetPropertiesResponseResource> resource() {
-        return this.resource;
+    public Output<Optional<SqlContainerGetPropertiesResponseResource>> resource() {
+        return Codegen.optional(this.resource);
     }
     /**
      * Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with &#34;defaultExperience&#34;: &#34;Cassandra&#34;. Current &#34;defaultExperience&#34; values also include &#34;Table&#34;, &#34;Graph&#34;, &#34;DocumentDB&#34;, and &#34;MongoDB&#34;.
@@ -85,8 +86,8 @@ public class SqlResourceSqlContainer extends com.pulumi.resources.CustomResource
      * @return Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with &#34;defaultExperience&#34;: &#34;Cassandra&#34;. Current &#34;defaultExperience&#34; values also include &#34;Table&#34;, &#34;Graph&#34;, &#34;DocumentDB&#34;, and &#34;MongoDB&#34;.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of Azure resource.

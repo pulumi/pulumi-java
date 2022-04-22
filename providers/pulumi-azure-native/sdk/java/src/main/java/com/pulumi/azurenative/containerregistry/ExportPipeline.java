@@ -15,6 +15,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class ExportPipeline extends com.pulumi.resources.CustomResource {
      * @return The identity of the export pipeline.
      * 
      */
-    public Output</* @Nullable */ IdentityPropertiesResponse> identity() {
-        return this.identity;
+    public Output<Optional<IdentityPropertiesResponse>> identity() {
+        return Codegen.optional(this.identity);
     }
     /**
      * The location of the export pipeline.
@@ -59,8 +60,8 @@ public class ExportPipeline extends com.pulumi.resources.CustomResource {
      * @return The location of the export pipeline.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The name of the resource.
@@ -87,8 +88,8 @@ public class ExportPipeline extends com.pulumi.resources.CustomResource {
      * @return The list of all options configured for the pipeline.
      * 
      */
-    public Output</* @Nullable */ List<String>> options() {
-        return this.options;
+    public Output<Optional<List<String>>> options() {
+        return Codegen.optional(this.options);
     }
     /**
      * The provisioning state of the pipeline at the time the operation was called.

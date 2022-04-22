@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -72,8 +73,8 @@ public class ApplicationGatewayPrivateEndpointConnection extends com.pulumi.reso
      * @return Name of the private endpoint connection on an application gateway.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * The resource of private end point.
@@ -100,8 +101,8 @@ public class ApplicationGatewayPrivateEndpointConnection extends com.pulumi.reso
      * @return A collection of information about the state of the connection between service consumer and provider.
      * 
      */
-    public Output</* @Nullable */ PrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState() {
-        return this.privateLinkServiceConnectionState;
+    public Output<Optional<PrivateLinkServiceConnectionStateResponse>> privateLinkServiceConnectionState() {
+        return Codegen.optional(this.privateLinkServiceConnectionState);
     }
     /**
      * The provisioning state of the application gateway private endpoint connection resource.

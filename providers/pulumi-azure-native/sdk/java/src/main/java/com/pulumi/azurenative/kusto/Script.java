@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class Script extends com.pulumi.resources.CustomResource {
      * @return Flag that indicates whether to continue if one of the command fails.
      * 
      */
-    public Output</* @Nullable */ Boolean> continueOnErrors() {
-        return this.continueOnErrors;
+    public Output<Optional<Boolean>> continueOnErrors() {
+        return Codegen.optional(this.continueOnErrors);
     }
     /**
      * A unique string. If changed the script will be applied again.
@@ -58,8 +59,8 @@ public class Script extends com.pulumi.resources.CustomResource {
      * @return A unique string. If changed the script will be applied again.
      * 
      */
-    public Output</* @Nullable */ String> forceUpdateTag() {
-        return this.forceUpdateTag;
+    public Output<Optional<String>> forceUpdateTag() {
+        return Codegen.optional(this.forceUpdateTag);
     }
     /**
      * The name of the resource

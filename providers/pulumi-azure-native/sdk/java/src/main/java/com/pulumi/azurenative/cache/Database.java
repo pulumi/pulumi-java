@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class Database extends com.pulumi.resources.CustomResource {
      * @return Specifies whether redis clients can connect using TLS-encrypted or plaintext redis protocols. Default is TLS-encrypted.
      * 
      */
-    public Output</* @Nullable */ String> clientProtocol() {
-        return this.clientProtocol;
+    public Output<Optional<String>> clientProtocol() {
+        return Codegen.optional(this.clientProtocol);
     }
     /**
      * Clustering policy - default is OSSCluster. Specified at create time.
@@ -59,8 +60,8 @@ public class Database extends com.pulumi.resources.CustomResource {
      * @return Clustering policy - default is OSSCluster. Specified at create time.
      * 
      */
-    public Output</* @Nullable */ String> clusteringPolicy() {
-        return this.clusteringPolicy;
+    public Output<Optional<String>> clusteringPolicy() {
+        return Codegen.optional(this.clusteringPolicy);
     }
     /**
      * Redis eviction policy - default is VolatileLRU
@@ -73,8 +74,8 @@ public class Database extends com.pulumi.resources.CustomResource {
      * @return Redis eviction policy - default is VolatileLRU
      * 
      */
-    public Output</* @Nullable */ String> evictionPolicy() {
-        return this.evictionPolicy;
+    public Output<Optional<String>> evictionPolicy() {
+        return Codegen.optional(this.evictionPolicy);
     }
     /**
      * Optional set of redis modules to enable in this database - modules can only be added at creation time.
@@ -87,8 +88,8 @@ public class Database extends com.pulumi.resources.CustomResource {
      * @return Optional set of redis modules to enable in this database - modules can only be added at creation time.
      * 
      */
-    public Output</* @Nullable */ List<ModuleResponse>> modules() {
-        return this.modules;
+    public Output<Optional<List<ModuleResponse>>> modules() {
+        return Codegen.optional(this.modules);
     }
     /**
      * The name of the resource
@@ -115,8 +116,8 @@ public class Database extends com.pulumi.resources.CustomResource {
      * @return Persistence settings
      * 
      */
-    public Output</* @Nullable */ PersistenceResponse> persistence() {
-        return this.persistence;
+    public Output<Optional<PersistenceResponse>> persistence() {
+        return Codegen.optional(this.persistence);
     }
     /**
      * TCP port of the database endpoint. Specified at create time. Defaults to an available port.
@@ -129,8 +130,8 @@ public class Database extends com.pulumi.resources.CustomResource {
      * @return TCP port of the database endpoint. Specified at create time. Defaults to an available port.
      * 
      */
-    public Output</* @Nullable */ Integer> port() {
-        return this.port;
+    public Output<Optional<Integer>> port() {
+        return Codegen.optional(this.port);
     }
     /**
      * Current provisioning status of the database

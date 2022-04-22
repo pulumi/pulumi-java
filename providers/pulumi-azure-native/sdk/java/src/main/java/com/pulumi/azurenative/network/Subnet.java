@@ -24,6 +24,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -54,8 +55,8 @@ public class Subnet extends com.pulumi.resources.CustomResource {
      * @return The address prefix for the subnet.
      * 
      */
-    public Output</* @Nullable */ String> addressPrefix() {
-        return this.addressPrefix;
+    public Output<Optional<String>> addressPrefix() {
+        return Codegen.optional(this.addressPrefix);
     }
     /**
      * List of address prefixes for the subnet.
@@ -68,8 +69,8 @@ public class Subnet extends com.pulumi.resources.CustomResource {
      * @return List of address prefixes for the subnet.
      * 
      */
-    public Output</* @Nullable */ List<String>> addressPrefixes() {
-        return this.addressPrefixes;
+    public Output<Optional<List<String>>> addressPrefixes() {
+        return Codegen.optional(this.addressPrefixes);
     }
     /**
      * Application gateway IP configurations of virtual network resource.
@@ -82,8 +83,8 @@ public class Subnet extends com.pulumi.resources.CustomResource {
      * @return Application gateway IP configurations of virtual network resource.
      * 
      */
-    public Output</* @Nullable */ List<ApplicationGatewayIPConfigurationResponse>> applicationGatewayIpConfigurations() {
-        return this.applicationGatewayIpConfigurations;
+    public Output<Optional<List<ApplicationGatewayIPConfigurationResponse>>> applicationGatewayIpConfigurations() {
+        return Codegen.optional(this.applicationGatewayIpConfigurations);
     }
     /**
      * An array of references to the delegations on the subnet.
@@ -96,8 +97,8 @@ public class Subnet extends com.pulumi.resources.CustomResource {
      * @return An array of references to the delegations on the subnet.
      * 
      */
-    public Output</* @Nullable */ List<DelegationResponse>> delegations() {
-        return this.delegations;
+    public Output<Optional<List<DelegationResponse>>> delegations() {
+        return Codegen.optional(this.delegations);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
@@ -124,8 +125,8 @@ public class Subnet extends com.pulumi.resources.CustomResource {
      * @return Array of IpAllocation which reference this subnet.
      * 
      */
-    public Output</* @Nullable */ List<SubResourceResponse>> ipAllocations() {
-        return this.ipAllocations;
+    public Output<Optional<List<SubResourceResponse>>> ipAllocations() {
+        return Codegen.optional(this.ipAllocations);
     }
     /**
      * Array of IP configuration profiles which reference this subnet.
@@ -166,8 +167,8 @@ public class Subnet extends com.pulumi.resources.CustomResource {
      * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * Nat gateway associated with this subnet.
@@ -180,8 +181,8 @@ public class Subnet extends com.pulumi.resources.CustomResource {
      * @return Nat gateway associated with this subnet.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> natGateway() {
-        return this.natGateway;
+    public Output<Optional<SubResourceResponse>> natGateway() {
+        return Codegen.optional(this.natGateway);
     }
     /**
      * The reference to the NetworkSecurityGroup resource.
@@ -194,8 +195,8 @@ public class Subnet extends com.pulumi.resources.CustomResource {
      * @return The reference to the NetworkSecurityGroup resource.
      * 
      */
-    public Output</* @Nullable */ NetworkSecurityGroupResponse> networkSecurityGroup() {
-        return this.networkSecurityGroup;
+    public Output<Optional<NetworkSecurityGroupResponse>> networkSecurityGroup() {
+        return Codegen.optional(this.networkSecurityGroup);
     }
     /**
      * Enable or Disable apply network policies on private end point in the subnet.
@@ -208,8 +209,8 @@ public class Subnet extends com.pulumi.resources.CustomResource {
      * @return Enable or Disable apply network policies on private end point in the subnet.
      * 
      */
-    public Output</* @Nullable */ String> privateEndpointNetworkPolicies() {
-        return this.privateEndpointNetworkPolicies;
+    public Output<Optional<String>> privateEndpointNetworkPolicies() {
+        return Codegen.optional(this.privateEndpointNetworkPolicies);
     }
     /**
      * An array of references to private endpoints.
@@ -236,8 +237,8 @@ public class Subnet extends com.pulumi.resources.CustomResource {
      * @return Enable or Disable apply network policies on private link service in the subnet.
      * 
      */
-    public Output</* @Nullable */ String> privateLinkServiceNetworkPolicies() {
-        return this.privateLinkServiceNetworkPolicies;
+    public Output<Optional<String>> privateLinkServiceNetworkPolicies() {
+        return Codegen.optional(this.privateLinkServiceNetworkPolicies);
     }
     /**
      * The provisioning state of the subnet resource.
@@ -292,8 +293,8 @@ public class Subnet extends com.pulumi.resources.CustomResource {
      * @return The reference to the RouteTable resource.
      * 
      */
-    public Output</* @Nullable */ RouteTableResponse> routeTable() {
-        return this.routeTable;
+    public Output<Optional<RouteTableResponse>> routeTable() {
+        return Codegen.optional(this.routeTable);
     }
     /**
      * An array of references to services injecting into this subnet.
@@ -320,8 +321,8 @@ public class Subnet extends com.pulumi.resources.CustomResource {
      * @return An array of service endpoint policies.
      * 
      */
-    public Output</* @Nullable */ List<ServiceEndpointPolicyResponse>> serviceEndpointPolicies() {
-        return this.serviceEndpointPolicies;
+    public Output<Optional<List<ServiceEndpointPolicyResponse>>> serviceEndpointPolicies() {
+        return Codegen.optional(this.serviceEndpointPolicies);
     }
     /**
      * An array of service endpoints.
@@ -334,8 +335,8 @@ public class Subnet extends com.pulumi.resources.CustomResource {
      * @return An array of service endpoints.
      * 
      */
-    public Output</* @Nullable */ List<ServiceEndpointPropertiesFormatResponse>> serviceEndpoints() {
-        return this.serviceEndpoints;
+    public Output<Optional<List<ServiceEndpointPropertiesFormatResponse>>> serviceEndpoints() {
+        return Codegen.optional(this.serviceEndpoints);
     }
     /**
      * Resource type.
@@ -348,8 +349,8 @@ public class Subnet extends com.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output</* @Nullable */ String> type() {
-        return this.type;
+    public Output<Optional<String>> type() {
+        return Codegen.optional(this.type);
     }
 
     /**
