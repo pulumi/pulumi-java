@@ -686,12 +686,10 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: go-binaries
-          path: ~/bin
-      - name: Activate go-binaries
-        run: |
-          chmod a+x ~/bin/pulumi-language-jvm
-          chmod a+x ~/bin/pulumi-java-gen
-      - run: make providers_generate_all
+          path: ./bin
+      - name: Activate pulumi-java-gen
+        run: chmod a+x ./bin/pulumi-java-gen
+      - run: make --old-file=bin/pulumi-java-gen providers_generate_all
       - run: |
           cd providers
           git status -s
