@@ -1577,7 +1577,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     public static class DeploymentState {
         public static final boolean DisableResourceReferences = getBooleanEnvironmentVariable("PULUMI_DISABLE_RESOURCE_REFERENCES").or(false);
         public static final boolean ExcessiveDebugOutput = getBooleanEnvironmentVariable("PULUMI_EXCESSIVE_DEBUG_OUTPUT").or(false);
-        public static final int TaskTimeoutInMillis = getIntegerEnvironmentVariable("PULUMI_JVM_TASK_TIMEOUT_IN_MILLIS").or(-1);
+        public static final int TaskTimeoutInMillis = getIntegerEnvironmentVariable("PULUMI_JAVA_TASK_TIMEOUT_IN_MILLIS").or(-1);
 
         public final DeploymentImpl.Config config;
         public final String projectName;
