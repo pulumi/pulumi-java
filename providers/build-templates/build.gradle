@@ -32,7 +32,7 @@ repositories {
     if (gprUser) {
         repositories {
             maven {
-                url = uri("https://maven.pkg.github.com/pulumi/pulumi-jvm")
+                url = uri("https://maven.pkg.github.com/pulumi/pulumi-java")
                 credentials {
                     username = gprUser
                     password = gprToken
@@ -158,7 +158,7 @@ publishing {
         repositories {
             maven {
                 name = "GitHubPackages"
-                url = uri("https://maven.pkg.github.com/pulumi/pulumi-jvm")
+                url = uri("https://maven.pkg.github.com/pulumi/pulumi-java")
                 credentials {
                     username = gprUser
                     password = gprToken
