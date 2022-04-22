@@ -15,6 +15,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -88,8 +89,8 @@ public class Plugin extends com.pulumi.resources.CustomResource {
      * @return HTTP client timeout to enable the plugin
      * 
      */
-    public Output</* @Nullable */ Integer> enableTimeout() {
-        return this.enableTimeout;
+    public Output<Optional<Integer>> enableTimeout() {
+        return Codegen.optional(this.enableTimeout);
     }
     /**
      * If `true` the plugin is enabled. Defaults to `true`
@@ -102,8 +103,8 @@ public class Plugin extends com.pulumi.resources.CustomResource {
      * @return If `true` the plugin is enabled. Defaults to `true`
      * 
      */
-    public Output</* @Nullable */ Boolean> enabled() {
-        return this.enabled;
+    public Output<Optional<Boolean>> enabled() {
+        return Codegen.optional(this.enabled);
     }
     /**
      * The environment variables in the form of `KEY=VALUE`, e.g. `DEBUG=0`
@@ -130,8 +131,8 @@ public class Plugin extends com.pulumi.resources.CustomResource {
      * @return If true, then the plugin is destroyed forcibly
      * 
      */
-    public Output</* @Nullable */ Boolean> forceDestroy() {
-        return this.forceDestroy;
+    public Output<Optional<Boolean>> forceDestroy() {
+        return Codegen.optional(this.forceDestroy);
     }
     /**
      * If true, then the plugin is disabled forcibly
@@ -144,8 +145,8 @@ public class Plugin extends com.pulumi.resources.CustomResource {
      * @return If true, then the plugin is disabled forcibly
      * 
      */
-    public Output</* @Nullable */ Boolean> forceDisable() {
-        return this.forceDisable;
+    public Output<Optional<Boolean>> forceDisable() {
+        return Codegen.optional(this.forceDisable);
     }
     /**
      * If true, grant all permissions necessary to run the plugin
@@ -158,8 +159,8 @@ public class Plugin extends com.pulumi.resources.CustomResource {
      * @return If true, grant all permissions necessary to run the plugin
      * 
      */
-    public Output</* @Nullable */ Boolean> grantAllPermissions() {
-        return this.grantAllPermissions;
+    public Output<Optional<Boolean>> grantAllPermissions() {
+        return Codegen.optional(this.grantAllPermissions);
     }
     /**
      * Grant specific permissions only
@@ -172,8 +173,8 @@ public class Plugin extends com.pulumi.resources.CustomResource {
      * @return Grant specific permissions only
      * 
      */
-    public Output</* @Nullable */ List<PluginGrantPermission>> grantPermissions() {
-        return this.grantPermissions;
+    public Output<Optional<List<PluginGrantPermission>>> grantPermissions() {
+        return Codegen.optional(this.grantPermissions);
     }
     /**
      * Docker Plugin name

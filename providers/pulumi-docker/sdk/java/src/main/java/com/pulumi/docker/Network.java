@@ -17,6 +17,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -90,8 +91,8 @@ public class Network extends com.pulumi.resources.CustomResource {
      * @return Enable manual container attachment to the network.
      * 
      */
-    public Output</* @Nullable */ Boolean> attachable() {
-        return this.attachable;
+    public Output<Optional<Boolean>> attachable() {
+        return Codegen.optional(this.attachable);
     }
     /**
      * Requests daemon to check for networks with same name.
@@ -104,8 +105,8 @@ public class Network extends com.pulumi.resources.CustomResource {
      * @return Requests daemon to check for networks with same name.
      * 
      */
-    public Output</* @Nullable */ Boolean> checkDuplicate() {
-        return this.checkDuplicate;
+    public Output<Optional<Boolean>> checkDuplicate() {
+        return Codegen.optional(this.checkDuplicate);
     }
     /**
      * The driver of the Docker network. Possible values are `bridge`, `host`, `overlay`, `macvlan`. See [network
@@ -134,8 +135,8 @@ public class Network extends com.pulumi.resources.CustomResource {
      * @return Create swarm routing-mesh network. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> ingress() {
-        return this.ingress;
+    public Output<Optional<Boolean>> ingress() {
+        return Codegen.optional(this.ingress);
     }
     /**
      * Whether the network is internal.
@@ -176,8 +177,8 @@ public class Network extends com.pulumi.resources.CustomResource {
      * @return Driver used by the custom IP scheme of the network. Defaults to `default`
      * 
      */
-    public Output</* @Nullable */ String> ipamDriver() {
-        return this.ipamDriver;
+    public Output<Optional<String>> ipamDriver() {
+        return Codegen.optional(this.ipamDriver);
     }
     /**
      * Enable IPv6 networking. Defaults to `false`.
@@ -190,8 +191,8 @@ public class Network extends com.pulumi.resources.CustomResource {
      * @return Enable IPv6 networking. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> ipv6() {
-        return this.ipv6;
+    public Output<Optional<Boolean>> ipv6() {
+        return Codegen.optional(this.ipv6);
     }
     /**
      * User-defined key/value metadata
@@ -204,8 +205,8 @@ public class Network extends com.pulumi.resources.CustomResource {
      * @return User-defined key/value metadata
      * 
      */
-    public Output</* @Nullable */ List<NetworkLabel>> labels() {
-        return this.labels;
+    public Output<Optional<List<NetworkLabel>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * The name of the Docker network.

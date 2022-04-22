@@ -14,6 +14,7 @@ import com.pulumi.docker.outputs.RemoteImageBuild;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -77,8 +78,8 @@ public class RemoteImage extends com.pulumi.resources.CustomResource {
      * reference](https://docs.docker.com/engine/reference/commandline/build/#options) too.
      * 
      */
-    public Output</* @Nullable */ RemoteImageBuild> build() {
-        return this.build;
+    public Output<Optional<RemoteImageBuild>> build() {
+        return Codegen.optional(this.build);
     }
     /**
      * If true, then the image is removed forcibly when the resource is destroyed.
@@ -91,8 +92,8 @@ public class RemoteImage extends com.pulumi.resources.CustomResource {
      * @return If true, then the image is removed forcibly when the resource is destroyed.
      * 
      */
-    public Output</* @Nullable */ Boolean> forceRemove() {
-        return this.forceRemove;
+    public Output<Optional<Boolean>> forceRemove() {
+        return Codegen.optional(this.forceRemove);
     }
     /**
      * If true, then the Docker image won&#39;t be deleted on destroy operation. If this is false, it will delete the image from
@@ -107,8 +108,8 @@ public class RemoteImage extends com.pulumi.resources.CustomResource {
      * the docker local storage on destroy operation.
      * 
      */
-    public Output</* @Nullable */ Boolean> keepLocally() {
-        return this.keepLocally;
+    public Output<Optional<Boolean>> keepLocally() {
+        return Codegen.optional(this.keepLocally);
     }
     /**
      * The ID of the image in the form of `sha256:&lt;hash&gt;` image digest. Do not confuse it with the default `latest` tag.
@@ -169,8 +170,8 @@ public class RemoteImage extends com.pulumi.resources.CustomResource {
      * @return A value which cause an image pull when changed
      * 
      */
-    public Output</* @Nullable */ String> pullTrigger() {
-        return this.pullTrigger;
+    public Output<Optional<String>> pullTrigger() {
+        return Codegen.optional(this.pullTrigger);
     }
     /**
      * List of values which cause an image pull when changed. This is used to store the image digest from the registry when
@@ -185,8 +186,8 @@ public class RemoteImage extends com.pulumi.resources.CustomResource {
      * using the [docker_registry_image](../data-sources/registry_image.md).
      * 
      */
-    public Output</* @Nullable */ List<String>> pullTriggers() {
-        return this.pullTriggers;
+    public Output<Optional<List<String>>> pullTriggers() {
+        return Codegen.optional(this.pullTriggers);
     }
     /**
      * The image sha256 digest in the form of `repo[:tag]@sha256:&lt;hash&gt;`.
