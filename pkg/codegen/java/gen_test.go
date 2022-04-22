@@ -10,7 +10,7 @@ import (
 	"github.com/pulumi/pulumi/pkg/v3/codegen/testing/test"
 )
 
-var javaSpecificTests []*test.SDKTest = []*test.SDKTest{
+var javaSpecificTests = []*test.SDKTest{
 	{
 		Directory:   "mini-azurenative",
 		Description: "Regression tests extracted from trying to codegen azure-natuve",
@@ -37,41 +37,41 @@ func adaptTest(t *test.SDKTest) *test.SDKTest {
 	switch t.Directory {
 	case "external-resource-schema":
 		// TODO[pulumi/pulumi-java#13]
-		t.Skip = codegen.NewStringSet("jvm/any")
+		t.Skip = codegen.NewStringSet("java/any")
 	case "plain-schema-gh6957":
-		t.Skip = codegen.NewStringSet("jvm/any") // TODO
+		t.Skip = codegen.NewStringSet("java/any") // TODO
 	case "simple-methods-schema":
-		t.Skip = codegen.NewStringSet("jvm/any") // TODO
+		t.Skip = codegen.NewStringSet("java/any") // TODO
 	case "provider-config-schema":
-		t.Skip = codegen.NewStringSet("jvm/any") // TODO
+		t.Skip = codegen.NewStringSet("java/any") // TODO
 	case "simple-methods-schema-single-value-returns":
-		t.Skip = codegen.NewStringSet("jvm/any") // TODO
+		t.Skip = codegen.NewStringSet("java/any") // TODO
 	case "hyphen-url":
-		t.Skip = codegen.NewStringSet("jvm/any") // TODO
+		t.Skip = codegen.NewStringSet("java/any") // TODO
 	case "plain-object-defaults":
-		t.Skip = codegen.NewStringSet("jvm/any") // TODO
+		t.Skip = codegen.NewStringSet("java/any") // TODO
 	case "output-funcs":
-		t.Skip = codegen.NewStringSet("jvm/any") // TODO
+		t.Skip = codegen.NewStringSet("java/any") // TODO
 	case "regress-8403":
-		t.Skip = codegen.NewStringSet("jvm/any") // TODO
+		t.Skip = codegen.NewStringSet("java/any") // TODO
 	case "plain-object-disable-defaults":
-		t.Skip = codegen.NewStringSet("jvm/any") // TODO
+		t.Skip = codegen.NewStringSet("java/any") // TODO
 	case "regress-node-8110":
-		t.Skip = codegen.NewStringSet("jvm/any") // TODO
+		t.Skip = codegen.NewStringSet("java/any") // TODO
 	case "different-package-name-conflict":
-		t.Skip = codegen.NewStringSet("jvm/any") // TODO
+		t.Skip = codegen.NewStringSet("java/any") // TODO
 	case "different-enum":
-		t.Skip = codegen.NewStringSet("jvm/any") // TODO
+		t.Skip = codegen.NewStringSet("java/any") // TODO
 	case "regress-go-8664":
-		t.Skip = codegen.NewStringSet("jvm/any") // TODO
+		t.Skip = codegen.NewStringSet("java/any") // TODO
 	case "external-node-compatibility":
-		t.Skip = codegen.NewStringSet("jvm/any") // TODO
+		t.Skip = codegen.NewStringSet("java/any") // TODO
 	case "external-go-import-aliases":
-		t.Skip = codegen.NewStringSet("jvm/any") // TODO
+		t.Skip = codegen.NewStringSet("java/any") // TODO
 	case "external-python-same-module-name":
-		t.Skip = codegen.NewStringSet("jvm/any") // TODO
+		t.Skip = codegen.NewStringSet("java/any") // TODO
 	case "internal-dependencies-go":
-		t.Skip = codegen.NewStringSet("jvm/any") // go-only
+		t.Skip = codegen.NewStringSet("java/any") // go-only
 	}
 	return t
 }
@@ -96,11 +96,11 @@ func testGeneratedPackage(t *testing.T, pwd string) {
 func TestGeneratePackage(t *testing.T) {
 	test.TestSDKCodegen(t, &test.SDKCodegenOptions{
 		GenPackage: generatePackage,
-		Language:   "jvm",
+		Language:   "java",
 		TestCases:  testCases(),
 		Checks: map[string]test.CodegenCheck{
-			"jvm/compile": compileGeneratedPackage,
-			"jvm/test":    testGeneratedPackage,
+			"java/compile": compileGeneratedPackage,
+			"java/test":    testGeneratedPackage,
 		},
 	})
 }
@@ -108,7 +108,7 @@ func TestGeneratePackage(t *testing.T) {
 func generatePackage(tool string, pkg *schema.Package, extraFiles map[string][]byte) (map[string][]byte, error) {
 	pkgInfo := PackageInfo{BuildFiles: "gradle"}
 	pkg.Language = map[string]interface{}{
-		"jvm": pkgInfo,
+		"java": pkgInfo,
 	}
 	return GeneratePackage(tool, pkg, extraFiles)
 }
