@@ -21,6 +21,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -51,8 +52,8 @@ public class AlertRule extends com.pulumi.resources.CustomResource {
      * @return action that is performed when the alert rule becomes active, and when an alert condition is resolved.
      * 
      */
-    public Output</* @Nullable */ Either<RuleEmailActionResponse,RuleWebhookActionResponse>> action() {
-        return this.action;
+    public Output<Optional<Either<RuleEmailActionResponse,RuleWebhookActionResponse>>> action() {
+        return Codegen.optional(this.action);
     }
     /**
      * the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
@@ -65,8 +66,8 @@ public class AlertRule extends com.pulumi.resources.CustomResource {
      * @return the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
      * 
      */
-    public Output</* @Nullable */ List<Either<RuleEmailActionResponse,RuleWebhookActionResponse>>> actions() {
-        return this.actions;
+    public Output<Optional<List<Either<RuleEmailActionResponse,RuleWebhookActionResponse>>>> actions() {
+        return Codegen.optional(this.actions);
     }
     /**
      * the condition that results in the alert rule being activated.
@@ -93,8 +94,8 @@ public class AlertRule extends com.pulumi.resources.CustomResource {
      * @return the description of the alert rule that will be included in the alert email.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * the flag that indicates whether the alert rule is enabled.
@@ -163,8 +164,8 @@ public class AlertRule extends com.pulumi.resources.CustomResource {
      * @return the provisioning state.
      * 
      */
-    public Output</* @Nullable */ String> provisioningState() {
-        return this.provisioningState;
+    public Output<Optional<String>> provisioningState() {
+        return Codegen.optional(this.provisioningState);
     }
     /**
      * Resource tags
@@ -177,8 +178,8 @@ public class AlertRule extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Azure resource type

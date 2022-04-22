@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class AttestationAtResourceGroup extends com.pulumi.resources.CustomResou
      * @return Comments describing why this attestation was created.
      * 
      */
-    public Output</* @Nullable */ String> comments() {
-        return this.comments;
+    public Output<Optional<String>> comments() {
+        return Codegen.optional(this.comments);
     }
     /**
      * The compliance state that should be set on the resource.
@@ -58,8 +59,8 @@ public class AttestationAtResourceGroup extends com.pulumi.resources.CustomResou
      * @return The compliance state that should be set on the resource.
      * 
      */
-    public Output</* @Nullable */ String> complianceState() {
-        return this.complianceState;
+    public Output<Optional<String>> complianceState() {
+        return Codegen.optional(this.complianceState);
     }
     /**
      * The evidence supporting the compliance state set in this attestation.
@@ -72,8 +73,8 @@ public class AttestationAtResourceGroup extends com.pulumi.resources.CustomResou
      * @return The evidence supporting the compliance state set in this attestation.
      * 
      */
-    public Output</* @Nullable */ List<AttestationEvidenceResponse>> evidence() {
-        return this.evidence;
+    public Output<Optional<List<AttestationEvidenceResponse>>> evidence() {
+        return Codegen.optional(this.evidence);
     }
     /**
      * The time the compliance state should expire.
@@ -86,8 +87,8 @@ public class AttestationAtResourceGroup extends com.pulumi.resources.CustomResou
      * @return The time the compliance state should expire.
      * 
      */
-    public Output</* @Nullable */ String> expiresOn() {
-        return this.expiresOn;
+    public Output<Optional<String>> expiresOn() {
+        return Codegen.optional(this.expiresOn);
     }
     /**
      * The time the compliance state was last changed in this attestation.
@@ -128,8 +129,8 @@ public class AttestationAtResourceGroup extends com.pulumi.resources.CustomResou
      * @return The person responsible for setting the state of the resource. This value is typically an Azure Active Directory object ID.
      * 
      */
-    public Output</* @Nullable */ String> owner() {
-        return this.owner;
+    public Output<Optional<String>> owner() {
+        return Codegen.optional(this.owner);
     }
     /**
      * The resource ID of the policy assignment that the attestation is setting the state for.
@@ -156,8 +157,8 @@ public class AttestationAtResourceGroup extends com.pulumi.resources.CustomResou
      * @return The policy definition reference ID from a policy set definition that the attestation is setting the state for. If the policy assignment assigns a policy set definition the attestation can choose a definition within the set definition with this property or omit this and set the state for the entire set definition.
      * 
      */
-    public Output</* @Nullable */ String> policyDefinitionReferenceId() {
-        return this.policyDefinitionReferenceId;
+    public Output<Optional<String>> policyDefinitionReferenceId() {
+        return Codegen.optional(this.policyDefinitionReferenceId);
     }
     /**
      * The status of the attestation.

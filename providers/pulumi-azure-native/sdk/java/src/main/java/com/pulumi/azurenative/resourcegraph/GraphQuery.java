@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class GraphQuery extends com.pulumi.resources.CustomResource {
      * @return The description of a graph query.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * This will be used to handle Optimistic Concurrency. If not present, it will always overwrite the existing resource without checking conflict.
@@ -57,8 +58,8 @@ public class GraphQuery extends com.pulumi.resources.CustomResource {
      * @return This will be used to handle Optimistic Concurrency. If not present, it will always overwrite the existing resource without checking conflict.
      * 
      */
-    public Output</* @Nullable */ String> etag() {
-        return this.etag;
+    public Output<Optional<String>> etag() {
+        return Codegen.optional(this.etag);
     }
     /**
      * The location of the resource
@@ -71,8 +72,8 @@ public class GraphQuery extends com.pulumi.resources.CustomResource {
      * @return The location of the resource
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * Azure resource name. This is GUID value. The display name should be assigned within properties field.
@@ -127,8 +128,8 @@ public class GraphQuery extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Date and time in UTC of the last modification that was made to this graph query definition.

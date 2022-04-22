@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -71,8 +72,8 @@ public class RoleManagementPolicyAssignment extends com.pulumi.resources.CustomR
      * @return The policy id role management policy assignment.
      * 
      */
-    public Output</* @Nullable */ String> policyId() {
-        return this.policyId;
+    public Output<Optional<String>> policyId() {
+        return Codegen.optional(this.policyId);
     }
     /**
      * The role definition of management policy assignment.
@@ -85,8 +86,8 @@ public class RoleManagementPolicyAssignment extends com.pulumi.resources.CustomR
      * @return The role definition of management policy assignment.
      * 
      */
-    public Output</* @Nullable */ String> roleDefinitionId() {
-        return this.roleDefinitionId;
+    public Output<Optional<String>> roleDefinitionId() {
+        return Codegen.optional(this.roleDefinitionId);
     }
     /**
      * The role management policy scope.
@@ -99,8 +100,8 @@ public class RoleManagementPolicyAssignment extends com.pulumi.resources.CustomR
      * @return The role management policy scope.
      * 
      */
-    public Output</* @Nullable */ String> scope() {
-        return this.scope;
+    public Output<Optional<String>> scope() {
+        return Codegen.optional(this.scope);
     }
     /**
      * The role management policy type.

@@ -20,6 +20,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -50,8 +51,8 @@ public class Automation extends com.pulumi.resources.CustomResource {
      * @return A collection of the actions which are triggered if all the configured rules evaluations, within at least one rule set, are true.
      * 
      */
-    public Output</* @Nullable */ List<Object>> actions() {
-        return this.actions;
+    public Output<Optional<List<Object>>> actions() {
+        return Codegen.optional(this.actions);
     }
     /**
      * The security automation description.
@@ -64,8 +65,8 @@ public class Automation extends com.pulumi.resources.CustomResource {
      * @return The security automation description.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Entity tag is used for comparing two or more entities from the same requested resource.
@@ -78,8 +79,8 @@ public class Automation extends com.pulumi.resources.CustomResource {
      * @return Entity tag is used for comparing two or more entities from the same requested resource.
      * 
      */
-    public Output</* @Nullable */ String> etag() {
-        return this.etag;
+    public Output<Optional<String>> etag() {
+        return Codegen.optional(this.etag);
     }
     /**
      * Indicates whether the security automation is enabled.
@@ -92,8 +93,8 @@ public class Automation extends com.pulumi.resources.CustomResource {
      * @return Indicates whether the security automation is enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> isEnabled() {
-        return this.isEnabled;
+    public Output<Optional<Boolean>> isEnabled() {
+        return Codegen.optional(this.isEnabled);
     }
     /**
      * Kind of the resource
@@ -106,8 +107,8 @@ public class Automation extends com.pulumi.resources.CustomResource {
      * @return Kind of the resource
      * 
      */
-    public Output</* @Nullable */ String> kind() {
-        return this.kind;
+    public Output<Optional<String>> kind() {
+        return Codegen.optional(this.kind);
     }
     /**
      * Location where the resource is stored
@@ -120,8 +121,8 @@ public class Automation extends com.pulumi.resources.CustomResource {
      * @return Location where the resource is stored
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * Resource name
@@ -148,8 +149,8 @@ public class Automation extends com.pulumi.resources.CustomResource {
      * @return A collection of scopes on which the security automations logic is applied. Supported scopes are the subscription itself or a resource group under that subscription. The automation will only apply on defined scopes.
      * 
      */
-    public Output</* @Nullable */ List<AutomationScopeResponse>> scopes() {
-        return this.scopes;
+    public Output<Optional<List<AutomationScopeResponse>>> scopes() {
+        return Codegen.optional(this.scopes);
     }
     /**
      * A collection of the source event types which evaluate the security automation set of rules.
@@ -162,8 +163,8 @@ public class Automation extends com.pulumi.resources.CustomResource {
      * @return A collection of the source event types which evaluate the security automation set of rules.
      * 
      */
-    public Output</* @Nullable */ List<AutomationSourceResponse>> sources() {
-        return this.sources;
+    public Output<Optional<List<AutomationSourceResponse>>> sources() {
+        return Codegen.optional(this.sources);
     }
     /**
      * A list of key value pairs that describe the resource.
@@ -176,8 +177,8 @@ public class Automation extends com.pulumi.resources.CustomResource {
      * @return A list of key value pairs that describe the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type

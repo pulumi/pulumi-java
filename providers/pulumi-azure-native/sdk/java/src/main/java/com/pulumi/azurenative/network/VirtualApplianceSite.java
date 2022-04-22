@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class VirtualApplianceSite extends com.pulumi.resources.CustomResource {
      * @return Address Prefix.
      * 
      */
-    public Output</* @Nullable */ String> addressPrefix() {
-        return this.addressPrefix;
+    public Output<Optional<String>> addressPrefix() {
+        return Codegen.optional(this.addressPrefix);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
@@ -71,8 +72,8 @@ public class VirtualApplianceSite extends com.pulumi.resources.CustomResource {
      * @return Name of the virtual appliance site.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * Office 365 Policy.
@@ -85,8 +86,8 @@ public class VirtualApplianceSite extends com.pulumi.resources.CustomResource {
      * @return Office 365 Policy.
      * 
      */
-    public Output</* @Nullable */ Office365PolicyPropertiesResponse> o365Policy() {
-        return this.o365Policy;
+    public Output<Optional<Office365PolicyPropertiesResponse>> o365Policy() {
+        return Codegen.optional(this.o365Policy);
     }
     /**
      * The provisioning state of the resource.

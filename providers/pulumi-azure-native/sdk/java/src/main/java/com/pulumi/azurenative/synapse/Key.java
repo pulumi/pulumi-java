@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class Key extends com.pulumi.resources.CustomResource {
      * @return Used to activate the workspace after a customer managed key is provided.
      * 
      */
-    public Output</* @Nullable */ Boolean> isActiveCMK() {
-        return this.isActiveCMK;
+    public Output<Optional<Boolean>> isActiveCMK() {
+        return Codegen.optional(this.isActiveCMK);
     }
     /**
      * The Key Vault Url of the workspace key.
@@ -57,8 +58,8 @@ public class Key extends com.pulumi.resources.CustomResource {
      * @return The Key Vault Url of the workspace key.
      * 
      */
-    public Output</* @Nullable */ String> keyVaultUrl() {
-        return this.keyVaultUrl;
+    public Output<Optional<String>> keyVaultUrl() {
+        return Codegen.optional(this.keyVaultUrl);
     }
     /**
      * The name of the resource

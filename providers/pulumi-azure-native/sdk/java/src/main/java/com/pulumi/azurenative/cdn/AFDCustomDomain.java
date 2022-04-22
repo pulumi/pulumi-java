@@ -16,6 +16,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class AFDCustomDomain extends com.pulumi.resources.CustomResource {
      * @return Resource reference to the Azure DNS zone
      * 
      */
-    public Output</* @Nullable */ ResourceReferenceResponse> azureDnsZone() {
-        return this.azureDnsZone;
+    public Output<Optional<ResourceReferenceResponse>> azureDnsZone() {
+        return Codegen.optional(this.azureDnsZone);
     }
     @Export(name="deploymentStatus", type=String.class, parameters={})
     private Output<String> deploymentStatus;
@@ -136,8 +137,8 @@ public class AFDCustomDomain extends com.pulumi.resources.CustomResource {
      * @return The configuration specifying how to enable HTTPS for the domain - using AzureFrontDoor managed certificate or user&#39;s own certificate. If not specified, enabling ssl uses AzureFrontDoor managed certificate by default.
      * 
      */
-    public Output</* @Nullable */ AFDDomainHttpsParametersResponse> tlsSettings() {
-        return this.tlsSettings;
+    public Output<Optional<AFDDomainHttpsParametersResponse>> tlsSettings() {
+        return Codegen.optional(this.tlsSettings);
     }
     /**
      * Resource type.

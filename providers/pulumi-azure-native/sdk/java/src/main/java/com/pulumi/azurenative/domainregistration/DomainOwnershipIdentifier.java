@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -40,8 +41,8 @@ public class DomainOwnershipIdentifier extends com.pulumi.resources.CustomResour
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> kind() {
-        return this.kind;
+    public Output<Optional<String>> kind() {
+        return Codegen.optional(this.kind);
     }
     /**
      * Resource Name.
@@ -68,8 +69,8 @@ public class DomainOwnershipIdentifier extends com.pulumi.resources.CustomResour
      * @return Ownership Id.
      * 
      */
-    public Output</* @Nullable */ String> ownershipId() {
-        return this.ownershipId;
+    public Output<Optional<String>> ownershipId() {
+        return Codegen.optional(this.ownershipId);
     }
     /**
      * The system metadata relating to this resource.

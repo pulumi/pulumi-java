@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -42,8 +43,8 @@ public class CloudEndpoint extends com.pulumi.resources.CustomResource {
      * @return Azure file share name
      * 
      */
-    public Output</* @Nullable */ String> azureFileShareName() {
-        return this.azureFileShareName;
+    public Output<Optional<String>> azureFileShareName() {
+        return Codegen.optional(this.azureFileShareName);
     }
     /**
      * Backup Enabled
@@ -70,8 +71,8 @@ public class CloudEndpoint extends com.pulumi.resources.CustomResource {
      * @return Friendly Name
      * 
      */
-    public Output</* @Nullable */ String> friendlyName() {
-        return this.friendlyName;
+    public Output<Optional<String>> friendlyName() {
+        return Codegen.optional(this.friendlyName);
     }
     /**
      * Resource Last Operation Name
@@ -84,8 +85,8 @@ public class CloudEndpoint extends com.pulumi.resources.CustomResource {
      * @return Resource Last Operation Name
      * 
      */
-    public Output</* @Nullable */ String> lastOperationName() {
-        return this.lastOperationName;
+    public Output<Optional<String>> lastOperationName() {
+        return Codegen.optional(this.lastOperationName);
     }
     /**
      * CloudEndpoint lastWorkflowId
@@ -98,8 +99,8 @@ public class CloudEndpoint extends com.pulumi.resources.CustomResource {
      * @return CloudEndpoint lastWorkflowId
      * 
      */
-    public Output</* @Nullable */ String> lastWorkflowId() {
-        return this.lastWorkflowId;
+    public Output<Optional<String>> lastWorkflowId() {
+        return Codegen.optional(this.lastWorkflowId);
     }
     /**
      * The name of the resource
@@ -126,8 +127,8 @@ public class CloudEndpoint extends com.pulumi.resources.CustomResource {
      * @return Partnership Id
      * 
      */
-    public Output</* @Nullable */ String> partnershipId() {
-        return this.partnershipId;
+    public Output<Optional<String>> partnershipId() {
+        return Codegen.optional(this.partnershipId);
     }
     /**
      * CloudEndpoint Provisioning State
@@ -140,8 +141,8 @@ public class CloudEndpoint extends com.pulumi.resources.CustomResource {
      * @return CloudEndpoint Provisioning State
      * 
      */
-    public Output</* @Nullable */ String> provisioningState() {
-        return this.provisioningState;
+    public Output<Optional<String>> provisioningState() {
+        return Codegen.optional(this.provisioningState);
     }
     /**
      * Storage Account Resource Id
@@ -154,8 +155,8 @@ public class CloudEndpoint extends com.pulumi.resources.CustomResource {
      * @return Storage Account Resource Id
      * 
      */
-    public Output</* @Nullable */ String> storageAccountResourceId() {
-        return this.storageAccountResourceId;
+    public Output<Optional<String>> storageAccountResourceId() {
+        return Codegen.optional(this.storageAccountResourceId);
     }
     /**
      * Storage Account Tenant Id
@@ -168,8 +169,8 @@ public class CloudEndpoint extends com.pulumi.resources.CustomResource {
      * @return Storage Account Tenant Id
      * 
      */
-    public Output</* @Nullable */ String> storageAccountTenantId() {
-        return this.storageAccountTenantId;
+    public Output<Optional<String>> storageAccountTenantId() {
+        return Codegen.optional(this.storageAccountTenantId);
     }
     /**
      * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;

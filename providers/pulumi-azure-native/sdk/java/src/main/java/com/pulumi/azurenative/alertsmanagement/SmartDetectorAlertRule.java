@@ -16,6 +16,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -60,8 +61,8 @@ public class SmartDetectorAlertRule extends com.pulumi.resources.CustomResource 
      * @return The alert rule description.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The alert rule&#39;s detector.
@@ -102,8 +103,8 @@ public class SmartDetectorAlertRule extends com.pulumi.resources.CustomResource 
      * @return The resource location.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The resource name.
@@ -172,8 +173,8 @@ public class SmartDetectorAlertRule extends com.pulumi.resources.CustomResource 
      * @return The resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The alert rule throttling information.
@@ -186,8 +187,8 @@ public class SmartDetectorAlertRule extends com.pulumi.resources.CustomResource 
      * @return The alert rule throttling information.
      * 
      */
-    public Output</* @Nullable */ ThrottlingInformationResponse> throttling() {
-        return this.throttling;
+    public Output<Optional<ThrottlingInformationResponse>> throttling() {
+        return Codegen.optional(this.throttling);
     }
     /**
      * The resource type.

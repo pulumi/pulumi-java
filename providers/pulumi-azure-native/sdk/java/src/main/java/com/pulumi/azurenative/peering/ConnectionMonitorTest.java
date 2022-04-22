@@ -14,6 +14,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class ConnectionMonitorTest extends com.pulumi.resources.CustomResource {
      * @return The Connection Monitor test destination
      * 
      */
-    public Output</* @Nullable */ String> destination() {
-        return this.destination;
+    public Output<Optional<String>> destination() {
+        return Codegen.optional(this.destination);
     }
     /**
      * The Connection Monitor test destination port
@@ -58,8 +59,8 @@ public class ConnectionMonitorTest extends com.pulumi.resources.CustomResource {
      * @return The Connection Monitor test destination port
      * 
      */
-    public Output</* @Nullable */ Integer> destinationPort() {
-        return this.destinationPort;
+    public Output<Optional<Integer>> destinationPort() {
+        return Codegen.optional(this.destinationPort);
     }
     /**
      * The flag that indicates if the Connection Monitor test is successful or not.
@@ -128,8 +129,8 @@ public class ConnectionMonitorTest extends com.pulumi.resources.CustomResource {
      * @return The Connection Monitor test source agent
      * 
      */
-    public Output</* @Nullable */ String> sourceAgent() {
-        return this.sourceAgent;
+    public Output<Optional<String>> sourceAgent() {
+        return Codegen.optional(this.sourceAgent);
     }
     /**
      * The Connection Monitor test frequency in seconds
@@ -142,8 +143,8 @@ public class ConnectionMonitorTest extends com.pulumi.resources.CustomResource {
      * @return The Connection Monitor test frequency in seconds
      * 
      */
-    public Output</* @Nullable */ Integer> testFrequencyInSec() {
-        return this.testFrequencyInSec;
+    public Output<Optional<Integer>> testFrequencyInSec() {
+        return Codegen.optional(this.testFrequencyInSec);
     }
     /**
      * The type of the resource.

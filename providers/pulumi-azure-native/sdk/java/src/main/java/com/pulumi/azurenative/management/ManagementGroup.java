@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class ManagementGroup extends com.pulumi.resources.CustomResource {
      * @return The list of children.
      * 
      */
-    public Output</* @Nullable */ List<ManagementGroupChildInfoResponse>> children() {
-        return this.children;
+    public Output<Optional<List<ManagementGroupChildInfoResponse>>> children() {
+        return Codegen.optional(this.children);
     }
     /**
      * The details of a management group.
@@ -58,8 +59,8 @@ public class ManagementGroup extends com.pulumi.resources.CustomResource {
      * @return The details of a management group.
      * 
      */
-    public Output</* @Nullable */ ManagementGroupDetailsResponse> details() {
-        return this.details;
+    public Output<Optional<ManagementGroupDetailsResponse>> details() {
+        return Codegen.optional(this.details);
     }
     /**
      * The friendly name of the management group.
@@ -72,8 +73,8 @@ public class ManagementGroup extends com.pulumi.resources.CustomResource {
      * @return The friendly name of the management group.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * The name of the management group. For example, 00000000-0000-0000-0000-000000000000
@@ -100,8 +101,8 @@ public class ManagementGroup extends com.pulumi.resources.CustomResource {
      * @return The AAD Tenant ID associated with the management group. For example, 00000000-0000-0000-0000-000000000000
      * 
      */
-    public Output</* @Nullable */ String> tenantId() {
-        return this.tenantId;
+    public Output<Optional<String>> tenantId() {
+        return Codegen.optional(this.tenantId);
     }
     /**
      * The type of the resource.  For example, Microsoft.Management/managementGroups

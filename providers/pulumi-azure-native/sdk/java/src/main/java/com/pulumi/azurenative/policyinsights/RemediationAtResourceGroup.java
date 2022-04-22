@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -72,8 +73,8 @@ public class RemediationAtResourceGroup extends com.pulumi.resources.CustomResou
      * @return The filters that will be applied to determine which resources to remediate.
      * 
      */
-    public Output</* @Nullable */ RemediationFiltersResponse> filters() {
-        return this.filters;
+    public Output<Optional<RemediationFiltersResponse>> filters() {
+        return Codegen.optional(this.filters);
     }
     /**
      * The time at which the remediation was last updated.
@@ -114,8 +115,8 @@ public class RemediationAtResourceGroup extends com.pulumi.resources.CustomResou
      * @return The resource ID of the policy assignment that should be remediated.
      * 
      */
-    public Output</* @Nullable */ String> policyAssignmentId() {
-        return this.policyAssignmentId;
+    public Output<Optional<String>> policyAssignmentId() {
+        return Codegen.optional(this.policyAssignmentId);
     }
     /**
      * The policy definition reference ID of the individual definition that should be remediated. Required when the policy assignment being remediated assigns a policy set definition.
@@ -128,8 +129,8 @@ public class RemediationAtResourceGroup extends com.pulumi.resources.CustomResou
      * @return The policy definition reference ID of the individual definition that should be remediated. Required when the policy assignment being remediated assigns a policy set definition.
      * 
      */
-    public Output</* @Nullable */ String> policyDefinitionReferenceId() {
-        return this.policyDefinitionReferenceId;
+    public Output<Optional<String>> policyDefinitionReferenceId() {
+        return Codegen.optional(this.policyDefinitionReferenceId);
     }
     /**
      * The status of the remediation.
@@ -156,8 +157,8 @@ public class RemediationAtResourceGroup extends com.pulumi.resources.CustomResou
      * @return The way resources to remediate are discovered. Defaults to ExistingNonCompliant if not specified.
      * 
      */
-    public Output</* @Nullable */ String> resourceDiscoveryMode() {
-        return this.resourceDiscoveryMode;
+    public Output<Optional<String>> resourceDiscoveryMode() {
+        return Codegen.optional(this.resourceDiscoveryMode);
     }
     /**
      * The type of the remediation.

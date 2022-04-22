@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class GuestDiagnosticsSetting extends com.pulumi.resources.CustomResource
      * @return the array of data source object which are configured to collect and send data
      * 
      */
-    public Output</* @Nullable */ List<DataSourceResponse>> dataSources() {
-        return this.dataSources;
+    public Output<Optional<List<DataSourceResponse>>> dataSources() {
+        return Codegen.optional(this.dataSources);
     }
     /**
      * Resource location
@@ -86,14 +87,14 @@ public class GuestDiagnosticsSetting extends com.pulumi.resources.CustomResource
      * @return Operating system type for the configuration
      * 
      */
-    public Output</* @Nullable */ String> osType() {
-        return this.osType;
+    public Output<Optional<String>> osType() {
+        return Codegen.optional(this.osType);
     }
     @Export(name="proxySetting", type=String.class, parameters={})
     private Output</* @Nullable */ String> proxySetting;
 
-    public Output</* @Nullable */ String> proxySetting() {
-        return this.proxySetting;
+    public Output<Optional<String>> proxySetting() {
+        return Codegen.optional(this.proxySetting);
     }
     /**
      * Resource tags
@@ -106,8 +107,8 @@ public class GuestDiagnosticsSetting extends com.pulumi.resources.CustomResource
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Azure resource type

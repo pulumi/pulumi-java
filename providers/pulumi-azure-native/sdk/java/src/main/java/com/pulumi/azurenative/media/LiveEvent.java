@@ -20,6 +20,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -64,8 +65,8 @@ public class LiveEvent extends com.pulumi.resources.CustomResource {
      * @return Live event cross site access policies.
      * 
      */
-    public Output</* @Nullable */ CrossSiteAccessPoliciesResponse> crossSiteAccessPolicies() {
-        return this.crossSiteAccessPolicies;
+    public Output<Optional<CrossSiteAccessPoliciesResponse>> crossSiteAccessPolicies() {
+        return Codegen.optional(this.crossSiteAccessPolicies);
     }
     /**
      * A description for the live event.
@@ -78,8 +79,8 @@ public class LiveEvent extends com.pulumi.resources.CustomResource {
      * @return A description for the live event.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Encoding settings for the live event. It configures whether a live encoder is used for the live event and settings for the live encoder if it is used.
@@ -92,8 +93,8 @@ public class LiveEvent extends com.pulumi.resources.CustomResource {
      * @return Encoding settings for the live event. It configures whether a live encoder is used for the live event and settings for the live encoder if it is used.
      * 
      */
-    public Output</* @Nullable */ LiveEventEncodingResponse> encoding() {
-        return this.encoding;
+    public Output<Optional<LiveEventEncodingResponse>> encoding() {
+        return Codegen.optional(this.encoding);
     }
     /**
      * When useStaticHostname is set to true, the hostnamePrefix specifies the first part of the hostname assigned to the live event preview and ingest endpoints. The final hostname would be a combination of this prefix, the media service account name and a short code for the Azure Media Services data center.
@@ -106,8 +107,8 @@ public class LiveEvent extends com.pulumi.resources.CustomResource {
      * @return When useStaticHostname is set to true, the hostnamePrefix specifies the first part of the hostname assigned to the live event preview and ingest endpoints. The final hostname would be a combination of this prefix, the media service account name and a short code for the Azure Media Services data center.
      * 
      */
-    public Output</* @Nullable */ String> hostnamePrefix() {
-        return this.hostnamePrefix;
+    public Output<Optional<String>> hostnamePrefix() {
+        return Codegen.optional(this.hostnamePrefix);
     }
     /**
      * Live event input settings. It defines how the live event receives input from a contribution encoder.
@@ -176,8 +177,8 @@ public class LiveEvent extends com.pulumi.resources.CustomResource {
      * @return Live event preview settings. Preview allows live event producers to preview the live streaming content without creating any live output.
      * 
      */
-    public Output</* @Nullable */ LiveEventPreviewResponse> preview() {
-        return this.preview;
+    public Output<Optional<LiveEventPreviewResponse>> preview() {
+        return Codegen.optional(this.preview);
     }
     /**
      * The provisioning state of the live event.
@@ -218,8 +219,8 @@ public class LiveEvent extends com.pulumi.resources.CustomResource {
      * @return The options to use for the LiveEvent. This value is specified at creation time and cannot be updated. The valid values for the array entry values are &#39;Default&#39; and &#39;LowLatency&#39;.
      * 
      */
-    public Output</* @Nullable */ List<String>> streamOptions() {
-        return this.streamOptions;
+    public Output<Optional<List<String>>> streamOptions() {
+        return Codegen.optional(this.streamOptions);
     }
     /**
      * The system metadata relating to this resource.
@@ -246,8 +247,8 @@ public class LiveEvent extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Live transcription settings for the live event. See https://go.microsoft.com/fwlink/?linkid=2133742 for more information about the live transcription feature.
@@ -260,8 +261,8 @@ public class LiveEvent extends com.pulumi.resources.CustomResource {
      * @return Live transcription settings for the live event. See https://go.microsoft.com/fwlink/?linkid=2133742 for more information about the live transcription feature.
      * 
      */
-    public Output</* @Nullable */ List<LiveEventTranscriptionResponse>> transcriptions() {
-        return this.transcriptions;
+    public Output<Optional<List<LiveEventTranscriptionResponse>>> transcriptions() {
+        return Codegen.optional(this.transcriptions);
     }
     /**
      * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
@@ -288,8 +289,8 @@ public class LiveEvent extends com.pulumi.resources.CustomResource {
      * @return Specifies whether a static hostname would be assigned to the live event preview and ingest endpoints. This value can only be updated if the live event is in Standby state
      * 
      */
-    public Output</* @Nullable */ Boolean> useStaticHostname() {
-        return this.useStaticHostname;
+    public Output<Optional<Boolean>> useStaticHostname() {
+        return Codegen.optional(this.useStaticHostname);
     }
 
     /**

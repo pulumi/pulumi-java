@@ -16,6 +16,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class Profile extends com.pulumi.resources.CustomResource {
      * @return The api entity set name. This becomes the odata entity set name for the entity Type being referred in this object.
      * 
      */
-    public Output</* @Nullable */ String> apiEntitySetName() {
-        return this.apiEntitySetName;
+    public Output<Optional<String>> apiEntitySetName() {
+        return Codegen.optional(this.apiEntitySetName);
     }
     /**
      * The attributes for the Type.
@@ -60,8 +61,8 @@ public class Profile extends com.pulumi.resources.CustomResource {
      * @return The attributes for the Type.
      * 
      */
-    public Output</* @Nullable */ Map<String,List<String>>> attributes() {
-        return this.attributes;
+    public Output<Optional<Map<String,List<String>>>> attributes() {
+        return Codegen.optional(this.attributes);
     }
     /**
      * Localized descriptions for the property.
@@ -74,8 +75,8 @@ public class Profile extends com.pulumi.resources.CustomResource {
      * @return Localized descriptions for the property.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> description() {
-        return this.description;
+    public Output<Optional<Map<String,String>>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Localized display names for the property.
@@ -88,8 +89,8 @@ public class Profile extends com.pulumi.resources.CustomResource {
      * @return Localized display names for the property.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> displayName() {
-        return this.displayName;
+    public Output<Optional<Map<String,String>>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * Type of entity.
@@ -102,8 +103,8 @@ public class Profile extends com.pulumi.resources.CustomResource {
      * @return Type of entity.
      * 
      */
-    public Output</* @Nullable */ String> entityType() {
-        return this.entityType;
+    public Output<Optional<String>> entityType() {
+        return Codegen.optional(this.entityType);
     }
     /**
      * The properties of the Profile.
@@ -116,8 +117,8 @@ public class Profile extends com.pulumi.resources.CustomResource {
      * @return The properties of the Profile.
      * 
      */
-    public Output</* @Nullable */ List<PropertyDefinitionResponse>> fields() {
-        return this.fields;
+    public Output<Optional<List<PropertyDefinitionResponse>>> fields() {
+        return Codegen.optional(this.fields);
     }
     /**
      * The instance count.
@@ -130,8 +131,8 @@ public class Profile extends com.pulumi.resources.CustomResource {
      * @return The instance count.
      * 
      */
-    public Output</* @Nullable */ Integer> instancesCount() {
-        return this.instancesCount;
+    public Output<Optional<Integer>> instancesCount() {
+        return Codegen.optional(this.instancesCount);
     }
     /**
      * Large Image associated with the Property or EntityType.
@@ -144,8 +145,8 @@ public class Profile extends com.pulumi.resources.CustomResource {
      * @return Large Image associated with the Property or EntityType.
      * 
      */
-    public Output</* @Nullable */ String> largeImage() {
-        return this.largeImage;
+    public Output<Optional<String>> largeImage() {
+        return Codegen.optional(this.largeImage);
     }
     /**
      * The last changed time for the type definition.
@@ -172,8 +173,8 @@ public class Profile extends com.pulumi.resources.CustomResource {
      * @return Any custom localized attributes for the Type.
      * 
      */
-    public Output</* @Nullable */ Map<String,Map<String,String>>> localizedAttributes() {
-        return this.localizedAttributes;
+    public Output<Optional<Map<String,Map<String,String>>>> localizedAttributes() {
+        return Codegen.optional(this.localizedAttributes);
     }
     /**
      * Medium Image associated with the Property or EntityType.
@@ -186,8 +187,8 @@ public class Profile extends com.pulumi.resources.CustomResource {
      * @return Medium Image associated with the Property or EntityType.
      * 
      */
-    public Output</* @Nullable */ String> mediumImage() {
-        return this.mediumImage;
+    public Output<Optional<String>> mediumImage() {
+        return Codegen.optional(this.mediumImage);
     }
     /**
      * Resource name.
@@ -228,8 +229,8 @@ public class Profile extends com.pulumi.resources.CustomResource {
      * @return The schema org link. This helps ACI identify and suggest semantic models.
      * 
      */
-    public Output</* @Nullable */ String> schemaItemTypeLink() {
-        return this.schemaItemTypeLink;
+    public Output<Optional<String>> schemaItemTypeLink() {
+        return Codegen.optional(this.schemaItemTypeLink);
     }
     /**
      * Small Image associated with the Property or EntityType.
@@ -242,8 +243,8 @@ public class Profile extends com.pulumi.resources.CustomResource {
      * @return Small Image associated with the Property or EntityType.
      * 
      */
-    public Output</* @Nullable */ String> smallImage() {
-        return this.smallImage;
+    public Output<Optional<String>> smallImage() {
+        return Codegen.optional(this.smallImage);
     }
     /**
      * The strong IDs.
@@ -256,8 +257,8 @@ public class Profile extends com.pulumi.resources.CustomResource {
      * @return The strong IDs.
      * 
      */
-    public Output</* @Nullable */ List<StrongIdResponse>> strongIds() {
-        return this.strongIds;
+    public Output<Optional<List<StrongIdResponse>>> strongIds() {
+        return Codegen.optional(this.strongIds);
     }
     /**
      * The hub name.
@@ -284,8 +285,8 @@ public class Profile extends com.pulumi.resources.CustomResource {
      * @return The timestamp property name. Represents the time when the interaction or profile update happened.
      * 
      */
-    public Output</* @Nullable */ String> timestampFieldName() {
-        return this.timestampFieldName;
+    public Output<Optional<String>> timestampFieldName() {
+        return Codegen.optional(this.timestampFieldName);
     }
     /**
      * Resource type.
@@ -312,8 +313,8 @@ public class Profile extends com.pulumi.resources.CustomResource {
      * @return The name of the entity.
      * 
      */
-    public Output</* @Nullable */ String> typeName() {
-        return this.typeName;
+    public Output<Optional<String>> typeName() {
+        return Codegen.optional(this.typeName);
     }
 
     /**

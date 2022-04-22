@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -130,8 +131,8 @@ public class EventHubEventSource extends com.pulumi.resources.CustomResource {
      * @return An object that represents the local timestamp property. It contains the format of local timestamp that needs to be used and the corresponding timezone offset information. If a value isn&#39;t specified for localTimestamp, or if null, then the local timestamp will not be ingressed with the events.
      * 
      */
-    public Output</* @Nullable */ LocalTimestampResponse> localTimestamp() {
-        return this.localTimestamp;
+    public Output<Optional<LocalTimestampResponse>> localTimestamp() {
+        return Codegen.optional(this.localTimestamp);
     }
     /**
      * Resource location
@@ -200,8 +201,8 @@ public class EventHubEventSource extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * ISO8601 UTC datetime with seconds precision (milliseconds are optional), specifying the date and time that will be the starting point for Events to be consumed.
@@ -214,8 +215,8 @@ public class EventHubEventSource extends com.pulumi.resources.CustomResource {
      * @return ISO8601 UTC datetime with seconds precision (milliseconds are optional), specifying the date and time that will be the starting point for Events to be consumed.
      * 
      */
-    public Output</* @Nullable */ String> time() {
-        return this.time;
+    public Output<Optional<String>> time() {
+        return Codegen.optional(this.time);
     }
     /**
      * The event property that will be used as the event source&#39;s timestamp. If a value isn&#39;t specified for timestampPropertyName, or if null or empty-string is specified, the event creation time will be used.
@@ -228,8 +229,8 @@ public class EventHubEventSource extends com.pulumi.resources.CustomResource {
      * @return The event property that will be used as the event source&#39;s timestamp. If a value isn&#39;t specified for timestampPropertyName, or if null or empty-string is specified, the event creation time will be used.
      * 
      */
-    public Output</* @Nullable */ String> timestampPropertyName() {
-        return this.timestampPropertyName;
+    public Output<Optional<String>> timestampPropertyName() {
+        return Codegen.optional(this.timestampPropertyName);
     }
     /**
      * Resource type

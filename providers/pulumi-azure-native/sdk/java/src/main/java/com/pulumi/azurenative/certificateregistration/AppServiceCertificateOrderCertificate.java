@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -41,8 +42,8 @@ public class AppServiceCertificateOrderCertificate extends com.pulumi.resources.
      * @return Key Vault resource Id.
      * 
      */
-    public Output</* @Nullable */ String> keyVaultId() {
-        return this.keyVaultId;
+    public Output<Optional<String>> keyVaultId() {
+        return Codegen.optional(this.keyVaultId);
     }
     /**
      * Key Vault secret name.
@@ -55,8 +56,8 @@ public class AppServiceCertificateOrderCertificate extends com.pulumi.resources.
      * @return Key Vault secret name.
      * 
      */
-    public Output</* @Nullable */ String> keyVaultSecretName() {
-        return this.keyVaultSecretName;
+    public Output<Optional<String>> keyVaultSecretName() {
+        return Codegen.optional(this.keyVaultSecretName);
     }
     /**
      * Kind of resource.
@@ -69,8 +70,8 @@ public class AppServiceCertificateOrderCertificate extends com.pulumi.resources.
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> kind() {
-        return this.kind;
+    public Output<Optional<String>> kind() {
+        return Codegen.optional(this.kind);
     }
     /**
      * Resource Location.
@@ -139,8 +140,8 @@ public class AppServiceCertificateOrderCertificate extends com.pulumi.resources.
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type.

@@ -20,6 +20,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -51,8 +52,8 @@ public class TaskRun extends com.pulumi.resources.CustomResource {
      * @return How the run should be forced to rerun even if the run request configuration has not changed
      * 
      */
-    public Output</* @Nullable */ String> forceUpdateTag() {
-        return this.forceUpdateTag;
+    public Output<Optional<String>> forceUpdateTag() {
+        return Codegen.optional(this.forceUpdateTag);
     }
     /**
      * Identity for the resource.
@@ -65,8 +66,8 @@ public class TaskRun extends com.pulumi.resources.CustomResource {
      * @return Identity for the resource.
      * 
      */
-    public Output</* @Nullable */ IdentityPropertiesResponse> identity() {
-        return this.identity;
+    public Output<Optional<IdentityPropertiesResponse>> identity() {
+        return Codegen.optional(this.identity);
     }
     /**
      * The location of the resource
@@ -79,8 +80,8 @@ public class TaskRun extends com.pulumi.resources.CustomResource {
      * @return The location of the resource
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The name of the resource.
@@ -121,8 +122,8 @@ public class TaskRun extends com.pulumi.resources.CustomResource {
      * @return The request (parameters) for the run
      * 
      */
-    public Output</* @Nullable */ Object> runRequest() {
-        return this.runRequest;
+    public Output<Optional<Object>> runRequest() {
+        return Codegen.optional(this.runRequest);
     }
     /**
      * The result of this task run

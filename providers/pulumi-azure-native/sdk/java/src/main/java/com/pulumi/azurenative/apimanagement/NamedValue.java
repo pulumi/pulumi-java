@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -58,8 +59,8 @@ public class NamedValue extends com.pulumi.resources.CustomResource {
      * @return KeyVault location details of the namedValue.
      * 
      */
-    public Output</* @Nullable */ KeyVaultContractPropertiesResponse> keyVault() {
-        return this.keyVault;
+    public Output<Optional<KeyVaultContractPropertiesResponse>> keyVault() {
+        return Codegen.optional(this.keyVault);
     }
     /**
      * Resource name.
@@ -86,8 +87,8 @@ public class NamedValue extends com.pulumi.resources.CustomResource {
      * @return Determines whether the value is a secret and should be encrypted or not. Default value is false.
      * 
      */
-    public Output</* @Nullable */ Boolean> secret() {
-        return this.secret;
+    public Output<Optional<Boolean>> secret() {
+        return Codegen.optional(this.secret);
     }
     /**
      * Optional tags that when provided can be used to filter the NamedValue list.
@@ -100,8 +101,8 @@ public class NamedValue extends com.pulumi.resources.CustomResource {
      * @return Optional tags that when provided can be used to filter the NamedValue list.
      * 
      */
-    public Output</* @Nullable */ List<String>> tags() {
-        return this.tags;
+    public Output<Optional<List<String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type for API Management resource.
@@ -128,8 +129,8 @@ public class NamedValue extends com.pulumi.resources.CustomResource {
      * @return Value of the NamedValue. Can contain policy expressions. It may not be empty or consist only of whitespace. This property will not be filled on &#39;GET&#39; operations! Use &#39;/listSecrets&#39; POST request to get the value.
      * 
      */
-    public Output</* @Nullable */ String> value() {
-        return this.value;
+    public Output<Optional<String>> value() {
+        return Codegen.optional(this.value);
     }
 
     /**

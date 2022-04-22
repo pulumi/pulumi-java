@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -58,8 +59,8 @@ public class SecurityRule extends com.pulumi.resources.CustomResource {
      * @return A description for this rule. Restricted to 140 chars.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The destination address prefix. CIDR or destination IP range. Asterisk &#39;*&#39; can also be used to match all source IPs. Default tags such as &#39;VirtualNetwork&#39;, &#39;AzureLoadBalancer&#39; and &#39;Internet&#39; can also be used.
@@ -72,8 +73,8 @@ public class SecurityRule extends com.pulumi.resources.CustomResource {
      * @return The destination address prefix. CIDR or destination IP range. Asterisk &#39;*&#39; can also be used to match all source IPs. Default tags such as &#39;VirtualNetwork&#39;, &#39;AzureLoadBalancer&#39; and &#39;Internet&#39; can also be used.
      * 
      */
-    public Output</* @Nullable */ String> destinationAddressPrefix() {
-        return this.destinationAddressPrefix;
+    public Output<Optional<String>> destinationAddressPrefix() {
+        return Codegen.optional(this.destinationAddressPrefix);
     }
     /**
      * The destination address prefixes. CIDR or destination IP ranges.
@@ -86,8 +87,8 @@ public class SecurityRule extends com.pulumi.resources.CustomResource {
      * @return The destination address prefixes. CIDR or destination IP ranges.
      * 
      */
-    public Output</* @Nullable */ List<String>> destinationAddressPrefixes() {
-        return this.destinationAddressPrefixes;
+    public Output<Optional<List<String>>> destinationAddressPrefixes() {
+        return Codegen.optional(this.destinationAddressPrefixes);
     }
     /**
      * The application security group specified as destination.
@@ -100,8 +101,8 @@ public class SecurityRule extends com.pulumi.resources.CustomResource {
      * @return The application security group specified as destination.
      * 
      */
-    public Output</* @Nullable */ List<ApplicationSecurityGroupResponse>> destinationApplicationSecurityGroups() {
-        return this.destinationApplicationSecurityGroups;
+    public Output<Optional<List<ApplicationSecurityGroupResponse>>> destinationApplicationSecurityGroups() {
+        return Codegen.optional(this.destinationApplicationSecurityGroups);
     }
     /**
      * The destination port or range. Integer or range between 0 and 65535. Asterisk &#39;*&#39; can also be used to match all ports.
@@ -114,8 +115,8 @@ public class SecurityRule extends com.pulumi.resources.CustomResource {
      * @return The destination port or range. Integer or range between 0 and 65535. Asterisk &#39;*&#39; can also be used to match all ports.
      * 
      */
-    public Output</* @Nullable */ String> destinationPortRange() {
-        return this.destinationPortRange;
+    public Output<Optional<String>> destinationPortRange() {
+        return Codegen.optional(this.destinationPortRange);
     }
     /**
      * The destination port ranges.
@@ -128,8 +129,8 @@ public class SecurityRule extends com.pulumi.resources.CustomResource {
      * @return The destination port ranges.
      * 
      */
-    public Output</* @Nullable */ List<String>> destinationPortRanges() {
-        return this.destinationPortRanges;
+    public Output<Optional<List<String>>> destinationPortRanges() {
+        return Codegen.optional(this.destinationPortRanges);
     }
     /**
      * The direction of the rule. The direction specifies if rule will be evaluated on incoming or outgoing traffic.
@@ -170,8 +171,8 @@ public class SecurityRule extends com.pulumi.resources.CustomResource {
      * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * The priority of the rule. The value can be between 100 and 4096. The priority number must be unique for each rule in the collection. The lower the priority number, the higher the priority of the rule.
@@ -184,8 +185,8 @@ public class SecurityRule extends com.pulumi.resources.CustomResource {
      * @return The priority of the rule. The value can be between 100 and 4096. The priority number must be unique for each rule in the collection. The lower the priority number, the higher the priority of the rule.
      * 
      */
-    public Output</* @Nullable */ Integer> priority() {
-        return this.priority;
+    public Output<Optional<Integer>> priority() {
+        return Codegen.optional(this.priority);
     }
     /**
      * Network protocol this rule applies to.
@@ -226,8 +227,8 @@ public class SecurityRule extends com.pulumi.resources.CustomResource {
      * @return The CIDR or source IP range. Asterisk &#39;*&#39; can also be used to match all source IPs. Default tags such as &#39;VirtualNetwork&#39;, &#39;AzureLoadBalancer&#39; and &#39;Internet&#39; can also be used. If this is an ingress rule, specifies where network traffic originates from.
      * 
      */
-    public Output</* @Nullable */ String> sourceAddressPrefix() {
-        return this.sourceAddressPrefix;
+    public Output<Optional<String>> sourceAddressPrefix() {
+        return Codegen.optional(this.sourceAddressPrefix);
     }
     /**
      * The CIDR or source IP ranges.
@@ -240,8 +241,8 @@ public class SecurityRule extends com.pulumi.resources.CustomResource {
      * @return The CIDR or source IP ranges.
      * 
      */
-    public Output</* @Nullable */ List<String>> sourceAddressPrefixes() {
-        return this.sourceAddressPrefixes;
+    public Output<Optional<List<String>>> sourceAddressPrefixes() {
+        return Codegen.optional(this.sourceAddressPrefixes);
     }
     /**
      * The application security group specified as source.
@@ -254,8 +255,8 @@ public class SecurityRule extends com.pulumi.resources.CustomResource {
      * @return The application security group specified as source.
      * 
      */
-    public Output</* @Nullable */ List<ApplicationSecurityGroupResponse>> sourceApplicationSecurityGroups() {
-        return this.sourceApplicationSecurityGroups;
+    public Output<Optional<List<ApplicationSecurityGroupResponse>>> sourceApplicationSecurityGroups() {
+        return Codegen.optional(this.sourceApplicationSecurityGroups);
     }
     /**
      * The source port or range. Integer or range between 0 and 65535. Asterisk &#39;*&#39; can also be used to match all ports.
@@ -268,8 +269,8 @@ public class SecurityRule extends com.pulumi.resources.CustomResource {
      * @return The source port or range. Integer or range between 0 and 65535. Asterisk &#39;*&#39; can also be used to match all ports.
      * 
      */
-    public Output</* @Nullable */ String> sourcePortRange() {
-        return this.sourcePortRange;
+    public Output<Optional<String>> sourcePortRange() {
+        return Codegen.optional(this.sourcePortRange);
     }
     /**
      * The source port ranges.
@@ -282,8 +283,8 @@ public class SecurityRule extends com.pulumi.resources.CustomResource {
      * @return The source port ranges.
      * 
      */
-    public Output</* @Nullable */ List<String>> sourcePortRanges() {
-        return this.sourcePortRanges;
+    public Output<Optional<List<String>>> sourcePortRanges() {
+        return Codegen.optional(this.sourcePortRanges);
     }
     /**
      * The type of the resource.
@@ -296,8 +297,8 @@ public class SecurityRule extends com.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output</* @Nullable */ String> type() {
-        return this.type;
+    public Output<Optional<String>> type() {
+        return Codegen.optional(this.type);
     }
 
     /**

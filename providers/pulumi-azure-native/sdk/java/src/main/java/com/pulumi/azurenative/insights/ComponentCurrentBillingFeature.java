@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class ComponentCurrentBillingFeature extends com.pulumi.resources.CustomR
      * @return Current enabled pricing plan. When the component is in the Enterprise plan, this will list both &#39;Basic&#39; and &#39;Application Insights Enterprise&#39;.
      * 
      */
-    public Output</* @Nullable */ List<String>> currentBillingFeatures() {
-        return this.currentBillingFeatures;
+    public Output<Optional<List<String>>> currentBillingFeatures() {
+        return Codegen.optional(this.currentBillingFeatures);
     }
     /**
      * An Application Insights component daily data volume cap
@@ -57,8 +58,8 @@ public class ComponentCurrentBillingFeature extends com.pulumi.resources.CustomR
      * @return An Application Insights component daily data volume cap
      * 
      */
-    public Output</* @Nullable */ ApplicationInsightsComponentDataVolumeCapResponse> dataVolumeCap() {
-        return this.dataVolumeCap;
+    public Output<Optional<ApplicationInsightsComponentDataVolumeCapResponse>> dataVolumeCap() {
+        return Codegen.optional(this.dataVolumeCap);
     }
 
     /**

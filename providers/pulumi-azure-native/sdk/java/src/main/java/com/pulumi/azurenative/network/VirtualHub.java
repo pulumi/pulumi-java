@@ -18,6 +18,7 @@ import java.lang.Double;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -48,8 +49,8 @@ public class VirtualHub extends com.pulumi.resources.CustomResource {
      * @return Address-prefix for this VirtualHub.
      * 
      */
-    public Output</* @Nullable */ String> addressPrefix() {
-        return this.addressPrefix;
+    public Output<Optional<String>> addressPrefix() {
+        return Codegen.optional(this.addressPrefix);
     }
     /**
      * Flag to control transit for VirtualRouter hub.
@@ -62,8 +63,8 @@ public class VirtualHub extends com.pulumi.resources.CustomResource {
      * @return Flag to control transit for VirtualRouter hub.
      * 
      */
-    public Output</* @Nullable */ Boolean> allowBranchToBranchTraffic() {
-        return this.allowBranchToBranchTraffic;
+    public Output<Optional<Boolean>> allowBranchToBranchTraffic() {
+        return Codegen.optional(this.allowBranchToBranchTraffic);
     }
     /**
      * The azureFirewall associated with this VirtualHub.
@@ -76,8 +77,8 @@ public class VirtualHub extends com.pulumi.resources.CustomResource {
      * @return The azureFirewall associated with this VirtualHub.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> azureFirewall() {
-        return this.azureFirewall;
+    public Output<Optional<SubResourceResponse>> azureFirewall() {
+        return Codegen.optional(this.azureFirewall);
     }
     /**
      * List of references to Bgp Connections.
@@ -118,8 +119,8 @@ public class VirtualHub extends com.pulumi.resources.CustomResource {
      * @return The expressRouteGateway associated with this VirtualHub.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> expressRouteGateway() {
-        return this.expressRouteGateway;
+    public Output<Optional<SubResourceResponse>> expressRouteGateway() {
+        return Codegen.optional(this.expressRouteGateway);
     }
     /**
      * List of references to IpConfigurations.
@@ -174,8 +175,8 @@ public class VirtualHub extends com.pulumi.resources.CustomResource {
      * @return The P2SVpnGateway associated with this VirtualHub.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> p2SVpnGateway() {
-        return this.p2SVpnGateway;
+    public Output<Optional<SubResourceResponse>> p2SVpnGateway() {
+        return Codegen.optional(this.p2SVpnGateway);
     }
     /**
      * The provisioning state of the virtual hub resource.
@@ -202,8 +203,8 @@ public class VirtualHub extends com.pulumi.resources.CustomResource {
      * @return The routeTable associated with this virtual hub.
      * 
      */
-    public Output</* @Nullable */ VirtualHubRouteTableResponse> routeTable() {
-        return this.routeTable;
+    public Output<Optional<VirtualHubRouteTableResponse>> routeTable() {
+        return Codegen.optional(this.routeTable);
     }
     /**
      * The routing state.
@@ -230,8 +231,8 @@ public class VirtualHub extends com.pulumi.resources.CustomResource {
      * @return The securityPartnerProvider associated with this VirtualHub.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> securityPartnerProvider() {
-        return this.securityPartnerProvider;
+    public Output<Optional<SubResourceResponse>> securityPartnerProvider() {
+        return Codegen.optional(this.securityPartnerProvider);
     }
     /**
      * The Security Provider name.
@@ -244,8 +245,8 @@ public class VirtualHub extends com.pulumi.resources.CustomResource {
      * @return The Security Provider name.
      * 
      */
-    public Output</* @Nullable */ String> securityProviderName() {
-        return this.securityProviderName;
+    public Output<Optional<String>> securityProviderName() {
+        return Codegen.optional(this.securityProviderName);
     }
     /**
      * The sku of this VirtualHub.
@@ -258,8 +259,8 @@ public class VirtualHub extends com.pulumi.resources.CustomResource {
      * @return The sku of this VirtualHub.
      * 
      */
-    public Output</* @Nullable */ String> sku() {
-        return this.sku;
+    public Output<Optional<String>> sku() {
+        return Codegen.optional(this.sku);
     }
     /**
      * Resource tags.
@@ -272,8 +273,8 @@ public class VirtualHub extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type.
@@ -300,8 +301,8 @@ public class VirtualHub extends com.pulumi.resources.CustomResource {
      * @return List of all virtual hub route table v2s associated with this VirtualHub.
      * 
      */
-    public Output</* @Nullable */ List<VirtualHubRouteTableV2Response>> virtualHubRouteTableV2s() {
-        return this.virtualHubRouteTableV2s;
+    public Output<Optional<List<VirtualHubRouteTableV2Response>>> virtualHubRouteTableV2s() {
+        return Codegen.optional(this.virtualHubRouteTableV2s);
     }
     /**
      * VirtualRouter ASN.
@@ -314,8 +315,8 @@ public class VirtualHub extends com.pulumi.resources.CustomResource {
      * @return VirtualRouter ASN.
      * 
      */
-    public Output</* @Nullable */ Double> virtualRouterAsn() {
-        return this.virtualRouterAsn;
+    public Output<Optional<Double>> virtualRouterAsn() {
+        return Codegen.optional(this.virtualRouterAsn);
     }
     /**
      * VirtualRouter IPs.
@@ -328,8 +329,8 @@ public class VirtualHub extends com.pulumi.resources.CustomResource {
      * @return VirtualRouter IPs.
      * 
      */
-    public Output</* @Nullable */ List<String>> virtualRouterIps() {
-        return this.virtualRouterIps;
+    public Output<Optional<List<String>>> virtualRouterIps() {
+        return Codegen.optional(this.virtualRouterIps);
     }
     /**
      * The VirtualWAN to which the VirtualHub belongs.
@@ -342,8 +343,8 @@ public class VirtualHub extends com.pulumi.resources.CustomResource {
      * @return The VirtualWAN to which the VirtualHub belongs.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> virtualWan() {
-        return this.virtualWan;
+    public Output<Optional<SubResourceResponse>> virtualWan() {
+        return Codegen.optional(this.virtualWan);
     }
     /**
      * The VpnGateway associated with this VirtualHub.
@@ -356,8 +357,8 @@ public class VirtualHub extends com.pulumi.resources.CustomResource {
      * @return The VpnGateway associated with this VirtualHub.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> vpnGateway() {
-        return this.vpnGateway;
+    public Output<Optional<SubResourceResponse>> vpnGateway() {
+        return Codegen.optional(this.vpnGateway);
     }
 
     /**

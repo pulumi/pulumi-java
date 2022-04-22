@@ -14,6 +14,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class PrivateLinkForAzureAd extends com.pulumi.resources.CustomResource {
      * @return Flag indicating whether all tenants are allowed
      * 
      */
-    public Output</* @Nullable */ Boolean> allTenants() {
-        return this.allTenants;
+    public Output<Optional<Boolean>> allTenants() {
+        return Codegen.optional(this.allTenants);
     }
     /**
      * Name of this resource.
@@ -58,8 +59,8 @@ public class PrivateLinkForAzureAd extends com.pulumi.resources.CustomResource {
      * @return Name of this resource.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * Guid of the owner tenant
@@ -72,8 +73,8 @@ public class PrivateLinkForAzureAd extends com.pulumi.resources.CustomResource {
      * @return Guid of the owner tenant
      * 
      */
-    public Output</* @Nullable */ String> ownerTenantId() {
-        return this.ownerTenantId;
+    public Output<Optional<String>> ownerTenantId() {
+        return Codegen.optional(this.ownerTenantId);
     }
     /**
      * Name of the resource group
@@ -86,8 +87,8 @@ public class PrivateLinkForAzureAd extends com.pulumi.resources.CustomResource {
      * @return Name of the resource group
      * 
      */
-    public Output</* @Nullable */ String> resourceGroup() {
-        return this.resourceGroup;
+    public Output<Optional<String>> resourceGroup() {
+        return Codegen.optional(this.resourceGroup);
     }
     /**
      * Name of the private link policy resource
@@ -100,8 +101,8 @@ public class PrivateLinkForAzureAd extends com.pulumi.resources.CustomResource {
      * @return Name of the private link policy resource
      * 
      */
-    public Output</* @Nullable */ String> resourceName() {
-        return this.resourceName;
+    public Output<Optional<String>> resourceName() {
+        return Codegen.optional(this.resourceName);
     }
     /**
      * Subscription Identifier
@@ -114,8 +115,8 @@ public class PrivateLinkForAzureAd extends com.pulumi.resources.CustomResource {
      * @return Subscription Identifier
      * 
      */
-    public Output</* @Nullable */ String> subscriptionId() {
-        return this.subscriptionId;
+    public Output<Optional<String>> subscriptionId() {
+        return Codegen.optional(this.subscriptionId);
     }
     /**
      * Resource tags.
@@ -128,8 +129,8 @@ public class PrivateLinkForAzureAd extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The list of tenantIds.
@@ -142,8 +143,8 @@ public class PrivateLinkForAzureAd extends com.pulumi.resources.CustomResource {
      * @return The list of tenantIds.
      * 
      */
-    public Output</* @Nullable */ List<String>> tenants() {
-        return this.tenants;
+    public Output<Optional<List<String>>> tenants() {
+        return Codegen.optional(this.tenants);
     }
     /**
      * Type of this resource.

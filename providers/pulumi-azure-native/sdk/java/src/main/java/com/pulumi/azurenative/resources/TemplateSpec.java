@@ -16,6 +16,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class TemplateSpec extends com.pulumi.resources.CustomResource {
      * @return Template Spec description.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Template Spec display name.
@@ -60,8 +61,8 @@ public class TemplateSpec extends com.pulumi.resources.CustomResource {
      * @return Template Spec display name.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * The location of the Template Spec. It cannot be changed after Template Spec creation. It must be one of the supported Azure locations.
@@ -88,8 +89,8 @@ public class TemplateSpec extends com.pulumi.resources.CustomResource {
      * @return The Template Spec metadata. Metadata is an open-ended object and is typically a collection of key-value pairs.
      * 
      */
-    public Output</* @Nullable */ Object> metadata() {
-        return this.metadata;
+    public Output<Optional<Object>> metadata() {
+        return Codegen.optional(this.metadata);
     }
     /**
      * Name of this resource.
@@ -130,8 +131,8 @@ public class TemplateSpec extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Type of this resource.

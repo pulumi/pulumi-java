@@ -15,6 +15,7 @@ import java.lang.Double;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -59,8 +60,8 @@ public class VirtualRouter extends com.pulumi.resources.CustomResource {
      * @return The Gateway on which VirtualRouter is hosted.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> hostedGateway() {
-        return this.hostedGateway;
+    public Output<Optional<SubResourceResponse>> hostedGateway() {
+        return Codegen.optional(this.hostedGateway);
     }
     /**
      * The Subnet on which VirtualRouter is hosted.
@@ -73,8 +74,8 @@ public class VirtualRouter extends com.pulumi.resources.CustomResource {
      * @return The Subnet on which VirtualRouter is hosted.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> hostedSubnet() {
-        return this.hostedSubnet;
+    public Output<Optional<SubResourceResponse>> hostedSubnet() {
+        return Codegen.optional(this.hostedSubnet);
     }
     /**
      * Resource location.
@@ -87,8 +88,8 @@ public class VirtualRouter extends com.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * Resource name.
@@ -143,8 +144,8 @@ public class VirtualRouter extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type.
@@ -171,8 +172,8 @@ public class VirtualRouter extends com.pulumi.resources.CustomResource {
      * @return VirtualRouter ASN.
      * 
      */
-    public Output</* @Nullable */ Double> virtualRouterAsn() {
-        return this.virtualRouterAsn;
+    public Output<Optional<Double>> virtualRouterAsn() {
+        return Codegen.optional(this.virtualRouterAsn);
     }
     /**
      * VirtualRouter IPs.
@@ -185,8 +186,8 @@ public class VirtualRouter extends com.pulumi.resources.CustomResource {
      * @return VirtualRouter IPs.
      * 
      */
-    public Output</* @Nullable */ List<String>> virtualRouterIps() {
-        return this.virtualRouterIps;
+    public Output<Optional<List<String>>> virtualRouterIps() {
+        return Codegen.optional(this.virtualRouterIps);
     }
 
     /**

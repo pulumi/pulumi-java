@@ -18,6 +18,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -48,8 +49,8 @@ public class Kpi extends com.pulumi.resources.CustomResource {
      * @return The aliases.
      * 
      */
-    public Output</* @Nullable */ List<KpiAliasResponse>> aliases() {
-        return this.aliases;
+    public Output<Optional<List<KpiAliasResponse>>> aliases() {
+        return Codegen.optional(this.aliases);
     }
     /**
      * The calculation window.
@@ -76,8 +77,8 @@ public class Kpi extends com.pulumi.resources.CustomResource {
      * @return Name of calculation window field.
      * 
      */
-    public Output</* @Nullable */ String> calculationWindowFieldName() {
-        return this.calculationWindowFieldName;
+    public Output<Optional<String>> calculationWindowFieldName() {
+        return Codegen.optional(this.calculationWindowFieldName);
     }
     /**
      * Localized description for the KPI.
@@ -90,8 +91,8 @@ public class Kpi extends com.pulumi.resources.CustomResource {
      * @return Localized description for the KPI.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> description() {
-        return this.description;
+    public Output<Optional<Map<String,String>>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Localized display name for the KPI.
@@ -104,8 +105,8 @@ public class Kpi extends com.pulumi.resources.CustomResource {
      * @return Localized display name for the KPI.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> displayName() {
-        return this.displayName;
+    public Output<Optional<Map<String,String>>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * The mapping entity type.
@@ -160,8 +161,8 @@ public class Kpi extends com.pulumi.resources.CustomResource {
      * @return The KPI extracts.
      * 
      */
-    public Output</* @Nullable */ List<KpiExtractResponse>> extracts() {
-        return this.extracts;
+    public Output<Optional<List<KpiExtractResponse>>> extracts() {
+        return Codegen.optional(this.extracts);
     }
     /**
      * The filter expression for the KPI.
@@ -174,8 +175,8 @@ public class Kpi extends com.pulumi.resources.CustomResource {
      * @return The filter expression for the KPI.
      * 
      */
-    public Output</* @Nullable */ String> filter() {
-        return this.filter;
+    public Output<Optional<String>> filter() {
+        return Codegen.optional(this.filter);
     }
     /**
      * The computation function for the KPI.
@@ -202,8 +203,8 @@ public class Kpi extends com.pulumi.resources.CustomResource {
      * @return the group by properties for the KPI.
      * 
      */
-    public Output</* @Nullable */ List<String>> groupBy() {
-        return this.groupBy;
+    public Output<Optional<List<String>>> groupBy() {
+        return Codegen.optional(this.groupBy);
     }
     /**
      * The KPI GroupByMetadata.
@@ -300,8 +301,8 @@ public class Kpi extends com.pulumi.resources.CustomResource {
      * @return The KPI thresholds.
      * 
      */
-    public Output</* @Nullable */ KpiThresholdsResponse> thresHolds() {
-        return this.thresHolds;
+    public Output<Optional<KpiThresholdsResponse>> thresHolds() {
+        return Codegen.optional(this.thresHolds);
     }
     /**
      * Resource type.
@@ -328,8 +329,8 @@ public class Kpi extends com.pulumi.resources.CustomResource {
      * @return The unit of measurement for the KPI.
      * 
      */
-    public Output</* @Nullable */ String> unit() {
-        return this.unit;
+    public Output<Optional<String>> unit() {
+        return Codegen.optional(this.unit);
     }
 
     /**

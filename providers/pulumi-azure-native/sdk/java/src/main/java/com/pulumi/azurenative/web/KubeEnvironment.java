@@ -17,6 +17,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -39,8 +40,8 @@ public class KubeEnvironment extends com.pulumi.resources.CustomResource {
     @Export(name="aksResourceID", type=String.class, parameters={})
     private Output</* @Nullable */ String> aksResourceID;
 
-    public Output</* @Nullable */ String> aksResourceID() {
-        return this.aksResourceID;
+    public Output<Optional<String>> aksResourceID() {
+        return Codegen.optional(this.aksResourceID);
     }
     /**
      * Cluster configuration which enables the log daemon to export
@@ -57,8 +58,8 @@ public class KubeEnvironment extends com.pulumi.resources.CustomResource {
      * supported
      * 
      */
-    public Output</* @Nullable */ AppLogsConfigurationResponse> appLogsConfiguration() {
-        return this.appLogsConfiguration;
+    public Output<Optional<AppLogsConfigurationResponse>> appLogsConfiguration() {
+        return Codegen.optional(this.appLogsConfiguration);
     }
     /**
      * Cluster configuration which determines the ARC cluster
@@ -75,8 +76,8 @@ public class KubeEnvironment extends com.pulumi.resources.CustomResource {
      * FrontEnd Service ArtifactsStorageType etc.
      * 
      */
-    public Output</* @Nullable */ ArcConfigurationResponse> arcConfiguration() {
-        return this.arcConfiguration;
+    public Output<Optional<ArcConfigurationResponse>> arcConfiguration() {
+        return Codegen.optional(this.arcConfiguration);
     }
     /**
      * Default Domain Name for the cluster
@@ -117,8 +118,8 @@ public class KubeEnvironment extends com.pulumi.resources.CustomResource {
      * @return Extended Location.
      * 
      */
-    public Output</* @Nullable */ ExtendedLocationResponse> extendedLocation() {
-        return this.extendedLocation;
+    public Output<Optional<ExtendedLocationResponse>> extendedLocation() {
+        return Codegen.optional(this.extendedLocation);
     }
     /**
      * Only visible within Vnet/Subnet
@@ -131,8 +132,8 @@ public class KubeEnvironment extends com.pulumi.resources.CustomResource {
      * @return Only visible within Vnet/Subnet
      * 
      */
-    public Output</* @Nullable */ Boolean> internalLoadBalancerEnabled() {
-        return this.internalLoadBalancerEnabled;
+    public Output<Optional<Boolean>> internalLoadBalancerEnabled() {
+        return Codegen.optional(this.internalLoadBalancerEnabled);
     }
     /**
      * Kind of resource.
@@ -145,8 +146,8 @@ public class KubeEnvironment extends com.pulumi.resources.CustomResource {
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> kind() {
-        return this.kind;
+    public Output<Optional<String>> kind() {
+        return Codegen.optional(this.kind);
     }
     /**
      * Resource Location.
@@ -201,8 +202,8 @@ public class KubeEnvironment extends com.pulumi.resources.CustomResource {
      * @return Static IP of the KubeEnvironment
      * 
      */
-    public Output</* @Nullable */ String> staticIp() {
-        return this.staticIp;
+    public Output<Optional<String>> staticIp() {
+        return Codegen.optional(this.staticIp);
     }
     /**
      * Resource tags.
@@ -215,8 +216,8 @@ public class KubeEnvironment extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type.

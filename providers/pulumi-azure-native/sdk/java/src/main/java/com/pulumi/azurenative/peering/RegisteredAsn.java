@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class RegisteredAsn extends com.pulumi.resources.CustomResource {
      * @return The customer&#39;s ASN from which traffic originates.
      * 
      */
-    public Output</* @Nullable */ Integer> asn() {
-        return this.asn;
+    public Output<Optional<Integer>> asn() {
+        return Codegen.optional(this.asn);
     }
     /**
      * The name of the resource.

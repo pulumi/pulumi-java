@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class WebAppVnetConnection extends com.pulumi.resources.CustomResource {
      * Point-To-Site VPN connection.
      * 
      */
-    public Output</* @Nullable */ String> certBlob() {
-        return this.certBlob;
+    public Output<Optional<String>> certBlob() {
+        return Codegen.optional(this.certBlob);
     }
     /**
      * The client certificate thumbprint.
@@ -71,8 +72,8 @@ public class WebAppVnetConnection extends com.pulumi.resources.CustomResource {
      * @return DNS servers to be used by this Virtual Network. This should be a comma-separated list of IP addresses.
      * 
      */
-    public Output</* @Nullable */ String> dnsServers() {
-        return this.dnsServers;
+    public Output<Optional<String>> dnsServers() {
+        return Codegen.optional(this.dnsServers);
     }
     /**
      * Flag that is used to denote if this is VNET injection
@@ -85,8 +86,8 @@ public class WebAppVnetConnection extends com.pulumi.resources.CustomResource {
      * @return Flag that is used to denote if this is VNET injection
      * 
      */
-    public Output</* @Nullable */ Boolean> isSwift() {
-        return this.isSwift;
+    public Output<Optional<Boolean>> isSwift() {
+        return Codegen.optional(this.isSwift);
     }
     /**
      * Kind of resource.
@@ -99,8 +100,8 @@ public class WebAppVnetConnection extends com.pulumi.resources.CustomResource {
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> kind() {
-        return this.kind;
+    public Output<Optional<String>> kind() {
+        return Codegen.optional(this.kind);
     }
     /**
      * Resource Name.
@@ -169,8 +170,8 @@ public class WebAppVnetConnection extends com.pulumi.resources.CustomResource {
      * @return The Virtual Network&#39;s resource ID.
      * 
      */
-    public Output</* @Nullable */ String> vnetResourceId() {
-        return this.vnetResourceId;
+    public Output<Optional<String>> vnetResourceId() {
+        return Codegen.optional(this.vnetResourceId);
     }
 
     /**

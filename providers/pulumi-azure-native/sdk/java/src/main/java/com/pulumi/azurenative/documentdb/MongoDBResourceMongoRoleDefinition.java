@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class MongoDBResourceMongoRoleDefinition extends com.pulumi.resources.Cus
      * @return The database name for which access is being granted for this Role Definition.
      * 
      */
-    public Output</* @Nullable */ String> databaseName() {
-        return this.databaseName;
+    public Output<Optional<String>> databaseName() {
+        return Codegen.optional(this.databaseName);
     }
     /**
      * The name of the database account.
@@ -72,8 +73,8 @@ public class MongoDBResourceMongoRoleDefinition extends com.pulumi.resources.Cus
      * @return A set of privileges contained by the Role Definition. This will allow application of this Role Definition on the entire database account or any underlying Database / Collection. Scopes higher than Database are not enforceable as privilege.
      * 
      */
-    public Output</* @Nullable */ List<PrivilegeResponse>> privileges() {
-        return this.privileges;
+    public Output<Optional<List<PrivilegeResponse>>> privileges() {
+        return Codegen.optional(this.privileges);
     }
     /**
      * A user-friendly name for the Role Definition. Must be unique for the database account.
@@ -86,8 +87,8 @@ public class MongoDBResourceMongoRoleDefinition extends com.pulumi.resources.Cus
      * @return A user-friendly name for the Role Definition. Must be unique for the database account.
      * 
      */
-    public Output</* @Nullable */ String> roleName() {
-        return this.roleName;
+    public Output<Optional<String>> roleName() {
+        return Codegen.optional(this.roleName);
     }
     /**
      * The set of roles inherited by this Role Definition.
@@ -100,8 +101,8 @@ public class MongoDBResourceMongoRoleDefinition extends com.pulumi.resources.Cus
      * @return The set of roles inherited by this Role Definition.
      * 
      */
-    public Output</* @Nullable */ List<RoleResponse>> roles() {
-        return this.roles;
+    public Output<Optional<List<RoleResponse>>> roles() {
+        return Codegen.optional(this.roles);
     }
     /**
      * The type of Azure resource.

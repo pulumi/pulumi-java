@@ -17,6 +17,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -61,8 +62,8 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return This can be used to restrict traffic from specific IPs instead of all IPs. Note: These are considered only if PublicNetworkAccess is enabled.
      * 
      */
-    public Output</* @Nullable */ List<InboundIpRuleResponse>> inboundIpRules() {
-        return this.inboundIpRules;
+    public Output<Optional<List<InboundIpRuleResponse>>> inboundIpRules() {
+        return Codegen.optional(this.inboundIpRules);
     }
     /**
      * This determines the format that Event Grid should expect for incoming events published to the domain.
@@ -75,8 +76,8 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return This determines the format that Event Grid should expect for incoming events published to the domain.
      * 
      */
-    public Output</* @Nullable */ String> inputSchema() {
-        return this.inputSchema;
+    public Output<Optional<String>> inputSchema() {
+        return Codegen.optional(this.inputSchema);
     }
     /**
      * Information about the InputSchemaMapping which specified the info about mapping event payload.
@@ -89,8 +90,8 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return Information about the InputSchemaMapping which specified the info about mapping event payload.
      * 
      */
-    public Output</* @Nullable */ JsonInputSchemaMappingResponse> inputSchemaMapping() {
-        return this.inputSchemaMapping;
+    public Output<Optional<JsonInputSchemaMappingResponse>> inputSchemaMapping() {
+        return Codegen.optional(this.inputSchemaMapping);
     }
     /**
      * Location of the resource.
@@ -175,8 +176,8 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * You can further restrict to specific IPs by configuring &lt;seealso cref=&#34;P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.DomainProperties.InboundIpRules&#34; /&gt;
      * 
      */
-    public Output</* @Nullable */ String> publicNetworkAccess() {
-        return this.publicNetworkAccess;
+    public Output<Optional<String>> publicNetworkAccess() {
+        return Codegen.optional(this.publicNetworkAccess);
     }
     /**
      * The system metadata relating to Domain resource.
@@ -203,8 +204,8 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return Tags of the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Type of the resource.

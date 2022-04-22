@@ -18,6 +18,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -90,8 +91,8 @@ public class Table extends com.pulumi.resources.CustomResource {
      * @return The table plan.
      * 
      */
-    public Output</* @Nullable */ String> plan() {
-        return this.plan;
+    public Output<Optional<String>> plan() {
+        return Codegen.optional(this.plan);
     }
     /**
      * Table&#39;s current provisioning state. If set to &#39;updating&#39;, indicates a resource lock due to ongoing operation, forbidding any update to the table until the ongoing operation is concluded.
@@ -118,8 +119,8 @@ public class Table extends com.pulumi.resources.CustomResource {
      * @return Parameters of the restore operation that initiated this table.
      * 
      */
-    public Output</* @Nullable */ RestoredLogsResponse> restoredLogs() {
-        return this.restoredLogs;
+    public Output<Optional<RestoredLogsResponse>> restoredLogs() {
+        return Codegen.optional(this.restoredLogs);
     }
     /**
      * Search job execution statistics.
@@ -132,8 +133,8 @@ public class Table extends com.pulumi.resources.CustomResource {
      * @return Search job execution statistics.
      * 
      */
-    public Output</* @Nullable */ ResultStatisticsResponse> resultStatistics() {
-        return this.resultStatistics;
+    public Output<Optional<ResultStatisticsResponse>> resultStatistics() {
+        return Codegen.optional(this.resultStatistics);
     }
     /**
      * The data table data retention in days, between 4 and 730. Setting this property to null will default to the workspace retention.
@@ -146,8 +147,8 @@ public class Table extends com.pulumi.resources.CustomResource {
      * @return The data table data retention in days, between 4 and 730. Setting this property to null will default to the workspace retention.
      * 
      */
-    public Output</* @Nullable */ Integer> retentionInDays() {
-        return this.retentionInDays;
+    public Output<Optional<Integer>> retentionInDays() {
+        return Codegen.optional(this.retentionInDays);
     }
     /**
      * Table schema.
@@ -160,8 +161,8 @@ public class Table extends com.pulumi.resources.CustomResource {
      * @return Table schema.
      * 
      */
-    public Output</* @Nullable */ SchemaResponse> schema() {
-        return this.schema;
+    public Output<Optional<SchemaResponse>> schema() {
+        return Codegen.optional(this.schema);
     }
     /**
      * Parameters of the search job that initiated this table.
@@ -174,8 +175,8 @@ public class Table extends com.pulumi.resources.CustomResource {
      * @return Parameters of the search job that initiated this table.
      * 
      */
-    public Output</* @Nullable */ SearchResultsResponse> searchResults() {
-        return this.searchResults;
+    public Output<Optional<SearchResultsResponse>> searchResults() {
+        return Codegen.optional(this.searchResults);
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
@@ -202,8 +203,8 @@ public class Table extends com.pulumi.resources.CustomResource {
      * @return The table data total retention in days, between 4 and 2555. Setting this property to null will default to table retention.
      * 
      */
-    public Output</* @Nullable */ Integer> totalRetentionInDays() {
-        return this.totalRetentionInDays;
+    public Output<Optional<Integer>> totalRetentionInDays() {
+        return Codegen.optional(this.totalRetentionInDays);
     }
     /**
      * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;

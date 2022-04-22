@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -58,8 +59,8 @@ public class PrivateEndpointConnection extends com.pulumi.resources.CustomResour
      * @return The private endpoint information.
      * 
      */
-    public Output</* @Nullable */ PrivateEndpointResponse> privateEndpoint() {
-        return this.privateEndpoint;
+    public Output<Optional<PrivateEndpointResponse>> privateEndpoint() {
+        return Codegen.optional(this.privateEndpoint);
     }
     /**
      * The private link service connection state.
@@ -72,8 +73,8 @@ public class PrivateEndpointConnection extends com.pulumi.resources.CustomResour
      * @return The private link service connection state.
      * 
      */
-    public Output</* @Nullable */ PrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState() {
-        return this.privateLinkServiceConnectionState;
+    public Output<Optional<PrivateLinkServiceConnectionStateResponse>> privateLinkServiceConnectionState() {
+        return Codegen.optional(this.privateLinkServiceConnectionState);
     }
     /**
      * The provisioning state.

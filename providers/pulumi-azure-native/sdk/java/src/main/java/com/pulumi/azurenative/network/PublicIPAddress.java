@@ -23,6 +23,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -53,8 +54,8 @@ public class PublicIPAddress extends com.pulumi.resources.CustomResource {
      * @return The DDoS protection custom policy associated with the public IP address.
      * 
      */
-    public Output</* @Nullable */ DdosSettingsResponse> ddosSettings() {
-        return this.ddosSettings;
+    public Output<Optional<DdosSettingsResponse>> ddosSettings() {
+        return Codegen.optional(this.ddosSettings);
     }
     /**
      * The FQDN of the DNS record associated with the public IP address.
@@ -67,8 +68,8 @@ public class PublicIPAddress extends com.pulumi.resources.CustomResource {
      * @return The FQDN of the DNS record associated with the public IP address.
      * 
      */
-    public Output</* @Nullable */ PublicIPAddressDnsSettingsResponse> dnsSettings() {
-        return this.dnsSettings;
+    public Output<Optional<PublicIPAddressDnsSettingsResponse>> dnsSettings() {
+        return Codegen.optional(this.dnsSettings);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
@@ -95,8 +96,8 @@ public class PublicIPAddress extends com.pulumi.resources.CustomResource {
      * @return The extended location of the public ip address.
      * 
      */
-    public Output</* @Nullable */ ExtendedLocationResponse> extendedLocation() {
-        return this.extendedLocation;
+    public Output<Optional<ExtendedLocationResponse>> extendedLocation() {
+        return Codegen.optional(this.extendedLocation);
     }
     /**
      * The idle timeout of the public IP address.
@@ -109,8 +110,8 @@ public class PublicIPAddress extends com.pulumi.resources.CustomResource {
      * @return The idle timeout of the public IP address.
      * 
      */
-    public Output</* @Nullable */ Integer> idleTimeoutInMinutes() {
-        return this.idleTimeoutInMinutes;
+    public Output<Optional<Integer>> idleTimeoutInMinutes() {
+        return Codegen.optional(this.idleTimeoutInMinutes);
     }
     /**
      * The IP address associated with the public IP address resource.
@@ -123,8 +124,8 @@ public class PublicIPAddress extends com.pulumi.resources.CustomResource {
      * @return The IP address associated with the public IP address resource.
      * 
      */
-    public Output</* @Nullable */ String> ipAddress() {
-        return this.ipAddress;
+    public Output<Optional<String>> ipAddress() {
+        return Codegen.optional(this.ipAddress);
     }
     /**
      * The IP configuration associated with the public IP address.
@@ -151,8 +152,8 @@ public class PublicIPAddress extends com.pulumi.resources.CustomResource {
      * @return The list of tags associated with the public IP address.
      * 
      */
-    public Output</* @Nullable */ List<IpTagResponse>> ipTags() {
-        return this.ipTags;
+    public Output<Optional<List<IpTagResponse>>> ipTags() {
+        return Codegen.optional(this.ipTags);
     }
     /**
      * The linked public IP address of the public IP address resource.
@@ -165,8 +166,8 @@ public class PublicIPAddress extends com.pulumi.resources.CustomResource {
      * @return The linked public IP address of the public IP address resource.
      * 
      */
-    public Output</* @Nullable */ PublicIPAddressResponse> linkedPublicIPAddress() {
-        return this.linkedPublicIPAddress;
+    public Output<Optional<PublicIPAddressResponse>> linkedPublicIPAddress() {
+        return Codegen.optional(this.linkedPublicIPAddress);
     }
     /**
      * Resource location.
@@ -179,8 +180,8 @@ public class PublicIPAddress extends com.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * Migration phase of Public IP Address.
@@ -193,8 +194,8 @@ public class PublicIPAddress extends com.pulumi.resources.CustomResource {
      * @return Migration phase of Public IP Address.
      * 
      */
-    public Output</* @Nullable */ String> migrationPhase() {
-        return this.migrationPhase;
+    public Output<Optional<String>> migrationPhase() {
+        return Codegen.optional(this.migrationPhase);
     }
     /**
      * Resource name.
@@ -221,8 +222,8 @@ public class PublicIPAddress extends com.pulumi.resources.CustomResource {
      * @return The NatGateway for the Public IP address.
      * 
      */
-    public Output</* @Nullable */ NatGatewayResponse> natGateway() {
-        return this.natGateway;
+    public Output<Optional<NatGatewayResponse>> natGateway() {
+        return Codegen.optional(this.natGateway);
     }
     /**
      * The provisioning state of the public IP address resource.
@@ -249,8 +250,8 @@ public class PublicIPAddress extends com.pulumi.resources.CustomResource {
      * @return The public IP address version.
      * 
      */
-    public Output</* @Nullable */ String> publicIPAddressVersion() {
-        return this.publicIPAddressVersion;
+    public Output<Optional<String>> publicIPAddressVersion() {
+        return Codegen.optional(this.publicIPAddressVersion);
     }
     /**
      * The public IP address allocation method.
@@ -263,8 +264,8 @@ public class PublicIPAddress extends com.pulumi.resources.CustomResource {
      * @return The public IP address allocation method.
      * 
      */
-    public Output</* @Nullable */ String> publicIPAllocationMethod() {
-        return this.publicIPAllocationMethod;
+    public Output<Optional<String>> publicIPAllocationMethod() {
+        return Codegen.optional(this.publicIPAllocationMethod);
     }
     /**
      * The Public IP Prefix this Public IP Address should be allocated from.
@@ -277,8 +278,8 @@ public class PublicIPAddress extends com.pulumi.resources.CustomResource {
      * @return The Public IP Prefix this Public IP Address should be allocated from.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> publicIPPrefix() {
-        return this.publicIPPrefix;
+    public Output<Optional<SubResourceResponse>> publicIPPrefix() {
+        return Codegen.optional(this.publicIPPrefix);
     }
     /**
      * The resource GUID property of the public IP address resource.
@@ -305,8 +306,8 @@ public class PublicIPAddress extends com.pulumi.resources.CustomResource {
      * @return The service public IP address of the public IP address resource.
      * 
      */
-    public Output</* @Nullable */ PublicIPAddressResponse> servicePublicIPAddress() {
-        return this.servicePublicIPAddress;
+    public Output<Optional<PublicIPAddressResponse>> servicePublicIPAddress() {
+        return Codegen.optional(this.servicePublicIPAddress);
     }
     /**
      * The public IP address SKU.
@@ -319,8 +320,8 @@ public class PublicIPAddress extends com.pulumi.resources.CustomResource {
      * @return The public IP address SKU.
      * 
      */
-    public Output</* @Nullable */ PublicIPAddressSkuResponse> sku() {
-        return this.sku;
+    public Output<Optional<PublicIPAddressSkuResponse>> sku() {
+        return Codegen.optional(this.sku);
     }
     /**
      * Resource tags.
@@ -333,8 +334,8 @@ public class PublicIPAddress extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type.
@@ -361,8 +362,8 @@ public class PublicIPAddress extends com.pulumi.resources.CustomResource {
      * @return A list of availability zones denoting the IP allocated for the resource needs to come from.
      * 
      */
-    public Output</* @Nullable */ List<String>> zones() {
-        return this.zones;
+    public Output<Optional<List<String>>> zones() {
+        return Codegen.optional(this.zones);
     }
 
     /**

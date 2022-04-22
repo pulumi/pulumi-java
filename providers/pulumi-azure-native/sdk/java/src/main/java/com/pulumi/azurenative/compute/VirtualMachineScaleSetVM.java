@@ -28,6 +28,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -55,8 +56,8 @@ public class VirtualMachineScaleSetVM extends com.pulumi.resources.CustomResourc
      * @return Specifies additional capabilities enabled or disabled on the virtual machine in the scale set. For instance: whether the virtual machine has the capability to support attaching managed data disks with UltraSSD_LRS storage account type.
      * 
      */
-    public Output</* @Nullable */ AdditionalCapabilitiesResponse> additionalCapabilities() {
-        return this.additionalCapabilities;
+    public Output<Optional<AdditionalCapabilitiesResponse>> additionalCapabilities() {
+        return Codegen.optional(this.additionalCapabilities);
     }
     /**
      * Specifies information about the availability set that the virtual machine should be assigned to. Virtual machines specified in the same availability set are allocated to different nodes to maximize availability. For more information about availability sets, see [Availability sets overview](https://docs.microsoft.com/azure/virtual-machines/availability-set-overview). &lt;br&gt;&lt;br&gt; For more information on Azure planned maintenance, see [Maintenance and updates for Virtual Machines in Azure](https://docs.microsoft.com/azure/virtual-machines/maintenance-and-updates) &lt;br&gt;&lt;br&gt; Currently, a VM can only be added to availability set at creation time. An existing VM cannot be added to an availability set.
@@ -69,8 +70,8 @@ public class VirtualMachineScaleSetVM extends com.pulumi.resources.CustomResourc
      * @return Specifies information about the availability set that the virtual machine should be assigned to. Virtual machines specified in the same availability set are allocated to different nodes to maximize availability. For more information about availability sets, see [Availability sets overview](https://docs.microsoft.com/azure/virtual-machines/availability-set-overview). &lt;br&gt;&lt;br&gt; For more information on Azure planned maintenance, see [Maintenance and updates for Virtual Machines in Azure](https://docs.microsoft.com/azure/virtual-machines/maintenance-and-updates) &lt;br&gt;&lt;br&gt; Currently, a VM can only be added to availability set at creation time. An existing VM cannot be added to an availability set.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> availabilitySet() {
-        return this.availabilitySet;
+    public Output<Optional<SubResourceResponse>> availabilitySet() {
+        return Codegen.optional(this.availabilitySet);
     }
     /**
      * Specifies the boot diagnostic settings state. &lt;br&gt;&lt;br&gt;Minimum api-version: 2015-06-15.
@@ -83,8 +84,8 @@ public class VirtualMachineScaleSetVM extends com.pulumi.resources.CustomResourc
      * @return Specifies the boot diagnostic settings state. &lt;br&gt;&lt;br&gt;Minimum api-version: 2015-06-15.
      * 
      */
-    public Output</* @Nullable */ DiagnosticsProfileResponse> diagnosticsProfile() {
-        return this.diagnosticsProfile;
+    public Output<Optional<DiagnosticsProfileResponse>> diagnosticsProfile() {
+        return Codegen.optional(this.diagnosticsProfile);
     }
     /**
      * Specifies the hardware settings for the virtual machine.
@@ -97,8 +98,8 @@ public class VirtualMachineScaleSetVM extends com.pulumi.resources.CustomResourc
      * @return Specifies the hardware settings for the virtual machine.
      * 
      */
-    public Output</* @Nullable */ HardwareProfileResponse> hardwareProfile() {
-        return this.hardwareProfile;
+    public Output<Optional<HardwareProfileResponse>> hardwareProfile() {
+        return Codegen.optional(this.hardwareProfile);
     }
     /**
      * The virtual machine instance ID.
@@ -153,8 +154,8 @@ public class VirtualMachineScaleSetVM extends com.pulumi.resources.CustomResourc
      * @return Specifies that the image or disk that is being used was licensed on-premises. &lt;br&gt;&lt;br&gt; Possible values for Windows Server operating system are: &lt;br&gt;&lt;br&gt; Windows_Client &lt;br&gt;&lt;br&gt; Windows_Server &lt;br&gt;&lt;br&gt; Possible values for Linux Server operating system are: &lt;br&gt;&lt;br&gt; RHEL_BYOS (for RHEL) &lt;br&gt;&lt;br&gt; SLES_BYOS (for SUSE) &lt;br&gt;&lt;br&gt; For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/windows/hybrid-use-benefit-licensing) &lt;br&gt;&lt;br&gt; [Azure Hybrid Use Benefit for Linux Server](https://docs.microsoft.com/azure/virtual-machines/linux/azure-hybrid-benefit-linux) &lt;br&gt;&lt;br&gt; Minimum api-version: 2015-06-15
      * 
      */
-    public Output</* @Nullable */ String> licenseType() {
-        return this.licenseType;
+    public Output<Optional<String>> licenseType() {
+        return Codegen.optional(this.licenseType);
     }
     /**
      * Resource location
@@ -209,8 +210,8 @@ public class VirtualMachineScaleSetVM extends com.pulumi.resources.CustomResourc
      * @return Specifies the network interfaces of the virtual machine.
      * 
      */
-    public Output</* @Nullable */ NetworkProfileResponse> networkProfile() {
-        return this.networkProfile;
+    public Output<Optional<NetworkProfileResponse>> networkProfile() {
+        return Codegen.optional(this.networkProfile);
     }
     /**
      * Specifies the network profile configuration of the virtual machine.
@@ -223,8 +224,8 @@ public class VirtualMachineScaleSetVM extends com.pulumi.resources.CustomResourc
      * @return Specifies the network profile configuration of the virtual machine.
      * 
      */
-    public Output</* @Nullable */ VirtualMachineScaleSetVMNetworkProfileConfigurationResponse> networkProfileConfiguration() {
-        return this.networkProfileConfiguration;
+    public Output<Optional<VirtualMachineScaleSetVMNetworkProfileConfigurationResponse>> networkProfileConfiguration() {
+        return Codegen.optional(this.networkProfileConfiguration);
     }
     /**
      * Specifies the operating system settings for the virtual machine.
@@ -237,8 +238,8 @@ public class VirtualMachineScaleSetVM extends com.pulumi.resources.CustomResourc
      * @return Specifies the operating system settings for the virtual machine.
      * 
      */
-    public Output</* @Nullable */ OSProfileResponse> osProfile() {
-        return this.osProfile;
+    public Output<Optional<OSProfileResponse>> osProfile() {
+        return Codegen.optional(this.osProfile);
     }
     /**
      * Specifies information about the marketplace image used to create the virtual machine. This element is only used for marketplace images. Before you can use a marketplace image from an API, you must enable the image for programmatic use.  In the Azure portal, find the marketplace image that you want to use and then click **Want to deploy programmatically, Get Started -&gt;**. Enter any required information and then click **Save**.
@@ -251,8 +252,8 @@ public class VirtualMachineScaleSetVM extends com.pulumi.resources.CustomResourc
      * @return Specifies information about the marketplace image used to create the virtual machine. This element is only used for marketplace images. Before you can use a marketplace image from an API, you must enable the image for programmatic use.  In the Azure portal, find the marketplace image that you want to use and then click **Want to deploy programmatically, Get Started -&gt;**. Enter any required information and then click **Save**.
      * 
      */
-    public Output</* @Nullable */ PlanResponse> plan() {
-        return this.plan;
+    public Output<Optional<PlanResponse>> plan() {
+        return Codegen.optional(this.plan);
     }
     /**
      * Specifies the protection policy of the virtual machine.
@@ -265,8 +266,8 @@ public class VirtualMachineScaleSetVM extends com.pulumi.resources.CustomResourc
      * @return Specifies the protection policy of the virtual machine.
      * 
      */
-    public Output</* @Nullable */ VirtualMachineScaleSetVMProtectionPolicyResponse> protectionPolicy() {
-        return this.protectionPolicy;
+    public Output<Optional<VirtualMachineScaleSetVMProtectionPolicyResponse>> protectionPolicy() {
+        return Codegen.optional(this.protectionPolicy);
     }
     /**
      * The provisioning state, which only appears in the response.
@@ -307,8 +308,8 @@ public class VirtualMachineScaleSetVM extends com.pulumi.resources.CustomResourc
      * @return Specifies the Security related profile settings for the virtual machine.
      * 
      */
-    public Output</* @Nullable */ SecurityProfileResponse> securityProfile() {
-        return this.securityProfile;
+    public Output<Optional<SecurityProfileResponse>> securityProfile() {
+        return Codegen.optional(this.securityProfile);
     }
     /**
      * The virtual machine SKU.
@@ -335,8 +336,8 @@ public class VirtualMachineScaleSetVM extends com.pulumi.resources.CustomResourc
      * @return Specifies the storage settings for the virtual machine disks.
      * 
      */
-    public Output</* @Nullable */ StorageProfileResponse> storageProfile() {
-        return this.storageProfile;
+    public Output<Optional<StorageProfileResponse>> storageProfile() {
+        return Codegen.optional(this.storageProfile);
     }
     /**
      * Resource tags
@@ -349,8 +350,8 @@ public class VirtualMachineScaleSetVM extends com.pulumi.resources.CustomResourc
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type
@@ -377,8 +378,8 @@ public class VirtualMachineScaleSetVM extends com.pulumi.resources.CustomResourc
      * @return UserData for the VM, which must be base-64 encoded. Customer should not pass any secrets in here. &lt;br&gt;&lt;br&gt;Minimum api-version: 2021-03-01
      * 
      */
-    public Output</* @Nullable */ String> userData() {
-        return this.userData;
+    public Output<Optional<String>> userData() {
+        return Codegen.optional(this.userData);
     }
     /**
      * Azure VM unique ID.

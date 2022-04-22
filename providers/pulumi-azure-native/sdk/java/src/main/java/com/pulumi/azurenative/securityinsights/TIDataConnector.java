@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class TIDataConnector extends com.pulumi.resources.CustomResource {
      * @return The available data types for the connector.
      * 
      */
-    public Output</* @Nullable */ TIDataConnectorDataTypesResponse> dataTypes() {
-        return this.dataTypes;
+    public Output<Optional<TIDataConnectorDataTypesResponse>> dataTypes() {
+        return Codegen.optional(this.dataTypes);
     }
     /**
      * Etag of the azure resource
@@ -57,8 +58,8 @@ public class TIDataConnector extends com.pulumi.resources.CustomResource {
      * @return Etag of the azure resource
      * 
      */
-    public Output</* @Nullable */ String> etag() {
-        return this.etag;
+    public Output<Optional<String>> etag() {
+        return Codegen.optional(this.etag);
     }
     /**
      * The kind of the data connector
@@ -101,8 +102,8 @@ public class TIDataConnector extends com.pulumi.resources.CustomResource {
      * @return The tenant id to connect to, and get the data from.
      * 
      */
-    public Output</* @Nullable */ String> tenantId() {
-        return this.tenantId;
+    public Output<Optional<String>> tenantId() {
+        return Codegen.optional(this.tenantId);
     }
     /**
      * The lookback period for the feed to be imported.
@@ -115,8 +116,8 @@ public class TIDataConnector extends com.pulumi.resources.CustomResource {
      * @return The lookback period for the feed to be imported.
      * 
      */
-    public Output</* @Nullable */ String> tipLookbackPeriod() {
-        return this.tipLookbackPeriod;
+    public Output<Optional<String>> tipLookbackPeriod() {
+        return Codegen.optional(this.tipLookbackPeriod);
     }
     /**
      * Azure resource type

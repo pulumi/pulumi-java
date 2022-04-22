@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -72,8 +73,8 @@ public class MyWorkbook extends com.pulumi.resources.CustomResource {
      * @return Resource etag
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> etag() {
-        return this.etag;
+    public Output<Optional<Map<String,String>>> etag() {
+        return Codegen.optional(this.etag);
     }
     /**
      * Identity used for BYOS
@@ -86,8 +87,8 @@ public class MyWorkbook extends com.pulumi.resources.CustomResource {
      * @return Identity used for BYOS
      * 
      */
-    public Output</* @Nullable */ MyWorkbookManagedIdentityResponse> identity() {
-        return this.identity;
+    public Output<Optional<MyWorkbookManagedIdentityResponse>> identity() {
+        return Codegen.optional(this.identity);
     }
     /**
      * The kind of workbook. Choices are user and shared.
@@ -100,8 +101,8 @@ public class MyWorkbook extends com.pulumi.resources.CustomResource {
      * @return The kind of workbook. Choices are user and shared.
      * 
      */
-    public Output</* @Nullable */ String> kind() {
-        return this.kind;
+    public Output<Optional<String>> kind() {
+        return Codegen.optional(this.kind);
     }
     /**
      * Resource location
@@ -114,8 +115,8 @@ public class MyWorkbook extends com.pulumi.resources.CustomResource {
      * @return Resource location
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * Azure resource name
@@ -128,8 +129,8 @@ public class MyWorkbook extends com.pulumi.resources.CustomResource {
      * @return Azure resource name
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * Configuration of this particular private workbook. Configuration data is a string containing valid JSON
@@ -156,8 +157,8 @@ public class MyWorkbook extends com.pulumi.resources.CustomResource {
      * @return Optional resourceId for a source resource.
      * 
      */
-    public Output</* @Nullable */ String> sourceId() {
-        return this.sourceId;
+    public Output<Optional<String>> sourceId() {
+        return Codegen.optional(this.sourceId);
     }
     /**
      * BYOS Storage Account URI
@@ -170,8 +171,8 @@ public class MyWorkbook extends com.pulumi.resources.CustomResource {
      * @return BYOS Storage Account URI
      * 
      */
-    public Output</* @Nullable */ String> storageUri() {
-        return this.storageUri;
+    public Output<Optional<String>> storageUri() {
+        return Codegen.optional(this.storageUri);
     }
     /**
      * Resource tags
@@ -184,8 +185,8 @@ public class MyWorkbook extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Date and time in UTC of the last modification that was made to this private workbook definition.
@@ -212,8 +213,8 @@ public class MyWorkbook extends com.pulumi.resources.CustomResource {
      * @return Azure resource type
      * 
      */
-    public Output</* @Nullable */ String> type() {
-        return this.type;
+    public Output<Optional<String>> type() {
+        return Codegen.optional(this.type);
     }
     /**
      * Unique user id of the specific user that owns this private workbook.
@@ -240,8 +241,8 @@ public class MyWorkbook extends com.pulumi.resources.CustomResource {
      * @return This instance&#39;s version of the data model. This can change as new features are added that can be marked private workbook.
      * 
      */
-    public Output</* @Nullable */ String> version() {
-        return this.version;
+    public Output<Optional<String>> version() {
+        return Codegen.optional(this.version);
     }
 
     /**

@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class SyncMember extends com.pulumi.resources.CustomResource {
      * @return Database name of the member database in the sync member.
      * 
      */
-    public Output</* @Nullable */ String> databaseName() {
-        return this.databaseName;
+    public Output<Optional<String>> databaseName() {
+        return Codegen.optional(this.databaseName);
     }
     /**
      * Database type of the sync member.
@@ -57,8 +58,8 @@ public class SyncMember extends com.pulumi.resources.CustomResource {
      * @return Database type of the sync member.
      * 
      */
-    public Output</* @Nullable */ String> databaseType() {
-        return this.databaseType;
+    public Output<Optional<String>> databaseType() {
+        return Codegen.optional(this.databaseType);
     }
     /**
      * Resource name.
@@ -99,8 +100,8 @@ public class SyncMember extends com.pulumi.resources.CustomResource {
      * @return Server name of the member database in the sync member
      * 
      */
-    public Output</* @Nullable */ String> serverName() {
-        return this.serverName;
+    public Output<Optional<String>> serverName() {
+        return Codegen.optional(this.serverName);
     }
     /**
      * SQL Server database id of the sync member.
@@ -113,8 +114,8 @@ public class SyncMember extends com.pulumi.resources.CustomResource {
      * @return SQL Server database id of the sync member.
      * 
      */
-    public Output</* @Nullable */ String> sqlServerDatabaseId() {
-        return this.sqlServerDatabaseId;
+    public Output<Optional<String>> sqlServerDatabaseId() {
+        return Codegen.optional(this.sqlServerDatabaseId);
     }
     /**
      * ARM resource id of the sync agent in the sync member.
@@ -127,8 +128,8 @@ public class SyncMember extends com.pulumi.resources.CustomResource {
      * @return ARM resource id of the sync agent in the sync member.
      * 
      */
-    public Output</* @Nullable */ String> syncAgentId() {
-        return this.syncAgentId;
+    public Output<Optional<String>> syncAgentId() {
+        return Codegen.optional(this.syncAgentId);
     }
     /**
      * Sync direction of the sync member.
@@ -141,8 +142,8 @@ public class SyncMember extends com.pulumi.resources.CustomResource {
      * @return Sync direction of the sync member.
      * 
      */
-    public Output</* @Nullable */ String> syncDirection() {
-        return this.syncDirection;
+    public Output<Optional<String>> syncDirection() {
+        return Codegen.optional(this.syncDirection);
     }
     /**
      * ARM resource id of the sync member logical database, for sync members in Azure.
@@ -155,8 +156,8 @@ public class SyncMember extends com.pulumi.resources.CustomResource {
      * @return ARM resource id of the sync member logical database, for sync members in Azure.
      * 
      */
-    public Output</* @Nullable */ String> syncMemberAzureDatabaseResourceId() {
-        return this.syncMemberAzureDatabaseResourceId;
+    public Output<Optional<String>> syncMemberAzureDatabaseResourceId() {
+        return Codegen.optional(this.syncMemberAzureDatabaseResourceId);
     }
     /**
      * Sync state of the sync member.
@@ -197,8 +198,8 @@ public class SyncMember extends com.pulumi.resources.CustomResource {
      * @return Whether to use private link connection.
      * 
      */
-    public Output</* @Nullable */ Boolean> usePrivateLinkConnection() {
-        return this.usePrivateLinkConnection;
+    public Output<Optional<Boolean>> usePrivateLinkConnection() {
+        return Codegen.optional(this.usePrivateLinkConnection);
     }
     /**
      * User name of the member database in the sync member.
@@ -211,8 +212,8 @@ public class SyncMember extends com.pulumi.resources.CustomResource {
      * @return User name of the member database in the sync member.
      * 
      */
-    public Output</* @Nullable */ String> userName() {
-        return this.userName;
+    public Output<Optional<String>> userName() {
+        return Codegen.optional(this.userName);
     }
 
     /**

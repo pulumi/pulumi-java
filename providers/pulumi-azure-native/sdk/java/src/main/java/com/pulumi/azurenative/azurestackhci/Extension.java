@@ -15,6 +15,7 @@ import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -59,8 +60,8 @@ public class Extension extends com.pulumi.resources.CustomResource {
      * @return Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
      * 
      */
-    public Output</* @Nullable */ Boolean> autoUpgradeMinorVersion() {
-        return this.autoUpgradeMinorVersion;
+    public Output<Optional<Boolean>> autoUpgradeMinorVersion() {
+        return Codegen.optional(this.autoUpgradeMinorVersion);
     }
     /**
      * The timestamp of resource creation (UTC).
@@ -73,8 +74,8 @@ public class Extension extends com.pulumi.resources.CustomResource {
      * @return The timestamp of resource creation (UTC).
      * 
      */
-    public Output</* @Nullable */ String> createdAt() {
-        return this.createdAt;
+    public Output<Optional<String>> createdAt() {
+        return Codegen.optional(this.createdAt);
     }
     /**
      * The identity that created the resource.
@@ -87,8 +88,8 @@ public class Extension extends com.pulumi.resources.CustomResource {
      * @return The identity that created the resource.
      * 
      */
-    public Output</* @Nullable */ String> createdBy() {
-        return this.createdBy;
+    public Output<Optional<String>> createdBy() {
+        return Codegen.optional(this.createdBy);
     }
     /**
      * The type of identity that created the resource.
@@ -101,8 +102,8 @@ public class Extension extends com.pulumi.resources.CustomResource {
      * @return The type of identity that created the resource.
      * 
      */
-    public Output</* @Nullable */ String> createdByType() {
-        return this.createdByType;
+    public Output<Optional<String>> createdByType() {
+        return Codegen.optional(this.createdByType);
     }
     /**
      * How the extension handler should be forced to update even if the extension configuration has not changed.
@@ -115,8 +116,8 @@ public class Extension extends com.pulumi.resources.CustomResource {
      * @return How the extension handler should be forced to update even if the extension configuration has not changed.
      * 
      */
-    public Output</* @Nullable */ String> forceUpdateTag() {
-        return this.forceUpdateTag;
+    public Output<Optional<String>> forceUpdateTag() {
+        return Codegen.optional(this.forceUpdateTag);
     }
     /**
      * The timestamp of resource last modification (UTC)
@@ -129,8 +130,8 @@ public class Extension extends com.pulumi.resources.CustomResource {
      * @return The timestamp of resource last modification (UTC)
      * 
      */
-    public Output</* @Nullable */ String> lastModifiedAt() {
-        return this.lastModifiedAt;
+    public Output<Optional<String>> lastModifiedAt() {
+        return Codegen.optional(this.lastModifiedAt);
     }
     /**
      * The identity that last modified the resource.
@@ -143,8 +144,8 @@ public class Extension extends com.pulumi.resources.CustomResource {
      * @return The identity that last modified the resource.
      * 
      */
-    public Output</* @Nullable */ String> lastModifiedBy() {
-        return this.lastModifiedBy;
+    public Output<Optional<String>> lastModifiedBy() {
+        return Codegen.optional(this.lastModifiedBy);
     }
     /**
      * The type of identity that last modified the resource.
@@ -157,8 +158,8 @@ public class Extension extends com.pulumi.resources.CustomResource {
      * @return The type of identity that last modified the resource.
      * 
      */
-    public Output</* @Nullable */ String> lastModifiedByType() {
-        return this.lastModifiedByType;
+    public Output<Optional<String>> lastModifiedByType() {
+        return Codegen.optional(this.lastModifiedByType);
     }
     /**
      * The name of the resource
@@ -199,8 +200,8 @@ public class Extension extends com.pulumi.resources.CustomResource {
      * @return Protected settings (may contain secrets).
      * 
      */
-    public Output</* @Nullable */ Object> protectedSettings() {
-        return this.protectedSettings;
+    public Output<Optional<Object>> protectedSettings() {
+        return Codegen.optional(this.protectedSettings);
     }
     /**
      * Provisioning state of the Extension proxy resource.
@@ -227,8 +228,8 @@ public class Extension extends com.pulumi.resources.CustomResource {
      * @return The name of the extension handler publisher.
      * 
      */
-    public Output</* @Nullable */ String> publisher() {
-        return this.publisher;
+    public Output<Optional<String>> publisher() {
+        return Codegen.optional(this.publisher);
     }
     /**
      * Json formatted public settings for the extension.
@@ -241,8 +242,8 @@ public class Extension extends com.pulumi.resources.CustomResource {
      * @return Json formatted public settings for the extension.
      * 
      */
-    public Output</* @Nullable */ Object> settings() {
-        return this.settings;
+    public Output<Optional<Object>> settings() {
+        return Codegen.optional(this.settings);
     }
     /**
      * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
@@ -269,8 +270,8 @@ public class Extension extends com.pulumi.resources.CustomResource {
      * @return Specifies the version of the script handler.
      * 
      */
-    public Output</* @Nullable */ String> typeHandlerVersion() {
-        return this.typeHandlerVersion;
+    public Output<Optional<String>> typeHandlerVersion() {
+        return Codegen.optional(this.typeHandlerVersion);
     }
 
     /**

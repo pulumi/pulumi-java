@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -57,8 +58,8 @@ public class SensitivityLabel extends com.pulumi.resources.CustomResource {
      * @return The information type.
      * 
      */
-    public Output</* @Nullable */ String> informationType() {
-        return this.informationType;
+    public Output<Optional<String>> informationType() {
+        return Codegen.optional(this.informationType);
     }
     /**
      * The information type ID.
@@ -71,8 +72,8 @@ public class SensitivityLabel extends com.pulumi.resources.CustomResource {
      * @return The information type ID.
      * 
      */
-    public Output</* @Nullable */ String> informationTypeId() {
-        return this.informationTypeId;
+    public Output<Optional<String>> informationTypeId() {
+        return Codegen.optional(this.informationTypeId);
     }
     /**
      * Is sensitivity recommendation disabled. Applicable for recommended sensitivity label only. Specifies whether the sensitivity recommendation on this column is disabled (dismissed) or not.
@@ -99,8 +100,8 @@ public class SensitivityLabel extends com.pulumi.resources.CustomResource {
      * @return The label ID.
      * 
      */
-    public Output</* @Nullable */ String> labelId() {
-        return this.labelId;
+    public Output<Optional<String>> labelId() {
+        return Codegen.optional(this.labelId);
     }
     /**
      * The label name.
@@ -113,8 +114,8 @@ public class SensitivityLabel extends com.pulumi.resources.CustomResource {
      * @return The label name.
      * 
      */
-    public Output</* @Nullable */ String> labelName() {
-        return this.labelName;
+    public Output<Optional<String>> labelName() {
+        return Codegen.optional(this.labelName);
     }
     /**
      * Resource that manages the sensitivity label.
@@ -147,8 +148,8 @@ public class SensitivityLabel extends com.pulumi.resources.CustomResource {
     @Export(name="rank", type=String.class, parameters={})
     private Output</* @Nullable */ String> rank;
 
-    public Output</* @Nullable */ String> rank() {
-        return this.rank;
+    public Output<Optional<String>> rank() {
+        return Codegen.optional(this.rank);
     }
     /**
      * The schema name.

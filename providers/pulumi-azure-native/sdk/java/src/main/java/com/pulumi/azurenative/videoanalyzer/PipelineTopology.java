@@ -20,6 +20,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -55,8 +56,8 @@ public class PipelineTopology extends com.pulumi.resources.CustomResource {
      * @return An optional description of the pipeline topology. It is recommended that the expected use of the topology to be described here.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Topology kind.
@@ -97,8 +98,8 @@ public class PipelineTopology extends com.pulumi.resources.CustomResource {
      * @return List of the topology parameter declarations. Parameters declared here can be referenced throughout the topology nodes through the use of &#34;${PARAMETER_NAME}&#34; string pattern. Parameters can have optional default values and can later be defined in individual instances of the pipeline.
      * 
      */
-    public Output</* @Nullable */ List<ParameterDeclarationResponse>> parameters() {
-        return this.parameters;
+    public Output<Optional<List<ParameterDeclarationResponse>>> parameters() {
+        return Codegen.optional(this.parameters);
     }
     /**
      * List of the topology processor nodes. Processor nodes enable pipeline data to be analyzed, processed or transformed.
@@ -111,8 +112,8 @@ public class PipelineTopology extends com.pulumi.resources.CustomResource {
      * @return List of the topology processor nodes. Processor nodes enable pipeline data to be analyzed, processed or transformed.
      * 
      */
-    public Output</* @Nullable */ List<EncoderProcessorResponse>> processors() {
-        return this.processors;
+    public Output<Optional<List<EncoderProcessorResponse>>> processors() {
+        return Codegen.optional(this.processors);
     }
     /**
      * List of the topology sink nodes. Sink nodes allow pipeline data to be stored or exported.

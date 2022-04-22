@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -72,8 +73,8 @@ public class PeeringService extends com.pulumi.resources.CustomResource {
      * @return The location (state/province) of the customer.
      * 
      */
-    public Output</* @Nullable */ String> peeringServiceLocation() {
-        return this.peeringServiceLocation;
+    public Output<Optional<String>> peeringServiceLocation() {
+        return Codegen.optional(this.peeringServiceLocation);
     }
     /**
      * The name of the service provider.
@@ -86,8 +87,8 @@ public class PeeringService extends com.pulumi.resources.CustomResource {
      * @return The name of the service provider.
      * 
      */
-    public Output</* @Nullable */ String> peeringServiceProvider() {
-        return this.peeringServiceProvider;
+    public Output<Optional<String>> peeringServiceProvider() {
+        return Codegen.optional(this.peeringServiceProvider);
     }
     /**
      * The backup peering (Microsoft/service provider) location to be used for customer traffic.
@@ -100,8 +101,8 @@ public class PeeringService extends com.pulumi.resources.CustomResource {
      * @return The backup peering (Microsoft/service provider) location to be used for customer traffic.
      * 
      */
-    public Output</* @Nullable */ String> providerBackupPeeringLocation() {
-        return this.providerBackupPeeringLocation;
+    public Output<Optional<String>> providerBackupPeeringLocation() {
+        return Codegen.optional(this.providerBackupPeeringLocation);
     }
     /**
      * The primary peering (Microsoft/service provider) location to be used for customer traffic.
@@ -114,8 +115,8 @@ public class PeeringService extends com.pulumi.resources.CustomResource {
      * @return The primary peering (Microsoft/service provider) location to be used for customer traffic.
      * 
      */
-    public Output</* @Nullable */ String> providerPrimaryPeeringLocation() {
-        return this.providerPrimaryPeeringLocation;
+    public Output<Optional<String>> providerPrimaryPeeringLocation() {
+        return Codegen.optional(this.providerPrimaryPeeringLocation);
     }
     /**
      * The provisioning state of the resource.
@@ -142,8 +143,8 @@ public class PeeringService extends com.pulumi.resources.CustomResource {
      * @return The SKU that defines the type of the peering service.
      * 
      */
-    public Output</* @Nullable */ PeeringServiceSkuResponse> sku() {
-        return this.sku;
+    public Output<Optional<PeeringServiceSkuResponse>> sku() {
+        return Codegen.optional(this.sku);
     }
     /**
      * The resource tags.
@@ -156,8 +157,8 @@ public class PeeringService extends com.pulumi.resources.CustomResource {
      * @return The resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource.

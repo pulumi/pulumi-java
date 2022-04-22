@@ -16,6 +16,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class Backend extends com.pulumi.resources.CustomResource {
      * @return Backend Credentials Contract Properties
      * 
      */
-    public Output</* @Nullable */ BackendCredentialsContractResponse> credentials() {
-        return this.credentials;
+    public Output<Optional<BackendCredentialsContractResponse>> credentials() {
+        return Codegen.optional(this.credentials);
     }
     /**
      * Backend Description.
@@ -60,8 +61,8 @@ public class Backend extends com.pulumi.resources.CustomResource {
      * @return Backend Description.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Resource name.
@@ -116,8 +117,8 @@ public class Backend extends com.pulumi.resources.CustomResource {
      * @return Backend Proxy Contract Properties
      * 
      */
-    public Output</* @Nullable */ BackendProxyContractResponse> proxy() {
-        return this.proxy;
+    public Output<Optional<BackendProxyContractResponse>> proxy() {
+        return Codegen.optional(this.proxy);
     }
     /**
      * Management Uri of the Resource in External System. This url can be the Arm Resource Id of Logic Apps, Function Apps or Api Apps.
@@ -130,8 +131,8 @@ public class Backend extends com.pulumi.resources.CustomResource {
      * @return Management Uri of the Resource in External System. This url can be the Arm Resource Id of Logic Apps, Function Apps or Api Apps.
      * 
      */
-    public Output</* @Nullable */ String> resourceId() {
-        return this.resourceId;
+    public Output<Optional<String>> resourceId() {
+        return Codegen.optional(this.resourceId);
     }
     /**
      * Backend Title.
@@ -144,8 +145,8 @@ public class Backend extends com.pulumi.resources.CustomResource {
      * @return Backend Title.
      * 
      */
-    public Output</* @Nullable */ String> title() {
-        return this.title;
+    public Output<Optional<String>> title() {
+        return Codegen.optional(this.title);
     }
     /**
      * Backend TLS Properties
@@ -158,8 +159,8 @@ public class Backend extends com.pulumi.resources.CustomResource {
      * @return Backend TLS Properties
      * 
      */
-    public Output</* @Nullable */ BackendTlsPropertiesResponse> tls() {
-        return this.tls;
+    public Output<Optional<BackendTlsPropertiesResponse>> tls() {
+        return Codegen.optional(this.tls);
     }
     /**
      * Resource type for API Management resource.

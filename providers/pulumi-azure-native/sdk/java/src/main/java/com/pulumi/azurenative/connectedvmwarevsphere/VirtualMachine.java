@@ -23,6 +23,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -67,8 +68,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the extended location.
      * 
      */
-    public Output</* @Nullable */ ExtendedLocationResponse> extendedLocation() {
-        return this.extendedLocation;
+    public Output<Optional<ExtendedLocationResponse>> extendedLocation() {
+        return Codegen.optional(this.extendedLocation);
     }
     /**
      * Firmware type
@@ -81,8 +82,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return Firmware type
      * 
      */
-    public Output</* @Nullable */ String> firmwareType() {
-        return this.firmwareType;
+    public Output<Optional<String>> firmwareType() {
+        return Codegen.optional(this.firmwareType);
     }
     /**
      * Gets or sets the folder path of the vm.
@@ -109,8 +110,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return Guest agent status properties.
      * 
      */
-    public Output</* @Nullable */ GuestAgentProfileResponse> guestAgentProfile() {
-        return this.guestAgentProfile;
+    public Output<Optional<GuestAgentProfileResponse>> guestAgentProfile() {
+        return Codegen.optional(this.guestAgentProfile);
     }
     /**
      * Hardware properties.
@@ -123,8 +124,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return Hardware properties.
      * 
      */
-    public Output</* @Nullable */ HardwareProfileResponse> hardwareProfile() {
-        return this.hardwareProfile;
+    public Output<Optional<HardwareProfileResponse>> hardwareProfile() {
+        return Codegen.optional(this.hardwareProfile);
     }
     /**
      * The identity of the resource.
@@ -137,8 +138,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return The identity of the resource.
      * 
      */
-    public Output</* @Nullable */ IdentityResponse> identity() {
-        return this.identity;
+    public Output<Optional<IdentityResponse>> identity() {
+        return Codegen.optional(this.identity);
     }
     /**
      * Gets or sets the instance uuid of the vm.
@@ -165,8 +166,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the inventory Item ID for the virtual machine.
      * 
      */
-    public Output</* @Nullable */ String> inventoryItemId() {
-        return this.inventoryItemId;
+    public Output<Optional<String>> inventoryItemId() {
+        return Codegen.optional(this.inventoryItemId);
     }
     /**
      * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
@@ -179,8 +180,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
      * 
      */
-    public Output</* @Nullable */ String> kind() {
-        return this.kind;
+    public Output<Optional<String>> kind() {
+        return Codegen.optional(this.kind);
     }
     /**
      * Gets or sets the location.
@@ -221,8 +222,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the vCenter MoRef (Managed Object Reference) ID for the virtual machine.
      * 
      */
-    public Output</* @Nullable */ String> moRefId() {
-        return this.moRefId;
+    public Output<Optional<String>> moRefId() {
+        return Codegen.optional(this.moRefId);
     }
     /**
      * Gets or sets the name.
@@ -249,8 +250,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return Network properties.
      * 
      */
-    public Output</* @Nullable */ NetworkProfileResponse> networkProfile() {
-        return this.networkProfile;
+    public Output<Optional<NetworkProfileResponse>> networkProfile() {
+        return Codegen.optional(this.networkProfile);
     }
     /**
      * OS properties.
@@ -263,8 +264,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return OS properties.
      * 
      */
-    public Output</* @Nullable */ OsProfileResponse> osProfile() {
-        return this.osProfile;
+    public Output<Optional<OsProfileResponse>> osProfile() {
+        return Codegen.optional(this.osProfile);
     }
     /**
      * Placement properties.
@@ -277,8 +278,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return Placement properties.
      * 
      */
-    public Output</* @Nullable */ PlacementProfileResponse> placementProfile() {
-        return this.placementProfile;
+    public Output<Optional<PlacementProfileResponse>> placementProfile() {
+        return Codegen.optional(this.placementProfile);
     }
     /**
      * Gets the power state of the virtual machine.
@@ -321,8 +322,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * deploy.
      * 
      */
-    public Output</* @Nullable */ String> resourcePoolId() {
-        return this.resourcePoolId;
+    public Output<Optional<String>> resourcePoolId() {
+        return Codegen.optional(this.resourcePoolId);
     }
     /**
      * Gets or sets the SMBIOS UUID of the vm.
@@ -335,8 +336,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the SMBIOS UUID of the vm.
      * 
      */
-    public Output</* @Nullable */ String> smbiosUuid() {
-        return this.smbiosUuid;
+    public Output<Optional<String>> smbiosUuid() {
+        return Codegen.optional(this.smbiosUuid);
     }
     /**
      * The resource status information.
@@ -363,8 +364,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return Storage properties.
      * 
      */
-    public Output</* @Nullable */ StorageProfileResponse> storageProfile() {
-        return this.storageProfile;
+    public Output<Optional<StorageProfileResponse>> storageProfile() {
+        return Codegen.optional(this.storageProfile);
     }
     /**
      * The system data.
@@ -391,8 +392,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Gets or sets the ARM Id of the template resource to deploy the virtual machine.
@@ -405,8 +406,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the ARM Id of the template resource to deploy the virtual machine.
      * 
      */
-    public Output</* @Nullable */ String> templateId() {
-        return this.templateId;
+    public Output<Optional<String>> templateId() {
+        return Codegen.optional(this.templateId);
     }
     /**
      * Gets or sets the type of the resource.
@@ -447,8 +448,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the ARM Id of the vCenter resource in which this resource pool resides.
      * 
      */
-    public Output</* @Nullable */ String> vCenterId() {
-        return this.vCenterId;
+    public Output<Optional<String>> vCenterId() {
+        return Codegen.optional(this.vCenterId);
     }
     /**
      * Gets or sets a unique identifier for the vm resource.

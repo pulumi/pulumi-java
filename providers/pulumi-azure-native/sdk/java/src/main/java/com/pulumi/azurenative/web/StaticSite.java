@@ -20,6 +20,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -50,8 +51,8 @@ public class StaticSite extends com.pulumi.resources.CustomResource {
      * @return &lt;code&gt;false&lt;/code&gt; if config file is locked for this static web app; otherwise, &lt;code&gt;true&lt;/code&gt;.
      * 
      */
-    public Output</* @Nullable */ Boolean> allowConfigFileUpdates() {
-        return this.allowConfigFileUpdates;
+    public Output<Optional<Boolean>> allowConfigFileUpdates() {
+        return Codegen.optional(this.allowConfigFileUpdates);
     }
     /**
      * The target branch in the repository.
@@ -64,8 +65,8 @@ public class StaticSite extends com.pulumi.resources.CustomResource {
      * @return The target branch in the repository.
      * 
      */
-    public Output</* @Nullable */ String> branch() {
-        return this.branch;
+    public Output<Optional<String>> branch() {
+        return Codegen.optional(this.branch);
     }
     /**
      * Build properties to configure on the repository.
@@ -78,8 +79,8 @@ public class StaticSite extends com.pulumi.resources.CustomResource {
      * @return Build properties to configure on the repository.
      * 
      */
-    public Output</* @Nullable */ StaticSiteBuildPropertiesResponse> buildProperties() {
-        return this.buildProperties;
+    public Output<Optional<StaticSiteBuildPropertiesResponse>> buildProperties() {
+        return Codegen.optional(this.buildProperties);
     }
     /**
      * The content distribution endpoint for the static site.
@@ -134,8 +135,8 @@ public class StaticSite extends com.pulumi.resources.CustomResource {
      * @return Managed service identity.
      * 
      */
-    public Output</* @Nullable */ ManagedServiceIdentityResponse> identity() {
-        return this.identity;
+    public Output<Optional<ManagedServiceIdentityResponse>> identity() {
+        return Codegen.optional(this.identity);
     }
     /**
      * Identity to use for Key Vault Reference authentication.
@@ -162,8 +163,8 @@ public class StaticSite extends com.pulumi.resources.CustomResource {
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> kind() {
-        return this.kind;
+    public Output<Optional<String>> kind() {
+        return Codegen.optional(this.kind);
     }
     /**
      * Resource Location.
@@ -232,8 +233,8 @@ public class StaticSite extends com.pulumi.resources.CustomResource {
      * @return A user&#39;s github repository token. This is used to setup the Github Actions workflow file and API secrets.
      * 
      */
-    public Output</* @Nullable */ String> repositoryToken() {
-        return this.repositoryToken;
+    public Output<Optional<String>> repositoryToken() {
+        return Codegen.optional(this.repositoryToken);
     }
     /**
      * URL for the repository of the static site.
@@ -246,8 +247,8 @@ public class StaticSite extends com.pulumi.resources.CustomResource {
      * @return URL for the repository of the static site.
      * 
      */
-    public Output</* @Nullable */ String> repositoryUrl() {
-        return this.repositoryUrl;
+    public Output<Optional<String>> repositoryUrl() {
+        return Codegen.optional(this.repositoryUrl);
     }
     /**
      * Description of a SKU for a scalable resource.
@@ -260,8 +261,8 @@ public class StaticSite extends com.pulumi.resources.CustomResource {
      * @return Description of a SKU for a scalable resource.
      * 
      */
-    public Output</* @Nullable */ SkuDescriptionResponse> sku() {
-        return this.sku;
+    public Output<Optional<SkuDescriptionResponse>> sku() {
+        return Codegen.optional(this.sku);
     }
     /**
      * State indicating whether staging environments are allowed or not allowed for a static web app.
@@ -274,8 +275,8 @@ public class StaticSite extends com.pulumi.resources.CustomResource {
      * @return State indicating whether staging environments are allowed or not allowed for a static web app.
      * 
      */
-    public Output</* @Nullable */ String> stagingEnvironmentPolicy() {
-        return this.stagingEnvironmentPolicy;
+    public Output<Optional<String>> stagingEnvironmentPolicy() {
+        return Codegen.optional(this.stagingEnvironmentPolicy);
     }
     /**
      * Resource tags.
@@ -288,8 +289,8 @@ public class StaticSite extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Template options for generating a new repository.
@@ -302,8 +303,8 @@ public class StaticSite extends com.pulumi.resources.CustomResource {
      * @return Template options for generating a new repository.
      * 
      */
-    public Output</* @Nullable */ StaticSiteTemplateOptionsResponse> templateProperties() {
-        return this.templateProperties;
+    public Output<Optional<StaticSiteTemplateOptionsResponse>> templateProperties() {
+        return Codegen.optional(this.templateProperties);
     }
     /**
      * Resource type.

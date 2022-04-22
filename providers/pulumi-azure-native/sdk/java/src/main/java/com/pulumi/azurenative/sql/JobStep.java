@@ -16,6 +16,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -74,8 +75,8 @@ public class JobStep extends com.pulumi.resources.CustomResource {
      * @return Execution options for the job step.
      * 
      */
-    public Output</* @Nullable */ JobStepExecutionOptionsResponse> executionOptions() {
-        return this.executionOptions;
+    public Output<Optional<JobStepExecutionOptionsResponse>> executionOptions() {
+        return Codegen.optional(this.executionOptions);
     }
     /**
      * Resource name.
@@ -102,8 +103,8 @@ public class JobStep extends com.pulumi.resources.CustomResource {
      * @return Output destination properties of the job step.
      * 
      */
-    public Output</* @Nullable */ JobStepOutputResponse> output() {
-        return this.output;
+    public Output<Optional<JobStepOutputResponse>> output() {
+        return Codegen.optional(this.output);
     }
     /**
      * The job step&#39;s index within the job. If not specified when creating the job step, it will be created as the last step. If not specified when updating the job step, the step id is not modified.
@@ -116,8 +117,8 @@ public class JobStep extends com.pulumi.resources.CustomResource {
      * @return The job step&#39;s index within the job. If not specified when creating the job step, it will be created as the last step. If not specified when updating the job step, the step id is not modified.
      * 
      */
-    public Output</* @Nullable */ Integer> stepId() {
-        return this.stepId;
+    public Output<Optional<Integer>> stepId() {
+        return Codegen.optional(this.stepId);
     }
     /**
      * The resource ID of the target group that the job step will be executed on.

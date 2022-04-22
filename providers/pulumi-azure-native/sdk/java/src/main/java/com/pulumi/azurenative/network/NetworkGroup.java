@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class NetworkGroup extends com.pulumi.resources.CustomResource {
      * @return Network group conditional filter.
      * 
      */
-    public Output</* @Nullable */ String> conditionalMembership() {
-        return this.conditionalMembership;
+    public Output<Optional<String>> conditionalMembership() {
+        return Codegen.optional(this.conditionalMembership);
     }
     /**
      * A description of the network group.
@@ -58,8 +59,8 @@ public class NetworkGroup extends com.pulumi.resources.CustomResource {
      * @return A description of the network group.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * A friendly name for the network group.
@@ -72,8 +73,8 @@ public class NetworkGroup extends com.pulumi.resources.CustomResource {
      * @return A friendly name for the network group.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
@@ -100,8 +101,8 @@ public class NetworkGroup extends com.pulumi.resources.CustomResource {
      * @return Group members of network group.
      * 
      */
-    public Output</* @Nullable */ List<GroupMembersItemResponse>> groupMembers() {
-        return this.groupMembers;
+    public Output<Optional<List<GroupMembersItemResponse>>> groupMembers() {
+        return Codegen.optional(this.groupMembers);
     }
     /**
      * Group member type.
@@ -114,8 +115,8 @@ public class NetworkGroup extends com.pulumi.resources.CustomResource {
      * @return Group member type.
      * 
      */
-    public Output</* @Nullable */ String> memberType() {
-        return this.memberType;
+    public Output<Optional<String>> memberType() {
+        return Codegen.optional(this.memberType);
     }
     /**
      * Resource name.

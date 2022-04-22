@@ -14,6 +14,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -57,8 +58,8 @@ public class Queue extends com.pulumi.resources.CustomResource {
      * @return A name-value pair that represents queue metadata.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> metadata() {
-        return this.metadata;
+    public Output<Optional<Map<String,String>>> metadata() {
+        return Codegen.optional(this.metadata);
     }
     /**
      * The name of the resource

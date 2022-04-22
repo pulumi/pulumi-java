@@ -24,6 +24,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -54,8 +55,8 @@ public class ActionGroup extends com.pulumi.resources.CustomResource {
      * @return The list of ARM role receivers that are part of this action group. Roles are Azure RBAC roles and only built-in roles are supported.
      * 
      */
-    public Output</* @Nullable */ List<ArmRoleReceiverResponse>> armRoleReceivers() {
-        return this.armRoleReceivers;
+    public Output<Optional<List<ArmRoleReceiverResponse>>> armRoleReceivers() {
+        return Codegen.optional(this.armRoleReceivers);
     }
     /**
      * The list of AutomationRunbook receivers that are part of this action group.
@@ -68,8 +69,8 @@ public class ActionGroup extends com.pulumi.resources.CustomResource {
      * @return The list of AutomationRunbook receivers that are part of this action group.
      * 
      */
-    public Output</* @Nullable */ List<AutomationRunbookReceiverResponse>> automationRunbookReceivers() {
-        return this.automationRunbookReceivers;
+    public Output<Optional<List<AutomationRunbookReceiverResponse>>> automationRunbookReceivers() {
+        return Codegen.optional(this.automationRunbookReceivers);
     }
     /**
      * The list of AzureAppPush receivers that are part of this action group.
@@ -82,8 +83,8 @@ public class ActionGroup extends com.pulumi.resources.CustomResource {
      * @return The list of AzureAppPush receivers that are part of this action group.
      * 
      */
-    public Output</* @Nullable */ List<AzureAppPushReceiverResponse>> azureAppPushReceivers() {
-        return this.azureAppPushReceivers;
+    public Output<Optional<List<AzureAppPushReceiverResponse>>> azureAppPushReceivers() {
+        return Codegen.optional(this.azureAppPushReceivers);
     }
     /**
      * The list of azure function receivers that are part of this action group.
@@ -96,8 +97,8 @@ public class ActionGroup extends com.pulumi.resources.CustomResource {
      * @return The list of azure function receivers that are part of this action group.
      * 
      */
-    public Output</* @Nullable */ List<AzureFunctionReceiverResponse>> azureFunctionReceivers() {
-        return this.azureFunctionReceivers;
+    public Output<Optional<List<AzureFunctionReceiverResponse>>> azureFunctionReceivers() {
+        return Codegen.optional(this.azureFunctionReceivers);
     }
     /**
      * The list of email receivers that are part of this action group.
@@ -110,8 +111,8 @@ public class ActionGroup extends com.pulumi.resources.CustomResource {
      * @return The list of email receivers that are part of this action group.
      * 
      */
-    public Output</* @Nullable */ List<EmailReceiverResponse>> emailReceivers() {
-        return this.emailReceivers;
+    public Output<Optional<List<EmailReceiverResponse>>> emailReceivers() {
+        return Codegen.optional(this.emailReceivers);
     }
     /**
      * Indicates whether this action group is enabled. If an action group is not enabled, then none of its receivers will receive communications.
@@ -166,8 +167,8 @@ public class ActionGroup extends com.pulumi.resources.CustomResource {
      * @return The list of ITSM receivers that are part of this action group.
      * 
      */
-    public Output</* @Nullable */ List<ItsmReceiverResponse>> itsmReceivers() {
-        return this.itsmReceivers;
+    public Output<Optional<List<ItsmReceiverResponse>>> itsmReceivers() {
+        return Codegen.optional(this.itsmReceivers);
     }
     /**
      * Azure resource kind
@@ -208,8 +209,8 @@ public class ActionGroup extends com.pulumi.resources.CustomResource {
      * @return The list of logic app receivers that are part of this action group.
      * 
      */
-    public Output</* @Nullable */ List<LogicAppReceiverResponse>> logicAppReceivers() {
-        return this.logicAppReceivers;
+    public Output<Optional<List<LogicAppReceiverResponse>>> logicAppReceivers() {
+        return Codegen.optional(this.logicAppReceivers);
     }
     /**
      * Azure resource name
@@ -236,8 +237,8 @@ public class ActionGroup extends com.pulumi.resources.CustomResource {
      * @return The list of SMS receivers that are part of this action group.
      * 
      */
-    public Output</* @Nullable */ List<SmsReceiverResponse>> smsReceivers() {
-        return this.smsReceivers;
+    public Output<Optional<List<SmsReceiverResponse>>> smsReceivers() {
+        return Codegen.optional(this.smsReceivers);
     }
     /**
      * Resource tags
@@ -250,8 +251,8 @@ public class ActionGroup extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Azure resource type
@@ -278,8 +279,8 @@ public class ActionGroup extends com.pulumi.resources.CustomResource {
      * @return The list of voice receivers that are part of this action group.
      * 
      */
-    public Output</* @Nullable */ List<VoiceReceiverResponse>> voiceReceivers() {
-        return this.voiceReceivers;
+    public Output<Optional<List<VoiceReceiverResponse>>> voiceReceivers() {
+        return Codegen.optional(this.voiceReceivers);
     }
     /**
      * The list of webhook receivers that are part of this action group.
@@ -292,8 +293,8 @@ public class ActionGroup extends com.pulumi.resources.CustomResource {
      * @return The list of webhook receivers that are part of this action group.
      * 
      */
-    public Output</* @Nullable */ List<WebhookReceiverResponse>> webhookReceivers() {
-        return this.webhookReceivers;
+    public Output<Optional<List<WebhookReceiverResponse>>> webhookReceivers() {
+        return Codegen.optional(this.webhookReceivers);
     }
 
     /**

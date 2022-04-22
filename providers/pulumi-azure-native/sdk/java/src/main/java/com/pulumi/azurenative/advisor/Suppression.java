@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -70,8 +71,8 @@ public class Suppression extends com.pulumi.resources.CustomResource {
      * @return The GUID of the suppression.
      * 
      */
-    public Output</* @Nullable */ String> suppressionId() {
-        return this.suppressionId;
+    public Output<Optional<String>> suppressionId() {
+        return Codegen.optional(this.suppressionId);
     }
     /**
      * The duration for which the suppression is valid.
@@ -84,8 +85,8 @@ public class Suppression extends com.pulumi.resources.CustomResource {
      * @return The duration for which the suppression is valid.
      * 
      */
-    public Output</* @Nullable */ String> ttl() {
-        return this.ttl;
+    public Output<Optional<String>> ttl() {
+        return Codegen.optional(this.ttl);
     }
     /**
      * The type of the resource.

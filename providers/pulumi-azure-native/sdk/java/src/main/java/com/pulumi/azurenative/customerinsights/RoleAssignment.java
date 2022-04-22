@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -59,8 +60,8 @@ public class RoleAssignment extends com.pulumi.resources.CustomResource {
      * @return Widget types set for the assignment.
      * 
      */
-    public Output</* @Nullable */ ResourceSetDescriptionResponse> conflationPolicies() {
-        return this.conflationPolicies;
+    public Output<Optional<ResourceSetDescriptionResponse>> conflationPolicies() {
+        return Codegen.optional(this.conflationPolicies);
     }
     /**
      * Connectors set for the assignment.
@@ -73,8 +74,8 @@ public class RoleAssignment extends com.pulumi.resources.CustomResource {
      * @return Connectors set for the assignment.
      * 
      */
-    public Output</* @Nullable */ ResourceSetDescriptionResponse> connectors() {
-        return this.connectors;
+    public Output<Optional<ResourceSetDescriptionResponse>> connectors() {
+        return Codegen.optional(this.connectors);
     }
     /**
      * Localized description for the metadata.
@@ -87,8 +88,8 @@ public class RoleAssignment extends com.pulumi.resources.CustomResource {
      * @return Localized description for the metadata.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> description() {
-        return this.description;
+    public Output<Optional<Map<String,String>>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Localized display names for the metadata.
@@ -101,8 +102,8 @@ public class RoleAssignment extends com.pulumi.resources.CustomResource {
      * @return Localized display names for the metadata.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> displayName() {
-        return this.displayName;
+    public Output<Optional<Map<String,String>>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * Interactions set for the assignment.
@@ -115,8 +116,8 @@ public class RoleAssignment extends com.pulumi.resources.CustomResource {
      * @return Interactions set for the assignment.
      * 
      */
-    public Output</* @Nullable */ ResourceSetDescriptionResponse> interactions() {
-        return this.interactions;
+    public Output<Optional<ResourceSetDescriptionResponse>> interactions() {
+        return Codegen.optional(this.interactions);
     }
     /**
      * Kpis set for the assignment.
@@ -129,8 +130,8 @@ public class RoleAssignment extends com.pulumi.resources.CustomResource {
      * @return Kpis set for the assignment.
      * 
      */
-    public Output</* @Nullable */ ResourceSetDescriptionResponse> kpis() {
-        return this.kpis;
+    public Output<Optional<ResourceSetDescriptionResponse>> kpis() {
+        return Codegen.optional(this.kpis);
     }
     /**
      * Links set for the assignment.
@@ -143,8 +144,8 @@ public class RoleAssignment extends com.pulumi.resources.CustomResource {
      * @return Links set for the assignment.
      * 
      */
-    public Output</* @Nullable */ ResourceSetDescriptionResponse> links() {
-        return this.links;
+    public Output<Optional<ResourceSetDescriptionResponse>> links() {
+        return Codegen.optional(this.links);
     }
     /**
      * Resource name.
@@ -185,8 +186,8 @@ public class RoleAssignment extends com.pulumi.resources.CustomResource {
      * @return Profiles set for the assignment.
      * 
      */
-    public Output</* @Nullable */ ResourceSetDescriptionResponse> profiles() {
-        return this.profiles;
+    public Output<Optional<ResourceSetDescriptionResponse>> profiles() {
+        return Codegen.optional(this.profiles);
     }
     /**
      * Provisioning state.
@@ -213,8 +214,8 @@ public class RoleAssignment extends com.pulumi.resources.CustomResource {
      * @return The Role assignments set for the relationship links.
      * 
      */
-    public Output</* @Nullable */ ResourceSetDescriptionResponse> relationshipLinks() {
-        return this.relationshipLinks;
+    public Output<Optional<ResourceSetDescriptionResponse>> relationshipLinks() {
+        return Codegen.optional(this.relationshipLinks);
     }
     /**
      * The Role assignments set for the relationships.
@@ -227,8 +228,8 @@ public class RoleAssignment extends com.pulumi.resources.CustomResource {
      * @return The Role assignments set for the relationships.
      * 
      */
-    public Output</* @Nullable */ ResourceSetDescriptionResponse> relationships() {
-        return this.relationships;
+    public Output<Optional<ResourceSetDescriptionResponse>> relationships() {
+        return Codegen.optional(this.relationships);
     }
     /**
      * Type of roles.
@@ -255,8 +256,8 @@ public class RoleAssignment extends com.pulumi.resources.CustomResource {
      * @return The Role assignments set for the assignment.
      * 
      */
-    public Output</* @Nullable */ ResourceSetDescriptionResponse> roleAssignments() {
-        return this.roleAssignments;
+    public Output<Optional<ResourceSetDescriptionResponse>> roleAssignments() {
+        return Codegen.optional(this.roleAssignments);
     }
     /**
      * Sas Policies set for the assignment.
@@ -269,8 +270,8 @@ public class RoleAssignment extends com.pulumi.resources.CustomResource {
      * @return Sas Policies set for the assignment.
      * 
      */
-    public Output</* @Nullable */ ResourceSetDescriptionResponse> sasPolicies() {
-        return this.sasPolicies;
+    public Output<Optional<ResourceSetDescriptionResponse>> sasPolicies() {
+        return Codegen.optional(this.sasPolicies);
     }
     /**
      * The Role assignments set for the assignment.
@@ -283,8 +284,8 @@ public class RoleAssignment extends com.pulumi.resources.CustomResource {
      * @return The Role assignments set for the assignment.
      * 
      */
-    public Output</* @Nullable */ ResourceSetDescriptionResponse> segments() {
-        return this.segments;
+    public Output<Optional<ResourceSetDescriptionResponse>> segments() {
+        return Codegen.optional(this.segments);
     }
     /**
      * The hub name.
@@ -325,8 +326,8 @@ public class RoleAssignment extends com.pulumi.resources.CustomResource {
      * @return Views set for the assignment.
      * 
      */
-    public Output</* @Nullable */ ResourceSetDescriptionResponse> views() {
-        return this.views;
+    public Output<Optional<ResourceSetDescriptionResponse>> views() {
+        return Codegen.optional(this.views);
     }
     /**
      * Widget types set for the assignment.
@@ -339,8 +340,8 @@ public class RoleAssignment extends com.pulumi.resources.CustomResource {
      * @return Widget types set for the assignment.
      * 
      */
-    public Output</* @Nullable */ ResourceSetDescriptionResponse> widgetTypes() {
-        return this.widgetTypes;
+    public Output<Optional<ResourceSetDescriptionResponse>> widgetTypes() {
+        return Codegen.optional(this.widgetTypes);
     }
 
     /**

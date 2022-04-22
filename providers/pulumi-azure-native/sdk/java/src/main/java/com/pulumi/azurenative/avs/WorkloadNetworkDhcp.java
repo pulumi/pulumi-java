@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -57,8 +58,8 @@ public class WorkloadNetworkDhcp extends com.pulumi.resources.CustomResource {
      * @return Display name of the DHCP entity.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * Resource name.
@@ -99,8 +100,8 @@ public class WorkloadNetworkDhcp extends com.pulumi.resources.CustomResource {
      * @return NSX revision number.
      * 
      */
-    public Output</* @Nullable */ Double> revision() {
-        return this.revision;
+    public Output<Optional<Double>> revision() {
+        return Codegen.optional(this.revision);
     }
     /**
      * NSX Segments consuming DHCP.

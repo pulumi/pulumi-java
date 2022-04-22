@@ -17,6 +17,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -47,8 +48,8 @@ public class Connector extends com.pulumi.resources.CustomResource {
      * @return Settings for authentication management, these settings are relevant only for the cloud connector.
      * 
      */
-    public Output</* @Nullable */ Object> authenticationDetails() {
-        return this.authenticationDetails;
+    public Output<Optional<Object>> authenticationDetails() {
+        return Codegen.optional(this.authenticationDetails);
     }
     /**
      * Settings for hybrid compute management. These settings are relevant only for Arc autoProvision (Hybrid Compute).
@@ -61,8 +62,8 @@ public class Connector extends com.pulumi.resources.CustomResource {
      * @return Settings for hybrid compute management. These settings are relevant only for Arc autoProvision (Hybrid Compute).
      * 
      */
-    public Output</* @Nullable */ HybridComputeSettingsPropertiesResponse> hybridComputeSettings() {
-        return this.hybridComputeSettings;
+    public Output<Optional<HybridComputeSettingsPropertiesResponse>> hybridComputeSettings() {
+        return Codegen.optional(this.hybridComputeSettings);
     }
     /**
      * Resource name

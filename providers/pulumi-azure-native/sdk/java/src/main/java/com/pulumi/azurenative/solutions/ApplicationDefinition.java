@@ -23,6 +23,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -53,8 +54,8 @@ public class ApplicationDefinition extends com.pulumi.resources.CustomResource {
      * @return The collection of managed application artifacts. The portal will use the files specified as artifacts to construct the user experience of creating a managed application from a managed application definition.
      * 
      */
-    public Output</* @Nullable */ List<ApplicationDefinitionArtifactResponse>> artifacts() {
-        return this.artifacts;
+    public Output<Optional<List<ApplicationDefinitionArtifactResponse>>> artifacts() {
+        return Codegen.optional(this.artifacts);
     }
     /**
      * The managed application provider authorizations.
@@ -67,8 +68,8 @@ public class ApplicationDefinition extends com.pulumi.resources.CustomResource {
      * @return The managed application provider authorizations.
      * 
      */
-    public Output</* @Nullable */ List<ApplicationAuthorizationResponse>> authorizations() {
-        return this.authorizations;
+    public Output<Optional<List<ApplicationAuthorizationResponse>>> authorizations() {
+        return Codegen.optional(this.authorizations);
     }
     /**
      * The createUiDefinition json for the backing template with Microsoft.Solutions/applications resource. It can be a JObject or well-formed JSON string.
@@ -81,8 +82,8 @@ public class ApplicationDefinition extends com.pulumi.resources.CustomResource {
      * @return The createUiDefinition json for the backing template with Microsoft.Solutions/applications resource. It can be a JObject or well-formed JSON string.
      * 
      */
-    public Output</* @Nullable */ Object> createUiDefinition() {
-        return this.createUiDefinition;
+    public Output<Optional<Object>> createUiDefinition() {
+        return Codegen.optional(this.createUiDefinition);
     }
     /**
      * The managed application deployment policy.
@@ -95,8 +96,8 @@ public class ApplicationDefinition extends com.pulumi.resources.CustomResource {
      * @return The managed application deployment policy.
      * 
      */
-    public Output</* @Nullable */ ApplicationDeploymentPolicyResponse> deploymentPolicy() {
-        return this.deploymentPolicy;
+    public Output<Optional<ApplicationDeploymentPolicyResponse>> deploymentPolicy() {
+        return Codegen.optional(this.deploymentPolicy);
     }
     /**
      * The managed application definition description.
@@ -109,8 +110,8 @@ public class ApplicationDefinition extends com.pulumi.resources.CustomResource {
      * @return The managed application definition description.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The managed application definition display name.
@@ -123,8 +124,8 @@ public class ApplicationDefinition extends com.pulumi.resources.CustomResource {
      * @return The managed application definition display name.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * A value indicating whether the package is enabled or not.
@@ -137,8 +138,8 @@ public class ApplicationDefinition extends com.pulumi.resources.CustomResource {
      * @return A value indicating whether the package is enabled or not.
      * 
      */
-    public Output</* @Nullable */ Boolean> isEnabled() {
-        return this.isEnabled;
+    public Output<Optional<Boolean>> isEnabled() {
+        return Codegen.optional(this.isEnabled);
     }
     /**
      * Resource location
@@ -151,8 +152,8 @@ public class ApplicationDefinition extends com.pulumi.resources.CustomResource {
      * @return Resource location
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The managed application lock level.
@@ -179,8 +180,8 @@ public class ApplicationDefinition extends com.pulumi.resources.CustomResource {
      * @return The managed application locking policy.
      * 
      */
-    public Output</* @Nullable */ ApplicationPackageLockingPolicyDefinitionResponse> lockingPolicy() {
-        return this.lockingPolicy;
+    public Output<Optional<ApplicationPackageLockingPolicyDefinitionResponse>> lockingPolicy() {
+        return Codegen.optional(this.lockingPolicy);
     }
     /**
      * The inline main template json which has resources to be provisioned. It can be a JObject or well-formed JSON string.
@@ -193,8 +194,8 @@ public class ApplicationDefinition extends com.pulumi.resources.CustomResource {
      * @return The inline main template json which has resources to be provisioned. It can be a JObject or well-formed JSON string.
      * 
      */
-    public Output</* @Nullable */ Object> mainTemplate() {
-        return this.mainTemplate;
+    public Output<Optional<Object>> mainTemplate() {
+        return Codegen.optional(this.mainTemplate);
     }
     /**
      * ID of the resource that manages this resource.
@@ -207,8 +208,8 @@ public class ApplicationDefinition extends com.pulumi.resources.CustomResource {
      * @return ID of the resource that manages this resource.
      * 
      */
-    public Output</* @Nullable */ String> managedBy() {
-        return this.managedBy;
+    public Output<Optional<String>> managedBy() {
+        return Codegen.optional(this.managedBy);
     }
     /**
      * The managed application management policy that determines publisher&#39;s access to the managed resource group.
@@ -221,8 +222,8 @@ public class ApplicationDefinition extends com.pulumi.resources.CustomResource {
      * @return The managed application management policy that determines publisher&#39;s access to the managed resource group.
      * 
      */
-    public Output</* @Nullable */ ApplicationManagementPolicyResponse> managementPolicy() {
-        return this.managementPolicy;
+    public Output<Optional<ApplicationManagementPolicyResponse>> managementPolicy() {
+        return Codegen.optional(this.managementPolicy);
     }
     /**
      * Resource name
@@ -249,8 +250,8 @@ public class ApplicationDefinition extends com.pulumi.resources.CustomResource {
      * @return The managed application notification policy.
      * 
      */
-    public Output</* @Nullable */ ApplicationNotificationPolicyResponse> notificationPolicy() {
-        return this.notificationPolicy;
+    public Output<Optional<ApplicationNotificationPolicyResponse>> notificationPolicy() {
+        return Codegen.optional(this.notificationPolicy);
     }
     /**
      * The managed application definition package file Uri. Use this element
@@ -263,8 +264,8 @@ public class ApplicationDefinition extends com.pulumi.resources.CustomResource {
      * @return The managed application definition package file Uri. Use this element
      * 
      */
-    public Output</* @Nullable */ String> packageFileUri() {
-        return this.packageFileUri;
+    public Output<Optional<String>> packageFileUri() {
+        return Codegen.optional(this.packageFileUri);
     }
     /**
      * The managed application provider policies.
@@ -277,8 +278,8 @@ public class ApplicationDefinition extends com.pulumi.resources.CustomResource {
      * @return The managed application provider policies.
      * 
      */
-    public Output</* @Nullable */ List<ApplicationPolicyResponse>> policies() {
-        return this.policies;
+    public Output<Optional<List<ApplicationPolicyResponse>>> policies() {
+        return Codegen.optional(this.policies);
     }
     /**
      * The SKU of the resource.
@@ -291,8 +292,8 @@ public class ApplicationDefinition extends com.pulumi.resources.CustomResource {
      * @return The SKU of the resource.
      * 
      */
-    public Output</* @Nullable */ SkuResponse> sku() {
-        return this.sku;
+    public Output<Optional<SkuResponse>> sku() {
+        return Codegen.optional(this.sku);
     }
     /**
      * Resource tags
@@ -305,8 +306,8 @@ public class ApplicationDefinition extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type

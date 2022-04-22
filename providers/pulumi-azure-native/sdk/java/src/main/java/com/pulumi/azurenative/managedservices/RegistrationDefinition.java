@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -58,8 +59,8 @@ public class RegistrationDefinition extends com.pulumi.resources.CustomResource 
      * @return Plan details for the managed services.
      * 
      */
-    public Output</* @Nullable */ PlanResponse> plan() {
-        return this.plan;
+    public Output<Optional<PlanResponse>> plan() {
+        return Codegen.optional(this.plan);
     }
     /**
      * Properties of a registration definition.

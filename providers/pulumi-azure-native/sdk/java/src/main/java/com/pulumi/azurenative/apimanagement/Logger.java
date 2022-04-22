@@ -14,6 +14,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class Logger extends com.pulumi.resources.CustomResource {
      * Instrumentation key for applicationInsights logger.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> credentials() {
-        return this.credentials;
+    public Output<Optional<Map<String,String>>> credentials() {
+        return Codegen.optional(this.credentials);
     }
     /**
      * Logger description.
@@ -60,8 +61,8 @@ public class Logger extends com.pulumi.resources.CustomResource {
      * @return Logger description.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Whether records are buffered in the logger before publishing. Default is assumed to be true.
@@ -74,8 +75,8 @@ public class Logger extends com.pulumi.resources.CustomResource {
      * @return Whether records are buffered in the logger before publishing. Default is assumed to be true.
      * 
      */
-    public Output</* @Nullable */ Boolean> isBuffered() {
-        return this.isBuffered;
+    public Output<Optional<Boolean>> isBuffered() {
+        return Codegen.optional(this.isBuffered);
     }
     /**
      * Logger type.
@@ -116,8 +117,8 @@ public class Logger extends com.pulumi.resources.CustomResource {
      * @return Azure Resource Id of a log target (either Azure Event Hub resource or Azure Application Insights resource).
      * 
      */
-    public Output</* @Nullable */ String> resourceId() {
-        return this.resourceId;
+    public Output<Optional<String>> resourceId() {
+        return Codegen.optional(this.resourceId);
     }
     /**
      * Resource type for API Management resource.

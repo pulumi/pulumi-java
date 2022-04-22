@@ -19,6 +19,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -50,8 +51,8 @@ public class ManagedCluster extends com.pulumi.resources.CustomResource {
      * @return client certificates for the cluster.
      * 
      */
-    public Output</* @Nullable */ List<String>> addonFeatures() {
-        return this.addonFeatures;
+    public Output<Optional<List<String>>> addonFeatures() {
+        return Codegen.optional(this.addonFeatures);
     }
     /**
      * vm admin user password.
@@ -64,8 +65,8 @@ public class ManagedCluster extends com.pulumi.resources.CustomResource {
      * @return vm admin user password.
      * 
      */
-    public Output</* @Nullable */ String> adminPassword() {
-        return this.adminPassword;
+    public Output<Optional<String>> adminPassword() {
+        return Codegen.optional(this.adminPassword);
     }
     /**
      * vm admin user name.
@@ -92,8 +93,8 @@ public class ManagedCluster extends com.pulumi.resources.CustomResource {
      * @return Azure active directory.
      * 
      */
-    public Output</* @Nullable */ AzureActiveDirectoryResponse> azureActiveDirectory() {
-        return this.azureActiveDirectory;
+    public Output<Optional<AzureActiveDirectoryResponse>> azureActiveDirectory() {
+        return Codegen.optional(this.azureActiveDirectory);
     }
     /**
      * The port used for client connections to the cluster.
@@ -106,8 +107,8 @@ public class ManagedCluster extends com.pulumi.resources.CustomResource {
      * @return The port used for client connections to the cluster.
      * 
      */
-    public Output</* @Nullable */ Integer> clientConnectionPort() {
-        return this.clientConnectionPort;
+    public Output<Optional<Integer>> clientConnectionPort() {
+        return Codegen.optional(this.clientConnectionPort);
     }
     /**
      * client certificates for the cluster.
@@ -120,8 +121,8 @@ public class ManagedCluster extends com.pulumi.resources.CustomResource {
      * @return client certificates for the cluster.
      * 
      */
-    public Output</* @Nullable */ List<ClientCertificateResponse>> clients() {
-        return this.clients;
+    public Output<Optional<List<ClientCertificateResponse>>> clients() {
+        return Codegen.optional(this.clients);
     }
     /**
      * The cluster certificate thumbprint used node to node communication.
@@ -148,8 +149,8 @@ public class ManagedCluster extends com.pulumi.resources.CustomResource {
      * @return The Service Fabric runtime version of the cluster. This property can only by set the user when **upgradeMode** is set to &#39;Manual&#39;. To get list of available Service Fabric versions for new clusters use [ClusterVersion API](./ClusterVersion.md). To get the list of available version for existing clusters use **availableClusterVersions**.
      * 
      */
-    public Output</* @Nullable */ String> clusterCodeVersion() {
-        return this.clusterCodeVersion;
+    public Output<Optional<String>> clusterCodeVersion() {
+        return Codegen.optional(this.clusterCodeVersion);
     }
     /**
      * A service generated unique identifier for the cluster resource.
@@ -218,8 +219,8 @@ public class ManagedCluster extends com.pulumi.resources.CustomResource {
      * @return The list of custom fabric settings to configure the cluster.
      * 
      */
-    public Output</* @Nullable */ List<SettingsSectionDescriptionResponse>> fabricSettings() {
-        return this.fabricSettings;
+    public Output<Optional<List<SettingsSectionDescriptionResponse>>> fabricSettings() {
+        return Codegen.optional(this.fabricSettings);
     }
     /**
      * the cluster Fully qualified domain name.
@@ -246,8 +247,8 @@ public class ManagedCluster extends com.pulumi.resources.CustomResource {
      * @return The port used for http connections to the cluster.
      * 
      */
-    public Output</* @Nullable */ Integer> httpGatewayConnectionPort() {
-        return this.httpGatewayConnectionPort;
+    public Output<Optional<Integer>> httpGatewayConnectionPort() {
+        return Codegen.optional(this.httpGatewayConnectionPort);
     }
     /**
      * Describes load balancing rules.
@@ -260,8 +261,8 @@ public class ManagedCluster extends com.pulumi.resources.CustomResource {
      * @return Describes load balancing rules.
      * 
      */
-    public Output</* @Nullable */ List<LoadBalancingRuleResponse>> loadBalancingRules() {
-        return this.loadBalancingRules;
+    public Output<Optional<List<LoadBalancingRuleResponse>>> loadBalancingRules() {
+        return Codegen.optional(this.loadBalancingRules);
     }
     /**
      * Azure resource location.
@@ -316,8 +317,8 @@ public class ManagedCluster extends com.pulumi.resources.CustomResource {
      * @return The sku of the managed cluster
      * 
      */
-    public Output</* @Nullable */ SkuResponse> sku() {
-        return this.sku;
+    public Output<Optional<SkuResponse>> sku() {
+        return Codegen.optional(this.sku);
     }
     /**
      * Azure resource tags.
@@ -330,8 +331,8 @@ public class ManagedCluster extends com.pulumi.resources.CustomResource {
      * @return Azure resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Azure resource type.

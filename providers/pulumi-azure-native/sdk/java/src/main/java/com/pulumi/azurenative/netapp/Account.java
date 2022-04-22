@@ -16,6 +16,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return Active Directories
      * 
      */
-    public Output</* @Nullable */ List<ActiveDirectoryResponse>> activeDirectories() {
-        return this.activeDirectories;
+    public Output<Optional<List<ActiveDirectoryResponse>>> activeDirectories() {
+        return Codegen.optional(this.activeDirectories);
     }
     /**
      * Encryption settings
@@ -60,8 +61,8 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return Encryption settings
      * 
      */
-    public Output</* @Nullable */ AccountEncryptionResponse> encryption() {
-        return this.encryption;
+    public Output<Optional<AccountEncryptionResponse>> encryption() {
+        return Codegen.optional(this.encryption);
     }
     /**
      * Resource location
@@ -130,8 +131,8 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type

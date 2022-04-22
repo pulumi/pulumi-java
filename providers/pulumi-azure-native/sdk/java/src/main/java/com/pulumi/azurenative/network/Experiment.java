@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class Experiment extends com.pulumi.resources.CustomResource {
      * @return The description of the details or intents of the Experiment
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The state of the Experiment
@@ -58,8 +59,8 @@ public class Experiment extends com.pulumi.resources.CustomResource {
      * @return The state of the Experiment
      * 
      */
-    public Output</* @Nullable */ String> enabledState() {
-        return this.enabledState;
+    public Output<Optional<String>> enabledState() {
+        return Codegen.optional(this.enabledState);
     }
     /**
      * The endpoint A of an experiment
@@ -72,8 +73,8 @@ public class Experiment extends com.pulumi.resources.CustomResource {
      * @return The endpoint A of an experiment
      * 
      */
-    public Output</* @Nullable */ ExperimentEndpointResponse> endpointA() {
-        return this.endpointA;
+    public Output<Optional<ExperimentEndpointResponse>> endpointA() {
+        return Codegen.optional(this.endpointA);
     }
     /**
      * The endpoint B of an experiment
@@ -86,8 +87,8 @@ public class Experiment extends com.pulumi.resources.CustomResource {
      * @return The endpoint B of an experiment
      * 
      */
-    public Output</* @Nullable */ ExperimentEndpointResponse> endpointB() {
-        return this.endpointB;
+    public Output<Optional<ExperimentEndpointResponse>> endpointB() {
+        return Codegen.optional(this.endpointB);
     }
     /**
      * Resource location.
@@ -100,8 +101,8 @@ public class Experiment extends com.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * Resource name.
@@ -170,8 +171,8 @@ public class Experiment extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type.

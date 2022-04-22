@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -57,8 +58,8 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return KeyVault location details of the certificate.
      * 
      */
-    public Output</* @Nullable */ KeyVaultContractPropertiesResponse> keyVault() {
-        return this.keyVault;
+    public Output<Optional<KeyVaultContractPropertiesResponse>> keyVault() {
+        return Codegen.optional(this.keyVault);
     }
     /**
      * Resource name.

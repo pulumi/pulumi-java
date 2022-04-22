@@ -16,6 +16,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class Gateway extends com.pulumi.resources.CustomResource {
      * @return User readable description of the gateway.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Network that the Application is using.
@@ -74,8 +75,8 @@ public class Gateway extends com.pulumi.resources.CustomResource {
      * @return Configuration for http connectivity for this gateway.
      * 
      */
-    public Output</* @Nullable */ List<HttpConfigResponse>> http() {
-        return this.http;
+    public Output<Optional<List<HttpConfigResponse>>> http() {
+        return Codegen.optional(this.http);
     }
     /**
      * IP address of the gateway. This is populated in the response and is ignored for incoming requests.
@@ -186,8 +187,8 @@ public class Gateway extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Configuration for tcp connectivity for this gateway.
@@ -200,8 +201,8 @@ public class Gateway extends com.pulumi.resources.CustomResource {
      * @return Configuration for tcp connectivity for this gateway.
      * 
      */
-    public Output</* @Nullable */ List<TcpConfigResponse>> tcp() {
-        return this.tcp;
+    public Output<Optional<List<TcpConfigResponse>>> tcp() {
+        return Codegen.optional(this.tcp);
     }
     /**
      * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.

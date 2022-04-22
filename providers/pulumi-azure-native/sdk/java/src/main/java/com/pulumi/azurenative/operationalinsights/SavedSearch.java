@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -72,8 +73,8 @@ public class SavedSearch extends com.pulumi.resources.CustomResource {
      * @return The ETag of the saved search. To override an existing saved search, use &#34;*&#34; or specify the current Etag
      * 
      */
-    public Output</* @Nullable */ String> etag() {
-        return this.etag;
+    public Output<Optional<String>> etag() {
+        return Codegen.optional(this.etag);
     }
     /**
      * The function alias if query serves as a function.
@@ -86,8 +87,8 @@ public class SavedSearch extends com.pulumi.resources.CustomResource {
      * @return The function alias if query serves as a function.
      * 
      */
-    public Output</* @Nullable */ String> functionAlias() {
-        return this.functionAlias;
+    public Output<Optional<String>> functionAlias() {
+        return Codegen.optional(this.functionAlias);
     }
     /**
      * The optional function parameters if query serves as a function. Value should be in the following format: &#39;param-name1:type1 = default_value1, param-name2:type2 = default_value2&#39;. For more examples and proper syntax please refer to https://docs.microsoft.com/en-us/azure/kusto/query/functions/user-defined-functions.
@@ -100,8 +101,8 @@ public class SavedSearch extends com.pulumi.resources.CustomResource {
      * @return The optional function parameters if query serves as a function. Value should be in the following format: &#39;param-name1:type1 = default_value1, param-name2:type2 = default_value2&#39;. For more examples and proper syntax please refer to https://docs.microsoft.com/en-us/azure/kusto/query/functions/user-defined-functions.
      * 
      */
-    public Output</* @Nullable */ String> functionParameters() {
-        return this.functionParameters;
+    public Output<Optional<String>> functionParameters() {
+        return Codegen.optional(this.functionParameters);
     }
     /**
      * The name of the resource
@@ -142,8 +143,8 @@ public class SavedSearch extends com.pulumi.resources.CustomResource {
      * @return The tags attached to the saved search.
      * 
      */
-    public Output</* @Nullable */ List<TagResponse>> tags() {
-        return this.tags;
+    public Output<Optional<List<TagResponse>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
@@ -170,8 +171,8 @@ public class SavedSearch extends com.pulumi.resources.CustomResource {
      * @return The version number of the query language. The current version is 2 and is the default.
      * 
      */
-    public Output</* @Nullable */ Double> version() {
-        return this.version;
+    public Output<Optional<Double>> version() {
+        return Codegen.optional(this.version);
     }
 
     /**

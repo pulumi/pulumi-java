@@ -14,6 +14,7 @@ import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -41,8 +42,8 @@ public class WebAppAuthSettingsSlot extends com.pulumi.resources.CustomResource 
      * @return Gets a JSON string containing the Azure AD Acl settings.
      * 
      */
-    public Output</* @Nullable */ String> aadClaimsAuthorization() {
-        return this.aadClaimsAuthorization;
+    public Output<Optional<String>> aadClaimsAuthorization() {
+        return Codegen.optional(this.aadClaimsAuthorization);
     }
     /**
      * Login parameters to send to the OpenID Connect authorization endpoint when
@@ -57,8 +58,8 @@ public class WebAppAuthSettingsSlot extends com.pulumi.resources.CustomResource 
      * a user logs in. Each parameter must be in the form &#34;key=value&#34;.
      * 
      */
-    public Output</* @Nullable */ List<String>> additionalLoginParams() {
-        return this.additionalLoginParams;
+    public Output<Optional<List<String>>> additionalLoginParams() {
+        return Codegen.optional(this.additionalLoginParams);
     }
     /**
      * Allowed audience values to consider when validating JWTs issued by
@@ -75,8 +76,8 @@ public class WebAppAuthSettingsSlot extends com.pulumi.resources.CustomResource 
      * allowed audience, regardless of this setting.
      * 
      */
-    public Output</* @Nullable */ List<String>> allowedAudiences() {
-        return this.allowedAudiences;
+    public Output<Optional<List<String>>> allowedAudiences() {
+        return Codegen.optional(this.allowedAudiences);
     }
     /**
      * External URLs that can be redirected to as part of logging in or logging out of the app. Note that the query string part of the URL is ignored.
@@ -93,8 +94,8 @@ public class WebAppAuthSettingsSlot extends com.pulumi.resources.CustomResource 
      * Note that URLs within the current domain are always implicitly allowed.
      * 
      */
-    public Output</* @Nullable */ List<String>> allowedExternalRedirectUrls() {
-        return this.allowedExternalRedirectUrls;
+    public Output<Optional<List<String>>> allowedExternalRedirectUrls() {
+        return Codegen.optional(this.allowedExternalRedirectUrls);
     }
     /**
      * The path of the config file containing auth settings.
@@ -109,8 +110,8 @@ public class WebAppAuthSettingsSlot extends com.pulumi.resources.CustomResource 
      * If the path is relative, base will the site&#39;s root directory.
      * 
      */
-    public Output</* @Nullable */ String> authFilePath() {
-        return this.authFilePath;
+    public Output<Optional<String>> authFilePath() {
+        return Codegen.optional(this.authFilePath);
     }
     /**
      * The Client ID of this relying party application, known as the client_id.
@@ -129,8 +130,8 @@ public class WebAppAuthSettingsSlot extends com.pulumi.resources.CustomResource 
      * More information on OpenID Connect: http://openid.net/specs/openid-connect-core-1_0.html
      * 
      */
-    public Output</* @Nullable */ String> clientId() {
-        return this.clientId;
+    public Output<Optional<String>> clientId() {
+        return Codegen.optional(this.clientId);
     }
     /**
      * The Client Secret of this relying party application (in Azure Active Directory, this is also referred to as the Key).
@@ -149,8 +150,8 @@ public class WebAppAuthSettingsSlot extends com.pulumi.resources.CustomResource 
      * More information on OpenID Connect: http://openid.net/specs/openid-connect-core-1_0.html
      * 
      */
-    public Output</* @Nullable */ String> clientSecret() {
-        return this.clientSecret;
+    public Output<Optional<String>> clientSecret() {
+        return Codegen.optional(this.clientSecret);
     }
     /**
      * An alternative to the client secret, that is the thumbprint of a certificate used for signing purposes. This property acts as
@@ -165,8 +166,8 @@ public class WebAppAuthSettingsSlot extends com.pulumi.resources.CustomResource 
      * a replacement for the Client Secret. It is also optional.
      * 
      */
-    public Output</* @Nullable */ String> clientSecretCertificateThumbprint() {
-        return this.clientSecretCertificateThumbprint;
+    public Output<Optional<String>> clientSecretCertificateThumbprint() {
+        return Codegen.optional(this.clientSecretCertificateThumbprint);
     }
     /**
      * The app setting name that contains the client secret of the relying party application.
@@ -179,8 +180,8 @@ public class WebAppAuthSettingsSlot extends com.pulumi.resources.CustomResource 
      * @return The app setting name that contains the client secret of the relying party application.
      * 
      */
-    public Output</* @Nullable */ String> clientSecretSettingName() {
-        return this.clientSecretSettingName;
+    public Output<Optional<String>> clientSecretSettingName() {
+        return Codegen.optional(this.clientSecretSettingName);
     }
     /**
      * The ConfigVersion of the Authentication / Authorization feature in use for the current app.
@@ -195,8 +196,8 @@ public class WebAppAuthSettingsSlot extends com.pulumi.resources.CustomResource 
      * The setting in this value can control the behavior of the control plane for Authentication / Authorization.
      * 
      */
-    public Output</* @Nullable */ String> configVersion() {
-        return this.configVersion;
+    public Output<Optional<String>> configVersion() {
+        return Codegen.optional(this.configVersion);
     }
     /**
      * The default authentication provider to use when multiple providers are configured.
@@ -213,8 +214,8 @@ public class WebAppAuthSettingsSlot extends com.pulumi.resources.CustomResource 
      * action is set to &#34;RedirectToLoginPage&#34;.
      * 
      */
-    public Output</* @Nullable */ String> defaultProvider() {
-        return this.defaultProvider;
+    public Output<Optional<String>> defaultProvider() {
+        return Codegen.optional(this.defaultProvider);
     }
     /**
      * &lt;code&gt;true&lt;/code&gt; if the Authentication / Authorization feature is enabled for the current app; otherwise, &lt;code&gt;false&lt;/code&gt;.
@@ -227,8 +228,8 @@ public class WebAppAuthSettingsSlot extends com.pulumi.resources.CustomResource 
      * @return &lt;code&gt;true&lt;/code&gt; if the Authentication / Authorization feature is enabled for the current app; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
-    public Output</* @Nullable */ Boolean> enabled() {
-        return this.enabled;
+    public Output<Optional<Boolean>> enabled() {
+        return Codegen.optional(this.enabled);
     }
     /**
      * The App ID of the Facebook app used for login.
@@ -245,8 +246,8 @@ public class WebAppAuthSettingsSlot extends com.pulumi.resources.CustomResource 
      * Facebook Login documentation: https://developers.facebook.com/docs/facebook-login
      * 
      */
-    public Output</* @Nullable */ String> facebookAppId() {
-        return this.facebookAppId;
+    public Output<Optional<String>> facebookAppId() {
+        return Codegen.optional(this.facebookAppId);
     }
     /**
      * The App Secret of the Facebook app used for Facebook Login.
@@ -263,8 +264,8 @@ public class WebAppAuthSettingsSlot extends com.pulumi.resources.CustomResource 
      * Facebook Login documentation: https://developers.facebook.com/docs/facebook-login
      * 
      */
-    public Output</* @Nullable */ String> facebookAppSecret() {
-        return this.facebookAppSecret;
+    public Output<Optional<String>> facebookAppSecret() {
+        return Codegen.optional(this.facebookAppSecret);
     }
     /**
      * The app setting name that contains the app secret used for Facebook Login.
@@ -277,8 +278,8 @@ public class WebAppAuthSettingsSlot extends com.pulumi.resources.CustomResource 
      * @return The app setting name that contains the app secret used for Facebook Login.
      * 
      */
-    public Output</* @Nullable */ String> facebookAppSecretSettingName() {
-        return this.facebookAppSecretSettingName;
+    public Output<Optional<String>> facebookAppSecretSettingName() {
+        return Codegen.optional(this.facebookAppSecretSettingName);
     }
     /**
      * The OAuth 2.0 scopes that will be requested as part of Facebook Login authentication.
@@ -295,8 +296,8 @@ public class WebAppAuthSettingsSlot extends com.pulumi.resources.CustomResource 
      * Facebook Login documentation: https://developers.facebook.com/docs/facebook-login
      * 
      */
-    public Output</* @Nullable */ List<String>> facebookOAuthScopes() {
-        return this.facebookOAuthScopes;
+    public Output<Optional<List<String>>> facebookOAuthScopes() {
+        return Codegen.optional(this.facebookOAuthScopes);
     }
     /**
      * The Client Id of the GitHub app used for login.
@@ -311,8 +312,8 @@ public class WebAppAuthSettingsSlot extends com.pulumi.resources.CustomResource 
      * This setting is required for enabling Github login
      * 
      */
-    public Output</* @Nullable */ String> gitHubClientId() {
-        return this.gitHubClientId;
+    public Output<Optional<String>> gitHubClientId() {
+        return Codegen.optional(this.gitHubClientId);
     }
     /**
      * The Client Secret of the GitHub app used for Github Login.
@@ -327,8 +328,8 @@ public class WebAppAuthSettingsSlot extends com.pulumi.resources.CustomResource 
      * This setting is required for enabling Github login.
      * 
      */
-    public Output</* @Nullable */ String> gitHubClientSecret() {
-        return this.gitHubClientSecret;
+    public Output<Optional<String>> gitHubClientSecret() {
+        return Codegen.optional(this.gitHubClientSecret);
     }
     /**
      * The app setting name that contains the client secret of the Github
@@ -343,8 +344,8 @@ public class WebAppAuthSettingsSlot extends com.pulumi.resources.CustomResource 
      * app used for GitHub Login.
      * 
      */
-    public Output</* @Nullable */ String> gitHubClientSecretSettingName() {
-        return this.gitHubClientSecretSettingName;
+    public Output<Optional<String>> gitHubClientSecretSettingName() {
+        return Codegen.optional(this.gitHubClientSecretSettingName);
     }
     /**
      * The OAuth 2.0 scopes that will be requested as part of GitHub Login authentication.
@@ -359,8 +360,8 @@ public class WebAppAuthSettingsSlot extends com.pulumi.resources.CustomResource 
      * This setting is optional
      * 
      */
-    public Output</* @Nullable */ List<String>> gitHubOAuthScopes() {
-        return this.gitHubOAuthScopes;
+    public Output<Optional<List<String>>> gitHubOAuthScopes() {
+        return Codegen.optional(this.gitHubOAuthScopes);
     }
     /**
      * The OpenID Connect Client ID for the Google web application.
@@ -377,8 +378,8 @@ public class WebAppAuthSettingsSlot extends com.pulumi.resources.CustomResource 
      * Google Sign-In documentation: https://developers.google.com/identity/sign-in/web/
      * 
      */
-    public Output</* @Nullable */ String> googleClientId() {
-        return this.googleClientId;
+    public Output<Optional<String>> googleClientId() {
+        return Codegen.optional(this.googleClientId);
     }
     /**
      * The client secret associated with the Google web application.
@@ -395,8 +396,8 @@ public class WebAppAuthSettingsSlot extends com.pulumi.resources.CustomResource 
      * Google Sign-In documentation: https://developers.google.com/identity/sign-in/web/
      * 
      */
-    public Output</* @Nullable */ String> googleClientSecret() {
-        return this.googleClientSecret;
+    public Output<Optional<String>> googleClientSecret() {
+        return Codegen.optional(this.googleClientSecret);
     }
     /**
      * The app setting name that contains the client secret associated with
@@ -411,8 +412,8 @@ public class WebAppAuthSettingsSlot extends com.pulumi.resources.CustomResource 
      * the Google web application.
      * 
      */
-    public Output</* @Nullable */ String> googleClientSecretSettingName() {
-        return this.googleClientSecretSettingName;
+    public Output<Optional<String>> googleClientSecretSettingName() {
+        return Codegen.optional(this.googleClientSecretSettingName);
     }
     /**
      * The OAuth 2.0 scopes that will be requested as part of Google Sign-In authentication.
@@ -429,8 +430,8 @@ public class WebAppAuthSettingsSlot extends com.pulumi.resources.CustomResource 
      * Google Sign-In documentation: https://developers.google.com/identity/sign-in/web/
      * 
      */
-    public Output</* @Nullable */ List<String>> googleOAuthScopes() {
-        return this.googleOAuthScopes;
+    public Output<Optional<List<String>>> googleOAuthScopes() {
+        return Codegen.optional(this.googleOAuthScopes);
     }
     /**
      * &#34;true&#34; if the auth config settings should be read from a file,
@@ -445,8 +446,8 @@ public class WebAppAuthSettingsSlot extends com.pulumi.resources.CustomResource 
      * &#34;false&#34; otherwise
      * 
      */
-    public Output</* @Nullable */ String> isAuthFromFile() {
-        return this.isAuthFromFile;
+    public Output<Optional<String>> isAuthFromFile() {
+        return Codegen.optional(this.isAuthFromFile);
     }
     /**
      * The OpenID Connect Issuer URI that represents the entity which issues access tokens for this application.
@@ -465,8 +466,8 @@ public class WebAppAuthSettingsSlot extends com.pulumi.resources.CustomResource 
      * More information on OpenID Connect Discovery: http://openid.net/specs/openid-connect-discovery-1_0.html
      * 
      */
-    public Output</* @Nullable */ String> issuer() {
-        return this.issuer;
+    public Output<Optional<String>> issuer() {
+        return Codegen.optional(this.issuer);
     }
     /**
      * Kind of resource.
@@ -479,8 +480,8 @@ public class WebAppAuthSettingsSlot extends com.pulumi.resources.CustomResource 
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> kind() {
-        return this.kind;
+    public Output<Optional<String>> kind() {
+        return Codegen.optional(this.kind);
     }
     /**
      * The OAuth 2.0 client ID that was created for the app used for authentication.
@@ -497,8 +498,8 @@ public class WebAppAuthSettingsSlot extends com.pulumi.resources.CustomResource 
      * Microsoft Account OAuth documentation: https://dev.onedrive.com/auth/msa_oauth.htm
      * 
      */
-    public Output</* @Nullable */ String> microsoftAccountClientId() {
-        return this.microsoftAccountClientId;
+    public Output<Optional<String>> microsoftAccountClientId() {
+        return Codegen.optional(this.microsoftAccountClientId);
     }
     /**
      * The OAuth 2.0 client secret that was created for the app used for authentication.
@@ -515,8 +516,8 @@ public class WebAppAuthSettingsSlot extends com.pulumi.resources.CustomResource 
      * Microsoft Account OAuth documentation: https://dev.onedrive.com/auth/msa_oauth.htm
      * 
      */
-    public Output</* @Nullable */ String> microsoftAccountClientSecret() {
-        return this.microsoftAccountClientSecret;
+    public Output<Optional<String>> microsoftAccountClientSecret() {
+        return Codegen.optional(this.microsoftAccountClientSecret);
     }
     /**
      * The app setting name containing the OAuth 2.0 client secret that was created for the
@@ -531,8 +532,8 @@ public class WebAppAuthSettingsSlot extends com.pulumi.resources.CustomResource 
      * app used for authentication.
      * 
      */
-    public Output</* @Nullable */ String> microsoftAccountClientSecretSettingName() {
-        return this.microsoftAccountClientSecretSettingName;
+    public Output<Optional<String>> microsoftAccountClientSecretSettingName() {
+        return Codegen.optional(this.microsoftAccountClientSecretSettingName);
     }
     /**
      * The OAuth 2.0 scopes that will be requested as part of Microsoft Account authentication.
@@ -549,8 +550,8 @@ public class WebAppAuthSettingsSlot extends com.pulumi.resources.CustomResource 
      * Microsoft Account Scopes and permissions documentation: https://msdn.microsoft.com/en-us/library/dn631845.aspx
      * 
      */
-    public Output</* @Nullable */ List<String>> microsoftAccountOAuthScopes() {
-        return this.microsoftAccountOAuthScopes;
+    public Output<Optional<List<String>>> microsoftAccountOAuthScopes() {
+        return Codegen.optional(this.microsoftAccountOAuthScopes);
     }
     /**
      * Resource Name.
@@ -579,8 +580,8 @@ public class WebAppAuthSettingsSlot extends com.pulumi.resources.CustomResource 
      * The setting in this value can control the behavior of certain features in the Authentication / Authorization module.
      * 
      */
-    public Output</* @Nullable */ String> runtimeVersion() {
-        return this.runtimeVersion;
+    public Output<Optional<String>> runtimeVersion() {
+        return Codegen.optional(this.runtimeVersion);
     }
     /**
      * The number of hours after session token expiration that a session token can be used to
@@ -595,8 +596,8 @@ public class WebAppAuthSettingsSlot extends com.pulumi.resources.CustomResource 
      * call the token refresh API. The default is 72 hours.
      * 
      */
-    public Output</* @Nullable */ Double> tokenRefreshExtensionHours() {
-        return this.tokenRefreshExtensionHours;
+    public Output<Optional<Double>> tokenRefreshExtensionHours() {
+        return Codegen.optional(this.tokenRefreshExtensionHours);
     }
     /**
      * &lt;code&gt;true&lt;/code&gt; to durably store platform-specific security tokens that are obtained during login flows; otherwise, &lt;code&gt;false&lt;/code&gt;.
@@ -611,8 +612,8 @@ public class WebAppAuthSettingsSlot extends com.pulumi.resources.CustomResource 
      *  The default is &lt;code&gt;false&lt;/code&gt;.
      * 
      */
-    public Output</* @Nullable */ Boolean> tokenStoreEnabled() {
-        return this.tokenStoreEnabled;
+    public Output<Optional<Boolean>> tokenStoreEnabled() {
+        return Codegen.optional(this.tokenStoreEnabled);
     }
     /**
      * The OAuth 1.0a consumer key of the Twitter application used for sign-in.
@@ -629,8 +630,8 @@ public class WebAppAuthSettingsSlot extends com.pulumi.resources.CustomResource 
      * Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in
      * 
      */
-    public Output</* @Nullable */ String> twitterConsumerKey() {
-        return this.twitterConsumerKey;
+    public Output<Optional<String>> twitterConsumerKey() {
+        return Codegen.optional(this.twitterConsumerKey);
     }
     /**
      * The OAuth 1.0a consumer secret of the Twitter application used for sign-in.
@@ -647,8 +648,8 @@ public class WebAppAuthSettingsSlot extends com.pulumi.resources.CustomResource 
      * Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in
      * 
      */
-    public Output</* @Nullable */ String> twitterConsumerSecret() {
-        return this.twitterConsumerSecret;
+    public Output<Optional<String>> twitterConsumerSecret() {
+        return Codegen.optional(this.twitterConsumerSecret);
     }
     /**
      * The app setting name that contains the OAuth 1.0a consumer secret of the Twitter
@@ -663,8 +664,8 @@ public class WebAppAuthSettingsSlot extends com.pulumi.resources.CustomResource 
      * application used for sign-in.
      * 
      */
-    public Output</* @Nullable */ String> twitterConsumerSecretSettingName() {
-        return this.twitterConsumerSecretSettingName;
+    public Output<Optional<String>> twitterConsumerSecretSettingName() {
+        return Codegen.optional(this.twitterConsumerSecretSettingName);
     }
     /**
      * Resource type.
@@ -691,8 +692,8 @@ public class WebAppAuthSettingsSlot extends com.pulumi.resources.CustomResource 
      * @return The action to take when an unauthenticated client attempts to access the app.
      * 
      */
-    public Output</* @Nullable */ String> unauthenticatedClientAction() {
-        return this.unauthenticatedClientAction;
+    public Output<Optional<String>> unauthenticatedClientAction() {
+        return Codegen.optional(this.unauthenticatedClientAction);
     }
     /**
      * Gets a value indicating whether the issuer should be a valid HTTPS url and be validated as such.
@@ -705,8 +706,8 @@ public class WebAppAuthSettingsSlot extends com.pulumi.resources.CustomResource 
      * @return Gets a value indicating whether the issuer should be a valid HTTPS url and be validated as such.
      * 
      */
-    public Output</* @Nullable */ Boolean> validateIssuer() {
-        return this.validateIssuer;
+    public Output<Optional<Boolean>> validateIssuer() {
+        return Codegen.optional(this.validateIssuer);
     }
 
     /**

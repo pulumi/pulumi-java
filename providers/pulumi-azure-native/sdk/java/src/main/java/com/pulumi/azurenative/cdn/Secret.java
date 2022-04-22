@@ -17,6 +17,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -67,8 +68,8 @@ public class Secret extends com.pulumi.resources.CustomResource {
      * @return object which contains secret parameters
      * 
      */
-    public Output</* @Nullable */ Object> parameters() {
-        return this.parameters;
+    public Output<Optional<Object>> parameters() {
+        return Codegen.optional(this.parameters);
     }
     /**
      * Provisioning status

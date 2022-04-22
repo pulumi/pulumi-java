@@ -17,6 +17,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -47,8 +48,8 @@ public class IotConnector extends com.pulumi.resources.CustomResource {
      * @return Device Mappings.
      * 
      */
-    public Output</* @Nullable */ IotMappingPropertiesResponse> deviceMapping() {
-        return this.deviceMapping;
+    public Output<Optional<IotMappingPropertiesResponse>> deviceMapping() {
+        return Codegen.optional(this.deviceMapping);
     }
     /**
      * An etag associated with the resource, used for optimistic concurrency when editing it.
@@ -61,8 +62,8 @@ public class IotConnector extends com.pulumi.resources.CustomResource {
      * @return An etag associated with the resource, used for optimistic concurrency when editing it.
      * 
      */
-    public Output</* @Nullable */ String> etag() {
-        return this.etag;
+    public Output<Optional<String>> etag() {
+        return Codegen.optional(this.etag);
     }
     /**
      * Setting indicating whether the service has a managed identity associated with it.
@@ -75,8 +76,8 @@ public class IotConnector extends com.pulumi.resources.CustomResource {
      * @return Setting indicating whether the service has a managed identity associated with it.
      * 
      */
-    public Output</* @Nullable */ ServiceManagedIdentityResponseIdentity> identity() {
-        return this.identity;
+    public Output<Optional<ServiceManagedIdentityResponseIdentity>> identity() {
+        return Codegen.optional(this.identity);
     }
     /**
      * Source configuration.
@@ -89,8 +90,8 @@ public class IotConnector extends com.pulumi.resources.CustomResource {
      * @return Source configuration.
      * 
      */
-    public Output</* @Nullable */ IotEventHubIngestionEndpointConfigurationResponse> ingestionEndpointConfiguration() {
-        return this.ingestionEndpointConfiguration;
+    public Output<Optional<IotEventHubIngestionEndpointConfigurationResponse>> ingestionEndpointConfiguration() {
+        return Codegen.optional(this.ingestionEndpointConfiguration);
     }
     /**
      * The resource location.
@@ -103,8 +104,8 @@ public class IotConnector extends com.pulumi.resources.CustomResource {
      * @return The resource location.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The resource name.
@@ -159,8 +160,8 @@ public class IotConnector extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The resource type.

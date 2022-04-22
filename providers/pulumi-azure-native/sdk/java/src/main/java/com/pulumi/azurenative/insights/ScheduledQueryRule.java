@@ -19,6 +19,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -63,8 +64,8 @@ public class ScheduledQueryRule extends com.pulumi.resources.CustomResource {
      * @return The flag that indicates whether the alert should be automatically resolved or not. The default is false.
      * 
      */
-    public Output</* @Nullable */ Boolean> autoMitigate() {
-        return this.autoMitigate;
+    public Output<Optional<Boolean>> autoMitigate() {
+        return Codegen.optional(this.autoMitigate);
     }
     /**
      * The api-version used when creating this alert rule
@@ -91,8 +92,8 @@ public class ScheduledQueryRule extends com.pulumi.resources.CustomResource {
      * @return The description of the Log Search rule.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The display name of the alert rule
@@ -105,8 +106,8 @@ public class ScheduledQueryRule extends com.pulumi.resources.CustomResource {
      * @return The display name of the alert rule
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * The flag which indicates whether the Log Search rule is enabled. Value should be true or false
@@ -119,8 +120,8 @@ public class ScheduledQueryRule extends com.pulumi.resources.CustomResource {
      * @return The flag which indicates whether the Log Search rule is enabled. Value should be true or false
      * 
      */
-    public Output</* @Nullable */ String> enabled() {
-        return this.enabled;
+    public Output<Optional<String>> enabled() {
+        return Codegen.optional(this.enabled);
     }
     /**
      * The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
@@ -231,8 +232,8 @@ public class ScheduledQueryRule extends com.pulumi.resources.CustomResource {
      * @return Schedule (Frequency, Time Window) for rule. Required for action type - AlertingAction
      * 
      */
-    public Output</* @Nullable */ ScheduleResponse> schedule() {
-        return this.schedule;
+    public Output<Optional<ScheduleResponse>> schedule() {
+        return Codegen.optional(this.schedule);
     }
     /**
      * Data Source against which rule will Query Data
@@ -259,8 +260,8 @@ public class ScheduledQueryRule extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Azure resource type

@@ -16,6 +16,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class EventChannel extends com.pulumi.resources.CustomResource {
      * @return Represents the destination of an event channel.
      * 
      */
-    public Output</* @Nullable */ EventChannelDestinationResponse> destination() {
-        return this.destination;
+    public Output<Optional<EventChannelDestinationResponse>> destination() {
+        return Codegen.optional(this.destination);
     }
     /**
      * Expiration time of the event channel. If this timer expires while the corresponding partner topic is never activated,
@@ -62,8 +63,8 @@ public class EventChannel extends com.pulumi.resources.CustomResource {
      * the event channel and corresponding partner topic are deleted.
      * 
      */
-    public Output</* @Nullable */ String> expirationTimeIfNotActivatedUtc() {
-        return this.expirationTimeIfNotActivatedUtc;
+    public Output<Optional<String>> expirationTimeIfNotActivatedUtc() {
+        return Codegen.optional(this.expirationTimeIfNotActivatedUtc);
     }
     /**
      * Information about the filter for the event channel.
@@ -76,8 +77,8 @@ public class EventChannel extends com.pulumi.resources.CustomResource {
      * @return Information about the filter for the event channel.
      * 
      */
-    public Output</* @Nullable */ EventChannelFilterResponse> filter() {
-        return this.filter;
+    public Output<Optional<EventChannelFilterResponse>> filter() {
+        return Codegen.optional(this.filter);
     }
     /**
      * Name of the resource.
@@ -106,8 +107,8 @@ public class EventChannel extends com.pulumi.resources.CustomResource {
      * This will be helpful to remove any ambiguity of the origin of creation of the partner topic for the customer.
      * 
      */
-    public Output</* @Nullable */ String> partnerTopicFriendlyDescription() {
-        return this.partnerTopicFriendlyDescription;
+    public Output<Optional<String>> partnerTopicFriendlyDescription() {
+        return Codegen.optional(this.partnerTopicFriendlyDescription);
     }
     /**
      * The readiness state of the corresponding partner topic.
@@ -148,8 +149,8 @@ public class EventChannel extends com.pulumi.resources.CustomResource {
      * @return Source of the event channel. This represents a unique resource in the partner&#39;s resource model.
      * 
      */
-    public Output</* @Nullable */ EventChannelSourceResponse> source() {
-        return this.source;
+    public Output<Optional<EventChannelSourceResponse>> source() {
+        return Codegen.optional(this.source);
     }
     /**
      * The system metadata relating to Event Channel resource.

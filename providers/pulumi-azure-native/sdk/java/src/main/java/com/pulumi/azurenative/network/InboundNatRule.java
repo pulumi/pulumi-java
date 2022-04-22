@@ -16,6 +16,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -60,8 +61,8 @@ public class InboundNatRule extends com.pulumi.resources.CustomResource {
      * @return The port used for the internal endpoint. Acceptable values range from 1 to 65535.
      * 
      */
-    public Output</* @Nullable */ Integer> backendPort() {
-        return this.backendPort;
+    public Output<Optional<Integer>> backendPort() {
+        return Codegen.optional(this.backendPort);
     }
     /**
      * Configures a virtual machine&#39;s endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server. This setting can&#39;t be changed after you create the endpoint.
@@ -74,8 +75,8 @@ public class InboundNatRule extends com.pulumi.resources.CustomResource {
      * @return Configures a virtual machine&#39;s endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server. This setting can&#39;t be changed after you create the endpoint.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableFloatingIP() {
-        return this.enableFloatingIP;
+    public Output<Optional<Boolean>> enableFloatingIP() {
+        return Codegen.optional(this.enableFloatingIP);
     }
     /**
      * Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This element is only used when the protocol is set to TCP.
@@ -88,8 +89,8 @@ public class InboundNatRule extends com.pulumi.resources.CustomResource {
      * @return Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This element is only used when the protocol is set to TCP.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableTcpReset() {
-        return this.enableTcpReset;
+    public Output<Optional<Boolean>> enableTcpReset() {
+        return Codegen.optional(this.enableTcpReset);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
@@ -116,8 +117,8 @@ public class InboundNatRule extends com.pulumi.resources.CustomResource {
      * @return A reference to frontend IP addresses.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> frontendIPConfiguration() {
-        return this.frontendIPConfiguration;
+    public Output<Optional<SubResourceResponse>> frontendIPConfiguration() {
+        return Codegen.optional(this.frontendIPConfiguration);
     }
     /**
      * The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values range from 1 to 65534.
@@ -130,8 +131,8 @@ public class InboundNatRule extends com.pulumi.resources.CustomResource {
      * @return The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values range from 1 to 65534.
      * 
      */
-    public Output</* @Nullable */ Integer> frontendPort() {
-        return this.frontendPort;
+    public Output<Optional<Integer>> frontendPort() {
+        return Codegen.optional(this.frontendPort);
     }
     /**
      * The timeout for the TCP idle connection. The value can be set between 4 and 30 minutes. The default value is 4 minutes. This element is only used when the protocol is set to TCP.
@@ -144,8 +145,8 @@ public class InboundNatRule extends com.pulumi.resources.CustomResource {
      * @return The timeout for the TCP idle connection. The value can be set between 4 and 30 minutes. The default value is 4 minutes. This element is only used when the protocol is set to TCP.
      * 
      */
-    public Output</* @Nullable */ Integer> idleTimeoutInMinutes() {
-        return this.idleTimeoutInMinutes;
+    public Output<Optional<Integer>> idleTimeoutInMinutes() {
+        return Codegen.optional(this.idleTimeoutInMinutes);
     }
     /**
      * The name of the resource that is unique within the set of inbound NAT rules used by the load balancer. This name can be used to access the resource.
@@ -158,8 +159,8 @@ public class InboundNatRule extends com.pulumi.resources.CustomResource {
      * @return The name of the resource that is unique within the set of inbound NAT rules used by the load balancer. This name can be used to access the resource.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * The reference to the transport protocol used by the load balancing rule.
@@ -172,8 +173,8 @@ public class InboundNatRule extends com.pulumi.resources.CustomResource {
      * @return The reference to the transport protocol used by the load balancing rule.
      * 
      */
-    public Output</* @Nullable */ String> protocol() {
-        return this.protocol;
+    public Output<Optional<String>> protocol() {
+        return Codegen.optional(this.protocol);
     }
     /**
      * The provisioning state of the inbound NAT rule resource.

@@ -16,6 +16,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class AssetFilter extends com.pulumi.resources.CustomResource {
      * @return The first quality.
      * 
      */
-    public Output</* @Nullable */ FirstQualityResponse> firstQuality() {
-        return this.firstQuality;
+    public Output<Optional<FirstQualityResponse>> firstQuality() {
+        return Codegen.optional(this.firstQuality);
     }
     /**
      * The name of the resource
@@ -74,8 +75,8 @@ public class AssetFilter extends com.pulumi.resources.CustomResource {
      * @return The presentation time range.
      * 
      */
-    public Output</* @Nullable */ PresentationTimeRangeResponse> presentationTimeRange() {
-        return this.presentationTimeRange;
+    public Output<Optional<PresentationTimeRangeResponse>> presentationTimeRange() {
+        return Codegen.optional(this.presentationTimeRange);
     }
     /**
      * The system metadata relating to this resource.
@@ -102,8 +103,8 @@ public class AssetFilter extends com.pulumi.resources.CustomResource {
      * @return The tracks selection conditions.
      * 
      */
-    public Output</* @Nullable */ List<FilterTrackSelectionResponse>> tracks() {
-        return this.tracks;
+    public Output<Optional<List<FilterTrackSelectionResponse>>> tracks() {
+        return Codegen.optional(this.tracks);
     }
     /**
      * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;

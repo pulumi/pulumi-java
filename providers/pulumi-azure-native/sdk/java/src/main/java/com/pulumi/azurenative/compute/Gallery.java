@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class Gallery extends com.pulumi.resources.CustomResource {
      * @return The description of this Shared Image Gallery resource. This property is updatable.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Describes the gallery unique name.
@@ -59,8 +60,8 @@ public class Gallery extends com.pulumi.resources.CustomResource {
      * @return Describes the gallery unique name.
      * 
      */
-    public Output</* @Nullable */ GalleryIdentifierResponse> identifier() {
-        return this.identifier;
+    public Output<Optional<GalleryIdentifierResponse>> identifier() {
+        return Codegen.optional(this.identifier);
     }
     /**
      * Resource location
@@ -115,8 +116,8 @@ public class Gallery extends com.pulumi.resources.CustomResource {
      * @return Profile for gallery sharing to subscription or tenant
      * 
      */
-    public Output</* @Nullable */ SharingProfileResponse> sharingProfile() {
-        return this.sharingProfile;
+    public Output<Optional<SharingProfileResponse>> sharingProfile() {
+        return Codegen.optional(this.sharingProfile);
     }
     /**
      * Resource tags
@@ -129,8 +130,8 @@ public class Gallery extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type

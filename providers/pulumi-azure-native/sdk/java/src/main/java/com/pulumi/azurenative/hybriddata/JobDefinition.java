@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class JobDefinition extends com.pulumi.resources.CustomResource {
      * @return List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.
      * 
      */
-    public Output</* @Nullable */ List<CustomerSecretResponse>> customerSecrets() {
-        return this.customerSecrets;
+    public Output<Optional<List<CustomerSecretResponse>>> customerSecrets() {
+        return Codegen.optional(this.customerSecrets);
     }
     /**
      * A generic json used differently by each data service type.
@@ -59,8 +60,8 @@ public class JobDefinition extends com.pulumi.resources.CustomResource {
      * @return A generic json used differently by each data service type.
      * 
      */
-    public Output</* @Nullable */ Object> dataServiceInput() {
-        return this.dataServiceInput;
+    public Output<Optional<Object>> dataServiceInput() {
+        return Codegen.optional(this.dataServiceInput);
     }
     /**
      * Data Sink Id associated to the job definition.
@@ -101,8 +102,8 @@ public class JobDefinition extends com.pulumi.resources.CustomResource {
      * @return Last modified time of the job definition.
      * 
      */
-    public Output</* @Nullable */ String> lastModifiedTime() {
-        return this.lastModifiedTime;
+    public Output<Optional<String>> lastModifiedTime() {
+        return Codegen.optional(this.lastModifiedTime);
     }
     /**
      * Name of the object.
@@ -129,8 +130,8 @@ public class JobDefinition extends com.pulumi.resources.CustomResource {
      * @return This is the preferred geo location for the job to run.
      * 
      */
-    public Output</* @Nullable */ String> runLocation() {
-        return this.runLocation;
+    public Output<Optional<String>> runLocation() {
+        return Codegen.optional(this.runLocation);
     }
     /**
      * Schedule for running the job definition
@@ -143,8 +144,8 @@ public class JobDefinition extends com.pulumi.resources.CustomResource {
      * @return Schedule for running the job definition
      * 
      */
-    public Output</* @Nullable */ List<ScheduleResponse>> schedules() {
-        return this.schedules;
+    public Output<Optional<List<ScheduleResponse>>> schedules() {
+        return Codegen.optional(this.schedules);
     }
     /**
      * State of the job definition.
@@ -185,8 +186,8 @@ public class JobDefinition extends com.pulumi.resources.CustomResource {
      * @return Enum to detect if user confirmation is required. If not passed will default to NotRequired.
      * 
      */
-    public Output</* @Nullable */ String> userConfirmation() {
-        return this.userConfirmation;
+    public Output<Optional<String>> userConfirmation() {
+        return Codegen.optional(this.userConfirmation);
     }
 
     /**

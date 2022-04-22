@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -71,8 +72,8 @@ public class ConnectorMapping extends com.pulumi.resources.CustomResource {
      * @return Type of connector.
      * 
      */
-    public Output</* @Nullable */ String> connectorType() {
-        return this.connectorType;
+    public Output<Optional<String>> connectorType() {
+        return Codegen.optional(this.connectorType);
     }
     /**
      * The created time.
@@ -113,8 +114,8 @@ public class ConnectorMapping extends com.pulumi.resources.CustomResource {
      * @return The description of the connector mapping.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Display name for the connector mapping.
@@ -127,8 +128,8 @@ public class ConnectorMapping extends com.pulumi.resources.CustomResource {
      * @return Display name for the connector mapping.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * Defines which entity type the file should map to.

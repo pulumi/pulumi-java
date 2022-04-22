@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class NetworkProfile extends com.pulumi.resources.CustomResource {
      * @return List of chid container network interface configurations.
      * 
      */
-    public Output</* @Nullable */ List<ContainerNetworkInterfaceConfigurationResponse>> containerNetworkInterfaceConfigurations() {
-        return this.containerNetworkInterfaceConfigurations;
+    public Output<Optional<List<ContainerNetworkInterfaceConfigurationResponse>>> containerNetworkInterfaceConfigurations() {
+        return Codegen.optional(this.containerNetworkInterfaceConfigurations);
     }
     /**
      * List of child container network interfaces.
@@ -87,8 +88,8 @@ public class NetworkProfile extends com.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * Resource name.
@@ -143,8 +144,8 @@ public class NetworkProfile extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type.

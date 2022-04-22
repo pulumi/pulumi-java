@@ -14,6 +14,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -41,8 +42,8 @@ public class WebAppSiteExtension extends com.pulumi.resources.CustomResource {
      * @return List of authors.
      * 
      */
-    public Output</* @Nullable */ List<String>> authors() {
-        return this.authors;
+    public Output<Optional<List<String>>> authors() {
+        return Codegen.optional(this.authors);
     }
     /**
      * Site Extension comment.
@@ -55,8 +56,8 @@ public class WebAppSiteExtension extends com.pulumi.resources.CustomResource {
      * @return Site Extension comment.
      * 
      */
-    public Output</* @Nullable */ String> comment() {
-        return this.comment;
+    public Output<Optional<String>> comment() {
+        return Codegen.optional(this.comment);
     }
     /**
      * Detailed description.
@@ -69,8 +70,8 @@ public class WebAppSiteExtension extends com.pulumi.resources.CustomResource {
      * @return Detailed description.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Count of downloads.
@@ -83,8 +84,8 @@ public class WebAppSiteExtension extends com.pulumi.resources.CustomResource {
      * @return Count of downloads.
      * 
      */
-    public Output</* @Nullable */ Integer> downloadCount() {
-        return this.downloadCount;
+    public Output<Optional<Integer>> downloadCount() {
+        return Codegen.optional(this.downloadCount);
     }
     /**
      * Site extension ID.
@@ -97,8 +98,8 @@ public class WebAppSiteExtension extends com.pulumi.resources.CustomResource {
      * @return Site extension ID.
      * 
      */
-    public Output</* @Nullable */ String> extensionId() {
-        return this.extensionId;
+    public Output<Optional<String>> extensionId() {
+        return Codegen.optional(this.extensionId);
     }
     /**
      * Site extension type.
@@ -111,8 +112,8 @@ public class WebAppSiteExtension extends com.pulumi.resources.CustomResource {
      * @return Site extension type.
      * 
      */
-    public Output</* @Nullable */ String> extensionType() {
-        return this.extensionType;
+    public Output<Optional<String>> extensionType() {
+        return Codegen.optional(this.extensionType);
     }
     /**
      * Extension URL.
@@ -125,8 +126,8 @@ public class WebAppSiteExtension extends com.pulumi.resources.CustomResource {
      * @return Extension URL.
      * 
      */
-    public Output</* @Nullable */ String> extensionUrl() {
-        return this.extensionUrl;
+    public Output<Optional<String>> extensionUrl() {
+        return Codegen.optional(this.extensionUrl);
     }
     /**
      * Feed URL.
@@ -139,8 +140,8 @@ public class WebAppSiteExtension extends com.pulumi.resources.CustomResource {
      * @return Feed URL.
      * 
      */
-    public Output</* @Nullable */ String> feedUrl() {
-        return this.feedUrl;
+    public Output<Optional<String>> feedUrl() {
+        return Codegen.optional(this.feedUrl);
     }
     /**
      * Icon URL.
@@ -153,8 +154,8 @@ public class WebAppSiteExtension extends com.pulumi.resources.CustomResource {
      * @return Icon URL.
      * 
      */
-    public Output</* @Nullable */ String> iconUrl() {
-        return this.iconUrl;
+    public Output<Optional<String>> iconUrl() {
+        return Codegen.optional(this.iconUrl);
     }
     /**
      * Installed timestamp.
@@ -167,8 +168,8 @@ public class WebAppSiteExtension extends com.pulumi.resources.CustomResource {
      * @return Installed timestamp.
      * 
      */
-    public Output</* @Nullable */ String> installedDateTime() {
-        return this.installedDateTime;
+    public Output<Optional<String>> installedDateTime() {
+        return Codegen.optional(this.installedDateTime);
     }
     /**
      * Installer command line parameters.
@@ -181,8 +182,8 @@ public class WebAppSiteExtension extends com.pulumi.resources.CustomResource {
      * @return Installer command line parameters.
      * 
      */
-    public Output</* @Nullable */ String> installerCommandLineParams() {
-        return this.installerCommandLineParams;
+    public Output<Optional<String>> installerCommandLineParams() {
+        return Codegen.optional(this.installerCommandLineParams);
     }
     /**
      * Kind of resource.
@@ -195,8 +196,8 @@ public class WebAppSiteExtension extends com.pulumi.resources.CustomResource {
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> kind() {
-        return this.kind;
+    public Output<Optional<String>> kind() {
+        return Codegen.optional(this.kind);
     }
     /**
      * License URL.
@@ -209,8 +210,8 @@ public class WebAppSiteExtension extends com.pulumi.resources.CustomResource {
      * @return License URL.
      * 
      */
-    public Output</* @Nullable */ String> licenseUrl() {
-        return this.licenseUrl;
+    public Output<Optional<String>> licenseUrl() {
+        return Codegen.optional(this.licenseUrl);
     }
     /**
      * &lt;code&gt;true&lt;/code&gt; if the local version is the latest version; &lt;code&gt;false&lt;/code&gt; otherwise.
@@ -223,8 +224,8 @@ public class WebAppSiteExtension extends com.pulumi.resources.CustomResource {
      * @return &lt;code&gt;true&lt;/code&gt; if the local version is the latest version; &lt;code&gt;false&lt;/code&gt; otherwise.
      * 
      */
-    public Output</* @Nullable */ Boolean> localIsLatestVersion() {
-        return this.localIsLatestVersion;
+    public Output<Optional<Boolean>> localIsLatestVersion() {
+        return Codegen.optional(this.localIsLatestVersion);
     }
     /**
      * Local path.
@@ -237,8 +238,8 @@ public class WebAppSiteExtension extends com.pulumi.resources.CustomResource {
      * @return Local path.
      * 
      */
-    public Output</* @Nullable */ String> localPath() {
-        return this.localPath;
+    public Output<Optional<String>> localPath() {
+        return Codegen.optional(this.localPath);
     }
     /**
      * Resource Name.
@@ -265,8 +266,8 @@ public class WebAppSiteExtension extends com.pulumi.resources.CustomResource {
      * @return Project URL.
      * 
      */
-    public Output</* @Nullable */ String> projectUrl() {
-        return this.projectUrl;
+    public Output<Optional<String>> projectUrl() {
+        return Codegen.optional(this.projectUrl);
     }
     /**
      * Provisioning state.
@@ -279,8 +280,8 @@ public class WebAppSiteExtension extends com.pulumi.resources.CustomResource {
      * @return Provisioning state.
      * 
      */
-    public Output</* @Nullable */ String> provisioningState() {
-        return this.provisioningState;
+    public Output<Optional<String>> provisioningState() {
+        return Codegen.optional(this.provisioningState);
     }
     /**
      * Published timestamp.
@@ -293,8 +294,8 @@ public class WebAppSiteExtension extends com.pulumi.resources.CustomResource {
      * @return Published timestamp.
      * 
      */
-    public Output</* @Nullable */ String> publishedDateTime() {
-        return this.publishedDateTime;
+    public Output<Optional<String>> publishedDateTime() {
+        return Codegen.optional(this.publishedDateTime);
     }
     /**
      * Summary description.
@@ -307,14 +308,14 @@ public class WebAppSiteExtension extends com.pulumi.resources.CustomResource {
      * @return Summary description.
      * 
      */
-    public Output</* @Nullable */ String> summary() {
-        return this.summary;
+    public Output<Optional<String>> summary() {
+        return Codegen.optional(this.summary);
     }
     @Export(name="title", type=String.class, parameters={})
     private Output</* @Nullable */ String> title;
 
-    public Output</* @Nullable */ String> title() {
-        return this.title;
+    public Output<Optional<String>> title() {
+        return Codegen.optional(this.title);
     }
     /**
      * Resource type.
@@ -341,8 +342,8 @@ public class WebAppSiteExtension extends com.pulumi.resources.CustomResource {
      * @return Version information.
      * 
      */
-    public Output</* @Nullable */ String> version() {
-        return this.version;
+    public Output<Optional<String>> version() {
+        return Codegen.optional(this.version);
     }
 
     /**

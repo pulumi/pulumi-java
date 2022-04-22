@@ -17,6 +17,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -47,8 +48,8 @@ public class PolicySetDefinitionAtManagementGroup extends com.pulumi.resources.C
      * @return The policy set definition description.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The display name of the policy set definition.
@@ -61,8 +62,8 @@ public class PolicySetDefinitionAtManagementGroup extends com.pulumi.resources.C
      * @return The display name of the policy set definition.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * The policy set definition metadata.  Metadata is an open ended object and is typically a collection of key value pairs.
@@ -75,8 +76,8 @@ public class PolicySetDefinitionAtManagementGroup extends com.pulumi.resources.C
      * @return The policy set definition metadata.  Metadata is an open ended object and is typically a collection of key value pairs.
      * 
      */
-    public Output</* @Nullable */ Object> metadata() {
-        return this.metadata;
+    public Output<Optional<Object>> metadata() {
+        return Codegen.optional(this.metadata);
     }
     /**
      * The name of the policy set definition.
@@ -103,8 +104,8 @@ public class PolicySetDefinitionAtManagementGroup extends com.pulumi.resources.C
      * @return The policy set definition parameters that can be used in policy definition references.
      * 
      */
-    public Output</* @Nullable */ Map<String,ParameterDefinitionsValueResponse>> parameters() {
-        return this.parameters;
+    public Output<Optional<Map<String,ParameterDefinitionsValueResponse>>> parameters() {
+        return Codegen.optional(this.parameters);
     }
     /**
      * The metadata describing groups of policy definition references within the policy set definition.
@@ -117,8 +118,8 @@ public class PolicySetDefinitionAtManagementGroup extends com.pulumi.resources.C
      * @return The metadata describing groups of policy definition references within the policy set definition.
      * 
      */
-    public Output</* @Nullable */ List<PolicyDefinitionGroupResponse>> policyDefinitionGroups() {
-        return this.policyDefinitionGroups;
+    public Output<Optional<List<PolicyDefinitionGroupResponse>>> policyDefinitionGroups() {
+        return Codegen.optional(this.policyDefinitionGroups);
     }
     /**
      * An array of policy definition references.
@@ -145,8 +146,8 @@ public class PolicySetDefinitionAtManagementGroup extends com.pulumi.resources.C
      * @return The type of policy definition. Possible values are NotSpecified, BuiltIn, Custom, and Static.
      * 
      */
-    public Output</* @Nullable */ String> policyType() {
-        return this.policyType;
+    public Output<Optional<String>> policyType() {
+        return Codegen.optional(this.policyType);
     }
     /**
      * The type of the resource (Microsoft.Authorization/policySetDefinitions).

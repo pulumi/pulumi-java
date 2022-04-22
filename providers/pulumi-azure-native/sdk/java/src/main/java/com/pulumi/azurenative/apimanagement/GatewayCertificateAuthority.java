@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class GatewayCertificateAuthority extends com.pulumi.resources.CustomReso
      * @return Determines whether certificate authority is trusted.
      * 
      */
-    public Output</* @Nullable */ Boolean> isTrusted() {
-        return this.isTrusted;
+    public Output<Optional<Boolean>> isTrusted() {
+        return Codegen.optional(this.isTrusted);
     }
     /**
      * Resource name.

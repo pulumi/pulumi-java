@@ -17,6 +17,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class WebAppAuthSettingsV2 extends com.pulumi.resources.CustomResource {
      * @return The configuration settings that determines the validation flow of users using App Service Authentication/Authorization.
      * 
      */
-    public Output</* @Nullable */ GlobalValidationResponse> globalValidation() {
-        return this.globalValidation;
+    public Output<Optional<GlobalValidationResponse>> globalValidation() {
+        return Codegen.optional(this.globalValidation);
     }
     /**
      * The configuration settings of the HTTP requests for authentication and authorization requests made against App Service Authentication/Authorization.
@@ -58,8 +59,8 @@ public class WebAppAuthSettingsV2 extends com.pulumi.resources.CustomResource {
      * @return The configuration settings of the HTTP requests for authentication and authorization requests made against App Service Authentication/Authorization.
      * 
      */
-    public Output</* @Nullable */ HttpSettingsResponse> httpSettings() {
-        return this.httpSettings;
+    public Output<Optional<HttpSettingsResponse>> httpSettings() {
+        return Codegen.optional(this.httpSettings);
     }
     /**
      * The configuration settings of each of the identity providers used to configure App Service Authentication/Authorization.
@@ -72,8 +73,8 @@ public class WebAppAuthSettingsV2 extends com.pulumi.resources.CustomResource {
      * @return The configuration settings of each of the identity providers used to configure App Service Authentication/Authorization.
      * 
      */
-    public Output</* @Nullable */ IdentityProvidersResponse> identityProviders() {
-        return this.identityProviders;
+    public Output<Optional<IdentityProvidersResponse>> identityProviders() {
+        return Codegen.optional(this.identityProviders);
     }
     /**
      * Kind of resource.
@@ -86,8 +87,8 @@ public class WebAppAuthSettingsV2 extends com.pulumi.resources.CustomResource {
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> kind() {
-        return this.kind;
+    public Output<Optional<String>> kind() {
+        return Codegen.optional(this.kind);
     }
     /**
      * The configuration settings of the login flow of users using App Service Authentication/Authorization.
@@ -100,8 +101,8 @@ public class WebAppAuthSettingsV2 extends com.pulumi.resources.CustomResource {
      * @return The configuration settings of the login flow of users using App Service Authentication/Authorization.
      * 
      */
-    public Output</* @Nullable */ LoginResponse> login() {
-        return this.login;
+    public Output<Optional<LoginResponse>> login() {
+        return Codegen.optional(this.login);
     }
     /**
      * Resource Name.
@@ -128,8 +129,8 @@ public class WebAppAuthSettingsV2 extends com.pulumi.resources.CustomResource {
      * @return The configuration settings of the platform of App Service Authentication/Authorization.
      * 
      */
-    public Output</* @Nullable */ AuthPlatformResponse> platform() {
-        return this.platform;
+    public Output<Optional<AuthPlatformResponse>> platform() {
+        return Codegen.optional(this.platform);
     }
     /**
      * Resource type.

@@ -16,6 +16,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class GuestAgent extends com.pulumi.resources.CustomResource {
      * @return Username / Password Credentials to provision guest agent.
      * 
      */
-    public Output</* @Nullable */ GuestCredentialResponse> credentials() {
-        return this.credentials;
+    public Output<Optional<GuestCredentialResponse>> credentials() {
+        return Codegen.optional(this.credentials);
     }
     /**
      * Gets the name of the corresponding resource in Kubernetes.
@@ -74,8 +75,8 @@ public class GuestAgent extends com.pulumi.resources.CustomResource {
      * @return HTTP Proxy configuration for the VM.
      * 
      */
-    public Output</* @Nullable */ HttpProxyConfigurationResponse> httpProxyConfig() {
-        return this.httpProxyConfig;
+    public Output<Optional<HttpProxyConfigurationResponse>> httpProxyConfig() {
+        return Codegen.optional(this.httpProxyConfig);
     }
     /**
      * The name of the resource
@@ -102,8 +103,8 @@ public class GuestAgent extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the guest agent provisioning action.
      * 
      */
-    public Output</* @Nullable */ String> provisioningAction() {
-        return this.provisioningAction;
+    public Output<Optional<String>> provisioningAction() {
+        return Codegen.optional(this.provisioningAction);
     }
     /**
      * Gets or sets the provisioning state.

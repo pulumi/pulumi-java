@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -85,8 +86,8 @@ public class ManagedPrivateEndpoint extends com.pulumi.resources.CustomResource 
      * @return The region of the resource to which the managed private endpoint is created.
      * 
      */
-    public Output</* @Nullable */ String> privateLinkResourceRegion() {
-        return this.privateLinkResourceRegion;
+    public Output<Optional<String>> privateLinkResourceRegion() {
+        return Codegen.optional(this.privateLinkResourceRegion);
     }
     /**
      * The provisioned state of the resource.
@@ -113,8 +114,8 @@ public class ManagedPrivateEndpoint extends com.pulumi.resources.CustomResource 
      * @return The user request message.
      * 
      */
-    public Output</* @Nullable */ String> requestMessage() {
-        return this.requestMessage;
+    public Output<Optional<String>> requestMessage() {
+        return Codegen.optional(this.requestMessage);
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.

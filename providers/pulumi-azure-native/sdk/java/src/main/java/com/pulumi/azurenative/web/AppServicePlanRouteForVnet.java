@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -39,8 +40,8 @@ public class AppServicePlanRouteForVnet extends com.pulumi.resources.CustomResou
      * @return The ending address for this route. If the start address is specified in CIDR notation, this must be omitted.
      * 
      */
-    public Output</* @Nullable */ String> endAddress() {
-        return this.endAddress;
+    public Output<Optional<String>> endAddress() {
+        return Codegen.optional(this.endAddress);
     }
     /**
      * Kind of resource.
@@ -53,8 +54,8 @@ public class AppServicePlanRouteForVnet extends com.pulumi.resources.CustomResou
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> kind() {
-        return this.kind;
+    public Output<Optional<String>> kind() {
+        return Codegen.optional(this.kind);
     }
     /**
      * Resource Name.
@@ -91,8 +92,8 @@ public class AppServicePlanRouteForVnet extends com.pulumi.resources.CustomResou
      * These values will be used for syncing an app&#39;s routes with those from a Virtual Network.
      * 
      */
-    public Output</* @Nullable */ String> routeType() {
-        return this.routeType;
+    public Output<Optional<String>> routeType() {
+        return Codegen.optional(this.routeType);
     }
     /**
      * The starting address for this route. This may also include a CIDR notation, in which case the end address must not be specified.
@@ -105,8 +106,8 @@ public class AppServicePlanRouteForVnet extends com.pulumi.resources.CustomResou
      * @return The starting address for this route. This may also include a CIDR notation, in which case the end address must not be specified.
      * 
      */
-    public Output</* @Nullable */ String> startAddress() {
-        return this.startAddress;
+    public Output<Optional<String>> startAddress() {
+        return Codegen.optional(this.startAddress);
     }
     /**
      * Resource type.

@@ -16,6 +16,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -146,8 +147,8 @@ public class Gen1Environment extends com.pulumi.resources.CustomResource {
      * @return The list of event properties which will be used to partition data in the environment. Currently, only a single partition key property is supported.
      * 
      */
-    public Output</* @Nullable */ List<TimeSeriesIdPropertyResponse>> partitionKeyProperties() {
-        return this.partitionKeyProperties;
+    public Output<Optional<List<TimeSeriesIdPropertyResponse>>> partitionKeyProperties() {
+        return Codegen.optional(this.partitionKeyProperties);
     }
     /**
      * Provisioning state of the resource.
@@ -202,8 +203,8 @@ public class Gen1Environment extends com.pulumi.resources.CustomResource {
      * @return The behavior the Time Series Insights service should take when the environment&#39;s capacity has been exceeded. If &#34;PauseIngress&#34; is specified, new events will not be read from the event source. If &#34;PurgeOldData&#34; is specified, new events will continue to be read and old events will be deleted from the environment. The default behavior is PurgeOldData.
      * 
      */
-    public Output</* @Nullable */ String> storageLimitExceededBehavior() {
-        return this.storageLimitExceededBehavior;
+    public Output<Optional<String>> storageLimitExceededBehavior() {
+        return Codegen.optional(this.storageLimitExceededBehavior);
     }
     /**
      * Resource tags
@@ -216,8 +217,8 @@ public class Gen1Environment extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type

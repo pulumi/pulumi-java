@@ -17,6 +17,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -117,8 +118,8 @@ public class DedicatedHostGroup extends com.pulumi.resources.CustomResource {
      * @return Specifies whether virtual machines or virtual machine scale sets can be placed automatically on the dedicated host group. Automatic placement means resources are allocated on dedicated hosts, that are chosen by Azure, under the dedicated host group. The value is defaulted to &#39;false&#39; when not provided. &lt;br&gt;&lt;br&gt;Minimum api-version: 2020-06-01.
      * 
      */
-    public Output</* @Nullable */ Boolean> supportAutomaticPlacement() {
-        return this.supportAutomaticPlacement;
+    public Output<Optional<Boolean>> supportAutomaticPlacement() {
+        return Codegen.optional(this.supportAutomaticPlacement);
     }
     /**
      * Resource tags
@@ -131,8 +132,8 @@ public class DedicatedHostGroup extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type
@@ -159,8 +160,8 @@ public class DedicatedHostGroup extends com.pulumi.resources.CustomResource {
      * @return Availability Zone to use for this host group. Only single zone is supported. The zone can be assigned only during creation. If not provided, the group supports all zones in the region. If provided, enforces each host in the group to be in the same zone.
      * 
      */
-    public Output</* @Nullable */ List<String>> zones() {
-        return this.zones;
+    public Output<Optional<List<String>>> zones() {
+        return Codegen.optional(this.zones);
     }
 
     /**

@@ -18,6 +18,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -59,8 +60,8 @@ public class AppServiceCertificateOrder extends com.pulumi.resources.CustomResou
      * @return &lt;code&gt;true&lt;/code&gt; if the certificate should be automatically renewed when it expires; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
-    public Output</* @Nullable */ Boolean> autoRenew() {
-        return this.autoRenew;
+    public Output<Optional<Boolean>> autoRenew() {
+        return Codegen.optional(this.autoRenew);
     }
     /**
      * State of the Key Vault secret.
@@ -73,8 +74,8 @@ public class AppServiceCertificateOrder extends com.pulumi.resources.CustomResou
      * @return State of the Key Vault secret.
      * 
      */
-    public Output</* @Nullable */ Map<String,AppServiceCertificateResponse>> certificates() {
-        return this.certificates;
+    public Output<Optional<Map<String,AppServiceCertificateResponse>>> certificates() {
+        return Codegen.optional(this.certificates);
     }
     /**
      * Last CSR that was created for this order.
@@ -87,8 +88,8 @@ public class AppServiceCertificateOrder extends com.pulumi.resources.CustomResou
      * @return Last CSR that was created for this order.
      * 
      */
-    public Output</* @Nullable */ String> csr() {
-        return this.csr;
+    public Output<Optional<String>> csr() {
+        return Codegen.optional(this.csr);
     }
     /**
      * Certificate distinguished name.
@@ -101,8 +102,8 @@ public class AppServiceCertificateOrder extends com.pulumi.resources.CustomResou
      * @return Certificate distinguished name.
      * 
      */
-    public Output</* @Nullable */ String> distinguishedName() {
-        return this.distinguishedName;
+    public Output<Optional<String>> distinguishedName() {
+        return Codegen.optional(this.distinguishedName);
     }
     /**
      * Domain verification token.
@@ -171,8 +172,8 @@ public class AppServiceCertificateOrder extends com.pulumi.resources.CustomResou
      * @return Certificate key size.
      * 
      */
-    public Output</* @Nullable */ Integer> keySize() {
-        return this.keySize;
+    public Output<Optional<Integer>> keySize() {
+        return Codegen.optional(this.keySize);
     }
     /**
      * Kind of resource.
@@ -185,8 +186,8 @@ public class AppServiceCertificateOrder extends com.pulumi.resources.CustomResou
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> kind() {
-        return this.kind;
+    public Output<Optional<String>> kind() {
+        return Codegen.optional(this.kind);
     }
     /**
      * Certificate last issuance time.
@@ -353,8 +354,8 @@ public class AppServiceCertificateOrder extends com.pulumi.resources.CustomResou
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type.
@@ -381,8 +382,8 @@ public class AppServiceCertificateOrder extends com.pulumi.resources.CustomResou
      * @return Duration in years (must be between 1 and 3).
      * 
      */
-    public Output</* @Nullable */ Integer> validityInYears() {
-        return this.validityInYears;
+    public Output<Optional<Integer>> validityInYears() {
+        return Codegen.optional(this.validityInYears);
     }
 
     /**

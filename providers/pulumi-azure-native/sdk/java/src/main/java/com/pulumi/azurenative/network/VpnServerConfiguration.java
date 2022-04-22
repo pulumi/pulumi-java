@@ -21,6 +21,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -51,8 +52,8 @@ public class VpnServerConfiguration extends com.pulumi.resources.CustomResource 
      * @return The set of aad vpn authentication parameters.
      * 
      */
-    public Output</* @Nullable */ AadAuthenticationParametersResponse> aadAuthenticationParameters() {
-        return this.aadAuthenticationParameters;
+    public Output<Optional<AadAuthenticationParametersResponse>> aadAuthenticationParameters() {
+        return Codegen.optional(this.aadAuthenticationParameters);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
@@ -79,8 +80,8 @@ public class VpnServerConfiguration extends com.pulumi.resources.CustomResource 
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * Resource name.
@@ -135,8 +136,8 @@ public class VpnServerConfiguration extends com.pulumi.resources.CustomResource 
      * @return Radius client root certificate of VpnServerConfiguration.
      * 
      */
-    public Output</* @Nullable */ List<VpnServerConfigRadiusClientRootCertificateResponse>> radiusClientRootCertificates() {
-        return this.radiusClientRootCertificates;
+    public Output<Optional<List<VpnServerConfigRadiusClientRootCertificateResponse>>> radiusClientRootCertificates() {
+        return Codegen.optional(this.radiusClientRootCertificates);
     }
     /**
      * The radius server address property of the VpnServerConfiguration resource for point to site client connection.
@@ -149,8 +150,8 @@ public class VpnServerConfiguration extends com.pulumi.resources.CustomResource 
      * @return The radius server address property of the VpnServerConfiguration resource for point to site client connection.
      * 
      */
-    public Output</* @Nullable */ String> radiusServerAddress() {
-        return this.radiusServerAddress;
+    public Output<Optional<String>> radiusServerAddress() {
+        return Codegen.optional(this.radiusServerAddress);
     }
     /**
      * Radius Server root certificate of VpnServerConfiguration.
@@ -163,8 +164,8 @@ public class VpnServerConfiguration extends com.pulumi.resources.CustomResource 
      * @return Radius Server root certificate of VpnServerConfiguration.
      * 
      */
-    public Output</* @Nullable */ List<VpnServerConfigRadiusServerRootCertificateResponse>> radiusServerRootCertificates() {
-        return this.radiusServerRootCertificates;
+    public Output<Optional<List<VpnServerConfigRadiusServerRootCertificateResponse>>> radiusServerRootCertificates() {
+        return Codegen.optional(this.radiusServerRootCertificates);
     }
     /**
      * The radius secret property of the VpnServerConfiguration resource for point to site client connection.
@@ -177,8 +178,8 @@ public class VpnServerConfiguration extends com.pulumi.resources.CustomResource 
      * @return The radius secret property of the VpnServerConfiguration resource for point to site client connection.
      * 
      */
-    public Output</* @Nullable */ String> radiusServerSecret() {
-        return this.radiusServerSecret;
+    public Output<Optional<String>> radiusServerSecret() {
+        return Codegen.optional(this.radiusServerSecret);
     }
     /**
      * Multiple Radius Server configuration for VpnServerConfiguration.
@@ -191,8 +192,8 @@ public class VpnServerConfiguration extends com.pulumi.resources.CustomResource 
      * @return Multiple Radius Server configuration for VpnServerConfiguration.
      * 
      */
-    public Output</* @Nullable */ List<RadiusServerResponse>> radiusServers() {
-        return this.radiusServers;
+    public Output<Optional<List<RadiusServerResponse>>> radiusServers() {
+        return Codegen.optional(this.radiusServers);
     }
     /**
      * Resource tags.
@@ -205,8 +206,8 @@ public class VpnServerConfiguration extends com.pulumi.resources.CustomResource 
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type.
@@ -233,8 +234,8 @@ public class VpnServerConfiguration extends com.pulumi.resources.CustomResource 
      * @return VPN authentication types for the VpnServerConfiguration.
      * 
      */
-    public Output</* @Nullable */ List<String>> vpnAuthenticationTypes() {
-        return this.vpnAuthenticationTypes;
+    public Output<Optional<List<String>>> vpnAuthenticationTypes() {
+        return Codegen.optional(this.vpnAuthenticationTypes);
     }
     /**
      * VpnClientIpsecPolicies for VpnServerConfiguration.
@@ -247,8 +248,8 @@ public class VpnServerConfiguration extends com.pulumi.resources.CustomResource 
      * @return VpnClientIpsecPolicies for VpnServerConfiguration.
      * 
      */
-    public Output</* @Nullable */ List<IpsecPolicyResponse>> vpnClientIpsecPolicies() {
-        return this.vpnClientIpsecPolicies;
+    public Output<Optional<List<IpsecPolicyResponse>>> vpnClientIpsecPolicies() {
+        return Codegen.optional(this.vpnClientIpsecPolicies);
     }
     /**
      * VPN client revoked certificate of VpnServerConfiguration.
@@ -261,8 +262,8 @@ public class VpnServerConfiguration extends com.pulumi.resources.CustomResource 
      * @return VPN client revoked certificate of VpnServerConfiguration.
      * 
      */
-    public Output</* @Nullable */ List<VpnServerConfigVpnClientRevokedCertificateResponse>> vpnClientRevokedCertificates() {
-        return this.vpnClientRevokedCertificates;
+    public Output<Optional<List<VpnServerConfigVpnClientRevokedCertificateResponse>>> vpnClientRevokedCertificates() {
+        return Codegen.optional(this.vpnClientRevokedCertificates);
     }
     /**
      * VPN client root certificate of VpnServerConfiguration.
@@ -275,8 +276,8 @@ public class VpnServerConfiguration extends com.pulumi.resources.CustomResource 
      * @return VPN client root certificate of VpnServerConfiguration.
      * 
      */
-    public Output</* @Nullable */ List<VpnServerConfigVpnClientRootCertificateResponse>> vpnClientRootCertificates() {
-        return this.vpnClientRootCertificates;
+    public Output<Optional<List<VpnServerConfigVpnClientRootCertificateResponse>>> vpnClientRootCertificates() {
+        return Codegen.optional(this.vpnClientRootCertificates);
     }
     /**
      * VPN protocols for the VpnServerConfiguration.
@@ -289,8 +290,8 @@ public class VpnServerConfiguration extends com.pulumi.resources.CustomResource 
      * @return VPN protocols for the VpnServerConfiguration.
      * 
      */
-    public Output</* @Nullable */ List<String>> vpnProtocols() {
-        return this.vpnProtocols;
+    public Output<Optional<List<String>>> vpnProtocols() {
+        return Codegen.optional(this.vpnProtocols);
     }
 
     /**

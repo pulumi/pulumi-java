@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class Favorite extends com.pulumi.resources.CustomResource {
      * @return Favorite category, as defined by the user at creation time.
      * 
      */
-    public Output</* @Nullable */ String> category() {
-        return this.category;
+    public Output<Optional<String>> category() {
+        return Codegen.optional(this.category);
     }
     /**
      * Configuration of this particular favorite, which are driven by the Azure portal UX. Configuration data is a string containing valid JSON
@@ -57,8 +58,8 @@ public class Favorite extends com.pulumi.resources.CustomResource {
      * @return Configuration of this particular favorite, which are driven by the Azure portal UX. Configuration data is a string containing valid JSON
      * 
      */
-    public Output</* @Nullable */ String> config() {
-        return this.config;
+    public Output<Optional<String>> config() {
+        return Codegen.optional(this.config);
     }
     /**
      * Internally assigned unique id of the favorite definition.
@@ -85,8 +86,8 @@ public class Favorite extends com.pulumi.resources.CustomResource {
      * @return Enum indicating if this favorite definition is owned by a specific user or is shared between all users with access to the Application Insights component.
      * 
      */
-    public Output</* @Nullable */ String> favoriteType() {
-        return this.favoriteType;
+    public Output<Optional<String>> favoriteType() {
+        return Codegen.optional(this.favoriteType);
     }
     /**
      * Flag denoting wether or not this favorite was generated from a template.
@@ -99,8 +100,8 @@ public class Favorite extends com.pulumi.resources.CustomResource {
      * @return Flag denoting wether or not this favorite was generated from a template.
      * 
      */
-    public Output</* @Nullable */ Boolean> isGeneratedFromTemplate() {
-        return this.isGeneratedFromTemplate;
+    public Output<Optional<Boolean>> isGeneratedFromTemplate() {
+        return Codegen.optional(this.isGeneratedFromTemplate);
     }
     /**
      * The user-defined name of the favorite.
@@ -113,8 +114,8 @@ public class Favorite extends com.pulumi.resources.CustomResource {
      * @return The user-defined name of the favorite.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * The source of the favorite definition.
@@ -127,8 +128,8 @@ public class Favorite extends com.pulumi.resources.CustomResource {
      * @return The source of the favorite definition.
      * 
      */
-    public Output</* @Nullable */ String> sourceType() {
-        return this.sourceType;
+    public Output<Optional<String>> sourceType() {
+        return Codegen.optional(this.sourceType);
     }
     /**
      * A list of 0 or more tags that are associated with this favorite definition
@@ -141,8 +142,8 @@ public class Favorite extends com.pulumi.resources.CustomResource {
      * @return A list of 0 or more tags that are associated with this favorite definition
      * 
      */
-    public Output</* @Nullable */ List<String>> tags() {
-        return this.tags;
+    public Output<Optional<List<String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Date and time in UTC of the last modification that was made to this favorite definition.
@@ -183,8 +184,8 @@ public class Favorite extends com.pulumi.resources.CustomResource {
      * @return This instance&#39;s version of the data model. This can change as new features are added that can be marked favorite. Current examples include MetricsExplorer (ME) and Search.
      * 
      */
-    public Output</* @Nullable */ String> version() {
-        return this.version;
+    public Output<Optional<String>> version() {
+        return Codegen.optional(this.version);
     }
 
     /**

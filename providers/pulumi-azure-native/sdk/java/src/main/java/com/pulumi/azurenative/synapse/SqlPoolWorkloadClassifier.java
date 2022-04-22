@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -42,8 +43,8 @@ public class SqlPoolWorkloadClassifier extends com.pulumi.resources.CustomResour
      * @return The workload classifier context.
      * 
      */
-    public Output</* @Nullable */ String> context() {
-        return this.context;
+    public Output<Optional<String>> context() {
+        return Codegen.optional(this.context);
     }
     /**
      * The workload classifier end time for classification.
@@ -56,8 +57,8 @@ public class SqlPoolWorkloadClassifier extends com.pulumi.resources.CustomResour
      * @return The workload classifier end time for classification.
      * 
      */
-    public Output</* @Nullable */ String> endTime() {
-        return this.endTime;
+    public Output<Optional<String>> endTime() {
+        return Codegen.optional(this.endTime);
     }
     /**
      * The workload classifier importance.
@@ -70,8 +71,8 @@ public class SqlPoolWorkloadClassifier extends com.pulumi.resources.CustomResour
      * @return The workload classifier importance.
      * 
      */
-    public Output</* @Nullable */ String> importance() {
-        return this.importance;
+    public Output<Optional<String>> importance() {
+        return Codegen.optional(this.importance);
     }
     /**
      * The workload classifier label.
@@ -84,8 +85,8 @@ public class SqlPoolWorkloadClassifier extends com.pulumi.resources.CustomResour
      * @return The workload classifier label.
      * 
      */
-    public Output</* @Nullable */ String> label() {
-        return this.label;
+    public Output<Optional<String>> label() {
+        return Codegen.optional(this.label);
     }
     /**
      * The workload classifier member name.
@@ -126,8 +127,8 @@ public class SqlPoolWorkloadClassifier extends com.pulumi.resources.CustomResour
      * @return The workload classifier start time for classification.
      * 
      */
-    public Output</* @Nullable */ String> startTime() {
-        return this.startTime;
+    public Output<Optional<String>> startTime() {
+        return Codegen.optional(this.startTime);
     }
     /**
      * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;

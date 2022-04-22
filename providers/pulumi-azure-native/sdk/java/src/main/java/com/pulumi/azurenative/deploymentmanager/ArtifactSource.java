@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class ArtifactSource extends com.pulumi.resources.CustomResource {
      * @return The path from the location that the &#39;authentication&#39; property [say, a SAS URI to the blob container] refers to, to the location of the artifacts. This can be used to differentiate different versions of the artifacts. Or, different types of artifacts like binaries or templates. The location referenced by the authentication property concatenated with this optional artifactRoot path forms the artifact source location where the artifacts are expected to be found.
      * 
      */
-    public Output</* @Nullable */ String> artifactRoot() {
-        return this.artifactRoot;
+    public Output<Optional<String>> artifactRoot() {
+        return Codegen.optional(this.artifactRoot);
     }
     /**
      * The authentication method to use to access the artifact source.
@@ -114,8 +115,8 @@ public class ArtifactSource extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;

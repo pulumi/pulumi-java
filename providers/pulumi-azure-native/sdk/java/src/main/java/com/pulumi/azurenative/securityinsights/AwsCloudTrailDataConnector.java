@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class AwsCloudTrailDataConnector extends com.pulumi.resources.CustomResou
      * @return The Aws Role Arn (with CloudTrailReadOnly policy) that is used to access the Aws account.
      * 
      */
-    public Output</* @Nullable */ String> awsRoleArn() {
-        return this.awsRoleArn;
+    public Output<Optional<String>> awsRoleArn() {
+        return Codegen.optional(this.awsRoleArn);
     }
     /**
      * The available data types for the connector.
@@ -57,8 +58,8 @@ public class AwsCloudTrailDataConnector extends com.pulumi.resources.CustomResou
      * @return The available data types for the connector.
      * 
      */
-    public Output</* @Nullable */ AwsCloudTrailDataConnectorDataTypesResponse> dataTypes() {
-        return this.dataTypes;
+    public Output<Optional<AwsCloudTrailDataConnectorDataTypesResponse>> dataTypes() {
+        return Codegen.optional(this.dataTypes);
     }
     /**
      * Etag of the azure resource
@@ -71,8 +72,8 @@ public class AwsCloudTrailDataConnector extends com.pulumi.resources.CustomResou
      * @return Etag of the azure resource
      * 
      */
-    public Output</* @Nullable */ String> etag() {
-        return this.etag;
+    public Output<Optional<String>> etag() {
+        return Codegen.optional(this.etag);
     }
     /**
      * The kind of the data connector

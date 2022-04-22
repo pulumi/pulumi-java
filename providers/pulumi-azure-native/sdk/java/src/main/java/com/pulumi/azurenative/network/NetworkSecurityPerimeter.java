@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class NetworkSecurityPerimeter extends com.pulumi.resources.CustomResourc
      * @return A description of the network security perimeter.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * A friendly name for the network security perimeter.
@@ -57,8 +58,8 @@ public class NetworkSecurityPerimeter extends com.pulumi.resources.CustomResourc
      * @return A friendly name for the network security perimeter.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
@@ -85,8 +86,8 @@ public class NetworkSecurityPerimeter extends com.pulumi.resources.CustomResourc
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * Resource name.
@@ -127,8 +128,8 @@ public class NetworkSecurityPerimeter extends com.pulumi.resources.CustomResourc
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type.

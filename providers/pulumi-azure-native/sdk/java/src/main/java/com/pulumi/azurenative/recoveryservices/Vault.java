@@ -17,6 +17,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -47,8 +48,8 @@ public class Vault extends com.pulumi.resources.CustomResource {
      * @return Optional ETag.
      * 
      */
-    public Output</* @Nullable */ String> etag() {
-        return this.etag;
+    public Output<Optional<String>> etag() {
+        return Codegen.optional(this.etag);
     }
     /**
      * Identity for the resource.
@@ -61,8 +62,8 @@ public class Vault extends com.pulumi.resources.CustomResource {
      * @return Identity for the resource.
      * 
      */
-    public Output</* @Nullable */ IdentityDataResponse> identity() {
-        return this.identity;
+    public Output<Optional<IdentityDataResponse>> identity() {
+        return Codegen.optional(this.identity);
     }
     /**
      * Resource location.
@@ -117,8 +118,8 @@ public class Vault extends com.pulumi.resources.CustomResource {
      * @return Identifies the unique system identifier for each Azure resource.
      * 
      */
-    public Output</* @Nullable */ SkuResponse> sku() {
-        return this.sku;
+    public Output<Optional<SkuResponse>> sku() {
+        return Codegen.optional(this.sku);
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
@@ -145,8 +146,8 @@ public class Vault extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...

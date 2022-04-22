@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -86,8 +87,8 @@ public class PrivateEndpointConnectionProxy extends com.pulumi.resources.CustomR
      * @return Remote private endpoint details.
      * 
      */
-    public Output</* @Nullable */ RemotePrivateEndpointResponse> remotePrivateEndpoint() {
-        return this.remotePrivateEndpoint;
+    public Output<Optional<RemotePrivateEndpointResponse>> remotePrivateEndpoint() {
+        return Codegen.optional(this.remotePrivateEndpoint);
     }
     /**
      * Operation status.
@@ -100,8 +101,8 @@ public class PrivateEndpointConnectionProxy extends com.pulumi.resources.CustomR
      * @return Operation status.
      * 
      */
-    public Output</* @Nullable */ String> status() {
-        return this.status;
+    public Output<Optional<String>> status() {
+        return Codegen.optional(this.status);
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.

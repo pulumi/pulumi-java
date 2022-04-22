@@ -21,6 +21,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -141,8 +142,8 @@ public class BatchAccount extends com.pulumi.resources.CustomResource {
      * @return The identity of the Batch account.
      * 
      */
-    public Output</* @Nullable */ BatchAccountIdentityResponse> identity() {
-        return this.identity;
+    public Output<Optional<BatchAccountIdentityResponse>> identity() {
+        return Codegen.optional(this.identity);
     }
     /**
      * Identifies the Azure key vault associated with a Batch account.

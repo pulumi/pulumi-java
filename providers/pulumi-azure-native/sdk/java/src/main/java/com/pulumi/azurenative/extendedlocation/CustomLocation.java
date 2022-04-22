@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class CustomLocation extends com.pulumi.resources.CustomResource {
      * @return This is optional input that contains the authentication that should be used to generate the namespace.
      * 
      */
-    public Output</* @Nullable */ CustomLocationPropertiesResponseAuthentication> authentication() {
-        return this.authentication;
+    public Output<Optional<CustomLocationPropertiesResponseAuthentication>> authentication() {
+        return Codegen.optional(this.authentication);
     }
     /**
      * Contains the reference to the add-on that contains charts to deploy CRDs and operators.
@@ -59,8 +60,8 @@ public class CustomLocation extends com.pulumi.resources.CustomResource {
      * @return Contains the reference to the add-on that contains charts to deploy CRDs and operators.
      * 
      */
-    public Output</* @Nullable */ List<String>> clusterExtensionIds() {
-        return this.clusterExtensionIds;
+    public Output<Optional<List<String>>> clusterExtensionIds() {
+        return Codegen.optional(this.clusterExtensionIds);
     }
     /**
      * Display name for the Custom Locations location.
@@ -73,8 +74,8 @@ public class CustomLocation extends com.pulumi.resources.CustomResource {
      * @return Display name for the Custom Locations location.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * Connected Cluster or AKS Cluster. The Custom Locations RP will perform a checkAccess API for listAdminCredentials permissions.
@@ -87,8 +88,8 @@ public class CustomLocation extends com.pulumi.resources.CustomResource {
      * @return Connected Cluster or AKS Cluster. The Custom Locations RP will perform a checkAccess API for listAdminCredentials permissions.
      * 
      */
-    public Output</* @Nullable */ String> hostResourceId() {
-        return this.hostResourceId;
+    public Output<Optional<String>> hostResourceId() {
+        return Codegen.optional(this.hostResourceId);
     }
     /**
      * Type of host the Custom Locations is referencing (Kubernetes, etc...).
@@ -101,8 +102,8 @@ public class CustomLocation extends com.pulumi.resources.CustomResource {
      * @return Type of host the Custom Locations is referencing (Kubernetes, etc...).
      * 
      */
-    public Output</* @Nullable */ String> hostType() {
-        return this.hostType;
+    public Output<Optional<String>> hostType() {
+        return Codegen.optional(this.hostType);
     }
     /**
      * The geo-location where the resource lives
@@ -143,8 +144,8 @@ public class CustomLocation extends com.pulumi.resources.CustomResource {
      * @return Kubernetes namespace that will be created on the specified cluster.
      * 
      */
-    public Output</* @Nullable */ String> namespace() {
-        return this.namespace;
+    public Output<Optional<String>> namespace() {
+        return Codegen.optional(this.namespace);
     }
     /**
      * Provisioning State for the Custom Location.
@@ -157,8 +158,8 @@ public class CustomLocation extends com.pulumi.resources.CustomResource {
      * @return Provisioning State for the Custom Location.
      * 
      */
-    public Output</* @Nullable */ String> provisioningState() {
-        return this.provisioningState;
+    public Output<Optional<String>> provisioningState() {
+        return Codegen.optional(this.provisioningState);
     }
     /**
      * Metadata pertaining to creation and last modification of the resource
@@ -185,8 +186,8 @@ public class CustomLocation extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;

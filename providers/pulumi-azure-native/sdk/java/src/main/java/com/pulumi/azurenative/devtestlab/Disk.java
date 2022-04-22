@@ -14,6 +14,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -58,8 +59,8 @@ public class Disk extends com.pulumi.resources.CustomResource {
      * @return When backed by a blob, the name of the VHD blob without extension.
      * 
      */
-    public Output</* @Nullable */ String> diskBlobName() {
-        return this.diskBlobName;
+    public Output<Optional<String>> diskBlobName() {
+        return Codegen.optional(this.diskBlobName);
     }
     /**
      * The size of the disk in Gibibytes.
@@ -72,8 +73,8 @@ public class Disk extends com.pulumi.resources.CustomResource {
      * @return The size of the disk in Gibibytes.
      * 
      */
-    public Output</* @Nullable */ Integer> diskSizeGiB() {
-        return this.diskSizeGiB;
+    public Output<Optional<Integer>> diskSizeGiB() {
+        return Codegen.optional(this.diskSizeGiB);
     }
     /**
      * The storage type for the disk (i.e. Standard, Premium).
@@ -86,8 +87,8 @@ public class Disk extends com.pulumi.resources.CustomResource {
      * @return The storage type for the disk (i.e. Standard, Premium).
      * 
      */
-    public Output</* @Nullable */ String> diskType() {
-        return this.diskType;
+    public Output<Optional<String>> diskType() {
+        return Codegen.optional(this.diskType);
     }
     /**
      * When backed by a blob, the URI of underlying blob.
@@ -100,8 +101,8 @@ public class Disk extends com.pulumi.resources.CustomResource {
      * @return When backed by a blob, the URI of underlying blob.
      * 
      */
-    public Output</* @Nullable */ String> diskUri() {
-        return this.diskUri;
+    public Output<Optional<String>> diskUri() {
+        return Codegen.optional(this.diskUri);
     }
     /**
      * The host caching policy of the disk (i.e. None, ReadOnly, ReadWrite).
@@ -114,8 +115,8 @@ public class Disk extends com.pulumi.resources.CustomResource {
      * @return The host caching policy of the disk (i.e. None, ReadOnly, ReadWrite).
      * 
      */
-    public Output</* @Nullable */ String> hostCaching() {
-        return this.hostCaching;
+    public Output<Optional<String>> hostCaching() {
+        return Codegen.optional(this.hostCaching);
     }
     /**
      * The resource ID of the VM to which this disk is leased.
@@ -128,8 +129,8 @@ public class Disk extends com.pulumi.resources.CustomResource {
      * @return The resource ID of the VM to which this disk is leased.
      * 
      */
-    public Output</* @Nullable */ String> leasedByLabVmId() {
-        return this.leasedByLabVmId;
+    public Output<Optional<String>> leasedByLabVmId() {
+        return Codegen.optional(this.leasedByLabVmId);
     }
     /**
      * The location of the resource.
@@ -142,8 +143,8 @@ public class Disk extends com.pulumi.resources.CustomResource {
      * @return The location of the resource.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * When backed by managed disk, this is the ID of the compute disk resource.
@@ -156,8 +157,8 @@ public class Disk extends com.pulumi.resources.CustomResource {
      * @return When backed by managed disk, this is the ID of the compute disk resource.
      * 
      */
-    public Output</* @Nullable */ String> managedDiskId() {
-        return this.managedDiskId;
+    public Output<Optional<String>> managedDiskId() {
+        return Codegen.optional(this.managedDiskId);
     }
     /**
      * The name of the resource.
@@ -198,8 +199,8 @@ public class Disk extends com.pulumi.resources.CustomResource {
      * @return When backed by a blob, the storage account where the blob is.
      * 
      */
-    public Output</* @Nullable */ String> storageAccountId() {
-        return this.storageAccountId;
+    public Output<Optional<String>> storageAccountId() {
+        return Codegen.optional(this.storageAccountId);
     }
     /**
      * The tags of the resource.
@@ -212,8 +213,8 @@ public class Disk extends com.pulumi.resources.CustomResource {
      * @return The tags of the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource.

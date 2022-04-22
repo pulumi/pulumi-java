@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -57,8 +58,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return The key vault identifier used for encrypted workspaces.
      * 
      */
-    public Output</* @Nullable */ String> keyVaultIdentifierId() {
-        return this.keyVaultIdentifierId;
+    public Output<Optional<String>> keyVaultIdentifierId() {
+        return Codegen.optional(this.keyVaultIdentifierId);
     }
     /**
      * The location of the resource. This cannot be changed after the resource is created.
@@ -127,8 +128,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return The tags of the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource.

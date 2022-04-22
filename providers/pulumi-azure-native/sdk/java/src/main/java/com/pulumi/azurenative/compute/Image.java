@@ -16,6 +16,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class Image extends com.pulumi.resources.CustomResource {
      * @return The extended location of the Image.
      * 
      */
-    public Output</* @Nullable */ ExtendedLocationResponse> extendedLocation() {
-        return this.extendedLocation;
+    public Output<Optional<ExtendedLocationResponse>> extendedLocation() {
+        return Codegen.optional(this.extendedLocation);
     }
     /**
      * Specifies the HyperVGenerationType of the VirtualMachine created from the image. From API Version 2019-03-01 if the image source is a blob, then we need the user to specify the value, if the source is managed resource like disk or snapshot, we may require the user to specify the property if we cannot deduce it from the source managed resource.
@@ -60,8 +61,8 @@ public class Image extends com.pulumi.resources.CustomResource {
      * @return Specifies the HyperVGenerationType of the VirtualMachine created from the image. From API Version 2019-03-01 if the image source is a blob, then we need the user to specify the value, if the source is managed resource like disk or snapshot, we may require the user to specify the property if we cannot deduce it from the source managed resource.
      * 
      */
-    public Output</* @Nullable */ String> hyperVGeneration() {
-        return this.hyperVGeneration;
+    public Output<Optional<String>> hyperVGeneration() {
+        return Codegen.optional(this.hyperVGeneration);
     }
     /**
      * Resource location
@@ -116,8 +117,8 @@ public class Image extends com.pulumi.resources.CustomResource {
      * @return The source virtual machine from which Image is created.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> sourceVirtualMachine() {
-        return this.sourceVirtualMachine;
+    public Output<Optional<SubResourceResponse>> sourceVirtualMachine() {
+        return Codegen.optional(this.sourceVirtualMachine);
     }
     /**
      * Specifies the storage settings for the virtual machine disks.
@@ -130,8 +131,8 @@ public class Image extends com.pulumi.resources.CustomResource {
      * @return Specifies the storage settings for the virtual machine disks.
      * 
      */
-    public Output</* @Nullable */ ImageStorageProfileResponse> storageProfile() {
-        return this.storageProfile;
+    public Output<Optional<ImageStorageProfileResponse>> storageProfile() {
+        return Codegen.optional(this.storageProfile);
     }
     /**
      * Resource tags
@@ -144,8 +145,8 @@ public class Image extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type

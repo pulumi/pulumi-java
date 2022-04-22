@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -42,8 +43,8 @@ public class WorkspaceAadAdmin extends com.pulumi.resources.CustomResource {
      * @return Workspace active directory administrator type
      * 
      */
-    public Output</* @Nullable */ String> administratorType() {
-        return this.administratorType;
+    public Output<Optional<String>> administratorType() {
+        return Codegen.optional(this.administratorType);
     }
     /**
      * Login of the workspace active directory administrator
@@ -56,8 +57,8 @@ public class WorkspaceAadAdmin extends com.pulumi.resources.CustomResource {
      * @return Login of the workspace active directory administrator
      * 
      */
-    public Output</* @Nullable */ String> login() {
-        return this.login;
+    public Output<Optional<String>> login() {
+        return Codegen.optional(this.login);
     }
     /**
      * The name of the resource
@@ -84,8 +85,8 @@ public class WorkspaceAadAdmin extends com.pulumi.resources.CustomResource {
      * @return Object ID of the workspace active directory administrator
      * 
      */
-    public Output</* @Nullable */ String> sid() {
-        return this.sid;
+    public Output<Optional<String>> sid() {
+        return Codegen.optional(this.sid);
     }
     /**
      * Tenant ID of the workspace active directory administrator
@@ -98,8 +99,8 @@ public class WorkspaceAadAdmin extends com.pulumi.resources.CustomResource {
      * @return Tenant ID of the workspace active directory administrator
      * 
      */
-    public Output</* @Nullable */ String> tenantId() {
-        return this.tenantId;
+    public Output<Optional<String>> tenantId() {
+        return Codegen.optional(this.tenantId);
     }
     /**
      * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;

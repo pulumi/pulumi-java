@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class JobSchedule extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the id of job schedule.
      * 
      */
-    public Output</* @Nullable */ String> jobScheduleId() {
-        return this.jobScheduleId;
+    public Output<Optional<String>> jobScheduleId() {
+        return Codegen.optional(this.jobScheduleId);
     }
     /**
      * Gets the name of the variable.
@@ -73,8 +74,8 @@ public class JobSchedule extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the parameters of the job schedule.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> parameters() {
-        return this.parameters;
+    public Output<Optional<Map<String,String>>> parameters() {
+        return Codegen.optional(this.parameters);
     }
     /**
      * Gets or sets the hybrid worker group that the scheduled job should run on.
@@ -87,8 +88,8 @@ public class JobSchedule extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the hybrid worker group that the scheduled job should run on.
      * 
      */
-    public Output</* @Nullable */ String> runOn() {
-        return this.runOn;
+    public Output<Optional<String>> runOn() {
+        return Codegen.optional(this.runOn);
     }
     /**
      * Gets or sets the runbook.
@@ -101,8 +102,8 @@ public class JobSchedule extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the runbook.
      * 
      */
-    public Output</* @Nullable */ RunbookAssociationPropertyResponse> runbook() {
-        return this.runbook;
+    public Output<Optional<RunbookAssociationPropertyResponse>> runbook() {
+        return Codegen.optional(this.runbook);
     }
     /**
      * Gets or sets the schedule.
@@ -115,8 +116,8 @@ public class JobSchedule extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the schedule.
      * 
      */
-    public Output</* @Nullable */ ScheduleAssociationPropertyResponse> schedule() {
-        return this.schedule;
+    public Output<Optional<ScheduleAssociationPropertyResponse>> schedule() {
+        return Codegen.optional(this.schedule);
     }
     /**
      * Resource type

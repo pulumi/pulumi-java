@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -57,8 +58,8 @@ public class AlertsSuppressionRule extends com.pulumi.resources.CustomResource {
      * @return Any comment regarding the rule
      * 
      */
-    public Output</* @Nullable */ String> comment() {
-        return this.comment;
+    public Output<Optional<String>> comment() {
+        return Codegen.optional(this.comment);
     }
     /**
      * Expiration date of the rule, if value is not provided or provided as null this field will default to the maximum allowed expiration date.
@@ -71,8 +72,8 @@ public class AlertsSuppressionRule extends com.pulumi.resources.CustomResource {
      * @return Expiration date of the rule, if value is not provided or provided as null this field will default to the maximum allowed expiration date.
      * 
      */
-    public Output</* @Nullable */ String> expirationDateUtc() {
-        return this.expirationDateUtc;
+    public Output<Optional<String>> expirationDateUtc() {
+        return Codegen.optional(this.expirationDateUtc);
     }
     /**
      * The last time this rule was modified
@@ -141,8 +142,8 @@ public class AlertsSuppressionRule extends com.pulumi.resources.CustomResource {
      * @return The suppression conditions
      * 
      */
-    public Output</* @Nullable */ SuppressionAlertsScopeResponse> suppressionAlertsScope() {
-        return this.suppressionAlertsScope;
+    public Output<Optional<SuppressionAlertsScopeResponse>> suppressionAlertsScope() {
+        return Codegen.optional(this.suppressionAlertsScope);
     }
     /**
      * Resource type

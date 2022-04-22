@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -39,8 +40,8 @@ public class WebAppHostNameBindingSlot extends com.pulumi.resources.CustomResour
      * @return Azure resource name.
      * 
      */
-    public Output</* @Nullable */ String> azureResourceName() {
-        return this.azureResourceName;
+    public Output<Optional<String>> azureResourceName() {
+        return Codegen.optional(this.azureResourceName);
     }
     /**
      * Azure resource type.
@@ -53,8 +54,8 @@ public class WebAppHostNameBindingSlot extends com.pulumi.resources.CustomResour
      * @return Azure resource type.
      * 
      */
-    public Output</* @Nullable */ String> azureResourceType() {
-        return this.azureResourceType;
+    public Output<Optional<String>> azureResourceType() {
+        return Codegen.optional(this.azureResourceType);
     }
     /**
      * Custom DNS record type.
@@ -67,8 +68,8 @@ public class WebAppHostNameBindingSlot extends com.pulumi.resources.CustomResour
      * @return Custom DNS record type.
      * 
      */
-    public Output</* @Nullable */ String> customHostNameDnsRecordType() {
-        return this.customHostNameDnsRecordType;
+    public Output<Optional<String>> customHostNameDnsRecordType() {
+        return Codegen.optional(this.customHostNameDnsRecordType);
     }
     /**
      * Fully qualified ARM domain resource URI.
@@ -81,8 +82,8 @@ public class WebAppHostNameBindingSlot extends com.pulumi.resources.CustomResour
      * @return Fully qualified ARM domain resource URI.
      * 
      */
-    public Output</* @Nullable */ String> domainId() {
-        return this.domainId;
+    public Output<Optional<String>> domainId() {
+        return Codegen.optional(this.domainId);
     }
     /**
      * Hostname type.
@@ -95,8 +96,8 @@ public class WebAppHostNameBindingSlot extends com.pulumi.resources.CustomResour
      * @return Hostname type.
      * 
      */
-    public Output</* @Nullable */ String> hostNameType() {
-        return this.hostNameType;
+    public Output<Optional<String>> hostNameType() {
+        return Codegen.optional(this.hostNameType);
     }
     /**
      * Kind of resource.
@@ -109,8 +110,8 @@ public class WebAppHostNameBindingSlot extends com.pulumi.resources.CustomResour
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> kind() {
-        return this.kind;
+    public Output<Optional<String>> kind() {
+        return Codegen.optional(this.kind);
     }
     /**
      * Resource Name.
@@ -137,8 +138,8 @@ public class WebAppHostNameBindingSlot extends com.pulumi.resources.CustomResour
      * @return App Service app name.
      * 
      */
-    public Output</* @Nullable */ String> siteName() {
-        return this.siteName;
+    public Output<Optional<String>> siteName() {
+        return Codegen.optional(this.siteName);
     }
     /**
      * SSL type
@@ -151,8 +152,8 @@ public class WebAppHostNameBindingSlot extends com.pulumi.resources.CustomResour
      * @return SSL type
      * 
      */
-    public Output</* @Nullable */ String> sslState() {
-        return this.sslState;
+    public Output<Optional<String>> sslState() {
+        return Codegen.optional(this.sslState);
     }
     /**
      * SSL certificate thumbprint
@@ -165,8 +166,8 @@ public class WebAppHostNameBindingSlot extends com.pulumi.resources.CustomResour
      * @return SSL certificate thumbprint
      * 
      */
-    public Output</* @Nullable */ String> thumbprint() {
-        return this.thumbprint;
+    public Output<Optional<String>> thumbprint() {
+        return Codegen.optional(this.thumbprint);
     }
     /**
      * Resource type.

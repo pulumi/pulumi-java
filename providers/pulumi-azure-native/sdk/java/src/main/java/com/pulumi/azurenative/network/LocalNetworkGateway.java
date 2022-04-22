@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class LocalNetworkGateway extends com.pulumi.resources.CustomResource {
      * @return Local network gateway&#39;s BGP speaker settings.
      * 
      */
-    public Output</* @Nullable */ BgpSettingsResponse> bgpSettings() {
-        return this.bgpSettings;
+    public Output<Optional<BgpSettingsResponse>> bgpSettings() {
+        return Codegen.optional(this.bgpSettings);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
@@ -73,8 +74,8 @@ public class LocalNetworkGateway extends com.pulumi.resources.CustomResource {
      * @return FQDN of local network gateway.
      * 
      */
-    public Output</* @Nullable */ String> fqdn() {
-        return this.fqdn;
+    public Output<Optional<String>> fqdn() {
+        return Codegen.optional(this.fqdn);
     }
     /**
      * IP address of local network gateway.
@@ -87,8 +88,8 @@ public class LocalNetworkGateway extends com.pulumi.resources.CustomResource {
      * @return IP address of local network gateway.
      * 
      */
-    public Output</* @Nullable */ String> gatewayIpAddress() {
-        return this.gatewayIpAddress;
+    public Output<Optional<String>> gatewayIpAddress() {
+        return Codegen.optional(this.gatewayIpAddress);
     }
     /**
      * Local network site address space.
@@ -101,8 +102,8 @@ public class LocalNetworkGateway extends com.pulumi.resources.CustomResource {
      * @return Local network site address space.
      * 
      */
-    public Output</* @Nullable */ AddressSpaceResponse> localNetworkAddressSpace() {
-        return this.localNetworkAddressSpace;
+    public Output<Optional<AddressSpaceResponse>> localNetworkAddressSpace() {
+        return Codegen.optional(this.localNetworkAddressSpace);
     }
     /**
      * Resource location.
@@ -115,8 +116,8 @@ public class LocalNetworkGateway extends com.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * Resource name.
@@ -171,8 +172,8 @@ public class LocalNetworkGateway extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type.

@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -42,8 +43,8 @@ public class PrivateLinkScopedResource extends com.pulumi.resources.CustomResour
      * @return The resource id of the scoped Azure monitor resource.
      * 
      */
-    public Output</* @Nullable */ String> linkedResourceId() {
-        return this.linkedResourceId;
+    public Output<Optional<String>> linkedResourceId() {
+        return Codegen.optional(this.linkedResourceId);
     }
     /**
      * The name of the resource

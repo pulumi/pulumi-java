@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class Gateway extends com.pulumi.resources.CustomResource {
      * @return Gateway description
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Gateway location.
@@ -57,8 +58,8 @@ public class Gateway extends com.pulumi.resources.CustomResource {
      * @return Gateway location.
      * 
      */
-    public Output</* @Nullable */ ResourceLocationDataContractResponse> locationData() {
-        return this.locationData;
+    public Output<Optional<ResourceLocationDataContractResponse>> locationData() {
+        return Codegen.optional(this.locationData);
     }
     /**
      * Resource name.

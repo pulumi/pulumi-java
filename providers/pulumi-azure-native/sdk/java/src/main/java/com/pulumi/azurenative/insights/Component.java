@@ -17,6 +17,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -117,8 +118,8 @@ public class Component extends com.pulumi.resources.CustomResource {
      * @return Disable IP masking.
      * 
      */
-    public Output</* @Nullable */ Boolean> disableIpMasking() {
-        return this.disableIpMasking;
+    public Output<Optional<Boolean>> disableIpMasking() {
+        return Codegen.optional(this.disableIpMasking);
     }
     /**
      * Used by the Application Insights system to determine what kind of flow this component was created by. This is to be set to &#39;Bluefield&#39; when creating/updating a component via the REST API.
@@ -131,8 +132,8 @@ public class Component extends com.pulumi.resources.CustomResource {
      * @return Used by the Application Insights system to determine what kind of flow this component was created by. This is to be set to &#39;Bluefield&#39; when creating/updating a component via the REST API.
      * 
      */
-    public Output</* @Nullable */ String> flowType() {
-        return this.flowType;
+    public Output<Optional<String>> flowType() {
+        return Codegen.optional(this.flowType);
     }
     /**
      * The unique application ID created when a new application is added to HockeyApp, used for communications with HockeyApp.
@@ -145,8 +146,8 @@ public class Component extends com.pulumi.resources.CustomResource {
      * @return The unique application ID created when a new application is added to HockeyApp, used for communications with HockeyApp.
      * 
      */
-    public Output</* @Nullable */ String> hockeyAppId() {
-        return this.hockeyAppId;
+    public Output<Optional<String>> hockeyAppId() {
+        return Codegen.optional(this.hockeyAppId);
     }
     /**
      * Token used to authenticate communications with between Application Insights and HockeyApp.
@@ -173,8 +174,8 @@ public class Component extends com.pulumi.resources.CustomResource {
      * @return Purge data immediately after 30 days.
      * 
      */
-    public Output</* @Nullable */ Boolean> immediatePurgeDataOn30Days() {
-        return this.immediatePurgeDataOn30Days;
+    public Output<Optional<Boolean>> immediatePurgeDataOn30Days() {
+        return Codegen.optional(this.immediatePurgeDataOn30Days);
     }
     /**
      * Indicates the flow of the ingestion.
@@ -187,8 +188,8 @@ public class Component extends com.pulumi.resources.CustomResource {
      * @return Indicates the flow of the ingestion.
      * 
      */
-    public Output</* @Nullable */ String> ingestionMode() {
-        return this.ingestionMode;
+    public Output<Optional<String>> ingestionMode() {
+        return Codegen.optional(this.ingestionMode);
     }
     /**
      * Application Insights Instrumentation key. A read-only value that applications can use to identify the destination for all telemetry sent to Azure Application Insights. This value will be supplied upon construction of each new Application Insights component.
@@ -285,8 +286,8 @@ public class Component extends com.pulumi.resources.CustomResource {
      * @return Describes what tool created this Application Insights component. Customers using this API should set this to the default &#39;rest&#39;.
      * 
      */
-    public Output</* @Nullable */ String> requestSource() {
-        return this.requestSource;
+    public Output<Optional<String>> requestSource() {
+        return Codegen.optional(this.requestSource);
     }
     /**
      * Retention period in days.
@@ -299,8 +300,8 @@ public class Component extends com.pulumi.resources.CustomResource {
      * @return Retention period in days.
      * 
      */
-    public Output</* @Nullable */ Integer> retentionInDays() {
-        return this.retentionInDays;
+    public Output<Optional<Integer>> retentionInDays() {
+        return Codegen.optional(this.retentionInDays);
     }
     /**
      * Percentage of the data produced by the application being monitored that is being sampled for Application Insights telemetry.
@@ -313,8 +314,8 @@ public class Component extends com.pulumi.resources.CustomResource {
      * @return Percentage of the data produced by the application being monitored that is being sampled for Application Insights telemetry.
      * 
      */
-    public Output</* @Nullable */ Double> samplingPercentage() {
-        return this.samplingPercentage;
+    public Output<Optional<Double>> samplingPercentage() {
+        return Codegen.optional(this.samplingPercentage);
     }
     /**
      * Resource tags
@@ -327,8 +328,8 @@ public class Component extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Azure Tenant Id.

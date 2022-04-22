@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -113,8 +114,8 @@ public class ServerAzureADAdministrator extends com.pulumi.resources.CustomResou
      * @return Tenant ID of the administrator.
      * 
      */
-    public Output</* @Nullable */ String> tenantId() {
-        return this.tenantId;
+    public Output<Optional<String>> tenantId() {
+        return Codegen.optional(this.tenantId);
     }
     /**
      * Resource type.

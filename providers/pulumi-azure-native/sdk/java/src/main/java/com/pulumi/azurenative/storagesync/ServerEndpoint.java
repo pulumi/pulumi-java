@@ -16,6 +16,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class ServerEndpoint extends com.pulumi.resources.CustomResource {
      * @return Cloud Tiering.
      * 
      */
-    public Output</* @Nullable */ String> cloudTiering() {
-        return this.cloudTiering;
+    public Output<Optional<String>> cloudTiering() {
+        return Codegen.optional(this.cloudTiering);
     }
     /**
      * Cloud tiering status. Only populated if cloud tiering is enabled.
@@ -74,8 +75,8 @@ public class ServerEndpoint extends com.pulumi.resources.CustomResource {
      * @return Friendly Name
      * 
      */
-    public Output</* @Nullable */ String> friendlyName() {
-        return this.friendlyName;
+    public Output<Optional<String>> friendlyName() {
+        return Codegen.optional(this.friendlyName);
     }
     /**
      * Policy for how namespace and files are recalled during FastDr.
@@ -88,8 +89,8 @@ public class ServerEndpoint extends com.pulumi.resources.CustomResource {
      * @return Policy for how namespace and files are recalled during FastDr.
      * 
      */
-    public Output</* @Nullable */ String> initialDownloadPolicy() {
-        return this.initialDownloadPolicy;
+    public Output<Optional<String>> initialDownloadPolicy() {
+        return Codegen.optional(this.initialDownloadPolicy);
     }
     /**
      * Resource Last Operation Name
@@ -130,8 +131,8 @@ public class ServerEndpoint extends com.pulumi.resources.CustomResource {
      * @return Policy for enabling follow-the-sun business models: link local cache to cloud behavior to pre-populate before local access.
      * 
      */
-    public Output</* @Nullable */ String> localCacheMode() {
-        return this.localCacheMode;
+    public Output<Optional<String>> localCacheMode() {
+        return Codegen.optional(this.localCacheMode);
     }
     /**
      * The name of the resource
@@ -158,8 +159,8 @@ public class ServerEndpoint extends com.pulumi.resources.CustomResource {
      * @return Offline data transfer
      * 
      */
-    public Output</* @Nullable */ String> offlineDataTransfer() {
-        return this.offlineDataTransfer;
+    public Output<Optional<String>> offlineDataTransfer() {
+        return Codegen.optional(this.offlineDataTransfer);
     }
     /**
      * Offline data transfer share name
@@ -172,8 +173,8 @@ public class ServerEndpoint extends com.pulumi.resources.CustomResource {
      * @return Offline data transfer share name
      * 
      */
-    public Output</* @Nullable */ String> offlineDataTransferShareName() {
-        return this.offlineDataTransferShareName;
+    public Output<Optional<String>> offlineDataTransferShareName() {
+        return Codegen.optional(this.offlineDataTransferShareName);
     }
     /**
      * Offline data transfer storage account resource ID
@@ -242,8 +243,8 @@ public class ServerEndpoint extends com.pulumi.resources.CustomResource {
      * @return Server Local path.
      * 
      */
-    public Output</* @Nullable */ String> serverLocalPath() {
-        return this.serverLocalPath;
+    public Output<Optional<String>> serverLocalPath() {
+        return Codegen.optional(this.serverLocalPath);
     }
     /**
      * Server Resource Id.
@@ -256,8 +257,8 @@ public class ServerEndpoint extends com.pulumi.resources.CustomResource {
      * @return Server Resource Id.
      * 
      */
-    public Output</* @Nullable */ String> serverResourceId() {
-        return this.serverResourceId;
+    public Output<Optional<String>> serverResourceId() {
+        return Codegen.optional(this.serverResourceId);
     }
     /**
      * Server Endpoint sync status
@@ -284,8 +285,8 @@ public class ServerEndpoint extends com.pulumi.resources.CustomResource {
      * @return Tier files older than days.
      * 
      */
-    public Output</* @Nullable */ Integer> tierFilesOlderThanDays() {
-        return this.tierFilesOlderThanDays;
+    public Output<Optional<Integer>> tierFilesOlderThanDays() {
+        return Codegen.optional(this.tierFilesOlderThanDays);
     }
     /**
      * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
@@ -312,8 +313,8 @@ public class ServerEndpoint extends com.pulumi.resources.CustomResource {
      * @return Level of free space to be maintained by Cloud Tiering if it is enabled.
      * 
      */
-    public Output</* @Nullable */ Integer> volumeFreeSpacePercent() {
-        return this.volumeFreeSpacePercent;
+    public Output<Optional<Integer>> volumeFreeSpacePercent() {
+        return Codegen.optional(this.volumeFreeSpacePercent);
     }
 
     /**

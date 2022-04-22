@@ -20,6 +20,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -50,8 +51,8 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return A list that describes the correlation of the service with other services.
      * 
      */
-    public Output</* @Nullable */ List<ServiceCorrelationDescriptionResponse>> correlationScheme() {
-        return this.correlationScheme;
+    public Output<Optional<List<ServiceCorrelationDescriptionResponse>>> correlationScheme() {
+        return Codegen.optional(this.correlationScheme);
     }
     /**
      * Specifies the move cost for the service.
@@ -64,8 +65,8 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return Specifies the move cost for the service.
      * 
      */
-    public Output</* @Nullable */ String> defaultMoveCost() {
-        return this.defaultMoveCost;
+    public Output<Optional<String>> defaultMoveCost() {
+        return Codegen.optional(this.defaultMoveCost);
     }
     /**
      * Azure resource etag.
@@ -92,8 +93,8 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return It will be deprecated in New API, resource location depends on the parent resource.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * Azure resource name.
@@ -120,8 +121,8 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return Describes how the service is partitioned.
      * 
      */
-    public Output</* @Nullable */ Object> partitionDescription() {
-        return this.partitionDescription;
+    public Output<Optional<Object>> partitionDescription() {
+        return Codegen.optional(this.partitionDescription);
     }
     /**
      * The placement constraints as a string. Placement constraints are boolean expressions on node properties and allow for restricting a service to particular nodes based on the service requirements. For example, to place a service on nodes where NodeType is blue specify the following: &#34;NodeColor == blue)&#34;.
@@ -134,8 +135,8 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return The placement constraints as a string. Placement constraints are boolean expressions on node properties and allow for restricting a service to particular nodes based on the service requirements. For example, to place a service on nodes where NodeType is blue specify the following: &#34;NodeColor == blue)&#34;.
      * 
      */
-    public Output</* @Nullable */ String> placementConstraints() {
-        return this.placementConstraints;
+    public Output<Optional<String>> placementConstraints() {
+        return Codegen.optional(this.placementConstraints);
     }
     /**
      * The current deployment or provisioning state, which only appears in the response
@@ -162,8 +163,8 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return Dns name used for the service. If this is specified, then the service can be accessed via its DNS name instead of service name.
      * 
      */
-    public Output</* @Nullable */ String> serviceDnsName() {
-        return this.serviceDnsName;
+    public Output<Optional<String>> serviceDnsName() {
+        return Codegen.optional(this.serviceDnsName);
     }
     /**
      * The kind of service (Stateless or Stateful).
@@ -190,8 +191,8 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return The service load metrics is given as an array of ServiceLoadMetricDescription objects.
      * 
      */
-    public Output</* @Nullable */ List<ServiceLoadMetricDescriptionResponse>> serviceLoadMetrics() {
-        return this.serviceLoadMetrics;
+    public Output<Optional<List<ServiceLoadMetricDescriptionResponse>>> serviceLoadMetrics() {
+        return Codegen.optional(this.serviceLoadMetrics);
     }
     /**
      * The activation Mode of the service package
@@ -204,8 +205,8 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return The activation Mode of the service package
      * 
      */
-    public Output</* @Nullable */ String> servicePackageActivationMode() {
-        return this.servicePackageActivationMode;
+    public Output<Optional<String>> servicePackageActivationMode() {
+        return Codegen.optional(this.servicePackageActivationMode);
     }
     /**
      * A list that describes the correlation of the service with other services.
@@ -218,8 +219,8 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return A list that describes the correlation of the service with other services.
      * 
      */
-    public Output</* @Nullable */ List<ServicePlacementPolicyDescriptionResponse>> servicePlacementPolicies() {
-        return this.servicePlacementPolicies;
+    public Output<Optional<List<ServicePlacementPolicyDescriptionResponse>>> servicePlacementPolicies() {
+        return Codegen.optional(this.servicePlacementPolicies);
     }
     /**
      * The name of the service type
@@ -232,8 +233,8 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return The name of the service type
      * 
      */
-    public Output</* @Nullable */ String> serviceTypeName() {
-        return this.serviceTypeName;
+    public Output<Optional<String>> serviceTypeName() {
+        return Codegen.optional(this.serviceTypeName);
     }
     /**
      * Azure resource tags.
@@ -246,8 +247,8 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return Azure resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Azure resource type.

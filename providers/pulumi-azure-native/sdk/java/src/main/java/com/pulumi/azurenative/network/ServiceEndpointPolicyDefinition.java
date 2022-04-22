@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -42,8 +43,8 @@ public class ServiceEndpointPolicyDefinition extends com.pulumi.resources.Custom
      * @return A description for this rule. Restricted to 140 chars.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
@@ -70,8 +71,8 @@ public class ServiceEndpointPolicyDefinition extends com.pulumi.resources.Custom
      * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * The provisioning state of the service endpoint policy definition resource.
@@ -98,8 +99,8 @@ public class ServiceEndpointPolicyDefinition extends com.pulumi.resources.Custom
      * @return Service endpoint name.
      * 
      */
-    public Output</* @Nullable */ String> service() {
-        return this.service;
+    public Output<Optional<String>> service() {
+        return Codegen.optional(this.service);
     }
     /**
      * A list of service resources.
@@ -112,8 +113,8 @@ public class ServiceEndpointPolicyDefinition extends com.pulumi.resources.Custom
      * @return A list of service resources.
      * 
      */
-    public Output</* @Nullable */ List<String>> serviceResources() {
-        return this.serviceResources;
+    public Output<Optional<List<String>>> serviceResources() {
+        return Codegen.optional(this.serviceResources);
     }
 
     /**
