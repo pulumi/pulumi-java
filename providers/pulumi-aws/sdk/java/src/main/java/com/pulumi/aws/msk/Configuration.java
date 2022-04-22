@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -56,8 +57,8 @@ public class Configuration extends com.pulumi.resources.CustomResource {
      * @return Description of the configuration.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * List of Apache Kafka versions which can use this configuration.
@@ -70,8 +71,8 @@ public class Configuration extends com.pulumi.resources.CustomResource {
      * @return List of Apache Kafka versions which can use this configuration.
      * 
      */
-    public Output</* @Nullable */ List<String>> kafkaVersions() {
-        return this.kafkaVersions;
+    public Output<Optional<List<String>>> kafkaVersions() {
+        return Codegen.optional(this.kafkaVersions);
     }
     /**
      * Latest revision of the configuration.

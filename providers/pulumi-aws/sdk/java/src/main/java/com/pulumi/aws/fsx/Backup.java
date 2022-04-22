@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -61,8 +62,8 @@ public class Backup extends com.pulumi.resources.CustomResource {
      * @return The ID of the file system to back up. Required if backing up Lustre or Windows file systems.
      * 
      */
-    public Output</* @Nullable */ String> fileSystemId() {
-        return this.fileSystemId;
+    public Output<Optional<String>> fileSystemId() {
+        return Codegen.optional(this.fileSystemId);
     }
     /**
      * The ID of the AWS Key Management Service (AWS KMS) key used to encrypt the backup of the Amazon FSx file system&#39;s data at rest.
@@ -145,8 +146,8 @@ public class Backup extends com.pulumi.resources.CustomResource {
      * @return The ID of the volume to back up. Required if backing up a ONTAP Volume.
      * 
      */
-    public Output</* @Nullable */ String> volumeId() {
-        return this.volumeId;
+    public Output<Optional<String>> volumeId() {
+        return Codegen.optional(this.volumeId);
     }
 
     /**

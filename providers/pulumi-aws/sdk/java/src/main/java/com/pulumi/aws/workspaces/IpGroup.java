@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class IpGroup extends com.pulumi.resources.CustomResource {
      * @return The description.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The name of the IP group.
@@ -71,8 +72,8 @@ public class IpGroup extends com.pulumi.resources.CustomResource {
      * @return One or more pairs specifying the IP group rule (in CIDR format) from which web requests originate.
      * 
      */
-    public Output</* @Nullable */ List<IpGroupRule>> rules() {
-        return this.rules;
+    public Output<Optional<List<IpGroupRule>>> rules() {
+        return Codegen.optional(this.rules);
     }
     /**
      * A map of tags assigned to the WorkSpaces directory. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -85,8 +86,8 @@ public class IpGroup extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the WorkSpaces directory. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -42,8 +43,8 @@ public class MaintenanceWindowTarget extends com.pulumi.resources.CustomResource
      * @return The description of the maintenance window target.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The name of the maintenance window target.
@@ -70,8 +71,8 @@ public class MaintenanceWindowTarget extends com.pulumi.resources.CustomResource
      * @return User-provided value that will be included in any CloudWatch events raised while running tasks for these targets in this Maintenance Window.
      * 
      */
-    public Output</* @Nullable */ String> ownerInformation() {
-        return this.ownerInformation;
+    public Output<Optional<String>> ownerInformation() {
+        return Codegen.optional(this.ownerInformation);
     }
     /**
      * The type of target being registered with the Maintenance Window. Possible values are `INSTANCE` and `RESOURCE_GROUP`.

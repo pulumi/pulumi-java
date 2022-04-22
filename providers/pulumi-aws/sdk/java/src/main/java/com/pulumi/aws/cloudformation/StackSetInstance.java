@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -61,8 +62,8 @@ public class StackSetInstance extends com.pulumi.resources.CustomResource {
      * @return The AWS Organizations accounts to which StackSets deploys. StackSets doesn&#39;t deploy stack instances to the organization management account, even if the organization management account is in your organization or in an OU in your organization. Drift detection is not possible for this argument. See deployment_targets below.
      * 
      */
-    public Output</* @Nullable */ StackSetInstanceDeploymentTargets> deploymentTargets() {
-        return this.deploymentTargets;
+    public Output<Optional<StackSetInstanceDeploymentTargets>> deploymentTargets() {
+        return Codegen.optional(this.deploymentTargets);
     }
     /**
      * The organization root ID or organizational unit (OU) IDs specified for `deployment_targets`.
@@ -89,8 +90,8 @@ public class StackSetInstance extends com.pulumi.resources.CustomResource {
      * @return Key-value map of input parameters to override from the StackSet for this Instance.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> parameterOverrides() {
-        return this.parameterOverrides;
+    public Output<Optional<Map<String,String>>> parameterOverrides() {
+        return Codegen.optional(this.parameterOverrides);
     }
     /**
      * Target AWS Region to create a Stack based on the StackSet. Defaults to current region.
@@ -117,8 +118,8 @@ public class StackSetInstance extends com.pulumi.resources.CustomResource {
      * @return During resource destroy, remove Instance from StackSet while keeping the Stack and its associated resources. Must be enabled in the state _before_ destroy operation to take effect. You cannot reassociate a retained Stack or add an existing, saved Stack to a new StackSet. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> retainStack() {
-        return this.retainStack;
+    public Output<Optional<Boolean>> retainStack() {
+        return Codegen.optional(this.retainStack);
     }
     /**
      * Stack identifier

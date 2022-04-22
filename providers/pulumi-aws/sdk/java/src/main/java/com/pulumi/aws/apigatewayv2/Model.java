@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -68,8 +69,8 @@ public class Model extends com.pulumi.resources.CustomResource {
      * @return The description of the model. Must be between 1 and 128 characters in length.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The name of the model. Must be alphanumeric. Must be between 1 and 128 characters in length.

@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -71,8 +72,8 @@ public class Connection extends com.pulumi.resources.CustomResource {
      * @return A map of key-value pairs used as parameters for this connection.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> connectionProperties() {
-        return this.connectionProperties;
+    public Output<Optional<Map<String,String>>> connectionProperties() {
+        return Codegen.optional(this.connectionProperties);
     }
     /**
      * The type of the connection. Supported are: `JDBC`, `MONGODB`, `KAFKA`, and `NETWORK`. Defaults to `JBDC`.
@@ -85,8 +86,8 @@ public class Connection extends com.pulumi.resources.CustomResource {
      * @return The type of the connection. Supported are: `JDBC`, `MONGODB`, `KAFKA`, and `NETWORK`. Defaults to `JBDC`.
      * 
      */
-    public Output</* @Nullable */ String> connectionType() {
-        return this.connectionType;
+    public Output<Optional<String>> connectionType() {
+        return Codegen.optional(this.connectionType);
     }
     /**
      * Description of the connection.
@@ -99,8 +100,8 @@ public class Connection extends com.pulumi.resources.CustomResource {
      * @return Description of the connection.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * A list of criteria that can be used in selecting this connection.
@@ -113,8 +114,8 @@ public class Connection extends com.pulumi.resources.CustomResource {
      * @return A list of criteria that can be used in selecting this connection.
      * 
      */
-    public Output</* @Nullable */ List<String>> matchCriterias() {
-        return this.matchCriterias;
+    public Output<Optional<List<String>>> matchCriterias() {
+        return Codegen.optional(this.matchCriterias);
     }
     /**
      * The name of the connection.
@@ -141,8 +142,8 @@ public class Connection extends com.pulumi.resources.CustomResource {
      * @return A map of physical connection requirements, such as VPC and SecurityGroup. Defined below.
      * 
      */
-    public Output</* @Nullable */ ConnectionPhysicalConnectionRequirements> physicalConnectionRequirements() {
-        return this.physicalConnectionRequirements;
+    public Output<Optional<ConnectionPhysicalConnectionRequirements>> physicalConnectionRequirements() {
+        return Codegen.optional(this.physicalConnectionRequirements);
     }
     /**
      * Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -155,8 +156,8 @@ public class Connection extends com.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.

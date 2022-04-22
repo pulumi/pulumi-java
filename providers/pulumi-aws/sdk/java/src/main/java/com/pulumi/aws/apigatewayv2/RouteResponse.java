@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -56,8 +57,8 @@ public class RouteResponse extends com.pulumi.resources.CustomResource {
      * @return The [model selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-model-selection-expressions) for the route response.
      * 
      */
-    public Output</* @Nullable */ String> modelSelectionExpression() {
-        return this.modelSelectionExpression;
+    public Output<Optional<String>> modelSelectionExpression() {
+        return Codegen.optional(this.modelSelectionExpression);
     }
     /**
      * The response models for the route response.
@@ -70,8 +71,8 @@ public class RouteResponse extends com.pulumi.resources.CustomResource {
      * @return The response models for the route response.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> responseModels() {
-        return this.responseModels;
+    public Output<Optional<Map<String,String>>> responseModels() {
+        return Codegen.optional(this.responseModels);
     }
     /**
      * The identifier of the `aws.apigatewayv2.Route`.

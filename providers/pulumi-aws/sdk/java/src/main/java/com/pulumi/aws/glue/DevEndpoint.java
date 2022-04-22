@@ -15,6 +15,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class DevEndpoint extends com.pulumi.resources.CustomResource {
      * @return A map of arguments used to configure the endpoint.
      * 
      */
-    public Output</* @Nullable */ Map<String,Object>> arguments() {
-        return this.arguments;
+    public Output<Optional<Map<String,Object>>> arguments() {
+        return Codegen.optional(this.arguments);
     }
     /**
      * The ARN of the endpoint.
@@ -86,8 +87,8 @@ public class DevEndpoint extends com.pulumi.resources.CustomResource {
      * @return Path to one or more Java Jars in an S3 bucket that should be loaded in this endpoint.
      * 
      */
-    public Output</* @Nullable */ String> extraJarsS3Path() {
-        return this.extraJarsS3Path;
+    public Output<Optional<String>> extraJarsS3Path() {
+        return Codegen.optional(this.extraJarsS3Path);
     }
     /**
      * Path(s) to one or more Python libraries in an S3 bucket that should be loaded in this endpoint. Multiple values must be complete paths separated by a comma.
@@ -100,8 +101,8 @@ public class DevEndpoint extends com.pulumi.resources.CustomResource {
      * @return Path(s) to one or more Python libraries in an S3 bucket that should be loaded in this endpoint. Multiple values must be complete paths separated by a comma.
      * 
      */
-    public Output</* @Nullable */ String> extraPythonLibsS3Path() {
-        return this.extraPythonLibsS3Path;
+    public Output<Optional<String>> extraPythonLibsS3Path() {
+        return Codegen.optional(this.extraPythonLibsS3Path);
     }
     /**
      * The reason for a current failure in this endpoint.
@@ -128,8 +129,8 @@ public class DevEndpoint extends com.pulumi.resources.CustomResource {
      * @return -  Specifies the versions of Python and Apache Spark to use. Defaults to AWS Glue version 0.9.
      * 
      */
-    public Output</* @Nullable */ String> glueVersion() {
-        return this.glueVersion;
+    public Output<Optional<String>> glueVersion() {
+        return Codegen.optional(this.glueVersion);
     }
     /**
      * The name of this endpoint. It must be unique in your account.
@@ -156,8 +157,8 @@ public class DevEndpoint extends com.pulumi.resources.CustomResource {
      * @return The number of AWS Glue Data Processing Units (DPUs) to allocate to this endpoint. Conflicts with `worker_type`.
      * 
      */
-    public Output</* @Nullable */ Integer> numberOfNodes() {
-        return this.numberOfNodes;
+    public Output<Optional<Integer>> numberOfNodes() {
+        return Codegen.optional(this.numberOfNodes);
     }
     /**
      * The number of workers of a defined worker type that are allocated to this endpoint. This field is available only when you choose worker type G.1X or G.2X.
@@ -170,8 +171,8 @@ public class DevEndpoint extends com.pulumi.resources.CustomResource {
      * @return The number of workers of a defined worker type that are allocated to this endpoint. This field is available only when you choose worker type G.1X or G.2X.
      * 
      */
-    public Output</* @Nullable */ Integer> numberOfWorkers() {
-        return this.numberOfWorkers;
+    public Output<Optional<Integer>> numberOfWorkers() {
+        return Codegen.optional(this.numberOfWorkers);
     }
     /**
      * A private IP address to access the endpoint within a VPC, if this endpoint is created within one.
@@ -212,8 +213,8 @@ public class DevEndpoint extends com.pulumi.resources.CustomResource {
      * @return The public key to be used by this endpoint for authentication.
      * 
      */
-    public Output</* @Nullable */ String> publicKey() {
-        return this.publicKey;
+    public Output<Optional<String>> publicKey() {
+        return Codegen.optional(this.publicKey);
     }
     /**
      * A list of public keys to be used by this endpoint for authentication.
@@ -226,8 +227,8 @@ public class DevEndpoint extends com.pulumi.resources.CustomResource {
      * @return A list of public keys to be used by this endpoint for authentication.
      * 
      */
-    public Output</* @Nullable */ List<String>> publicKeys() {
-        return this.publicKeys;
+    public Output<Optional<List<String>>> publicKeys() {
+        return Codegen.optional(this.publicKeys);
     }
     /**
      * The IAM role for this endpoint.
@@ -254,8 +255,8 @@ public class DevEndpoint extends com.pulumi.resources.CustomResource {
      * @return The name of the Security Configuration structure to be used with this endpoint.
      * 
      */
-    public Output</* @Nullable */ String> securityConfiguration() {
-        return this.securityConfiguration;
+    public Output<Optional<String>> securityConfiguration() {
+        return Codegen.optional(this.securityConfiguration);
     }
     /**
      * Security group IDs for the security groups to be used by this endpoint.
@@ -268,8 +269,8 @@ public class DevEndpoint extends com.pulumi.resources.CustomResource {
      * @return Security group IDs for the security groups to be used by this endpoint.
      * 
      */
-    public Output</* @Nullable */ List<String>> securityGroupIds() {
-        return this.securityGroupIds;
+    public Output<Optional<List<String>>> securityGroupIds() {
+        return Codegen.optional(this.securityGroupIds);
     }
     /**
      * The current status of this endpoint.
@@ -296,8 +297,8 @@ public class DevEndpoint extends com.pulumi.resources.CustomResource {
      * @return The subnet ID for the new endpoint to use.
      * 
      */
-    public Output</* @Nullable */ String> subnetId() {
-        return this.subnetId;
+    public Output<Optional<String>> subnetId() {
+        return Codegen.optional(this.subnetId);
     }
     /**
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -310,8 +311,8 @@ public class DevEndpoint extends com.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
@@ -352,8 +353,8 @@ public class DevEndpoint extends com.pulumi.resources.CustomResource {
      * @return The type of predefined worker that is allocated to this endpoint. Accepts a value of Standard, G.1X, or G.2X.
      * 
      */
-    public Output</* @Nullable */ String> workerType() {
-        return this.workerType;
+    public Output<Optional<String>> workerType() {
+        return Codegen.optional(this.workerType);
     }
     /**
      * The YARN endpoint address used by this endpoint.

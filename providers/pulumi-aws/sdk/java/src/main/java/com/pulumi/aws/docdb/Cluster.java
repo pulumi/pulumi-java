@@ -15,6 +15,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -101,8 +102,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The days to retain backups for. Default `1`
      * 
      */
-    public Output</* @Nullable */ Integer> backupRetentionPeriod() {
-        return this.backupRetentionPeriod;
+    public Output<Optional<Integer>> backupRetentionPeriod() {
+        return Codegen.optional(this.backupRetentionPeriod);
     }
     /**
      * The cluster identifier. If omitted, this provider will assign a random, unique identifier.
@@ -199,8 +200,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return A value that indicates whether the DB cluster has deletion protection enabled. The database can&#39;t be deleted when deletion protection is enabled. By default, deletion protection is disabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> deletionProtection() {
-        return this.deletionProtection;
+    public Output<Optional<Boolean>> deletionProtection() {
+        return Codegen.optional(this.deletionProtection);
     }
     /**
      * List of log types to export to cloudwatch. If omitted, no logs will be exported.
@@ -215,8 +216,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * The following log types are supported: `audit`, `profiler`.
      * 
      */
-    public Output</* @Nullable */ List<String>> enabledCloudwatchLogsExports() {
-        return this.enabledCloudwatchLogsExports;
+    public Output<Optional<List<String>>> enabledCloudwatchLogsExports() {
+        return Codegen.optional(this.enabledCloudwatchLogsExports);
     }
     /**
      * The DNS address of the DocDB instance
@@ -243,8 +244,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The name of the database engine to be used for this DB cluster. Defaults to `docdb`. Valid Values: `docdb`
      * 
      */
-    public Output</* @Nullable */ String> engine() {
-        return this.engine;
+    public Output<Optional<String>> engine() {
+        return Codegen.optional(this.engine);
     }
     /**
      * The database engine version. Updating this argument results in an outage.
@@ -275,8 +276,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * made.
      * 
      */
-    public Output</* @Nullable */ String> finalSnapshotIdentifier() {
-        return this.finalSnapshotIdentifier;
+    public Output<Optional<String>> finalSnapshotIdentifier() {
+        return Codegen.optional(this.finalSnapshotIdentifier);
     }
     /**
      * The global cluster identifier specified on `aws.docdb.GlobalCluster`.
@@ -289,8 +290,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The global cluster identifier specified on `aws.docdb.GlobalCluster`.
      * 
      */
-    public Output</* @Nullable */ String> globalClusterIdentifier() {
-        return this.globalClusterIdentifier;
+    public Output<Optional<String>> globalClusterIdentifier() {
+        return Codegen.optional(this.globalClusterIdentifier);
     }
     /**
      * The Route53 Hosted Zone ID of the endpoint
@@ -333,8 +334,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * show up in logs, and it will be stored in the state file. Please refer to the DocDB Naming Constraints.
      * 
      */
-    public Output</* @Nullable */ String> masterPassword() {
-        return this.masterPassword;
+    public Output<Optional<String>> masterPassword() {
+        return Codegen.optional(this.masterPassword);
     }
     /**
      * Username for the master DB user.
@@ -361,8 +362,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The port on which the DB accepts connections
      * 
      */
-    public Output</* @Nullable */ Integer> port() {
-        return this.port;
+    public Output<Optional<Integer>> port() {
+        return Codegen.optional(this.port);
     }
     /**
      * The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC
@@ -419,8 +420,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from `final_snapshot_identifier`. Default is `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> skipFinalSnapshot() {
-        return this.skipFinalSnapshot;
+    public Output<Optional<Boolean>> skipFinalSnapshot() {
+        return Codegen.optional(this.skipFinalSnapshot);
     }
     /**
      * Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.
@@ -433,8 +434,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.
      * 
      */
-    public Output</* @Nullable */ String> snapshotIdentifier() {
-        return this.snapshotIdentifier;
+    public Output<Optional<String>> snapshotIdentifier() {
+        return Codegen.optional(this.snapshotIdentifier);
     }
     /**
      * Specifies whether the DB cluster is encrypted. The default is `false`.
@@ -447,8 +448,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Specifies whether the DB cluster is encrypted. The default is `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> storageEncrypted() {
-        return this.storageEncrypted;
+    public Output<Optional<Boolean>> storageEncrypted() {
+        return Codegen.optional(this.storageEncrypted);
     }
     /**
      * A map of tags to assign to the DB cluster. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -461,8 +462,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the DB cluster. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

@@ -17,6 +17,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -88,8 +89,8 @@ public class SigningJob extends com.pulumi.resources.CustomResource {
      * @return Set this argument to `true` to ignore signing job failures and retrieve failed status and reason. Default `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> ignoreSigningJobFailure() {
-        return this.ignoreSigningJobFailure;
+    public Output<Optional<Boolean>> ignoreSigningJobFailure() {
+        return Codegen.optional(this.ignoreSigningJobFailure);
     }
     /**
      * The ID of the signing job on output.

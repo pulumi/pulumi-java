@@ -14,6 +14,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -80,8 +81,8 @@ public class ClusterInstance extends com.pulumi.resources.CustomResource {
      * @return Indicates that minor engine upgrades will be applied automatically to the DB instance during the maintenance window. Default `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> autoMinorVersionUpgrade() {
-        return this.autoMinorVersionUpgrade;
+    public Output<Optional<Boolean>> autoMinorVersionUpgrade() {
+        return Codegen.optional(this.autoMinorVersionUpgrade);
     }
     /**
      * The EC2 Availability Zone that the DB instance is created in. See [docs](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_CreateDBInstance.html) about the details.
@@ -178,8 +179,8 @@ public class ClusterInstance extends com.pulumi.resources.CustomResource {
      * @return The name of the database engine to be used for the DocDB instance. Defaults to `docdb`. Valid Values: `docdb`.
      * 
      */
-    public Output</* @Nullable */ String> engine() {
-        return this.engine;
+    public Output<Optional<String>> engine() {
+        return Codegen.optional(this.engine);
     }
     /**
      * The database engine version
@@ -334,8 +335,8 @@ public class ClusterInstance extends com.pulumi.resources.CustomResource {
      * @return Default 0. Failover Priority setting on instance level. The reader who has lower tier has higher priority to get promoter to writer.
      * 
      */
-    public Output</* @Nullable */ Integer> promotionTier() {
-        return this.promotionTier;
+    public Output<Optional<Integer>> promotionTier() {
+        return Codegen.optional(this.promotionTier);
     }
     @Export(name="publiclyAccessible", type=Boolean.class, parameters={})
     private Output<Boolean> publiclyAccessible;
@@ -368,8 +369,8 @@ public class ClusterInstance extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the instance. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

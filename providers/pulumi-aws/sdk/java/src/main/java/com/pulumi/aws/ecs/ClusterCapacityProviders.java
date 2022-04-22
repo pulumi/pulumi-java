@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -38,8 +39,8 @@ public class ClusterCapacityProviders extends com.pulumi.resources.CustomResourc
      * @return Set of names of one or more capacity providers to associate with the cluster. Valid values also include `FARGATE` and `FARGATE_SPOT`.
      * 
      */
-    public Output</* @Nullable */ List<String>> capacityProviders() {
-        return this.capacityProviders;
+    public Output<Optional<List<String>>> capacityProviders() {
+        return Codegen.optional(this.capacityProviders);
     }
     /**
      * Name of the ECS cluster to manage capacity providers for.
@@ -66,8 +67,8 @@ public class ClusterCapacityProviders extends com.pulumi.resources.CustomResourc
      * @return Set of capacity provider strategies to use by default for the cluster. Detailed below.
      * 
      */
-    public Output</* @Nullable */ List<ClusterCapacityProvidersDefaultCapacityProviderStrategy>> defaultCapacityProviderStrategies() {
-        return this.defaultCapacityProviderStrategies;
+    public Output<Optional<List<ClusterCapacityProvidersDefaultCapacityProviderStrategy>>> defaultCapacityProviderStrategies() {
+        return Codegen.optional(this.defaultCapacityProviderStrategies);
     }
 
     /**

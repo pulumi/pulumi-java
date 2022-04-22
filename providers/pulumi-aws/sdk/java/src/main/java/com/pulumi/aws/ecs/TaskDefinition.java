@@ -21,6 +21,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -78,8 +79,8 @@ public class TaskDefinition extends com.pulumi.resources.CustomResource {
      * @return Number of cpu units used by the task. If the `requires_compatibilities` is `FARGATE` this field is required.
      * 
      */
-    public Output</* @Nullable */ String> cpu() {
-        return this.cpu;
+    public Output<Optional<String>> cpu() {
+        return Codegen.optional(this.cpu);
     }
     /**
      * The amount of ephemeral storage to allocate for the task. This parameter is used to expand the total amount of ephemeral storage available, beyond the default amount, for tasks hosted on AWS Fargate. See Ephemeral Storage.
@@ -92,8 +93,8 @@ public class TaskDefinition extends com.pulumi.resources.CustomResource {
      * @return The amount of ephemeral storage to allocate for the task. This parameter is used to expand the total amount of ephemeral storage available, beyond the default amount, for tasks hosted on AWS Fargate. See Ephemeral Storage.
      * 
      */
-    public Output</* @Nullable */ TaskDefinitionEphemeralStorage> ephemeralStorage() {
-        return this.ephemeralStorage;
+    public Output<Optional<TaskDefinitionEphemeralStorage>> ephemeralStorage() {
+        return Codegen.optional(this.ephemeralStorage);
     }
     /**
      * ARN of the task execution role that the Amazon ECS container agent and the Docker daemon can assume.
@@ -106,8 +107,8 @@ public class TaskDefinition extends com.pulumi.resources.CustomResource {
      * @return ARN of the task execution role that the Amazon ECS container agent and the Docker daemon can assume.
      * 
      */
-    public Output</* @Nullable */ String> executionRoleArn() {
-        return this.executionRoleArn;
+    public Output<Optional<String>> executionRoleArn() {
+        return Codegen.optional(this.executionRoleArn);
     }
     /**
      * A unique name for your task definition.
@@ -134,8 +135,8 @@ public class TaskDefinition extends com.pulumi.resources.CustomResource {
      * @return Configuration block(s) with Inference Accelerators settings. Detailed below.
      * 
      */
-    public Output</* @Nullable */ List<TaskDefinitionInferenceAccelerator>> inferenceAccelerators() {
-        return this.inferenceAccelerators;
+    public Output<Optional<List<TaskDefinitionInferenceAccelerator>>> inferenceAccelerators() {
+        return Codegen.optional(this.inferenceAccelerators);
     }
     /**
      * IPC resource namespace to be used for the containers in the task The valid values are `host`, `task`, and `none`.
@@ -148,8 +149,8 @@ public class TaskDefinition extends com.pulumi.resources.CustomResource {
      * @return IPC resource namespace to be used for the containers in the task The valid values are `host`, `task`, and `none`.
      * 
      */
-    public Output</* @Nullable */ String> ipcMode() {
-        return this.ipcMode;
+    public Output<Optional<String>> ipcMode() {
+        return Codegen.optional(this.ipcMode);
     }
     /**
      * Amount (in MiB) of memory used by the task. If the `requires_compatibilities` is `FARGATE` this field is required.
@@ -162,8 +163,8 @@ public class TaskDefinition extends com.pulumi.resources.CustomResource {
      * @return Amount (in MiB) of memory used by the task. If the `requires_compatibilities` is `FARGATE` this field is required.
      * 
      */
-    public Output</* @Nullable */ String> memory() {
-        return this.memory;
+    public Output<Optional<String>> memory() {
+        return Codegen.optional(this.memory);
     }
     /**
      * Docker networking mode to use for the containers in the task. Valid values are `none`, `bridge`, `awsvpc`, and `host`.
@@ -190,8 +191,8 @@ public class TaskDefinition extends com.pulumi.resources.CustomResource {
      * @return Process namespace to use for the containers in the task. The valid values are `host` and `task`.
      * 
      */
-    public Output</* @Nullable */ String> pidMode() {
-        return this.pidMode;
+    public Output<Optional<String>> pidMode() {
+        return Codegen.optional(this.pidMode);
     }
     /**
      * Configuration block for rules that are taken into consideration during task placement. Maximum number of `placement_constraints` is `10`. Detailed below.
@@ -204,8 +205,8 @@ public class TaskDefinition extends com.pulumi.resources.CustomResource {
      * @return Configuration block for rules that are taken into consideration during task placement. Maximum number of `placement_constraints` is `10`. Detailed below.
      * 
      */
-    public Output</* @Nullable */ List<TaskDefinitionPlacementConstraint>> placementConstraints() {
-        return this.placementConstraints;
+    public Output<Optional<List<TaskDefinitionPlacementConstraint>>> placementConstraints() {
+        return Codegen.optional(this.placementConstraints);
     }
     /**
      * Configuration block for the App Mesh proxy. Detailed below.
@@ -218,8 +219,8 @@ public class TaskDefinition extends com.pulumi.resources.CustomResource {
      * @return Configuration block for the App Mesh proxy. Detailed below.
      * 
      */
-    public Output</* @Nullable */ TaskDefinitionProxyConfiguration> proxyConfiguration() {
-        return this.proxyConfiguration;
+    public Output<Optional<TaskDefinitionProxyConfiguration>> proxyConfiguration() {
+        return Codegen.optional(this.proxyConfiguration);
     }
     /**
      * Set of launch types required by the task. The valid values are `EC2` and `FARGATE`.
@@ -232,8 +233,8 @@ public class TaskDefinition extends com.pulumi.resources.CustomResource {
      * @return Set of launch types required by the task. The valid values are `EC2` and `FARGATE`.
      * 
      */
-    public Output</* @Nullable */ List<String>> requiresCompatibilities() {
-        return this.requiresCompatibilities;
+    public Output<Optional<List<String>>> requiresCompatibilities() {
+        return Codegen.optional(this.requiresCompatibilities);
     }
     /**
      * Revision of the task in a particular family.
@@ -260,14 +261,14 @@ public class TaskDefinition extends com.pulumi.resources.CustomResource {
      * @return Configuration block for runtime_platform that containers in your task may use.
      * 
      */
-    public Output</* @Nullable */ TaskDefinitionRuntimePlatform> runtimePlatform() {
-        return this.runtimePlatform;
+    public Output<Optional<TaskDefinitionRuntimePlatform>> runtimePlatform() {
+        return Codegen.optional(this.runtimePlatform);
     }
     @Export(name="skipDestroy", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> skipDestroy;
 
-    public Output</* @Nullable */ Boolean> skipDestroy() {
-        return this.skipDestroy;
+    public Output<Optional<Boolean>> skipDestroy() {
+        return Codegen.optional(this.skipDestroy);
     }
     /**
      * Key-value map of resource tags.
@@ -280,8 +281,8 @@ public class TaskDefinition extends com.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Map of tags assigned to the resource, including those inherited from the provider.
@@ -308,8 +309,8 @@ public class TaskDefinition extends com.pulumi.resources.CustomResource {
      * @return ARN of IAM role that allows your Amazon ECS container task to make calls to other AWS services.
      * 
      */
-    public Output</* @Nullable */ String> taskRoleArn() {
-        return this.taskRoleArn;
+    public Output<Optional<String>> taskRoleArn() {
+        return Codegen.optional(this.taskRoleArn);
     }
     /**
      * Configuration block for volumes that containers in your task may use. Detailed below.
@@ -322,8 +323,8 @@ public class TaskDefinition extends com.pulumi.resources.CustomResource {
      * @return Configuration block for volumes that containers in your task may use. Detailed below.
      * 
      */
-    public Output</* @Nullable */ List<TaskDefinitionVolume>> volumes() {
-        return this.volumes;
+    public Output<Optional<List<TaskDefinitionVolume>>> volumes() {
+        return Codegen.optional(this.volumes);
     }
 
     /**

@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -115,8 +116,8 @@ public class ClusterEndpoint extends com.pulumi.resources.CustomResource {
      * @return List of DB instance identifiers that aren&#39;t part of the custom endpoint group. All other eligible instances are reachable through the custom endpoint. Only relevant if the list of static members is empty. Conflicts with `static_members`.
      * 
      */
-    public Output</* @Nullable */ List<String>> excludedMembers() {
-        return this.excludedMembers;
+    public Output<Optional<List<String>>> excludedMembers() {
+        return Codegen.optional(this.excludedMembers);
     }
     /**
      * List of DB instance identifiers that are part of the custom endpoint group. Conflicts with `excluded_members`.
@@ -129,8 +130,8 @@ public class ClusterEndpoint extends com.pulumi.resources.CustomResource {
      * @return List of DB instance identifiers that are part of the custom endpoint group. Conflicts with `excluded_members`.
      * 
      */
-    public Output</* @Nullable */ List<String>> staticMembers() {
-        return this.staticMembers;
+    public Output<Optional<List<String>>> staticMembers() {
+        return Codegen.optional(this.staticMembers);
     }
     /**
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -143,8 +144,8 @@ public class ClusterEndpoint extends com.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

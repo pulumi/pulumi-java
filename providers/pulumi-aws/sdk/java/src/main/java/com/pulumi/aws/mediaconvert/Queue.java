@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -56,8 +57,8 @@ public class Queue extends com.pulumi.resources.CustomResource {
      * @return A description of the queue
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * A unique identifier describing the queue
@@ -84,8 +85,8 @@ public class Queue extends com.pulumi.resources.CustomResource {
      * @return Specifies whether the pricing plan for the queue is on-demand or reserved. Valid values are `ON_DEMAND` or `RESERVED`. Default to `ON_DEMAND`.
      * 
      */
-    public Output</* @Nullable */ String> pricingPlan() {
-        return this.pricingPlan;
+    public Output<Optional<String>> pricingPlan() {
+        return Codegen.optional(this.pricingPlan);
     }
     /**
      * A detail pricing plan of the  reserved queue. See below.
@@ -112,8 +113,8 @@ public class Queue extends com.pulumi.resources.CustomResource {
      * @return A status of the queue. Valid values are `ACTIVE` or `RESERVED`. Default to `PAUSED`.
      * 
      */
-    public Output</* @Nullable */ String> status() {
-        return this.status;
+    public Output<Optional<String>> status() {
+        return Codegen.optional(this.status);
     }
     /**
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -126,8 +127,8 @@ public class Queue extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

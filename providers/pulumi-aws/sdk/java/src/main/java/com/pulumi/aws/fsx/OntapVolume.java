@@ -15,6 +15,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -129,8 +130,8 @@ public class OntapVolume extends com.pulumi.resources.CustomResource {
      * @return Specifies the volume security style, Valid values are `UNIX`, `NTFS`, and `MIXED`. Default value is `UNIX`.
      * 
      */
-    public Output</* @Nullable */ String> securityStyle() {
-        return this.securityStyle;
+    public Output<Optional<String>> securityStyle() {
+        return Codegen.optional(this.securityStyle);
     }
     /**
      * Specifies the size of the volume, in megabytes (MB), that you are creating.
@@ -185,8 +186,8 @@ public class OntapVolume extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the volume. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
@@ -205,8 +206,8 @@ public class OntapVolume extends com.pulumi.resources.CustomResource {
     @Export(name="tieringPolicy", type=OntapVolumeTieringPolicy.class, parameters={})
     private Output</* @Nullable */ OntapVolumeTieringPolicy> tieringPolicy;
 
-    public Output</* @Nullable */ OntapVolumeTieringPolicy> tieringPolicy() {
-        return this.tieringPolicy;
+    public Output<Optional<OntapVolumeTieringPolicy>> tieringPolicy() {
+        return Codegen.optional(this.tieringPolicy);
     }
     /**
      * The Volume&#39;s UUID (universally unique identifier).
@@ -233,8 +234,8 @@ public class OntapVolume extends com.pulumi.resources.CustomResource {
      * @return The type of volume, currently the only valid value is `ONTAP`.
      * 
      */
-    public Output</* @Nullable */ String> volumeType() {
-        return this.volumeType;
+    public Output<Optional<String>> volumeType() {
+        return Codegen.optional(this.volumeType);
     }
 
     /**

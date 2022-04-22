@@ -16,6 +16,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -79,8 +80,8 @@ public class TargetGroup extends com.pulumi.resources.CustomResource {
      * @return Whether to terminate connections at the end of the deregistration timeout on Network Load Balancers. See [doc](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-target-groups.html#deregistration-delay) for more information. Default is `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> connectionTermination() {
-        return this.connectionTermination;
+    public Output<Optional<Boolean>> connectionTermination() {
+        return Codegen.optional(this.connectionTermination);
     }
     /**
      * Amount time for Elastic Load Balancing to wait before changing the state of a deregistering target from draining to unused. The range is 0-3600 seconds. The default value is 300 seconds.
@@ -93,8 +94,8 @@ public class TargetGroup extends com.pulumi.resources.CustomResource {
      * @return Amount time for Elastic Load Balancing to wait before changing the state of a deregistering target from draining to unused. The range is 0-3600 seconds. The default value is 300 seconds.
      * 
      */
-    public Output</* @Nullable */ Integer> deregistrationDelay() {
-        return this.deregistrationDelay;
+    public Output<Optional<Integer>> deregistrationDelay() {
+        return Codegen.optional(this.deregistrationDelay);
     }
     /**
      * Health Check configuration block. Detailed below.
@@ -121,8 +122,8 @@ public class TargetGroup extends com.pulumi.resources.CustomResource {
      * @return Whether the request and response headers exchanged between the load balancer and the Lambda function include arrays of values or strings. Only applies when `target_type` is `lambda`. Default is `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> lambdaMultiValueHeadersEnabled() {
-        return this.lambdaMultiValueHeadersEnabled;
+    public Output<Optional<Boolean>> lambdaMultiValueHeadersEnabled() {
+        return Codegen.optional(this.lambdaMultiValueHeadersEnabled);
     }
     /**
      * Determines how the load balancer selects targets when routing requests. Only applicable for Application Load Balancer Target Groups. The value is `round_robin` or `least_outstanding_requests`. The default is `round_robin`.
@@ -163,8 +164,8 @@ public class TargetGroup extends com.pulumi.resources.CustomResource {
      * @return Creates a unique name beginning with the specified prefix. Conflicts with `name`. Cannot be longer than 6 characters.
      * 
      */
-    public Output</* @Nullable */ String> namePrefix() {
-        return this.namePrefix;
+    public Output<Optional<String>> namePrefix() {
+        return Codegen.optional(this.namePrefix);
     }
     /**
      * Port to use to connect with the target. Valid values are either ports 1-65535, or `traffic-port`. Defaults to `traffic-port`.
@@ -177,8 +178,8 @@ public class TargetGroup extends com.pulumi.resources.CustomResource {
      * @return Port to use to connect with the target. Valid values are either ports 1-65535, or `traffic-port`. Defaults to `traffic-port`.
      * 
      */
-    public Output</* @Nullable */ Integer> port() {
-        return this.port;
+    public Output<Optional<Integer>> port() {
+        return Codegen.optional(this.port);
     }
     /**
      * Whether client IP preservation is enabled. See [doc](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-target-groups.html#client-ip-preservation) for more information.
@@ -205,8 +206,8 @@ public class TargetGroup extends com.pulumi.resources.CustomResource {
      * @return Protocol to use to connect with the target. Defaults to `HTTP`. Not applicable when `target_type` is `lambda`.
      * 
      */
-    public Output</* @Nullable */ String> protocol() {
-        return this.protocol;
+    public Output<Optional<String>> protocol() {
+        return Codegen.optional(this.protocol);
     }
     /**
      * Only applicable when `protocol` is `HTTP` or `HTTPS`. The protocol version. Specify GRPC to send requests to targets using gRPC. Specify HTTP2 to send requests to targets using HTTP/2. The default is HTTP1, which sends requests to targets using HTTP/1.1
@@ -233,8 +234,8 @@ public class TargetGroup extends com.pulumi.resources.CustomResource {
      * @return Whether to enable support for proxy protocol v2 on Network Load Balancers. See [doc](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-target-groups.html#proxy-protocol) for more information. Default is `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> proxyProtocolV2() {
-        return this.proxyProtocolV2;
+    public Output<Optional<Boolean>> proxyProtocolV2() {
+        return Codegen.optional(this.proxyProtocolV2);
     }
     /**
      * Amount time for targets to warm up before the load balancer sends them a full share of requests. The range is 30-900 seconds or 0 to disable. The default value is 0 seconds.
@@ -247,8 +248,8 @@ public class TargetGroup extends com.pulumi.resources.CustomResource {
      * @return Amount time for targets to warm up before the load balancer sends them a full share of requests. The range is 30-900 seconds or 0 to disable. The default value is 0 seconds.
      * 
      */
-    public Output</* @Nullable */ Integer> slowStart() {
-        return this.slowStart;
+    public Output<Optional<Integer>> slowStart() {
+        return Codegen.optional(this.slowStart);
     }
     /**
      * Stickiness configuration block. Detailed below.
@@ -275,8 +276,8 @@ public class TargetGroup extends com.pulumi.resources.CustomResource {
      * @return Map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .
@@ -303,8 +304,8 @@ public class TargetGroup extends com.pulumi.resources.CustomResource {
      * @return Type of target that you must specify when registering targets with this target group. See [doc](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_CreateTargetGroup.html) for supported values. The default is `instance`.
      * 
      */
-    public Output</* @Nullable */ String> targetType() {
-        return this.targetType;
+    public Output<Optional<String>> targetType() {
+        return Codegen.optional(this.targetType);
     }
     /**
      * Identifier of the VPC in which to create the target group. Required when `target_type` is `instance` or `ip`. Does not apply when `target_type` is `lambda`.
@@ -317,8 +318,8 @@ public class TargetGroup extends com.pulumi.resources.CustomResource {
      * @return Identifier of the VPC in which to create the target group. Required when `target_type` is `instance` or `ip`. Does not apply when `target_type` is `lambda`.
      * 
      */
-    public Output</* @Nullable */ String> vpcId() {
-        return this.vpcId;
+    public Output<Optional<String>> vpcId() {
+        return Codegen.optional(this.vpcId);
     }
 
     /**

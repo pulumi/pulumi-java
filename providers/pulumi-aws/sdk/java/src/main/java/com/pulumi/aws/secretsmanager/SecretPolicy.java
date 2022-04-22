@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -41,8 +42,8 @@ public class SecretPolicy extends com.pulumi.resources.CustomResource {
      * @return Makes an optional API call to Zelkova to validate the Resource Policy to prevent broad access to your secret.
      * 
      */
-    public Output</* @Nullable */ Boolean> blockPublicPolicy() {
-        return this.blockPublicPolicy;
+    public Output<Optional<Boolean>> blockPublicPolicy() {
+        return Codegen.optional(this.blockPublicPolicy);
     }
     /**
      * Valid JSON document representing a [resource policy](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_resource-based-policies.html). Unlike `aws.secretsmanager.Secret`, where `policy` can be set to `&#34;{}&#34;` to delete the policy, `&#34;{}&#34;` is not a valid policy since `policy` is required.

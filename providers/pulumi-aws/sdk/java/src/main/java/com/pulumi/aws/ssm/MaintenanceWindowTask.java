@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class MaintenanceWindowTask extends com.pulumi.resources.CustomResource {
      * @return The description of the maintenance window task.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The maximum number of targets this task can be run for in parallel.
@@ -100,8 +101,8 @@ public class MaintenanceWindowTask extends com.pulumi.resources.CustomResource {
      * @return The priority of the task in the Maintenance Window, the lower the number the higher the priority. Tasks in a Maintenance Window are scheduled in priority order with tasks that have the same priority scheduled in parallel.
      * 
      */
-    public Output</* @Nullable */ Integer> priority() {
-        return this.priority;
+    public Output<Optional<Integer>> priority() {
+        return Codegen.optional(this.priority);
     }
     /**
      * The role that should be assumed when executing the task. If a role is not provided, Systems Manager uses your account&#39;s service-linked role. If no service-linked role for Systems Manager exists in your account, it is created for you.
@@ -128,8 +129,8 @@ public class MaintenanceWindowTask extends com.pulumi.resources.CustomResource {
      * @return The targets (either instances or window target ids). Instances are specified using Key=InstanceIds,Values=instanceid1,instanceid2. Window target ids are specified using Key=WindowTargetIds,Values=window target id1, window target id2.
      * 
      */
-    public Output</* @Nullable */ List<MaintenanceWindowTaskTarget>> targets() {
-        return this.targets;
+    public Output<Optional<List<MaintenanceWindowTaskTarget>>> targets() {
+        return Codegen.optional(this.targets);
     }
     /**
      * The ARN of the task to execute.
@@ -156,8 +157,8 @@ public class MaintenanceWindowTask extends com.pulumi.resources.CustomResource {
      * @return Configuration block with parameters for task execution.
      * 
      */
-    public Output</* @Nullable */ MaintenanceWindowTaskTaskInvocationParameters> taskInvocationParameters() {
-        return this.taskInvocationParameters;
+    public Output<Optional<MaintenanceWindowTaskTaskInvocationParameters>> taskInvocationParameters() {
+        return Codegen.optional(this.taskInvocationParameters);
     }
     /**
      * The type of task being registered. Valid values: `AUTOMATION`, `LAMBDA`, `RUN_COMMAND` or `STEP_FUNCTIONS`.

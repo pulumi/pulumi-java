@@ -17,6 +17,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -78,8 +79,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return When set to `true`, the cluster will automatically receive minor engine version upgrades after launch. Defaults to `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> autoMinorVersionUpgrade() {
-        return this.autoMinorVersionUpgrade;
+    public Output<Optional<Boolean>> autoMinorVersionUpgrade() {
+        return Codegen.optional(this.autoMinorVersionUpgrade);
     }
     @Export(name="clusterEndpoints", type=List.class, parameters={ClusterClusterEndpoint.class})
     private Output<List<ClusterClusterEndpoint>> clusterEndpoints;
@@ -90,8 +91,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Patch version number of the Redis engine used by the cluster.
@@ -132,8 +133,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Name of the final cluster snapshot to be created when this resource is deleted. If omitted, no final snapshot will be made.
      * 
      */
-    public Output</* @Nullable */ String> finalSnapshotName() {
-        return this.finalSnapshotName;
+    public Output<Optional<String>> finalSnapshotName() {
+        return Codegen.optional(this.finalSnapshotName);
     }
     /**
      * ARN of the KMS key used to encrypt the cluster at rest.
@@ -146,8 +147,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return ARN of the KMS key used to encrypt the cluster at rest.
      * 
      */
-    public Output</* @Nullable */ String> kmsKeyArn() {
-        return this.kmsKeyArn;
+    public Output<Optional<String>> kmsKeyArn() {
+        return Codegen.optional(this.kmsKeyArn);
     }
     /**
      * Specifies the weekly time range during which maintenance on the cluster is performed. It is specified as a range in the format `ddd:hh24:mi-ddd:hh24:mi` (24H Clock UTC). The minimum maintenance window is a 60 minute period. Example: `sun:23:00-mon:01:30`.
@@ -218,8 +219,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The number of replicas to apply to each shard, up to a maximum of 5. Defaults to `1` (i.e. 2 nodes per shard).
      * 
      */
-    public Output</* @Nullable */ Integer> numReplicasPerShard() {
-        return this.numReplicasPerShard;
+    public Output<Optional<Integer>> numReplicasPerShard() {
+        return Codegen.optional(this.numReplicasPerShard);
     }
     /**
      * The number of shards in the cluster. Defaults to `1`.
@@ -232,8 +233,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The number of shards in the cluster. Defaults to `1`.
      * 
      */
-    public Output</* @Nullable */ Integer> numShards() {
-        return this.numShards;
+    public Output<Optional<Integer>> numShards() {
+        return Codegen.optional(this.numShards);
     }
     /**
      * The name of the parameter group associated with the cluster.
@@ -274,8 +275,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Set of VPC Security Group ID-s to associate with this cluster.
      * 
      */
-    public Output</* @Nullable */ List<String>> securityGroupIds() {
-        return this.securityGroupIds;
+    public Output<Optional<List<String>>> securityGroupIds() {
+        return Codegen.optional(this.securityGroupIds);
     }
     /**
      * Set of shards in this cluster.
@@ -302,8 +303,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return List of ARN-s that uniquely identify RDB snapshot files stored in S3. The snapshot files will be used to populate the new cluster. Object names in the ARN-s cannot contain any commas.
      * 
      */
-    public Output</* @Nullable */ String> snapshotArns() {
-        return this.snapshotArns;
+    public Output<Optional<String>> snapshotArns() {
+        return Codegen.optional(this.snapshotArns);
     }
     /**
      * The name of a snapshot from which to restore data into the new cluster.
@@ -316,8 +317,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The name of a snapshot from which to restore data into the new cluster.
      * 
      */
-    public Output</* @Nullable */ String> snapshotName() {
-        return this.snapshotName;
+    public Output<Optional<String>> snapshotName() {
+        return Codegen.optional(this.snapshotName);
     }
     /**
      * The number of days for which MemoryDB retains automatic snapshots before deleting them. When set to `0`, automatic backups are disabled. Defaults to `0`.
@@ -358,8 +359,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return ARN of the SNS topic to which cluster notifications are sent.
      * 
      */
-    public Output</* @Nullable */ String> snsTopicArn() {
-        return this.snsTopicArn;
+    public Output<Optional<String>> snsTopicArn() {
+        return Codegen.optional(this.snsTopicArn);
     }
     /**
      * The name of the subnet group to be used for the cluster. Defaults to a subnet group consisting of default VPC subnets.
@@ -386,8 +387,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
@@ -414,8 +415,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return A flag to enable in-transit encryption on the cluster. When set to `false`, the `acl_name` must be `open-access`. Defaults to `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> tlsEnabled() {
-        return this.tlsEnabled;
+    public Output<Optional<Boolean>> tlsEnabled() {
+        return Codegen.optional(this.tlsEnabled);
     }
 
     /**

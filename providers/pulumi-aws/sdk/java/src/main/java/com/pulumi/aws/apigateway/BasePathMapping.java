@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -48,8 +49,8 @@ public class BasePathMapping extends com.pulumi.resources.CustomResource {
      * @return Path segment that must be prepended to the path when accessing the API via this mapping. If omitted, the API is exposed at the root of the given domain.
      * 
      */
-    public Output</* @Nullable */ String> basePath() {
-        return this.basePath;
+    public Output<Optional<String>> basePath() {
+        return Codegen.optional(this.basePath);
     }
     /**
      * The already-registered domain name to connect the API to.
@@ -90,8 +91,8 @@ public class BasePathMapping extends com.pulumi.resources.CustomResource {
      * @return The name of a specific deployment stage to expose at the given path. If omitted, callers may select any stage by including its name as a path element after the base path.
      * 
      */
-    public Output</* @Nullable */ String> stageName() {
-        return this.stageName;
+    public Output<Optional<String>> stageName() {
+        return Codegen.optional(this.stageName);
     }
 
     /**

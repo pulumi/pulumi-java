@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -61,8 +62,8 @@ public class WebAclLoggingConfiguration extends com.pulumi.resources.CustomResou
      * @return A configuration block that specifies which web requests are kept in the logs and which are dropped. You can filter on the rule action and on the web request labels that were applied by matching rules during web ACL evaluation. See Logging Filter below for more details.
      * 
      */
-    public Output</* @Nullable */ WebAclLoggingConfigurationLoggingFilter> loggingFilter() {
-        return this.loggingFilter;
+    public Output<Optional<WebAclLoggingConfigurationLoggingFilter>> loggingFilter() {
+        return Codegen.optional(this.loggingFilter);
     }
     /**
      * The parts of the request that you want to keep out of the logs. Up to 100 `redacted_fields` blocks are supported. See Redacted Fields below for more details.
@@ -75,8 +76,8 @@ public class WebAclLoggingConfiguration extends com.pulumi.resources.CustomResou
      * @return The parts of the request that you want to keep out of the logs. Up to 100 `redacted_fields` blocks are supported. See Redacted Fields below for more details.
      * 
      */
-    public Output</* @Nullable */ List<WebAclLoggingConfigurationRedactedField>> redactedFields() {
-        return this.redactedFields;
+    public Output<Optional<List<WebAclLoggingConfigurationRedactedField>>> redactedFields() {
+        return Codegen.optional(this.redactedFields);
     }
     /**
      * The Amazon Resource Name (ARN) of the web ACL that you want to associate with `log_destination_configs`.

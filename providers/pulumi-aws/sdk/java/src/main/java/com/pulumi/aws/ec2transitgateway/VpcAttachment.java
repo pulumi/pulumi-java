@@ -14,6 +14,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class VpcAttachment extends com.pulumi.resources.CustomResource {
      * @return Whether Appliance Mode support is enabled. If enabled, a traffic flow between a source and destination uses the same Availability Zone for the VPC attachment for the lifetime of that flow. Valid values: `disable`, `enable`. Default value: `disable`.
      * 
      */
-    public Output</* @Nullable */ String> applianceModeSupport() {
-        return this.applianceModeSupport;
+    public Output<Optional<String>> applianceModeSupport() {
+        return Codegen.optional(this.applianceModeSupport);
     }
     /**
      * Whether DNS support is enabled. Valid values: `disable`, `enable`. Default value: `enable`.
@@ -57,8 +58,8 @@ public class VpcAttachment extends com.pulumi.resources.CustomResource {
      * @return Whether DNS support is enabled. Valid values: `disable`, `enable`. Default value: `enable`.
      * 
      */
-    public Output</* @Nullable */ String> dnsSupport() {
-        return this.dnsSupport;
+    public Output<Optional<String>> dnsSupport() {
+        return Codegen.optional(this.dnsSupport);
     }
     /**
      * Whether IPv6 support is enabled. Valid values: `disable`, `enable`. Default value: `disable`.
@@ -71,8 +72,8 @@ public class VpcAttachment extends com.pulumi.resources.CustomResource {
      * @return Whether IPv6 support is enabled. Valid values: `disable`, `enable`. Default value: `disable`.
      * 
      */
-    public Output</* @Nullable */ String> ipv6Support() {
-        return this.ipv6Support;
+    public Output<Optional<String>> ipv6Support() {
+        return Codegen.optional(this.ipv6Support);
     }
     /**
      * Identifiers of EC2 Subnets.
@@ -99,8 +100,8 @@ public class VpcAttachment extends com.pulumi.resources.CustomResource {
      * @return Key-value tags for the EC2 Transit Gateway VPC Attachment. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
@@ -127,8 +128,8 @@ public class VpcAttachment extends com.pulumi.resources.CustomResource {
      * @return Boolean whether the VPC Attachment should be associated with the EC2 Transit Gateway association default route table. This cannot be configured or perform drift detection with Resource Access Manager shared EC2 Transit Gateways. Default value: `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> transitGatewayDefaultRouteTableAssociation() {
-        return this.transitGatewayDefaultRouteTableAssociation;
+    public Output<Optional<Boolean>> transitGatewayDefaultRouteTableAssociation() {
+        return Codegen.optional(this.transitGatewayDefaultRouteTableAssociation);
     }
     /**
      * Boolean whether the VPC Attachment should propagate routes with the EC2 Transit Gateway propagation default route table. This cannot be configured or perform drift detection with Resource Access Manager shared EC2 Transit Gateways. Default value: `true`.
@@ -141,8 +142,8 @@ public class VpcAttachment extends com.pulumi.resources.CustomResource {
      * @return Boolean whether the VPC Attachment should propagate routes with the EC2 Transit Gateway propagation default route table. This cannot be configured or perform drift detection with Resource Access Manager shared EC2 Transit Gateways. Default value: `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> transitGatewayDefaultRouteTablePropagation() {
-        return this.transitGatewayDefaultRouteTablePropagation;
+    public Output<Optional<Boolean>> transitGatewayDefaultRouteTablePropagation() {
+        return Codegen.optional(this.transitGatewayDefaultRouteTablePropagation);
     }
     /**
      * Identifier of EC2 Transit Gateway.

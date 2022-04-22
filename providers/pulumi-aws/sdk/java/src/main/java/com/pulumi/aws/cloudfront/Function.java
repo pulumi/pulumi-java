@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -73,8 +74,8 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return Comment.
      * 
      */
-    public Output</* @Nullable */ String> comment() {
-        return this.comment;
+    public Output<Optional<String>> comment() {
+        return Codegen.optional(this.comment);
     }
     /**
      * ETag hash of the function. This is the value for the `DEVELOPMENT` stage of the function.
@@ -129,8 +130,8 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return Whether to publish creation/change as Live CloudFront Function Version. Defaults to `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> publish() {
-        return this.publish;
+    public Output<Optional<Boolean>> publish() {
+        return Codegen.optional(this.publish);
     }
     /**
      * Identifier of the function&#39;s runtime. Currently only `cloudfront-js-1.0` is valid.

@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -42,8 +43,8 @@ public class DeploymentConfig extends com.pulumi.resources.CustomResource {
      * @return The compute platform can be `Server`, `Lambda`, or `ECS`. Default is `Server`.
      * 
      */
-    public Output</* @Nullable */ String> computePlatform() {
-        return this.computePlatform;
+    public Output<Optional<String>> computePlatform() {
+        return Codegen.optional(this.computePlatform);
     }
     /**
      * The AWS Assigned deployment config id
@@ -84,8 +85,8 @@ public class DeploymentConfig extends com.pulumi.resources.CustomResource {
      * @return A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum Healthy Hosts are documented below.
      * 
      */
-    public Output</* @Nullable */ DeploymentConfigMinimumHealthyHosts> minimumHealthyHosts() {
-        return this.minimumHealthyHosts;
+    public Output<Optional<DeploymentConfigMinimumHealthyHosts>> minimumHealthyHosts() {
+        return Codegen.optional(this.minimumHealthyHosts);
     }
     /**
      * A traffic_routing_config block. Traffic Routing Config is documented below.
@@ -98,8 +99,8 @@ public class DeploymentConfig extends com.pulumi.resources.CustomResource {
      * @return A traffic_routing_config block. Traffic Routing Config is documented below.
      * 
      */
-    public Output</* @Nullable */ DeploymentConfigTrafficRoutingConfig> trafficRoutingConfig() {
-        return this.trafficRoutingConfig;
+    public Output<Optional<DeploymentConfigTrafficRoutingConfig>> trafficRoutingConfig() {
+        return Codegen.optional(this.trafficRoutingConfig);
     }
 
     /**

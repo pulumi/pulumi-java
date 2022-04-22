@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -69,8 +70,8 @@ public class CustomerGateway extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) for the customer gateway certificate.
      * 
      */
-    public Output</* @Nullable */ String> certificateArn() {
-        return this.certificateArn;
+    public Output<Optional<String>> certificateArn() {
+        return Codegen.optional(this.certificateArn);
     }
     /**
      * A name for the customer gateway device.
@@ -83,8 +84,8 @@ public class CustomerGateway extends com.pulumi.resources.CustomResource {
      * @return A name for the customer gateway device.
      * 
      */
-    public Output</* @Nullable */ String> deviceName() {
-        return this.deviceName;
+    public Output<Optional<String>> deviceName() {
+        return Codegen.optional(this.deviceName);
     }
     /**
      * The IP address of the gateway&#39;s Internet-routable external interface.
@@ -111,8 +112,8 @@ public class CustomerGateway extends com.pulumi.resources.CustomResource {
      * @return Tags to apply to the gateway. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

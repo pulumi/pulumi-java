@@ -14,6 +14,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class NotebookInstance extends com.pulumi.resources.CustomResource {
      * These can be either the names of Git repositories stored as resources in your account, or the URL of Git repositories in [AWS CodeCommit](https://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html) or in any other Git repository. These repositories are cloned at the same level as the default repository of your notebook instance.
      * 
      */
-    public Output</* @Nullable */ List<String>> additionalCodeRepositories() {
-        return this.additionalCodeRepositories;
+    public Output<Optional<List<String>>> additionalCodeRepositories() {
+        return Codegen.optional(this.additionalCodeRepositories);
     }
     /**
      * The Amazon Resource Name (ARN) assigned by AWS to this notebook instance.
@@ -73,8 +74,8 @@ public class NotebookInstance extends com.pulumi.resources.CustomResource {
      * @return The Git repository associated with the notebook instance as its default code repository. This can be either the name of a Git repository stored as a resource in your account, or the URL of a Git repository in [AWS CodeCommit](https://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html) or in any other Git repository.
      * 
      */
-    public Output</* @Nullable */ String> defaultCodeRepository() {
-        return this.defaultCodeRepository;
+    public Output<Optional<String>> defaultCodeRepository() {
+        return Codegen.optional(this.defaultCodeRepository);
     }
     /**
      * Set to `Disabled` to disable internet access to notebook. Requires `security_groups` and `subnet_id` to be set. Supported values: `Enabled` (Default) or `Disabled`. If set to `Disabled`, the notebook instance will be able to access resources only in your VPC, and will not be able to connect to Amazon SageMaker training and endpoint services unless your configure a NAT Gateway in your VPC.
@@ -87,8 +88,8 @@ public class NotebookInstance extends com.pulumi.resources.CustomResource {
      * @return Set to `Disabled` to disable internet access to notebook. Requires `security_groups` and `subnet_id` to be set. Supported values: `Enabled` (Default) or `Disabled`. If set to `Disabled`, the notebook instance will be able to access resources only in your VPC, and will not be able to connect to Amazon SageMaker training and endpoint services unless your configure a NAT Gateway in your VPC.
      * 
      */
-    public Output</* @Nullable */ String> directInternetAccess() {
-        return this.directInternetAccess;
+    public Output<Optional<String>> directInternetAccess() {
+        return Codegen.optional(this.directInternetAccess);
     }
     /**
      * The name of ML compute instance type.
@@ -115,8 +116,8 @@ public class NotebookInstance extends com.pulumi.resources.CustomResource {
      * @return The AWS Key Management Service (AWS KMS) key that Amazon SageMaker uses to encrypt the model artifacts at rest using Amazon S3 server-side encryption.
      * 
      */
-    public Output</* @Nullable */ String> kmsKeyId() {
-        return this.kmsKeyId;
+    public Output<Optional<String>> kmsKeyId() {
+        return Codegen.optional(this.kmsKeyId);
     }
     /**
      * The name of a lifecycle configuration to associate with the notebook instance.
@@ -129,8 +130,8 @@ public class NotebookInstance extends com.pulumi.resources.CustomResource {
      * @return The name of a lifecycle configuration to associate with the notebook instance.
      * 
      */
-    public Output</* @Nullable */ String> lifecycleConfigName() {
-        return this.lifecycleConfigName;
+    public Output<Optional<String>> lifecycleConfigName() {
+        return Codegen.optional(this.lifecycleConfigName);
     }
     /**
      * The name of the notebook instance (must be unique).
@@ -199,8 +200,8 @@ public class NotebookInstance extends com.pulumi.resources.CustomResource {
      * @return Whether root access is `Enabled` or `Disabled` for users of the notebook instance. The default value is `Enabled`.
      * 
      */
-    public Output</* @Nullable */ String> rootAccess() {
-        return this.rootAccess;
+    public Output<Optional<String>> rootAccess() {
+        return Codegen.optional(this.rootAccess);
     }
     /**
      * The associated security groups.
@@ -227,8 +228,8 @@ public class NotebookInstance extends com.pulumi.resources.CustomResource {
      * @return The VPC subnet ID.
      * 
      */
-    public Output</* @Nullable */ String> subnetId() {
-        return this.subnetId;
+    public Output<Optional<String>> subnetId() {
+        return Codegen.optional(this.subnetId);
     }
     /**
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -241,8 +242,8 @@ public class NotebookInstance extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .
@@ -283,8 +284,8 @@ public class NotebookInstance extends com.pulumi.resources.CustomResource {
      * @return The size, in GB, of the ML storage volume to attach to the notebook instance. The default value is 5 GB.
      * 
      */
-    public Output</* @Nullable */ Integer> volumeSize() {
-        return this.volumeSize;
+    public Output<Optional<Integer>> volumeSize() {
+        return Codegen.optional(this.volumeSize);
     }
 
     /**

@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -59,8 +60,8 @@ public class OntapStorageVirtualMachine extends com.pulumi.resources.CustomResou
      * @return Configuration block that Amazon FSx uses to join the FSx ONTAP Storage Virtual Machine(SVM) to your Microsoft Active Directory (AD) directory. Detailed below.
      * 
      */
-    public Output</* @Nullable */ OntapStorageVirtualMachineActiveDirectoryConfiguration> activeDirectoryConfiguration() {
-        return this.activeDirectoryConfiguration;
+    public Output<Optional<OntapStorageVirtualMachineActiveDirectoryConfiguration>> activeDirectoryConfiguration() {
+        return Codegen.optional(this.activeDirectoryConfiguration);
     }
     /**
      * Amazon Resource Name of the storage virtual machine.
@@ -129,8 +130,8 @@ public class OntapStorageVirtualMachine extends com.pulumi.resources.CustomResou
      * @return Specifies the root volume security style, Valid values are `UNIX`, `NTFS`, and `MIXED`. All volumes created under this SVM will inherit the root security style unless the security style is specified on the volume. Default value is `UNIX`.
      * 
      */
-    public Output</* @Nullable */ String> rootVolumeSecurityStyle() {
-        return this.rootVolumeSecurityStyle;
+    public Output<Optional<String>> rootVolumeSecurityStyle() {
+        return Codegen.optional(this.rootVolumeSecurityStyle);
     }
     /**
      * Describes the SVM&#39;s subtype, e.g. `DEFAULT`
@@ -149,8 +150,8 @@ public class OntapStorageVirtualMachine extends com.pulumi.resources.CustomResou
     @Export(name="svmAdminPassword", type=String.class, parameters={})
     private Output</* @Nullable */ String> svmAdminPassword;
 
-    public Output</* @Nullable */ String> svmAdminPassword() {
-        return this.svmAdminPassword;
+    public Output<Optional<String>> svmAdminPassword() {
+        return Codegen.optional(this.svmAdminPassword);
     }
     /**
      * A map of tags to assign to the storage virtual machine. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -163,8 +164,8 @@ public class OntapStorageVirtualMachine extends com.pulumi.resources.CustomResou
      * @return A map of tags to assign to the storage virtual machine. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.

@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -94,8 +95,8 @@ public class Build extends com.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .
@@ -122,8 +123,8 @@ public class Build extends com.pulumi.resources.CustomResource {
      * @return Version that is associated with this build.
      * 
      */
-    public Output</* @Nullable */ String> version() {
-        return this.version;
+    public Output<Optional<String>> version() {
+        return Codegen.optional(this.version);
     }
 
     /**

@@ -16,6 +16,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -81,8 +82,8 @@ public class AmiFromInstance extends com.pulumi.resources.CustomResource {
      * @return A longer, human-readable description for the AMI.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Nested block describing an EBS block device that should be
@@ -277,8 +278,8 @@ public class AmiFromInstance extends com.pulumi.resources.CustomResource {
      * guarantees that no filesystem writes will be underway at the time of snapshot.
      * 
      */
-    public Output</* @Nullable */ Boolean> snapshotWithoutReboot() {
-        return this.snapshotWithoutReboot;
+    public Output<Optional<Boolean>> snapshotWithoutReboot() {
+        return Codegen.optional(this.snapshotWithoutReboot);
     }
     /**
      * The id of the instance to use as the basis of the AMI.
@@ -321,8 +322,8 @@ public class AmiFromInstance extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;

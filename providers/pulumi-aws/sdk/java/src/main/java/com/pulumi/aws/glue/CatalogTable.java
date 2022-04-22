@@ -18,6 +18,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -89,8 +90,8 @@ public class CatalogTable extends com.pulumi.resources.CustomResource {
      * @return Description of the table.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Name of the target table.
@@ -117,8 +118,8 @@ public class CatalogTable extends com.pulumi.resources.CustomResource {
      * @return Owner of the table.
      * 
      */
-    public Output</* @Nullable */ String> owner() {
-        return this.owner;
+    public Output<Optional<String>> owner() {
+        return Codegen.optional(this.owner);
     }
     /**
      * Map of initialization parameters for the SerDe, in key-value form.
@@ -131,8 +132,8 @@ public class CatalogTable extends com.pulumi.resources.CustomResource {
      * @return Map of initialization parameters for the SerDe, in key-value form.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> parameters() {
-        return this.parameters;
+    public Output<Optional<Map<String,String>>> parameters() {
+        return Codegen.optional(this.parameters);
     }
     /**
      * Configuration block for a maximum of 3 partition indexes. See `partition_index` below.
@@ -159,8 +160,8 @@ public class CatalogTable extends com.pulumi.resources.CustomResource {
      * @return Configuration block of columns by which the table is partitioned. Only primitive types are supported as partition keys. See `partition_keys` below.
      * 
      */
-    public Output</* @Nullable */ List<CatalogTablePartitionKey>> partitionKeys() {
-        return this.partitionKeys;
+    public Output<Optional<List<CatalogTablePartitionKey>>> partitionKeys() {
+        return Codegen.optional(this.partitionKeys);
     }
     /**
      * Retention time for this table.
@@ -173,8 +174,8 @@ public class CatalogTable extends com.pulumi.resources.CustomResource {
      * @return Retention time for this table.
      * 
      */
-    public Output</* @Nullable */ Integer> retention() {
-        return this.retention;
+    public Output<Optional<Integer>> retention() {
+        return Codegen.optional(this.retention);
     }
     /**
      * Configuration block for information about the physical storage of this table. For more information, refer to the [Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-StorageDescriptor). See `storage_descriptor` below.
@@ -187,8 +188,8 @@ public class CatalogTable extends com.pulumi.resources.CustomResource {
      * @return Configuration block for information about the physical storage of this table. For more information, refer to the [Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-StorageDescriptor). See `storage_descriptor` below.
      * 
      */
-    public Output</* @Nullable */ CatalogTableStorageDescriptor> storageDescriptor() {
-        return this.storageDescriptor;
+    public Output<Optional<CatalogTableStorageDescriptor>> storageDescriptor() {
+        return Codegen.optional(this.storageDescriptor);
     }
     /**
      * Type of this table (EXTERNAL_TABLE, VIRTUAL_VIEW, etc.). While optional, some Athena DDL queries such as `ALTER TABLE` and `SHOW CREATE TABLE` will fail if this argument is empty.
@@ -201,8 +202,8 @@ public class CatalogTable extends com.pulumi.resources.CustomResource {
      * @return Type of this table (EXTERNAL_TABLE, VIRTUAL_VIEW, etc.). While optional, some Athena DDL queries such as `ALTER TABLE` and `SHOW CREATE TABLE` will fail if this argument is empty.
      * 
      */
-    public Output</* @Nullable */ String> tableType() {
-        return this.tableType;
+    public Output<Optional<String>> tableType() {
+        return Codegen.optional(this.tableType);
     }
     /**
      * Configuration block of a target table for resource linking. See `target_table` below.
@@ -215,8 +216,8 @@ public class CatalogTable extends com.pulumi.resources.CustomResource {
      * @return Configuration block of a target table for resource linking. See `target_table` below.
      * 
      */
-    public Output</* @Nullable */ CatalogTableTargetTable> targetTable() {
-        return this.targetTable;
+    public Output<Optional<CatalogTableTargetTable>> targetTable() {
+        return Codegen.optional(this.targetTable);
     }
     /**
      * If the table is a view, the expanded text of the view; otherwise null.
@@ -229,8 +230,8 @@ public class CatalogTable extends com.pulumi.resources.CustomResource {
      * @return If the table is a view, the expanded text of the view; otherwise null.
      * 
      */
-    public Output</* @Nullable */ String> viewExpandedText() {
-        return this.viewExpandedText;
+    public Output<Optional<String>> viewExpandedText() {
+        return Codegen.optional(this.viewExpandedText);
     }
     /**
      * If the table is a view, the original text of the view; otherwise null.
@@ -243,8 +244,8 @@ public class CatalogTable extends com.pulumi.resources.CustomResource {
      * @return If the table is a view, the original text of the view; otherwise null.
      * 
      */
-    public Output</* @Nullable */ String> viewOriginalText() {
-        return this.viewOriginalText;
+    public Output<Optional<String>> viewOriginalText() {
+        return Codegen.optional(this.viewOriginalText);
     }
 
     /**

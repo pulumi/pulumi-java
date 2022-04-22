@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -57,8 +58,8 @@ public class IdentityPoolRoleAttachment extends com.pulumi.resources.CustomResou
      * @return A List of Role Mapping.
      * 
      */
-    public Output</* @Nullable */ List<IdentityPoolRoleAttachmentRoleMapping>> roleMappings() {
-        return this.roleMappings;
+    public Output<Optional<List<IdentityPoolRoleAttachmentRoleMapping>>> roleMappings() {
+        return Codegen.optional(this.roleMappings);
     }
     /**
      * The map of roles associated with this pool. For a given role, the key will be either &#34;authenticated&#34; or &#34;unauthenticated&#34; and the value will be the Role ARN.

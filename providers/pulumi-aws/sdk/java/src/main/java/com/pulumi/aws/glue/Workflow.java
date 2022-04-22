@@ -14,6 +14,7 @@ import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -59,8 +60,8 @@ public class Workflow extends com.pulumi.resources.CustomResource {
      * @return A map of default run properties for this workflow. These properties are passed to all jobs associated to the workflow.
      * 
      */
-    public Output</* @Nullable */ Map<String,Object>> defaultRunProperties() {
-        return this.defaultRunProperties;
+    public Output<Optional<Map<String,Object>>> defaultRunProperties() {
+        return Codegen.optional(this.defaultRunProperties);
     }
     /**
      * Description of the workflow.
@@ -73,8 +74,8 @@ public class Workflow extends com.pulumi.resources.CustomResource {
      * @return Description of the workflow.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Prevents exceeding the maximum number of concurrent runs of any of the component jobs. If you leave this parameter blank, there is no limit to the number of concurrent workflow runs.
@@ -87,8 +88,8 @@ public class Workflow extends com.pulumi.resources.CustomResource {
      * @return Prevents exceeding the maximum number of concurrent runs of any of the component jobs. If you leave this parameter blank, there is no limit to the number of concurrent workflow runs.
      * 
      */
-    public Output</* @Nullable */ Integer> maxConcurrentRuns() {
-        return this.maxConcurrentRuns;
+    public Output<Optional<Integer>> maxConcurrentRuns() {
+        return Codegen.optional(this.maxConcurrentRuns);
     }
     /**
      * The name you assign to this workflow.
@@ -115,8 +116,8 @@ public class Workflow extends com.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.

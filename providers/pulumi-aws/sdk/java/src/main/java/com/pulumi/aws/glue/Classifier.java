@@ -15,6 +15,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class Classifier extends com.pulumi.resources.CustomResource {
      * @return A classifier for Csv content. Defined below.
      * 
      */
-    public Output</* @Nullable */ ClassifierCsvClassifier> csvClassifier() {
-        return this.csvClassifier;
+    public Output<Optional<ClassifierCsvClassifier>> csvClassifier() {
+        return Codegen.optional(this.csvClassifier);
     }
     /**
      * A classifier that uses grok patterns. Defined below.
@@ -60,8 +61,8 @@ public class Classifier extends com.pulumi.resources.CustomResource {
      * @return A classifier that uses grok patterns. Defined below.
      * 
      */
-    public Output</* @Nullable */ ClassifierGrokClassifier> grokClassifier() {
-        return this.grokClassifier;
+    public Output<Optional<ClassifierGrokClassifier>> grokClassifier() {
+        return Codegen.optional(this.grokClassifier);
     }
     /**
      * A classifier for JSON content. Defined below.
@@ -74,8 +75,8 @@ public class Classifier extends com.pulumi.resources.CustomResource {
      * @return A classifier for JSON content. Defined below.
      * 
      */
-    public Output</* @Nullable */ ClassifierJsonClassifier> jsonClassifier() {
-        return this.jsonClassifier;
+    public Output<Optional<ClassifierJsonClassifier>> jsonClassifier() {
+        return Codegen.optional(this.jsonClassifier);
     }
     /**
      * The name of the classifier.
@@ -102,8 +103,8 @@ public class Classifier extends com.pulumi.resources.CustomResource {
      * @return A classifier for XML content. Defined below.
      * 
      */
-    public Output</* @Nullable */ ClassifierXmlClassifier> xmlClassifier() {
-        return this.xmlClassifier;
+    public Output<Optional<ClassifierXmlClassifier>> xmlClassifier() {
+        return Codegen.optional(this.xmlClassifier);
     }
 
     /**

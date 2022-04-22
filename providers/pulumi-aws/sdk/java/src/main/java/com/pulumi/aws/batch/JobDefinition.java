@@ -17,6 +17,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -62,8 +63,8 @@ public class JobDefinition extends com.pulumi.resources.CustomResource {
      * provided as a single valid JSON document. This parameter is required if the `type` parameter is `container`.
      * 
      */
-    public Output</* @Nullable */ String> containerProperties() {
-        return this.containerProperties;
+    public Output<Optional<String>> containerProperties() {
+        return Codegen.optional(this.containerProperties);
     }
     /**
      * Specifies the name of the job definition.
@@ -90,8 +91,8 @@ public class JobDefinition extends com.pulumi.resources.CustomResource {
      * @return Specifies the parameter substitution placeholders to set in the job definition.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> parameters() {
-        return this.parameters;
+    public Output<Optional<Map<String,String>>> parameters() {
+        return Codegen.optional(this.parameters);
     }
     /**
      * The platform capabilities required by the job definition. If no value is specified, it defaults to `EC2`. To run the job on Fargate resources, specify `FARGATE`.
@@ -104,8 +105,8 @@ public class JobDefinition extends com.pulumi.resources.CustomResource {
      * @return The platform capabilities required by the job definition. If no value is specified, it defaults to `EC2`. To run the job on Fargate resources, specify `FARGATE`.
      * 
      */
-    public Output</* @Nullable */ List<String>> platformCapabilities() {
-        return this.platformCapabilities;
+    public Output<Optional<List<String>>> platformCapabilities() {
+        return Codegen.optional(this.platformCapabilities);
     }
     /**
      * Specifies whether to propagate the tags from the job definition to the corresponding Amazon ECS task. Default is `false`.
@@ -118,8 +119,8 @@ public class JobDefinition extends com.pulumi.resources.CustomResource {
      * @return Specifies whether to propagate the tags from the job definition to the corresponding Amazon ECS task. Default is `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> propagateTags() {
-        return this.propagateTags;
+    public Output<Optional<Boolean>> propagateTags() {
+        return Codegen.optional(this.propagateTags);
     }
     /**
      * Specifies the retry strategy to use for failed jobs that are submitted with this job definition.
@@ -134,8 +135,8 @@ public class JobDefinition extends com.pulumi.resources.CustomResource {
      * Maximum number of `retry_strategy` is `1`.  Defined below.
      * 
      */
-    public Output</* @Nullable */ JobDefinitionRetryStrategy> retryStrategy() {
-        return this.retryStrategy;
+    public Output<Optional<JobDefinitionRetryStrategy>> retryStrategy() {
+        return Codegen.optional(this.retryStrategy);
     }
     /**
      * The revision of the job definition.
@@ -162,8 +163,8 @@ public class JobDefinition extends com.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .
@@ -190,8 +191,8 @@ public class JobDefinition extends com.pulumi.resources.CustomResource {
      * @return Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of `timeout` is `1`. Defined below.
      * 
      */
-    public Output</* @Nullable */ JobDefinitionTimeout> timeout() {
-        return this.timeout;
+    public Output<Optional<JobDefinitionTimeout>> timeout() {
+        return Codegen.optional(this.timeout);
     }
     /**
      * The type of job definition.  Must be `container`.

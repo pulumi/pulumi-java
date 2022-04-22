@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -55,8 +56,8 @@ public class DomainSamlOptions extends com.pulumi.resources.CustomResource {
      * @return The SAML authentication options for an AWS Elasticsearch Domain.
      * 
      */
-    public Output</* @Nullable */ DomainSamlOptionsSamlOptions> samlOptions() {
-        return this.samlOptions;
+    public Output<Optional<DomainSamlOptionsSamlOptions>> samlOptions() {
+        return Codegen.optional(this.samlOptions);
     }
 
     /**

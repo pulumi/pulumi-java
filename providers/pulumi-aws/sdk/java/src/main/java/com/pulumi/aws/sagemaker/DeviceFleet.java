@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -57,8 +58,8 @@ public class DeviceFleet extends com.pulumi.resources.CustomResource {
      * @return A description of the fleet.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The name of the Device Fleet (must be unique).
@@ -85,8 +86,8 @@ public class DeviceFleet extends com.pulumi.resources.CustomResource {
      * @return Whether to create an AWS IoT Role Alias during device fleet creation. The name of the role alias generated will match this pattern: &#34;SageMakerEdge-{DeviceFleetName}&#34;.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableIotRoleAlias() {
-        return this.enableIotRoleAlias;
+    public Output<Optional<Boolean>> enableIotRoleAlias() {
+        return Codegen.optional(this.enableIotRoleAlias);
     }
     @Export(name="iotRoleAlias", type=String.class, parameters={})
     private Output<String> iotRoleAlias;
@@ -133,8 +134,8 @@ public class DeviceFleet extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.

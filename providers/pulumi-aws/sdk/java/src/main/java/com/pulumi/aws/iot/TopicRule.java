@@ -30,6 +30,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -63,14 +64,14 @@ public class TopicRule extends com.pulumi.resources.CustomResource {
     @Export(name="cloudwatchAlarm", type=TopicRuleCloudwatchAlarm.class, parameters={})
     private Output</* @Nullable */ TopicRuleCloudwatchAlarm> cloudwatchAlarm;
 
-    public Output</* @Nullable */ TopicRuleCloudwatchAlarm> cloudwatchAlarm() {
-        return this.cloudwatchAlarm;
+    public Output<Optional<TopicRuleCloudwatchAlarm>> cloudwatchAlarm() {
+        return Codegen.optional(this.cloudwatchAlarm);
     }
     @Export(name="cloudwatchMetric", type=TopicRuleCloudwatchMetric.class, parameters={})
     private Output</* @Nullable */ TopicRuleCloudwatchMetric> cloudwatchMetric;
 
-    public Output</* @Nullable */ TopicRuleCloudwatchMetric> cloudwatchMetric() {
-        return this.cloudwatchMetric;
+    public Output<Optional<TopicRuleCloudwatchMetric>> cloudwatchMetric() {
+        return Codegen.optional(this.cloudwatchMetric);
     }
     /**
      * The description of the rule.
@@ -83,26 +84,26 @@ public class TopicRule extends com.pulumi.resources.CustomResource {
      * @return The description of the rule.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     @Export(name="dynamodb", type=TopicRuleDynamodb.class, parameters={})
     private Output</* @Nullable */ TopicRuleDynamodb> dynamodb;
 
-    public Output</* @Nullable */ TopicRuleDynamodb> dynamodb() {
-        return this.dynamodb;
+    public Output<Optional<TopicRuleDynamodb>> dynamodb() {
+        return Codegen.optional(this.dynamodb);
     }
     @Export(name="dynamodbv2s", type=List.class, parameters={TopicRuleDynamodbv2.class})
     private Output</* @Nullable */ List<TopicRuleDynamodbv2>> dynamodbv2s;
 
-    public Output</* @Nullable */ List<TopicRuleDynamodbv2>> dynamodbv2s() {
-        return this.dynamodbv2s;
+    public Output<Optional<List<TopicRuleDynamodbv2>>> dynamodbv2s() {
+        return Codegen.optional(this.dynamodbv2s);
     }
     @Export(name="elasticsearch", type=TopicRuleElasticsearch.class, parameters={})
     private Output</* @Nullable */ TopicRuleElasticsearch> elasticsearch;
 
-    public Output</* @Nullable */ TopicRuleElasticsearch> elasticsearch() {
-        return this.elasticsearch;
+    public Output<Optional<TopicRuleElasticsearch>> elasticsearch() {
+        return Codegen.optional(this.elasticsearch);
     }
     /**
      * Specifies whether the rule is enabled.
@@ -129,38 +130,38 @@ public class TopicRule extends com.pulumi.resources.CustomResource {
      * @return Configuration block with error action to be associated with the rule. See the documentation for `cloudwatch_alarm`, `cloudwatch_metric`, `dynamodb`, `dynamodbv2`, `elasticsearch`, `firehose`, `iot_analytics`, `iot_events`, `kinesis`, `lambda`, `republish`, `s3`, `step_functions`, `sns`, `sqs` configuration blocks for further configuration details.
      * 
      */
-    public Output</* @Nullable */ TopicRuleErrorAction> errorAction() {
-        return this.errorAction;
+    public Output<Optional<TopicRuleErrorAction>> errorAction() {
+        return Codegen.optional(this.errorAction);
     }
     @Export(name="firehose", type=TopicRuleFirehose.class, parameters={})
     private Output</* @Nullable */ TopicRuleFirehose> firehose;
 
-    public Output</* @Nullable */ TopicRuleFirehose> firehose() {
-        return this.firehose;
+    public Output<Optional<TopicRuleFirehose>> firehose() {
+        return Codegen.optional(this.firehose);
     }
     @Export(name="iotAnalytics", type=List.class, parameters={TopicRuleIotAnalytic.class})
     private Output</* @Nullable */ List<TopicRuleIotAnalytic>> iotAnalytics;
 
-    public Output</* @Nullable */ List<TopicRuleIotAnalytic>> iotAnalytics() {
-        return this.iotAnalytics;
+    public Output<Optional<List<TopicRuleIotAnalytic>>> iotAnalytics() {
+        return Codegen.optional(this.iotAnalytics);
     }
     @Export(name="iotEvents", type=List.class, parameters={TopicRuleIotEvent.class})
     private Output</* @Nullable */ List<TopicRuleIotEvent>> iotEvents;
 
-    public Output</* @Nullable */ List<TopicRuleIotEvent>> iotEvents() {
-        return this.iotEvents;
+    public Output<Optional<List<TopicRuleIotEvent>>> iotEvents() {
+        return Codegen.optional(this.iotEvents);
     }
     @Export(name="kinesis", type=TopicRuleKinesis.class, parameters={})
     private Output</* @Nullable */ TopicRuleKinesis> kinesis;
 
-    public Output</* @Nullable */ TopicRuleKinesis> kinesis() {
-        return this.kinesis;
+    public Output<Optional<TopicRuleKinesis>> kinesis() {
+        return Codegen.optional(this.kinesis);
     }
     @Export(name="lambda", type=TopicRuleLambda.class, parameters={})
     private Output</* @Nullable */ TopicRuleLambda> lambda;
 
-    public Output</* @Nullable */ TopicRuleLambda> lambda() {
-        return this.lambda;
+    public Output<Optional<TopicRuleLambda>> lambda() {
+        return Codegen.optional(this.lambda);
     }
     /**
      * The name of the rule.
@@ -179,20 +180,20 @@ public class TopicRule extends com.pulumi.resources.CustomResource {
     @Export(name="republish", type=TopicRuleRepublish.class, parameters={})
     private Output</* @Nullable */ TopicRuleRepublish> republish;
 
-    public Output</* @Nullable */ TopicRuleRepublish> republish() {
-        return this.republish;
+    public Output<Optional<TopicRuleRepublish>> republish() {
+        return Codegen.optional(this.republish);
     }
     @Export(name="s3", type=TopicRuleS3.class, parameters={})
     private Output</* @Nullable */ TopicRuleS3> s3;
 
-    public Output</* @Nullable */ TopicRuleS3> s3() {
-        return this.s3;
+    public Output<Optional<TopicRuleS3>> s3() {
+        return Codegen.optional(this.s3);
     }
     @Export(name="sns", type=TopicRuleSns.class, parameters={})
     private Output</* @Nullable */ TopicRuleSns> sns;
 
-    public Output</* @Nullable */ TopicRuleSns> sns() {
-        return this.sns;
+    public Output<Optional<TopicRuleSns>> sns() {
+        return Codegen.optional(this.sns);
     }
     /**
      * The SQL statement used to query the topic. For more information, see AWS IoT SQL Reference (http://docs.aws.amazon.com/iot/latest/developerguide/iot-rules.html#aws-iot-sql-reference) in the AWS IoT Developer Guide.
@@ -225,14 +226,14 @@ public class TopicRule extends com.pulumi.resources.CustomResource {
     @Export(name="sqs", type=TopicRuleSqs.class, parameters={})
     private Output</* @Nullable */ TopicRuleSqs> sqs;
 
-    public Output</* @Nullable */ TopicRuleSqs> sqs() {
-        return this.sqs;
+    public Output<Optional<TopicRuleSqs>> sqs() {
+        return Codegen.optional(this.sqs);
     }
     @Export(name="stepFunctions", type=List.class, parameters={TopicRuleStepFunction.class})
     private Output</* @Nullable */ List<TopicRuleStepFunction>> stepFunctions;
 
-    public Output</* @Nullable */ List<TopicRuleStepFunction>> stepFunctions() {
-        return this.stepFunctions;
+    public Output<Optional<List<TopicRuleStepFunction>>> stepFunctions() {
+        return Codegen.optional(this.stepFunctions);
     }
     /**
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -245,8 +246,8 @@ public class TopicRule extends com.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

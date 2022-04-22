@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -56,8 +57,8 @@ public class AnalyticsConfiguration extends com.pulumi.resources.CustomResource 
      * @return Object filtering that accepts a prefix, tags, or a logical AND of prefix and tags (documented below).
      * 
      */
-    public Output</* @Nullable */ AnalyticsConfigurationFilter> filter() {
-        return this.filter;
+    public Output<Optional<AnalyticsConfigurationFilter>> filter() {
+        return Codegen.optional(this.filter);
     }
     /**
      * Unique identifier of the analytics configuration for the bucket.
@@ -84,8 +85,8 @@ public class AnalyticsConfiguration extends com.pulumi.resources.CustomResource 
      * @return Configuration for the analytics data export (documented below).
      * 
      */
-    public Output</* @Nullable */ AnalyticsConfigurationStorageClassAnalysis> storageClassAnalysis() {
-        return this.storageClassAnalysis;
+    public Output<Optional<AnalyticsConfigurationStorageClassAnalysis>> storageClassAnalysis() {
+        return Codegen.optional(this.storageClassAnalysis);
     }
 
     /**

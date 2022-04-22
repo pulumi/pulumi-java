@@ -16,6 +16,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -64,8 +65,8 @@ public class Stream extends com.pulumi.resources.CustomResource {
      * @return The encryption type to use. The only acceptable values are `NONE` or `KMS`. The default value is `NONE`.
      * 
      */
-    public Output</* @Nullable */ String> encryptionType() {
-        return this.encryptionType;
+    public Output<Optional<String>> encryptionType() {
+        return Codegen.optional(this.encryptionType);
     }
     /**
      * A boolean that indicates all registered consumers should be deregistered from the stream so that the stream can be destroyed without error. The default value is `false`.
@@ -78,8 +79,8 @@ public class Stream extends com.pulumi.resources.CustomResource {
      * @return A boolean that indicates all registered consumers should be deregistered from the stream so that the stream can be destroyed without error. The default value is `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> enforceConsumerDeletion() {
-        return this.enforceConsumerDeletion;
+    public Output<Optional<Boolean>> enforceConsumerDeletion() {
+        return Codegen.optional(this.enforceConsumerDeletion);
     }
     /**
      * The GUID for the customer-managed KMS key to use for encryption. You can also use a Kinesis-owned master key by specifying the alias `alias/aws/kinesis`.
@@ -92,8 +93,8 @@ public class Stream extends com.pulumi.resources.CustomResource {
      * @return The GUID for the customer-managed KMS key to use for encryption. You can also use a Kinesis-owned master key by specifying the alias `alias/aws/kinesis`.
      * 
      */
-    public Output</* @Nullable */ String> kmsKeyId() {
-        return this.kmsKeyId;
+    public Output<Optional<String>> kmsKeyId() {
+        return Codegen.optional(this.kmsKeyId);
     }
     /**
      * A name to identify the stream. This is unique to the AWS account and region the Stream is created in.
@@ -120,8 +121,8 @@ public class Stream extends com.pulumi.resources.CustomResource {
      * @return Length of time data records are accessible after they are added to the stream. The maximum value of a stream&#39;s retention period is 8760 hours. Minimum value is 24. Default is 24.
      * 
      */
-    public Output</* @Nullable */ Integer> retentionPeriod() {
-        return this.retentionPeriod;
+    public Output<Optional<Integer>> retentionPeriod() {
+        return Codegen.optional(this.retentionPeriod);
     }
     /**
      * The number of shards that the stream will use. If the `stream_mode` is `PROVISIONED`, this field is required.
@@ -136,8 +137,8 @@ public class Stream extends com.pulumi.resources.CustomResource {
      * Amazon has guidelines for specifying the Stream size that should be referenced when creating a Kinesis stream. See [Amazon Kinesis Streams](https://docs.aws.amazon.com/kinesis/latest/dev/amazon-kinesis-streams.html) for more.
      * 
      */
-    public Output</* @Nullable */ Integer> shardCount() {
-        return this.shardCount;
+    public Output<Optional<Integer>> shardCount() {
+        return Codegen.optional(this.shardCount);
     }
     /**
      * A list of shard-level CloudWatch metrics which can be enabled for the stream. See [Monitoring with CloudWatch](https://docs.aws.amazon.com/streams/latest/dev/monitoring-with-cloudwatch.html) for more. Note that the value ALL should not be used; instead you should provide an explicit list of metrics you wish to enable.
@@ -150,8 +151,8 @@ public class Stream extends com.pulumi.resources.CustomResource {
      * @return A list of shard-level CloudWatch metrics which can be enabled for the stream. See [Monitoring with CloudWatch](https://docs.aws.amazon.com/streams/latest/dev/monitoring-with-cloudwatch.html) for more. Note that the value ALL should not be used; instead you should provide an explicit list of metrics you wish to enable.
      * 
      */
-    public Output</* @Nullable */ List<String>> shardLevelMetrics() {
-        return this.shardLevelMetrics;
+    public Output<Optional<List<String>>> shardLevelMetrics() {
+        return Codegen.optional(this.shardLevelMetrics);
     }
     /**
      * Indicates the [capacity mode](https://docs.aws.amazon.com/streams/latest/dev/how-do-i-size-a-stream.html) of the data stream. Detailed below.
@@ -178,8 +179,8 @@ public class Stream extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.

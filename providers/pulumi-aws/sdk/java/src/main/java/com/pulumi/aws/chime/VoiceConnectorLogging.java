@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -41,8 +42,8 @@ public class VoiceConnectorLogging extends com.pulumi.resources.CustomResource {
      * @return When true, enables SIP message logs for sending to Amazon CloudWatch Logs.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableSipLogs() {
-        return this.enableSipLogs;
+    public Output<Optional<Boolean>> enableSipLogs() {
+        return Codegen.optional(this.enableSipLogs);
     }
     /**
      * The Amazon Chime Voice Connector ID.

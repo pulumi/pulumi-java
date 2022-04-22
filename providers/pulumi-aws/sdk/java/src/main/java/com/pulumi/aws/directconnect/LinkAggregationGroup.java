@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -58,8 +59,8 @@ public class LinkAggregationGroup extends com.pulumi.resources.CustomResource {
      * @return The ID of an existing dedicated connection to migrate to the LAG.
      * 
      */
-    public Output</* @Nullable */ String> connectionId() {
-        return this.connectionId;
+    public Output<Optional<String>> connectionId() {
+        return Codegen.optional(this.connectionId);
     }
     /**
      * The bandwidth of the individual physical connections bundled by the LAG. Valid values: 50Mbps, 100Mbps, 200Mbps, 300Mbps, 400Mbps, 500Mbps, 1Gbps, 2Gbps, 5Gbps, 10Gbps and 100Gbps. Case sensitive.
@@ -86,8 +87,8 @@ public class LinkAggregationGroup extends com.pulumi.resources.CustomResource {
      * @return A boolean that indicates all connections associated with the LAG should be deleted so that the LAG can be destroyed without error. These objects are *not* recoverable.
      * 
      */
-    public Output</* @Nullable */ Boolean> forceDestroy() {
-        return this.forceDestroy;
+    public Output<Optional<Boolean>> forceDestroy() {
+        return Codegen.optional(this.forceDestroy);
     }
     /**
      * Indicates whether the LAG supports a secondary BGP peer in the same address family (IPv4/IPv6).
@@ -176,8 +177,8 @@ public class LinkAggregationGroup extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.

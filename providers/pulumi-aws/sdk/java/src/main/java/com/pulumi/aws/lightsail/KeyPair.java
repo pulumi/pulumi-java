@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -110,8 +111,8 @@ public class KeyPair extends com.pulumi.resources.CustomResource {
     @Export(name="namePrefix", type=String.class, parameters={})
     private Output</* @Nullable */ String> namePrefix;
 
-    public Output</* @Nullable */ String> namePrefix() {
-        return this.namePrefix;
+    public Output<Optional<String>> namePrefix() {
+        return Codegen.optional(this.namePrefix);
     }
     /**
      * An optional PGP key to encrypt the resulting private
@@ -126,8 +127,8 @@ public class KeyPair extends com.pulumi.resources.CustomResource {
      * key material. Only used when creating a new key pair
      * 
      */
-    public Output</* @Nullable */ String> pgpKey() {
-        return this.pgpKey;
+    public Output<Optional<String>> pgpKey() {
+        return Codegen.optional(this.pgpKey);
     }
     /**
      * the private key, base64 encoded. This is only populated

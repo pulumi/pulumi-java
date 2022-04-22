@@ -14,6 +14,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -99,8 +100,8 @@ public class AutoScalingConfigurationVersion extends com.pulumi.resources.Custom
      * @return The maximal number of concurrent requests that you want an instance to process. When the number of concurrent requests goes over this limit, App Runner scales up your service.
      * 
      */
-    public Output</* @Nullable */ Integer> maxConcurrency() {
-        return this.maxConcurrency;
+    public Output<Optional<Integer>> maxConcurrency() {
+        return Codegen.optional(this.maxConcurrency);
     }
     /**
      * The maximal number of instances that App Runner provisions for your service.
@@ -113,8 +114,8 @@ public class AutoScalingConfigurationVersion extends com.pulumi.resources.Custom
      * @return The maximal number of instances that App Runner provisions for your service.
      * 
      */
-    public Output</* @Nullable */ Integer> maxSize() {
-        return this.maxSize;
+    public Output<Optional<Integer>> maxSize() {
+        return Codegen.optional(this.maxSize);
     }
     /**
      * The minimal number of instances that App Runner provisions for your service.
@@ -127,8 +128,8 @@ public class AutoScalingConfigurationVersion extends com.pulumi.resources.Custom
      * @return The minimal number of instances that App Runner provisions for your service.
      * 
      */
-    public Output</* @Nullable */ Integer> minSize() {
-        return this.minSize;
+    public Output<Optional<Integer>> minSize() {
+        return Codegen.optional(this.minSize);
     }
     /**
      * The current state of the auto scaling configuration. An INACTIVE configuration revision has been deleted and can&#39;t be used. It is permanently removed some time after deletion.
@@ -155,8 +156,8 @@ public class AutoScalingConfigurationVersion extends com.pulumi.resources.Custom
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.

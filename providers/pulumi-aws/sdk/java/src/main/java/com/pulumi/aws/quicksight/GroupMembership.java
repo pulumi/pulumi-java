@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -88,8 +89,8 @@ public class GroupMembership extends com.pulumi.resources.CustomResource {
      * @return The namespace. Defaults to `default`. Currently only `default` is supported.
      * 
      */
-    public Output</* @Nullable */ String> namespace() {
-        return this.namespace;
+    public Output<Optional<String>> namespace() {
+        return Codegen.optional(this.namespace);
     }
 
     /**

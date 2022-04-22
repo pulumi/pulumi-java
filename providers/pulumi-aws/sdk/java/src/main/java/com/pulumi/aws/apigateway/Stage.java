@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class Stage extends com.pulumi.resources.CustomResource {
      * @return Enables access logs for the API stage. Detailed below.
      * 
      */
-    public Output</* @Nullable */ StageAccessLogSettings> accessLogSettings() {
-        return this.accessLogSettings;
+    public Output<Optional<StageAccessLogSettings>> accessLogSettings() {
+        return Codegen.optional(this.accessLogSettings);
     }
     /**
      * Amazon Resource Name (ARN)
@@ -71,8 +72,8 @@ public class Stage extends com.pulumi.resources.CustomResource {
      * @return Specifies whether a cache cluster is enabled for the stage
      * 
      */
-    public Output</* @Nullable */ Boolean> cacheClusterEnabled() {
-        return this.cacheClusterEnabled;
+    public Output<Optional<Boolean>> cacheClusterEnabled() {
+        return Codegen.optional(this.cacheClusterEnabled);
     }
     /**
      * The size of the cache cluster for the stage, if enabled. Allowed values include `0.5`, `1.6`, `6.1`, `13.5`, `28.4`, `58.2`, `118` and `237`.
@@ -85,8 +86,8 @@ public class Stage extends com.pulumi.resources.CustomResource {
      * @return The size of the cache cluster for the stage, if enabled. Allowed values include `0.5`, `1.6`, `6.1`, `13.5`, `28.4`, `58.2`, `118` and `237`.
      * 
      */
-    public Output</* @Nullable */ String> cacheClusterSize() {
-        return this.cacheClusterSize;
+    public Output<Optional<String>> cacheClusterSize() {
+        return Codegen.optional(this.cacheClusterSize);
     }
     /**
      * The identifier of a client certificate for the stage.
@@ -99,8 +100,8 @@ public class Stage extends com.pulumi.resources.CustomResource {
      * @return The identifier of a client certificate for the stage.
      * 
      */
-    public Output</* @Nullable */ String> clientCertificateId() {
-        return this.clientCertificateId;
+    public Output<Optional<String>> clientCertificateId() {
+        return Codegen.optional(this.clientCertificateId);
     }
     /**
      * The ID of the deployment that the stage points to
@@ -127,8 +128,8 @@ public class Stage extends com.pulumi.resources.CustomResource {
      * @return The description of the stage
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The version of the associated API documentation
@@ -141,8 +142,8 @@ public class Stage extends com.pulumi.resources.CustomResource {
      * @return The version of the associated API documentation
      * 
      */
-    public Output</* @Nullable */ String> documentationVersion() {
-        return this.documentationVersion;
+    public Output<Optional<String>> documentationVersion() {
+        return Codegen.optional(this.documentationVersion);
     }
     /**
      * The execution ARN to be used in `lambda_permission`&#39;s `source_arn`
@@ -217,8 +218,8 @@ public class Stage extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
@@ -245,8 +246,8 @@ public class Stage extends com.pulumi.resources.CustomResource {
      * @return A map that defines the stage variables
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> variables() {
-        return this.variables;
+    public Output<Optional<Map<String,String>>> variables() {
+        return Codegen.optional(this.variables);
     }
     /**
      * The ARN of the WebAcl associated with the Stage.
@@ -273,8 +274,8 @@ public class Stage extends com.pulumi.resources.CustomResource {
      * @return Whether active tracing with X-ray is enabled. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> xrayTracingEnabled() {
-        return this.xrayTracingEnabled;
+    public Output<Optional<Boolean>> xrayTracingEnabled() {
+        return Codegen.optional(this.xrayTracingEnabled);
     }
 
     /**

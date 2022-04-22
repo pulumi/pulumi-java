@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return Specifies the VPC used for non-EFS traffic. The default value is `PublicInternetOnly`. Valid values are `PublicInternetOnly` and `VpcOnly`.
      * 
      */
-    public Output</* @Nullable */ String> appNetworkAccessType() {
-        return this.appNetworkAccessType;
+    public Output<Optional<String>> appNetworkAccessType() {
+        return Codegen.optional(this.appNetworkAccessType);
     }
     /**
      * The Amazon Resource Name (ARN) assigned by AWS to this Domain.
@@ -128,8 +129,8 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return The AWS KMS customer managed CMK used to encrypt the EFS volume attached to the domain.
      * 
      */
-    public Output</* @Nullable */ String> kmsKeyId() {
-        return this.kmsKeyId;
+    public Output<Optional<String>> kmsKeyId() {
+        return Codegen.optional(this.kmsKeyId);
     }
     /**
      * The retention policy for this domain, which specifies whether resources will be retained after the Domain is deleted. By default, all resources are retained. See Retention Policy below.
@@ -142,8 +143,8 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return The retention policy for this domain, which specifies whether resources will be retained after the Domain is deleted. By default, all resources are retained. See Retention Policy below.
      * 
      */
-    public Output</* @Nullable */ DomainRetentionPolicy> retentionPolicy() {
-        return this.retentionPolicy;
+    public Output<Optional<DomainRetentionPolicy>> retentionPolicy() {
+        return Codegen.optional(this.retentionPolicy);
     }
     /**
      * The SSO managed application instance ID.
@@ -184,8 +185,8 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

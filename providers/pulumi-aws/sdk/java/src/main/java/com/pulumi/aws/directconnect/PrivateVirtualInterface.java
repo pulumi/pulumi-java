@@ -14,6 +14,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -161,8 +162,8 @@ public class PrivateVirtualInterface extends com.pulumi.resources.CustomResource
      * @return The ID of the Direct Connect gateway to which to connect the virtual interface.
      * 
      */
-    public Output</* @Nullable */ String> dxGatewayId() {
-        return this.dxGatewayId;
+    public Output<Optional<String>> dxGatewayId() {
+        return Codegen.optional(this.dxGatewayId);
     }
     /**
      * Indicates whether jumbo frames (9001 MTU) are supported.
@@ -191,8 +192,8 @@ public class PrivateVirtualInterface extends com.pulumi.resources.CustomResource
      * The MTU of a virtual private interface can be either `1500` or `9001` (jumbo frames). Default is `1500`.
      * 
      */
-    public Output</* @Nullable */ Integer> mtu() {
-        return this.mtu;
+    public Output<Optional<Integer>> mtu() {
+        return Codegen.optional(this.mtu);
     }
     /**
      * The name for the virtual interface.
@@ -211,8 +212,8 @@ public class PrivateVirtualInterface extends com.pulumi.resources.CustomResource
     @Export(name="sitelinkEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> sitelinkEnabled;
 
-    public Output</* @Nullable */ Boolean> sitelinkEnabled() {
-        return this.sitelinkEnabled;
+    public Output<Optional<Boolean>> sitelinkEnabled() {
+        return Codegen.optional(this.sitelinkEnabled);
     }
     /**
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -225,8 +226,8 @@ public class PrivateVirtualInterface extends com.pulumi.resources.CustomResource
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .
@@ -267,8 +268,8 @@ public class PrivateVirtualInterface extends com.pulumi.resources.CustomResource
      * @return The ID of the virtual private gateway to which to connect the virtual interface.
      * 
      */
-    public Output</* @Nullable */ String> vpnGatewayId() {
-        return this.vpnGatewayId;
+    public Output<Optional<String>> vpnGatewayId() {
+        return Codegen.optional(this.vpnGatewayId);
     }
 
     /**

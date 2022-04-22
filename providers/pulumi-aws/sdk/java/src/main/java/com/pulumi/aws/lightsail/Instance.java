@@ -16,6 +16,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -234,8 +235,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * Lightsail console (cannot use `aws.ec2.KeyPair` at this time)
      * 
      */
-    public Output</* @Nullable */ String> keyPairName() {
-        return this.keyPairName;
+    public Output<Optional<String>> keyPairName() {
+        return Codegen.optional(this.keyPairName);
     }
     /**
      * The name of the Lightsail Instance. Names be unique within each AWS Region in your Lightsail account.
@@ -304,8 +305,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. To create a key-only tag, use an empty string as the value. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
@@ -332,8 +333,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return launch script to configure server with additional user data
      * 
      */
-    public Output</* @Nullable */ String> userData() {
-        return this.userData;
+    public Output<Optional<String>> userData() {
+        return Codegen.optional(this.userData);
     }
     /**
      * The user name for connecting to the instance (e.g., ec2-user).

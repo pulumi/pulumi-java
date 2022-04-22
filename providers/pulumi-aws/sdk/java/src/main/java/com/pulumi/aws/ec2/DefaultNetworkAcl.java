@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -83,8 +84,8 @@ public class DefaultNetworkAcl extends com.pulumi.resources.CustomResource {
      * @return Configuration block for an egress rule. Detailed below.
      * 
      */
-    public Output</* @Nullable */ List<DefaultNetworkAclEgress>> egress() {
-        return this.egress;
+    public Output<Optional<List<DefaultNetworkAclEgress>>> egress() {
+        return Codegen.optional(this.egress);
     }
     /**
      * Configuration block for an ingress rule. Detailed below.
@@ -97,8 +98,8 @@ public class DefaultNetworkAcl extends com.pulumi.resources.CustomResource {
      * @return Configuration block for an ingress rule. Detailed below.
      * 
      */
-    public Output</* @Nullable */ List<DefaultNetworkAclIngress>> ingress() {
-        return this.ingress;
+    public Output<Optional<List<DefaultNetworkAclIngress>>> ingress() {
+        return Codegen.optional(this.ingress);
     }
     /**
      * ID of the AWS account that owns the Default Network ACL
@@ -125,8 +126,8 @@ public class DefaultNetworkAcl extends com.pulumi.resources.CustomResource {
      * @return List of Subnet IDs to apply the ACL to. See the notes below on managing Subnets in the Default Network ACL
      * 
      */
-    public Output</* @Nullable */ List<String>> subnetIds() {
-        return this.subnetIds;
+    public Output<Optional<List<String>>> subnetIds() {
+        return Codegen.optional(this.subnetIds);
     }
     /**
      * Map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -139,8 +140,8 @@ public class DefaultNetworkAcl extends com.pulumi.resources.CustomResource {
      * @return Map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

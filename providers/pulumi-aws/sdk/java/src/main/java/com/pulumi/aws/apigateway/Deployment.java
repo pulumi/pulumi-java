@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -54,8 +55,8 @@ public class Deployment extends com.pulumi.resources.CustomResource {
      * @return Description of the deployment
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The execution ARN to be used in `lambda_permission` resource&#39;s `source_arn`
@@ -116,8 +117,8 @@ public class Deployment extends com.pulumi.resources.CustomResource {
      * @return Description to set on the stage managed by the `stage_name` argument.
      * 
      */
-    public Output</* @Nullable */ String> stageDescription() {
-        return this.stageDescription;
+    public Output<Optional<String>> stageDescription() {
+        return Codegen.optional(this.stageDescription);
     }
     /**
      * Name of the stage to create with this deployment. If the specified stage already exists, it will be updated to point to the new deployment. It is recommended to use the `aws.apigateway.Stage` resource instead to manage stages.
@@ -130,8 +131,8 @@ public class Deployment extends com.pulumi.resources.CustomResource {
      * @return Name of the stage to create with this deployment. If the specified stage already exists, it will be updated to point to the new deployment. It is recommended to use the `aws.apigateway.Stage` resource instead to manage stages.
      * 
      */
-    public Output</* @Nullable */ String> stageName() {
-        return this.stageName;
+    public Output<Optional<String>> stageName() {
+        return Codegen.optional(this.stageName);
     }
     /**
      * Map of arbitrary keys and values that, when changed, will trigger a redeployment.
@@ -144,8 +145,8 @@ public class Deployment extends com.pulumi.resources.CustomResource {
      * @return Map of arbitrary keys and values that, when changed, will trigger a redeployment.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> triggers() {
-        return this.triggers;
+    public Output<Optional<Map<String,String>>> triggers() {
+        return Codegen.optional(this.triggers);
     }
     /**
      * Map to set on the stage managed by the `stage_name` argument.
@@ -158,8 +159,8 @@ public class Deployment extends com.pulumi.resources.CustomResource {
      * @return Map to set on the stage managed by the `stage_name` argument.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> variables() {
-        return this.variables;
+    public Output<Optional<Map<String,String>>> variables() {
+        return Codegen.optional(this.variables);
     }
 
     /**

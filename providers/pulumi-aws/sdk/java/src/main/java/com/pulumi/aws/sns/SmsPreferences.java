@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -33,8 +34,8 @@ public class SmsPreferences extends com.pulumi.resources.CustomResource {
      * @return A string, such as your business brand, that is displayed as the sender on the receiving device.
      * 
      */
-    public Output</* @Nullable */ String> defaultSenderId() {
-        return this.defaultSenderId;
+    public Output<Optional<String>> defaultSenderId() {
+        return Codegen.optional(this.defaultSenderId);
     }
     /**
      * The type of SMS message that you will send by default. Possible values are: Promotional, Transactional
@@ -47,8 +48,8 @@ public class SmsPreferences extends com.pulumi.resources.CustomResource {
      * @return The type of SMS message that you will send by default. Possible values are: Promotional, Transactional
      * 
      */
-    public Output</* @Nullable */ String> defaultSmsType() {
-        return this.defaultSmsType;
+    public Output<Optional<String>> defaultSmsType() {
+        return Codegen.optional(this.defaultSmsType);
     }
     /**
      * The ARN of the IAM role that allows Amazon SNS to write logs about SMS deliveries in CloudWatch Logs.
@@ -61,8 +62,8 @@ public class SmsPreferences extends com.pulumi.resources.CustomResource {
      * @return The ARN of the IAM role that allows Amazon SNS to write logs about SMS deliveries in CloudWatch Logs.
      * 
      */
-    public Output</* @Nullable */ String> deliveryStatusIamRoleArn() {
-        return this.deliveryStatusIamRoleArn;
+    public Output<Optional<String>> deliveryStatusIamRoleArn() {
+        return Codegen.optional(this.deliveryStatusIamRoleArn);
     }
     /**
      * The percentage of successful SMS deliveries for which Amazon SNS will write logs in CloudWatch Logs. The value must be between 0 and 100.
@@ -75,8 +76,8 @@ public class SmsPreferences extends com.pulumi.resources.CustomResource {
      * @return The percentage of successful SMS deliveries for which Amazon SNS will write logs in CloudWatch Logs. The value must be between 0 and 100.
      * 
      */
-    public Output</* @Nullable */ String> deliveryStatusSuccessSamplingRate() {
-        return this.deliveryStatusSuccessSamplingRate;
+    public Output<Optional<String>> deliveryStatusSuccessSamplingRate() {
+        return Codegen.optional(this.deliveryStatusSuccessSamplingRate);
     }
     /**
      * The maximum amount in USD that you are willing to spend each month to send SMS messages.
@@ -103,8 +104,8 @@ public class SmsPreferences extends com.pulumi.resources.CustomResource {
      * @return The name of the Amazon S3 bucket to receive daily SMS usage reports from Amazon SNS.
      * 
      */
-    public Output</* @Nullable */ String> usageReportS3Bucket() {
-        return this.usageReportS3Bucket;
+    public Output<Optional<String>> usageReportS3Bucket() {
+        return Codegen.optional(this.usageReportS3Bucket);
     }
 
     /**

@@ -15,6 +15,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -50,8 +51,8 @@ public class Listener extends com.pulumi.resources.CustomResource {
      * @return Name of the Application-Layer Protocol Negotiation (ALPN) policy. Can be set if `protocol` is `TLS`. Valid values are `HTTP1Only`, `HTTP2Only`, `HTTP2Optional`, `HTTP2Preferred`, and `None`.
      * 
      */
-    public Output</* @Nullable */ String> alpnPolicy() {
-        return this.alpnPolicy;
+    public Output<Optional<String>> alpnPolicy() {
+        return Codegen.optional(this.alpnPolicy);
     }
     /**
      * ARN of the target group.
@@ -78,8 +79,8 @@ public class Listener extends com.pulumi.resources.CustomResource {
      * @return ARN of the default SSL server certificate. Exactly one certificate is required if the protocol is HTTPS. For adding additional SSL certificates, see the `aws.lb.ListenerCertificate` resource.
      * 
      */
-    public Output</* @Nullable */ String> certificateArn() {
-        return this.certificateArn;
+    public Output<Optional<String>> certificateArn() {
+        return Codegen.optional(this.certificateArn);
     }
     /**
      * Configuration block for default actions. Detailed below.
@@ -120,8 +121,8 @@ public class Listener extends com.pulumi.resources.CustomResource {
      * @return Port. Specify a value from `1` to `65535` or `#{port}`. Defaults to `#{port}`.
      * 
      */
-    public Output</* @Nullable */ Integer> port() {
-        return this.port;
+    public Output<Optional<Integer>> port() {
+        return Codegen.optional(this.port);
     }
     /**
      * Protocol. Valid values are `HTTP`, `HTTPS`, or `#{protocol}`. Defaults to `#{protocol}`.
@@ -162,8 +163,8 @@ public class Listener extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.

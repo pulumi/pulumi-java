@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -40,8 +41,8 @@ public class ScheduledAction extends com.pulumi.resources.CustomResource {
      * @return The description of the scheduled action.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Whether to enable the scheduled action. Default is `true` .
@@ -54,8 +55,8 @@ public class ScheduledAction extends com.pulumi.resources.CustomResource {
      * @return Whether to enable the scheduled action. Default is `true` .
      * 
      */
-    public Output</* @Nullable */ Boolean> enable() {
-        return this.enable;
+    public Output<Optional<Boolean>> enable() {
+        return Codegen.optional(this.enable);
     }
     /**
      * The end time in UTC when the schedule is active, in UTC RFC3339 format(for example, YYYY-MM-DDTHH:MM:SSZ).
@@ -68,8 +69,8 @@ public class ScheduledAction extends com.pulumi.resources.CustomResource {
      * @return The end time in UTC when the schedule is active, in UTC RFC3339 format(for example, YYYY-MM-DDTHH:MM:SSZ).
      * 
      */
-    public Output</* @Nullable */ String> endTime() {
-        return this.endTime;
+    public Output<Optional<String>> endTime() {
+        return Codegen.optional(this.endTime);
     }
     /**
      * The IAM role to assume to run the scheduled action.
@@ -124,8 +125,8 @@ public class ScheduledAction extends com.pulumi.resources.CustomResource {
      * @return The start time in UTC when the schedule is active, in UTC RFC3339 format(for example, YYYY-MM-DDTHH:MM:SSZ).
      * 
      */
-    public Output</* @Nullable */ String> startTime() {
-        return this.startTime;
+    public Output<Optional<String>> startTime() {
+        return Codegen.optional(this.startTime);
     }
     /**
      * Target action. Documented below.

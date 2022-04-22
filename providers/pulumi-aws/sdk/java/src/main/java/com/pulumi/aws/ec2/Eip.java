@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -54,8 +55,8 @@ public class Eip extends com.pulumi.resources.CustomResource {
      * @return IP address from an EC2 BYOIP pool. This option is only available for VPC EIPs.
      * 
      */
-    public Output</* @Nullable */ String> address() {
-        return this.address;
+    public Output<Optional<String>> address() {
+        return Codegen.optional(this.address);
     }
     /**
      * ID that AWS assigns to represent the allocation of the Elastic IP address for use with instances in a VPC.
@@ -82,8 +83,8 @@ public class Eip extends com.pulumi.resources.CustomResource {
      * @return User-specified primary or secondary private IP address to associate with the Elastic IP address. If no private IP address is specified, the Elastic IP address is associated with the primary private IP address.
      * 
      */
-    public Output</* @Nullable */ String> associateWithPrivateIp() {
-        return this.associateWithPrivateIp;
+    public Output<Optional<String>> associateWithPrivateIp() {
+        return Codegen.optional(this.associateWithPrivateIp);
     }
     /**
      * ID representing the association of the address with an instance in a VPC.
@@ -138,8 +139,8 @@ public class Eip extends com.pulumi.resources.CustomResource {
      * @return ID  of a customer-owned address pool. For more on customer owned IP addressed check out [Customer-owned IP addresses guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#ip-addressing).
      * 
      */
-    public Output</* @Nullable */ String> customerOwnedIpv4Pool() {
-        return this.customerOwnedIpv4Pool;
+    public Output<Optional<String>> customerOwnedIpv4Pool() {
+        return Codegen.optional(this.customerOwnedIpv4Pool);
     }
     /**
      * Indicates if this EIP is for use in VPC (`vpc`) or EC2 Classic (`standard`).
@@ -278,8 +279,8 @@ public class Eip extends com.pulumi.resources.CustomResource {
      * @return Map of tags to assign to the resource. Tags can only be applied to EIPs in a VPC. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.

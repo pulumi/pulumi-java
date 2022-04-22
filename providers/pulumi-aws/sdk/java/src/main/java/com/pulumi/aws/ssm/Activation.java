@@ -14,6 +14,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -57,8 +58,8 @@ public class Activation extends com.pulumi.resources.CustomResource {
      * @return The description of the resource that you want to register.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * UTC timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) by which this activation request should expire. The default value is 24 hours from resource creation time. This provider will only perform drift detection of its value when present in a configuration.
@@ -141,8 +142,8 @@ public class Activation extends com.pulumi.resources.CustomResource {
      * @return The maximum number of managed instances you want to register. The default value is 1 instance.
      * 
      */
-    public Output</* @Nullable */ Integer> registrationLimit() {
-        return this.registrationLimit;
+    public Output<Optional<Integer>> registrationLimit() {
+        return Codegen.optional(this.registrationLimit);
     }
     /**
      * A map of tags to assign to the object. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -155,8 +156,8 @@ public class Activation extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the object. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

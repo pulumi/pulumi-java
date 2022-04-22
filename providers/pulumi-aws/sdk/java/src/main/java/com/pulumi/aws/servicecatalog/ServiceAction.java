@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -41,8 +42,8 @@ public class ServiceAction extends com.pulumi.resources.CustomResource {
      * @return Language code. Valid values are `en` (English), `jp` (Japanese), and `zh` (Chinese). Default is `en`.
      * 
      */
-    public Output</* @Nullable */ String> acceptLanguage() {
-        return this.acceptLanguage;
+    public Output<Optional<String>> acceptLanguage() {
+        return Codegen.optional(this.acceptLanguage);
     }
     /**
      * Self-service action definition configuration block. Detailed below.

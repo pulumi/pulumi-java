@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -84,8 +85,8 @@ public class UserProfile extends com.pulumi.resources.CustomResource {
      * @return A specifier for the type of value specified in `single_sign_on_user_value`. Currently, the only supported value is `UserName`. If the Domain&#39;s AuthMode is SSO, this field is required. If the Domain&#39;s AuthMode is not SSO, this field cannot be specified.
      * 
      */
-    public Output</* @Nullable */ String> singleSignOnUserIdentifier() {
-        return this.singleSignOnUserIdentifier;
+    public Output<Optional<String>> singleSignOnUserIdentifier() {
+        return Codegen.optional(this.singleSignOnUserIdentifier);
     }
     /**
      * The username of the associated AWS Single Sign-On User for this User Profile. If the Domain&#39;s AuthMode is SSO, this field is required, and must match a valid username of a user in your directory. If the Domain&#39;s AuthMode is not SSO, this field cannot be specified.
@@ -98,8 +99,8 @@ public class UserProfile extends com.pulumi.resources.CustomResource {
      * @return The username of the associated AWS Single Sign-On User for this User Profile. If the Domain&#39;s AuthMode is SSO, this field is required, and must match a valid username of a user in your directory. If the Domain&#39;s AuthMode is not SSO, this field cannot be specified.
      * 
      */
-    public Output</* @Nullable */ String> singleSignOnUserValue() {
-        return this.singleSignOnUserValue;
+    public Output<Optional<String>> singleSignOnUserValue() {
+        return Codegen.optional(this.singleSignOnUserValue);
     }
     /**
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -112,8 +113,8 @@ public class UserProfile extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .
@@ -154,8 +155,8 @@ public class UserProfile extends com.pulumi.resources.CustomResource {
      * @return The user settings. See User Settings below.
      * 
      */
-    public Output</* @Nullable */ UserProfileUserSettings> userSettings() {
-        return this.userSettings;
+    public Output<Optional<UserProfileUserSettings>> userSettings() {
+        return Codegen.optional(this.userSettings);
     }
 
     /**

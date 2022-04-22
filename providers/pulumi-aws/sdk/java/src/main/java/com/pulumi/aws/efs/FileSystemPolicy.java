@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -41,8 +42,8 @@ public class FileSystemPolicy extends com.pulumi.resources.CustomResource {
      * @return A flag to indicate whether to bypass the `aws.efs.FileSystemPolicy` lockout safety check. The policy lockout safety check determines whether the policy in the request will prevent the principal making the request will be locked out from making future `PutFileSystemPolicy` requests on the file system. Set `bypass_policy_lockout_safety_check` to `true` only when you intend to prevent the principal that is making the request from making a subsequent `PutFileSystemPolicy` request on the file system. The default value is `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> bypassPolicyLockoutSafetyCheck() {
-        return this.bypassPolicyLockoutSafetyCheck;
+    public Output<Optional<Boolean>> bypassPolicyLockoutSafetyCheck() {
+        return Codegen.optional(this.bypassPolicyLockoutSafetyCheck);
     }
     /**
      * The ID of the EFS file system.

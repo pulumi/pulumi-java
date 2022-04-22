@@ -14,6 +14,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -57,8 +58,8 @@ public class ExternalKey extends com.pulumi.resources.CustomResource {
      * @return Specifies whether to disable the policy lockout check performed when creating or updating the key&#39;s policy. Setting this value to `true` increases the risk that the key becomes unmanageable. For more information, refer to the scenario in the [Default Key Policy](https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html#key-policy-default-allow-root-enable-iam) section in the AWS Key Management Service Developer Guide. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> bypassPolicyLockoutSafetyCheck() {
-        return this.bypassPolicyLockoutSafetyCheck;
+    public Output<Optional<Boolean>> bypassPolicyLockoutSafetyCheck() {
+        return Codegen.optional(this.bypassPolicyLockoutSafetyCheck);
     }
     /**
      * Duration in days after which the key is deleted after destruction of the resource. Must be between `7` and `30` days. Defaults to `30`.
@@ -71,8 +72,8 @@ public class ExternalKey extends com.pulumi.resources.CustomResource {
      * @return Duration in days after which the key is deleted after destruction of the resource. Must be between `7` and `30` days. Defaults to `30`.
      * 
      */
-    public Output</* @Nullable */ Integer> deletionWindowInDays() {
-        return this.deletionWindowInDays;
+    public Output<Optional<Integer>> deletionWindowInDays() {
+        return Codegen.optional(this.deletionWindowInDays);
     }
     /**
      * Description of the key.
@@ -85,8 +86,8 @@ public class ExternalKey extends com.pulumi.resources.CustomResource {
      * @return Description of the key.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Specifies whether the key is enabled. Keys pending import can only be `false`. Imported keys default to `true` unless expired.
@@ -127,8 +128,8 @@ public class ExternalKey extends com.pulumi.resources.CustomResource {
      * @return Base64 encoded 256-bit symmetric encryption key material to import. The CMK is permanently associated with this key material. The same key material can be reimported, but you cannot import different key material.
      * 
      */
-    public Output</* @Nullable */ String> keyMaterialBase64() {
-        return this.keyMaterialBase64;
+    public Output<Optional<String>> keyMaterialBase64() {
+        return Codegen.optional(this.keyMaterialBase64);
     }
     /**
      * The state of the CMK.
@@ -197,8 +198,8 @@ public class ExternalKey extends com.pulumi.resources.CustomResource {
      * @return A key-value map of tags to assign to the key. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
@@ -225,8 +226,8 @@ public class ExternalKey extends com.pulumi.resources.CustomResource {
      * @return Time at which the imported key material expires. When the key material expires, AWS KMS deletes the key material and the CMK becomes unusable. If not specified, key material does not expire. Valid values: [RFC3339 time string](https://tools.ietf.org/html/rfc3339#section-5.8) (`YYYY-MM-DDTHH:MM:SSZ`)
      * 
      */
-    public Output</* @Nullable */ String> validTo() {
-        return this.validTo;
+    public Output<Optional<String>> validTo() {
+        return Codegen.optional(this.validTo);
     }
 
     /**

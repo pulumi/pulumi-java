@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -33,8 +34,8 @@ public class UserProfile extends com.pulumi.resources.CustomResource {
      * @return Whether users can specify their own SSH public key through the My Settings page
      * 
      */
-    public Output</* @Nullable */ Boolean> allowSelfManagement() {
-        return this.allowSelfManagement;
+    public Output<Optional<Boolean>> allowSelfManagement() {
+        return Codegen.optional(this.allowSelfManagement);
     }
     /**
      * The users public key
@@ -47,8 +48,8 @@ public class UserProfile extends com.pulumi.resources.CustomResource {
      * @return The users public key
      * 
      */
-    public Output</* @Nullable */ String> sshPublicKey() {
-        return this.sshPublicKey;
+    public Output<Optional<String>> sshPublicKey() {
+        return Codegen.optional(this.sshPublicKey);
     }
     /**
      * The ssh username, with witch this user wants to log in

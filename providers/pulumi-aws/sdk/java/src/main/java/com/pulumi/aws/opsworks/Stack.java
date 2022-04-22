@@ -15,6 +15,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -64,8 +65,8 @@ public class Stack extends com.pulumi.resources.CustomResource {
      * @return If `manage_berkshelf` is enabled, the version of Berkshelf to use.
      * 
      */
-    public Output</* @Nullable */ String> berkshelfVersion() {
-        return this.berkshelfVersion;
+    public Output<Optional<String>> berkshelfVersion() {
+        return Codegen.optional(this.berkshelfVersion);
     }
     /**
      * Color to paint next to the stack&#39;s resources in the OpsWorks console.
@@ -78,8 +79,8 @@ public class Stack extends com.pulumi.resources.CustomResource {
      * @return Color to paint next to the stack&#39;s resources in the OpsWorks console.
      * 
      */
-    public Output</* @Nullable */ String> color() {
-        return this.color;
+    public Output<Optional<String>> color() {
+        return Codegen.optional(this.color);
     }
     /**
      * Name of the configuration manager to use. Defaults to &#34;Chef&#34;.
@@ -92,8 +93,8 @@ public class Stack extends com.pulumi.resources.CustomResource {
      * @return Name of the configuration manager to use. Defaults to &#34;Chef&#34;.
      * 
      */
-    public Output</* @Nullable */ String> configurationManagerName() {
-        return this.configurationManagerName;
+    public Output<Optional<String>> configurationManagerName() {
+        return Codegen.optional(this.configurationManagerName);
     }
     /**
      * Version of the configuration manager to use. Defaults to &#34;11.4&#34;.
@@ -106,8 +107,8 @@ public class Stack extends com.pulumi.resources.CustomResource {
      * @return Version of the configuration manager to use. Defaults to &#34;11.4&#34;.
      * 
      */
-    public Output</* @Nullable */ String> configurationManagerVersion() {
-        return this.configurationManagerVersion;
+    public Output<Optional<String>> configurationManagerVersion() {
+        return Codegen.optional(this.configurationManagerVersion);
     }
     /**
      * When `use_custom_cookbooks` is set, provide this sub-object as
@@ -136,8 +137,8 @@ public class Stack extends com.pulumi.resources.CustomResource {
      * @return Custom JSON attributes to apply to the entire stack.
      * 
      */
-    public Output</* @Nullable */ String> customJson() {
-        return this.customJson;
+    public Output<Optional<String>> customJson() {
+        return Codegen.optional(this.customJson);
     }
     /**
      * Name of the availability zone where instances will be created
@@ -182,8 +183,8 @@ public class Stack extends com.pulumi.resources.CustomResource {
      * @return Name of OS that will be installed on instances by default.
      * 
      */
-    public Output</* @Nullable */ String> defaultOs() {
-        return this.defaultOs;
+    public Output<Optional<String>> defaultOs() {
+        return Codegen.optional(this.defaultOs);
     }
     /**
      * Name of the type of root device instances will have by default.
@@ -196,8 +197,8 @@ public class Stack extends com.pulumi.resources.CustomResource {
      * @return Name of the type of root device instances will have by default.
      * 
      */
-    public Output</* @Nullable */ String> defaultRootDeviceType() {
-        return this.defaultRootDeviceType;
+    public Output<Optional<String>> defaultRootDeviceType() {
+        return Codegen.optional(this.defaultRootDeviceType);
     }
     /**
      * Name of the SSH keypair that instances will have by default.
@@ -210,8 +211,8 @@ public class Stack extends com.pulumi.resources.CustomResource {
      * @return Name of the SSH keypair that instances will have by default.
      * 
      */
-    public Output</* @Nullable */ String> defaultSshKeyName() {
-        return this.defaultSshKeyName;
+    public Output<Optional<String>> defaultSshKeyName() {
+        return Codegen.optional(this.defaultSshKeyName);
     }
     /**
      * Id of the subnet in which instances will be created by default. Mandatory
@@ -242,8 +243,8 @@ public class Stack extends com.pulumi.resources.CustomResource {
      * within this stack.
      * 
      */
-    public Output</* @Nullable */ String> hostnameTheme() {
-        return this.hostnameTheme;
+    public Output<Optional<String>> hostnameTheme() {
+        return Codegen.optional(this.hostnameTheme);
     }
     /**
      * Boolean value controlling whether Opsworks will run Berkshelf for this stack.
@@ -256,8 +257,8 @@ public class Stack extends com.pulumi.resources.CustomResource {
      * @return Boolean value controlling whether Opsworks will run Berkshelf for this stack.
      * 
      */
-    public Output</* @Nullable */ Boolean> manageBerkshelf() {
-        return this.manageBerkshelf;
+    public Output<Optional<Boolean>> manageBerkshelf() {
+        return Codegen.optional(this.manageBerkshelf);
     }
     /**
      * The name of the stack.
@@ -318,8 +319,8 @@ public class Stack extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .
@@ -348,8 +349,8 @@ public class Stack extends com.pulumi.resources.CustomResource {
      * enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> useCustomCookbooks() {
-        return this.useCustomCookbooks;
+    public Output<Optional<Boolean>> useCustomCookbooks() {
+        return Codegen.optional(this.useCustomCookbooks);
     }
     /**
      * Boolean value controlling whether the standard OpsWorks
@@ -364,8 +365,8 @@ public class Stack extends com.pulumi.resources.CustomResource {
      * security groups apply to created instances.
      * 
      */
-    public Output</* @Nullable */ Boolean> useOpsworksSecurityGroups() {
-        return this.useOpsworksSecurityGroups;
+    public Output<Optional<Boolean>> useOpsworksSecurityGroups() {
+        return Codegen.optional(this.useOpsworksSecurityGroups);
     }
     /**
      * The id of the VPC that this stack belongs to.

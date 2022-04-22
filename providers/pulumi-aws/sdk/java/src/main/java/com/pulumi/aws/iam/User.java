@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -62,8 +63,8 @@ public class User extends com.pulumi.resources.CustomResource {
      * a user with non-provider-managed access keys and login profile will fail to be destroyed.
      * 
      */
-    public Output</* @Nullable */ Boolean> forceDestroy() {
-        return this.forceDestroy;
+    public Output<Optional<Boolean>> forceDestroy() {
+        return Codegen.optional(this.forceDestroy);
     }
     /**
      * The user&#39;s name. The name must consist of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: `=,.@-_.`. User names are not distinguished by case. For example, you cannot create users named both &#34;TESTUSER&#34; and &#34;testuser&#34;.
@@ -90,8 +91,8 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return Path in which to create the user.
      * 
      */
-    public Output</* @Nullable */ String> path() {
-        return this.path;
+    public Output<Optional<String>> path() {
+        return Codegen.optional(this.path);
     }
     /**
      * The ARN of the policy that is used to set the permissions boundary for the user.
@@ -104,8 +105,8 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return The ARN of the policy that is used to set the permissions boundary for the user.
      * 
      */
-    public Output</* @Nullable */ String> permissionsBoundary() {
-        return this.permissionsBoundary;
+    public Output<Optional<String>> permissionsBoundary() {
+        return Codegen.optional(this.permissionsBoundary);
     }
     /**
      * Key-value mapping of tags for the IAM user
@@ -118,8 +119,8 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return Key-value mapping of tags for the IAM user
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider.

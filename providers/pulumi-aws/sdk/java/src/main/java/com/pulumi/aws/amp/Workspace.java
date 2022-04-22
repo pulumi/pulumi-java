@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -42,8 +43,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return The alias of the prometheus workspace. See more [in AWS Docs](https://docs.aws.amazon.com/prometheus/latest/userguide/AMP-onboard-create-workspace.html).
      * 
      */
-    public Output</* @Nullable */ String> alias() {
-        return this.alias;
+    public Output<Optional<String>> alias() {
+        return Codegen.optional(this.alias);
     }
     /**
      * Amazon Resource Name (ARN) of the workspace.

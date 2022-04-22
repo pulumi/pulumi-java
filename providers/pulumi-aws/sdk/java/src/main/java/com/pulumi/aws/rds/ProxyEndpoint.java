@@ -14,6 +14,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -113,8 +114,8 @@ public class ProxyEndpoint extends com.pulumi.resources.CustomResource {
      * @return A mapping of tags to assign to the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
@@ -133,8 +134,8 @@ public class ProxyEndpoint extends com.pulumi.resources.CustomResource {
      * @return Indicates whether the DB proxy endpoint can be used for read/write or read-only operations. The default is `READ_WRITE`. Valid values are `READ_WRITE` and `READ_ONLY`.
      * 
      */
-    public Output</* @Nullable */ String> targetRole() {
-        return this.targetRole;
+    public Output<Optional<String>> targetRole() {
+        return Codegen.optional(this.targetRole);
     }
     /**
      * The VPC ID of the DB proxy endpoint.

@@ -14,6 +14,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -90,8 +91,8 @@ public class ClusterInstance extends com.pulumi.resources.CustomResource {
      * @return Indicates that minor engine upgrades will be applied automatically to the instance during the maintenance window. Default is `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> autoMinorVersionUpgrade() {
-        return this.autoMinorVersionUpgrade;
+    public Output<Optional<Boolean>> autoMinorVersionUpgrade() {
+        return Codegen.optional(this.autoMinorVersionUpgrade);
     }
     /**
      * The EC2 Availability Zone that the neptune instance is created in.
@@ -160,8 +161,8 @@ public class ClusterInstance extends com.pulumi.resources.CustomResource {
      * @return The name of the database engine to be used for the neptune instance. Defaults to `neptune`. Valid Values: `neptune`.
      * 
      */
-    public Output</* @Nullable */ String> engine() {
-        return this.engine;
+    public Output<Optional<String>> engine() {
+        return Codegen.optional(this.engine);
     }
     /**
      * The neptune engine version.
@@ -244,8 +245,8 @@ public class ClusterInstance extends com.pulumi.resources.CustomResource {
      * @return The name of the neptune parameter group to associate with this instance.
      * 
      */
-    public Output</* @Nullable */ String> neptuneParameterGroupName() {
-        return this.neptuneParameterGroupName;
+    public Output<Optional<String>> neptuneParameterGroupName() {
+        return Codegen.optional(this.neptuneParameterGroupName);
     }
     /**
      * A subnet group to associate with this neptune instance. **NOTE:** This must match the `neptune_subnet_group_name` of the attached `aws.neptune.Cluster`.
@@ -272,8 +273,8 @@ public class ClusterInstance extends com.pulumi.resources.CustomResource {
      * @return The port on which the DB accepts connections. Defaults to `8182`.
      * 
      */
-    public Output</* @Nullable */ Integer> port() {
-        return this.port;
+    public Output<Optional<Integer>> port() {
+        return Codegen.optional(this.port);
     }
     /**
      * The daily time range during which automated backups are created if automated backups are enabled. Eg: &#34;04:00-09:00&#34;
@@ -316,8 +317,8 @@ public class ClusterInstance extends com.pulumi.resources.CustomResource {
      * @return Default 0. Failover Priority setting on instance level. The reader who has lower tier has higher priority to get promoter to writer.
      * 
      */
-    public Output</* @Nullable */ Integer> promotionTier() {
-        return this.promotionTier;
+    public Output<Optional<Integer>> promotionTier() {
+        return Codegen.optional(this.promotionTier);
     }
     /**
      * Bool to control if instance is publicly accessible. Default is `false`.
@@ -330,8 +331,8 @@ public class ClusterInstance extends com.pulumi.resources.CustomResource {
      * @return Bool to control if instance is publicly accessible. Default is `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> publiclyAccessible() {
-        return this.publiclyAccessible;
+    public Output<Optional<Boolean>> publiclyAccessible() {
+        return Codegen.optional(this.publiclyAccessible);
     }
     /**
      * Specifies whether the neptune cluster is encrypted.
@@ -358,8 +359,8 @@ public class ClusterInstance extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the instance. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

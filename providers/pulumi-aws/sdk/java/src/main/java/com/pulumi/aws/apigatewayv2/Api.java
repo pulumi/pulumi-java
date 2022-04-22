@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -63,8 +64,8 @@ public class Api extends com.pulumi.resources.CustomResource {
      * Applicable for WebSocket APIs.
      * 
      */
-    public Output</* @Nullable */ String> apiKeySelectionExpression() {
-        return this.apiKeySelectionExpression;
+    public Output<Optional<String>> apiKeySelectionExpression() {
+        return Codegen.optional(this.apiKeySelectionExpression);
     }
     /**
      * The ARN of the API.
@@ -91,8 +92,8 @@ public class Api extends com.pulumi.resources.CustomResource {
      * @return An OpenAPI specification that defines the set of routes and integrations to create as part of the HTTP APIs. Supported only for HTTP APIs.
      * 
      */
-    public Output</* @Nullable */ String> body() {
-        return this.body;
+    public Output<Optional<String>> body() {
+        return Codegen.optional(this.body);
     }
     /**
      * The cross-origin resource sharing (CORS) [configuration](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-cors.html). Applicable for HTTP APIs.
@@ -105,8 +106,8 @@ public class Api extends com.pulumi.resources.CustomResource {
      * @return The cross-origin resource sharing (CORS) [configuration](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-cors.html). Applicable for HTTP APIs.
      * 
      */
-    public Output</* @Nullable */ ApiCorsConfiguration> corsConfiguration() {
-        return this.corsConfiguration;
+    public Output<Optional<ApiCorsConfiguration>> corsConfiguration() {
+        return Codegen.optional(this.corsConfiguration);
     }
     /**
      * Part of _quick create_. Specifies any credentials required for the integration. Applicable for HTTP APIs.
@@ -119,8 +120,8 @@ public class Api extends com.pulumi.resources.CustomResource {
      * @return Part of _quick create_. Specifies any credentials required for the integration. Applicable for HTTP APIs.
      * 
      */
-    public Output</* @Nullable */ String> credentialsArn() {
-        return this.credentialsArn;
+    public Output<Optional<String>> credentialsArn() {
+        return Codegen.optional(this.credentialsArn);
     }
     /**
      * The description of the API. Must be less than or equal to 1024 characters in length.
@@ -133,8 +134,8 @@ public class Api extends com.pulumi.resources.CustomResource {
      * @return The description of the API. Must be less than or equal to 1024 characters in length.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Whether clients can invoke the API by using the default `execute-api` endpoint.
@@ -151,8 +152,8 @@ public class Api extends com.pulumi.resources.CustomResource {
      * To require that clients use a custom domain name to invoke the API, disable the default endpoint.
      * 
      */
-    public Output</* @Nullable */ Boolean> disableExecuteApiEndpoint() {
-        return this.disableExecuteApiEndpoint;
+    public Output<Optional<Boolean>> disableExecuteApiEndpoint() {
+        return Codegen.optional(this.disableExecuteApiEndpoint);
     }
     /**
      * The ARN prefix to be used in an `aws.lambda.Permission`&#39;s `source_arn` attribute
@@ -183,8 +184,8 @@ public class Api extends com.pulumi.resources.CustomResource {
      * @return Whether warnings should return an error while API Gateway is creating or updating the resource using an OpenAPI specification. Defaults to `false`. Applicable for HTTP APIs.
      * 
      */
-    public Output</* @Nullable */ Boolean> failOnWarnings() {
-        return this.failOnWarnings;
+    public Output<Optional<Boolean>> failOnWarnings() {
+        return Codegen.optional(this.failOnWarnings);
     }
     /**
      * The name of the API. Must be less than or equal to 128 characters in length.
@@ -225,8 +226,8 @@ public class Api extends com.pulumi.resources.CustomResource {
      * @return Part of _quick create_. Specifies any [route key](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-routes.html). Applicable for HTTP APIs.
      * 
      */
-    public Output</* @Nullable */ String> routeKey() {
-        return this.routeKey;
+    public Output<Optional<String>> routeKey() {
+        return Codegen.optional(this.routeKey);
     }
     /**
      * The [route selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-route-selection-expressions) for the API.
@@ -241,8 +242,8 @@ public class Api extends com.pulumi.resources.CustomResource {
      * Defaults to `$request.method $request.path`.
      * 
      */
-    public Output</* @Nullable */ String> routeSelectionExpression() {
-        return this.routeSelectionExpression;
+    public Output<Optional<String>> routeSelectionExpression() {
+        return Codegen.optional(this.routeSelectionExpression);
     }
     /**
      * A map of tags to assign to the API. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -255,8 +256,8 @@ public class Api extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the API. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .
@@ -287,8 +288,8 @@ public class Api extends com.pulumi.resources.CustomResource {
      * The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. Applicable for HTTP APIs.
      * 
      */
-    public Output</* @Nullable */ String> target() {
-        return this.target;
+    public Output<Optional<String>> target() {
+        return Codegen.optional(this.target);
     }
     /**
      * A version identifier for the API. Must be between 1 and 64 characters in length.
@@ -301,8 +302,8 @@ public class Api extends com.pulumi.resources.CustomResource {
      * @return A version identifier for the API. Must be between 1 and 64 characters in length.
      * 
      */
-    public Output</* @Nullable */ String> version() {
-        return this.version;
+    public Output<Optional<String>> version() {
+        return Codegen.optional(this.version);
     }
 
     /**

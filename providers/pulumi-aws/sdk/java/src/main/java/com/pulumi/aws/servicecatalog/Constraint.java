@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -42,8 +43,8 @@ public class Constraint extends com.pulumi.resources.CustomResource {
      * @return Language code. Valid values: `en` (English), `jp` (Japanese), `zh` (Chinese). Default value is `en`.
      * 
      */
-    public Output</* @Nullable */ String> acceptLanguage() {
-        return this.acceptLanguage;
+    public Output<Optional<String>> acceptLanguage() {
+        return Codegen.optional(this.acceptLanguage);
     }
     /**
      * Description of the constraint.

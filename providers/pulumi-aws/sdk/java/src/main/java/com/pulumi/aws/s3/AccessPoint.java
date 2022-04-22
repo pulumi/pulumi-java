@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -196,8 +197,8 @@ public class AccessPoint extends com.pulumi.resources.CustomResource {
      * @return Configuration block to manage the `PublicAccessBlock` configuration that you want to apply to this Amazon S3 bucket. You can enable the configuration options in any combination. Detailed below.
      * 
      */
-    public Output</* @Nullable */ AccessPointPublicAccessBlockConfiguration> publicAccessBlockConfiguration() {
-        return this.publicAccessBlockConfiguration;
+    public Output<Optional<AccessPointPublicAccessBlockConfiguration>> publicAccessBlockConfiguration() {
+        return Codegen.optional(this.publicAccessBlockConfiguration);
     }
     /**
      * Configuration block to restrict access to this access point to requests from the specified Virtual Private Cloud (VPC). Required for S3 on Outposts. Detailed below.
@@ -210,8 +211,8 @@ public class AccessPoint extends com.pulumi.resources.CustomResource {
      * @return Configuration block to restrict access to this access point to requests from the specified Virtual Private Cloud (VPC). Required for S3 on Outposts. Detailed below.
      * 
      */
-    public Output</* @Nullable */ AccessPointVpcConfiguration> vpcConfiguration() {
-        return this.vpcConfiguration;
+    public Output<Optional<AccessPointVpcConfiguration>> vpcConfiguration() {
+        return Codegen.optional(this.vpcConfiguration);
     }
 
     /**

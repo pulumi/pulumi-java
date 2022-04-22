@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -56,8 +57,8 @@ public class IntegrationResponse extends com.pulumi.resources.CustomResource {
      * @return How to handle response payload content type conversions. Valid values: `CONVERT_TO_BINARY`, `CONVERT_TO_TEXT`.
      * 
      */
-    public Output</* @Nullable */ String> contentHandlingStrategy() {
-        return this.contentHandlingStrategy;
+    public Output<Optional<String>> contentHandlingStrategy() {
+        return Codegen.optional(this.contentHandlingStrategy);
     }
     /**
      * The identifier of the `aws.apigatewayv2.Integration`.
@@ -98,8 +99,8 @@ public class IntegrationResponse extends com.pulumi.resources.CustomResource {
      * @return A map of Velocity templates that are applied on the request payload based on the value of the Content-Type header sent by the client.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> responseTemplates() {
-        return this.responseTemplates;
+    public Output<Optional<Map<String,String>>> responseTemplates() {
+        return Codegen.optional(this.responseTemplates);
     }
     /**
      * The [template selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-template-selection-expressions) for the integration response.
@@ -112,8 +113,8 @@ public class IntegrationResponse extends com.pulumi.resources.CustomResource {
      * @return The [template selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-template-selection-expressions) for the integration response.
      * 
      */
-    public Output</* @Nullable */ String> templateSelectionExpression() {
-        return this.templateSelectionExpression;
+    public Output<Optional<String>> templateSelectionExpression() {
+        return Codegen.optional(this.templateSelectionExpression);
     }
 
     /**

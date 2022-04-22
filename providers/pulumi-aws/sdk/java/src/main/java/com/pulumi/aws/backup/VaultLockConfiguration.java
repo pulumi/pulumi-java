@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -69,8 +70,8 @@ public class VaultLockConfiguration extends com.pulumi.resources.CustomResource 
      * @return The number of days before the lock date.
      * 
      */
-    public Output</* @Nullable */ Integer> changeableForDays() {
-        return this.changeableForDays;
+    public Output<Optional<Integer>> changeableForDays() {
+        return Codegen.optional(this.changeableForDays);
     }
     /**
      * The maximum retention period that the vault retains its recovery points.
@@ -83,8 +84,8 @@ public class VaultLockConfiguration extends com.pulumi.resources.CustomResource 
      * @return The maximum retention period that the vault retains its recovery points.
      * 
      */
-    public Output</* @Nullable */ Integer> maxRetentionDays() {
-        return this.maxRetentionDays;
+    public Output<Optional<Integer>> maxRetentionDays() {
+        return Codegen.optional(this.maxRetentionDays);
     }
     /**
      * The minimum retention period that the vault retains its recovery points.
@@ -97,8 +98,8 @@ public class VaultLockConfiguration extends com.pulumi.resources.CustomResource 
      * @return The minimum retention period that the vault retains its recovery points.
      * 
      */
-    public Output</* @Nullable */ Integer> minRetentionDays() {
-        return this.minRetentionDays;
+    public Output<Optional<Integer>> minRetentionDays() {
+        return Codegen.optional(this.minRetentionDays);
     }
 
     /**

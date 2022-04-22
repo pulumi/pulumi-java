@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -54,8 +55,8 @@ public class NamedQuery extends com.pulumi.resources.CustomResource {
      * @return A brief explanation of the query. Maximum length of 1024.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The plain language name for the query. Maximum length of 128.
@@ -96,8 +97,8 @@ public class NamedQuery extends com.pulumi.resources.CustomResource {
      * @return The workgroup to which the query belongs. Defaults to `primary`
      * 
      */
-    public Output</* @Nullable */ String> workgroup() {
-        return this.workgroup;
+    public Output<Optional<String>> workgroup() {
+        return Codegen.optional(this.workgroup);
     }
 
     /**

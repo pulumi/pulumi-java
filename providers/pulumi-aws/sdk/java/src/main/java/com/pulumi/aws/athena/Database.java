@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -48,8 +49,8 @@ public class Database extends com.pulumi.resources.CustomResource {
      * @return The encryption key block AWS Athena uses to decrypt the data in S3, such as an AWS Key Management Service (AWS KMS) key. An `encryption_configuration` block is documented below.
      * 
      */
-    public Output</* @Nullable */ DatabaseEncryptionConfiguration> encryptionConfiguration() {
-        return this.encryptionConfiguration;
+    public Output<Optional<DatabaseEncryptionConfiguration>> encryptionConfiguration() {
+        return Codegen.optional(this.encryptionConfiguration);
     }
     /**
      * A boolean that indicates all tables should be deleted from the database so that the database can be destroyed without error. The tables are *not* recoverable.
@@ -62,8 +63,8 @@ public class Database extends com.pulumi.resources.CustomResource {
      * @return A boolean that indicates all tables should be deleted from the database so that the database can be destroyed without error. The tables are *not* recoverable.
      * 
      */
-    public Output</* @Nullable */ Boolean> forceDestroy() {
-        return this.forceDestroy;
+    public Output<Optional<Boolean>> forceDestroy() {
+        return Codegen.optional(this.forceDestroy);
     }
     /**
      * Name of the database to create.

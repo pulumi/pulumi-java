@@ -15,6 +15,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -49,8 +50,8 @@ public class InstanceGroup extends com.pulumi.resources.CustomResource {
      * @return The autoscaling policy document. This is a JSON formatted string. See [EMR Auto Scaling](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-automatic-scaling.html)
      * 
      */
-    public Output</* @Nullable */ String> autoscalingPolicy() {
-        return this.autoscalingPolicy;
+    public Output<Optional<String>> autoscalingPolicy() {
+        return Codegen.optional(this.autoscalingPolicy);
     }
     /**
      * If set, the bid price for each EC2 instance in the instance group, expressed in USD. By setting this attribute, the instance group is being declared as a Spot Instance, and will implicitly create a Spot request. Leave this blank to use On-Demand Instances.
@@ -63,8 +64,8 @@ public class InstanceGroup extends com.pulumi.resources.CustomResource {
      * @return If set, the bid price for each EC2 instance in the instance group, expressed in USD. By setting this attribute, the instance group is being declared as a Spot Instance, and will implicitly create a Spot request. Leave this blank to use On-Demand Instances.
      * 
      */
-    public Output</* @Nullable */ String> bidPrice() {
-        return this.bidPrice;
+    public Output<Optional<String>> bidPrice() {
+        return Codegen.optional(this.bidPrice);
     }
     /**
      * ID of the EMR Cluster to attach to. Changing this forces a new resource to be created.
@@ -91,8 +92,8 @@ public class InstanceGroup extends com.pulumi.resources.CustomResource {
      * @return A JSON string for supplying list of configurations specific to the EMR instance group. Note that this can only be changed when using EMR release 5.21 or later.
      * 
      */
-    public Output</* @Nullable */ String> configurationsJson() {
-        return this.configurationsJson;
+    public Output<Optional<String>> configurationsJson() {
+        return Codegen.optional(this.configurationsJson);
     }
     /**
      * One or more `ebs_config` blocks as defined below. Changing this forces a new resource to be created.
@@ -119,8 +120,8 @@ public class InstanceGroup extends com.pulumi.resources.CustomResource {
      * @return Indicates whether an Amazon EBS volume is EBS-optimized. Changing this forces a new resource to be created.
      * 
      */
-    public Output</* @Nullable */ Boolean> ebsOptimized() {
-        return this.ebsOptimized;
+    public Output<Optional<Boolean>> ebsOptimized() {
+        return Codegen.optional(this.ebsOptimized);
     }
     /**
      * target number of instances for the instance group. defaults to 0.
@@ -133,8 +134,8 @@ public class InstanceGroup extends com.pulumi.resources.CustomResource {
      * @return target number of instances for the instance group. defaults to 0.
      * 
      */
-    public Output</* @Nullable */ Integer> instanceCount() {
-        return this.instanceCount;
+    public Output<Optional<Integer>> instanceCount() {
+        return Codegen.optional(this.instanceCount);
     }
     /**
      * The EC2 instance type for all instances in the instance group. Changing this forces a new resource to be created.

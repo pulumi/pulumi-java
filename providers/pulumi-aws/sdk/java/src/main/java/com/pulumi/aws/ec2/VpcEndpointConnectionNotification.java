@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -98,8 +99,8 @@ public class VpcEndpointConnectionNotification extends com.pulumi.resources.Cust
      * @return The ID of the VPC Endpoint to receive notifications for.
      * 
      */
-    public Output</* @Nullable */ String> vpcEndpointId() {
-        return this.vpcEndpointId;
+    public Output<Optional<String>> vpcEndpointId() {
+        return Codegen.optional(this.vpcEndpointId);
     }
     /**
      * The ID of the VPC Endpoint Service to receive notifications for.
@@ -112,8 +113,8 @@ public class VpcEndpointConnectionNotification extends com.pulumi.resources.Cust
      * @return The ID of the VPC Endpoint Service to receive notifications for.
      * 
      */
-    public Output</* @Nullable */ String> vpcEndpointServiceId() {
-        return this.vpcEndpointServiceId;
+    public Output<Optional<String>> vpcEndpointServiceId() {
+        return Codegen.optional(this.vpcEndpointServiceId);
     }
 
     /**

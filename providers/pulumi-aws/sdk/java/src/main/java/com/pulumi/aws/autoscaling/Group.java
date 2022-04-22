@@ -21,6 +21,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -149,8 +150,8 @@ public class Group extends com.pulumi.resources.CustomResource {
      * @return Indicates whether capacity rebalance is enabled. Otherwise, capacity rebalance is disabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> capacityRebalance() {
-        return this.capacityRebalance;
+    public Output<Optional<Boolean>> capacityRebalance() {
+        return Codegen.optional(this.capacityRebalance);
     }
     /**
      * The amount of time, in seconds, after a scaling activity completes before another scaling activity can start.
@@ -195,8 +196,8 @@ public class Group extends com.pulumi.resources.CustomResource {
      * @return A list of metrics to collect. The allowed values are defined by the [underlying AWS API](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_EnableMetricsCollection.html).
      * 
      */
-    public Output</* @Nullable */ List<String>> enabledMetrics() {
-        return this.enabledMetrics;
+    public Output<Optional<List<String>>> enabledMetrics() {
+        return Codegen.optional(this.enabledMetrics);
     }
     /**
      * Allows deleting the Auto Scaling Group without waiting
@@ -217,14 +218,14 @@ public class Group extends com.pulumi.resources.CustomResource {
      * behavior and potentially leaves resources dangling.
      * 
      */
-    public Output</* @Nullable */ Boolean> forceDelete() {
-        return this.forceDelete;
+    public Output<Optional<Boolean>> forceDelete() {
+        return Codegen.optional(this.forceDelete);
     }
     @Export(name="forceDeleteWarmPool", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> forceDeleteWarmPool;
 
-    public Output</* @Nullable */ Boolean> forceDeleteWarmPool() {
-        return this.forceDeleteWarmPool;
+    public Output<Optional<Boolean>> forceDeleteWarmPool() {
+        return Codegen.optional(this.forceDeleteWarmPool);
     }
     /**
      * Time (in seconds) after instance comes into service before checking health.
@@ -237,8 +238,8 @@ public class Group extends com.pulumi.resources.CustomResource {
      * @return Time (in seconds) after instance comes into service before checking health.
      * 
      */
-    public Output</* @Nullable */ Integer> healthCheckGracePeriod() {
-        return this.healthCheckGracePeriod;
+    public Output<Optional<Integer>> healthCheckGracePeriod() {
+        return Codegen.optional(this.healthCheckGracePeriod);
     }
     /**
      * &#34;EC2&#34; or &#34;ELB&#34;. Controls how health checking is done.
@@ -277,8 +278,8 @@ public class Group extends com.pulumi.resources.CustomResource {
      * a new Auto Scaling Group. For all other use-cases, please use `aws.autoscaling.LifecycleHook` resource.
      * 
      */
-    public Output</* @Nullable */ List<GroupInitialLifecycleHook>> initialLifecycleHooks() {
-        return this.initialLifecycleHooks;
+    public Output<Optional<List<GroupInitialLifecycleHook>>> initialLifecycleHooks() {
+        return Codegen.optional(this.initialLifecycleHooks);
     }
     /**
      * If this block is configured, start an
@@ -295,8 +296,8 @@ public class Group extends com.pulumi.resources.CustomResource {
      * when this Auto Scaling Group is updated. Defined below.
      * 
      */
-    public Output</* @Nullable */ GroupInstanceRefresh> instanceRefresh() {
-        return this.instanceRefresh;
+    public Output<Optional<GroupInstanceRefresh>> instanceRefresh() {
+        return Codegen.optional(this.instanceRefresh);
     }
     /**
      * The name of the launch configuration to use.
@@ -309,8 +310,8 @@ public class Group extends com.pulumi.resources.CustomResource {
      * @return The name of the launch configuration to use.
      * 
      */
-    public Output</* @Nullable */ String> launchConfiguration() {
-        return this.launchConfiguration;
+    public Output<Optional<String>> launchConfiguration() {
+        return Codegen.optional(this.launchConfiguration);
     }
     /**
      * Nested argument containing launch template settings along with the overrides to specify multiple instance types and weights. Defined below.
@@ -323,8 +324,8 @@ public class Group extends com.pulumi.resources.CustomResource {
      * @return Nested argument containing launch template settings along with the overrides to specify multiple instance types and weights. Defined below.
      * 
      */
-    public Output</* @Nullable */ GroupLaunchTemplate> launchTemplate() {
-        return this.launchTemplate;
+    public Output<Optional<GroupLaunchTemplate>> launchTemplate() {
+        return Codegen.optional(this.launchTemplate);
     }
     /**
      * A list of elastic load balancer names to add to the autoscaling
@@ -339,8 +340,8 @@ public class Group extends com.pulumi.resources.CustomResource {
      * group names. Only valid for classic load balancers. For ALBs, use `target_group_arns` instead.
      * 
      */
-    public Output</* @Nullable */ List<String>> loadBalancers() {
-        return this.loadBalancers;
+    public Output<Optional<List<String>>> loadBalancers() {
+        return Codegen.optional(this.loadBalancers);
     }
     /**
      * The maximum amount of time, in seconds, that an instance can be in service, values must be either equal to 0 or between 86400 and 31536000 seconds.
@@ -353,8 +354,8 @@ public class Group extends com.pulumi.resources.CustomResource {
      * @return The maximum amount of time, in seconds, that an instance can be in service, values must be either equal to 0 or between 86400 and 31536000 seconds.
      * 
      */
-    public Output</* @Nullable */ Integer> maxInstanceLifetime() {
-        return this.maxInstanceLifetime;
+    public Output<Optional<Integer>> maxInstanceLifetime() {
+        return Codegen.optional(this.maxInstanceLifetime);
     }
     /**
      * The maximum size of the Auto Scaling Group.
@@ -381,8 +382,8 @@ public class Group extends com.pulumi.resources.CustomResource {
      * @return The granularity to associate with the metrics to collect. The only valid value is `1Minute`. Default is `1Minute`.
      * 
      */
-    public Output</* @Nullable */ String> metricsGranularity() {
-        return this.metricsGranularity;
+    public Output<Optional<String>> metricsGranularity() {
+        return Codegen.optional(this.metricsGranularity);
     }
     /**
      * Setting this causes the provider to wait for
@@ -401,8 +402,8 @@ public class Group extends com.pulumi.resources.CustomResource {
      * (See also Waiting for Capacity below.)
      * 
      */
-    public Output</* @Nullable */ Integer> minElbCapacity() {
-        return this.minElbCapacity;
+    public Output<Optional<Integer>> minElbCapacity() {
+        return Codegen.optional(this.minElbCapacity);
     }
     /**
      * Specifies the minimum number of instances to maintain in the warm pool. This helps you to ensure that there is always a certain number of warmed instances available to handle traffic spikes. Defaults to 0 if not specified.
@@ -429,8 +430,8 @@ public class Group extends com.pulumi.resources.CustomResource {
      * @return Configuration block containing settings to define launch targets for Auto Scaling groups. See Mixed Instances Policy below for more details.
      * 
      */
-    public Output</* @Nullable */ GroupMixedInstancesPolicy> mixedInstancesPolicy() {
-        return this.mixedInstancesPolicy;
+    public Output<Optional<GroupMixedInstancesPolicy>> mixedInstancesPolicy() {
+        return Codegen.optional(this.mixedInstancesPolicy);
     }
     /**
      * The name of the Auto Scaling Group. By default generated by this provider. Conflicts with `name_prefix`.
@@ -473,8 +474,8 @@ public class Group extends com.pulumi.resources.CustomResource {
      * @return The name of the placement group into which you&#39;ll launch your instances, if any.
      * 
      */
-    public Output</* @Nullable */ String> placementGroup() {
-        return this.placementGroup;
+    public Output<Optional<String>> placementGroup() {
+        return Codegen.optional(this.placementGroup);
     }
     /**
      * Allows setting instance protection. The
@@ -491,8 +492,8 @@ public class Group extends com.pulumi.resources.CustomResource {
      * during scale in events.
      * 
      */
-    public Output</* @Nullable */ Boolean> protectFromScaleIn() {
-        return this.protectFromScaleIn;
+    public Output<Optional<Boolean>> protectFromScaleIn() {
+        return Codegen.optional(this.protectFromScaleIn);
     }
     /**
      * The ARN of the service-linked role that the ASG will use to call other AWS services
@@ -521,8 +522,8 @@ public class Group extends com.pulumi.resources.CustomResource {
      * Note that if you suspend either the `Launch` or `Terminate` process types, it can prevent your Auto Scaling Group from functioning properly.
      * 
      */
-    public Output</* @Nullable */ List<String>> suspendedProcesses() {
-        return this.suspendedProcesses;
+    public Output<Optional<List<String>>> suspendedProcesses() {
+        return Codegen.optional(this.suspendedProcesses);
     }
     /**
      * Configuration block(s) containing resource tags. Conflicts with `tags_collection`. Documented below.
@@ -535,8 +536,8 @@ public class Group extends com.pulumi.resources.CustomResource {
      * @return Configuration block(s) containing resource tags. Conflicts with `tags_collection`. Documented below.
      * 
      */
-    public Output</* @Nullable */ List<GroupTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<GroupTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Set of maps containing resource tags. Conflicts with `tag`. Documented below.
@@ -549,8 +550,8 @@ public class Group extends com.pulumi.resources.CustomResource {
      * @return Set of maps containing resource tags. Conflicts with `tag`. Documented below.
      * 
      */
-    public Output</* @Nullable */ List<Map<String,String>>> tagsCollection() {
-        return this.tagsCollection;
+    public Output<Optional<List<Map<String,String>>>> tagsCollection() {
+        return Codegen.optional(this.tagsCollection);
     }
     /**
      * A set of `aws.alb.TargetGroup` ARNs, for use with Application or Network Load Balancing.
@@ -563,8 +564,8 @@ public class Group extends com.pulumi.resources.CustomResource {
      * @return A set of `aws.alb.TargetGroup` ARNs, for use with Application or Network Load Balancing.
      * 
      */
-    public Output</* @Nullable */ List<String>> targetGroupArns() {
-        return this.targetGroupArns;
+    public Output<Optional<List<String>>> targetGroupArns() {
+        return Codegen.optional(this.targetGroupArns);
     }
     /**
      * A list of policies to decide how the instances in the Auto Scaling Group should be terminated. The allowed values are `OldestInstance`, `NewestInstance`, `OldestLaunchConfiguration`, `ClosestToNextInstanceHour`, `OldestLaunchTemplate`, `AllocationStrategy`, `Default`.
@@ -577,8 +578,8 @@ public class Group extends com.pulumi.resources.CustomResource {
      * @return A list of policies to decide how the instances in the Auto Scaling Group should be terminated. The allowed values are `OldestInstance`, `NewestInstance`, `OldestLaunchConfiguration`, `ClosestToNextInstanceHour`, `OldestLaunchTemplate`, `AllocationStrategy`, `Default`.
      * 
      */
-    public Output</* @Nullable */ List<String>> terminationPolicies() {
-        return this.terminationPolicies;
+    public Output<Optional<List<String>>> terminationPolicies() {
+        return Codegen.optional(this.terminationPolicies);
     }
     /**
      * A list of subnet IDs to launch resources in. Subnets automatically determine which availability zones the group will reside. Conflicts with `availability_zones`.
@@ -613,8 +614,8 @@ public class Group extends com.pulumi.resources.CustomResource {
      * this provider to skip all Capacity Waiting behavior.
      * 
      */
-    public Output</* @Nullable */ String> waitForCapacityTimeout() {
-        return this.waitForCapacityTimeout;
+    public Output<Optional<String>> waitForCapacityTimeout() {
+        return Codegen.optional(this.waitForCapacityTimeout);
     }
     /**
      * Setting this will cause the provider to wait
@@ -635,8 +636,8 @@ public class Group extends com.pulumi.resources.CustomResource {
      * (See also Waiting for Capacity below.)
      * 
      */
-    public Output</* @Nullable */ Integer> waitForElbCapacity() {
-        return this.waitForElbCapacity;
+    public Output<Optional<Integer>> waitForElbCapacity() {
+        return Codegen.optional(this.waitForElbCapacity);
     }
     /**
      * If this block is configured, add a [Warm Pool](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-warm-pools.html)
@@ -651,8 +652,8 @@ public class Group extends com.pulumi.resources.CustomResource {
      * to the specified Auto Scaling group. Defined below
      * 
      */
-    public Output</* @Nullable */ GroupWarmPool> warmPool() {
-        return this.warmPool;
+    public Output<Optional<GroupWarmPool>> warmPool() {
+        return Codegen.optional(this.warmPool);
     }
 
     /**

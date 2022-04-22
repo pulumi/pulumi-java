@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -56,8 +57,8 @@ public class FieldLevelEncryptionConfig extends com.pulumi.resources.CustomResou
      * @return An optional comment about the Field Level Encryption Config.
      * 
      */
-    public Output</* @Nullable */ String> comment() {
-        return this.comment;
+    public Output<Optional<String>> comment() {
+        return Codegen.optional(this.comment);
     }
     /**
      * Content Type Profile Config specifies when to forward content if a content type isn&#39;t recognized and profiles to use as by default in a request if a query argument doesn&#39;t specify a profile to use.

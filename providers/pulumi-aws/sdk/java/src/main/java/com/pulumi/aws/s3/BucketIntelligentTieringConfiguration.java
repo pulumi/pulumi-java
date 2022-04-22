@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -57,8 +58,8 @@ public class BucketIntelligentTieringConfiguration extends com.pulumi.resources.
      * @return A bucket filter. The configuration only includes objects that meet the filter&#39;s criteria (documented below).
      * 
      */
-    public Output</* @Nullable */ BucketIntelligentTieringConfigurationFilter> filter() {
-        return this.filter;
+    public Output<Optional<BucketIntelligentTieringConfigurationFilter>> filter() {
+        return Codegen.optional(this.filter);
     }
     /**
      * The unique name used to identify the S3 Intelligent-Tiering configuration for the bucket.
@@ -85,8 +86,8 @@ public class BucketIntelligentTieringConfiguration extends com.pulumi.resources.
      * @return Specifies the status of the configuration. Valid values: `Enabled`, `Disabled`.
      * 
      */
-    public Output</* @Nullable */ String> status() {
-        return this.status;
+    public Output<Optional<String>> status() {
+        return Codegen.optional(this.status);
     }
     /**
      * The S3 Intelligent-Tiering storage class tiers of the configuration (documented below).

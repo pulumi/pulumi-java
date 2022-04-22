@@ -16,6 +16,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -76,8 +77,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return A CloudWatch log stream to monitor application configuration errors.
      * 
      */
-    public Output</* @Nullable */ ApplicationCloudwatchLoggingOptions> cloudwatchLoggingOptions() {
-        return this.cloudwatchLoggingOptions;
+    public Output<Optional<ApplicationCloudwatchLoggingOptions>> cloudwatchLoggingOptions() {
+        return Codegen.optional(this.cloudwatchLoggingOptions);
     }
     /**
      * The current timestamp when the application was created.
@@ -104,8 +105,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return A summary description of the application.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Whether to force stop an unresponsive Flink-based application.
@@ -118,8 +119,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return Whether to force stop an unresponsive Flink-based application.
      * 
      */
-    public Output</* @Nullable */ Boolean> forceStop() {
-        return this.forceStop;
+    public Output<Optional<Boolean>> forceStop() {
+        return Codegen.optional(this.forceStop);
     }
     /**
      * The current timestamp when the application was last updated.
@@ -188,8 +189,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return Whether to start or stop the application.
      * 
      */
-    public Output</* @Nullable */ Boolean> startApplication() {
-        return this.startApplication;
+    public Output<Optional<Boolean>> startApplication() {
+        return Codegen.optional(this.startApplication);
     }
     /**
      * The status of the application.
@@ -216,8 +217,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the application. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.

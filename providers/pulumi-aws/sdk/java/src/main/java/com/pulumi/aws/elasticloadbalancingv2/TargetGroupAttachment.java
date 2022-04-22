@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class TargetGroupAttachment extends com.pulumi.resources.CustomResource {
      * @return The Availability Zone where the IP address of the target is to be registered. If the private ip address is outside of the VPC scope, this value must be set to &#39;all&#39;.
      * 
      */
-    public Output</* @Nullable */ String> availabilityZone() {
-        return this.availabilityZone;
+    public Output<Optional<String>> availabilityZone() {
+        return Codegen.optional(this.availabilityZone);
     }
     /**
      * The port on which targets receive traffic.
@@ -58,8 +59,8 @@ public class TargetGroupAttachment extends com.pulumi.resources.CustomResource {
      * @return The port on which targets receive traffic.
      * 
      */
-    public Output</* @Nullable */ Integer> port() {
-        return this.port;
+    public Output<Optional<Integer>> port() {
+        return Codegen.optional(this.port);
     }
     /**
      * The ARN of the target group with which to register targets

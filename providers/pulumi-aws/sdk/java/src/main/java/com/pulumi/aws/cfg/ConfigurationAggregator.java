@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class ConfigurationAggregator extends com.pulumi.resources.CustomResource
      * @return The account(s) to aggregate config data from as documented below.
      * 
      */
-    public Output</* @Nullable */ ConfigurationAggregatorAccountAggregationSource> accountAggregationSource() {
-        return this.accountAggregationSource;
+    public Output<Optional<ConfigurationAggregatorAccountAggregationSource>> accountAggregationSource() {
+        return Codegen.optional(this.accountAggregationSource);
     }
     /**
      * The ARN of the aggregator
@@ -85,8 +86,8 @@ public class ConfigurationAggregator extends com.pulumi.resources.CustomResource
      * @return The organization to aggregate config data from as documented below.
      * 
      */
-    public Output</* @Nullable */ ConfigurationAggregatorOrganizationAggregationSource> organizationAggregationSource() {
-        return this.organizationAggregationSource;
+    public Output<Optional<ConfigurationAggregatorOrganizationAggregationSource>> organizationAggregationSource() {
+        return Codegen.optional(this.organizationAggregationSource);
     }
     /**
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -99,8 +100,8 @@ public class ConfigurationAggregator extends com.pulumi.resources.CustomResource
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

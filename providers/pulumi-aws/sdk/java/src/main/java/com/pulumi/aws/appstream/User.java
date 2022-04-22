@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -83,8 +84,8 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return Specifies whether the user in the user pool is enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> enabled() {
-        return this.enabled;
+    public Output<Optional<Boolean>> enabled() {
+        return Codegen.optional(this.enabled);
     }
     /**
      * First name, or given name, of the user.
@@ -97,8 +98,8 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return First name, or given name, of the user.
      * 
      */
-    public Output</* @Nullable */ String> firstName() {
-        return this.firstName;
+    public Output<Optional<String>> firstName() {
+        return Codegen.optional(this.firstName);
     }
     /**
      * Last name, or surname, of the user.
@@ -111,8 +112,8 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return Last name, or surname, of the user.
      * 
      */
-    public Output</* @Nullable */ String> lastName() {
-        return this.lastName;
+    public Output<Optional<String>> lastName() {
+        return Codegen.optional(this.lastName);
     }
     /**
      * Send an email notification.
@@ -125,8 +126,8 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return Send an email notification.
      * 
      */
-    public Output</* @Nullable */ Boolean> sendEmailNotification() {
-        return this.sendEmailNotification;
+    public Output<Optional<Boolean>> sendEmailNotification() {
+        return Codegen.optional(this.sendEmailNotification);
     }
     /**
      * Email address of the user.

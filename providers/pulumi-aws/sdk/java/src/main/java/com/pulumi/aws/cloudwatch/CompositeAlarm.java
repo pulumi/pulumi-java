@@ -14,6 +14,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class CompositeAlarm extends com.pulumi.resources.CustomResource {
      * @return Indicates whether actions should be executed during any changes to the alarm state of the composite alarm. Defaults to `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> actionsEnabled() {
-        return this.actionsEnabled;
+    public Output<Optional<Boolean>> actionsEnabled() {
+        return Codegen.optional(this.actionsEnabled);
     }
     /**
      * The set of actions to execute when this alarm transitions to the `ALARM` state from any other state. Each action is specified as an ARN. Up to 5 actions are allowed.
@@ -59,8 +60,8 @@ public class CompositeAlarm extends com.pulumi.resources.CustomResource {
      * @return The set of actions to execute when this alarm transitions to the `ALARM` state from any other state. Each action is specified as an ARN. Up to 5 actions are allowed.
      * 
      */
-    public Output</* @Nullable */ List<String>> alarmActions() {
-        return this.alarmActions;
+    public Output<Optional<List<String>>> alarmActions() {
+        return Codegen.optional(this.alarmActions);
     }
     /**
      * The description for the composite alarm.
@@ -73,8 +74,8 @@ public class CompositeAlarm extends com.pulumi.resources.CustomResource {
      * @return The description for the composite alarm.
      * 
      */
-    public Output</* @Nullable */ String> alarmDescription() {
-        return this.alarmDescription;
+    public Output<Optional<String>> alarmDescription() {
+        return Codegen.optional(this.alarmDescription);
     }
     /**
      * The name for the composite alarm. This name must be unique within the region.
@@ -129,8 +130,8 @@ public class CompositeAlarm extends com.pulumi.resources.CustomResource {
      * @return The set of actions to execute when this alarm transitions to the `INSUFFICIENT_DATA` state from any other state. Each action is specified as an ARN. Up to 5 actions are allowed.
      * 
      */
-    public Output</* @Nullable */ List<String>> insufficientDataActions() {
-        return this.insufficientDataActions;
+    public Output<Optional<List<String>>> insufficientDataActions() {
+        return Codegen.optional(this.insufficientDataActions);
     }
     /**
      * The set of actions to execute when this alarm transitions to an `OK` state from any other state. Each action is specified as an ARN. Up to 5 actions are allowed.
@@ -143,8 +144,8 @@ public class CompositeAlarm extends com.pulumi.resources.CustomResource {
      * @return The set of actions to execute when this alarm transitions to an `OK` state from any other state. Each action is specified as an ARN. Up to 5 actions are allowed.
      * 
      */
-    public Output</* @Nullable */ List<String>> okActions() {
-        return this.okActions;
+    public Output<Optional<List<String>>> okActions() {
+        return Codegen.optional(this.okActions);
     }
     /**
      * A map of tags to associate with the alarm. Up to 50 tags are allowed. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -157,8 +158,8 @@ public class CompositeAlarm extends com.pulumi.resources.CustomResource {
      * @return A map of tags to associate with the alarm. Up to 50 tags are allowed. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

@@ -15,6 +15,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -102,8 +103,8 @@ public class LustreFileSystem extends com.pulumi.resources.CustomResource {
      * @return The ID of the source backup to create the filesystem from.
      * 
      */
-    public Output</* @Nullable */ String> backupId() {
-        return this.backupId;
+    public Output<Optional<String>> backupId() {
+        return Codegen.optional(this.backupId);
     }
     /**
      * A boolean flag indicating whether tags for the file system should be copied to backups. Applicable for `PERSISTENT_1` and `PERSISTENT_2` deployment_type. The default value is false.
@@ -116,8 +117,8 @@ public class LustreFileSystem extends com.pulumi.resources.CustomResource {
      * @return A boolean flag indicating whether tags for the file system should be copied to backups. Applicable for `PERSISTENT_1` and `PERSISTENT_2` deployment_type. The default value is false.
      * 
      */
-    public Output</* @Nullable */ Boolean> copyTagsToBackups() {
-        return this.copyTagsToBackups;
+    public Output<Optional<Boolean>> copyTagsToBackups() {
+        return Codegen.optional(this.copyTagsToBackups);
     }
     /**
      * A recurring daily time, in the format HH:MM. HH is the zero-padded hour of the day (0-23), and MM is the zero-padded minute of the hour. For example, 05:00 specifies 5 AM daily. only valid for `PERSISTENT_1` and `PERSISTENT_2` deployment_type. Requires `automatic_backup_retention_days` to be set.
@@ -144,8 +145,8 @@ public class LustreFileSystem extends com.pulumi.resources.CustomResource {
      * @return Sets the data compression configuration for the file system. Valid values are `LZ4` and `NONE`. Default value is `NONE`. Unsetting this value reverts the compression type back to `NONE`.
      * 
      */
-    public Output</* @Nullable */ String> dataCompressionType() {
-        return this.dataCompressionType;
+    public Output<Optional<String>> dataCompressionType() {
+        return Codegen.optional(this.dataCompressionType);
     }
     /**
      * - The filesystem deployment type. One of: `SCRATCH_1`, `SCRATCH_2`, `PERSISTENT_1`, `PERSISTENT_2`.
@@ -158,8 +159,8 @@ public class LustreFileSystem extends com.pulumi.resources.CustomResource {
      * @return - The filesystem deployment type. One of: `SCRATCH_1`, `SCRATCH_2`, `PERSISTENT_1`, `PERSISTENT_2`.
      * 
      */
-    public Output</* @Nullable */ String> deploymentType() {
-        return this.deploymentType;
+    public Output<Optional<String>> deploymentType() {
+        return Codegen.optional(this.deploymentType);
     }
     /**
      * DNS name for the file system, e.g., `fs-12345678.fsx.us-west-2.amazonaws.com`
@@ -186,8 +187,8 @@ public class LustreFileSystem extends com.pulumi.resources.CustomResource {
      * @return - The type of drive cache used by `PERSISTENT_1` filesystems that are provisioned with `HDD` storage_type. Required for `HDD` storage_type, set to either `READ` or `NONE`.
      * 
      */
-    public Output</* @Nullable */ String> driveCacheType() {
-        return this.driveCacheType;
+    public Output<Optional<String>> driveCacheType() {
+        return Codegen.optional(this.driveCacheType);
     }
     /**
      * S3 URI (with optional prefix) where the root of your Amazon FSx file system is exported. Can only be specified with `import_path` argument and the path must use the same Amazon S3 bucket as specified in `import_path`. Set equal to `import_path` to overwrite files on export. Defaults to `s3://{IMPORT BUCKET}/FSxLustre{CREATION TIMESTAMP}`. Only supported on `PERSISTENT_1` deployment types.
@@ -228,8 +229,8 @@ public class LustreFileSystem extends com.pulumi.resources.CustomResource {
      * @return S3 URI (with optional prefix) that you&#39;re using as the data repository for your FSx for Lustre file system. For example, `s3://example-bucket/optional-prefix/`. Only supported on `PERSISTENT_1` deployment types.
      * 
      */
-    public Output</* @Nullable */ String> importPath() {
-        return this.importPath;
+    public Output<Optional<String>> importPath() {
+        return Codegen.optional(this.importPath);
     }
     /**
      * For files imported from a data repository, this value determines the stripe count and maximum amount of data per file (in MiB) stored on a single physical disk. Can only be specified with `import_path` argument. Defaults to `1024`. Minimum of `1` and maximum of `512000`. Only supported on `PERSISTENT_1` deployment types.
@@ -312,8 +313,8 @@ public class LustreFileSystem extends com.pulumi.resources.CustomResource {
      * @return - Describes the amount of read and write throughput for each 1 tebibyte of storage, in MB/s/TiB, required for the `PERSISTENT_1` and `PERSISTENT_2` deployment_type. Valid values for `PERSISTENT_1` deployment_type and `SSD` storage_type are 50, 100, 200. Valid values for `PERSISTENT_1` deployment_type and `HDD` storage_type are 12, 40. Valid values for `PERSISTENT_2` deployment_type and `  SSD ` storage_type are 125, 250, 500, 1000.
      * 
      */
-    public Output</* @Nullable */ Integer> perUnitStorageThroughput() {
-        return this.perUnitStorageThroughput;
+    public Output<Optional<Integer>> perUnitStorageThroughput() {
+        return Codegen.optional(this.perUnitStorageThroughput);
     }
     /**
      * A list of IDs for the security groups that apply to the specified network interfaces created for file system access. These security groups will apply to all network interfaces.
@@ -326,8 +327,8 @@ public class LustreFileSystem extends com.pulumi.resources.CustomResource {
      * @return A list of IDs for the security groups that apply to the specified network interfaces created for file system access. These security groups will apply to all network interfaces.
      * 
      */
-    public Output</* @Nullable */ List<String>> securityGroupIds() {
-        return this.securityGroupIds;
+    public Output<Optional<List<String>>> securityGroupIds() {
+        return Codegen.optional(this.securityGroupIds);
     }
     /**
      * The storage capacity (GiB) of the file system. Minimum of `1200`. See more details at [Allowed values for Fsx storage capacity](https://docs.aws.amazon.com/fsx/latest/APIReference/API_CreateFileSystem.html#FSx-CreateFileSystem-request-StorageCapacity). Update is allowed only for `SCRATCH_2`, `PERSISTENT_1` and `PERSISTENT_2` deployment types, See more details at [Fsx Storage Capacity Update](https://docs.aws.amazon.com/fsx/latest/APIReference/API_UpdateFileSystem.html#FSx-UpdateFileSystem-request-StorageCapacity). Required when not creating filesystem for a backup.
@@ -340,8 +341,8 @@ public class LustreFileSystem extends com.pulumi.resources.CustomResource {
      * @return The storage capacity (GiB) of the file system. Minimum of `1200`. See more details at [Allowed values for Fsx storage capacity](https://docs.aws.amazon.com/fsx/latest/APIReference/API_CreateFileSystem.html#FSx-CreateFileSystem-request-StorageCapacity). Update is allowed only for `SCRATCH_2`, `PERSISTENT_1` and `PERSISTENT_2` deployment types, See more details at [Fsx Storage Capacity Update](https://docs.aws.amazon.com/fsx/latest/APIReference/API_UpdateFileSystem.html#FSx-UpdateFileSystem-request-StorageCapacity). Required when not creating filesystem for a backup.
      * 
      */
-    public Output</* @Nullable */ Integer> storageCapacity() {
-        return this.storageCapacity;
+    public Output<Optional<Integer>> storageCapacity() {
+        return Codegen.optional(this.storageCapacity);
     }
     /**
      * - The filesystem storage type. Either `SSD` or `HDD`, defaults to `SSD`. `HDD` is only supported on `PERSISTENT_1` deployment types.
@@ -354,8 +355,8 @@ public class LustreFileSystem extends com.pulumi.resources.CustomResource {
      * @return - The filesystem storage type. Either `SSD` or `HDD`, defaults to `SSD`. `HDD` is only supported on `PERSISTENT_1` deployment types.
      * 
      */
-    public Output</* @Nullable */ String> storageType() {
-        return this.storageType;
+    public Output<Optional<String>> storageType() {
+        return Codegen.optional(this.storageType);
     }
     /**
      * A list of IDs for the subnets that the file system will be accessible from. File systems currently support only one subnet. The file server is also launched in that subnet&#39;s Availability Zone.
@@ -382,8 +383,8 @@ public class LustreFileSystem extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the file system. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

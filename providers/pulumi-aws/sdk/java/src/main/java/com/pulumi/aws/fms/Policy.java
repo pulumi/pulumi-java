@@ -17,6 +17,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -52,8 +53,8 @@ public class Policy extends com.pulumi.resources.CustomResource {
      * @return If true, the request will also perform a clean-up process. Defaults to `true`. More information can be found here [AWS Firewall Manager delete policy](https://docs.aws.amazon.com/fms/2018-01-01/APIReference/API_DeletePolicy.html)
      * 
      */
-    public Output</* @Nullable */ Boolean> deleteAllPolicyResources() {
-        return this.deleteAllPolicyResources;
+    public Output<Optional<Boolean>> deleteAllPolicyResources() {
+        return Codegen.optional(this.deleteAllPolicyResources);
     }
     /**
      * A map of lists of accounts and OU&#39;s to exclude from the policy.
@@ -66,8 +67,8 @@ public class Policy extends com.pulumi.resources.CustomResource {
      * @return A map of lists of accounts and OU&#39;s to exclude from the policy.
      * 
      */
-    public Output</* @Nullable */ PolicyExcludeMap> excludeMap() {
-        return this.excludeMap;
+    public Output<Optional<PolicyExcludeMap>> excludeMap() {
+        return Codegen.optional(this.excludeMap);
     }
     /**
      * A boolean value, if true the tags that are specified in the `resource_tags` are not protected by this policy. If set to false and resource_tags are populated, resources that contain tags will be protected by this policy.
@@ -94,8 +95,8 @@ public class Policy extends com.pulumi.resources.CustomResource {
      * @return A map of lists of accounts and OU&#39;s to include in the policy.
      * 
      */
-    public Output</* @Nullable */ PolicyIncludeMap> includeMap() {
-        return this.includeMap;
+    public Output<Optional<PolicyIncludeMap>> includeMap() {
+        return Codegen.optional(this.includeMap);
     }
     /**
      * The friendly name of the AWS Firewall Manager Policy.
@@ -136,8 +137,8 @@ public class Policy extends com.pulumi.resources.CustomResource {
      * @return A boolean value, indicates if the policy should automatically applied to resources that already exist in the account.
      * 
      */
-    public Output</* @Nullable */ Boolean> remediationEnabled() {
-        return this.remediationEnabled;
+    public Output<Optional<Boolean>> remediationEnabled() {
+        return Codegen.optional(this.remediationEnabled);
     }
     /**
      * A map of resource tags, that if present will filter protections on resources based on the exclude_resource_tags.
@@ -150,8 +151,8 @@ public class Policy extends com.pulumi.resources.CustomResource {
      * @return A map of resource tags, that if present will filter protections on resources based on the exclude_resource_tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> resourceTags() {
-        return this.resourceTags;
+    public Output<Optional<Map<String,String>>> resourceTags() {
+        return Codegen.optional(this.resourceTags);
     }
     /**
      * A resource type to protect. Conflicts with `resource_type_list`. See the [FMS API Reference](https://docs.aws.amazon.com/fms/2018-01-01/APIReference/API_Policy.html#fms-Type-Policy-ResourceType) for more information about supported values.

@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -58,14 +59,14 @@ public class Repository extends com.pulumi.resources.CustomResource {
      * @return Catalog data configuration for the repository. See below for schema.
      * 
      */
-    public Output</* @Nullable */ RepositoryCatalogData> catalogData() {
-        return this.catalogData;
+    public Output<Optional<RepositoryCatalogData>> catalogData() {
+        return Codegen.optional(this.catalogData);
     }
     @Export(name="forceDestroy", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> forceDestroy;
 
-    public Output</* @Nullable */ Boolean> forceDestroy() {
-        return this.forceDestroy;
+    public Output<Optional<Boolean>> forceDestroy() {
+        return Codegen.optional(this.forceDestroy);
     }
     /**
      * The registry ID where the repository was created.

@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -50,8 +51,8 @@ public class Ciphertext extends com.pulumi.resources.CustomResource {
      * @return An optional mapping that makes up the encryption context.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> context() {
-        return this.context;
+    public Output<Optional<Map<String,String>>> context() {
+        return Codegen.optional(this.context);
     }
     /**
      * Globally unique key ID for the customer master key.

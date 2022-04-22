@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -56,8 +57,8 @@ public class Listener extends com.pulumi.resources.CustomResource {
      * @return Direct all requests from a user to the same endpoint. Valid values are `NONE`, `SOURCE_IP`. Default: `NONE`. If `NONE`, Global Accelerator uses the &#34;five-tuple&#34; properties of source IP address, source port, destination IP address, destination port, and protocol to select the hash value. If `SOURCE_IP`, Global Accelerator uses the &#34;two-tuple&#34; properties of source (client) IP address and destination IP address to select the hash value.
      * 
      */
-    public Output</* @Nullable */ String> clientAffinity() {
-        return this.clientAffinity;
+    public Output<Optional<String>> clientAffinity() {
+        return Codegen.optional(this.clientAffinity);
     }
     /**
      * The list of port ranges for the connections from clients to the accelerator. Fields documented below.

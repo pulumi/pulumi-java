@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -55,8 +56,8 @@ public class UserStackAssociation extends com.pulumi.resources.CustomResource {
      * @return Specifies whether a welcome email is sent to a user after the user is created in the user pool.
      * 
      */
-    public Output</* @Nullable */ Boolean> sendEmailNotification() {
-        return this.sendEmailNotification;
+    public Output<Optional<Boolean>> sendEmailNotification() {
+        return Codegen.optional(this.sendEmailNotification);
     }
     /**
      * Name of the stack that is associated with the user.

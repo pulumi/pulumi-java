@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -86,8 +87,8 @@ public class ApplicationVersion extends com.pulumi.resources.CustomResource {
      * @return Short description of the Application Version.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * On delete, force an Application Version to be deleted when it may be in use by multiple Elastic Beanstalk Environments.
@@ -100,8 +101,8 @@ public class ApplicationVersion extends com.pulumi.resources.CustomResource {
      * @return On delete, force an Application Version to be deleted when it may be in use by multiple Elastic Beanstalk Environments.
      * 
      */
-    public Output</* @Nullable */ Boolean> forceDelete() {
-        return this.forceDelete;
+    public Output<Optional<Boolean>> forceDelete() {
+        return Codegen.optional(this.forceDelete);
     }
     /**
      * S3 object that is the Application Version source bundle.
@@ -142,8 +143,8 @@ public class ApplicationVersion extends com.pulumi.resources.CustomResource {
      * @return Key-value map of tags for the Elastic Beanstalk Application Version. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;

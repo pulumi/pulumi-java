@@ -14,6 +14,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -63,8 +64,8 @@ public class Key extends com.pulumi.resources.CustomResource {
      * The default value is `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> bypassPolicyLockoutSafetyCheck() {
-        return this.bypassPolicyLockoutSafetyCheck;
+    public Output<Optional<Boolean>> bypassPolicyLockoutSafetyCheck() {
+        return Codegen.optional(this.bypassPolicyLockoutSafetyCheck);
     }
     /**
      * Specifies whether the key contains a symmetric key or an asymmetric key pair and the encryption algorithms or signing algorithms that the key supports.
@@ -79,8 +80,8 @@ public class Key extends com.pulumi.resources.CustomResource {
      * Valid values: `SYMMETRIC_DEFAULT`,  `RSA_2048`, `RSA_3072`, `RSA_4096`, `ECC_NIST_P256`, `ECC_NIST_P384`, `ECC_NIST_P521`, or `ECC_SECG_P256K1`. Defaults to `SYMMETRIC_DEFAULT`. For help with choosing a key spec, see the [AWS KMS Developer Guide](https://docs.aws.amazon.com/kms/latest/developerguide/symm-asymm-choose.html).
      * 
      */
-    public Output</* @Nullable */ String> customerMasterKeySpec() {
-        return this.customerMasterKeySpec;
+    public Output<Optional<String>> customerMasterKeySpec() {
+        return Codegen.optional(this.customerMasterKeySpec);
     }
     /**
      * The waiting period, specified in number of days. After the waiting period ends, AWS KMS deletes the KMS key.
@@ -97,8 +98,8 @@ public class Key extends com.pulumi.resources.CustomResource {
      * If the KMS key is a multi-Region primary key with replicas, the waiting period begins when the last of its replica keys is deleted. Otherwise, the waiting period begins immediately.
      * 
      */
-    public Output</* @Nullable */ Integer> deletionWindowInDays() {
-        return this.deletionWindowInDays;
+    public Output<Optional<Integer>> deletionWindowInDays() {
+        return Codegen.optional(this.deletionWindowInDays);
     }
     /**
      * The description of the key as viewed in AWS console.
@@ -125,8 +126,8 @@ public class Key extends com.pulumi.resources.CustomResource {
      * @return Specifies whether [key rotation](http://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html) is enabled. Defaults to false.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableKeyRotation() {
-        return this.enableKeyRotation;
+    public Output<Optional<Boolean>> enableKeyRotation() {
+        return Codegen.optional(this.enableKeyRotation);
     }
     /**
      * Specifies whether the key is enabled. Defaults to `true`.
@@ -139,8 +140,8 @@ public class Key extends com.pulumi.resources.CustomResource {
      * @return Specifies whether the key is enabled. Defaults to `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> isEnabled() {
-        return this.isEnabled;
+    public Output<Optional<Boolean>> isEnabled() {
+        return Codegen.optional(this.isEnabled);
     }
     /**
      * The globally unique identifier for the key.
@@ -169,8 +170,8 @@ public class Key extends com.pulumi.resources.CustomResource {
      * Defaults to `ENCRYPT_DECRYPT`.
      * 
      */
-    public Output</* @Nullable */ String> keyUsage() {
-        return this.keyUsage;
+    public Output<Optional<String>> keyUsage() {
+        return Codegen.optional(this.keyUsage);
     }
     /**
      * Indicates whether the KMS key is a multi-Region (`true`) or regional (`false`) key. Defaults to `false`.
@@ -211,8 +212,8 @@ public class Key extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the object. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.

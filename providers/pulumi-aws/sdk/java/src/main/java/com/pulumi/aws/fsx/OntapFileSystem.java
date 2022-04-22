@@ -16,6 +16,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -74,8 +75,8 @@ public class OntapFileSystem extends com.pulumi.resources.CustomResource {
      * @return The number of days to retain automatic backups. Setting this to 0 disables automatic backups. You can retain automatic backups for a maximum of 90 days.
      * 
      */
-    public Output</* @Nullable */ Integer> automaticBackupRetentionDays() {
-        return this.automaticBackupRetentionDays;
+    public Output<Optional<Integer>> automaticBackupRetentionDays() {
+        return Codegen.optional(this.automaticBackupRetentionDays);
     }
     /**
      * A recurring daily time, in the format HH:MM. HH is the zero-padded hour of the day (0-23), and MM is the zero-padded minute of the hour. For example, 05:00 specifies 5 AM daily. Requires `automatic_backup_retention_days` to be set.
@@ -172,8 +173,8 @@ public class OntapFileSystem extends com.pulumi.resources.CustomResource {
      * @return The ONTAP administrative password for the fsxadmin user that you can use to administer your file system using the ONTAP CLI and REST API.
      * 
      */
-    public Output</* @Nullable */ String> fsxAdminPassword() {
-        return this.fsxAdminPassword;
+    public Output<Optional<String>> fsxAdminPassword() {
+        return Codegen.optional(this.fsxAdminPassword);
     }
     /**
      * ARN for the KMS Key to encrypt the file system at rest, Defaults to an AWS managed KMS Key.
@@ -256,8 +257,8 @@ public class OntapFileSystem extends com.pulumi.resources.CustomResource {
      * @return A list of IDs for the security groups that apply to the specified network interfaces created for file system access. These security groups will apply to all network interfaces.
      * 
      */
-    public Output</* @Nullable */ List<String>> securityGroupIds() {
-        return this.securityGroupIds;
+    public Output<Optional<List<String>>> securityGroupIds() {
+        return Codegen.optional(this.securityGroupIds);
     }
     /**
      * The storage capacity (GiB) of the file system. Valid values between `1024` and `196608`.
@@ -270,8 +271,8 @@ public class OntapFileSystem extends com.pulumi.resources.CustomResource {
      * @return The storage capacity (GiB) of the file system. Valid values between `1024` and `196608`.
      * 
      */
-    public Output</* @Nullable */ Integer> storageCapacity() {
-        return this.storageCapacity;
+    public Output<Optional<Integer>> storageCapacity() {
+        return Codegen.optional(this.storageCapacity);
     }
     /**
      * - The filesystem storage type. defaults to `SSD`.
@@ -284,8 +285,8 @@ public class OntapFileSystem extends com.pulumi.resources.CustomResource {
      * @return - The filesystem storage type. defaults to `SSD`.
      * 
      */
-    public Output</* @Nullable */ String> storageType() {
-        return this.storageType;
+    public Output<Optional<String>> storageType() {
+        return Codegen.optional(this.storageType);
     }
     /**
      * A list of IDs for the subnets that the file system will be accessible from. Exactly 2 subnets need to be provided.
@@ -312,8 +313,8 @@ public class OntapFileSystem extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the file system. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.

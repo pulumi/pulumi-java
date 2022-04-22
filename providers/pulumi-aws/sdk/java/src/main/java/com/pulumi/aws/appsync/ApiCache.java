@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -70,8 +71,8 @@ public class ApiCache extends com.pulumi.resources.CustomResource {
      * @return At-rest encryption flag for cache. You cannot update this setting after creation.
      * 
      */
-    public Output</* @Nullable */ Boolean> atRestEncryptionEnabled() {
-        return this.atRestEncryptionEnabled;
+    public Output<Optional<Boolean>> atRestEncryptionEnabled() {
+        return Codegen.optional(this.atRestEncryptionEnabled);
     }
     /**
      * Transit encryption flag when connecting to cache. You cannot update this setting after creation.
@@ -84,8 +85,8 @@ public class ApiCache extends com.pulumi.resources.CustomResource {
      * @return Transit encryption flag when connecting to cache. You cannot update this setting after creation.
      * 
      */
-    public Output</* @Nullable */ Boolean> transitEncryptionEnabled() {
-        return this.transitEncryptionEnabled;
+    public Output<Optional<Boolean>> transitEncryptionEnabled() {
+        return Codegen.optional(this.transitEncryptionEnabled);
     }
     /**
      * TTL in seconds for cache entries.

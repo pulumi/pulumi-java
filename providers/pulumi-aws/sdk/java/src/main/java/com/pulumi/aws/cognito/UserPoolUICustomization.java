@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -42,8 +43,8 @@ public class UserPoolUICustomization extends com.pulumi.resources.CustomResource
      * @return The client ID for the client app. Defaults to `ALL`. If `ALL` is specified, the `css` and/or `image_file` settings will be used for every client that has no UI customization set previously.
      * 
      */
-    public Output</* @Nullable */ String> clientId() {
-        return this.clientId;
+    public Output<Optional<String>> clientId() {
+        return Codegen.optional(this.clientId);
     }
     /**
      * The creation date in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) for the UI customization.
@@ -70,8 +71,8 @@ public class UserPoolUICustomization extends com.pulumi.resources.CustomResource
      * @return The CSS values in the UI customization, provided as a String. At least one of `css` or `image_file` is required.
      * 
      */
-    public Output</* @Nullable */ String> css() {
-        return this.css;
+    public Output<Optional<String>> css() {
+        return Codegen.optional(this.css);
     }
     /**
      * The CSS version number.
@@ -98,8 +99,8 @@ public class UserPoolUICustomization extends com.pulumi.resources.CustomResource
      * @return The uploaded logo image for the UI customization, provided as a base64-encoded String. Drift detection is not possible for this argument. At least one of `css` or `image_file` is required.
      * 
      */
-    public Output</* @Nullable */ String> imageFile() {
-        return this.imageFile;
+    public Output<Optional<String>> imageFile() {
+        return Codegen.optional(this.imageFile);
     }
     /**
      * The logo image URL for the UI customization.

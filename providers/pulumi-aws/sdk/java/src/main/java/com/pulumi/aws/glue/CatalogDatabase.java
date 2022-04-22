@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -70,8 +71,8 @@ public class CatalogDatabase extends com.pulumi.resources.CustomResource {
      * @return Description of the database.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Location of the database (for example, an HDFS path).
@@ -112,8 +113,8 @@ public class CatalogDatabase extends com.pulumi.resources.CustomResource {
      * @return List of key-value pairs that define parameters and properties of the database.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> parameters() {
-        return this.parameters;
+    public Output<Optional<Map<String,String>>> parameters() {
+        return Codegen.optional(this.parameters);
     }
     /**
      * Configuration block for a target database for resource linking. See `target_database` below.
@@ -126,8 +127,8 @@ public class CatalogDatabase extends com.pulumi.resources.CustomResource {
      * @return Configuration block for a target database for resource linking. See `target_database` below.
      * 
      */
-    public Output</* @Nullable */ CatalogDatabaseTargetDatabase> targetDatabase() {
-        return this.targetDatabase;
+    public Output<Optional<CatalogDatabaseTargetDatabase>> targetDatabase() {
+        return Codegen.optional(this.targetDatabase);
     }
 
     /**
