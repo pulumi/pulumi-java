@@ -1,6 +1,6 @@
 name: ${PROJECT}
 description: ${DESCRIPTION}
-runtime: jvm
+runtime: java
 template:
   description: A minimal AWS Java Pulumi program
   important: true

@@ -1,5 +1,5 @@
 name: aws-java-webserver
-runtime: jvm
+runtime: java
 description: Basic example of an AWS web server accessible over HTTP
 template:
   config:

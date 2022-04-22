@@ -82,7 +82,7 @@ jobs:
           build-root-directory: sdk/jvm
       - run: make build_go
       - run: make bin/pulumi-java-gen
-      - run: make bin/pulumi-language-jvm
+      - run: make bin/pulumi-language-java
       - uses: actions/upload-artifact@v3
         with:
           name: versions.txt
@@ -137,7 +137,7 @@ jobs:
           path: ~/bin
       - name: Activate go-binaries
         run: |
-          chmod a+x ~/bin/pulumi-language-jvm
+          chmod a+x ~/bin/pulumi-language-java
           chmod a+x ~/bin/pulumi-java-gen
       - name: Download versions.txt
         uses: actions/download-artifact@v2
@@ -206,7 +206,7 @@ jobs:
           path: ~/bin
       - name: Activate go-binaries
         run: |
-          chmod a+x ~/bin/pulumi-language-jvm
+          chmod a+x ~/bin/pulumi-language-java
           chmod a+x ~/bin/pulumi-java-gen
       - name: Codegen the provider code
         run: ~/bin/pulumi-java-gen -config providers/pulumi-${{ matrix.provider }}/pulumi-java-gen.yaml
@@ -313,7 +313,7 @@ jobs:
           path: ~/bin
       - name: Activate go-binaries
         run: |
-          chmod a+x ~/bin/pulumi-language-jvm
+          chmod a+x ~/bin/pulumi-language-java
           chmod a+x ~/bin/pulumi-java-gen
       - name: Codegen the provider code
         run: ~/bin/pulumi-java-gen -config providers/pulumi-${{ matrix.provider }}/pulumi-java-gen.yaml
