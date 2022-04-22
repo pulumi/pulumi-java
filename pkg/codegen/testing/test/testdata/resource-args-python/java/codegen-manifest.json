@@ -1,0 +1,16 @@
+{
+  "emittedFiles": [
+    "README.md",
+    "build.gradle",
+    "settings.gradle",
+    "src/main/java/com/pulumi/example/Person.java",
+    "src/main/java/com/pulumi/example/PersonArgs.java",
+    "src/main/java/com/pulumi/example/Pet.java",
+    "src/main/java/com/pulumi/example/PetArgs.java",
+    "src/main/java/com/pulumi/example/Provider.java",
+    "src/main/java/com/pulumi/example/ProviderArgs.java",
+    "src/main/java/com/pulumi/example/Utilities.java",
+    "src/main/java/com/pulumi/example/inputs/PetArgs.java",
+    "src/main/java/com/pulumi/example/outputs/Pet.java"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "emittedFiles": [
+    "README.md",
+    "build.gradle",
+    "settings.gradle",
+    "src/main/java/com/pulumi/example/Cat.java",
+    "src/main/java/com/pulumi/example/CatArgs.java",
+    "src/main/java/com/pulumi/example/Dog.java",
+    "src/main/java/com/pulumi/example/DogArgs.java",
+    "src/main/java/com/pulumi/example/God.java",
+    "src/main/java/com/pulumi/example/GodArgs.java",
+    "src/main/java/com/pulumi/example/NoRecursive.java",
+    "src/main/java/com/pulumi/example/NoRecursiveArgs.java",
+    "src/main/java/com/pulumi/example/Provider.java",
+    "src/main/java/com/pulumi/example/ProviderArgs.java",
+    "src/main/java/com/pulumi/example/ToyStore.java",
+    "src/main/java/com/pulumi/example/ToyStoreArgs.java",
+    "src/main/java/com/pulumi/example/Utilities.java",
+    "src/main/java/com/pulumi/example/outputs/Chew.java",
+    "src/main/java/com/pulumi/example/outputs/Laser.java",
+    "src/main/java/com/pulumi/example/outputs/Rec.java",
+    "src/main/java/com/pulumi/example/outputs/Toy.java"
+  ]
+}

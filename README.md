@@ -14,7 +14,7 @@ and Go that live in `pulumi/pulumi`. Its TBD how that will be
 accomplished technically but options include Git submodules and
 stitching releases via cross-repo GitHub Actions.
 
-The dependecy loop between `pulumi/pulumi` and `pulumi/java` should be
+The dependency loop between `pulumi/pulumi` and `pulumi/java` should be
 avoided in favor of `pulumi/java` build-depending on `pulumi/pulumi`.
 Layers of indirection similar to plugin acquisition will need to be
 introduced in places where `pulumi/pulumi` currently build-depends on
