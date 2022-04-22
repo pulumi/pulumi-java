@@ -17,7 +17,7 @@ import (
 
 	"gopkg.in/yaml.v3"
 
-	jvmgen "github.com/pulumi/pulumi-java/pkg/codegen/java"
+	javagen "github.com/pulumi/pulumi-java/pkg/codegen/java"
 	pschema "github.com/pulumi/pulumi/pkg/v3/codegen/schema"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/resource/plugin"
 )
@@ -93,15 +93,15 @@ func readPackageSchema(path string) (*pschema.PackageSpec, error) {
 	return &result, nil
 }
 
-func convertPackageInfo(mapParsedFromYaml interface{}) (jvmgen.PackageInfo, error) {
+func convertPackageInfo(mapParsedFromYaml interface{}) (javagen.PackageInfo, error) {
 	packageInfoJSON, err := json.Marshal(mapParsedFromYaml)
 	if err != nil {
-		return jvmgen.PackageInfo{}, err
+		return javagen.PackageInfo{}, err
 	}
 
-	var result jvmgen.PackageInfo
+	var result javagen.PackageInfo
 	if err := json.Unmarshal(packageInfoJSON, &result); err != nil {
-		return jvmgen.PackageInfo{}, err
+		return javagen.PackageInfo{}, err
 	}
 	return result, nil
 }
@@ -132,13 +132,13 @@ func generateJava(configFile string) error {
 		return err
 	}
 
-	pkg.Language["jvm"] = pkgInfo
+	pkg.Language["java"] = pkgInfo
 
 	extraFiles, err := readOverlays(rootDir, *cfg)
 	if err != nil {
 		return err
 	}
-	files, err := jvmgen.GeneratePackage("pulumi-java-gen", pkg, extraFiles)
+	files, err := javagen.GeneratePackage("pulumi-java-gen", pkg, extraFiles)
 	if err != nil {
 		return err
 	}
