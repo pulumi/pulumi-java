@@ -44,14 +44,14 @@ func main() {
 	flag.Parse()
 	args := flag.Args()
 	logging.InitLogging(false, 0, false)
-	cmdutil.InitTracing("pulumi-language-jvm", "pulumi-language-jvm", tracing)
+	cmdutil.InitTracing("pulumi-language-java", "pulumi-language-java", tracing)
 
-	var jvmExec *jvmExecutor
+	var javaExec *javaExecutor
 	switch {
 	case givenExecutor != "":
 		logging.V(3).Infof("language host asked to use specific executor: `%s`", givenExecutor)
 		var err error
-		jvmExec, err = resolveExecutor(givenExecutor)
+		javaExec, err = resolveExecutor(givenExecutor)
 		if err != nil {
 			cmdutil.Exit(err)
 		}
@@ -61,7 +61,7 @@ func main() {
 		if err != nil {
 			cmdutil.Exit(err)
 		}
-		jvmExec, err = newJarExecutor(cmd, binary)
+		javaExec, err = newJarExecutor(cmd, binary)
 		if err != nil {
 			cmdutil.Exit(err)
 		}
@@ -71,7 +71,7 @@ func main() {
 			cmdutil.Exit(err)
 		}
 		logging.V(3).Infof("language host identified executor from path: `%s`", pathExec)
-		jvmExec, err = resolveExecutor(pathExec)
+		javaExec, err = resolveExecutor(pathExec)
 		if err != nil {
 			cmdutil.Exit(err)
 		}
@@ -86,7 +86,7 @@ func main() {
 	// Fire up a gRPC server, letting the kernel choose a free port.
 	port, done, err := rpcutil.Serve(0, nil, []func(*grpc.Server) error{
 		func(srv *grpc.Server) error {
-			host := newLanguageHost(jvmExec, engineAddress, tracing)
+			host := newLanguageHost(javaExec, engineAddress, tracing)
 			pulumirpc.RegisterLanguageRuntimeServer(srv, host)
 			return nil
 		},
@@ -104,23 +104,23 @@ func main() {
 	}
 }
 
-type jvmExecutor struct {
+type javaExecutor struct {
 	cmd        string
 	buildArgs  []string
 	runArgs    []string
 	pluginArgs []string
 }
 
-// jvmLanguageHost implements the LanguageRuntimeServer interface
+// javaLanguageHost implements the LanguageRuntimeServer interface
 // for use as an API endpoint.
-type jvmLanguageHost struct {
-	exec          *jvmExecutor
+type javaLanguageHost struct {
+	exec          *javaExecutor
 	engineAddress string
 	tracing       string
 }
 
-func newLanguageHost(exec *jvmExecutor, engineAddress, tracing string) pulumirpc.LanguageRuntimeServer {
-	return &jvmLanguageHost{
+func newLanguageHost(exec *javaExecutor, engineAddress, tracing string) pulumirpc.LanguageRuntimeServer {
+	return &javaLanguageHost{
 		exec:          exec,
 		engineAddress: engineAddress,
 		tracing:       tracing,
@@ -128,7 +128,7 @@ func newLanguageHost(exec *jvmExecutor, engineAddress, tracing string) pulumirpc
 }
 
 // GetRequiredPlugins computes the complete set of anticipated plugins required by a program.
-func (host *jvmLanguageHost) GetRequiredPlugins(
+func (host *javaLanguageHost) GetRequiredPlugins(
 	ctx context.Context,
 	req *pulumirpc.GetRequiredPluginsRequest) (*pulumirpc.GetRequiredPluginsResponse, error) {
 
@@ -167,7 +167,7 @@ func (host *jvmLanguageHost) GetRequiredPlugins(
 	return &pulumirpc.GetRequiredPluginsResponse{Plugins: plugins}, nil
 }
 
-func (host *jvmLanguageHost) determinePulumiPackages(
+func (host *javaLanguageHost) determinePulumiPackages(
 	ctx context.Context) ([]plugin.PulumiPluginJSON, error) {
 
 	logging.V(3).Infof("GetRequiredPlugins: Determining Pulumi plugins")
@@ -175,7 +175,7 @@ func (host *jvmLanguageHost) determinePulumiPackages(
 	// Run our classpath introspection from the SDK and parse the resulting JSON
 	cmd := host.exec.cmd
 	args := host.exec.pluginArgs
-	output, err := host.runJvmCommand(ctx, cmd, args)
+	output, err := host.runJavaCommand(ctx, cmd, args)
 	if err != nil {
 		return nil, errors.Wrapf(err, "language host counld not run plugin discovery command successfully")
 	}
@@ -194,7 +194,7 @@ func (host *jvmLanguageHost) determinePulumiPackages(
 	return plugins, nil
 }
 
-func (host *jvmLanguageHost) runJvmCommand(
+func (host *javaLanguageHost) runJavaCommand(
 	ctx context.Context, name string, args []string) (string, error) {
 
 	commandStr := strings.Join(args, " ")
@@ -232,7 +232,7 @@ func (host *jvmLanguageHost) runJvmCommand(
 }
 
 // Run is an RPC endpoint for LanguageRuntimeServer::Run
-func (host *jvmLanguageHost) Run(ctx context.Context, req *pulumirpc.RunRequest) (*pulumirpc.RunResponse, error) {
+func (host *javaLanguageHost) Run(ctx context.Context, req *pulumirpc.RunRequest) (*pulumirpc.RunResponse, error) {
 	logging.V(5).Infof("Run: program=%v", req.GetProgram())
 
 	config, err := host.constructConfig(req)
@@ -279,10 +279,10 @@ func (host *jvmLanguageHost) Run(ctx context.Context, req *pulumirpc.RunRequest)
 	return &pulumirpc.RunResponse{Error: errResult}, nil
 }
 
-// constructEnv constructs an environ for `pulumi-language-jvm`
+// constructEnv constructs an environ for `pulumi-language-java`
 // by enumerating all of the optional and non-optional evn vars present
 // in a RunRequest.
-func (host *jvmLanguageHost) constructEnv(req *pulumirpc.RunRequest, config, configSecretKeys string) []string {
+func (host *javaLanguageHost) constructEnv(req *pulumirpc.RunRequest, config, configSecretKeys string) []string {
 	env := os.Environ()
 
 	maybeAppendEnv := func(k, v string) {
@@ -307,7 +307,7 @@ func (host *jvmLanguageHost) constructEnv(req *pulumirpc.RunRequest, config, con
 }
 
 // constructConfig json-serializes the configuration data given as part of a RunRequest.
-func (host *jvmLanguageHost) constructConfig(req *pulumirpc.RunRequest) (string, error) {
+func (host *javaLanguageHost) constructConfig(req *pulumirpc.RunRequest) (string, error) {
 	configMap := req.GetConfig()
 	if configMap == nil {
 		return "", nil
@@ -323,7 +323,7 @@ func (host *jvmLanguageHost) constructConfig(req *pulumirpc.RunRequest) (string,
 
 // constructConfigSecretKeys JSON-serializes the list of keys that contain secret values given as part of
 // a RunRequest.
-func (host *jvmLanguageHost) constructConfigSecretKeys(req *pulumirpc.RunRequest) (string, error) {
+func (host *javaLanguageHost) constructConfigSecretKeys(req *pulumirpc.RunRequest) (string, error) {
 	configSecretKeys := req.GetConfigSecretKeys()
 	if configSecretKeys == nil {
 		return "[]", nil
@@ -337,13 +337,13 @@ func (host *jvmLanguageHost) constructConfigSecretKeys(req *pulumirpc.RunRequest
 	return string(configSecretKeysJSON), nil
 }
 
-func (host *jvmLanguageHost) GetPluginInfo(ctx context.Context, req *pbempty.Empty) (*pulumirpc.PluginInfo, error) {
+func (host *javaLanguageHost) GetPluginInfo(ctx context.Context, req *pbempty.Empty) (*pulumirpc.PluginInfo, error) {
 	return &pulumirpc.PluginInfo{
 		Version: version.Version,
 	}, nil
 }
 
-func (host *jvmLanguageHost) InstallDependencies(req *pulumirpc.InstallDependenciesRequest,
+func (host *javaLanguageHost) InstallDependencies(req *pulumirpc.InstallDependenciesRequest,
 	server pulumirpc.LanguageRuntime_InstallDependenciesServer) error {
 
 	// Executor may not support the build command (for example, jar executor).
@@ -411,7 +411,7 @@ func probeExecutor() (string, error) {
 	return "", errors.New("did not found an executor, expected one of: gradle (settings.gradle), maven (pom.xml)")
 }
 
-func resolveExecutor(exec string) (*jvmExecutor, error) {
+func resolveExecutor(exec string) (*javaExecutor, error) {
 	switch exec {
 	case "gradle", "./gradlew":
 		cmd, err := lookupPath(exec)
@@ -431,8 +431,8 @@ func resolveExecutor(exec string) (*jvmExecutor, error) {
 	}
 }
 
-func newGradleExecutor(cmd string) (*jvmExecutor, error) {
-	return &jvmExecutor{
+func newGradleExecutor(cmd string) (*javaExecutor, error) {
+	return &javaExecutor{
 		cmd:       cmd,
 		buildArgs: []string{"build", "-q", "--console=plain"},
 		runArgs:   []string{"run", "-q", "--console=plain"},
@@ -445,8 +445,8 @@ func newGradleExecutor(cmd string) (*jvmExecutor, error) {
 	}, nil
 }
 
-func newMavenExecutor(cmd string) (*jvmExecutor, error) {
-	return &jvmExecutor{
+func newMavenExecutor(cmd string) (*javaExecutor, error) {
+	return &javaExecutor{
 		cmd:       cmd,
 		buildArgs: []string{"--quiet", "--no-transfer-progress", "compile"},
 		runArgs:   []string{"--quiet", "--no-transfer-progress", "compile", "exec:java"},
@@ -458,8 +458,8 @@ func newMavenExecutor(cmd string) (*jvmExecutor, error) {
 	}, nil
 }
 
-func newJarExecutor(cmd string, path string) (*jvmExecutor, error) {
-	return &jvmExecutor{
+func newJarExecutor(cmd string, path string) (*javaExecutor, error) {
+	return &javaExecutor{
 		cmd:        cmd,
 		buildArgs:  nil, // not supported
 		runArgs:    []string{"-jar", filepath.Clean(path)},

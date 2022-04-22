@@ -15,9 +15,9 @@ build_go::
 test_go:: build_go submodule_update
 	cd pkg && go test ./...
 
-bin/pulumi-language-jvm: ${PKG_FILES}
+bin/pulumi-language-java: ${PKG_FILES}
 	mkdir -p bin
-	cd pkg && go build -o ../bin github.com/pulumi/pulumi-java/pkg/cmd/pulumi-language-jvm
+	cd pkg && go build -o ../bin github.com/pulumi/pulumi-java/pkg/cmd/pulumi-language-java
 
 bin/pulumi-java-gen: ${PKG_FILES}
 	mkdir -p bin
@@ -58,23 +58,23 @@ provider.%.install:	provider.%.build
 
 # Run a custom integration test or example.
 # Example: make test_example.aws-java-webserver
-test_example.%:	bin/pulumi-language-jvm
+test_example.%:	bin/pulumi-language-java
 	cd tests/examples && PATH="${PATH}:${PWD}/bin" go test -run "TestExamples/^$*" -test.v
 
 # Test a single template, e.g.:
 #     make test_template.java-gradle
-test_template.%: bin/pulumi-language-jvm
+test_template.%: bin/pulumi-language-java
 	cd tests/templates && PATH="${PATH}:${PWD}/bin" go test -run "TestTemplates/^$*$$" -test.v
 
-test_templates: bin/pulumi-language-jvm
+test_templates: bin/pulumi-language-java
 	cd tests/templates && PATH="${PATH}:${PWD}/bin" go test -test.v
 
 # Test a single integration, s.g.:
 #     make test_integration.stack-reference
-test_integration.%: bin/pulumi-language-jvm
+test_integration.%: bin/pulumi-language-java
 	cd tests/integration && PATH="${PATH}:${PWD}/bin" go test -run "TestIntegrations/^$*$$" -test.v
 
-test_integrations: bin/pulumi-language-jvm
+test_integrations: bin/pulumi-language-java
 	cd tests/integration && PATH="${PATH}:${PWD}/bin" go test -test.v
 
 codegen_tests::

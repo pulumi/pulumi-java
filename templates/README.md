@@ -44,7 +44,7 @@ pulumi up --yes
 
 Dependencies:
 
-- pulumi-language-jvm in PATH
+- pulumi-language-java in PATH
 
 - Pulumi SDK resolvable from local maven repo (~/.m2)
 
@@ -54,6 +54,6 @@ Installing dependencies:
 ```
 cd ~/pulumi-java
 make install_sdk
-make bin/pulumi-language-jvm
+make bin/pulumi-language-java
 export PATH=$PATH:$PWD/bin
 ```

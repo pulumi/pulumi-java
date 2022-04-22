@@ -1,7 +1,7 @@
 builds:
-- binary: pulumi-language-jvm
+- binary: pulumi-language-java
   dir: pkg
-  main: cmd/pulumi-language-jvm/main.go
+  main: cmd/pulumi-language-java/main.go
   env:
   - CGO_ENABLED=0
   - GO111MODULE=on
