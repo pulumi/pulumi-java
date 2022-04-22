@@ -166,7 +166,7 @@ public interface Deployment {
      * Deployment will instantiate a default stack instance based on the callback passed as {@code callback} parameter.
      * @param callback Callback that creates stack resources.
      * @param options  Optional Stack options.
-     * JVM applications should perform all startup logic
+     * Java applications should perform all startup logic
      * they need in their {@code main} method and then end with:
      * <p>
      * <code>
@@ -210,7 +210,7 @@ public interface Deployment {
      * An entry-point to a Pulumi application.
      * Deployment will instantiate a new stack instance using the supplier passed as {@code stackFactory} parameter.
      * @param stackFactory The stack supplier used to create stack instances
-     * JVM applications should perform all startup logic they
+     * Java applications should perform all startup logic they
      * need in their {@code main} method and then end with:
      * <p>
      * <code>

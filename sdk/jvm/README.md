@@ -1,6 +1,6 @@
-# JVM Language Provider
+# Java Language Provider
 
-JVM languages provider for Pulumi.
+Java languages provider for Pulumi.
 
 
 ## Building and running
@@ -10,7 +10,7 @@ and ensure `java` is on your path. Once that it does, running `make` in either t
 directory or the `sdk/jvm` directory will build and install the language
 plugin.
 
-Once this is done, you can write a Pulumi app written on top of JVM.
+Once this is done, you can write a Pulumi app written on top of Java.
 
 
 TODO

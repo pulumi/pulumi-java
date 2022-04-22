@@ -21,10 +21,10 @@ introduced in places where `pulumi/pulumi` currently build-depends on
 `pulumi/java`, for example:
 
 - `pkg/cmd/pulumi/import.go`: import command support needs
-  jvm.GenerateProgram; instead figure out dynamic loading of program
+  java.GenerateProgram; instead figure out dynamic loading of program
   generators
 
-- `pkg/cmd/pulumi/new.go`: new command needs jvm.Build to support
+- `pkg/cmd/pulumi/new.go`: new command needs java.Build to support
   dispatching the right build commands for a java project; instead
   figure out dynamic dispatch of builders per language
 

@@ -16,7 +16,9 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.function.Supplier;
 import java.util.logging.Level;
 
-import static com.pulumi.deployment.internal.DeploymentTests.*;
+import static com.pulumi.deployment.internal.DeploymentTests.DeploymentMock;
+import static com.pulumi.deployment.internal.DeploymentTests.DeploymentMockBuilder;
+import static com.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class DeploymentTest {
@@ -37,10 +39,10 @@ public class DeploymentTest {
 
     @Test
     void testConfigRequire() {
-        mock.overrideConfig("hello-jvm:name", "test");
+        mock.overrideConfig("hello-java:name", "test");
 
         Supplier<CompletableFuture<Map<String, Output<?>>>> supplier = () -> {
-            var config = Config.of("hello-jvm");
+            var config = Config.of("hello-java");
             //noinspection unused
             var ignore = config.require("name");
             return CompletableFuture.completedFuture(Map.<String, Output<?>>of());
@@ -53,7 +55,7 @@ public class DeploymentTest {
     @Test
     void testConfigRequireMissing() {
         Supplier<CompletableFuture<Map<String, Output<?>>>> supplier = () -> {
-            var config = Config.of("hello-jvm");
+            var config = Config.of("hello-java");
             //noinspection unused
             var ignore = config.require("missing");
             return CompletableFuture.completedFuture(Map.<String, Output<?>>of());
