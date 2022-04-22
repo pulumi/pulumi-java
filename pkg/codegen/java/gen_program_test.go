@@ -1,4 +1,4 @@
-package jvm
+package java
 
 import (
 	"io/ioutil"

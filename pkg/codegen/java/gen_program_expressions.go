@@ -1,6 +1,6 @@
 // Copyright 2022, Pulumi Corporation.  All rights reserved.
 
-package jvm
+package java
 
 import (
 	"io"
@@ -17,7 +17,7 @@ import (
 	"github.com/pulumi/pulumi/pkg/v3/codegen/schema"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/contract"
 
-	"github.com/pulumi/pulumi-java/pkg/codegen/jvm/names"
+	"github.com/pulumi/pulumi-java/pkg/codegen/java/names"
 )
 
 type nameInfo int
