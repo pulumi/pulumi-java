@@ -675,3 +675,24 @@ jobs:
           ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
           ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
         run: make test_templates
+
+  check-for-dirty-providers:
+    runs-on: ubuntu-latest
+    needs: prerequisites
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v2
+      - name: Download go-binaries
+        uses: actions/download-artifact@v2
+        with:
+          name: go-binaries
+          path: ~/bin
+      - name: Activate go-binaries
+        run: |
+          chmod a+x ~/bin/pulumi-language-jvm
+          chmod a+x ~/bin/pulumi-java-gen
+      - run: make providers_generate_all
+      - run: |
+          cd providers
+          git status -s
+          [[ -n $(git status -s) ]] && echo "providers/ generated code is out of date" && exit 1
