@@ -14,11 +14,11 @@ and Go that live in `pulumi/pulumi`. Its TBD how that will be
 accomplished technically but options include Git submodules and
 stitching releases via cross-repo GitHub Actions.
 
-The dependecy loop between `pulumi/pulumi` and `pulumi/jvm` should be
-avoided in favor of `pulumi/jvm` build-depending on `pulumi/pulumi`.
+The dependecy loop between `pulumi/pulumi` and `pulumi/java` should be
+avoided in favor of `pulumi/java` build-depending on `pulumi/pulumi`.
 Layers of indirection similar to plugin acquisition will need to be
 introduced in places where `pulumi/pulumi` currently build-depends on
-`pulumi/jvm`, for example:
+`pulumi/java`, for example:
 
 - `pkg/cmd/pulumi/import.go`: import command support needs
   jvm.GenerateProgram; instead figure out dynamic loading of program
@@ -48,7 +48,7 @@ $ make install_sdk #installs com.pulumi:pulumi to local maven repository
 To run the example:
 
 ```shell
-cd ~/pulumi-jvm
+cd ~/pulumi-java
 make bin/pulumi-language-jvm
 export PATH=$PWD/bin:$PATH
 
@@ -71,4 +71,3 @@ expected stack outputs.
 This repo adapts code from `VirtusLab/pulumi` fork of `pulumi/pulumi`
 starting with the `jvm-lang-codegen-rewrite` branch. The upstream
 history is preserved so that updates can be merged via Git.
-

@@ -1463,7 +1463,7 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 
 		const indent = "    "
 
-		// TODO[pulumi/pulumi-jvm#262]: Support proper codegen for methods
+		// TODO[pulumi/pulumi-java#262]: Support proper codegen for methods
 		if fun.IsMethod {
 			continue
 		}
