@@ -21,6 +21,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -51,8 +52,8 @@ public class NotificationHub extends com.pulumi.resources.CustomResource {
      * @return The AdmCredential of the created NotificationHub
      * 
      */
-    public Output</* @Nullable */ AdmCredentialResponse> admCredential() {
-        return this.admCredential;
+    public Output<Optional<AdmCredentialResponse>> admCredential() {
+        return Codegen.optional(this.admCredential);
     }
     /**
      * The ApnsCredential of the created NotificationHub
@@ -65,8 +66,8 @@ public class NotificationHub extends com.pulumi.resources.CustomResource {
      * @return The ApnsCredential of the created NotificationHub
      * 
      */
-    public Output</* @Nullable */ ApnsCredentialResponse> apnsCredential() {
-        return this.apnsCredential;
+    public Output<Optional<ApnsCredentialResponse>> apnsCredential() {
+        return Codegen.optional(this.apnsCredential);
     }
     /**
      * The AuthorizationRules of the created NotificationHub
@@ -79,8 +80,8 @@ public class NotificationHub extends com.pulumi.resources.CustomResource {
      * @return The AuthorizationRules of the created NotificationHub
      * 
      */
-    public Output</* @Nullable */ List<SharedAccessAuthorizationRulePropertiesResponse>> authorizationRules() {
-        return this.authorizationRules;
+    public Output<Optional<List<SharedAccessAuthorizationRulePropertiesResponse>>> authorizationRules() {
+        return Codegen.optional(this.authorizationRules);
     }
     /**
      * The BaiduCredential of the created NotificationHub
@@ -93,8 +94,8 @@ public class NotificationHub extends com.pulumi.resources.CustomResource {
      * @return The BaiduCredential of the created NotificationHub
      * 
      */
-    public Output</* @Nullable */ BaiduCredentialResponse> baiduCredential() {
-        return this.baiduCredential;
+    public Output<Optional<BaiduCredentialResponse>> baiduCredential() {
+        return Codegen.optional(this.baiduCredential);
     }
     /**
      * The GcmCredential of the created NotificationHub
@@ -107,8 +108,8 @@ public class NotificationHub extends com.pulumi.resources.CustomResource {
      * @return The GcmCredential of the created NotificationHub
      * 
      */
-    public Output</* @Nullable */ GcmCredentialResponse> gcmCredential() {
-        return this.gcmCredential;
+    public Output<Optional<GcmCredentialResponse>> gcmCredential() {
+        return Codegen.optional(this.gcmCredential);
     }
     /**
      * Resource location
@@ -121,8 +122,8 @@ public class NotificationHub extends com.pulumi.resources.CustomResource {
      * @return Resource location
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The MpnsCredential of the created NotificationHub
@@ -135,8 +136,8 @@ public class NotificationHub extends com.pulumi.resources.CustomResource {
      * @return The MpnsCredential of the created NotificationHub
      * 
      */
-    public Output</* @Nullable */ MpnsCredentialResponse> mpnsCredential() {
-        return this.mpnsCredential;
+    public Output<Optional<MpnsCredentialResponse>> mpnsCredential() {
+        return Codegen.optional(this.mpnsCredential);
     }
     /**
      * Resource name
@@ -163,8 +164,8 @@ public class NotificationHub extends com.pulumi.resources.CustomResource {
      * @return The RegistrationTtl of the created NotificationHub
      * 
      */
-    public Output</* @Nullable */ String> registrationTtl() {
-        return this.registrationTtl;
+    public Output<Optional<String>> registrationTtl() {
+        return Codegen.optional(this.registrationTtl);
     }
     /**
      * The sku of the created namespace
@@ -177,8 +178,8 @@ public class NotificationHub extends com.pulumi.resources.CustomResource {
      * @return The sku of the created namespace
      * 
      */
-    public Output</* @Nullable */ SkuResponse> sku() {
-        return this.sku;
+    public Output<Optional<SkuResponse>> sku() {
+        return Codegen.optional(this.sku);
     }
     /**
      * Resource tags
@@ -191,8 +192,8 @@ public class NotificationHub extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type
@@ -219,8 +220,8 @@ public class NotificationHub extends com.pulumi.resources.CustomResource {
      * @return The WnsCredential of the created NotificationHub
      * 
      */
-    public Output</* @Nullable */ WnsCredentialResponse> wnsCredential() {
-        return this.wnsCredential;
+    public Output<Optional<WnsCredentialResponse>> wnsCredential() {
+        return Codegen.optional(this.wnsCredential);
     }
 
     /**

@@ -16,6 +16,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -144,8 +145,8 @@ public class Order extends com.pulumi.resources.CustomResource {
      * @return ShipmentType of the order
      * 
      */
-    public Output</* @Nullable */ String> shipmentType() {
-        return this.shipmentType;
+    public Output<Optional<String>> shipmentType() {
+        return Codegen.optional(this.shipmentType);
     }
     /**
      * The shipping address.
@@ -158,8 +159,8 @@ public class Order extends com.pulumi.resources.CustomResource {
      * @return The shipping address.
      * 
      */
-    public Output</* @Nullable */ AddressResponse> shippingAddress() {
-        return this.shippingAddress;
+    public Output<Optional<AddressResponse>> shippingAddress() {
+        return Codegen.optional(this.shippingAddress);
     }
     /**
      * The hierarchical type of the object.

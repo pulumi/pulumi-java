@@ -16,6 +16,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class Association extends com.pulumi.resources.CustomResource {
      * @return By default, when you create a new or update associations, the system runs it immediately and then according to the schedule you specified. Enable this option if you do not want an association to run immediately after you create or update it. This parameter is not supported for rate expressions. Default: `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> applyOnlyAtCronInterval() {
-        return this.applyOnlyAtCronInterval;
+    public Output<Optional<Boolean>> applyOnlyAtCronInterval() {
+        return Codegen.optional(this.applyOnlyAtCronInterval);
     }
     /**
      * The ID of the SSM association.
@@ -73,8 +74,8 @@ public class Association extends com.pulumi.resources.CustomResource {
      * @return The descriptive name for the association.
      * 
      */
-    public Output</* @Nullable */ String> associationName() {
-        return this.associationName;
+    public Output<Optional<String>> associationName() {
+        return Codegen.optional(this.associationName);
     }
     /**
      * Specify the target for the association. This target is required for associations that use an `Automation` document and target resources by using rate controls. This should be set to the SSM document `parameter` that will define how your automation will branch out.
@@ -87,8 +88,8 @@ public class Association extends com.pulumi.resources.CustomResource {
      * @return Specify the target for the association. This target is required for associations that use an `Automation` document and target resources by using rate controls. This should be set to the SSM document `parameter` that will define how your automation will branch out.
      * 
      */
-    public Output</* @Nullable */ String> automationTargetParameterName() {
-        return this.automationTargetParameterName;
+    public Output<Optional<String>> automationTargetParameterName() {
+        return Codegen.optional(this.automationTargetParameterName);
     }
     /**
      * The compliance severity for the association. Can be one of the following: `UNSPECIFIED`, `LOW`, `MEDIUM`, `HIGH` or `CRITICAL`
@@ -101,8 +102,8 @@ public class Association extends com.pulumi.resources.CustomResource {
      * @return The compliance severity for the association. Can be one of the following: `UNSPECIFIED`, `LOW`, `MEDIUM`, `HIGH` or `CRITICAL`
      * 
      */
-    public Output</* @Nullable */ String> complianceSeverity() {
-        return this.complianceSeverity;
+    public Output<Optional<String>> complianceSeverity() {
+        return Codegen.optional(this.complianceSeverity);
     }
     /**
      * The document version you want to associate with the target(s). Can be a specific version or the default version.
@@ -129,8 +130,8 @@ public class Association extends com.pulumi.resources.CustomResource {
      * @return The instance ID to apply an SSM document to. Use `targets` with key `InstanceIds` for document schema versions 2.0 and above.
      * 
      */
-    public Output</* @Nullable */ String> instanceId() {
-        return this.instanceId;
+    public Output<Optional<String>> instanceId() {
+        return Codegen.optional(this.instanceId);
     }
     /**
      * The maximum number of targets allowed to run the association at the same time. You can specify a number, for example 10, or a percentage of the target set, for example 10%.
@@ -143,8 +144,8 @@ public class Association extends com.pulumi.resources.CustomResource {
      * @return The maximum number of targets allowed to run the association at the same time. You can specify a number, for example 10, or a percentage of the target set, for example 10%.
      * 
      */
-    public Output</* @Nullable */ String> maxConcurrency() {
-        return this.maxConcurrency;
+    public Output<Optional<String>> maxConcurrency() {
+        return Codegen.optional(this.maxConcurrency);
     }
     /**
      * The number of errors that are allowed before the system stops sending requests to run the association on additional targets. You can specify a number, for example 10, or a percentage of the target set, for example 10%.
@@ -157,8 +158,8 @@ public class Association extends com.pulumi.resources.CustomResource {
      * @return The number of errors that are allowed before the system stops sending requests to run the association on additional targets. You can specify a number, for example 10, or a percentage of the target set, for example 10%.
      * 
      */
-    public Output</* @Nullable */ String> maxErrors() {
-        return this.maxErrors;
+    public Output<Optional<String>> maxErrors() {
+        return Codegen.optional(this.maxErrors);
     }
     /**
      * The name of the SSM document to apply.
@@ -185,8 +186,8 @@ public class Association extends com.pulumi.resources.CustomResource {
      * @return An output location block. Output Location is documented below.
      * 
      */
-    public Output</* @Nullable */ AssociationOutputLocation> outputLocation() {
-        return this.outputLocation;
+    public Output<Optional<AssociationOutputLocation>> outputLocation() {
+        return Codegen.optional(this.outputLocation);
     }
     /**
      * A block of arbitrary string parameters to pass to the SSM document.
@@ -213,8 +214,8 @@ public class Association extends com.pulumi.resources.CustomResource {
      * @return A cron expression when the association will be applied to the target(s).
      * 
      */
-    public Output</* @Nullable */ String> scheduleExpression() {
-        return this.scheduleExpression;
+    public Output<Optional<String>> scheduleExpression() {
+        return Codegen.optional(this.scheduleExpression);
     }
     /**
      * A block containing the targets of the SSM association. Targets are documented below. AWS currently supports a maximum of 5 targets.

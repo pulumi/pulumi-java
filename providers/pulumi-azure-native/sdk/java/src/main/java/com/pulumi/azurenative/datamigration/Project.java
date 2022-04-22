@@ -19,6 +19,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -63,8 +64,8 @@ public class Project extends com.pulumi.resources.CustomResource {
      * @return List of DatabaseInfo
      * 
      */
-    public Output</* @Nullable */ List<DatabaseInfoResponse>> databasesInfo() {
-        return this.databasesInfo;
+    public Output<Optional<List<DatabaseInfoResponse>>> databasesInfo() {
+        return Codegen.optional(this.databasesInfo);
     }
     /**
      * Resource location.
@@ -119,8 +120,8 @@ public class Project extends com.pulumi.resources.CustomResource {
      * @return Information for connecting to source
      * 
      */
-    public Output</* @Nullable */ Object> sourceConnectionInfo() {
-        return this.sourceConnectionInfo;
+    public Output<Optional<Object>> sourceConnectionInfo() {
+        return Codegen.optional(this.sourceConnectionInfo);
     }
     /**
      * Source platform for the project
@@ -147,8 +148,8 @@ public class Project extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Information for connecting to target
@@ -161,8 +162,8 @@ public class Project extends com.pulumi.resources.CustomResource {
      * @return Information for connecting to target
      * 
      */
-    public Output</* @Nullable */ Object> targetConnectionInfo() {
-        return this.targetConnectionInfo;
+    public Output<Optional<Object>> targetConnectionInfo() {
+        return Codegen.optional(this.targetConnectionInfo);
     }
     /**
      * Target platform for the project

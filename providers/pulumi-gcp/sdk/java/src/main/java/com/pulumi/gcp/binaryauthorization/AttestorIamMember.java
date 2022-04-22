@@ -12,6 +12,7 @@ import com.pulumi.gcp.binaryauthorization.AttestorIamMemberArgs;
 import com.pulumi.gcp.binaryauthorization.inputs.AttestorIamMemberState;
 import com.pulumi.gcp.binaryauthorization.outputs.AttestorIamMemberCondition;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -75,8 +76,8 @@ public class AttestorIamMember extends com.pulumi.resources.CustomResource {
     @Export(name="condition", type=AttestorIamMemberCondition.class, parameters={})
     private Output</* @Nullable */ AttestorIamMemberCondition> condition;
 
-    public Output</* @Nullable */ AttestorIamMemberCondition> condition() {
-        return this.condition;
+    public Output<Optional<AttestorIamMemberCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * (Computed) The etag of the IAM policy.

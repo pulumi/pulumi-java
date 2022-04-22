@@ -15,6 +15,7 @@ import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -38,38 +39,38 @@ public class Authorizer extends com.pulumi.resources.CustomResource {
     @Export(name="authorizerName", type=String.class, parameters={})
     private Output</* @Nullable */ String> authorizerName;
 
-    public Output</* @Nullable */ String> authorizerName() {
-        return this.authorizerName;
+    public Output<Optional<String>> authorizerName() {
+        return Codegen.optional(this.authorizerName);
     }
     @Export(name="signingDisabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> signingDisabled;
 
-    public Output</* @Nullable */ Boolean> signingDisabled() {
-        return this.signingDisabled;
+    public Output<Optional<Boolean>> signingDisabled() {
+        return Codegen.optional(this.signingDisabled);
     }
     @Export(name="status", type=AuthorizerStatus.class, parameters={})
     private Output</* @Nullable */ AuthorizerStatus> status;
 
-    public Output</* @Nullable */ AuthorizerStatus> status() {
-        return this.status;
+    public Output<Optional<AuthorizerStatus>> status() {
+        return Codegen.optional(this.status);
     }
     @Export(name="tags", type=List.class, parameters={AuthorizerTag.class})
     private Output</* @Nullable */ List<AuthorizerTag>> tags;
 
-    public Output</* @Nullable */ List<AuthorizerTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<AuthorizerTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     @Export(name="tokenKeyName", type=String.class, parameters={})
     private Output</* @Nullable */ String> tokenKeyName;
 
-    public Output</* @Nullable */ String> tokenKeyName() {
-        return this.tokenKeyName;
+    public Output<Optional<String>> tokenKeyName() {
+        return Codegen.optional(this.tokenKeyName);
     }
     @Export(name="tokenSigningPublicKeys", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> tokenSigningPublicKeys;
 
-    public Output</* @Nullable */ Object> tokenSigningPublicKeys() {
-        return this.tokenSigningPublicKeys;
+    public Output<Optional<Object>> tokenSigningPublicKeys() {
+        return Codegen.optional(this.tokenSigningPublicKeys);
     }
 
     /**

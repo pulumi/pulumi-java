@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -59,8 +60,8 @@ public class StreamKey extends com.pulumi.resources.CustomResource {
      * @return A list of key-value pairs that contain metadata for the asset model.
      * 
      */
-    public Output</* @Nullable */ List<StreamKeyTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<StreamKeyTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Stream-key value.

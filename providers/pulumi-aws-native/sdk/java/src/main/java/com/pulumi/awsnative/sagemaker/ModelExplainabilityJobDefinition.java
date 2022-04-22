@@ -19,6 +19,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -58,8 +59,8 @@ public class ModelExplainabilityJobDefinition extends com.pulumi.resources.Custo
     @Export(name="jobDefinitionName", type=String.class, parameters={})
     private Output</* @Nullable */ String> jobDefinitionName;
 
-    public Output</* @Nullable */ String> jobDefinitionName() {
-        return this.jobDefinitionName;
+    public Output<Optional<String>> jobDefinitionName() {
+        return Codegen.optional(this.jobDefinitionName);
     }
     @Export(name="jobResources", type=ModelExplainabilityJobDefinitionMonitoringResources.class, parameters={})
     private Output<ModelExplainabilityJobDefinitionMonitoringResources> jobResources;
@@ -76,8 +77,8 @@ public class ModelExplainabilityJobDefinition extends com.pulumi.resources.Custo
     @Export(name="modelExplainabilityBaselineConfig", type=ModelExplainabilityJobDefinitionModelExplainabilityBaselineConfig.class, parameters={})
     private Output</* @Nullable */ ModelExplainabilityJobDefinitionModelExplainabilityBaselineConfig> modelExplainabilityBaselineConfig;
 
-    public Output</* @Nullable */ ModelExplainabilityJobDefinitionModelExplainabilityBaselineConfig> modelExplainabilityBaselineConfig() {
-        return this.modelExplainabilityBaselineConfig;
+    public Output<Optional<ModelExplainabilityJobDefinitionModelExplainabilityBaselineConfig>> modelExplainabilityBaselineConfig() {
+        return Codegen.optional(this.modelExplainabilityBaselineConfig);
     }
     @Export(name="modelExplainabilityJobInput", type=ModelExplainabilityJobDefinitionModelExplainabilityJobInput.class, parameters={})
     private Output<ModelExplainabilityJobDefinitionModelExplainabilityJobInput> modelExplainabilityJobInput;
@@ -94,8 +95,8 @@ public class ModelExplainabilityJobDefinition extends com.pulumi.resources.Custo
     @Export(name="networkConfig", type=ModelExplainabilityJobDefinitionNetworkConfig.class, parameters={})
     private Output</* @Nullable */ ModelExplainabilityJobDefinitionNetworkConfig> networkConfig;
 
-    public Output</* @Nullable */ ModelExplainabilityJobDefinitionNetworkConfig> networkConfig() {
-        return this.networkConfig;
+    public Output<Optional<ModelExplainabilityJobDefinitionNetworkConfig>> networkConfig() {
+        return Codegen.optional(this.networkConfig);
     }
     /**
      * The Amazon Resource Name (ARN) of an IAM role that Amazon SageMaker can assume to perform tasks on your behalf.
@@ -114,8 +115,8 @@ public class ModelExplainabilityJobDefinition extends com.pulumi.resources.Custo
     @Export(name="stoppingCondition", type=ModelExplainabilityJobDefinitionStoppingCondition.class, parameters={})
     private Output</* @Nullable */ ModelExplainabilityJobDefinitionStoppingCondition> stoppingCondition;
 
-    public Output</* @Nullable */ ModelExplainabilityJobDefinitionStoppingCondition> stoppingCondition() {
-        return this.stoppingCondition;
+    public Output<Optional<ModelExplainabilityJobDefinitionStoppingCondition>> stoppingCondition() {
+        return Codegen.optional(this.stoppingCondition);
     }
     /**
      * An array of key-value pairs to apply to this resource.
@@ -128,8 +129,8 @@ public class ModelExplainabilityJobDefinition extends com.pulumi.resources.Custo
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<ModelExplainabilityJobDefinitionTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<ModelExplainabilityJobDefinitionTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

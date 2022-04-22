@@ -17,6 +17,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -47,8 +48,8 @@ public class Blueprint extends com.pulumi.resources.CustomResource {
      * @return Multi-line explain this resource.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * One-liner string explain this resource.
@@ -61,8 +62,8 @@ public class Blueprint extends com.pulumi.resources.CustomResource {
      * @return One-liner string explain this resource.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * Layout view of the blueprint definition for UI reference.
@@ -103,8 +104,8 @@ public class Blueprint extends com.pulumi.resources.CustomResource {
      * @return Parameters required by this blueprint definition.
      * 
      */
-    public Output</* @Nullable */ Map<String,ParameterDefinitionResponse>> parameters() {
-        return this.parameters;
+    public Output<Optional<Map<String,ParameterDefinitionResponse>>> parameters() {
+        return Codegen.optional(this.parameters);
     }
     /**
      * Resource group placeholders defined by this blueprint definition.
@@ -117,8 +118,8 @@ public class Blueprint extends com.pulumi.resources.CustomResource {
      * @return Resource group placeholders defined by this blueprint definition.
      * 
      */
-    public Output</* @Nullable */ Map<String,ResourceGroupDefinitionResponse>> resourceGroups() {
-        return this.resourceGroups;
+    public Output<Optional<Map<String,ResourceGroupDefinitionResponse>>> resourceGroups() {
+        return Codegen.optional(this.resourceGroups);
     }
     /**
      * Status of the blueprint. This field is readonly.
@@ -173,8 +174,8 @@ public class Blueprint extends com.pulumi.resources.CustomResource {
      * @return Published versions of this blueprint definition.
      * 
      */
-    public Output</* @Nullable */ Object> versions() {
-        return this.versions;
+    public Output<Optional<Object>> versions() {
+        return Codegen.optional(this.versions);
     }
 
     /**

@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return User-defined description of the job.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Resource name.
@@ -72,8 +73,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Schedule properties of the job.
      * 
      */
-    public Output</* @Nullable */ JobScheduleResponse> schedule() {
-        return this.schedule;
+    public Output<Optional<JobScheduleResponse>> schedule() {
+        return Codegen.optional(this.schedule);
     }
     /**
      * Resource type.

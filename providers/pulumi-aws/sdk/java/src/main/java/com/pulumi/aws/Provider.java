@@ -10,6 +10,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -32,8 +33,8 @@ public class Provider extends com.pulumi.resources.ProviderResource {
      * @return The access key for API operations. You can retrieve this from the &#39;Security &amp; Credentials&#39; section of the AWS console.
      * 
      */
-    public Output</* @Nullable */ String> accessKey() {
-        return this.accessKey;
+    public Output<Optional<String>> accessKey() {
+        return Codegen.optional(this.accessKey);
     }
     /**
      * The address of an HTTP proxy to use when accessing the AWS API. Can also be configured using the `HTTP_PROXY` or
@@ -48,8 +49,8 @@ public class Provider extends com.pulumi.resources.ProviderResource {
      * `HTTPS_PROXY` environment variables.
      * 
      */
-    public Output</* @Nullable */ String> httpProxy() {
-        return this.httpProxy;
+    public Output<Optional<String>> httpProxy() {
+        return Codegen.optional(this.httpProxy);
     }
     /**
      * The profile for API operations. If not set, the default profile created with `aws configure` will be used.
@@ -62,8 +63,8 @@ public class Provider extends com.pulumi.resources.ProviderResource {
      * @return The profile for API operations. If not set, the default profile created with `aws configure` will be used.
      * 
      */
-    public Output</* @Nullable */ String> profile() {
-        return this.profile;
+    public Output<Optional<String>> profile() {
+        return Codegen.optional(this.profile);
     }
     /**
      * The region where AWS operations will take place. Examples are us-east-1, us-west-2, etc.
@@ -76,8 +77,8 @@ public class Provider extends com.pulumi.resources.ProviderResource {
      * @return The region where AWS operations will take place. Examples are us-east-1, us-west-2, etc.
      * 
      */
-    public Output</* @Nullable */ String> region() {
-        return this.region;
+    public Output<Optional<String>> region() {
+        return Codegen.optional(this.region);
     }
     /**
      * The secret key for API operations. You can retrieve this from the &#39;Security &amp; Credentials&#39; section of the AWS console.
@@ -90,8 +91,8 @@ public class Provider extends com.pulumi.resources.ProviderResource {
      * @return The secret key for API operations. You can retrieve this from the &#39;Security &amp; Credentials&#39; section of the AWS console.
      * 
      */
-    public Output</* @Nullable */ String> secretKey() {
-        return this.secretKey;
+    public Output<Optional<String>> secretKey() {
+        return Codegen.optional(this.secretKey);
     }
     /**
      * The path to the shared credentials file. If not set this defaults to ~/.aws/credentials.
@@ -104,8 +105,8 @@ public class Provider extends com.pulumi.resources.ProviderResource {
      * @return The path to the shared credentials file. If not set this defaults to ~/.aws/credentials.
      * 
      */
-    public Output</* @Nullable */ String> sharedCredentialsFile() {
-        return this.sharedCredentialsFile;
+    public Output<Optional<String>> sharedCredentialsFile() {
+        return Codegen.optional(this.sharedCredentialsFile);
     }
     /**
      * session token. A session token is only required if you are using temporary security credentials.
@@ -118,8 +119,8 @@ public class Provider extends com.pulumi.resources.ProviderResource {
      * @return session token. A session token is only required if you are using temporary security credentials.
      * 
      */
-    public Output</* @Nullable */ String> token() {
-        return this.token;
+    public Output<Optional<String>> token() {
+        return Codegen.optional(this.token);
     }
 
     /**

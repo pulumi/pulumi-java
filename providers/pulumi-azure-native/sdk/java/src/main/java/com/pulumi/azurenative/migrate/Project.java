@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class Project extends com.pulumi.resources.CustomResource {
      * @return For optimistic concurrency control.
      * 
      */
-    public Output</* @Nullable */ String> eTag() {
-        return this.eTag;
+    public Output<Optional<String>> eTag() {
+        return Codegen.optional(this.eTag);
     }
     /**
      * Azure location in which project is created.
@@ -58,8 +59,8 @@ public class Project extends com.pulumi.resources.CustomResource {
      * @return Azure location in which project is created.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * Name of the project.
@@ -100,8 +101,8 @@ public class Project extends com.pulumi.resources.CustomResource {
      * @return Tags provided by Azure Tagging service.
      * 
      */
-    public Output</* @Nullable */ Object> tags() {
-        return this.tags;
+    public Output<Optional<Object>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Type of the object = [Microsoft.Migrate/assessmentProjects].

@@ -12,6 +12,7 @@ import com.pulumi.gcp.compute.NetworkPeeringArgs;
 import com.pulumi.gcp.compute.inputs.NetworkPeeringState;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -49,8 +50,8 @@ public class NetworkPeering extends com.pulumi.resources.CustomResource {
      * @return Whether to export the custom routes to the peer network. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> exportCustomRoutes() {
-        return this.exportCustomRoutes;
+    public Output<Optional<Boolean>> exportCustomRoutes() {
+        return Codegen.optional(this.exportCustomRoutes);
     }
     /**
      * Whether subnet routes with public IP range are exported. The default value is true, all subnet routes are exported. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always exported to peers and are not controlled by this field.
@@ -63,8 +64,8 @@ public class NetworkPeering extends com.pulumi.resources.CustomResource {
      * @return Whether subnet routes with public IP range are exported. The default value is true, all subnet routes are exported. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always exported to peers and are not controlled by this field.
      * 
      */
-    public Output</* @Nullable */ Boolean> exportSubnetRoutesWithPublicIp() {
-        return this.exportSubnetRoutesWithPublicIp;
+    public Output<Optional<Boolean>> exportSubnetRoutesWithPublicIp() {
+        return Codegen.optional(this.exportSubnetRoutesWithPublicIp);
     }
     /**
      * Whether to import the custom routes from the peer network. Defaults to `false`.
@@ -77,8 +78,8 @@ public class NetworkPeering extends com.pulumi.resources.CustomResource {
      * @return Whether to import the custom routes from the peer network. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> importCustomRoutes() {
-        return this.importCustomRoutes;
+    public Output<Optional<Boolean>> importCustomRoutes() {
+        return Codegen.optional(this.importCustomRoutes);
     }
     /**
      * Whether subnet routes with public IP range are imported. The default value is false. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always imported from peers and are not controlled by this field.
@@ -91,8 +92,8 @@ public class NetworkPeering extends com.pulumi.resources.CustomResource {
      * @return Whether subnet routes with public IP range are imported. The default value is false. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always imported from peers and are not controlled by this field.
      * 
      */
-    public Output</* @Nullable */ Boolean> importSubnetRoutesWithPublicIp() {
-        return this.importSubnetRoutesWithPublicIp;
+    public Output<Optional<Boolean>> importSubnetRoutesWithPublicIp() {
+        return Codegen.optional(this.importSubnetRoutesWithPublicIp);
     }
     /**
      * Name of the peering.

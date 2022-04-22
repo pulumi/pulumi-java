@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class QueueServiceProperties extends com.pulumi.resources.CustomResource 
      * @return Specifies CORS rules for the Queue service. You can include up to five CorsRule elements in the request. If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the Queue service.
      * 
      */
-    public Output</* @Nullable */ CorsRulesResponse> cors() {
-        return this.cors;
+    public Output<Optional<CorsRulesResponse>> cors() {
+        return Codegen.optional(this.cors);
     }
     /**
      * The name of the resource

@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -39,8 +40,8 @@ public class IPAM extends com.pulumi.resources.CustomResource {
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Id of the IPAM.
@@ -67,8 +68,8 @@ public class IPAM extends com.pulumi.resources.CustomResource {
      * @return The regions IPAM is enabled for. Allows pools to be created in these regions, as well as enabling monitoring
      * 
      */
-    public Output</* @Nullable */ List<IPAMIpamOperatingRegion>> operatingRegions() {
-        return this.operatingRegions;
+    public Output<Optional<List<IPAMIpamOperatingRegion>>> operatingRegions() {
+        return Codegen.optional(this.operatingRegions);
     }
     /**
      * The Id of the default scope for publicly routable IP space, created with this IPAM.
@@ -123,8 +124,8 @@ public class IPAM extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<IPAMTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<IPAMTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

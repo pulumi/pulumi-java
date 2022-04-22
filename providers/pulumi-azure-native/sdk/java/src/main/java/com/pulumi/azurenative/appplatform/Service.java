@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return The GEO location of the resource.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The name of the resource.
@@ -87,8 +88,8 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return Sku of the Service resource
      * 
      */
-    public Output</* @Nullable */ SkuResponse> sku() {
-        return this.sku;
+    public Output<Optional<SkuResponse>> sku() {
+        return Codegen.optional(this.sku);
     }
     /**
      * Tags of the service which is a list of key value pairs that describe the resource.
@@ -101,8 +102,8 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return Tags of the service which is a list of key value pairs that describe the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource.

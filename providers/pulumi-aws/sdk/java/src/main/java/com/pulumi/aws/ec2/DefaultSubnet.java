@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -102,26 +103,26 @@ public class DefaultSubnet extends com.pulumi.resources.CustomResource {
     @Export(name="customerOwnedIpv4Pool", type=String.class, parameters={})
     private Output</* @Nullable */ String> customerOwnedIpv4Pool;
 
-    public Output</* @Nullable */ String> customerOwnedIpv4Pool() {
-        return this.customerOwnedIpv4Pool;
+    public Output<Optional<String>> customerOwnedIpv4Pool() {
+        return Codegen.optional(this.customerOwnedIpv4Pool);
     }
     @Export(name="enableDns64", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableDns64;
 
-    public Output</* @Nullable */ Boolean> enableDns64() {
-        return this.enableDns64;
+    public Output<Optional<Boolean>> enableDns64() {
+        return Codegen.optional(this.enableDns64);
     }
     @Export(name="enableResourceNameDnsARecordOnLaunch", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableResourceNameDnsARecordOnLaunch;
 
-    public Output</* @Nullable */ Boolean> enableResourceNameDnsARecordOnLaunch() {
-        return this.enableResourceNameDnsARecordOnLaunch;
+    public Output<Optional<Boolean>> enableResourceNameDnsARecordOnLaunch() {
+        return Codegen.optional(this.enableResourceNameDnsARecordOnLaunch);
     }
     @Export(name="enableResourceNameDnsAaaaRecordOnLaunch", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableResourceNameDnsAaaaRecordOnLaunch;
 
-    public Output</* @Nullable */ Boolean> enableResourceNameDnsAaaaRecordOnLaunch() {
-        return this.enableResourceNameDnsAaaaRecordOnLaunch;
+    public Output<Optional<Boolean>> enableResourceNameDnsAaaaRecordOnLaunch() {
+        return Codegen.optional(this.enableResourceNameDnsAaaaRecordOnLaunch);
     }
     /**
      * IPv6 CIDR block.
@@ -146,14 +147,14 @@ public class DefaultSubnet extends com.pulumi.resources.CustomResource {
     @Export(name="ipv6Native", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> ipv6Native;
 
-    public Output</* @Nullable */ Boolean> ipv6Native() {
-        return this.ipv6Native;
+    public Output<Optional<Boolean>> ipv6Native() {
+        return Codegen.optional(this.ipv6Native);
     }
     @Export(name="mapCustomerOwnedIpOnLaunch", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> mapCustomerOwnedIpOnLaunch;
 
-    public Output</* @Nullable */ Boolean> mapCustomerOwnedIpOnLaunch() {
-        return this.mapCustomerOwnedIpOnLaunch;
+    public Output<Optional<Boolean>> mapCustomerOwnedIpOnLaunch() {
+        return Codegen.optional(this.mapCustomerOwnedIpOnLaunch);
     }
     /**
      * Whether instances launched into the subnet should be assigned a public IP address.
@@ -172,8 +173,8 @@ public class DefaultSubnet extends com.pulumi.resources.CustomResource {
     @Export(name="outpostArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> outpostArn;
 
-    public Output</* @Nullable */ String> outpostArn() {
-        return this.outpostArn;
+    public Output<Optional<String>> outpostArn() {
+        return Codegen.optional(this.outpostArn);
     }
     /**
      * ID of the AWS account that owns the subnet.
@@ -206,8 +207,8 @@ public class DefaultSubnet extends com.pulumi.resources.CustomResource {
      * @return Map of tags to assign to the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;

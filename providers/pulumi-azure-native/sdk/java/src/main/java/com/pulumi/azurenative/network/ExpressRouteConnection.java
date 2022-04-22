@@ -16,6 +16,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class ExpressRouteConnection extends com.pulumi.resources.CustomResource 
      * @return Authorization key to establish the connection.
      * 
      */
-    public Output</* @Nullable */ String> authorizationKey() {
-        return this.authorizationKey;
+    public Output<Optional<String>> authorizationKey() {
+        return Codegen.optional(this.authorizationKey);
     }
     /**
      * Enable internet security.
@@ -60,8 +61,8 @@ public class ExpressRouteConnection extends com.pulumi.resources.CustomResource 
      * @return Enable internet security.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableInternetSecurity() {
-        return this.enableInternetSecurity;
+    public Output<Optional<Boolean>> enableInternetSecurity() {
+        return Codegen.optional(this.enableInternetSecurity);
     }
     /**
      * The ExpressRoute circuit peering.
@@ -88,8 +89,8 @@ public class ExpressRouteConnection extends com.pulumi.resources.CustomResource 
      * @return Enable FastPath to vWan Firewall hub.
      * 
      */
-    public Output</* @Nullable */ Boolean> expressRouteGatewayBypass() {
-        return this.expressRouteGatewayBypass;
+    public Output<Optional<Boolean>> expressRouteGatewayBypass() {
+        return Codegen.optional(this.expressRouteGatewayBypass);
     }
     /**
      * The name of the resource.
@@ -130,8 +131,8 @@ public class ExpressRouteConnection extends com.pulumi.resources.CustomResource 
      * @return The Routing Configuration indicating the associated and propagated route tables on this connection.
      * 
      */
-    public Output</* @Nullable */ RoutingConfigurationResponse> routingConfiguration() {
-        return this.routingConfiguration;
+    public Output<Optional<RoutingConfigurationResponse>> routingConfiguration() {
+        return Codegen.optional(this.routingConfiguration);
     }
     /**
      * The routing weight associated to the connection.
@@ -144,8 +145,8 @@ public class ExpressRouteConnection extends com.pulumi.resources.CustomResource 
      * @return The routing weight associated to the connection.
      * 
      */
-    public Output</* @Nullable */ Integer> routingWeight() {
-        return this.routingWeight;
+    public Output<Optional<Integer>> routingWeight() {
+        return Codegen.optional(this.routingWeight);
     }
 
     /**

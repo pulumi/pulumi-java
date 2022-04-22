@@ -16,6 +16,7 @@ import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -60,8 +61,8 @@ public class Queue extends com.pulumi.resources.CustomResource {
      * @return ISO 8061 timeSpan idle interval after which the queue is automatically deleted. The minimum duration is 5 minutes.
      * 
      */
-    public Output</* @Nullable */ String> autoDeleteOnIdle() {
-        return this.autoDeleteOnIdle;
+    public Output<Optional<String>> autoDeleteOnIdle() {
+        return Codegen.optional(this.autoDeleteOnIdle);
     }
     /**
      * Message Count Details.
@@ -102,8 +103,8 @@ public class Queue extends com.pulumi.resources.CustomResource {
      * @return A value that indicates whether this queue has dead letter support when a message expires.
      * 
      */
-    public Output</* @Nullable */ Boolean> deadLetteringOnMessageExpiration() {
-        return this.deadLetteringOnMessageExpiration;
+    public Output<Optional<Boolean>> deadLetteringOnMessageExpiration() {
+        return Codegen.optional(this.deadLetteringOnMessageExpiration);
     }
     /**
      * ISO 8601 default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.
@@ -116,8 +117,8 @@ public class Queue extends com.pulumi.resources.CustomResource {
      * @return ISO 8601 default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.
      * 
      */
-    public Output</* @Nullable */ String> defaultMessageTimeToLive() {
-        return this.defaultMessageTimeToLive;
+    public Output<Optional<String>> defaultMessageTimeToLive() {
+        return Codegen.optional(this.defaultMessageTimeToLive);
     }
     /**
      * ISO 8601 timeSpan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.
@@ -130,8 +131,8 @@ public class Queue extends com.pulumi.resources.CustomResource {
      * @return ISO 8601 timeSpan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.
      * 
      */
-    public Output</* @Nullable */ String> duplicateDetectionHistoryTimeWindow() {
-        return this.duplicateDetectionHistoryTimeWindow;
+    public Output<Optional<String>> duplicateDetectionHistoryTimeWindow() {
+        return Codegen.optional(this.duplicateDetectionHistoryTimeWindow);
     }
     /**
      * Value that indicates whether server-side batched operations are enabled.
@@ -144,8 +145,8 @@ public class Queue extends com.pulumi.resources.CustomResource {
      * @return Value that indicates whether server-side batched operations are enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableBatchedOperations() {
-        return this.enableBatchedOperations;
+    public Output<Optional<Boolean>> enableBatchedOperations() {
+        return Codegen.optional(this.enableBatchedOperations);
     }
     /**
      * A value that indicates whether Express Entities are enabled. An express queue holds a message in memory temporarily before writing it to persistent storage.
@@ -158,8 +159,8 @@ public class Queue extends com.pulumi.resources.CustomResource {
      * @return A value that indicates whether Express Entities are enabled. An express queue holds a message in memory temporarily before writing it to persistent storage.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableExpress() {
-        return this.enableExpress;
+    public Output<Optional<Boolean>> enableExpress() {
+        return Codegen.optional(this.enableExpress);
     }
     /**
      * A value that indicates whether the queue is to be partitioned across multiple message brokers.
@@ -172,8 +173,8 @@ public class Queue extends com.pulumi.resources.CustomResource {
      * @return A value that indicates whether the queue is to be partitioned across multiple message brokers.
      * 
      */
-    public Output</* @Nullable */ Boolean> enablePartitioning() {
-        return this.enablePartitioning;
+    public Output<Optional<Boolean>> enablePartitioning() {
+        return Codegen.optional(this.enablePartitioning);
     }
     /**
      * Queue/Topic name to forward the Dead Letter message
@@ -186,8 +187,8 @@ public class Queue extends com.pulumi.resources.CustomResource {
      * @return Queue/Topic name to forward the Dead Letter message
      * 
      */
-    public Output</* @Nullable */ String> forwardDeadLetteredMessagesTo() {
-        return this.forwardDeadLetteredMessagesTo;
+    public Output<Optional<String>> forwardDeadLetteredMessagesTo() {
+        return Codegen.optional(this.forwardDeadLetteredMessagesTo);
     }
     /**
      * Queue/Topic name to forward the messages
@@ -200,8 +201,8 @@ public class Queue extends com.pulumi.resources.CustomResource {
      * @return Queue/Topic name to forward the messages
      * 
      */
-    public Output</* @Nullable */ String> forwardTo() {
-        return this.forwardTo;
+    public Output<Optional<String>> forwardTo() {
+        return Codegen.optional(this.forwardTo);
     }
     /**
      * ISO 8601 timespan duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. The maximum value for LockDuration is 5 minutes; the default value is 1 minute.
@@ -214,8 +215,8 @@ public class Queue extends com.pulumi.resources.CustomResource {
      * @return ISO 8601 timespan duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. The maximum value for LockDuration is 5 minutes; the default value is 1 minute.
      * 
      */
-    public Output</* @Nullable */ String> lockDuration() {
-        return this.lockDuration;
+    public Output<Optional<String>> lockDuration() {
+        return Codegen.optional(this.lockDuration);
     }
     /**
      * The maximum delivery count. A message is automatically deadlettered after this number of deliveries. default value is 10.
@@ -228,8 +229,8 @@ public class Queue extends com.pulumi.resources.CustomResource {
      * @return The maximum delivery count. A message is automatically deadlettered after this number of deliveries. default value is 10.
      * 
      */
-    public Output</* @Nullable */ Integer> maxDeliveryCount() {
-        return this.maxDeliveryCount;
+    public Output<Optional<Integer>> maxDeliveryCount() {
+        return Codegen.optional(this.maxDeliveryCount);
     }
     /**
      * The maximum size of the queue in megabytes, which is the size of memory allocated for the queue. Default is 1024.
@@ -242,8 +243,8 @@ public class Queue extends com.pulumi.resources.CustomResource {
      * @return The maximum size of the queue in megabytes, which is the size of memory allocated for the queue. Default is 1024.
      * 
      */
-    public Output</* @Nullable */ Integer> maxSizeInMegabytes() {
-        return this.maxSizeInMegabytes;
+    public Output<Optional<Integer>> maxSizeInMegabytes() {
+        return Codegen.optional(this.maxSizeInMegabytes);
     }
     /**
      * The number of messages in the queue.
@@ -284,8 +285,8 @@ public class Queue extends com.pulumi.resources.CustomResource {
      * @return A value indicating if this queue requires duplicate detection.
      * 
      */
-    public Output</* @Nullable */ Boolean> requiresDuplicateDetection() {
-        return this.requiresDuplicateDetection;
+    public Output<Optional<Boolean>> requiresDuplicateDetection() {
+        return Codegen.optional(this.requiresDuplicateDetection);
     }
     /**
      * A value that indicates whether the queue supports the concept of sessions.
@@ -298,8 +299,8 @@ public class Queue extends com.pulumi.resources.CustomResource {
      * @return A value that indicates whether the queue supports the concept of sessions.
      * 
      */
-    public Output</* @Nullable */ Boolean> requiresSession() {
-        return this.requiresSession;
+    public Output<Optional<Boolean>> requiresSession() {
+        return Codegen.optional(this.requiresSession);
     }
     /**
      * The size of the queue, in bytes.
@@ -326,8 +327,8 @@ public class Queue extends com.pulumi.resources.CustomResource {
      * @return Enumerates the possible values for the status of a messaging entity.
      * 
      */
-    public Output</* @Nullable */ String> status() {
-        return this.status;
+    public Output<Optional<String>> status() {
+        return Codegen.optional(this.status);
     }
     /**
      * Resource type

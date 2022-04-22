@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class AccessPolicy extends com.pulumi.resources.CustomResource {
      * @return Authentication method to be used when validating client API access.
      * 
      */
-    public Output</* @Nullable */ JwtAuthenticationResponse> authentication() {
-        return this.authentication;
+    public Output<Optional<JwtAuthenticationResponse>> authentication() {
+        return Codegen.optional(this.authentication);
     }
     /**
      * The name of the resource
@@ -72,8 +73,8 @@ public class AccessPolicy extends com.pulumi.resources.CustomResource {
      * @return Defines the access level granted by this policy.
      * 
      */
-    public Output</* @Nullable */ String> role() {
-        return this.role;
+    public Output<Optional<String>> role() {
+        return Codegen.optional(this.role);
     }
     /**
      * The system metadata relating to this resource.

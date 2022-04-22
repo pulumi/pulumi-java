@@ -18,6 +18,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -61,8 +62,8 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return The name of the endpoint database.
      * 
      */
-    public Output</* @Nullable */ String> databaseName() {
-        return this.databaseName;
+    public Output<Optional<String>> databaseName() {
+        return Codegen.optional(this.databaseName);
     }
     /**
      * Configuration block with Elasticsearch settings. Detailed below.
@@ -75,8 +76,8 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return Configuration block with Elasticsearch settings. Detailed below.
      * 
      */
-    public Output</* @Nullable */ EndpointElasticsearchSettings> elasticsearchSettings() {
-        return this.elasticsearchSettings;
+    public Output<Optional<EndpointElasticsearchSettings>> elasticsearchSettings() {
+        return Codegen.optional(this.elasticsearchSettings);
     }
     /**
      * The Amazon Resource Name (ARN) for the endpoint.
@@ -159,8 +160,8 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return Configuration block with Kafka settings. Detailed below.
      * 
      */
-    public Output</* @Nullable */ EndpointKafkaSettings> kafkaSettings() {
-        return this.kafkaSettings;
+    public Output<Optional<EndpointKafkaSettings>> kafkaSettings() {
+        return Codegen.optional(this.kafkaSettings);
     }
     /**
      * Configuration block with Kinesis settings. Detailed below.
@@ -173,8 +174,8 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return Configuration block with Kinesis settings. Detailed below.
      * 
      */
-    public Output</* @Nullable */ EndpointKinesisSettings> kinesisSettings() {
-        return this.kinesisSettings;
+    public Output<Optional<EndpointKinesisSettings>> kinesisSettings() {
+        return Codegen.optional(this.kinesisSettings);
     }
     /**
      * The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kms_key_arn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
@@ -201,8 +202,8 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return Configuration block with MongoDB settings. Detailed below.
      * 
      */
-    public Output</* @Nullable */ EndpointMongodbSettings> mongodbSettings() {
-        return this.mongodbSettings;
+    public Output<Optional<EndpointMongodbSettings>> mongodbSettings() {
+        return Codegen.optional(this.mongodbSettings);
     }
     /**
      * The password to be used to login to the endpoint database.
@@ -215,8 +216,8 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return The password to be used to login to the endpoint database.
      * 
      */
-    public Output</* @Nullable */ String> password() {
-        return this.password;
+    public Output<Optional<String>> password() {
+        return Codegen.optional(this.password);
     }
     /**
      * The port used by the endpoint database.
@@ -229,8 +230,8 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return The port used by the endpoint database.
      * 
      */
-    public Output</* @Nullable */ Integer> port() {
-        return this.port;
+    public Output<Optional<Integer>> port() {
+        return Codegen.optional(this.port);
     }
     /**
      * Configuration block with S3 settings. Detailed below.
@@ -243,8 +244,8 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return Configuration block with S3 settings. Detailed below.
      * 
      */
-    public Output</* @Nullable */ EndpointS3Settings> s3Settings() {
-        return this.s3Settings;
+    public Output<Optional<EndpointS3Settings>> s3Settings() {
+        return Codegen.optional(this.s3Settings);
     }
     /**
      * Amazon Resource Name (ARN) of the IAM role that specifies AWS DMS as the trusted entity and has the required permissions to access the value in SecretsManagerSecret.
@@ -257,8 +258,8 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the IAM role that specifies AWS DMS as the trusted entity and has the required permissions to access the value in SecretsManagerSecret.
      * 
      */
-    public Output</* @Nullable */ String> secretsManagerAccessRoleArn() {
-        return this.secretsManagerAccessRoleArn;
+    public Output<Optional<String>> secretsManagerAccessRoleArn() {
+        return Codegen.optional(this.secretsManagerAccessRoleArn);
     }
     /**
      * The full ARN, partial ARN, or friendly name of the SecretsManagerSecret that contains the endpoint connection details. Supported only for `engine_name` as `oracle` and `postgres`.
@@ -271,8 +272,8 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return The full ARN, partial ARN, or friendly name of the SecretsManagerSecret that contains the endpoint connection details. Supported only for `engine_name` as `oracle` and `postgres`.
      * 
      */
-    public Output</* @Nullable */ String> secretsManagerArn() {
-        return this.secretsManagerArn;
+    public Output<Optional<String>> secretsManagerArn() {
+        return Codegen.optional(this.secretsManagerArn);
     }
     /**
      * The host name of the server.
@@ -285,8 +286,8 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return The host name of the server.
      * 
      */
-    public Output</* @Nullable */ String> serverName() {
-        return this.serverName;
+    public Output<Optional<String>> serverName() {
+        return Codegen.optional(this.serverName);
     }
     /**
      * The Amazon Resource Name (ARN) used by the service access IAM role for dynamodb endpoints.
@@ -299,8 +300,8 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) used by the service access IAM role for dynamodb endpoints.
      * 
      */
-    public Output</* @Nullable */ String> serviceAccessRole() {
-        return this.serviceAccessRole;
+    public Output<Optional<String>> serviceAccessRole() {
+        return Codegen.optional(this.serviceAccessRole);
     }
     /**
      * The SSL mode to use for the connection. Can be one of `none | require | verify-ca | verify-full`
@@ -327,8 +328,8 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .
@@ -355,8 +356,8 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return The user name to be used to login to the endpoint database.
      * 
      */
-    public Output</* @Nullable */ String> username() {
-        return this.username;
+    public Output<Optional<String>> username() {
+        return Codegen.optional(this.username);
     }
 
     /**

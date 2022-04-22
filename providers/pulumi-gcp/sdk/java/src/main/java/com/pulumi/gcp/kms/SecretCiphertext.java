@@ -11,6 +11,7 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.kms.SecretCiphertextArgs;
 import com.pulumi.gcp.kms.inputs.SecretCiphertextState;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -52,8 +53,8 @@ public class SecretCiphertext extends com.pulumi.resources.CustomResource {
      * **Note**: This property is sensitive and will not be displayed in the plan.
      * 
      */
-    public Output</* @Nullable */ String> additionalAuthenticatedData() {
-        return this.additionalAuthenticatedData;
+    public Output<Optional<String>> additionalAuthenticatedData() {
+        return Codegen.optional(this.additionalAuthenticatedData);
     }
     /**
      * Contains the result of encrypting the provided plaintext, encoded in base64.

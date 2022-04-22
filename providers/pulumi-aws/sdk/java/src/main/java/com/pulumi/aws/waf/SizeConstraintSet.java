@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -70,8 +71,8 @@ public class SizeConstraintSet extends com.pulumi.resources.CustomResource {
      * @return Specifies the parts of web requests that you want to inspect the size of.
      * 
      */
-    public Output</* @Nullable */ List<SizeConstraintSetSizeConstraint>> sizeConstraints() {
-        return this.sizeConstraints;
+    public Output<Optional<List<SizeConstraintSetSizeConstraint>>> sizeConstraints() {
+        return Codegen.optional(this.sizeConstraints);
     }
 
     /**

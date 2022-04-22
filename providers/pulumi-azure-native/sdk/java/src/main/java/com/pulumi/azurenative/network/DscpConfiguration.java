@@ -17,6 +17,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -61,8 +62,8 @@ public class DscpConfiguration extends com.pulumi.resources.CustomResource {
      * @return Destination IP ranges.
      * 
      */
-    public Output</* @Nullable */ List<QosIpRangeResponse>> destinationIpRanges() {
-        return this.destinationIpRanges;
+    public Output<Optional<List<QosIpRangeResponse>>> destinationIpRanges() {
+        return Codegen.optional(this.destinationIpRanges);
     }
     /**
      * Destination port ranges.
@@ -75,8 +76,8 @@ public class DscpConfiguration extends com.pulumi.resources.CustomResource {
      * @return Destination port ranges.
      * 
      */
-    public Output</* @Nullable */ List<QosPortRangeResponse>> destinationPortRanges() {
-        return this.destinationPortRanges;
+    public Output<Optional<List<QosPortRangeResponse>>> destinationPortRanges() {
+        return Codegen.optional(this.destinationPortRanges);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
@@ -103,8 +104,8 @@ public class DscpConfiguration extends com.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * List of markings to be used in the configuration.
@@ -117,8 +118,8 @@ public class DscpConfiguration extends com.pulumi.resources.CustomResource {
      * @return List of markings to be used in the configuration.
      * 
      */
-    public Output</* @Nullable */ List<Integer>> markings() {
-        return this.markings;
+    public Output<Optional<List<Integer>>> markings() {
+        return Codegen.optional(this.markings);
     }
     /**
      * Resource name.
@@ -145,8 +146,8 @@ public class DscpConfiguration extends com.pulumi.resources.CustomResource {
      * @return RNM supported protocol types.
      * 
      */
-    public Output</* @Nullable */ String> protocol() {
-        return this.protocol;
+    public Output<Optional<String>> protocol() {
+        return Codegen.optional(this.protocol);
     }
     /**
      * The provisioning state of the DSCP Configuration resource.
@@ -201,8 +202,8 @@ public class DscpConfiguration extends com.pulumi.resources.CustomResource {
      * @return Source IP ranges.
      * 
      */
-    public Output</* @Nullable */ List<QosIpRangeResponse>> sourceIpRanges() {
-        return this.sourceIpRanges;
+    public Output<Optional<List<QosIpRangeResponse>>> sourceIpRanges() {
+        return Codegen.optional(this.sourceIpRanges);
     }
     /**
      * Sources port ranges.
@@ -215,8 +216,8 @@ public class DscpConfiguration extends com.pulumi.resources.CustomResource {
      * @return Sources port ranges.
      * 
      */
-    public Output</* @Nullable */ List<QosPortRangeResponse>> sourcePortRanges() {
-        return this.sourcePortRanges;
+    public Output<Optional<List<QosPortRangeResponse>>> sourcePortRanges() {
+        return Codegen.optional(this.sourcePortRanges);
     }
     /**
      * Resource tags.
@@ -229,8 +230,8 @@ public class DscpConfiguration extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type.

@@ -11,6 +11,7 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.compute.RouterInterfaceArgs;
 import com.pulumi.gcp.compute.inputs.RouterInterfaceState;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -49,8 +50,8 @@ public class RouterInterface extends com.pulumi.resources.CustomResource {
      * specified.
      * 
      */
-    public Output</* @Nullable */ String> interconnectAttachment() {
-        return this.interconnectAttachment;
+    public Output<Optional<String>> interconnectAttachment() {
+        return Codegen.optional(this.interconnectAttachment);
     }
     /**
      * IP address and range of the interface. The IP range must be
@@ -65,8 +66,8 @@ public class RouterInterface extends com.pulumi.resources.CustomResource {
      * in the RFC3927 link-local IP space. Changing this forces a new interface to be created.
      * 
      */
-    public Output</* @Nullable */ String> ipRange() {
-        return this.ipRange;
+    public Output<Optional<String>> ipRange() {
+        return Codegen.optional(this.ipRange);
     }
     /**
      * A unique name for the interface, required by GCE. Changing
@@ -149,8 +150,8 @@ public class RouterInterface extends com.pulumi.resources.CustomResource {
      * one of `vpn_tunnel` and `interconnect_attachment` can be specified.
      * 
      */
-    public Output</* @Nullable */ String> vpnTunnel() {
-        return this.vpnTunnel;
+    public Output<Optional<String>> vpnTunnel() {
+        return Codegen.optional(this.vpnTunnel);
     }
 
     /**

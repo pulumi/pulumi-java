@@ -19,6 +19,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -49,8 +50,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The list of Log Analytics workspaces associated with the cluster
      * 
      */
-    public Output</* @Nullable */ List<AssociatedWorkspaceResponse>> associatedWorkspaces() {
-        return this.associatedWorkspaces;
+    public Output<Optional<List<AssociatedWorkspaceResponse>>> associatedWorkspaces() {
+        return Codegen.optional(this.associatedWorkspaces);
     }
     /**
      * The cluster&#39;s billing type.
@@ -63,8 +64,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The cluster&#39;s billing type.
      * 
      */
-    public Output</* @Nullable */ String> billingType() {
-        return this.billingType;
+    public Output<Optional<String>> billingType() {
+        return Codegen.optional(this.billingType);
     }
     /**
      * Additional properties for capacity reservation
@@ -77,8 +78,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Additional properties for capacity reservation
      * 
      */
-    public Output</* @Nullable */ CapacityReservationPropertiesResponse> capacityReservationProperties() {
-        return this.capacityReservationProperties;
+    public Output<Optional<CapacityReservationPropertiesResponse>> capacityReservationProperties() {
+        return Codegen.optional(this.capacityReservationProperties);
     }
     /**
      * The ID associated with the cluster.
@@ -119,8 +120,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The identity of the resource.
      * 
      */
-    public Output</* @Nullable */ IdentityResponse> identity() {
-        return this.identity;
+    public Output<Optional<IdentityResponse>> identity() {
+        return Codegen.optional(this.identity);
     }
     /**
      * Sets whether the cluster will support availability zones. This can be set as true only in regions where Azure Data Explorer support Availability Zones. This Property can not be modified after cluster creation. Default value is &#39;true&#39; if region supports Availability Zones.
@@ -133,8 +134,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Sets whether the cluster will support availability zones. This can be set as true only in regions where Azure Data Explorer support Availability Zones. This Property can not be modified after cluster creation. Default value is &#39;true&#39; if region supports Availability Zones.
      * 
      */
-    public Output</* @Nullable */ Boolean> isAvailabilityZonesEnabled() {
-        return this.isAvailabilityZonesEnabled;
+    public Output<Optional<Boolean>> isAvailabilityZonesEnabled() {
+        return Codegen.optional(this.isAvailabilityZonesEnabled);
     }
     /**
      * The associated key properties.
@@ -147,8 +148,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The associated key properties.
      * 
      */
-    public Output</* @Nullable */ KeyVaultPropertiesResponse> keyVaultProperties() {
-        return this.keyVaultProperties;
+    public Output<Optional<KeyVaultPropertiesResponse>> keyVaultProperties() {
+        return Codegen.optional(this.keyVaultProperties);
     }
     /**
      * The last time the cluster was updated.
@@ -217,8 +218,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The sku properties.
      * 
      */
-    public Output</* @Nullable */ ClusterSkuResponse> sku() {
-        return this.sku;
+    public Output<Optional<ClusterSkuResponse>> sku() {
+        return Codegen.optional(this.sku);
     }
     /**
      * Resource tags.
@@ -231,8 +232,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;

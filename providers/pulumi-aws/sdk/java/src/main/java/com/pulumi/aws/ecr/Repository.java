@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -58,8 +59,8 @@ public class Repository extends com.pulumi.resources.CustomResource {
      * @return Encryption configuration for the repository. See below for schema.
      * 
      */
-    public Output</* @Nullable */ List<RepositoryEncryptionConfiguration>> encryptionConfigurations() {
-        return this.encryptionConfigurations;
+    public Output<Optional<List<RepositoryEncryptionConfiguration>>> encryptionConfigurations() {
+        return Codegen.optional(this.encryptionConfigurations);
     }
     /**
      * Configuration block that defines image scanning configuration for the repository. By default, image scanning must be manually triggered. See the [ECR User Guide](https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-scanning.html) for more information about image scanning.
@@ -72,8 +73,8 @@ public class Repository extends com.pulumi.resources.CustomResource {
      * @return Configuration block that defines image scanning configuration for the repository. By default, image scanning must be manually triggered. See the [ECR User Guide](https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-scanning.html) for more information about image scanning.
      * 
      */
-    public Output</* @Nullable */ RepositoryImageScanningConfiguration> imageScanningConfiguration() {
-        return this.imageScanningConfiguration;
+    public Output<Optional<RepositoryImageScanningConfiguration>> imageScanningConfiguration() {
+        return Codegen.optional(this.imageScanningConfiguration);
     }
     /**
      * The tag mutability setting for the repository. Must be one of: `MUTABLE` or `IMMUTABLE`. Defaults to `MUTABLE`.
@@ -86,8 +87,8 @@ public class Repository extends com.pulumi.resources.CustomResource {
      * @return The tag mutability setting for the repository. Must be one of: `MUTABLE` or `IMMUTABLE`. Defaults to `MUTABLE`.
      * 
      */
-    public Output</* @Nullable */ String> imageTagMutability() {
-        return this.imageTagMutability;
+    public Output<Optional<String>> imageTagMutability() {
+        return Codegen.optional(this.imageTagMutability);
     }
     /**
      * Name of the repository.
@@ -142,8 +143,8 @@ public class Repository extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.

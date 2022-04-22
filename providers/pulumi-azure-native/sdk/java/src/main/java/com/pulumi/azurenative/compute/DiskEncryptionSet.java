@@ -16,6 +16,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class DiskEncryptionSet extends com.pulumi.resources.CustomResource {
      * @return The key vault key which is currently used by this disk encryption set.
      * 
      */
-    public Output</* @Nullable */ KeyForDiskEncryptionSetResponse> activeKey() {
-        return this.activeKey;
+    public Output<Optional<KeyForDiskEncryptionSetResponse>> activeKey() {
+        return Codegen.optional(this.activeKey);
     }
     /**
      * The type of key used to encrypt the data of the disk.
@@ -60,8 +61,8 @@ public class DiskEncryptionSet extends com.pulumi.resources.CustomResource {
      * @return The type of key used to encrypt the data of the disk.
      * 
      */
-    public Output</* @Nullable */ String> encryptionType() {
-        return this.encryptionType;
+    public Output<Optional<String>> encryptionType() {
+        return Codegen.optional(this.encryptionType);
     }
     /**
      * The managed identity for the disk encryption set. It should be given permission on the key vault before it can be used to encrypt disks.
@@ -74,8 +75,8 @@ public class DiskEncryptionSet extends com.pulumi.resources.CustomResource {
      * @return The managed identity for the disk encryption set. It should be given permission on the key vault before it can be used to encrypt disks.
      * 
      */
-    public Output</* @Nullable */ EncryptionSetIdentityResponse> identity() {
-        return this.identity;
+    public Output<Optional<EncryptionSetIdentityResponse>> identity() {
+        return Codegen.optional(this.identity);
     }
     /**
      * The time when the active key of this disk encryption set was updated.
@@ -158,8 +159,8 @@ public class DiskEncryptionSet extends com.pulumi.resources.CustomResource {
      * @return Set this flag to true to enable auto-updating of this disk encryption set to the latest key version.
      * 
      */
-    public Output</* @Nullable */ Boolean> rotationToLatestKeyVersionEnabled() {
-        return this.rotationToLatestKeyVersionEnabled;
+    public Output<Optional<Boolean>> rotationToLatestKeyVersionEnabled() {
+        return Codegen.optional(this.rotationToLatestKeyVersionEnabled);
     }
     /**
      * Resource tags
@@ -172,8 +173,8 @@ public class DiskEncryptionSet extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type

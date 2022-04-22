@@ -21,6 +21,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -51,8 +52,8 @@ public class ExpressRouteCircuit extends com.pulumi.resources.CustomResource {
      * @return Allow classic operations.
      * 
      */
-    public Output</* @Nullable */ Boolean> allowClassicOperations() {
-        return this.allowClassicOperations;
+    public Output<Optional<Boolean>> allowClassicOperations() {
+        return Codegen.optional(this.allowClassicOperations);
     }
     /**
      * The list of authorizations.
@@ -65,8 +66,8 @@ public class ExpressRouteCircuit extends com.pulumi.resources.CustomResource {
      * @return The list of authorizations.
      * 
      */
-    public Output</* @Nullable */ List<ExpressRouteCircuitAuthorizationResponse>> authorizations() {
-        return this.authorizations;
+    public Output<Optional<List<ExpressRouteCircuitAuthorizationResponse>>> authorizations() {
+        return Codegen.optional(this.authorizations);
     }
     /**
      * The bandwidth of the circuit when the circuit is provisioned on an ExpressRoutePort resource.
@@ -79,8 +80,8 @@ public class ExpressRouteCircuit extends com.pulumi.resources.CustomResource {
      * @return The bandwidth of the circuit when the circuit is provisioned on an ExpressRoutePort resource.
      * 
      */
-    public Output</* @Nullable */ Double> bandwidthInGbps() {
-        return this.bandwidthInGbps;
+    public Output<Optional<Double>> bandwidthInGbps() {
+        return Codegen.optional(this.bandwidthInGbps);
     }
     /**
      * The CircuitProvisioningState state of the resource.
@@ -93,8 +94,8 @@ public class ExpressRouteCircuit extends com.pulumi.resources.CustomResource {
      * @return The CircuitProvisioningState state of the resource.
      * 
      */
-    public Output</* @Nullable */ String> circuitProvisioningState() {
-        return this.circuitProvisioningState;
+    public Output<Optional<String>> circuitProvisioningState() {
+        return Codegen.optional(this.circuitProvisioningState);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
@@ -121,8 +122,8 @@ public class ExpressRouteCircuit extends com.pulumi.resources.CustomResource {
      * @return The reference to the ExpressRoutePort resource when the circuit is provisioned on an ExpressRoutePort resource.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> expressRoutePort() {
-        return this.expressRoutePort;
+    public Output<Optional<SubResourceResponse>> expressRoutePort() {
+        return Codegen.optional(this.expressRoutePort);
     }
     /**
      * The GatewayManager Etag.
@@ -135,8 +136,8 @@ public class ExpressRouteCircuit extends com.pulumi.resources.CustomResource {
      * @return The GatewayManager Etag.
      * 
      */
-    public Output</* @Nullable */ String> gatewayManagerEtag() {
-        return this.gatewayManagerEtag;
+    public Output<Optional<String>> gatewayManagerEtag() {
+        return Codegen.optional(this.gatewayManagerEtag);
     }
     /**
      * Flag denoting global reach status.
@@ -149,8 +150,8 @@ public class ExpressRouteCircuit extends com.pulumi.resources.CustomResource {
      * @return Flag denoting global reach status.
      * 
      */
-    public Output</* @Nullable */ Boolean> globalReachEnabled() {
-        return this.globalReachEnabled;
+    public Output<Optional<Boolean>> globalReachEnabled() {
+        return Codegen.optional(this.globalReachEnabled);
     }
     /**
      * Resource location.
@@ -163,8 +164,8 @@ public class ExpressRouteCircuit extends com.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * Resource name.
@@ -191,8 +192,8 @@ public class ExpressRouteCircuit extends com.pulumi.resources.CustomResource {
      * @return The list of peerings.
      * 
      */
-    public Output</* @Nullable */ List<ExpressRouteCircuitPeeringResponse>> peerings() {
-        return this.peerings;
+    public Output<Optional<List<ExpressRouteCircuitPeeringResponse>>> peerings() {
+        return Codegen.optional(this.peerings);
     }
     /**
      * The provisioning state of the express route circuit resource.
@@ -219,8 +220,8 @@ public class ExpressRouteCircuit extends com.pulumi.resources.CustomResource {
      * @return The ServiceKey.
      * 
      */
-    public Output</* @Nullable */ String> serviceKey() {
-        return this.serviceKey;
+    public Output<Optional<String>> serviceKey() {
+        return Codegen.optional(this.serviceKey);
     }
     /**
      * The ServiceProviderNotes.
@@ -233,8 +234,8 @@ public class ExpressRouteCircuit extends com.pulumi.resources.CustomResource {
      * @return The ServiceProviderNotes.
      * 
      */
-    public Output</* @Nullable */ String> serviceProviderNotes() {
-        return this.serviceProviderNotes;
+    public Output<Optional<String>> serviceProviderNotes() {
+        return Codegen.optional(this.serviceProviderNotes);
     }
     /**
      * The ServiceProviderProperties.
@@ -247,8 +248,8 @@ public class ExpressRouteCircuit extends com.pulumi.resources.CustomResource {
      * @return The ServiceProviderProperties.
      * 
      */
-    public Output</* @Nullable */ ExpressRouteCircuitServiceProviderPropertiesResponse> serviceProviderProperties() {
-        return this.serviceProviderProperties;
+    public Output<Optional<ExpressRouteCircuitServiceProviderPropertiesResponse>> serviceProviderProperties() {
+        return Codegen.optional(this.serviceProviderProperties);
     }
     /**
      * The ServiceProviderProvisioningState state of the resource.
@@ -261,8 +262,8 @@ public class ExpressRouteCircuit extends com.pulumi.resources.CustomResource {
      * @return The ServiceProviderProvisioningState state of the resource.
      * 
      */
-    public Output</* @Nullable */ String> serviceProviderProvisioningState() {
-        return this.serviceProviderProvisioningState;
+    public Output<Optional<String>> serviceProviderProvisioningState() {
+        return Codegen.optional(this.serviceProviderProvisioningState);
     }
     /**
      * The SKU.
@@ -275,8 +276,8 @@ public class ExpressRouteCircuit extends com.pulumi.resources.CustomResource {
      * @return The SKU.
      * 
      */
-    public Output</* @Nullable */ ExpressRouteCircuitSkuResponse> sku() {
-        return this.sku;
+    public Output<Optional<ExpressRouteCircuitSkuResponse>> sku() {
+        return Codegen.optional(this.sku);
     }
     /**
      * The identifier of the circuit traffic. Outer tag for QinQ encapsulation.
@@ -303,8 +304,8 @@ public class ExpressRouteCircuit extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type.

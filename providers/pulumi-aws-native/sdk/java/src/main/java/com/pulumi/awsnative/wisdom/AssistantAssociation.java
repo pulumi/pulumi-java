@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -61,8 +62,8 @@ public class AssistantAssociation extends com.pulumi.resources.CustomResource {
     @Export(name="tags", type=List.class, parameters={AssistantAssociationTag.class})
     private Output</* @Nullable */ List<AssistantAssociationTag>> tags;
 
-    public Output</* @Nullable */ List<AssistantAssociationTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<AssistantAssociationTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

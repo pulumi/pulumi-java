@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class WorkloadNetworkPublicIP extends com.pulumi.resources.CustomResource
      * @return Display name of the Public IP Block.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * Resource name.
@@ -71,8 +72,8 @@ public class WorkloadNetworkPublicIP extends com.pulumi.resources.CustomResource
      * @return Number of Public IPs requested.
      * 
      */
-    public Output</* @Nullable */ Double> numberOfPublicIPs() {
-        return this.numberOfPublicIPs;
+    public Output<Optional<Double>> numberOfPublicIPs() {
+        return Codegen.optional(this.numberOfPublicIPs);
     }
     /**
      * The provisioning state

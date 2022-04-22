@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -33,8 +34,8 @@ public class ResiliencyPolicy extends com.pulumi.resources.CustomResource {
      * @return Data Location Constraint of the Policy.
      * 
      */
-    public Output</* @Nullable */ ResiliencyPolicyDataLocationConstraint> dataLocationConstraint() {
-        return this.dataLocationConstraint;
+    public Output<Optional<ResiliencyPolicyDataLocationConstraint>> dataLocationConstraint() {
+        return Codegen.optional(this.dataLocationConstraint);
     }
     @Export(name="policy", type=ResiliencyPolicyPolicyMap.class, parameters={})
     private Output<ResiliencyPolicyPolicyMap> policy;
@@ -67,8 +68,8 @@ public class ResiliencyPolicy extends com.pulumi.resources.CustomResource {
      * @return Description of Resiliency Policy.
      * 
      */
-    public Output</* @Nullable */ String> policyDescription() {
-        return this.policyDescription;
+    public Output<Optional<String>> policyDescription() {
+        return Codegen.optional(this.policyDescription);
     }
     /**
      * Name of Resiliency Policy.
@@ -87,8 +88,8 @@ public class ResiliencyPolicy extends com.pulumi.resources.CustomResource {
     @Export(name="tags", type=ResiliencyPolicyTagMap.class, parameters={})
     private Output</* @Nullable */ ResiliencyPolicyTagMap> tags;
 
-    public Output</* @Nullable */ ResiliencyPolicyTagMap> tags() {
-        return this.tags;
+    public Output<Optional<ResiliencyPolicyTagMap>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resiliency Policy Tier.

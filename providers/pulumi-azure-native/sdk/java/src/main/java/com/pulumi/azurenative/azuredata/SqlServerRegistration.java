@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -72,8 +73,8 @@ public class SqlServerRegistration extends com.pulumi.resources.CustomResource {
      * @return Optional Properties as JSON string
      * 
      */
-    public Output</* @Nullable */ String> propertyBag() {
-        return this.propertyBag;
+    public Output<Optional<String>> propertyBag() {
+        return Codegen.optional(this.propertyBag);
     }
     /**
      * Resource Group Name
@@ -86,8 +87,8 @@ public class SqlServerRegistration extends com.pulumi.resources.CustomResource {
      * @return Resource Group Name
      * 
      */
-    public Output</* @Nullable */ String> resourceGroup() {
-        return this.resourceGroup;
+    public Output<Optional<String>> resourceGroup() {
+        return Codegen.optional(this.resourceGroup);
     }
     /**
      * Subscription Id
@@ -100,8 +101,8 @@ public class SqlServerRegistration extends com.pulumi.resources.CustomResource {
      * @return Subscription Id
      * 
      */
-    public Output</* @Nullable */ String> subscriptionId() {
-        return this.subscriptionId;
+    public Output<Optional<String>> subscriptionId() {
+        return Codegen.optional(this.subscriptionId);
     }
     /**
      * Read only system data
@@ -128,8 +129,8 @@ public class SqlServerRegistration extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.

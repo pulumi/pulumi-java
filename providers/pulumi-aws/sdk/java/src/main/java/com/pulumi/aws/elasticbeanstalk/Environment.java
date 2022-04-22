@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -146,8 +147,8 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return Short description of the Environment
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The URL to the Load Balancer for this Environment
@@ -254,8 +255,8 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * use the default behavior, which is an exponential backoff
      * 
      */
-    public Output</* @Nullable */ String> pollInterval() {
-        return this.pollInterval;
+    public Output<Optional<String>> pollInterval() {
+        return Codegen.optional(this.pollInterval);
     }
     /**
      * SQS queues in use by this Environment.
@@ -286,8 +287,8 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * below in Option Settings
      * 
      */
-    public Output</* @Nullable */ List<EnvironmentSetting>> settings() {
-        return this.settings;
+    public Output<Optional<List<EnvironmentSetting>>> settings() {
+        return Codegen.optional(this.settings);
     }
     /**
      * A solution stack to base your environment
@@ -316,8 +317,8 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return A set of tags to apply to the Environment. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
@@ -346,8 +347,8 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * template to use in deployment
      * 
      */
-    public Output</* @Nullable */ String> templateName() {
-        return this.templateName;
+    public Output<Optional<String>> templateName() {
+        return Codegen.optional(this.templateName);
     }
     /**
      * Elastic Beanstalk Environment tier. Valid values are `Worker`
@@ -362,8 +363,8 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * or `WebServer`. If tier is left blank `WebServer` will be used.
      * 
      */
-    public Output</* @Nullable */ String> tier() {
-        return this.tier;
+    public Output<Optional<String>> tier() {
+        return Codegen.optional(this.tier);
     }
     /**
      * Autoscaling triggers in use by this Environment.
@@ -412,8 +413,8 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * out.
      * 
      */
-    public Output</* @Nullable */ String> waitForReadyTimeout() {
-        return this.waitForReadyTimeout;
+    public Output<Optional<String>> waitForReadyTimeout() {
+        return Codegen.optional(this.waitForReadyTimeout);
     }
 
     /**

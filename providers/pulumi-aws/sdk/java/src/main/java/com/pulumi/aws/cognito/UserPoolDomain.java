@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -54,8 +55,8 @@ public class UserPoolDomain extends com.pulumi.resources.CustomResource {
      * @return The ARN of an ISSUED ACM certificate in us-east-1 for a custom domain.
      * 
      */
-    public Output</* @Nullable */ String> certificateArn() {
-        return this.certificateArn;
+    public Output<Optional<String>> certificateArn() {
+        return Codegen.optional(this.certificateArn);
     }
     /**
      * The URL of the CloudFront distribution. This is required to generate the ALIAS `aws.route53.Record`

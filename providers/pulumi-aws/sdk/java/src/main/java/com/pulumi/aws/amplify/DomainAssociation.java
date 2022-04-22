@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -113,8 +114,8 @@ public class DomainAssociation extends com.pulumi.resources.CustomResource {
      * @return If enabled, the resource will wait for the domain association status to change to `PENDING_DEPLOYMENT` or `AVAILABLE`. Setting this to `false` will skip the process. Default: `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> waitForVerification() {
-        return this.waitForVerification;
+    public Output<Optional<Boolean>> waitForVerification() {
+        return Codegen.optional(this.waitForVerification);
     }
 
     /**

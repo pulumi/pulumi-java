@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -32,14 +33,14 @@ public class Pipeline extends com.pulumi.resources.CustomResource {
     @Export(name="pipelineName", type=String.class, parameters={})
     private Output</* @Nullable */ String> pipelineName;
 
-    public Output</* @Nullable */ String> pipelineName() {
-        return this.pipelineName;
+    public Output<Optional<String>> pipelineName() {
+        return Codegen.optional(this.pipelineName);
     }
     @Export(name="tags", type=List.class, parameters={PipelineTag.class})
     private Output</* @Nullable */ List<PipelineTag>> tags;
 
-    public Output</* @Nullable */ List<PipelineTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<PipelineTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

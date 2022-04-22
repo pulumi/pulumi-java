@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -29,14 +30,14 @@ public class Image extends com.pulumi.resources.CustomResource {
     @Export(name="imageDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> imageDescription;
 
-    public Output</* @Nullable */ String> imageDescription() {
-        return this.imageDescription;
+    public Output<Optional<String>> imageDescription() {
+        return Codegen.optional(this.imageDescription);
     }
     @Export(name="imageDisplayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> imageDisplayName;
 
-    public Output</* @Nullable */ String> imageDisplayName() {
-        return this.imageDisplayName;
+    public Output<Optional<String>> imageDisplayName() {
+        return Codegen.optional(this.imageDisplayName);
     }
     @Export(name="imageName", type=String.class, parameters={})
     private Output<String> imageName;
@@ -61,8 +62,8 @@ public class Image extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<ImageTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<ImageTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

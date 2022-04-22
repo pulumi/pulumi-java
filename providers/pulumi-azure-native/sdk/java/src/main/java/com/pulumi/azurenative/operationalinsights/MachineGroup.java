@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class MachineGroup extends com.pulumi.resources.CustomResource {
      * @return Count of machines in this group. The value of count may be bigger than the number of machines in case of the group has been truncated due to exceeding the max number of machines a group can handle.
      * 
      */
-    public Output</* @Nullable */ Integer> count() {
-        return this.count;
+    public Output<Optional<Integer>> count() {
+        return Codegen.optional(this.count);
     }
     /**
      * User defined name for the group
@@ -72,8 +73,8 @@ public class MachineGroup extends com.pulumi.resources.CustomResource {
      * @return Resource ETAG.
      * 
      */
-    public Output</* @Nullable */ String> etag() {
-        return this.etag;
+    public Output<Optional<String>> etag() {
+        return Codegen.optional(this.etag);
     }
     /**
      * Type of the machine group
@@ -86,8 +87,8 @@ public class MachineGroup extends com.pulumi.resources.CustomResource {
      * @return Type of the machine group
      * 
      */
-    public Output</* @Nullable */ String> groupType() {
-        return this.groupType;
+    public Output<Optional<String>> groupType() {
+        return Codegen.optional(this.groupType);
     }
     /**
      * Additional resource type qualifier.
@@ -116,8 +117,8 @@ public class MachineGroup extends com.pulumi.resources.CustomResource {
      * @return References of the machines in this group. The hints within each reference do not represent the current value of the corresponding fields. They are a snapshot created during the last time the machine group was updated.
      * 
      */
-    public Output</* @Nullable */ List<MachineReferenceWithHintsResponse>> machines() {
-        return this.machines;
+    public Output<Optional<List<MachineReferenceWithHintsResponse>>> machines() {
+        return Codegen.optional(this.machines);
     }
     /**
      * Resource name.

@@ -19,6 +19,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -49,8 +50,8 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return Applicable only for the standard3 SKU. You can set this property to enable up to 3 high density partitions that allow up to 1000 indexes, which is much higher than the maximum indexes allowed for any other SKU. For the standard3 SKU, the value is either &#39;default&#39; or &#39;highDensity&#39;. For all other SKUs, this value must be &#39;default&#39;.
      * 
      */
-    public Output</* @Nullable */ String> hostingMode() {
-        return this.hostingMode;
+    public Output<Optional<String>> hostingMode() {
+        return Codegen.optional(this.hostingMode);
     }
     /**
      * The identity of the resource.
@@ -63,8 +64,8 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return The identity of the resource.
      * 
      */
-    public Output</* @Nullable */ IdentityResponse> identity() {
-        return this.identity;
+    public Output<Optional<IdentityResponse>> identity() {
+        return Codegen.optional(this.identity);
     }
     /**
      * The geo-location where the resource lives
@@ -105,8 +106,8 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return Network specific rules that determine how the Azure Cognitive Search service may be reached.
      * 
      */
-    public Output</* @Nullable */ NetworkRuleSetResponse> networkRuleSet() {
-        return this.networkRuleSet;
+    public Output<Optional<NetworkRuleSetResponse>> networkRuleSet() {
+        return Codegen.optional(this.networkRuleSet);
     }
     /**
      * The number of partitions in the search service; if specified, it can be 1, 2, 3, 4, 6, or 12. Values greater than 1 are only valid for standard SKUs. For &#39;standard3&#39; services with hostingMode set to &#39;highDensity&#39;, the allowed values are between 1 and 3.
@@ -119,8 +120,8 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return The number of partitions in the search service; if specified, it can be 1, 2, 3, 4, 6, or 12. Values greater than 1 are only valid for standard SKUs. For &#39;standard3&#39; services with hostingMode set to &#39;highDensity&#39;, the allowed values are between 1 and 3.
      * 
      */
-    public Output</* @Nullable */ Integer> partitionCount() {
-        return this.partitionCount;
+    public Output<Optional<Integer>> partitionCount() {
+        return Codegen.optional(this.partitionCount);
     }
     /**
      * The list of private endpoint connections to the Azure Cognitive Search service.
@@ -161,8 +162,8 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return This value can be set to &#39;enabled&#39; to avoid breaking changes on existing customer resources and templates. If set to &#39;disabled&#39;, traffic over public interface is not allowed, and private endpoint connections would be the exclusive access method.
      * 
      */
-    public Output</* @Nullable */ String> publicNetworkAccess() {
-        return this.publicNetworkAccess;
+    public Output<Optional<String>> publicNetworkAccess() {
+        return Codegen.optional(this.publicNetworkAccess);
     }
     /**
      * The number of replicas in the search service. If specified, it must be a value between 1 and 12 inclusive for standard SKUs or between 1 and 3 inclusive for basic SKU.
@@ -175,8 +176,8 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return The number of replicas in the search service. If specified, it must be a value between 1 and 12 inclusive for standard SKUs or between 1 and 3 inclusive for basic SKU.
      * 
      */
-    public Output</* @Nullable */ Integer> replicaCount() {
-        return this.replicaCount;
+    public Output<Optional<Integer>> replicaCount() {
+        return Codegen.optional(this.replicaCount);
     }
     /**
      * The list of shared private link resources managed by the Azure Cognitive Search service.
@@ -203,8 +204,8 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return The SKU of the Search Service, which determines price tier and capacity limits. This property is required when creating a new Search Service.
      * 
      */
-    public Output</* @Nullable */ SkuResponse> sku() {
-        return this.sku;
+    public Output<Optional<SkuResponse>> sku() {
+        return Codegen.optional(this.sku);
     }
     /**
      * The status of the search service. Possible values include: &#39;running&#39;: The search service is running and no provisioning operations are underway. &#39;provisioning&#39;: The search service is being provisioned or scaled up or down. &#39;deleting&#39;: The search service is being deleted. &#39;degraded&#39;: The search service is degraded. This can occur when the underlying search units are not healthy. The search service is most likely operational, but performance might be slow and some requests might be dropped. &#39;disabled&#39;: The search service is disabled. In this state, the service will reject all API requests. &#39;error&#39;: The search service is in an error state. If your service is in the degraded, disabled, or error states, it means the Azure Cognitive Search team is actively investigating the underlying issue. Dedicated services in these states are still chargeable based on the number of search units provisioned.
@@ -245,8 +246,8 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;

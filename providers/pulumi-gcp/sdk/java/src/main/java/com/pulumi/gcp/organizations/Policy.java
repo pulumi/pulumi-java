@@ -15,6 +15,7 @@ import com.pulumi.gcp.organizations.outputs.PolicyListPolicy;
 import com.pulumi.gcp.organizations.outputs.PolicyRestorePolicy;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -56,8 +57,8 @@ public class Policy extends com.pulumi.resources.CustomResource {
      * below.
      * 
      */
-    public Output</* @Nullable */ PolicyBooleanPolicy> booleanPolicy() {
-        return this.booleanPolicy;
+    public Output<Optional<PolicyBooleanPolicy>> booleanPolicy() {
+        return Codegen.optional(this.booleanPolicy);
     }
     /**
      * The name of the Constraint the Policy is configuring, for example, `serviceuser.services`. Check out the [complete list of available constraints](https://cloud.google.com/resource-manager/docs/organization-policy/understanding-constraints#available_constraints).
@@ -98,8 +99,8 @@ public class Policy extends com.pulumi.resources.CustomResource {
      * @return A policy that can define specific values that are allowed or denied for the given constraint. It can also be used to allow or deny all values. Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ PolicyListPolicy> listPolicy() {
-        return this.listPolicy;
+    public Output<Optional<PolicyListPolicy>> listPolicy() {
+        return Codegen.optional(this.listPolicy);
     }
     /**
      * The numeric ID of the organization to set the policy for.
@@ -126,8 +127,8 @@ public class Policy extends com.pulumi.resources.CustomResource {
      * @return A restore policy is a constraint to restore the default policy. Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ PolicyRestorePolicy> restorePolicy() {
-        return this.restorePolicy;
+    public Output<Optional<PolicyRestorePolicy>> restorePolicy() {
+        return Codegen.optional(this.restorePolicy);
     }
     /**
      * (Computed) The timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds, representing when the variable was last updated. Example: &#34;2016-10-09T12:33:37.578138407Z&#34;.

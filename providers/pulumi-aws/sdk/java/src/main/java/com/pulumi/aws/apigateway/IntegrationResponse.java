@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class IntegrationResponse extends com.pulumi.resources.CustomResource {
      * @return Specifies how to handle request payload content type conversions. Supported values are `CONVERT_TO_BINARY` and `CONVERT_TO_TEXT`. If this property is not defined, the response payload will be passed through from the integration response to the method response without modification.
      * 
      */
-    public Output</* @Nullable */ String> contentHandling() {
-        return this.contentHandling;
+    public Output<Optional<String>> contentHandling() {
+        return Codegen.optional(this.contentHandling);
     }
     /**
      * The HTTP method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
@@ -88,8 +89,8 @@ public class IntegrationResponse extends com.pulumi.resources.CustomResource {
      * For example: `response_parameters = { &#34;method.response.header.X-Some-Header&#34; = &#34;integration.response.header.X-Some-Other-Header&#34; }`
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> responseParameters() {
-        return this.responseParameters;
+    public Output<Optional<Map<String,String>>> responseParameters() {
+        return Codegen.optional(this.responseParameters);
     }
     /**
      * A map specifying the templates used to transform the integration response body
@@ -102,8 +103,8 @@ public class IntegrationResponse extends com.pulumi.resources.CustomResource {
      * @return A map specifying the templates used to transform the integration response body
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> responseTemplates() {
-        return this.responseTemplates;
+    public Output<Optional<Map<String,String>>> responseTemplates() {
+        return Codegen.optional(this.responseTemplates);
     }
     /**
      * The ID of the associated REST API
@@ -136,8 +137,8 @@ public class IntegrationResponse extends com.pulumi.resources.CustomResource {
      * For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
      * 
      */
-    public Output</* @Nullable */ String> selectionPattern() {
-        return this.selectionPattern;
+    public Output<Optional<String>> selectionPattern() {
+        return Codegen.optional(this.selectionPattern);
     }
     /**
      * The HTTP status code

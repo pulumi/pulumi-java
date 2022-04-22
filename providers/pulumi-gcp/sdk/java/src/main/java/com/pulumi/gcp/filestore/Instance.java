@@ -15,6 +15,7 @@ import com.pulumi.gcp.filestore.outputs.InstanceNetwork;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -74,8 +75,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return A description of the instance.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Server-specified ETag for the instance resource to prevent simultaneous updates from overwriting each other.
@@ -120,8 +121,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return Resource labels to represent user-provided metadata.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * The name of the location of the instance. This can be a region for ENTERPRISE tier instances.

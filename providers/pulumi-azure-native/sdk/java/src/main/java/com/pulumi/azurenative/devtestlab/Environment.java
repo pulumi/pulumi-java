@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return The display name of the Azure Resource Manager template that produced the environment.
      * 
      */
-    public Output</* @Nullable */ String> armTemplateDisplayName() {
-        return this.armTemplateDisplayName;
+    public Output<Optional<String>> armTemplateDisplayName() {
+        return Codegen.optional(this.armTemplateDisplayName);
     }
     /**
      * The creator of the environment.
@@ -72,8 +73,8 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return The deployment properties of the environment.
      * 
      */
-    public Output</* @Nullable */ EnvironmentDeploymentPropertiesResponse> deploymentProperties() {
-        return this.deploymentProperties;
+    public Output<Optional<EnvironmentDeploymentPropertiesResponse>> deploymentProperties() {
+        return Codegen.optional(this.deploymentProperties);
     }
     /**
      * The location of the resource.
@@ -86,8 +87,8 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return The location of the resource.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The name of the resource.
@@ -142,8 +143,8 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return The tags of the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource.

@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -99,8 +100,8 @@ public class SignalRSharedPrivateLinkResource extends com.pulumi.resources.Custo
      * @return The request message for requesting approval of the shared private link resource
      * 
      */
-    public Output</* @Nullable */ String> requestMessage() {
-        return this.requestMessage;
+    public Output<Optional<String>> requestMessage() {
+        return Codegen.optional(this.requestMessage);
     }
     /**
      * Status of the shared private link resource

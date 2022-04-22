@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -73,8 +74,8 @@ public class CodeSigningConfig extends com.pulumi.resources.CustomResource {
      * @return Policies to control how to act if a signature is invalid
      * 
      */
-    public Output</* @Nullable */ CodeSigningConfigCodeSigningPolicies> codeSigningPolicies() {
-        return this.codeSigningPolicies;
+    public Output<Optional<CodeSigningConfigCodeSigningPolicies>> codeSigningPolicies() {
+        return Codegen.optional(this.codeSigningPolicies);
     }
     /**
      * A description of the CodeSigningConfig
@@ -87,8 +88,8 @@ public class CodeSigningConfig extends com.pulumi.resources.CustomResource {
      * @return A description of the CodeSigningConfig
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
 
     /**

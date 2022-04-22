@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -68,8 +69,8 @@ public class ApiKey extends com.pulumi.resources.CustomResource {
      * @return RFC3339 string representation of the expiry date. Rounded down to nearest hour. By default, it is 7 days from the date of creation.
      * 
      */
-    public Output</* @Nullable */ String> expires() {
-        return this.expires;
+    public Output<Optional<String>> expires() {
+        return Codegen.optional(this.expires);
     }
     /**
      * The API key

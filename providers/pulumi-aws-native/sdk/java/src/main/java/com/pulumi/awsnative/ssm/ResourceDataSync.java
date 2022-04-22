@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -23,38 +24,38 @@ public class ResourceDataSync extends com.pulumi.resources.CustomResource {
     @Export(name="bucketName", type=String.class, parameters={})
     private Output</* @Nullable */ String> bucketName;
 
-    public Output</* @Nullable */ String> bucketName() {
-        return this.bucketName;
+    public Output<Optional<String>> bucketName() {
+        return Codegen.optional(this.bucketName);
     }
     @Export(name="bucketPrefix", type=String.class, parameters={})
     private Output</* @Nullable */ String> bucketPrefix;
 
-    public Output</* @Nullable */ String> bucketPrefix() {
-        return this.bucketPrefix;
+    public Output<Optional<String>> bucketPrefix() {
+        return Codegen.optional(this.bucketPrefix);
     }
     @Export(name="bucketRegion", type=String.class, parameters={})
     private Output</* @Nullable */ String> bucketRegion;
 
-    public Output</* @Nullable */ String> bucketRegion() {
-        return this.bucketRegion;
+    public Output<Optional<String>> bucketRegion() {
+        return Codegen.optional(this.bucketRegion);
     }
     @Export(name="kMSKeyArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> kMSKeyArn;
 
-    public Output</* @Nullable */ String> kMSKeyArn() {
-        return this.kMSKeyArn;
+    public Output<Optional<String>> kMSKeyArn() {
+        return Codegen.optional(this.kMSKeyArn);
     }
     @Export(name="s3Destination", type=ResourceDataSyncS3Destination.class, parameters={})
     private Output</* @Nullable */ ResourceDataSyncS3Destination> s3Destination;
 
-    public Output</* @Nullable */ ResourceDataSyncS3Destination> s3Destination() {
-        return this.s3Destination;
+    public Output<Optional<ResourceDataSyncS3Destination>> s3Destination() {
+        return Codegen.optional(this.s3Destination);
     }
     @Export(name="syncFormat", type=String.class, parameters={})
     private Output</* @Nullable */ String> syncFormat;
 
-    public Output</* @Nullable */ String> syncFormat() {
-        return this.syncFormat;
+    public Output<Optional<String>> syncFormat() {
+        return Codegen.optional(this.syncFormat);
     }
     @Export(name="syncName", type=String.class, parameters={})
     private Output<String> syncName;
@@ -65,14 +66,14 @@ public class ResourceDataSync extends com.pulumi.resources.CustomResource {
     @Export(name="syncSource", type=ResourceDataSyncSyncSource.class, parameters={})
     private Output</* @Nullable */ ResourceDataSyncSyncSource> syncSource;
 
-    public Output</* @Nullable */ ResourceDataSyncSyncSource> syncSource() {
-        return this.syncSource;
+    public Output<Optional<ResourceDataSyncSyncSource>> syncSource() {
+        return Codegen.optional(this.syncSource);
     }
     @Export(name="syncType", type=String.class, parameters={})
     private Output</* @Nullable */ String> syncType;
 
-    public Output</* @Nullable */ String> syncType() {
-        return this.syncType;
+    public Output<Optional<String>> syncType() {
+        return Codegen.optional(this.syncType);
     }
 
     /**

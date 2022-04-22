@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -85,8 +86,8 @@ public class ConfigurationProfile extends com.pulumi.resources.CustomResource {
      * @return The description of the configuration profile. Can be at most 1024 characters.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * A URI to locate the configuration. You can specify the AWS AppConfig hosted configuration store, Systems Manager (SSM) document, an SSM Parameter Store parameter, or an Amazon S3 object. For the hosted configuration store, specify `hosted`. For an SSM document, specify either the document name in the format `ssm-document://&lt;Document_name&gt;` or the Amazon Resource Name (ARN). For a parameter, specify either the parameter name in the format `ssm-parameter://&lt;Parameter_name&gt;` or the ARN. For an Amazon S3 object, specify the URI in the following format: `s3://&lt;bucket&gt;/&lt;objectKey&gt;`.
@@ -127,8 +128,8 @@ public class ConfigurationProfile extends com.pulumi.resources.CustomResource {
      * @return The ARN of an IAM role with permission to access the configuration at the specified `location_uri`. A retrieval role ARN is not required for configurations stored in the AWS AppConfig `hosted` configuration store. It is required for all other sources that store your configuration.
      * 
      */
-    public Output</* @Nullable */ String> retrievalRoleArn() {
-        return this.retrievalRoleArn;
+    public Output<Optional<String>> retrievalRoleArn() {
+        return Codegen.optional(this.retrievalRoleArn);
     }
     /**
      * A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -141,8 +142,8 @@ public class ConfigurationProfile extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
@@ -169,8 +170,8 @@ public class ConfigurationProfile extends com.pulumi.resources.CustomResource {
      * @return A set of methods for validating the configuration. Maximum of 2. See Validator below for more details.
      * 
      */
-    public Output</* @Nullable */ List<ConfigurationProfileValidator>> validators() {
-        return this.validators;
+    public Output<Optional<List<ConfigurationProfileValidator>>> validators() {
+        return Codegen.optional(this.validators);
     }
 
     /**

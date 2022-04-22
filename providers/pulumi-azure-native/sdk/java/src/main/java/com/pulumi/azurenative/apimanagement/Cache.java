@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -56,8 +57,8 @@ public class Cache extends com.pulumi.resources.CustomResource {
      * @return Cache description
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Resource name.
@@ -84,8 +85,8 @@ public class Cache extends com.pulumi.resources.CustomResource {
      * @return Original uri of entity in external system cache points to
      * 
      */
-    public Output</* @Nullable */ String> resourceId() {
-        return this.resourceId;
+    public Output<Optional<String>> resourceId() {
+        return Codegen.optional(this.resourceId);
     }
     /**
      * Resource type for API Management resource.

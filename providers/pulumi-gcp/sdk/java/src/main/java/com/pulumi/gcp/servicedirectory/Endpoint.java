@@ -13,6 +13,7 @@ import com.pulumi.gcp.servicedirectory.inputs.EndpointState;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -56,8 +57,8 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return IPv4 or IPv6 address of the endpoint.
      * 
      */
-    public Output</* @Nullable */ String> address() {
-        return this.address;
+    public Output<Optional<String>> address() {
+        return Codegen.optional(this.address);
     }
     /**
      * The Resource ID must be 1-63 characters long, including digits,
@@ -92,8 +93,8 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * Metadata that goes beyond any these limits will be rejected.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> metadata() {
-        return this.metadata;
+    public Output<Optional<Map<String,String>>> metadata() {
+        return Codegen.optional(this.metadata);
     }
     /**
      * The resource name for the endpoint in the format &#39;projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*{@literal /}endpoints/*&#39;.
@@ -120,8 +121,8 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return The URL to the network, such as projects/PROJECT_NUMBER/locations/global/networks/NETWORK_NAME.
      * 
      */
-    public Output</* @Nullable */ String> network() {
-        return this.network;
+    public Output<Optional<String>> network() {
+        return Codegen.optional(this.network);
     }
     /**
      * Port that the endpoint is running on, must be in the
@@ -136,8 +137,8 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * range of [0, 65535]. If unspecified, the default is 0.
      * 
      */
-    public Output</* @Nullable */ Integer> port() {
-        return this.port;
+    public Output<Optional<Integer>> port() {
+        return Codegen.optional(this.port);
     }
     /**
      * The resource name of the service that this endpoint provides.

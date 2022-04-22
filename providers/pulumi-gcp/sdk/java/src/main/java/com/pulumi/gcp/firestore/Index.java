@@ -13,6 +13,7 @@ import com.pulumi.gcp.firestore.inputs.IndexState;
 import com.pulumi.gcp.firestore.outputs.IndexField;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -70,8 +71,8 @@ public class Index extends com.pulumi.resources.CustomResource {
      * @return The Firestore database id. Defaults to `&#34;(default)&#34;`.
      * 
      */
-    public Output</* @Nullable */ String> database() {
-        return this.database;
+    public Output<Optional<String>> database() {
+        return Codegen.optional(this.database);
     }
     /**
      * The fields supported by this index. The last field entry is always for
@@ -146,8 +147,8 @@ public class Index extends com.pulumi.resources.CustomResource {
      * Possible values are `COLLECTION` and `COLLECTION_GROUP`.
      * 
      */
-    public Output</* @Nullable */ String> queryScope() {
-        return this.queryScope;
+    public Output<Optional<String>> queryScope() {
+        return Codegen.optional(this.queryScope);
     }
 
     /**

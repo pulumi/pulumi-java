@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -70,8 +71,8 @@ public class Policy extends com.pulumi.resources.CustomResource {
      * @return The policy type. Valid values are `StepScaling` and `TargetTrackingScaling`. Defaults to `StepScaling`. Certain services only support only one policy type. For more information see the [Target Tracking Scaling Policies](https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-target-tracking.html) and [Step Scaling Policies](https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-step-scaling-policies.html) documentation.
      * 
      */
-    public Output</* @Nullable */ String> policyType() {
-        return this.policyType;
+    public Output<Optional<String>> policyType() {
+        return Codegen.optional(this.policyType);
     }
     /**
      * The resource type and unique identifier string for the resource associated with the scaling policy. Documentation can be found in the `ResourceId` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
@@ -126,8 +127,8 @@ public class Policy extends com.pulumi.resources.CustomResource {
      * @return Step scaling policy configuration, requires `policy_type = &#34;StepScaling&#34;` (default). See supported fields below.
      * 
      */
-    public Output</* @Nullable */ PolicyStepScalingPolicyConfiguration> stepScalingPolicyConfiguration() {
-        return this.stepScalingPolicyConfiguration;
+    public Output<Optional<PolicyStepScalingPolicyConfiguration>> stepScalingPolicyConfiguration() {
+        return Codegen.optional(this.stepScalingPolicyConfiguration);
     }
     /**
      * A target tracking policy, requires `policy_type = &#34;TargetTrackingScaling&#34;`. See supported fields below.
@@ -140,8 +141,8 @@ public class Policy extends com.pulumi.resources.CustomResource {
      * @return A target tracking policy, requires `policy_type = &#34;TargetTrackingScaling&#34;`. See supported fields below.
      * 
      */
-    public Output</* @Nullable */ PolicyTargetTrackingScalingPolicyConfiguration> targetTrackingScalingPolicyConfiguration() {
-        return this.targetTrackingScalingPolicyConfiguration;
+    public Output<Optional<PolicyTargetTrackingScalingPolicyConfiguration>> targetTrackingScalingPolicyConfiguration() {
+        return Codegen.optional(this.targetTrackingScalingPolicyConfiguration);
     }
 
     /**

@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -42,8 +43,8 @@ public class IPv6FirewallRule extends com.pulumi.resources.CustomResource {
      * @return The end IP address of the firewall rule. Must be IPv6 format. Must be greater than or equal to startIpAddress.
      * 
      */
-    public Output</* @Nullable */ String> endIPv6Address() {
-        return this.endIPv6Address;
+    public Output<Optional<String>> endIPv6Address() {
+        return Codegen.optional(this.endIPv6Address);
     }
     /**
      * Resource name.
@@ -56,8 +57,8 @@ public class IPv6FirewallRule extends com.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * The start IP address of the firewall rule. Must be IPv6 format.
@@ -70,8 +71,8 @@ public class IPv6FirewallRule extends com.pulumi.resources.CustomResource {
      * @return The start IP address of the firewall rule. Must be IPv6 format.
      * 
      */
-    public Output</* @Nullable */ String> startIPv6Address() {
-        return this.startIPv6Address;
+    public Output<Optional<String>> startIPv6Address() {
+        return Codegen.optional(this.startIPv6Address);
     }
     /**
      * Resource type.

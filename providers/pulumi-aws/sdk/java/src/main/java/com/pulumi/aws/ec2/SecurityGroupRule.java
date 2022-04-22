@@ -14,6 +14,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -91,8 +92,8 @@ public class SecurityGroupRule extends com.pulumi.resources.CustomResource {
      * @return List of CIDR blocks. Cannot be specified with `source_security_group_id` or `self`.
      * 
      */
-    public Output</* @Nullable */ List<String>> cidrBlocks() {
-        return this.cidrBlocks;
+    public Output<Optional<List<String>>> cidrBlocks() {
+        return Codegen.optional(this.cidrBlocks);
     }
     /**
      * Description of the rule.
@@ -105,8 +106,8 @@ public class SecurityGroupRule extends com.pulumi.resources.CustomResource {
      * @return Description of the rule.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Start port (or ICMP type number if protocol is &#34;icmp&#34; or &#34;icmpv6&#34;).
@@ -133,8 +134,8 @@ public class SecurityGroupRule extends com.pulumi.resources.CustomResource {
      * @return List of IPv6 CIDR blocks. Cannot be specified with `source_security_group_id` or `self`.
      * 
      */
-    public Output</* @Nullable */ List<String>> ipv6CidrBlocks() {
-        return this.ipv6CidrBlocks;
+    public Output<Optional<List<String>>> ipv6CidrBlocks() {
+        return Codegen.optional(this.ipv6CidrBlocks);
     }
     /**
      * List of Prefix List IDs.
@@ -147,8 +148,8 @@ public class SecurityGroupRule extends com.pulumi.resources.CustomResource {
      * @return List of Prefix List IDs.
      * 
      */
-    public Output</* @Nullable */ List<String>> prefixListIds() {
-        return this.prefixListIds;
+    public Output<Optional<List<String>>> prefixListIds() {
+        return Codegen.optional(this.prefixListIds);
     }
     /**
      * Protocol. If not icmp, icmpv6, tcp, udp, or all use the [protocol number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
@@ -189,8 +190,8 @@ public class SecurityGroupRule extends com.pulumi.resources.CustomResource {
      * @return Whether the security group itself will be added as a source to this ingress rule. Cannot be specified with `cidr_blocks`, `ipv6_cidr_blocks`, or `source_security_group_id`.
      * 
      */
-    public Output</* @Nullable */ Boolean> self() {
-        return this.self;
+    public Output<Optional<Boolean>> self() {
+        return Codegen.optional(this.self);
     }
     /**
      * Security group id to allow access to/from, depending on the `type`. Cannot be specified with `cidr_blocks`, `ipv6_cidr_blocks`, or `self`.

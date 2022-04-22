@@ -3,7 +3,11 @@
 package templates
 
 import (
+	"fmt"
+	"io/ioutil"
+	"os"
 	"path/filepath"
+	"regexp"
 	"testing"
 
 	"github.com/pulumi/pulumi/pkg/v3/engine"
@@ -56,8 +60,10 @@ func checkTemplate(t *testing.T, templateCfg templateConfig) {
 	opts := integration.ProgramTestOptions{
 		Dir:    e.RootPath,
 		Config: templateCfg.config,
-		PrepareProject: func(*engine.Projinfo) error {
-			return nil // needed because defaultPrepareProject does not know about jvm
+		// Note: must override PrepareProject to support Java,
+		// even if the override is a no-op.
+		PrepareProject: func(info *engine.Projinfo) error {
+			return fixupVersions(info)
 		},
 	}.With(previewOnlyOptions())
 	integration.ProgramTest(t, &opts)
@@ -88,4 +94,93 @@ func deleteIfNotFailed(e *ptesting.Environment) {
 	if !e.T.Failed() {
 		e.DeleteEnvironment()
 	}
+}
+
+func fixupVersions(info *engine.Projinfo) error {
+	pom := filepath.Join(info.Root, "pom.xml")
+	hasPom, err := fileExists(pom)
+	if err != nil {
+		return err
+	}
+
+	buildGradle := filepath.Join(info.Root, "app", "build.gradle")
+	hasBuildGradle, err := fileExists(buildGradle)
+	if err != nil {
+		return err
+	}
+
+	if hasPom {
+		return fixupPomVersions(pom)
+	} else if hasBuildGradle {
+		return fixupGradleVersions(buildGradle)
+	}
+
+	return nil
+}
+
+func fixupPomVersions(pom string) error {
+	versions := versionsFromEnv()
+	vpat := regexp.MustCompile("<version>[^<]+</version>")
+	return editFile(pom, func(bytes []byte) []byte {
+		for dep, ver := range versions {
+			pat := regexp.MustCompile(fmt.Sprintf("<artifactId>%s</artifactId>\\s*"+
+				"<version>[^<]+</version>", dep))
+			newVer := []byte(fmt.Sprintf("<version>%s</version>", ver))
+			bytes = pat.ReplaceAllFunc(bytes, func(match []byte) []byte {
+				return vpat.ReplaceAll(match, newVer)
+			})
+		}
+		return bytes
+	})
+}
+
+func fixupGradleVersions(buildGradle string) error {
+	versions := versionsFromEnv()
+	return editFile(buildGradle, func(bytes []byte) []byte {
+		for dep, ver := range versions {
+			newVer := []byte(fmt.Sprintf("com.pulumi:%s:%s", dep, ver))
+			pat := regexp.MustCompile(fmt.Sprintf("com.pulumi:%s:[^']+", dep))
+			bytes = pat.ReplaceAll(bytes, newVer)
+		}
+		return bytes
+	})
+}
+
+func versionsFromEnv() map[string]string {
+	vn := map[string]string{}
+	vn["pulumi"] = os.Getenv("PULUMI_JAVA_SDK_VERSION")
+	vn["aws"] = os.Getenv("PULUMI_AWS_PROVIDER_SDK_VERSION")
+	vn["aws-native"] = os.Getenv("PULUMI_AWS_NATIVE_PROVIDER_SDK_VERSION")
+	vn["azure-native"] = os.Getenv("PULUMI_AZURE_NATIVE_PROVIDER_SDK_VERSION")
+	vn["azuread"] = os.Getenv("PULUMI_AZUREAD_PROVIDER_SDK_VERSION")
+	vn["docker"] = os.Getenv("PULUMI_DOCKER_PROVIDER_SDK_VERSION")
+	vn["eks"] = os.Getenv("PULUMI_EKS_PROVIDER_SDK_VERSION")
+	vn["gcp"] = os.Getenv("PULUMI_GCP_PROVIDER_SDK_VERSION")
+	vn["google-native"] = os.Getenv("PULUMI_GOOGLE_NATIVE_PROVIDER_SDK_VERSION")
+	vn["kubernetes"] = os.Getenv("PULUMI_KUBERNETES_PROVIDER_SDK_VERSION")
+	vn["random"] = os.Getenv("PULUMI_RANDOM_PROVIDER_SDK_VERSION")
+	for k, v := range vn {
+		if v == "" {
+			delete(vn, k)
+		}
+	}
+	return vn
+}
+
+func fileExists(path string) (bool, error) {
+	_, err := os.Stat(path)
+
+	if err != nil && os.IsNotExist(err) {
+		return false, nil
+	}
+
+	return true, err
+}
+
+func editFile(path string, edit func([]byte) []byte) error {
+	bytes, err := ioutil.ReadFile(path)
+	if err != nil {
+		return err
+	}
+	return ioutil.WriteFile(path, edit(bytes), 0600)
 }

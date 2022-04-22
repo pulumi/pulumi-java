@@ -14,6 +14,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -101,8 +102,8 @@ public class StoredIscsiVolume extends com.pulumi.resources.CustomResource {
      * @return `true` to use Amazon S3 server side encryption with your own AWS KMS key, or `false` to use a key managed by Amazon S3. Optional.
      * 
      */
-    public Output</* @Nullable */ Boolean> kmsEncrypted() {
-        return this.kmsEncrypted;
+    public Output<Optional<Boolean>> kmsEncrypted() {
+        return Codegen.optional(this.kmsEncrypted);
     }
     /**
      * The Amazon Resource Name (ARN) of the AWS KMS key used for Amazon S3 server side encryption. This value can only be set when `kms_encrypted` is `true`.
@@ -115,8 +116,8 @@ public class StoredIscsiVolume extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the AWS KMS key used for Amazon S3 server side encryption. This value can only be set when `kms_encrypted` is `true`.
      * 
      */
-    public Output</* @Nullable */ String> kmsKey() {
-        return this.kmsKey;
+    public Output<Optional<String>> kmsKey() {
+        return Codegen.optional(this.kmsKey);
     }
     /**
      * Logical disk number.
@@ -185,8 +186,8 @@ public class StoredIscsiVolume extends com.pulumi.resources.CustomResource {
      * @return The snapshot ID of the snapshot to restore as the new stored volumeE.g., `snap-1122aabb`.
      * 
      */
-    public Output</* @Nullable */ String> snapshotId() {
-        return this.snapshotId;
+    public Output<Optional<String>> snapshotId() {
+        return Codegen.optional(this.snapshotId);
     }
     /**
      * Key-value mapping of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -199,8 +200,8 @@ public class StoredIscsiVolume extends com.pulumi.resources.CustomResource {
      * @return Key-value mapping of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.

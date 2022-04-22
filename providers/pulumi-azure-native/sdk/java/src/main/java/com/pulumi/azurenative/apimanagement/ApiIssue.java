@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -42,8 +43,8 @@ public class ApiIssue extends com.pulumi.resources.CustomResource {
      * @return A resource identifier for the API the issue was created for.
      * 
      */
-    public Output</* @Nullable */ String> apiId() {
-        return this.apiId;
+    public Output<Optional<String>> apiId() {
+        return Codegen.optional(this.apiId);
     }
     /**
      * Date and time when the issue was created.
@@ -56,8 +57,8 @@ public class ApiIssue extends com.pulumi.resources.CustomResource {
      * @return Date and time when the issue was created.
      * 
      */
-    public Output</* @Nullable */ String> createdDate() {
-        return this.createdDate;
+    public Output<Optional<String>> createdDate() {
+        return Codegen.optional(this.createdDate);
     }
     /**
      * Text describing the issue.
@@ -98,8 +99,8 @@ public class ApiIssue extends com.pulumi.resources.CustomResource {
      * @return Status of the issue.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Output<Optional<String>> state() {
+        return Codegen.optional(this.state);
     }
     /**
      * The issue title.

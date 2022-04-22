@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -57,8 +58,8 @@ public class ProductGroup extends com.pulumi.resources.CustomResource {
      * @return Group description. Can contain HTML formatting tags.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Group name.
@@ -85,8 +86,8 @@ public class ProductGroup extends com.pulumi.resources.CustomResource {
      * @return For external groups, this property contains the id of the group from the external identity provider, e.g. for Azure Active Directory `aad://&lt;tenant&gt;.onmicrosoft.com/groups/&lt;group object id&gt;`; otherwise the value is null.
      * 
      */
-    public Output</* @Nullable */ String> externalId() {
-        return this.externalId;
+    public Output<Optional<String>> externalId() {
+        return Codegen.optional(this.externalId);
     }
     /**
      * Resource name.

@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -72,8 +73,8 @@ public class GroupPolicy extends com.pulumi.resources.CustomResource {
      * prefix. Conflicts with `name`.
      * 
      */
-    public Output</* @Nullable */ String> namePrefix() {
-        return this.namePrefix;
+    public Output<Optional<String>> namePrefix() {
+        return Codegen.optional(this.namePrefix);
     }
     /**
      * The policy document. This is a JSON formatted string.

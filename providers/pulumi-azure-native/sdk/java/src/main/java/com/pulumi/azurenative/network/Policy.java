@@ -20,6 +20,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -50,8 +51,8 @@ public class Policy extends com.pulumi.resources.CustomResource {
      * @return Describes custom rules inside the policy.
      * 
      */
-    public Output</* @Nullable */ CustomRuleListResponse> customRules() {
-        return this.customRules;
+    public Output<Optional<CustomRuleListResponse>> customRules() {
+        return Codegen.optional(this.customRules);
     }
     /**
      * Gets a unique read-only string that changes whenever the resource is updated.
@@ -64,8 +65,8 @@ public class Policy extends com.pulumi.resources.CustomResource {
      * @return Gets a unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output</* @Nullable */ String> etag() {
-        return this.etag;
+    public Output<Optional<String>> etag() {
+        return Codegen.optional(this.etag);
     }
     /**
      * Describes Frontend Endpoints associated with this Web Application Firewall policy.
@@ -92,8 +93,8 @@ public class Policy extends com.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * Describes managed rules inside the policy.
@@ -106,8 +107,8 @@ public class Policy extends com.pulumi.resources.CustomResource {
      * @return Describes managed rules inside the policy.
      * 
      */
-    public Output</* @Nullable */ ManagedRuleSetListResponse> managedRules() {
-        return this.managedRules;
+    public Output<Optional<ManagedRuleSetListResponse>> managedRules() {
+        return Codegen.optional(this.managedRules);
     }
     /**
      * Resource name.
@@ -134,8 +135,8 @@ public class Policy extends com.pulumi.resources.CustomResource {
      * @return Describes settings for the policy.
      * 
      */
-    public Output</* @Nullable */ FrontDoorPolicySettingsResponse> policySettings() {
-        return this.policySettings;
+    public Output<Optional<FrontDoorPolicySettingsResponse>> policySettings() {
+        return Codegen.optional(this.policySettings);
     }
     /**
      * Provisioning state of the policy.
@@ -196,8 +197,8 @@ public class Policy extends com.pulumi.resources.CustomResource {
      * @return The pricing tier of web application firewall policy. Defaults to Classic_AzureFrontDoor if not specified.
      * 
      */
-    public Output</* @Nullable */ SkuResponse> sku() {
-        return this.sku;
+    public Output<Optional<SkuResponse>> sku() {
+        return Codegen.optional(this.sku);
     }
     /**
      * Resource tags.
@@ -210,8 +211,8 @@ public class Policy extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type.

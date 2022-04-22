@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -24,8 +25,8 @@ public class TransitGatewayVpcAttachment extends com.pulumi.resources.CustomReso
     @Export(name="addSubnetIds", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> addSubnetIds;
 
-    public Output</* @Nullable */ List<String>> addSubnetIds() {
-        return this.addSubnetIds;
+    public Output<Optional<List<String>>> addSubnetIds() {
+        return Codegen.optional(this.addSubnetIds);
     }
     /**
      * The options for the transit gateway vpc attachment.
@@ -38,38 +39,38 @@ public class TransitGatewayVpcAttachment extends com.pulumi.resources.CustomReso
      * @return The options for the transit gateway vpc attachment.
      * 
      */
-    public Output</* @Nullable */ OptionsProperties> options() {
-        return this.options;
+    public Output<Optional<OptionsProperties>> options() {
+        return Codegen.optional(this.options);
     }
     @Export(name="removeSubnetIds", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> removeSubnetIds;
 
-    public Output</* @Nullable */ List<String>> removeSubnetIds() {
-        return this.removeSubnetIds;
+    public Output<Optional<List<String>>> removeSubnetIds() {
+        return Codegen.optional(this.removeSubnetIds);
     }
     @Export(name="subnetIds", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> subnetIds;
 
-    public Output</* @Nullable */ List<String>> subnetIds() {
-        return this.subnetIds;
+    public Output<Optional<List<String>>> subnetIds() {
+        return Codegen.optional(this.subnetIds);
     }
     @Export(name="tags", type=List.class, parameters={TransitGatewayVpcAttachmentTag.class})
     private Output</* @Nullable */ List<TransitGatewayVpcAttachmentTag>> tags;
 
-    public Output</* @Nullable */ List<TransitGatewayVpcAttachmentTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<TransitGatewayVpcAttachmentTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     @Export(name="transitGatewayId", type=String.class, parameters={})
     private Output</* @Nullable */ String> transitGatewayId;
 
-    public Output</* @Nullable */ String> transitGatewayId() {
-        return this.transitGatewayId;
+    public Output<Optional<String>> transitGatewayId() {
+        return Codegen.optional(this.transitGatewayId);
     }
     @Export(name="vpcId", type=String.class, parameters={})
     private Output</* @Nullable */ String> vpcId;
 
-    public Output</* @Nullable */ String> vpcId() {
-        return this.vpcId;
+    public Output<Optional<String>> vpcId() {
+        return Codegen.optional(this.vpcId);
     }
 
     /**

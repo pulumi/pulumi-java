@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class ServiceUnit extends com.pulumi.resources.CustomResource {
      * @return The artifacts for the service unit.
      * 
      */
-    public Output</* @Nullable */ ServiceUnitArtifactsResponse> artifacts() {
-        return this.artifacts;
+    public Output<Optional<ServiceUnitArtifactsResponse>> artifacts() {
+        return Codegen.optional(this.artifacts);
     }
     /**
      * Describes the type of ARM deployment to be performed on the resource.
@@ -100,8 +101,8 @@ public class ServiceUnit extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The Azure Resource Group to which the resources in the service unit belong to or should be deployed to.

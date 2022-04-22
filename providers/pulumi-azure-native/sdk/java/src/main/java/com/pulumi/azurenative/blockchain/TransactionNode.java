@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -57,8 +58,8 @@ public class TransactionNode extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the firewall rules.
      * 
      */
-    public Output</* @Nullable */ List<FirewallRuleResponse>> firewallRules() {
-        return this.firewallRules;
+    public Output<Optional<List<FirewallRuleResponse>>> firewallRules() {
+        return Codegen.optional(this.firewallRules);
     }
     /**
      * Gets or sets the transaction node location.
@@ -71,8 +72,8 @@ public class TransactionNode extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the transaction node location.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The name of the resource.
@@ -99,8 +100,8 @@ public class TransactionNode extends com.pulumi.resources.CustomResource {
      * @return Sets the transaction node dns endpoint basic auth password.
      * 
      */
-    public Output</* @Nullable */ String> password() {
-        return this.password;
+    public Output<Optional<String>> password() {
+        return Codegen.optional(this.password);
     }
     /**
      * Gets or sets the blockchain member provision state.

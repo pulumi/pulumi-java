@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -32,8 +33,8 @@ public class Device extends com.pulumi.resources.CustomResource {
      * @return The description of the device.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The Amazon Resource Name (ARN) of the device.
@@ -88,8 +89,8 @@ public class Device extends com.pulumi.resources.CustomResource {
      * @return The site location.
      * 
      */
-    public Output</* @Nullable */ DeviceLocation> location() {
-        return this.location;
+    public Output<Optional<DeviceLocation>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The device model
@@ -102,8 +103,8 @@ public class Device extends com.pulumi.resources.CustomResource {
      * @return The device model
      * 
      */
-    public Output</* @Nullable */ String> model() {
-        return this.model;
+    public Output<Optional<String>> model() {
+        return Codegen.optional(this.model);
     }
     /**
      * The device serial number.
@@ -116,8 +117,8 @@ public class Device extends com.pulumi.resources.CustomResource {
      * @return The device serial number.
      * 
      */
-    public Output</* @Nullable */ String> serialNumber() {
-        return this.serialNumber;
+    public Output<Optional<String>> serialNumber() {
+        return Codegen.optional(this.serialNumber);
     }
     /**
      * The site ID.
@@ -130,8 +131,8 @@ public class Device extends com.pulumi.resources.CustomResource {
      * @return The site ID.
      * 
      */
-    public Output</* @Nullable */ String> siteId() {
-        return this.siteId;
+    public Output<Optional<String>> siteId() {
+        return Codegen.optional(this.siteId);
     }
     /**
      * The tags for the device.
@@ -144,8 +145,8 @@ public class Device extends com.pulumi.resources.CustomResource {
      * @return The tags for the device.
      * 
      */
-    public Output</* @Nullable */ List<DeviceTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<DeviceTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The device type.
@@ -158,8 +159,8 @@ public class Device extends com.pulumi.resources.CustomResource {
      * @return The device type.
      * 
      */
-    public Output</* @Nullable */ String> type() {
-        return this.type;
+    public Output<Optional<String>> type() {
+        return Codegen.optional(this.type);
     }
     /**
      * The device vendor.
@@ -172,8 +173,8 @@ public class Device extends com.pulumi.resources.CustomResource {
      * @return The device vendor.
      * 
      */
-    public Output</* @Nullable */ String> vendor() {
-        return this.vendor;
+    public Output<Optional<String>> vendor() {
+        return Codegen.optional(this.vendor);
     }
 
     /**

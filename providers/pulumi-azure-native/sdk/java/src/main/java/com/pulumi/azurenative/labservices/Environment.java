@@ -17,6 +17,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -128,8 +129,8 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return The location of the resource.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The name of the resource.
@@ -184,8 +185,8 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return The provisioning status of the resource.
      * 
      */
-    public Output</* @Nullable */ String> provisioningState() {
-        return this.provisioningState;
+    public Output<Optional<String>> provisioningState() {
+        return Codegen.optional(this.provisioningState);
     }
     /**
      * The set of a VM and the setting id it was created for
@@ -198,8 +199,8 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return The set of a VM and the setting id it was created for
      * 
      */
-    public Output</* @Nullable */ ResourceSetResponse> resourceSets() {
-        return this.resourceSets;
+    public Output<Optional<ResourceSetResponse>> resourceSets() {
+        return Codegen.optional(this.resourceSets);
     }
     /**
      * The tags of the resource.
@@ -212,8 +213,8 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return The tags of the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * How long the environment has been used by a lab user
@@ -254,8 +255,8 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return The unique immutable identifier of a resource (Guid).
      * 
      */
-    public Output</* @Nullable */ String> uniqueIdentifier() {
-        return this.uniqueIdentifier;
+    public Output<Optional<String>> uniqueIdentifier() {
+        return Codegen.optional(this.uniqueIdentifier);
     }
 
     /**

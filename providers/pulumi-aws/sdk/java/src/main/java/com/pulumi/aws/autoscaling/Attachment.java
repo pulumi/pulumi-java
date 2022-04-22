@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -41,8 +42,8 @@ public class Attachment extends com.pulumi.resources.CustomResource {
      * @return The ARN of an ALB Target Group.
      * 
      */
-    public Output</* @Nullable */ String> albTargetGroupArn() {
-        return this.albTargetGroupArn;
+    public Output<Optional<String>> albTargetGroupArn() {
+        return Codegen.optional(this.albTargetGroupArn);
     }
     /**
      * Name of ASG to associate with the ELB.
@@ -69,8 +70,8 @@ public class Attachment extends com.pulumi.resources.CustomResource {
      * @return The name of the ELB.
      * 
      */
-    public Output</* @Nullable */ String> elb() {
-        return this.elb;
+    public Output<Optional<String>> elb() {
+        return Codegen.optional(this.elb);
     }
 
     /**

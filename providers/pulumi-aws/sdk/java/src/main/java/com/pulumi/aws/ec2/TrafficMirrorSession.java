@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -57,8 +58,8 @@ public class TrafficMirrorSession extends com.pulumi.resources.CustomResource {
      * @return A description of the traffic mirror session.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * ID of the source network interface. Not all network interfaces are eligible as mirror sources. On EC2 instances only nitro based instances support mirroring.
@@ -99,8 +100,8 @@ public class TrafficMirrorSession extends com.pulumi.resources.CustomResource {
      * @return The number of bytes in each packet to mirror. These are bytes after the VXLAN header. Do not specify this parameter when you want to mirror the entire packet. To mirror a subset of the packet, set this to the length (in bytes) that you want to mirror.
      * 
      */
-    public Output</* @Nullable */ Integer> packetLength() {
-        return this.packetLength;
+    public Output<Optional<Integer>> packetLength() {
+        return Codegen.optional(this.packetLength);
     }
     /**
      * - The session number determines the order in which sessions are evaluated when an interface is used by multiple sessions. The first session with a matching filter is the one that mirrors the packets.
@@ -127,8 +128,8 @@ public class TrafficMirrorSession extends com.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.

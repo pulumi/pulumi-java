@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -60,8 +61,8 @@ public class LogGroup extends com.pulumi.resources.CustomResource {
      * permissions for the CMK whenever the encrypted data is requested.
      * 
      */
-    public Output</* @Nullable */ String> kmsKeyId() {
-        return this.kmsKeyId;
+    public Output<Optional<String>> kmsKeyId() {
+        return Codegen.optional(this.kmsKeyId);
     }
     /**
      * The name of the log group. If omitted, this provider will assign a random, unique name.
@@ -88,8 +89,8 @@ public class LogGroup extends com.pulumi.resources.CustomResource {
      * @return Creates a unique name beginning with the specified prefix. Conflicts with `name`.
      * 
      */
-    public Output</* @Nullable */ String> namePrefix() {
-        return this.namePrefix;
+    public Output<Optional<String>> namePrefix() {
+        return Codegen.optional(this.namePrefix);
     }
     /**
      * Specifies the number of days
@@ -106,8 +107,8 @@ public class LogGroup extends com.pulumi.resources.CustomResource {
      * If you select 0, the events in the log group are always retained and never expire.
      * 
      */
-    public Output</* @Nullable */ Integer> retentionInDays() {
-        return this.retentionInDays;
+    public Output<Optional<Integer>> retentionInDays() {
+        return Codegen.optional(this.retentionInDays);
     }
     /**
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -120,8 +121,8 @@ public class LogGroup extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

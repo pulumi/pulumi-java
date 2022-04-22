@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -57,8 +58,8 @@ public class InventoryItem extends com.pulumi.resources.CustomResource {
      * @return Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
      * 
      */
-    public Output</* @Nullable */ String> kind() {
-        return this.kind;
+    public Output<Optional<String>> kind() {
+        return Codegen.optional(this.kind);
     }
     /**
      * Gets or sets the tracked resource id corresponding to the inventory resource.
@@ -71,8 +72,8 @@ public class InventoryItem extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the tracked resource id corresponding to the inventory resource.
      * 
      */
-    public Output</* @Nullable */ String> managedResourceId() {
-        return this.managedResourceId;
+    public Output<Optional<String>> managedResourceId() {
+        return Codegen.optional(this.managedResourceId);
     }
     /**
      * Gets or sets the vCenter Managed Object name for the inventory item.
@@ -85,8 +86,8 @@ public class InventoryItem extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the vCenter Managed Object name for the inventory item.
      * 
      */
-    public Output</* @Nullable */ String> moName() {
-        return this.moName;
+    public Output<Optional<String>> moName() {
+        return Codegen.optional(this.moName);
     }
     /**
      * Gets or sets the MoRef (Managed Object Reference) ID for the inventory item.
@@ -99,8 +100,8 @@ public class InventoryItem extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the MoRef (Managed Object Reference) ID for the inventory item.
      * 
      */
-    public Output</* @Nullable */ String> moRefId() {
-        return this.moRefId;
+    public Output<Optional<String>> moRefId() {
+        return Codegen.optional(this.moRefId);
     }
     /**
      * The name of the resource

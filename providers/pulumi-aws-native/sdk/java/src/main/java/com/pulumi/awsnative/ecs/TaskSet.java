@@ -16,6 +16,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -49,8 +50,8 @@ public class TaskSet extends com.pulumi.resources.CustomResource {
      * @return An optional non-unique tag that identifies this task set in external systems. If the task set is associated with a service discovery registry, the tasks in this task set will have the ECS_TASK_SET_EXTERNAL_ID AWS Cloud Map attribute set to the provided value.
      * 
      */
-    public Output</* @Nullable */ String> externalId() {
-        return this.externalId;
+    public Output<Optional<String>> externalId() {
+        return Codegen.optional(this.externalId);
     }
     /**
      * The launch type that new tasks in the task set will use. For more information, see https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html in the Amazon Elastic Container Service Developer Guide.
@@ -63,20 +64,20 @@ public class TaskSet extends com.pulumi.resources.CustomResource {
      * @return The launch type that new tasks in the task set will use. For more information, see https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html in the Amazon Elastic Container Service Developer Guide.
      * 
      */
-    public Output</* @Nullable */ TaskSetLaunchType> launchType() {
-        return this.launchType;
+    public Output<Optional<TaskSetLaunchType>> launchType() {
+        return Codegen.optional(this.launchType);
     }
     @Export(name="loadBalancers", type=List.class, parameters={TaskSetLoadBalancer.class})
     private Output</* @Nullable */ List<TaskSetLoadBalancer>> loadBalancers;
 
-    public Output</* @Nullable */ List<TaskSetLoadBalancer>> loadBalancers() {
-        return this.loadBalancers;
+    public Output<Optional<List<TaskSetLoadBalancer>>> loadBalancers() {
+        return Codegen.optional(this.loadBalancers);
     }
     @Export(name="networkConfiguration", type=TaskSetNetworkConfiguration.class, parameters={})
     private Output</* @Nullable */ TaskSetNetworkConfiguration> networkConfiguration;
 
-    public Output</* @Nullable */ TaskSetNetworkConfiguration> networkConfiguration() {
-        return this.networkConfiguration;
+    public Output<Optional<TaskSetNetworkConfiguration>> networkConfiguration() {
+        return Codegen.optional(this.networkConfiguration);
     }
     /**
      * The platform version that the tasks in the task set should use. A platform version is specified only for tasks using the Fargate launch type. If one isn&#39;t specified, the LATEST platform version is used by default.
@@ -89,8 +90,8 @@ public class TaskSet extends com.pulumi.resources.CustomResource {
      * @return The platform version that the tasks in the task set should use. A platform version is specified only for tasks using the Fargate launch type. If one isn&#39;t specified, the LATEST platform version is used by default.
      * 
      */
-    public Output</* @Nullable */ String> platformVersion() {
-        return this.platformVersion;
+    public Output<Optional<String>> platformVersion() {
+        return Codegen.optional(this.platformVersion);
     }
     /**
      * A floating-point percentage of the desired number of tasks to place and keep running in the task set.
@@ -103,8 +104,8 @@ public class TaskSet extends com.pulumi.resources.CustomResource {
      * @return A floating-point percentage of the desired number of tasks to place and keep running in the task set.
      * 
      */
-    public Output</* @Nullable */ TaskSetScale> scale() {
-        return this.scale;
+    public Output<Optional<TaskSetScale>> scale() {
+        return Codegen.optional(this.scale);
     }
     /**
      * The short name or full Amazon Resource Name (ARN) of the service to create the task set in.
@@ -131,8 +132,8 @@ public class TaskSet extends com.pulumi.resources.CustomResource {
      * @return The details of the service discovery registries to assign to this task set. For more information, see https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html.
      * 
      */
-    public Output</* @Nullable */ List<TaskSetServiceRegistry>> serviceRegistries() {
-        return this.serviceRegistries;
+    public Output<Optional<List<TaskSetServiceRegistry>>> serviceRegistries() {
+        return Codegen.optional(this.serviceRegistries);
     }
     /**
      * The short name or full Amazon Resource Name (ARN) of the task definition for the tasks in the task set to use.

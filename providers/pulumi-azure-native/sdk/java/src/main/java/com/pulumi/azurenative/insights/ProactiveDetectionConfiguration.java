@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class ProactiveDetectionConfiguration extends com.pulumi.resources.Custom
      * @return Custom email addresses for this rule notifications
      * 
      */
-    public Output</* @Nullable */ List<String>> customEmails() {
-        return this.customEmails;
+    public Output<Optional<List<String>>> customEmails() {
+        return Codegen.optional(this.customEmails);
     }
     /**
      * A flag that indicates whether this rule is enabled by the user
@@ -58,8 +59,8 @@ public class ProactiveDetectionConfiguration extends com.pulumi.resources.Custom
      * @return A flag that indicates whether this rule is enabled by the user
      * 
      */
-    public Output</* @Nullable */ Boolean> enabled() {
-        return this.enabled;
+    public Output<Optional<Boolean>> enabled() {
+        return Codegen.optional(this.enabled);
     }
     /**
      * The last time this rule was updated
@@ -72,8 +73,8 @@ public class ProactiveDetectionConfiguration extends com.pulumi.resources.Custom
      * @return The last time this rule was updated
      * 
      */
-    public Output</* @Nullable */ String> lastUpdatedTime() {
-        return this.lastUpdatedTime;
+    public Output<Optional<String>> lastUpdatedTime() {
+        return Codegen.optional(this.lastUpdatedTime);
     }
     /**
      * The rule name
@@ -86,8 +87,8 @@ public class ProactiveDetectionConfiguration extends com.pulumi.resources.Custom
      * @return The rule name
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * Static definitions of the ProactiveDetection configuration rule (same values for all components).
@@ -100,8 +101,8 @@ public class ProactiveDetectionConfiguration extends com.pulumi.resources.Custom
      * @return Static definitions of the ProactiveDetection configuration rule (same values for all components).
      * 
      */
-    public Output</* @Nullable */ ApplicationInsightsComponentProactiveDetectionConfigurationResponseRuleDefinitions> ruleDefinitions() {
-        return this.ruleDefinitions;
+    public Output<Optional<ApplicationInsightsComponentProactiveDetectionConfigurationResponseRuleDefinitions>> ruleDefinitions() {
+        return Codegen.optional(this.ruleDefinitions);
     }
     /**
      * A flag that indicated whether notifications on this rule should be sent to subscription owners
@@ -114,8 +115,8 @@ public class ProactiveDetectionConfiguration extends com.pulumi.resources.Custom
      * @return A flag that indicated whether notifications on this rule should be sent to subscription owners
      * 
      */
-    public Output</* @Nullable */ Boolean> sendEmailsToSubscriptionOwners() {
-        return this.sendEmailsToSubscriptionOwners;
+    public Output<Optional<Boolean>> sendEmailsToSubscriptionOwners() {
+        return Codegen.optional(this.sendEmailsToSubscriptionOwners);
     }
 
     /**

@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -42,8 +43,8 @@ public class Addon extends com.pulumi.resources.CustomResource {
      * @return The type of private cloud addon
      * 
      */
-    public Output</* @Nullable */ String> addonType() {
-        return this.addonType;
+    public Output<Optional<String>> addonType() {
+        return Codegen.optional(this.addonType);
     }
     /**
      * The SRM license
@@ -56,8 +57,8 @@ public class Addon extends com.pulumi.resources.CustomResource {
      * @return The SRM license
      * 
      */
-    public Output</* @Nullable */ String> licenseKey() {
-        return this.licenseKey;
+    public Output<Optional<String>> licenseKey() {
+        return Codegen.optional(this.licenseKey);
     }
     /**
      * Resource name.

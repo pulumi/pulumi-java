@@ -19,6 +19,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -49,8 +50,8 @@ public class SecurityConnector extends com.pulumi.resources.CustomResource {
      * @return The multi cloud resource&#39;s cloud name.
      * 
      */
-    public Output</* @Nullable */ String> cloudName() {
-        return this.cloudName;
+    public Output<Optional<String>> cloudName() {
+        return Codegen.optional(this.cloudName);
     }
     /**
      * Entity tag is used for comparing two or more entities from the same requested resource.
@@ -63,8 +64,8 @@ public class SecurityConnector extends com.pulumi.resources.CustomResource {
      * @return Entity tag is used for comparing two or more entities from the same requested resource.
      * 
      */
-    public Output</* @Nullable */ String> etag() {
-        return this.etag;
+    public Output<Optional<String>> etag() {
+        return Codegen.optional(this.etag);
     }
     /**
      * The multi cloud resource identifier (account id in case of AWS connector).
@@ -77,8 +78,8 @@ public class SecurityConnector extends com.pulumi.resources.CustomResource {
      * @return The multi cloud resource identifier (account id in case of AWS connector).
      * 
      */
-    public Output</* @Nullable */ String> hierarchyIdentifier() {
-        return this.hierarchyIdentifier;
+    public Output<Optional<String>> hierarchyIdentifier() {
+        return Codegen.optional(this.hierarchyIdentifier);
     }
     /**
      * Kind of the resource
@@ -91,8 +92,8 @@ public class SecurityConnector extends com.pulumi.resources.CustomResource {
      * @return Kind of the resource
      * 
      */
-    public Output</* @Nullable */ String> kind() {
-        return this.kind;
+    public Output<Optional<String>> kind() {
+        return Codegen.optional(this.kind);
     }
     /**
      * Location where the resource is stored
@@ -105,8 +106,8 @@ public class SecurityConnector extends com.pulumi.resources.CustomResource {
      * @return Location where the resource is stored
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * Resource name
@@ -133,8 +134,8 @@ public class SecurityConnector extends com.pulumi.resources.CustomResource {
      * @return A collection of offerings for the security connector.
      * 
      */
-    public Output</* @Nullable */ List<Object>> offerings() {
-        return this.offerings;
+    public Output<Optional<List<Object>>> offerings() {
+        return Codegen.optional(this.offerings);
     }
     /**
      * The multi cloud account&#39;s organizational data
@@ -147,8 +148,8 @@ public class SecurityConnector extends com.pulumi.resources.CustomResource {
      * @return The multi cloud account&#39;s organizational data
      * 
      */
-    public Output</* @Nullable */ SecurityConnectorPropertiesResponseOrganizationalData> organizationalData() {
-        return this.organizationalData;
+    public Output<Optional<SecurityConnectorPropertiesResponseOrganizationalData>> organizationalData() {
+        return Codegen.optional(this.organizationalData);
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
@@ -175,8 +176,8 @@ public class SecurityConnector extends com.pulumi.resources.CustomResource {
      * @return A list of key value pairs that describe the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type

@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -42,8 +43,8 @@ public class EncryptionConfig extends com.pulumi.resources.CustomResource {
      * @return An AWS KMS customer master key (CMK) ARN.
      * 
      */
-    public Output</* @Nullable */ String> keyId() {
-        return this.keyId;
+    public Output<Optional<String>> keyId() {
+        return Codegen.optional(this.keyId);
     }
     /**
      * The type of encryption. Set to `KMS` to use your own key for encryption. Set to `NONE` for default encryption.

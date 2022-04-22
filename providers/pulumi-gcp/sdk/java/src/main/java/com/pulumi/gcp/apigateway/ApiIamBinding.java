@@ -13,6 +13,7 @@ import com.pulumi.gcp.apigateway.inputs.ApiIamBindingState;
 import com.pulumi.gcp.apigateway.outputs.ApiIamBindingCondition;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -68,8 +69,8 @@ public class ApiIamBinding extends com.pulumi.resources.CustomResource {
     @Export(name="condition", type=ApiIamBindingCondition.class, parameters={})
     private Output</* @Nullable */ ApiIamBindingCondition> condition;
 
-    public Output</* @Nullable */ ApiIamBindingCondition> condition() {
-        return this.condition;
+    public Output<Optional<ApiIamBindingCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * (Computed) The etag of the IAM policy.

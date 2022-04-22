@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -41,8 +42,8 @@ public class TagOption extends com.pulumi.resources.CustomResource {
      * @return Whether tag option is active. Default is `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> active() {
-        return this.active;
+    public Output<Optional<Boolean>> active() {
+        return Codegen.optional(this.active);
     }
     /**
      * Tag option key.

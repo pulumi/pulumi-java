@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -51,8 +52,8 @@ public class Robot extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the fleet.
      * 
      */
-    public Output</* @Nullable */ String> fleet() {
-        return this.fleet;
+    public Output<Optional<String>> fleet() {
+        return Codegen.optional(this.fleet);
     }
     /**
      * The Greengrass group id.
@@ -79,14 +80,14 @@ public class Robot extends com.pulumi.resources.CustomResource {
      * @return The name for the robot.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     @Export(name="tags", type=RobotTags.class, parameters={})
     private Output</* @Nullable */ RobotTags> tags;
 
-    public Output</* @Nullable */ RobotTags> tags() {
-        return this.tags;
+    public Output<Optional<RobotTags>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

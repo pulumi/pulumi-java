@@ -16,6 +16,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -59,8 +60,8 @@ public class AdaptiveApplicationControl extends com.pulumi.resources.CustomResou
      * @return The application control policy enforcement/protection mode of the machine group
      * 
      */
-    public Output</* @Nullable */ String> enforcementMode() {
-        return this.enforcementMode;
+    public Output<Optional<String>> enforcementMode() {
+        return Codegen.optional(this.enforcementMode);
     }
     @Export(name="issues", type=List.class, parameters={AdaptiveApplicationControlIssueSummaryResponse.class})
     private Output<List<AdaptiveApplicationControlIssueSummaryResponse>> issues;
@@ -99,8 +100,8 @@ public class AdaptiveApplicationControl extends com.pulumi.resources.CustomResou
     @Export(name="pathRecommendations", type=List.class, parameters={PathRecommendationResponse.class})
     private Output</* @Nullable */ List<PathRecommendationResponse>> pathRecommendations;
 
-    public Output</* @Nullable */ List<PathRecommendationResponse>> pathRecommendations() {
-        return this.pathRecommendations;
+    public Output<Optional<List<PathRecommendationResponse>>> pathRecommendations() {
+        return Codegen.optional(this.pathRecommendations);
     }
     /**
      * The protection mode of the collection/file types. Exe/Msi/Script are used for Windows, Executable is used for Linux.
@@ -113,8 +114,8 @@ public class AdaptiveApplicationControl extends com.pulumi.resources.CustomResou
      * @return The protection mode of the collection/file types. Exe/Msi/Script are used for Windows, Executable is used for Linux.
      * 
      */
-    public Output</* @Nullable */ ProtectionModeResponse> protectionMode() {
-        return this.protectionMode;
+    public Output<Optional<ProtectionModeResponse>> protectionMode() {
+        return Codegen.optional(this.protectionMode);
     }
     /**
      * The initial recommendation status of the machine group or machine
@@ -161,8 +162,8 @@ public class AdaptiveApplicationControl extends com.pulumi.resources.CustomResou
     @Export(name="vmRecommendations", type=List.class, parameters={VmRecommendationResponse.class})
     private Output</* @Nullable */ List<VmRecommendationResponse>> vmRecommendations;
 
-    public Output</* @Nullable */ List<VmRecommendationResponse>> vmRecommendations() {
-        return this.vmRecommendations;
+    public Output<Optional<List<VmRecommendationResponse>>> vmRecommendations() {
+        return Codegen.optional(this.vmRecommendations);
     }
 
     /**

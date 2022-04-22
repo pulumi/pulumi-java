@@ -14,6 +14,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -71,8 +72,8 @@ public class Snapshot extends com.pulumi.resources.CustomResource {
      * @return A description of what the snapshot is.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Whether the snapshot is encrypted.
@@ -113,8 +114,8 @@ public class Snapshot extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the Outpost on which to create a local snapshot.
      * 
      */
-    public Output</* @Nullable */ String> outpostArn() {
-        return this.outpostArn;
+    public Output<Optional<String>> outpostArn() {
+        return Codegen.optional(this.outpostArn);
     }
     /**
      * Value from an Amazon-maintained list (`amazon`, `aws-marketplace`, `microsoft`) of snapshot owners.
@@ -155,8 +156,8 @@ public class Snapshot extends com.pulumi.resources.CustomResource {
      * @return Indicates whether to permanently restore an archived snapshot.
      * 
      */
-    public Output</* @Nullable */ Boolean> permanentRestore() {
-        return this.permanentRestore;
+    public Output<Optional<Boolean>> permanentRestore() {
+        return Codegen.optional(this.permanentRestore);
     }
     /**
      * The name of the storage tier. Valid values are `archive` and `standard`. Default value is `standard`.
@@ -183,8 +184,8 @@ public class Snapshot extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the snapshot. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
@@ -211,8 +212,8 @@ public class Snapshot extends com.pulumi.resources.CustomResource {
      * @return Specifies the number of days for which to temporarily restore an archived snapshot. Required for temporary restores only. The snapshot will be automatically re-archived after this period.
      * 
      */
-    public Output</* @Nullable */ Integer> temporaryRestoreDays() {
-        return this.temporaryRestoreDays;
+    public Output<Optional<Integer>> temporaryRestoreDays() {
+        return Codegen.optional(this.temporaryRestoreDays);
     }
     /**
      * The Volume ID of which to make a snapshot.

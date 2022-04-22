@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -33,8 +34,8 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return The type of access for the on-premise network connectivity for the Outpost endpoint. To access endpoint from an on-premises network, you must specify the access type and provide the customer owned Ipv4 pool.
      * 
      */
-    public Output</* @Nullable */ EndpointAccessType> accessType() {
-        return this.accessType;
+    public Output<Optional<EndpointAccessType>> accessType() {
+        return Codegen.optional(this.accessType);
     }
     /**
      * The Amazon Resource Name (ARN) of the endpoint.
@@ -89,8 +90,8 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return The ID of the customer-owned IPv4 pool for the Endpoint. IP addresses will be allocated from this pool for the endpoint.
      * 
      */
-    public Output</* @Nullable */ String> customerOwnedIpv4Pool() {
-        return this.customerOwnedIpv4Pool;
+    public Output<Optional<String>> customerOwnedIpv4Pool() {
+        return Codegen.optional(this.customerOwnedIpv4Pool);
     }
     /**
      * The network interfaces of the endpoint.

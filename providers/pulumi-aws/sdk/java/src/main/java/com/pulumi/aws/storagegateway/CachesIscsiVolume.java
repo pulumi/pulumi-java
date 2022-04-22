@@ -14,6 +14,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -91,8 +92,8 @@ public class CachesIscsiVolume extends com.pulumi.resources.CustomResource {
      * @return Set to `true` to use Amazon S3 server side encryption with your own AWS KMS key, or `false` to use a key managed by Amazon S3.
      * 
      */
-    public Output</* @Nullable */ Boolean> kmsEncrypted() {
-        return this.kmsEncrypted;
+    public Output<Optional<Boolean>> kmsEncrypted() {
+        return Codegen.optional(this.kmsEncrypted);
     }
     /**
      * The Amazon Resource Name (ARN) of the AWS KMS key used for Amazon S3 server side encryption. Is required when `kms_encrypted` is set.
@@ -105,8 +106,8 @@ public class CachesIscsiVolume extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the AWS KMS key used for Amazon S3 server side encryption. Is required when `kms_encrypted` is set.
      * 
      */
-    public Output</* @Nullable */ String> kmsKey() {
-        return this.kmsKey;
+    public Output<Optional<String>> kmsKey() {
+        return Codegen.optional(this.kmsKey);
     }
     /**
      * Logical disk number.
@@ -161,8 +162,8 @@ public class CachesIscsiVolume extends com.pulumi.resources.CustomResource {
      * @return The snapshot ID of the snapshot to restore as the new cached volumeE.g., `snap-1122aabb`.
      * 
      */
-    public Output</* @Nullable */ String> snapshotId() {
-        return this.snapshotId;
+    public Output<Optional<String>> snapshotId() {
+        return Codegen.optional(this.snapshotId);
     }
     /**
      * The ARN for an existing volume. Specifying this ARN makes the new volume into an exact copy of the specified existing volume&#39;s latest recovery point. The `volume_size_in_bytes` value for this new volume must be equal to or larger than the size of the existing volume, in bytes.
@@ -175,8 +176,8 @@ public class CachesIscsiVolume extends com.pulumi.resources.CustomResource {
      * @return The ARN for an existing volume. Specifying this ARN makes the new volume into an exact copy of the specified existing volume&#39;s latest recovery point. The `volume_size_in_bytes` value for this new volume must be equal to or larger than the size of the existing volume, in bytes.
      * 
      */
-    public Output</* @Nullable */ String> sourceVolumeArn() {
-        return this.sourceVolumeArn;
+    public Output<Optional<String>> sourceVolumeArn() {
+        return Codegen.optional(this.sourceVolumeArn);
     }
     /**
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -189,8 +190,8 @@ public class CachesIscsiVolume extends com.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.

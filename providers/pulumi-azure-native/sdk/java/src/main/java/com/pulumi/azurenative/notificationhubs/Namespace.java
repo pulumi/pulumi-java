@@ -15,6 +15,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class Namespace extends com.pulumi.resources.CustomResource {
      * @return The time the namespace was created.
      * 
      */
-    public Output</* @Nullable */ String> createdAt() {
-        return this.createdAt;
+    public Output<Optional<String>> createdAt() {
+        return Codegen.optional(this.createdAt);
     }
     /**
      * Whether or not the namespace is set as Critical.
@@ -59,8 +60,8 @@ public class Namespace extends com.pulumi.resources.CustomResource {
      * @return Whether or not the namespace is set as Critical.
      * 
      */
-    public Output</* @Nullable */ Boolean> critical() {
-        return this.critical;
+    public Output<Optional<Boolean>> critical() {
+        return Codegen.optional(this.critical);
     }
     /**
      * Data center for the namespace
@@ -73,8 +74,8 @@ public class Namespace extends com.pulumi.resources.CustomResource {
      * @return Data center for the namespace
      * 
      */
-    public Output</* @Nullable */ String> dataCenter() {
-        return this.dataCenter;
+    public Output<Optional<String>> dataCenter() {
+        return Codegen.optional(this.dataCenter);
     }
     /**
      * Whether or not the namespace is currently enabled.
@@ -87,8 +88,8 @@ public class Namespace extends com.pulumi.resources.CustomResource {
      * @return Whether or not the namespace is currently enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> enabled() {
-        return this.enabled;
+    public Output<Optional<Boolean>> enabled() {
+        return Codegen.optional(this.enabled);
     }
     /**
      * Resource location
@@ -101,8 +102,8 @@ public class Namespace extends com.pulumi.resources.CustomResource {
      * @return Resource location
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * Identifier for Azure Insights metrics
@@ -143,8 +144,8 @@ public class Namespace extends com.pulumi.resources.CustomResource {
      * @return The namespace type.
      * 
      */
-    public Output</* @Nullable */ String> namespaceType() {
-        return this.namespaceType;
+    public Output<Optional<String>> namespaceType() {
+        return Codegen.optional(this.namespaceType);
     }
     /**
      * Provisioning state of the Namespace.
@@ -157,8 +158,8 @@ public class Namespace extends com.pulumi.resources.CustomResource {
      * @return Provisioning state of the Namespace.
      * 
      */
-    public Output</* @Nullable */ String> provisioningState() {
-        return this.provisioningState;
+    public Output<Optional<String>> provisioningState() {
+        return Codegen.optional(this.provisioningState);
     }
     /**
      * Specifies the targeted region in which the namespace should be created. It can be any of the following values: Australia East, Australia Southeast, Central US, East US, East US 2, West US, North Central US, South Central US, East Asia, Southeast Asia, Brazil South, Japan East, Japan West, North Europe, West Europe
@@ -171,8 +172,8 @@ public class Namespace extends com.pulumi.resources.CustomResource {
      * @return Specifies the targeted region in which the namespace should be created. It can be any of the following values: Australia East, Australia Southeast, Central US, East US, East US 2, West US, North Central US, South Central US, East Asia, Southeast Asia, Brazil South, Japan East, Japan West, North Europe, West Europe
      * 
      */
-    public Output</* @Nullable */ String> region() {
-        return this.region;
+    public Output<Optional<String>> region() {
+        return Codegen.optional(this.region);
     }
     /**
      * ScaleUnit where the namespace gets created
@@ -185,8 +186,8 @@ public class Namespace extends com.pulumi.resources.CustomResource {
      * @return ScaleUnit where the namespace gets created
      * 
      */
-    public Output</* @Nullable */ String> scaleUnit() {
-        return this.scaleUnit;
+    public Output<Optional<String>> scaleUnit() {
+        return Codegen.optional(this.scaleUnit);
     }
     /**
      * Endpoint you can use to perform NotificationHub operations.
@@ -199,8 +200,8 @@ public class Namespace extends com.pulumi.resources.CustomResource {
      * @return Endpoint you can use to perform NotificationHub operations.
      * 
      */
-    public Output</* @Nullable */ String> serviceBusEndpoint() {
-        return this.serviceBusEndpoint;
+    public Output<Optional<String>> serviceBusEndpoint() {
+        return Codegen.optional(this.serviceBusEndpoint);
     }
     /**
      * The sku of the created namespace
@@ -213,8 +214,8 @@ public class Namespace extends com.pulumi.resources.CustomResource {
      * @return The sku of the created namespace
      * 
      */
-    public Output</* @Nullable */ SkuResponse> sku() {
-        return this.sku;
+    public Output<Optional<SkuResponse>> sku() {
+        return Codegen.optional(this.sku);
     }
     /**
      * Status of the namespace. It can be any of these values:1 = Created/Active2 = Creating3 = Suspended4 = Deleting
@@ -227,8 +228,8 @@ public class Namespace extends com.pulumi.resources.CustomResource {
      * @return Status of the namespace. It can be any of these values:1 = Created/Active2 = Creating3 = Suspended4 = Deleting
      * 
      */
-    public Output</* @Nullable */ String> status() {
-        return this.status;
+    public Output<Optional<String>> status() {
+        return Codegen.optional(this.status);
     }
     /**
      * The Id of the Azure subscription associated with the namespace.
@@ -241,8 +242,8 @@ public class Namespace extends com.pulumi.resources.CustomResource {
      * @return The Id of the Azure subscription associated with the namespace.
      * 
      */
-    public Output</* @Nullable */ String> subscriptionId() {
-        return this.subscriptionId;
+    public Output<Optional<String>> subscriptionId() {
+        return Codegen.optional(this.subscriptionId);
     }
     /**
      * Resource tags
@@ -255,8 +256,8 @@ public class Namespace extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type
@@ -283,8 +284,8 @@ public class Namespace extends com.pulumi.resources.CustomResource {
      * @return The time the namespace was updated.
      * 
      */
-    public Output</* @Nullable */ String> updatedAt() {
-        return this.updatedAt;
+    public Output<Optional<String>> updatedAt() {
+        return Codegen.optional(this.updatedAt);
     }
 
     /**

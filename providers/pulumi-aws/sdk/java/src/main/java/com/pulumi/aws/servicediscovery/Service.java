@@ -16,6 +16,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -59,8 +60,8 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return The description of the service.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * A complex type that contains information about the resource record sets that you want Amazon Route 53 to create when you register an instance.
@@ -73,8 +74,8 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return A complex type that contains information about the resource record sets that you want Amazon Route 53 to create when you register an instance.
      * 
      */
-    public Output</* @Nullable */ ServiceDnsConfig> dnsConfig() {
-        return this.dnsConfig;
+    public Output<Optional<ServiceDnsConfig>> dnsConfig() {
+        return Codegen.optional(this.dnsConfig);
     }
     /**
      * A boolean that indicates all instances should be deleted from the service so that the service can be destroyed without error. These instances are not recoverable.
@@ -87,8 +88,8 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return A boolean that indicates all instances should be deleted from the service so that the service can be destroyed without error. These instances are not recoverable.
      * 
      */
-    public Output</* @Nullable */ Boolean> forceDestroy() {
-        return this.forceDestroy;
+    public Output<Optional<Boolean>> forceDestroy() {
+        return Codegen.optional(this.forceDestroy);
     }
     /**
      * A complex type that contains settings for an optional health check. Only for Public DNS namespaces.
@@ -101,8 +102,8 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return A complex type that contains settings for an optional health check. Only for Public DNS namespaces.
      * 
      */
-    public Output</* @Nullable */ ServiceHealthCheckConfig> healthCheckConfig() {
-        return this.healthCheckConfig;
+    public Output<Optional<ServiceHealthCheckConfig>> healthCheckConfig() {
+        return Codegen.optional(this.healthCheckConfig);
     }
     /**
      * A complex type that contains settings for ECS managed health checks.
@@ -115,8 +116,8 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return A complex type that contains settings for ECS managed health checks.
      * 
      */
-    public Output</* @Nullable */ ServiceHealthCheckCustomConfig> healthCheckCustomConfig() {
-        return this.healthCheckCustomConfig;
+    public Output<Optional<ServiceHealthCheckCustomConfig>> healthCheckCustomConfig() {
+        return Codegen.optional(this.healthCheckCustomConfig);
     }
     /**
      * The name of the service.
@@ -157,8 +158,8 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the service. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

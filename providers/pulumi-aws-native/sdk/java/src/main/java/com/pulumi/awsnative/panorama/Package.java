@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -55,8 +56,8 @@ public class Package extends com.pulumi.resources.CustomResource {
     @Export(name="tags", type=List.class, parameters={PackageTag.class})
     private Output</* @Nullable */ List<PackageTag>> tags;
 
-    public Output</* @Nullable */ List<PackageTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<PackageTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

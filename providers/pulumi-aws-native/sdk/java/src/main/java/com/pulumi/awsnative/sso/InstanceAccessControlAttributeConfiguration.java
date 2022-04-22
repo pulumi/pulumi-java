@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -24,8 +25,8 @@ public class InstanceAccessControlAttributeConfiguration extends com.pulumi.reso
     @Export(name="accessControlAttributes", type=List.class, parameters={InstanceAccessControlAttributeConfigurationAccessControlAttribute.class})
     private Output</* @Nullable */ List<InstanceAccessControlAttributeConfigurationAccessControlAttribute>> accessControlAttributes;
 
-    public Output</* @Nullable */ List<InstanceAccessControlAttributeConfigurationAccessControlAttribute>> accessControlAttributes() {
-        return this.accessControlAttributes;
+    public Output<Optional<List<InstanceAccessControlAttributeConfigurationAccessControlAttribute>>> accessControlAttributes() {
+        return Codegen.optional(this.accessControlAttributes);
     }
     /**
      * The InstanceAccessControlAttributeConfiguration property has been deprecated but is still supported for backwards compatibility purposes. We recomend that you use  AccessControlAttributes property instead.
@@ -38,8 +39,8 @@ public class InstanceAccessControlAttributeConfiguration extends com.pulumi.reso
      * @return The InstanceAccessControlAttributeConfiguration property has been deprecated but is still supported for backwards compatibility purposes. We recomend that you use  AccessControlAttributes property instead.
      * 
      */
-    public Output</* @Nullable */ InstanceAccessControlAttributeConfigurationProperties> instanceAccessControlAttributeConfiguration() {
-        return this.instanceAccessControlAttributeConfiguration;
+    public Output<Optional<InstanceAccessControlAttributeConfigurationProperties>> instanceAccessControlAttributeConfiguration() {
+        return Codegen.optional(this.instanceAccessControlAttributeConfiguration);
     }
     /**
      * The ARN of the AWS SSO instance under which the operation will be executed.

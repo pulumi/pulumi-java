@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -55,8 +56,8 @@ public class IdentityNotificationTopic extends com.pulumi.resources.CustomResour
      * @return Whether SES should include original email headers in SNS notifications of this type. *false* by default.
      * 
      */
-    public Output</* @Nullable */ Boolean> includeOriginalHeaders() {
-        return this.includeOriginalHeaders;
+    public Output<Optional<Boolean>> includeOriginalHeaders() {
+        return Codegen.optional(this.includeOriginalHeaders);
     }
     /**
      * The type of notifications that will be published to the specified Amazon SNS topic. Valid Values: *Bounce*, *Complaint* or *Delivery*.
@@ -83,8 +84,8 @@ public class IdentityNotificationTopic extends com.pulumi.resources.CustomResour
      * @return The Amazon Resource Name (ARN) of the Amazon SNS topic. Can be set to &#34;&#34; (an empty string) to disable publishing.
      * 
      */
-    public Output</* @Nullable */ String> topicArn() {
-        return this.topicArn;
+    public Output<Optional<String>> topicArn() {
+        return Codegen.optional(this.topicArn);
     }
 
     /**

@@ -16,6 +16,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -73,8 +74,8 @@ public class Proxy extends com.pulumi.resources.CustomResource {
      * @return Whether the proxy includes detailed information about SQL statements in its logs. This information helps you to debug issues involving SQL behavior or the performance and scalability of the proxy connections. The debug information includes the text of SQL statements that you submit through the proxy. Thus, only enable this setting when needed for debugging, and only when you have security measures in place to safeguard any sensitive information that appears in the logs.
      * 
      */
-    public Output</* @Nullable */ Boolean> debugLogging() {
-        return this.debugLogging;
+    public Output<Optional<Boolean>> debugLogging() {
+        return Codegen.optional(this.debugLogging);
     }
     /**
      * The endpoint that you can use to connect to the proxy. You include the endpoint value in the connection string for a database client application.
@@ -143,8 +144,8 @@ public class Proxy extends com.pulumi.resources.CustomResource {
      * @return A Boolean parameter that specifies whether Transport Layer Security (TLS) encryption is required for connections to the proxy. By enabling this setting, you can enforce encrypted TLS connections to the proxy.
      * 
      */
-    public Output</* @Nullable */ Boolean> requireTls() {
-        return this.requireTls;
+    public Output<Optional<Boolean>> requireTls() {
+        return Codegen.optional(this.requireTls);
     }
     /**
      * The Amazon Resource Name (ARN) of the IAM role that the proxy uses to access secrets in AWS Secrets Manager.
@@ -171,8 +172,8 @@ public class Proxy extends com.pulumi.resources.CustomResource {
      * @return A mapping of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

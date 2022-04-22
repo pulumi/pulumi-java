@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -63,8 +64,8 @@ public class Invocation extends com.pulumi.resources.CustomResource {
      * @return Qualifier (i.e., version) of the lambda function. Defaults to `$LATEST`.
      * 
      */
-    public Output</* @Nullable */ String> qualifier() {
-        return this.qualifier;
+    public Output<Optional<String>> qualifier() {
+        return Codegen.optional(this.qualifier);
     }
     /**
      * String result of the lambda function invocation.
@@ -83,8 +84,8 @@ public class Invocation extends com.pulumi.resources.CustomResource {
     @Export(name="triggers", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> triggers;
 
-    public Output</* @Nullable */ Map<String,String>> triggers() {
-        return this.triggers;
+    public Output<Optional<Map<String,String>>> triggers() {
+        return Codegen.optional(this.triggers);
     }
 
     /**

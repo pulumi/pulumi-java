@@ -18,6 +18,7 @@ import com.pulumi.gcp.container.outputs.NodePoolUpgradeSettings;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -55,8 +56,8 @@ public class NodePool extends com.pulumi.resources.CustomResource {
      * the size of the node pool to the current cluster usage. Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ NodePoolAutoscaling> autoscaling() {
-        return this.autoscaling;
+    public Output<Optional<NodePoolAutoscaling>> autoscaling() {
+        return Codegen.optional(this.autoscaling);
     }
     /**
      * The cluster to create the node pool for. Cluster must be present in `location` provided for clusters. May be specified in the format `projects/{{project}}/locations/{{location}}/clusters/{{cluster}}` or as just the name of the cluster.

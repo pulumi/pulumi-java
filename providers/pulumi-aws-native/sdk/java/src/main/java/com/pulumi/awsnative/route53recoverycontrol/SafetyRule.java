@@ -16,6 +16,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -27,8 +28,8 @@ public class SafetyRule extends com.pulumi.resources.CustomResource {
     @Export(name="assertionRule", type=SafetyRuleAssertionRule.class, parameters={})
     private Output</* @Nullable */ SafetyRuleAssertionRule> assertionRule;
 
-    public Output</* @Nullable */ SafetyRuleAssertionRule> assertionRule() {
-        return this.assertionRule;
+    public Output<Optional<SafetyRuleAssertionRule>> assertionRule() {
+        return Codegen.optional(this.assertionRule);
     }
     /**
      * The Amazon Resource Name (ARN) of the control panel.
@@ -41,26 +42,26 @@ public class SafetyRule extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the control panel.
      * 
      */
-    public Output</* @Nullable */ String> controlPanelArn() {
-        return this.controlPanelArn;
+    public Output<Optional<String>> controlPanelArn() {
+        return Codegen.optional(this.controlPanelArn);
     }
     @Export(name="gatingRule", type=SafetyRuleGatingRule.class, parameters={})
     private Output</* @Nullable */ SafetyRuleGatingRule> gatingRule;
 
-    public Output</* @Nullable */ SafetyRuleGatingRule> gatingRule() {
-        return this.gatingRule;
+    public Output<Optional<SafetyRuleGatingRule>> gatingRule() {
+        return Codegen.optional(this.gatingRule);
     }
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     @Export(name="ruleConfig", type=SafetyRuleRuleConfig.class, parameters={})
     private Output</* @Nullable */ SafetyRuleRuleConfig> ruleConfig;
 
-    public Output</* @Nullable */ SafetyRuleRuleConfig> ruleConfig() {
-        return this.ruleConfig;
+    public Output<Optional<SafetyRuleRuleConfig>> ruleConfig() {
+        return Codegen.optional(this.ruleConfig);
     }
     /**
      * The Amazon Resource Name (ARN) of the safety rule.
@@ -101,8 +102,8 @@ public class SafetyRule extends com.pulumi.resources.CustomResource {
      * @return A collection of tags associated with a resource
      * 
      */
-    public Output</* @Nullable */ List<SafetyRuleTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<SafetyRuleTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

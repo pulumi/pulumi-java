@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -32,8 +33,8 @@ public class Portal extends com.pulumi.resources.CustomResource {
      * @return Contains the configuration information of an alarm created in an AWS IoT SiteWise Monitor portal. You can use the alarm to monitor an asset property and get notified when the asset property value is outside a specified range.
      * 
      */
-    public Output</* @Nullable */ AlarmsProperties> alarms() {
-        return this.alarms;
+    public Output<Optional<AlarmsProperties>> alarms() {
+        return Codegen.optional(this.alarms);
     }
     /**
      * The email address that sends alarm notifications.
@@ -46,8 +47,8 @@ public class Portal extends com.pulumi.resources.CustomResource {
      * @return The email address that sends alarm notifications.
      * 
      */
-    public Output</* @Nullable */ String> notificationSenderEmail() {
-        return this.notificationSenderEmail;
+    public Output<Optional<String>> notificationSenderEmail() {
+        return Codegen.optional(this.notificationSenderEmail);
     }
     /**
      * The ARN of the portal, which has the following format.
@@ -74,8 +75,8 @@ public class Portal extends com.pulumi.resources.CustomResource {
      * @return The service to use to authenticate users to the portal. Choose from SSO or IAM. You can&#39;t change this value after you create a portal.
      * 
      */
-    public Output</* @Nullable */ String> portalAuthMode() {
-        return this.portalAuthMode;
+    public Output<Optional<String>> portalAuthMode() {
+        return Codegen.optional(this.portalAuthMode);
     }
     /**
      * The AWS SSO application generated client ID (used with AWS SSO APIs).
@@ -116,8 +117,8 @@ public class Portal extends com.pulumi.resources.CustomResource {
      * @return A description for the portal.
      * 
      */
-    public Output</* @Nullable */ String> portalDescription() {
-        return this.portalDescription;
+    public Output<Optional<String>> portalDescription() {
+        return Codegen.optional(this.portalDescription);
     }
     /**
      * The ID of the portal.
@@ -186,8 +187,8 @@ public class Portal extends com.pulumi.resources.CustomResource {
      * @return A list of key-value pairs that contain metadata for the portal.
      * 
      */
-    public Output</* @Nullable */ List<PortalTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<PortalTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

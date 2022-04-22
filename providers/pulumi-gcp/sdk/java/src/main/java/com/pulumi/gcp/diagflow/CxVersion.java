@@ -13,6 +13,7 @@ import com.pulumi.gcp.diagflow.inputs.CxVersionState;
 import com.pulumi.gcp.diagflow.outputs.CxVersionNluSetting;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -69,8 +70,8 @@ public class CxVersion extends com.pulumi.resources.CustomResource {
      * @return The description of the version. The maximum length is 500 characters. If exceeded, the request is rejected.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The human-readable name of the version. Limit of 64 characters.
@@ -129,8 +130,8 @@ public class CxVersion extends com.pulumi.resources.CustomResource {
      * Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow ID&gt;.
      * 
      */
-    public Output</* @Nullable */ String> parent() {
-        return this.parent;
+    public Output<Optional<String>> parent() {
+        return Codegen.optional(this.parent);
     }
     /**
      * The state of this version. * RUNNING: Version is not ready to serve (e.g. training is running). * SUCCEEDED: Training

@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -66,8 +67,8 @@ public class LoadBalancerBackendServerPolicy extends com.pulumi.resources.Custom
      * @return List of Policy Names to apply to the backend server.
      * 
      */
-    public Output</* @Nullable */ List<String>> policyNames() {
-        return this.policyNames;
+    public Output<Optional<List<String>>> policyNames() {
+        return Codegen.optional(this.policyNames);
     }
 
     /**

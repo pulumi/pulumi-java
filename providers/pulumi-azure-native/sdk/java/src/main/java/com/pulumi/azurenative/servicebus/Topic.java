@@ -16,6 +16,7 @@ import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -60,8 +61,8 @@ public class Topic extends com.pulumi.resources.CustomResource {
      * @return ISO 8601 timespan idle interval after which the topic is automatically deleted. The minimum duration is 5 minutes.
      * 
      */
-    public Output</* @Nullable */ String> autoDeleteOnIdle() {
-        return this.autoDeleteOnIdle;
+    public Output<Optional<String>> autoDeleteOnIdle() {
+        return Codegen.optional(this.autoDeleteOnIdle);
     }
     /**
      * Message count details
@@ -102,8 +103,8 @@ public class Topic extends com.pulumi.resources.CustomResource {
      * @return ISO 8601 Default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.
      * 
      */
-    public Output</* @Nullable */ String> defaultMessageTimeToLive() {
-        return this.defaultMessageTimeToLive;
+    public Output<Optional<String>> defaultMessageTimeToLive() {
+        return Codegen.optional(this.defaultMessageTimeToLive);
     }
     /**
      * ISO8601 timespan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.
@@ -116,8 +117,8 @@ public class Topic extends com.pulumi.resources.CustomResource {
      * @return ISO8601 timespan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.
      * 
      */
-    public Output</* @Nullable */ String> duplicateDetectionHistoryTimeWindow() {
-        return this.duplicateDetectionHistoryTimeWindow;
+    public Output<Optional<String>> duplicateDetectionHistoryTimeWindow() {
+        return Codegen.optional(this.duplicateDetectionHistoryTimeWindow);
     }
     /**
      * Value that indicates whether server-side batched operations are enabled.
@@ -130,8 +131,8 @@ public class Topic extends com.pulumi.resources.CustomResource {
      * @return Value that indicates whether server-side batched operations are enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableBatchedOperations() {
-        return this.enableBatchedOperations;
+    public Output<Optional<Boolean>> enableBatchedOperations() {
+        return Codegen.optional(this.enableBatchedOperations);
     }
     /**
      * Value that indicates whether Express Entities are enabled. An express topic holds a message in memory temporarily before writing it to persistent storage.
@@ -144,8 +145,8 @@ public class Topic extends com.pulumi.resources.CustomResource {
      * @return Value that indicates whether Express Entities are enabled. An express topic holds a message in memory temporarily before writing it to persistent storage.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableExpress() {
-        return this.enableExpress;
+    public Output<Optional<Boolean>> enableExpress() {
+        return Codegen.optional(this.enableExpress);
     }
     /**
      * Value that indicates whether the topic to be partitioned across multiple message brokers is enabled.
@@ -158,8 +159,8 @@ public class Topic extends com.pulumi.resources.CustomResource {
      * @return Value that indicates whether the topic to be partitioned across multiple message brokers is enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> enablePartitioning() {
-        return this.enablePartitioning;
+    public Output<Optional<Boolean>> enablePartitioning() {
+        return Codegen.optional(this.enablePartitioning);
     }
     /**
      * Maximum size of the topic in megabytes, which is the size of the memory allocated for the topic. Default is 1024.
@@ -172,8 +173,8 @@ public class Topic extends com.pulumi.resources.CustomResource {
      * @return Maximum size of the topic in megabytes, which is the size of the memory allocated for the topic. Default is 1024.
      * 
      */
-    public Output</* @Nullable */ Integer> maxSizeInMegabytes() {
-        return this.maxSizeInMegabytes;
+    public Output<Optional<Integer>> maxSizeInMegabytes() {
+        return Codegen.optional(this.maxSizeInMegabytes);
     }
     /**
      * Resource name
@@ -200,8 +201,8 @@ public class Topic extends com.pulumi.resources.CustomResource {
      * @return Value indicating if this topic requires duplicate detection.
      * 
      */
-    public Output</* @Nullable */ Boolean> requiresDuplicateDetection() {
-        return this.requiresDuplicateDetection;
+    public Output<Optional<Boolean>> requiresDuplicateDetection() {
+        return Codegen.optional(this.requiresDuplicateDetection);
     }
     /**
      * Size of the topic, in bytes.
@@ -228,8 +229,8 @@ public class Topic extends com.pulumi.resources.CustomResource {
      * @return Enumerates the possible values for the status of a messaging entity.
      * 
      */
-    public Output</* @Nullable */ String> status() {
-        return this.status;
+    public Output<Optional<String>> status() {
+        return Codegen.optional(this.status);
     }
     /**
      * Number of subscriptions.
@@ -256,8 +257,8 @@ public class Topic extends com.pulumi.resources.CustomResource {
      * @return Value that indicates whether the topic supports ordering.
      * 
      */
-    public Output</* @Nullable */ Boolean> supportOrdering() {
-        return this.supportOrdering;
+    public Output<Optional<Boolean>> supportOrdering() {
+        return Codegen.optional(this.supportOrdering);
     }
     /**
      * Resource type

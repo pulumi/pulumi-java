@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -42,8 +43,8 @@ public class FirewallRule extends com.pulumi.resources.CustomResource {
      * @return The end IP address of the firewall rule. Must be IPv4 format. Must be greater than or equal to startIpAddress. Use value &#39;0.0.0.0&#39; for all Azure-internal IP addresses.
      * 
      */
-    public Output</* @Nullable */ String> endIpAddress() {
-        return this.endIpAddress;
+    public Output<Optional<String>> endIpAddress() {
+        return Codegen.optional(this.endIpAddress);
     }
     /**
      * Resource name.
@@ -56,8 +57,8 @@ public class FirewallRule extends com.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * The start IP address of the firewall rule. Must be IPv4 format. Use value &#39;0.0.0.0&#39; for all Azure-internal IP addresses.
@@ -70,8 +71,8 @@ public class FirewallRule extends com.pulumi.resources.CustomResource {
      * @return The start IP address of the firewall rule. Must be IPv4 format. Use value &#39;0.0.0.0&#39; for all Azure-internal IP addresses.
      * 
      */
-    public Output</* @Nullable */ String> startIpAddress() {
-        return this.startIpAddress;
+    public Output<Optional<String>> startIpAddress() {
+        return Codegen.optional(this.startIpAddress);
     }
     /**
      * Resource type.

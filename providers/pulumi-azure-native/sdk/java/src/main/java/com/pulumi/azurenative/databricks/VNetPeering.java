@@ -16,6 +16,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class VNetPeering extends com.pulumi.resources.CustomResource {
      * @return Whether the forwarded traffic from the VMs in the local virtual network will be allowed/disallowed in remote virtual network.
      * 
      */
-    public Output</* @Nullable */ Boolean> allowForwardedTraffic() {
-        return this.allowForwardedTraffic;
+    public Output<Optional<Boolean>> allowForwardedTraffic() {
+        return Codegen.optional(this.allowForwardedTraffic);
     }
     /**
      * If gateway links can be used in remote virtual networking to link to this virtual network.
@@ -60,8 +61,8 @@ public class VNetPeering extends com.pulumi.resources.CustomResource {
      * @return If gateway links can be used in remote virtual networking to link to this virtual network.
      * 
      */
-    public Output</* @Nullable */ Boolean> allowGatewayTransit() {
-        return this.allowGatewayTransit;
+    public Output<Optional<Boolean>> allowGatewayTransit() {
+        return Codegen.optional(this.allowGatewayTransit);
     }
     /**
      * Whether the VMs in the local virtual network space would be able to access the VMs in remote virtual network space.
@@ -74,8 +75,8 @@ public class VNetPeering extends com.pulumi.resources.CustomResource {
      * @return Whether the VMs in the local virtual network space would be able to access the VMs in remote virtual network space.
      * 
      */
-    public Output</* @Nullable */ Boolean> allowVirtualNetworkAccess() {
-        return this.allowVirtualNetworkAccess;
+    public Output<Optional<Boolean>> allowVirtualNetworkAccess() {
+        return Codegen.optional(this.allowVirtualNetworkAccess);
     }
     /**
      * The reference to the databricks virtual network address space.
@@ -88,8 +89,8 @@ public class VNetPeering extends com.pulumi.resources.CustomResource {
      * @return The reference to the databricks virtual network address space.
      * 
      */
-    public Output</* @Nullable */ AddressSpaceResponse> databricksAddressSpace() {
-        return this.databricksAddressSpace;
+    public Output<Optional<AddressSpaceResponse>> databricksAddressSpace() {
+        return Codegen.optional(this.databricksAddressSpace);
     }
     /**
      *  The remote virtual network should be in the same region. See here to learn more (https://docs.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/vnet-peering).
@@ -102,8 +103,8 @@ public class VNetPeering extends com.pulumi.resources.CustomResource {
      * @return  The remote virtual network should be in the same region. See here to learn more (https://docs.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/vnet-peering).
      * 
      */
-    public Output</* @Nullable */ VirtualNetworkPeeringPropertiesFormatResponseDatabricksVirtualNetwork> databricksVirtualNetwork() {
-        return this.databricksVirtualNetwork;
+    public Output<Optional<VirtualNetworkPeeringPropertiesFormatResponseDatabricksVirtualNetwork>> databricksVirtualNetwork() {
+        return Codegen.optional(this.databricksVirtualNetwork);
     }
     /**
      * Name of the virtual network peering resource
@@ -158,8 +159,8 @@ public class VNetPeering extends com.pulumi.resources.CustomResource {
      * @return The reference to the remote virtual network address space.
      * 
      */
-    public Output</* @Nullable */ AddressSpaceResponse> remoteAddressSpace() {
-        return this.remoteAddressSpace;
+    public Output<Optional<AddressSpaceResponse>> remoteAddressSpace() {
+        return Codegen.optional(this.remoteAddressSpace);
     }
     /**
      *  The remote virtual network should be in the same region. See here to learn more (https://docs.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/vnet-peering).
@@ -200,8 +201,8 @@ public class VNetPeering extends com.pulumi.resources.CustomResource {
      * @return If remote gateways can be used on this virtual network. If the flag is set to true, and allowGatewayTransit on remote peering is also true, virtual network will use gateways of remote virtual network for transit. Only one peering can have this flag set to true. This flag cannot be set if virtual network already has a gateway.
      * 
      */
-    public Output</* @Nullable */ Boolean> useRemoteGateways() {
-        return this.useRemoteGateways;
+    public Output<Optional<Boolean>> useRemoteGateways() {
+        return Codegen.optional(this.useRemoteGateways);
     }
 
     /**

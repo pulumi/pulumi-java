@@ -14,6 +14,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class Topic extends com.pulumi.resources.CustomResource {
      * @return IAM role for failure feedback
      * 
      */
-    public Output</* @Nullable */ String> applicationFailureFeedbackRoleArn() {
-        return this.applicationFailureFeedbackRoleArn;
+    public Output<Optional<String>> applicationFailureFeedbackRoleArn() {
+        return Codegen.optional(this.applicationFailureFeedbackRoleArn);
     }
     /**
      * The IAM role permitted to receive success feedback for this topic
@@ -60,8 +61,8 @@ public class Topic extends com.pulumi.resources.CustomResource {
      * @return The IAM role permitted to receive success feedback for this topic
      * 
      */
-    public Output</* @Nullable */ String> applicationSuccessFeedbackRoleArn() {
-        return this.applicationSuccessFeedbackRoleArn;
+    public Output<Optional<String>> applicationSuccessFeedbackRoleArn() {
+        return Codegen.optional(this.applicationSuccessFeedbackRoleArn);
     }
     /**
      * Percentage of success to sample
@@ -74,8 +75,8 @@ public class Topic extends com.pulumi.resources.CustomResource {
      * @return Percentage of success to sample
      * 
      */
-    public Output</* @Nullable */ Integer> applicationSuccessFeedbackSampleRate() {
-        return this.applicationSuccessFeedbackSampleRate;
+    public Output<Optional<Integer>> applicationSuccessFeedbackSampleRate() {
+        return Codegen.optional(this.applicationSuccessFeedbackSampleRate);
     }
     /**
      * The ARN of the SNS topic, as a more obvious property (clone of id)
@@ -102,8 +103,8 @@ public class Topic extends com.pulumi.resources.CustomResource {
      * @return Enables content-based deduplication for FIFO topics. For more information, see the [related documentation](https://docs.aws.amazon.com/sns/latest/dg/fifo-message-dedup.html)
      * 
      */
-    public Output</* @Nullable */ Boolean> contentBasedDeduplication() {
-        return this.contentBasedDeduplication;
+    public Output<Optional<Boolean>> contentBasedDeduplication() {
+        return Codegen.optional(this.contentBasedDeduplication);
     }
     /**
      * The SNS delivery policy. More on [AWS documentation](https://docs.aws.amazon.com/sns/latest/dg/DeliveryPolicies.html)
@@ -116,8 +117,8 @@ public class Topic extends com.pulumi.resources.CustomResource {
      * @return The SNS delivery policy. More on [AWS documentation](https://docs.aws.amazon.com/sns/latest/dg/DeliveryPolicies.html)
      * 
      */
-    public Output</* @Nullable */ String> deliveryPolicy() {
-        return this.deliveryPolicy;
+    public Output<Optional<String>> deliveryPolicy() {
+        return Codegen.optional(this.deliveryPolicy);
     }
     /**
      * The display name for the topic
@@ -130,8 +131,8 @@ public class Topic extends com.pulumi.resources.CustomResource {
      * @return The display name for the topic
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * Boolean indicating whether or not to create a FIFO (first-in-first-out) topic (default is `false`).
@@ -144,8 +145,8 @@ public class Topic extends com.pulumi.resources.CustomResource {
      * @return Boolean indicating whether or not to create a FIFO (first-in-first-out) topic (default is `false`).
      * 
      */
-    public Output</* @Nullable */ Boolean> fifoTopic() {
-        return this.fifoTopic;
+    public Output<Optional<Boolean>> fifoTopic() {
+        return Codegen.optional(this.fifoTopic);
     }
     /**
      * IAM role for failure feedback
@@ -158,8 +159,8 @@ public class Topic extends com.pulumi.resources.CustomResource {
      * @return IAM role for failure feedback
      * 
      */
-    public Output</* @Nullable */ String> firehoseFailureFeedbackRoleArn() {
-        return this.firehoseFailureFeedbackRoleArn;
+    public Output<Optional<String>> firehoseFailureFeedbackRoleArn() {
+        return Codegen.optional(this.firehoseFailureFeedbackRoleArn);
     }
     /**
      * The IAM role permitted to receive success feedback for this topic
@@ -172,8 +173,8 @@ public class Topic extends com.pulumi.resources.CustomResource {
      * @return The IAM role permitted to receive success feedback for this topic
      * 
      */
-    public Output</* @Nullable */ String> firehoseSuccessFeedbackRoleArn() {
-        return this.firehoseSuccessFeedbackRoleArn;
+    public Output<Optional<String>> firehoseSuccessFeedbackRoleArn() {
+        return Codegen.optional(this.firehoseSuccessFeedbackRoleArn);
     }
     /**
      * Percentage of success to sample
@@ -186,8 +187,8 @@ public class Topic extends com.pulumi.resources.CustomResource {
      * @return Percentage of success to sample
      * 
      */
-    public Output</* @Nullable */ Integer> firehoseSuccessFeedbackSampleRate() {
-        return this.firehoseSuccessFeedbackSampleRate;
+    public Output<Optional<Integer>> firehoseSuccessFeedbackSampleRate() {
+        return Codegen.optional(this.firehoseSuccessFeedbackSampleRate);
     }
     /**
      * IAM role for failure feedback
@@ -200,8 +201,8 @@ public class Topic extends com.pulumi.resources.CustomResource {
      * @return IAM role for failure feedback
      * 
      */
-    public Output</* @Nullable */ String> httpFailureFeedbackRoleArn() {
-        return this.httpFailureFeedbackRoleArn;
+    public Output<Optional<String>> httpFailureFeedbackRoleArn() {
+        return Codegen.optional(this.httpFailureFeedbackRoleArn);
     }
     /**
      * The IAM role permitted to receive success feedback for this topic
@@ -214,8 +215,8 @@ public class Topic extends com.pulumi.resources.CustomResource {
      * @return The IAM role permitted to receive success feedback for this topic
      * 
      */
-    public Output</* @Nullable */ String> httpSuccessFeedbackRoleArn() {
-        return this.httpSuccessFeedbackRoleArn;
+    public Output<Optional<String>> httpSuccessFeedbackRoleArn() {
+        return Codegen.optional(this.httpSuccessFeedbackRoleArn);
     }
     /**
      * Percentage of success to sample
@@ -228,8 +229,8 @@ public class Topic extends com.pulumi.resources.CustomResource {
      * @return Percentage of success to sample
      * 
      */
-    public Output</* @Nullable */ Integer> httpSuccessFeedbackSampleRate() {
-        return this.httpSuccessFeedbackSampleRate;
+    public Output<Optional<Integer>> httpSuccessFeedbackSampleRate() {
+        return Codegen.optional(this.httpSuccessFeedbackSampleRate);
     }
     /**
      * The ID of an AWS-managed customer master key (CMK) for Amazon SNS or a custom CMK. For more information, see [Key Terms](https://docs.aws.amazon.com/sns/latest/dg/sns-server-side-encryption.html#sse-key-terms)
@@ -242,8 +243,8 @@ public class Topic extends com.pulumi.resources.CustomResource {
      * @return The ID of an AWS-managed customer master key (CMK) for Amazon SNS or a custom CMK. For more information, see [Key Terms](https://docs.aws.amazon.com/sns/latest/dg/sns-server-side-encryption.html#sse-key-terms)
      * 
      */
-    public Output</* @Nullable */ String> kmsMasterKeyId() {
-        return this.kmsMasterKeyId;
+    public Output<Optional<String>> kmsMasterKeyId() {
+        return Codegen.optional(this.kmsMasterKeyId);
     }
     /**
      * IAM role for failure feedback
@@ -256,8 +257,8 @@ public class Topic extends com.pulumi.resources.CustomResource {
      * @return IAM role for failure feedback
      * 
      */
-    public Output</* @Nullable */ String> lambdaFailureFeedbackRoleArn() {
-        return this.lambdaFailureFeedbackRoleArn;
+    public Output<Optional<String>> lambdaFailureFeedbackRoleArn() {
+        return Codegen.optional(this.lambdaFailureFeedbackRoleArn);
     }
     /**
      * The IAM role permitted to receive success feedback for this topic
@@ -270,8 +271,8 @@ public class Topic extends com.pulumi.resources.CustomResource {
      * @return The IAM role permitted to receive success feedback for this topic
      * 
      */
-    public Output</* @Nullable */ String> lambdaSuccessFeedbackRoleArn() {
-        return this.lambdaSuccessFeedbackRoleArn;
+    public Output<Optional<String>> lambdaSuccessFeedbackRoleArn() {
+        return Codegen.optional(this.lambdaSuccessFeedbackRoleArn);
     }
     /**
      * Percentage of success to sample
@@ -284,8 +285,8 @@ public class Topic extends com.pulumi.resources.CustomResource {
      * @return Percentage of success to sample
      * 
      */
-    public Output</* @Nullable */ Integer> lambdaSuccessFeedbackSampleRate() {
-        return this.lambdaSuccessFeedbackSampleRate;
+    public Output<Optional<Integer>> lambdaSuccessFeedbackSampleRate() {
+        return Codegen.optional(this.lambdaSuccessFeedbackSampleRate);
     }
     /**
      * The name of the topic. Topic names must be made up of only uppercase and lowercase ASCII letters, numbers, underscores, and hyphens, and must be between 1 and 256 characters long. For a FIFO (first-in-first-out) topic, the name must end with the `.fifo` suffix. If omitted, this provider will assign a random, unique name. Conflicts with `name_prefix`
@@ -354,8 +355,8 @@ public class Topic extends com.pulumi.resources.CustomResource {
      * @return IAM role for failure feedback
      * 
      */
-    public Output</* @Nullable */ String> sqsFailureFeedbackRoleArn() {
-        return this.sqsFailureFeedbackRoleArn;
+    public Output<Optional<String>> sqsFailureFeedbackRoleArn() {
+        return Codegen.optional(this.sqsFailureFeedbackRoleArn);
     }
     /**
      * The IAM role permitted to receive success feedback for this topic
@@ -368,8 +369,8 @@ public class Topic extends com.pulumi.resources.CustomResource {
      * @return The IAM role permitted to receive success feedback for this topic
      * 
      */
-    public Output</* @Nullable */ String> sqsSuccessFeedbackRoleArn() {
-        return this.sqsSuccessFeedbackRoleArn;
+    public Output<Optional<String>> sqsSuccessFeedbackRoleArn() {
+        return Codegen.optional(this.sqsSuccessFeedbackRoleArn);
     }
     /**
      * Percentage of success to sample
@@ -382,8 +383,8 @@ public class Topic extends com.pulumi.resources.CustomResource {
      * @return Percentage of success to sample
      * 
      */
-    public Output</* @Nullable */ Integer> sqsSuccessFeedbackSampleRate() {
-        return this.sqsSuccessFeedbackSampleRate;
+    public Output<Optional<Integer>> sqsSuccessFeedbackSampleRate() {
+        return Codegen.optional(this.sqsSuccessFeedbackSampleRate);
     }
     /**
      * Key-value map of resource tags. .If configured with a provider `defaultTags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -396,8 +397,8 @@ public class Topic extends com.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. .If configured with a provider `defaultTags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

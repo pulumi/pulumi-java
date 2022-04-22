@@ -11,6 +11,7 @@ import com.pulumi.foobar.Utilities;
 import com.pulumi.foobar.deeply_nested_module.ResourceArgs;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 @ResourceType(type="foo-bar:deeply/nested/module:Resource")
@@ -18,8 +19,8 @@ public class Resource extends com.pulumi.resources.CustomResource {
     @Export(name="baz", type=String.class, parameters={})
     private Output</* @Nullable */ String> baz;
 
-    public Output</* @Nullable */ String> baz() {
-        return this.baz;
+    public Output<Optional<String>> baz() {
+        return Codegen.optional(this.baz);
     }
 
     /**

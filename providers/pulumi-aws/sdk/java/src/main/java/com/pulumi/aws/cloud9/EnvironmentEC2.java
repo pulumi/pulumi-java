@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -48,8 +49,8 @@ public class EnvironmentEC2 extends com.pulumi.resources.CustomResource {
      * @return The number of minutes until the running instance is shut down after the environment has last been used.
      * 
      */
-    public Output</* @Nullable */ Integer> automaticStopTimeMinutes() {
-        return this.automaticStopTimeMinutes;
+    public Output<Optional<Integer>> automaticStopTimeMinutes() {
+        return Codegen.optional(this.automaticStopTimeMinutes);
     }
     /**
      * The description of the environment.
@@ -62,8 +63,8 @@ public class EnvironmentEC2 extends com.pulumi.resources.CustomResource {
      * @return The description of the environment.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The type of instance to connect to the environment, e.g., `t2.micro`.
@@ -118,8 +119,8 @@ public class EnvironmentEC2 extends com.pulumi.resources.CustomResource {
      * @return The ID of the subnet in Amazon VPC that AWS Cloud9 will use to communicate with the Amazon EC2 instance.
      * 
      */
-    public Output</* @Nullable */ String> subnetId() {
-        return this.subnetId;
+    public Output<Optional<String>> subnetId() {
+        return Codegen.optional(this.subnetId);
     }
     /**
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -132,8 +133,8 @@ public class EnvironmentEC2 extends com.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.

@@ -18,6 +18,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -48,8 +49,8 @@ public class Assignment extends com.pulumi.resources.CustomResource {
      * @return ID of the published version of a blueprint definition.
      * 
      */
-    public Output</* @Nullable */ String> blueprintId() {
-        return this.blueprintId;
+    public Output<Optional<String>> blueprintId() {
+        return Codegen.optional(this.blueprintId);
     }
     /**
      * Multi-line explain this resource.
@@ -62,8 +63,8 @@ public class Assignment extends com.pulumi.resources.CustomResource {
      * @return Multi-line explain this resource.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * One-liner string explain this resource.
@@ -76,8 +77,8 @@ public class Assignment extends com.pulumi.resources.CustomResource {
      * @return One-liner string explain this resource.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * Managed identity for this blueprint assignment.
@@ -118,8 +119,8 @@ public class Assignment extends com.pulumi.resources.CustomResource {
      * @return Defines how resources deployed by a blueprint assignment are locked.
      * 
      */
-    public Output</* @Nullable */ AssignmentLockSettingsResponse> locks() {
-        return this.locks;
+    public Output<Optional<AssignmentLockSettingsResponse>> locks() {
+        return Codegen.optional(this.locks);
     }
     /**
      * Name of this resource.
@@ -188,8 +189,8 @@ public class Assignment extends com.pulumi.resources.CustomResource {
      * @return The target subscription scope of the blueprint assignment (format: &#39;/subscriptions/{subscriptionId}&#39;). For management group level assignments, the property is required.
      * 
      */
-    public Output</* @Nullable */ String> scope() {
-        return this.scope;
+    public Output<Optional<String>> scope() {
+        return Codegen.optional(this.scope);
     }
     /**
      * Status of blueprint assignment. This field is readonly.

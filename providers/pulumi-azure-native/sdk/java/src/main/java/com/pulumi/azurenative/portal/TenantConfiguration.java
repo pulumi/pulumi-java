@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class TenantConfiguration extends com.pulumi.resources.CustomResource {
      * @return When flag is set to true Markdown tile will require external storage configuration (URI). The inline content configuration will be prohibited.
      * 
      */
-    public Output</* @Nullable */ Boolean> enforcePrivateMarkdownStorage() {
-        return this.enforcePrivateMarkdownStorage;
+    public Output<Optional<Boolean>> enforcePrivateMarkdownStorage() {
+        return Codegen.optional(this.enforcePrivateMarkdownStorage);
     }
     /**
      * The name of the resource

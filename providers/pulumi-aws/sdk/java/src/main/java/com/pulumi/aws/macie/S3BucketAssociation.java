@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -65,8 +66,8 @@ public class S3BucketAssociation extends com.pulumi.resources.CustomResource {
      * @return The ID of the Amazon Macie member account whose S3 resources you want to associate with Macie. If `member_account_id` isn&#39;t specified, the action associates specified S3 resources with Macie for the current master account.
      * 
      */
-    public Output</* @Nullable */ String> memberAccountId() {
-        return this.memberAccountId;
+    public Output<Optional<String>> memberAccountId() {
+        return Codegen.optional(this.memberAccountId);
     }
     /**
      * Object key prefix identifying one or more S3 objects to which the association applies.
@@ -79,8 +80,8 @@ public class S3BucketAssociation extends com.pulumi.resources.CustomResource {
      * @return Object key prefix identifying one or more S3 objects to which the association applies.
      * 
      */
-    public Output</* @Nullable */ String> prefix() {
-        return this.prefix;
+    public Output<Optional<String>> prefix() {
+        return Codegen.optional(this.prefix);
     }
 
     /**

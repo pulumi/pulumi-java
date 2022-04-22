@@ -14,6 +14,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -98,8 +99,8 @@ public class Address extends com.pulumi.resources.CustomResource {
      * Possible values are `INTERNAL` and `EXTERNAL`.
      * 
      */
-    public Output</* @Nullable */ String> addressType() {
-        return this.addressType;
+    public Output<Optional<String>> addressType() {
+        return Codegen.optional(this.addressType);
     }
     /**
      * Creation timestamp in RFC3339 text format.
@@ -126,8 +127,8 @@ public class Address extends com.pulumi.resources.CustomResource {
      * @return An optional description of this resource.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The fingerprint used for optimistic locking of this resource. Used internally during updates.
@@ -154,8 +155,8 @@ public class Address extends com.pulumi.resources.CustomResource {
      * @return Labels to apply to this address.  A list of key-&gt;value pairs.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * Name of the resource. The name must be 1-63 characters long, and
@@ -196,8 +197,8 @@ public class Address extends com.pulumi.resources.CustomResource {
      * IPSEC_INTERCONNECT purposes.
      * 
      */
-    public Output</* @Nullable */ String> network() {
-        return this.network;
+    public Output<Optional<String>> network() {
+        return Codegen.optional(this.network);
     }
     /**
      * The networking tier used for configuring this address. If this field is not
@@ -228,8 +229,8 @@ public class Address extends com.pulumi.resources.CustomResource {
      * @return The prefix length if the resource represents an IP range.
      * 
      */
-    public Output</* @Nullable */ Integer> prefixLength() {
-        return this.prefixLength;
+    public Output<Optional<Integer>> prefixLength() {
+        return Codegen.optional(this.prefixLength);
     }
     /**
      * The ID of the project in which the resource belongs.

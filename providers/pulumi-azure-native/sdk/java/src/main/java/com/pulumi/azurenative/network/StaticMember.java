@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -71,8 +72,8 @@ public class StaticMember extends com.pulumi.resources.CustomResource {
      * @return Resource Id.
      * 
      */
-    public Output</* @Nullable */ String> resourceId() {
-        return this.resourceId;
+    public Output<Optional<String>> resourceId() {
+        return Codegen.optional(this.resourceId);
     }
     /**
      * The system metadata related to this resource.

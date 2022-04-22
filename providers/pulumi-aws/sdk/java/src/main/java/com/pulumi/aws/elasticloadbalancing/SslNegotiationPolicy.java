@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -39,8 +40,8 @@ public class SslNegotiationPolicy extends com.pulumi.resources.CustomResource {
      * @return An SSL Negotiation policy attribute. Each has two properties:
      * 
      */
-    public Output</* @Nullable */ List<SslNegotiationPolicyAttribute>> attributes() {
-        return this.attributes;
+    public Output<Optional<List<SslNegotiationPolicyAttribute>>> attributes() {
+        return Codegen.optional(this.attributes);
     }
     /**
      * The load balancer port to which the policy

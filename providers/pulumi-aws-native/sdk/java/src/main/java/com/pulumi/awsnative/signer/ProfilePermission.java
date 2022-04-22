@@ -10,6 +10,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -39,8 +40,8 @@ public class ProfilePermission extends com.pulumi.resources.CustomResource {
     @Export(name="profileVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> profileVersion;
 
-    public Output</* @Nullable */ String> profileVersion() {
-        return this.profileVersion;
+    public Output<Optional<String>> profileVersion() {
+        return Codegen.optional(this.profileVersion);
     }
     @Export(name="statementId", type=String.class, parameters={})
     private Output<String> statementId;

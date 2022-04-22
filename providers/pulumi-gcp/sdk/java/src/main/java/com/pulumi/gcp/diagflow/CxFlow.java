@@ -15,6 +15,7 @@ import com.pulumi.gcp.diagflow.outputs.CxFlowNluSettings;
 import com.pulumi.gcp.diagflow.outputs.CxFlowTransitionRoute;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -54,8 +55,8 @@ public class CxFlow extends com.pulumi.resources.CustomResource {
      * @return The description of the flow. The maximum length is 500 characters. If exceeded, the request is rejected.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The human-readable name of the flow.
@@ -114,8 +115,8 @@ public class CxFlow extends com.pulumi.resources.CustomResource {
      * If not specified, the agent&#39;s default language is used. Many languages are supported. Note: languages must be enabled in the agent before they can be used.
      * 
      */
-    public Output</* @Nullable */ String> languageCode() {
-        return this.languageCode;
+    public Output<Optional<String>> languageCode() {
+        return Codegen.optional(this.languageCode);
     }
     /**
      * - 
@@ -146,8 +147,8 @@ public class CxFlow extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ CxFlowNluSettings> nluSettings() {
-        return this.nluSettings;
+    public Output<Optional<CxFlowNluSettings>> nluSettings() {
+        return Codegen.optional(this.nluSettings);
     }
     /**
      * The agent to create a flow for.
@@ -162,8 +163,8 @@ public class CxFlow extends com.pulumi.resources.CustomResource {
      * Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;.
      * 
      */
-    public Output</* @Nullable */ String> parent() {
-        return this.parent;
+    public Output<Optional<String>> parent() {
+        return Codegen.optional(this.parent);
     }
     /**
      * A flow&#39;s transition route group serve two purposes:
@@ -182,8 +183,8 @@ public class CxFlow extends com.pulumi.resources.CustomResource {
      * Format:projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow ID&gt;/transitionRouteGroups/&lt;TransitionRouteGroup ID&gt;.
      * 
      */
-    public Output</* @Nullable */ List<String>> transitionRouteGroups() {
-        return this.transitionRouteGroups;
+    public Output<Optional<List<String>>> transitionRouteGroups() {
+        return Codegen.optional(this.transitionRouteGroups);
     }
     /**
      * A flow&#39;s transition routes serve two purposes:
@@ -200,8 +201,8 @@ public class CxFlow extends com.pulumi.resources.CustomResource {
      * They are inherited by every page&#39;s [transition routes][Page.transition_routes] and can support use cases such as the user saying &#34;help&#34; or &#34;can I talk to a human?&#34;, which can be handled in a common way regardless of the current page. Transition routes defined in the page have higher priority than those defined in the flow.
      * 
      */
-    public Output</* @Nullable */ List<CxFlowTransitionRoute>> transitionRoutes() {
-        return this.transitionRoutes;
+    public Output<Optional<List<CxFlowTransitionRoute>>> transitionRoutes() {
+        return Codegen.optional(this.transitionRoutes);
     }
 
     /**

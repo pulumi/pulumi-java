@@ -17,6 +17,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -47,8 +48,8 @@ public class WorkbookTemplate extends com.pulumi.resources.CustomResource {
      * @return Information about the author of the workbook template.
      * 
      */
-    public Output</* @Nullable */ String> author() {
-        return this.author;
+    public Output<Optional<String>> author() {
+        return Codegen.optional(this.author);
     }
     /**
      * Workbook galleries supported by the template.
@@ -75,8 +76,8 @@ public class WorkbookTemplate extends com.pulumi.resources.CustomResource {
      * @return Key value pair of localized gallery. Each key is the locale code of languages supported by the Azure portal.
      * 
      */
-    public Output</* @Nullable */ Map<String,List<WorkbookTemplateLocalizedGalleryResponse>>> localized() {
-        return this.localized;
+    public Output<Optional<Map<String,List<WorkbookTemplateLocalizedGalleryResponse>>>> localized() {
+        return Codegen.optional(this.localized);
     }
     /**
      * Resource location
@@ -117,8 +118,8 @@ public class WorkbookTemplate extends com.pulumi.resources.CustomResource {
      * @return Priority of the template. Determines which template to open when a workbook gallery is opened in viewer mode.
      * 
      */
-    public Output</* @Nullable */ Integer> priority() {
-        return this.priority;
+    public Output<Optional<Integer>> priority() {
+        return Codegen.optional(this.priority);
     }
     /**
      * Resource tags
@@ -131,8 +132,8 @@ public class WorkbookTemplate extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Valid JSON object containing workbook template payload.

@@ -15,6 +15,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -41,8 +42,8 @@ public class WorkspaceCollection extends com.pulumi.resources.CustomResource {
      * @return Azure location
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * Workspace collection name
@@ -55,8 +56,8 @@ public class WorkspaceCollection extends com.pulumi.resources.CustomResource {
      * @return Workspace collection name
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * Properties
@@ -75,14 +76,14 @@ public class WorkspaceCollection extends com.pulumi.resources.CustomResource {
     @Export(name="sku", type=AzureSkuResponse.class, parameters={})
     private Output</* @Nullable */ AzureSkuResponse> sku;
 
-    public Output</* @Nullable */ AzureSkuResponse> sku() {
-        return this.sku;
+    public Output<Optional<AzureSkuResponse>> sku() {
+        return Codegen.optional(this.sku);
     }
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type
@@ -95,8 +96,8 @@ public class WorkspaceCollection extends com.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output</* @Nullable */ String> type() {
-        return this.type;
+    public Output<Optional<String>> type() {
+        return Codegen.optional(this.type);
     }
 
     /**

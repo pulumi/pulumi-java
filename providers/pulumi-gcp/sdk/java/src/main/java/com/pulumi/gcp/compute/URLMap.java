@@ -19,6 +19,7 @@ import com.pulumi.gcp.compute.outputs.URLMapTest;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -85,8 +86,8 @@ public class URLMap extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ URLMapDefaultRouteAction> defaultRouteAction() {
-        return this.defaultRouteAction;
+    public Output<Optional<URLMapDefaultRouteAction>> defaultRouteAction() {
+        return Codegen.optional(this.defaultRouteAction);
     }
     /**
      * The backend service or backend bucket to use when none of the given paths match.
@@ -99,8 +100,8 @@ public class URLMap extends com.pulumi.resources.CustomResource {
      * @return The backend service or backend bucket to use when none of the given paths match.
      * 
      */
-    public Output</* @Nullable */ String> defaultService() {
-        return this.defaultService;
+    public Output<Optional<String>> defaultService() {
+        return Codegen.optional(this.defaultService);
     }
     /**
      * When none of the specified hostRules match, the request is redirected to a URL specified
@@ -119,8 +120,8 @@ public class URLMap extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ URLMapDefaultUrlRedirect> defaultUrlRedirect() {
-        return this.defaultUrlRedirect;
+    public Output<Optional<URLMapDefaultUrlRedirect>> defaultUrlRedirect() {
+        return Codegen.optional(this.defaultUrlRedirect);
     }
     /**
      * Description of this test case.
@@ -133,8 +134,8 @@ public class URLMap extends com.pulumi.resources.CustomResource {
      * @return Description of this test case.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking.
@@ -169,8 +170,8 @@ public class URLMap extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ URLMapHeaderAction> headerAction() {
-        return this.headerAction;
+    public Output<Optional<URLMapHeaderAction>> headerAction() {
+        return Codegen.optional(this.headerAction);
     }
     /**
      * The list of HostRules to use against the URL.
@@ -185,8 +186,8 @@ public class URLMap extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<URLMapHostRule>> hostRules() {
-        return this.hostRules;
+    public Output<Optional<List<URLMapHostRule>>> hostRules() {
+        return Codegen.optional(this.hostRules);
     }
     /**
      * The unique identifier for the resource.
@@ -231,8 +232,8 @@ public class URLMap extends com.pulumi.resources.CustomResource {
      * hostRule matches the URL&#39;s host portion.
      * 
      */
-    public Output</* @Nullable */ List<URLMapPathMatcher>> pathMatchers() {
-        return this.pathMatchers;
+    public Output<Optional<List<URLMapPathMatcher>>> pathMatchers() {
+        return Codegen.optional(this.pathMatchers);
     }
     /**
      * The ID of the project in which the resource belongs.
@@ -281,8 +282,8 @@ public class URLMap extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<URLMapTest>> tests() {
-        return this.tests;
+    public Output<Optional<List<URLMapTest>>> tests() {
+        return Codegen.optional(this.tests);
     }
 
     /**

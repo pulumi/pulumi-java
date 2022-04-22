@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -32,26 +33,26 @@ public class WebAppRelayServiceConnection extends com.pulumi.resources.CustomRes
     @Export(name="biztalkUri", type=String.class, parameters={})
     private Output</* @Nullable */ String> biztalkUri;
 
-    public Output</* @Nullable */ String> biztalkUri() {
-        return this.biztalkUri;
+    public Output<Optional<String>> biztalkUri() {
+        return Codegen.optional(this.biztalkUri);
     }
     @Export(name="entityConnectionString", type=String.class, parameters={})
     private Output</* @Nullable */ String> entityConnectionString;
 
-    public Output</* @Nullable */ String> entityConnectionString() {
-        return this.entityConnectionString;
+    public Output<Optional<String>> entityConnectionString() {
+        return Codegen.optional(this.entityConnectionString);
     }
     @Export(name="entityName", type=String.class, parameters={})
     private Output</* @Nullable */ String> entityName;
 
-    public Output</* @Nullable */ String> entityName() {
-        return this.entityName;
+    public Output<Optional<String>> entityName() {
+        return Codegen.optional(this.entityName);
     }
     @Export(name="hostname", type=String.class, parameters={})
     private Output</* @Nullable */ String> hostname;
 
-    public Output</* @Nullable */ String> hostname() {
-        return this.hostname;
+    public Output<Optional<String>> hostname() {
+        return Codegen.optional(this.hostname);
     }
     /**
      * Kind of resource.
@@ -64,8 +65,8 @@ public class WebAppRelayServiceConnection extends com.pulumi.resources.CustomRes
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> kind() {
-        return this.kind;
+    public Output<Optional<String>> kind() {
+        return Codegen.optional(this.kind);
     }
     /**
      * Resource Name.
@@ -84,20 +85,20 @@ public class WebAppRelayServiceConnection extends com.pulumi.resources.CustomRes
     @Export(name="port", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> port;
 
-    public Output</* @Nullable */ Integer> port() {
-        return this.port;
+    public Output<Optional<Integer>> port() {
+        return Codegen.optional(this.port);
     }
     @Export(name="resourceConnectionString", type=String.class, parameters={})
     private Output</* @Nullable */ String> resourceConnectionString;
 
-    public Output</* @Nullable */ String> resourceConnectionString() {
-        return this.resourceConnectionString;
+    public Output<Optional<String>> resourceConnectionString() {
+        return Codegen.optional(this.resourceConnectionString);
     }
     @Export(name="resourceType", type=String.class, parameters={})
     private Output</* @Nullable */ String> resourceType;
 
-    public Output</* @Nullable */ String> resourceType() {
-        return this.resourceType;
+    public Output<Optional<String>> resourceType() {
+        return Codegen.optional(this.resourceType);
     }
     /**
      * Resource type.

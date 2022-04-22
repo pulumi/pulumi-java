@@ -17,6 +17,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -67,8 +68,8 @@ public class ObjectAnchorsAccount extends com.pulumi.resources.CustomResource {
     @Export(name="identity", type=ObjectAnchorsAccountResponseIdentity.class, parameters={})
     private Output</* @Nullable */ ObjectAnchorsAccountResponseIdentity> identity;
 
-    public Output</* @Nullable */ ObjectAnchorsAccountResponseIdentity> identity() {
-        return this.identity;
+    public Output<Optional<ObjectAnchorsAccountResponseIdentity>> identity() {
+        return Codegen.optional(this.identity);
     }
     /**
      * The kind of account, if supported
@@ -81,8 +82,8 @@ public class ObjectAnchorsAccount extends com.pulumi.resources.CustomResource {
      * @return The kind of account, if supported
      * 
      */
-    public Output</* @Nullable */ SkuResponse> kind() {
-        return this.kind;
+    public Output<Optional<SkuResponse>> kind() {
+        return Codegen.optional(this.kind);
     }
     /**
      * The geo-location where the resource lives
@@ -123,8 +124,8 @@ public class ObjectAnchorsAccount extends com.pulumi.resources.CustomResource {
      * @return The plan associated with this account
      * 
      */
-    public Output</* @Nullable */ IdentityResponse> plan() {
-        return this.plan;
+    public Output<Optional<IdentityResponse>> plan() {
+        return Codegen.optional(this.plan);
     }
     /**
      * The sku associated with this account
@@ -137,8 +138,8 @@ public class ObjectAnchorsAccount extends com.pulumi.resources.CustomResource {
      * @return The sku associated with this account
      * 
      */
-    public Output</* @Nullable */ SkuResponse> sku() {
-        return this.sku;
+    public Output<Optional<SkuResponse>> sku() {
+        return Codegen.optional(this.sku);
     }
     /**
      * The name of the storage account associated with this accountId
@@ -151,8 +152,8 @@ public class ObjectAnchorsAccount extends com.pulumi.resources.CustomResource {
      * @return The name of the storage account associated with this accountId
      * 
      */
-    public Output</* @Nullable */ String> storageAccountName() {
-        return this.storageAccountName;
+    public Output<Optional<String>> storageAccountName() {
+        return Codegen.optional(this.storageAccountName);
     }
     /**
      * The system metadata related to an object anchors account.
@@ -179,8 +180,8 @@ public class ObjectAnchorsAccount extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;

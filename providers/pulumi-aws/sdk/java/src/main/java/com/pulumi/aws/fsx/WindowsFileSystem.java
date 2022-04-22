@@ -17,6 +17,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -62,8 +63,8 @@ public class WindowsFileSystem extends com.pulumi.resources.CustomResource {
      * @return The ID for an existing Microsoft Active Directory instance that the file system should join when it&#39;s created. Cannot be specified with `self_managed_active_directory`.
      * 
      */
-    public Output</* @Nullable */ String> activeDirectoryId() {
-        return this.activeDirectoryId;
+    public Output<Optional<String>> activeDirectoryId() {
+        return Codegen.optional(this.activeDirectoryId);
     }
     /**
      * An array DNS alias names that you want to associate with the Amazon FSx file system.  For more information, see [Working with DNS Aliases](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-dns-aliases.html)
@@ -76,8 +77,8 @@ public class WindowsFileSystem extends com.pulumi.resources.CustomResource {
      * @return An array DNS alias names that you want to associate with the Amazon FSx file system.  For more information, see [Working with DNS Aliases](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-dns-aliases.html)
      * 
      */
-    public Output</* @Nullable */ List<String>> aliases() {
-        return this.aliases;
+    public Output<Optional<List<String>>> aliases() {
+        return Codegen.optional(this.aliases);
     }
     /**
      * Amazon Resource Name of the file system.
@@ -118,8 +119,8 @@ public class WindowsFileSystem extends com.pulumi.resources.CustomResource {
      * @return The number of days to retain automatic backups. Minimum of `0` and maximum of `90`. Defaults to `7`. Set to `0` to disable.
      * 
      */
-    public Output</* @Nullable */ Integer> automaticBackupRetentionDays() {
-        return this.automaticBackupRetentionDays;
+    public Output<Optional<Integer>> automaticBackupRetentionDays() {
+        return Codegen.optional(this.automaticBackupRetentionDays);
     }
     /**
      * The ID of the source backup to create the filesystem from.
@@ -132,8 +133,8 @@ public class WindowsFileSystem extends com.pulumi.resources.CustomResource {
      * @return The ID of the source backup to create the filesystem from.
      * 
      */
-    public Output</* @Nullable */ String> backupId() {
-        return this.backupId;
+    public Output<Optional<String>> backupId() {
+        return Codegen.optional(this.backupId);
     }
     /**
      * A boolean flag indicating whether tags on the file system should be copied to backups. Defaults to `false`.
@@ -146,8 +147,8 @@ public class WindowsFileSystem extends com.pulumi.resources.CustomResource {
      * @return A boolean flag indicating whether tags on the file system should be copied to backups. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> copyTagsToBackups() {
-        return this.copyTagsToBackups;
+    public Output<Optional<Boolean>> copyTagsToBackups() {
+        return Codegen.optional(this.copyTagsToBackups);
     }
     /**
      * The preferred time (in `HH:MM` format) to take daily automatic backups, in the UTC time zone.
@@ -174,8 +175,8 @@ public class WindowsFileSystem extends com.pulumi.resources.CustomResource {
      * @return Specifies the file system deployment type, valid values are `MULTI_AZ_1`, `SINGLE_AZ_1` and `SINGLE_AZ_2`. Default value is `SINGLE_AZ_1`.
      * 
      */
-    public Output</* @Nullable */ String> deploymentType() {
-        return this.deploymentType;
+    public Output<Optional<String>> deploymentType() {
+        return Codegen.optional(this.deploymentType);
     }
     /**
      * DNS name for the file system, e.g., `fs-12345678.corp.example.com` (domain name matching the Active Directory domain name)
@@ -286,8 +287,8 @@ public class WindowsFileSystem extends com.pulumi.resources.CustomResource {
      * @return A list of IDs for the security groups that apply to the specified network interfaces created for file system access. These security groups will apply to all network interfaces.
      * 
      */
-    public Output</* @Nullable */ List<String>> securityGroupIds() {
-        return this.securityGroupIds;
+    public Output<Optional<List<String>>> securityGroupIds() {
+        return Codegen.optional(this.securityGroupIds);
     }
     /**
      * Configuration block that Amazon FSx uses to join the Windows File Server instance to your self-managed (including on-premises) Microsoft Active Directory (AD) directory. Cannot be specified with `active_directory_id`. Detailed below.
@@ -300,8 +301,8 @@ public class WindowsFileSystem extends com.pulumi.resources.CustomResource {
      * @return Configuration block that Amazon FSx uses to join the Windows File Server instance to your self-managed (including on-premises) Microsoft Active Directory (AD) directory. Cannot be specified with `active_directory_id`. Detailed below.
      * 
      */
-    public Output</* @Nullable */ WindowsFileSystemSelfManagedActiveDirectory> selfManagedActiveDirectory() {
-        return this.selfManagedActiveDirectory;
+    public Output<Optional<WindowsFileSystemSelfManagedActiveDirectory>> selfManagedActiveDirectory() {
+        return Codegen.optional(this.selfManagedActiveDirectory);
     }
     /**
      * When enabled, will skip the default final backup taken when the file system is deleted. This configuration must be applied separately before attempting to delete the resource to have the desired behavior. Defaults to `false`.
@@ -314,8 +315,8 @@ public class WindowsFileSystem extends com.pulumi.resources.CustomResource {
      * @return When enabled, will skip the default final backup taken when the file system is deleted. This configuration must be applied separately before attempting to delete the resource to have the desired behavior. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> skipFinalBackup() {
-        return this.skipFinalBackup;
+    public Output<Optional<Boolean>> skipFinalBackup() {
+        return Codegen.optional(this.skipFinalBackup);
     }
     /**
      * Storage capacity (GiB) of the file system. Minimum of 32 and maximum of 65536. If the storage type is set to `HDD` the minimum value is 2000. Required when not creating filesystem for a backup.
@@ -342,8 +343,8 @@ public class WindowsFileSystem extends com.pulumi.resources.CustomResource {
      * @return Specifies the storage type, Valid values are `SSD` and `HDD`. `HDD` is supported on `SINGLE_AZ_2` and `MULTI_AZ_1` Windows file system deployment types. Default value is `SSD`.
      * 
      */
-    public Output</* @Nullable */ String> storageType() {
-        return this.storageType;
+    public Output<Optional<String>> storageType() {
+        return Codegen.optional(this.storageType);
     }
     /**
      * A list of IDs for the subnets that the file system will be accessible from. To specify more than a single subnet set `deployment_type` to `MULTI_AZ_1`.
@@ -370,8 +371,8 @@ public class WindowsFileSystem extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the file system. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

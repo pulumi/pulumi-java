@@ -14,6 +14,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -105,8 +106,8 @@ public class VpcAttachmentAccepter extends com.pulumi.resources.CustomResource {
      * @return Key-value tags for the EC2 Transit Gateway VPC Attachment. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
@@ -147,8 +148,8 @@ public class VpcAttachmentAccepter extends com.pulumi.resources.CustomResource {
      * @return Boolean whether the VPC Attachment should be associated with the EC2 Transit Gateway association default route table. Default value: `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> transitGatewayDefaultRouteTableAssociation() {
-        return this.transitGatewayDefaultRouteTableAssociation;
+    public Output<Optional<Boolean>> transitGatewayDefaultRouteTableAssociation() {
+        return Codegen.optional(this.transitGatewayDefaultRouteTableAssociation);
     }
     /**
      * Boolean whether the VPC Attachment should propagate routes with the EC2 Transit Gateway propagation default route table. Default value: `true`.
@@ -161,8 +162,8 @@ public class VpcAttachmentAccepter extends com.pulumi.resources.CustomResource {
      * @return Boolean whether the VPC Attachment should propagate routes with the EC2 Transit Gateway propagation default route table. Default value: `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> transitGatewayDefaultRouteTablePropagation() {
-        return this.transitGatewayDefaultRouteTablePropagation;
+    public Output<Optional<Boolean>> transitGatewayDefaultRouteTablePropagation() {
+        return Codegen.optional(this.transitGatewayDefaultRouteTablePropagation);
     }
     /**
      * Identifier of EC2 Transit Gateway.

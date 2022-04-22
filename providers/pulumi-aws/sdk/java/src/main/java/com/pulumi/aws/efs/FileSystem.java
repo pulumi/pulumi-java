@@ -18,6 +18,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -151,8 +152,8 @@ public class FileSystem extends com.pulumi.resources.CustomResource {
      * @return A file system [lifecycle policy](https://docs.aws.amazon.com/efs/latest/ug/API_LifecyclePolicy.html) object (documented below).
      * 
      */
-    public Output</* @Nullable */ FileSystemLifecyclePolicy> lifecyclePolicy() {
-        return this.lifecyclePolicy;
+    public Output<Optional<FileSystemLifecyclePolicy>> lifecyclePolicy() {
+        return Codegen.optional(this.lifecyclePolicy);
     }
     /**
      * The current number of mount targets that the file system has.
@@ -207,8 +208,8 @@ public class FileSystem extends com.pulumi.resources.CustomResource {
      * @return The throughput, measured in MiB/s, that you want to provision for the file system. Only applicable with `throughput_mode` set to `provisioned`.
      * 
      */
-    public Output</* @Nullable */ Double> provisionedThroughputInMibps() {
-        return this.provisionedThroughputInMibps;
+    public Output<Optional<Double>> provisionedThroughputInMibps() {
+        return Codegen.optional(this.provisionedThroughputInMibps);
     }
     /**
      * The latest known metered size (in bytes) of data stored in the file system, the value is not the exact size that the file system was at any point in time. See Size In Bytes.
@@ -235,8 +236,8 @@ public class FileSystem extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the file system. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
@@ -263,8 +264,8 @@ public class FileSystem extends com.pulumi.resources.CustomResource {
      * @return Throughput mode for the file system. Defaults to `bursting`. Valid values: `bursting`, `provisioned`. When using `provisioned`, also set `provisioned_throughput_in_mibps`.
      * 
      */
-    public Output</* @Nullable */ String> throughputMode() {
-        return this.throughputMode;
+    public Output<Optional<String>> throughputMode() {
+        return Codegen.optional(this.throughputMode);
     }
 
     /**

@@ -15,6 +15,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -50,8 +51,8 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return ARNs of FinSpace Data Bundles to install
      * 
      */
-    public Output</* @Nullable */ List<String>> dataBundles() {
-        return this.dataBundles;
+    public Output<Optional<List<String>>> dataBundles() {
+        return Codegen.optional(this.dataBundles);
     }
     /**
      * ID for FinSpace created account used to store Environment artifacts
@@ -78,8 +79,8 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return Description of the Environment
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * ARN of the Environment
@@ -134,14 +135,14 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return Federation mode used with the Environment
      * 
      */
-    public Output</* @Nullable */ EnvironmentFederationMode> federationMode() {
-        return this.federationMode;
+    public Output<Optional<EnvironmentFederationMode>> federationMode() {
+        return Codegen.optional(this.federationMode);
     }
     @Export(name="federationParameters", type=EnvironmentFederationParameters.class, parameters={})
     private Output</* @Nullable */ EnvironmentFederationParameters> federationParameters;
 
-    public Output</* @Nullable */ EnvironmentFederationParameters> federationParameters() {
-        return this.federationParameters;
+    public Output<Optional<EnvironmentFederationParameters>> federationParameters() {
+        return Codegen.optional(this.federationParameters);
     }
     /**
      * KMS key used to encrypt customer data within FinSpace Environment infrastructure
@@ -154,8 +155,8 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return KMS key used to encrypt customer data within FinSpace Environment infrastructure
      * 
      */
-    public Output</* @Nullable */ String> kmsKeyId() {
-        return this.kmsKeyId;
+    public Output<Optional<String>> kmsKeyId() {
+        return Codegen.optional(this.kmsKeyId);
     }
     /**
      * Name of the Environment
@@ -202,8 +203,8 @@ public class Environment extends com.pulumi.resources.CustomResource {
     @Export(name="superuserParameters", type=EnvironmentSuperuserParameters.class, parameters={})
     private Output</* @Nullable */ EnvironmentSuperuserParameters> superuserParameters;
 
-    public Output</* @Nullable */ EnvironmentSuperuserParameters> superuserParameters() {
-        return this.superuserParameters;
+    public Output<Optional<EnvironmentSuperuserParameters>> superuserParameters() {
+        return Codegen.optional(this.superuserParameters);
     }
 
     /**

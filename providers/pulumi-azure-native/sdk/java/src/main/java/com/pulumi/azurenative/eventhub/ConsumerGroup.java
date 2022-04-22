@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -98,8 +99,8 @@ public class ConsumerGroup extends com.pulumi.resources.CustomResource {
      * @return User Metadata is a placeholder to store user-defined string data with maximum length 1024. e.g. it can be used to store descriptive data, such as list of teams and their contact information also user-defined configuration settings can be stored.
      * 
      */
-    public Output</* @Nullable */ String> userMetadata() {
-        return this.userMetadata;
+    public Output<Optional<String>> userMetadata() {
+        return Codegen.optional(this.userMetadata);
     }
 
     /**

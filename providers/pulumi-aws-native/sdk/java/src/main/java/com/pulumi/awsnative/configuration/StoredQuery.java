@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -29,8 +30,8 @@ public class StoredQuery extends com.pulumi.resources.CustomResource {
     @Export(name="queryDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> queryDescription;
 
-    public Output</* @Nullable */ String> queryDescription() {
-        return this.queryDescription;
+    public Output<Optional<String>> queryDescription() {
+        return Codegen.optional(this.queryDescription);
     }
     @Export(name="queryExpression", type=String.class, parameters={})
     private Output<String> queryExpression;
@@ -61,8 +62,8 @@ public class StoredQuery extends com.pulumi.resources.CustomResource {
      * @return The tags for the stored query.
      * 
      */
-    public Output</* @Nullable */ List<StoredQueryTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<StoredQueryTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

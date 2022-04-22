@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -82,8 +83,8 @@ public class DomainName extends com.pulumi.resources.CustomResource {
      * @return The ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when an edge-optimized domain name is desired. Conflicts with `certificate_name`, `certificate_body`, `certificate_chain`, `certificate_private_key`, `regional_certificate_arn`, and `regional_certificate_name`.
      * 
      */
-    public Output</* @Nullable */ String> certificateArn() {
-        return this.certificateArn;
+    public Output<Optional<String>> certificateArn() {
+        return Codegen.optional(this.certificateArn);
     }
     /**
      * The certificate issued for the domain name
@@ -100,8 +101,8 @@ public class DomainName extends com.pulumi.resources.CustomResource {
      * `regional_certificate_name`.
      * 
      */
-    public Output</* @Nullable */ String> certificateBody() {
-        return this.certificateBody;
+    public Output<Optional<String>> certificateBody() {
+        return Codegen.optional(this.certificateBody);
     }
     /**
      * The certificate for the CA that issued the
@@ -120,8 +121,8 @@ public class DomainName extends com.pulumi.resources.CustomResource {
      * `regional_certificate_arn`, and `regional_certificate_name`.
      * 
      */
-    public Output</* @Nullable */ String> certificateChain() {
-        return this.certificateChain;
+    public Output<Optional<String>> certificateChain() {
+        return Codegen.optional(this.certificateChain);
     }
     /**
      * The unique name to use when registering this
@@ -138,8 +139,8 @@ public class DomainName extends com.pulumi.resources.CustomResource {
      * `regional_certificate_name`. Required if `certificate_arn` is not set.
      * 
      */
-    public Output</* @Nullable */ String> certificateName() {
-        return this.certificateName;
+    public Output<Optional<String>> certificateName() {
+        return Codegen.optional(this.certificateName);
     }
     /**
      * The private key associated with the
@@ -154,8 +155,8 @@ public class DomainName extends com.pulumi.resources.CustomResource {
      * domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and `regional_certificate_name`.
      * 
      */
-    public Output</* @Nullable */ String> certificatePrivateKey() {
-        return this.certificatePrivateKey;
+    public Output<Optional<String>> certificatePrivateKey() {
+        return Codegen.optional(this.certificatePrivateKey);
     }
     /**
      * The upload date associated with the domain certificate.
@@ -242,8 +243,8 @@ public class DomainName extends com.pulumi.resources.CustomResource {
      * @return The mutual TLS authentication configuration for the domain name. Defined below.
      * 
      */
-    public Output</* @Nullable */ DomainNameMutualTlsAuthentication> mutualTlsAuthentication() {
-        return this.mutualTlsAuthentication;
+    public Output<Optional<DomainNameMutualTlsAuthentication>> mutualTlsAuthentication() {
+        return Codegen.optional(this.mutualTlsAuthentication);
     }
     /**
      * The ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when a regional domain name is desired. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and `certificate_private_key`.
@@ -256,8 +257,8 @@ public class DomainName extends com.pulumi.resources.CustomResource {
      * @return The ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when a regional domain name is desired. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and `certificate_private_key`.
      * 
      */
-    public Output</* @Nullable */ String> regionalCertificateArn() {
-        return this.regionalCertificateArn;
+    public Output<Optional<String>> regionalCertificateArn() {
+        return Codegen.optional(this.regionalCertificateArn);
     }
     /**
      * The user-friendly name of the certificate that will be used by regional endpoint for this domain name. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and
@@ -272,8 +273,8 @@ public class DomainName extends com.pulumi.resources.CustomResource {
      * `certificate_private_key`.
      * 
      */
-    public Output</* @Nullable */ String> regionalCertificateName() {
-        return this.regionalCertificateName;
+    public Output<Optional<String>> regionalCertificateName() {
+        return Codegen.optional(this.regionalCertificateName);
     }
     /**
      * The hostname for the custom domain&#39;s regional endpoint.
@@ -328,8 +329,8 @@ public class DomainName extends com.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

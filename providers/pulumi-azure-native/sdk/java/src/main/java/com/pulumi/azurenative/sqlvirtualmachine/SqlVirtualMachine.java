@@ -20,6 +20,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -50,8 +51,8 @@ public class SqlVirtualMachine extends com.pulumi.resources.CustomResource {
      * @return Auto backup settings for SQL Server.
      * 
      */
-    public Output</* @Nullable */ AutoBackupSettingsResponse> autoBackupSettings() {
-        return this.autoBackupSettings;
+    public Output<Optional<AutoBackupSettingsResponse>> autoBackupSettings() {
+        return Codegen.optional(this.autoBackupSettings);
     }
     /**
      * Auto patching settings for applying critical security updates to SQL virtual machine.
@@ -64,8 +65,8 @@ public class SqlVirtualMachine extends com.pulumi.resources.CustomResource {
      * @return Auto patching settings for applying critical security updates to SQL virtual machine.
      * 
      */
-    public Output</* @Nullable */ AutoPatchingSettingsResponse> autoPatchingSettings() {
-        return this.autoPatchingSettings;
+    public Output<Optional<AutoPatchingSettingsResponse>> autoPatchingSettings() {
+        return Codegen.optional(this.autoPatchingSettings);
     }
     /**
      * Azure Active Directory identity of the server.
@@ -78,8 +79,8 @@ public class SqlVirtualMachine extends com.pulumi.resources.CustomResource {
      * @return Azure Active Directory identity of the server.
      * 
      */
-    public Output</* @Nullable */ ResourceIdentityResponse> identity() {
-        return this.identity;
+    public Output<Optional<ResourceIdentityResponse>> identity() {
+        return Codegen.optional(this.identity);
     }
     /**
      * Key vault credential settings.
@@ -92,8 +93,8 @@ public class SqlVirtualMachine extends com.pulumi.resources.CustomResource {
      * @return Key vault credential settings.
      * 
      */
-    public Output</* @Nullable */ KeyVaultCredentialSettingsResponse> keyVaultCredentialSettings() {
-        return this.keyVaultCredentialSettings;
+    public Output<Optional<KeyVaultCredentialSettingsResponse>> keyVaultCredentialSettings() {
+        return Codegen.optional(this.keyVaultCredentialSettings);
     }
     /**
      * Resource location.
@@ -148,8 +149,8 @@ public class SqlVirtualMachine extends com.pulumi.resources.CustomResource {
      * @return SQL Server configuration management settings.
      * 
      */
-    public Output</* @Nullable */ ServerConfigurationsManagementSettingsResponse> serverConfigurationsManagementSettings() {
-        return this.serverConfigurationsManagementSettings;
+    public Output<Optional<ServerConfigurationsManagementSettingsResponse>> serverConfigurationsManagementSettings() {
+        return Codegen.optional(this.serverConfigurationsManagementSettings);
     }
     /**
      * SQL image offer. Examples include SQL2016-WS2016, SQL2017-WS2016.
@@ -162,8 +163,8 @@ public class SqlVirtualMachine extends com.pulumi.resources.CustomResource {
      * @return SQL image offer. Examples include SQL2016-WS2016, SQL2017-WS2016.
      * 
      */
-    public Output</* @Nullable */ String> sqlImageOffer() {
-        return this.sqlImageOffer;
+    public Output<Optional<String>> sqlImageOffer() {
+        return Codegen.optional(this.sqlImageOffer);
     }
     /**
      * SQL Server edition type.
@@ -176,8 +177,8 @@ public class SqlVirtualMachine extends com.pulumi.resources.CustomResource {
      * @return SQL Server edition type.
      * 
      */
-    public Output</* @Nullable */ String> sqlImageSku() {
-        return this.sqlImageSku;
+    public Output<Optional<String>> sqlImageSku() {
+        return Codegen.optional(this.sqlImageSku);
     }
     /**
      * SQL Server Management type.
@@ -190,8 +191,8 @@ public class SqlVirtualMachine extends com.pulumi.resources.CustomResource {
      * @return SQL Server Management type.
      * 
      */
-    public Output</* @Nullable */ String> sqlManagement() {
-        return this.sqlManagement;
+    public Output<Optional<String>> sqlManagement() {
+        return Codegen.optional(this.sqlManagement);
     }
     /**
      * SQL Server license type.
@@ -204,8 +205,8 @@ public class SqlVirtualMachine extends com.pulumi.resources.CustomResource {
      * @return SQL Server license type.
      * 
      */
-    public Output</* @Nullable */ String> sqlServerLicenseType() {
-        return this.sqlServerLicenseType;
+    public Output<Optional<String>> sqlServerLicenseType() {
+        return Codegen.optional(this.sqlServerLicenseType);
     }
     /**
      * ARM resource id of the SQL virtual machine group this SQL virtual machine is or will be part of.
@@ -218,8 +219,8 @@ public class SqlVirtualMachine extends com.pulumi.resources.CustomResource {
      * @return ARM resource id of the SQL virtual machine group this SQL virtual machine is or will be part of.
      * 
      */
-    public Output</* @Nullable */ String> sqlVirtualMachineGroupResourceId() {
-        return this.sqlVirtualMachineGroupResourceId;
+    public Output<Optional<String>> sqlVirtualMachineGroupResourceId() {
+        return Codegen.optional(this.sqlVirtualMachineGroupResourceId);
     }
     /**
      * Storage Configuration Settings.
@@ -232,8 +233,8 @@ public class SqlVirtualMachine extends com.pulumi.resources.CustomResource {
      * @return Storage Configuration Settings.
      * 
      */
-    public Output</* @Nullable */ StorageConfigurationSettingsResponse> storageConfigurationSettings() {
-        return this.storageConfigurationSettings;
+    public Output<Optional<StorageConfigurationSettingsResponse>> storageConfigurationSettings() {
+        return Codegen.optional(this.storageConfigurationSettings);
     }
     /**
      * Resource tags.
@@ -246,8 +247,8 @@ public class SqlVirtualMachine extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type.
@@ -274,8 +275,8 @@ public class SqlVirtualMachine extends com.pulumi.resources.CustomResource {
      * @return ARM Resource id of underlying virtual machine created from SQL marketplace image.
      * 
      */
-    public Output</* @Nullable */ String> virtualMachineResourceId() {
-        return this.virtualMachineResourceId;
+    public Output<Optional<String>> virtualMachineResourceId() {
+        return Codegen.optional(this.virtualMachineResourceId);
     }
     /**
      * Domain credentials for setting up Windows Server Failover Cluster for SQL availability group.
@@ -288,8 +289,8 @@ public class SqlVirtualMachine extends com.pulumi.resources.CustomResource {
      * @return Domain credentials for setting up Windows Server Failover Cluster for SQL availability group.
      * 
      */
-    public Output</* @Nullable */ WsfcDomainCredentialsResponse> wsfcDomainCredentials() {
-        return this.wsfcDomainCredentials;
+    public Output<Optional<WsfcDomainCredentialsResponse>> wsfcDomainCredentials() {
+        return Codegen.optional(this.wsfcDomainCredentials);
     }
 
     /**

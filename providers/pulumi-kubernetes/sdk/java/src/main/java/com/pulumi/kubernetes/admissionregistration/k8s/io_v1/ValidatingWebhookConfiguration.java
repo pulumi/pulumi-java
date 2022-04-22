@@ -14,6 +14,7 @@ import com.pulumi.kubernetes.admissionregistration.k8s.io_v1.outputs.ValidatingW
 import com.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -33,8 +34,8 @@ public class ValidatingWebhookConfiguration extends com.pulumi.resources.CustomR
      * @return APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
      */
-    public Output</* @Nullable */ String> apiVersion() {
-        return this.apiVersion;
+    public Output<Optional<String>> apiVersion() {
+        return Codegen.optional(this.apiVersion);
     }
     /**
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
@@ -47,8 +48,8 @@ public class ValidatingWebhookConfiguration extends com.pulumi.resources.CustomR
      * @return Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
      */
-    public Output</* @Nullable */ String> kind() {
-        return this.kind;
+    public Output<Optional<String>> kind() {
+        return Codegen.optional(this.kind);
     }
     /**
      * Standard object metadata; More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata.
@@ -61,8 +62,8 @@ public class ValidatingWebhookConfiguration extends com.pulumi.resources.CustomR
      * @return Standard object metadata; More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata.
      * 
      */
-    public Output</* @Nullable */ ObjectMeta> metadata() {
-        return this.metadata;
+    public Output<Optional<ObjectMeta>> metadata() {
+        return Codegen.optional(this.metadata);
     }
     /**
      * Webhooks is a list of webhooks and the affected resources and operations.
@@ -75,8 +76,8 @@ public class ValidatingWebhookConfiguration extends com.pulumi.resources.CustomR
      * @return Webhooks is a list of webhooks and the affected resources and operations.
      * 
      */
-    public Output</* @Nullable */ List<ValidatingWebhook>> webhooks() {
-        return this.webhooks;
+    public Output<Optional<List<ValidatingWebhook>>> webhooks() {
+        return Codegen.optional(this.webhooks);
     }
 
     /**

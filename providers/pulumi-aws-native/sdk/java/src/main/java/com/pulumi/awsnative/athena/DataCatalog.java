@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -35,8 +36,8 @@ public class DataCatalog extends com.pulumi.resources.CustomResource {
      * @return A description of the data catalog to be created.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The name of the data catalog to create. The catalog name must be unique for the AWS account and can use a maximum of 128 alphanumeric, underscore, at sign, or hyphen characters.
@@ -63,8 +64,8 @@ public class DataCatalog extends com.pulumi.resources.CustomResource {
      * @return Specifies the Lambda function or functions to use for creating the data catalog. This is a mapping whose values depend on the catalog type.
      * 
      */
-    public Output</* @Nullable */ Object> parameters() {
-        return this.parameters;
+    public Output<Optional<Object>> parameters() {
+        return Codegen.optional(this.parameters);
     }
     /**
      * A list of comma separated tags to add to the data catalog that is created.
@@ -77,8 +78,8 @@ public class DataCatalog extends com.pulumi.resources.CustomResource {
      * @return A list of comma separated tags to add to the data catalog that is created.
      * 
      */
-    public Output</* @Nullable */ List<DataCatalogTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<DataCatalogTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of data catalog to create: LAMBDA for a federated catalog, GLUE for AWS Glue Catalog, or HIVE for an external hive metastore.

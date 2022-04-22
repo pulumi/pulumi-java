@@ -16,6 +16,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class RouteTable extends com.pulumi.resources.CustomResource {
      * @return Whether to disable the routes learned by BGP on that route table. True means disable.
      * 
      */
-    public Output</* @Nullable */ Boolean> disableBgpRoutePropagation() {
-        return this.disableBgpRoutePropagation;
+    public Output<Optional<Boolean>> disableBgpRoutePropagation() {
+        return Codegen.optional(this.disableBgpRoutePropagation);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
@@ -74,8 +75,8 @@ public class RouteTable extends com.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * Resource name.
@@ -130,8 +131,8 @@ public class RouteTable extends com.pulumi.resources.CustomResource {
      * @return Collection of routes contained within a route table.
      * 
      */
-    public Output</* @Nullable */ List<RouteResponse>> routes() {
-        return this.routes;
+    public Output<Optional<List<RouteResponse>>> routes() {
+        return Codegen.optional(this.routes);
     }
     /**
      * A collection of references to subnets.
@@ -158,8 +159,8 @@ public class RouteTable extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type.

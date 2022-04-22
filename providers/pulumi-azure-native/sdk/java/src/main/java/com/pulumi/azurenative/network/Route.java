@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class Route extends com.pulumi.resources.CustomResource {
      * @return The destination CIDR to which the route applies.
      * 
      */
-    public Output</* @Nullable */ String> addressPrefix() {
-        return this.addressPrefix;
+    public Output<Optional<String>> addressPrefix() {
+        return Codegen.optional(this.addressPrefix);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
@@ -71,8 +72,8 @@ public class Route extends com.pulumi.resources.CustomResource {
      * @return A value indicating whether this route overrides overlapping BGP routes regardless of LPM.
      * 
      */
-    public Output</* @Nullable */ Boolean> hasBgpOverride() {
-        return this.hasBgpOverride;
+    public Output<Optional<Boolean>> hasBgpOverride() {
+        return Codegen.optional(this.hasBgpOverride);
     }
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
@@ -85,8 +86,8 @@ public class Route extends com.pulumi.resources.CustomResource {
      * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * The IP address packets should be forwarded to. Next hop values are only allowed in routes where the next hop type is VirtualAppliance.
@@ -99,8 +100,8 @@ public class Route extends com.pulumi.resources.CustomResource {
      * @return The IP address packets should be forwarded to. Next hop values are only allowed in routes where the next hop type is VirtualAppliance.
      * 
      */
-    public Output</* @Nullable */ String> nextHopIpAddress() {
-        return this.nextHopIpAddress;
+    public Output<Optional<String>> nextHopIpAddress() {
+        return Codegen.optional(this.nextHopIpAddress);
     }
     /**
      * The type of Azure hop the packet should be sent to.
@@ -141,8 +142,8 @@ public class Route extends com.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output</* @Nullable */ String> type() {
-        return this.type;
+    public Output<Optional<String>> type() {
+        return Codegen.optional(this.type);
     }
 
     /**

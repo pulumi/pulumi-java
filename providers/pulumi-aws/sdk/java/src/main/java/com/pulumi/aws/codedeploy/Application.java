@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -70,8 +71,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return The compute platform can either be `ECS`, `Lambda`, or `Server`. Default is `Server`.
      * 
      */
-    public Output</* @Nullable */ String> computePlatform() {
-        return this.computePlatform;
+    public Output<Optional<String>> computePlatform() {
+        return Codegen.optional(this.computePlatform);
     }
     /**
      * The name for a connection to a GitHub account.
@@ -126,8 +127,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

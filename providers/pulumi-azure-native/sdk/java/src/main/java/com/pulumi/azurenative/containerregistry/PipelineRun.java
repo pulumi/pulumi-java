@@ -15,6 +15,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class PipelineRun extends com.pulumi.resources.CustomResource {
      * @return How the pipeline run should be forced to recreate even if the pipeline run configuration has not changed.
      * 
      */
-    public Output</* @Nullable */ String> forceUpdateTag() {
-        return this.forceUpdateTag;
+    public Output<Optional<String>> forceUpdateTag() {
+        return Codegen.optional(this.forceUpdateTag);
     }
     /**
      * The name of the resource.
@@ -87,8 +88,8 @@ public class PipelineRun extends com.pulumi.resources.CustomResource {
      * @return The request parameters for a pipeline run.
      * 
      */
-    public Output</* @Nullable */ PipelineRunRequestResponse> request() {
-        return this.request;
+    public Output<Optional<PipelineRunRequestResponse>> request() {
+        return Codegen.optional(this.request);
     }
     /**
      * The response of a pipeline run.

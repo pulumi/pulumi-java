@@ -13,6 +13,7 @@ import com.pulumi.gcp.bigtable.inputs.TableIamBindingState;
 import com.pulumi.gcp.bigtable.outputs.TableIamBindingCondition;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -58,8 +59,8 @@ public class TableIamBinding extends com.pulumi.resources.CustomResource {
     @Export(name="condition", type=TableIamBindingCondition.class, parameters={})
     private Output</* @Nullable */ TableIamBindingCondition> condition;
 
-    public Output</* @Nullable */ TableIamBindingCondition> condition() {
-        return this.condition;
+    public Output<Optional<TableIamBindingCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * (Computed) The etag of the tables&#39;s IAM policy.

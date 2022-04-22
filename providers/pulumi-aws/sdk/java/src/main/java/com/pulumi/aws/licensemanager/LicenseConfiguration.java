@@ -15,6 +15,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -71,8 +72,8 @@ public class LicenseConfiguration extends com.pulumi.resources.CustomResource {
      * @return Description of the license configuration.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Number of licenses managed by the license configuration.
@@ -85,8 +86,8 @@ public class LicenseConfiguration extends com.pulumi.resources.CustomResource {
      * @return Number of licenses managed by the license configuration.
      * 
      */
-    public Output</* @Nullable */ Integer> licenseCount() {
-        return this.licenseCount;
+    public Output<Optional<Integer>> licenseCount() {
+        return Codegen.optional(this.licenseCount);
     }
     /**
      * Sets the number of available licenses as a hard limit.
@@ -99,8 +100,8 @@ public class LicenseConfiguration extends com.pulumi.resources.CustomResource {
      * @return Sets the number of available licenses as a hard limit.
      * 
      */
-    public Output</* @Nullable */ Boolean> licenseCountHardLimit() {
-        return this.licenseCountHardLimit;
+    public Output<Optional<Boolean>> licenseCountHardLimit() {
+        return Codegen.optional(this.licenseCountHardLimit);
     }
     /**
      * Dimension to use to track license inventory. Specify either `vCPU`, `Instance`, `Core` or `Socket`.
@@ -127,8 +128,8 @@ public class LicenseConfiguration extends com.pulumi.resources.CustomResource {
      * @return Array of configured License Manager rules.
      * 
      */
-    public Output</* @Nullable */ List<String>> licenseRules() {
-        return this.licenseRules;
+    public Output<Optional<List<String>>> licenseRules() {
+        return Codegen.optional(this.licenseRules);
     }
     /**
      * Name of the license configuration.
@@ -169,8 +170,8 @@ public class LicenseConfiguration extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

@@ -14,6 +14,7 @@ import com.pulumi.gcp.cloudbuild.outputs.WorkerPoolNetworkConfig;
 import com.pulumi.gcp.cloudbuild.outputs.WorkerPoolWorkerConfig;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -55,8 +56,8 @@ public class WorkerPool extends com.pulumi.resources.CustomResource {
      * limitations.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> annotations() {
-        return this.annotations;
+    public Output<Optional<Map<String,String>>> annotations() {
+        return Codegen.optional(this.annotations);
     }
     /**
      * Output only. Time at which the request to create the `WorkerPool` was received.
@@ -97,8 +98,8 @@ public class WorkerPool extends com.pulumi.resources.CustomResource {
      * @return A user-specified, human-readable name for the `WorkerPool`. If provided, this value must be 1-63 characters.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * The location for the resource
@@ -139,8 +140,8 @@ public class WorkerPool extends com.pulumi.resources.CustomResource {
      * @return Network configuration for the `WorkerPool`. Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ WorkerPoolNetworkConfig> networkConfig() {
-        return this.networkConfig;
+    public Output<Optional<WorkerPoolNetworkConfig>> networkConfig() {
+        return Codegen.optional(this.networkConfig);
     }
     /**
      * The project for the resource

@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -52,8 +53,8 @@ public class AccessPoint extends com.pulumi.resources.CustomResource {
      * @return The name you want to assign to this Object lambda Access Point.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * The Object lambda Access Point Configuration that configures transformations to be applied on the objects on specified S3 Actions

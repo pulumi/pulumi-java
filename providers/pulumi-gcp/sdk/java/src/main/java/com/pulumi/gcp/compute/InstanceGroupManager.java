@@ -20,6 +20,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -68,8 +69,8 @@ public class InstanceGroupManager extends com.pulumi.resources.CustomResource {
      * group. You can specify only one value. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances#monitoring_groups).
      * 
      */
-    public Output</* @Nullable */ InstanceGroupManagerAutoHealingPolicies> autoHealingPolicies() {
-        return this.autoHealingPolicies;
+    public Output<Optional<InstanceGroupManagerAutoHealingPolicies>> autoHealingPolicies() {
+        return Codegen.optional(this.autoHealingPolicies);
     }
     /**
      * The base instance name to use for
@@ -108,8 +109,8 @@ public class InstanceGroupManager extends com.pulumi.resources.CustomResource {
      * group manager.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The fingerprint of the instance group manager.
@@ -166,8 +167,8 @@ public class InstanceGroupManager extends com.pulumi.resources.CustomResource {
      * for details on configuration.
      * 
      */
-    public Output</* @Nullable */ List<InstanceGroupManagerNamedPort>> namedPorts() {
-        return this.namedPorts;
+    public Output<Optional<List<InstanceGroupManagerNamedPort>>> namedPorts() {
+        return Codegen.optional(this.namedPorts);
     }
     @Export(name="operation", type=String.class, parameters={})
     private Output<String> operation;
@@ -216,8 +217,8 @@ public class InstanceGroupManager extends com.pulumi.resources.CustomResource {
      * @return ) Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs).
      * 
      */
-    public Output</* @Nullable */ List<InstanceGroupManagerStatefulDisk>> statefulDisks() {
-        return this.statefulDisks;
+    public Output<Optional<List<InstanceGroupManagerStatefulDisk>>> statefulDisks() {
+        return Codegen.optional(this.statefulDisks);
     }
     /**
      * The status of this managed instance group.
@@ -248,8 +249,8 @@ public class InstanceGroupManager extends com.pulumi.resources.CustomResource {
      * not affect existing instances.
      * 
      */
-    public Output</* @Nullable */ List<String>> targetPools() {
-        return this.targetPools;
+    public Output<Optional<List<String>>> targetPools() {
+        return Codegen.optional(this.targetPools);
     }
     /**
      * - The number of instances calculated as a fixed number or a percentage depending on the settings. Structure is documented below.
@@ -312,8 +313,8 @@ public class InstanceGroupManager extends com.pulumi.resources.CustomResource {
      * continue trying until it times out.
      * 
      */
-    public Output</* @Nullable */ Boolean> waitForInstances() {
-        return this.waitForInstances;
+    public Output<Optional<Boolean>> waitForInstances() {
+        return Codegen.optional(this.waitForInstances);
     }
     /**
      * When used with `wait_for_instances` it specifies the status to wait for.
@@ -332,8 +333,8 @@ public class InstanceGroupManager extends com.pulumi.resources.CustomResource {
      * instances to be stable before returning. The possible values are `STABLE` and `UPDATED`
      * 
      */
-    public Output</* @Nullable */ String> waitForInstancesStatus() {
-        return this.waitForInstancesStatus;
+    public Output<Optional<String>> waitForInstancesStatus() {
+        return Codegen.optional(this.waitForInstancesStatus);
     }
     /**
      * The zone that instances in this group should be created

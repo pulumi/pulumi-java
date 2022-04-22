@@ -18,6 +18,7 @@ import java.lang.Double;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -62,8 +63,8 @@ public class NetworkVirtualAppliance extends com.pulumi.resources.CustomResource
      * @return BootStrapConfigurationBlobs storage URLs.
      * 
      */
-    public Output</* @Nullable */ List<String>> bootStrapConfigurationBlobs() {
-        return this.bootStrapConfigurationBlobs;
+    public Output<Optional<List<String>>> bootStrapConfigurationBlobs() {
+        return Codegen.optional(this.bootStrapConfigurationBlobs);
     }
     /**
      * CloudInitConfiguration string in plain text.
@@ -76,8 +77,8 @@ public class NetworkVirtualAppliance extends com.pulumi.resources.CustomResource
      * @return CloudInitConfiguration string in plain text.
      * 
      */
-    public Output</* @Nullable */ String> cloudInitConfiguration() {
-        return this.cloudInitConfiguration;
+    public Output<Optional<String>> cloudInitConfiguration() {
+        return Codegen.optional(this.cloudInitConfiguration);
     }
     /**
      * CloudInitConfigurationBlob storage URLs.
@@ -90,8 +91,8 @@ public class NetworkVirtualAppliance extends com.pulumi.resources.CustomResource
      * @return CloudInitConfigurationBlob storage URLs.
      * 
      */
-    public Output</* @Nullable */ List<String>> cloudInitConfigurationBlobs() {
-        return this.cloudInitConfigurationBlobs;
+    public Output<Optional<List<String>>> cloudInitConfigurationBlobs() {
+        return Codegen.optional(this.cloudInitConfigurationBlobs);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
@@ -118,8 +119,8 @@ public class NetworkVirtualAppliance extends com.pulumi.resources.CustomResource
      * @return The service principal that has read access to cloud-init and config blob.
      * 
      */
-    public Output</* @Nullable */ ManagedServiceIdentityResponse> identity() {
-        return this.identity;
+    public Output<Optional<ManagedServiceIdentityResponse>> identity() {
+        return Codegen.optional(this.identity);
     }
     /**
      * List of references to InboundSecurityRules.
@@ -146,8 +147,8 @@ public class NetworkVirtualAppliance extends com.pulumi.resources.CustomResource
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * Resource name.
@@ -174,8 +175,8 @@ public class NetworkVirtualAppliance extends com.pulumi.resources.CustomResource
      * @return Network Virtual Appliance SKU.
      * 
      */
-    public Output</* @Nullable */ VirtualApplianceSkuPropertiesResponse> nvaSku() {
-        return this.nvaSku;
+    public Output<Optional<VirtualApplianceSkuPropertiesResponse>> nvaSku() {
+        return Codegen.optional(this.nvaSku);
     }
     /**
      * The provisioning state of the resource.
@@ -202,8 +203,8 @@ public class NetworkVirtualAppliance extends com.pulumi.resources.CustomResource
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type.
@@ -230,8 +231,8 @@ public class NetworkVirtualAppliance extends com.pulumi.resources.CustomResource
      * @return VirtualAppliance ASN.
      * 
      */
-    public Output</* @Nullable */ Double> virtualApplianceAsn() {
-        return this.virtualApplianceAsn;
+    public Output<Optional<Double>> virtualApplianceAsn() {
+        return Codegen.optional(this.virtualApplianceAsn);
     }
     /**
      * List of Virtual Appliance Network Interfaces.
@@ -272,8 +273,8 @@ public class NetworkVirtualAppliance extends com.pulumi.resources.CustomResource
      * @return The Virtual Hub where Network Virtual Appliance is being deployed.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> virtualHub() {
-        return this.virtualHub;
+    public Output<Optional<SubResourceResponse>> virtualHub() {
+        return Codegen.optional(this.virtualHub);
     }
 
     /**

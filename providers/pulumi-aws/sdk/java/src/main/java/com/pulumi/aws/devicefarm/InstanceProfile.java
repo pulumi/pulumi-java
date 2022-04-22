@@ -14,6 +14,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -59,8 +60,8 @@ public class InstanceProfile extends com.pulumi.resources.CustomResource {
      * @return The description of the instance profile.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * An array of strings that specifies the list of app packages that should not be cleaned up from the device after a test run.
@@ -73,8 +74,8 @@ public class InstanceProfile extends com.pulumi.resources.CustomResource {
      * @return An array of strings that specifies the list of app packages that should not be cleaned up from the device after a test run.
      * 
      */
-    public Output</* @Nullable */ List<String>> excludeAppPackagesFromCleanups() {
-        return this.excludeAppPackagesFromCleanups;
+    public Output<Optional<List<String>>> excludeAppPackagesFromCleanups() {
+        return Codegen.optional(this.excludeAppPackagesFromCleanups);
     }
     /**
      * The name for the instance profile.
@@ -101,8 +102,8 @@ public class InstanceProfile extends com.pulumi.resources.CustomResource {
      * @return When set to `true`, Device Farm removes app packages after a test run. The default value is `false` for private devices.
      * 
      */
-    public Output</* @Nullable */ Boolean> packageCleanup() {
-        return this.packageCleanup;
+    public Output<Optional<Boolean>> packageCleanup() {
+        return Codegen.optional(this.packageCleanup);
     }
     /**
      * When set to `true`, Device Farm reboots the instance after a test run. The default value is `true`.
@@ -115,8 +116,8 @@ public class InstanceProfile extends com.pulumi.resources.CustomResource {
      * @return When set to `true`, Device Farm reboots the instance after a test run. The default value is `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> rebootAfterUse() {
-        return this.rebootAfterUse;
+    public Output<Optional<Boolean>> rebootAfterUse() {
+        return Codegen.optional(this.rebootAfterUse);
     }
     /**
      * A map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
@@ -129,8 +130,8 @@ public class InstanceProfile extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).

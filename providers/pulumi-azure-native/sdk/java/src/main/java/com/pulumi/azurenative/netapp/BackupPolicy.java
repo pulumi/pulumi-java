@@ -16,6 +16,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class BackupPolicy extends com.pulumi.resources.CustomResource {
      * @return Daily backups count to keep
      * 
      */
-    public Output</* @Nullable */ Integer> dailyBackupsToKeep() {
-        return this.dailyBackupsToKeep;
+    public Output<Optional<Integer>> dailyBackupsToKeep() {
+        return Codegen.optional(this.dailyBackupsToKeep);
     }
     /**
      * The property to decide policy is enabled or not
@@ -60,8 +61,8 @@ public class BackupPolicy extends com.pulumi.resources.CustomResource {
      * @return The property to decide policy is enabled or not
      * 
      */
-    public Output</* @Nullable */ Boolean> enabled() {
-        return this.enabled;
+    public Output<Optional<Boolean>> enabled() {
+        return Codegen.optional(this.enabled);
     }
     /**
      * Resource location
@@ -88,8 +89,8 @@ public class BackupPolicy extends com.pulumi.resources.CustomResource {
      * @return Monthly backups count to keep
      * 
      */
-    public Output</* @Nullable */ Integer> monthlyBackupsToKeep() {
-        return this.monthlyBackupsToKeep;
+    public Output<Optional<Integer>> monthlyBackupsToKeep() {
+        return Codegen.optional(this.monthlyBackupsToKeep);
     }
     /**
      * Name of backup policy
@@ -130,8 +131,8 @@ public class BackupPolicy extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type
@@ -158,8 +159,8 @@ public class BackupPolicy extends com.pulumi.resources.CustomResource {
      * @return A list of volumes assigned to this policy
      * 
      */
-    public Output</* @Nullable */ List<VolumeBackupsResponse>> volumeBackups() {
-        return this.volumeBackups;
+    public Output<Optional<List<VolumeBackupsResponse>>> volumeBackups() {
+        return Codegen.optional(this.volumeBackups);
     }
     /**
      * Volumes using current backup policy
@@ -172,8 +173,8 @@ public class BackupPolicy extends com.pulumi.resources.CustomResource {
      * @return Volumes using current backup policy
      * 
      */
-    public Output</* @Nullable */ Integer> volumesAssigned() {
-        return this.volumesAssigned;
+    public Output<Optional<Integer>> volumesAssigned() {
+        return Codegen.optional(this.volumesAssigned);
     }
     /**
      * Weekly backups count to keep
@@ -186,8 +187,8 @@ public class BackupPolicy extends com.pulumi.resources.CustomResource {
      * @return Weekly backups count to keep
      * 
      */
-    public Output</* @Nullable */ Integer> weeklyBackupsToKeep() {
-        return this.weeklyBackupsToKeep;
+    public Output<Optional<Integer>> weeklyBackupsToKeep() {
+        return Codegen.optional(this.weeklyBackupsToKeep);
     }
     /**
      * Yearly backups count to keep
@@ -200,8 +201,8 @@ public class BackupPolicy extends com.pulumi.resources.CustomResource {
      * @return Yearly backups count to keep
      * 
      */
-    public Output</* @Nullable */ Integer> yearlyBackupsToKeep() {
-        return this.yearlyBackupsToKeep;
+    public Output<Optional<Integer>> yearlyBackupsToKeep() {
+        return Codegen.optional(this.yearlyBackupsToKeep);
     }
 
     /**

@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -32,8 +33,8 @@ public class NotificationRule extends com.pulumi.resources.CustomResource {
     @Export(name="createdBy", type=String.class, parameters={})
     private Output</* @Nullable */ String> createdBy;
 
-    public Output</* @Nullable */ String> createdBy() {
-        return this.createdBy;
+    public Output<Optional<String>> createdBy() {
+        return Codegen.optional(this.createdBy);
     }
     @Export(name="detailType", type=NotificationRuleDetailType.class, parameters={})
     private Output<NotificationRuleDetailType> detailType;
@@ -44,8 +45,8 @@ public class NotificationRule extends com.pulumi.resources.CustomResource {
     @Export(name="eventTypeId", type=String.class, parameters={})
     private Output</* @Nullable */ String> eventTypeId;
 
-    public Output</* @Nullable */ String> eventTypeId() {
-        return this.eventTypeId;
+    public Output<Optional<String>> eventTypeId() {
+        return Codegen.optional(this.eventTypeId);
     }
     @Export(name="eventTypeIds", type=List.class, parameters={String.class})
     private Output<List<String>> eventTypeIds;
@@ -68,20 +69,20 @@ public class NotificationRule extends com.pulumi.resources.CustomResource {
     @Export(name="status", type=NotificationRuleStatus.class, parameters={})
     private Output</* @Nullable */ NotificationRuleStatus> status;
 
-    public Output</* @Nullable */ NotificationRuleStatus> status() {
-        return this.status;
+    public Output<Optional<NotificationRuleStatus>> status() {
+        return Codegen.optional(this.status);
     }
     @Export(name="tags", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> tags;
 
-    public Output</* @Nullable */ Object> tags() {
-        return this.tags;
+    public Output<Optional<Object>> tags() {
+        return Codegen.optional(this.tags);
     }
     @Export(name="targetAddress", type=String.class, parameters={})
     private Output</* @Nullable */ String> targetAddress;
 
-    public Output</* @Nullable */ String> targetAddress() {
-        return this.targetAddress;
+    public Output<Optional<String>> targetAddress() {
+        return Codegen.optional(this.targetAddress);
     }
     @Export(name="targets", type=List.class, parameters={NotificationRuleTarget.class})
     private Output<List<NotificationRuleTarget>> targets;

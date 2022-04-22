@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -59,8 +60,8 @@ public class ReadinessCheck extends com.pulumi.resources.CustomResource {
      * @return The name of the resource set to check.
      * 
      */
-    public Output</* @Nullable */ String> resourceSetName() {
-        return this.resourceSetName;
+    public Output<Optional<String>> resourceSetName() {
+        return Codegen.optional(this.resourceSetName);
     }
     /**
      * A collection of tags associated with a resource.
@@ -73,8 +74,8 @@ public class ReadinessCheck extends com.pulumi.resources.CustomResource {
      * @return A collection of tags associated with a resource.
      * 
      */
-    public Output</* @Nullable */ List<ReadinessCheckTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<ReadinessCheckTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

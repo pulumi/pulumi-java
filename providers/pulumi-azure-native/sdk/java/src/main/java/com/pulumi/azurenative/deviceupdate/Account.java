@@ -16,6 +16,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -60,8 +61,8 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return The type of identity used for the resource.
      * 
      */
-    public Output</* @Nullable */ ManagedServiceIdentityResponse> identity() {
-        return this.identity;
+    public Output<Optional<ManagedServiceIdentityResponse>> identity() {
+        return Codegen.optional(this.identity);
     }
     /**
      * The geo-location where the resource lives
@@ -102,8 +103,8 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return List of private endpoint connections associated with the account.
      * 
      */
-    public Output</* @Nullable */ List<PrivateEndpointConnectionResponse>> privateEndpointConnections() {
-        return this.privateEndpointConnections;
+    public Output<Optional<List<PrivateEndpointConnectionResponse>>> privateEndpointConnections() {
+        return Codegen.optional(this.privateEndpointConnections);
     }
     /**
      * Provisioning state.
@@ -130,8 +131,8 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return Whether or not public network access is allowed for the account.
      * 
      */
-    public Output</* @Nullable */ String> publicNetworkAccess() {
-        return this.publicNetworkAccess;
+    public Output<Optional<String>> publicNetworkAccess() {
+        return Codegen.optional(this.publicNetworkAccess);
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
@@ -158,8 +159,8 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;

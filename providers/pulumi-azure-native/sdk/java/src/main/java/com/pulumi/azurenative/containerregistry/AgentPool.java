@@ -15,6 +15,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class AgentPool extends com.pulumi.resources.CustomResource {
      * @return The count of agent machine
      * 
      */
-    public Output</* @Nullable */ Integer> count() {
-        return this.count;
+    public Output<Optional<Integer>> count() {
+        return Codegen.optional(this.count);
     }
     /**
      * The location of the resource. This cannot be changed after the resource is created.
@@ -88,8 +89,8 @@ public class AgentPool extends com.pulumi.resources.CustomResource {
      * @return The OS of agent machine
      * 
      */
-    public Output</* @Nullable */ String> os() {
-        return this.os;
+    public Output<Optional<String>> os() {
+        return Codegen.optional(this.os);
     }
     /**
      * The provisioning state of this agent pool
@@ -130,8 +131,8 @@ public class AgentPool extends com.pulumi.resources.CustomResource {
      * @return The tags of the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The Tier of agent machine
@@ -144,8 +145,8 @@ public class AgentPool extends com.pulumi.resources.CustomResource {
      * @return The Tier of agent machine
      * 
      */
-    public Output</* @Nullable */ String> tier() {
-        return this.tier;
+    public Output<Optional<String>> tier() {
+        return Codegen.optional(this.tier);
     }
     /**
      * The type of the resource.
@@ -172,8 +173,8 @@ public class AgentPool extends com.pulumi.resources.CustomResource {
      * @return The Virtual Network Subnet Resource Id of the agent machine
      * 
      */
-    public Output</* @Nullable */ String> virtualNetworkSubnetResourceId() {
-        return this.virtualNetworkSubnetResourceId;
+    public Output<Optional<String>> virtualNetworkSubnetResourceId() {
+        return Codegen.optional(this.virtualNetworkSubnetResourceId);
     }
 
     /**

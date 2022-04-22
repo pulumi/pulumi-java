@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -25,8 +26,8 @@ public class ServiceAction extends com.pulumi.resources.CustomResource {
     @Export(name="acceptLanguage", type=ServiceActionAcceptLanguage.class, parameters={})
     private Output</* @Nullable */ ServiceActionAcceptLanguage> acceptLanguage;
 
-    public Output</* @Nullable */ ServiceActionAcceptLanguage> acceptLanguage() {
-        return this.acceptLanguage;
+    public Output<Optional<ServiceActionAcceptLanguage>> acceptLanguage() {
+        return Codegen.optional(this.acceptLanguage);
     }
     @Export(name="definition", type=List.class, parameters={ServiceActionDefinitionParameter.class})
     private Output<List<ServiceActionDefinitionParameter>> definition;
@@ -43,8 +44,8 @@ public class ServiceAction extends com.pulumi.resources.CustomResource {
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;

@@ -16,6 +16,7 @@ import com.pulumi.gcp.certificateauthority.outputs.CertificateRevocationDetail;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -56,8 +57,8 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return Certificate Authority name.
      * 
      */
-    public Output</* @Nullable */ String> certificateAuthority() {
-        return this.certificateAuthority;
+    public Output<Optional<String>> certificateAuthority() {
+        return Codegen.optional(this.certificateAuthority);
     }
     /**
      * Output only. Details regarding the revocation of this Certificate. This Certificate is considered revoked if and only if
@@ -94,8 +95,8 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * as the Certificate.
      * 
      */
-    public Output</* @Nullable */ String> certificateTemplate() {
-        return this.certificateTemplate;
+    public Output<Optional<String>> certificateTemplate() {
+        return Codegen.optional(this.certificateTemplate);
     }
     /**
      * The config used to create a self-signed X.509 certificate or CSR.
@@ -110,8 +111,8 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ CertificateConfig> config() {
-        return this.config;
+    public Output<Optional<CertificateConfig>> config() {
+        return Codegen.optional(this.config);
     }
     /**
      * The time that this resource was created on the server. This is in RFC3339 text format.
@@ -138,8 +139,8 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return Labels with user-defined metadata to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * The desired lifetime of the CA certificate. Used to create the &#34;notBeforeTime&#34; and
@@ -156,8 +157,8 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
      * 
      */
-    public Output</* @Nullable */ String> lifetime() {
-        return this.lifetime;
+    public Output<Optional<String>> lifetime() {
+        return Codegen.optional(this.lifetime);
     }
     /**
      * Location of the Certificate. A full list of valid locations can be found by
@@ -228,8 +229,8 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return Immutable. A pem-encoded X.509 certificate signing request (CSR).
      * 
      */
-    public Output</* @Nullable */ String> pemCsr() {
-        return this.pemCsr;
+    public Output<Optional<String>> pemCsr() {
+        return Codegen.optional(this.pemCsr);
     }
     /**
      * The name of the CaPool this Certificate belongs to.

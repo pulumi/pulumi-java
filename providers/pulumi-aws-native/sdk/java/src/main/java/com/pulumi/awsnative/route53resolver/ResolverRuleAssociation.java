@@ -10,6 +10,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -29,8 +30,8 @@ public class ResolverRuleAssociation extends com.pulumi.resources.CustomResource
      * @return The name of an association between a Resolver rule and a VPC.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * Primary Identifier for Resolver Rule Association

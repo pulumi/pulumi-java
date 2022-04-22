@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class RoleDefinition extends com.pulumi.resources.CustomResource {
      * @return Role definition assignable scopes.
      * 
      */
-    public Output</* @Nullable */ List<String>> assignableScopes() {
-        return this.assignableScopes;
+    public Output<Optional<List<String>>> assignableScopes() {
+        return Codegen.optional(this.assignableScopes);
     }
     /**
      * The role definition description.
@@ -57,8 +58,8 @@ public class RoleDefinition extends com.pulumi.resources.CustomResource {
      * @return The role definition description.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The role definition name.
@@ -85,8 +86,8 @@ public class RoleDefinition extends com.pulumi.resources.CustomResource {
      * @return Role definition permissions.
      * 
      */
-    public Output</* @Nullable */ List<PermissionResponse>> permissions() {
-        return this.permissions;
+    public Output<Optional<List<PermissionResponse>>> permissions() {
+        return Codegen.optional(this.permissions);
     }
     /**
      * The role name.
@@ -99,8 +100,8 @@ public class RoleDefinition extends com.pulumi.resources.CustomResource {
      * @return The role name.
      * 
      */
-    public Output</* @Nullable */ String> roleName() {
-        return this.roleName;
+    public Output<Optional<String>> roleName() {
+        return Codegen.optional(this.roleName);
     }
     /**
      * The role type.
@@ -113,8 +114,8 @@ public class RoleDefinition extends com.pulumi.resources.CustomResource {
      * @return The role type.
      * 
      */
-    public Output</* @Nullable */ String> roleType() {
-        return this.roleType;
+    public Output<Optional<String>> roleType() {
+        return Codegen.optional(this.roleType);
     }
     /**
      * The role definition type.

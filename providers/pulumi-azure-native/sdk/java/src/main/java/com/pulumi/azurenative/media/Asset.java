@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class Asset extends com.pulumi.resources.CustomResource {
      * @return The alternate ID of the Asset.
      * 
      */
-    public Output</* @Nullable */ String> alternateId() {
-        return this.alternateId;
+    public Output<Optional<String>> alternateId() {
+        return Codegen.optional(this.alternateId);
     }
     /**
      * The Asset ID.
@@ -71,8 +72,8 @@ public class Asset extends com.pulumi.resources.CustomResource {
      * @return The name of the asset blob container.
      * 
      */
-    public Output</* @Nullable */ String> container() {
-        return this.container;
+    public Output<Optional<String>> container() {
+        return Codegen.optional(this.container);
     }
     /**
      * The creation date of the Asset.
@@ -99,8 +100,8 @@ public class Asset extends com.pulumi.resources.CustomResource {
      * @return The Asset description.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The last modified date of the Asset.
@@ -141,8 +142,8 @@ public class Asset extends com.pulumi.resources.CustomResource {
      * @return The name of the storage account.
      * 
      */
-    public Output</* @Nullable */ String> storageAccountName() {
-        return this.storageAccountName;
+    public Output<Optional<String>> storageAccountName() {
+        return Codegen.optional(this.storageAccountName);
     }
     /**
      * The Asset encryption format. One of None or MediaStorageEncryption.

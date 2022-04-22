@@ -15,6 +15,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class AvailabilityGroupListener extends com.pulumi.resources.CustomResour
      * @return Name of the availability group.
      * 
      */
-    public Output</* @Nullable */ String> availabilityGroupName() {
-        return this.availabilityGroupName;
+    public Output<Optional<String>> availabilityGroupName() {
+        return Codegen.optional(this.availabilityGroupName);
     }
     /**
      * Create a default availability group if it does not exist.
@@ -59,8 +60,8 @@ public class AvailabilityGroupListener extends com.pulumi.resources.CustomResour
      * @return Create a default availability group if it does not exist.
      * 
      */
-    public Output</* @Nullable */ Boolean> createDefaultAvailabilityGroupIfNotExist() {
-        return this.createDefaultAvailabilityGroupIfNotExist;
+    public Output<Optional<Boolean>> createDefaultAvailabilityGroupIfNotExist() {
+        return Codegen.optional(this.createDefaultAvailabilityGroupIfNotExist);
     }
     /**
      * List of load balancer configurations for an availability group listener.
@@ -73,8 +74,8 @@ public class AvailabilityGroupListener extends com.pulumi.resources.CustomResour
      * @return List of load balancer configurations for an availability group listener.
      * 
      */
-    public Output</* @Nullable */ List<LoadBalancerConfigurationResponse>> loadBalancerConfigurations() {
-        return this.loadBalancerConfigurations;
+    public Output<Optional<List<LoadBalancerConfigurationResponse>>> loadBalancerConfigurations() {
+        return Codegen.optional(this.loadBalancerConfigurations);
     }
     /**
      * Resource name.
@@ -101,8 +102,8 @@ public class AvailabilityGroupListener extends com.pulumi.resources.CustomResour
      * @return Listener port.
      * 
      */
-    public Output</* @Nullable */ Integer> port() {
-        return this.port;
+    public Output<Optional<Integer>> port() {
+        return Codegen.optional(this.port);
     }
     /**
      * Provisioning state to track the async operation status.

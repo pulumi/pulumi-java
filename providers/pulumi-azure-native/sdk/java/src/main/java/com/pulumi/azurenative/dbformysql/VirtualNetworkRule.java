@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class VirtualNetworkRule extends com.pulumi.resources.CustomResource {
      * @return Create firewall rule before the virtual network has vnet service endpoint enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> ignoreMissingVnetServiceEndpoint() {
-        return this.ignoreMissingVnetServiceEndpoint;
+    public Output<Optional<Boolean>> ignoreMissingVnetServiceEndpoint() {
+        return Codegen.optional(this.ignoreMissingVnetServiceEndpoint);
     }
     /**
      * The name of the resource

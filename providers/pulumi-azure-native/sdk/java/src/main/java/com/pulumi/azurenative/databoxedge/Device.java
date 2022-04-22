@@ -20,6 +20,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -78,8 +79,8 @@ public class Device extends com.pulumi.resources.CustomResource {
      * @return The status of the Data Box Edge/Gateway device.
      * 
      */
-    public Output</* @Nullable */ String> dataBoxEdgeDeviceStatus() {
-        return this.dataBoxEdgeDeviceStatus;
+    public Output<Optional<String>> dataBoxEdgeDeviceStatus() {
+        return Codegen.optional(this.dataBoxEdgeDeviceStatus);
     }
     /**
      * The Description of the Data Box Edge/Gateway device.
@@ -190,8 +191,8 @@ public class Device extends com.pulumi.resources.CustomResource {
      * @return The etag for the devices.
      * 
      */
-    public Output</* @Nullable */ String> etag() {
-        return this.etag;
+    public Output<Optional<String>> etag() {
+        return Codegen.optional(this.etag);
     }
     /**
      * The Data Box Edge/Gateway device name.
@@ -218,8 +219,8 @@ public class Device extends com.pulumi.resources.CustomResource {
      * @return Msi identity of the resource
      * 
      */
-    public Output</* @Nullable */ ResourceIdentityResponse> identity() {
-        return this.identity;
+    public Output<Optional<ResourceIdentityResponse>> identity() {
+        return Codegen.optional(this.identity);
     }
     /**
      * The etag for the devices.
@@ -330,8 +331,8 @@ public class Device extends com.pulumi.resources.CustomResource {
      * @return The SKU type.
      * 
      */
-    public Output</* @Nullable */ SkuResponse> sku() {
-        return this.sku;
+    public Output<Optional<SkuResponse>> sku() {
+        return Codegen.optional(this.sku);
     }
     /**
      * DataBoxEdge Resource
@@ -358,8 +359,8 @@ public class Device extends com.pulumi.resources.CustomResource {
      * @return The list of tags that describe the device. These tags can be used to view and group this device (across resource groups).
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The Data Box Edge/Gateway device timezone.

@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -42,8 +43,8 @@ public class EncryptionByDefault extends com.pulumi.resources.CustomResource {
      * @return Whether or not default EBS encryption is enabled. Valid values are `true` or `false`. Defaults to `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> enabled() {
-        return this.enabled;
+    public Output<Optional<Boolean>> enabled() {
+        return Codegen.optional(this.enabled);
     }
 
     /**

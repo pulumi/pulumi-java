@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -73,8 +74,8 @@ public class DelegationSet extends com.pulumi.resources.CustomResource {
      * (helpful for identifying single delegation set amongst others)
      * 
      */
-    public Output</* @Nullable */ String> referenceName() {
-        return this.referenceName;
+    public Output<Optional<String>> referenceName() {
+        return Codegen.optional(this.referenceName);
     }
 
     /**

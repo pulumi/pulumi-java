@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -87,8 +88,8 @@ public class LocationSmb extends com.pulumi.resources.CustomResource {
      * @return Configuration block containing mount options used by DataSync to access the SMB Server. Can be `AUTOMATIC`, `SMB2`, or `SMB3`.
      * 
      */
-    public Output</* @Nullable */ LocationSmbMountOptions> mountOptions() {
-        return this.mountOptions;
+    public Output<Optional<LocationSmbMountOptions>> mountOptions() {
+        return Codegen.optional(this.mountOptions);
     }
     /**
      * The password of the user who can mount the share and has file permissions in the SMB.
@@ -143,8 +144,8 @@ public class LocationSmb extends com.pulumi.resources.CustomResource {
      * @return Key-value pairs of resource tags to assign to the DataSync Location. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

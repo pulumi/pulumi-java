@@ -15,6 +15,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class Rule extends com.pulumi.resources.CustomResource {
      * @return Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter expression.
      * 
      */
-    public Output</* @Nullable */ ActionResponse> action() {
-        return this.action;
+    public Output<Optional<ActionResponse>> action() {
+        return Codegen.optional(this.action);
     }
     /**
      * Properties of correlationFilter
@@ -59,8 +60,8 @@ public class Rule extends com.pulumi.resources.CustomResource {
      * @return Properties of correlationFilter
      * 
      */
-    public Output</* @Nullable */ CorrelationFilterResponse> correlationFilter() {
-        return this.correlationFilter;
+    public Output<Optional<CorrelationFilterResponse>> correlationFilter() {
+        return Codegen.optional(this.correlationFilter);
     }
     /**
      * Filter type that is evaluated against a BrokeredMessage.
@@ -73,8 +74,8 @@ public class Rule extends com.pulumi.resources.CustomResource {
      * @return Filter type that is evaluated against a BrokeredMessage.
      * 
      */
-    public Output</* @Nullable */ String> filterType() {
-        return this.filterType;
+    public Output<Optional<String>> filterType() {
+        return Codegen.optional(this.filterType);
     }
     /**
      * Resource name
@@ -101,8 +102,8 @@ public class Rule extends com.pulumi.resources.CustomResource {
      * @return Properties of sqlFilter
      * 
      */
-    public Output</* @Nullable */ SqlFilterResponse> sqlFilter() {
-        return this.sqlFilter;
+    public Output<Optional<SqlFilterResponse>> sqlFilter() {
+        return Codegen.optional(this.sqlFilter);
     }
     /**
      * Resource type

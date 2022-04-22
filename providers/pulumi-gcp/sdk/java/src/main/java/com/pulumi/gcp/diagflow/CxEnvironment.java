@@ -13,6 +13,7 @@ import com.pulumi.gcp.diagflow.inputs.CxEnvironmentState;
 import com.pulumi.gcp.diagflow.outputs.CxEnvironmentVersionConfig;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -54,8 +55,8 @@ public class CxEnvironment extends com.pulumi.resources.CustomResource {
      * @return The human-readable description of the environment. The maximum length is 500 characters. If exceeded, the request is rejected.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The human-readable name of the environment (unique in an agent). Limit of 64 characters.
@@ -98,8 +99,8 @@ public class CxEnvironment extends com.pulumi.resources.CustomResource {
      * Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;.
      * 
      */
-    public Output</* @Nullable */ String> parent() {
-        return this.parent;
+    public Output<Optional<String>> parent() {
+        return Codegen.optional(this.parent);
     }
     /**
      * Update time of this environment. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond resolution and up to nine

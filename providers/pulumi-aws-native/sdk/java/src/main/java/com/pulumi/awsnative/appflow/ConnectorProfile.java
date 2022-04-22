@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -60,8 +61,8 @@ public class ConnectorProfile extends com.pulumi.resources.CustomResource {
      * @return Connector specific configurations needed to create connector profile
      * 
      */
-    public Output</* @Nullable */ ConnectorProfileConfig> connectorProfileConfig() {
-        return this.connectorProfileConfig;
+    public Output<Optional<ConnectorProfileConfig>> connectorProfileConfig() {
+        return Codegen.optional(this.connectorProfileConfig);
     }
     /**
      * The maximum number of items to retrieve in a single batch.
@@ -116,8 +117,8 @@ public class ConnectorProfile extends com.pulumi.resources.CustomResource {
      * @return The ARN of the AWS Key Management Service (AWS KMS) key that&#39;s used to encrypt your function&#39;s environment variables. If it&#39;s not provided, AWS Lambda uses a default service key.
      * 
      */
-    public Output</* @Nullable */ String> kMSArn() {
-        return this.kMSArn;
+    public Output<Optional<String>> kMSArn() {
+        return Codegen.optional(this.kMSArn);
     }
 
     /**

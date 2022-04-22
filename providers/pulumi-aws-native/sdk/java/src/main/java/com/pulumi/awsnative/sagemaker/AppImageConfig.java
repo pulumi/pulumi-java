@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -60,8 +61,8 @@ public class AppImageConfig extends com.pulumi.resources.CustomResource {
      * @return The KernelGatewayImageConfig.
      * 
      */
-    public Output</* @Nullable */ AppImageConfigKernelGatewayImageConfig> kernelGatewayImageConfig() {
-        return this.kernelGatewayImageConfig;
+    public Output<Optional<AppImageConfigKernelGatewayImageConfig>> kernelGatewayImageConfig() {
+        return Codegen.optional(this.kernelGatewayImageConfig);
     }
     /**
      * A list of tags to apply to the AppImageConfig.
@@ -74,8 +75,8 @@ public class AppImageConfig extends com.pulumi.resources.CustomResource {
      * @return A list of tags to apply to the AppImageConfig.
      * 
      */
-    public Output</* @Nullable */ List<AppImageConfigTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<AppImageConfigTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

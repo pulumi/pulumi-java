@@ -13,6 +13,7 @@ import com.pulumi.kubernetes.meta_v1.outputs.ListMeta;
 import com.pulumi.kubernetes.meta_v1.outputs.StatusDetails;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -32,8 +33,8 @@ public class Status extends com.pulumi.resources.CustomResource {
      * @return APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
      */
-    public Output</* @Nullable */ String> apiVersion() {
-        return this.apiVersion;
+    public Output<Optional<String>> apiVersion() {
+        return Codegen.optional(this.apiVersion);
     }
     /**
      * Suggested HTTP return code for this status, 0 if not set.
@@ -46,8 +47,8 @@ public class Status extends com.pulumi.resources.CustomResource {
      * @return Suggested HTTP return code for this status, 0 if not set.
      * 
      */
-    public Output</* @Nullable */ Integer> code() {
-        return this.code;
+    public Output<Optional<Integer>> code() {
+        return Codegen.optional(this.code);
     }
     /**
      * Extended data associated with the reason.  Each reason may define its own extended details. This field is optional and the data returned is not guaranteed to conform to any schema except that defined by the reason type.
@@ -60,8 +61,8 @@ public class Status extends com.pulumi.resources.CustomResource {
      * @return Extended data associated with the reason.  Each reason may define its own extended details. This field is optional and the data returned is not guaranteed to conform to any schema except that defined by the reason type.
      * 
      */
-    public Output</* @Nullable */ StatusDetails> details() {
-        return this.details;
+    public Output<Optional<StatusDetails>> details() {
+        return Codegen.optional(this.details);
     }
     /**
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
@@ -74,8 +75,8 @@ public class Status extends com.pulumi.resources.CustomResource {
      * @return Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
      */
-    public Output</* @Nullable */ String> kind() {
-        return this.kind;
+    public Output<Optional<String>> kind() {
+        return Codegen.optional(this.kind);
     }
     /**
      * A human-readable description of the status of this operation.
@@ -88,8 +89,8 @@ public class Status extends com.pulumi.resources.CustomResource {
      * @return A human-readable description of the status of this operation.
      * 
      */
-    public Output</* @Nullable */ String> message() {
-        return this.message;
+    public Output<Optional<String>> message() {
+        return Codegen.optional(this.message);
     }
     /**
      * Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
@@ -102,8 +103,8 @@ public class Status extends com.pulumi.resources.CustomResource {
      * @return Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
      */
-    public Output</* @Nullable */ ListMeta> metadata() {
-        return this.metadata;
+    public Output<Optional<ListMeta>> metadata() {
+        return Codegen.optional(this.metadata);
     }
     /**
      * A machine-readable description of why this operation is in the &#34;Failure&#34; status. If this value is empty there is no information available. A Reason clarifies an HTTP status code but does not override it.
@@ -116,8 +117,8 @@ public class Status extends com.pulumi.resources.CustomResource {
      * @return A machine-readable description of why this operation is in the &#34;Failure&#34; status. If this value is empty there is no information available. A Reason clarifies an HTTP status code but does not override it.
      * 
      */
-    public Output</* @Nullable */ String> reason() {
-        return this.reason;
+    public Output<Optional<String>> reason() {
+        return Codegen.optional(this.reason);
     }
     /**
      * Status of the operation. One of: &#34;Success&#34; or &#34;Failure&#34;. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
@@ -130,8 +131,8 @@ public class Status extends com.pulumi.resources.CustomResource {
      * @return Status of the operation. One of: &#34;Success&#34; or &#34;Failure&#34;. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
      * 
      */
-    public Output</* @Nullable */ String> status() {
-        return this.status;
+    public Output<Optional<String>> status() {
+        return Codegen.optional(this.status);
     }
 
     /**

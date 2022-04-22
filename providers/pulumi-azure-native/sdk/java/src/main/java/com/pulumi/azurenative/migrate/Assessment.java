@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class Assessment extends com.pulumi.resources.CustomResource {
      * @return For optimistic concurrency control.
      * 
      */
-    public Output</* @Nullable */ String> eTag() {
-        return this.eTag;
+    public Output<Optional<String>> eTag() {
+        return Codegen.optional(this.eTag);
     }
     /**
      * Unique name of an assessment.

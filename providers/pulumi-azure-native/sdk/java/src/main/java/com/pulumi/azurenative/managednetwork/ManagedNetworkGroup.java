@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -57,8 +58,8 @@ public class ManagedNetworkGroup extends com.pulumi.resources.CustomResource {
      * @return Responsibility role under which this Managed Network Group will be created
      * 
      */
-    public Output</* @Nullable */ String> kind() {
-        return this.kind;
+    public Output<Optional<String>> kind() {
+        return Codegen.optional(this.kind);
     }
     /**
      * The geo-location where the resource lives
@@ -71,8 +72,8 @@ public class ManagedNetworkGroup extends com.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The collection of management groups covered by the Managed Network
@@ -85,8 +86,8 @@ public class ManagedNetworkGroup extends com.pulumi.resources.CustomResource {
      * @return The collection of management groups covered by the Managed Network
      * 
      */
-    public Output</* @Nullable */ List<ResourceIdResponse>> managementGroups() {
-        return this.managementGroups;
+    public Output<Optional<List<ResourceIdResponse>>> managementGroups() {
+        return Codegen.optional(this.managementGroups);
     }
     /**
      * The name of the resource
@@ -127,8 +128,8 @@ public class ManagedNetworkGroup extends com.pulumi.resources.CustomResource {
      * @return The collection of  subnets covered by the Managed Network
      * 
      */
-    public Output</* @Nullable */ List<ResourceIdResponse>> subnets() {
-        return this.subnets;
+    public Output<Optional<List<ResourceIdResponse>>> subnets() {
+        return Codegen.optional(this.subnets);
     }
     /**
      * The collection of subscriptions covered by the Managed Network
@@ -141,8 +142,8 @@ public class ManagedNetworkGroup extends com.pulumi.resources.CustomResource {
      * @return The collection of subscriptions covered by the Managed Network
      * 
      */
-    public Output</* @Nullable */ List<ResourceIdResponse>> subscriptions() {
-        return this.subscriptions;
+    public Output<Optional<List<ResourceIdResponse>>> subscriptions() {
+        return Codegen.optional(this.subscriptions);
     }
     /**
      * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
@@ -169,8 +170,8 @@ public class ManagedNetworkGroup extends com.pulumi.resources.CustomResource {
      * @return The collection of virtual nets covered by the Managed Network
      * 
      */
-    public Output</* @Nullable */ List<ResourceIdResponse>> virtualNetworks() {
-        return this.virtualNetworks;
+    public Output<Optional<List<ResourceIdResponse>>> virtualNetworks() {
+        return Codegen.optional(this.virtualNetworks);
     }
 
     /**

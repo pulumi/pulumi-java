@@ -13,6 +13,7 @@ import com.pulumi.gcp.storage.inputs.NotificationState;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -71,8 +72,8 @@ public class Notification extends com.pulumi.resources.CustomResource {
      * @return A set of key/value attribute pairs to attach to each Cloud PubSub message published for this notification subscription
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> customAttributes() {
-        return this.customAttributes;
+    public Output<Optional<Map<String,String>>> customAttributes() {
+        return Codegen.optional(this.customAttributes);
     }
     /**
      * List of event type filters for this notification config. If not specified, Cloud Storage will send notifications for all event types. The valid types are: `&#34;OBJECT_FINALIZE&#34;`, `&#34;OBJECT_METADATA_UPDATE&#34;`, `&#34;OBJECT_DELETE&#34;`, `&#34;OBJECT_ARCHIVE&#34;`
@@ -85,8 +86,8 @@ public class Notification extends com.pulumi.resources.CustomResource {
      * @return List of event type filters for this notification config. If not specified, Cloud Storage will send notifications for all event types. The valid types are: `&#34;OBJECT_FINALIZE&#34;`, `&#34;OBJECT_METADATA_UPDATE&#34;`, `&#34;OBJECT_DELETE&#34;`, `&#34;OBJECT_ARCHIVE&#34;`
      * 
      */
-    public Output</* @Nullable */ List<String>> eventTypes() {
-        return this.eventTypes;
+    public Output<Optional<List<String>>> eventTypes() {
+        return Codegen.optional(this.eventTypes);
     }
     /**
      * The ID of the created notification.
@@ -113,8 +114,8 @@ public class Notification extends com.pulumi.resources.CustomResource {
      * @return Specifies a prefix path filter for this notification config. Cloud Storage will only send notifications for objects in this bucket whose names begin with the specified prefix.
      * 
      */
-    public Output</* @Nullable */ String> objectNamePrefix() {
-        return this.objectNamePrefix;
+    public Output<Optional<String>> objectNamePrefix() {
+        return Codegen.optional(this.objectNamePrefix);
     }
     /**
      * The desired content of the Payload. One of `&#34;JSON_API_V1&#34;` or `&#34;NONE&#34;`.

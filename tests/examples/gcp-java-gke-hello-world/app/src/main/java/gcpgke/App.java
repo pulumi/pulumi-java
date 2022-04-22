@@ -153,7 +153,9 @@ public class App {
         );
 
         // Export the Namespace name
-        var namespaceName = ns.metadata().apply(m -> Output.of(m.name().orElseThrow()));
+        var namespaceName = ns.metadata()
+                .applyValue(m -> m.orElseThrow().name().orElseThrow());
+
         ctx.export("namespaceName", namespaceName);
 
         final var appLabels = Map.of("appClass", name);
@@ -188,7 +190,8 @@ public class App {
                 .build(), clusterResourceOptions);
 
         // Export the Deployment name
-        ctx.export("deploymentName", deployment.metadata().apply(m -> Output.of(m.name().orElseThrow())));
+        ctx.export("deploymentName", deployment.metadata()
+                .applyValue(m -> m.orElseThrow().name().orElseThrow()));
 
         // Create a LoadBalancer Service for the NGINX Deployment
         final var service = new Service(name, ServiceArgs.builder()
@@ -204,10 +207,13 @@ public class App {
                 .build(), clusterResourceOptions);
 
         // Export the Service name and public LoadBalancer endpoint
-        ctx.export("serviceName", service.metadata().applyValue(m -> m.name().orElseThrow()));
+        ctx.export("serviceName", service.metadata()
+                .applyValue(m -> m.orElseThrow().name().orElseThrow()));
+
         ctx.export("servicePublicIP", service.status()
-                .applyValue(s -> s.loadBalancer().orElseThrow())
+                .applyValue(s -> s.orElseThrow().loadBalancer().orElseThrow())
                 .applyValue(status -> status.ingress().get(0).ip().orElseThrow()));
+
         return ctx.exports();
     }
 }

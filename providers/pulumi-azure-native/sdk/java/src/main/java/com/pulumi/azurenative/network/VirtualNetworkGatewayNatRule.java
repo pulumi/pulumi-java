@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -57,8 +58,8 @@ public class VirtualNetworkGatewayNatRule extends com.pulumi.resources.CustomRes
      * @return The private IP address external mapping for NAT.
      * 
      */
-    public Output</* @Nullable */ List<VpnNatRuleMappingResponse>> externalMappings() {
-        return this.externalMappings;
+    public Output<Optional<List<VpnNatRuleMappingResponse>>> externalMappings() {
+        return Codegen.optional(this.externalMappings);
     }
     /**
      * The private IP address internal mapping for NAT.
@@ -71,8 +72,8 @@ public class VirtualNetworkGatewayNatRule extends com.pulumi.resources.CustomRes
      * @return The private IP address internal mapping for NAT.
      * 
      */
-    public Output</* @Nullable */ List<VpnNatRuleMappingResponse>> internalMappings() {
-        return this.internalMappings;
+    public Output<Optional<List<VpnNatRuleMappingResponse>>> internalMappings() {
+        return Codegen.optional(this.internalMappings);
     }
     /**
      * The IP Configuration ID this NAT rule applies to.
@@ -85,8 +86,8 @@ public class VirtualNetworkGatewayNatRule extends com.pulumi.resources.CustomRes
      * @return The IP Configuration ID this NAT rule applies to.
      * 
      */
-    public Output</* @Nullable */ String> ipConfigurationId() {
-        return this.ipConfigurationId;
+    public Output<Optional<String>> ipConfigurationId() {
+        return Codegen.optional(this.ipConfigurationId);
     }
     /**
      * The Source NAT direction of a VPN NAT.
@@ -99,8 +100,8 @@ public class VirtualNetworkGatewayNatRule extends com.pulumi.resources.CustomRes
      * @return The Source NAT direction of a VPN NAT.
      * 
      */
-    public Output</* @Nullable */ String> mode() {
-        return this.mode;
+    public Output<Optional<String>> mode() {
+        return Codegen.optional(this.mode);
     }
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
@@ -113,8 +114,8 @@ public class VirtualNetworkGatewayNatRule extends com.pulumi.resources.CustomRes
      * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * The provisioning state of the NAT Rule resource.

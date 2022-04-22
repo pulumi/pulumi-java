@@ -23,6 +23,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -56,8 +57,8 @@ public class DeploymentGroup extends com.pulumi.resources.CustomResource {
      * @return Configuration block of alarms associated with the deployment group (documented below).
      * 
      */
-    public Output</* @Nullable */ DeploymentGroupAlarmConfiguration> alarmConfiguration() {
-        return this.alarmConfiguration;
+    public Output<Optional<DeploymentGroupAlarmConfiguration>> alarmConfiguration() {
+        return Codegen.optional(this.alarmConfiguration);
     }
     /**
      * The name of the application.
@@ -98,8 +99,8 @@ public class DeploymentGroup extends com.pulumi.resources.CustomResource {
      * @return Configuration block of the automatic rollback configuration associated with the deployment group (documented below).
      * 
      */
-    public Output</* @Nullable */ DeploymentGroupAutoRollbackConfiguration> autoRollbackConfiguration() {
-        return this.autoRollbackConfiguration;
+    public Output<Optional<DeploymentGroupAutoRollbackConfiguration>> autoRollbackConfiguration() {
+        return Codegen.optional(this.autoRollbackConfiguration);
     }
     /**
      * Autoscaling groups associated with the deployment group.
@@ -112,8 +113,8 @@ public class DeploymentGroup extends com.pulumi.resources.CustomResource {
      * @return Autoscaling groups associated with the deployment group.
      * 
      */
-    public Output</* @Nullable */ List<String>> autoscalingGroups() {
-        return this.autoscalingGroups;
+    public Output<Optional<List<String>>> autoscalingGroups() {
+        return Codegen.optional(this.autoscalingGroups);
     }
     /**
      * Configuration block of the blue/green deployment options for a deployment group (documented below).
@@ -154,8 +155,8 @@ public class DeploymentGroup extends com.pulumi.resources.CustomResource {
      * @return The name of the group&#39;s deployment config. The default is &#34;CodeDeployDefault.OneAtATime&#34;.
      * 
      */
-    public Output</* @Nullable */ String> deploymentConfigName() {
-        return this.deploymentConfigName;
+    public Output<Optional<String>> deploymentConfigName() {
+        return Codegen.optional(this.deploymentConfigName);
     }
     /**
      * The ID of the CodeDeploy deployment group.
@@ -196,8 +197,8 @@ public class DeploymentGroup extends com.pulumi.resources.CustomResource {
      * @return Configuration block of the type of deployment, either in-place or blue/green, you want to run and whether to route deployment traffic behind a load balancer (documented below).
      * 
      */
-    public Output</* @Nullable */ DeploymentGroupDeploymentStyle> deploymentStyle() {
-        return this.deploymentStyle;
+    public Output<Optional<DeploymentGroupDeploymentStyle>> deploymentStyle() {
+        return Codegen.optional(this.deploymentStyle);
     }
     /**
      * Tag filters associated with the deployment group. See the AWS docs for details.
@@ -210,8 +211,8 @@ public class DeploymentGroup extends com.pulumi.resources.CustomResource {
      * @return Tag filters associated with the deployment group. See the AWS docs for details.
      * 
      */
-    public Output</* @Nullable */ List<DeploymentGroupEc2TagFilter>> ec2TagFilters() {
-        return this.ec2TagFilters;
+    public Output<Optional<List<DeploymentGroupEc2TagFilter>>> ec2TagFilters() {
+        return Codegen.optional(this.ec2TagFilters);
     }
     /**
      * Configuration block(s) of Tag filters associated with the deployment group, which are also referred to as tag groups (documented below). See the AWS docs for details.
@@ -224,8 +225,8 @@ public class DeploymentGroup extends com.pulumi.resources.CustomResource {
      * @return Configuration block(s) of Tag filters associated with the deployment group, which are also referred to as tag groups (documented below). See the AWS docs for details.
      * 
      */
-    public Output</* @Nullable */ List<DeploymentGroupEc2TagSet>> ec2TagSets() {
-        return this.ec2TagSets;
+    public Output<Optional<List<DeploymentGroupEc2TagSet>>> ec2TagSets() {
+        return Codegen.optional(this.ec2TagSets);
     }
     /**
      * Configuration block(s) of the ECS services for a deployment group (documented below).
@@ -238,8 +239,8 @@ public class DeploymentGroup extends com.pulumi.resources.CustomResource {
      * @return Configuration block(s) of the ECS services for a deployment group (documented below).
      * 
      */
-    public Output</* @Nullable */ DeploymentGroupEcsService> ecsService() {
-        return this.ecsService;
+    public Output<Optional<DeploymentGroupEcsService>> ecsService() {
+        return Codegen.optional(this.ecsService);
     }
     /**
      * Single configuration block of the load balancer to use in a blue/green deployment (documented below).
@@ -252,8 +253,8 @@ public class DeploymentGroup extends com.pulumi.resources.CustomResource {
      * @return Single configuration block of the load balancer to use in a blue/green deployment (documented below).
      * 
      */
-    public Output</* @Nullable */ DeploymentGroupLoadBalancerInfo> loadBalancerInfo() {
-        return this.loadBalancerInfo;
+    public Output<Optional<DeploymentGroupLoadBalancerInfo>> loadBalancerInfo() {
+        return Codegen.optional(this.loadBalancerInfo);
     }
     /**
      * On premise tag filters associated with the group. See the AWS docs for details.
@@ -266,8 +267,8 @@ public class DeploymentGroup extends com.pulumi.resources.CustomResource {
      * @return On premise tag filters associated with the group. See the AWS docs for details.
      * 
      */
-    public Output</* @Nullable */ List<DeploymentGroupOnPremisesInstanceTagFilter>> onPremisesInstanceTagFilters() {
-        return this.onPremisesInstanceTagFilters;
+    public Output<Optional<List<DeploymentGroupOnPremisesInstanceTagFilter>>> onPremisesInstanceTagFilters() {
+        return Codegen.optional(this.onPremisesInstanceTagFilters);
     }
     /**
      * The service role ARN that allows deployments.
@@ -294,8 +295,8 @@ public class DeploymentGroup extends com.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .
@@ -322,8 +323,8 @@ public class DeploymentGroup extends com.pulumi.resources.CustomResource {
      * @return Configuration block(s) of the triggers for the deployment group (documented below).
      * 
      */
-    public Output</* @Nullable */ List<DeploymentGroupTriggerConfiguration>> triggerConfigurations() {
-        return this.triggerConfigurations;
+    public Output<Optional<List<DeploymentGroupTriggerConfiguration>>> triggerConfigurations() {
+        return Codegen.optional(this.triggerConfigurations);
     }
 
     /**

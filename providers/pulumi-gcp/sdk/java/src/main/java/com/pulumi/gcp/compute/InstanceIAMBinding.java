@@ -13,6 +13,7 @@ import com.pulumi.gcp.compute.inputs.InstanceIAMBindingState;
 import com.pulumi.gcp.compute.outputs.InstanceIAMBindingCondition;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -76,8 +77,8 @@ public class InstanceIAMBinding extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ InstanceIAMBindingCondition> condition() {
-        return this.condition;
+    public Output<Optional<InstanceIAMBindingCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * (Computed) The etag of the IAM policy.

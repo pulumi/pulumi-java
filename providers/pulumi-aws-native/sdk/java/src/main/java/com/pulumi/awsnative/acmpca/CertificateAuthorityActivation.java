@@ -10,6 +10,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -57,8 +58,8 @@ public class CertificateAuthorityActivation extends com.pulumi.resources.CustomR
      * @return Certificate chain for the Certificate Authority certificate.
      * 
      */
-    public Output</* @Nullable */ String> certificateChain() {
-        return this.certificateChain;
+    public Output<Optional<String>> certificateChain() {
+        return Codegen.optional(this.certificateChain);
     }
     /**
      * The complete certificate chain, including the Certificate Authority certificate.
@@ -85,8 +86,8 @@ public class CertificateAuthorityActivation extends com.pulumi.resources.CustomR
      * @return The status of the Certificate Authority.
      * 
      */
-    public Output</* @Nullable */ String> status() {
-        return this.status;
+    public Output<Optional<String>> status() {
+        return Codegen.optional(this.status);
     }
 
     /**

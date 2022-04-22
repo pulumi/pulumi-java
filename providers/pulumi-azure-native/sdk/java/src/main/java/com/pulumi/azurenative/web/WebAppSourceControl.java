@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -41,8 +42,8 @@ public class WebAppSourceControl extends com.pulumi.resources.CustomResource {
      * @return Name of branch to use for deployment.
      * 
      */
-    public Output</* @Nullable */ String> branch() {
-        return this.branch;
+    public Output<Optional<String>> branch() {
+        return Codegen.optional(this.branch);
     }
     /**
      * &lt;code&gt;true&lt;/code&gt; to enable deployment rollback; otherwise, &lt;code&gt;false&lt;/code&gt;.
@@ -55,8 +56,8 @@ public class WebAppSourceControl extends com.pulumi.resources.CustomResource {
      * @return &lt;code&gt;true&lt;/code&gt; to enable deployment rollback; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
-    public Output</* @Nullable */ Boolean> deploymentRollbackEnabled() {
-        return this.deploymentRollbackEnabled;
+    public Output<Optional<Boolean>> deploymentRollbackEnabled() {
+        return Codegen.optional(this.deploymentRollbackEnabled);
     }
     /**
      * If GitHub Action is selected, than the associated configuration.
@@ -69,8 +70,8 @@ public class WebAppSourceControl extends com.pulumi.resources.CustomResource {
      * @return If GitHub Action is selected, than the associated configuration.
      * 
      */
-    public Output</* @Nullable */ GitHubActionConfigurationResponse> gitHubActionConfiguration() {
-        return this.gitHubActionConfiguration;
+    public Output<Optional<GitHubActionConfigurationResponse>> gitHubActionConfiguration() {
+        return Codegen.optional(this.gitHubActionConfiguration);
     }
     /**
      * &lt;code&gt;true&lt;/code&gt; if this is deployed via GitHub action.
@@ -83,8 +84,8 @@ public class WebAppSourceControl extends com.pulumi.resources.CustomResource {
      * @return &lt;code&gt;true&lt;/code&gt; if this is deployed via GitHub action.
      * 
      */
-    public Output</* @Nullable */ Boolean> isGitHubAction() {
-        return this.isGitHubAction;
+    public Output<Optional<Boolean>> isGitHubAction() {
+        return Codegen.optional(this.isGitHubAction);
     }
     /**
      * &lt;code&gt;true&lt;/code&gt; to limit to manual integration; &lt;code&gt;false&lt;/code&gt; to enable continuous integration (which configures webhooks into online repos like GitHub).
@@ -97,8 +98,8 @@ public class WebAppSourceControl extends com.pulumi.resources.CustomResource {
      * @return &lt;code&gt;true&lt;/code&gt; to limit to manual integration; &lt;code&gt;false&lt;/code&gt; to enable continuous integration (which configures webhooks into online repos like GitHub).
      * 
      */
-    public Output</* @Nullable */ Boolean> isManualIntegration() {
-        return this.isManualIntegration;
+    public Output<Optional<Boolean>> isManualIntegration() {
+        return Codegen.optional(this.isManualIntegration);
     }
     /**
      * &lt;code&gt;true&lt;/code&gt; for a Mercurial repository; &lt;code&gt;false&lt;/code&gt; for a Git repository.
@@ -111,8 +112,8 @@ public class WebAppSourceControl extends com.pulumi.resources.CustomResource {
      * @return &lt;code&gt;true&lt;/code&gt; for a Mercurial repository; &lt;code&gt;false&lt;/code&gt; for a Git repository.
      * 
      */
-    public Output</* @Nullable */ Boolean> isMercurial() {
-        return this.isMercurial;
+    public Output<Optional<Boolean>> isMercurial() {
+        return Codegen.optional(this.isMercurial);
     }
     /**
      * Kind of resource.
@@ -125,8 +126,8 @@ public class WebAppSourceControl extends com.pulumi.resources.CustomResource {
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> kind() {
-        return this.kind;
+    public Output<Optional<String>> kind() {
+        return Codegen.optional(this.kind);
     }
     /**
      * Resource Name.
@@ -153,8 +154,8 @@ public class WebAppSourceControl extends com.pulumi.resources.CustomResource {
      * @return Repository or source control URL.
      * 
      */
-    public Output</* @Nullable */ String> repoUrl() {
-        return this.repoUrl;
+    public Output<Optional<String>> repoUrl() {
+        return Codegen.optional(this.repoUrl);
     }
     /**
      * Resource type.

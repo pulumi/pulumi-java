@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -71,8 +72,8 @@ public class VirtualHubBgpConnection extends com.pulumi.resources.CustomResource
      * @return Name of the connection.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * Peer ASN.
@@ -85,8 +86,8 @@ public class VirtualHubBgpConnection extends com.pulumi.resources.CustomResource
      * @return Peer ASN.
      * 
      */
-    public Output</* @Nullable */ Double> peerAsn() {
-        return this.peerAsn;
+    public Output<Optional<Double>> peerAsn() {
+        return Codegen.optional(this.peerAsn);
     }
     /**
      * Peer IP.
@@ -99,8 +100,8 @@ public class VirtualHubBgpConnection extends com.pulumi.resources.CustomResource
      * @return Peer IP.
      * 
      */
-    public Output</* @Nullable */ String> peerIp() {
-        return this.peerIp;
+    public Output<Optional<String>> peerIp() {
+        return Codegen.optional(this.peerIp);
     }
     /**
      * The provisioning state of the resource.

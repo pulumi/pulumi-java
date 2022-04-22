@@ -14,6 +14,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -33,68 +34,68 @@ public class AndroidMAMPolicyByName extends com.pulumi.resources.CustomResource 
     @Export(name="accessRecheckOfflineTimeout", type=String.class, parameters={})
     private Output</* @Nullable */ String> accessRecheckOfflineTimeout;
 
-    public Output</* @Nullable */ String> accessRecheckOfflineTimeout() {
-        return this.accessRecheckOfflineTimeout;
+    public Output<Optional<String>> accessRecheckOfflineTimeout() {
+        return Codegen.optional(this.accessRecheckOfflineTimeout);
     }
     @Export(name="accessRecheckOnlineTimeout", type=String.class, parameters={})
     private Output</* @Nullable */ String> accessRecheckOnlineTimeout;
 
-    public Output</* @Nullable */ String> accessRecheckOnlineTimeout() {
-        return this.accessRecheckOnlineTimeout;
+    public Output<Optional<String>> accessRecheckOnlineTimeout() {
+        return Codegen.optional(this.accessRecheckOnlineTimeout);
     }
     @Export(name="appSharingFromLevel", type=String.class, parameters={})
     private Output</* @Nullable */ String> appSharingFromLevel;
 
-    public Output</* @Nullable */ String> appSharingFromLevel() {
-        return this.appSharingFromLevel;
+    public Output<Optional<String>> appSharingFromLevel() {
+        return Codegen.optional(this.appSharingFromLevel);
     }
     @Export(name="appSharingToLevel", type=String.class, parameters={})
     private Output</* @Nullable */ String> appSharingToLevel;
 
-    public Output</* @Nullable */ String> appSharingToLevel() {
-        return this.appSharingToLevel;
+    public Output<Optional<String>> appSharingToLevel() {
+        return Codegen.optional(this.appSharingToLevel);
     }
     @Export(name="authentication", type=String.class, parameters={})
     private Output</* @Nullable */ String> authentication;
 
-    public Output</* @Nullable */ String> authentication() {
-        return this.authentication;
+    public Output<Optional<String>> authentication() {
+        return Codegen.optional(this.authentication);
     }
     @Export(name="clipboardSharingLevel", type=String.class, parameters={})
     private Output</* @Nullable */ String> clipboardSharingLevel;
 
-    public Output</* @Nullable */ String> clipboardSharingLevel() {
-        return this.clipboardSharingLevel;
+    public Output<Optional<String>> clipboardSharingLevel() {
+        return Codegen.optional(this.clipboardSharingLevel);
     }
     @Export(name="dataBackup", type=String.class, parameters={})
     private Output</* @Nullable */ String> dataBackup;
 
-    public Output</* @Nullable */ String> dataBackup() {
-        return this.dataBackup;
+    public Output<Optional<String>> dataBackup() {
+        return Codegen.optional(this.dataBackup);
     }
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     @Export(name="deviceCompliance", type=String.class, parameters={})
     private Output</* @Nullable */ String> deviceCompliance;
 
-    public Output</* @Nullable */ String> deviceCompliance() {
-        return this.deviceCompliance;
+    public Output<Optional<String>> deviceCompliance() {
+        return Codegen.optional(this.deviceCompliance);
     }
     @Export(name="fileEncryption", type=String.class, parameters={})
     private Output</* @Nullable */ String> fileEncryption;
 
-    public Output</* @Nullable */ String> fileEncryption() {
-        return this.fileEncryption;
+    public Output<Optional<String>> fileEncryption() {
+        return Codegen.optional(this.fileEncryption);
     }
     @Export(name="fileSharingSaveAs", type=String.class, parameters={})
     private Output</* @Nullable */ String> fileSharingSaveAs;
 
-    public Output</* @Nullable */ String> fileSharingSaveAs() {
-        return this.fileSharingSaveAs;
+    public Output<Optional<String>> fileSharingSaveAs() {
+        return Codegen.optional(this.fileSharingSaveAs);
     }
     @Export(name="friendlyName", type=String.class, parameters={})
     private Output<String> friendlyName;
@@ -125,14 +126,14 @@ public class AndroidMAMPolicyByName extends com.pulumi.resources.CustomResource 
      * @return Resource Location
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     @Export(name="managedBrowser", type=String.class, parameters={})
     private Output</* @Nullable */ String> managedBrowser;
 
-    public Output</* @Nullable */ String> managedBrowser() {
-        return this.managedBrowser;
+    public Output<Optional<String>> managedBrowser() {
+        return Codegen.optional(this.managedBrowser);
     }
     /**
      * Resource name
@@ -157,26 +158,26 @@ public class AndroidMAMPolicyByName extends com.pulumi.resources.CustomResource 
     @Export(name="offlineWipeTimeout", type=String.class, parameters={})
     private Output</* @Nullable */ String> offlineWipeTimeout;
 
-    public Output</* @Nullable */ String> offlineWipeTimeout() {
-        return this.offlineWipeTimeout;
+    public Output<Optional<String>> offlineWipeTimeout() {
+        return Codegen.optional(this.offlineWipeTimeout);
     }
     @Export(name="pin", type=String.class, parameters={})
     private Output</* @Nullable */ String> pin;
 
-    public Output</* @Nullable */ String> pin() {
-        return this.pin;
+    public Output<Optional<String>> pin() {
+        return Codegen.optional(this.pin);
     }
     @Export(name="pinNumRetry", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> pinNumRetry;
 
-    public Output</* @Nullable */ Integer> pinNumRetry() {
-        return this.pinNumRetry;
+    public Output<Optional<Integer>> pinNumRetry() {
+        return Codegen.optional(this.pinNumRetry);
     }
     @Export(name="screenCapture", type=String.class, parameters={})
     private Output</* @Nullable */ String> screenCapture;
 
-    public Output</* @Nullable */ String> screenCapture() {
-        return this.screenCapture;
+    public Output<Optional<String>> screenCapture() {
+        return Codegen.optional(this.screenCapture);
     }
     /**
      * Resource Tags
@@ -189,8 +190,8 @@ public class AndroidMAMPolicyByName extends com.pulumi.resources.CustomResource 
      * @return Resource Tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type

@@ -16,6 +16,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class FileShare extends com.pulumi.resources.CustomResource {
      * @return Access tier for specific share. GpV2 account can choose between TransactionOptimized (default), Hot, and Cool. FileStorage account can choose Premium.
      * 
      */
-    public Output</* @Nullable */ String> accessTier() {
-        return this.accessTier;
+    public Output<Optional<String>> accessTier() {
+        return Codegen.optional(this.accessTier);
     }
     /**
      * Indicates the last modification time for share access tier.
@@ -116,8 +117,8 @@ public class FileShare extends com.pulumi.resources.CustomResource {
      * @return The authentication protocol that is used for the file share. Can only be specified when creating a share.
      * 
      */
-    public Output</* @Nullable */ String> enabledProtocols() {
-        return this.enabledProtocols;
+    public Output<Optional<String>> enabledProtocols() {
+        return Codegen.optional(this.enabledProtocols);
     }
     /**
      * Resource Etag.
@@ -158,8 +159,8 @@ public class FileShare extends com.pulumi.resources.CustomResource {
      * @return A name-value pair to associate with the share as metadata.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> metadata() {
-        return this.metadata;
+    public Output<Optional<Map<String,String>>> metadata() {
+        return Codegen.optional(this.metadata);
     }
     /**
      * The name of the resource
@@ -200,8 +201,8 @@ public class FileShare extends com.pulumi.resources.CustomResource {
      * @return The property is for NFS share only. The default is NoRootSquash.
      * 
      */
-    public Output</* @Nullable */ String> rootSquash() {
-        return this.rootSquash;
+    public Output<Optional<String>> rootSquash() {
+        return Codegen.optional(this.rootSquash);
     }
     /**
      * The maximum size of the share, in gigabytes. Must be greater than 0, and less than or equal to 5TB (5120). For Large File Shares, the maximum size is 102400.
@@ -214,8 +215,8 @@ public class FileShare extends com.pulumi.resources.CustomResource {
      * @return The maximum size of the share, in gigabytes. Must be greater than 0, and less than or equal to 5TB (5120). For Large File Shares, the maximum size is 102400.
      * 
      */
-    public Output</* @Nullable */ Integer> shareQuota() {
-        return this.shareQuota;
+    public Output<Optional<Integer>> shareQuota() {
+        return Codegen.optional(this.shareQuota);
     }
     /**
      * The approximate size of the data stored on the share. Note that this value may not include all recently created or recently resized files.

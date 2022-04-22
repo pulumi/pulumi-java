@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -72,8 +73,8 @@ public class Repository extends com.pulumi.resources.CustomResource {
      * @return The description of the repository.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The domain that contains the created repository.
@@ -114,8 +115,8 @@ public class Repository extends com.pulumi.resources.CustomResource {
      * @return An array of external connections associated with the repository. Only one external connection can be set per repository. see External Connections.
      * 
      */
-    public Output</* @Nullable */ RepositoryExternalConnections> externalConnections() {
-        return this.externalConnections;
+    public Output<Optional<RepositoryExternalConnections>> externalConnections() {
+        return Codegen.optional(this.externalConnections);
     }
     /**
      * The name of the repository to create.
@@ -142,8 +143,8 @@ public class Repository extends com.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .
@@ -170,8 +171,8 @@ public class Repository extends com.pulumi.resources.CustomResource {
      * @return A list of upstream repositories to associate with the repository. The order of the upstream repositories in the list determines their priority order when AWS CodeArtifact looks for a requested package version. see Upstream
      * 
      */
-    public Output</* @Nullable */ List<RepositoryUpstream>> upstreams() {
-        return this.upstreams;
+    public Output<Optional<List<RepositoryUpstream>>> upstreams() {
+        return Codegen.optional(this.upstreams);
     }
 
     /**

@@ -16,6 +16,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -77,8 +78,8 @@ public class DBProxy extends com.pulumi.resources.CustomResource {
      * @return Whether the proxy includes detailed information about SQL statements in its logs.
      * 
      */
-    public Output</* @Nullable */ Boolean> debugLogging() {
-        return this.debugLogging;
+    public Output<Optional<Boolean>> debugLogging() {
+        return Codegen.optional(this.debugLogging);
     }
     /**
      * The endpoint that you can use to connect to the proxy. You include the endpoint value in the connection string for a database client application.
@@ -119,8 +120,8 @@ public class DBProxy extends com.pulumi.resources.CustomResource {
      * @return The number of seconds that a connection to the proxy can be inactive before the proxy disconnects it.
      * 
      */
-    public Output</* @Nullable */ Integer> idleClientTimeout() {
-        return this.idleClientTimeout;
+    public Output<Optional<Integer>> idleClientTimeout() {
+        return Codegen.optional(this.idleClientTimeout);
     }
     /**
      * A Boolean parameter that specifies whether Transport Layer Security (TLS) encryption is required for connections to the proxy.
@@ -133,8 +134,8 @@ public class DBProxy extends com.pulumi.resources.CustomResource {
      * @return A Boolean parameter that specifies whether Transport Layer Security (TLS) encryption is required for connections to the proxy.
      * 
      */
-    public Output</* @Nullable */ Boolean> requireTLS() {
-        return this.requireTLS;
+    public Output<Optional<Boolean>> requireTLS() {
+        return Codegen.optional(this.requireTLS);
     }
     /**
      * The Amazon Resource Name (ARN) of the IAM role that the proxy uses to access secrets in AWS Secrets Manager.
@@ -161,8 +162,8 @@ public class DBProxy extends com.pulumi.resources.CustomResource {
      * @return An optional set of key-value pairs to associate arbitrary data of your choosing with the proxy.
      * 
      */
-    public Output</* @Nullable */ List<DBProxyTagFormat>> tags() {
-        return this.tags;
+    public Output<Optional<List<DBProxyTagFormat>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * VPC security group IDs to associate with the new proxy.
@@ -175,8 +176,8 @@ public class DBProxy extends com.pulumi.resources.CustomResource {
      * @return VPC security group IDs to associate with the new proxy.
      * 
      */
-    public Output</* @Nullable */ List<String>> vpcSecurityGroupIds() {
-        return this.vpcSecurityGroupIds;
+    public Output<Optional<List<String>>> vpcSecurityGroupIds() {
+        return Codegen.optional(this.vpcSecurityGroupIds);
     }
     /**
      * VPC subnet IDs to associate with the new proxy.

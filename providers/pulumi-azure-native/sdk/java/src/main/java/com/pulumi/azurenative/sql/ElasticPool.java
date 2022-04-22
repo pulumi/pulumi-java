@@ -17,6 +17,7 @@ import java.lang.Double;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -75,8 +76,8 @@ public class ElasticPool extends com.pulumi.resources.CustomResource {
      * @return The license type to apply for this elastic pool.
      * 
      */
-    public Output</* @Nullable */ String> licenseType() {
-        return this.licenseType;
+    public Output<Optional<String>> licenseType() {
+        return Codegen.optional(this.licenseType);
     }
     /**
      * Resource location.
@@ -103,8 +104,8 @@ public class ElasticPool extends com.pulumi.resources.CustomResource {
      * @return Maintenance configuration id assigned to the elastic pool. This configuration defines the period when the maintenance updates will will occur.
      * 
      */
-    public Output</* @Nullable */ String> maintenanceConfigurationId() {
-        return this.maintenanceConfigurationId;
+    public Output<Optional<String>> maintenanceConfigurationId() {
+        return Codegen.optional(this.maintenanceConfigurationId);
     }
     /**
      * The storage limit for the database elastic pool in bytes.
@@ -117,8 +118,8 @@ public class ElasticPool extends com.pulumi.resources.CustomResource {
      * @return The storage limit for the database elastic pool in bytes.
      * 
      */
-    public Output</* @Nullable */ Double> maxSizeBytes() {
-        return this.maxSizeBytes;
+    public Output<Optional<Double>> maxSizeBytes() {
+        return Codegen.optional(this.maxSizeBytes);
     }
     /**
      * Resource name.
@@ -145,8 +146,8 @@ public class ElasticPool extends com.pulumi.resources.CustomResource {
      * @return The per database settings for the elastic pool.
      * 
      */
-    public Output</* @Nullable */ ElasticPoolPerDatabaseSettingsResponse> perDatabaseSettings() {
-        return this.perDatabaseSettings;
+    public Output<Optional<ElasticPoolPerDatabaseSettingsResponse>> perDatabaseSettings() {
+        return Codegen.optional(this.perDatabaseSettings);
     }
     /**
      * The elastic pool SKU.
@@ -163,8 +164,8 @@ public class ElasticPool extends com.pulumi.resources.CustomResource {
      * The list of SKUs may vary by region and support offer. To determine the SKUs (including the SKU name, tier/edition, family, and capacity) that are available to your subscription in an Azure region, use the `Capabilities_ListByLocation` REST API or the following command:
      * 
      */
-    public Output</* @Nullable */ SkuResponse> sku() {
-        return this.sku;
+    public Output<Optional<SkuResponse>> sku() {
+        return Codegen.optional(this.sku);
     }
     /**
      * The state of the elastic pool.
@@ -191,8 +192,8 @@ public class ElasticPool extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type.
@@ -219,8 +220,8 @@ public class ElasticPool extends com.pulumi.resources.CustomResource {
      * @return Whether or not this elastic pool is zone redundant, which means the replicas of this elastic pool will be spread across multiple availability zones.
      * 
      */
-    public Output</* @Nullable */ Boolean> zoneRedundant() {
-        return this.zoneRedundant;
+    public Output<Optional<Boolean>> zoneRedundant() {
+        return Codegen.optional(this.zoneRedundant);
     }
 
     /**

@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -71,8 +72,8 @@ public class GlobalCluster extends com.pulumi.resources.CustomResource {
      * @return Name for an automatically created database on cluster creation.
      * 
      */
-    public Output</* @Nullable */ String> databaseName() {
-        return this.databaseName;
+    public Output<Optional<String>> databaseName() {
+        return Codegen.optional(this.databaseName);
     }
     /**
      * If the Global Cluster should have deletion protection enabled. The database can&#39;t be deleted when this value is set to `true`. The default is `false`.
@@ -85,8 +86,8 @@ public class GlobalCluster extends com.pulumi.resources.CustomResource {
      * @return If the Global Cluster should have deletion protection enabled. The database can&#39;t be deleted when this value is set to `true`. The default is `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> deletionProtection() {
-        return this.deletionProtection;
+    public Output<Optional<Boolean>> deletionProtection() {
+        return Codegen.optional(this.deletionProtection);
     }
     @Export(name="engine", type=String.class, parameters={})
     private Output<String> engine;

@@ -11,6 +11,7 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.apigee.EnvironmentArgs;
 import com.pulumi.gcp.apigee.inputs.EnvironmentState;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -50,8 +51,8 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return Description of the environment.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Display name of the environment.
@@ -64,8 +65,8 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return Display name of the environment.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * The resource ID of the environment.

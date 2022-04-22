@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -52,8 +53,8 @@ public class PublicKey extends com.pulumi.resources.CustomResource {
      * @return An optional comment about the public key.
      * 
      */
-    public Output</* @Nullable */ String> comment() {
-        return this.comment;
+    public Output<Optional<String>> comment() {
+        return Codegen.optional(this.comment);
     }
     /**
      * The encoded public key that you want to add to CloudFront to use with features like field-level encryption.

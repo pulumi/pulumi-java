@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class PolicyExemption extends com.pulumi.resources.CustomResource {
      * @return The description of the policy exemption.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The display name of the policy exemption.
@@ -58,8 +59,8 @@ public class PolicyExemption extends com.pulumi.resources.CustomResource {
      * @return The display name of the policy exemption.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * The policy exemption category. Possible values are Waiver and Mitigated.
@@ -86,8 +87,8 @@ public class PolicyExemption extends com.pulumi.resources.CustomResource {
      * @return The expiration date and time (in UTC ISO 8601 format yyyy-MM-ddTHH:mm:ssZ) of the policy exemption.
      * 
      */
-    public Output</* @Nullable */ String> expiresOn() {
-        return this.expiresOn;
+    public Output<Optional<String>> expiresOn() {
+        return Codegen.optional(this.expiresOn);
     }
     /**
      * The policy exemption metadata. Metadata is an open ended object and is typically a collection of key value pairs.
@@ -100,8 +101,8 @@ public class PolicyExemption extends com.pulumi.resources.CustomResource {
      * @return The policy exemption metadata. Metadata is an open ended object and is typically a collection of key value pairs.
      * 
      */
-    public Output</* @Nullable */ Object> metadata() {
-        return this.metadata;
+    public Output<Optional<Object>> metadata() {
+        return Codegen.optional(this.metadata);
     }
     /**
      * The name of the policy exemption.
@@ -142,8 +143,8 @@ public class PolicyExemption extends com.pulumi.resources.CustomResource {
      * @return The policy definition reference ID list when the associated policy assignment is an assignment of a policy set definition.
      * 
      */
-    public Output</* @Nullable */ List<String>> policyDefinitionReferenceIds() {
-        return this.policyDefinitionReferenceIds;
+    public Output<Optional<List<String>>> policyDefinitionReferenceIds() {
+        return Codegen.optional(this.policyDefinitionReferenceIds);
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.

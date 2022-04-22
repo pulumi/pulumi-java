@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -33,8 +34,8 @@ public class ScheduledAction extends com.pulumi.resources.CustomResource {
      * @return If true, the schedule is enabled. If false, the scheduled action does not trigger.
      * 
      */
-    public Output</* @Nullable */ Boolean> enable() {
-        return this.enable;
+    public Output<Optional<Boolean>> enable() {
+        return Codegen.optional(this.enable);
     }
     /**
      * The end time in UTC of the scheduled action. After this time, the scheduled action does not trigger.
@@ -47,8 +48,8 @@ public class ScheduledAction extends com.pulumi.resources.CustomResource {
      * @return The end time in UTC of the scheduled action. After this time, the scheduled action does not trigger.
      * 
      */
-    public Output</* @Nullable */ String> endTime() {
-        return this.endTime;
+    public Output<Optional<String>> endTime() {
+        return Codegen.optional(this.endTime);
     }
     /**
      * The IAM role to assume to run the target action.
@@ -61,8 +62,8 @@ public class ScheduledAction extends com.pulumi.resources.CustomResource {
      * @return The IAM role to assume to run the target action.
      * 
      */
-    public Output</* @Nullable */ String> iamRole() {
-        return this.iamRole;
+    public Output<Optional<String>> iamRole() {
+        return Codegen.optional(this.iamRole);
     }
     /**
      * List of times when the scheduled action will run.
@@ -89,8 +90,8 @@ public class ScheduledAction extends com.pulumi.resources.CustomResource {
      * @return The schedule in `at( )` or `cron( )` format.
      * 
      */
-    public Output</* @Nullable */ String> schedule() {
-        return this.schedule;
+    public Output<Optional<String>> schedule() {
+        return Codegen.optional(this.schedule);
     }
     /**
      * The description of the scheduled action.
@@ -103,8 +104,8 @@ public class ScheduledAction extends com.pulumi.resources.CustomResource {
      * @return The description of the scheduled action.
      * 
      */
-    public Output</* @Nullable */ String> scheduledActionDescription() {
-        return this.scheduledActionDescription;
+    public Output<Optional<String>> scheduledActionDescription() {
+        return Codegen.optional(this.scheduledActionDescription);
     }
     /**
      * The name of the scheduled action. The name must be unique within an account.
@@ -131,8 +132,8 @@ public class ScheduledAction extends com.pulumi.resources.CustomResource {
      * @return The start time in UTC of the scheduled action. Before this time, the scheduled action does not trigger.
      * 
      */
-    public Output</* @Nullable */ String> startTime() {
-        return this.startTime;
+    public Output<Optional<String>> startTime() {
+        return Codegen.optional(this.startTime);
     }
     /**
      * The state of the scheduled action.
@@ -159,8 +160,8 @@ public class ScheduledAction extends com.pulumi.resources.CustomResource {
      * @return A JSON format string of the Amazon Redshift API operation with input parameters.
      * 
      */
-    public Output</* @Nullable */ ScheduledActionType> targetAction() {
-        return this.targetAction;
+    public Output<Optional<ScheduledActionType>> targetAction() {
+        return Codegen.optional(this.targetAction);
     }
 
     /**

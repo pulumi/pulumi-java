@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class Setting extends com.pulumi.resources.CustomResource {
      * @return Array of scopes with additional details used by Cost Management in the Azure portal.
      * 
      */
-    public Output</* @Nullable */ List<SettingsPropertiesResponseCache>> cache() {
-        return this.cache;
+    public Output<Optional<List<SettingsPropertiesResponseCache>>> cache() {
+        return Codegen.optional(this.cache);
     }
     /**
      * Resource kind.
@@ -99,8 +100,8 @@ public class Setting extends com.pulumi.resources.CustomResource {
      * @return Indicates what scope Cost Management in the Azure portal should default to. Allowed values: LastUsed.
      * 
      */
-    public Output</* @Nullable */ String> startOn() {
-        return this.startOn;
+    public Output<Optional<String>> startOn() {
+        return Codegen.optional(this.startOn);
     }
     /**
      * Resource type.

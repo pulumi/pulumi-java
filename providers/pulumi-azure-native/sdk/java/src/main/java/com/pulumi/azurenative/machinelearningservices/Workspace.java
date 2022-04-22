@@ -23,6 +23,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -53,8 +54,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return The flag to indicate whether to allow public access when behind VNet.
      * 
      */
-    public Output</* @Nullable */ Boolean> allowPublicAccessWhenBehindVnet() {
-        return this.allowPublicAccessWhenBehindVnet;
+    public Output<Optional<Boolean>> allowPublicAccessWhenBehindVnet() {
+        return Codegen.optional(this.allowPublicAccessWhenBehindVnet);
     }
     /**
      * ARM id of the application insights associated with this workspace. This cannot be changed once the workspace has been created
@@ -67,8 +68,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return ARM id of the application insights associated with this workspace. This cannot be changed once the workspace has been created
      * 
      */
-    public Output</* @Nullable */ String> applicationInsights() {
-        return this.applicationInsights;
+    public Output<Optional<String>> applicationInsights() {
+        return Codegen.optional(this.applicationInsights);
     }
     /**
      * ARM id of the container registry associated with this workspace. This cannot be changed once the workspace has been created
@@ -81,8 +82,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return ARM id of the container registry associated with this workspace. This cannot be changed once the workspace has been created
      * 
      */
-    public Output</* @Nullable */ String> containerRegistry() {
-        return this.containerRegistry;
+    public Output<Optional<String>> containerRegistry() {
+        return Codegen.optional(this.containerRegistry);
     }
     /**
      * The description of this workspace.
@@ -95,8 +96,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return The description of this workspace.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Url for the discovery service to identify regional endpoints for machine learning experimentation services
@@ -109,8 +110,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return Url for the discovery service to identify regional endpoints for machine learning experimentation services
      * 
      */
-    public Output</* @Nullable */ String> discoveryUrl() {
-        return this.discoveryUrl;
+    public Output<Optional<String>> discoveryUrl() {
+        return Codegen.optional(this.discoveryUrl);
     }
     /**
      * The encryption settings of Azure ML workspace.
@@ -123,8 +124,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return The encryption settings of Azure ML workspace.
      * 
      */
-    public Output</* @Nullable */ EncryptionPropertyResponse> encryption() {
-        return this.encryption;
+    public Output<Optional<EncryptionPropertyResponse>> encryption() {
+        return Codegen.optional(this.encryption);
     }
     /**
      * The friendly name for this workspace. This name in mutable
@@ -137,8 +138,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return The friendly name for this workspace. This name in mutable
      * 
      */
-    public Output</* @Nullable */ String> friendlyName() {
-        return this.friendlyName;
+    public Output<Optional<String>> friendlyName() {
+        return Codegen.optional(this.friendlyName);
     }
     /**
      * The flag to signal HBI data in the workspace and reduce diagnostic data collected by the service
@@ -151,8 +152,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return The flag to signal HBI data in the workspace and reduce diagnostic data collected by the service
      * 
      */
-    public Output</* @Nullable */ Boolean> hbiWorkspace() {
-        return this.hbiWorkspace;
+    public Output<Optional<Boolean>> hbiWorkspace() {
+        return Codegen.optional(this.hbiWorkspace);
     }
     /**
      * The identity of the resource.
@@ -165,8 +166,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return The identity of the resource.
      * 
      */
-    public Output</* @Nullable */ IdentityResponse> identity() {
-        return this.identity;
+    public Output<Optional<IdentityResponse>> identity() {
+        return Codegen.optional(this.identity);
     }
     /**
      * The compute name for image build
@@ -179,8 +180,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return The compute name for image build
      * 
      */
-    public Output</* @Nullable */ String> imageBuildCompute() {
-        return this.imageBuildCompute;
+    public Output<Optional<String>> imageBuildCompute() {
+        return Codegen.optional(this.imageBuildCompute);
     }
     /**
      * ARM id of the key vault associated with this workspace. This cannot be changed once the workspace has been created
@@ -193,8 +194,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return ARM id of the key vault associated with this workspace. This cannot be changed once the workspace has been created
      * 
      */
-    public Output</* @Nullable */ String> keyVault() {
-        return this.keyVault;
+    public Output<Optional<String>> keyVault() {
+        return Codegen.optional(this.keyVault);
     }
     /**
      * Specifies the location of the resource.
@@ -207,8 +208,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return Specifies the location of the resource.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * Specifies the name of the resource.
@@ -249,8 +250,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return The user assigned identity resource id that represents the workspace identity.
      * 
      */
-    public Output</* @Nullable */ String> primaryUserAssignedIdentity() {
-        return this.primaryUserAssignedIdentity;
+    public Output<Optional<String>> primaryUserAssignedIdentity() {
+        return Codegen.optional(this.primaryUserAssignedIdentity);
     }
     /**
      * The list of private endpoint connections in the workspace.
@@ -305,8 +306,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return The service managed resource settings.
      * 
      */
-    public Output</* @Nullable */ ServiceManagedResourcesSettingsResponse> serviceManagedResourcesSettings() {
-        return this.serviceManagedResourcesSettings;
+    public Output<Optional<ServiceManagedResourcesSettingsResponse>> serviceManagedResourcesSettings() {
+        return Codegen.optional(this.serviceManagedResourcesSettings);
     }
     /**
      * The name of the managed resource group created by workspace RP in customer subscription if the workspace is CMK workspace
@@ -333,8 +334,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return The list of shared private link resources in this workspace.
      * 
      */
-    public Output</* @Nullable */ List<SharedPrivateLinkResourceResponse>> sharedPrivateLinkResources() {
-        return this.sharedPrivateLinkResources;
+    public Output<Optional<List<SharedPrivateLinkResourceResponse>>> sharedPrivateLinkResources() {
+        return Codegen.optional(this.sharedPrivateLinkResources);
     }
     /**
      * The sku of the workspace.
@@ -347,8 +348,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return The sku of the workspace.
      * 
      */
-    public Output</* @Nullable */ SkuResponse> sku() {
-        return this.sku;
+    public Output<Optional<SkuResponse>> sku() {
+        return Codegen.optional(this.sku);
     }
     /**
      * ARM id of the storage account associated with this workspace. This cannot be changed once the workspace has been created
@@ -361,8 +362,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return ARM id of the storage account associated with this workspace. This cannot be changed once the workspace has been created
      * 
      */
-    public Output</* @Nullable */ String> storageAccount() {
-        return this.storageAccount;
+    public Output<Optional<String>> storageAccount() {
+        return Codegen.optional(this.storageAccount);
     }
     /**
      * Read only system data
@@ -389,8 +390,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return Contains resource tags defined as key/value pairs.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Specifies the type of the resource.

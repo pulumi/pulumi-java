@@ -14,6 +14,7 @@ import com.pulumi.gcp.bigquery.outputs.RoutineArgument;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -59,8 +60,8 @@ public class Routine extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<RoutineArgument>> arguments() {
-        return this.arguments;
+    public Output<Optional<List<RoutineArgument>>> arguments() {
+        return Codegen.optional(this.arguments);
     }
     /**
      * The time when this routine was created, in milliseconds since the epoch.
@@ -117,8 +118,8 @@ public class Routine extends com.pulumi.resources.CustomResource {
      * @return The description of the routine if defined.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The determinism level of the JavaScript UDF if defined.
@@ -133,8 +134,8 @@ public class Routine extends com.pulumi.resources.CustomResource {
      * Possible values are `DETERMINISM_LEVEL_UNSPECIFIED`, `DETERMINISTIC`, and `NOT_DETERMINISTIC`.
      * 
      */
-    public Output</* @Nullable */ String> determinismLevel() {
-        return this.determinismLevel;
+    public Output<Optional<String>> determinismLevel() {
+        return Codegen.optional(this.determinismLevel);
     }
     /**
      * Optional. If language = &#34;JAVASCRIPT&#34;, this field stores the path of the
@@ -149,8 +150,8 @@ public class Routine extends com.pulumi.resources.CustomResource {
      * imported JAVASCRIPT libraries.
      * 
      */
-    public Output</* @Nullable */ List<String>> importedLibraries() {
-        return this.importedLibraries;
+    public Output<Optional<List<String>>> importedLibraries() {
+        return Codegen.optional(this.importedLibraries);
     }
     /**
      * The language of the routine.
@@ -165,8 +166,8 @@ public class Routine extends com.pulumi.resources.CustomResource {
      * Possible values are `SQL` and `JAVASCRIPT`.
      * 
      */
-    public Output</* @Nullable */ String> language() {
-        return this.language;
+    public Output<Optional<String>> language() {
+        return Codegen.optional(this.language);
     }
     /**
      * The time when this routine was modified, in milliseconds since the epoch.
@@ -215,8 +216,8 @@ public class Routine extends com.pulumi.resources.CustomResource {
      * be cast to match the column types specificed in return table type, at query time.
      * 
      */
-    public Output</* @Nullable */ String> returnTableType() {
-        return this.returnTableType;
+    public Output<Optional<String>> returnTableType() {
+        return Codegen.optional(this.returnTableType);
     }
     /**
      * A JSON schema for the return type. Optional if language = &#34;SQL&#34;; required otherwise.
@@ -245,8 +246,8 @@ public class Routine extends com.pulumi.resources.CustomResource {
      * the schema as returned by the API.
      * 
      */
-    public Output</* @Nullable */ String> returnType() {
-        return this.returnType;
+    public Output<Optional<String>> returnType() {
+        return Codegen.optional(this.returnType);
     }
     /**
      * The ID of the the routine. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.
@@ -275,8 +276,8 @@ public class Routine extends com.pulumi.resources.CustomResource {
      * Possible values are `SCALAR_FUNCTION`, `PROCEDURE`, and `TABLE_VALUED_FUNCTION`.
      * 
      */
-    public Output</* @Nullable */ String> routineType() {
-        return this.routineType;
+    public Output<Optional<String>> routineType() {
+        return Codegen.optional(this.routineType);
     }
 
     /**

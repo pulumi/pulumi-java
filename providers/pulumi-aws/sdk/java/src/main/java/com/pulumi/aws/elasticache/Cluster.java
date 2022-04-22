@@ -16,6 +16,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -221,8 +222,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Name of your final cluster snapshot. If omitted, no final snapshot will be made.
      * 
      */
-    public Output</* @Nullable */ String> finalSnapshotIdentifier() {
-        return this.finalSnapshotIdentifier;
+    public Output<Optional<String>> finalSnapshotIdentifier() {
+        return Codegen.optional(this.finalSnapshotIdentifier);
     }
     /**
      * Specifies the weekly time range for when maintenance
@@ -267,8 +268,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return ARN of an SNS topic to send ElastiCache notifications to. Example: `arn:aws:sns:us-east-1:012345678999:my_sns_topic`.
      * 
      */
-    public Output</* @Nullable */ String> notificationTopicArn() {
-        return this.notificationTopicArn;
+    public Output<Optional<String>> notificationTopicArn() {
+        return Codegen.optional(this.notificationTopicArn);
     }
     /**
      * The initial number of cache nodes that the cache cluster will have. For Redis, this value must be 1. For Memcached, this value must be between 1 and 40. If this number is reduced on subsequent runs, the highest numbered nodes will be removed.
@@ -323,8 +324,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return List of the Availability Zones in which cache nodes are created. If you are creating your cluster in an Amazon VPC you can only locate nodes in Availability Zones that are associated with the subnets in the selected subnet group. The number of Availability Zones listed must equal the value of `num_cache_nodes`. If you want all the nodes in the same Availability Zone, use `availability_zone` instead, or repeat the Availability Zone multiple times in the list. Default: System chosen Availability Zones. Detecting drift of existing node availability zone is not currently supported. Updating this argument by itself to migrate existing node availability zones is not currently supported and will show a perpetual difference.
      * 
      */
-    public Output</* @Nullable */ List<String>> preferredAvailabilityZones() {
-        return this.preferredAvailabilityZones;
+    public Output<Optional<List<String>>> preferredAvailabilityZones() {
+        return Codegen.optional(this.preferredAvailabilityZones);
     }
     /**
      * ID of the replication group to which this cluster should belong. If this parameter is specified, the cluster is added to the specified replication group as a read replica; otherwise, the cluster is a standalone primary that is not part of any replication group.
@@ -379,8 +380,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Single-element string list containing an Amazon Resource Name (ARN) of a Redis RDB snapshot file stored in Amazon S3. The object name cannot contain any commas. Changing `snapshot_arns` forces a new resource.
      * 
      */
-    public Output</* @Nullable */ String> snapshotArns() {
-        return this.snapshotArns;
+    public Output<Optional<String>> snapshotArns() {
+        return Codegen.optional(this.snapshotArns);
     }
     /**
      * Name of a snapshot from which to restore data into the new node group. Changing `snapshot_name` forces a new resource.
@@ -393,8 +394,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Name of a snapshot from which to restore data into the new node group. Changing `snapshot_name` forces a new resource.
      * 
      */
-    public Output</* @Nullable */ String> snapshotName() {
-        return this.snapshotName;
+    public Output<Optional<String>> snapshotName() {
+        return Codegen.optional(this.snapshotName);
     }
     /**
      * Number of days for which ElastiCache will retain automatic cache cluster snapshots before deleting them. For example, if you set SnapshotRetentionLimit to 5, then a snapshot that was taken today will be retained for 5 days before being deleted. If the value of SnapshotRetentionLimit is set to zero (0), backups are turned off. Please note that setting a `snapshot_retention_limit` is not supported on cache.t1.micro cache nodes
@@ -407,8 +408,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Number of days for which ElastiCache will retain automatic cache cluster snapshots before deleting them. For example, if you set SnapshotRetentionLimit to 5, then a snapshot that was taken today will be retained for 5 days before being deleted. If the value of SnapshotRetentionLimit is set to zero (0), backups are turned off. Please note that setting a `snapshot_retention_limit` is not supported on cache.t1.micro cache nodes
      * 
      */
-    public Output</* @Nullable */ Integer> snapshotRetentionLimit() {
-        return this.snapshotRetentionLimit;
+    public Output<Optional<Integer>> snapshotRetentionLimit() {
+        return Codegen.optional(this.snapshotRetentionLimit);
     }
     /**
      * Daily time range (in UTC) during which ElastiCache will begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00
@@ -449,8 +450,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;

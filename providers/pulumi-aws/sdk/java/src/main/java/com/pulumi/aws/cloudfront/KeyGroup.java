@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -39,8 +40,8 @@ public class KeyGroup extends com.pulumi.resources.CustomResource {
      * @return A comment to describe the key group..
      * 
      */
-    public Output</* @Nullable */ String> comment() {
-        return this.comment;
+    public Output<Optional<String>> comment() {
+        return Codegen.optional(this.comment);
     }
     /**
      * The identifier for this version of the key group.

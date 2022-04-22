@@ -17,6 +17,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -34,26 +35,26 @@ public class DomainConfiguration extends com.pulumi.resources.CustomResource {
     @Export(name="authorizerConfig", type=DomainConfigurationAuthorizerConfig.class, parameters={})
     private Output</* @Nullable */ DomainConfigurationAuthorizerConfig> authorizerConfig;
 
-    public Output</* @Nullable */ DomainConfigurationAuthorizerConfig> authorizerConfig() {
-        return this.authorizerConfig;
+    public Output<Optional<DomainConfigurationAuthorizerConfig>> authorizerConfig() {
+        return Codegen.optional(this.authorizerConfig);
     }
     @Export(name="domainConfigurationName", type=String.class, parameters={})
     private Output</* @Nullable */ String> domainConfigurationName;
 
-    public Output</* @Nullable */ String> domainConfigurationName() {
-        return this.domainConfigurationName;
+    public Output<Optional<String>> domainConfigurationName() {
+        return Codegen.optional(this.domainConfigurationName);
     }
     @Export(name="domainConfigurationStatus", type=DomainConfigurationStatus.class, parameters={})
     private Output</* @Nullable */ DomainConfigurationStatus> domainConfigurationStatus;
 
-    public Output</* @Nullable */ DomainConfigurationStatus> domainConfigurationStatus() {
-        return this.domainConfigurationStatus;
+    public Output<Optional<DomainConfigurationStatus>> domainConfigurationStatus() {
+        return Codegen.optional(this.domainConfigurationStatus);
     }
     @Export(name="domainName", type=String.class, parameters={})
     private Output</* @Nullable */ String> domainName;
 
-    public Output</* @Nullable */ String> domainName() {
-        return this.domainName;
+    public Output<Optional<String>> domainName() {
+        return Codegen.optional(this.domainName);
     }
     @Export(name="domainType", type=DomainConfigurationDomainType.class, parameters={})
     private Output<DomainConfigurationDomainType> domainType;
@@ -64,8 +65,8 @@ public class DomainConfiguration extends com.pulumi.resources.CustomResource {
     @Export(name="serverCertificateArns", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> serverCertificateArns;
 
-    public Output</* @Nullable */ List<String>> serverCertificateArns() {
-        return this.serverCertificateArns;
+    public Output<Optional<List<String>>> serverCertificateArns() {
+        return Codegen.optional(this.serverCertificateArns);
     }
     @Export(name="serverCertificates", type=List.class, parameters={DomainConfigurationServerCertificateSummary.class})
     private Output<List<DomainConfigurationServerCertificateSummary>> serverCertificates;
@@ -76,20 +77,20 @@ public class DomainConfiguration extends com.pulumi.resources.CustomResource {
     @Export(name="serviceType", type=DomainConfigurationServiceType.class, parameters={})
     private Output</* @Nullable */ DomainConfigurationServiceType> serviceType;
 
-    public Output</* @Nullable */ DomainConfigurationServiceType> serviceType() {
-        return this.serviceType;
+    public Output<Optional<DomainConfigurationServiceType>> serviceType() {
+        return Codegen.optional(this.serviceType);
     }
     @Export(name="tags", type=List.class, parameters={DomainConfigurationTag.class})
     private Output</* @Nullable */ List<DomainConfigurationTag>> tags;
 
-    public Output</* @Nullable */ List<DomainConfigurationTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<DomainConfigurationTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     @Export(name="validationCertificateArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> validationCertificateArn;
 
-    public Output</* @Nullable */ String> validationCertificateArn() {
-        return this.validationCertificateArn;
+    public Output<Optional<String>> validationCertificateArn() {
+        return Codegen.optional(this.validationCertificateArn);
     }
 
     /**

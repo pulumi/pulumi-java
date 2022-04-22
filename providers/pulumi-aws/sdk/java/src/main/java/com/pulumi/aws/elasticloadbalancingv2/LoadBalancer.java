@@ -17,6 +17,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -52,8 +53,8 @@ public class LoadBalancer extends com.pulumi.resources.CustomResource {
      * @return An Access Logs block. Access Logs documented below.
      * 
      */
-    public Output</* @Nullable */ LoadBalancerAccessLogs> accessLogs() {
-        return this.accessLogs;
+    public Output<Optional<LoadBalancerAccessLogs>> accessLogs() {
+        return Codegen.optional(this.accessLogs);
     }
     /**
      * The ARN of the load balancer (matches `id`).
@@ -94,8 +95,8 @@ public class LoadBalancer extends com.pulumi.resources.CustomResource {
      * @return The ID of the customer owned ipv4 pool to use for this load balancer.
      * 
      */
-    public Output</* @Nullable */ String> customerOwnedIpv4Pool() {
-        return this.customerOwnedIpv4Pool;
+    public Output<Optional<String>> customerOwnedIpv4Pool() {
+        return Codegen.optional(this.customerOwnedIpv4Pool);
     }
     /**
      * Determines how the load balancer handles requests that might pose a security risk to an application due to HTTP desync. Valid values are `monitor`, `defensive` (default), `strictest`.
@@ -108,8 +109,8 @@ public class LoadBalancer extends com.pulumi.resources.CustomResource {
      * @return Determines how the load balancer handles requests that might pose a security risk to an application due to HTTP desync. Valid values are `monitor`, `defensive` (default), `strictest`.
      * 
      */
-    public Output</* @Nullable */ String> desyncMitigationMode() {
-        return this.desyncMitigationMode;
+    public Output<Optional<String>> desyncMitigationMode() {
+        return Codegen.optional(this.desyncMitigationMode);
     }
     /**
      * The DNS name of the load balancer.
@@ -136,8 +137,8 @@ public class LoadBalancer extends com.pulumi.resources.CustomResource {
      * @return Indicates whether HTTP headers with header fields that are not valid are removed by the load balancer (true) or routed to targets (false). The default is false. Elastic Load Balancing requires that message header names contain only alphanumeric characters and hyphens. Only valid for Load Balancers of type `application`.
      * 
      */
-    public Output</* @Nullable */ Boolean> dropInvalidHeaderFields() {
-        return this.dropInvalidHeaderFields;
+    public Output<Optional<Boolean>> dropInvalidHeaderFields() {
+        return Codegen.optional(this.dropInvalidHeaderFields);
     }
     /**
      * If true, cross-zone load balancing of the load balancer will be enabled.
@@ -152,8 +153,8 @@ public class LoadBalancer extends com.pulumi.resources.CustomResource {
      * This is a `network` load balancer feature. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableCrossZoneLoadBalancing() {
-        return this.enableCrossZoneLoadBalancing;
+    public Output<Optional<Boolean>> enableCrossZoneLoadBalancing() {
+        return Codegen.optional(this.enableCrossZoneLoadBalancing);
     }
     /**
      * If true, deletion of the load balancer will be disabled via
@@ -168,8 +169,8 @@ public class LoadBalancer extends com.pulumi.resources.CustomResource {
      * the AWS API. This will prevent this provider from deleting the load balancer. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableDeletionProtection() {
-        return this.enableDeletionProtection;
+    public Output<Optional<Boolean>> enableDeletionProtection() {
+        return Codegen.optional(this.enableDeletionProtection);
     }
     /**
      * Indicates whether HTTP/2 is enabled in `application` load balancers. Defaults to `true`.
@@ -182,8 +183,8 @@ public class LoadBalancer extends com.pulumi.resources.CustomResource {
      * @return Indicates whether HTTP/2 is enabled in `application` load balancers. Defaults to `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableHttp2() {
-        return this.enableHttp2;
+    public Output<Optional<Boolean>> enableHttp2() {
+        return Codegen.optional(this.enableHttp2);
     }
     /**
      * Indicates whether to allow a WAF-enabled load balancer to route requests to targets if it is unable to forward the request to AWS WAF. Defaults to `false`.
@@ -196,8 +197,8 @@ public class LoadBalancer extends com.pulumi.resources.CustomResource {
      * @return Indicates whether to allow a WAF-enabled load balancer to route requests to targets if it is unable to forward the request to AWS WAF. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableWafFailOpen() {
-        return this.enableWafFailOpen;
+    public Output<Optional<Boolean>> enableWafFailOpen() {
+        return Codegen.optional(this.enableWafFailOpen);
     }
     /**
      * The time in seconds that the connection is allowed to be idle. Only valid for Load Balancers of type `application`. Default: 60.
@@ -210,8 +211,8 @@ public class LoadBalancer extends com.pulumi.resources.CustomResource {
      * @return The time in seconds that the connection is allowed to be idle. Only valid for Load Balancers of type `application`. Default: 60.
      * 
      */
-    public Output</* @Nullable */ Integer> idleTimeout() {
-        return this.idleTimeout;
+    public Output<Optional<Integer>> idleTimeout() {
+        return Codegen.optional(this.idleTimeout);
     }
     /**
      * If true, the LB will be internal.
@@ -252,8 +253,8 @@ public class LoadBalancer extends com.pulumi.resources.CustomResource {
      * @return The type of load balancer to create. Possible values are `application`, `gateway`, or `network`. The default value is `application`.
      * 
      */
-    public Output</* @Nullable */ String> loadBalancerType() {
-        return this.loadBalancerType;
+    public Output<Optional<String>> loadBalancerType() {
+        return Codegen.optional(this.loadBalancerType);
     }
     /**
      * The name of the LB. This name must be unique within your AWS account, can have a maximum of 32 characters,
@@ -284,8 +285,8 @@ public class LoadBalancer extends com.pulumi.resources.CustomResource {
      * @return Creates a unique name beginning with the specified prefix. Conflicts with `name`.
      * 
      */
-    public Output</* @Nullable */ String> namePrefix() {
-        return this.namePrefix;
+    public Output<Optional<String>> namePrefix() {
+        return Codegen.optional(this.namePrefix);
     }
     /**
      * A list of security group IDs to assign to the LB. Only valid for Load Balancers of type `application`.
@@ -344,8 +345,8 @@ public class LoadBalancer extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

@@ -16,6 +16,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class Server extends com.pulumi.resources.CustomResource {
      * @return Administrator username for the server. Once created it cannot be changed.
      * 
      */
-    public Output</* @Nullable */ String> administratorLogin() {
-        return this.administratorLogin;
+    public Output<Optional<String>> administratorLogin() {
+        return Codegen.optional(this.administratorLogin);
     }
     /**
      * The Azure Active Directory identity of the server.
@@ -60,8 +61,8 @@ public class Server extends com.pulumi.resources.CustomResource {
      * @return The Azure Active Directory identity of the server.
      * 
      */
-    public Output</* @Nullable */ ServerExternalAdministratorResponse> administrators() {
-        return this.administrators;
+    public Output<Optional<ServerExternalAdministratorResponse>> administrators() {
+        return Codegen.optional(this.administrators);
     }
     /**
      * The fully qualified domain name of the server.
@@ -88,8 +89,8 @@ public class Server extends com.pulumi.resources.CustomResource {
      * @return The Azure Active Directory identity of the server.
      * 
      */
-    public Output</* @Nullable */ ResourceIdentityResponse> identity() {
-        return this.identity;
+    public Output<Optional<ResourceIdentityResponse>> identity() {
+        return Codegen.optional(this.identity);
     }
     /**
      * A CMK URI of the key to use for encryption.
@@ -102,8 +103,8 @@ public class Server extends com.pulumi.resources.CustomResource {
      * @return A CMK URI of the key to use for encryption.
      * 
      */
-    public Output</* @Nullable */ String> keyId() {
-        return this.keyId;
+    public Output<Optional<String>> keyId() {
+        return Codegen.optional(this.keyId);
     }
     /**
      * Kind of sql server. This is metadata used for the Azure portal experience.
@@ -144,8 +145,8 @@ public class Server extends com.pulumi.resources.CustomResource {
      * @return Minimal TLS version. Allowed values: &#39;1.0&#39;, &#39;1.1&#39;, &#39;1.2&#39;
      * 
      */
-    public Output</* @Nullable */ String> minimalTlsVersion() {
-        return this.minimalTlsVersion;
+    public Output<Optional<String>> minimalTlsVersion() {
+        return Codegen.optional(this.minimalTlsVersion);
     }
     /**
      * Resource name.
@@ -172,8 +173,8 @@ public class Server extends com.pulumi.resources.CustomResource {
      * @return The resource id of a user assigned identity to be used by default.
      * 
      */
-    public Output</* @Nullable */ String> primaryUserAssignedIdentityId() {
-        return this.primaryUserAssignedIdentityId;
+    public Output<Optional<String>> primaryUserAssignedIdentityId() {
+        return Codegen.optional(this.primaryUserAssignedIdentityId);
     }
     /**
      * List of private endpoint connections on a server
@@ -200,8 +201,8 @@ public class Server extends com.pulumi.resources.CustomResource {
      * @return Whether or not public endpoint access is allowed for this server.  Value is optional but if passed in, must be &#39;Enabled&#39; or &#39;Disabled&#39;
      * 
      */
-    public Output</* @Nullable */ String> publicNetworkAccess() {
-        return this.publicNetworkAccess;
+    public Output<Optional<String>> publicNetworkAccess() {
+        return Codegen.optional(this.publicNetworkAccess);
     }
     /**
      * The state of the server.
@@ -228,8 +229,8 @@ public class Server extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type.
@@ -256,8 +257,8 @@ public class Server extends com.pulumi.resources.CustomResource {
      * @return The version of the server.
      * 
      */
-    public Output</* @Nullable */ String> version() {
-        return this.version;
+    public Output<Optional<String>> version() {
+        return Codegen.optional(this.version);
     }
     /**
      * Whether or not existing server has a workspace created and if it allows connection from workspace

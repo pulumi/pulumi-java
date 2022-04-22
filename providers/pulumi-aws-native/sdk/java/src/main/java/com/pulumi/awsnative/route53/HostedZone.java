@@ -15,6 +15,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -26,8 +27,8 @@ public class HostedZone extends com.pulumi.resources.CustomResource {
     @Export(name="hostedZoneConfig", type=HostedZoneConfig.class, parameters={})
     private Output</* @Nullable */ HostedZoneConfig> hostedZoneConfig;
 
-    public Output</* @Nullable */ HostedZoneConfig> hostedZoneConfig() {
-        return this.hostedZoneConfig;
+    public Output<Optional<HostedZoneConfig>> hostedZoneConfig() {
+        return Codegen.optional(this.hostedZoneConfig);
     }
     /**
      * Adds, edits, or deletes tags for a health check or a hosted zone.
@@ -44,8 +45,8 @@ public class HostedZone extends com.pulumi.resources.CustomResource {
      * For information about using tags for cost allocation, see Using Cost Allocation Tags in the AWS Billing and Cost Management User Guide.
      * 
      */
-    public Output</* @Nullable */ List<HostedZoneTag>> hostedZoneTags() {
-        return this.hostedZoneTags;
+    public Output<Optional<List<HostedZoneTag>>> hostedZoneTags() {
+        return Codegen.optional(this.hostedZoneTags);
     }
     /**
      * The name of the domain. Specify a fully qualified domain name, for example, www.example.com. The trailing dot is optional; Amazon Route 53 assumes that the domain name is fully qualified. This means that Route 53 treats www.example.com (without a trailing dot) and www.example.com. (with a trailing dot) as identical.
@@ -62,8 +63,8 @@ public class HostedZone extends com.pulumi.resources.CustomResource {
      * If you&#39;re creating a public hosted zone, this is the name you have registered with your DNS registrar. If your domain name is registered with a registrar other than Route 53, change the name servers for your domain to the set of NameServers that are returned by the Fn::GetAtt intrinsic function.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     @Export(name="nameServers", type=List.class, parameters={String.class})
     private Output<List<String>> nameServers;
@@ -74,8 +75,8 @@ public class HostedZone extends com.pulumi.resources.CustomResource {
     @Export(name="queryLoggingConfig", type=HostedZoneQueryLoggingConfig.class, parameters={})
     private Output</* @Nullable */ HostedZoneQueryLoggingConfig> queryLoggingConfig;
 
-    public Output</* @Nullable */ HostedZoneQueryLoggingConfig> queryLoggingConfig() {
-        return this.queryLoggingConfig;
+    public Output<Optional<HostedZoneQueryLoggingConfig>> queryLoggingConfig() {
+        return Codegen.optional(this.queryLoggingConfig);
     }
     /**
      * A complex type that contains information about the VPCs that are associated with the specified hosted zone.
@@ -88,8 +89,8 @@ public class HostedZone extends com.pulumi.resources.CustomResource {
      * @return A complex type that contains information about the VPCs that are associated with the specified hosted zone.
      * 
      */
-    public Output</* @Nullable */ List<HostedZoneVPC>> vPCs() {
-        return this.vPCs;
+    public Output<Optional<List<HostedZoneVPC>>> vPCs() {
+        return Codegen.optional(this.vPCs);
     }
 
     /**

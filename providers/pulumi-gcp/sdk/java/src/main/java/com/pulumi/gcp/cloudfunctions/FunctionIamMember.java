@@ -12,6 +12,7 @@ import com.pulumi.gcp.cloudfunctions.FunctionIamMemberArgs;
 import com.pulumi.gcp.cloudfunctions.inputs.FunctionIamMemberState;
 import com.pulumi.gcp.cloudfunctions.outputs.FunctionIamMemberCondition;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 @ResourceType(type="gcp:cloudfunctions/functionIamMember:FunctionIamMember")
@@ -25,8 +26,8 @@ public class FunctionIamMember extends com.pulumi.resources.CustomResource {
     @Export(name="condition", type=FunctionIamMemberCondition.class, parameters={})
     private Output</* @Nullable */ FunctionIamMemberCondition> condition;
 
-    public Output</* @Nullable */ FunctionIamMemberCondition> condition() {
-        return this.condition;
+    public Output<Optional<FunctionIamMemberCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;

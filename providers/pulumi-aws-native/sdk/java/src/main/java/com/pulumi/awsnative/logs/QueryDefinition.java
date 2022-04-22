@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -30,8 +31,8 @@ public class QueryDefinition extends com.pulumi.resources.CustomResource {
      * @return Optionally define specific log groups as part of your query definition
      * 
      */
-    public Output</* @Nullable */ List<String>> logGroupNames() {
-        return this.logGroupNames;
+    public Output<Optional<List<String>>> logGroupNames() {
+        return Codegen.optional(this.logGroupNames);
     }
     /**
      * A name for the saved query definition

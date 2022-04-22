@@ -14,6 +14,7 @@ import com.pulumi.gcp.certificateauthority.outputs.CaPoolIssuancePolicy;
 import com.pulumi.gcp.certificateauthority.outputs.CaPoolPublishingOptions;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -55,8 +56,8 @@ public class CaPool extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ CaPoolIssuancePolicy> issuancePolicy() {
-        return this.issuancePolicy;
+    public Output<Optional<CaPoolIssuancePolicy>> issuancePolicy() {
+        return Codegen.optional(this.issuancePolicy);
     }
     /**
      * Labels with user-defined metadata.
@@ -73,8 +74,8 @@ public class CaPool extends com.pulumi.resources.CustomResource {
      * &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.
@@ -133,8 +134,8 @@ public class CaPool extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ CaPoolPublishingOptions> publishingOptions() {
-        return this.publishingOptions;
+    public Output<Optional<CaPoolPublishingOptions>> publishingOptions() {
+        return Codegen.optional(this.publishingOptions);
     }
     /**
      * The Tier of this CaPool.

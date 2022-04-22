@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -40,8 +41,8 @@ public class WebAppSitePushSettings extends com.pulumi.resources.CustomResource 
      * @return Gets or sets a JSON string containing a list of dynamic tags that will be evaluated from user claims in the push registration endpoint.
      * 
      */
-    public Output</* @Nullable */ String> dynamicTagsJson() {
-        return this.dynamicTagsJson;
+    public Output<Optional<String>> dynamicTagsJson() {
+        return Codegen.optional(this.dynamicTagsJson);
     }
     /**
      * Gets or sets a flag indicating whether the Push endpoint is enabled.
@@ -68,8 +69,8 @@ public class WebAppSitePushSettings extends com.pulumi.resources.CustomResource 
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> kind() {
-        return this.kind;
+    public Output<Optional<String>> kind() {
+        return Codegen.optional(this.kind);
     }
     /**
      * Resource Name.
@@ -96,8 +97,8 @@ public class WebAppSitePushSettings extends com.pulumi.resources.CustomResource 
      * @return Gets or sets a JSON string containing a list of tags that are whitelisted for use by the push registration endpoint.
      * 
      */
-    public Output</* @Nullable */ String> tagWhitelistJson() {
-        return this.tagWhitelistJson;
+    public Output<Optional<String>> tagWhitelistJson() {
+        return Codegen.optional(this.tagWhitelistJson);
     }
     /**
      * Gets or sets a JSON string containing a list of tags that require user authentication to be used in the push registration endpoint.
@@ -116,8 +117,8 @@ public class WebAppSitePushSettings extends com.pulumi.resources.CustomResource 
      * Validation should be performed at the PushRequestHandler.
      * 
      */
-    public Output</* @Nullable */ String> tagsRequiringAuth() {
-        return this.tagsRequiringAuth;
+    public Output<Optional<String>> tagsRequiringAuth() {
+        return Codegen.optional(this.tagsRequiringAuth);
     }
     /**
      * Resource type.

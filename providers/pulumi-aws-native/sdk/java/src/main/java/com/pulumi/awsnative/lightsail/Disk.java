@@ -16,6 +16,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -35,8 +36,8 @@ public class Disk extends com.pulumi.resources.CustomResource {
      * @return An array of objects representing the add-ons to enable for the new instance.
      * 
      */
-    public Output</* @Nullable */ List<DiskAddOn>> addOns() {
-        return this.addOns;
+    public Output<Optional<List<DiskAddOn>>> addOns() {
+        return Codegen.optional(this.addOns);
     }
     /**
      * Name of the attached Lightsail Instance
@@ -77,8 +78,8 @@ public class Disk extends com.pulumi.resources.CustomResource {
      * @return The Availability Zone in which to create your instance. Use the following format: us-east-2a (case sensitive). Be sure to add the include Availability Zones parameter to your request.
      * 
      */
-    public Output</* @Nullable */ String> availabilityZone() {
-        return this.availabilityZone;
+    public Output<Optional<String>> availabilityZone() {
+        return Codegen.optional(this.availabilityZone);
     }
     @Export(name="diskArn", type=String.class, parameters={})
     private Output<String> diskArn;
@@ -215,8 +216,8 @@ public class Disk extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<DiskTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<DiskTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

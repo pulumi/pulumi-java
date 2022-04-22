@@ -10,6 +10,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -57,8 +58,8 @@ public class UserHierarchyGroup extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) for the parent user hierarchy group.
      * 
      */
-    public Output</* @Nullable */ String> parentGroupArn() {
-        return this.parentGroupArn;
+    public Output<Optional<String>> parentGroupArn() {
+        return Codegen.optional(this.parentGroupArn);
     }
     /**
      * The Amazon Resource Name (ARN) for the user hierarchy group.

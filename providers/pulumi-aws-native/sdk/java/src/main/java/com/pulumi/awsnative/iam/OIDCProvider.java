@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -37,14 +38,14 @@ public class OIDCProvider extends com.pulumi.resources.CustomResource {
     @Export(name="clientIdList", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> clientIdList;
 
-    public Output</* @Nullable */ List<String>> clientIdList() {
-        return this.clientIdList;
+    public Output<Optional<List<String>>> clientIdList() {
+        return Codegen.optional(this.clientIdList);
     }
     @Export(name="tags", type=List.class, parameters={OIDCProviderTag.class})
     private Output</* @Nullable */ List<OIDCProviderTag>> tags;
 
-    public Output</* @Nullable */ List<OIDCProviderTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<OIDCProviderTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     @Export(name="thumbprintList", type=List.class, parameters={String.class})
     private Output<List<String>> thumbprintList;
@@ -55,8 +56,8 @@ public class OIDCProvider extends com.pulumi.resources.CustomResource {
     @Export(name="url", type=String.class, parameters={})
     private Output</* @Nullable */ String> url;
 
-    public Output</* @Nullable */ String> url() {
-        return this.url;
+    public Output<Optional<String>> url() {
+        return Codegen.optional(this.url);
     }
 
     /**

@@ -24,6 +24,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -37,14 +38,14 @@ public class Job extends com.pulumi.resources.CustomResource {
     @Export(name="dataCatalogOutputs", type=List.class, parameters={JobDataCatalogOutput.class})
     private Output</* @Nullable */ List<JobDataCatalogOutput>> dataCatalogOutputs;
 
-    public Output</* @Nullable */ List<JobDataCatalogOutput>> dataCatalogOutputs() {
-        return this.dataCatalogOutputs;
+    public Output<Optional<List<JobDataCatalogOutput>>> dataCatalogOutputs() {
+        return Codegen.optional(this.dataCatalogOutputs);
     }
     @Export(name="databaseOutputs", type=List.class, parameters={JobDatabaseOutput.class})
     private Output</* @Nullable */ List<JobDatabaseOutput>> databaseOutputs;
 
-    public Output</* @Nullable */ List<JobDatabaseOutput>> databaseOutputs() {
-        return this.databaseOutputs;
+    public Output<Optional<List<JobDatabaseOutput>>> databaseOutputs() {
+        return Codegen.optional(this.databaseOutputs);
     }
     /**
      * Dataset name
@@ -57,8 +58,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Dataset name
      * 
      */
-    public Output</* @Nullable */ String> datasetName() {
-        return this.datasetName;
+    public Output<Optional<String>> datasetName() {
+        return Codegen.optional(this.datasetName);
     }
     /**
      * Encryption Key Arn
@@ -71,8 +72,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Encryption Key Arn
      * 
      */
-    public Output</* @Nullable */ String> encryptionKeyArn() {
-        return this.encryptionKeyArn;
+    public Output<Optional<String>> encryptionKeyArn() {
+        return Codegen.optional(this.encryptionKeyArn);
     }
     /**
      * Encryption mode
@@ -85,8 +86,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Encryption mode
      * 
      */
-    public Output</* @Nullable */ JobEncryptionMode> encryptionMode() {
-        return this.encryptionMode;
+    public Output<Optional<JobEncryptionMode>> encryptionMode() {
+        return Codegen.optional(this.encryptionMode);
     }
     /**
      * Job Sample
@@ -99,8 +100,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Job Sample
      * 
      */
-    public Output</* @Nullable */ JobSample> jobSample() {
-        return this.jobSample;
+    public Output<Optional<JobSample>> jobSample() {
+        return Codegen.optional(this.jobSample);
     }
     /**
      * Log subscription
@@ -113,8 +114,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Log subscription
      * 
      */
-    public Output</* @Nullable */ JobLogSubscription> logSubscription() {
-        return this.logSubscription;
+    public Output<Optional<JobLogSubscription>> logSubscription() {
+        return Codegen.optional(this.logSubscription);
     }
     /**
      * Max capacity
@@ -127,8 +128,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Max capacity
      * 
      */
-    public Output</* @Nullable */ Integer> maxCapacity() {
-        return this.maxCapacity;
+    public Output<Optional<Integer>> maxCapacity() {
+        return Codegen.optional(this.maxCapacity);
     }
     /**
      * Max retries
@@ -141,8 +142,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Max retries
      * 
      */
-    public Output</* @Nullable */ Integer> maxRetries() {
-        return this.maxRetries;
+    public Output<Optional<Integer>> maxRetries() {
+        return Codegen.optional(this.maxRetries);
     }
     /**
      * Job name
@@ -169,14 +170,14 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Output location
      * 
      */
-    public Output</* @Nullable */ JobOutputLocation> outputLocation() {
-        return this.outputLocation;
+    public Output<Optional<JobOutputLocation>> outputLocation() {
+        return Codegen.optional(this.outputLocation);
     }
     @Export(name="outputs", type=List.class, parameters={JobOutput.class})
     private Output</* @Nullable */ List<JobOutput>> outputs;
 
-    public Output</* @Nullable */ List<JobOutput>> outputs() {
-        return this.outputs;
+    public Output<Optional<List<JobOutput>>> outputs() {
+        return Codegen.optional(this.outputs);
     }
     /**
      * Profile Job configuration
@@ -189,8 +190,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Profile Job configuration
      * 
      */
-    public Output</* @Nullable */ JobProfileConfiguration> profileConfiguration() {
-        return this.profileConfiguration;
+    public Output<Optional<JobProfileConfiguration>> profileConfiguration() {
+        return Codegen.optional(this.profileConfiguration);
     }
     /**
      * Project name
@@ -203,14 +204,14 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Project name
      * 
      */
-    public Output</* @Nullable */ String> projectName() {
-        return this.projectName;
+    public Output<Optional<String>> projectName() {
+        return Codegen.optional(this.projectName);
     }
     @Export(name="recipe", type=JobRecipe.class, parameters={})
     private Output</* @Nullable */ JobRecipe> recipe;
 
-    public Output</* @Nullable */ JobRecipe> recipe() {
-        return this.recipe;
+    public Output<Optional<JobRecipe>> recipe() {
+        return Codegen.optional(this.recipe);
     }
     /**
      * Role arn
@@ -229,8 +230,8 @@ public class Job extends com.pulumi.resources.CustomResource {
     @Export(name="tags", type=List.class, parameters={JobTag.class})
     private Output</* @Nullable */ List<JobTag>> tags;
 
-    public Output</* @Nullable */ List<JobTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<JobTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Timeout
@@ -243,8 +244,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Timeout
      * 
      */
-    public Output</* @Nullable */ Integer> timeout() {
-        return this.timeout;
+    public Output<Optional<Integer>> timeout() {
+        return Codegen.optional(this.timeout);
     }
     /**
      * Job type
@@ -271,8 +272,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Data quality rules configuration
      * 
      */
-    public Output</* @Nullable */ List<JobValidationConfiguration>> validationConfigurations() {
-        return this.validationConfigurations;
+    public Output<Optional<List<JobValidationConfiguration>>> validationConfigurations() {
+        return Codegen.optional(this.validationConfigurations);
     }
 
     /**

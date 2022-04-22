@@ -10,6 +10,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -32,8 +33,8 @@ public class SqlResourceSqlContainer extends com.pulumi.resources.CustomResource
     @Export(name="resource", type=SqlContainerGetPropertiesResponseResource.class, parameters={})
     private Output</* @Nullable */ SqlContainerGetPropertiesResponseResource> resource;
 
-    public Output</* @Nullable */ SqlContainerGetPropertiesResponseResource> resource() {
-        return this.resource;
+    public Output<Optional<SqlContainerGetPropertiesResponseResource>> resource() {
+        return Codegen.optional(this.resource);
     }
 
     /**

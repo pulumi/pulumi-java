@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -61,8 +62,8 @@ public class ReportPlan extends com.pulumi.resources.CustomResource {
      * @return An optional description of the report plan with a maximum of 1,024 characters.
      * 
      */
-    public Output</* @Nullable */ String> reportPlanDescription() {
-        return this.reportPlanDescription;
+    public Output<Optional<String>> reportPlanDescription() {
+        return Codegen.optional(this.reportPlanDescription);
     }
     /**
      * The unique name of the report plan. The name must be between 1 and 256 characters, starting with a letter, and consisting of letters (a-z, A-Z), numbers (0-9), and underscores (_).
@@ -75,8 +76,8 @@ public class ReportPlan extends com.pulumi.resources.CustomResource {
      * @return The unique name of the report plan. The name must be between 1 and 256 characters, starting with a letter, and consisting of letters (a-z, A-Z), numbers (0-9), and underscores (_).
      * 
      */
-    public Output</* @Nullable */ String> reportPlanName() {
-        return this.reportPlanName;
+    public Output<Optional<String>> reportPlanName() {
+        return Codegen.optional(this.reportPlanName);
     }
     /**
      * Metadata that you can assign to help organize the report plans that you create. Each tag is a key-value pair.
@@ -89,8 +90,8 @@ public class ReportPlan extends com.pulumi.resources.CustomResource {
      * @return Metadata that you can assign to help organize the report plans that you create. Each tag is a key-value pair.
      * 
      */
-    public Output</* @Nullable */ List<ReportPlanTag>> reportPlanTags() {
-        return this.reportPlanTags;
+    public Output<Optional<List<ReportPlanTag>>> reportPlanTags() {
+        return Codegen.optional(this.reportPlanTags);
     }
     /**
      * Identifies the report template for the report. Reports are built using a report template.

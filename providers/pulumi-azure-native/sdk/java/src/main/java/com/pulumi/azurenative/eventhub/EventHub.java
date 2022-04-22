@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class EventHub extends com.pulumi.resources.CustomResource {
      * @return Properties of capture description
      * 
      */
-    public Output</* @Nullable */ CaptureDescriptionResponse> captureDescription() {
-        return this.captureDescription;
+    public Output<Optional<CaptureDescriptionResponse>> captureDescription() {
+        return Codegen.optional(this.captureDescription);
     }
     /**
      * Exact time the Event Hub was created.
@@ -72,8 +73,8 @@ public class EventHub extends com.pulumi.resources.CustomResource {
      * @return Number of days to retain the events for this Event Hub, value should be 1 to 7 days
      * 
      */
-    public Output</* @Nullable */ Double> messageRetentionInDays() {
-        return this.messageRetentionInDays;
+    public Output<Optional<Double>> messageRetentionInDays() {
+        return Codegen.optional(this.messageRetentionInDays);
     }
     /**
      * The name of the resource
@@ -100,8 +101,8 @@ public class EventHub extends com.pulumi.resources.CustomResource {
      * @return Number of partitions created for the Event Hub, allowed values are from 1 to 32 partitions.
      * 
      */
-    public Output</* @Nullable */ Double> partitionCount() {
-        return this.partitionCount;
+    public Output<Optional<Double>> partitionCount() {
+        return Codegen.optional(this.partitionCount);
     }
     /**
      * Current number of shards on the Event Hub.
@@ -128,8 +129,8 @@ public class EventHub extends com.pulumi.resources.CustomResource {
      * @return Enumerates the possible values for the status of the Event Hub.
      * 
      */
-    public Output</* @Nullable */ String> status() {
-        return this.status;
+    public Output<Optional<String>> status() {
+        return Codegen.optional(this.status);
     }
     /**
      * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;

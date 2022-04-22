@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -42,8 +43,8 @@ public class WebAppBackupConfiguration extends com.pulumi.resources.CustomResour
      * @return Name of the backup.
      * 
      */
-    public Output</* @Nullable */ String> backupName() {
-        return this.backupName;
+    public Output<Optional<String>> backupName() {
+        return Codegen.optional(this.backupName);
     }
     /**
      * Schedule for the backup if it is executed periodically.
@@ -56,8 +57,8 @@ public class WebAppBackupConfiguration extends com.pulumi.resources.CustomResour
      * @return Schedule for the backup if it is executed periodically.
      * 
      */
-    public Output</* @Nullable */ BackupScheduleResponse> backupSchedule() {
-        return this.backupSchedule;
+    public Output<Optional<BackupScheduleResponse>> backupSchedule() {
+        return Codegen.optional(this.backupSchedule);
     }
     /**
      * Databases included in the backup.
@@ -70,8 +71,8 @@ public class WebAppBackupConfiguration extends com.pulumi.resources.CustomResour
      * @return Databases included in the backup.
      * 
      */
-    public Output</* @Nullable */ List<DatabaseBackupSettingResponse>> databases() {
-        return this.databases;
+    public Output<Optional<List<DatabaseBackupSettingResponse>>> databases() {
+        return Codegen.optional(this.databases);
     }
     /**
      * True if the backup schedule is enabled (must be included in that case), false if the backup schedule should be disabled.
@@ -84,8 +85,8 @@ public class WebAppBackupConfiguration extends com.pulumi.resources.CustomResour
      * @return True if the backup schedule is enabled (must be included in that case), false if the backup schedule should be disabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> enabled() {
-        return this.enabled;
+    public Output<Optional<Boolean>> enabled() {
+        return Codegen.optional(this.enabled);
     }
     /**
      * Kind of resource.
@@ -98,8 +99,8 @@ public class WebAppBackupConfiguration extends com.pulumi.resources.CustomResour
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> kind() {
-        return this.kind;
+    public Output<Optional<String>> kind() {
+        return Codegen.optional(this.kind);
     }
     /**
      * Resource Name.

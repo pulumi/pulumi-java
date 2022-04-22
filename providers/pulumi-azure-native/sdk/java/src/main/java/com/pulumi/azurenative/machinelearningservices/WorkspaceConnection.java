@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -42,8 +43,8 @@ public class WorkspaceConnection extends com.pulumi.resources.CustomResource {
      * @return Authorization type of the workspace connection.
      * 
      */
-    public Output</* @Nullable */ String> authType() {
-        return this.authType;
+    public Output<Optional<String>> authType() {
+        return Codegen.optional(this.authType);
     }
     /**
      * Category of the workspace connection.
@@ -56,8 +57,8 @@ public class WorkspaceConnection extends com.pulumi.resources.CustomResource {
      * @return Category of the workspace connection.
      * 
      */
-    public Output</* @Nullable */ String> category() {
-        return this.category;
+    public Output<Optional<String>> category() {
+        return Codegen.optional(this.category);
     }
     /**
      * Friendly name of the workspace connection.
@@ -84,8 +85,8 @@ public class WorkspaceConnection extends com.pulumi.resources.CustomResource {
      * @return Target of the workspace connection.
      * 
      */
-    public Output</* @Nullable */ String> target() {
-        return this.target;
+    public Output<Optional<String>> target() {
+        return Codegen.optional(this.target);
     }
     /**
      * Resource type of workspace connection.
@@ -112,8 +113,8 @@ public class WorkspaceConnection extends com.pulumi.resources.CustomResource {
      * @return Value details of the workspace connection.
      * 
      */
-    public Output</* @Nullable */ String> value() {
-        return this.value;
+    public Output<Optional<String>> value() {
+        return Codegen.optional(this.value);
     }
     /**
      * format for the workspace connection value
@@ -126,8 +127,8 @@ public class WorkspaceConnection extends com.pulumi.resources.CustomResource {
      * @return format for the workspace connection value
      * 
      */
-    public Output</* @Nullable */ String> valueFormat() {
-        return this.valueFormat;
+    public Output<Optional<String>> valueFormat() {
+        return Codegen.optional(this.valueFormat);
     }
 
     /**

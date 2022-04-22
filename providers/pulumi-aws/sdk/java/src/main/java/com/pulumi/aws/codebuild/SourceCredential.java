@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -99,8 +100,8 @@ public class SourceCredential extends com.pulumi.resources.CustomResource {
      * @return The Bitbucket username when the authType is `BASIC_AUTH`. This parameter is not valid for other types of source providers or connections.
      * 
      */
-    public Output</* @Nullable */ String> userName() {
-        return this.userName;
+    public Output<Optional<String>> userName() {
+        return Codegen.optional(this.userName);
     }
 
     /**

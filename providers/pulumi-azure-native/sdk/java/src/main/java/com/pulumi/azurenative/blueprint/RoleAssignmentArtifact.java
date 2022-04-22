@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class RoleAssignmentArtifact extends com.pulumi.resources.CustomResource 
      * @return Artifacts which need to be deployed before the specified artifact.
      * 
      */
-    public Output</* @Nullable */ List<String>> dependsOn() {
-        return this.dependsOn;
+    public Output<Optional<List<String>>> dependsOn() {
+        return Codegen.optional(this.dependsOn);
     }
     /**
      * Multi-line explain this resource.
@@ -57,8 +58,8 @@ public class RoleAssignmentArtifact extends com.pulumi.resources.CustomResource 
      * @return Multi-line explain this resource.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * One-liner string explain this resource.
@@ -71,8 +72,8 @@ public class RoleAssignmentArtifact extends com.pulumi.resources.CustomResource 
      * @return One-liner string explain this resource.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * Specifies the kind of blueprint artifact.
@@ -129,8 +130,8 @@ public class RoleAssignmentArtifact extends com.pulumi.resources.CustomResource 
      * @return RoleAssignment will be scope to this resourceGroup. If empty, it scopes to the subscription.
      * 
      */
-    public Output</* @Nullable */ String> resourceGroup() {
-        return this.resourceGroup;
+    public Output<Optional<String>> resourceGroup() {
+        return Codegen.optional(this.resourceGroup);
     }
     /**
      * Azure resource ID of the RoleDefinition.

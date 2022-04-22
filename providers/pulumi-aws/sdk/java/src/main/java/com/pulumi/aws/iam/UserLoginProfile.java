@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -90,8 +91,8 @@ public class UserLoginProfile extends com.pulumi.resources.CustomResource {
      * @return The length of the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument.
      * 
      */
-    public Output</* @Nullable */ Integer> passwordLength() {
-        return this.passwordLength;
+    public Output<Optional<Integer>> passwordLength() {
+        return Codegen.optional(this.passwordLength);
     }
     /**
      * Whether the user should be forced to reset the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument.
@@ -104,8 +105,8 @@ public class UserLoginProfile extends com.pulumi.resources.CustomResource {
      * @return Whether the user should be forced to reset the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument.
      * 
      */
-    public Output</* @Nullable */ Boolean> passwordResetRequired() {
-        return this.passwordResetRequired;
+    public Output<Optional<Boolean>> passwordResetRequired() {
+        return Codegen.optional(this.passwordResetRequired);
     }
     /**
      * Either a base-64 encoded PGP public key, or a keybase username in the form `keybase:username`. Only applies on resource creation. Drift detection is not possible with this argument.

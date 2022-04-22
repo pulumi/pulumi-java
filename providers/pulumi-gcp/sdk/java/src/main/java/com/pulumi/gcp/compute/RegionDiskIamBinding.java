@@ -13,6 +13,7 @@ import com.pulumi.gcp.compute.inputs.RegionDiskIamBindingState;
 import com.pulumi.gcp.compute.outputs.RegionDiskIamBindingCondition;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -62,8 +63,8 @@ public class RegionDiskIamBinding extends com.pulumi.resources.CustomResource {
     @Export(name="condition", type=RegionDiskIamBindingCondition.class, parameters={})
     private Output</* @Nullable */ RegionDiskIamBindingCondition> condition;
 
-    public Output</* @Nullable */ RegionDiskIamBindingCondition> condition() {
-        return this.condition;
+    public Output<Optional<RegionDiskIamBindingCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * (Computed) The etag of the IAM policy.

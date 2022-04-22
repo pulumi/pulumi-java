@@ -12,6 +12,7 @@ import com.pulumi.gcp.datacatalog.EntryGroupIamMemberArgs;
 import com.pulumi.gcp.datacatalog.inputs.EntryGroupIamMemberState;
 import com.pulumi.gcp.datacatalog.outputs.EntryGroupIamMemberCondition;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -61,8 +62,8 @@ public class EntryGroupIamMember extends com.pulumi.resources.CustomResource {
     @Export(name="condition", type=EntryGroupIamMemberCondition.class, parameters={})
     private Output</* @Nullable */ EntryGroupIamMemberCondition> condition;
 
-    public Output</* @Nullable */ EntryGroupIamMemberCondition> condition() {
-        return this.condition;
+    public Output<Optional<EntryGroupIamMemberCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * Used to find the parent resource to bind the IAM policy to

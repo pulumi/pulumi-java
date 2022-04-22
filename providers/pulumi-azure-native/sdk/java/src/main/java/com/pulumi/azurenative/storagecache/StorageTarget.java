@@ -18,6 +18,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -48,8 +49,8 @@ public class StorageTarget extends com.pulumi.resources.CustomResource {
      * @return Properties when targetType is blobNfs.
      * 
      */
-    public Output</* @Nullable */ BlobNfsTargetResponse> blobNfs() {
-        return this.blobNfs;
+    public Output<Optional<BlobNfsTargetResponse>> blobNfs() {
+        return Codegen.optional(this.blobNfs);
     }
     /**
      * Properties when targetType is clfs.
@@ -62,8 +63,8 @@ public class StorageTarget extends com.pulumi.resources.CustomResource {
      * @return Properties when targetType is clfs.
      * 
      */
-    public Output</* @Nullable */ ClfsTargetResponse> clfs() {
-        return this.clfs;
+    public Output<Optional<ClfsTargetResponse>> clfs() {
+        return Codegen.optional(this.clfs);
     }
     /**
      * List of Cache namespace junctions to target for namespace associations.
@@ -76,8 +77,8 @@ public class StorageTarget extends com.pulumi.resources.CustomResource {
      * @return List of Cache namespace junctions to target for namespace associations.
      * 
      */
-    public Output</* @Nullable */ List<NamespaceJunctionResponse>> junctions() {
-        return this.junctions;
+    public Output<Optional<List<NamespaceJunctionResponse>>> junctions() {
+        return Codegen.optional(this.junctions);
     }
     /**
      * Region name string.
@@ -118,8 +119,8 @@ public class StorageTarget extends com.pulumi.resources.CustomResource {
      * @return Properties when targetType is nfs3.
      * 
      */
-    public Output</* @Nullable */ Nfs3TargetResponse> nfs3() {
-        return this.nfs3;
+    public Output<Optional<Nfs3TargetResponse>> nfs3() {
+        return Codegen.optional(this.nfs3);
     }
     /**
      * ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
@@ -132,8 +133,8 @@ public class StorageTarget extends com.pulumi.resources.CustomResource {
      * @return ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
      * 
      */
-    public Output</* @Nullable */ String> provisioningState() {
-        return this.provisioningState;
+    public Output<Optional<String>> provisioningState() {
+        return Codegen.optional(this.provisioningState);
     }
     /**
      * The system meta data relating to this resource.
@@ -188,8 +189,8 @@ public class StorageTarget extends com.pulumi.resources.CustomResource {
      * @return Properties when targetType is unknown.
      * 
      */
-    public Output</* @Nullable */ UnknownTargetResponse> unknown() {
-        return this.unknown;
+    public Output<Optional<UnknownTargetResponse>> unknown() {
+        return Codegen.optional(this.unknown);
     }
 
     /**

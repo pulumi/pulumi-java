@@ -17,6 +17,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -60,8 +61,8 @@ public class Pipeline extends com.pulumi.resources.CustomResource {
      * @return The AWS Key Management Service (AWS KMS) key that you want to use with this pipeline.
      * 
      */
-    public Output</* @Nullable */ String> awsKmsKeyArn() {
-        return this.awsKmsKeyArn;
+    public Output<Optional<String>> awsKmsKeyArn() {
+        return Codegen.optional(this.awsKmsKeyArn);
     }
     /**
      * The ContentConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save transcoded files and playlists. (documented below)
@@ -88,8 +89,8 @@ public class Pipeline extends com.pulumi.resources.CustomResource {
      * @return The permissions for the `content_config` object. (documented below)
      * 
      */
-    public Output</* @Nullable */ List<PipelineContentConfigPermission>> contentConfigPermissions() {
-        return this.contentConfigPermissions;
+    public Output<Optional<List<PipelineContentConfigPermission>>> contentConfigPermissions() {
+        return Codegen.optional(this.contentConfigPermissions);
     }
     /**
      * The Amazon S3 bucket in which you saved the media files that you want to transcode and the graphics that you want to use as watermarks.
@@ -130,8 +131,8 @@ public class Pipeline extends com.pulumi.resources.CustomResource {
      * @return The Amazon Simple Notification Service (Amazon SNS) topic that you want to notify to report job status. (documented below)
      * 
      */
-    public Output</* @Nullable */ PipelineNotifications> notifications() {
-        return this.notifications;
+    public Output<Optional<PipelineNotifications>> notifications() {
+        return Codegen.optional(this.notifications);
     }
     /**
      * The Amazon S3 bucket in which you want Elastic Transcoder to save the transcoded files.
@@ -186,8 +187,8 @@ public class Pipeline extends com.pulumi.resources.CustomResource {
      * @return The permissions for the `thumbnail_config` object. (documented below)
      * 
      */
-    public Output</* @Nullable */ List<PipelineThumbnailConfigPermission>> thumbnailConfigPermissions() {
-        return this.thumbnailConfigPermissions;
+    public Output<Optional<List<PipelineThumbnailConfigPermission>>> thumbnailConfigPermissions() {
+        return Codegen.optional(this.thumbnailConfigPermissions);
     }
 
     /**

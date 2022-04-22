@@ -12,6 +12,7 @@ import com.pulumi.gcp.compute.SSLPolicyArgs;
 import com.pulumi.gcp.compute.inputs.SSLPolicyState;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -86,8 +87,8 @@ public class SSLPolicy extends com.pulumi.resources.CustomResource {
      * *must not* be present when using any other profile.
      * 
      */
-    public Output</* @Nullable */ List<String>> customFeatures() {
-        return this.customFeatures;
+    public Output<Optional<List<String>>> customFeatures() {
+        return Codegen.optional(this.customFeatures);
     }
     /**
      * An optional description of this resource.
@@ -100,8 +101,8 @@ public class SSLPolicy extends com.pulumi.resources.CustomResource {
      * @return An optional description of this resource.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The list of features enabled in the SSL policy.
@@ -148,8 +149,8 @@ public class SSLPolicy extends com.pulumi.resources.CustomResource {
      * Possible values are `TLS_1_0`, `TLS_1_1`, and `TLS_1_2`.
      * 
      */
-    public Output</* @Nullable */ String> minTlsVersion() {
-        return this.minTlsVersion;
+    public Output<Optional<String>> minTlsVersion() {
+        return Codegen.optional(this.minTlsVersion);
     }
     /**
      * Name of the resource. Provided by the client when the resource is
@@ -204,8 +205,8 @@ public class SSLPolicy extends com.pulumi.resources.CustomResource {
      * Possible values are `COMPATIBLE`, `MODERN`, `RESTRICTED`, and `CUSTOM`.
      * 
      */
-    public Output</* @Nullable */ String> profile() {
-        return this.profile;
+    public Output<Optional<String>> profile() {
+        return Codegen.optional(this.profile);
     }
     /**
      * The ID of the project in which the resource belongs.

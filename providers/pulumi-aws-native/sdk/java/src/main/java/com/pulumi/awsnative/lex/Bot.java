@@ -17,6 +17,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,14 +45,14 @@ public class Bot extends com.pulumi.resources.CustomResource {
      * @return Specifies whether to build the bot locales after bot creation completes.
      * 
      */
-    public Output</* @Nullable */ Boolean> autoBuildBotLocales() {
-        return this.autoBuildBotLocales;
+    public Output<Optional<Boolean>> autoBuildBotLocales() {
+        return Codegen.optional(this.autoBuildBotLocales);
     }
     @Export(name="botFileS3Location", type=BotS3Location.class, parameters={})
     private Output</* @Nullable */ BotS3Location> botFileS3Location;
 
-    public Output</* @Nullable */ BotS3Location> botFileS3Location() {
-        return this.botFileS3Location;
+    public Output<Optional<BotS3Location>> botFileS3Location() {
+        return Codegen.optional(this.botFileS3Location);
     }
     /**
      * List of bot locales
@@ -64,8 +65,8 @@ public class Bot extends com.pulumi.resources.CustomResource {
      * @return List of bot locales
      * 
      */
-    public Output</* @Nullable */ List<BotLocale>> botLocales() {
-        return this.botLocales;
+    public Output<Optional<List<BotLocale>>> botLocales() {
+        return Codegen.optional(this.botLocales);
     }
     /**
      * A list of tags to add to the bot, which can only be added at bot creation.
@@ -78,8 +79,8 @@ public class Bot extends com.pulumi.resources.CustomResource {
      * @return A list of tags to add to the bot, which can only be added at bot creation.
      * 
      */
-    public Output</* @Nullable */ List<BotTag>> botTags() {
-        return this.botTags;
+    public Output<Optional<List<BotTag>>> botTags() {
+        return Codegen.optional(this.botTags);
     }
     /**
      * Data privacy setting of the Bot.
@@ -98,8 +99,8 @@ public class Bot extends com.pulumi.resources.CustomResource {
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * IdleSessionTTLInSeconds of the resource
@@ -138,8 +139,8 @@ public class Bot extends com.pulumi.resources.CustomResource {
      * @return A list of tags to add to the test alias for a bot, , which can only be added at bot/bot alias creation.
      * 
      */
-    public Output</* @Nullable */ List<BotTag>> testBotAliasTags() {
-        return this.testBotAliasTags;
+    public Output<Optional<List<BotTag>>> testBotAliasTags() {
+        return Codegen.optional(this.testBotAliasTags);
     }
 
     /**

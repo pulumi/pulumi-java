@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -38,14 +39,14 @@ public class Fleet extends com.pulumi.resources.CustomResource {
      * @return The name of the fleet.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     @Export(name="tags", type=FleetTags.class, parameters={})
     private Output</* @Nullable */ FleetTags> tags;
 
-    public Output</* @Nullable */ FleetTags> tags() {
-        return this.tags;
+    public Output<Optional<FleetTags>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

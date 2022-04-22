@@ -12,6 +12,7 @@ import com.pulumi.gcp.compute.TargetGrpcProxyArgs;
 import com.pulumi.gcp.compute.inputs.TargetGrpcProxyState;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -72,8 +73,8 @@ public class TargetGrpcProxy extends com.pulumi.resources.CustomResource {
      * @return An optional description of this resource.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking.
@@ -180,8 +181,8 @@ public class TargetGrpcProxy extends com.pulumi.resources.CustomResource {
      * must be set to GRPC.
      * 
      */
-    public Output</* @Nullable */ String> urlMap() {
-        return this.urlMap;
+    public Output<Optional<String>> urlMap() {
+        return Codegen.optional(this.urlMap);
     }
     /**
      * If true, indicates that the BackendServices referenced by
@@ -212,8 +213,8 @@ public class TargetGrpcProxy extends com.pulumi.resources.CustomResource {
      * it is connecting to
      * 
      */
-    public Output</* @Nullable */ Boolean> validateForProxyless() {
-        return this.validateForProxyless;
+    public Output<Optional<Boolean>> validateForProxyless() {
+        return Codegen.optional(this.validateForProxyless);
     }
 
     /**

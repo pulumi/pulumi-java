@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -37,38 +38,38 @@ public class ServerCertificate extends com.pulumi.resources.CustomResource {
     @Export(name="certificateBody", type=String.class, parameters={})
     private Output</* @Nullable */ String> certificateBody;
 
-    public Output</* @Nullable */ String> certificateBody() {
-        return this.certificateBody;
+    public Output<Optional<String>> certificateBody() {
+        return Codegen.optional(this.certificateBody);
     }
     @Export(name="certificateChain", type=String.class, parameters={})
     private Output</* @Nullable */ String> certificateChain;
 
-    public Output</* @Nullable */ String> certificateChain() {
-        return this.certificateChain;
+    public Output<Optional<String>> certificateChain() {
+        return Codegen.optional(this.certificateChain);
     }
     @Export(name="path", type=String.class, parameters={})
     private Output</* @Nullable */ String> path;
 
-    public Output</* @Nullable */ String> path() {
-        return this.path;
+    public Output<Optional<String>> path() {
+        return Codegen.optional(this.path);
     }
     @Export(name="privateKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> privateKey;
 
-    public Output</* @Nullable */ String> privateKey() {
-        return this.privateKey;
+    public Output<Optional<String>> privateKey() {
+        return Codegen.optional(this.privateKey);
     }
     @Export(name="serverCertificateName", type=String.class, parameters={})
     private Output</* @Nullable */ String> serverCertificateName;
 
-    public Output</* @Nullable */ String> serverCertificateName() {
-        return this.serverCertificateName;
+    public Output<Optional<String>> serverCertificateName() {
+        return Codegen.optional(this.serverCertificateName);
     }
     @Export(name="tags", type=List.class, parameters={ServerCertificateTag.class})
     private Output</* @Nullable */ List<ServerCertificateTag>> tags;
 
-    public Output</* @Nullable */ List<ServerCertificateTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<ServerCertificateTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

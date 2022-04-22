@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class RegisteredServer extends com.pulumi.resources.CustomResource {
      * @return Registered Server Agent Version
      * 
      */
-    public Output</* @Nullable */ String> agentVersion() {
-        return this.agentVersion;
+    public Output<Optional<String>> agentVersion() {
+        return Codegen.optional(this.agentVersion);
     }
     /**
      * Registered Server Agent Version Expiration Date
@@ -85,8 +86,8 @@ public class RegisteredServer extends com.pulumi.resources.CustomResource {
      * @return Registered Server clusterId
      * 
      */
-    public Output</* @Nullable */ String> clusterId() {
-        return this.clusterId;
+    public Output<Optional<String>> clusterId() {
+        return Codegen.optional(this.clusterId);
     }
     /**
      * Registered Server clusterName
@@ -99,8 +100,8 @@ public class RegisteredServer extends com.pulumi.resources.CustomResource {
      * @return Registered Server clusterName
      * 
      */
-    public Output</* @Nullable */ String> clusterName() {
-        return this.clusterName;
+    public Output<Optional<String>> clusterName() {
+        return Codegen.optional(this.clusterName);
     }
     /**
      * Resource discoveryEndpointUri
@@ -113,8 +114,8 @@ public class RegisteredServer extends com.pulumi.resources.CustomResource {
      * @return Resource discoveryEndpointUri
      * 
      */
-    public Output</* @Nullable */ String> discoveryEndpointUri() {
-        return this.discoveryEndpointUri;
+    public Output<Optional<String>> discoveryEndpointUri() {
+        return Codegen.optional(this.discoveryEndpointUri);
     }
     /**
      * Friendly Name
@@ -127,8 +128,8 @@ public class RegisteredServer extends com.pulumi.resources.CustomResource {
      * @return Friendly Name
      * 
      */
-    public Output</* @Nullable */ String> friendlyName() {
-        return this.friendlyName;
+    public Output<Optional<String>> friendlyName() {
+        return Codegen.optional(this.friendlyName);
     }
     /**
      * Registered Server last heart beat
@@ -141,8 +142,8 @@ public class RegisteredServer extends com.pulumi.resources.CustomResource {
      * @return Registered Server last heart beat
      * 
      */
-    public Output</* @Nullable */ String> lastHeartBeat() {
-        return this.lastHeartBeat;
+    public Output<Optional<String>> lastHeartBeat() {
+        return Codegen.optional(this.lastHeartBeat);
     }
     /**
      * Resource Last Operation Name
@@ -155,8 +156,8 @@ public class RegisteredServer extends com.pulumi.resources.CustomResource {
      * @return Resource Last Operation Name
      * 
      */
-    public Output</* @Nullable */ String> lastOperationName() {
-        return this.lastOperationName;
+    public Output<Optional<String>> lastOperationName() {
+        return Codegen.optional(this.lastOperationName);
     }
     /**
      * Registered Server lastWorkflowId
@@ -169,8 +170,8 @@ public class RegisteredServer extends com.pulumi.resources.CustomResource {
      * @return Registered Server lastWorkflowId
      * 
      */
-    public Output</* @Nullable */ String> lastWorkflowId() {
-        return this.lastWorkflowId;
+    public Output<Optional<String>> lastWorkflowId() {
+        return Codegen.optional(this.lastWorkflowId);
     }
     /**
      * Management Endpoint Uri
@@ -183,8 +184,8 @@ public class RegisteredServer extends com.pulumi.resources.CustomResource {
      * @return Management Endpoint Uri
      * 
      */
-    public Output</* @Nullable */ String> managementEndpointUri() {
-        return this.managementEndpointUri;
+    public Output<Optional<String>> managementEndpointUri() {
+        return Codegen.optional(this.managementEndpointUri);
     }
     /**
      * Monitoring Configuration
@@ -197,8 +198,8 @@ public class RegisteredServer extends com.pulumi.resources.CustomResource {
      * @return Monitoring Configuration
      * 
      */
-    public Output</* @Nullable */ String> monitoringConfiguration() {
-        return this.monitoringConfiguration;
+    public Output<Optional<String>> monitoringConfiguration() {
+        return Codegen.optional(this.monitoringConfiguration);
     }
     /**
      * Telemetry Endpoint Uri
@@ -211,8 +212,8 @@ public class RegisteredServer extends com.pulumi.resources.CustomResource {
      * @return Telemetry Endpoint Uri
      * 
      */
-    public Output</* @Nullable */ String> monitoringEndpointUri() {
-        return this.monitoringEndpointUri;
+    public Output<Optional<String>> monitoringEndpointUri() {
+        return Codegen.optional(this.monitoringEndpointUri);
     }
     /**
      * The name of the resource
@@ -239,8 +240,8 @@ public class RegisteredServer extends com.pulumi.resources.CustomResource {
      * @return Registered Server Provisioning State
      * 
      */
-    public Output</* @Nullable */ String> provisioningState() {
-        return this.provisioningState;
+    public Output<Optional<String>> provisioningState() {
+        return Codegen.optional(this.provisioningState);
     }
     /**
      * Resource Location
@@ -253,8 +254,8 @@ public class RegisteredServer extends com.pulumi.resources.CustomResource {
      * @return Resource Location
      * 
      */
-    public Output</* @Nullable */ String> resourceLocation() {
-        return this.resourceLocation;
+    public Output<Optional<String>> resourceLocation() {
+        return Codegen.optional(this.resourceLocation);
     }
     /**
      * Registered Server Certificate
@@ -267,8 +268,8 @@ public class RegisteredServer extends com.pulumi.resources.CustomResource {
      * @return Registered Server Certificate
      * 
      */
-    public Output</* @Nullable */ String> serverCertificate() {
-        return this.serverCertificate;
+    public Output<Optional<String>> serverCertificate() {
+        return Codegen.optional(this.serverCertificate);
     }
     /**
      * Registered Server serverId
@@ -281,8 +282,8 @@ public class RegisteredServer extends com.pulumi.resources.CustomResource {
      * @return Registered Server serverId
      * 
      */
-    public Output</* @Nullable */ String> serverId() {
-        return this.serverId;
+    public Output<Optional<String>> serverId() {
+        return Codegen.optional(this.serverId);
     }
     /**
      * Registered Server Management Error Code
@@ -295,8 +296,8 @@ public class RegisteredServer extends com.pulumi.resources.CustomResource {
      * @return Registered Server Management Error Code
      * 
      */
-    public Output</* @Nullable */ Integer> serverManagementErrorCode() {
-        return this.serverManagementErrorCode;
+    public Output<Optional<Integer>> serverManagementErrorCode() {
+        return Codegen.optional(this.serverManagementErrorCode);
     }
     /**
      * Registered Server OS Version
@@ -309,8 +310,8 @@ public class RegisteredServer extends com.pulumi.resources.CustomResource {
      * @return Registered Server OS Version
      * 
      */
-    public Output</* @Nullable */ String> serverOSVersion() {
-        return this.serverOSVersion;
+    public Output<Optional<String>> serverOSVersion() {
+        return Codegen.optional(this.serverOSVersion);
     }
     /**
      * Registered Server serverRole
@@ -323,8 +324,8 @@ public class RegisteredServer extends com.pulumi.resources.CustomResource {
      * @return Registered Server serverRole
      * 
      */
-    public Output</* @Nullable */ String> serverRole() {
-        return this.serverRole;
+    public Output<Optional<String>> serverRole() {
+        return Codegen.optional(this.serverRole);
     }
     /**
      * Service Location
@@ -337,8 +338,8 @@ public class RegisteredServer extends com.pulumi.resources.CustomResource {
      * @return Service Location
      * 
      */
-    public Output</* @Nullable */ String> serviceLocation() {
-        return this.serviceLocation;
+    public Output<Optional<String>> serviceLocation() {
+        return Codegen.optional(this.serviceLocation);
     }
     /**
      * Registered Server storageSyncServiceUid
@@ -351,8 +352,8 @@ public class RegisteredServer extends com.pulumi.resources.CustomResource {
      * @return Registered Server storageSyncServiceUid
      * 
      */
-    public Output</* @Nullable */ String> storageSyncServiceUid() {
-        return this.storageSyncServiceUid;
+    public Output<Optional<String>> storageSyncServiceUid() {
+        return Codegen.optional(this.storageSyncServiceUid);
     }
     /**
      * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;

@@ -11,6 +11,7 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.pubsub.SchemaArgs;
 import com.pulumi.gcp.pubsub.inputs.SchemaState;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -59,8 +60,8 @@ public class Schema extends com.pulumi.resources.CustomResource {
      * that is a valid schema definition of the type specified in type.
      * 
      */
-    public Output</* @Nullable */ String> definition() {
-        return this.definition;
+    public Output<Optional<String>> definition() {
+        return Codegen.optional(this.definition);
     }
     /**
      * The ID to use for the schema, which will become the final component of the schema&#39;s resource name.
@@ -107,8 +108,8 @@ public class Schema extends com.pulumi.resources.CustomResource {
      * Possible values are `TYPE_UNSPECIFIED`, `PROTOCOL_BUFFER`, and `AVRO`.
      * 
      */
-    public Output</* @Nullable */ String> type() {
-        return this.type;
+    public Output<Optional<String>> type() {
+        return Codegen.optional(this.type);
     }
 
     /**

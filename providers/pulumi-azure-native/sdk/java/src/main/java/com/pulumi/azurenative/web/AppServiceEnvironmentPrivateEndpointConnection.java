@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -41,8 +42,8 @@ public class AppServiceEnvironmentPrivateEndpointConnection extends com.pulumi.r
      * @return Private IPAddresses mapped to the remote private endpoint
      * 
      */
-    public Output</* @Nullable */ List<String>> ipAddresses() {
-        return this.ipAddresses;
+    public Output<Optional<List<String>>> ipAddresses() {
+        return Codegen.optional(this.ipAddresses);
     }
     /**
      * Kind of resource.
@@ -55,8 +56,8 @@ public class AppServiceEnvironmentPrivateEndpointConnection extends com.pulumi.r
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> kind() {
-        return this.kind;
+    public Output<Optional<String>> kind() {
+        return Codegen.optional(this.kind);
     }
     /**
      * Resource Name.
@@ -83,8 +84,8 @@ public class AppServiceEnvironmentPrivateEndpointConnection extends com.pulumi.r
      * @return PrivateEndpoint of a remote private endpoint connection
      * 
      */
-    public Output</* @Nullable */ ArmIdWrapperResponse> privateEndpoint() {
-        return this.privateEndpoint;
+    public Output<Optional<ArmIdWrapperResponse>> privateEndpoint() {
+        return Codegen.optional(this.privateEndpoint);
     }
     /**
      * The state of a private link connection
@@ -97,8 +98,8 @@ public class AppServiceEnvironmentPrivateEndpointConnection extends com.pulumi.r
      * @return The state of a private link connection
      * 
      */
-    public Output</* @Nullable */ PrivateLinkConnectionStateResponse> privateLinkServiceConnectionState() {
-        return this.privateLinkServiceConnectionState;
+    public Output<Optional<PrivateLinkConnectionStateResponse>> privateLinkServiceConnectionState() {
+        return Codegen.optional(this.privateLinkServiceConnectionState);
     }
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;

@@ -18,6 +18,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -48,8 +49,8 @@ public class EnterprisePolicy extends com.pulumi.resources.CustomResource {
      * @return The encryption settings for a configuration store.
      * 
      */
-    public Output</* @Nullable */ PropertiesResponseEncryption> encryption() {
-        return this.encryption;
+    public Output<Optional<PropertiesResponseEncryption>> encryption() {
+        return Codegen.optional(this.encryption);
     }
     /**
      * The identity of the EnterprisePolicy.
@@ -62,8 +63,8 @@ public class EnterprisePolicy extends com.pulumi.resources.CustomResource {
      * @return The identity of the EnterprisePolicy.
      * 
      */
-    public Output</* @Nullable */ EnterprisePolicyIdentityResponse> identity() {
-        return this.identity;
+    public Output<Optional<EnterprisePolicyIdentityResponse>> identity() {
+        return Codegen.optional(this.identity);
     }
     /**
      * The kind (type) of Enterprise Policy.
@@ -104,8 +105,8 @@ public class EnterprisePolicy extends com.pulumi.resources.CustomResource {
      * @return Settings concerning lockbox.
      * 
      */
-    public Output</* @Nullable */ PropertiesResponseLockbox> lockbox() {
-        return this.lockbox;
+    public Output<Optional<PropertiesResponseLockbox>> lockbox() {
+        return Codegen.optional(this.lockbox);
     }
     /**
      * The name of the resource
@@ -132,8 +133,8 @@ public class EnterprisePolicy extends com.pulumi.resources.CustomResource {
      * @return Settings concerning network injection.
      * 
      */
-    public Output</* @Nullable */ PropertiesResponseNetworkInjection> networkInjection() {
-        return this.networkInjection;
+    public Output<Optional<PropertiesResponseNetworkInjection>> networkInjection() {
+        return Codegen.optional(this.networkInjection);
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
@@ -160,8 +161,8 @@ public class EnterprisePolicy extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;

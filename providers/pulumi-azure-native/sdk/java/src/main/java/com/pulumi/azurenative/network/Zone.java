@@ -15,6 +15,7 @@ import java.lang.Double;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class Zone extends com.pulumi.resources.CustomResource {
      * @return The etag of the zone.
      * 
      */
-    public Output</* @Nullable */ String> etag() {
-        return this.etag;
+    public Output<Optional<String>> etag() {
+        return Codegen.optional(this.etag);
     }
     /**
      * Resource location.
@@ -143,8 +144,8 @@ public class Zone extends com.pulumi.resources.CustomResource {
      * @return A list of references to virtual networks that register hostnames in this DNS zone. This is a only when ZoneType is Private.
      * 
      */
-    public Output</* @Nullable */ List<SubResourceResponse>> registrationVirtualNetworks() {
-        return this.registrationVirtualNetworks;
+    public Output<Optional<List<SubResourceResponse>>> registrationVirtualNetworks() {
+        return Codegen.optional(this.registrationVirtualNetworks);
     }
     /**
      * A list of references to virtual networks that resolve records in this DNS zone. This is a only when ZoneType is Private.
@@ -157,8 +158,8 @@ public class Zone extends com.pulumi.resources.CustomResource {
      * @return A list of references to virtual networks that resolve records in this DNS zone. This is a only when ZoneType is Private.
      * 
      */
-    public Output</* @Nullable */ List<SubResourceResponse>> resolutionVirtualNetworks() {
-        return this.resolutionVirtualNetworks;
+    public Output<Optional<List<SubResourceResponse>>> resolutionVirtualNetworks() {
+        return Codegen.optional(this.resolutionVirtualNetworks);
     }
     /**
      * Resource tags.
@@ -171,8 +172,8 @@ public class Zone extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type.
@@ -199,8 +200,8 @@ public class Zone extends com.pulumi.resources.CustomResource {
      * @return The type of this DNS zone (Public or Private).
      * 
      */
-    public Output</* @Nullable */ String> zoneType() {
-        return this.zoneType;
+    public Output<Optional<String>> zoneType() {
+        return Codegen.optional(this.zoneType);
     }
 
     /**

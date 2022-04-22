@@ -13,6 +13,7 @@ import com.pulumi.gcp.iap.inputs.TunnelInstanceIAMBindingState;
 import com.pulumi.gcp.iap.outputs.TunnelInstanceIAMBindingCondition;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -76,8 +77,8 @@ public class TunnelInstanceIAMBinding extends com.pulumi.resources.CustomResourc
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ TunnelInstanceIAMBindingCondition> condition() {
-        return this.condition;
+    public Output<Optional<TunnelInstanceIAMBindingCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * (Computed) The etag of the IAM policy.

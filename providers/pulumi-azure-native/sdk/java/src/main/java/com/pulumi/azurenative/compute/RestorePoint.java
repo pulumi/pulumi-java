@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -58,8 +59,8 @@ public class RestorePoint extends com.pulumi.resources.CustomResource {
      * @return List of disk resource ids that the customer wishes to exclude from the restore point. If no disks are specified, all disks will be included.
      * 
      */
-    public Output</* @Nullable */ List<ApiEntityReferenceResponse>> excludeDisks() {
-        return this.excludeDisks;
+    public Output<Optional<List<ApiEntityReferenceResponse>>> excludeDisks() {
+        return Codegen.optional(this.excludeDisks);
     }
     /**
      * Resource name
@@ -114,8 +115,8 @@ public class RestorePoint extends com.pulumi.resources.CustomResource {
      * @return Gets the creation time of the restore point.
      * 
      */
-    public Output</* @Nullable */ String> timeCreated() {
-        return this.timeCreated;
+    public Output<Optional<String>> timeCreated() {
+        return Codegen.optional(this.timeCreated);
     }
     /**
      * Resource type

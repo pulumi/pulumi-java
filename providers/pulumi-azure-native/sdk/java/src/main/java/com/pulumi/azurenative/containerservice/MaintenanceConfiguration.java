@@ -15,6 +15,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -59,8 +60,8 @@ public class MaintenanceConfiguration extends com.pulumi.resources.CustomResourc
      * @return Time slots on which upgrade is not allowed.
      * 
      */
-    public Output</* @Nullable */ List<TimeSpanResponse>> notAllowedTime() {
-        return this.notAllowedTime;
+    public Output<Optional<List<TimeSpanResponse>>> notAllowedTime() {
+        return Codegen.optional(this.notAllowedTime);
     }
     /**
      * The system meta data relating to this resource.
@@ -87,8 +88,8 @@ public class MaintenanceConfiguration extends com.pulumi.resources.CustomResourc
      * @return Weekday time slots allowed to upgrade.
      * 
      */
-    public Output</* @Nullable */ List<TimeInWeekResponse>> timeInWeek() {
-        return this.timeInWeek;
+    public Output<Optional<List<TimeInWeekResponse>>> timeInWeek() {
+        return Codegen.optional(this.timeInWeek);
     }
     /**
      * Resource type

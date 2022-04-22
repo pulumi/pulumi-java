@@ -16,6 +16,7 @@ import java.lang.Double;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class Schedule extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the advanced schedule.
      * 
      */
-    public Output</* @Nullable */ AdvancedScheduleResponse> advancedSchedule() {
-        return this.advancedSchedule;
+    public Output<Optional<AdvancedScheduleResponse>> advancedSchedule() {
+        return Codegen.optional(this.advancedSchedule);
     }
     /**
      * Gets or sets the creation time.
@@ -60,8 +61,8 @@ public class Schedule extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the creation time.
      * 
      */
-    public Output</* @Nullable */ String> creationTime() {
-        return this.creationTime;
+    public Output<Optional<String>> creationTime() {
+        return Codegen.optional(this.creationTime);
     }
     /**
      * Gets or sets the description.
@@ -74,8 +75,8 @@ public class Schedule extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the description.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Gets or sets the end time of the schedule.
@@ -88,8 +89,8 @@ public class Schedule extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the end time of the schedule.
      * 
      */
-    public Output</* @Nullable */ String> expiryTime() {
-        return this.expiryTime;
+    public Output<Optional<String>> expiryTime() {
+        return Codegen.optional(this.expiryTime);
     }
     /**
      * Gets or sets the expiry time&#39;s offset in minutes.
@@ -102,8 +103,8 @@ public class Schedule extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the expiry time&#39;s offset in minutes.
      * 
      */
-    public Output</* @Nullable */ Double> expiryTimeOffsetMinutes() {
-        return this.expiryTimeOffsetMinutes;
+    public Output<Optional<Double>> expiryTimeOffsetMinutes() {
+        return Codegen.optional(this.expiryTimeOffsetMinutes);
     }
     /**
      * Gets or sets the frequency of the schedule.
@@ -116,8 +117,8 @@ public class Schedule extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the frequency of the schedule.
      * 
      */
-    public Output</* @Nullable */ String> frequency() {
-        return this.frequency;
+    public Output<Optional<String>> frequency() {
+        return Codegen.optional(this.frequency);
     }
     /**
      * Gets or sets the interval of the schedule.
@@ -130,8 +131,8 @@ public class Schedule extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the interval of the schedule.
      * 
      */
-    public Output</* @Nullable */ Object> interval() {
-        return this.interval;
+    public Output<Optional<Object>> interval() {
+        return Codegen.optional(this.interval);
     }
     /**
      * Gets or sets a value indicating whether this schedule is enabled.
@@ -144,8 +145,8 @@ public class Schedule extends com.pulumi.resources.CustomResource {
      * @return Gets or sets a value indicating whether this schedule is enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> isEnabled() {
-        return this.isEnabled;
+    public Output<Optional<Boolean>> isEnabled() {
+        return Codegen.optional(this.isEnabled);
     }
     /**
      * Gets or sets the last modified time.
@@ -158,8 +159,8 @@ public class Schedule extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the last modified time.
      * 
      */
-    public Output</* @Nullable */ String> lastModifiedTime() {
-        return this.lastModifiedTime;
+    public Output<Optional<String>> lastModifiedTime() {
+        return Codegen.optional(this.lastModifiedTime);
     }
     /**
      * The name of the resource
@@ -186,8 +187,8 @@ public class Schedule extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the next run time of the schedule.
      * 
      */
-    public Output</* @Nullable */ String> nextRun() {
-        return this.nextRun;
+    public Output<Optional<String>> nextRun() {
+        return Codegen.optional(this.nextRun);
     }
     /**
      * Gets or sets the next run time&#39;s offset in minutes.
@@ -200,8 +201,8 @@ public class Schedule extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the next run time&#39;s offset in minutes.
      * 
      */
-    public Output</* @Nullable */ Double> nextRunOffsetMinutes() {
-        return this.nextRunOffsetMinutes;
+    public Output<Optional<Double>> nextRunOffsetMinutes() {
+        return Codegen.optional(this.nextRunOffsetMinutes);
     }
     /**
      * Gets or sets the start time of the schedule.
@@ -214,8 +215,8 @@ public class Schedule extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the start time of the schedule.
      * 
      */
-    public Output</* @Nullable */ String> startTime() {
-        return this.startTime;
+    public Output<Optional<String>> startTime() {
+        return Codegen.optional(this.startTime);
     }
     /**
      * Gets the start time&#39;s offset in minutes.
@@ -242,8 +243,8 @@ public class Schedule extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the time zone of the schedule.
      * 
      */
-    public Output</* @Nullable */ String> timeZone() {
-        return this.timeZone;
+    public Output<Optional<String>> timeZone() {
+        return Codegen.optional(this.timeZone);
     }
     /**
      * The type of the resource.

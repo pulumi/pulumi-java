@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -56,8 +57,8 @@ public class StaticSiteUserProvidedFunctionAppForStaticSiteBuild extends com.pul
      * @return The region of the function app registered with the static site
      * 
      */
-    public Output</* @Nullable */ String> functionAppRegion() {
-        return this.functionAppRegion;
+    public Output<Optional<String>> functionAppRegion() {
+        return Codegen.optional(this.functionAppRegion);
     }
     /**
      * The resource id of the function app registered with the static site
@@ -70,8 +71,8 @@ public class StaticSiteUserProvidedFunctionAppForStaticSiteBuild extends com.pul
      * @return The resource id of the function app registered with the static site
      * 
      */
-    public Output</* @Nullable */ String> functionAppResourceId() {
-        return this.functionAppResourceId;
+    public Output<Optional<String>> functionAppResourceId() {
+        return Codegen.optional(this.functionAppResourceId);
     }
     /**
      * Kind of resource.
@@ -84,8 +85,8 @@ public class StaticSiteUserProvidedFunctionAppForStaticSiteBuild extends com.pul
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> kind() {
-        return this.kind;
+    public Output<Optional<String>> kind() {
+        return Codegen.optional(this.kind);
     }
     /**
      * Resource Name.

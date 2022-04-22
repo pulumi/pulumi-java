@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -115,8 +116,8 @@ public class ScheduledTrigger extends com.pulumi.resources.CustomResource {
      * @return Synchronization mode
      * 
      */
-    public Output</* @Nullable */ String> synchronizationMode() {
-        return this.synchronizationMode;
+    public Output<Optional<String>> synchronizationMode() {
+        return Codegen.optional(this.synchronizationMode);
     }
     /**
      * Synchronization time

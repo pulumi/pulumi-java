@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -63,8 +64,8 @@ public class VpcDhcpOptions extends com.pulumi.resources.CustomResource {
      * @return the suffix domain name to use by default when resolving non Fully Qualified Domain Names. In other words, this is what ends up being the `search` value in the `/etc/resolv.conf` file.
      * 
      */
-    public Output</* @Nullable */ String> domainName() {
-        return this.domainName;
+    public Output<Optional<String>> domainName() {
+        return Codegen.optional(this.domainName);
     }
     /**
      * List of name servers to configure in `/etc/resolv.conf`. If you want to use the default AWS nameservers you should set this to `AmazonProvidedDNS`.
@@ -77,8 +78,8 @@ public class VpcDhcpOptions extends com.pulumi.resources.CustomResource {
      * @return List of name servers to configure in `/etc/resolv.conf`. If you want to use the default AWS nameservers you should set this to `AmazonProvidedDNS`.
      * 
      */
-    public Output</* @Nullable */ List<String>> domainNameServers() {
-        return this.domainNameServers;
+    public Output<Optional<List<String>>> domainNameServers() {
+        return Codegen.optional(this.domainNameServers);
     }
     /**
      * List of NETBIOS name servers.
@@ -91,8 +92,8 @@ public class VpcDhcpOptions extends com.pulumi.resources.CustomResource {
      * @return List of NETBIOS name servers.
      * 
      */
-    public Output</* @Nullable */ List<String>> netbiosNameServers() {
-        return this.netbiosNameServers;
+    public Output<Optional<List<String>>> netbiosNameServers() {
+        return Codegen.optional(this.netbiosNameServers);
     }
     /**
      * The NetBIOS node type (1, 2, 4, or 8). AWS recommends to specify 2 since broadcast and multicast are not supported in their network. For more information about these node types, see [RFC 2132](http://www.ietf.org/rfc/rfc2132.txt).
@@ -105,8 +106,8 @@ public class VpcDhcpOptions extends com.pulumi.resources.CustomResource {
      * @return The NetBIOS node type (1, 2, 4, or 8). AWS recommends to specify 2 since broadcast and multicast are not supported in their network. For more information about these node types, see [RFC 2132](http://www.ietf.org/rfc/rfc2132.txt).
      * 
      */
-    public Output</* @Nullable */ String> netbiosNodeType() {
-        return this.netbiosNodeType;
+    public Output<Optional<String>> netbiosNodeType() {
+        return Codegen.optional(this.netbiosNodeType);
     }
     /**
      * List of NTP servers to configure.
@@ -119,8 +120,8 @@ public class VpcDhcpOptions extends com.pulumi.resources.CustomResource {
      * @return List of NTP servers to configure.
      * 
      */
-    public Output</* @Nullable */ List<String>> ntpServers() {
-        return this.ntpServers;
+    public Output<Optional<List<String>>> ntpServers() {
+        return Codegen.optional(this.ntpServers);
     }
     /**
      * The ID of the AWS account that owns the DHCP options set.
@@ -147,8 +148,8 @@ public class VpcDhcpOptions extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

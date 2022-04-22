@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -66,8 +67,8 @@ public class TopicSubscription extends com.pulumi.resources.CustomResource {
      * @return Integer indicating number of minutes to wait in retrying mode for fetching subscription arn before marking it as failure. Only applicable for http and https protocols. Default is `1`.
      * 
      */
-    public Output</* @Nullable */ Integer> confirmationTimeoutInMinutes() {
-        return this.confirmationTimeoutInMinutes;
+    public Output<Optional<Integer>> confirmationTimeoutInMinutes() {
+        return Codegen.optional(this.confirmationTimeoutInMinutes);
     }
     /**
      * Whether the subscription confirmation request was authenticated.
@@ -94,8 +95,8 @@ public class TopicSubscription extends com.pulumi.resources.CustomResource {
      * @return JSON String with the delivery policy (retries, backoff, etc.) that will be used in the subscription - this only applies to HTTP/S subscriptions. Refer to the [SNS docs](https://docs.aws.amazon.com/sns/latest/dg/DeliveryPolicies.html) for more details.
      * 
      */
-    public Output</* @Nullable */ String> deliveryPolicy() {
-        return this.deliveryPolicy;
+    public Output<Optional<String>> deliveryPolicy() {
+        return Codegen.optional(this.deliveryPolicy);
     }
     /**
      * Endpoint to send data to. The contents vary with the protocol. See details below.
@@ -122,8 +123,8 @@ public class TopicSubscription extends com.pulumi.resources.CustomResource {
      * @return Whether the endpoint is capable of [auto confirming subscription](http://docs.aws.amazon.com/sns/latest/dg/SendMessageToHttp.html#SendMessageToHttp.prepare) (e.g., PagerDuty). Default is `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> endpointAutoConfirms() {
-        return this.endpointAutoConfirms;
+    public Output<Optional<Boolean>> endpointAutoConfirms() {
+        return Codegen.optional(this.endpointAutoConfirms);
     }
     /**
      * JSON String with the filter policy that will be used in the subscription to filter messages seen by the target resource. Refer to the [SNS docs](https://docs.aws.amazon.com/sns/latest/dg/message-filtering.html) for more details.
@@ -136,8 +137,8 @@ public class TopicSubscription extends com.pulumi.resources.CustomResource {
      * @return JSON String with the filter policy that will be used in the subscription to filter messages seen by the target resource. Refer to the [SNS docs](https://docs.aws.amazon.com/sns/latest/dg/message-filtering.html) for more details.
      * 
      */
-    public Output</* @Nullable */ String> filterPolicy() {
-        return this.filterPolicy;
+    public Output<Optional<String>> filterPolicy() {
+        return Codegen.optional(this.filterPolicy);
     }
     /**
      * AWS account ID of the subscription&#39;s owner.
@@ -192,8 +193,8 @@ public class TopicSubscription extends com.pulumi.resources.CustomResource {
      * @return Whether to enable raw message delivery (the original message is directly passed, not wrapped in JSON with the original message in the message property). Default is `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> rawMessageDelivery() {
-        return this.rawMessageDelivery;
+    public Output<Optional<Boolean>> rawMessageDelivery() {
+        return Codegen.optional(this.rawMessageDelivery);
     }
     /**
      * JSON String with the redrive policy that will be used in the subscription. Refer to the [SNS docs](https://docs.aws.amazon.com/sns/latest/dg/sns-dead-letter-queues.html#how-messages-moved-into-dead-letter-queue) for more details.
@@ -206,8 +207,8 @@ public class TopicSubscription extends com.pulumi.resources.CustomResource {
      * @return JSON String with the redrive policy that will be used in the subscription. Refer to the [SNS docs](https://docs.aws.amazon.com/sns/latest/dg/sns-dead-letter-queues.html#how-messages-moved-into-dead-letter-queue) for more details.
      * 
      */
-    public Output</* @Nullable */ String> redrivePolicy() {
-        return this.redrivePolicy;
+    public Output<Optional<String>> redrivePolicy() {
+        return Codegen.optional(this.redrivePolicy);
     }
     /**
      * ARN of the IAM role to publish to Kinesis Data Firehose delivery stream. Refer to [SNS docs](https://docs.aws.amazon.com/sns/latest/dg/sns-firehose-as-subscriber.html).
@@ -220,8 +221,8 @@ public class TopicSubscription extends com.pulumi.resources.CustomResource {
      * @return ARN of the IAM role to publish to Kinesis Data Firehose delivery stream. Refer to [SNS docs](https://docs.aws.amazon.com/sns/latest/dg/sns-firehose-as-subscriber.html).
      * 
      */
-    public Output</* @Nullable */ String> subscriptionRoleArn() {
-        return this.subscriptionRoleArn;
+    public Output<Optional<String>> subscriptionRoleArn() {
+        return Codegen.optional(this.subscriptionRoleArn);
     }
     /**
      * ARN of the SNS topic to subscribe to.

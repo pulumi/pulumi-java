@@ -11,6 +11,7 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.runtimeconfig.VariableArgs;
 import com.pulumi.gcp.runtimeconfig.inputs.VariableState;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -96,8 +97,8 @@ public class Variable extends com.pulumi.resources.CustomResource {
      * is specified, it must be base64 encoded and less than 4096 bytes in length.
      * 
      */
-    public Output</* @Nullable */ String> text() {
-        return this.text;
+    public Output<Optional<String>> text() {
+        return Codegen.optional(this.text);
     }
     /**
      * (Computed) The timestamp in RFC3339 UTC &#34;Zulu&#34; format,
@@ -120,8 +121,8 @@ public class Variable extends com.pulumi.resources.CustomResource {
     @Export(name="value", type=String.class, parameters={})
     private Output</* @Nullable */ String> value;
 
-    public Output</* @Nullable */ String> value() {
-        return this.value;
+    public Output<Optional<String>> value() {
+        return Codegen.optional(this.value);
     }
 
     /**

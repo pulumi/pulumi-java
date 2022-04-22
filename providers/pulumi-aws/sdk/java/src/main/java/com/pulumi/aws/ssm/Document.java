@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -89,8 +90,8 @@ public class Document extends com.pulumi.resources.CustomResource {
      * @return One or more configuration blocks describing attachments sources to a version of a document. Defined below.
      * 
      */
-    public Output</* @Nullable */ List<DocumentAttachmentsSource>> attachmentsSources() {
-        return this.attachmentsSources;
+    public Output<Optional<List<DocumentAttachmentsSource>>> attachmentsSources() {
+        return Codegen.optional(this.attachmentsSources);
     }
     /**
      * The JSON or YAML content of the document.
@@ -159,8 +160,8 @@ public class Document extends com.pulumi.resources.CustomResource {
      * @return The format of the document. Valid document types include: `JSON` and `YAML`
      * 
      */
-    public Output</* @Nullable */ String> documentFormat() {
-        return this.documentFormat;
+    public Output<Optional<String>> documentFormat() {
+        return Codegen.optional(this.documentFormat);
     }
     /**
      * The type of the document. Valid document types include: `Automation`, `Command`, `Package`, `Policy`, and `Session`
@@ -285,8 +286,8 @@ public class Document extends com.pulumi.resources.CustomResource {
      * @return Additional Permissions to attach to the document. See Permissions below for details.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> permissions() {
-        return this.permissions;
+    public Output<Optional<Map<String,String>>> permissions() {
+        return Codegen.optional(this.permissions);
     }
     /**
      * A list of OS platforms compatible with this SSM document, either &#34;Windows&#34; or &#34;Linux&#34;.
@@ -341,8 +342,8 @@ public class Document extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the object. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .
@@ -369,8 +370,8 @@ public class Document extends com.pulumi.resources.CustomResource {
      * @return The target type which defines the kinds of resources the document can run on. For example, /AWS::EC2::Instance. For a list of valid resource types, see AWS Resource Types Reference (http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html)
      * 
      */
-    public Output</* @Nullable */ String> targetType() {
-        return this.targetType;
+    public Output<Optional<String>> targetType() {
+        return Codegen.optional(this.targetType);
     }
     /**
      * A field specifying the version of the artifact you are creating with the document. For example, &#34;Release 12, Update 6&#34;. This value is unique across all versions of a document and cannot be changed for an existing document version.
@@ -383,8 +384,8 @@ public class Document extends com.pulumi.resources.CustomResource {
      * @return A field specifying the version of the artifact you are creating with the document. For example, &#34;Release 12, Update 6&#34;. This value is unique across all versions of a document and cannot be changed for an existing document version.
      * 
      */
-    public Output</* @Nullable */ String> versionName() {
-        return this.versionName;
+    public Output<Optional<String>> versionName() {
+        return Codegen.optional(this.versionName);
     }
 
     /**

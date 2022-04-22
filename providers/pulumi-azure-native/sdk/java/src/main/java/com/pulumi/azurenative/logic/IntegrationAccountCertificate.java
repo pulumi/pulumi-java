@@ -15,6 +15,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -73,8 +74,8 @@ public class IntegrationAccountCertificate extends com.pulumi.resources.CustomRe
      * @return The key details in the key vault.
      * 
      */
-    public Output</* @Nullable */ KeyVaultKeyReferenceResponse> key() {
-        return this.key;
+    public Output<Optional<KeyVaultKeyReferenceResponse>> key() {
+        return Codegen.optional(this.key);
     }
     /**
      * The resource location.
@@ -87,8 +88,8 @@ public class IntegrationAccountCertificate extends com.pulumi.resources.CustomRe
      * @return The resource location.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The metadata.
@@ -101,8 +102,8 @@ public class IntegrationAccountCertificate extends com.pulumi.resources.CustomRe
      * @return The metadata.
      * 
      */
-    public Output</* @Nullable */ Object> metadata() {
-        return this.metadata;
+    public Output<Optional<Object>> metadata() {
+        return Codegen.optional(this.metadata);
     }
     /**
      * Gets the resource name.
@@ -129,8 +130,8 @@ public class IntegrationAccountCertificate extends com.pulumi.resources.CustomRe
      * @return The public certificate.
      * 
      */
-    public Output</* @Nullable */ String> publicCertificate() {
-        return this.publicCertificate;
+    public Output<Optional<String>> publicCertificate() {
+        return Codegen.optional(this.publicCertificate);
     }
     /**
      * The resource tags.
@@ -143,8 +144,8 @@ public class IntegrationAccountCertificate extends com.pulumi.resources.CustomRe
      * @return The resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Gets the resource type.

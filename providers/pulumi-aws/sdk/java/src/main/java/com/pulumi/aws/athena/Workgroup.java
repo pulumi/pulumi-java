@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -57,8 +58,8 @@ public class Workgroup extends com.pulumi.resources.CustomResource {
      * @return Configuration block with various settings for the workgroup. Documented below.
      * 
      */
-    public Output</* @Nullable */ WorkgroupConfiguration> configuration() {
-        return this.configuration;
+    public Output<Optional<WorkgroupConfiguration>> configuration() {
+        return Codegen.optional(this.configuration);
     }
     /**
      * Description of the workgroup.
@@ -71,8 +72,8 @@ public class Workgroup extends com.pulumi.resources.CustomResource {
      * @return Description of the workgroup.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The option to delete the workgroup and its contents even if the workgroup contains any named queries.
@@ -85,8 +86,8 @@ public class Workgroup extends com.pulumi.resources.CustomResource {
      * @return The option to delete the workgroup and its contents even if the workgroup contains any named queries.
      * 
      */
-    public Output</* @Nullable */ Boolean> forceDestroy() {
-        return this.forceDestroy;
+    public Output<Optional<Boolean>> forceDestroy() {
+        return Codegen.optional(this.forceDestroy);
     }
     /**
      * Name of the workgroup.
@@ -113,8 +114,8 @@ public class Workgroup extends com.pulumi.resources.CustomResource {
      * @return State of the workgroup. Valid values are `DISABLED` or `ENABLED`. Defaults to `ENABLED`.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Output<Optional<String>> state() {
+        return Codegen.optional(this.state);
     }
     /**
      * Key-value map of resource tags for the workgroup. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -127,8 +128,8 @@ public class Workgroup extends com.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags for the workgroup. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

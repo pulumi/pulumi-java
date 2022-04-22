@@ -18,6 +18,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -48,8 +49,8 @@ public class Metadata extends com.pulumi.resources.CustomResource {
      * @return The creator of the content item.
      * 
      */
-    public Output</* @Nullable */ MetadataAuthorResponse> author() {
-        return this.author;
+    public Output<Optional<MetadataAuthorResponse>> author() {
+        return Codegen.optional(this.author);
     }
     /**
      * Categories for the solution content item
@@ -62,8 +63,8 @@ public class Metadata extends com.pulumi.resources.CustomResource {
      * @return Categories for the solution content item
      * 
      */
-    public Output</* @Nullable */ MetadataCategoriesResponse> categories() {
-        return this.categories;
+    public Output<Optional<MetadataCategoriesResponse>> categories() {
+        return Codegen.optional(this.categories);
     }
     /**
      * Static ID for the content.  Used to identify dependencies and content from solutions or community.  Hard-coded/static for out of the box content and solutions. Dynamic for user-created.  This is the resource name
@@ -76,8 +77,8 @@ public class Metadata extends com.pulumi.resources.CustomResource {
      * @return Static ID for the content.  Used to identify dependencies and content from solutions or community.  Hard-coded/static for out of the box content and solutions. Dynamic for user-created.  This is the resource name
      * 
      */
-    public Output</* @Nullable */ String> contentId() {
-        return this.contentId;
+    public Output<Optional<String>> contentId() {
+        return Codegen.optional(this.contentId);
     }
     /**
      * Dependencies for the content item, what other content items it requires to work.  Can describe more complex dependencies using a recursive/nested structure. For a single dependency an id/kind/version can be supplied or operator/criteria for complex formats.
@@ -90,8 +91,8 @@ public class Metadata extends com.pulumi.resources.CustomResource {
      * @return Dependencies for the content item, what other content items it requires to work.  Can describe more complex dependencies using a recursive/nested structure. For a single dependency an id/kind/version can be supplied or operator/criteria for complex formats.
      * 
      */
-    public Output</* @Nullable */ MetadataDependenciesResponse> dependencies() {
-        return this.dependencies;
+    public Output<Optional<MetadataDependenciesResponse>> dependencies() {
+        return Codegen.optional(this.dependencies);
     }
     /**
      * Etag of the azure resource
@@ -104,8 +105,8 @@ public class Metadata extends com.pulumi.resources.CustomResource {
      * @return Etag of the azure resource
      * 
      */
-    public Output</* @Nullable */ String> etag() {
-        return this.etag;
+    public Output<Optional<String>> etag() {
+        return Codegen.optional(this.etag);
     }
     /**
      * first publish date solution content item
@@ -118,8 +119,8 @@ public class Metadata extends com.pulumi.resources.CustomResource {
      * @return first publish date solution content item
      * 
      */
-    public Output</* @Nullable */ String> firstPublishDate() {
-        return this.firstPublishDate;
+    public Output<Optional<String>> firstPublishDate() {
+        return Codegen.optional(this.firstPublishDate);
     }
     /**
      * The kind of content the metadata is for.
@@ -146,8 +147,8 @@ public class Metadata extends com.pulumi.resources.CustomResource {
      * @return last publish date for the solution content item
      * 
      */
-    public Output</* @Nullable */ String> lastPublishDate() {
-        return this.lastPublishDate;
+    public Output<Optional<String>> lastPublishDate() {
+        return Codegen.optional(this.lastPublishDate);
     }
     /**
      * Azure resource name
@@ -188,8 +189,8 @@ public class Metadata extends com.pulumi.resources.CustomResource {
      * @return Providers for the solution content item
      * 
      */
-    public Output</* @Nullable */ List<String>> providers() {
-        return this.providers;
+    public Output<Optional<List<String>>> providers() {
+        return Codegen.optional(this.providers);
     }
     /**
      * Source of the content.  This is where/how it was created.
@@ -202,8 +203,8 @@ public class Metadata extends com.pulumi.resources.CustomResource {
      * @return Source of the content.  This is where/how it was created.
      * 
      */
-    public Output</* @Nullable */ MetadataSourceResponse> source() {
-        return this.source;
+    public Output<Optional<MetadataSourceResponse>> source() {
+        return Codegen.optional(this.source);
     }
     /**
      * Support information for the metadata - type, name, contact information
@@ -216,8 +217,8 @@ public class Metadata extends com.pulumi.resources.CustomResource {
      * @return Support information for the metadata - type, name, contact information
      * 
      */
-    public Output</* @Nullable */ MetadataSupportResponse> support() {
-        return this.support;
+    public Output<Optional<MetadataSupportResponse>> support() {
+        return Codegen.optional(this.support);
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
@@ -258,8 +259,8 @@ public class Metadata extends com.pulumi.resources.CustomResource {
      * @return Version of the content.  Default and recommended format is numeric (e.g. 1, 1.0, 1.0.0, 1.0.0.0), following ARM template best practices.  Can also be any string, but then we cannot guarantee any version checks
      * 
      */
-    public Output</* @Nullable */ String> version() {
-        return this.version;
+    public Output<Optional<String>> version() {
+        return Codegen.optional(this.version);
     }
 
     /**

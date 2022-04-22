@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class Registration extends com.pulumi.resources.CustomResource {
      * @return Specifies the billing mode for the Azure Stack registration.
      * 
      */
-    public Output</* @Nullable */ String> billingModel() {
-        return this.billingModel;
+    public Output<Optional<String>> billingModel() {
+        return Codegen.optional(this.billingModel);
     }
     /**
      * The identifier of the registered Azure Stack.
@@ -57,8 +58,8 @@ public class Registration extends com.pulumi.resources.CustomResource {
      * @return The identifier of the registered Azure Stack.
      * 
      */
-    public Output</* @Nullable */ String> cloudId() {
-        return this.cloudId;
+    public Output<Optional<String>> cloudId() {
+        return Codegen.optional(this.cloudId);
     }
     /**
      * The entity tag used for optimistic concurrency when modifying the resource.
@@ -71,8 +72,8 @@ public class Registration extends com.pulumi.resources.CustomResource {
      * @return The entity tag used for optimistic concurrency when modifying the resource.
      * 
      */
-    public Output</* @Nullable */ String> etag() {
-        return this.etag;
+    public Output<Optional<String>> etag() {
+        return Codegen.optional(this.etag);
     }
     /**
      * Location of the resource.
@@ -113,8 +114,8 @@ public class Registration extends com.pulumi.resources.CustomResource {
      * @return The object identifier associated with the Azure Stack connecting to Azure.
      * 
      */
-    public Output</* @Nullable */ String> objectId() {
-        return this.objectId;
+    public Output<Optional<String>> objectId() {
+        return Codegen.optional(this.objectId);
     }
     /**
      * Custom tags for the resource.
@@ -127,8 +128,8 @@ public class Registration extends com.pulumi.resources.CustomResource {
      * @return Custom tags for the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Type of Resource.

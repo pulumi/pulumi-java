@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -54,8 +55,8 @@ public class LogSubscriptionFilter extends com.pulumi.resources.CustomResource {
      * @return The method used to distribute log data to the destination. By default log data is grouped by log stream, but the grouping can be set to random for a more even distribution. This property is only applicable when the destination is an Amazon Kinesis stream. Valid values are &#34;Random&#34; and &#34;ByLogStream&#34;.
      * 
      */
-    public Output</* @Nullable */ String> distribution() {
-        return this.distribution;
+    public Output<Optional<String>> distribution() {
+        return Codegen.optional(this.distribution);
     }
     /**
      * A valid CloudWatch Logs filter pattern for subscribing to a filtered stream of log events.

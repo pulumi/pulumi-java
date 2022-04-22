@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -42,8 +43,8 @@ public class RoleAssignment extends com.pulumi.resources.CustomResource {
      * @return The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase &#39;foo_storage_container&#39;
      * 
      */
-    public Output</* @Nullable */ String> condition() {
-        return this.condition;
+    public Output<Optional<String>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * Version of the condition. Currently accepted value is &#39;2.0&#39;
@@ -56,8 +57,8 @@ public class RoleAssignment extends com.pulumi.resources.CustomResource {
      * @return Version of the condition. Currently accepted value is &#39;2.0&#39;
      * 
      */
-    public Output</* @Nullable */ String> conditionVersion() {
-        return this.conditionVersion;
+    public Output<Optional<String>> conditionVersion() {
+        return Codegen.optional(this.conditionVersion);
     }
     /**
      * Id of the user who created the assignment
@@ -98,8 +99,8 @@ public class RoleAssignment extends com.pulumi.resources.CustomResource {
      * @return Id of the delegated managed identity resource
      * 
      */
-    public Output</* @Nullable */ String> delegatedManagedIdentityResourceId() {
-        return this.delegatedManagedIdentityResourceId;
+    public Output<Optional<String>> delegatedManagedIdentityResourceId() {
+        return Codegen.optional(this.delegatedManagedIdentityResourceId);
     }
     /**
      * Description of role assignment
@@ -112,8 +113,8 @@ public class RoleAssignment extends com.pulumi.resources.CustomResource {
      * @return Description of role assignment
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The role assignment name.
@@ -154,8 +155,8 @@ public class RoleAssignment extends com.pulumi.resources.CustomResource {
      * @return The principal type of the assigned principal ID.
      * 
      */
-    public Output</* @Nullable */ String> principalType() {
-        return this.principalType;
+    public Output<Optional<String>> principalType() {
+        return Codegen.optional(this.principalType);
     }
     /**
      * The role definition ID.

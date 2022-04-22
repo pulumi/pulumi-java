@@ -18,6 +18,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -77,8 +78,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return The list of connections used for this job.
      * 
      */
-    public Output</* @Nullable */ List<String>> connections() {
-        return this.connections;
+    public Output<Optional<List<String>>> connections() {
+        return Codegen.optional(this.connections);
     }
     /**
      * The map of default arguments for this job. You can specify arguments here that your own job-execution script consumes, as well as arguments that AWS Glue itself consumes. For information about how to specify and consume your own Job arguments, see the [Calling AWS Glue APIs in Python](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-python-calling.html) topic in the developer guide. For information about the key-value pairs that AWS Glue consumes to set up your job, see the [Special Parameters Used by AWS Glue](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-python-glue-arguments.html) topic in the developer guide.
@@ -91,8 +92,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return The map of default arguments for this job. You can specify arguments here that your own job-execution script consumes, as well as arguments that AWS Glue itself consumes. For information about how to specify and consume your own Job arguments, see the [Calling AWS Glue APIs in Python](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-python-calling.html) topic in the developer guide. For information about the key-value pairs that AWS Glue consumes to set up your job, see the [Special Parameters Used by AWS Glue](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-python-glue-arguments.html) topic in the developer guide.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> defaultArguments() {
-        return this.defaultArguments;
+    public Output<Optional<Map<String,String>>> defaultArguments() {
+        return Codegen.optional(this.defaultArguments);
     }
     /**
      * Description of the job.
@@ -105,8 +106,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Description of the job.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Execution property of the job. Defined below.
@@ -161,8 +162,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return The maximum number of times to retry this job if it fails.
      * 
      */
-    public Output</* @Nullable */ Integer> maxRetries() {
-        return this.maxRetries;
+    public Output<Optional<Integer>> maxRetries() {
+        return Codegen.optional(this.maxRetries);
     }
     /**
      * The name you assign to this job. It must be unique in your account.
@@ -189,8 +190,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Non-overridable arguments for this job, specified as name-value pairs.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> nonOverridableArguments() {
-        return this.nonOverridableArguments;
+    public Output<Optional<Map<String,String>>> nonOverridableArguments() {
+        return Codegen.optional(this.nonOverridableArguments);
     }
     /**
      * Notification property of the job. Defined below.
@@ -217,8 +218,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return The number of workers of a defined workerType that are allocated when a job runs.
      * 
      */
-    public Output</* @Nullable */ Integer> numberOfWorkers() {
-        return this.numberOfWorkers;
+    public Output<Optional<Integer>> numberOfWorkers() {
+        return Codegen.optional(this.numberOfWorkers);
     }
     /**
      * The ARN of the IAM role associated with this job.
@@ -245,8 +246,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return The name of the Security Configuration to be associated with the job.
      * 
      */
-    public Output</* @Nullable */ String> securityConfiguration() {
-        return this.securityConfiguration;
+    public Output<Optional<String>> securityConfiguration() {
+        return Codegen.optional(this.securityConfiguration);
     }
     /**
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -259,8 +260,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
@@ -287,8 +288,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return The job timeout in minutes. The default is 2880 minutes (48 hours).
      * 
      */
-    public Output</* @Nullable */ Integer> timeout() {
-        return this.timeout;
+    public Output<Optional<Integer>> timeout() {
+        return Codegen.optional(this.timeout);
     }
     /**
      * The type of predefined worker that is allocated when a job runs. Accepts a value of Standard, G.1X, or G.2X.
@@ -301,8 +302,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return The type of predefined worker that is allocated when a job runs. Accepts a value of Standard, G.1X, or G.2X.
      * 
      */
-    public Output</* @Nullable */ String> workerType() {
-        return this.workerType;
+    public Output<Optional<String>> workerType() {
+        return Codegen.optional(this.workerType);
     }
 
     /**

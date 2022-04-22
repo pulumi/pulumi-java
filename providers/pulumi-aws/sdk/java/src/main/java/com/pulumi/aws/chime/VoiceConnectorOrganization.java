@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class VoiceConnectorOrganization extends com.pulumi.resources.CustomResou
      * @return When origination settings are disabled, inbound calls are not enabled for your Amazon Chime Voice Connector.
      * 
      */
-    public Output</* @Nullable */ Boolean> disabled() {
-        return this.disabled;
+    public Output<Optional<Boolean>> disabled() {
+        return Codegen.optional(this.disabled);
     }
     /**
      * Set of call distribution properties defined for your SIP hosts. See route below for more details. Minimum of 1. Maximum of 20.

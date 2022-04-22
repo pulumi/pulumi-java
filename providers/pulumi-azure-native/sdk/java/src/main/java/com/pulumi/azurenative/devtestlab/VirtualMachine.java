@@ -22,6 +22,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -52,8 +53,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return Indicates whether another user can take ownership of the virtual machine
      * 
      */
-    public Output</* @Nullable */ Boolean> allowClaim() {
-        return this.allowClaim;
+    public Output<Optional<Boolean>> allowClaim() {
+        return Codegen.optional(this.allowClaim);
     }
     /**
      * The applicable schedule for the virtual machine.
@@ -94,8 +95,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return The artifacts to be installed on the virtual machine.
      * 
      */
-    public Output</* @Nullable */ List<ArtifactInstallPropertiesResponse>> artifacts() {
-        return this.artifacts;
+    public Output<Optional<List<ArtifactInstallPropertiesResponse>>> artifacts() {
+        return Codegen.optional(this.artifacts);
     }
     /**
      * The resource identifier (Microsoft.Compute) of the virtual machine.
@@ -164,8 +165,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return The creation date of the virtual machine.
      * 
      */
-    public Output</* @Nullable */ String> createdDate() {
-        return this.createdDate;
+    public Output<Optional<String>> createdDate() {
+        return Codegen.optional(this.createdDate);
     }
     /**
      * The custom image identifier of the virtual machine.
@@ -178,8 +179,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return The custom image identifier of the virtual machine.
      * 
      */
-    public Output</* @Nullable */ String> customImageId() {
-        return this.customImageId;
+    public Output<Optional<String>> customImageId() {
+        return Codegen.optional(this.customImageId);
     }
     /**
      * New or existing data disks to attach to the virtual machine after creation
@@ -192,8 +193,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return New or existing data disks to attach to the virtual machine after creation
      * 
      */
-    public Output</* @Nullable */ List<DataDiskPropertiesResponse>> dataDiskParameters() {
-        return this.dataDiskParameters;
+    public Output<Optional<List<DataDiskPropertiesResponse>>> dataDiskParameters() {
+        return Codegen.optional(this.dataDiskParameters);
     }
     /**
      * Indicates whether the virtual machine is to be created without a public IP address.
@@ -206,8 +207,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return Indicates whether the virtual machine is to be created without a public IP address.
      * 
      */
-    public Output</* @Nullable */ Boolean> disallowPublicIpAddress() {
-        return this.disallowPublicIpAddress;
+    public Output<Optional<Boolean>> disallowPublicIpAddress() {
+        return Codegen.optional(this.disallowPublicIpAddress);
     }
     /**
      * The resource ID of the environment that contains this virtual machine, if any.
@@ -220,8 +221,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return The resource ID of the environment that contains this virtual machine, if any.
      * 
      */
-    public Output</* @Nullable */ String> environmentId() {
-        return this.environmentId;
+    public Output<Optional<String>> environmentId() {
+        return Codegen.optional(this.environmentId);
     }
     /**
      * The expiration date for VM.
@@ -234,8 +235,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return The expiration date for VM.
      * 
      */
-    public Output</* @Nullable */ String> expirationDate() {
-        return this.expirationDate;
+    public Output<Optional<String>> expirationDate() {
+        return Codegen.optional(this.expirationDate);
     }
     /**
      * The fully-qualified domain name of the virtual machine.
@@ -262,8 +263,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return The Microsoft Azure Marketplace image reference of the virtual machine.
      * 
      */
-    public Output</* @Nullable */ GalleryImageReferenceResponse> galleryImageReference() {
-        return this.galleryImageReference;
+    public Output<Optional<GalleryImageReferenceResponse>> galleryImageReference() {
+        return Codegen.optional(this.galleryImageReference);
     }
     /**
      * Indicates whether this virtual machine uses an SSH key for authentication.
@@ -276,8 +277,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return Indicates whether this virtual machine uses an SSH key for authentication.
      * 
      */
-    public Output</* @Nullable */ Boolean> isAuthenticationWithSshKey() {
-        return this.isAuthenticationWithSshKey;
+    public Output<Optional<Boolean>> isAuthenticationWithSshKey() {
+        return Codegen.optional(this.isAuthenticationWithSshKey);
     }
     /**
      * The lab subnet name of the virtual machine.
@@ -290,8 +291,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return The lab subnet name of the virtual machine.
      * 
      */
-    public Output</* @Nullable */ String> labSubnetName() {
-        return this.labSubnetName;
+    public Output<Optional<String>> labSubnetName() {
+        return Codegen.optional(this.labSubnetName);
     }
     /**
      * The lab virtual network identifier of the virtual machine.
@@ -304,8 +305,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return The lab virtual network identifier of the virtual machine.
      * 
      */
-    public Output</* @Nullable */ String> labVirtualNetworkId() {
-        return this.labVirtualNetworkId;
+    public Output<Optional<String>> labVirtualNetworkId() {
+        return Codegen.optional(this.labVirtualNetworkId);
     }
     /**
      * Last known compute power state captured in DTL
@@ -332,8 +333,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return The location of the resource.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The name of the resource.
@@ -360,8 +361,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return The network interface properties.
      * 
      */
-    public Output</* @Nullable */ NetworkInterfacePropertiesResponse> networkInterface() {
-        return this.networkInterface;
+    public Output<Optional<NetworkInterfacePropertiesResponse>> networkInterface() {
+        return Codegen.optional(this.networkInterface);
     }
     /**
      * The notes of the virtual machine.
@@ -374,8 +375,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return The notes of the virtual machine.
      * 
      */
-    public Output</* @Nullable */ String> notes() {
-        return this.notes;
+    public Output<Optional<String>> notes() {
+        return Codegen.optional(this.notes);
     }
     /**
      * The OS type of the virtual machine.
@@ -402,8 +403,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return The object identifier of the owner of the virtual machine.
      * 
      */
-    public Output</* @Nullable */ String> ownerObjectId() {
-        return this.ownerObjectId;
+    public Output<Optional<String>> ownerObjectId() {
+        return Codegen.optional(this.ownerObjectId);
     }
     /**
      * The user principal name of the virtual machine owner.
@@ -416,8 +417,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return The user principal name of the virtual machine owner.
      * 
      */
-    public Output</* @Nullable */ String> ownerUserPrincipalName() {
-        return this.ownerUserPrincipalName;
+    public Output<Optional<String>> ownerUserPrincipalName() {
+        return Codegen.optional(this.ownerUserPrincipalName);
     }
     /**
      * The password of the virtual machine administrator.
@@ -430,8 +431,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return The password of the virtual machine administrator.
      * 
      */
-    public Output</* @Nullable */ String> password() {
-        return this.password;
+    public Output<Optional<String>> password() {
+        return Codegen.optional(this.password);
     }
     /**
      * The id of the plan associated with the virtual machine image
@@ -444,8 +445,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return The id of the plan associated with the virtual machine image
      * 
      */
-    public Output</* @Nullable */ String> planId() {
-        return this.planId;
+    public Output<Optional<String>> planId() {
+        return Codegen.optional(this.planId);
     }
     /**
      * The provisioning status of the resource.
@@ -472,8 +473,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return Virtual Machine schedules to be created
      * 
      */
-    public Output</* @Nullable */ List<ScheduleCreationParameterResponse>> scheduleParameters() {
-        return this.scheduleParameters;
+    public Output<Optional<List<ScheduleCreationParameterResponse>>> scheduleParameters() {
+        return Codegen.optional(this.scheduleParameters);
     }
     /**
      * The size of the virtual machine.
@@ -486,8 +487,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return The size of the virtual machine.
      * 
      */
-    public Output</* @Nullable */ String> size() {
-        return this.size;
+    public Output<Optional<String>> size() {
+        return Codegen.optional(this.size);
     }
     /**
      * The SSH key of the virtual machine administrator.
@@ -500,8 +501,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return The SSH key of the virtual machine administrator.
      * 
      */
-    public Output</* @Nullable */ String> sshKey() {
-        return this.sshKey;
+    public Output<Optional<String>> sshKey() {
+        return Codegen.optional(this.sshKey);
     }
     /**
      * Storage type to use for virtual machine (i.e. Standard, Premium).
@@ -514,8 +515,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return Storage type to use for virtual machine (i.e. Standard, Premium).
      * 
      */
-    public Output</* @Nullable */ String> storageType() {
-        return this.storageType;
+    public Output<Optional<String>> storageType() {
+        return Codegen.optional(this.storageType);
     }
     /**
      * The tags of the resource.
@@ -528,8 +529,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return The tags of the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource.
@@ -570,8 +571,8 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return The user name of the virtual machine.
      * 
      */
-    public Output</* @Nullable */ String> userName() {
-        return this.userName;
+    public Output<Optional<String>> userName() {
+        return Codegen.optional(this.userName);
     }
     /**
      * Tells source of creation of lab virtual machine. Output property only.

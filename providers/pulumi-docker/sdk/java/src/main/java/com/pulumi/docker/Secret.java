@@ -13,6 +13,7 @@ import com.pulumi.docker.inputs.SecretState;
 import com.pulumi.docker.outputs.SecretLabel;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -48,8 +49,8 @@ public class Secret extends com.pulumi.resources.CustomResource {
      * @return User-defined key/value metadata
      * 
      */
-    public Output</* @Nullable */ List<SecretLabel>> labels() {
-        return this.labels;
+    public Output<Optional<List<SecretLabel>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * User-defined name of the secret

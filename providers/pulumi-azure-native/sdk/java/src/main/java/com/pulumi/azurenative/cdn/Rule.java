@@ -37,6 +37,7 @@ import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -81,8 +82,8 @@ public class Rule extends com.pulumi.resources.CustomResource {
      * @return A list of conditions that must be matched for the actions to be executed
      * 
      */
-    public Output</* @Nullable */ List<Object>> conditions() {
-        return this.conditions;
+    public Output<Optional<List<Object>>> conditions() {
+        return Codegen.optional(this.conditions);
     }
     @Export(name="deploymentStatus", type=String.class, parameters={})
     private Output<String> deploymentStatus;
@@ -101,8 +102,8 @@ public class Rule extends com.pulumi.resources.CustomResource {
      * @return If this rule is a match should the rules engine continue running the remaining rules or stop. If not present, defaults to Continue.
      * 
      */
-    public Output</* @Nullable */ String> matchProcessingBehavior() {
-        return this.matchProcessingBehavior;
+    public Output<Optional<String>> matchProcessingBehavior() {
+        return Codegen.optional(this.matchProcessingBehavior);
     }
     /**
      * Resource name.

@@ -18,6 +18,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -53,8 +54,8 @@ public class Device extends com.pulumi.resources.CustomResource {
      * @return If a device is blocked, connections or requests from this device will fail.
      * 
      */
-    public Output</* @Nullable */ Boolean> blocked() {
-        return this.blocked;
+    public Output<Optional<Boolean>> blocked() {
+        return Codegen.optional(this.blocked);
     }
     /**
      * The most recent device configuration, which is eventually sent from Cloud IoT Core to the device.
@@ -83,8 +84,8 @@ public class Device extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<DeviceCredential>> credentials() {
-        return this.credentials;
+    public Output<Optional<List<DeviceCredential>>> credentials() {
+        return Codegen.optional(this.credentials);
     }
     /**
      * Gateway-related configuration and state.
@@ -99,8 +100,8 @@ public class Device extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ DeviceGatewayConfig> gatewayConfig() {
-        return this.gatewayConfig;
+    public Output<Optional<DeviceGatewayConfig>> gatewayConfig() {
+        return Codegen.optional(this.gatewayConfig);
     }
     /**
      * The last time a cloud-to-device config version acknowledgment was received from the device.
@@ -213,8 +214,8 @@ public class Device extends com.pulumi.resources.CustomResource {
      * Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
      * 
      */
-    public Output</* @Nullable */ String> logLevel() {
-        return this.logLevel;
+    public Output<Optional<String>> logLevel() {
+        return Codegen.optional(this.logLevel);
     }
     /**
      * The metadata key-value pairs assigned to the device.
@@ -227,8 +228,8 @@ public class Device extends com.pulumi.resources.CustomResource {
      * @return The metadata key-value pairs assigned to the device.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> metadata() {
-        return this.metadata;
+    public Output<Optional<Map<String,String>>> metadata() {
+        return Codegen.optional(this.metadata);
     }
     /**
      * A unique name for the resource.

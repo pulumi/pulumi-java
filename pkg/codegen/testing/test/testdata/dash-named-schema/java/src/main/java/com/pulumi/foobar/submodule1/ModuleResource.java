@@ -10,6 +10,7 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.foobar.Utilities;
 import com.pulumi.foobar.outputs.TopLevel;
 import com.pulumi.foobar.submodule1.ModuleResourceArgs;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 @ResourceType(type="foo-bar:submodule1:ModuleResource")
@@ -17,8 +18,8 @@ public class ModuleResource extends com.pulumi.resources.CustomResource {
     @Export(name="thing", type=TopLevel.class, parameters={})
     private Output</* @Nullable */ TopLevel> thing;
 
-    public Output</* @Nullable */ TopLevel> thing() {
-        return this.thing;
+    public Output<Optional<TopLevel>> thing() {
+        return Codegen.optional(this.thing);
     }
 
     /**

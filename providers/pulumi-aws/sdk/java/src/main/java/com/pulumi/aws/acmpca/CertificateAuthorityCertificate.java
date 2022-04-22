@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -60,8 +61,8 @@ public class CertificateAuthorityCertificate extends com.pulumi.resources.Custom
      * @return The PEM-encoded certificate chain that includes any intermediate certificates and chains up to root CA. Required for subordinate Certificate Authorities. Not allowed for root Certificate Authorities.
      * 
      */
-    public Output</* @Nullable */ String> certificateChain() {
-        return this.certificateChain;
+    public Output<Optional<String>> certificateChain() {
+        return Codegen.optional(this.certificateChain);
     }
 
     /**

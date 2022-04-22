@@ -12,6 +12,7 @@ import com.pulumi.gcp.artifactregistry.RepositoryArgs;
 import com.pulumi.gcp.artifactregistry.inputs.RepositoryState;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -73,8 +74,8 @@ public class Repository extends com.pulumi.resources.CustomResource {
      * @return The user-provided description of the repository.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The format of packages that are stored in the repository. You can only create
@@ -123,8 +124,8 @@ public class Repository extends com.pulumi.resources.CustomResource {
      * This value may not be changed after the Repository has been created.
      * 
      */
-    public Output</* @Nullable */ String> kmsKeyName() {
-        return this.kmsKeyName;
+    public Output<Optional<String>> kmsKeyName() {
+        return Codegen.optional(this.kmsKeyName);
     }
     /**
      * Labels with user-defined metadata.
@@ -145,8 +146,8 @@ public class Repository extends com.pulumi.resources.CustomResource {
      * and dashes.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * The name of the location this repository is located in.

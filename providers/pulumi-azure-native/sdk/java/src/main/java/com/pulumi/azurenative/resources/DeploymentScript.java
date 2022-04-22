@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -49,8 +50,8 @@ public class DeploymentScript extends com.pulumi.resources.CustomResource {
      * @return Optional property. Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.
      * 
      */
-    public Output</* @Nullable */ ManagedServiceIdentityResponse> identity() {
-        return this.identity;
+    public Output<Optional<ManagedServiceIdentityResponse>> identity() {
+        return Codegen.optional(this.identity);
     }
     /**
      * Type of the script.
@@ -119,8 +120,8 @@ public class DeploymentScript extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Type of this resource.

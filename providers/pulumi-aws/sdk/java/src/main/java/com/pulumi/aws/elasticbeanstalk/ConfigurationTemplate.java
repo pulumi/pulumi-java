@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -58,8 +59,8 @@ public class ConfigurationTemplate extends com.pulumi.resources.CustomResource {
      * @return Short description of the Template
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The ID of the environment used with this configuration template
@@ -72,8 +73,8 @@ public class ConfigurationTemplate extends com.pulumi.resources.CustomResource {
      * @return The ID of the environment used with this configuration template
      * 
      */
-    public Output</* @Nullable */ String> environmentId() {
-        return this.environmentId;
+    public Output<Optional<String>> environmentId() {
+        return Codegen.optional(this.environmentId);
     }
     /**
      * A unique name for this Template.
@@ -120,8 +121,8 @@ public class ConfigurationTemplate extends com.pulumi.resources.CustomResource {
      * off of. Example stacks can be found in the [Amazon API documentation](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.platforms.html)
      * 
      */
-    public Output</* @Nullable */ String> solutionStackName() {
-        return this.solutionStackName;
+    public Output<Optional<String>> solutionStackName() {
+        return Codegen.optional(this.solutionStackName);
     }
 
     /**

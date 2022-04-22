@@ -11,6 +11,7 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.firestore.DocumentArgs;
 import com.pulumi.gcp.firestore.inputs.DocumentState;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -81,8 +82,8 @@ public class Document extends com.pulumi.resources.CustomResource {
      * @return The Firestore database id. Defaults to `&#34;(default)&#34;`.
      * 
      */
-    public Output</* @Nullable */ String> database() {
-        return this.database;
+    public Output<Optional<String>> database() {
+        return Codegen.optional(this.database);
     }
     /**
      * The client-assigned document ID to use for this document during creation.

@@ -15,6 +15,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class Webhook extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the creation time.
      * 
      */
-    public Output</* @Nullable */ String> creationTime() {
-        return this.creationTime;
+    public Output<Optional<String>> creationTime() {
+        return Codegen.optional(this.creationTime);
     }
     /**
      * Gets or sets the description.
@@ -59,8 +60,8 @@ public class Webhook extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the description.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Gets or sets the expiry time.
@@ -73,8 +74,8 @@ public class Webhook extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the expiry time.
      * 
      */
-    public Output</* @Nullable */ String> expiryTime() {
-        return this.expiryTime;
+    public Output<Optional<String>> expiryTime() {
+        return Codegen.optional(this.expiryTime);
     }
     /**
      * Gets or sets the value of the enabled flag of the webhook.
@@ -87,8 +88,8 @@ public class Webhook extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the value of the enabled flag of the webhook.
      * 
      */
-    public Output</* @Nullable */ Boolean> isEnabled() {
-        return this.isEnabled;
+    public Output<Optional<Boolean>> isEnabled() {
+        return Codegen.optional(this.isEnabled);
     }
     /**
      * Gets or sets the last invoked time.
@@ -101,8 +102,8 @@ public class Webhook extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the last invoked time.
      * 
      */
-    public Output</* @Nullable */ String> lastInvokedTime() {
-        return this.lastInvokedTime;
+    public Output<Optional<String>> lastInvokedTime() {
+        return Codegen.optional(this.lastInvokedTime);
     }
     /**
      * Details of the user who last modified the Webhook
@@ -115,8 +116,8 @@ public class Webhook extends com.pulumi.resources.CustomResource {
      * @return Details of the user who last modified the Webhook
      * 
      */
-    public Output</* @Nullable */ String> lastModifiedBy() {
-        return this.lastModifiedBy;
+    public Output<Optional<String>> lastModifiedBy() {
+        return Codegen.optional(this.lastModifiedBy);
     }
     /**
      * Gets or sets the last modified time.
@@ -129,8 +130,8 @@ public class Webhook extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the last modified time.
      * 
      */
-    public Output</* @Nullable */ String> lastModifiedTime() {
-        return this.lastModifiedTime;
+    public Output<Optional<String>> lastModifiedTime() {
+        return Codegen.optional(this.lastModifiedTime);
     }
     /**
      * The name of the resource
@@ -157,8 +158,8 @@ public class Webhook extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the parameters of the job that is created when the webhook calls the runbook it is associated with.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> parameters() {
-        return this.parameters;
+    public Output<Optional<Map<String,String>>> parameters() {
+        return Codegen.optional(this.parameters);
     }
     /**
      * Gets or sets the name of the hybrid worker group the webhook job will run on.
@@ -171,8 +172,8 @@ public class Webhook extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the name of the hybrid worker group the webhook job will run on.
      * 
      */
-    public Output</* @Nullable */ String> runOn() {
-        return this.runOn;
+    public Output<Optional<String>> runOn() {
+        return Codegen.optional(this.runOn);
     }
     /**
      * Gets or sets the runbook the webhook is associated with.
@@ -185,8 +186,8 @@ public class Webhook extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the runbook the webhook is associated with.
      * 
      */
-    public Output</* @Nullable */ RunbookAssociationPropertyResponse> runbook() {
-        return this.runbook;
+    public Output<Optional<RunbookAssociationPropertyResponse>> runbook() {
+        return Codegen.optional(this.runbook);
     }
     /**
      * The type of the resource.
@@ -213,8 +214,8 @@ public class Webhook extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the webhook uri.
      * 
      */
-    public Output</* @Nullable */ String> uri() {
-        return this.uri;
+    public Output<Optional<String>> uri() {
+        return Codegen.optional(this.uri);
     }
 
     /**

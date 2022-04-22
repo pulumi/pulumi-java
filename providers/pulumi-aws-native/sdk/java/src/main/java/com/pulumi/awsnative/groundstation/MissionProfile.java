@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -41,8 +42,8 @@ public class MissionProfile extends com.pulumi.resources.CustomResource {
      * @return Post-pass time needed after the contact.
      * 
      */
-    public Output</* @Nullable */ Integer> contactPostPassDurationSeconds() {
-        return this.contactPostPassDurationSeconds;
+    public Output<Optional<Integer>> contactPostPassDurationSeconds() {
+        return Codegen.optional(this.contactPostPassDurationSeconds);
     }
     /**
      * Pre-pass time needed before the contact.
@@ -55,8 +56,8 @@ public class MissionProfile extends com.pulumi.resources.CustomResource {
      * @return Pre-pass time needed before the contact.
      * 
      */
-    public Output</* @Nullable */ Integer> contactPrePassDurationSeconds() {
-        return this.contactPrePassDurationSeconds;
+    public Output<Optional<Integer>> contactPrePassDurationSeconds() {
+        return Codegen.optional(this.contactPrePassDurationSeconds);
     }
     @Export(name="dataflowEdges", type=List.class, parameters={MissionProfileDataflowEdge.class})
     private Output<List<MissionProfileDataflowEdge>> dataflowEdges;
@@ -101,8 +102,8 @@ public class MissionProfile extends com.pulumi.resources.CustomResource {
     @Export(name="tags", type=List.class, parameters={MissionProfileTag.class})
     private Output</* @Nullable */ List<MissionProfileTag>> tags;
 
-    public Output</* @Nullable */ List<MissionProfileTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<MissionProfileTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     @Export(name="trackingConfigArn", type=String.class, parameters={})
     private Output<String> trackingConfigArn;

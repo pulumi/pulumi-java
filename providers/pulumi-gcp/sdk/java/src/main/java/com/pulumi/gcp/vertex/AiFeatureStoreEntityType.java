@@ -13,6 +13,7 @@ import com.pulumi.gcp.vertex.inputs.AiFeatureStoreEntityTypeState;
 import com.pulumi.gcp.vertex.outputs.AiFeatureStoreEntityTypeMonitoringConfig;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -82,8 +83,8 @@ public class AiFeatureStoreEntityType extends com.pulumi.resources.CustomResourc
      * @return A set of key/value label pairs to assign to this EntityType.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * The default monitoring configuration for all Features under this EntityType.
@@ -100,8 +101,8 @@ public class AiFeatureStoreEntityType extends com.pulumi.resources.CustomResourc
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ AiFeatureStoreEntityTypeMonitoringConfig> monitoringConfig() {
-        return this.monitoringConfig;
+    public Output<Optional<AiFeatureStoreEntityTypeMonitoringConfig>> monitoringConfig() {
+        return Codegen.optional(this.monitoringConfig);
     }
     /**
      * The name of the EntityType. This value may be up to 60 characters, and valid characters are [a-z0-9_]. The first character cannot be a number.

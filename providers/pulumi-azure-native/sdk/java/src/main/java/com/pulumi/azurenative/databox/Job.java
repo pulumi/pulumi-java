@@ -23,6 +23,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -67,8 +68,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Delivery Info of Job.
      * 
      */
-    public Output</* @Nullable */ JobDeliveryInfoResponse> deliveryInfo() {
-        return this.deliveryInfo;
+    public Output<Optional<JobDeliveryInfoResponse>> deliveryInfo() {
+        return Codegen.optional(this.deliveryInfo);
     }
     /**
      * Delivery type of Job.
@@ -81,8 +82,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Delivery type of Job.
      * 
      */
-    public Output</* @Nullable */ String> deliveryType() {
-        return this.deliveryType;
+    public Output<Optional<String>> deliveryType() {
+        return Codegen.optional(this.deliveryType);
     }
     /**
      * Details of a job run. This field will only be sent for expand details filter.
@@ -95,8 +96,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Details of a job run. This field will only be sent for expand details filter.
      * 
      */
-    public Output</* @Nullable */ Object> details() {
-        return this.details;
+    public Output<Optional<Object>> details() {
+        return Codegen.optional(this.details);
     }
     /**
      * Top level error for the job.
@@ -123,8 +124,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Msi identity of the resource
      * 
      */
-    public Output</* @Nullable */ ResourceIdentityResponse> identity() {
-        return this.identity;
+    public Output<Optional<ResourceIdentityResponse>> identity() {
+        return Codegen.optional(this.identity);
     }
     /**
      * Describes whether the job is cancellable or not.
@@ -291,8 +292,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups).
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Type of the data transfer.

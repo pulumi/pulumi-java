@@ -21,6 +21,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -135,8 +136,8 @@ public class IntegrationServiceEnvironmentManagedApi extends com.pulumi.resource
      * @return The integration service environment managed api deployment parameters.
      * 
      */
-    public Output</* @Nullable */ IntegrationServiceEnvironmentManagedApiDeploymentParametersResponse> deploymentParameters() {
-        return this.deploymentParameters;
+    public Output<Optional<IntegrationServiceEnvironmentManagedApiDeploymentParametersResponse>> deploymentParameters() {
+        return Codegen.optional(this.deploymentParameters);
     }
     /**
      * The api general information.
@@ -163,8 +164,8 @@ public class IntegrationServiceEnvironmentManagedApi extends com.pulumi.resource
      * @return The integration service environment reference.
      * 
      */
-    public Output</* @Nullable */ ResourceReferenceResponse> integrationServiceEnvironment() {
-        return this.integrationServiceEnvironment;
+    public Output<Optional<ResourceReferenceResponse>> integrationServiceEnvironment() {
+        return Codegen.optional(this.integrationServiceEnvironment);
     }
     /**
      * The resource location.
@@ -177,8 +178,8 @@ public class IntegrationServiceEnvironmentManagedApi extends com.pulumi.resource
      * @return The resource location.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The metadata.
@@ -261,8 +262,8 @@ public class IntegrationServiceEnvironmentManagedApi extends com.pulumi.resource
      * @return The resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Gets the resource type.

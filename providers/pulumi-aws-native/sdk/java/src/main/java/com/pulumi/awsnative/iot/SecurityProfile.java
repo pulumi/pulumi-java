@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -36,8 +37,8 @@ public class SecurityProfile extends com.pulumi.resources.CustomResource {
      * @return A list of metrics whose data is retained (stored). By default, data is retained for any metric used in the profile&#39;s behaviors, but it is also retained for any metric specified here.
      * 
      */
-    public Output</* @Nullable */ List<SecurityProfileMetricToRetain>> additionalMetricsToRetainV2() {
-        return this.additionalMetricsToRetainV2;
+    public Output<Optional<List<SecurityProfileMetricToRetain>>> additionalMetricsToRetainV2() {
+        return Codegen.optional(this.additionalMetricsToRetainV2);
     }
     /**
      * Specifies the destinations to which alerts are sent.
@@ -50,8 +51,8 @@ public class SecurityProfile extends com.pulumi.resources.CustomResource {
      * @return Specifies the destinations to which alerts are sent.
      * 
      */
-    public Output</* @Nullable */ Object> alertTargets() {
-        return this.alertTargets;
+    public Output<Optional<Object>> alertTargets() {
+        return Codegen.optional(this.alertTargets);
     }
     /**
      * Specifies the behaviors that, when violated by a device (thing), cause an alert.
@@ -64,8 +65,8 @@ public class SecurityProfile extends com.pulumi.resources.CustomResource {
      * @return Specifies the behaviors that, when violated by a device (thing), cause an alert.
      * 
      */
-    public Output</* @Nullable */ List<SecurityProfileBehavior>> behaviors() {
-        return this.behaviors;
+    public Output<Optional<List<SecurityProfileBehavior>>> behaviors() {
+        return Codegen.optional(this.behaviors);
     }
     /**
      * The ARN (Amazon resource name) of the created security profile.
@@ -92,8 +93,8 @@ public class SecurityProfile extends com.pulumi.resources.CustomResource {
      * @return A description of the security profile.
      * 
      */
-    public Output</* @Nullable */ String> securityProfileDescription() {
-        return this.securityProfileDescription;
+    public Output<Optional<String>> securityProfileDescription() {
+        return Codegen.optional(this.securityProfileDescription);
     }
     /**
      * A unique identifier for the security profile.
@@ -106,8 +107,8 @@ public class SecurityProfile extends com.pulumi.resources.CustomResource {
      * @return A unique identifier for the security profile.
      * 
      */
-    public Output</* @Nullable */ String> securityProfileName() {
-        return this.securityProfileName;
+    public Output<Optional<String>> securityProfileName() {
+        return Codegen.optional(this.securityProfileName);
     }
     /**
      * Metadata that can be used to manage the security profile.
@@ -120,8 +121,8 @@ public class SecurityProfile extends com.pulumi.resources.CustomResource {
      * @return Metadata that can be used to manage the security profile.
      * 
      */
-    public Output</* @Nullable */ List<SecurityProfileTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<SecurityProfileTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A set of target ARNs that the security profile is attached to.
@@ -134,8 +135,8 @@ public class SecurityProfile extends com.pulumi.resources.CustomResource {
      * @return A set of target ARNs that the security profile is attached to.
      * 
      */
-    public Output</* @Nullable */ List<String>> targetArns() {
-        return this.targetArns;
+    public Output<Optional<List<String>>> targetArns() {
+        return Codegen.optional(this.targetArns);
     }
 
     /**

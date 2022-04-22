@@ -20,6 +20,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -61,8 +62,8 @@ public class RegionInstanceGroupManager extends com.pulumi.resources.CustomResou
      * group. You can specify only one value. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances#monitoring_groups).
      * 
      */
-    public Output</* @Nullable */ RegionInstanceGroupManagerAutoHealingPolicies> autoHealingPolicies() {
-        return this.autoHealingPolicies;
+    public Output<Optional<RegionInstanceGroupManagerAutoHealingPolicies>> autoHealingPolicies() {
+        return Codegen.optional(this.autoHealingPolicies);
     }
     /**
      * The base instance name to use for
@@ -101,8 +102,8 @@ public class RegionInstanceGroupManager extends com.pulumi.resources.CustomResou
      * group manager.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The shape to which the group converges either proactively or on resize events (depending on the value set in update_policy.0.instance_redistribution_type). For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/regional-mig-distribution-shape).
@@ -189,8 +190,8 @@ public class RegionInstanceGroupManager extends com.pulumi.resources.CustomResou
      * for details on configuration.
      * 
      */
-    public Output</* @Nullable */ List<RegionInstanceGroupManagerNamedPort>> namedPorts() {
-        return this.namedPorts;
+    public Output<Optional<List<RegionInstanceGroupManagerNamedPort>>> namedPorts() {
+        return Codegen.optional(this.namedPorts);
     }
     /**
      * The ID of the project in which the resource belongs. If it
@@ -247,8 +248,8 @@ public class RegionInstanceGroupManager extends com.pulumi.resources.CustomResou
      * @return Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs). Proactive cross zone instance redistribution must be disabled before you can update stateful disks on existing instance group managers. This can be controlled via the `update_policy`.
      * 
      */
-    public Output</* @Nullable */ List<RegionInstanceGroupManagerStatefulDisk>> statefulDisks() {
-        return this.statefulDisks;
+    public Output<Optional<List<RegionInstanceGroupManagerStatefulDisk>>> statefulDisks() {
+        return Codegen.optional(this.statefulDisks);
     }
     /**
      * The status of this managed instance group.
@@ -279,8 +280,8 @@ public class RegionInstanceGroupManager extends com.pulumi.resources.CustomResou
      * not affect existing instances.
      * 
      */
-    public Output</* @Nullable */ List<String>> targetPools() {
-        return this.targetPools;
+    public Output<Optional<List<String>>> targetPools() {
+        return Codegen.optional(this.targetPools);
     }
     /**
      * - The number of instances calculated as a fixed number or a percentage depending on the settings. Structure is documented below.
@@ -343,8 +344,8 @@ public class RegionInstanceGroupManager extends com.pulumi.resources.CustomResou
      * continue trying until it times out.
      * 
      */
-    public Output</* @Nullable */ Boolean> waitForInstances() {
-        return this.waitForInstances;
+    public Output<Optional<Boolean>> waitForInstances() {
+        return Codegen.optional(this.waitForInstances);
     }
     /**
      * When used with `wait_for_instances` it specifies the status to wait for.
@@ -363,8 +364,8 @@ public class RegionInstanceGroupManager extends com.pulumi.resources.CustomResou
      * instances to be stable before returning. The possible values are `STABLE` and `UPDATED`
      * 
      */
-    public Output</* @Nullable */ String> waitForInstancesStatus() {
-        return this.waitForInstancesStatus;
+    public Output<Optional<String>> waitForInstancesStatus() {
+        return Codegen.optional(this.waitForInstancesStatus);
     }
 
     /**

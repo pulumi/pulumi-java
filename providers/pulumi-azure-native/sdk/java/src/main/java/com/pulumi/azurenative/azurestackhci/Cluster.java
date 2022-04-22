@@ -15,6 +15,7 @@ import java.lang.Double;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -101,8 +102,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The timestamp of resource creation (UTC).
      * 
      */
-    public Output</* @Nullable */ String> createdAt() {
-        return this.createdAt;
+    public Output<Optional<String>> createdAt() {
+        return Codegen.optional(this.createdAt);
     }
     /**
      * The identity that created the resource.
@@ -115,8 +116,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The identity that created the resource.
      * 
      */
-    public Output</* @Nullable */ String> createdBy() {
-        return this.createdBy;
+    public Output<Optional<String>> createdBy() {
+        return Codegen.optional(this.createdBy);
     }
     /**
      * The type of identity that created the resource.
@@ -129,8 +130,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The type of identity that created the resource.
      * 
      */
-    public Output</* @Nullable */ String> createdByType() {
-        return this.createdByType;
+    public Output<Optional<String>> createdByType() {
+        return Codegen.optional(this.createdByType);
     }
     /**
      * Most recent billing meter timestamp.
@@ -157,8 +158,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The timestamp of resource last modification (UTC)
      * 
      */
-    public Output</* @Nullable */ String> lastModifiedAt() {
-        return this.lastModifiedAt;
+    public Output<Optional<String>> lastModifiedAt() {
+        return Codegen.optional(this.lastModifiedAt);
     }
     /**
      * The identity that last modified the resource.
@@ -171,8 +172,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The identity that last modified the resource.
      * 
      */
-    public Output</* @Nullable */ String> lastModifiedBy() {
-        return this.lastModifiedBy;
+    public Output<Optional<String>> lastModifiedBy() {
+        return Codegen.optional(this.lastModifiedBy);
     }
     /**
      * The type of identity that last modified the resource.
@@ -185,8 +186,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The type of identity that last modified the resource.
      * 
      */
-    public Output</* @Nullable */ String> lastModifiedByType() {
-        return this.lastModifiedByType;
+    public Output<Optional<String>> lastModifiedByType() {
+        return Codegen.optional(this.lastModifiedByType);
     }
     /**
      * Most recent cluster sync timestamp.
@@ -269,8 +270,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Properties reported by cluster agent.
      * 
      */
-    public Output</* @Nullable */ ClusterReportedPropertiesResponse> reportedProperties() {
-        return this.reportedProperties;
+    public Output<Optional<ClusterReportedPropertiesResponse>> reportedProperties() {
+        return Codegen.optional(this.reportedProperties);
     }
     /**
      * Status of the cluster agent.
@@ -297,8 +298,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Number of days remaining in the trial period.

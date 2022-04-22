@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class ServiceProfile extends com.pulumi.resources.CustomResource {
      * @return LoRaWAN supports all LoRa specific attributes for service profile for CreateServiceProfile operation
      * 
      */
-    public Output</* @Nullable */ ServiceProfileLoRaWANServiceProfile> loRaWAN() {
-        return this.loRaWAN;
+    public Output<Optional<ServiceProfileLoRaWANServiceProfile>> loRaWAN() {
+        return Codegen.optional(this.loRaWAN);
     }
     /**
      * Name of service profile
@@ -60,8 +61,8 @@ public class ServiceProfile extends com.pulumi.resources.CustomResource {
      * @return Name of service profile
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * A list of key-value pairs that contain metadata for the service profile.
@@ -74,8 +75,8 @@ public class ServiceProfile extends com.pulumi.resources.CustomResource {
      * @return A list of key-value pairs that contain metadata for the service profile.
      * 
      */
-    public Output</* @Nullable */ List<ServiceProfileTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<ServiceProfileTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

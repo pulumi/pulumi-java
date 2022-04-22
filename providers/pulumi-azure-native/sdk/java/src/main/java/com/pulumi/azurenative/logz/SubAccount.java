@@ -16,6 +16,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -37,8 +38,8 @@ public class SubAccount extends com.pulumi.resources.CustomResource {
     @Export(name="identity", type=IdentityPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ IdentityPropertiesResponse> identity;
 
-    public Output</* @Nullable */ IdentityPropertiesResponse> identity() {
-        return this.identity;
+    public Output<Optional<IdentityPropertiesResponse>> identity() {
+        return Codegen.optional(this.identity);
     }
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
@@ -91,8 +92,8 @@ public class SubAccount extends com.pulumi.resources.CustomResource {
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the monitor resource.

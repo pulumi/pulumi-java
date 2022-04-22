@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class LocationSMB extends com.pulumi.resources.CustomResource {
      * @return The name of the Windows domain that the SMB server belongs to.
      * 
      */
-    public Output</* @Nullable */ String> domain() {
-        return this.domain;
+    public Output<Optional<String>> domain() {
+        return Codegen.optional(this.domain);
     }
     /**
      * The Amazon Resource Name (ARN) of the SMB location that is created.
@@ -80,8 +81,8 @@ public class LocationSMB extends com.pulumi.resources.CustomResource {
     @Export(name="mountOptions", type=LocationSMBMountOptions.class, parameters={})
     private Output</* @Nullable */ LocationSMBMountOptions> mountOptions;
 
-    public Output</* @Nullable */ LocationSMBMountOptions> mountOptions() {
-        return this.mountOptions;
+    public Output<Optional<LocationSMBMountOptions>> mountOptions() {
+        return Codegen.optional(this.mountOptions);
     }
     /**
      * The password of the user who can mount the share and has the permissions to access files and folders in the SMB share.
@@ -136,8 +137,8 @@ public class LocationSMB extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<LocationSMBTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<LocationSMBTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The user who can mount the share, has the permissions to access files and folders in the SMB share.

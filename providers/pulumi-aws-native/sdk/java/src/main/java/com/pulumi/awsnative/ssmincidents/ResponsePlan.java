@@ -15,6 +15,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -34,8 +35,8 @@ public class ResponsePlan extends com.pulumi.resources.CustomResource {
      * @return The list of actions.
      * 
      */
-    public Output</* @Nullable */ List<ResponsePlanAction>> actions() {
-        return this.actions;
+    public Output<Optional<List<ResponsePlanAction>>> actions() {
+        return Codegen.optional(this.actions);
     }
     /**
      * The ARN of the response plan.
@@ -54,8 +55,8 @@ public class ResponsePlan extends com.pulumi.resources.CustomResource {
     @Export(name="chatChannel", type=ResponsePlanChatChannel.class, parameters={})
     private Output</* @Nullable */ ResponsePlanChatChannel> chatChannel;
 
-    public Output</* @Nullable */ ResponsePlanChatChannel> chatChannel() {
-        return this.chatChannel;
+    public Output<Optional<ResponsePlanChatChannel>> chatChannel() {
+        return Codegen.optional(this.chatChannel);
     }
     /**
      * The display name of the response plan.
@@ -68,8 +69,8 @@ public class ResponsePlan extends com.pulumi.resources.CustomResource {
      * @return The display name of the response plan.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * The list of engagements to use.
@@ -82,8 +83,8 @@ public class ResponsePlan extends com.pulumi.resources.CustomResource {
      * @return The list of engagements to use.
      * 
      */
-    public Output</* @Nullable */ List<String>> engagements() {
-        return this.engagements;
+    public Output<Optional<List<String>>> engagements() {
+        return Codegen.optional(this.engagements);
     }
     @Export(name="incidentTemplate", type=ResponsePlanIncidentTemplate.class, parameters={})
     private Output<ResponsePlanIncidentTemplate> incidentTemplate;
@@ -116,8 +117,8 @@ public class ResponsePlan extends com.pulumi.resources.CustomResource {
      * @return The tags to apply to the response plan.
      * 
      */
-    public Output</* @Nullable */ List<ResponsePlanTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<ResponsePlanTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class MigrateProject extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the eTag for concurrency control.
      * 
      */
-    public Output</* @Nullable */ String> eTag() {
-        return this.eTag;
+    public Output<Optional<String>> eTag() {
+        return Codegen.optional(this.eTag);
     }
     /**
      * Gets or sets the Azure location in which migrate project is created.
@@ -58,8 +59,8 @@ public class MigrateProject extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the Azure location in which migrate project is created.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * Gets the name of the migrate project.
@@ -100,8 +101,8 @@ public class MigrateProject extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the tags.
      * 
      */
-    public Output</* @Nullable */ MigrateProjectResponseTags> tags() {
-        return this.tags;
+    public Output<Optional<MigrateProjectResponseTags>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Handled by resource provider. Type = Microsoft.Migrate/MigrateProject.

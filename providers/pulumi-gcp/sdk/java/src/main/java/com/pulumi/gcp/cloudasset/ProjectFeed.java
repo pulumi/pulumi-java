@@ -14,6 +14,7 @@ import com.pulumi.gcp.cloudasset.outputs.ProjectFeedCondition;
 import com.pulumi.gcp.cloudasset.outputs.ProjectFeedFeedOutputConfig;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -63,8 +64,8 @@ public class ProjectFeed extends com.pulumi.resources.CustomResource {
      * See https://cloud.google.com/apis/design/resourceNames#fullResourceName for more info.
      * 
      */
-    public Output</* @Nullable */ List<String>> assetNames() {
-        return this.assetNames;
+    public Output<Optional<List<String>>> assetNames() {
+        return Codegen.optional(this.assetNames);
     }
     /**
      * A list of types of the assets to receive updates. You must specify either or both of assetNames
@@ -85,8 +86,8 @@ public class ProjectFeed extends com.pulumi.resources.CustomResource {
      * supported asset types.
      * 
      */
-    public Output</* @Nullable */ List<String>> assetTypes() {
-        return this.assetTypes;
+    public Output<Optional<List<String>>> assetTypes() {
+        return Codegen.optional(this.assetTypes);
     }
     /**
      * The project whose identity will be used when sending messages to the
@@ -105,8 +106,8 @@ public class ProjectFeed extends com.pulumi.resources.CustomResource {
      * project will be used.
      * 
      */
-    public Output</* @Nullable */ String> billingProject() {
-        return this.billingProject;
+    public Output<Optional<String>> billingProject() {
+        return Codegen.optional(this.billingProject);
     }
     /**
      * A condition which determines whether an asset update should be published. If specified, an asset
@@ -129,8 +130,8 @@ public class ProjectFeed extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ ProjectFeedCondition> condition() {
-        return this.condition;
+    public Output<Optional<ProjectFeedCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * Asset content type. If not specified, no content but the asset name and type will be returned.
@@ -145,8 +146,8 @@ public class ProjectFeed extends com.pulumi.resources.CustomResource {
      * Possible values are `CONTENT_TYPE_UNSPECIFIED`, `RESOURCE`, `IAM_POLICY`, `ORG_POLICY`, and `ACCESS_POLICY`.
      * 
      */
-    public Output</* @Nullable */ String> contentType() {
-        return this.contentType;
+    public Output<Optional<String>> contentType() {
+        return Codegen.optional(this.contentType);
     }
     /**
      * This is the client-assigned asset feed identifier and it needs to be unique under a specific parent.

@@ -15,6 +15,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class PipelineJob extends com.pulumi.resources.CustomResource {
      * @return An optional description for the pipeline.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Details about the error, in case the pipeline job fails.
@@ -101,8 +102,8 @@ public class PipelineJob extends com.pulumi.resources.CustomResource {
      * @return List of the instance level parameter values for the user-defined topology parameters. A pipeline can only define or override parameters values for parameters which have been declared in the referenced topology. Topology parameters without a default value must be defined. Topology parameters with a default value can be optionally be overridden.
      * 
      */
-    public Output</* @Nullable */ List<ParameterDefinitionResponse>> parameters() {
-        return this.parameters;
+    public Output<Optional<List<ParameterDefinitionResponse>>> parameters() {
+        return Codegen.optional(this.parameters);
     }
     /**
      * Current state of the pipeline (read-only).

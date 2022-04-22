@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class LogGroup extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the CMK to use when encrypting log data.
      * 
      */
-    public Output</* @Nullable */ String> kmsKeyId() {
-        return this.kmsKeyId;
+    public Output<Optional<String>> kmsKeyId() {
+        return Codegen.optional(this.kmsKeyId);
     }
     /**
      * The name of the log group. If you don&#39;t specify a name, AWS CloudFormation generates a unique ID for the log group.
@@ -60,8 +61,8 @@ public class LogGroup extends com.pulumi.resources.CustomResource {
      * @return The name of the log group. If you don&#39;t specify a name, AWS CloudFormation generates a unique ID for the log group.
      * 
      */
-    public Output</* @Nullable */ String> logGroupName() {
-        return this.logGroupName;
+    public Output<Optional<String>> logGroupName() {
+        return Codegen.optional(this.logGroupName);
     }
     /**
      * The number of days to retain the log events in the specified log group. Possible values are: 1, 3, 5, 7, 14, 30, 60, 90, 120, 150, 180, 365, 400, 545, 731, 1827, and 3653.
@@ -74,8 +75,8 @@ public class LogGroup extends com.pulumi.resources.CustomResource {
      * @return The number of days to retain the log events in the specified log group. Possible values are: 1, 3, 5, 7, 14, 30, 60, 90, 120, 150, 180, 365, 400, 545, 731, 1827, and 3653.
      * 
      */
-    public Output</* @Nullable */ Integer> retentionInDays() {
-        return this.retentionInDays;
+    public Output<Optional<Integer>> retentionInDays() {
+        return Codegen.optional(this.retentionInDays);
     }
     /**
      * An array of key-value pairs to apply to this resource.
@@ -88,8 +89,8 @@ public class LogGroup extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<LogGroupTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<LogGroupTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

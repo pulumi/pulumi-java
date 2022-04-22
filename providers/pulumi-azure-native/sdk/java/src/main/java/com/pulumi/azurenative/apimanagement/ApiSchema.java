@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -57,8 +58,8 @@ public class ApiSchema extends com.pulumi.resources.CustomResource {
      * @return Types definitions. Used for Swagger/OpenAPI schemas only, null otherwise.
      * 
      */
-    public Output</* @Nullable */ Object> definitions() {
-        return this.definitions;
+    public Output<Optional<Object>> definitions() {
+        return Codegen.optional(this.definitions);
     }
     /**
      * Resource name.
@@ -99,8 +100,8 @@ public class ApiSchema extends com.pulumi.resources.CustomResource {
      * @return Json escaped string defining the document representing the Schema. Used for schemas other than Swagger/OpenAPI.
      * 
      */
-    public Output</* @Nullable */ String> value() {
-        return this.value;
+    public Output<Optional<String>> value() {
+        return Codegen.optional(this.value);
     }
 
     /**

@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -32,8 +33,8 @@ public class Ruleset extends com.pulumi.resources.CustomResource {
      * @return Description of the Ruleset
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Name of the Ruleset
@@ -66,8 +67,8 @@ public class Ruleset extends com.pulumi.resources.CustomResource {
     @Export(name="tags", type=List.class, parameters={RulesetTag.class})
     private Output</* @Nullable */ List<RulesetTag>> tags;
 
-    public Output</* @Nullable */ List<RulesetTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<RulesetTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Arn of the target resource (dataset) to apply the ruleset to

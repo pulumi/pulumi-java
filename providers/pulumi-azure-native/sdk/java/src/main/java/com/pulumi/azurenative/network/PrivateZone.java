@@ -14,6 +14,7 @@ import java.lang.Double;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class PrivateZone extends com.pulumi.resources.CustomResource {
      * @return The ETag of the zone.
      * 
      */
-    public Output</* @Nullable */ String> etag() {
-        return this.etag;
+    public Output<Optional<String>> etag() {
+        return Codegen.optional(this.etag);
     }
     /**
      * Private zone internal Id
@@ -72,8 +73,8 @@ public class PrivateZone extends com.pulumi.resources.CustomResource {
      * @return The Azure Region where the resource lives
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The maximum number of record sets that can be created in this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.
@@ -198,8 +199,8 @@ public class PrivateZone extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource. Example - &#39;Microsoft.Network/privateDnsZones&#39;.

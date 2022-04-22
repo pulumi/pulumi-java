@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -58,8 +59,8 @@ public class App extends com.pulumi.resources.CustomResource {
      * @return The display name of the application.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * The resource location.
@@ -114,8 +115,8 @@ public class App extends com.pulumi.resources.CustomResource {
      * @return The subdomain of the application.
      * 
      */
-    public Output</* @Nullable */ String> subdomain() {
-        return this.subdomain;
+    public Output<Optional<String>> subdomain() {
+        return Codegen.optional(this.subdomain);
     }
     /**
      * The resource tags.
@@ -128,8 +129,8 @@ public class App extends com.pulumi.resources.CustomResource {
      * @return The resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The ID of the application template, which is a blueprint that defines the characteristics and behaviors of an application. Optional; if not specified, defaults to a blank blueprint and allows the application to be defined from scratch.
@@ -142,8 +143,8 @@ public class App extends com.pulumi.resources.CustomResource {
      * @return The ID of the application template, which is a blueprint that defines the characteristics and behaviors of an application. Optional; if not specified, defaults to a blank blueprint and allows the application to be defined from scratch.
      * 
      */
-    public Output</* @Nullable */ String> template() {
-        return this.template;
+    public Output<Optional<String>> template() {
+        return Codegen.optional(this.template);
     }
     /**
      * The resource type.

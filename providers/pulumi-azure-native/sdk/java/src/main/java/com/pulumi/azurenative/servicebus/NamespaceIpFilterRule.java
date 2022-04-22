@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -42,8 +43,8 @@ public class NamespaceIpFilterRule extends com.pulumi.resources.CustomResource {
      * @return The IP Filter Action
      * 
      */
-    public Output</* @Nullable */ String> action() {
-        return this.action;
+    public Output<Optional<String>> action() {
+        return Codegen.optional(this.action);
     }
     /**
      * IP Filter name
@@ -56,8 +57,8 @@ public class NamespaceIpFilterRule extends com.pulumi.resources.CustomResource {
      * @return IP Filter name
      * 
      */
-    public Output</* @Nullable */ String> filterName() {
-        return this.filterName;
+    public Output<Optional<String>> filterName() {
+        return Codegen.optional(this.filterName);
     }
     /**
      * IP Mask
@@ -70,8 +71,8 @@ public class NamespaceIpFilterRule extends com.pulumi.resources.CustomResource {
      * @return IP Mask
      * 
      */
-    public Output</* @Nullable */ String> ipMask() {
-        return this.ipMask;
+    public Output<Optional<String>> ipMask() {
+        return Codegen.optional(this.ipMask);
     }
     /**
      * Resource name

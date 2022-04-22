@@ -11,6 +11,7 @@ import com.pulumi.example.NoRecursiveArgs;
 import com.pulumi.example.Utilities;
 import com.pulumi.example.outputs.Rec;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 @ResourceType(type="example::NoRecursive")
@@ -18,14 +19,14 @@ public class NoRecursive extends com.pulumi.resources.CustomResource {
     @Export(name="rec", type=Rec.class, parameters={})
     private Output</* @Nullable */ Rec> rec;
 
-    public Output</* @Nullable */ Rec> rec() {
-        return this.rec;
+    public Output<Optional<Rec>> rec() {
+        return Codegen.optional(this.rec);
     }
     @Export(name="replace", type=String.class, parameters={})
     private Output</* @Nullable */ String> replace;
 
-    public Output</* @Nullable */ String> replace() {
-        return this.replace;
+    public Output<Optional<String>> replace() {
+        return Codegen.optional(this.replace);
     }
 
     /**

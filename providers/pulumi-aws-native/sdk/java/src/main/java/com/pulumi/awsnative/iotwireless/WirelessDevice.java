@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -47,8 +48,8 @@ public class WirelessDevice extends com.pulumi.resources.CustomResource {
      * @return Wireless device description
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Wireless device destination name
@@ -75,8 +76,8 @@ public class WirelessDevice extends com.pulumi.resources.CustomResource {
      * @return The date and time when the most recent uplink was received.
      * 
      */
-    public Output</* @Nullable */ String> lastUplinkReceivedAt() {
-        return this.lastUplinkReceivedAt;
+    public Output<Optional<String>> lastUplinkReceivedAt() {
+        return Codegen.optional(this.lastUplinkReceivedAt);
     }
     /**
      * The combination of Package, Station and Model which represents the version of the LoRaWAN Wireless Device.
@@ -89,8 +90,8 @@ public class WirelessDevice extends com.pulumi.resources.CustomResource {
      * @return The combination of Package, Station and Model which represents the version of the LoRaWAN Wireless Device.
      * 
      */
-    public Output</* @Nullable */ WirelessDeviceLoRaWANDevice> loRaWAN() {
-        return this.loRaWAN;
+    public Output<Optional<WirelessDeviceLoRaWANDevice>> loRaWAN() {
+        return Codegen.optional(this.loRaWAN);
     }
     /**
      * Wireless device name
@@ -103,8 +104,8 @@ public class WirelessDevice extends com.pulumi.resources.CustomResource {
      * @return Wireless device name
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * A list of key-value pairs that contain metadata for the device. Currently not supported, will not create if tags are passed.
@@ -117,8 +118,8 @@ public class WirelessDevice extends com.pulumi.resources.CustomResource {
      * @return A list of key-value pairs that contain metadata for the device. Currently not supported, will not create if tags are passed.
      * 
      */
-    public Output</* @Nullable */ List<WirelessDeviceTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<WirelessDeviceTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Thing arn. Passed into update to associate Thing with Wireless device.
@@ -131,8 +132,8 @@ public class WirelessDevice extends com.pulumi.resources.CustomResource {
      * @return Thing arn. Passed into update to associate Thing with Wireless device.
      * 
      */
-    public Output</* @Nullable */ String> thingArn() {
-        return this.thingArn;
+    public Output<Optional<String>> thingArn() {
+        return Codegen.optional(this.thingArn);
     }
     /**
      * Thing Arn. If there is a Thing created, this can be returned with a Get call.

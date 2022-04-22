@@ -16,6 +16,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -60,8 +61,8 @@ public class Namespace extends com.pulumi.resources.CustomResource {
      * @return Value that indicates whether AutoInflate is enabled for eventhub namespace.
      * 
      */
-    public Output</* @Nullable */ Boolean> isAutoInflateEnabled() {
-        return this.isAutoInflateEnabled;
+    public Output<Optional<Boolean>> isAutoInflateEnabled() {
+        return Codegen.optional(this.isAutoInflateEnabled);
     }
     /**
      * Value that indicates whether Kafka is enabled for eventhub namespace.
@@ -74,8 +75,8 @@ public class Namespace extends com.pulumi.resources.CustomResource {
      * @return Value that indicates whether Kafka is enabled for eventhub namespace.
      * 
      */
-    public Output</* @Nullable */ Boolean> kafkaEnabled() {
-        return this.kafkaEnabled;
+    public Output<Optional<Boolean>> kafkaEnabled() {
+        return Codegen.optional(this.kafkaEnabled);
     }
     /**
      * Resource location.
@@ -88,8 +89,8 @@ public class Namespace extends com.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * Upper limit of throughput units when AutoInflate is enabled, value should be within 0 to 20 throughput units. ( &#39;0&#39; if AutoInflateEnabled = true)
@@ -102,8 +103,8 @@ public class Namespace extends com.pulumi.resources.CustomResource {
      * @return Upper limit of throughput units when AutoInflate is enabled, value should be within 0 to 20 throughput units. ( &#39;0&#39; if AutoInflateEnabled = true)
      * 
      */
-    public Output</* @Nullable */ Integer> maximumThroughputUnits() {
-        return this.maximumThroughputUnits;
+    public Output<Optional<Integer>> maximumThroughputUnits() {
+        return Codegen.optional(this.maximumThroughputUnits);
     }
     /**
      * Identifier for Azure Insights metrics.
@@ -172,8 +173,8 @@ public class Namespace extends com.pulumi.resources.CustomResource {
      * @return Properties of sku resource
      * 
      */
-    public Output</* @Nullable */ SkuResponse> sku() {
-        return this.sku;
+    public Output<Optional<SkuResponse>> sku() {
+        return Codegen.optional(this.sku);
     }
     /**
      * Resource tags.
@@ -186,8 +187,8 @@ public class Namespace extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;

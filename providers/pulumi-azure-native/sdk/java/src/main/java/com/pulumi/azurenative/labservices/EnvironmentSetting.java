@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -42,8 +43,8 @@ public class EnvironmentSetting extends com.pulumi.resources.CustomResource {
      * @return Describes the user&#39;s progress in configuring their environment setting
      * 
      */
-    public Output</* @Nullable */ String> configurationState() {
-        return this.configurationState;
+    public Output<Optional<String>> configurationState() {
+        return Codegen.optional(this.configurationState);
     }
     /**
      * Describes the environment and its resource settings
@@ -56,8 +57,8 @@ public class EnvironmentSetting extends com.pulumi.resources.CustomResource {
      * @return Describes the environment and its resource settings
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Time when the template VM was last changed.
@@ -112,8 +113,8 @@ public class EnvironmentSetting extends com.pulumi.resources.CustomResource {
      * @return The location of the resource.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The name of the resource.
@@ -140,8 +141,8 @@ public class EnvironmentSetting extends com.pulumi.resources.CustomResource {
      * @return The provisioning status of the resource.
      * 
      */
-    public Output</* @Nullable */ String> provisioningState() {
-        return this.provisioningState;
+    public Output<Optional<String>> provisioningState() {
+        return Codegen.optional(this.provisioningState);
     }
     /**
      * Describes the readiness of this environment setting
@@ -182,8 +183,8 @@ public class EnvironmentSetting extends com.pulumi.resources.CustomResource {
      * @return The tags of the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Brief title describing the environment and its resource settings
@@ -196,8 +197,8 @@ public class EnvironmentSetting extends com.pulumi.resources.CustomResource {
      * @return Brief title describing the environment and its resource settings
      * 
      */
-    public Output</* @Nullable */ String> title() {
-        return this.title;
+    public Output<Optional<String>> title() {
+        return Codegen.optional(this.title);
     }
     /**
      * The type of the resource.
@@ -224,8 +225,8 @@ public class EnvironmentSetting extends com.pulumi.resources.CustomResource {
      * @return The unique immutable identifier of a resource (Guid).
      * 
      */
-    public Output</* @Nullable */ String> uniqueIdentifier() {
-        return this.uniqueIdentifier;
+    public Output<Optional<String>> uniqueIdentifier() {
+        return Codegen.optional(this.uniqueIdentifier);
     }
 
     /**

@@ -16,6 +16,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -73,8 +74,8 @@ public class WebAcl extends com.pulumi.resources.CustomResource {
      * @return Configuration block to enable WAF logging. Detailed below.
      * 
      */
-    public Output</* @Nullable */ WebAclLoggingConfiguration> loggingConfiguration() {
-        return this.loggingConfiguration;
+    public Output<Optional<WebAclLoggingConfiguration>> loggingConfiguration() {
+        return Codegen.optional(this.loggingConfiguration);
     }
     /**
      * The name or description for the Amazon CloudWatch metric of this web ACL.
@@ -115,8 +116,8 @@ public class WebAcl extends com.pulumi.resources.CustomResource {
      * @return Set of configuration blocks containing rules for the web ACL. Detailed below.
      * 
      */
-    public Output</* @Nullable */ List<WebAclRule>> rules() {
-        return this.rules;
+    public Output<Optional<List<WebAclRule>>> rules() {
+        return Codegen.optional(this.rules);
     }
     /**
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -129,8 +130,8 @@ public class WebAcl extends com.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

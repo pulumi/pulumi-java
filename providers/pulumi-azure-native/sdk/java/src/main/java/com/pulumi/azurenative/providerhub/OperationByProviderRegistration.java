@@ -15,6 +15,7 @@ import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -36,8 +37,8 @@ public class OperationByProviderRegistration extends com.pulumi.resources.Custom
     @Export(name="actionType", type=String.class, parameters={})
     private Output</* @Nullable */ String> actionType;
 
-    public Output</* @Nullable */ String> actionType() {
-        return this.actionType;
+    public Output<Optional<String>> actionType() {
+        return Codegen.optional(this.actionType);
     }
     /**
      * Display information of the operation.
@@ -64,8 +65,8 @@ public class OperationByProviderRegistration extends com.pulumi.resources.Custom
      * @return Indicates whether the operation applies to data-plane.
      * 
      */
-    public Output</* @Nullable */ Boolean> isDataAction() {
-        return this.isDataAction;
+    public Output<Optional<Boolean>> isDataAction() {
+        return Codegen.optional(this.isDataAction);
     }
     /**
      * The name of the resource
@@ -84,8 +85,8 @@ public class OperationByProviderRegistration extends com.pulumi.resources.Custom
     @Export(name="origin", type=String.class, parameters={})
     private Output</* @Nullable */ String> origin;
 
-    public Output</* @Nullable */ String> origin() {
-        return this.origin;
+    public Output<Optional<String>> origin() {
+        return Codegen.optional(this.origin);
     }
     @Export(name="properties", type=Object.class, parameters={})
     private Output<Object> properties;

@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -56,8 +57,8 @@ public class SmsChannel extends com.pulumi.resources.CustomResource {
      * @return Whether the channel is enabled or disabled. Defaults to `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> enabled() {
-        return this.enabled;
+    public Output<Optional<Boolean>> enabled() {
+        return Codegen.optional(this.enabled);
     }
     /**
      * Promotional messages per second that can be sent.
@@ -84,8 +85,8 @@ public class SmsChannel extends com.pulumi.resources.CustomResource {
      * @return Sender identifier of your messages.
      * 
      */
-    public Output</* @Nullable */ String> senderId() {
-        return this.senderId;
+    public Output<Optional<String>> senderId() {
+        return Codegen.optional(this.senderId);
     }
     /**
      * The Short Code registered with the phone provider.
@@ -98,8 +99,8 @@ public class SmsChannel extends com.pulumi.resources.CustomResource {
      * @return The Short Code registered with the phone provider.
      * 
      */
-    public Output</* @Nullable */ String> shortCode() {
-        return this.shortCode;
+    public Output<Optional<String>> shortCode() {
+        return Codegen.optional(this.shortCode);
     }
     /**
      * Transactional messages per second that can be sent.

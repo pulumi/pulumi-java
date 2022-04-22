@@ -15,6 +15,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -61,8 +62,8 @@ public class Authorizer extends com.pulumi.resources.CustomResource {
      * Supported only for `REQUEST` authorizers.
      * 
      */
-    public Output</* @Nullable */ String> authorizerCredentialsArn() {
-        return this.authorizerCredentialsArn;
+    public Output<Optional<String>> authorizerCredentialsArn() {
+        return Codegen.optional(this.authorizerCredentialsArn);
     }
     /**
      * The format of the payload sent to an HTTP API Lambda authorizer. Required for HTTP API Lambda authorizers.
@@ -77,8 +78,8 @@ public class Authorizer extends com.pulumi.resources.CustomResource {
      * Valid values: `1.0`, `2.0`.
      * 
      */
-    public Output</* @Nullable */ String> authorizerPayloadFormatVersion() {
-        return this.authorizerPayloadFormatVersion;
+    public Output<Optional<String>> authorizerPayloadFormatVersion() {
+        return Codegen.optional(this.authorizerPayloadFormatVersion);
     }
     /**
      * The time to live (TTL) for cached authorizer results, in seconds. If it equals 0, authorization caching is disabled.
@@ -131,8 +132,8 @@ public class Authorizer extends com.pulumi.resources.CustomResource {
      * Supported only for `REQUEST` authorizers. Must be between 1 and 2048 characters in length.
      * 
      */
-    public Output</* @Nullable */ String> authorizerUri() {
-        return this.authorizerUri;
+    public Output<Optional<String>> authorizerUri() {
+        return Codegen.optional(this.authorizerUri);
     }
     /**
      * Whether a Lambda authorizer returns a response in a simple format. If enabled, the Lambda authorizer can return a boolean value instead of an IAM policy.
@@ -147,8 +148,8 @@ public class Authorizer extends com.pulumi.resources.CustomResource {
      * Supported only for HTTP APIs.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableSimpleResponses() {
-        return this.enableSimpleResponses;
+    public Output<Optional<Boolean>> enableSimpleResponses() {
+        return Codegen.optional(this.enableSimpleResponses);
     }
     /**
      * The identity sources for which authorization is requested.
@@ -165,8 +166,8 @@ public class Authorizer extends com.pulumi.resources.CustomResource {
      * For `JWT` authorizers the single entry specifies where to extract the JSON Web Token (JWT) from inbound requests.
      * 
      */
-    public Output</* @Nullable */ List<String>> identitySources() {
-        return this.identitySources;
+    public Output<Optional<List<String>>> identitySources() {
+        return Codegen.optional(this.identitySources);
     }
     /**
      * The configuration of a JWT authorizer. Required for the `JWT` authorizer type.
@@ -181,8 +182,8 @@ public class Authorizer extends com.pulumi.resources.CustomResource {
      * Supported only for HTTP APIs.
      * 
      */
-    public Output</* @Nullable */ AuthorizerJwtConfiguration> jwtConfiguration() {
-        return this.jwtConfiguration;
+    public Output<Optional<AuthorizerJwtConfiguration>> jwtConfiguration() {
+        return Codegen.optional(this.jwtConfiguration);
     }
     /**
      * The name of the authorizer. Must be between 1 and 128 characters in length.

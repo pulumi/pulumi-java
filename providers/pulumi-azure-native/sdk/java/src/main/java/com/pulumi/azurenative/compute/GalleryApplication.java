@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class GalleryApplication extends com.pulumi.resources.CustomResource {
      * @return The description of this gallery Application Definition resource. This property is updatable.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The end of life date of the gallery Application Definition. This property can be used for decommissioning purposes. This property is updatable.
@@ -57,8 +58,8 @@ public class GalleryApplication extends com.pulumi.resources.CustomResource {
      * @return The end of life date of the gallery Application Definition. This property can be used for decommissioning purposes. This property is updatable.
      * 
      */
-    public Output</* @Nullable */ String> endOfLifeDate() {
-        return this.endOfLifeDate;
+    public Output<Optional<String>> endOfLifeDate() {
+        return Codegen.optional(this.endOfLifeDate);
     }
     /**
      * The Eula agreement for the gallery Application Definition.
@@ -71,8 +72,8 @@ public class GalleryApplication extends com.pulumi.resources.CustomResource {
      * @return The Eula agreement for the gallery Application Definition.
      * 
      */
-    public Output</* @Nullable */ String> eula() {
-        return this.eula;
+    public Output<Optional<String>> eula() {
+        return Codegen.optional(this.eula);
     }
     /**
      * Resource location
@@ -113,8 +114,8 @@ public class GalleryApplication extends com.pulumi.resources.CustomResource {
      * @return The privacy statement uri.
      * 
      */
-    public Output</* @Nullable */ String> privacyStatementUri() {
-        return this.privacyStatementUri;
+    public Output<Optional<String>> privacyStatementUri() {
+        return Codegen.optional(this.privacyStatementUri);
     }
     /**
      * The release note uri.
@@ -127,8 +128,8 @@ public class GalleryApplication extends com.pulumi.resources.CustomResource {
      * @return The release note uri.
      * 
      */
-    public Output</* @Nullable */ String> releaseNoteUri() {
-        return this.releaseNoteUri;
+    public Output<Optional<String>> releaseNoteUri() {
+        return Codegen.optional(this.releaseNoteUri);
     }
     /**
      * This property allows you to specify the supported type of the OS that application is built for. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **Windows** &lt;br&gt;&lt;br&gt; **Linux**
@@ -155,8 +156,8 @@ public class GalleryApplication extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type

@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -41,8 +42,8 @@ public class ReplicationTask extends com.pulumi.resources.CustomResource {
      * @return Indicates when you want a change data capture (CDC) operation to start. The value can be in date, checkpoint, or LSN/SCN format depending on the source engine. For more information, see [Determining a CDC native start point](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Task.CDC.html#CHAP_Task.CDC.StartPoint.Native).
      * 
      */
-    public Output</* @Nullable */ String> cdcStartPosition() {
-        return this.cdcStartPosition;
+    public Output<Optional<String>> cdcStartPosition() {
+        return Codegen.optional(this.cdcStartPosition);
     }
     /**
      * The Unix timestamp integer for the start of the Change Data Capture (CDC) operation.
@@ -55,8 +56,8 @@ public class ReplicationTask extends com.pulumi.resources.CustomResource {
      * @return The Unix timestamp integer for the start of the Change Data Capture (CDC) operation.
      * 
      */
-    public Output</* @Nullable */ String> cdcStartTime() {
-        return this.cdcStartTime;
+    public Output<Optional<String>> cdcStartTime() {
+        return Codegen.optional(this.cdcStartTime);
     }
     /**
      * The migration type. Can be one of `full-load | cdc | full-load-and-cdc`.
@@ -125,8 +126,8 @@ public class ReplicationTask extends com.pulumi.resources.CustomResource {
      * @return An escaped JSON string that contains the task settings. For a complete list of task settings, see [Task Settings for AWS Database Migration Service Tasks](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TaskSettings.html).
      * 
      */
-    public Output</* @Nullable */ String> replicationTaskSettings() {
-        return this.replicationTaskSettings;
+    public Output<Optional<String>> replicationTaskSettings() {
+        return Codegen.optional(this.replicationTaskSettings);
     }
     /**
      * The Amazon Resource Name (ARN) string that uniquely identifies the source endpoint.
@@ -167,8 +168,8 @@ public class ReplicationTask extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

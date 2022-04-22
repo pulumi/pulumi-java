@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -55,8 +56,8 @@ public class DedicatedHost extends com.pulumi.resources.CustomResource {
      * @return Indicates whether the host accepts any untargeted instance launches that match its instance type configuration, or if it only accepts Host tenancy instance launches that specify its unique host ID. Valid values: `on`, `off`. Default: `on`.
      * 
      */
-    public Output</* @Nullable */ String> autoPlacement() {
-        return this.autoPlacement;
+    public Output<Optional<String>> autoPlacement() {
+        return Codegen.optional(this.autoPlacement);
     }
     /**
      * The Availability Zone in which to allocate the Dedicated Host.
@@ -83,8 +84,8 @@ public class DedicatedHost extends com.pulumi.resources.CustomResource {
      * @return Indicates whether to enable or disable host recovery for the Dedicated Host. Valid values: `on`, `off`. Default: `off`.
      * 
      */
-    public Output</* @Nullable */ String> hostRecovery() {
-        return this.hostRecovery;
+    public Output<Optional<String>> hostRecovery() {
+        return Codegen.optional(this.hostRecovery);
     }
     /**
      * Specifies the instance family to be supported by the Dedicated Hosts. If you specify an instance family, the Dedicated Hosts support multiple instance types within that instance family. Exactly one of `instance_family` or `instance_type` must be specified.
@@ -97,8 +98,8 @@ public class DedicatedHost extends com.pulumi.resources.CustomResource {
      * @return Specifies the instance family to be supported by the Dedicated Hosts. If you specify an instance family, the Dedicated Hosts support multiple instance types within that instance family. Exactly one of `instance_family` or `instance_type` must be specified.
      * 
      */
-    public Output</* @Nullable */ String> instanceFamily() {
-        return this.instanceFamily;
+    public Output<Optional<String>> instanceFamily() {
+        return Codegen.optional(this.instanceFamily);
     }
     /**
      * Specifies the instance type to be supported by the Dedicated Hosts. If you specify an instance type, the Dedicated Hosts support instances of the specified instance type only.  Exactly one of `instance_family` or `instance_type` must be specified.
@@ -111,8 +112,8 @@ public class DedicatedHost extends com.pulumi.resources.CustomResource {
      * @return Specifies the instance type to be supported by the Dedicated Hosts. If you specify an instance type, the Dedicated Hosts support instances of the specified instance type only.  Exactly one of `instance_family` or `instance_type` must be specified.
      * 
      */
-    public Output</* @Nullable */ String> instanceType() {
-        return this.instanceType;
+    public Output<Optional<String>> instanceType() {
+        return Codegen.optional(this.instanceType);
     }
     /**
      * The ID of the AWS account that owns the Dedicated Host.
@@ -139,8 +140,8 @@ public class DedicatedHost extends com.pulumi.resources.CustomResource {
      * @return Map of tags to assign to this resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.

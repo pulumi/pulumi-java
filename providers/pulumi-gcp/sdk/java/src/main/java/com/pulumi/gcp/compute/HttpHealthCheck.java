@@ -12,6 +12,7 @@ import com.pulumi.gcp.compute.HttpHealthCheckArgs;
 import com.pulumi.gcp.compute.inputs.HttpHealthCheckState;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -64,8 +65,8 @@ public class HttpHealthCheck extends com.pulumi.resources.CustomResource {
      * seconds.
      * 
      */
-    public Output</* @Nullable */ Integer> checkIntervalSec() {
-        return this.checkIntervalSec;
+    public Output<Optional<Integer>> checkIntervalSec() {
+        return Codegen.optional(this.checkIntervalSec);
     }
     /**
      * Creation timestamp in RFC3339 text format.
@@ -94,8 +95,8 @@ public class HttpHealthCheck extends com.pulumi.resources.CustomResource {
      * you create the resource.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * A so-far unhealthy instance will be marked healthy after this many
@@ -110,8 +111,8 @@ public class HttpHealthCheck extends com.pulumi.resources.CustomResource {
      * consecutive successes. The default value is 2.
      * 
      */
-    public Output</* @Nullable */ Integer> healthyThreshold() {
-        return this.healthyThreshold;
+    public Output<Optional<Integer>> healthyThreshold() {
+        return Codegen.optional(this.healthyThreshold);
     }
     /**
      * The value of the host header in the HTTP health check request. If
@@ -128,8 +129,8 @@ public class HttpHealthCheck extends com.pulumi.resources.CustomResource {
      * health check is performed will be used.
      * 
      */
-    public Output</* @Nullable */ String> host() {
-        return this.host;
+    public Output<Optional<String>> host() {
+        return Codegen.optional(this.host);
     }
     /**
      * Name of the resource. Provided by the client when the resource is
@@ -170,8 +171,8 @@ public class HttpHealthCheck extends com.pulumi.resources.CustomResource {
      * The default value is 80.
      * 
      */
-    public Output</* @Nullable */ Integer> port() {
-        return this.port;
+    public Output<Optional<Integer>> port() {
+        return Codegen.optional(this.port);
     }
     /**
      * The ID of the project in which the resource belongs.
@@ -202,8 +203,8 @@ public class HttpHealthCheck extends com.pulumi.resources.CustomResource {
      * The default value is /.
      * 
      */
-    public Output</* @Nullable */ String> requestPath() {
-        return this.requestPath;
+    public Output<Optional<String>> requestPath() {
+        return Codegen.optional(this.requestPath);
     }
     /**
      * The URI of the created resource.
@@ -234,8 +235,8 @@ public class HttpHealthCheck extends com.pulumi.resources.CustomResource {
      * greater value than checkIntervalSec.
      * 
      */
-    public Output</* @Nullable */ Integer> timeoutSec() {
-        return this.timeoutSec;
+    public Output<Optional<Integer>> timeoutSec() {
+        return Codegen.optional(this.timeoutSec);
     }
     /**
      * A so-far healthy instance will be marked unhealthy after this many
@@ -250,8 +251,8 @@ public class HttpHealthCheck extends com.pulumi.resources.CustomResource {
      * consecutive failures. The default value is 2.
      * 
      */
-    public Output</* @Nullable */ Integer> unhealthyThreshold() {
-        return this.unhealthyThreshold;
+    public Output<Optional<Integer>> unhealthyThreshold() {
+        return Codegen.optional(this.unhealthyThreshold);
     }
 
     /**

@@ -18,6 +18,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -48,8 +49,8 @@ public class GalleryImage extends com.pulumi.resources.CustomResource {
      * @return The description of this gallery image definition resource. This property is updatable.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Describes the disallowed disk types.
@@ -62,8 +63,8 @@ public class GalleryImage extends com.pulumi.resources.CustomResource {
      * @return Describes the disallowed disk types.
      * 
      */
-    public Output</* @Nullable */ DisallowedResponse> disallowed() {
-        return this.disallowed;
+    public Output<Optional<DisallowedResponse>> disallowed() {
+        return Codegen.optional(this.disallowed);
     }
     /**
      * The end of life date of the gallery image definition. This property can be used for decommissioning purposes. This property is updatable.
@@ -76,8 +77,8 @@ public class GalleryImage extends com.pulumi.resources.CustomResource {
      * @return The end of life date of the gallery image definition. This property can be used for decommissioning purposes. This property is updatable.
      * 
      */
-    public Output</* @Nullable */ String> endOfLifeDate() {
-        return this.endOfLifeDate;
+    public Output<Optional<String>> endOfLifeDate() {
+        return Codegen.optional(this.endOfLifeDate);
     }
     /**
      * The Eula agreement for the gallery image definition.
@@ -90,8 +91,8 @@ public class GalleryImage extends com.pulumi.resources.CustomResource {
      * @return The Eula agreement for the gallery image definition.
      * 
      */
-    public Output</* @Nullable */ String> eula() {
-        return this.eula;
+    public Output<Optional<String>> eula() {
+        return Codegen.optional(this.eula);
     }
     /**
      * A list of gallery image features.
@@ -104,8 +105,8 @@ public class GalleryImage extends com.pulumi.resources.CustomResource {
      * @return A list of gallery image features.
      * 
      */
-    public Output</* @Nullable */ List<GalleryImageFeatureResponse>> features() {
-        return this.features;
+    public Output<Optional<List<GalleryImageFeatureResponse>>> features() {
+        return Codegen.optional(this.features);
     }
     /**
      * The hypervisor generation of the Virtual Machine. Applicable to OS disks only.
@@ -118,8 +119,8 @@ public class GalleryImage extends com.pulumi.resources.CustomResource {
      * @return The hypervisor generation of the Virtual Machine. Applicable to OS disks only.
      * 
      */
-    public Output</* @Nullable */ String> hyperVGeneration() {
-        return this.hyperVGeneration;
+    public Output<Optional<String>> hyperVGeneration() {
+        return Codegen.optional(this.hyperVGeneration);
     }
     /**
      * This is the gallery image definition identifier.
@@ -202,8 +203,8 @@ public class GalleryImage extends com.pulumi.resources.CustomResource {
      * @return The privacy statement uri.
      * 
      */
-    public Output</* @Nullable */ String> privacyStatementUri() {
-        return this.privacyStatementUri;
+    public Output<Optional<String>> privacyStatementUri() {
+        return Codegen.optional(this.privacyStatementUri);
     }
     /**
      * The provisioning state, which only appears in the response.
@@ -230,8 +231,8 @@ public class GalleryImage extends com.pulumi.resources.CustomResource {
      * @return Describes the gallery image definition purchase plan. This is used by marketplace images.
      * 
      */
-    public Output</* @Nullable */ ImagePurchasePlanResponse> purchasePlan() {
-        return this.purchasePlan;
+    public Output<Optional<ImagePurchasePlanResponse>> purchasePlan() {
+        return Codegen.optional(this.purchasePlan);
     }
     /**
      * The properties describe the recommended machine configuration for this Image Definition. These properties are updatable.
@@ -244,8 +245,8 @@ public class GalleryImage extends com.pulumi.resources.CustomResource {
      * @return The properties describe the recommended machine configuration for this Image Definition. These properties are updatable.
      * 
      */
-    public Output</* @Nullable */ RecommendedMachineConfigurationResponse> recommended() {
-        return this.recommended;
+    public Output<Optional<RecommendedMachineConfigurationResponse>> recommended() {
+        return Codegen.optional(this.recommended);
     }
     /**
      * The release note uri.
@@ -258,8 +259,8 @@ public class GalleryImage extends com.pulumi.resources.CustomResource {
      * @return The release note uri.
      * 
      */
-    public Output</* @Nullable */ String> releaseNoteUri() {
-        return this.releaseNoteUri;
+    public Output<Optional<String>> releaseNoteUri() {
+        return Codegen.optional(this.releaseNoteUri);
     }
     /**
      * Resource tags
@@ -272,8 +273,8 @@ public class GalleryImage extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type

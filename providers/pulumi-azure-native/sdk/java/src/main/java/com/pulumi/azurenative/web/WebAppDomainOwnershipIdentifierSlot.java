@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -39,8 +40,8 @@ public class WebAppDomainOwnershipIdentifierSlot extends com.pulumi.resources.Cu
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> kind() {
-        return this.kind;
+    public Output<Optional<String>> kind() {
+        return Codegen.optional(this.kind);
     }
     /**
      * Resource Name.
@@ -81,8 +82,8 @@ public class WebAppDomainOwnershipIdentifierSlot extends com.pulumi.resources.Cu
      * @return String representation of the identity.
      * 
      */
-    public Output</* @Nullable */ String> value() {
-        return this.value;
+    public Output<Optional<String>> value() {
+        return Codegen.optional(this.value);
     }
 
     /**

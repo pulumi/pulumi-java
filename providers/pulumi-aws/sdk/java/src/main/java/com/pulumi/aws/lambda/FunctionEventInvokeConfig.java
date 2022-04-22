@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -60,8 +61,8 @@ public class FunctionEventInvokeConfig extends com.pulumi.resources.CustomResour
      * @return Configuration block with destination configuration. See below for details.
      * 
      */
-    public Output</* @Nullable */ FunctionEventInvokeConfigDestinationConfig> destinationConfig() {
-        return this.destinationConfig;
+    public Output<Optional<FunctionEventInvokeConfigDestinationConfig>> destinationConfig() {
+        return Codegen.optional(this.destinationConfig);
     }
     /**
      * Name or Amazon Resource Name (ARN) of the Lambda Function, omitting any version or alias qualifier.
@@ -88,8 +89,8 @@ public class FunctionEventInvokeConfig extends com.pulumi.resources.CustomResour
      * @return Maximum age of a request that Lambda sends to a function for processing in seconds. Valid values between 60 and 21600.
      * 
      */
-    public Output</* @Nullable */ Integer> maximumEventAgeInSeconds() {
-        return this.maximumEventAgeInSeconds;
+    public Output<Optional<Integer>> maximumEventAgeInSeconds() {
+        return Codegen.optional(this.maximumEventAgeInSeconds);
     }
     /**
      * Maximum number of times to retry when the function returns an error. Valid values between 0 and 2. Defaults to 2.
@@ -102,8 +103,8 @@ public class FunctionEventInvokeConfig extends com.pulumi.resources.CustomResour
      * @return Maximum number of times to retry when the function returns an error. Valid values between 0 and 2. Defaults to 2.
      * 
      */
-    public Output</* @Nullable */ Integer> maximumRetryAttempts() {
-        return this.maximumRetryAttempts;
+    public Output<Optional<Integer>> maximumRetryAttempts() {
+        return Codegen.optional(this.maximumRetryAttempts);
     }
     /**
      * Lambda Function published version, `$LATEST`, or Lambda Alias name.
@@ -116,8 +117,8 @@ public class FunctionEventInvokeConfig extends com.pulumi.resources.CustomResour
      * @return Lambda Function published version, `$LATEST`, or Lambda Alias name.
      * 
      */
-    public Output</* @Nullable */ String> qualifier() {
-        return this.qualifier;
+    public Output<Optional<String>> qualifier() {
+        return Codegen.optional(this.qualifier);
     }
 
     /**

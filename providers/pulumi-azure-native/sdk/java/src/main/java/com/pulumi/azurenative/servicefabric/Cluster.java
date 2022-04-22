@@ -25,6 +25,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -56,8 +57,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The list of add-on features to enable in the cluster.
      * 
      */
-    public Output</* @Nullable */ List<String>> addOnFeatures() {
-        return this.addOnFeatures;
+    public Output<Optional<List<String>>> addOnFeatures() {
+        return Codegen.optional(this.addOnFeatures);
     }
     /**
      * The policy used to clean up unused versions.
@@ -70,8 +71,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The policy used to clean up unused versions.
      * 
      */
-    public Output</* @Nullable */ ApplicationTypeVersionsCleanupPolicyResponse> applicationTypeVersionsCleanupPolicy() {
-        return this.applicationTypeVersionsCleanupPolicy;
+    public Output<Optional<ApplicationTypeVersionsCleanupPolicyResponse>> applicationTypeVersionsCleanupPolicy() {
+        return Codegen.optional(this.applicationTypeVersionsCleanupPolicy);
     }
     /**
      * The Service Fabric runtime versions available for this cluster.
@@ -98,8 +99,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The AAD authentication settings of the cluster.
      * 
      */
-    public Output</* @Nullable */ AzureActiveDirectoryResponse> azureActiveDirectory() {
-        return this.azureActiveDirectory;
+    public Output<Optional<AzureActiveDirectoryResponse>> azureActiveDirectory() {
+        return Codegen.optional(this.azureActiveDirectory);
     }
     /**
      * The certificate to use for securing the cluster. The certificate provided will be used for node to node security within the cluster, SSL certificate for cluster management endpoint and default admin client.
@@ -112,8 +113,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The certificate to use for securing the cluster. The certificate provided will be used for node to node security within the cluster, SSL certificate for cluster management endpoint and default admin client.
      * 
      */
-    public Output</* @Nullable */ CertificateDescriptionResponse> certificate() {
-        return this.certificate;
+    public Output<Optional<CertificateDescriptionResponse>> certificate() {
+        return Codegen.optional(this.certificate);
     }
     /**
      * Describes a list of server certificates referenced by common name that are used to secure the cluster.
@@ -126,8 +127,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Describes a list of server certificates referenced by common name that are used to secure the cluster.
      * 
      */
-    public Output</* @Nullable */ ServerCertificateCommonNamesResponse> certificateCommonNames() {
-        return this.certificateCommonNames;
+    public Output<Optional<ServerCertificateCommonNamesResponse>> certificateCommonNames() {
+        return Codegen.optional(this.certificateCommonNames);
     }
     /**
      * The list of client certificates referenced by common name that are allowed to manage the cluster.
@@ -140,8 +141,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The list of client certificates referenced by common name that are allowed to manage the cluster.
      * 
      */
-    public Output</* @Nullable */ List<ClientCertificateCommonNameResponse>> clientCertificateCommonNames() {
-        return this.clientCertificateCommonNames;
+    public Output<Optional<List<ClientCertificateCommonNameResponse>>> clientCertificateCommonNames() {
+        return Codegen.optional(this.clientCertificateCommonNames);
     }
     /**
      * The list of client certificates referenced by thumbprint that are allowed to manage the cluster.
@@ -154,8 +155,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The list of client certificates referenced by thumbprint that are allowed to manage the cluster.
      * 
      */
-    public Output</* @Nullable */ List<ClientCertificateThumbprintResponse>> clientCertificateThumbprints() {
-        return this.clientCertificateThumbprints;
+    public Output<Optional<List<ClientCertificateThumbprintResponse>>> clientCertificateThumbprints() {
+        return Codegen.optional(this.clientCertificateThumbprints);
     }
     /**
      * The Service Fabric runtime version of the cluster. This property can only by set the user when **upgradeMode** is set to &#39;Manual&#39;. To get list of available Service Fabric versions for new clusters use [ClusterVersion API](./ClusterVersion.md). To get the list of available version for existing clusters use **availableClusterVersions**.
@@ -168,8 +169,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The Service Fabric runtime version of the cluster. This property can only by set the user when **upgradeMode** is set to &#39;Manual&#39;. To get list of available Service Fabric versions for new clusters use [ClusterVersion API](./ClusterVersion.md). To get the list of available version for existing clusters use **availableClusterVersions**.
      * 
      */
-    public Output</* @Nullable */ String> clusterCodeVersion() {
-        return this.clusterCodeVersion;
+    public Output<Optional<String>> clusterCodeVersion() {
+        return Codegen.optional(this.clusterCodeVersion);
     }
     /**
      * The Azure Resource Provider endpoint. A system service in the cluster connects to this  endpoint.
@@ -246,8 +247,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The storage account information for storing Service Fabric diagnostic logs.
      * 
      */
-    public Output</* @Nullable */ DiagnosticsStorageAccountConfigResponse> diagnosticsStorageAccountConfig() {
-        return this.diagnosticsStorageAccountConfig;
+    public Output<Optional<DiagnosticsStorageAccountConfigResponse>> diagnosticsStorageAccountConfig() {
+        return Codegen.optional(this.diagnosticsStorageAccountConfig);
     }
     /**
      * Azure resource etag.
@@ -274,8 +275,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Indicates if the event store service is enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> eventStoreServiceEnabled() {
-        return this.eventStoreServiceEnabled;
+    public Output<Optional<Boolean>> eventStoreServiceEnabled() {
+        return Codegen.optional(this.eventStoreServiceEnabled);
     }
     /**
      * The list of custom fabric settings to configure the cluster.
@@ -288,8 +289,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The list of custom fabric settings to configure the cluster.
      * 
      */
-    public Output</* @Nullable */ List<SettingsSectionDescriptionResponse>> fabricSettings() {
-        return this.fabricSettings;
+    public Output<Optional<List<SettingsSectionDescriptionResponse>>> fabricSettings() {
+        return Codegen.optional(this.fabricSettings);
     }
     /**
      * Azure resource location.
@@ -384,8 +385,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      *   - Platinum - Run the System services with a target replica set count of 9.
      * 
      */
-    public Output</* @Nullable */ String> reliabilityLevel() {
-        return this.reliabilityLevel;
+    public Output<Optional<String>> reliabilityLevel() {
+        return Codegen.optional(this.reliabilityLevel);
     }
     /**
      * The server certificate used by reverse proxy.
@@ -398,8 +399,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The server certificate used by reverse proxy.
      * 
      */
-    public Output</* @Nullable */ CertificateDescriptionResponse> reverseProxyCertificate() {
-        return this.reverseProxyCertificate;
+    public Output<Optional<CertificateDescriptionResponse>> reverseProxyCertificate() {
+        return Codegen.optional(this.reverseProxyCertificate);
     }
     /**
      * Describes a list of server certificates referenced by common name that are used to secure the cluster.
@@ -412,8 +413,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Describes a list of server certificates referenced by common name that are used to secure the cluster.
      * 
      */
-    public Output</* @Nullable */ ServerCertificateCommonNamesResponse> reverseProxyCertificateCommonNames() {
-        return this.reverseProxyCertificateCommonNames;
+    public Output<Optional<ServerCertificateCommonNamesResponse>> reverseProxyCertificateCommonNames() {
+        return Codegen.optional(this.reverseProxyCertificateCommonNames);
     }
     /**
      * Azure resource tags.
@@ -426,8 +427,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Azure resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Azure resource type.
@@ -454,8 +455,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The policy to use when upgrading the cluster.
      * 
      */
-    public Output</* @Nullable */ ClusterUpgradePolicyResponse> upgradeDescription() {
-        return this.upgradeDescription;
+    public Output<Optional<ClusterUpgradePolicyResponse>> upgradeDescription() {
+        return Codegen.optional(this.upgradeDescription);
     }
     /**
      * The upgrade mode of the cluster when new Service Fabric runtime version is available.
@@ -474,8 +475,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      *   - Manual - The cluster will not be automatically upgraded to the latest Service Fabric runtime version. The cluster is upgraded by setting the **clusterCodeVersion** property in the cluster resource.
      * 
      */
-    public Output</* @Nullable */ String> upgradeMode() {
-        return this.upgradeMode;
+    public Output<Optional<String>> upgradeMode() {
+        return Codegen.optional(this.upgradeMode);
     }
     /**
      * The VM image VMSS has been configured with. Generic names such as Windows or Linux can be used.
@@ -488,8 +489,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The VM image VMSS has been configured with. Generic names such as Windows or Linux can be used.
      * 
      */
-    public Output</* @Nullable */ String> vmImage() {
-        return this.vmImage;
+    public Output<Optional<String>> vmImage() {
+        return Codegen.optional(this.vmImage);
     }
 
     /**

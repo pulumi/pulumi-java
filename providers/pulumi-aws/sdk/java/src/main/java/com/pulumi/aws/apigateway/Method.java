@@ -14,6 +14,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class Method extends com.pulumi.resources.CustomResource {
      * @return Specify if the method requires an API key
      * 
      */
-    public Output</* @Nullable */ Boolean> apiKeyRequired() {
-        return this.apiKeyRequired;
+    public Output<Optional<Boolean>> apiKeyRequired() {
+        return Codegen.optional(this.apiKeyRequired);
     }
     /**
      * The type of authorization used for the method (`NONE`, `CUSTOM`, `AWS_IAM`, `COGNITO_USER_POOLS`)
@@ -72,8 +73,8 @@ public class Method extends com.pulumi.resources.CustomResource {
      * @return The authorization scopes used when the authorization is `COGNITO_USER_POOLS`
      * 
      */
-    public Output</* @Nullable */ List<String>> authorizationScopes() {
-        return this.authorizationScopes;
+    public Output<Optional<List<String>>> authorizationScopes() {
+        return Codegen.optional(this.authorizationScopes);
     }
     /**
      * The authorizer id to be used when the authorization is `CUSTOM` or `COGNITO_USER_POOLS`
@@ -86,8 +87,8 @@ public class Method extends com.pulumi.resources.CustomResource {
      * @return The authorizer id to be used when the authorization is `CUSTOM` or `COGNITO_USER_POOLS`
      * 
      */
-    public Output</* @Nullable */ String> authorizerId() {
-        return this.authorizerId;
+    public Output<Optional<String>> authorizerId() {
+        return Codegen.optional(this.authorizerId);
     }
     /**
      * The HTTP Method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
@@ -114,8 +115,8 @@ public class Method extends com.pulumi.resources.CustomResource {
      * @return The function name that will be given to the method when generating an SDK through API Gateway. If omitted, API Gateway will generate a function name based on the resource path and HTTP verb.
      * 
      */
-    public Output</* @Nullable */ String> operationName() {
-        return this.operationName;
+    public Output<Optional<String>> operationName() {
+        return Codegen.optional(this.operationName);
     }
     /**
      * A map of the API models used for the request&#39;s content type
@@ -132,8 +133,8 @@ public class Method extends com.pulumi.resources.CustomResource {
      * and value is either `Error`, `Empty` (built-in models) or `aws.apigateway.Model`&#39;s `name`.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> requestModels() {
-        return this.requestModels;
+    public Output<Optional<Map<String,String>>> requestModels() {
+        return Codegen.optional(this.requestModels);
     }
     /**
      * A map of request parameters (from the path, query string and headers) that should be passed to the integration. The boolean value indicates whether the parameter is required (`true`) or optional (`false`).
@@ -148,8 +149,8 @@ public class Method extends com.pulumi.resources.CustomResource {
      * For example: `request_parameters = {&#34;method.request.header.X-Some-Header&#34; = true &#34;method.request.querystring.some-query-param&#34; = true}` would define that the header `X-Some-Header` and the query string `some-query-param` must be provided in the request.
      * 
      */
-    public Output</* @Nullable */ Map<String,Boolean>> requestParameters() {
-        return this.requestParameters;
+    public Output<Optional<Map<String,Boolean>>> requestParameters() {
+        return Codegen.optional(this.requestParameters);
     }
     /**
      * The ID of a `aws.apigateway.RequestValidator`
@@ -162,8 +163,8 @@ public class Method extends com.pulumi.resources.CustomResource {
      * @return The ID of a `aws.apigateway.RequestValidator`
      * 
      */
-    public Output</* @Nullable */ String> requestValidatorId() {
-        return this.requestValidatorId;
+    public Output<Optional<String>> requestValidatorId() {
+        return Codegen.optional(this.requestValidatorId);
     }
     /**
      * The API resource ID

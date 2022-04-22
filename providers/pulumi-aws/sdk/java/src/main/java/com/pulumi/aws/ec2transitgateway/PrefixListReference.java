@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -41,8 +42,8 @@ public class PrefixListReference extends com.pulumi.resources.CustomResource {
      * @return Indicates whether to drop traffic that matches the Prefix List. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> blackhole() {
-        return this.blackhole;
+    public Output<Optional<Boolean>> blackhole() {
+        return Codegen.optional(this.blackhole);
     }
     /**
      * Identifier of EC2 Prefix List.
@@ -75,8 +76,8 @@ public class PrefixListReference extends com.pulumi.resources.CustomResource {
      * @return Identifier of EC2 Transit Gateway Attachment.
      * 
      */
-    public Output</* @Nullable */ String> transitGatewayAttachmentId() {
-        return this.transitGatewayAttachmentId;
+    public Output<Optional<String>> transitGatewayAttachmentId() {
+        return Codegen.optional(this.transitGatewayAttachmentId);
     }
     /**
      * Identifier of EC2 Transit Gateway Route Table.

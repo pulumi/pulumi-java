@@ -14,6 +14,7 @@ import com.pulumi.gcp.endpoints.outputs.ServiceApi;
 import com.pulumi.gcp.endpoints.outputs.ServiceEndpoint;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -99,8 +100,8 @@ public class Service extends com.pulumi.resources.CustomResource {
      * protoc_output_base64. open_api config must not be provided.
      * 
      */
-    public Output</* @Nullable */ String> grpcConfig() {
-        return this.grpcConfig;
+    public Output<Optional<String>> grpcConfig() {
+        return Codegen.optional(this.grpcConfig);
     }
     /**
      * The full text of the OpenAPI YAML configuration as described here. Either this, or both of grpc_config and
@@ -115,8 +116,8 @@ public class Service extends com.pulumi.resources.CustomResource {
      * protoc_output_base64 must be specified.
      * 
      */
-    public Output</* @Nullable */ String> openapiConfig() {
-        return this.openapiConfig;
+    public Output<Optional<String>> openapiConfig() {
+        return Codegen.optional(this.openapiConfig);
     }
     /**
      * The project ID that the service belongs to. If not provided, provider project is used.
@@ -145,8 +146,8 @@ public class Service extends com.pulumi.resources.CustomResource {
      * base64-encoded.
      * 
      */
-    public Output</* @Nullable */ String> protocOutputBase64() {
-        return this.protocOutputBase64;
+    public Output<Optional<String>> protocOutputBase64() {
+        return Codegen.optional(this.protocOutputBase64);
     }
     /**
      * The name of the service. Usually of the form $apiname.endpoints.$projectid.cloud.goog.

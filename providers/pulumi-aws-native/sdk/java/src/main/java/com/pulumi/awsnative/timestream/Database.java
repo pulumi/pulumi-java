@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -37,8 +38,8 @@ public class Database extends com.pulumi.resources.CustomResource {
      * @return The name for the database. If you don&#39;t specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the database name.
      * 
      */
-    public Output</* @Nullable */ String> databaseName() {
-        return this.databaseName;
+    public Output<Optional<String>> databaseName() {
+        return Codegen.optional(this.databaseName);
     }
     /**
      * The KMS key for the database. If the KMS key is not specified, the database will be encrypted with a Timestream managed KMS key located in your account.
@@ -51,8 +52,8 @@ public class Database extends com.pulumi.resources.CustomResource {
      * @return The KMS key for the database. If the KMS key is not specified, the database will be encrypted with a Timestream managed KMS key located in your account.
      * 
      */
-    public Output</* @Nullable */ String> kmsKeyId() {
-        return this.kmsKeyId;
+    public Output<Optional<String>> kmsKeyId() {
+        return Codegen.optional(this.kmsKeyId);
     }
     /**
      * An array of key-value pairs to apply to this resource.
@@ -65,8 +66,8 @@ public class Database extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<DatabaseTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<DatabaseTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

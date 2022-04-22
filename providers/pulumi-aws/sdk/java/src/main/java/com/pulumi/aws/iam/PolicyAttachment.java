@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -39,8 +40,8 @@ public class PolicyAttachment extends com.pulumi.resources.CustomResource {
      * @return The group(s) the policy should be applied to
      * 
      */
-    public Output</* @Nullable */ List<String>> groups() {
-        return this.groups;
+    public Output<Optional<List<String>>> groups() {
+        return Codegen.optional(this.groups);
     }
     /**
      * The name of the attachment. This cannot be an empty string.
@@ -81,8 +82,8 @@ public class PolicyAttachment extends com.pulumi.resources.CustomResource {
      * @return The role(s) the policy should be applied to
      * 
      */
-    public Output</* @Nullable */ List<String>> roles() {
-        return this.roles;
+    public Output<Optional<List<String>>> roles() {
+        return Codegen.optional(this.roles);
     }
     /**
      * The user(s) the policy should be applied to
@@ -95,8 +96,8 @@ public class PolicyAttachment extends com.pulumi.resources.CustomResource {
      * @return The user(s) the policy should be applied to
      * 
      */
-    public Output</* @Nullable */ List<String>> users() {
-        return this.users;
+    public Output<Optional<List<String>>> users() {
+        return Codegen.optional(this.users);
     }
 
     /**

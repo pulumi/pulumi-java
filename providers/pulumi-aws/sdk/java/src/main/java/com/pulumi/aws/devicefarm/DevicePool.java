@@ -15,6 +15,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -58,8 +59,8 @@ public class DevicePool extends com.pulumi.resources.CustomResource {
      * @return The device pool&#39;s description.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The number of devices that Device Farm can add to your device pool.
@@ -72,8 +73,8 @@ public class DevicePool extends com.pulumi.resources.CustomResource {
      * @return The number of devices that Device Farm can add to your device pool.
      * 
      */
-    public Output</* @Nullable */ Integer> maxDevices() {
-        return this.maxDevices;
+    public Output<Optional<Integer>> maxDevices() {
+        return Codegen.optional(this.maxDevices);
     }
     /**
      * The name of the Device Pool
@@ -128,8 +129,8 @@ public class DevicePool extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).

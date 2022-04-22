@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -128,8 +129,8 @@ public class SqlVirtualMachineGroup extends com.pulumi.resources.CustomResource 
      * @return SQL image offer. Examples may include SQL2016-WS2016, SQL2017-WS2016.
      * 
      */
-    public Output</* @Nullable */ String> sqlImageOffer() {
-        return this.sqlImageOffer;
+    public Output<Optional<String>> sqlImageOffer() {
+        return Codegen.optional(this.sqlImageOffer);
     }
     /**
      * SQL image sku.
@@ -142,8 +143,8 @@ public class SqlVirtualMachineGroup extends com.pulumi.resources.CustomResource 
      * @return SQL image sku.
      * 
      */
-    public Output</* @Nullable */ String> sqlImageSku() {
-        return this.sqlImageSku;
+    public Output<Optional<String>> sqlImageSku() {
+        return Codegen.optional(this.sqlImageSku);
     }
     /**
      * Resource tags.
@@ -156,8 +157,8 @@ public class SqlVirtualMachineGroup extends com.pulumi.resources.CustomResource 
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type.
@@ -184,8 +185,8 @@ public class SqlVirtualMachineGroup extends com.pulumi.resources.CustomResource 
      * @return Cluster Active Directory domain profile.
      * 
      */
-    public Output</* @Nullable */ WsfcDomainProfileResponse> wsfcDomainProfile() {
-        return this.wsfcDomainProfile;
+    public Output<Optional<WsfcDomainProfileResponse>> wsfcDomainProfile() {
+        return Codegen.optional(this.wsfcDomainProfile);
     }
 
     /**

@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -42,8 +43,8 @@ public class TrafficManagerUserMetricsKey extends com.pulumi.resources.CustomRes
      * @return The key returned by the User Metrics operation.
      * 
      */
-    public Output</* @Nullable */ String> key() {
-        return this.key;
+    public Output<Optional<String>> key() {
+        return Codegen.optional(this.key);
     }
     /**
      * The name of the resource
@@ -56,8 +57,8 @@ public class TrafficManagerUserMetricsKey extends com.pulumi.resources.CustomRes
      * @return The name of the resource
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.
@@ -70,8 +71,8 @@ public class TrafficManagerUserMetricsKey extends com.pulumi.resources.CustomRes
      * @return The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.
      * 
      */
-    public Output</* @Nullable */ String> type() {
-        return this.type;
+    public Output<Optional<String>> type() {
+        return Codegen.optional(this.type);
     }
 
     /**

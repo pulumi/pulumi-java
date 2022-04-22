@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class ManagementGroupSubscription extends com.pulumi.resources.CustomReso
      * @return The friendly name of the subscription.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * The stringified id of the subscription. For example, 00000000-0000-0000-0000-000000000000
@@ -71,8 +72,8 @@ public class ManagementGroupSubscription extends com.pulumi.resources.CustomReso
      * @return The ID of the parent management group.
      * 
      */
-    public Output</* @Nullable */ DescendantParentGroupInfoResponse> parent() {
-        return this.parent;
+    public Output<Optional<DescendantParentGroupInfoResponse>> parent() {
+        return Codegen.optional(this.parent);
     }
     /**
      * The state of the subscription.
@@ -85,8 +86,8 @@ public class ManagementGroupSubscription extends com.pulumi.resources.CustomReso
      * @return The state of the subscription.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Output<Optional<String>> state() {
+        return Codegen.optional(this.state);
     }
     /**
      * The AAD Tenant ID associated with the subscription. For example, 00000000-0000-0000-0000-000000000000
@@ -99,8 +100,8 @@ public class ManagementGroupSubscription extends com.pulumi.resources.CustomReso
      * @return The AAD Tenant ID associated with the subscription. For example, 00000000-0000-0000-0000-000000000000
      * 
      */
-    public Output</* @Nullable */ String> tenant() {
-        return this.tenant;
+    public Output<Optional<String>> tenant() {
+        return Codegen.optional(this.tenant);
     }
     /**
      * The type of the resource.  For example, Microsoft.Management/managementGroups/subscriptions

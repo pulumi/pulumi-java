@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -66,8 +67,8 @@ public class NotebookInstanceLifecycleConfiguration extends com.pulumi.resources
      * @return A shell script (base64-encoded) that runs only once when the SageMaker Notebook Instance is created.
      * 
      */
-    public Output</* @Nullable */ String> onCreate() {
-        return this.onCreate;
+    public Output<Optional<String>> onCreate() {
+        return Codegen.optional(this.onCreate);
     }
     /**
      * A shell script (base64-encoded) that runs every time the SageMaker Notebook Instance is started including the time it&#39;s created.
@@ -80,8 +81,8 @@ public class NotebookInstanceLifecycleConfiguration extends com.pulumi.resources
      * @return A shell script (base64-encoded) that runs every time the SageMaker Notebook Instance is started including the time it&#39;s created.
      * 
      */
-    public Output</* @Nullable */ String> onStart() {
-        return this.onStart;
+    public Output<Optional<String>> onStart() {
+        return Codegen.optional(this.onStart);
     }
 
     /**

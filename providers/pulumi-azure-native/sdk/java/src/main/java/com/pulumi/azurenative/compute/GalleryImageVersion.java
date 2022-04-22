@@ -16,6 +16,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -88,8 +89,8 @@ public class GalleryImageVersion extends com.pulumi.resources.CustomResource {
      * @return The publishing profile of a gallery image Version.
      * 
      */
-    public Output</* @Nullable */ GalleryImageVersionPublishingProfileResponse> publishingProfile() {
-        return this.publishingProfile;
+    public Output<Optional<GalleryImageVersionPublishingProfileResponse>> publishingProfile() {
+        return Codegen.optional(this.publishingProfile);
     }
     /**
      * This is the replication status of the gallery image version.
@@ -130,8 +131,8 @@ public class GalleryImageVersion extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type

@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -114,8 +115,8 @@ public class Sensor extends com.pulumi.resources.CustomResource {
      * @return Type of sensor
      * 
      */
-    public Output</* @Nullable */ String> sensorType() {
-        return this.sensorType;
+    public Output<Optional<String>> sensorType() {
+        return Codegen.optional(this.sensorType);
     }
     /**
      * Version of the IoT sensor
@@ -156,8 +157,8 @@ public class Sensor extends com.pulumi.resources.CustomResource {
      * @return TI Automatic mode status of the IoT sensor
      * 
      */
-    public Output</* @Nullable */ Boolean> tiAutomaticUpdates() {
-        return this.tiAutomaticUpdates;
+    public Output<Optional<Boolean>> tiAutomaticUpdates() {
+        return Codegen.optional(this.tiAutomaticUpdates);
     }
     /**
      * TI Status of the IoT sensor
@@ -212,8 +213,8 @@ public class Sensor extends com.pulumi.resources.CustomResource {
      * @return Zone of the IoT sensor
      * 
      */
-    public Output</* @Nullable */ String> zone() {
-        return this.zone;
+    public Output<Optional<String>> zone() {
+        return Codegen.optional(this.zone);
     }
 
     /**

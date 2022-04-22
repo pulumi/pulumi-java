@@ -14,6 +14,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -86,8 +87,8 @@ public class HybridConnection extends com.pulumi.resources.CustomResource {
      * @return Returns true if client authorization is needed for this hybrid connection; otherwise, false.
      * 
      */
-    public Output</* @Nullable */ Boolean> requiresClientAuthorization() {
-        return this.requiresClientAuthorization;
+    public Output<Optional<Boolean>> requiresClientAuthorization() {
+        return Codegen.optional(this.requiresClientAuthorization);
     }
     /**
      * Resource type.
@@ -128,8 +129,8 @@ public class HybridConnection extends com.pulumi.resources.CustomResource {
      * @return The usermetadata is a placeholder to store user-defined string data for the hybrid connection endpoint. For example, it can be used to store descriptive data, such as a list of teams and their contact information. Also, user-defined configuration settings can be stored.
      * 
      */
-    public Output</* @Nullable */ String> userMetadata() {
-        return this.userMetadata;
+    public Output<Optional<String>> userMetadata() {
+        return Codegen.optional(this.userMetadata);
     }
 
     /**

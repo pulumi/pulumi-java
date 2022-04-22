@@ -15,6 +15,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -51,8 +52,8 @@ public class AFDEndpoint extends com.pulumi.resources.CustomResource {
      * @return Whether to enable use of this rule. Permitted values are &#39;Enabled&#39; or &#39;Disabled&#39;
      * 
      */
-    public Output</* @Nullable */ String> enabledState() {
-        return this.enabledState;
+    public Output<Optional<String>> enabledState() {
+        return Codegen.optional(this.enabledState);
     }
     /**
      * The host name of the endpoint structured as {endpointName}.{DNSZone}, e.g. contoso.azureedge.net
@@ -107,8 +108,8 @@ public class AFDEndpoint extends com.pulumi.resources.CustomResource {
      * @return Send and receive timeout on forwarding request to the origin. When timeout is reached, the request fails and returns.
      * 
      */
-    public Output</* @Nullable */ Integer> originResponseTimeoutSeconds() {
-        return this.originResponseTimeoutSeconds;
+    public Output<Optional<Integer>> originResponseTimeoutSeconds() {
+        return Codegen.optional(this.originResponseTimeoutSeconds);
     }
     /**
      * Provisioning status
@@ -149,8 +150,8 @@ public class AFDEndpoint extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type.

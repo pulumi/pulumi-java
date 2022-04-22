@@ -19,6 +19,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -49,8 +50,8 @@ public class StreamingEndpoint extends com.pulumi.resources.CustomResource {
      * @return The access control definition of the streaming endpoint.
      * 
      */
-    public Output</* @Nullable */ StreamingEndpointAccessControlResponse> accessControl() {
-        return this.accessControl;
+    public Output<Optional<StreamingEndpointAccessControlResponse>> accessControl() {
+        return Codegen.optional(this.accessControl);
     }
     /**
      * This feature is deprecated, do not set a value for this property.
@@ -63,8 +64,8 @@ public class StreamingEndpoint extends com.pulumi.resources.CustomResource {
      * @return This feature is deprecated, do not set a value for this property.
      * 
      */
-    public Output</* @Nullable */ String> availabilitySetName() {
-        return this.availabilitySetName;
+    public Output<Optional<String>> availabilitySetName() {
+        return Codegen.optional(this.availabilitySetName);
     }
     /**
      * The CDN enabled flag.
@@ -77,8 +78,8 @@ public class StreamingEndpoint extends com.pulumi.resources.CustomResource {
      * @return The CDN enabled flag.
      * 
      */
-    public Output</* @Nullable */ Boolean> cdnEnabled() {
-        return this.cdnEnabled;
+    public Output<Optional<Boolean>> cdnEnabled() {
+        return Codegen.optional(this.cdnEnabled);
     }
     /**
      * The CDN profile name.
@@ -91,8 +92,8 @@ public class StreamingEndpoint extends com.pulumi.resources.CustomResource {
      * @return The CDN profile name.
      * 
      */
-    public Output</* @Nullable */ String> cdnProfile() {
-        return this.cdnProfile;
+    public Output<Optional<String>> cdnProfile() {
+        return Codegen.optional(this.cdnProfile);
     }
     /**
      * The CDN provider name.
@@ -105,8 +106,8 @@ public class StreamingEndpoint extends com.pulumi.resources.CustomResource {
      * @return The CDN provider name.
      * 
      */
-    public Output</* @Nullable */ String> cdnProvider() {
-        return this.cdnProvider;
+    public Output<Optional<String>> cdnProvider() {
+        return Codegen.optional(this.cdnProvider);
     }
     /**
      * The exact time the streaming endpoint was created.
@@ -133,8 +134,8 @@ public class StreamingEndpoint extends com.pulumi.resources.CustomResource {
      * @return The streaming endpoint access policies.
      * 
      */
-    public Output</* @Nullable */ CrossSiteAccessPoliciesResponse> crossSiteAccessPolicies() {
-        return this.crossSiteAccessPolicies;
+    public Output<Optional<CrossSiteAccessPoliciesResponse>> crossSiteAccessPolicies() {
+        return Codegen.optional(this.crossSiteAccessPolicies);
     }
     /**
      * The custom host names of the streaming endpoint
@@ -147,8 +148,8 @@ public class StreamingEndpoint extends com.pulumi.resources.CustomResource {
      * @return The custom host names of the streaming endpoint
      * 
      */
-    public Output</* @Nullable */ List<String>> customHostNames() {
-        return this.customHostNames;
+    public Output<Optional<List<String>>> customHostNames() {
+        return Codegen.optional(this.customHostNames);
     }
     /**
      * The streaming endpoint description.
@@ -161,8 +162,8 @@ public class StreamingEndpoint extends com.pulumi.resources.CustomResource {
      * @return The streaming endpoint description.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The free trial expiration time.
@@ -231,8 +232,8 @@ public class StreamingEndpoint extends com.pulumi.resources.CustomResource {
      * @return Max cache age
      * 
      */
-    public Output</* @Nullable */ Double> maxCacheAge() {
-        return this.maxCacheAge;
+    public Output<Optional<Double>> maxCacheAge() {
+        return Codegen.optional(this.maxCacheAge);
     }
     /**
      * The name of the resource
@@ -315,8 +316,8 @@ public class StreamingEndpoint extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;

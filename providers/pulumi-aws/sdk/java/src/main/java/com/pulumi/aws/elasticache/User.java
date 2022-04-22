@@ -14,6 +14,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -81,8 +82,8 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return Indicates a password is not required for this user.
      * 
      */
-    public Output</* @Nullable */ Boolean> noPasswordRequired() {
-        return this.noPasswordRequired;
+    public Output<Optional<Boolean>> noPasswordRequired() {
+        return Codegen.optional(this.noPasswordRequired);
     }
     /**
      * Passwords used for this user. You can create up to two passwords for each user.
@@ -95,8 +96,8 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return Passwords used for this user. You can create up to two passwords for each user.
      * 
      */
-    public Output</* @Nullable */ List<String>> passwords() {
-        return this.passwords;
+    public Output<Optional<List<String>>> passwords() {
+        return Codegen.optional(this.passwords);
     }
     /**
      * A list of tags to be added to this resource. A tag is a key-value pair.
@@ -109,8 +110,8 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return A list of tags to be added to this resource. A tag is a key-value pair.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;

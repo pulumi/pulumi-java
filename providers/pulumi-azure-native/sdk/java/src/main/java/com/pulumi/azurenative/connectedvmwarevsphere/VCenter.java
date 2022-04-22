@@ -18,6 +18,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -62,8 +63,8 @@ public class VCenter extends com.pulumi.resources.CustomResource {
      * @return Username / Password Credentials to connect to vcenter.
      * 
      */
-    public Output</* @Nullable */ VICredentialResponse> credentials() {
-        return this.credentials;
+    public Output<Optional<VICredentialResponse>> credentials() {
+        return Codegen.optional(this.credentials);
     }
     /**
      * Gets the name of the corresponding resource in Kubernetes.
@@ -90,8 +91,8 @@ public class VCenter extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the extended location.
      * 
      */
-    public Output</* @Nullable */ ExtendedLocationResponse> extendedLocation() {
-        return this.extendedLocation;
+    public Output<Optional<ExtendedLocationResponse>> extendedLocation() {
+        return Codegen.optional(this.extendedLocation);
     }
     /**
      * Gets or sets the FQDN/IPAddress of the vCenter.
@@ -132,8 +133,8 @@ public class VCenter extends com.pulumi.resources.CustomResource {
      * @return Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
      * 
      */
-    public Output</* @Nullable */ String> kind() {
-        return this.kind;
+    public Output<Optional<String>> kind() {
+        return Codegen.optional(this.kind);
     }
     /**
      * Gets or sets the location.
@@ -174,8 +175,8 @@ public class VCenter extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the port of the vCenter.
      * 
      */
-    public Output</* @Nullable */ Integer> port() {
-        return this.port;
+    public Output<Optional<Integer>> port() {
+        return Codegen.optional(this.port);
     }
     /**
      * Gets or sets the provisioning state.
@@ -230,8 +231,8 @@ public class VCenter extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Gets or sets the type of the resource.

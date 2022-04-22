@@ -21,6 +21,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -65,8 +66,8 @@ public class PrivateLinkService extends com.pulumi.resources.CustomResource {
      * @return The auto-approval list of the private link service.
      * 
      */
-    public Output</* @Nullable */ PrivateLinkServicePropertiesResponseAutoApproval> autoApproval() {
-        return this.autoApproval;
+    public Output<Optional<PrivateLinkServicePropertiesResponseAutoApproval>> autoApproval() {
+        return Codegen.optional(this.autoApproval);
     }
     /**
      * Whether the private link service is enabled for proxy protocol or not.
@@ -79,8 +80,8 @@ public class PrivateLinkService extends com.pulumi.resources.CustomResource {
      * @return Whether the private link service is enabled for proxy protocol or not.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableProxyProtocol() {
-        return this.enableProxyProtocol;
+    public Output<Optional<Boolean>> enableProxyProtocol() {
+        return Codegen.optional(this.enableProxyProtocol);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
@@ -107,8 +108,8 @@ public class PrivateLinkService extends com.pulumi.resources.CustomResource {
      * @return The extended location of the load balancer.
      * 
      */
-    public Output</* @Nullable */ ExtendedLocationResponse> extendedLocation() {
-        return this.extendedLocation;
+    public Output<Optional<ExtendedLocationResponse>> extendedLocation() {
+        return Codegen.optional(this.extendedLocation);
     }
     /**
      * The list of Fqdn.
@@ -121,8 +122,8 @@ public class PrivateLinkService extends com.pulumi.resources.CustomResource {
      * @return The list of Fqdn.
      * 
      */
-    public Output</* @Nullable */ List<String>> fqdns() {
-        return this.fqdns;
+    public Output<Optional<List<String>>> fqdns() {
+        return Codegen.optional(this.fqdns);
     }
     /**
      * An array of private link service IP configurations.
@@ -135,8 +136,8 @@ public class PrivateLinkService extends com.pulumi.resources.CustomResource {
      * @return An array of private link service IP configurations.
      * 
      */
-    public Output</* @Nullable */ List<PrivateLinkServiceIpConfigurationResponse>> ipConfigurations() {
-        return this.ipConfigurations;
+    public Output<Optional<List<PrivateLinkServiceIpConfigurationResponse>>> ipConfigurations() {
+        return Codegen.optional(this.ipConfigurations);
     }
     /**
      * An array of references to the load balancer IP configurations.
@@ -149,8 +150,8 @@ public class PrivateLinkService extends com.pulumi.resources.CustomResource {
      * @return An array of references to the load balancer IP configurations.
      * 
      */
-    public Output</* @Nullable */ List<FrontendIPConfigurationResponse>> loadBalancerFrontendIpConfigurations() {
-        return this.loadBalancerFrontendIpConfigurations;
+    public Output<Optional<List<FrontendIPConfigurationResponse>>> loadBalancerFrontendIpConfigurations() {
+        return Codegen.optional(this.loadBalancerFrontendIpConfigurations);
     }
     /**
      * Resource location.
@@ -163,8 +164,8 @@ public class PrivateLinkService extends com.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * Resource name.
@@ -233,8 +234,8 @@ public class PrivateLinkService extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type.
@@ -261,8 +262,8 @@ public class PrivateLinkService extends com.pulumi.resources.CustomResource {
      * @return The visibility list of the private link service.
      * 
      */
-    public Output</* @Nullable */ PrivateLinkServicePropertiesResponseVisibility> visibility() {
-        return this.visibility;
+    public Output<Optional<PrivateLinkServicePropertiesResponseVisibility>> visibility() {
+        return Codegen.optional(this.visibility);
     }
 
     /**

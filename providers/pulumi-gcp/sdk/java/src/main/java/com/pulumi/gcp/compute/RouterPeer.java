@@ -16,6 +16,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -72,8 +73,8 @@ public class RouterPeer extends com.pulumi.resources.CustomResource {
      * Possible values are `DEFAULT` and `CUSTOM`.
      * 
      */
-    public Output</* @Nullable */ String> advertiseMode() {
-        return this.advertiseMode;
+    public Output<Optional<String>> advertiseMode() {
+        return Codegen.optional(this.advertiseMode);
     }
     /**
      * User-specified list of prefix groups to advertise in custom
@@ -94,8 +95,8 @@ public class RouterPeer extends com.pulumi.resources.CustomResource {
      * * `ALL_PEER_VPC_SUBNETS`: Advertises peer subnets of the router&#39;s VPC network.
      * 
      */
-    public Output</* @Nullable */ List<String>> advertisedGroups() {
-        return this.advertisedGroups;
+    public Output<Optional<List<String>>> advertisedGroups() {
+        return Codegen.optional(this.advertisedGroups);
     }
     /**
      * User-specified list of individual IP ranges to advertise in
@@ -118,8 +119,8 @@ public class RouterPeer extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<RouterPeerAdvertisedIpRange>> advertisedIpRanges() {
-        return this.advertisedIpRanges;
+    public Output<Optional<List<RouterPeerAdvertisedIpRange>>> advertisedIpRanges() {
+        return Codegen.optional(this.advertisedIpRanges);
     }
     /**
      * The priority of routes advertised to this BGP peer.
@@ -136,8 +137,8 @@ public class RouterPeer extends com.pulumi.resources.CustomResource {
      * length, the routes with the lowest priority value win.
      * 
      */
-    public Output</* @Nullable */ Integer> advertisedRoutePriority() {
-        return this.advertisedRoutePriority;
+    public Output<Optional<Integer>> advertisedRoutePriority() {
+        return Codegen.optional(this.advertisedRoutePriority);
     }
     /**
      * BFD configuration for the BGP peering.
@@ -172,8 +173,8 @@ public class RouterPeer extends com.pulumi.resources.CustomResource {
      * The default is true.
      * 
      */
-    public Output</* @Nullable */ Boolean> enable() {
-        return this.enable;
+    public Output<Optional<Boolean>> enable() {
+        return Codegen.optional(this.enable);
     }
     /**
      * Name of the interface the BGP peer is associated with.

@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -85,8 +86,8 @@ public class View extends com.pulumi.resources.CustomResource {
      * @return Localized display name for the view.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> displayName() {
-        return this.displayName;
+    public Output<Optional<Map<String,String>>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * Resource name.
@@ -141,8 +142,8 @@ public class View extends com.pulumi.resources.CustomResource {
      * @return the user ID.
      * 
      */
-    public Output</* @Nullable */ String> userId() {
-        return this.userId;
+    public Output<Optional<String>> userId() {
+        return Codegen.optional(this.userId);
     }
     /**
      * Name of the view.

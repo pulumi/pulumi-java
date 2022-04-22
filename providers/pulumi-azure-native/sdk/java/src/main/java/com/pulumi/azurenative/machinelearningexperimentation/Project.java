@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -71,8 +72,8 @@ public class Project extends com.pulumi.resources.CustomResource {
      * @return The description of this project.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The friendly name for this project.
@@ -99,8 +100,8 @@ public class Project extends com.pulumi.resources.CustomResource {
      * @return The reference to git repo for this project.
      * 
      */
-    public Output</* @Nullable */ String> gitrepo() {
-        return this.gitrepo;
+    public Output<Optional<String>> gitrepo() {
+        return Codegen.optional(this.gitrepo);
     }
     /**
      * The location of the resource. This cannot be changed after the resource is created.
@@ -169,8 +170,8 @@ public class Project extends com.pulumi.resources.CustomResource {
      * @return The tags of the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource.

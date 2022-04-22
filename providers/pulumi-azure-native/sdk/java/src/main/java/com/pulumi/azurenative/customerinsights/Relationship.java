@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class Relationship extends com.pulumi.resources.CustomResource {
      * @return The Relationship Cardinality.
      * 
      */
-    public Output</* @Nullable */ String> cardinality() {
-        return this.cardinality;
+    public Output<Optional<String>> cardinality() {
+        return Codegen.optional(this.cardinality);
     }
     /**
      * Localized descriptions for the Relationship.
@@ -59,8 +60,8 @@ public class Relationship extends com.pulumi.resources.CustomResource {
      * @return Localized descriptions for the Relationship.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> description() {
-        return this.description;
+    public Output<Optional<Map<String,String>>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Localized display name for the Relationship.
@@ -73,8 +74,8 @@ public class Relationship extends com.pulumi.resources.CustomResource {
      * @return Localized display name for the Relationship.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> displayName() {
-        return this.displayName;
+    public Output<Optional<Map<String,String>>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * The expiry date time in UTC.
@@ -87,8 +88,8 @@ public class Relationship extends com.pulumi.resources.CustomResource {
      * @return The expiry date time in UTC.
      * 
      */
-    public Output</* @Nullable */ String> expiryDateTimeUtc() {
-        return this.expiryDateTimeUtc;
+    public Output<Optional<String>> expiryDateTimeUtc() {
+        return Codegen.optional(this.expiryDateTimeUtc);
     }
     /**
      * The properties of the Relationship.
@@ -101,8 +102,8 @@ public class Relationship extends com.pulumi.resources.CustomResource {
      * @return The properties of the Relationship.
      * 
      */
-    public Output</* @Nullable */ List<PropertyDefinitionResponse>> fields() {
-        return this.fields;
+    public Output<Optional<List<PropertyDefinitionResponse>>> fields() {
+        return Codegen.optional(this.fields);
     }
     /**
      * Optional property to be used to map fields in profile to their strong ids in related profile.
@@ -115,8 +116,8 @@ public class Relationship extends com.pulumi.resources.CustomResource {
      * @return Optional property to be used to map fields in profile to their strong ids in related profile.
      * 
      */
-    public Output</* @Nullable */ List<RelationshipTypeMappingResponse>> lookupMappings() {
-        return this.lookupMappings;
+    public Output<Optional<List<RelationshipTypeMappingResponse>>> lookupMappings() {
+        return Codegen.optional(this.lookupMappings);
     }
     /**
      * Resource name.

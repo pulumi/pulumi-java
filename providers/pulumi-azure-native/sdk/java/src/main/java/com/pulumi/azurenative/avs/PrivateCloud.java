@@ -18,6 +18,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -48,8 +49,8 @@ public class PrivateCloud extends com.pulumi.resources.CustomResource {
      * @return An ExpressRoute Circuit
      * 
      */
-    public Output</* @Nullable */ CircuitResponse> circuit() {
-        return this.circuit;
+    public Output<Optional<CircuitResponse>> circuit() {
+        return Codegen.optional(this.circuit);
     }
     /**
      * The endpoints
@@ -76,8 +77,8 @@ public class PrivateCloud extends com.pulumi.resources.CustomResource {
      * @return vCenter Single Sign On Identity Sources
      * 
      */
-    public Output</* @Nullable */ List<IdentitySourceResponse>> identitySources() {
-        return this.identitySources;
+    public Output<Optional<List<IdentitySourceResponse>>> identitySources() {
+        return Codegen.optional(this.identitySources);
     }
     /**
      * Connectivity to internet is enabled or disabled
@@ -90,8 +91,8 @@ public class PrivateCloud extends com.pulumi.resources.CustomResource {
      * @return Connectivity to internet is enabled or disabled
      * 
      */
-    public Output</* @Nullable */ String> internet() {
-        return this.internet;
+    public Output<Optional<String>> internet() {
+        return Codegen.optional(this.internet);
     }
     /**
      * Resource location
@@ -188,8 +189,8 @@ public class PrivateCloud extends com.pulumi.resources.CustomResource {
      * @return Optionally, set the NSX-T Manager password when the private cloud is created
      * 
      */
-    public Output</* @Nullable */ String> nsxtPassword() {
-        return this.nsxtPassword;
+    public Output<Optional<String>> nsxtPassword() {
+        return Codegen.optional(this.nsxtPassword);
     }
     /**
      * Used for virtual machine cold migration, cloning, and snapshot migration
@@ -244,8 +245,8 @@ public class PrivateCloud extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type.
@@ -286,8 +287,8 @@ public class PrivateCloud extends com.pulumi.resources.CustomResource {
      * @return Optionally, set the vCenter admin password when the private cloud is created
      * 
      */
-    public Output</* @Nullable */ String> vcenterPassword() {
-        return this.vcenterPassword;
+    public Output<Optional<String>> vcenterPassword() {
+        return Codegen.optional(this.vcenterPassword);
     }
     /**
      * Used for live migration of virtual machines

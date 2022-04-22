@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class ContactChannel extends com.pulumi.resources.CustomResource {
      * @return The details that SSM Incident Manager uses when trying to engage the contact channel.
      * 
      */
-    public Output</* @Nullable */ String> channelAddress() {
-        return this.channelAddress;
+    public Output<Optional<String>> channelAddress() {
+        return Codegen.optional(this.channelAddress);
     }
     /**
      * The device name. String of 6 to 50 alphabetical, numeric, dash, and underscore characters.
@@ -59,8 +60,8 @@ public class ContactChannel extends com.pulumi.resources.CustomResource {
      * @return The device name. String of 6 to 50 alphabetical, numeric, dash, and underscore characters.
      * 
      */
-    public Output</* @Nullable */ String> channelName() {
-        return this.channelName;
+    public Output<Optional<String>> channelName() {
+        return Codegen.optional(this.channelName);
     }
     /**
      * Device type, which specify notification channel. Currently supported values: “SMS”, “VOICE”, “EMAIL”, “CHATBOT.
@@ -73,8 +74,8 @@ public class ContactChannel extends com.pulumi.resources.CustomResource {
      * @return Device type, which specify notification channel. Currently supported values: “SMS”, “VOICE”, “EMAIL”, “CHATBOT.
      * 
      */
-    public Output</* @Nullable */ ContactChannelChannelType> channelType() {
-        return this.channelType;
+    public Output<Optional<ContactChannelChannelType>> channelType() {
+        return Codegen.optional(this.channelType);
     }
     /**
      * ARN of the contact resource
@@ -87,8 +88,8 @@ public class ContactChannel extends com.pulumi.resources.CustomResource {
      * @return ARN of the contact resource
      * 
      */
-    public Output</* @Nullable */ String> contactId() {
-        return this.contactId;
+    public Output<Optional<String>> contactId() {
+        return Codegen.optional(this.contactId);
     }
     /**
      * If you want to activate the channel at a later time, you can choose to defer activation. SSM Incident Manager can&#39;t engage your contact channel until it has been activated.
@@ -101,8 +102,8 @@ public class ContactChannel extends com.pulumi.resources.CustomResource {
      * @return If you want to activate the channel at a later time, you can choose to defer activation. SSM Incident Manager can&#39;t engage your contact channel until it has been activated.
      * 
      */
-    public Output</* @Nullable */ Boolean> deferActivation() {
-        return this.deferActivation;
+    public Output<Optional<Boolean>> deferActivation() {
+        return Codegen.optional(this.deferActivation);
     }
 
     /**

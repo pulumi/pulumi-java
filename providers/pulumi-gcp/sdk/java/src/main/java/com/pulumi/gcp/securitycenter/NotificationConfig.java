@@ -12,6 +12,7 @@ import com.pulumi.gcp.securitycenter.NotificationConfigArgs;
 import com.pulumi.gcp.securitycenter.inputs.NotificationConfigState;
 import com.pulumi.gcp.securitycenter.outputs.NotificationConfigStreamingConfig;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -71,8 +72,8 @@ public class NotificationConfig extends com.pulumi.resources.CustomResource {
      * @return The description of the notification config (max of 1024 characters).
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The resource name of this notification config, in the format

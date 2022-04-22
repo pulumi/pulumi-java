@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class ReportDefinition extends com.pulumi.resources.CustomResource {
      * @return A list of additional artifacts. Valid values are: `REDSHIFT`, `QUICKSIGHT`, `ATHENA`. When ATHENA exists within additional_artifacts, no other artifact type can be declared and report_versioning must be `OVERWRITE_REPORT`.
      * 
      */
-    public Output</* @Nullable */ List<String>> additionalArtifacts() {
-        return this.additionalArtifacts;
+    public Output<Optional<List<String>>> additionalArtifacts() {
+        return Codegen.optional(this.additionalArtifacts);
     }
     /**
      * A list of schema elements. Valid values are: `RESOURCES`.
@@ -116,8 +117,8 @@ public class ReportDefinition extends com.pulumi.resources.CustomResource {
      * @return Set to true to update your reports after they have been finalized if AWS detects charges related to previous months.
      * 
      */
-    public Output</* @Nullable */ Boolean> refreshClosedReports() {
-        return this.refreshClosedReports;
+    public Output<Optional<Boolean>> refreshClosedReports() {
+        return Codegen.optional(this.refreshClosedReports);
     }
     /**
      * Unique name for the report. Must start with a number/letter and is case sensitive. Limited to 256 characters.
@@ -144,8 +145,8 @@ public class ReportDefinition extends com.pulumi.resources.CustomResource {
      * @return Overwrite the previous version of each report or to deliver the report in addition to the previous versions. Valid values are: `CREATE_NEW_REPORT` and `OVERWRITE_REPORT`.
      * 
      */
-    public Output</* @Nullable */ String> reportVersioning() {
-        return this.reportVersioning;
+    public Output<Optional<String>> reportVersioning() {
+        return Codegen.optional(this.reportVersioning);
     }
     /**
      * Name of the existing S3 bucket to hold generated reports.
@@ -172,8 +173,8 @@ public class ReportDefinition extends com.pulumi.resources.CustomResource {
      * @return Report path prefix. Limited to 256 characters.
      * 
      */
-    public Output</* @Nullable */ String> s3Prefix() {
-        return this.s3Prefix;
+    public Output<Optional<String>> s3Prefix() {
+        return Codegen.optional(this.s3Prefix);
     }
     /**
      * Region of the existing S3 bucket to hold generated reports.

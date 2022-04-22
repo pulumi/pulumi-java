@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -42,8 +43,8 @@ public class ScopeAssignment extends com.pulumi.resources.CustomResource {
      * @return The managed network ID with scope will be assigned to.
      * 
      */
-    public Output</* @Nullable */ String> assignedManagedNetwork() {
-        return this.assignedManagedNetwork;
+    public Output<Optional<String>> assignedManagedNetwork() {
+        return Codegen.optional(this.assignedManagedNetwork);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
@@ -70,8 +71,8 @@ public class ScopeAssignment extends com.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The name of the resource

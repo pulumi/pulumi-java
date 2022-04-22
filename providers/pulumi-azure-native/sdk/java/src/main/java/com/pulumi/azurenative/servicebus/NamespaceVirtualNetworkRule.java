@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -70,8 +71,8 @@ public class NamespaceVirtualNetworkRule extends com.pulumi.resources.CustomReso
      * @return Resource ID of Virtual Network Subnet
      * 
      */
-    public Output</* @Nullable */ String> virtualNetworkSubnetId() {
-        return this.virtualNetworkSubnetId;
+    public Output<Optional<String>> virtualNetworkSubnetId() {
+        return Codegen.optional(this.virtualNetworkSubnetId);
     }
 
     /**

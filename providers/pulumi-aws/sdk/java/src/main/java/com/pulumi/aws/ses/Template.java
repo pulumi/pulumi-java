@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -54,8 +55,8 @@ public class Template extends com.pulumi.resources.CustomResource {
      * @return The HTML body of the email. Must be less than 500KB in size, including both the text and HTML parts.
      * 
      */
-    public Output</* @Nullable */ String> html() {
-        return this.html;
+    public Output<Optional<String>> html() {
+        return Codegen.optional(this.html);
     }
     /**
      * The name of the template. Cannot exceed 64 characters. You will refer to this name when you send email.
@@ -82,8 +83,8 @@ public class Template extends com.pulumi.resources.CustomResource {
      * @return The subject line of the email.
      * 
      */
-    public Output</* @Nullable */ String> subject() {
-        return this.subject;
+    public Output<Optional<String>> subject() {
+        return Codegen.optional(this.subject);
     }
     /**
      * The email body that will be visible to recipients whose email clients do not display HTML. Must be less than 500KB in size, including both the text and HTML parts.
@@ -96,8 +97,8 @@ public class Template extends com.pulumi.resources.CustomResource {
      * @return The email body that will be visible to recipients whose email clients do not display HTML. Must be less than 500KB in size, including both the text and HTML parts.
      * 
      */
-    public Output</* @Nullable */ String> text() {
-        return this.text;
+    public Output<Optional<String>> text() {
+        return Codegen.optional(this.text);
     }
 
     /**

@@ -10,6 +10,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -29,8 +30,8 @@ public class Host extends com.pulumi.resources.CustomResource {
      * @return Indicates whether the host accepts any untargeted instance launches that match its instance type configuration, or if it only accepts Host tenancy instance launches that specify its unique host ID.
      * 
      */
-    public Output</* @Nullable */ String> autoPlacement() {
-        return this.autoPlacement;
+    public Output<Optional<String>> autoPlacement() {
+        return Codegen.optional(this.autoPlacement);
     }
     /**
      * The Availability Zone in which to allocate the Dedicated Host.
@@ -71,8 +72,8 @@ public class Host extends com.pulumi.resources.CustomResource {
      * @return Indicates whether to enable or disable host recovery for the Dedicated Host. Host recovery is disabled by default.
      * 
      */
-    public Output</* @Nullable */ String> hostRecovery() {
-        return this.hostRecovery;
+    public Output<Optional<String>> hostRecovery() {
+        return Codegen.optional(this.hostRecovery);
     }
     /**
      * Specifies the instance type to be supported by the Dedicated Hosts. If you specify an instance type, the Dedicated Hosts support instances of the specified instance type only.

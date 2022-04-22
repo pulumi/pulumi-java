@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -99,8 +100,8 @@ public class ObjectReplicationPolicy extends com.pulumi.resources.CustomResource
      * @return The storage account object replication rules.
      * 
      */
-    public Output</* @Nullable */ List<ObjectReplicationPolicyRuleResponse>> rules() {
-        return this.rules;
+    public Output<Optional<List<ObjectReplicationPolicyRuleResponse>>> rules() {
+        return Codegen.optional(this.rules);
     }
     /**
      * Required. Source account name.

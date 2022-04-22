@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -56,8 +57,8 @@ public class HostedPrivateVirtualInterfaceAccepter extends com.pulumi.resources.
      * @return The ID of the Direct Connect gateway to which to connect the virtual interface.
      * 
      */
-    public Output</* @Nullable */ String> dxGatewayId() {
-        return this.dxGatewayId;
+    public Output<Optional<String>> dxGatewayId() {
+        return Codegen.optional(this.dxGatewayId);
     }
     /**
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -70,8 +71,8 @@ public class HostedPrivateVirtualInterfaceAccepter extends com.pulumi.resources.
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .
@@ -112,8 +113,8 @@ public class HostedPrivateVirtualInterfaceAccepter extends com.pulumi.resources.
      * @return The ID of the virtual private gateway to which to connect the virtual interface.
      * 
      */
-    public Output</* @Nullable */ String> vpnGatewayId() {
-        return this.vpnGatewayId;
+    public Output<Optional<String>> vpnGatewayId() {
+        return Codegen.optional(this.vpnGatewayId);
     }
 
     /**

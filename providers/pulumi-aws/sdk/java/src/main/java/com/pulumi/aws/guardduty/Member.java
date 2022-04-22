@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -69,8 +70,8 @@ public class Member extends com.pulumi.resources.CustomResource {
      * @return Boolean whether an email notification is sent to the accounts. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> disableEmailNotification() {
-        return this.disableEmailNotification;
+    public Output<Optional<Boolean>> disableEmailNotification() {
+        return Codegen.optional(this.disableEmailNotification);
     }
     /**
      * Email address for member account.
@@ -97,8 +98,8 @@ public class Member extends com.pulumi.resources.CustomResource {
      * @return Message for invitation.
      * 
      */
-    public Output</* @Nullable */ String> invitationMessage() {
-        return this.invitationMessage;
+    public Output<Optional<String>> invitationMessage() {
+        return Codegen.optional(this.invitationMessage);
     }
     /**
      * Boolean whether to invite the account to GuardDuty as a member. Defaults to `false`. To detect if an invitation needs to be (re-)sent, the this provider state value is `true` based on a `relationship_status` of `Disabled`, `Enabled`, `Invited`, or `EmailVerificationInProgress`.
@@ -111,8 +112,8 @@ public class Member extends com.pulumi.resources.CustomResource {
      * @return Boolean whether to invite the account to GuardDuty as a member. Defaults to `false`. To detect if an invitation needs to be (re-)sent, the this provider state value is `true` based on a `relationship_status` of `Disabled`, `Enabled`, `Invited`, or `EmailVerificationInProgress`.
      * 
      */
-    public Output</* @Nullable */ Boolean> invite() {
-        return this.invite;
+    public Output<Optional<Boolean>> invite() {
+        return Codegen.optional(this.invite);
     }
     /**
      * The status of the relationship between the member account and its primary account. More information can be found in [Amazon GuardDuty API Reference](https://docs.aws.amazon.com/guardduty/latest/ug/get-members.html).

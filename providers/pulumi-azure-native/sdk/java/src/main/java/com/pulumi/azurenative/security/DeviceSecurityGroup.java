@@ -16,6 +16,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class DeviceSecurityGroup extends com.pulumi.resources.CustomResource {
      * @return The allow-list custom alert rules.
      * 
      */
-    public Output</* @Nullable */ List<AllowlistCustomAlertRuleResponse>> allowlistRules() {
-        return this.allowlistRules;
+    public Output<Optional<List<AllowlistCustomAlertRuleResponse>>> allowlistRules() {
+        return Codegen.optional(this.allowlistRules);
     }
     /**
      * The deny-list custom alert rules.
@@ -60,8 +61,8 @@ public class DeviceSecurityGroup extends com.pulumi.resources.CustomResource {
      * @return The deny-list custom alert rules.
      * 
      */
-    public Output</* @Nullable */ List<DenylistCustomAlertRuleResponse>> denylistRules() {
-        return this.denylistRules;
+    public Output<Optional<List<DenylistCustomAlertRuleResponse>>> denylistRules() {
+        return Codegen.optional(this.denylistRules);
     }
     /**
      * Resource name
@@ -88,8 +89,8 @@ public class DeviceSecurityGroup extends com.pulumi.resources.CustomResource {
      * @return The list of custom alert threshold rules.
      * 
      */
-    public Output</* @Nullable */ List<ThresholdCustomAlertRuleResponse>> thresholdRules() {
-        return this.thresholdRules;
+    public Output<Optional<List<ThresholdCustomAlertRuleResponse>>> thresholdRules() {
+        return Codegen.optional(this.thresholdRules);
     }
     /**
      * The list of custom alert time-window rules.
@@ -102,8 +103,8 @@ public class DeviceSecurityGroup extends com.pulumi.resources.CustomResource {
      * @return The list of custom alert time-window rules.
      * 
      */
-    public Output</* @Nullable */ List<TimeWindowCustomAlertRuleResponse>> timeWindowRules() {
-        return this.timeWindowRules;
+    public Output<Optional<List<TimeWindowCustomAlertRuleResponse>>> timeWindowRules() {
+        return Codegen.optional(this.timeWindowRules);
     }
     /**
      * Resource type

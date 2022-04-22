@@ -15,6 +15,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -104,8 +105,8 @@ public class Variable extends com.pulumi.resources.CustomResource {
      * @return The description.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The time when the variable was last updated.
@@ -146,8 +147,8 @@ public class Variable extends com.pulumi.resources.CustomResource {
      * @return Tags associated with this variable.
      * 
      */
-    public Output</* @Nullable */ List<VariableTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<VariableTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The variable type. For more information see https://docs.aws.amazon.com/frauddetector/latest/ug/create-a-variable.html#variable-types
@@ -160,8 +161,8 @@ public class Variable extends com.pulumi.resources.CustomResource {
      * @return The variable type. For more information see https://docs.aws.amazon.com/frauddetector/latest/ug/create-a-variable.html#variable-types
      * 
      */
-    public Output</* @Nullable */ VariableType> variableType() {
-        return this.variableType;
+    public Output<Optional<VariableType>> variableType() {
+        return Codegen.optional(this.variableType);
     }
 
     /**

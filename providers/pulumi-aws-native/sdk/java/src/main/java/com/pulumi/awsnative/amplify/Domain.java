@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -36,14 +37,14 @@ public class Domain extends com.pulumi.resources.CustomResource {
     @Export(name="autoSubDomainCreationPatterns", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> autoSubDomainCreationPatterns;
 
-    public Output</* @Nullable */ List<String>> autoSubDomainCreationPatterns() {
-        return this.autoSubDomainCreationPatterns;
+    public Output<Optional<List<String>>> autoSubDomainCreationPatterns() {
+        return Codegen.optional(this.autoSubDomainCreationPatterns);
     }
     @Export(name="autoSubDomainIAMRole", type=String.class, parameters={})
     private Output</* @Nullable */ String> autoSubDomainIAMRole;
 
-    public Output</* @Nullable */ String> autoSubDomainIAMRole() {
-        return this.autoSubDomainIAMRole;
+    public Output<Optional<String>> autoSubDomainIAMRole() {
+        return Codegen.optional(this.autoSubDomainIAMRole);
     }
     @Export(name="certificateRecord", type=String.class, parameters={})
     private Output<String> certificateRecord;
@@ -66,8 +67,8 @@ public class Domain extends com.pulumi.resources.CustomResource {
     @Export(name="enableAutoSubDomain", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableAutoSubDomain;
 
-    public Output</* @Nullable */ Boolean> enableAutoSubDomain() {
-        return this.enableAutoSubDomain;
+    public Output<Optional<Boolean>> enableAutoSubDomain() {
+        return Codegen.optional(this.enableAutoSubDomain);
     }
     @Export(name="statusReason", type=String.class, parameters={})
     private Output<String> statusReason;

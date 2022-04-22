@@ -18,6 +18,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -75,8 +76,8 @@ public class DataSource extends com.pulumi.resources.CustomResource {
      * @return The credentials Amazon QuickSight uses to connect to your underlying source. Currently, only credentials based on user name and password are supported. See Credentials below for more details.
      * 
      */
-    public Output</* @Nullable */ DataSourceCredentials> credentials() {
-        return this.credentials;
+    public Output<Optional<DataSourceCredentials>> credentials() {
+        return Codegen.optional(this.credentials);
     }
     /**
      * An identifier for the data source.
@@ -131,8 +132,8 @@ public class DataSource extends com.pulumi.resources.CustomResource {
      * @return A set of resource permissions on the data source. Maximum of 64 items. See Permission below for more details.
      * 
      */
-    public Output</* @Nullable */ List<DataSourcePermission>> permissions() {
-        return this.permissions;
+    public Output<Optional<List<DataSourcePermission>>> permissions() {
+        return Codegen.optional(this.permissions);
     }
     /**
      * Secure Socket Layer (SSL) properties that apply when Amazon QuickSight connects to your underlying source. See SSL Properties below for more details.
@@ -145,8 +146,8 @@ public class DataSource extends com.pulumi.resources.CustomResource {
      * @return Secure Socket Layer (SSL) properties that apply when Amazon QuickSight connects to your underlying source. See SSL Properties below for more details.
      * 
      */
-    public Output</* @Nullable */ DataSourceSslProperties> sslProperties() {
-        return this.sslProperties;
+    public Output<Optional<DataSourceSslProperties>> sslProperties() {
+        return Codegen.optional(this.sslProperties);
     }
     /**
      * Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -159,8 +160,8 @@ public class DataSource extends com.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
@@ -201,8 +202,8 @@ public class DataSource extends com.pulumi.resources.CustomResource {
      * @return Use this parameter only when you want Amazon QuickSight to use a VPC connection when connecting to your underlying source. See VPC Connection Properties below for more details.
      * 
      */
-    public Output</* @Nullable */ DataSourceVpcConnectionProperties> vpcConnectionProperties() {
-        return this.vpcConnectionProperties;
+    public Output<Optional<DataSourceVpcConnectionProperties>> vpcConnectionProperties() {
+        return Codegen.optional(this.vpcConnectionProperties);
     }
 
     /**

@@ -22,6 +22,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -87,8 +88,8 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return Path to the function&#39;s deployment package within the local filesystem. Conflicts with `image_uri`, `s3_bucket`, `s3_key`, and `s3_object_version`.
      * 
      */
-    public Output</* @Nullable */ Archive> code() {
-        return this.code;
+    public Output<Optional<Archive>> code() {
+        return Codegen.optional(this.code);
     }
     /**
      * To enable code signing for this function, specify the ARN of a code-signing configuration. A code-signing configuration includes a set of signing profiles, which define the trusted publishers for this function.
@@ -101,8 +102,8 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return To enable code signing for this function, specify the ARN of a code-signing configuration. A code-signing configuration includes a set of signing profiles, which define the trusted publishers for this function.
      * 
      */
-    public Output</* @Nullable */ String> codeSigningConfigArn() {
-        return this.codeSigningConfigArn;
+    public Output<Optional<String>> codeSigningConfigArn() {
+        return Codegen.optional(this.codeSigningConfigArn);
     }
     /**
      * Configuration block. Detailed below.
@@ -115,8 +116,8 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return Configuration block. Detailed below.
      * 
      */
-    public Output</* @Nullable */ FunctionDeadLetterConfig> deadLetterConfig() {
-        return this.deadLetterConfig;
+    public Output<Optional<FunctionDeadLetterConfig>> deadLetterConfig() {
+        return Codegen.optional(this.deadLetterConfig);
     }
     /**
      * Description of what your Lambda Function does.
@@ -129,8 +130,8 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return Description of what your Lambda Function does.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Configuration block. Detailed below.
@@ -143,8 +144,8 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return Configuration block. Detailed below.
      * 
      */
-    public Output</* @Nullable */ FunctionEnvironment> environment() {
-        return this.environment;
+    public Output<Optional<FunctionEnvironment>> environment() {
+        return Codegen.optional(this.environment);
     }
     /**
      * Configuration block. Detailed below.
@@ -157,8 +158,8 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return Configuration block. Detailed below.
      * 
      */
-    public Output</* @Nullable */ FunctionFileSystemConfig> fileSystemConfig() {
-        return this.fileSystemConfig;
+    public Output<Optional<FunctionFileSystemConfig>> fileSystemConfig() {
+        return Codegen.optional(this.fileSystemConfig);
     }
     /**
      * Function [entrypoint](https://docs.aws.amazon.com/lambda/latest/dg/walkthrough-custom-events-create-test-function.html) in your code.
@@ -171,8 +172,8 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return Function [entrypoint](https://docs.aws.amazon.com/lambda/latest/dg/walkthrough-custom-events-create-test-function.html) in your code.
      * 
      */
-    public Output</* @Nullable */ String> handler() {
-        return this.handler;
+    public Output<Optional<String>> handler() {
+        return Codegen.optional(this.handler);
     }
     /**
      * Configuration block. Detailed below.
@@ -185,8 +186,8 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return Configuration block. Detailed below.
      * 
      */
-    public Output</* @Nullable */ FunctionImageConfig> imageConfig() {
-        return this.imageConfig;
+    public Output<Optional<FunctionImageConfig>> imageConfig() {
+        return Codegen.optional(this.imageConfig);
     }
     /**
      * ECR image URI containing the function&#39;s deployment package. Conflicts with `filename`, `s3_bucket`, `s3_key`, and `s3_object_version`.
@@ -199,8 +200,8 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return ECR image URI containing the function&#39;s deployment package. Conflicts with `filename`, `s3_bucket`, `s3_key`, and `s3_object_version`.
      * 
      */
-    public Output</* @Nullable */ String> imageUri() {
-        return this.imageUri;
+    public Output<Optional<String>> imageUri() {
+        return Codegen.optional(this.imageUri);
     }
     /**
      * ARN to be used for invoking Lambda Function from API Gateway - to be used in `aws.apigateway.Integration`&#39;s `uri`.
@@ -227,8 +228,8 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the AWS Key Management Service (KMS) key that is used to encrypt environment variables. If this configuration is not provided when environment variables are in use, AWS Lambda uses a default service key. If this configuration is provided when environment variables are not in use, the AWS Lambda API does not save this configuration and the provider will show a perpetual difference of adding the key. To fix the perpetual difference, remove this configuration.
      * 
      */
-    public Output</* @Nullable */ String> kmsKeyArn() {
-        return this.kmsKeyArn;
+    public Output<Optional<String>> kmsKeyArn() {
+        return Codegen.optional(this.kmsKeyArn);
     }
     /**
      * Date this resource was last modified.
@@ -255,8 +256,8 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return List of Lambda Layer Version ARNs (maximum of 5) to attach to your Lambda Function. See [Lambda Layers](https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html)
      * 
      */
-    public Output</* @Nullable */ List<String>> layers() {
-        return this.layers;
+    public Output<Optional<List<String>>> layers() {
+        return Codegen.optional(this.layers);
     }
     /**
      * Amount of memory in MB your Lambda Function can use at runtime. Defaults to `128`. See [Limits](https://docs.aws.amazon.com/lambda/latest/dg/limits.html)
@@ -269,8 +270,8 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return Amount of memory in MB your Lambda Function can use at runtime. Defaults to `128`. See [Limits](https://docs.aws.amazon.com/lambda/latest/dg/limits.html)
      * 
      */
-    public Output</* @Nullable */ Integer> memorySize() {
-        return this.memorySize;
+    public Output<Optional<Integer>> memorySize() {
+        return Codegen.optional(this.memorySize);
     }
     /**
      * Unique name for your Lambda Function.
@@ -297,8 +298,8 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return Lambda deployment package type. Valid values are `Zip` and `Image`. Defaults to `Zip`.
      * 
      */
-    public Output</* @Nullable */ String> packageType() {
-        return this.packageType;
+    public Output<Optional<String>> packageType() {
+        return Codegen.optional(this.packageType);
     }
     /**
      * Whether to publish creation/change as new Lambda Function Version. Defaults to `false`.
@@ -311,8 +312,8 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return Whether to publish creation/change as new Lambda Function Version. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> publish() {
-        return this.publish;
+    public Output<Optional<Boolean>> publish() {
+        return Codegen.optional(this.publish);
     }
     /**
      * ARN identifying your Lambda Function Version (if versioning is enabled via `publish = true`).
@@ -339,8 +340,8 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return Amount of reserved concurrent executions for this lambda function. A value of `0` disables lambda from being triggered and `-1` removes any concurrency limitations. Defaults to Unreserved Concurrency Limits `-1`. See [Managing Concurrency](https://docs.aws.amazon.com/lambda/latest/dg/concurrent-executions.html)
      * 
      */
-    public Output</* @Nullable */ Integer> reservedConcurrentExecutions() {
-        return this.reservedConcurrentExecutions;
+    public Output<Optional<Integer>> reservedConcurrentExecutions() {
+        return Codegen.optional(this.reservedConcurrentExecutions);
     }
     /**
      * Amazon Resource Name (ARN) of the function&#39;s execution role. The role provides the function&#39;s identity and access to AWS services and resources.
@@ -367,8 +368,8 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return Identifier of the function&#39;s runtime. See [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_CreateFunction.html#SSS-CreateFunction-request-Runtime) for valid values.
      * 
      */
-    public Output</* @Nullable */ String> runtime() {
-        return this.runtime;
+    public Output<Optional<String>> runtime() {
+        return Codegen.optional(this.runtime);
     }
     /**
      * S3 bucket location containing the function&#39;s deployment package. Conflicts with `filename` and `image_uri`. This bucket must reside in the same AWS region where you are creating the Lambda function.
@@ -381,8 +382,8 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return S3 bucket location containing the function&#39;s deployment package. Conflicts with `filename` and `image_uri`. This bucket must reside in the same AWS region where you are creating the Lambda function.
      * 
      */
-    public Output</* @Nullable */ String> s3Bucket() {
-        return this.s3Bucket;
+    public Output<Optional<String>> s3Bucket() {
+        return Codegen.optional(this.s3Bucket);
     }
     /**
      * S3 key of an object containing the function&#39;s deployment package. Conflicts with `filename` and `image_uri`.
@@ -395,8 +396,8 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return S3 key of an object containing the function&#39;s deployment package. Conflicts with `filename` and `image_uri`.
      * 
      */
-    public Output</* @Nullable */ String> s3Key() {
-        return this.s3Key;
+    public Output<Optional<String>> s3Key() {
+        return Codegen.optional(this.s3Key);
     }
     /**
      * Object version containing the function&#39;s deployment package. Conflicts with `filename` and `image_uri`.
@@ -409,8 +410,8 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return Object version containing the function&#39;s deployment package. Conflicts with `filename` and `image_uri`.
      * 
      */
-    public Output</* @Nullable */ String> s3ObjectVersion() {
-        return this.s3ObjectVersion;
+    public Output<Optional<String>> s3ObjectVersion() {
+        return Codegen.optional(this.s3ObjectVersion);
     }
     /**
      * ARN of the signing job.
@@ -479,8 +480,8 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return Map of tags to assign to the object.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .
@@ -507,8 +508,8 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return Amount of time your Lambda Function has to run in seconds. Defaults to `3`. See [Limits](https://docs.aws.amazon.com/lambda/latest/dg/limits.html).
      * 
      */
-    public Output</* @Nullable */ Integer> timeout() {
-        return this.timeout;
+    public Output<Optional<Integer>> timeout() {
+        return Codegen.optional(this.timeout);
     }
     /**
      * Configuration block. Detailed below.
@@ -551,8 +552,8 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return Configuration block. Detailed below.
      * 
      */
-    public Output</* @Nullable */ FunctionVpcConfig> vpcConfig() {
-        return this.vpcConfig;
+    public Output<Optional<FunctionVpcConfig>> vpcConfig() {
+        return Codegen.optional(this.vpcConfig);
     }
 
     /**

@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -114,8 +115,8 @@ public class LogProfile extends com.pulumi.resources.CustomResource {
      * @return The service bus rule ID of the service bus namespace in which you would like to have Event Hubs created for streaming the Activity Log. The rule ID is of the format: &#39;{service bus resource ID}/authorizationrules/{key name}&#39;.
      * 
      */
-    public Output</* @Nullable */ String> serviceBusRuleId() {
-        return this.serviceBusRuleId;
+    public Output<Optional<String>> serviceBusRuleId() {
+        return Codegen.optional(this.serviceBusRuleId);
     }
     /**
      * the resource id of the storage account to which you would like to send the Activity Log.
@@ -128,8 +129,8 @@ public class LogProfile extends com.pulumi.resources.CustomResource {
      * @return the resource id of the storage account to which you would like to send the Activity Log.
      * 
      */
-    public Output</* @Nullable */ String> storageAccountId() {
-        return this.storageAccountId;
+    public Output<Optional<String>> storageAccountId() {
+        return Codegen.optional(this.storageAccountId);
     }
     /**
      * Resource tags
@@ -142,8 +143,8 @@ public class LogProfile extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Azure resource type

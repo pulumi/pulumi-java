@@ -21,6 +21,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -51,8 +52,8 @@ public class VirtualNetwork extends com.pulumi.resources.CustomResource {
      * @return The AddressSpace that contains an array of IP address ranges that can be used by subnets.
      * 
      */
-    public Output</* @Nullable */ AddressSpaceResponse> addressSpace() {
-        return this.addressSpace;
+    public Output<Optional<AddressSpaceResponse>> addressSpace() {
+        return Codegen.optional(this.addressSpace);
     }
     /**
      * Bgp Communities sent over ExpressRoute with each route corresponding to a prefix in this VNET.
@@ -65,8 +66,8 @@ public class VirtualNetwork extends com.pulumi.resources.CustomResource {
      * @return Bgp Communities sent over ExpressRoute with each route corresponding to a prefix in this VNET.
      * 
      */
-    public Output</* @Nullable */ VirtualNetworkBgpCommunitiesResponse> bgpCommunities() {
-        return this.bgpCommunities;
+    public Output<Optional<VirtualNetworkBgpCommunitiesResponse>> bgpCommunities() {
+        return Codegen.optional(this.bgpCommunities);
     }
     /**
      * The DDoS protection plan associated with the virtual network.
@@ -79,8 +80,8 @@ public class VirtualNetwork extends com.pulumi.resources.CustomResource {
      * @return The DDoS protection plan associated with the virtual network.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> ddosProtectionPlan() {
-        return this.ddosProtectionPlan;
+    public Output<Optional<SubResourceResponse>> ddosProtectionPlan() {
+        return Codegen.optional(this.ddosProtectionPlan);
     }
     /**
      * The dhcpOptions that contains an array of DNS servers available to VMs deployed in the virtual network.
@@ -93,8 +94,8 @@ public class VirtualNetwork extends com.pulumi.resources.CustomResource {
      * @return The dhcpOptions that contains an array of DNS servers available to VMs deployed in the virtual network.
      * 
      */
-    public Output</* @Nullable */ DhcpOptionsResponse> dhcpOptions() {
-        return this.dhcpOptions;
+    public Output<Optional<DhcpOptionsResponse>> dhcpOptions() {
+        return Codegen.optional(this.dhcpOptions);
     }
     /**
      * Indicates if DDoS protection is enabled for all the protected resources in the virtual network. It requires a DDoS protection plan associated with the resource.
@@ -107,8 +108,8 @@ public class VirtualNetwork extends com.pulumi.resources.CustomResource {
      * @return Indicates if DDoS protection is enabled for all the protected resources in the virtual network. It requires a DDoS protection plan associated with the resource.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableDdosProtection() {
-        return this.enableDdosProtection;
+    public Output<Optional<Boolean>> enableDdosProtection() {
+        return Codegen.optional(this.enableDdosProtection);
     }
     /**
      * Indicates if VM protection is enabled for all the subnets in the virtual network.
@@ -121,8 +122,8 @@ public class VirtualNetwork extends com.pulumi.resources.CustomResource {
      * @return Indicates if VM protection is enabled for all the subnets in the virtual network.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableVmProtection() {
-        return this.enableVmProtection;
+    public Output<Optional<Boolean>> enableVmProtection() {
+        return Codegen.optional(this.enableVmProtection);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
@@ -149,8 +150,8 @@ public class VirtualNetwork extends com.pulumi.resources.CustomResource {
      * @return The extended location of the virtual network.
      * 
      */
-    public Output</* @Nullable */ ExtendedLocationResponse> extendedLocation() {
-        return this.extendedLocation;
+    public Output<Optional<ExtendedLocationResponse>> extendedLocation() {
+        return Codegen.optional(this.extendedLocation);
     }
     /**
      * Array of IpAllocation which reference this VNET.
@@ -163,8 +164,8 @@ public class VirtualNetwork extends com.pulumi.resources.CustomResource {
      * @return Array of IpAllocation which reference this VNET.
      * 
      */
-    public Output</* @Nullable */ List<SubResourceResponse>> ipAllocations() {
-        return this.ipAllocations;
+    public Output<Optional<List<SubResourceResponse>>> ipAllocations() {
+        return Codegen.optional(this.ipAllocations);
     }
     /**
      * Resource location.
@@ -177,8 +178,8 @@ public class VirtualNetwork extends com.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * Resource name.
@@ -233,8 +234,8 @@ public class VirtualNetwork extends com.pulumi.resources.CustomResource {
      * @return A list of subnets in a Virtual Network.
      * 
      */
-    public Output</* @Nullable */ List<SubnetResponse>> subnets() {
-        return this.subnets;
+    public Output<Optional<List<SubnetResponse>>> subnets() {
+        return Codegen.optional(this.subnets);
     }
     /**
      * Resource tags.
@@ -247,8 +248,8 @@ public class VirtualNetwork extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type.
@@ -275,8 +276,8 @@ public class VirtualNetwork extends com.pulumi.resources.CustomResource {
      * @return A list of peerings in a Virtual Network.
      * 
      */
-    public Output</* @Nullable */ List<VirtualNetworkPeeringResponse>> virtualNetworkPeerings() {
-        return this.virtualNetworkPeerings;
+    public Output<Optional<List<VirtualNetworkPeeringResponse>>> virtualNetworkPeerings() {
+        return Codegen.optional(this.virtualNetworkPeerings);
     }
 
     /**

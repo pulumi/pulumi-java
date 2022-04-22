@@ -15,6 +15,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -104,14 +105,14 @@ public class AccessPoint extends com.pulumi.resources.CustomResource {
      * @return The Access Point Policy you want to apply to this access point.
      * 
      */
-    public Output</* @Nullable */ Object> policy() {
-        return this.policy;
+    public Output<Optional<Object>> policy() {
+        return Codegen.optional(this.policy);
     }
     @Export(name="policyStatus", type=PolicyStatusProperties.class, parameters={})
     private Output</* @Nullable */ PolicyStatusProperties> policyStatus;
 
-    public Output</* @Nullable */ PolicyStatusProperties> policyStatus() {
-        return this.policyStatus;
+    public Output<Optional<PolicyStatusProperties>> policyStatus() {
+        return Codegen.optional(this.policyStatus);
     }
     /**
      * The PublicAccessBlock configuration that you want to apply to this Access Point. You can enable the configuration options in any combination. For more information about when Amazon S3 considers a bucket or object public, see https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html#access-control-block-public-access-policy-status &#39;The Meaning of Public&#39; in the Amazon Simple Storage Service Developer Guide.
@@ -124,8 +125,8 @@ public class AccessPoint extends com.pulumi.resources.CustomResource {
      * @return The PublicAccessBlock configuration that you want to apply to this Access Point. You can enable the configuration options in any combination. For more information about when Amazon S3 considers a bucket or object public, see https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html#access-control-block-public-access-policy-status &#39;The Meaning of Public&#39; in the Amazon Simple Storage Service Developer Guide.
      * 
      */
-    public Output</* @Nullable */ AccessPointPublicAccessBlockConfiguration> publicAccessBlockConfiguration() {
-        return this.publicAccessBlockConfiguration;
+    public Output<Optional<AccessPointPublicAccessBlockConfiguration>> publicAccessBlockConfiguration() {
+        return Codegen.optional(this.publicAccessBlockConfiguration);
     }
     /**
      * If you include this field, Amazon S3 restricts access to this Access Point to requests from the specified Virtual Private Cloud (VPC).
@@ -138,8 +139,8 @@ public class AccessPoint extends com.pulumi.resources.CustomResource {
      * @return If you include this field, Amazon S3 restricts access to this Access Point to requests from the specified Virtual Private Cloud (VPC).
      * 
      */
-    public Output</* @Nullable */ AccessPointVpcConfiguration> vpcConfiguration() {
-        return this.vpcConfiguration;
+    public Output<Optional<AccessPointVpcConfiguration>> vpcConfiguration() {
+        return Codegen.optional(this.vpcConfiguration);
     }
 
     /**

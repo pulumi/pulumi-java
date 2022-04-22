@@ -20,6 +20,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -50,8 +51,8 @@ public class Policy extends com.pulumi.resources.CustomResource {
      * @return Describes custom rules inside the policy.
      * 
      */
-    public Output</* @Nullable */ CustomRuleListResponse> customRules() {
-        return this.customRules;
+    public Output<Optional<CustomRuleListResponse>> customRules() {
+        return Codegen.optional(this.customRules);
     }
     /**
      * Describes Azure CDN endpoints associated with this Web Application Firewall policy.
@@ -78,8 +79,8 @@ public class Policy extends com.pulumi.resources.CustomResource {
      * @return Gets a unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output</* @Nullable */ String> etag() {
-        return this.etag;
+    public Output<Optional<String>> etag() {
+        return Codegen.optional(this.etag);
     }
     /**
      * Resource location.
@@ -106,8 +107,8 @@ public class Policy extends com.pulumi.resources.CustomResource {
      * @return Describes managed rules inside the policy.
      * 
      */
-    public Output</* @Nullable */ ManagedRuleSetListResponse> managedRules() {
-        return this.managedRules;
+    public Output<Optional<ManagedRuleSetListResponse>> managedRules() {
+        return Codegen.optional(this.managedRules);
     }
     /**
      * Resource name.
@@ -134,8 +135,8 @@ public class Policy extends com.pulumi.resources.CustomResource {
      * @return Describes  policySettings for policy
      * 
      */
-    public Output</* @Nullable */ PolicySettingsResponse> policySettings() {
-        return this.policySettings;
+    public Output<Optional<PolicySettingsResponse>> policySettings() {
+        return Codegen.optional(this.policySettings);
     }
     /**
      * Provisioning state of the WebApplicationFirewallPolicy.
@@ -162,8 +163,8 @@ public class Policy extends com.pulumi.resources.CustomResource {
      * @return Describes rate limit rules inside the policy.
      * 
      */
-    public Output</* @Nullable */ RateLimitRuleListResponse> rateLimitRules() {
-        return this.rateLimitRules;
+    public Output<Optional<RateLimitRuleListResponse>> rateLimitRules() {
+        return Codegen.optional(this.rateLimitRules);
     }
     @Export(name="resourceState", type=String.class, parameters={})
     private Output<String> resourceState;
@@ -210,8 +211,8 @@ public class Policy extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type.

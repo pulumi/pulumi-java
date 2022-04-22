@@ -11,6 +11,7 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.storage.BucketAccessControlArgs;
 import com.pulumi.gcp.storage.inputs.BucketAccessControlState;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -147,8 +148,8 @@ public class BucketAccessControl extends com.pulumi.resources.CustomResource {
      * Possible values are `OWNER`, `READER`, and `WRITER`.
      * 
      */
-    public Output</* @Nullable */ String> role() {
-        return this.role;
+    public Output<Optional<String>> role() {
+        return Codegen.optional(this.role);
     }
 
     /**

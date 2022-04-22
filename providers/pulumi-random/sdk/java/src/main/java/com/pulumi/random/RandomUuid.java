@@ -13,6 +13,7 @@ import com.pulumi.random.inputs.RandomUuidState;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class RandomUuid extends com.pulumi.resources.CustomResource {
      * @return Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
      * 
      */
-    public Output</* @Nullable */ Map<String,Object>> keepers() {
-        return this.keepers;
+    public Output<Optional<Map<String,Object>>> keepers() {
+        return Codegen.optional(this.keepers);
     }
     /**
      * The generated uuid presented in string format.

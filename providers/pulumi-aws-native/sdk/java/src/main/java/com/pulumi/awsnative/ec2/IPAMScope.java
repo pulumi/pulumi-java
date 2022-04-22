@@ -15,6 +15,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -40,8 +41,8 @@ public class IPAMScope extends com.pulumi.resources.CustomResource {
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The Amazon Resource Name (ARN) of the IPAM this scope is a part of.
@@ -138,8 +139,8 @@ public class IPAMScope extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<IPAMScopeTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<IPAMScopeTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

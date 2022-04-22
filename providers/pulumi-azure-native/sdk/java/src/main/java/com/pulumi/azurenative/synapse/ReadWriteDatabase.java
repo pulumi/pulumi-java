@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class ReadWriteDatabase extends com.pulumi.resources.CustomResource {
      * @return The time the data should be kept in cache for fast queries in TimeSpan.
      * 
      */
-    public Output</* @Nullable */ String> hotCachePeriod() {
-        return this.hotCachePeriod;
+    public Output<Optional<String>> hotCachePeriod() {
+        return Codegen.optional(this.hotCachePeriod);
     }
     /**
      * Indicates whether the database is followed.
@@ -89,8 +90,8 @@ public class ReadWriteDatabase extends com.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The name of the resource
@@ -131,8 +132,8 @@ public class ReadWriteDatabase extends com.pulumi.resources.CustomResource {
      * @return The time the data should be kept before it stops being accessible to queries in TimeSpan.
      * 
      */
-    public Output</* @Nullable */ String> softDeletePeriod() {
-        return this.softDeletePeriod;
+    public Output<Optional<String>> softDeletePeriod() {
+        return Codegen.optional(this.softDeletePeriod);
     }
     /**
      * The statistics of the database.

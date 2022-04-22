@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -49,8 +50,8 @@ public class ApiKey extends com.pulumi.resources.CustomResource {
      * @return An AWS Marketplace customer identifier to use when integrating with the AWS SaaS Marketplace.
      * 
      */
-    public Output</* @Nullable */ String> customerId() {
-        return this.customerId;
+    public Output<Optional<String>> customerId() {
+        return Codegen.optional(this.customerId);
     }
     /**
      * A description of the purpose of the API key.
@@ -63,8 +64,8 @@ public class ApiKey extends com.pulumi.resources.CustomResource {
      * @return A description of the purpose of the API key.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Indicates whether the API key can be used by clients.
@@ -77,8 +78,8 @@ public class ApiKey extends com.pulumi.resources.CustomResource {
      * @return Indicates whether the API key can be used by clients.
      * 
      */
-    public Output</* @Nullable */ Boolean> enabled() {
-        return this.enabled;
+    public Output<Optional<Boolean>> enabled() {
+        return Codegen.optional(this.enabled);
     }
     /**
      * Specifies whether the key identifier is distinct from the created API key value. This parameter is deprecated and should not be used.
@@ -91,8 +92,8 @@ public class ApiKey extends com.pulumi.resources.CustomResource {
      * @return Specifies whether the key identifier is distinct from the created API key value. This parameter is deprecated and should not be used.
      * 
      */
-    public Output</* @Nullable */ Boolean> generateDistinctId() {
-        return this.generateDistinctId;
+    public Output<Optional<Boolean>> generateDistinctId() {
+        return Codegen.optional(this.generateDistinctId);
     }
     /**
      * A name for the API key. If you don&#39;t specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the API key name.
@@ -105,8 +106,8 @@ public class ApiKey extends com.pulumi.resources.CustomResource {
      * @return A name for the API key. If you don&#39;t specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the API key name.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * A list of stages to associate with this API key.
@@ -119,8 +120,8 @@ public class ApiKey extends com.pulumi.resources.CustomResource {
      * @return A list of stages to associate with this API key.
      * 
      */
-    public Output</* @Nullable */ List<ApiKeyStageKey>> stageKeys() {
-        return this.stageKeys;
+    public Output<Optional<List<ApiKeyStageKey>>> stageKeys() {
+        return Codegen.optional(this.stageKeys);
     }
     /**
      * An array of arbitrary tags (key-value pairs) to associate with the API key.
@@ -133,8 +134,8 @@ public class ApiKey extends com.pulumi.resources.CustomResource {
      * @return An array of arbitrary tags (key-value pairs) to associate with the API key.
      * 
      */
-    public Output</* @Nullable */ List<ApiKeyTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<ApiKeyTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The value of the API key. Must be at least 20 characters long.
@@ -147,8 +148,8 @@ public class ApiKey extends com.pulumi.resources.CustomResource {
      * @return The value of the API key. Must be at least 20 characters long.
      * 
      */
-    public Output</* @Nullable */ String> value() {
-        return this.value;
+    public Output<Optional<String>> value() {
+        return Codegen.optional(this.value);
     }
 
     /**

@@ -12,6 +12,7 @@ import com.pulumi.kubernetes.core_v1.PodTemplateArgs;
 import com.pulumi.kubernetes.core_v1.outputs.PodTemplateSpec;
 import com.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -31,8 +32,8 @@ public class PodTemplate extends com.pulumi.resources.CustomResource {
      * @return APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
      */
-    public Output</* @Nullable */ String> apiVersion() {
-        return this.apiVersion;
+    public Output<Optional<String>> apiVersion() {
+        return Codegen.optional(this.apiVersion);
     }
     /**
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
@@ -45,8 +46,8 @@ public class PodTemplate extends com.pulumi.resources.CustomResource {
      * @return Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
      */
-    public Output</* @Nullable */ String> kind() {
-        return this.kind;
+    public Output<Optional<String>> kind() {
+        return Codegen.optional(this.kind);
     }
     /**
      * Standard object&#39;s metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
@@ -59,8 +60,8 @@ public class PodTemplate extends com.pulumi.resources.CustomResource {
      * @return Standard object&#39;s metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
      */
-    public Output</* @Nullable */ ObjectMeta> metadata() {
-        return this.metadata;
+    public Output<Optional<ObjectMeta>> metadata() {
+        return Codegen.optional(this.metadata);
     }
     /**
      * Template defines the pods that will be created from this pod template. https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
@@ -73,8 +74,8 @@ public class PodTemplate extends com.pulumi.resources.CustomResource {
      * @return Template defines the pods that will be created from this pod template. https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
      * 
      */
-    public Output</* @Nullable */ PodTemplateSpec> template() {
-        return this.template;
+    public Output<Optional<PodTemplateSpec>> template() {
+        return Codegen.optional(this.template);
     }
 
     /**

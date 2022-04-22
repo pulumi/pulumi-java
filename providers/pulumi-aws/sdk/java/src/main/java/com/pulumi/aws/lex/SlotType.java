@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -62,8 +63,8 @@ public class SlotType extends com.pulumi.resources.CustomResource {
      * update. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> createVersion() {
-        return this.createVersion;
+    public Output<Optional<Boolean>> createVersion() {
+        return Codegen.optional(this.createVersion);
     }
     /**
      * The date when the slot type version was created.
@@ -90,8 +91,8 @@ public class SlotType extends com.pulumi.resources.CustomResource {
      * @return A description of the slot type. Must be less than or equal to 200 characters in length.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * A list of EnumerationValue objects that defines the values that
@@ -158,8 +159,8 @@ public class SlotType extends com.pulumi.resources.CustomResource {
      * if there is a resolution list for the slot, otherwise null is returned. Defaults to `ORIGINAL_VALUE`.
      * 
      */
-    public Output</* @Nullable */ String> valueSelectionStrategy() {
-        return this.valueSelectionStrategy;
+    public Output<Optional<String>> valueSelectionStrategy() {
+        return Codegen.optional(this.valueSelectionStrategy);
     }
     /**
      * The version of the slot type.

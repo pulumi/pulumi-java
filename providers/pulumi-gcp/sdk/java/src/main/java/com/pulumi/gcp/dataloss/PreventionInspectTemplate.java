@@ -12,6 +12,7 @@ import com.pulumi.gcp.dataloss.PreventionInspectTemplateArgs;
 import com.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateState;
 import com.pulumi.gcp.dataloss.outputs.PreventionInspectTemplateInspectConfig;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -51,8 +52,8 @@ public class PreventionInspectTemplate extends com.pulumi.resources.CustomResour
      * @return A description of the inspect template.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * User set display name of the inspect template.
@@ -65,8 +66,8 @@ public class PreventionInspectTemplate extends com.pulumi.resources.CustomResour
      * @return User set display name of the inspect template.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * The core content of the template.
@@ -81,8 +82,8 @@ public class PreventionInspectTemplate extends com.pulumi.resources.CustomResour
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ PreventionInspectTemplateInspectConfig> inspectConfig() {
-        return this.inspectConfig;
+    public Output<Optional<PreventionInspectTemplateInspectConfig>> inspectConfig() {
+        return Codegen.optional(this.inspectConfig);
     }
     /**
      * Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`

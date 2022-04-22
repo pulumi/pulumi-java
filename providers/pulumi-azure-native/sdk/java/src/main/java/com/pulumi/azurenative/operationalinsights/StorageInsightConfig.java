@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class StorageInsightConfig extends com.pulumi.resources.CustomResource {
      * @return The names of the blob containers that the workspace should read
      * 
      */
-    public Output</* @Nullable */ List<String>> containers() {
-        return this.containers;
+    public Output<Optional<List<String>>> containers() {
+        return Codegen.optional(this.containers);
     }
     /**
      * The ETag of the storage insight.
@@ -59,8 +60,8 @@ public class StorageInsightConfig extends com.pulumi.resources.CustomResource {
      * @return The ETag of the storage insight.
      * 
      */
-    public Output</* @Nullable */ String> eTag() {
-        return this.eTag;
+    public Output<Optional<String>> eTag() {
+        return Codegen.optional(this.eTag);
     }
     /**
      * The name of the resource
@@ -115,8 +116,8 @@ public class StorageInsightConfig extends com.pulumi.resources.CustomResource {
      * @return The names of the Azure tables that the workspace should read
      * 
      */
-    public Output</* @Nullable */ List<String>> tables() {
-        return this.tables;
+    public Output<Optional<List<String>>> tables() {
+        return Codegen.optional(this.tables);
     }
     /**
      * Resource tags.
@@ -129,8 +130,8 @@ public class StorageInsightConfig extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;

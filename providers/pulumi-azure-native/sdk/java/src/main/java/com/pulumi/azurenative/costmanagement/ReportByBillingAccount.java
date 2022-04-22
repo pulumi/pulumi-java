@@ -16,6 +16,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -64,8 +65,8 @@ public class ReportByBillingAccount extends com.pulumi.resources.CustomResource 
      * @return The format of the report being delivered.
      * 
      */
-    public Output</* @Nullable */ String> format() {
-        return this.format;
+    public Output<Optional<String>> format() {
+        return Codegen.optional(this.format);
     }
     /**
      * Resource name.
@@ -92,8 +93,8 @@ public class ReportByBillingAccount extends com.pulumi.resources.CustomResource 
      * @return Has schedule information for the report.
      * 
      */
-    public Output</* @Nullable */ ReportScheduleResponse> schedule() {
-        return this.schedule;
+    public Output<Optional<ReportScheduleResponse>> schedule() {
+        return Codegen.optional(this.schedule);
     }
     /**
      * Resource tags.

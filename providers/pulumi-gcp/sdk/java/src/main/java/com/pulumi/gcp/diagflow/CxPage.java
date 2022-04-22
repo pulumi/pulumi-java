@@ -16,6 +16,7 @@ import com.pulumi.gcp.diagflow.outputs.CxPageForm;
 import com.pulumi.gcp.diagflow.outputs.CxPageTransitionRoute;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -71,8 +72,8 @@ public class CxPage extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ CxPageEntryFulfillment> entryFulfillment() {
-        return this.entryFulfillment;
+    public Output<Optional<CxPageEntryFulfillment>> entryFulfillment() {
+        return Codegen.optional(this.entryFulfillment);
     }
     /**
      * Handlers associated with the page to handle events such as webhook errors, no match or no input.
@@ -87,8 +88,8 @@ public class CxPage extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<CxPageEventHandler>> eventHandlers() {
-        return this.eventHandlers;
+    public Output<Optional<List<CxPageEventHandler>>> eventHandlers() {
+        return Codegen.optional(this.eventHandlers);
     }
     /**
      * The form associated with the page, used for collecting parameters relevant to the page.
@@ -103,8 +104,8 @@ public class CxPage extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ CxPageForm> form() {
-        return this.form;
+    public Output<Optional<CxPageForm>> form() {
+        return Codegen.optional(this.form);
     }
     /**
      * The language of the following fields in page:
@@ -139,8 +140,8 @@ public class CxPage extends com.pulumi.resources.CustomResource {
      * If not specified, the agent&#39;s default language is used. Many languages are supported. Note: languages must be enabled in the agent before they can be used.
      * 
      */
-    public Output</* @Nullable */ String> languageCode() {
-        return this.languageCode;
+    public Output<Optional<String>> languageCode() {
+        return Codegen.optional(this.languageCode);
     }
     /**
      * - 
@@ -171,8 +172,8 @@ public class CxPage extends com.pulumi.resources.CustomResource {
      * Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow ID&gt;.
      * 
      */
-    public Output</* @Nullable */ String> parent() {
-        return this.parent;
+    public Output<Optional<String>> parent() {
+        return Codegen.optional(this.parent);
     }
     /**
      * Ordered list of TransitionRouteGroups associated with the page. Transition route groups must be unique within a page.
@@ -191,8 +192,8 @@ public class CxPage extends com.pulumi.resources.CustomResource {
      * Format:projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow ID&gt;/transitionRouteGroups/&lt;TransitionRouteGroup ID&gt;.
      * 
      */
-    public Output</* @Nullable */ List<String>> transitionRouteGroups() {
-        return this.transitionRouteGroups;
+    public Output<Optional<List<String>>> transitionRouteGroups() {
+        return Codegen.optional(this.transitionRouteGroups);
     }
     /**
      * A list of transitions for the transition rules of this page. They route the conversation to another page in the same flow, or another flow.
@@ -221,8 +222,8 @@ public class CxPage extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<CxPageTransitionRoute>> transitionRoutes() {
-        return this.transitionRoutes;
+    public Output<Optional<List<CxPageTransitionRoute>>> transitionRoutes() {
+        return Codegen.optional(this.transitionRoutes);
     }
 
     /**

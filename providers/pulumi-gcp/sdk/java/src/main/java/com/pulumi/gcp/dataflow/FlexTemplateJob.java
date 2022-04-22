@@ -13,6 +13,7 @@ import com.pulumi.gcp.dataflow.inputs.FlexTemplateJobState;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -108,8 +109,8 @@ public class FlexTemplateJob extends com.pulumi.resources.CustomResource {
      * labels will be ignored to prevent diffs on re-apply.
      * 
      */
-    public Output</* @Nullable */ Map<String,Object>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,Object>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * A unique name for the resource, required by Dataflow.
@@ -138,8 +139,8 @@ public class FlexTemplateJob extends com.pulumi.resources.CustomResource {
      * deletion during `pulumi destroy`.  See above note.
      * 
      */
-    public Output</* @Nullable */ String> onDelete() {
-        return this.onDelete;
+    public Output<Optional<String>> onDelete() {
+        return Codegen.optional(this.onDelete);
     }
     /**
      * Key/Value pairs to be passed to the Dataflow job (as
@@ -156,8 +157,8 @@ public class FlexTemplateJob extends com.pulumi.resources.CustomResource {
      * such as `serviceAccount`, `workerMachineType`, etc can be specified here.
      * 
      */
-    public Output</* @Nullable */ Map<String,Object>> parameters() {
-        return this.parameters;
+    public Output<Optional<Map<String,Object>>> parameters() {
+        return Codegen.optional(this.parameters);
     }
     /**
      * The project in which the resource belongs. If it is not

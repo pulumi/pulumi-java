@@ -12,6 +12,7 @@ import com.pulumi.gcp.apigee.EnvironmentIamMemberArgs;
 import com.pulumi.gcp.apigee.inputs.EnvironmentIamMemberState;
 import com.pulumi.gcp.apigee.outputs.EnvironmentIamMemberCondition;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -61,8 +62,8 @@ public class EnvironmentIamMember extends com.pulumi.resources.CustomResource {
     @Export(name="condition", type=EnvironmentIamMemberCondition.class, parameters={})
     private Output</* @Nullable */ EnvironmentIamMemberCondition> condition;
 
-    public Output</* @Nullable */ EnvironmentIamMemberCondition> condition() {
-        return this.condition;
+    public Output<Optional<EnvironmentIamMemberCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * Used to find the parent resource to bind the IAM policy to

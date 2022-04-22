@@ -29,6 +29,10 @@ import static com.pulumi.core.internal.Environment.getIntegerEnvironmentVariable
 @InternalUse
 public final class Codegen {
 
+    public static <T> Output<Optional<T>> optional(Output</* Nullable */ T> out) {
+        return out == null ? Output.of(Optional.empty()) : out.applyValue(Optional::ofNullable);
+    }
+
     public static <T> Output<T> secret(@Nullable T value) {
         return Codegen.ofNullable(value).asSecret();
     }

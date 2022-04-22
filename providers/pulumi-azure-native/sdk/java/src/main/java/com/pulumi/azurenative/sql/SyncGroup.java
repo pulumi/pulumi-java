@@ -16,6 +16,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class SyncGroup extends com.pulumi.resources.CustomResource {
      * @return Conflict logging retention period.
      * 
      */
-    public Output</* @Nullable */ Integer> conflictLoggingRetentionInDays() {
-        return this.conflictLoggingRetentionInDays;
+    public Output<Optional<Integer>> conflictLoggingRetentionInDays() {
+        return Codegen.optional(this.conflictLoggingRetentionInDays);
     }
     /**
      * Conflict resolution policy of the sync group.
@@ -60,8 +61,8 @@ public class SyncGroup extends com.pulumi.resources.CustomResource {
      * @return Conflict resolution policy of the sync group.
      * 
      */
-    public Output</* @Nullable */ String> conflictResolutionPolicy() {
-        return this.conflictResolutionPolicy;
+    public Output<Optional<String>> conflictResolutionPolicy() {
+        return Codegen.optional(this.conflictResolutionPolicy);
     }
     /**
      * If conflict logging is enabled.
@@ -74,8 +75,8 @@ public class SyncGroup extends com.pulumi.resources.CustomResource {
      * @return If conflict logging is enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableConflictLogging() {
-        return this.enableConflictLogging;
+    public Output<Optional<Boolean>> enableConflictLogging() {
+        return Codegen.optional(this.enableConflictLogging);
     }
     /**
      * User name for the sync group hub database credential.
@@ -88,8 +89,8 @@ public class SyncGroup extends com.pulumi.resources.CustomResource {
      * @return User name for the sync group hub database credential.
      * 
      */
-    public Output</* @Nullable */ String> hubDatabaseUserName() {
-        return this.hubDatabaseUserName;
+    public Output<Optional<String>> hubDatabaseUserName() {
+        return Codegen.optional(this.hubDatabaseUserName);
     }
     /**
      * Sync interval of the sync group.
@@ -102,8 +103,8 @@ public class SyncGroup extends com.pulumi.resources.CustomResource {
      * @return Sync interval of the sync group.
      * 
      */
-    public Output</* @Nullable */ Integer> interval() {
-        return this.interval;
+    public Output<Optional<Integer>> interval() {
+        return Codegen.optional(this.interval);
     }
     /**
      * Last sync time of the sync group.
@@ -158,8 +159,8 @@ public class SyncGroup extends com.pulumi.resources.CustomResource {
      * @return Sync schema of the sync group.
      * 
      */
-    public Output</* @Nullable */ SyncGroupSchemaResponse> schema() {
-        return this.schema;
+    public Output<Optional<SyncGroupSchemaResponse>> schema() {
+        return Codegen.optional(this.schema);
     }
     /**
      * The name and capacity of the SKU.
@@ -172,8 +173,8 @@ public class SyncGroup extends com.pulumi.resources.CustomResource {
      * @return The name and capacity of the SKU.
      * 
      */
-    public Output</* @Nullable */ SkuResponse> sku() {
-        return this.sku;
+    public Output<Optional<SkuResponse>> sku() {
+        return Codegen.optional(this.sku);
     }
     /**
      * ARM resource id of the sync database in the sync group.
@@ -186,8 +187,8 @@ public class SyncGroup extends com.pulumi.resources.CustomResource {
      * @return ARM resource id of the sync database in the sync group.
      * 
      */
-    public Output</* @Nullable */ String> syncDatabaseId() {
-        return this.syncDatabaseId;
+    public Output<Optional<String>> syncDatabaseId() {
+        return Codegen.optional(this.syncDatabaseId);
     }
     /**
      * Sync state of the sync group.
@@ -228,8 +229,8 @@ public class SyncGroup extends com.pulumi.resources.CustomResource {
      * @return If use private link connection is enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> usePrivateLinkConnection() {
-        return this.usePrivateLinkConnection;
+    public Output<Optional<Boolean>> usePrivateLinkConnection() {
+        return Codegen.optional(this.usePrivateLinkConnection);
     }
 
     /**

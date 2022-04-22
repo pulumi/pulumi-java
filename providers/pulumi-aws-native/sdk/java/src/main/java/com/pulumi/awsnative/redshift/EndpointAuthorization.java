@@ -13,6 +13,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -130,8 +131,8 @@ public class EndpointAuthorization extends com.pulumi.resources.CustomResource {
      * @return  Indicates whether to force the revoke action. If true, the Redshift-managed VPC endpoints associated with the endpoint authorization are also deleted.
      * 
      */
-    public Output</* @Nullable */ Boolean> force() {
-        return this.force;
+    public Output<Optional<Boolean>> force() {
+        return Codegen.optional(this.force);
     }
     /**
      * The AWS account ID of the grantee of the cluster.
@@ -186,8 +187,8 @@ public class EndpointAuthorization extends com.pulumi.resources.CustomResource {
      * @return The virtual private cloud (VPC) identifiers to grant or revoke access to.
      * 
      */
-    public Output</* @Nullable */ List<String>> vpcIds() {
-        return this.vpcIds;
+    public Output<Optional<List<String>>> vpcIds() {
+        return Codegen.optional(this.vpcIds);
     }
 
     /**

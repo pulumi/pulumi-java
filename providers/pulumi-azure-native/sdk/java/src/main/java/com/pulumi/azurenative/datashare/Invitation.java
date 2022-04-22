@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class Invitation extends com.pulumi.resources.CustomResource {
      * @return The expiration date for the invitation and share subscription.
      * 
      */
-    public Output</* @Nullable */ String> expirationDate() {
-        return this.expirationDate;
+    public Output<Optional<String>> expirationDate() {
+        return Codegen.optional(this.expirationDate);
     }
     /**
      * unique invitation id
@@ -141,8 +142,8 @@ public class Invitation extends com.pulumi.resources.CustomResource {
      * @return The target Azure AD Id. Can&#39;t be combined with email.
      * 
      */
-    public Output</* @Nullable */ String> targetActiveDirectoryId() {
-        return this.targetActiveDirectoryId;
+    public Output<Optional<String>> targetActiveDirectoryId() {
+        return Codegen.optional(this.targetActiveDirectoryId);
     }
     /**
      * The email the invitation is directed to.
@@ -155,8 +156,8 @@ public class Invitation extends com.pulumi.resources.CustomResource {
      * @return The email the invitation is directed to.
      * 
      */
-    public Output</* @Nullable */ String> targetEmail() {
-        return this.targetEmail;
+    public Output<Optional<String>> targetEmail() {
+        return Codegen.optional(this.targetEmail);
     }
     /**
      * The target user or application Id that invitation is being sent to.
@@ -173,8 +174,8 @@ public class Invitation extends com.pulumi.resources.CustomResource {
      * invitations to specific users or applications in an AD tenant.
      * 
      */
-    public Output</* @Nullable */ String> targetObjectId() {
-        return this.targetObjectId;
+    public Output<Optional<String>> targetObjectId() {
+        return Codegen.optional(this.targetObjectId);
     }
     /**
      * Type of the azure resource

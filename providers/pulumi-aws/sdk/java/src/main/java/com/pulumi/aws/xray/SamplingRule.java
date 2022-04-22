@@ -14,6 +14,7 @@ import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -57,8 +58,8 @@ public class SamplingRule extends com.pulumi.resources.CustomResource {
      * @return Matches attributes derived from the request.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> attributes() {
-        return this.attributes;
+    public Output<Optional<Map<String,String>>> attributes() {
+        return Codegen.optional(this.attributes);
     }
     /**
      * The percentage of matching requests to instrument, after the reservoir is exhausted.
@@ -155,8 +156,8 @@ public class SamplingRule extends com.pulumi.resources.CustomResource {
      * @return The name of the sampling rule.
      * 
      */
-    public Output</* @Nullable */ String> ruleName() {
-        return this.ruleName;
+    public Output<Optional<String>> ruleName() {
+        return Codegen.optional(this.ruleName);
     }
     /**
      * Matches the `name` that the service uses to identify itself in segments.
@@ -197,8 +198,8 @@ public class SamplingRule extends com.pulumi.resources.CustomResource {
      * @return Key-value mapping of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.

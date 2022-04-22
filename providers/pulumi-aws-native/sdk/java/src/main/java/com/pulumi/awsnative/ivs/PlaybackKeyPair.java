@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -61,8 +62,8 @@ public class PlaybackKeyPair extends com.pulumi.resources.CustomResource {
      * @return An arbitrary string (a nickname) assigned to a playback key pair that helps the customer identify that resource. The value does not need to be unique.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * The public portion of a customer-generated key pair.
@@ -89,8 +90,8 @@ public class PlaybackKeyPair extends com.pulumi.resources.CustomResource {
      * @return A list of key-value pairs that contain metadata for the asset model.
      * 
      */
-    public Output</* @Nullable */ List<PlaybackKeyPairTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<PlaybackKeyPairTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

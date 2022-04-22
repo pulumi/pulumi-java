@@ -16,6 +16,7 @@ import com.pulumi.gcp.secretmanager.outputs.SecretTopic;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -101,8 +102,8 @@ public class Secret extends com.pulumi.resources.CustomResource {
      * { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * The resource name of the Pub/Sub topic that will be published to, in the following format: projects/*{@literal /}topics/*.
@@ -167,8 +168,8 @@ public class Secret extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ SecretRotation> rotation() {
-        return this.rotation;
+    public Output<Optional<SecretRotation>> rotation() {
+        return Codegen.optional(this.rotation);
     }
     /**
      * This must be unique within the project.
@@ -197,8 +198,8 @@ public class Secret extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<SecretTopic>> topics() {
-        return this.topics;
+    public Output<Optional<List<SecretTopic>>> topics() {
+        return Codegen.optional(this.topics);
     }
     /**
      * The TTL for the Secret.
@@ -213,8 +214,8 @@ public class Secret extends com.pulumi.resources.CustomResource {
      * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
      * 
      */
-    public Output</* @Nullable */ String> ttl() {
-        return this.ttl;
+    public Output<Optional<String>> ttl() {
+        return Codegen.optional(this.ttl);
     }
 
     /**

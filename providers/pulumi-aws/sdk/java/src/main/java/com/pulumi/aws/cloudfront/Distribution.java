@@ -25,6 +25,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -66,8 +67,8 @@ public class Distribution extends com.pulumi.resources.CustomResource {
      * this distribution.
      * 
      */
-    public Output</* @Nullable */ List<String>> aliases() {
-        return this.aliases;
+    public Output<Optional<List<String>>> aliases() {
+        return Codegen.optional(this.aliases);
     }
     /**
      * The ARN (Amazon Resource Name) for the distribution. For example: `arn:aws:cloudfront::123456789012:distribution/EDFDVBD632BHDS5`, where `123456789012` is your AWS account ID.
@@ -112,8 +113,8 @@ public class Distribution extends com.pulumi.resources.CustomResource {
      * distribution.
      * 
      */
-    public Output</* @Nullable */ String> comment() {
-        return this.comment;
+    public Output<Optional<String>> comment() {
+        return Codegen.optional(this.comment);
     }
     /**
      * One or more custom error response elements (multiples allowed).
@@ -126,8 +127,8 @@ public class Distribution extends com.pulumi.resources.CustomResource {
      * @return One or more custom error response elements (multiples allowed).
      * 
      */
-    public Output</* @Nullable */ List<DistributionCustomErrorResponse>> customErrorResponses() {
-        return this.customErrorResponses;
+    public Output<Optional<List<DistributionCustomErrorResponse>>> customErrorResponses() {
+        return Codegen.optional(this.customErrorResponses);
     }
     /**
      * The default cache behavior for this distribution (maximum
@@ -158,8 +159,8 @@ public class Distribution extends com.pulumi.resources.CustomResource {
      * return (for example, index.html) when an end user requests the root URL.
      * 
      */
-    public Output</* @Nullable */ String> defaultRootObject() {
-        return this.defaultRootObject;
+    public Output<Optional<String>> defaultRootObject() {
+        return Codegen.optional(this.defaultRootObject);
     }
     /**
      * The DNS domain name of either the S3 bucket, or
@@ -240,8 +241,8 @@ public class Distribution extends com.pulumi.resources.CustomResource {
      * `http2`.
      * 
      */
-    public Output</* @Nullable */ String> httpVersion() {
-        return this.httpVersion;
+    public Output<Optional<String>> httpVersion() {
+        return Codegen.optional(this.httpVersion);
     }
     /**
      * The number of invalidation batches
@@ -270,8 +271,8 @@ public class Distribution extends com.pulumi.resources.CustomResource {
      * @return Whether the IPv6 is enabled for the distribution.
      * 
      */
-    public Output</* @Nullable */ Boolean> isIpv6Enabled() {
-        return this.isIpv6Enabled;
+    public Output<Optional<Boolean>> isIpv6Enabled() {
+        return Codegen.optional(this.isIpv6Enabled);
     }
     /**
      * The date and time the distribution was last modified.
@@ -302,8 +303,8 @@ public class Distribution extends com.pulumi.resources.CustomResource {
      * to your distribution (maximum one).
      * 
      */
-    public Output</* @Nullable */ DistributionLoggingConfig> loggingConfig() {
-        return this.loggingConfig;
+    public Output<Optional<DistributionLoggingConfig>> loggingConfig() {
+        return Codegen.optional(this.loggingConfig);
     }
     /**
      * An ordered list of cache behaviors
@@ -320,8 +321,8 @@ public class Distribution extends com.pulumi.resources.CustomResource {
      * in order of precedence. The topmost cache behavior will have precedence 0.
      * 
      */
-    public Output</* @Nullable */ List<DistributionOrderedCacheBehavior>> orderedCacheBehaviors() {
-        return this.orderedCacheBehaviors;
+    public Output<Optional<List<DistributionOrderedCacheBehavior>>> orderedCacheBehaviors() {
+        return Codegen.optional(this.orderedCacheBehaviors);
     }
     /**
      * One or more origin_group for this
@@ -336,8 +337,8 @@ public class Distribution extends com.pulumi.resources.CustomResource {
      * distribution (multiples allowed).
      * 
      */
-    public Output</* @Nullable */ List<DistributionOriginGroup>> originGroups() {
-        return this.originGroups;
+    public Output<Optional<List<DistributionOriginGroup>>> originGroups() {
+        return Codegen.optional(this.originGroups);
     }
     /**
      * One or more origins for this
@@ -368,8 +369,8 @@ public class Distribution extends com.pulumi.resources.CustomResource {
      * `PriceClass_All`, `PriceClass_200`, `PriceClass_100`
      * 
      */
-    public Output</* @Nullable */ String> priceClass() {
-        return this.priceClass;
+    public Output<Optional<String>> priceClass() {
+        return Codegen.optional(this.priceClass);
     }
     /**
      * The restriction
@@ -402,8 +403,8 @@ public class Distribution extends com.pulumi.resources.CustomResource {
      * the distribution needs to be deleted manually afterwards. Default: `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> retainOnDelete() {
-        return this.retainOnDelete;
+    public Output<Optional<Boolean>> retainOnDelete() {
+        return Codegen.optional(this.retainOnDelete);
     }
     /**
      * The current status of the distribution. `Deployed` if the
@@ -434,8 +435,8 @@ public class Distribution extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .
@@ -516,8 +517,8 @@ public class Distribution extends com.pulumi.resources.CustomResource {
      * this to`false` will skip the process. Default: `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> waitForDeployment() {
-        return this.waitForDeployment;
+    public Output<Optional<Boolean>> waitForDeployment() {
+        return Codegen.optional(this.waitForDeployment);
     }
     /**
      * A unique identifier that specifies the AWS WAF web ACL,
@@ -542,8 +543,8 @@ public class Distribution extends com.pulumi.resources.CustomResource {
      * credentials configuring this argument must have `waf:GetWebACL` permissions assigned.
      * 
      */
-    public Output</* @Nullable */ String> webAclId() {
-        return this.webAclId;
+    public Output<Optional<String>> webAclId() {
+        return Codegen.optional(this.webAclId);
     }
 
     /**

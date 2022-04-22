@@ -19,6 +19,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -49,8 +50,8 @@ public class Registry extends com.pulumi.resources.CustomResource {
      * @return The value that indicates whether the admin user is enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> adminUserEnabled() {
-        return this.adminUserEnabled;
+    public Output<Optional<Boolean>> adminUserEnabled() {
+        return Codegen.optional(this.adminUserEnabled);
     }
     /**
      * The creation date of the container registry in ISO8601 format.
@@ -119,8 +120,8 @@ public class Registry extends com.pulumi.resources.CustomResource {
      * @return The network rule set for a container registry.
      * 
      */
-    public Output</* @Nullable */ NetworkRuleSetResponse> networkRuleSet() {
-        return this.networkRuleSet;
+    public Output<Optional<NetworkRuleSetResponse>> networkRuleSet() {
+        return Codegen.optional(this.networkRuleSet);
     }
     /**
      * The policies for a container registry.
@@ -133,8 +134,8 @@ public class Registry extends com.pulumi.resources.CustomResource {
      * @return The policies for a container registry.
      * 
      */
-    public Output</* @Nullable */ PoliciesResponse> policies() {
-        return this.policies;
+    public Output<Optional<PoliciesResponse>> policies() {
+        return Codegen.optional(this.policies);
     }
     /**
      * The provisioning state of the container registry at the time the operation was called.
@@ -189,8 +190,8 @@ public class Registry extends com.pulumi.resources.CustomResource {
      * @return The properties of the storage account for the container registry. Only applicable to Classic SKU.
      * 
      */
-    public Output</* @Nullable */ StorageAccountPropertiesResponse> storageAccount() {
-        return this.storageAccount;
+    public Output<Optional<StorageAccountPropertiesResponse>> storageAccount() {
+        return Codegen.optional(this.storageAccount);
     }
     /**
      * The tags of the resource.
@@ -203,8 +204,8 @@ public class Registry extends com.pulumi.resources.CustomResource {
      * @return The tags of the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource.

@@ -15,6 +15,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class ApiOperation extends com.pulumi.resources.CustomResource {
      * @return Description of the operation. May include HTML formatting tags.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Operation Name.
@@ -101,8 +102,8 @@ public class ApiOperation extends com.pulumi.resources.CustomResource {
      * @return Operation Policies
      * 
      */
-    public Output</* @Nullable */ String> policies() {
-        return this.policies;
+    public Output<Optional<String>> policies() {
+        return Codegen.optional(this.policies);
     }
     /**
      * An entity containing request details.
@@ -115,8 +116,8 @@ public class ApiOperation extends com.pulumi.resources.CustomResource {
      * @return An entity containing request details.
      * 
      */
-    public Output</* @Nullable */ RequestContractResponse> request() {
-        return this.request;
+    public Output<Optional<RequestContractResponse>> request() {
+        return Codegen.optional(this.request);
     }
     /**
      * Array of Operation responses.
@@ -129,8 +130,8 @@ public class ApiOperation extends com.pulumi.resources.CustomResource {
      * @return Array of Operation responses.
      * 
      */
-    public Output</* @Nullable */ List<ResponseContractResponse>> responses() {
-        return this.responses;
+    public Output<Optional<List<ResponseContractResponse>>> responses() {
+        return Codegen.optional(this.responses);
     }
     /**
      * Collection of URL template parameters.
@@ -143,8 +144,8 @@ public class ApiOperation extends com.pulumi.resources.CustomResource {
      * @return Collection of URL template parameters.
      * 
      */
-    public Output</* @Nullable */ List<ParameterContractResponse>> templateParameters() {
-        return this.templateParameters;
+    public Output<Optional<List<ParameterContractResponse>>> templateParameters() {
+        return Codegen.optional(this.templateParameters);
     }
     /**
      * Resource type for API Management resource.

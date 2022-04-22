@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -42,8 +43,8 @@ public class Authorizer extends com.pulumi.resources.CustomResource {
      * @return The credentials required for the authorizer. To specify an IAM Role for API Gateway to assume, use the IAM Role ARN.
      * 
      */
-    public Output</* @Nullable */ String> authorizerCredentials() {
-        return this.authorizerCredentials;
+    public Output<Optional<String>> authorizerCredentials() {
+        return Codegen.optional(this.authorizerCredentials);
     }
     /**
      * The TTL of cached authorizer results in seconds. Defaults to `300`.
@@ -56,8 +57,8 @@ public class Authorizer extends com.pulumi.resources.CustomResource {
      * @return The TTL of cached authorizer results in seconds. Defaults to `300`.
      * 
      */
-    public Output</* @Nullable */ Integer> authorizerResultTtlInSeconds() {
-        return this.authorizerResultTtlInSeconds;
+    public Output<Optional<Integer>> authorizerResultTtlInSeconds() {
+        return Codegen.optional(this.authorizerResultTtlInSeconds);
     }
     /**
      * The authorizer&#39;s Uniform Resource Identifier (URI). This must be a well-formed Lambda function URI in the form of `arn:aws:apigateway:{region}:lambda:path/{service_api}`,
@@ -72,8 +73,8 @@ public class Authorizer extends com.pulumi.resources.CustomResource {
      * e.g., `arn:aws:apigateway:us-west-2:lambda:path/2015-03-31/functions/arn:aws:lambda:us-west-2:012345678912:function:my-function/invocations`
      * 
      */
-    public Output</* @Nullable */ String> authorizerUri() {
-        return this.authorizerUri;
+    public Output<Optional<String>> authorizerUri() {
+        return Codegen.optional(this.authorizerUri);
     }
     /**
      * The source of the identity in an incoming request. Defaults to `method.request.header.Authorization`. For `REQUEST` type, this may be a comma-separated list of values, including headers, query string parameters and stage variables - e.g., `&#34;method.request.header.SomeHeaderName,method.request.querystring.SomeQueryStringName,stageVariables.SomeStageVariableName&#34;`
@@ -86,8 +87,8 @@ public class Authorizer extends com.pulumi.resources.CustomResource {
      * @return The source of the identity in an incoming request. Defaults to `method.request.header.Authorization`. For `REQUEST` type, this may be a comma-separated list of values, including headers, query string parameters and stage variables - e.g., `&#34;method.request.header.SomeHeaderName,method.request.querystring.SomeQueryStringName,stageVariables.SomeStageVariableName&#34;`
      * 
      */
-    public Output</* @Nullable */ String> identitySource() {
-        return this.identitySource;
+    public Output<Optional<String>> identitySource() {
+        return Codegen.optional(this.identitySource);
     }
     /**
      * A validation expression for the incoming identity. For `TOKEN` type, this value should be a regular expression. The incoming token from the client is matched against this expression, and will proceed if the token matches. If the token doesn&#39;t match, the client receives a 401 Unauthorized response.
@@ -100,8 +101,8 @@ public class Authorizer extends com.pulumi.resources.CustomResource {
      * @return A validation expression for the incoming identity. For `TOKEN` type, this value should be a regular expression. The incoming token from the client is matched against this expression, and will proceed if the token matches. If the token doesn&#39;t match, the client receives a 401 Unauthorized response.
      * 
      */
-    public Output</* @Nullable */ String> identityValidationExpression() {
-        return this.identityValidationExpression;
+    public Output<Optional<String>> identityValidationExpression() {
+        return Codegen.optional(this.identityValidationExpression);
     }
     /**
      * The name of the authorizer
@@ -128,8 +129,8 @@ public class Authorizer extends com.pulumi.resources.CustomResource {
      * @return A list of the Amazon Cognito user pool ARNs. Each element is of this format: `arn:aws:cognito-idp:{region}:{account_id}:userpool/{user_pool_id}`.
      * 
      */
-    public Output</* @Nullable */ List<String>> providerArns() {
-        return this.providerArns;
+    public Output<Optional<List<String>>> providerArns() {
+        return Codegen.optional(this.providerArns);
     }
     /**
      * The ID of the associated REST API
@@ -156,8 +157,8 @@ public class Authorizer extends com.pulumi.resources.CustomResource {
      * @return The type of the authorizer. Possible values are `TOKEN` for a Lambda function using a single authorization token submitted in a custom header, `REQUEST` for a Lambda function using incoming request parameters, or `COGNITO_USER_POOLS` for using an Amazon Cognito user pool. Defaults to `TOKEN`.
      * 
      */
-    public Output</* @Nullable */ String> type() {
-        return this.type;
+    public Output<Optional<String>> type() {
+        return Codegen.optional(this.type);
     }
 
     /**

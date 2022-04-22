@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class CustomIPPrefix extends com.pulumi.resources.CustomResource {
      * @return The prefix range in CIDR notation. Should include the start address and the prefix length.
      * 
      */
-    public Output</* @Nullable */ String> cidr() {
-        return this.cidr;
+    public Output<Optional<String>> cidr() {
+        return Codegen.optional(this.cidr);
     }
     /**
      * The commissioned state of the Custom IP Prefix.
@@ -59,8 +60,8 @@ public class CustomIPPrefix extends com.pulumi.resources.CustomResource {
      * @return The commissioned state of the Custom IP Prefix.
      * 
      */
-    public Output</* @Nullable */ String> commissionedState() {
-        return this.commissionedState;
+    public Output<Optional<String>> commissionedState() {
+        return Codegen.optional(this.commissionedState);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
@@ -87,8 +88,8 @@ public class CustomIPPrefix extends com.pulumi.resources.CustomResource {
      * @return The extended location of the custom IP prefix.
      * 
      */
-    public Output</* @Nullable */ ExtendedLocationResponse> extendedLocation() {
-        return this.extendedLocation;
+    public Output<Optional<ExtendedLocationResponse>> extendedLocation() {
+        return Codegen.optional(this.extendedLocation);
     }
     /**
      * Resource location.
@@ -101,8 +102,8 @@ public class CustomIPPrefix extends com.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * Resource name.
@@ -171,8 +172,8 @@ public class CustomIPPrefix extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type.
@@ -199,8 +200,8 @@ public class CustomIPPrefix extends com.pulumi.resources.CustomResource {
      * @return A list of availability zones denoting the IP allocated for the resource needs to come from.
      * 
      */
-    public Output</* @Nullable */ List<String>> zones() {
-        return this.zones;
+    public Output<Optional<List<String>>> zones() {
+        return Codegen.optional(this.zones);
     }
 
     /**

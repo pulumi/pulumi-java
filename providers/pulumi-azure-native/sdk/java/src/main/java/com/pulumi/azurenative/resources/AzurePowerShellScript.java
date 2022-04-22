@@ -20,6 +20,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -50,8 +51,8 @@ public class AzurePowerShellScript extends com.pulumi.resources.CustomResource {
      * @return Command line arguments to pass to the script. Arguments are separated by spaces. ex: -Name blue* -Location &#39;West US 2&#39;
      * 
      */
-    public Output</* @Nullable */ String> arguments() {
-        return this.arguments;
+    public Output<Optional<String>> arguments() {
+        return Codegen.optional(this.arguments);
     }
     /**
      * Azure PowerShell module version to be used.
@@ -78,8 +79,8 @@ public class AzurePowerShellScript extends com.pulumi.resources.CustomResource {
      * @return The clean up preference when the script execution gets in a terminal state. Default setting is &#39;Always&#39;.
      * 
      */
-    public Output</* @Nullable */ String> cleanupPreference() {
-        return this.cleanupPreference;
+    public Output<Optional<String>> cleanupPreference() {
+        return Codegen.optional(this.cleanupPreference);
     }
     /**
      * Container settings.
@@ -92,8 +93,8 @@ public class AzurePowerShellScript extends com.pulumi.resources.CustomResource {
      * @return Container settings.
      * 
      */
-    public Output</* @Nullable */ ContainerConfigurationResponse> containerSettings() {
-        return this.containerSettings;
+    public Output<Optional<ContainerConfigurationResponse>> containerSettings() {
+        return Codegen.optional(this.containerSettings);
     }
     /**
      * The environment variables to pass over to the script.
@@ -106,8 +107,8 @@ public class AzurePowerShellScript extends com.pulumi.resources.CustomResource {
      * @return The environment variables to pass over to the script.
      * 
      */
-    public Output</* @Nullable */ List<EnvironmentVariableResponse>> environmentVariables() {
-        return this.environmentVariables;
+    public Output<Optional<List<EnvironmentVariableResponse>>> environmentVariables() {
+        return Codegen.optional(this.environmentVariables);
     }
     /**
      * Gets or sets how the deployment script should be forced to execute even if the script resource has not changed. Can be current time stamp or a GUID.
@@ -120,8 +121,8 @@ public class AzurePowerShellScript extends com.pulumi.resources.CustomResource {
      * @return Gets or sets how the deployment script should be forced to execute even if the script resource has not changed. Can be current time stamp or a GUID.
      * 
      */
-    public Output</* @Nullable */ String> forceUpdateTag() {
-        return this.forceUpdateTag;
+    public Output<Optional<String>> forceUpdateTag() {
+        return Codegen.optional(this.forceUpdateTag);
     }
     /**
      * Optional property. Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.
@@ -134,8 +135,8 @@ public class AzurePowerShellScript extends com.pulumi.resources.CustomResource {
      * @return Optional property. Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.
      * 
      */
-    public Output</* @Nullable */ ManagedServiceIdentityResponse> identity() {
-        return this.identity;
+    public Output<Optional<ManagedServiceIdentityResponse>> identity() {
+        return Codegen.optional(this.identity);
     }
     /**
      * Type of the script.
@@ -206,8 +207,8 @@ public class AzurePowerShellScript extends com.pulumi.resources.CustomResource {
      * @return Uri for the script. This is the entry point for the external script.
      * 
      */
-    public Output</* @Nullable */ String> primaryScriptUri() {
-        return this.primaryScriptUri;
+    public Output<Optional<String>> primaryScriptUri() {
+        return Codegen.optional(this.primaryScriptUri);
     }
     /**
      * State of the script execution. This only appears in the response.
@@ -248,8 +249,8 @@ public class AzurePowerShellScript extends com.pulumi.resources.CustomResource {
      * @return Script body.
      * 
      */
-    public Output</* @Nullable */ String> scriptContent() {
-        return this.scriptContent;
+    public Output<Optional<String>> scriptContent() {
+        return Codegen.optional(this.scriptContent);
     }
     /**
      * Contains the results of script execution.
@@ -276,8 +277,8 @@ public class AzurePowerShellScript extends com.pulumi.resources.CustomResource {
      * @return Storage Account settings.
      * 
      */
-    public Output</* @Nullable */ StorageAccountConfigurationResponse> storageAccountSettings() {
-        return this.storageAccountSettings;
+    public Output<Optional<StorageAccountConfigurationResponse>> storageAccountSettings() {
+        return Codegen.optional(this.storageAccountSettings);
     }
     /**
      * Supporting files for the external script.
@@ -290,8 +291,8 @@ public class AzurePowerShellScript extends com.pulumi.resources.CustomResource {
      * @return Supporting files for the external script.
      * 
      */
-    public Output</* @Nullable */ List<String>> supportingScriptUris() {
-        return this.supportingScriptUris;
+    public Output<Optional<List<String>>> supportingScriptUris() {
+        return Codegen.optional(this.supportingScriptUris);
     }
     /**
      * The system metadata related to this resource.
@@ -318,8 +319,8 @@ public class AzurePowerShellScript extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Maximum allowed script execution time specified in ISO 8601 format. Default value is P1D
@@ -332,8 +333,8 @@ public class AzurePowerShellScript extends com.pulumi.resources.CustomResource {
      * @return Maximum allowed script execution time specified in ISO 8601 format. Default value is P1D
      * 
      */
-    public Output</* @Nullable */ String> timeout() {
-        return this.timeout;
+    public Output<Optional<String>> timeout() {
+        return Codegen.optional(this.timeout);
     }
     /**
      * Type of this resource.

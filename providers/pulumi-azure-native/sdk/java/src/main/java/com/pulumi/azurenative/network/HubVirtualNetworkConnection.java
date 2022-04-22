@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class HubVirtualNetworkConnection extends com.pulumi.resources.CustomReso
      * @return Deprecated: VirtualHub to RemoteVnet transit to enabled or not.
      * 
      */
-    public Output</* @Nullable */ Boolean> allowHubToRemoteVnetTransit() {
-        return this.allowHubToRemoteVnetTransit;
+    public Output<Optional<Boolean>> allowHubToRemoteVnetTransit() {
+        return Codegen.optional(this.allowHubToRemoteVnetTransit);
     }
     /**
      * Deprecated: Allow RemoteVnet to use Virtual Hub&#39;s gateways.
@@ -59,8 +60,8 @@ public class HubVirtualNetworkConnection extends com.pulumi.resources.CustomReso
      * @return Deprecated: Allow RemoteVnet to use Virtual Hub&#39;s gateways.
      * 
      */
-    public Output</* @Nullable */ Boolean> allowRemoteVnetToUseHubVnetGateways() {
-        return this.allowRemoteVnetToUseHubVnetGateways;
+    public Output<Optional<Boolean>> allowRemoteVnetToUseHubVnetGateways() {
+        return Codegen.optional(this.allowRemoteVnetToUseHubVnetGateways);
     }
     /**
      * Enable internet security.
@@ -73,8 +74,8 @@ public class HubVirtualNetworkConnection extends com.pulumi.resources.CustomReso
      * @return Enable internet security.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableInternetSecurity() {
-        return this.enableInternetSecurity;
+    public Output<Optional<Boolean>> enableInternetSecurity() {
+        return Codegen.optional(this.enableInternetSecurity);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
@@ -101,8 +102,8 @@ public class HubVirtualNetworkConnection extends com.pulumi.resources.CustomReso
      * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * The provisioning state of the hub virtual network connection resource.
@@ -129,8 +130,8 @@ public class HubVirtualNetworkConnection extends com.pulumi.resources.CustomReso
      * @return Reference to the remote virtual network.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> remoteVirtualNetwork() {
-        return this.remoteVirtualNetwork;
+    public Output<Optional<SubResourceResponse>> remoteVirtualNetwork() {
+        return Codegen.optional(this.remoteVirtualNetwork);
     }
     /**
      * The Routing Configuration indicating the associated and propagated route tables on this connection.
@@ -143,8 +144,8 @@ public class HubVirtualNetworkConnection extends com.pulumi.resources.CustomReso
      * @return The Routing Configuration indicating the associated and propagated route tables on this connection.
      * 
      */
-    public Output</* @Nullable */ RoutingConfigurationResponse> routingConfiguration() {
-        return this.routingConfiguration;
+    public Output<Optional<RoutingConfigurationResponse>> routingConfiguration() {
+        return Codegen.optional(this.routingConfiguration);
     }
 
     /**

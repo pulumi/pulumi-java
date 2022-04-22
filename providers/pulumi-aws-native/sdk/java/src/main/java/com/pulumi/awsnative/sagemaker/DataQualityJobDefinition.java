@@ -19,6 +19,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -50,8 +51,8 @@ public class DataQualityJobDefinition extends com.pulumi.resources.CustomResourc
     @Export(name="dataQualityBaselineConfig", type=DataQualityJobDefinitionDataQualityBaselineConfig.class, parameters={})
     private Output</* @Nullable */ DataQualityJobDefinitionDataQualityBaselineConfig> dataQualityBaselineConfig;
 
-    public Output</* @Nullable */ DataQualityJobDefinitionDataQualityBaselineConfig> dataQualityBaselineConfig() {
-        return this.dataQualityBaselineConfig;
+    public Output<Optional<DataQualityJobDefinitionDataQualityBaselineConfig>> dataQualityBaselineConfig() {
+        return Codegen.optional(this.dataQualityBaselineConfig);
     }
     @Export(name="dataQualityJobInput", type=DataQualityJobDefinitionDataQualityJobInput.class, parameters={})
     private Output<DataQualityJobDefinitionDataQualityJobInput> dataQualityJobInput;
@@ -82,8 +83,8 @@ public class DataQualityJobDefinition extends com.pulumi.resources.CustomResourc
     @Export(name="jobDefinitionName", type=String.class, parameters={})
     private Output</* @Nullable */ String> jobDefinitionName;
 
-    public Output</* @Nullable */ String> jobDefinitionName() {
-        return this.jobDefinitionName;
+    public Output<Optional<String>> jobDefinitionName() {
+        return Codegen.optional(this.jobDefinitionName);
     }
     @Export(name="jobResources", type=DataQualityJobDefinitionMonitoringResources.class, parameters={})
     private Output<DataQualityJobDefinitionMonitoringResources> jobResources;
@@ -94,8 +95,8 @@ public class DataQualityJobDefinition extends com.pulumi.resources.CustomResourc
     @Export(name="networkConfig", type=DataQualityJobDefinitionNetworkConfig.class, parameters={})
     private Output</* @Nullable */ DataQualityJobDefinitionNetworkConfig> networkConfig;
 
-    public Output</* @Nullable */ DataQualityJobDefinitionNetworkConfig> networkConfig() {
-        return this.networkConfig;
+    public Output<Optional<DataQualityJobDefinitionNetworkConfig>> networkConfig() {
+        return Codegen.optional(this.networkConfig);
     }
     /**
      * The Amazon Resource Name (ARN) of an IAM role that Amazon SageMaker can assume to perform tasks on your behalf.
@@ -114,8 +115,8 @@ public class DataQualityJobDefinition extends com.pulumi.resources.CustomResourc
     @Export(name="stoppingCondition", type=DataQualityJobDefinitionStoppingCondition.class, parameters={})
     private Output</* @Nullable */ DataQualityJobDefinitionStoppingCondition> stoppingCondition;
 
-    public Output</* @Nullable */ DataQualityJobDefinitionStoppingCondition> stoppingCondition() {
-        return this.stoppingCondition;
+    public Output<Optional<DataQualityJobDefinitionStoppingCondition>> stoppingCondition() {
+        return Codegen.optional(this.stoppingCondition);
     }
     /**
      * An array of key-value pairs to apply to this resource.
@@ -128,8 +129,8 @@ public class DataQualityJobDefinition extends com.pulumi.resources.CustomResourc
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<DataQualityJobDefinitionTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<DataQualityJobDefinitionTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

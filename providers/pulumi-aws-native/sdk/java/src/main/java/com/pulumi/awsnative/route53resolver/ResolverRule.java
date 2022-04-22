@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -61,8 +62,8 @@ public class ResolverRule extends com.pulumi.resources.CustomResource {
      * @return The name for the Resolver rule
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * The ID of the endpoint that the rule is associated with.
@@ -75,8 +76,8 @@ public class ResolverRule extends com.pulumi.resources.CustomResource {
      * @return The ID of the endpoint that the rule is associated with.
      * 
      */
-    public Output</* @Nullable */ String> resolverEndpointId() {
-        return this.resolverEndpointId;
+    public Output<Optional<String>> resolverEndpointId() {
+        return Codegen.optional(this.resolverEndpointId);
     }
     /**
      * The ID of the endpoint that the rule is associated with.
@@ -117,8 +118,8 @@ public class ResolverRule extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<ResolverRuleTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<ResolverRuleTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * An array that contains the IP addresses and ports that an outbound endpoint forwards DNS queries to. Typically, these are the IP addresses of DNS resolvers on your network. Specify IPv4 addresses. IPv6 is not supported.
@@ -131,8 +132,8 @@ public class ResolverRule extends com.pulumi.resources.CustomResource {
      * @return An array that contains the IP addresses and ports that an outbound endpoint forwards DNS queries to. Typically, these are the IP addresses of DNS resolvers on your network. Specify IPv4 addresses. IPv6 is not supported.
      * 
      */
-    public Output</* @Nullable */ List<ResolverRuleTargetAddress>> targetIps() {
-        return this.targetIps;
+    public Output<Optional<List<ResolverRuleTargetAddress>>> targetIps() {
+        return Codegen.optional(this.targetIps);
     }
 
     /**

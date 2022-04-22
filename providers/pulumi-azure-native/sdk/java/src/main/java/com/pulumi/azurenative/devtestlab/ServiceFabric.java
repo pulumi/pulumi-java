@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -58,8 +59,8 @@ public class ServiceFabric extends com.pulumi.resources.CustomResource {
      * @return The resource id of the environment under which the service fabric resource is present
      * 
      */
-    public Output</* @Nullable */ String> environmentId() {
-        return this.environmentId;
+    public Output<Optional<String>> environmentId() {
+        return Codegen.optional(this.environmentId);
     }
     /**
      * The backing service fabric resource&#39;s id
@@ -72,8 +73,8 @@ public class ServiceFabric extends com.pulumi.resources.CustomResource {
      * @return The backing service fabric resource&#39;s id
      * 
      */
-    public Output</* @Nullable */ String> externalServiceFabricId() {
-        return this.externalServiceFabricId;
+    public Output<Optional<String>> externalServiceFabricId() {
+        return Codegen.optional(this.externalServiceFabricId);
     }
     /**
      * The location of the resource.
@@ -86,8 +87,8 @@ public class ServiceFabric extends com.pulumi.resources.CustomResource {
      * @return The location of the resource.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The name of the resource.
@@ -128,8 +129,8 @@ public class ServiceFabric extends com.pulumi.resources.CustomResource {
      * @return The tags of the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource.

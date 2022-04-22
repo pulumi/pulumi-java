@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class CloudConnector extends com.pulumi.resources.CustomResource {
      * @return Connector billing model
      * 
      */
-    public Output</* @Nullable */ String> billingModel() {
-        return this.billingModel;
+    public Output<Optional<String>> billingModel() {
+        return Codegen.optional(this.billingModel);
     }
     /**
      * Collection information
@@ -86,8 +87,8 @@ public class CloudConnector extends com.pulumi.resources.CustomResource {
      * @return Credentials authentication key (eg AWS ARN)
      * 
      */
-    public Output</* @Nullable */ String> credentialsKey() {
-        return this.credentialsKey;
+    public Output<Optional<String>> credentialsKey() {
+        return Codegen.optional(this.credentialsKey);
     }
     /**
      * Number of days remaining of trial
@@ -114,8 +115,8 @@ public class CloudConnector extends com.pulumi.resources.CustomResource {
      * @return Default ManagementGroupId
      * 
      */
-    public Output</* @Nullable */ String> defaultManagementGroupId() {
-        return this.defaultManagementGroupId;
+    public Output<Optional<String>> defaultManagementGroupId() {
+        return Codegen.optional(this.defaultManagementGroupId);
     }
     /**
      * Connector DisplayName
@@ -128,8 +129,8 @@ public class CloudConnector extends com.pulumi.resources.CustomResource {
      * @return Connector DisplayName
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * Associated ExternalBillingAccountId
@@ -156,8 +157,8 @@ public class CloudConnector extends com.pulumi.resources.CustomResource {
      * @return Connector kind (eg aws)
      * 
      */
-    public Output</* @Nullable */ String> kind() {
-        return this.kind;
+    public Output<Optional<String>> kind() {
+        return Codegen.optional(this.kind);
     }
     /**
      * Connector last modified datetime
@@ -226,8 +227,8 @@ public class CloudConnector extends com.pulumi.resources.CustomResource {
      * @return Identifying source report. (For AWS this is a CUR report name, defined with Daily and with Resources)
      * 
      */
-    public Output</* @Nullable */ String> reportId() {
-        return this.reportId;
+    public Output<Optional<String>> reportId() {
+        return Codegen.optional(this.reportId);
     }
     /**
      * Connector status
@@ -254,8 +255,8 @@ public class CloudConnector extends com.pulumi.resources.CustomResource {
      * @return Billing SubscriptionId
      * 
      */
-    public Output</* @Nullable */ String> subscriptionId() {
-        return this.subscriptionId;
+    public Output<Optional<String>> subscriptionId() {
+        return Codegen.optional(this.subscriptionId);
     }
     /**
      * Connector type

@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -58,8 +59,8 @@ public class EmailTemplate extends com.pulumi.resources.CustomResource {
      * @return Description of the Email Template.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Whether the template is the default template provided by Api Management or has been edited.
@@ -100,8 +101,8 @@ public class EmailTemplate extends com.pulumi.resources.CustomResource {
      * @return Email Template Parameter values.
      * 
      */
-    public Output</* @Nullable */ List<EmailTemplateParametersContractPropertiesResponse>> parameters() {
-        return this.parameters;
+    public Output<Optional<List<EmailTemplateParametersContractPropertiesResponse>>> parameters() {
+        return Codegen.optional(this.parameters);
     }
     /**
      * Subject of the Template.
@@ -128,8 +129,8 @@ public class EmailTemplate extends com.pulumi.resources.CustomResource {
      * @return Title of the Template.
      * 
      */
-    public Output</* @Nullable */ String> title() {
-        return this.title;
+    public Output<Optional<String>> title() {
+        return Codegen.optional(this.title);
     }
     /**
      * Resource type for API Management resource.

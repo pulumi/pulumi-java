@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class StorageAccountCredential extends com.pulumi.resources.CustomResourc
      * @return Encrypted storage key.
      * 
      */
-    public Output</* @Nullable */ AsymmetricEncryptedSecretResponse> accountKey() {
-        return this.accountKey;
+    public Output<Optional<AsymmetricEncryptedSecretResponse>> accountKey() {
+        return Codegen.optional(this.accountKey);
     }
     /**
      * Type of storage accessed on the storage account.
@@ -86,8 +87,8 @@ public class StorageAccountCredential extends com.pulumi.resources.CustomResourc
      * @return Blob end point for private clouds.
      * 
      */
-    public Output</* @Nullable */ String> blobDomainName() {
-        return this.blobDomainName;
+    public Output<Optional<String>> blobDomainName() {
+        return Codegen.optional(this.blobDomainName);
     }
     /**
      * Connection string for the storage account. Use this string if username and account key are not specified.
@@ -100,8 +101,8 @@ public class StorageAccountCredential extends com.pulumi.resources.CustomResourc
      * @return Connection string for the storage account. Use this string if username and account key are not specified.
      * 
      */
-    public Output</* @Nullable */ String> connectionString() {
-        return this.connectionString;
+    public Output<Optional<String>> connectionString() {
+        return Codegen.optional(this.connectionString);
     }
     /**
      * The object name.
@@ -142,8 +143,8 @@ public class StorageAccountCredential extends com.pulumi.resources.CustomResourc
      * @return Id of the storage account.
      * 
      */
-    public Output</* @Nullable */ String> storageAccountId() {
-        return this.storageAccountId;
+    public Output<Optional<String>> storageAccountId() {
+        return Codegen.optional(this.storageAccountId);
     }
     /**
      * StorageAccountCredential object
@@ -184,8 +185,8 @@ public class StorageAccountCredential extends com.pulumi.resources.CustomResourc
      * @return Username for the storage account.
      * 
      */
-    public Output</* @Nullable */ String> userName() {
-        return this.userName;
+    public Output<Optional<String>> userName() {
+        return Codegen.optional(this.userName);
     }
 
     /**

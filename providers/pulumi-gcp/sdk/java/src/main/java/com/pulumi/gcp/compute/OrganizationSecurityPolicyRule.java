@@ -15,6 +15,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -66,8 +67,8 @@ public class OrganizationSecurityPolicyRule extends com.pulumi.resources.CustomR
      * @return A description of the rule.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The direction in which this rule applies. If unspecified an INGRESS rule is created.
@@ -82,8 +83,8 @@ public class OrganizationSecurityPolicyRule extends com.pulumi.resources.CustomR
      * Possible values are `INGRESS` and `EGRESS`.
      * 
      */
-    public Output</* @Nullable */ String> direction() {
-        return this.direction;
+    public Output<Optional<String>> direction() {
+        return Codegen.optional(this.direction);
     }
     /**
      * Denotes whether to enable logging for a particular rule.
@@ -100,8 +101,8 @@ public class OrganizationSecurityPolicyRule extends com.pulumi.resources.CustomR
      * configured export destination in Stackdriver.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableLogging() {
-        return this.enableLogging;
+    public Output<Optional<Boolean>> enableLogging() {
+        return Codegen.optional(this.enableLogging);
     }
     /**
      * A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding &#39;action&#39; is enforced.
@@ -144,8 +145,8 @@ public class OrganizationSecurityPolicyRule extends com.pulumi.resources.CustomR
      * @return If set to true, the specified action is not enforced.
      * 
      */
-    public Output</* @Nullable */ Boolean> preview() {
-        return this.preview;
+    public Output<Optional<Boolean>> preview() {
+        return Codegen.optional(this.preview);
     }
     /**
      * An integer indicating the priority of a rule in the list. The priority must be a value
@@ -182,8 +183,8 @@ public class OrganizationSecurityPolicyRule extends com.pulumi.resources.CustomR
      * within the organization will receive the rule.
      * 
      */
-    public Output</* @Nullable */ List<String>> targetResources() {
-        return this.targetResources;
+    public Output<Optional<List<String>>> targetResources() {
+        return Codegen.optional(this.targetResources);
     }
     /**
      * A list of service accounts indicating the sets of
@@ -198,8 +199,8 @@ public class OrganizationSecurityPolicyRule extends com.pulumi.resources.CustomR
      * instances that are applied with this rule.
      * 
      */
-    public Output</* @Nullable */ List<String>> targetServiceAccounts() {
-        return this.targetServiceAccounts;
+    public Output<Optional<List<String>>> targetServiceAccounts() {
+        return Codegen.optional(this.targetServiceAccounts);
     }
 
     /**

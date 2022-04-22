@@ -16,6 +16,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -63,8 +64,8 @@ public class LocationHDFS extends com.pulumi.resources.CustomResource {
      * @return Size of chunks (blocks) in bytes that the data is divided into when stored in the HDFS cluster.
      * 
      */
-    public Output</* @Nullable */ Integer> blockSize() {
-        return this.blockSize;
+    public Output<Optional<Integer>> blockSize() {
+        return Codegen.optional(this.blockSize);
     }
     /**
      * The Base64 string representation of the Keytab file.
@@ -77,8 +78,8 @@ public class LocationHDFS extends com.pulumi.resources.CustomResource {
      * @return The Base64 string representation of the Keytab file.
      * 
      */
-    public Output</* @Nullable */ String> kerberosKeytab() {
-        return this.kerberosKeytab;
+    public Output<Optional<String>> kerberosKeytab() {
+        return Codegen.optional(this.kerberosKeytab);
     }
     /**
      * The string representation of the Krb5Conf file, or the presigned URL to access the Krb5.conf file within an S3 bucket.
@@ -91,8 +92,8 @@ public class LocationHDFS extends com.pulumi.resources.CustomResource {
      * @return The string representation of the Krb5Conf file, or the presigned URL to access the Krb5.conf file within an S3 bucket.
      * 
      */
-    public Output</* @Nullable */ String> kerberosKrb5Conf() {
-        return this.kerberosKrb5Conf;
+    public Output<Optional<String>> kerberosKrb5Conf() {
+        return Codegen.optional(this.kerberosKrb5Conf);
     }
     /**
      * The unique identity, or principal, to which Kerberos can assign tickets.
@@ -105,8 +106,8 @@ public class LocationHDFS extends com.pulumi.resources.CustomResource {
      * @return The unique identity, or principal, to which Kerberos can assign tickets.
      * 
      */
-    public Output</* @Nullable */ String> kerberosPrincipal() {
-        return this.kerberosPrincipal;
+    public Output<Optional<String>> kerberosPrincipal() {
+        return Codegen.optional(this.kerberosPrincipal);
     }
     /**
      * The identifier for the Key Management Server where the encryption keys that encrypt data inside HDFS clusters are stored.
@@ -119,8 +120,8 @@ public class LocationHDFS extends com.pulumi.resources.CustomResource {
      * @return The identifier for the Key Management Server where the encryption keys that encrypt data inside HDFS clusters are stored.
      * 
      */
-    public Output</* @Nullable */ String> kmsKeyProviderUri() {
-        return this.kmsKeyProviderUri;
+    public Output<Optional<String>> kmsKeyProviderUri() {
+        return Codegen.optional(this.kmsKeyProviderUri);
     }
     /**
      * The Amazon Resource Name (ARN) of the HDFS location.
@@ -167,8 +168,8 @@ public class LocationHDFS extends com.pulumi.resources.CustomResource {
     @Export(name="qopConfiguration", type=LocationHDFSQopConfiguration.class, parameters={})
     private Output</* @Nullable */ LocationHDFSQopConfiguration> qopConfiguration;
 
-    public Output</* @Nullable */ LocationHDFSQopConfiguration> qopConfiguration() {
-        return this.qopConfiguration;
+    public Output<Optional<LocationHDFSQopConfiguration>> qopConfiguration() {
+        return Codegen.optional(this.qopConfiguration);
     }
     /**
      * Number of copies of each block that exists inside the HDFS cluster.
@@ -181,8 +182,8 @@ public class LocationHDFS extends com.pulumi.resources.CustomResource {
      * @return Number of copies of each block that exists inside the HDFS cluster.
      * 
      */
-    public Output</* @Nullable */ Integer> replicationFactor() {
-        return this.replicationFactor;
+    public Output<Optional<Integer>> replicationFactor() {
+        return Codegen.optional(this.replicationFactor);
     }
     /**
      * The user name that has read and write permissions on the specified HDFS cluster.
@@ -195,8 +196,8 @@ public class LocationHDFS extends com.pulumi.resources.CustomResource {
      * @return The user name that has read and write permissions on the specified HDFS cluster.
      * 
      */
-    public Output</* @Nullable */ String> simpleUser() {
-        return this.simpleUser;
+    public Output<Optional<String>> simpleUser() {
+        return Codegen.optional(this.simpleUser);
     }
     /**
      * The subdirectory in HDFS that is used to read data from the HDFS source location or write data to the HDFS destination.
@@ -209,8 +210,8 @@ public class LocationHDFS extends com.pulumi.resources.CustomResource {
      * @return The subdirectory in HDFS that is used to read data from the HDFS source location or write data to the HDFS destination.
      * 
      */
-    public Output</* @Nullable */ String> subdirectory() {
-        return this.subdirectory;
+    public Output<Optional<String>> subdirectory() {
+        return Codegen.optional(this.subdirectory);
     }
     /**
      * An array of key-value pairs to apply to this resource.
@@ -223,8 +224,8 @@ public class LocationHDFS extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<LocationHDFSTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<LocationHDFSTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

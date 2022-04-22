@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -41,14 +42,14 @@ public class PlaceIndex extends com.pulumi.resources.CustomResource {
     @Export(name="dataSourceConfiguration", type=PlaceIndexDataSourceConfiguration.class, parameters={})
     private Output</* @Nullable */ PlaceIndexDataSourceConfiguration> dataSourceConfiguration;
 
-    public Output</* @Nullable */ PlaceIndexDataSourceConfiguration> dataSourceConfiguration() {
-        return this.dataSourceConfiguration;
+    public Output<Optional<PlaceIndexDataSourceConfiguration>> dataSourceConfiguration() {
+        return Codegen.optional(this.dataSourceConfiguration);
     }
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     @Export(name="indexArn", type=String.class, parameters={})
     private Output<String> indexArn;
@@ -65,8 +66,8 @@ public class PlaceIndex extends com.pulumi.resources.CustomResource {
     @Export(name="pricingPlan", type=PlaceIndexPricingPlan.class, parameters={})
     private Output</* @Nullable */ PlaceIndexPricingPlan> pricingPlan;
 
-    public Output</* @Nullable */ PlaceIndexPricingPlan> pricingPlan() {
-        return this.pricingPlan;
+    public Output<Optional<PlaceIndexPricingPlan>> pricingPlan() {
+        return Codegen.optional(this.pricingPlan);
     }
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;

@@ -31,6 +31,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -76,8 +77,8 @@ public class LaunchTemplate extends com.pulumi.resources.CustomResource {
      * See Block Devices below for details.
      * 
      */
-    public Output</* @Nullable */ List<LaunchTemplateBlockDeviceMapping>> blockDeviceMappings() {
-        return this.blockDeviceMappings;
+    public Output<Optional<List<LaunchTemplateBlockDeviceMapping>>> blockDeviceMappings() {
+        return Codegen.optional(this.blockDeviceMappings);
     }
     /**
      * Targeting for EC2 capacity reservations. See Capacity Reservation Specification below for more details.
@@ -90,8 +91,8 @@ public class LaunchTemplate extends com.pulumi.resources.CustomResource {
      * @return Targeting for EC2 capacity reservations. See Capacity Reservation Specification below for more details.
      * 
      */
-    public Output</* @Nullable */ LaunchTemplateCapacityReservationSpecification> capacityReservationSpecification() {
-        return this.capacityReservationSpecification;
+    public Output<Optional<LaunchTemplateCapacityReservationSpecification>> capacityReservationSpecification() {
+        return Codegen.optional(this.capacityReservationSpecification);
     }
     /**
      * The CPU options for the instance. See CPU Options below for more details.
@@ -104,8 +105,8 @@ public class LaunchTemplate extends com.pulumi.resources.CustomResource {
      * @return The CPU options for the instance. See CPU Options below for more details.
      * 
      */
-    public Output</* @Nullable */ LaunchTemplateCpuOptions> cpuOptions() {
-        return this.cpuOptions;
+    public Output<Optional<LaunchTemplateCpuOptions>> cpuOptions() {
+        return Codegen.optional(this.cpuOptions);
     }
     /**
      * Customize the credit specification of the instance. See Credit
@@ -120,8 +121,8 @@ public class LaunchTemplate extends com.pulumi.resources.CustomResource {
      * Specification below for more details.
      * 
      */
-    public Output</* @Nullable */ LaunchTemplateCreditSpecification> creditSpecification() {
-        return this.creditSpecification;
+    public Output<Optional<LaunchTemplateCreditSpecification>> creditSpecification() {
+        return Codegen.optional(this.creditSpecification);
     }
     /**
      * Default Version of the launch template.
@@ -148,8 +149,8 @@ public class LaunchTemplate extends com.pulumi.resources.CustomResource {
      * @return Description of the launch template.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * If `true`, enables [EC2 Instance
@@ -164,8 +165,8 @@ public class LaunchTemplate extends com.pulumi.resources.CustomResource {
      * Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination)
      * 
      */
-    public Output</* @Nullable */ Boolean> disableApiTermination() {
-        return this.disableApiTermination;
+    public Output<Optional<Boolean>> disableApiTermination() {
+        return Codegen.optional(this.disableApiTermination);
     }
     /**
      * If `true`, the launched EC2 instance will be EBS-optimized.
@@ -178,8 +179,8 @@ public class LaunchTemplate extends com.pulumi.resources.CustomResource {
      * @return If `true`, the launched EC2 instance will be EBS-optimized.
      * 
      */
-    public Output</* @Nullable */ String> ebsOptimized() {
-        return this.ebsOptimized;
+    public Output<Optional<String>> ebsOptimized() {
+        return Codegen.optional(this.ebsOptimized);
     }
     /**
      * The elastic GPU to attach to the instance. See Elastic GPU
@@ -194,8 +195,8 @@ public class LaunchTemplate extends com.pulumi.resources.CustomResource {
      * below for more details.
      * 
      */
-    public Output</* @Nullable */ List<LaunchTemplateElasticGpuSpecification>> elasticGpuSpecifications() {
-        return this.elasticGpuSpecifications;
+    public Output<Optional<List<LaunchTemplateElasticGpuSpecification>>> elasticGpuSpecifications() {
+        return Codegen.optional(this.elasticGpuSpecifications);
     }
     /**
      * Configuration block containing an Elastic Inference Accelerator to attach to the instance. See Elastic Inference Accelerator below for more details.
@@ -208,8 +209,8 @@ public class LaunchTemplate extends com.pulumi.resources.CustomResource {
      * @return Configuration block containing an Elastic Inference Accelerator to attach to the instance. See Elastic Inference Accelerator below for more details.
      * 
      */
-    public Output</* @Nullable */ LaunchTemplateElasticInferenceAccelerator> elasticInferenceAccelerator() {
-        return this.elasticInferenceAccelerator;
+    public Output<Optional<LaunchTemplateElasticInferenceAccelerator>> elasticInferenceAccelerator() {
+        return Codegen.optional(this.elasticInferenceAccelerator);
     }
     /**
      * Enable Nitro Enclaves on launched instances. See Enclave Options below for more details.
@@ -222,8 +223,8 @@ public class LaunchTemplate extends com.pulumi.resources.CustomResource {
      * @return Enable Nitro Enclaves on launched instances. See Enclave Options below for more details.
      * 
      */
-    public Output</* @Nullable */ LaunchTemplateEnclaveOptions> enclaveOptions() {
-        return this.enclaveOptions;
+    public Output<Optional<LaunchTemplateEnclaveOptions>> enclaveOptions() {
+        return Codegen.optional(this.enclaveOptions);
     }
     /**
      * The hibernation options for the instance. See Hibernation Options below for more details.
@@ -236,8 +237,8 @@ public class LaunchTemplate extends com.pulumi.resources.CustomResource {
      * @return The hibernation options for the instance. See Hibernation Options below for more details.
      * 
      */
-    public Output</* @Nullable */ LaunchTemplateHibernationOptions> hibernationOptions() {
-        return this.hibernationOptions;
+    public Output<Optional<LaunchTemplateHibernationOptions>> hibernationOptions() {
+        return Codegen.optional(this.hibernationOptions);
     }
     /**
      * The IAM Instance Profile to launch the instance with. See Instance Profile
@@ -252,8 +253,8 @@ public class LaunchTemplate extends com.pulumi.resources.CustomResource {
      * below for more details.
      * 
      */
-    public Output</* @Nullable */ LaunchTemplateIamInstanceProfile> iamInstanceProfile() {
-        return this.iamInstanceProfile;
+    public Output<Optional<LaunchTemplateIamInstanceProfile>> iamInstanceProfile() {
+        return Codegen.optional(this.iamInstanceProfile);
     }
     /**
      * The AMI from which to launch the instance.
@@ -266,8 +267,8 @@ public class LaunchTemplate extends com.pulumi.resources.CustomResource {
      * @return The AMI from which to launch the instance.
      * 
      */
-    public Output</* @Nullable */ String> imageId() {
-        return this.imageId;
+    public Output<Optional<String>> imageId() {
+        return Codegen.optional(this.imageId);
     }
     /**
      * Shutdown behavior for the instance. Can be `stop` or `terminate`.
@@ -282,8 +283,8 @@ public class LaunchTemplate extends com.pulumi.resources.CustomResource {
      * (Default: `stop`).
      * 
      */
-    public Output</* @Nullable */ String> instanceInitiatedShutdownBehavior() {
-        return this.instanceInitiatedShutdownBehavior;
+    public Output<Optional<String>> instanceInitiatedShutdownBehavior() {
+        return Codegen.optional(this.instanceInitiatedShutdownBehavior);
     }
     /**
      * The market (purchasing) option for the instance. See Market Options
@@ -298,8 +299,8 @@ public class LaunchTemplate extends com.pulumi.resources.CustomResource {
      * below for details.
      * 
      */
-    public Output</* @Nullable */ LaunchTemplateInstanceMarketOptions> instanceMarketOptions() {
-        return this.instanceMarketOptions;
+    public Output<Optional<LaunchTemplateInstanceMarketOptions>> instanceMarketOptions() {
+        return Codegen.optional(this.instanceMarketOptions);
     }
     /**
      * The type of the instance.
@@ -312,8 +313,8 @@ public class LaunchTemplate extends com.pulumi.resources.CustomResource {
      * @return The type of the instance.
      * 
      */
-    public Output</* @Nullable */ String> instanceType() {
-        return this.instanceType;
+    public Output<Optional<String>> instanceType() {
+        return Codegen.optional(this.instanceType);
     }
     /**
      * The kernel ID.
@@ -326,8 +327,8 @@ public class LaunchTemplate extends com.pulumi.resources.CustomResource {
      * @return The kernel ID.
      * 
      */
-    public Output</* @Nullable */ String> kernelId() {
-        return this.kernelId;
+    public Output<Optional<String>> kernelId() {
+        return Codegen.optional(this.kernelId);
     }
     /**
      * The key name to use for the instance.
@@ -340,8 +341,8 @@ public class LaunchTemplate extends com.pulumi.resources.CustomResource {
      * @return The key name to use for the instance.
      * 
      */
-    public Output</* @Nullable */ String> keyName() {
-        return this.keyName;
+    public Output<Optional<String>> keyName() {
+        return Codegen.optional(this.keyName);
     }
     /**
      * The latest version of the launch template.
@@ -368,8 +369,8 @@ public class LaunchTemplate extends com.pulumi.resources.CustomResource {
      * @return A list of license specifications to associate with. See License Specification below for more details.
      * 
      */
-    public Output</* @Nullable */ List<LaunchTemplateLicenseSpecification>> licenseSpecifications() {
-        return this.licenseSpecifications;
+    public Output<Optional<List<LaunchTemplateLicenseSpecification>>> licenseSpecifications() {
+        return Codegen.optional(this.licenseSpecifications);
     }
     /**
      * Customize the metadata options for the instance. See Metadata Options below for more details.
@@ -396,8 +397,8 @@ public class LaunchTemplate extends com.pulumi.resources.CustomResource {
      * @return The monitoring option for the instance. See Monitoring below for more details.
      * 
      */
-    public Output</* @Nullable */ LaunchTemplateMonitoring> monitoring() {
-        return this.monitoring;
+    public Output<Optional<LaunchTemplateMonitoring>> monitoring() {
+        return Codegen.optional(this.monitoring);
     }
     /**
      * The name of the launch template. If you leave this blank, this provider will auto-generate a unique name.
@@ -440,8 +441,8 @@ public class LaunchTemplate extends com.pulumi.resources.CustomResource {
      * Interfaces below for more details.
      * 
      */
-    public Output</* @Nullable */ List<LaunchTemplateNetworkInterface>> networkInterfaces() {
-        return this.networkInterfaces;
+    public Output<Optional<List<LaunchTemplateNetworkInterface>>> networkInterfaces() {
+        return Codegen.optional(this.networkInterfaces);
     }
     /**
      * The placement of the instance. See Placement below for more details.
@@ -454,8 +455,8 @@ public class LaunchTemplate extends com.pulumi.resources.CustomResource {
      * @return The placement of the instance. See Placement below for more details.
      * 
      */
-    public Output</* @Nullable */ LaunchTemplatePlacement> placement() {
-        return this.placement;
+    public Output<Optional<LaunchTemplatePlacement>> placement() {
+        return Codegen.optional(this.placement);
     }
     /**
      * The ID of the RAM disk.
@@ -468,8 +469,8 @@ public class LaunchTemplate extends com.pulumi.resources.CustomResource {
      * @return The ID of the RAM disk.
      * 
      */
-    public Output</* @Nullable */ String> ramDiskId() {
-        return this.ramDiskId;
+    public Output<Optional<String>> ramDiskId() {
+        return Codegen.optional(this.ramDiskId);
     }
     /**
      * A list of security group names to associate with. If you are creating Instances in a VPC, use
@@ -484,8 +485,8 @@ public class LaunchTemplate extends com.pulumi.resources.CustomResource {
      * `vpc_security_group_ids` instead.
      * 
      */
-    public Output</* @Nullable */ List<String>> securityGroupNames() {
-        return this.securityGroupNames;
+    public Output<Optional<List<String>>> securityGroupNames() {
+        return Codegen.optional(this.securityGroupNames);
     }
     /**
      * The tags to apply to the resources during launch. See Tag Specifications below for more details.
@@ -498,8 +499,8 @@ public class LaunchTemplate extends com.pulumi.resources.CustomResource {
      * @return The tags to apply to the resources during launch. See Tag Specifications below for more details.
      * 
      */
-    public Output</* @Nullable */ List<LaunchTemplateTagSpecification>> tagSpecifications() {
-        return this.tagSpecifications;
+    public Output<Optional<List<LaunchTemplateTagSpecification>>> tagSpecifications() {
+        return Codegen.optional(this.tagSpecifications);
     }
     /**
      * A map of tags to assign to the launch template. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -512,8 +513,8 @@ public class LaunchTemplate extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the launch template. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .
@@ -540,8 +541,8 @@ public class LaunchTemplate extends com.pulumi.resources.CustomResource {
      * @return Whether to update Default Version each update. Conflicts with `default_version`.
      * 
      */
-    public Output</* @Nullable */ Boolean> updateDefaultVersion() {
-        return this.updateDefaultVersion;
+    public Output<Optional<Boolean>> updateDefaultVersion() {
+        return Codegen.optional(this.updateDefaultVersion);
     }
     /**
      * The Base64-encoded user data to provide when launching the instance.
@@ -554,8 +555,8 @@ public class LaunchTemplate extends com.pulumi.resources.CustomResource {
      * @return The Base64-encoded user data to provide when launching the instance.
      * 
      */
-    public Output</* @Nullable */ String> userData() {
-        return this.userData;
+    public Output<Optional<String>> userData() {
+        return Codegen.optional(this.userData);
     }
     /**
      * A list of security group IDs to associate with. Conflicts with `network_interfaces.security_groups`
@@ -568,8 +569,8 @@ public class LaunchTemplate extends com.pulumi.resources.CustomResource {
      * @return A list of security group IDs to associate with. Conflicts with `network_interfaces.security_groups`
      * 
      */
-    public Output</* @Nullable */ List<String>> vpcSecurityGroupIds() {
-        return this.vpcSecurityGroupIds;
+    public Output<Optional<List<String>>> vpcSecurityGroupIds() {
+        return Codegen.optional(this.vpcSecurityGroupIds);
     }
 
     /**

@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -100,8 +101,8 @@ public class LinkedSubscription extends com.pulumi.resources.CustomResource {
      * @return The entity tag used for optimistic concurrency when modifying the resource.
      * 
      */
-    public Output</* @Nullable */ String> etag() {
-        return this.etag;
+    public Output<Optional<String>> etag() {
+        return Codegen.optional(this.etag);
     }
     /**
      * The kind of the resource.
@@ -142,8 +143,8 @@ public class LinkedSubscription extends com.pulumi.resources.CustomResource {
      * @return The identifier associated with the device subscription.
      * 
      */
-    public Output</* @Nullable */ String> linkedSubscriptionId() {
-        return this.linkedSubscriptionId;
+    public Output<Optional<String>> linkedSubscriptionId() {
+        return Codegen.optional(this.linkedSubscriptionId);
     }
     /**
      * Location of the resource.
@@ -184,8 +185,8 @@ public class LinkedSubscription extends com.pulumi.resources.CustomResource {
      * @return The identifier associated with the device registration.
      * 
      */
-    public Output</* @Nullable */ String> registrationResourceId() {
-        return this.registrationResourceId;
+    public Output<Optional<String>> registrationResourceId() {
+        return Codegen.optional(this.registrationResourceId);
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
@@ -212,8 +213,8 @@ public class LinkedSubscription extends com.pulumi.resources.CustomResource {
      * @return Custom tags for the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Type of Resource.

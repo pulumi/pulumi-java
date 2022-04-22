@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -42,8 +43,8 @@ public class ApiPolicy extends com.pulumi.resources.CustomResource {
      * @return Format of the policyContent.
      * 
      */
-    public Output</* @Nullable */ String> format() {
-        return this.format;
+    public Output<Optional<String>> format() {
+        return Codegen.optional(this.format);
     }
     /**
      * Resource name.

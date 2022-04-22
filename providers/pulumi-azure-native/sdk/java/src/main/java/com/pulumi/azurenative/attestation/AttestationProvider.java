@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -42,8 +43,8 @@ public class AttestationProvider extends com.pulumi.resources.CustomResource {
      * @return Gets the uri of attestation service
      * 
      */
-    public Output</* @Nullable */ String> attestUri() {
-        return this.attestUri;
+    public Output<Optional<String>> attestUri() {
+        return Codegen.optional(this.attestUri);
     }
     /**
      * The geo-location where the resource lives
@@ -98,8 +99,8 @@ public class AttestationProvider extends com.pulumi.resources.CustomResource {
      * @return Status of attestation service.
      * 
      */
-    public Output</* @Nullable */ String> status() {
-        return this.status;
+    public Output<Optional<String>> status() {
+        return Codegen.optional(this.status);
     }
     /**
      * The system metadata relating to this resource
@@ -126,8 +127,8 @@ public class AttestationProvider extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Trust model for the attestation provider.
@@ -140,8 +141,8 @@ public class AttestationProvider extends com.pulumi.resources.CustomResource {
      * @return Trust model for the attestation provider.
      * 
      */
-    public Output</* @Nullable */ String> trustModel() {
-        return this.trustModel;
+    public Output<Optional<String>> trustModel() {
+        return Codegen.optional(this.trustModel);
     }
     /**
      * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;

@@ -12,6 +12,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -31,8 +32,8 @@ public class LoadBalancerTlsCertificate extends com.pulumi.resources.CustomResou
      * @return An array of strings listing alternative domains and subdomains for your SSL/TLS certificate.
      * 
      */
-    public Output</* @Nullable */ List<String>> certificateAlternativeNames() {
-        return this.certificateAlternativeNames;
+    public Output<Optional<List<String>>> certificateAlternativeNames() {
+        return Codegen.optional(this.certificateAlternativeNames);
     }
     /**
      * The domain name (e.g., example.com ) for your SSL/TLS certificate.
@@ -73,8 +74,8 @@ public class LoadBalancerTlsCertificate extends com.pulumi.resources.CustomResou
      * @return When true, the SSL/TLS certificate is attached to the Lightsail load balancer.
      * 
      */
-    public Output</* @Nullable */ Boolean> isAttached() {
-        return this.isAttached;
+    public Output<Optional<Boolean>> isAttached() {
+        return Codegen.optional(this.isAttached);
     }
     /**
      * The name of your load balancer.

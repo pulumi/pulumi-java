@@ -20,6 +20,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -50,8 +51,8 @@ public class Workflow extends com.pulumi.resources.CustomResource {
      * @return The access control configuration.
      * 
      */
-    public Output</* @Nullable */ FlowAccessControlConfigurationResponse> accessControl() {
-        return this.accessControl;
+    public Output<Optional<FlowAccessControlConfigurationResponse>> accessControl() {
+        return Codegen.optional(this.accessControl);
     }
     /**
      * Gets the access endpoint.
@@ -106,8 +107,8 @@ public class Workflow extends com.pulumi.resources.CustomResource {
      * @return The definition.
      * 
      */
-    public Output</* @Nullable */ Object> definition() {
-        return this.definition;
+    public Output<Optional<Object>> definition() {
+        return Codegen.optional(this.definition);
     }
     /**
      * The endpoints configuration.
@@ -120,8 +121,8 @@ public class Workflow extends com.pulumi.resources.CustomResource {
      * @return The endpoints configuration.
      * 
      */
-    public Output</* @Nullable */ FlowEndpointsConfigurationResponse> endpointsConfiguration() {
-        return this.endpointsConfiguration;
+    public Output<Optional<FlowEndpointsConfigurationResponse>> endpointsConfiguration() {
+        return Codegen.optional(this.endpointsConfiguration);
     }
     /**
      * Managed service identity properties.
@@ -134,8 +135,8 @@ public class Workflow extends com.pulumi.resources.CustomResource {
      * @return Managed service identity properties.
      * 
      */
-    public Output</* @Nullable */ ManagedServiceIdentityResponse> identity() {
-        return this.identity;
+    public Output<Optional<ManagedServiceIdentityResponse>> identity() {
+        return Codegen.optional(this.identity);
     }
     /**
      * The integration account.
@@ -148,8 +149,8 @@ public class Workflow extends com.pulumi.resources.CustomResource {
      * @return The integration account.
      * 
      */
-    public Output</* @Nullable */ ResourceReferenceResponse> integrationAccount() {
-        return this.integrationAccount;
+    public Output<Optional<ResourceReferenceResponse>> integrationAccount() {
+        return Codegen.optional(this.integrationAccount);
     }
     /**
      * The integration service environment.
@@ -162,8 +163,8 @@ public class Workflow extends com.pulumi.resources.CustomResource {
      * @return The integration service environment.
      * 
      */
-    public Output</* @Nullable */ ResourceReferenceResponse> integrationServiceEnvironment() {
-        return this.integrationServiceEnvironment;
+    public Output<Optional<ResourceReferenceResponse>> integrationServiceEnvironment() {
+        return Codegen.optional(this.integrationServiceEnvironment);
     }
     /**
      * The resource location.
@@ -176,8 +177,8 @@ public class Workflow extends com.pulumi.resources.CustomResource {
      * @return The resource location.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * Gets the resource name.
@@ -204,8 +205,8 @@ public class Workflow extends com.pulumi.resources.CustomResource {
      * @return The parameters.
      * 
      */
-    public Output</* @Nullable */ Map<String,WorkflowParameterResponse>> parameters() {
-        return this.parameters;
+    public Output<Optional<Map<String,WorkflowParameterResponse>>> parameters() {
+        return Codegen.optional(this.parameters);
     }
     /**
      * Gets the provisioning state.
@@ -246,8 +247,8 @@ public class Workflow extends com.pulumi.resources.CustomResource {
      * @return The state.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Output<Optional<String>> state() {
+        return Codegen.optional(this.state);
     }
     /**
      * The resource tags.
@@ -260,8 +261,8 @@ public class Workflow extends com.pulumi.resources.CustomResource {
      * @return The resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Gets the resource type.

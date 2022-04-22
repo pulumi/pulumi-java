@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -48,8 +49,8 @@ public class HoursOfOperation extends com.pulumi.resources.CustomResource {
      * @return The description of the hours of operation.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The Amazon Resource Name (ARN) for the hours of operation.
@@ -104,8 +105,8 @@ public class HoursOfOperation extends com.pulumi.resources.CustomResource {
      * @return One or more tags.
      * 
      */
-    public Output</* @Nullable */ List<HoursOfOperationTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<HoursOfOperationTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The time zone of the hours of operation.

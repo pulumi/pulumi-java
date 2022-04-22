@@ -16,6 +16,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -55,8 +56,8 @@ public class EdgeCacheService extends com.pulumi.resources.CustomResource {
      * @return A human-readable description of the resource.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * HTTP/3 (IETF QUIC) and Google QUIC are enabled by default.
@@ -83,8 +84,8 @@ public class EdgeCacheService extends com.pulumi.resources.CustomResource {
      * @return Resource URL that points at the Cloud Armor edge security policy that is applied on each request against the EdgeCacheService.
      * 
      */
-    public Output</* @Nullable */ String> edgeSecurityPolicy() {
-        return this.edgeSecurityPolicy;
+    public Output<Optional<String>> edgeSecurityPolicy() {
+        return Codegen.optional(this.edgeSecurityPolicy);
     }
     /**
      * URLs to sslCertificate resources that are used to authenticate connections between users and the EdgeCacheService.
@@ -99,8 +100,8 @@ public class EdgeCacheService extends com.pulumi.resources.CustomResource {
      * Note that only &#34;global&#34; certificates with a &#34;scope&#34; of &#34;EDGE_CACHE&#34; can be attached to an EdgeCacheService.
      * 
      */
-    public Output</* @Nullable */ List<String>> edgeSslCertificates() {
-        return this.edgeSslCertificates;
+    public Output<Optional<List<String>>> edgeSslCertificates() {
+        return Codegen.optional(this.edgeSslCertificates);
     }
     /**
      * The IPv4 addresses associated with this service. Addresses are static for the lifetime of the service.
@@ -141,8 +142,8 @@ public class EdgeCacheService extends com.pulumi.resources.CustomResource {
      * @return Set of label tags associated with the EdgeCache resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * Specifies the logging options for the traffic served by this service. If logging is enabled, logs will be exported to Cloud Logging.
@@ -157,8 +158,8 @@ public class EdgeCacheService extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ EdgeCacheServiceLogConfig> logConfig() {
-        return this.logConfig;
+    public Output<Optional<EdgeCacheServiceLogConfig>> logConfig() {
+        return Codegen.optional(this.logConfig);
     }
     /**
      * The name of the query parameter to match. The query parameter must exist in the request, in the absence of which the request match fails.
@@ -237,8 +238,8 @@ public class EdgeCacheService extends com.pulumi.resources.CustomResource {
      * If not set, the EdgeCacheService has no SSL policy configured, and will default to the &#34;COMPATIBLE&#34; policy.
      * 
      */
-    public Output</* @Nullable */ String> sslPolicy() {
-        return this.sslPolicy;
+    public Output<Optional<String>> sslPolicy() {
+        return Codegen.optional(this.sslPolicy);
     }
 
     /**

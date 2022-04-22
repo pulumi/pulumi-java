@@ -13,6 +13,7 @@ import com.pulumi.gcp.organizations.inputs.IAMCustomRoleState;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -66,8 +67,8 @@ public class IAMCustomRole extends com.pulumi.resources.CustomResource {
      * @return A human-readable description for the role.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The name of the role in the format `organizations/{{org_id}}/roles/{{role_id}}`. Like `id`, this field can be used as a reference in other resources such as IAM role bindings.
@@ -140,8 +141,8 @@ public class IAMCustomRole extends com.pulumi.resources.CustomResource {
      * List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1/organizations.roles#Role.RoleLaunchStage).
      * 
      */
-    public Output</* @Nullable */ String> stage() {
-        return this.stage;
+    public Output<Optional<String>> stage() {
+        return Codegen.optional(this.stage);
     }
     /**
      * A human-readable title for the role.

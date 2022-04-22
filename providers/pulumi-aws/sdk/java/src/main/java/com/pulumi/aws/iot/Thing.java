@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -56,8 +57,8 @@ public class Thing extends com.pulumi.resources.CustomResource {
      * @return Map of attributes of the thing.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> attributes() {
-        return this.attributes;
+    public Output<Optional<Map<String,String>>> attributes() {
+        return Codegen.optional(this.attributes);
     }
     /**
      * The default client ID.
@@ -98,8 +99,8 @@ public class Thing extends com.pulumi.resources.CustomResource {
      * @return The thing type name.
      * 
      */
-    public Output</* @Nullable */ String> thingTypeName() {
-        return this.thingTypeName;
+    public Output<Optional<String>> thingTypeName() {
+        return Codegen.optional(this.thingTypeName);
     }
     /**
      * The current version of the thing record in the registry.

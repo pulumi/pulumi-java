@@ -19,6 +19,7 @@ import com.pulumi.gcp.compute.outputs.RegionHealthCheckSslHealthCheck;
 import com.pulumi.gcp.compute.outputs.RegionHealthCheckTcpHealthCheck;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -78,8 +79,8 @@ public class RegionHealthCheck extends com.pulumi.resources.CustomResource {
      * seconds.
      * 
      */
-    public Output</* @Nullable */ Integer> checkIntervalSec() {
-        return this.checkIntervalSec;
+    public Output<Optional<Integer>> checkIntervalSec() {
+        return Codegen.optional(this.checkIntervalSec);
     }
     /**
      * Creation timestamp in RFC3339 text format.
@@ -108,8 +109,8 @@ public class RegionHealthCheck extends com.pulumi.resources.CustomResource {
      * you create the resource.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * A nested object resource
@@ -124,8 +125,8 @@ public class RegionHealthCheck extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ RegionHealthCheckGrpcHealthCheck> grpcHealthCheck() {
-        return this.grpcHealthCheck;
+    public Output<Optional<RegionHealthCheckGrpcHealthCheck>> grpcHealthCheck() {
+        return Codegen.optional(this.grpcHealthCheck);
     }
     /**
      * A so-far unhealthy instance will be marked healthy after this many
@@ -140,8 +141,8 @@ public class RegionHealthCheck extends com.pulumi.resources.CustomResource {
      * consecutive successes. The default value is 2.
      * 
      */
-    public Output</* @Nullable */ Integer> healthyThreshold() {
-        return this.healthyThreshold;
+    public Output<Optional<Integer>> healthyThreshold() {
+        return Codegen.optional(this.healthyThreshold);
     }
     /**
      * A nested object resource
@@ -156,8 +157,8 @@ public class RegionHealthCheck extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ RegionHealthCheckHttp2HealthCheck> http2HealthCheck() {
-        return this.http2HealthCheck;
+    public Output<Optional<RegionHealthCheckHttp2HealthCheck>> http2HealthCheck() {
+        return Codegen.optional(this.http2HealthCheck);
     }
     /**
      * A nested object resource
@@ -172,8 +173,8 @@ public class RegionHealthCheck extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ RegionHealthCheckHttpHealthCheck> httpHealthCheck() {
-        return this.httpHealthCheck;
+    public Output<Optional<RegionHealthCheckHttpHealthCheck>> httpHealthCheck() {
+        return Codegen.optional(this.httpHealthCheck);
     }
     /**
      * A nested object resource
@@ -188,8 +189,8 @@ public class RegionHealthCheck extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ RegionHealthCheckHttpsHealthCheck> httpsHealthCheck() {
-        return this.httpsHealthCheck;
+    public Output<Optional<RegionHealthCheckHttpsHealthCheck>> httpsHealthCheck() {
+        return Codegen.optional(this.httpsHealthCheck);
     }
     /**
      * Configure logging on this health check.
@@ -292,8 +293,8 @@ public class RegionHealthCheck extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ RegionHealthCheckSslHealthCheck> sslHealthCheck() {
-        return this.sslHealthCheck;
+    public Output<Optional<RegionHealthCheckSslHealthCheck>> sslHealthCheck() {
+        return Codegen.optional(this.sslHealthCheck);
     }
     /**
      * A nested object resource
@@ -308,8 +309,8 @@ public class RegionHealthCheck extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ RegionHealthCheckTcpHealthCheck> tcpHealthCheck() {
-        return this.tcpHealthCheck;
+    public Output<Optional<RegionHealthCheckTcpHealthCheck>> tcpHealthCheck() {
+        return Codegen.optional(this.tcpHealthCheck);
     }
     /**
      * How long (in seconds) to wait before claiming failure.
@@ -326,8 +327,8 @@ public class RegionHealthCheck extends com.pulumi.resources.CustomResource {
      * greater value than checkIntervalSec.
      * 
      */
-    public Output</* @Nullable */ Integer> timeoutSec() {
-        return this.timeoutSec;
+    public Output<Optional<Integer>> timeoutSec() {
+        return Codegen.optional(this.timeoutSec);
     }
     /**
      * The type of the health check. One of HTTP, HTTP2, HTTPS, TCP, or SSL.
@@ -356,8 +357,8 @@ public class RegionHealthCheck extends com.pulumi.resources.CustomResource {
      * consecutive failures. The default value is 2.
      * 
      */
-    public Output</* @Nullable */ Integer> unhealthyThreshold() {
-        return this.unhealthyThreshold;
+    public Output<Optional<Integer>> unhealthyThreshold() {
+        return Codegen.optional(this.unhealthyThreshold);
     }
 
     /**

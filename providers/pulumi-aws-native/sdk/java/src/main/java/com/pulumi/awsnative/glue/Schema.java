@@ -16,6 +16,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -41,8 +42,8 @@ public class Schema extends com.pulumi.resources.CustomResource {
     @Export(name="checkpointVersion", type=SchemaVersion.class, parameters={})
     private Output</* @Nullable */ SchemaVersion> checkpointVersion;
 
-    public Output</* @Nullable */ SchemaVersion> checkpointVersion() {
-        return this.checkpointVersion;
+    public Output<Optional<SchemaVersion>> checkpointVersion() {
+        return Codegen.optional(this.checkpointVersion);
     }
     /**
      * Compatibility setting for the schema.
@@ -83,8 +84,8 @@ public class Schema extends com.pulumi.resources.CustomResource {
      * @return A description of the schema. If description is not provided, there will not be any default value for this.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Represents the version ID associated with the initial schema version.
@@ -117,8 +118,8 @@ public class Schema extends com.pulumi.resources.CustomResource {
     @Export(name="registry", type=SchemaRegistry.class, parameters={})
     private Output</* @Nullable */ SchemaRegistry> registry;
 
-    public Output</* @Nullable */ SchemaRegistry> registry() {
-        return this.registry;
+    public Output<Optional<SchemaRegistry>> registry() {
+        return Codegen.optional(this.registry);
     }
     /**
      * Definition for the initial schema version in plain-text.
@@ -145,8 +146,8 @@ public class Schema extends com.pulumi.resources.CustomResource {
      * @return List of tags to tag the schema
      * 
      */
-    public Output</* @Nullable */ List<SchemaTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<SchemaTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

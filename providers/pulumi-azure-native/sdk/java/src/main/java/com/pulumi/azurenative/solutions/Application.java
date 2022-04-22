@@ -24,6 +24,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -54,8 +55,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return The fully qualified path of managed application definition Id.
      * 
      */
-    public Output</* @Nullable */ String> applicationDefinitionId() {
-        return this.applicationDefinitionId;
+    public Output<Optional<String>> applicationDefinitionId() {
+        return Codegen.optional(this.applicationDefinitionId);
     }
     /**
      * The collection of managed application artifacts.
@@ -138,8 +139,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return The identity of the resource.
      * 
      */
-    public Output</* @Nullable */ IdentityResponse> identity() {
-        return this.identity;
+    public Output<Optional<IdentityResponse>> identity() {
+        return Codegen.optional(this.identity);
     }
     /**
      * The managed application Jit access policy.
@@ -152,8 +153,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return The managed application Jit access policy.
      * 
      */
-    public Output</* @Nullable */ ApplicationJitAccessPolicyResponse> jitAccessPolicy() {
-        return this.jitAccessPolicy;
+    public Output<Optional<ApplicationJitAccessPolicyResponse>> jitAccessPolicy() {
+        return Codegen.optional(this.jitAccessPolicy);
     }
     /**
      * The kind of the managed application. Allowed values are MarketPlace and ServiceCatalog.
@@ -180,8 +181,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return Resource location
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * ID of the resource that manages this resource.
@@ -194,8 +195,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return ID of the resource that manages this resource.
      * 
      */
-    public Output</* @Nullable */ String> managedBy() {
-        return this.managedBy;
+    public Output<Optional<String>> managedBy() {
+        return Codegen.optional(this.managedBy);
     }
     /**
      * The managed resource group Id.
@@ -208,8 +209,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return The managed resource group Id.
      * 
      */
-    public Output</* @Nullable */ String> managedResourceGroupId() {
-        return this.managedResourceGroupId;
+    public Output<Optional<String>> managedResourceGroupId() {
+        return Codegen.optional(this.managedResourceGroupId);
     }
     /**
      * The managed application management mode.
@@ -264,8 +265,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return Name and value pairs that define the managed application parameters. It can be a JObject or a well formed JSON string.
      * 
      */
-    public Output</* @Nullable */ Object> parameters() {
-        return this.parameters;
+    public Output<Optional<Object>> parameters() {
+        return Codegen.optional(this.parameters);
     }
     /**
      * The plan information.
@@ -278,8 +279,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return The plan information.
      * 
      */
-    public Output</* @Nullable */ PlanResponse> plan() {
-        return this.plan;
+    public Output<Optional<PlanResponse>> plan() {
+        return Codegen.optional(this.plan);
     }
     /**
      * The managed application provisioning state.
@@ -320,8 +321,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return The SKU of the resource.
      * 
      */
-    public Output</* @Nullable */ SkuResponse> sku() {
-        return this.sku;
+    public Output<Optional<SkuResponse>> sku() {
+        return Codegen.optional(this.sku);
     }
     /**
      * The read-only support URLs property that is retrieved from the application package.
@@ -348,8 +349,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type

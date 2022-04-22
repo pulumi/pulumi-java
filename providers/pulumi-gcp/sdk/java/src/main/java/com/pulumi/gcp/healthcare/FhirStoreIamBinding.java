@@ -13,6 +13,7 @@ import com.pulumi.gcp.healthcare.inputs.FhirStoreIamBindingState;
 import com.pulumi.gcp.healthcare.outputs.FhirStoreIamBindingCondition;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -64,8 +65,8 @@ public class FhirStoreIamBinding extends com.pulumi.resources.CustomResource {
     @Export(name="condition", type=FhirStoreIamBindingCondition.class, parameters={})
     private Output</* @Nullable */ FhirStoreIamBindingCondition> condition;
 
-    public Output</* @Nullable */ FhirStoreIamBindingCondition> condition() {
-        return this.condition;
+    public Output<Optional<FhirStoreIamBindingCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * (Computed) The etag of the FHIR store&#39;s IAM policy.

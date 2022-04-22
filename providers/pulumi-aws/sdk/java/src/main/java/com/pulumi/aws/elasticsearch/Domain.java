@@ -24,6 +24,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -129,8 +130,8 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return Configuration block for authenticating Kibana with Cognito. Detailed below.
      * 
      */
-    public Output</* @Nullable */ DomainCognitoOptions> cognitoOptions() {
-        return this.cognitoOptions;
+    public Output<Optional<DomainCognitoOptions>> cognitoOptions() {
+        return Codegen.optional(this.cognitoOptions);
     }
     /**
      * Configuration block for domain endpoint HTTP(S) related options. Detailed below.
@@ -199,8 +200,8 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return Version of Elasticsearch to deploy. Defaults to `1.5`.
      * 
      */
-    public Output</* @Nullable */ String> elasticsearchVersion() {
-        return this.elasticsearchVersion;
+    public Output<Optional<String>> elasticsearchVersion() {
+        return Codegen.optional(this.elasticsearchVersion);
     }
     /**
      * Configuration block for encrypt at rest options. Only available for [certain instance types](http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/aes-supported-instance-types.html). Detailed below.
@@ -255,8 +256,8 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return Configuration block for publishing slow and application logs to CloudWatch Logs. This block can be declared multiple times, for each log_type, within the same resource. Detailed below.
      * 
      */
-    public Output</* @Nullable */ List<DomainLogPublishingOption>> logPublishingOptions() {
-        return this.logPublishingOptions;
+    public Output<Optional<List<DomainLogPublishingOption>>> logPublishingOptions() {
+        return Codegen.optional(this.logPublishingOptions);
     }
     /**
      * Configuration block for node-to-node encryption options. Detailed below.
@@ -283,8 +284,8 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return Configuration block for snapshot related options. Detailed below. DEPRECATED. For domains running Elasticsearch 5.3 and later, Amazon ES takes hourly automated snapshots, making this setting irrelevant. For domains running earlier versions of Elasticsearch, Amazon ES takes daily automated snapshots.
      * 
      */
-    public Output</* @Nullable */ DomainSnapshotOptions> snapshotOptions() {
-        return this.snapshotOptions;
+    public Output<Optional<DomainSnapshotOptions>> snapshotOptions() {
+        return Codegen.optional(this.snapshotOptions);
     }
     /**
      * Map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -297,8 +298,8 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return Map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
@@ -317,8 +318,8 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return Configuration block for VPC related options. Adding or removing this configuration forces a new resource ([documentation](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-vpc.html#es-vpc-limitations)). Detailed below.
      * 
      */
-    public Output</* @Nullable */ DomainVpcOptions> vpcOptions() {
-        return this.vpcOptions;
+    public Output<Optional<DomainVpcOptions>> vpcOptions() {
+        return Codegen.optional(this.vpcOptions);
     }
 
     /**

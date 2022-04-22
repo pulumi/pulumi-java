@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -24,8 +25,8 @@ public class Function extends com.pulumi.resources.CustomResource {
     @Export(name="autoPublish", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> autoPublish;
 
-    public Output</* @Nullable */ Boolean> autoPublish() {
-        return this.autoPublish;
+    public Output<Optional<Boolean>> autoPublish() {
+        return Codegen.optional(this.autoPublish);
     }
     @Export(name="functionARN", type=String.class, parameters={})
     private Output<String> functionARN;
@@ -36,20 +37,20 @@ public class Function extends com.pulumi.resources.CustomResource {
     @Export(name="functionCode", type=String.class, parameters={})
     private Output</* @Nullable */ String> functionCode;
 
-    public Output</* @Nullable */ String> functionCode() {
-        return this.functionCode;
+    public Output<Optional<String>> functionCode() {
+        return Codegen.optional(this.functionCode);
     }
     @Export(name="functionConfig", type=FunctionConfig.class, parameters={})
     private Output</* @Nullable */ FunctionConfig> functionConfig;
 
-    public Output</* @Nullable */ FunctionConfig> functionConfig() {
-        return this.functionConfig;
+    public Output<Optional<FunctionConfig>> functionConfig() {
+        return Codegen.optional(this.functionConfig);
     }
     @Export(name="functionMetadata", type=FunctionMetadata.class, parameters={})
     private Output</* @Nullable */ FunctionMetadata> functionMetadata;
 
-    public Output</* @Nullable */ FunctionMetadata> functionMetadata() {
-        return this.functionMetadata;
+    public Output<Optional<FunctionMetadata>> functionMetadata() {
+        return Codegen.optional(this.functionMetadata);
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;

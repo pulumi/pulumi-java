@@ -12,6 +12,7 @@ import com.pulumi.gcp.storage.BucketACLArgs;
 import com.pulumi.gcp.storage.inputs.BucketACLState;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -60,8 +61,8 @@ public class BucketACL extends com.pulumi.resources.CustomResource {
      * @return Configure this ACL to be the default ACL.
      * 
      */
-    public Output</* @Nullable */ String> defaultAcl() {
-        return this.defaultAcl;
+    public Output<Optional<String>> defaultAcl() {
+        return Codegen.optional(this.defaultAcl);
     }
     /**
      * The [canned GCS ACL](https://cloud.google.com/storage/docs/access-control/lists#predefined-acl) to apply. Must be set if `role_entity` is not.
@@ -74,8 +75,8 @@ public class BucketACL extends com.pulumi.resources.CustomResource {
      * @return The [canned GCS ACL](https://cloud.google.com/storage/docs/access-control/lists#predefined-acl) to apply. Must be set if `role_entity` is not.
      * 
      */
-    public Output</* @Nullable */ String> predefinedAcl() {
-        return this.predefinedAcl;
+    public Output<Optional<String>> predefinedAcl() {
+        return Codegen.optional(this.predefinedAcl);
     }
     /**
      * List of role/entity pairs in the form `ROLE:entity`. See [GCS Bucket ACL documentation](https://cloud.google.com/storage/docs/json_api/v1/bucketAccessControls)  for more details. Must be set if `predefined_acl` is not.

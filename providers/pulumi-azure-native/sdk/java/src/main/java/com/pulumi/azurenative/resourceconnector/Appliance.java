@@ -16,6 +16,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class Appliance extends com.pulumi.resources.CustomResource {
      * @return Represents a supported Fabric/Infra. (AKSEdge etc...).
      * 
      */
-    public Output</* @Nullable */ String> distro() {
-        return this.distro;
+    public Output<Optional<String>> distro() {
+        return Codegen.optional(this.distro);
     }
     /**
      * Identity for the resource.
@@ -60,8 +61,8 @@ public class Appliance extends com.pulumi.resources.CustomResource {
      * @return Identity for the resource.
      * 
      */
-    public Output</* @Nullable */ IdentityResponse> identity() {
-        return this.identity;
+    public Output<Optional<IdentityResponse>> identity() {
+        return Codegen.optional(this.identity);
     }
     /**
      * Contains infrastructure information about the Appliance
@@ -74,8 +75,8 @@ public class Appliance extends com.pulumi.resources.CustomResource {
      * @return Contains infrastructure information about the Appliance
      * 
      */
-    public Output</* @Nullable */ AppliancePropertiesResponseInfrastructureConfig> infrastructureConfig() {
-        return this.infrastructureConfig;
+    public Output<Optional<AppliancePropertiesResponseInfrastructureConfig>> infrastructureConfig() {
+        return Codegen.optional(this.infrastructureConfig);
     }
     /**
      * The geo-location where the resource lives
@@ -130,8 +131,8 @@ public class Appliance extends com.pulumi.resources.CustomResource {
      * @return Certificates pair used to download MSI certificate from HIS
      * 
      */
-    public Output</* @Nullable */ String> publicKey() {
-        return this.publicKey;
+    public Output<Optional<String>> publicKey() {
+        return Codegen.optional(this.publicKey);
     }
     /**
      * Appliance’s health and state of connection to on-prem
@@ -172,8 +173,8 @@ public class Appliance extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
