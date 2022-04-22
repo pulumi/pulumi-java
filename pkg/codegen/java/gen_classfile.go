@@ -1,11 +1,11 @@
-package jvm
+package java
 
 import (
 	"bytes"
 	"fmt"
 	"io"
 
-	"github.com/pulumi/pulumi-java/pkg/codegen/jvm/names"
+	"github.com/pulumi/pulumi-java/pkg/codegen/java/names"
 )
 
 type classFileContext struct {

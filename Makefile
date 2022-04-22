@@ -78,7 +78,7 @@ test_integrations: bin/pulumi-language-java
 	cd tests/integration && PATH="${PATH}:${PWD}/bin" go test -test.v
 
 codegen_tests::
-	cd ./pkg/codegen/jvm && go test ./...
+	cd ./pkg/codegen/java && go test ./...
 
 submodule_update::
 	git submodule update --init --recursive
