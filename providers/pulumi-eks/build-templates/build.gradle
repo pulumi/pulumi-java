@@ -16,7 +16,7 @@ java {
 
 compileJava {
     options.fork = true
-    options.forkOptions.jvmArgs.addAll(["-Xmx4g"])
+    options.forkOptions.jvmArgs.addAll(["-Xmx4g", "-XshowSettings:vm"])
 }
 
 def gprUser = project.findProperty("gpr.user")  ?: System.getenv("GPR_USER")
@@ -186,7 +186,7 @@ javadoc {
     if (JavaVersion.current().isJava9Compatible()) {
         options.addBooleanOption('html5', true)
     }
-    options.jFlags("-Xmx2g", "-Xms512m")
+    options.jFlags("-Xmx2g", "-Xms512m", "-XshowSettings:vm")
 }
 
 if (ossrhUsername) {

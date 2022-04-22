@@ -138,7 +138,7 @@ java {
 
 compileJava {
     options.fork = true
-    options.forkOptions.jvmArgs.addAll(["-Xmx4g"])
+    options.forkOptions.jvmArgs.addAll(["-Xmx4g", "-XshowSettings:vm"])
 }
 
 repositories {

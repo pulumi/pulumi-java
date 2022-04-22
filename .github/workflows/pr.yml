@@ -32,7 +32,6 @@ env:
   GPR_USER: ${{ secrets.GPR_USER }}
   GPR_TOKEN: ${{ secrets.GPR_TOKEN }}
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
 jobs:
 
   prerequisites:

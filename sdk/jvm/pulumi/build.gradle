@@ -198,7 +198,7 @@ javadoc {
     if (JavaVersion.current().isJava9Compatible()) {
         options.addBooleanOption('html5', true)
     }
-    options.jFlags("-Xmx2g", "-Xms512m")
+    options.jFlags("-Xmx2g", "-Xms512m", "-XshowSettings:vm")
 }
 
 def signingKeyId = project.findProperty("signingKeyId") ?: System.getenv("SIGNING_KEY_ID")
