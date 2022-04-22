@@ -1216,8 +1216,8 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 		// Prefer to surface non-required properties as `Output<Optional<T>>` rather than
 		// `Output</* Nullable */ T>` through the getter.
 		getterExpr := fmt.Sprintf("this.%s", propertyName)
-		if isNullable, t := propertyType.unNullable(); isNullable {
-			getterType = t.optional().ToCode(ctx.imports)
+		if isNullable, t := propertyType.UnNullable(); isNullable {
+			getterType = t.Optional().ToCode(ctx.imports)
 			getterExpr = fmt.Sprintf("%s.optional(this.%s)", ctx.ref(names.Codegen), propertyName)
 		}
 
