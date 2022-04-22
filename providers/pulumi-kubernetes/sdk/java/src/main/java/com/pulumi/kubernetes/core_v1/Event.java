@@ -17,6 +17,7 @@ import com.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -36,8 +37,8 @@ public class Event extends com.pulumi.resources.CustomResource {
      * @return What action was taken/failed regarding to the Regarding object.
      * 
      */
-    public Output</* @Nullable */ String> action() {
-        return this.action;
+    public Output<Optional<String>> action() {
+        return Codegen.optional(this.action);
     }
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
@@ -50,8 +51,8 @@ public class Event extends com.pulumi.resources.CustomResource {
      * @return APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
      */
-    public Output</* @Nullable */ String> apiVersion() {
-        return this.apiVersion;
+    public Output<Optional<String>> apiVersion() {
+        return Codegen.optional(this.apiVersion);
     }
     /**
      * The number of times this event has occurred.
@@ -64,8 +65,8 @@ public class Event extends com.pulumi.resources.CustomResource {
      * @return The number of times this event has occurred.
      * 
      */
-    public Output</* @Nullable */ Integer> count() {
-        return this.count;
+    public Output<Optional<Integer>> count() {
+        return Codegen.optional(this.count);
     }
     /**
      * Time when this Event was first observed.
@@ -78,8 +79,8 @@ public class Event extends com.pulumi.resources.CustomResource {
      * @return Time when this Event was first observed.
      * 
      */
-    public Output</* @Nullable */ String> eventTime() {
-        return this.eventTime;
+    public Output<Optional<String>> eventTime() {
+        return Codegen.optional(this.eventTime);
     }
     /**
      * The time at which the event was first recorded. (Time of server receipt is in TypeMeta.)
@@ -92,8 +93,8 @@ public class Event extends com.pulumi.resources.CustomResource {
      * @return The time at which the event was first recorded. (Time of server receipt is in TypeMeta.)
      * 
      */
-    public Output</* @Nullable */ String> firstTimestamp() {
-        return this.firstTimestamp;
+    public Output<Optional<String>> firstTimestamp() {
+        return Codegen.optional(this.firstTimestamp);
     }
     /**
      * The object that this event is about.
@@ -120,8 +121,8 @@ public class Event extends com.pulumi.resources.CustomResource {
      * @return Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
      */
-    public Output</* @Nullable */ String> kind() {
-        return this.kind;
+    public Output<Optional<String>> kind() {
+        return Codegen.optional(this.kind);
     }
     /**
      * The time at which the most recent occurrence of this event was recorded.
@@ -134,8 +135,8 @@ public class Event extends com.pulumi.resources.CustomResource {
      * @return The time at which the most recent occurrence of this event was recorded.
      * 
      */
-    public Output</* @Nullable */ String> lastTimestamp() {
-        return this.lastTimestamp;
+    public Output<Optional<String>> lastTimestamp() {
+        return Codegen.optional(this.lastTimestamp);
     }
     /**
      * A human-readable description of the status of this operation.
@@ -148,8 +149,8 @@ public class Event extends com.pulumi.resources.CustomResource {
      * @return A human-readable description of the status of this operation.
      * 
      */
-    public Output</* @Nullable */ String> message() {
-        return this.message;
+    public Output<Optional<String>> message() {
+        return Codegen.optional(this.message);
     }
     /**
      * Standard object&#39;s metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
@@ -176,8 +177,8 @@ public class Event extends com.pulumi.resources.CustomResource {
      * @return This should be a short, machine understandable string that gives the reason for the transition into the object&#39;s current status.
      * 
      */
-    public Output</* @Nullable */ String> reason() {
-        return this.reason;
+    public Output<Optional<String>> reason() {
+        return Codegen.optional(this.reason);
     }
     /**
      * Optional secondary object for more complex actions.
@@ -190,8 +191,8 @@ public class Event extends com.pulumi.resources.CustomResource {
      * @return Optional secondary object for more complex actions.
      * 
      */
-    public Output</* @Nullable */ ObjectReference> related() {
-        return this.related;
+    public Output<Optional<ObjectReference>> related() {
+        return Codegen.optional(this.related);
     }
     /**
      * Name of the controller that emitted this Event, e.g. `kubernetes.io/kubelet`.
@@ -204,8 +205,8 @@ public class Event extends com.pulumi.resources.CustomResource {
      * @return Name of the controller that emitted this Event, e.g. `kubernetes.io/kubelet`.
      * 
      */
-    public Output</* @Nullable */ String> reportingComponent() {
-        return this.reportingComponent;
+    public Output<Optional<String>> reportingComponent() {
+        return Codegen.optional(this.reportingComponent);
     }
     /**
      * ID of the controller instance, e.g. `kubelet-xyzf`.
@@ -218,8 +219,8 @@ public class Event extends com.pulumi.resources.CustomResource {
      * @return ID of the controller instance, e.g. `kubelet-xyzf`.
      * 
      */
-    public Output</* @Nullable */ String> reportingInstance() {
-        return this.reportingInstance;
+    public Output<Optional<String>> reportingInstance() {
+        return Codegen.optional(this.reportingInstance);
     }
     /**
      * Data about the Event series this event represents or nil if it&#39;s a singleton Event.
@@ -232,8 +233,8 @@ public class Event extends com.pulumi.resources.CustomResource {
      * @return Data about the Event series this event represents or nil if it&#39;s a singleton Event.
      * 
      */
-    public Output</* @Nullable */ EventSeries> series() {
-        return this.series;
+    public Output<Optional<EventSeries>> series() {
+        return Codegen.optional(this.series);
     }
     /**
      * The component reporting this event. Should be a short machine understandable string.
@@ -246,8 +247,8 @@ public class Event extends com.pulumi.resources.CustomResource {
      * @return The component reporting this event. Should be a short machine understandable string.
      * 
      */
-    public Output</* @Nullable */ EventSource> source() {
-        return this.source;
+    public Output<Optional<EventSource>> source() {
+        return Codegen.optional(this.source);
     }
     /**
      * Type of this event (Normal, Warning), new types could be added in the future
@@ -260,8 +261,8 @@ public class Event extends com.pulumi.resources.CustomResource {
      * @return Type of this event (Normal, Warning), new types could be added in the future
      * 
      */
-    public Output</* @Nullable */ String> type() {
-        return this.type;
+    public Output<Optional<String>> type() {
+        return Codegen.optional(this.type);
     }
 
     /**
