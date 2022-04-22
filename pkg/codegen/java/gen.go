@@ -88,22 +88,17 @@ func tokenToFunctionName(tok string) string {
 	return tokenToName(tok)
 }
 
-func (mod *modContext) tokenToPackage(tok string, qualifier string) string {
+func (mod *modContext) tokenToPackage(tok string, qualifier qualifier) string {
 	components := strings.Split(tok, ":")
 	contract.Assertf(len(components) == 3, "malformed token %v", tok)
 
 	pkg := mod.basePackageName + packageName(mod.packages, components[0])
 	pkgName := mod.pkg.TokenToModule(tok)
 
-	typ := pkg
 	if pkgName != "" {
-		typ += "." + packageName(mod.packages, pkgName)
+		pkg += "." + packageName(mod.packages, pkgName)
 	}
-	if qualifier != "" {
-		typ += "." + qualifier
-	}
-
-	return typ
+	return qualifier.append(pkg)
 }
 
 func (mod *modContext) typeName(t *schema.ObjectType, state, args bool) string {
@@ -120,7 +115,7 @@ func (mod *modContext) typeName(t *schema.ObjectType, state, args bool) string {
 func (mod *modContext) typeString(
 	ctx *classFileContext,
 	t schema.Type,
-	qualifier string,
+	qualifier qualifier,
 	input bool,
 	state bool,
 	// Influences how Map and Array types are generated.
@@ -145,7 +140,7 @@ func (mod *modContext) typeString(
 func (mod *modContext) typeStringRecHelper(
 	ctx *classFileContext,
 	t schema.Type,
-	qualifier string,
+	qualifier qualifier,
 	input bool,
 	state bool,
 	requireInitializers bool,
@@ -268,7 +263,7 @@ func (mod *modContext) typeStringRecHelper(
 					basePackageName: info.BasePackageOrDefault(),
 				}
 			}
-			pkg, err := parsePackageName(namingCtx.tokenToPackage(t.Token, ""))
+			pkg, err := parsePackageName(namingCtx.tokenToPackage(t.Token, noQualifier))
 			if err != nil {
 				panic(err)
 			}
@@ -343,11 +338,11 @@ func (mod *modContext) typeStringRecHelper(
 }
 
 func (mod *modContext) typeStringForEnumType(enumType *schema.EnumType) TypeShape {
-	pkg, err := parsePackageName(mod.tokenToPackage(enumType.Token, ""))
+	pkg, err := parsePackageName(mod.tokenToPackage(enumType.Token, enumsQualifier))
 	if err != nil {
 		panic(err)
 	}
-	fqn := pkg.Dot("enums").Dot(names.Ident(tokenToName(enumType.Token)))
+	fqn := pkg.Dot(names.Ident(tokenToName(enumType.Token)))
 	return TypeShape{Type: fqn}
 }
 
@@ -382,7 +377,7 @@ type plainType struct {
 	name                  string
 	comment               string
 	baseClass             string
-	propertyTypeQualifier string
+	propertyTypeQualifier qualifier
 	properties            []*schema.Property
 	args                  bool
 	state                 bool
@@ -1184,7 +1179,7 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 		propertyType := mod.typeString(
 			ctx,
 			prop.Type,
-			"outputs",
+			outputsQualifier,
 			false,
 			false,
 			false,
@@ -1566,7 +1561,7 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 					mod:                   mod,
 					name:                  ctx.className.String(),
 					baseClass:             "com.pulumi.resources.InvokeArgs",
-					propertyTypeQualifier: "inputs",
+					propertyTypeQualifier: inputsQualifier,
 					properties:            fun.Inputs.Properties,
 				}
 				return args.genInputType(ctx)
@@ -1580,7 +1575,7 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 				res := &plainType{
 					mod:                   mod,
 					name:                  ctx.className.String(),
-					propertyTypeQualifier: "outputs",
+					propertyTypeQualifier: outputsQualifier,
 					properties:            fun.Outputs.Properties,
 				}
 				contract.Assert(resultClass.String() == res.name)
@@ -1603,7 +1598,8 @@ func printObsoleteAttribute(ctx *classFileContext, deprecationMessage, indent st
 	}
 }
 
-func (mod *modContext) genEnum(ctx *classFileContext, qualifier string, enum *schema.EnumType) error {
+// what's qualifier?
+func (mod *modContext) genEnum(ctx *classFileContext, enum *schema.EnumType) error {
 	w := ctx.writer
 	indent := "    "
 	enumName := tokenToName(enum.Token)
@@ -1631,7 +1627,7 @@ func (mod *modContext) genEnum(ctx *classFileContext, qualifier string, enum *sc
 	underlyingType := mod.typeString(
 		ctx,
 		enum.ElementType,
-		qualifier,
+		enumsQualifier,
 		false,
 		false,
 		false,
@@ -1722,10 +1718,42 @@ func visitObjectTypes(properties []*schema.Property, visitor func(*schema.Object
 	})
 }
 
+type qualifier int
+
+const (
+	noQualifier qualifier = iota
+	enumsQualifier
+	inputsQualifier
+	outputsQualifier
+)
+
+func (q qualifier) append(typeName string) string {
+	switch q {
+	case noQualifier:
+		return typeName
+	default:
+		return fmt.Sprintf("%s.%s", q.String(), typeName)
+	}
+}
+
+func (q qualifier) String() string {
+	switch q {
+	case noQualifier:
+		return ""
+	case enumsQualifier:
+		return "enums"
+	case inputsQualifier:
+		return "inputs"
+	case outputsQualifier:
+		return "outputs"
+	}
+	panic("invalid qualifier")
+}
+
 func (mod *modContext) genType(
 	ctx *classFileContext,
 	obj *schema.ObjectType,
-	propertyTypeQualifier string,
+	propertyTypeQualifier qualifier,
 	input, state bool,
 ) error {
 	pt := &plainType{
@@ -1778,7 +1806,7 @@ func (mod *modContext) getConfigProperty(ctx *classFileContext, prop *schema.Pro
 	projectedType := mod.typeString(
 		ctx,
 		schemaType,
-		"inputs",
+		inputsQualifier,
 		false,
 		false,
 		true,  // requireInitializers - set to true so we preserve Optional
@@ -1971,7 +1999,7 @@ func (mod *modContext) gen(fs fs) error {
 				res:                   r,
 				name:                  string(ctx.className),
 				baseClass:             "com.pulumi.resources.ResourceArgs",
-				propertyTypeQualifier: "inputs",
+				propertyTypeQualifier: inputsQualifier,
 				properties:            r.InputProperties,
 				args:                  true,
 			}
@@ -1988,7 +2016,7 @@ func (mod *modContext) gen(fs fs) error {
 					res:                   r,
 					name:                  string(ctx.className),
 					baseClass:             "com.pulumi.resources.ResourceArgs",
-					propertyTypeQualifier: "inputs",
+					propertyTypeQualifier: inputsQualifier,
 					properties:            r.StateInputs.Properties,
 					args:                  true,
 					state:                 true,
@@ -2028,7 +2056,7 @@ func (mod *modContext) gen(fs fs) error {
 			}
 			plainTypeClassName = names.Ident(mod.typeName(t, false, t.IsInputShape()))
 			if err := addClass(inputsPkg, plainTypeClassName, func(ctx *classFileContext) error {
-				return mod.genType(ctx, t, "inputs", true, false)
+				return mod.genType(ctx, t, inputsQualifier, true, false)
 			}); err != nil {
 				return err
 			}
@@ -2041,7 +2069,7 @@ func (mod *modContext) gen(fs fs) error {
 			// can be accommodated.
 			if !inputsPkg.Dot(plainTypeClassName).Equal(inputsPkg.Dot(className)) {
 				if err := addClass(inputsPkg, className, func(ctx *classFileContext) error {
-					return mod.genType(ctx, t, "inputs", true, false)
+					return mod.genType(ctx, t, inputsQualifier, true, false)
 				}); err != nil {
 					return err
 				}
@@ -2050,7 +2078,7 @@ func (mod *modContext) gen(fs fs) error {
 		if mod.details(t).stateType {
 			className := names.Ident(mod.typeName(t, true, t.IsInputShape()))
 			if err := addClass(javaPkg.Dot(names.Ident("inputs")), className, func(ctx *classFileContext) error {
-				return mod.genType(ctx, t, "inputs", true, true)
+				return mod.genType(ctx, t, inputsQualifier, true, true)
 			}); err != nil {
 				return err
 			}
@@ -2058,7 +2086,7 @@ func (mod *modContext) gen(fs fs) error {
 		if mod.details(t).outputType {
 			className := names.Ident(mod.typeName(t, false, t.IsInputShape()))
 			if err := addClass(javaPkg.Dot(names.Ident("outputs")), className, func(ctx *classFileContext) error {
-				return mod.genType(ctx, t, "outputs", false, false)
+				return mod.genType(ctx, t, outputsQualifier, false, false)
 			}); err != nil {
 				return err
 			}
@@ -2070,7 +2098,7 @@ func (mod *modContext) gen(fs fs) error {
 		for _, enum := range mod.enums {
 			enumClassName := names.Ident(tokenToName(enum.Token))
 			if err := addClass(javaPkg.Dot(names.Ident("enums")), enumClassName, func(ctx *classFileContext) error {
-				return mod.genEnum(ctx, "enums", enum)
+				return mod.genEnum(ctx, enum)
 			}); err != nil {
 				return err
 			}
