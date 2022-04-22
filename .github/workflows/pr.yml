@@ -79,7 +79,7 @@ jobs:
         uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
         with:
           arguments: build
-          build-root-directory: sdk/jvm
+          build-root-directory: sdk/java
       - run: make build_go
       - run: make bin/pulumi-java-gen
       - run: make bin/pulumi-language-java
@@ -103,7 +103,7 @@ jobs:
         continue-on-error: true
         with:
           arguments: publish
-          build-root-directory: sdk/jvm
+          build-root-directory: sdk/java
     strategy:
       fail-fast: true
 
@@ -150,7 +150,7 @@ jobs:
         uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
         with:
           arguments: publishToMavenLocal
-          build-root-directory: sdk/jvm
+          build-root-directory: sdk/java
       - name: Configure Go cache
         id: go-cache-paths
         run: |
