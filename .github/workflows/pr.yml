@@ -690,7 +690,4 @@ jobs:
       - name: Activate pulumi-java-gen
         run: chmod a+x ./bin/pulumi-java-gen
       - run: make --old-file=bin/pulumi-java-gen providers_generate_all
-      - run: |
-          cd providers
-          git status -s
-          [[ -n $(git status -s) ]] && echo "providers/ generated code is out of date" && exit 1
+      - run: ./scripts/check-dirty.sh
