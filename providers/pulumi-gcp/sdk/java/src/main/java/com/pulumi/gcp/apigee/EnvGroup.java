@@ -12,6 +12,7 @@ import com.pulumi.gcp.apigee.EnvGroupArgs;
 import com.pulumi.gcp.apigee.inputs.EnvGroupState;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -51,8 +52,8 @@ public class EnvGroup extends com.pulumi.resources.CustomResource {
      * @return Hostnames of the environment group.
      * 
      */
-    public Output</* @Nullable */ List<String>> hostnames() {
-        return this.hostnames;
+    public Output<Optional<List<String>>> hostnames() {
+        return Codegen.optional(this.hostnames);
     }
     /**
      * The resource ID of the environment group.

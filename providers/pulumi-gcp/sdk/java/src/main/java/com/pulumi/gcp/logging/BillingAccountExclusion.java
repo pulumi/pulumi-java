@@ -12,6 +12,7 @@ import com.pulumi.gcp.logging.BillingAccountExclusionArgs;
 import com.pulumi.gcp.logging.inputs.BillingAccountExclusionState;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -51,8 +52,8 @@ public class BillingAccountExclusion extends com.pulumi.resources.CustomResource
      * @return A human-readable description.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Whether this exclusion rule should be disabled or not. This defaults to
@@ -67,8 +68,8 @@ public class BillingAccountExclusion extends com.pulumi.resources.CustomResource
      * false.
      * 
      */
-    public Output</* @Nullable */ Boolean> disabled() {
-        return this.disabled;
+    public Output<Optional<Boolean>> disabled() {
+        return Codegen.optional(this.disabled);
     }
     /**
      * The filter to apply when excluding logs. Only log entries that match the filter are excluded.

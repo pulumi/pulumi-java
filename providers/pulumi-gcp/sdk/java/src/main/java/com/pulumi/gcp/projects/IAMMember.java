@@ -12,6 +12,7 @@ import com.pulumi.gcp.projects.IAMMemberArgs;
 import com.pulumi.gcp.projects.inputs.IAMMemberState;
 import com.pulumi.gcp.projects.outputs.IAMMemberCondition;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -103,8 +104,8 @@ public class IAMMember extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ IAMMemberCondition> condition() {
-        return this.condition;
+    public Output<Optional<IAMMemberCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * (Computed) The etag of the project&#39;s IAM policy.

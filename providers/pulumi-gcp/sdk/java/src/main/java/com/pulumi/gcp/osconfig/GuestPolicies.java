@@ -16,6 +16,7 @@ import com.pulumi.gcp.osconfig.outputs.GuestPoliciesPackageRepository;
 import com.pulumi.gcp.osconfig.outputs.GuestPoliciesRecipe;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -105,8 +106,8 @@ public class GuestPolicies extends com.pulumi.resources.CustomResource {
      * @return Description of the guest policy. Length of the description is limited to 1024 characters.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The etag for this guest policy. If this is provided on update, it must match the server&#39;s etag.
@@ -183,8 +184,8 @@ public class GuestPolicies extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<GuestPoliciesPackageRepository>> packageRepositories() {
-        return this.packageRepositories;
+    public Output<Optional<List<GuestPoliciesPackageRepository>>> packageRepositories() {
+        return Codegen.optional(this.packageRepositories);
     }
     /**
      * The software packages to be managed by this policy.
@@ -199,8 +200,8 @@ public class GuestPolicies extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<GuestPoliciesPackage>> packages() {
-        return this.packages;
+    public Output<Optional<List<GuestPoliciesPackage>>> packages() {
+        return Codegen.optional(this.packages);
     }
     /**
      * The ID of the project in which the resource belongs.
@@ -231,8 +232,8 @@ public class GuestPolicies extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<GuestPoliciesRecipe>> recipes() {
-        return this.recipes;
+    public Output<Optional<List<GuestPoliciesRecipe>>> recipes() {
+        return Codegen.optional(this.recipes);
     }
     /**
      * Last time this guest policy was updated. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example:

@@ -12,6 +12,7 @@ import com.pulumi.gcp.healthcare.DatasetIamMemberArgs;
 import com.pulumi.gcp.healthcare.inputs.DatasetIamMemberState;
 import com.pulumi.gcp.healthcare.outputs.DatasetIamMemberCondition;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -67,8 +68,8 @@ public class DatasetIamMember extends com.pulumi.resources.CustomResource {
     @Export(name="condition", type=DatasetIamMemberCondition.class, parameters={})
     private Output</* @Nullable */ DatasetIamMemberCondition> condition;
 
-    public Output</* @Nullable */ DatasetIamMemberCondition> condition() {
-        return this.condition;
+    public Output<Optional<DatasetIamMemberCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * The dataset ID, in the form

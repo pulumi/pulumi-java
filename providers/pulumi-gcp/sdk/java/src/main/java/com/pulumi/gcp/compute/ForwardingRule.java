@@ -14,6 +14,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -75,8 +76,8 @@ public class ForwardingRule extends com.pulumi.resources.CustomResource {
      * Cannot be set if port or portRange are set.
      * 
      */
-    public Output</* @Nullable */ Boolean> allPorts() {
-        return this.allPorts;
+    public Output<Optional<Boolean>> allPorts() {
+        return Codegen.optional(this.allPorts);
     }
     /**
      * If true, clients can access ILB from all regions.
@@ -91,8 +92,8 @@ public class ForwardingRule extends com.pulumi.resources.CustomResource {
      * Otherwise only allows from the local region the ILB is located at.
      * 
      */
-    public Output</* @Nullable */ Boolean> allowGlobalAccess() {
-        return this.allowGlobalAccess;
+    public Output<Optional<Boolean>> allowGlobalAccess() {
+        return Codegen.optional(this.allowGlobalAccess);
     }
     /**
      * A BackendService to receive the matched traffic. This is used only
@@ -107,8 +108,8 @@ public class ForwardingRule extends com.pulumi.resources.CustomResource {
      * for INTERNAL load balancing.
      * 
      */
-    public Output</* @Nullable */ String> backendService() {
-        return this.backendService;
+    public Output<Optional<String>> backendService() {
+        return Codegen.optional(this.backendService);
     }
     /**
      * [Output Only] Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
@@ -137,8 +138,8 @@ public class ForwardingRule extends com.pulumi.resources.CustomResource {
      * you create the resource.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The IP address that this forwarding rule serves. When a client sends
@@ -219,8 +220,8 @@ public class ForwardingRule extends com.pulumi.resources.CustomResource {
      * loadBalancingScheme set to INTERNAL.
      * 
      */
-    public Output</* @Nullable */ Boolean> isMirroringCollector() {
-        return this.isMirroringCollector;
+    public Output<Optional<Boolean>> isMirroringCollector() {
+        return Codegen.optional(this.isMirroringCollector);
     }
     /**
      * Used internally during label updates.
@@ -247,8 +248,8 @@ public class ForwardingRule extends com.pulumi.resources.CustomResource {
      * @return Labels to apply to this forwarding rule.  A list of key-&gt;value pairs.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * This signifies what the ForwardingRule will be used for and can be
@@ -279,8 +280,8 @@ public class ForwardingRule extends com.pulumi.resources.CustomResource {
      * Possible values are `EXTERNAL`, `EXTERNAL_MANAGED`, `INTERNAL`, and `INTERNAL_MANAGED`.
      * 
      */
-    public Output</* @Nullable */ String> loadBalancingScheme() {
-        return this.loadBalancingScheme;
+    public Output<Optional<String>> loadBalancingScheme() {
+        return Codegen.optional(this.loadBalancingScheme);
     }
     /**
      * Name of the resource; provided by the client when the resource is
@@ -387,8 +388,8 @@ public class ForwardingRule extends com.pulumi.resources.CustomResource {
      * * TargetVpnGateway: 500, 4500
      * 
      */
-    public Output</* @Nullable */ String> portRange() {
-        return this.portRange;
+    public Output<Optional<String>> portRange() {
+        return Codegen.optional(this.portRange);
     }
     /**
      * This field is used along with internal load balancing and network
@@ -417,8 +418,8 @@ public class ForwardingRule extends com.pulumi.resources.CustomResource {
      * You may specify a maximum of up to 5 ports, which can be non-contiguous.
      * 
      */
-    public Output</* @Nullable */ List<String>> ports() {
-        return this.ports;
+    public Output<Optional<List<String>>> ports() {
+        return Codegen.optional(this.ports);
     }
     /**
      * The ID of the project in which the resource belongs.
@@ -495,8 +496,8 @@ public class ForwardingRule extends com.pulumi.resources.CustomResource {
      * This field is only used for INTERNAL load balancing.
      * 
      */
-    public Output</* @Nullable */ String> serviceLabel() {
-        return this.serviceLabel;
+    public Output<Optional<String>> serviceLabel() {
+        return Codegen.optional(this.serviceLabel);
     }
     /**
      * [Output Only] The internal fully qualified service name for this Forwarding Rule. This field is only used for internal
@@ -553,8 +554,8 @@ public class ForwardingRule extends com.pulumi.resources.CustomResource {
      * object.
      * 
      */
-    public Output</* @Nullable */ String> target() {
-        return this.target;
+    public Output<Optional<String>> target() {
+        return Codegen.optional(this.target);
     }
 
     /**

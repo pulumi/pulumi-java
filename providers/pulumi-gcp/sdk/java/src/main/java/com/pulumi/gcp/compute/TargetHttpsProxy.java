@@ -14,6 +14,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -72,8 +73,8 @@ public class TargetHttpsProxy extends com.pulumi.resources.CustomResource {
      * @return An optional description of this resource.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Name of the resource. Provided by the client when the resource is
@@ -170,8 +171,8 @@ public class TargetHttpsProxy extends com.pulumi.resources.CustomResource {
      * Possible values are `NONE`, `ENABLE`, and `DISABLE`.
      * 
      */
-    public Output</* @Nullable */ String> quicOverride() {
-        return this.quicOverride;
+    public Output<Optional<String>> quicOverride() {
+        return Codegen.optional(this.quicOverride);
     }
     /**
      * The URI of the created resource.
@@ -220,8 +221,8 @@ public class TargetHttpsProxy extends com.pulumi.resources.CustomResource {
      * resource will not have any SSL policy configured.
      * 
      */
-    public Output</* @Nullable */ String> sslPolicy() {
-        return this.sslPolicy;
+    public Output<Optional<String>> sslPolicy() {
+        return Codegen.optional(this.sslPolicy);
     }
     /**
      * A reference to the UrlMap resource that defines the mapping from URL

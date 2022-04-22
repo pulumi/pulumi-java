@@ -12,6 +12,7 @@ import com.pulumi.gcp.storage.BucketIAMMemberArgs;
 import com.pulumi.gcp.storage.inputs.BucketIAMMemberState;
 import com.pulumi.gcp.storage.outputs.BucketIAMMemberCondition;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -89,8 +90,8 @@ public class BucketIAMMember extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ BucketIAMMemberCondition> condition() {
-        return this.condition;
+    public Output<Optional<BucketIAMMemberCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * (Computed) The etag of the IAM policy.

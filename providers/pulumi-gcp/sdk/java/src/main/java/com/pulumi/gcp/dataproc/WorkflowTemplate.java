@@ -17,6 +17,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -68,8 +69,8 @@ public class WorkflowTemplate extends com.pulumi.resources.CustomResource {
      * @return (Beta only) Optional. Timeout duration for the DAG of jobs. You can use &#34;s&#34;, &#34;m&#34;, &#34;h&#34;, and &#34;d&#34; suffixes for second, minute, hour, and day duration values, respectively. The timeout duration must be from 10 minutes (&#34;10m&#34;) to 24 hours (&#34;24h&#34; or &#34;1d&#34;). The timer begins when the first job is submitted. If the workflow is running at the end of the timeout period, any remaining jobs are cancelled, the workflow is ended, and if the workflow was running on a (/dataproc/docs/concepts/workflows/using-workflows#configuring_or_selecting_a_cluster), the cluster is deleted.
      * 
      */
-    public Output</* @Nullable */ String> dagTimeout() {
-        return this.dagTimeout;
+    public Output<Optional<String>> dagTimeout() {
+        return Codegen.optional(this.dagTimeout);
     }
     /**
      * Required. The Directed Acyclic Graph of Jobs to submit.
@@ -96,8 +97,8 @@ public class WorkflowTemplate extends com.pulumi.resources.CustomResource {
      * @return Optional. The labels to associate with this cluster. Label keys must be between 1 and 63 characters long, and must conform to the following PCRE regular expression: {0,63} No more than 32 labels can be associated with a given cluster.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * The location for the resource
@@ -138,8 +139,8 @@ public class WorkflowTemplate extends com.pulumi.resources.CustomResource {
      * @return Optional. Template parameters whose values are substituted into the template. Values for parameters must be provided when the template is instantiated.
      * 
      */
-    public Output</* @Nullable */ List<WorkflowTemplateParameter>> parameters() {
-        return this.parameters;
+    public Output<Optional<List<WorkflowTemplateParameter>>> parameters() {
+        return Codegen.optional(this.parameters);
     }
     /**
      * Required. WorkflowTemplate scheduling information.

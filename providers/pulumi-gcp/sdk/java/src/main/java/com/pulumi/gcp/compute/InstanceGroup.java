@@ -14,6 +14,7 @@ import com.pulumi.gcp.compute.outputs.InstanceGroupNamedPort;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -55,8 +56,8 @@ public class InstanceGroup extends com.pulumi.resources.CustomResource {
      * group.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * List of instances in the group. They should be given
@@ -103,8 +104,8 @@ public class InstanceGroup extends com.pulumi.resources.CustomResource {
      * for details on configuration. Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<InstanceGroupNamedPort>> namedPorts() {
-        return this.namedPorts;
+    public Output<Optional<List<InstanceGroupNamedPort>>> namedPorts() {
+        return Codegen.optional(this.namedPorts);
     }
     /**
      * The URL of the network the instance group is in. If

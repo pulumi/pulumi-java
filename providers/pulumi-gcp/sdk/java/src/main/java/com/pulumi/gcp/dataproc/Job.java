@@ -24,6 +24,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -84,8 +85,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * job is first cancelled before issuing the delete.
      * 
      */
-    public Output</* @Nullable */ Boolean> forceDelete() {
-        return this.forceDelete;
+    public Output<Optional<Boolean>> forceDelete() {
+        return Codegen.optional(this.forceDelete);
     }
     /**
      * The config of Hadoop job
@@ -98,8 +99,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return The config of Hadoop job
      * 
      */
-    public Output</* @Nullable */ JobHadoopConfig> hadoopConfig() {
-        return this.hadoopConfig;
+    public Output<Optional<JobHadoopConfig>> hadoopConfig() {
+        return Codegen.optional(this.hadoopConfig);
     }
     /**
      * The config of hive job
@@ -112,8 +113,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return The config of hive job
      * 
      */
-    public Output</* @Nullable */ JobHiveConfig> hiveConfig() {
-        return this.hiveConfig;
+    public Output<Optional<JobHiveConfig>> hiveConfig() {
+        return Codegen.optional(this.hiveConfig);
     }
     /**
      * The list of labels (key/value pairs) to add to the job.
@@ -126,8 +127,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return The list of labels (key/value pairs) to add to the job.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * The config of pag job.
@@ -140,8 +141,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return The config of pag job.
      * 
      */
-    public Output</* @Nullable */ JobPigConfig> pigConfig() {
-        return this.pigConfig;
+    public Output<Optional<JobPigConfig>> pigConfig() {
+        return Codegen.optional(this.pigConfig);
     }
     /**
      * The config of job placement.
@@ -184,8 +185,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return The config of pySpark job.
      * 
      */
-    public Output</* @Nullable */ JobPysparkConfig> pysparkConfig() {
-        return this.pysparkConfig;
+    public Output<Optional<JobPysparkConfig>> pysparkConfig() {
+        return Codegen.optional(this.pysparkConfig);
     }
     /**
      * The reference of the job
@@ -214,8 +215,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * for this job to be submitted to. If not specified, defaults to `global`.
      * 
      */
-    public Output</* @Nullable */ String> region() {
-        return this.region;
+    public Output<Optional<String>> region() {
+        return Codegen.optional(this.region);
     }
     /**
      * Optional. Job scheduling configuration.
@@ -228,8 +229,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Optional. Job scheduling configuration.
      * 
      */
-    public Output</* @Nullable */ JobScheduling> scheduling() {
-        return this.scheduling;
+    public Output<Optional<JobScheduling>> scheduling() {
+        return Codegen.optional(this.scheduling);
     }
     /**
      * The config of the Spark job.
@@ -242,8 +243,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return The config of the Spark job.
      * 
      */
-    public Output</* @Nullable */ JobSparkConfig> sparkConfig() {
-        return this.sparkConfig;
+    public Output<Optional<JobSparkConfig>> sparkConfig() {
+        return Codegen.optional(this.sparkConfig);
     }
     /**
      * The config of SparkSql job
@@ -256,8 +257,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return The config of SparkSql job
      * 
      */
-    public Output</* @Nullable */ JobSparksqlConfig> sparksqlConfig() {
-        return this.sparksqlConfig;
+    public Output<Optional<JobSparksqlConfig>> sparksqlConfig() {
+        return Codegen.optional(this.sparksqlConfig);
     }
     /**
      * The status of the job.

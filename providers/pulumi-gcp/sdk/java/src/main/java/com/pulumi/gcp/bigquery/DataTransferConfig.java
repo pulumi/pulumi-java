@@ -17,6 +17,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -64,8 +65,8 @@ public class DataTransferConfig extends com.pulumi.resources.CustomResource {
      * Set the value to 0 to use the default value.
      * 
      */
-    public Output</* @Nullable */ Integer> dataRefreshWindowDays() {
-        return this.dataRefreshWindowDays;
+    public Output<Optional<Integer>> dataRefreshWindowDays() {
+        return Codegen.optional(this.dataRefreshWindowDays);
     }
     /**
      * The data source id. Cannot be changed once the transfer config is created.
@@ -92,8 +93,8 @@ public class DataTransferConfig extends com.pulumi.resources.CustomResource {
      * @return The BigQuery target dataset id.
      * 
      */
-    public Output</* @Nullable */ String> destinationDatasetId() {
-        return this.destinationDatasetId;
+    public Output<Optional<String>> destinationDatasetId() {
+        return Codegen.optional(this.destinationDatasetId);
     }
     /**
      * When set to true, no runs are scheduled for a given transfer.
@@ -106,8 +107,8 @@ public class DataTransferConfig extends com.pulumi.resources.CustomResource {
      * @return When set to true, no runs are scheduled for a given transfer.
      * 
      */
-    public Output</* @Nullable */ Boolean> disabled() {
-        return this.disabled;
+    public Output<Optional<Boolean>> disabled() {
+        return Codegen.optional(this.disabled);
     }
     /**
      * The user specified display name for the transfer config.
@@ -138,8 +139,8 @@ public class DataTransferConfig extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ DataTransferConfigEmailPreferences> emailPreferences() {
-        return this.emailPreferences;
+    public Output<Optional<DataTransferConfigEmailPreferences>> emailPreferences() {
+        return Codegen.optional(this.emailPreferences);
     }
     /**
      * The geographic location where the transfer config should reside.
@@ -154,8 +155,8 @@ public class DataTransferConfig extends com.pulumi.resources.CustomResource {
      * Examples: US, EU, asia-northeast1. The default value is US.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The resource name of the transfer config. Transfer config names have the form
@@ -188,8 +189,8 @@ public class DataTransferConfig extends com.pulumi.resources.CustomResource {
      * associated with this transfer config finish.
      * 
      */
-    public Output</* @Nullable */ String> notificationPubsubTopic() {
-        return this.notificationPubsubTopic;
+    public Output<Optional<String>> notificationPubsubTopic() {
+        return Codegen.optional(this.notificationPubsubTopic);
     }
     /**
      * Parameters specific to each data source. For more information see the bq tab in the &#39;Setting up a data transfer&#39;
@@ -250,8 +251,8 @@ public class DataTransferConfig extends com.pulumi.resources.CustomResource {
      * NOTE: the granularity should be at least 8 hours, or less frequent.
      * 
      */
-    public Output</* @Nullable */ String> schedule() {
-        return this.schedule;
+    public Output<Optional<String>> schedule() {
+        return Codegen.optional(this.schedule);
     }
     /**
      * Options customizing the data transfer schedule.
@@ -266,8 +267,8 @@ public class DataTransferConfig extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ DataTransferConfigScheduleOptions> scheduleOptions() {
-        return this.scheduleOptions;
+    public Output<Optional<DataTransferConfigScheduleOptions>> scheduleOptions() {
+        return Codegen.optional(this.scheduleOptions);
     }
     /**
      * Different parameters are configured primarily using the the `params` field on this
@@ -292,8 +293,8 @@ public class DataTransferConfig extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ DataTransferConfigSensitiveParams> sensitiveParams() {
-        return this.sensitiveParams;
+    public Output<Optional<DataTransferConfigSensitiveParams>> sensitiveParams() {
+        return Codegen.optional(this.sensitiveParams);
     }
     /**
      * Service account email. If this field is set, transfer config will
@@ -310,8 +311,8 @@ public class DataTransferConfig extends com.pulumi.resources.CustomResource {
      * requesting user calling this API has permissions to act as this service account.
      * 
      */
-    public Output</* @Nullable */ String> serviceAccountName() {
-        return this.serviceAccountName;
+    public Output<Optional<String>> serviceAccountName() {
+        return Codegen.optional(this.serviceAccountName);
     }
 
     /**

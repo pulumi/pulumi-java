@@ -12,6 +12,7 @@ import com.pulumi.gcp.compute.FirewallPolicyArgs;
 import com.pulumi.gcp.compute.inputs.FirewallPolicyState;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -63,8 +64,8 @@ public class FirewallPolicy extends com.pulumi.resources.CustomResource {
      * @return An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Fingerprint of the resource. This field is used internally during updates of this resource.

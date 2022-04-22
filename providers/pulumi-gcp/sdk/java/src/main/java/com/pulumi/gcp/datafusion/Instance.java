@@ -14,6 +14,7 @@ import com.pulumi.gcp.datafusion.outputs.InstanceNetworkConfig;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -75,8 +76,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return User-managed service account to set on Dataproc when Cloud Data Fusion creates Dataproc to run data processing pipelines.
      * 
      */
-    public Output</* @Nullable */ String> dataprocServiceAccount() {
-        return this.dataprocServiceAccount;
+    public Output<Optional<String>> dataprocServiceAccount() {
+        return Codegen.optional(this.dataprocServiceAccount);
     }
     /**
      * An optional description of the instance.
@@ -89,8 +90,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return An optional description of the instance.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Option to enable Stackdriver Logging.
@@ -103,8 +104,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return Option to enable Stackdriver Logging.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableStackdriverLogging() {
-        return this.enableStackdriverLogging;
+    public Output<Optional<Boolean>> enableStackdriverLogging() {
+        return Codegen.optional(this.enableStackdriverLogging);
     }
     /**
      * Option to enable Stackdriver Monitoring.
@@ -117,8 +118,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return Option to enable Stackdriver Monitoring.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableStackdriverMonitoring() {
-        return this.enableStackdriverMonitoring;
+    public Output<Optional<Boolean>> enableStackdriverMonitoring() {
+        return Codegen.optional(this.enableStackdriverMonitoring);
     }
     /**
      * The resource labels for instance to use to annotate any related underlying resources,
@@ -133,8 +134,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * such as Compute Engine VMs.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * The ID of the instance or a fully qualified identifier for the instance.
@@ -163,8 +164,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ InstanceNetworkConfig> networkConfig() {
-        return this.networkConfig;
+    public Output<Optional<InstanceNetworkConfig>> networkConfig() {
+        return Codegen.optional(this.networkConfig);
     }
     /**
      * Map of additional options used to configure the behavior of Data Fusion instance.
@@ -177,8 +178,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return Map of additional options used to configure the behavior of Data Fusion instance.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> options() {
-        return this.options;
+    public Output<Optional<Map<String,String>>> options() {
+        return Codegen.optional(this.options);
     }
     /**
      * Specifies whether the Data Fusion instance should be private. If set to
@@ -195,8 +196,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * able to access the public internet.
      * 
      */
-    public Output</* @Nullable */ Boolean> privateInstance() {
-        return this.privateInstance;
+    public Output<Optional<Boolean>> privateInstance() {
+        return Codegen.optional(this.privateInstance);
     }
     /**
      * The ID of the project in which the resource belongs.

@@ -14,6 +14,7 @@ import com.pulumi.gcp.dataloss.outputs.PreventionStoredInfoTypeDictionary;
 import com.pulumi.gcp.dataloss.outputs.PreventionStoredInfoTypeLargeCustomDictionary;
 import com.pulumi.gcp.dataloss.outputs.PreventionStoredInfoTypeRegex;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -53,8 +54,8 @@ public class PreventionStoredInfoType extends com.pulumi.resources.CustomResourc
      * @return A description of the info type.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Dictionary which defines the rule.
@@ -69,8 +70,8 @@ public class PreventionStoredInfoType extends com.pulumi.resources.CustomResourc
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ PreventionStoredInfoTypeDictionary> dictionary() {
-        return this.dictionary;
+    public Output<Optional<PreventionStoredInfoTypeDictionary>> dictionary() {
+        return Codegen.optional(this.dictionary);
     }
     /**
      * User set display name of the info type.
@@ -83,8 +84,8 @@ public class PreventionStoredInfoType extends com.pulumi.resources.CustomResourc
      * @return User set display name of the info type.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * Dictionary which defines the rule.
@@ -99,8 +100,8 @@ public class PreventionStoredInfoType extends com.pulumi.resources.CustomResourc
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ PreventionStoredInfoTypeLargeCustomDictionary> largeCustomDictionary() {
-        return this.largeCustomDictionary;
+    public Output<Optional<PreventionStoredInfoTypeLargeCustomDictionary>> largeCustomDictionary() {
+        return Codegen.optional(this.largeCustomDictionary);
     }
     /**
      * Name describing the field.
@@ -151,8 +152,8 @@ public class PreventionStoredInfoType extends com.pulumi.resources.CustomResourc
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ PreventionStoredInfoTypeRegex> regex() {
-        return this.regex;
+    public Output<Optional<PreventionStoredInfoTypeRegex>> regex() {
+        return Codegen.optional(this.regex);
     }
 
     /**

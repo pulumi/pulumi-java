@@ -15,6 +15,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -59,8 +60,8 @@ public class InterconnectAttachment extends com.pulumi.resources.CustomResource 
      * PARTNER type this will Pre-Activate the interconnect attachment
      * 
      */
-    public Output</* @Nullable */ Boolean> adminEnabled() {
-        return this.adminEnabled;
+    public Output<Optional<Boolean>> adminEnabled() {
+        return Codegen.optional(this.adminEnabled);
     }
     /**
      * Provisioned bandwidth capacity for the interconnect attachment.
@@ -109,8 +110,8 @@ public class InterconnectAttachment extends com.pulumi.resources.CustomResource 
      * Google will randomly select an unused /29 from all of link-local space.
      * 
      */
-    public Output</* @Nullable */ List<String>> candidateSubnets() {
-        return this.candidateSubnets;
+    public Output<Optional<List<String>>> candidateSubnets() {
+        return Codegen.optional(this.candidateSubnets);
     }
     /**
      * IPv4 address + prefix length to be configured on Cloud Router Interface for this interconnect attachment.
@@ -165,8 +166,8 @@ public class InterconnectAttachment extends com.pulumi.resources.CustomResource 
      * @return An optional description of this resource.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Desired availability domain for the attachment. Only available for type
@@ -227,8 +228,8 @@ public class InterconnectAttachment extends com.pulumi.resources.CustomResource 
      * Possible values are `NONE` and `IPSEC`.
      * 
      */
-    public Output</* @Nullable */ String> encryption() {
-        return this.encryption;
+    public Output<Optional<String>> encryption() {
+        return Codegen.optional(this.encryption);
     }
     /**
      * Google reference ID, to be used when raising support tickets with Google or otherwise to debug backend connectivity
@@ -261,8 +262,8 @@ public class InterconnectAttachment extends com.pulumi.resources.CustomResource 
      * be set if type is PARTNER.
      * 
      */
-    public Output</* @Nullable */ String> interconnect() {
-        return this.interconnect;
+    public Output<Optional<String>> interconnect() {
+        return Codegen.optional(this.interconnect);
     }
     /**
      * URL of addresses that have been reserved for the interconnect
@@ -305,8 +306,8 @@ public class InterconnectAttachment extends com.pulumi.resources.CustomResource 
      * allocated from regional external IP address pool.
      * 
      */
-    public Output</* @Nullable */ List<String>> ipsecInternalAddresses() {
-        return this.ipsecInternalAddresses;
+    public Output<Optional<List<String>>> ipsecInternalAddresses() {
+        return Codegen.optional(this.ipsecInternalAddresses);
     }
     /**
      * Maximum Transmission Unit (MTU), in bytes, of packets passing through

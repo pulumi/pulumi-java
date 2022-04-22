@@ -12,6 +12,7 @@ import com.pulumi.gcp.folder.IAMMemberArgs;
 import com.pulumi.gcp.folder.inputs.IAMMemberState;
 import com.pulumi.gcp.folder.outputs.IAMMemberCondition;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 @ResourceType(type="gcp:folder/iAMMember:IAMMember")
@@ -19,8 +20,8 @@ public class IAMMember extends com.pulumi.resources.CustomResource {
     @Export(name="condition", type=IAMMemberCondition.class, parameters={})
     private Output</* @Nullable */ IAMMemberCondition> condition;
 
-    public Output</* @Nullable */ IAMMemberCondition> condition() {
-        return this.condition;
+    public Output<Optional<IAMMemberCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;

@@ -12,6 +12,7 @@ import com.pulumi.gcp.servicedirectory.ServiceIamMemberArgs;
 import com.pulumi.gcp.servicedirectory.inputs.ServiceIamMemberState;
 import com.pulumi.gcp.servicedirectory.outputs.ServiceIamMemberCondition;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -61,8 +62,8 @@ public class ServiceIamMember extends com.pulumi.resources.CustomResource {
     @Export(name="condition", type=ServiceIamMemberCondition.class, parameters={})
     private Output</* @Nullable */ ServiceIamMemberCondition> condition;
 
-    public Output</* @Nullable */ ServiceIamMemberCondition> condition() {
-        return this.condition;
+    public Output<Optional<ServiceIamMemberCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * (Computed) The etag of the IAM policy.

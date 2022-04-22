@@ -12,6 +12,7 @@ import com.pulumi.gcp.projects.ServiceArgs;
 import com.pulumi.gcp.projects.inputs.ServiceState;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -61,8 +62,8 @@ public class Service extends com.pulumi.resources.CustomResource {
      * services depend on this service when destroying it.
      * 
      */
-    public Output</* @Nullable */ Boolean> disableDependentServices() {
-        return this.disableDependentServices;
+    public Output<Optional<Boolean>> disableDependentServices() {
+        return Codegen.optional(this.disableDependentServices);
     }
     /**
      * If true, disable the service when the resource is destroyed. Defaults to true. May be useful in the event that a project is long-lived but the infrastructure running in that project changes frequently.
@@ -75,8 +76,8 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return If true, disable the service when the resource is destroyed. Defaults to true. May be useful in the event that a project is long-lived but the infrastructure running in that project changes frequently.
      * 
      */
-    public Output</* @Nullable */ Boolean> disableOnDestroy() {
-        return this.disableOnDestroy;
+    public Output<Optional<Boolean>> disableOnDestroy() {
+        return Codegen.optional(this.disableOnDestroy);
     }
     /**
      * The project ID. If not provided, the provider project

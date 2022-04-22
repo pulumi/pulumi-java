@@ -15,6 +15,7 @@ import com.pulumi.gcp.compute.outputs.SecurityScanConfigSchedule;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -65,8 +66,8 @@ public class SecurityScanConfig extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ SecurityScanConfigAuthentication> authentication() {
-        return this.authentication;
+    public Output<Optional<SecurityScanConfigAuthentication>> authentication() {
+        return Codegen.optional(this.authentication);
     }
     /**
      * The blacklist URL patterns as described in
@@ -81,8 +82,8 @@ public class SecurityScanConfig extends com.pulumi.resources.CustomResource {
      * https://cloud.google.com/security-scanner/docs/excluded-urls
      * 
      */
-    public Output</* @Nullable */ List<String>> blacklistPatterns() {
-        return this.blacklistPatterns;
+    public Output<Optional<List<String>>> blacklistPatterns() {
+        return Codegen.optional(this.blacklistPatterns);
     }
     /**
      * The user provider display name of the ScanConfig.
@@ -113,8 +114,8 @@ public class SecurityScanConfig extends com.pulumi.resources.CustomResource {
      * Possible values are `ENABLED` and `DISABLED`.
      * 
      */
-    public Output</* @Nullable */ String> exportToSecurityCommandCenter() {
-        return this.exportToSecurityCommandCenter;
+    public Output<Optional<String>> exportToSecurityCommandCenter() {
+        return Codegen.optional(this.exportToSecurityCommandCenter);
     }
     /**
      * The maximum QPS during scanning. A valid value ranges from 5 to 20 inclusively.
@@ -129,8 +130,8 @@ public class SecurityScanConfig extends com.pulumi.resources.CustomResource {
      * Defaults to 15.
      * 
      */
-    public Output</* @Nullable */ Integer> maxQps() {
-        return this.maxQps;
+    public Output<Optional<Integer>> maxQps() {
+        return Codegen.optional(this.maxQps);
     }
     /**
      * A server defined name for this index. Format: &#39;projects/{{project}}/scanConfigs/{{server_generated_id}}&#39;
@@ -175,8 +176,8 @@ public class SecurityScanConfig extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ SecurityScanConfigSchedule> schedule() {
-        return this.schedule;
+    public Output<Optional<SecurityScanConfigSchedule>> schedule() {
+        return Codegen.optional(this.schedule);
     }
     /**
      * The starting URLs from which the scanner finds site pages.
@@ -205,8 +206,8 @@ public class SecurityScanConfig extends com.pulumi.resources.CustomResource {
      * Each value may be one of `APP_ENGINE` and `COMPUTE`.
      * 
      */
-    public Output</* @Nullable */ List<String>> targetPlatforms() {
-        return this.targetPlatforms;
+    public Output<Optional<List<String>>> targetPlatforms() {
+        return Codegen.optional(this.targetPlatforms);
     }
     /**
      * Type of the user agents used for scanning
@@ -223,8 +224,8 @@ public class SecurityScanConfig extends com.pulumi.resources.CustomResource {
      * Possible values are `USER_AGENT_UNSPECIFIED`, `CHROME_LINUX`, `CHROME_ANDROID`, and `SAFARI_IPHONE`.
      * 
      */
-    public Output</* @Nullable */ String> userAgent() {
-        return this.userAgent;
+    public Output<Optional<String>> userAgent() {
+        return Codegen.optional(this.userAgent);
     }
 
     /**

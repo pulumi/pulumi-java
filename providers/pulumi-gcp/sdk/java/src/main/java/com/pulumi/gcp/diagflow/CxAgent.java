@@ -14,6 +14,7 @@ import com.pulumi.gcp.diagflow.outputs.CxAgentSpeechToTextSettings;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -57,8 +58,8 @@ public class CxAgent extends com.pulumi.resources.CustomResource {
      * @return The URI of the agent&#39;s avatar. Avatars are used throughout the Dialogflow console and in the self-hosted Web Demo integration.
      * 
      */
-    public Output</* @Nullable */ String> avatarUri() {
-        return this.avatarUri;
+    public Output<Optional<String>> avatarUri() {
+        return Codegen.optional(this.avatarUri);
     }
     /**
      * The default language of the agent as a language tag. [See Language Support](https://cloud.google.com/dialogflow/cx/docs/reference/language)
@@ -87,8 +88,8 @@ public class CxAgent extends com.pulumi.resources.CustomResource {
      * @return The description of this agent. The maximum length is 500 characters. If exceeded, the request is rejected.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The human-readable name of the agent, unique within the location.
@@ -115,8 +116,8 @@ public class CxAgent extends com.pulumi.resources.CustomResource {
      * @return Indicates if automatic spell correction is enabled in detect intent requests.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableSpellCorrection() {
-        return this.enableSpellCorrection;
+    public Output<Optional<Boolean>> enableSpellCorrection() {
+        return Codegen.optional(this.enableSpellCorrection);
     }
     /**
      * Determines whether this agent should log conversation queries.
@@ -129,8 +130,8 @@ public class CxAgent extends com.pulumi.resources.CustomResource {
      * @return Determines whether this agent should log conversation queries.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableStackdriverLogging() {
-        return this.enableStackdriverLogging;
+    public Output<Optional<Boolean>> enableStackdriverLogging() {
+        return Codegen.optional(this.enableStackdriverLogging);
     }
     /**
      * The name of the location this agent is located in.
@@ -193,8 +194,8 @@ public class CxAgent extends com.pulumi.resources.CustomResource {
      * @return Name of the SecuritySettings reference for the agent. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/securitySettings/&lt;Security Settings ID&gt;.
      * 
      */
-    public Output</* @Nullable */ String> securitySettings() {
-        return this.securitySettings;
+    public Output<Optional<String>> securitySettings() {
+        return Codegen.optional(this.securitySettings);
     }
     /**
      * Settings related to speech recognition.
@@ -209,8 +210,8 @@ public class CxAgent extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ CxAgentSpeechToTextSettings> speechToTextSettings() {
-        return this.speechToTextSettings;
+    public Output<Optional<CxAgentSpeechToTextSettings>> speechToTextSettings() {
+        return Codegen.optional(this.speechToTextSettings);
     }
     /**
      * Name of the start flow in this agent. A start flow will be automatically created when the agent is created, and can only
@@ -241,8 +242,8 @@ public class CxAgent extends com.pulumi.resources.CustomResource {
      * @return The list of all languages supported by this agent (except for the default_language_code).
      * 
      */
-    public Output</* @Nullable */ List<String>> supportedLanguageCodes() {
-        return this.supportedLanguageCodes;
+    public Output<Optional<List<String>>> supportedLanguageCodes() {
+        return Codegen.optional(this.supportedLanguageCodes);
     }
     /**
      * The time zone of this agent from the [time zone database](https://www.iana.org/time-zones), e.g., America/New_York,

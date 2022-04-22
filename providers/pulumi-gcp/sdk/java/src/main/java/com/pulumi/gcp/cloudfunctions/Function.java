@@ -17,6 +17,7 @@ import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -60,8 +61,8 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return Memory (in MB), available to the function. Default value is `256`. Possible values include `128`, `256`, `512`, `1024`, etc.
      * 
      */
-    public Output</* @Nullable */ Integer> availableMemoryMb() {
-        return this.availableMemoryMb;
+    public Output<Optional<Integer>> availableMemoryMb() {
+        return Codegen.optional(this.availableMemoryMb);
     }
     /**
      * A set of key/value environment variable pairs available during build time.
@@ -74,8 +75,8 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return A set of key/value environment variable pairs available during build time.
      * 
      */
-    public Output</* @Nullable */ Map<String,Object>> buildEnvironmentVariables() {
-        return this.buildEnvironmentVariables;
+    public Output<Optional<Map<String,Object>>> buildEnvironmentVariables() {
+        return Codegen.optional(this.buildEnvironmentVariables);
     }
     /**
      * Description of the function.
@@ -88,8 +89,8 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return Description of the function.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Name of the function that will be executed when the Google Cloud Function is triggered.
@@ -102,8 +103,8 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return Name of the function that will be executed when the Google Cloud Function is triggered.
      * 
      */
-    public Output</* @Nullable */ String> entryPoint() {
-        return this.entryPoint;
+    public Output<Optional<String>> entryPoint() {
+        return Codegen.optional(this.entryPoint);
     }
     /**
      * A set of key/value environment variable pairs to assign to the function.
@@ -116,8 +117,8 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return A set of key/value environment variable pairs to assign to the function.
      * 
      */
-    public Output</* @Nullable */ Map<String,Object>> environmentVariables() {
-        return this.environmentVariables;
+    public Output<Optional<Map<String,Object>>> environmentVariables() {
+        return Codegen.optional(this.environmentVariables);
     }
     /**
      * A source that fires events in response to a condition in another service. Structure is documented below. Cannot be used with `trigger_http`.
@@ -158,8 +159,8 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return String value that controls what traffic can reach the function. Allowed values are `ALLOW_ALL`, `ALLOW_INTERNAL_AND_GCLB` and `ALLOW_INTERNAL_ONLY`. Check [ingress documentation](https://cloud.google.com/functions/docs/networking/network-settings#ingress_settings) to see the impact of each settings value. Changes to this field will recreate the cloud function.
      * 
      */
-    public Output</* @Nullable */ String> ingressSettings() {
-        return this.ingressSettings;
+    public Output<Optional<String>> ingressSettings() {
+        return Codegen.optional(this.ingressSettings);
     }
     /**
      * A set of key/value label pairs to assign to the function. Label keys must follow the requirements at https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements.
@@ -172,8 +173,8 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return A set of key/value label pairs to assign to the function. Label keys must follow the requirements at https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements.
      * 
      */
-    public Output</* @Nullable */ Map<String,Object>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,Object>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * The limit on the maximum number of function instances that may coexist at a given time.
@@ -186,8 +187,8 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return The limit on the maximum number of function instances that may coexist at a given time.
      * 
      */
-    public Output</* @Nullable */ Integer> maxInstances() {
-        return this.maxInstances;
+    public Output<Optional<Integer>> maxInstances() {
+        return Codegen.optional(this.maxInstances);
     }
     /**
      * The limit on the minimum number of function instances that may coexist at a given time.
@@ -200,8 +201,8 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return The limit on the minimum number of function instances that may coexist at a given time.
      * 
      */
-    public Output</* @Nullable */ Integer> minInstances() {
-        return this.minInstances;
+    public Output<Optional<Integer>> minInstances() {
+        return Codegen.optional(this.minInstances);
     }
     /**
      * A user-defined name of the function. Function names must be unique globally.
@@ -286,8 +287,8 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return The GCS bucket containing the zip archive which contains the function.
      * 
      */
-    public Output</* @Nullable */ String> sourceArchiveBucket() {
-        return this.sourceArchiveBucket;
+    public Output<Optional<String>> sourceArchiveBucket() {
+        return Codegen.optional(this.sourceArchiveBucket);
     }
     /**
      * The source archive object (file) in archive bucket.
@@ -300,8 +301,8 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return The source archive object (file) in archive bucket.
      * 
      */
-    public Output</* @Nullable */ String> sourceArchiveObject() {
-        return this.sourceArchiveObject;
+    public Output<Optional<String>> sourceArchiveObject() {
+        return Codegen.optional(this.sourceArchiveObject);
     }
     /**
      * Represents parameters related to source repository where a function is hosted.
@@ -316,8 +317,8 @@ public class Function extends com.pulumi.resources.CustomResource {
      * Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ FunctionSourceRepository> sourceRepository() {
-        return this.sourceRepository;
+    public Output<Optional<FunctionSourceRepository>> sourceRepository() {
+        return Codegen.optional(this.sourceRepository);
     }
     /**
      * Timeout (in seconds) for the function. Default value is 60 seconds. Cannot be more than 540 seconds.
@@ -330,8 +331,8 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return Timeout (in seconds) for the function. Default value is 60 seconds. Cannot be more than 540 seconds.
      * 
      */
-    public Output</* @Nullable */ Integer> timeout() {
-        return this.timeout;
+    public Output<Optional<Integer>> timeout() {
+        return Codegen.optional(this.timeout);
     }
     /**
      * Boolean variable. Any HTTP request (of a supported type) to the endpoint will trigger function execution. Supported HTTP request types are: POST, PUT, GET, DELETE, and OPTIONS. Endpoint is returned as `https_trigger_url`. Cannot be used with `event_trigger`.
@@ -344,8 +345,8 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return Boolean variable. Any HTTP request (of a supported type) to the endpoint will trigger function execution. Supported HTTP request types are: POST, PUT, GET, DELETE, and OPTIONS. Endpoint is returned as `https_trigger_url`. Cannot be used with `event_trigger`.
      * 
      */
-    public Output</* @Nullable */ Boolean> triggerHttp() {
-        return this.triggerHttp;
+    public Output<Optional<Boolean>> triggerHttp() {
+        return Codegen.optional(this.triggerHttp);
     }
     /**
      * The VPC Network Connector that this cloud function can connect to. It should be set up as fully-qualified URI. The format of this field is `projects/*{@literal /}locations/*{@literal /}connectors/*`.
@@ -358,8 +359,8 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return The VPC Network Connector that this cloud function can connect to. It should be set up as fully-qualified URI. The format of this field is `projects/*{@literal /}locations/*{@literal /}connectors/*`.
      * 
      */
-    public Output</* @Nullable */ String> vpcConnector() {
-        return this.vpcConnector;
+    public Output<Optional<String>> vpcConnector() {
+        return Codegen.optional(this.vpcConnector);
     }
     /**
      * The egress settings for the connector, controlling what traffic is diverted through it. Allowed values are `ALL_TRAFFIC` and `PRIVATE_RANGES_ONLY`. Defaults to `PRIVATE_RANGES_ONLY`. If unset, this field preserves the previously set value.

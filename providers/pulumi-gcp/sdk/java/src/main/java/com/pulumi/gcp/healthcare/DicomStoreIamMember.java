@@ -12,6 +12,7 @@ import com.pulumi.gcp.healthcare.DicomStoreIamMemberArgs;
 import com.pulumi.gcp.healthcare.inputs.DicomStoreIamMemberState;
 import com.pulumi.gcp.healthcare.outputs.DicomStoreIamMemberCondition;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -63,8 +64,8 @@ public class DicomStoreIamMember extends com.pulumi.resources.CustomResource {
     @Export(name="condition", type=DicomStoreIamMemberCondition.class, parameters={})
     private Output</* @Nullable */ DicomStoreIamMemberCondition> condition;
 
-    public Output</* @Nullable */ DicomStoreIamMemberCondition> condition() {
-        return this.condition;
+    public Output<Optional<DicomStoreIamMemberCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * The DICOM store ID, in the form

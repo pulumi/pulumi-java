@@ -15,6 +15,7 @@ import com.pulumi.gcp.dataproc.outputs.MetastoreServiceMaintenanceWindow;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -82,8 +83,8 @@ public class MetastoreService extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ MetastoreServiceHiveMetastoreConfig> hiveMetastoreConfig() {
-        return this.hiveMetastoreConfig;
+    public Output<Optional<MetastoreServiceHiveMetastoreConfig>> hiveMetastoreConfig() {
+        return Codegen.optional(this.hiveMetastoreConfig);
     }
     /**
      * User-defined labels for the metastore service.
@@ -96,8 +97,8 @@ public class MetastoreService extends com.pulumi.resources.CustomResource {
      * @return User-defined labels for the metastore service.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * The  location where the autoscaling policy should reside.
@@ -112,8 +113,8 @@ public class MetastoreService extends com.pulumi.resources.CustomResource {
      * The default value is `global`.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The one hour maintenance window of the metastore service.
@@ -130,8 +131,8 @@ public class MetastoreService extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ MetastoreServiceMaintenanceWindow> maintenanceWindow() {
-        return this.maintenanceWindow;
+    public Output<Optional<MetastoreServiceMaintenanceWindow>> maintenanceWindow() {
+        return Codegen.optional(this.maintenanceWindow);
     }
     /**
      * The relative resource name of the metastore service.

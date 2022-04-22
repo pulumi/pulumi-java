@@ -15,6 +15,7 @@ import com.pulumi.gcp.networkconnectivity.outputs.SpokeLinkedRouterApplianceInst
 import com.pulumi.gcp.networkconnectivity.outputs.SpokeLinkedVpnTunnels;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -66,8 +67,8 @@ public class Spoke extends com.pulumi.resources.CustomResource {
      * @return An optional description of the spoke.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Immutable. The URI of the hub that this spoke is attached to.
@@ -94,8 +95,8 @@ public class Spoke extends com.pulumi.resources.CustomResource {
      * @return Optional labels in key:value format. For more information about labels, see [Requirements for labels](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements).
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * A collection of VLAN attachment resources. These resources should be redundant attachments that all advertise the same prefixes to Google Cloud. Alternatively, in active/passive configurations, all attachments should be capable of advertising the same prefixes.
@@ -108,8 +109,8 @@ public class Spoke extends com.pulumi.resources.CustomResource {
      * @return A collection of VLAN attachment resources. These resources should be redundant attachments that all advertise the same prefixes to Google Cloud. Alternatively, in active/passive configurations, all attachments should be capable of advertising the same prefixes.
      * 
      */
-    public Output</* @Nullable */ SpokeLinkedInterconnectAttachments> linkedInterconnectAttachments() {
-        return this.linkedInterconnectAttachments;
+    public Output<Optional<SpokeLinkedInterconnectAttachments>> linkedInterconnectAttachments() {
+        return Codegen.optional(this.linkedInterconnectAttachments);
     }
     /**
      * The URIs of linked Router appliance resources
@@ -122,8 +123,8 @@ public class Spoke extends com.pulumi.resources.CustomResource {
      * @return The URIs of linked Router appliance resources
      * 
      */
-    public Output</* @Nullable */ SpokeLinkedRouterApplianceInstances> linkedRouterApplianceInstances() {
-        return this.linkedRouterApplianceInstances;
+    public Output<Optional<SpokeLinkedRouterApplianceInstances>> linkedRouterApplianceInstances() {
+        return Codegen.optional(this.linkedRouterApplianceInstances);
     }
     /**
      * The URIs of linked VPN tunnel resources
@@ -136,8 +137,8 @@ public class Spoke extends com.pulumi.resources.CustomResource {
      * @return The URIs of linked VPN tunnel resources
      * 
      */
-    public Output</* @Nullable */ SpokeLinkedVpnTunnels> linkedVpnTunnels() {
-        return this.linkedVpnTunnels;
+    public Output<Optional<SpokeLinkedVpnTunnels>> linkedVpnTunnels() {
+        return Codegen.optional(this.linkedVpnTunnels);
     }
     /**
      * The location for the resource

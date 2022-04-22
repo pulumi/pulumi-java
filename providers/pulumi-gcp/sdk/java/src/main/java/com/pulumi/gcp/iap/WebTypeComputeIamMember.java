@@ -12,6 +12,7 @@ import com.pulumi.gcp.iap.WebTypeComputeIamMemberArgs;
 import com.pulumi.gcp.iap.inputs.WebTypeComputeIamMemberState;
 import com.pulumi.gcp.iap.outputs.WebTypeComputeIamMemberCondition;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -75,8 +76,8 @@ public class WebTypeComputeIamMember extends com.pulumi.resources.CustomResource
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ WebTypeComputeIamMemberCondition> condition() {
-        return this.condition;
+    public Output<Optional<WebTypeComputeIamMemberCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * (Computed) The etag of the IAM policy.

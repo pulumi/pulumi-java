@@ -13,6 +13,7 @@ import com.pulumi.gcp.secretmanager.inputs.SecretIamBindingState;
 import com.pulumi.gcp.secretmanager.outputs.SecretIamBindingCondition;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -62,8 +63,8 @@ public class SecretIamBinding extends com.pulumi.resources.CustomResource {
     @Export(name="condition", type=SecretIamBindingCondition.class, parameters={})
     private Output</* @Nullable */ SecretIamBindingCondition> condition;
 
-    public Output</* @Nullable */ SecretIamBindingCondition> condition() {
-        return this.condition;
+    public Output<Optional<SecretIamBindingCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * (Computed) The etag of the IAM policy.

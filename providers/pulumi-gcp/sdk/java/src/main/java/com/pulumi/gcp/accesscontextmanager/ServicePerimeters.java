@@ -13,6 +13,7 @@ import com.pulumi.gcp.accesscontextmanager.inputs.ServicePerimetersState;
 import com.pulumi.gcp.accesscontextmanager.outputs.ServicePerimetersServicePerimeter;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -72,8 +73,8 @@ public class ServicePerimeters extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<ServicePerimetersServicePerimeter>> servicePerimeters() {
-        return this.servicePerimeters;
+    public Output<Optional<List<ServicePerimetersServicePerimeter>>> servicePerimeters() {
+        return Codegen.optional(this.servicePerimeters);
     }
 
     /**

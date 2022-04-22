@@ -12,6 +12,7 @@ import com.pulumi.gcp.datacatalog.TaxonomyArgs;
 import com.pulumi.gcp.datacatalog.inputs.TaxonomyState;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -51,8 +52,8 @@ public class Taxonomy extends com.pulumi.resources.CustomResource {
      * Each value may be one of `POLICY_TYPE_UNSPECIFIED` and `FINE_GRAINED_ACCESS_CONTROL`.
      * 
      */
-    public Output</* @Nullable */ List<String>> activatedPolicyTypes() {
-        return this.activatedPolicyTypes;
+    public Output<Optional<List<String>>> activatedPolicyTypes() {
+        return Codegen.optional(this.activatedPolicyTypes);
     }
     /**
      * Description of this taxonomy. It must: contain only unicode characters,
@@ -69,8 +70,8 @@ public class Taxonomy extends com.pulumi.resources.CustomResource {
      * long when encoded in UTF-8. If not set, defaults to an empty description.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * User defined name of this taxonomy.

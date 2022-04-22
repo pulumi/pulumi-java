@@ -12,6 +12,7 @@ import com.pulumi.gcp.bigquery.IamMemberArgs;
 import com.pulumi.gcp.bigquery.inputs.IamMemberState;
 import com.pulumi.gcp.bigquery.outputs.IamMemberCondition;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -75,8 +76,8 @@ public class IamMember extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ IamMemberCondition> condition() {
-        return this.condition;
+    public Output<Optional<IamMemberCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     @Export(name="datasetId", type=String.class, parameters={})
     private Output<String> datasetId;

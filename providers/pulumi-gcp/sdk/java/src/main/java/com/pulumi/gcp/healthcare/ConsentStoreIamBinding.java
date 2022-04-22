@@ -13,6 +13,7 @@ import com.pulumi.gcp.healthcare.inputs.ConsentStoreIamBindingState;
 import com.pulumi.gcp.healthcare.outputs.ConsentStoreIamBindingCondition;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -62,8 +63,8 @@ public class ConsentStoreIamBinding extends com.pulumi.resources.CustomResource 
     @Export(name="condition", type=ConsentStoreIamBindingCondition.class, parameters={})
     private Output</* @Nullable */ ConsentStoreIamBindingCondition> condition;
 
-    public Output</* @Nullable */ ConsentStoreIamBindingCondition> condition() {
-        return this.condition;
+    public Output<Optional<ConsentStoreIamBindingCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * Used to find the parent resource to bind the IAM policy to

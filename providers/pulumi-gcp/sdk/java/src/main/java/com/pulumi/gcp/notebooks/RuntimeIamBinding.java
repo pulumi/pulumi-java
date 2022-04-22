@@ -13,6 +13,7 @@ import com.pulumi.gcp.notebooks.inputs.RuntimeIamBindingState;
 import com.pulumi.gcp.notebooks.outputs.RuntimeIamBindingCondition;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -62,8 +63,8 @@ public class RuntimeIamBinding extends com.pulumi.resources.CustomResource {
     @Export(name="condition", type=RuntimeIamBindingCondition.class, parameters={})
     private Output</* @Nullable */ RuntimeIamBindingCondition> condition;
 
-    public Output</* @Nullable */ RuntimeIamBindingCondition> condition() {
-        return this.condition;
+    public Output<Optional<RuntimeIamBindingCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * (Computed) The etag of the IAM policy.

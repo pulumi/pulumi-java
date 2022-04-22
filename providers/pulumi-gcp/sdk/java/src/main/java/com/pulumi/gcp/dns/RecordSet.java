@@ -13,6 +13,7 @@ import com.pulumi.gcp.dns.inputs.RecordSetState;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -114,8 +115,8 @@ public class RecordSet extends com.pulumi.resources.CustomResource {
      * @return The time-to-live of this record set (seconds).
      * 
      */
-    public Output</* @Nullable */ Integer> ttl() {
-        return this.ttl;
+    public Output<Optional<Integer>> ttl() {
+        return Codegen.optional(this.ttl);
     }
     /**
      * The DNS record set type.

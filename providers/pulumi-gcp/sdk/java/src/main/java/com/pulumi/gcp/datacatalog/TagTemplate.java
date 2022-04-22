@@ -14,6 +14,7 @@ import com.pulumi.gcp.datacatalog.outputs.TagTemplateField;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -50,8 +51,8 @@ public class TagTemplate extends com.pulumi.resources.CustomResource {
      * @return The display name for this template.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * Set of tag template field IDs and the settings for the field. This set is an exhaustive list of the allowed fields. This set must contain at least one field and at most 500 fields.
@@ -80,8 +81,8 @@ public class TagTemplate extends com.pulumi.resources.CustomResource {
      * @return This confirms the deletion of any possible tags using this template. Must be set to true in order to delete the tag template.
      * 
      */
-    public Output</* @Nullable */ Boolean> forceDelete() {
-        return this.forceDelete;
+    public Output<Optional<Boolean>> forceDelete() {
+        return Codegen.optional(this.forceDelete);
     }
     /**
      * - 

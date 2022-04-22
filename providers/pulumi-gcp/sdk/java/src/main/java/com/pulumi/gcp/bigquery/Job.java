@@ -18,6 +18,7 @@ import com.pulumi.gcp.bigquery.outputs.JobStatus;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -76,8 +77,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ JobCopy> copy() {
-        return this.copy;
+    public Output<Optional<JobCopy>> copy() {
+        return Codegen.optional(this.copy);
     }
     /**
      * Configures an extract job.
@@ -92,8 +93,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ JobExtract> extract() {
-        return this.extract;
+    public Output<Optional<JobExtract>> extract() {
+        return Codegen.optional(this.extract);
     }
     /**
      * The ID of the job. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), or dashes (-). The maximum length is 1,024 characters.
@@ -120,8 +121,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Job timeout in milliseconds. If this time limit is exceeded, BigQuery may attempt to terminate the job.
      * 
      */
-    public Output</* @Nullable */ String> jobTimeoutMs() {
-        return this.jobTimeoutMs;
+    public Output<Optional<String>> jobTimeoutMs() {
+        return Codegen.optional(this.jobTimeoutMs);
     }
     /**
      * The type of the job.
@@ -148,8 +149,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return The labels associated with this job. You can use these to organize and group your jobs.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * Configures a load job.
@@ -164,8 +165,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ JobLoad> load() {
-        return this.load;
+    public Output<Optional<JobLoad>> load() {
+        return Codegen.optional(this.load);
     }
     /**
      * The geographic location of the job. The default value is US.
@@ -178,8 +179,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return The geographic location of the job. The default value is US.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The ID of the project in which the resource belongs.
@@ -210,8 +211,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ JobQuery> query() {
-        return this.query;
+    public Output<Optional<JobQuery>> query() {
+        return Codegen.optional(this.query);
     }
     /**
      * The status of this job. Examine this value when polling an asynchronous job to see if the job is complete.

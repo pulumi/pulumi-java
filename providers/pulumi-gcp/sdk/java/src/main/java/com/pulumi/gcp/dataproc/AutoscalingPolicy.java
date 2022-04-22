@@ -14,6 +14,7 @@ import com.pulumi.gcp.dataproc.outputs.AutoscalingPolicyBasicAlgorithm;
 import com.pulumi.gcp.dataproc.outputs.AutoscalingPolicySecondaryWorkerConfig;
 import com.pulumi.gcp.dataproc.outputs.AutoscalingPolicyWorkerConfig;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -53,8 +54,8 @@ public class AutoscalingPolicy extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ AutoscalingPolicyBasicAlgorithm> basicAlgorithm() {
-        return this.basicAlgorithm;
+    public Output<Optional<AutoscalingPolicyBasicAlgorithm>> basicAlgorithm() {
+        return Codegen.optional(this.basicAlgorithm);
     }
     /**
      * The  location where the autoscaling policy should reside.
@@ -69,8 +70,8 @@ public class AutoscalingPolicy extends com.pulumi.resources.CustomResource {
      * The default value is `global`.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The &#34;resource name&#34; of the autoscaling policy.
@@ -133,8 +134,8 @@ public class AutoscalingPolicy extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ AutoscalingPolicySecondaryWorkerConfig> secondaryWorkerConfig() {
-        return this.secondaryWorkerConfig;
+    public Output<Optional<AutoscalingPolicySecondaryWorkerConfig>> secondaryWorkerConfig() {
+        return Codegen.optional(this.secondaryWorkerConfig);
     }
     /**
      * Describes how the autoscaler will operate for primary workers.
@@ -149,8 +150,8 @@ public class AutoscalingPolicy extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ AutoscalingPolicyWorkerConfig> workerConfig() {
-        return this.workerConfig;
+    public Output<Optional<AutoscalingPolicyWorkerConfig>> workerConfig() {
+        return Codegen.optional(this.workerConfig);
     }
 
     /**

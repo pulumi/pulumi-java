@@ -14,6 +14,7 @@ import com.pulumi.gcp.vertex.outputs.AiFeatureStoreOnlineServingConfig;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -81,8 +82,8 @@ public class AiFeatureStore extends com.pulumi.resources.CustomResource {
      * @return If set to true, any EntityTypes and Features for this Featurestore will also be deleted
      * 
      */
-    public Output</* @Nullable */ Boolean> forceDestroy() {
-        return this.forceDestroy;
+    public Output<Optional<Boolean>> forceDestroy() {
+        return Codegen.optional(this.forceDestroy);
     }
     /**
      * A set of key/value label pairs to assign to this Featurestore.
@@ -95,8 +96,8 @@ public class AiFeatureStore extends com.pulumi.resources.CustomResource {
      * @return A set of key/value label pairs to assign to this Featurestore.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * The name of the Featurestore. This value may be up to 60 characters, and valid characters are [a-z0-9_]. The first character cannot be a number.
@@ -125,8 +126,8 @@ public class AiFeatureStore extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ AiFeatureStoreOnlineServingConfig> onlineServingConfig() {
-        return this.onlineServingConfig;
+    public Output<Optional<AiFeatureStoreOnlineServingConfig>> onlineServingConfig() {
+        return Codegen.optional(this.onlineServingConfig);
     }
     /**
      * The ID of the project in which the resource belongs.

@@ -14,6 +14,7 @@ import com.pulumi.gcp.pubsub.outputs.TopicMessageStoragePolicy;
 import com.pulumi.gcp.pubsub.outputs.TopicSchemaSettings;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -68,8 +69,8 @@ public class Topic extends com.pulumi.resources.CustomResource {
      * The expected format is `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*`
      * 
      */
-    public Output</* @Nullable */ String> kmsKeyName() {
-        return this.kmsKeyName;
+    public Output<Optional<String>> kmsKeyName() {
+        return Codegen.optional(this.kmsKeyName);
     }
     /**
      * A set of key/value label pairs to assign to this Topic.
@@ -82,8 +83,8 @@ public class Topic extends com.pulumi.resources.CustomResource {
      * @return A set of key/value label pairs to assign to this Topic.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * Indicates the minimum duration to retain a message after it is published
@@ -108,8 +109,8 @@ public class Topic extends com.pulumi.resources.CustomResource {
      * Cannot be more than 7 days or less than 10 minutes.
      * 
      */
-    public Output</* @Nullable */ String> messageRetentionDuration() {
-        return this.messageRetentionDuration;
+    public Output<Optional<String>> messageRetentionDuration() {
+        return Codegen.optional(this.messageRetentionDuration);
     }
     /**
      * Policy constraining the set of Google Cloud Platform regions where

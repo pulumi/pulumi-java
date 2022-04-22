@@ -13,6 +13,7 @@ import com.pulumi.gcp.tags.inputs.TagKeyIamBindingState;
 import com.pulumi.gcp.tags.outputs.TagKeyIamBindingCondition;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -62,8 +63,8 @@ public class TagKeyIamBinding extends com.pulumi.resources.CustomResource {
     @Export(name="condition", type=TagKeyIamBindingCondition.class, parameters={})
     private Output</* @Nullable */ TagKeyIamBindingCondition> condition;
 
-    public Output</* @Nullable */ TagKeyIamBindingCondition> condition() {
-        return this.condition;
+    public Output<Optional<TagKeyIamBindingCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * (Computed) The etag of the IAM policy.

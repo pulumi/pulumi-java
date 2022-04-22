@@ -12,6 +12,7 @@ import com.pulumi.gcp.iap.WebBackendServiceIamMemberArgs;
 import com.pulumi.gcp.iap.inputs.WebBackendServiceIamMemberState;
 import com.pulumi.gcp.iap.outputs.WebBackendServiceIamMemberCondition;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -75,8 +76,8 @@ public class WebBackendServiceIamMember extends com.pulumi.resources.CustomResou
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ WebBackendServiceIamMemberCondition> condition() {
-        return this.condition;
+    public Output<Optional<WebBackendServiceIamMemberCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * (Computed) The etag of the IAM policy.

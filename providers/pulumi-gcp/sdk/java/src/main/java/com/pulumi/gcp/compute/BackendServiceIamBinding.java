@@ -13,6 +13,7 @@ import com.pulumi.gcp.compute.inputs.BackendServiceIamBindingState;
 import com.pulumi.gcp.compute.outputs.BackendServiceIamBindingCondition;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 @ResourceType(type="gcp:compute/backendServiceIamBinding:BackendServiceIamBinding")
@@ -20,8 +21,8 @@ public class BackendServiceIamBinding extends com.pulumi.resources.CustomResourc
     @Export(name="condition", type=BackendServiceIamBindingCondition.class, parameters={})
     private Output</* @Nullable */ BackendServiceIamBindingCondition> condition;
 
-    public Output</* @Nullable */ BackendServiceIamBindingCondition> condition() {
-        return this.condition;
+    public Output<Optional<BackendServiceIamBindingCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;

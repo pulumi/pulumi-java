@@ -13,6 +13,7 @@ import com.pulumi.gcp.apigee.inputs.EnvironmentIamBindingState;
 import com.pulumi.gcp.apigee.outputs.EnvironmentIamBindingCondition;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -62,8 +63,8 @@ public class EnvironmentIamBinding extends com.pulumi.resources.CustomResource {
     @Export(name="condition", type=EnvironmentIamBindingCondition.class, parameters={})
     private Output</* @Nullable */ EnvironmentIamBindingCondition> condition;
 
-    public Output</* @Nullable */ EnvironmentIamBindingCondition> condition() {
-        return this.condition;
+    public Output<Optional<EnvironmentIamBindingCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * Used to find the parent resource to bind the IAM policy to

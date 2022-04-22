@@ -16,6 +16,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -104,8 +105,8 @@ public class Image extends com.pulumi.resources.CustomResource {
      * you create the resource.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Size of the image when restored onto a persistent disk (in GB).
@@ -140,8 +141,8 @@ public class Image extends com.pulumi.resources.CustomResource {
      * RFC1035.
      * 
      */
-    public Output</* @Nullable */ String> family() {
-        return this.family;
+    public Output<Optional<String>> family() {
+        return Codegen.optional(this.family);
     }
     /**
      * A list of features to enable on the guest operating system.
@@ -186,8 +187,8 @@ public class Image extends com.pulumi.resources.CustomResource {
      * @return Labels to apply to this Image.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * Any applicable license URI.
@@ -258,8 +259,8 @@ public class Image extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ ImageRawDisk> rawDisk() {
-        return this.rawDisk;
+    public Output<Optional<ImageRawDisk>> rawDisk() {
+        return Codegen.optional(this.rawDisk);
     }
     /**
      * The URI of the created resource.
@@ -290,8 +291,8 @@ public class Image extends com.pulumi.resources.CustomResource {
      * rawDisk.source property but not both to create an image.
      * 
      */
-    public Output</* @Nullable */ String> sourceDisk() {
-        return this.sourceDisk;
+    public Output<Optional<String>> sourceDisk() {
+        return Codegen.optional(this.sourceDisk);
     }
     /**
      * URL of the source image used to create this image. In order to create an image, you must provide the full or partial
@@ -314,8 +315,8 @@ public class Image extends com.pulumi.resources.CustomResource {
      * * The sourceDisk URL
      * 
      */
-    public Output</* @Nullable */ String> sourceImage() {
-        return this.sourceImage;
+    public Output<Optional<String>> sourceImage() {
+        return Codegen.optional(this.sourceImage);
     }
     /**
      * URL of the source snapshot used to create this image.
@@ -340,8 +341,8 @@ public class Image extends com.pulumi.resources.CustomResource {
      * * The sourceDisk URL
      * 
      */
-    public Output</* @Nullable */ String> sourceSnapshot() {
-        return this.sourceSnapshot;
+    public Output<Optional<String>> sourceSnapshot() {
+        return Codegen.optional(this.sourceSnapshot);
     }
 
     /**

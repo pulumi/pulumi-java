@@ -12,6 +12,7 @@ import com.pulumi.gcp.iam.WorkloadIdentityPoolArgs;
 import com.pulumi.gcp.iam.inputs.WorkloadIdentityPoolState;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -56,8 +57,8 @@ public class WorkloadIdentityPool extends com.pulumi.resources.CustomResource {
      * @return A description of the pool. Cannot exceed 256 characters.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Whether the pool is disabled. You cannot use a disabled pool to exchange tokens, or use
@@ -74,8 +75,8 @@ public class WorkloadIdentityPool extends com.pulumi.resources.CustomResource {
      * access again.
      * 
      */
-    public Output</* @Nullable */ Boolean> disabled() {
-        return this.disabled;
+    public Output<Optional<Boolean>> disabled() {
+        return Codegen.optional(this.disabled);
     }
     /**
      * A display name for the pool. Cannot exceed 32 characters.
@@ -88,8 +89,8 @@ public class WorkloadIdentityPool extends com.pulumi.resources.CustomResource {
      * @return A display name for the pool. Cannot exceed 32 characters.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * The resource name of the pool as

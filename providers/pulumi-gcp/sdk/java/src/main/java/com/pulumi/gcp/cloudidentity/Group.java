@@ -13,6 +13,7 @@ import com.pulumi.gcp.cloudidentity.inputs.GroupState;
 import com.pulumi.gcp.cloudidentity.outputs.GroupGroupKey;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -70,8 +71,8 @@ public class Group extends com.pulumi.resources.CustomResource {
      * Must not be longer than 4,096 characters.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The display name of the Group.
@@ -84,8 +85,8 @@ public class Group extends com.pulumi.resources.CustomResource {
      * @return The display name of the Group.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * EntityKey of the Group.
@@ -124,8 +125,8 @@ public class Group extends com.pulumi.resources.CustomResource {
      * Possible values are `INITIAL_GROUP_CONFIG_UNSPECIFIED`, `WITH_INITIAL_OWNER`, and `EMPTY`.
      * 
      */
-    public Output</* @Nullable */ String> initialGroupConfig() {
-        return this.initialGroupConfig;
+    public Output<Optional<String>> initialGroupConfig() {
+        return Codegen.optional(this.initialGroupConfig);
     }
     /**
      * The labels that apply to the Group.

@@ -12,6 +12,7 @@ import com.pulumi.gcp.kms.KeyRingIAMMemberArgs;
 import com.pulumi.gcp.kms.inputs.KeyRingIAMMemberState;
 import com.pulumi.gcp.kms.outputs.KeyRingIAMMemberCondition;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -79,8 +80,8 @@ public class KeyRingIAMMember extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ KeyRingIAMMemberCondition> condition() {
-        return this.condition;
+    public Output<Optional<KeyRingIAMMemberCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * (Computed) The etag of the key ring&#39;s IAM policy.

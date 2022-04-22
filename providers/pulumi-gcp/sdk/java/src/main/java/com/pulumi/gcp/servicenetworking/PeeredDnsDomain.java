@@ -11,6 +11,7 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.servicenetworking.PeeredDnsDomainArgs;
 import com.pulumi.gcp.servicenetworking.inputs.PeeredDnsDomainState;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -114,8 +115,8 @@ public class PeeredDnsDomain extends com.pulumi.resources.CustomResource {
      * @return Private service connection between service and consumer network, defaults to `servicenetworking.googleapis.com`
      * 
      */
-    public Output</* @Nullable */ String> service() {
-        return this.service;
+    public Output<Optional<String>> service() {
+        return Codegen.optional(this.service);
     }
 
     /**

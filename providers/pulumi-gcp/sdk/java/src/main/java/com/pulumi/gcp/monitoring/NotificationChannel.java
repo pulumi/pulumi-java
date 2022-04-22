@@ -14,6 +14,7 @@ import com.pulumi.gcp.monitoring.outputs.NotificationChannelSensitiveLabels;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -65,8 +66,8 @@ public class NotificationChannel extends com.pulumi.resources.CustomResource {
      * @return An optional human-readable description of this notification channel. This description may provide additional details, beyond the display name, for the channel. This may not exceed 1024 Unicode characters.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * An optional human-readable name for this notification channel. It is recommended that you specify a non-empty and unique name in order to make it easier to identify the channels in your project, though this is not enforced. The display name is limited to 512 Unicode characters.
@@ -79,8 +80,8 @@ public class NotificationChannel extends com.pulumi.resources.CustomResource {
      * @return An optional human-readable name for this notification channel. It is recommended that you specify a non-empty and unique name in order to make it easier to identify the channels in your project, though this is not enforced. The display name is limited to 512 Unicode characters.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * Whether notifications are forwarded to the described channel. This makes it possible to disable delivery of notifications to a particular channel without removing the channel from all alerting policies that reference the channel. This is a more convenient approach when the change is temporary and you want to receive notifications from the same set of alerting policies on the channel at some point in the future.
@@ -93,8 +94,8 @@ public class NotificationChannel extends com.pulumi.resources.CustomResource {
      * @return Whether notifications are forwarded to the described channel. This makes it possible to disable delivery of notifications to a particular channel without removing the channel from all alerting policies that reference the channel. This is a more convenient approach when the change is temporary and you want to receive notifications from the same set of alerting policies on the channel at some point in the future.
      * 
      */
-    public Output</* @Nullable */ Boolean> enabled() {
-        return this.enabled;
+    public Output<Optional<Boolean>> enabled() {
+        return Codegen.optional(this.enabled);
     }
     /**
      * Configuration fields that define the channel and its behavior. The
@@ -117,8 +118,8 @@ public class NotificationChannel extends com.pulumi.resources.CustomResource {
      * the sensitive_labels block, but cannot be configured in both places.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * The full REST resource name for this channel. The syntax is: projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID] The
@@ -175,8 +176,8 @@ public class NotificationChannel extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ NotificationChannelSensitiveLabels> sensitiveLabels() {
-        return this.sensitiveLabels;
+    public Output<Optional<NotificationChannelSensitiveLabels>> sensitiveLabels() {
+        return Codegen.optional(this.sensitiveLabels);
     }
     /**
      * The type of the notification channel. This field matches the value of the NotificationChannelDescriptor.type field. See https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.notificationChannelDescriptors/list to get the list of valid values such as &#34;email&#34;, &#34;slack&#34;, etc...
@@ -203,8 +204,8 @@ public class NotificationChannel extends com.pulumi.resources.CustomResource {
      * @return User-supplied key/value data that does not need to conform to the corresponding NotificationChannelDescriptor&#39;s schema, unlike the labels field. This field is intended to be used for organizing and identifying the NotificationChannel objects.The field can contain up to 64 entries. Each key and value is limited to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values can contain only lowercase letters, numerals, underscores, and dashes. Keys must begin with a letter.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> userLabels() {
-        return this.userLabels;
+    public Output<Optional<Map<String,String>>> userLabels() {
+        return Codegen.optional(this.userLabels);
     }
     /**
      * Indicates whether this channel has been verified or not. On a ListNotificationChannels or GetNotificationChannel

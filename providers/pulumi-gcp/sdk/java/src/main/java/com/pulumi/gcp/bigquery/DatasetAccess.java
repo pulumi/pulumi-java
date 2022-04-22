@@ -13,6 +13,7 @@ import com.pulumi.gcp.bigquery.inputs.DatasetAccessState;
 import com.pulumi.gcp.bigquery.outputs.DatasetAccessView;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -66,8 +67,8 @@ public class DatasetAccess extends com.pulumi.resources.CustomResource {
      * domain specified will be granted the specified access
      * 
      */
-    public Output</* @Nullable */ String> domain() {
-        return this.domain;
+    public Output<Optional<String>> domain() {
+        return Codegen.optional(this.domain);
     }
     /**
      * An email address of a Google Group to grant access to.
@@ -80,8 +81,8 @@ public class DatasetAccess extends com.pulumi.resources.CustomResource {
      * @return An email address of a Google Group to grant access to.
      * 
      */
-    public Output</* @Nullable */ String> groupByEmail() {
-        return this.groupByEmail;
+    public Output<Optional<String>> groupByEmail() {
+        return Codegen.optional(this.groupByEmail);
     }
     /**
      * Some other type of member that appears in the IAM Policy but isn&#39;t a user,
@@ -96,8 +97,8 @@ public class DatasetAccess extends com.pulumi.resources.CustomResource {
      * group, domain, or special group. For example: `allUsers`
      * 
      */
-    public Output</* @Nullable */ String> iamMember() {
-        return this.iamMember;
+    public Output<Optional<String>> iamMember() {
+        return Codegen.optional(this.iamMember);
     }
     /**
      * The ID of the project in which the resource belongs.
@@ -136,8 +137,8 @@ public class DatasetAccess extends com.pulumi.resources.CustomResource {
      * [official docs](https://cloud.google.com/bigquery/docs/access-control).
      * 
      */
-    public Output</* @Nullable */ String> role() {
-        return this.role;
+    public Output<Optional<String>> role() {
+        return Codegen.optional(this.role);
     }
     /**
      * A special group to grant access to. Possible values include:
@@ -150,8 +151,8 @@ public class DatasetAccess extends com.pulumi.resources.CustomResource {
      * @return A special group to grant access to. Possible values include:
      * 
      */
-    public Output</* @Nullable */ String> specialGroup() {
-        return this.specialGroup;
+    public Output<Optional<String>> specialGroup() {
+        return Codegen.optional(this.specialGroup);
     }
     /**
      * An email address of a user to grant access to. For example:
@@ -166,8 +167,8 @@ public class DatasetAccess extends com.pulumi.resources.CustomResource {
      * fred@example.com
      * 
      */
-    public Output</* @Nullable */ String> userByEmail() {
-        return this.userByEmail;
+    public Output<Optional<String>> userByEmail() {
+        return Codegen.optional(this.userByEmail);
     }
     /**
      * A view from a different dataset to grant access to. Queries
@@ -190,8 +191,8 @@ public class DatasetAccess extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ DatasetAccessView> view() {
-        return this.view;
+    public Output<Optional<DatasetAccessView>> view() {
+        return Codegen.optional(this.view);
     }
 
     /**

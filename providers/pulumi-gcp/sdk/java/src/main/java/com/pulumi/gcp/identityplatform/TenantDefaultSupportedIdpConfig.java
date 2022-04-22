@@ -12,6 +12,7 @@ import com.pulumi.gcp.identityplatform.TenantDefaultSupportedIdpConfigArgs;
 import com.pulumi.gcp.identityplatform.inputs.TenantDefaultSupportedIdpConfigState;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -81,8 +82,8 @@ public class TenantDefaultSupportedIdpConfig extends com.pulumi.resources.Custom
      * @return If this IDP allows the user to sign in
      * 
      */
-    public Output</* @Nullable */ Boolean> enabled() {
-        return this.enabled;
+    public Output<Optional<Boolean>> enabled() {
+        return Codegen.optional(this.enabled);
     }
     /**
      * ID of the IDP. Possible values include:

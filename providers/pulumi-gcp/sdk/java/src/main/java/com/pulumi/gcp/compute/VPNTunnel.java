@@ -14,6 +14,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -79,8 +80,8 @@ public class VPNTunnel extends com.pulumi.resources.CustomResource {
      * @return An optional description of this resource.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Detailed status message for the VPN tunnel.
@@ -111,8 +112,8 @@ public class VPNTunnel extends com.pulumi.resources.CustomResource {
      * Acceptable IKE versions are 1 or 2. Default version is 2.
      * 
      */
-    public Output</* @Nullable */ Integer> ikeVersion() {
-        return this.ikeVersion;
+    public Output<Optional<Integer>> ikeVersion() {
+        return Codegen.optional(this.ikeVersion);
     }
     /**
      * The fingerprint used for optimistic locking of this resource. Used internally during updates.
@@ -139,8 +140,8 @@ public class VPNTunnel extends com.pulumi.resources.CustomResource {
      * @return Labels to apply to this VpnTunnel.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * Local traffic selector to use when establishing the VPN tunnel with
@@ -199,8 +200,8 @@ public class VPNTunnel extends com.pulumi.resources.CustomResource {
      * @return URL of the peer side external VPN gateway to which this VPN tunnel is connected.
      * 
      */
-    public Output</* @Nullable */ String> peerExternalGateway() {
-        return this.peerExternalGateway;
+    public Output<Optional<String>> peerExternalGateway() {
+        return Codegen.optional(this.peerExternalGateway);
     }
     /**
      * The interface ID of the external VPN gateway to which this VPN tunnel is connected.
@@ -213,8 +214,8 @@ public class VPNTunnel extends com.pulumi.resources.CustomResource {
      * @return The interface ID of the external VPN gateway to which this VPN tunnel is connected.
      * 
      */
-    public Output</* @Nullable */ Integer> peerExternalGatewayInterface() {
-        return this.peerExternalGatewayInterface;
+    public Output<Optional<Integer>> peerExternalGatewayInterface() {
+        return Codegen.optional(this.peerExternalGatewayInterface);
     }
     /**
      * URL of the peer side HA GCP VPN gateway to which this VPN tunnel is connected.
@@ -233,8 +234,8 @@ public class VPNTunnel extends com.pulumi.resources.CustomResource {
      * This field must reference a `gcp.compute.HaVpnGateway` resource.
      * 
      */
-    public Output</* @Nullable */ String> peerGcpGateway() {
-        return this.peerGcpGateway;
+    public Output<Optional<String>> peerGcpGateway() {
+        return Codegen.optional(this.peerGcpGateway);
     }
     /**
      * IP address of the peer VPN gateway. Only IPv4 is supported.
@@ -311,8 +312,8 @@ public class VPNTunnel extends com.pulumi.resources.CustomResource {
      * @return URL of router resource to be used for dynamic routing.
      * 
      */
-    public Output</* @Nullable */ String> router() {
-        return this.router;
+    public Output<Optional<String>> router() {
+        return Codegen.optional(this.router);
     }
     /**
      * The URI of the created resource.
@@ -373,8 +374,8 @@ public class VPNTunnel extends com.pulumi.resources.CustomResource {
      * associated.
      * 
      */
-    public Output</* @Nullable */ String> targetVpnGateway() {
-        return this.targetVpnGateway;
+    public Output<Optional<String>> targetVpnGateway() {
+        return Codegen.optional(this.targetVpnGateway);
     }
     /**
      * The unique identifier for the resource. This identifier is defined by the server.
@@ -405,8 +406,8 @@ public class VPNTunnel extends com.pulumi.resources.CustomResource {
      * This field must reference a `gcp.compute.HaVpnGateway` resource.
      * 
      */
-    public Output</* @Nullable */ String> vpnGateway() {
-        return this.vpnGateway;
+    public Output<Optional<String>> vpnGateway() {
+        return Codegen.optional(this.vpnGateway);
     }
     /**
      * The interface ID of the VPN gateway with which this VPN tunnel is associated.
@@ -419,8 +420,8 @@ public class VPNTunnel extends com.pulumi.resources.CustomResource {
      * @return The interface ID of the VPN gateway with which this VPN tunnel is associated.
      * 
      */
-    public Output</* @Nullable */ Integer> vpnGatewayInterface() {
-        return this.vpnGatewayInterface;
+    public Output<Optional<Integer>> vpnGatewayInterface() {
+        return Codegen.optional(this.vpnGatewayInterface);
     }
 
     /**

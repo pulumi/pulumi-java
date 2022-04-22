@@ -12,6 +12,7 @@ import com.pulumi.gcp.orgpolicy.PolicyArgs;
 import com.pulumi.gcp.orgpolicy.inputs.PolicyState;
 import com.pulumi.gcp.orgpolicy.outputs.PolicySpec;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -77,8 +78,8 @@ public class Policy extends com.pulumi.resources.CustomResource {
      * @return Basic information about the Organization Policy.
      * 
      */
-    public Output</* @Nullable */ PolicySpec> spec() {
-        return this.spec;
+    public Output<Optional<PolicySpec>> spec() {
+        return Codegen.optional(this.spec);
     }
 
     /**

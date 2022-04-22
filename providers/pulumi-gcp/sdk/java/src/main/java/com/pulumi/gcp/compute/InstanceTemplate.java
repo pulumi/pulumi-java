@@ -25,6 +25,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -100,8 +101,8 @@ public class InstanceTemplate extends com.pulumi.resources.CustomResource {
      * @return Configure Nested Virtualisation and Simultaneous Hyper Threading on this VM. Structure is documented below
      * 
      */
-    public Output</* @Nullable */ InstanceTemplateAdvancedMachineFeatures> advancedMachineFeatures() {
-        return this.advancedMachineFeatures;
+    public Output<Optional<InstanceTemplateAdvancedMachineFeatures>> advancedMachineFeatures() {
+        return Codegen.optional(this.advancedMachineFeatures);
     }
     /**
      * Whether to allow sending and receiving of
@@ -116,8 +117,8 @@ public class InstanceTemplate extends com.pulumi.resources.CustomResource {
      * packets with non-matching source or destination IPs. This defaults to false.
      * 
      */
-    public Output</* @Nullable */ Boolean> canIpForward() {
-        return this.canIpForward;
+    public Output<Optional<Boolean>> canIpForward() {
+        return Codegen.optional(this.canIpForward);
     }
     /**
      * Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM. Structure is documented below
@@ -144,8 +145,8 @@ public class InstanceTemplate extends com.pulumi.resources.CustomResource {
      * @return A brief description of this resource.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Disks to attach to instances created from this template.
@@ -178,8 +179,8 @@ public class InstanceTemplate extends com.pulumi.resources.CustomResource {
      * **Note**: `allow_stopping_for_update` must be set to true in order to update this field.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableDisplay() {
-        return this.enableDisplay;
+    public Output<Optional<Boolean>> enableDisplay() {
+        return Codegen.optional(this.enableDisplay);
     }
     /**
      * List of the type and count of accelerator cards attached to the instance. Structure documented below.
@@ -192,8 +193,8 @@ public class InstanceTemplate extends com.pulumi.resources.CustomResource {
      * @return List of the type and count of accelerator cards attached to the instance. Structure documented below.
      * 
      */
-    public Output</* @Nullable */ List<InstanceTemplateGuestAccelerator>> guestAccelerators() {
-        return this.guestAccelerators;
+    public Output<Optional<List<InstanceTemplateGuestAccelerator>>> guestAccelerators() {
+        return Codegen.optional(this.guestAccelerators);
     }
     /**
      * A brief description to use for instances
@@ -208,8 +209,8 @@ public class InstanceTemplate extends com.pulumi.resources.CustomResource {
      * created from this template.
      * 
      */
-    public Output</* @Nullable */ String> instanceDescription() {
-        return this.instanceDescription;
+    public Output<Optional<String>> instanceDescription() {
+        return Codegen.optional(this.instanceDescription);
     }
     /**
      * A set of ket/value label pairs to assign to disk created from
@@ -224,8 +225,8 @@ public class InstanceTemplate extends com.pulumi.resources.CustomResource {
      * this template
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * The machine type to create.
@@ -254,8 +255,8 @@ public class InstanceTemplate extends com.pulumi.resources.CustomResource {
      * within instances created from this template.
      * 
      */
-    public Output</* @Nullable */ Map<String,Object>> metadata() {
-        return this.metadata;
+    public Output<Optional<Map<String,Object>>> metadata() {
+        return Codegen.optional(this.metadata);
     }
     /**
      * The unique fingerprint of the metadata.
@@ -288,8 +289,8 @@ public class InstanceTemplate extends com.pulumi.resources.CustomResource {
      * thus the two mechanisms are not allowed to be used simultaneously.
      * 
      */
-    public Output</* @Nullable */ String> metadataStartupScript() {
-        return this.metadataStartupScript;
+    public Output<Optional<String>> metadataStartupScript() {
+        return Codegen.optional(this.metadataStartupScript);
     }
     /**
      * Specifies a minimum CPU platform. Applicable values are the friendly names of CPU platforms, such as
@@ -304,8 +305,8 @@ public class InstanceTemplate extends com.pulumi.resources.CustomResource {
      * `Intel Haswell` or `Intel Skylake`. See the complete list [here](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform).
      * 
      */
-    public Output</* @Nullable */ String> minCpuPlatform() {
-        return this.minCpuPlatform;
+    public Output<Optional<String>> minCpuPlatform() {
+        return Codegen.optional(this.minCpuPlatform);
     }
     /**
      * The name of the instance template. If you leave
@@ -354,8 +355,8 @@ public class InstanceTemplate extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<InstanceTemplateNetworkInterface>> networkInterfaces() {
-        return this.networkInterfaces;
+    public Output<Optional<List<InstanceTemplateNetworkInterface>>> networkInterfaces() {
+        return Codegen.optional(this.networkInterfaces);
     }
     /**
      * Configures network performance settings for the instance created from the
@@ -378,8 +379,8 @@ public class InstanceTemplate extends com.pulumi.resources.CustomResource {
      * in order for this setting to take effect.
      * 
      */
-    public Output</* @Nullable */ InstanceTemplateNetworkPerformanceConfig> networkPerformanceConfig() {
-        return this.networkPerformanceConfig;
+    public Output<Optional<InstanceTemplateNetworkPerformanceConfig>> networkPerformanceConfig() {
+        return Codegen.optional(this.networkPerformanceConfig);
     }
     /**
      * The ID of the project in which the resource belongs. If it
@@ -434,8 +435,8 @@ public class InstanceTemplate extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ InstanceTemplateReservationAffinity> reservationAffinity() {
-        return this.reservationAffinity;
+    public Output<Optional<InstanceTemplateReservationAffinity>> reservationAffinity() {
+        return Codegen.optional(this.reservationAffinity);
     }
     /**
      * The scheduling strategy to use. More details about
@@ -478,8 +479,8 @@ public class InstanceTemplate extends com.pulumi.resources.CustomResource {
      * @return Service account to attach to the instance. Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ InstanceTemplateServiceAccount> serviceAccount() {
-        return this.serviceAccount;
+    public Output<Optional<InstanceTemplateServiceAccount>> serviceAccount() {
+        return Codegen.optional(this.serviceAccount);
     }
     /**
      * Enable [Shielded VM](https://cloud.google.com/security/shielded-cloud/shielded-vm) on this instance. Shielded VM provides verifiable integrity to prevent against malware and rootkits. Defaults to disabled. Structure is documented below.
@@ -508,8 +509,8 @@ public class InstanceTemplate extends com.pulumi.resources.CustomResource {
      * @return Tags to attach to the instance.
      * 
      */
-    public Output</* @Nullable */ List<String>> tags() {
-        return this.tags;
+    public Output<Optional<List<String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The unique fingerprint of the tags.

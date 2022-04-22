@@ -15,6 +15,7 @@ import com.pulumi.gcp.storage.outputs.BucketObjectCustomerEncryption;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -61,8 +62,8 @@ public class BucketObject extends com.pulumi.resources.CustomResource {
      * directive to specify caching behavior of object data. If omitted and object is accessible to all anonymous users, the default will be public, max-age=3600
      * 
      */
-    public Output</* @Nullable */ String> cacheControl() {
-        return this.cacheControl;
+    public Output<Optional<String>> cacheControl() {
+        return Codegen.optional(this.cacheControl);
     }
     /**
      * Data as `string` to be uploaded. Must be defined if `source` is not. **Note**: The `content` field is marked as sensitive.
@@ -75,8 +76,8 @@ public class BucketObject extends com.pulumi.resources.CustomResource {
      * @return Data as `string` to be uploaded. Must be defined if `source` is not. **Note**: The `content` field is marked as sensitive.
      * 
      */
-    public Output</* @Nullable */ String> content() {
-        return this.content;
+    public Output<Optional<String>> content() {
+        return Codegen.optional(this.content);
     }
     /**
      * [Content-Disposition](https://tools.ietf.org/html/rfc6266) of the object data.
@@ -89,8 +90,8 @@ public class BucketObject extends com.pulumi.resources.CustomResource {
      * @return [Content-Disposition](https://tools.ietf.org/html/rfc6266) of the object data.
      * 
      */
-    public Output</* @Nullable */ String> contentDisposition() {
-        return this.contentDisposition;
+    public Output<Optional<String>> contentDisposition() {
+        return Codegen.optional(this.contentDisposition);
     }
     /**
      * [Content-Encoding](https://tools.ietf.org/html/rfc7231#section-3.1.2.2) of the object data.
@@ -103,8 +104,8 @@ public class BucketObject extends com.pulumi.resources.CustomResource {
      * @return [Content-Encoding](https://tools.ietf.org/html/rfc7231#section-3.1.2.2) of the object data.
      * 
      */
-    public Output</* @Nullable */ String> contentEncoding() {
-        return this.contentEncoding;
+    public Output<Optional<String>> contentEncoding() {
+        return Codegen.optional(this.contentEncoding);
     }
     /**
      * [Content-Language](https://tools.ietf.org/html/rfc7231#section-3.1.3.2) of the object data.
@@ -117,8 +118,8 @@ public class BucketObject extends com.pulumi.resources.CustomResource {
      * @return [Content-Language](https://tools.ietf.org/html/rfc7231#section-3.1.3.2) of the object data.
      * 
      */
-    public Output</* @Nullable */ String> contentLanguage() {
-        return this.contentLanguage;
+    public Output<Optional<String>> contentLanguage() {
+        return Codegen.optional(this.contentLanguage);
     }
     /**
      * [Content-Type](https://tools.ietf.org/html/rfc7231#section-3.1.1.5) of the object data. Defaults to &#34;application/octet-stream&#34; or &#34;text/plain; charset=utf-8&#34;.
@@ -161,14 +162,14 @@ public class BucketObject extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ BucketObjectCustomerEncryption> customerEncryption() {
-        return this.customerEncryption;
+    public Output<Optional<BucketObjectCustomerEncryption>> customerEncryption() {
+        return Codegen.optional(this.customerEncryption);
     }
     @Export(name="detectMd5hash", type=String.class, parameters={})
     private Output</* @Nullable */ String> detectMd5hash;
 
-    public Output</* @Nullable */ String> detectMd5hash() {
-        return this.detectMd5hash;
+    public Output<Optional<String>> detectMd5hash() {
+        return Codegen.optional(this.detectMd5hash);
     }
     /**
      * Whether an object is under event-based hold. Event-based hold is a way to retain objects until an event occurs, which is
@@ -185,8 +186,8 @@ public class BucketObject extends com.pulumi.resources.CustomResource {
      * will be subject to bucket-level retention (if any).
      * 
      */
-    public Output</* @Nullable */ Boolean> eventBasedHold() {
-        return this.eventBasedHold;
+    public Output<Optional<Boolean>> eventBasedHold() {
+        return Codegen.optional(this.eventBasedHold);
     }
     /**
      * The resource name of the Cloud KMS key that will be used to [encrypt](https://cloud.google.com/storage/docs/encryption/using-customer-managed-keys) the object.
@@ -241,8 +242,8 @@ public class BucketObject extends com.pulumi.resources.CustomResource {
      * @return User-provided metadata, in key/value pairs.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> metadata() {
-        return this.metadata;
+    public Output<Optional<Map<String,String>>> metadata() {
+        return Codegen.optional(this.metadata);
     }
     /**
      * The name of the object. If you&#39;re interpolating the name of this object, see `output_name` instead.
@@ -301,8 +302,8 @@ public class BucketObject extends com.pulumi.resources.CustomResource {
      * if `content` is not.
      * 
      */
-    public Output</* @Nullable */ AssetOrArchive> source() {
-        return this.source;
+    public Output<Optional<AssetOrArchive>> source() {
+        return Codegen.optional(this.source);
     }
     /**
      * The [StorageClass](https://cloud.google.com/storage/docs/storage-classes) of the new bucket object.
@@ -335,8 +336,8 @@ public class BucketObject extends com.pulumi.resources.CustomResource {
      * overwrites.
      * 
      */
-    public Output</* @Nullable */ Boolean> temporaryHold() {
-        return this.temporaryHold;
+    public Output<Optional<Boolean>> temporaryHold() {
+        return Codegen.optional(this.temporaryHold);
     }
 
     /**

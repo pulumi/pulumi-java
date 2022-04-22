@@ -15,6 +15,7 @@ import com.pulumi.gcp.datacatalog.outputs.EntryBigqueryTableSpec;
 import com.pulumi.gcp.datacatalog.outputs.EntryGcsFilesetSpec;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -85,8 +86,8 @@ public class Entry extends com.pulumi.resources.CustomResource {
      * @return Entry description, which can consist of several sentences or paragraphs that describe entry contents.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Display information such as title and description. A short name to identify the entry,
@@ -101,8 +102,8 @@ public class Entry extends com.pulumi.resources.CustomResource {
      * for example, &#34;Analytics Data - Jan 2011&#34;.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * The name of the entry group this entry is in.
@@ -145,8 +146,8 @@ public class Entry extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ EntryGcsFilesetSpec> gcsFilesetSpec() {
-        return this.gcsFilesetSpec;
+    public Output<Optional<EntryGcsFilesetSpec>> gcsFilesetSpec() {
+        return Codegen.optional(this.gcsFilesetSpec);
     }
     /**
      * This field indicates the entry&#39;s source system that Data Catalog integrates with, such as BigQuery or Pub/Sub.
@@ -221,8 +222,8 @@ public class Entry extends com.pulumi.resources.CustomResource {
      * for what fields this schema can contain.
      * 
      */
-    public Output</* @Nullable */ String> schema() {
-        return this.schema;
+    public Output<Optional<String>> schema() {
+        return Codegen.optional(this.schema);
     }
     /**
      * The type of the entry. Only used for Entries with types in the EntryType enum.
@@ -239,8 +240,8 @@ public class Entry extends com.pulumi.resources.CustomResource {
      * Possible values are `FILESET`.
      * 
      */
-    public Output</* @Nullable */ String> type() {
-        return this.type;
+    public Output<Optional<String>> type() {
+        return Codegen.optional(this.type);
     }
     /**
      * This field indicates the entry&#39;s source system that Data Catalog does not integrate with.
@@ -257,8 +258,8 @@ public class Entry extends com.pulumi.resources.CustomResource {
      * and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
      * 
      */
-    public Output</* @Nullable */ String> userSpecifiedSystem() {
-        return this.userSpecifiedSystem;
+    public Output<Optional<String>> userSpecifiedSystem() {
+        return Codegen.optional(this.userSpecifiedSystem);
     }
     /**
      * Entry type if it does not fit any of the input-allowed values listed in EntryType enum above.
@@ -279,8 +280,8 @@ public class Entry extends com.pulumi.resources.CustomResource {
      * numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
      * 
      */
-    public Output</* @Nullable */ String> userSpecifiedType() {
-        return this.userSpecifiedType;
+    public Output<Optional<String>> userSpecifiedType() {
+        return Codegen.optional(this.userSpecifiedType);
     }
 
     /**

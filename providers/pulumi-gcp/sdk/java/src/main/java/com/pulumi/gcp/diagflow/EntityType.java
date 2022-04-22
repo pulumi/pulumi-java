@@ -14,6 +14,7 @@ import com.pulumi.gcp.diagflow.outputs.EntityTypeEntity;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -63,8 +64,8 @@ public class EntityType extends com.pulumi.resources.CustomResource {
      * @return Enables fuzzy entity extraction during classification.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableFuzzyExtraction() {
-        return this.enableFuzzyExtraction;
+    public Output<Optional<Boolean>> enableFuzzyExtraction() {
+        return Codegen.optional(this.enableFuzzyExtraction);
     }
     /**
      * The collection of entity entries associated with the entity type.
@@ -79,8 +80,8 @@ public class EntityType extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<EntityTypeEntity>> entities() {
-        return this.entities;
+    public Output<Optional<List<EntityTypeEntity>>> entities() {
+        return Codegen.optional(this.entities);
     }
     /**
      * Indicates the kind of entity type.

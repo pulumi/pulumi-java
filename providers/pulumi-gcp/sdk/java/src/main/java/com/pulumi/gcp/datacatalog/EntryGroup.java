@@ -11,6 +11,7 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.datacatalog.EntryGroupArgs;
 import com.pulumi.gcp.datacatalog.inputs.EntryGroupState;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class EntryGroup extends com.pulumi.resources.CustomResource {
      * @return Entry group description, which can consist of several sentences or paragraphs that describe entry group contents.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * A short name to identify the entry group, for example, &#34;analytics data - jan 2011&#34;.
@@ -60,8 +61,8 @@ public class EntryGroup extends com.pulumi.resources.CustomResource {
      * @return A short name to identify the entry group, for example, &#34;analytics data - jan 2011&#34;.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * The id of the entry group to create. The id must begin with a letter or underscore,

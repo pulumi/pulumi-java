@@ -12,6 +12,7 @@ import com.pulumi.gcp.datacatalog.TagTemplateIamMemberArgs;
 import com.pulumi.gcp.datacatalog.inputs.TagTemplateIamMemberState;
 import com.pulumi.gcp.datacatalog.outputs.TagTemplateIamMemberCondition;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 @ResourceType(type="gcp:datacatalog/tagTemplateIamMember:TagTemplateIamMember")
@@ -19,8 +20,8 @@ public class TagTemplateIamMember extends com.pulumi.resources.CustomResource {
     @Export(name="condition", type=TagTemplateIamMemberCondition.class, parameters={})
     private Output</* @Nullable */ TagTemplateIamMemberCondition> condition;
 
-    public Output</* @Nullable */ TagTemplateIamMemberCondition> condition() {
-        return this.condition;
+    public Output<Optional<TagTemplateIamMemberCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;

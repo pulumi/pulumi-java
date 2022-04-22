@@ -11,6 +11,7 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.tags.TagValueArgs;
 import com.pulumi.gcp.tags.inputs.TagValueState;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -66,8 +67,8 @@ public class TagValue extends com.pulumi.resources.CustomResource {
      * @return User-assigned description of the TagValue. Must not exceed 256 characters.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The generated numeric id for the TagValue.

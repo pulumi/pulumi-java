@@ -13,6 +13,7 @@ import com.pulumi.gcp.datacatalog.inputs.TaxonomyIamBindingState;
 import com.pulumi.gcp.datacatalog.outputs.TaxonomyIamBindingCondition;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -62,8 +63,8 @@ public class TaxonomyIamBinding extends com.pulumi.resources.CustomResource {
     @Export(name="condition", type=TaxonomyIamBindingCondition.class, parameters={})
     private Output</* @Nullable */ TaxonomyIamBindingCondition> condition;
 
-    public Output</* @Nullable */ TaxonomyIamBindingCondition> condition() {
-        return this.condition;
+    public Output<Optional<TaxonomyIamBindingCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * (Computed) The etag of the IAM policy.

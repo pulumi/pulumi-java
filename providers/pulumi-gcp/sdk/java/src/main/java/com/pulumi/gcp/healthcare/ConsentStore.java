@@ -13,6 +13,7 @@ import com.pulumi.gcp.healthcare.inputs.ConsentStoreState;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -66,8 +67,8 @@ public class ConsentStore extends com.pulumi.resources.CustomResource {
      * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
      * 
      */
-    public Output</* @Nullable */ String> defaultConsentTtl() {
-        return this.defaultConsentTtl;
+    public Output<Optional<String>> defaultConsentTtl() {
+        return Codegen.optional(this.defaultConsentTtl);
     }
     /**
      * If true, [consents.patch] [google.cloud.healthcare.v1.consent.UpdateConsent] creates the consent if it does not already exist.
@@ -80,8 +81,8 @@ public class ConsentStore extends com.pulumi.resources.CustomResource {
      * @return If true, [consents.patch] [google.cloud.healthcare.v1.consent.UpdateConsent] creates the consent if it does not already exist.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableConsentCreateOnUpdate() {
-        return this.enableConsentCreateOnUpdate;
+    public Output<Optional<Boolean>> enableConsentCreateOnUpdate() {
+        return Codegen.optional(this.enableConsentCreateOnUpdate);
     }
     /**
      * User-supplied key-value pairs used to organize Consent stores.
@@ -108,8 +109,8 @@ public class ConsentStore extends com.pulumi.resources.CustomResource {
      * Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * The name of this ConsentStore, for example:

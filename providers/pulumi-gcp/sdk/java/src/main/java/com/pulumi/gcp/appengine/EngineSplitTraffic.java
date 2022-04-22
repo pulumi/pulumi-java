@@ -13,6 +13,7 @@ import com.pulumi.gcp.appengine.inputs.EngineSplitTrafficState;
 import com.pulumi.gcp.appengine.outputs.EngineSplitTrafficSplit;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -54,8 +55,8 @@ public class EngineSplitTraffic extends com.pulumi.resources.CustomResource {
      * @return If set to true traffic will be migrated to this version.
      * 
      */
-    public Output</* @Nullable */ Boolean> migrateTraffic() {
-        return this.migrateTraffic;
+    public Output<Optional<Boolean>> migrateTraffic() {
+        return Codegen.optional(this.migrateTraffic);
     }
     /**
      * The ID of the project in which the resource belongs.

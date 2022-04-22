@@ -17,6 +17,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -100,8 +101,8 @@ public class Dataset extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ DatasetDefaultEncryptionConfiguration> defaultEncryptionConfiguration() {
-        return this.defaultEncryptionConfiguration;
+    public Output<Optional<DatasetDefaultEncryptionConfiguration>> defaultEncryptionConfiguration() {
+        return Codegen.optional(this.defaultEncryptionConfiguration);
     }
     /**
      * The default partition expiration for all partitioned tables in
@@ -116,8 +117,8 @@ public class Dataset extends com.pulumi.resources.CustomResource {
      * the dataset, in milliseconds.
      * 
      */
-    public Output</* @Nullable */ Integer> defaultPartitionExpirationMs() {
-        return this.defaultPartitionExpirationMs;
+    public Output<Optional<Integer>> defaultPartitionExpirationMs() {
+        return Codegen.optional(this.defaultPartitionExpirationMs);
     }
     /**
      * The default lifetime of all tables in the dataset, in milliseconds.
@@ -132,8 +133,8 @@ public class Dataset extends com.pulumi.resources.CustomResource {
      * The minimum value is 3600000 milliseconds (one hour).
      * 
      */
-    public Output</* @Nullable */ Integer> defaultTableExpirationMs() {
-        return this.defaultTableExpirationMs;
+    public Output<Optional<Integer>> defaultTableExpirationMs() {
+        return Codegen.optional(this.defaultTableExpirationMs);
     }
     /**
      * If set to `true`, delete all the tables in the
@@ -150,8 +151,8 @@ public class Dataset extends com.pulumi.resources.CustomResource {
      * destroying the resource will fail if tables are present.
      * 
      */
-    public Output</* @Nullable */ Boolean> deleteContentsOnDestroy() {
-        return this.deleteContentsOnDestroy;
+    public Output<Optional<Boolean>> deleteContentsOnDestroy() {
+        return Codegen.optional(this.deleteContentsOnDestroy);
     }
     /**
      * A user-friendly description of the dataset
@@ -164,8 +165,8 @@ public class Dataset extends com.pulumi.resources.CustomResource {
      * @return A user-friendly description of the dataset
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * A hash of the resource.
@@ -192,8 +193,8 @@ public class Dataset extends com.pulumi.resources.CustomResource {
      * @return A descriptive name for the dataset
      * 
      */
-    public Output</* @Nullable */ String> friendlyName() {
-        return this.friendlyName;
+    public Output<Optional<String>> friendlyName() {
+        return Codegen.optional(this.friendlyName);
     }
     /**
      * The labels associated with this dataset. You can use these to
@@ -208,8 +209,8 @@ public class Dataset extends com.pulumi.resources.CustomResource {
      * organize and group your datasets
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * The date when this dataset or any of its tables was last modified, in milliseconds since the epoch.
@@ -238,8 +239,8 @@ public class Dataset extends com.pulumi.resources.CustomResource {
      * See [official docs](https://cloud.google.com/bigquery/docs/dataset-locations).
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The ID of the project in which the resource belongs.

@@ -14,6 +14,7 @@ import com.pulumi.gcp.containeranalysis.outputs.NoteAttestationAuthority;
 import com.pulumi.gcp.containeranalysis.outputs.NoteRelatedUrl;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -105,8 +106,8 @@ public class Note extends com.pulumi.resources.CustomResource {
      * @return Time of expiration for this note. Leave empty if note does not expire.
      * 
      */
-    public Output</* @Nullable */ String> expirationTime() {
-        return this.expirationTime;
+    public Output<Optional<String>> expirationTime() {
+        return Codegen.optional(this.expirationTime);
     }
     /**
      * The type of analysis this note describes
@@ -133,8 +134,8 @@ public class Note extends com.pulumi.resources.CustomResource {
      * @return A detailed description of the note
      * 
      */
-    public Output</* @Nullable */ String> longDescription() {
-        return this.longDescription;
+    public Output<Optional<String>> longDescription() {
+        return Codegen.optional(this.longDescription);
     }
     /**
      * The name of the note.
@@ -177,8 +178,8 @@ public class Note extends com.pulumi.resources.CustomResource {
      * @return Names of other notes related to this note.
      * 
      */
-    public Output</* @Nullable */ List<String>> relatedNoteNames() {
-        return this.relatedNoteNames;
+    public Output<Optional<List<String>>> relatedNoteNames() {
+        return Codegen.optional(this.relatedNoteNames);
     }
     /**
      * URLs associated with this note and related metadata.
@@ -193,8 +194,8 @@ public class Note extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<NoteRelatedUrl>> relatedUrls() {
-        return this.relatedUrls;
+    public Output<Optional<List<NoteRelatedUrl>>> relatedUrls() {
+        return Codegen.optional(this.relatedUrls);
     }
     /**
      * A one sentence description of the note.
@@ -207,8 +208,8 @@ public class Note extends com.pulumi.resources.CustomResource {
      * @return A one sentence description of the note.
      * 
      */
-    public Output</* @Nullable */ String> shortDescription() {
-        return this.shortDescription;
+    public Output<Optional<String>> shortDescription() {
+        return Codegen.optional(this.shortDescription);
     }
     /**
      * The time this note was last updated.

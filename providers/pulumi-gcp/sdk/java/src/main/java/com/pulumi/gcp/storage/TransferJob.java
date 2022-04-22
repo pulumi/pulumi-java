@@ -13,6 +13,7 @@ import com.pulumi.gcp.storage.inputs.TransferJobState;
 import com.pulumi.gcp.storage.outputs.TransferJobSchedule;
 import com.pulumi.gcp.storage.outputs.TransferJobTransferSpec;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -135,8 +136,8 @@ public class TransferJob extends com.pulumi.resources.CustomResource {
      * @return Schedule specification defining when the Transfer Job should be scheduled to start, end and what time to run. Structure documented below.
      * 
      */
-    public Output</* @Nullable */ TransferJobSchedule> schedule() {
-        return this.schedule;
+    public Output<Optional<TransferJobSchedule>> schedule() {
+        return Codegen.optional(this.schedule);
     }
     /**
      * Status of the job. Default: `ENABLED`. **NOTE: The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation.**
@@ -149,8 +150,8 @@ public class TransferJob extends com.pulumi.resources.CustomResource {
      * @return Status of the job. Default: `ENABLED`. **NOTE: The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation.**
      * 
      */
-    public Output</* @Nullable */ String> status() {
-        return this.status;
+    public Output<Optional<String>> status() {
+        return Codegen.optional(this.status);
     }
     /**
      * Transfer specification. Structure documented below.

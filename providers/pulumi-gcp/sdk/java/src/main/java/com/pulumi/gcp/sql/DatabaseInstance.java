@@ -19,6 +19,7 @@ import com.pulumi.gcp.sql.outputs.DatabaseInstanceSettings;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -72,8 +73,8 @@ public class DatabaseInstance extends com.pulumi.resources.CustomResource {
      * configuration is detailed below.
      * 
      */
-    public Output</* @Nullable */ DatabaseInstanceClone> clone_() {
-        return this.clone;
+    public Output<Optional<DatabaseInstanceClone>> clone_() {
+        return Codegen.optional(this.clone);
     }
     /**
      * The connection name of the instance to be used in
@@ -134,8 +135,8 @@ public class DatabaseInstance extends com.pulumi.resources.CustomResource {
      * in state, a `destroy` or `update` command that deletes the instance will fail.
      * 
      */
-    public Output</* @Nullable */ Boolean> deletionProtection() {
-        return this.deletionProtection;
+    public Output<Optional<Boolean>> deletionProtection() {
+        return Codegen.optional(this.deletionProtection);
     }
     /**
      * The full path to the encryption key used for the CMEK disk encryption.  Setting
@@ -162,8 +163,8 @@ public class DatabaseInstance extends com.pulumi.resources.CustomResource {
      * key - please see [this step](https://cloud.google.com/sql/docs/mysql/configure-cmek#grantkey).
      * 
      */
-    public Output</* @Nullable */ String> encryptionKeyName() {
-        return this.encryptionKeyName;
+    public Output<Optional<String>> encryptionKeyName() {
+        return Codegen.optional(this.encryptionKeyName);
     }
     /**
      * The first IPv4 address of any type assigned.
@@ -316,8 +317,8 @@ public class DatabaseInstance extends com.pulumi.resources.CustomResource {
      * block during resource creation/update will trigger the restore action after the resource is created/updated.
      * 
      */
-    public Output</* @Nullable */ DatabaseInstanceRestoreBackupContext> restoreBackupContext() {
-        return this.restoreBackupContext;
+    public Output<Optional<DatabaseInstanceRestoreBackupContext>> restoreBackupContext() {
+        return Codegen.optional(this.restoreBackupContext);
     }
     /**
      * Initial root password. Required for MS SQL Server, ignored by MySQL and PostgreSQL.
@@ -330,8 +331,8 @@ public class DatabaseInstance extends com.pulumi.resources.CustomResource {
      * @return Initial root password. Required for MS SQL Server, ignored by MySQL and PostgreSQL.
      * 
      */
-    public Output</* @Nullable */ String> rootPassword() {
-        return this.rootPassword;
+    public Output<Optional<String>> rootPassword() {
+        return Codegen.optional(this.rootPassword);
     }
     /**
      * The URI of the created resource.

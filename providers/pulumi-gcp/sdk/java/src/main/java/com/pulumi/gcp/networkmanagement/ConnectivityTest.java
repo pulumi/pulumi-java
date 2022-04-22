@@ -15,6 +15,7 @@ import com.pulumi.gcp.networkmanagement.outputs.ConnectivityTestSource;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -62,8 +63,8 @@ public class ConnectivityTest extends com.pulumi.resources.CustomResource {
      * Maximum of 512 characters.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Required. Destination specification of the Connectivity Test.
@@ -118,8 +119,8 @@ public class ConnectivityTest extends com.pulumi.resources.CustomResource {
      * @return Resource labels to represent user-provided metadata.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * Unique name for the connectivity test.
@@ -162,8 +163,8 @@ public class ConnectivityTest extends com.pulumi.resources.CustomResource {
      * @return IP Protocol of the test. When not provided, &#34;TCP&#34; is assumed.
      * 
      */
-    public Output</* @Nullable */ String> protocol() {
-        return this.protocol;
+    public Output<Optional<String>> protocol() {
+        return Codegen.optional(this.protocol);
     }
     /**
      * Other projects that may be relevant for reachability analysis.
@@ -180,8 +181,8 @@ public class ConnectivityTest extends com.pulumi.resources.CustomResource {
      * boundaries.
      * 
      */
-    public Output</* @Nullable */ List<String>> relatedProjects() {
-        return this.relatedProjects;
+    public Output<Optional<List<String>>> relatedProjects() {
+        return Codegen.optional(this.relatedProjects);
     }
     /**
      * Required. Source specification of the Connectivity Test.

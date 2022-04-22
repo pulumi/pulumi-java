@@ -12,6 +12,7 @@ import com.pulumi.gcp.identityplatform.TenantOauthIdpConfigArgs;
 import com.pulumi.gcp.identityplatform.inputs.TenantOauthIdpConfigState;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -67,8 +68,8 @@ public class TenantOauthIdpConfig extends com.pulumi.resources.CustomResource {
      * @return The client secret of the OAuth client, to enable OIDC code flow.
      * 
      */
-    public Output</* @Nullable */ String> clientSecret() {
-        return this.clientSecret;
+    public Output<Optional<String>> clientSecret() {
+        return Codegen.optional(this.clientSecret);
     }
     /**
      * Human friendly display name.
@@ -95,8 +96,8 @@ public class TenantOauthIdpConfig extends com.pulumi.resources.CustomResource {
      * @return If this config allows users to sign in with the provider.
      * 
      */
-    public Output</* @Nullable */ Boolean> enabled() {
-        return this.enabled;
+    public Output<Optional<Boolean>> enabled() {
+        return Codegen.optional(this.enabled);
     }
     /**
      * For OIDC Idps, the issuer identifier.

@@ -13,6 +13,7 @@ import com.pulumi.gcp.datacatalog.inputs.TagState;
 import com.pulumi.gcp.datacatalog.outputs.TagField;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -56,8 +57,8 @@ public class Tag extends com.pulumi.resources.CustomResource {
      * `outer_column.inner_column`
      * 
      */
-    public Output</* @Nullable */ String> column() {
-        return this.column;
+    public Output<Optional<String>> column() {
+        return Codegen.optional(this.column);
     }
     /**
      * This maps the ID of a tag field to the value of and additional information about that field.
@@ -110,8 +111,8 @@ public class Tag extends com.pulumi.resources.CustomResource {
      * all entries in that group.
      * 
      */
-    public Output</* @Nullable */ String> parent() {
-        return this.parent;
+    public Output<Optional<String>> parent() {
+        return Codegen.optional(this.parent);
     }
     /**
      * The resource name of the tag template that this tag uses. Example:

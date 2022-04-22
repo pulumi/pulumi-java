@@ -19,6 +19,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -94,8 +95,8 @@ public class ManagedZone extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ ManagedZoneDnssecConfig> dnssecConfig() {
-        return this.dnssecConfig;
+    public Output<Optional<ManagedZoneDnssecConfig>> dnssecConfig() {
+        return Codegen.optional(this.dnssecConfig);
     }
     /**
      * Set this true to delete all records in the zone.
@@ -108,8 +109,8 @@ public class ManagedZone extends com.pulumi.resources.CustomResource {
      * @return Set this true to delete all records in the zone.
      * 
      */
-    public Output</* @Nullable */ Boolean> forceDestroy() {
-        return this.forceDestroy;
+    public Output<Optional<Boolean>> forceDestroy() {
+        return Codegen.optional(this.forceDestroy);
     }
     /**
      * The presence for this field indicates that outbound forwarding is enabled
@@ -128,8 +129,8 @@ public class ManagedZone extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ ManagedZoneForwardingConfig> forwardingConfig() {
-        return this.forwardingConfig;
+    public Output<Optional<ManagedZoneForwardingConfig>> forwardingConfig() {
+        return Codegen.optional(this.forwardingConfig);
     }
     /**
      * A set of key/value label pairs to assign to this ManagedZone.
@@ -142,8 +143,8 @@ public class ManagedZone extends com.pulumi.resources.CustomResource {
      * @return A set of key/value label pairs to assign to this ManagedZone.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * User assigned name for this resource.
@@ -190,8 +191,8 @@ public class ManagedZone extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ ManagedZonePeeringConfig> peeringConfig() {
-        return this.peeringConfig;
+    public Output<Optional<ManagedZonePeeringConfig>> peeringConfig() {
+        return Codegen.optional(this.peeringConfig);
     }
     /**
      * For privately visible zones, the set of Virtual Private Cloud
@@ -208,8 +209,8 @@ public class ManagedZone extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ ManagedZonePrivateVisibilityConfig> privateVisibilityConfig() {
-        return this.privateVisibilityConfig;
+    public Output<Optional<ManagedZonePrivateVisibilityConfig>> privateVisibilityConfig() {
+        return Codegen.optional(this.privateVisibilityConfig);
     }
     /**
      * The ID of the project in which the resource belongs.
@@ -242,8 +243,8 @@ public class ManagedZone extends com.pulumi.resources.CustomResource {
      * to networks listed under `private_visibility_config`.
      * 
      */
-    public Output</* @Nullable */ Boolean> reverseLookup() {
-        return this.reverseLookup;
+    public Output<Optional<Boolean>> reverseLookup() {
+        return Codegen.optional(this.reverseLookup);
     }
     /**
      * The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains information related to the namespace associated with the zone.
@@ -258,8 +259,8 @@ public class ManagedZone extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ ManagedZoneServiceDirectoryConfig> serviceDirectoryConfig() {
-        return this.serviceDirectoryConfig;
+    public Output<Optional<ManagedZoneServiceDirectoryConfig>> serviceDirectoryConfig() {
+        return Codegen.optional(this.serviceDirectoryConfig);
     }
     /**
      * The zone&#39;s visibility: public zones are exposed to the Internet,
@@ -278,8 +279,8 @@ public class ManagedZone extends com.pulumi.resources.CustomResource {
      * Possible values are `private` and `public`.
      * 
      */
-    public Output</* @Nullable */ String> visibility() {
-        return this.visibility;
+    public Output<Optional<String>> visibility() {
+        return Codegen.optional(this.visibility);
     }
 
     /**
