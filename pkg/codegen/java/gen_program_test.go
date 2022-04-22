@@ -48,7 +48,7 @@ var testdataPath = filepath.Join("..", "testing", "test", "testdata")
 //
 //	test.TestProgramCodegen(t,
 //		test.ProgramCodegenOptions{
-//			Language:   "jvm",
+//			Language:   "java",
 //			Extension:  "java",
 //			OutputFile: "App.java",
 //			Check: func(t *testing.T, path string, dependencies codegen.StringSet) {
