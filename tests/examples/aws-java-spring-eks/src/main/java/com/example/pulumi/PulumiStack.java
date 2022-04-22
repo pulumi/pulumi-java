@@ -20,10 +20,11 @@ public class PulumiStack {
         final var ref0 = new StackReference("ref-0", new StackReferenceArgs(stackRefId), null);
         final var ref1 = new StackReference("ref-1", new StackReferenceArgs(stackRefId), null);
 
-        //"target/spring-boot-complete-0.0.1-SNAPSHOT.war"
-        final var jarPath = config.require("jar-path");
         final var bucketName = ref0.getOutput(Output.of("bucketName")).applyValue(String::valueOf);
         final var kubeconfig = ref1.getOutput(Output.of("kubeconfig")).applyValue(String::valueOf);
+
+        //"target/spring-boot-complete-0.0.1-SNAPSHOT.war"
+        final var jarPath = config.require("jar-path");
 
         final var deployment = new JarDeployment("my-deployment", args -> {
             args.appPort(Output.of(8080))

@@ -27,7 +27,6 @@ public class EKSStack {
      * @param clusterPolicies
      */
     public EKSStack(List<Policy> clusterPolicies) {
-
         var vpcIdOutput = Output.of(
                 Ec2Functions.getVpc(
                         GetVpcArgs.builder().default_(true).build()

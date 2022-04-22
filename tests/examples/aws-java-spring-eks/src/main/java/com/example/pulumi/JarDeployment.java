@@ -1,6 +1,5 @@
 package com.example.pulumi;
 
-import com.pulumi.asset.AssetOrArchive;
 import com.pulumi.asset.FileAsset;
 import com.pulumi.aws.s3.BucketObject;
 import com.pulumi.aws.s3.BucketObjectArgs;
@@ -28,16 +27,8 @@ import com.pulumi.kubernetes.core_v1.inputs.VolumeMountArgs;
 import com.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
 import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 import com.pulumi.resources.ComponentResource;
-import com.pulumi.resources.ComponentResourceOptions;
 import com.pulumi.resources.CustomResourceOptions;
 
-import javax.annotation.Nullable;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
@@ -72,10 +63,14 @@ public class JarDeployment extends ComponentResource {
     public BucketObject deployJar(String filepath, Output<String> jarBucket) {
         final var file = new FileAsset(filepath);
 
-        final var appJar = new BucketObject("my-jar.jar", BucketObjectArgs.builder()
-                .bucket(jarBucket)
-                .source(file)
-                .build());
+        final var appJar = new BucketObject("my-jar.jar",
+                BucketObjectArgs.builder()
+                        .bucket(jarBucket)
+                        .source(file)
+                        .build(),
+                CustomResourceOptions.builder()
+                        .parent(this)
+                        .build());
 
         return appJar;
     }
@@ -89,10 +84,15 @@ public class JarDeployment extends ComponentResource {
         final var clusterProvider = new Provider("myProvider",
                 ProviderArgs.builder()
                         .kubeconfig(kubeconfig)
+                        .build(),
+                CustomResourceOptions
+                        .builder()
+                        .parent(this)
                         .build());
 
         final var clusterResourceOptions = CustomResourceOptions.builder()
                 .provider(clusterProvider)
+                .parent(this)
                 .build();
         return clusterResourceOptions;
     }
@@ -108,7 +108,7 @@ public class JarDeployment extends ComponentResource {
                 clusterResourceOptions);
 
         final var appLabels = Map.of(
-                "appClass", "gs-spring-boot"
+        "appClass", "gs-spring-boot"
         );
 
         // Configure Metadata args
