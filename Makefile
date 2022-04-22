@@ -6,7 +6,7 @@ ensure::	ensure_sdk
 
 PKG_FILES := $(shell  find pkg -name '*.go' -type f)
 
-# Go project rooted at `pkg/` implements Pulumi JVM language plugin
+# Go project rooted at `pkg/` implements Pulumi Java language plugin
 # and Java go as a Go library.
 
 build_go::

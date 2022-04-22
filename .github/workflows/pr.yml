@@ -243,10 +243,10 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.base.ref }}
       - run: make submodule_update
-      - name: Regenerate JVM provider SDK from ${{ github.event.pull_request.base.ref }}
+      - name: Regenerate Java provider SDK from ${{ github.event.pull_request.base.ref }}
         continue-on-error: true
         run: ~/bin/pulumi-java-gen -config providers/pulumi-${{ matrix.provider }}/pulumi-java-gen.yaml
-      - name: Rebuild JVM provider SDK from ${{ github.event.pull_request.base.ref }}
+      - name: Rebuild Java provider SDK from ${{ github.event.pull_request.base.ref }}
         uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
         continue-on-error: true
         with:
@@ -350,10 +350,10 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.base.ref }}
       - run: make submodule_update
-      - name: Regenerate JVM provider SDK from ${{ github.event.pull_request.base.ref }}
+      - name: Regenerate Java provider SDK from ${{ github.event.pull_request.base.ref }}
         continue-on-error: true
         run: ~/bin/pulumi-java-gen -config providers/pulumi-${{ matrix.provider }}/pulumi-java-gen.yaml
-      - name: Rebuild JVM provider SDK from ${{ github.event.pull_request.base.ref }}
+      - name: Rebuild Java provider SDK from ${{ github.event.pull_request.base.ref }}
         uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
         continue-on-error: true
         with:
