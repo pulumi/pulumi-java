@@ -50,7 +50,7 @@ hierarchy) does two things:
    must complete all the promises
 
 As a consequence of this design, we have a limitation
-[#314](https://github.com/pulumi/pulumi-jvm/issues/314): subclasses
+[#314](https://github.com/pulumi/pulumi-java/issues/314): subclasses
 currently cannot reliably create and instantiate additional fields. If
 they do, the field initializers may not be run in time for the SDK to
 observe a fully constructed resource.
