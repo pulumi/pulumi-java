@@ -11,12 +11,12 @@ import (
 
 const defaultBasePackage = "com.pulumi."
 
-// PropertyInfo represents a JVM language-specific info for a property.
+// PropertyInfo represents a Java language-specific info for a property.
 type PropertyInfo struct {
 	Name string `json:"name,omitempty"`
 }
 
-// PackageInfo represents a JVM language-specific info for a package.
+// PackageInfo represents a Java language-specific info for a package.
 type PackageInfo struct {
 	PackageReferences      map[string]string `json:"packageReferences,omitempty"`
 	Packages               map[string]string `json:"packages,omitempty"`
@@ -41,7 +41,7 @@ func ensureEndsWithDot(s string) string {
 	return s + "."
 }
 
-// Importer implements schema.Language for JVM
+// Importer implements schema.Language for Java
 var Importer schema.Language = importer(0)
 
 type importer int

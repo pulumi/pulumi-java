@@ -225,8 +225,8 @@ func (mod *modContext) typeStringRecHelper(
 			// including package naming and compatibility mode.
 			extPkg := t.Package
 			var info PackageInfo
-			contract.AssertNoError(extPkg.ImportLanguages(map[string]schema.Language{"jvm": Importer}))
-			if v, ok := t.Package.Language["jvm"].(PackageInfo); ok {
+			contract.AssertNoError(extPkg.ImportLanguages(map[string]schema.Language{"java": Importer}))
+			if v, ok := t.Package.Language["java"].(PackageInfo); ok {
 				info = v
 			}
 			namingCtx = &modContext{
@@ -258,8 +258,8 @@ func (mod *modContext) typeStringRecHelper(
 				// including package naming and compatibility mode.
 				extPkg := t.Resource.Package
 				var info PackageInfo
-				contract.AssertNoError(extPkg.ImportLanguages(map[string]schema.Language{"jvm": Importer}))
-				if v, ok := t.Resource.Package.Language["jvm"].(PackageInfo); ok {
+				contract.AssertNoError(extPkg.ImportLanguages(map[string]schema.Language{"java": Importer}))
+				if v, ok := t.Resource.Package.Language["java"].(PackageInfo); ok {
 					info = v
 				}
 				namingCtx = &modContext{
@@ -1877,7 +1877,7 @@ func (mod *modContext) gen(fs fs) error {
 			if err != nil {
 				return err
 			}
-			return jvmUtilitiesTemplate.Execute(ctx.writer, jvmUtilitiesTemplateContext{
+			return javaUtilitiesTemplate.Execute(ctx.writer, javaUtilitiesTemplateContext{
 				Name:        pkgName.String(),
 				PackagePath: strings.ReplaceAll(mod.packageName, ".", "/"),
 				ClassName:   "Utilities",
@@ -2050,7 +2050,7 @@ func (mod *modContext) gen(fs fs) error {
 
 func computePropertyNames(props []*schema.Property, names map[*schema.Property]string) {
 	for _, p := range props {
-		if info, ok := p.Language["jvm"].(PropertyInfo); ok && info.Name != "" {
+		if info, ok := p.Language["java"].(PropertyInfo); ok && info.Name != "" {
 			names[p] = info.Name
 		}
 	}
@@ -2062,18 +2062,18 @@ func generateModuleContextMap(tool string, pkg *schema.Package) (map[string]*mod
 	var getPackageInfo = func(p *schema.Package) *PackageInfo {
 		info, ok := infos[p]
 		if !ok {
-			if err := p.ImportLanguages(map[string]schema.Language{"jvm": Importer}); err != nil {
+			if err := p.ImportLanguages(map[string]schema.Language{"java": Importer}); err != nil {
 				panic(err)
 			}
 
-			var jvmInfo PackageInfo
-			if raw, ok := pkg.Language["jvm"]; ok {
-				jvmInfo, ok = raw.(PackageInfo)
+			var javaInfo PackageInfo
+			if raw, ok := pkg.Language["java"]; ok {
+				javaInfo, ok = raw.(PackageInfo)
 				if !ok {
-					panic(fmt.Sprintf("Failed to cast `pkg.Language[\"jvm\"]`=%v to `PackageInfo`", raw))
+					panic(fmt.Sprintf("Failed to cast `pkg.Language[\"java\"]`=%v to `PackageInfo`", raw))
 				}
 			}
-			info = &jvmInfo
+			info = &javaInfo
 			infos[p] = info
 		}
 		return info
@@ -2306,7 +2306,7 @@ func genGradleProject(pkg *schema.Package,
 // genSettingsFile emits settings.gradle
 func genSettingsFile(packageName string) ([]byte, error) {
 	w := &bytes.Buffer{}
-	err := jvmSettingsTemplate.Execute(w, jvmSettingsTemplateContext{
+	err := javaSettingsTemplate.Execute(w, javaSettingsTemplateContext{
 		PackageName: packageName,
 	})
 	if err != nil {
@@ -2318,7 +2318,7 @@ func genSettingsFile(packageName string) ([]byte, error) {
 // genBuildFile emits build.gradle
 func genBuildFile(name string, basePackageName string, pkgInfo PackageInfo) ([]byte, error) {
 	w := &bytes.Buffer{}
-	err := jvmBuildTemplate.Execute(w, jvmBuildTemplateContext{
+	err := javaBuildTemplate.Execute(w, javaBuildTemplateContext{
 		Name:            name,
 		BasePackageName: strings.TrimSuffix(basePackageName, "."),
 		PackageInfo:     pkgInfo,
