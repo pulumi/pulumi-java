@@ -1,4 +1,3 @@
 name: eks-minimal
 description: A minimal example of using pulumi-eks
-runtime:
-  name: jvm
+runtime: java

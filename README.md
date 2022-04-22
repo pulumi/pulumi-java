@@ -49,7 +49,7 @@ To run the example:
 
 ```shell
 cd ~/pulumi-java
-make bin/pulumi-language-jvm
+make bin/pulumi-language-java
 export PATH=$PWD/bin:$PATH
 
 # For every provider you need:
