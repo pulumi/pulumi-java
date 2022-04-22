@@ -11,7 +11,7 @@ env:
   GITHUB_TOKEN: ${{ secrets.PULUMI_BOT_TOKEN }}
 
 jobs:
-  release-pulumi-language-jvm:
+  release-pulumi-language-java:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2

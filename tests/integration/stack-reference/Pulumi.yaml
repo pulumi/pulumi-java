@@ -1,7 +1,7 @@
 name: stack-reference
 description: Integration test for Stack Reference
 runtime:
-  name: jvm
+  name: java
   options:
     logtostderr: false
     v: 0
