@@ -18,7 +18,7 @@ import (
 func TestIntegrations(t *testing.T) {
 	t.Run("stack-reference", func(t *testing.T) {
 		dir := filepath.Join(getCwd(t), "stack-reference")
-		test := getJvmBase(t, integration.ProgramTestOptions{
+		test := getJavaBase(t, integration.ProgramTestOptions{
 			Dir:           dir,
 			Quick:         true,
 			DebugUpdates:  false,
@@ -65,7 +65,7 @@ func TestIntegrations(t *testing.T) {
 	})
 }
 
-func getJvmBase(t *testing.T, testSpecificOptions integration.ProgramTestOptions) integration.ProgramTestOptions {
+func getJavaBase(t *testing.T, testSpecificOptions integration.ProgramTestOptions) integration.ProgramTestOptions {
 	repoRoot, err := filepath.Abs(filepath.Join("..", ".."))
 	if err != nil {
 		panic(err)
@@ -76,7 +76,7 @@ func getJvmBase(t *testing.T, testSpecificOptions integration.ProgramTestOptions
 			"org": "pulumi-bot",
 		},
 		PrepareProject: func(*engine.Projinfo) error {
-			return nil // needed because defaultPrepareProject does not know about jvm
+			return nil // needed because defaultPrepareProject does not know about java
 		},
 	}
 	opts = opts.With(testSpecificOptions)
