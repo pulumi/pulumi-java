@@ -16,6 +16,7 @@ import com.pulumi.gcp.assuredworkloads.outputs.WorkloadResourceSetting;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -105,8 +106,8 @@ public class Workload extends com.pulumi.resources.CustomResource {
      * @return Input only. Settings used to create a CMEK crypto key. When set a project with a KMS CMEK key is provisioned. This field is mandatory for a subset of Compliance Regimes.
      * 
      */
-    public Output</* @Nullable */ WorkloadKmsSettings> kmsSettings() {
-        return this.kmsSettings;
+    public Output<Optional<WorkloadKmsSettings>> kmsSettings() {
+        return Codegen.optional(this.kmsSettings);
     }
     /**
      * Optional. Labels applied to the workload.
@@ -119,8 +120,8 @@ public class Workload extends com.pulumi.resources.CustomResource {
      * @return Optional. Labels applied to the workload.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * The location for the resource
@@ -175,8 +176,8 @@ public class Workload extends com.pulumi.resources.CustomResource {
      * @return Input only. The parent resource for the resources managed by this Assured Workload. May be either an organization or a folder. Must be the same or a child of the Workload parent. If not specified all resources are created under the Workload parent. Formats: folders/{folder_id}, organizations/{organization_id}
      * 
      */
-    public Output</* @Nullable */ String> provisionedResourcesParent() {
-        return this.provisionedResourcesParent;
+    public Output<Optional<String>> provisionedResourcesParent() {
+        return Codegen.optional(this.provisionedResourcesParent);
     }
     /**
      * Input only. Resource properties that are used to customize workload resources. These properties (such as custom project id) will be used to create workload resources if possible. This field is optional.
@@ -189,8 +190,8 @@ public class Workload extends com.pulumi.resources.CustomResource {
      * @return Input only. Resource properties that are used to customize workload resources. These properties (such as custom project id) will be used to create workload resources if possible. This field is optional.
      * 
      */
-    public Output</* @Nullable */ List<WorkloadResourceSetting>> resourceSettings() {
-        return this.resourceSettings;
+    public Output<Optional<List<WorkloadResourceSetting>>> resourceSettings() {
+        return Codegen.optional(this.resourceSettings);
     }
     /**
      * Output only. The resources associated with this workload. These resources will be created when creating the workload. If

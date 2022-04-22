@@ -12,6 +12,7 @@ import com.pulumi.gcp.datacatalog.PolicyTagArgs;
 import com.pulumi.gcp.datacatalog.inputs.PolicyTagState;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -67,8 +68,8 @@ public class PolicyTag extends com.pulumi.resources.CustomResource {
      * If not set, defaults to an empty description.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * User defined name of this policy tag. It must: be unique within the parent
@@ -119,8 +120,8 @@ public class PolicyTag extends com.pulumi.resources.CustomResource {
      * If not set, defaults to an empty string.
      * 
      */
-    public Output</* @Nullable */ String> parentPolicyTag() {
-        return this.parentPolicyTag;
+    public Output<Optional<String>> parentPolicyTag() {
+        return Codegen.optional(this.parentPolicyTag);
     }
     /**
      * Taxonomy the policy tag is associated with

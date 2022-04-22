@@ -12,6 +12,7 @@ import com.pulumi.gcp.iap.AppEngineVersionIamMemberArgs;
 import com.pulumi.gcp.iap.inputs.AppEngineVersionIamMemberState;
 import com.pulumi.gcp.iap.outputs.AppEngineVersionIamMemberCondition;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -89,8 +90,8 @@ public class AppEngineVersionIamMember extends com.pulumi.resources.CustomResour
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ AppEngineVersionIamMemberCondition> condition() {
-        return this.condition;
+    public Output<Optional<AppEngineVersionIamMemberCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * (Computed) The etag of the IAM policy.

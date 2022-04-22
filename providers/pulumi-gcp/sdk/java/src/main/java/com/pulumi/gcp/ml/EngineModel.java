@@ -14,6 +14,7 @@ import com.pulumi.gcp.ml.outputs.EngineModelDefaultVersion;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -64,8 +65,8 @@ public class EngineModel extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ EngineModelDefaultVersion> defaultVersion() {
-        return this.defaultVersion;
+    public Output<Optional<EngineModelDefaultVersion>> defaultVersion() {
+        return Codegen.optional(this.defaultVersion);
     }
     /**
      * The description specified for the model when it was created.
@@ -78,8 +79,8 @@ public class EngineModel extends com.pulumi.resources.CustomResource {
      * @return The description specified for the model when it was created.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * One or more labels that you can add, to organize your models.
@@ -92,8 +93,8 @@ public class EngineModel extends com.pulumi.resources.CustomResource {
      * @return One or more labels that you can add, to organize your models.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * The name specified for the version when it was created.
@@ -120,8 +121,8 @@ public class EngineModel extends com.pulumi.resources.CustomResource {
      * @return If true, online prediction nodes send stderr and stdout streams to Stackdriver Logging
      * 
      */
-    public Output</* @Nullable */ Boolean> onlinePredictionConsoleLogging() {
-        return this.onlinePredictionConsoleLogging;
+    public Output<Optional<Boolean>> onlinePredictionConsoleLogging() {
+        return Codegen.optional(this.onlinePredictionConsoleLogging);
     }
     /**
      * If true, online prediction access logs are sent to StackDriver Logging.
@@ -134,8 +135,8 @@ public class EngineModel extends com.pulumi.resources.CustomResource {
      * @return If true, online prediction access logs are sent to StackDriver Logging.
      * 
      */
-    public Output</* @Nullable */ Boolean> onlinePredictionLogging() {
-        return this.onlinePredictionLogging;
+    public Output<Optional<Boolean>> onlinePredictionLogging() {
+        return Codegen.optional(this.onlinePredictionLogging);
     }
     /**
      * The ID of the project in which the resource belongs.
@@ -166,8 +167,8 @@ public class EngineModel extends com.pulumi.resources.CustomResource {
      * Currently only one region per model is supported
      * 
      */
-    public Output</* @Nullable */ String> regions() {
-        return this.regions;
+    public Output<Optional<String>> regions() {
+        return Codegen.optional(this.regions);
     }
 
     /**

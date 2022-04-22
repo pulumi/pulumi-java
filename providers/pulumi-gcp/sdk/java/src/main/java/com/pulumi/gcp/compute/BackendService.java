@@ -22,6 +22,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -78,8 +79,8 @@ public class BackendService extends com.pulumi.resources.CustomResource {
      * When the load balancing scheme is INTERNAL, this field is not used.
      * 
      */
-    public Output</* @Nullable */ Integer> affinityCookieTtlSec() {
-        return this.affinityCookieTtlSec;
+    public Output<Optional<Integer>> affinityCookieTtlSec() {
+        return Codegen.optional(this.affinityCookieTtlSec);
     }
     /**
      * The set of backends that serve this BackendService.
@@ -94,8 +95,8 @@ public class BackendService extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<BackendServiceBackend>> backends() {
-        return this.backends;
+    public Output<Optional<List<BackendServiceBackend>>> backends() {
+        return Codegen.optional(this.backends);
     }
     /**
      * Cloud CDN configuration for this BackendService.
@@ -128,8 +129,8 @@ public class BackendService extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ BackendServiceCircuitBreakers> circuitBreakers() {
-        return this.circuitBreakers;
+    public Output<Optional<BackendServiceCircuitBreakers>> circuitBreakers() {
+        return Codegen.optional(this.circuitBreakers);
     }
     /**
      * Time for which instance will be drained (not accept new
@@ -144,8 +145,8 @@ public class BackendService extends com.pulumi.resources.CustomResource {
      * connections, but still work to finish started).
      * 
      */
-    public Output</* @Nullable */ Integer> connectionDrainingTimeoutSec() {
-        return this.connectionDrainingTimeoutSec;
+    public Output<Optional<Integer>> connectionDrainingTimeoutSec() {
+        return Codegen.optional(this.connectionDrainingTimeoutSec);
     }
     /**
      * Consistent Hash-based load balancing can be used to provide soft session
@@ -174,8 +175,8 @@ public class BackendService extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ BackendServiceConsistentHash> consistentHash() {
-        return this.consistentHash;
+    public Output<Optional<BackendServiceConsistentHash>> consistentHash() {
+        return Codegen.optional(this.consistentHash);
     }
     /**
      * Creation timestamp in RFC3339 text format.
@@ -204,8 +205,8 @@ public class BackendService extends com.pulumi.resources.CustomResource {
      * requests.
      * 
      */
-    public Output</* @Nullable */ List<String>> customRequestHeaders() {
-        return this.customRequestHeaders;
+    public Output<Optional<List<String>>> customRequestHeaders() {
+        return Codegen.optional(this.customRequestHeaders);
     }
     /**
      * Headers that the HTTP/S load balancer should add to proxied
@@ -220,8 +221,8 @@ public class BackendService extends com.pulumi.resources.CustomResource {
      * responses.
      * 
      */
-    public Output</* @Nullable */ List<String>> customResponseHeaders() {
-        return this.customResponseHeaders;
+    public Output<Optional<List<String>>> customResponseHeaders() {
+        return Codegen.optional(this.customResponseHeaders);
     }
     /**
      * An optional description of this resource.
@@ -236,8 +237,8 @@ public class BackendService extends com.pulumi.resources.CustomResource {
      * Provide this property when you create the resource.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * If true, enable Cloud CDN for this BackendService.
@@ -250,8 +251,8 @@ public class BackendService extends com.pulumi.resources.CustomResource {
      * @return If true, enable Cloud CDN for this BackendService.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableCdn() {
-        return this.enableCdn;
+    public Output<Optional<Boolean>> enableCdn() {
+        return Codegen.optional(this.enableCdn);
     }
     /**
      * Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking.
@@ -288,8 +289,8 @@ public class BackendService extends com.pulumi.resources.CustomResource {
      * For internal load balancing, a URL to a HealthCheck resource must be specified instead.
      * 
      */
-    public Output</* @Nullable */ String> healthChecks() {
-        return this.healthChecks;
+    public Output<Optional<String>> healthChecks() {
+        return Codegen.optional(this.healthChecks);
     }
     /**
      * Settings for enabling Cloud Identity Aware Proxy
@@ -304,8 +305,8 @@ public class BackendService extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ BackendServiceIap> iap() {
-        return this.iap;
+    public Output<Optional<BackendServiceIap>> iap() {
+        return Codegen.optional(this.iap);
     }
     /**
      * Indicates whether the backend service will be used with internal or
@@ -328,8 +329,8 @@ public class BackendService extends com.pulumi.resources.CustomResource {
      * Possible values are `EXTERNAL`, `INTERNAL_SELF_MANAGED`, and `EXTERNAL_MANAGED`.
      * 
      */
-    public Output</* @Nullable */ String> loadBalancingScheme() {
-        return this.loadBalancingScheme;
+    public Output<Optional<String>> loadBalancingScheme() {
+        return Codegen.optional(this.loadBalancingScheme);
     }
     /**
      * The load balancing algorithm used within the scope of the locality.
@@ -380,8 +381,8 @@ public class BackendService extends com.pulumi.resources.CustomResource {
      *   Maglev, refer to https://ai.google/research/pubs/pub44824
      * 
      */
-    public Output</* @Nullable */ String> localityLbPolicy() {
-        return this.localityLbPolicy;
+    public Output<Optional<String>> localityLbPolicy() {
+        return Codegen.optional(this.localityLbPolicy);
     }
     /**
      * This field denotes the logging options for the load balancer traffic served by this backend service.
@@ -432,8 +433,8 @@ public class BackendService extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ BackendServiceOutlierDetection> outlierDetection() {
-        return this.outlierDetection;
+    public Output<Optional<BackendServiceOutlierDetection>> outlierDetection() {
+        return Codegen.optional(this.outlierDetection);
     }
     /**
      * Name of backend port. The same name should appear in the instance
@@ -500,8 +501,8 @@ public class BackendService extends com.pulumi.resources.CustomResource {
      * @return The security policy associated with this backend service.
      * 
      */
-    public Output</* @Nullable */ String> securityPolicy() {
-        return this.securityPolicy;
+    public Output<Optional<String>> securityPolicy() {
+        return Codegen.optional(this.securityPolicy);
     }
     /**
      * The security settings that apply to this backend service. This field is applicable to either
@@ -522,8 +523,8 @@ public class BackendService extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ BackendServiceSecuritySettings> securitySettings() {
-        return this.securitySettings;
+    public Output<Optional<BackendServiceSecuritySettings>> securitySettings() {
+        return Codegen.optional(this.securitySettings);
     }
     /**
      * The URI of the created resource.

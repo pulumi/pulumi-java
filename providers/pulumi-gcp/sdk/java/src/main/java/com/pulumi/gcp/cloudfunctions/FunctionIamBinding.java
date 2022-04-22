@@ -13,6 +13,7 @@ import com.pulumi.gcp.cloudfunctions.inputs.FunctionIamBindingState;
 import com.pulumi.gcp.cloudfunctions.outputs.FunctionIamBindingCondition;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 @ResourceType(type="gcp:cloudfunctions/functionIamBinding:FunctionIamBinding")
@@ -26,8 +27,8 @@ public class FunctionIamBinding extends com.pulumi.resources.CustomResource {
     @Export(name="condition", type=FunctionIamBindingCondition.class, parameters={})
     private Output</* @Nullable */ FunctionIamBindingCondition> condition;
 
-    public Output</* @Nullable */ FunctionIamBindingCondition> condition() {
-        return this.condition;
+    public Output<Optional<FunctionIamBindingCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;

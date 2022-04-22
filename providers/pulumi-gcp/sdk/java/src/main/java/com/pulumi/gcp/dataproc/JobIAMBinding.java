@@ -13,6 +13,7 @@ import com.pulumi.gcp.dataproc.inputs.JobIAMBindingState;
 import com.pulumi.gcp.dataproc.outputs.JobIAMBindingCondition;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -58,8 +59,8 @@ public class JobIAMBinding extends com.pulumi.resources.CustomResource {
     @Export(name="condition", type=JobIAMBindingCondition.class, parameters={})
     private Output</* @Nullable */ JobIAMBindingCondition> condition;
 
-    public Output</* @Nullable */ JobIAMBindingCondition> condition() {
-        return this.condition;
+    public Output<Optional<JobIAMBindingCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * (Computed) The etag of the jobs&#39;s IAM policy.

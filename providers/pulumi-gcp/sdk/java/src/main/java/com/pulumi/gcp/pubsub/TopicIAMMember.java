@@ -12,6 +12,7 @@ import com.pulumi.gcp.pubsub.TopicIAMMemberArgs;
 import com.pulumi.gcp.pubsub.inputs.TopicIAMMemberState;
 import com.pulumi.gcp.pubsub.outputs.TopicIAMMemberCondition;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -61,8 +62,8 @@ public class TopicIAMMember extends com.pulumi.resources.CustomResource {
     @Export(name="condition", type=TopicIAMMemberCondition.class, parameters={})
     private Output</* @Nullable */ TopicIAMMemberCondition> condition;
 
-    public Output</* @Nullable */ TopicIAMMemberCondition> condition() {
-        return this.condition;
+    public Output<Optional<TopicIAMMemberCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * (Computed) The etag of the IAM policy.

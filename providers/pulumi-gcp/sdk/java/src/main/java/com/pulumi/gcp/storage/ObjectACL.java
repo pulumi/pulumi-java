@@ -12,6 +12,7 @@ import com.pulumi.gcp.storage.ObjectACLArgs;
 import com.pulumi.gcp.storage.inputs.ObjectACLState;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -75,8 +76,8 @@ public class ObjectACL extends com.pulumi.resources.CustomResource {
      * @return The &#34;canned&#34; [predefined ACL](https://cloud.google.com/storage/docs/access-control#predefined-acl) to apply. Must be set if `role_entity` is not.
      * 
      */
-    public Output</* @Nullable */ String> predefinedAcl() {
-        return this.predefinedAcl;
+    public Output<Optional<String>> predefinedAcl() {
+        return Codegen.optional(this.predefinedAcl);
     }
     /**
      * List of role/entity pairs in the form `ROLE:entity`. See [GCS Object ACL documentation](https://cloud.google.com/storage/docs/json_api/v1/objectAccessControls) for more details.

@@ -21,6 +21,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -67,14 +68,14 @@ public class Bucket extends com.pulumi.resources.CustomResource {
      * @return The bucket&#39;s [Cross-Origin Resource Sharing (CORS)](https://www.w3.org/TR/cors/) configuration. Multiple blocks of this type are permitted. Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<BucketCor>> cors() {
-        return this.cors;
+    public Output<Optional<List<BucketCor>>> cors() {
+        return Codegen.optional(this.cors);
     }
     @Export(name="defaultEventBasedHold", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> defaultEventBasedHold;
 
-    public Output</* @Nullable */ Boolean> defaultEventBasedHold() {
-        return this.defaultEventBasedHold;
+    public Output<Optional<Boolean>> defaultEventBasedHold() {
+        return Codegen.optional(this.defaultEventBasedHold);
     }
     /**
      * The bucket&#39;s encryption configuration. Structure is documented below.
@@ -87,8 +88,8 @@ public class Bucket extends com.pulumi.resources.CustomResource {
      * @return The bucket&#39;s encryption configuration. Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ BucketEncryption> encryption() {
-        return this.encryption;
+    public Output<Optional<BucketEncryption>> encryption() {
+        return Codegen.optional(this.encryption);
     }
     /**
      * When deleting a bucket, this
@@ -105,8 +106,8 @@ public class Bucket extends com.pulumi.resources.CustomResource {
      * bucket that contains objects, the provider will fail that run.
      * 
      */
-    public Output</* @Nullable */ Boolean> forceDestroy() {
-        return this.forceDestroy;
+    public Output<Optional<Boolean>> forceDestroy() {
+        return Codegen.optional(this.forceDestroy);
     }
     /**
      * A map of key/value label pairs to assign to the bucket.
@@ -119,8 +120,8 @@ public class Bucket extends com.pulumi.resources.CustomResource {
      * @return A map of key/value label pairs to assign to the bucket.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * The bucket&#39;s [Lifecycle Rules](https://cloud.google.com/storage/docs/lifecycle#configuration) configuration. Multiple blocks of this type are permitted. Structure is documented below.
@@ -133,8 +134,8 @@ public class Bucket extends com.pulumi.resources.CustomResource {
      * @return The bucket&#39;s [Lifecycle Rules](https://cloud.google.com/storage/docs/lifecycle#configuration) configuration. Multiple blocks of this type are permitted. Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<BucketLifecycleRule>> lifecycleRules() {
-        return this.lifecycleRules;
+    public Output<Optional<List<BucketLifecycleRule>>> lifecycleRules() {
+        return Codegen.optional(this.lifecycleRules);
     }
     /**
      * The [GCS location](https://cloud.google.com/storage/docs/bucket-locations)
@@ -161,8 +162,8 @@ public class Bucket extends com.pulumi.resources.CustomResource {
      * @return The bucket&#39;s [Access &amp; Storage Logs](https://cloud.google.com/storage/docs/access-logs) configuration. Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ BucketLogging> logging() {
-        return this.logging;
+    public Output<Optional<BucketLogging>> logging() {
+        return Codegen.optional(this.logging);
     }
     /**
      * The name of the bucket.
@@ -219,8 +220,8 @@ public class Bucket extends com.pulumi.resources.CustomResource {
      * @return Enables [Requester Pays](https://cloud.google.com/storage/docs/requester-pays) on a storage bucket.
      * 
      */
-    public Output</* @Nullable */ Boolean> requesterPays() {
-        return this.requesterPays;
+    public Output<Optional<Boolean>> requesterPays() {
+        return Codegen.optional(this.requesterPays);
     }
     /**
      * Configuration of the bucket&#39;s data retention policy for how long objects in the bucket should be retained. Structure is documented below.
@@ -233,8 +234,8 @@ public class Bucket extends com.pulumi.resources.CustomResource {
      * @return Configuration of the bucket&#39;s data retention policy for how long objects in the bucket should be retained. Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ BucketRetentionPolicy> retentionPolicy() {
-        return this.retentionPolicy;
+    public Output<Optional<BucketRetentionPolicy>> retentionPolicy() {
+        return Codegen.optional(this.retentionPolicy);
     }
     /**
      * The URI of the created resource.
@@ -261,8 +262,8 @@ public class Bucket extends com.pulumi.resources.CustomResource {
      * @return The target [Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects affected by this Lifecycle Rule. Supported values include: `STANDARD`, `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`.
      * 
      */
-    public Output</* @Nullable */ String> storageClass() {
-        return this.storageClass;
+    public Output<Optional<String>> storageClass() {
+        return Codegen.optional(this.storageClass);
     }
     /**
      * Enables [Uniform bucket-level access](https://cloud.google.com/storage/docs/uniform-bucket-level-access) access to a bucket.
@@ -303,8 +304,8 @@ public class Bucket extends com.pulumi.resources.CustomResource {
      * @return The bucket&#39;s [Versioning](https://cloud.google.com/storage/docs/object-versioning) configuration.  Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ BucketVersioning> versioning() {
-        return this.versioning;
+    public Output<Optional<BucketVersioning>> versioning() {
+        return Codegen.optional(this.versioning);
     }
     /**
      * Configuration if the bucket acts as a website. Structure is documented below.
@@ -317,8 +318,8 @@ public class Bucket extends com.pulumi.resources.CustomResource {
      * @return Configuration if the bucket acts as a website. Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ BucketWebsite> website() {
-        return this.website;
+    public Output<Optional<BucketWebsite>> website() {
+        return Codegen.optional(this.website);
     }
 
     /**

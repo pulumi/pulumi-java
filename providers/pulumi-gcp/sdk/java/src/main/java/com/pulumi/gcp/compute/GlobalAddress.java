@@ -13,6 +13,7 @@ import com.pulumi.gcp.compute.inputs.GlobalAddressState;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -83,8 +84,8 @@ public class GlobalAddress extends com.pulumi.resources.CustomResource {
      *   Possible values are `EXTERNAL` and `INTERNAL`.
      * 
      */
-    public Output</* @Nullable */ String> addressType() {
-        return this.addressType;
+    public Output<Optional<String>> addressType() {
+        return Codegen.optional(this.addressType);
     }
     /**
      * Creation timestamp in RFC3339 text format.
@@ -111,8 +112,8 @@ public class GlobalAddress extends com.pulumi.resources.CustomResource {
      * @return An optional description of this resource.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The IP Version that will be used by this address. The default value is `IPV4`.
@@ -127,8 +128,8 @@ public class GlobalAddress extends com.pulumi.resources.CustomResource {
      * Possible values are `IPV4` and `IPV6`.
      * 
      */
-    public Output</* @Nullable */ String> ipVersion() {
-        return this.ipVersion;
+    public Output<Optional<String>> ipVersion() {
+        return Codegen.optional(this.ipVersion);
     }
     /**
      * The fingerprint used for optimistic locking of this resource. Used internally during updates.
@@ -155,8 +156,8 @@ public class GlobalAddress extends com.pulumi.resources.CustomResource {
      * @return Labels to apply to this address.  A list of key-&gt;value pairs.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * Name of the resource. Provided by the client when the resource is
@@ -201,8 +202,8 @@ public class GlobalAddress extends com.pulumi.resources.CustomResource {
      * This should only be set when using an Internal address.
      * 
      */
-    public Output</* @Nullable */ String> network() {
-        return this.network;
+    public Output<Optional<String>> network() {
+        return Codegen.optional(this.network);
     }
     /**
      * The prefix length of the IP range. If not present, it means the
@@ -221,8 +222,8 @@ public class GlobalAddress extends com.pulumi.resources.CustomResource {
      * or addressType=INTERNAL when purpose=PRIVATE_SERVICE_CONNECT
      * 
      */
-    public Output</* @Nullable */ Integer> prefixLength() {
-        return this.prefixLength;
+    public Output<Optional<Integer>> prefixLength() {
+        return Codegen.optional(this.prefixLength);
     }
     /**
      * The ID of the project in which the resource belongs.
@@ -255,8 +256,8 @@ public class GlobalAddress extends com.pulumi.resources.CustomResource {
      * * PRIVATE_SERVICE_CONNECT - for Private Service Connect networks
      * 
      */
-    public Output</* @Nullable */ String> purpose() {
-        return this.purpose;
+    public Output<Optional<String>> purpose() {
+        return Codegen.optional(this.purpose);
     }
     /**
      * The URI of the created resource.

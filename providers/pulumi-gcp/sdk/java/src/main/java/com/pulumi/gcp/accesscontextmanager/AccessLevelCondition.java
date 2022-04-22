@@ -14,6 +14,7 @@ import com.pulumi.gcp.accesscontextmanager.outputs.AccessLevelConditionDevicePol
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -78,8 +79,8 @@ public class AccessLevelCondition extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ AccessLevelConditionDevicePolicy> devicePolicy() {
-        return this.devicePolicy;
+    public Output<Optional<AccessLevelConditionDevicePolicy>> devicePolicy() {
+        return Codegen.optional(this.devicePolicy);
     }
     /**
      * A list of CIDR block IP subnetwork specification. May be IPv4
@@ -110,8 +111,8 @@ public class AccessLevelCondition extends com.pulumi.resources.CustomResource {
      * If empty, all IP addresses are allowed.
      * 
      */
-    public Output</* @Nullable */ List<String>> ipSubnetworks() {
-        return this.ipSubnetworks;
+    public Output<Optional<List<String>>> ipSubnetworks() {
+        return Codegen.optional(this.ipSubnetworks);
     }
     /**
      * An allowed list of members (users, service accounts).
@@ -136,8 +137,8 @@ public class AccessLevelCondition extends com.pulumi.resources.CustomResource {
      * Formats: `user:{emailid}`, `serviceAccount:{emailid}`
      * 
      */
-    public Output</* @Nullable */ List<String>> members() {
-        return this.members;
+    public Output<Optional<List<String>>> members() {
+        return Codegen.optional(this.members);
     }
     /**
      * Whether to negate the Condition. If true, the Condition becomes
@@ -154,8 +155,8 @@ public class AccessLevelCondition extends com.pulumi.resources.CustomResource {
      * the Condition overall to be satisfied. Defaults to false.
      * 
      */
-    public Output</* @Nullable */ Boolean> negate() {
-        return this.negate;
+    public Output<Optional<Boolean>> negate() {
+        return Codegen.optional(this.negate);
     }
     /**
      * The request must originate from one of the provided
@@ -172,8 +173,8 @@ public class AccessLevelCondition extends com.pulumi.resources.CustomResource {
      * Format: A valid ISO 3166-1 alpha-2 code.
      * 
      */
-    public Output</* @Nullable */ List<String>> regions() {
-        return this.regions;
+    public Output<Optional<List<String>>> regions() {
+        return Codegen.optional(this.regions);
     }
     /**
      * A list of other access levels defined in the same Policy,
@@ -194,8 +195,8 @@ public class AccessLevelCondition extends com.pulumi.resources.CustomResource {
      * Format: accessPolicies/{policy_id}/accessLevels/{short_name}
      * 
      */
-    public Output</* @Nullable */ List<String>> requiredAccessLevels() {
-        return this.requiredAccessLevels;
+    public Output<Optional<List<String>>> requiredAccessLevels() {
+        return Codegen.optional(this.requiredAccessLevels);
     }
 
     /**

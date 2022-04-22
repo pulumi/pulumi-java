@@ -12,6 +12,7 @@ import com.pulumi.gcp.iap.WebIamMemberArgs;
 import com.pulumi.gcp.iap.inputs.WebIamMemberState;
 import com.pulumi.gcp.iap.outputs.WebIamMemberCondition;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -75,8 +76,8 @@ public class WebIamMember extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ WebIamMemberCondition> condition() {
-        return this.condition;
+    public Output<Optional<WebIamMemberCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * (Computed) The etag of the IAM policy.

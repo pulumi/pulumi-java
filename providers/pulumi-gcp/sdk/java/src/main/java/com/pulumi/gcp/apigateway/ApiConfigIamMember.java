@@ -12,6 +12,7 @@ import com.pulumi.gcp.apigateway.ApiConfigIamMemberArgs;
 import com.pulumi.gcp.apigateway.inputs.ApiConfigIamMemberState;
 import com.pulumi.gcp.apigateway.outputs.ApiConfigIamMemberCondition;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -83,8 +84,8 @@ public class ApiConfigIamMember extends com.pulumi.resources.CustomResource {
     @Export(name="condition", type=ApiConfigIamMemberCondition.class, parameters={})
     private Output</* @Nullable */ ApiConfigIamMemberCondition> condition;
 
-    public Output</* @Nullable */ ApiConfigIamMemberCondition> condition() {
-        return this.condition;
+    public Output<Optional<ApiConfigIamMemberCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * (Computed) The etag of the IAM policy.

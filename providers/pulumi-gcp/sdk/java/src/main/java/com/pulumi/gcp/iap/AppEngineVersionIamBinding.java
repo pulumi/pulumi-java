@@ -13,6 +13,7 @@ import com.pulumi.gcp.iap.inputs.AppEngineVersionIamBindingState;
 import com.pulumi.gcp.iap.outputs.AppEngineVersionIamBindingCondition;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -90,8 +91,8 @@ public class AppEngineVersionIamBinding extends com.pulumi.resources.CustomResou
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ AppEngineVersionIamBindingCondition> condition() {
-        return this.condition;
+    public Output<Optional<AppEngineVersionIamBindingCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * (Computed) The etag of the IAM policy.

@@ -15,6 +15,7 @@ import com.pulumi.gcp.diagflow.outputs.FulfillmentGenericWebService;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -64,8 +65,8 @@ public class Fulfillment extends com.pulumi.resources.CustomResource {
      * @return Whether fulfillment is enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> enabled() {
-        return this.enabled;
+    public Output<Optional<Boolean>> enabled() {
+        return Codegen.optional(this.enabled);
     }
     /**
      * The field defines whether the fulfillment is enabled for certain features.
@@ -80,8 +81,8 @@ public class Fulfillment extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<FulfillmentFeature>> features() {
-        return this.features;
+    public Output<Optional<List<FulfillmentFeature>>> features() {
+        return Codegen.optional(this.features);
     }
     /**
      * Represents configuration for a generic web service. Dialogflow supports two mechanisms for authentications: - Basic authentication with username and password. - Authentication with additional authentication headers.
@@ -96,8 +97,8 @@ public class Fulfillment extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ FulfillmentGenericWebService> genericWebService() {
-        return this.genericWebService;
+    public Output<Optional<FulfillmentGenericWebService>> genericWebService() {
+        return Codegen.optional(this.genericWebService);
     }
     /**
      * The unique identifier of the fulfillment. Format: projects/&lt;Project ID&gt;/agent/fulfillment - projects/&lt;Project

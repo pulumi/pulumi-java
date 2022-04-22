@@ -18,6 +18,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -57,8 +58,8 @@ public class AlertPolicy extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ AlertPolicyAlertStrategy> alertStrategy() {
-        return this.alertStrategy;
+    public Output<Optional<AlertPolicyAlertStrategy>> alertStrategy() {
+        return Codegen.optional(this.alertStrategy);
     }
     /**
      * How to combine the results of multiple conditions to
@@ -159,8 +160,8 @@ public class AlertPolicy extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ AlertPolicyDocumentation> documentation() {
-        return this.documentation;
+    public Output<Optional<AlertPolicyDocumentation>> documentation() {
+        return Codegen.optional(this.documentation);
     }
     /**
      * Whether or not the policy is enabled. The default is true.
@@ -173,8 +174,8 @@ public class AlertPolicy extends com.pulumi.resources.CustomResource {
      * @return Whether or not the policy is enabled. The default is true.
      * 
      */
-    public Output</* @Nullable */ Boolean> enabled() {
-        return this.enabled;
+    public Output<Optional<Boolean>> enabled() {
+        return Codegen.optional(this.enabled);
     }
     /**
      * - 
@@ -225,8 +226,8 @@ public class AlertPolicy extends com.pulumi.resources.CustomResource {
      * `projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`
      * 
      */
-    public Output</* @Nullable */ List<String>> notificationChannels() {
-        return this.notificationChannels;
+    public Output<Optional<List<String>>> notificationChannels() {
+        return Codegen.optional(this.notificationChannels);
     }
     /**
      * The ID of the project in which the resource belongs.
@@ -263,8 +264,8 @@ public class AlertPolicy extends com.pulumi.resources.CustomResource {
      * must begin with a letter.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> userLabels() {
-        return this.userLabels;
+    public Output<Optional<Map<String,String>>> userLabels() {
+        return Codegen.optional(this.userLabels);
     }
 
     /**

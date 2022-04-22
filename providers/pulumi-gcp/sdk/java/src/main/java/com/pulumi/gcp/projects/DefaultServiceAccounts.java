@@ -13,6 +13,7 @@ import com.pulumi.gcp.projects.inputs.DefaultServiceAccountsState;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -85,8 +86,8 @@ public class DefaultServiceAccounts extends com.pulumi.resources.CustomResource 
      * If set to REVERT_AND_IGNORE_FAILURE it is the same behavior as REVERT but ignores errors returned by the API.
      * 
      */
-    public Output</* @Nullable */ String> restorePolicy() {
-        return this.restorePolicy;
+    public Output<Optional<String>> restorePolicy() {
+        return Codegen.optional(this.restorePolicy);
     }
     /**
      * The Service Accounts changed by this resource. It is used for `REVERT` the `action` on the destroy.

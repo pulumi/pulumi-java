@@ -15,6 +15,7 @@ import com.pulumi.gcp.binaryauthorization.outputs.PolicyClusterAdmissionRule;
 import com.pulumi.gcp.binaryauthorization.outputs.PolicyDefaultAdmissionRule;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -60,8 +61,8 @@ public class Policy extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<PolicyAdmissionWhitelistPattern>> admissionWhitelistPatterns() {
-        return this.admissionWhitelistPatterns;
+    public Output<Optional<List<PolicyAdmissionWhitelistPattern>>> admissionWhitelistPatterns() {
+        return Codegen.optional(this.admissionWhitelistPatterns);
     }
     /**
      * Per-cluster admission rules. An admission rule specifies either that
@@ -82,8 +83,8 @@ public class Policy extends com.pulumi.resources.CustomResource {
      * admission rule per cluster spec.
      * 
      */
-    public Output</* @Nullable */ List<PolicyClusterAdmissionRule>> clusterAdmissionRules() {
-        return this.clusterAdmissionRules;
+    public Output<Optional<List<PolicyClusterAdmissionRule>>> clusterAdmissionRules() {
+        return Codegen.optional(this.clusterAdmissionRules);
     }
     /**
      * Default admission rule for a cluster without a per-cluster admission
@@ -114,8 +115,8 @@ public class Policy extends com.pulumi.resources.CustomResource {
      * @return A descriptive comment.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Controls the evaluation of a Google-maintained global admission policy

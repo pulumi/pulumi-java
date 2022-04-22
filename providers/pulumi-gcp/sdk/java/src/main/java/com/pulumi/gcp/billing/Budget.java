@@ -16,6 +16,7 @@ import com.pulumi.gcp.billing.outputs.BudgetBudgetFilter;
 import com.pulumi.gcp.billing.outputs.BudgetThresholdRule;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -71,8 +72,8 @@ public class Budget extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ BudgetAllUpdatesRule> allUpdatesRule() {
-        return this.allUpdatesRule;
+    public Output<Optional<BudgetAllUpdatesRule>> allUpdatesRule() {
+        return Codegen.optional(this.allUpdatesRule);
     }
     /**
      * The budgeted amount for each usage period.
@@ -133,8 +134,8 @@ public class Budget extends com.pulumi.resources.CustomResource {
      * @return User data for display name in UI. Must be &lt;= 60 chars.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * Resource name of the budget. The resource name implies the scope of a budget. Values are of the form

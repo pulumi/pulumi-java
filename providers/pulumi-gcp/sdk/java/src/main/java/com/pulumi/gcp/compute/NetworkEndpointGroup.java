@@ -12,6 +12,7 @@ import com.pulumi.gcp.compute.NetworkEndpointGroupArgs;
 import com.pulumi.gcp.compute.inputs.NetworkEndpointGroupState;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -74,8 +75,8 @@ public class NetworkEndpointGroup extends com.pulumi.resources.CustomResource {
      * network endpoint.
      * 
      */
-    public Output</* @Nullable */ Integer> defaultPort() {
-        return this.defaultPort;
+    public Output<Optional<Integer>> defaultPort() {
+        return Codegen.optional(this.defaultPort);
     }
     /**
      * An optional description of this resource. Provide this property when
@@ -90,8 +91,8 @@ public class NetworkEndpointGroup extends com.pulumi.resources.CustomResource {
      * you create the resource.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Name of the resource; provided by the client when the resource is
@@ -150,8 +151,8 @@ public class NetworkEndpointGroup extends com.pulumi.resources.CustomResource {
      * Possible values are `GCE_VM_IP_PORT`.
      * 
      */
-    public Output</* @Nullable */ String> networkEndpointType() {
-        return this.networkEndpointType;
+    public Output<Optional<String>> networkEndpointType() {
+        return Codegen.optional(this.networkEndpointType);
     }
     /**
      * The ID of the project in which the resource belongs.
@@ -208,8 +209,8 @@ public class NetworkEndpointGroup extends com.pulumi.resources.CustomResource {
      * @return Optional subnetwork to which all network endpoints in the NEG belong.
      * 
      */
-    public Output</* @Nullable */ String> subnetwork() {
-        return this.subnetwork;
+    public Output<Optional<String>> subnetwork() {
+        return Codegen.optional(this.subnetwork);
     }
     /**
      * Zone where the network endpoint group is located.

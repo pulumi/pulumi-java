@@ -17,6 +17,7 @@ import com.pulumi.gcp.cloudrun.outputs.ServiceTraffic;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -84,8 +85,8 @@ public class Service extends com.pulumi.resources.CustomResource {
      * this field is set to false, the revision name will still autogenerate.)
      * 
      */
-    public Output</* @Nullable */ Boolean> autogenerateRevisionName() {
-        return this.autogenerateRevisionName;
+    public Output<Optional<Boolean>> autogenerateRevisionName() {
+        return Codegen.optional(this.autogenerateRevisionName);
     }
     /**
      * The location of the cloud run instance. eg us-central1
@@ -192,8 +193,8 @@ public class Service extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ ServiceTemplate> template() {
-        return this.template;
+    public Output<Optional<ServiceTemplate>> template() {
+        return Codegen.optional(this.template);
     }
     /**
      * Traffic specifies how to distribute traffic over a collection of Knative Revisions

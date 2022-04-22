@@ -13,6 +13,7 @@ import com.pulumi.gcp.pubsub.inputs.TopicIAMBindingState;
 import com.pulumi.gcp.pubsub.outputs.TopicIAMBindingCondition;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -62,8 +63,8 @@ public class TopicIAMBinding extends com.pulumi.resources.CustomResource {
     @Export(name="condition", type=TopicIAMBindingCondition.class, parameters={})
     private Output</* @Nullable */ TopicIAMBindingCondition> condition;
 
-    public Output</* @Nullable */ TopicIAMBindingCondition> condition() {
-        return this.condition;
+    public Output<Optional<TopicIAMBindingCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * (Computed) The etag of the IAM policy.

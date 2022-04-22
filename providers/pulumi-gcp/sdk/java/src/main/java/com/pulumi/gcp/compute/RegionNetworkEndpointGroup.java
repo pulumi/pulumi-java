@@ -14,6 +14,7 @@ import com.pulumi.gcp.compute.outputs.RegionNetworkEndpointGroupAppEngine;
 import com.pulumi.gcp.compute.outputs.RegionNetworkEndpointGroupCloudFunction;
 import com.pulumi.gcp.compute.outputs.RegionNetworkEndpointGroupCloudRun;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -65,8 +66,8 @@ public class RegionNetworkEndpointGroup extends com.pulumi.resources.CustomResou
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ RegionNetworkEndpointGroupAppEngine> appEngine() {
-        return this.appEngine;
+    public Output<Optional<RegionNetworkEndpointGroupAppEngine>> appEngine() {
+        return Codegen.optional(this.appEngine);
     }
     /**
      * Only valid when networkEndpointType is &#34;SERVERLESS&#34;.
@@ -83,8 +84,8 @@ public class RegionNetworkEndpointGroup extends com.pulumi.resources.CustomResou
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ RegionNetworkEndpointGroupCloudFunction> cloudFunction() {
-        return this.cloudFunction;
+    public Output<Optional<RegionNetworkEndpointGroupCloudFunction>> cloudFunction() {
+        return Codegen.optional(this.cloudFunction);
     }
     /**
      * Only valid when networkEndpointType is &#34;SERVERLESS&#34;.
@@ -101,8 +102,8 @@ public class RegionNetworkEndpointGroup extends com.pulumi.resources.CustomResou
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ RegionNetworkEndpointGroupCloudRun> cloudRun() {
-        return this.cloudRun;
+    public Output<Optional<RegionNetworkEndpointGroupCloudRun>> cloudRun() {
+        return Codegen.optional(this.cloudRun);
     }
     /**
      * An optional description of this resource. Provide this property when
@@ -117,8 +118,8 @@ public class RegionNetworkEndpointGroup extends com.pulumi.resources.CustomResou
      * you create the resource.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Name of the resource; provided by the client when the resource is
@@ -161,8 +162,8 @@ public class RegionNetworkEndpointGroup extends com.pulumi.resources.CustomResou
      * Possible values are `SERVERLESS`.
      * 
      */
-    public Output</* @Nullable */ String> networkEndpointType() {
-        return this.networkEndpointType;
+    public Output<Optional<String>> networkEndpointType() {
+        return Codegen.optional(this.networkEndpointType);
     }
     /**
      * The ID of the project in which the resource belongs.

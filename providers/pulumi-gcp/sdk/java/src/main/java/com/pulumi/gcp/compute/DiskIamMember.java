@@ -12,6 +12,7 @@ import com.pulumi.gcp.compute.DiskIamMemberArgs;
 import com.pulumi.gcp.compute.inputs.DiskIamMemberState;
 import com.pulumi.gcp.compute.outputs.DiskIamMemberCondition;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -61,8 +62,8 @@ public class DiskIamMember extends com.pulumi.resources.CustomResource {
     @Export(name="condition", type=DiskIamMemberCondition.class, parameters={})
     private Output</* @Nullable */ DiskIamMemberCondition> condition;
 
-    public Output</* @Nullable */ DiskIamMemberCondition> condition() {
-        return this.condition;
+    public Output<Optional<DiskIamMemberCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * (Computed) The etag of the IAM policy.

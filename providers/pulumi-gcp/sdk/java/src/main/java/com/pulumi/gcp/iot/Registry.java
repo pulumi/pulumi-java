@@ -17,6 +17,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -66,8 +67,8 @@ public class Registry extends com.pulumi.resources.CustomResource {
      * The structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<RegistryCredential>> credentials() {
-        return this.credentials;
+    public Output<Optional<List<RegistryCredential>>> credentials() {
+        return Codegen.optional(this.credentials);
     }
     /**
      * List of configurations for event notifications, such as PubSub topics
@@ -126,8 +127,8 @@ public class Registry extends com.pulumi.resources.CustomResource {
      * Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
      * 
      */
-    public Output</* @Nullable */ String> logLevel() {
-        return this.logLevel;
+    public Output<Optional<String>> logLevel() {
+        return Codegen.optional(this.logLevel);
     }
     /**
      * Activate or deactivate MQTT.
@@ -204,8 +205,8 @@ public class Registry extends com.pulumi.resources.CustomResource {
      * The structure is documented below.
      * 
      */
-    public Output</* @Nullable */ Map<String,Object>> stateNotificationConfig() {
-        return this.stateNotificationConfig;
+    public Output<Optional<Map<String,Object>>> stateNotificationConfig() {
+        return Codegen.optional(this.stateNotificationConfig);
     }
 
     /**

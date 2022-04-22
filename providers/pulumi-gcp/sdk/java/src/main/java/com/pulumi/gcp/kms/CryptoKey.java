@@ -14,6 +14,7 @@ import com.pulumi.gcp.kms.outputs.CryptoKeyVersionTemplate;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -107,8 +108,8 @@ public class CryptoKey extends com.pulumi.resources.CustomResource {
      * @return Labels with user-defined metadata to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * The resource name for the CryptoKey.
@@ -143,8 +144,8 @@ public class CryptoKey extends com.pulumi.resources.CustomResource {
      * Possible values are `ENCRYPT_DECRYPT`, `ASYMMETRIC_SIGN`, and `ASYMMETRIC_DECRYPT`.
      * 
      */
-    public Output</* @Nullable */ String> purpose() {
-        return this.purpose;
+    public Output<Optional<String>> purpose() {
+        return Codegen.optional(this.purpose);
     }
     /**
      * Every time this period passes, generate a new CryptoKeyVersion and set it as the primary.
@@ -163,8 +164,8 @@ public class CryptoKey extends com.pulumi.resources.CustomResource {
      * letter `s` (seconds). It must be greater than a day (ie, 86400).
      * 
      */
-    public Output</* @Nullable */ String> rotationPeriod() {
-        return this.rotationPeriod;
+    public Output<Optional<String>> rotationPeriod() {
+        return Codegen.optional(this.rotationPeriod);
     }
     /**
      * If set to true, the request will create a CryptoKey without any CryptoKeyVersions.
@@ -179,8 +180,8 @@ public class CryptoKey extends com.pulumi.resources.CustomResource {
      * You must use the `gcp.kms.KeyRingImportJob` resource to import the CryptoKeyVersion.
      * 
      */
-    public Output</* @Nullable */ Boolean> skipInitialVersionCreation() {
-        return this.skipInitialVersionCreation;
+    public Output<Optional<Boolean>> skipInitialVersionCreation() {
+        return Codegen.optional(this.skipInitialVersionCreation);
     }
     /**
      * A template describing settings for new crypto key versions.

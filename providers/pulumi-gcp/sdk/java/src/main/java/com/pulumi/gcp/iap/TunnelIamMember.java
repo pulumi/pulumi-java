@@ -12,6 +12,7 @@ import com.pulumi.gcp.iap.TunnelIamMemberArgs;
 import com.pulumi.gcp.iap.inputs.TunnelIamMemberState;
 import com.pulumi.gcp.iap.outputs.TunnelIamMemberCondition;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -75,8 +76,8 @@ public class TunnelIamMember extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ TunnelIamMemberCondition> condition() {
-        return this.condition;
+    public Output<Optional<TunnelIamMemberCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * (Computed) The etag of the IAM policy.

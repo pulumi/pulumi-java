@@ -13,6 +13,7 @@ import com.pulumi.gcp.gameservices.inputs.GameServerDeploymentRolloutState;
 import com.pulumi.gcp.gameservices.outputs.GameServerDeploymentRolloutGameServerConfigOverride;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -97,8 +98,8 @@ public class GameServerDeploymentRollout extends com.pulumi.resources.CustomReso
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<GameServerDeploymentRolloutGameServerConfigOverride>> gameServerConfigOverrides() {
-        return this.gameServerConfigOverrides;
+    public Output<Optional<List<GameServerDeploymentRolloutGameServerConfigOverride>>> gameServerConfigOverrides() {
+        return Codegen.optional(this.gameServerConfigOverrides);
     }
     /**
      * The resource id of the game server deployment eg:

@@ -13,6 +13,7 @@ import com.pulumi.gcp.serviceAccount.inputs.KeyState;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -42,8 +43,8 @@ public class Key extends com.pulumi.resources.CustomResource {
      * @return Arbitrary map of values that, when changed, will trigger a new key to be generated.
      * 
      */
-    public Output</* @Nullable */ Map<String,Object>> keepers() {
-        return this.keepers;
+    public Output<Optional<Map<String,Object>>> keepers() {
+        return Codegen.optional(this.keepers);
     }
     /**
      * The algorithm used to generate the key. KEY_ALG_RSA_2048 is the default algorithm.
@@ -62,8 +63,8 @@ public class Key extends com.pulumi.resources.CustomResource {
      * (only used on create)
      * 
      */
-    public Output</* @Nullable */ String> keyAlgorithm() {
-        return this.keyAlgorithm;
+    public Output<Optional<String>> keyAlgorithm() {
+        return Codegen.optional(this.keyAlgorithm);
     }
     /**
      * The name used for this key pair
@@ -106,8 +107,8 @@ public class Key extends com.pulumi.resources.CustomResource {
      * @return The output format of the private key. TYPE_GOOGLE_CREDENTIALS_FILE is the default output format.
      * 
      */
-    public Output</* @Nullable */ String> privateKeyType() {
-        return this.privateKeyType;
+    public Output<Optional<String>> privateKeyType() {
+        return Codegen.optional(this.privateKeyType);
     }
     /**
      * The public key, base64 encoded
@@ -134,8 +135,8 @@ public class Key extends com.pulumi.resources.CustomResource {
      * @return Public key data to create a service account key for given service account. The expected format for this field is a base64 encoded X509_PEM and it conflicts with `public_key_type` and `private_key_type`.
      * 
      */
-    public Output</* @Nullable */ String> publicKeyData() {
-        return this.publicKeyData;
+    public Output<Optional<String>> publicKeyData() {
+        return Codegen.optional(this.publicKeyData);
     }
     /**
      * The output format of the public key requested. TYPE_X509_PEM_FILE is the default output format.
@@ -148,8 +149,8 @@ public class Key extends com.pulumi.resources.CustomResource {
      * @return The output format of the public key requested. TYPE_X509_PEM_FILE is the default output format.
      * 
      */
-    public Output</* @Nullable */ String> publicKeyType() {
-        return this.publicKeyType;
+    public Output<Optional<String>> publicKeyType() {
+        return Codegen.optional(this.publicKeyType);
     }
     /**
      * The Service account id of the Key. This can be a string in the format

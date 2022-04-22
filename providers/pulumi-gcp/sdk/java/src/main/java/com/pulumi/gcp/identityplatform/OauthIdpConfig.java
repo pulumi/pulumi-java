@@ -12,6 +12,7 @@ import com.pulumi.gcp.identityplatform.OauthIdpConfigArgs;
 import com.pulumi.gcp.identityplatform.inputs.OauthIdpConfigState;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -67,8 +68,8 @@ public class OauthIdpConfig extends com.pulumi.resources.CustomResource {
      * @return The client secret of the OAuth client, to enable OIDC code flow.
      * 
      */
-    public Output</* @Nullable */ String> clientSecret() {
-        return this.clientSecret;
+    public Output<Optional<String>> clientSecret() {
+        return Codegen.optional(this.clientSecret);
     }
     /**
      * Human friendly display name.
@@ -81,8 +82,8 @@ public class OauthIdpConfig extends com.pulumi.resources.CustomResource {
      * @return Human friendly display name.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * If this config allows users to sign in with the provider.
@@ -95,8 +96,8 @@ public class OauthIdpConfig extends com.pulumi.resources.CustomResource {
      * @return If this config allows users to sign in with the provider.
      * 
      */
-    public Output</* @Nullable */ Boolean> enabled() {
-        return this.enabled;
+    public Output<Optional<Boolean>> enabled() {
+        return Codegen.optional(this.enabled);
     }
     /**
      * For OIDC Idps, the issuer identifier.

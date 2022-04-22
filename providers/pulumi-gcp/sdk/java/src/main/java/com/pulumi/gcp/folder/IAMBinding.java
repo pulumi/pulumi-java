@@ -13,6 +13,7 @@ import com.pulumi.gcp.folder.inputs.IAMBindingState;
 import com.pulumi.gcp.folder.outputs.IAMBindingCondition;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -49,8 +50,8 @@ public class IAMBinding extends com.pulumi.resources.CustomResource {
     @Export(name="condition", type=IAMBindingCondition.class, parameters={})
     private Output</* @Nullable */ IAMBindingCondition> condition;
 
-    public Output</* @Nullable */ IAMBindingCondition> condition() {
-        return this.condition;
+    public Output<Optional<IAMBindingCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * (Computed) The etag of the folder&#39;s IAM policy.

@@ -13,6 +13,7 @@ import com.pulumi.gcp.bigquery.inputs.DatasetIamBindingState;
 import com.pulumi.gcp.bigquery.outputs.DatasetIamBindingCondition;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -76,8 +77,8 @@ public class DatasetIamBinding extends com.pulumi.resources.CustomResource {
     @Export(name="condition", type=DatasetIamBindingCondition.class, parameters={})
     private Output</* @Nullable */ DatasetIamBindingCondition> condition;
 
-    public Output</* @Nullable */ DatasetIamBindingCondition> condition() {
-        return this.condition;
+    public Output<Optional<DatasetIamBindingCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * The dataset ID.

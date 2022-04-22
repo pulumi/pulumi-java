@@ -13,6 +13,7 @@ import com.pulumi.gcp.compute.inputs.NetworkState;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -64,8 +65,8 @@ public class Network extends com.pulumi.resources.CustomResource {
      * the user can explicitly connect subnetwork resources.
      * 
      */
-    public Output</* @Nullable */ Boolean> autoCreateSubnetworks() {
-        return this.autoCreateSubnetworks;
+    public Output<Optional<Boolean>> autoCreateSubnetworks() {
+        return Codegen.optional(this.autoCreateSubnetworks);
     }
     /**
      * If set to `true`, default routes (`0.0.0.0/0`) will be deleted
@@ -80,8 +81,8 @@ public class Network extends com.pulumi.resources.CustomResource {
      * immediately after network creation. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> deleteDefaultRoutesOnCreate() {
-        return this.deleteDefaultRoutesOnCreate;
+    public Output<Optional<Boolean>> deleteDefaultRoutesOnCreate() {
+        return Codegen.optional(this.deleteDefaultRoutesOnCreate);
     }
     /**
      * An optional description of this resource. The resource must be
@@ -96,8 +97,8 @@ public class Network extends com.pulumi.resources.CustomResource {
      * recreated to modify this field.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The gateway address for default routing out of the network. This value is selected by GCP.

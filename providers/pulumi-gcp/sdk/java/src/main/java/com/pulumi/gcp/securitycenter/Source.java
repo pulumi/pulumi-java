@@ -11,6 +11,7 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.securitycenter.SourceArgs;
 import com.pulumi.gcp.securitycenter.inputs.SourceState;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -53,8 +54,8 @@ public class Source extends com.pulumi.resources.CustomResource {
      * @return The description of the source (max of 1024 characters).
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The source’s display name. A source’s display name must be unique

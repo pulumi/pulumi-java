@@ -12,6 +12,7 @@ import com.pulumi.gcp.dataloss.PreventionDeidentifyTemplateArgs;
 import com.pulumi.gcp.dataloss.inputs.PreventionDeidentifyTemplateState;
 import com.pulumi.gcp.dataloss.outputs.PreventionDeidentifyTemplateDeidentifyConfig;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -67,8 +68,8 @@ public class PreventionDeidentifyTemplate extends com.pulumi.resources.CustomRes
      * @return A description of the template.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * User set display name of the template.
@@ -81,8 +82,8 @@ public class PreventionDeidentifyTemplate extends com.pulumi.resources.CustomRes
      * @return User set display name of the template.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at [https://cloud.google.com/dlp/docs/infotypes-reference](https://cloud.google.com/dlp/docs/infotypes-reference) when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.

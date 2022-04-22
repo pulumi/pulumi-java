@@ -13,6 +13,7 @@ import com.pulumi.gcp.vertex.inputs.AiDatasetState;
 import com.pulumi.gcp.vertex.outputs.AiDatasetEncryptionSpec;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -76,8 +77,8 @@ public class AiDataset extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ AiDatasetEncryptionSpec> encryptionSpec() {
-        return this.encryptionSpec;
+    public Output<Optional<AiDatasetEncryptionSpec>> encryptionSpec() {
+        return Codegen.optional(this.encryptionSpec);
     }
     /**
      * A set of key/value label pairs to assign to this Workflow.

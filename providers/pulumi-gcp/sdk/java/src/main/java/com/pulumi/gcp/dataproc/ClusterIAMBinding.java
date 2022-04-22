@@ -13,6 +13,7 @@ import com.pulumi.gcp.dataproc.inputs.ClusterIAMBindingState;
 import com.pulumi.gcp.dataproc.outputs.ClusterIAMBindingCondition;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -72,8 +73,8 @@ public class ClusterIAMBinding extends com.pulumi.resources.CustomResource {
     @Export(name="condition", type=ClusterIAMBindingCondition.class, parameters={})
     private Output</* @Nullable */ ClusterIAMBindingCondition> condition;
 
-    public Output</* @Nullable */ ClusterIAMBindingCondition> condition() {
-        return this.condition;
+    public Output<Optional<ClusterIAMBindingCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * (Computed) The etag of the clusters&#39;s IAM policy.

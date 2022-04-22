@@ -14,6 +14,7 @@ import com.pulumi.gcp.compute.outputs.MachineImageMachineImageEncryptionKey;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -59,8 +60,8 @@ public class MachineImage extends com.pulumi.resources.CustomResource {
      * @return A text description of the resource.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Specify this to create an application consistent machine image by informing the OS to prepare for the snapshot process.
@@ -75,8 +76,8 @@ public class MachineImage extends com.pulumi.resources.CustomResource {
      * Currently only supported on Windows instances using the Volume Shadow Copy Service (VSS).
      * 
      */
-    public Output</* @Nullable */ Boolean> guestFlush() {
-        return this.guestFlush;
+    public Output<Optional<Boolean>> guestFlush() {
+        return Codegen.optional(this.guestFlush);
     }
     /**
      * Encrypts the machine image using a customer-supplied encryption key.
@@ -97,8 +98,8 @@ public class MachineImage extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ MachineImageMachineImageEncryptionKey> machineImageEncryptionKey() {
-        return this.machineImageEncryptionKey;
+    public Output<Optional<MachineImageMachineImageEncryptionKey>> machineImageEncryptionKey() {
+        return Codegen.optional(this.machineImageEncryptionKey);
     }
     /**
      * Name of the resource.

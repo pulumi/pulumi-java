@@ -13,6 +13,7 @@ import com.pulumi.gcp.activedirectory.inputs.DomainState;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -50,8 +51,8 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * If not specified, setupadmin will be used.
      * 
      */
-    public Output</* @Nullable */ String> admin() {
-        return this.admin;
+    public Output<Optional<String>> admin() {
+        return Codegen.optional(this.admin);
     }
     /**
      * The full names of the Google Compute Engine networks the domain instance is connected to. The domain is only available on networks listed in authorizedNetworks.
@@ -66,8 +67,8 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * If CIDR subnets overlap between networks, domain creation will fail.
      * 
      */
-    public Output</* @Nullable */ List<String>> authorizedNetworks() {
-        return this.authorizedNetworks;
+    public Output<Optional<List<String>>> authorizedNetworks() {
+        return Codegen.optional(this.authorizedNetworks);
     }
     /**
      * The fully qualified domain name. e.g. mydomain.myorganization.com, with the restrictions,
@@ -112,8 +113,8 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return Resource labels that can contain user-provided metadata
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * Locations where domain needs to be provisioned. [regions][compute/docs/regions-zones/]

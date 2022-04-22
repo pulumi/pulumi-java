@@ -13,6 +13,7 @@ import com.pulumi.gcp.organizations.inputs.ProjectState;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -64,8 +65,8 @@ public class Project extends com.pulumi.resources.CustomResource {
      * you set `auto_create_network` to `false`, since the network will exist momentarily.
      * 
      */
-    public Output</* @Nullable */ Boolean> autoCreateNetwork() {
-        return this.autoCreateNetwork;
+    public Output<Optional<Boolean>> autoCreateNetwork() {
+        return Codegen.optional(this.autoCreateNetwork);
     }
     /**
      * The alphanumeric ID of the billing account this project
@@ -86,8 +87,8 @@ public class Project extends com.pulumi.resources.CustomResource {
      * for more details.
      * 
      */
-    public Output</* @Nullable */ String> billingAccount() {
-        return this.billingAccount;
+    public Output<Optional<String>> billingAccount() {
+        return Codegen.optional(this.billingAccount);
     }
     /**
      * The numeric ID of the folder this project should be
@@ -108,8 +109,8 @@ public class Project extends com.pulumi.resources.CustomResource {
      * project to be migrated to the newly specified folder.
      * 
      */
-    public Output</* @Nullable */ String> folderId() {
-        return this.folderId;
+    public Output<Optional<String>> folderId() {
+        return Codegen.optional(this.folderId);
     }
     /**
      * A set of key/value label pairs to assign to the project.
@@ -122,8 +123,8 @@ public class Project extends com.pulumi.resources.CustomResource {
      * @return A set of key/value label pairs to assign to the project.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * The display name of the project.
@@ -174,8 +175,8 @@ public class Project extends com.pulumi.resources.CustomResource {
      * organization.
      * 
      */
-    public Output</* @Nullable */ String> orgId() {
-        return this.orgId;
+    public Output<Optional<String>> orgId() {
+        return Codegen.optional(this.orgId);
     }
     /**
      * The project ID. Changing this forces a new project to be created.

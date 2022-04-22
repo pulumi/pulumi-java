@@ -16,6 +16,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -65,8 +66,8 @@ public class RouterNat extends com.pulumi.resources.CustomResource {
      * valid static external IPs that have been assigned to the NAT.
      * 
      */
-    public Output</* @Nullable */ List<String>> drainNatIps() {
-        return this.drainNatIps;
+    public Output<Optional<List<String>>> drainNatIps() {
+        return Codegen.optional(this.drainNatIps);
     }
     /**
      * Specifies if endpoint independent mapping is enabled. This is enabled by default. For more information
@@ -81,8 +82,8 @@ public class RouterNat extends com.pulumi.resources.CustomResource {
      * see the [official documentation](https://cloud.google.com/nat/docs/overview#specs-rfcs).
      * 
      */
-    public Output</* @Nullable */ Boolean> enableEndpointIndependentMapping() {
-        return this.enableEndpointIndependentMapping;
+    public Output<Optional<Boolean>> enableEndpointIndependentMapping() {
+        return Codegen.optional(this.enableEndpointIndependentMapping);
     }
     /**
      * Timeout (in seconds) for ICMP connections. Defaults to 30s if not set.
@@ -95,8 +96,8 @@ public class RouterNat extends com.pulumi.resources.CustomResource {
      * @return Timeout (in seconds) for ICMP connections. Defaults to 30s if not set.
      * 
      */
-    public Output</* @Nullable */ Integer> icmpIdleTimeoutSec() {
-        return this.icmpIdleTimeoutSec;
+    public Output<Optional<Integer>> icmpIdleTimeoutSec() {
+        return Codegen.optional(this.icmpIdleTimeoutSec);
     }
     /**
      * Configuration for logging on NAT
@@ -111,8 +112,8 @@ public class RouterNat extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ RouterNatLogConfig> logConfig() {
-        return this.logConfig;
+    public Output<Optional<RouterNatLogConfig>> logConfig() {
+        return Codegen.optional(this.logConfig);
     }
     /**
      * Minimum number of ports allocated to a VM from this NAT.
@@ -125,8 +126,8 @@ public class RouterNat extends com.pulumi.resources.CustomResource {
      * @return Minimum number of ports allocated to a VM from this NAT.
      * 
      */
-    public Output</* @Nullable */ Integer> minPortsPerVm() {
-        return this.minPortsPerVm;
+    public Output<Optional<Integer>> minPortsPerVm() {
+        return Codegen.optional(this.minPortsPerVm);
     }
     /**
      * Self-link of subnetwork to NAT
@@ -175,8 +176,8 @@ public class RouterNat extends com.pulumi.resources.CustomResource {
      * is set to MANUAL_ONLY.
      * 
      */
-    public Output</* @Nullable */ List<String>> natIps() {
-        return this.natIps;
+    public Output<Optional<List<String>>> natIps() {
+        return Codegen.optional(this.natIps);
     }
     /**
      * The ID of the project in which the resource belongs.
@@ -271,8 +272,8 @@ public class RouterNat extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<RouterNatSubnetwork>> subnetworks() {
-        return this.subnetworks;
+    public Output<Optional<List<RouterNatSubnetwork>>> subnetworks() {
+        return Codegen.optional(this.subnetworks);
     }
     /**
      * Timeout (in seconds) for TCP established connections.
@@ -287,8 +288,8 @@ public class RouterNat extends com.pulumi.resources.CustomResource {
      * Defaults to 1200s if not set.
      * 
      */
-    public Output</* @Nullable */ Integer> tcpEstablishedIdleTimeoutSec() {
-        return this.tcpEstablishedIdleTimeoutSec;
+    public Output<Optional<Integer>> tcpEstablishedIdleTimeoutSec() {
+        return Codegen.optional(this.tcpEstablishedIdleTimeoutSec);
     }
     /**
      * Timeout (in seconds) for TCP transitory connections.
@@ -303,8 +304,8 @@ public class RouterNat extends com.pulumi.resources.CustomResource {
      * Defaults to 30s if not set.
      * 
      */
-    public Output</* @Nullable */ Integer> tcpTransitoryIdleTimeoutSec() {
-        return this.tcpTransitoryIdleTimeoutSec;
+    public Output<Optional<Integer>> tcpTransitoryIdleTimeoutSec() {
+        return Codegen.optional(this.tcpTransitoryIdleTimeoutSec);
     }
     /**
      * Timeout (in seconds) for UDP connections. Defaults to 30s if not set.
@@ -317,8 +318,8 @@ public class RouterNat extends com.pulumi.resources.CustomResource {
      * @return Timeout (in seconds) for UDP connections. Defaults to 30s if not set.
      * 
      */
-    public Output</* @Nullable */ Integer> udpIdleTimeoutSec() {
-        return this.udpIdleTimeoutSec;
+    public Output<Optional<Integer>> udpIdleTimeoutSec() {
+        return Codegen.optional(this.udpIdleTimeoutSec);
     }
 
     /**

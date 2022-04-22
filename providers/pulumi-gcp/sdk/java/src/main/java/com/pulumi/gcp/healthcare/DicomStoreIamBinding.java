@@ -13,6 +13,7 @@ import com.pulumi.gcp.healthcare.inputs.DicomStoreIamBindingState;
 import com.pulumi.gcp.healthcare.outputs.DicomStoreIamBindingCondition;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -64,8 +65,8 @@ public class DicomStoreIamBinding extends com.pulumi.resources.CustomResource {
     @Export(name="condition", type=DicomStoreIamBindingCondition.class, parameters={})
     private Output</* @Nullable */ DicomStoreIamBindingCondition> condition;
 
-    public Output</* @Nullable */ DicomStoreIamBindingCondition> condition() {
-        return this.condition;
+    public Output<Optional<DicomStoreIamBindingCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * The DICOM store ID, in the form

@@ -16,6 +16,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -87,8 +88,8 @@ public class Snapshot extends com.pulumi.resources.CustomResource {
      * @return An optional description of this resource.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Size of the snapshot, specified in GB.
@@ -129,8 +130,8 @@ public class Snapshot extends com.pulumi.resources.CustomResource {
      * @return Labels to apply to this Snapshot.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * A list of public visible licenses that apply to this snapshot. This can be because the original image had licenses
@@ -221,8 +222,8 @@ public class Snapshot extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ SnapshotSnapshotEncryptionKey> snapshotEncryptionKey() {
-        return this.snapshotEncryptionKey;
+    public Output<Optional<SnapshotSnapshotEncryptionKey>> snapshotEncryptionKey() {
+        return Codegen.optional(this.snapshotEncryptionKey);
     }
     /**
      * The unique identifier for the resource.
@@ -269,8 +270,8 @@ public class Snapshot extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ SnapshotSourceDiskEncryptionKey> sourceDiskEncryptionKey() {
-        return this.sourceDiskEncryptionKey;
+    public Output<Optional<SnapshotSourceDiskEncryptionKey>> sourceDiskEncryptionKey() {
+        return Codegen.optional(this.sourceDiskEncryptionKey);
     }
     /**
      * A size of the storage used by the snapshot. As snapshots share storage, this number is expected to change with snapshot

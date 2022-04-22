@@ -12,6 +12,7 @@ import com.pulumi.gcp.compute.GlobalNetworkEndpointGroupArgs;
 import com.pulumi.gcp.compute.inputs.GlobalNetworkEndpointGroupState;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -62,8 +63,8 @@ public class GlobalNetworkEndpointGroup extends com.pulumi.resources.CustomResou
      * network endpoint.
      * 
      */
-    public Output</* @Nullable */ Integer> defaultPort() {
-        return this.defaultPort;
+    public Output<Optional<Integer>> defaultPort() {
+        return Codegen.optional(this.defaultPort);
     }
     /**
      * An optional description of this resource. Provide this property when
@@ -78,8 +79,8 @@ public class GlobalNetworkEndpointGroup extends com.pulumi.resources.CustomResou
      * you create the resource.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Name of the resource; provided by the client when the resource is

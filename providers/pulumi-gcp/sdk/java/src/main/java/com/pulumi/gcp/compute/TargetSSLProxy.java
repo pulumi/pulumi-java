@@ -13,6 +13,7 @@ import com.pulumi.gcp.compute.inputs.TargetSSLProxyState;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -86,8 +87,8 @@ public class TargetSSLProxy extends com.pulumi.resources.CustomResource {
      * @return An optional description of this resource.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Name of the resource. Provided by the client when the resource is
@@ -148,8 +149,8 @@ public class TargetSSLProxy extends com.pulumi.resources.CustomResource {
      * Possible values are `NONE` and `PROXY_V1`.
      * 
      */
-    public Output</* @Nullable */ String> proxyHeader() {
-        return this.proxyHeader;
+    public Output<Optional<String>> proxyHeader() {
+        return Codegen.optional(this.proxyHeader);
     }
     /**
      * The unique identifier for the resource.
@@ -212,8 +213,8 @@ public class TargetSSLProxy extends com.pulumi.resources.CustomResource {
      * resource will not have any SSL policy configured.
      * 
      */
-    public Output</* @Nullable */ String> sslPolicy() {
-        return this.sslPolicy;
+    public Output<Optional<String>> sslPolicy() {
+        return Codegen.optional(this.sslPolicy);
     }
 
     /**

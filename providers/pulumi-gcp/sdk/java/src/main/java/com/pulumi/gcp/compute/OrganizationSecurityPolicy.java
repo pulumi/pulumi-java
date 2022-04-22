@@ -11,6 +11,7 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.compute.OrganizationSecurityPolicyArgs;
 import com.pulumi.gcp.compute.inputs.OrganizationSecurityPolicyState;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -50,8 +51,8 @@ public class OrganizationSecurityPolicy extends com.pulumi.resources.CustomResou
      * @return A textual description for the organization security policy.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * A textual name of the security policy.
@@ -130,8 +131,8 @@ public class OrganizationSecurityPolicy extends com.pulumi.resources.CustomResou
      * Possible values are `FIREWALL`.
      * 
      */
-    public Output</* @Nullable */ String> type() {
-        return this.type;
+    public Output<Optional<String>> type() {
+        return Codegen.optional(this.type);
     }
 
     /**

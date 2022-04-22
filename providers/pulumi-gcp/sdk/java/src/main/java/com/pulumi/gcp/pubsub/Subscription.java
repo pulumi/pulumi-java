@@ -18,6 +18,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -121,8 +122,8 @@ public class Subscription extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ SubscriptionDeadLetterPolicy> deadLetterPolicy() {
-        return this.deadLetterPolicy;
+    public Output<Optional<SubscriptionDeadLetterPolicy>> deadLetterPolicy() {
+        return Codegen.optional(this.deadLetterPolicy);
     }
     /**
      * If `true`, messages published with the same orderingKey in PubsubMessage will be delivered to
@@ -139,8 +140,8 @@ public class Subscription extends com.pulumi.resources.CustomResource {
      * may be delivered in any order.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableMessageOrdering() {
-        return this.enableMessageOrdering;
+    public Output<Optional<Boolean>> enableMessageOrdering() {
+        return Codegen.optional(this.enableMessageOrdering);
     }
     /**
      * A policy that specifies the conditions for this subscription&#39;s expiration.
@@ -187,8 +188,8 @@ public class Subscription extends com.pulumi.resources.CustomResource {
      * you can&#39;t modify the filter.
      * 
      */
-    public Output</* @Nullable */ String> filter() {
-        return this.filter;
+    public Output<Optional<String>> filter() {
+        return Codegen.optional(this.filter);
     }
     /**
      * A set of key/value label pairs to assign to this Subscription.
@@ -201,8 +202,8 @@ public class Subscription extends com.pulumi.resources.CustomResource {
      * @return A set of key/value label pairs to assign to this Subscription.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * How long to retain unacknowledged messages in the subscription&#39;s
@@ -229,8 +230,8 @@ public class Subscription extends com.pulumi.resources.CustomResource {
      * by &#39;s&#39;. Example: `&#34;600.5s&#34;`.
      * 
      */
-    public Output</* @Nullable */ String> messageRetentionDuration() {
-        return this.messageRetentionDuration;
+    public Output<Optional<String>> messageRetentionDuration() {
+        return Codegen.optional(this.messageRetentionDuration);
     }
     /**
      * Name of the subscription.
@@ -279,8 +280,8 @@ public class Subscription extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ SubscriptionPushConfig> pushConfig() {
-        return this.pushConfig;
+    public Output<Optional<SubscriptionPushConfig>> pushConfig() {
+        return Codegen.optional(this.pushConfig);
     }
     /**
      * Indicates whether to retain acknowledged messages. If `true`, then
@@ -299,8 +300,8 @@ public class Subscription extends com.pulumi.resources.CustomResource {
      * messageRetentionDuration window.
      * 
      */
-    public Output</* @Nullable */ Boolean> retainAckedMessages() {
-        return this.retainAckedMessages;
+    public Output<Optional<Boolean>> retainAckedMessages() {
+        return Codegen.optional(this.retainAckedMessages);
     }
     /**
      * A policy that specifies how Pub/Sub retries message delivery for this subscription.
@@ -319,8 +320,8 @@ public class Subscription extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ SubscriptionRetryPolicy> retryPolicy() {
-        return this.retryPolicy;
+    public Output<Optional<SubscriptionRetryPolicy>> retryPolicy() {
+        return Codegen.optional(this.retryPolicy);
     }
     /**
      * A reference to a Topic resource.

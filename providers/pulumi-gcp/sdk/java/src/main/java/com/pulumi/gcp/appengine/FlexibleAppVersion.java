@@ -26,6 +26,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -77,8 +78,8 @@ public class FlexibleAppVersion extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ FlexibleAppVersionApiConfig> apiConfig() {
-        return this.apiConfig;
+    public Output<Optional<FlexibleAppVersionApiConfig>> apiConfig() {
+        return Codegen.optional(this.apiConfig);
     }
     /**
      * Automatic scaling is based on request rate, response latencies, and other application metrics.
@@ -93,8 +94,8 @@ public class FlexibleAppVersion extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ FlexibleAppVersionAutomaticScaling> automaticScaling() {
-        return this.automaticScaling;
+    public Output<Optional<FlexibleAppVersionAutomaticScaling>> automaticScaling() {
+        return Codegen.optional(this.automaticScaling);
     }
     /**
      * Metadata settings that are supplied to this version to enable beta runtime features.
@@ -107,8 +108,8 @@ public class FlexibleAppVersion extends com.pulumi.resources.CustomResource {
      * @return Metadata settings that are supplied to this version to enable beta runtime features.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> betaSettings() {
-        return this.betaSettings;
+    public Output<Optional<Map<String,String>>> betaSettings() {
+        return Codegen.optional(this.betaSettings);
     }
     /**
      * Duration that static files should be cached by web proxies and browsers.
@@ -123,8 +124,8 @@ public class FlexibleAppVersion extends com.pulumi.resources.CustomResource {
      * Only applicable if the corresponding StaticFilesHandler does not specify its own expiration time.
      * 
      */
-    public Output</* @Nullable */ String> defaultExpiration() {
-        return this.defaultExpiration;
+    public Output<Optional<String>> defaultExpiration() {
+        return Codegen.optional(this.defaultExpiration);
     }
     /**
      * If set to `true`, the service will be deleted if it is the last version.
@@ -137,8 +138,8 @@ public class FlexibleAppVersion extends com.pulumi.resources.CustomResource {
      * @return If set to `true`, the service will be deleted if it is the last version.
      * 
      */
-    public Output</* @Nullable */ Boolean> deleteServiceOnDestroy() {
-        return this.deleteServiceOnDestroy;
+    public Output<Optional<Boolean>> deleteServiceOnDestroy() {
+        return Codegen.optional(this.deleteServiceOnDestroy);
     }
     /**
      * Code and application artifacts that make up this version.
@@ -153,8 +154,8 @@ public class FlexibleAppVersion extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ FlexibleAppVersionDeployment> deployment() {
-        return this.deployment;
+    public Output<Optional<FlexibleAppVersionDeployment>> deployment() {
+        return Codegen.optional(this.deployment);
     }
     /**
      * Code and application artifacts that make up this version.
@@ -169,8 +170,8 @@ public class FlexibleAppVersion extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ FlexibleAppVersionEndpointsApiService> endpointsApiService() {
-        return this.endpointsApiService;
+    public Output<Optional<FlexibleAppVersionEndpointsApiService>> endpointsApiService() {
+        return Codegen.optional(this.endpointsApiService);
     }
     /**
      * The entrypoint for the application.
@@ -185,8 +186,8 @@ public class FlexibleAppVersion extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ FlexibleAppVersionEntrypoint> entrypoint() {
-        return this.entrypoint;
+    public Output<Optional<FlexibleAppVersionEntrypoint>> entrypoint() {
+        return Codegen.optional(this.entrypoint);
     }
     /**
      * Environment variables available to the application.  As these are not returned in the API request, the provider will not detect any changes made outside of the config.
@@ -199,8 +200,8 @@ public class FlexibleAppVersion extends com.pulumi.resources.CustomResource {
      * @return Environment variables available to the application.  As these are not returned in the API request, the provider will not detect any changes made outside of the config.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> envVariables() {
-        return this.envVariables;
+    public Output<Optional<Map<String,String>>> envVariables() {
+        return Codegen.optional(this.envVariables);
     }
     /**
      * An ordered list of URL-matching patterns that should be applied to incoming requests.
@@ -233,8 +234,8 @@ public class FlexibleAppVersion extends com.pulumi.resources.CustomResource {
      * Each value may be one of `INBOUND_SERVICE_MAIL`, `INBOUND_SERVICE_MAIL_BOUNCE`, `INBOUND_SERVICE_XMPP_ERROR`, `INBOUND_SERVICE_XMPP_MESSAGE`, `INBOUND_SERVICE_XMPP_SUBSCRIBE`, `INBOUND_SERVICE_XMPP_PRESENCE`, `INBOUND_SERVICE_CHANNEL_PRESENCE`, and `INBOUND_SERVICE_WARMUP`.
      * 
      */
-    public Output</* @Nullable */ List<String>> inboundServices() {
-        return this.inboundServices;
+    public Output<Optional<List<String>>> inboundServices() {
+        return Codegen.optional(this.inboundServices);
     }
     /**
      * Instance class that is used to run this version. Valid values are
@@ -253,8 +254,8 @@ public class FlexibleAppVersion extends com.pulumi.resources.CustomResource {
      * Defaults to F1 for AutomaticScaling and B1 for ManualScaling.
      * 
      */
-    public Output</* @Nullable */ String> instanceClass() {
-        return this.instanceClass;
+    public Output<Optional<String>> instanceClass() {
+        return Codegen.optional(this.instanceClass);
     }
     /**
      * Health checking configuration for VM instances. Unhealthy instances are killed and replaced with new instances.
@@ -285,8 +286,8 @@ public class FlexibleAppVersion extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ FlexibleAppVersionManualScaling> manualScaling() {
-        return this.manualScaling;
+    public Output<Optional<FlexibleAppVersionManualScaling>> manualScaling() {
+        return Codegen.optional(this.manualScaling);
     }
     /**
      * Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
@@ -315,8 +316,8 @@ public class FlexibleAppVersion extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ FlexibleAppVersionNetwork> network() {
-        return this.network;
+    public Output<Optional<FlexibleAppVersionNetwork>> network() {
+        return Codegen.optional(this.network);
     }
     /**
      * Files that match this pattern will not be built into this version. Only applicable for Go runtimes.
@@ -329,8 +330,8 @@ public class FlexibleAppVersion extends com.pulumi.resources.CustomResource {
      * @return Files that match this pattern will not be built into this version. Only applicable for Go runtimes.
      * 
      */
-    public Output</* @Nullable */ String> nobuildFilesRegex() {
-        return this.nobuildFilesRegex;
+    public Output<Optional<String>> nobuildFilesRegex() {
+        return Codegen.optional(this.nobuildFilesRegex);
     }
     /**
      * If set to `true`, the application version will not be deleted.
@@ -343,8 +344,8 @@ public class FlexibleAppVersion extends com.pulumi.resources.CustomResource {
      * @return If set to `true`, the application version will not be deleted.
      * 
      */
-    public Output</* @Nullable */ Boolean> noopOnDestroy() {
-        return this.noopOnDestroy;
+    public Output<Optional<Boolean>> noopOnDestroy() {
+        return Codegen.optional(this.noopOnDestroy);
     }
     /**
      * The ID of the project in which the resource belongs.
@@ -391,8 +392,8 @@ public class FlexibleAppVersion extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ FlexibleAppVersionResources> resources() {
-        return this.resources;
+    public Output<Optional<FlexibleAppVersionResources>> resources() {
+        return Codegen.optional(this.resources);
     }
     /**
      * Desired runtime. Example python27.
@@ -437,8 +438,8 @@ public class FlexibleAppVersion extends com.pulumi.resources.CustomResource {
      * @return The channel of the runtime to use. Only available for some runtimes.
      * 
      */
-    public Output</* @Nullable */ String> runtimeChannel() {
-        return this.runtimeChannel;
+    public Output<Optional<String>> runtimeChannel() {
+        return Codegen.optional(this.runtimeChannel);
     }
     /**
      * The path or name of the app&#39;s main executable.
@@ -451,8 +452,8 @@ public class FlexibleAppVersion extends com.pulumi.resources.CustomResource {
      * @return The path or name of the app&#39;s main executable.
      * 
      */
-    public Output</* @Nullable */ String> runtimeMainExecutablePath() {
-        return this.runtimeMainExecutablePath;
+    public Output<Optional<String>> runtimeMainExecutablePath() {
+        return Codegen.optional(this.runtimeMainExecutablePath);
     }
     /**
      * AppEngine service resource. Can contain numbers, letters, and hyphens.
@@ -483,8 +484,8 @@ public class FlexibleAppVersion extends com.pulumi.resources.CustomResource {
      * Possible values are `SERVING` and `STOPPED`.
      * 
      */
-    public Output</* @Nullable */ String> servingStatus() {
-        return this.servingStatus;
+    public Output<Optional<String>> servingStatus() {
+        return Codegen.optional(this.servingStatus);
     }
     /**
      * Relative name of the version within the service. For example, `v1`. Version names can contain only lowercase letters, numbers, or hyphens.
@@ -499,8 +500,8 @@ public class FlexibleAppVersion extends com.pulumi.resources.CustomResource {
      * Reserved names,&#34;default&#34;, &#34;latest&#34;, and any name with the prefix &#34;ah-&#34;.
      * 
      */
-    public Output</* @Nullable */ String> versionId() {
-        return this.versionId;
+    public Output<Optional<String>> versionId() {
+        return Codegen.optional(this.versionId);
     }
     /**
      * Enables VPC connectivity for standard apps.
@@ -515,8 +516,8 @@ public class FlexibleAppVersion extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ FlexibleAppVersionVpcAccessConnector> vpcAccessConnector() {
-        return this.vpcAccessConnector;
+    public Output<Optional<FlexibleAppVersionVpcAccessConnector>> vpcAccessConnector() {
+        return Codegen.optional(this.vpcAccessConnector);
     }
 
     /**

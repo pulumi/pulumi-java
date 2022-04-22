@@ -13,6 +13,7 @@ import com.pulumi.gcp.compute.inputs.TargetPoolState;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -60,8 +61,8 @@ public class TargetPool extends com.pulumi.resources.CustomResource {
      * failover\_ratio.
      * 
      */
-    public Output</* @Nullable */ String> backupPool() {
-        return this.backupPool;
+    public Output<Optional<String>> backupPool() {
+        return Codegen.optional(this.backupPool);
     }
     /**
      * Textual description field.
@@ -74,8 +75,8 @@ public class TargetPool extends com.pulumi.resources.CustomResource {
      * @return Textual description field.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Ratio (0 to 1) of failed nodes before using the
@@ -90,8 +91,8 @@ public class TargetPool extends com.pulumi.resources.CustomResource {
      * backup pool (which must also be set).
      * 
      */
-    public Output</* @Nullable */ Double> failoverRatio() {
-        return this.failoverRatio;
+    public Output<Optional<Double>> failoverRatio() {
+        return Codegen.optional(this.failoverRatio);
     }
     /**
      * List of zero or one health check name or self_link. Only
@@ -106,8 +107,8 @@ public class TargetPool extends com.pulumi.resources.CustomResource {
      * legacy `gcp.compute.HttpHealthCheck` is supported.
      * 
      */
-    public Output</* @Nullable */ String> healthChecks() {
-        return this.healthChecks;
+    public Output<Optional<String>> healthChecks() {
+        return Codegen.optional(this.healthChecks);
     }
     /**
      * List of instances in the pool. They can be given as
@@ -208,8 +209,8 @@ public class TargetPool extends com.pulumi.resources.CustomResource {
      * &#34;CLIENT\_IP\_PROTO&#34; also includes the protocol (default &#34;NONE&#34;).
      * 
      */
-    public Output</* @Nullable */ String> sessionAffinity() {
-        return this.sessionAffinity;
+    public Output<Optional<String>> sessionAffinity() {
+        return Codegen.optional(this.sessionAffinity);
     }
 
     /**

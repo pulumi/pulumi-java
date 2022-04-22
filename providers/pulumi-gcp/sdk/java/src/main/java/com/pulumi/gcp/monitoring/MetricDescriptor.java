@@ -14,6 +14,7 @@ import com.pulumi.gcp.monitoring.outputs.MetricDescriptorLabel;
 import com.pulumi.gcp.monitoring.outputs.MetricDescriptorMetadata;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -79,8 +80,8 @@ public class MetricDescriptor extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<MetricDescriptorLabel>> labels() {
-        return this.labels;
+    public Output<Optional<List<MetricDescriptorLabel>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * The launch stage of the metric definition.
@@ -95,8 +96,8 @@ public class MetricDescriptor extends com.pulumi.resources.CustomResource {
      * Possible values are `LAUNCH_STAGE_UNSPECIFIED`, `UNIMPLEMENTED`, `PRELAUNCH`, `EARLY_ACCESS`, `ALPHA`, `BETA`, `GA`, and `DEPRECATED`.
      * 
      */
-    public Output</* @Nullable */ String> launchStage() {
-        return this.launchStage;
+    public Output<Optional<String>> launchStage() {
+        return Codegen.optional(this.launchStage);
     }
     /**
      * Metadata which can be used to guide usage of the metric.
@@ -111,8 +112,8 @@ public class MetricDescriptor extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ MetricDescriptorMetadata> metadata() {
-        return this.metadata;
+    public Output<Optional<MetricDescriptorMetadata>> metadata() {
+        return Codegen.optional(this.metadata);
     }
     /**
      * Whether the metric records instantaneous values, changes to a value, etc. Some combinations of metricKind and valueType might not be supported.
@@ -237,8 +238,8 @@ public class MetricDescriptor extends com.pulumi.resources.CustomResource {
      * (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.metricDescriptors).
      * 
      */
-    public Output</* @Nullable */ String> unit() {
-        return this.unit;
+    public Output<Optional<String>> unit() {
+        return Codegen.optional(this.unit);
     }
     /**
      * The type of data that can be assigned to the label.

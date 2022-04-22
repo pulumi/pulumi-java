@@ -23,6 +23,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -82,8 +83,8 @@ public class RegionBackendService extends com.pulumi.resources.CustomResource {
      * When the load balancing scheme is INTERNAL, this field is not used.
      * 
      */
-    public Output</* @Nullable */ Integer> affinityCookieTtlSec() {
-        return this.affinityCookieTtlSec;
+    public Output<Optional<Integer>> affinityCookieTtlSec() {
+        return Codegen.optional(this.affinityCookieTtlSec);
     }
     /**
      * The set of backends that serve this RegionBackendService.
@@ -98,8 +99,8 @@ public class RegionBackendService extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<RegionBackendServiceBackend>> backends() {
-        return this.backends;
+    public Output<Optional<List<RegionBackendServiceBackend>>> backends() {
+        return Codegen.optional(this.backends);
     }
     /**
      * Cloud CDN configuration for this BackendService.
@@ -134,8 +135,8 @@ public class RegionBackendService extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ RegionBackendServiceCircuitBreakers> circuitBreakers() {
-        return this.circuitBreakers;
+    public Output<Optional<RegionBackendServiceCircuitBreakers>> circuitBreakers() {
+        return Codegen.optional(this.circuitBreakers);
     }
     /**
      * Time for which instance will be drained (not accept new
@@ -150,8 +151,8 @@ public class RegionBackendService extends com.pulumi.resources.CustomResource {
      * connections, but still work to finish started).
      * 
      */
-    public Output</* @Nullable */ Integer> connectionDrainingTimeoutSec() {
-        return this.connectionDrainingTimeoutSec;
+    public Output<Optional<Integer>> connectionDrainingTimeoutSec() {
+        return Codegen.optional(this.connectionDrainingTimeoutSec);
     }
     /**
      * Connection Tracking configuration for this BackendService.
@@ -170,8 +171,8 @@ public class RegionBackendService extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ RegionBackendServiceConnectionTrackingPolicy> connectionTrackingPolicy() {
-        return this.connectionTrackingPolicy;
+    public Output<Optional<RegionBackendServiceConnectionTrackingPolicy>> connectionTrackingPolicy() {
+        return Codegen.optional(this.connectionTrackingPolicy);
     }
     /**
      * Consistent Hash-based load balancing can be used to provide soft session
@@ -196,8 +197,8 @@ public class RegionBackendService extends com.pulumi.resources.CustomResource {
      * This field only applies when all of the following are true -
      * 
      */
-    public Output</* @Nullable */ RegionBackendServiceConsistentHash> consistentHash() {
-        return this.consistentHash;
+    public Output<Optional<RegionBackendServiceConsistentHash>> consistentHash() {
+        return Codegen.optional(this.consistentHash);
     }
     /**
      * Creation timestamp in RFC3339 text format.
@@ -226,8 +227,8 @@ public class RegionBackendService extends com.pulumi.resources.CustomResource {
      * Provide this property when you create the resource.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * If true, enable Cloud CDN for this RegionBackendService.
@@ -240,8 +241,8 @@ public class RegionBackendService extends com.pulumi.resources.CustomResource {
      * @return If true, enable Cloud CDN for this RegionBackendService.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableCdn() {
-        return this.enableCdn;
+    public Output<Optional<Boolean>> enableCdn() {
+        return Codegen.optional(this.enableCdn);
     }
     /**
      * Policy for failovers.
@@ -256,8 +257,8 @@ public class RegionBackendService extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ RegionBackendServiceFailoverPolicy> failoverPolicy() {
-        return this.failoverPolicy;
+    public Output<Optional<RegionBackendServiceFailoverPolicy>> failoverPolicy() {
+        return Codegen.optional(this.failoverPolicy);
     }
     /**
      * Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking.
@@ -292,8 +293,8 @@ public class RegionBackendService extends com.pulumi.resources.CustomResource {
      * or serverless NEG as a backend.
      * 
      */
-    public Output</* @Nullable */ String> healthChecks() {
-        return this.healthChecks;
+    public Output<Optional<String>> healthChecks() {
+        return Codegen.optional(this.healthChecks);
     }
     /**
      * Settings for enabling Cloud Identity Aware Proxy
@@ -308,8 +309,8 @@ public class RegionBackendService extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ RegionBackendServiceIap> iap() {
-        return this.iap;
+    public Output<Optional<RegionBackendServiceIap>> iap() {
+        return Codegen.optional(this.iap);
     }
     /**
      * Indicates what kind of load balancing this regional backend service
@@ -332,8 +333,8 @@ public class RegionBackendService extends com.pulumi.resources.CustomResource {
      * Possible values are `EXTERNAL`, `EXTERNAL_MANAGED`, `INTERNAL`, and `INTERNAL_MANAGED`.
      * 
      */
-    public Output</* @Nullable */ String> loadBalancingScheme() {
-        return this.loadBalancingScheme;
+    public Output<Optional<String>> loadBalancingScheme() {
+        return Codegen.optional(this.loadBalancingScheme);
     }
     /**
      * The load balancing algorithm used within the scope of the locality.
@@ -384,8 +385,8 @@ public class RegionBackendService extends com.pulumi.resources.CustomResource {
      *   Maglev, refer to https://ai.google/research/pubs/pub44824
      * 
      */
-    public Output</* @Nullable */ String> localityLbPolicy() {
-        return this.localityLbPolicy;
+    public Output<Optional<String>> localityLbPolicy() {
+        return Codegen.optional(this.localityLbPolicy);
     }
     /**
      * This field denotes the logging options for the load balancer traffic served by this backend service.
@@ -432,8 +433,8 @@ public class RegionBackendService extends com.pulumi.resources.CustomResource {
      * This field can only be specified when the load balancing scheme is set to INTERNAL.
      * 
      */
-    public Output</* @Nullable */ String> network() {
-        return this.network;
+    public Output<Optional<String>> network() {
+        return Codegen.optional(this.network);
     }
     /**
      * Settings controlling eviction of unhealthy hosts from the load balancing pool.
@@ -452,8 +453,8 @@ public class RegionBackendService extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ RegionBackendServiceOutlierDetection> outlierDetection() {
-        return this.outlierDetection;
+    public Output<Optional<RegionBackendServiceOutlierDetection>> outlierDetection() {
+        return Codegen.optional(this.outlierDetection);
     }
     /**
      * A named port on a backend instance group representing the port for

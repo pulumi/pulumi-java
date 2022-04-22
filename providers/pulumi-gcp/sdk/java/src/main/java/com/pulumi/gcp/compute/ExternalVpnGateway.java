@@ -13,6 +13,7 @@ import com.pulumi.gcp.compute.inputs.ExternalVpnGatewayState;
 import com.pulumi.gcp.compute.outputs.ExternalVpnGatewayInterface;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -54,8 +55,8 @@ public class ExternalVpnGateway extends com.pulumi.resources.CustomResource {
      * @return An optional description of this resource.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * A list of interfaces on this external VPN gateway.
@@ -70,8 +71,8 @@ public class ExternalVpnGateway extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<ExternalVpnGatewayInterface>> interfaces() {
-        return this.interfaces;
+    public Output<Optional<List<ExternalVpnGatewayInterface>>> interfaces() {
+        return Codegen.optional(this.interfaces);
     }
     /**
      * Name of the resource. Provided by the client when the resource is
@@ -128,8 +129,8 @@ public class ExternalVpnGateway extends com.pulumi.resources.CustomResource {
      * Possible values are `FOUR_IPS_REDUNDANCY`, `SINGLE_IP_INTERNALLY_REDUNDANT`, and `TWO_IPS_REDUNDANCY`.
      * 
      */
-    public Output</* @Nullable */ String> redundancyType() {
-        return this.redundancyType;
+    public Output<Optional<String>> redundancyType() {
+        return Codegen.optional(this.redundancyType);
     }
     /**
      * The URI of the created resource.

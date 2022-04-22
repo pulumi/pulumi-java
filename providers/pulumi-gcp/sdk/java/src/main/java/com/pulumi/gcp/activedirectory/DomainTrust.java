@@ -13,6 +13,7 @@ import com.pulumi.gcp.activedirectory.inputs.DomainTrustState;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -91,8 +92,8 @@ public class DomainTrust extends com.pulumi.resources.CustomResource {
      * @return Whether the trusted side has forest/domain wide access or selective access to an approved set of resources.
      * 
      */
-    public Output</* @Nullable */ Boolean> selectiveAuthentication() {
-        return this.selectiveAuthentication;
+    public Output<Optional<Boolean>> selectiveAuthentication() {
+        return Codegen.optional(this.selectiveAuthentication);
     }
     /**
      * The target DNS server IP addresses which can resolve the remote domain involved in the trust.

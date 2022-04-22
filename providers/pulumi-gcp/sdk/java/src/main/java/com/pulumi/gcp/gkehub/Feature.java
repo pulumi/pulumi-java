@@ -15,6 +15,7 @@ import com.pulumi.gcp.gkehub.outputs.FeatureState;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -76,8 +77,8 @@ public class Feature extends com.pulumi.resources.CustomResource {
      * @return GCP labels for this Feature.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * The location for the resource
@@ -146,8 +147,8 @@ public class Feature extends com.pulumi.resources.CustomResource {
      * @return Optional. Hub-wide Feature configuration. If this Feature does not support any Hub-wide configuration, this field may be unused.
      * 
      */
-    public Output</* @Nullable */ FeatureSpec> spec() {
-        return this.spec;
+    public Output<Optional<FeatureSpec>> spec() {
+        return Codegen.optional(this.spec);
     }
     /**
      * Output only. The Hub-wide Feature state

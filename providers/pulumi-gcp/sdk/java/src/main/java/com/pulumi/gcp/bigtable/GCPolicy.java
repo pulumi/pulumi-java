@@ -14,6 +14,7 @@ import com.pulumi.gcp.bigtable.outputs.GCPolicyMaxAge;
 import com.pulumi.gcp.bigtable.outputs.GCPolicyMaxVersion;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -69,8 +70,8 @@ public class GCPolicy extends com.pulumi.resources.CustomResource {
      * @return GC policy that applies to all cells older than the given age.
      * 
      */
-    public Output</* @Nullable */ GCPolicyMaxAge> maxAge() {
-        return this.maxAge;
+    public Output<Optional<GCPolicyMaxAge>> maxAge() {
+        return Codegen.optional(this.maxAge);
     }
     /**
      * GC policy that applies to all versions of a cell except for the most recent.
@@ -83,8 +84,8 @@ public class GCPolicy extends com.pulumi.resources.CustomResource {
      * @return GC policy that applies to all versions of a cell except for the most recent.
      * 
      */
-    public Output</* @Nullable */ List<GCPolicyMaxVersion>> maxVersions() {
-        return this.maxVersions;
+    public Output<Optional<List<GCPolicyMaxVersion>>> maxVersions() {
+        return Codegen.optional(this.maxVersions);
     }
     /**
      * If multiple policies are set, you should choose between `UNION` OR `INTERSECTION`.
@@ -97,8 +98,8 @@ public class GCPolicy extends com.pulumi.resources.CustomResource {
      * @return If multiple policies are set, you should choose between `UNION` OR `INTERSECTION`.
      * 
      */
-    public Output</* @Nullable */ String> mode() {
-        return this.mode;
+    public Output<Optional<String>> mode() {
+        return Codegen.optional(this.mode);
     }
     /**
      * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.

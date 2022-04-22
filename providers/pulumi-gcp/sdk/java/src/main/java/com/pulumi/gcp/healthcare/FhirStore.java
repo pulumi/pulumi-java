@@ -16,6 +16,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -82,8 +83,8 @@ public class FhirStore extends com.pulumi.resources.CustomResource {
      * ** Changing this property may recreate the FHIR store (removing all data) **
      * 
      */
-    public Output</* @Nullable */ Boolean> disableReferentialIntegrity() {
-        return this.disableReferentialIntegrity;
+    public Output<Optional<Boolean>> disableReferentialIntegrity() {
+        return Codegen.optional(this.disableReferentialIntegrity);
     }
     /**
      * Whether to disable resource versioning for this FHIR store. This field can not be changed after the creation
@@ -106,8 +107,8 @@ public class FhirStore extends com.pulumi.resources.CustomResource {
      * ** Changing this property may recreate the FHIR store (removing all data) **
      * 
      */
-    public Output</* @Nullable */ Boolean> disableResourceVersioning() {
-        return this.disableResourceVersioning;
+    public Output<Optional<Boolean>> disableResourceVersioning() {
+        return Codegen.optional(this.disableResourceVersioning);
     }
     /**
      * Whether to allow the bulk import API to accept history bundles and directly insert historical resource
@@ -130,8 +131,8 @@ public class FhirStore extends com.pulumi.resources.CustomResource {
      * ** This property can be changed manually in the Google Cloud Healthcare admin console without recreating the FHIR store **
      * 
      */
-    public Output</* @Nullable */ Boolean> enableHistoryImport() {
-        return this.enableHistoryImport;
+    public Output<Optional<Boolean>> enableHistoryImport() {
+        return Codegen.optional(this.enableHistoryImport);
     }
     /**
      * Whether this FHIR store has the updateCreate capability. This determines if the client can use an Update
@@ -154,8 +155,8 @@ public class FhirStore extends com.pulumi.resources.CustomResource {
      * notifications.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableUpdateCreate() {
-        return this.enableUpdateCreate;
+    public Output<Optional<Boolean>> enableUpdateCreate() {
+        return Codegen.optional(this.enableUpdateCreate);
     }
     /**
      * User-supplied key-value pairs used to organize FHIR stores.
@@ -182,8 +183,8 @@ public class FhirStore extends com.pulumi.resources.CustomResource {
      * Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * The resource name for the FhirStore.
@@ -214,8 +215,8 @@ public class FhirStore extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ FhirStoreNotificationConfig> notificationConfig() {
-        return this.notificationConfig;
+    public Output<Optional<FhirStoreNotificationConfig>> notificationConfig() {
+        return Codegen.optional(this.notificationConfig);
     }
     /**
      * The fully qualified name of this dataset
@@ -254,8 +255,8 @@ public class FhirStore extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<FhirStoreStreamConfig>> streamConfigs() {
-        return this.streamConfigs;
+    public Output<Optional<List<FhirStoreStreamConfig>>> streamConfigs() {
+        return Codegen.optional(this.streamConfigs);
     }
     /**
      * The FHIR specification version.
@@ -272,8 +273,8 @@ public class FhirStore extends com.pulumi.resources.CustomResource {
      * Possible values are `DSTU2`, `STU3`, and `R4`.
      * 
      */
-    public Output</* @Nullable */ String> version() {
-        return this.version;
+    public Output<Optional<String>> version() {
+        return Codegen.optional(this.version);
     }
 
     /**

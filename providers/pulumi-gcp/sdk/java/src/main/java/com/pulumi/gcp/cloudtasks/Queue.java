@@ -15,6 +15,7 @@ import com.pulumi.gcp.cloudtasks.outputs.QueueRateLimits;
 import com.pulumi.gcp.cloudtasks.outputs.QueueRetryConfig;
 import com.pulumi.gcp.cloudtasks.outputs.QueueStackdriverLoggingConfig;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -61,8 +62,8 @@ public class Queue extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ QueueAppEngineRoutingOverride> appEngineRoutingOverride() {
-        return this.appEngineRoutingOverride;
+    public Output<Optional<QueueAppEngineRoutingOverride>> appEngineRoutingOverride() {
+        return Codegen.optional(this.appEngineRoutingOverride);
     }
     /**
      * The location of the queue
@@ -165,8 +166,8 @@ public class Queue extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ QueueStackdriverLoggingConfig> stackdriverLoggingConfig() {
-        return this.stackdriverLoggingConfig;
+    public Output<Optional<QueueStackdriverLoggingConfig>> stackdriverLoggingConfig() {
+        return Codegen.optional(this.stackdriverLoggingConfig);
     }
 
     /**

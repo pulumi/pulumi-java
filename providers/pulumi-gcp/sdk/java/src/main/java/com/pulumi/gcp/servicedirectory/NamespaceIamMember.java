@@ -12,6 +12,7 @@ import com.pulumi.gcp.servicedirectory.NamespaceIamMemberArgs;
 import com.pulumi.gcp.servicedirectory.inputs.NamespaceIamMemberState;
 import com.pulumi.gcp.servicedirectory.outputs.NamespaceIamMemberCondition;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -61,8 +62,8 @@ public class NamespaceIamMember extends com.pulumi.resources.CustomResource {
     @Export(name="condition", type=NamespaceIamMemberCondition.class, parameters={})
     private Output</* @Nullable */ NamespaceIamMemberCondition> condition;
 
-    public Output</* @Nullable */ NamespaceIamMemberCondition> condition() {
-        return this.condition;
+    public Output<Optional<NamespaceIamMemberCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * (Computed) The etag of the IAM policy.

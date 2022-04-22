@@ -15,6 +15,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -52,8 +53,8 @@ public class EdgeCacheOrigin extends com.pulumi.resources.CustomResource {
      * @return A human-readable description of the resource.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The Origin resource to try when the current origin cannot be reached.
@@ -72,8 +73,8 @@ public class EdgeCacheOrigin extends com.pulumi.resources.CustomResource {
      * A reference to a Topic resource.
      * 
      */
-    public Output</* @Nullable */ String> failoverOrigin() {
-        return this.failoverOrigin;
+    public Output<Optional<String>> failoverOrigin() {
+        return Codegen.optional(this.failoverOrigin);
     }
     /**
      * Set of label tags associated with the EdgeCache resource.
@@ -86,8 +87,8 @@ public class EdgeCacheOrigin extends com.pulumi.resources.CustomResource {
      * @return Set of label tags associated with the EdgeCache resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * The maximum number of attempts to cache fill from this origin. Another attempt is made when a cache fill fails with one of the retryConditions.
@@ -114,8 +115,8 @@ public class EdgeCacheOrigin extends com.pulumi.resources.CustomResource {
      * Defaults to 1. Must be a value greater than 0 and less than 4.
      * 
      */
-    public Output</* @Nullable */ Integer> maxAttempts() {
-        return this.maxAttempts;
+    public Output<Optional<Integer>> maxAttempts() {
+        return Codegen.optional(this.maxAttempts);
     }
     /**
      * Name of the resource; provided by the client when the resource is created.
@@ -256,8 +257,8 @@ public class EdgeCacheOrigin extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ EdgeCacheOriginTimeout> timeout() {
-        return this.timeout;
+    public Output<Optional<EdgeCacheOriginTimeout>> timeout() {
+        return Codegen.optional(this.timeout);
     }
 
     /**

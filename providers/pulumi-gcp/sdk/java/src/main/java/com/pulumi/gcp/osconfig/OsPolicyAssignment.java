@@ -16,6 +16,7 @@ import com.pulumi.gcp.osconfig.outputs.OsPolicyAssignmentRollout;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -85,8 +86,8 @@ public class OsPolicyAssignment extends com.pulumi.resources.CustomResource {
      * @return OS policy assignment description. Length of the description is limited to 1024 characters.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The etag for this OS policy assignment. If this is provided on update, it must match the server&#39;s etag.

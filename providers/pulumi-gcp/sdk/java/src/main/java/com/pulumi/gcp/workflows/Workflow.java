@@ -12,6 +12,7 @@ import com.pulumi.gcp.workflows.WorkflowArgs;
 import com.pulumi.gcp.workflows.inputs.WorkflowState;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -73,8 +74,8 @@ public class Workflow extends com.pulumi.resources.CustomResource {
      * @return A set of key/value label pairs to assign to this Workflow.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * Name of the Workflow.
@@ -133,8 +134,8 @@ public class Workflow extends com.pulumi.resources.CustomResource {
      * @return The region of the workflow.
      * 
      */
-    public Output</* @Nullable */ String> region() {
-        return this.region;
+    public Output<Optional<String>> region() {
+        return Codegen.optional(this.region);
     }
     /**
      * The revision of the workflow. A new one is generated if the service account or source contents is changed.
@@ -179,8 +180,8 @@ public class Workflow extends com.pulumi.resources.CustomResource {
      * @return Workflow code to be executed. The size limit is 32KB.
      * 
      */
-    public Output</* @Nullable */ String> sourceContents() {
-        return this.sourceContents;
+    public Output<Optional<String>> sourceContents() {
+        return Codegen.optional(this.sourceContents);
     }
     /**
      * State of the workflow deployment.

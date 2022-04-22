@@ -16,6 +16,7 @@ import com.pulumi.gcp.compute.outputs.PacketMirroringMirroredResources;
 import com.pulumi.gcp.compute.outputs.PacketMirroringNetwork;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -87,8 +88,8 @@ public class PacketMirroring extends com.pulumi.resources.CustomResource {
      * @return A human-readable description of the rule.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * A filter for mirrored traffic.  If unset, all traffic is mirrored.
@@ -103,8 +104,8 @@ public class PacketMirroring extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ PacketMirroringFilter> filter() {
-        return this.filter;
+    public Output<Optional<PacketMirroringFilter>> filter() {
+        return Codegen.optional(this.filter);
     }
     /**
      * A means of specifying which resources to mirror.

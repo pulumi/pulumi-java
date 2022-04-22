@@ -12,6 +12,7 @@ import com.pulumi.gcp.pubsub.SubscriptionIAMMemberArgs;
 import com.pulumi.gcp.pubsub.inputs.SubscriptionIAMMemberState;
 import com.pulumi.gcp.pubsub.outputs.SubscriptionIAMMemberCondition;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -57,8 +58,8 @@ public class SubscriptionIAMMember extends com.pulumi.resources.CustomResource {
     @Export(name="condition", type=SubscriptionIAMMemberCondition.class, parameters={})
     private Output</* @Nullable */ SubscriptionIAMMemberCondition> condition;
 
-    public Output</* @Nullable */ SubscriptionIAMMemberCondition> condition() {
-        return this.condition;
+    public Output<Optional<SubscriptionIAMMemberCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * (Computed) The etag of the subscription&#39;s IAM policy.

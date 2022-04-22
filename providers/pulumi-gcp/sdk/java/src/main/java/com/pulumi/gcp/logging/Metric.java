@@ -14,6 +14,7 @@ import com.pulumi.gcp.logging.outputs.MetricBucketOptions;
 import com.pulumi.gcp.logging.outputs.MetricMetricDescriptor;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -59,8 +60,8 @@ public class Metric extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ MetricBucketOptions> bucketOptions() {
-        return this.bucketOptions;
+    public Output<Optional<MetricBucketOptions>> bucketOptions() {
+        return Codegen.optional(this.bucketOptions);
     }
     /**
      * A description of this metric, which is used in documentation. The maximum length of the
@@ -75,8 +76,8 @@ public class Metric extends com.pulumi.resources.CustomResource {
      * description is 8000 characters.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * An advanced logs filter (https://cloud.google.com/logging/docs/view/advanced-filters) which
@@ -111,8 +112,8 @@ public class Metric extends com.pulumi.resources.CustomResource {
      * the same as for the valueExtractor field.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> labelExtractors() {
-        return this.labelExtractors;
+    public Output<Optional<Map<String,String>>> labelExtractors() {
+        return Codegen.optional(this.labelExtractors);
     }
     /**
      * The metric descriptor associated with the logs-based metric.
@@ -191,8 +192,8 @@ public class Metric extends com.pulumi.resources.CustomResource {
      * error to specify a regex that does not include exactly one capture group.
      * 
      */
-    public Output</* @Nullable */ String> valueExtractor() {
-        return this.valueExtractor;
+    public Output<Optional<String>> valueExtractor() {
+        return Codegen.optional(this.valueExtractor);
     }
 
     /**

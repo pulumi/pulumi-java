@@ -14,6 +14,7 @@ import com.pulumi.gcp.spanner.outputs.DatabaseEncryptionConfig;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -69,8 +70,8 @@ public class Database extends com.pulumi.resources.CustomResource {
      * error in any statement, the database is not created.
      * 
      */
-    public Output</* @Nullable */ List<String>> ddls() {
-        return this.ddls;
+    public Output<Optional<List<String>>> ddls() {
+        return Codegen.optional(this.ddls);
     }
     /**
      * Whether or not to allow the provider to destroy the instance. Unless this field is set to false
@@ -85,8 +86,8 @@ public class Database extends com.pulumi.resources.CustomResource {
      * in state, a `destroy` or `update` that would delete the instance will fail.
      * 
      */
-    public Output</* @Nullable */ Boolean> deletionProtection() {
-        return this.deletionProtection;
+    public Output<Optional<Boolean>> deletionProtection() {
+        return Codegen.optional(this.deletionProtection);
     }
     /**
      * Encryption configuration for the database
@@ -101,8 +102,8 @@ public class Database extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ DatabaseEncryptionConfig> encryptionConfig() {
-        return this.encryptionConfig;
+    public Output<Optional<DatabaseEncryptionConfig>> encryptionConfig() {
+        return Codegen.optional(this.encryptionConfig);
     }
     /**
      * The instance to create the database on.

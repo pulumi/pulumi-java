@@ -26,6 +26,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -68,8 +69,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return Configure Nested Virtualisation and Simultaneous Hyper Threading  on this VM. Structure is documented below
      * 
      */
-    public Output</* @Nullable */ InstanceAdvancedMachineFeatures> advancedMachineFeatures() {
-        return this.advancedMachineFeatures;
+    public Output<Optional<InstanceAdvancedMachineFeatures>> advancedMachineFeatures() {
+        return Codegen.optional(this.advancedMachineFeatures);
     }
     /**
      * If true, allows this prvider to stop the instance to update its properties.
@@ -84,8 +85,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * If you try to update a property that requires stopping the instance without setting this field, the update will fail.
      * 
      */
-    public Output</* @Nullable */ Boolean> allowStoppingForUpdate() {
-        return this.allowStoppingForUpdate;
+    public Output<Optional<Boolean>> allowStoppingForUpdate() {
+        return Codegen.optional(this.allowStoppingForUpdate);
     }
     /**
      * Additional disks to attach to the instance. Can be repeated multiple times for multiple disks. Structure is documented below.
@@ -98,8 +99,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return Additional disks to attach to the instance. Can be repeated multiple times for multiple disks. Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<InstanceAttachedDisk>> attachedDisks() {
-        return this.attachedDisks;
+    public Output<Optional<List<InstanceAttachedDisk>>> attachedDisks() {
+        return Codegen.optional(this.attachedDisks);
     }
     /**
      * The boot disk for the instance.
@@ -132,8 +133,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * This defaults to false.
      * 
      */
-    public Output</* @Nullable */ Boolean> canIpForward() {
-        return this.canIpForward;
+    public Output<Optional<Boolean>> canIpForward() {
+        return Codegen.optional(this.canIpForward);
     }
     /**
      * Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM. Structure is documented below
@@ -190,8 +191,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * **Note:** you must disable deletion protection before removing the resource (e.g., via `pulumi destroy`), or the instance cannot be deleted and the provider run will not complete successfully.
      * 
      */
-    public Output</* @Nullable */ Boolean> deletionProtection() {
-        return this.deletionProtection;
+    public Output<Optional<Boolean>> deletionProtection() {
+        return Codegen.optional(this.deletionProtection);
     }
     /**
      * A brief description of this resource.
@@ -204,8 +205,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return A brief description of this resource.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Desired status of the instance. Either
@@ -220,8 +221,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * `&#34;RUNNING&#34;` or `&#34;TERMINATED&#34;`.
      * 
      */
-    public Output</* @Nullable */ String> desiredStatus() {
-        return this.desiredStatus;
+    public Output<Optional<String>> desiredStatus() {
+        return Codegen.optional(this.desiredStatus);
     }
     /**
      * Enable [Virtual Displays](https://cloud.google.com/compute/docs/instances/enable-instance-virtual-display#verify_display_driver) on this instance.
@@ -236,8 +237,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableDisplay() {
-        return this.enableDisplay;
+    public Output<Optional<Boolean>> enableDisplay() {
+        return Codegen.optional(this.enableDisplay);
     }
     /**
      * List of the type and count of accelerator cards attached to the instance. Structure documented below.
@@ -270,8 +271,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * The entire hostname must not exceed 253 characters. Changing this forces a new resource to be created.
      * 
      */
-    public Output</* @Nullable */ String> hostname() {
-        return this.hostname;
+    public Output<Optional<String>> hostname() {
+        return Codegen.optional(this.hostname);
     }
     /**
      * The server-assigned unique identifier of this instance.
@@ -312,8 +313,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return A map of key/value label pairs to assign to the instance.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * The machine type to create.
@@ -344,8 +345,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * Add them to your config in order to keep them attached to your instance.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> metadata() {
-        return this.metadata;
+    public Output<Optional<Map<String,String>>> metadata() {
+        return Codegen.optional(this.metadata);
     }
     /**
      * The unique fingerprint of the metadata.
@@ -390,8 +391,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * is desired, you will need to modify your state file.
      * 
      */
-    public Output</* @Nullable */ String> metadataStartupScript() {
-        return this.metadataStartupScript;
+    public Output<Optional<String>> metadataStartupScript() {
+        return Codegen.optional(this.metadataStartupScript);
     }
     /**
      * Specifies a minimum CPU platform for the VM instance. Applicable values are the friendly names of CPU platforms, such as
@@ -462,8 +463,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * in order for this setting to take effect.
      * 
      */
-    public Output</* @Nullable */ InstanceNetworkPerformanceConfig> networkPerformanceConfig() {
-        return this.networkPerformanceConfig;
+    public Output<Optional<InstanceNetworkPerformanceConfig>> networkPerformanceConfig() {
+        return Codegen.optional(this.networkPerformanceConfig);
     }
     /**
      * The ID of the project in which the resource belongs. If it
@@ -508,8 +509,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return -- A list of short names or self_links of resource policies to attach to the instance. Modifying this list will cause the instance to recreate. Currently a max of 1 resource policy is supported.
      * 
      */
-    public Output</* @Nullable */ String> resourcePolicies() {
-        return this.resourcePolicies;
+    public Output<Optional<String>> resourcePolicies() {
+        return Codegen.optional(this.resourcePolicies);
     }
     /**
      * The scheduling strategy to use. More details about
@@ -540,8 +541,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * specified multiple times for multiple scratch disks. Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<InstanceScratchDisk>> scratchDisks() {
-        return this.scratchDisks;
+    public Output<Optional<List<InstanceScratchDisk>>> scratchDisks() {
+        return Codegen.optional(this.scratchDisks);
     }
     /**
      * The URI of the created resource.
@@ -572,8 +573,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
      * 
      */
-    public Output</* @Nullable */ InstanceServiceAccount> serviceAccount() {
-        return this.serviceAccount;
+    public Output<Optional<InstanceServiceAccount>> serviceAccount() {
+        return Codegen.optional(this.serviceAccount);
     }
     /**
      * Enable [Shielded VM](https://cloud.google.com/security/shielded-cloud/shielded-vm) on this instance. Shielded VM provides verifiable integrity to prevent against malware and rootkits. Defaults to disabled. Structure is documented below.
@@ -604,8 +605,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return A list of network tags to attach to the instance.
      * 
      */
-    public Output</* @Nullable */ List<String>> tags() {
-        return this.tags;
+    public Output<Optional<List<String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The unique fingerprint of the tags.

@@ -15,6 +15,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -74,8 +75,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * in the statefile, a `pulumi destroy` or `pulumi up` that would delete the instance will fail.
      * 
      */
-    public Output</* @Nullable */ Boolean> deletionProtection() {
-        return this.deletionProtection;
+    public Output<Optional<Boolean>> deletionProtection() {
+        return Codegen.optional(this.deletionProtection);
     }
     /**
      * The human-readable display name of the Bigtable instance. Defaults to the instance `name`.
@@ -114,8 +115,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * is functionally identical to a `&#34;DEVELOPMENT&#34;` instance, but without the accompanying restrictions.
      * 
      */
-    public Output</* @Nullable */ String> instanceType() {
-        return this.instanceType;
+    public Output<Optional<String>> instanceType() {
+        return Codegen.optional(this.instanceType);
     }
     /**
      * A set of key/value label pairs to assign to the resource. Label keys must follow the requirements at https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements.
@@ -128,8 +129,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return A set of key/value label pairs to assign to the resource. Label keys must follow the requirements at https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * The name (also called Instance Id in the Cloud Console) of the Cloud Bigtable instance.

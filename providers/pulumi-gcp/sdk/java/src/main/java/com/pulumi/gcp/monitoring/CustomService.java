@@ -12,6 +12,7 @@ import com.pulumi.gcp.monitoring.CustomServiceArgs;
 import com.pulumi.gcp.monitoring.inputs.CustomServiceState;
 import com.pulumi.gcp.monitoring.outputs.CustomServiceTelemetry;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -51,8 +52,8 @@ public class CustomService extends com.pulumi.resources.CustomResource {
      * @return Name used for UI elements listing this Service.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * The full resource name for this service. The syntax is: projects/[PROJECT_ID]/services/[SERVICE_ID].
@@ -113,8 +114,8 @@ public class CustomService extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ CustomServiceTelemetry> telemetry() {
-        return this.telemetry;
+    public Output<Optional<CustomServiceTelemetry>> telemetry() {
+        return Codegen.optional(this.telemetry);
     }
 
     /**

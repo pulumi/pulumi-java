@@ -10,6 +10,7 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.ProviderArgs;
 import com.pulumi.gcp.Utilities;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -24,632 +25,632 @@ public class Provider extends com.pulumi.resources.ProviderResource {
     @Export(name="accessApprovalCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> accessApprovalCustomEndpoint;
 
-    public Output</* @Nullable */ String> accessApprovalCustomEndpoint() {
-        return this.accessApprovalCustomEndpoint;
+    public Output<Optional<String>> accessApprovalCustomEndpoint() {
+        return Codegen.optional(this.accessApprovalCustomEndpoint);
     }
     @Export(name="accessContextManagerCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> accessContextManagerCustomEndpoint;
 
-    public Output</* @Nullable */ String> accessContextManagerCustomEndpoint() {
-        return this.accessContextManagerCustomEndpoint;
+    public Output<Optional<String>> accessContextManagerCustomEndpoint() {
+        return Codegen.optional(this.accessContextManagerCustomEndpoint);
     }
     @Export(name="accessToken", type=String.class, parameters={})
     private Output</* @Nullable */ String> accessToken;
 
-    public Output</* @Nullable */ String> accessToken() {
-        return this.accessToken;
+    public Output<Optional<String>> accessToken() {
+        return Codegen.optional(this.accessToken);
     }
     @Export(name="activeDirectoryCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> activeDirectoryCustomEndpoint;
 
-    public Output</* @Nullable */ String> activeDirectoryCustomEndpoint() {
-        return this.activeDirectoryCustomEndpoint;
+    public Output<Optional<String>> activeDirectoryCustomEndpoint() {
+        return Codegen.optional(this.activeDirectoryCustomEndpoint);
     }
     @Export(name="apiGatewayCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiGatewayCustomEndpoint;
 
-    public Output</* @Nullable */ String> apiGatewayCustomEndpoint() {
-        return this.apiGatewayCustomEndpoint;
+    public Output<Optional<String>> apiGatewayCustomEndpoint() {
+        return Codegen.optional(this.apiGatewayCustomEndpoint);
     }
     @Export(name="apigeeCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> apigeeCustomEndpoint;
 
-    public Output</* @Nullable */ String> apigeeCustomEndpoint() {
-        return this.apigeeCustomEndpoint;
+    public Output<Optional<String>> apigeeCustomEndpoint() {
+        return Codegen.optional(this.apigeeCustomEndpoint);
     }
     @Export(name="appEngineCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> appEngineCustomEndpoint;
 
-    public Output</* @Nullable */ String> appEngineCustomEndpoint() {
-        return this.appEngineCustomEndpoint;
+    public Output<Optional<String>> appEngineCustomEndpoint() {
+        return Codegen.optional(this.appEngineCustomEndpoint);
     }
     @Export(name="artifactRegistryCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> artifactRegistryCustomEndpoint;
 
-    public Output</* @Nullable */ String> artifactRegistryCustomEndpoint() {
-        return this.artifactRegistryCustomEndpoint;
+    public Output<Optional<String>> artifactRegistryCustomEndpoint() {
+        return Codegen.optional(this.artifactRegistryCustomEndpoint);
     }
     @Export(name="assuredWorkloadsCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> assuredWorkloadsCustomEndpoint;
 
-    public Output</* @Nullable */ String> assuredWorkloadsCustomEndpoint() {
-        return this.assuredWorkloadsCustomEndpoint;
+    public Output<Optional<String>> assuredWorkloadsCustomEndpoint() {
+        return Codegen.optional(this.assuredWorkloadsCustomEndpoint);
     }
     @Export(name="bigQueryCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> bigQueryCustomEndpoint;
 
-    public Output</* @Nullable */ String> bigQueryCustomEndpoint() {
-        return this.bigQueryCustomEndpoint;
+    public Output<Optional<String>> bigQueryCustomEndpoint() {
+        return Codegen.optional(this.bigQueryCustomEndpoint);
     }
     @Export(name="bigqueryConnectionCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> bigqueryConnectionCustomEndpoint;
 
-    public Output</* @Nullable */ String> bigqueryConnectionCustomEndpoint() {
-        return this.bigqueryConnectionCustomEndpoint;
+    public Output<Optional<String>> bigqueryConnectionCustomEndpoint() {
+        return Codegen.optional(this.bigqueryConnectionCustomEndpoint);
     }
     @Export(name="bigqueryDataTransferCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> bigqueryDataTransferCustomEndpoint;
 
-    public Output</* @Nullable */ String> bigqueryDataTransferCustomEndpoint() {
-        return this.bigqueryDataTransferCustomEndpoint;
+    public Output<Optional<String>> bigqueryDataTransferCustomEndpoint() {
+        return Codegen.optional(this.bigqueryDataTransferCustomEndpoint);
     }
     @Export(name="bigqueryReservationCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> bigqueryReservationCustomEndpoint;
 
-    public Output</* @Nullable */ String> bigqueryReservationCustomEndpoint() {
-        return this.bigqueryReservationCustomEndpoint;
+    public Output<Optional<String>> bigqueryReservationCustomEndpoint() {
+        return Codegen.optional(this.bigqueryReservationCustomEndpoint);
     }
     @Export(name="bigtableCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> bigtableCustomEndpoint;
 
-    public Output</* @Nullable */ String> bigtableCustomEndpoint() {
-        return this.bigtableCustomEndpoint;
+    public Output<Optional<String>> bigtableCustomEndpoint() {
+        return Codegen.optional(this.bigtableCustomEndpoint);
     }
     @Export(name="billingCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> billingCustomEndpoint;
 
-    public Output</* @Nullable */ String> billingCustomEndpoint() {
-        return this.billingCustomEndpoint;
+    public Output<Optional<String>> billingCustomEndpoint() {
+        return Codegen.optional(this.billingCustomEndpoint);
     }
     @Export(name="billingProject", type=String.class, parameters={})
     private Output</* @Nullable */ String> billingProject;
 
-    public Output</* @Nullable */ String> billingProject() {
-        return this.billingProject;
+    public Output<Optional<String>> billingProject() {
+        return Codegen.optional(this.billingProject);
     }
     @Export(name="binaryAuthorizationCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> binaryAuthorizationCustomEndpoint;
 
-    public Output</* @Nullable */ String> binaryAuthorizationCustomEndpoint() {
-        return this.binaryAuthorizationCustomEndpoint;
+    public Output<Optional<String>> binaryAuthorizationCustomEndpoint() {
+        return Codegen.optional(this.binaryAuthorizationCustomEndpoint);
     }
     @Export(name="cloudAssetCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> cloudAssetCustomEndpoint;
 
-    public Output</* @Nullable */ String> cloudAssetCustomEndpoint() {
-        return this.cloudAssetCustomEndpoint;
+    public Output<Optional<String>> cloudAssetCustomEndpoint() {
+        return Codegen.optional(this.cloudAssetCustomEndpoint);
     }
     @Export(name="cloudBillingCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> cloudBillingCustomEndpoint;
 
-    public Output</* @Nullable */ String> cloudBillingCustomEndpoint() {
-        return this.cloudBillingCustomEndpoint;
+    public Output<Optional<String>> cloudBillingCustomEndpoint() {
+        return Codegen.optional(this.cloudBillingCustomEndpoint);
     }
     @Export(name="cloudBuildCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> cloudBuildCustomEndpoint;
 
-    public Output</* @Nullable */ String> cloudBuildCustomEndpoint() {
-        return this.cloudBuildCustomEndpoint;
+    public Output<Optional<String>> cloudBuildCustomEndpoint() {
+        return Codegen.optional(this.cloudBuildCustomEndpoint);
     }
     @Export(name="cloudBuildWorkerPoolCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> cloudBuildWorkerPoolCustomEndpoint;
 
-    public Output</* @Nullable */ String> cloudBuildWorkerPoolCustomEndpoint() {
-        return this.cloudBuildWorkerPoolCustomEndpoint;
+    public Output<Optional<String>> cloudBuildWorkerPoolCustomEndpoint() {
+        return Codegen.optional(this.cloudBuildWorkerPoolCustomEndpoint);
     }
     @Export(name="cloudFunctionsCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> cloudFunctionsCustomEndpoint;
 
-    public Output</* @Nullable */ String> cloudFunctionsCustomEndpoint() {
-        return this.cloudFunctionsCustomEndpoint;
+    public Output<Optional<String>> cloudFunctionsCustomEndpoint() {
+        return Codegen.optional(this.cloudFunctionsCustomEndpoint);
     }
     @Export(name="cloudIdentityCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> cloudIdentityCustomEndpoint;
 
-    public Output</* @Nullable */ String> cloudIdentityCustomEndpoint() {
-        return this.cloudIdentityCustomEndpoint;
+    public Output<Optional<String>> cloudIdentityCustomEndpoint() {
+        return Codegen.optional(this.cloudIdentityCustomEndpoint);
     }
     @Export(name="cloudIotCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> cloudIotCustomEndpoint;
 
-    public Output</* @Nullable */ String> cloudIotCustomEndpoint() {
-        return this.cloudIotCustomEndpoint;
+    public Output<Optional<String>> cloudIotCustomEndpoint() {
+        return Codegen.optional(this.cloudIotCustomEndpoint);
     }
     @Export(name="cloudResourceManagerCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> cloudResourceManagerCustomEndpoint;
 
-    public Output</* @Nullable */ String> cloudResourceManagerCustomEndpoint() {
-        return this.cloudResourceManagerCustomEndpoint;
+    public Output<Optional<String>> cloudResourceManagerCustomEndpoint() {
+        return Codegen.optional(this.cloudResourceManagerCustomEndpoint);
     }
     @Export(name="cloudRunCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> cloudRunCustomEndpoint;
 
-    public Output</* @Nullable */ String> cloudRunCustomEndpoint() {
-        return this.cloudRunCustomEndpoint;
+    public Output<Optional<String>> cloudRunCustomEndpoint() {
+        return Codegen.optional(this.cloudRunCustomEndpoint);
     }
     @Export(name="cloudSchedulerCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> cloudSchedulerCustomEndpoint;
 
-    public Output</* @Nullable */ String> cloudSchedulerCustomEndpoint() {
-        return this.cloudSchedulerCustomEndpoint;
+    public Output<Optional<String>> cloudSchedulerCustomEndpoint() {
+        return Codegen.optional(this.cloudSchedulerCustomEndpoint);
     }
     @Export(name="cloudTasksCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> cloudTasksCustomEndpoint;
 
-    public Output</* @Nullable */ String> cloudTasksCustomEndpoint() {
-        return this.cloudTasksCustomEndpoint;
+    public Output<Optional<String>> cloudTasksCustomEndpoint() {
+        return Codegen.optional(this.cloudTasksCustomEndpoint);
     }
     @Export(name="composerCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> composerCustomEndpoint;
 
-    public Output</* @Nullable */ String> composerCustomEndpoint() {
-        return this.composerCustomEndpoint;
+    public Output<Optional<String>> composerCustomEndpoint() {
+        return Codegen.optional(this.composerCustomEndpoint);
     }
     @Export(name="computeCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> computeCustomEndpoint;
 
-    public Output</* @Nullable */ String> computeCustomEndpoint() {
-        return this.computeCustomEndpoint;
+    public Output<Optional<String>> computeCustomEndpoint() {
+        return Codegen.optional(this.computeCustomEndpoint);
     }
     @Export(name="containerAnalysisCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> containerAnalysisCustomEndpoint;
 
-    public Output</* @Nullable */ String> containerAnalysisCustomEndpoint() {
-        return this.containerAnalysisCustomEndpoint;
+    public Output<Optional<String>> containerAnalysisCustomEndpoint() {
+        return Codegen.optional(this.containerAnalysisCustomEndpoint);
     }
     @Export(name="containerAwsCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> containerAwsCustomEndpoint;
 
-    public Output</* @Nullable */ String> containerAwsCustomEndpoint() {
-        return this.containerAwsCustomEndpoint;
+    public Output<Optional<String>> containerAwsCustomEndpoint() {
+        return Codegen.optional(this.containerAwsCustomEndpoint);
     }
     @Export(name="containerAzureCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> containerAzureCustomEndpoint;
 
-    public Output</* @Nullable */ String> containerAzureCustomEndpoint() {
-        return this.containerAzureCustomEndpoint;
+    public Output<Optional<String>> containerAzureCustomEndpoint() {
+        return Codegen.optional(this.containerAzureCustomEndpoint);
     }
     @Export(name="containerCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> containerCustomEndpoint;
 
-    public Output</* @Nullable */ String> containerCustomEndpoint() {
-        return this.containerCustomEndpoint;
+    public Output<Optional<String>> containerCustomEndpoint() {
+        return Codegen.optional(this.containerCustomEndpoint);
     }
     @Export(name="credentials", type=String.class, parameters={})
     private Output</* @Nullable */ String> credentials;
 
-    public Output</* @Nullable */ String> credentials() {
-        return this.credentials;
+    public Output<Optional<String>> credentials() {
+        return Codegen.optional(this.credentials);
     }
     @Export(name="dataCatalogCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> dataCatalogCustomEndpoint;
 
-    public Output</* @Nullable */ String> dataCatalogCustomEndpoint() {
-        return this.dataCatalogCustomEndpoint;
+    public Output<Optional<String>> dataCatalogCustomEndpoint() {
+        return Codegen.optional(this.dataCatalogCustomEndpoint);
     }
     @Export(name="dataFusionCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> dataFusionCustomEndpoint;
 
-    public Output</* @Nullable */ String> dataFusionCustomEndpoint() {
-        return this.dataFusionCustomEndpoint;
+    public Output<Optional<String>> dataFusionCustomEndpoint() {
+        return Codegen.optional(this.dataFusionCustomEndpoint);
     }
     @Export(name="dataLossPreventionCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> dataLossPreventionCustomEndpoint;
 
-    public Output</* @Nullable */ String> dataLossPreventionCustomEndpoint() {
-        return this.dataLossPreventionCustomEndpoint;
+    public Output<Optional<String>> dataLossPreventionCustomEndpoint() {
+        return Codegen.optional(this.dataLossPreventionCustomEndpoint);
     }
     @Export(name="dataflowCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> dataflowCustomEndpoint;
 
-    public Output</* @Nullable */ String> dataflowCustomEndpoint() {
-        return this.dataflowCustomEndpoint;
+    public Output<Optional<String>> dataflowCustomEndpoint() {
+        return Codegen.optional(this.dataflowCustomEndpoint);
     }
     @Export(name="dataprocCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> dataprocCustomEndpoint;
 
-    public Output</* @Nullable */ String> dataprocCustomEndpoint() {
-        return this.dataprocCustomEndpoint;
+    public Output<Optional<String>> dataprocCustomEndpoint() {
+        return Codegen.optional(this.dataprocCustomEndpoint);
     }
     @Export(name="dataprocMetastoreCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> dataprocMetastoreCustomEndpoint;
 
-    public Output</* @Nullable */ String> dataprocMetastoreCustomEndpoint() {
-        return this.dataprocMetastoreCustomEndpoint;
+    public Output<Optional<String>> dataprocMetastoreCustomEndpoint() {
+        return Codegen.optional(this.dataprocMetastoreCustomEndpoint);
     }
     @Export(name="datastoreCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> datastoreCustomEndpoint;
 
-    public Output</* @Nullable */ String> datastoreCustomEndpoint() {
-        return this.datastoreCustomEndpoint;
+    public Output<Optional<String>> datastoreCustomEndpoint() {
+        return Codegen.optional(this.datastoreCustomEndpoint);
     }
     @Export(name="deploymentManagerCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> deploymentManagerCustomEndpoint;
 
-    public Output</* @Nullable */ String> deploymentManagerCustomEndpoint() {
-        return this.deploymentManagerCustomEndpoint;
+    public Output<Optional<String>> deploymentManagerCustomEndpoint() {
+        return Codegen.optional(this.deploymentManagerCustomEndpoint);
     }
     @Export(name="dialogflowCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> dialogflowCustomEndpoint;
 
-    public Output</* @Nullable */ String> dialogflowCustomEndpoint() {
-        return this.dialogflowCustomEndpoint;
+    public Output<Optional<String>> dialogflowCustomEndpoint() {
+        return Codegen.optional(this.dialogflowCustomEndpoint);
     }
     @Export(name="dialogflowCxCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> dialogflowCxCustomEndpoint;
 
-    public Output</* @Nullable */ String> dialogflowCxCustomEndpoint() {
-        return this.dialogflowCxCustomEndpoint;
+    public Output<Optional<String>> dialogflowCxCustomEndpoint() {
+        return Codegen.optional(this.dialogflowCxCustomEndpoint);
     }
     @Export(name="dnsCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> dnsCustomEndpoint;
 
-    public Output</* @Nullable */ String> dnsCustomEndpoint() {
-        return this.dnsCustomEndpoint;
+    public Output<Optional<String>> dnsCustomEndpoint() {
+        return Codegen.optional(this.dnsCustomEndpoint);
     }
     @Export(name="essentialContactsCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> essentialContactsCustomEndpoint;
 
-    public Output</* @Nullable */ String> essentialContactsCustomEndpoint() {
-        return this.essentialContactsCustomEndpoint;
+    public Output<Optional<String>> essentialContactsCustomEndpoint() {
+        return Codegen.optional(this.essentialContactsCustomEndpoint);
     }
     @Export(name="eventarcCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> eventarcCustomEndpoint;
 
-    public Output</* @Nullable */ String> eventarcCustomEndpoint() {
-        return this.eventarcCustomEndpoint;
+    public Output<Optional<String>> eventarcCustomEndpoint() {
+        return Codegen.optional(this.eventarcCustomEndpoint);
     }
     @Export(name="filestoreCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> filestoreCustomEndpoint;
 
-    public Output</* @Nullable */ String> filestoreCustomEndpoint() {
-        return this.filestoreCustomEndpoint;
+    public Output<Optional<String>> filestoreCustomEndpoint() {
+        return Codegen.optional(this.filestoreCustomEndpoint);
     }
     @Export(name="firebaseCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> firebaseCustomEndpoint;
 
-    public Output</* @Nullable */ String> firebaseCustomEndpoint() {
-        return this.firebaseCustomEndpoint;
+    public Output<Optional<String>> firebaseCustomEndpoint() {
+        return Codegen.optional(this.firebaseCustomEndpoint);
     }
     @Export(name="firestoreCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> firestoreCustomEndpoint;
 
-    public Output</* @Nullable */ String> firestoreCustomEndpoint() {
-        return this.firestoreCustomEndpoint;
+    public Output<Optional<String>> firestoreCustomEndpoint() {
+        return Codegen.optional(this.firestoreCustomEndpoint);
     }
     @Export(name="gameServicesCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> gameServicesCustomEndpoint;
 
-    public Output</* @Nullable */ String> gameServicesCustomEndpoint() {
-        return this.gameServicesCustomEndpoint;
+    public Output<Optional<String>> gameServicesCustomEndpoint() {
+        return Codegen.optional(this.gameServicesCustomEndpoint);
     }
     @Export(name="gkeHubCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> gkeHubCustomEndpoint;
 
-    public Output</* @Nullable */ String> gkeHubCustomEndpoint() {
-        return this.gkeHubCustomEndpoint;
+    public Output<Optional<String>> gkeHubCustomEndpoint() {
+        return Codegen.optional(this.gkeHubCustomEndpoint);
     }
     @Export(name="gkehubFeatureCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> gkehubFeatureCustomEndpoint;
 
-    public Output</* @Nullable */ String> gkehubFeatureCustomEndpoint() {
-        return this.gkehubFeatureCustomEndpoint;
+    public Output<Optional<String>> gkehubFeatureCustomEndpoint() {
+        return Codegen.optional(this.gkehubFeatureCustomEndpoint);
     }
     @Export(name="googlePartnerName", type=String.class, parameters={})
     private Output</* @Nullable */ String> googlePartnerName;
 
-    public Output</* @Nullable */ String> googlePartnerName() {
-        return this.googlePartnerName;
+    public Output<Optional<String>> googlePartnerName() {
+        return Codegen.optional(this.googlePartnerName);
     }
     @Export(name="healthcareCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> healthcareCustomEndpoint;
 
-    public Output</* @Nullable */ String> healthcareCustomEndpoint() {
-        return this.healthcareCustomEndpoint;
+    public Output<Optional<String>> healthcareCustomEndpoint() {
+        return Codegen.optional(this.healthcareCustomEndpoint);
     }
     @Export(name="iamBetaCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> iamBetaCustomEndpoint;
 
-    public Output</* @Nullable */ String> iamBetaCustomEndpoint() {
-        return this.iamBetaCustomEndpoint;
+    public Output<Optional<String>> iamBetaCustomEndpoint() {
+        return Codegen.optional(this.iamBetaCustomEndpoint);
     }
     @Export(name="iamCredentialsCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> iamCredentialsCustomEndpoint;
 
-    public Output</* @Nullable */ String> iamCredentialsCustomEndpoint() {
-        return this.iamCredentialsCustomEndpoint;
+    public Output<Optional<String>> iamCredentialsCustomEndpoint() {
+        return Codegen.optional(this.iamCredentialsCustomEndpoint);
     }
     @Export(name="iamCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> iamCustomEndpoint;
 
-    public Output</* @Nullable */ String> iamCustomEndpoint() {
-        return this.iamCustomEndpoint;
+    public Output<Optional<String>> iamCustomEndpoint() {
+        return Codegen.optional(this.iamCustomEndpoint);
     }
     @Export(name="iapCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> iapCustomEndpoint;
 
-    public Output</* @Nullable */ String> iapCustomEndpoint() {
-        return this.iapCustomEndpoint;
+    public Output<Optional<String>> iapCustomEndpoint() {
+        return Codegen.optional(this.iapCustomEndpoint);
     }
     @Export(name="identityPlatformCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> identityPlatformCustomEndpoint;
 
-    public Output</* @Nullable */ String> identityPlatformCustomEndpoint() {
-        return this.identityPlatformCustomEndpoint;
+    public Output<Optional<String>> identityPlatformCustomEndpoint() {
+        return Codegen.optional(this.identityPlatformCustomEndpoint);
     }
     @Export(name="impersonateServiceAccount", type=String.class, parameters={})
     private Output</* @Nullable */ String> impersonateServiceAccount;
 
-    public Output</* @Nullable */ String> impersonateServiceAccount() {
-        return this.impersonateServiceAccount;
+    public Output<Optional<String>> impersonateServiceAccount() {
+        return Codegen.optional(this.impersonateServiceAccount);
     }
     @Export(name="kmsCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> kmsCustomEndpoint;
 
-    public Output</* @Nullable */ String> kmsCustomEndpoint() {
-        return this.kmsCustomEndpoint;
+    public Output<Optional<String>> kmsCustomEndpoint() {
+        return Codegen.optional(this.kmsCustomEndpoint);
     }
     @Export(name="loggingCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> loggingCustomEndpoint;
 
-    public Output</* @Nullable */ String> loggingCustomEndpoint() {
-        return this.loggingCustomEndpoint;
+    public Output<Optional<String>> loggingCustomEndpoint() {
+        return Codegen.optional(this.loggingCustomEndpoint);
     }
     @Export(name="memcacheCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> memcacheCustomEndpoint;
 
-    public Output</* @Nullable */ String> memcacheCustomEndpoint() {
-        return this.memcacheCustomEndpoint;
+    public Output<Optional<String>> memcacheCustomEndpoint() {
+        return Codegen.optional(this.memcacheCustomEndpoint);
     }
     @Export(name="mlEngineCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> mlEngineCustomEndpoint;
 
-    public Output</* @Nullable */ String> mlEngineCustomEndpoint() {
-        return this.mlEngineCustomEndpoint;
+    public Output<Optional<String>> mlEngineCustomEndpoint() {
+        return Codegen.optional(this.mlEngineCustomEndpoint);
     }
     @Export(name="monitoringCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> monitoringCustomEndpoint;
 
-    public Output</* @Nullable */ String> monitoringCustomEndpoint() {
-        return this.monitoringCustomEndpoint;
+    public Output<Optional<String>> monitoringCustomEndpoint() {
+        return Codegen.optional(this.monitoringCustomEndpoint);
     }
     @Export(name="networkConnectivityCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> networkConnectivityCustomEndpoint;
 
-    public Output</* @Nullable */ String> networkConnectivityCustomEndpoint() {
-        return this.networkConnectivityCustomEndpoint;
+    public Output<Optional<String>> networkConnectivityCustomEndpoint() {
+        return Codegen.optional(this.networkConnectivityCustomEndpoint);
     }
     @Export(name="networkManagementCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> networkManagementCustomEndpoint;
 
-    public Output</* @Nullable */ String> networkManagementCustomEndpoint() {
-        return this.networkManagementCustomEndpoint;
+    public Output<Optional<String>> networkManagementCustomEndpoint() {
+        return Codegen.optional(this.networkManagementCustomEndpoint);
     }
     @Export(name="networkServicesCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> networkServicesCustomEndpoint;
 
-    public Output</* @Nullable */ String> networkServicesCustomEndpoint() {
-        return this.networkServicesCustomEndpoint;
+    public Output<Optional<String>> networkServicesCustomEndpoint() {
+        return Codegen.optional(this.networkServicesCustomEndpoint);
     }
     @Export(name="notebooksCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> notebooksCustomEndpoint;
 
-    public Output</* @Nullable */ String> notebooksCustomEndpoint() {
-        return this.notebooksCustomEndpoint;
+    public Output<Optional<String>> notebooksCustomEndpoint() {
+        return Codegen.optional(this.notebooksCustomEndpoint);
     }
     @Export(name="orgPolicyCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> orgPolicyCustomEndpoint;
 
-    public Output</* @Nullable */ String> orgPolicyCustomEndpoint() {
-        return this.orgPolicyCustomEndpoint;
+    public Output<Optional<String>> orgPolicyCustomEndpoint() {
+        return Codegen.optional(this.orgPolicyCustomEndpoint);
     }
     @Export(name="osConfigCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> osConfigCustomEndpoint;
 
-    public Output</* @Nullable */ String> osConfigCustomEndpoint() {
-        return this.osConfigCustomEndpoint;
+    public Output<Optional<String>> osConfigCustomEndpoint() {
+        return Codegen.optional(this.osConfigCustomEndpoint);
     }
     @Export(name="osLoginCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> osLoginCustomEndpoint;
 
-    public Output</* @Nullable */ String> osLoginCustomEndpoint() {
-        return this.osLoginCustomEndpoint;
+    public Output<Optional<String>> osLoginCustomEndpoint() {
+        return Codegen.optional(this.osLoginCustomEndpoint);
     }
     @Export(name="privatecaCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> privatecaCustomEndpoint;
 
-    public Output</* @Nullable */ String> privatecaCustomEndpoint() {
-        return this.privatecaCustomEndpoint;
+    public Output<Optional<String>> privatecaCustomEndpoint() {
+        return Codegen.optional(this.privatecaCustomEndpoint);
     }
     @Export(name="project", type=String.class, parameters={})
     private Output</* @Nullable */ String> project;
 
-    public Output</* @Nullable */ String> project() {
-        return this.project;
+    public Output<Optional<String>> project() {
+        return Codegen.optional(this.project);
     }
     @Export(name="pubsubCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> pubsubCustomEndpoint;
 
-    public Output</* @Nullable */ String> pubsubCustomEndpoint() {
-        return this.pubsubCustomEndpoint;
+    public Output<Optional<String>> pubsubCustomEndpoint() {
+        return Codegen.optional(this.pubsubCustomEndpoint);
     }
     @Export(name="pubsubLiteCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> pubsubLiteCustomEndpoint;
 
-    public Output</* @Nullable */ String> pubsubLiteCustomEndpoint() {
-        return this.pubsubLiteCustomEndpoint;
+    public Output<Optional<String>> pubsubLiteCustomEndpoint() {
+        return Codegen.optional(this.pubsubLiteCustomEndpoint);
     }
     @Export(name="recaptchaEnterpriseCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> recaptchaEnterpriseCustomEndpoint;
 
-    public Output</* @Nullable */ String> recaptchaEnterpriseCustomEndpoint() {
-        return this.recaptchaEnterpriseCustomEndpoint;
+    public Output<Optional<String>> recaptchaEnterpriseCustomEndpoint() {
+        return Codegen.optional(this.recaptchaEnterpriseCustomEndpoint);
     }
     @Export(name="redisCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> redisCustomEndpoint;
 
-    public Output</* @Nullable */ String> redisCustomEndpoint() {
-        return this.redisCustomEndpoint;
+    public Output<Optional<String>> redisCustomEndpoint() {
+        return Codegen.optional(this.redisCustomEndpoint);
     }
     @Export(name="region", type=String.class, parameters={})
     private Output</* @Nullable */ String> region;
 
-    public Output</* @Nullable */ String> region() {
-        return this.region;
+    public Output<Optional<String>> region() {
+        return Codegen.optional(this.region);
     }
     @Export(name="requestReason", type=String.class, parameters={})
     private Output</* @Nullable */ String> requestReason;
 
-    public Output</* @Nullable */ String> requestReason() {
-        return this.requestReason;
+    public Output<Optional<String>> requestReason() {
+        return Codegen.optional(this.requestReason);
     }
     @Export(name="requestTimeout", type=String.class, parameters={})
     private Output</* @Nullable */ String> requestTimeout;
 
-    public Output</* @Nullable */ String> requestTimeout() {
-        return this.requestTimeout;
+    public Output<Optional<String>> requestTimeout() {
+        return Codegen.optional(this.requestTimeout);
     }
     @Export(name="resourceManagerCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> resourceManagerCustomEndpoint;
 
-    public Output</* @Nullable */ String> resourceManagerCustomEndpoint() {
-        return this.resourceManagerCustomEndpoint;
+    public Output<Optional<String>> resourceManagerCustomEndpoint() {
+        return Codegen.optional(this.resourceManagerCustomEndpoint);
     }
     @Export(name="resourceManagerV2CustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> resourceManagerV2CustomEndpoint;
 
-    public Output</* @Nullable */ String> resourceManagerV2CustomEndpoint() {
-        return this.resourceManagerV2CustomEndpoint;
+    public Output<Optional<String>> resourceManagerV2CustomEndpoint() {
+        return Codegen.optional(this.resourceManagerV2CustomEndpoint);
     }
     @Export(name="runtimeConfigCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> runtimeConfigCustomEndpoint;
 
-    public Output</* @Nullable */ String> runtimeConfigCustomEndpoint() {
-        return this.runtimeConfigCustomEndpoint;
+    public Output<Optional<String>> runtimeConfigCustomEndpoint() {
+        return Codegen.optional(this.runtimeConfigCustomEndpoint);
     }
     @Export(name="runtimeconfigCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> runtimeconfigCustomEndpoint;
 
-    public Output</* @Nullable */ String> runtimeconfigCustomEndpoint() {
-        return this.runtimeconfigCustomEndpoint;
+    public Output<Optional<String>> runtimeconfigCustomEndpoint() {
+        return Codegen.optional(this.runtimeconfigCustomEndpoint);
     }
     @Export(name="secretManagerCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> secretManagerCustomEndpoint;
 
-    public Output</* @Nullable */ String> secretManagerCustomEndpoint() {
-        return this.secretManagerCustomEndpoint;
+    public Output<Optional<String>> secretManagerCustomEndpoint() {
+        return Codegen.optional(this.secretManagerCustomEndpoint);
     }
     @Export(name="securityCenterCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> securityCenterCustomEndpoint;
 
-    public Output</* @Nullable */ String> securityCenterCustomEndpoint() {
-        return this.securityCenterCustomEndpoint;
+    public Output<Optional<String>> securityCenterCustomEndpoint() {
+        return Codegen.optional(this.securityCenterCustomEndpoint);
     }
     @Export(name="securityScannerCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> securityScannerCustomEndpoint;
 
-    public Output</* @Nullable */ String> securityScannerCustomEndpoint() {
-        return this.securityScannerCustomEndpoint;
+    public Output<Optional<String>> securityScannerCustomEndpoint() {
+        return Codegen.optional(this.securityScannerCustomEndpoint);
     }
     @Export(name="serviceDirectoryCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> serviceDirectoryCustomEndpoint;
 
-    public Output</* @Nullable */ String> serviceDirectoryCustomEndpoint() {
-        return this.serviceDirectoryCustomEndpoint;
+    public Output<Optional<String>> serviceDirectoryCustomEndpoint() {
+        return Codegen.optional(this.serviceDirectoryCustomEndpoint);
     }
     @Export(name="serviceManagementCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> serviceManagementCustomEndpoint;
 
-    public Output</* @Nullable */ String> serviceManagementCustomEndpoint() {
-        return this.serviceManagementCustomEndpoint;
+    public Output<Optional<String>> serviceManagementCustomEndpoint() {
+        return Codegen.optional(this.serviceManagementCustomEndpoint);
     }
     @Export(name="serviceNetworkingCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> serviceNetworkingCustomEndpoint;
 
-    public Output</* @Nullable */ String> serviceNetworkingCustomEndpoint() {
-        return this.serviceNetworkingCustomEndpoint;
+    public Output<Optional<String>> serviceNetworkingCustomEndpoint() {
+        return Codegen.optional(this.serviceNetworkingCustomEndpoint);
     }
     @Export(name="serviceUsageCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> serviceUsageCustomEndpoint;
 
-    public Output</* @Nullable */ String> serviceUsageCustomEndpoint() {
-        return this.serviceUsageCustomEndpoint;
+    public Output<Optional<String>> serviceUsageCustomEndpoint() {
+        return Codegen.optional(this.serviceUsageCustomEndpoint);
     }
     @Export(name="sourceRepoCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> sourceRepoCustomEndpoint;
 
-    public Output</* @Nullable */ String> sourceRepoCustomEndpoint() {
-        return this.sourceRepoCustomEndpoint;
+    public Output<Optional<String>> sourceRepoCustomEndpoint() {
+        return Codegen.optional(this.sourceRepoCustomEndpoint);
     }
     @Export(name="spannerCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> spannerCustomEndpoint;
 
-    public Output</* @Nullable */ String> spannerCustomEndpoint() {
-        return this.spannerCustomEndpoint;
+    public Output<Optional<String>> spannerCustomEndpoint() {
+        return Codegen.optional(this.spannerCustomEndpoint);
     }
     @Export(name="sqlCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> sqlCustomEndpoint;
 
-    public Output</* @Nullable */ String> sqlCustomEndpoint() {
-        return this.sqlCustomEndpoint;
+    public Output<Optional<String>> sqlCustomEndpoint() {
+        return Codegen.optional(this.sqlCustomEndpoint);
     }
     @Export(name="storageCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> storageCustomEndpoint;
 
-    public Output</* @Nullable */ String> storageCustomEndpoint() {
-        return this.storageCustomEndpoint;
+    public Output<Optional<String>> storageCustomEndpoint() {
+        return Codegen.optional(this.storageCustomEndpoint);
     }
     @Export(name="storageTransferCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> storageTransferCustomEndpoint;
 
-    public Output</* @Nullable */ String> storageTransferCustomEndpoint() {
-        return this.storageTransferCustomEndpoint;
+    public Output<Optional<String>> storageTransferCustomEndpoint() {
+        return Codegen.optional(this.storageTransferCustomEndpoint);
     }
     @Export(name="tagsCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> tagsCustomEndpoint;
 
-    public Output</* @Nullable */ String> tagsCustomEndpoint() {
-        return this.tagsCustomEndpoint;
+    public Output<Optional<String>> tagsCustomEndpoint() {
+        return Codegen.optional(this.tagsCustomEndpoint);
     }
     @Export(name="tpuCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> tpuCustomEndpoint;
 
-    public Output</* @Nullable */ String> tpuCustomEndpoint() {
-        return this.tpuCustomEndpoint;
+    public Output<Optional<String>> tpuCustomEndpoint() {
+        return Codegen.optional(this.tpuCustomEndpoint);
     }
     @Export(name="vertexAiCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> vertexAiCustomEndpoint;
 
-    public Output</* @Nullable */ String> vertexAiCustomEndpoint() {
-        return this.vertexAiCustomEndpoint;
+    public Output<Optional<String>> vertexAiCustomEndpoint() {
+        return Codegen.optional(this.vertexAiCustomEndpoint);
     }
     @Export(name="vpcAccessCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> vpcAccessCustomEndpoint;
 
-    public Output</* @Nullable */ String> vpcAccessCustomEndpoint() {
-        return this.vpcAccessCustomEndpoint;
+    public Output<Optional<String>> vpcAccessCustomEndpoint() {
+        return Codegen.optional(this.vpcAccessCustomEndpoint);
     }
     @Export(name="workflowsCustomEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> workflowsCustomEndpoint;
 
-    public Output</* @Nullable */ String> workflowsCustomEndpoint() {
-        return this.workflowsCustomEndpoint;
+    public Output<Optional<String>> workflowsCustomEndpoint() {
+        return Codegen.optional(this.workflowsCustomEndpoint);
     }
     @Export(name="zone", type=String.class, parameters={})
     private Output</* @Nullable */ String> zone;
 
-    public Output</* @Nullable */ String> zone() {
-        return this.zone;
+    public Output<Optional<String>> zone() {
+        return Codegen.optional(this.zone);
     }
 
     /**
