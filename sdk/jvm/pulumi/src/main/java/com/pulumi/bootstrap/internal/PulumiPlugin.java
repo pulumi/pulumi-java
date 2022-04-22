@@ -12,7 +12,7 @@ import java.util.StringJoiner;
 
 /**
  * Represents additional information about a package's associated Pulumi plugin.
- * For JVM, the content is inside com/pulumi/{@literal <provider>}/plugin.json file inside the package.
+ * For Java, the content is inside com/pulumi/{@literal <provider>}/plugin.json file inside the package.
  * <p>
  * Keep in sync with pulumi/sdk/go/common/resource/plugin/plugin.go:51
  **/
