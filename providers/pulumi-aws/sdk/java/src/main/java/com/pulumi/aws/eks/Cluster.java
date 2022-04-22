@@ -18,6 +18,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -89,8 +90,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return List of the desired control plane logging to enable. For more information, see [Amazon EKS Control Plane Logging](https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html).
      * 
      */
-    public Output</* @Nullable */ List<String>> enabledClusterLogTypes() {
-        return this.enabledClusterLogTypes;
+    public Output<Optional<List<String>>> enabledClusterLogTypes() {
+        return Codegen.optional(this.enabledClusterLogTypes);
     }
     /**
      * Configuration block with encryption configuration for the cluster. Only available on Kubernetes 1.13 and above clusters created after March 6, 2020. Detailed below.
@@ -103,8 +104,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Configuration block with encryption configuration for the cluster. Only available on Kubernetes 1.13 and above clusters created after March 6, 2020. Detailed below.
      * 
      */
-    public Output</* @Nullable */ ClusterEncryptionConfig> encryptionConfig() {
-        return this.encryptionConfig;
+    public Output<Optional<ClusterEncryptionConfig>> encryptionConfig() {
+        return Codegen.optional(this.encryptionConfig);
     }
     /**
      * Endpoint for your Kubernetes API server.
@@ -215,8 +216,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Map of tags assigned to the resource, including those inherited from the provider.

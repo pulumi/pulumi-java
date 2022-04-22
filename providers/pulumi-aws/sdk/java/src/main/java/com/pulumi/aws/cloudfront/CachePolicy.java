@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -40,8 +41,8 @@ public class CachePolicy extends com.pulumi.resources.CustomResource {
      * @return A comment to describe the cache policy.
      * 
      */
-    public Output</* @Nullable */ String> comment() {
-        return this.comment;
+    public Output<Optional<String>> comment() {
+        return Codegen.optional(this.comment);
     }
     /**
      * The default amount of time, in seconds, that you want objects to stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated.
@@ -54,8 +55,8 @@ public class CachePolicy extends com.pulumi.resources.CustomResource {
      * @return The default amount of time, in seconds, that you want objects to stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated.
      * 
      */
-    public Output</* @Nullable */ Integer> defaultTtl() {
-        return this.defaultTtl;
+    public Output<Optional<Integer>> defaultTtl() {
+        return Codegen.optional(this.defaultTtl);
     }
     /**
      * The current version of the cache policy.
@@ -82,8 +83,8 @@ public class CachePolicy extends com.pulumi.resources.CustomResource {
      * @return The maximum amount of time, in seconds, that objects stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated.
      * 
      */
-    public Output</* @Nullable */ Integer> maxTtl() {
-        return this.maxTtl;
+    public Output<Optional<Integer>> maxTtl() {
+        return Codegen.optional(this.maxTtl);
     }
     /**
      * The minimum amount of time, in seconds, that you want objects to stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated.
@@ -96,8 +97,8 @@ public class CachePolicy extends com.pulumi.resources.CustomResource {
      * @return The minimum amount of time, in seconds, that you want objects to stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated.
      * 
      */
-    public Output</* @Nullable */ Integer> minTtl() {
-        return this.minTtl;
+    public Output<Optional<Integer>> minTtl() {
+        return Codegen.optional(this.minTtl);
     }
     /**
      * A unique name to identify the cache policy.

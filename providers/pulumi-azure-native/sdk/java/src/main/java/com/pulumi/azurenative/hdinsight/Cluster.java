@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The ETag for the resource
      * 
      */
-    public Output</* @Nullable */ String> etag() {
-        return this.etag;
+    public Output<Optional<String>> etag() {
+        return Codegen.optional(this.etag);
     }
     /**
      * The identity of the cluster, if configured.
@@ -59,8 +60,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The identity of the cluster, if configured.
      * 
      */
-    public Output</* @Nullable */ ClusterIdentityResponse> identity() {
-        return this.identity;
+    public Output<Optional<ClusterIdentityResponse>> identity() {
+        return Codegen.optional(this.identity);
     }
     /**
      * The Azure Region where the resource lives
@@ -73,8 +74,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The Azure Region where the resource lives
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The name of the resource
@@ -115,8 +116,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource.

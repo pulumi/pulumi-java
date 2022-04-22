@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -75,8 +76,8 @@ public class Deployment extends com.pulumi.resources.CustomResource {
      * @return The description for the deployment resource. Must be less than or equal to 1024 characters in length.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * A map of arbitrary keys and values that, when changed, will trigger a redeployment.
@@ -89,8 +90,8 @@ public class Deployment extends com.pulumi.resources.CustomResource {
      * @return A map of arbitrary keys and values that, when changed, will trigger a redeployment.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> triggers() {
-        return this.triggers;
+    public Output<Optional<Map<String,String>>> triggers() {
+        return Codegen.optional(this.triggers);
     }
 
     /**

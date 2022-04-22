@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -69,8 +70,8 @@ public class Member extends com.pulumi.resources.CustomResource {
      * @return Boolean whether to invite the account to Security Hub as a member. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> invite() {
-        return this.invite;
+    public Output<Optional<Boolean>> invite() {
+        return Codegen.optional(this.invite);
     }
     /**
      * The ID of the master Security Hub AWS account.

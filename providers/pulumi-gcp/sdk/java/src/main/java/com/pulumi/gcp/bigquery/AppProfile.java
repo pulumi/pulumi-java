@@ -13,6 +13,7 @@ import com.pulumi.gcp.bigquery.inputs.AppProfileState;
 import com.pulumi.gcp.bigquery.outputs.AppProfileSingleClusterRouting;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -68,8 +69,8 @@ public class AppProfile extends com.pulumi.resources.CustomResource {
      * @return Long form description of the use case for this app profile.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * If true, ignore safety checks when deleting/updating the app profile.
@@ -82,8 +83,8 @@ public class AppProfile extends com.pulumi.resources.CustomResource {
      * @return If true, ignore safety checks when deleting/updating the app profile.
      * 
      */
-    public Output</* @Nullable */ Boolean> ignoreWarnings() {
-        return this.ignoreWarnings;
+    public Output<Optional<Boolean>> ignoreWarnings() {
+        return Codegen.optional(this.ignoreWarnings);
     }
     /**
      * The name of the instance to create the app profile within.
@@ -96,8 +97,8 @@ public class AppProfile extends com.pulumi.resources.CustomResource {
      * @return The name of the instance to create the app profile within.
      * 
      */
-    public Output</* @Nullable */ String> instance() {
-        return this.instance;
+    public Output<Optional<String>> instance() {
+        return Codegen.optional(this.instance);
     }
     /**
      * If true, read/write requests are routed to the nearest cluster in the instance, and will fail over to the nearest cluster that is available
@@ -114,8 +115,8 @@ public class AppProfile extends com.pulumi.resources.CustomResource {
      * consistency to improve availability.
      * 
      */
-    public Output</* @Nullable */ Boolean> multiClusterRoutingUseAny() {
-        return this.multiClusterRoutingUseAny;
+    public Output<Optional<Boolean>> multiClusterRoutingUseAny() {
+        return Codegen.optional(this.multiClusterRoutingUseAny);
     }
     /**
      * The unique name of the requested app profile. Values are of the form
@@ -162,8 +163,8 @@ public class AppProfile extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ AppProfileSingleClusterRouting> singleClusterRouting() {
-        return this.singleClusterRouting;
+    public Output<Optional<AppProfileSingleClusterRouting>> singleClusterRouting() {
+        return Codegen.optional(this.singleClusterRouting);
     }
 
     /**

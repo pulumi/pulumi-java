@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -42,8 +43,8 @@ public class Webhook extends com.pulumi.resources.CustomResource {
      * @return A regular expression used to determine which branches get built. Default is all branches are built. It is recommended to use `filter_group` over `branch_filter`.
      * 
      */
-    public Output</* @Nullable */ String> branchFilter() {
-        return this.branchFilter;
+    public Output<Optional<String>> branchFilter() {
+        return Codegen.optional(this.branchFilter);
     }
     /**
      * The type of build this webhook will trigger. Valid values for this parameter are: `BUILD`, `BUILD_BATCH`.
@@ -56,8 +57,8 @@ public class Webhook extends com.pulumi.resources.CustomResource {
      * @return The type of build this webhook will trigger. Valid values for this parameter are: `BUILD`, `BUILD_BATCH`.
      * 
      */
-    public Output</* @Nullable */ String> buildType() {
-        return this.buildType;
+    public Output<Optional<String>> buildType() {
+        return Codegen.optional(this.buildType);
     }
     /**
      * Information about the webhook&#39;s trigger. Filter group blocks are documented below.
@@ -70,8 +71,8 @@ public class Webhook extends com.pulumi.resources.CustomResource {
      * @return Information about the webhook&#39;s trigger. Filter group blocks are documented below.
      * 
      */
-    public Output</* @Nullable */ List<WebhookFilterGroup>> filterGroups() {
-        return this.filterGroups;
+    public Output<Optional<List<WebhookFilterGroup>>> filterGroups() {
+        return Codegen.optional(this.filterGroups);
     }
     /**
      * The CodeBuild endpoint where webhook events are sent.

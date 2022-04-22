@@ -16,6 +16,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class ActivityCustomEntityQuery extends com.pulumi.resources.CustomResour
      * @return The entity query content to display in timeline
      * 
      */
-    public Output</* @Nullable */ String> content() {
-        return this.content;
+    public Output<Optional<String>> content() {
+        return Codegen.optional(this.content);
     }
     /**
      * The time the activity was created
@@ -74,8 +75,8 @@ public class ActivityCustomEntityQuery extends com.pulumi.resources.CustomResour
      * @return The entity query description
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Determines whether this activity is enabled or disabled.
@@ -88,8 +89,8 @@ public class ActivityCustomEntityQuery extends com.pulumi.resources.CustomResour
      * @return Determines whether this activity is enabled or disabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> enabled() {
-        return this.enabled;
+    public Output<Optional<Boolean>> enabled() {
+        return Codegen.optional(this.enabled);
     }
     /**
      * The query applied only to entities matching to all filters
@@ -102,8 +103,8 @@ public class ActivityCustomEntityQuery extends com.pulumi.resources.CustomResour
      * @return The query applied only to entities matching to all filters
      * 
      */
-    public Output</* @Nullable */ Map<String,List<String>>> entitiesFilter() {
-        return this.entitiesFilter;
+    public Output<Optional<Map<String,List<String>>>> entitiesFilter() {
+        return Codegen.optional(this.entitiesFilter);
     }
     /**
      * Etag of the azure resource
@@ -116,8 +117,8 @@ public class ActivityCustomEntityQuery extends com.pulumi.resources.CustomResour
      * @return Etag of the azure resource
      * 
      */
-    public Output</* @Nullable */ String> etag() {
-        return this.etag;
+    public Output<Optional<String>> etag() {
+        return Codegen.optional(this.etag);
     }
     /**
      * The type of the query&#39;s source entity
@@ -130,8 +131,8 @@ public class ActivityCustomEntityQuery extends com.pulumi.resources.CustomResour
      * @return The type of the query&#39;s source entity
      * 
      */
-    public Output</* @Nullable */ String> inputEntityType() {
-        return this.inputEntityType;
+    public Output<Optional<String>> inputEntityType() {
+        return Codegen.optional(this.inputEntityType);
     }
     /**
      * The kind of the entity query
@@ -188,8 +189,8 @@ public class ActivityCustomEntityQuery extends com.pulumi.resources.CustomResour
      * @return The Activity query definitions
      * 
      */
-    public Output</* @Nullable */ ActivityEntityQueriesPropertiesResponseQueryDefinitions> queryDefinitions() {
-        return this.queryDefinitions;
+    public Output<Optional<ActivityEntityQueriesPropertiesResponseQueryDefinitions>> queryDefinitions() {
+        return Codegen.optional(this.queryDefinitions);
     }
     /**
      * List of the fields of the source entity that are required to run the query
@@ -202,8 +203,8 @@ public class ActivityCustomEntityQuery extends com.pulumi.resources.CustomResour
      * @return List of the fields of the source entity that are required to run the query
      * 
      */
-    public Output</* @Nullable */ List<List<String>>> requiredInputFieldsSets() {
-        return this.requiredInputFieldsSets;
+    public Output<Optional<List<List<String>>>> requiredInputFieldsSets() {
+        return Codegen.optional(this.requiredInputFieldsSets);
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
@@ -230,8 +231,8 @@ public class ActivityCustomEntityQuery extends com.pulumi.resources.CustomResour
      * @return The template id this activity was created from
      * 
      */
-    public Output</* @Nullable */ String> templateName() {
-        return this.templateName;
+    public Output<Optional<String>> templateName() {
+        return Codegen.optional(this.templateName);
     }
     /**
      * The entity query title
@@ -244,8 +245,8 @@ public class ActivityCustomEntityQuery extends com.pulumi.resources.CustomResour
      * @return The entity query title
      * 
      */
-    public Output</* @Nullable */ String> title() {
-        return this.title;
+    public Output<Optional<String>> title() {
+        return Codegen.optional(this.title);
     }
     /**
      * Azure resource type

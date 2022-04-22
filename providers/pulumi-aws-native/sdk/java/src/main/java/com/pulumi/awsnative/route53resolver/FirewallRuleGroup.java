@@ -16,6 +16,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -77,8 +78,8 @@ public class FirewallRuleGroup extends com.pulumi.resources.CustomResource {
      * @return FirewallRules
      * 
      */
-    public Output</* @Nullable */ List<FirewallRuleGroupFirewallRule>> firewallRules() {
-        return this.firewallRules;
+    public Output<Optional<List<FirewallRuleGroupFirewallRule>>> firewallRules() {
+        return Codegen.optional(this.firewallRules);
     }
     /**
      * Rfc3339TimeString
@@ -105,8 +106,8 @@ public class FirewallRuleGroup extends com.pulumi.resources.CustomResource {
      * @return FirewallRuleGroupName
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * AccountId
@@ -189,8 +190,8 @@ public class FirewallRuleGroup extends com.pulumi.resources.CustomResource {
      * @return Tags
      * 
      */
-    public Output</* @Nullable */ List<FirewallRuleGroupTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<FirewallRuleGroupTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

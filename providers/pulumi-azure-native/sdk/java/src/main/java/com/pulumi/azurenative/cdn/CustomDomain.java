@@ -16,6 +16,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class CustomDomain extends com.pulumi.resources.CustomResource {
      * @return Certificate parameters for securing custom HTTPS
      * 
      */
-    public Output</* @Nullable */ Either<CdnManagedHttpsParametersResponse,UserManagedHttpsParametersResponse>> customHttpsParameters() {
-        return this.customHttpsParameters;
+    public Output<Optional<Either<CdnManagedHttpsParametersResponse,UserManagedHttpsParametersResponse>>> customHttpsParameters() {
+        return Codegen.optional(this.customHttpsParameters);
     }
     /**
      * Provisioning status of Custom Https of the custom domain.
@@ -172,8 +173,8 @@ public class CustomDomain extends com.pulumi.resources.CustomResource {
      * @return Special validation or data may be required when delivering CDN to some regions due to local compliance reasons. E.g. ICP license number of a custom domain is required to deliver content in China.
      * 
      */
-    public Output</* @Nullable */ String> validationData() {
-        return this.validationData;
+    public Output<Optional<String>> validationData() {
+        return Codegen.optional(this.validationData);
     }
 
     /**

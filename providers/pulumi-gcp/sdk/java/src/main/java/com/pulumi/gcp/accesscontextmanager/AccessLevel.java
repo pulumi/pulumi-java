@@ -13,6 +13,7 @@ import com.pulumi.gcp.accesscontextmanager.inputs.AccessLevelState;
 import com.pulumi.gcp.accesscontextmanager.outputs.AccessLevelBasic;
 import com.pulumi.gcp.accesscontextmanager.outputs.AccessLevelCustom;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -57,8 +58,8 @@ public class AccessLevel extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ AccessLevelBasic> basic() {
-        return this.basic;
+    public Output<Optional<AccessLevelBasic>> basic() {
+        return Codegen.optional(this.basic);
     }
     /**
      * Custom access level conditions are set using the Cloud Common Expression Language to represent the necessary conditions for the level to apply to a request.
@@ -75,8 +76,8 @@ public class AccessLevel extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ AccessLevelCustom> custom() {
-        return this.custom;
+    public Output<Optional<AccessLevelCustom>> custom() {
+        return Codegen.optional(this.custom);
     }
     /**
      * Description of the expression
@@ -89,8 +90,8 @@ public class AccessLevel extends com.pulumi.resources.CustomResource {
      * @return Description of the expression
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Resource name for the Access Level. The short_name component must begin

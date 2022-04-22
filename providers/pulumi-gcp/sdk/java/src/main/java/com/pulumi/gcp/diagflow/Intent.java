@@ -15,6 +15,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -71,8 +72,8 @@ public class Intent extends com.pulumi.resources.CustomResource {
      * Each value may be one of `FACEBOOK`, `SLACK`, `TELEGRAM`, `KIK`, `SKYPE`, `LINE`, `VIBER`, `ACTIONS_ON_GOOGLE`, and `GOOGLE_HANGOUTS`.
      * 
      */
-    public Output</* @Nullable */ List<String>> defaultResponsePlatforms() {
-        return this.defaultResponsePlatforms;
+    public Output<Optional<List<String>>> defaultResponsePlatforms() {
+        return Codegen.optional(this.defaultResponsePlatforms);
     }
     /**
      * The name of this intent to be displayed on the console.
@@ -103,8 +104,8 @@ public class Intent extends com.pulumi.resources.CustomResource {
      * [events reference](https://cloud.google.com/dialogflow/docs/events-overview) for more details.
      * 
      */
-    public Output</* @Nullable */ List<String>> events() {
-        return this.events;
+    public Output<Optional<List<String>>> events() {
+        return Codegen.optional(this.events);
     }
     /**
      * Information about all followup intents that have this intent as a direct or indirect parent. We populate this field only
@@ -135,8 +136,8 @@ public class Intent extends com.pulumi.resources.CustomResource {
      * Format: projects/&lt;Project ID&gt;/agent/sessions/-/contexts/&lt;Context ID&gt;.
      * 
      */
-    public Output</* @Nullable */ List<String>> inputContextNames() {
-        return this.inputContextNames;
+    public Output<Optional<List<String>>> inputContextNames() {
+        return Codegen.optional(this.inputContextNames);
     }
     /**
      * Indicates whether this is a fallback intent.

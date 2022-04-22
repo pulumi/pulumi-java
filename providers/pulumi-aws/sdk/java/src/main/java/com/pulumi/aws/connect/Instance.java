@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -58,8 +59,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return Specifies whether auto resolve best voices is enabled. Defaults to `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> autoResolveBestVoicesEnabled() {
-        return this.autoResolveBestVoicesEnabled;
+    public Output<Optional<Boolean>> autoResolveBestVoicesEnabled() {
+        return Codegen.optional(this.autoResolveBestVoicesEnabled);
     }
     /**
      * Specifies whether contact flow logs are enabled. Defaults to `false`.
@@ -72,8 +73,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return Specifies whether contact flow logs are enabled. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> contactFlowLogsEnabled() {
-        return this.contactFlowLogsEnabled;
+    public Output<Optional<Boolean>> contactFlowLogsEnabled() {
+        return Codegen.optional(this.contactFlowLogsEnabled);
     }
     /**
      * Specifies whether contact lens is enabled. Defaults to `true`.
@@ -86,8 +87,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return Specifies whether contact lens is enabled. Defaults to `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> contactLensEnabled() {
-        return this.contactLensEnabled;
+    public Output<Optional<Boolean>> contactLensEnabled() {
+        return Codegen.optional(this.contactLensEnabled);
     }
     /**
      * Specifies when the instance was created.
@@ -114,8 +115,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return The identifier for the directory if identity_management_type is `EXISTING_DIRECTORY`.
      * 
      */
-    public Output</* @Nullable */ String> directoryId() {
-        return this.directoryId;
+    public Output<Optional<String>> directoryId() {
+        return Codegen.optional(this.directoryId);
     }
     /**
      * Specifies whether early media for outbound calls is enabled . Defaults to `true` if outbound calls is enabled.
@@ -128,8 +129,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return Specifies whether early media for outbound calls is enabled . Defaults to `true` if outbound calls is enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> earlyMediaEnabled() {
-        return this.earlyMediaEnabled;
+    public Output<Optional<Boolean>> earlyMediaEnabled() {
+        return Codegen.optional(this.earlyMediaEnabled);
     }
     /**
      * Specifies the identity management type attached to the instance. Allowed Values are: `SAML`, `CONNECT_MANAGED`, `EXISTING_DIRECTORY`.
@@ -170,8 +171,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return Specifies the name of the instance. Required if `directory_id` not specified.
      * 
      */
-    public Output</* @Nullable */ String> instanceAlias() {
-        return this.instanceAlias;
+    public Output<Optional<String>> instanceAlias() {
+        return Codegen.optional(this.instanceAlias);
     }
     /**
      * Specifies whether outbound calls are enabled.

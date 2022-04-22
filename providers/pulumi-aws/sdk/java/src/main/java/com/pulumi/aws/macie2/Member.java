@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -98,8 +99,8 @@ public class Member extends com.pulumi.resources.CustomResource {
      * @return Specifies whether to send an email notification to the root user of each account that the invitation will be sent to. This notification is in addition to an alert that the root user receives in AWS Personal Health Dashboard. To send an email notification to the root user of each account, set this value to `true`.
      * 
      */
-    public Output</* @Nullable */ String> invitationDisableEmailNotification() {
-        return this.invitationDisableEmailNotification;
+    public Output<Optional<String>> invitationDisableEmailNotification() {
+        return Codegen.optional(this.invitationDisableEmailNotification);
     }
     /**
      * A custom message to include in the invitation. Amazon Macie adds this message to the standard content that it sends for an invitation.
@@ -112,8 +113,8 @@ public class Member extends com.pulumi.resources.CustomResource {
      * @return A custom message to include in the invitation. Amazon Macie adds this message to the standard content that it sends for an invitation.
      * 
      */
-    public Output</* @Nullable */ String> invitationMessage() {
-        return this.invitationMessage;
+    public Output<Optional<String>> invitationMessage() {
+        return Codegen.optional(this.invitationMessage);
     }
     /**
      * Send an invitation to a member
@@ -188,8 +189,8 @@ public class Member extends com.pulumi.resources.CustomResource {
      * @return A map of key-value pairs that specifies the tags to associate with the account in Amazon Macie.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;

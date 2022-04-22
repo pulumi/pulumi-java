@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -70,8 +71,8 @@ public class ServerTrustCertificate extends com.pulumi.resources.CustomResource 
      * @return The certificate public blob
      * 
      */
-    public Output</* @Nullable */ String> publicBlob() {
-        return this.publicBlob;
+    public Output<Optional<String>> publicBlob() {
+        return Codegen.optional(this.publicBlob);
     }
     /**
      * The certificate thumbprint

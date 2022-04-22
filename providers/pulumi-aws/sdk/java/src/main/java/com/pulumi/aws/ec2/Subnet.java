@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -62,8 +63,8 @@ public class Subnet extends com.pulumi.resources.CustomResource {
      * assigned an IPv6 address. Default is `false`
      * 
      */
-    public Output</* @Nullable */ Boolean> assignIpv6AddressOnCreation() {
-        return this.assignIpv6AddressOnCreation;
+    public Output<Optional<Boolean>> assignIpv6AddressOnCreation() {
+        return Codegen.optional(this.assignIpv6AddressOnCreation);
     }
     /**
      * AZ for the subnet.
@@ -104,8 +105,8 @@ public class Subnet extends com.pulumi.resources.CustomResource {
      * @return The IPv4 CIDR block for the subnet.
      * 
      */
-    public Output</* @Nullable */ String> cidrBlock() {
-        return this.cidrBlock;
+    public Output<Optional<String>> cidrBlock() {
+        return Codegen.optional(this.cidrBlock);
     }
     /**
      * The customer owned IPv4 address pool. Typically used with the `map_customer_owned_ip_on_launch` argument. The `outpost_arn` argument must be specified when configured.
@@ -118,8 +119,8 @@ public class Subnet extends com.pulumi.resources.CustomResource {
      * @return The customer owned IPv4 address pool. Typically used with the `map_customer_owned_ip_on_launch` argument. The `outpost_arn` argument must be specified when configured.
      * 
      */
-    public Output</* @Nullable */ String> customerOwnedIpv4Pool() {
-        return this.customerOwnedIpv4Pool;
+    public Output<Optional<String>> customerOwnedIpv4Pool() {
+        return Codegen.optional(this.customerOwnedIpv4Pool);
     }
     /**
      * Indicates whether DNS queries made to the Amazon-provided DNS Resolver in this subnet should return synthetic IPv6 addresses for IPv4-only destinations. Default: `false`.
@@ -132,8 +133,8 @@ public class Subnet extends com.pulumi.resources.CustomResource {
      * @return Indicates whether DNS queries made to the Amazon-provided DNS Resolver in this subnet should return synthetic IPv6 addresses for IPv4-only destinations. Default: `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableDns64() {
-        return this.enableDns64;
+    public Output<Optional<Boolean>> enableDns64() {
+        return Codegen.optional(this.enableDns64);
     }
     /**
      * Indicates whether to respond to DNS queries for instance hostnames with DNS A records. Default: `false`.
@@ -146,8 +147,8 @@ public class Subnet extends com.pulumi.resources.CustomResource {
      * @return Indicates whether to respond to DNS queries for instance hostnames with DNS A records. Default: `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableResourceNameDnsARecordOnLaunch() {
-        return this.enableResourceNameDnsARecordOnLaunch;
+    public Output<Optional<Boolean>> enableResourceNameDnsARecordOnLaunch() {
+        return Codegen.optional(this.enableResourceNameDnsARecordOnLaunch);
     }
     /**
      * Indicates whether to respond to DNS queries for instance hostnames with DNS AAAA records. Default: `false`.
@@ -160,8 +161,8 @@ public class Subnet extends com.pulumi.resources.CustomResource {
      * @return Indicates whether to respond to DNS queries for instance hostnames with DNS AAAA records. Default: `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableResourceNameDnsAaaaRecordOnLaunch() {
-        return this.enableResourceNameDnsAaaaRecordOnLaunch;
+    public Output<Optional<Boolean>> enableResourceNameDnsAaaaRecordOnLaunch() {
+        return Codegen.optional(this.enableResourceNameDnsAaaaRecordOnLaunch);
     }
     /**
      * The IPv6 network range for the subnet,
@@ -176,8 +177,8 @@ public class Subnet extends com.pulumi.resources.CustomResource {
      * in CIDR notation. The subnet size must use a /64 prefix length.
      * 
      */
-    public Output</* @Nullable */ String> ipv6CidrBlock() {
-        return this.ipv6CidrBlock;
+    public Output<Optional<String>> ipv6CidrBlock() {
+        return Codegen.optional(this.ipv6CidrBlock);
     }
     /**
      * The association ID for the IPv6 CIDR block.
@@ -204,8 +205,8 @@ public class Subnet extends com.pulumi.resources.CustomResource {
      * @return Indicates whether to create an IPv6-only subnet. Default: `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> ipv6Native() {
-        return this.ipv6Native;
+    public Output<Optional<Boolean>> ipv6Native() {
+        return Codegen.optional(this.ipv6Native);
     }
     /**
      * Specify `true` to indicate that network interfaces created in the subnet should be assigned a customer owned IP address. The `customer_owned_ipv4_pool` and `outpost_arn` arguments must be specified when set to `true`. Default is `false`.
@@ -218,8 +219,8 @@ public class Subnet extends com.pulumi.resources.CustomResource {
      * @return Specify `true` to indicate that network interfaces created in the subnet should be assigned a customer owned IP address. The `customer_owned_ipv4_pool` and `outpost_arn` arguments must be specified when set to `true`. Default is `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> mapCustomerOwnedIpOnLaunch() {
-        return this.mapCustomerOwnedIpOnLaunch;
+    public Output<Optional<Boolean>> mapCustomerOwnedIpOnLaunch() {
+        return Codegen.optional(this.mapCustomerOwnedIpOnLaunch);
     }
     /**
      * Specify true to indicate
@@ -236,8 +237,8 @@ public class Subnet extends com.pulumi.resources.CustomResource {
      * a public IP address. Default is `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> mapPublicIpOnLaunch() {
-        return this.mapPublicIpOnLaunch;
+    public Output<Optional<Boolean>> mapPublicIpOnLaunch() {
+        return Codegen.optional(this.mapPublicIpOnLaunch);
     }
     /**
      * The Amazon Resource Name (ARN) of the Outpost.
@@ -250,8 +251,8 @@ public class Subnet extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the Outpost.
      * 
      */
-    public Output</* @Nullable */ String> outpostArn() {
-        return this.outpostArn;
+    public Output<Optional<String>> outpostArn() {
+        return Codegen.optional(this.outpostArn);
     }
     /**
      * The ID of the AWS account that owns the subnet.
@@ -292,8 +293,8 @@ public class Subnet extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

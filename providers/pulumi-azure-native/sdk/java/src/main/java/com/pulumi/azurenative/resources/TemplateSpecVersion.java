@@ -16,6 +16,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class TemplateSpecVersion extends com.pulumi.resources.CustomResource {
      * @return Template Spec version description.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * An array of linked template artifacts.
@@ -60,8 +61,8 @@ public class TemplateSpecVersion extends com.pulumi.resources.CustomResource {
      * @return An array of linked template artifacts.
      * 
      */
-    public Output</* @Nullable */ List<LinkedTemplateArtifactResponse>> linkedTemplates() {
-        return this.linkedTemplates;
+    public Output<Optional<List<LinkedTemplateArtifactResponse>>> linkedTemplates() {
+        return Codegen.optional(this.linkedTemplates);
     }
     /**
      * The location of the Template Spec Version. It must match the location of the parent Template Spec.
@@ -88,8 +89,8 @@ public class TemplateSpecVersion extends com.pulumi.resources.CustomResource {
      * @return The main Azure Resource Manager template content.
      * 
      */
-    public Output</* @Nullable */ Object> mainTemplate() {
-        return this.mainTemplate;
+    public Output<Optional<Object>> mainTemplate() {
+        return Codegen.optional(this.mainTemplate);
     }
     /**
      * The version metadata. Metadata is an open-ended object and is typically a collection of key-value pairs.
@@ -102,8 +103,8 @@ public class TemplateSpecVersion extends com.pulumi.resources.CustomResource {
      * @return The version metadata. Metadata is an open-ended object and is typically a collection of key-value pairs.
      * 
      */
-    public Output</* @Nullable */ Object> metadata() {
-        return this.metadata;
+    public Output<Optional<Object>> metadata() {
+        return Codegen.optional(this.metadata);
     }
     /**
      * Name of this resource.
@@ -144,8 +145,8 @@ public class TemplateSpecVersion extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Type of this resource.
@@ -172,8 +173,8 @@ public class TemplateSpecVersion extends com.pulumi.resources.CustomResource {
      * @return The Azure Resource Manager template UI definition content.
      * 
      */
-    public Output</* @Nullable */ Object> uiFormDefinition() {
-        return this.uiFormDefinition;
+    public Output<Optional<Object>> uiFormDefinition() {
+        return Codegen.optional(this.uiFormDefinition);
     }
 
     /**

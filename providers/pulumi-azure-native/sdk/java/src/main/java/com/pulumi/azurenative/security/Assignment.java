@@ -18,6 +18,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -48,8 +49,8 @@ public class Assignment extends com.pulumi.resources.CustomResource {
      * @return Additional data about the assignment
      * 
      */
-    public Output</* @Nullable */ AssignmentPropertiesResponseAdditionalData> additionalData() {
-        return this.additionalData;
+    public Output<Optional<AssignmentPropertiesResponseAdditionalData>> additionalData() {
+        return Codegen.optional(this.additionalData);
     }
     /**
      * Component item with key as applied to this standard assignment over the given scope
@@ -62,8 +63,8 @@ public class Assignment extends com.pulumi.resources.CustomResource {
      * @return Component item with key as applied to this standard assignment over the given scope
      * 
      */
-    public Output</* @Nullable */ AssignedComponentItemResponse> assignedComponent() {
-        return this.assignedComponent;
+    public Output<Optional<AssignedComponentItemResponse>> assignedComponent() {
+        return Codegen.optional(this.assignedComponent);
     }
     /**
      * Standard item with key as applied to this standard assignment over the given scope
@@ -76,8 +77,8 @@ public class Assignment extends com.pulumi.resources.CustomResource {
      * @return Standard item with key as applied to this standard assignment over the given scope
      * 
      */
-    public Output</* @Nullable */ AssignedStandardItemResponse> assignedStandard() {
-        return this.assignedStandard;
+    public Output<Optional<AssignedStandardItemResponse>> assignedStandard() {
+        return Codegen.optional(this.assignedStandard);
     }
     /**
      * description of the standardAssignment
@@ -90,8 +91,8 @@ public class Assignment extends com.pulumi.resources.CustomResource {
      * @return description of the standardAssignment
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * display name of the standardAssignment
@@ -104,8 +105,8 @@ public class Assignment extends com.pulumi.resources.CustomResource {
      * @return display name of the standardAssignment
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * expected effect of this assignment (Disable/Exempt/etc)
@@ -118,8 +119,8 @@ public class Assignment extends com.pulumi.resources.CustomResource {
      * @return expected effect of this assignment (Disable/Exempt/etc)
      * 
      */
-    public Output</* @Nullable */ String> effect() {
-        return this.effect;
+    public Output<Optional<String>> effect() {
+        return Codegen.optional(this.effect);
     }
     /**
      * Entity tag is used for comparing two or more entities from the same requested resource.
@@ -132,8 +133,8 @@ public class Assignment extends com.pulumi.resources.CustomResource {
      * @return Entity tag is used for comparing two or more entities from the same requested resource.
      * 
      */
-    public Output</* @Nullable */ String> etag() {
-        return this.etag;
+    public Output<Optional<String>> etag() {
+        return Codegen.optional(this.etag);
     }
     /**
      * Expiration date of this assignment as a full ISO date
@@ -146,8 +147,8 @@ public class Assignment extends com.pulumi.resources.CustomResource {
      * @return Expiration date of this assignment as a full ISO date
      * 
      */
-    public Output</* @Nullable */ String> expiresOn() {
-        return this.expiresOn;
+    public Output<Optional<String>> expiresOn() {
+        return Codegen.optional(this.expiresOn);
     }
     /**
      * Kind of the resource
@@ -160,8 +161,8 @@ public class Assignment extends com.pulumi.resources.CustomResource {
      * @return Kind of the resource
      * 
      */
-    public Output</* @Nullable */ String> kind() {
-        return this.kind;
+    public Output<Optional<String>> kind() {
+        return Codegen.optional(this.kind);
     }
     /**
      * Location where the resource is stored
@@ -174,8 +175,8 @@ public class Assignment extends com.pulumi.resources.CustomResource {
      * @return Location where the resource is stored
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The assignment metadata. Metadata is an open ended object and is typically a collection of key value pairs.
@@ -188,8 +189,8 @@ public class Assignment extends com.pulumi.resources.CustomResource {
      * @return The assignment metadata. Metadata is an open ended object and is typically a collection of key value pairs.
      * 
      */
-    public Output</* @Nullable */ Object> metadata() {
-        return this.metadata;
+    public Output<Optional<Object>> metadata() {
+        return Codegen.optional(this.metadata);
     }
     /**
      * Resource name
@@ -216,8 +217,8 @@ public class Assignment extends com.pulumi.resources.CustomResource {
      * @return Scope to which the standardAssignment applies - can be a subscription path or a resource group under that subscription
      * 
      */
-    public Output</* @Nullable */ String> scope() {
-        return this.scope;
+    public Output<Optional<String>> scope() {
+        return Codegen.optional(this.scope);
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
@@ -244,8 +245,8 @@ public class Assignment extends com.pulumi.resources.CustomResource {
      * @return A list of key value pairs that describe the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type

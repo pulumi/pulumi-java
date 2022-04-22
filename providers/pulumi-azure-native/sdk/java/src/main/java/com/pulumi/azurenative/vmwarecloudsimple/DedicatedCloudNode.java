@@ -15,6 +15,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -227,8 +228,8 @@ public class DedicatedCloudNode extends com.pulumi.resources.CustomResource {
      * @return Dedicated Cloud Nodes SKU
      * 
      */
-    public Output</* @Nullable */ SkuResponse> sku() {
-        return this.sku;
+    public Output<Optional<SkuResponse>> sku() {
+        return Codegen.optional(this.sku);
     }
     /**
      * Node status, indicates is private cloud set up on this node or not
@@ -255,8 +256,8 @@ public class DedicatedCloudNode extends com.pulumi.resources.CustomResource {
      * @return Dedicated Cloud Nodes tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * {resourceProviderNamespace}/{resourceType}

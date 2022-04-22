@@ -16,6 +16,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -73,8 +74,8 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that it maintains and your service logs. By default, App Runner uses an AWS managed CMK. See Encryption Configuration below for more details.
      * 
      */
-    public Output</* @Nullable */ ServiceEncryptionConfiguration> encryptionConfiguration() {
-        return this.encryptionConfiguration;
+    public Output<Optional<ServiceEncryptionConfiguration>> encryptionConfiguration() {
+        return Codegen.optional(this.encryptionConfiguration);
     }
     /**
      * Settings of the health check that AWS App Runner performs to monitor the health of your service. See Health Check Configuration below for more details.
@@ -185,8 +186,8 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.

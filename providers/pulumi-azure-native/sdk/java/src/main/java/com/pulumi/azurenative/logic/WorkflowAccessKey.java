@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -52,8 +53,8 @@ public class WorkflowAccessKey extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the not-after time.
      * 
      */
-    public Output</* @Nullable */ String> notAfter() {
-        return this.notAfter;
+    public Output<Optional<String>> notAfter() {
+        return Codegen.optional(this.notAfter);
     }
     /**
      * Gets or sets the not-before time.
@@ -66,8 +67,8 @@ public class WorkflowAccessKey extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the not-before time.
      * 
      */
-    public Output</* @Nullable */ String> notBefore() {
-        return this.notBefore;
+    public Output<Optional<String>> notBefore() {
+        return Codegen.optional(this.notBefore);
     }
     /**
      * Gets the workflow access key type.

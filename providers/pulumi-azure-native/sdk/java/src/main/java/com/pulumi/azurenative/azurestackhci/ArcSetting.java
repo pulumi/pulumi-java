@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -71,8 +72,8 @@ public class ArcSetting extends com.pulumi.resources.CustomResource {
      * @return The timestamp of resource creation (UTC).
      * 
      */
-    public Output</* @Nullable */ String> createdAt() {
-        return this.createdAt;
+    public Output<Optional<String>> createdAt() {
+        return Codegen.optional(this.createdAt);
     }
     /**
      * The identity that created the resource.
@@ -85,8 +86,8 @@ public class ArcSetting extends com.pulumi.resources.CustomResource {
      * @return The identity that created the resource.
      * 
      */
-    public Output</* @Nullable */ String> createdBy() {
-        return this.createdBy;
+    public Output<Optional<String>> createdBy() {
+        return Codegen.optional(this.createdBy);
     }
     /**
      * The type of identity that created the resource.
@@ -99,8 +100,8 @@ public class ArcSetting extends com.pulumi.resources.CustomResource {
      * @return The type of identity that created the resource.
      * 
      */
-    public Output</* @Nullable */ String> createdByType() {
-        return this.createdByType;
+    public Output<Optional<String>> createdByType() {
+        return Codegen.optional(this.createdByType);
     }
     /**
      * The timestamp of resource last modification (UTC)
@@ -113,8 +114,8 @@ public class ArcSetting extends com.pulumi.resources.CustomResource {
      * @return The timestamp of resource last modification (UTC)
      * 
      */
-    public Output</* @Nullable */ String> lastModifiedAt() {
-        return this.lastModifiedAt;
+    public Output<Optional<String>> lastModifiedAt() {
+        return Codegen.optional(this.lastModifiedAt);
     }
     /**
      * The identity that last modified the resource.
@@ -127,8 +128,8 @@ public class ArcSetting extends com.pulumi.resources.CustomResource {
      * @return The identity that last modified the resource.
      * 
      */
-    public Output</* @Nullable */ String> lastModifiedBy() {
-        return this.lastModifiedBy;
+    public Output<Optional<String>> lastModifiedBy() {
+        return Codegen.optional(this.lastModifiedBy);
     }
     /**
      * The type of identity that last modified the resource.
@@ -141,8 +142,8 @@ public class ArcSetting extends com.pulumi.resources.CustomResource {
      * @return The type of identity that last modified the resource.
      * 
      */
-    public Output</* @Nullable */ String> lastModifiedByType() {
-        return this.lastModifiedByType;
+    public Output<Optional<String>> lastModifiedByType() {
+        return Codegen.optional(this.lastModifiedByType);
     }
     /**
      * The name of the resource

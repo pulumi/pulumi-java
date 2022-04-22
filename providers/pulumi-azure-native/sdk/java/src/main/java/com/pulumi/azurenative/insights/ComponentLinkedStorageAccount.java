@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -42,8 +43,8 @@ public class ComponentLinkedStorageAccount extends com.pulumi.resources.CustomRe
      * @return Linked storage account resource ID
      * 
      */
-    public Output</* @Nullable */ String> linkedStorageAccount() {
-        return this.linkedStorageAccount;
+    public Output<Optional<String>> linkedStorageAccount() {
+        return Codegen.optional(this.linkedStorageAccount);
     }
     /**
      * The name of the resource

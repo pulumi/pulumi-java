@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -71,8 +72,8 @@ public class EventApiDestination extends com.pulumi.resources.CustomResource {
      * @return The description of the new API Destination. Maximum of 512 characters.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Select the HTTP method used for the invocation endpoint, such as GET, POST, PUT, etc.
@@ -113,8 +114,8 @@ public class EventApiDestination extends com.pulumi.resources.CustomResource {
      * @return Enter the maximum number of invocations per second to allow for this destination. Enter a value greater than 0 (default 300).
      * 
      */
-    public Output</* @Nullable */ Integer> invocationRateLimitPerSecond() {
-        return this.invocationRateLimitPerSecond;
+    public Output<Optional<Integer>> invocationRateLimitPerSecond() {
+        return Codegen.optional(this.invocationRateLimitPerSecond);
     }
     /**
      * The name of the new API Destination. The name must be unique for your account. Maximum of 64 characters consisting of numbers, lower/upper case letters, .,-,_.

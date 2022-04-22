@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class MaintenanceConfiguration extends com.pulumi.resources.CustomResourc
      * @return Gets or sets extensionProperties of the maintenanceConfiguration. This is for future use only and would be a set of key value pairs for additional information e.g. whether to follow SDP etc.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> extensionProperties() {
-        return this.extensionProperties;
+    public Output<Optional<Map<String,String>>> extensionProperties() {
+        return Codegen.optional(this.extensionProperties);
     }
     /**
      * Gets or sets location of the resource
@@ -57,8 +58,8 @@ public class MaintenanceConfiguration extends com.pulumi.resources.CustomResourc
      * @return Gets or sets location of the resource
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * Gets or sets maintenanceScope of the configuration. It represent the impact area of the maintenance
@@ -71,8 +72,8 @@ public class MaintenanceConfiguration extends com.pulumi.resources.CustomResourc
      * @return Gets or sets maintenanceScope of the configuration. It represent the impact area of the maintenance
      * 
      */
-    public Output</* @Nullable */ String> maintenanceScope() {
-        return this.maintenanceScope;
+    public Output<Optional<String>> maintenanceScope() {
+        return Codegen.optional(this.maintenanceScope);
     }
     /**
      * Name of the resource
@@ -99,8 +100,8 @@ public class MaintenanceConfiguration extends com.pulumi.resources.CustomResourc
      * @return Gets or sets namespace of the resource e.g. Microsoft.Maintenance or Microsoft.Sql
      * 
      */
-    public Output</* @Nullable */ String> namespace() {
-        return this.namespace;
+    public Output<Optional<String>> namespace() {
+        return Codegen.optional(this.namespace);
     }
     /**
      * Gets or sets tags of the resource
@@ -113,8 +114,8 @@ public class MaintenanceConfiguration extends com.pulumi.resources.CustomResourc
      * @return Gets or sets tags of the resource
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Type of the resource

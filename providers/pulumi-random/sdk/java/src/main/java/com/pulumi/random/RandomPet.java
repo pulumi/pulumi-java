@@ -14,6 +14,7 @@ import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -37,8 +38,8 @@ public class RandomPet extends com.pulumi.resources.CustomResource {
      * @return Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
      * 
      */
-    public Output</* @Nullable */ Map<String,Object>> keepers() {
-        return this.keepers;
+    public Output<Optional<Map<String,Object>>> keepers() {
+        return Codegen.optional(this.keepers);
     }
     /**
      * The length (in words) of the pet name.
@@ -51,8 +52,8 @@ public class RandomPet extends com.pulumi.resources.CustomResource {
      * @return The length (in words) of the pet name.
      * 
      */
-    public Output</* @Nullable */ Integer> length() {
-        return this.length;
+    public Output<Optional<Integer>> length() {
+        return Codegen.optional(this.length);
     }
     /**
      * A string to prefix the name with.
@@ -65,8 +66,8 @@ public class RandomPet extends com.pulumi.resources.CustomResource {
      * @return A string to prefix the name with.
      * 
      */
-    public Output</* @Nullable */ String> prefix() {
-        return this.prefix;
+    public Output<Optional<String>> prefix() {
+        return Codegen.optional(this.prefix);
     }
     /**
      * The character to separate words in the pet name.
@@ -79,8 +80,8 @@ public class RandomPet extends com.pulumi.resources.CustomResource {
      * @return The character to separate words in the pet name.
      * 
      */
-    public Output</* @Nullable */ String> separator() {
-        return this.separator;
+    public Output<Optional<String>> separator() {
+        return Codegen.optional(this.separator);
     }
 
     /**

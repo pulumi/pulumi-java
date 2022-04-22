@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -42,8 +43,8 @@ public class MailFrom extends com.pulumi.resources.CustomResource {
      * @return The action that you want Amazon SES to take if it cannot successfully read the required MX record when you send an email. Defaults to `UseDefaultValue`. See the [SES API documentation](https://docs.aws.amazon.com/ses/latest/APIReference/API_SetIdentityMailFromDomain.html) for more information.
      * 
      */
-    public Output</* @Nullable */ String> behaviorOnMxFailure() {
-        return this.behaviorOnMxFailure;
+    public Output<Optional<String>> behaviorOnMxFailure() {
+        return Codegen.optional(this.behaviorOnMxFailure);
     }
     /**
      * Verified domain name to generate DKIM tokens for.

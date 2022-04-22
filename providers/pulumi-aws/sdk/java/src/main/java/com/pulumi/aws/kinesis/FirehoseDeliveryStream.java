@@ -20,6 +20,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -87,8 +88,8 @@ public class FirehoseDeliveryStream extends com.pulumi.resources.CustomResource 
      * @return Configuration options if elasticsearch is the destination. More details are given below.
      * 
      */
-    public Output</* @Nullable */ FirehoseDeliveryStreamElasticsearchConfiguration> elasticsearchConfiguration() {
-        return this.elasticsearchConfiguration;
+    public Output<Optional<FirehoseDeliveryStreamElasticsearchConfiguration>> elasticsearchConfiguration() {
+        return Codegen.optional(this.elasticsearchConfiguration);
     }
     /**
      * Enhanced configuration options for the s3 destination. More details are given below.
@@ -101,8 +102,8 @@ public class FirehoseDeliveryStream extends com.pulumi.resources.CustomResource 
      * @return Enhanced configuration options for the s3 destination. More details are given below.
      * 
      */
-    public Output</* @Nullable */ FirehoseDeliveryStreamExtendedS3Configuration> extendedS3Configuration() {
-        return this.extendedS3Configuration;
+    public Output<Optional<FirehoseDeliveryStreamExtendedS3Configuration>> extendedS3Configuration() {
+        return Codegen.optional(this.extendedS3Configuration);
     }
     /**
      * Configuration options if http_endpoint is the destination. requires the user to also specify a `s3_configuration` block.  More details are given below.
@@ -115,8 +116,8 @@ public class FirehoseDeliveryStream extends com.pulumi.resources.CustomResource 
      * @return Configuration options if http_endpoint is the destination. requires the user to also specify a `s3_configuration` block.  More details are given below.
      * 
      */
-    public Output</* @Nullable */ FirehoseDeliveryStreamHttpEndpointConfiguration> httpEndpointConfiguration() {
-        return this.httpEndpointConfiguration;
+    public Output<Optional<FirehoseDeliveryStreamHttpEndpointConfiguration>> httpEndpointConfiguration() {
+        return Codegen.optional(this.httpEndpointConfiguration);
     }
     /**
      * Allows the ability to specify the kinesis stream that is used as the source of the firehose delivery stream.
@@ -129,8 +130,8 @@ public class FirehoseDeliveryStream extends com.pulumi.resources.CustomResource 
      * @return Allows the ability to specify the kinesis stream that is used as the source of the firehose delivery stream.
      * 
      */
-    public Output</* @Nullable */ FirehoseDeliveryStreamKinesisSourceConfiguration> kinesisSourceConfiguration() {
-        return this.kinesisSourceConfiguration;
+    public Output<Optional<FirehoseDeliveryStreamKinesisSourceConfiguration>> kinesisSourceConfiguration() {
+        return Codegen.optional(this.kinesisSourceConfiguration);
     }
     /**
      * A name to identify the stream. This is unique to the
@@ -163,8 +164,8 @@ public class FirehoseDeliveryStream extends com.pulumi.resources.CustomResource 
      * `s3_configuration` block. More details are given below.
      * 
      */
-    public Output</* @Nullable */ FirehoseDeliveryStreamRedshiftConfiguration> redshiftConfiguration() {
-        return this.redshiftConfiguration;
+    public Output<Optional<FirehoseDeliveryStreamRedshiftConfiguration>> redshiftConfiguration() {
+        return Codegen.optional(this.redshiftConfiguration);
     }
     /**
      * Required for non-S3 destinations. For S3 destination, use `extended_s3_configuration` instead. Configuration options for the s3 destination (or the intermediate bucket if the destination
@@ -179,8 +180,8 @@ public class FirehoseDeliveryStream extends com.pulumi.resources.CustomResource 
      * is redshift). More details are given below.
      * 
      */
-    public Output</* @Nullable */ FirehoseDeliveryStreamS3Configuration> s3Configuration() {
-        return this.s3Configuration;
+    public Output<Optional<FirehoseDeliveryStreamS3Configuration>> s3Configuration() {
+        return Codegen.optional(this.s3Configuration);
     }
     /**
      * Encrypt at rest options.
@@ -195,8 +196,8 @@ public class FirehoseDeliveryStream extends com.pulumi.resources.CustomResource 
      * Server-side encryption should not be enabled when a kinesis stream is configured as the source of the firehose delivery stream.
      * 
      */
-    public Output</* @Nullable */ FirehoseDeliveryStreamServerSideEncryption> serverSideEncryption() {
-        return this.serverSideEncryption;
+    public Output<Optional<FirehoseDeliveryStreamServerSideEncryption>> serverSideEncryption() {
+        return Codegen.optional(this.serverSideEncryption);
     }
     /**
      * Configuration options if splunk is the destination. More details are given below.
@@ -209,8 +210,8 @@ public class FirehoseDeliveryStream extends com.pulumi.resources.CustomResource 
      * @return Configuration options if splunk is the destination. More details are given below.
      * 
      */
-    public Output</* @Nullable */ FirehoseDeliveryStreamSplunkConfiguration> splunkConfiguration() {
-        return this.splunkConfiguration;
+    public Output<Optional<FirehoseDeliveryStreamSplunkConfiguration>> splunkConfiguration() {
+        return Codegen.optional(this.splunkConfiguration);
     }
     /**
      * A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -223,8 +224,8 @@ public class FirehoseDeliveryStream extends com.pulumi.resources.CustomResource 
      * @return A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.

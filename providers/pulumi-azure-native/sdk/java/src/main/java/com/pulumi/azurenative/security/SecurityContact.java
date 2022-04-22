@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class SecurityContact extends com.pulumi.resources.CustomResource {
      * @return Defines whether to send email notifications about new security alerts
      * 
      */
-    public Output</* @Nullable */ SecurityContactPropertiesResponseAlertNotifications> alertNotifications() {
-        return this.alertNotifications;
+    public Output<Optional<SecurityContactPropertiesResponseAlertNotifications>> alertNotifications() {
+        return Codegen.optional(this.alertNotifications);
     }
     /**
      * List of email addresses which will get notifications from Azure Security Center by the configurations defined in this security contact.
@@ -58,8 +59,8 @@ public class SecurityContact extends com.pulumi.resources.CustomResource {
      * @return List of email addresses which will get notifications from Azure Security Center by the configurations defined in this security contact.
      * 
      */
-    public Output</* @Nullable */ String> emails() {
-        return this.emails;
+    public Output<Optional<String>> emails() {
+        return Codegen.optional(this.emails);
     }
     /**
      * Resource name
@@ -86,8 +87,8 @@ public class SecurityContact extends com.pulumi.resources.CustomResource {
      * @return Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.
      * 
      */
-    public Output</* @Nullable */ SecurityContactPropertiesResponseNotificationsByRole> notificationsByRole() {
-        return this.notificationsByRole;
+    public Output<Optional<SecurityContactPropertiesResponseNotificationsByRole>> notificationsByRole() {
+        return Codegen.optional(this.notificationsByRole);
     }
     /**
      * The security contact&#39;s phone number
@@ -100,8 +101,8 @@ public class SecurityContact extends com.pulumi.resources.CustomResource {
      * @return The security contact&#39;s phone number
      * 
      */
-    public Output</* @Nullable */ String> phone() {
-        return this.phone;
+    public Output<Optional<String>> phone() {
+        return Codegen.optional(this.phone);
     }
     /**
      * Resource type

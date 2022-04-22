@@ -20,6 +20,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -52,8 +53,8 @@ public class Account extends com.pulumi.resources.CustomResource {
      * External cloud identifier used as part of scanning configuration.
      * 
      */
-    public Output</* @Nullable */ CloudConnectorsResponse> cloudConnectors() {
-        return this.cloudConnectors;
+    public Output<Optional<CloudConnectorsResponse>> cloudConnectors() {
+        return Codegen.optional(this.cloudConnectors);
     }
     /**
      * Gets the time at which the entity was created.
@@ -136,8 +137,8 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return Identity Info on the tracked resource
      * 
      */
-    public Output</* @Nullable */ IdentityResponse> identity() {
-        return this.identity;
+    public Output<Optional<IdentityResponse>> identity() {
+        return Codegen.optional(this.identity);
     }
     /**
      * Gets or sets the location.
@@ -150,8 +151,8 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the location.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * Gets or sets the managed resource group name
@@ -164,8 +165,8 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the managed resource group name
      * 
      */
-    public Output</* @Nullable */ String> managedResourceGroupName() {
-        return this.managedResourceGroupName;
+    public Output<Optional<String>> managedResourceGroupName() {
+        return Codegen.optional(this.managedResourceGroupName);
     }
     /**
      * Gets the resource identifiers of the managed resources.
@@ -234,8 +235,8 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the public network access.
      * 
      */
-    public Output</* @Nullable */ String> publicNetworkAccess() {
-        return this.publicNetworkAccess;
+    public Output<Optional<String>> publicNetworkAccess() {
+        return Codegen.optional(this.publicNetworkAccess);
     }
     /**
      * Gets or sets the Sku.
@@ -276,8 +277,8 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return Tags on the azure resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Gets or sets the type.

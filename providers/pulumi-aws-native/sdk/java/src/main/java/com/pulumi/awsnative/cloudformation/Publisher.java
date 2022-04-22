@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class Publisher extends com.pulumi.resources.CustomResource {
      * @return If you are using a Bitbucket or GitHub account for identity verification, the Amazon Resource Name (ARN) for your connection to that account.
      * 
      */
-    public Output</* @Nullable */ String> connectionArn() {
-        return this.connectionArn;
+    public Output<Optional<String>> connectionArn() {
+        return Codegen.optional(this.connectionArn);
     }
     /**
      * The type of account used as the identity provider when registering this publisher with CloudFormation.

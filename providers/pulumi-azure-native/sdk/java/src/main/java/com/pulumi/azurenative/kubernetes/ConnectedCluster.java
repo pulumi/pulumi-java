@@ -16,6 +16,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -88,8 +89,8 @@ public class ConnectedCluster extends com.pulumi.resources.CustomResource {
      * @return The Kubernetes distribution running on this connected cluster.
      * 
      */
-    public Output</* @Nullable */ String> distribution() {
-        return this.distribution;
+    public Output<Optional<String>> distribution() {
+        return Codegen.optional(this.distribution);
     }
     /**
      * The identity of the connected cluster.
@@ -116,8 +117,8 @@ public class ConnectedCluster extends com.pulumi.resources.CustomResource {
      * @return The infrastructure on which the Kubernetes cluster represented by this connected cluster is running on.
      * 
      */
-    public Output</* @Nullable */ String> infrastructure() {
-        return this.infrastructure;
+    public Output<Optional<String>> infrastructure() {
+        return Codegen.optional(this.infrastructure);
     }
     /**
      * The Kubernetes version of the connected cluster resource
@@ -214,8 +215,8 @@ public class ConnectedCluster extends com.pulumi.resources.CustomResource {
      * @return Provisioning state of the connected cluster resource.
      * 
      */
-    public Output</* @Nullable */ String> provisioningState() {
-        return this.provisioningState;
+    public Output<Optional<String>> provisioningState() {
+        return Codegen.optional(this.provisioningState);
     }
     /**
      * Metadata pertaining to creation and last modification of the resource
@@ -242,8 +243,8 @@ public class ConnectedCluster extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Number of CPU cores present in the connected cluster resource

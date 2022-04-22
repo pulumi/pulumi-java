@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -59,8 +60,8 @@ public class Organization extends com.pulumi.resources.CustomResource {
      * @return Location of Organization resource
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The name of the resource.
@@ -87,8 +88,8 @@ public class Organization extends com.pulumi.resources.CustomResource {
      * @return Confluent offer detail
      * 
      */
-    public Output</* @Nullable */ OrganizationResourcePropertiesResponseOfferDetail> offerDetail() {
-        return this.offerDetail;
+    public Output<Optional<OrganizationResourcePropertiesResponseOfferDetail>> offerDetail() {
+        return Codegen.optional(this.offerDetail);
     }
     /**
      * Id of the Confluent organization.
@@ -143,8 +144,8 @@ public class Organization extends com.pulumi.resources.CustomResource {
      * @return Organization resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource.
@@ -171,8 +172,8 @@ public class Organization extends com.pulumi.resources.CustomResource {
      * @return Subscriber detail
      * 
      */
-    public Output</* @Nullable */ OrganizationResourcePropertiesResponseUserDetail> userDetail() {
-        return this.userDetail;
+    public Output<Optional<OrganizationResourcePropertiesResponseUserDetail>> userDetail() {
+        return Codegen.optional(this.userDetail);
     }
 
     /**

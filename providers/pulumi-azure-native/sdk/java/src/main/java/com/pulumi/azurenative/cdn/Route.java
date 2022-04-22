@@ -15,6 +15,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class Route extends com.pulumi.resources.CustomResource {
      * @return compression settings.
      * 
      */
-    public Output</* @Nullable */ CompressionSettingsResponse> compressionSettings() {
-        return this.compressionSettings;
+    public Output<Optional<CompressionSettingsResponse>> compressionSettings() {
+        return Codegen.optional(this.compressionSettings);
     }
     /**
      * Domains referenced by this endpoint.
@@ -59,8 +60,8 @@ public class Route extends com.pulumi.resources.CustomResource {
      * @return Domains referenced by this endpoint.
      * 
      */
-    public Output</* @Nullable */ List<ResourceReferenceResponse>> customDomains() {
-        return this.customDomains;
+    public Output<Optional<List<ResourceReferenceResponse>>> customDomains() {
+        return Codegen.optional(this.customDomains);
     }
     @Export(name="deploymentStatus", type=String.class, parameters={})
     private Output<String> deploymentStatus;
@@ -79,8 +80,8 @@ public class Route extends com.pulumi.resources.CustomResource {
      * @return Whether to enable use of this rule. Permitted values are &#39;Enabled&#39; or &#39;Disabled&#39;
      * 
      */
-    public Output</* @Nullable */ String> enabledState() {
-        return this.enabledState;
+    public Output<Optional<String>> enabledState() {
+        return Codegen.optional(this.enabledState);
     }
     /**
      * Protocol this rule will use when forwarding traffic to backends.
@@ -93,8 +94,8 @@ public class Route extends com.pulumi.resources.CustomResource {
      * @return Protocol this rule will use when forwarding traffic to backends.
      * 
      */
-    public Output</* @Nullable */ String> forwardingProtocol() {
-        return this.forwardingProtocol;
+    public Output<Optional<String>> forwardingProtocol() {
+        return Codegen.optional(this.forwardingProtocol);
     }
     /**
      * Whether to automatically redirect HTTP traffic to HTTPS traffic. Note that this is a easy way to set up this rule and it will be the first rule that gets executed.
@@ -107,8 +108,8 @@ public class Route extends com.pulumi.resources.CustomResource {
      * @return Whether to automatically redirect HTTP traffic to HTTPS traffic. Note that this is a easy way to set up this rule and it will be the first rule that gets executed.
      * 
      */
-    public Output</* @Nullable */ String> httpsRedirect() {
-        return this.httpsRedirect;
+    public Output<Optional<String>> httpsRedirect() {
+        return Codegen.optional(this.httpsRedirect);
     }
     /**
      * whether this route will be linked to the default endpoint domain.
@@ -121,8 +122,8 @@ public class Route extends com.pulumi.resources.CustomResource {
      * @return whether this route will be linked to the default endpoint domain.
      * 
      */
-    public Output</* @Nullable */ String> linkToDefaultDomain() {
-        return this.linkToDefaultDomain;
+    public Output<Optional<String>> linkToDefaultDomain() {
+        return Codegen.optional(this.linkToDefaultDomain);
     }
     /**
      * Resource name.
@@ -163,8 +164,8 @@ public class Route extends com.pulumi.resources.CustomResource {
      * @return A directory path on the origin that AzureFrontDoor can use to retrieve content from, e.g. contoso.cloudapp.net/originpath.
      * 
      */
-    public Output</* @Nullable */ String> originPath() {
-        return this.originPath;
+    public Output<Optional<String>> originPath() {
+        return Codegen.optional(this.originPath);
     }
     /**
      * The route patterns of the rule.
@@ -177,8 +178,8 @@ public class Route extends com.pulumi.resources.CustomResource {
      * @return The route patterns of the rule.
      * 
      */
-    public Output</* @Nullable */ List<String>> patternsToMatch() {
-        return this.patternsToMatch;
+    public Output<Optional<List<String>>> patternsToMatch() {
+        return Codegen.optional(this.patternsToMatch);
     }
     /**
      * Provisioning status
@@ -205,8 +206,8 @@ public class Route extends com.pulumi.resources.CustomResource {
      * @return Defines how CDN caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.
      * 
      */
-    public Output</* @Nullable */ String> queryStringCachingBehavior() {
-        return this.queryStringCachingBehavior;
+    public Output<Optional<String>> queryStringCachingBehavior() {
+        return Codegen.optional(this.queryStringCachingBehavior);
     }
     /**
      * rule sets referenced by this endpoint.
@@ -219,8 +220,8 @@ public class Route extends com.pulumi.resources.CustomResource {
      * @return rule sets referenced by this endpoint.
      * 
      */
-    public Output</* @Nullable */ List<ResourceReferenceResponse>> ruleSets() {
-        return this.ruleSets;
+    public Output<Optional<List<ResourceReferenceResponse>>> ruleSets() {
+        return Codegen.optional(this.ruleSets);
     }
     /**
      * List of supported protocols for this route.
@@ -233,8 +234,8 @@ public class Route extends com.pulumi.resources.CustomResource {
      * @return List of supported protocols for this route.
      * 
      */
-    public Output</* @Nullable */ List<String>> supportedProtocols() {
-        return this.supportedProtocols;
+    public Output<Optional<List<String>>> supportedProtocols() {
+        return Codegen.optional(this.supportedProtocols);
     }
     /**
      * Read only system data

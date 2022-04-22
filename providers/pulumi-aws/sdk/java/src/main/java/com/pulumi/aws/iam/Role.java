@@ -16,6 +16,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -91,8 +92,8 @@ public class Role extends com.pulumi.resources.CustomResource {
      * @return Description of the role.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Whether to force detaching any policies the role has before destroying it. Defaults to `false`.
@@ -105,8 +106,8 @@ public class Role extends com.pulumi.resources.CustomResource {
      * @return Whether to force detaching any policies the role has before destroying it. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> forceDetachPolicies() {
-        return this.forceDetachPolicies;
+    public Output<Optional<Boolean>> forceDetachPolicies() {
+        return Codegen.optional(this.forceDetachPolicies);
     }
     /**
      * Configuration block defining an exclusive set of IAM inline policies associated with the IAM role. See below. If no blocks are configured, this provider will not manage any inline policies in this resource. Configuring one empty block (i.e., `inline_policy {}`) will cause the provider to remove _all_ inline policies added out of band on `apply`.
@@ -147,8 +148,8 @@ public class Role extends com.pulumi.resources.CustomResource {
      * @return Maximum session duration (in seconds) that you want to set for the specified role. If you do not specify a value for this setting, the default maximum of one hour is applied. This setting can have a value from 1 hour to 12 hours.
      * 
      */
-    public Output</* @Nullable */ Integer> maxSessionDuration() {
-        return this.maxSessionDuration;
+    public Output<Optional<Integer>> maxSessionDuration() {
+        return Codegen.optional(this.maxSessionDuration);
     }
     /**
      * Name of the role policy.
@@ -189,8 +190,8 @@ public class Role extends com.pulumi.resources.CustomResource {
      * @return Path to the role. See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) for more information.
      * 
      */
-    public Output</* @Nullable */ String> path() {
-        return this.path;
+    public Output<Optional<String>> path() {
+        return Codegen.optional(this.path);
     }
     /**
      * ARN of the policy that is used to set the permissions boundary for the role.
@@ -203,8 +204,8 @@ public class Role extends com.pulumi.resources.CustomResource {
      * @return ARN of the policy that is used to set the permissions boundary for the role.
      * 
      */
-    public Output</* @Nullable */ String> permissionsBoundary() {
-        return this.permissionsBoundary;
+    public Output<Optional<String>> permissionsBoundary() {
+        return Codegen.optional(this.permissionsBoundary);
     }
     /**
      * Key-value mapping of tags for the IAM role. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -217,8 +218,8 @@ public class Role extends com.pulumi.resources.CustomResource {
      * @return Key-value mapping of tags for the IAM role. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

@@ -15,6 +15,7 @@ import com.pulumi.gcp.apigateway.outputs.ApiConfigOpenapiDocument;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -120,8 +121,8 @@ public class ApiConfig extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ ApiConfigGatewayConfig> gatewayConfig() {
-        return this.gatewayConfig;
+    public Output<Optional<ApiConfigGatewayConfig>> gatewayConfig() {
+        return Codegen.optional(this.gatewayConfig);
     }
     /**
      * Resource labels to represent user-provided metadata.
@@ -134,8 +135,8 @@ public class ApiConfig extends com.pulumi.resources.CustomResource {
      * @return Resource labels to represent user-provided metadata.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * The resource name of the API Config.

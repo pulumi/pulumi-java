@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -38,8 +39,8 @@ public class ReplicationSet extends com.pulumi.resources.CustomResource {
     @Export(name="deletionProtected", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> deletionProtected;
 
-    public Output</* @Nullable */ Boolean> deletionProtected() {
-        return this.deletionProtected;
+    public Output<Optional<Boolean>> deletionProtected() {
+        return Codegen.optional(this.deletionProtected);
     }
     /**
      * The ReplicationSet configuration.

@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -40,8 +41,8 @@ public class PrincipalPortfolioAssociation extends com.pulumi.resources.CustomRe
      * @return Language code. Valid values: `en` (English), `jp` (Japanese), `zh` (Chinese). Default value is `en`.
      * 
      */
-    public Output</* @Nullable */ String> acceptLanguage() {
-        return this.acceptLanguage;
+    public Output<Optional<String>> acceptLanguage() {
+        return Codegen.optional(this.acceptLanguage);
     }
     /**
      * Portfolio identifier.
@@ -82,8 +83,8 @@ public class PrincipalPortfolioAssociation extends com.pulumi.resources.CustomRe
      * @return Principal type. Setting this argument empty (e.g., `principal_type = &#34;&#34;`) will result in an error. Valid value is `IAM`. Default is `IAM`.
      * 
      */
-    public Output</* @Nullable */ String> principalType() {
-        return this.principalType;
+    public Output<Optional<String>> principalType() {
+        return Codegen.optional(this.principalType);
     }
 
     /**

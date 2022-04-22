@@ -12,6 +12,7 @@ import com.pulumi.gcp.secretmanager.SecretVersionArgs;
 import com.pulumi.gcp.secretmanager.inputs.SecretVersionState;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -72,8 +73,8 @@ public class SecretVersion extends com.pulumi.resources.CustomResource {
      * @return The current state of the SecretVersion.
      * 
      */
-    public Output</* @Nullable */ Boolean> enabled() {
-        return this.enabled;
+    public Output<Optional<Boolean>> enabled() {
+        return Codegen.optional(this.enabled);
     }
     /**
      * The resource name of the SecretVersion. Format: &#39;projects/{{project}}/secrets/{{secret_id}}/versions/{{version}}&#39;

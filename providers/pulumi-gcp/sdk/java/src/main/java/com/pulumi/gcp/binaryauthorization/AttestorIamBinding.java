@@ -13,6 +13,7 @@ import com.pulumi.gcp.binaryauthorization.inputs.AttestorIamBindingState;
 import com.pulumi.gcp.binaryauthorization.outputs.AttestorIamBindingCondition;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -76,8 +77,8 @@ public class AttestorIamBinding extends com.pulumi.resources.CustomResource {
     @Export(name="condition", type=AttestorIamBindingCondition.class, parameters={})
     private Output</* @Nullable */ AttestorIamBindingCondition> condition;
 
-    public Output</* @Nullable */ AttestorIamBindingCondition> condition() {
-        return this.condition;
+    public Output<Optional<AttestorIamBindingCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * (Computed) The etag of the IAM policy.

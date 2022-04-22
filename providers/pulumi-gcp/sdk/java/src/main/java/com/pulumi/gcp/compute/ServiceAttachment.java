@@ -15,6 +15,7 @@ import com.pulumi.gcp.compute.outputs.ServiceAttachmentConsumerAcceptList;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -96,8 +97,8 @@ public class ServiceAttachment extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<ServiceAttachmentConsumerAcceptList>> consumerAcceptLists() {
-        return this.consumerAcceptLists;
+    public Output<Optional<List<ServiceAttachmentConsumerAcceptList>>> consumerAcceptLists() {
+        return Codegen.optional(this.consumerAcceptLists);
     }
     /**
      * An array of projects that are not allowed to connect to this service
@@ -112,8 +113,8 @@ public class ServiceAttachment extends com.pulumi.resources.CustomResource {
      * attachment.
      * 
      */
-    public Output</* @Nullable */ List<String>> consumerRejectLists() {
-        return this.consumerRejectLists;
+    public Output<Optional<List<String>>> consumerRejectLists() {
+        return Codegen.optional(this.consumerRejectLists);
     }
     /**
      * An optional description of this resource.
@@ -126,8 +127,8 @@ public class ServiceAttachment extends com.pulumi.resources.CustomResource {
      * @return An optional description of this resource.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * If true, enable the proxy protocol which is for supplying client TCP/IP

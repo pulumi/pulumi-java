@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -30,14 +31,14 @@ public class InstanceProfile extends com.pulumi.resources.CustomResource {
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     @Export(name="excludeAppPackagesFromCleanup", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> excludeAppPackagesFromCleanup;
 
-    public Output</* @Nullable */ List<String>> excludeAppPackagesFromCleanup() {
-        return this.excludeAppPackagesFromCleanup;
+    public Output<Optional<List<String>>> excludeAppPackagesFromCleanup() {
+        return Codegen.optional(this.excludeAppPackagesFromCleanup);
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
@@ -48,20 +49,20 @@ public class InstanceProfile extends com.pulumi.resources.CustomResource {
     @Export(name="packageCleanup", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> packageCleanup;
 
-    public Output</* @Nullable */ Boolean> packageCleanup() {
-        return this.packageCleanup;
+    public Output<Optional<Boolean>> packageCleanup() {
+        return Codegen.optional(this.packageCleanup);
     }
     @Export(name="rebootAfterUse", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> rebootAfterUse;
 
-    public Output</* @Nullable */ Boolean> rebootAfterUse() {
-        return this.rebootAfterUse;
+    public Output<Optional<Boolean>> rebootAfterUse() {
+        return Codegen.optional(this.rebootAfterUse);
     }
     @Export(name="tags", type=List.class, parameters={InstanceProfileTag.class})
     private Output</* @Nullable */ List<InstanceProfileTag>> tags;
 
-    public Output</* @Nullable */ List<InstanceProfileTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<InstanceProfileTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

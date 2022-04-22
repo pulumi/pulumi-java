@@ -16,6 +16,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class BackupVault extends com.pulumi.resources.CustomResource {
      * @return Optional ETag.
      * 
      */
-    public Output</* @Nullable */ String> eTag() {
-        return this.eTag;
+    public Output<Optional<String>> eTag() {
+        return Codegen.optional(this.eTag);
     }
     /**
      * Input Managed Identity Details
@@ -60,8 +61,8 @@ public class BackupVault extends com.pulumi.resources.CustomResource {
      * @return Input Managed Identity Details
      * 
      */
-    public Output</* @Nullable */ DppIdentityDetailsResponse> identity() {
-        return this.identity;
+    public Output<Optional<DppIdentityDetailsResponse>> identity() {
+        return Codegen.optional(this.identity);
     }
     /**
      * Resource location.
@@ -130,8 +131,8 @@ public class BackupVault extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...

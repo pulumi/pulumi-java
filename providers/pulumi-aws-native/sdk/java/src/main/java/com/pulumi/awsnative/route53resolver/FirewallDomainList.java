@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -89,14 +90,14 @@ public class FirewallDomainList extends com.pulumi.resources.CustomResource {
      * @return S3 URL to import domains from.
      * 
      */
-    public Output</* @Nullable */ String> domainFileUrl() {
-        return this.domainFileUrl;
+    public Output<Optional<String>> domainFileUrl() {
+        return Codegen.optional(this.domainFileUrl);
     }
     @Export(name="domains", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> domains;
 
-    public Output</* @Nullable */ List<String>> domains() {
-        return this.domains;
+    public Output<Optional<List<String>>> domains() {
+        return Codegen.optional(this.domains);
     }
     /**
      * ServicePrincipal
@@ -137,8 +138,8 @@ public class FirewallDomainList extends com.pulumi.resources.CustomResource {
      * @return FirewallDomainListName
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * ResolverFirewallDomainList, possible values are COMPLETE, DELETING, UPDATING, COMPLETE_IMPORT_FAILED, IMPORTING, and INACTIVE_OWNER_ACCOUNT_CLOSED.
@@ -179,8 +180,8 @@ public class FirewallDomainList extends com.pulumi.resources.CustomResource {
      * @return Tags
      * 
      */
-    public Output</* @Nullable */ List<FirewallDomainListTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<FirewallDomainListTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

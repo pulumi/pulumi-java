@@ -14,6 +14,7 @@ import com.pulumi.gcp.appengine.outputs.DomainMappingResourceRecord;
 import com.pulumi.gcp.appengine.outputs.DomainMappingSslSettings;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -91,8 +92,8 @@ public class DomainMapping extends com.pulumi.resources.CustomResource {
      * Possible values are `STRICT` and `OVERRIDE`.
      * 
      */
-    public Output</* @Nullable */ String> overrideStrategy() {
-        return this.overrideStrategy;
+    public Output<Optional<String>> overrideStrategy() {
+        return Codegen.optional(this.overrideStrategy);
     }
     /**
      * The ID of the project in which the resource belongs.
@@ -139,8 +140,8 @@ public class DomainMapping extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ DomainMappingSslSettings> sslSettings() {
-        return this.sslSettings;
+    public Output<Optional<DomainMappingSslSettings>> sslSettings() {
+        return Codegen.optional(this.sslSettings);
     }
 
     /**

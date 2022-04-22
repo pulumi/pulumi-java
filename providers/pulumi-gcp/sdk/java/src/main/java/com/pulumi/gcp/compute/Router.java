@@ -13,6 +13,7 @@ import com.pulumi.gcp.compute.inputs.RouterState;
 import com.pulumi.gcp.compute.outputs.RouterBgp;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -62,8 +63,8 @@ public class Router extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ RouterBgp> bgp() {
-        return this.bgp;
+    public Output<Optional<RouterBgp>> bgp() {
+        return Codegen.optional(this.bgp);
     }
     /**
      * Creation timestamp in RFC3339 text format.
@@ -90,8 +91,8 @@ public class Router extends com.pulumi.resources.CustomResource {
      * @return User-specified description for the IP range.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Field to indicate if a router is dedicated to use with encrypted
@@ -108,8 +109,8 @@ public class Router extends com.pulumi.resources.CustomResource {
      * Not currently available publicly.
      * 
      */
-    public Output</* @Nullable */ Boolean> encryptedInterconnectRouter() {
-        return this.encryptedInterconnectRouter;
+    public Output<Optional<Boolean>> encryptedInterconnectRouter() {
+        return Codegen.optional(this.encryptedInterconnectRouter);
     }
     /**
      * Name of the resource. The name must be 1-63 characters long, and

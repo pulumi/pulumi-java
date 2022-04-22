@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class MulticastGroup extends com.pulumi.resources.CustomResource {
      * @return Wireless device to associate. Only for update request.
      * 
      */
-    public Output</* @Nullable */ String> associateWirelessDevice() {
-        return this.associateWirelessDevice;
+    public Output<Optional<String>> associateWirelessDevice() {
+        return Codegen.optional(this.associateWirelessDevice);
     }
     /**
      * Multicast group description
@@ -60,8 +61,8 @@ public class MulticastGroup extends com.pulumi.resources.CustomResource {
      * @return Multicast group description
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Wireless device to disassociate. Only for update request.
@@ -74,8 +75,8 @@ public class MulticastGroup extends com.pulumi.resources.CustomResource {
      * @return Wireless device to disassociate. Only for update request.
      * 
      */
-    public Output</* @Nullable */ String> disassociateWirelessDevice() {
-        return this.disassociateWirelessDevice;
+    public Output<Optional<String>> disassociateWirelessDevice() {
+        return Codegen.optional(this.disassociateWirelessDevice);
     }
     /**
      * Multicast group LoRaWAN
@@ -102,8 +103,8 @@ public class MulticastGroup extends com.pulumi.resources.CustomResource {
      * @return Name of Multicast group
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * Multicast group status. Returned after successful read.
@@ -130,8 +131,8 @@ public class MulticastGroup extends com.pulumi.resources.CustomResource {
      * @return A list of key-value pairs that contain metadata for the Multicast group.
      * 
      */
-    public Output</* @Nullable */ List<MulticastGroupTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<MulticastGroupTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

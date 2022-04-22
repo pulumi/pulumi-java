@@ -16,6 +16,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -59,8 +60,8 @@ public class EventDestination extends com.pulumi.resources.CustomResource {
      * @return CloudWatch destination for the events
      * 
      */
-    public Output</* @Nullable */ List<EventDestinationCloudwatchDestination>> cloudwatchDestinations() {
-        return this.cloudwatchDestinations;
+    public Output<Optional<List<EventDestinationCloudwatchDestination>>> cloudwatchDestinations() {
+        return Codegen.optional(this.cloudwatchDestinations);
     }
     /**
      * The name of the configuration set
@@ -87,8 +88,8 @@ public class EventDestination extends com.pulumi.resources.CustomResource {
      * @return If true, the event destination will be enabled
      * 
      */
-    public Output</* @Nullable */ Boolean> enabled() {
-        return this.enabled;
+    public Output<Optional<Boolean>> enabled() {
+        return Codegen.optional(this.enabled);
     }
     /**
      * Send the events to a kinesis firehose destination
@@ -101,8 +102,8 @@ public class EventDestination extends com.pulumi.resources.CustomResource {
      * @return Send the events to a kinesis firehose destination
      * 
      */
-    public Output</* @Nullable */ EventDestinationKinesisDestination> kinesisDestination() {
-        return this.kinesisDestination;
+    public Output<Optional<EventDestinationKinesisDestination>> kinesisDestination() {
+        return Codegen.optional(this.kinesisDestination);
     }
     /**
      * A list of matching types. May be any of `&#34;send&#34;`, `&#34;reject&#34;`, `&#34;bounce&#34;`, `&#34;complaint&#34;`, `&#34;delivery&#34;`, `&#34;open&#34;`, `&#34;click&#34;`, or `&#34;renderingFailure&#34;`.
@@ -143,8 +144,8 @@ public class EventDestination extends com.pulumi.resources.CustomResource {
      * @return Send the events to an SNS Topic destination
      * 
      */
-    public Output</* @Nullable */ EventDestinationSnsDestination> snsDestination() {
-        return this.snsDestination;
+    public Output<Optional<EventDestinationSnsDestination>> snsDestination() {
+        return Codegen.optional(this.snsDestination);
     }
 
     /**

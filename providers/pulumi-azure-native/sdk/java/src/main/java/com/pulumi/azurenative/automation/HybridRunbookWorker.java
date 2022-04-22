@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class HybridRunbookWorker extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the assigned machine IP address.
      * 
      */
-    public Output</* @Nullable */ String> ip() {
-        return this.ip;
+    public Output<Optional<String>> ip() {
+        return Codegen.optional(this.ip);
     }
     /**
      * Last Heartbeat from the Worker
@@ -57,8 +58,8 @@ public class HybridRunbookWorker extends com.pulumi.resources.CustomResource {
      * @return Last Heartbeat from the Worker
      * 
      */
-    public Output</* @Nullable */ String> lastSeenDateTime() {
-        return this.lastSeenDateTime;
+    public Output<Optional<String>> lastSeenDateTime() {
+        return Codegen.optional(this.lastSeenDateTime);
     }
     /**
      * The name of the resource
@@ -85,8 +86,8 @@ public class HybridRunbookWorker extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the registration time of the worker machine.
      * 
      */
-    public Output</* @Nullable */ String> registeredDateTime() {
-        return this.registeredDateTime;
+    public Output<Optional<String>> registeredDateTime() {
+        return Codegen.optional(this.registeredDateTime);
     }
     /**
      * Resource system metadata.
@@ -127,8 +128,8 @@ public class HybridRunbookWorker extends com.pulumi.resources.CustomResource {
      * @return Azure Resource Manager Id for a virtual machine.
      * 
      */
-    public Output</* @Nullable */ String> vmResourceId() {
-        return this.vmResourceId;
+    public Output<Optional<String>> vmResourceId() {
+        return Codegen.optional(this.vmResourceId);
     }
     /**
      * Name of the HybridWorker.
@@ -141,8 +142,8 @@ public class HybridRunbookWorker extends com.pulumi.resources.CustomResource {
      * @return Name of the HybridWorker.
      * 
      */
-    public Output</* @Nullable */ String> workerName() {
-        return this.workerName;
+    public Output<Optional<String>> workerName() {
+        return Codegen.optional(this.workerName);
     }
     /**
      * Type of the HybridWorker.
@@ -155,8 +156,8 @@ public class HybridRunbookWorker extends com.pulumi.resources.CustomResource {
      * @return Type of the HybridWorker.
      * 
      */
-    public Output</* @Nullable */ String> workerType() {
-        return this.workerType;
+    public Output<Optional<String>> workerType() {
+        return Codegen.optional(this.workerType);
     }
 
     /**

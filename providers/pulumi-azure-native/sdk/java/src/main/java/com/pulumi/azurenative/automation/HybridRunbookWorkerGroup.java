@@ -15,6 +15,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class HybridRunbookWorkerGroup extends com.pulumi.resources.CustomResourc
      * @return Sets the credential of a worker group.
      * 
      */
-    public Output</* @Nullable */ RunAsCredentialAssociationPropertyResponse> credential() {
-        return this.credential;
+    public Output<Optional<RunAsCredentialAssociationPropertyResponse>> credential() {
+        return Codegen.optional(this.credential);
     }
     /**
      * Type of the HybridWorkerGroup.
@@ -59,8 +60,8 @@ public class HybridRunbookWorkerGroup extends com.pulumi.resources.CustomResourc
      * @return Type of the HybridWorkerGroup.
      * 
      */
-    public Output</* @Nullable */ String> groupType() {
-        return this.groupType;
+    public Output<Optional<String>> groupType() {
+        return Codegen.optional(this.groupType);
     }
     /**
      * Gets or sets the list of hybrid runbook workers.
@@ -73,8 +74,8 @@ public class HybridRunbookWorkerGroup extends com.pulumi.resources.CustomResourc
      * @return Gets or sets the list of hybrid runbook workers.
      * 
      */
-    public Output</* @Nullable */ List<HybridRunbookWorkerLegacyResponse>> hybridRunbookWorkers() {
-        return this.hybridRunbookWorkers;
+    public Output<Optional<List<HybridRunbookWorkerLegacyResponse>>> hybridRunbookWorkers() {
+        return Codegen.optional(this.hybridRunbookWorkers);
     }
     /**
      * Gets or sets the name of the group.
@@ -87,8 +88,8 @@ public class HybridRunbookWorkerGroup extends com.pulumi.resources.CustomResourc
      * @return Gets or sets the name of the group.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * Resource system metadata.

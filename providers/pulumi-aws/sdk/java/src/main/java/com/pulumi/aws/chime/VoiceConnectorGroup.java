@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class VoiceConnectorGroup extends com.pulumi.resources.CustomResource {
      * @return The Amazon Chime Voice Connectors to route inbound calls to.
      * 
      */
-    public Output</* @Nullable */ List<VoiceConnectorGroupConnector>> connectors() {
-        return this.connectors;
+    public Output<Optional<List<VoiceConnectorGroupConnector>>> connectors() {
+        return Codegen.optional(this.connectors);
     }
     /**
      * The name of the Amazon Chime Voice Connector group.

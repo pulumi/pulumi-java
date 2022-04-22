@@ -16,6 +16,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -33,14 +34,14 @@ public class Policy extends com.pulumi.resources.CustomResource {
     @Export(name="deleteAllPolicyResources", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> deleteAllPolicyResources;
 
-    public Output</* @Nullable */ Boolean> deleteAllPolicyResources() {
-        return this.deleteAllPolicyResources;
+    public Output<Optional<Boolean>> deleteAllPolicyResources() {
+        return Codegen.optional(this.deleteAllPolicyResources);
     }
     @Export(name="excludeMap", type=PolicyIEMap.class, parameters={})
     private Output</* @Nullable */ PolicyIEMap> excludeMap;
 
-    public Output</* @Nullable */ PolicyIEMap> excludeMap() {
-        return this.excludeMap;
+    public Output<Optional<PolicyIEMap>> excludeMap() {
+        return Codegen.optional(this.excludeMap);
     }
     @Export(name="excludeResourceTags", type=Boolean.class, parameters={})
     private Output<Boolean> excludeResourceTags;
@@ -51,8 +52,8 @@ public class Policy extends com.pulumi.resources.CustomResource {
     @Export(name="includeMap", type=PolicyIEMap.class, parameters={})
     private Output</* @Nullable */ PolicyIEMap> includeMap;
 
-    public Output</* @Nullable */ PolicyIEMap> includeMap() {
-        return this.includeMap;
+    public Output<Optional<PolicyIEMap>> includeMap() {
+        return Codegen.optional(this.includeMap);
     }
     @Export(name="policyName", type=String.class, parameters={})
     private Output<String> policyName;
@@ -69,8 +70,8 @@ public class Policy extends com.pulumi.resources.CustomResource {
     @Export(name="resourceTags", type=List.class, parameters={PolicyResourceTag.class})
     private Output</* @Nullable */ List<PolicyResourceTag>> resourceTags;
 
-    public Output</* @Nullable */ List<PolicyResourceTag>> resourceTags() {
-        return this.resourceTags;
+    public Output<Optional<List<PolicyResourceTag>>> resourceTags() {
+        return Codegen.optional(this.resourceTags);
     }
     @Export(name="resourceType", type=String.class, parameters={})
     private Output<String> resourceType;
@@ -81,14 +82,14 @@ public class Policy extends com.pulumi.resources.CustomResource {
     @Export(name="resourceTypeList", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> resourceTypeList;
 
-    public Output</* @Nullable */ List<String>> resourceTypeList() {
-        return this.resourceTypeList;
+    public Output<Optional<List<String>>> resourceTypeList() {
+        return Codegen.optional(this.resourceTypeList);
     }
     @Export(name="resourcesCleanUp", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> resourcesCleanUp;
 
-    public Output</* @Nullable */ Boolean> resourcesCleanUp() {
-        return this.resourcesCleanUp;
+    public Output<Optional<Boolean>> resourcesCleanUp() {
+        return Codegen.optional(this.resourcesCleanUp);
     }
     @Export(name="securityServicePolicyData", type=SecurityServicePolicyDataProperties.class, parameters={})
     private Output<SecurityServicePolicyDataProperties> securityServicePolicyData;
@@ -99,8 +100,8 @@ public class Policy extends com.pulumi.resources.CustomResource {
     @Export(name="tags", type=List.class, parameters={PolicyTag.class})
     private Output</* @Nullable */ List<PolicyTag>> tags;
 
-    public Output</* @Nullable */ List<PolicyTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<PolicyTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

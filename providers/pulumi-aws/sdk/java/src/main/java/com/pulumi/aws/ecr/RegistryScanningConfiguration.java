@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -56,8 +57,8 @@ public class RegistryScanningConfiguration extends com.pulumi.resources.CustomRe
      * @return One or multiple blocks specifying scanning rules to determine which repository filters are used and at what frequency scanning will occur. See below for schema.
      * 
      */
-    public Output</* @Nullable */ List<RegistryScanningConfigurationRule>> rules() {
-        return this.rules;
+    public Output<Optional<List<RegistryScanningConfigurationRule>>> rules() {
+        return Codegen.optional(this.rules);
     }
     /**
      * the scanning type to set for the registry. Can be either `ENHANCED` or `BASIC`.

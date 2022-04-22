@@ -16,6 +16,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class CapacityDetails extends com.pulumi.resources.CustomResource {
      * @return A collection of Dedicated capacity administrators
      * 
      */
-    public Output</* @Nullable */ DedicatedCapacityAdministratorsResponse> administration() {
-        return this.administration;
+    public Output<Optional<DedicatedCapacityAdministratorsResponse>> administration() {
+        return Codegen.optional(this.administration);
     }
     /**
      * Capacity name
@@ -88,8 +89,8 @@ public class CapacityDetails extends com.pulumi.resources.CustomResource {
      * @return Specifies the generation of the Power BI Embedded capacity. If no value is specified, the default value &#39;Gen2&#39; is used. [Learn More](https://docs.microsoft.com/power-bi/developer/embedded/power-bi-embedded-generation-2)
      * 
      */
-    public Output</* @Nullable */ String> mode() {
-        return this.mode;
+    public Output<Optional<String>> mode() {
+        return Codegen.optional(this.mode);
     }
     /**
      * The name of the PowerBI Dedicated resource.
@@ -158,8 +159,8 @@ public class CapacityDetails extends com.pulumi.resources.CustomResource {
      * @return Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    public Output</* @Nullable */ SystemDataResponse> systemData() {
-        return this.systemData;
+    public Output<Optional<SystemDataResponse>> systemData() {
+        return Codegen.optional(this.systemData);
     }
     /**
      * Key-value pairs of additional resource provisioning properties.
@@ -172,8 +173,8 @@ public class CapacityDetails extends com.pulumi.resources.CustomResource {
      * @return Key-value pairs of additional resource provisioning properties.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Tenant ID for the capacity. Used for creating Pro Plus capacity.

@@ -15,6 +15,7 @@ import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class VendorSkus extends com.pulumi.resources.CustomResource {
      * @return The sku deployment mode.
      * 
      */
-    public Output</* @Nullable */ String> deploymentMode() {
-        return this.deploymentMode;
+    public Output<Optional<String>> deploymentMode() {
+        return Codegen.optional(this.deploymentMode);
     }
     /**
      * The parameters for the managed application to be supplied by the vendor.
@@ -59,8 +60,8 @@ public class VendorSkus extends com.pulumi.resources.CustomResource {
      * @return The parameters for the managed application to be supplied by the vendor.
      * 
      */
-    public Output</* @Nullable */ Object> managedApplicationParameters() {
-        return this.managedApplicationParameters;
+    public Output<Optional<Object>> managedApplicationParameters() {
+        return Codegen.optional(this.managedApplicationParameters);
     }
     /**
      * The template for the managed application deployment.
@@ -73,8 +74,8 @@ public class VendorSkus extends com.pulumi.resources.CustomResource {
      * @return The template for the managed application deployment.
      * 
      */
-    public Output</* @Nullable */ Object> managedApplicationTemplate() {
-        return this.managedApplicationTemplate;
+    public Output<Optional<Object>> managedApplicationTemplate() {
+        return Codegen.optional(this.managedApplicationTemplate);
     }
     /**
      * The name of the resource
@@ -101,8 +102,8 @@ public class VendorSkus extends com.pulumi.resources.CustomResource {
      * @return The template definition of the network function.
      * 
      */
-    public Output</* @Nullable */ NetworkFunctionTemplateResponse> networkFunctionTemplate() {
-        return this.networkFunctionTemplate;
+    public Output<Optional<NetworkFunctionTemplateResponse>> networkFunctionTemplate() {
+        return Codegen.optional(this.networkFunctionTemplate);
     }
     /**
      * Indicates if the vendor sku is in preview mode.
@@ -115,8 +116,8 @@ public class VendorSkus extends com.pulumi.resources.CustomResource {
      * @return Indicates if the vendor sku is in preview mode.
      * 
      */
-    public Output</* @Nullable */ Boolean> preview() {
-        return this.preview;
+    public Output<Optional<Boolean>> preview() {
+        return Codegen.optional(this.preview);
     }
     /**
      * The provisioning state of the vendor sku sub resource.
@@ -143,8 +144,8 @@ public class VendorSkus extends com.pulumi.resources.CustomResource {
      * @return The sku type.
      * 
      */
-    public Output</* @Nullable */ String> skuType() {
-        return this.skuType;
+    public Output<Optional<String>> skuType() {
+        return Codegen.optional(this.skuType);
     }
     /**
      * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;

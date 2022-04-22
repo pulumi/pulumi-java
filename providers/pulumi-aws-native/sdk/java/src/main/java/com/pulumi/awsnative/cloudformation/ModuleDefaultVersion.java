@@ -10,6 +10,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -29,8 +30,8 @@ public class ModuleDefaultVersion extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the module version to set as the default version.
      * 
      */
-    public Output</* @Nullable */ String> arn() {
-        return this.arn;
+    public Output<Optional<String>> arn() {
+        return Codegen.optional(this.arn);
     }
     /**
      * The name of a module existing in the registry.
@@ -43,8 +44,8 @@ public class ModuleDefaultVersion extends com.pulumi.resources.CustomResource {
      * @return The name of a module existing in the registry.
      * 
      */
-    public Output</* @Nullable */ String> moduleName() {
-        return this.moduleName;
+    public Output<Optional<String>> moduleName() {
+        return Codegen.optional(this.moduleName);
     }
     /**
      * The ID of an existing version of the named module to set as the default.
@@ -57,8 +58,8 @@ public class ModuleDefaultVersion extends com.pulumi.resources.CustomResource {
      * @return The ID of an existing version of the named module to set as the default.
      * 
      */
-    public Output</* @Nullable */ String> versionId() {
-        return this.versionId;
+    public Output<Optional<String>> versionId() {
+        return Codegen.optional(this.versionId);
     }
 
     /**

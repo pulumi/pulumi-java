@@ -18,6 +18,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -61,8 +62,8 @@ public class MLTransform extends com.pulumi.resources.CustomResource {
      * @return Description of the ML Transform.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The version of glue to use, for example &#34;1.0&#34;. For information about available versions, see the [AWS Glue Release Notes](https://docs.aws.amazon.com/glue/latest/dg/release-notes.html).
@@ -131,8 +132,8 @@ public class MLTransform extends com.pulumi.resources.CustomResource {
      * @return The maximum number of times to retry this ML Transform if it fails.
      * 
      */
-    public Output</* @Nullable */ Integer> maxRetries() {
-        return this.maxRetries;
+    public Output<Optional<Integer>> maxRetries() {
+        return Codegen.optional(this.maxRetries);
     }
     /**
      * The name you assign to this ML Transform. It must be unique in your account.
@@ -159,8 +160,8 @@ public class MLTransform extends com.pulumi.resources.CustomResource {
      * @return The number of workers of a defined `worker_type` that are allocated when an ML Transform runs. Required with `worker_type`.
      * 
      */
-    public Output</* @Nullable */ Integer> numberOfWorkers() {
-        return this.numberOfWorkers;
+    public Output<Optional<Integer>> numberOfWorkers() {
+        return Codegen.optional(this.numberOfWorkers);
     }
     /**
      * The algorithmic parameters that are specific to the transform type used. Conditionally dependent on the transform type. see Parameters.
@@ -215,8 +216,8 @@ public class MLTransform extends com.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
@@ -243,8 +244,8 @@ public class MLTransform extends com.pulumi.resources.CustomResource {
      * @return The ML Transform timeout in minutes. The default is 2880 minutes (48 hours).
      * 
      */
-    public Output</* @Nullable */ Integer> timeout() {
-        return this.timeout;
+    public Output<Optional<Integer>> timeout() {
+        return Codegen.optional(this.timeout);
     }
     /**
      * The type of predefined worker that is allocated when an ML Transform runs. Accepts a value of `Standard`, `G.1X`, or `G.2X`. Required with `number_of_workers`.
@@ -257,8 +258,8 @@ public class MLTransform extends com.pulumi.resources.CustomResource {
      * @return The type of predefined worker that is allocated when an ML Transform runs. Accepts a value of `Standard`, `G.1X`, or `G.2X`. Required with `number_of_workers`.
      * 
      */
-    public Output</* @Nullable */ String> workerType() {
-        return this.workerType;
+    public Output<Optional<String>> workerType() {
+        return Codegen.optional(this.workerType);
     }
 
     /**

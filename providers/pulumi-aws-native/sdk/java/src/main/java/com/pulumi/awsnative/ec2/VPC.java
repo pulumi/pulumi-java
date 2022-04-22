@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -88,8 +89,8 @@ public class VPC extends com.pulumi.resources.CustomResource {
      * @return Indicates whether the instances launched in the VPC get DNS hostnames. If enabled, instances in the VPC get DNS hostnames; otherwise, they do not. Disabled by default for nondefault VPCs.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableDnsHostnames() {
-        return this.enableDnsHostnames;
+    public Output<Optional<Boolean>> enableDnsHostnames() {
+        return Codegen.optional(this.enableDnsHostnames);
     }
     /**
      * Indicates whether the DNS resolution is supported for the VPC. If enabled, queries to the Amazon provided DNS server at the 169.254.169.253 IP address, or the reserved IP address at the base of the VPC network range &#34;plus two&#34; succeed. If disabled, the Amazon provided DNS service in the VPC that resolves public DNS hostnames to IP addresses is not enabled. Enabled by default.
@@ -102,8 +103,8 @@ public class VPC extends com.pulumi.resources.CustomResource {
      * @return Indicates whether the DNS resolution is supported for the VPC. If enabled, queries to the Amazon provided DNS server at the 169.254.169.253 IP address, or the reserved IP address at the base of the VPC network range &#34;plus two&#34; succeed. If disabled, the Amazon provided DNS service in the VPC that resolves public DNS hostnames to IP addresses is not enabled. Enabled by default.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableDnsSupport() {
-        return this.enableDnsSupport;
+    public Output<Optional<Boolean>> enableDnsSupport() {
+        return Codegen.optional(this.enableDnsSupport);
     }
     /**
      * The allowed tenancy of instances launched into the VPC.
@@ -128,8 +129,8 @@ public class VPC extends com.pulumi.resources.CustomResource {
      * Updating InstanceTenancy requires no replacement only if you are updating its value from &#34;dedicated&#34; to &#34;default&#34;. Updating InstanceTenancy from &#34;default&#34; to &#34;dedicated&#34; requires replacement.
      * 
      */
-    public Output</* @Nullable */ String> instanceTenancy() {
-        return this.instanceTenancy;
+    public Output<Optional<String>> instanceTenancy() {
+        return Codegen.optional(this.instanceTenancy);
     }
     /**
      * A list of IPv6 CIDR blocks that are associated with the VPC.
@@ -156,8 +157,8 @@ public class VPC extends com.pulumi.resources.CustomResource {
      * @return The tags for the VPC.
      * 
      */
-    public Output</* @Nullable */ List<VPCTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<VPCTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The Id for the model.

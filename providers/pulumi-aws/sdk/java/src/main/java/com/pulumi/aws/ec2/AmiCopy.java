@@ -16,6 +16,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -75,8 +76,8 @@ public class AmiCopy extends com.pulumi.resources.CustomResource {
      * @return A longer, human-readable description for the AMI.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The ARN of the Outpost to which to copy the AMI.
@@ -91,8 +92,8 @@ public class AmiCopy extends com.pulumi.resources.CustomResource {
      * Only specify this parameter when copying an AMI from an AWS Region to an Outpost. The AMI must be in the Region of the destination Outpost.
      * 
      */
-    public Output</* @Nullable */ String> destinationOutpostArn() {
-        return this.destinationOutpostArn;
+    public Output<Optional<String>> destinationOutpostArn() {
+        return Codegen.optional(this.destinationOutpostArn);
     }
     /**
      * Nested block describing an EBS block device that should be
@@ -135,8 +136,8 @@ public class AmiCopy extends com.pulumi.resources.CustomResource {
      * @return Boolean controlling whether the created EBS volumes will be encrypted. Can&#39;t be used with `snapshot_id`.
      * 
      */
-    public Output</* @Nullable */ Boolean> encrypted() {
-        return this.encrypted;
+    public Output<Optional<Boolean>> encrypted() {
+        return Codegen.optional(this.encrypted);
     }
     /**
      * Nested block describing an ephemeral block device that
@@ -361,8 +362,8 @@ public class AmiCopy extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;

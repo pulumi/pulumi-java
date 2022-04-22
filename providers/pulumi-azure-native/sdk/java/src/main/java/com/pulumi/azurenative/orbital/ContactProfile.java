@@ -16,6 +16,7 @@ import java.lang.Double;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class ContactProfile extends com.pulumi.resources.CustomResource {
      * @return Auto track configuration.
      * 
      */
-    public Output</* @Nullable */ String> autoTrackingConfiguration() {
-        return this.autoTrackingConfiguration;
+    public Output<Optional<String>> autoTrackingConfiguration() {
+        return Codegen.optional(this.autoTrackingConfiguration);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
@@ -74,8 +75,8 @@ public class ContactProfile extends com.pulumi.resources.CustomResource {
      * @return The URI of the Event Hub used for telemetry
      * 
      */
-    public Output</* @Nullable */ String> eventHubUri() {
-        return this.eventHubUri;
+    public Output<Optional<String>> eventHubUri() {
+        return Codegen.optional(this.eventHubUri);
     }
     /**
      * Links of the Contact Profile
@@ -116,8 +117,8 @@ public class ContactProfile extends com.pulumi.resources.CustomResource {
      * @return Minimum viable elevation for the contact in decimal degrees.
      * 
      */
-    public Output</* @Nullable */ Double> minimumElevationDegrees() {
-        return this.minimumElevationDegrees;
+    public Output<Optional<Double>> minimumElevationDegrees() {
+        return Codegen.optional(this.minimumElevationDegrees);
     }
     /**
      * Minimum viable contact duration in ISO 8601 format.
@@ -130,8 +131,8 @@ public class ContactProfile extends com.pulumi.resources.CustomResource {
      * @return Minimum viable contact duration in ISO 8601 format.
      * 
      */
-    public Output</* @Nullable */ String> minimumViableContactDuration() {
-        return this.minimumViableContactDuration;
+    public Output<Optional<String>> minimumViableContactDuration() {
+        return Codegen.optional(this.minimumViableContactDuration);
     }
     /**
      * The name of the resource
@@ -172,8 +173,8 @@ public class ContactProfile extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;

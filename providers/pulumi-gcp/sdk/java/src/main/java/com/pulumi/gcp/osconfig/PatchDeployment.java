@@ -16,6 +16,7 @@ import com.pulumi.gcp.osconfig.outputs.PatchDeploymentPatchConfig;
 import com.pulumi.gcp.osconfig.outputs.PatchDeploymentRecurringSchedule;
 import com.pulumi.gcp.osconfig.outputs.PatchDeploymentRollout;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -76,8 +77,8 @@ public class PatchDeployment extends com.pulumi.resources.CustomResource {
      * @return Description of the patch deployment. Length of the description is limited to 1024 characters.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Duration of the patch. After the duration ends, the patch times out.
@@ -92,8 +93,8 @@ public class PatchDeployment extends com.pulumi.resources.CustomResource {
      * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;
      * 
      */
-    public Output</* @Nullable */ String> duration() {
-        return this.duration;
+    public Output<Optional<String>> duration() {
+        return Codegen.optional(this.duration);
     }
     /**
      * VM instances to patch.
@@ -158,8 +159,8 @@ public class PatchDeployment extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ PatchDeploymentOneTimeSchedule> oneTimeSchedule() {
-        return this.oneTimeSchedule;
+    public Output<Optional<PatchDeploymentOneTimeSchedule>> oneTimeSchedule() {
+        return Codegen.optional(this.oneTimeSchedule);
     }
     /**
      * Patch configuration that is applied.
@@ -174,8 +175,8 @@ public class PatchDeployment extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ PatchDeploymentPatchConfig> patchConfig() {
-        return this.patchConfig;
+    public Output<Optional<PatchDeploymentPatchConfig>> patchConfig() {
+        return Codegen.optional(this.patchConfig);
     }
     /**
      * A name for the patch deployment in the project. When creating a name the following rules apply:
@@ -230,8 +231,8 @@ public class PatchDeployment extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ PatchDeploymentRecurringSchedule> recurringSchedule() {
-        return this.recurringSchedule;
+    public Output<Optional<PatchDeploymentRecurringSchedule>> recurringSchedule() {
+        return Codegen.optional(this.recurringSchedule);
     }
     /**
      * Rollout strategy of the patch job.
@@ -246,8 +247,8 @@ public class PatchDeployment extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ PatchDeploymentRollout> rollout() {
-        return this.rollout;
+    public Output<Optional<PatchDeploymentRollout>> rollout() {
+        return Codegen.optional(this.rollout);
     }
     /**
      * Time the patch deployment was last updated. Timestamp is in RFC3339 text format. A timestamp in RFC3339 UTC &#34;Zulu&#34;

@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -87,8 +88,8 @@ public class UserGroup extends com.pulumi.resources.CustomResource {
      * @return List of users associated to this user group.
      * 
      */
-    public Output</* @Nullable */ List<String>> userIds() {
-        return this.userIds;
+    public Output<Optional<List<String>>> userIds() {
+        return Codegen.optional(this.userIds);
     }
 
     /**

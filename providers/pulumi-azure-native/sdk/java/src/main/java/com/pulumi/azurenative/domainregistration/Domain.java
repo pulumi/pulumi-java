@@ -16,6 +16,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -35,8 +36,8 @@ public class Domain extends com.pulumi.resources.CustomResource {
     @Export(name="authCode", type=String.class, parameters={})
     private Output</* @Nullable */ String> authCode;
 
-    public Output</* @Nullable */ String> authCode() {
-        return this.authCode;
+    public Output<Optional<String>> authCode() {
+        return Codegen.optional(this.authCode);
     }
     /**
      * &lt;code&gt;true&lt;/code&gt; if the domain should be automatically renewed; otherwise, &lt;code&gt;false&lt;/code&gt;.
@@ -49,8 +50,8 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return &lt;code&gt;true&lt;/code&gt; if the domain should be automatically renewed; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
-    public Output</* @Nullable */ Boolean> autoRenew() {
-        return this.autoRenew;
+    public Output<Optional<Boolean>> autoRenew() {
+        return Codegen.optional(this.autoRenew);
     }
     /**
      * Domain creation timestamp.
@@ -77,8 +78,8 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return Current DNS type
      * 
      */
-    public Output</* @Nullable */ String> dnsType() {
-        return this.dnsType;
+    public Output<Optional<String>> dnsType() {
+        return Codegen.optional(this.dnsType);
     }
     /**
      * Azure DNS Zone to use
@@ -91,8 +92,8 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return Azure DNS Zone to use
      * 
      */
-    public Output</* @Nullable */ String> dnsZoneId() {
-        return this.dnsZoneId;
+    public Output<Optional<String>> dnsZoneId() {
+        return Codegen.optional(this.dnsZoneId);
     }
     /**
      * Reasons why domain is not renewable.
@@ -133,8 +134,8 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> kind() {
-        return this.kind;
+    public Output<Optional<String>> kind() {
+        return Codegen.optional(this.kind);
     }
     /**
      * Timestamp when the domain was renewed last time.
@@ -217,8 +218,8 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return &lt;code&gt;true&lt;/code&gt; if domain privacy is enabled for this domain; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
-    public Output</* @Nullable */ Boolean> privacy() {
-        return this.privacy;
+    public Output<Optional<Boolean>> privacy() {
+        return Codegen.optional(this.privacy);
     }
     /**
      * Domain provisioning state.
@@ -289,8 +290,8 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Target DNS type (would be used for migration)
@@ -303,8 +304,8 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return Target DNS type (would be used for migration)
      * 
      */
-    public Output</* @Nullable */ String> targetDnsType() {
-        return this.targetDnsType;
+    public Output<Optional<String>> targetDnsType() {
+        return Codegen.optional(this.targetDnsType);
     }
     /**
      * Resource type.

@@ -16,6 +16,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class LabAccount extends com.pulumi.resources.CustomResource {
      * @return Represents if region selection is enabled
      * 
      */
-    public Output</* @Nullable */ Boolean> enabledRegionSelection() {
-        return this.enabledRegionSelection;
+    public Output<Optional<Boolean>> enabledRegionSelection() {
+        return Codegen.optional(this.enabledRegionSelection);
     }
     /**
      * The details of the latest operation. ex: status, error
@@ -71,8 +72,8 @@ public class LabAccount extends com.pulumi.resources.CustomResource {
      * @return The location of the resource.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The name of the resource.
@@ -99,8 +100,8 @@ public class LabAccount extends com.pulumi.resources.CustomResource {
      * @return The provisioning status of the resource.
      * 
      */
-    public Output</* @Nullable */ String> provisioningState() {
-        return this.provisioningState;
+    public Output<Optional<String>> provisioningState() {
+        return Codegen.optional(this.provisioningState);
     }
     /**
      * Represents the size configuration under the lab account
@@ -127,8 +128,8 @@ public class LabAccount extends com.pulumi.resources.CustomResource {
      * @return The tags of the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource.
@@ -155,8 +156,8 @@ public class LabAccount extends com.pulumi.resources.CustomResource {
      * @return The unique immutable identifier of a resource (Guid).
      * 
      */
-    public Output</* @Nullable */ String> uniqueIdentifier() {
-        return this.uniqueIdentifier;
+    public Output<Optional<String>> uniqueIdentifier() {
+        return Codegen.optional(this.uniqueIdentifier);
     }
 
     /**

@@ -11,6 +11,7 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.oslogin.SshPublicKeyArgs;
 import com.pulumi.gcp.oslogin.inputs.SshPublicKeyState;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -50,8 +51,8 @@ public class SshPublicKey extends com.pulumi.resources.CustomResource {
      * @return An expiration time in microseconds since epoch.
      * 
      */
-    public Output</* @Nullable */ String> expirationTimeUsec() {
-        return this.expirationTimeUsec;
+    public Output<Optional<String>> expirationTimeUsec() {
+        return Codegen.optional(this.expirationTimeUsec);
     }
     /**
      * The SHA-256 fingerprint of the SSH public key.
@@ -92,8 +93,8 @@ public class SshPublicKey extends com.pulumi.resources.CustomResource {
      * @return The project ID of the Google Cloud Platform project.
      * 
      */
-    public Output</* @Nullable */ String> project() {
-        return this.project;
+    public Output<Optional<String>> project() {
+        return Codegen.optional(this.project);
     }
     /**
      * The user email.

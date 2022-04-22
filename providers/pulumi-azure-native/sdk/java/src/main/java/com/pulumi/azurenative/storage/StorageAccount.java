@@ -29,6 +29,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -73,8 +74,8 @@ public class StorageAccount extends com.pulumi.resources.CustomResource {
      * @return Allow or disallow public access to all blobs or containers in the storage account. The default interpretation is true for this property.
      * 
      */
-    public Output</* @Nullable */ Boolean> allowBlobPublicAccess() {
-        return this.allowBlobPublicAccess;
+    public Output<Optional<Boolean>> allowBlobPublicAccess() {
+        return Codegen.optional(this.allowBlobPublicAccess);
     }
     /**
      * Indicates whether the storage account permits requests to be authorized with the account access key via Shared Key. If false, then all requests, including shared access signatures, must be authorized with Azure Active Directory (Azure AD). The default value is null, which is equivalent to true.
@@ -87,8 +88,8 @@ public class StorageAccount extends com.pulumi.resources.CustomResource {
      * @return Indicates whether the storage account permits requests to be authorized with the account access key via Shared Key. If false, then all requests, including shared access signatures, must be authorized with Azure Active Directory (Azure AD). The default value is null, which is equivalent to true.
      * 
      */
-    public Output</* @Nullable */ Boolean> allowSharedKeyAccess() {
-        return this.allowSharedKeyAccess;
+    public Output<Optional<Boolean>> allowSharedKeyAccess() {
+        return Codegen.optional(this.allowSharedKeyAccess);
     }
     /**
      * Provides the identity based authentication settings for Azure Files.
@@ -101,8 +102,8 @@ public class StorageAccount extends com.pulumi.resources.CustomResource {
      * @return Provides the identity based authentication settings for Azure Files.
      * 
      */
-    public Output</* @Nullable */ AzureFilesIdentityBasedAuthenticationResponse> azureFilesIdentityBasedAuthentication() {
-        return this.azureFilesIdentityBasedAuthentication;
+    public Output<Optional<AzureFilesIdentityBasedAuthenticationResponse>> azureFilesIdentityBasedAuthentication() {
+        return Codegen.optional(this.azureFilesIdentityBasedAuthentication);
     }
     /**
      * Blob restore status
@@ -157,8 +158,8 @@ public class StorageAccount extends com.pulumi.resources.CustomResource {
      * @return Allows https traffic only to storage service if sets to true.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableHttpsTrafficOnly() {
-        return this.enableHttpsTrafficOnly;
+    public Output<Optional<Boolean>> enableHttpsTrafficOnly() {
+        return Codegen.optional(this.enableHttpsTrafficOnly);
     }
     /**
      * NFS 3.0 protocol support enabled if set to true.
@@ -171,8 +172,8 @@ public class StorageAccount extends com.pulumi.resources.CustomResource {
      * @return NFS 3.0 protocol support enabled if set to true.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableNfsV3() {
-        return this.enableNfsV3;
+    public Output<Optional<Boolean>> enableNfsV3() {
+        return Codegen.optional(this.enableNfsV3);
     }
     /**
      * Gets the encryption settings on the account. If unspecified, the account is unencrypted.
@@ -199,8 +200,8 @@ public class StorageAccount extends com.pulumi.resources.CustomResource {
      * @return The extendedLocation of the resource.
      * 
      */
-    public Output</* @Nullable */ ExtendedLocationResponse> extendedLocation() {
-        return this.extendedLocation;
+    public Output<Optional<ExtendedLocationResponse>> extendedLocation() {
+        return Codegen.optional(this.extendedLocation);
     }
     /**
      * If the failover is in progress, the value will be true, otherwise, it will be null.
@@ -241,8 +242,8 @@ public class StorageAccount extends com.pulumi.resources.CustomResource {
      * @return The identity of the resource.
      * 
      */
-    public Output</* @Nullable */ IdentityResponse> identity() {
-        return this.identity;
+    public Output<Optional<IdentityResponse>> identity() {
+        return Codegen.optional(this.identity);
     }
     /**
      * Account HierarchicalNamespace enabled if sets to true.
@@ -255,8 +256,8 @@ public class StorageAccount extends com.pulumi.resources.CustomResource {
      * @return Account HierarchicalNamespace enabled if sets to true.
      * 
      */
-    public Output</* @Nullable */ Boolean> isHnsEnabled() {
-        return this.isHnsEnabled;
+    public Output<Optional<Boolean>> isHnsEnabled() {
+        return Codegen.optional(this.isHnsEnabled);
     }
     /**
      * Storage account keys creation time.
@@ -311,8 +312,8 @@ public class StorageAccount extends com.pulumi.resources.CustomResource {
      * @return Allow large file shares if sets to Enabled. It cannot be disabled once it is enabled.
      * 
      */
-    public Output</* @Nullable */ String> largeFileSharesState() {
-        return this.largeFileSharesState;
+    public Output<Optional<String>> largeFileSharesState() {
+        return Codegen.optional(this.largeFileSharesState);
     }
     /**
      * Gets the timestamp of the most recent instance of a failover to the secondary location. Only the most recent timestamp is retained. This element is not returned if there has never been a failover instance. Only available if the accountType is Standard_GRS or Standard_RAGRS.
@@ -353,8 +354,8 @@ public class StorageAccount extends com.pulumi.resources.CustomResource {
      * @return Set the minimum TLS version to be permitted on requests to storage. The default interpretation is TLS 1.0 for this property.
      * 
      */
-    public Output</* @Nullable */ String> minimumTlsVersion() {
-        return this.minimumTlsVersion;
+    public Output<Optional<String>> minimumTlsVersion() {
+        return Codegen.optional(this.minimumTlsVersion);
     }
     /**
      * The name of the resource
@@ -451,8 +452,8 @@ public class StorageAccount extends com.pulumi.resources.CustomResource {
      * @return Maintains information about the network routing choice opted by the user for data transfer
      * 
      */
-    public Output</* @Nullable */ RoutingPreferenceResponse> routingPreference() {
-        return this.routingPreference;
+    public Output<Optional<RoutingPreferenceResponse>> routingPreference() {
+        return Codegen.optional(this.routingPreference);
     }
     /**
      * SasPolicy assigned to the storage account.
@@ -549,8 +550,8 @@ public class StorageAccount extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;

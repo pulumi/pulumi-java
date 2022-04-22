@@ -19,6 +19,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -77,8 +78,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return The ETag of the workspace.
      * 
      */
-    public Output</* @Nullable */ String> eTag() {
-        return this.eTag;
+    public Output<Optional<String>> eTag() {
+        return Codegen.optional(this.eTag);
     }
     /**
      * Workspace features.
@@ -91,8 +92,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return Workspace features.
      * 
      */
-    public Output</* @Nullable */ WorkspaceFeaturesResponse> features() {
-        return this.features;
+    public Output<Optional<WorkspaceFeaturesResponse>> features() {
+        return Codegen.optional(this.features);
     }
     /**
      * Indicates whether customer managed storage is mandatory for query management.
@@ -105,8 +106,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return Indicates whether customer managed storage is mandatory for query management.
      * 
      */
-    public Output</* @Nullable */ Boolean> forceCmkForQuery() {
-        return this.forceCmkForQuery;
+    public Output<Optional<Boolean>> forceCmkForQuery() {
+        return Codegen.optional(this.forceCmkForQuery);
     }
     /**
      * The geo-location where the resource lives
@@ -175,8 +176,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return The provisioning state of the workspace.
      * 
      */
-    public Output</* @Nullable */ String> provisioningState() {
-        return this.provisioningState;
+    public Output<Optional<String>> provisioningState() {
+        return Codegen.optional(this.provisioningState);
     }
     /**
      * The network access type for accessing Log Analytics ingestion.
@@ -189,8 +190,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return The network access type for accessing Log Analytics ingestion.
      * 
      */
-    public Output</* @Nullable */ String> publicNetworkAccessForIngestion() {
-        return this.publicNetworkAccessForIngestion;
+    public Output<Optional<String>> publicNetworkAccessForIngestion() {
+        return Codegen.optional(this.publicNetworkAccessForIngestion);
     }
     /**
      * The network access type for accessing Log Analytics query.
@@ -203,8 +204,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return The network access type for accessing Log Analytics query.
      * 
      */
-    public Output</* @Nullable */ String> publicNetworkAccessForQuery() {
-        return this.publicNetworkAccessForQuery;
+    public Output<Optional<String>> publicNetworkAccessForQuery() {
+        return Codegen.optional(this.publicNetworkAccessForQuery);
     }
     /**
      * The workspace data retention in days. Allowed values are per pricing plan. See pricing tiers documentation for details.
@@ -217,8 +218,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return The workspace data retention in days. Allowed values are per pricing plan. See pricing tiers documentation for details.
      * 
      */
-    public Output</* @Nullable */ Integer> retentionInDays() {
-        return this.retentionInDays;
+    public Output<Optional<Integer>> retentionInDays() {
+        return Codegen.optional(this.retentionInDays);
     }
     /**
      * The SKU of the workspace.
@@ -231,8 +232,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return The SKU of the workspace.
      * 
      */
-    public Output</* @Nullable */ WorkspaceSkuResponse> sku() {
-        return this.sku;
+    public Output<Optional<WorkspaceSkuResponse>> sku() {
+        return Codegen.optional(this.sku);
     }
     /**
      * Resource tags.
@@ -245,8 +246,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
@@ -273,8 +274,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return The daily volume cap for ingestion.
      * 
      */
-    public Output</* @Nullable */ WorkspaceCappingResponse> workspaceCapping() {
-        return this.workspaceCapping;
+    public Output<Optional<WorkspaceCappingResponse>> workspaceCapping() {
+        return Codegen.optional(this.workspaceCapping);
     }
 
     /**

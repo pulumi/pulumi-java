@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -82,8 +83,8 @@ public class ContactFlow extends com.pulumi.resources.CustomResource {
     @Export(name="contentHash", type=String.class, parameters={})
     private Output</* @Nullable */ String> contentHash;
 
-    public Output</* @Nullable */ String> contentHash() {
-        return this.contentHash;
+    public Output<Optional<String>> contentHash() {
+        return Codegen.optional(this.contentHash);
     }
     /**
      * Specifies the description of the Contact Flow.
@@ -96,8 +97,8 @@ public class ContactFlow extends com.pulumi.resources.CustomResource {
      * @return Specifies the description of the Contact Flow.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The path to the Contact Flow source within the local filesystem. Conflicts with `content`.
@@ -110,8 +111,8 @@ public class ContactFlow extends com.pulumi.resources.CustomResource {
      * @return The path to the Contact Flow source within the local filesystem. Conflicts with `content`.
      * 
      */
-    public Output</* @Nullable */ String> filename() {
-        return this.filename;
+    public Output<Optional<String>> filename() {
+        return Codegen.optional(this.filename);
     }
     /**
      * Specifies the identifier of the hosting Amazon Connect Instance.
@@ -152,8 +153,8 @@ public class ContactFlow extends com.pulumi.resources.CustomResource {
      * @return Tags to apply to the Contact Flow. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
@@ -180,8 +181,8 @@ public class ContactFlow extends com.pulumi.resources.CustomResource {
      * @return Specifies the type of the Contact Flow. Defaults to `CONTACT_FLOW`. Allowed Values are: `CONTACT_FLOW`, `CUSTOMER_QUEUE`, `CUSTOMER_HOLD`, `CUSTOMER_WHISPER`, `AGENT_HOLD`, `AGENT_WHISPER`, `OUTBOUND_WHISPER`, `AGENT_TRANSFER`, `QUEUE_TRANSFER`.
      * 
      */
-    public Output</* @Nullable */ String> type() {
-        return this.type;
+    public Output<Optional<String>> type() {
+        return Codegen.optional(this.type);
     }
 
     /**

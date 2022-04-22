@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -25,8 +26,8 @@ public class AppMonitor extends com.pulumi.resources.CustomResource {
     @Export(name="appMonitorConfiguration", type=AppMonitorConfiguration.class, parameters={})
     private Output</* @Nullable */ AppMonitorConfiguration> appMonitorConfiguration;
 
-    public Output</* @Nullable */ AppMonitorConfiguration> appMonitorConfiguration() {
-        return this.appMonitorConfiguration;
+    public Output<Optional<AppMonitorConfiguration>> appMonitorConfiguration() {
+        return Codegen.optional(this.appMonitorConfiguration);
     }
     /**
      * Data collected by RUM is kept by RUM for 30 days and then deleted. This parameter specifies whether RUM sends a copy of this telemetry data to CWLlong in your account. This enables you to keep the telemetry data for more than 30 days, but it does incur CWLlong charges. If you omit this parameter, the default is false
@@ -39,8 +40,8 @@ public class AppMonitor extends com.pulumi.resources.CustomResource {
      * @return Data collected by RUM is kept by RUM for 30 days and then deleted. This parameter specifies whether RUM sends a copy of this telemetry data to CWLlong in your account. This enables you to keep the telemetry data for more than 30 days, but it does incur CWLlong charges. If you omit this parameter, the default is false
      * 
      */
-    public Output</* @Nullable */ Boolean> cwLogEnabled() {
-        return this.cwLogEnabled;
+    public Output<Optional<Boolean>> cwLogEnabled() {
+        return Codegen.optional(this.cwLogEnabled);
     }
     /**
      * The top-level internet domain name for which your application has administrative authority.
@@ -73,8 +74,8 @@ public class AppMonitor extends com.pulumi.resources.CustomResource {
     @Export(name="tags", type=List.class, parameters={AppMonitorTag.class})
     private Output</* @Nullable */ List<AppMonitorTag>> tags;
 
-    public Output</* @Nullable */ List<AppMonitorTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<AppMonitorTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

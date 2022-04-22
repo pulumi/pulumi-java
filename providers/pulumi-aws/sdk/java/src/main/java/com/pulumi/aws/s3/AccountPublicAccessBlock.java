@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -63,8 +64,8 @@ public class AccountPublicAccessBlock extends com.pulumi.resources.CustomResourc
      * * PUT Object calls fail if the request includes a public ACL.
      * 
      */
-    public Output</* @Nullable */ Boolean> blockPublicAcls() {
-        return this.blockPublicAcls;
+    public Output<Optional<Boolean>> blockPublicAcls() {
+        return Codegen.optional(this.blockPublicAcls);
     }
     /**
      * Whether Amazon S3 should block public bucket policies for buckets in this account. Defaults to `false`. Enabling this setting does not affect existing bucket policies. When set to `true` causes Amazon S3 to:
@@ -79,8 +80,8 @@ public class AccountPublicAccessBlock extends com.pulumi.resources.CustomResourc
      * * Reject calls to PUT Bucket policy if the specified bucket policy allows public access.
      * 
      */
-    public Output</* @Nullable */ Boolean> blockPublicPolicy() {
-        return this.blockPublicPolicy;
+    public Output<Optional<Boolean>> blockPublicPolicy() {
+        return Codegen.optional(this.blockPublicPolicy);
     }
     /**
      * Whether Amazon S3 should ignore public ACLs for buckets in this account. Defaults to `false`. Enabling this setting does not affect the persistence of any existing ACLs and doesn&#39;t prevent new public ACLs from being set. When set to `true` causes Amazon S3 to:
@@ -95,8 +96,8 @@ public class AccountPublicAccessBlock extends com.pulumi.resources.CustomResourc
      * * Ignore all public ACLs on buckets in this account and any objects that they contain.
      * 
      */
-    public Output</* @Nullable */ Boolean> ignorePublicAcls() {
-        return this.ignorePublicAcls;
+    public Output<Optional<Boolean>> ignorePublicAcls() {
+        return Codegen.optional(this.ignorePublicAcls);
     }
     /**
      * Whether Amazon S3 should restrict public bucket policies for buckets in this account. Defaults to `false`. Enabling this setting does not affect previously stored bucket policies, except that public and cross-account access within any public bucket policy, including non-public delegation to specific accounts, is blocked. When set to `true`:
@@ -111,8 +112,8 @@ public class AccountPublicAccessBlock extends com.pulumi.resources.CustomResourc
      * * Only the bucket owner and AWS Services can access buckets with public policies.
      * 
      */
-    public Output</* @Nullable */ Boolean> restrictPublicBuckets() {
-        return this.restrictPublicBuckets;
+    public Output<Optional<Boolean>> restrictPublicBuckets() {
+        return Codegen.optional(this.restrictPublicBuckets);
     }
 
     /**

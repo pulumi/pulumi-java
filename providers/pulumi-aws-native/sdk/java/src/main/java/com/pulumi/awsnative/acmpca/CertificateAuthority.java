@@ -15,6 +15,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -64,8 +65,8 @@ public class CertificateAuthority extends com.pulumi.resources.CustomResource {
      * @return Structure that contains CSR pass through extension information used by the CreateCertificateAuthority action.
      * 
      */
-    public Output</* @Nullable */ CertificateAuthorityCsrExtensions> csrExtensions() {
-        return this.csrExtensions;
+    public Output<Optional<CertificateAuthorityCsrExtensions>> csrExtensions() {
+        return Codegen.optional(this.csrExtensions);
     }
     /**
      * Public key algorithm and size, in bits, of the key pair that your CA creates when it issues a certificate.
@@ -92,8 +93,8 @@ public class CertificateAuthority extends com.pulumi.resources.CustomResource {
      * @return KeyStorageSecurityStadard defines a cryptographic key management compliance standard used for handling CA keys.
      * 
      */
-    public Output</* @Nullable */ String> keyStorageSecurityStandard() {
-        return this.keyStorageSecurityStandard;
+    public Output<Optional<String>> keyStorageSecurityStandard() {
+        return Codegen.optional(this.keyStorageSecurityStandard);
     }
     /**
      * Certificate revocation information used by the CreateCertificateAuthority and UpdateCertificateAuthority actions.
@@ -106,8 +107,8 @@ public class CertificateAuthority extends com.pulumi.resources.CustomResource {
      * @return Certificate revocation information used by the CreateCertificateAuthority and UpdateCertificateAuthority actions.
      * 
      */
-    public Output</* @Nullable */ CertificateAuthorityRevocationConfiguration> revocationConfiguration() {
-        return this.revocationConfiguration;
+    public Output<Optional<CertificateAuthorityRevocationConfiguration>> revocationConfiguration() {
+        return Codegen.optional(this.revocationConfiguration);
     }
     /**
      * Algorithm your CA uses to sign certificate requests.
@@ -140,8 +141,8 @@ public class CertificateAuthority extends com.pulumi.resources.CustomResource {
     @Export(name="tags", type=List.class, parameters={CertificateAuthorityTag.class})
     private Output</* @Nullable */ List<CertificateAuthorityTag>> tags;
 
-    public Output</* @Nullable */ List<CertificateAuthorityTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<CertificateAuthorityTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the certificate authority.

@@ -16,6 +16,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -105,8 +106,8 @@ public class Node extends com.pulumi.resources.CustomResource {
      * @return The user-supplied description of the TPU. Maximum of 512 characters.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Resource labels to represent user provided metadata.
@@ -119,8 +120,8 @@ public class Node extends com.pulumi.resources.CustomResource {
      * @return Resource labels to represent user provided metadata.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * The immutable name of the TPU.
@@ -201,8 +202,8 @@ public class Node extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ NodeSchedulingConfig> schedulingConfig() {
-        return this.schedulingConfig;
+    public Output<Optional<NodeSchedulingConfig>> schedulingConfig() {
+        return Codegen.optional(this.schedulingConfig);
     }
     /**
      * The service account used to run the tensor flow services within the node. To share resources, including Google Cloud
@@ -251,8 +252,8 @@ public class Node extends com.pulumi.resources.CustomResource {
      * TPU Node to is a Shared VPC network, the node must be created with this this field enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> useServiceNetworking() {
-        return this.useServiceNetworking;
+    public Output<Optional<Boolean>> useServiceNetworking() {
+        return Codegen.optional(this.useServiceNetworking);
     }
     /**
      * The GCP location for the TPU. If it is not provided, the provider zone is used.

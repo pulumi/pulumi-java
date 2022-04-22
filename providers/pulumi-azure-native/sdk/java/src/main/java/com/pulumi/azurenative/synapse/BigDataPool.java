@@ -20,6 +20,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -50,8 +51,8 @@ public class BigDataPool extends com.pulumi.resources.CustomResource {
      * @return Auto-pausing properties
      * 
      */
-    public Output</* @Nullable */ AutoPausePropertiesResponse> autoPause() {
-        return this.autoPause;
+    public Output<Optional<AutoPausePropertiesResponse>> autoPause() {
+        return Codegen.optional(this.autoPause);
     }
     /**
      * Auto-scaling properties
@@ -64,8 +65,8 @@ public class BigDataPool extends com.pulumi.resources.CustomResource {
      * @return Auto-scaling properties
      * 
      */
-    public Output</* @Nullable */ AutoScalePropertiesResponse> autoScale() {
-        return this.autoScale;
+    public Output<Optional<AutoScalePropertiesResponse>> autoScale() {
+        return Codegen.optional(this.autoScale);
     }
     /**
      * The cache size
@@ -78,8 +79,8 @@ public class BigDataPool extends com.pulumi.resources.CustomResource {
      * @return The cache size
      * 
      */
-    public Output</* @Nullable */ Integer> cacheSize() {
-        return this.cacheSize;
+    public Output<Optional<Integer>> cacheSize() {
+        return Codegen.optional(this.cacheSize);
     }
     /**
      * The time when the Big Data pool was created.
@@ -92,8 +93,8 @@ public class BigDataPool extends com.pulumi.resources.CustomResource {
      * @return The time when the Big Data pool was created.
      * 
      */
-    public Output</* @Nullable */ String> creationDate() {
-        return this.creationDate;
+    public Output<Optional<String>> creationDate() {
+        return Codegen.optional(this.creationDate);
     }
     /**
      * List of custom libraries/packages associated with the spark pool.
@@ -106,8 +107,8 @@ public class BigDataPool extends com.pulumi.resources.CustomResource {
      * @return List of custom libraries/packages associated with the spark pool.
      * 
      */
-    public Output</* @Nullable */ List<LibraryInfoResponse>> customLibraries() {
-        return this.customLibraries;
+    public Output<Optional<List<LibraryInfoResponse>>> customLibraries() {
+        return Codegen.optional(this.customLibraries);
     }
     /**
      * The default folder where Spark logs will be written.
@@ -120,8 +121,8 @@ public class BigDataPool extends com.pulumi.resources.CustomResource {
      * @return The default folder where Spark logs will be written.
      * 
      */
-    public Output</* @Nullable */ String> defaultSparkLogFolder() {
-        return this.defaultSparkLogFolder;
+    public Output<Optional<String>> defaultSparkLogFolder() {
+        return Codegen.optional(this.defaultSparkLogFolder);
     }
     /**
      * Dynamic Executor Allocation
@@ -134,8 +135,8 @@ public class BigDataPool extends com.pulumi.resources.CustomResource {
      * @return Dynamic Executor Allocation
      * 
      */
-    public Output</* @Nullable */ DynamicExecutorAllocationResponse> dynamicExecutorAllocation() {
-        return this.dynamicExecutorAllocation;
+    public Output<Optional<DynamicExecutorAllocationResponse>> dynamicExecutorAllocation() {
+        return Codegen.optional(this.dynamicExecutorAllocation);
     }
     /**
      * Whether compute isolation is required or not.
@@ -148,8 +149,8 @@ public class BigDataPool extends com.pulumi.resources.CustomResource {
      * @return Whether compute isolation is required or not.
      * 
      */
-    public Output</* @Nullable */ Boolean> isComputeIsolationEnabled() {
-        return this.isComputeIsolationEnabled;
+    public Output<Optional<Boolean>> isComputeIsolationEnabled() {
+        return Codegen.optional(this.isComputeIsolationEnabled);
     }
     /**
      * The time when the Big Data pool was updated successfully.
@@ -176,8 +177,8 @@ public class BigDataPool extends com.pulumi.resources.CustomResource {
      * @return Library version requirements
      * 
      */
-    public Output</* @Nullable */ LibraryRequirementsResponse> libraryRequirements() {
-        return this.libraryRequirements;
+    public Output<Optional<LibraryRequirementsResponse>> libraryRequirements() {
+        return Codegen.optional(this.libraryRequirements);
     }
     /**
      * The geo-location where the resource lives
@@ -218,8 +219,8 @@ public class BigDataPool extends com.pulumi.resources.CustomResource {
      * @return The number of nodes in the Big Data pool.
      * 
      */
-    public Output</* @Nullable */ Integer> nodeCount() {
-        return this.nodeCount;
+    public Output<Optional<Integer>> nodeCount() {
+        return Codegen.optional(this.nodeCount);
     }
     /**
      * The level of compute power that each node in the Big Data pool has.
@@ -232,8 +233,8 @@ public class BigDataPool extends com.pulumi.resources.CustomResource {
      * @return The level of compute power that each node in the Big Data pool has.
      * 
      */
-    public Output</* @Nullable */ String> nodeSize() {
-        return this.nodeSize;
+    public Output<Optional<String>> nodeSize() {
+        return Codegen.optional(this.nodeSize);
     }
     /**
      * The kind of nodes that the Big Data pool provides.
@@ -246,8 +247,8 @@ public class BigDataPool extends com.pulumi.resources.CustomResource {
      * @return The kind of nodes that the Big Data pool provides.
      * 
      */
-    public Output</* @Nullable */ String> nodeSizeFamily() {
-        return this.nodeSizeFamily;
+    public Output<Optional<String>> nodeSizeFamily() {
+        return Codegen.optional(this.nodeSizeFamily);
     }
     /**
      * The state of the Big Data pool.
@@ -260,8 +261,8 @@ public class BigDataPool extends com.pulumi.resources.CustomResource {
      * @return The state of the Big Data pool.
      * 
      */
-    public Output</* @Nullable */ String> provisioningState() {
-        return this.provisioningState;
+    public Output<Optional<String>> provisioningState() {
+        return Codegen.optional(this.provisioningState);
     }
     /**
      * Whether session level packages enabled.
@@ -274,8 +275,8 @@ public class BigDataPool extends com.pulumi.resources.CustomResource {
      * @return Whether session level packages enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> sessionLevelPackagesEnabled() {
-        return this.sessionLevelPackagesEnabled;
+    public Output<Optional<Boolean>> sessionLevelPackagesEnabled() {
+        return Codegen.optional(this.sessionLevelPackagesEnabled);
     }
     /**
      * Spark configuration file to specify additional properties
@@ -288,8 +289,8 @@ public class BigDataPool extends com.pulumi.resources.CustomResource {
      * @return Spark configuration file to specify additional properties
      * 
      */
-    public Output</* @Nullable */ LibraryRequirementsResponse> sparkConfigProperties() {
-        return this.sparkConfigProperties;
+    public Output<Optional<LibraryRequirementsResponse>> sparkConfigProperties() {
+        return Codegen.optional(this.sparkConfigProperties);
     }
     /**
      * The Spark events folder
@@ -302,8 +303,8 @@ public class BigDataPool extends com.pulumi.resources.CustomResource {
      * @return The Spark events folder
      * 
      */
-    public Output</* @Nullable */ String> sparkEventsFolder() {
-        return this.sparkEventsFolder;
+    public Output<Optional<String>> sparkEventsFolder() {
+        return Codegen.optional(this.sparkEventsFolder);
     }
     /**
      * The Apache Spark version.
@@ -316,8 +317,8 @@ public class BigDataPool extends com.pulumi.resources.CustomResource {
      * @return The Apache Spark version.
      * 
      */
-    public Output</* @Nullable */ String> sparkVersion() {
-        return this.sparkVersion;
+    public Output<Optional<String>> sparkVersion() {
+        return Codegen.optional(this.sparkVersion);
     }
     /**
      * Resource tags.
@@ -330,8 +331,8 @@ public class BigDataPool extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;

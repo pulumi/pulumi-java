@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return HTTP strong entity tag value. Ignored if submitted
      * 
      */
-    public Output</* @Nullable */ String> etag() {
-        return this.etag;
+    public Output<Optional<String>> etag() {
+        return Codegen.optional(this.etag);
     }
     /**
      * The resource kind. Only &#39;vm&#39; (the default) is supported.
@@ -58,8 +59,8 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return The resource kind. Only &#39;vm&#39; (the default) is supported.
      * 
      */
-    public Output</* @Nullable */ String> kind() {
-        return this.kind;
+    public Output<Optional<String>> kind() {
+        return Codegen.optional(this.kind);
     }
     /**
      * Resource location.
@@ -114,8 +115,8 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return The public key of the service, used to encrypt secrets sent to the service
      * 
      */
-    public Output</* @Nullable */ String> publicKey() {
-        return this.publicKey;
+    public Output<Optional<String>> publicKey() {
+        return Codegen.optional(this.publicKey);
     }
     /**
      * Service SKU
@@ -128,8 +129,8 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return Service SKU
      * 
      */
-    public Output</* @Nullable */ ServiceSkuResponse> sku() {
-        return this.sku;
+    public Output<Optional<ServiceSkuResponse>> sku() {
+        return Codegen.optional(this.sku);
     }
     /**
      * Resource tags.
@@ -142,8 +143,8 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type.

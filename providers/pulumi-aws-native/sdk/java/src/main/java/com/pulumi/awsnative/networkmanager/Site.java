@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -32,8 +33,8 @@ public class Site extends com.pulumi.resources.CustomResource {
      * @return The description of the site.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The ID of the global network.
@@ -60,8 +61,8 @@ public class Site extends com.pulumi.resources.CustomResource {
      * @return The location of the site.
      * 
      */
-    public Output</* @Nullable */ SiteLocation> location() {
-        return this.location;
+    public Output<Optional<SiteLocation>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The Amazon Resource Name (ARN) of the site.
@@ -102,8 +103,8 @@ public class Site extends com.pulumi.resources.CustomResource {
      * @return The tags for the site.
      * 
      */
-    public Output</* @Nullable */ List<SiteTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<SiteTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

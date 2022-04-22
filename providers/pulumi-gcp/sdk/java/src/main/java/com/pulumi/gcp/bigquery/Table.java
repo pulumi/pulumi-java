@@ -21,6 +21,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -60,8 +61,8 @@ public class Table extends com.pulumi.resources.CustomResource {
      * descending priority order.
      * 
      */
-    public Output</* @Nullable */ List<String>> clusterings() {
-        return this.clusterings;
+    public Output<Optional<List<String>>> clusterings() {
+        return Codegen.optional(this.clusterings);
     }
     /**
      * The time when this table was created, in milliseconds since the epoch.
@@ -106,8 +107,8 @@ public class Table extends com.pulumi.resources.CustomResource {
      * in state, a `=destroy` or `=update` that would delete the instance will fail.
      * 
      */
-    public Output</* @Nullable */ Boolean> deletionProtection() {
-        return this.deletionProtection;
+    public Output<Optional<Boolean>> deletionProtection() {
+        return Codegen.optional(this.deletionProtection);
     }
     /**
      * The field description.
@@ -120,8 +121,8 @@ public class Table extends com.pulumi.resources.CustomResource {
      * @return The field description.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Specifies how the table should be encrypted.
@@ -138,8 +139,8 @@ public class Table extends com.pulumi.resources.CustomResource {
      * is transparent to the user.  Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ TableEncryptionConfiguration> encryptionConfiguration() {
-        return this.encryptionConfiguration;
+    public Output<Optional<TableEncryptionConfiguration>> encryptionConfiguration() {
+        return Codegen.optional(this.encryptionConfiguration);
     }
     /**
      * A hash of the resource.
@@ -192,8 +193,8 @@ public class Table extends com.pulumi.resources.CustomResource {
      * if it were a standard BigQuery table. Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ TableExternalDataConfiguration> externalDataConfiguration() {
-        return this.externalDataConfiguration;
+    public Output<Optional<TableExternalDataConfiguration>> externalDataConfiguration() {
+        return Codegen.optional(this.externalDataConfiguration);
     }
     /**
      * A descriptive name for the table.
@@ -206,8 +207,8 @@ public class Table extends com.pulumi.resources.CustomResource {
      * @return A descriptive name for the table.
      * 
      */
-    public Output</* @Nullable */ String> friendlyName() {
-        return this.friendlyName;
+    public Output<Optional<String>> friendlyName() {
+        return Codegen.optional(this.friendlyName);
     }
     /**
      * A mapping of labels to assign to the resource.
@@ -220,8 +221,8 @@ public class Table extends com.pulumi.resources.CustomResource {
      * @return A mapping of labels to assign to the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * The time when this table was last modified, in milliseconds since the epoch.
@@ -264,8 +265,8 @@ public class Table extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ TableMaterializedView> materializedView() {
-        return this.materializedView;
+    public Output<Optional<TableMaterializedView>> materializedView() {
+        return Codegen.optional(this.materializedView);
     }
     /**
      * The size of this table in bytes, excluding any data in the streaming buffer.
@@ -338,8 +339,8 @@ public class Table extends com.pulumi.resources.CustomResource {
      * partitioning for this table. Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ TableRangePartitioning> rangePartitioning() {
-        return this.rangePartitioning;
+    public Output<Optional<TableRangePartitioning>> rangePartitioning() {
+        return Codegen.optional(this.rangePartitioning);
     }
     /**
      * A JSON schema for the external table. Schema is required
@@ -418,8 +419,8 @@ public class Table extends com.pulumi.resources.CustomResource {
      * partitioning for this table. Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ TableTimePartitioning> timePartitioning() {
-        return this.timePartitioning;
+    public Output<Optional<TableTimePartitioning>> timePartitioning() {
+        return Codegen.optional(this.timePartitioning);
     }
     /**
      * The supported types are DAY, HOUR, MONTH, and YEAR,
@@ -450,8 +451,8 @@ public class Table extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ TableView> view() {
-        return this.view;
+    public Output<Optional<TableView>> view() {
+        return Codegen.optional(this.view);
     }
 
     /**

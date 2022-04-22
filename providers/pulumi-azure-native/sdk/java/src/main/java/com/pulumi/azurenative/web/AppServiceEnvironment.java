@@ -17,6 +17,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class AppServiceEnvironment extends com.pulumi.resources.CustomResource {
      * @return Custom settings for changing the behavior of the App Service Environment.
      * 
      */
-    public Output</* @Nullable */ List<NameValuePairResponse>> clusterSettings() {
-        return this.clusterSettings;
+    public Output<Optional<List<NameValuePairResponse>>> clusterSettings() {
+        return Codegen.optional(this.clusterSettings);
     }
     /**
      * Dedicated Host Count
@@ -72,8 +73,8 @@ public class AppServiceEnvironment extends com.pulumi.resources.CustomResource {
      * @return DNS suffix of the App Service Environment.
      * 
      */
-    public Output</* @Nullable */ String> dnsSuffix() {
-        return this.dnsSuffix;
+    public Output<Optional<String>> dnsSuffix() {
+        return Codegen.optional(this.dnsSuffix);
     }
     /**
      * Scale factor for front-ends.
@@ -86,8 +87,8 @@ public class AppServiceEnvironment extends com.pulumi.resources.CustomResource {
      * @return Scale factor for front-ends.
      * 
      */
-    public Output</* @Nullable */ Integer> frontEndScaleFactor() {
-        return this.frontEndScaleFactor;
+    public Output<Optional<Integer>> frontEndScaleFactor() {
+        return Codegen.optional(this.frontEndScaleFactor);
     }
     /**
      * Flag that displays whether an ASE has linux workers or not
@@ -114,8 +115,8 @@ public class AppServiceEnvironment extends com.pulumi.resources.CustomResource {
      * @return Specifies which endpoints to serve internally in the Virtual Network for the App Service Environment.
      * 
      */
-    public Output</* @Nullable */ String> internalLoadBalancingMode() {
-        return this.internalLoadBalancingMode;
+    public Output<Optional<String>> internalLoadBalancingMode() {
+        return Codegen.optional(this.internalLoadBalancingMode);
     }
     /**
      * Number of IP SSL addresses reserved for the App Service Environment.
@@ -128,8 +129,8 @@ public class AppServiceEnvironment extends com.pulumi.resources.CustomResource {
      * @return Number of IP SSL addresses reserved for the App Service Environment.
      * 
      */
-    public Output</* @Nullable */ Integer> ipsslAddressCount() {
-        return this.ipsslAddressCount;
+    public Output<Optional<Integer>> ipsslAddressCount() {
+        return Codegen.optional(this.ipsslAddressCount);
     }
     /**
      * Kind of resource.
@@ -142,8 +143,8 @@ public class AppServiceEnvironment extends com.pulumi.resources.CustomResource {
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> kind() {
-        return this.kind;
+    public Output<Optional<String>> kind() {
+        return Codegen.optional(this.kind);
     }
     /**
      * Resource Location.
@@ -198,8 +199,8 @@ public class AppServiceEnvironment extends com.pulumi.resources.CustomResource {
      * @return Front-end VM size, e.g. &#34;Medium&#34;, &#34;Large&#34;.
      * 
      */
-    public Output</* @Nullable */ String> multiSize() {
-        return this.multiSize;
+    public Output<Optional<String>> multiSize() {
+        return Codegen.optional(this.multiSize);
     }
     /**
      * Resource Name.
@@ -270,8 +271,8 @@ public class AppServiceEnvironment extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type.
@@ -298,8 +299,8 @@ public class AppServiceEnvironment extends com.pulumi.resources.CustomResource {
      * @return User added ip ranges to whitelist on ASE db
      * 
      */
-    public Output</* @Nullable */ List<String>> userWhitelistedIpRanges() {
-        return this.userWhitelistedIpRanges;
+    public Output<Optional<List<String>>> userWhitelistedIpRanges() {
+        return Codegen.optional(this.userWhitelistedIpRanges);
     }
     /**
      * Description of the Virtual Network.

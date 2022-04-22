@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -175,8 +176,8 @@ public class HostedPrivateVirtualInterface extends com.pulumi.resources.CustomRe
      * @return The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection. The MTU of a virtual private interface can be either `1500` or `9001` (jumbo frames). Default is `1500`.
      * 
      */
-    public Output</* @Nullable */ Integer> mtu() {
-        return this.mtu;
+    public Output<Optional<Integer>> mtu() {
+        return Codegen.optional(this.mtu);
     }
     /**
      * The name for the virtual interface.

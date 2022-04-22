@@ -12,6 +12,7 @@ import com.pulumi.gcp.tags.TagKeyIamMemberArgs;
 import com.pulumi.gcp.tags.inputs.TagKeyIamMemberState;
 import com.pulumi.gcp.tags.outputs.TagKeyIamMemberCondition;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -61,8 +62,8 @@ public class TagKeyIamMember extends com.pulumi.resources.CustomResource {
     @Export(name="condition", type=TagKeyIamMemberCondition.class, parameters={})
     private Output</* @Nullable */ TagKeyIamMemberCondition> condition;
 
-    public Output</* @Nullable */ TagKeyIamMemberCondition> condition() {
-        return this.condition;
+    public Output<Optional<TagKeyIamMemberCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * (Computed) The etag of the IAM policy.

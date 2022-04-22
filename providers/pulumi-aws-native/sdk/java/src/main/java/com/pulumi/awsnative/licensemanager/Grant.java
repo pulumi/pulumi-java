@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -22,8 +23,8 @@ public class Grant extends com.pulumi.resources.CustomResource {
     @Export(name="allowedOperations", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> allowedOperations;
 
-    public Output</* @Nullable */ List<String>> allowedOperations() {
-        return this.allowedOperations;
+    public Output<Optional<List<String>>> allowedOperations() {
+        return Codegen.optional(this.allowedOperations);
     }
     /**
      * Arn of the grant.
@@ -50,8 +51,8 @@ public class Grant extends com.pulumi.resources.CustomResource {
      * @return Name for the created Grant.
      * 
      */
-    public Output</* @Nullable */ String> grantName() {
-        return this.grantName;
+    public Output<Optional<String>> grantName() {
+        return Codegen.optional(this.grantName);
     }
     /**
      * Home region for the created grant.
@@ -64,8 +65,8 @@ public class Grant extends com.pulumi.resources.CustomResource {
      * @return Home region for the created grant.
      * 
      */
-    public Output</* @Nullable */ String> homeRegion() {
-        return this.homeRegion;
+    public Output<Optional<String>> homeRegion() {
+        return Codegen.optional(this.homeRegion);
     }
     /**
      * License Arn for the grant.
@@ -78,20 +79,20 @@ public class Grant extends com.pulumi.resources.CustomResource {
      * @return License Arn for the grant.
      * 
      */
-    public Output</* @Nullable */ String> licenseArn() {
-        return this.licenseArn;
+    public Output<Optional<String>> licenseArn() {
+        return Codegen.optional(this.licenseArn);
     }
     @Export(name="principals", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> principals;
 
-    public Output</* @Nullable */ List<String>> principals() {
-        return this.principals;
+    public Output<Optional<List<String>>> principals() {
+        return Codegen.optional(this.principals);
     }
     @Export(name="status", type=String.class, parameters={})
     private Output</* @Nullable */ String> status;
 
-    public Output</* @Nullable */ String> status() {
-        return this.status;
+    public Output<Optional<String>> status() {
+        return Codegen.optional(this.status);
     }
     /**
      * The version of the grant.

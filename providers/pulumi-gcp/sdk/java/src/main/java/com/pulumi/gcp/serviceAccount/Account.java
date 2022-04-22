@@ -12,6 +12,7 @@ import com.pulumi.gcp.serviceAccount.AccountArgs;
 import com.pulumi.gcp.serviceAccount.inputs.AccountState;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -73,8 +74,8 @@ public class Account extends com.pulumi.resources.CustomResource {
      * Must be less than or equal to 256 UTF-8 bytes.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Whether a service account is disabled or not. Defaults to `false`. This field has no effect during creation.
@@ -89,8 +90,8 @@ public class Account extends com.pulumi.resources.CustomResource {
      * Must be set after creation to disable a service account.
      * 
      */
-    public Output</* @Nullable */ Boolean> disabled() {
-        return this.disabled;
+    public Output<Optional<Boolean>> disabled() {
+        return Codegen.optional(this.disabled);
     }
     /**
      * The display name for the service account.
@@ -105,8 +106,8 @@ public class Account extends com.pulumi.resources.CustomResource {
      * Can be updated without creating a new resource.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * The e-mail address of the service account. This value

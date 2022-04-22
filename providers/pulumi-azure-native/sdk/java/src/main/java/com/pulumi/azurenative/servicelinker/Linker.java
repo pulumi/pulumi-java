@@ -19,6 +19,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -49,8 +50,8 @@ public class Linker extends com.pulumi.resources.CustomResource {
      * @return The authentication type.
      * 
      */
-    public Output</* @Nullable */ Object> authInfo() {
-        return this.authInfo;
+    public Output<Optional<Object>> authInfo() {
+        return Codegen.optional(this.authInfo);
     }
     /**
      * The application client type
@@ -63,8 +64,8 @@ public class Linker extends com.pulumi.resources.CustomResource {
      * @return The application client type
      * 
      */
-    public Output</* @Nullable */ String> clientType() {
-        return this.clientType;
+    public Output<Optional<String>> clientType() {
+        return Codegen.optional(this.clientType);
     }
     /**
      * The name of the resource
@@ -119,8 +120,8 @@ public class Linker extends com.pulumi.resources.CustomResource {
      * @return The resource Id of target service.
      * 
      */
-    public Output</* @Nullable */ String> targetId() {
-        return this.targetId;
+    public Output<Optional<String>> targetId() {
+        return Codegen.optional(this.targetId);
     }
     /**
      * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;

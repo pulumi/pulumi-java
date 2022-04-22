@@ -18,6 +18,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -48,8 +49,8 @@ public class AppServicePlan extends com.pulumi.resources.CustomResource {
      * @return The time when the server farm free offer expires.
      * 
      */
-    public Output</* @Nullable */ String> freeOfferExpirationTime() {
-        return this.freeOfferExpirationTime;
+    public Output<Optional<String>> freeOfferExpirationTime() {
+        return Codegen.optional(this.freeOfferExpirationTime);
     }
     /**
      * Geographical location for the App Service plan.
@@ -76,8 +77,8 @@ public class AppServicePlan extends com.pulumi.resources.CustomResource {
      * @return Specification for the App Service Environment to use for the App Service plan.
      * 
      */
-    public Output</* @Nullable */ HostingEnvironmentProfileResponse> hostingEnvironmentProfile() {
-        return this.hostingEnvironmentProfile;
+    public Output<Optional<HostingEnvironmentProfileResponse>> hostingEnvironmentProfile() {
+        return Codegen.optional(this.hostingEnvironmentProfile);
     }
     /**
      * If Hyper-V container app service plan &lt;code&gt;true&lt;/code&gt;, &lt;code&gt;false&lt;/code&gt; otherwise.
@@ -90,8 +91,8 @@ public class AppServicePlan extends com.pulumi.resources.CustomResource {
      * @return If Hyper-V container app service plan &lt;code&gt;true&lt;/code&gt;, &lt;code&gt;false&lt;/code&gt; otherwise.
      * 
      */
-    public Output</* @Nullable */ Boolean> hyperV() {
-        return this.hyperV;
+    public Output<Optional<Boolean>> hyperV() {
+        return Codegen.optional(this.hyperV);
     }
     /**
      * If &lt;code&gt;true&lt;/code&gt;, this App Service Plan owns spot instances.
@@ -104,8 +105,8 @@ public class AppServicePlan extends com.pulumi.resources.CustomResource {
      * @return If &lt;code&gt;true&lt;/code&gt;, this App Service Plan owns spot instances.
      * 
      */
-    public Output</* @Nullable */ Boolean> isSpot() {
-        return this.isSpot;
+    public Output<Optional<Boolean>> isSpot() {
+        return Codegen.optional(this.isSpot);
     }
     /**
      * Obsolete: If Hyper-V container app service plan &lt;code&gt;true&lt;/code&gt;, &lt;code&gt;false&lt;/code&gt; otherwise.
@@ -118,8 +119,8 @@ public class AppServicePlan extends com.pulumi.resources.CustomResource {
      * @return Obsolete: If Hyper-V container app service plan &lt;code&gt;true&lt;/code&gt;, &lt;code&gt;false&lt;/code&gt; otherwise.
      * 
      */
-    public Output</* @Nullable */ Boolean> isXenon() {
-        return this.isXenon;
+    public Output<Optional<Boolean>> isXenon() {
+        return Codegen.optional(this.isXenon);
     }
     /**
      * Kind of resource.
@@ -132,8 +133,8 @@ public class AppServicePlan extends com.pulumi.resources.CustomResource {
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> kind() {
-        return this.kind;
+    public Output<Optional<String>> kind() {
+        return Codegen.optional(this.kind);
     }
     /**
      * Specification for the Kubernetes Environment to use for the App Service plan.
@@ -146,8 +147,8 @@ public class AppServicePlan extends com.pulumi.resources.CustomResource {
      * @return Specification for the Kubernetes Environment to use for the App Service plan.
      * 
      */
-    public Output</* @Nullable */ KubeEnvironmentProfileResponse> kubeEnvironmentProfile() {
-        return this.kubeEnvironmentProfile;
+    public Output<Optional<KubeEnvironmentProfileResponse>> kubeEnvironmentProfile() {
+        return Codegen.optional(this.kubeEnvironmentProfile);
     }
     /**
      * Resource Location.
@@ -174,8 +175,8 @@ public class AppServicePlan extends com.pulumi.resources.CustomResource {
      * @return Maximum number of total workers allowed for this ElasticScaleEnabled App Service Plan
      * 
      */
-    public Output</* @Nullable */ Integer> maximumElasticWorkerCount() {
-        return this.maximumElasticWorkerCount;
+    public Output<Optional<Integer>> maximumElasticWorkerCount() {
+        return Codegen.optional(this.maximumElasticWorkerCount);
     }
     /**
      * Maximum number of instances that can be assigned to this App Service plan.
@@ -232,8 +233,8 @@ public class AppServicePlan extends com.pulumi.resources.CustomResource {
      * If &lt;code&gt;false&lt;/code&gt;, apps assigned to this App Service plan will scale to all instances of the plan.
      * 
      */
-    public Output</* @Nullable */ Boolean> perSiteScaling() {
-        return this.perSiteScaling;
+    public Output<Optional<Boolean>> perSiteScaling() {
+        return Codegen.optional(this.perSiteScaling);
     }
     /**
      * Provisioning state of the App Service Plan.
@@ -260,8 +261,8 @@ public class AppServicePlan extends com.pulumi.resources.CustomResource {
      * @return If Linux app service plan &lt;code&gt;true&lt;/code&gt;, &lt;code&gt;false&lt;/code&gt; otherwise.
      * 
      */
-    public Output</* @Nullable */ Boolean> reserved() {
-        return this.reserved;
+    public Output<Optional<Boolean>> reserved() {
+        return Codegen.optional(this.reserved);
     }
     /**
      * Resource group of the App Service plan.
@@ -288,8 +289,8 @@ public class AppServicePlan extends com.pulumi.resources.CustomResource {
      * @return Description of a SKU for a scalable resource.
      * 
      */
-    public Output</* @Nullable */ SkuDescriptionResponse> sku() {
-        return this.sku;
+    public Output<Optional<SkuDescriptionResponse>> sku() {
+        return Codegen.optional(this.sku);
     }
     /**
      * The time when the server farm expires. Valid only if it is a spot server farm.
@@ -302,8 +303,8 @@ public class AppServicePlan extends com.pulumi.resources.CustomResource {
      * @return The time when the server farm expires. Valid only if it is a spot server farm.
      * 
      */
-    public Output</* @Nullable */ String> spotExpirationTime() {
-        return this.spotExpirationTime;
+    public Output<Optional<String>> spotExpirationTime() {
+        return Codegen.optional(this.spotExpirationTime);
     }
     /**
      * App Service plan status.
@@ -344,8 +345,8 @@ public class AppServicePlan extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Scaling worker count.
@@ -358,8 +359,8 @@ public class AppServicePlan extends com.pulumi.resources.CustomResource {
      * @return Scaling worker count.
      * 
      */
-    public Output</* @Nullable */ Integer> targetWorkerCount() {
-        return this.targetWorkerCount;
+    public Output<Optional<Integer>> targetWorkerCount() {
+        return Codegen.optional(this.targetWorkerCount);
     }
     /**
      * Scaling worker size ID.
@@ -372,8 +373,8 @@ public class AppServicePlan extends com.pulumi.resources.CustomResource {
      * @return Scaling worker size ID.
      * 
      */
-    public Output</* @Nullable */ Integer> targetWorkerSizeId() {
-        return this.targetWorkerSizeId;
+    public Output<Optional<Integer>> targetWorkerSizeId() {
+        return Codegen.optional(this.targetWorkerSizeId);
     }
     /**
      * Resource type.
@@ -400,8 +401,8 @@ public class AppServicePlan extends com.pulumi.resources.CustomResource {
      * @return Target worker tier assigned to the App Service plan.
      * 
      */
-    public Output</* @Nullable */ String> workerTierName() {
-        return this.workerTierName;
+    public Output<Optional<String>> workerTierName() {
+        return Codegen.optional(this.workerTierName);
     }
 
     /**

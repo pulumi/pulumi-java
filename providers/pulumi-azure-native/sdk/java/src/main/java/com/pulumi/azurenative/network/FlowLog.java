@@ -17,6 +17,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -47,8 +48,8 @@ public class FlowLog extends com.pulumi.resources.CustomResource {
      * @return Flag to enable/disable flow logging.
      * 
      */
-    public Output</* @Nullable */ Boolean> enabled() {
-        return this.enabled;
+    public Output<Optional<Boolean>> enabled() {
+        return Codegen.optional(this.enabled);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
@@ -75,8 +76,8 @@ public class FlowLog extends com.pulumi.resources.CustomResource {
      * @return Parameters that define the configuration of traffic analytics.
      * 
      */
-    public Output</* @Nullable */ TrafficAnalyticsPropertiesResponse> flowAnalyticsConfiguration() {
-        return this.flowAnalyticsConfiguration;
+    public Output<Optional<TrafficAnalyticsPropertiesResponse>> flowAnalyticsConfiguration() {
+        return Codegen.optional(this.flowAnalyticsConfiguration);
     }
     /**
      * Parameters that define the flow log format.
@@ -89,8 +90,8 @@ public class FlowLog extends com.pulumi.resources.CustomResource {
      * @return Parameters that define the flow log format.
      * 
      */
-    public Output</* @Nullable */ FlowLogFormatParametersResponse> format() {
-        return this.format;
+    public Output<Optional<FlowLogFormatParametersResponse>> format() {
+        return Codegen.optional(this.format);
     }
     /**
      * Resource location.
@@ -103,8 +104,8 @@ public class FlowLog extends com.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * Resource name.
@@ -145,8 +146,8 @@ public class FlowLog extends com.pulumi.resources.CustomResource {
      * @return Parameters that define the retention policy for flow log.
      * 
      */
-    public Output</* @Nullable */ RetentionPolicyParametersResponse> retentionPolicy() {
-        return this.retentionPolicy;
+    public Output<Optional<RetentionPolicyParametersResponse>> retentionPolicy() {
+        return Codegen.optional(this.retentionPolicy);
     }
     /**
      * ID of the storage account which is used to store the flow log.
@@ -173,8 +174,8 @@ public class FlowLog extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Guid of network security group to which flow log will be applied.

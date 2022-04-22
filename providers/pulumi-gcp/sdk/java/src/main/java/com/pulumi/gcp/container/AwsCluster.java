@@ -19,6 +19,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -58,8 +59,8 @@ public class AwsCluster extends com.pulumi.resources.CustomResource {
      * @return Optional. Annotations on the cluster. This field has the same restrictions as Kubernetes annotations. The total size of all keys and values combined is limited to 256k. Key can have 2 segments: prefix (optional) and name (required), separated by a slash (/). Prefix must be a DNS subdomain. Name must be 63 characters or less, begin and end with alphanumerics, with dashes (-), underscores (_), dots (.), and alphanumerics between.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> annotations() {
-        return this.annotations;
+    public Output<Optional<Map<String,String>>> annotations() {
+        return Codegen.optional(this.annotations);
     }
     /**
      * Required. Configuration related to the cluster RBAC settings.
@@ -128,8 +129,8 @@ public class AwsCluster extends com.pulumi.resources.CustomResource {
      * @return Optional. A human readable description of this cluster. Cannot be longer than 255 UTF-8 encoded bytes.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Output only. The endpoint of the cluster&#39;s API server.

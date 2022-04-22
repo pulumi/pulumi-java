@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -24,8 +25,8 @@ public class BackupVault extends com.pulumi.resources.CustomResource {
     @Export(name="accessPolicy", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> accessPolicy;
 
-    public Output</* @Nullable */ Object> accessPolicy() {
-        return this.accessPolicy;
+    public Output<Optional<Object>> accessPolicy() {
+        return Codegen.optional(this.accessPolicy);
     }
     @Export(name="backupVaultArn", type=String.class, parameters={})
     private Output<String> backupVaultArn;
@@ -42,26 +43,26 @@ public class BackupVault extends com.pulumi.resources.CustomResource {
     @Export(name="backupVaultTags", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> backupVaultTags;
 
-    public Output</* @Nullable */ Object> backupVaultTags() {
-        return this.backupVaultTags;
+    public Output<Optional<Object>> backupVaultTags() {
+        return Codegen.optional(this.backupVaultTags);
     }
     @Export(name="encryptionKeyArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> encryptionKeyArn;
 
-    public Output</* @Nullable */ String> encryptionKeyArn() {
-        return this.encryptionKeyArn;
+    public Output<Optional<String>> encryptionKeyArn() {
+        return Codegen.optional(this.encryptionKeyArn);
     }
     @Export(name="lockConfiguration", type=BackupVaultLockConfigurationType.class, parameters={})
     private Output</* @Nullable */ BackupVaultLockConfigurationType> lockConfiguration;
 
-    public Output</* @Nullable */ BackupVaultLockConfigurationType> lockConfiguration() {
-        return this.lockConfiguration;
+    public Output<Optional<BackupVaultLockConfigurationType>> lockConfiguration() {
+        return Codegen.optional(this.lockConfiguration);
     }
     @Export(name="notifications", type=BackupVaultNotificationObjectType.class, parameters={})
     private Output</* @Nullable */ BackupVaultNotificationObjectType> notifications;
 
-    public Output</* @Nullable */ BackupVaultNotificationObjectType> notifications() {
-        return this.notifications;
+    public Output<Optional<BackupVaultNotificationObjectType>> notifications() {
+        return Codegen.optional(this.notifications);
     }
 
     /**

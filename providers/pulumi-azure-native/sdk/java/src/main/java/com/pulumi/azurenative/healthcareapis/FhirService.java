@@ -20,6 +20,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -50,8 +51,8 @@ public class FhirService extends com.pulumi.resources.CustomResource {
      * @return Fhir Service access policies.
      * 
      */
-    public Output</* @Nullable */ List<FhirServiceAccessPolicyEntryResponse>> accessPolicies() {
-        return this.accessPolicies;
+    public Output<Optional<List<FhirServiceAccessPolicyEntryResponse>>> accessPolicies() {
+        return Codegen.optional(this.accessPolicies);
     }
     /**
      * Fhir Service Azure container registry configuration.
@@ -64,8 +65,8 @@ public class FhirService extends com.pulumi.resources.CustomResource {
      * @return Fhir Service Azure container registry configuration.
      * 
      */
-    public Output</* @Nullable */ FhirServiceAcrConfigurationResponse> acrConfiguration() {
-        return this.acrConfiguration;
+    public Output<Optional<FhirServiceAcrConfigurationResponse>> acrConfiguration() {
+        return Codegen.optional(this.acrConfiguration);
     }
     /**
      * Fhir Service authentication configuration.
@@ -78,8 +79,8 @@ public class FhirService extends com.pulumi.resources.CustomResource {
      * @return Fhir Service authentication configuration.
      * 
      */
-    public Output</* @Nullable */ FhirServiceAuthenticationConfigurationResponse> authenticationConfiguration() {
-        return this.authenticationConfiguration;
+    public Output<Optional<FhirServiceAuthenticationConfigurationResponse>> authenticationConfiguration() {
+        return Codegen.optional(this.authenticationConfiguration);
     }
     /**
      * Fhir Service Cors configuration.
@@ -92,8 +93,8 @@ public class FhirService extends com.pulumi.resources.CustomResource {
      * @return Fhir Service Cors configuration.
      * 
      */
-    public Output</* @Nullable */ FhirServiceCorsConfigurationResponse> corsConfiguration() {
-        return this.corsConfiguration;
+    public Output<Optional<FhirServiceCorsConfigurationResponse>> corsConfiguration() {
+        return Codegen.optional(this.corsConfiguration);
     }
     /**
      * An etag associated with the resource, used for optimistic concurrency when editing it.
@@ -106,8 +107,8 @@ public class FhirService extends com.pulumi.resources.CustomResource {
      * @return An etag associated with the resource, used for optimistic concurrency when editing it.
      * 
      */
-    public Output</* @Nullable */ String> etag() {
-        return this.etag;
+    public Output<Optional<String>> etag() {
+        return Codegen.optional(this.etag);
     }
     /**
      * Fhir Service export configuration.
@@ -120,8 +121,8 @@ public class FhirService extends com.pulumi.resources.CustomResource {
      * @return Fhir Service export configuration.
      * 
      */
-    public Output</* @Nullable */ FhirServiceExportConfigurationResponse> exportConfiguration() {
-        return this.exportConfiguration;
+    public Output<Optional<FhirServiceExportConfigurationResponse>> exportConfiguration() {
+        return Codegen.optional(this.exportConfiguration);
     }
     /**
      * Setting indicating whether the service has a managed identity associated with it.
@@ -134,8 +135,8 @@ public class FhirService extends com.pulumi.resources.CustomResource {
      * @return Setting indicating whether the service has a managed identity associated with it.
      * 
      */
-    public Output</* @Nullable */ ServiceManagedIdentityResponseIdentity> identity() {
-        return this.identity;
+    public Output<Optional<ServiceManagedIdentityResponseIdentity>> identity() {
+        return Codegen.optional(this.identity);
     }
     /**
      * The kind of the service.
@@ -148,8 +149,8 @@ public class FhirService extends com.pulumi.resources.CustomResource {
      * @return The kind of the service.
      * 
      */
-    public Output</* @Nullable */ String> kind() {
-        return this.kind;
+    public Output<Optional<String>> kind() {
+        return Codegen.optional(this.kind);
     }
     /**
      * The resource location.
@@ -162,8 +163,8 @@ public class FhirService extends com.pulumi.resources.CustomResource {
      * @return The resource location.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The resource name.
@@ -218,8 +219,8 @@ public class FhirService extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The resource type.

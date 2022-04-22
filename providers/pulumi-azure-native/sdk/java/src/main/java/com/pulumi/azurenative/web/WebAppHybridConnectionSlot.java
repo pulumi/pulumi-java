@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -40,8 +41,8 @@ public class WebAppHybridConnectionSlot extends com.pulumi.resources.CustomResou
      * @return The hostname of the endpoint.
      * 
      */
-    public Output</* @Nullable */ String> hostname() {
-        return this.hostname;
+    public Output<Optional<String>> hostname() {
+        return Codegen.optional(this.hostname);
     }
     /**
      * Kind of resource.
@@ -54,8 +55,8 @@ public class WebAppHybridConnectionSlot extends com.pulumi.resources.CustomResou
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> kind() {
-        return this.kind;
+    public Output<Optional<String>> kind() {
+        return Codegen.optional(this.kind);
     }
     /**
      * Resource Name.
@@ -82,8 +83,8 @@ public class WebAppHybridConnectionSlot extends com.pulumi.resources.CustomResou
      * @return The port of the endpoint.
      * 
      */
-    public Output</* @Nullable */ Integer> port() {
-        return this.port;
+    public Output<Optional<Integer>> port() {
+        return Codegen.optional(this.port);
     }
     /**
      * The ARM URI to the Service Bus relay.
@@ -96,8 +97,8 @@ public class WebAppHybridConnectionSlot extends com.pulumi.resources.CustomResou
      * @return The ARM URI to the Service Bus relay.
      * 
      */
-    public Output</* @Nullable */ String> relayArmUri() {
-        return this.relayArmUri;
+    public Output<Optional<String>> relayArmUri() {
+        return Codegen.optional(this.relayArmUri);
     }
     /**
      * The name of the Service Bus relay.
@@ -110,8 +111,8 @@ public class WebAppHybridConnectionSlot extends com.pulumi.resources.CustomResou
      * @return The name of the Service Bus relay.
      * 
      */
-    public Output</* @Nullable */ String> relayName() {
-        return this.relayName;
+    public Output<Optional<String>> relayName() {
+        return Codegen.optional(this.relayName);
     }
     /**
      * The name of the Service Bus key which has Send permissions. This is used to authenticate to Service Bus.
@@ -124,8 +125,8 @@ public class WebAppHybridConnectionSlot extends com.pulumi.resources.CustomResou
      * @return The name of the Service Bus key which has Send permissions. This is used to authenticate to Service Bus.
      * 
      */
-    public Output</* @Nullable */ String> sendKeyName() {
-        return this.sendKeyName;
+    public Output<Optional<String>> sendKeyName() {
+        return Codegen.optional(this.sendKeyName);
     }
     /**
      * The value of the Service Bus key. This is used to authenticate to Service Bus. In ARM this key will not be returned
@@ -140,8 +141,8 @@ public class WebAppHybridConnectionSlot extends com.pulumi.resources.CustomResou
      * normally, use the POST /listKeys API instead.
      * 
      */
-    public Output</* @Nullable */ String> sendKeyValue() {
-        return this.sendKeyValue;
+    public Output<Optional<String>> sendKeyValue() {
+        return Codegen.optional(this.sendKeyValue);
     }
     /**
      * The name of the Service Bus namespace.
@@ -154,8 +155,8 @@ public class WebAppHybridConnectionSlot extends com.pulumi.resources.CustomResou
      * @return The name of the Service Bus namespace.
      * 
      */
-    public Output</* @Nullable */ String> serviceBusNamespace() {
-        return this.serviceBusNamespace;
+    public Output<Optional<String>> serviceBusNamespace() {
+        return Codegen.optional(this.serviceBusNamespace);
     }
     /**
      * The suffix for the service bus endpoint. By default this is .servicebus.windows.net
@@ -168,8 +169,8 @@ public class WebAppHybridConnectionSlot extends com.pulumi.resources.CustomResou
      * @return The suffix for the service bus endpoint. By default this is .servicebus.windows.net
      * 
      */
-    public Output</* @Nullable */ String> serviceBusSuffix() {
-        return this.serviceBusSuffix;
+    public Output<Optional<String>> serviceBusSuffix() {
+        return Codegen.optional(this.serviceBusSuffix);
     }
     /**
      * Resource type.

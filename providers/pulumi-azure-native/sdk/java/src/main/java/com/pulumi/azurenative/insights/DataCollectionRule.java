@@ -16,6 +16,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class DataCollectionRule extends com.pulumi.resources.CustomResource {
      * @return The specification of data flows.
      * 
      */
-    public Output</* @Nullable */ List<DataFlowResponse>> dataFlows() {
-        return this.dataFlows;
+    public Output<Optional<List<DataFlowResponse>>> dataFlows() {
+        return Codegen.optional(this.dataFlows);
     }
     /**
      * The specification of data sources.
@@ -62,8 +63,8 @@ public class DataCollectionRule extends com.pulumi.resources.CustomResource {
      * This property is optional and can be omitted if the rule is meant to be used via direct calls to the provisioned endpoint.
      * 
      */
-    public Output</* @Nullable */ DataCollectionRuleResponseDataSources> dataSources() {
-        return this.dataSources;
+    public Output<Optional<DataCollectionRuleResponseDataSources>> dataSources() {
+        return Codegen.optional(this.dataSources);
     }
     /**
      * Description of the data collection rule.
@@ -76,8 +77,8 @@ public class DataCollectionRule extends com.pulumi.resources.CustomResource {
      * @return Description of the data collection rule.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The specification of destinations.
@@ -90,8 +91,8 @@ public class DataCollectionRule extends com.pulumi.resources.CustomResource {
      * @return The specification of destinations.
      * 
      */
-    public Output</* @Nullable */ DataCollectionRuleResponseDestinations> destinations() {
-        return this.destinations;
+    public Output<Optional<DataCollectionRuleResponseDestinations>> destinations() {
+        return Codegen.optional(this.destinations);
     }
     /**
      * Resource entity tag (ETag).
@@ -132,8 +133,8 @@ public class DataCollectionRule extends com.pulumi.resources.CustomResource {
      * @return The kind of the resource.
      * 
      */
-    public Output</* @Nullable */ String> kind() {
-        return this.kind;
+    public Output<Optional<String>> kind() {
+        return Codegen.optional(this.kind);
     }
     /**
      * The geo-location where the resource lives.
@@ -188,8 +189,8 @@ public class DataCollectionRule extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource.

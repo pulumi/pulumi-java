@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -57,8 +58,8 @@ public class Workforce extends com.pulumi.resources.CustomResource {
      * @return Use this parameter to configure an Amazon Cognito private workforce. A single Cognito workforce is created using and corresponds to a single Amazon Cognito user pool. Conflicts with `oidc_config`. see Cognito Config details below.
      * 
      */
-    public Output</* @Nullable */ WorkforceCognitoConfig> cognitoConfig() {
-        return this.cognitoConfig;
+    public Output<Optional<WorkforceCognitoConfig>> cognitoConfig() {
+        return Codegen.optional(this.cognitoConfig);
     }
     /**
      * Use this parameter to configure a private workforce using your own OIDC Identity Provider. Conflicts with `cognito_config`. see OIDC Config details below.
@@ -71,8 +72,8 @@ public class Workforce extends com.pulumi.resources.CustomResource {
      * @return Use this parameter to configure a private workforce using your own OIDC Identity Provider. Conflicts with `cognito_config`. see OIDC Config details below.
      * 
      */
-    public Output</* @Nullable */ WorkforceOidcConfig> oidcConfig() {
-        return this.oidcConfig;
+    public Output<Optional<WorkforceOidcConfig>> oidcConfig() {
+        return Codegen.optional(this.oidcConfig);
     }
     /**
      * A list of IP address ranges Used to create an allow list of IP addresses for a private workforce. By default, a workforce isn&#39;t restricted to specific IP addresses. see Source Ip Config details below.

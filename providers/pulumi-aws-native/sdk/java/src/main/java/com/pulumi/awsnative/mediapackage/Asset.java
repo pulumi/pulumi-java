@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -88,8 +89,8 @@ public class Asset extends com.pulumi.resources.CustomResource {
      * @return The resource ID to include in SPEKE key requests.
      * 
      */
-    public Output</* @Nullable */ String> resourceId() {
-        return this.resourceId;
+    public Output<Optional<String>> resourceId() {
+        return Codegen.optional(this.resourceId);
     }
     /**
      * ARN of the source object in S3.
@@ -130,8 +131,8 @@ public class Asset extends com.pulumi.resources.CustomResource {
      * @return A collection of tags associated with a resource
      * 
      */
-    public Output</* @Nullable */ List<AssetTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<AssetTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

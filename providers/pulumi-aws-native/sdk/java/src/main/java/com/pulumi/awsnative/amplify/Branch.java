@@ -16,6 +16,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -39,8 +40,8 @@ public class Branch extends com.pulumi.resources.CustomResource {
     @Export(name="basicAuthConfig", type=BranchBasicAuthConfig.class, parameters={})
     private Output</* @Nullable */ BranchBasicAuthConfig> basicAuthConfig;
 
-    public Output</* @Nullable */ BranchBasicAuthConfig> basicAuthConfig() {
-        return this.basicAuthConfig;
+    public Output<Optional<BranchBasicAuthConfig>> basicAuthConfig() {
+        return Codegen.optional(this.basicAuthConfig);
     }
     @Export(name="branchName", type=String.class, parameters={})
     private Output<String> branchName;
@@ -51,56 +52,56 @@ public class Branch extends com.pulumi.resources.CustomResource {
     @Export(name="buildSpec", type=String.class, parameters={})
     private Output</* @Nullable */ String> buildSpec;
 
-    public Output</* @Nullable */ String> buildSpec() {
-        return this.buildSpec;
+    public Output<Optional<String>> buildSpec() {
+        return Codegen.optional(this.buildSpec);
     }
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     @Export(name="enableAutoBuild", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableAutoBuild;
 
-    public Output</* @Nullable */ Boolean> enableAutoBuild() {
-        return this.enableAutoBuild;
+    public Output<Optional<Boolean>> enableAutoBuild() {
+        return Codegen.optional(this.enableAutoBuild);
     }
     @Export(name="enablePerformanceMode", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enablePerformanceMode;
 
-    public Output</* @Nullable */ Boolean> enablePerformanceMode() {
-        return this.enablePerformanceMode;
+    public Output<Optional<Boolean>> enablePerformanceMode() {
+        return Codegen.optional(this.enablePerformanceMode);
     }
     @Export(name="enablePullRequestPreview", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enablePullRequestPreview;
 
-    public Output</* @Nullable */ Boolean> enablePullRequestPreview() {
-        return this.enablePullRequestPreview;
+    public Output<Optional<Boolean>> enablePullRequestPreview() {
+        return Codegen.optional(this.enablePullRequestPreview);
     }
     @Export(name="environmentVariables", type=List.class, parameters={BranchEnvironmentVariable.class})
     private Output</* @Nullable */ List<BranchEnvironmentVariable>> environmentVariables;
 
-    public Output</* @Nullable */ List<BranchEnvironmentVariable>> environmentVariables() {
-        return this.environmentVariables;
+    public Output<Optional<List<BranchEnvironmentVariable>>> environmentVariables() {
+        return Codegen.optional(this.environmentVariables);
     }
     @Export(name="pullRequestEnvironmentName", type=String.class, parameters={})
     private Output</* @Nullable */ String> pullRequestEnvironmentName;
 
-    public Output</* @Nullable */ String> pullRequestEnvironmentName() {
-        return this.pullRequestEnvironmentName;
+    public Output<Optional<String>> pullRequestEnvironmentName() {
+        return Codegen.optional(this.pullRequestEnvironmentName);
     }
     @Export(name="stage", type=BranchStage.class, parameters={})
     private Output</* @Nullable */ BranchStage> stage;
 
-    public Output</* @Nullable */ BranchStage> stage() {
-        return this.stage;
+    public Output<Optional<BranchStage>> stage() {
+        return Codegen.optional(this.stage);
     }
     @Export(name="tags", type=List.class, parameters={BranchTag.class})
     private Output</* @Nullable */ List<BranchTag>> tags;
 
-    public Output</* @Nullable */ List<BranchTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<BranchTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

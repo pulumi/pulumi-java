@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class SubnetGroup extends com.pulumi.resources.CustomResource {
      * @return An optional description of the subnet group.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The name of the subnet group. This value must be unique as it also serves as the subnet group identifier.
@@ -87,8 +88,8 @@ public class SubnetGroup extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this subnet group.
      * 
      */
-    public Output</* @Nullable */ List<SubnetGroupTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<SubnetGroupTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

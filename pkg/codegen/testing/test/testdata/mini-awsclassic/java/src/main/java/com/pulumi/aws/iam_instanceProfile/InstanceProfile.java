@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 @ResourceType(type="aws:iam/instanceProfile:InstanceProfile")
@@ -26,8 +27,8 @@ public class InstanceProfile extends com.pulumi.resources.CustomResource {
      * @return Name of the role to add to the profile.
      * 
      */
-    public Output</* @Nullable */ String> role() {
-        return this.role;
+    public Output<Optional<String>> role() {
+        return Codegen.optional(this.role);
     }
 
     /**

@@ -10,6 +10,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -47,8 +48,8 @@ public class ResourceDefaultVersion extends com.pulumi.resources.CustomResource 
      * We recommend that type names adhere to the following pattern: company_or_organization::service::type.
      * 
      */
-    public Output</* @Nullable */ String> typeName() {
-        return this.typeName;
+    public Output<Optional<String>> typeName() {
+        return Codegen.optional(this.typeName);
     }
     /**
      * The Amazon Resource Name (ARN) of the type version.
@@ -61,8 +62,8 @@ public class ResourceDefaultVersion extends com.pulumi.resources.CustomResource 
      * @return The Amazon Resource Name (ARN) of the type version.
      * 
      */
-    public Output</* @Nullable */ String> typeVersionArn() {
-        return this.typeVersionArn;
+    public Output<Optional<String>> typeVersionArn() {
+        return Codegen.optional(this.typeVersionArn);
     }
     /**
      * The ID of an existing version of the resource to set as the default.
@@ -75,8 +76,8 @@ public class ResourceDefaultVersion extends com.pulumi.resources.CustomResource 
      * @return The ID of an existing version of the resource to set as the default.
      * 
      */
-    public Output</* @Nullable */ String> versionId() {
-        return this.versionId;
+    public Output<Optional<String>> versionId() {
+        return Codegen.optional(this.versionId);
     }
 
     /**

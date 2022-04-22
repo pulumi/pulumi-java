@@ -15,6 +15,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class ConnectivityConfiguration extends com.pulumi.resources.CustomResour
      * @return Groups for configuration
      * 
      */
-    public Output</* @Nullable */ List<ConnectivityGroupItemResponse>> appliesToGroups() {
-        return this.appliesToGroups;
+    public Output<Optional<List<ConnectivityGroupItemResponse>>> appliesToGroups() {
+        return Codegen.optional(this.appliesToGroups);
     }
     /**
      * Connectivity topology type.
@@ -73,8 +74,8 @@ public class ConnectivityConfiguration extends com.pulumi.resources.CustomResour
      * @return Flag if need to remove current existing peerings.
      * 
      */
-    public Output</* @Nullable */ String> deleteExistingPeering() {
-        return this.deleteExistingPeering;
+    public Output<Optional<String>> deleteExistingPeering() {
+        return Codegen.optional(this.deleteExistingPeering);
     }
     /**
      * A description of the connectivity configuration.
@@ -87,8 +88,8 @@ public class ConnectivityConfiguration extends com.pulumi.resources.CustomResour
      * @return A description of the connectivity configuration.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * A friendly name for the resource.
@@ -101,8 +102,8 @@ public class ConnectivityConfiguration extends com.pulumi.resources.CustomResour
      * @return A friendly name for the resource.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
@@ -129,8 +130,8 @@ public class ConnectivityConfiguration extends com.pulumi.resources.CustomResour
      * @return List of hubItems
      * 
      */
-    public Output</* @Nullable */ List<HubResponse>> hubs() {
-        return this.hubs;
+    public Output<Optional<List<HubResponse>>> hubs() {
+        return Codegen.optional(this.hubs);
     }
     /**
      * Flag if global mesh is supported.
@@ -143,8 +144,8 @@ public class ConnectivityConfiguration extends com.pulumi.resources.CustomResour
      * @return Flag if global mesh is supported.
      * 
      */
-    public Output</* @Nullable */ String> isGlobal() {
-        return this.isGlobal;
+    public Output<Optional<String>> isGlobal() {
+        return Codegen.optional(this.isGlobal);
     }
     /**
      * Resource name.

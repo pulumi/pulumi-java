@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,26 +47,26 @@ public class GeofenceCollection extends com.pulumi.resources.CustomResource {
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     @Export(name="kmsKeyId", type=String.class, parameters={})
     private Output</* @Nullable */ String> kmsKeyId;
 
-    public Output</* @Nullable */ String> kmsKeyId() {
-        return this.kmsKeyId;
+    public Output<Optional<String>> kmsKeyId() {
+        return Codegen.optional(this.kmsKeyId);
     }
     @Export(name="pricingPlan", type=GeofenceCollectionPricingPlan.class, parameters={})
     private Output</* @Nullable */ GeofenceCollectionPricingPlan> pricingPlan;
 
-    public Output</* @Nullable */ GeofenceCollectionPricingPlan> pricingPlan() {
-        return this.pricingPlan;
+    public Output<Optional<GeofenceCollectionPricingPlan>> pricingPlan() {
+        return Codegen.optional(this.pricingPlan);
     }
     @Export(name="pricingPlanDataSource", type=String.class, parameters={})
     private Output</* @Nullable */ String> pricingPlanDataSource;
 
-    public Output</* @Nullable */ String> pricingPlanDataSource() {
-        return this.pricingPlanDataSource;
+    public Output<Optional<String>> pricingPlanDataSource() {
+        return Codegen.optional(this.pricingPlanDataSource);
     }
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;

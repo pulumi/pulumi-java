@@ -16,6 +16,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -59,8 +60,8 @@ public class NfsFileShare extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the storage used for audit logs.
      * 
      */
-    public Output</* @Nullable */ String> auditDestinationArn() {
-        return this.auditDestinationArn;
+    public Output<Optional<String>> auditDestinationArn() {
+        return Codegen.optional(this.auditDestinationArn);
     }
     /**
      * Refresh cache information. see Cache Attributes for more details.
@@ -73,8 +74,8 @@ public class NfsFileShare extends com.pulumi.resources.CustomResource {
      * @return Refresh cache information. see Cache Attributes for more details.
      * 
      */
-    public Output</* @Nullable */ NfsFileShareCacheAttributes> cacheAttributes() {
-        return this.cacheAttributes;
+    public Output<Optional<NfsFileShareCacheAttributes>> cacheAttributes() {
+        return Codegen.optional(this.cacheAttributes);
     }
     /**
      * The list of clients that are allowed to access the file gateway. The list must contain either valid IP addresses or valid CIDR blocks. Set to `[&#34;0.0.0.0/0&#34;]` to not limit access. Minimum 1 item. Maximum 100 items.
@@ -101,8 +102,8 @@ public class NfsFileShare extends com.pulumi.resources.CustomResource {
      * @return The default [storage class](https://docs.aws.amazon.com/storagegateway/latest/APIReference/API_CreateNFSFileShare.html#StorageGateway-CreateNFSFileShare-request-DefaultStorageClass) for objects put into an Amazon S3 bucket by the file gateway. Defaults to `S3_STANDARD`.
      * 
      */
-    public Output</* @Nullable */ String> defaultStorageClass() {
-        return this.defaultStorageClass;
+    public Output<Optional<String>> defaultStorageClass() {
+        return Codegen.optional(this.defaultStorageClass);
     }
     /**
      * The name of the file share. Must be set if an S3 prefix name is set in `location_arn`.
@@ -157,8 +158,8 @@ public class NfsFileShare extends com.pulumi.resources.CustomResource {
      * @return Boolean value that enables guessing of the MIME type for uploaded objects based on file extensions. Defaults to `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> guessMimeTypeEnabled() {
-        return this.guessMimeTypeEnabled;
+    public Output<Optional<Boolean>> guessMimeTypeEnabled() {
+        return Codegen.optional(this.guessMimeTypeEnabled);
     }
     /**
      * Boolean value if `true` to use Amazon S3 server side encryption with your own AWS KMS key, or `false` to use a key managed by Amazon S3. Defaults to `false`.
@@ -171,8 +172,8 @@ public class NfsFileShare extends com.pulumi.resources.CustomResource {
      * @return Boolean value if `true` to use Amazon S3 server side encryption with your own AWS KMS key, or `false` to use a key managed by Amazon S3. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> kmsEncrypted() {
-        return this.kmsEncrypted;
+    public Output<Optional<Boolean>> kmsEncrypted() {
+        return Codegen.optional(this.kmsEncrypted);
     }
     /**
      * Amazon Resource Name (ARN) for KMS key used for Amazon S3 server side encryption. This value can only be set when `kms_encrypted` is true.
@@ -185,8 +186,8 @@ public class NfsFileShare extends com.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) for KMS key used for Amazon S3 server side encryption. This value can only be set when `kms_encrypted` is true.
      * 
      */
-    public Output</* @Nullable */ String> kmsKeyArn() {
-        return this.kmsKeyArn;
+    public Output<Optional<String>> kmsKeyArn() {
+        return Codegen.optional(this.kmsKeyArn);
     }
     /**
      * The ARN of the backed storage used for storing file data.
@@ -213,8 +214,8 @@ public class NfsFileShare extends com.pulumi.resources.CustomResource {
      * @return Nested argument with file share default values. More information below. see NFS File Share Defaults for more details.
      * 
      */
-    public Output</* @Nullable */ NfsFileShareNfsFileShareDefaults> nfsFileShareDefaults() {
-        return this.nfsFileShareDefaults;
+    public Output<Optional<NfsFileShareNfsFileShareDefaults>> nfsFileShareDefaults() {
+        return Codegen.optional(this.nfsFileShareDefaults);
     }
     /**
      * The notification policy of the file share. For more information see the [AWS Documentation](https://docs.aws.amazon.com/storagegateway/latest/APIReference/API_CreateNFSFileShare.html#StorageGateway-CreateNFSFileShare-request-NotificationPolicy). Default value is `{}`.
@@ -227,8 +228,8 @@ public class NfsFileShare extends com.pulumi.resources.CustomResource {
      * @return The notification policy of the file share. For more information see the [AWS Documentation](https://docs.aws.amazon.com/storagegateway/latest/APIReference/API_CreateNFSFileShare.html#StorageGateway-CreateNFSFileShare-request-NotificationPolicy). Default value is `{}`.
      * 
      */
-    public Output</* @Nullable */ String> notificationPolicy() {
-        return this.notificationPolicy;
+    public Output<Optional<String>> notificationPolicy() {
+        return Codegen.optional(this.notificationPolicy);
     }
     /**
      * Access Control List permission for S3 bucket objects. Defaults to `private`.
@@ -241,8 +242,8 @@ public class NfsFileShare extends com.pulumi.resources.CustomResource {
      * @return Access Control List permission for S3 bucket objects. Defaults to `private`.
      * 
      */
-    public Output</* @Nullable */ String> objectAcl() {
-        return this.objectAcl;
+    public Output<Optional<String>> objectAcl() {
+        return Codegen.optional(this.objectAcl);
     }
     /**
      * File share path used by the NFS client to identify the mount point.
@@ -269,8 +270,8 @@ public class NfsFileShare extends com.pulumi.resources.CustomResource {
      * @return Boolean to indicate write status of file share. File share does not accept writes if `true`. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> readOnly() {
-        return this.readOnly;
+    public Output<Optional<Boolean>> readOnly() {
+        return Codegen.optional(this.readOnly);
     }
     /**
      * Boolean who pays the cost of the request and the data download from the Amazon S3 bucket. Set this value to `true` if you want the requester to pay instead of the bucket owner. Defaults to `false`.
@@ -283,8 +284,8 @@ public class NfsFileShare extends com.pulumi.resources.CustomResource {
      * @return Boolean who pays the cost of the request and the data download from the Amazon S3 bucket. Set this value to `true` if you want the requester to pay instead of the bucket owner. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> requesterPays() {
-        return this.requesterPays;
+    public Output<Optional<Boolean>> requesterPays() {
+        return Codegen.optional(this.requesterPays);
     }
     /**
      * The ARN of the AWS Identity and Access Management (IAM) role that a file gateway assumes when it accesses the underlying storage.
@@ -311,8 +312,8 @@ public class NfsFileShare extends com.pulumi.resources.CustomResource {
      * @return Maps a user to anonymous user. Defaults to `RootSquash`. Valid values: `RootSquash` (only root is mapped to anonymous user), `NoSquash` (no one is mapped to anonymous user), `AllSquash` (everyone is mapped to anonymous user)
      * 
      */
-    public Output</* @Nullable */ String> squash() {
-        return this.squash;
+    public Output<Optional<String>> squash() {
+        return Codegen.optional(this.squash);
     }
     /**
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -325,8 +326,8 @@ public class NfsFileShare extends com.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

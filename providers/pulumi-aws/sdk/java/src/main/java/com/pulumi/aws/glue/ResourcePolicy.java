@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -32,8 +33,8 @@ public class ResourcePolicy extends com.pulumi.resources.CustomResource {
     @Export(name="enableHybrid", type=String.class, parameters={})
     private Output</* @Nullable */ String> enableHybrid;
 
-    public Output</* @Nullable */ String> enableHybrid() {
-        return this.enableHybrid;
+    public Output<Optional<String>> enableHybrid() {
+        return Codegen.optional(this.enableHybrid);
     }
     /**
      * The policy to be applied to the aws glue data catalog.

@@ -23,6 +23,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -48,8 +49,8 @@ public class DataSet extends com.pulumi.resources.CustomResource {
     @Export(name="awsAccountId", type=String.class, parameters={})
     private Output</* @Nullable */ String> awsAccountId;
 
-    public Output</* @Nullable */ String> awsAccountId() {
-        return this.awsAccountId;
+    public Output<Optional<String>> awsAccountId() {
+        return Codegen.optional(this.awsAccountId);
     }
     /**
      * &lt;p&gt;Groupings of columns that work together in certain QuickSight features. Currently, only geospatial hierarchy is supported.&lt;/p&gt;
@@ -62,14 +63,14 @@ public class DataSet extends com.pulumi.resources.CustomResource {
      * @return &lt;p&gt;Groupings of columns that work together in certain QuickSight features. Currently, only geospatial hierarchy is supported.&lt;/p&gt;
      * 
      */
-    public Output</* @Nullable */ List<DataSetColumnGroup>> columnGroups() {
-        return this.columnGroups;
+    public Output<Optional<List<DataSetColumnGroup>>> columnGroups() {
+        return Codegen.optional(this.columnGroups);
     }
     @Export(name="columnLevelPermissionRules", type=List.class, parameters={DataSetColumnLevelPermissionRule.class})
     private Output</* @Nullable */ List<DataSetColumnLevelPermissionRule>> columnLevelPermissionRules;
 
-    public Output</* @Nullable */ List<DataSetColumnLevelPermissionRule>> columnLevelPermissionRules() {
-        return this.columnLevelPermissionRules;
+    public Output<Optional<List<DataSetColumnLevelPermissionRule>>> columnLevelPermissionRules() {
+        return Codegen.optional(this.columnLevelPermissionRules);
     }
     /**
      * &lt;p&gt;The amount of SPICE capacity used by this dataset. This is 0 if the dataset isn&#39;t
@@ -104,26 +105,26 @@ public class DataSet extends com.pulumi.resources.CustomResource {
     @Export(name="dataSetId", type=String.class, parameters={})
     private Output</* @Nullable */ String> dataSetId;
 
-    public Output</* @Nullable */ String> dataSetId() {
-        return this.dataSetId;
+    public Output<Optional<String>> dataSetId() {
+        return Codegen.optional(this.dataSetId);
     }
     @Export(name="fieldFolders", type=DataSetFieldFolderMap.class, parameters={})
     private Output</* @Nullable */ DataSetFieldFolderMap> fieldFolders;
 
-    public Output</* @Nullable */ DataSetFieldFolderMap> fieldFolders() {
-        return this.fieldFolders;
+    public Output<Optional<DataSetFieldFolderMap>> fieldFolders() {
+        return Codegen.optional(this.fieldFolders);
     }
     @Export(name="importMode", type=DataSetImportMode.class, parameters={})
     private Output</* @Nullable */ DataSetImportMode> importMode;
 
-    public Output</* @Nullable */ DataSetImportMode> importMode() {
-        return this.importMode;
+    public Output<Optional<DataSetImportMode>> importMode() {
+        return Codegen.optional(this.importMode);
     }
     @Export(name="ingestionWaitPolicy", type=DataSetIngestionWaitPolicy.class, parameters={})
     private Output</* @Nullable */ DataSetIngestionWaitPolicy> ingestionWaitPolicy;
 
-    public Output</* @Nullable */ DataSetIngestionWaitPolicy> ingestionWaitPolicy() {
-        return this.ingestionWaitPolicy;
+    public Output<Optional<DataSetIngestionWaitPolicy>> ingestionWaitPolicy() {
+        return Codegen.optional(this.ingestionWaitPolicy);
     }
     /**
      * &lt;p&gt;The last time that this dataset was updated.&lt;/p&gt;
@@ -142,8 +143,8 @@ public class DataSet extends com.pulumi.resources.CustomResource {
     @Export(name="logicalTableMap", type=DataSetLogicalTableMap.class, parameters={})
     private Output</* @Nullable */ DataSetLogicalTableMap> logicalTableMap;
 
-    public Output</* @Nullable */ DataSetLogicalTableMap> logicalTableMap() {
-        return this.logicalTableMap;
+    public Output<Optional<DataSetLogicalTableMap>> logicalTableMap() {
+        return Codegen.optional(this.logicalTableMap);
     }
     /**
      * &lt;p&gt;The display name for the dataset.&lt;/p&gt;
@@ -156,8 +157,8 @@ public class DataSet extends com.pulumi.resources.CustomResource {
      * @return &lt;p&gt;The display name for the dataset.&lt;/p&gt;
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * &lt;p&gt;The list of columns after all transforms. These columns are available in templates,
@@ -186,20 +187,20 @@ public class DataSet extends com.pulumi.resources.CustomResource {
      * @return &lt;p&gt;A list of resource permissions on the dataset.&lt;/p&gt;
      * 
      */
-    public Output</* @Nullable */ List<DataSetResourcePermission>> permissions() {
-        return this.permissions;
+    public Output<Optional<List<DataSetResourcePermission>>> permissions() {
+        return Codegen.optional(this.permissions);
     }
     @Export(name="physicalTableMap", type=DataSetPhysicalTableMap.class, parameters={})
     private Output</* @Nullable */ DataSetPhysicalTableMap> physicalTableMap;
 
-    public Output</* @Nullable */ DataSetPhysicalTableMap> physicalTableMap() {
-        return this.physicalTableMap;
+    public Output<Optional<DataSetPhysicalTableMap>> physicalTableMap() {
+        return Codegen.optional(this.physicalTableMap);
     }
     @Export(name="rowLevelPermissionDataSet", type=DataSetRowLevelPermissionDataSet.class, parameters={})
     private Output</* @Nullable */ DataSetRowLevelPermissionDataSet> rowLevelPermissionDataSet;
 
-    public Output</* @Nullable */ DataSetRowLevelPermissionDataSet> rowLevelPermissionDataSet() {
-        return this.rowLevelPermissionDataSet;
+    public Output<Optional<DataSetRowLevelPermissionDataSet>> rowLevelPermissionDataSet() {
+        return Codegen.optional(this.rowLevelPermissionDataSet);
     }
     /**
      * &lt;p&gt;Contains a map of the key-value pairs for the resource tag or tags assigned to the dataset.&lt;/p&gt;
@@ -212,8 +213,8 @@ public class DataSet extends com.pulumi.resources.CustomResource {
      * @return &lt;p&gt;Contains a map of the key-value pairs for the resource tag or tags assigned to the dataset.&lt;/p&gt;
      * 
      */
-    public Output</* @Nullable */ List<DataSetTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<DataSetTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

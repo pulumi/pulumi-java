@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -47,8 +48,8 @@ public class PackagingGroup extends com.pulumi.resources.CustomResource {
      * @return CDN Authorization
      * 
      */
-    public Output</* @Nullable */ PackagingGroupAuthorization> authorization() {
-        return this.authorization;
+    public Output<Optional<PackagingGroupAuthorization>> authorization() {
+        return Codegen.optional(this.authorization);
     }
     /**
      * The fully qualified domain name for Assets in the PackagingGroup.
@@ -75,8 +76,8 @@ public class PackagingGroup extends com.pulumi.resources.CustomResource {
      * @return The configuration parameters for egress access logging.
      * 
      */
-    public Output</* @Nullable */ PackagingGroupLogConfiguration> egressAccessLogs() {
-        return this.egressAccessLogs;
+    public Output<Optional<PackagingGroupLogConfiguration>> egressAccessLogs() {
+        return Codegen.optional(this.egressAccessLogs);
     }
     /**
      * A collection of tags associated with a resource
@@ -89,8 +90,8 @@ public class PackagingGroup extends com.pulumi.resources.CustomResource {
      * @return A collection of tags associated with a resource
      * 
      */
-    public Output</* @Nullable */ List<PackagingGroupTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<PackagingGroupTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

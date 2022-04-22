@@ -15,6 +15,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class Key extends com.pulumi.resources.CustomResource {
      * @return The attributes of the key.
      * 
      */
-    public Output</* @Nullable */ KeyAttributesResponse> attributes() {
-        return this.attributes;
+    public Output<Optional<KeyAttributesResponse>> attributes() {
+        return Codegen.optional(this.attributes);
     }
     /**
      * The elliptic curve name. For valid values, see JsonWebKeyCurveName.
@@ -59,14 +60,14 @@ public class Key extends com.pulumi.resources.CustomResource {
      * @return The elliptic curve name. For valid values, see JsonWebKeyCurveName.
      * 
      */
-    public Output</* @Nullable */ String> curveName() {
-        return this.curveName;
+    public Output<Optional<String>> curveName() {
+        return Codegen.optional(this.curveName);
     }
     @Export(name="keyOps", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> keyOps;
 
-    public Output</* @Nullable */ List<String>> keyOps() {
-        return this.keyOps;
+    public Output<Optional<List<String>>> keyOps() {
+        return Codegen.optional(this.keyOps);
     }
     /**
      * The key size in bits. For example: 2048, 3072, or 4096 for RSA.
@@ -79,8 +80,8 @@ public class Key extends com.pulumi.resources.CustomResource {
      * @return The key size in bits. For example: 2048, 3072, or 4096 for RSA.
      * 
      */
-    public Output</* @Nullable */ Integer> keySize() {
-        return this.keySize;
+    public Output<Optional<Integer>> keySize() {
+        return Codegen.optional(this.keySize);
     }
     /**
      * The URI to retrieve the current version of the key.
@@ -121,8 +122,8 @@ public class Key extends com.pulumi.resources.CustomResource {
      * @return The type of the key. For valid values, see JsonWebKeyType.
      * 
      */
-    public Output</* @Nullable */ String> kty() {
-        return this.kty;
+    public Output<Optional<String>> kty() {
+        return Codegen.optional(this.kty);
     }
     /**
      * Azure location of the key vault resource.

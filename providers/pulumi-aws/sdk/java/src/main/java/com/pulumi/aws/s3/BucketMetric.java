@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -55,8 +56,8 @@ public class BucketMetric extends com.pulumi.resources.CustomResource {
      * @return [Object filtering](http://docs.aws.amazon.com/AmazonS3/latest/dev/metrics-configurations.html#metrics-configurations-filter) that accepts a prefix, tags, or a logical AND of prefix and tags (documented below).
      * 
      */
-    public Output</* @Nullable */ BucketMetricFilter> filter() {
-        return this.filter;
+    public Output<Optional<BucketMetricFilter>> filter() {
+        return Codegen.optional(this.filter);
     }
     /**
      * Unique identifier of the metrics configuration for the bucket.

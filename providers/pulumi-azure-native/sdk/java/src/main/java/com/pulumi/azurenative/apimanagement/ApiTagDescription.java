@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -42,8 +43,8 @@ public class ApiTagDescription extends com.pulumi.resources.CustomResource {
      * @return Description of the Tag.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Tag name.
@@ -56,8 +57,8 @@ public class ApiTagDescription extends com.pulumi.resources.CustomResource {
      * @return Tag name.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * Description of the external resources describing the tag.
@@ -70,8 +71,8 @@ public class ApiTagDescription extends com.pulumi.resources.CustomResource {
      * @return Description of the external resources describing the tag.
      * 
      */
-    public Output</* @Nullable */ String> externalDocsDescription() {
-        return this.externalDocsDescription;
+    public Output<Optional<String>> externalDocsDescription() {
+        return Codegen.optional(this.externalDocsDescription);
     }
     /**
      * Absolute URL of external resources describing the tag.
@@ -84,8 +85,8 @@ public class ApiTagDescription extends com.pulumi.resources.CustomResource {
      * @return Absolute URL of external resources describing the tag.
      * 
      */
-    public Output</* @Nullable */ String> externalDocsUrl() {
-        return this.externalDocsUrl;
+    public Output<Optional<String>> externalDocsUrl() {
+        return Codegen.optional(this.externalDocsUrl);
     }
     /**
      * Resource name.
@@ -112,8 +113,8 @@ public class ApiTagDescription extends com.pulumi.resources.CustomResource {
      * @return Identifier of the tag in the form of /tags/{tagId}
      * 
      */
-    public Output</* @Nullable */ String> tagId() {
-        return this.tagId;
+    public Output<Optional<String>> tagId() {
+        return Codegen.optional(this.tagId);
     }
     /**
      * Resource type for API Management resource.

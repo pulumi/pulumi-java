@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -61,8 +62,8 @@ public class Accelerator extends com.pulumi.resources.CustomResource {
      * @return Indicates whether an accelerator is enabled. The value is true or false.
      * 
      */
-    public Output</* @Nullable */ Boolean> enabled() {
-        return this.enabled;
+    public Output<Optional<Boolean>> enabled() {
+        return Codegen.optional(this.enabled);
     }
     /**
      * IP Address type.
@@ -75,8 +76,8 @@ public class Accelerator extends com.pulumi.resources.CustomResource {
      * @return IP Address type.
      * 
      */
-    public Output</* @Nullable */ AcceleratorIpAddressType> ipAddressType() {
-        return this.ipAddressType;
+    public Output<Optional<AcceleratorIpAddressType>> ipAddressType() {
+        return Codegen.optional(this.ipAddressType);
     }
     /**
      * The IP addresses from BYOIP Prefix pool.
@@ -89,8 +90,8 @@ public class Accelerator extends com.pulumi.resources.CustomResource {
      * @return The IP addresses from BYOIP Prefix pool.
      * 
      */
-    public Output</* @Nullable */ List<String>> ipAddresses() {
-        return this.ipAddresses;
+    public Output<Optional<List<String>>> ipAddresses() {
+        return Codegen.optional(this.ipAddresses);
     }
     /**
      * Name of accelerator.
@@ -109,8 +110,8 @@ public class Accelerator extends com.pulumi.resources.CustomResource {
     @Export(name="tags", type=List.class, parameters={AcceleratorTag.class})
     private Output</* @Nullable */ List<AcceleratorTag>> tags;
 
-    public Output</* @Nullable */ List<AcceleratorTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<AcceleratorTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

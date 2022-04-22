@@ -16,6 +16,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -60,8 +61,8 @@ public class Incident extends com.pulumi.resources.CustomResource {
      * @return The reason the incident was closed
      * 
      */
-    public Output</* @Nullable */ String> classification() {
-        return this.classification;
+    public Output<Optional<String>> classification() {
+        return Codegen.optional(this.classification);
     }
     /**
      * Describes the reason the incident was closed
@@ -74,8 +75,8 @@ public class Incident extends com.pulumi.resources.CustomResource {
      * @return Describes the reason the incident was closed
      * 
      */
-    public Output</* @Nullable */ String> classificationComment() {
-        return this.classificationComment;
+    public Output<Optional<String>> classificationComment() {
+        return Codegen.optional(this.classificationComment);
     }
     /**
      * The classification reason the incident was closed with
@@ -88,8 +89,8 @@ public class Incident extends com.pulumi.resources.CustomResource {
      * @return The classification reason the incident was closed with
      * 
      */
-    public Output</* @Nullable */ String> classificationReason() {
-        return this.classificationReason;
+    public Output<Optional<String>> classificationReason() {
+        return Codegen.optional(this.classificationReason);
     }
     /**
      * The time the incident was created
@@ -116,8 +117,8 @@ public class Incident extends com.pulumi.resources.CustomResource {
      * @return The description of the incident
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Etag of the azure resource
@@ -130,8 +131,8 @@ public class Incident extends com.pulumi.resources.CustomResource {
      * @return Etag of the azure resource
      * 
      */
-    public Output</* @Nullable */ String> etag() {
-        return this.etag;
+    public Output<Optional<String>> etag() {
+        return Codegen.optional(this.etag);
     }
     /**
      * The time of the first activity in the incident
@@ -144,8 +145,8 @@ public class Incident extends com.pulumi.resources.CustomResource {
      * @return The time of the first activity in the incident
      * 
      */
-    public Output</* @Nullable */ String> firstActivityTimeUtc() {
-        return this.firstActivityTimeUtc;
+    public Output<Optional<String>> firstActivityTimeUtc() {
+        return Codegen.optional(this.firstActivityTimeUtc);
     }
     /**
      * A sequential number
@@ -186,8 +187,8 @@ public class Incident extends com.pulumi.resources.CustomResource {
      * @return List of labels relevant to this incident
      * 
      */
-    public Output</* @Nullable */ List<IncidentLabelResponse>> labels() {
-        return this.labels;
+    public Output<Optional<List<IncidentLabelResponse>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * The time of the last activity in the incident
@@ -200,8 +201,8 @@ public class Incident extends com.pulumi.resources.CustomResource {
      * @return The time of the last activity in the incident
      * 
      */
-    public Output</* @Nullable */ String> lastActivityTimeUtc() {
-        return this.lastActivityTimeUtc;
+    public Output<Optional<String>> lastActivityTimeUtc() {
+        return Codegen.optional(this.lastActivityTimeUtc);
     }
     /**
      * The last time the incident was updated
@@ -242,8 +243,8 @@ public class Incident extends com.pulumi.resources.CustomResource {
      * @return Describes a user that the incident is assigned to
      * 
      */
-    public Output</* @Nullable */ IncidentOwnerInfoResponse> owner() {
-        return this.owner;
+    public Output<Optional<IncidentOwnerInfoResponse>> owner() {
+        return Codegen.optional(this.owner);
     }
     /**
      * List of resource ids of Analytic rules related to the incident

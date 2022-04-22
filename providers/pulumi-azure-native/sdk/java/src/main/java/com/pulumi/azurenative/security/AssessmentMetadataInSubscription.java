@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -50,8 +51,8 @@ public class AssessmentMetadataInSubscription extends com.pulumi.resources.Custo
     @Export(name="categories", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> categories;
 
-    public Output</* @Nullable */ List<String>> categories() {
-        return this.categories;
+    public Output<Optional<List<String>>> categories() {
+        return Codegen.optional(this.categories);
     }
     /**
      * Human readable description of the assessment
@@ -64,8 +65,8 @@ public class AssessmentMetadataInSubscription extends com.pulumi.resources.Custo
      * @return Human readable description of the assessment
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * User friendly display name of the assessment
@@ -92,8 +93,8 @@ public class AssessmentMetadataInSubscription extends com.pulumi.resources.Custo
      * @return The implementation effort required to remediate this assessment
      * 
      */
-    public Output</* @Nullable */ String> implementationEffort() {
-        return this.implementationEffort;
+    public Output<Optional<String>> implementationEffort() {
+        return Codegen.optional(this.implementationEffort);
     }
     /**
      * Resource name
@@ -120,8 +121,8 @@ public class AssessmentMetadataInSubscription extends com.pulumi.resources.Custo
      * @return Describes the partner that created the assessment
      * 
      */
-    public Output</* @Nullable */ SecurityAssessmentMetadataPartnerDataResponse> partnerData() {
-        return this.partnerData;
+    public Output<Optional<SecurityAssessmentMetadataPartnerDataResponse>> partnerData() {
+        return Codegen.optional(this.partnerData);
     }
     /**
      * Azure resource ID of the policy definition that turns this assessment calculation on
@@ -148,8 +149,8 @@ public class AssessmentMetadataInSubscription extends com.pulumi.resources.Custo
      * @return True if this assessment is in preview release status
      * 
      */
-    public Output</* @Nullable */ Boolean> preview() {
-        return this.preview;
+    public Output<Optional<Boolean>> preview() {
+        return Codegen.optional(this.preview);
     }
     /**
      * Human readable description of what you should do to mitigate this security issue
@@ -162,8 +163,8 @@ public class AssessmentMetadataInSubscription extends com.pulumi.resources.Custo
      * @return Human readable description of what you should do to mitigate this security issue
      * 
      */
-    public Output</* @Nullable */ String> remediationDescription() {
-        return this.remediationDescription;
+    public Output<Optional<String>> remediationDescription() {
+        return Codegen.optional(this.remediationDescription);
     }
     /**
      * The severity level of the assessment
@@ -182,8 +183,8 @@ public class AssessmentMetadataInSubscription extends com.pulumi.resources.Custo
     @Export(name="threats", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> threats;
 
-    public Output</* @Nullable */ List<String>> threats() {
-        return this.threats;
+    public Output<Optional<List<String>>> threats() {
+        return Codegen.optional(this.threats);
     }
     /**
      * Resource type
@@ -210,8 +211,8 @@ public class AssessmentMetadataInSubscription extends com.pulumi.resources.Custo
      * @return The user impact of the assessment
      * 
      */
-    public Output</* @Nullable */ String> userImpact() {
-        return this.userImpact;
+    public Output<Optional<String>> userImpact() {
+        return Codegen.optional(this.userImpact);
     }
 
     /**

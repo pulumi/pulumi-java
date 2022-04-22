@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -115,8 +116,8 @@ public class NotificationRule extends com.pulumi.resources.CustomResource {
      * @return The status of the notification rule. Possible values are `ENABLED` and `DISABLED`, default is `ENABLED`.
      * 
      */
-    public Output</* @Nullable */ String> status() {
-        return this.status;
+    public Output<Optional<String>> status() {
+        return Codegen.optional(this.status);
     }
     /**
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -129,8 +130,8 @@ public class NotificationRule extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .
@@ -157,8 +158,8 @@ public class NotificationRule extends com.pulumi.resources.CustomResource {
      * @return Configuration blocks containing notification target information. Can be specified multiple times. At least one target must be specified on creation.
      * 
      */
-    public Output</* @Nullable */ List<NotificationRuleTarget>> targets() {
-        return this.targets;
+    public Output<Optional<List<NotificationRuleTarget>>> targets() {
+        return Codegen.optional(this.targets);
     }
 
     /**

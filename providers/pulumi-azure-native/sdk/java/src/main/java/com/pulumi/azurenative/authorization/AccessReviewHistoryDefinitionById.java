@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -59,8 +60,8 @@ public class AccessReviewHistoryDefinitionById extends com.pulumi.resources.Cust
      * @return Collection of review decisions which the history data should be filtered on. For example if Approve and Deny are supplied the data will only contain review results in which the decision maker approved or denied a review request.
      * 
      */
-    public Output</* @Nullable */ List<String>> decisions() {
-        return this.decisions;
+    public Output<Optional<List<String>>> decisions() {
+        return Codegen.optional(this.decisions);
     }
     /**
      * The display name for the history definition.
@@ -73,8 +74,8 @@ public class AccessReviewHistoryDefinitionById extends com.pulumi.resources.Cust
      * @return The display name for the history definition.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * The DateTime when the review is scheduled to end. Required if type is endDate
@@ -87,8 +88,8 @@ public class AccessReviewHistoryDefinitionById extends com.pulumi.resources.Cust
      * @return The DateTime when the review is scheduled to end. Required if type is endDate
      * 
      */
-    public Output</* @Nullable */ String> endDate() {
-        return this.endDate;
+    public Output<Optional<String>> endDate() {
+        return Codegen.optional(this.endDate);
     }
     /**
      * Set of access review history instances for this history definition.
@@ -101,8 +102,8 @@ public class AccessReviewHistoryDefinitionById extends com.pulumi.resources.Cust
      * @return Set of access review history instances for this history definition.
      * 
      */
-    public Output</* @Nullable */ List<AccessReviewHistoryInstanceResponse>> instances() {
-        return this.instances;
+    public Output<Optional<List<AccessReviewHistoryInstanceResponse>>> instances() {
+        return Codegen.optional(this.instances);
     }
     /**
      * The interval for recurrence. For a quarterly review, the interval is 3 for type : absoluteMonthly.
@@ -115,8 +116,8 @@ public class AccessReviewHistoryDefinitionById extends com.pulumi.resources.Cust
      * @return The interval for recurrence. For a quarterly review, the interval is 3 for type : absoluteMonthly.
      * 
      */
-    public Output</* @Nullable */ Integer> interval() {
-        return this.interval;
+    public Output<Optional<Integer>> interval() {
+        return Codegen.optional(this.interval);
     }
     /**
      * The access review history definition unique id.
@@ -143,8 +144,8 @@ public class AccessReviewHistoryDefinitionById extends com.pulumi.resources.Cust
      * @return The number of times to repeat the access review. Required and must be positive if type is numbered.
      * 
      */
-    public Output</* @Nullable */ Integer> numberOfOccurrences() {
-        return this.numberOfOccurrences;
+    public Output<Optional<Integer>> numberOfOccurrences() {
+        return Codegen.optional(this.numberOfOccurrences);
     }
     /**
      * The identity id
@@ -227,8 +228,8 @@ public class AccessReviewHistoryDefinitionById extends com.pulumi.resources.Cust
      * @return A collection of scopes used when selecting review history data
      * 
      */
-    public Output</* @Nullable */ List<AccessReviewScopeResponse>> scopes() {
-        return this.scopes;
+    public Output<Optional<List<AccessReviewScopeResponse>>> scopes() {
+        return Codegen.optional(this.scopes);
     }
     /**
      * The DateTime when the review is scheduled to be start. This could be a date in the future. Required on create.
@@ -241,8 +242,8 @@ public class AccessReviewHistoryDefinitionById extends com.pulumi.resources.Cust
      * @return The DateTime when the review is scheduled to be start. This could be a date in the future. Required on create.
      * 
      */
-    public Output</* @Nullable */ String> startDate() {
-        return this.startDate;
+    public Output<Optional<String>> startDate() {
+        return Codegen.optional(this.startDate);
     }
     /**
      * This read-only field specifies the of the requested review history data. This is either requested, in-progress, done or error.

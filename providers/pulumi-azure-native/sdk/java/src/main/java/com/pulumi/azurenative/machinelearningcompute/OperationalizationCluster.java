@@ -19,6 +19,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -49,8 +50,8 @@ public class OperationalizationCluster extends com.pulumi.resources.CustomResour
      * @return AppInsights configuration.
      * 
      */
-    public Output</* @Nullable */ AppInsightsPropertiesResponse> appInsights() {
-        return this.appInsights;
+    public Output<Optional<AppInsightsPropertiesResponse>> appInsights() {
+        return Codegen.optional(this.appInsights);
     }
     /**
      * The cluster type.
@@ -77,8 +78,8 @@ public class OperationalizationCluster extends com.pulumi.resources.CustomResour
      * @return Container Registry properties.
      * 
      */
-    public Output</* @Nullable */ ContainerRegistryPropertiesResponse> containerRegistry() {
-        return this.containerRegistry;
+    public Output<Optional<ContainerRegistryPropertiesResponse>> containerRegistry() {
+        return Codegen.optional(this.containerRegistry);
     }
     /**
      * Parameters for the Azure Container Service cluster.
@@ -91,8 +92,8 @@ public class OperationalizationCluster extends com.pulumi.resources.CustomResour
      * @return Parameters for the Azure Container Service cluster.
      * 
      */
-    public Output</* @Nullable */ AcsClusterPropertiesResponse> containerService() {
-        return this.containerService;
+    public Output<Optional<AcsClusterPropertiesResponse>> containerService() {
+        return Codegen.optional(this.containerService);
     }
     /**
      * The date and time when the cluster was created.
@@ -119,8 +120,8 @@ public class OperationalizationCluster extends com.pulumi.resources.CustomResour
      * @return The description of the cluster.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Contains global configuration for the web services in the cluster.
@@ -133,8 +134,8 @@ public class OperationalizationCluster extends com.pulumi.resources.CustomResour
      * @return Contains global configuration for the web services in the cluster.
      * 
      */
-    public Output</* @Nullable */ GlobalServiceConfigurationResponse> globalServiceConfiguration() {
-        return this.globalServiceConfiguration;
+    public Output<Optional<GlobalServiceConfigurationResponse>> globalServiceConfiguration() {
+        return Codegen.optional(this.globalServiceConfiguration);
     }
     /**
      * Specifies the location of the resource.
@@ -217,8 +218,8 @@ public class OperationalizationCluster extends com.pulumi.resources.CustomResour
      * @return Storage Account properties.
      * 
      */
-    public Output</* @Nullable */ StorageAccountPropertiesResponse> storageAccount() {
-        return this.storageAccount;
+    public Output<Optional<StorageAccountPropertiesResponse>> storageAccount() {
+        return Codegen.optional(this.storageAccount);
     }
     /**
      * Contains resource tags defined as key/value pairs.
@@ -231,8 +232,8 @@ public class OperationalizationCluster extends com.pulumi.resources.CustomResour
      * @return Contains resource tags defined as key/value pairs.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Specifies the type of the resource.

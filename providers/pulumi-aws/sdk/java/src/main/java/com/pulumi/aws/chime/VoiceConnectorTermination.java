@@ -14,6 +14,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -71,8 +72,8 @@ public class VoiceConnectorTermination extends com.pulumi.resources.CustomResour
      * @return The limit on calls per second. Max value based on account service quota. Default value of `1`.
      * 
      */
-    public Output</* @Nullable */ Integer> cpsLimit() {
-        return this.cpsLimit;
+    public Output<Optional<Integer>> cpsLimit() {
+        return Codegen.optional(this.cpsLimit);
     }
     /**
      * The default caller ID phone number.
@@ -85,8 +86,8 @@ public class VoiceConnectorTermination extends com.pulumi.resources.CustomResour
      * @return The default caller ID phone number.
      * 
      */
-    public Output</* @Nullable */ String> defaultPhoneNumber() {
-        return this.defaultPhoneNumber;
+    public Output<Optional<String>> defaultPhoneNumber() {
+        return Codegen.optional(this.defaultPhoneNumber);
     }
     /**
      * When termination settings are disabled, outbound calls can not be made.
@@ -99,8 +100,8 @@ public class VoiceConnectorTermination extends com.pulumi.resources.CustomResour
      * @return When termination settings are disabled, outbound calls can not be made.
      * 
      */
-    public Output</* @Nullable */ Boolean> disabled() {
-        return this.disabled;
+    public Output<Optional<Boolean>> disabled() {
+        return Codegen.optional(this.disabled);
     }
     /**
      * The Amazon Chime Voice Connector ID.

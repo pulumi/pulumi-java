@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -58,8 +59,8 @@ public class Schedule extends com.pulumi.resources.CustomResource {
      * @return Notes for this schedule.
      * 
      */
-    public Output</* @Nullable */ String> notes() {
-        return this.notes;
+    public Output<Optional<String>> notes() {
+        return Codegen.optional(this.notes);
     }
     /**
      * Current provisioning state of the schedule.
@@ -86,8 +87,8 @@ public class Schedule extends com.pulumi.resources.CustomResource {
      * @return The recurrence pattern of the scheduled actions.
      * 
      */
-    public Output</* @Nullable */ RecurrencePatternResponse> recurrencePattern() {
-        return this.recurrencePattern;
+    public Output<Optional<RecurrencePatternResponse>> recurrencePattern() {
+        return Codegen.optional(this.recurrencePattern);
     }
     /**
      * When lab user virtual machines will be started. Timestamp offsets will be ignored and timeZoneId is used instead.
@@ -100,8 +101,8 @@ public class Schedule extends com.pulumi.resources.CustomResource {
      * @return When lab user virtual machines will be started. Timestamp offsets will be ignored and timeZoneId is used instead.
      * 
      */
-    public Output</* @Nullable */ String> startAt() {
-        return this.startAt;
+    public Output<Optional<String>> startAt() {
+        return Codegen.optional(this.startAt);
     }
     /**
      * When lab user virtual machines will be stopped. Timestamp offsets will be ignored and timeZoneId is used instead.

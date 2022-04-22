@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class Partner extends com.pulumi.resources.CustomResource {
      * @return This is the DateTime when the partner was created.
      * 
      */
-    public Output</* @Nullable */ String> createdTime() {
-        return this.createdTime;
+    public Output<Optional<String>> createdTime() {
+        return Codegen.optional(this.createdTime);
     }
     /**
      * Type of the partner
@@ -57,8 +58,8 @@ public class Partner extends com.pulumi.resources.CustomResource {
      * @return Type of the partner
      * 
      */
-    public Output</* @Nullable */ Integer> etag() {
-        return this.etag;
+    public Output<Optional<Integer>> etag() {
+        return Codegen.optional(this.etag);
     }
     /**
      * Name of the partner
@@ -85,8 +86,8 @@ public class Partner extends com.pulumi.resources.CustomResource {
      * @return This is the object id.
      * 
      */
-    public Output</* @Nullable */ String> objectId() {
-        return this.objectId;
+    public Output<Optional<String>> objectId() {
+        return Codegen.optional(this.objectId);
     }
     /**
      * This is the partner id
@@ -99,8 +100,8 @@ public class Partner extends com.pulumi.resources.CustomResource {
      * @return This is the partner id
      * 
      */
-    public Output</* @Nullable */ String> partnerId() {
-        return this.partnerId;
+    public Output<Optional<String>> partnerId() {
+        return Codegen.optional(this.partnerId);
     }
     /**
      * This is the partner name
@@ -113,8 +114,8 @@ public class Partner extends com.pulumi.resources.CustomResource {
      * @return This is the partner name
      * 
      */
-    public Output</* @Nullable */ String> partnerName() {
-        return this.partnerName;
+    public Output<Optional<String>> partnerName() {
+        return Codegen.optional(this.partnerName);
     }
     /**
      * This is the tenant id.
@@ -127,8 +128,8 @@ public class Partner extends com.pulumi.resources.CustomResource {
      * @return This is the tenant id.
      * 
      */
-    public Output</* @Nullable */ String> tenantId() {
-        return this.tenantId;
+    public Output<Optional<String>> tenantId() {
+        return Codegen.optional(this.tenantId);
     }
     /**
      * Type of resource. &#34;Microsoft.ManagementPartner/partners&#34;
@@ -155,8 +156,8 @@ public class Partner extends com.pulumi.resources.CustomResource {
      * @return This is the DateTime when the partner was updated.
      * 
      */
-    public Output</* @Nullable */ String> updatedTime() {
-        return this.updatedTime;
+    public Output<Optional<String>> updatedTime() {
+        return Codegen.optional(this.updatedTime);
     }
     /**
      * This is the version.
@@ -169,8 +170,8 @@ public class Partner extends com.pulumi.resources.CustomResource {
      * @return This is the version.
      * 
      */
-    public Output</* @Nullable */ Integer> version() {
-        return this.version;
+    public Output<Optional<Integer>> version() {
+        return Codegen.optional(this.version);
     }
 
     /**

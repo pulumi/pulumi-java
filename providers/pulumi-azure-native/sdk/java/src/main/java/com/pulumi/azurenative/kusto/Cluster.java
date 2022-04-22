@@ -21,6 +21,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -65,8 +66,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return A boolean value that indicates if the cluster&#39;s disks are encrypted.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableDiskEncryption() {
-        return this.enableDiskEncryption;
+    public Output<Optional<Boolean>> enableDiskEncryption() {
+        return Codegen.optional(this.enableDiskEncryption);
     }
     /**
      * A boolean value that indicates if double encryption is enabled.
@@ -79,8 +80,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return A boolean value that indicates if double encryption is enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableDoubleEncryption() {
-        return this.enableDoubleEncryption;
+    public Output<Optional<Boolean>> enableDoubleEncryption() {
+        return Codegen.optional(this.enableDoubleEncryption);
     }
     /**
      * A boolean value that indicates if the purge operations are enabled.
@@ -93,8 +94,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return A boolean value that indicates if the purge operations are enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> enablePurge() {
-        return this.enablePurge;
+    public Output<Optional<Boolean>> enablePurge() {
+        return Codegen.optional(this.enablePurge);
     }
     /**
      * A boolean value that indicates if the streaming ingest is enabled.
@@ -107,8 +108,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return A boolean value that indicates if the streaming ingest is enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableStreamingIngest() {
-        return this.enableStreamingIngest;
+    public Output<Optional<Boolean>> enableStreamingIngest() {
+        return Codegen.optional(this.enableStreamingIngest);
     }
     /**
      * The engine type
@@ -121,8 +122,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The engine type
      * 
      */
-    public Output</* @Nullable */ String> engineType() {
-        return this.engineType;
+    public Output<Optional<String>> engineType() {
+        return Codegen.optional(this.engineType);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
@@ -149,8 +150,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The identity of the cluster, if configured.
      * 
      */
-    public Output</* @Nullable */ IdentityResponse> identity() {
-        return this.identity;
+    public Output<Optional<IdentityResponse>> identity() {
+        return Codegen.optional(this.identity);
     }
     /**
      * KeyVault properties for the cluster encryption.
@@ -163,8 +164,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return KeyVault properties for the cluster encryption.
      * 
      */
-    public Output</* @Nullable */ KeyVaultPropertiesResponse> keyVaultProperties() {
-        return this.keyVaultProperties;
+    public Output<Optional<KeyVaultPropertiesResponse>> keyVaultProperties() {
+        return Codegen.optional(this.keyVaultProperties);
     }
     /**
      * List of the cluster&#39;s language extensions.
@@ -219,8 +220,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Optimized auto scale definition.
      * 
      */
-    public Output</* @Nullable */ OptimizedAutoscaleResponse> optimizedAutoscale() {
-        return this.optimizedAutoscale;
+    public Output<Optional<OptimizedAutoscaleResponse>> optimizedAutoscale() {
+        return Codegen.optional(this.optimizedAutoscale);
     }
     /**
      * The provisioned state of the resource.
@@ -289,8 +290,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The cluster&#39;s external tenants.
@@ -303,8 +304,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The cluster&#39;s external tenants.
      * 
      */
-    public Output</* @Nullable */ List<TrustedExternalTenantResponse>> trustedExternalTenants() {
-        return this.trustedExternalTenants;
+    public Output<Optional<List<TrustedExternalTenantResponse>>> trustedExternalTenants() {
+        return Codegen.optional(this.trustedExternalTenants);
     }
     /**
      * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
@@ -345,8 +346,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Virtual network definition.
      * 
      */
-    public Output</* @Nullable */ VirtualNetworkConfigurationResponse> virtualNetworkConfiguration() {
-        return this.virtualNetworkConfiguration;
+    public Output<Optional<VirtualNetworkConfigurationResponse>> virtualNetworkConfiguration() {
+        return Codegen.optional(this.virtualNetworkConfiguration);
     }
     /**
      * The availability zones of the cluster.
@@ -359,8 +360,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The availability zones of the cluster.
      * 
      */
-    public Output</* @Nullable */ List<String>> zones() {
-        return this.zones;
+    public Output<Optional<List<String>>> zones() {
+        return Codegen.optional(this.zones);
     }
 
     /**

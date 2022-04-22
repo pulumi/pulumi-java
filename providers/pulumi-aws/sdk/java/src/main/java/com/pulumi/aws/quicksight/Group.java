@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -68,8 +69,8 @@ public class Group extends com.pulumi.resources.CustomResource {
      * @return A description for the group.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * A name for the group.
@@ -96,8 +97,8 @@ public class Group extends com.pulumi.resources.CustomResource {
      * @return The namespace. Currently, you should set this to `default`.
      * 
      */
-    public Output</* @Nullable */ String> namespace() {
-        return this.namespace;
+    public Output<Optional<String>> namespace() {
+        return Codegen.optional(this.namespace);
     }
 
     /**

@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -36,8 +37,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return The description of the application.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The name of the application.
@@ -56,8 +57,8 @@ public class Application extends com.pulumi.resources.CustomResource {
     @Export(name="tags", type=ApplicationTags.class, parameters={})
     private Output</* @Nullable */ ApplicationTags> tags;
 
-    public Output</* @Nullable */ ApplicationTags> tags() {
-        return this.tags;
+    public Output<Optional<ApplicationTags>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

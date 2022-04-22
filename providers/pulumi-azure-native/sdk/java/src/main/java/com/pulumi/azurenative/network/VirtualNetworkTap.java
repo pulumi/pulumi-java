@@ -17,6 +17,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -47,8 +48,8 @@ public class VirtualNetworkTap extends com.pulumi.resources.CustomResource {
      * @return The reference to the private IP address on the internal Load Balancer that will receive the tap.
      * 
      */
-    public Output</* @Nullable */ FrontendIPConfigurationResponse> destinationLoadBalancerFrontEndIPConfiguration() {
-        return this.destinationLoadBalancerFrontEndIPConfiguration;
+    public Output<Optional<FrontendIPConfigurationResponse>> destinationLoadBalancerFrontEndIPConfiguration() {
+        return Codegen.optional(this.destinationLoadBalancerFrontEndIPConfiguration);
     }
     /**
      * The reference to the private IP Address of the collector nic that will receive the tap.
@@ -61,8 +62,8 @@ public class VirtualNetworkTap extends com.pulumi.resources.CustomResource {
      * @return The reference to the private IP Address of the collector nic that will receive the tap.
      * 
      */
-    public Output</* @Nullable */ NetworkInterfaceIPConfigurationResponse> destinationNetworkInterfaceIPConfiguration() {
-        return this.destinationNetworkInterfaceIPConfiguration;
+    public Output<Optional<NetworkInterfaceIPConfigurationResponse>> destinationNetworkInterfaceIPConfiguration() {
+        return Codegen.optional(this.destinationNetworkInterfaceIPConfiguration);
     }
     /**
      * The VXLAN destination port that will receive the tapped traffic.
@@ -75,8 +76,8 @@ public class VirtualNetworkTap extends com.pulumi.resources.CustomResource {
      * @return The VXLAN destination port that will receive the tapped traffic.
      * 
      */
-    public Output</* @Nullable */ Integer> destinationPort() {
-        return this.destinationPort;
+    public Output<Optional<Integer>> destinationPort() {
+        return Codegen.optional(this.destinationPort);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
@@ -103,8 +104,8 @@ public class VirtualNetworkTap extends com.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * Resource name.
@@ -173,8 +174,8 @@ public class VirtualNetworkTap extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type.

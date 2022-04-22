@@ -17,6 +17,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -122,8 +123,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return Resource labels to represent user-provided metadata.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * The full version of memcached server running on this instance.
@@ -166,8 +167,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ InstanceMemcacheParameters> memcacheParameters() {
-        return this.memcacheParameters;
+    public Output<Optional<InstanceMemcacheParameters>> memcacheParameters() {
+        return Codegen.optional(this.memcacheParameters);
     }
     /**
      * The major version of Memcached software. If not provided, latest supported version will be used.
@@ -188,8 +189,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * Possible values are `MEMCACHE_1_5`.
      * 
      */
-    public Output</* @Nullable */ String> memcacheVersion() {
-        return this.memcacheVersion;
+    public Output<Optional<String>> memcacheVersion() {
+        return Codegen.optional(this.memcacheVersion);
     }
     /**
      * The resource name of the instance.

@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -99,8 +100,8 @@ public class Backup extends com.pulumi.resources.CustomResource {
      * @return Label for backup
      * 
      */
-    public Output</* @Nullable */ String> label() {
-        return this.label;
+    public Output<Optional<String>> label() {
+        return Codegen.optional(this.label);
     }
     /**
      * Resource location

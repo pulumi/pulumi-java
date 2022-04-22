@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class Resource extends com.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the IAM Role to assume for operations.
      * 
      */
-    public Output</* @Nullable */ String> roleArn() {
-        return this.roleArn;
+    public Output<Optional<String>> roleArn() {
+        return Codegen.optional(this.roleArn);
     }
     /**
      * JSON string of the CloudFormation resource type schema which is used for plan time validation where possible. Automatically fetched if not provided. In large scale environments with multiple resources using the same `type_name`, it is recommended to fetch the schema once via the `aws.cloudformation.CloudFormationType` data source and use this argument to reduce `DescribeType` API operation throttling. This value is marked sensitive only to prevent large plan differences from showing.
@@ -86,8 +87,8 @@ public class Resource extends com.pulumi.resources.CustomResource {
      * @return Identifier of the CloudFormation resource type version.
      * 
      */
-    public Output</* @Nullable */ String> typeVersionId() {
-        return this.typeVersionId;
+    public Output<Optional<String>> typeVersionId() {
+        return Codegen.optional(this.typeVersionId);
     }
 
     /**

@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class HierarchySetting extends com.pulumi.resources.CustomResource {
      * @return Settings that sets the default Management Group under which new subscriptions get added in this tenant. For example, /providers/Microsoft.Management/managementGroups/defaultGroup
      * 
      */
-    public Output</* @Nullable */ String> defaultManagementGroup() {
-        return this.defaultManagementGroup;
+    public Output<Optional<String>> defaultManagementGroup() {
+        return Codegen.optional(this.defaultManagementGroup);
     }
     /**
      * The name of the object. In this case, default.
@@ -71,8 +72,8 @@ public class HierarchySetting extends com.pulumi.resources.CustomResource {
      * @return Indicates whether RBAC access is required upon group creation under the root Management Group. If set to true, user will require Microsoft.Management/managementGroups/write action on the root Management Group scope in order to create new Groups directly under the root. This will prevent new users from creating new Management Groups, unless they are given access.
      * 
      */
-    public Output</* @Nullable */ Boolean> requireAuthorizationForGroupCreation() {
-        return this.requireAuthorizationForGroupCreation;
+    public Output<Optional<Boolean>> requireAuthorizationForGroupCreation() {
+        return Codegen.optional(this.requireAuthorizationForGroupCreation);
     }
     /**
      * The AAD Tenant ID associated with the hierarchy settings. For example, 00000000-0000-0000-0000-000000000000
@@ -85,8 +86,8 @@ public class HierarchySetting extends com.pulumi.resources.CustomResource {
      * @return The AAD Tenant ID associated with the hierarchy settings. For example, 00000000-0000-0000-0000-000000000000
      * 
      */
-    public Output</* @Nullable */ String> tenantId() {
-        return this.tenantId;
+    public Output<Optional<String>> tenantId() {
+        return Codegen.optional(this.tenantId);
     }
     /**
      * The type of the resource.  For example, Microsoft.Management/managementGroups/settings.

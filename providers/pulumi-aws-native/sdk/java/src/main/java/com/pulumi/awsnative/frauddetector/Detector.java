@@ -17,6 +17,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -50,8 +51,8 @@ public class Detector extends com.pulumi.resources.CustomResource {
      * @return The models to associate with this detector.
      * 
      */
-    public Output</* @Nullable */ List<DetectorModel>> associatedModels() {
-        return this.associatedModels;
+    public Output<Optional<List<DetectorModel>>> associatedModels() {
+        return Codegen.optional(this.associatedModels);
     }
     /**
      * The time when the detector was created.
@@ -78,8 +79,8 @@ public class Detector extends com.pulumi.resources.CustomResource {
      * @return The description of the detector.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The ID of the detector
@@ -120,8 +121,8 @@ public class Detector extends com.pulumi.resources.CustomResource {
      * @return The desired detector version status for the detector
      * 
      */
-    public Output</* @Nullable */ DetectorVersionStatus> detectorVersionStatus() {
-        return this.detectorVersionStatus;
+    public Output<Optional<DetectorVersionStatus>> detectorVersionStatus() {
+        return Codegen.optional(this.detectorVersionStatus);
     }
     /**
      * The event type to associate this detector with.
@@ -154,8 +155,8 @@ public class Detector extends com.pulumi.resources.CustomResource {
     @Export(name="ruleExecutionMode", type=DetectorRuleExecutionMode.class, parameters={})
     private Output</* @Nullable */ DetectorRuleExecutionMode> ruleExecutionMode;
 
-    public Output</* @Nullable */ DetectorRuleExecutionMode> ruleExecutionMode() {
-        return this.ruleExecutionMode;
+    public Output<Optional<DetectorRuleExecutionMode>> ruleExecutionMode() {
+        return Codegen.optional(this.ruleExecutionMode);
     }
     @Export(name="rules", type=List.class, parameters={DetectorRule.class})
     private Output<List<DetectorRule>> rules;
@@ -174,8 +175,8 @@ public class Detector extends com.pulumi.resources.CustomResource {
      * @return Tags associated with this detector.
      * 
      */
-    public Output</* @Nullable */ List<DetectorTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<DetectorTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

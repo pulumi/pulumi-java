@@ -14,6 +14,7 @@ import com.pulumi.gcp.compute.outputs.ResourcePolicyGroupPlacementPolicy;
 import com.pulumi.gcp.compute.outputs.ResourcePolicyInstanceSchedulePolicy;
 import com.pulumi.gcp.compute.outputs.ResourcePolicySnapshotSchedulePolicy;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -55,8 +56,8 @@ public class ResourcePolicy extends com.pulumi.resources.CustomResource {
      * @return An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Resource policy for instances used for placement configuration.
@@ -71,8 +72,8 @@ public class ResourcePolicy extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ ResourcePolicyGroupPlacementPolicy> groupPlacementPolicy() {
-        return this.groupPlacementPolicy;
+    public Output<Optional<ResourcePolicyGroupPlacementPolicy>> groupPlacementPolicy() {
+        return Codegen.optional(this.groupPlacementPolicy);
     }
     /**
      * Resource policy for scheduling instance operations.
@@ -87,8 +88,8 @@ public class ResourcePolicy extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ ResourcePolicyInstanceSchedulePolicy> instanceSchedulePolicy() {
-        return this.instanceSchedulePolicy;
+    public Output<Optional<ResourcePolicyInstanceSchedulePolicy>> instanceSchedulePolicy() {
+        return Codegen.optional(this.instanceSchedulePolicy);
     }
     /**
      * The name of the resource, provided by the client when initially creating
@@ -173,8 +174,8 @@ public class ResourcePolicy extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ ResourcePolicySnapshotSchedulePolicy> snapshotSchedulePolicy() {
-        return this.snapshotSchedulePolicy;
+    public Output<Optional<ResourcePolicySnapshotSchedulePolicy>> snapshotSchedulePolicy() {
+        return Codegen.optional(this.snapshotSchedulePolicy);
     }
 
     /**

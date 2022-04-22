@@ -16,6 +16,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -59,8 +60,8 @@ public class Firewall extends com.pulumi.resources.CustomResource {
      * @return A boolean flag indicating whether it is possible to delete the firewall. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> deleteProtection() {
-        return this.deleteProtection;
+    public Output<Optional<Boolean>> deleteProtection() {
+        return Codegen.optional(this.deleteProtection);
     }
     /**
      * A friendly description of the firewall.
@@ -73,8 +74,8 @@ public class Firewall extends com.pulumi.resources.CustomResource {
      * @return A friendly description of the firewall.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The Amazon Resource Name (ARN) of the VPC Firewall policy.
@@ -101,8 +102,8 @@ public class Firewall extends com.pulumi.resources.CustomResource {
      * @return A boolean flag indicating whether it is possible to change the associated firewall policy. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> firewallPolicyChangeProtection() {
-        return this.firewallPolicyChangeProtection;
+    public Output<Optional<Boolean>> firewallPolicyChangeProtection() {
+        return Codegen.optional(this.firewallPolicyChangeProtection);
     }
     /**
      * Nested list of information about the current status of the firewall.
@@ -143,8 +144,8 @@ public class Firewall extends com.pulumi.resources.CustomResource {
      * @return A boolean flag indicating whether it is possible to change the associated subnet(s). Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> subnetChangeProtection() {
-        return this.subnetChangeProtection;
+    public Output<Optional<Boolean>> subnetChangeProtection() {
+        return Codegen.optional(this.subnetChangeProtection);
     }
     /**
      * Set of configuration blocks describing the public subnets. Each subnet must belong to a different Availability Zone in the VPC. AWS Network Firewall creates a firewall endpoint in each subnet. See Subnet Mapping below for details.
@@ -171,8 +172,8 @@ public class Firewall extends com.pulumi.resources.CustomResource {
      * @return Map of resource tags to associate with the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

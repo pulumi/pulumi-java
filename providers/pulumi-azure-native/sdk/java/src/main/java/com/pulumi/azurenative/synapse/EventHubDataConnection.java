@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class EventHubDataConnection extends com.pulumi.resources.CustomResource 
      * @return The event hub messages compression type
      * 
      */
-    public Output</* @Nullable */ String> compression() {
-        return this.compression;
+    public Output<Optional<String>> compression() {
+        return Codegen.optional(this.compression);
     }
     /**
      * The event hub consumer group.
@@ -71,8 +72,8 @@ public class EventHubDataConnection extends com.pulumi.resources.CustomResource 
      * @return The data format of the message. Optionally the data format can be added to each message.
      * 
      */
-    public Output</* @Nullable */ String> dataFormat() {
-        return this.dataFormat;
+    public Output<Optional<String>> dataFormat() {
+        return Codegen.optional(this.dataFormat);
     }
     /**
      * The resource ID of the event hub to be used to create a data connection.
@@ -99,8 +100,8 @@ public class EventHubDataConnection extends com.pulumi.resources.CustomResource 
      * @return System properties of the event hub
      * 
      */
-    public Output</* @Nullable */ List<String>> eventSystemProperties() {
-        return this.eventSystemProperties;
+    public Output<Optional<List<String>>> eventSystemProperties() {
+        return Codegen.optional(this.eventSystemProperties);
     }
     /**
      * Kind of the endpoint for the data connection
@@ -129,8 +130,8 @@ public class EventHubDataConnection extends com.pulumi.resources.CustomResource 
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.
@@ -143,8 +144,8 @@ public class EventHubDataConnection extends com.pulumi.resources.CustomResource 
      * @return The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.
      * 
      */
-    public Output</* @Nullable */ String> mappingRuleName() {
-        return this.mappingRuleName;
+    public Output<Optional<String>> mappingRuleName() {
+        return Codegen.optional(this.mappingRuleName);
     }
     /**
      * The name of the resource
@@ -199,8 +200,8 @@ public class EventHubDataConnection extends com.pulumi.resources.CustomResource 
      * @return The table where the data should be ingested. Optionally the table information can be added to each message.
      * 
      */
-    public Output</* @Nullable */ String> tableName() {
-        return this.tableName;
+    public Output<Optional<String>> tableName() {
+        return Codegen.optional(this.tableName);
     }
     /**
      * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;

@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -56,8 +57,8 @@ public class IpSet extends com.pulumi.resources.CustomResource {
      * @return One or more pairs specifying the IP address type (IPV4 or IPV6) and the IP address range (in CIDR notation) from which web requests originate.
      * 
      */
-    public Output</* @Nullable */ List<IpSetIpSetDescriptor>> ipSetDescriptors() {
-        return this.ipSetDescriptors;
+    public Output<Optional<List<IpSetIpSetDescriptor>>> ipSetDescriptors() {
+        return Codegen.optional(this.ipSetDescriptors);
     }
     /**
      * The name or description of the IPSet.

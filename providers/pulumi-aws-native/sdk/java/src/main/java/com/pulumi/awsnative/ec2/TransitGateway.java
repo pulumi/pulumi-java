@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -24,74 +25,74 @@ public class TransitGateway extends com.pulumi.resources.CustomResource {
     @Export(name="amazonSideAsn", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> amazonSideAsn;
 
-    public Output</* @Nullable */ Integer> amazonSideAsn() {
-        return this.amazonSideAsn;
+    public Output<Optional<Integer>> amazonSideAsn() {
+        return Codegen.optional(this.amazonSideAsn);
     }
     @Export(name="associationDefaultRouteTableId", type=String.class, parameters={})
     private Output</* @Nullable */ String> associationDefaultRouteTableId;
 
-    public Output</* @Nullable */ String> associationDefaultRouteTableId() {
-        return this.associationDefaultRouteTableId;
+    public Output<Optional<String>> associationDefaultRouteTableId() {
+        return Codegen.optional(this.associationDefaultRouteTableId);
     }
     @Export(name="autoAcceptSharedAttachments", type=String.class, parameters={})
     private Output</* @Nullable */ String> autoAcceptSharedAttachments;
 
-    public Output</* @Nullable */ String> autoAcceptSharedAttachments() {
-        return this.autoAcceptSharedAttachments;
+    public Output<Optional<String>> autoAcceptSharedAttachments() {
+        return Codegen.optional(this.autoAcceptSharedAttachments);
     }
     @Export(name="defaultRouteTableAssociation", type=String.class, parameters={})
     private Output</* @Nullable */ String> defaultRouteTableAssociation;
 
-    public Output</* @Nullable */ String> defaultRouteTableAssociation() {
-        return this.defaultRouteTableAssociation;
+    public Output<Optional<String>> defaultRouteTableAssociation() {
+        return Codegen.optional(this.defaultRouteTableAssociation);
     }
     @Export(name="defaultRouteTablePropagation", type=String.class, parameters={})
     private Output</* @Nullable */ String> defaultRouteTablePropagation;
 
-    public Output</* @Nullable */ String> defaultRouteTablePropagation() {
-        return this.defaultRouteTablePropagation;
+    public Output<Optional<String>> defaultRouteTablePropagation() {
+        return Codegen.optional(this.defaultRouteTablePropagation);
     }
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     @Export(name="dnsSupport", type=String.class, parameters={})
     private Output</* @Nullable */ String> dnsSupport;
 
-    public Output</* @Nullable */ String> dnsSupport() {
-        return this.dnsSupport;
+    public Output<Optional<String>> dnsSupport() {
+        return Codegen.optional(this.dnsSupport);
     }
     @Export(name="multicastSupport", type=String.class, parameters={})
     private Output</* @Nullable */ String> multicastSupport;
 
-    public Output</* @Nullable */ String> multicastSupport() {
-        return this.multicastSupport;
+    public Output<Optional<String>> multicastSupport() {
+        return Codegen.optional(this.multicastSupport);
     }
     @Export(name="propagationDefaultRouteTableId", type=String.class, parameters={})
     private Output</* @Nullable */ String> propagationDefaultRouteTableId;
 
-    public Output</* @Nullable */ String> propagationDefaultRouteTableId() {
-        return this.propagationDefaultRouteTableId;
+    public Output<Optional<String>> propagationDefaultRouteTableId() {
+        return Codegen.optional(this.propagationDefaultRouteTableId);
     }
     @Export(name="tags", type=List.class, parameters={TransitGatewayTag.class})
     private Output</* @Nullable */ List<TransitGatewayTag>> tags;
 
-    public Output</* @Nullable */ List<TransitGatewayTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<TransitGatewayTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     @Export(name="transitGatewayCidrBlocks", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> transitGatewayCidrBlocks;
 
-    public Output</* @Nullable */ List<String>> transitGatewayCidrBlocks() {
-        return this.transitGatewayCidrBlocks;
+    public Output<Optional<List<String>>> transitGatewayCidrBlocks() {
+        return Codegen.optional(this.transitGatewayCidrBlocks);
     }
     @Export(name="vpnEcmpSupport", type=String.class, parameters={})
     private Output</* @Nullable */ String> vpnEcmpSupport;
 
-    public Output</* @Nullable */ String> vpnEcmpSupport() {
-        return this.vpnEcmpSupport;
+    public Output<Optional<String>> vpnEcmpSupport() {
+        return Codegen.optional(this.vpnEcmpSupport);
     }
 
     /**

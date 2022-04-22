@@ -14,6 +14,7 @@ import java.lang.Double;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -100,8 +101,8 @@ public class Pool extends com.pulumi.resources.CustomResource {
      * @return The qos type of the pool
      * 
      */
-    public Output</* @Nullable */ String> qosType() {
-        return this.qosType;
+    public Output<Optional<String>> qosType() {
+        return Codegen.optional(this.qosType);
     }
     /**
      * The service level of the file system
@@ -142,8 +143,8 @@ public class Pool extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Total throughput of pool in Mibps

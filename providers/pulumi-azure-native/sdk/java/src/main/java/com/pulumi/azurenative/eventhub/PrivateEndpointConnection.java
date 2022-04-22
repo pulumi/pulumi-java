@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -58,8 +59,8 @@ public class PrivateEndpointConnection extends com.pulumi.resources.CustomResour
      * @return The Private Endpoint resource for this Connection.
      * 
      */
-    public Output</* @Nullable */ PrivateEndpointResponse> privateEndpoint() {
-        return this.privateEndpoint;
+    public Output<Optional<PrivateEndpointResponse>> privateEndpoint() {
+        return Codegen.optional(this.privateEndpoint);
     }
     /**
      * Details about the state of the connection.
@@ -72,8 +73,8 @@ public class PrivateEndpointConnection extends com.pulumi.resources.CustomResour
      * @return Details about the state of the connection.
      * 
      */
-    public Output</* @Nullable */ ConnectionStateResponse> privateLinkServiceConnectionState() {
-        return this.privateLinkServiceConnectionState;
+    public Output<Optional<ConnectionStateResponse>> privateLinkServiceConnectionState() {
+        return Codegen.optional(this.privateLinkServiceConnectionState);
     }
     /**
      * Provisioning state of the Private Endpoint Connection.
@@ -86,8 +87,8 @@ public class PrivateEndpointConnection extends com.pulumi.resources.CustomResour
      * @return Provisioning state of the Private Endpoint Connection.
      * 
      */
-    public Output</* @Nullable */ String> provisioningState() {
-        return this.provisioningState;
+    public Output<Optional<String>> provisioningState() {
+        return Codegen.optional(this.provisioningState);
     }
     /**
      * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;

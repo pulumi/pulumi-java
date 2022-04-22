@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -72,8 +73,8 @@ public class SchemaRegistry extends com.pulumi.resources.CustomResource {
      * @return dictionary object for SchemaGroup group properties
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> groupProperties() {
-        return this.groupProperties;
+    public Output<Optional<Map<String,String>>> groupProperties() {
+        return Codegen.optional(this.groupProperties);
     }
     /**
      * The geo-location where the resource lives
@@ -106,14 +107,14 @@ public class SchemaRegistry extends com.pulumi.resources.CustomResource {
     @Export(name="schemaCompatibility", type=String.class, parameters={})
     private Output</* @Nullable */ String> schemaCompatibility;
 
-    public Output</* @Nullable */ String> schemaCompatibility() {
-        return this.schemaCompatibility;
+    public Output<Optional<String>> schemaCompatibility() {
+        return Codegen.optional(this.schemaCompatibility);
     }
     @Export(name="schemaType", type=String.class, parameters={})
     private Output</* @Nullable */ String> schemaType;
 
-    public Output</* @Nullable */ String> schemaType() {
-        return this.schemaType;
+    public Output<Optional<String>> schemaType() {
+        return Codegen.optional(this.schemaType);
     }
     /**
      * The system meta data relating to this resource.

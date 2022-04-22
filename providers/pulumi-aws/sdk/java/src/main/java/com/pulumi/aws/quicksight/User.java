@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -78,8 +79,8 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return The ARN of the IAM user or role that you are registering with Amazon QuickSight.
      * 
      */
-    public Output</* @Nullable */ String> iamArn() {
-        return this.iamArn;
+    public Output<Optional<String>> iamArn() {
+        return Codegen.optional(this.iamArn);
     }
     /**
      * Amazon QuickSight supports several ways of managing the identity of users. This parameter accepts either  `IAM` or `QUICKSIGHT`. If `IAM` is specified, the `iam_arn` must also be specified.
@@ -106,8 +107,8 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return The namespace. Currently, you should set this to `default`.
      * 
      */
-    public Output</* @Nullable */ String> namespace() {
-        return this.namespace;
+    public Output<Optional<String>> namespace() {
+        return Codegen.optional(this.namespace);
     }
     /**
      * The name of the IAM session to use when assuming roles that can embed QuickSight dashboards. Only valid for registering users using an assumed IAM role. Additionally, if registering multiple users using the same IAM role, each user needs to have a unique session name.
@@ -120,8 +121,8 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return The name of the IAM session to use when assuming roles that can embed QuickSight dashboards. Only valid for registering users using an assumed IAM role. Additionally, if registering multiple users using the same IAM role, each user needs to have a unique session name.
      * 
      */
-    public Output</* @Nullable */ String> sessionName() {
-        return this.sessionName;
+    public Output<Optional<String>> sessionName() {
+        return Codegen.optional(this.sessionName);
     }
     /**
      * The Amazon QuickSight user name that you want to create for the user you are registering. Only valid for registering a user with `identity_type` set to `QUICKSIGHT`.
@@ -134,8 +135,8 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return The Amazon QuickSight user name that you want to create for the user you are registering. Only valid for registering a user with `identity_type` set to `QUICKSIGHT`.
      * 
      */
-    public Output</* @Nullable */ String> userName() {
-        return this.userName;
+    public Output<Optional<String>> userName() {
+        return Codegen.optional(this.userName);
     }
     /**
      * The Amazon QuickSight role of the user. The user role can be one of the following: `READER`, `AUTHOR`, or `ADMIN`

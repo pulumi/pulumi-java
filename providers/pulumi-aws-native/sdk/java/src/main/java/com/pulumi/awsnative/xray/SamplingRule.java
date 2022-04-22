@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -33,32 +34,32 @@ public class SamplingRule extends com.pulumi.resources.CustomResource {
     @Export(name="ruleName", type=String.class, parameters={})
     private Output</* @Nullable */ String> ruleName;
 
-    public Output</* @Nullable */ String> ruleName() {
-        return this.ruleName;
+    public Output<Optional<String>> ruleName() {
+        return Codegen.optional(this.ruleName);
     }
     @Export(name="samplingRule", type=com.pulumi.awsnative.xray.outputs.SamplingRule.class, parameters={})
     private Output</* @Nullable */ com.pulumi.awsnative.xray.outputs.SamplingRule> samplingRule;
 
-    public Output</* @Nullable */ com.pulumi.awsnative.xray.outputs.SamplingRule> samplingRule() {
-        return this.samplingRule;
+    public Output<Optional<com.pulumi.awsnative.xray.outputs.SamplingRule>> samplingRule() {
+        return Codegen.optional(this.samplingRule);
     }
     @Export(name="samplingRuleRecord", type=SamplingRuleRecord.class, parameters={})
     private Output</* @Nullable */ SamplingRuleRecord> samplingRuleRecord;
 
-    public Output</* @Nullable */ SamplingRuleRecord> samplingRuleRecord() {
-        return this.samplingRuleRecord;
+    public Output<Optional<SamplingRuleRecord>> samplingRuleRecord() {
+        return Codegen.optional(this.samplingRuleRecord);
     }
     @Export(name="samplingRuleUpdate", type=SamplingRuleUpdate.class, parameters={})
     private Output</* @Nullable */ SamplingRuleUpdate> samplingRuleUpdate;
 
-    public Output</* @Nullable */ SamplingRuleUpdate> samplingRuleUpdate() {
-        return this.samplingRuleUpdate;
+    public Output<Optional<SamplingRuleUpdate>> samplingRuleUpdate() {
+        return Codegen.optional(this.samplingRuleUpdate);
     }
     @Export(name="tags", type=List.class, parameters={TagsItemProperties.class})
     private Output</* @Nullable */ List<TagsItemProperties>> tags;
 
-    public Output</* @Nullable */ List<TagsItemProperties>> tags() {
-        return this.tags;
+    public Output<Optional<List<TagsItemProperties>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

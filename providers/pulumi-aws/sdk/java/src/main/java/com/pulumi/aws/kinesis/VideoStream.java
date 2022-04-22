@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -74,8 +75,8 @@ public class VideoStream extends com.pulumi.resources.CustomResource {
      * @return The number of hours that you want to retain the data in the stream. Kinesis Video Streams retains the data in a data store that is associated with the stream. The default value is `0`, indicating that the stream does not persist data.
      * 
      */
-    public Output</* @Nullable */ Integer> dataRetentionInHours() {
-        return this.dataRetentionInHours;
+    public Output<Optional<Integer>> dataRetentionInHours() {
+        return Codegen.optional(this.dataRetentionInHours);
     }
     /**
      * The name of the device that is writing to the stream. **In the current implementation, Kinesis Video Streams does not use this name.**
@@ -88,8 +89,8 @@ public class VideoStream extends com.pulumi.resources.CustomResource {
      * @return The name of the device that is writing to the stream. **In the current implementation, Kinesis Video Streams does not use this name.**
      * 
      */
-    public Output</* @Nullable */ String> deviceName() {
-        return this.deviceName;
+    public Output<Optional<String>> deviceName() {
+        return Codegen.optional(this.deviceName);
     }
     /**
      * The ID of the AWS Key Management Service (AWS KMS) key that you want Kinesis Video Streams to use to encrypt stream data. If no key ID is specified, the default, Kinesis Video-managed key (`aws/kinesisvideo`) is used.
@@ -116,8 +117,8 @@ public class VideoStream extends com.pulumi.resources.CustomResource {
      * @return The media type of the stream. Consumers of the stream can use this information when processing the stream. For more information about media types, see [Media Types](http://www.iana.org/assignments/media-types/media-types.xhtml). If you choose to specify the MediaType, see [Naming Requirements](https://tools.ietf.org/html/rfc6838#section-4.2) for guidelines.
      * 
      */
-    public Output</* @Nullable */ String> mediaType() {
-        return this.mediaType;
+    public Output<Optional<String>> mediaType() {
+        return Codegen.optional(this.mediaType);
     }
     /**
      * A name to identify the stream. This is unique to the
@@ -146,8 +147,8 @@ public class VideoStream extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.

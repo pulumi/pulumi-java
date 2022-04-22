@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -63,8 +64,8 @@ public class EipAssociation extends com.pulumi.resources.CustomResource {
      * be re-associated. Defaults to `true` in VPC.
      * 
      */
-    public Output</* @Nullable */ Boolean> allowReassociation() {
-        return this.allowReassociation;
+    public Output<Optional<Boolean>> allowReassociation() {
+        return Codegen.optional(this.allowReassociation);
     }
     /**
      * The ID of the instance. This is required for

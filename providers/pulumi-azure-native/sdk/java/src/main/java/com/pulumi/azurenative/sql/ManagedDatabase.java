@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class ManagedDatabase extends com.pulumi.resources.CustomResource {
      * @return Collation of the metadata catalog.
      * 
      */
-    public Output</* @Nullable */ String> catalogCollation() {
-        return this.catalogCollation;
+    public Output<Optional<String>> catalogCollation() {
+        return Codegen.optional(this.catalogCollation);
     }
     /**
      * Collation of the managed database.
@@ -57,8 +58,8 @@ public class ManagedDatabase extends com.pulumi.resources.CustomResource {
      * @return Collation of the managed database.
      * 
      */
-    public Output</* @Nullable */ String> collation() {
-        return this.collation;
+    public Output<Optional<String>> collation() {
+        return Codegen.optional(this.collation);
     }
     /**
      * Creation date of the database.
@@ -169,8 +170,8 @@ public class ManagedDatabase extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type.

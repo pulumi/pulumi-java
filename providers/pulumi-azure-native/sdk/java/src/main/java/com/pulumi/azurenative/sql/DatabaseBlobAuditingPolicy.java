@@ -14,6 +14,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -156,8 +157,8 @@ public class DatabaseBlobAuditingPolicy extends com.pulumi.resources.CustomResou
      * For more information, see [Database-Level Audit Actions](https://docs.microsoft.com/en-us/sql/relational-databases/security/auditing/sql-server-audit-action-groups-and-actions#database-level-audit-actions)
      * 
      */
-    public Output</* @Nullable */ List<String>> auditActionsAndGroups() {
-        return this.auditActionsAndGroups;
+    public Output<Optional<List<String>>> auditActionsAndGroups() {
+        return Codegen.optional(this.auditActionsAndGroups);
     }
     /**
      * Specifies whether audit events are sent to Azure Monitor.
@@ -190,8 +191,8 @@ public class DatabaseBlobAuditingPolicy extends com.pulumi.resources.CustomResou
      * or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033043)
      * 
      */
-    public Output</* @Nullable */ Boolean> isAzureMonitorTargetEnabled() {
-        return this.isAzureMonitorTargetEnabled;
+    public Output<Optional<Boolean>> isAzureMonitorTargetEnabled() {
+        return Codegen.optional(this.isAzureMonitorTargetEnabled);
     }
     /**
      * Specifies whether storageAccountAccessKey value is the storage&#39;s secondary key.
@@ -204,8 +205,8 @@ public class DatabaseBlobAuditingPolicy extends com.pulumi.resources.CustomResou
      * @return Specifies whether storageAccountAccessKey value is the storage&#39;s secondary key.
      * 
      */
-    public Output</* @Nullable */ Boolean> isStorageSecondaryKeyInUse() {
-        return this.isStorageSecondaryKeyInUse;
+    public Output<Optional<Boolean>> isStorageSecondaryKeyInUse() {
+        return Codegen.optional(this.isStorageSecondaryKeyInUse);
     }
     /**
      * Resource kind.
@@ -248,8 +249,8 @@ public class DatabaseBlobAuditingPolicy extends com.pulumi.resources.CustomResou
      * The default minimum value is 1000 (1 second). The maximum is 2,147,483,647.
      * 
      */
-    public Output</* @Nullable */ Integer> queueDelayMs() {
-        return this.queueDelayMs;
+    public Output<Optional<Integer>> queueDelayMs() {
+        return Codegen.optional(this.queueDelayMs);
     }
     /**
      * Specifies the number of days to keep in the audit logs in the storage account.
@@ -262,8 +263,8 @@ public class DatabaseBlobAuditingPolicy extends com.pulumi.resources.CustomResou
      * @return Specifies the number of days to keep in the audit logs in the storage account.
      * 
      */
-    public Output</* @Nullable */ Integer> retentionDays() {
-        return this.retentionDays;
+    public Output<Optional<Integer>> retentionDays() {
+        return Codegen.optional(this.retentionDays);
     }
     /**
      * Specifies the state of the audit. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required.
@@ -290,8 +291,8 @@ public class DatabaseBlobAuditingPolicy extends com.pulumi.resources.CustomResou
      * @return Specifies the blob storage subscription Id.
      * 
      */
-    public Output</* @Nullable */ String> storageAccountSubscriptionId() {
-        return this.storageAccountSubscriptionId;
+    public Output<Optional<String>> storageAccountSubscriptionId() {
+        return Codegen.optional(this.storageAccountSubscriptionId);
     }
     /**
      * Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled is required.
@@ -304,8 +305,8 @@ public class DatabaseBlobAuditingPolicy extends com.pulumi.resources.CustomResou
      * @return Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled is required.
      * 
      */
-    public Output</* @Nullable */ String> storageEndpoint() {
-        return this.storageEndpoint;
+    public Output<Optional<String>> storageEndpoint() {
+        return Codegen.optional(this.storageEndpoint);
     }
     /**
      * Resource type.

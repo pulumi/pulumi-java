@@ -15,6 +15,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class IpAllocation extends com.pulumi.resources.CustomResource {
      * @return IpAllocation tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> allocationTags() {
-        return this.allocationTags;
+    public Output<Optional<Map<String,String>>> allocationTags() {
+        return Codegen.optional(this.allocationTags);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
@@ -73,8 +74,8 @@ public class IpAllocation extends com.pulumi.resources.CustomResource {
      * @return The IPAM allocation ID.
      * 
      */
-    public Output</* @Nullable */ String> ipamAllocationId() {
-        return this.ipamAllocationId;
+    public Output<Optional<String>> ipamAllocationId() {
+        return Codegen.optional(this.ipamAllocationId);
     }
     /**
      * Resource location.
@@ -87,8 +88,8 @@ public class IpAllocation extends com.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * Resource name.
@@ -115,8 +116,8 @@ public class IpAllocation extends com.pulumi.resources.CustomResource {
      * @return The address prefix for the IpAllocation.
      * 
      */
-    public Output</* @Nullable */ String> prefix() {
-        return this.prefix;
+    public Output<Optional<String>> prefix() {
+        return Codegen.optional(this.prefix);
     }
     /**
      * The address prefix length for the IpAllocation.
@@ -129,8 +130,8 @@ public class IpAllocation extends com.pulumi.resources.CustomResource {
      * @return The address prefix length for the IpAllocation.
      * 
      */
-    public Output</* @Nullable */ Integer> prefixLength() {
-        return this.prefixLength;
+    public Output<Optional<Integer>> prefixLength() {
+        return Codegen.optional(this.prefixLength);
     }
     /**
      * The address prefix Type for the IpAllocation.
@@ -143,8 +144,8 @@ public class IpAllocation extends com.pulumi.resources.CustomResource {
      * @return The address prefix Type for the IpAllocation.
      * 
      */
-    public Output</* @Nullable */ String> prefixType() {
-        return this.prefixType;
+    public Output<Optional<String>> prefixType() {
+        return Codegen.optional(this.prefixType);
     }
     /**
      * The Subnet that using the prefix of this IpAllocation resource.
@@ -171,8 +172,8 @@ public class IpAllocation extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type.

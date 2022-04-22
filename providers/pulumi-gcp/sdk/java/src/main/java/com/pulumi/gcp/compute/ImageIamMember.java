@@ -12,6 +12,7 @@ import com.pulumi.gcp.compute.ImageIamMemberArgs;
 import com.pulumi.gcp.compute.inputs.ImageIamMemberState;
 import com.pulumi.gcp.compute.outputs.ImageIamMemberCondition;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -75,8 +76,8 @@ public class ImageIamMember extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ ImageIamMemberCondition> condition() {
-        return this.condition;
+    public Output<Optional<ImageIamMemberCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * (Computed) The etag of the IAM policy.

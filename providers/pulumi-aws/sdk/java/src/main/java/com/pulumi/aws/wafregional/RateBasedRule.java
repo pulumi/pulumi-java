@@ -15,6 +15,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -86,8 +87,8 @@ public class RateBasedRule extends com.pulumi.resources.CustomResource {
      * @return The objects to include in a rule (documented below).
      * 
      */
-    public Output</* @Nullable */ List<RateBasedRulePredicate>> predicates() {
-        return this.predicates;
+    public Output<Optional<List<RateBasedRulePredicate>>> predicates() {
+        return Codegen.optional(this.predicates);
     }
     /**
      * Valid value is IP.
@@ -128,8 +129,8 @@ public class RateBasedRule extends com.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

@@ -14,6 +14,7 @@ import com.pulumi.gcp.gkehub.outputs.MembershipAuthority;
 import com.pulumi.gcp.gkehub.outputs.MembershipEndpoint;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -55,8 +56,8 @@ public class Membership extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ MembershipAuthority> authority() {
-        return this.authority;
+    public Output<Optional<MembershipAuthority>> authority() {
+        return Codegen.optional(this.authority);
     }
     /**
      * The name of this entity type to be displayed on the console. This field is unavailable in v1 of the API.
@@ -73,8 +74,8 @@ public class Membership extends com.pulumi.resources.CustomResource {
      * @return The name of this entity type to be displayed on the console. This field is unavailable in v1 of the API.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * If this Membership is a Kubernetes API server hosted on GKE, this is a self link to its GCP resource.
@@ -89,8 +90,8 @@ public class Membership extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ MembershipEndpoint> endpoint() {
-        return this.endpoint;
+    public Output<Optional<MembershipEndpoint>> endpoint() {
+        return Codegen.optional(this.endpoint);
     }
     /**
      * Labels to apply to this membership.
@@ -103,8 +104,8 @@ public class Membership extends com.pulumi.resources.CustomResource {
      * @return Labels to apply to this membership.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * The client-provided identifier of the membership.

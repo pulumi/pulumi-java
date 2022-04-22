@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -42,8 +43,8 @@ public class ResourceShare extends com.pulumi.resources.CustomResource {
      * @return Indicates whether principals outside your organization can be associated with a resource share.
      * 
      */
-    public Output</* @Nullable */ Boolean> allowExternalPrincipals() {
-        return this.allowExternalPrincipals;
+    public Output<Optional<Boolean>> allowExternalPrincipals() {
+        return Codegen.optional(this.allowExternalPrincipals);
     }
     /**
      * The Amazon Resource Name (ARN) of the resource share.
@@ -84,8 +85,8 @@ public class ResourceShare extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource share. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

@@ -11,6 +11,7 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.compute.TargetInstanceArgs;
 import com.pulumi.gcp.compute.inputs.TargetInstanceState;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -77,8 +78,8 @@ public class TargetInstance extends com.pulumi.resources.CustomResource {
      * @return An optional description of this resource.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The Compute instance VM handling traffic for this target instance.
@@ -147,8 +148,8 @@ public class TargetInstance extends com.pulumi.resources.CustomResource {
      * Possible values are `NO_NAT`.
      * 
      */
-    public Output</* @Nullable */ String> natPolicy() {
-        return this.natPolicy;
+    public Output<Optional<String>> natPolicy() {
+        return Codegen.optional(this.natPolicy);
     }
     /**
      * The URL of the network this target instance uses to forward traffic. If not specified, the traffic will be forwarded to the network that the default network interface belongs to.
@@ -161,8 +162,8 @@ public class TargetInstance extends com.pulumi.resources.CustomResource {
      * @return The URL of the network this target instance uses to forward traffic. If not specified, the traffic will be forwarded to the network that the default network interface belongs to.
      * 
      */
-    public Output</* @Nullable */ String> network() {
-        return this.network;
+    public Output<Optional<String>> network() {
+        return Codegen.optional(this.network);
     }
     /**
      * The ID of the project in which the resource belongs.

@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -30,14 +31,14 @@ public class TopicRule extends com.pulumi.resources.CustomResource {
     @Export(name="ruleName", type=String.class, parameters={})
     private Output</* @Nullable */ String> ruleName;
 
-    public Output</* @Nullable */ String> ruleName() {
-        return this.ruleName;
+    public Output<Optional<String>> ruleName() {
+        return Codegen.optional(this.ruleName);
     }
     @Export(name="tags", type=List.class, parameters={TopicRuleTag.class})
     private Output</* @Nullable */ List<TopicRuleTag>> tags;
 
-    public Output</* @Nullable */ List<TopicRuleTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<TopicRuleTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     @Export(name="topicRulePayload", type=TopicRulePayload.class, parameters={})
     private Output<TopicRulePayload> topicRulePayload;

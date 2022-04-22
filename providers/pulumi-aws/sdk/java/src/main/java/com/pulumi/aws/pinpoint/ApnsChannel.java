@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -55,8 +56,8 @@ public class ApnsChannel extends com.pulumi.resources.CustomResource {
      * @return The ID assigned to your iOS app. To find this value, choose Certificates, IDs &amp; Profiles, choose App IDs in the Identifiers section, and choose your app.
      * 
      */
-    public Output</* @Nullable */ String> bundleId() {
-        return this.bundleId;
+    public Output<Optional<String>> bundleId() {
+        return Codegen.optional(this.bundleId);
     }
     /**
      * The pem encoded TLS Certificate from Apple.
@@ -69,8 +70,8 @@ public class ApnsChannel extends com.pulumi.resources.CustomResource {
      * @return The pem encoded TLS Certificate from Apple.
      * 
      */
-    public Output</* @Nullable */ String> certificate() {
-        return this.certificate;
+    public Output<Optional<String>> certificate() {
+        return Codegen.optional(this.certificate);
     }
     /**
      * The default authentication method used for APNs.
@@ -89,8 +90,8 @@ public class ApnsChannel extends com.pulumi.resources.CustomResource {
      * If your default authentication type fails, Amazon Pinpoint doesn&#39;t attempt to use the other authentication type.
      * 
      */
-    public Output</* @Nullable */ String> defaultAuthenticationMethod() {
-        return this.defaultAuthenticationMethod;
+    public Output<Optional<String>> defaultAuthenticationMethod() {
+        return Codegen.optional(this.defaultAuthenticationMethod);
     }
     /**
      * Whether the channel is enabled or disabled. Defaults to `true`.
@@ -103,8 +104,8 @@ public class ApnsChannel extends com.pulumi.resources.CustomResource {
      * @return Whether the channel is enabled or disabled. Defaults to `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> enabled() {
-        return this.enabled;
+    public Output<Optional<Boolean>> enabled() {
+        return Codegen.optional(this.enabled);
     }
     /**
      * The Certificate Private Key file (ie. `.key` file).
@@ -117,8 +118,8 @@ public class ApnsChannel extends com.pulumi.resources.CustomResource {
      * @return The Certificate Private Key file (ie. `.key` file).
      * 
      */
-    public Output</* @Nullable */ String> privateKey() {
-        return this.privateKey;
+    public Output<Optional<String>> privateKey() {
+        return Codegen.optional(this.privateKey);
     }
     /**
      * The ID assigned to your Apple developer account team. This value is provided on the Membership page.
@@ -131,8 +132,8 @@ public class ApnsChannel extends com.pulumi.resources.CustomResource {
      * @return The ID assigned to your Apple developer account team. This value is provided on the Membership page.
      * 
      */
-    public Output</* @Nullable */ String> teamId() {
-        return this.teamId;
+    public Output<Optional<String>> teamId() {
+        return Codegen.optional(this.teamId);
     }
     /**
      * The `.p8` file that you download from your Apple developer account when you create an authentication key.
@@ -145,8 +146,8 @@ public class ApnsChannel extends com.pulumi.resources.CustomResource {
      * @return The `.p8` file that you download from your Apple developer account when you create an authentication key.
      * 
      */
-    public Output</* @Nullable */ String> tokenKey() {
-        return this.tokenKey;
+    public Output<Optional<String>> tokenKey() {
+        return Codegen.optional(this.tokenKey);
     }
     /**
      * The ID assigned to your signing key. To find this value, choose Certificates, IDs &amp; Profiles, and choose your key in the Keys section.
@@ -159,8 +160,8 @@ public class ApnsChannel extends com.pulumi.resources.CustomResource {
      * @return The ID assigned to your signing key. To find this value, choose Certificates, IDs &amp; Profiles, and choose your key in the Keys section.
      * 
      */
-    public Output</* @Nullable */ String> tokenKeyId() {
-        return this.tokenKeyId;
+    public Output<Optional<String>> tokenKeyId() {
+        return Codegen.optional(this.tokenKeyId);
     }
 
     /**

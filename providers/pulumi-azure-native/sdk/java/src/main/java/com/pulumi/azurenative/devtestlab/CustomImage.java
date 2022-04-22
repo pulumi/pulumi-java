@@ -18,6 +18,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -48,8 +49,8 @@ public class CustomImage extends com.pulumi.resources.CustomResource {
      * @return The author of the custom image.
      * 
      */
-    public Output</* @Nullable */ String> author() {
-        return this.author;
+    public Output<Optional<String>> author() {
+        return Codegen.optional(this.author);
     }
     /**
      * The creation date of the custom image.
@@ -76,8 +77,8 @@ public class CustomImage extends com.pulumi.resources.CustomResource {
      * @return Storage information about the plan related to this custom image
      * 
      */
-    public Output</* @Nullable */ CustomImagePropertiesFromPlanResponse> customImagePlan() {
-        return this.customImagePlan;
+    public Output<Optional<CustomImagePropertiesFromPlanResponse>> customImagePlan() {
+        return Codegen.optional(this.customImagePlan);
     }
     /**
      * Storage information about the data disks present in the custom image
@@ -90,8 +91,8 @@ public class CustomImage extends com.pulumi.resources.CustomResource {
      * @return Storage information about the data disks present in the custom image
      * 
      */
-    public Output</* @Nullable */ List<DataDiskStorageTypeInfoResponse>> dataDiskStorageInfo() {
-        return this.dataDiskStorageInfo;
+    public Output<Optional<List<DataDiskStorageTypeInfoResponse>>> dataDiskStorageInfo() {
+        return Codegen.optional(this.dataDiskStorageInfo);
     }
     /**
      * The description of the custom image.
@@ -104,8 +105,8 @@ public class CustomImage extends com.pulumi.resources.CustomResource {
      * @return The description of the custom image.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Whether or not the custom images underlying offer/plan has been enabled for programmatic deployment
@@ -118,8 +119,8 @@ public class CustomImage extends com.pulumi.resources.CustomResource {
      * @return Whether or not the custom images underlying offer/plan has been enabled for programmatic deployment
      * 
      */
-    public Output</* @Nullable */ Boolean> isPlanAuthorized() {
-        return this.isPlanAuthorized;
+    public Output<Optional<Boolean>> isPlanAuthorized() {
+        return Codegen.optional(this.isPlanAuthorized);
     }
     /**
      * The location of the resource.
@@ -132,8 +133,8 @@ public class CustomImage extends com.pulumi.resources.CustomResource {
      * @return The location of the resource.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The Managed Image Id backing the custom image.
@@ -146,8 +147,8 @@ public class CustomImage extends com.pulumi.resources.CustomResource {
      * @return The Managed Image Id backing the custom image.
      * 
      */
-    public Output</* @Nullable */ String> managedImageId() {
-        return this.managedImageId;
+    public Output<Optional<String>> managedImageId() {
+        return Codegen.optional(this.managedImageId);
     }
     /**
      * The Managed Snapshot Id backing the custom image.
@@ -160,8 +161,8 @@ public class CustomImage extends com.pulumi.resources.CustomResource {
      * @return The Managed Snapshot Id backing the custom image.
      * 
      */
-    public Output</* @Nullable */ String> managedSnapshotId() {
-        return this.managedSnapshotId;
+    public Output<Optional<String>> managedSnapshotId() {
+        return Codegen.optional(this.managedSnapshotId);
     }
     /**
      * The name of the resource.
@@ -202,8 +203,8 @@ public class CustomImage extends com.pulumi.resources.CustomResource {
      * @return The tags of the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource.
@@ -244,8 +245,8 @@ public class CustomImage extends com.pulumi.resources.CustomResource {
      * @return The VHD from which the image is to be created.
      * 
      */
-    public Output</* @Nullable */ CustomImagePropertiesCustomResponse> vhd() {
-        return this.vhd;
+    public Output<Optional<CustomImagePropertiesCustomResponse>> vhd() {
+        return Codegen.optional(this.vhd);
     }
     /**
      * The virtual machine from which the image is to be created.
@@ -258,8 +259,8 @@ public class CustomImage extends com.pulumi.resources.CustomResource {
      * @return The virtual machine from which the image is to be created.
      * 
      */
-    public Output</* @Nullable */ CustomImagePropertiesFromVmResponse> vm() {
-        return this.vm;
+    public Output<Optional<CustomImagePropertiesFromVmResponse>> vm() {
+        return Codegen.optional(this.vm);
     }
 
     /**

@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -30,32 +31,32 @@ public class NetworkProfile extends com.pulumi.resources.CustomResource {
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     @Export(name="downlinkBandwidthBits", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> downlinkBandwidthBits;
 
-    public Output</* @Nullable */ Integer> downlinkBandwidthBits() {
-        return this.downlinkBandwidthBits;
+    public Output<Optional<Integer>> downlinkBandwidthBits() {
+        return Codegen.optional(this.downlinkBandwidthBits);
     }
     @Export(name="downlinkDelayMs", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> downlinkDelayMs;
 
-    public Output</* @Nullable */ Integer> downlinkDelayMs() {
-        return this.downlinkDelayMs;
+    public Output<Optional<Integer>> downlinkDelayMs() {
+        return Codegen.optional(this.downlinkDelayMs);
     }
     @Export(name="downlinkJitterMs", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> downlinkJitterMs;
 
-    public Output</* @Nullable */ Integer> downlinkJitterMs() {
-        return this.downlinkJitterMs;
+    public Output<Optional<Integer>> downlinkJitterMs() {
+        return Codegen.optional(this.downlinkJitterMs);
     }
     @Export(name="downlinkLossPercent", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> downlinkLossPercent;
 
-    public Output</* @Nullable */ Integer> downlinkLossPercent() {
-        return this.downlinkLossPercent;
+    public Output<Optional<Integer>> downlinkLossPercent() {
+        return Codegen.optional(this.downlinkLossPercent);
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
@@ -72,32 +73,32 @@ public class NetworkProfile extends com.pulumi.resources.CustomResource {
     @Export(name="tags", type=List.class, parameters={NetworkProfileTag.class})
     private Output</* @Nullable */ List<NetworkProfileTag>> tags;
 
-    public Output</* @Nullable */ List<NetworkProfileTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<NetworkProfileTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     @Export(name="uplinkBandwidthBits", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> uplinkBandwidthBits;
 
-    public Output</* @Nullable */ Integer> uplinkBandwidthBits() {
-        return this.uplinkBandwidthBits;
+    public Output<Optional<Integer>> uplinkBandwidthBits() {
+        return Codegen.optional(this.uplinkBandwidthBits);
     }
     @Export(name="uplinkDelayMs", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> uplinkDelayMs;
 
-    public Output</* @Nullable */ Integer> uplinkDelayMs() {
-        return this.uplinkDelayMs;
+    public Output<Optional<Integer>> uplinkDelayMs() {
+        return Codegen.optional(this.uplinkDelayMs);
     }
     @Export(name="uplinkJitterMs", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> uplinkJitterMs;
 
-    public Output</* @Nullable */ Integer> uplinkJitterMs() {
-        return this.uplinkJitterMs;
+    public Output<Optional<Integer>> uplinkJitterMs() {
+        return Codegen.optional(this.uplinkJitterMs);
     }
     @Export(name="uplinkLossPercent", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> uplinkLossPercent;
 
-    public Output</* @Nullable */ Integer> uplinkLossPercent() {
-        return this.uplinkLossPercent;
+    public Output<Optional<Integer>> uplinkLossPercent() {
+        return Codegen.optional(this.uplinkLossPercent);
     }
 
     /**

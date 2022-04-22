@@ -15,6 +15,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -82,8 +83,8 @@ public class Volume extends com.pulumi.resources.CustomResource {
      * @return Options specific to the driver.
      * 
      */
-    public Output</* @Nullable */ Map<String,Object>> driverOpts() {
-        return this.driverOpts;
+    public Output<Optional<Map<String,Object>>> driverOpts() {
+        return Codegen.optional(this.driverOpts);
     }
     /**
      * User-defined key/value metadata
@@ -96,8 +97,8 @@ public class Volume extends com.pulumi.resources.CustomResource {
      * @return User-defined key/value metadata
      * 
      */
-    public Output</* @Nullable */ List<VolumeLabel>> labels() {
-        return this.labels;
+    public Output<Optional<List<VolumeLabel>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * The mountpoint of the volume.

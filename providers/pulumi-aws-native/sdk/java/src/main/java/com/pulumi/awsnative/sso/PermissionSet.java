@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -32,8 +33,8 @@ public class PermissionSet extends com.pulumi.resources.CustomResource {
      * @return The permission set description.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The inline policy to put in permission set.
@@ -46,8 +47,8 @@ public class PermissionSet extends com.pulumi.resources.CustomResource {
      * @return The inline policy to put in permission set.
      * 
      */
-    public Output</* @Nullable */ Object> inlinePolicy() {
-        return this.inlinePolicy;
+    public Output<Optional<Object>> inlinePolicy() {
+        return Codegen.optional(this.inlinePolicy);
     }
     /**
      * The sso instance arn that the permission set is owned.
@@ -66,8 +67,8 @@ public class PermissionSet extends com.pulumi.resources.CustomResource {
     @Export(name="managedPolicies", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> managedPolicies;
 
-    public Output</* @Nullable */ List<String>> managedPolicies() {
-        return this.managedPolicies;
+    public Output<Optional<List<String>>> managedPolicies() {
+        return Codegen.optional(this.managedPolicies);
     }
     /**
      * The name you want to assign to this permission set.
@@ -108,8 +109,8 @@ public class PermissionSet extends com.pulumi.resources.CustomResource {
      * @return The relay state URL that redirect links to any service in the AWS Management Console.
      * 
      */
-    public Output</* @Nullable */ String> relayStateType() {
-        return this.relayStateType;
+    public Output<Optional<String>> relayStateType() {
+        return Codegen.optional(this.relayStateType);
     }
     /**
      * The length of time that a user can be signed in to an AWS account.
@@ -122,14 +123,14 @@ public class PermissionSet extends com.pulumi.resources.CustomResource {
      * @return The length of time that a user can be signed in to an AWS account.
      * 
      */
-    public Output</* @Nullable */ String> sessionDuration() {
-        return this.sessionDuration;
+    public Output<Optional<String>> sessionDuration() {
+        return Codegen.optional(this.sessionDuration);
     }
     @Export(name="tags", type=List.class, parameters={PermissionSetTag.class})
     private Output</* @Nullable */ List<PermissionSetTag>> tags;
 
-    public Output</* @Nullable */ List<PermissionSetTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<PermissionSetTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

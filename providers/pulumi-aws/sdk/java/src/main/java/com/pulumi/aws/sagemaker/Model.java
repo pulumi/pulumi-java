@@ -18,6 +18,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -64,8 +65,8 @@ public class Model extends com.pulumi.resources.CustomResource {
      * @return Specifies containers in the inference pipeline. If not specified, the `primary_container` argument is required. Fields are documented below.
      * 
      */
-    public Output</* @Nullable */ List<ModelContainer>> containers() {
-        return this.containers;
+    public Output<Optional<List<ModelContainer>>> containers() {
+        return Codegen.optional(this.containers);
     }
     /**
      * Isolates the model container. No inbound or outbound network calls can be made to or from the model container.
@@ -78,8 +79,8 @@ public class Model extends com.pulumi.resources.CustomResource {
      * @return Isolates the model container. No inbound or outbound network calls can be made to or from the model container.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableNetworkIsolation() {
-        return this.enableNetworkIsolation;
+    public Output<Optional<Boolean>> enableNetworkIsolation() {
+        return Codegen.optional(this.enableNetworkIsolation);
     }
     /**
      * A role that SageMaker can assume to access model artifacts and docker images for deployment.
@@ -134,8 +135,8 @@ public class Model extends com.pulumi.resources.CustomResource {
      * @return The primary docker image containing inference code that is used when the model is deployed for predictions.  If not specified, the `container` argument is required. Fields are documented below.
      * 
      */
-    public Output</* @Nullable */ ModelPrimaryContainer> primaryContainer() {
-        return this.primaryContainer;
+    public Output<Optional<ModelPrimaryContainer>> primaryContainer() {
+        return Codegen.optional(this.primaryContainer);
     }
     /**
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -148,8 +149,8 @@ public class Model extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .
@@ -176,8 +177,8 @@ public class Model extends com.pulumi.resources.CustomResource {
      * @return Specifies the VPC that you want your model to connect to. VpcConfig is used in hosting services and in batch transform.
      * 
      */
-    public Output</* @Nullable */ ModelVpcConfig> vpcConfig() {
-        return this.vpcConfig;
+    public Output<Optional<ModelVpcConfig>> vpcConfig() {
+        return Codegen.optional(this.vpcConfig);
     }
 
     /**

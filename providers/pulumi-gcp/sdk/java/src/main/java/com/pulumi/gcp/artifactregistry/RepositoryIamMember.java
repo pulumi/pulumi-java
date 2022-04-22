@@ -12,6 +12,7 @@ import com.pulumi.gcp.artifactregistry.RepositoryIamMemberArgs;
 import com.pulumi.gcp.artifactregistry.inputs.RepositoryIamMemberState;
 import com.pulumi.gcp.artifactregistry.outputs.RepositoryIamMemberCondition;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -61,8 +62,8 @@ public class RepositoryIamMember extends com.pulumi.resources.CustomResource {
     @Export(name="condition", type=RepositoryIamMemberCondition.class, parameters={})
     private Output</* @Nullable */ RepositoryIamMemberCondition> condition;
 
-    public Output</* @Nullable */ RepositoryIamMemberCondition> condition() {
-        return this.condition;
+    public Output<Optional<RepositoryIamMemberCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * (Computed) The etag of the IAM policy.

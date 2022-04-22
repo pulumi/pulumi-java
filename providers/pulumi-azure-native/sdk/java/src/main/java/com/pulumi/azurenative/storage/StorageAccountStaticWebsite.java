@@ -10,6 +10,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -50,8 +51,8 @@ public class StorageAccountStaticWebsite extends com.pulumi.resources.CustomReso
      * @return The absolute path to a custom webpage that should be used when a request is made which does not correspond to an existing file.
      * 
      */
-    public Output</* @Nullable */ String> error404Document() {
-        return this.error404Document;
+    public Output<Optional<String>> error404Document() {
+        return Codegen.optional(this.error404Document);
     }
     /**
      * The webpage that Azure Storage serves for requests to the root of a website or any sub-folder. For example, &#39;index.html&#39;. The value is case-sensitive.
@@ -64,8 +65,8 @@ public class StorageAccountStaticWebsite extends com.pulumi.resources.CustomReso
      * @return The webpage that Azure Storage serves for requests to the root of a website or any sub-folder. For example, &#39;index.html&#39;. The value is case-sensitive.
      * 
      */
-    public Output</* @Nullable */ String> indexDocument() {
-        return this.indexDocument;
+    public Output<Optional<String>> indexDocument() {
+        return Codegen.optional(this.indexDocument);
     }
 
     /**

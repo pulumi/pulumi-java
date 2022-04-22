@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -48,8 +49,8 @@ public class VpcIpamPreviewNextCidr extends com.pulumi.resources.CustomResource 
      * @return Exclude a particular CIDR range from being returned by the pool.
      * 
      */
-    public Output</* @Nullable */ List<String>> disallowedCidrs() {
-        return this.disallowedCidrs;
+    public Output<Optional<List<String>>> disallowedCidrs() {
+        return Codegen.optional(this.disallowedCidrs);
     }
     /**
      * The ID of the pool to which you want to assign a CIDR.
@@ -76,8 +77,8 @@ public class VpcIpamPreviewNextCidr extends com.pulumi.resources.CustomResource 
      * @return The netmask length of the CIDR you would like to preview from the IPAM pool.
      * 
      */
-    public Output</* @Nullable */ Integer> netmaskLength() {
-        return this.netmaskLength;
+    public Output<Optional<Integer>> netmaskLength() {
+        return Codegen.optional(this.netmaskLength);
     }
 
     /**

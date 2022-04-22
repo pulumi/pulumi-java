@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -79,8 +80,8 @@ public class Studio extends com.pulumi.resources.CustomResource {
     @Export(name="studioEncryptionConfiguration", type=StudioEncryptionConfiguration.class, parameters={})
     private Output</* @Nullable */ StudioEncryptionConfiguration> studioEncryptionConfiguration;
 
-    public Output</* @Nullable */ StudioEncryptionConfiguration> studioEncryptionConfiguration() {
-        return this.studioEncryptionConfiguration;
+    public Output<Optional<StudioEncryptionConfiguration>> studioEncryptionConfiguration() {
+        return Codegen.optional(this.studioEncryptionConfiguration);
     }
     @Export(name="studioId", type=String.class, parameters={})
     private Output<String> studioId;
@@ -119,8 +120,8 @@ public class Studio extends com.pulumi.resources.CustomResource {
     @Export(name="tags", type=StudioTags.class, parameters={})
     private Output</* @Nullable */ StudioTags> tags;
 
-    public Output</* @Nullable */ StudioTags> tags() {
-        return this.tags;
+    public Output<Optional<StudioTags>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * &lt;p&gt;The IAM role that Studio Users will assume when logging in to the Nimble Studio portal.&lt;/p&gt;

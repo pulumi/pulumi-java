@@ -13,6 +13,7 @@ import com.pulumi.gcp.composer.inputs.EnvironmentState;
 import com.pulumi.gcp.composer.outputs.EnvironmentConfig;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -68,8 +69,8 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * associated with a given environment. Both keys and values must be &lt;= 128 bytes in size.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * Name of the environment.
@@ -110,8 +111,8 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return The location or Compute Engine region for the environment.
      * 
      */
-    public Output</* @Nullable */ String> region() {
-        return this.region;
+    public Output<Optional<String>> region() {
+        return Codegen.optional(this.region);
     }
 
     /**

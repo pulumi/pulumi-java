@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -113,8 +114,8 @@ public class Host extends com.pulumi.resources.CustomResource {
      * @return The VPC configuration to be provisioned for the host. A VPC must be configured, and the infrastructure to be represented by the host must already be connected to the VPC.
      * 
      */
-    public Output</* @Nullable */ HostVpcConfiguration> vpcConfiguration() {
-        return this.vpcConfiguration;
+    public Output<Optional<HostVpcConfiguration>> vpcConfiguration() {
+        return Codegen.optional(this.vpcConfiguration);
     }
 
     /**

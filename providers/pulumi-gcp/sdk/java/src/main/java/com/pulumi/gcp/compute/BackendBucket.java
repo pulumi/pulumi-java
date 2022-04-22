@@ -14,6 +14,7 @@ import com.pulumi.gcp.compute.outputs.BackendBucketCdnPolicy;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -107,8 +108,8 @@ public class BackendBucket extends com.pulumi.resources.CustomResource {
      * @return Headers that the HTTP/S load balancer should add to proxied responses.
      * 
      */
-    public Output</* @Nullable */ List<String>> customResponseHeaders() {
-        return this.customResponseHeaders;
+    public Output<Optional<List<String>>> customResponseHeaders() {
+        return Codegen.optional(this.customResponseHeaders);
     }
     /**
      * An optional textual description of the resource; provided by the
@@ -123,8 +124,8 @@ public class BackendBucket extends com.pulumi.resources.CustomResource {
      * client when the resource is created.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * If true, enable Cloud CDN for this BackendBucket.
@@ -137,8 +138,8 @@ public class BackendBucket extends com.pulumi.resources.CustomResource {
      * @return If true, enable Cloud CDN for this BackendBucket.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableCdn() {
-        return this.enableCdn;
+    public Output<Optional<Boolean>> enableCdn() {
+        return Codegen.optional(this.enableCdn);
     }
     /**
      * Name of the resource. Provided by the client when the resource is

@@ -17,6 +17,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -52,8 +53,8 @@ public class HaproxyLayer extends com.pulumi.resources.CustomResource {
      * @return Whether to automatically assign an elastic IP address to the layer&#39;s instances.
      * 
      */
-    public Output</* @Nullable */ Boolean> autoAssignElasticIps() {
-        return this.autoAssignElasticIps;
+    public Output<Optional<Boolean>> autoAssignElasticIps() {
+        return Codegen.optional(this.autoAssignElasticIps);
     }
     /**
      * For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer&#39;s instances.
@@ -66,8 +67,8 @@ public class HaproxyLayer extends com.pulumi.resources.CustomResource {
      * @return For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer&#39;s instances.
      * 
      */
-    public Output</* @Nullable */ Boolean> autoAssignPublicIps() {
-        return this.autoAssignPublicIps;
+    public Output<Optional<Boolean>> autoAssignPublicIps() {
+        return Codegen.optional(this.autoAssignPublicIps);
     }
     /**
      * Whether to enable auto-healing for the layer.
@@ -80,26 +81,26 @@ public class HaproxyLayer extends com.pulumi.resources.CustomResource {
      * @return Whether to enable auto-healing for the layer.
      * 
      */
-    public Output</* @Nullable */ Boolean> autoHealing() {
-        return this.autoHealing;
+    public Output<Optional<Boolean>> autoHealing() {
+        return Codegen.optional(this.autoHealing);
     }
     @Export(name="cloudwatchConfiguration", type=HaproxyLayerCloudwatchConfiguration.class, parameters={})
     private Output</* @Nullable */ HaproxyLayerCloudwatchConfiguration> cloudwatchConfiguration;
 
-    public Output</* @Nullable */ HaproxyLayerCloudwatchConfiguration> cloudwatchConfiguration() {
-        return this.cloudwatchConfiguration;
+    public Output<Optional<HaproxyLayerCloudwatchConfiguration>> cloudwatchConfiguration() {
+        return Codegen.optional(this.cloudwatchConfiguration);
     }
     @Export(name="customConfigureRecipes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> customConfigureRecipes;
 
-    public Output</* @Nullable */ List<String>> customConfigureRecipes() {
-        return this.customConfigureRecipes;
+    public Output<Optional<List<String>>> customConfigureRecipes() {
+        return Codegen.optional(this.customConfigureRecipes);
     }
     @Export(name="customDeployRecipes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> customDeployRecipes;
 
-    public Output</* @Nullable */ List<String>> customDeployRecipes() {
-        return this.customDeployRecipes;
+    public Output<Optional<List<String>>> customDeployRecipes() {
+        return Codegen.optional(this.customDeployRecipes);
     }
     /**
      * The ARN of an IAM profile that will be used for the layer&#39;s instances.
@@ -112,8 +113,8 @@ public class HaproxyLayer extends com.pulumi.resources.CustomResource {
      * @return The ARN of an IAM profile that will be used for the layer&#39;s instances.
      * 
      */
-    public Output</* @Nullable */ String> customInstanceProfileArn() {
-        return this.customInstanceProfileArn;
+    public Output<Optional<String>> customInstanceProfileArn() {
+        return Codegen.optional(this.customInstanceProfileArn);
     }
     /**
      * Custom JSON attributes to apply to the layer.
@@ -126,8 +127,8 @@ public class HaproxyLayer extends com.pulumi.resources.CustomResource {
      * @return Custom JSON attributes to apply to the layer.
      * 
      */
-    public Output</* @Nullable */ String> customJson() {
-        return this.customJson;
+    public Output<Optional<String>> customJson() {
+        return Codegen.optional(this.customJson);
     }
     /**
      * Ids for a set of security groups to apply to the layer&#39;s instances.
@@ -140,26 +141,26 @@ public class HaproxyLayer extends com.pulumi.resources.CustomResource {
      * @return Ids for a set of security groups to apply to the layer&#39;s instances.
      * 
      */
-    public Output</* @Nullable */ List<String>> customSecurityGroupIds() {
-        return this.customSecurityGroupIds;
+    public Output<Optional<List<String>>> customSecurityGroupIds() {
+        return Codegen.optional(this.customSecurityGroupIds);
     }
     @Export(name="customSetupRecipes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> customSetupRecipes;
 
-    public Output</* @Nullable */ List<String>> customSetupRecipes() {
-        return this.customSetupRecipes;
+    public Output<Optional<List<String>>> customSetupRecipes() {
+        return Codegen.optional(this.customSetupRecipes);
     }
     @Export(name="customShutdownRecipes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> customShutdownRecipes;
 
-    public Output</* @Nullable */ List<String>> customShutdownRecipes() {
-        return this.customShutdownRecipes;
+    public Output<Optional<List<String>>> customShutdownRecipes() {
+        return Codegen.optional(this.customShutdownRecipes);
     }
     @Export(name="customUndeployRecipes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> customUndeployRecipes;
 
-    public Output</* @Nullable */ List<String>> customUndeployRecipes() {
-        return this.customUndeployRecipes;
+    public Output<Optional<List<String>>> customUndeployRecipes() {
+        return Codegen.optional(this.customUndeployRecipes);
     }
     /**
      * Whether to enable Elastic Load Balancing connection draining.
@@ -172,8 +173,8 @@ public class HaproxyLayer extends com.pulumi.resources.CustomResource {
      * @return Whether to enable Elastic Load Balancing connection draining.
      * 
      */
-    public Output</* @Nullable */ Boolean> drainElbOnShutdown() {
-        return this.drainElbOnShutdown;
+    public Output<Optional<Boolean>> drainElbOnShutdown() {
+        return Codegen.optional(this.drainElbOnShutdown);
     }
     /**
      * `ebs_volume` blocks, as described below, will each create an EBS volume and connect it to the layer&#39;s instances.
@@ -186,8 +187,8 @@ public class HaproxyLayer extends com.pulumi.resources.CustomResource {
      * @return `ebs_volume` blocks, as described below, will each create an EBS volume and connect it to the layer&#39;s instances.
      * 
      */
-    public Output</* @Nullable */ List<HaproxyLayerEbsVolume>> ebsVolumes() {
-        return this.ebsVolumes;
+    public Output<Optional<List<HaproxyLayerEbsVolume>>> ebsVolumes() {
+        return Codegen.optional(this.ebsVolumes);
     }
     /**
      * Name of an Elastic Load Balancer to attach to this layer
@@ -200,8 +201,8 @@ public class HaproxyLayer extends com.pulumi.resources.CustomResource {
      * @return Name of an Elastic Load Balancer to attach to this layer
      * 
      */
-    public Output</* @Nullable */ String> elasticLoadBalancer() {
-        return this.elasticLoadBalancer;
+    public Output<Optional<String>> elasticLoadBalancer() {
+        return Codegen.optional(this.elasticLoadBalancer);
     }
     /**
      * HTTP method to use for instance healthchecks. Defaults to &#34;OPTIONS&#34;.
@@ -214,8 +215,8 @@ public class HaproxyLayer extends com.pulumi.resources.CustomResource {
      * @return HTTP method to use for instance healthchecks. Defaults to &#34;OPTIONS&#34;.
      * 
      */
-    public Output</* @Nullable */ String> healthcheckMethod() {
-        return this.healthcheckMethod;
+    public Output<Optional<String>> healthcheckMethod() {
+        return Codegen.optional(this.healthcheckMethod);
     }
     /**
      * URL path to use for instance healthchecks. Defaults to &#34;/&#34;.
@@ -228,8 +229,8 @@ public class HaproxyLayer extends com.pulumi.resources.CustomResource {
      * @return URL path to use for instance healthchecks. Defaults to &#34;/&#34;.
      * 
      */
-    public Output</* @Nullable */ String> healthcheckUrl() {
-        return this.healthcheckUrl;
+    public Output<Optional<String>> healthcheckUrl() {
+        return Codegen.optional(this.healthcheckUrl);
     }
     /**
      * Whether to install OS and package updates on each instance when it boots.
@@ -242,8 +243,8 @@ public class HaproxyLayer extends com.pulumi.resources.CustomResource {
      * @return Whether to install OS and package updates on each instance when it boots.
      * 
      */
-    public Output</* @Nullable */ Boolean> installUpdatesOnBoot() {
-        return this.installUpdatesOnBoot;
+    public Output<Optional<Boolean>> installUpdatesOnBoot() {
+        return Codegen.optional(this.installUpdatesOnBoot);
     }
     /**
      * The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
@@ -256,8 +257,8 @@ public class HaproxyLayer extends com.pulumi.resources.CustomResource {
      * @return The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
      * 
      */
-    public Output</* @Nullable */ Integer> instanceShutdownTimeout() {
-        return this.instanceShutdownTimeout;
+    public Output<Optional<Integer>> instanceShutdownTimeout() {
+        return Codegen.optional(this.instanceShutdownTimeout);
     }
     /**
      * A human-readable name for the layer.
@@ -298,8 +299,8 @@ public class HaproxyLayer extends com.pulumi.resources.CustomResource {
      * @return Whether to enable HAProxy stats.
      * 
      */
-    public Output</* @Nullable */ Boolean> statsEnabled() {
-        return this.statsEnabled;
+    public Output<Optional<Boolean>> statsEnabled() {
+        return Codegen.optional(this.statsEnabled);
     }
     /**
      * The password to use for HAProxy stats.
@@ -326,8 +327,8 @@ public class HaproxyLayer extends com.pulumi.resources.CustomResource {
      * @return The HAProxy stats URL. Defaults to &#34;/haproxy?stats&#34;.
      * 
      */
-    public Output</* @Nullable */ String> statsUrl() {
-        return this.statsUrl;
+    public Output<Optional<String>> statsUrl() {
+        return Codegen.optional(this.statsUrl);
     }
     /**
      * The username for HAProxy stats. Defaults to &#34;opsworks&#34;.
@@ -340,8 +341,8 @@ public class HaproxyLayer extends com.pulumi.resources.CustomResource {
      * @return The username for HAProxy stats. Defaults to &#34;opsworks&#34;.
      * 
      */
-    public Output</* @Nullable */ String> statsUser() {
-        return this.statsUser;
+    public Output<Optional<String>> statsUser() {
+        return Codegen.optional(this.statsUser);
     }
     /**
      * Names of a set of system packages to install on the layer&#39;s instances.
@@ -354,8 +355,8 @@ public class HaproxyLayer extends com.pulumi.resources.CustomResource {
      * @return Names of a set of system packages to install on the layer&#39;s instances.
      * 
      */
-    public Output</* @Nullable */ List<String>> systemPackages() {
-        return this.systemPackages;
+    public Output<Optional<List<String>>> systemPackages() {
+        return Codegen.optional(this.systemPackages);
     }
     /**
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -368,8 +369,8 @@ public class HaproxyLayer extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .
@@ -396,8 +397,8 @@ public class HaproxyLayer extends com.pulumi.resources.CustomResource {
      * @return Whether to use EBS-optimized instances.
      * 
      */
-    public Output</* @Nullable */ Boolean> useEbsOptimizedInstances() {
-        return this.useEbsOptimizedInstances;
+    public Output<Optional<Boolean>> useEbsOptimizedInstances() {
+        return Codegen.optional(this.useEbsOptimizedInstances);
     }
 
     /**

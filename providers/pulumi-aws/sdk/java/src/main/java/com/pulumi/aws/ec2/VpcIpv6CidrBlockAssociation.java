@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -71,8 +72,8 @@ public class VpcIpv6CidrBlockAssociation extends com.pulumi.resources.CustomReso
      * @return The netmask length of the IPv6 CIDR you want to allocate to this VPC. Requires specifying a `ipv6_ipam_pool_id`. This parameter is optional if the IPAM pool has `allocation_default_netmask` set, otherwise it or `cidr_block` are required
      * 
      */
-    public Output</* @Nullable */ Integer> ipv6NetmaskLength() {
-        return this.ipv6NetmaskLength;
+    public Output<Optional<Integer>> ipv6NetmaskLength() {
+        return Codegen.optional(this.ipv6NetmaskLength);
     }
     /**
      * The ID of the VPC to make the association with.

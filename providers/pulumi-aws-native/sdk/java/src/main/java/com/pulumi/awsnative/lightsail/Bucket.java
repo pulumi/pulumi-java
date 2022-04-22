@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -39,8 +40,8 @@ public class Bucket extends com.pulumi.resources.CustomResource {
     @Export(name="accessRules", type=BucketAccessRules.class, parameters={})
     private Output</* @Nullable */ BucketAccessRules> accessRules;
 
-    public Output</* @Nullable */ BucketAccessRules> accessRules() {
-        return this.accessRules;
+    public Output<Optional<BucketAccessRules>> accessRules() {
+        return Codegen.optional(this.accessRules);
     }
     @Export(name="bucketArn", type=String.class, parameters={})
     private Output<String> bucketArn;
@@ -87,8 +88,8 @@ public class Bucket extends com.pulumi.resources.CustomResource {
      * @return Specifies whether to enable or disable versioning of objects in the bucket.
      * 
      */
-    public Output</* @Nullable */ Boolean> objectVersioning() {
-        return this.objectVersioning;
+    public Output<Optional<Boolean>> objectVersioning() {
+        return Codegen.optional(this.objectVersioning);
     }
     /**
      * An array of strings to specify the AWS account IDs that can access the bucket.
@@ -101,8 +102,8 @@ public class Bucket extends com.pulumi.resources.CustomResource {
      * @return An array of strings to specify the AWS account IDs that can access the bucket.
      * 
      */
-    public Output</* @Nullable */ List<String>> readOnlyAccessAccounts() {
-        return this.readOnlyAccessAccounts;
+    public Output<Optional<List<String>>> readOnlyAccessAccounts() {
+        return Codegen.optional(this.readOnlyAccessAccounts);
     }
     /**
      * The names of the Lightsail resources for which to set bucket access.
@@ -115,8 +116,8 @@ public class Bucket extends com.pulumi.resources.CustomResource {
      * @return The names of the Lightsail resources for which to set bucket access.
      * 
      */
-    public Output</* @Nullable */ List<String>> resourcesReceivingAccess() {
-        return this.resourcesReceivingAccess;
+    public Output<Optional<List<String>>> resourcesReceivingAccess() {
+        return Codegen.optional(this.resourcesReceivingAccess);
     }
     /**
      * An array of key-value pairs to apply to this resource.
@@ -129,8 +130,8 @@ public class Bucket extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<BucketTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<BucketTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The URL of the bucket.

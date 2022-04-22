@@ -13,6 +13,7 @@ import com.pulumi.example.outputs.Chew;
 import com.pulumi.example.outputs.Laser;
 import com.pulumi.example.outputs.Toy;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 @ResourceType(type="example::ToyStore")
@@ -20,26 +21,26 @@ public class ToyStore extends com.pulumi.resources.CustomResource {
     @Export(name="chew", type=Chew.class, parameters={})
     private Output</* @Nullable */ Chew> chew;
 
-    public Output</* @Nullable */ Chew> chew() {
-        return this.chew;
+    public Output<Optional<Chew>> chew() {
+        return Codegen.optional(this.chew);
     }
     @Export(name="laser", type=Laser.class, parameters={})
     private Output</* @Nullable */ Laser> laser;
 
-    public Output</* @Nullable */ Laser> laser() {
-        return this.laser;
+    public Output<Optional<Laser>> laser() {
+        return Codegen.optional(this.laser);
     }
     @Export(name="stuff", type=List.class, parameters={Toy.class})
     private Output</* @Nullable */ List<Toy>> stuff;
 
-    public Output</* @Nullable */ List<Toy>> stuff() {
-        return this.stuff;
+    public Output<Optional<List<Toy>>> stuff() {
+        return Codegen.optional(this.stuff);
     }
     @Export(name="wanted", type=List.class, parameters={Toy.class})
     private Output</* @Nullable */ List<Toy>> wanted;
 
-    public Output</* @Nullable */ List<Toy>> wanted() {
-        return this.wanted;
+    public Output<Optional<List<Toy>>> wanted() {
+        return Codegen.optional(this.wanted);
     }
 
     /**

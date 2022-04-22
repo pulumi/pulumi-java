@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -41,8 +42,8 @@ public class UserGroup extends com.pulumi.resources.CustomResource {
      * @return The description of the user group.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The name of the user group.
@@ -69,8 +70,8 @@ public class UserGroup extends com.pulumi.resources.CustomResource {
      * @return The precedence of the user group.
      * 
      */
-    public Output</* @Nullable */ Integer> precedence() {
-        return this.precedence;
+    public Output<Optional<Integer>> precedence() {
+        return Codegen.optional(this.precedence);
     }
     /**
      * The ARN of the IAM role to be associated with the user group.
@@ -83,8 +84,8 @@ public class UserGroup extends com.pulumi.resources.CustomResource {
      * @return The ARN of the IAM role to be associated with the user group.
      * 
      */
-    public Output</* @Nullable */ String> roleArn() {
-        return this.roleArn;
+    public Output<Optional<String>> roleArn() {
+        return Codegen.optional(this.roleArn);
     }
     /**
      * The user pool ID.

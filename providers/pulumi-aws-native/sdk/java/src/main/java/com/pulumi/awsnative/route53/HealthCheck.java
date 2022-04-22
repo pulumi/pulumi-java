@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -52,8 +53,8 @@ public class HealthCheck extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<HealthCheckTag>> healthCheckTags() {
-        return this.healthCheckTags;
+    public Output<Optional<List<HealthCheckTag>>> healthCheckTags() {
+        return Codegen.optional(this.healthCheckTags);
     }
 
     /**

@@ -14,6 +14,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class KeyValue extends com.pulumi.resources.CustomResource {
      * Providing a proper content-type can enable transformations of values when they are retrieved by applications.
      * 
      */
-    public Output</* @Nullable */ String> contentType() {
-        return this.contentType;
+    public Output<Optional<String>> contentType() {
+        return Codegen.optional(this.contentType);
     }
     /**
      * An ETag indicating the state of a key-value within a configuration store.
@@ -150,8 +151,8 @@ public class KeyValue extends com.pulumi.resources.CustomResource {
      * @return A dictionary of tags that can help identify what a key-value may be applicable for.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource.
@@ -178,8 +179,8 @@ public class KeyValue extends com.pulumi.resources.CustomResource {
      * @return The value of the key-value.
      * 
      */
-    public Output</* @Nullable */ String> value() {
-        return this.value;
+    public Output<Optional<String>> value() {
+        return Codegen.optional(this.value);
     }
 
     /**

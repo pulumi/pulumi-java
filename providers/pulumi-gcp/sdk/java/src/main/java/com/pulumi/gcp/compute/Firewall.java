@@ -17,6 +17,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -77,8 +78,8 @@ public class Firewall extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<FirewallAllow>> allows() {
-        return this.allows;
+    public Output<Optional<List<FirewallAllow>>> allows() {
+        return Codegen.optional(this.allows);
     }
     /**
      * Creation timestamp in RFC3339 text format.
@@ -109,8 +110,8 @@ public class Firewall extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<FirewallDeny>> denies() {
-        return this.denies;
+    public Output<Optional<List<FirewallDeny>>> denies() {
+        return Codegen.optional(this.denies);
     }
     /**
      * An optional description of this resource. Provide this property when
@@ -125,8 +126,8 @@ public class Firewall extends com.pulumi.resources.CustomResource {
      * you create the resource.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * If destination ranges are specified, the firewall will apply only to
@@ -187,8 +188,8 @@ public class Firewall extends com.pulumi.resources.CustomResource {
      * is unspecified, the firewall rule will be enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> disabled() {
-        return this.disabled;
+    public Output<Optional<Boolean>> disabled() {
+        return Codegen.optional(this.disabled);
     }
     /**
      * This field denotes whether to enable logging for a particular firewall rule.
@@ -225,8 +226,8 @@ public class Firewall extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ FirewallLogConfig> logConfig() {
-        return this.logConfig;
+    public Output<Optional<FirewallLogConfig>> logConfig() {
+        return Codegen.optional(this.logConfig);
     }
     /**
      * Name of the resource. Provided by the client when the resource is
@@ -289,8 +290,8 @@ public class Firewall extends com.pulumi.resources.CustomResource {
      * precedence over ALLOW rules having equal priority.
      * 
      */
-    public Output</* @Nullable */ Integer> priority() {
-        return this.priority;
+    public Output<Optional<Integer>> priority() {
+        return Codegen.optional(this.priority);
     }
     /**
      * The ID of the project in which the resource belongs.
@@ -349,8 +350,8 @@ public class Firewall extends com.pulumi.resources.CustomResource {
      * `source_tags` or `source_service_accounts` is required.
      * 
      */
-    public Output</* @Nullable */ List<String>> sourceRanges() {
-        return this.sourceRanges;
+    public Output<Optional<List<String>>> sourceRanges() {
+        return Codegen.optional(this.sourceRanges);
     }
     /**
      * If source service accounts are specified, the firewall will apply only
@@ -385,8 +386,8 @@ public class Firewall extends com.pulumi.resources.CustomResource {
      * one of `source_ranges`, `source_tags` or `source_service_accounts` is required.
      * 
      */
-    public Output</* @Nullable */ List<String>> sourceServiceAccounts() {
-        return this.sourceServiceAccounts;
+    public Output<Optional<List<String>>> sourceServiceAccounts() {
+        return Codegen.optional(this.sourceServiceAccounts);
     }
     /**
      * If source tags are specified, the firewall will apply only to traffic
@@ -417,8 +418,8 @@ public class Firewall extends com.pulumi.resources.CustomResource {
      * one of `source_ranges`, `source_tags` or `source_service_accounts` is required.
      * 
      */
-    public Output</* @Nullable */ List<String>> sourceTags() {
-        return this.sourceTags;
+    public Output<Optional<List<String>>> sourceTags() {
+        return Codegen.optional(this.sourceTags);
     }
     /**
      * A list of service accounts indicating sets of instances located in the
@@ -441,8 +442,8 @@ public class Firewall extends com.pulumi.resources.CustomResource {
      * network.
      * 
      */
-    public Output</* @Nullable */ List<String>> targetServiceAccounts() {
-        return this.targetServiceAccounts;
+    public Output<Optional<List<String>>> targetServiceAccounts() {
+        return Codegen.optional(this.targetServiceAccounts);
     }
     /**
      * A list of instance tags indicating sets of instances located in the
@@ -461,8 +462,8 @@ public class Firewall extends com.pulumi.resources.CustomResource {
      * instances on the specified network.
      * 
      */
-    public Output</* @Nullable */ List<String>> targetTags() {
-        return this.targetTags;
+    public Output<Optional<List<String>>> targetTags() {
+        return Codegen.optional(this.targetTags);
     }
 
     /**

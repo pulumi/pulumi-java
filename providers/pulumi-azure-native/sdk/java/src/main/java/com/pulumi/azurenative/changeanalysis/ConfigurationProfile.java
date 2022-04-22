@@ -15,6 +15,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class ConfigurationProfile extends com.pulumi.resources.CustomResource {
      * @return The identity block returned by ARM resource that supports managed identity.
      * 
      */
-    public Output</* @Nullable */ ResourceIdentityResponse> identity() {
-        return this.identity;
+    public Output<Optional<ResourceIdentityResponse>> identity() {
+        return Codegen.optional(this.identity);
     }
     /**
      * The location where the resource is to be deployed.
@@ -59,8 +60,8 @@ public class ConfigurationProfile extends com.pulumi.resources.CustomResource {
      * @return The location where the resource is to be deployed.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The name of the resource
@@ -101,8 +102,8 @@ public class ConfigurationProfile extends com.pulumi.resources.CustomResource {
      * @return Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources
      * 
      */
-    public Output</* @Nullable */ SystemDataResponse> systemData() {
-        return this.systemData;
+    public Output<Optional<SystemDataResponse>> systemData() {
+        return Codegen.optional(this.systemData);
     }
     /**
      * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;

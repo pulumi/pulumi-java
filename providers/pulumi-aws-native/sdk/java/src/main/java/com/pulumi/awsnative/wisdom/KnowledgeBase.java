@@ -16,6 +16,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -27,8 +28,8 @@ public class KnowledgeBase extends com.pulumi.resources.CustomResource {
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     @Export(name="knowledgeBaseArn", type=String.class, parameters={})
     private Output<String> knowledgeBaseArn;
@@ -57,26 +58,26 @@ public class KnowledgeBase extends com.pulumi.resources.CustomResource {
     @Export(name="renderingConfiguration", type=KnowledgeBaseRenderingConfiguration.class, parameters={})
     private Output</* @Nullable */ KnowledgeBaseRenderingConfiguration> renderingConfiguration;
 
-    public Output</* @Nullable */ KnowledgeBaseRenderingConfiguration> renderingConfiguration() {
-        return this.renderingConfiguration;
+    public Output<Optional<KnowledgeBaseRenderingConfiguration>> renderingConfiguration() {
+        return Codegen.optional(this.renderingConfiguration);
     }
     @Export(name="serverSideEncryptionConfiguration", type=KnowledgeBaseServerSideEncryptionConfiguration.class, parameters={})
     private Output</* @Nullable */ KnowledgeBaseServerSideEncryptionConfiguration> serverSideEncryptionConfiguration;
 
-    public Output</* @Nullable */ KnowledgeBaseServerSideEncryptionConfiguration> serverSideEncryptionConfiguration() {
-        return this.serverSideEncryptionConfiguration;
+    public Output<Optional<KnowledgeBaseServerSideEncryptionConfiguration>> serverSideEncryptionConfiguration() {
+        return Codegen.optional(this.serverSideEncryptionConfiguration);
     }
     @Export(name="sourceConfiguration", type=KnowledgeBaseSourceConfiguration.class, parameters={})
     private Output</* @Nullable */ KnowledgeBaseSourceConfiguration> sourceConfiguration;
 
-    public Output</* @Nullable */ KnowledgeBaseSourceConfiguration> sourceConfiguration() {
-        return this.sourceConfiguration;
+    public Output<Optional<KnowledgeBaseSourceConfiguration>> sourceConfiguration() {
+        return Codegen.optional(this.sourceConfiguration);
     }
     @Export(name="tags", type=List.class, parameters={KnowledgeBaseTag.class})
     private Output</* @Nullable */ List<KnowledgeBaseTag>> tags;
 
-    public Output</* @Nullable */ List<KnowledgeBaseTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<KnowledgeBaseTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

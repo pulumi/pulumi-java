@@ -14,6 +14,7 @@ import com.pulumi.gcp.sourcerepo.outputs.RepositoryPubsubConfig;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -89,8 +90,8 @@ public class Repository extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<RepositoryPubsubConfig>> pubsubConfigs() {
-        return this.pubsubConfigs;
+    public Output<Optional<List<RepositoryPubsubConfig>>> pubsubConfigs() {
+        return Codegen.optional(this.pubsubConfigs);
     }
     /**
      * The disk usage of the repo, in bytes.

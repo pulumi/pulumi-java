@@ -15,6 +15,7 @@ import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -34,14 +35,14 @@ public class FleetMetric extends com.pulumi.resources.CustomResource {
      * @return The aggregation field to perform aggregation and metric emission
      * 
      */
-    public Output</* @Nullable */ String> aggregationField() {
-        return this.aggregationField;
+    public Output<Optional<String>> aggregationField() {
+        return Codegen.optional(this.aggregationField);
     }
     @Export(name="aggregationType", type=FleetMetricAggregationType.class, parameters={})
     private Output</* @Nullable */ FleetMetricAggregationType> aggregationType;
 
-    public Output</* @Nullable */ FleetMetricAggregationType> aggregationType() {
-        return this.aggregationType;
+    public Output<Optional<FleetMetricAggregationType>> aggregationType() {
+        return Codegen.optional(this.aggregationType);
     }
     /**
      * The creation date of a fleet metric
@@ -68,8 +69,8 @@ public class FleetMetric extends com.pulumi.resources.CustomResource {
      * @return The description of a fleet metric
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The index name of a fleet metric
@@ -82,8 +83,8 @@ public class FleetMetric extends com.pulumi.resources.CustomResource {
      * @return The index name of a fleet metric
      * 
      */
-    public Output</* @Nullable */ String> indexName() {
-        return this.indexName;
+    public Output<Optional<String>> indexName() {
+        return Codegen.optional(this.indexName);
     }
     /**
      * The last modified date of a fleet metric
@@ -138,8 +139,8 @@ public class FleetMetric extends com.pulumi.resources.CustomResource {
      * @return The period of metric emission in seconds
      * 
      */
-    public Output</* @Nullable */ Integer> period() {
-        return this.period;
+    public Output<Optional<Integer>> period() {
+        return Codegen.optional(this.period);
     }
     /**
      * The Fleet Indexing query used by a fleet metric
@@ -152,8 +153,8 @@ public class FleetMetric extends com.pulumi.resources.CustomResource {
      * @return The Fleet Indexing query used by a fleet metric
      * 
      */
-    public Output</* @Nullable */ String> queryString() {
-        return this.queryString;
+    public Output<Optional<String>> queryString() {
+        return Codegen.optional(this.queryString);
     }
     /**
      * The version of a Fleet Indexing query used by a fleet metric
@@ -166,8 +167,8 @@ public class FleetMetric extends com.pulumi.resources.CustomResource {
      * @return The version of a Fleet Indexing query used by a fleet metric
      * 
      */
-    public Output</* @Nullable */ String> queryVersion() {
-        return this.queryVersion;
+    public Output<Optional<String>> queryVersion() {
+        return Codegen.optional(this.queryVersion);
     }
     /**
      * An array of key-value pairs to apply to this resource
@@ -180,8 +181,8 @@ public class FleetMetric extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource
      * 
      */
-    public Output</* @Nullable */ List<FleetMetricTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<FleetMetricTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The unit of data points emitted by a fleet metric
@@ -194,8 +195,8 @@ public class FleetMetric extends com.pulumi.resources.CustomResource {
      * @return The unit of data points emitted by a fleet metric
      * 
      */
-    public Output</* @Nullable */ String> unit() {
-        return this.unit;
+    public Output<Optional<String>> unit() {
+        return Codegen.optional(this.unit);
     }
     /**
      * The version of a fleet metric

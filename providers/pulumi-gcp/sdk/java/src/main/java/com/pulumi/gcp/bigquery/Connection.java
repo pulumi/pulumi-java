@@ -13,6 +13,7 @@ import com.pulumi.gcp.bigquery.inputs.ConnectionState;
 import com.pulumi.gcp.bigquery.outputs.ConnectionCloudSql;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -89,8 +90,8 @@ public class Connection extends com.pulumi.resources.CustomResource {
      * @return A descriptive description for the connection
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * A descriptive name for the connection
@@ -103,8 +104,8 @@ public class Connection extends com.pulumi.resources.CustomResource {
      * @return A descriptive name for the connection
      * 
      */
-    public Output</* @Nullable */ String> friendlyName() {
-        return this.friendlyName;
+    public Output<Optional<String>> friendlyName() {
+        return Codegen.optional(this.friendlyName);
     }
     /**
      * True if the connection has credential assigned.
@@ -137,8 +138,8 @@ public class Connection extends com.pulumi.resources.CustomResource {
      * Examples: US, EU, asia-northeast1, us-central1, europe-west1. The default value is US.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The resource name of the connection in the form of:

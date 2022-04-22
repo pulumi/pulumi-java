@@ -16,6 +16,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class SimulationApplication extends com.pulumi.resources.CustomResource {
      * @return The current revision id.
      * 
      */
-    public Output</* @Nullable */ String> currentRevisionId() {
-        return this.currentRevisionId;
+    public Output<Optional<String>> currentRevisionId() {
+        return Codegen.optional(this.currentRevisionId);
     }
     /**
      * The URI of the Docker image for the robot application.
@@ -57,8 +58,8 @@ public class SimulationApplication extends com.pulumi.resources.CustomResource {
      * @return The URI of the Docker image for the robot application.
      * 
      */
-    public Output</* @Nullable */ String> environment() {
-        return this.environment;
+    public Output<Optional<String>> environment() {
+        return Codegen.optional(this.environment);
     }
     /**
      * The name of the simulation application.
@@ -71,8 +72,8 @@ public class SimulationApplication extends com.pulumi.resources.CustomResource {
      * @return The name of the simulation application.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * The rendering engine for the simulation application.
@@ -85,8 +86,8 @@ public class SimulationApplication extends com.pulumi.resources.CustomResource {
      * @return The rendering engine for the simulation application.
      * 
      */
-    public Output</* @Nullable */ SimulationApplicationRenderingEngine> renderingEngine() {
-        return this.renderingEngine;
+    public Output<Optional<SimulationApplicationRenderingEngine>> renderingEngine() {
+        return Codegen.optional(this.renderingEngine);
     }
     /**
      * The robot software suite used by the simulation application.
@@ -127,14 +128,14 @@ public class SimulationApplication extends com.pulumi.resources.CustomResource {
      * @return The sources of the simulation application.
      * 
      */
-    public Output</* @Nullable */ List<SimulationApplicationSourceConfig>> sources() {
-        return this.sources;
+    public Output<Optional<List<SimulationApplicationSourceConfig>>> sources() {
+        return Codegen.optional(this.sources);
     }
     @Export(name="tags", type=SimulationApplicationTags.class, parameters={})
     private Output</* @Nullable */ SimulationApplicationTags> tags;
 
-    public Output</* @Nullable */ SimulationApplicationTags> tags() {
-        return this.tags;
+    public Output<Optional<SimulationApplicationTags>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

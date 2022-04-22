@@ -13,6 +13,7 @@ import com.pulumi.gcp.datastore.inputs.DataStoreIndexState;
 import com.pulumi.gcp.datastore.outputs.DataStoreIndexProperty;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -66,8 +67,8 @@ public class DataStoreIndex extends com.pulumi.resources.CustomResource {
      * Possible values are `NONE` and `ALL_ANCESTORS`.
      * 
      */
-    public Output</* @Nullable */ String> ancestor() {
-        return this.ancestor;
+    public Output<Optional<String>> ancestor() {
+        return Codegen.optional(this.ancestor);
     }
     /**
      * The index id.
@@ -126,8 +127,8 @@ public class DataStoreIndex extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<DataStoreIndexProperty>> properties() {
-        return this.properties;
+    public Output<Optional<List<DataStoreIndexProperty>>> properties() {
+        return Codegen.optional(this.properties);
     }
 
     /**

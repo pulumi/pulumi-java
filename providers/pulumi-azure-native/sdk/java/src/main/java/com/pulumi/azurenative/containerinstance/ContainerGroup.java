@@ -24,6 +24,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -68,8 +69,8 @@ public class ContainerGroup extends com.pulumi.resources.CustomResource {
      * @return The diagnostic information for a container group.
      * 
      */
-    public Output</* @Nullable */ ContainerGroupDiagnosticsResponse> diagnostics() {
-        return this.diagnostics;
+    public Output<Optional<ContainerGroupDiagnosticsResponse>> diagnostics() {
+        return Codegen.optional(this.diagnostics);
     }
     /**
      * The DNS config information for a container group.
@@ -82,8 +83,8 @@ public class ContainerGroup extends com.pulumi.resources.CustomResource {
      * @return The DNS config information for a container group.
      * 
      */
-    public Output</* @Nullable */ DnsConfigurationResponse> dnsConfig() {
-        return this.dnsConfig;
+    public Output<Optional<DnsConfigurationResponse>> dnsConfig() {
+        return Codegen.optional(this.dnsConfig);
     }
     /**
      * The encryption properties for a container group.
@@ -96,8 +97,8 @@ public class ContainerGroup extends com.pulumi.resources.CustomResource {
      * @return The encryption properties for a container group.
      * 
      */
-    public Output</* @Nullable */ EncryptionPropertiesResponse> encryptionProperties() {
-        return this.encryptionProperties;
+    public Output<Optional<EncryptionPropertiesResponse>> encryptionProperties() {
+        return Codegen.optional(this.encryptionProperties);
     }
     /**
      * The identity of the container group, if configured.
@@ -110,8 +111,8 @@ public class ContainerGroup extends com.pulumi.resources.CustomResource {
      * @return The identity of the container group, if configured.
      * 
      */
-    public Output</* @Nullable */ ContainerGroupIdentityResponse> identity() {
-        return this.identity;
+    public Output<Optional<ContainerGroupIdentityResponse>> identity() {
+        return Codegen.optional(this.identity);
     }
     /**
      * The image registry credentials by which the container group is created from.
@@ -124,8 +125,8 @@ public class ContainerGroup extends com.pulumi.resources.CustomResource {
      * @return The image registry credentials by which the container group is created from.
      * 
      */
-    public Output</* @Nullable */ List<ImageRegistryCredentialResponse>> imageRegistryCredentials() {
-        return this.imageRegistryCredentials;
+    public Output<Optional<List<ImageRegistryCredentialResponse>>> imageRegistryCredentials() {
+        return Codegen.optional(this.imageRegistryCredentials);
     }
     /**
      * The init containers for a container group.
@@ -138,8 +139,8 @@ public class ContainerGroup extends com.pulumi.resources.CustomResource {
      * @return The init containers for a container group.
      * 
      */
-    public Output</* @Nullable */ List<InitContainerDefinitionResponse>> initContainers() {
-        return this.initContainers;
+    public Output<Optional<List<InitContainerDefinitionResponse>>> initContainers() {
+        return Codegen.optional(this.initContainers);
     }
     /**
      * The instance view of the container group. Only valid in response.
@@ -166,8 +167,8 @@ public class ContainerGroup extends com.pulumi.resources.CustomResource {
      * @return The IP address type of the container group.
      * 
      */
-    public Output</* @Nullable */ IpAddressResponse> ipAddress() {
-        return this.ipAddress;
+    public Output<Optional<IpAddressResponse>> ipAddress() {
+        return Codegen.optional(this.ipAddress);
     }
     /**
      * The resource location.
@@ -180,8 +181,8 @@ public class ContainerGroup extends com.pulumi.resources.CustomResource {
      * @return The resource location.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The resource name.
@@ -208,8 +209,8 @@ public class ContainerGroup extends com.pulumi.resources.CustomResource {
      * @return The network profile information for a container group.
      * 
      */
-    public Output</* @Nullable */ ContainerGroupNetworkProfileResponse> networkProfile() {
-        return this.networkProfile;
+    public Output<Optional<ContainerGroupNetworkProfileResponse>> networkProfile() {
+        return Codegen.optional(this.networkProfile);
     }
     /**
      * The operating system type required by the containers in the container group.
@@ -256,8 +257,8 @@ public class ContainerGroup extends com.pulumi.resources.CustomResource {
      * - `Never` Never restart
      * 
      */
-    public Output</* @Nullable */ String> restartPolicy() {
-        return this.restartPolicy;
+    public Output<Optional<String>> restartPolicy() {
+        return Codegen.optional(this.restartPolicy);
     }
     /**
      * The SKU for a container group.
@@ -270,8 +271,8 @@ public class ContainerGroup extends com.pulumi.resources.CustomResource {
      * @return The SKU for a container group.
      * 
      */
-    public Output</* @Nullable */ String> sku() {
-        return this.sku;
+    public Output<Optional<String>> sku() {
+        return Codegen.optional(this.sku);
     }
     /**
      * The resource tags.
@@ -284,8 +285,8 @@ public class ContainerGroup extends com.pulumi.resources.CustomResource {
      * @return The resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The resource type.
@@ -312,8 +313,8 @@ public class ContainerGroup extends com.pulumi.resources.CustomResource {
      * @return The list of volumes that can be mounted by containers in this container group.
      * 
      */
-    public Output</* @Nullable */ List<VolumeResponse>> volumes() {
-        return this.volumes;
+    public Output<Optional<List<VolumeResponse>>> volumes() {
+        return Codegen.optional(this.volumes);
     }
 
     /**

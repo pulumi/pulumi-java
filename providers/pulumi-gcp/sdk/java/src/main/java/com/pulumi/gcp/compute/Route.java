@@ -13,6 +13,7 @@ import com.pulumi.gcp.compute.inputs.RouteState;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -79,8 +80,8 @@ public class Route extends com.pulumi.resources.CustomResource {
      * when you create the resource.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The destination range of outgoing packets that this route applies to.
@@ -161,8 +162,8 @@ public class Route extends com.pulumi.resources.CustomResource {
      * * The string `default-internet-gateway`.
      * 
      */
-    public Output</* @Nullable */ String> nextHopGateway() {
-        return this.nextHopGateway;
+    public Output<Optional<String>> nextHopGateway() {
+        return Codegen.optional(this.nextHopGateway);
     }
     /**
      * The IP address or URL to a forwarding rule of type
@@ -199,8 +200,8 @@ public class Route extends com.pulumi.resources.CustomResource {
      *   a public (non-RFC 1918) IP CIDR range.
      * 
      */
-    public Output</* @Nullable */ String> nextHopIlb() {
-        return this.nextHopIlb;
+    public Output<Optional<String>> nextHopIlb() {
+        return Codegen.optional(this.nextHopIlb);
     }
     /**
      * URL to an instance that should handle matching packets.
@@ -223,8 +224,8 @@ public class Route extends com.pulumi.resources.CustomResource {
      * * Just the instance name, with the zone in `next_hop_instance_zone`.
      * 
      */
-    public Output</* @Nullable */ String> nextHopInstance() {
-        return this.nextHopInstance;
+    public Output<Optional<String>> nextHopInstance() {
+        return Codegen.optional(this.nextHopInstance);
     }
     /**
      * (Optional when `next_hop_instance` is
@@ -285,8 +286,8 @@ public class Route extends com.pulumi.resources.CustomResource {
      * @return URL to a VpnTunnel that should handle matching packets.
      * 
      */
-    public Output</* @Nullable */ String> nextHopVpnTunnel() {
-        return this.nextHopVpnTunnel;
+    public Output<Optional<String>> nextHopVpnTunnel() {
+        return Codegen.optional(this.nextHopVpnTunnel);
     }
     /**
      * The priority of this route. Priority is used to break ties in cases
@@ -307,8 +308,8 @@ public class Route extends com.pulumi.resources.CustomResource {
      * Default value is 1000. Valid range is 0 through 65535.
      * 
      */
-    public Output</* @Nullable */ Integer> priority() {
-        return this.priority;
+    public Output<Optional<Integer>> priority() {
+        return Codegen.optional(this.priority);
     }
     /**
      * The ID of the project in which the resource belongs.
@@ -351,8 +352,8 @@ public class Route extends com.pulumi.resources.CustomResource {
      * @return A list of instance tags to which this route applies.
      * 
      */
-    public Output</* @Nullable */ List<String>> tags() {
-        return this.tags;
+    public Output<Optional<List<String>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

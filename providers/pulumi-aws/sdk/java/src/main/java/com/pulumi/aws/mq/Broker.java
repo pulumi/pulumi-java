@@ -21,6 +21,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -56,8 +57,8 @@ public class Broker extends com.pulumi.resources.CustomResource {
      * @return Specifies whether any broker modifications are applied immediately, or during the next maintenance window. Default is `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> applyImmediately() {
-        return this.applyImmediately;
+    public Output<Optional<Boolean>> applyImmediately() {
+        return Codegen.optional(this.applyImmediately);
     }
     /**
      * ARN of the broker.
@@ -98,8 +99,8 @@ public class Broker extends com.pulumi.resources.CustomResource {
      * @return Whether to automatically upgrade to new minor versions of brokers as Amazon MQ makes releases available.
      * 
      */
-    public Output</* @Nullable */ Boolean> autoMinorVersionUpgrade() {
-        return this.autoMinorVersionUpgrade;
+    public Output<Optional<Boolean>> autoMinorVersionUpgrade() {
+        return Codegen.optional(this.autoMinorVersionUpgrade);
     }
     /**
      * Name of the broker.
@@ -140,8 +141,8 @@ public class Broker extends com.pulumi.resources.CustomResource {
      * @return Deployment mode of the broker. Valid values are `SINGLE_INSTANCE`, `ACTIVE_STANDBY_MULTI_AZ`, and `CLUSTER_MULTI_AZ`. Default is `SINGLE_INSTANCE`.
      * 
      */
-    public Output</* @Nullable */ String> deploymentMode() {
-        return this.deploymentMode;
+    public Output<Optional<String>> deploymentMode() {
+        return Codegen.optional(this.deploymentMode);
     }
     /**
      * Configuration block containing encryption options. Detailed below.
@@ -154,8 +155,8 @@ public class Broker extends com.pulumi.resources.CustomResource {
      * @return Configuration block containing encryption options. Detailed below.
      * 
      */
-    public Output</* @Nullable */ BrokerEncryptionOptions> encryptionOptions() {
-        return this.encryptionOptions;
+    public Output<Optional<BrokerEncryptionOptions>> encryptionOptions() {
+        return Codegen.optional(this.encryptionOptions);
     }
     /**
      * Type of broker engine. Valid values are `ActiveMQ` and `RabbitMQ`.
@@ -246,8 +247,8 @@ public class Broker extends com.pulumi.resources.CustomResource {
      * @return Configuration block for the LDAP server used to authenticate and authorize connections to the broker. Not supported for `engine_type` `RabbitMQ`. Detailed below. (Currently, AWS may not process changes to LDAP server metadata.)
      * 
      */
-    public Output</* @Nullable */ BrokerLdapServerMetadata> ldapServerMetadata() {
-        return this.ldapServerMetadata;
+    public Output<Optional<BrokerLdapServerMetadata>> ldapServerMetadata() {
+        return Codegen.optional(this.ldapServerMetadata);
     }
     /**
      * Configuration block for the logging configuration of the broker. Detailed below.
@@ -260,8 +261,8 @@ public class Broker extends com.pulumi.resources.CustomResource {
      * @return Configuration block for the logging configuration of the broker. Detailed below.
      * 
      */
-    public Output</* @Nullable */ BrokerLogs> logs() {
-        return this.logs;
+    public Output<Optional<BrokerLogs>> logs() {
+        return Codegen.optional(this.logs);
     }
     /**
      * Configuration block for the maintenance window start time. Detailed below.
@@ -288,8 +289,8 @@ public class Broker extends com.pulumi.resources.CustomResource {
      * @return Whether to enable connections from applications outside of the VPC that hosts the broker&#39;s subnets.
      * 
      */
-    public Output</* @Nullable */ Boolean> publiclyAccessible() {
-        return this.publiclyAccessible;
+    public Output<Optional<Boolean>> publiclyAccessible() {
+        return Codegen.optional(this.publiclyAccessible);
     }
     /**
      * List of security group IDs assigned to the broker.
@@ -302,8 +303,8 @@ public class Broker extends com.pulumi.resources.CustomResource {
      * @return List of security group IDs assigned to the broker.
      * 
      */
-    public Output</* @Nullable */ List<String>> securityGroups() {
-        return this.securityGroups;
+    public Output<Optional<List<String>>> securityGroups() {
+        return Codegen.optional(this.securityGroups);
     }
     /**
      * Storage type of the broker. For `engine_type` `ActiveMQ`, the valid values are `efs` and `ebs`, and the AWS-default is `efs`. For `engine_type` `RabbitMQ`, only `ebs` is supported. When using `ebs`, only the `mq.m5` broker instance type family is supported.
@@ -344,8 +345,8 @@ public class Broker extends com.pulumi.resources.CustomResource {
      * @return Map of tags to assign to the broker. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

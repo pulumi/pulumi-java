@@ -17,6 +17,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -61,8 +62,8 @@ public class Prediction extends com.pulumi.resources.CustomResource {
      * @return Description of the prediction.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> description() {
-        return this.description;
+    public Output<Optional<Map<String,String>>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Display name of the prediction.
@@ -75,8 +76,8 @@ public class Prediction extends com.pulumi.resources.CustomResource {
      * @return Display name of the prediction.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> displayName() {
-        return this.displayName;
+    public Output<Optional<Map<String,String>>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * The prediction grades.
@@ -89,8 +90,8 @@ public class Prediction extends com.pulumi.resources.CustomResource {
      * @return The prediction grades.
      * 
      */
-    public Output</* @Nullable */ List<PredictionResponseGrades>> grades() {
-        return this.grades;
+    public Output<Optional<List<PredictionResponseGrades>>> grades() {
+        return Codegen.optional(this.grades);
     }
     /**
      * Interaction types involved in the prediction.
@@ -103,8 +104,8 @@ public class Prediction extends com.pulumi.resources.CustomResource {
      * @return Interaction types involved in the prediction.
      * 
      */
-    public Output</* @Nullable */ List<String>> involvedInteractionTypes() {
-        return this.involvedInteractionTypes;
+    public Output<Optional<List<String>>> involvedInteractionTypes() {
+        return Codegen.optional(this.involvedInteractionTypes);
     }
     /**
      * KPI types involved in the prediction.
@@ -117,8 +118,8 @@ public class Prediction extends com.pulumi.resources.CustomResource {
      * @return KPI types involved in the prediction.
      * 
      */
-    public Output</* @Nullable */ List<String>> involvedKpiTypes() {
-        return this.involvedKpiTypes;
+    public Output<Optional<List<String>>> involvedKpiTypes() {
+        return Codegen.optional(this.involvedKpiTypes);
     }
     /**
      * Relationships involved in the prediction.
@@ -131,8 +132,8 @@ public class Prediction extends com.pulumi.resources.CustomResource {
      * @return Relationships involved in the prediction.
      * 
      */
-    public Output</* @Nullable */ List<String>> involvedRelationships() {
-        return this.involvedRelationships;
+    public Output<Optional<List<String>>> involvedRelationships() {
+        return Codegen.optional(this.involvedRelationships);
     }
     /**
      * Definition of the link mapping of prediction.
@@ -201,8 +202,8 @@ public class Prediction extends com.pulumi.resources.CustomResource {
      * @return Name of the prediction.
      * 
      */
-    public Output</* @Nullable */ String> predictionName() {
-        return this.predictionName;
+    public Output<Optional<String>> predictionName() {
+        return Codegen.optional(this.predictionName);
     }
     /**
      * Primary profile type.

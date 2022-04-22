@@ -12,6 +12,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -31,8 +32,8 @@ public class CompositeAlarm extends com.pulumi.resources.CustomResource {
      * @return Indicates whether actions should be executed during any changes to the alarm state. The default is TRUE.
      * 
      */
-    public Output</* @Nullable */ Boolean> actionsEnabled() {
-        return this.actionsEnabled;
+    public Output<Optional<Boolean>> actionsEnabled() {
+        return Codegen.optional(this.actionsEnabled);
     }
     /**
      * The list of actions to execute when this alarm transitions into an ALARM state from any other state. Specify each action as an Amazon Resource Name (ARN).
@@ -45,8 +46,8 @@ public class CompositeAlarm extends com.pulumi.resources.CustomResource {
      * @return The list of actions to execute when this alarm transitions into an ALARM state from any other state. Specify each action as an Amazon Resource Name (ARN).
      * 
      */
-    public Output</* @Nullable */ List<String>> alarmActions() {
-        return this.alarmActions;
+    public Output<Optional<List<String>>> alarmActions() {
+        return Codegen.optional(this.alarmActions);
     }
     /**
      * The description of the alarm
@@ -59,8 +60,8 @@ public class CompositeAlarm extends com.pulumi.resources.CustomResource {
      * @return The description of the alarm
      * 
      */
-    public Output</* @Nullable */ String> alarmDescription() {
-        return this.alarmDescription;
+    public Output<Optional<String>> alarmDescription() {
+        return Codegen.optional(this.alarmDescription);
     }
     /**
      * The name of the Composite Alarm
@@ -115,8 +116,8 @@ public class CompositeAlarm extends com.pulumi.resources.CustomResource {
      * @return The actions to execute when this alarm transitions to the INSUFFICIENT_DATA state from any other state. Each action is specified as an Amazon Resource Name (ARN).
      * 
      */
-    public Output</* @Nullable */ List<String>> insufficientDataActions() {
-        return this.insufficientDataActions;
+    public Output<Optional<List<String>>> insufficientDataActions() {
+        return Codegen.optional(this.insufficientDataActions);
     }
     /**
      * The actions to execute when this alarm transitions to the OK state from any other state. Each action is specified as an Amazon Resource Name (ARN).
@@ -129,8 +130,8 @@ public class CompositeAlarm extends com.pulumi.resources.CustomResource {
      * @return The actions to execute when this alarm transitions to the OK state from any other state. Each action is specified as an Amazon Resource Name (ARN).
      * 
      */
-    public Output</* @Nullable */ List<String>> oKActions() {
-        return this.oKActions;
+    public Output<Optional<List<String>>> oKActions() {
+        return Codegen.optional(this.oKActions);
     }
 
     /**

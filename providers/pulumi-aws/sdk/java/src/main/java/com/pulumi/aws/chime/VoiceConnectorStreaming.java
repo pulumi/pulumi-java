@@ -14,6 +14,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -58,8 +59,8 @@ public class VoiceConnectorStreaming extends com.pulumi.resources.CustomResource
      * @return When true, media streaming to Amazon Kinesis is turned off. Default: `false`
      * 
      */
-    public Output</* @Nullable */ Boolean> disabled() {
-        return this.disabled;
+    public Output<Optional<Boolean>> disabled() {
+        return Codegen.optional(this.disabled);
     }
     /**
      * The streaming notification targets. Valid Values: `EventBridge | SNS | SQS`
@@ -72,8 +73,8 @@ public class VoiceConnectorStreaming extends com.pulumi.resources.CustomResource
      * @return The streaming notification targets. Valid Values: `EventBridge | SNS | SQS`
      * 
      */
-    public Output</* @Nullable */ List<String>> streamingNotificationTargets() {
-        return this.streamingNotificationTargets;
+    public Output<Optional<List<String>>> streamingNotificationTargets() {
+        return Codegen.optional(this.streamingNotificationTargets);
     }
     /**
      * The Amazon Chime Voice Connector ID.

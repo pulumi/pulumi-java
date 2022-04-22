@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -47,8 +48,8 @@ public class TypeActivation extends com.pulumi.resources.CustomResource {
      * @return Whether to automatically update the extension in this account and region when a new minor version is published by the extension publisher. Major versions released by the publisher must be manually updated.
      * 
      */
-    public Output</* @Nullable */ Boolean> autoUpdate() {
-        return this.autoUpdate;
+    public Output<Optional<Boolean>> autoUpdate() {
+        return Codegen.optional(this.autoUpdate);
     }
     /**
      * The Amazon Resource Name (ARN) of the IAM execution role to use to register the type. If your resource type calls AWS APIs in any of its handlers, you must create an IAM execution role that includes the necessary permissions to call those AWS APIs, and provision that execution role in your account. CloudFormation then assumes that execution role to provide your resource type with the appropriate credentials.
@@ -61,8 +62,8 @@ public class TypeActivation extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the IAM execution role to use to register the type. If your resource type calls AWS APIs in any of its handlers, you must create an IAM execution role that includes the necessary permissions to call those AWS APIs, and provision that execution role in your account. CloudFormation then assumes that execution role to provide your resource type with the appropriate credentials.
      * 
      */
-    public Output</* @Nullable */ String> executionRoleArn() {
-        return this.executionRoleArn;
+    public Output<Optional<String>> executionRoleArn() {
+        return Codegen.optional(this.executionRoleArn);
     }
     /**
      * Specifies logging configuration information for a type.
@@ -75,8 +76,8 @@ public class TypeActivation extends com.pulumi.resources.CustomResource {
      * @return Specifies logging configuration information for a type.
      * 
      */
-    public Output</* @Nullable */ TypeActivationLoggingConfig> loggingConfig() {
-        return this.loggingConfig;
+    public Output<Optional<TypeActivationLoggingConfig>> loggingConfig() {
+        return Codegen.optional(this.loggingConfig);
     }
     /**
      * The Major Version of the type you want to enable
@@ -89,8 +90,8 @@ public class TypeActivation extends com.pulumi.resources.CustomResource {
      * @return The Major Version of the type you want to enable
      * 
      */
-    public Output</* @Nullable */ String> majorVersion() {
-        return this.majorVersion;
+    public Output<Optional<String>> majorVersion() {
+        return Codegen.optional(this.majorVersion);
     }
     /**
      * The Amazon Resource Number (ARN) assigned to the public extension upon publication
@@ -103,8 +104,8 @@ public class TypeActivation extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Number (ARN) assigned to the public extension upon publication
      * 
      */
-    public Output</* @Nullable */ String> publicTypeArn() {
-        return this.publicTypeArn;
+    public Output<Optional<String>> publicTypeArn() {
+        return Codegen.optional(this.publicTypeArn);
     }
     /**
      * The publisher id assigned by CloudFormation for publishing in this region.
@@ -117,8 +118,8 @@ public class TypeActivation extends com.pulumi.resources.CustomResource {
      * @return The publisher id assigned by CloudFormation for publishing in this region.
      * 
      */
-    public Output</* @Nullable */ String> publisherId() {
-        return this.publisherId;
+    public Output<Optional<String>> publisherId() {
+        return Codegen.optional(this.publisherId);
     }
     /**
      * The kind of extension
@@ -131,8 +132,8 @@ public class TypeActivation extends com.pulumi.resources.CustomResource {
      * @return The kind of extension
      * 
      */
-    public Output</* @Nullable */ TypeActivationType> type() {
-        return this.type;
+    public Output<Optional<TypeActivationType>> type() {
+        return Codegen.optional(this.type);
     }
     /**
      * The name of the type being registered.
@@ -149,8 +150,8 @@ public class TypeActivation extends com.pulumi.resources.CustomResource {
      * We recommend that type names adhere to the following pattern: company_or_organization::service::type.
      * 
      */
-    public Output</* @Nullable */ String> typeName() {
-        return this.typeName;
+    public Output<Optional<String>> typeName() {
+        return Codegen.optional(this.typeName);
     }
     /**
      * An alias to assign to the public extension in this account and region. If you specify an alias for the extension, you must then use the alias to refer to the extension in your templates.
@@ -163,8 +164,8 @@ public class TypeActivation extends com.pulumi.resources.CustomResource {
      * @return An alias to assign to the public extension in this account and region. If you specify an alias for the extension, you must then use the alias to refer to the extension in your templates.
      * 
      */
-    public Output</* @Nullable */ String> typeNameAlias() {
-        return this.typeNameAlias;
+    public Output<Optional<String>> typeNameAlias() {
+        return Codegen.optional(this.typeNameAlias);
     }
     /**
      * Manually updates a previously-enabled type to a new major or minor version, if available. You can also use this parameter to update the value of AutoUpdateEnabled
@@ -177,8 +178,8 @@ public class TypeActivation extends com.pulumi.resources.CustomResource {
      * @return Manually updates a previously-enabled type to a new major or minor version, if available. You can also use this parameter to update the value of AutoUpdateEnabled
      * 
      */
-    public Output</* @Nullable */ TypeActivationVersionBump> versionBump() {
-        return this.versionBump;
+    public Output<Optional<TypeActivationVersionBump>> versionBump() {
+        return Codegen.optional(this.versionBump);
     }
 
     /**

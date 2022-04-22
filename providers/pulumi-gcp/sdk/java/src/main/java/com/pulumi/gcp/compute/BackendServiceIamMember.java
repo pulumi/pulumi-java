@@ -12,6 +12,7 @@ import com.pulumi.gcp.compute.BackendServiceIamMemberArgs;
 import com.pulumi.gcp.compute.inputs.BackendServiceIamMemberState;
 import com.pulumi.gcp.compute.outputs.BackendServiceIamMemberCondition;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 @ResourceType(type="gcp:compute/backendServiceIamMember:BackendServiceIamMember")
@@ -19,8 +20,8 @@ public class BackendServiceIamMember extends com.pulumi.resources.CustomResource
     @Export(name="condition", type=BackendServiceIamMemberCondition.class, parameters={})
     private Output</* @Nullable */ BackendServiceIamMemberCondition> condition;
 
-    public Output</* @Nullable */ BackendServiceIamMemberCondition> condition() {
-        return this.condition;
+    public Output<Optional<BackendServiceIamMemberCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;

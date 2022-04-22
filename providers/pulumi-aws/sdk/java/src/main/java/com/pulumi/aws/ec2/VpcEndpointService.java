@@ -15,6 +15,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -121,8 +122,8 @@ public class VpcEndpointService extends com.pulumi.resources.CustomResource {
      * @return Amazon Resource Names (ARNs) of one or more Gateway Load Balancers for the endpoint service.
      * 
      */
-    public Output</* @Nullable */ List<String>> gatewayLoadBalancerArns() {
-        return this.gatewayLoadBalancerArns;
+    public Output<Optional<List<String>>> gatewayLoadBalancerArns() {
+        return Codegen.optional(this.gatewayLoadBalancerArns);
     }
     /**
      * Whether or not the service manages its VPC endpoints - `true` or `false`.
@@ -149,8 +150,8 @@ public class VpcEndpointService extends com.pulumi.resources.CustomResource {
      * @return Amazon Resource Names (ARNs) of one or more Network Load Balancers for the endpoint service.
      * 
      */
-    public Output</* @Nullable */ List<String>> networkLoadBalancerArns() {
-        return this.networkLoadBalancerArns;
+    public Output<Optional<List<String>>> networkLoadBalancerArns() {
+        return Codegen.optional(this.networkLoadBalancerArns);
     }
     /**
      * The private DNS name for the service.
@@ -233,8 +234,8 @@ public class VpcEndpointService extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

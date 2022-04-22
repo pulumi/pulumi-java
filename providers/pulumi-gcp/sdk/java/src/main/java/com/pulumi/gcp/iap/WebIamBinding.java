@@ -13,6 +13,7 @@ import com.pulumi.gcp.iap.inputs.WebIamBindingState;
 import com.pulumi.gcp.iap.outputs.WebIamBindingCondition;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -76,8 +77,8 @@ public class WebIamBinding extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ WebIamBindingCondition> condition() {
-        return this.condition;
+    public Output<Optional<WebIamBindingCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * (Computed) The etag of the IAM policy.

@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class Lab extends com.pulumi.resources.CustomResource {
      * @return The properties of any lab announcement associated with this lab
      * 
      */
-    public Output</* @Nullable */ LabAnnouncementPropertiesResponse> announcement() {
-        return this.announcement;
+    public Output<Optional<LabAnnouncementPropertiesResponse>> announcement() {
+        return Codegen.optional(this.announcement);
     }
     /**
      * The lab&#39;s artifact storage account.
@@ -115,8 +116,8 @@ public class Lab extends com.pulumi.resources.CustomResource {
      * @return The access rights to be granted to the user when provisioning an environment
      * 
      */
-    public Output</* @Nullable */ String> environmentPermission() {
-        return this.environmentPermission;
+    public Output<Optional<String>> environmentPermission() {
+        return Codegen.optional(this.environmentPermission);
     }
     /**
      * Extended properties of the lab used for experimental features
@@ -129,8 +130,8 @@ public class Lab extends com.pulumi.resources.CustomResource {
      * @return Extended properties of the lab used for experimental features
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> extendedProperties() {
-        return this.extendedProperties;
+    public Output<Optional<Map<String,String>>> extendedProperties() {
+        return Codegen.optional(this.extendedProperties);
     }
     /**
      * Type of storage used by the lab. It can be either Premium or Standard. Default is Premium.
@@ -143,8 +144,8 @@ public class Lab extends com.pulumi.resources.CustomResource {
      * @return Type of storage used by the lab. It can be either Premium or Standard. Default is Premium.
      * 
      */
-    public Output</* @Nullable */ String> labStorageType() {
-        return this.labStorageType;
+    public Output<Optional<String>> labStorageType() {
+        return Codegen.optional(this.labStorageType);
     }
     /**
      * The load balancer used to for lab VMs that use shared IP address.
@@ -171,8 +172,8 @@ public class Lab extends com.pulumi.resources.CustomResource {
      * @return The location of the resource.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The ordered list of artifact resource IDs that should be applied on all Linux VM creations by default, prior to the artifacts specified by the user.
@@ -185,8 +186,8 @@ public class Lab extends com.pulumi.resources.CustomResource {
      * @return The ordered list of artifact resource IDs that should be applied on all Linux VM creations by default, prior to the artifacts specified by the user.
      * 
      */
-    public Output</* @Nullable */ List<String>> mandatoryArtifactsResourceIdsLinux() {
-        return this.mandatoryArtifactsResourceIdsLinux;
+    public Output<Optional<List<String>>> mandatoryArtifactsResourceIdsLinux() {
+        return Codegen.optional(this.mandatoryArtifactsResourceIdsLinux);
     }
     /**
      * The ordered list of artifact resource IDs that should be applied on all Windows VM creations by default, prior to the artifacts specified by the user.
@@ -199,8 +200,8 @@ public class Lab extends com.pulumi.resources.CustomResource {
      * @return The ordered list of artifact resource IDs that should be applied on all Windows VM creations by default, prior to the artifacts specified by the user.
      * 
      */
-    public Output</* @Nullable */ List<String>> mandatoryArtifactsResourceIdsWindows() {
-        return this.mandatoryArtifactsResourceIdsWindows;
+    public Output<Optional<List<String>>> mandatoryArtifactsResourceIdsWindows() {
+        return Codegen.optional(this.mandatoryArtifactsResourceIdsWindows);
     }
     /**
      * The name of the resource.
@@ -259,8 +260,8 @@ public class Lab extends com.pulumi.resources.CustomResource {
      * When its value is &#39;Disabled&#39;, only creation of standard data disks is allowed.
      * 
      */
-    public Output</* @Nullable */ String> premiumDataDisks() {
-        return this.premiumDataDisks;
+    public Output<Optional<String>> premiumDataDisks() {
+        return Codegen.optional(this.premiumDataDisks);
     }
     /**
      * The provisioning status of the resource.
@@ -301,8 +302,8 @@ public class Lab extends com.pulumi.resources.CustomResource {
      * @return The properties of any lab support message associated with this lab
      * 
      */
-    public Output</* @Nullable */ LabSupportPropertiesResponse> support() {
-        return this.support;
+    public Output<Optional<LabSupportPropertiesResponse>> support() {
+        return Codegen.optional(this.support);
     }
     /**
      * The tags of the resource.
@@ -315,8 +316,8 @@ public class Lab extends com.pulumi.resources.CustomResource {
      * @return The tags of the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource.

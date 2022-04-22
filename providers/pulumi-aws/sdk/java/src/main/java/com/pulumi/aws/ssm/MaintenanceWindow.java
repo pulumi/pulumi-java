@@ -14,6 +14,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class MaintenanceWindow extends com.pulumi.resources.CustomResource {
      * @return Whether targets must be registered with the Maintenance Window before tasks can be defined for those targets.
      * 
      */
-    public Output</* @Nullable */ Boolean> allowUnassociatedTargets() {
-        return this.allowUnassociatedTargets;
+    public Output<Optional<Boolean>> allowUnassociatedTargets() {
+        return Codegen.optional(this.allowUnassociatedTargets);
     }
     /**
      * The number of hours before the end of the Maintenance Window that Systems Manager stops scheduling new tasks for execution.
@@ -73,8 +74,8 @@ public class MaintenanceWindow extends com.pulumi.resources.CustomResource {
      * @return A description for the maintenance window.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The duration of the Maintenance Window in hours.
@@ -101,8 +102,8 @@ public class MaintenanceWindow extends com.pulumi.resources.CustomResource {
      * @return Whether the maintenance window is enabled. Default: `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> enabled() {
-        return this.enabled;
+    public Output<Optional<Boolean>> enabled() {
+        return Codegen.optional(this.enabled);
     }
     /**
      * Timestamp in [ISO-8601 extended format](https://www.iso.org/iso-8601-date-and-time-format.html) when to no longer run the maintenance window.
@@ -115,8 +116,8 @@ public class MaintenanceWindow extends com.pulumi.resources.CustomResource {
      * @return Timestamp in [ISO-8601 extended format](https://www.iso.org/iso-8601-date-and-time-format.html) when to no longer run the maintenance window.
      * 
      */
-    public Output</* @Nullable */ String> endDate() {
-        return this.endDate;
+    public Output<Optional<String>> endDate() {
+        return Codegen.optional(this.endDate);
     }
     /**
      * The name of the maintenance window.
@@ -157,8 +158,8 @@ public class MaintenanceWindow extends com.pulumi.resources.CustomResource {
      * @return The number of days to wait after the date and time specified by a CRON expression before running the maintenance window.
      * 
      */
-    public Output</* @Nullable */ Integer> scheduleOffset() {
-        return this.scheduleOffset;
+    public Output<Optional<Integer>> scheduleOffset() {
+        return Codegen.optional(this.scheduleOffset);
     }
     /**
      * Timezone for schedule in [Internet Assigned Numbers Authority (IANA) Time Zone Database format](https://www.iana.org/time-zones). For example: `America/Los_Angeles`, `etc/UTC`, or `Asia/Seoul`.
@@ -171,8 +172,8 @@ public class MaintenanceWindow extends com.pulumi.resources.CustomResource {
      * @return Timezone for schedule in [Internet Assigned Numbers Authority (IANA) Time Zone Database format](https://www.iana.org/time-zones). For example: `America/Los_Angeles`, `etc/UTC`, or `Asia/Seoul`.
      * 
      */
-    public Output</* @Nullable */ String> scheduleTimezone() {
-        return this.scheduleTimezone;
+    public Output<Optional<String>> scheduleTimezone() {
+        return Codegen.optional(this.scheduleTimezone);
     }
     /**
      * Timestamp in [ISO-8601 extended format](https://www.iso.org/iso-8601-date-and-time-format.html) when to begin the maintenance window.
@@ -185,8 +186,8 @@ public class MaintenanceWindow extends com.pulumi.resources.CustomResource {
      * @return Timestamp in [ISO-8601 extended format](https://www.iso.org/iso-8601-date-and-time-format.html) when to begin the maintenance window.
      * 
      */
-    public Output</* @Nullable */ String> startDate() {
-        return this.startDate;
+    public Output<Optional<String>> startDate() {
+        return Codegen.optional(this.startDate);
     }
     /**
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -199,8 +200,8 @@ public class MaintenanceWindow extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

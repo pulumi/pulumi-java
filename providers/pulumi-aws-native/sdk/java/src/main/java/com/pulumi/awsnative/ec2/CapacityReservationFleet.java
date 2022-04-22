@@ -17,6 +17,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -30,8 +31,8 @@ public class CapacityReservationFleet extends com.pulumi.resources.CustomResourc
     @Export(name="allocationStrategy", type=String.class, parameters={})
     private Output</* @Nullable */ String> allocationStrategy;
 
-    public Output</* @Nullable */ String> allocationStrategy() {
-        return this.allocationStrategy;
+    public Output<Optional<String>> allocationStrategy() {
+        return Codegen.optional(this.allocationStrategy);
     }
     @Export(name="capacityReservationFleetId", type=String.class, parameters={})
     private Output<String> capacityReservationFleetId;
@@ -42,50 +43,50 @@ public class CapacityReservationFleet extends com.pulumi.resources.CustomResourc
     @Export(name="endDate", type=String.class, parameters={})
     private Output</* @Nullable */ String> endDate;
 
-    public Output</* @Nullable */ String> endDate() {
-        return this.endDate;
+    public Output<Optional<String>> endDate() {
+        return Codegen.optional(this.endDate);
     }
     @Export(name="instanceMatchCriteria", type=CapacityReservationFleetInstanceMatchCriteria.class, parameters={})
     private Output</* @Nullable */ CapacityReservationFleetInstanceMatchCriteria> instanceMatchCriteria;
 
-    public Output</* @Nullable */ CapacityReservationFleetInstanceMatchCriteria> instanceMatchCriteria() {
-        return this.instanceMatchCriteria;
+    public Output<Optional<CapacityReservationFleetInstanceMatchCriteria>> instanceMatchCriteria() {
+        return Codegen.optional(this.instanceMatchCriteria);
     }
     @Export(name="instanceTypeSpecifications", type=List.class, parameters={CapacityReservationFleetInstanceTypeSpecification.class})
     private Output</* @Nullable */ List<CapacityReservationFleetInstanceTypeSpecification>> instanceTypeSpecifications;
 
-    public Output</* @Nullable */ List<CapacityReservationFleetInstanceTypeSpecification>> instanceTypeSpecifications() {
-        return this.instanceTypeSpecifications;
+    public Output<Optional<List<CapacityReservationFleetInstanceTypeSpecification>>> instanceTypeSpecifications() {
+        return Codegen.optional(this.instanceTypeSpecifications);
     }
     @Export(name="noRemoveEndDate", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> noRemoveEndDate;
 
-    public Output</* @Nullable */ Boolean> noRemoveEndDate() {
-        return this.noRemoveEndDate;
+    public Output<Optional<Boolean>> noRemoveEndDate() {
+        return Codegen.optional(this.noRemoveEndDate);
     }
     @Export(name="removeEndDate", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> removeEndDate;
 
-    public Output</* @Nullable */ Boolean> removeEndDate() {
-        return this.removeEndDate;
+    public Output<Optional<Boolean>> removeEndDate() {
+        return Codegen.optional(this.removeEndDate);
     }
     @Export(name="tagSpecifications", type=List.class, parameters={CapacityReservationFleetTagSpecification.class})
     private Output</* @Nullable */ List<CapacityReservationFleetTagSpecification>> tagSpecifications;
 
-    public Output</* @Nullable */ List<CapacityReservationFleetTagSpecification>> tagSpecifications() {
-        return this.tagSpecifications;
+    public Output<Optional<List<CapacityReservationFleetTagSpecification>>> tagSpecifications() {
+        return Codegen.optional(this.tagSpecifications);
     }
     @Export(name="tenancy", type=CapacityReservationFleetTenancy.class, parameters={})
     private Output</* @Nullable */ CapacityReservationFleetTenancy> tenancy;
 
-    public Output</* @Nullable */ CapacityReservationFleetTenancy> tenancy() {
-        return this.tenancy;
+    public Output<Optional<CapacityReservationFleetTenancy>> tenancy() {
+        return Codegen.optional(this.tenancy);
     }
     @Export(name="totalTargetCapacity", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> totalTargetCapacity;
 
-    public Output</* @Nullable */ Integer> totalTargetCapacity() {
-        return this.totalTargetCapacity;
+    public Output<Optional<Integer>> totalTargetCapacity() {
+        return Codegen.optional(this.totalTargetCapacity);
     }
 
     /**

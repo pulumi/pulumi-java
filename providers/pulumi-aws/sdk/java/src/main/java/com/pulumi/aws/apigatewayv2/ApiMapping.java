@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -55,8 +56,8 @@ public class ApiMapping extends com.pulumi.resources.CustomResource {
      * @return The [API mapping key](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-mapping-template-reference.html).
      * 
      */
-    public Output</* @Nullable */ String> apiMappingKey() {
-        return this.apiMappingKey;
+    public Output<Optional<String>> apiMappingKey() {
+        return Codegen.optional(this.apiMappingKey);
     }
     /**
      * The domain name. Use the `aws.apigatewayv2.DomainName` resource to configure a domain name.

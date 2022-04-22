@@ -13,6 +13,7 @@ import com.pulumi.gcp.healthcare.inputs.Hl7StoreIamBindingState;
 import com.pulumi.gcp.healthcare.outputs.Hl7StoreIamBindingCondition;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -64,8 +65,8 @@ public class Hl7StoreIamBinding extends com.pulumi.resources.CustomResource {
     @Export(name="condition", type=Hl7StoreIamBindingCondition.class, parameters={})
     private Output</* @Nullable */ Hl7StoreIamBindingCondition> condition;
 
-    public Output</* @Nullable */ Hl7StoreIamBindingCondition> condition() {
-        return this.condition;
+    public Output<Optional<Hl7StoreIamBindingCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * (Computed) The etag of the HL7v2 store&#39;s IAM policy.

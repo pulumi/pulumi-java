@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -33,8 +34,8 @@ public class OrganizationConformancePack extends com.pulumi.resources.CustomReso
      * @return A list of ConformancePackInputParameter objects.
      * 
      */
-    public Output</* @Nullable */ List<OrganizationConformancePackConformancePackInputParameter>> conformancePackInputParameters() {
-        return this.conformancePackInputParameters;
+    public Output<Optional<List<OrganizationConformancePackConformancePackInputParameter>>> conformancePackInputParameters() {
+        return Codegen.optional(this.conformancePackInputParameters);
     }
     /**
      * AWS Config stores intermediate files while processing conformance pack template.
@@ -47,8 +48,8 @@ public class OrganizationConformancePack extends com.pulumi.resources.CustomReso
      * @return AWS Config stores intermediate files while processing conformance pack template.
      * 
      */
-    public Output</* @Nullable */ String> deliveryS3Bucket() {
-        return this.deliveryS3Bucket;
+    public Output<Optional<String>> deliveryS3Bucket() {
+        return Codegen.optional(this.deliveryS3Bucket);
     }
     /**
      * The prefix for the delivery S3 bucket.
@@ -61,8 +62,8 @@ public class OrganizationConformancePack extends com.pulumi.resources.CustomReso
      * @return The prefix for the delivery S3 bucket.
      * 
      */
-    public Output</* @Nullable */ String> deliveryS3KeyPrefix() {
-        return this.deliveryS3KeyPrefix;
+    public Output<Optional<String>> deliveryS3KeyPrefix() {
+        return Codegen.optional(this.deliveryS3KeyPrefix);
     }
     /**
      * A list of AWS accounts to be excluded from an organization conformance pack while deploying a conformance pack.
@@ -75,8 +76,8 @@ public class OrganizationConformancePack extends com.pulumi.resources.CustomReso
      * @return A list of AWS accounts to be excluded from an organization conformance pack while deploying a conformance pack.
      * 
      */
-    public Output</* @Nullable */ List<String>> excludedAccounts() {
-        return this.excludedAccounts;
+    public Output<Optional<List<String>>> excludedAccounts() {
+        return Codegen.optional(this.excludedAccounts);
     }
     /**
      * The name of the organization conformance pack.
@@ -103,8 +104,8 @@ public class OrganizationConformancePack extends com.pulumi.resources.CustomReso
      * @return A string containing full conformance pack template body.
      * 
      */
-    public Output</* @Nullable */ String> templateBody() {
-        return this.templateBody;
+    public Output<Optional<String>> templateBody() {
+        return Codegen.optional(this.templateBody);
     }
     /**
      * Location of file containing the template body.
@@ -117,8 +118,8 @@ public class OrganizationConformancePack extends com.pulumi.resources.CustomReso
      * @return Location of file containing the template body.
      * 
      */
-    public Output</* @Nullable */ String> templateS3Uri() {
-        return this.templateS3Uri;
+    public Output<Optional<String>> templateS3Uri() {
+        return Codegen.optional(this.templateS3Uri);
     }
 
     /**

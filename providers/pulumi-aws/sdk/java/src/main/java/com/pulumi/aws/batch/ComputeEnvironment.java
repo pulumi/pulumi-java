@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -92,8 +93,8 @@ public class ComputeEnvironment extends com.pulumi.resources.CustomResource {
      * @return Details of the compute resources managed by the compute environment. This parameter is required for managed compute environments. See details below.
      * 
      */
-    public Output</* @Nullable */ ComputeEnvironmentComputeResources> computeResources() {
-        return this.computeResources;
+    public Output<Optional<ComputeEnvironmentComputeResources>> computeResources() {
+        return Codegen.optional(this.computeResources);
     }
     /**
      * The Amazon Resource Name (ARN) of the underlying Amazon ECS cluster used by the compute environment.
@@ -134,8 +135,8 @@ public class ComputeEnvironment extends com.pulumi.resources.CustomResource {
      * @return The state of the compute environment. If the state is `ENABLED`, then the compute environment accepts jobs from a queue and can scale out automatically based on queues. Valid items are `ENABLED` or `DISABLED`. Defaults to `ENABLED`.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Output<Optional<String>> state() {
+        return Codegen.optional(this.state);
     }
     /**
      * The current status of the compute environment (for example, CREATING or VALID).
@@ -176,8 +177,8 @@ public class ComputeEnvironment extends com.pulumi.resources.CustomResource {
      * @return Key-value pair tags to be applied to resources that are launched in the compute environment. This parameter isn&#39;t applicable to jobs running on Fargate resources, and shouldn&#39;t be specified.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

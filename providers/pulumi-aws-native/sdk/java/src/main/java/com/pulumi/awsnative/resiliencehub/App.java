@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -60,8 +61,8 @@ public class App extends com.pulumi.resources.CustomResource {
      * @return App description.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Name of the app.
@@ -88,8 +89,8 @@ public class App extends com.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the Resiliency Policy.
      * 
      */
-    public Output</* @Nullable */ String> resiliencyPolicyArn() {
-        return this.resiliencyPolicyArn;
+    public Output<Optional<String>> resiliencyPolicyArn() {
+        return Codegen.optional(this.resiliencyPolicyArn);
     }
     /**
      * An array of ResourceMapping objects.
@@ -108,8 +109,8 @@ public class App extends com.pulumi.resources.CustomResource {
     @Export(name="tags", type=AppTagMap.class, parameters={})
     private Output</* @Nullable */ AppTagMap> tags;
 
-    public Output</* @Nullable */ AppTagMap> tags() {
-        return this.tags;
+    public Output<Optional<AppTagMap>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

@@ -15,6 +15,7 @@ import com.pulumi.gcp.dns.outputs.PolicyNetwork;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -65,8 +66,8 @@ public class Policy extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ PolicyAlternativeNameServerConfig> alternativeNameServerConfig() {
-        return this.alternativeNameServerConfig;
+    public Output<Optional<PolicyAlternativeNameServerConfig>> alternativeNameServerConfig() {
+        return Codegen.optional(this.alternativeNameServerConfig);
     }
     /**
      * A textual description field. Defaults to &#39;Managed by Pulumi&#39;.
@@ -79,8 +80,8 @@ public class Policy extends com.pulumi.resources.CustomResource {
      * @return A textual description field. Defaults to &#39;Managed by Pulumi&#39;.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Allows networks bound to this policy to receive DNS queries sent
@@ -99,8 +100,8 @@ public class Policy extends com.pulumi.resources.CustomResource {
      * that are bound to this policy.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableInboundForwarding() {
-        return this.enableInboundForwarding;
+    public Output<Optional<Boolean>> enableInboundForwarding() {
+        return Codegen.optional(this.enableInboundForwarding);
     }
     /**
      * Controls whether logging is enabled for the networks bound to this policy.
@@ -115,8 +116,8 @@ public class Policy extends com.pulumi.resources.CustomResource {
      * Defaults to no logging if not set.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableLogging() {
-        return this.enableLogging;
+    public Output<Optional<Boolean>> enableLogging() {
+        return Codegen.optional(this.enableLogging);
     }
     /**
      * User assigned name for this policy.
@@ -145,8 +146,8 @@ public class Policy extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<PolicyNetwork>> networks() {
-        return this.networks;
+    public Output<Optional<List<PolicyNetwork>>> networks() {
+        return Codegen.optional(this.networks);
     }
     /**
      * The ID of the project in which the resource belongs.

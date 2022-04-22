@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -54,8 +55,8 @@ public class PublishingDestination extends com.pulumi.resources.CustomResource {
      * @return Currently there is only &#34;S3&#34; available as destination type which is also the default value
      * 
      */
-    public Output</* @Nullable */ String> destinationType() {
-        return this.destinationType;
+    public Output<Optional<String>> destinationType() {
+        return Codegen.optional(this.destinationType);
     }
     /**
      * The detector ID of the GuardDuty.

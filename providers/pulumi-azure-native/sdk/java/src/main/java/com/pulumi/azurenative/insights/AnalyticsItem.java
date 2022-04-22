@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class AnalyticsItem extends com.pulumi.resources.CustomResource {
      * @return The content of this item
      * 
      */
-    public Output</* @Nullable */ String> content() {
-        return this.content;
+    public Output<Optional<String>> content() {
+        return Codegen.optional(this.content);
     }
     /**
      * The user-defined name of the item.
@@ -57,8 +58,8 @@ public class AnalyticsItem extends com.pulumi.resources.CustomResource {
      * @return The user-defined name of the item.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * A set of properties that can be defined in the context of a specific item type. Each type may have its own properties.
@@ -85,8 +86,8 @@ public class AnalyticsItem extends com.pulumi.resources.CustomResource {
      * @return Enum indicating if this item definition is owned by a specific user or is shared between all users with access to the Application Insights component.
      * 
      */
-    public Output</* @Nullable */ String> scope() {
-        return this.scope;
+    public Output<Optional<String>> scope() {
+        return Codegen.optional(this.scope);
     }
     /**
      * Date and time in UTC when this item was created.
@@ -127,8 +128,8 @@ public class AnalyticsItem extends com.pulumi.resources.CustomResource {
      * @return Enum indicating the type of the Analytics item.
      * 
      */
-    public Output</* @Nullable */ String> type() {
-        return this.type;
+    public Output<Optional<String>> type() {
+        return Codegen.optional(this.type);
     }
     /**
      * This instance&#39;s version of the data model. This can change as new features are added.

@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -88,8 +89,8 @@ public class ResolverQueryLoggingConfig extends com.pulumi.resources.CustomResou
      * @return destination arn
      * 
      */
-    public Output</* @Nullable */ String> destinationArn() {
-        return this.destinationArn;
+    public Output<Optional<String>> destinationArn() {
+        return Codegen.optional(this.destinationArn);
     }
     /**
      * ResolverQueryLogConfigName
@@ -102,8 +103,8 @@ public class ResolverQueryLoggingConfig extends com.pulumi.resources.CustomResou
      * @return ResolverQueryLogConfigName
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * AccountId

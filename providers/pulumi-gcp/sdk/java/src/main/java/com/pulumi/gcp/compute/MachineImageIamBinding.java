@@ -13,6 +13,7 @@ import com.pulumi.gcp.compute.inputs.MachineImageIamBindingState;
 import com.pulumi.gcp.compute.outputs.MachineImageIamBindingCondition;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -76,8 +77,8 @@ public class MachineImageIamBinding extends com.pulumi.resources.CustomResource 
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ MachineImageIamBindingCondition> condition() {
-        return this.condition;
+    public Output<Optional<MachineImageIamBindingCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * (Computed) The etag of the IAM policy.

@@ -18,6 +18,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -48,8 +49,8 @@ public class VirtualMachineScaleSetVMRunCommand extends com.pulumi.resources.Cus
      * @return Optional. If set to true, provisioning will complete as soon as the script starts and will not wait for script to complete.
      * 
      */
-    public Output</* @Nullable */ Boolean> asyncExecution() {
-        return this.asyncExecution;
+    public Output<Optional<Boolean>> asyncExecution() {
+        return Codegen.optional(this.asyncExecution);
     }
     /**
      * Specifies the Azure storage blob where script error stream will be uploaded.
@@ -62,8 +63,8 @@ public class VirtualMachineScaleSetVMRunCommand extends com.pulumi.resources.Cus
      * @return Specifies the Azure storage blob where script error stream will be uploaded.
      * 
      */
-    public Output</* @Nullable */ String> errorBlobUri() {
-        return this.errorBlobUri;
+    public Output<Optional<String>> errorBlobUri() {
+        return Codegen.optional(this.errorBlobUri);
     }
     /**
      * The virtual machine run command instance view.
@@ -118,8 +119,8 @@ public class VirtualMachineScaleSetVMRunCommand extends com.pulumi.resources.Cus
      * @return Specifies the Azure storage blob where script output stream will be uploaded.
      * 
      */
-    public Output</* @Nullable */ String> outputBlobUri() {
-        return this.outputBlobUri;
+    public Output<Optional<String>> outputBlobUri() {
+        return Codegen.optional(this.outputBlobUri);
     }
     /**
      * The parameters used by the script.
@@ -132,8 +133,8 @@ public class VirtualMachineScaleSetVMRunCommand extends com.pulumi.resources.Cus
      * @return The parameters used by the script.
      * 
      */
-    public Output</* @Nullable */ List<RunCommandInputParameterResponse>> parameters() {
-        return this.parameters;
+    public Output<Optional<List<RunCommandInputParameterResponse>>> parameters() {
+        return Codegen.optional(this.parameters);
     }
     /**
      * The parameters used by the script.
@@ -146,8 +147,8 @@ public class VirtualMachineScaleSetVMRunCommand extends com.pulumi.resources.Cus
      * @return The parameters used by the script.
      * 
      */
-    public Output</* @Nullable */ List<RunCommandInputParameterResponse>> protectedParameters() {
-        return this.protectedParameters;
+    public Output<Optional<List<RunCommandInputParameterResponse>>> protectedParameters() {
+        return Codegen.optional(this.protectedParameters);
     }
     /**
      * The provisioning state, which only appears in the response.
@@ -174,8 +175,8 @@ public class VirtualMachineScaleSetVMRunCommand extends com.pulumi.resources.Cus
      * @return Specifies the user account password on the VM when executing the run command.
      * 
      */
-    public Output</* @Nullable */ String> runAsPassword() {
-        return this.runAsPassword;
+    public Output<Optional<String>> runAsPassword() {
+        return Codegen.optional(this.runAsPassword);
     }
     /**
      * Specifies the user account on the VM when executing the run command.
@@ -188,8 +189,8 @@ public class VirtualMachineScaleSetVMRunCommand extends com.pulumi.resources.Cus
      * @return Specifies the user account on the VM when executing the run command.
      * 
      */
-    public Output</* @Nullable */ String> runAsUser() {
-        return this.runAsUser;
+    public Output<Optional<String>> runAsUser() {
+        return Codegen.optional(this.runAsUser);
     }
     /**
      * The source of the run command script.
@@ -202,8 +203,8 @@ public class VirtualMachineScaleSetVMRunCommand extends com.pulumi.resources.Cus
      * @return The source of the run command script.
      * 
      */
-    public Output</* @Nullable */ VirtualMachineRunCommandScriptSourceResponse> source() {
-        return this.source;
+    public Output<Optional<VirtualMachineRunCommandScriptSourceResponse>> source() {
+        return Codegen.optional(this.source);
     }
     /**
      * Resource tags
@@ -216,8 +217,8 @@ public class VirtualMachineScaleSetVMRunCommand extends com.pulumi.resources.Cus
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The timeout in seconds to execute the run command.
@@ -230,8 +231,8 @@ public class VirtualMachineScaleSetVMRunCommand extends com.pulumi.resources.Cus
      * @return The timeout in seconds to execute the run command.
      * 
      */
-    public Output</* @Nullable */ Integer> timeoutInSeconds() {
-        return this.timeoutInSeconds;
+    public Output<Optional<Integer>> timeoutInSeconds() {
+        return Codegen.optional(this.timeoutInSeconds);
     }
     /**
      * Resource type

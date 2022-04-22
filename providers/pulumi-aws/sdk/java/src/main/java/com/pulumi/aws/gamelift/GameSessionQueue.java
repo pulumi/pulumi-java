@@ -15,6 +15,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -58,8 +59,8 @@ public class GameSessionQueue extends com.pulumi.resources.CustomResource {
      * @return List of fleet/alias ARNs used by session queue for placing game sessions.
      * 
      */
-    public Output</* @Nullable */ List<String>> destinations() {
-        return this.destinations;
+    public Output<Optional<List<String>>> destinations() {
+        return Codegen.optional(this.destinations);
     }
     /**
      * Name of the session queue.
@@ -86,8 +87,8 @@ public class GameSessionQueue extends com.pulumi.resources.CustomResource {
      * @return One or more policies used to choose fleet based on player latency. See below.
      * 
      */
-    public Output</* @Nullable */ List<GameSessionQueuePlayerLatencyPolicy>> playerLatencyPolicies() {
-        return this.playerLatencyPolicies;
+    public Output<Optional<List<GameSessionQueuePlayerLatencyPolicy>>> playerLatencyPolicies() {
+        return Codegen.optional(this.playerLatencyPolicies);
     }
     /**
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -100,8 +101,8 @@ public class GameSessionQueue extends com.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .
@@ -128,8 +129,8 @@ public class GameSessionQueue extends com.pulumi.resources.CustomResource {
      * @return Maximum time a game session request can remain in the queue.
      * 
      */
-    public Output</* @Nullable */ Integer> timeoutInSeconds() {
-        return this.timeoutInSeconds;
+    public Output<Optional<Integer>> timeoutInSeconds() {
+        return Codegen.optional(this.timeoutInSeconds);
     }
 
     /**

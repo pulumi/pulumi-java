@@ -21,6 +21,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -51,8 +52,8 @@ public class ApiManagementService extends com.pulumi.resources.CustomResource {
      * @return Additional datacenter locations of the API Management service.
      * 
      */
-    public Output</* @Nullable */ List<AdditionalLocationResponse>> additionalLocations() {
-        return this.additionalLocations;
+    public Output<Optional<List<AdditionalLocationResponse>>> additionalLocations() {
+        return Codegen.optional(this.additionalLocations);
     }
     /**
      * Control Plane Apis version constraint for the API Management service.
@@ -65,8 +66,8 @@ public class ApiManagementService extends com.pulumi.resources.CustomResource {
      * @return Control Plane Apis version constraint for the API Management service.
      * 
      */
-    public Output</* @Nullable */ ApiVersionConstraintResponse> apiVersionConstraint() {
-        return this.apiVersionConstraint;
+    public Output<Optional<ApiVersionConstraintResponse>> apiVersionConstraint() {
+        return Codegen.optional(this.apiVersionConstraint);
     }
     /**
      * List of Certificates that need to be installed in the API Management service. Max supported certificates that can be installed is 10.
@@ -79,8 +80,8 @@ public class ApiManagementService extends com.pulumi.resources.CustomResource {
      * @return List of Certificates that need to be installed in the API Management service. Max supported certificates that can be installed is 10.
      * 
      */
-    public Output</* @Nullable */ List<CertificateConfigurationResponse>> certificates() {
-        return this.certificates;
+    public Output<Optional<List<CertificateConfigurationResponse>>> certificates() {
+        return Codegen.optional(this.certificates);
     }
     /**
      * Creation UTC date of the API Management service.The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
@@ -107,8 +108,8 @@ public class ApiManagementService extends com.pulumi.resources.CustomResource {
      * @return Custom properties of the API Management service.&lt;/br&gt;Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TripleDes168` will disable the cipher TLS_RSA_WITH_3DES_EDE_CBC_SHA for all TLS(1.0, 1.1 and 1.2).&lt;/br&gt;Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls11` can be used to disable just TLS 1.1.&lt;/br&gt;Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls10` can be used to disable TLS 1.0 on an API Management service.&lt;/br&gt;Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls11` can be used to disable just TLS 1.1 for communications with backends.&lt;/br&gt;Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls10` can be used to disable TLS 1.0 for communications with backends.&lt;/br&gt;Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Protocols.Server.Http2` can be used to enable HTTP2 protocol on an API Management service.&lt;/br&gt;Not specifying any of these properties on PATCH operation will reset omitted properties&#39; values to their defaults. For all the settings except Http2 the default value is `True` if the service was created on or before April 1st 2018 and `False` otherwise. Http2 setting&#39;s default value is `False`.&lt;/br&gt;&lt;/br&gt;You can disable any of next ciphers by using settings `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.[cipher_name]`: TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA. For example, `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_RSA_WITH_AES_128_CBC_SHA256`:`false`. The default value is `true` for them.  Note: next ciphers can&#39;t be disabled since they are required by Azure CloudService internal components: TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256,TLS_RSA_WITH_AES_256_GCM_SHA384
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> customProperties() {
-        return this.customProperties;
+    public Output<Optional<Map<String,String>>> customProperties() {
+        return Codegen.optional(this.customProperties);
     }
     /**
      * DEveloper Portal endpoint URL of the API Management service.
@@ -135,8 +136,8 @@ public class ApiManagementService extends com.pulumi.resources.CustomResource {
      * @return Property only valid for an Api Management service deployed in multiple locations. This can be used to disable the gateway in master region.
      * 
      */
-    public Output</* @Nullable */ Boolean> disableGateway() {
-        return this.disableGateway;
+    public Output<Optional<Boolean>> disableGateway() {
+        return Codegen.optional(this.disableGateway);
     }
     /**
      * Property only meant to be used for Consumption SKU Service. This enforces a client certificate to be presented on each request to the gateway. This also enables the ability to authenticate the certificate in the policy on the gateway.
@@ -149,8 +150,8 @@ public class ApiManagementService extends com.pulumi.resources.CustomResource {
      * @return Property only meant to be used for Consumption SKU Service. This enforces a client certificate to be presented on each request to the gateway. This also enables the ability to authenticate the certificate in the policy on the gateway.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableClientCertificate() {
-        return this.enableClientCertificate;
+    public Output<Optional<Boolean>> enableClientCertificate() {
+        return Codegen.optional(this.enableClientCertificate);
     }
     /**
      * ETag of the resource.
@@ -205,8 +206,8 @@ public class ApiManagementService extends com.pulumi.resources.CustomResource {
      * @return Custom hostname configuration of the API Management service.
      * 
      */
-    public Output</* @Nullable */ List<HostnameConfigurationResponse>> hostnameConfigurations() {
-        return this.hostnameConfigurations;
+    public Output<Optional<List<HostnameConfigurationResponse>>> hostnameConfigurations() {
+        return Codegen.optional(this.hostnameConfigurations);
     }
     /**
      * Managed service identity of the Api Management service.
@@ -219,8 +220,8 @@ public class ApiManagementService extends com.pulumi.resources.CustomResource {
      * @return Managed service identity of the Api Management service.
      * 
      */
-    public Output</* @Nullable */ ApiManagementServiceIdentityResponse> identity() {
-        return this.identity;
+    public Output<Optional<ApiManagementServiceIdentityResponse>> identity() {
+        return Codegen.optional(this.identity);
     }
     /**
      * Resource location.
@@ -275,8 +276,8 @@ public class ApiManagementService extends com.pulumi.resources.CustomResource {
      * @return Email address from which the notification will be sent.
      * 
      */
-    public Output</* @Nullable */ String> notificationSenderEmail() {
-        return this.notificationSenderEmail;
+    public Output<Optional<String>> notificationSenderEmail() {
+        return Codegen.optional(this.notificationSenderEmail);
     }
     /**
      * Publisher portal endpoint Url of the API Management service.
@@ -373,8 +374,8 @@ public class ApiManagementService extends com.pulumi.resources.CustomResource {
      * @return Undelete Api Management Service if it was previously soft-deleted. If this flag is specified and set to True all other properties will be ignored.
      * 
      */
-    public Output</* @Nullable */ Boolean> restore() {
-        return this.restore;
+    public Output<Optional<Boolean>> restore() {
+        return Codegen.optional(this.restore);
     }
     /**
      * SCM endpoint URL of the API Management service.
@@ -415,8 +416,8 @@ public class ApiManagementService extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The provisioning state of the API Management service, which is targeted by the long running operation started on the service.
@@ -457,8 +458,8 @@ public class ApiManagementService extends com.pulumi.resources.CustomResource {
      * @return Virtual network configuration of the API Management service.
      * 
      */
-    public Output</* @Nullable */ VirtualNetworkConfigurationResponse> virtualNetworkConfiguration() {
-        return this.virtualNetworkConfiguration;
+    public Output<Optional<VirtualNetworkConfigurationResponse>> virtualNetworkConfiguration() {
+        return Codegen.optional(this.virtualNetworkConfiguration);
     }
     /**
      * The type of VPN in which API Management service needs to be configured in. None (Default Value) means the API Management service is not part of any Virtual Network, External means the API Management deployment is set up inside a Virtual Network having an Internet Facing Endpoint, and Internal means that API Management deployment is setup inside a Virtual Network having an Intranet Facing Endpoint only.
@@ -471,8 +472,8 @@ public class ApiManagementService extends com.pulumi.resources.CustomResource {
      * @return The type of VPN in which API Management service needs to be configured in. None (Default Value) means the API Management service is not part of any Virtual Network, External means the API Management deployment is set up inside a Virtual Network having an Internet Facing Endpoint, and Internal means that API Management deployment is setup inside a Virtual Network having an Intranet Facing Endpoint only.
      * 
      */
-    public Output</* @Nullable */ String> virtualNetworkType() {
-        return this.virtualNetworkType;
+    public Output<Optional<String>> virtualNetworkType() {
+        return Codegen.optional(this.virtualNetworkType);
     }
     /**
      * A list of availability zones denoting where the resource needs to come from.
@@ -485,8 +486,8 @@ public class ApiManagementService extends com.pulumi.resources.CustomResource {
      * @return A list of availability zones denoting where the resource needs to come from.
      * 
      */
-    public Output</* @Nullable */ List<String>> zones() {
-        return this.zones;
+    public Output<Optional<List<String>>> zones() {
+        return Codegen.optional(this.zones);
     }
 
     /**

@@ -15,6 +15,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -34,44 +35,44 @@ public class Server extends com.pulumi.resources.CustomResource {
     @Export(name="associatePublicIpAddress", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> associatePublicIpAddress;
 
-    public Output</* @Nullable */ Boolean> associatePublicIpAddress() {
-        return this.associatePublicIpAddress;
+    public Output<Optional<Boolean>> associatePublicIpAddress() {
+        return Codegen.optional(this.associatePublicIpAddress);
     }
     @Export(name="backupId", type=String.class, parameters={})
     private Output</* @Nullable */ String> backupId;
 
-    public Output</* @Nullable */ String> backupId() {
-        return this.backupId;
+    public Output<Optional<String>> backupId() {
+        return Codegen.optional(this.backupId);
     }
     @Export(name="backupRetentionCount", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> backupRetentionCount;
 
-    public Output</* @Nullable */ Integer> backupRetentionCount() {
-        return this.backupRetentionCount;
+    public Output<Optional<Integer>> backupRetentionCount() {
+        return Codegen.optional(this.backupRetentionCount);
     }
     @Export(name="customCertificate", type=String.class, parameters={})
     private Output</* @Nullable */ String> customCertificate;
 
-    public Output</* @Nullable */ String> customCertificate() {
-        return this.customCertificate;
+    public Output<Optional<String>> customCertificate() {
+        return Codegen.optional(this.customCertificate);
     }
     @Export(name="customDomain", type=String.class, parameters={})
     private Output</* @Nullable */ String> customDomain;
 
-    public Output</* @Nullable */ String> customDomain() {
-        return this.customDomain;
+    public Output<Optional<String>> customDomain() {
+        return Codegen.optional(this.customDomain);
     }
     @Export(name="customPrivateKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> customPrivateKey;
 
-    public Output</* @Nullable */ String> customPrivateKey() {
-        return this.customPrivateKey;
+    public Output<Optional<String>> customPrivateKey() {
+        return Codegen.optional(this.customPrivateKey);
     }
     @Export(name="disableAutomatedBackup", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> disableAutomatedBackup;
 
-    public Output</* @Nullable */ Boolean> disableAutomatedBackup() {
-        return this.disableAutomatedBackup;
+    public Output<Optional<Boolean>> disableAutomatedBackup() {
+        return Codegen.optional(this.disableAutomatedBackup);
     }
     @Export(name="endpoint", type=String.class, parameters={})
     private Output<String> endpoint;
@@ -82,26 +83,26 @@ public class Server extends com.pulumi.resources.CustomResource {
     @Export(name="engine", type=String.class, parameters={})
     private Output</* @Nullable */ String> engine;
 
-    public Output</* @Nullable */ String> engine() {
-        return this.engine;
+    public Output<Optional<String>> engine() {
+        return Codegen.optional(this.engine);
     }
     @Export(name="engineAttributes", type=List.class, parameters={ServerEngineAttribute.class})
     private Output</* @Nullable */ List<ServerEngineAttribute>> engineAttributes;
 
-    public Output</* @Nullable */ List<ServerEngineAttribute>> engineAttributes() {
-        return this.engineAttributes;
+    public Output<Optional<List<ServerEngineAttribute>>> engineAttributes() {
+        return Codegen.optional(this.engineAttributes);
     }
     @Export(name="engineModel", type=String.class, parameters={})
     private Output</* @Nullable */ String> engineModel;
 
-    public Output</* @Nullable */ String> engineModel() {
-        return this.engineModel;
+    public Output<Optional<String>> engineModel() {
+        return Codegen.optional(this.engineModel);
     }
     @Export(name="engineVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> engineVersion;
 
-    public Output</* @Nullable */ String> engineVersion() {
-        return this.engineVersion;
+    public Output<Optional<String>> engineVersion() {
+        return Codegen.optional(this.engineVersion);
     }
     @Export(name="instanceProfileArn", type=String.class, parameters={})
     private Output<String> instanceProfileArn;
@@ -118,32 +119,32 @@ public class Server extends com.pulumi.resources.CustomResource {
     @Export(name="keyPair", type=String.class, parameters={})
     private Output</* @Nullable */ String> keyPair;
 
-    public Output</* @Nullable */ String> keyPair() {
-        return this.keyPair;
+    public Output<Optional<String>> keyPair() {
+        return Codegen.optional(this.keyPair);
     }
     @Export(name="preferredBackupWindow", type=String.class, parameters={})
     private Output</* @Nullable */ String> preferredBackupWindow;
 
-    public Output</* @Nullable */ String> preferredBackupWindow() {
-        return this.preferredBackupWindow;
+    public Output<Optional<String>> preferredBackupWindow() {
+        return Codegen.optional(this.preferredBackupWindow);
     }
     @Export(name="preferredMaintenanceWindow", type=String.class, parameters={})
     private Output</* @Nullable */ String> preferredMaintenanceWindow;
 
-    public Output</* @Nullable */ String> preferredMaintenanceWindow() {
-        return this.preferredMaintenanceWindow;
+    public Output<Optional<String>> preferredMaintenanceWindow() {
+        return Codegen.optional(this.preferredMaintenanceWindow);
     }
     @Export(name="securityGroupIds", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> securityGroupIds;
 
-    public Output</* @Nullable */ List<String>> securityGroupIds() {
-        return this.securityGroupIds;
+    public Output<Optional<List<String>>> securityGroupIds() {
+        return Codegen.optional(this.securityGroupIds);
     }
     @Export(name="serverName", type=String.class, parameters={})
     private Output</* @Nullable */ String> serverName;
 
-    public Output</* @Nullable */ String> serverName() {
-        return this.serverName;
+    public Output<Optional<String>> serverName() {
+        return Codegen.optional(this.serverName);
     }
     @Export(name="serviceRoleArn", type=String.class, parameters={})
     private Output<String> serviceRoleArn;
@@ -154,14 +155,14 @@ public class Server extends com.pulumi.resources.CustomResource {
     @Export(name="subnetIds", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> subnetIds;
 
-    public Output</* @Nullable */ List<String>> subnetIds() {
-        return this.subnetIds;
+    public Output<Optional<List<String>>> subnetIds() {
+        return Codegen.optional(this.subnetIds);
     }
     @Export(name="tags", type=List.class, parameters={ServerTag.class})
     private Output</* @Nullable */ List<ServerTag>> tags;
 
-    public Output</* @Nullable */ List<ServerTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<ServerTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

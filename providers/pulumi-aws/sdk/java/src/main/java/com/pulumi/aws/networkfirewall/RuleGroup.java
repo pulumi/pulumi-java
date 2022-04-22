@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -71,8 +72,8 @@ public class RuleGroup extends com.pulumi.resources.CustomResource {
      * @return A friendly description of the rule group.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * A friendly name of the rule group.
@@ -113,8 +114,8 @@ public class RuleGroup extends com.pulumi.resources.CustomResource {
      * @return The stateful rule group rules specifications in Suricata file format, with one rule per line. Use this to import your existing Suricata compatible rule groups. Required unless `rule_group` is specified.
      * 
      */
-    public Output</* @Nullable */ String> rules() {
-        return this.rules;
+    public Output<Optional<String>> rules() {
+        return Codegen.optional(this.rules);
     }
     /**
      * A map of key:value pairs to associate with the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -127,8 +128,8 @@ public class RuleGroup extends com.pulumi.resources.CustomResource {
      * @return A map of key:value pairs to associate with the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

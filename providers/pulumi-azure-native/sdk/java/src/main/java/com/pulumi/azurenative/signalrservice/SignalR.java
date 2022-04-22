@@ -20,6 +20,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -50,8 +51,8 @@ public class SignalR extends com.pulumi.resources.CustomResource {
      * @return Cross-Origin Resource Sharing (CORS) settings.
      * 
      */
-    public Output</* @Nullable */ SignalRCorsSettingsResponse> cors() {
-        return this.cors;
+    public Output<Optional<SignalRCorsSettingsResponse>> cors() {
+        return Codegen.optional(this.cors);
     }
     /**
      * The publicly accessible IP of the SignalR service.
@@ -88,8 +89,8 @@ public class SignalR extends com.pulumi.resources.CustomResource {
      * But keep in mind, the default value doesn&#39;t mean &#34;false&#34;. It varies in terms of different FeatureFlags.
      * 
      */
-    public Output</* @Nullable */ List<SignalRFeatureResponse>> features() {
-        return this.features;
+    public Output<Optional<List<SignalRFeatureResponse>>> features() {
+        return Codegen.optional(this.features);
     }
     /**
      * FQDN of the SignalR service instance. Format: xxx.service.signalr.net
@@ -132,8 +133,8 @@ public class SignalR extends com.pulumi.resources.CustomResource {
      * @return The kind of the service - e.g. &#34;SignalR&#34;, or &#34;RawWebSockets&#34; for &#34;Microsoft.SignalRService/SignalR&#34;
      * 
      */
-    public Output</* @Nullable */ String> kind() {
-        return this.kind;
+    public Output<Optional<String>> kind() {
+        return Codegen.optional(this.kind);
     }
     /**
      * The GEO location of the SignalR service. e.g. West US | East US | North Central US | South Central US.
@@ -146,8 +147,8 @@ public class SignalR extends com.pulumi.resources.CustomResource {
      * @return The GEO location of the SignalR service. e.g. West US | East US | North Central US | South Central US.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The name of the resource.
@@ -174,8 +175,8 @@ public class SignalR extends com.pulumi.resources.CustomResource {
      * @return Network ACLs
      * 
      */
-    public Output</* @Nullable */ SignalRNetworkACLsResponse> networkACLs() {
-        return this.networkACLs;
+    public Output<Optional<SignalRNetworkACLsResponse>> networkACLs() {
+        return Codegen.optional(this.networkACLs);
     }
     /**
      * Private endpoint connections to the SignalR resource.
@@ -244,8 +245,8 @@ public class SignalR extends com.pulumi.resources.CustomResource {
      * @return The billing information of the resource.(e.g. Free, Standard)
      * 
      */
-    public Output</* @Nullable */ ResourceSkuResponse> sku() {
-        return this.sku;
+    public Output<Optional<ResourceSkuResponse>> sku() {
+        return Codegen.optional(this.sku);
     }
     /**
      * Tags of the service which is a list of key value pairs that describe the resource.
@@ -258,8 +259,8 @@ public class SignalR extends com.pulumi.resources.CustomResource {
      * @return Tags of the service which is a list of key value pairs that describe the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource - e.g. &#34;Microsoft.SignalRService/SignalR&#34;
@@ -286,8 +287,8 @@ public class SignalR extends com.pulumi.resources.CustomResource {
      * @return Upstream settings when the Azure SignalR is in server-less mode.
      * 
      */
-    public Output</* @Nullable */ ServerlessUpstreamSettingsResponse> upstream() {
-        return this.upstream;
+    public Output<Optional<ServerlessUpstreamSettingsResponse>> upstream() {
+        return Codegen.optional(this.upstream);
     }
     /**
      * Version of the SignalR resource. Probably you need the same or higher version of client SDKs.

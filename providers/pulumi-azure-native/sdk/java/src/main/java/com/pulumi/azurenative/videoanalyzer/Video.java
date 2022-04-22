@@ -16,6 +16,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class Video extends com.pulumi.resources.CustomResource {
      * @return Optional video description provided by the user. Value can be up to 2048 characters long.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Video flags contain information about the available video actions and its dynamic properties based on the current video state.
@@ -130,8 +131,8 @@ public class Video extends com.pulumi.resources.CustomResource {
      * @return Optional video title provided by the user. Value can be up to 256 characters long.
      * 
      */
-    public Output</* @Nullable */ String> title() {
-        return this.title;
+    public Output<Optional<String>> title() {
+        return Codegen.optional(this.title);
     }
     /**
      * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;

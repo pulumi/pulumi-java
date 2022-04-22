@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -33,8 +34,8 @@ public class FlowEntitlement extends com.pulumi.resources.CustomResource {
      * @return Percentage from 0-100 of the data transfer cost to be billed to the subscriber.
      * 
      */
-    public Output</* @Nullable */ Integer> dataTransferSubscriberFeePercent() {
-        return this.dataTransferSubscriberFeePercent;
+    public Output<Optional<Integer>> dataTransferSubscriberFeePercent() {
+        return Codegen.optional(this.dataTransferSubscriberFeePercent);
     }
     /**
      * A description of the entitlement.
@@ -61,8 +62,8 @@ public class FlowEntitlement extends com.pulumi.resources.CustomResource {
      * @return The type of encryption that will be used on the output that is associated with this entitlement.
      * 
      */
-    public Output</* @Nullable */ FlowEntitlementEncryption> encryption() {
-        return this.encryption;
+    public Output<Optional<FlowEntitlementEncryption>> encryption() {
+        return Codegen.optional(this.encryption);
     }
     /**
      * The ARN of the entitlement.
@@ -89,8 +90,8 @@ public class FlowEntitlement extends com.pulumi.resources.CustomResource {
      * @return  An indication of whether the entitlement is enabled.
      * 
      */
-    public Output</* @Nullable */ FlowEntitlementEntitlementStatus> entitlementStatus() {
-        return this.entitlementStatus;
+    public Output<Optional<FlowEntitlementEntitlementStatus>> entitlementStatus() {
+        return Codegen.optional(this.entitlementStatus);
     }
     /**
      * The ARN of the flow.

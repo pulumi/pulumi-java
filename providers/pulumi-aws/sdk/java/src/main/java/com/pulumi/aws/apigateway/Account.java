@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return The ARN of an IAM role for CloudWatch (to allow logging &amp; monitoring). See more [in AWS Docs](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-stage-settings.html#how-to-stage-settings-console). Logging &amp; monitoring can be enabled/disabled and otherwise tuned on the API Gateway Stage level.
      * 
      */
-    public Output</* @Nullable */ String> cloudwatchRoleArn() {
-        return this.cloudwatchRoleArn;
+    public Output<Optional<String>> cloudwatchRoleArn() {
+        return Codegen.optional(this.cloudwatchRoleArn);
     }
     /**
      * Account-Level throttle settings. See exported fields below.

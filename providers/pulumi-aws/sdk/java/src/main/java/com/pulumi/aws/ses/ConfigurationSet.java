@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -58,8 +59,8 @@ public class ConfigurationSet extends com.pulumi.resources.CustomResource {
      * @return Configuration block. Detailed below.
      * 
      */
-    public Output</* @Nullable */ ConfigurationSetDeliveryOptions> deliveryOptions() {
-        return this.deliveryOptions;
+    public Output<Optional<ConfigurationSetDeliveryOptions>> deliveryOptions() {
+        return Codegen.optional(this.deliveryOptions);
     }
     /**
      * The date and time at which the reputation metrics for the configuration set were last reset. Resetting these metrics is known as a fresh start.
@@ -100,8 +101,8 @@ public class ConfigurationSet extends com.pulumi.resources.CustomResource {
      * @return Whether or not Amazon SES publishes reputation metrics for the configuration set, such as bounce and complaint rates, to Amazon CloudWatch. The default value is `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> reputationMetricsEnabled() {
-        return this.reputationMetricsEnabled;
+    public Output<Optional<Boolean>> reputationMetricsEnabled() {
+        return Codegen.optional(this.reputationMetricsEnabled);
     }
     /**
      * Whether email sending is enabled or disabled for the configuration set. The default value is `true`.
@@ -114,8 +115,8 @@ public class ConfigurationSet extends com.pulumi.resources.CustomResource {
      * @return Whether email sending is enabled or disabled for the configuration set. The default value is `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> sendingEnabled() {
-        return this.sendingEnabled;
+    public Output<Optional<Boolean>> sendingEnabled() {
+        return Codegen.optional(this.sendingEnabled);
     }
 
     /**

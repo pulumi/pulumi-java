@@ -15,6 +15,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -34,8 +35,8 @@ public class UsagePlan extends com.pulumi.resources.CustomResource {
      * @return The API stages to associate with this usage plan.
      * 
      */
-    public Output</* @Nullable */ List<UsagePlanApiStage>> apiStages() {
-        return this.apiStages;
+    public Output<Optional<List<UsagePlanApiStage>>> apiStages() {
+        return Codegen.optional(this.apiStages);
     }
     /**
      * A description of the usage plan.
@@ -48,8 +49,8 @@ public class UsagePlan extends com.pulumi.resources.CustomResource {
      * @return A description of the usage plan.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Configures the number of requests that users can make within a given interval.
@@ -62,8 +63,8 @@ public class UsagePlan extends com.pulumi.resources.CustomResource {
      * @return Configures the number of requests that users can make within a given interval.
      * 
      */
-    public Output</* @Nullable */ UsagePlanQuotaSettings> quota() {
-        return this.quota;
+    public Output<Optional<UsagePlanQuotaSettings>> quota() {
+        return Codegen.optional(this.quota);
     }
     /**
      * An array of arbitrary tags (key-value pairs) to associate with the usage plan.
@@ -76,8 +77,8 @@ public class UsagePlan extends com.pulumi.resources.CustomResource {
      * @return An array of arbitrary tags (key-value pairs) to associate with the usage plan.
      * 
      */
-    public Output</* @Nullable */ List<UsagePlanTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<UsagePlanTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Configures the overall request rate (average requests per second) and burst capacity.
@@ -90,8 +91,8 @@ public class UsagePlan extends com.pulumi.resources.CustomResource {
      * @return Configures the overall request rate (average requests per second) and burst capacity.
      * 
      */
-    public Output</* @Nullable */ UsagePlanThrottleSettings> throttle() {
-        return this.throttle;
+    public Output<Optional<UsagePlanThrottleSettings>> throttle() {
+        return Codegen.optional(this.throttle);
     }
     /**
      * A name for the usage plan.
@@ -104,8 +105,8 @@ public class UsagePlan extends com.pulumi.resources.CustomResource {
      * @return A name for the usage plan.
      * 
      */
-    public Output</* @Nullable */ String> usagePlanName() {
-        return this.usagePlanName;
+    public Output<Optional<String>> usagePlanName() {
+        return Codegen.optional(this.usagePlanName);
     }
 
     /**

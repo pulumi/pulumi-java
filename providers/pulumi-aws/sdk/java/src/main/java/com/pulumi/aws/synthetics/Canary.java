@@ -20,6 +20,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -65,8 +66,8 @@ public class Canary extends com.pulumi.resources.CustomResource {
      * @return configuration for canary artifacts, including the encryption-at-rest settings for artifacts that the canary uploads to Amazon S3. See Artifact Config.
      * 
      */
-    public Output</* @Nullable */ CanaryArtifactConfig> artifactConfig() {
-        return this.artifactConfig;
+    public Output<Optional<CanaryArtifactConfig>> artifactConfig() {
+        return Codegen.optional(this.artifactConfig);
     }
     /**
      * Location in Amazon S3 where Synthetics stores artifacts from the test runs of this canary.
@@ -121,8 +122,8 @@ public class Canary extends com.pulumi.resources.CustomResource {
      * @return Number of days to retain data about failed runs of this canary. If you omit this field, the default of 31 days is used. The valid range is 1 to 455 days.
      * 
      */
-    public Output</* @Nullable */ Integer> failureRetentionPeriod() {
-        return this.failureRetentionPeriod;
+    public Output<Optional<Integer>> failureRetentionPeriod() {
+        return Codegen.optional(this.failureRetentionPeriod);
     }
     /**
      * Entry point to use for the source code when running the canary. This value must end with the string `.handler` .
@@ -191,8 +192,8 @@ public class Canary extends com.pulumi.resources.CustomResource {
      * @return Full bucket name which is used if your canary script is located in S3. The bucket must already exist. Specify the full bucket name including s3:// as the start of the bucket name. **Conflicts with `zip_file`.**
      * 
      */
-    public Output</* @Nullable */ String> s3Bucket() {
-        return this.s3Bucket;
+    public Output<Optional<String>> s3Bucket() {
+        return Codegen.optional(this.s3Bucket);
     }
     /**
      * S3 key of your script. **Conflicts with `zip_file`.**
@@ -205,8 +206,8 @@ public class Canary extends com.pulumi.resources.CustomResource {
      * @return S3 key of your script. **Conflicts with `zip_file`.**
      * 
      */
-    public Output</* @Nullable */ String> s3Key() {
-        return this.s3Key;
+    public Output<Optional<String>> s3Key() {
+        return Codegen.optional(this.s3Key);
     }
     /**
      * S3 version ID of your script. **Conflicts with `zip_file`.**
@@ -219,8 +220,8 @@ public class Canary extends com.pulumi.resources.CustomResource {
      * @return S3 version ID of your script. **Conflicts with `zip_file`.**
      * 
      */
-    public Output</* @Nullable */ String> s3Version() {
-        return this.s3Version;
+    public Output<Optional<String>> s3Version() {
+        return Codegen.optional(this.s3Version);
     }
     /**
      * Configuration block providing how often the canary is to run and when these test runs are to stop. Detailed below.
@@ -261,8 +262,8 @@ public class Canary extends com.pulumi.resources.CustomResource {
      * @return Whether to run or stop the canary.
      * 
      */
-    public Output</* @Nullable */ Boolean> startCanary() {
-        return this.startCanary;
+    public Output<Optional<Boolean>> startCanary() {
+        return Codegen.optional(this.startCanary);
     }
     /**
      * Canary status.
@@ -289,8 +290,8 @@ public class Canary extends com.pulumi.resources.CustomResource {
      * @return Number of days to retain data about successful runs of this canary. If you omit this field, the default of 31 days is used. The valid range is 1 to 455 days.
      * 
      */
-    public Output</* @Nullable */ Integer> successRetentionPeriod() {
-        return this.successRetentionPeriod;
+    public Output<Optional<Integer>> successRetentionPeriod() {
+        return Codegen.optional(this.successRetentionPeriod);
     }
     /**
      * Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -303,8 +304,8 @@ public class Canary extends com.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .
@@ -345,8 +346,8 @@ public class Canary extends com.pulumi.resources.CustomResource {
      * @return Configuration block. Detailed below.
      * 
      */
-    public Output</* @Nullable */ CanaryVpcConfig> vpcConfig() {
-        return this.vpcConfig;
+    public Output<Optional<CanaryVpcConfig>> vpcConfig() {
+        return Codegen.optional(this.vpcConfig);
     }
     /**
      * ZIP file that contains the script, if you input your canary script directly into the canary instead of referring to an S3 location. It can be up to 5 MB. **Conflicts with `s3_bucket`, `s3_key`, and `s3_version`.**
@@ -359,8 +360,8 @@ public class Canary extends com.pulumi.resources.CustomResource {
      * @return ZIP file that contains the script, if you input your canary script directly into the canary instead of referring to an S3 location. It can be up to 5 MB. **Conflicts with `s3_bucket`, `s3_key`, and `s3_version`.**
      * 
      */
-    public Output</* @Nullable */ String> zipFile() {
-        return this.zipFile;
+    public Output<Optional<String>> zipFile() {
+        return Codegen.optional(this.zipFile);
     }
 
     /**

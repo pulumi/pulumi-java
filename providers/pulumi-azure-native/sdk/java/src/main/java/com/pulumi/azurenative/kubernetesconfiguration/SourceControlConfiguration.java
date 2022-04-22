@@ -17,6 +17,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -61,8 +62,8 @@ public class SourceControlConfiguration extends com.pulumi.resources.CustomResou
      * @return Name-value pairs of protected configuration settings for the configuration
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> configurationProtectedSettings() {
-        return this.configurationProtectedSettings;
+    public Output<Optional<Map<String,String>>> configurationProtectedSettings() {
+        return Codegen.optional(this.configurationProtectedSettings);
     }
     /**
      * Option to enable Helm Operator for this git configuration.
@@ -75,8 +76,8 @@ public class SourceControlConfiguration extends com.pulumi.resources.CustomResou
      * @return Option to enable Helm Operator for this git configuration.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableHelmOperator() {
-        return this.enableHelmOperator;
+    public Output<Optional<Boolean>> enableHelmOperator() {
+        return Codegen.optional(this.enableHelmOperator);
     }
     /**
      * Properties for Helm operator.
@@ -89,8 +90,8 @@ public class SourceControlConfiguration extends com.pulumi.resources.CustomResou
      * @return Properties for Helm operator.
      * 
      */
-    public Output</* @Nullable */ HelmOperatorPropertiesResponse> helmOperatorProperties() {
-        return this.helmOperatorProperties;
+    public Output<Optional<HelmOperatorPropertiesResponse>> helmOperatorProperties() {
+        return Codegen.optional(this.helmOperatorProperties);
     }
     /**
      * The name of the resource
@@ -117,8 +118,8 @@ public class SourceControlConfiguration extends com.pulumi.resources.CustomResou
      * @return Instance name of the operator - identifying the specific configuration.
      * 
      */
-    public Output</* @Nullable */ String> operatorInstanceName() {
-        return this.operatorInstanceName;
+    public Output<Optional<String>> operatorInstanceName() {
+        return Codegen.optional(this.operatorInstanceName);
     }
     /**
      * The namespace to which this operator is installed to. Maximum of 253 lower case alphanumeric characters, hyphen and period only.
@@ -131,8 +132,8 @@ public class SourceControlConfiguration extends com.pulumi.resources.CustomResou
      * @return The namespace to which this operator is installed to. Maximum of 253 lower case alphanumeric characters, hyphen and period only.
      * 
      */
-    public Output</* @Nullable */ String> operatorNamespace() {
-        return this.operatorNamespace;
+    public Output<Optional<String>> operatorNamespace() {
+        return Codegen.optional(this.operatorNamespace);
     }
     /**
      * Any Parameters for the Operator instance in string format.
@@ -145,8 +146,8 @@ public class SourceControlConfiguration extends com.pulumi.resources.CustomResou
      * @return Any Parameters for the Operator instance in string format.
      * 
      */
-    public Output</* @Nullable */ String> operatorParams() {
-        return this.operatorParams;
+    public Output<Optional<String>> operatorParams() {
+        return Codegen.optional(this.operatorParams);
     }
     /**
      * Scope at which the operator will be installed.
@@ -159,8 +160,8 @@ public class SourceControlConfiguration extends com.pulumi.resources.CustomResou
      * @return Scope at which the operator will be installed.
      * 
      */
-    public Output</* @Nullable */ String> operatorScope() {
-        return this.operatorScope;
+    public Output<Optional<String>> operatorScope() {
+        return Codegen.optional(this.operatorScope);
     }
     /**
      * Type of the operator
@@ -173,8 +174,8 @@ public class SourceControlConfiguration extends com.pulumi.resources.CustomResou
      * @return Type of the operator
      * 
      */
-    public Output</* @Nullable */ String> operatorType() {
-        return this.operatorType;
+    public Output<Optional<String>> operatorType() {
+        return Codegen.optional(this.operatorType);
     }
     /**
      * The provisioning state of the resource provider.
@@ -215,8 +216,8 @@ public class SourceControlConfiguration extends com.pulumi.resources.CustomResou
      * @return Url of the SourceControl Repository.
      * 
      */
-    public Output</* @Nullable */ String> repositoryUrl() {
-        return this.repositoryUrl;
+    public Output<Optional<String>> repositoryUrl() {
+        return Codegen.optional(this.repositoryUrl);
     }
     /**
      * Base64-encoded known_hosts contents containing public SSH keys required to access private Git instances
@@ -229,8 +230,8 @@ public class SourceControlConfiguration extends com.pulumi.resources.CustomResou
      * @return Base64-encoded known_hosts contents containing public SSH keys required to access private Git instances
      * 
      */
-    public Output</* @Nullable */ String> sshKnownHostsContents() {
-        return this.sshKnownHostsContents;
+    public Output<Optional<String>> sshKnownHostsContents() {
+        return Codegen.optional(this.sshKnownHostsContents);
     }
     /**
      * Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources

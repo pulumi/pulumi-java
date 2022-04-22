@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -87,8 +88,8 @@ public class LocalGatewayRouteTableVPCAssociation extends com.pulumi.resources.C
      * @return The tags for the association.
      * 
      */
-    public Output</* @Nullable */ List<LocalGatewayRouteTableVPCAssociationTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<LocalGatewayRouteTableVPCAssociationTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The ID of the VPC.

@@ -16,6 +16,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -96,8 +97,8 @@ public class RegionDisk extends com.pulumi.resources.CustomResource {
      * you create the resource.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Encrypts the disk using a customer-supplied encryption key.
@@ -128,8 +129,8 @@ public class RegionDisk extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ RegionDiskDiskEncryptionKey> diskEncryptionKey() {
-        return this.diskEncryptionKey;
+    public Output<Optional<RegionDiskDiskEncryptionKey>> diskEncryptionKey() {
+        return Codegen.optional(this.diskEncryptionKey);
     }
     /**
      * Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
@@ -146,8 +147,8 @@ public class RegionDisk extends com.pulumi.resources.CustomResource {
      * @return Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
      * 
      */
-    public Output</* @Nullable */ String> interface_() {
-        return this.interface_;
+    public Output<Optional<String>> interface_() {
+        return Codegen.optional(this.interface_);
     }
     /**
      * The fingerprint used for optimistic locking of this resource. Used internally during updates.
@@ -174,8 +175,8 @@ public class RegionDisk extends com.pulumi.resources.CustomResource {
      * @return Labels to apply to this disk.  A list of key-&gt;value pairs.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * Last attach timestamp in RFC3339 text format.
@@ -360,8 +361,8 @@ public class RegionDisk extends com.pulumi.resources.CustomResource {
      * * `snapshot`
      * 
      */
-    public Output</* @Nullable */ String> snapshot() {
-        return this.snapshot;
+    public Output<Optional<String>> snapshot() {
+        return Codegen.optional(this.snapshot);
     }
     /**
      * The customer-supplied encryption key of the source snapshot. Required
@@ -380,8 +381,8 @@ public class RegionDisk extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ RegionDiskSourceSnapshotEncryptionKey> sourceSnapshotEncryptionKey() {
-        return this.sourceSnapshotEncryptionKey;
+    public Output<Optional<RegionDiskSourceSnapshotEncryptionKey>> sourceSnapshotEncryptionKey() {
+        return Codegen.optional(this.sourceSnapshotEncryptionKey);
     }
     /**
      * The unique ID of the snapshot used to create this disk. This value identifies the exact snapshot that was used to create
@@ -414,8 +415,8 @@ public class RegionDisk extends com.pulumi.resources.CustomResource {
      * create the disk. Provide this when creating the disk.
      * 
      */
-    public Output</* @Nullable */ String> type() {
-        return this.type;
+    public Output<Optional<String>> type() {
+        return Codegen.optional(this.type);
     }
     /**
      * Links to the users of the disk (attached instances) in form: project/zones/zone/instances/instance

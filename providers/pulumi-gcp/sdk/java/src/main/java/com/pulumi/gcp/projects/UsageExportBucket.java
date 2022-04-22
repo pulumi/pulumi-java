@@ -11,6 +11,7 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.projects.UsageExportBucketArgs;
 import com.pulumi.gcp.projects.inputs.UsageExportBucketState;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -70,8 +71,8 @@ public class UsageExportBucket extends com.pulumi.resources.CustomResource {
      * @return A prefix for the reports, for instance, the project name.
      * 
      */
-    public Output</* @Nullable */ String> prefix() {
-        return this.prefix;
+    public Output<Optional<String>> prefix() {
+        return Codegen.optional(this.prefix);
     }
     /**
      * The project to set the export bucket on. If it is not provided, the provider project is used.

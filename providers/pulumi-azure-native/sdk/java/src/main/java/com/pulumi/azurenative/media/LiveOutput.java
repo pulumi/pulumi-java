@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -86,8 +87,8 @@ public class LiveOutput extends com.pulumi.resources.CustomResource {
      * @return The description of the live output.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * HTTP Live Streaming (HLS) packing setting for the live output.
@@ -100,8 +101,8 @@ public class LiveOutput extends com.pulumi.resources.CustomResource {
      * @return HTTP Live Streaming (HLS) packing setting for the live output.
      * 
      */
-    public Output</* @Nullable */ HlsResponse> hls() {
-        return this.hls;
+    public Output<Optional<HlsResponse>> hls() {
+        return Codegen.optional(this.hls);
     }
     /**
      * The time the live output was last modified.
@@ -128,8 +129,8 @@ public class LiveOutput extends com.pulumi.resources.CustomResource {
      * @return The manifest file name. If not provided, the service will generate one automatically.
      * 
      */
-    public Output</* @Nullable */ String> manifestName() {
-        return this.manifestName;
+    public Output<Optional<String>> manifestName() {
+        return Codegen.optional(this.manifestName);
     }
     /**
      * The name of the resource
@@ -156,8 +157,8 @@ public class LiveOutput extends com.pulumi.resources.CustomResource {
      * @return The initial timestamp that the live output will start at, any content before this value will not be archived.
      * 
      */
-    public Output</* @Nullable */ Double> outputSnapTime() {
-        return this.outputSnapTime;
+    public Output<Optional<Double>> outputSnapTime() {
+        return Codegen.optional(this.outputSnapTime);
     }
     /**
      * The provisioning state of the live output.

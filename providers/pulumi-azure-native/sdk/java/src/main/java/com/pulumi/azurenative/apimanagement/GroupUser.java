@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class GroupUser extends com.pulumi.resources.CustomResource {
      * @return Email address.
      * 
      */
-    public Output</* @Nullable */ String> email() {
-        return this.email;
+    public Output<Optional<String>> email() {
+        return Codegen.optional(this.email);
     }
     /**
      * First name.
@@ -58,8 +59,8 @@ public class GroupUser extends com.pulumi.resources.CustomResource {
      * @return First name.
      * 
      */
-    public Output</* @Nullable */ String> firstName() {
-        return this.firstName;
+    public Output<Optional<String>> firstName() {
+        return Codegen.optional(this.firstName);
     }
     /**
      * Collection of groups user is part of.
@@ -86,8 +87,8 @@ public class GroupUser extends com.pulumi.resources.CustomResource {
      * @return Collection of user identities.
      * 
      */
-    public Output</* @Nullable */ List<UserIdentityContractResponse>> identities() {
-        return this.identities;
+    public Output<Optional<List<UserIdentityContractResponse>>> identities() {
+        return Codegen.optional(this.identities);
     }
     /**
      * Last name.
@@ -100,8 +101,8 @@ public class GroupUser extends com.pulumi.resources.CustomResource {
      * @return Last name.
      * 
      */
-    public Output</* @Nullable */ String> lastName() {
-        return this.lastName;
+    public Output<Optional<String>> lastName() {
+        return Codegen.optional(this.lastName);
     }
     /**
      * Resource name.
@@ -128,8 +129,8 @@ public class GroupUser extends com.pulumi.resources.CustomResource {
      * @return Optional note about a user set by the administrator.
      * 
      */
-    public Output</* @Nullable */ String> note() {
-        return this.note;
+    public Output<Optional<String>> note() {
+        return Codegen.optional(this.note);
     }
     /**
      * Date of user registration. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
@@ -142,8 +143,8 @@ public class GroupUser extends com.pulumi.resources.CustomResource {
      * @return Date of user registration. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
      * 
      */
-    public Output</* @Nullable */ String> registrationDate() {
-        return this.registrationDate;
+    public Output<Optional<String>> registrationDate() {
+        return Codegen.optional(this.registrationDate);
     }
     /**
      * Account state. Specifies whether the user is active or not. Blocked users are unable to sign into the developer portal or call any APIs of subscribed products. Default state is Active.
@@ -156,8 +157,8 @@ public class GroupUser extends com.pulumi.resources.CustomResource {
      * @return Account state. Specifies whether the user is active or not. Blocked users are unable to sign into the developer portal or call any APIs of subscribed products. Default state is Active.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Output<Optional<String>> state() {
+        return Codegen.optional(this.state);
     }
     /**
      * Resource type for API Management resource.

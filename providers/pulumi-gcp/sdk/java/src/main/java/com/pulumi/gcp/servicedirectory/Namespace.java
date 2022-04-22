@@ -12,6 +12,7 @@ import com.pulumi.gcp.servicedirectory.NamespaceArgs;
 import com.pulumi.gcp.servicedirectory.inputs.NamespaceState;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -60,8 +61,8 @@ public class Namespace extends com.pulumi.resources.CustomResource {
      * be no longer than 63 characters.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * The location for the Namespace.

@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -86,8 +87,8 @@ public class StorageAccount extends com.pulumi.resources.CustomResource {
      * @return Description for the storage Account.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The object name.
@@ -114,8 +115,8 @@ public class StorageAccount extends com.pulumi.resources.CustomResource {
      * @return Storage Account Credential Id
      * 
      */
-    public Output</* @Nullable */ String> storageAccountCredentialId() {
-        return this.storageAccountCredentialId;
+    public Output<Optional<String>> storageAccountCredentialId() {
+        return Codegen.optional(this.storageAccountCredentialId);
     }
     /**
      * Current status of the storage account
@@ -128,8 +129,8 @@ public class StorageAccount extends com.pulumi.resources.CustomResource {
      * @return Current status of the storage account
      * 
      */
-    public Output</* @Nullable */ String> storageAccountStatus() {
-        return this.storageAccountStatus;
+    public Output<Optional<String>> storageAccountStatus() {
+        return Codegen.optional(this.storageAccountStatus);
     }
     /**
      * StorageAccount object on ASE device

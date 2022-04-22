@@ -16,6 +16,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -98,8 +99,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return The AWS OpsWorks agent to install.  Defaults to `&#34;INHERIT&#34;`.
      * 
      */
-    public Output</* @Nullable */ String> agentVersion() {
-        return this.agentVersion;
+    public Output<Optional<String>> agentVersion() {
+        return Codegen.optional(this.agentVersion);
     }
     /**
      * The AMI to use for the instance.  If an AMI is specified, `os` must be `&#34;Custom&#34;`.
@@ -126,8 +127,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return Machine architecture for created instances.  Can be either `&#34;x86_64&#34;` (the default) or `&#34;i386&#34;`
      * 
      */
-    public Output</* @Nullable */ String> architecture() {
-        return this.architecture;
+    public Output<Optional<String>> architecture() {
+        return Codegen.optional(this.architecture);
     }
     /**
      * Creates load-based or time-based instances.  If set, can be either: `&#34;load&#34;` or `&#34;timer&#34;`.
@@ -140,8 +141,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return Creates load-based or time-based instances.  If set, can be either: `&#34;load&#34;` or `&#34;timer&#34;`.
      * 
      */
-    public Output</* @Nullable */ String> autoScalingType() {
-        return this.autoScalingType;
+    public Output<Optional<String>> autoScalingType() {
+        return Codegen.optional(this.autoScalingType);
     }
     /**
      * Name of the availability zone where instances will be created
@@ -168,14 +169,14 @@ public class Instance extends com.pulumi.resources.CustomResource {
     @Export(name="deleteEbs", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> deleteEbs;
 
-    public Output</* @Nullable */ Boolean> deleteEbs() {
-        return this.deleteEbs;
+    public Output<Optional<Boolean>> deleteEbs() {
+        return Codegen.optional(this.deleteEbs);
     }
     @Export(name="deleteEip", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> deleteEip;
 
-    public Output</* @Nullable */ Boolean> deleteEip() {
-        return this.deleteEip;
+    public Output<Optional<Boolean>> deleteEip() {
+        return Codegen.optional(this.deleteEip);
     }
     /**
      * Additional EBS block devices to attach to the
@@ -204,8 +205,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return If true, the launched EC2 instance will be EBS-optimized.
      * 
      */
-    public Output</* @Nullable */ Boolean> ebsOptimized() {
-        return this.ebsOptimized;
+    public Output<Optional<Boolean>> ebsOptimized() {
+        return Codegen.optional(this.ebsOptimized);
     }
     /**
      * EC2 instance ID
@@ -280,8 +281,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return Controls where to install OS and package updates when the instance boots.  Defaults to `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> installUpdatesOnBoot() {
-        return this.installUpdatesOnBoot;
+    public Output<Optional<Boolean>> installUpdatesOnBoot() {
+        return Codegen.optional(this.installUpdatesOnBoot);
     }
     @Export(name="instanceProfileArn", type=String.class, parameters={})
     private Output<String> instanceProfileArn;
@@ -300,8 +301,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return The type of instance to start
      * 
      */
-    public Output</* @Nullable */ String> instanceType() {
-        return this.instanceType;
+    public Output<Optional<String>> instanceType() {
+        return Codegen.optional(this.instanceType);
     }
     @Export(name="lastServiceErrorId", type=String.class, parameters={})
     private Output<String> lastServiceErrorId;
@@ -536,8 +537,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return The desired state of the instance.  Can be either `&#34;running&#34;` or `&#34;stopped&#34;`.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Output<Optional<String>> state() {
+        return Codegen.optional(this.state);
     }
     @Export(name="status", type=String.class, parameters={})
     private Output<String> status;

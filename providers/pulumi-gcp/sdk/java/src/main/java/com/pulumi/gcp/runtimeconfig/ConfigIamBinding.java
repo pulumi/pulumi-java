@@ -13,6 +13,7 @@ import com.pulumi.gcp.runtimeconfig.inputs.ConfigIamBindingState;
 import com.pulumi.gcp.runtimeconfig.outputs.ConfigIamBindingCondition;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class ConfigIamBinding extends com.pulumi.resources.CustomResource {
     @Export(name="condition", type=ConfigIamBindingCondition.class, parameters={})
     private Output</* @Nullable */ ConfigIamBindingCondition> condition;
 
-    public Output</* @Nullable */ ConfigIamBindingCondition> condition() {
-        return this.condition;
+    public Output<Optional<ConfigIamBindingCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * Used to find the parent resource to bind the IAM policy to

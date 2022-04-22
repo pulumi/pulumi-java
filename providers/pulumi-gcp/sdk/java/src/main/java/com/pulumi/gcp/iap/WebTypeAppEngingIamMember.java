@@ -12,6 +12,7 @@ import com.pulumi.gcp.iap.WebTypeAppEngingIamMemberArgs;
 import com.pulumi.gcp.iap.inputs.WebTypeAppEngingIamMemberState;
 import com.pulumi.gcp.iap.outputs.WebTypeAppEngingIamMemberCondition;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -89,8 +90,8 @@ public class WebTypeAppEngingIamMember extends com.pulumi.resources.CustomResour
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ WebTypeAppEngingIamMemberCondition> condition() {
-        return this.condition;
+    public Output<Optional<WebTypeAppEngingIamMemberCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * (Computed) The etag of the IAM policy.

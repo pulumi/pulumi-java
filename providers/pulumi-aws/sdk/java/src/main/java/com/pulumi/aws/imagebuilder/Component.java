@@ -14,6 +14,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -59,8 +60,8 @@ public class Component extends com.pulumi.resources.CustomResource {
      * @return Change description of the component.
      * 
      */
-    public Output</* @Nullable */ String> changeDescription() {
-        return this.changeDescription;
+    public Output<Optional<String>> changeDescription() {
+        return Codegen.optional(this.changeDescription);
     }
     /**
      * Inline YAML string with data of the component. Exactly one of `data` and `uri` can be specified. the provider will only perform drift detection of its value when present in a configuration.
@@ -101,8 +102,8 @@ public class Component extends com.pulumi.resources.CustomResource {
      * @return Description of the component.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Encryption status of the component.
@@ -129,8 +130,8 @@ public class Component extends com.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the Key Management Service (KMS) Key used to encrypt the component.
      * 
      */
-    public Output</* @Nullable */ String> kmsKeyId() {
-        return this.kmsKeyId;
+    public Output<Optional<String>> kmsKeyId() {
+        return Codegen.optional(this.kmsKeyId);
     }
     /**
      * Name of the component.
@@ -185,8 +186,8 @@ public class Component extends com.pulumi.resources.CustomResource {
      * @return Set of Operating Systems (OS) supported by the component.
      * 
      */
-    public Output</* @Nullable */ List<String>> supportedOsVersions() {
-        return this.supportedOsVersions;
+    public Output<Optional<List<String>>> supportedOsVersions() {
+        return Codegen.optional(this.supportedOsVersions);
     }
     /**
      * Key-value map of resource tags for the component. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -199,8 +200,8 @@ public class Component extends com.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags for the component. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .
@@ -241,8 +242,8 @@ public class Component extends com.pulumi.resources.CustomResource {
      * @return S3 URI with data of the component. Exactly one of `data` and `uri` can be specified.
      * 
      */
-    public Output</* @Nullable */ String> uri() {
-        return this.uri;
+    public Output<Optional<String>> uri() {
+        return Codegen.optional(this.uri);
     }
     /**
      * Version of the component.

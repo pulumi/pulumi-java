@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class UserProfile extends com.pulumi.resources.CustomResource {
      * @return A specifier for the type of value specified in SingleSignOnUserValue. Currently, the only supported value is &#34;UserName&#34;. If the Domain&#39;s AuthMode is SSO, this field is required. If the Domain&#39;s AuthMode is not SSO, this field cannot be specified.
      * 
      */
-    public Output</* @Nullable */ String> singleSignOnUserIdentifier() {
-        return this.singleSignOnUserIdentifier;
+    public Output<Optional<String>> singleSignOnUserIdentifier() {
+        return Codegen.optional(this.singleSignOnUserIdentifier);
     }
     /**
      * The username of the associated AWS Single Sign-On User for this UserProfile. If the Domain&#39;s AuthMode is SSO, this field is required, and must match a valid username of a user in your directory. If the Domain&#39;s AuthMode is not SSO, this field cannot be specified.
@@ -60,8 +61,8 @@ public class UserProfile extends com.pulumi.resources.CustomResource {
      * @return The username of the associated AWS Single Sign-On User for this UserProfile. If the Domain&#39;s AuthMode is SSO, this field is required, and must match a valid username of a user in your directory. If the Domain&#39;s AuthMode is not SSO, this field cannot be specified.
      * 
      */
-    public Output</* @Nullable */ String> singleSignOnUserValue() {
-        return this.singleSignOnUserValue;
+    public Output<Optional<String>> singleSignOnUserValue() {
+        return Codegen.optional(this.singleSignOnUserValue);
     }
     /**
      * A list of tags to apply to the user profile.
@@ -74,8 +75,8 @@ public class UserProfile extends com.pulumi.resources.CustomResource {
      * @return A list of tags to apply to the user profile.
      * 
      */
-    public Output</* @Nullable */ List<UserProfileTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<UserProfileTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The user profile Amazon Resource Name (ARN).
@@ -116,8 +117,8 @@ public class UserProfile extends com.pulumi.resources.CustomResource {
      * @return A collection of settings.
      * 
      */
-    public Output</* @Nullable */ UserProfileUserSettings> userSettings() {
-        return this.userSettings;
+    public Output<Optional<UserProfileUserSettings>> userSettings() {
+        return Codegen.optional(this.userSettings);
     }
 
     /**

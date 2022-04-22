@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class FuotaTask extends com.pulumi.resources.CustomResource {
      * @return Multicast group to associate. Only for update request.
      * 
      */
-    public Output</* @Nullable */ String> associateMulticastGroup() {
-        return this.associateMulticastGroup;
+    public Output<Optional<String>> associateMulticastGroup() {
+        return Codegen.optional(this.associateMulticastGroup);
     }
     /**
      * Wireless device to associate. Only for update request.
@@ -60,8 +61,8 @@ public class FuotaTask extends com.pulumi.resources.CustomResource {
      * @return Wireless device to associate. Only for update request.
      * 
      */
-    public Output</* @Nullable */ String> associateWirelessDevice() {
-        return this.associateWirelessDevice;
+    public Output<Optional<String>> associateWirelessDevice() {
+        return Codegen.optional(this.associateWirelessDevice);
     }
     /**
      * FUOTA task description
@@ -74,8 +75,8 @@ public class FuotaTask extends com.pulumi.resources.CustomResource {
      * @return FUOTA task description
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Multicast group to disassociate. Only for update request.
@@ -88,8 +89,8 @@ public class FuotaTask extends com.pulumi.resources.CustomResource {
      * @return Multicast group to disassociate. Only for update request.
      * 
      */
-    public Output</* @Nullable */ String> disassociateMulticastGroup() {
-        return this.disassociateMulticastGroup;
+    public Output<Optional<String>> disassociateMulticastGroup() {
+        return Codegen.optional(this.disassociateMulticastGroup);
     }
     /**
      * Wireless device to disassociate. Only for update request.
@@ -102,8 +103,8 @@ public class FuotaTask extends com.pulumi.resources.CustomResource {
      * @return Wireless device to disassociate. Only for update request.
      * 
      */
-    public Output</* @Nullable */ String> disassociateWirelessDevice() {
-        return this.disassociateWirelessDevice;
+    public Output<Optional<String>> disassociateWirelessDevice() {
+        return Codegen.optional(this.disassociateWirelessDevice);
     }
     /**
      * FUOTA task firmware update image binary S3 link
@@ -172,8 +173,8 @@ public class FuotaTask extends com.pulumi.resources.CustomResource {
      * @return Name of FUOTA task
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * A list of key-value pairs that contain metadata for the FUOTA task.
@@ -186,8 +187,8 @@ public class FuotaTask extends com.pulumi.resources.CustomResource {
      * @return A list of key-value pairs that contain metadata for the FUOTA task.
      * 
      */
-    public Output</* @Nullable */ List<FuotaTaskTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<FuotaTaskTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

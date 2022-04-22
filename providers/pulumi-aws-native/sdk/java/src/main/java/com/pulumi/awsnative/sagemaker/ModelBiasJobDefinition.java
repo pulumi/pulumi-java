@@ -19,6 +19,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -58,8 +59,8 @@ public class ModelBiasJobDefinition extends com.pulumi.resources.CustomResource 
     @Export(name="jobDefinitionName", type=String.class, parameters={})
     private Output</* @Nullable */ String> jobDefinitionName;
 
-    public Output</* @Nullable */ String> jobDefinitionName() {
-        return this.jobDefinitionName;
+    public Output<Optional<String>> jobDefinitionName() {
+        return Codegen.optional(this.jobDefinitionName);
     }
     @Export(name="jobResources", type=ModelBiasJobDefinitionMonitoringResources.class, parameters={})
     private Output<ModelBiasJobDefinitionMonitoringResources> jobResources;
@@ -76,8 +77,8 @@ public class ModelBiasJobDefinition extends com.pulumi.resources.CustomResource 
     @Export(name="modelBiasBaselineConfig", type=ModelBiasJobDefinitionModelBiasBaselineConfig.class, parameters={})
     private Output</* @Nullable */ ModelBiasJobDefinitionModelBiasBaselineConfig> modelBiasBaselineConfig;
 
-    public Output</* @Nullable */ ModelBiasJobDefinitionModelBiasBaselineConfig> modelBiasBaselineConfig() {
-        return this.modelBiasBaselineConfig;
+    public Output<Optional<ModelBiasJobDefinitionModelBiasBaselineConfig>> modelBiasBaselineConfig() {
+        return Codegen.optional(this.modelBiasBaselineConfig);
     }
     @Export(name="modelBiasJobInput", type=ModelBiasJobDefinitionModelBiasJobInput.class, parameters={})
     private Output<ModelBiasJobDefinitionModelBiasJobInput> modelBiasJobInput;
@@ -94,8 +95,8 @@ public class ModelBiasJobDefinition extends com.pulumi.resources.CustomResource 
     @Export(name="networkConfig", type=ModelBiasJobDefinitionNetworkConfig.class, parameters={})
     private Output</* @Nullable */ ModelBiasJobDefinitionNetworkConfig> networkConfig;
 
-    public Output</* @Nullable */ ModelBiasJobDefinitionNetworkConfig> networkConfig() {
-        return this.networkConfig;
+    public Output<Optional<ModelBiasJobDefinitionNetworkConfig>> networkConfig() {
+        return Codegen.optional(this.networkConfig);
     }
     /**
      * The Amazon Resource Name (ARN) of an IAM role that Amazon SageMaker can assume to perform tasks on your behalf.
@@ -114,8 +115,8 @@ public class ModelBiasJobDefinition extends com.pulumi.resources.CustomResource 
     @Export(name="stoppingCondition", type=ModelBiasJobDefinitionStoppingCondition.class, parameters={})
     private Output</* @Nullable */ ModelBiasJobDefinitionStoppingCondition> stoppingCondition;
 
-    public Output</* @Nullable */ ModelBiasJobDefinitionStoppingCondition> stoppingCondition() {
-        return this.stoppingCondition;
+    public Output<Optional<ModelBiasJobDefinitionStoppingCondition>> stoppingCondition() {
+        return Codegen.optional(this.stoppingCondition);
     }
     /**
      * An array of key-value pairs to apply to this resource.
@@ -128,8 +129,8 @@ public class ModelBiasJobDefinition extends com.pulumi.resources.CustomResource 
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<ModelBiasJobDefinitionTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<ModelBiasJobDefinitionTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

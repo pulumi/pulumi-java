@@ -15,6 +15,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -40,8 +41,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
     @Export(name="capacityProviders", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> capacityProviders;
 
-    public Output</* @Nullable */ List<String>> capacityProviders() {
-        return this.capacityProviders;
+    public Output<Optional<List<String>>> capacityProviders() {
+        return Codegen.optional(this.capacityProviders);
     }
     /**
      * A user-generated string that you use to identify your cluster. If you don&#39;t specify a name, AWS CloudFormation generates a unique physical ID for the name.
@@ -54,32 +55,32 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return A user-generated string that you use to identify your cluster. If you don&#39;t specify a name, AWS CloudFormation generates a unique physical ID for the name.
      * 
      */
-    public Output</* @Nullable */ String> clusterName() {
-        return this.clusterName;
+    public Output<Optional<String>> clusterName() {
+        return Codegen.optional(this.clusterName);
     }
     @Export(name="clusterSettings", type=List.class, parameters={ClusterSettings.class})
     private Output</* @Nullable */ List<ClusterSettings>> clusterSettings;
 
-    public Output</* @Nullable */ List<ClusterSettings>> clusterSettings() {
-        return this.clusterSettings;
+    public Output<Optional<List<ClusterSettings>>> clusterSettings() {
+        return Codegen.optional(this.clusterSettings);
     }
     @Export(name="configuration", type=ClusterConfiguration.class, parameters={})
     private Output</* @Nullable */ ClusterConfiguration> configuration;
 
-    public Output</* @Nullable */ ClusterConfiguration> configuration() {
-        return this.configuration;
+    public Output<Optional<ClusterConfiguration>> configuration() {
+        return Codegen.optional(this.configuration);
     }
     @Export(name="defaultCapacityProviderStrategy", type=List.class, parameters={ClusterCapacityProviderStrategyItem.class})
     private Output</* @Nullable */ List<ClusterCapacityProviderStrategyItem>> defaultCapacityProviderStrategy;
 
-    public Output</* @Nullable */ List<ClusterCapacityProviderStrategyItem>> defaultCapacityProviderStrategy() {
-        return this.defaultCapacityProviderStrategy;
+    public Output<Optional<List<ClusterCapacityProviderStrategyItem>>> defaultCapacityProviderStrategy() {
+        return Codegen.optional(this.defaultCapacityProviderStrategy);
     }
     @Export(name="tags", type=List.class, parameters={ClusterTag.class})
     private Output</* @Nullable */ List<ClusterTag>> tags;
 
-    public Output</* @Nullable */ List<ClusterTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<ClusterTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

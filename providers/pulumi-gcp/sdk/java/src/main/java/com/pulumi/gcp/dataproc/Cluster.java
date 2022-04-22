@@ -13,6 +13,7 @@ import com.pulumi.gcp.dataproc.inputs.ClusterState;
 import com.pulumi.gcp.dataproc.outputs.ClusterClusterConfig;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -64,8 +65,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * terraform apply
      * 
      */
-    public Output</* @Nullable */ String> gracefulDecommissionTimeout() {
-        return this.gracefulDecommissionTimeout;
+    public Output<Optional<String>> gracefulDecommissionTimeout() {
+        return Codegen.optional(this.gracefulDecommissionTimeout);
     }
     /**
      * The list of labels (key/value pairs) to be applied to
@@ -130,8 +131,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * Defaults to `global`.
      * 
      */
-    public Output</* @Nullable */ String> region() {
-        return this.region;
+    public Output<Optional<String>> region() {
+        return Codegen.optional(this.region);
     }
 
     /**

@@ -12,6 +12,7 @@ import com.pulumi.gcp.monitoring.GroupArgs;
 import com.pulumi.gcp.monitoring.inputs.GroupState;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -86,8 +87,8 @@ public class Group extends com.pulumi.resources.CustomResource {
      * groups that are clusters.
      * 
      */
-    public Output</* @Nullable */ Boolean> isCluster() {
-        return this.isCluster;
+    public Output<Optional<Boolean>> isCluster() {
+        return Codegen.optional(this.isCluster);
     }
     /**
      * A unique identifier for this group. The format is &#34;projects/{project_id_or_number}/groups/{group_id}&#34;.
@@ -118,8 +119,8 @@ public class Group extends com.pulumi.resources.CustomResource {
      * groups with no parent, parentName is the empty string, &#34;&#34;.
      * 
      */
-    public Output</* @Nullable */ String> parentName() {
-        return this.parentName;
+    public Output<Optional<String>> parentName() {
+        return Codegen.optional(this.parentName);
     }
     /**
      * The ID of the project in which the resource belongs.

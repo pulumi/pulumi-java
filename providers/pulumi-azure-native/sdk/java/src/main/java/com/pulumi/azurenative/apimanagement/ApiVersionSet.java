@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -42,8 +43,8 @@ public class ApiVersionSet extends com.pulumi.resources.CustomResource {
      * @return Description of API Version Set.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Name of API Version Set
@@ -98,8 +99,8 @@ public class ApiVersionSet extends com.pulumi.resources.CustomResource {
      * @return Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.
      * 
      */
-    public Output</* @Nullable */ String> versionHeaderName() {
-        return this.versionHeaderName;
+    public Output<Optional<String>> versionHeaderName() {
+        return Codegen.optional(this.versionHeaderName);
     }
     /**
      * Name of query parameter that indicates the API Version if versioningScheme is set to `query`.
@@ -112,8 +113,8 @@ public class ApiVersionSet extends com.pulumi.resources.CustomResource {
      * @return Name of query parameter that indicates the API Version if versioningScheme is set to `query`.
      * 
      */
-    public Output</* @Nullable */ String> versionQueryName() {
-        return this.versionQueryName;
+    public Output<Optional<String>> versionQueryName() {
+        return Codegen.optional(this.versionQueryName);
     }
     /**
      * An value that determines where the API Version identifier will be located in a HTTP request.

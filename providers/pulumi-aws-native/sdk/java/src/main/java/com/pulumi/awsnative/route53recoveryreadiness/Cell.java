@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -59,8 +60,8 @@ public class Cell extends com.pulumi.resources.CustomResource {
      * @return A list of cell Amazon Resource Names (ARNs) contained within this cell, for use in nested cells. For example, Availability Zones within specific Regions.
      * 
      */
-    public Output</* @Nullable */ List<String>> cells() {
-        return this.cells;
+    public Output<Optional<List<String>>> cells() {
+        return Codegen.optional(this.cells);
     }
     /**
      * The readiness scope for the cell, which can be a cell Amazon Resource Name (ARN) or a recovery group ARN. This is a list but currently can have only one element.
@@ -87,8 +88,8 @@ public class Cell extends com.pulumi.resources.CustomResource {
      * @return A collection of tags associated with a resource
      * 
      */
-    public Output</* @Nullable */ List<CellTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<CellTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -27,8 +28,8 @@ public class Pipeline extends com.pulumi.resources.CustomResource {
     @Export(name="parallelismConfiguration", type=ParallelismConfigurationProperties.class, parameters={})
     private Output</* @Nullable */ ParallelismConfigurationProperties> parallelismConfiguration;
 
-    public Output</* @Nullable */ ParallelismConfigurationProperties> parallelismConfiguration() {
-        return this.parallelismConfiguration;
+    public Output<Optional<ParallelismConfigurationProperties>> parallelismConfiguration() {
+        return Codegen.optional(this.parallelismConfiguration);
     }
     @Export(name="pipelineDefinition", type=Object.class, parameters={})
     private Output<Object> pipelineDefinition;
@@ -47,8 +48,8 @@ public class Pipeline extends com.pulumi.resources.CustomResource {
      * @return The description of the Pipeline.
      * 
      */
-    public Output</* @Nullable */ String> pipelineDescription() {
-        return this.pipelineDescription;
+    public Output<Optional<String>> pipelineDescription() {
+        return Codegen.optional(this.pipelineDescription);
     }
     /**
      * The display name of the Pipeline.
@@ -61,8 +62,8 @@ public class Pipeline extends com.pulumi.resources.CustomResource {
      * @return The display name of the Pipeline.
      * 
      */
-    public Output</* @Nullable */ String> pipelineDisplayName() {
-        return this.pipelineDisplayName;
+    public Output<Optional<String>> pipelineDisplayName() {
+        return Codegen.optional(this.pipelineDisplayName);
     }
     /**
      * The name of the Pipeline.
@@ -95,8 +96,8 @@ public class Pipeline extends com.pulumi.resources.CustomResource {
     @Export(name="tags", type=List.class, parameters={PipelineTag.class})
     private Output</* @Nullable */ List<PipelineTag>> tags;
 
-    public Output</* @Nullable */ List<PipelineTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<PipelineTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

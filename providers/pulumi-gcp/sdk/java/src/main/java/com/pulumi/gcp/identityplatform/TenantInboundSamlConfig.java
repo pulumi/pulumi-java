@@ -14,6 +14,7 @@ import com.pulumi.gcp.identityplatform.outputs.TenantInboundSamlConfigIdpConfig;
 import com.pulumi.gcp.identityplatform.outputs.TenantInboundSamlConfigSpConfig;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -69,8 +70,8 @@ public class TenantInboundSamlConfig extends com.pulumi.resources.CustomResource
      * @return If this config allows users to sign in with the provider.
      * 
      */
-    public Output</* @Nullable */ Boolean> enabled() {
-        return this.enabled;
+    public Output<Optional<Boolean>> enabled() {
+        return Codegen.optional(this.enabled);
     }
     /**
      * SAML IdP configuration when the project acts as the relying party

@@ -14,6 +14,7 @@ import com.pulumi.gcp.compute.outputs.GlobalForwardingRuleMetadataFilter;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -59,8 +60,8 @@ public class GlobalForwardingRule extends com.pulumi.resources.CustomResource {
      * you create the resource.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The IP address that this forwarding rule serves. When a client sends
@@ -135,8 +136,8 @@ public class GlobalForwardingRule extends com.pulumi.resources.CustomResource {
      * Possible values are `IPV4` and `IPV6`.
      * 
      */
-    public Output</* @Nullable */ String> ipVersion() {
-        return this.ipVersion;
+    public Output<Optional<String>> ipVersion() {
+        return Codegen.optional(this.ipVersion);
     }
     /**
      * Used internally during label updates.
@@ -163,8 +164,8 @@ public class GlobalForwardingRule extends com.pulumi.resources.CustomResource {
      * @return Labels to apply to this forwarding rule.  A list of key-&gt;value pairs.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * This signifies what the GlobalForwardingRule will be used for.
@@ -199,8 +200,8 @@ public class GlobalForwardingRule extends com.pulumi.resources.CustomResource {
      * Possible values are `EXTERNAL`, `EXTERNAL_MANAGED`, and `INTERNAL_SELF_MANAGED`.
      * 
      */
-    public Output</* @Nullable */ String> loadBalancingScheme() {
-        return this.loadBalancingScheme;
+    public Output<Optional<String>> loadBalancingScheme() {
+        return Codegen.optional(this.loadBalancingScheme);
     }
     /**
      * Opaque filter criteria used by Loadbalancer to restrict routing
@@ -241,8 +242,8 @@ public class GlobalForwardingRule extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<GlobalForwardingRuleMetadataFilter>> metadataFilters() {
-        return this.metadataFilters;
+    public Output<Optional<List<GlobalForwardingRuleMetadataFilter>>> metadataFilters() {
+        return Codegen.optional(this.metadataFilters);
     }
     /**
      * Name of the metadata label. The length must be between
@@ -323,8 +324,8 @@ public class GlobalForwardingRule extends com.pulumi.resources.CustomResource {
      * * TargetVpnGateway: 500, 4500
      * 
      */
-    public Output</* @Nullable */ String> portRange() {
-        return this.portRange;
+    public Output<Optional<String>> portRange() {
+        return Codegen.optional(this.portRange);
     }
     /**
      * The ID of the project in which the resource belongs.

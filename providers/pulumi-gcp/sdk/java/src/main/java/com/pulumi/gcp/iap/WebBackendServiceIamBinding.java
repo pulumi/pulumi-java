@@ -13,6 +13,7 @@ import com.pulumi.gcp.iap.inputs.WebBackendServiceIamBindingState;
 import com.pulumi.gcp.iap.outputs.WebBackendServiceIamBindingCondition;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -76,8 +77,8 @@ public class WebBackendServiceIamBinding extends com.pulumi.resources.CustomReso
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ WebBackendServiceIamBindingCondition> condition() {
-        return this.condition;
+    public Output<Optional<WebBackendServiceIamBindingCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * (Computed) The etag of the IAM policy.

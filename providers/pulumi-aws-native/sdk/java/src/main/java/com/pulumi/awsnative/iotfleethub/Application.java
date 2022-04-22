@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -60,8 +61,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return Application Description, should be between 1 and 2048 characters.
      * 
      */
-    public Output</* @Nullable */ String> applicationDescription() {
-        return this.applicationDescription;
+    public Output<Optional<String>> applicationDescription() {
+        return Codegen.optional(this.applicationDescription);
     }
     /**
      * The ID of the application.
@@ -186,8 +187,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return A list of key-value pairs that contain metadata for the application.
      * 
      */
-    public Output</* @Nullable */ List<ApplicationTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<ApplicationTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

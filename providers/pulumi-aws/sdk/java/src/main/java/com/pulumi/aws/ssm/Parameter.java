@@ -14,6 +14,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class Parameter extends com.pulumi.resources.CustomResource {
      * @return A regular expression used to validate the parameter value.
      * 
      */
-    public Output</* @Nullable */ String> allowedPattern() {
-        return this.allowedPattern;
+    public Output<Optional<String>> allowedPattern() {
+        return Codegen.optional(this.allowedPattern);
     }
     /**
      * The ARN of the parameter.
@@ -87,8 +88,8 @@ public class Parameter extends com.pulumi.resources.CustomResource {
      * @return The description of the parameter.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The KMS key id or arn for encrypting a SecureString.
@@ -129,8 +130,8 @@ public class Parameter extends com.pulumi.resources.CustomResource {
      * @return Overwrite an existing parameter. If not specified, will default to `false` if the resource has not been created by this provider to avoid overwrite of existing resource and will default to `true` otherwise (lifecycle rules should then be used to manage the update behavior).
      * 
      */
-    public Output</* @Nullable */ Boolean> overwrite() {
-        return this.overwrite;
+    public Output<Optional<Boolean>> overwrite() {
+        return Codegen.optional(this.overwrite);
     }
     /**
      * A map of tags to assign to the object. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -143,8 +144,8 @@ public class Parameter extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the object. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .
@@ -171,8 +172,8 @@ public class Parameter extends com.pulumi.resources.CustomResource {
      * @return The tier of the parameter. If not specified, will default to `Standard`. Valid tiers are `Standard`, `Advanced`, and `Intelligent-Tiering`. For more information on parameter tiers, see the [AWS SSM Parameter tier comparison and guide](https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-advanced-parameters.html).
      * 
      */
-    public Output</* @Nullable */ String> tier() {
-        return this.tier;
+    public Output<Optional<String>> tier() {
+        return Codegen.optional(this.tier);
     }
     /**
      * The type of the parameter. Valid types are `String`, `StringList` and `SecureString`.

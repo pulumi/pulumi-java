@@ -20,6 +20,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -41,8 +42,8 @@ public class Canary extends com.pulumi.resources.CustomResource {
      * @return Provide artifact configuration
      * 
      */
-    public Output</* @Nullable */ CanaryArtifactConfig> artifactConfig() {
-        return this.artifactConfig;
+    public Output<Optional<CanaryArtifactConfig>> artifactConfig() {
+        return Codegen.optional(this.artifactConfig);
     }
     /**
      * Provide the s3 bucket output location for test results
@@ -97,8 +98,8 @@ public class Canary extends com.pulumi.resources.CustomResource {
      * @return Retention period of failed canary runs represented in number of days
      * 
      */
-    public Output</* @Nullable */ Integer> failureRetentionPeriod() {
-        return this.failureRetentionPeriod;
+    public Output<Optional<Integer>> failureRetentionPeriod() {
+        return Codegen.optional(this.failureRetentionPeriod);
     }
     /**
      * Name of the canary.
@@ -125,8 +126,8 @@ public class Canary extends com.pulumi.resources.CustomResource {
      * @return Provide canary run configuration
      * 
      */
-    public Output</* @Nullable */ CanaryRunConfig> runConfig() {
-        return this.runConfig;
+    public Output<Optional<CanaryRunConfig>> runConfig() {
+        return Codegen.optional(this.runConfig);
     }
     /**
      * Runtime version of Synthetics Library
@@ -195,14 +196,14 @@ public class Canary extends com.pulumi.resources.CustomResource {
      * @return Retention period of successful canary runs represented in number of days
      * 
      */
-    public Output</* @Nullable */ Integer> successRetentionPeriod() {
-        return this.successRetentionPeriod;
+    public Output<Optional<Integer>> successRetentionPeriod() {
+        return Codegen.optional(this.successRetentionPeriod);
     }
     @Export(name="tags", type=List.class, parameters={CanaryTag.class})
     private Output</* @Nullable */ List<CanaryTag>> tags;
 
-    public Output</* @Nullable */ List<CanaryTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<CanaryTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Provide VPC Configuration if enabled.
@@ -215,8 +216,8 @@ public class Canary extends com.pulumi.resources.CustomResource {
      * @return Provide VPC Configuration if enabled.
      * 
      */
-    public Output</* @Nullable */ CanaryVPCConfig> vPCConfig() {
-        return this.vPCConfig;
+    public Output<Optional<CanaryVPCConfig>> vPCConfig() {
+        return Codegen.optional(this.vPCConfig);
     }
     /**
      * Visual reference configuration for visual testing
@@ -229,8 +230,8 @@ public class Canary extends com.pulumi.resources.CustomResource {
      * @return Visual reference configuration for visual testing
      * 
      */
-    public Output</* @Nullable */ CanaryVisualReference> visualReference() {
-        return this.visualReference;
+    public Output<Optional<CanaryVisualReference>> visualReference() {
+        return Codegen.optional(this.visualReference);
     }
 
     /**

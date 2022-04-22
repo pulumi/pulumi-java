@@ -13,6 +13,7 @@ import com.pulumi.gcp.bigquery.inputs.ReservationState;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -60,8 +61,8 @@ public class Reservation extends com.pulumi.resources.CustomResource {
      * capacity specified above at most.
      * 
      */
-    public Output</* @Nullable */ Boolean> ignoreIdleSlots() {
-        return this.ignoreIdleSlots;
+    public Output<Optional<Boolean>> ignoreIdleSlots() {
+        return Codegen.optional(this.ignoreIdleSlots);
     }
     /**
      * The geographic location where the transfer config should reside.
@@ -76,8 +77,8 @@ public class Reservation extends com.pulumi.resources.CustomResource {
      * Examples: US, EU, asia-northeast1. The default value is US.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The name of the reservation. This field must only contain alphanumeric characters or dash.

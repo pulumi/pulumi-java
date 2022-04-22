@@ -15,6 +15,7 @@ import com.pulumi.gcp.compute.outputs.ManagedSslCertificateManaged;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -104,8 +105,8 @@ public class ManagedSslCertificate extends com.pulumi.resources.CustomResource {
      * @return An optional description of this resource.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Expire time of the certificate.
@@ -136,8 +137,8 @@ public class ManagedSslCertificate extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ ManagedSslCertificateManaged> managed() {
-        return this.managed;
+    public Output<Optional<ManagedSslCertificateManaged>> managed() {
+        return Codegen.optional(this.managed);
     }
     /**
      * Name of the resource. Provided by the client when the resource is
@@ -226,8 +227,8 @@ public class ManagedSslCertificate extends com.pulumi.resources.CustomResource {
      * Possible values are `MANAGED`.
      * 
      */
-    public Output</* @Nullable */ String> type() {
-        return this.type;
+    public Output<Optional<String>> type() {
+        return Codegen.optional(this.type);
     }
 
     /**

@@ -15,6 +15,7 @@ import com.pulumi.gcp.cloudscheduler.outputs.JobHttpTarget;
 import com.pulumi.gcp.cloudscheduler.outputs.JobPubsubTarget;
 import com.pulumi.gcp.cloudscheduler.outputs.JobRetryConfig;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -73,8 +74,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ JobAppEngineHttpTarget> appEngineHttpTarget() {
-        return this.appEngineHttpTarget;
+    public Output<Optional<JobAppEngineHttpTarget>> appEngineHttpTarget() {
+        return Codegen.optional(this.appEngineHttpTarget);
     }
     /**
      * The deadline for job attempts. If the request handler does not respond by this deadline then the request is
@@ -101,8 +102,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      *   A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;
      * 
      */
-    public Output</* @Nullable */ String> attemptDeadline() {
-        return this.attemptDeadline;
+    public Output<Optional<String>> attemptDeadline() {
+        return Codegen.optional(this.attemptDeadline);
     }
     /**
      * A human-readable description for the job.
@@ -117,8 +118,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * This string must not contain more than 500 characters.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * HTTP target.
@@ -137,8 +138,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ JobHttpTarget> httpTarget() {
-        return this.httpTarget;
+    public Output<Optional<JobHttpTarget>> httpTarget() {
+        return Codegen.optional(this.httpTarget);
     }
     /**
      * The name of the job.
@@ -187,8 +188,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ JobPubsubTarget> pubsubTarget() {
-        return this.pubsubTarget;
+    public Output<Optional<JobPubsubTarget>> pubsubTarget() {
+        return Codegen.optional(this.pubsubTarget);
     }
     /**
      * Region where the scheduler job resides. If it is not provided, this provider will use the provider default.
@@ -221,8 +222,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ JobRetryConfig> retryConfig() {
-        return this.retryConfig;
+    public Output<Optional<JobRetryConfig>> retryConfig() {
+        return Codegen.optional(this.retryConfig);
     }
     /**
      * Describes the schedule on which the job will be executed.
@@ -235,8 +236,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Describes the schedule on which the job will be executed.
      * 
      */
-    public Output</* @Nullable */ String> schedule() {
-        return this.schedule;
+    public Output<Optional<String>> schedule() {
+        return Codegen.optional(this.schedule);
     }
     /**
      * Specifies the time zone to be used in interpreting schedule.
@@ -251,8 +252,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * The value of this field must be a time zone name from the tz database.
      * 
      */
-    public Output</* @Nullable */ String> timeZone() {
-        return this.timeZone;
+    public Output<Optional<String>> timeZone() {
+        return Codegen.optional(this.timeZone);
     }
 
     /**

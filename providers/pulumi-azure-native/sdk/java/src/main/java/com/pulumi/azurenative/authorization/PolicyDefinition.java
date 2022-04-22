@@ -15,6 +15,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class PolicyDefinition extends com.pulumi.resources.CustomResource {
      * @return The policy definition description.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The display name of the policy definition.
@@ -59,8 +60,8 @@ public class PolicyDefinition extends com.pulumi.resources.CustomResource {
      * @return The display name of the policy definition.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * The policy definition metadata.  Metadata is an open ended object and is typically a collection of key value pairs.
@@ -73,8 +74,8 @@ public class PolicyDefinition extends com.pulumi.resources.CustomResource {
      * @return The policy definition metadata.  Metadata is an open ended object and is typically a collection of key value pairs.
      * 
      */
-    public Output</* @Nullable */ Object> metadata() {
-        return this.metadata;
+    public Output<Optional<Object>> metadata() {
+        return Codegen.optional(this.metadata);
     }
     /**
      * The policy definition mode. Some examples are All, Indexed, Microsoft.KeyVault.Data.
@@ -87,8 +88,8 @@ public class PolicyDefinition extends com.pulumi.resources.CustomResource {
      * @return The policy definition mode. Some examples are All, Indexed, Microsoft.KeyVault.Data.
      * 
      */
-    public Output</* @Nullable */ String> mode() {
-        return this.mode;
+    public Output<Optional<String>> mode() {
+        return Codegen.optional(this.mode);
     }
     /**
      * The name of the policy definition.
@@ -115,8 +116,8 @@ public class PolicyDefinition extends com.pulumi.resources.CustomResource {
      * @return The parameter definitions for parameters used in the policy rule. The keys are the parameter names.
      * 
      */
-    public Output</* @Nullable */ Map<String,ParameterDefinitionsValueResponse>> parameters() {
-        return this.parameters;
+    public Output<Optional<Map<String,ParameterDefinitionsValueResponse>>> parameters() {
+        return Codegen.optional(this.parameters);
     }
     /**
      * The policy rule.
@@ -129,8 +130,8 @@ public class PolicyDefinition extends com.pulumi.resources.CustomResource {
      * @return The policy rule.
      * 
      */
-    public Output</* @Nullable */ Object> policyRule() {
-        return this.policyRule;
+    public Output<Optional<Object>> policyRule() {
+        return Codegen.optional(this.policyRule);
     }
     /**
      * The type of policy definition. Possible values are NotSpecified, BuiltIn, Custom, and Static.
@@ -143,8 +144,8 @@ public class PolicyDefinition extends com.pulumi.resources.CustomResource {
      * @return The type of policy definition. Possible values are NotSpecified, BuiltIn, Custom, and Static.
      * 
      */
-    public Output</* @Nullable */ String> policyType() {
-        return this.policyType;
+    public Output<Optional<String>> policyType() {
+        return Codegen.optional(this.policyType);
     }
     /**
      * The type of the resource (Microsoft.Authorization/policyDefinitions).

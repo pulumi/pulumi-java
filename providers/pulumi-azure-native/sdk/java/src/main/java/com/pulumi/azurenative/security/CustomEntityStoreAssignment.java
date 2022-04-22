@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class CustomEntityStoreAssignment extends com.pulumi.resources.CustomReso
      * @return The link to entity store database.
      * 
      */
-    public Output</* @Nullable */ String> entityStoreDatabaseLink() {
-        return this.entityStoreDatabaseLink;
+    public Output<Optional<String>> entityStoreDatabaseLink() {
+        return Codegen.optional(this.entityStoreDatabaseLink);
     }
     /**
      * Resource name
@@ -71,8 +72,8 @@ public class CustomEntityStoreAssignment extends com.pulumi.resources.CustomReso
      * @return The principal assigned with entity store. Format of principal is: [AAD type]=[PrincipalObjectId];[TenantId]
      * 
      */
-    public Output</* @Nullable */ String> principal() {
-        return this.principal;
+    public Output<Optional<String>> principal() {
+        return Codegen.optional(this.principal);
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.

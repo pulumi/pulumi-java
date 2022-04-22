@@ -14,6 +14,7 @@ import com.pulumi.gcp.accesscontextmanager.outputs.ServicePerimeterSpec;
 import com.pulumi.gcp.accesscontextmanager.outputs.ServicePerimeterStatus;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -79,8 +80,8 @@ public class ServicePerimeter extends com.pulumi.resources.CustomResource {
      * behavior.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Resource name for the ServicePerimeter. The short_name component must
@@ -157,8 +158,8 @@ public class ServicePerimeter extends com.pulumi.resources.CustomResource {
      * Possible values are `PERIMETER_TYPE_REGULAR` and `PERIMETER_TYPE_BRIDGE`.
      * 
      */
-    public Output</* @Nullable */ String> perimeterType() {
-        return this.perimeterType;
+    public Output<Optional<String>> perimeterType() {
+        return Codegen.optional(this.perimeterType);
     }
     /**
      * Proposed (or dry run) ServicePerimeter configuration.
@@ -179,8 +180,8 @@ public class ServicePerimeter extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ ServicePerimeterSpec> spec() {
-        return this.spec;
+    public Output<Optional<ServicePerimeterSpec>> spec() {
+        return Codegen.optional(this.spec);
     }
     /**
      * ServicePerimeter configuration. Specifies sets of resources,
@@ -199,8 +200,8 @@ public class ServicePerimeter extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ ServicePerimeterStatus> status() {
-        return this.status;
+    public Output<Optional<ServicePerimeterStatus>> status() {
+        return Codegen.optional(this.status);
     }
     /**
      * Human readable title. Must be unique within the Policy.
@@ -257,8 +258,8 @@ public class ServicePerimeter extends com.pulumi.resources.CustomResource {
      * bet set to True if any of the fields in the spec are set to non-default values.
      * 
      */
-    public Output</* @Nullable */ Boolean> useExplicitDryRunSpec() {
-        return this.useExplicitDryRunSpec;
+    public Output<Optional<Boolean>> useExplicitDryRunSpec() {
+        return Codegen.optional(this.useExplicitDryRunSpec);
     }
 
     /**

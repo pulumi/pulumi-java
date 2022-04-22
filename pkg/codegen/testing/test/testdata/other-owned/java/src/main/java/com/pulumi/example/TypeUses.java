@@ -12,6 +12,7 @@ import com.pulumi.example.Utilities;
 import com.pulumi.example.outputs.Object;
 import com.pulumi.example.outputs.ObjectWithNodeOptionalInputs;
 import com.pulumi.example.outputs.SomeOtherObject;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 @ResourceType(type="example::TypeUses")
@@ -19,20 +20,20 @@ public class TypeUses extends com.pulumi.resources.CustomResource {
     @Export(name="bar", type=SomeOtherObject.class, parameters={})
     private Output</* @Nullable */ SomeOtherObject> bar;
 
-    public Output</* @Nullable */ SomeOtherObject> bar() {
-        return this.bar;
+    public Output<Optional<SomeOtherObject>> bar() {
+        return Codegen.optional(this.bar);
     }
     @Export(name="baz", type=ObjectWithNodeOptionalInputs.class, parameters={})
     private Output</* @Nullable */ ObjectWithNodeOptionalInputs> baz;
 
-    public Output</* @Nullable */ ObjectWithNodeOptionalInputs> baz() {
-        return this.baz;
+    public Output<Optional<ObjectWithNodeOptionalInputs>> baz() {
+        return Codegen.optional(this.baz);
     }
     @Export(name="foo", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> foo;
 
-    public Output</* @Nullable */ Object> foo() {
-        return this.foo;
+    public Output<Optional<Object>> foo() {
+        return Codegen.optional(this.foo);
     }
 
     /**

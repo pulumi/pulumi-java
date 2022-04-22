@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class Stream extends com.pulumi.resources.CustomResource {
      * @return The number of hours till which Kinesis Video will retain the data in the stream
      * 
      */
-    public Output</* @Nullable */ Integer> dataRetentionInHours() {
-        return this.dataRetentionInHours;
+    public Output<Optional<Integer>> dataRetentionInHours() {
+        return Codegen.optional(this.dataRetentionInHours);
     }
     /**
      * The name of the device that is writing to the stream.
@@ -60,8 +61,8 @@ public class Stream extends com.pulumi.resources.CustomResource {
      * @return The name of the device that is writing to the stream.
      * 
      */
-    public Output</* @Nullable */ String> deviceName() {
-        return this.deviceName;
+    public Output<Optional<String>> deviceName() {
+        return Codegen.optional(this.deviceName);
     }
     /**
      * AWS KMS key ID that Kinesis Video Streams uses to encrypt stream data.
@@ -74,8 +75,8 @@ public class Stream extends com.pulumi.resources.CustomResource {
      * @return AWS KMS key ID that Kinesis Video Streams uses to encrypt stream data.
      * 
      */
-    public Output</* @Nullable */ String> kmsKeyId() {
-        return this.kmsKeyId;
+    public Output<Optional<String>> kmsKeyId() {
+        return Codegen.optional(this.kmsKeyId);
     }
     /**
      * The media type of the stream. Consumers of the stream can use this information when processing the stream.
@@ -88,8 +89,8 @@ public class Stream extends com.pulumi.resources.CustomResource {
      * @return The media type of the stream. Consumers of the stream can use this information when processing the stream.
      * 
      */
-    public Output</* @Nullable */ String> mediaType() {
-        return this.mediaType;
+    public Output<Optional<String>> mediaType() {
+        return Codegen.optional(this.mediaType);
     }
     /**
      * The name of the Kinesis Video stream.
@@ -102,8 +103,8 @@ public class Stream extends com.pulumi.resources.CustomResource {
      * @return The name of the Kinesis Video stream.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * An array of key-value pairs associated with the Kinesis Video Stream.
@@ -116,8 +117,8 @@ public class Stream extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs associated with the Kinesis Video Stream.
      * 
      */
-    public Output</* @Nullable */ List<StreamTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<StreamTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

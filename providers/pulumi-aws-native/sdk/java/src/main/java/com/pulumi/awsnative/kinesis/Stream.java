@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -48,8 +49,8 @@ public class Stream extends com.pulumi.resources.CustomResource {
      * @return The name of the Kinesis stream.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * The number of hours for the data records that are stored in shards to remain accessible.
@@ -62,8 +63,8 @@ public class Stream extends com.pulumi.resources.CustomResource {
      * @return The number of hours for the data records that are stored in shards to remain accessible.
      * 
      */
-    public Output</* @Nullable */ Integer> retentionPeriodHours() {
-        return this.retentionPeriodHours;
+    public Output<Optional<Integer>> retentionPeriodHours() {
+        return Codegen.optional(this.retentionPeriodHours);
     }
     /**
      * The number of shards that the stream uses. Required when StreamMode = PROVISIONED is passed.
@@ -76,8 +77,8 @@ public class Stream extends com.pulumi.resources.CustomResource {
      * @return The number of shards that the stream uses. Required when StreamMode = PROVISIONED is passed.
      * 
      */
-    public Output</* @Nullable */ Integer> shardCount() {
-        return this.shardCount;
+    public Output<Optional<Integer>> shardCount() {
+        return Codegen.optional(this.shardCount);
     }
     /**
      * When specified, enables or updates server-side encryption using an AWS KMS key for a specified stream.
@@ -90,8 +91,8 @@ public class Stream extends com.pulumi.resources.CustomResource {
      * @return When specified, enables or updates server-side encryption using an AWS KMS key for a specified stream.
      * 
      */
-    public Output</* @Nullable */ StreamEncryption> streamEncryption() {
-        return this.streamEncryption;
+    public Output<Optional<StreamEncryption>> streamEncryption() {
+        return Codegen.optional(this.streamEncryption);
     }
     /**
      * The mode in which the stream is running.
@@ -104,8 +105,8 @@ public class Stream extends com.pulumi.resources.CustomResource {
      * @return The mode in which the stream is running.
      * 
      */
-    public Output</* @Nullable */ StreamModeDetails> streamModeDetails() {
-        return this.streamModeDetails;
+    public Output<Optional<StreamModeDetails>> streamModeDetails() {
+        return Codegen.optional(this.streamModeDetails);
     }
     /**
      * An arbitrary set of tags (key–value pairs) to associate with the Kinesis stream.
@@ -118,8 +119,8 @@ public class Stream extends com.pulumi.resources.CustomResource {
      * @return An arbitrary set of tags (key–value pairs) to associate with the Kinesis stream.
      * 
      */
-    public Output</* @Nullable */ List<StreamTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<StreamTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

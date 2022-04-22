@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class Channel extends com.pulumi.resources.CustomResource {
      * @return The functions to be enabled for the channel
      * 
      */
-    public Output</* @Nullable */ List<String>> channelFunctions() {
-        return this.channelFunctions;
+    public Output<Optional<List<String>>> channelFunctions() {
+        return Codegen.optional(this.channelFunctions);
     }
     /**
      * The channel type
@@ -71,8 +72,8 @@ public class Channel extends com.pulumi.resources.CustomResource {
      * @return The channel credentials
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> credentials() {
-        return this.credentials;
+    public Output<Optional<Map<String,String>>> credentials() {
+        return Codegen.optional(this.credentials);
     }
     /**
      * The name of the resource

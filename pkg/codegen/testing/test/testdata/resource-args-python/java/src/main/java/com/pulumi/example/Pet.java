@@ -10,6 +10,7 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.example.PetArgs;
 import com.pulumi.example.Utilities;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 @ResourceType(type="example::Pet")
@@ -17,8 +18,8 @@ public class Pet extends com.pulumi.resources.CustomResource {
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
 
     /**

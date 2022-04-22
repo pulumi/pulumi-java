@@ -14,6 +14,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -33,8 +34,8 @@ public class LoadBalancer extends com.pulumi.resources.CustomResource {
      * @return The names of the instances attached to the load balancer.
      * 
      */
-    public Output</* @Nullable */ List<String>> attachedInstances() {
-        return this.attachedInstances;
+    public Output<Optional<List<String>>> attachedInstances() {
+        return Codegen.optional(this.attachedInstances);
     }
     /**
      * The path you provided to perform the load balancer health check. If you didn&#39;t specify a health check path, Lightsail uses the root path of your website (e.g., &#34;/&#34;).
@@ -47,8 +48,8 @@ public class LoadBalancer extends com.pulumi.resources.CustomResource {
      * @return The path you provided to perform the load balancer health check. If you didn&#39;t specify a health check path, Lightsail uses the root path of your website (e.g., &#34;/&#34;).
      * 
      */
-    public Output</* @Nullable */ String> healthCheckPath() {
-        return this.healthCheckPath;
+    public Output<Optional<String>> healthCheckPath() {
+        return Codegen.optional(this.healthCheckPath);
     }
     /**
      * The instance port where you&#39;re creating your load balancer.
@@ -75,8 +76,8 @@ public class LoadBalancer extends com.pulumi.resources.CustomResource {
      * @return The IP address type for the load balancer. The possible values are ipv4 for IPv4 only, and dualstack for IPv4 and IPv6. The default value is dualstack.
      * 
      */
-    public Output</* @Nullable */ String> ipAddressType() {
-        return this.ipAddressType;
+    public Output<Optional<String>> ipAddressType() {
+        return Codegen.optional(this.ipAddressType);
     }
     @Export(name="loadBalancerArn", type=String.class, parameters={})
     private Output<String> loadBalancerArn;
@@ -109,8 +110,8 @@ public class LoadBalancer extends com.pulumi.resources.CustomResource {
      * @return Configuration option to enable session stickiness.
      * 
      */
-    public Output</* @Nullable */ Boolean> sessionStickinessEnabled() {
-        return this.sessionStickinessEnabled;
+    public Output<Optional<Boolean>> sessionStickinessEnabled() {
+        return Codegen.optional(this.sessionStickinessEnabled);
     }
     /**
      * Configuration option to adjust session stickiness cookie duration parameter.
@@ -123,8 +124,8 @@ public class LoadBalancer extends com.pulumi.resources.CustomResource {
      * @return Configuration option to adjust session stickiness cookie duration parameter.
      * 
      */
-    public Output</* @Nullable */ String> sessionStickinessLBCookieDurationSeconds() {
-        return this.sessionStickinessLBCookieDurationSeconds;
+    public Output<Optional<String>> sessionStickinessLBCookieDurationSeconds() {
+        return Codegen.optional(this.sessionStickinessLBCookieDurationSeconds);
     }
     /**
      * An array of key-value pairs to apply to this resource.
@@ -137,8 +138,8 @@ public class LoadBalancer extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<LoadBalancerTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<LoadBalancerTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

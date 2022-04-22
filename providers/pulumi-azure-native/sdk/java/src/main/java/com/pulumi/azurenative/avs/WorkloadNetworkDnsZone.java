@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class WorkloadNetworkDnsZone extends com.pulumi.resources.CustomResource 
      * @return Display name of the DNS Zone.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * DNS Server IP array of the DNS Zone.
@@ -57,8 +58,8 @@ public class WorkloadNetworkDnsZone extends com.pulumi.resources.CustomResource 
      * @return DNS Server IP array of the DNS Zone.
      * 
      */
-    public Output</* @Nullable */ List<String>> dnsServerIps() {
-        return this.dnsServerIps;
+    public Output<Optional<List<String>>> dnsServerIps() {
+        return Codegen.optional(this.dnsServerIps);
     }
     /**
      * Number of DNS Services using the DNS zone.
@@ -71,8 +72,8 @@ public class WorkloadNetworkDnsZone extends com.pulumi.resources.CustomResource 
      * @return Number of DNS Services using the DNS zone.
      * 
      */
-    public Output</* @Nullable */ Double> dnsServices() {
-        return this.dnsServices;
+    public Output<Optional<Double>> dnsServices() {
+        return Codegen.optional(this.dnsServices);
     }
     /**
      * Domain names of the DNS Zone.
@@ -85,8 +86,8 @@ public class WorkloadNetworkDnsZone extends com.pulumi.resources.CustomResource 
      * @return Domain names of the DNS Zone.
      * 
      */
-    public Output</* @Nullable */ List<String>> domain() {
-        return this.domain;
+    public Output<Optional<List<String>>> domain() {
+        return Codegen.optional(this.domain);
     }
     /**
      * Resource name.
@@ -127,8 +128,8 @@ public class WorkloadNetworkDnsZone extends com.pulumi.resources.CustomResource 
      * @return NSX revision number.
      * 
      */
-    public Output</* @Nullable */ Double> revision() {
-        return this.revision;
+    public Output<Optional<Double>> revision() {
+        return Codegen.optional(this.revision);
     }
     /**
      * Source IP of the DNS Zone.
@@ -141,8 +142,8 @@ public class WorkloadNetworkDnsZone extends com.pulumi.resources.CustomResource 
      * @return Source IP of the DNS Zone.
      * 
      */
-    public Output</* @Nullable */ String> sourceIp() {
-        return this.sourceIp;
+    public Output<Optional<String>> sourceIp() {
+        return Codegen.optional(this.sourceIp);
     }
     /**
      * Resource type.

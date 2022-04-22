@@ -12,6 +12,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -59,8 +60,8 @@ public class SlackChannelConfiguration extends com.pulumi.resources.CustomResour
      * @return The list of IAM policy ARNs that are applied as channel guardrails. The AWS managed &#39;AdministratorAccess&#39; policy is applied as a default if this is not set.
      * 
      */
-    public Output</* @Nullable */ List<String>> guardrailPolicies() {
-        return this.guardrailPolicies;
+    public Output<Optional<List<String>>> guardrailPolicies() {
+        return Codegen.optional(this.guardrailPolicies);
     }
     /**
      * The ARN of the IAM role that defines the permissions for AWS Chatbot
@@ -87,8 +88,8 @@ public class SlackChannelConfiguration extends com.pulumi.resources.CustomResour
      * @return Specifies the logging level for this configuration:ERROR,INFO or NONE. This property affects the log entries pushed to Amazon CloudWatch logs
      * 
      */
-    public Output</* @Nullable */ String> loggingLevel() {
-        return this.loggingLevel;
+    public Output<Optional<String>> loggingLevel() {
+        return Codegen.optional(this.loggingLevel);
     }
     /**
      * The id of the Slack channel
@@ -129,8 +130,8 @@ public class SlackChannelConfiguration extends com.pulumi.resources.CustomResour
      * @return ARNs of SNS topics which delivers notifications to AWS Chatbot, for example CloudWatch alarm notifications.
      * 
      */
-    public Output</* @Nullable */ List<String>> snsTopicArns() {
-        return this.snsTopicArns;
+    public Output<Optional<List<String>>> snsTopicArns() {
+        return Codegen.optional(this.snsTopicArns);
     }
     /**
      * Enables use of a user role requirement in your chat configuration
@@ -143,8 +144,8 @@ public class SlackChannelConfiguration extends com.pulumi.resources.CustomResour
      * @return Enables use of a user role requirement in your chat configuration
      * 
      */
-    public Output</* @Nullable */ Boolean> userRoleRequired() {
-        return this.userRoleRequired;
+    public Output<Optional<Boolean>> userRoleRequired() {
+        return Codegen.optional(this.userRoleRequired);
     }
 
     /**

@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -129,8 +130,8 @@ public class ADLSGen2FileDataSetMapping extends com.pulumi.resources.CustomResou
      * @return Type of output file
      * 
      */
-    public Output</* @Nullable */ String> outputType() {
-        return this.outputType;
+    public Output<Optional<String>> outputType() {
+        return Codegen.optional(this.outputType);
     }
     /**
      * Provisioning state of the data set mapping.

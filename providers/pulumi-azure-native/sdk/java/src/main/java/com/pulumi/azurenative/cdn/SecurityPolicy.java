@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -64,8 +65,8 @@ public class SecurityPolicy extends com.pulumi.resources.CustomResource {
      * @return object which contains security policy parameters
      * 
      */
-    public Output</* @Nullable */ SecurityPolicyWebApplicationFirewallParametersResponse> parameters() {
-        return this.parameters;
+    public Output<Optional<SecurityPolicyWebApplicationFirewallParametersResponse>> parameters() {
+        return Codegen.optional(this.parameters);
     }
     /**
      * Provisioning status

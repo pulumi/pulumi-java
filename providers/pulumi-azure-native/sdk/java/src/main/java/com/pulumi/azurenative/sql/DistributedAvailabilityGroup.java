@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -98,8 +99,8 @@ public class DistributedAvailabilityGroup extends com.pulumi.resources.CustomRes
      * @return The primary availability group name
      * 
      */
-    public Output</* @Nullable */ String> primaryAvailabilityGroupName() {
-        return this.primaryAvailabilityGroupName;
+    public Output<Optional<String>> primaryAvailabilityGroupName() {
+        return Codegen.optional(this.primaryAvailabilityGroupName);
     }
     /**
      * The replication mode of a distributed availability group. Parameter will be ignored during link creation.
@@ -112,8 +113,8 @@ public class DistributedAvailabilityGroup extends com.pulumi.resources.CustomRes
      * @return The replication mode of a distributed availability group. Parameter will be ignored during link creation.
      * 
      */
-    public Output</* @Nullable */ String> replicationMode() {
-        return this.replicationMode;
+    public Output<Optional<String>> replicationMode() {
+        return Codegen.optional(this.replicationMode);
     }
     /**
      * The secondary availability group name
@@ -126,8 +127,8 @@ public class DistributedAvailabilityGroup extends com.pulumi.resources.CustomRes
      * @return The secondary availability group name
      * 
      */
-    public Output</* @Nullable */ String> secondaryAvailabilityGroupName() {
-        return this.secondaryAvailabilityGroupName;
+    public Output<Optional<String>> secondaryAvailabilityGroupName() {
+        return Codegen.optional(this.secondaryAvailabilityGroupName);
     }
     /**
      * The source endpoint
@@ -140,8 +141,8 @@ public class DistributedAvailabilityGroup extends com.pulumi.resources.CustomRes
      * @return The source endpoint
      * 
      */
-    public Output</* @Nullable */ String> sourceEndpoint() {
-        return this.sourceEndpoint;
+    public Output<Optional<String>> sourceEndpoint() {
+        return Codegen.optional(this.sourceEndpoint);
     }
     /**
      * The source replica id
@@ -168,8 +169,8 @@ public class DistributedAvailabilityGroup extends com.pulumi.resources.CustomRes
      * @return The name of the target database
      * 
      */
-    public Output</* @Nullable */ String> targetDatabase() {
-        return this.targetDatabase;
+    public Output<Optional<String>> targetDatabase() {
+        return Codegen.optional(this.targetDatabase);
     }
     /**
      * The target replica id

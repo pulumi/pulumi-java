@@ -13,6 +13,7 @@ import com.pulumi.gcp.spanner.inputs.DatabaseIAMBindingState;
 import com.pulumi.gcp.spanner.outputs.DatabaseIAMBindingCondition;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -65,8 +66,8 @@ public class DatabaseIAMBinding extends com.pulumi.resources.CustomResource {
     @Export(name="condition", type=DatabaseIAMBindingCondition.class, parameters={})
     private Output</* @Nullable */ DatabaseIAMBindingCondition> condition;
 
-    public Output</* @Nullable */ DatabaseIAMBindingCondition> condition() {
-        return this.condition;
+    public Output<Optional<DatabaseIAMBindingCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * The name of the Spanner database.

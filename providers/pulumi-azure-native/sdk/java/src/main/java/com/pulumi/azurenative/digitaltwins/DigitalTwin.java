@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -73,8 +74,8 @@ public class DigitalTwin extends com.pulumi.resources.CustomResource {
      * @return The managed identity for the DigitalTwinsInstance.
      * 
      */
-    public Output</* @Nullable */ DigitalTwinsIdentityResponse> identity() {
-        return this.identity;
+    public Output<Optional<DigitalTwinsIdentityResponse>> identity() {
+        return Codegen.optional(this.identity);
     }
     /**
      * Time when DigitalTwinsInstance was updated.
@@ -121,8 +122,8 @@ public class DigitalTwin extends com.pulumi.resources.CustomResource {
     @Export(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionResponse.class})
     private Output</* @Nullable */ List<PrivateEndpointConnectionResponse>> privateEndpointConnections;
 
-    public Output</* @Nullable */ List<PrivateEndpointConnectionResponse>> privateEndpointConnections() {
-        return this.privateEndpointConnections;
+    public Output<Optional<List<PrivateEndpointConnectionResponse>>> privateEndpointConnections() {
+        return Codegen.optional(this.privateEndpointConnections);
     }
     /**
      * The provisioning state.
@@ -149,8 +150,8 @@ public class DigitalTwin extends com.pulumi.resources.CustomResource {
      * @return Public network access for the DigitalTwinsInstance.
      * 
      */
-    public Output</* @Nullable */ String> publicNetworkAccess() {
-        return this.publicNetworkAccess;
+    public Output<Optional<String>> publicNetworkAccess() {
+        return Codegen.optional(this.publicNetworkAccess);
     }
     /**
      * The resource tags.
@@ -163,8 +164,8 @@ public class DigitalTwin extends com.pulumi.resources.CustomResource {
      * @return The resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The resource type.

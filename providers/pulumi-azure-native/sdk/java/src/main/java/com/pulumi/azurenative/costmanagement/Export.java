@@ -15,6 +15,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -73,8 +74,8 @@ public class Export extends com.pulumi.resources.CustomResource {
      * @return eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
      * 
      */
-    public Output</* @Nullable */ String> eTag() {
-        return this.eTag;
+    public Output<Optional<String>> eTag() {
+        return Codegen.optional(this.eTag);
     }
     /**
      * The format of the export being delivered. Currently only &#39;Csv&#39; is supported.
@@ -87,8 +88,8 @@ public class Export extends com.pulumi.resources.CustomResource {
      * @return The format of the export being delivered. Currently only &#39;Csv&#39; is supported.
      * 
      */
-    public Output</* @Nullable */ String> format() {
-        return this.format;
+    public Output<Optional<String>> format() {
+        return Codegen.optional(this.format);
     }
     /**
      * Resource name.
@@ -129,8 +130,8 @@ public class Export extends com.pulumi.resources.CustomResource {
      * @return If requested, has the most recent execution history for the export.
      * 
      */
-    public Output</* @Nullable */ ExportExecutionListResultResponse> runHistory() {
-        return this.runHistory;
+    public Output<Optional<ExportExecutionListResultResponse>> runHistory() {
+        return Codegen.optional(this.runHistory);
     }
     /**
      * Has schedule information for the export.
@@ -143,8 +144,8 @@ public class Export extends com.pulumi.resources.CustomResource {
      * @return Has schedule information for the export.
      * 
      */
-    public Output</* @Nullable */ ExportScheduleResponse> schedule() {
-        return this.schedule;
+    public Output<Optional<ExportScheduleResponse>> schedule() {
+        return Codegen.optional(this.schedule);
     }
     /**
      * Resource type.

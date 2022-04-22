@@ -22,6 +22,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -52,8 +53,8 @@ public class VirtualNetworkGatewayConnection extends com.pulumi.resources.Custom
      * @return The authorizationKey.
      * 
      */
-    public Output</* @Nullable */ String> authorizationKey() {
-        return this.authorizationKey;
+    public Output<Optional<String>> authorizationKey() {
+        return Codegen.optional(this.authorizationKey);
     }
     /**
      * The connection mode for this connection.
@@ -66,8 +67,8 @@ public class VirtualNetworkGatewayConnection extends com.pulumi.resources.Custom
      * @return The connection mode for this connection.
      * 
      */
-    public Output</* @Nullable */ String> connectionMode() {
-        return this.connectionMode;
+    public Output<Optional<String>> connectionMode() {
+        return Codegen.optional(this.connectionMode);
     }
     /**
      * Connection protocol used for this connection.
@@ -80,8 +81,8 @@ public class VirtualNetworkGatewayConnection extends com.pulumi.resources.Custom
      * @return Connection protocol used for this connection.
      * 
      */
-    public Output</* @Nullable */ String> connectionProtocol() {
-        return this.connectionProtocol;
+    public Output<Optional<String>> connectionProtocol() {
+        return Codegen.optional(this.connectionProtocol);
     }
     /**
      * Virtual Network Gateway connection status.
@@ -122,8 +123,8 @@ public class VirtualNetworkGatewayConnection extends com.pulumi.resources.Custom
      * @return The dead peer detection timeout of this connection in seconds.
      * 
      */
-    public Output</* @Nullable */ Integer> dpdTimeoutSeconds() {
-        return this.dpdTimeoutSeconds;
+    public Output<Optional<Integer>> dpdTimeoutSeconds() {
+        return Codegen.optional(this.dpdTimeoutSeconds);
     }
     /**
      * The egress bytes transferred in this connection.
@@ -150,8 +151,8 @@ public class VirtualNetworkGatewayConnection extends com.pulumi.resources.Custom
      * @return EnableBgp flag.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableBgp() {
-        return this.enableBgp;
+    public Output<Optional<Boolean>> enableBgp() {
+        return Codegen.optional(this.enableBgp);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
@@ -178,8 +179,8 @@ public class VirtualNetworkGatewayConnection extends com.pulumi.resources.Custom
      * @return Bypass ExpressRoute Gateway for data forwarding.
      * 
      */
-    public Output</* @Nullable */ Boolean> expressRouteGatewayBypass() {
-        return this.expressRouteGatewayBypass;
+    public Output<Optional<Boolean>> expressRouteGatewayBypass() {
+        return Codegen.optional(this.expressRouteGatewayBypass);
     }
     /**
      * The ingress bytes transferred in this connection.
@@ -206,8 +207,8 @@ public class VirtualNetworkGatewayConnection extends com.pulumi.resources.Custom
      * @return The IPSec Policies to be considered by this connection.
      * 
      */
-    public Output</* @Nullable */ List<IpsecPolicyResponse>> ipsecPolicies() {
-        return this.ipsecPolicies;
+    public Output<Optional<List<IpsecPolicyResponse>>> ipsecPolicies() {
+        return Codegen.optional(this.ipsecPolicies);
     }
     /**
      * The reference to local network gateway resource.
@@ -220,8 +221,8 @@ public class VirtualNetworkGatewayConnection extends com.pulumi.resources.Custom
      * @return The reference to local network gateway resource.
      * 
      */
-    public Output</* @Nullable */ LocalNetworkGatewayResponse> localNetworkGateway2() {
-        return this.localNetworkGateway2;
+    public Output<Optional<LocalNetworkGatewayResponse>> localNetworkGateway2() {
+        return Codegen.optional(this.localNetworkGateway2);
     }
     /**
      * Resource location.
@@ -234,8 +235,8 @@ public class VirtualNetworkGatewayConnection extends com.pulumi.resources.Custom
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * Resource name.
@@ -262,8 +263,8 @@ public class VirtualNetworkGatewayConnection extends com.pulumi.resources.Custom
      * @return The reference to peerings resource.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> peer() {
-        return this.peer;
+    public Output<Optional<SubResourceResponse>> peer() {
+        return Codegen.optional(this.peer);
     }
     /**
      * The provisioning state of the virtual network gateway connection resource.
@@ -304,8 +305,8 @@ public class VirtualNetworkGatewayConnection extends com.pulumi.resources.Custom
      * @return The routing weight.
      * 
      */
-    public Output</* @Nullable */ Integer> routingWeight() {
-        return this.routingWeight;
+    public Output<Optional<Integer>> routingWeight() {
+        return Codegen.optional(this.routingWeight);
     }
     /**
      * The IPSec shared key.
@@ -318,8 +319,8 @@ public class VirtualNetworkGatewayConnection extends com.pulumi.resources.Custom
      * @return The IPSec shared key.
      * 
      */
-    public Output</* @Nullable */ String> sharedKey() {
-        return this.sharedKey;
+    public Output<Optional<String>> sharedKey() {
+        return Codegen.optional(this.sharedKey);
     }
     /**
      * Resource tags.
@@ -332,8 +333,8 @@ public class VirtualNetworkGatewayConnection extends com.pulumi.resources.Custom
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The Traffic Selector Policies to be considered by this connection.
@@ -346,8 +347,8 @@ public class VirtualNetworkGatewayConnection extends com.pulumi.resources.Custom
      * @return The Traffic Selector Policies to be considered by this connection.
      * 
      */
-    public Output</* @Nullable */ List<TrafficSelectorPolicyResponse>> trafficSelectorPolicies() {
-        return this.trafficSelectorPolicies;
+    public Output<Optional<List<TrafficSelectorPolicyResponse>>> trafficSelectorPolicies() {
+        return Codegen.optional(this.trafficSelectorPolicies);
     }
     /**
      * Collection of all tunnels&#39; connection health status.
@@ -388,8 +389,8 @@ public class VirtualNetworkGatewayConnection extends com.pulumi.resources.Custom
      * @return Use private local Azure IP for the connection.
      * 
      */
-    public Output</* @Nullable */ Boolean> useLocalAzureIpAddress() {
-        return this.useLocalAzureIpAddress;
+    public Output<Optional<Boolean>> useLocalAzureIpAddress() {
+        return Codegen.optional(this.useLocalAzureIpAddress);
     }
     /**
      * Enable policy-based traffic selectors.
@@ -402,8 +403,8 @@ public class VirtualNetworkGatewayConnection extends com.pulumi.resources.Custom
      * @return Enable policy-based traffic selectors.
      * 
      */
-    public Output</* @Nullable */ Boolean> usePolicyBasedTrafficSelectors() {
-        return this.usePolicyBasedTrafficSelectors;
+    public Output<Optional<Boolean>> usePolicyBasedTrafficSelectors() {
+        return Codegen.optional(this.usePolicyBasedTrafficSelectors);
     }
     /**
      * The reference to virtual network gateway resource.
@@ -430,8 +431,8 @@ public class VirtualNetworkGatewayConnection extends com.pulumi.resources.Custom
      * @return The reference to virtual network gateway resource.
      * 
      */
-    public Output</* @Nullable */ VirtualNetworkGatewayResponse> virtualNetworkGateway2() {
-        return this.virtualNetworkGateway2;
+    public Output<Optional<VirtualNetworkGatewayResponse>> virtualNetworkGateway2() {
+        return Codegen.optional(this.virtualNetworkGateway2);
     }
 
     /**

@@ -16,6 +16,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class ADCCatalog extends com.pulumi.resources.CustomResource {
      * @return Azure data catalog admin list.
      * 
      */
-    public Output</* @Nullable */ List<PrincipalsResponse>> admins() {
-        return this.admins;
+    public Output<Optional<List<PrincipalsResponse>>> admins() {
+        return Codegen.optional(this.admins);
     }
     /**
      * Automatic unit adjustment enabled or not.
@@ -60,8 +61,8 @@ public class ADCCatalog extends com.pulumi.resources.CustomResource {
      * @return Automatic unit adjustment enabled or not.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableAutomaticUnitAdjustment() {
-        return this.enableAutomaticUnitAdjustment;
+    public Output<Optional<Boolean>> enableAutomaticUnitAdjustment() {
+        return Codegen.optional(this.enableAutomaticUnitAdjustment);
     }
     /**
      * Resource etag
@@ -74,8 +75,8 @@ public class ADCCatalog extends com.pulumi.resources.CustomResource {
      * @return Resource etag
      * 
      */
-    public Output</* @Nullable */ String> etag() {
-        return this.etag;
+    public Output<Optional<String>> etag() {
+        return Codegen.optional(this.etag);
     }
     /**
      * Resource location
@@ -88,8 +89,8 @@ public class ADCCatalog extends com.pulumi.resources.CustomResource {
      * @return Resource location
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * Resource name
@@ -116,8 +117,8 @@ public class ADCCatalog extends com.pulumi.resources.CustomResource {
      * @return Azure data catalog SKU.
      * 
      */
-    public Output</* @Nullable */ String> sku() {
-        return this.sku;
+    public Output<Optional<String>> sku() {
+        return Codegen.optional(this.sku);
     }
     /**
      * Azure data catalog provision status.
@@ -130,8 +131,8 @@ public class ADCCatalog extends com.pulumi.resources.CustomResource {
      * @return Azure data catalog provision status.
      * 
      */
-    public Output</* @Nullable */ Boolean> successfullyProvisioned() {
-        return this.successfullyProvisioned;
+    public Output<Optional<Boolean>> successfullyProvisioned() {
+        return Codegen.optional(this.successfullyProvisioned);
     }
     /**
      * Resource tags
@@ -144,8 +145,8 @@ public class ADCCatalog extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type
@@ -172,8 +173,8 @@ public class ADCCatalog extends com.pulumi.resources.CustomResource {
      * @return Azure data catalog units.
      * 
      */
-    public Output</* @Nullable */ Integer> units() {
-        return this.units;
+    public Output<Optional<Integer>> units() {
+        return Codegen.optional(this.units);
     }
     /**
      * Azure data catalog user list.
@@ -186,8 +187,8 @@ public class ADCCatalog extends com.pulumi.resources.CustomResource {
      * @return Azure data catalog user list.
      * 
      */
-    public Output</* @Nullable */ List<PrincipalsResponse>> users() {
-        return this.users;
+    public Output<Optional<List<PrincipalsResponse>>> users() {
+        return Codegen.optional(this.users);
     }
 
     /**

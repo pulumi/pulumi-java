@@ -15,6 +15,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class Stack extends com.pulumi.resources.CustomResource {
      * Valid values: `CAPABILITY_IAM`, `CAPABILITY_NAMED_IAM`, or `CAPABILITY_AUTO_EXPAND`
      * 
      */
-    public Output</* @Nullable */ List<String>> capabilities() {
-        return this.capabilities;
+    public Output<Optional<List<String>>> capabilities() {
+        return Codegen.optional(this.capabilities);
     }
     /**
      * Set to true to disable rollback of the stack if stack creation failed.
@@ -62,8 +63,8 @@ public class Stack extends com.pulumi.resources.CustomResource {
      * Conflicts with `on_failure`.
      * 
      */
-    public Output</* @Nullable */ Boolean> disableRollback() {
-        return this.disableRollback;
+    public Output<Optional<Boolean>> disableRollback() {
+        return Codegen.optional(this.disableRollback);
     }
     /**
      * The ARN of an IAM role that AWS CloudFormation assumes to create the stack. If you don&#39;t specify a value, AWS CloudFormation uses the role that was previously associated with the stack. If no role is available, AWS CloudFormation uses a temporary session that is generated from your user credentials.
@@ -76,8 +77,8 @@ public class Stack extends com.pulumi.resources.CustomResource {
      * @return The ARN of an IAM role that AWS CloudFormation assumes to create the stack. If you don&#39;t specify a value, AWS CloudFormation uses the role that was previously associated with the stack. If no role is available, AWS CloudFormation uses a temporary session that is generated from your user credentials.
      * 
      */
-    public Output</* @Nullable */ String> iamRoleArn() {
-        return this.iamRoleArn;
+    public Output<Optional<String>> iamRoleArn() {
+        return Codegen.optional(this.iamRoleArn);
     }
     /**
      * Stack name.
@@ -104,8 +105,8 @@ public class Stack extends com.pulumi.resources.CustomResource {
      * @return A list of SNS topic ARNs to publish stack related events.
      * 
      */
-    public Output</* @Nullable */ List<String>> notificationArns() {
-        return this.notificationArns;
+    public Output<Optional<List<String>>> notificationArns() {
+        return Codegen.optional(this.notificationArns);
     }
     /**
      * Action to be taken if stack creation fails. This must be
@@ -120,8 +121,8 @@ public class Stack extends com.pulumi.resources.CustomResource {
      * one of: `DO_NOTHING`, `ROLLBACK`, or `DELETE`. Conflicts with `disable_rollback`.
      * 
      */
-    public Output</* @Nullable */ String> onFailure() {
-        return this.onFailure;
+    public Output<Optional<String>> onFailure() {
+        return Codegen.optional(this.onFailure);
     }
     /**
      * A map of outputs from the stack.
@@ -180,8 +181,8 @@ public class Stack extends com.pulumi.resources.CustomResource {
      * Conflicts w/ `policy_body`.
      * 
      */
-    public Output</* @Nullable */ String> policyUrl() {
-        return this.policyUrl;
+    public Output<Optional<String>> policyUrl() {
+        return Codegen.optional(this.policyUrl);
     }
     /**
      * Map of resource tags to associate with this stack. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -194,8 +195,8 @@ public class Stack extends com.pulumi.resources.CustomResource {
      * @return Map of resource tags to associate with this stack. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .
@@ -236,8 +237,8 @@ public class Stack extends com.pulumi.resources.CustomResource {
      * @return Location of a file containing the template body (max size: 460,800 bytes).
      * 
      */
-    public Output</* @Nullable */ String> templateUrl() {
-        return this.templateUrl;
+    public Output<Optional<String>> templateUrl() {
+        return Codegen.optional(this.templateUrl);
     }
     /**
      * The amount of time that can pass before the stack status becomes `CREATE_FAILED`.
@@ -250,8 +251,8 @@ public class Stack extends com.pulumi.resources.CustomResource {
      * @return The amount of time that can pass before the stack status becomes `CREATE_FAILED`.
      * 
      */
-    public Output</* @Nullable */ Integer> timeoutInMinutes() {
-        return this.timeoutInMinutes;
+    public Output<Optional<Integer>> timeoutInMinutes() {
+        return Codegen.optional(this.timeoutInMinutes);
     }
 
     /**

@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -31,14 +32,14 @@ public class DataSource extends com.pulumi.resources.CustomResource {
     @Export(name="dataSourceConfiguration", type=DataSourceConfiguration.class, parameters={})
     private Output</* @Nullable */ DataSourceConfiguration> dataSourceConfiguration;
 
-    public Output</* @Nullable */ DataSourceConfiguration> dataSourceConfiguration() {
-        return this.dataSourceConfiguration;
+    public Output<Optional<DataSourceConfiguration>> dataSourceConfiguration() {
+        return Codegen.optional(this.dataSourceConfiguration);
     }
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     @Export(name="indexId", type=String.class, parameters={})
     private Output<String> indexId;
@@ -55,14 +56,14 @@ public class DataSource extends com.pulumi.resources.CustomResource {
     @Export(name="roleArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> roleArn;
 
-    public Output</* @Nullable */ String> roleArn() {
-        return this.roleArn;
+    public Output<Optional<String>> roleArn() {
+        return Codegen.optional(this.roleArn);
     }
     @Export(name="schedule", type=String.class, parameters={})
     private Output</* @Nullable */ String> schedule;
 
-    public Output</* @Nullable */ String> schedule() {
-        return this.schedule;
+    public Output<Optional<String>> schedule() {
+        return Codegen.optional(this.schedule);
     }
     /**
      * Tags for labeling the data source
@@ -75,8 +76,8 @@ public class DataSource extends com.pulumi.resources.CustomResource {
      * @return Tags for labeling the data source
      * 
      */
-    public Output</* @Nullable */ List<DataSourceTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<DataSourceTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     @Export(name="type", type=DataSourceType.class, parameters={})
     private Output<DataSourceType> type;

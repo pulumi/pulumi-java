@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -32,8 +33,8 @@ public class DatasetGroup extends com.pulumi.resources.CustomResource {
      * @return An array of Amazon Resource Names (ARNs) of the datasets that you want to include in the dataset group.
      * 
      */
-    public Output</* @Nullable */ List<String>> datasetArns() {
-        return this.datasetArns;
+    public Output<Optional<List<String>>> datasetArns() {
+        return Codegen.optional(this.datasetArns);
     }
     /**
      * The Amazon Resource Name (ARN) of the dataset group to delete.
@@ -88,8 +89,8 @@ public class DatasetGroup extends com.pulumi.resources.CustomResource {
      * @return The tags of Application Insights application.
      * 
      */
-    public Output</* @Nullable */ List<DatasetGroupTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<DatasetGroupTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

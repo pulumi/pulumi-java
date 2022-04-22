@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -57,8 +58,8 @@ public class Share extends com.pulumi.resources.CustomResource {
      * @return Share description.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Name of the azure resource
@@ -99,8 +100,8 @@ public class Share extends com.pulumi.resources.CustomResource {
      * @return Share kind.
      * 
      */
-    public Output</* @Nullable */ String> shareKind() {
-        return this.shareKind;
+    public Output<Optional<String>> shareKind() {
+        return Codegen.optional(this.shareKind);
     }
     /**
      * System Data of the Azure resource.
@@ -127,8 +128,8 @@ public class Share extends com.pulumi.resources.CustomResource {
      * @return Share terms.
      * 
      */
-    public Output</* @Nullable */ String> terms() {
-        return this.terms;
+    public Output<Optional<String>> terms() {
+        return Codegen.optional(this.terms);
     }
     /**
      * Type of the azure resource

@@ -15,6 +15,7 @@ import java.lang.Double;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class SqlPool extends com.pulumi.resources.CustomResource {
      * @return Collation mode
      * 
      */
-    public Output</* @Nullable */ String> collation() {
-        return this.collation;
+    public Output<Optional<String>> collation() {
+        return Codegen.optional(this.collation);
     }
     /**
      * Specifies the mode of sql pool creation.
@@ -75,8 +76,8 @@ public class SqlPool extends com.pulumi.resources.CustomResource {
      * Restore: Creates a sql pool by restoring a backup of a deleted sql  pool. SourceDatabaseId should be the sql pool&#39;s original resource ID. SourceDatabaseId and sourceDatabaseDeletionDate must be specified.
      * 
      */
-    public Output</* @Nullable */ String> createMode() {
-        return this.createMode;
+    public Output<Optional<String>> createMode() {
+        return Codegen.optional(this.createMode);
     }
     /**
      * Date the SQL pool was created
@@ -89,8 +90,8 @@ public class SqlPool extends com.pulumi.resources.CustomResource {
      * @return Date the SQL pool was created
      * 
      */
-    public Output</* @Nullable */ String> creationDate() {
-        return this.creationDate;
+    public Output<Optional<String>> creationDate() {
+        return Codegen.optional(this.creationDate);
     }
     /**
      * The geo-location where the resource lives
@@ -117,8 +118,8 @@ public class SqlPool extends com.pulumi.resources.CustomResource {
      * @return Maximum size in bytes
      * 
      */
-    public Output</* @Nullable */ Double> maxSizeBytes() {
-        return this.maxSizeBytes;
+    public Output<Optional<Double>> maxSizeBytes() {
+        return Codegen.optional(this.maxSizeBytes);
     }
     /**
      * The name of the resource
@@ -145,8 +146,8 @@ public class SqlPool extends com.pulumi.resources.CustomResource {
      * @return Resource state
      * 
      */
-    public Output</* @Nullable */ String> provisioningState() {
-        return this.provisioningState;
+    public Output<Optional<String>> provisioningState() {
+        return Codegen.optional(this.provisioningState);
     }
     /**
      * Backup database to restore from
@@ -159,8 +160,8 @@ public class SqlPool extends com.pulumi.resources.CustomResource {
      * @return Backup database to restore from
      * 
      */
-    public Output</* @Nullable */ String> recoverableDatabaseId() {
-        return this.recoverableDatabaseId;
+    public Output<Optional<String>> recoverableDatabaseId() {
+        return Codegen.optional(this.recoverableDatabaseId);
     }
     /**
      * Snapshot time to restore
@@ -173,8 +174,8 @@ public class SqlPool extends com.pulumi.resources.CustomResource {
      * @return Snapshot time to restore
      * 
      */
-    public Output</* @Nullable */ String> restorePointInTime() {
-        return this.restorePointInTime;
+    public Output<Optional<String>> restorePointInTime() {
+        return Codegen.optional(this.restorePointInTime);
     }
     /**
      * SQL pool SKU
@@ -187,8 +188,8 @@ public class SqlPool extends com.pulumi.resources.CustomResource {
      * @return SQL pool SKU
      * 
      */
-    public Output</* @Nullable */ SkuResponse> sku() {
-        return this.sku;
+    public Output<Optional<SkuResponse>> sku() {
+        return Codegen.optional(this.sku);
     }
     /**
      * Source database to create from
@@ -201,8 +202,8 @@ public class SqlPool extends com.pulumi.resources.CustomResource {
      * @return Source database to create from
      * 
      */
-    public Output</* @Nullable */ String> sourceDatabaseId() {
-        return this.sourceDatabaseId;
+    public Output<Optional<String>> sourceDatabaseId() {
+        return Codegen.optional(this.sourceDatabaseId);
     }
     /**
      * Resource status
@@ -215,8 +216,8 @@ public class SqlPool extends com.pulumi.resources.CustomResource {
      * @return Resource status
      * 
      */
-    public Output</* @Nullable */ String> status() {
-        return this.status;
+    public Output<Optional<String>> status() {
+        return Codegen.optional(this.status);
     }
     /**
      * The storage account type used to store backups for this sql pool.
@@ -229,8 +230,8 @@ public class SqlPool extends com.pulumi.resources.CustomResource {
      * @return The storage account type used to store backups for this sql pool.
      * 
      */
-    public Output</* @Nullable */ String> storageAccountType() {
-        return this.storageAccountType;
+    public Output<Optional<String>> storageAccountType() {
+        return Codegen.optional(this.storageAccountType);
     }
     /**
      * Resource tags.
@@ -243,8 +244,8 @@ public class SqlPool extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;

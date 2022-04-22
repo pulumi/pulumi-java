@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -30,8 +31,8 @@ public class StaticIp extends com.pulumi.resources.CustomResource {
      * @return The instance where the static IP is attached.
      * 
      */
-    public Output</* @Nullable */ String> attachedTo() {
-        return this.attachedTo;
+    public Output<Optional<String>> attachedTo() {
+        return Codegen.optional(this.attachedTo);
     }
     /**
      * The static IP address.

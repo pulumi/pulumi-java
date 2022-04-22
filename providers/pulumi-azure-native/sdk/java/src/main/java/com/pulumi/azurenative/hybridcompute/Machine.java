@@ -18,6 +18,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -76,8 +77,8 @@ public class Machine extends com.pulumi.resources.CustomResource {
      * @return Public Key that the client provides to be used during initial resource onboarding
      * 
      */
-    public Output</* @Nullable */ String> clientPublicKey() {
-        return this.clientPublicKey;
+    public Output<Optional<String>> clientPublicKey() {
+        return Codegen.optional(this.clientPublicKey);
     }
     /**
      * Specifies the hybrid machine display name.
@@ -152,8 +153,8 @@ public class Machine extends com.pulumi.resources.CustomResource {
     @Export(name="identity", type=MachineResponseIdentity.class, parameters={})
     private Output</* @Nullable */ MachineResponseIdentity> identity;
 
-    public Output</* @Nullable */ MachineResponseIdentity> identity() {
-        return this.identity;
+    public Output<Optional<MachineResponseIdentity>> identity() {
+        return Codegen.optional(this.identity);
     }
     /**
      * The time of the last status change.
@@ -194,8 +195,8 @@ public class Machine extends com.pulumi.resources.CustomResource {
      * @return Metadata pertaining to the geographic location of the resource.
      * 
      */
-    public Output</* @Nullable */ LocationDataResponse> locationData() {
-        return this.locationData;
+    public Output<Optional<LocationDataResponse>> locationData() {
+        return Codegen.optional(this.locationData);
     }
     /**
      * Specifies the hybrid machine FQDN.
@@ -250,8 +251,8 @@ public class Machine extends com.pulumi.resources.CustomResource {
      * @return Specifies the operating system settings for the hybrid machine.
      * 
      */
-    public Output</* @Nullable */ MachinePropertiesResponseOsProfile> osProfile() {
-        return this.osProfile;
+    public Output<Optional<MachinePropertiesResponseOsProfile>> osProfile() {
+        return Codegen.optional(this.osProfile);
     }
     /**
      * Specifies the Operating System product SKU.
@@ -320,8 +321,8 @@ public class Machine extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
@@ -348,8 +349,8 @@ public class Machine extends com.pulumi.resources.CustomResource {
      * @return Specifies the hybrid machine unique ID.
      * 
      */
-    public Output</* @Nullable */ String> vmId() {
-        return this.vmId;
+    public Output<Optional<String>> vmId() {
+        return Codegen.optional(this.vmId);
     }
     /**
      * Specifies the Arc Machine&#39;s unique SMBIOS ID

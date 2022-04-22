@@ -18,6 +18,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -35,8 +36,8 @@ public class ApplicationInstance extends com.pulumi.resources.CustomResource {
     @Export(name="applicationInstanceIdToReplace", type=String.class, parameters={})
     private Output</* @Nullable */ String> applicationInstanceIdToReplace;
 
-    public Output</* @Nullable */ String> applicationInstanceIdToReplace() {
-        return this.applicationInstanceIdToReplace;
+    public Output<Optional<String>> applicationInstanceIdToReplace() {
+        return Codegen.optional(this.applicationInstanceIdToReplace);
     }
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
@@ -65,14 +66,14 @@ public class ApplicationInstance extends com.pulumi.resources.CustomResource {
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     @Export(name="deviceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> deviceId;
 
-    public Output</* @Nullable */ String> deviceId() {
-        return this.deviceId;
+    public Output<Optional<String>> deviceId() {
+        return Codegen.optional(this.deviceId);
     }
     @Export(name="healthStatus", type=ApplicationInstanceHealthStatus.class, parameters={})
     private Output<ApplicationInstanceHealthStatus> healthStatus;
@@ -89,8 +90,8 @@ public class ApplicationInstance extends com.pulumi.resources.CustomResource {
     @Export(name="manifestOverridesPayload", type=ApplicationInstanceManifestOverridesPayload.class, parameters={})
     private Output</* @Nullable */ ApplicationInstanceManifestOverridesPayload> manifestOverridesPayload;
 
-    public Output</* @Nullable */ ApplicationInstanceManifestOverridesPayload> manifestOverridesPayload() {
-        return this.manifestOverridesPayload;
+    public Output<Optional<ApplicationInstanceManifestOverridesPayload>> manifestOverridesPayload() {
+        return Codegen.optional(this.manifestOverridesPayload);
     }
     @Export(name="manifestPayload", type=ApplicationInstanceManifestPayload.class, parameters={})
     private Output<ApplicationInstanceManifestPayload> manifestPayload;
@@ -101,14 +102,14 @@ public class ApplicationInstance extends com.pulumi.resources.CustomResource {
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     @Export(name="runtimeRoleArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> runtimeRoleArn;
 
-    public Output</* @Nullable */ String> runtimeRoleArn() {
-        return this.runtimeRoleArn;
+    public Output<Optional<String>> runtimeRoleArn() {
+        return Codegen.optional(this.runtimeRoleArn);
     }
     @Export(name="status", type=ApplicationInstanceStatus.class, parameters={})
     private Output<ApplicationInstanceStatus> status;
@@ -125,14 +126,14 @@ public class ApplicationInstance extends com.pulumi.resources.CustomResource {
     @Export(name="statusFilter", type=ApplicationInstanceStatusFilter.class, parameters={})
     private Output</* @Nullable */ ApplicationInstanceStatusFilter> statusFilter;
 
-    public Output</* @Nullable */ ApplicationInstanceStatusFilter> statusFilter() {
-        return this.statusFilter;
+    public Output<Optional<ApplicationInstanceStatusFilter>> statusFilter() {
+        return Codegen.optional(this.statusFilter);
     }
     @Export(name="tags", type=List.class, parameters={ApplicationInstanceTag.class})
     private Output</* @Nullable */ List<ApplicationInstanceTag>> tags;
 
-    public Output</* @Nullable */ List<ApplicationInstanceTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<ApplicationInstanceTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

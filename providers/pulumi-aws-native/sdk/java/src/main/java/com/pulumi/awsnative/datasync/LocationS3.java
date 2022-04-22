@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -83,8 +84,8 @@ public class LocationS3 extends com.pulumi.resources.CustomResource {
      * @return The Amazon S3 storage class you want to store your files in when this location is used as a task destination.
      * 
      */
-    public Output</* @Nullable */ LocationS3S3StorageClass> s3StorageClass() {
-        return this.s3StorageClass;
+    public Output<Optional<LocationS3S3StorageClass>> s3StorageClass() {
+        return Codegen.optional(this.s3StorageClass);
     }
     /**
      * A subdirectory in the Amazon S3 bucket. This subdirectory in Amazon S3 is used to read data from the S3 source location or write data to the S3 destination.
@@ -97,8 +98,8 @@ public class LocationS3 extends com.pulumi.resources.CustomResource {
      * @return A subdirectory in the Amazon S3 bucket. This subdirectory in Amazon S3 is used to read data from the S3 source location or write data to the S3 destination.
      * 
      */
-    public Output</* @Nullable */ String> subdirectory() {
-        return this.subdirectory;
+    public Output<Optional<String>> subdirectory() {
+        return Codegen.optional(this.subdirectory);
     }
     /**
      * An array of key-value pairs to apply to this resource.
@@ -111,8 +112,8 @@ public class LocationS3 extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<LocationS3Tag>> tags() {
-        return this.tags;
+    public Output<Optional<List<LocationS3Tag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

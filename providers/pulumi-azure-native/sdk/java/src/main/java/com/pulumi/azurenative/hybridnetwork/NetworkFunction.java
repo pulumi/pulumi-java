@@ -16,6 +16,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class NetworkFunction extends com.pulumi.resources.CustomResource {
      * @return The reference to the device resource.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> device() {
-        return this.device;
+    public Output<Optional<SubResourceResponse>> device() {
+        return Codegen.optional(this.device);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
@@ -60,8 +61,8 @@ public class NetworkFunction extends com.pulumi.resources.CustomResource {
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output</* @Nullable */ String> etag() {
-        return this.etag;
+    public Output<Optional<String>> etag() {
+        return Codegen.optional(this.etag);
     }
     /**
      * The geo-location where the resource lives
@@ -102,8 +103,8 @@ public class NetworkFunction extends com.pulumi.resources.CustomResource {
      * @return The parameters for the managed application.
      * 
      */
-    public Output</* @Nullable */ Object> managedApplicationParameters() {
-        return this.managedApplicationParameters;
+    public Output<Optional<Object>> managedApplicationParameters() {
+        return Codegen.optional(this.managedApplicationParameters);
     }
     /**
      * The name of the resource
@@ -130,8 +131,8 @@ public class NetworkFunction extends com.pulumi.resources.CustomResource {
      * @return The network function configurations from the user.
      * 
      */
-    public Output</* @Nullable */ List<NetworkFunctionUserConfigurationResponse>> networkFunctionUserConfigurations() {
-        return this.networkFunctionUserConfigurations;
+    public Output<Optional<List<NetworkFunctionUserConfigurationResponse>>> networkFunctionUserConfigurations() {
+        return Codegen.optional(this.networkFunctionUserConfigurations);
     }
     /**
      * The provisioning state of the network function resource.
@@ -172,8 +173,8 @@ public class NetworkFunction extends com.pulumi.resources.CustomResource {
      * @return The sku name for the network function.
      * 
      */
-    public Output</* @Nullable */ String> skuName() {
-        return this.skuName;
+    public Output<Optional<String>> skuName() {
+        return Codegen.optional(this.skuName);
     }
     /**
      * The sku type for the network function.
@@ -200,8 +201,8 @@ public class NetworkFunction extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
@@ -228,8 +229,8 @@ public class NetworkFunction extends com.pulumi.resources.CustomResource {
      * @return The vendor name for the network function.
      * 
      */
-    public Output</* @Nullable */ String> vendorName() {
-        return this.vendorName;
+    public Output<Optional<String>> vendorName() {
+        return Codegen.optional(this.vendorName);
     }
     /**
      * The vendor provisioning state for the network function resource.

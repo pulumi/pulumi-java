@@ -16,6 +16,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class AutoScaleVCore extends com.pulumi.resources.CustomResource {
      * @return The maximum capacity of an auto scale v-core resource.
      * 
      */
-    public Output</* @Nullable */ Integer> capacityLimit() {
-        return this.capacityLimit;
+    public Output<Optional<Integer>> capacityLimit() {
+        return Codegen.optional(this.capacityLimit);
     }
     /**
      * The object ID of the capacity resource associated with the auto scale v-core resource.
@@ -60,8 +61,8 @@ public class AutoScaleVCore extends com.pulumi.resources.CustomResource {
      * @return The object ID of the capacity resource associated with the auto scale v-core resource.
      * 
      */
-    public Output</* @Nullable */ String> capacityObjectId() {
-        return this.capacityObjectId;
+    public Output<Optional<String>> capacityObjectId() {
+        return Codegen.optional(this.capacityObjectId);
     }
     /**
      * Location of the PowerBI Dedicated resource.
@@ -130,8 +131,8 @@ public class AutoScaleVCore extends com.pulumi.resources.CustomResource {
      * @return Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    public Output</* @Nullable */ SystemDataResponse> systemData() {
-        return this.systemData;
+    public Output<Optional<SystemDataResponse>> systemData() {
+        return Codegen.optional(this.systemData);
     }
     /**
      * Key-value pairs of additional resource provisioning properties.
@@ -144,8 +145,8 @@ public class AutoScaleVCore extends com.pulumi.resources.CustomResource {
      * @return Key-value pairs of additional resource provisioning properties.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the PowerBI Dedicated resource.

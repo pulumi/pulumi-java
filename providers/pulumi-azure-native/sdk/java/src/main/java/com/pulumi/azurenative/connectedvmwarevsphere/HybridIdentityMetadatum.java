@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -86,8 +87,8 @@ public class HybridIdentityMetadatum extends com.pulumi.resources.CustomResource
      * @return Gets or sets the Public Key.
      * 
      */
-    public Output</* @Nullable */ String> publicKey() {
-        return this.publicKey;
+    public Output<Optional<String>> publicKey() {
+        return Codegen.optional(this.publicKey);
     }
     /**
      * The system data.
@@ -128,8 +129,8 @@ public class HybridIdentityMetadatum extends com.pulumi.resources.CustomResource
      * @return Gets or sets the Vm Id.
      * 
      */
-    public Output</* @Nullable */ String> vmId() {
-        return this.vmId;
+    public Output<Optional<String>> vmId() {
+        return Codegen.optional(this.vmId);
     }
 
     /**

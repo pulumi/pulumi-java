@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -56,8 +57,8 @@ public class SqlResourceSqlRoleAssignment extends com.pulumi.resources.CustomRes
      * @return The unique identifier for the associated AAD principal in the AAD graph to which access is being granted through this Role Assignment. Tenant ID for the principal is inferred using the tenant associated with the subscription.
      * 
      */
-    public Output</* @Nullable */ String> principalId() {
-        return this.principalId;
+    public Output<Optional<String>> principalId() {
+        return Codegen.optional(this.principalId);
     }
     /**
      * The unique identifier for the associated Role Definition.
@@ -70,8 +71,8 @@ public class SqlResourceSqlRoleAssignment extends com.pulumi.resources.CustomRes
      * @return The unique identifier for the associated Role Definition.
      * 
      */
-    public Output</* @Nullable */ String> roleDefinitionId() {
-        return this.roleDefinitionId;
+    public Output<Optional<String>> roleDefinitionId() {
+        return Codegen.optional(this.roleDefinitionId);
     }
     /**
      * The data plane resource path for which access is being granted through this Role Assignment.
@@ -84,8 +85,8 @@ public class SqlResourceSqlRoleAssignment extends com.pulumi.resources.CustomRes
      * @return The data plane resource path for which access is being granted through this Role Assignment.
      * 
      */
-    public Output</* @Nullable */ String> scope() {
-        return this.scope;
+    public Output<Optional<String>> scope() {
+        return Codegen.optional(this.scope);
     }
     /**
      * The type of Azure resource.

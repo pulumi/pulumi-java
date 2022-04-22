@@ -13,6 +13,7 @@ import com.pulumi.gcp.datacatalog.inputs.PolicyTagIamBindingState;
 import com.pulumi.gcp.datacatalog.outputs.PolicyTagIamBindingCondition;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -62,8 +63,8 @@ public class PolicyTagIamBinding extends com.pulumi.resources.CustomResource {
     @Export(name="condition", type=PolicyTagIamBindingCondition.class, parameters={})
     private Output</* @Nullable */ PolicyTagIamBindingCondition> condition;
 
-    public Output</* @Nullable */ PolicyTagIamBindingCondition> condition() {
-        return this.condition;
+    public Output<Optional<PolicyTagIamBindingCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * (Computed) The etag of the IAM policy.

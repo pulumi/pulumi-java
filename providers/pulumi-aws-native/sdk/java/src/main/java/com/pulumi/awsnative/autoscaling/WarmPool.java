@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -29,26 +30,26 @@ public class WarmPool extends com.pulumi.resources.CustomResource {
     @Export(name="instanceReusePolicy", type=WarmPoolInstanceReusePolicy.class, parameters={})
     private Output</* @Nullable */ WarmPoolInstanceReusePolicy> instanceReusePolicy;
 
-    public Output</* @Nullable */ WarmPoolInstanceReusePolicy> instanceReusePolicy() {
-        return this.instanceReusePolicy;
+    public Output<Optional<WarmPoolInstanceReusePolicy>> instanceReusePolicy() {
+        return Codegen.optional(this.instanceReusePolicy);
     }
     @Export(name="maxGroupPreparedCapacity", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxGroupPreparedCapacity;
 
-    public Output</* @Nullable */ Integer> maxGroupPreparedCapacity() {
-        return this.maxGroupPreparedCapacity;
+    public Output<Optional<Integer>> maxGroupPreparedCapacity() {
+        return Codegen.optional(this.maxGroupPreparedCapacity);
     }
     @Export(name="minSize", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> minSize;
 
-    public Output</* @Nullable */ Integer> minSize() {
-        return this.minSize;
+    public Output<Optional<Integer>> minSize() {
+        return Codegen.optional(this.minSize);
     }
     @Export(name="poolState", type=String.class, parameters={})
     private Output</* @Nullable */ String> poolState;
 
-    public Output</* @Nullable */ String> poolState() {
-        return this.poolState;
+    public Output<Optional<String>> poolState() {
+        return Codegen.optional(this.poolState);
     }
 
     /**

@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -50,8 +51,8 @@ public class SqlMigrationService extends com.pulumi.resources.CustomResource {
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
@@ -82,8 +83,8 @@ public class SqlMigrationService extends com.pulumi.resources.CustomResource {
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;

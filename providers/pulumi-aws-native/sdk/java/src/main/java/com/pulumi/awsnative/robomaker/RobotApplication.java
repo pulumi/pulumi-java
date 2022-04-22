@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -41,8 +42,8 @@ public class RobotApplication extends com.pulumi.resources.CustomResource {
      * @return The revision ID of robot application.
      * 
      */
-    public Output</* @Nullable */ String> currentRevisionId() {
-        return this.currentRevisionId;
+    public Output<Optional<String>> currentRevisionId() {
+        return Codegen.optional(this.currentRevisionId);
     }
     /**
      * The URI of the Docker image for the robot application.
@@ -55,8 +56,8 @@ public class RobotApplication extends com.pulumi.resources.CustomResource {
      * @return The URI of the Docker image for the robot application.
      * 
      */
-    public Output</* @Nullable */ String> environment() {
-        return this.environment;
+    public Output<Optional<String>> environment() {
+        return Codegen.optional(this.environment);
     }
     /**
      * The name of the robot application.
@@ -69,8 +70,8 @@ public class RobotApplication extends com.pulumi.resources.CustomResource {
      * @return The name of the robot application.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     @Export(name="robotSoftwareSuite", type=RobotApplicationRobotSoftwareSuite.class, parameters={})
     private Output<RobotApplicationRobotSoftwareSuite> robotSoftwareSuite;
@@ -89,14 +90,14 @@ public class RobotApplication extends com.pulumi.resources.CustomResource {
      * @return The sources of the robot application.
      * 
      */
-    public Output</* @Nullable */ List<RobotApplicationSourceConfig>> sources() {
-        return this.sources;
+    public Output<Optional<List<RobotApplicationSourceConfig>>> sources() {
+        return Codegen.optional(this.sources);
     }
     @Export(name="tags", type=RobotApplicationTags.class, parameters={})
     private Output</* @Nullable */ RobotApplicationTags> tags;
 
-    public Output</* @Nullable */ RobotApplicationTags> tags() {
-        return this.tags;
+    public Output<Optional<RobotApplicationTags>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

@@ -17,6 +17,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -61,8 +62,8 @@ public class ConfigurationStore extends com.pulumi.resources.CustomResource {
      * @return The encryption settings of the configuration store.
      * 
      */
-    public Output</* @Nullable */ EncryptionPropertiesResponse> encryption() {
-        return this.encryption;
+    public Output<Optional<EncryptionPropertiesResponse>> encryption() {
+        return Codegen.optional(this.encryption);
     }
     /**
      * The DNS endpoint where the configuration store API will be available.
@@ -89,8 +90,8 @@ public class ConfigurationStore extends com.pulumi.resources.CustomResource {
      * @return The managed identity information, if configured.
      * 
      */
-    public Output</* @Nullable */ ResourceIdentityResponse> identity() {
-        return this.identity;
+    public Output<Optional<ResourceIdentityResponse>> identity() {
+        return Codegen.optional(this.identity);
     }
     /**
      * The location of the resource. This cannot be changed after the resource is created.
@@ -159,8 +160,8 @@ public class ConfigurationStore extends com.pulumi.resources.CustomResource {
      * @return Control permission for data plane traffic coming from public networks while private endpoint is enabled.
      * 
      */
-    public Output</* @Nullable */ String> publicNetworkAccess() {
-        return this.publicNetworkAccess;
+    public Output<Optional<String>> publicNetworkAccess() {
+        return Codegen.optional(this.publicNetworkAccess);
     }
     /**
      * The sku of the configuration store.
@@ -187,8 +188,8 @@ public class ConfigurationStore extends com.pulumi.resources.CustomResource {
      * @return The tags of the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource.

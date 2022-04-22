@@ -14,6 +14,7 @@ import com.pulumi.gcp.compute.outputs.SecurityPolicyAdaptiveProtectionConfig;
 import com.pulumi.gcp.compute.outputs.SecurityPolicyRule;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -37,8 +38,8 @@ public class SecurityPolicy extends com.pulumi.resources.CustomResource {
      * @return Configuration for [Google Cloud Armor Adaptive Protection](https://cloud.google.com/armor/docs/adaptive-protection-overview?hl=en). Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ SecurityPolicyAdaptiveProtectionConfig> adaptiveProtectionConfig() {
-        return this.adaptiveProtectionConfig;
+    public Output<Optional<SecurityPolicyAdaptiveProtectionConfig>> adaptiveProtectionConfig() {
+        return Codegen.optional(this.adaptiveProtectionConfig);
     }
     /**
      * An optional description of this rule. Max size is 64.
@@ -51,8 +52,8 @@ public class SecurityPolicy extends com.pulumi.resources.CustomResource {
      * @return An optional description of this rule. Max size is 64.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Fingerprint of this resource.

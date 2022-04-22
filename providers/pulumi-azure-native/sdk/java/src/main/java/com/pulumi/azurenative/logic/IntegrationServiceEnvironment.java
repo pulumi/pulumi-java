@@ -16,6 +16,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class IntegrationServiceEnvironment extends com.pulumi.resources.CustomRe
      * @return Managed service identity properties.
      * 
      */
-    public Output</* @Nullable */ ManagedServiceIdentityResponse> identity() {
-        return this.identity;
+    public Output<Optional<ManagedServiceIdentityResponse>> identity() {
+        return Codegen.optional(this.identity);
     }
     /**
      * The resource location.
@@ -60,8 +61,8 @@ public class IntegrationServiceEnvironment extends com.pulumi.resources.CustomRe
      * @return The resource location.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * Gets the resource name.
@@ -102,8 +103,8 @@ public class IntegrationServiceEnvironment extends com.pulumi.resources.CustomRe
      * @return The sku.
      * 
      */
-    public Output</* @Nullable */ IntegrationServiceEnvironmentSkuResponse> sku() {
-        return this.sku;
+    public Output<Optional<IntegrationServiceEnvironmentSkuResponse>> sku() {
+        return Codegen.optional(this.sku);
     }
     /**
      * The resource tags.
@@ -116,8 +117,8 @@ public class IntegrationServiceEnvironment extends com.pulumi.resources.CustomRe
      * @return The resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Gets the resource type.

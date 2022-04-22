@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -42,8 +43,8 @@ public class ApiRelease extends com.pulumi.resources.CustomResource {
      * @return Identifier of the API the release belongs to.
      * 
      */
-    public Output</* @Nullable */ String> apiId() {
-        return this.apiId;
+    public Output<Optional<String>> apiId() {
+        return Codegen.optional(this.apiId);
     }
     /**
      * The time the API was released. The date conforms to the following format: yyyy-MM-ddTHH:mm:ssZ as specified by the ISO 8601 standard.
@@ -84,8 +85,8 @@ public class ApiRelease extends com.pulumi.resources.CustomResource {
      * @return Release Notes
      * 
      */
-    public Output</* @Nullable */ String> notes() {
-        return this.notes;
+    public Output<Optional<String>> notes() {
+        return Codegen.optional(this.notes);
     }
     /**
      * Resource type for API Management resource.

@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class Bot extends com.pulumi.resources.CustomResource {
      * @return Entity Tag
      * 
      */
-    public Output</* @Nullable */ String> etag() {
-        return this.etag;
+    public Output<Optional<String>> etag() {
+        return Codegen.optional(this.etag);
     }
     /**
      * Required. Gets or sets the Kind of the resource.
@@ -59,8 +60,8 @@ public class Bot extends com.pulumi.resources.CustomResource {
      * @return Required. Gets or sets the Kind of the resource.
      * 
      */
-    public Output</* @Nullable */ String> kind() {
-        return this.kind;
+    public Output<Optional<String>> kind() {
+        return Codegen.optional(this.kind);
     }
     /**
      * Specifies the location of the resource.
@@ -73,8 +74,8 @@ public class Bot extends com.pulumi.resources.CustomResource {
      * @return Specifies the location of the resource.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * Specifies the name of the resource.
@@ -115,8 +116,8 @@ public class Bot extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the SKU of the resource.
      * 
      */
-    public Output</* @Nullable */ SkuResponse> sku() {
-        return this.sku;
+    public Output<Optional<SkuResponse>> sku() {
+        return Codegen.optional(this.sku);
     }
     /**
      * Contains resource tags defined as key/value pairs.
@@ -129,8 +130,8 @@ public class Bot extends com.pulumi.resources.CustomResource {
      * @return Contains resource tags defined as key/value pairs.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Specifies the type of the resource.

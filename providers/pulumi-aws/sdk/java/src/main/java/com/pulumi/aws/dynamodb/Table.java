@@ -22,6 +22,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -81,8 +82,8 @@ public class Table extends com.pulumi.resources.CustomResource {
      * @return Controls how you are charged for read and write throughput and how you manage capacity. The valid values are `PROVISIONED` and `PAY_PER_REQUEST`. Defaults to `PROVISIONED`.
      * 
      */
-    public Output</* @Nullable */ String> billingMode() {
-        return this.billingMode;
+    public Output<Optional<String>> billingMode() {
+        return Codegen.optional(this.billingMode);
     }
     /**
      * Describe a GSI for the table;
@@ -99,8 +100,8 @@ public class Table extends com.pulumi.resources.CustomResource {
      * attributes, etc.
      * 
      */
-    public Output</* @Nullable */ List<TableGlobalSecondaryIndex>> globalSecondaryIndexes() {
-        return this.globalSecondaryIndexes;
+    public Output<Optional<List<TableGlobalSecondaryIndex>>> globalSecondaryIndexes() {
+        return Codegen.optional(this.globalSecondaryIndexes);
     }
     /**
      * The name of the hash key in the index; must be
@@ -133,8 +134,8 @@ public class Table extends com.pulumi.resources.CustomResource {
      * definition after you have created the resource.
      * 
      */
-    public Output</* @Nullable */ List<TableLocalSecondaryIndex>> localSecondaryIndexes() {
-        return this.localSecondaryIndexes;
+    public Output<Optional<List<TableLocalSecondaryIndex>>> localSecondaryIndexes() {
+        return Codegen.optional(this.localSecondaryIndexes);
     }
     /**
      * The name of the index
@@ -175,8 +176,8 @@ public class Table extends com.pulumi.resources.CustomResource {
      * @return The name of the range key; must be defined
      * 
      */
-    public Output</* @Nullable */ String> rangeKey() {
-        return this.rangeKey;
+    public Output<Optional<String>> rangeKey() {
+        return Codegen.optional(this.rangeKey);
     }
     /**
      * The number of read units for this index. Must be set if billing_mode is set to PROVISIONED.
@@ -203,8 +204,8 @@ public class Table extends com.pulumi.resources.CustomResource {
      * @return Configuration block(s) with [DynamoDB Global Tables V2 (version 2019.11.21)](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html) replication configurations. Detailed below.
      * 
      */
-    public Output</* @Nullable */ List<TableReplica>> replicas() {
-        return this.replicas;
+    public Output<Optional<List<TableReplica>>> replicas() {
+        return Codegen.optional(this.replicas);
     }
     /**
      * The time of the point-in-time recovery point to restore.
@@ -217,8 +218,8 @@ public class Table extends com.pulumi.resources.CustomResource {
      * @return The time of the point-in-time recovery point to restore.
      * 
      */
-    public Output</* @Nullable */ String> restoreDateTime() {
-        return this.restoreDateTime;
+    public Output<Optional<String>> restoreDateTime() {
+        return Codegen.optional(this.restoreDateTime);
     }
     /**
      * The name of the table to restore. Must match the name of an existing table.
@@ -231,8 +232,8 @@ public class Table extends com.pulumi.resources.CustomResource {
      * @return The name of the table to restore. Must match the name of an existing table.
      * 
      */
-    public Output</* @Nullable */ String> restoreSourceName() {
-        return this.restoreSourceName;
+    public Output<Optional<String>> restoreSourceName() {
+        return Codegen.optional(this.restoreSourceName);
     }
     /**
      * If set, restores table to the most recent point-in-time recovery point.
@@ -245,8 +246,8 @@ public class Table extends com.pulumi.resources.CustomResource {
      * @return If set, restores table to the most recent point-in-time recovery point.
      * 
      */
-    public Output</* @Nullable */ Boolean> restoreToLatestTime() {
-        return this.restoreToLatestTime;
+    public Output<Optional<Boolean>> restoreToLatestTime() {
+        return Codegen.optional(this.restoreToLatestTime);
     }
     /**
      * Encryption at rest options. AWS DynamoDB tables are automatically encrypted at rest with an AWS owned Customer Master Key if this argument isn&#39;t specified.
@@ -287,8 +288,8 @@ public class Table extends com.pulumi.resources.CustomResource {
      * @return Indicates whether Streams are to be enabled (true) or disabled (false).
      * 
      */
-    public Output</* @Nullable */ Boolean> streamEnabled() {
-        return this.streamEnabled;
+    public Output<Optional<Boolean>> streamEnabled() {
+        return Codegen.optional(this.streamEnabled);
     }
     /**
      * A timestamp, in ISO 8601 format, for this stream. Note that this timestamp is not
@@ -335,8 +336,8 @@ public class Table extends com.pulumi.resources.CustomResource {
      * @return The storage class of the table. Valid values are `STANDARD` and `STANDARD_INFREQUENT_ACCESS`.
      * 
      */
-    public Output</* @Nullable */ String> tableClass() {
-        return this.tableClass;
+    public Output<Optional<String>> tableClass() {
+        return Codegen.optional(this.tableClass);
     }
     /**
      * A map of tags to populate on the created table. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -349,8 +350,8 @@ public class Table extends com.pulumi.resources.CustomResource {
      * @return A map of tags to populate on the created table. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

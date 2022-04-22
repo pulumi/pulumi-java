@@ -18,6 +18,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -48,8 +49,8 @@ public class PrivateEndpoint extends com.pulumi.resources.CustomResource {
      * @return An array of custom dns configurations.
      * 
      */
-    public Output</* @Nullable */ List<CustomDnsConfigPropertiesFormatResponse>> customDnsConfigs() {
-        return this.customDnsConfigs;
+    public Output<Optional<List<CustomDnsConfigPropertiesFormatResponse>>> customDnsConfigs() {
+        return Codegen.optional(this.customDnsConfigs);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
@@ -76,8 +77,8 @@ public class PrivateEndpoint extends com.pulumi.resources.CustomResource {
      * @return The extended location of the load balancer.
      * 
      */
-    public Output</* @Nullable */ ExtendedLocationResponse> extendedLocation() {
-        return this.extendedLocation;
+    public Output<Optional<ExtendedLocationResponse>> extendedLocation() {
+        return Codegen.optional(this.extendedLocation);
     }
     /**
      * Resource location.
@@ -90,8 +91,8 @@ public class PrivateEndpoint extends com.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * A grouping of information about the connection to the remote resource. Used when the network admin does not have access to approve connections to the remote resource.
@@ -104,8 +105,8 @@ public class PrivateEndpoint extends com.pulumi.resources.CustomResource {
      * @return A grouping of information about the connection to the remote resource. Used when the network admin does not have access to approve connections to the remote resource.
      * 
      */
-    public Output</* @Nullable */ List<PrivateLinkServiceConnectionResponse>> manualPrivateLinkServiceConnections() {
-        return this.manualPrivateLinkServiceConnections;
+    public Output<Optional<List<PrivateLinkServiceConnectionResponse>>> manualPrivateLinkServiceConnections() {
+        return Codegen.optional(this.manualPrivateLinkServiceConnections);
     }
     /**
      * Resource name.
@@ -146,8 +147,8 @@ public class PrivateEndpoint extends com.pulumi.resources.CustomResource {
      * @return A grouping of information about the connection to the remote resource.
      * 
      */
-    public Output</* @Nullable */ List<PrivateLinkServiceConnectionResponse>> privateLinkServiceConnections() {
-        return this.privateLinkServiceConnections;
+    public Output<Optional<List<PrivateLinkServiceConnectionResponse>>> privateLinkServiceConnections() {
+        return Codegen.optional(this.privateLinkServiceConnections);
     }
     /**
      * The provisioning state of the private endpoint resource.
@@ -174,8 +175,8 @@ public class PrivateEndpoint extends com.pulumi.resources.CustomResource {
      * @return The ID of the subnet from which the private IP will be allocated.
      * 
      */
-    public Output</* @Nullable */ SubnetResponse> subnet() {
-        return this.subnet;
+    public Output<Optional<SubnetResponse>> subnet() {
+        return Codegen.optional(this.subnet);
     }
     /**
      * Resource tags.
@@ -188,8 +189,8 @@ public class PrivateEndpoint extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type.

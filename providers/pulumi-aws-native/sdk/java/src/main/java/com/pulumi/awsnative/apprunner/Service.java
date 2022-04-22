@@ -16,6 +16,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -35,26 +36,26 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return Autoscaling configuration ARN
      * 
      */
-    public Output</* @Nullable */ String> autoScalingConfigurationArn() {
-        return this.autoScalingConfigurationArn;
+    public Output<Optional<String>> autoScalingConfigurationArn() {
+        return Codegen.optional(this.autoScalingConfigurationArn);
     }
     @Export(name="encryptionConfiguration", type=ServiceEncryptionConfiguration.class, parameters={})
     private Output</* @Nullable */ ServiceEncryptionConfiguration> encryptionConfiguration;
 
-    public Output</* @Nullable */ ServiceEncryptionConfiguration> encryptionConfiguration() {
-        return this.encryptionConfiguration;
+    public Output<Optional<ServiceEncryptionConfiguration>> encryptionConfiguration() {
+        return Codegen.optional(this.encryptionConfiguration);
     }
     @Export(name="healthCheckConfiguration", type=ServiceHealthCheckConfiguration.class, parameters={})
     private Output</* @Nullable */ ServiceHealthCheckConfiguration> healthCheckConfiguration;
 
-    public Output</* @Nullable */ ServiceHealthCheckConfiguration> healthCheckConfiguration() {
-        return this.healthCheckConfiguration;
+    public Output<Optional<ServiceHealthCheckConfiguration>> healthCheckConfiguration() {
+        return Codegen.optional(this.healthCheckConfiguration);
     }
     @Export(name="instanceConfiguration", type=ServiceInstanceConfiguration.class, parameters={})
     private Output</* @Nullable */ ServiceInstanceConfiguration> instanceConfiguration;
 
-    public Output</* @Nullable */ ServiceInstanceConfiguration> instanceConfiguration() {
-        return this.instanceConfiguration;
+    public Output<Optional<ServiceInstanceConfiguration>> instanceConfiguration() {
+        return Codegen.optional(this.instanceConfiguration);
     }
     /**
      * The Amazon Resource Name (ARN) of the AppRunner Service.
@@ -95,8 +96,8 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return The AppRunner Service Name.
      * 
      */
-    public Output</* @Nullable */ String> serviceName() {
-        return this.serviceName;
+    public Output<Optional<String>> serviceName() {
+        return Codegen.optional(this.serviceName);
     }
     /**
      * The Service Url of the AppRunner Service.
@@ -135,8 +136,8 @@ public class Service extends com.pulumi.resources.CustomResource {
     @Export(name="tags", type=List.class, parameters={ServiceTag.class})
     private Output</* @Nullable */ List<ServiceTag>> tags;
 
-    public Output</* @Nullable */ List<ServiceTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<ServiceTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

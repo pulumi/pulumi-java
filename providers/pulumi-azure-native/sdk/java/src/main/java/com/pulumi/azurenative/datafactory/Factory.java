@@ -19,6 +19,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -77,8 +78,8 @@ public class Factory extends com.pulumi.resources.CustomResource {
      * @return Properties to enable Customer Managed Key for the factory.
      * 
      */
-    public Output</* @Nullable */ EncryptionConfigurationResponse> encryption() {
-        return this.encryption;
+    public Output<Optional<EncryptionConfigurationResponse>> encryption() {
+        return Codegen.optional(this.encryption);
     }
     /**
      * List of parameters for factory.
@@ -91,8 +92,8 @@ public class Factory extends com.pulumi.resources.CustomResource {
      * @return List of parameters for factory.
      * 
      */
-    public Output</* @Nullable */ Map<String,GlobalParameterSpecificationResponse>> globalParameters() {
-        return this.globalParameters;
+    public Output<Optional<Map<String,GlobalParameterSpecificationResponse>>> globalParameters() {
+        return Codegen.optional(this.globalParameters);
     }
     /**
      * Managed service identity of the factory.
@@ -105,8 +106,8 @@ public class Factory extends com.pulumi.resources.CustomResource {
      * @return Managed service identity of the factory.
      * 
      */
-    public Output</* @Nullable */ FactoryIdentityResponse> identity() {
-        return this.identity;
+    public Output<Optional<FactoryIdentityResponse>> identity() {
+        return Codegen.optional(this.identity);
     }
     /**
      * The resource location.
@@ -119,8 +120,8 @@ public class Factory extends com.pulumi.resources.CustomResource {
      * @return The resource location.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The resource name.
@@ -161,8 +162,8 @@ public class Factory extends com.pulumi.resources.CustomResource {
      * @return Whether or not public network access is allowed for the data factory.
      * 
      */
-    public Output</* @Nullable */ String> publicNetworkAccess() {
-        return this.publicNetworkAccess;
+    public Output<Optional<String>> publicNetworkAccess() {
+        return Codegen.optional(this.publicNetworkAccess);
     }
     /**
      * Git repo information of the factory.
@@ -175,8 +176,8 @@ public class Factory extends com.pulumi.resources.CustomResource {
      * @return Git repo information of the factory.
      * 
      */
-    public Output</* @Nullable */ Either<FactoryGitHubConfigurationResponse,FactoryVSTSConfigurationResponse>> repoConfiguration() {
-        return this.repoConfiguration;
+    public Output<Optional<Either<FactoryGitHubConfigurationResponse,FactoryVSTSConfigurationResponse>>> repoConfiguration() {
+        return Codegen.optional(this.repoConfiguration);
     }
     /**
      * The resource tags.
@@ -189,8 +190,8 @@ public class Factory extends com.pulumi.resources.CustomResource {
      * @return The resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The resource type.

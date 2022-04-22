@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -69,8 +70,8 @@ public class LogDestinationPolicy extends com.pulumi.resources.CustomResource {
      * @return Specify true if you are updating an existing destination policy to grant permission to an organization ID instead of granting permission to individual AWS accounts.
      * 
      */
-    public Output</* @Nullable */ Boolean> forceUpdate() {
-        return this.forceUpdate;
+    public Output<Optional<Boolean>> forceUpdate() {
+        return Codegen.optional(this.forceUpdate);
     }
 
     /**

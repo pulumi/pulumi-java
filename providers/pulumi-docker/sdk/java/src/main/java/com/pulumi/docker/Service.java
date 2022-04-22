@@ -20,6 +20,7 @@ import com.pulumi.docker.outputs.ServiceTaskSpec;
 import com.pulumi.docker.outputs.ServiceUpdateConfig;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -71,8 +72,8 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return Configuration for the authentication for pulling the images of the service
      * 
      */
-    public Output</* @Nullable */ ServiceAuth> auth() {
-        return this.auth;
+    public Output<Optional<ServiceAuth>> auth() {
+        return Codegen.optional(this.auth);
     }
     /**
      * A configuration to ensure that a service converges aka reaches the desired that of all task up and running
@@ -85,8 +86,8 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return A configuration to ensure that a service converges aka reaches the desired that of all task up and running
      * 
      */
-    public Output</* @Nullable */ ServiceConvergeConfig> convergeConfig() {
-        return this.convergeConfig;
+    public Output<Optional<ServiceConvergeConfig>> convergeConfig() {
+        return Codegen.optional(this.convergeConfig);
     }
     /**
      * Properties that can be configured to access and load balance a service
@@ -155,8 +156,8 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return Specification for the rollback strategy of the service
      * 
      */
-    public Output</* @Nullable */ ServiceRollbackConfig> rollbackConfig() {
-        return this.rollbackConfig;
+    public Output<Optional<ServiceRollbackConfig>> rollbackConfig() {
+        return Codegen.optional(this.rollbackConfig);
     }
     /**
      * User modifiable task configuration
@@ -183,8 +184,8 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return Specification for the update strategy of the service
      * 
      */
-    public Output</* @Nullable */ ServiceUpdateConfig> updateConfig() {
-        return this.updateConfig;
+    public Output<Optional<ServiceUpdateConfig>> updateConfig() {
+        return Codegen.optional(this.updateConfig);
     }
 
     /**

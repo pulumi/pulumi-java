@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -70,8 +71,8 @@ public class DataMaskingPolicy extends com.pulumi.resources.CustomResource {
      * @return The list of the exempt principals. Specifies the semicolon-separated list of database users for which the data masking policy does not apply. The specified users receive data results without masking for all of the database queries.
      * 
      */
-    public Output</* @Nullable */ String> exemptPrincipals() {
-        return this.exemptPrincipals;
+    public Output<Optional<String>> exemptPrincipals() {
+        return Codegen.optional(this.exemptPrincipals);
     }
     /**
      * The kind of data masking policy. Metadata, used for Azure portal.

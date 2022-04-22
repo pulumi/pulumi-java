@@ -12,6 +12,7 @@ import com.pulumi.gcp.healthcare.Hl7StoreIamMemberArgs;
 import com.pulumi.gcp.healthcare.inputs.Hl7StoreIamMemberState;
 import com.pulumi.gcp.healthcare.outputs.Hl7StoreIamMemberCondition;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -63,8 +64,8 @@ public class Hl7StoreIamMember extends com.pulumi.resources.CustomResource {
     @Export(name="condition", type=Hl7StoreIamMemberCondition.class, parameters={})
     private Output</* @Nullable */ Hl7StoreIamMemberCondition> condition;
 
-    public Output</* @Nullable */ Hl7StoreIamMemberCondition> condition() {
-        return this.condition;
+    public Output<Optional<Hl7StoreIamMemberCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * (Computed) The etag of the HL7v2 store&#39;s IAM policy.

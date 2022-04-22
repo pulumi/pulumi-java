@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class B2CTenant extends com.pulumi.resources.CustomResource {
      * @return The billing configuration for the tenant.
      * 
      */
-    public Output</* @Nullable */ B2CTenantResourcePropertiesResponseBillingConfig> billingConfig() {
-        return this.billingConfig;
+    public Output<Optional<B2CTenantResourcePropertiesResponseBillingConfig>> billingConfig() {
+        return Codegen.optional(this.billingConfig);
     }
     /**
      * The location in which the resource is hosted and data resides. Can be one of &#39;United States&#39;, &#39;Europe&#39;, &#39;Asia Pacific&#39;, or &#39;Australia&#39; (preview). Refer to [this documentation](https://aka.ms/B2CDataResidency) for more information.
@@ -100,8 +101,8 @@ public class B2CTenant extends com.pulumi.resources.CustomResource {
      * @return Resource Tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * An identifier of the B2C tenant.
@@ -114,8 +115,8 @@ public class B2CTenant extends com.pulumi.resources.CustomResource {
      * @return An identifier of the B2C tenant.
      * 
      */
-    public Output</* @Nullable */ String> tenantId() {
-        return this.tenantId;
+    public Output<Optional<String>> tenantId() {
+        return Codegen.optional(this.tenantId);
     }
     /**
      * The type of the B2C tenant resource.

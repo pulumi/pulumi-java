@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -25,20 +26,20 @@ public class ProvisioningTemplate extends com.pulumi.resources.CustomResource {
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     @Export(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
-    public Output</* @Nullable */ Boolean> enabled() {
-        return this.enabled;
+    public Output<Optional<Boolean>> enabled() {
+        return Codegen.optional(this.enabled);
     }
     @Export(name="preProvisioningHook", type=ProvisioningTemplateProvisioningHook.class, parameters={})
     private Output</* @Nullable */ ProvisioningTemplateProvisioningHook> preProvisioningHook;
 
-    public Output</* @Nullable */ ProvisioningTemplateProvisioningHook> preProvisioningHook() {
-        return this.preProvisioningHook;
+    public Output<Optional<ProvisioningTemplateProvisioningHook>> preProvisioningHook() {
+        return Codegen.optional(this.preProvisioningHook);
     }
     @Export(name="provisioningRoleArn", type=String.class, parameters={})
     private Output<String> provisioningRoleArn;
@@ -49,8 +50,8 @@ public class ProvisioningTemplate extends com.pulumi.resources.CustomResource {
     @Export(name="tags", type=List.class, parameters={ProvisioningTemplateTag.class})
     private Output</* @Nullable */ List<ProvisioningTemplateTag>> tags;
 
-    public Output</* @Nullable */ List<ProvisioningTemplateTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<ProvisioningTemplateTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     @Export(name="templateArn", type=String.class, parameters={})
     private Output<String> templateArn;
@@ -67,8 +68,8 @@ public class ProvisioningTemplate extends com.pulumi.resources.CustomResource {
     @Export(name="templateName", type=String.class, parameters={})
     private Output</* @Nullable */ String> templateName;
 
-    public Output</* @Nullable */ String> templateName() {
-        return this.templateName;
+    public Output<Optional<String>> templateName() {
+        return Codegen.optional(this.templateName);
     }
 
     /**

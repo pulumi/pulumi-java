@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -33,14 +34,14 @@ public class Keyspace extends com.pulumi.resources.CustomResource {
      * @return Name for Cassandra keyspace
      * 
      */
-    public Output</* @Nullable */ String> keyspaceName() {
-        return this.keyspaceName;
+    public Output<Optional<String>> keyspaceName() {
+        return Codegen.optional(this.keyspaceName);
     }
     @Export(name="tags", type=List.class, parameters={KeyspaceTag.class})
     private Output</* @Nullable */ List<KeyspaceTag>> tags;
 
-    public Output</* @Nullable */ List<KeyspaceTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<KeyspaceTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

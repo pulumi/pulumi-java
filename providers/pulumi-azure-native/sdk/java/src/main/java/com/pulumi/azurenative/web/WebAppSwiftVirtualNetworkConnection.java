@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -41,8 +42,8 @@ public class WebAppSwiftVirtualNetworkConnection extends com.pulumi.resources.Cu
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> kind() {
-        return this.kind;
+    public Output<Optional<String>> kind() {
+        return Codegen.optional(this.kind);
     }
     /**
      * Resource Name.
@@ -69,8 +70,8 @@ public class WebAppSwiftVirtualNetworkConnection extends com.pulumi.resources.Cu
      * @return The Virtual Network subnet&#39;s resource ID. This is the subnet that this Web App will join. This subnet must have a delegation to Microsoft.Web/serverFarms defined first.
      * 
      */
-    public Output</* @Nullable */ String> subnetResourceId() {
-        return this.subnetResourceId;
+    public Output<Optional<String>> subnetResourceId() {
+        return Codegen.optional(this.subnetResourceId);
     }
     /**
      * A flag that specifies if the scale unit this Web App is on supports Swift integration.
@@ -83,8 +84,8 @@ public class WebAppSwiftVirtualNetworkConnection extends com.pulumi.resources.Cu
      * @return A flag that specifies if the scale unit this Web App is on supports Swift integration.
      * 
      */
-    public Output</* @Nullable */ Boolean> swiftSupported() {
-        return this.swiftSupported;
+    public Output<Optional<Boolean>> swiftSupported() {
+        return Codegen.optional(this.swiftSupported);
     }
     /**
      * The system metadata relating to this resource.

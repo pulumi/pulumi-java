@@ -14,6 +14,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -105,8 +106,8 @@ public class Volume extends com.pulumi.resources.CustomResource {
      * @return Specifies whether to enable Amazon EBS Multi-Attach. Multi-Attach is supported exclusively on `io1` volumes.
      * 
      */
-    public Output</* @Nullable */ Boolean> multiAttachEnabled() {
-        return this.multiAttachEnabled;
+    public Output<Optional<Boolean>> multiAttachEnabled() {
+        return Codegen.optional(this.multiAttachEnabled);
     }
     /**
      * The Amazon Resource Name (ARN) of the Outpost.
@@ -119,8 +120,8 @@ public class Volume extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the Outpost.
      * 
      */
-    public Output</* @Nullable */ String> outpostArn() {
-        return this.outpostArn;
+    public Output<Optional<String>> outpostArn() {
+        return Codegen.optional(this.outpostArn);
     }
     /**
      * The size of the drive in GiBs.
@@ -161,8 +162,8 @@ public class Volume extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.

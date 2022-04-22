@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -73,8 +74,8 @@ public class ACL extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this cluster.
      * 
      */
-    public Output</* @Nullable */ List<ACLTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<ACLTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * List of users associated to this acl.
@@ -87,8 +88,8 @@ public class ACL extends com.pulumi.resources.CustomResource {
      * @return List of users associated to this acl.
      * 
      */
-    public Output</* @Nullable */ List<String>> userNames() {
-        return this.userNames;
+    public Output<Optional<List<String>>> userNames() {
+        return Codegen.optional(this.userNames);
     }
 
     /**

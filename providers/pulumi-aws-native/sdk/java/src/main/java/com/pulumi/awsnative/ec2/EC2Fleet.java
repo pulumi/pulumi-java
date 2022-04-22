@@ -19,6 +19,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -30,14 +31,14 @@ public class EC2Fleet extends com.pulumi.resources.CustomResource {
     @Export(name="context", type=String.class, parameters={})
     private Output</* @Nullable */ String> context;
 
-    public Output</* @Nullable */ String> context() {
-        return this.context;
+    public Output<Optional<String>> context() {
+        return Codegen.optional(this.context);
     }
     @Export(name="excessCapacityTerminationPolicy", type=EC2FleetExcessCapacityTerminationPolicy.class, parameters={})
     private Output</* @Nullable */ EC2FleetExcessCapacityTerminationPolicy> excessCapacityTerminationPolicy;
 
-    public Output</* @Nullable */ EC2FleetExcessCapacityTerminationPolicy> excessCapacityTerminationPolicy() {
-        return this.excessCapacityTerminationPolicy;
+    public Output<Optional<EC2FleetExcessCapacityTerminationPolicy>> excessCapacityTerminationPolicy() {
+        return Codegen.optional(this.excessCapacityTerminationPolicy);
     }
     @Export(name="fleetId", type=String.class, parameters={})
     private Output<String> fleetId;
@@ -54,26 +55,26 @@ public class EC2Fleet extends com.pulumi.resources.CustomResource {
     @Export(name="onDemandOptions", type=EC2FleetOnDemandOptionsRequest.class, parameters={})
     private Output</* @Nullable */ EC2FleetOnDemandOptionsRequest> onDemandOptions;
 
-    public Output</* @Nullable */ EC2FleetOnDemandOptionsRequest> onDemandOptions() {
-        return this.onDemandOptions;
+    public Output<Optional<EC2FleetOnDemandOptionsRequest>> onDemandOptions() {
+        return Codegen.optional(this.onDemandOptions);
     }
     @Export(name="replaceUnhealthyInstances", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> replaceUnhealthyInstances;
 
-    public Output</* @Nullable */ Boolean> replaceUnhealthyInstances() {
-        return this.replaceUnhealthyInstances;
+    public Output<Optional<Boolean>> replaceUnhealthyInstances() {
+        return Codegen.optional(this.replaceUnhealthyInstances);
     }
     @Export(name="spotOptions", type=EC2FleetSpotOptionsRequest.class, parameters={})
     private Output</* @Nullable */ EC2FleetSpotOptionsRequest> spotOptions;
 
-    public Output</* @Nullable */ EC2FleetSpotOptionsRequest> spotOptions() {
-        return this.spotOptions;
+    public Output<Optional<EC2FleetSpotOptionsRequest>> spotOptions() {
+        return Codegen.optional(this.spotOptions);
     }
     @Export(name="tagSpecifications", type=List.class, parameters={EC2FleetTagSpecification.class})
     private Output</* @Nullable */ List<EC2FleetTagSpecification>> tagSpecifications;
 
-    public Output</* @Nullable */ List<EC2FleetTagSpecification>> tagSpecifications() {
-        return this.tagSpecifications;
+    public Output<Optional<List<EC2FleetTagSpecification>>> tagSpecifications() {
+        return Codegen.optional(this.tagSpecifications);
     }
     @Export(name="targetCapacitySpecification", type=EC2FleetTargetCapacitySpecificationRequest.class, parameters={})
     private Output<EC2FleetTargetCapacitySpecificationRequest> targetCapacitySpecification;
@@ -84,26 +85,26 @@ public class EC2Fleet extends com.pulumi.resources.CustomResource {
     @Export(name="terminateInstancesWithExpiration", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> terminateInstancesWithExpiration;
 
-    public Output</* @Nullable */ Boolean> terminateInstancesWithExpiration() {
-        return this.terminateInstancesWithExpiration;
+    public Output<Optional<Boolean>> terminateInstancesWithExpiration() {
+        return Codegen.optional(this.terminateInstancesWithExpiration);
     }
     @Export(name="type", type=EC2FleetType.class, parameters={})
     private Output</* @Nullable */ EC2FleetType> type;
 
-    public Output</* @Nullable */ EC2FleetType> type() {
-        return this.type;
+    public Output<Optional<EC2FleetType>> type() {
+        return Codegen.optional(this.type);
     }
     @Export(name="validFrom", type=String.class, parameters={})
     private Output</* @Nullable */ String> validFrom;
 
-    public Output</* @Nullable */ String> validFrom() {
-        return this.validFrom;
+    public Output<Optional<String>> validFrom() {
+        return Codegen.optional(this.validFrom);
     }
     @Export(name="validUntil", type=String.class, parameters={})
     private Output</* @Nullable */ String> validUntil;
 
-    public Output</* @Nullable */ String> validUntil() {
-        return this.validUntil;
+    public Output<Optional<String>> validUntil() {
+        return Codegen.optional(this.validUntil);
     }
 
     /**

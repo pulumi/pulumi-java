@@ -12,6 +12,7 @@ import com.pulumi.gcp.sql.SourceRepresentationInstanceArgs;
 import com.pulumi.gcp.sql.inputs.SourceRepresentationInstanceState;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -99,8 +100,8 @@ public class SourceRepresentationInstance extends com.pulumi.resources.CustomRes
      * Defaults to 3306.
      * 
      */
-    public Output</* @Nullable */ Integer> port() {
-        return this.port;
+    public Output<Optional<Integer>> port() {
+        return Codegen.optional(this.port);
     }
     /**
      * The ID of the project in which the resource belongs.

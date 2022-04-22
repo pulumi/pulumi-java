@@ -15,6 +15,7 @@ import com.pulumi.gcp.logging.outputs.ProjectSinkExclusion;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -54,8 +55,8 @@ public class ProjectSink extends com.pulumi.resources.CustomResource {
      * @return A description of this exclusion.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The destination of the sink (or, in other words, where logs are written to). Can be a
@@ -88,8 +89,8 @@ public class ProjectSink extends com.pulumi.resources.CustomResource {
      * @return If set to True, then this exclusion is disabled and it does not exclude any log entries.
      * 
      */
-    public Output</* @Nullable */ Boolean> disabled() {
-        return this.disabled;
+    public Output<Optional<Boolean>> disabled() {
+        return Codegen.optional(this.disabled);
     }
     /**
      * Log entries that match any of the exclusion filters will not be exported. If a log entry is matched by both filter and one of exclusion_filters it will not be exported.  Can be repeated multiple times for multiple exclusions. Structure is documented below.
@@ -102,8 +103,8 @@ public class ProjectSink extends com.pulumi.resources.CustomResource {
      * @return Log entries that match any of the exclusion filters will not be exported. If a log entry is matched by both filter and one of exclusion_filters it will not be exported.  Can be repeated multiple times for multiple exclusions. Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<ProjectSinkExclusion>> exclusions() {
-        return this.exclusions;
+    public Output<Optional<List<ProjectSinkExclusion>>> exclusions() {
+        return Codegen.optional(this.exclusions);
     }
     /**
      * An advanced logs filter that matches the log entries to be excluded. By using the sample function, you can exclude less than 100% of the matching log entries. See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced_filters) for information on how to
@@ -118,8 +119,8 @@ public class ProjectSink extends com.pulumi.resources.CustomResource {
      * write a filter.
      * 
      */
-    public Output</* @Nullable */ String> filter() {
-        return this.filter;
+    public Output<Optional<String>> filter() {
+        return Codegen.optional(this.filter);
     }
     /**
      * A client-assigned identifier, such as `load-balancer-exclusion`. Identifiers are limited to 100 characters and can include only letters, digits, underscores, hyphens, and periods. First character has to be alphanumeric.
@@ -168,8 +169,8 @@ public class ProjectSink extends com.pulumi.resources.CustomResource {
      * `bigquery_options`, you must set `unique_writer_identity` to true.
      * 
      */
-    public Output</* @Nullable */ Boolean> uniqueWriterIdentity() {
-        return this.uniqueWriterIdentity;
+    public Output<Optional<Boolean>> uniqueWriterIdentity() {
+        return Codegen.optional(this.uniqueWriterIdentity);
     }
     /**
      * The identity associated with this sink. This identity must be granted write access to the

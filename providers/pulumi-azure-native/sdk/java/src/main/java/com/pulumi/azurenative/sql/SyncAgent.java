@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -113,8 +114,8 @@ public class SyncAgent extends com.pulumi.resources.CustomResource {
      * @return ARM resource id of the sync database in the sync agent.
      * 
      */
-    public Output</* @Nullable */ String> syncDatabaseId() {
-        return this.syncDatabaseId;
+    public Output<Optional<String>> syncDatabaseId() {
+        return Codegen.optional(this.syncDatabaseId);
     }
     /**
      * Resource type.

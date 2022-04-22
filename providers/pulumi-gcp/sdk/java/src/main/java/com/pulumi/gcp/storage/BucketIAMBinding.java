@@ -13,6 +13,7 @@ import com.pulumi.gcp.storage.inputs.BucketIAMBindingState;
 import com.pulumi.gcp.storage.outputs.BucketIAMBindingCondition;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -90,8 +91,8 @@ public class BucketIAMBinding extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ BucketIAMBindingCondition> condition() {
-        return this.condition;
+    public Output<Optional<BucketIAMBindingCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * (Computed) The etag of the IAM policy.

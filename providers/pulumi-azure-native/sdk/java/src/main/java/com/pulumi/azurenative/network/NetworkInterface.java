@@ -22,6 +22,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -52,8 +53,8 @@ public class NetworkInterface extends com.pulumi.resources.CustomResource {
      * @return The DNS settings in network interface.
      * 
      */
-    public Output</* @Nullable */ NetworkInterfaceDnsSettingsResponse> dnsSettings() {
-        return this.dnsSettings;
+    public Output<Optional<NetworkInterfaceDnsSettingsResponse>> dnsSettings() {
+        return Codegen.optional(this.dnsSettings);
     }
     /**
      * A reference to the dscp configuration to which the network interface is linked.
@@ -80,8 +81,8 @@ public class NetworkInterface extends com.pulumi.resources.CustomResource {
      * @return If the network interface is accelerated networking enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableAcceleratedNetworking() {
-        return this.enableAcceleratedNetworking;
+    public Output<Optional<Boolean>> enableAcceleratedNetworking() {
+        return Codegen.optional(this.enableAcceleratedNetworking);
     }
     /**
      * Indicates whether IP forwarding is enabled on this network interface.
@@ -94,8 +95,8 @@ public class NetworkInterface extends com.pulumi.resources.CustomResource {
      * @return Indicates whether IP forwarding is enabled on this network interface.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableIPForwarding() {
-        return this.enableIPForwarding;
+    public Output<Optional<Boolean>> enableIPForwarding() {
+        return Codegen.optional(this.enableIPForwarding);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
@@ -122,8 +123,8 @@ public class NetworkInterface extends com.pulumi.resources.CustomResource {
      * @return The extended location of the network interface.
      * 
      */
-    public Output</* @Nullable */ ExtendedLocationResponse> extendedLocation() {
-        return this.extendedLocation;
+    public Output<Optional<ExtendedLocationResponse>> extendedLocation() {
+        return Codegen.optional(this.extendedLocation);
     }
     /**
      * A list of references to linked BareMetal resources.
@@ -150,8 +151,8 @@ public class NetworkInterface extends com.pulumi.resources.CustomResource {
      * @return A list of IPConfigurations of the network interface.
      * 
      */
-    public Output</* @Nullable */ List<NetworkInterfaceIPConfigurationResponse>> ipConfigurations() {
-        return this.ipConfigurations;
+    public Output<Optional<List<NetworkInterfaceIPConfigurationResponse>>> ipConfigurations() {
+        return Codegen.optional(this.ipConfigurations);
     }
     /**
      * Resource location.
@@ -164,8 +165,8 @@ public class NetworkInterface extends com.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The MAC address of the network interface.
@@ -192,8 +193,8 @@ public class NetworkInterface extends com.pulumi.resources.CustomResource {
      * @return Migration phase of Network Interface resource.
      * 
      */
-    public Output</* @Nullable */ String> migrationPhase() {
-        return this.migrationPhase;
+    public Output<Optional<String>> migrationPhase() {
+        return Codegen.optional(this.migrationPhase);
     }
     /**
      * Resource name.
@@ -220,8 +221,8 @@ public class NetworkInterface extends com.pulumi.resources.CustomResource {
      * @return The reference to the NetworkSecurityGroup resource.
      * 
      */
-    public Output</* @Nullable */ NetworkSecurityGroupResponse> networkSecurityGroup() {
-        return this.networkSecurityGroup;
+    public Output<Optional<NetworkSecurityGroupResponse>> networkSecurityGroup() {
+        return Codegen.optional(this.networkSecurityGroup);
     }
     /**
      * Type of Network Interface resource.
@@ -234,8 +235,8 @@ public class NetworkInterface extends com.pulumi.resources.CustomResource {
      * @return Type of Network Interface resource.
      * 
      */
-    public Output</* @Nullable */ String> nicType() {
-        return this.nicType;
+    public Output<Optional<String>> nicType() {
+        return Codegen.optional(this.nicType);
     }
     /**
      * Whether this is a primary network interface on a virtual machine.
@@ -276,8 +277,8 @@ public class NetworkInterface extends com.pulumi.resources.CustomResource {
      * @return Privatelinkservice of the network interface resource.
      * 
      */
-    public Output</* @Nullable */ PrivateLinkServiceResponse> privateLinkService() {
-        return this.privateLinkService;
+    public Output<Optional<PrivateLinkServiceResponse>> privateLinkService() {
+        return Codegen.optional(this.privateLinkService);
     }
     /**
      * The provisioning state of the network interface resource.
@@ -318,8 +319,8 @@ public class NetworkInterface extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A list of TapConfigurations of the network interface.

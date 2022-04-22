@@ -16,6 +16,7 @@ import com.pulumi.gcp.monitoring.outputs.SloWindowsBasedSli;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -70,8 +71,8 @@ public class Slo extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ SloBasicSli> basicSli() {
-        return this.basicSli;
+    public Output<Optional<SloBasicSli>> basicSli() {
+        return Codegen.optional(this.basicSli);
     }
     /**
      * A calendar period, semantically &#34;since the start of the current
@@ -88,8 +89,8 @@ public class Slo extends com.pulumi.resources.CustomResource {
      * Possible values are `DAY`, `WEEK`, `FORTNIGHT`, and `MONTH`.
      * 
      */
-    public Output</* @Nullable */ String> calendarPeriod() {
-        return this.calendarPeriod;
+    public Output<Optional<String>> calendarPeriod() {
+        return Codegen.optional(this.calendarPeriod);
     }
     /**
      * Name used for UI elements listing this SLO.
@@ -102,8 +103,8 @@ public class Slo extends com.pulumi.resources.CustomResource {
      * @return Name used for UI elements listing this SLO.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * The fraction of service that must be good in order for this objective
@@ -178,8 +179,8 @@ public class Slo extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ SloRequestBasedSli> requestBasedSli() {
-        return this.requestBasedSli;
+    public Output<Optional<SloRequestBasedSli>> requestBasedSli() {
+        return Codegen.optional(this.requestBasedSli);
     }
     /**
      * A rolling time period, semantically &#34;in the past X days&#34;.
@@ -194,8 +195,8 @@ public class Slo extends com.pulumi.resources.CustomResource {
      * Must be between 1 to 30 days, inclusive.
      * 
      */
-    public Output</* @Nullable */ Integer> rollingPeriodDays() {
-        return this.rollingPeriodDays;
+    public Output<Optional<Integer>> rollingPeriodDays() {
+        return Codegen.optional(this.rollingPeriodDays);
     }
     /**
      * ID of the service to which this SLO belongs.
@@ -252,8 +253,8 @@ public class Slo extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ SloWindowsBasedSli> windowsBasedSli() {
-        return this.windowsBasedSli;
+    public Output<Optional<SloWindowsBasedSli>> windowsBasedSli() {
+        return Codegen.optional(this.windowsBasedSli);
     }
 
     /**

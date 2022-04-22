@@ -12,6 +12,7 @@ import com.pulumi.gcp.servicedirectory.ServiceArgs;
 import com.pulumi.gcp.servicedirectory.inputs.ServiceState;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -61,8 +62,8 @@ public class Service extends com.pulumi.resources.CustomResource {
      * Metadata that goes beyond any these limits will be rejected.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> metadata() {
-        return this.metadata;
+    public Output<Optional<Map<String,String>>> metadata() {
+        return Codegen.optional(this.metadata);
     }
     /**
      * The resource name for the service in the format &#39;projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*&#39;.

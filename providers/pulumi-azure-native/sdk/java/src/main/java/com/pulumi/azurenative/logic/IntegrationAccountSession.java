@@ -14,6 +14,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -58,8 +59,8 @@ public class IntegrationAccountSession extends com.pulumi.resources.CustomResour
      * @return The session content.
      * 
      */
-    public Output</* @Nullable */ Object> content() {
-        return this.content;
+    public Output<Optional<Object>> content() {
+        return Codegen.optional(this.content);
     }
     /**
      * The created time.
@@ -86,8 +87,8 @@ public class IntegrationAccountSession extends com.pulumi.resources.CustomResour
      * @return The resource location.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * Gets the resource name.
@@ -114,8 +115,8 @@ public class IntegrationAccountSession extends com.pulumi.resources.CustomResour
      * @return The resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Gets the resource type.

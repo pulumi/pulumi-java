@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -47,8 +48,8 @@ public class Map extends com.pulumi.resources.CustomResource {
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     @Export(name="mapArn", type=String.class, parameters={})
     private Output<String> mapArn;
@@ -65,8 +66,8 @@ public class Map extends com.pulumi.resources.CustomResource {
     @Export(name="pricingPlan", type=MapPricingPlan.class, parameters={})
     private Output</* @Nullable */ MapPricingPlan> pricingPlan;
 
-    public Output</* @Nullable */ MapPricingPlan> pricingPlan() {
-        return this.pricingPlan;
+    public Output<Optional<MapPricingPlan>> pricingPlan() {
+        return Codegen.optional(this.pricingPlan);
     }
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;

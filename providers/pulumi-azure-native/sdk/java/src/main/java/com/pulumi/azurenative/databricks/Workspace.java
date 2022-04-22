@@ -18,6 +18,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -48,8 +49,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return The workspace provider authorizations.
      * 
      */
-    public Output</* @Nullable */ List<WorkspaceProviderAuthorizationResponse>> authorizations() {
-        return this.authorizations;
+    public Output<Optional<List<WorkspaceProviderAuthorizationResponse>>> authorizations() {
+        return Codegen.optional(this.authorizations);
     }
     /**
      * Indicates the Object ID, PUID and Application ID of entity that created the workspace.
@@ -62,8 +63,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return Indicates the Object ID, PUID and Application ID of entity that created the workspace.
      * 
      */
-    public Output</* @Nullable */ CreatedByResponse> createdBy() {
-        return this.createdBy;
+    public Output<Optional<CreatedByResponse>> createdBy() {
+        return Codegen.optional(this.createdBy);
     }
     /**
      * Specifies the date and time when the workspace is created.
@@ -132,8 +133,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return The workspace&#39;s custom parameters.
      * 
      */
-    public Output</* @Nullable */ WorkspaceCustomParametersResponse> parameters() {
-        return this.parameters;
+    public Output<Optional<WorkspaceCustomParametersResponse>> parameters() {
+        return Codegen.optional(this.parameters);
     }
     /**
      * The workspace provisioning state.
@@ -160,8 +161,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return The SKU of the resource.
      * 
      */
-    public Output</* @Nullable */ SkuResponse> sku() {
-        return this.sku;
+    public Output<Optional<SkuResponse>> sku() {
+        return Codegen.optional(this.sku);
     }
     /**
      * The details of Managed Identity of Storage Account
@@ -174,8 +175,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return The details of Managed Identity of Storage Account
      * 
      */
-    public Output</* @Nullable */ ManagedIdentityConfigurationResponse> storageAccountIdentity() {
-        return this.storageAccountIdentity;
+    public Output<Optional<ManagedIdentityConfigurationResponse>> storageAccountIdentity() {
+        return Codegen.optional(this.storageAccountIdentity);
     }
     /**
      * Resource tags.
@@ -188,8 +189,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
@@ -216,8 +217,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return The blob URI where the UI definition file is located.
      * 
      */
-    public Output</* @Nullable */ String> uiDefinitionUri() {
-        return this.uiDefinitionUri;
+    public Output<Optional<String>> uiDefinitionUri() {
+        return Codegen.optional(this.uiDefinitionUri);
     }
     /**
      * Indicates the Object ID, PUID and Application ID of entity that last updated the workspace.
@@ -230,8 +231,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return Indicates the Object ID, PUID and Application ID of entity that last updated the workspace.
      * 
      */
-    public Output</* @Nullable */ CreatedByResponse> updatedBy() {
-        return this.updatedBy;
+    public Output<Optional<CreatedByResponse>> updatedBy() {
+        return Codegen.optional(this.updatedBy);
     }
     /**
      * The unique identifier of the databricks workspace in databricks control plane.

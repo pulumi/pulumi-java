@@ -15,6 +15,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return The password details.
      * 
      */
-    public Output</* @Nullable */ AsymmetricEncryptedSecretResponse> encryptedPassword() {
-        return this.encryptedPassword;
+    public Output<Optional<AsymmetricEncryptedSecretResponse>> encryptedPassword() {
+        return Codegen.optional(this.encryptedPassword);
     }
     /**
      * The object name.

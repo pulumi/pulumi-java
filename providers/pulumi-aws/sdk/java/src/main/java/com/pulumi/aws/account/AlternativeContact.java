@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class AlternativeContact extends com.pulumi.resources.CustomResource {
      * @return The ID of the target account when managing member accounts. Will manage current user&#39;s account by default if omitted.
      * 
      */
-    public Output</* @Nullable */ String> accountId() {
-        return this.accountId;
+    public Output<Optional<String>> accountId() {
+        return Codegen.optional(this.accountId);
     }
     /**
      * The type of the alternate contact. Allowed values are: `BILLING`, `OPERATIONS`, `SECURITY`.

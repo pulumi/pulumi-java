@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -30,8 +31,8 @@ public class Environment extends com.pulumi.resources.CustomResource {
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     @Export(name="environmentIdentifier", type=String.class, parameters={})
     private Output<String> environmentIdentifier;
@@ -42,14 +43,14 @@ public class Environment extends com.pulumi.resources.CustomResource {
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     @Export(name="networkFabricType", type=EnvironmentNetworkFabricType.class, parameters={})
     private Output</* @Nullable */ EnvironmentNetworkFabricType> networkFabricType;
 
-    public Output</* @Nullable */ EnvironmentNetworkFabricType> networkFabricType() {
-        return this.networkFabricType;
+    public Output<Optional<EnvironmentNetworkFabricType>> networkFabricType() {
+        return Codegen.optional(this.networkFabricType);
     }
     /**
      * Metadata that you can assign to help organize the frameworks that you create. Each tag is a key-value pair.
@@ -62,8 +63,8 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return Metadata that you can assign to help organize the frameworks that you create. Each tag is a key-value pair.
      * 
      */
-    public Output</* @Nullable */ List<EnvironmentTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<EnvironmentTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     @Export(name="transitGatewayId", type=String.class, parameters={})
     private Output<String> transitGatewayId;

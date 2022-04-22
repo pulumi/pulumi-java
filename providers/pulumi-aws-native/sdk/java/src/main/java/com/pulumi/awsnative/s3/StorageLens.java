@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -37,8 +38,8 @@ public class StorageLens extends com.pulumi.resources.CustomResource {
      * @return A set of tags (key-value pairs) for this Amazon S3 Storage Lens configuration.
      * 
      */
-    public Output</* @Nullable */ List<StorageLensTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<StorageLensTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

@@ -16,6 +16,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class PrivateLinkServicesForM365SecurityCenter extends com.pulumi.resourc
      * @return An etag associated with the resource, used for optimistic concurrency when editing it.
      * 
      */
-    public Output</* @Nullable */ String> etag() {
-        return this.etag;
+    public Output<Optional<String>> etag() {
+        return Codegen.optional(this.etag);
     }
     /**
      * Setting indicating whether the service has a managed identity associated with it.
@@ -60,8 +61,8 @@ public class PrivateLinkServicesForM365SecurityCenter extends com.pulumi.resourc
      * @return Setting indicating whether the service has a managed identity associated with it.
      * 
      */
-    public Output</* @Nullable */ ServicesResourceResponseIdentity> identity() {
-        return this.identity;
+    public Output<Optional<ServicesResourceResponseIdentity>> identity() {
+        return Codegen.optional(this.identity);
     }
     /**
      * The kind of the service.
@@ -144,8 +145,8 @@ public class PrivateLinkServicesForM365SecurityCenter extends com.pulumi.resourc
      * @return The resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The resource type.

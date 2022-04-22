@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -37,14 +38,14 @@ public class NetworkInsightsPath extends com.pulumi.resources.CustomResource {
     @Export(name="destinationIp", type=String.class, parameters={})
     private Output</* @Nullable */ String> destinationIp;
 
-    public Output</* @Nullable */ String> destinationIp() {
-        return this.destinationIp;
+    public Output<Optional<String>> destinationIp() {
+        return Codegen.optional(this.destinationIp);
     }
     @Export(name="destinationPort", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> destinationPort;
 
-    public Output</* @Nullable */ Integer> destinationPort() {
-        return this.destinationPort;
+    public Output<Optional<Integer>> destinationPort() {
+        return Codegen.optional(this.destinationPort);
     }
     @Export(name="networkInsightsPathArn", type=String.class, parameters={})
     private Output<String> networkInsightsPathArn;
@@ -73,14 +74,14 @@ public class NetworkInsightsPath extends com.pulumi.resources.CustomResource {
     @Export(name="sourceIp", type=String.class, parameters={})
     private Output</* @Nullable */ String> sourceIp;
 
-    public Output</* @Nullable */ String> sourceIp() {
-        return this.sourceIp;
+    public Output<Optional<String>> sourceIp() {
+        return Codegen.optional(this.sourceIp);
     }
     @Export(name="tags", type=List.class, parameters={NetworkInsightsPathTag.class})
     private Output</* @Nullable */ List<NetworkInsightsPathTag>> tags;
 
-    public Output</* @Nullable */ List<NetworkInsightsPathTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<NetworkInsightsPathTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

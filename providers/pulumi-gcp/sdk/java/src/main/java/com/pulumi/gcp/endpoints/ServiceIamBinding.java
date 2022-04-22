@@ -13,6 +13,7 @@ import com.pulumi.gcp.endpoints.inputs.ServiceIamBindingState;
 import com.pulumi.gcp.endpoints.outputs.ServiceIamBindingCondition;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -62,8 +63,8 @@ public class ServiceIamBinding extends com.pulumi.resources.CustomResource {
     @Export(name="condition", type=ServiceIamBindingCondition.class, parameters={})
     private Output</* @Nullable */ ServiceIamBindingCondition> condition;
 
-    public Output</* @Nullable */ ServiceIamBindingCondition> condition() {
-        return this.condition;
+    public Output<Optional<ServiceIamBindingCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * (Computed) The etag of the IAM policy.

@@ -21,6 +21,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -51,8 +52,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Customer provided key, value pairs that will be returned in Job and JobOutput state events.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> correlationData() {
-        return this.correlationData;
+    public Output<Optional<Map<String,String>>> correlationData() {
+        return Codegen.optional(this.correlationData);
     }
     /**
      * The UTC date and time when the customer has created the Job, in &#39;YYYY-MM-DDThh:mm:ssZ&#39; format.
@@ -79,8 +80,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Optional customer supplied description of the Job.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The UTC date and time at which this Job finished processing.
@@ -163,8 +164,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Priority with which the job should be processed. Higher priority jobs are processed before lower priority jobs. If not set, the default is normal.
      * 
      */
-    public Output</* @Nullable */ String> priority() {
-        return this.priority;
+    public Output<Optional<String>> priority() {
+        return Codegen.optional(this.priority);
     }
     /**
      * The UTC date and time at which this Job began processing.

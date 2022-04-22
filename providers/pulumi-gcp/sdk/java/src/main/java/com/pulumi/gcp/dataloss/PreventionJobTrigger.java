@@ -14,6 +14,7 @@ import com.pulumi.gcp.dataloss.outputs.PreventionJobTriggerInspectJob;
 import com.pulumi.gcp.dataloss.outputs.PreventionJobTriggerTrigger;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -53,8 +54,8 @@ public class PreventionJobTrigger extends com.pulumi.resources.CustomResource {
      * @return A description of the job trigger.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * User set display name of the job trigger.
@@ -67,8 +68,8 @@ public class PreventionJobTrigger extends com.pulumi.resources.CustomResource {
      * @return User set display name of the job trigger.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * Controls what and how to inspect for findings.
@@ -83,8 +84,8 @@ public class PreventionJobTrigger extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ PreventionJobTriggerInspectJob> inspectJob() {
-        return this.inspectJob;
+    public Output<Optional<PreventionJobTriggerInspectJob>> inspectJob() {
+        return Codegen.optional(this.inspectJob);
     }
     /**
      * The timestamp of the last time this trigger executed.
@@ -145,8 +146,8 @@ public class PreventionJobTrigger extends com.pulumi.resources.CustomResource {
      * Possible values are `PAUSED`, `HEALTHY`, and `CANCELLED`.
      * 
      */
-    public Output</* @Nullable */ String> status() {
-        return this.status;
+    public Output<Optional<String>> status() {
+        return Codegen.optional(this.status);
     }
     /**
      * What event needs to occur for a new job to be started.

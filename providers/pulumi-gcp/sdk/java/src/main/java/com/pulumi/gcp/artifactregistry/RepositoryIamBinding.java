@@ -13,6 +13,7 @@ import com.pulumi.gcp.artifactregistry.inputs.RepositoryIamBindingState;
 import com.pulumi.gcp.artifactregistry.outputs.RepositoryIamBindingCondition;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -62,8 +63,8 @@ public class RepositoryIamBinding extends com.pulumi.resources.CustomResource {
     @Export(name="condition", type=RepositoryIamBindingCondition.class, parameters={})
     private Output</* @Nullable */ RepositoryIamBindingCondition> condition;
 
-    public Output</* @Nullable */ RepositoryIamBindingCondition> condition() {
-        return this.condition;
+    public Output<Optional<RepositoryIamBindingCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * (Computed) The etag of the IAM policy.

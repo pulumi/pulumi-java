@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -70,8 +71,8 @@ public class NotificationRecipientUser extends com.pulumi.resources.CustomResour
      * @return API Management UserId subscribed to notification.
      * 
      */
-    public Output</* @Nullable */ String> userId() {
-        return this.userId;
+    public Output<Optional<String>> userId() {
+        return Codegen.optional(this.userId);
     }
 
     /**

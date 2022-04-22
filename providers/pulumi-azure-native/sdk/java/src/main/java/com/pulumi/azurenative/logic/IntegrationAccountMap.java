@@ -16,6 +16,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -60,8 +61,8 @@ public class IntegrationAccountMap extends com.pulumi.resources.CustomResource {
      * @return The content.
      * 
      */
-    public Output</* @Nullable */ String> content() {
-        return this.content;
+    public Output<Optional<String>> content() {
+        return Codegen.optional(this.content);
     }
     /**
      * The content link.
@@ -88,8 +89,8 @@ public class IntegrationAccountMap extends com.pulumi.resources.CustomResource {
      * @return The content type.
      * 
      */
-    public Output</* @Nullable */ String> contentType() {
-        return this.contentType;
+    public Output<Optional<String>> contentType() {
+        return Codegen.optional(this.contentType);
     }
     /**
      * The created time.
@@ -116,8 +117,8 @@ public class IntegrationAccountMap extends com.pulumi.resources.CustomResource {
      * @return The resource location.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The map type.
@@ -144,8 +145,8 @@ public class IntegrationAccountMap extends com.pulumi.resources.CustomResource {
      * @return The metadata.
      * 
      */
-    public Output</* @Nullable */ Object> metadata() {
-        return this.metadata;
+    public Output<Optional<Object>> metadata() {
+        return Codegen.optional(this.metadata);
     }
     /**
      * Gets the resource name.
@@ -172,8 +173,8 @@ public class IntegrationAccountMap extends com.pulumi.resources.CustomResource {
      * @return The parameters schema of integration account map.
      * 
      */
-    public Output</* @Nullable */ IntegrationAccountMapPropertiesResponseParametersSchema> parametersSchema() {
-        return this.parametersSchema;
+    public Output<Optional<IntegrationAccountMapPropertiesResponseParametersSchema>> parametersSchema() {
+        return Codegen.optional(this.parametersSchema);
     }
     /**
      * The resource tags.
@@ -186,8 +187,8 @@ public class IntegrationAccountMap extends com.pulumi.resources.CustomResource {
      * @return The resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Gets the resource type.

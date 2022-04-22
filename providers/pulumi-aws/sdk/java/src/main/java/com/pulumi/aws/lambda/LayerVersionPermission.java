@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -73,8 +74,8 @@ public class LayerVersionPermission extends com.pulumi.resources.CustomResource 
      * @return An identifier of AWS Organization, which should be able to use your Lambda Layer. `principal` should be equal to `*` if `organization_id` provided.
      * 
      */
-    public Output</* @Nullable */ String> organizationId() {
-        return this.organizationId;
+    public Output<Optional<String>> organizationId() {
+        return Codegen.optional(this.organizationId);
     }
     /**
      * Full Lambda Layer Permission policy.

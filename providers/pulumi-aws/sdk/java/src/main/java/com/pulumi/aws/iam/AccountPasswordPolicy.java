@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class AccountPasswordPolicy extends com.pulumi.resources.CustomResource {
      * @return Whether to allow users to change their own password
      * 
      */
-    public Output</* @Nullable */ Boolean> allowUsersToChangePassword() {
-        return this.allowUsersToChangePassword;
+    public Output<Optional<Boolean>> allowUsersToChangePassword() {
+        return Codegen.optional(this.allowUsersToChangePassword);
     }
     /**
      * Indicates whether passwords in the account expire. Returns `true` if `max_password_age` contains a value greater than `0`. Returns `false` if it is `0` or _not present_.
@@ -101,8 +102,8 @@ public class AccountPasswordPolicy extends com.pulumi.resources.CustomResource {
      * @return Minimum length to require for user passwords.
      * 
      */
-    public Output</* @Nullable */ Integer> minimumPasswordLength() {
-        return this.minimumPasswordLength;
+    public Output<Optional<Integer>> minimumPasswordLength() {
+        return Codegen.optional(this.minimumPasswordLength);
     }
     /**
      * The number of previous passwords that users are prevented from reusing.

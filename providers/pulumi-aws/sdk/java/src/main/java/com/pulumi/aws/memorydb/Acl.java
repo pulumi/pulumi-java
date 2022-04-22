@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -92,8 +93,8 @@ public class Acl extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
@@ -120,8 +121,8 @@ public class Acl extends com.pulumi.resources.CustomResource {
      * @return Set of MemoryDB user names to be included in this ACL.
      * 
      */
-    public Output</* @Nullable */ List<String>> userNames() {
-        return this.userNames;
+    public Output<Optional<List<String>>> userNames() {
+        return Codegen.optional(this.userNames);
     }
 
     /**

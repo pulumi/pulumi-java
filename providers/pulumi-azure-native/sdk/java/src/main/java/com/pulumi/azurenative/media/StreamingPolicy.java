@@ -17,6 +17,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -47,8 +48,8 @@ public class StreamingPolicy extends com.pulumi.resources.CustomResource {
      * @return Configuration of CommonEncryptionCbcs
      * 
      */
-    public Output</* @Nullable */ CommonEncryptionCbcsResponse> commonEncryptionCbcs() {
-        return this.commonEncryptionCbcs;
+    public Output<Optional<CommonEncryptionCbcsResponse>> commonEncryptionCbcs() {
+        return Codegen.optional(this.commonEncryptionCbcs);
     }
     /**
      * Configuration of CommonEncryptionCenc
@@ -61,8 +62,8 @@ public class StreamingPolicy extends com.pulumi.resources.CustomResource {
      * @return Configuration of CommonEncryptionCenc
      * 
      */
-    public Output</* @Nullable */ CommonEncryptionCencResponse> commonEncryptionCenc() {
-        return this.commonEncryptionCenc;
+    public Output<Optional<CommonEncryptionCencResponse>> commonEncryptionCenc() {
+        return Codegen.optional(this.commonEncryptionCenc);
     }
     /**
      * Creation time of Streaming Policy
@@ -89,8 +90,8 @@ public class StreamingPolicy extends com.pulumi.resources.CustomResource {
      * @return Default ContentKey used by current Streaming Policy
      * 
      */
-    public Output</* @Nullable */ String> defaultContentKeyPolicyName() {
-        return this.defaultContentKeyPolicyName;
+    public Output<Optional<String>> defaultContentKeyPolicyName() {
+        return Codegen.optional(this.defaultContentKeyPolicyName);
     }
     /**
      * Configuration of EnvelopeEncryption
@@ -103,8 +104,8 @@ public class StreamingPolicy extends com.pulumi.resources.CustomResource {
      * @return Configuration of EnvelopeEncryption
      * 
      */
-    public Output</* @Nullable */ EnvelopeEncryptionResponse> envelopeEncryption() {
-        return this.envelopeEncryption;
+    public Output<Optional<EnvelopeEncryptionResponse>> envelopeEncryption() {
+        return Codegen.optional(this.envelopeEncryption);
     }
     /**
      * The name of the resource
@@ -131,8 +132,8 @@ public class StreamingPolicy extends com.pulumi.resources.CustomResource {
      * @return Configurations of NoEncryption
      * 
      */
-    public Output</* @Nullable */ NoEncryptionResponse> noEncryption() {
-        return this.noEncryption;
+    public Output<Optional<NoEncryptionResponse>> noEncryption() {
+        return Codegen.optional(this.noEncryption);
     }
     /**
      * The system metadata relating to this resource.

@@ -16,6 +16,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -113,8 +114,8 @@ public class GalleryImage extends com.pulumi.resources.CustomResource {
      * @return Indicates whether this gallery image is enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> isEnabled() {
-        return this.isEnabled;
+    public Output<Optional<Boolean>> isEnabled() {
+        return Codegen.optional(this.isEnabled);
     }
     /**
      * Indicates whether this gallery has been overridden for this lab account
@@ -127,8 +128,8 @@ public class GalleryImage extends com.pulumi.resources.CustomResource {
      * @return Indicates whether this gallery has been overridden for this lab account
      * 
      */
-    public Output</* @Nullable */ Boolean> isOverride() {
-        return this.isOverride;
+    public Output<Optional<Boolean>> isOverride() {
+        return Codegen.optional(this.isOverride);
     }
     /**
      * Indicates if the plan has been authorized for programmatic deployment.
@@ -141,8 +142,8 @@ public class GalleryImage extends com.pulumi.resources.CustomResource {
      * @return Indicates if the plan has been authorized for programmatic deployment.
      * 
      */
-    public Output</* @Nullable */ Boolean> isPlanAuthorized() {
-        return this.isPlanAuthorized;
+    public Output<Optional<Boolean>> isPlanAuthorized() {
+        return Codegen.optional(this.isPlanAuthorized);
     }
     /**
      * The details of the latest operation. ex: status, error
@@ -169,8 +170,8 @@ public class GalleryImage extends com.pulumi.resources.CustomResource {
      * @return The location of the resource.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The name of the resource.
@@ -211,8 +212,8 @@ public class GalleryImage extends com.pulumi.resources.CustomResource {
      * @return The provisioning status of the resource.
      * 
      */
-    public Output</* @Nullable */ String> provisioningState() {
-        return this.provisioningState;
+    public Output<Optional<String>> provisioningState() {
+        return Codegen.optional(this.provisioningState);
     }
     /**
      * The tags of the resource.
@@ -225,8 +226,8 @@ public class GalleryImage extends com.pulumi.resources.CustomResource {
      * @return The tags of the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource.
@@ -253,8 +254,8 @@ public class GalleryImage extends com.pulumi.resources.CustomResource {
      * @return The unique immutable identifier of a resource (Guid).
      * 
      */
-    public Output</* @Nullable */ String> uniqueIdentifier() {
-        return this.uniqueIdentifier;
+    public Output<Optional<String>> uniqueIdentifier() {
+        return Codegen.optional(this.uniqueIdentifier);
     }
 
     /**

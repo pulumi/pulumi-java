@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -47,8 +48,8 @@ public class TransitGatewayPeeringAttachment extends com.pulumi.resources.Custom
      * @return Options for transit gateway peering attachment
      * 
      */
-    public Output</* @Nullable */ TransitGatewayPeeringAttachmentOptions> options() {
-        return this.options;
+    public Output<Optional<TransitGatewayPeeringAttachmentOptions>> options() {
+        return Codegen.optional(this.options);
     }
     /**
      * The ID of the peer account
@@ -131,8 +132,8 @@ public class TransitGatewayPeeringAttachment extends com.pulumi.resources.Custom
      * @return The tags for the transit gateway peering attachment.
      * 
      */
-    public Output</* @Nullable */ List<TransitGatewayPeeringAttachmentTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<TransitGatewayPeeringAttachmentTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The ID of the transit gateway peering attachment.

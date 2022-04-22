@@ -19,6 +19,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -49,8 +50,8 @@ public class BlobServiceProperties extends com.pulumi.resources.CustomResource {
      * @return Deprecated in favor of isVersioningEnabled property.
      * 
      */
-    public Output</* @Nullable */ Boolean> automaticSnapshotPolicyEnabled() {
-        return this.automaticSnapshotPolicyEnabled;
+    public Output<Optional<Boolean>> automaticSnapshotPolicyEnabled() {
+        return Codegen.optional(this.automaticSnapshotPolicyEnabled);
     }
     /**
      * The blob service properties for change feed events.
@@ -63,8 +64,8 @@ public class BlobServiceProperties extends com.pulumi.resources.CustomResource {
      * @return The blob service properties for change feed events.
      * 
      */
-    public Output</* @Nullable */ ChangeFeedResponse> changeFeed() {
-        return this.changeFeed;
+    public Output<Optional<ChangeFeedResponse>> changeFeed() {
+        return Codegen.optional(this.changeFeed);
     }
     /**
      * The blob service properties for container soft delete.
@@ -77,8 +78,8 @@ public class BlobServiceProperties extends com.pulumi.resources.CustomResource {
      * @return The blob service properties for container soft delete.
      * 
      */
-    public Output</* @Nullable */ DeleteRetentionPolicyResponse> containerDeleteRetentionPolicy() {
-        return this.containerDeleteRetentionPolicy;
+    public Output<Optional<DeleteRetentionPolicyResponse>> containerDeleteRetentionPolicy() {
+        return Codegen.optional(this.containerDeleteRetentionPolicy);
     }
     /**
      * Specifies CORS rules for the Blob service. You can include up to five CorsRule elements in the request. If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the Blob service.
@@ -91,8 +92,8 @@ public class BlobServiceProperties extends com.pulumi.resources.CustomResource {
      * @return Specifies CORS rules for the Blob service. You can include up to five CorsRule elements in the request. If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the Blob service.
      * 
      */
-    public Output</* @Nullable */ CorsRulesResponse> cors() {
-        return this.cors;
+    public Output<Optional<CorsRulesResponse>> cors() {
+        return Codegen.optional(this.cors);
     }
     /**
      * DefaultServiceVersion indicates the default version to use for requests to the Blob service if an incoming request’s version is not specified. Possible values include version 2008-10-27 and all more recent versions.
@@ -105,8 +106,8 @@ public class BlobServiceProperties extends com.pulumi.resources.CustomResource {
      * @return DefaultServiceVersion indicates the default version to use for requests to the Blob service if an incoming request’s version is not specified. Possible values include version 2008-10-27 and all more recent versions.
      * 
      */
-    public Output</* @Nullable */ String> defaultServiceVersion() {
-        return this.defaultServiceVersion;
+    public Output<Optional<String>> defaultServiceVersion() {
+        return Codegen.optional(this.defaultServiceVersion);
     }
     /**
      * The blob service properties for blob soft delete.
@@ -119,8 +120,8 @@ public class BlobServiceProperties extends com.pulumi.resources.CustomResource {
      * @return The blob service properties for blob soft delete.
      * 
      */
-    public Output</* @Nullable */ DeleteRetentionPolicyResponse> deleteRetentionPolicy() {
-        return this.deleteRetentionPolicy;
+    public Output<Optional<DeleteRetentionPolicyResponse>> deleteRetentionPolicy() {
+        return Codegen.optional(this.deleteRetentionPolicy);
     }
     /**
      * Versioning is enabled if set to true.
@@ -133,8 +134,8 @@ public class BlobServiceProperties extends com.pulumi.resources.CustomResource {
      * @return Versioning is enabled if set to true.
      * 
      */
-    public Output</* @Nullable */ Boolean> isVersioningEnabled() {
-        return this.isVersioningEnabled;
+    public Output<Optional<Boolean>> isVersioningEnabled() {
+        return Codegen.optional(this.isVersioningEnabled);
     }
     /**
      * The blob service property to configure last access time based tracking policy.
@@ -147,8 +148,8 @@ public class BlobServiceProperties extends com.pulumi.resources.CustomResource {
      * @return The blob service property to configure last access time based tracking policy.
      * 
      */
-    public Output</* @Nullable */ LastAccessTimeTrackingPolicyResponse> lastAccessTimeTrackingPolicy() {
-        return this.lastAccessTimeTrackingPolicy;
+    public Output<Optional<LastAccessTimeTrackingPolicyResponse>> lastAccessTimeTrackingPolicy() {
+        return Codegen.optional(this.lastAccessTimeTrackingPolicy);
     }
     /**
      * The name of the resource
@@ -175,8 +176,8 @@ public class BlobServiceProperties extends com.pulumi.resources.CustomResource {
      * @return The blob service properties for blob restore policy.
      * 
      */
-    public Output</* @Nullable */ RestorePolicyPropertiesResponse> restorePolicy() {
-        return this.restorePolicy;
+    public Output<Optional<RestorePolicyPropertiesResponse>> restorePolicy() {
+        return Codegen.optional(this.restorePolicy);
     }
     /**
      * Sku name and tier.

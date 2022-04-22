@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -42,8 +43,8 @@ public class TransitGateway extends com.pulumi.resources.CustomResource {
      * @return Private Autonomous System Number (ASN) for the Amazon side of a BGP session. The range is `64512` to `65534` for 16-bit ASNs and `4200000000` to `4294967294` for 32-bit ASNs. Default value: `64512`.
      * 
      */
-    public Output</* @Nullable */ Integer> amazonSideAsn() {
-        return this.amazonSideAsn;
+    public Output<Optional<Integer>> amazonSideAsn() {
+        return Codegen.optional(this.amazonSideAsn);
     }
     /**
      * EC2 Transit Gateway Amazon Resource Name (ARN)
@@ -84,8 +85,8 @@ public class TransitGateway extends com.pulumi.resources.CustomResource {
      * @return Whether resource attachment requests are automatically accepted. Valid values: `disable`, `enable`. Default value: `disable`.
      * 
      */
-    public Output</* @Nullable */ String> autoAcceptSharedAttachments() {
-        return this.autoAcceptSharedAttachments;
+    public Output<Optional<String>> autoAcceptSharedAttachments() {
+        return Codegen.optional(this.autoAcceptSharedAttachments);
     }
     /**
      * Whether resource attachments are automatically associated with the default association route table. Valid values: `disable`, `enable`. Default value: `enable`.
@@ -98,8 +99,8 @@ public class TransitGateway extends com.pulumi.resources.CustomResource {
      * @return Whether resource attachments are automatically associated with the default association route table. Valid values: `disable`, `enable`. Default value: `enable`.
      * 
      */
-    public Output</* @Nullable */ String> defaultRouteTableAssociation() {
-        return this.defaultRouteTableAssociation;
+    public Output<Optional<String>> defaultRouteTableAssociation() {
+        return Codegen.optional(this.defaultRouteTableAssociation);
     }
     /**
      * Whether resource attachments automatically propagate routes to the default propagation route table. Valid values: `disable`, `enable`. Default value: `enable`.
@@ -112,8 +113,8 @@ public class TransitGateway extends com.pulumi.resources.CustomResource {
      * @return Whether resource attachments automatically propagate routes to the default propagation route table. Valid values: `disable`, `enable`. Default value: `enable`.
      * 
      */
-    public Output</* @Nullable */ String> defaultRouteTablePropagation() {
-        return this.defaultRouteTablePropagation;
+    public Output<Optional<String>> defaultRouteTablePropagation() {
+        return Codegen.optional(this.defaultRouteTablePropagation);
     }
     /**
      * Description of the EC2 Transit Gateway.
@@ -126,8 +127,8 @@ public class TransitGateway extends com.pulumi.resources.CustomResource {
      * @return Description of the EC2 Transit Gateway.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Whether DNS support is enabled. Valid values: `disable`, `enable`. Default value: `enable`.
@@ -140,8 +141,8 @@ public class TransitGateway extends com.pulumi.resources.CustomResource {
      * @return Whether DNS support is enabled. Valid values: `disable`, `enable`. Default value: `enable`.
      * 
      */
-    public Output</* @Nullable */ String> dnsSupport() {
-        return this.dnsSupport;
+    public Output<Optional<String>> dnsSupport() {
+        return Codegen.optional(this.dnsSupport);
     }
     /**
      * Identifier of the AWS account that owns the EC2 Transit Gateway
@@ -182,8 +183,8 @@ public class TransitGateway extends com.pulumi.resources.CustomResource {
      * @return Key-value tags for the EC2 Transit Gateway. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
@@ -210,8 +211,8 @@ public class TransitGateway extends com.pulumi.resources.CustomResource {
      * @return Whether VPN Equal Cost Multipath Protocol support is enabled. Valid values: `disable`, `enable`. Default value: `enable`.
      * 
      */
-    public Output</* @Nullable */ String> vpnEcmpSupport() {
-        return this.vpnEcmpSupport;
+    public Output<Optional<String>> vpnEcmpSupport() {
+        return Codegen.optional(this.vpnEcmpSupport);
     }
 
     /**

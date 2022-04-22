@@ -15,6 +15,7 @@ import com.pulumi.gcp.compute.outputs.SubnetworkSecondaryIpRange;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -102,8 +103,8 @@ public class Subnetwork extends com.pulumi.resources.CustomResource {
      * creation time.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The range of external IPv6 addresses that are owned by this subnetwork.
@@ -188,8 +189,8 @@ public class Subnetwork extends com.pulumi.resources.CustomResource {
      * Possible values are `EXTERNAL`.
      * 
      */
-    public Output</* @Nullable */ String> ipv6AccessType() {
-        return this.ipv6AccessType;
+    public Output<Optional<String>> ipv6AccessType() {
+        return Codegen.optional(this.ipv6AccessType);
     }
     /**
      * The range of internal IPv6 addresses that are owned by this subnetwork.
@@ -222,8 +223,8 @@ public class Subnetwork extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ SubnetworkLogConfig> logConfig() {
-        return this.logConfig;
+    public Output<Optional<SubnetworkLogConfig>> logConfig() {
+        return Codegen.optional(this.logConfig);
     }
     /**
      * The name of the resource, provided by the client when initially
@@ -280,8 +281,8 @@ public class Subnetwork extends com.pulumi.resources.CustomResource {
      * access Google APIs and services by using Private Google Access.
      * 
      */
-    public Output</* @Nullable */ Boolean> privateIpGoogleAccess() {
-        return this.privateIpGoogleAccess;
+    public Output<Optional<Boolean>> privateIpGoogleAccess() {
+        return Codegen.optional(this.privateIpGoogleAccess);
     }
     /**
      * The private IPv6 google access type for the VMs in this subnet.
@@ -368,8 +369,8 @@ public class Subnetwork extends com.pulumi.resources.CustomResource {
      * Possible values are `ACTIVE` and `BACKUP`.
      * 
      */
-    public Output</* @Nullable */ String> role() {
-        return this.role;
+    public Output<Optional<String>> role() {
+        return Codegen.optional(this.role);
     }
     /**
      * An array of configurations for secondary IP ranges for VM instances

@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class ExpressRouteCircuitConnection extends com.pulumi.resources.CustomRe
      * @return /29 IP address space to carve out Customer addresses for tunnels.
      * 
      */
-    public Output</* @Nullable */ String> addressPrefix() {
-        return this.addressPrefix;
+    public Output<Optional<String>> addressPrefix() {
+        return Codegen.optional(this.addressPrefix);
     }
     /**
      * The authorization key.
@@ -58,8 +59,8 @@ public class ExpressRouteCircuitConnection extends com.pulumi.resources.CustomRe
      * @return The authorization key.
      * 
      */
-    public Output</* @Nullable */ String> authorizationKey() {
-        return this.authorizationKey;
+    public Output<Optional<String>> authorizationKey() {
+        return Codegen.optional(this.authorizationKey);
     }
     /**
      * Express Route Circuit connection state.
@@ -100,8 +101,8 @@ public class ExpressRouteCircuitConnection extends com.pulumi.resources.CustomRe
      * @return Reference to Express Route Circuit Private Peering Resource of the circuit initiating connection.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> expressRouteCircuitPeering() {
-        return this.expressRouteCircuitPeering;
+    public Output<Optional<SubResourceResponse>> expressRouteCircuitPeering() {
+        return Codegen.optional(this.expressRouteCircuitPeering);
     }
     /**
      * IPv6 Address PrefixProperties of the express route circuit connection.
@@ -114,8 +115,8 @@ public class ExpressRouteCircuitConnection extends com.pulumi.resources.CustomRe
      * @return IPv6 Address PrefixProperties of the express route circuit connection.
      * 
      */
-    public Output</* @Nullable */ Ipv6CircuitConnectionConfigResponse> ipv6CircuitConnectionConfig() {
-        return this.ipv6CircuitConnectionConfig;
+    public Output<Optional<Ipv6CircuitConnectionConfigResponse>> ipv6CircuitConnectionConfig() {
+        return Codegen.optional(this.ipv6CircuitConnectionConfig);
     }
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
@@ -128,8 +129,8 @@ public class ExpressRouteCircuitConnection extends com.pulumi.resources.CustomRe
      * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * Reference to Express Route Circuit Private Peering Resource of the peered circuit.
@@ -142,8 +143,8 @@ public class ExpressRouteCircuitConnection extends com.pulumi.resources.CustomRe
      * @return Reference to Express Route Circuit Private Peering Resource of the peered circuit.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> peerExpressRouteCircuitPeering() {
-        return this.peerExpressRouteCircuitPeering;
+    public Output<Optional<SubResourceResponse>> peerExpressRouteCircuitPeering() {
+        return Codegen.optional(this.peerExpressRouteCircuitPeering);
     }
     /**
      * The provisioning state of the express route circuit connection resource.

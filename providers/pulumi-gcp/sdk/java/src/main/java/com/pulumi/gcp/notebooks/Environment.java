@@ -13,6 +13,7 @@ import com.pulumi.gcp.notebooks.inputs.EnvironmentState;
 import com.pulumi.gcp.notebooks.outputs.EnvironmentContainerImage;
 import com.pulumi.gcp.notebooks.outputs.EnvironmentVmImage;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -58,8 +59,8 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ EnvironmentContainerImage> containerImage() {
-        return this.containerImage;
+    public Output<Optional<EnvironmentContainerImage>> containerImage() {
+        return Codegen.optional(this.containerImage);
     }
     /**
      * Instance creation time
@@ -86,8 +87,8 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return A brief description of this environment.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Display name of this environment for the UI.
@@ -100,8 +101,8 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return Display name of this environment for the UI.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * A reference to the zone where the machine resides.
@@ -146,8 +147,8 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * The path must be a URL or Cloud Storage path. Example: &#34;gs://path-to-file/file-name&#34;
      * 
      */
-    public Output</* @Nullable */ String> postStartupScript() {
-        return this.postStartupScript;
+    public Output<Optional<String>> postStartupScript() {
+        return Codegen.optional(this.postStartupScript);
     }
     /**
      * The name of the Google Cloud project that this VM image belongs to.
@@ -178,8 +179,8 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ EnvironmentVmImage> vmImage() {
-        return this.vmImage;
+    public Output<Optional<EnvironmentVmImage>> vmImage() {
+        return Codegen.optional(this.vmImage);
     }
 
     /**

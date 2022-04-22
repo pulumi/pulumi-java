@@ -15,6 +15,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class Origin extends com.pulumi.resources.CustomResource {
      * @return Origin is enabled for load balancing or not
      * 
      */
-    public Output</* @Nullable */ Boolean> enabled() {
-        return this.enabled;
+    public Output<Optional<Boolean>> enabled() {
+        return Codegen.optional(this.enabled);
     }
     /**
      * The address of the origin. Domain names, IPv4 addresses, and IPv6 addresses are supported.This should be unique across all origins in an endpoint.
@@ -73,8 +74,8 @@ public class Origin extends com.pulumi.resources.CustomResource {
      * @return The value of the HTTP port. Must be between 1 and 65535.
      * 
      */
-    public Output</* @Nullable */ Integer> httpPort() {
-        return this.httpPort;
+    public Output<Optional<Integer>> httpPort() {
+        return Codegen.optional(this.httpPort);
     }
     /**
      * The value of the HTTPS port. Must be between 1 and 65535.
@@ -87,8 +88,8 @@ public class Origin extends com.pulumi.resources.CustomResource {
      * @return The value of the HTTPS port. Must be between 1 and 65535.
      * 
      */
-    public Output</* @Nullable */ Integer> httpsPort() {
-        return this.httpsPort;
+    public Output<Optional<Integer>> httpsPort() {
+        return Codegen.optional(this.httpsPort);
     }
     /**
      * Resource name.
@@ -115,8 +116,8 @@ public class Origin extends com.pulumi.resources.CustomResource {
      * @return The host header value sent to the origin with each request. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default. This overrides the host header defined at Endpoint
      * 
      */
-    public Output</* @Nullable */ String> originHostHeader() {
-        return this.originHostHeader;
+    public Output<Optional<String>> originHostHeader() {
+        return Codegen.optional(this.originHostHeader);
     }
     /**
      * Priority of origin in given origin group for load balancing. Higher priorities will not be used for load balancing if any lower priority origin is healthy.Must be between 1 and 5
@@ -129,8 +130,8 @@ public class Origin extends com.pulumi.resources.CustomResource {
      * @return Priority of origin in given origin group for load balancing. Higher priorities will not be used for load balancing if any lower priority origin is healthy.Must be between 1 and 5
      * 
      */
-    public Output</* @Nullable */ Integer> priority() {
-        return this.priority;
+    public Output<Optional<Integer>> priority() {
+        return Codegen.optional(this.priority);
     }
     /**
      * The approval status for the connection to the Private Link
@@ -157,8 +158,8 @@ public class Origin extends com.pulumi.resources.CustomResource {
      * @return The Alias of the Private Link resource. Populating this optional field indicates that this origin is &#39;Private&#39;
      * 
      */
-    public Output</* @Nullable */ String> privateLinkAlias() {
-        return this.privateLinkAlias;
+    public Output<Optional<String>> privateLinkAlias() {
+        return Codegen.optional(this.privateLinkAlias);
     }
     /**
      * A custom message to be included in the approval request to connect to the Private Link.
@@ -171,8 +172,8 @@ public class Origin extends com.pulumi.resources.CustomResource {
      * @return A custom message to be included in the approval request to connect to the Private Link.
      * 
      */
-    public Output</* @Nullable */ String> privateLinkApprovalMessage() {
-        return this.privateLinkApprovalMessage;
+    public Output<Optional<String>> privateLinkApprovalMessage() {
+        return Codegen.optional(this.privateLinkApprovalMessage);
     }
     /**
      * The location of the Private Link resource. Required only if &#39;privateLinkResourceId&#39; is populated
@@ -185,8 +186,8 @@ public class Origin extends com.pulumi.resources.CustomResource {
      * @return The location of the Private Link resource. Required only if &#39;privateLinkResourceId&#39; is populated
      * 
      */
-    public Output</* @Nullable */ String> privateLinkLocation() {
-        return this.privateLinkLocation;
+    public Output<Optional<String>> privateLinkLocation() {
+        return Codegen.optional(this.privateLinkLocation);
     }
     /**
      * The Resource Id of the Private Link resource. Populating this optional field indicates that this backend is &#39;Private&#39;
@@ -199,8 +200,8 @@ public class Origin extends com.pulumi.resources.CustomResource {
      * @return The Resource Id of the Private Link resource. Populating this optional field indicates that this backend is &#39;Private&#39;
      * 
      */
-    public Output</* @Nullable */ String> privateLinkResourceId() {
-        return this.privateLinkResourceId;
+    public Output<Optional<String>> privateLinkResourceId() {
+        return Codegen.optional(this.privateLinkResourceId);
     }
     /**
      * Provisioning status of the origin.
@@ -269,8 +270,8 @@ public class Origin extends com.pulumi.resources.CustomResource {
      * @return Weight of the origin in given origin group for load balancing. Must be between 1 and 1000
      * 
      */
-    public Output</* @Nullable */ Integer> weight() {
-        return this.weight;
+    public Output<Optional<Integer>> weight() {
+        return Codegen.optional(this.weight);
     }
 
     /**

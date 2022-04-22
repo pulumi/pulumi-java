@@ -20,6 +20,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -88,8 +89,8 @@ public class Intent extends com.pulumi.resources.CustomResource {
      * mutually exclusive. You can specify only one. Attributes are documented under statement.
      * 
      */
-    public Output</* @Nullable */ IntentConclusionStatement> conclusionStatement() {
-        return this.conclusionStatement;
+    public Output<Optional<IntentConclusionStatement>> conclusionStatement() {
+        return Codegen.optional(this.conclusionStatement);
     }
     /**
      * Prompts the user to confirm the intent. This question should
@@ -106,8 +107,8 @@ public class Intent extends com.pulumi.resources.CustomResource {
      * or neither. Attributes are documented under prompt.
      * 
      */
-    public Output</* @Nullable */ IntentConfirmationPrompt> confirmationPrompt() {
-        return this.confirmationPrompt;
+    public Output<Optional<IntentConfirmationPrompt>> confirmationPrompt() {
+        return Codegen.optional(this.confirmationPrompt);
     }
     /**
      * Determines if a new slot type version is created when the initial
@@ -122,8 +123,8 @@ public class Intent extends com.pulumi.resources.CustomResource {
      * resource is created and on each update. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> createVersion() {
-        return this.createVersion;
+    public Output<Optional<Boolean>> createVersion() {
+        return Codegen.optional(this.createVersion);
     }
     /**
      * The date when the intent version was created.
@@ -150,8 +151,8 @@ public class Intent extends com.pulumi.resources.CustomResource {
      * @return A description of the bot. Must be less than or equal to 200 characters in length.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Specifies a Lambda function to invoke for each user input. You can
@@ -166,8 +167,8 @@ public class Intent extends com.pulumi.resources.CustomResource {
      * invoke this Lambda function to personalize user interaction. Attributes are documented under code_hook.
      * 
      */
-    public Output</* @Nullable */ IntentDialogCodeHook> dialogCodeHook() {
-        return this.dialogCodeHook;
+    public Output<Optional<IntentDialogCodeHook>> dialogCodeHook() {
+        return Codegen.optional(this.dialogCodeHook);
     }
     /**
      * Amazon Lex uses this prompt to solicit additional activity after
@@ -186,8 +187,8 @@ public class Intent extends com.pulumi.resources.CustomResource {
      * exclusive. You can specify only one. Attributes are documented under follow_up_prompt.
      * 
      */
-    public Output</* @Nullable */ IntentFollowUpPrompt> followUpPrompt() {
-        return this.followUpPrompt;
+    public Output<Optional<IntentFollowUpPrompt>> followUpPrompt() {
+        return Codegen.optional(this.followUpPrompt);
     }
     /**
      * Describes how the intent is fulfilled. For example, after a
@@ -252,8 +253,8 @@ public class Intent extends com.pulumi.resources.CustomResource {
      * in the Alexa Skills Kit.
      * 
      */
-    public Output</* @Nullable */ String> parentIntentSignature() {
-        return this.parentIntentSignature;
+    public Output<Optional<String>> parentIntentSignature() {
+        return Codegen.optional(this.parentIntentSignature);
     }
     /**
      * If the user answers &#34;no&#34; to the question defined in the prompt field,
@@ -270,8 +271,8 @@ public class Intent extends com.pulumi.resources.CustomResource {
      * documented below under statement.
      * 
      */
-    public Output</* @Nullable */ IntentRejectionStatement> rejectionStatement() {
-        return this.rejectionStatement;
+    public Output<Optional<IntentRejectionStatement>> rejectionStatement() {
+        return Codegen.optional(this.rejectionStatement);
     }
     /**
      * If you know a specific pattern with which users might respond to
@@ -288,8 +289,8 @@ public class Intent extends com.pulumi.resources.CustomResource {
      * is optional. In most cases, Amazon Lex is capable of understanding user utterances. Must have between 1 and 10 items in the list, and each item must be less than or equal to 200 characters in length.
      * 
      */
-    public Output</* @Nullable */ List<String>> sampleUtterances() {
-        return this.sampleUtterances;
+    public Output<Optional<List<String>>> sampleUtterances() {
+        return Codegen.optional(this.sampleUtterances);
     }
     /**
      * An list of intent slots. At runtime, Amazon Lex elicits required slot values
@@ -304,8 +305,8 @@ public class Intent extends com.pulumi.resources.CustomResource {
      * from the user using prompts defined in the slots. Attributes are documented under slot.
      * 
      */
-    public Output</* @Nullable */ List<IntentSlot>> slots() {
-        return this.slots;
+    public Output<Optional<List<IntentSlot>>> slots() {
+        return Codegen.optional(this.slots);
     }
     /**
      * The version of the bot.

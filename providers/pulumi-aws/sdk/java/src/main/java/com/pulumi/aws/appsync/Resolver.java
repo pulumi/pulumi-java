@@ -15,6 +15,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -72,8 +73,8 @@ public class Resolver extends com.pulumi.resources.CustomResource {
      * @return The CachingConfig.
      * 
      */
-    public Output</* @Nullable */ ResolverCachingConfig> cachingConfig() {
-        return this.cachingConfig;
+    public Output<Optional<ResolverCachingConfig>> cachingConfig() {
+        return Codegen.optional(this.cachingConfig);
     }
     /**
      * The DataSource name.
@@ -86,8 +87,8 @@ public class Resolver extends com.pulumi.resources.CustomResource {
      * @return The DataSource name.
      * 
      */
-    public Output</* @Nullable */ String> dataSource() {
-        return this.dataSource;
+    public Output<Optional<String>> dataSource() {
+        return Codegen.optional(this.dataSource);
     }
     /**
      * The field name from the schema defined in the GraphQL API.
@@ -114,8 +115,8 @@ public class Resolver extends com.pulumi.resources.CustomResource {
      * @return The resolver type. Valid values are `UNIT` and `PIPELINE`.
      * 
      */
-    public Output</* @Nullable */ String> kind() {
-        return this.kind;
+    public Output<Optional<String>> kind() {
+        return Codegen.optional(this.kind);
     }
     /**
      * The maximum batching size for a resolver. Valid values are between `0` and `2000`.
@@ -128,8 +129,8 @@ public class Resolver extends com.pulumi.resources.CustomResource {
      * @return The maximum batching size for a resolver. Valid values are between `0` and `2000`.
      * 
      */
-    public Output</* @Nullable */ Integer> maxBatchSize() {
-        return this.maxBatchSize;
+    public Output<Optional<Integer>> maxBatchSize() {
+        return Codegen.optional(this.maxBatchSize);
     }
     /**
      * The PipelineConfig.
@@ -142,8 +143,8 @@ public class Resolver extends com.pulumi.resources.CustomResource {
      * @return The PipelineConfig.
      * 
      */
-    public Output</* @Nullable */ ResolverPipelineConfig> pipelineConfig() {
-        return this.pipelineConfig;
+    public Output<Optional<ResolverPipelineConfig>> pipelineConfig() {
+        return Codegen.optional(this.pipelineConfig);
     }
     /**
      * The request mapping template for UNIT resolver or &#39;before mapping template&#39; for PIPELINE resolver. Required for non-Lambda resolvers.
@@ -156,8 +157,8 @@ public class Resolver extends com.pulumi.resources.CustomResource {
      * @return The request mapping template for UNIT resolver or &#39;before mapping template&#39; for PIPELINE resolver. Required for non-Lambda resolvers.
      * 
      */
-    public Output</* @Nullable */ String> requestTemplate() {
-        return this.requestTemplate;
+    public Output<Optional<String>> requestTemplate() {
+        return Codegen.optional(this.requestTemplate);
     }
     /**
      * The response mapping template for UNIT resolver or &#39;after mapping template&#39; for PIPELINE resolver. Required for non-Lambda resolvers.
@@ -170,8 +171,8 @@ public class Resolver extends com.pulumi.resources.CustomResource {
      * @return The response mapping template for UNIT resolver or &#39;after mapping template&#39; for PIPELINE resolver. Required for non-Lambda resolvers.
      * 
      */
-    public Output</* @Nullable */ String> responseTemplate() {
-        return this.responseTemplate;
+    public Output<Optional<String>> responseTemplate() {
+        return Codegen.optional(this.responseTemplate);
     }
     /**
      * Describes a Sync configuration for a resolver. See Sync Config.
@@ -184,8 +185,8 @@ public class Resolver extends com.pulumi.resources.CustomResource {
      * @return Describes a Sync configuration for a resolver. See Sync Config.
      * 
      */
-    public Output</* @Nullable */ ResolverSyncConfig> syncConfig() {
-        return this.syncConfig;
+    public Output<Optional<ResolverSyncConfig>> syncConfig() {
+        return Codegen.optional(this.syncConfig);
     }
     /**
      * The type name from the schema defined in the GraphQL API.

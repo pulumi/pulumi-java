@@ -14,6 +14,7 @@ import java.lang.Double;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return Windows IoT Device Service OEM AAD domain
      * 
      */
-    public Output</* @Nullable */ String> adminDomainName() {
-        return this.adminDomainName;
+    public Output<Optional<String>> adminDomainName() {
+        return Codegen.optional(this.adminDomainName);
     }
     /**
      * Windows IoT Device Service ODM AAD domain
@@ -58,8 +59,8 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return Windows IoT Device Service ODM AAD domain
      * 
      */
-    public Output</* @Nullable */ String> billingDomainName() {
-        return this.billingDomainName;
+    public Output<Optional<String>> billingDomainName() {
+        return Codegen.optional(this.billingDomainName);
     }
     /**
      * The Etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal ETag convention.
@@ -72,8 +73,8 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return The Etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal ETag convention.
      * 
      */
-    public Output</* @Nullable */ String> etag() {
-        return this.etag;
+    public Output<Optional<String>> etag() {
+        return Codegen.optional(this.etag);
     }
     /**
      * The Azure Region where the resource lives
@@ -86,8 +87,8 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return The Azure Region where the resource lives
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The name of the resource
@@ -114,8 +115,8 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return Windows IoT Device Service notes.
      * 
      */
-    public Output</* @Nullable */ String> notes() {
-        return this.notes;
+    public Output<Optional<String>> notes() {
+        return Codegen.optional(this.notes);
     }
     /**
      * Windows IoT Device Service device allocation,
@@ -128,8 +129,8 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return Windows IoT Device Service device allocation,
      * 
      */
-    public Output</* @Nullable */ Double> quantity() {
-        return this.quantity;
+    public Output<Optional<Double>> quantity() {
+        return Codegen.optional(this.quantity);
     }
     /**
      * Windows IoT Device Service start date,
@@ -156,8 +157,8 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource.

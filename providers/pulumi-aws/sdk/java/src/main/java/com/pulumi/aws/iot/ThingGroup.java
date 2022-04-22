@@ -16,6 +16,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -79,8 +80,8 @@ public class ThingGroup extends com.pulumi.resources.CustomResource {
      * @return The name of the parent Thing Group.
      * 
      */
-    public Output</* @Nullable */ String> parentGroupName() {
-        return this.parentGroupName;
+    public Output<Optional<String>> parentGroupName() {
+        return Codegen.optional(this.parentGroupName);
     }
     /**
      * The Thing Group properties. Defined below.
@@ -93,8 +94,8 @@ public class ThingGroup extends com.pulumi.resources.CustomResource {
      * @return The Thing Group properties. Defined below.
      * 
      */
-    public Output</* @Nullable */ ThingGroupProperties> properties() {
-        return this.properties;
+    public Output<Optional<ThingGroupProperties>> properties() {
+        return Codegen.optional(this.properties);
     }
     /**
      * Key-value mapping of resource tags
@@ -107,8 +108,8 @@ public class ThingGroup extends com.pulumi.resources.CustomResource {
      * @return Key-value mapping of resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;

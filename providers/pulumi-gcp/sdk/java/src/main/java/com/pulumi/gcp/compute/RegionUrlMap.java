@@ -17,6 +17,7 @@ import com.pulumi.gcp.compute.outputs.RegionUrlMapTest;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -77,8 +78,8 @@ public class RegionUrlMap extends com.pulumi.resources.CustomResource {
      * the URL&#39;s path portion.
      * 
      */
-    public Output</* @Nullable */ String> defaultService() {
-        return this.defaultService;
+    public Output<Optional<String>> defaultService() {
+        return Codegen.optional(this.defaultService);
     }
     /**
      * When none of the specified hostRules match, the request is redirected to a URL specified
@@ -97,8 +98,8 @@ public class RegionUrlMap extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ RegionUrlMapDefaultUrlRedirect> defaultUrlRedirect() {
-        return this.defaultUrlRedirect;
+    public Output<Optional<RegionUrlMapDefaultUrlRedirect>> defaultUrlRedirect() {
+        return Codegen.optional(this.defaultUrlRedirect);
     }
     /**
      * Description of this test case.
@@ -111,8 +112,8 @@ public class RegionUrlMap extends com.pulumi.resources.CustomResource {
      * @return Description of this test case.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Fingerprint of this resource. This field is used internally during updates of this resource.
@@ -141,8 +142,8 @@ public class RegionUrlMap extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<RegionUrlMapHostRule>> hostRules() {
-        return this.hostRules;
+    public Output<Optional<List<RegionUrlMapHostRule>>> hostRules() {
+        return Codegen.optional(this.hostRules);
     }
     /**
      * The unique identifier for the resource.
@@ -187,8 +188,8 @@ public class RegionUrlMap extends com.pulumi.resources.CustomResource {
      * the URL if the hostRule matches the URL&#39;s host portion.
      * 
      */
-    public Output</* @Nullable */ List<RegionUrlMapPathMatcher>> pathMatchers() {
-        return this.pathMatchers;
+    public Output<Optional<List<RegionUrlMapPathMatcher>>> pathMatchers() {
+        return Codegen.optional(this.pathMatchers);
     }
     /**
      * The ID of the project in which the resource belongs.
@@ -251,8 +252,8 @@ public class RegionUrlMap extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<RegionUrlMapTest>> tests() {
-        return this.tests;
+    public Output<Optional<List<RegionUrlMapTest>>> tests() {
+        return Codegen.optional(this.tests);
     }
 
     /**

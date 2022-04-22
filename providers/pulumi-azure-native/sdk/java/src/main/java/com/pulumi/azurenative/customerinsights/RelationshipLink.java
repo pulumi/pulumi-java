@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class RelationshipLink extends com.pulumi.resources.CustomResource {
      * @return Localized descriptions for the Relationship Link.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> description() {
-        return this.description;
+    public Output<Optional<Map<String,String>>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Localized display name for the Relationship Link.
@@ -59,8 +60,8 @@ public class RelationshipLink extends com.pulumi.resources.CustomResource {
      * @return Localized display name for the Relationship Link.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> displayName() {
-        return this.displayName;
+    public Output<Optional<Map<String,String>>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * The InteractionType associated with the Relationship Link.
@@ -101,8 +102,8 @@ public class RelationshipLink extends com.pulumi.resources.CustomResource {
      * @return The mappings between Interaction and Relationship fields.
      * 
      */
-    public Output</* @Nullable */ List<RelationshipLinkFieldMappingResponse>> mappings() {
-        return this.mappings;
+    public Output<Optional<List<RelationshipLinkFieldMappingResponse>>> mappings() {
+        return Codegen.optional(this.mappings);
     }
     /**
      * Resource name.

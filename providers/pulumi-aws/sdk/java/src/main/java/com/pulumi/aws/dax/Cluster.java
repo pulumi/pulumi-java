@@ -16,6 +16,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -63,8 +64,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * nodes will be created
      * 
      */
-    public Output</* @Nullable */ List<String>> availabilityZones() {
-        return this.availabilityZones;
+    public Output<Optional<List<String>>> availabilityZones() {
+        return Codegen.optional(this.availabilityZones);
     }
     /**
      * The DNS name of the DAX cluster without the port appended
@@ -95,8 +96,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * Default value is `NONE`.
      * 
      */
-    public Output</* @Nullable */ String> clusterEndpointEncryptionType() {
-        return this.clusterEndpointEncryptionType;
+    public Output<Optional<String>> clusterEndpointEncryptionType() {
+        return Codegen.optional(this.clusterEndpointEncryptionType);
     }
     /**
      * Group identifier. DAX converts this name to
@@ -141,8 +142,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Description for the cluster
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * A valid Amazon Resource Name (ARN) that identifies
@@ -231,8 +232,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * `arn:aws:sns:us-east-1:012345678999:my_sns_topic`
      * 
      */
-    public Output</* @Nullable */ String> notificationTopicArn() {
-        return this.notificationTopicArn;
+    public Output<Optional<String>> notificationTopicArn() {
+        return Codegen.optional(this.notificationTopicArn);
     }
     /**
      * Name of the parameter group to associate
@@ -309,8 +310,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Encrypt at rest options
      * 
      */
-    public Output</* @Nullable */ ClusterServerSideEncryption> serverSideEncryption() {
-        return this.serverSideEncryption;
+    public Output<Optional<ClusterServerSideEncryption>> serverSideEncryption() {
+        return Codegen.optional(this.serverSideEncryption);
     }
     /**
      * Name of the subnet group to be used for the
@@ -339,8 +340,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

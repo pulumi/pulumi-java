@@ -14,6 +14,7 @@ import com.pulumi.gcp.pubsub.outputs.LiteTopicPartitionConfig;
 import com.pulumi.gcp.pubsub.outputs.LiteTopicReservationConfig;
 import com.pulumi.gcp.pubsub.outputs.LiteTopicRetentionConfig;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -77,8 +78,8 @@ public class LiteTopic extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ LiteTopicPartitionConfig> partitionConfig() {
-        return this.partitionConfig;
+    public Output<Optional<LiteTopicPartitionConfig>> partitionConfig() {
+        return Codegen.optional(this.partitionConfig);
     }
     /**
      * The ID of the project in which the resource belongs.
@@ -107,8 +108,8 @@ public class LiteTopic extends com.pulumi.resources.CustomResource {
      * @return The region of the pubsub lite topic.
      * 
      */
-    public Output</* @Nullable */ String> region() {
-        return this.region;
+    public Output<Optional<String>> region() {
+        return Codegen.optional(this.region);
     }
     /**
      * The settings for this topic&#39;s Reservation usage.
@@ -123,8 +124,8 @@ public class LiteTopic extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ LiteTopicReservationConfig> reservationConfig() {
-        return this.reservationConfig;
+    public Output<Optional<LiteTopicReservationConfig>> reservationConfig() {
+        return Codegen.optional(this.reservationConfig);
     }
     /**
      * The settings for a topic&#39;s message retention.
@@ -139,8 +140,8 @@ public class LiteTopic extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ LiteTopicRetentionConfig> retentionConfig() {
-        return this.retentionConfig;
+    public Output<Optional<LiteTopicRetentionConfig>> retentionConfig() {
+        return Codegen.optional(this.retentionConfig);
     }
     /**
      * The zone of the pubsub lite topic.
@@ -153,8 +154,8 @@ public class LiteTopic extends com.pulumi.resources.CustomResource {
      * @return The zone of the pubsub lite topic.
      * 
      */
-    public Output</* @Nullable */ String> zone() {
-        return this.zone;
+    public Output<Optional<String>> zone() {
+        return Codegen.optional(this.zone);
     }
 
     /**

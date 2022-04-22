@@ -19,6 +19,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -66,8 +67,8 @@ public class Trigger extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ TriggerBuild> build() {
-        return this.build;
+    public Output<Optional<TriggerBuild>> build() {
+        return Codegen.optional(this.build);
     }
     /**
      * Time when the trigger was created.
@@ -94,8 +95,8 @@ public class Trigger extends com.pulumi.resources.CustomResource {
      * @return Human-readable description of the trigger.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Whether the trigger is disabled or not. If true, the trigger will never result in a build.
@@ -108,8 +109,8 @@ public class Trigger extends com.pulumi.resources.CustomResource {
      * @return Whether the trigger is disabled or not. If true, the trigger will never result in a build.
      * 
      */
-    public Output</* @Nullable */ Boolean> disabled() {
-        return this.disabled;
+    public Output<Optional<Boolean>> disabled() {
+        return Codegen.optional(this.disabled);
     }
     /**
      * Path, from the source root, to a file whose contents is used for the template. Either a filename or build template must be provided.
@@ -122,8 +123,8 @@ public class Trigger extends com.pulumi.resources.CustomResource {
      * @return Path, from the source root, to a file whose contents is used for the template. Either a filename or build template must be provided.
      * 
      */
-    public Output</* @Nullable */ String> filename() {
-        return this.filename;
+    public Output<Optional<String>> filename() {
+        return Codegen.optional(this.filename);
     }
     /**
      * Describes the configuration of a trigger that creates a build whenever a GitHub event is received.
@@ -140,8 +141,8 @@ public class Trigger extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ TriggerGithub> github() {
-        return this.github;
+    public Output<Optional<TriggerGithub>> github() {
+        return Codegen.optional(this.github);
     }
     /**
      * ignoredFiles and includedFiles are file glob matches using https://golang.org/pkg/path/filepath/#Match
@@ -166,8 +167,8 @@ public class Trigger extends com.pulumi.resources.CustomResource {
      * of the ignoredFiles globs, then we do not trigger a build.
      * 
      */
-    public Output</* @Nullable */ List<String>> ignoredFiles() {
-        return this.ignoredFiles;
+    public Output<Optional<List<String>>> ignoredFiles() {
+        return Codegen.optional(this.ignoredFiles);
     }
     /**
      * ignoredFiles and includedFiles are file glob matches using https://golang.org/pkg/path/filepath/#Match
@@ -196,8 +197,8 @@ public class Trigger extends com.pulumi.resources.CustomResource {
      * a build.
      * 
      */
-    public Output</* @Nullable */ List<String>> includedFiles() {
-        return this.includedFiles;
+    public Output<Optional<List<String>>> includedFiles() {
+        return Codegen.optional(this.includedFiles);
     }
     /**
      * Name of the volume to mount.
@@ -250,8 +251,8 @@ public class Trigger extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ TriggerPubsubConfig> pubsubConfig() {
-        return this.pubsubConfig;
+    public Output<Optional<TriggerPubsubConfig>> pubsubConfig() {
+        return Codegen.optional(this.pubsubConfig);
     }
     /**
      * The service account used for all user-controlled operations including
@@ -272,8 +273,8 @@ public class Trigger extends com.pulumi.resources.CustomResource {
      * Format: projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_ID_OR_EMAIL}
      * 
      */
-    public Output</* @Nullable */ String> serviceAccount() {
-        return this.serviceAccount;
+    public Output<Optional<String>> serviceAccount() {
+        return Codegen.optional(this.serviceAccount);
     }
     /**
      * Substitutions to use in a triggered build. Should only be used with triggers.run
@@ -286,8 +287,8 @@ public class Trigger extends com.pulumi.resources.CustomResource {
      * @return Substitutions to use in a triggered build. Should only be used with triggers.run
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> substitutions() {
-        return this.substitutions;
+    public Output<Optional<Map<String,String>>> substitutions() {
+        return Codegen.optional(this.substitutions);
     }
     /**
      * Tags for annotation of a Build. These are not docker tags.
@@ -300,8 +301,8 @@ public class Trigger extends com.pulumi.resources.CustomResource {
      * @return Tags for annotation of a Build. These are not docker tags.
      * 
      */
-    public Output</* @Nullable */ List<String>> tags() {
-        return this.tags;
+    public Output<Optional<List<String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The unique identifier for the trigger.
@@ -338,8 +339,8 @@ public class Trigger extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ TriggerTriggerTemplate> triggerTemplate() {
-        return this.triggerTemplate;
+    public Output<Optional<TriggerTriggerTemplate>> triggerTemplate() {
+        return Codegen.optional(this.triggerTemplate);
     }
     /**
      * WebhookConfig describes the configuration of a trigger that creates
@@ -358,8 +359,8 @@ public class Trigger extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ TriggerWebhookConfig> webhookConfig() {
-        return this.webhookConfig;
+    public Output<Optional<TriggerWebhookConfig>> webhookConfig() {
+        return Codegen.optional(this.webhookConfig);
     }
 
     /**

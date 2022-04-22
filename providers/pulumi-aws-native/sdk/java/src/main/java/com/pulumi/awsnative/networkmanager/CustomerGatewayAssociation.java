@@ -10,6 +10,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -71,8 +72,8 @@ public class CustomerGatewayAssociation extends com.pulumi.resources.CustomResou
      * @return The ID of the link
      * 
      */
-    public Output</* @Nullable */ String> linkId() {
-        return this.linkId;
+    public Output<Optional<String>> linkId() {
+        return Codegen.optional(this.linkId);
     }
 
     /**
