@@ -15,6 +15,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -50,8 +51,8 @@ public class RandomShuffle extends com.pulumi.resources.CustomResource {
      * @return Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
      * 
      */
-    public Output</* @Nullable */ Map<String,Object>> keepers() {
-        return this.keepers;
+    public Output<Optional<Map<String,Object>>> keepers() {
+        return Codegen.optional(this.keepers);
     }
     /**
      * The number of results to return. Defaults to the number of items in the `input` list. If fewer items are requested, some elements will be excluded from the result. If more items are requested, items will be repeated in the result but not more frequently than the number of items in the input list.
@@ -64,8 +65,8 @@ public class RandomShuffle extends com.pulumi.resources.CustomResource {
      * @return The number of results to return. Defaults to the number of items in the `input` list. If fewer items are requested, some elements will be excluded from the result. If more items are requested, items will be repeated in the result but not more frequently than the number of items in the input list.
      * 
      */
-    public Output</* @Nullable */ Integer> resultCount() {
-        return this.resultCount;
+    public Output<Optional<Integer>> resultCount() {
+        return Codegen.optional(this.resultCount);
     }
     /**
      * Random permutation of the list of strings given in `input`.
@@ -92,8 +93,8 @@ public class RandomShuffle extends com.pulumi.resources.CustomResource {
      * @return Arbitrary string with which to seed the random number generator, in order to produce less-volatile permutations of the list.
      * 
      */
-    public Output</* @Nullable */ String> seed() {
-        return this.seed;
+    public Output<Optional<String>> seed() {
+        return Codegen.optional(this.seed);
     }
 
     /**
