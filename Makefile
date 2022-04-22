@@ -24,16 +24,16 @@ bin/pulumi-java-gen: ${PKG_FILES}
 	cd pkg && go build -o ../bin github.com/pulumi/pulumi-java/pkg/cmd/pulumi-java-gen
 
 
-# Java SDK is a gradle project rooted at `sdk/jvm`
+# Java SDK is a gradle project rooted at `sdk/java`
 
 install_sdk::
-	cd sdk/jvm && make install
+	cd sdk/java && make install
 
 build_sdk::
-	cd sdk/jvm && make build
+	cd sdk/java && make build
 
 ensure_sdk::
-	cd sdk/jvm && make ensure
+	cd sdk/java && make ensure
 
 providers_generate_all: provider.random.generate provider.aws.generate provider.aws-native.generate provider.docker.generate provider.kubernetes.generate provider.azure-native.generate provider.google-native.generate provider.gcp.generate provider.eks.generate
 
