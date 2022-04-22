@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class ParameterGroup extends com.pulumi.resources.CustomResource {
      * @return A description of the parameter group.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The name of the parameter group family that this parameter group is compatible with.
@@ -88,8 +89,8 @@ public class ParameterGroup extends com.pulumi.resources.CustomResource {
      * @return An map of parameter names and values for the parameter update. You must supply at least one parameter name and value; subsequent arguments are optional.
      * 
      */
-    public Output</* @Nullable */ Object> parameters() {
-        return this.parameters;
+    public Output<Optional<Object>> parameters() {
+        return Codegen.optional(this.parameters);
     }
     /**
      * An array of key-value pairs to apply to this parameter group.
@@ -102,8 +103,8 @@ public class ParameterGroup extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this parameter group.
      * 
      */
-    public Output</* @Nullable */ List<ParameterGroupTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<ParameterGroupTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

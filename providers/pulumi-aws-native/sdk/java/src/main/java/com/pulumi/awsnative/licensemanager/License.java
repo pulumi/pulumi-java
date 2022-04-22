@@ -16,6 +16,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -35,8 +36,8 @@ public class License extends com.pulumi.resources.CustomResource {
      * @return Beneficiary of the license.
      * 
      */
-    public Output</* @Nullable */ String> beneficiary() {
-        return this.beneficiary;
+    public Output<Optional<String>> beneficiary() {
+        return Codegen.optional(this.beneficiary);
     }
     @Export(name="consumptionConfiguration", type=LicenseConsumptionConfiguration.class, parameters={})
     private Output<LicenseConsumptionConfiguration> consumptionConfiguration;
@@ -87,8 +88,8 @@ public class License extends com.pulumi.resources.CustomResource {
     @Export(name="licenseMetadata", type=List.class, parameters={LicenseMetadata.class})
     private Output</* @Nullable */ List<LicenseMetadata>> licenseMetadata;
 
-    public Output</* @Nullable */ List<LicenseMetadata>> licenseMetadata() {
-        return this.licenseMetadata;
+    public Output<Optional<List<LicenseMetadata>>> licenseMetadata() {
+        return Codegen.optional(this.licenseMetadata);
     }
     /**
      * Name for the created license.
@@ -129,14 +130,14 @@ public class License extends com.pulumi.resources.CustomResource {
      * @return ProductSKU of the license.
      * 
      */
-    public Output</* @Nullable */ String> productSKU() {
-        return this.productSKU;
+    public Output<Optional<String>> productSKU() {
+        return Codegen.optional(this.productSKU);
     }
     @Export(name="status", type=String.class, parameters={})
     private Output</* @Nullable */ String> status;
 
-    public Output</* @Nullable */ String> status() {
-        return this.status;
+    public Output<Optional<String>> status() {
+        return Codegen.optional(this.status);
     }
     @Export(name="validity", type=LicenseValidityDateFormat.class, parameters={})
     private Output<LicenseValidityDateFormat> validity;

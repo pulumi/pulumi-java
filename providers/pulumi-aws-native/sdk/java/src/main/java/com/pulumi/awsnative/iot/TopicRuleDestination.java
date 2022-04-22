@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class TopicRuleDestination extends com.pulumi.resources.CustomResource {
      * @return HTTP URL destination properties.
      * 
      */
-    public Output</* @Nullable */ TopicRuleDestinationHttpUrlDestinationSummary> httpUrlProperties() {
-        return this.httpUrlProperties;
+    public Output<Optional<TopicRuleDestinationHttpUrlDestinationSummary>> httpUrlProperties() {
+        return Codegen.optional(this.httpUrlProperties);
     }
     /**
      * The status of the TopicRuleDestination.
@@ -60,8 +61,8 @@ public class TopicRuleDestination extends com.pulumi.resources.CustomResource {
      * @return The status of the TopicRuleDestination.
      * 
      */
-    public Output</* @Nullable */ TopicRuleDestinationStatus> status() {
-        return this.status;
+    public Output<Optional<TopicRuleDestinationStatus>> status() {
+        return Codegen.optional(this.status);
     }
     /**
      * The reasoning for the current status of the TopicRuleDestination.
@@ -88,8 +89,8 @@ public class TopicRuleDestination extends com.pulumi.resources.CustomResource {
      * @return VPC destination properties.
      * 
      */
-    public Output</* @Nullable */ TopicRuleDestinationVpcDestinationProperties> vpcProperties() {
-        return this.vpcProperties;
+    public Output<Optional<TopicRuleDestinationVpcDestinationProperties>> vpcProperties() {
+        return Codegen.optional(this.vpcProperties);
     }
 
     /**

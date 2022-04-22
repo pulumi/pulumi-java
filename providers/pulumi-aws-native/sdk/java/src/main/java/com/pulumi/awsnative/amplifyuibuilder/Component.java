@@ -18,6 +18,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -35,26 +36,26 @@ public class Component extends com.pulumi.resources.CustomResource {
     @Export(name="bindingProperties", type=ComponentBindingProperties.class, parameters={})
     private Output</* @Nullable */ ComponentBindingProperties> bindingProperties;
 
-    public Output</* @Nullable */ ComponentBindingProperties> bindingProperties() {
-        return this.bindingProperties;
+    public Output<Optional<ComponentBindingProperties>> bindingProperties() {
+        return Codegen.optional(this.bindingProperties);
     }
     @Export(name="children", type=List.class, parameters={ComponentChild.class})
     private Output</* @Nullable */ List<ComponentChild>> children;
 
-    public Output</* @Nullable */ List<ComponentChild>> children() {
-        return this.children;
+    public Output<Optional<List<ComponentChild>>> children() {
+        return Codegen.optional(this.children);
     }
     @Export(name="collectionProperties", type=ComponentCollectionProperties.class, parameters={})
     private Output</* @Nullable */ ComponentCollectionProperties> collectionProperties;
 
-    public Output</* @Nullable */ ComponentCollectionProperties> collectionProperties() {
-        return this.collectionProperties;
+    public Output<Optional<ComponentCollectionProperties>> collectionProperties() {
+        return Codegen.optional(this.collectionProperties);
     }
     @Export(name="componentType", type=String.class, parameters={})
     private Output</* @Nullable */ String> componentType;
 
-    public Output</* @Nullable */ String> componentType() {
-        return this.componentType;
+    public Output<Optional<String>> componentType() {
+        return Codegen.optional(this.componentType);
     }
     @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
@@ -77,38 +78,38 @@ public class Component extends com.pulumi.resources.CustomResource {
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     @Export(name="overrides", type=ComponentOverrides.class, parameters={})
     private Output</* @Nullable */ ComponentOverrides> overrides;
 
-    public Output</* @Nullable */ ComponentOverrides> overrides() {
-        return this.overrides;
+    public Output<Optional<ComponentOverrides>> overrides() {
+        return Codegen.optional(this.overrides);
     }
     @Export(name="properties", type=ComponentProperties.class, parameters={})
     private Output</* @Nullable */ ComponentProperties> properties;
 
-    public Output</* @Nullable */ ComponentProperties> properties() {
-        return this.properties;
+    public Output<Optional<ComponentProperties>> properties() {
+        return Codegen.optional(this.properties);
     }
     @Export(name="sourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> sourceId;
 
-    public Output</* @Nullable */ String> sourceId() {
-        return this.sourceId;
+    public Output<Optional<String>> sourceId() {
+        return Codegen.optional(this.sourceId);
     }
     @Export(name="tags", type=ComponentTags.class, parameters={})
     private Output</* @Nullable */ ComponentTags> tags;
 
-    public Output</* @Nullable */ ComponentTags> tags() {
-        return this.tags;
+    public Output<Optional<ComponentTags>> tags() {
+        return Codegen.optional(this.tags);
     }
     @Export(name="variants", type=List.class, parameters={ComponentVariant.class})
     private Output</* @Nullable */ List<ComponentVariant>> variants;
 
-    public Output</* @Nullable */ List<ComponentVariant>> variants() {
-        return this.variants;
+    public Output<Optional<List<ComponentVariant>>> variants() {
+        return Codegen.optional(this.variants);
     }
 
     /**

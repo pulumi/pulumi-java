@@ -18,6 +18,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -31,8 +32,8 @@ public class Table extends com.pulumi.resources.CustomResource {
     @Export(name="billingMode", type=TableBillingMode.class, parameters={})
     private Output</* @Nullable */ TableBillingMode> billingMode;
 
-    public Output</* @Nullable */ TableBillingMode> billingMode() {
-        return this.billingMode;
+    public Output<Optional<TableBillingMode>> billingMode() {
+        return Codegen.optional(this.billingMode);
     }
     /**
      * Clustering key columns of the table
@@ -45,8 +46,8 @@ public class Table extends com.pulumi.resources.CustomResource {
      * @return Clustering key columns of the table
      * 
      */
-    public Output</* @Nullable */ List<TableClusteringKeyColumn>> clusteringKeyColumns() {
-        return this.clusteringKeyColumns;
+    public Output<Optional<List<TableClusteringKeyColumn>>> clusteringKeyColumns() {
+        return Codegen.optional(this.clusteringKeyColumns);
     }
     /**
      * Default TTL (Time To Live) in seconds, where zero is disabled. If the value is greater than zero, TTL is enabled for the entire table and an expiration timestamp is added to each column.
@@ -59,14 +60,14 @@ public class Table extends com.pulumi.resources.CustomResource {
      * @return Default TTL (Time To Live) in seconds, where zero is disabled. If the value is greater than zero, TTL is enabled for the entire table and an expiration timestamp is added to each column.
      * 
      */
-    public Output</* @Nullable */ Integer> defaultTimeToLive() {
-        return this.defaultTimeToLive;
+    public Output<Optional<Integer>> defaultTimeToLive() {
+        return Codegen.optional(this.defaultTimeToLive);
     }
     @Export(name="encryptionSpecification", type=TableEncryptionSpecification.class, parameters={})
     private Output</* @Nullable */ TableEncryptionSpecification> encryptionSpecification;
 
-    public Output</* @Nullable */ TableEncryptionSpecification> encryptionSpecification() {
-        return this.encryptionSpecification;
+    public Output<Optional<TableEncryptionSpecification>> encryptionSpecification() {
+        return Codegen.optional(this.encryptionSpecification);
     }
     /**
      * Name for Cassandra keyspace
@@ -107,8 +108,8 @@ public class Table extends com.pulumi.resources.CustomResource {
      * @return Indicates whether point in time recovery is enabled (true) or disabled (false) on the table
      * 
      */
-    public Output</* @Nullable */ Boolean> pointInTimeRecoveryEnabled() {
-        return this.pointInTimeRecoveryEnabled;
+    public Output<Optional<Boolean>> pointInTimeRecoveryEnabled() {
+        return Codegen.optional(this.pointInTimeRecoveryEnabled);
     }
     /**
      * Non-key columns of the table
@@ -121,8 +122,8 @@ public class Table extends com.pulumi.resources.CustomResource {
      * @return Non-key columns of the table
      * 
      */
-    public Output</* @Nullable */ List<TableColumn>> regularColumns() {
-        return this.regularColumns;
+    public Output<Optional<List<TableColumn>>> regularColumns() {
+        return Codegen.optional(this.regularColumns);
     }
     /**
      * Name for Cassandra table
@@ -135,8 +136,8 @@ public class Table extends com.pulumi.resources.CustomResource {
      * @return Name for Cassandra table
      * 
      */
-    public Output</* @Nullable */ String> tableName() {
-        return this.tableName;
+    public Output<Optional<String>> tableName() {
+        return Codegen.optional(this.tableName);
     }
     /**
      * An array of key-value pairs to apply to this resource
@@ -149,8 +150,8 @@ public class Table extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource
      * 
      */
-    public Output</* @Nullable */ List<TableTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<TableTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

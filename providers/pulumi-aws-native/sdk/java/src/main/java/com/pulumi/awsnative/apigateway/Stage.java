@@ -17,6 +17,7 @@ import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -36,8 +37,8 @@ public class Stage extends com.pulumi.resources.CustomResource {
      * @return Specifies settings for logging access in this stage.
      * 
      */
-    public Output</* @Nullable */ StageAccessLogSetting> accessLogSetting() {
-        return this.accessLogSetting;
+    public Output<Optional<StageAccessLogSetting>> accessLogSetting() {
+        return Codegen.optional(this.accessLogSetting);
     }
     /**
      * Indicates whether cache clustering is enabled for the stage.
@@ -50,8 +51,8 @@ public class Stage extends com.pulumi.resources.CustomResource {
      * @return Indicates whether cache clustering is enabled for the stage.
      * 
      */
-    public Output</* @Nullable */ Boolean> cacheClusterEnabled() {
-        return this.cacheClusterEnabled;
+    public Output<Optional<Boolean>> cacheClusterEnabled() {
+        return Codegen.optional(this.cacheClusterEnabled);
     }
     /**
      * The stage&#39;s cache cluster size.
@@ -64,8 +65,8 @@ public class Stage extends com.pulumi.resources.CustomResource {
      * @return The stage&#39;s cache cluster size.
      * 
      */
-    public Output</* @Nullable */ String> cacheClusterSize() {
-        return this.cacheClusterSize;
+    public Output<Optional<String>> cacheClusterSize() {
+        return Codegen.optional(this.cacheClusterSize);
     }
     /**
      * Specifies settings for the canary deployment in this stage.
@@ -78,8 +79,8 @@ public class Stage extends com.pulumi.resources.CustomResource {
      * @return Specifies settings for the canary deployment in this stage.
      * 
      */
-    public Output</* @Nullable */ StageCanarySetting> canarySetting() {
-        return this.canarySetting;
+    public Output<Optional<StageCanarySetting>> canarySetting() {
+        return Codegen.optional(this.canarySetting);
     }
     /**
      * The ID of the client certificate that API Gateway uses to call your integration endpoints in the stage.
@@ -92,8 +93,8 @@ public class Stage extends com.pulumi.resources.CustomResource {
      * @return The ID of the client certificate that API Gateway uses to call your integration endpoints in the stage.
      * 
      */
-    public Output</* @Nullable */ String> clientCertificateId() {
-        return this.clientCertificateId;
+    public Output<Optional<String>> clientCertificateId() {
+        return Codegen.optional(this.clientCertificateId);
     }
     /**
      * The ID of the deployment that the stage is associated with. This parameter is required to create a stage.
@@ -106,8 +107,8 @@ public class Stage extends com.pulumi.resources.CustomResource {
      * @return The ID of the deployment that the stage is associated with. This parameter is required to create a stage.
      * 
      */
-    public Output</* @Nullable */ String> deploymentId() {
-        return this.deploymentId;
+    public Output<Optional<String>> deploymentId() {
+        return Codegen.optional(this.deploymentId);
     }
     /**
      * A description of the stage.
@@ -120,8 +121,8 @@ public class Stage extends com.pulumi.resources.CustomResource {
      * @return A description of the stage.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The version ID of the API documentation snapshot.
@@ -134,8 +135,8 @@ public class Stage extends com.pulumi.resources.CustomResource {
      * @return The version ID of the API documentation snapshot.
      * 
      */
-    public Output</* @Nullable */ String> documentationVersion() {
-        return this.documentationVersion;
+    public Output<Optional<String>> documentationVersion() {
+        return Codegen.optional(this.documentationVersion);
     }
     /**
      * Settings for all methods in the stage.
@@ -148,8 +149,8 @@ public class Stage extends com.pulumi.resources.CustomResource {
      * @return Settings for all methods in the stage.
      * 
      */
-    public Output</* @Nullable */ List<StageMethodSetting>> methodSettings() {
-        return this.methodSettings;
+    public Output<Optional<List<StageMethodSetting>>> methodSettings() {
+        return Codegen.optional(this.methodSettings);
     }
     /**
      * The ID of the RestApi resource that you&#39;re deploying with this stage.
@@ -176,8 +177,8 @@ public class Stage extends com.pulumi.resources.CustomResource {
      * @return The name of the stage, which API Gateway uses as the first path segment in the invoked Uniform Resource Identifier (URI).
      * 
      */
-    public Output</* @Nullable */ String> stageName() {
-        return this.stageName;
+    public Output<Optional<String>> stageName() {
+        return Codegen.optional(this.stageName);
     }
     /**
      * An array of arbitrary tags (key-value pairs) to associate with the stage.
@@ -190,8 +191,8 @@ public class Stage extends com.pulumi.resources.CustomResource {
      * @return An array of arbitrary tags (key-value pairs) to associate with the stage.
      * 
      */
-    public Output</* @Nullable */ List<StageTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<StageTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Specifies whether active X-Ray tracing is enabled for this stage.
@@ -204,8 +205,8 @@ public class Stage extends com.pulumi.resources.CustomResource {
      * @return Specifies whether active X-Ray tracing is enabled for this stage.
      * 
      */
-    public Output</* @Nullable */ Boolean> tracingEnabled() {
-        return this.tracingEnabled;
+    public Output<Optional<Boolean>> tracingEnabled() {
+        return Codegen.optional(this.tracingEnabled);
     }
     /**
      * A map (string-to-string map) that defines the stage variables, where the variable name is the key and the variable value is the value.
@@ -218,8 +219,8 @@ public class Stage extends com.pulumi.resources.CustomResource {
      * @return A map (string-to-string map) that defines the stage variables, where the variable name is the key and the variable value is the value.
      * 
      */
-    public Output</* @Nullable */ Object> variables() {
-        return this.variables;
+    public Output<Optional<Object>> variables() {
+        return Codegen.optional(this.variables);
     }
 
     /**

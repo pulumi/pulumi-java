@@ -15,6 +15,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -66,8 +67,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * You cannot modify the value of AutoMinorVersionUpgrade after the cluster is created. To enable AutoMinorVersionUpgrade on a cluster you must set AutoMinorVersionUpgrade to true when you create a cluster.
      * 
      */
-    public Output</* @Nullable */ Boolean> autoMinorVersionUpgrade() {
-        return this.autoMinorVersionUpgrade;
+    public Output<Optional<Boolean>> autoMinorVersionUpgrade() {
+        return Codegen.optional(this.autoMinorVersionUpgrade);
     }
     /**
      * The cluster endpoint.
@@ -80,8 +81,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The cluster endpoint.
      * 
      */
-    public Output</* @Nullable */ ClusterEndpoint> clusterEndpoint() {
-        return this.clusterEndpoint;
+    public Output<Optional<ClusterEndpoint>> clusterEndpoint() {
+        return Codegen.optional(this.clusterEndpoint);
     }
     /**
      * The name of the cluster. This value must be unique as it also serves as the cluster identifier.
@@ -108,8 +109,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return An optional description of the cluster.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The Redis engine version used by the cluster.
@@ -122,8 +123,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The Redis engine version used by the cluster.
      * 
      */
-    public Output</* @Nullable */ String> engineVersion() {
-        return this.engineVersion;
+    public Output<Optional<String>> engineVersion() {
+        return Codegen.optional(this.engineVersion);
     }
     /**
      * The user-supplied name of a final cluster snapshot. This is the unique name that identifies the snapshot. MemoryDB creates the snapshot, and then deletes the cluster immediately afterward.
@@ -136,8 +137,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The user-supplied name of a final cluster snapshot. This is the unique name that identifies the snapshot. MemoryDB creates the snapshot, and then deletes the cluster immediately afterward.
      * 
      */
-    public Output</* @Nullable */ String> finalSnapshotName() {
-        return this.finalSnapshotName;
+    public Output<Optional<String>> finalSnapshotName() {
+        return Codegen.optional(this.finalSnapshotName);
     }
     /**
      * The ID of the KMS key used to encrypt the cluster.
@@ -150,8 +151,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The ID of the KMS key used to encrypt the cluster.
      * 
      */
-    public Output</* @Nullable */ String> kmsKeyId() {
-        return this.kmsKeyId;
+    public Output<Optional<String>> kmsKeyId() {
+        return Codegen.optional(this.kmsKeyId);
     }
     /**
      * Specifies the weekly time range during which maintenance on the cluster is performed. It is specified as a range in the format ddd:hh24:mi-ddd:hh24:mi (24H Clock UTC). The minimum maintenance window is a 60 minute period.
@@ -164,8 +165,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Specifies the weekly time range during which maintenance on the cluster is performed. It is specified as a range in the format ddd:hh24:mi-ddd:hh24:mi (24H Clock UTC). The minimum maintenance window is a 60 minute period.
      * 
      */
-    public Output</* @Nullable */ String> maintenanceWindow() {
-        return this.maintenanceWindow;
+    public Output<Optional<String>> maintenanceWindow() {
+        return Codegen.optional(this.maintenanceWindow);
     }
     /**
      * The compute and memory capacity of the nodes in the cluster.
@@ -192,8 +193,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The number of replicas to apply to each shard. The limit is 5.
      * 
      */
-    public Output</* @Nullable */ Integer> numReplicasPerShard() {
-        return this.numReplicasPerShard;
+    public Output<Optional<Integer>> numReplicasPerShard() {
+        return Codegen.optional(this.numReplicasPerShard);
     }
     /**
      * The number of shards the cluster will contain.
@@ -206,8 +207,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The number of shards the cluster will contain.
      * 
      */
-    public Output</* @Nullable */ Integer> numShards() {
-        return this.numShards;
+    public Output<Optional<Integer>> numShards() {
+        return Codegen.optional(this.numShards);
     }
     /**
      * The name of the parameter group associated with the cluster.
@@ -220,8 +221,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The name of the parameter group associated with the cluster.
      * 
      */
-    public Output</* @Nullable */ String> parameterGroupName() {
-        return this.parameterGroupName;
+    public Output<Optional<String>> parameterGroupName() {
+        return Codegen.optional(this.parameterGroupName);
     }
     /**
      * The status of the parameter group used by the cluster.
@@ -248,8 +249,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The port number on which each member of the cluster accepts connections.
      * 
      */
-    public Output</* @Nullable */ Integer> port() {
-        return this.port;
+    public Output<Optional<Integer>> port() {
+        return Codegen.optional(this.port);
     }
     /**
      * One or more Amazon VPC security groups associated with this cluster.
@@ -262,8 +263,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return One or more Amazon VPC security groups associated with this cluster.
      * 
      */
-    public Output</* @Nullable */ List<String>> securityGroupIds() {
-        return this.securityGroupIds;
+    public Output<Optional<List<String>>> securityGroupIds() {
+        return Codegen.optional(this.securityGroupIds);
     }
     /**
      * A list of Amazon Resource Names (ARN) that uniquely identify the RDB snapshot files stored in Amazon S3. The snapshot files are used to populate the new cluster. The Amazon S3 object name in the ARN cannot contain any commas.
@@ -276,8 +277,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return A list of Amazon Resource Names (ARN) that uniquely identify the RDB snapshot files stored in Amazon S3. The snapshot files are used to populate the new cluster. The Amazon S3 object name in the ARN cannot contain any commas.
      * 
      */
-    public Output</* @Nullable */ List<String>> snapshotArns() {
-        return this.snapshotArns;
+    public Output<Optional<List<String>>> snapshotArns() {
+        return Codegen.optional(this.snapshotArns);
     }
     /**
      * The name of a snapshot from which to restore data into the new cluster. The snapshot status changes to restoring while the new cluster is being created.
@@ -290,8 +291,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The name of a snapshot from which to restore data into the new cluster. The snapshot status changes to restoring while the new cluster is being created.
      * 
      */
-    public Output</* @Nullable */ String> snapshotName() {
-        return this.snapshotName;
+    public Output<Optional<String>> snapshotName() {
+        return Codegen.optional(this.snapshotName);
     }
     /**
      * The number of days for which MemoryDB retains automatic snapshots before deleting them. For example, if you set SnapshotRetentionLimit to 5, a snapshot that was taken today is retained for 5 days before being deleted.
@@ -304,8 +305,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The number of days for which MemoryDB retains automatic snapshots before deleting them. For example, if you set SnapshotRetentionLimit to 5, a snapshot that was taken today is retained for 5 days before being deleted.
      * 
      */
-    public Output</* @Nullable */ Integer> snapshotRetentionLimit() {
-        return this.snapshotRetentionLimit;
+    public Output<Optional<Integer>> snapshotRetentionLimit() {
+        return Codegen.optional(this.snapshotRetentionLimit);
     }
     /**
      * The daily time range (in UTC) during which MemoryDB begins taking a daily snapshot of your cluster.
@@ -318,8 +319,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The daily time range (in UTC) during which MemoryDB begins taking a daily snapshot of your cluster.
      * 
      */
-    public Output</* @Nullable */ String> snapshotWindow() {
-        return this.snapshotWindow;
+    public Output<Optional<String>> snapshotWindow() {
+        return Codegen.optional(this.snapshotWindow);
     }
     /**
      * The Amazon Resource Name (ARN) of the Amazon Simple Notification Service (SNS) topic to which notifications are sent.
@@ -332,8 +333,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the Amazon Simple Notification Service (SNS) topic to which notifications are sent.
      * 
      */
-    public Output</* @Nullable */ String> snsTopicArn() {
-        return this.snsTopicArn;
+    public Output<Optional<String>> snsTopicArn() {
+        return Codegen.optional(this.snsTopicArn);
     }
     /**
      * The status of the Amazon SNS notification topic. Notifications are sent only if the status is enabled.
@@ -346,8 +347,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The status of the Amazon SNS notification topic. Notifications are sent only if the status is enabled.
      * 
      */
-    public Output</* @Nullable */ String> snsTopicStatus() {
-        return this.snsTopicStatus;
+    public Output<Optional<String>> snsTopicStatus() {
+        return Codegen.optional(this.snsTopicStatus);
     }
     /**
      * The status of the cluster. For example, Available, Updating, Creating.
@@ -374,8 +375,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The name of the subnet group to be used for the cluster.
      * 
      */
-    public Output</* @Nullable */ String> subnetGroupName() {
-        return this.subnetGroupName;
+    public Output<Optional<String>> subnetGroupName() {
+        return Codegen.optional(this.subnetGroupName);
     }
     /**
      * A flag that enables in-transit encryption when set to true.
@@ -392,8 +393,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * You cannot modify the value of TransitEncryptionEnabled after the cluster is created. To enable in-transit encryption on a cluster you must set TransitEncryptionEnabled to true when you create a cluster.
      * 
      */
-    public Output</* @Nullable */ Boolean> tLSEnabled() {
-        return this.tLSEnabled;
+    public Output<Optional<Boolean>> tLSEnabled() {
+        return Codegen.optional(this.tLSEnabled);
     }
     /**
      * An array of key-value pairs to apply to this cluster.
@@ -406,8 +407,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this cluster.
      * 
      */
-    public Output</* @Nullable */ List<ClusterTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<ClusterTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

@@ -15,6 +15,7 @@ import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -50,8 +51,8 @@ public class Component extends com.pulumi.resources.CustomResource {
      * @return The change description of the component.
      * 
      */
-    public Output</* @Nullable */ String> changeDescription() {
-        return this.changeDescription;
+    public Output<Optional<String>> changeDescription() {
+        return Codegen.optional(this.changeDescription);
     }
     /**
      * The data of the component.
@@ -64,8 +65,8 @@ public class Component extends com.pulumi.resources.CustomResource {
      * @return The data of the component.
      * 
      */
-    public Output</* @Nullable */ String> data() {
-        return this.data;
+    public Output<Optional<String>> data() {
+        return Codegen.optional(this.data);
     }
     /**
      * The description of the component.
@@ -78,8 +79,8 @@ public class Component extends com.pulumi.resources.CustomResource {
      * @return The description of the component.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The encryption status of the component.
@@ -106,8 +107,8 @@ public class Component extends com.pulumi.resources.CustomResource {
      * @return The KMS key identifier used to encrypt the component.
      * 
      */
-    public Output</* @Nullable */ String> kmsKeyId() {
-        return this.kmsKeyId;
+    public Output<Optional<String>> kmsKeyId() {
+        return Codegen.optional(this.kmsKeyId);
     }
     /**
      * The name of the component.
@@ -148,8 +149,8 @@ public class Component extends com.pulumi.resources.CustomResource {
      * @return The operating system (OS) version supported by the component.
      * 
      */
-    public Output</* @Nullable */ List<String>> supportedOsVersions() {
-        return this.supportedOsVersions;
+    public Output<Optional<List<String>>> supportedOsVersions() {
+        return Codegen.optional(this.supportedOsVersions);
     }
     /**
      * The tags associated with the component.
@@ -162,8 +163,8 @@ public class Component extends com.pulumi.resources.CustomResource {
      * @return The tags associated with the component.
      * 
      */
-    public Output</* @Nullable */ Object> tags() {
-        return this.tags;
+    public Output<Optional<Object>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the component denotes whether the component is used to build the image or only to test it.
@@ -190,8 +191,8 @@ public class Component extends com.pulumi.resources.CustomResource {
      * @return The uri of the component.
      * 
      */
-    public Output</* @Nullable */ String> uri() {
-        return this.uri;
+    public Output<Optional<String>> uri() {
+        return Codegen.optional(this.uri);
     }
     /**
      * The version of the component.

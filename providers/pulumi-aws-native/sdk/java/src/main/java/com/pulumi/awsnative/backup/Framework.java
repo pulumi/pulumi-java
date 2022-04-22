@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -89,8 +90,8 @@ public class Framework extends com.pulumi.resources.CustomResource {
      * @return An optional description of the framework with a maximum 1,024 characters.
      * 
      */
-    public Output</* @Nullable */ String> frameworkDescription() {
-        return this.frameworkDescription;
+    public Output<Optional<String>> frameworkDescription() {
+        return Codegen.optional(this.frameworkDescription);
     }
     /**
      * The unique name of a framework. This name is between 1 and 256 characters, starting with a letter, and consisting of letters (a-z, A-Z), numbers (0-9), and underscores (_).
@@ -103,8 +104,8 @@ public class Framework extends com.pulumi.resources.CustomResource {
      * @return The unique name of a framework. This name is between 1 and 256 characters, starting with a letter, and consisting of letters (a-z, A-Z), numbers (0-9), and underscores (_).
      * 
      */
-    public Output</* @Nullable */ String> frameworkName() {
-        return this.frameworkName;
+    public Output<Optional<String>> frameworkName() {
+        return Codegen.optional(this.frameworkName);
     }
     /**
      * A framework consists of one or more controls. Each control governs a resource, such as backup plans, backup selections, backup vaults, or recovery points. You can also turn AWS Config recording on or off for each resource. The statuses are:
@@ -147,8 +148,8 @@ public class Framework extends com.pulumi.resources.CustomResource {
      * @return Metadata that you can assign to help organize the frameworks that you create. Each tag is a key-value pair.
      * 
      */
-    public Output</* @Nullable */ List<FrameworkTag>> frameworkTags() {
-        return this.frameworkTags;
+    public Output<Optional<List<FrameworkTag>>> frameworkTags() {
+        return Codegen.optional(this.frameworkTags);
     }
 
     /**

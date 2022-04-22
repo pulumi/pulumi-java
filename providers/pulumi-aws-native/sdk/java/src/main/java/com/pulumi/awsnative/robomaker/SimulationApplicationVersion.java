@@ -10,6 +10,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -47,8 +48,8 @@ public class SimulationApplicationVersion extends com.pulumi.resources.CustomRes
      * @return The revision ID of robot application.
      * 
      */
-    public Output</* @Nullable */ String> currentRevisionId() {
-        return this.currentRevisionId;
+    public Output<Optional<String>> currentRevisionId() {
+        return Codegen.optional(this.currentRevisionId);
     }
 
     /**

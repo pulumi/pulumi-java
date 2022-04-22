@@ -19,6 +19,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class OriginEndpoint extends com.pulumi.resources.CustomResource {
     @Export(name="authorization", type=OriginEndpointAuthorization.class, parameters={})
     private Output</* @Nullable */ OriginEndpointAuthorization> authorization;
 
-    public Output</* @Nullable */ OriginEndpointAuthorization> authorization() {
-        return this.authorization;
+    public Output<Optional<OriginEndpointAuthorization>> authorization() {
+        return Codegen.optional(this.authorization);
     }
     /**
      * The ID of the Channel the OriginEndpoint is associated with.
@@ -64,14 +65,14 @@ public class OriginEndpoint extends com.pulumi.resources.CustomResource {
     @Export(name="cmafPackage", type=OriginEndpointCmafPackage.class, parameters={})
     private Output</* @Nullable */ OriginEndpointCmafPackage> cmafPackage;
 
-    public Output</* @Nullable */ OriginEndpointCmafPackage> cmafPackage() {
-        return this.cmafPackage;
+    public Output<Optional<OriginEndpointCmafPackage>> cmafPackage() {
+        return Codegen.optional(this.cmafPackage);
     }
     @Export(name="dashPackage", type=OriginEndpointDashPackage.class, parameters={})
     private Output</* @Nullable */ OriginEndpointDashPackage> dashPackage;
 
-    public Output</* @Nullable */ OriginEndpointDashPackage> dashPackage() {
-        return this.dashPackage;
+    public Output<Optional<OriginEndpointDashPackage>> dashPackage() {
+        return Codegen.optional(this.dashPackage);
     }
     /**
      * A short text description of the OriginEndpoint.
@@ -84,14 +85,14 @@ public class OriginEndpoint extends com.pulumi.resources.CustomResource {
      * @return A short text description of the OriginEndpoint.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     @Export(name="hlsPackage", type=OriginEndpointHlsPackage.class, parameters={})
     private Output</* @Nullable */ OriginEndpointHlsPackage> hlsPackage;
 
-    public Output</* @Nullable */ OriginEndpointHlsPackage> hlsPackage() {
-        return this.hlsPackage;
+    public Output<Optional<OriginEndpointHlsPackage>> hlsPackage() {
+        return Codegen.optional(this.hlsPackage);
     }
     /**
      * A short string appended to the end of the OriginEndpoint URL.
@@ -104,14 +105,14 @@ public class OriginEndpoint extends com.pulumi.resources.CustomResource {
      * @return A short string appended to the end of the OriginEndpoint URL.
      * 
      */
-    public Output</* @Nullable */ String> manifestName() {
-        return this.manifestName;
+    public Output<Optional<String>> manifestName() {
+        return Codegen.optional(this.manifestName);
     }
     @Export(name="mssPackage", type=OriginEndpointMssPackage.class, parameters={})
     private Output</* @Nullable */ OriginEndpointMssPackage> mssPackage;
 
-    public Output</* @Nullable */ OriginEndpointMssPackage> mssPackage() {
-        return this.mssPackage;
+    public Output<Optional<OriginEndpointMssPackage>> mssPackage() {
+        return Codegen.optional(this.mssPackage);
     }
     /**
      * Control whether origination of video is allowed for this OriginEndpoint. If set to ALLOW, the OriginEndpoint may by requested, pursuant to any other form of access control. If set to DENY, the OriginEndpoint may not be requested. This can be helpful for Live to VOD harvesting, or for temporarily disabling origination
@@ -124,8 +125,8 @@ public class OriginEndpoint extends com.pulumi.resources.CustomResource {
      * @return Control whether origination of video is allowed for this OriginEndpoint. If set to ALLOW, the OriginEndpoint may by requested, pursuant to any other form of access control. If set to DENY, the OriginEndpoint may not be requested. This can be helpful for Live to VOD harvesting, or for temporarily disabling origination
      * 
      */
-    public Output</* @Nullable */ OriginEndpointOrigination> origination() {
-        return this.origination;
+    public Output<Optional<OriginEndpointOrigination>> origination() {
+        return Codegen.optional(this.origination);
     }
     /**
      * Maximum duration (seconds) of content to retain for startover playback. If not specified, startover playback will be disabled for the OriginEndpoint.
@@ -138,8 +139,8 @@ public class OriginEndpoint extends com.pulumi.resources.CustomResource {
      * @return Maximum duration (seconds) of content to retain for startover playback. If not specified, startover playback will be disabled for the OriginEndpoint.
      * 
      */
-    public Output</* @Nullable */ Integer> startoverWindowSeconds() {
-        return this.startoverWindowSeconds;
+    public Output<Optional<Integer>> startoverWindowSeconds() {
+        return Codegen.optional(this.startoverWindowSeconds);
     }
     /**
      * A collection of tags associated with a resource
@@ -152,8 +153,8 @@ public class OriginEndpoint extends com.pulumi.resources.CustomResource {
      * @return A collection of tags associated with a resource
      * 
      */
-    public Output</* @Nullable */ List<OriginEndpointTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<OriginEndpointTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Amount of delay (seconds) to enforce on the playback of live content. If not specified, there will be no time delay in effect for the OriginEndpoint.
@@ -166,8 +167,8 @@ public class OriginEndpoint extends com.pulumi.resources.CustomResource {
      * @return Amount of delay (seconds) to enforce on the playback of live content. If not specified, there will be no time delay in effect for the OriginEndpoint.
      * 
      */
-    public Output</* @Nullable */ Integer> timeDelaySeconds() {
-        return this.timeDelaySeconds;
+    public Output<Optional<Integer>> timeDelaySeconds() {
+        return Codegen.optional(this.timeDelaySeconds);
     }
     /**
      * The URL of the packaged OriginEndpoint for consumption.
@@ -194,8 +195,8 @@ public class OriginEndpoint extends com.pulumi.resources.CustomResource {
      * @return A list of source IP CIDR blocks that will be allowed to access the OriginEndpoint.
      * 
      */
-    public Output</* @Nullable */ List<String>> whitelist() {
-        return this.whitelist;
+    public Output<Optional<List<String>>> whitelist() {
+        return Codegen.optional(this.whitelist);
     }
 
     /**

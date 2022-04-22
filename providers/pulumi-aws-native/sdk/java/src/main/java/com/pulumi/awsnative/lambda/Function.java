@@ -22,6 +22,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -35,8 +36,8 @@ public class Function extends com.pulumi.resources.CustomResource {
     @Export(name="architectures", type=List.class, parameters={FunctionArchitecturesItem.class})
     private Output</* @Nullable */ List<FunctionArchitecturesItem>> architectures;
 
-    public Output</* @Nullable */ List<FunctionArchitecturesItem>> architectures() {
-        return this.architectures;
+    public Output<Optional<List<FunctionArchitecturesItem>>> architectures() {
+        return Codegen.optional(this.architectures);
     }
     /**
      * Unique identifier for function resources
@@ -77,8 +78,8 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return A unique Arn for CodeSigningConfig resource
      * 
      */
-    public Output</* @Nullable */ String> codeSigningConfigArn() {
-        return this.codeSigningConfigArn;
+    public Output<Optional<String>> codeSigningConfigArn() {
+        return Codegen.optional(this.codeSigningConfigArn);
     }
     /**
      * A dead letter queue configuration that specifies the queue or topic where Lambda sends asynchronous events when they fail processing.
@@ -91,8 +92,8 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return A dead letter queue configuration that specifies the queue or topic where Lambda sends asynchronous events when they fail processing.
      * 
      */
-    public Output</* @Nullable */ FunctionDeadLetterConfig> deadLetterConfig() {
-        return this.deadLetterConfig;
+    public Output<Optional<FunctionDeadLetterConfig>> deadLetterConfig() {
+        return Codegen.optional(this.deadLetterConfig);
     }
     /**
      * A description of the function.
@@ -105,8 +106,8 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return A description of the function.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Environment variables that are accessible from function code during execution.
@@ -119,8 +120,8 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return Environment variables that are accessible from function code during execution.
      * 
      */
-    public Output</* @Nullable */ FunctionEnvironment> environment() {
-        return this.environment;
+    public Output<Optional<FunctionEnvironment>> environment() {
+        return Codegen.optional(this.environment);
     }
     /**
      * Connection settings for an Amazon EFS file system. To connect a function to a file system, a mount target must be available in every Availability Zone that your function connects to. If your template contains an AWS::EFS::MountTarget resource, you must also specify a DependsOn attribute to ensure that the mount target is created or updated before the function.
@@ -133,8 +134,8 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return Connection settings for an Amazon EFS file system. To connect a function to a file system, a mount target must be available in every Availability Zone that your function connects to. If your template contains an AWS::EFS::MountTarget resource, you must also specify a DependsOn attribute to ensure that the mount target is created or updated before the function.
      * 
      */
-    public Output</* @Nullable */ List<FunctionFileSystemConfig>> fileSystemConfigs() {
-        return this.fileSystemConfigs;
+    public Output<Optional<List<FunctionFileSystemConfig>>> fileSystemConfigs() {
+        return Codegen.optional(this.fileSystemConfigs);
     }
     /**
      * The name of the Lambda function, up to 64 characters in length. If you don&#39;t specify a name, AWS CloudFormation generates one.
@@ -147,8 +148,8 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return The name of the Lambda function, up to 64 characters in length. If you don&#39;t specify a name, AWS CloudFormation generates one.
      * 
      */
-    public Output</* @Nullable */ String> functionName() {
-        return this.functionName;
+    public Output<Optional<String>> functionName() {
+        return Codegen.optional(this.functionName);
     }
     /**
      * The name of the method within your code that Lambda calls to execute your function. The format includes the file name. It can also include namespaces and other qualifiers, depending on the runtime
@@ -161,8 +162,8 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return The name of the method within your code that Lambda calls to execute your function. The format includes the file name. It can also include namespaces and other qualifiers, depending on the runtime
      * 
      */
-    public Output</* @Nullable */ String> handler() {
-        return this.handler;
+    public Output<Optional<String>> handler() {
+        return Codegen.optional(this.handler);
     }
     /**
      * ImageConfig
@@ -175,8 +176,8 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return ImageConfig
      * 
      */
-    public Output</* @Nullable */ FunctionImageConfig> imageConfig() {
-        return this.imageConfig;
+    public Output<Optional<FunctionImageConfig>> imageConfig() {
+        return Codegen.optional(this.imageConfig);
     }
     /**
      * The ARN of the AWS Key Management Service (AWS KMS) key that&#39;s used to encrypt your function&#39;s environment variables. If it&#39;s not provided, AWS Lambda uses a default service key.
@@ -189,8 +190,8 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return The ARN of the AWS Key Management Service (AWS KMS) key that&#39;s used to encrypt your function&#39;s environment variables. If it&#39;s not provided, AWS Lambda uses a default service key.
      * 
      */
-    public Output</* @Nullable */ String> kmsKeyArn() {
-        return this.kmsKeyArn;
+    public Output<Optional<String>> kmsKeyArn() {
+        return Codegen.optional(this.kmsKeyArn);
     }
     /**
      * A list of function layers to add to the function&#39;s execution environment. Specify each layer by its ARN, including the version.
@@ -203,8 +204,8 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return A list of function layers to add to the function&#39;s execution environment. Specify each layer by its ARN, including the version.
      * 
      */
-    public Output</* @Nullable */ List<String>> layers() {
-        return this.layers;
+    public Output<Optional<List<String>>> layers() {
+        return Codegen.optional(this.layers);
     }
     /**
      * The amount of memory that your function has access to. Increasing the function&#39;s memory also increases its CPU allocation. The default value is 128 MB. The value must be a multiple of 64 MB.
@@ -217,8 +218,8 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return The amount of memory that your function has access to. Increasing the function&#39;s memory also increases its CPU allocation. The default value is 128 MB. The value must be a multiple of 64 MB.
      * 
      */
-    public Output</* @Nullable */ Integer> memorySize() {
-        return this.memorySize;
+    public Output<Optional<Integer>> memorySize() {
+        return Codegen.optional(this.memorySize);
     }
     /**
      * PackageType.
@@ -231,8 +232,8 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return PackageType.
      * 
      */
-    public Output</* @Nullable */ FunctionPackageType> packageType() {
-        return this.packageType;
+    public Output<Optional<FunctionPackageType>> packageType() {
+        return Codegen.optional(this.packageType);
     }
     /**
      * The number of simultaneous executions to reserve for the function.
@@ -245,8 +246,8 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return The number of simultaneous executions to reserve for the function.
      * 
      */
-    public Output</* @Nullable */ Integer> reservedConcurrentExecutions() {
-        return this.reservedConcurrentExecutions;
+    public Output<Optional<Integer>> reservedConcurrentExecutions() {
+        return Codegen.optional(this.reservedConcurrentExecutions);
     }
     /**
      * The Amazon Resource Name (ARN) of the function&#39;s execution role.
@@ -273,8 +274,8 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return The identifier of the function&#39;s runtime.
      * 
      */
-    public Output</* @Nullable */ String> runtime() {
-        return this.runtime;
+    public Output<Optional<String>> runtime() {
+        return Codegen.optional(this.runtime);
     }
     /**
      * A list of tags to apply to the function.
@@ -287,8 +288,8 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return A list of tags to apply to the function.
      * 
      */
-    public Output</* @Nullable */ List<FunctionTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<FunctionTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The amount of time that Lambda allows a function to run before stopping it. The default is 3 seconds. The maximum allowed value is 900 seconds.
@@ -301,8 +302,8 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return The amount of time that Lambda allows a function to run before stopping it. The default is 3 seconds. The maximum allowed value is 900 seconds.
      * 
      */
-    public Output</* @Nullable */ Integer> timeout() {
-        return this.timeout;
+    public Output<Optional<Integer>> timeout() {
+        return Codegen.optional(this.timeout);
     }
     /**
      * Set Mode to Active to sample and trace a subset of incoming requests with AWS X-Ray.
@@ -315,8 +316,8 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return Set Mode to Active to sample and trace a subset of incoming requests with AWS X-Ray.
      * 
      */
-    public Output</* @Nullable */ FunctionTracingConfig> tracingConfig() {
-        return this.tracingConfig;
+    public Output<Optional<FunctionTracingConfig>> tracingConfig() {
+        return Codegen.optional(this.tracingConfig);
     }
     /**
      * For network connectivity to AWS resources in a VPC, specify a list of security groups and subnets in the VPC.
@@ -329,8 +330,8 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return For network connectivity to AWS resources in a VPC, specify a list of security groups and subnets in the VPC.
      * 
      */
-    public Output</* @Nullable */ FunctionVpcConfig> vpcConfig() {
-        return this.vpcConfig;
+    public Output<Optional<FunctionVpcConfig>> vpcConfig() {
+        return Codegen.optional(this.vpcConfig);
     }
 
     /**

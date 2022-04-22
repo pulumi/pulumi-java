@@ -15,6 +15,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -34,8 +35,8 @@ public class ControlPanel extends com.pulumi.resources.CustomResource {
      * @return Cluster to associate with the Control Panel
      * 
      */
-    public Output</* @Nullable */ String> clusterArn() {
-        return this.clusterArn;
+    public Output<Optional<String>> clusterArn() {
+        return Codegen.optional(this.clusterArn);
     }
     /**
      * The Amazon Resource Name (ARN) of the cluster.
@@ -118,8 +119,8 @@ public class ControlPanel extends com.pulumi.resources.CustomResource {
      * @return A collection of tags associated with a resource
      * 
      */
-    public Output</* @Nullable */ List<ControlPanelTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<ControlPanelTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

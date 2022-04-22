@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class Alert extends com.pulumi.resources.CustomResource {
      * @return A description for the alert.
      * 
      */
-    public Output</* @Nullable */ String> alertDescription() {
-        return this.alertDescription;
+    public Output<Optional<String>> alertDescription() {
+        return Codegen.optional(this.alertDescription);
     }
     /**
      * The name of the alert. If not provided, a name is generated automatically.
@@ -59,8 +60,8 @@ public class Alert extends com.pulumi.resources.CustomResource {
      * @return The name of the alert. If not provided, a name is generated automatically.
      * 
      */
-    public Output</* @Nullable */ String> alertName() {
-        return this.alertName;
+    public Output<Optional<String>> alertName() {
+        return Codegen.optional(this.alertName);
     }
     /**
      * A number between 0 and 100 (inclusive) that tunes the sensitivity of the alert.

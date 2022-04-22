@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -30,14 +31,14 @@ public class NetworkInsightsAccessScope extends com.pulumi.resources.CustomResou
     @Export(name="excludePaths", type=List.class, parameters={NetworkInsightsAccessScopeAccessScopePathRequest.class})
     private Output</* @Nullable */ List<NetworkInsightsAccessScopeAccessScopePathRequest>> excludePaths;
 
-    public Output</* @Nullable */ List<NetworkInsightsAccessScopeAccessScopePathRequest>> excludePaths() {
-        return this.excludePaths;
+    public Output<Optional<List<NetworkInsightsAccessScopeAccessScopePathRequest>>> excludePaths() {
+        return Codegen.optional(this.excludePaths);
     }
     @Export(name="matchPaths", type=List.class, parameters={NetworkInsightsAccessScopeAccessScopePathRequest.class})
     private Output</* @Nullable */ List<NetworkInsightsAccessScopeAccessScopePathRequest>> matchPaths;
 
-    public Output</* @Nullable */ List<NetworkInsightsAccessScopeAccessScopePathRequest>> matchPaths() {
-        return this.matchPaths;
+    public Output<Optional<List<NetworkInsightsAccessScopeAccessScopePathRequest>>> matchPaths() {
+        return Codegen.optional(this.matchPaths);
     }
     @Export(name="networkInsightsAccessScopeArn", type=String.class, parameters={})
     private Output<String> networkInsightsAccessScopeArn;
@@ -54,8 +55,8 @@ public class NetworkInsightsAccessScope extends com.pulumi.resources.CustomResou
     @Export(name="tags", type=List.class, parameters={NetworkInsightsAccessScopeTag.class})
     private Output</* @Nullable */ List<NetworkInsightsAccessScopeTag>> tags;
 
-    public Output</* @Nullable */ List<NetworkInsightsAccessScopeTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<NetworkInsightsAccessScopeTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     @Export(name="updatedDate", type=String.class, parameters={})
     private Output<String> updatedDate;

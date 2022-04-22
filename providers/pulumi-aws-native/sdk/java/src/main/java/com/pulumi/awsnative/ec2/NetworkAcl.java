@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -31,8 +32,8 @@ public class NetworkAcl extends com.pulumi.resources.CustomResource {
      * @return The tags to assign to the network ACL.
      * 
      */
-    public Output</* @Nullable */ List<NetworkAclTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<NetworkAclTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The ID of the VPC.

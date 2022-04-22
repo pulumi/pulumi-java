@@ -19,6 +19,7 @@ import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -38,8 +39,8 @@ public class EventSourceMapping extends com.pulumi.resources.CustomResource {
      * @return The maximum number of items to retrieve in a single batch.
      * 
      */
-    public Output</* @Nullable */ Integer> batchSize() {
-        return this.batchSize;
+    public Output<Optional<Integer>> batchSize() {
+        return Codegen.optional(this.batchSize);
     }
     /**
      * (Streams) If the function returns an error, split the batch in two and retry.
@@ -52,8 +53,8 @@ public class EventSourceMapping extends com.pulumi.resources.CustomResource {
      * @return (Streams) If the function returns an error, split the batch in two and retry.
      * 
      */
-    public Output</* @Nullable */ Boolean> bisectBatchOnFunctionError() {
-        return this.bisectBatchOnFunctionError;
+    public Output<Optional<Boolean>> bisectBatchOnFunctionError() {
+        return Codegen.optional(this.bisectBatchOnFunctionError);
     }
     /**
      * (Streams) An Amazon SQS queue or Amazon SNS topic destination for discarded records.
@@ -66,8 +67,8 @@ public class EventSourceMapping extends com.pulumi.resources.CustomResource {
      * @return (Streams) An Amazon SQS queue or Amazon SNS topic destination for discarded records.
      * 
      */
-    public Output</* @Nullable */ EventSourceMappingDestinationConfig> destinationConfig() {
-        return this.destinationConfig;
+    public Output<Optional<EventSourceMappingDestinationConfig>> destinationConfig() {
+        return Codegen.optional(this.destinationConfig);
     }
     /**
      * Disables the event source mapping to pause polling and invocation.
@@ -80,8 +81,8 @@ public class EventSourceMapping extends com.pulumi.resources.CustomResource {
      * @return Disables the event source mapping to pause polling and invocation.
      * 
      */
-    public Output</* @Nullable */ Boolean> enabled() {
-        return this.enabled;
+    public Output<Optional<Boolean>> enabled() {
+        return Codegen.optional(this.enabled);
     }
     /**
      * The Amazon Resource Name (ARN) of the event source.
@@ -94,8 +95,8 @@ public class EventSourceMapping extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the event source.
      * 
      */
-    public Output</* @Nullable */ String> eventSourceArn() {
-        return this.eventSourceArn;
+    public Output<Optional<String>> eventSourceArn() {
+        return Codegen.optional(this.eventSourceArn);
     }
     /**
      * The filter criteria to control event filtering.
@@ -108,8 +109,8 @@ public class EventSourceMapping extends com.pulumi.resources.CustomResource {
      * @return The filter criteria to control event filtering.
      * 
      */
-    public Output</* @Nullable */ FilterCriteriaProperties> filterCriteria() {
-        return this.filterCriteria;
+    public Output<Optional<FilterCriteriaProperties>> filterCriteria() {
+        return Codegen.optional(this.filterCriteria);
     }
     /**
      * The name of the Lambda function.
@@ -136,8 +137,8 @@ public class EventSourceMapping extends com.pulumi.resources.CustomResource {
      * @return (Streams) A list of response types supported by the function.
      * 
      */
-    public Output</* @Nullable */ List<EventSourceMappingFunctionResponseTypesItem>> functionResponseTypes() {
-        return this.functionResponseTypes;
+    public Output<Optional<List<EventSourceMappingFunctionResponseTypesItem>>> functionResponseTypes() {
+        return Codegen.optional(this.functionResponseTypes);
     }
     /**
      * (Streams) The maximum amount of time to gather records before invoking the function, in seconds.
@@ -150,8 +151,8 @@ public class EventSourceMapping extends com.pulumi.resources.CustomResource {
      * @return (Streams) The maximum amount of time to gather records before invoking the function, in seconds.
      * 
      */
-    public Output</* @Nullable */ Integer> maximumBatchingWindowInSeconds() {
-        return this.maximumBatchingWindowInSeconds;
+    public Output<Optional<Integer>> maximumBatchingWindowInSeconds() {
+        return Codegen.optional(this.maximumBatchingWindowInSeconds);
     }
     /**
      * (Streams) The maximum age of a record that Lambda sends to a function for processing.
@@ -164,8 +165,8 @@ public class EventSourceMapping extends com.pulumi.resources.CustomResource {
      * @return (Streams) The maximum age of a record that Lambda sends to a function for processing.
      * 
      */
-    public Output</* @Nullable */ Integer> maximumRecordAgeInSeconds() {
-        return this.maximumRecordAgeInSeconds;
+    public Output<Optional<Integer>> maximumRecordAgeInSeconds() {
+        return Codegen.optional(this.maximumRecordAgeInSeconds);
     }
     /**
      * (Streams) The maximum number of times to retry when the function returns an error.
@@ -178,8 +179,8 @@ public class EventSourceMapping extends com.pulumi.resources.CustomResource {
      * @return (Streams) The maximum number of times to retry when the function returns an error.
      * 
      */
-    public Output</* @Nullable */ Integer> maximumRetryAttempts() {
-        return this.maximumRetryAttempts;
+    public Output<Optional<Integer>> maximumRetryAttempts() {
+        return Codegen.optional(this.maximumRetryAttempts);
     }
     /**
      * (Streams) The number of batches to process from each shard concurrently.
@@ -192,8 +193,8 @@ public class EventSourceMapping extends com.pulumi.resources.CustomResource {
      * @return (Streams) The number of batches to process from each shard concurrently.
      * 
      */
-    public Output</* @Nullable */ Integer> parallelizationFactor() {
-        return this.parallelizationFactor;
+    public Output<Optional<Integer>> parallelizationFactor() {
+        return Codegen.optional(this.parallelizationFactor);
     }
     /**
      * (ActiveMQ) A list of ActiveMQ queues.
@@ -206,8 +207,8 @@ public class EventSourceMapping extends com.pulumi.resources.CustomResource {
      * @return (ActiveMQ) A list of ActiveMQ queues.
      * 
      */
-    public Output</* @Nullable */ List<String>> queues() {
-        return this.queues;
+    public Output<Optional<List<String>>> queues() {
+        return Codegen.optional(this.queues);
     }
     /**
      * Self-managed event source endpoints.
@@ -220,8 +221,8 @@ public class EventSourceMapping extends com.pulumi.resources.CustomResource {
      * @return Self-managed event source endpoints.
      * 
      */
-    public Output</* @Nullable */ EventSourceMappingSelfManagedEventSource> selfManagedEventSource() {
-        return this.selfManagedEventSource;
+    public Output<Optional<EventSourceMappingSelfManagedEventSource>> selfManagedEventSource() {
+        return Codegen.optional(this.selfManagedEventSource);
     }
     /**
      * A list of SourceAccessConfiguration.
@@ -234,8 +235,8 @@ public class EventSourceMapping extends com.pulumi.resources.CustomResource {
      * @return A list of SourceAccessConfiguration.
      * 
      */
-    public Output</* @Nullable */ List<EventSourceMappingSourceAccessConfiguration>> sourceAccessConfigurations() {
-        return this.sourceAccessConfigurations;
+    public Output<Optional<List<EventSourceMappingSourceAccessConfiguration>>> sourceAccessConfigurations() {
+        return Codegen.optional(this.sourceAccessConfigurations);
     }
     /**
      * The position in a stream from which to start reading. Required for Amazon Kinesis and Amazon DynamoDB Streams sources.
@@ -248,8 +249,8 @@ public class EventSourceMapping extends com.pulumi.resources.CustomResource {
      * @return The position in a stream from which to start reading. Required for Amazon Kinesis and Amazon DynamoDB Streams sources.
      * 
      */
-    public Output</* @Nullable */ String> startingPosition() {
-        return this.startingPosition;
+    public Output<Optional<String>> startingPosition() {
+        return Codegen.optional(this.startingPosition);
     }
     /**
      * With StartingPosition set to AT_TIMESTAMP, the time from which to start reading, in Unix time seconds.
@@ -262,8 +263,8 @@ public class EventSourceMapping extends com.pulumi.resources.CustomResource {
      * @return With StartingPosition set to AT_TIMESTAMP, the time from which to start reading, in Unix time seconds.
      * 
      */
-    public Output</* @Nullable */ Double> startingPositionTimestamp() {
-        return this.startingPositionTimestamp;
+    public Output<Optional<Double>> startingPositionTimestamp() {
+        return Codegen.optional(this.startingPositionTimestamp);
     }
     /**
      * (Kafka) A list of Kafka topics.
@@ -276,8 +277,8 @@ public class EventSourceMapping extends com.pulumi.resources.CustomResource {
      * @return (Kafka) A list of Kafka topics.
      * 
      */
-    public Output</* @Nullable */ List<String>> topics() {
-        return this.topics;
+    public Output<Optional<List<String>>> topics() {
+        return Codegen.optional(this.topics);
     }
     /**
      * (Streams) Tumbling window (non-overlapping time window) duration to perform aggregations.
@@ -290,8 +291,8 @@ public class EventSourceMapping extends com.pulumi.resources.CustomResource {
      * @return (Streams) Tumbling window (non-overlapping time window) duration to perform aggregations.
      * 
      */
-    public Output</* @Nullable */ Integer> tumblingWindowInSeconds() {
-        return this.tumblingWindowInSeconds;
+    public Output<Optional<Integer>> tumblingWindowInSeconds() {
+        return Codegen.optional(this.tumblingWindowInSeconds);
     }
 
     /**

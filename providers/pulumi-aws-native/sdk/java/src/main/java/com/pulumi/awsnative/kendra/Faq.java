@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -39,8 +40,8 @@ public class Faq extends com.pulumi.resources.CustomResource {
      * @return FAQ description
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * FAQ file format
@@ -53,8 +54,8 @@ public class Faq extends com.pulumi.resources.CustomResource {
      * @return FAQ file format
      * 
      */
-    public Output</* @Nullable */ FaqFileFormat> fileFormat() {
-        return this.fileFormat;
+    public Output<Optional<FaqFileFormat>> fileFormat() {
+        return Codegen.optional(this.fileFormat);
     }
     /**
      * Index ID
@@ -123,8 +124,8 @@ public class Faq extends com.pulumi.resources.CustomResource {
      * @return Tags for labeling the FAQ
      * 
      */
-    public Output</* @Nullable */ List<FaqTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<FaqTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

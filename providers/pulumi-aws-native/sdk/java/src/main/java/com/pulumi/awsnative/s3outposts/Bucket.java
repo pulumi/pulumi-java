@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -60,8 +61,8 @@ public class Bucket extends com.pulumi.resources.CustomResource {
      * @return Rules that define how Amazon S3Outposts manages objects during their lifetime.
      * 
      */
-    public Output</* @Nullable */ BucketLifecycleConfiguration> lifecycleConfiguration() {
-        return this.lifecycleConfiguration;
+    public Output<Optional<BucketLifecycleConfiguration>> lifecycleConfiguration() {
+        return Codegen.optional(this.lifecycleConfiguration);
     }
     /**
      * The id of the customer outpost on which the bucket resides.
@@ -88,8 +89,8 @@ public class Bucket extends com.pulumi.resources.CustomResource {
      * @return An arbitrary set of tags (key-value pairs) for this S3Outposts bucket.
      * 
      */
-    public Output</* @Nullable */ List<BucketTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<BucketTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

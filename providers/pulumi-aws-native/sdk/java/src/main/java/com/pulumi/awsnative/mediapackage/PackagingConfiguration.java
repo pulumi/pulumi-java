@@ -16,6 +16,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -49,8 +50,8 @@ public class PackagingConfiguration extends com.pulumi.resources.CustomResource 
      * @return A CMAF packaging configuration.
      * 
      */
-    public Output</* @Nullable */ PackagingConfigurationCmafPackage> cmafPackage() {
-        return this.cmafPackage;
+    public Output<Optional<PackagingConfigurationCmafPackage>> cmafPackage() {
+        return Codegen.optional(this.cmafPackage);
     }
     /**
      * A Dynamic Adaptive Streaming over HTTP (DASH) packaging configuration.
@@ -63,8 +64,8 @@ public class PackagingConfiguration extends com.pulumi.resources.CustomResource 
      * @return A Dynamic Adaptive Streaming over HTTP (DASH) packaging configuration.
      * 
      */
-    public Output</* @Nullable */ PackagingConfigurationDashPackage> dashPackage() {
-        return this.dashPackage;
+    public Output<Optional<PackagingConfigurationDashPackage>> dashPackage() {
+        return Codegen.optional(this.dashPackage);
     }
     /**
      * An HTTP Live Streaming (HLS) packaging configuration.
@@ -77,8 +78,8 @@ public class PackagingConfiguration extends com.pulumi.resources.CustomResource 
      * @return An HTTP Live Streaming (HLS) packaging configuration.
      * 
      */
-    public Output</* @Nullable */ PackagingConfigurationHlsPackage> hlsPackage() {
-        return this.hlsPackage;
+    public Output<Optional<PackagingConfigurationHlsPackage>> hlsPackage() {
+        return Codegen.optional(this.hlsPackage);
     }
     /**
      * A Microsoft Smooth Streaming (MSS) PackagingConfiguration.
@@ -91,8 +92,8 @@ public class PackagingConfiguration extends com.pulumi.resources.CustomResource 
      * @return A Microsoft Smooth Streaming (MSS) PackagingConfiguration.
      * 
      */
-    public Output</* @Nullable */ PackagingConfigurationMssPackage> mssPackage() {
-        return this.mssPackage;
+    public Output<Optional<PackagingConfigurationMssPackage>> mssPackage() {
+        return Codegen.optional(this.mssPackage);
     }
     /**
      * The ID of a PackagingGroup.
@@ -119,8 +120,8 @@ public class PackagingConfiguration extends com.pulumi.resources.CustomResource 
      * @return A collection of tags associated with a resource
      * 
      */
-    public Output</* @Nullable */ List<PackagingConfigurationTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<PackagingConfigurationTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

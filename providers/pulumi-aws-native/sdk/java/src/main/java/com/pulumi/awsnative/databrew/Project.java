@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -90,14 +91,14 @@ public class Project extends com.pulumi.resources.CustomResource {
      * @return Sample
      * 
      */
-    public Output</* @Nullable */ ProjectSample> sample() {
-        return this.sample;
+    public Output<Optional<ProjectSample>> sample() {
+        return Codegen.optional(this.sample);
     }
     @Export(name="tags", type=List.class, parameters={ProjectTag.class})
     private Output</* @Nullable */ List<ProjectTag>> tags;
 
-    public Output</* @Nullable */ List<ProjectTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<ProjectTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

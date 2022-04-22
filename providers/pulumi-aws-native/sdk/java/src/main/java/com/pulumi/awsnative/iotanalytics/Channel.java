@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -27,26 +28,26 @@ public class Channel extends com.pulumi.resources.CustomResource {
     @Export(name="channelName", type=String.class, parameters={})
     private Output</* @Nullable */ String> channelName;
 
-    public Output</* @Nullable */ String> channelName() {
-        return this.channelName;
+    public Output<Optional<String>> channelName() {
+        return Codegen.optional(this.channelName);
     }
     @Export(name="channelStorage", type=ChannelStorage.class, parameters={})
     private Output</* @Nullable */ ChannelStorage> channelStorage;
 
-    public Output</* @Nullable */ ChannelStorage> channelStorage() {
-        return this.channelStorage;
+    public Output<Optional<ChannelStorage>> channelStorage() {
+        return Codegen.optional(this.channelStorage);
     }
     @Export(name="retentionPeriod", type=ChannelRetentionPeriod.class, parameters={})
     private Output</* @Nullable */ ChannelRetentionPeriod> retentionPeriod;
 
-    public Output</* @Nullable */ ChannelRetentionPeriod> retentionPeriod() {
-        return this.retentionPeriod;
+    public Output<Optional<ChannelRetentionPeriod>> retentionPeriod() {
+        return Codegen.optional(this.retentionPeriod);
     }
     @Export(name="tags", type=List.class, parameters={ChannelTag.class})
     private Output</* @Nullable */ List<ChannelTag>> tags;
 
-    public Output</* @Nullable */ List<ChannelTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<ChannelTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

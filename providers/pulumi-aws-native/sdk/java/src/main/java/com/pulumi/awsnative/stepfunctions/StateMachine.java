@@ -18,6 +18,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -37,32 +38,32 @@ public class StateMachine extends com.pulumi.resources.CustomResource {
     @Export(name="definition", type=StateMachineDefinition.class, parameters={})
     private Output</* @Nullable */ StateMachineDefinition> definition;
 
-    public Output</* @Nullable */ StateMachineDefinition> definition() {
-        return this.definition;
+    public Output<Optional<StateMachineDefinition>> definition() {
+        return Codegen.optional(this.definition);
     }
     @Export(name="definitionS3Location", type=StateMachineS3Location.class, parameters={})
     private Output</* @Nullable */ StateMachineS3Location> definitionS3Location;
 
-    public Output</* @Nullable */ StateMachineS3Location> definitionS3Location() {
-        return this.definitionS3Location;
+    public Output<Optional<StateMachineS3Location>> definitionS3Location() {
+        return Codegen.optional(this.definitionS3Location);
     }
     @Export(name="definitionString", type=String.class, parameters={})
     private Output</* @Nullable */ String> definitionString;
 
-    public Output</* @Nullable */ String> definitionString() {
-        return this.definitionString;
+    public Output<Optional<String>> definitionString() {
+        return Codegen.optional(this.definitionString);
     }
     @Export(name="definitionSubstitutions", type=StateMachineDefinitionSubstitutions.class, parameters={})
     private Output</* @Nullable */ StateMachineDefinitionSubstitutions> definitionSubstitutions;
 
-    public Output</* @Nullable */ StateMachineDefinitionSubstitutions> definitionSubstitutions() {
-        return this.definitionSubstitutions;
+    public Output<Optional<StateMachineDefinitionSubstitutions>> definitionSubstitutions() {
+        return Codegen.optional(this.definitionSubstitutions);
     }
     @Export(name="loggingConfiguration", type=StateMachineLoggingConfiguration.class, parameters={})
     private Output</* @Nullable */ StateMachineLoggingConfiguration> loggingConfiguration;
 
-    public Output</* @Nullable */ StateMachineLoggingConfiguration> loggingConfiguration() {
-        return this.loggingConfiguration;
+    public Output<Optional<StateMachineLoggingConfiguration>> loggingConfiguration() {
+        return Codegen.optional(this.loggingConfiguration);
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
@@ -79,26 +80,26 @@ public class StateMachine extends com.pulumi.resources.CustomResource {
     @Export(name="stateMachineName", type=String.class, parameters={})
     private Output</* @Nullable */ String> stateMachineName;
 
-    public Output</* @Nullable */ String> stateMachineName() {
-        return this.stateMachineName;
+    public Output<Optional<String>> stateMachineName() {
+        return Codegen.optional(this.stateMachineName);
     }
     @Export(name="stateMachineType", type=StateMachineType.class, parameters={})
     private Output</* @Nullable */ StateMachineType> stateMachineType;
 
-    public Output</* @Nullable */ StateMachineType> stateMachineType() {
-        return this.stateMachineType;
+    public Output<Optional<StateMachineType>> stateMachineType() {
+        return Codegen.optional(this.stateMachineType);
     }
     @Export(name="tags", type=List.class, parameters={StateMachineTagsEntry.class})
     private Output</* @Nullable */ List<StateMachineTagsEntry>> tags;
 
-    public Output</* @Nullable */ List<StateMachineTagsEntry>> tags() {
-        return this.tags;
+    public Output<Optional<List<StateMachineTagsEntry>>> tags() {
+        return Codegen.optional(this.tags);
     }
     @Export(name="tracingConfiguration", type=StateMachineTracingConfiguration.class, parameters={})
     private Output</* @Nullable */ StateMachineTracingConfiguration> tracingConfiguration;
 
-    public Output</* @Nullable */ StateMachineTracingConfiguration> tracingConfiguration() {
-        return this.tracingConfiguration;
+    public Output<Optional<StateMachineTracingConfiguration>> tracingConfiguration() {
+        return Codegen.optional(this.tracingConfiguration);
     }
 
     /**

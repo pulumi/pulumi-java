@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -33,8 +34,8 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return The identifier of the user account in the directory used for identity management.
      * 
      */
-    public Output</* @Nullable */ String> directoryUserId() {
-        return this.directoryUserId;
+    public Output<Optional<String>> directoryUserId() {
+        return Codegen.optional(this.directoryUserId);
     }
     /**
      * The identifier of the hierarchy group for the user.
@@ -47,8 +48,8 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return The identifier of the hierarchy group for the user.
      * 
      */
-    public Output</* @Nullable */ String> hierarchyGroupArn() {
-        return this.hierarchyGroupArn;
+    public Output<Optional<String>> hierarchyGroupArn() {
+        return Codegen.optional(this.hierarchyGroupArn);
     }
     /**
      * The information about the identity of the user.
@@ -61,8 +62,8 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return The information about the identity of the user.
      * 
      */
-    public Output</* @Nullable */ UserIdentityInfo> identityInfo() {
-        return this.identityInfo;
+    public Output<Optional<UserIdentityInfo>> identityInfo() {
+        return Codegen.optional(this.identityInfo);
     }
     /**
      * The identifier of the Amazon Connect instance.
@@ -89,8 +90,8 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return The password for the user account. A password is required if you are using Amazon Connect for identity management. Otherwise, it is an error to include a password.
      * 
      */
-    public Output</* @Nullable */ String> password() {
-        return this.password;
+    public Output<Optional<String>> password() {
+        return Codegen.optional(this.password);
     }
     /**
      * The phone settings for the user.
@@ -145,8 +146,8 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return One or more tags.
      * 
      */
-    public Output</* @Nullable */ List<UserTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<UserTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The Amazon Resource Name (ARN) for the user.

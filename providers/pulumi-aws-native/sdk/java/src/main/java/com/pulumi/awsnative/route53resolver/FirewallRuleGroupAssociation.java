@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -118,8 +119,8 @@ public class FirewallRuleGroupAssociation extends com.pulumi.resources.CustomRes
      * @return MutationProtectionStatus
      * 
      */
-    public Output</* @Nullable */ FirewallRuleGroupAssociationMutationProtection> mutationProtection() {
-        return this.mutationProtection;
+    public Output<Optional<FirewallRuleGroupAssociationMutationProtection>> mutationProtection() {
+        return Codegen.optional(this.mutationProtection);
     }
     /**
      * FirewallRuleGroupAssociationName
@@ -132,8 +133,8 @@ public class FirewallRuleGroupAssociation extends com.pulumi.resources.CustomRes
      * @return FirewallRuleGroupAssociationName
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * Priority
@@ -188,8 +189,8 @@ public class FirewallRuleGroupAssociation extends com.pulumi.resources.CustomRes
      * @return Tags
      * 
      */
-    public Output</* @Nullable */ List<FirewallRuleGroupAssociationTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<FirewallRuleGroupAssociationTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * VpcId

@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -30,8 +31,8 @@ public class RoutingControl extends com.pulumi.resources.CustomResource {
      * @return Arn associated with Control Panel
      * 
      */
-    public Output</* @Nullable */ String> clusterArn() {
-        return this.clusterArn;
+    public Output<Optional<String>> clusterArn() {
+        return Codegen.optional(this.clusterArn);
     }
     /**
      * The Amazon Resource Name (ARN) of the control panel.
@@ -44,8 +45,8 @@ public class RoutingControl extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the control panel.
      * 
      */
-    public Output</* @Nullable */ String> controlPanelArn() {
-        return this.controlPanelArn;
+    public Output<Optional<String>> controlPanelArn() {
+        return Codegen.optional(this.controlPanelArn);
     }
     /**
      * The name of the routing control. You can use any non-white space character in the name.

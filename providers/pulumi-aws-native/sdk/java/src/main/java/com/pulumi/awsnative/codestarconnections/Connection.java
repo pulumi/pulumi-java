@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -75,8 +76,8 @@ public class Connection extends com.pulumi.resources.CustomResource {
      * @return The host arn configured to represent the infrastructure where your third-party provider is installed. You must specify either a ProviderType or a HostArn.
      * 
      */
-    public Output</* @Nullable */ String> hostArn() {
-        return this.hostArn;
+    public Output<Optional<String>> hostArn() {
+        return Codegen.optional(this.hostArn);
     }
     /**
      * The name of the external provider where your third-party code repository is configured. For Bitbucket, this is the account ID of the owner of the Bitbucket repository.
@@ -103,8 +104,8 @@ public class Connection extends com.pulumi.resources.CustomResource {
      * @return The name of the external provider where your third-party code repository is configured. You must specify either a ProviderType or a HostArn.
      * 
      */
-    public Output</* @Nullable */ String> providerType() {
-        return this.providerType;
+    public Output<Optional<String>> providerType() {
+        return Codegen.optional(this.providerType);
     }
     /**
      * Specifies the tags applied to a connection.
@@ -117,8 +118,8 @@ public class Connection extends com.pulumi.resources.CustomResource {
      * @return Specifies the tags applied to a connection.
      * 
      */
-    public Output</* @Nullable */ List<ConnectionTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<ConnectionTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

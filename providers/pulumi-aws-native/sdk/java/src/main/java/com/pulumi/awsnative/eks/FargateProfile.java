@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -54,8 +55,8 @@ public class FargateProfile extends com.pulumi.resources.CustomResource {
      * @return Name of FargateProfile
      * 
      */
-    public Output</* @Nullable */ String> fargateProfileName() {
-        return this.fargateProfileName;
+    public Output<Optional<String>> fargateProfileName() {
+        return Codegen.optional(this.fargateProfileName);
     }
     /**
      * The IAM policy arn for pods
@@ -80,8 +81,8 @@ public class FargateProfile extends com.pulumi.resources.CustomResource {
     @Export(name="subnets", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> subnets;
 
-    public Output</* @Nullable */ List<String>> subnets() {
-        return this.subnets;
+    public Output<Optional<List<String>>> subnets() {
+        return Codegen.optional(this.subnets);
     }
     /**
      * An array of key-value pairs to apply to this resource.
@@ -94,8 +95,8 @@ public class FargateProfile extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<FargateProfileTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<FargateProfileTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

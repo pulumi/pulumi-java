@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -31,8 +32,8 @@ public class Device extends com.pulumi.resources.CustomResource {
      * @return The Edge Device you want to register against a device fleet
      * 
      */
-    public Output</* @Nullable */ com.pulumi.awsnative.sagemaker.outputs.Device> device() {
-        return this.device;
+    public Output<Optional<com.pulumi.awsnative.sagemaker.outputs.Device>> device() {
+        return Codegen.optional(this.device);
     }
     /**
      * The name of the edge device fleet
@@ -59,8 +60,8 @@ public class Device extends com.pulumi.resources.CustomResource {
      * @return Associate tags with the resource
      * 
      */
-    public Output</* @Nullable */ List<DeviceTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<DeviceTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

@@ -17,6 +17,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -36,8 +37,8 @@ public class JobTemplate extends com.pulumi.resources.CustomResource {
      * @return The criteria that determine when and how a job abort takes place.
      * 
      */
-    public Output</* @Nullable */ AbortConfigProperties> abortConfig() {
-        return this.abortConfig;
+    public Output<Optional<AbortConfigProperties>> abortConfig() {
+        return Codegen.optional(this.abortConfig);
     }
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
@@ -70,8 +71,8 @@ public class JobTemplate extends com.pulumi.resources.CustomResource {
      * @return The job document. Required if you don&#39;t specify a value for documentSource.
      * 
      */
-    public Output</* @Nullable */ String> document() {
-        return this.document;
+    public Output<Optional<String>> document() {
+        return Codegen.optional(this.document);
     }
     /**
      * An S3 link to the job document to use in the template. Required if you don&#39;t specify a value for document.
@@ -84,8 +85,8 @@ public class JobTemplate extends com.pulumi.resources.CustomResource {
      * @return An S3 link to the job document to use in the template. Required if you don&#39;t specify a value for document.
      * 
      */
-    public Output</* @Nullable */ String> documentSource() {
-        return this.documentSource;
+    public Output<Optional<String>> documentSource() {
+        return Codegen.optional(this.documentSource);
     }
     /**
      * Optional for copying a JobTemplate from a pre-existing Job configuration.
@@ -98,14 +99,14 @@ public class JobTemplate extends com.pulumi.resources.CustomResource {
      * @return Optional for copying a JobTemplate from a pre-existing Job configuration.
      * 
      */
-    public Output</* @Nullable */ String> jobArn() {
-        return this.jobArn;
+    public Output<Optional<String>> jobArn() {
+        return Codegen.optional(this.jobArn);
     }
     @Export(name="jobExecutionsRetryConfig", type=JobExecutionsRetryConfigProperties.class, parameters={})
     private Output</* @Nullable */ JobExecutionsRetryConfigProperties> jobExecutionsRetryConfig;
 
-    public Output</* @Nullable */ JobExecutionsRetryConfigProperties> jobExecutionsRetryConfig() {
-        return this.jobExecutionsRetryConfig;
+    public Output<Optional<JobExecutionsRetryConfigProperties>> jobExecutionsRetryConfig() {
+        return Codegen.optional(this.jobExecutionsRetryConfig);
     }
     /**
      * Allows you to create a staged rollout of a job.
@@ -118,8 +119,8 @@ public class JobTemplate extends com.pulumi.resources.CustomResource {
      * @return Allows you to create a staged rollout of a job.
      * 
      */
-    public Output</* @Nullable */ JobExecutionsRolloutConfigProperties> jobExecutionsRolloutConfig() {
-        return this.jobExecutionsRolloutConfig;
+    public Output<Optional<JobExecutionsRolloutConfigProperties>> jobExecutionsRolloutConfig() {
+        return Codegen.optional(this.jobExecutionsRolloutConfig);
     }
     @Export(name="jobTemplateId", type=String.class, parameters={})
     private Output<String> jobTemplateId;
@@ -138,8 +139,8 @@ public class JobTemplate extends com.pulumi.resources.CustomResource {
      * @return Configuration for pre-signed S3 URLs.
      * 
      */
-    public Output</* @Nullable */ PresignedUrlConfigProperties> presignedUrlConfig() {
-        return this.presignedUrlConfig;
+    public Output<Optional<PresignedUrlConfigProperties>> presignedUrlConfig() {
+        return Codegen.optional(this.presignedUrlConfig);
     }
     /**
      * Metadata that can be used to manage the JobTemplate.
@@ -152,8 +153,8 @@ public class JobTemplate extends com.pulumi.resources.CustomResource {
      * @return Metadata that can be used to manage the JobTemplate.
      * 
      */
-    public Output</* @Nullable */ List<JobTemplateTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<JobTemplateTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Specifies the amount of time each device has to finish its execution of the job.
@@ -166,8 +167,8 @@ public class JobTemplate extends com.pulumi.resources.CustomResource {
      * @return Specifies the amount of time each device has to finish its execution of the job.
      * 
      */
-    public Output</* @Nullable */ TimeoutConfigProperties> timeoutConfig() {
-        return this.timeoutConfig;
+    public Output<Optional<TimeoutConfigProperties>> timeoutConfig() {
+        return Codegen.optional(this.timeoutConfig);
     }
 
     /**

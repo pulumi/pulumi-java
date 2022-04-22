@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -80,8 +81,8 @@ public class NetworkInsightsAccessScopeAnalysis extends com.pulumi.resources.Cus
     @Export(name="tags", type=List.class, parameters={NetworkInsightsAccessScopeAnalysisTag.class})
     private Output</* @Nullable */ List<NetworkInsightsAccessScopeAnalysisTag>> tags;
 
-    public Output</* @Nullable */ List<NetworkInsightsAccessScopeAnalysisTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<NetworkInsightsAccessScopeAnalysisTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

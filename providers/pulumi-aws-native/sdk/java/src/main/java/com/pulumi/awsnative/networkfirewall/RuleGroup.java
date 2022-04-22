@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -31,14 +32,14 @@ public class RuleGroup extends com.pulumi.resources.CustomResource {
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     @Export(name="ruleGroup", type=com.pulumi.awsnative.networkfirewall.outputs.RuleGroup.class, parameters={})
     private Output</* @Nullable */ com.pulumi.awsnative.networkfirewall.outputs.RuleGroup> ruleGroup;
 
-    public Output</* @Nullable */ com.pulumi.awsnative.networkfirewall.outputs.RuleGroup> ruleGroup() {
-        return this.ruleGroup;
+    public Output<Optional<com.pulumi.awsnative.networkfirewall.outputs.RuleGroup>> ruleGroup() {
+        return Codegen.optional(this.ruleGroup);
     }
     @Export(name="ruleGroupArn", type=String.class, parameters={})
     private Output<String> ruleGroupArn;
@@ -61,8 +62,8 @@ public class RuleGroup extends com.pulumi.resources.CustomResource {
     @Export(name="tags", type=List.class, parameters={RuleGroupTag.class})
     private Output</* @Nullable */ List<RuleGroupTag>> tags;
 
-    public Output</* @Nullable */ List<RuleGroupTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<RuleGroupTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     @Export(name="type", type=RuleGroupTypeEnum.class, parameters={})
     private Output<RuleGroupTypeEnum> type;

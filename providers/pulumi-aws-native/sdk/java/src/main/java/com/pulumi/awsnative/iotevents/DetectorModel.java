@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -39,8 +40,8 @@ public class DetectorModel extends com.pulumi.resources.CustomResource {
      * @return A brief description of the detector model.
      * 
      */
-    public Output</* @Nullable */ String> detectorModelDescription() {
-        return this.detectorModelDescription;
+    public Output<Optional<String>> detectorModelDescription() {
+        return Codegen.optional(this.detectorModelDescription);
     }
     /**
      * The name of the detector model.
@@ -53,8 +54,8 @@ public class DetectorModel extends com.pulumi.resources.CustomResource {
      * @return The name of the detector model.
      * 
      */
-    public Output</* @Nullable */ String> detectorModelName() {
-        return this.detectorModelName;
+    public Output<Optional<String>> detectorModelName() {
+        return Codegen.optional(this.detectorModelName);
     }
     /**
      * Information about the order in which events are evaluated and how actions are executed.
@@ -67,8 +68,8 @@ public class DetectorModel extends com.pulumi.resources.CustomResource {
      * @return Information about the order in which events are evaluated and how actions are executed.
      * 
      */
-    public Output</* @Nullable */ DetectorModelEvaluationMethod> evaluationMethod() {
-        return this.evaluationMethod;
+    public Output<Optional<DetectorModelEvaluationMethod>> evaluationMethod() {
+        return Codegen.optional(this.evaluationMethod);
     }
     /**
      * The value used to identify a detector instance. When a device or system sends input, a new detector instance with a unique key value is created. AWS IoT Events can continue to route input to its corresponding detector instance based on this identifying information.
@@ -85,8 +86,8 @@ public class DetectorModel extends com.pulumi.resources.CustomResource {
      * This parameter uses a JSON-path expression to select the attribute-value pair in the message payload that is used for identification. To route the message to the correct detector instance, the device must send a message payload that contains the same attribute-value.
      * 
      */
-    public Output</* @Nullable */ String> key() {
-        return this.key;
+    public Output<Optional<String>> key() {
+        return Codegen.optional(this.key);
     }
     /**
      * The ARN of the role that grants permission to AWS IoT Events to perform its operations.
@@ -117,8 +118,8 @@ public class DetectorModel extends com.pulumi.resources.CustomResource {
      * For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html).
      * 
      */
-    public Output</* @Nullable */ List<DetectorModelTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<DetectorModelTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

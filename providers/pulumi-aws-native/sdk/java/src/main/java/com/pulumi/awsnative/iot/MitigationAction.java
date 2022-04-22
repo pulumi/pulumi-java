@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -34,8 +35,8 @@ public class MitigationAction extends com.pulumi.resources.CustomResource {
      * @return A unique identifier for the mitigation action.
      * 
      */
-    public Output</* @Nullable */ String> actionName() {
-        return this.actionName;
+    public Output<Optional<String>> actionName() {
+        return Codegen.optional(this.actionName);
     }
     @Export(name="actionParams", type=MitigationActionActionParams.class, parameters={})
     private Output<MitigationActionActionParams> actionParams;
@@ -72,8 +73,8 @@ public class MitigationAction extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<MitigationActionTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<MitigationActionTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

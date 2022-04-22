@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -55,8 +56,8 @@ public class LocationNFS extends com.pulumi.resources.CustomResource {
     @Export(name="mountOptions", type=LocationNFSMountOptions.class, parameters={})
     private Output</* @Nullable */ LocationNFSMountOptions> mountOptions;
 
-    public Output</* @Nullable */ LocationNFSMountOptions> mountOptions() {
-        return this.mountOptions;
+    public Output<Optional<LocationNFSMountOptions>> mountOptions() {
+        return Codegen.optional(this.mountOptions);
     }
     @Export(name="onPremConfig", type=LocationNFSOnPremConfig.class, parameters={})
     private Output<LocationNFSOnPremConfig> onPremConfig;
@@ -103,8 +104,8 @@ public class LocationNFS extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<LocationNFSTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<LocationNFSTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

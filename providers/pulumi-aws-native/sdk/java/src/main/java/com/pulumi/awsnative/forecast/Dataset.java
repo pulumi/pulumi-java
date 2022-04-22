@@ -16,6 +16,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -41,8 +42,8 @@ public class Dataset extends com.pulumi.resources.CustomResource {
      * @return Frequency of data collection. This parameter is required for RELATED_TIME_SERIES
      * 
      */
-    public Output</* @Nullable */ String> dataFrequency() {
-        return this.dataFrequency;
+    public Output<Optional<String>> dataFrequency() {
+        return Codegen.optional(this.dataFrequency);
     }
     /**
      * A name for the dataset
@@ -89,8 +90,8 @@ public class Dataset extends com.pulumi.resources.CustomResource {
     @Export(name="encryptionConfig", type=EncryptionConfigProperties.class, parameters={})
     private Output</* @Nullable */ EncryptionConfigProperties> encryptionConfig;
 
-    public Output</* @Nullable */ EncryptionConfigProperties> encryptionConfig() {
-        return this.encryptionConfig;
+    public Output<Optional<EncryptionConfigProperties>> encryptionConfig() {
+        return Codegen.optional(this.encryptionConfig);
     }
     @Export(name="schema", type=SchemaProperties.class, parameters={})
     private Output<SchemaProperties> schema;
@@ -101,8 +102,8 @@ public class Dataset extends com.pulumi.resources.CustomResource {
     @Export(name="tags", type=List.class, parameters={TagsItemProperties.class})
     private Output</* @Nullable */ List<TagsItemProperties>> tags;
 
-    public Output</* @Nullable */ List<TagsItemProperties>> tags() {
-        return this.tags;
+    public Output<Optional<List<TagsItemProperties>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

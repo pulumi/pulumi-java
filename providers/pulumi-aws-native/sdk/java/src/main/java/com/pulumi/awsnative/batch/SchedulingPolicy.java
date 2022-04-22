@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -29,8 +30,8 @@ public class SchedulingPolicy extends com.pulumi.resources.CustomResource {
     @Export(name="fairsharePolicy", type=SchedulingPolicyFairsharePolicy.class, parameters={})
     private Output</* @Nullable */ SchedulingPolicyFairsharePolicy> fairsharePolicy;
 
-    public Output</* @Nullable */ SchedulingPolicyFairsharePolicy> fairsharePolicy() {
-        return this.fairsharePolicy;
+    public Output<Optional<SchedulingPolicyFairsharePolicy>> fairsharePolicy() {
+        return Codegen.optional(this.fairsharePolicy);
     }
     /**
      * Name of Scheduling Policy.
@@ -43,8 +44,8 @@ public class SchedulingPolicy extends com.pulumi.resources.CustomResource {
      * @return Name of Scheduling Policy.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * A key-value pair to associate with a resource.
@@ -57,8 +58,8 @@ public class SchedulingPolicy extends com.pulumi.resources.CustomResource {
      * @return A key-value pair to associate with a resource.
      * 
      */
-    public Output</* @Nullable */ Object> tags() {
-        return this.tags;
+    public Output<Optional<Object>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

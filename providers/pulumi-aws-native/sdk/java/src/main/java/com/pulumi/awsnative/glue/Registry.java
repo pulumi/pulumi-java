@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class Registry extends com.pulumi.resources.CustomResource {
      * @return A description of the registry. If description is not provided, there will not be any default value for this.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Name of the registry to be created of max length of 255, and may only contain letters, numbers, hyphen, underscore, dollar sign, or hash mark.  No whitespace.
@@ -73,8 +74,8 @@ public class Registry extends com.pulumi.resources.CustomResource {
      * @return List of tags to tag the Registry
      * 
      */
-    public Output</* @Nullable */ List<RegistryTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<RegistryTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

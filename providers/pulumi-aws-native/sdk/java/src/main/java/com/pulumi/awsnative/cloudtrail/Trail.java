@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -40,8 +41,8 @@ public class Trail extends com.pulumi.resources.CustomResource {
      * @return Specifies a log group name using an Amazon Resource Name (ARN), a unique identifier that represents the log group to which CloudTrail logs will be delivered. Not required unless you specify CloudWatchLogsRoleArn.
      * 
      */
-    public Output</* @Nullable */ String> cloudWatchLogsLogGroupArn() {
-        return this.cloudWatchLogsLogGroupArn;
+    public Output<Optional<String>> cloudWatchLogsLogGroupArn() {
+        return Codegen.optional(this.cloudWatchLogsLogGroupArn);
     }
     /**
      * Specifies the role for the CloudWatch Logs endpoint to assume to write to a user&#39;s log group.
@@ -54,8 +55,8 @@ public class Trail extends com.pulumi.resources.CustomResource {
      * @return Specifies the role for the CloudWatch Logs endpoint to assume to write to a user&#39;s log group.
      * 
      */
-    public Output</* @Nullable */ String> cloudWatchLogsRoleArn() {
-        return this.cloudWatchLogsRoleArn;
+    public Output<Optional<String>> cloudWatchLogsRoleArn() {
+        return Codegen.optional(this.cloudWatchLogsRoleArn);
     }
     /**
      * Specifies whether log file validation is enabled. The default is false.
@@ -68,8 +69,8 @@ public class Trail extends com.pulumi.resources.CustomResource {
      * @return Specifies whether log file validation is enabled. The default is false.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableLogFileValidation() {
-        return this.enableLogFileValidation;
+    public Output<Optional<Boolean>> enableLogFileValidation() {
+        return Codegen.optional(this.enableLogFileValidation);
     }
     /**
      * Use event selectors to further specify the management and data event settings for your trail. By default, trails created without specific event selectors will be configured to log all read and write management events, and no data events. When an event occurs in your account, CloudTrail evaluates the event selector for all trails. For each trail, if the event matches any event selector, the trail processes and logs the event. If the event doesn&#39;t match any event selector, the trail doesn&#39;t log the event. You can configure up to five event selectors for a trail.
@@ -82,8 +83,8 @@ public class Trail extends com.pulumi.resources.CustomResource {
      * @return Use event selectors to further specify the management and data event settings for your trail. By default, trails created without specific event selectors will be configured to log all read and write management events, and no data events. When an event occurs in your account, CloudTrail evaluates the event selector for all trails. For each trail, if the event matches any event selector, the trail processes and logs the event. If the event doesn&#39;t match any event selector, the trail doesn&#39;t log the event. You can configure up to five event selectors for a trail.
      * 
      */
-    public Output</* @Nullable */ List<TrailEventSelector>> eventSelectors() {
-        return this.eventSelectors;
+    public Output<Optional<List<TrailEventSelector>>> eventSelectors() {
+        return Codegen.optional(this.eventSelectors);
     }
     /**
      * Specifies whether the trail is publishing events from global services such as IAM to the log files.
@@ -96,8 +97,8 @@ public class Trail extends com.pulumi.resources.CustomResource {
      * @return Specifies whether the trail is publishing events from global services such as IAM to the log files.
      * 
      */
-    public Output</* @Nullable */ Boolean> includeGlobalServiceEvents() {
-        return this.includeGlobalServiceEvents;
+    public Output<Optional<Boolean>> includeGlobalServiceEvents() {
+        return Codegen.optional(this.includeGlobalServiceEvents);
     }
     /**
      * Lets you enable Insights event logging by specifying the Insights selectors that you want to enable on an existing trail.
@@ -110,8 +111,8 @@ public class Trail extends com.pulumi.resources.CustomResource {
      * @return Lets you enable Insights event logging by specifying the Insights selectors that you want to enable on an existing trail.
      * 
      */
-    public Output</* @Nullable */ List<TrailInsightSelector>> insightSelectors() {
-        return this.insightSelectors;
+    public Output<Optional<List<TrailInsightSelector>>> insightSelectors() {
+        return Codegen.optional(this.insightSelectors);
     }
     /**
      * Whether the CloudTrail is currently logging AWS API calls.
@@ -138,8 +139,8 @@ public class Trail extends com.pulumi.resources.CustomResource {
      * @return Specifies whether the trail applies only to the current region or to all regions. The default is false. If the trail exists only in the current region and this value is set to true, shadow trails (replications of the trail) will be created in the other regions. If the trail exists in all regions and this value is set to false, the trail will remain in the region where it was created, and its shadow trails in other regions will be deleted. As a best practice, consider using trails that log events in all regions.
      * 
      */
-    public Output</* @Nullable */ Boolean> isMultiRegionTrail() {
-        return this.isMultiRegionTrail;
+    public Output<Optional<Boolean>> isMultiRegionTrail() {
+        return Codegen.optional(this.isMultiRegionTrail);
     }
     /**
      * Specifies whether the trail is created for all accounts in an organization in AWS Organizations, or only for the current AWS account. The default is false, and cannot be true unless the call is made on behalf of an AWS account that is the master account for an organization in AWS Organizations.
@@ -152,8 +153,8 @@ public class Trail extends com.pulumi.resources.CustomResource {
      * @return Specifies whether the trail is created for all accounts in an organization in AWS Organizations, or only for the current AWS account. The default is false, and cannot be true unless the call is made on behalf of an AWS account that is the master account for an organization in AWS Organizations.
      * 
      */
-    public Output</* @Nullable */ Boolean> isOrganizationTrail() {
-        return this.isOrganizationTrail;
+    public Output<Optional<Boolean>> isOrganizationTrail() {
+        return Codegen.optional(this.isOrganizationTrail);
     }
     /**
      * Specifies the KMS key ID to use to encrypt the logs delivered by CloudTrail. The value can be an alias name prefixed by &#39;alias/&#39;, a fully specified ARN to an alias, a fully specified ARN to a key, or a globally unique identifier.
@@ -166,8 +167,8 @@ public class Trail extends com.pulumi.resources.CustomResource {
      * @return Specifies the KMS key ID to use to encrypt the logs delivered by CloudTrail. The value can be an alias name prefixed by &#39;alias/&#39;, a fully specified ARN to an alias, a fully specified ARN to a key, or a globally unique identifier.
      * 
      */
-    public Output</* @Nullable */ String> kMSKeyId() {
-        return this.kMSKeyId;
+    public Output<Optional<String>> kMSKeyId() {
+        return Codegen.optional(this.kMSKeyId);
     }
     /**
      * Specifies the name of the Amazon S3 bucket designated for publishing log files. See Amazon S3 Bucket Naming Requirements.
@@ -194,8 +195,8 @@ public class Trail extends com.pulumi.resources.CustomResource {
      * @return Specifies the Amazon S3 key prefix that comes after the name of the bucket you have designated for log file delivery. For more information, see Finding Your CloudTrail Log Files. The maximum length is 200 characters.
      * 
      */
-    public Output</* @Nullable */ String> s3KeyPrefix() {
-        return this.s3KeyPrefix;
+    public Output<Optional<String>> s3KeyPrefix() {
+        return Codegen.optional(this.s3KeyPrefix);
     }
     @Export(name="snsTopicArn", type=String.class, parameters={})
     private Output<String> snsTopicArn;
@@ -214,20 +215,20 @@ public class Trail extends com.pulumi.resources.CustomResource {
      * @return Specifies the name of the Amazon SNS topic defined for notification of log file delivery. The maximum length is 256 characters.
      * 
      */
-    public Output</* @Nullable */ String> snsTopicName() {
-        return this.snsTopicName;
+    public Output<Optional<String>> snsTopicName() {
+        return Codegen.optional(this.snsTopicName);
     }
     @Export(name="tags", type=List.class, parameters={TrailTag.class})
     private Output</* @Nullable */ List<TrailTag>> tags;
 
-    public Output</* @Nullable */ List<TrailTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<TrailTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     @Export(name="trailName", type=String.class, parameters={})
     private Output</* @Nullable */ String> trailName;
 
-    public Output</* @Nullable */ String> trailName() {
-        return this.trailName;
+    public Output<Optional<String>> trailName() {
+        return Codegen.optional(this.trailName);
     }
 
     /**

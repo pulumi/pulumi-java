@@ -14,6 +14,7 @@ import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -67,8 +68,8 @@ public class Alarm extends com.pulumi.resources.CustomResource {
      * @return The contact protocols to use for the alarm, such as Email, SMS (text messaging), or both.
      * 
      */
-    public Output</* @Nullable */ List<String>> contactProtocols() {
-        return this.contactProtocols;
+    public Output<Optional<List<String>>> contactProtocols() {
+        return Codegen.optional(this.contactProtocols);
     }
     /**
      * The number of data points that must be not within the specified threshold to trigger the alarm. If you are setting an &#34;M out of N&#34; alarm, this value (datapointsToAlarm) is the M.
@@ -81,8 +82,8 @@ public class Alarm extends com.pulumi.resources.CustomResource {
      * @return The number of data points that must be not within the specified threshold to trigger the alarm. If you are setting an &#34;M out of N&#34; alarm, this value (datapointsToAlarm) is the M.
      * 
      */
-    public Output</* @Nullable */ Integer> datapointsToAlarm() {
-        return this.datapointsToAlarm;
+    public Output<Optional<Integer>> datapointsToAlarm() {
+        return Codegen.optional(this.datapointsToAlarm);
     }
     /**
      * The number of most recent periods over which data is compared to the specified threshold. If you are setting an &#34;M out of N&#34; alarm, this value (evaluationPeriods) is the N.
@@ -137,8 +138,8 @@ public class Alarm extends com.pulumi.resources.CustomResource {
      * @return Indicates whether the alarm is enabled. Notifications are enabled by default if you don&#39;t specify this parameter.
      * 
      */
-    public Output</* @Nullable */ Boolean> notificationEnabled() {
-        return this.notificationEnabled;
+    public Output<Optional<Boolean>> notificationEnabled() {
+        return Codegen.optional(this.notificationEnabled);
     }
     /**
      * The alarm states that trigger a notification.
@@ -151,8 +152,8 @@ public class Alarm extends com.pulumi.resources.CustomResource {
      * @return The alarm states that trigger a notification.
      * 
      */
-    public Output</* @Nullable */ List<String>> notificationTriggers() {
-        return this.notificationTriggers;
+    public Output<Optional<List<String>>> notificationTriggers() {
+        return Codegen.optional(this.notificationTriggers);
     }
     /**
      * The current state of the alarm.
@@ -193,8 +194,8 @@ public class Alarm extends com.pulumi.resources.CustomResource {
      * @return Sets how this alarm will handle missing data points.
      * 
      */
-    public Output</* @Nullable */ String> treatMissingData() {
-        return this.treatMissingData;
+    public Output<Optional<String>> treatMissingData() {
+        return Codegen.optional(this.treatMissingData);
     }
 
     /**

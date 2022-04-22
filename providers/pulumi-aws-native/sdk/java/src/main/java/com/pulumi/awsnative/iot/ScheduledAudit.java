@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -35,8 +36,8 @@ public class ScheduledAudit extends com.pulumi.resources.CustomResource {
      * @return The day of the month on which the scheduled audit takes place. Can be 1 through 31 or LAST. This field is required if the frequency parameter is set to MONTHLY.
      * 
      */
-    public Output</* @Nullable */ String> dayOfMonth() {
-        return this.dayOfMonth;
+    public Output<Optional<String>> dayOfMonth() {
+        return Codegen.optional(this.dayOfMonth);
     }
     /**
      * The day of the week on which the scheduled audit takes place. Can be one of SUN, MON, TUE,WED, THU, FRI, or SAT. This field is required if the frequency parameter is set to WEEKLY or BIWEEKLY.
@@ -49,8 +50,8 @@ public class ScheduledAudit extends com.pulumi.resources.CustomResource {
      * @return The day of the week on which the scheduled audit takes place. Can be one of SUN, MON, TUE,WED, THU, FRI, or SAT. This field is required if the frequency parameter is set to WEEKLY or BIWEEKLY.
      * 
      */
-    public Output</* @Nullable */ ScheduledAuditDayOfWeek> dayOfWeek() {
-        return this.dayOfWeek;
+    public Output<Optional<ScheduledAuditDayOfWeek>> dayOfWeek() {
+        return Codegen.optional(this.dayOfWeek);
     }
     /**
      * How often the scheduled audit takes place. Can be one of DAILY, WEEKLY, BIWEEKLY, or MONTHLY.
@@ -91,8 +92,8 @@ public class ScheduledAudit extends com.pulumi.resources.CustomResource {
      * @return The name you want to give to the scheduled audit.
      * 
      */
-    public Output</* @Nullable */ String> scheduledAuditName() {
-        return this.scheduledAuditName;
+    public Output<Optional<String>> scheduledAuditName() {
+        return Codegen.optional(this.scheduledAuditName);
     }
     /**
      * An array of key-value pairs to apply to this resource.
@@ -105,8 +106,8 @@ public class ScheduledAudit extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<ScheduledAuditTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<ScheduledAuditTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Which checks are performed during the scheduled audit. Checks must be enabled for your account.

@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -24,14 +25,14 @@ public class Subnet extends com.pulumi.resources.CustomResource {
     @Export(name="assignIpv6AddressOnCreation", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> assignIpv6AddressOnCreation;
 
-    public Output</* @Nullable */ Boolean> assignIpv6AddressOnCreation() {
-        return this.assignIpv6AddressOnCreation;
+    public Output<Optional<Boolean>> assignIpv6AddressOnCreation() {
+        return Codegen.optional(this.assignIpv6AddressOnCreation);
     }
     @Export(name="availabilityZone", type=String.class, parameters={})
     private Output</* @Nullable */ String> availabilityZone;
 
-    public Output</* @Nullable */ String> availabilityZone() {
-        return this.availabilityZone;
+    public Output<Optional<String>> availabilityZone() {
+        return Codegen.optional(this.availabilityZone);
     }
     @Export(name="cidrBlock", type=String.class, parameters={})
     private Output<String> cidrBlock;
@@ -42,8 +43,8 @@ public class Subnet extends com.pulumi.resources.CustomResource {
     @Export(name="ipv6CidrBlock", type=String.class, parameters={})
     private Output</* @Nullable */ String> ipv6CidrBlock;
 
-    public Output</* @Nullable */ String> ipv6CidrBlock() {
-        return this.ipv6CidrBlock;
+    public Output<Optional<String>> ipv6CidrBlock() {
+        return Codegen.optional(this.ipv6CidrBlock);
     }
     @Export(name="ipv6CidrBlocks", type=List.class, parameters={String.class})
     private Output<List<String>> ipv6CidrBlocks;
@@ -54,8 +55,8 @@ public class Subnet extends com.pulumi.resources.CustomResource {
     @Export(name="mapPublicIpOnLaunch", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> mapPublicIpOnLaunch;
 
-    public Output</* @Nullable */ Boolean> mapPublicIpOnLaunch() {
-        return this.mapPublicIpOnLaunch;
+    public Output<Optional<Boolean>> mapPublicIpOnLaunch() {
+        return Codegen.optional(this.mapPublicIpOnLaunch);
     }
     @Export(name="networkAclAssociationId", type=String.class, parameters={})
     private Output<String> networkAclAssociationId;
@@ -66,8 +67,8 @@ public class Subnet extends com.pulumi.resources.CustomResource {
     @Export(name="outpostArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> outpostArn;
 
-    public Output</* @Nullable */ String> outpostArn() {
-        return this.outpostArn;
+    public Output<Optional<String>> outpostArn() {
+        return Codegen.optional(this.outpostArn);
     }
     @Export(name="subnetId", type=String.class, parameters={})
     private Output<String> subnetId;
@@ -78,8 +79,8 @@ public class Subnet extends com.pulumi.resources.CustomResource {
     @Export(name="tags", type=List.class, parameters={SubnetTag.class})
     private Output</* @Nullable */ List<SubnetTag>> tags;
 
-    public Output</* @Nullable */ List<SubnetTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<SubnetTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     @Export(name="vpcId", type=String.class, parameters={})
     private Output<String> vpcId;

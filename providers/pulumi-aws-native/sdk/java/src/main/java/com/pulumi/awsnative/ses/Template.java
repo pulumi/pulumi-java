@@ -9,6 +9,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -22,8 +23,8 @@ public class Template extends com.pulumi.resources.CustomResource {
     @Export(name="template", type=com.pulumi.awsnative.ses.outputs.Template.class, parameters={})
     private Output</* @Nullable */ com.pulumi.awsnative.ses.outputs.Template> template;
 
-    public Output</* @Nullable */ com.pulumi.awsnative.ses.outputs.Template> template() {
-        return this.template;
+    public Output<Optional<com.pulumi.awsnative.ses.outputs.Template>> template() {
+        return Codegen.optional(this.template);
     }
 
     /**

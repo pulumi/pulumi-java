@@ -19,6 +19,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -38,8 +39,8 @@ public class Fleet extends com.pulumi.resources.CustomResource {
      * @return A unique identifier for a build to be deployed on the new fleet. If you are deploying the fleet with a custom game build, you must specify this property. The build must have been successfully uploaded to Amazon GameLift and be in a READY status. This fleet setting cannot be changed once the fleet is created.
      * 
      */
-    public Output</* @Nullable */ String> buildId() {
-        return this.buildId;
+    public Output<Optional<String>> buildId() {
+        return Codegen.optional(this.buildId);
     }
     /**
      * Indicates whether to generate a TLS/SSL certificate for the new fleet. TLS certificates are used for encrypting traffic between game clients and game servers running on GameLift. If this parameter is not set, certificate generation is disabled. This fleet setting cannot be changed once the fleet is created.
@@ -52,8 +53,8 @@ public class Fleet extends com.pulumi.resources.CustomResource {
      * @return Indicates whether to generate a TLS/SSL certificate for the new fleet. TLS certificates are used for encrypting traffic between game clients and game servers running on GameLift. If this parameter is not set, certificate generation is disabled. This fleet setting cannot be changed once the fleet is created.
      * 
      */
-    public Output</* @Nullable */ FleetCertificateConfiguration> certificateConfiguration() {
-        return this.certificateConfiguration;
+    public Output<Optional<FleetCertificateConfiguration>> certificateConfiguration() {
+        return Codegen.optional(this.certificateConfiguration);
     }
     /**
      * A human-readable description of a fleet.
@@ -66,8 +67,8 @@ public class Fleet extends com.pulumi.resources.CustomResource {
      * @return A human-readable description of a fleet.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * [DEPRECATED] The number of EC2 instances that you want this fleet to host. When creating a new fleet, GameLift automatically sets this value to &#34;1&#34; and initiates a single instance. Once the fleet is active, update this value to trigger GameLift to add or remove instances from the fleet.
@@ -80,8 +81,8 @@ public class Fleet extends com.pulumi.resources.CustomResource {
      * @return [DEPRECATED] The number of EC2 instances that you want this fleet to host. When creating a new fleet, GameLift automatically sets this value to &#34;1&#34; and initiates a single instance. Once the fleet is active, update this value to trigger GameLift to add or remove instances from the fleet.
      * 
      */
-    public Output</* @Nullable */ Integer> desiredEC2Instances() {
-        return this.desiredEC2Instances;
+    public Output<Optional<Integer>> desiredEC2Instances() {
+        return Codegen.optional(this.desiredEC2Instances);
     }
     /**
      * A range of IP addresses and port settings that allow inbound traffic to connect to server processes on an Amazon GameLift server.
@@ -94,8 +95,8 @@ public class Fleet extends com.pulumi.resources.CustomResource {
      * @return A range of IP addresses and port settings that allow inbound traffic to connect to server processes on an Amazon GameLift server.
      * 
      */
-    public Output</* @Nullable */ List<FleetIpPermission>> eC2InboundPermissions() {
-        return this.eC2InboundPermissions;
+    public Output<Optional<List<FleetIpPermission>>> eC2InboundPermissions() {
+        return Codegen.optional(this.eC2InboundPermissions);
     }
     /**
      * The name of an EC2 instance type that is supported in Amazon GameLift. A fleet instance type determines the computing resources of each instance in the fleet, including CPU, memory, storage, and networking capacity. Amazon GameLift supports the following EC2 instance types. See Amazon EC2 Instance Types for detailed descriptions.
@@ -108,8 +109,8 @@ public class Fleet extends com.pulumi.resources.CustomResource {
      * @return The name of an EC2 instance type that is supported in Amazon GameLift. A fleet instance type determines the computing resources of each instance in the fleet, including CPU, memory, storage, and networking capacity. Amazon GameLift supports the following EC2 instance types. See Amazon EC2 Instance Types for detailed descriptions.
      * 
      */
-    public Output</* @Nullable */ String> eC2InstanceType() {
-        return this.eC2InstanceType;
+    public Output<Optional<String>> eC2InstanceType() {
+        return Codegen.optional(this.eC2InstanceType);
     }
     /**
      * Unique fleet ID
@@ -136,8 +137,8 @@ public class Fleet extends com.pulumi.resources.CustomResource {
      * @return Indicates whether to use On-Demand instances or Spot instances for this fleet. If empty, the default is ON_DEMAND. Both categories of instances use identical hardware and configurations based on the instance type selected for this fleet.
      * 
      */
-    public Output</* @Nullable */ FleetType> fleetType() {
-        return this.fleetType;
+    public Output<Optional<FleetType>> fleetType() {
+        return Codegen.optional(this.fleetType);
     }
     /**
      * A unique identifier for an AWS IAM role that manages access to your AWS services. With an instance role ARN set, any application that runs on an instance in this fleet can assume the role, including install scripts, server processes, and daemons (background processes). Create a role or look up a role&#39;s ARN from the IAM dashboard in the AWS Management Console.
@@ -150,14 +151,14 @@ public class Fleet extends com.pulumi.resources.CustomResource {
      * @return A unique identifier for an AWS IAM role that manages access to your AWS services. With an instance role ARN set, any application that runs on an instance in this fleet can assume the role, including install scripts, server processes, and daemons (background processes). Create a role or look up a role&#39;s ARN from the IAM dashboard in the AWS Management Console.
      * 
      */
-    public Output</* @Nullable */ String> instanceRoleARN() {
-        return this.instanceRoleARN;
+    public Output<Optional<String>> instanceRoleARN() {
+        return Codegen.optional(this.instanceRoleARN);
     }
     @Export(name="locations", type=List.class, parameters={FleetLocationConfiguration.class})
     private Output</* @Nullable */ List<FleetLocationConfiguration>> locations;
 
-    public Output</* @Nullable */ List<FleetLocationConfiguration>> locations() {
-        return this.locations;
+    public Output<Optional<List<FleetLocationConfiguration>>> locations() {
+        return Codegen.optional(this.locations);
     }
     /**
      * This parameter is no longer used. When hosting a custom game build, specify where Amazon GameLift should store log files using the Amazon GameLift server API call ProcessReady()
@@ -170,8 +171,8 @@ public class Fleet extends com.pulumi.resources.CustomResource {
      * @return This parameter is no longer used. When hosting a custom game build, specify where Amazon GameLift should store log files using the Amazon GameLift server API call ProcessReady()
      * 
      */
-    public Output</* @Nullable */ List<String>> logPaths() {
-        return this.logPaths;
+    public Output<Optional<List<String>>> logPaths() {
+        return Codegen.optional(this.logPaths);
     }
     /**
      * [DEPRECATED] The maximum value that is allowed for the fleet&#39;s instance count. When creating a new fleet, GameLift automatically sets this value to &#34;1&#34;. Once the fleet is active, you can change this value.
@@ -184,8 +185,8 @@ public class Fleet extends com.pulumi.resources.CustomResource {
      * @return [DEPRECATED] The maximum value that is allowed for the fleet&#39;s instance count. When creating a new fleet, GameLift automatically sets this value to &#34;1&#34;. Once the fleet is active, you can change this value.
      * 
      */
-    public Output</* @Nullable */ Integer> maxSize() {
-        return this.maxSize;
+    public Output<Optional<Integer>> maxSize() {
+        return Codegen.optional(this.maxSize);
     }
     /**
      * The name of an Amazon CloudWatch metric group. A metric group aggregates the metrics for all fleets in the group. Specify a string containing the metric group name. You can use an existing name or use a new name to create a new metric group. Currently, this parameter can have only one string.
@@ -198,8 +199,8 @@ public class Fleet extends com.pulumi.resources.CustomResource {
      * @return The name of an Amazon CloudWatch metric group. A metric group aggregates the metrics for all fleets in the group. Specify a string containing the metric group name. You can use an existing name or use a new name to create a new metric group. Currently, this parameter can have only one string.
      * 
      */
-    public Output</* @Nullable */ List<String>> metricGroups() {
-        return this.metricGroups;
+    public Output<Optional<List<String>>> metricGroups() {
+        return Codegen.optional(this.metricGroups);
     }
     /**
      * [DEPRECATED] The minimum value allowed for the fleet&#39;s instance count. When creating a new fleet, GameLift automatically sets this value to &#34;0&#34;. After the fleet is active, you can change this value.
@@ -212,8 +213,8 @@ public class Fleet extends com.pulumi.resources.CustomResource {
      * @return [DEPRECATED] The minimum value allowed for the fleet&#39;s instance count. When creating a new fleet, GameLift automatically sets this value to &#34;0&#34;. After the fleet is active, you can change this value.
      * 
      */
-    public Output</* @Nullable */ Integer> minSize() {
-        return this.minSize;
+    public Output<Optional<Integer>> minSize() {
+        return Codegen.optional(this.minSize);
     }
     /**
      * A descriptive label that is associated with a fleet. Fleet names do not need to be unique.
@@ -226,8 +227,8 @@ public class Fleet extends com.pulumi.resources.CustomResource {
      * @return A descriptive label that is associated with a fleet. Fleet names do not need to be unique.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * A game session protection policy to apply to all game sessions hosted on instances in this fleet. When protected, active game sessions cannot be terminated during a scale-down event. If this parameter is not set, instances in this fleet default to no protection. You can change a fleet&#39;s protection policy to affect future game sessions on the fleet. You can also set protection for individual game sessions.
@@ -240,8 +241,8 @@ public class Fleet extends com.pulumi.resources.CustomResource {
      * @return A game session protection policy to apply to all game sessions hosted on instances in this fleet. When protected, active game sessions cannot be terminated during a scale-down event. If this parameter is not set, instances in this fleet default to no protection. You can change a fleet&#39;s protection policy to affect future game sessions on the fleet. You can also set protection for individual game sessions.
      * 
      */
-    public Output</* @Nullable */ FleetNewGameSessionProtectionPolicy> newGameSessionProtectionPolicy() {
-        return this.newGameSessionProtectionPolicy;
+    public Output<Optional<FleetNewGameSessionProtectionPolicy>> newGameSessionProtectionPolicy() {
+        return Codegen.optional(this.newGameSessionProtectionPolicy);
     }
     /**
      * A unique identifier for the AWS account with the VPC that you want to peer your Amazon GameLift fleet with. You can find your account ID in the AWS Management Console under account settings.
@@ -254,8 +255,8 @@ public class Fleet extends com.pulumi.resources.CustomResource {
      * @return A unique identifier for the AWS account with the VPC that you want to peer your Amazon GameLift fleet with. You can find your account ID in the AWS Management Console under account settings.
      * 
      */
-    public Output</* @Nullable */ String> peerVpcAwsAccountId() {
-        return this.peerVpcAwsAccountId;
+    public Output<Optional<String>> peerVpcAwsAccountId() {
+        return Codegen.optional(this.peerVpcAwsAccountId);
     }
     /**
      * A unique identifier for a VPC with resources to be accessed by your Amazon GameLift fleet. The VPC must be in the same Region as your fleet. To look up a VPC ID, use the VPC Dashboard in the AWS Management Console.
@@ -268,8 +269,8 @@ public class Fleet extends com.pulumi.resources.CustomResource {
      * @return A unique identifier for a VPC with resources to be accessed by your Amazon GameLift fleet. The VPC must be in the same Region as your fleet. To look up a VPC ID, use the VPC Dashboard in the AWS Management Console.
      * 
      */
-    public Output</* @Nullable */ String> peerVpcId() {
-        return this.peerVpcId;
+    public Output<Optional<String>> peerVpcId() {
+        return Codegen.optional(this.peerVpcId);
     }
     /**
      * A policy that limits the number of game sessions an individual player can create over a span of time for this fleet.
@@ -282,8 +283,8 @@ public class Fleet extends com.pulumi.resources.CustomResource {
      * @return A policy that limits the number of game sessions an individual player can create over a span of time for this fleet.
      * 
      */
-    public Output</* @Nullable */ FleetResourceCreationLimitPolicy> resourceCreationLimitPolicy() {
-        return this.resourceCreationLimitPolicy;
+    public Output<Optional<FleetResourceCreationLimitPolicy>> resourceCreationLimitPolicy() {
+        return Codegen.optional(this.resourceCreationLimitPolicy);
     }
     /**
      * Instructions for launching server processes on each instance in the fleet. Server processes run either a custom game build executable or a Realtime script. The runtime configuration defines the server executables or launch script file, launch parameters, and the number of processes to run concurrently on each instance. When creating a fleet, the runtime configuration must have at least one server process configuration; otherwise the request fails with an invalid request exception.
@@ -300,8 +301,8 @@ public class Fleet extends com.pulumi.resources.CustomResource {
      * This parameter is required unless the parameters ServerLaunchPath and ServerLaunchParameters are defined. Runtime configuration has replaced these parameters, but fleets that use them will continue to work.
      * 
      */
-    public Output</* @Nullable */ FleetRuntimeConfiguration> runtimeConfiguration() {
-        return this.runtimeConfiguration;
+    public Output<Optional<FleetRuntimeConfiguration>> runtimeConfiguration() {
+        return Codegen.optional(this.runtimeConfiguration);
     }
     /**
      * A unique identifier for a Realtime script to be deployed on a new Realtime Servers fleet. The script must have been successfully uploaded to Amazon GameLift. This fleet setting cannot be changed once the fleet is created.
@@ -318,8 +319,8 @@ public class Fleet extends com.pulumi.resources.CustomResource {
      * Note: It is not currently possible to use the !Ref command to reference a script created with a CloudFormation template for the fleet property ScriptId. Instead, use Fn::GetAtt Script.Arn or Fn::GetAtt Script.Id to retrieve either of these properties as input for ScriptId. Alternatively, enter a ScriptId string manually.
      * 
      */
-    public Output</* @Nullable */ String> scriptId() {
-        return this.scriptId;
+    public Output<Optional<String>> scriptId() {
+        return Codegen.optional(this.scriptId);
     }
     /**
      * This parameter is no longer used but is retained for backward compatibility. Instead, specify server launch parameters in the RuntimeConfiguration parameter. A request must specify either a runtime configuration or values for both ServerLaunchParameters and ServerLaunchPath.
@@ -332,8 +333,8 @@ public class Fleet extends com.pulumi.resources.CustomResource {
      * @return This parameter is no longer used but is retained for backward compatibility. Instead, specify server launch parameters in the RuntimeConfiguration parameter. A request must specify either a runtime configuration or values for both ServerLaunchParameters and ServerLaunchPath.
      * 
      */
-    public Output</* @Nullable */ String> serverLaunchParameters() {
-        return this.serverLaunchParameters;
+    public Output<Optional<String>> serverLaunchParameters() {
+        return Codegen.optional(this.serverLaunchParameters);
     }
     /**
      * This parameter is no longer used. Instead, specify a server launch path using the RuntimeConfiguration parameter. Requests that specify a server launch path and launch parameters instead of a runtime configuration will continue to work.
@@ -346,8 +347,8 @@ public class Fleet extends com.pulumi.resources.CustomResource {
      * @return This parameter is no longer used. Instead, specify a server launch path using the RuntimeConfiguration parameter. Requests that specify a server launch path and launch parameters instead of a runtime configuration will continue to work.
      * 
      */
-    public Output</* @Nullable */ String> serverLaunchPath() {
-        return this.serverLaunchPath;
+    public Output<Optional<String>> serverLaunchPath() {
+        return Codegen.optional(this.serverLaunchPath);
     }
 
     /**

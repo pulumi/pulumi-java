@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -33,8 +34,8 @@ public class Database extends com.pulumi.resources.CustomResource {
      * @return The Availability Zone in which to create your new database. Use the us-east-2a case-sensitive format.
      * 
      */
-    public Output</* @Nullable */ String> availabilityZone() {
-        return this.availabilityZone;
+    public Output<Optional<String>> availabilityZone() {
+        return Codegen.optional(this.availabilityZone);
     }
     /**
      * When true, enables automated backup retention for your database. Updates are applied during the next maintenance window because this can result in an outage.
@@ -47,8 +48,8 @@ public class Database extends com.pulumi.resources.CustomResource {
      * @return When true, enables automated backup retention for your database. Updates are applied during the next maintenance window because this can result in an outage.
      * 
      */
-    public Output</* @Nullable */ Boolean> backupRetention() {
-        return this.backupRetention;
+    public Output<Optional<Boolean>> backupRetention() {
+        return Codegen.optional(this.backupRetention);
     }
     /**
      * Indicates the certificate that needs to be associated with the database.
@@ -61,8 +62,8 @@ public class Database extends com.pulumi.resources.CustomResource {
      * @return Indicates the certificate that needs to be associated with the database.
      * 
      */
-    public Output</* @Nullable */ String> caCertificateIdentifier() {
-        return this.caCertificateIdentifier;
+    public Output<Optional<String>> caCertificateIdentifier() {
+        return Codegen.optional(this.caCertificateIdentifier);
     }
     @Export(name="databaseArn", type=String.class, parameters={})
     private Output<String> databaseArn;
@@ -95,8 +96,8 @@ public class Database extends com.pulumi.resources.CustomResource {
      * @return The password for the master user. The password can include any printable ASCII character except &#34;/&#34;, &#34;&#34;&#34;, or &#34;@&#34;. It cannot contain spaces.
      * 
      */
-    public Output</* @Nullable */ String> masterUserPassword() {
-        return this.masterUserPassword;
+    public Output<Optional<String>> masterUserPassword() {
+        return Codegen.optional(this.masterUserPassword);
     }
     /**
      * The name for the master user.
@@ -123,8 +124,8 @@ public class Database extends com.pulumi.resources.CustomResource {
      * @return The daily time range during which automated backups are created for your new database if automated backups are enabled.
      * 
      */
-    public Output</* @Nullable */ String> preferredBackupWindow() {
-        return this.preferredBackupWindow;
+    public Output<Optional<String>> preferredBackupWindow() {
+        return Codegen.optional(this.preferredBackupWindow);
     }
     /**
      * The weekly time range during which system maintenance can occur on your new database.
@@ -137,8 +138,8 @@ public class Database extends com.pulumi.resources.CustomResource {
      * @return The weekly time range during which system maintenance can occur on your new database.
      * 
      */
-    public Output</* @Nullable */ String> preferredMaintenanceWindow() {
-        return this.preferredMaintenanceWindow;
+    public Output<Optional<String>> preferredMaintenanceWindow() {
+        return Codegen.optional(this.preferredMaintenanceWindow);
     }
     /**
      * Specifies the accessibility options for your new database. A value of true specifies a database that is available to resources outside of your Lightsail account. A value of false specifies a database that is available only to your Lightsail resources in the same region as your database.
@@ -151,8 +152,8 @@ public class Database extends com.pulumi.resources.CustomResource {
      * @return Specifies the accessibility options for your new database. A value of true specifies a database that is available to resources outside of your Lightsail account. A value of false specifies a database that is available only to your Lightsail resources in the same region as your database.
      * 
      */
-    public Output</* @Nullable */ Boolean> publiclyAccessible() {
-        return this.publiclyAccessible;
+    public Output<Optional<Boolean>> publiclyAccessible() {
+        return Codegen.optional(this.publiclyAccessible);
     }
     /**
      * The blueprint ID for your new database. A blueprint describes the major engine version of a database.
@@ -207,8 +208,8 @@ public class Database extends com.pulumi.resources.CustomResource {
      * @return Update one or more parameters of the relational database.
      * 
      */
-    public Output</* @Nullable */ List<DatabaseRelationalDatabaseParameter>> relationalDatabaseParameters() {
-        return this.relationalDatabaseParameters;
+    public Output<Optional<List<DatabaseRelationalDatabaseParameter>>> relationalDatabaseParameters() {
+        return Codegen.optional(this.relationalDatabaseParameters);
     }
     /**
      * When true, the master user password is changed to a new strong password generated by Lightsail. Use the get relational database master user password operation to get the new password.
@@ -221,8 +222,8 @@ public class Database extends com.pulumi.resources.CustomResource {
      * @return When true, the master user password is changed to a new strong password generated by Lightsail. Use the get relational database master user password operation to get the new password.
      * 
      */
-    public Output</* @Nullable */ Boolean> rotateMasterUserPassword() {
-        return this.rotateMasterUserPassword;
+    public Output<Optional<Boolean>> rotateMasterUserPassword() {
+        return Codegen.optional(this.rotateMasterUserPassword);
     }
     /**
      * An array of key-value pairs to apply to this resource.
@@ -235,8 +236,8 @@ public class Database extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<DatabaseTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<DatabaseTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

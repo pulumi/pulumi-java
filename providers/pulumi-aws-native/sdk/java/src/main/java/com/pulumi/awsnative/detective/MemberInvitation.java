@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -30,8 +31,8 @@ public class MemberInvitation extends com.pulumi.resources.CustomResource {
      * @return When set to true, invitation emails are not sent to the member accounts. Member accounts must still accept the invitation before they are added to the behavior graph. Updating this field has no effect.
      * 
      */
-    public Output</* @Nullable */ Boolean> disableEmailNotification() {
-        return this.disableEmailNotification;
+    public Output<Optional<Boolean>> disableEmailNotification() {
+        return Codegen.optional(this.disableEmailNotification);
     }
     /**
      * The ARN of the graph to which the member account will be invited
@@ -86,8 +87,8 @@ public class MemberInvitation extends com.pulumi.resources.CustomResource {
      * @return A message to be included in the email invitation sent to the invited account. Updating this field has no effect.
      * 
      */
-    public Output</* @Nullable */ String> message() {
-        return this.message;
+    public Output<Optional<String>> message() {
+        return Codegen.optional(this.message);
     }
 
     /**

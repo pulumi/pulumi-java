@@ -19,6 +19,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -72,8 +73,8 @@ public class Connector extends com.pulumi.resources.CustomResource {
      * @return A summary description of the connector.
      * 
      */
-    public Output</* @Nullable */ String> connectorDescription() {
-        return this.connectorDescription;
+    public Output<Optional<String>> connectorDescription() {
+        return Codegen.optional(this.connectorDescription);
     }
     /**
      * The name of the connector.
@@ -124,8 +125,8 @@ public class Connector extends com.pulumi.resources.CustomResource {
     @Export(name="logDelivery", type=ConnectorLogDelivery.class, parameters={})
     private Output</* @Nullable */ ConnectorLogDelivery> logDelivery;
 
-    public Output</* @Nullable */ ConnectorLogDelivery> logDelivery() {
-        return this.logDelivery;
+    public Output<Optional<ConnectorLogDelivery>> logDelivery() {
+        return Codegen.optional(this.logDelivery);
     }
     /**
      * List of plugins to use with the connector.
@@ -158,8 +159,8 @@ public class Connector extends com.pulumi.resources.CustomResource {
     @Export(name="workerConfiguration", type=ConnectorWorkerConfiguration.class, parameters={})
     private Output</* @Nullable */ ConnectorWorkerConfiguration> workerConfiguration;
 
-    public Output</* @Nullable */ ConnectorWorkerConfiguration> workerConfiguration() {
-        return this.workerConfiguration;
+    public Output<Optional<ConnectorWorkerConfiguration>> workerConfiguration() {
+        return Codegen.optional(this.workerConfiguration);
     }
 
     /**

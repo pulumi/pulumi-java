@@ -12,6 +12,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class CustomDataIdentifier extends com.pulumi.resources.CustomResource {
      * @return Description of custom data identifier.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Words to be ignored.
@@ -59,8 +60,8 @@ public class CustomDataIdentifier extends com.pulumi.resources.CustomResource {
      * @return Words to be ignored.
      * 
      */
-    public Output</* @Nullable */ List<String>> ignoreWords() {
-        return this.ignoreWords;
+    public Output<Optional<List<String>>> ignoreWords() {
+        return Codegen.optional(this.ignoreWords);
     }
     /**
      * Keywords to be matched against.
@@ -73,8 +74,8 @@ public class CustomDataIdentifier extends com.pulumi.resources.CustomResource {
      * @return Keywords to be matched against.
      * 
      */
-    public Output</* @Nullable */ List<String>> keywords() {
-        return this.keywords;
+    public Output<Optional<List<String>>> keywords() {
+        return Codegen.optional(this.keywords);
     }
     /**
      * Maximum match distance.
@@ -87,8 +88,8 @@ public class CustomDataIdentifier extends com.pulumi.resources.CustomResource {
      * @return Maximum match distance.
      * 
      */
-    public Output</* @Nullable */ Integer> maximumMatchDistance() {
-        return this.maximumMatchDistance;
+    public Output<Optional<Integer>> maximumMatchDistance() {
+        return Codegen.optional(this.maximumMatchDistance);
     }
     /**
      * Name of custom data identifier.

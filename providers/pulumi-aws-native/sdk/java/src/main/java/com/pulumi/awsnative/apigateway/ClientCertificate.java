@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class ClientCertificate extends com.pulumi.resources.CustomResource {
      * @return A description of the client certificate.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * An array of arbitrary tags (key-value pairs) to associate with the client certificate.
@@ -59,8 +60,8 @@ public class ClientCertificate extends com.pulumi.resources.CustomResource {
      * @return An array of arbitrary tags (key-value pairs) to associate with the client certificate.
      * 
      */
-    public Output</* @Nullable */ List<ClientCertificateTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<ClientCertificateTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

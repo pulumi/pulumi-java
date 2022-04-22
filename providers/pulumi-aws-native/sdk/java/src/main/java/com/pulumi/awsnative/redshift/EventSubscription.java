@@ -17,6 +17,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -64,8 +65,8 @@ public class EventSubscription extends com.pulumi.resources.CustomResource {
      * @return A boolean value; set to true to activate the subscription, and set to false to create the subscription but not activate it.
      * 
      */
-    public Output</* @Nullable */ Boolean> enabled() {
-        return this.enabled;
+    public Output<Optional<Boolean>> enabled() {
+        return Codegen.optional(this.enabled);
     }
     /**
      * Specifies the Amazon Redshift event categories to be published by the event notification subscription.
@@ -78,8 +79,8 @@ public class EventSubscription extends com.pulumi.resources.CustomResource {
      * @return Specifies the Amazon Redshift event categories to be published by the event notification subscription.
      * 
      */
-    public Output</* @Nullable */ List<EventSubscriptionEventCategoriesItem>> eventCategories() {
-        return this.eventCategories;
+    public Output<Optional<List<EventSubscriptionEventCategoriesItem>>> eventCategories() {
+        return Codegen.optional(this.eventCategories);
     }
     /**
      * The list of Amazon Redshift event categories specified in the event notification subscription.
@@ -106,8 +107,8 @@ public class EventSubscription extends com.pulumi.resources.CustomResource {
      * @return Specifies the Amazon Redshift event severity to be published by the event notification subscription.
      * 
      */
-    public Output</* @Nullable */ EventSubscriptionSeverity> severity() {
-        return this.severity;
+    public Output<Optional<EventSubscriptionSeverity>> severity() {
+        return Codegen.optional(this.severity);
     }
     /**
      * The Amazon Resource Name (ARN) of the Amazon SNS topic used to transmit the event notifications.
@@ -120,8 +121,8 @@ public class EventSubscription extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the Amazon SNS topic used to transmit the event notifications.
      * 
      */
-    public Output</* @Nullable */ String> snsTopicArn() {
-        return this.snsTopicArn;
+    public Output<Optional<String>> snsTopicArn() {
+        return Codegen.optional(this.snsTopicArn);
     }
     /**
      * A list of one or more identifiers of Amazon Redshift source objects.
@@ -134,8 +135,8 @@ public class EventSubscription extends com.pulumi.resources.CustomResource {
      * @return A list of one or more identifiers of Amazon Redshift source objects.
      * 
      */
-    public Output</* @Nullable */ List<String>> sourceIds() {
-        return this.sourceIds;
+    public Output<Optional<List<String>>> sourceIds() {
+        return Codegen.optional(this.sourceIds);
     }
     /**
      * A list of the sources that publish events to the Amazon Redshift event notification subscription.
@@ -162,8 +163,8 @@ public class EventSubscription extends com.pulumi.resources.CustomResource {
      * @return The type of source that will be generating the events.
      * 
      */
-    public Output</* @Nullable */ EventSubscriptionSourceType> sourceType() {
-        return this.sourceType;
+    public Output<Optional<EventSubscriptionSourceType>> sourceType() {
+        return Codegen.optional(this.sourceType);
     }
     /**
      * The status of the Amazon Redshift event notification subscription.
@@ -218,8 +219,8 @@ public class EventSubscription extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<EventSubscriptionTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<EventSubscriptionTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

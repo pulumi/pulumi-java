@@ -15,6 +15,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -38,14 +39,14 @@ public class Service extends com.pulumi.resources.CustomResource {
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     @Export(name="endpointType", type=ServiceEndpointType.class, parameters={})
     private Output</* @Nullable */ ServiceEndpointType> endpointType;
 
-    public Output</* @Nullable */ ServiceEndpointType> endpointType() {
-        return this.endpointType;
+    public Output<Optional<ServiceEndpointType>> endpointType() {
+        return Codegen.optional(this.endpointType);
     }
     @Export(name="environmentIdentifier", type=String.class, parameters={})
     private Output<String> environmentIdentifier;
@@ -56,14 +57,14 @@ public class Service extends com.pulumi.resources.CustomResource {
     @Export(name="lambdaEndpoint", type=ServiceLambdaEndpointInput.class, parameters={})
     private Output</* @Nullable */ ServiceLambdaEndpointInput> lambdaEndpoint;
 
-    public Output</* @Nullable */ ServiceLambdaEndpointInput> lambdaEndpoint() {
-        return this.lambdaEndpoint;
+    public Output<Optional<ServiceLambdaEndpointInput>> lambdaEndpoint() {
+        return Codegen.optional(this.lambdaEndpoint);
     }
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     @Export(name="serviceIdentifier", type=String.class, parameters={})
     private Output<String> serviceIdentifier;
@@ -82,20 +83,20 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return Metadata that you can assign to help organize the frameworks that you create. Each tag is a key-value pair.
      * 
      */
-    public Output</* @Nullable */ List<ServiceTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<ServiceTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     @Export(name="urlEndpoint", type=ServiceUrlEndpointInput.class, parameters={})
     private Output</* @Nullable */ ServiceUrlEndpointInput> urlEndpoint;
 
-    public Output</* @Nullable */ ServiceUrlEndpointInput> urlEndpoint() {
-        return this.urlEndpoint;
+    public Output<Optional<ServiceUrlEndpointInput>> urlEndpoint() {
+        return Codegen.optional(this.urlEndpoint);
     }
     @Export(name="vpcId", type=String.class, parameters={})
     private Output</* @Nullable */ String> vpcId;
 
-    public Output</* @Nullable */ String> vpcId() {
-        return this.vpcId;
+    public Output<Optional<String>> vpcId() {
+        return Codegen.optional(this.vpcId);
     }
 
     /**

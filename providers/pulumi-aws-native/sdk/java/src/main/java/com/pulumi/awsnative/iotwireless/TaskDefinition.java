@@ -16,6 +16,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -63,8 +64,8 @@ public class TaskDefinition extends com.pulumi.resources.CustomResource {
      * @return The list of task definitions.
      * 
      */
-    public Output</* @Nullable */ TaskDefinitionLoRaWANUpdateGatewayTaskEntry> loRaWANUpdateGatewayTaskEntry() {
-        return this.loRaWANUpdateGatewayTaskEntry;
+    public Output<Optional<TaskDefinitionLoRaWANUpdateGatewayTaskEntry>> loRaWANUpdateGatewayTaskEntry() {
+        return Codegen.optional(this.loRaWANUpdateGatewayTaskEntry);
     }
     /**
      * The name of the new resource.
@@ -77,8 +78,8 @@ public class TaskDefinition extends com.pulumi.resources.CustomResource {
      * @return The name of the new resource.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * A list of key-value pairs that contain metadata for the destination.
@@ -91,8 +92,8 @@ public class TaskDefinition extends com.pulumi.resources.CustomResource {
      * @return A list of key-value pairs that contain metadata for the destination.
      * 
      */
-    public Output</* @Nullable */ List<TaskDefinitionTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<TaskDefinitionTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A filter to list only the wireless gateway task definitions that use this task definition type
@@ -105,8 +106,8 @@ public class TaskDefinition extends com.pulumi.resources.CustomResource {
      * @return A filter to list only the wireless gateway task definitions that use this task definition type
      * 
      */
-    public Output</* @Nullable */ TaskDefinitionType> taskDefinitionType() {
-        return this.taskDefinitionType;
+    public Output<Optional<TaskDefinitionType>> taskDefinitionType() {
+        return Codegen.optional(this.taskDefinitionType);
     }
     /**
      * Information about the gateways to update.
@@ -119,8 +120,8 @@ public class TaskDefinition extends com.pulumi.resources.CustomResource {
      * @return Information about the gateways to update.
      * 
      */
-    public Output</* @Nullable */ TaskDefinitionUpdateWirelessGatewayTaskCreate> update() {
-        return this.update;
+    public Output<Optional<TaskDefinitionUpdateWirelessGatewayTaskCreate>> update() {
+        return Codegen.optional(this.update);
     }
 
     /**

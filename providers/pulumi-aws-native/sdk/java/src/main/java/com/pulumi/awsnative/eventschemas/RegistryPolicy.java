@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -36,8 +37,8 @@ public class RegistryPolicy extends com.pulumi.resources.CustomResource {
     @Export(name="revisionId", type=String.class, parameters={})
     private Output</* @Nullable */ String> revisionId;
 
-    public Output</* @Nullable */ String> revisionId() {
-        return this.revisionId;
+    public Output<Optional<String>> revisionId() {
+        return Codegen.optional(this.revisionId);
     }
 
     /**

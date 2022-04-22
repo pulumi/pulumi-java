@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -101,8 +102,8 @@ public class Dashboard extends com.pulumi.resources.CustomResource {
      * @return The ID of the project in which to create the dashboard.
      * 
      */
-    public Output</* @Nullable */ String> projectId() {
-        return this.projectId;
+    public Output<Optional<String>> projectId() {
+        return Codegen.optional(this.projectId);
     }
     /**
      * A list of key-value pairs that contain metadata for the dashboard.
@@ -115,8 +116,8 @@ public class Dashboard extends com.pulumi.resources.CustomResource {
      * @return A list of key-value pairs that contain metadata for the dashboard.
      * 
      */
-    public Output</* @Nullable */ List<DashboardTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<DashboardTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

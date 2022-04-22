@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -32,8 +33,8 @@ public class StreamingImage extends com.pulumi.resources.CustomResource {
      * @return &lt;p&gt;A human-readable description of the streaming image.&lt;/p&gt;
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * &lt;p&gt;The ID of an EC2 machine image with which to create this streaming image.&lt;/p&gt;
@@ -134,8 +135,8 @@ public class StreamingImage extends com.pulumi.resources.CustomResource {
     @Export(name="tags", type=StreamingImageTags.class, parameters={})
     private Output</* @Nullable */ StreamingImageTags> tags;
 
-    public Output</* @Nullable */ StreamingImageTags> tags() {
-        return this.tags;
+    public Output<Optional<StreamingImageTags>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

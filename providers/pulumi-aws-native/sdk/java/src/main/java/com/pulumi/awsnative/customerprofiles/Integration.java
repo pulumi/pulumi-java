@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -55,8 +56,8 @@ public class Integration extends com.pulumi.resources.CustomResource {
     @Export(name="flowDefinition", type=IntegrationFlowDefinition.class, parameters={})
     private Output</* @Nullable */ IntegrationFlowDefinition> flowDefinition;
 
-    public Output</* @Nullable */ IntegrationFlowDefinition> flowDefinition() {
-        return this.flowDefinition;
+    public Output<Optional<IntegrationFlowDefinition>> flowDefinition() {
+        return Codegen.optional(this.flowDefinition);
     }
     /**
      * The time of this integration got last updated at
@@ -83,8 +84,8 @@ public class Integration extends com.pulumi.resources.CustomResource {
      * @return The name of the ObjectType defined for the 3rd party data in Profile Service
      * 
      */
-    public Output</* @Nullable */ String> objectTypeName() {
-        return this.objectTypeName;
+    public Output<Optional<String>> objectTypeName() {
+        return Codegen.optional(this.objectTypeName);
     }
     /**
      * The mapping between 3rd party event types and ObjectType names
@@ -97,8 +98,8 @@ public class Integration extends com.pulumi.resources.CustomResource {
      * @return The mapping between 3rd party event types and ObjectType names
      * 
      */
-    public Output</* @Nullable */ List<IntegrationObjectTypeMapping>> objectTypeNames() {
-        return this.objectTypeNames;
+    public Output<Optional<List<IntegrationObjectTypeMapping>>> objectTypeNames() {
+        return Codegen.optional(this.objectTypeNames);
     }
     /**
      * The tags (keys and values) associated with the integration
@@ -111,8 +112,8 @@ public class Integration extends com.pulumi.resources.CustomResource {
      * @return The tags (keys and values) associated with the integration
      * 
      */
-    public Output</* @Nullable */ List<IntegrationTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<IntegrationTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The URI of the S3 bucket or any other type of data source.
@@ -125,8 +126,8 @@ public class Integration extends com.pulumi.resources.CustomResource {
      * @return The URI of the S3 bucket or any other type of data source.
      * 
      */
-    public Output</* @Nullable */ String> uri() {
-        return this.uri;
+    public Output<Optional<String>> uri() {
+        return Codegen.optional(this.uri);
     }
 
     /**

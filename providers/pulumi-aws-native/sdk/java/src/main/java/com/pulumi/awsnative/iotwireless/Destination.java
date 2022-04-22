@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class Destination extends com.pulumi.resources.CustomResource {
      * @return Destination description
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Destination expression
@@ -116,8 +117,8 @@ public class Destination extends com.pulumi.resources.CustomResource {
      * @return A list of key-value pairs that contain metadata for the destination.
      * 
      */
-    public Output</* @Nullable */ List<DestinationTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<DestinationTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

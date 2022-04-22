@@ -16,6 +16,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -61,14 +62,14 @@ public class Theme extends com.pulumi.resources.CustomResource {
      * 			within a QuickSight analysis. &lt;/p&gt;
      * 
      */
-    public Output</* @Nullable */ String> baseThemeId() {
-        return this.baseThemeId;
+    public Output<Optional<String>> baseThemeId() {
+        return Codegen.optional(this.baseThemeId);
     }
     @Export(name="configuration", type=ThemeConfiguration.class, parameters={})
     private Output</* @Nullable */ ThemeConfiguration> configuration;
 
-    public Output</* @Nullable */ ThemeConfiguration> configuration() {
-        return this.configuration;
+    public Output<Optional<ThemeConfiguration>> configuration() {
+        return Codegen.optional(this.configuration);
     }
     /**
      * &lt;p&gt;The date and time that the theme was created.&lt;/p&gt;
@@ -109,8 +110,8 @@ public class Theme extends com.pulumi.resources.CustomResource {
      * @return &lt;p&gt;A display name for the theme.&lt;/p&gt;
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * &lt;p&gt;A valid grouping of resource permissions to apply to the new theme.
@@ -125,8 +126,8 @@ public class Theme extends com.pulumi.resources.CustomResource {
      * 			&lt;/p&gt;
      * 
      */
-    public Output</* @Nullable */ List<ThemeResourcePermission>> permissions() {
-        return this.permissions;
+    public Output<Optional<List<ThemeResourcePermission>>> permissions() {
+        return Codegen.optional(this.permissions);
     }
     /**
      * &lt;p&gt;A map of the key-value pairs for the resource tag or tags that you want to add to the
@@ -141,8 +142,8 @@ public class Theme extends com.pulumi.resources.CustomResource {
      * 			resource.&lt;/p&gt;
      * 
      */
-    public Output</* @Nullable */ List<ThemeTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<ThemeTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     @Export(name="themeId", type=String.class, parameters={})
     private Output<String> themeId;
@@ -179,8 +180,8 @@ public class Theme extends com.pulumi.resources.CustomResource {
      * 			field.&lt;/p&gt;
      * 
      */
-    public Output</* @Nullable */ String> versionDescription() {
-        return this.versionDescription;
+    public Output<Optional<String>> versionDescription() {
+        return Codegen.optional(this.versionDescription);
     }
 
     /**

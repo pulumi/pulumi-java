@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class AccountAuditConfiguration extends com.pulumi.resources.CustomResour
     @Export(name="auditNotificationTargetConfigurations", type=AccountAuditConfigurationAuditNotificationTargetConfigurations.class, parameters={})
     private Output</* @Nullable */ AccountAuditConfigurationAuditNotificationTargetConfigurations> auditNotificationTargetConfigurations;
 
-    public Output</* @Nullable */ AccountAuditConfigurationAuditNotificationTargetConfigurations> auditNotificationTargetConfigurations() {
-        return this.auditNotificationTargetConfigurations;
+    public Output<Optional<AccountAuditConfigurationAuditNotificationTargetConfigurations>> auditNotificationTargetConfigurations() {
+        return Codegen.optional(this.auditNotificationTargetConfigurations);
     }
     /**
      * The ARN of the role that grants permission to AWS IoT to access information about your devices, policies, certificates and other items as required when performing an audit.

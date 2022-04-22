@@ -15,6 +15,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -54,8 +55,8 @@ public class RecordingConfiguration extends com.pulumi.resources.CustomResource 
      * @return Recording Configuration Name.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * Recording Configuration State.
@@ -82,14 +83,14 @@ public class RecordingConfiguration extends com.pulumi.resources.CustomResource 
      * @return A list of key-value pairs that contain metadata for the asset model.
      * 
      */
-    public Output</* @Nullable */ List<RecordingConfigurationTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<RecordingConfigurationTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     @Export(name="thumbnailConfiguration", type=RecordingConfigurationThumbnailConfiguration.class, parameters={})
     private Output</* @Nullable */ RecordingConfigurationThumbnailConfiguration> thumbnailConfiguration;
 
-    public Output</* @Nullable */ RecordingConfigurationThumbnailConfiguration> thumbnailConfiguration() {
-        return this.thumbnailConfiguration;
+    public Output<Optional<RecordingConfigurationThumbnailConfiguration>> thumbnailConfiguration() {
+        return Codegen.optional(this.thumbnailConfiguration);
     }
 
     /**

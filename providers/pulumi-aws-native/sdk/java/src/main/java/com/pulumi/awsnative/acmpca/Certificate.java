@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -31,8 +32,8 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return These are fields to be overridden in a certificate at the time of issuance. These requires an API_Passthrough template be used or they will be ignored.
      * 
      */
-    public Output</* @Nullable */ CertificateApiPassthrough> apiPassthrough() {
-        return this.apiPassthrough;
+    public Output<Optional<CertificateApiPassthrough>> apiPassthrough() {
+        return Codegen.optional(this.apiPassthrough);
     }
     /**
      * The ARN of the issued certificate.
@@ -115,8 +116,8 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return Specifies a custom configuration template to use when issuing a certificate. If this parameter is not provided, ACM Private CA defaults to the EndEntityCertificate/V1 template.
      * 
      */
-    public Output</* @Nullable */ String> templateArn() {
-        return this.templateArn;
+    public Output<Optional<String>> templateArn() {
+        return Codegen.optional(this.templateArn);
     }
     /**
      * The time before which the Certificate will be valid.
@@ -143,8 +144,8 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return The time after which the Certificate will be valid.
      * 
      */
-    public Output</* @Nullable */ CertificateValidity> validityNotBefore() {
-        return this.validityNotBefore;
+    public Output<Optional<CertificateValidity>> validityNotBefore() {
+        return Codegen.optional(this.validityNotBefore);
     }
 
     /**

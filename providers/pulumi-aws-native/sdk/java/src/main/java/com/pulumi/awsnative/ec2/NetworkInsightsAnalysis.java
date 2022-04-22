@@ -17,6 +17,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -40,8 +41,8 @@ public class NetworkInsightsAnalysis extends com.pulumi.resources.CustomResource
     @Export(name="filterInArns", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> filterInArns;
 
-    public Output</* @Nullable */ List<String>> filterInArns() {
-        return this.filterInArns;
+    public Output<Optional<List<String>>> filterInArns() {
+        return Codegen.optional(this.filterInArns);
     }
     @Export(name="forwardPathComponents", type=List.class, parameters={NetworkInsightsAnalysisPathComponent.class})
     private Output<List<NetworkInsightsAnalysisPathComponent>> forwardPathComponents;
@@ -100,8 +101,8 @@ public class NetworkInsightsAnalysis extends com.pulumi.resources.CustomResource
     @Export(name="tags", type=List.class, parameters={NetworkInsightsAnalysisTag.class})
     private Output</* @Nullable */ List<NetworkInsightsAnalysisTag>> tags;
 
-    public Output</* @Nullable */ List<NetworkInsightsAnalysisTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<NetworkInsightsAnalysisTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

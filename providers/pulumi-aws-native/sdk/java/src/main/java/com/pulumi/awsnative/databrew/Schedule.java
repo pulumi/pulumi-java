@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -39,8 +40,8 @@ public class Schedule extends com.pulumi.resources.CustomResource {
     @Export(name="jobNames", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> jobNames;
 
-    public Output</* @Nullable */ List<String>> jobNames() {
-        return this.jobNames;
+    public Output<Optional<List<String>>> jobNames() {
+        return Codegen.optional(this.jobNames);
     }
     /**
      * Schedule Name
@@ -59,8 +60,8 @@ public class Schedule extends com.pulumi.resources.CustomResource {
     @Export(name="tags", type=List.class, parameters={ScheduleTag.class})
     private Output</* @Nullable */ List<ScheduleTag>> tags;
 
-    public Output</* @Nullable */ List<ScheduleTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<ScheduleTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

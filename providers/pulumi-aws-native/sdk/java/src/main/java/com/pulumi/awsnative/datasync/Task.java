@@ -16,6 +16,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -37,8 +38,8 @@ public class Task extends com.pulumi.resources.CustomResource {
      * @return The ARN of the Amazon CloudWatch log group that is used to monitor and log events in the task.
      * 
      */
-    public Output</* @Nullable */ String> cloudWatchLogGroupArn() {
-        return this.cloudWatchLogGroupArn;
+    public Output<Optional<String>> cloudWatchLogGroupArn() {
+        return Codegen.optional(this.cloudWatchLogGroupArn);
     }
     /**
      * The ARN of an AWS storage resource&#39;s location.
@@ -91,14 +92,14 @@ public class Task extends com.pulumi.resources.CustomResource {
     @Export(name="excludes", type=List.class, parameters={TaskFilterRule.class})
     private Output</* @Nullable */ List<TaskFilterRule>> excludes;
 
-    public Output</* @Nullable */ List<TaskFilterRule>> excludes() {
-        return this.excludes;
+    public Output<Optional<List<TaskFilterRule>>> excludes() {
+        return Codegen.optional(this.excludes);
     }
     @Export(name="includes", type=List.class, parameters={TaskFilterRule.class})
     private Output</* @Nullable */ List<TaskFilterRule>> includes;
 
-    public Output</* @Nullable */ List<TaskFilterRule>> includes() {
-        return this.includes;
+    public Output<Optional<List<TaskFilterRule>>> includes() {
+        return Codegen.optional(this.includes);
     }
     /**
      * The name of a task. This value is a text reference that is used to identify the task in the console.
@@ -111,20 +112,20 @@ public class Task extends com.pulumi.resources.CustomResource {
      * @return The name of a task. This value is a text reference that is used to identify the task in the console.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     @Export(name="options", type=TaskOptions.class, parameters={})
     private Output</* @Nullable */ TaskOptions> options;
 
-    public Output</* @Nullable */ TaskOptions> options() {
-        return this.options;
+    public Output<Optional<TaskOptions>> options() {
+        return Codegen.optional(this.options);
     }
     @Export(name="schedule", type=TaskSchedule.class, parameters={})
     private Output</* @Nullable */ TaskSchedule> schedule;
 
-    public Output</* @Nullable */ TaskSchedule> schedule() {
-        return this.schedule;
+    public Output<Optional<TaskSchedule>> schedule() {
+        return Codegen.optional(this.schedule);
     }
     /**
      * The ARN of the source location for the task.
@@ -171,8 +172,8 @@ public class Task extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<TaskTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<TaskTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The ARN of the task.

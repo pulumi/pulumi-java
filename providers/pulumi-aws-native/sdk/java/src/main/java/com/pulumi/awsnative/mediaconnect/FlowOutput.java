@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -34,8 +35,8 @@ public class FlowOutput extends com.pulumi.resources.CustomResource {
      * @return The range of IP addresses that should be allowed to initiate output requests to this flow. These IP addresses should be in the form of a Classless Inter-Domain Routing (CIDR) block; for example, 10.0.0.0/16.
      * 
      */
-    public Output</* @Nullable */ List<String>> cidrAllowList() {
-        return this.cidrAllowList;
+    public Output<Optional<List<String>>> cidrAllowList() {
+        return Codegen.optional(this.cidrAllowList);
     }
     /**
      * A description of the output.
@@ -48,8 +49,8 @@ public class FlowOutput extends com.pulumi.resources.CustomResource {
      * @return A description of the output.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The address where you want to send the output.
@@ -62,8 +63,8 @@ public class FlowOutput extends com.pulumi.resources.CustomResource {
      * @return The address where you want to send the output.
      * 
      */
-    public Output</* @Nullable */ String> destination() {
-        return this.destination;
+    public Output<Optional<String>> destination() {
+        return Codegen.optional(this.destination);
     }
     /**
      * The type of key used for the encryption. If no keyType is provided, the service will use the default setting (static-key).
@@ -76,8 +77,8 @@ public class FlowOutput extends com.pulumi.resources.CustomResource {
      * @return The type of key used for the encryption. If no keyType is provided, the service will use the default setting (static-key).
      * 
      */
-    public Output</* @Nullable */ FlowOutputEncryption> encryption() {
-        return this.encryption;
+    public Output<Optional<FlowOutputEncryption>> encryption() {
+        return Codegen.optional(this.encryption);
     }
     /**
      * The Amazon Resource Name (ARN), a unique identifier for any AWS resource, of the flow.
@@ -104,8 +105,8 @@ public class FlowOutput extends com.pulumi.resources.CustomResource {
      * @return The maximum latency in milliseconds. This parameter applies only to RIST-based and Zixi-based streams.
      * 
      */
-    public Output</* @Nullable */ Integer> maxLatency() {
-        return this.maxLatency;
+    public Output<Optional<Integer>> maxLatency() {
+        return Codegen.optional(this.maxLatency);
     }
     /**
      * The minimum latency in milliseconds.
@@ -118,8 +119,8 @@ public class FlowOutput extends com.pulumi.resources.CustomResource {
      * @return The minimum latency in milliseconds.
      * 
      */
-    public Output</* @Nullable */ Integer> minLatency() {
-        return this.minLatency;
+    public Output<Optional<Integer>> minLatency() {
+        return Codegen.optional(this.minLatency);
     }
     /**
      * The name of the output. This value must be unique within the current flow.
@@ -132,8 +133,8 @@ public class FlowOutput extends com.pulumi.resources.CustomResource {
      * @return The name of the output. This value must be unique within the current flow.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * The ARN of the output.
@@ -160,8 +161,8 @@ public class FlowOutput extends com.pulumi.resources.CustomResource {
      * @return The port to use when content is distributed to this output.
      * 
      */
-    public Output</* @Nullable */ Integer> port() {
-        return this.port;
+    public Output<Optional<Integer>> port() {
+        return Codegen.optional(this.port);
     }
     /**
      * The protocol that is used by the source or output.
@@ -188,8 +189,8 @@ public class FlowOutput extends com.pulumi.resources.CustomResource {
      * @return The remote ID for the Zixi-pull stream.
      * 
      */
-    public Output</* @Nullable */ String> remoteId() {
-        return this.remoteId;
+    public Output<Optional<String>> remoteId() {
+        return Codegen.optional(this.remoteId);
     }
     /**
      * The smoothing latency in milliseconds for RIST, RTP, and RTP-FEC streams.
@@ -202,8 +203,8 @@ public class FlowOutput extends com.pulumi.resources.CustomResource {
      * @return The smoothing latency in milliseconds for RIST, RTP, and RTP-FEC streams.
      * 
      */
-    public Output</* @Nullable */ Integer> smoothingLatency() {
-        return this.smoothingLatency;
+    public Output<Optional<Integer>> smoothingLatency() {
+        return Codegen.optional(this.smoothingLatency);
     }
     /**
      * The stream ID that you want to use for this transport. This parameter applies only to Zixi-based streams.
@@ -216,8 +217,8 @@ public class FlowOutput extends com.pulumi.resources.CustomResource {
      * @return The stream ID that you want to use for this transport. This parameter applies only to Zixi-based streams.
      * 
      */
-    public Output</* @Nullable */ String> streamId() {
-        return this.streamId;
+    public Output<Optional<String>> streamId() {
+        return Codegen.optional(this.streamId);
     }
     /**
      * The name of the VPC interface attachment to use for this output.
@@ -230,8 +231,8 @@ public class FlowOutput extends com.pulumi.resources.CustomResource {
      * @return The name of the VPC interface attachment to use for this output.
      * 
      */
-    public Output</* @Nullable */ FlowOutputVpcInterfaceAttachment> vpcInterfaceAttachment() {
-        return this.vpcInterfaceAttachment;
+    public Output<Optional<FlowOutputVpcInterfaceAttachment>> vpcInterfaceAttachment() {
+        return Codegen.optional(this.vpcInterfaceAttachment);
     }
 
     /**

@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -92,8 +93,8 @@ public class ResourceSet extends com.pulumi.resources.CustomResource {
      * @return A tag to associate with the parameters for a resource set.
      * 
      */
-    public Output</* @Nullable */ List<ResourceSetTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<ResourceSetTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

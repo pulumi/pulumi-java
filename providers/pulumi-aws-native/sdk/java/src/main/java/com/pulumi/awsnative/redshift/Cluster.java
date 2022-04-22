@@ -16,6 +16,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -35,8 +36,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Major version upgrades can be applied during the maintenance window to the Amazon Redshift engine that is running on the cluster. Default value is True
      * 
      */
-    public Output</* @Nullable */ Boolean> allowVersionUpgrade() {
-        return this.allowVersionUpgrade;
+    public Output<Optional<Boolean>> allowVersionUpgrade() {
+        return Codegen.optional(this.allowVersionUpgrade);
     }
     /**
      * The value represents how the cluster is configured to use AQUA (Advanced Query Accelerator) after the cluster is restored. Possible values include the following.
@@ -57,8 +58,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * auto - Amazon Redshift determines whether to use AQUA.
      * 
      */
-    public Output</* @Nullable */ String> aquaConfigurationStatus() {
-        return this.aquaConfigurationStatus;
+    public Output<Optional<String>> aquaConfigurationStatus() {
+        return Codegen.optional(this.aquaConfigurationStatus);
     }
     /**
      * The number of days that automated snapshots are retained. If the value is 0, automated snapshots are disabled. Default value is 1
@@ -71,8 +72,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The number of days that automated snapshots are retained. If the value is 0, automated snapshots are disabled. Default value is 1
      * 
      */
-    public Output</* @Nullable */ Integer> automatedSnapshotRetentionPeriod() {
-        return this.automatedSnapshotRetentionPeriod;
+    public Output<Optional<Integer>> automatedSnapshotRetentionPeriod() {
+        return Codegen.optional(this.automatedSnapshotRetentionPeriod);
     }
     /**
      * The EC2 Availability Zone (AZ) in which you want Amazon Redshift to provision the cluster. Default: A random, system-chosen Availability Zone in the region that is specified by the endpoint
@@ -85,8 +86,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The EC2 Availability Zone (AZ) in which you want Amazon Redshift to provision the cluster. Default: A random, system-chosen Availability Zone in the region that is specified by the endpoint
      * 
      */
-    public Output</* @Nullable */ String> availabilityZone() {
-        return this.availabilityZone;
+    public Output<Optional<String>> availabilityZone() {
+        return Codegen.optional(this.availabilityZone);
     }
     /**
      * The option to enable relocation for an Amazon Redshift cluster between Availability Zones after the cluster modification is complete.
@@ -99,8 +100,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The option to enable relocation for an Amazon Redshift cluster between Availability Zones after the cluster modification is complete.
      * 
      */
-    public Output</* @Nullable */ Boolean> availabilityZoneRelocation() {
-        return this.availabilityZoneRelocation;
+    public Output<Optional<Boolean>> availabilityZoneRelocation() {
+        return Codegen.optional(this.availabilityZoneRelocation);
     }
     /**
      * The availability zone relocation status of the cluster
@@ -113,8 +114,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The availability zone relocation status of the cluster
      * 
      */
-    public Output</* @Nullable */ String> availabilityZoneRelocationStatus() {
-        return this.availabilityZoneRelocationStatus;
+    public Output<Optional<String>> availabilityZoneRelocationStatus() {
+        return Codegen.optional(this.availabilityZoneRelocationStatus);
     }
     /**
      * A boolean value indicating whether the resize operation is using the classic resize process. If you don&#39;t provide this parameter or set the value to false , the resize type is elastic.
@@ -127,8 +128,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return A boolean value indicating whether the resize operation is using the classic resize process. If you don&#39;t provide this parameter or set the value to false , the resize type is elastic.
      * 
      */
-    public Output</* @Nullable */ Boolean> classic() {
-        return this.classic;
+    public Output<Optional<Boolean>> classic() {
+        return Codegen.optional(this.classic);
     }
     /**
      * A unique identifier for the cluster. You use this identifier to refer to the cluster for any subsequent cluster operations such as deleting or modifying. All alphabetical characters must be lower case, no hypens at the end, no two consecutive hyphens. Cluster name should be unique for all clusters within an AWS account
@@ -141,8 +142,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return A unique identifier for the cluster. You use this identifier to refer to the cluster for any subsequent cluster operations such as deleting or modifying. All alphabetical characters must be lower case, no hypens at the end, no two consecutive hyphens. Cluster name should be unique for all clusters within an AWS account
      * 
      */
-    public Output</* @Nullable */ String> clusterIdentifier() {
-        return this.clusterIdentifier;
+    public Output<Optional<String>> clusterIdentifier() {
+        return Codegen.optional(this.clusterIdentifier);
     }
     /**
      * The name of the parameter group to be associated with this cluster.
@@ -155,8 +156,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The name of the parameter group to be associated with this cluster.
      * 
      */
-    public Output</* @Nullable */ String> clusterParameterGroupName() {
-        return this.clusterParameterGroupName;
+    public Output<Optional<String>> clusterParameterGroupName() {
+        return Codegen.optional(this.clusterParameterGroupName);
     }
     /**
      * A list of security groups to be associated with this cluster.
@@ -169,8 +170,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return A list of security groups to be associated with this cluster.
      * 
      */
-    public Output</* @Nullable */ List<String>> clusterSecurityGroups() {
-        return this.clusterSecurityGroups;
+    public Output<Optional<List<String>>> clusterSecurityGroups() {
+        return Codegen.optional(this.clusterSecurityGroups);
     }
     /**
      * The name of a cluster subnet group to be associated with this cluster.
@@ -183,8 +184,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The name of a cluster subnet group to be associated with this cluster.
      * 
      */
-    public Output</* @Nullable */ String> clusterSubnetGroupName() {
-        return this.clusterSubnetGroupName;
+    public Output<Optional<String>> clusterSubnetGroupName() {
+        return Codegen.optional(this.clusterSubnetGroupName);
     }
     /**
      * The type of the cluster. When cluster type is specified as single-node, the NumberOfNodes parameter is not required and if multi-node, the NumberOfNodes parameter is required
@@ -211,8 +212,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The version of the Amazon Redshift engine software that you want to deploy on the cluster.The version selected runs on all the nodes in the cluster.
      * 
      */
-    public Output</* @Nullable */ String> clusterVersion() {
-        return this.clusterVersion;
+    public Output<Optional<String>> clusterVersion() {
+        return Codegen.optional(this.clusterVersion);
     }
     /**
      * The name of the first database to be created when the cluster is created. To create additional databases after the cluster is created, connect to the cluster with a SQL client and use SQL commands to create a database.
@@ -239,8 +240,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return A boolean indicating whether to enable the deferred maintenance window.
      * 
      */
-    public Output</* @Nullable */ Boolean> deferMaintenance() {
-        return this.deferMaintenance;
+    public Output<Optional<Boolean>> deferMaintenance() {
+        return Codegen.optional(this.deferMaintenance);
     }
     /**
      * An integer indicating the duration of the maintenance window in days. If you specify a duration, you can&#39;t specify an end time. The duration must be 45 days or less.
@@ -253,8 +254,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return An integer indicating the duration of the maintenance window in days. If you specify a duration, you can&#39;t specify an end time. The duration must be 45 days or less.
      * 
      */
-    public Output</* @Nullable */ Integer> deferMaintenanceDuration() {
-        return this.deferMaintenanceDuration;
+    public Output<Optional<Integer>> deferMaintenanceDuration() {
+        return Codegen.optional(this.deferMaintenanceDuration);
     }
     /**
      * A timestamp indicating end time for the deferred maintenance window. If you specify an end time, you can&#39;t specify a duration.
@@ -267,8 +268,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return A timestamp indicating end time for the deferred maintenance window. If you specify an end time, you can&#39;t specify a duration.
      * 
      */
-    public Output</* @Nullable */ String> deferMaintenanceEndTime() {
-        return this.deferMaintenanceEndTime;
+    public Output<Optional<String>> deferMaintenanceEndTime() {
+        return Codegen.optional(this.deferMaintenanceEndTime);
     }
     /**
      * A unique identifier for the deferred maintenance window.
@@ -295,8 +296,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return A timestamp indicating the start time for the deferred maintenance window.
      * 
      */
-    public Output</* @Nullable */ String> deferMaintenanceStartTime() {
-        return this.deferMaintenanceStartTime;
+    public Output<Optional<String>> deferMaintenanceStartTime() {
+        return Codegen.optional(this.deferMaintenanceStartTime);
     }
     /**
      * The destination AWS Region that you want to copy snapshots to. Constraints: Must be the name of a valid AWS Region. For more information, see Regions and Endpoints in the Amazon Web Services [https://docs.aws.amazon.com/general/latest/gr/rande.html#redshift_region] General Reference
@@ -309,8 +310,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The destination AWS Region that you want to copy snapshots to. Constraints: Must be the name of a valid AWS Region. For more information, see Regions and Endpoints in the Amazon Web Services [https://docs.aws.amazon.com/general/latest/gr/rande.html#redshift_region] General Reference
      * 
      */
-    public Output</* @Nullable */ String> destinationRegion() {
-        return this.destinationRegion;
+    public Output<Optional<String>> destinationRegion() {
+        return Codegen.optional(this.destinationRegion);
     }
     /**
      * The Elastic IP (EIP) address for the cluster.
@@ -323,8 +324,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The Elastic IP (EIP) address for the cluster.
      * 
      */
-    public Output</* @Nullable */ String> elasticIp() {
-        return this.elasticIp;
+    public Output<Optional<String>> elasticIp() {
+        return Codegen.optional(this.elasticIp);
     }
     /**
      * If true, the data in the cluster is encrypted at rest.
@@ -337,14 +338,14 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return If true, the data in the cluster is encrypted at rest.
      * 
      */
-    public Output</* @Nullable */ Boolean> encrypted() {
-        return this.encrypted;
+    public Output<Optional<Boolean>> encrypted() {
+        return Codegen.optional(this.encrypted);
     }
     @Export(name="endpoint", type=ClusterEndpoint.class, parameters={})
     private Output</* @Nullable */ ClusterEndpoint> endpoint;
 
-    public Output</* @Nullable */ ClusterEndpoint> endpoint() {
-        return this.endpoint;
+    public Output<Optional<ClusterEndpoint>> endpoint() {
+        return Codegen.optional(this.endpoint);
     }
     /**
      * An option that specifies whether to create the cluster with enhanced VPC routing enabled. To create a cluster that uses enhanced VPC routing, the cluster must be in a VPC. For more information, see Enhanced VPC Routing in the Amazon Redshift Cluster Management Guide.
@@ -365,8 +366,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * Default: false
      * 
      */
-    public Output</* @Nullable */ Boolean> enhancedVpcRouting() {
-        return this.enhancedVpcRouting;
+    public Output<Optional<Boolean>> enhancedVpcRouting() {
+        return Codegen.optional(this.enhancedVpcRouting);
     }
     /**
      * Specifies the name of the HSM client certificate the Amazon Redshift cluster uses to retrieve the data encryption keys stored in an HSM
@@ -379,8 +380,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Specifies the name of the HSM client certificate the Amazon Redshift cluster uses to retrieve the data encryption keys stored in an HSM
      * 
      */
-    public Output</* @Nullable */ String> hsmClientCertificateIdentifier() {
-        return this.hsmClientCertificateIdentifier;
+    public Output<Optional<String>> hsmClientCertificateIdentifier() {
+        return Codegen.optional(this.hsmClientCertificateIdentifier);
     }
     /**
      * Specifies the name of the HSM configuration that contains the information the Amazon Redshift cluster can use to retrieve and store keys in an HSM.
@@ -393,8 +394,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Specifies the name of the HSM configuration that contains the information the Amazon Redshift cluster can use to retrieve and store keys in an HSM.
      * 
      */
-    public Output</* @Nullable */ String> hsmConfigurationIdentifier() {
-        return this.hsmConfigurationIdentifier;
+    public Output<Optional<String>> hsmConfigurationIdentifier() {
+        return Codegen.optional(this.hsmConfigurationIdentifier);
     }
     /**
      * A list of AWS Identity and Access Management (IAM) roles that can be used by the cluster to access other AWS services. You must supply the IAM roles in their Amazon Resource Name (ARN) format. You can supply up to 10 IAM roles in a single request
@@ -407,8 +408,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return A list of AWS Identity and Access Management (IAM) roles that can be used by the cluster to access other AWS services. You must supply the IAM roles in their Amazon Resource Name (ARN) format. You can supply up to 10 IAM roles in a single request
      * 
      */
-    public Output</* @Nullable */ List<String>> iamRoles() {
-        return this.iamRoles;
+    public Output<Optional<List<String>>> iamRoles() {
+        return Codegen.optional(this.iamRoles);
     }
     /**
      * The AWS Key Management Service (KMS) key ID of the encryption key that you want to use to encrypt data in the cluster.
@@ -421,14 +422,14 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The AWS Key Management Service (KMS) key ID of the encryption key that you want to use to encrypt data in the cluster.
      * 
      */
-    public Output</* @Nullable */ String> kmsKeyId() {
-        return this.kmsKeyId;
+    public Output<Optional<String>> kmsKeyId() {
+        return Codegen.optional(this.kmsKeyId);
     }
     @Export(name="loggingProperties", type=ClusterLoggingProperties.class, parameters={})
     private Output</* @Nullable */ ClusterLoggingProperties> loggingProperties;
 
-    public Output</* @Nullable */ ClusterLoggingProperties> loggingProperties() {
-        return this.loggingProperties;
+    public Output<Optional<ClusterLoggingProperties>> loggingProperties() {
+        return Codegen.optional(this.loggingProperties);
     }
     /**
      * The name for the maintenance track that you want to assign for the cluster. This name change is asynchronous. The new track name stays in the PendingModifiedValues for the cluster until the next maintenance window. When the maintenance track changes, the cluster is switched to the latest cluster release available for the maintenance track. At this point, the maintenance track name is applied.
@@ -441,8 +442,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The name for the maintenance track that you want to assign for the cluster. This name change is asynchronous. The new track name stays in the PendingModifiedValues for the cluster until the next maintenance window. When the maintenance track changes, the cluster is switched to the latest cluster release available for the maintenance track. At this point, the maintenance track name is applied.
      * 
      */
-    public Output</* @Nullable */ String> maintenanceTrackName() {
-        return this.maintenanceTrackName;
+    public Output<Optional<String>> maintenanceTrackName() {
+        return Codegen.optional(this.maintenanceTrackName);
     }
     /**
      * The number of days to retain newly copied snapshots in the destination AWS Region after they are copied from the source AWS Region. If the value is -1, the manual snapshot is retained indefinitely.
@@ -459,8 +460,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * The value must be either -1 or an integer between 1 and 3,653.
      * 
      */
-    public Output</* @Nullable */ Integer> manualSnapshotRetentionPeriod() {
-        return this.manualSnapshotRetentionPeriod;
+    public Output<Optional<Integer>> manualSnapshotRetentionPeriod() {
+        return Codegen.optional(this.manualSnapshotRetentionPeriod);
     }
     /**
      * The password associated with the master user account for the cluster that is being created. Password must be between 8 and 64 characters in length, should have at least one uppercase letter.Must contain at least one lowercase letter.Must contain one number.Can be any printable ASCII character.
@@ -515,14 +516,14 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The number of compute nodes in the cluster. This parameter is required when the ClusterType parameter is specified as multi-node.
      * 
      */
-    public Output</* @Nullable */ Integer> numberOfNodes() {
-        return this.numberOfNodes;
+    public Output<Optional<Integer>> numberOfNodes() {
+        return Codegen.optional(this.numberOfNodes);
     }
     @Export(name="ownerAccount", type=String.class, parameters={})
     private Output</* @Nullable */ String> ownerAccount;
 
-    public Output</* @Nullable */ String> ownerAccount() {
-        return this.ownerAccount;
+    public Output<Optional<String>> ownerAccount() {
+        return Codegen.optional(this.ownerAccount);
     }
     /**
      * The port number on which the cluster accepts incoming connections. The cluster is accessible only via the JDBC and ODBC connection strings
@@ -535,8 +536,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The port number on which the cluster accepts incoming connections. The cluster is accessible only via the JDBC and ODBC connection strings
      * 
      */
-    public Output</* @Nullable */ Integer> port() {
-        return this.port;
+    public Output<Optional<Integer>> port() {
+        return Codegen.optional(this.port);
     }
     /**
      * The weekly time range (in UTC) during which automated cluster maintenance can occur.
@@ -549,8 +550,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The weekly time range (in UTC) during which automated cluster maintenance can occur.
      * 
      */
-    public Output</* @Nullable */ String> preferredMaintenanceWindow() {
-        return this.preferredMaintenanceWindow;
+    public Output<Optional<String>> preferredMaintenanceWindow() {
+        return Codegen.optional(this.preferredMaintenanceWindow);
     }
     /**
      * If true, the cluster can be accessed from a public network.
@@ -563,8 +564,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return If true, the cluster can be accessed from a public network.
      * 
      */
-    public Output</* @Nullable */ Boolean> publiclyAccessible() {
-        return this.publiclyAccessible;
+    public Output<Optional<Boolean>> publiclyAccessible() {
+        return Codegen.optional(this.publiclyAccessible);
     }
     /**
      * The Redshift operation to be performed. Resource Action supports pause-cluster, resume-cluster APIs
@@ -577,8 +578,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The Redshift operation to be performed. Resource Action supports pause-cluster, resume-cluster APIs
      * 
      */
-    public Output</* @Nullable */ String> resourceAction() {
-        return this.resourceAction;
+    public Output<Optional<String>> resourceAction() {
+        return Codegen.optional(this.resourceAction);
     }
     /**
      * The identifier of the database revision. You can retrieve this value from the response to the DescribeClusterDbRevisions request.
@@ -591,8 +592,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The identifier of the database revision. You can retrieve this value from the response to the DescribeClusterDbRevisions request.
      * 
      */
-    public Output</* @Nullable */ String> revisionTarget() {
-        return this.revisionTarget;
+    public Output<Optional<String>> revisionTarget() {
+        return Codegen.optional(this.revisionTarget);
     }
     /**
      * A boolean indicating if we want to rotate Encryption Keys.
@@ -605,8 +606,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return A boolean indicating if we want to rotate Encryption Keys.
      * 
      */
-    public Output</* @Nullable */ Boolean> rotateEncryptionKey() {
-        return this.rotateEncryptionKey;
+    public Output<Optional<Boolean>> rotateEncryptionKey() {
+        return Codegen.optional(this.rotateEncryptionKey);
     }
     /**
      * The name of the cluster the source snapshot was created from. This parameter is required if your IAM user has a policy containing a snapshot resource element that specifies anything other than * for the cluster name.
@@ -619,8 +620,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The name of the cluster the source snapshot was created from. This parameter is required if your IAM user has a policy containing a snapshot resource element that specifies anything other than * for the cluster name.
      * 
      */
-    public Output</* @Nullable */ String> snapshotClusterIdentifier() {
-        return this.snapshotClusterIdentifier;
+    public Output<Optional<String>> snapshotClusterIdentifier() {
+        return Codegen.optional(this.snapshotClusterIdentifier);
     }
     /**
      * The name of the snapshot copy grant to use when snapshots of an AWS KMS-encrypted cluster are copied to the destination region.
@@ -633,8 +634,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The name of the snapshot copy grant to use when snapshots of an AWS KMS-encrypted cluster are copied to the destination region.
      * 
      */
-    public Output</* @Nullable */ String> snapshotCopyGrantName() {
-        return this.snapshotCopyGrantName;
+    public Output<Optional<String>> snapshotCopyGrantName() {
+        return Codegen.optional(this.snapshotCopyGrantName);
     }
     /**
      * Indicates whether to apply the snapshot retention period to newly copied manual snapshots instead of automated snapshots.
@@ -647,8 +648,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Indicates whether to apply the snapshot retention period to newly copied manual snapshots instead of automated snapshots.
      * 
      */
-    public Output</* @Nullable */ Boolean> snapshotCopyManual() {
-        return this.snapshotCopyManual;
+    public Output<Optional<Boolean>> snapshotCopyManual() {
+        return Codegen.optional(this.snapshotCopyManual);
     }
     /**
      * The number of days to retain automated snapshots in the destination region after they are copied from the source region.
@@ -669,8 +670,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      *  Constraints: Must be at least 1 and no more than 35.
      * 
      */
-    public Output</* @Nullable */ Integer> snapshotCopyRetentionPeriod() {
-        return this.snapshotCopyRetentionPeriod;
+    public Output<Optional<Integer>> snapshotCopyRetentionPeriod() {
+        return Codegen.optional(this.snapshotCopyRetentionPeriod);
     }
     /**
      * The name of the snapshot from which to create the new cluster. This parameter isn&#39;t case sensitive.
@@ -683,8 +684,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The name of the snapshot from which to create the new cluster. This parameter isn&#39;t case sensitive.
      * 
      */
-    public Output</* @Nullable */ String> snapshotIdentifier() {
-        return this.snapshotIdentifier;
+    public Output<Optional<String>> snapshotIdentifier() {
+        return Codegen.optional(this.snapshotIdentifier);
     }
     /**
      * The list of tags for the cluster parameter group.
@@ -697,8 +698,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The list of tags for the cluster parameter group.
      * 
      */
-    public Output</* @Nullable */ List<ClusterTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<ClusterTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A list of Virtual Private Cloud (VPC) security groups to be associated with the cluster.
@@ -711,8 +712,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return A list of Virtual Private Cloud (VPC) security groups to be associated with the cluster.
      * 
      */
-    public Output</* @Nullable */ List<String>> vpcSecurityGroupIds() {
-        return this.vpcSecurityGroupIds;
+    public Output<Optional<List<String>>> vpcSecurityGroupIds() {
+        return Codegen.optional(this.vpcSecurityGroupIds);
     }
 
     /**

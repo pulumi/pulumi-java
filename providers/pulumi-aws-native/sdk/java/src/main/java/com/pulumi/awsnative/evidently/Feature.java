@@ -15,6 +15,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -32,26 +33,26 @@ public class Feature extends com.pulumi.resources.CustomResource {
     @Export(name="defaultVariation", type=String.class, parameters={})
     private Output</* @Nullable */ String> defaultVariation;
 
-    public Output</* @Nullable */ String> defaultVariation() {
-        return this.defaultVariation;
+    public Output<Optional<String>> defaultVariation() {
+        return Codegen.optional(this.defaultVariation);
     }
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     @Export(name="entityOverrides", type=List.class, parameters={FeatureEntityOverride.class})
     private Output</* @Nullable */ List<FeatureEntityOverride>> entityOverrides;
 
-    public Output</* @Nullable */ List<FeatureEntityOverride>> entityOverrides() {
-        return this.entityOverrides;
+    public Output<Optional<List<FeatureEntityOverride>>> entityOverrides() {
+        return Codegen.optional(this.entityOverrides);
     }
     @Export(name="evaluationStrategy", type=FeatureEvaluationStrategy.class, parameters={})
     private Output</* @Nullable */ FeatureEvaluationStrategy> evaluationStrategy;
 
-    public Output</* @Nullable */ FeatureEvaluationStrategy> evaluationStrategy() {
-        return this.evaluationStrategy;
+    public Output<Optional<FeatureEvaluationStrategy>> evaluationStrategy() {
+        return Codegen.optional(this.evaluationStrategy);
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
@@ -76,8 +77,8 @@ public class Feature extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<FeatureTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<FeatureTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     @Export(name="variations", type=List.class, parameters={FeatureVariationObject.class})
     private Output<List<FeatureVariationObject>> variations;

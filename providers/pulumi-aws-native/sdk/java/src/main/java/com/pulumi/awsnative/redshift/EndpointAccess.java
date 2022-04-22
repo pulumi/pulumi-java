@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -47,8 +48,8 @@ public class EndpointAccess extends com.pulumi.resources.CustomResource {
      * @return A unique identifier for the cluster. You use this identifier to refer to the cluster for any subsequent cluster operations such as deleting or modifying. All alphabetical characters must be lower case, no hypens at the end, no two consecutive hyphens. Cluster name should be unique for all clusters within an AWS account
      * 
      */
-    public Output</* @Nullable */ String> clusterIdentifier() {
-        return this.clusterIdentifier;
+    public Output<Optional<String>> clusterIdentifier() {
+        return Codegen.optional(this.clusterIdentifier);
     }
     /**
      * The time (UTC) that the endpoint was created.
@@ -117,8 +118,8 @@ public class EndpointAccess extends com.pulumi.resources.CustomResource {
      * @return The AWS account ID of the owner of the cluster.
      * 
      */
-    public Output</* @Nullable */ String> resourceOwner() {
-        return this.resourceOwner;
+    public Output<Optional<String>> resourceOwner() {
+        return Codegen.optional(this.resourceOwner);
     }
     /**
      * The subnet group name where Amazon Redshift chooses to deploy the endpoint.
@@ -131,8 +132,8 @@ public class EndpointAccess extends com.pulumi.resources.CustomResource {
      * @return The subnet group name where Amazon Redshift chooses to deploy the endpoint.
      * 
      */
-    public Output</* @Nullable */ String> subnetGroupName() {
-        return this.subnetGroupName;
+    public Output<Optional<String>> subnetGroupName() {
+        return Codegen.optional(this.subnetGroupName);
     }
     /**
      * The connection endpoint for connecting to an Amazon Redshift cluster through the proxy.

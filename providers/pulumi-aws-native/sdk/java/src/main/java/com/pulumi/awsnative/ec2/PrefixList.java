@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -64,8 +65,8 @@ public class PrefixList extends com.pulumi.resources.CustomResource {
      * @return Entries of Prefix List.
      * 
      */
-    public Output</* @Nullable */ List<PrefixListEntry>> entries() {
-        return this.entries;
+    public Output<Optional<List<PrefixListEntry>>> entries() {
+        return Codegen.optional(this.entries);
     }
     /**
      * Max Entries of Prefix List.
@@ -134,8 +135,8 @@ public class PrefixList extends com.pulumi.resources.CustomResource {
      * @return Tags for Prefix List
      * 
      */
-    public Output</* @Nullable */ List<PrefixListTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<PrefixListTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Version of Prefix List.

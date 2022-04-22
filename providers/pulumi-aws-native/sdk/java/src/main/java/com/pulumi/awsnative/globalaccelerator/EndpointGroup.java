@@ -16,6 +16,7 @@ import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -35,8 +36,8 @@ public class EndpointGroup extends com.pulumi.resources.CustomResource {
      * @return The list of endpoint objects.
      * 
      */
-    public Output</* @Nullable */ List<EndpointGroupEndpointConfiguration>> endpointConfigurations() {
-        return this.endpointConfigurations;
+    public Output<Optional<List<EndpointGroupEndpointConfiguration>>> endpointConfigurations() {
+        return Codegen.optional(this.endpointConfigurations);
     }
     /**
      * The Amazon Resource Name (ARN) of the endpoint group
@@ -77,14 +78,14 @@ public class EndpointGroup extends com.pulumi.resources.CustomResource {
      * @return The time in seconds between each health check for an endpoint. Must be a value of 10 or 30
      * 
      */
-    public Output</* @Nullable */ Integer> healthCheckIntervalSeconds() {
-        return this.healthCheckIntervalSeconds;
+    public Output<Optional<Integer>> healthCheckIntervalSeconds() {
+        return Codegen.optional(this.healthCheckIntervalSeconds);
     }
     @Export(name="healthCheckPath", type=String.class, parameters={})
     private Output</* @Nullable */ String> healthCheckPath;
 
-    public Output</* @Nullable */ String> healthCheckPath() {
-        return this.healthCheckPath;
+    public Output<Optional<String>> healthCheckPath() {
+        return Codegen.optional(this.healthCheckPath);
     }
     /**
      * The port that AWS Global Accelerator uses to check the health of endpoints in this endpoint group.
@@ -97,8 +98,8 @@ public class EndpointGroup extends com.pulumi.resources.CustomResource {
      * @return The port that AWS Global Accelerator uses to check the health of endpoints in this endpoint group.
      * 
      */
-    public Output</* @Nullable */ Integer> healthCheckPort() {
-        return this.healthCheckPort;
+    public Output<Optional<Integer>> healthCheckPort() {
+        return Codegen.optional(this.healthCheckPort);
     }
     /**
      * The protocol that AWS Global Accelerator uses to check the health of endpoints in this endpoint group.
@@ -111,8 +112,8 @@ public class EndpointGroup extends com.pulumi.resources.CustomResource {
      * @return The protocol that AWS Global Accelerator uses to check the health of endpoints in this endpoint group.
      * 
      */
-    public Output</* @Nullable */ EndpointGroupHealthCheckProtocol> healthCheckProtocol() {
-        return this.healthCheckProtocol;
+    public Output<Optional<EndpointGroupHealthCheckProtocol>> healthCheckProtocol() {
+        return Codegen.optional(this.healthCheckProtocol);
     }
     /**
      * The Amazon Resource Name (ARN) of the listener
@@ -131,8 +132,8 @@ public class EndpointGroup extends com.pulumi.resources.CustomResource {
     @Export(name="portOverrides", type=List.class, parameters={EndpointGroupPortOverride.class})
     private Output</* @Nullable */ List<EndpointGroupPortOverride>> portOverrides;
 
-    public Output</* @Nullable */ List<EndpointGroupPortOverride>> portOverrides() {
-        return this.portOverrides;
+    public Output<Optional<List<EndpointGroupPortOverride>>> portOverrides() {
+        return Codegen.optional(this.portOverrides);
     }
     /**
      * The number of consecutive health checks required to set the state of the endpoint to unhealthy.
@@ -145,8 +146,8 @@ public class EndpointGroup extends com.pulumi.resources.CustomResource {
      * @return The number of consecutive health checks required to set the state of the endpoint to unhealthy.
      * 
      */
-    public Output</* @Nullable */ Integer> thresholdCount() {
-        return this.thresholdCount;
+    public Output<Optional<Integer>> thresholdCount() {
+        return Codegen.optional(this.thresholdCount);
     }
     /**
      * The percentage of traffic to sent to an AWS Region
@@ -159,8 +160,8 @@ public class EndpointGroup extends com.pulumi.resources.CustomResource {
      * @return The percentage of traffic to sent to an AWS Region
      * 
      */
-    public Output</* @Nullable */ Double> trafficDialPercentage() {
-        return this.trafficDialPercentage;
+    public Output<Optional<Double>> trafficDialPercentage() {
+        return Codegen.optional(this.trafficDialPercentage);
     }
 
     /**

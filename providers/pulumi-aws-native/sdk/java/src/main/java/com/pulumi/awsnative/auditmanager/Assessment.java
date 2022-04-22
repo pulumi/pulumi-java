@@ -19,6 +19,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -42,14 +43,14 @@ public class Assessment extends com.pulumi.resources.CustomResource {
     @Export(name="assessmentReportsDestination", type=AssessmentReportsDestination.class, parameters={})
     private Output</* @Nullable */ AssessmentReportsDestination> assessmentReportsDestination;
 
-    public Output</* @Nullable */ AssessmentReportsDestination> assessmentReportsDestination() {
-        return this.assessmentReportsDestination;
+    public Output<Optional<AssessmentReportsDestination>> assessmentReportsDestination() {
+        return Codegen.optional(this.assessmentReportsDestination);
     }
     @Export(name="awsAccount", type=AssessmentAWSAccount.class, parameters={})
     private Output</* @Nullable */ AssessmentAWSAccount> awsAccount;
 
-    public Output</* @Nullable */ AssessmentAWSAccount> awsAccount() {
-        return this.awsAccount;
+    public Output<Optional<AssessmentAWSAccount>> awsAccount() {
+        return Codegen.optional(this.awsAccount);
     }
     @Export(name="creationTime", type=Double.class, parameters={})
     private Output<Double> creationTime;
@@ -74,20 +75,20 @@ public class Assessment extends com.pulumi.resources.CustomResource {
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     @Export(name="frameworkId", type=String.class, parameters={})
     private Output</* @Nullable */ String> frameworkId;
 
-    public Output</* @Nullable */ String> frameworkId() {
-        return this.frameworkId;
+    public Output<Optional<String>> frameworkId() {
+        return Codegen.optional(this.frameworkId);
     }
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * The list of roles for the specified assessment.
@@ -100,20 +101,20 @@ public class Assessment extends com.pulumi.resources.CustomResource {
      * @return The list of roles for the specified assessment.
      * 
      */
-    public Output</* @Nullable */ List<AssessmentRole>> roles() {
-        return this.roles;
+    public Output<Optional<List<AssessmentRole>>> roles() {
+        return Codegen.optional(this.roles);
     }
     @Export(name="scope", type=AssessmentScope.class, parameters={})
     private Output</* @Nullable */ AssessmentScope> scope;
 
-    public Output</* @Nullable */ AssessmentScope> scope() {
-        return this.scope;
+    public Output<Optional<AssessmentScope>> scope() {
+        return Codegen.optional(this.scope);
     }
     @Export(name="status", type=AssessmentStatus.class, parameters={})
     private Output</* @Nullable */ AssessmentStatus> status;
 
-    public Output</* @Nullable */ AssessmentStatus> status() {
-        return this.status;
+    public Output<Optional<AssessmentStatus>> status() {
+        return Codegen.optional(this.status);
     }
     /**
      * The tags associated with the assessment.
@@ -126,8 +127,8 @@ public class Assessment extends com.pulumi.resources.CustomResource {
      * @return The tags associated with the assessment.
      * 
      */
-    public Output</* @Nullable */ List<AssessmentTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<AssessmentTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

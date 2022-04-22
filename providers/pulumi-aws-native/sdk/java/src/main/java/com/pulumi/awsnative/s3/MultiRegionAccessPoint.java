@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -60,8 +61,8 @@ public class MultiRegionAccessPoint extends com.pulumi.resources.CustomResource 
      * @return The name you want to assign to this Multi Region Access Point.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * The PublicAccessBlock configuration that you want to apply to this Multi Region Access Point. You can enable the configuration options in any combination. For more information about when Amazon S3 considers a bucket or object public, see https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html#access-control-block-public-access-policy-status &#39;The Meaning of Public&#39; in the Amazon Simple Storage Service Developer Guide.
@@ -74,8 +75,8 @@ public class MultiRegionAccessPoint extends com.pulumi.resources.CustomResource 
      * @return The PublicAccessBlock configuration that you want to apply to this Multi Region Access Point. You can enable the configuration options in any combination. For more information about when Amazon S3 considers a bucket or object public, see https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html#access-control-block-public-access-policy-status &#39;The Meaning of Public&#39; in the Amazon Simple Storage Service Developer Guide.
      * 
      */
-    public Output</* @Nullable */ MultiRegionAccessPointPublicAccessBlockConfiguration> publicAccessBlockConfiguration() {
-        return this.publicAccessBlockConfiguration;
+    public Output<Optional<MultiRegionAccessPointPublicAccessBlockConfiguration>> publicAccessBlockConfiguration() {
+        return Codegen.optional(this.publicAccessBlockConfiguration);
     }
     /**
      * The list of buckets that you want to associate this Multi Region Access Point with.

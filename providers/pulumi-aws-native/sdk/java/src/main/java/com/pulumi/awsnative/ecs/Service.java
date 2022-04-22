@@ -25,6 +25,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -36,62 +37,62 @@ public class Service extends com.pulumi.resources.CustomResource {
     @Export(name="capacityProviderStrategy", type=List.class, parameters={ServiceCapacityProviderStrategyItem.class})
     private Output</* @Nullable */ List<ServiceCapacityProviderStrategyItem>> capacityProviderStrategy;
 
-    public Output</* @Nullable */ List<ServiceCapacityProviderStrategyItem>> capacityProviderStrategy() {
-        return this.capacityProviderStrategy;
+    public Output<Optional<List<ServiceCapacityProviderStrategyItem>>> capacityProviderStrategy() {
+        return Codegen.optional(this.capacityProviderStrategy);
     }
     @Export(name="cluster", type=String.class, parameters={})
     private Output</* @Nullable */ String> cluster;
 
-    public Output</* @Nullable */ String> cluster() {
-        return this.cluster;
+    public Output<Optional<String>> cluster() {
+        return Codegen.optional(this.cluster);
     }
     @Export(name="deploymentConfiguration", type=ServiceDeploymentConfiguration.class, parameters={})
     private Output</* @Nullable */ ServiceDeploymentConfiguration> deploymentConfiguration;
 
-    public Output</* @Nullable */ ServiceDeploymentConfiguration> deploymentConfiguration() {
-        return this.deploymentConfiguration;
+    public Output<Optional<ServiceDeploymentConfiguration>> deploymentConfiguration() {
+        return Codegen.optional(this.deploymentConfiguration);
     }
     @Export(name="deploymentController", type=ServiceDeploymentController.class, parameters={})
     private Output</* @Nullable */ ServiceDeploymentController> deploymentController;
 
-    public Output</* @Nullable */ ServiceDeploymentController> deploymentController() {
-        return this.deploymentController;
+    public Output<Optional<ServiceDeploymentController>> deploymentController() {
+        return Codegen.optional(this.deploymentController);
     }
     @Export(name="desiredCount", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> desiredCount;
 
-    public Output</* @Nullable */ Integer> desiredCount() {
-        return this.desiredCount;
+    public Output<Optional<Integer>> desiredCount() {
+        return Codegen.optional(this.desiredCount);
     }
     @Export(name="enableECSManagedTags", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableECSManagedTags;
 
-    public Output</* @Nullable */ Boolean> enableECSManagedTags() {
-        return this.enableECSManagedTags;
+    public Output<Optional<Boolean>> enableECSManagedTags() {
+        return Codegen.optional(this.enableECSManagedTags);
     }
     @Export(name="enableExecuteCommand", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableExecuteCommand;
 
-    public Output</* @Nullable */ Boolean> enableExecuteCommand() {
-        return this.enableExecuteCommand;
+    public Output<Optional<Boolean>> enableExecuteCommand() {
+        return Codegen.optional(this.enableExecuteCommand);
     }
     @Export(name="healthCheckGracePeriodSeconds", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> healthCheckGracePeriodSeconds;
 
-    public Output</* @Nullable */ Integer> healthCheckGracePeriodSeconds() {
-        return this.healthCheckGracePeriodSeconds;
+    public Output<Optional<Integer>> healthCheckGracePeriodSeconds() {
+        return Codegen.optional(this.healthCheckGracePeriodSeconds);
     }
     @Export(name="launchType", type=ServiceLaunchType.class, parameters={})
     private Output</* @Nullable */ ServiceLaunchType> launchType;
 
-    public Output</* @Nullable */ ServiceLaunchType> launchType() {
-        return this.launchType;
+    public Output<Optional<ServiceLaunchType>> launchType() {
+        return Codegen.optional(this.launchType);
     }
     @Export(name="loadBalancers", type=List.class, parameters={ServiceLoadBalancer.class})
     private Output</* @Nullable */ List<ServiceLoadBalancer>> loadBalancers;
 
-    public Output</* @Nullable */ List<ServiceLoadBalancer>> loadBalancers() {
-        return this.loadBalancers;
+    public Output<Optional<List<ServiceLoadBalancer>>> loadBalancers() {
+        return Codegen.optional(this.loadBalancers);
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
@@ -102,44 +103,44 @@ public class Service extends com.pulumi.resources.CustomResource {
     @Export(name="networkConfiguration", type=ServiceNetworkConfiguration.class, parameters={})
     private Output</* @Nullable */ ServiceNetworkConfiguration> networkConfiguration;
 
-    public Output</* @Nullable */ ServiceNetworkConfiguration> networkConfiguration() {
-        return this.networkConfiguration;
+    public Output<Optional<ServiceNetworkConfiguration>> networkConfiguration() {
+        return Codegen.optional(this.networkConfiguration);
     }
     @Export(name="placementConstraints", type=List.class, parameters={ServicePlacementConstraint.class})
     private Output</* @Nullable */ List<ServicePlacementConstraint>> placementConstraints;
 
-    public Output</* @Nullable */ List<ServicePlacementConstraint>> placementConstraints() {
-        return this.placementConstraints;
+    public Output<Optional<List<ServicePlacementConstraint>>> placementConstraints() {
+        return Codegen.optional(this.placementConstraints);
     }
     @Export(name="placementStrategies", type=List.class, parameters={ServicePlacementStrategy.class})
     private Output</* @Nullable */ List<ServicePlacementStrategy>> placementStrategies;
 
-    public Output</* @Nullable */ List<ServicePlacementStrategy>> placementStrategies() {
-        return this.placementStrategies;
+    public Output<Optional<List<ServicePlacementStrategy>>> placementStrategies() {
+        return Codegen.optional(this.placementStrategies);
     }
     @Export(name="platformVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> platformVersion;
 
-    public Output</* @Nullable */ String> platformVersion() {
-        return this.platformVersion;
+    public Output<Optional<String>> platformVersion() {
+        return Codegen.optional(this.platformVersion);
     }
     @Export(name="propagateTags", type=ServicePropagateTags.class, parameters={})
     private Output</* @Nullable */ ServicePropagateTags> propagateTags;
 
-    public Output</* @Nullable */ ServicePropagateTags> propagateTags() {
-        return this.propagateTags;
+    public Output<Optional<ServicePropagateTags>> propagateTags() {
+        return Codegen.optional(this.propagateTags);
     }
     @Export(name="role", type=String.class, parameters={})
     private Output</* @Nullable */ String> role;
 
-    public Output</* @Nullable */ String> role() {
-        return this.role;
+    public Output<Optional<String>> role() {
+        return Codegen.optional(this.role);
     }
     @Export(name="schedulingStrategy", type=ServiceSchedulingStrategy.class, parameters={})
     private Output</* @Nullable */ ServiceSchedulingStrategy> schedulingStrategy;
 
-    public Output</* @Nullable */ ServiceSchedulingStrategy> schedulingStrategy() {
-        return this.schedulingStrategy;
+    public Output<Optional<ServiceSchedulingStrategy>> schedulingStrategy() {
+        return Codegen.optional(this.schedulingStrategy);
     }
     @Export(name="serviceArn", type=String.class, parameters={})
     private Output<String> serviceArn;
@@ -150,26 +151,26 @@ public class Service extends com.pulumi.resources.CustomResource {
     @Export(name="serviceName", type=String.class, parameters={})
     private Output</* @Nullable */ String> serviceName;
 
-    public Output</* @Nullable */ String> serviceName() {
-        return this.serviceName;
+    public Output<Optional<String>> serviceName() {
+        return Codegen.optional(this.serviceName);
     }
     @Export(name="serviceRegistries", type=List.class, parameters={ServiceRegistry.class})
     private Output</* @Nullable */ List<ServiceRegistry>> serviceRegistries;
 
-    public Output</* @Nullable */ List<ServiceRegistry>> serviceRegistries() {
-        return this.serviceRegistries;
+    public Output<Optional<List<ServiceRegistry>>> serviceRegistries() {
+        return Codegen.optional(this.serviceRegistries);
     }
     @Export(name="tags", type=List.class, parameters={ServiceTag.class})
     private Output</* @Nullable */ List<ServiceTag>> tags;
 
-    public Output</* @Nullable */ List<ServiceTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<ServiceTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     @Export(name="taskDefinition", type=String.class, parameters={})
     private Output</* @Nullable */ String> taskDefinition;
 
-    public Output</* @Nullable */ String> taskDefinition() {
-        return this.taskDefinition;
+    public Output<Optional<String>> taskDefinition() {
+        return Codegen.optional(this.taskDefinition);
     }
 
     /**

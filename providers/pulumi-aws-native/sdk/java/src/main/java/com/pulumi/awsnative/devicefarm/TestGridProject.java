@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -30,8 +31,8 @@ public class TestGridProject extends com.pulumi.resources.CustomResource {
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
@@ -42,14 +43,14 @@ public class TestGridProject extends com.pulumi.resources.CustomResource {
     @Export(name="tags", type=List.class, parameters={TestGridProjectTag.class})
     private Output</* @Nullable */ List<TestGridProjectTag>> tags;
 
-    public Output</* @Nullable */ List<TestGridProjectTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<TestGridProjectTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     @Export(name="vpcConfig", type=TestGridProjectVpcConfig.class, parameters={})
     private Output</* @Nullable */ TestGridProjectVpcConfig> vpcConfig;
 
-    public Output</* @Nullable */ TestGridProjectVpcConfig> vpcConfig() {
-        return this.vpcConfig;
+    public Output<Optional<TestGridProjectVpcConfig>> vpcConfig() {
+        return Codegen.optional(this.vpcConfig);
     }
 
     /**

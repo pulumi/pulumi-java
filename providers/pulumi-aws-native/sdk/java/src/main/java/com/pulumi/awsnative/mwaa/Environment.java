@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -50,14 +51,14 @@ public class Environment extends com.pulumi.resources.CustomResource {
      *     &#34;core.dags_folder&#34;: &#34;{AIRFLOW_HOME}/dags&#34;
      * 
      */
-    public Output</* @Nullable */ Object> airflowConfigurationOptions() {
-        return this.airflowConfigurationOptions;
+    public Output<Optional<Object>> airflowConfigurationOptions() {
+        return Codegen.optional(this.airflowConfigurationOptions);
     }
     @Export(name="airflowVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> airflowVersion;
 
-    public Output</* @Nullable */ String> airflowVersion() {
-        return this.airflowVersion;
+    public Output<Optional<String>> airflowVersion() {
+        return Codegen.optional(this.airflowVersion);
     }
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
@@ -68,44 +69,44 @@ public class Environment extends com.pulumi.resources.CustomResource {
     @Export(name="dagS3Path", type=String.class, parameters={})
     private Output</* @Nullable */ String> dagS3Path;
 
-    public Output</* @Nullable */ String> dagS3Path() {
-        return this.dagS3Path;
+    public Output<Optional<String>> dagS3Path() {
+        return Codegen.optional(this.dagS3Path);
     }
     @Export(name="environmentClass", type=String.class, parameters={})
     private Output</* @Nullable */ String> environmentClass;
 
-    public Output</* @Nullable */ String> environmentClass() {
-        return this.environmentClass;
+    public Output<Optional<String>> environmentClass() {
+        return Codegen.optional(this.environmentClass);
     }
     @Export(name="executionRoleArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> executionRoleArn;
 
-    public Output</* @Nullable */ String> executionRoleArn() {
-        return this.executionRoleArn;
+    public Output<Optional<String>> executionRoleArn() {
+        return Codegen.optional(this.executionRoleArn);
     }
     @Export(name="kmsKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> kmsKey;
 
-    public Output</* @Nullable */ String> kmsKey() {
-        return this.kmsKey;
+    public Output<Optional<String>> kmsKey() {
+        return Codegen.optional(this.kmsKey);
     }
     @Export(name="loggingConfiguration", type=EnvironmentLoggingConfiguration.class, parameters={})
     private Output</* @Nullable */ EnvironmentLoggingConfiguration> loggingConfiguration;
 
-    public Output</* @Nullable */ EnvironmentLoggingConfiguration> loggingConfiguration() {
-        return this.loggingConfiguration;
+    public Output<Optional<EnvironmentLoggingConfiguration>> loggingConfiguration() {
+        return Codegen.optional(this.loggingConfiguration);
     }
     @Export(name="maxWorkers", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxWorkers;
 
-    public Output</* @Nullable */ Integer> maxWorkers() {
-        return this.maxWorkers;
+    public Output<Optional<Integer>> maxWorkers() {
+        return Codegen.optional(this.maxWorkers);
     }
     @Export(name="minWorkers", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> minWorkers;
 
-    public Output</* @Nullable */ Integer> minWorkers() {
-        return this.minWorkers;
+    public Output<Optional<Integer>> minWorkers() {
+        return Codegen.optional(this.minWorkers);
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
@@ -116,44 +117,44 @@ public class Environment extends com.pulumi.resources.CustomResource {
     @Export(name="networkConfiguration", type=EnvironmentNetworkConfiguration.class, parameters={})
     private Output</* @Nullable */ EnvironmentNetworkConfiguration> networkConfiguration;
 
-    public Output</* @Nullable */ EnvironmentNetworkConfiguration> networkConfiguration() {
-        return this.networkConfiguration;
+    public Output<Optional<EnvironmentNetworkConfiguration>> networkConfiguration() {
+        return Codegen.optional(this.networkConfiguration);
     }
     @Export(name="pluginsS3ObjectVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> pluginsS3ObjectVersion;
 
-    public Output</* @Nullable */ String> pluginsS3ObjectVersion() {
-        return this.pluginsS3ObjectVersion;
+    public Output<Optional<String>> pluginsS3ObjectVersion() {
+        return Codegen.optional(this.pluginsS3ObjectVersion);
     }
     @Export(name="pluginsS3Path", type=String.class, parameters={})
     private Output</* @Nullable */ String> pluginsS3Path;
 
-    public Output</* @Nullable */ String> pluginsS3Path() {
-        return this.pluginsS3Path;
+    public Output<Optional<String>> pluginsS3Path() {
+        return Codegen.optional(this.pluginsS3Path);
     }
     @Export(name="requirementsS3ObjectVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> requirementsS3ObjectVersion;
 
-    public Output</* @Nullable */ String> requirementsS3ObjectVersion() {
-        return this.requirementsS3ObjectVersion;
+    public Output<Optional<String>> requirementsS3ObjectVersion() {
+        return Codegen.optional(this.requirementsS3ObjectVersion);
     }
     @Export(name="requirementsS3Path", type=String.class, parameters={})
     private Output</* @Nullable */ String> requirementsS3Path;
 
-    public Output</* @Nullable */ String> requirementsS3Path() {
-        return this.requirementsS3Path;
+    public Output<Optional<String>> requirementsS3Path() {
+        return Codegen.optional(this.requirementsS3Path);
     }
     @Export(name="schedulers", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> schedulers;
 
-    public Output</* @Nullable */ Integer> schedulers() {
-        return this.schedulers;
+    public Output<Optional<Integer>> schedulers() {
+        return Codegen.optional(this.schedulers);
     }
     @Export(name="sourceBucketArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> sourceBucketArn;
 
-    public Output</* @Nullable */ String> sourceBucketArn() {
-        return this.sourceBucketArn;
+    public Output<Optional<String>> sourceBucketArn() {
+        return Codegen.optional(this.sourceBucketArn);
     }
     /**
      * A map of tags for the environment.
@@ -166,14 +167,14 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return A map of tags for the environment.
      * 
      */
-    public Output</* @Nullable */ Object> tags() {
-        return this.tags;
+    public Output<Optional<Object>> tags() {
+        return Codegen.optional(this.tags);
     }
     @Export(name="webserverAccessMode", type=EnvironmentWebserverAccessMode.class, parameters={})
     private Output</* @Nullable */ EnvironmentWebserverAccessMode> webserverAccessMode;
 
-    public Output</* @Nullable */ EnvironmentWebserverAccessMode> webserverAccessMode() {
-        return this.webserverAccessMode;
+    public Output<Optional<EnvironmentWebserverAccessMode>> webserverAccessMode() {
+        return Codegen.optional(this.webserverAccessMode);
     }
     @Export(name="webserverUrl", type=String.class, parameters={})
     private Output<String> webserverUrl;
@@ -184,8 +185,8 @@ public class Environment extends com.pulumi.resources.CustomResource {
     @Export(name="weeklyMaintenanceWindowStart", type=String.class, parameters={})
     private Output</* @Nullable */ String> weeklyMaintenanceWindowStart;
 
-    public Output</* @Nullable */ String> weeklyMaintenanceWindowStart() {
-        return this.weeklyMaintenanceWindowStart;
+    public Output<Optional<String>> weeklyMaintenanceWindowStart() {
+        return Codegen.optional(this.weeklyMaintenanceWindowStart);
     }
 
     /**

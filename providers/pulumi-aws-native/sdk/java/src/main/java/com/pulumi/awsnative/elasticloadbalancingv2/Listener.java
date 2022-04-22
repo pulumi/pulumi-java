@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -25,14 +26,14 @@ public class Listener extends com.pulumi.resources.CustomResource {
     @Export(name="alpnPolicy", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> alpnPolicy;
 
-    public Output</* @Nullable */ List<String>> alpnPolicy() {
-        return this.alpnPolicy;
+    public Output<Optional<List<String>>> alpnPolicy() {
+        return Codegen.optional(this.alpnPolicy);
     }
     @Export(name="certificates", type=List.class, parameters={ListenerCertificate.class})
     private Output</* @Nullable */ List<ListenerCertificate>> certificates;
 
-    public Output</* @Nullable */ List<ListenerCertificate>> certificates() {
-        return this.certificates;
+    public Output<Optional<List<ListenerCertificate>>> certificates() {
+        return Codegen.optional(this.certificates);
     }
     @Export(name="defaultActions", type=List.class, parameters={ListenerAction.class})
     private Output<List<ListenerAction>> defaultActions;
@@ -55,20 +56,20 @@ public class Listener extends com.pulumi.resources.CustomResource {
     @Export(name="port", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> port;
 
-    public Output</* @Nullable */ Integer> port() {
-        return this.port;
+    public Output<Optional<Integer>> port() {
+        return Codegen.optional(this.port);
     }
     @Export(name="protocol", type=String.class, parameters={})
     private Output</* @Nullable */ String> protocol;
 
-    public Output</* @Nullable */ String> protocol() {
-        return this.protocol;
+    public Output<Optional<String>> protocol() {
+        return Codegen.optional(this.protocol);
     }
     @Export(name="sslPolicy", type=String.class, parameters={})
     private Output</* @Nullable */ String> sslPolicy;
 
-    public Output</* @Nullable */ String> sslPolicy() {
-        return this.sslPolicy;
+    public Output<Optional<String>> sslPolicy() {
+        return Codegen.optional(this.sslPolicy);
     }
 
     /**

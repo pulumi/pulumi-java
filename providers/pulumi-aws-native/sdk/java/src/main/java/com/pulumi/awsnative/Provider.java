@@ -10,6 +10,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -29,8 +30,8 @@ public class Provider extends com.pulumi.resources.ProviderResource {
      * @return The profile for API operations. If not set, the default profile created with `aws configure` will be used.
      * 
      */
-    public Output</* @Nullable */ String> profile() {
-        return this.profile;
+    public Output<Optional<String>> profile() {
+        return Codegen.optional(this.profile);
     }
     /**
      * The region where AWS operations will take place. Examples are `us-east-1`, `us-west-2`, etc.
@@ -43,8 +44,8 @@ public class Provider extends com.pulumi.resources.ProviderResource {
      * @return The region where AWS operations will take place. Examples are `us-east-1`, `us-west-2`, etc.
      * 
      */
-    public Output</* @Nullable */ String> region() {
-        return this.region;
+    public Output<Optional<String>> region() {
+        return Codegen.optional(this.region);
     }
     /**
      * The path to the shared credentials file. If not set this defaults to `~/.aws/credentials`.
@@ -57,8 +58,8 @@ public class Provider extends com.pulumi.resources.ProviderResource {
      * @return The path to the shared credentials file. If not set this defaults to `~/.aws/credentials`.
      * 
      */
-    public Output</* @Nullable */ String> sharedCredentialsFile() {
-        return this.sharedCredentialsFile;
+    public Output<Optional<String>> sharedCredentialsFile() {
+        return Codegen.optional(this.sharedCredentialsFile);
     }
 
     /**

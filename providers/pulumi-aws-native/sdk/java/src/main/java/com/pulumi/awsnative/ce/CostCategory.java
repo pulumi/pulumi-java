@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class CostCategory extends com.pulumi.resources.CustomResource {
      * @return The default value for the cost category
      * 
      */
-    public Output</* @Nullable */ String> defaultValue() {
-        return this.defaultValue;
+    public Output<Optional<String>> defaultValue() {
+        return Codegen.optional(this.defaultValue);
     }
     @Export(name="effectiveStart", type=String.class, parameters={})
     private Output<String> effectiveStart;
@@ -90,8 +91,8 @@ public class CostCategory extends com.pulumi.resources.CustomResource {
      * @return Json array format of CostCategorySplitChargeRule in Billing and Cost Management API
      * 
      */
-    public Output</* @Nullable */ String> splitChargeRules() {
-        return this.splitChargeRules;
+    public Output<Optional<String>> splitChargeRules() {
+        return Codegen.optional(this.splitChargeRules);
     }
 
     /**
