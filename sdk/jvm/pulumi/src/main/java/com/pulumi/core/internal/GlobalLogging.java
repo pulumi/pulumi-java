@@ -8,7 +8,7 @@ import java.util.logging.Logger;
 import static com.pulumi.core.internal.Environment.getBooleanEnvironmentVariable;
 
 public final class GlobalLogging {
-    public static final Level GlobalLevel = getBooleanEnvironmentVariable("PULUMI_JVM_LOG_VERBOSE").or(false)
+    public static final Level GlobalLevel = getBooleanEnvironmentVariable("PULUMI_JAVA_LOG_VERBOSE").or(false)
             ? Level.FINEST
             : Level.SEVERE;
 
