@@ -60,6 +60,8 @@ func checkTemplate(t *testing.T, templateCfg templateConfig) {
 	opts := integration.ProgramTestOptions{
 		Dir:    e.RootPath,
 		Config: templateCfg.config,
+		// Note: must override PrepareProject to support Java,
+		// even if the override is a no-op.
 		PrepareProject: func(info *engine.Projinfo) error {
 			return fixupVersions(info)
 		},
