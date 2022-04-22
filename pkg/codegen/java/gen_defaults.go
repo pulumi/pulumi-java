@@ -3,7 +3,7 @@
 // Default value and config value code-generation facilities for SDK
 // generation are kept in this separate file as they are a bit
 // intricate.
-package jvm
+package java
 
 import (
 	"bytes"
@@ -14,7 +14,7 @@ import (
 
 	"github.com/pulumi/pulumi/pkg/v3/codegen/schema"
 
-	"github.com/pulumi/pulumi-java/pkg/codegen/jvm/names"
+	"github.com/pulumi/pulumi-java/pkg/codegen/java/names"
 )
 
 // TODO would this file be a convenient place to handle

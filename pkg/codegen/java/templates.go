@@ -1,6 +1,6 @@
 // Copyright 2022, Pulumi Corporation.  All rights reserved.
 
-package jvm
+package java
 
 import (
 	tmplt "text/template"

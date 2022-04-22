@@ -1,12 +1,12 @@
 // Copyright 2022, Pulumi Corporation.  All rights reserved.
 
-package jvm
+package java
 
 import (
 	"fmt"
 	"strings"
 
-	"github.com/pulumi/pulumi-java/pkg/codegen/jvm/names"
+	"github.com/pulumi/pulumi-java/pkg/codegen/java/names"
 )
 
 type MethodCall struct {
