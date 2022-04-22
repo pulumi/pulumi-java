@@ -1,6 +1,5 @@
 name: ${PROJECT}
 description: ${DESCRIPTION}
-runtime:
-  name: jvm
+runtime: java
 template:
   description: A minimal Google Cloud Java Pulumi program

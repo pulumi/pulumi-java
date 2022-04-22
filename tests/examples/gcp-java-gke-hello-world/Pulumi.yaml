@@ -1,7 +1,6 @@
 name: gcp-java-gke-hello-world
 description: A Google Kubernetes Engine (GKE) + Kubernetes Hello World example
-runtime:
-  name: jvm
+runtime: java
 template:
   config:
     gcp:project:

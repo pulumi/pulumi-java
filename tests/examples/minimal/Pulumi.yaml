@@ -1,6 +1,6 @@
 name: minimal
 description: A minimal Pulumi program using a JAR.
 runtime:
-  name: jvm
+  name: java
   options:
     binary: target/minimal-1.0-SNAPSHOT-jar-with-dependencies.jar
